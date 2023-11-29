@@ -24,6 +24,10 @@ class ListFeaturesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Feature[]
+   */
+  public $resources;
   protected $resourcesType = Feature::class;
   protected $resourcesDataType = 'array';
 

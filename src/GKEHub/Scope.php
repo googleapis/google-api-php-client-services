@@ -39,6 +39,10 @@ class Scope extends \Google\Model
    * @var string[]
    */
   public $namespaceLabels;
+  /**
+   * @var ScopeLifecycleState
+   */
+  public $state;
   protected $stateType = ScopeLifecycleState::class;
   protected $stateDataType = '';
   /**

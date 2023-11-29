@@ -39,8 +39,16 @@ class RBACRoleBinding extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var Role
+   */
+  public $role;
   protected $roleType = Role::class;
   protected $roleDataType = '';
+  /**
+   * @var RBACRoleBindingLifecycleState
+   */
+  public $state;
   protected $stateType = RBACRoleBindingLifecycleState::class;
   protected $stateDataType = '';
   /**

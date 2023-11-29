@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class ClusterUpgradeGKEUpgradeOverride extends \Google\Model
 {
+  /**
+   * @var ClusterUpgradePostConditions
+   */
+  public $postConditions;
   protected $postConditionsType = ClusterUpgradePostConditions::class;
   protected $postConditionsDataType = '';
+  /**
+   * @var ClusterUpgradeGKEUpgrade
+   */
+  public $upgrade;
   protected $upgradeType = ClusterUpgradeGKEUpgrade::class;
   protected $upgradeDataType = '';
 

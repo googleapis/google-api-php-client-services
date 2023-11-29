@@ -20,6 +20,10 @@ namespace Google\Service\GKEHub;
 class PolicyControllerPolicyControllerDeploymentConfig extends \Google\Collection
 {
   protected $collection_key = 'podTolerations';
+  /**
+   * @var PolicyControllerResourceRequirements
+   */
+  public $containerResources;
   protected $containerResourcesType = PolicyControllerResourceRequirements::class;
   protected $containerResourcesDataType = '';
   /**
@@ -30,6 +34,10 @@ class PolicyControllerPolicyControllerDeploymentConfig extends \Google\Collectio
    * @var bool
    */
   public $podAntiAffinity;
+  /**
+   * @var PolicyControllerToleration[]
+   */
+  public $podTolerations;
   protected $podTolerationsType = PolicyControllerToleration::class;
   protected $podTolerationsDataType = 'array';
   /**

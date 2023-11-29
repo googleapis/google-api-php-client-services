@@ -20,6 +20,10 @@ namespace Google\Service\GKEHub;
 class ListMembershipBindingsResponse extends \Google\Collection
 {
   protected $collection_key = 'membershipBindings';
+  /**
+   * @var MembershipBinding[]
+   */
+  public $membershipBindings;
   protected $membershipBindingsType = MembershipBinding::class;
   protected $membershipBindingsDataType = 'array';
   /**

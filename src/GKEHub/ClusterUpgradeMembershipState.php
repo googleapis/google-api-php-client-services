@@ -24,12 +24,20 @@ class ClusterUpgradeMembershipState extends \Google\Collection
    * @var string
    */
   public $fleet;
+  /**
+   * @var ClusterUpgradeIgnoredMembership
+   */
+  public $ignored;
   protected $ignoredType = ClusterUpgradeIgnoredMembership::class;
   protected $ignoredDataType = '';
   /**
    * @var string[]
    */
   public $scopes;
+  /**
+   * @var ClusterUpgradeMembershipGKEUpgradeState[]
+   */
+  public $upgrades;
   protected $upgradesType = ClusterUpgradeMembershipGKEUpgradeState::class;
   protected $upgradesDataType = 'array';
 

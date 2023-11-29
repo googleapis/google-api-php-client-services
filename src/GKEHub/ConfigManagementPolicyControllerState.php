@@ -19,10 +19,22 @@ namespace Google\Service\GKEHub;
 
 class ConfigManagementPolicyControllerState extends \Google\Model
 {
+  /**
+   * @var ConfigManagementGatekeeperDeploymentState
+   */
+  public $deploymentState;
   protected $deploymentStateType = ConfigManagementGatekeeperDeploymentState::class;
   protected $deploymentStateDataType = '';
+  /**
+   * @var ConfigManagementPolicyControllerMigration
+   */
+  public $migration;
   protected $migrationType = ConfigManagementPolicyControllerMigration::class;
   protected $migrationDataType = '';
+  /**
+   * @var ConfigManagementPolicyControllerVersion
+   */
+  public $version;
   protected $versionType = ConfigManagementPolicyControllerVersion::class;
   protected $versionDataType = '';
 

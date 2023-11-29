@@ -43,6 +43,10 @@ class GkehubNamespace extends \Google\Model
    * @var string
    */
   public $scope;
+  /**
+   * @var NamespaceLifecycleState
+   */
+  public $state;
   protected $stateType = NamespaceLifecycleState::class;
   protected $stateDataType = '';
   /**

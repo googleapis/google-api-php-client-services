@@ -19,6 +19,10 @@ namespace Google\Service\GKEHub;
 
 class FleetObservabilityFeatureSpec extends \Google\Model
 {
+  /**
+   * @var FleetObservabilityLoggingConfig
+   */
+  public $loggingConfig;
   protected $loggingConfigType = FleetObservabilityLoggingConfig::class;
   protected $loggingConfigDataType = '';
 

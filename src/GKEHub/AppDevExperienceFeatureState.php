@@ -19,6 +19,10 @@ namespace Google\Service\GKEHub;
 
 class AppDevExperienceFeatureState extends \Google\Model
 {
+  /**
+   * @var Status
+   */
+  public $networkingInstallSucceeded;
   protected $networkingInstallSucceededType = Status::class;
   protected $networkingInstallSucceededDataType = '';
 

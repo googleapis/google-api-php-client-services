@@ -19,6 +19,10 @@ namespace Google\Service\GKEHub;
 
 class ConfigManagementErrorResource extends \Google\Model
 {
+  /**
+   * @var ConfigManagementGroupVersionKind
+   */
+  public $resourceGvk;
   protected $resourceGvkType = ConfigManagementGroupVersionKind::class;
   protected $resourceGvkDataType = '';
   /**

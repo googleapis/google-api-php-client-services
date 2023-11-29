@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class PolicyControllerMembershipState extends \Google\Model
 {
+  /**
+   * @var PolicyControllerOnClusterState[]
+   */
+  public $componentStates;
   protected $componentStatesType = PolicyControllerOnClusterState::class;
   protected $componentStatesDataType = 'map';
+  /**
+   * @var PolicyControllerPolicyContentState
+   */
+  public $policyContentState;
   protected $policyContentStateType = PolicyControllerPolicyContentState::class;
   protected $policyContentStateDataType = '';
   /**

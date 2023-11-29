@@ -19,6 +19,10 @@ namespace Google\Service\GKEHub;
 
 class PolicyControllerMembershipSpec extends \Google\Model
 {
+  /**
+   * @var PolicyControllerHubConfig
+   */
+  public $policyControllerHubConfig;
   protected $policyControllerHubConfigType = PolicyControllerHubConfig::class;
   protected $policyControllerHubConfigDataType = '';
   /**

@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class FleetObservabilityFeatureState extends \Google\Model
 {
+  /**
+   * @var FleetObservabilityFleetObservabilityLoggingState
+   */
+  public $logging;
   protected $loggingType = FleetObservabilityFleetObservabilityLoggingState::class;
   protected $loggingDataType = '';
+  /**
+   * @var FleetObservabilityFleetObservabilityMonitoringState
+   */
+  public $monitoring;
   protected $monitoringType = FleetObservabilityFleetObservabilityMonitoringState::class;
   protected $monitoringDataType = '';
 

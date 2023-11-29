@@ -20,6 +20,10 @@ namespace Google\Service\GKEHub;
 class GenerateConnectManifestResponse extends \Google\Collection
 {
   protected $collection_key = 'manifest';
+  /**
+   * @var ConnectAgentResource[]
+   */
+  public $manifest;
   protected $manifestType = ConnectAgentResource::class;
   protected $manifestDataType = 'array';
 

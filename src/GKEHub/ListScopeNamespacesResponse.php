@@ -24,6 +24,10 @@ class ListScopeNamespacesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GkehubNamespace[]
+   */
+  public $scopeNamespaces;
   protected $scopeNamespacesType = GkehubNamespace::class;
   protected $scopeNamespacesDataType = 'array';
 

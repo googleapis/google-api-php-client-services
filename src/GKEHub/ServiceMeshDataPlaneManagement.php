@@ -20,6 +20,10 @@ namespace Google\Service\GKEHub;
 class ServiceMeshDataPlaneManagement extends \Google\Collection
 {
   protected $collection_key = 'details';
+  /**
+   * @var ServiceMeshStatusDetails[]
+   */
+  public $details;
   protected $detailsType = ServiceMeshStatusDetails::class;
   protected $detailsDataType = 'array';
   /**

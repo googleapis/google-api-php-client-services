@@ -23,10 +23,22 @@ class ConfigManagementMembershipSpec extends \Google\Model
    * @var string
    */
   public $cluster;
+  /**
+   * @var ConfigManagementConfigSync
+   */
+  public $configSync;
   protected $configSyncType = ConfigManagementConfigSync::class;
   protected $configSyncDataType = '';
+  /**
+   * @var ConfigManagementHierarchyControllerConfig
+   */
+  public $hierarchyController;
   protected $hierarchyControllerType = ConfigManagementHierarchyControllerConfig::class;
   protected $hierarchyControllerDataType = '';
+  /**
+   * @var ConfigManagementPolicyController
+   */
+  public $policyController;
   protected $policyControllerType = ConfigManagementPolicyController::class;
   protected $policyControllerDataType = '';
   /**

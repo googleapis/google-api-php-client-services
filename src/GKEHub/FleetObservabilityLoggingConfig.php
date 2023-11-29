@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class FleetObservabilityLoggingConfig extends \Google\Model
 {
+  /**
+   * @var FleetObservabilityRoutingConfig
+   */
+  public $defaultConfig;
   protected $defaultConfigType = FleetObservabilityRoutingConfig::class;
   protected $defaultConfigDataType = '';
+  /**
+   * @var FleetObservabilityRoutingConfig
+   */
+  public $fleetScopeLogsConfig;
   protected $fleetScopeLogsConfigType = FleetObservabilityRoutingConfig::class;
   protected $fleetScopeLogsConfigDataType = '';
 

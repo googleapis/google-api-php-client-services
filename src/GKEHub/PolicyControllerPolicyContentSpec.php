@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class PolicyControllerPolicyContentSpec extends \Google\Model
 {
+  /**
+   * @var PolicyControllerBundleInstallSpec[]
+   */
+  public $bundles;
   protected $bundlesType = PolicyControllerBundleInstallSpec::class;
   protected $bundlesDataType = 'map';
+  /**
+   * @var PolicyControllerTemplateLibraryConfig
+   */
+  public $templateLibrary;
   protected $templateLibraryType = PolicyControllerTemplateLibraryConfig::class;
   protected $templateLibraryDataType = '';
 

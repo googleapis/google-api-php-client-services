@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class PolicyControllerResourceRequirements extends \Google\Model
 {
+  /**
+   * @var PolicyControllerResourceList
+   */
+  public $limits;
   protected $limitsType = PolicyControllerResourceList::class;
   protected $limitsDataType = '';
+  /**
+   * @var PolicyControllerResourceList
+   */
+  public $requests;
   protected $requestsType = PolicyControllerResourceList::class;
   protected $requestsDataType = '';
 

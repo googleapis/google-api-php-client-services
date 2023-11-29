@@ -27,28 +27,60 @@ class Feature extends \Google\Model
    * @var string
    */
   public $deleteTime;
+  /**
+   * @var CommonFleetDefaultMemberConfigSpec
+   */
+  public $fleetDefaultMemberConfig;
   protected $fleetDefaultMemberConfigType = CommonFleetDefaultMemberConfigSpec::class;
   protected $fleetDefaultMemberConfigDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var MembershipFeatureSpec[]
+   */
+  public $membershipSpecs;
   protected $membershipSpecsType = MembershipFeatureSpec::class;
   protected $membershipSpecsDataType = 'map';
+  /**
+   * @var MembershipFeatureState[]
+   */
+  public $membershipStates;
   protected $membershipStatesType = MembershipFeatureState::class;
   protected $membershipStatesDataType = 'map';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var FeatureResourceState
+   */
+  public $resourceState;
   protected $resourceStateType = FeatureResourceState::class;
   protected $resourceStateDataType = '';
+  /**
+   * @var ScopeFeatureSpec[]
+   */
+  public $scopeSpecs;
   protected $scopeSpecsType = ScopeFeatureSpec::class;
   protected $scopeSpecsDataType = 'map';
+  /**
+   * @var ScopeFeatureState[]
+   */
+  public $scopeStates;
   protected $scopeStatesType = ScopeFeatureState::class;
   protected $scopeStatesDataType = 'map';
+  /**
+   * @var CommonFeatureSpec
+   */
+  public $spec;
   protected $specType = CommonFeatureSpec::class;
   protected $specDataType = '';
+  /**
+   * @var CommonFeatureState
+   */
+  public $state;
   protected $stateType = CommonFeatureState::class;
   protected $stateDataType = '';
   /**

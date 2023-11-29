@@ -20,14 +20,26 @@ namespace Google\Service\GKEHub;
 class KubernetesResource extends \Google\Collection
 {
   protected $collection_key = 'membershipResources';
+  /**
+   * @var ResourceManifest[]
+   */
+  public $connectResources;
   protected $connectResourcesType = ResourceManifest::class;
   protected $connectResourcesDataType = 'array';
   /**
    * @var string
    */
   public $membershipCrManifest;
+  /**
+   * @var ResourceManifest[]
+   */
+  public $membershipResources;
   protected $membershipResourcesType = ResourceManifest::class;
   protected $membershipResourcesDataType = 'array';
+  /**
+   * @var ResourceOptions
+   */
+  public $resourceOptions;
   protected $resourceOptionsType = ResourceOptions::class;
   protected $resourceOptionsDataType = '';
 

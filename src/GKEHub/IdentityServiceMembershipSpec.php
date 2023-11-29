@@ -20,6 +20,10 @@ namespace Google\Service\GKEHub;
 class IdentityServiceMembershipSpec extends \Google\Collection
 {
   protected $collection_key = 'authMethods';
+  /**
+   * @var IdentityServiceAuthMethod[]
+   */
+  public $authMethods;
   protected $authMethodsType = IdentityServiceAuthMethod::class;
   protected $authMethodsDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\GKEHub;
 
 class ClusterUpgradeMembershipGKEUpgradeState extends \Google\Model
 {
+  /**
+   * @var ClusterUpgradeUpgradeStatus
+   */
+  public $status;
   protected $statusType = ClusterUpgradeUpgradeStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var ClusterUpgradeGKEUpgrade
+   */
+  public $upgrade;
   protected $upgradeType = ClusterUpgradeGKEUpgrade::class;
   protected $upgradeDataType = '';
 
