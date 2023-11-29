@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureValue extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1BoolArray
+   */
+  public $boolArrayValue;
   protected $boolArrayValueType = GoogleCloudAiplatformV1BoolArray::class;
   protected $boolArrayValueDataType = '';
   /**
@@ -29,17 +33,33 @@ class GoogleCloudAiplatformV1FeatureValue extends \Google\Model
    * @var string
    */
   public $bytesValue;
+  /**
+   * @var GoogleCloudAiplatformV1DoubleArray
+   */
+  public $doubleArrayValue;
   protected $doubleArrayValueType = GoogleCloudAiplatformV1DoubleArray::class;
   protected $doubleArrayValueDataType = '';
   public $doubleValue;
+  /**
+   * @var GoogleCloudAiplatformV1Int64Array
+   */
+  public $int64ArrayValue;
   protected $int64ArrayValueType = GoogleCloudAiplatformV1Int64Array::class;
   protected $int64ArrayValueDataType = '';
   /**
    * @var string
    */
   public $int64Value;
+  /**
+   * @var GoogleCloudAiplatformV1FeatureValueMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1FeatureValueMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StringArray
+   */
+  public $stringArrayValue;
   protected $stringArrayValueType = GoogleCloudAiplatformV1StringArray::class;
   protected $stringArrayValueDataType = '';
   /**

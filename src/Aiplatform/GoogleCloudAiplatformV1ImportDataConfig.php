@@ -27,6 +27,10 @@ class GoogleCloudAiplatformV1ImportDataConfig extends \Google\Model
    * @var string[]
    */
   public $dataItemLabels;
+  /**
+   * @var GoogleCloudAiplatformV1GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1GcsSource::class;
   protected $gcsSourceDataType = '';
   /**

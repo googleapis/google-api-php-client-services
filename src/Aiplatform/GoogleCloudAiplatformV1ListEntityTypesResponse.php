@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListEntityTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'entityTypes';
+  /**
+   * @var GoogleCloudAiplatformV1EntityType[]
+   */
+  public $entityTypes;
   protected $entityTypesType = GoogleCloudAiplatformV1EntityType::class;
   protected $entityTypesDataType = 'array';
   /**

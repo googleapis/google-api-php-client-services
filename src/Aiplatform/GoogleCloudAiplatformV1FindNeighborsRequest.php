@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1FindNeighborsRequest extends \Google\Collection
    * @var string
    */
   public $deployedIndexId;
+  /**
+   * @var GoogleCloudAiplatformV1FindNeighborsRequestQuery[]
+   */
+  public $queries;
   protected $queriesType = GoogleCloudAiplatformV1FindNeighborsRequestQuery::class;
   protected $queriesDataType = 'array';
   /**

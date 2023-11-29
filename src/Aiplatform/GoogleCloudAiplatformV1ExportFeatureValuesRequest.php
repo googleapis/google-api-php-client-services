@@ -20,14 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExportFeatureValuesRequest extends \Google\Collection
 {
   protected $collection_key = 'settings';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureValueDestination
+   */
+  public $destination;
   protected $destinationType = GoogleCloudAiplatformV1FeatureValueDestination::class;
   protected $destinationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureSelector
+   */
+  public $featureSelector;
   protected $featureSelectorType = GoogleCloudAiplatformV1FeatureSelector::class;
   protected $featureSelectorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ExportFeatureValuesRequestFullExport
+   */
+  public $fullExport;
   protected $fullExportType = GoogleCloudAiplatformV1ExportFeatureValuesRequestFullExport::class;
   protected $fullExportDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1DestinationFeatureSetting[]
+   */
+  public $settings;
   protected $settingsType = GoogleCloudAiplatformV1DestinationFeatureSetting::class;
   protected $settingsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1ExportFeatureValuesRequestSnapshotExport
+   */
+  public $snapshotExport;
   protected $snapshotExportType = GoogleCloudAiplatformV1ExportFeatureValuesRequestSnapshotExport::class;
   protected $snapshotExportDataType = '';
 

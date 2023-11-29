@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ListNotebookRuntimesResponse extends \Google\Collec
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudAiplatformV1NotebookRuntime[]
+   */
+  public $notebookRuntimes;
   protected $notebookRuntimesType = GoogleCloudAiplatformV1NotebookRuntime::class;
   protected $notebookRuntimesDataType = 'array';
 

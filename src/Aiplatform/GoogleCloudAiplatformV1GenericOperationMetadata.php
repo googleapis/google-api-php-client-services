@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1GenericOperationMetadata extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $partialFailures;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
   /**

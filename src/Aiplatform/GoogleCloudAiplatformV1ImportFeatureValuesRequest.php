@@ -20,10 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ImportFeatureValuesRequest extends \Google\Collection
 {
   protected $collection_key = 'featureSpecs';
+  /**
+   * @var GoogleCloudAiplatformV1AvroSource
+   */
+  public $avroSource;
   protected $avroSourceType = GoogleCloudAiplatformV1AvroSource::class;
   protected $avroSourceDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1BigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudAiplatformV1BigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1CsvSource
+   */
+  public $csvSource;
   protected $csvSourceType = GoogleCloudAiplatformV1CsvSource::class;
   protected $csvSourceDataType = '';
   /**
@@ -38,6 +50,10 @@ class GoogleCloudAiplatformV1ImportFeatureValuesRequest extends \Google\Collecti
    * @var string
    */
   public $entityIdField;
+  /**
+   * @var GoogleCloudAiplatformV1ImportFeatureValuesRequestFeatureSpec[]
+   */
+  public $featureSpecs;
   protected $featureSpecsType = GoogleCloudAiplatformV1ImportFeatureValuesRequestFeatureSpec::class;
   protected $featureSpecsDataType = 'array';
   /**

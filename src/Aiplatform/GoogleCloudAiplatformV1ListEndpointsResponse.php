@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListEndpointsResponse extends \Google\Collection
 {
   protected $collection_key = 'endpoints';
+  /**
+   * @var GoogleCloudAiplatformV1Endpoint[]
+   */
+  public $endpoints;
   protected $endpointsType = GoogleCloudAiplatformV1Endpoint::class;
   protected $endpointsDataType = 'array';
   /**

@@ -19,10 +19,22 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureValueDestination extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1BigQueryDestination
+   */
+  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1CsvDestination
+   */
+  public $csvDestination;
   protected $csvDestinationType = GoogleCloudAiplatformV1CsvDestination::class;
   protected $csvDestinationDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1TFRecordDestination
+   */
+  public $tfrecordDestination;
   protected $tfrecordDestinationType = GoogleCloudAiplatformV1TFRecordDestination::class;
   protected $tfrecordDestinationDataType = '';
 

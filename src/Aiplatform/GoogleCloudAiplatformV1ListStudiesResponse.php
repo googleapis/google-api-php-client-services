@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ListStudiesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudAiplatformV1Study[]
+   */
+  public $studies;
   protected $studiesType = GoogleCloudAiplatformV1Study::class;
   protected $studiesDataType = 'array';
 

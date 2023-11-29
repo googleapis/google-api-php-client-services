@@ -23,12 +23,20 @@ class GoogleCloudAiplatformV1FeatureViewSync extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $finalStatus;
   protected $finalStatusType = GoogleRpcStatus::class;
   protected $finalStatusDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleTypeInterval
+   */
+  public $runTime;
   protected $runTimeType = GoogleTypeInterval::class;
   protected $runTimeDataType = '';
 

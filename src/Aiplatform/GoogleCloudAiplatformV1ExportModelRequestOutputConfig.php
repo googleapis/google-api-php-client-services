@@ -19,12 +19,20 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExportModelRequestOutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $artifactDestination;
   protected $artifactDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $artifactDestinationDataType = '';
   /**
    * @var string
    */
   public $exportFormatId;
+  /**
+   * @var GoogleCloudAiplatformV1ContainerRegistryDestination
+   */
+  public $imageDestination;
   protected $imageDestinationType = GoogleCloudAiplatformV1ContainerRegistryDestination::class;
   protected $imageDestinationDataType = '';
 

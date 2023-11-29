@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListDatasetsResponse extends \Google\Collection
 {
   protected $collection_key = 'datasets';
+  /**
+   * @var GoogleCloudAiplatformV1Dataset[]
+   */
+  public $datasets;
   protected $datasetsType = GoogleCloudAiplatformV1Dataset::class;
   protected $datasetsDataType = 'array';
   /**

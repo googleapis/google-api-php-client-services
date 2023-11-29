@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ImportModelEvaluationRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluation
+   */
+  public $modelEvaluation;
   protected $modelEvaluationType = GoogleCloudAiplatformV1ModelEvaluation::class;
   protected $modelEvaluationDataType = '';
 

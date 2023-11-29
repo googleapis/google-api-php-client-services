@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListHyperparameterTuningJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'hyperparameterTuningJobs';
+  /**
+   * @var GoogleCloudAiplatformV1HyperparameterTuningJob[]
+   */
+  public $hyperparameterTuningJobs;
   protected $hyperparameterTuningJobsType = GoogleCloudAiplatformV1HyperparameterTuningJob::class;
   protected $hyperparameterTuningJobsDataType = 'array';
   /**

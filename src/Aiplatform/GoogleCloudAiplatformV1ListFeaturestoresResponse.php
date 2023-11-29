@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListFeaturestoresResponse extends \Google\Collection
 {
   protected $collection_key = 'featurestores';
+  /**
+   * @var GoogleCloudAiplatformV1Featurestore[]
+   */
+  public $featurestores;
   protected $featurestoresType = GoogleCloudAiplatformV1Featurestore::class;
   protected $featurestoresDataType = 'array';
   /**

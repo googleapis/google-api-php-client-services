@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListDeploymentResourcePoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'deploymentResourcePools';
+  /**
+   * @var GoogleCloudAiplatformV1DeploymentResourcePool[]
+   */
+  public $deploymentResourcePools;
   protected $deploymentResourcePoolsType = GoogleCloudAiplatformV1DeploymentResourcePool::class;
   protected $deploymentResourcePoolsDataType = 'array';
   /**

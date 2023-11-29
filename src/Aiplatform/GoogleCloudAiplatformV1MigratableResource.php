@@ -19,10 +19,22 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1MigratableResourceAutomlDataset
+   */
+  public $automlDataset;
   protected $automlDatasetType = GoogleCloudAiplatformV1MigratableResourceAutomlDataset::class;
   protected $automlDatasetDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1MigratableResourceAutomlModel
+   */
+  public $automlModel;
   protected $automlModelType = GoogleCloudAiplatformV1MigratableResourceAutomlModel::class;
   protected $automlModelDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset
+   */
+  public $dataLabelingDataset;
   protected $dataLabelingDatasetType = GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset::class;
   protected $dataLabelingDatasetDataType = '';
   /**
@@ -33,6 +45,10 @@ class GoogleCloudAiplatformV1MigratableResource extends \Google\Model
    * @var string
    */
   public $lastUpdateTime;
+  /**
+   * @var GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion
+   */
+  public $mlEngineModelVersion;
   protected $mlEngineModelVersionType = GoogleCloudAiplatformV1MigratableResourceMlEngineModelVersion::class;
   protected $mlEngineModelVersionDataType = '';
 

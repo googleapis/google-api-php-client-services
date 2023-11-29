@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListFeatureOnlineStoresResponse extends \Google\Collection
 {
   protected $collection_key = 'featureOnlineStores';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureOnlineStore[]
+   */
+  public $featureOnlineStores;
   protected $featureOnlineStoresType = GoogleCloudAiplatformV1FeatureOnlineStore::class;
   protected $featureOnlineStoresDataType = 'array';
   /**

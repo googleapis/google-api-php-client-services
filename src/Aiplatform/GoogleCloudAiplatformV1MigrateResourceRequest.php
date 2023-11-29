@@ -19,12 +19,28 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1MigrateResourceRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlDatasetConfig
+   */
+  public $migrateAutomlDatasetConfig;
   protected $migrateAutomlDatasetConfigType = GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlDatasetConfig::class;
   protected $migrateAutomlDatasetConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlModelConfig
+   */
+  public $migrateAutomlModelConfig;
   protected $migrateAutomlModelConfigType = GoogleCloudAiplatformV1MigrateResourceRequestMigrateAutomlModelConfig::class;
   protected $migrateAutomlModelConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetConfig
+   */
+  public $migrateDataLabelingDatasetConfig;
   protected $migrateDataLabelingDatasetConfigType = GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetConfig::class;
   protected $migrateDataLabelingDatasetConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1MigrateResourceRequestMigrateMlEngineModelVersionConfig
+   */
+  public $migrateMlEngineModelVersionConfig;
   protected $migrateMlEngineModelVersionConfigType = GoogleCloudAiplatformV1MigrateResourceRequestMigrateMlEngineModelVersionConfig::class;
   protected $migrateMlEngineModelVersionConfigDataType = '';
 

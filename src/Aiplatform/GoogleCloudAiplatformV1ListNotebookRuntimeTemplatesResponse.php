@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ListNotebookRuntimeTemplatesResponse extends \Googl
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudAiplatformV1NotebookRuntimeTemplate[]
+   */
+  public $notebookRuntimeTemplates;
   protected $notebookRuntimeTemplatesType = GoogleCloudAiplatformV1NotebookRuntimeTemplate::class;
   protected $notebookRuntimeTemplatesDataType = 'array';
 

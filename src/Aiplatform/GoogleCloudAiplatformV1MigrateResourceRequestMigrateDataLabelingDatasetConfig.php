@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetCon
    * @var string
    */
   public $datasetDisplayName;
+  /**
+   * @var GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetConfigMigrateDataLabelingAnnotatedDatasetConfig[]
+   */
+  public $migrateDataLabelingAnnotatedDatasetConfigs;
   protected $migrateDataLabelingAnnotatedDatasetConfigsType = GoogleCloudAiplatformV1MigrateResourceRequestMigrateDataLabelingDatasetConfigMigrateDataLabelingAnnotatedDatasetConfig::class;
   protected $migrateDataLabelingAnnotatedDatasetConfigsDataType = 'array';
 

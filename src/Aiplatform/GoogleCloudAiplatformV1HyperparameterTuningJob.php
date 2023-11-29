@@ -28,12 +28,20 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
@@ -64,10 +72,22 @@ class GoogleCloudAiplatformV1HyperparameterTuningJob extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpec
+   */
+  public $studySpec;
   protected $studySpecType = GoogleCloudAiplatformV1StudySpec::class;
   protected $studySpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1CustomJobSpec
+   */
+  public $trialJobSpec;
   protected $trialJobSpecType = GoogleCloudAiplatformV1CustomJobSpec::class;
   protected $trialJobSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1Trial[]
+   */
+  public $trials;
   protected $trialsType = GoogleCloudAiplatformV1Trial::class;
   protected $trialsDataType = 'array';
   /**

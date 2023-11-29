@@ -20,10 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1LineageSubgraph extends \Google\Collection
 {
   protected $collection_key = 'executions';
+  /**
+   * @var GoogleCloudAiplatformV1Artifact[]
+   */
+  public $artifacts;
   protected $artifactsType = GoogleCloudAiplatformV1Artifact::class;
   protected $artifactsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1Event[]
+   */
+  public $events;
   protected $eventsType = GoogleCloudAiplatformV1Event::class;
   protected $eventsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1Execution[]
+   */
+  public $executions;
   protected $executionsType = GoogleCloudAiplatformV1Execution::class;
   protected $executionsDataType = 'array';
 

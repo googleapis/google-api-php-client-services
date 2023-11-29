@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'artifacts';
+  /**
+   * @var GoogleCloudAiplatformV1Artifact[]
+   */
+  public $artifacts;
   protected $artifactsType = GoogleCloudAiplatformV1Artifact::class;
   protected $artifactsDataType = 'array';
   /**

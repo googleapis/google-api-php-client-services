@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FetchFeatureValuesResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1FetchFeatureValuesResponseFeatureNameValuePairList
+   */
+  public $keyValues;
   protected $keyValuesType = GoogleCloudAiplatformV1FetchFeatureValuesResponseFeatureNameValuePairList::class;
   protected $keyValuesDataType = '';
   /**

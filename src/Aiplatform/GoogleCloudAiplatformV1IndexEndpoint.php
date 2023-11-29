@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1IndexEndpoint extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudAiplatformV1DeployedIndex[]
+   */
+  public $deployedIndexes;
   protected $deployedIndexesType = GoogleCloudAiplatformV1DeployedIndex::class;
   protected $deployedIndexesDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class GoogleCloudAiplatformV1IndexEndpoint extends \Google\Collection
    * @var bool
    */
   public $enablePrivateServiceConnect;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
@@ -56,6 +64,10 @@ class GoogleCloudAiplatformV1IndexEndpoint extends \Google\Collection
    * @var string
    */
   public $network;
+  /**
+   * @var GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   */
+  public $privateServiceConnectConfig;
   protected $privateServiceConnectConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
   protected $privateServiceConnectConfigDataType = '';
   /**

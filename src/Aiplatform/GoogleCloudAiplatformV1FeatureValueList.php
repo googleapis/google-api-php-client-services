@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureValueList extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureValue[]
+   */
+  public $values;
   protected $valuesType = GoogleCloudAiplatformV1FeatureValue::class;
   protected $valuesDataType = 'array';
 

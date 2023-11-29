@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListModelVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'models';
+  /**
+   * @var GoogleCloudAiplatformV1Model[]
+   */
+  public $models;
   protected $modelsType = GoogleCloudAiplatformV1Model::class;
   protected $modelsDataType = 'array';
   /**

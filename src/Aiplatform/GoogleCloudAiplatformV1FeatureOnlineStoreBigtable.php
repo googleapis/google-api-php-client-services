@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureOnlineStoreBigtable extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling
+   */
+  public $autoScaling;
   protected $autoScalingType = GoogleCloudAiplatformV1FeatureOnlineStoreBigtableAutoScaling::class;
   protected $autoScalingDataType = '';
 

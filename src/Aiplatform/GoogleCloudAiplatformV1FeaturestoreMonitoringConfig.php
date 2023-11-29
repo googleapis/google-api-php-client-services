@@ -19,12 +19,28 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeaturestoreMonitoringConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1FeaturestoreMonitoringConfigThresholdConfig
+   */
+  public $categoricalThresholdConfig;
   protected $categoricalThresholdConfigType = GoogleCloudAiplatformV1FeaturestoreMonitoringConfigThresholdConfig::class;
   protected $categoricalThresholdConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FeaturestoreMonitoringConfigImportFeaturesAnalysis
+   */
+  public $importFeaturesAnalysis;
   protected $importFeaturesAnalysisType = GoogleCloudAiplatformV1FeaturestoreMonitoringConfigImportFeaturesAnalysis::class;
   protected $importFeaturesAnalysisDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FeaturestoreMonitoringConfigThresholdConfig
+   */
+  public $numericalThresholdConfig;
   protected $numericalThresholdConfigType = GoogleCloudAiplatformV1FeaturestoreMonitoringConfigThresholdConfig::class;
   protected $numericalThresholdConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FeaturestoreMonitoringConfigSnapshotAnalysis
+   */
+  public $snapshotAnalysis;
   protected $snapshotAnalysisType = GoogleCloudAiplatformV1FeaturestoreMonitoringConfigSnapshotAnalysis::class;
   protected $snapshotAnalysisDataType = '';
 

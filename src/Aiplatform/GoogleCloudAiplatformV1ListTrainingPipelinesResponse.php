@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ListTrainingPipelinesResponse extends \Google\Colle
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudAiplatformV1TrainingPipeline[]
+   */
+  public $trainingPipelines;
   protected $trainingPipelinesType = GoogleCloudAiplatformV1TrainingPipeline::class;
   protected $trainingPipelinesDataType = 'array';
 

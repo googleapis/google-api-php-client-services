@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListOptimalTrialsResponse extends \Google\Collection
 {
   protected $collection_key = 'optimalTrials';
+  /**
+   * @var GoogleCloudAiplatformV1Trial[]
+   */
+  public $optimalTrials;
   protected $optimalTrialsType = GoogleCloudAiplatformV1Trial::class;
   protected $optimalTrialsDataType = 'array';
 

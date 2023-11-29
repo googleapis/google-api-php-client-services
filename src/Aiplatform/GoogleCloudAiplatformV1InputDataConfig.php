@@ -27,30 +27,58 @@ class GoogleCloudAiplatformV1InputDataConfig extends \Google\Model
    * @var string
    */
   public $annotationsFilter;
+  /**
+   * @var GoogleCloudAiplatformV1BigQueryDestination
+   */
+  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
   /**
    * @var string
    */
   public $datasetId;
+  /**
+   * @var GoogleCloudAiplatformV1FilterSplit
+   */
+  public $filterSplit;
   protected $filterSplitType = GoogleCloudAiplatformV1FilterSplit::class;
   protected $filterSplitDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FractionSplit
+   */
+  public $fractionSplit;
   protected $fractionSplitType = GoogleCloudAiplatformV1FractionSplit::class;
   protected $fractionSplitDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**
    * @var bool
    */
   public $persistMlUseAssignment;
+  /**
+   * @var GoogleCloudAiplatformV1PredefinedSplit
+   */
+  public $predefinedSplit;
   protected $predefinedSplitType = GoogleCloudAiplatformV1PredefinedSplit::class;
   protected $predefinedSplitDataType = '';
   /**
    * @var string
    */
   public $savedQueryId;
+  /**
+   * @var GoogleCloudAiplatformV1StratifiedSplit
+   */
+  public $stratifiedSplit;
   protected $stratifiedSplitType = GoogleCloudAiplatformV1StratifiedSplit::class;
   protected $stratifiedSplitDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1TimestampSplit
+   */
+  public $timestampSplit;
   protected $timestampSplitType = GoogleCloudAiplatformV1TimestampSplit::class;
   protected $timestampSplitDataType = '';
 

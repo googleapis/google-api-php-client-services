@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListCustomJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'customJobs';
+  /**
+   * @var GoogleCloudAiplatformV1CustomJob[]
+   */
+  public $customJobs;
   protected $customJobsType = GoogleCloudAiplatformV1CustomJob::class;
   protected $customJobsDataType = 'array';
   /**

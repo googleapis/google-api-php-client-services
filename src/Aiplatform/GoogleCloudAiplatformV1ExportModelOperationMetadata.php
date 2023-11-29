@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExportModelOperationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1GenericOperationMetadata
+   */
+  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1ExportModelOperationMetadataOutputInfo
+   */
+  public $outputInfo;
   protected $outputInfoType = GoogleCloudAiplatformV1ExportModelOperationMetadataOutputInfo::class;
   protected $outputInfoDataType = '';
 

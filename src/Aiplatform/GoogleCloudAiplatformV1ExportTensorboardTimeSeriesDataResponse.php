@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ExportTensorboardTimeSeriesDataResponse extends \Go
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudAiplatformV1TimeSeriesDataPoint[]
+   */
+  public $timeSeriesDataPoints;
   protected $timeSeriesDataPointsType = GoogleCloudAiplatformV1TimeSeriesDataPoint::class;
   protected $timeSeriesDataPointsDataType = 'array';
 

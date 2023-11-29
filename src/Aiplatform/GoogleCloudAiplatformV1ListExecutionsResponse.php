@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListExecutionsResponse extends \Google\Collection
 {
   protected $collection_key = 'executions';
+  /**
+   * @var GoogleCloudAiplatformV1Execution[]
+   */
+  public $executions;
   protected $executionsType = GoogleCloudAiplatformV1Execution::class;
   protected $executionsDataType = 'array';
   /**

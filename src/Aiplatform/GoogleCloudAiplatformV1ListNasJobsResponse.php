@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListNasJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'nasJobs';
+  /**
+   * @var GoogleCloudAiplatformV1NasJob[]
+   */
+  public $nasJobs;
   protected $nasJobsType = GoogleCloudAiplatformV1NasJob::class;
   protected $nasJobsDataType = 'array';
   /**

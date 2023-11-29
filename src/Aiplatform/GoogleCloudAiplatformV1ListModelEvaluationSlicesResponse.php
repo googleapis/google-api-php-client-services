@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListModelEvaluationSlicesResponse extends \Google\Collection
 {
   protected $collection_key = 'modelEvaluationSlices';
+  /**
+   * @var GoogleCloudAiplatformV1ModelEvaluationSlice[]
+   */
+  public $modelEvaluationSlices;
   protected $modelEvaluationSlicesType = GoogleCloudAiplatformV1ModelEvaluationSlice::class;
   protected $modelEvaluationSlicesDataType = 'array';
   /**

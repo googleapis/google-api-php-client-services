@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FindNeighborsResponse extends \Google\Collection
 {
   protected $collection_key = 'nearestNeighbors';
+  /**
+   * @var GoogleCloudAiplatformV1FindNeighborsResponseNearestNeighbors[]
+   */
+  public $nearestNeighbors;
   protected $nearestNeighborsType = GoogleCloudAiplatformV1FindNeighborsResponseNearestNeighbors::class;
   protected $nearestNeighborsDataType = 'array';
 

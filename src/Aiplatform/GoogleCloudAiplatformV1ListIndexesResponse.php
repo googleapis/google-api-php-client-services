@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListIndexesResponse extends \Google\Collection
 {
   protected $collection_key = 'indexes';
+  /**
+   * @var GoogleCloudAiplatformV1Index[]
+   */
+  public $indexes;
   protected $indexesType = GoogleCloudAiplatformV1Index::class;
   protected $indexesDataType = 'array';
   /**

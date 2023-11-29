@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1Measurement extends \Google\Collection
    * @var string
    */
   public $elapsedDuration;
+  /**
+   * @var GoogleCloudAiplatformV1MeasurementMetric[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudAiplatformV1MeasurementMetric::class;
   protected $metricsDataType = 'array';
   /**

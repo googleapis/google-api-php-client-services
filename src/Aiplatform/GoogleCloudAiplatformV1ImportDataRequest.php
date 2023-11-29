@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ImportDataRequest extends \Google\Collection
 {
   protected $collection_key = 'importConfigs';
+  /**
+   * @var GoogleCloudAiplatformV1ImportDataConfig[]
+   */
+  public $importConfigs;
   protected $importConfigsType = GoogleCloudAiplatformV1ImportDataConfig::class;
   protected $importConfigsDataType = 'array';
 

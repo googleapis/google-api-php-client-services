@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListBatchPredictionJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'batchPredictionJobs';
+  /**
+   * @var GoogleCloudAiplatformV1BatchPredictionJob[]
+   */
+  public $batchPredictionJobs;
   protected $batchPredictionJobsType = GoogleCloudAiplatformV1BatchPredictionJob::class;
   protected $batchPredictionJobsDataType = 'array';
   /**

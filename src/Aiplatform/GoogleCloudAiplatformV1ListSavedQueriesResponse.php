@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1ListSavedQueriesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudAiplatformV1SavedQuery[]
+   */
+  public $savedQueries;
   protected $savedQueriesType = GoogleCloudAiplatformV1SavedQuery::class;
   protected $savedQueriesDataType = 'array';
 

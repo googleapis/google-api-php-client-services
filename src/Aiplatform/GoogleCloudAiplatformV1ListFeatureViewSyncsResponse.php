@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListFeatureViewSyncsResponse extends \Google\Collection
 {
   protected $collection_key = 'featureViewSyncs';
+  /**
+   * @var GoogleCloudAiplatformV1FeatureViewSync[]
+   */
+  public $featureViewSyncs;
   protected $featureViewSyncsType = GoogleCloudAiplatformV1FeatureViewSync::class;
   protected $featureViewSyncsDataType = 'array';
   /**

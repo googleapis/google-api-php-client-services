@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1FindNeighborsRequestQuery extends \Google\Model
    * @var int
    */
   public $approximateNeighborCount;
+  /**
+   * @var GoogleCloudAiplatformV1IndexDatapoint
+   */
+  public $datapoint;
   protected $datapointType = GoogleCloudAiplatformV1IndexDatapoint::class;
   protected $datapointDataType = '';
   public $fractionLeafNodesToSearchOverride;

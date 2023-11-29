@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListDataItemsResponse extends \Google\Collection
 {
   protected $collection_key = 'dataItems';
+  /**
+   * @var GoogleCloudAiplatformV1DataItem[]
+   */
+  public $dataItems;
   protected $dataItemsType = GoogleCloudAiplatformV1DataItem::class;
   protected $dataItemsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListContextsResponse extends \Google\Collection
 {
   protected $collection_key = 'contexts';
+  /**
+   * @var GoogleCloudAiplatformV1Context[]
+   */
+  public $contexts;
   protected $contextsType = GoogleCloudAiplatformV1Context::class;
   protected $contextsDataType = 'array';
   /**

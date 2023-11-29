@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListDatasetVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'datasetVersions';
+  /**
+   * @var GoogleCloudAiplatformV1DatasetVersion[]
+   */
+  public $datasetVersions;
   protected $datasetVersionsType = GoogleCloudAiplatformV1DatasetVersion::class;
   protected $datasetVersionsDataType = 'array';
   /**

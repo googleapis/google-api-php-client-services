@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListDataLabelingJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'dataLabelingJobs';
+  /**
+   * @var GoogleCloudAiplatformV1DataLabelingJob[]
+   */
+  public $dataLabelingJobs;
   protected $dataLabelingJobsType = GoogleCloudAiplatformV1DataLabelingJob::class;
   protected $dataLabelingJobsDataType = 'array';
   /**
