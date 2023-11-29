@@ -20,6 +20,10 @@ namespace Google\Service\BackupforGKE;
 class ListBackupPlansResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var BackupPlan[]
+   */
+  public $backupPlans;
   protected $backupPlansType = BackupPlan::class;
   protected $backupPlansDataType = 'array';
   /**

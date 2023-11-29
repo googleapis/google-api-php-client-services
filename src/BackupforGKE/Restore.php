@@ -63,6 +63,10 @@ class Restore extends \Google\Model
    * @var int
    */
   public $resourcesRestoredCount;
+  /**
+   * @var RestoreConfig
+   */
+  public $restoreConfig;
   protected $restoreConfigType = RestoreConfig::class;
   protected $restoreConfigDataType = '';
   /**

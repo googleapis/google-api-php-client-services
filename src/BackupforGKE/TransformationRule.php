@@ -24,8 +24,16 @@ class TransformationRule extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var TransformationRuleAction[]
+   */
+  public $fieldActions;
   protected $fieldActionsType = TransformationRuleAction::class;
   protected $fieldActionsDataType = 'array';
+  /**
+   * @var ResourceFilter
+   */
+  public $resourceFilter;
   protected $resourceFilterType = ResourceFilter::class;
   protected $resourceFilterDataType = '';
 

@@ -24,6 +24,10 @@ class ListRestoresResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Restore[]
+   */
+  public $restores;
   protected $restoresType = Restore::class;
   protected $restoresDataType = 'array';
   /**

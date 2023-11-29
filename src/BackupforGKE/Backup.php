@@ -23,6 +23,10 @@ class Backup extends \Google\Model
    * @var bool
    */
   public $allNamespaces;
+  /**
+   * @var ClusterMetadata
+   */
+  public $clusterMetadata;
   protected $clusterMetadataType = ClusterMetadata::class;
   protected $clusterMetadataDataType = '';
   /**
@@ -57,6 +61,10 @@ class Backup extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var EncryptionKey
+   */
+  public $encryptionKey;
   protected $encryptionKeyType = EncryptionKey::class;
   protected $encryptionKeyDataType = '';
   /**
@@ -91,8 +99,16 @@ class Backup extends \Google\Model
    * @var string
    */
   public $retainExpireTime;
+  /**
+   * @var NamespacedNames
+   */
+  public $selectedApplications;
   protected $selectedApplicationsType = NamespacedNames::class;
   protected $selectedApplicationsDataType = '';
+  /**
+   * @var Namespaces
+   */
+  public $selectedNamespaces;
   protected $selectedNamespacesType = Namespaces::class;
   protected $selectedNamespacesDataType = '';
   /**

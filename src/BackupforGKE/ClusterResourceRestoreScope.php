@@ -24,12 +24,20 @@ class ClusterResourceRestoreScope extends \Google\Collection
    * @var bool
    */
   public $allGroupKinds;
+  /**
+   * @var GroupKind[]
+   */
+  public $excludedGroupKinds;
   protected $excludedGroupKindsType = GroupKind::class;
   protected $excludedGroupKindsDataType = 'array';
   /**
    * @var bool
    */
   public $noGroupKinds;
+  /**
+   * @var GroupKind[]
+   */
+  public $selectedGroupKinds;
   protected $selectedGroupKindsType = GroupKind::class;
   protected $selectedGroupKindsDataType = 'array';
 
