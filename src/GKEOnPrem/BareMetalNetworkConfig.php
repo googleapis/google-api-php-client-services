@@ -23,10 +23,22 @@ class BareMetalNetworkConfig extends \Google\Model
    * @var bool
    */
   public $advancedNetworking;
+  /**
+   * @var BareMetalIslandModeCidrConfig
+   */
+  public $islandModeCidr;
   protected $islandModeCidrType = BareMetalIslandModeCidrConfig::class;
   protected $islandModeCidrDataType = '';
+  /**
+   * @var BareMetalMultipleNetworkInterfacesConfig
+   */
+  public $multipleNetworkInterfacesConfig;
   protected $multipleNetworkInterfacesConfigType = BareMetalMultipleNetworkInterfacesConfig::class;
   protected $multipleNetworkInterfacesConfigDataType = '';
+  /**
+   * @var BareMetalSrIovConfig
+   */
+  public $srIovConfig;
   protected $srIovConfigType = BareMetalSrIovConfig::class;
   protected $srIovConfigDataType = '';
 

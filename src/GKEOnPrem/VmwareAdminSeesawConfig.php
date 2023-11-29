@@ -28,6 +28,10 @@ class VmwareAdminSeesawConfig extends \Google\Collection
    * @var string
    */
   public $group;
+  /**
+   * @var VmwareIpBlock[]
+   */
+  public $ipBlocks;
   protected $ipBlocksType = VmwareIpBlock::class;
   protected $ipBlocksDataType = 'array';
   /**

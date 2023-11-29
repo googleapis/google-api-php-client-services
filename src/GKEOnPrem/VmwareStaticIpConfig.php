@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class VmwareStaticIpConfig extends \Google\Collection
 {
   protected $collection_key = 'ipBlocks';
+  /**
+   * @var VmwareIpBlock[]
+   */
+  public $ipBlocks;
   protected $ipBlocksType = VmwareIpBlock::class;
   protected $ipBlocksDataType = 'array';
 

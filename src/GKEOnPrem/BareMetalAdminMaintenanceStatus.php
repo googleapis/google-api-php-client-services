@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalAdminMaintenanceStatus extends \Google\Model
 {
+  /**
+   * @var BareMetalAdminMachineDrainStatus
+   */
+  public $machineDrainStatus;
   protected $machineDrainStatusType = BareMetalAdminMachineDrainStatus::class;
   protected $machineDrainStatusDataType = '';
 

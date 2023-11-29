@@ -20,8 +20,16 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalAdminControlPlaneConfig extends \Google\Collection
 {
   protected $collection_key = 'apiServerArgs';
+  /**
+   * @var BareMetalAdminApiServerArgument[]
+   */
+  public $apiServerArgs;
   protected $apiServerArgsType = BareMetalAdminApiServerArgument::class;
   protected $apiServerArgsDataType = 'array';
+  /**
+   * @var BareMetalAdminControlPlaneNodePoolConfig
+   */
+  public $controlPlaneNodePoolConfig;
   protected $controlPlaneNodePoolConfigType = BareMetalAdminControlPlaneNodePoolConfig::class;
   protected $controlPlaneNodePoolConfigDataType = '';
 

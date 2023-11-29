@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class VmwareMetalLbConfig extends \Google\Collection
 {
   protected $collection_key = 'addressPools';
+  /**
+   * @var VmwareAddressPool[]
+   */
+  public $addressPools;
   protected $addressPoolsType = VmwareAddressPool::class;
   protected $addressPoolsDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalLvpShareConfig extends \Google\Model
 {
+  /**
+   * @var BareMetalLvpConfig
+   */
+  public $lvpConfig;
   protected $lvpConfigType = BareMetalLvpConfig::class;
   protected $lvpConfigDataType = '';
   /**

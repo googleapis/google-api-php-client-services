@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class VmwarePlatformConfig extends \Google\Collection
 {
   protected $collection_key = 'bundles';
+  /**
+   * @var VmwareBundleConfig[]
+   */
+  public $bundles;
   protected $bundlesType = VmwareBundleConfig::class;
   protected $bundlesDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class VmwarePlatformConfig extends \Google\Collection
    * @var string
    */
   public $requiredPlatformVersion;
+  /**
+   * @var ResourceStatus
+   */
+  public $status;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
 

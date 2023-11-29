@@ -35,6 +35,10 @@ class OperationMetadata extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var OperationProgress
+   */
+  public $progress;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = '';
   /**

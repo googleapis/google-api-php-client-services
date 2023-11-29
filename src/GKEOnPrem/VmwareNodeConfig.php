@@ -52,8 +52,16 @@ class VmwareNodeConfig extends \Google\Collection
    * @var string
    */
   public $replicas;
+  /**
+   * @var NodeTaint[]
+   */
+  public $taints;
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
+  /**
+   * @var VmwareVsphereConfig
+   */
+  public $vsphereConfig;
   protected $vsphereConfigType = VmwareVsphereConfig::class;
   protected $vsphereConfigDataType = '';
 

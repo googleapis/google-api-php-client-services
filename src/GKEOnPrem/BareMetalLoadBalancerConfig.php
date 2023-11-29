@@ -19,14 +19,34 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalLoadBalancerConfig extends \Google\Model
 {
+  /**
+   * @var BareMetalBgpLbConfig
+   */
+  public $bgpLbConfig;
   protected $bgpLbConfigType = BareMetalBgpLbConfig::class;
   protected $bgpLbConfigDataType = '';
+  /**
+   * @var BareMetalManualLbConfig
+   */
+  public $manualLbConfig;
   protected $manualLbConfigType = BareMetalManualLbConfig::class;
   protected $manualLbConfigDataType = '';
+  /**
+   * @var BareMetalMetalLbConfig
+   */
+  public $metalLbConfig;
   protected $metalLbConfigType = BareMetalMetalLbConfig::class;
   protected $metalLbConfigDataType = '';
+  /**
+   * @var BareMetalPortConfig
+   */
+  public $portConfig;
   protected $portConfigType = BareMetalPortConfig::class;
   protected $portConfigDataType = '';
+  /**
+   * @var BareMetalVipConfig
+   */
+  public $vipConfig;
   protected $vipConfigType = BareMetalVipConfig::class;
   protected $vipConfigDataType = '';
 

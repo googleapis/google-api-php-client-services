@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalAdminNetworkConfig extends \Google\Model
 {
+  /**
+   * @var BareMetalAdminIslandModeCidrConfig
+   */
+  public $islandModeCidr;
   protected $islandModeCidrType = BareMetalAdminIslandModeCidrConfig::class;
   protected $islandModeCidrDataType = '';
 

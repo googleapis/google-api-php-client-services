@@ -27,10 +27,22 @@ class BareMetalAdminCluster extends \Google\Model
    * @var string
    */
   public $bareMetalVersion;
+  /**
+   * @var BinaryAuthorization
+   */
+  public $binaryAuthorization;
   protected $binaryAuthorizationType = BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
+  /**
+   * @var BareMetalAdminClusterOperationsConfig
+   */
+  public $clusterOperations;
   protected $clusterOperationsType = BareMetalAdminClusterOperationsConfig::class;
   protected $clusterOperationsDataType = '';
+  /**
+   * @var BareMetalAdminControlPlaneConfig
+   */
+  public $controlPlane;
   protected $controlPlaneType = BareMetalAdminControlPlaneConfig::class;
   protected $controlPlaneDataType = '';
   /**
@@ -53,44 +65,92 @@ class BareMetalAdminCluster extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var Fleet
+   */
+  public $fleet;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
+  /**
+   * @var BareMetalAdminLoadBalancerConfig
+   */
+  public $loadBalancer;
   protected $loadBalancerType = BareMetalAdminLoadBalancerConfig::class;
   protected $loadBalancerDataType = '';
   /**
    * @var string
    */
   public $localName;
+  /**
+   * @var BareMetalAdminMaintenanceConfig
+   */
+  public $maintenanceConfig;
   protected $maintenanceConfigType = BareMetalAdminMaintenanceConfig::class;
   protected $maintenanceConfigDataType = '';
+  /**
+   * @var BareMetalAdminMaintenanceStatus
+   */
+  public $maintenanceStatus;
   protected $maintenanceStatusType = BareMetalAdminMaintenanceStatus::class;
   protected $maintenanceStatusDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var BareMetalAdminNetworkConfig
+   */
+  public $networkConfig;
   protected $networkConfigType = BareMetalAdminNetworkConfig::class;
   protected $networkConfigDataType = '';
+  /**
+   * @var BareMetalAdminNodeAccessConfig
+   */
+  public $nodeAccessConfig;
   protected $nodeAccessConfigType = BareMetalAdminNodeAccessConfig::class;
   protected $nodeAccessConfigDataType = '';
+  /**
+   * @var BareMetalAdminWorkloadNodeConfig
+   */
+  public $nodeConfig;
   protected $nodeConfigType = BareMetalAdminWorkloadNodeConfig::class;
   protected $nodeConfigDataType = '';
+  /**
+   * @var BareMetalAdminOsEnvironmentConfig
+   */
+  public $osEnvironmentConfig;
   protected $osEnvironmentConfigType = BareMetalAdminOsEnvironmentConfig::class;
   protected $osEnvironmentConfigDataType = '';
+  /**
+   * @var BareMetalAdminProxyConfig
+   */
+  public $proxy;
   protected $proxyType = BareMetalAdminProxyConfig::class;
   protected $proxyDataType = '';
   /**
    * @var bool
    */
   public $reconciling;
+  /**
+   * @var BareMetalAdminSecurityConfig
+   */
+  public $securityConfig;
   protected $securityConfigType = BareMetalAdminSecurityConfig::class;
   protected $securityConfigDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var ResourceStatus
+   */
+  public $status;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var BareMetalAdminStorageConfig
+   */
+  public $storage;
   protected $storageType = BareMetalAdminStorageConfig::class;
   protected $storageDataType = '';
   /**
@@ -101,6 +161,10 @@ class BareMetalAdminCluster extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var ValidationCheck
+   */
+  public $validationCheck;
   protected $validationCheckType = ValidationCheck::class;
   protected $validationCheckDataType = '';
 

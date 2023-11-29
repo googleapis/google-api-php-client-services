@@ -20,14 +20,26 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalBgpLbConfig extends \Google\Collection
 {
   protected $collection_key = 'bgpPeerConfigs';
+  /**
+   * @var BareMetalLoadBalancerAddressPool[]
+   */
+  public $addressPools;
   protected $addressPoolsType = BareMetalLoadBalancerAddressPool::class;
   protected $addressPoolsDataType = 'array';
   /**
    * @var string
    */
   public $asn;
+  /**
+   * @var BareMetalBgpPeerConfig[]
+   */
+  public $bgpPeerConfigs;
   protected $bgpPeerConfigsType = BareMetalBgpPeerConfig::class;
   protected $bgpPeerConfigsDataType = 'array';
+  /**
+   * @var BareMetalLoadBalancerNodePoolConfig
+   */
+  public $loadBalancerNodePoolConfig;
   protected $loadBalancerNodePoolConfigType = BareMetalLoadBalancerNodePoolConfig::class;
   protected $loadBalancerNodePoolConfigDataType = '';
 

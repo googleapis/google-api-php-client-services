@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class ResourceStatus extends \Google\Collection
 {
   protected $collection_key = 'conditions';
+  /**
+   * @var ResourceCondition[]
+   */
+  public $conditions;
   protected $conditionsType = ResourceCondition::class;
   protected $conditionsDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class VmwareNodePool extends \Google\Model
    * @var string[]
    */
   public $annotations;
+  /**
+   * @var VmwareNodeConfig
+   */
+  public $config;
   protected $configType = VmwareNodeConfig::class;
   protected $configDataType = '';
   /**
@@ -45,6 +49,10 @@ class VmwareNodePool extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var VmwareNodePoolAutoscalingConfig
+   */
+  public $nodePoolAutoscaling;
   protected $nodePoolAutoscalingType = VmwareNodePoolAutoscalingConfig::class;
   protected $nodePoolAutoscalingDataType = '';
   /**
@@ -59,6 +67,10 @@ class VmwareNodePool extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var ResourceStatus
+   */
+  public $status;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
   /**

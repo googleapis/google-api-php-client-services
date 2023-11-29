@@ -20,18 +20,30 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalNodePoolConfig extends \Google\Collection
 {
   protected $collection_key = 'taints';
+  /**
+   * @var BareMetalKubeletConfig
+   */
+  public $kubeletConfig;
   protected $kubeletConfigType = BareMetalKubeletConfig::class;
   protected $kubeletConfigDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var BareMetalNodeConfig[]
+   */
+  public $nodeConfigs;
   protected $nodeConfigsType = BareMetalNodeConfig::class;
   protected $nodeConfigsDataType = 'array';
   /**
    * @var string
    */
   public $operatingSystem;
+  /**
+   * @var NodeTaint[]
+   */
+  public $taints;
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
 

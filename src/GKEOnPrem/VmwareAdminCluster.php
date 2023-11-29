@@ -19,22 +19,42 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareAdminCluster extends \Google\Model
 {
+  /**
+   * @var VmwareAdminAddonNodeConfig
+   */
+  public $addonNode;
   protected $addonNodeType = VmwareAdminAddonNodeConfig::class;
   protected $addonNodeDataType = '';
   /**
    * @var string[]
    */
   public $annotations;
+  /**
+   * @var VmwareAAGConfig
+   */
+  public $antiAffinityGroups;
   protected $antiAffinityGroupsType = VmwareAAGConfig::class;
   protected $antiAffinityGroupsDataType = '';
+  /**
+   * @var VmwareAdminAuthorizationConfig
+   */
+  public $authorization;
   protected $authorizationType = VmwareAdminAuthorizationConfig::class;
   protected $authorizationDataType = '';
+  /**
+   * @var VmwareAutoRepairConfig
+   */
+  public $autoRepairConfig;
   protected $autoRepairConfigType = VmwareAutoRepairConfig::class;
   protected $autoRepairConfigDataType = '';
   /**
    * @var string
    */
   public $bootstrapClusterMembership;
+  /**
+   * @var VmwareAdminControlPlaneNodeConfig
+   */
+  public $controlPlaneNode;
   protected $controlPlaneNodeType = VmwareAdminControlPlaneNodeConfig::class;
   protected $controlPlaneNodeDataType = '';
   /**
@@ -53,12 +73,20 @@ class VmwareAdminCluster extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var Fleet
+   */
+  public $fleet;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
   /**
    * @var string
    */
   public $imageType;
+  /**
+   * @var VmwareAdminLoadBalancerConfig
+   */
+  public $loadBalancer;
   protected $loadBalancerType = VmwareAdminLoadBalancerConfig::class;
   protected $loadBalancerDataType = '';
   /**
@@ -69,14 +97,26 @@ class VmwareAdminCluster extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var VmwareAdminNetworkConfig
+   */
+  public $networkConfig;
   protected $networkConfigType = VmwareAdminNetworkConfig::class;
   protected $networkConfigDataType = '';
   /**
    * @var string
    */
   public $onPremVersion;
+  /**
+   * @var VmwarePlatformConfig
+   */
+  public $platformConfig;
   protected $platformConfigType = VmwarePlatformConfig::class;
   protected $platformConfigDataType = '';
+  /**
+   * @var VmwareAdminPreparedSecretsConfig
+   */
+  public $preparedSecrets;
   protected $preparedSecretsType = VmwareAdminPreparedSecretsConfig::class;
   protected $preparedSecretsDataType = '';
   /**
@@ -87,6 +127,10 @@ class VmwareAdminCluster extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var ResourceStatus
+   */
+  public $status;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
   /**
@@ -97,6 +141,10 @@ class VmwareAdminCluster extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VmwareAdminVCenterConfig
+   */
+  public $vcenter;
   protected $vcenterType = VmwareAdminVCenterConfig::class;
   protected $vcenterDataType = '';
 

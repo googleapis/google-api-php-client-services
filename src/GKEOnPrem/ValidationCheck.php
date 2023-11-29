@@ -27,6 +27,10 @@ class ValidationCheck extends \Google\Model
    * @var string
    */
   public $scenario;
+  /**
+   * @var ValidationCheckStatus
+   */
+  public $status;
   protected $statusType = ValidationCheckStatus::class;
   protected $statusDataType = '';
 

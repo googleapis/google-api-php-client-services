@@ -19,14 +19,34 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareLoadBalancerConfig extends \Google\Model
 {
+  /**
+   * @var VmwareF5BigIpConfig
+   */
+  public $f5Config;
   protected $f5ConfigType = VmwareF5BigIpConfig::class;
   protected $f5ConfigDataType = '';
+  /**
+   * @var VmwareManualLbConfig
+   */
+  public $manualLbConfig;
   protected $manualLbConfigType = VmwareManualLbConfig::class;
   protected $manualLbConfigDataType = '';
+  /**
+   * @var VmwareMetalLbConfig
+   */
+  public $metalLbConfig;
   protected $metalLbConfigType = VmwareMetalLbConfig::class;
   protected $metalLbConfigDataType = '';
+  /**
+   * @var VmwareSeesawConfig
+   */
+  public $seesawConfig;
   protected $seesawConfigType = VmwareSeesawConfig::class;
   protected $seesawConfigDataType = '';
+  /**
+   * @var VmwareVipConfig
+   */
+  public $vipConfig;
   protected $vipConfigType = VmwareVipConfig::class;
   protected $vipConfigDataType = '';
 

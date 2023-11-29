@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class ValidationCheckStatus extends \Google\Collection
 {
   protected $collection_key = 'result';
+  /**
+   * @var ValidationCheckResult[]
+   */
+  public $result;
   protected $resultType = ValidationCheckResult::class;
   protected $resultDataType = 'array';
 

@@ -35,10 +35,22 @@ class BareMetalCluster extends \Google\Model
    * @var string
    */
   public $bareMetalVersion;
+  /**
+   * @var BinaryAuthorization
+   */
+  public $binaryAuthorization;
   protected $binaryAuthorizationType = BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
+  /**
+   * @var BareMetalClusterOperationsConfig
+   */
+  public $clusterOperations;
   protected $clusterOperationsType = BareMetalClusterOperationsConfig::class;
   protected $clusterOperationsDataType = '';
+  /**
+   * @var BareMetalControlPlaneConfig
+   */
+  public $controlPlane;
   protected $controlPlaneType = BareMetalControlPlaneConfig::class;
   protected $controlPlaneDataType = '';
   /**
@@ -61,44 +73,92 @@ class BareMetalCluster extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var Fleet
+   */
+  public $fleet;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
+  /**
+   * @var BareMetalLoadBalancerConfig
+   */
+  public $loadBalancer;
   protected $loadBalancerType = BareMetalLoadBalancerConfig::class;
   protected $loadBalancerDataType = '';
   /**
    * @var string
    */
   public $localName;
+  /**
+   * @var BareMetalMaintenanceConfig
+   */
+  public $maintenanceConfig;
   protected $maintenanceConfigType = BareMetalMaintenanceConfig::class;
   protected $maintenanceConfigDataType = '';
+  /**
+   * @var BareMetalMaintenanceStatus
+   */
+  public $maintenanceStatus;
   protected $maintenanceStatusType = BareMetalMaintenanceStatus::class;
   protected $maintenanceStatusDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var BareMetalNetworkConfig
+   */
+  public $networkConfig;
   protected $networkConfigType = BareMetalNetworkConfig::class;
   protected $networkConfigDataType = '';
+  /**
+   * @var BareMetalNodeAccessConfig
+   */
+  public $nodeAccessConfig;
   protected $nodeAccessConfigType = BareMetalNodeAccessConfig::class;
   protected $nodeAccessConfigDataType = '';
+  /**
+   * @var BareMetalWorkloadNodeConfig
+   */
+  public $nodeConfig;
   protected $nodeConfigType = BareMetalWorkloadNodeConfig::class;
   protected $nodeConfigDataType = '';
+  /**
+   * @var BareMetalOsEnvironmentConfig
+   */
+  public $osEnvironmentConfig;
   protected $osEnvironmentConfigType = BareMetalOsEnvironmentConfig::class;
   protected $osEnvironmentConfigDataType = '';
+  /**
+   * @var BareMetalProxyConfig
+   */
+  public $proxy;
   protected $proxyType = BareMetalProxyConfig::class;
   protected $proxyDataType = '';
   /**
    * @var bool
    */
   public $reconciling;
+  /**
+   * @var BareMetalSecurityConfig
+   */
+  public $securityConfig;
   protected $securityConfigType = BareMetalSecurityConfig::class;
   protected $securityConfigDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var ResourceStatus
+   */
+  public $status;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var BareMetalStorageConfig
+   */
+  public $storage;
   protected $storageType = BareMetalStorageConfig::class;
   protected $storageDataType = '';
   /**
@@ -109,8 +169,16 @@ class BareMetalCluster extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var BareMetalClusterUpgradePolicy
+   */
+  public $upgradePolicy;
   protected $upgradePolicyType = BareMetalClusterUpgradePolicy::class;
   protected $upgradePolicyDataType = '';
+  /**
+   * @var ValidationCheck
+   */
+  public $validationCheck;
   protected $validationCheckType = ValidationCheck::class;
   protected $validationCheckDataType = '';
 

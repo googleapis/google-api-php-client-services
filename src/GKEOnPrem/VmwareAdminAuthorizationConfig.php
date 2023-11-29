@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class VmwareAdminAuthorizationConfig extends \Google\Collection
 {
   protected $collection_key = 'viewerUsers';
+  /**
+   * @var ClusterUser[]
+   */
+  public $viewerUsers;
   protected $viewerUsersType = ClusterUser::class;
   protected $viewerUsersDataType = 'array';
 

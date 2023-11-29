@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalVersionInfo extends \Google\Collection
 {
   protected $collection_key = 'dependencies';
+  /**
+   * @var UpgradeDependency[]
+   */
+  public $dependencies;
   protected $dependenciesType = UpgradeDependency::class;
   protected $dependenciesDataType = 'array';
   /**

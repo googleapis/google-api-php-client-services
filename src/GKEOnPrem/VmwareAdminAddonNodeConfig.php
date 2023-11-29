@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareAdminAddonNodeConfig extends \Google\Model
 {
+  /**
+   * @var VmwareAutoResizeConfig
+   */
+  public $autoResizeConfig;
   protected $autoResizeConfigType = VmwareAutoResizeConfig::class;
   protected $autoResizeConfigDataType = '';
 

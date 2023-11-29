@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalNodePoolUpgradePolicy extends \Google\Model
 {
+  /**
+   * @var BareMetalParallelUpgradeConfig
+   */
+  public $parallelUpgradeConfig;
   protected $parallelUpgradeConfigType = BareMetalParallelUpgradeConfig::class;
   protected $parallelUpgradeConfigDataType = '';
 

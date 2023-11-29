@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareAdminHAControlPlaneConfig extends \Google\Model
 {
+  /**
+   * @var VmwareIpBlock
+   */
+  public $controlPlaneIpBlock;
   protected $controlPlaneIpBlockType = VmwareIpBlock::class;
   protected $controlPlaneIpBlockDataType = '';
 

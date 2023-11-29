@@ -19,6 +19,10 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalControlPlaneNodePoolConfig extends \Google\Model
 {
+  /**
+   * @var BareMetalNodePoolConfig
+   */
+  public $nodePoolConfig;
   protected $nodePoolConfigType = BareMetalNodePoolConfig::class;
   protected $nodePoolConfigDataType = '';
 
