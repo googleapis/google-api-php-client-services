@@ -28,6 +28,10 @@ class ListThreadsResponse extends \Google\Collection
    * @var string
    */
   public $resultSizeEstimate;
+  /**
+   * @var Thread[]
+   */
+  public $threads;
   protected $threadsType = Thread::class;
   protected $threadsDataType = 'array';
 

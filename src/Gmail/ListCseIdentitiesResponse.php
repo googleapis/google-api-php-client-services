@@ -20,6 +20,10 @@ namespace Google\Service\Gmail;
 class ListCseIdentitiesResponse extends \Google\Collection
 {
   protected $collection_key = 'cseIdentities';
+  /**
+   * @var CseIdentity[]
+   */
+  public $cseIdentities;
   protected $cseIdentitiesType = CseIdentity::class;
   protected $cseIdentitiesDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Gmail;
 class ListCseKeyPairsResponse extends \Google\Collection
 {
   protected $collection_key = 'cseKeyPairs';
+  /**
+   * @var CseKeyPair[]
+   */
+  public $cseKeyPairs;
   protected $cseKeyPairsType = CseKeyPair::class;
   protected $cseKeyPairsDataType = 'array';
   /**

@@ -28,6 +28,10 @@ class Thread extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Message[]
+   */
+  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**

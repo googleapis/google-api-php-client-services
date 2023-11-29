@@ -20,12 +20,20 @@ namespace Google\Service\Gmail;
 class MessagePart extends \Google\Collection
 {
   protected $collection_key = 'parts';
+  /**
+   * @var MessagePartBody
+   */
+  public $body;
   protected $bodyType = MessagePartBody::class;
   protected $bodyDataType = '';
   /**
    * @var string
    */
   public $filename;
+  /**
+   * @var MessagePartHeader[]
+   */
+  public $headers;
   protected $headersType = MessagePartHeader::class;
   protected $headersDataType = 'array';
   /**
@@ -36,6 +44,10 @@ class MessagePart extends \Google\Collection
    * @var string
    */
   public $partId;
+  /**
+   * @var MessagePart[]
+   */
+  public $parts;
   protected $partsType = MessagePart::class;
   protected $partsDataType = 'array';
 

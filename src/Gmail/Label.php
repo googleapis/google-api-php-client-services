@@ -19,6 +19,10 @@ namespace Google\Service\Gmail;
 
 class Label extends \Google\Model
 {
+  /**
+   * @var LabelColor
+   */
+  public $color;
   protected $colorType = LabelColor::class;
   protected $colorDataType = '';
   /**

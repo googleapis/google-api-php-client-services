@@ -23,6 +23,10 @@ class Draft extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var Message
+   */
+  public $message;
   protected $messageType = Message::class;
   protected $messageDataType = '';
 

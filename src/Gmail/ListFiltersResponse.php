@@ -20,6 +20,10 @@ namespace Google\Service\Gmail;
 class ListFiltersResponse extends \Google\Collection
 {
   protected $collection_key = 'filter';
+  /**
+   * @var Filter[]
+   */
+  public $filter;
   protected $filterType = Filter::class;
   protected $filterDataType = 'array';
 

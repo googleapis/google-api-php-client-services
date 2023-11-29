@@ -20,6 +20,10 @@ namespace Google\Service\Gmail;
 class ListSendAsResponse extends \Google\Collection
 {
   protected $collection_key = 'sendAs';
+  /**
+   * @var SendAs[]
+   */
+  public $sendAs;
   protected $sendAsType = SendAs::class;
   protected $sendAsDataType = 'array';
 

@@ -24,14 +24,34 @@ class History extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var HistoryLabelAdded[]
+   */
+  public $labelsAdded;
   protected $labelsAddedType = HistoryLabelAdded::class;
   protected $labelsAddedDataType = 'array';
+  /**
+   * @var HistoryLabelRemoved[]
+   */
+  public $labelsRemoved;
   protected $labelsRemovedType = HistoryLabelRemoved::class;
   protected $labelsRemovedDataType = 'array';
+  /**
+   * @var Message[]
+   */
+  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
+  /**
+   * @var HistoryMessageAdded[]
+   */
+  public $messagesAdded;
   protected $messagesAddedType = HistoryMessageAdded::class;
   protected $messagesAddedDataType = 'array';
+  /**
+   * @var HistoryMessageDeleted[]
+   */
+  public $messagesDeleted;
   protected $messagesDeletedType = HistoryMessageDeleted::class;
   protected $messagesDeletedDataType = 'array';
 

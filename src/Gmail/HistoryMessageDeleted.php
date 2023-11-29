@@ -19,6 +19,10 @@ namespace Google\Service\Gmail;
 
 class HistoryMessageDeleted extends \Google\Model
 {
+  /**
+   * @var Message
+   */
+  public $message;
   protected $messageType = Message::class;
   protected $messageDataType = '';
 

@@ -43,6 +43,10 @@ class SendAs extends \Google\Model
    * @var string
    */
   public $signature;
+  /**
+   * @var SmtpMsa
+   */
+  public $smtpMsa;
   protected $smtpMsaType = SmtpMsa::class;
   protected $smtpMsaDataType = '';
   /**
