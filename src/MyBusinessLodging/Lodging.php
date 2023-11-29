@@ -20,52 +20,140 @@ namespace Google\Service\MyBusinessLodging;
 class Lodging extends \Google\Collection
 {
   protected $collection_key = 'guestUnits';
+  /**
+   * @var Accessibility
+   */
+  public $accessibility;
   protected $accessibilityType = Accessibility::class;
   protected $accessibilityDataType = '';
+  /**
+   * @var Activities
+   */
+  public $activities;
   protected $activitiesType = Activities::class;
   protected $activitiesDataType = '';
+  /**
+   * @var GuestUnitFeatures
+   */
+  public $allUnits;
   protected $allUnitsType = GuestUnitFeatures::class;
   protected $allUnitsDataType = '';
+  /**
+   * @var Business
+   */
+  public $business;
   protected $businessType = Business::class;
   protected $businessDataType = '';
+  /**
+   * @var LivingArea
+   */
+  public $commonLivingArea;
   protected $commonLivingAreaType = LivingArea::class;
   protected $commonLivingAreaDataType = '';
+  /**
+   * @var Connectivity
+   */
+  public $connectivity;
   protected $connectivityType = Connectivity::class;
   protected $connectivityDataType = '';
+  /**
+   * @var Families
+   */
+  public $families;
   protected $familiesType = Families::class;
   protected $familiesDataType = '';
+  /**
+   * @var FoodAndDrink
+   */
+  public $foodAndDrink;
   protected $foodAndDrinkType = FoodAndDrink::class;
   protected $foodAndDrinkDataType = '';
+  /**
+   * @var GuestUnitType[]
+   */
+  public $guestUnits;
   protected $guestUnitsType = GuestUnitType::class;
   protected $guestUnitsDataType = 'array';
+  /**
+   * @var HealthAndSafety
+   */
+  public $healthAndSafety;
   protected $healthAndSafetyType = HealthAndSafety::class;
   protected $healthAndSafetyDataType = '';
+  /**
+   * @var Housekeeping
+   */
+  public $housekeeping;
   protected $housekeepingType = Housekeeping::class;
   protected $housekeepingDataType = '';
+  /**
+   * @var LodgingMetadata
+   */
+  public $metadata;
   protected $metadataType = LodgingMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Parking
+   */
+  public $parking;
   protected $parkingType = Parking::class;
   protected $parkingDataType = '';
+  /**
+   * @var Pets
+   */
+  public $pets;
   protected $petsType = Pets::class;
   protected $petsDataType = '';
+  /**
+   * @var Policies
+   */
+  public $policies;
   protected $policiesType = Policies::class;
   protected $policiesDataType = '';
+  /**
+   * @var Pools
+   */
+  public $pools;
   protected $poolsType = Pools::class;
   protected $poolsDataType = '';
+  /**
+   * @var Property
+   */
+  public $property;
   protected $propertyType = Property::class;
   protected $propertyDataType = '';
+  /**
+   * @var Services
+   */
+  public $services;
   protected $servicesType = Services::class;
   protected $servicesDataType = '';
+  /**
+   * @var GuestUnitFeatures
+   */
+  public $someUnits;
   protected $someUnitsType = GuestUnitFeatures::class;
   protected $someUnitsDataType = '';
+  /**
+   * @var Sustainability
+   */
+  public $sustainability;
   protected $sustainabilityType = Sustainability::class;
   protected $sustainabilityDataType = '';
+  /**
+   * @var Transportation
+   */
+  public $transportation;
   protected $transportationType = Transportation::class;
   protected $transportationDataType = '';
+  /**
+   * @var Wellness
+   */
+  public $wellness;
   protected $wellnessType = Wellness::class;
   protected $wellnessDataType = '';
 

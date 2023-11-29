@@ -84,6 +84,10 @@ class Services extends \Google\Collection
    * @var string
    */
   public $giftShopException;
+  /**
+   * @var LanguageSpoken[]
+   */
+  public $languagesSpoken;
   protected $languagesSpokenType = LanguageSpoken::class;
   protected $languagesSpokenDataType = 'array';
   /**

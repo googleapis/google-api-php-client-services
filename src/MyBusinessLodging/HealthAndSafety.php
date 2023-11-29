@@ -19,14 +19,34 @@ namespace Google\Service\MyBusinessLodging;
 
 class HealthAndSafety extends \Google\Model
 {
+  /**
+   * @var EnhancedCleaning
+   */
+  public $enhancedCleaning;
   protected $enhancedCleaningType = EnhancedCleaning::class;
   protected $enhancedCleaningDataType = '';
+  /**
+   * @var IncreasedFoodSafety
+   */
+  public $increasedFoodSafety;
   protected $increasedFoodSafetyType = IncreasedFoodSafety::class;
   protected $increasedFoodSafetyDataType = '';
+  /**
+   * @var MinimizedContact
+   */
+  public $minimizedContact;
   protected $minimizedContactType = MinimizedContact::class;
   protected $minimizedContactDataType = '';
+  /**
+   * @var PersonalProtection
+   */
+  public $personalProtection;
   protected $personalProtectionType = PersonalProtection::class;
   protected $personalProtectionDataType = '';
+  /**
+   * @var PhysicalDistancing
+   */
+  public $physicalDistancing;
   protected $physicalDistancingType = PhysicalDistancing::class;
   protected $physicalDistancingDataType = '';
 

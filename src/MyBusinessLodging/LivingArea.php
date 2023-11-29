@@ -19,14 +19,34 @@ namespace Google\Service\MyBusinessLodging;
 
 class LivingArea extends \Google\Model
 {
+  /**
+   * @var LivingAreaAccessibility
+   */
+  public $accessibility;
   protected $accessibilityType = LivingAreaAccessibility::class;
   protected $accessibilityDataType = '';
+  /**
+   * @var LivingAreaEating
+   */
+  public $eating;
   protected $eatingType = LivingAreaEating::class;
   protected $eatingDataType = '';
+  /**
+   * @var LivingAreaFeatures
+   */
+  public $features;
   protected $featuresType = LivingAreaFeatures::class;
   protected $featuresDataType = '';
+  /**
+   * @var LivingAreaLayout
+   */
+  public $layout;
   protected $layoutType = LivingAreaLayout::class;
   protected $layoutDataType = '';
+  /**
+   * @var LivingAreaSleeping
+   */
+  public $sleeping;
   protected $sleepingType = LivingAreaSleeping::class;
   protected $sleepingDataType = '';
 

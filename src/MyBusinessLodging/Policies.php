@@ -35,12 +35,20 @@ class Policies extends \Google\Model
    * @var string
    */
   public $allInclusiveOnlyException;
+  /**
+   * @var TimeOfDay
+   */
+  public $checkinTime;
   protected $checkinTimeType = TimeOfDay::class;
   protected $checkinTimeDataType = '';
   /**
    * @var string
    */
   public $checkinTimeException;
+  /**
+   * @var TimeOfDay
+   */
+  public $checkoutTime;
   protected $checkoutTimeType = TimeOfDay::class;
   protected $checkoutTimeDataType = '';
   /**
@@ -71,6 +79,10 @@ class Policies extends \Google\Model
    * @var string
    */
   public $maxKidsStayFreeCountException;
+  /**
+   * @var PaymentOptions
+   */
+  public $paymentOptions;
   protected $paymentOptionsType = PaymentOptions::class;
   protected $paymentOptionsDataType = '';
   /**

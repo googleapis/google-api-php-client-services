@@ -19,14 +19,34 @@ namespace Google\Service\MyBusinessLodging;
 
 class Sustainability extends \Google\Model
 {
+  /**
+   * @var EnergyEfficiency
+   */
+  public $energyEfficiency;
   protected $energyEfficiencyType = EnergyEfficiency::class;
   protected $energyEfficiencyDataType = '';
+  /**
+   * @var SustainabilityCertifications
+   */
+  public $sustainabilityCertifications;
   protected $sustainabilityCertificationsType = SustainabilityCertifications::class;
   protected $sustainabilityCertificationsDataType = '';
+  /**
+   * @var SustainableSourcing
+   */
+  public $sustainableSourcing;
   protected $sustainableSourcingType = SustainableSourcing::class;
   protected $sustainableSourcingDataType = '';
+  /**
+   * @var WasteReduction
+   */
+  public $wasteReduction;
   protected $wasteReductionType = WasteReduction::class;
   protected $wasteReductionDataType = '';
+  /**
+   * @var WaterConservation
+   */
+  public $waterConservation;
   protected $waterConservationType = WaterConservation::class;
   protected $waterConservationDataType = '';
 
