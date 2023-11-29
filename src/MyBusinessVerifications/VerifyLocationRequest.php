@@ -19,6 +19,10 @@ namespace Google\Service\MyBusinessVerifications;
 
 class VerifyLocationRequest extends \Google\Model
 {
+  /**
+   * @var ServiceBusinessContext
+   */
+  public $context;
   protected $contextType = ServiceBusinessContext::class;
   protected $contextDataType = '';
   /**
@@ -41,6 +45,10 @@ class VerifyLocationRequest extends \Google\Model
    * @var string
    */
   public $phoneNumber;
+  /**
+   * @var VerificationToken
+   */
+  public $token;
   protected $tokenType = VerificationToken::class;
   protected $tokenDataType = '';
 

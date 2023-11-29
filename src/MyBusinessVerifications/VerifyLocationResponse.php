@@ -19,6 +19,10 @@ namespace Google\Service\MyBusinessVerifications;
 
 class VerifyLocationResponse extends \Google\Model
 {
+  /**
+   * @var Verification
+   */
+  public $verification;
   protected $verificationType = Verification::class;
   protected $verificationDataType = '';
 

@@ -19,12 +19,20 @@ namespace Google\Service\MyBusinessVerifications;
 
 class VerificationOption extends \Google\Model
 {
+  /**
+   * @var AddressVerificationData
+   */
+  public $addressData;
   protected $addressDataType = AddressVerificationData::class;
   protected $addressDataDataType = '';
   /**
    * @var string
    */
   public $announcement;
+  /**
+   * @var EmailVerificationData
+   */
+  public $emailData;
   protected $emailDataType = EmailVerificationData::class;
   protected $emailDataDataType = '';
   /**

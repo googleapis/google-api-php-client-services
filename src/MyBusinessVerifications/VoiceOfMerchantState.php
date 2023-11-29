@@ -19,6 +19,10 @@ namespace Google\Service\MyBusinessVerifications;
 
 class VoiceOfMerchantState extends \Google\Model
 {
+  /**
+   * @var ComplyWithGuidelines
+   */
+  public $complyWithGuidelines;
   protected $complyWithGuidelinesType = ComplyWithGuidelines::class;
   protected $complyWithGuidelinesDataType = '';
   /**
@@ -29,10 +33,22 @@ class VoiceOfMerchantState extends \Google\Model
    * @var bool
    */
   public $hasVoiceOfMerchant;
+  /**
+   * @var ResolveOwnershipConflict
+   */
+  public $resolveOwnershipConflict;
   protected $resolveOwnershipConflictType = ResolveOwnershipConflict::class;
   protected $resolveOwnershipConflictDataType = '';
+  /**
+   * @var Verify
+   */
+  public $verify;
   protected $verifyType = Verify::class;
   protected $verifyDataType = '';
+  /**
+   * @var WaitForVoiceOfMerchant
+   */
+  public $waitForVoiceOfMerchant;
   protected $waitForVoiceOfMerchantType = WaitForVoiceOfMerchant::class;
   protected $waitForVoiceOfMerchantDataType = '';
 
