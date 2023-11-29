@@ -28,6 +28,10 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $availabilityType;
+  /**
+   * @var ClientConnectionConfig
+   */
+  public $clientConnectionConfig;
   protected $clientConnectionConfigType = ClientConnectionConfig::class;
   protected $clientConnectionConfigDataType = '';
   /**
@@ -66,16 +70,32 @@ class Instance extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var MachineConfig
+   */
+  public $machineConfig;
   protected $machineConfigType = MachineConfig::class;
   protected $machineConfigDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Node[]
+   */
+  public $nodes;
   protected $nodesType = Node::class;
   protected $nodesDataType = 'array';
+  /**
+   * @var QueryInsightsInstanceConfig
+   */
+  public $queryInsightsConfig;
   protected $queryInsightsConfigType = QueryInsightsInstanceConfig::class;
   protected $queryInsightsConfigDataType = '';
+  /**
+   * @var ReadPoolConfig
+   */
+  public $readPoolConfig;
   protected $readPoolConfigType = ReadPoolConfig::class;
   protected $readPoolConfigDataType = '';
   /**
@@ -94,6 +114,10 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var Node
+   */
+  public $writableNode;
   protected $writableNodeType = Node::class;
   protected $writableNodeDataType = '';
 

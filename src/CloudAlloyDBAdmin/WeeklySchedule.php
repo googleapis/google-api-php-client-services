@@ -24,6 +24,10 @@ class WeeklySchedule extends \Google\Collection
    * @var string[]
    */
   public $daysOfWeek;
+  /**
+   * @var GoogleTypeTimeOfDay[]
+   */
+  public $startTimes;
   protected $startTimesType = GoogleTypeTimeOfDay::class;
   protected $startTimesDataType = 'array';
 

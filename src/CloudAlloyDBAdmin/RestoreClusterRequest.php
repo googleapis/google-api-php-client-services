@@ -19,14 +19,26 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class RestoreClusterRequest extends \Google\Model
 {
+  /**
+   * @var BackupSource
+   */
+  public $backupSource;
   protected $backupSourceType = BackupSource::class;
   protected $backupSourceDataType = '';
+  /**
+   * @var Cluster
+   */
+  public $cluster;
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**
    * @var string
    */
   public $clusterId;
+  /**
+   * @var ContinuousBackupSource
+   */
+  public $continuousBackupSource;
   protected $continuousBackupSourceType = ContinuousBackupSource::class;
   protected $continuousBackupSourceDataType = '';
   /**

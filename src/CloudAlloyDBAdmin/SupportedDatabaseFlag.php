@@ -28,6 +28,10 @@ class SupportedDatabaseFlag extends \Google\Collection
    * @var string
    */
   public $flagName;
+  /**
+   * @var IntegerRestrictions
+   */
+  public $integerRestrictions;
   protected $integerRestrictionsType = IntegerRestrictions::class;
   protected $integerRestrictionsDataType = '';
   /**
@@ -38,6 +42,10 @@ class SupportedDatabaseFlag extends \Google\Collection
    * @var bool
    */
   public $requiresDbRestart;
+  /**
+   * @var StringRestrictions
+   */
+  public $stringRestrictions;
   protected $stringRestrictionsType = StringRestrictions::class;
   protected $stringRestrictionsDataType = '';
   /**

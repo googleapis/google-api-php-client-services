@@ -27,10 +27,22 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
    * @var string
    */
   public $feedType;
+  /**
+   * @var StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData
+   */
+  public $resourceHealthSignalData;
   protected $resourceHealthSignalDataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData::class;
   protected $resourceHealthSignalDataDataType = '';
+  /**
+   * @var StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
+   */
+  public $resourceId;
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
+  /**
+   * @var StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata
+   */
+  public $resourceMetadata;
   protected $resourceMetadataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata::class;
   protected $resourceMetadataDataType = '';
 

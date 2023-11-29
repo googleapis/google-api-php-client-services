@@ -23,6 +23,10 @@ class ClientConnectionConfig extends \Google\Model
    * @var bool
    */
   public $requireConnectors;
+  /**
+   * @var SslConfig
+   */
+  public $sslConfig;
   protected $sslConfigType = SslConfig::class;
   protected $sslConfigDataType = '';
 
