@@ -72,6 +72,10 @@ class IdentitytoolkitRelyingpartyUploadAccountRequest extends \Google\Collection
    * @var string
    */
   public $targetProjectId;
+  /**
+   * @var UserInfo[]
+   */
+  public $users;
   protected $usersType = UserInfo::class;
   protected $usersDataType = 'array';
 

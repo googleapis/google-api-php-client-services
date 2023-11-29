@@ -60,6 +60,10 @@ class SetAccountInfoResponse extends \Google\Collection
    * @var string
    */
   public $photoUrl;
+  /**
+   * @var SetAccountInfoResponseProviderUserInfo[]
+   */
+  public $providerUserInfo;
   protected $providerUserInfoType = SetAccountInfoResponseProviderUserInfo::class;
   protected $providerUserInfoDataType = 'array';
   /**

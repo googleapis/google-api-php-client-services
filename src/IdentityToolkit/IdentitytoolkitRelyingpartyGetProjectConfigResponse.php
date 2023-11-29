@@ -32,6 +32,10 @@ class IdentitytoolkitRelyingpartyGetProjectConfigResponse extends \Google\Collec
    * @var string[]
    */
   public $authorizedDomains;
+  /**
+   * @var EmailTemplate
+   */
+  public $changeEmailTemplate;
   protected $changeEmailTemplateType = EmailTemplate::class;
   protected $changeEmailTemplateDataType = '';
   /**
@@ -42,20 +46,36 @@ class IdentitytoolkitRelyingpartyGetProjectConfigResponse extends \Google\Collec
    * @var bool
    */
   public $enableAnonymousUser;
+  /**
+   * @var IdpConfig[]
+   */
+  public $idpConfig;
   protected $idpConfigType = IdpConfig::class;
   protected $idpConfigDataType = 'array';
+  /**
+   * @var EmailTemplate
+   */
+  public $legacyResetPasswordTemplate;
   protected $legacyResetPasswordTemplateType = EmailTemplate::class;
   protected $legacyResetPasswordTemplateDataType = '';
   /**
    * @var string
    */
   public $projectId;
+  /**
+   * @var EmailTemplate
+   */
+  public $resetPasswordTemplate;
   protected $resetPasswordTemplateType = EmailTemplate::class;
   protected $resetPasswordTemplateDataType = '';
   /**
    * @var bool
    */
   public $useEmailSending;
+  /**
+   * @var EmailTemplate
+   */
+  public $verifyEmailTemplate;
   protected $verifyEmailTemplateType = EmailTemplate::class;
   protected $verifyEmailTemplateDataType = '';
 

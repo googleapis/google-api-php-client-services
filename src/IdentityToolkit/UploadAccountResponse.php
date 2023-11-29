@@ -20,6 +20,10 @@ namespace Google\Service\IdentityToolkit;
 class UploadAccountResponse extends \Google\Collection
 {
   protected $collection_key = 'error';
+  /**
+   * @var UploadAccountResponseError[]
+   */
+  public $error;
   protected $errorType = UploadAccountResponseError::class;
   protected $errorDataType = 'array';
   /**
