@@ -35,6 +35,10 @@ class ApproveDecision extends \Google\Model
    * @var string
    */
   public $invalidateTime;
+  /**
+   * @var SignatureInfo
+   */
+  public $signatureInfo;
   protected $signatureInfoType = SignatureInfo::class;
   protected $signatureInfoDataType = '';
 
