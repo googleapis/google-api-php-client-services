@@ -20,6 +20,10 @@ namespace Google\Service\PostmasterTools;
 class ListDomainsResponse extends \Google\Collection
 {
   protected $collection_key = 'domains';
+  /**
+   * @var Domain[]
+   */
+  public $domains;
   protected $domainsType = Domain::class;
   protected $domainsDataType = 'array';
   /**

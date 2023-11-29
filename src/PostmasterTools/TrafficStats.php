@@ -20,6 +20,10 @@ namespace Google\Service\PostmasterTools;
 class TrafficStats extends \Google\Collection
 {
   protected $collection_key = 'spammyFeedbackLoops';
+  /**
+   * @var DeliveryError[]
+   */
+  public $deliveryErrors;
   protected $deliveryErrorsType = DeliveryError::class;
   protected $deliveryErrorsDataType = 'array';
   public $dkimSuccessRatio;
@@ -29,6 +33,10 @@ class TrafficStats extends \Google\Collection
    */
   public $domainReputation;
   public $inboundEncryptionRatio;
+  /**
+   * @var IpReputation[]
+   */
+  public $ipReputations;
   protected $ipReputationsType = IpReputation::class;
   protected $ipReputationsDataType = 'array';
   /**
@@ -36,6 +44,10 @@ class TrafficStats extends \Google\Collection
    */
   public $name;
   public $outboundEncryptionRatio;
+  /**
+   * @var FeedbackLoop[]
+   */
+  public $spammyFeedbackLoops;
   protected $spammyFeedbackLoopsType = FeedbackLoop::class;
   protected $spammyFeedbackLoopsDataType = 'array';
   public $spfSuccessRatio;
