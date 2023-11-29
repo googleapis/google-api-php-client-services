@@ -20,8 +20,16 @@ namespace Google\Service\AnalyticsData;
 class CheckCompatibilityResponse extends \Google\Collection
 {
   protected $collection_key = 'metricCompatibilities';
+  /**
+   * @var DimensionCompatibility[]
+   */
+  public $dimensionCompatibilities;
   protected $dimensionCompatibilitiesType = DimensionCompatibility::class;
   protected $dimensionCompatibilitiesDataType = 'array';
+  /**
+   * @var MetricCompatibility[]
+   */
+  public $metricCompatibilities;
   protected $metricCompatibilitiesType = MetricCompatibility::class;
   protected $metricCompatibilitiesDataType = 'array';
 

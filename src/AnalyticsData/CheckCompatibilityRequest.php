@@ -24,12 +24,28 @@ class CheckCompatibilityRequest extends \Google\Collection
    * @var string
    */
   public $compatibilityFilter;
+  /**
+   * @var FilterExpression
+   */
+  public $dimensionFilter;
   protected $dimensionFilterType = FilterExpression::class;
   protected $dimensionFilterDataType = '';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
+  /**
+   * @var FilterExpression
+   */
+  public $metricFilter;
   protected $metricFilterType = FilterExpression::class;
   protected $metricFilterDataType = '';
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
 

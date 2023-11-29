@@ -20,26 +20,54 @@ namespace Google\Service\AnalyticsData;
 class RunRealtimeReportResponse extends \Google\Collection
 {
   protected $collection_key = 'totals';
+  /**
+   * @var DimensionHeader[]
+   */
+  public $dimensionHeaders;
   protected $dimensionHeadersType = DimensionHeader::class;
   protected $dimensionHeadersDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Row[]
+   */
+  public $maximums;
   protected $maximumsType = Row::class;
   protected $maximumsDataType = 'array';
+  /**
+   * @var MetricHeader[]
+   */
+  public $metricHeaders;
   protected $metricHeadersType = MetricHeader::class;
   protected $metricHeadersDataType = 'array';
+  /**
+   * @var Row[]
+   */
+  public $minimums;
   protected $minimumsType = Row::class;
   protected $minimumsDataType = 'array';
+  /**
+   * @var PropertyQuota
+   */
+  public $propertyQuota;
   protected $propertyQuotaType = PropertyQuota::class;
   protected $propertyQuotaDataType = '';
   /**
    * @var int
    */
   public $rowCount;
+  /**
+   * @var Row[]
+   */
+  public $rows;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
+  /**
+   * @var Row[]
+   */
+  public $totals;
   protected $totalsType = Row::class;
   protected $totalsDataType = 'array';
 

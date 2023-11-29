@@ -36,6 +36,10 @@ class Pivot extends \Google\Collection
    * @var string
    */
   public $offset;
+  /**
+   * @var OrderBy[]
+   */
+  public $orderBys;
   protected $orderBysType = OrderBy::class;
   protected $orderBysDataType = 'array';
 

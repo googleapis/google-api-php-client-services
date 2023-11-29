@@ -23,10 +23,22 @@ class OrderBy extends \Google\Model
    * @var bool
    */
   public $desc;
+  /**
+   * @var DimensionOrderBy
+   */
+  public $dimension;
   protected $dimensionType = DimensionOrderBy::class;
   protected $dimensionDataType = '';
+  /**
+   * @var MetricOrderBy
+   */
+  public $metric;
   protected $metricType = MetricOrderBy::class;
   protected $metricDataType = '';
+  /**
+   * @var PivotOrderBy
+   */
+  public $pivot;
   protected $pivotType = PivotOrderBy::class;
   protected $pivotDataType = '';
 

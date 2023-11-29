@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsData;
 class SchemaRestrictionResponse extends \Google\Collection
 {
   protected $collection_key = 'activeMetricRestrictions';
+  /**
+   * @var ActiveMetricRestriction[]
+   */
+  public $activeMetricRestrictions;
   protected $activeMetricRestrictionsType = ActiveMetricRestriction::class;
   protected $activeMetricRestrictionsDataType = 'array';
 

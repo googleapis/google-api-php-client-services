@@ -20,8 +20,16 @@ namespace Google\Service\AnalyticsData;
 class Row extends \Google\Collection
 {
   protected $collection_key = 'metricValues';
+  /**
+   * @var DimensionValue[]
+   */
+  public $dimensionValues;
   protected $dimensionValuesType = DimensionValue::class;
   protected $dimensionValuesDataType = 'array';
+  /**
+   * @var MetricValue[]
+   */
+  public $metricValues;
   protected $metricValuesType = MetricValue::class;
   protected $metricValuesDataType = 'array';
 

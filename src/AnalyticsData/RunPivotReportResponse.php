@@ -20,22 +20,50 @@ namespace Google\Service\AnalyticsData;
 class RunPivotReportResponse extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  /**
+   * @var Row[]
+   */
+  public $aggregates;
   protected $aggregatesType = Row::class;
   protected $aggregatesDataType = 'array';
+  /**
+   * @var DimensionHeader[]
+   */
+  public $dimensionHeaders;
   protected $dimensionHeadersType = DimensionHeader::class;
   protected $dimensionHeadersDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var ResponseMetaData
+   */
+  public $metadata;
   protected $metadataType = ResponseMetaData::class;
   protected $metadataDataType = '';
+  /**
+   * @var MetricHeader[]
+   */
+  public $metricHeaders;
   protected $metricHeadersType = MetricHeader::class;
   protected $metricHeadersDataType = 'array';
+  /**
+   * @var PivotHeader[]
+   */
+  public $pivotHeaders;
   protected $pivotHeadersType = PivotHeader::class;
   protected $pivotHeadersDataType = 'array';
+  /**
+   * @var PropertyQuota
+   */
+  public $propertyQuota;
   protected $propertyQuotaType = PropertyQuota::class;
   protected $propertyQuotaDataType = '';
+  /**
+   * @var Row[]
+   */
+  public $rows;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
 

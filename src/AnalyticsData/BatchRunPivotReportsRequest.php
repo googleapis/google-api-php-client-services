@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsData;
 class BatchRunPivotReportsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
+  /**
+   * @var RunPivotReportRequest[]
+   */
+  public $requests;
   protected $requestsType = RunPivotReportRequest::class;
   protected $requestsDataType = 'array';
 

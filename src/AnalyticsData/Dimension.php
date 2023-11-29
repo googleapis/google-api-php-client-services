@@ -19,6 +19,10 @@ namespace Google\Service\AnalyticsData;
 
 class Dimension extends \Google\Model
 {
+  /**
+   * @var DimensionExpression
+   */
+  public $dimensionExpression;
   protected $dimensionExpressionType = DimensionExpression::class;
   protected $dimensionExpressionDataType = '';
   /**

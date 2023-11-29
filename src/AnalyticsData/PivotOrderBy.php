@@ -24,6 +24,10 @@ class PivotOrderBy extends \Google\Collection
    * @var string
    */
   public $metricName;
+  /**
+   * @var PivotSelection[]
+   */
+  public $pivotSelections;
   protected $pivotSelectionsType = PivotSelection::class;
   protected $pivotSelectionsDataType = 'array';
 

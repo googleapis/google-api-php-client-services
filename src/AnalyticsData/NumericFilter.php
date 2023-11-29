@@ -23,6 +23,10 @@ class NumericFilter extends \Google\Model
    * @var string
    */
   public $operation;
+  /**
+   * @var NumericValue
+   */
+  public $value;
   protected $valueType = NumericValue::class;
   protected $valueDataType = '';
 

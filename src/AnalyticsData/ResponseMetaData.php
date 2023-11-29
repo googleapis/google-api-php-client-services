@@ -32,8 +32,16 @@ class ResponseMetaData extends \Google\Collection
    * @var string
    */
   public $emptyReason;
+  /**
+   * @var SamplingMetadata[]
+   */
+  public $samplingMetadatas;
   protected $samplingMetadatasType = SamplingMetadata::class;
   protected $samplingMetadatasDataType = 'array';
+  /**
+   * @var SchemaRestrictionResponse
+   */
+  public $schemaRestrictionResponse;
   protected $schemaRestrictionResponseType = SchemaRestrictionResponse::class;
   protected $schemaRestrictionResponseDataType = '';
   /**

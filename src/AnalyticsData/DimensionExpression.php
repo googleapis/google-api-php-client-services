@@ -19,10 +19,22 @@ namespace Google\Service\AnalyticsData;
 
 class DimensionExpression extends \Google\Model
 {
+  /**
+   * @var ConcatenateExpression
+   */
+  public $concatenate;
   protected $concatenateType = ConcatenateExpression::class;
   protected $concatenateDataType = '';
+  /**
+   * @var CaseExpression
+   */
+  public $lowerCase;
   protected $lowerCaseType = CaseExpression::class;
   protected $lowerCaseDataType = '';
+  /**
+   * @var CaseExpression
+   */
+  public $upperCase;
   protected $upperCaseType = CaseExpression::class;
   protected $upperCaseDataType = '';
 

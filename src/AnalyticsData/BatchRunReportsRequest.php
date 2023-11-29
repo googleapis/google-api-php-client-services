@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsData;
 class BatchRunReportsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
+  /**
+   * @var RunReportRequest[]
+   */
+  public $requests;
   protected $requestsType = RunReportRequest::class;
   protected $requestsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsData;
 class FilterExpressionList extends \Google\Collection
 {
   protected $collection_key = 'expressions';
+  /**
+   * @var FilterExpression[]
+   */
+  public $expressions;
   protected $expressionsType = FilterExpression::class;
   protected $expressionsDataType = 'array';
 

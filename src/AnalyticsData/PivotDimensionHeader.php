@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsData;
 class PivotDimensionHeader extends \Google\Collection
 {
   protected $collection_key = 'dimensionValues';
+  /**
+   * @var DimensionValue[]
+   */
+  public $dimensionValues;
   protected $dimensionValuesType = DimensionValue::class;
   protected $dimensionValuesDataType = 'array';
 

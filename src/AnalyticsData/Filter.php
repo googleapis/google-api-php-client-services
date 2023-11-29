@@ -19,16 +19,32 @@ namespace Google\Service\AnalyticsData;
 
 class Filter extends \Google\Model
 {
+  /**
+   * @var BetweenFilter
+   */
+  public $betweenFilter;
   protected $betweenFilterType = BetweenFilter::class;
   protected $betweenFilterDataType = '';
   /**
    * @var string
    */
   public $fieldName;
+  /**
+   * @var InListFilter
+   */
+  public $inListFilter;
   protected $inListFilterType = InListFilter::class;
   protected $inListFilterDataType = '';
+  /**
+   * @var NumericFilter
+   */
+  public $numericFilter;
   protected $numericFilterType = NumericFilter::class;
   protected $numericFilterDataType = '';
+  /**
+   * @var StringFilter
+   */
+  public $stringFilter;
   protected $stringFilterType = StringFilter::class;
   protected $stringFilterDataType = '';
 

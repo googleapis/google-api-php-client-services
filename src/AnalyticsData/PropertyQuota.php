@@ -19,16 +19,40 @@ namespace Google\Service\AnalyticsData;
 
 class PropertyQuota extends \Google\Model
 {
+  /**
+   * @var QuotaStatus
+   */
+  public $concurrentRequests;
   protected $concurrentRequestsType = QuotaStatus::class;
   protected $concurrentRequestsDataType = '';
+  /**
+   * @var QuotaStatus
+   */
+  public $potentiallyThresholdedRequestsPerHour;
   protected $potentiallyThresholdedRequestsPerHourType = QuotaStatus::class;
   protected $potentiallyThresholdedRequestsPerHourDataType = '';
+  /**
+   * @var QuotaStatus
+   */
+  public $serverErrorsPerProjectPerHour;
   protected $serverErrorsPerProjectPerHourType = QuotaStatus::class;
   protected $serverErrorsPerProjectPerHourDataType = '';
+  /**
+   * @var QuotaStatus
+   */
+  public $tokensPerDay;
   protected $tokensPerDayType = QuotaStatus::class;
   protected $tokensPerDayDataType = '';
+  /**
+   * @var QuotaStatus
+   */
+  public $tokensPerHour;
   protected $tokensPerHourType = QuotaStatus::class;
   protected $tokensPerHourDataType = '';
+  /**
+   * @var QuotaStatus
+   */
+  public $tokensPerProjectPerHour;
   protected $tokensPerProjectPerHourType = QuotaStatus::class;
   protected $tokensPerProjectPerHourDataType = '';
 
