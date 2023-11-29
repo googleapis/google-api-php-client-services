@@ -19,6 +19,10 @@ namespace Google\Service\BlockchainNodeEngine;
 
 class EthereumDetails extends \Google\Model
 {
+  /**
+   * @var EthereumEndpoints
+   */
+  public $additionalEndpoints;
   protected $additionalEndpointsType = EthereumEndpoints::class;
   protected $additionalEndpointsDataType = '';
   /**
@@ -41,6 +45,10 @@ class EthereumDetails extends \Google\Model
    * @var string
    */
   public $executionClient;
+  /**
+   * @var GethDetails
+   */
+  public $gethDetails;
   protected $gethDetailsType = GethDetails::class;
   protected $gethDetailsDataType = '';
   /**

@@ -23,12 +23,20 @@ class BlockchainNode extends \Google\Model
    * @var string
    */
   public $blockchainType;
+  /**
+   * @var ConnectionInfo
+   */
+  public $connectionInfo;
   protected $connectionInfoType = ConnectionInfo::class;
   protected $connectionInfoDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var EthereumDetails
+   */
+  public $ethereumDetails;
   protected $ethereumDetailsType = EthereumDetails::class;
   protected $ethereumDetailsDataType = '';
   /**
