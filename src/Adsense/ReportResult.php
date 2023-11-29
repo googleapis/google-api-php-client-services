@@ -20,20 +20,44 @@ namespace Google\Service\Adsense;
 class ReportResult extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var Row
+   */
+  public $averages;
   protected $averagesType = Row::class;
   protected $averagesDataType = '';
+  /**
+   * @var Date
+   */
+  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
+  /**
+   * @var Header[]
+   */
+  public $headers;
   protected $headersType = Header::class;
   protected $headersDataType = 'array';
+  /**
+   * @var Row[]
+   */
+  public $rows;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
+  /**
+   * @var Date
+   */
+  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   /**
    * @var string
    */
   public $totalMatchedRows;
+  /**
+   * @var Row
+   */
+  public $totals;
   protected $totalsType = Row::class;
   protected $totalsDataType = '';
   /**

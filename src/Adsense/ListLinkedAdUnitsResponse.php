@@ -20,6 +20,10 @@ namespace Google\Service\Adsense;
 class ListLinkedAdUnitsResponse extends \Google\Collection
 {
   protected $collection_key = 'adUnits';
+  /**
+   * @var AdUnit[]
+   */
+  public $adUnits;
   protected $adUnitsType = AdUnit::class;
   protected $adUnitsDataType = 'array';
   /**

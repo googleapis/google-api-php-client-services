@@ -20,6 +20,10 @@ namespace Google\Service\Adsense;
 class ListAdClientsResponse extends \Google\Collection
 {
   protected $collection_key = 'adClients';
+  /**
+   * @var AdClient[]
+   */
+  public $adClients;
   protected $adClientsType = AdClient::class;
   protected $adClientsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Adsense;
 class ListChildAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'accounts';
+  /**
+   * @var Account[]
+   */
+  public $accounts;
   protected $accountsType = Account::class;
   protected $accountsDataType = 'array';
   /**

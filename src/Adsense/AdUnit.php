@@ -19,6 +19,10 @@ namespace Google\Service\Adsense;
 
 class AdUnit extends \Google\Model
 {
+  /**
+   * @var ContentAdsSettings
+   */
+  public $contentAdsSettings;
   protected $contentAdsSettingsType = ContentAdsSettings::class;
   protected $contentAdsSettingsDataType = '';
   /**
