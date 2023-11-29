@@ -19,16 +19,40 @@ namespace Google\Service\GamesConfiguration;
 
 class GamesNumberAffixConfiguration extends \Google\Model
 {
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $few;
   protected $fewType = LocalizedStringBundle::class;
   protected $fewDataType = '';
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $many;
   protected $manyType = LocalizedStringBundle::class;
   protected $manyDataType = '';
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $one;
   protected $oneType = LocalizedStringBundle::class;
   protected $oneDataType = '';
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $other;
   protected $otherType = LocalizedStringBundle::class;
   protected $otherDataType = '';
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $two;
   protected $twoType = LocalizedStringBundle::class;
   protected $twoDataType = '';
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $zero;
   protected $zeroType = LocalizedStringBundle::class;
   protected $zeroDataType = '';
 

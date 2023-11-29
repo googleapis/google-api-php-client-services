@@ -19,6 +19,10 @@ namespace Google\Service\GamesConfiguration;
 
 class AchievementConfigurationDetail extends \Google\Model
 {
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $description;
   protected $descriptionType = LocalizedStringBundle::class;
   protected $descriptionDataType = '';
   /**
@@ -29,6 +33,10 @@ class AchievementConfigurationDetail extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $name;
   protected $nameType = LocalizedStringBundle::class;
   protected $nameDataType = '';
   /**

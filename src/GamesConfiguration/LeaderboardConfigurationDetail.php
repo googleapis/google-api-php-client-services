@@ -27,8 +27,16 @@ class LeaderboardConfigurationDetail extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var LocalizedStringBundle
+   */
+  public $name;
   protected $nameType = LocalizedStringBundle::class;
   protected $nameDataType = '';
+  /**
+   * @var GamesNumberFormatConfiguration
+   */
+  public $scoreFormat;
   protected $scoreFormatType = GamesNumberFormatConfiguration::class;
   protected $scoreFormatDataType = '';
   /**
