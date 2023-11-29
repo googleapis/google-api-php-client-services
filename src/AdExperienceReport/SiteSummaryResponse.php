@@ -19,8 +19,16 @@ namespace Google\Service\AdExperienceReport;
 
 class SiteSummaryResponse extends \Google\Model
 {
+  /**
+   * @var PlatformSummary
+   */
+  public $desktopSummary;
   protected $desktopSummaryType = PlatformSummary::class;
   protected $desktopSummaryDataType = '';
+  /**
+   * @var PlatformSummary
+   */
+  public $mobileSummary;
   protected $mobileSummaryType = PlatformSummary::class;
   protected $mobileSummaryDataType = '';
   /**
