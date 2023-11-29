@@ -19,6 +19,10 @@ namespace Google\Service\BigQueryConnectionService;
 
 class Connection extends \Google\Model
 {
+  /**
+   * @var CloudSqlProperties
+   */
+  public $cloudSql;
   protected $cloudSqlType = CloudSqlProperties::class;
   protected $cloudSqlDataType = '';
   /**

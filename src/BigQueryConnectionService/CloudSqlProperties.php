@@ -19,6 +19,10 @@ namespace Google\Service\BigQueryConnectionService;
 
 class CloudSqlProperties extends \Google\Model
 {
+  /**
+   * @var CloudSqlCredential
+   */
+  public $credential;
   protected $credentialType = CloudSqlCredential::class;
   protected $credentialDataType = '';
   /**
