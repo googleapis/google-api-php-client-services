@@ -20,6 +20,10 @@ namespace Google\Service\NetworkSecurity;
 class ClientTlsPolicy extends \Google\Collection
 {
   protected $collection_key = 'serverValidationCa';
+  /**
+   * @var GoogleCloudNetworksecurityV1CertificateProvider
+   */
+  public $clientCertificate;
   protected $clientCertificateType = GoogleCloudNetworksecurityV1CertificateProvider::class;
   protected $clientCertificateDataType = '';
   /**
@@ -38,6 +42,10 @@ class ClientTlsPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ValidationCA[]
+   */
+  public $serverValidationCa;
   protected $serverValidationCaType = ValidationCA::class;
   protected $serverValidationCaDataType = 'array';
   /**

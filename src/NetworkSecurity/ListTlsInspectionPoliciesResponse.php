@@ -24,6 +24,10 @@ class ListTlsInspectionPoliciesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TlsInspectionPolicy[]
+   */
+  public $tlsInspectionPolicies;
   protected $tlsInspectionPoliciesType = TlsInspectionPolicy::class;
   protected $tlsInspectionPoliciesDataType = 'array';
   /**

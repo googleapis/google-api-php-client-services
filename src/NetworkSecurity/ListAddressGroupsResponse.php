@@ -20,6 +20,10 @@ namespace Google\Service\NetworkSecurity;
 class ListAddressGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'addressGroups';
+  /**
+   * @var AddressGroup[]
+   */
+  public $addressGroups;
   protected $addressGroupsType = AddressGroup::class;
   protected $addressGroupsDataType = 'array';
   /**

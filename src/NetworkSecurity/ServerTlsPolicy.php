@@ -35,12 +35,20 @@ class ServerTlsPolicy extends \Google\Model
    * @var string[]
    */
   public $labels;
+  /**
+   * @var MTLSPolicy
+   */
+  public $mtlsPolicy;
   protected $mtlsPolicyType = MTLSPolicy::class;
   protected $mtlsPolicyDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudNetworksecurityV1CertificateProvider
+   */
+  public $serverCertificate;
   protected $serverCertificateType = GoogleCloudNetworksecurityV1CertificateProvider::class;
   protected $serverCertificateDataType = '';
   /**

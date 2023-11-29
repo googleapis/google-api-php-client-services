@@ -20,6 +20,10 @@ namespace Google\Service\NetworkSecurity;
 class ListAuthorizationPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'authorizationPolicies';
+  /**
+   * @var AuthorizationPolicy[]
+   */
+  public $authorizationPolicies;
   protected $authorizationPoliciesType = AuthorizationPolicy::class;
   protected $authorizationPoliciesDataType = 'array';
   /**

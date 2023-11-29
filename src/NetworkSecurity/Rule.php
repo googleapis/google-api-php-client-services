@@ -20,8 +20,16 @@ namespace Google\Service\NetworkSecurity;
 class Rule extends \Google\Collection
 {
   protected $collection_key = 'sources';
+  /**
+   * @var Destination[]
+   */
+  public $destinations;
   protected $destinationsType = Destination::class;
   protected $destinationsDataType = 'array';
+  /**
+   * @var Source[]
+   */
+  public $sources;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
 

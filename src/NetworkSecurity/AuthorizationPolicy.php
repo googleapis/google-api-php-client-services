@@ -40,6 +40,10 @@ class AuthorizationPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var Rule[]
+   */
+  public $rules;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
   /**

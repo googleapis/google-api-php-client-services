@@ -20,6 +20,10 @@ namespace Google\Service\NetworkSecurity;
 class MTLSPolicy extends \Google\Collection
 {
   protected $collection_key = 'clientValidationCa';
+  /**
+   * @var ValidationCA[]
+   */
+  public $clientValidationCa;
   protected $clientValidationCaType = ValidationCA::class;
   protected $clientValidationCaDataType = 'array';
   /**
