@@ -24,6 +24,10 @@ class ListServiceConnectionMapsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ServiceConnectionMap[]
+   */
+  public $serviceConnectionMaps;
   protected $serviceConnectionMapsType = ServiceConnectionMap::class;
   protected $serviceConnectionMapsDataType = 'array';
   /**

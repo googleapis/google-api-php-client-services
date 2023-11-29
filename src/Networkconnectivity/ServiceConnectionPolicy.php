@@ -48,8 +48,16 @@ class ServiceConnectionPolicy extends \Google\Collection
    * @var string
    */
   public $network;
+  /**
+   * @var PscConfig
+   */
+  public $pscConfig;
   protected $pscConfigType = PscConfig::class;
   protected $pscConfigDataType = '';
+  /**
+   * @var PscConnection[]
+   */
+  public $pscConnections;
   protected $pscConnectionsType = PscConnection::class;
   protected $pscConnectionsDataType = 'array';
   /**

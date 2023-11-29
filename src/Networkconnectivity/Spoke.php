@@ -40,18 +40,38 @@ class Spoke extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var LinkedInterconnectAttachments
+   */
+  public $linkedInterconnectAttachments;
   protected $linkedInterconnectAttachmentsType = LinkedInterconnectAttachments::class;
   protected $linkedInterconnectAttachmentsDataType = '';
+  /**
+   * @var LinkedRouterApplianceInstances
+   */
+  public $linkedRouterApplianceInstances;
   protected $linkedRouterApplianceInstancesType = LinkedRouterApplianceInstances::class;
   protected $linkedRouterApplianceInstancesDataType = '';
+  /**
+   * @var LinkedVpcNetwork
+   */
+  public $linkedVpcNetwork;
   protected $linkedVpcNetworkType = LinkedVpcNetwork::class;
   protected $linkedVpcNetworkDataType = '';
+  /**
+   * @var LinkedVpnTunnels
+   */
+  public $linkedVpnTunnels;
   protected $linkedVpnTunnelsType = LinkedVpnTunnels::class;
   protected $linkedVpnTunnelsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var StateReason[]
+   */
+  public $reasons;
   protected $reasonsType = StateReason::class;
   protected $reasonsDataType = 'array';
   /**

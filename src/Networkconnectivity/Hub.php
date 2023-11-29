@@ -40,8 +40,16 @@ class Hub extends \Google\Collection
    * @var string[]
    */
   public $routeTables;
+  /**
+   * @var RoutingVPC[]
+   */
+  public $routingVpcs;
   protected $routingVpcsType = RoutingVPC::class;
   protected $routingVpcsDataType = 'array';
+  /**
+   * @var SpokeSummary
+   */
+  public $spokeSummary;
   protected $spokeSummaryType = SpokeSummary::class;
   protected $spokeSummaryDataType = '';
   /**

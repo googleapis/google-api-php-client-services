@@ -43,6 +43,10 @@ class Route extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var NextHopVpcNetwork
+   */
+  public $nextHopVpcNetwork;
   protected $nextHopVpcNetworkType = NextHopVpcNetwork::class;
   protected $nextHopVpcNetworkDataType = '';
   /**

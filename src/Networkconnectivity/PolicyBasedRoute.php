@@ -28,8 +28,16 @@ class PolicyBasedRoute extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var Filter
+   */
+  public $filter;
   protected $filterType = Filter::class;
   protected $filterDataType = '';
+  /**
+   * @var InterconnectAttachment
+   */
+  public $interconnectAttachment;
   protected $interconnectAttachmentType = InterconnectAttachment::class;
   protected $interconnectAttachmentDataType = '';
   /**
@@ -68,8 +76,16 @@ class PolicyBasedRoute extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VirtualMachine
+   */
+  public $virtualMachine;
   protected $virtualMachineType = VirtualMachine::class;
   protected $virtualMachineDataType = '';
+  /**
+   * @var Warnings[]
+   */
+  public $warnings;
   protected $warningsType = Warnings::class;
   protected $warningsDataType = 'array';
 

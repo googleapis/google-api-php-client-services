@@ -20,6 +20,10 @@ namespace Google\Service\Networkconnectivity;
 class ListInternalRangesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var InternalRange[]
+   */
+  public $internalRanges;
   protected $internalRangesType = InternalRange::class;
   protected $internalRangesDataType = 'array';
   /**

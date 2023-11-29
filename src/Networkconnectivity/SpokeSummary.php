@@ -20,10 +20,22 @@ namespace Google\Service\Networkconnectivity;
 class SpokeSummary extends \Google\Collection
 {
   protected $collection_key = 'spokeTypeCounts';
+  /**
+   * @var SpokeStateCount[]
+   */
+  public $spokeStateCounts;
   protected $spokeStateCountsType = SpokeStateCount::class;
   protected $spokeStateCountsDataType = 'array';
+  /**
+   * @var SpokeStateReasonCount[]
+   */
+  public $spokeStateReasonCounts;
   protected $spokeStateReasonCountsType = SpokeStateReasonCount::class;
   protected $spokeStateReasonCountsDataType = 'array';
+  /**
+   * @var SpokeTypeCount[]
+   */
+  public $spokeTypeCounts;
   protected $spokeTypeCountsType = SpokeTypeCount::class;
   protected $spokeTypeCountsDataType = 'array';
 

@@ -24,6 +24,10 @@ class ListServiceConnectionPoliciesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ServiceConnectionPolicy[]
+   */
+  public $serviceConnectionPolicies;
   protected $serviceConnectionPoliciesType = ServiceConnectionPolicy::class;
   protected $serviceConnectionPoliciesDataType = 'array';
   /**

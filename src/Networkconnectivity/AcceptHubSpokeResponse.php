@@ -19,6 +19,10 @@ namespace Google\Service\Networkconnectivity;
 
 class AcceptHubSpokeResponse extends \Google\Model
 {
+  /**
+   * @var Spoke
+   */
+  public $spoke;
   protected $spokeType = Spoke::class;
   protected $spokeDataType = '';
 

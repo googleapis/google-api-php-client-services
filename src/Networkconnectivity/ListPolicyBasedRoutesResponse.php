@@ -24,6 +24,10 @@ class ListPolicyBasedRoutesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PolicyBasedRoute[]
+   */
+  public $policyBasedRoutes;
   protected $policyBasedRoutesType = PolicyBasedRoute::class;
   protected $policyBasedRoutesDataType = 'array';
   /**

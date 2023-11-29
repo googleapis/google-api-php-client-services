@@ -20,8 +20,16 @@ namespace Google\Service\Networkconnectivity;
 class ServiceConnectionMap extends \Google\Collection
 {
   protected $collection_key = 'producerPscConfigs';
+  /**
+   * @var ConsumerPscConfig[]
+   */
+  public $consumerPscConfigs;
   protected $consumerPscConfigsType = ConsumerPscConfig::class;
   protected $consumerPscConfigsDataType = 'array';
+  /**
+   * @var ConsumerPscConnection[]
+   */
+  public $consumerPscConnections;
   protected $consumerPscConnectionsType = ConsumerPscConnection::class;
   protected $consumerPscConnectionsDataType = 'array';
   /**
@@ -48,6 +56,10 @@ class ServiceConnectionMap extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ProducerPscConfig[]
+   */
+  public $producerPscConfigs;
   protected $producerPscConfigsType = ProducerPscConfig::class;
   protected $producerPscConfigsDataType = 'array';
   /**

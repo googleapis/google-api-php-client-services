@@ -20,6 +20,10 @@ namespace Google\Service\Networkconnectivity;
 class LinkedRouterApplianceInstances extends \Google\Collection
 {
   protected $collection_key = 'instances';
+  /**
+   * @var RouterApplianceInstance[]
+   */
+  public $instances;
   protected $instancesType = RouterApplianceInstance::class;
   protected $instancesDataType = 'array';
   /**
