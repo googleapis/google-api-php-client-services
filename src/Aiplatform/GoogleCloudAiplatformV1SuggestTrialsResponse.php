@@ -32,6 +32,10 @@ class GoogleCloudAiplatformV1SuggestTrialsResponse extends \Google\Collection
    * @var string
    */
   public $studyState;
+  /**
+   * @var GoogleCloudAiplatformV1Trial[]
+   */
+  public $trials;
   protected $trialsType = GoogleCloudAiplatformV1Trial::class;
   protected $trialsDataType = 'array';
 

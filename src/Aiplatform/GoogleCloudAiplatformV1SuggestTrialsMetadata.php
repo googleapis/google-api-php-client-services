@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1SuggestTrialsMetadata extends \Google\Model
    * @var string
    */
   public $clientId;
+  /**
+   * @var GoogleCloudAiplatformV1GenericOperationMetadata
+   */
+  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
 

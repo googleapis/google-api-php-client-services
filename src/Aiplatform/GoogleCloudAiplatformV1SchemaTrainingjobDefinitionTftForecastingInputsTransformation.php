@@ -19,14 +19,34 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationAutoTransformation
+   */
+  public $auto;
   protected $autoType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationAutoTransformation::class;
   protected $autoDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationCategoricalTransformation
+   */
+  public $categorical;
   protected $categoricalType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationCategoricalTransformation::class;
   protected $categoricalDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationNumericTransformation
+   */
+  public $numeric;
   protected $numericType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationNumericTransformation::class;
   protected $numericDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTextTransformation
+   */
+  public $text;
   protected $textType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTextTransformation::class;
   protected $textDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTimestampTransformation
+   */
+  public $timestamp;
   protected $timestampType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformationTimestampTransformation::class;
   protected $timestampDataType = '';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTables extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputs
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputs::class;
   protected $inputsDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesMetadata::class;
   protected $metadataDataType = '';
 

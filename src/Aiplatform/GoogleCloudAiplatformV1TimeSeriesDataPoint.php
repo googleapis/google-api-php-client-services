@@ -19,14 +19,26 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1TimeSeriesDataPoint extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1TensorboardBlobSequence
+   */
+  public $blobs;
   protected $blobsType = GoogleCloudAiplatformV1TensorboardBlobSequence::class;
   protected $blobsDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1Scalar
+   */
+  public $scalar;
   protected $scalarType = GoogleCloudAiplatformV1Scalar::class;
   protected $scalarDataType = '';
   /**
    * @var string
    */
   public $step;
+  /**
+   * @var GoogleCloudAiplatformV1TensorboardTensor
+   */
+  public $tensor;
   protected $tensorType = GoogleCloudAiplatformV1TensorboardTensor::class;
   protected $tensorDataType = '';
   /**

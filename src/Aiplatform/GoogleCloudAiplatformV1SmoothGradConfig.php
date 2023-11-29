@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SmoothGradConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1FeatureNoiseSigma
+   */
+  public $featureNoiseSigma;
   protected $featureNoiseSigmaType = GoogleCloudAiplatformV1FeatureNoiseSigma::class;
   protected $featureNoiseSigmaDataType = '';
   /**

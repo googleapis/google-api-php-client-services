@@ -39,6 +39,10 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageClassificatio
    * @var bool
    */
   public $multiLabel;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutomlImageTrainingTunableParameter
+   */
+  public $tunableParameter;
   protected $tunableParameterType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutomlImageTrainingTunableParameter::class;
   protected $tunableParameterDataType = '';
   /**

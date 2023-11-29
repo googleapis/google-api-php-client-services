@@ -27,6 +27,10 @@ class GoogleCloudAiplatformV1StudySpecMetricSpec extends \Google\Model
    * @var string
    */
   public $metricId;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecMetricSpecSafetyMetricConfig
+   */
+  public $safetyConfig;
   protected $safetyConfigType = GoogleCloudAiplatformV1StudySpecMetricSpecSafetyMetricConfig::class;
   protected $safetyConfigDataType = '';
 

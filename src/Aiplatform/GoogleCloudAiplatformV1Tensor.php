@@ -45,6 +45,10 @@ class GoogleCloudAiplatformV1Tensor extends \Google\Collection
    * @var int[]
    */
   public $intVal;
+  /**
+   * @var GoogleCloudAiplatformV1Tensor[]
+   */
+  public $listVal;
   protected $listValType = GoogleCloudAiplatformV1Tensor::class;
   protected $listValDataType = 'array';
   /**
@@ -55,6 +59,10 @@ class GoogleCloudAiplatformV1Tensor extends \Google\Collection
    * @var string[]
    */
   public $stringVal;
+  /**
+   * @var GoogleCloudAiplatformV1Tensor[]
+   */
+  public $structVal;
   protected $structValType = GoogleCloudAiplatformV1Tensor::class;
   protected $structValDataType = 'map';
   /**

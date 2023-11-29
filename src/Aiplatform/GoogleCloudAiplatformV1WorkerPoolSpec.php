@@ -20,14 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
 {
   protected $collection_key = 'nfsMounts';
+  /**
+   * @var GoogleCloudAiplatformV1ContainerSpec
+   */
+  public $containerSpec;
   protected $containerSpecType = GoogleCloudAiplatformV1ContainerSpec::class;
   protected $containerSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1DiskSpec
+   */
+  public $diskSpec;
   protected $diskSpecType = GoogleCloudAiplatformV1DiskSpec::class;
   protected $diskSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1MachineSpec
+   */
+  public $machineSpec;
   protected $machineSpecType = GoogleCloudAiplatformV1MachineSpec::class;
   protected $machineSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1NfsMount[]
+   */
+  public $nfsMounts;
   protected $nfsMountsType = GoogleCloudAiplatformV1NfsMount::class;
   protected $nfsMountsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1PythonPackageSpec
+   */
+  public $pythonPackageSpec;
   protected $pythonPackageSpecType = GoogleCloudAiplatformV1PythonPackageSpec::class;
   protected $pythonPackageSpecDataType = '';
   /**

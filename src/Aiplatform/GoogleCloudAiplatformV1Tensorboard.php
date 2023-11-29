@@ -35,6 +35,10 @@ class GoogleCloudAiplatformV1Tensorboard extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**

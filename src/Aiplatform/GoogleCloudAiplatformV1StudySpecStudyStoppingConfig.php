@@ -31,12 +31,20 @@ class GoogleCloudAiplatformV1StudySpecStudyStoppingConfig extends \Google\Model
    * @var int
    */
   public $maxNumTrialsNoProgress;
+  /**
+   * @var GoogleCloudAiplatformV1StudyTimeConstraint
+   */
+  public $maximumRuntimeConstraint;
   protected $maximumRuntimeConstraintType = GoogleCloudAiplatformV1StudyTimeConstraint::class;
   protected $maximumRuntimeConstraintDataType = '';
   /**
    * @var int
    */
   public $minNumTrials;
+  /**
+   * @var GoogleCloudAiplatformV1StudyTimeConstraint
+   */
+  public $minimumRuntimeConstraint;
   protected $minimumRuntimeConstraintType = GoogleCloudAiplatformV1StudyTimeConstraint::class;
   protected $minimumRuntimeConstraintDataType = '';
   /**

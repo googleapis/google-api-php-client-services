@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataInputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataBigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataBigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1SchemaTimeSeriesDatasetMetadataGcsSource::class;
   protected $gcsSourceDataType = '';
 

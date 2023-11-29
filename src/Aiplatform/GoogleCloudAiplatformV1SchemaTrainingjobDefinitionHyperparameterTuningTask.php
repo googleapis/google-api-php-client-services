@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningTask extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobSpec
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobSpec::class;
   protected $inputsDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobMetadata::class;
   protected $metadataDataType = '';
 

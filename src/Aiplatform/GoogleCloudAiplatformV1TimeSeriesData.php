@@ -28,6 +28,10 @@ class GoogleCloudAiplatformV1TimeSeriesData extends \Google\Collection
    * @var string
    */
   public $valueType;
+  /**
+   * @var GoogleCloudAiplatformV1TimeSeriesDataPoint[]
+   */
+  public $values;
   protected $valuesType = GoogleCloudAiplatformV1TimeSeriesDataPoint::class;
   protected $valuesDataType = 'array';
 

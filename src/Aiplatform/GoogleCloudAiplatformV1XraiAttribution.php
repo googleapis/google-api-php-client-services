@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1XraiAttribution extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1BlurBaselineConfig
+   */
+  public $blurBaselineConfig;
   protected $blurBaselineConfigType = GoogleCloudAiplatformV1BlurBaselineConfig::class;
   protected $blurBaselineConfigDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SmoothGradConfig
+   */
+  public $smoothGradConfig;
   protected $smoothGradConfigType = GoogleCloudAiplatformV1SmoothGradConfig::class;
   protected $smoothGradConfigDataType = '';
   /**

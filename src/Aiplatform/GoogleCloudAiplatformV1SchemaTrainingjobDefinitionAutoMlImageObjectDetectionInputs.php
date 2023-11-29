@@ -31,6 +31,10 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetecti
    * @var string
    */
   public $modelType;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutomlImageTrainingTunableParameter
+   */
+  public $tunableParameter;
   protected $tunableParameterType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutomlImageTrainingTunableParameter::class;
   protected $tunableParameterDataType = '';
   /**

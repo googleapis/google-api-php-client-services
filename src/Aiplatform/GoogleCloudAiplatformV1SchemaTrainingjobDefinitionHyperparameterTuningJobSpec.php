@@ -31,8 +31,16 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHyperparameterTuningJobS
    * @var int
    */
   public $parallelTrialCount;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpec
+   */
+  public $studySpec;
   protected $studySpecType = GoogleCloudAiplatformV1StudySpec::class;
   protected $studySpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1CustomJobSpec
+   */
+  public $trialJobSpec;
   protected $trialJobSpecType = GoogleCloudAiplatformV1CustomJobSpec::class;
   protected $trialJobSpecDataType = '';
 

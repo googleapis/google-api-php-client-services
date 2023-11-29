@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1WriteTensorboardRunDataRequest extends \Google\Coll
    * @var string
    */
   public $tensorboardRun;
+  /**
+   * @var GoogleCloudAiplatformV1TimeSeriesData[]
+   */
+  public $timeSeriesData;
   protected $timeSeriesDataType = GoogleCloudAiplatformV1TimeSeriesData::class;
   protected $timeSeriesDataDataType = 'array';
 

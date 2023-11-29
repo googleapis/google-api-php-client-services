@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1WriteFeatureValuesRequest extends \Google\Collection
 {
   protected $collection_key = 'payloads';
+  /**
+   * @var GoogleCloudAiplatformV1WriteFeatureValuesPayload[]
+   */
+  public $payloads;
   protected $payloadsType = GoogleCloudAiplatformV1WriteFeatureValuesPayload::class;
   protected $payloadsDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1UploadModelRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1Model
+   */
+  public $model;
   protected $modelType = GoogleCloudAiplatformV1Model::class;
   protected $modelDataType = '';
   /**

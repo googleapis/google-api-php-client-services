@@ -24,24 +24,48 @@ class GoogleCloudAiplatformV1StudySpec extends \Google\Collection
    * @var string
    */
   public $algorithm;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecConvexAutomatedStoppingSpec
+   */
+  public $convexAutomatedStoppingSpec;
   protected $convexAutomatedStoppingSpecType = GoogleCloudAiplatformV1StudySpecConvexAutomatedStoppingSpec::class;
   protected $convexAutomatedStoppingSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecDecayCurveAutomatedStoppingSpec
+   */
+  public $decayCurveStoppingSpec;
   protected $decayCurveStoppingSpecType = GoogleCloudAiplatformV1StudySpecDecayCurveAutomatedStoppingSpec::class;
   protected $decayCurveStoppingSpecDataType = '';
   /**
    * @var string
    */
   public $measurementSelectionType;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecMedianAutomatedStoppingSpec
+   */
+  public $medianAutomatedStoppingSpec;
   protected $medianAutomatedStoppingSpecType = GoogleCloudAiplatformV1StudySpecMedianAutomatedStoppingSpec::class;
   protected $medianAutomatedStoppingSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecMetricSpec[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudAiplatformV1StudySpecMetricSpec::class;
   protected $metricsDataType = 'array';
   /**
    * @var string
    */
   public $observationNoise;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpec[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1StudySpecParameterSpec::class;
   protected $parametersDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecStudyStoppingConfig
+   */
+  public $studyStoppingConfig;
   protected $studyStoppingConfigType = GoogleCloudAiplatformV1StudySpecStudyStoppingConfig::class;
   protected $studyStoppingConfigDataType = '';
 

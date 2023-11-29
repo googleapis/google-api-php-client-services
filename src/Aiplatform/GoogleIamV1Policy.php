@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleIamV1Policy extends \Google\Collection
 {
   protected $collection_key = 'bindings';
+  /**
+   * @var GoogleIamV1Binding[]
+   */
+  public $bindings;
   protected $bindingsType = GoogleIamV1Binding::class;
   protected $bindingsDataType = 'array';
   /**

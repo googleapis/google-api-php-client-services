@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecasting extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputs
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputs::class;
   protected $inputsDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingMetadata::class;
   protected $metadataDataType = '';
 

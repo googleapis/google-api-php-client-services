@@ -23,8 +23,16 @@ class GoogleCloudAiplatformV1UnmanagedContainerModel extends \Google\Model
    * @var string
    */
   public $artifactUri;
+  /**
+   * @var GoogleCloudAiplatformV1ModelContainerSpec
+   */
+  public $containerSpec;
   protected $containerSpecType = GoogleCloudAiplatformV1ModelContainerSpec::class;
   protected $containerSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1PredictSchemata
+   */
+  public $predictSchemata;
   protected $predictSchemataType = GoogleCloudAiplatformV1PredictSchemata::class;
   protected $predictSchemataDataType = '';
 

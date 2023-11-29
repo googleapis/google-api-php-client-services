@@ -20,14 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StudySpecParameterSpec extends \Google\Collection
 {
   protected $collection_key = 'conditionalParameterSpecs';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecCategoricalValueSpec
+   */
+  public $categoricalValueSpec;
   protected $categoricalValueSpecType = GoogleCloudAiplatformV1StudySpecParameterSpecCategoricalValueSpec::class;
   protected $categoricalValueSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec[]
+   */
+  public $conditionalParameterSpecs;
   protected $conditionalParameterSpecsType = GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec::class;
   protected $conditionalParameterSpecsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecDiscreteValueSpec
+   */
+  public $discreteValueSpec;
   protected $discreteValueSpecType = GoogleCloudAiplatformV1StudySpecParameterSpecDiscreteValueSpec::class;
   protected $discreteValueSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecDoubleValueSpec
+   */
+  public $doubleValueSpec;
   protected $doubleValueSpecType = GoogleCloudAiplatformV1StudySpecParameterSpecDoubleValueSpec::class;
   protected $doubleValueSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecIntegerValueSpec
+   */
+  public $integerValueSpec;
   protected $integerValueSpecType = GoogleCloudAiplatformV1StudySpecParameterSpecIntegerValueSpec::class;
   protected $integerValueSpecDataType = '';
   /**

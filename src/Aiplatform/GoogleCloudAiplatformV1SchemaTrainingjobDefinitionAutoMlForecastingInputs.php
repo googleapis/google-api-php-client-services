@@ -32,18 +32,30 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputs 
    * @var string
    */
   public $contextWindow;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputsGranularity
+   */
+  public $dataGranularity;
   protected $dataGranularityType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputsGranularity::class;
   protected $dataGranularityDataType = '';
   /**
    * @var bool
    */
   public $enableProbabilisticInference;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig
+   */
+  public $exportEvaluatedDataItemsConfig;
   protected $exportEvaluatedDataItemsConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig::class;
   protected $exportEvaluatedDataItemsConfigDataType = '';
   /**
    * @var string
    */
   public $forecastHorizon;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig
+   */
+  public $hierarchyConfig;
   protected $hierarchyConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig::class;
   protected $hierarchyConfigDataType = '';
   /**
@@ -75,6 +87,10 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputs 
    * @var string
    */
   public $trainBudgetMilliNodeHours;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputsTransformation[]
+   */
+  public $transformations;
   protected $transformationsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputsTransformation::class;
   protected $transformationsDataType = 'array';
   /**
@@ -89,6 +105,10 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlForecastingInputs 
    * @var string
    */
   public $weightColumn;
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionWindowConfig
+   */
+  public $windowConfig;
   protected $windowConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionWindowConfig::class;
   protected $windowConfigDataType = '';
 

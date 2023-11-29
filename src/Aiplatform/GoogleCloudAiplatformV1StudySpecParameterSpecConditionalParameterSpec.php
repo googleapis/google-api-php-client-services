@@ -19,12 +19,28 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpec
+   */
+  public $parameterSpec;
   protected $parameterSpecType = GoogleCloudAiplatformV1StudySpecParameterSpec::class;
   protected $parameterSpecDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecCategoricalValueCondition
+   */
+  public $parentCategoricalValues;
   protected $parentCategoricalValuesType = GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecCategoricalValueCondition::class;
   protected $parentCategoricalValuesDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecDiscreteValueCondition
+   */
+  public $parentDiscreteValues;
   protected $parentDiscreteValuesType = GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecDiscreteValueCondition::class;
   protected $parentDiscreteValuesDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecIntValueCondition
+   */
+  public $parentIntValues;
   protected $parentIntValuesType = GoogleCloudAiplatformV1StudySpecParameterSpecConditionalParameterSpecIntValueCondition::class;
   protected $parentIntValuesDataType = '';
 

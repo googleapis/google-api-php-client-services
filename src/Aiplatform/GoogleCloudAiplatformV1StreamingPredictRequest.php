@@ -20,8 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1StreamingPredictRequest extends \Google\Collection
 {
   protected $collection_key = 'inputs';
+  /**
+   * @var GoogleCloudAiplatformV1Tensor[]
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1Tensor::class;
   protected $inputsDataType = 'array';
+  /**
+   * @var GoogleCloudAiplatformV1Tensor
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1Tensor::class;
   protected $parametersDataType = '';
 

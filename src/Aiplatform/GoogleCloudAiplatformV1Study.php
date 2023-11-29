@@ -39,6 +39,10 @@ class GoogleCloudAiplatformV1Study extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudAiplatformV1StudySpec
+   */
+  public $studySpec;
   protected $studySpecType = GoogleCloudAiplatformV1StudySpec::class;
   protected $studySpecDataType = '';
 

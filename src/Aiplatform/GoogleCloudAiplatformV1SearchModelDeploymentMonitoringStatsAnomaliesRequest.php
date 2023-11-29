@@ -32,6 +32,10 @@ class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesReques
    * @var string
    */
   public $featureDisplayName;
+  /**
+   * @var GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRequestStatsAnomaliesObjective[]
+   */
+  public $objectives;
   protected $objectivesType = GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesRequestStatsAnomaliesObjective::class;
   protected $objectivesDataType = 'array';
   /**

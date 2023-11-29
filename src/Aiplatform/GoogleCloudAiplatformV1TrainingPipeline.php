@@ -27,14 +27,26 @@ class GoogleCloudAiplatformV1TrainingPipeline extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAiplatformV1EncryptionSpec
+   */
+  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1InputDataConfig
+   */
+  public $inputDataConfig;
   protected $inputDataConfigType = GoogleCloudAiplatformV1InputDataConfig::class;
   protected $inputDataConfigDataType = '';
   /**
@@ -45,6 +57,10 @@ class GoogleCloudAiplatformV1TrainingPipeline extends \Google\Model
    * @var string
    */
   public $modelId;
+  /**
+   * @var GoogleCloudAiplatformV1Model
+   */
+  public $modelToUpload;
   protected $modelToUploadType = GoogleCloudAiplatformV1Model::class;
   protected $modelToUploadDataType = '';
   /**

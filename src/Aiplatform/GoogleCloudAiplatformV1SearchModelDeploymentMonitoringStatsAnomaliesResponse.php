@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SearchModelDeploymentMonitoringStatsAnomaliesResponse extends \Google\Collection
 {
   protected $collection_key = 'monitoringStats';
+  /**
+   * @var GoogleCloudAiplatformV1ModelMonitoringStatsAnomalies[]
+   */
+  public $monitoringStats;
   protected $monitoringStatsType = GoogleCloudAiplatformV1ModelMonitoringStatsAnomalies::class;
   protected $monitoringStatsDataType = 'array';
   /**

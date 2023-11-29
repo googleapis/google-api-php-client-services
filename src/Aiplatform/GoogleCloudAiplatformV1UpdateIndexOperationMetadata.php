@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1UpdateIndexOperationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1GenericOperationMetadata
+   */
+  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadata
+   */
+  public $nearestNeighborSearchOperationMetadata;
   protected $nearestNeighborSearchOperationMetadataType = GoogleCloudAiplatformV1NearestNeighborSearchOperationMetadata::class;
   protected $nearestNeighborSearchOperationMetadataDataType = '';
 

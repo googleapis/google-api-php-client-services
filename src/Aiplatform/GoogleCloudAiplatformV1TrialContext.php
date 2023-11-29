@@ -24,6 +24,10 @@ class GoogleCloudAiplatformV1TrialContext extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var GoogleCloudAiplatformV1TrialParameter[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1TrialParameter::class;
   protected $parametersDataType = 'array';
 

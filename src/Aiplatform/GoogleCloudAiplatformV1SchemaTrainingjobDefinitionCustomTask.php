@@ -19,8 +19,16 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionCustomTask extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAiplatformV1CustomJobSpec
+   */
+  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1CustomJobSpec::class;
   protected $inputsDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionCustomJobMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionCustomJobMetadata::class;
   protected $metadataDataType = '';
 
