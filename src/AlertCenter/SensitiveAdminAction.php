@@ -27,14 +27,34 @@ class SensitiveAdminAction extends \Google\Model
    * @var string
    */
   public $eventTime;
+  /**
+   * @var PrimaryAdminChangedEvent
+   */
+  public $primaryAdminChangedEvent;
   protected $primaryAdminChangedEventType = PrimaryAdminChangedEvent::class;
   protected $primaryAdminChangedEventDataType = '';
+  /**
+   * @var SSOProfileCreatedEvent
+   */
+  public $ssoProfileCreatedEvent;
   protected $ssoProfileCreatedEventType = SSOProfileCreatedEvent::class;
   protected $ssoProfileCreatedEventDataType = '';
+  /**
+   * @var SSOProfileDeletedEvent
+   */
+  public $ssoProfileDeletedEvent;
   protected $ssoProfileDeletedEventType = SSOProfileDeletedEvent::class;
   protected $ssoProfileDeletedEventDataType = '';
+  /**
+   * @var SSOProfileUpdatedEvent
+   */
+  public $ssoProfileUpdatedEvent;
   protected $ssoProfileUpdatedEventType = SSOProfileUpdatedEvent::class;
   protected $ssoProfileUpdatedEventDataType = '';
+  /**
+   * @var SuperAdminPasswordResetEvent
+   */
+  public $superAdminPasswordResetEvent;
   protected $superAdminPasswordResetEventType = SuperAdminPasswordResetEvent::class;
   protected $superAdminPasswordResetEventDataType = '';
 

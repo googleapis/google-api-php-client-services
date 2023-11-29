@@ -20,6 +20,10 @@ namespace Google\Service\AlertCenter;
 class ListAlertsResponse extends \Google\Collection
 {
   protected $collection_key = 'alerts';
+  /**
+   * @var Alert[]
+   */
+  public $alerts;
   protected $alertsType = Alert::class;
   protected $alertsDataType = 'array';
   /**

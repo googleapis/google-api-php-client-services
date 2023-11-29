@@ -19,6 +19,10 @@ namespace Google\Service\AlertCenter;
 
 class DlpRuleViolation extends \Google\Model
 {
+  /**
+   * @var RuleViolationInfo
+   */
+  public $ruleViolationInfo;
   protected $ruleViolationInfoType = RuleViolationInfo::class;
   protected $ruleViolationInfoDataType = '';
 

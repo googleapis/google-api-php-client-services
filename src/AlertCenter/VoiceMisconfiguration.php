@@ -31,10 +31,22 @@ class VoiceMisconfiguration extends \Google\Model
    * @var string
    */
   public $fixUri;
+  /**
+   * @var TransferMisconfiguration
+   */
+  public $membersMisconfiguration;
   protected $membersMisconfigurationType = TransferMisconfiguration::class;
   protected $membersMisconfigurationDataType = '';
+  /**
+   * @var TransferMisconfiguration
+   */
+  public $transferMisconfiguration;
   protected $transferMisconfigurationType = TransferMisconfiguration::class;
   protected $transferMisconfigurationDataType = '';
+  /**
+   * @var VoicemailMisconfiguration
+   */
+  public $voicemailMisconfiguration;
   protected $voicemailMisconfigurationType = VoicemailMisconfiguration::class;
   protected $voicemailMisconfigurationDataType = '';
 

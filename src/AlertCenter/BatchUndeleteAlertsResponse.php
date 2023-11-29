@@ -20,6 +20,10 @@ namespace Google\Service\AlertCenter;
 class BatchUndeleteAlertsResponse extends \Google\Collection
 {
   protected $collection_key = 'successAlertIds';
+  /**
+   * @var Status[]
+   */
+  public $failedAlertStatus;
   protected $failedAlertStatusType = Status::class;
   protected $failedAlertStatusDataType = 'map';
   /**

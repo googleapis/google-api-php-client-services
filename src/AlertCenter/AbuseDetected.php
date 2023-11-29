@@ -19,6 +19,10 @@ namespace Google\Service\AlertCenter;
 
 class AbuseDetected extends \Google\Model
 {
+  /**
+   * @var EntityList
+   */
+  public $additionalDetails;
   protected $additionalDetailsType = EntityList::class;
   protected $additionalDetailsDataType = '';
   /**

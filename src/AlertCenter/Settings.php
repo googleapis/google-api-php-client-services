@@ -20,6 +20,10 @@ namespace Google\Service\AlertCenter;
 class Settings extends \Google\Collection
 {
   protected $collection_key = 'notifications';
+  /**
+   * @var Notification[]
+   */
+  public $notifications;
   protected $notificationsType = Notification::class;
   protected $notificationsDataType = 'array';
 

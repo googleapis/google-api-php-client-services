@@ -19,6 +19,10 @@ namespace Google\Service\AlertCenter;
 
 class Attachment extends \Google\Model
 {
+  /**
+   * @var Csv
+   */
+  public $csv;
   protected $csvType = Csv::class;
   protected $csvDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AlertCenter;
 class Csv extends \Google\Collection
 {
   protected $collection_key = 'headers';
+  /**
+   * @var CsvRow[]
+   */
+  public $dataRows;
   protected $dataRowsType = CsvRow::class;
   protected $dataRowsDataType = 'array';
   /**

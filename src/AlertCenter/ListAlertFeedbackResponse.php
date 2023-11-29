@@ -20,6 +20,10 @@ namespace Google\Service\AlertCenter;
 class ListAlertFeedbackResponse extends \Google\Collection
 {
   protected $collection_key = 'feedback';
+  /**
+   * @var AlertFeedback[]
+   */
+  public $feedback;
   protected $feedbackType = AlertFeedback::class;
   protected $feedbackDataType = 'array';
 

@@ -20,10 +20,22 @@ namespace Google\Service\AlertCenter;
 class BadWhitelist extends \Google\Collection
 {
   protected $collection_key = 'messages';
+  /**
+   * @var DomainId
+   */
+  public $domainId;
   protected $domainIdType = DomainId::class;
   protected $domainIdDataType = '';
+  /**
+   * @var MaliciousEntity
+   */
+  public $maliciousEntity;
   protected $maliciousEntityType = MaliciousEntity::class;
   protected $maliciousEntityDataType = '';
+  /**
+   * @var GmailMessageInfo[]
+   */
+  public $messages;
   protected $messagesType = GmailMessageInfo::class;
   protected $messagesDataType = 'array';
   /**

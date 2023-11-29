@@ -28,6 +28,10 @@ class AppsOutage extends \Google\Collection
    * @var string
    */
   public $incidentTrackingId;
+  /**
+   * @var MergeInfo
+   */
+  public $mergeInfo;
   protected $mergeInfoType = MergeInfo::class;
   protected $mergeInfoDataType = '';
   /**

@@ -40,6 +40,10 @@ class AccessApproval extends \Google\Collection
    * @var string
    */
   public $scope;
+  /**
+   * @var SupportTicket[]
+   */
+  public $tickets;
   protected $ticketsType = SupportTicket::class;
   protected $ticketsDataType = 'array';
 
