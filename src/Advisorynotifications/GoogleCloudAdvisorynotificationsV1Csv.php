@@ -20,6 +20,10 @@ namespace Google\Service\Advisorynotifications;
 class GoogleCloudAdvisorynotificationsV1Csv extends \Google\Collection
 {
   protected $collection_key = 'headers';
+  /**
+   * @var GoogleCloudAdvisorynotificationsV1CsvCsvRow[]
+   */
+  public $dataRows;
   protected $dataRowsType = GoogleCloudAdvisorynotificationsV1CsvCsvRow::class;
   protected $dataRowsDataType = 'array';
   /**

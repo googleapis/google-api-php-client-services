@@ -24,6 +24,10 @@ class GoogleCloudAdvisorynotificationsV1Notification extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudAdvisorynotificationsV1Message[]
+   */
+  public $messages;
   protected $messagesType = GoogleCloudAdvisorynotificationsV1Message::class;
   protected $messagesDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class GoogleCloudAdvisorynotificationsV1Notification extends \Google\Collection
    * @var string
    */
   public $notificationType;
+  /**
+   * @var GoogleCloudAdvisorynotificationsV1Subject
+   */
+  public $subject;
   protected $subjectType = GoogleCloudAdvisorynotificationsV1Subject::class;
   protected $subjectDataType = '';
 

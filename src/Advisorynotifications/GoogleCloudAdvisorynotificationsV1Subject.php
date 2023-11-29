@@ -19,6 +19,10 @@ namespace Google\Service\Advisorynotifications;
 
 class GoogleCloudAdvisorynotificationsV1Subject extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAdvisorynotificationsV1Text
+   */
+  public $text;
   protected $textType = GoogleCloudAdvisorynotificationsV1Text::class;
   protected $textDataType = '';
 
