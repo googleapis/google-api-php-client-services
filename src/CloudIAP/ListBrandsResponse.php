@@ -20,6 +20,10 @@ namespace Google\Service\CloudIAP;
 class ListBrandsResponse extends \Google\Collection
 {
   protected $collection_key = 'brands';
+  /**
+   * @var Brand[]
+   */
+  public $brands;
   protected $brandsType = Brand::class;
   protected $brandsDataType = 'array';
 

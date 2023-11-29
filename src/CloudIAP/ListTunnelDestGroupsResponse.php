@@ -24,6 +24,10 @@ class ListTunnelDestGroupsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TunnelDestGroup[]
+   */
+  public $tunnelDestGroups;
   protected $tunnelDestGroupsType = TunnelDestGroup::class;
   protected $tunnelDestGroupsDataType = 'array';
 

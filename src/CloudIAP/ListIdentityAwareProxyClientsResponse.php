@@ -20,6 +20,10 @@ namespace Google\Service\CloudIAP;
 class ListIdentityAwareProxyClientsResponse extends \Google\Collection
 {
   protected $collection_key = 'identityAwareProxyClients';
+  /**
+   * @var IdentityAwareProxyClient[]
+   */
+  public $identityAwareProxyClients;
   protected $identityAwareProxyClientsType = IdentityAwareProxyClient::class;
   protected $identityAwareProxyClientsDataType = 'array';
   /**

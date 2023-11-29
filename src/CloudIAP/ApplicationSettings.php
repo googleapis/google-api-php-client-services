@@ -19,14 +19,26 @@ namespace Google\Service\CloudIAP;
 
 class ApplicationSettings extends \Google\Model
 {
+  /**
+   * @var AccessDeniedPageSettings
+   */
+  public $accessDeniedPageSettings;
   protected $accessDeniedPageSettingsType = AccessDeniedPageSettings::class;
   protected $accessDeniedPageSettingsDataType = '';
+  /**
+   * @var AttributePropagationSettings
+   */
+  public $attributePropagationSettings;
   protected $attributePropagationSettingsType = AttributePropagationSettings::class;
   protected $attributePropagationSettingsDataType = '';
   /**
    * @var string
    */
   public $cookieDomain;
+  /**
+   * @var CsmSettings
+   */
+  public $csmSettings;
   protected $csmSettingsType = CsmSettings::class;
   protected $csmSettingsDataType = '';
 

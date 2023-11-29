@@ -27,8 +27,16 @@ class PolicyDelegationSettings extends \Google\Model
    * @var string
    */
   public $iamServiceName;
+  /**
+   * @var PolicyName
+   */
+  public $policyName;
   protected $policyNameType = PolicyName::class;
   protected $policyNameDataType = '';
+  /**
+   * @var IapResource
+   */
+  public $resource;
   protected $resourceType = IapResource::class;
   protected $resourceDataType = '';
 
