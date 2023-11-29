@@ -19,6 +19,10 @@ namespace Google\Service\Iam;
 
 class GoogleIamAdminV1AuditData extends \Google\Model
 {
+  /**
+   * @var GoogleIamAdminV1AuditDataPermissionDelta
+   */
+  public $permissionDelta;
   protected $permissionDeltaType = GoogleIamAdminV1AuditDataPermissionDelta::class;
   protected $permissionDeltaDataType = '';
 

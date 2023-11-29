@@ -20,6 +20,10 @@ namespace Google\Service\Iam;
 class GoogleIamV2DenyRule extends \Google\Collection
 {
   protected $collection_key = 'exceptionPrincipals';
+  /**
+   * @var GoogleTypeExpr
+   */
+  public $denialCondition;
   protected $denialConditionType = GoogleTypeExpr::class;
   protected $denialConditionDataType = '';
   /**
