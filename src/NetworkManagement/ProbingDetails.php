@@ -23,12 +23,28 @@ class ProbingDetails extends \Google\Model
    * @var string
    */
   public $abortCause;
+  /**
+   * @var EdgeLocation
+   */
+  public $destinationEgressLocation;
   protected $destinationEgressLocationType = EdgeLocation::class;
   protected $destinationEgressLocationDataType = '';
+  /**
+   * @var EndpointInfo
+   */
+  public $endpointInfo;
   protected $endpointInfoType = EndpointInfo::class;
   protected $endpointInfoDataType = '';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var LatencyDistribution
+   */
+  public $probingLatency;
   protected $probingLatencyType = LatencyDistribution::class;
   protected $probingLatencyDataType = '';
   /**

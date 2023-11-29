@@ -28,6 +28,10 @@ class LoadBalancerInfo extends \Google\Collection
    * @var string
    */
   public $backendUri;
+  /**
+   * @var LoadBalancerBackend[]
+   */
+  public $backends;
   protected $backendsType = LoadBalancerBackend::class;
   protected $backendsDataType = 'array';
   /**

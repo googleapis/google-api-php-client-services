@@ -20,12 +20,20 @@ namespace Google\Service\NetworkManagement;
 class ReachabilityDetails extends \Google\Collection
 {
   protected $collection_key = 'traces';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
    * @var string
    */
   public $result;
+  /**
+   * @var Trace[]
+   */
+  public $traces;
   protected $tracesType = Trace::class;
   protected $tracesDataType = 'array';
   /**

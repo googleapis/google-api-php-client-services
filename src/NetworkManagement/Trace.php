@@ -20,8 +20,16 @@ namespace Google\Service\NetworkManagement;
 class Trace extends \Google\Collection
 {
   protected $collection_key = 'steps';
+  /**
+   * @var EndpointInfo
+   */
+  public $endpointInfo;
   protected $endpointInfoType = EndpointInfo::class;
   protected $endpointInfoDataType = '';
+  /**
+   * @var Step[]
+   */
+  public $steps;
   protected $stepsType = Step::class;
   protected $stepsDataType = 'array';
 

@@ -24,6 +24,10 @@ class ListConnectivityTestsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ConnectivityTest[]
+   */
+  public $resources;
   protected $resourcesType = ConnectivityTest::class;
   protected $resourcesDataType = 'array';
   /**
