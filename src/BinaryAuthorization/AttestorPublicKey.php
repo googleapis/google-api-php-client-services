@@ -31,6 +31,10 @@ class AttestorPublicKey extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var PkixPublicKey
+   */
+  public $pkixPublicKey;
   protected $pkixPublicKeyType = PkixPublicKey::class;
   protected $pkixPublicKeyDataType = '';
 

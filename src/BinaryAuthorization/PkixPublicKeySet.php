@@ -20,6 +20,10 @@ namespace Google\Service\BinaryAuthorization;
 class PkixPublicKeySet extends \Google\Collection
 {
   protected $collection_key = 'pkixPublicKeys';
+  /**
+   * @var PkixPublicKey[]
+   */
+  public $pkixPublicKeys;
   protected $pkixPublicKeysType = PkixPublicKey::class;
   protected $pkixPublicKeysDataType = 'array';
 

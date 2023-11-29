@@ -20,6 +20,10 @@ namespace Google\Service\BinaryAuthorization;
 class IamPolicy extends \Google\Collection
 {
   protected $collection_key = 'bindings';
+  /**
+   * @var Binding[]
+   */
+  public $bindings;
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
   /**

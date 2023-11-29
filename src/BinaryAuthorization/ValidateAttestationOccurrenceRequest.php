@@ -19,6 +19,10 @@ namespace Google\Service\BinaryAuthorization;
 
 class ValidateAttestationOccurrenceRequest extends \Google\Model
 {
+  /**
+   * @var AttestationOccurrence
+   */
+  public $attestation;
   protected $attestationType = AttestationOccurrence::class;
   protected $attestationDataType = '';
   /**

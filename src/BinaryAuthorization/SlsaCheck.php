@@ -20,6 +20,10 @@ namespace Google\Service\BinaryAuthorization;
 class SlsaCheck extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  /**
+   * @var VerificationRule[]
+   */
+  public $rules;
   protected $rulesType = VerificationRule::class;
   protected $rulesDataType = 'array';
 

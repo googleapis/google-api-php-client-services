@@ -23,6 +23,10 @@ class PlatformPolicy extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var GkePolicy
+   */
+  public $gkePolicy;
   protected $gkePolicyType = GkePolicy::class;
   protected $gkePolicyDataType = '';
   /**

@@ -24,6 +24,10 @@ class ListPlatformPoliciesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PlatformPolicy[]
+   */
+  public $platformPolicies;
   protected $platformPoliciesType = PlatformPolicy::class;
   protected $platformPoliciesDataType = 'array';
 

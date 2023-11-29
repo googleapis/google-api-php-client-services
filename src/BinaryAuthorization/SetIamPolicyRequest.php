@@ -19,6 +19,10 @@ namespace Google\Service\BinaryAuthorization;
 
 class SetIamPolicyRequest extends \Google\Model
 {
+  /**
+   * @var IamPolicy
+   */
+  public $policy;
   protected $policyType = IamPolicy::class;
   protected $policyDataType = '';
 

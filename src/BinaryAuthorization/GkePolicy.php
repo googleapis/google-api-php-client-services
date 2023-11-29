@@ -20,8 +20,16 @@ namespace Google\Service\BinaryAuthorization;
 class GkePolicy extends \Google\Collection
 {
   protected $collection_key = 'checkSets';
+  /**
+   * @var CheckSet[]
+   */
+  public $checkSets;
   protected $checkSetsType = CheckSet::class;
   protected $checkSetsDataType = 'array';
+  /**
+   * @var ImageAllowlist
+   */
+  public $imageAllowlist;
   protected $imageAllowlistType = ImageAllowlist::class;
   protected $imageAllowlistDataType = '';
 

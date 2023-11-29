@@ -20,14 +20,26 @@ namespace Google\Service\BinaryAuthorization;
 class CheckSet extends \Google\Collection
 {
   protected $collection_key = 'checks';
+  /**
+   * @var Check[]
+   */
+  public $checks;
   protected $checksType = Check::class;
   protected $checksDataType = 'array';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var ImageAllowlist
+   */
+  public $imageAllowlist;
   protected $imageAllowlistType = ImageAllowlist::class;
   protected $imageAllowlistDataType = '';
+  /**
+   * @var Scope
+   */
+  public $scope;
   protected $scopeType = Scope::class;
   protected $scopeDataType = '';
 

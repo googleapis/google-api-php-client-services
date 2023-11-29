@@ -27,16 +27,40 @@ class Check extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var ImageAllowlist
+   */
+  public $imageAllowlist;
   protected $imageAllowlistType = ImageAllowlist::class;
   protected $imageAllowlistDataType = '';
+  /**
+   * @var ImageFreshnessCheck
+   */
+  public $imageFreshnessCheck;
   protected $imageFreshnessCheckType = ImageFreshnessCheck::class;
   protected $imageFreshnessCheckDataType = '';
+  /**
+   * @var SimpleSigningAttestationCheck
+   */
+  public $simpleSigningAttestationCheck;
   protected $simpleSigningAttestationCheckType = SimpleSigningAttestationCheck::class;
   protected $simpleSigningAttestationCheckDataType = '';
+  /**
+   * @var SlsaCheck
+   */
+  public $slsaCheck;
   protected $slsaCheckType = SlsaCheck::class;
   protected $slsaCheckDataType = '';
+  /**
+   * @var TrustedDirectoryCheck
+   */
+  public $trustedDirectoryCheck;
   protected $trustedDirectoryCheckType = TrustedDirectoryCheck::class;
   protected $trustedDirectoryCheckDataType = '';
+  /**
+   * @var VulnerabilityCheck
+   */
+  public $vulnerabilityCheck;
   protected $vulnerabilityCheckType = VulnerabilityCheck::class;
   protected $vulnerabilityCheckDataType = '';
 

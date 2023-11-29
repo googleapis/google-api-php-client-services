@@ -20,10 +20,22 @@ namespace Google\Service\BinaryAuthorization;
 class Policy extends \Google\Collection
 {
   protected $collection_key = 'admissionWhitelistPatterns';
+  /**
+   * @var AdmissionWhitelistPattern[]
+   */
+  public $admissionWhitelistPatterns;
   protected $admissionWhitelistPatternsType = AdmissionWhitelistPattern::class;
   protected $admissionWhitelistPatternsDataType = 'array';
+  /**
+   * @var AdmissionRule[]
+   */
+  public $clusterAdmissionRules;
   protected $clusterAdmissionRulesType = AdmissionRule::class;
   protected $clusterAdmissionRulesDataType = 'map';
+  /**
+   * @var AdmissionRule
+   */
+  public $defaultAdmissionRule;
   protected $defaultAdmissionRuleType = AdmissionRule::class;
   protected $defaultAdmissionRuleDataType = '';
   /**
@@ -38,10 +50,22 @@ class Policy extends \Google\Collection
    * @var string
    */
   public $globalPolicyEvaluationMode;
+  /**
+   * @var AdmissionRule[]
+   */
+  public $istioServiceIdentityAdmissionRules;
   protected $istioServiceIdentityAdmissionRulesType = AdmissionRule::class;
   protected $istioServiceIdentityAdmissionRulesDataType = 'map';
+  /**
+   * @var AdmissionRule[]
+   */
+  public $kubernetesNamespaceAdmissionRules;
   protected $kubernetesNamespaceAdmissionRulesType = AdmissionRule::class;
   protected $kubernetesNamespaceAdmissionRulesDataType = 'map';
+  /**
+   * @var AdmissionRule[]
+   */
+  public $kubernetesServiceAccountAdmissionRules;
   protected $kubernetesServiceAccountAdmissionRulesType = AdmissionRule::class;
   protected $kubernetesServiceAccountAdmissionRulesDataType = 'map';
   /**
