@@ -24,6 +24,10 @@ class ListQuestionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Question[]
+   */
+  public $questions;
   protected $questionsType = Question::class;
   protected $questionsDataType = 'array';
   /**

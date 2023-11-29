@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessQA;
 class ListAnswersResponse extends \Google\Collection
 {
   protected $collection_key = 'answers';
+  /**
+   * @var Answer[]
+   */
+  public $answers;
   protected $answersType = Answer::class;
   protected $answersDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\MyBusinessQA;
 
 class Answer extends \Google\Model
 {
+  /**
+   * @var Author
+   */
+  public $author;
   protected $authorType = Author::class;
   protected $authorDataType = '';
   /**
