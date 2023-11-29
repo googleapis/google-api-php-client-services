@@ -28,8 +28,16 @@ class EcommerceData extends \Google\Collection
    * @var string
    */
   public $ecommerceType;
+  /**
+   * @var ProductData[]
+   */
+  public $products;
   protected $productsType = ProductData::class;
   protected $productsDataType = 'array';
+  /**
+   * @var TransactionData
+   */
+  public $transaction;
   protected $transactionType = TransactionData::class;
   protected $transactionDataType = '';
 

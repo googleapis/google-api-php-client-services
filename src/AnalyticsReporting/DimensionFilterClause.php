@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class DimensionFilterClause extends \Google\Collection
 {
   protected $collection_key = 'filters';
+  /**
+   * @var DimensionFilter[]
+   */
+  public $filters;
   protected $filtersType = DimensionFilter::class;
   protected $filtersDataType = 'array';
   /**

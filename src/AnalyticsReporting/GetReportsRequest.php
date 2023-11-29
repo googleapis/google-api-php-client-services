@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class GetReportsRequest extends \Google\Collection
 {
   protected $collection_key = 'reportRequests';
+  /**
+   * @var ReportRequest[]
+   */
+  public $reportRequests;
   protected $reportRequestsType = ReportRequest::class;
   protected $reportRequestsDataType = 'array';
   /**

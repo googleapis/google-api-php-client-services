@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class MetricFilterClause extends \Google\Collection
 {
   protected $collection_key = 'filters';
+  /**
+   * @var MetricFilter[]
+   */
+  public $filters;
   protected $filtersType = MetricFilter::class;
   protected $filtersDataType = 'array';
   /**

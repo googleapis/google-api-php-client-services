@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class GoalSetData extends \Google\Collection
 {
   protected $collection_key = 'goals';
+  /**
+   * @var GoalData[]
+   */
+  public $goals;
   protected $goalsType = GoalData::class;
   protected $goalsDataType = 'array';
 

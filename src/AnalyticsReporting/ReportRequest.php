@@ -20,12 +20,28 @@ namespace Google\Service\AnalyticsReporting;
 class ReportRequest extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var CohortGroup
+   */
+  public $cohortGroup;
   protected $cohortGroupType = CohortGroup::class;
   protected $cohortGroupDataType = '';
+  /**
+   * @var DateRange[]
+   */
+  public $dateRanges;
   protected $dateRangesType = DateRange::class;
   protected $dateRangesDataType = 'array';
+  /**
+   * @var DimensionFilterClause[]
+   */
+  public $dimensionFilterClauses;
   protected $dimensionFilterClausesType = DimensionFilterClause::class;
   protected $dimensionFilterClausesDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
@@ -44,10 +60,22 @@ class ReportRequest extends \Google\Collection
    * @var bool
    */
   public $includeEmptyRows;
+  /**
+   * @var MetricFilterClause[]
+   */
+  public $metricFilterClauses;
   protected $metricFilterClausesType = MetricFilterClause::class;
   protected $metricFilterClausesDataType = 'array';
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var OrderBy[]
+   */
+  public $orderBys;
   protected $orderBysType = OrderBy::class;
   protected $orderBysDataType = 'array';
   /**
@@ -58,12 +86,20 @@ class ReportRequest extends \Google\Collection
    * @var string
    */
   public $pageToken;
+  /**
+   * @var Pivot[]
+   */
+  public $pivots;
   protected $pivotsType = Pivot::class;
   protected $pivotsDataType = 'array';
   /**
    * @var string
    */
   public $samplingLevel;
+  /**
+   * @var Segment[]
+   */
+  public $segments;
   protected $segmentsType = Segment::class;
   protected $segmentsDataType = 'array';
   /**

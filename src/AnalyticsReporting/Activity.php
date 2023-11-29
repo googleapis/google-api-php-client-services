@@ -28,6 +28,10 @@ class Activity extends \Google\Collection
    * @var string
    */
   public $activityType;
+  /**
+   * @var ScreenviewData
+   */
+  public $appview;
   protected $appviewType = ScreenviewData::class;
   protected $appviewDataType = '';
   /**
@@ -38,12 +42,28 @@ class Activity extends \Google\Collection
    * @var string
    */
   public $channelGrouping;
+  /**
+   * @var CustomDimension[]
+   */
+  public $customDimension;
   protected $customDimensionType = CustomDimension::class;
   protected $customDimensionDataType = 'array';
+  /**
+   * @var EcommerceData
+   */
+  public $ecommerce;
   protected $ecommerceType = EcommerceData::class;
   protected $ecommerceDataType = '';
+  /**
+   * @var EventData
+   */
+  public $event;
   protected $eventType = EventData::class;
   protected $eventDataType = '';
+  /**
+   * @var GoalSetData
+   */
+  public $goals;
   protected $goalsType = GoalSetData::class;
   protected $goalsDataType = '';
   /**
@@ -62,6 +82,10 @@ class Activity extends \Google\Collection
    * @var string
    */
   public $medium;
+  /**
+   * @var PageviewData
+   */
+  public $pageview;
   protected $pageviewType = PageviewData::class;
   protected $pageviewDataType = '';
   /**

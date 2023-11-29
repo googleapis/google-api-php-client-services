@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class CohortGroup extends \Google\Collection
 {
   protected $collection_key = 'cohorts';
+  /**
+   * @var Cohort[]
+   */
+  public $cohorts;
   protected $cohortsType = Cohort::class;
   protected $cohortsDataType = 'array';
   /**

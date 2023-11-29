@@ -24,6 +24,10 @@ class ColumnHeader extends \Google\Collection
    * @var string[]
    */
   public $dimensions;
+  /**
+   * @var MetricHeader
+   */
+  public $metricHeader;
   protected $metricHeaderType = MetricHeader::class;
   protected $metricHeaderDataType = '';
 

@@ -24,8 +24,16 @@ class GetReportsResponse extends \Google\Collection
    * @var int
    */
   public $queryCost;
+  /**
+   * @var Report[]
+   */
+  public $reports;
   protected $reportsType = Report::class;
   protected $reportsDataType = 'array';
+  /**
+   * @var ResourceQuotasRemaining
+   */
+  public $resourceQuotasRemaining;
   protected $resourceQuotasRemainingType = ResourceQuotasRemaining::class;
   protected $resourceQuotasRemainingDataType = '';
 

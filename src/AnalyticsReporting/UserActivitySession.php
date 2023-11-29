@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class UserActivitySession extends \Google\Collection
 {
   protected $collection_key = 'activities';
+  /**
+   * @var Activity[]
+   */
+  public $activities;
   protected $activitiesType = Activity::class;
   protected $activitiesDataType = 'array';
   /**

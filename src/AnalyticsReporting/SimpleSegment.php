@@ -20,6 +20,10 @@ namespace Google\Service\AnalyticsReporting;
 class SimpleSegment extends \Google\Collection
 {
   protected $collection_key = 'orFiltersForSegment';
+  /**
+   * @var OrFiltersForSegment[]
+   */
+  public $orFiltersForSegment;
   protected $orFiltersForSegmentType = OrFiltersForSegment::class;
   protected $orFiltersForSegmentDataType = 'array';
 
