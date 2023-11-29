@@ -19,8 +19,16 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class BidResponseWithoutBidsStatusRow extends \Google\Model
 {
+  /**
+   * @var MetricValue
+   */
+  public $impressionCount;
   protected $impressionCountType = MetricValue::class;
   protected $impressionCountDataType = '';
+  /**
+   * @var RowDimensions
+   */
+  public $rowDimensions;
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
   /**

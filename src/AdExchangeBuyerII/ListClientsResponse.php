@@ -20,6 +20,10 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListClientsResponse extends \Google\Collection
 {
   protected $collection_key = 'clients';
+  /**
+   * @var Client[]
+   */
+  public $clients;
   protected $clientsType = Client::class;
   protected $clientsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class DealServingMetadata extends \Google\Model
 {
+  /**
+   * @var DealPauseStatus
+   */
+  public $dealPauseStatus;
   protected $dealPauseStatusType = DealPauseStatus::class;
   protected $dealPauseStatusDataType = '';
 

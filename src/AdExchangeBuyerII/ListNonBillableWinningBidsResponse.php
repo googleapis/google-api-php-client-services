@@ -24,6 +24,10 @@ class ListNonBillableWinningBidsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var NonBillableWinningBidStatusRow[]
+   */
+  public $nonBillableWinningBidStatusRows;
   protected $nonBillableWinningBidStatusRowsType = NonBillableWinningBidStatusRow::class;
   protected $nonBillableWinningBidStatusRowsDataType = 'array';
 

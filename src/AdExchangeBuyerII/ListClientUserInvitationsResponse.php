@@ -20,6 +20,10 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListClientUserInvitationsResponse extends \Google\Collection
 {
   protected $collection_key = 'invitations';
+  /**
+   * @var ClientUserInvitation[]
+   */
+  public $invitations;
   protected $invitationsType = ClientUserInvitation::class;
   protected $invitationsDataType = 'array';
   /**

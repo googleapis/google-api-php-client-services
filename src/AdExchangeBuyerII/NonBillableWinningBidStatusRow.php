@@ -19,8 +19,16 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class NonBillableWinningBidStatusRow extends \Google\Model
 {
+  /**
+   * @var MetricValue
+   */
+  public $bidCount;
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
+  /**
+   * @var RowDimensions
+   */
+  public $rowDimensions;
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListFilterSetsResponse extends \Google\Collection
 {
   protected $collection_key = 'filterSets';
+  /**
+   * @var FilterSet[]
+   */
+  public $filterSets;
   protected $filterSetsType = FilterSet::class;
   protected $filterSetsDataType = 'array';
   /**

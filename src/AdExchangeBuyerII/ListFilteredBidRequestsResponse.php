@@ -20,6 +20,10 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListFilteredBidRequestsResponse extends \Google\Collection
 {
   protected $collection_key = 'calloutStatusRows';
+  /**
+   * @var CalloutStatusRow[]
+   */
+  public $calloutStatusRows;
   protected $calloutStatusRowsType = CalloutStatusRow::class;
   protected $calloutStatusRowsDataType = 'array';
   /**

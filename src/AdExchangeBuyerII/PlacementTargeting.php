@@ -19,8 +19,16 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class PlacementTargeting extends \Google\Model
 {
+  /**
+   * @var MobileApplicationTargeting
+   */
+  public $mobileApplicationTargeting;
   protected $mobileApplicationTargetingType = MobileApplicationTargeting::class;
   protected $mobileApplicationTargetingDataType = '';
+  /**
+   * @var UrlTargeting
+   */
+  public $urlTargeting;
   protected $urlTargetingType = UrlTargeting::class;
   protected $urlTargetingDataType = '';
 

@@ -27,16 +27,32 @@ class DealTerms extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var Price
+   */
+  public $estimatedGrossSpend;
   protected $estimatedGrossSpendType = Price::class;
   protected $estimatedGrossSpendDataType = '';
   /**
    * @var string
    */
   public $estimatedImpressionsPerDay;
+  /**
+   * @var GuaranteedFixedPriceTerms
+   */
+  public $guaranteedFixedPriceTerms;
   protected $guaranteedFixedPriceTermsType = GuaranteedFixedPriceTerms::class;
   protected $guaranteedFixedPriceTermsDataType = '';
+  /**
+   * @var NonGuaranteedAuctionTerms
+   */
+  public $nonGuaranteedAuctionTerms;
   protected $nonGuaranteedAuctionTermsType = NonGuaranteedAuctionTerms::class;
   protected $nonGuaranteedAuctionTermsDataType = '';
+  /**
+   * @var NonGuaranteedFixedPriceTerms
+   */
+  public $nonGuaranteedFixedPriceTerms;
   protected $nonGuaranteedFixedPriceTermsType = NonGuaranteedFixedPriceTerms::class;
   protected $nonGuaranteedFixedPriceTermsDataType = '';
   /**

@@ -24,6 +24,10 @@ class NonGuaranteedAuctionTerms extends \Google\Collection
    * @var bool
    */
   public $autoOptimizePrivateAuction;
+  /**
+   * @var PricePerBuyer[]
+   */
+  public $reservePricesPerBuyer;
   protected $reservePricesPerBuyerType = PricePerBuyer::class;
   protected $reservePricesPerBuyerDataType = 'array';
 

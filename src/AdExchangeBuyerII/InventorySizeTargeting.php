@@ -20,8 +20,16 @@ namespace Google\Service\AdExchangeBuyerII;
 class InventorySizeTargeting extends \Google\Collection
 {
   protected $collection_key = 'targetedInventorySizes';
+  /**
+   * @var AdSize[]
+   */
+  public $excludedInventorySizes;
   protected $excludedInventorySizesType = AdSize::class;
   protected $excludedInventorySizesDataType = 'array';
+  /**
+   * @var AdSize[]
+   */
+  public $targetedInventorySizes;
   protected $targetedInventorySizesType = AdSize::class;
   protected $targetedInventorySizesDataType = 'array';
 

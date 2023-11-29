@@ -19,12 +19,20 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class FilteredBidCreativeRow extends \Google\Model
 {
+  /**
+   * @var MetricValue
+   */
+  public $bidCount;
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
   /**
    * @var string
    */
   public $creativeId;
+  /**
+   * @var RowDimensions
+   */
+  public $rowDimensions;
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
 

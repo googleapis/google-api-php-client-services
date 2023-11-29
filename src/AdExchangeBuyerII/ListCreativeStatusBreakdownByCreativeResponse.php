@@ -20,6 +20,10 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListCreativeStatusBreakdownByCreativeResponse extends \Google\Collection
 {
   protected $collection_key = 'filteredBidCreativeRows';
+  /**
+   * @var FilteredBidCreativeRow[]
+   */
+  public $filteredBidCreativeRows;
   protected $filteredBidCreativeRowsType = FilteredBidCreativeRow::class;
   protected $filteredBidCreativeRowsDataType = 'array';
   /**

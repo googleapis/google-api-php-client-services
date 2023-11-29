@@ -20,14 +20,34 @@ namespace Google\Service\AdExchangeBuyerII;
 class Proposal extends \Google\Collection
 {
   protected $collection_key = 'sellerContacts';
+  /**
+   * @var Buyer
+   */
+  public $billedBuyer;
   protected $billedBuyerType = Buyer::class;
   protected $billedBuyerDataType = '';
+  /**
+   * @var Buyer
+   */
+  public $buyer;
   protected $buyerType = Buyer::class;
   protected $buyerDataType = '';
+  /**
+   * @var ContactInformation[]
+   */
+  public $buyerContacts;
   protected $buyerContactsType = ContactInformation::class;
   protected $buyerContactsDataType = 'array';
+  /**
+   * @var PrivateData
+   */
+  public $buyerPrivateData;
   protected $buyerPrivateDataType = PrivateData::class;
   protected $buyerPrivateDataDataType = '';
+  /**
+   * @var Deal[]
+   */
+  public $deals;
   protected $dealsType = Deal::class;
   protected $dealsDataType = 'array';
   /**
@@ -46,6 +66,10 @@ class Proposal extends \Google\Collection
    * @var string
    */
   public $lastUpdaterOrCommentorRole;
+  /**
+   * @var Note[]
+   */
+  public $notes;
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
   /**
@@ -68,8 +92,16 @@ class Proposal extends \Google\Collection
    * @var string
    */
   public $proposalState;
+  /**
+   * @var Seller
+   */
+  public $seller;
   protected $sellerType = Seller::class;
   protected $sellerDataType = '';
+  /**
+   * @var ContactInformation[]
+   */
+  public $sellerContacts;
   protected $sellerContactsType = ContactInformation::class;
   protected $sellerContactsDataType = 'array';
   /**

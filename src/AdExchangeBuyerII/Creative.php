@@ -28,6 +28,10 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $adChoicesDestinationUrl;
+  /**
+   * @var AdTechnologyProviders
+   */
+  public $adTechnologyProviders;
   protected $adTechnologyProvidersType = AdTechnologyProviders::class;
   protected $adTechnologyProvidersDataType = '';
   /**
@@ -50,6 +54,10 @@ class Creative extends \Google\Collection
    * @var string[]
    */
   public $clickThroughUrls;
+  /**
+   * @var Correction[]
+   */
+  public $corrections;
   protected $correctionsType = Correction::class;
   protected $correctionsDataType = 'array';
   /**
@@ -84,12 +92,20 @@ class Creative extends \Google\Collection
    * @var int[]
    */
   public $detectedSensitiveCategories;
+  /**
+   * @var HtmlContent
+   */
+  public $html;
   protected $htmlType = HtmlContent::class;
   protected $htmlDataType = '';
   /**
    * @var string[]
    */
   public $impressionTrackingUrls;
+  /**
+   * @var NativeContent
+   */
+  public $native;
   protected $nativeType = NativeContent::class;
   protected $nativeDataType = '';
   /**
@@ -100,6 +116,10 @@ class Creative extends \Google\Collection
    * @var string[]
    */
   public $restrictedCategories;
+  /**
+   * @var ServingRestriction[]
+   */
+  public $servingRestrictions;
   protected $servingRestrictionsType = ServingRestriction::class;
   protected $servingRestrictionsDataType = 'array';
   /**
@@ -110,6 +130,10 @@ class Creative extends \Google\Collection
    * @var int
    */
   public $version;
+  /**
+   * @var VideoContent
+   */
+  public $video;
   protected $videoType = VideoContent::class;
   protected $videoDataType = '';
 

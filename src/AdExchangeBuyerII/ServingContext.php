@@ -23,14 +23,34 @@ class ServingContext extends \Google\Model
    * @var string
    */
   public $all;
+  /**
+   * @var AppContext
+   */
+  public $appType;
   protected $appTypeType = AppContext::class;
   protected $appTypeDataType = '';
+  /**
+   * @var AuctionContext
+   */
+  public $auctionType;
   protected $auctionTypeType = AuctionContext::class;
   protected $auctionTypeDataType = '';
+  /**
+   * @var LocationContext
+   */
+  public $location;
   protected $locationType = LocationContext::class;
   protected $locationDataType = '';
+  /**
+   * @var PlatformContext
+   */
+  public $platform;
   protected $platformType = PlatformContext::class;
   protected $platformDataType = '';
+  /**
+   * @var SecurityContext
+   */
+  public $securityType;
   protected $securityTypeType = SecurityContext::class;
   protected $securityTypeDataType = '';
 

@@ -19,12 +19,20 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class CreativeStatusRow extends \Google\Model
 {
+  /**
+   * @var MetricValue
+   */
+  public $bidCount;
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
   /**
    * @var int
    */
   public $creativeStatusId;
+  /**
+   * @var RowDimensions
+   */
+  public $rowDimensions;
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
 

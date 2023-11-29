@@ -19,6 +19,10 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class RemoveDealAssociationRequest extends \Google\Model
 {
+  /**
+   * @var CreativeDealAssociation
+   */
+  public $association;
   protected $associationType = CreativeDealAssociation::class;
   protected $associationDataType = '';
 

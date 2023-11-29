@@ -20,10 +20,22 @@ namespace Google\Service\AdExchangeBuyerII;
 class ServingRestriction extends \Google\Collection
 {
   protected $collection_key = 'disapprovalReasons';
+  /**
+   * @var ServingContext[]
+   */
+  public $contexts;
   protected $contextsType = ServingContext::class;
   protected $contextsDataType = 'array';
+  /**
+   * @var Disapproval
+   */
+  public $disapproval;
   protected $disapprovalType = Disapproval::class;
   protected $disapprovalDataType = '';
+  /**
+   * @var Disapproval[]
+   */
+  public $disapprovalReasons;
   protected $disapprovalReasonsType = Disapproval::class;
   protected $disapprovalReasonsDataType = 'array';
   /**

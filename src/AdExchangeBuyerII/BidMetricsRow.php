@@ -19,20 +19,52 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class BidMetricsRow extends \Google\Model
 {
+  /**
+   * @var MetricValue
+   */
+  public $bids;
   protected $bidsType = MetricValue::class;
   protected $bidsDataType = '';
+  /**
+   * @var MetricValue
+   */
+  public $bidsInAuction;
   protected $bidsInAuctionType = MetricValue::class;
   protected $bidsInAuctionDataType = '';
+  /**
+   * @var MetricValue
+   */
+  public $billedImpressions;
   protected $billedImpressionsType = MetricValue::class;
   protected $billedImpressionsDataType = '';
+  /**
+   * @var MetricValue
+   */
+  public $impressionsWon;
   protected $impressionsWonType = MetricValue::class;
   protected $impressionsWonDataType = '';
+  /**
+   * @var MetricValue
+   */
+  public $measurableImpressions;
   protected $measurableImpressionsType = MetricValue::class;
   protected $measurableImpressionsDataType = '';
+  /**
+   * @var MetricValue
+   */
+  public $reachedQueries;
   protected $reachedQueriesType = MetricValue::class;
   protected $reachedQueriesDataType = '';
+  /**
+   * @var RowDimensions
+   */
+  public $rowDimensions;
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
+  /**
+   * @var MetricValue
+   */
+  public $viewableImpressions;
   protected $viewableImpressionsType = MetricValue::class;
   protected $viewableImpressionsDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListBidResponsesWithoutBidsResponse extends \Google\Collection
 {
   protected $collection_key = 'bidResponseWithoutBidsStatusRows';
+  /**
+   * @var BidResponseWithoutBidsStatusRow[]
+   */
+  public $bidResponseWithoutBidsStatusRows;
   protected $bidResponseWithoutBidsStatusRowsType = BidResponseWithoutBidsStatusRow::class;
   protected $bidResponseWithoutBidsStatusRowsDataType = 'array';
   /**

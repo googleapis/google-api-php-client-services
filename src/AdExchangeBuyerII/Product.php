@@ -32,6 +32,10 @@ class Product extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var ContactInformation[]
+   */
+  public $creatorContacts;
   protected $creatorContactsType = ContactInformation::class;
   protected $creatorContactsDataType = 'array';
   /**
@@ -54,14 +58,26 @@ class Product extends \Google\Collection
    * @var string
    */
   public $publisherProfileId;
+  /**
+   * @var Seller
+   */
+  public $seller;
   protected $sellerType = Seller::class;
   protected $sellerDataType = '';
   /**
    * @var string
    */
   public $syndicationProduct;
+  /**
+   * @var TargetingCriteria[]
+   */
+  public $targetingCriterion;
   protected $targetingCriterionType = TargetingCriteria::class;
   protected $targetingCriterionDataType = 'array';
+  /**
+   * @var DealTerms
+   */
+  public $terms;
   protected $termsType = DealTerms::class;
   protected $termsDataType = '';
   /**

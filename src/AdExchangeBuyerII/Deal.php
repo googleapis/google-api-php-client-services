@@ -28,6 +28,10 @@ class Deal extends \Google\Collection
    * @var string
    */
   public $availableStartTime;
+  /**
+   * @var PrivateData
+   */
+  public $buyerPrivateData;
   protected $buyerPrivateDataType = PrivateData::class;
   protected $buyerPrivateDataDataType = '';
   /**
@@ -46,6 +50,10 @@ class Deal extends \Google\Collection
    * @var string
    */
   public $creativePreApprovalPolicy;
+  /**
+   * @var CreativeRestrictions
+   */
+  public $creativeRestrictions;
   protected $creativeRestrictionsType = CreativeRestrictions::class;
   protected $creativeRestrictionsDataType = '';
   /**
@@ -56,10 +64,22 @@ class Deal extends \Google\Collection
    * @var string
    */
   public $dealId;
+  /**
+   * @var DealServingMetadata
+   */
+  public $dealServingMetadata;
   protected $dealServingMetadataType = DealServingMetadata::class;
   protected $dealServingMetadataDataType = '';
+  /**
+   * @var DealTerms
+   */
+  public $dealTerms;
   protected $dealTermsType = DealTerms::class;
   protected $dealTermsDataType = '';
+  /**
+   * @var DeliveryControl
+   */
+  public $deliveryControl;
   protected $deliveryControlType = DeliveryControl::class;
   protected $deliveryControlDataType = '';
   /**
@@ -86,14 +106,26 @@ class Deal extends \Google\Collection
    * @var string
    */
   public $proposalId;
+  /**
+   * @var ContactInformation[]
+   */
+  public $sellerContacts;
   protected $sellerContactsType = ContactInformation::class;
   protected $sellerContactsDataType = 'array';
   /**
    * @var string
    */
   public $syndicationProduct;
+  /**
+   * @var MarketplaceTargeting
+   */
+  public $targeting;
   protected $targetingType = MarketplaceTargeting::class;
   protected $targetingDataType = '';
+  /**
+   * @var TargetingCriteria[]
+   */
+  public $targetingCriterion;
   protected $targetingCriterionType = TargetingCriteria::class;
   protected $targetingCriterionDataType = 'array';
   /**

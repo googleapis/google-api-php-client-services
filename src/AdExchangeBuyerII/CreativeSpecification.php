@@ -20,8 +20,16 @@ namespace Google\Service\AdExchangeBuyerII;
 class CreativeSpecification extends \Google\Collection
 {
   protected $collection_key = 'creativeCompanionSizes';
+  /**
+   * @var AdSize[]
+   */
+  public $creativeCompanionSizes;
   protected $creativeCompanionSizesType = AdSize::class;
   protected $creativeCompanionSizesDataType = 'array';
+  /**
+   * @var AdSize
+   */
+  public $creativeSize;
   protected $creativeSizeType = AdSize::class;
   protected $creativeSizeDataType = '';
 
