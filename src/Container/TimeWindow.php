@@ -23,6 +23,10 @@ class TimeWindow extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var MaintenanceExclusionOptions
+   */
+  public $maintenanceExclusionOptions;
   protected $maintenanceExclusionOptionsType = MaintenanceExclusionOptions::class;
   protected $maintenanceExclusionOptionsDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class LoggingConfig extends \Google\Model
 {
+  /**
+   * @var LoggingComponentConfig
+   */
+  public $componentConfig;
   protected $componentConfigType = LoggingComponentConfig::class;
   protected $componentConfigDataType = '';
 

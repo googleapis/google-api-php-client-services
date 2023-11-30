@@ -20,6 +20,10 @@ namespace Google\Service\Container;
 class NodeTaints extends \Google\Collection
 {
   protected $collection_key = 'taints';
+  /**
+   * @var NodeTaint[]
+   */
+  public $taints;
   protected $taintsType = NodeTaint::class;
   protected $taintsDataType = 'array';
 

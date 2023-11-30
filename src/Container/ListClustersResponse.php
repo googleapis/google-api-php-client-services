@@ -20,6 +20,10 @@ namespace Google\Service\Container;
 class ListClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'missingZones';
+  /**
+   * @var Cluster[]
+   */
+  public $clusters;
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
   /**

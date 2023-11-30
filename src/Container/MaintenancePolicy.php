@@ -23,6 +23,10 @@ class MaintenancePolicy extends \Google\Model
    * @var string
    */
   public $resourceVersion;
+  /**
+   * @var MaintenanceWindow
+   */
+  public $window;
   protected $windowType = MaintenanceWindow::class;
   protected $windowDataType = '';
 

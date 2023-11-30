@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class IPAllocationPolicy extends \Google\Model
 {
+  /**
+   * @var AdditionalPodRangesConfig
+   */
+  public $additionalPodRangesConfig;
   protected $additionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $additionalPodRangesConfigDataType = '';
   /**
@@ -50,6 +54,10 @@ class IPAllocationPolicy extends \Google\Model
    * @var string
    */
   public $nodeIpv4CidrBlock;
+  /**
+   * @var PodCIDROverprovisionConfig
+   */
+  public $podCidrOverprovisionConfig;
   protected $podCidrOverprovisionConfigType = PodCIDROverprovisionConfig::class;
   protected $podCidrOverprovisionConfigDataType = '';
   /**

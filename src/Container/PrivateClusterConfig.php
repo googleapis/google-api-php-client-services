@@ -27,6 +27,10 @@ class PrivateClusterConfig extends \Google\Model
    * @var bool
    */
   public $enablePrivateNodes;
+  /**
+   * @var PrivateClusterMasterGlobalAccessConfig
+   */
+  public $masterGlobalAccessConfig;
   protected $masterGlobalAccessConfigType = PrivateClusterMasterGlobalAccessConfig::class;
   protected $masterGlobalAccessConfigDataType = '';
   /**

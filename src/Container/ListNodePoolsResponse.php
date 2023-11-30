@@ -20,6 +20,10 @@ namespace Google\Service\Container;
 class ListNodePoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'nodePools';
+  /**
+   * @var NodePool[]
+   */
+  public $nodePools;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
 

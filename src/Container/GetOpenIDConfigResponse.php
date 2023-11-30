@@ -28,6 +28,10 @@ class GetOpenIDConfigResponse extends \Google\Collection
         "responseTypesSupported" => "response_types_supported",
         "subjectTypesSupported" => "subject_types_supported",
   ];
+  /**
+   * @var HttpCacheControlResponseHeader
+   */
+  public $cacheHeader;
   protected $cacheHeaderType = HttpCacheControlResponseHeader::class;
   protected $cacheHeaderDataType = '';
   /**

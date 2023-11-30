@@ -23,6 +23,10 @@ class BlueGreenSettings extends \Google\Model
    * @var string
    */
   public $nodePoolSoakDuration;
+  /**
+   * @var StandardRolloutPolicy
+   */
+  public $standardRolloutPolicy;
   protected $standardRolloutPolicyType = StandardRolloutPolicy::class;
   protected $standardRolloutPolicyDataType = '';
 

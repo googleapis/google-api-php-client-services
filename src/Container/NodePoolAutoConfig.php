@@ -19,8 +19,16 @@ namespace Google\Service\Container;
 
 class NodePoolAutoConfig extends \Google\Model
 {
+  /**
+   * @var NetworkTags
+   */
+  public $networkTags;
   protected $networkTagsType = NetworkTags::class;
   protected $networkTagsDataType = '';
+  /**
+   * @var ResourceManagerTags
+   */
+  public $resourceManagerTags;
   protected $resourceManagerTagsType = ResourceManagerTags::class;
   protected $resourceManagerTagsDataType = '';
 

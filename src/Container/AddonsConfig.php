@@ -19,26 +19,70 @@ namespace Google\Service\Container;
 
 class AddonsConfig extends \Google\Model
 {
+  /**
+   * @var CloudRunConfig
+   */
+  public $cloudRunConfig;
   protected $cloudRunConfigType = CloudRunConfig::class;
   protected $cloudRunConfigDataType = '';
+  /**
+   * @var ConfigConnectorConfig
+   */
+  public $configConnectorConfig;
   protected $configConnectorConfigType = ConfigConnectorConfig::class;
   protected $configConnectorConfigDataType = '';
+  /**
+   * @var DnsCacheConfig
+   */
+  public $dnsCacheConfig;
   protected $dnsCacheConfigType = DnsCacheConfig::class;
   protected $dnsCacheConfigDataType = '';
+  /**
+   * @var GcePersistentDiskCsiDriverConfig
+   */
+  public $gcePersistentDiskCsiDriverConfig;
   protected $gcePersistentDiskCsiDriverConfigType = GcePersistentDiskCsiDriverConfig::class;
   protected $gcePersistentDiskCsiDriverConfigDataType = '';
+  /**
+   * @var GcpFilestoreCsiDriverConfig
+   */
+  public $gcpFilestoreCsiDriverConfig;
   protected $gcpFilestoreCsiDriverConfigType = GcpFilestoreCsiDriverConfig::class;
   protected $gcpFilestoreCsiDriverConfigDataType = '';
+  /**
+   * @var GcsFuseCsiDriverConfig
+   */
+  public $gcsFuseCsiDriverConfig;
   protected $gcsFuseCsiDriverConfigType = GcsFuseCsiDriverConfig::class;
   protected $gcsFuseCsiDriverConfigDataType = '';
+  /**
+   * @var GkeBackupAgentConfig
+   */
+  public $gkeBackupAgentConfig;
   protected $gkeBackupAgentConfigType = GkeBackupAgentConfig::class;
   protected $gkeBackupAgentConfigDataType = '';
+  /**
+   * @var HorizontalPodAutoscaling
+   */
+  public $horizontalPodAutoscaling;
   protected $horizontalPodAutoscalingType = HorizontalPodAutoscaling::class;
   protected $horizontalPodAutoscalingDataType = '';
+  /**
+   * @var HttpLoadBalancing
+   */
+  public $httpLoadBalancing;
   protected $httpLoadBalancingType = HttpLoadBalancing::class;
   protected $httpLoadBalancingDataType = '';
+  /**
+   * @var KubernetesDashboard
+   */
+  public $kubernetesDashboard;
   protected $kubernetesDashboardType = KubernetesDashboard::class;
   protected $kubernetesDashboardDataType = '';
+  /**
+   * @var NetworkPolicyConfig
+   */
+  public $networkPolicyConfig;
   protected $networkPolicyConfigType = NetworkPolicyConfig::class;
   protected $networkPolicyConfigDataType = '';
 

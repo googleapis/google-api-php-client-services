@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class UpgradeAvailableEvent extends \Google\Model
 {
+  /**
+   * @var ReleaseChannel
+   */
+  public $releaseChannel;
   protected $releaseChannelType = ReleaseChannel::class;
   protected $releaseChannelDataType = '';
   /**

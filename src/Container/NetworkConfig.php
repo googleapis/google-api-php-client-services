@@ -23,8 +23,16 @@ class NetworkConfig extends \Google\Model
    * @var string
    */
   public $datapathProvider;
+  /**
+   * @var DefaultSnatStatus
+   */
+  public $defaultSnatStatus;
   protected $defaultSnatStatusType = DefaultSnatStatus::class;
   protected $defaultSnatStatusDataType = '';
+  /**
+   * @var DNSConfig
+   */
+  public $dnsConfig;
   protected $dnsConfigType = DNSConfig::class;
   protected $dnsConfigDataType = '';
   /**
@@ -43,18 +51,30 @@ class NetworkConfig extends \Google\Model
    * @var bool
    */
   public $enableMultiNetworking;
+  /**
+   * @var GatewayAPIConfig
+   */
+  public $gatewayApiConfig;
   protected $gatewayApiConfigType = GatewayAPIConfig::class;
   protected $gatewayApiConfigDataType = '';
   /**
    * @var string
    */
   public $network;
+  /**
+   * @var ClusterNetworkPerformanceConfig
+   */
+  public $networkPerformanceConfig;
   protected $networkPerformanceConfigType = ClusterNetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
   /**
    * @var string
    */
   public $privateIpv6GoogleAccess;
+  /**
+   * @var ServiceExternalIPsConfig
+   */
+  public $serviceExternalIpsConfig;
   protected $serviceExternalIpsConfigType = ServiceExternalIPsConfig::class;
   protected $serviceExternalIpsConfigDataType = '';
   /**

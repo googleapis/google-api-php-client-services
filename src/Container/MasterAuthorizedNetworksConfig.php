@@ -20,6 +20,10 @@ namespace Google\Service\Container;
 class MasterAuthorizedNetworksConfig extends \Google\Collection
 {
   protected $collection_key = 'cidrBlocks';
+  /**
+   * @var CidrBlock[]
+   */
+  public $cidrBlocks;
   protected $cidrBlocksType = CidrBlock::class;
   protected $cidrBlocksDataType = 'array';
   /**

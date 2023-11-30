@@ -27,6 +27,10 @@ class NodeManagement extends \Google\Model
    * @var bool
    */
   public $autoUpgrade;
+  /**
+   * @var AutoUpgradeOptions
+   */
+  public $upgradeOptions;
   protected $upgradeOptionsType = AutoUpgradeOptions::class;
   protected $upgradeOptionsDataType = '';
 

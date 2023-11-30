@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class NotificationConfig extends \Google\Model
 {
+  /**
+   * @var PubSub
+   */
+  public $pubsub;
   protected $pubsubType = PubSub::class;
   protected $pubsubDataType = '';
 

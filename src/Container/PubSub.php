@@ -23,6 +23,10 @@ class PubSub extends \Google\Model
    * @var bool
    */
   public $enabled;
+  /**
+   * @var Filter
+   */
+  public $filter;
   protected $filterType = Filter::class;
   protected $filterDataType = '';
   /**

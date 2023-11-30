@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class AdditionalPodNetworkConfig extends \Google\Model
 {
+  /**
+   * @var MaxPodsConstraint
+   */
+  public $maxPodsPerNode;
   protected $maxPodsPerNodeType = MaxPodsConstraint::class;
   protected $maxPodsPerNodeDataType = '';
   /**

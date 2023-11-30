@@ -20,8 +20,16 @@ namespace Google\Service\Container;
 class GetJSONWebKeysResponse extends \Google\Collection
 {
   protected $collection_key = 'keys';
+  /**
+   * @var HttpCacheControlResponseHeader
+   */
+  public $cacheHeader;
   protected $cacheHeaderType = HttpCacheControlResponseHeader::class;
   protected $cacheHeaderDataType = '';
+  /**
+   * @var Jwk[]
+   */
+  public $keys;
   protected $keysType = Jwk::class;
   protected $keysDataType = 'array';
 

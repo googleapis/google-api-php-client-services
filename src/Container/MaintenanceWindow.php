@@ -19,10 +19,22 @@ namespace Google\Service\Container;
 
 class MaintenanceWindow extends \Google\Model
 {
+  /**
+   * @var DailyMaintenanceWindow
+   */
+  public $dailyMaintenanceWindow;
   protected $dailyMaintenanceWindowType = DailyMaintenanceWindow::class;
   protected $dailyMaintenanceWindowDataType = '';
+  /**
+   * @var TimeWindow[]
+   */
+  public $maintenanceExclusions;
   protected $maintenanceExclusionsType = TimeWindow::class;
   protected $maintenanceExclusionsDataType = 'map';
+  /**
+   * @var RecurringTimeWindow
+   */
+  public $recurringWindow;
   protected $recurringWindowType = RecurringTimeWindow::class;
   protected $recurringWindowDataType = '';
 

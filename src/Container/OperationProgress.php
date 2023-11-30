@@ -20,12 +20,20 @@ namespace Google\Service\Container;
 class OperationProgress extends \Google\Collection
 {
   protected $collection_key = 'stages';
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var OperationProgress[]
+   */
+  public $stages;
   protected $stagesType = OperationProgress::class;
   protected $stagesDataType = 'array';
   /**

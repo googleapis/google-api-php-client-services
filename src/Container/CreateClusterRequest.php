@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class CreateClusterRequest extends \Google\Model
 {
+  /**
+   * @var Cluster
+   */
+  public $cluster;
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**

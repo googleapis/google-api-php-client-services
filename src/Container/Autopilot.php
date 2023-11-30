@@ -23,6 +23,10 @@ class Autopilot extends \Google\Model
    * @var bool
    */
   public $enabled;
+  /**
+   * @var WorkloadPolicyConfig
+   */
+  public $workloadPolicyConfig;
   protected $workloadPolicyConfigType = WorkloadPolicyConfig::class;
   protected $workloadPolicyConfigDataType = '';
 

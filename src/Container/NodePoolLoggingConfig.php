@@ -19,6 +19,10 @@ namespace Google\Service\Container;
 
 class NodePoolLoggingConfig extends \Google\Model
 {
+  /**
+   * @var LoggingVariantConfig
+   */
+  public $variantConfig;
   protected $variantConfigType = LoggingVariantConfig::class;
   protected $variantConfigDataType = '';
 

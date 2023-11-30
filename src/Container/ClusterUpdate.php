@@ -20,28 +20,68 @@ namespace Google\Service\Container;
 class ClusterUpdate extends \Google\Collection
 {
   protected $collection_key = 'desiredLocations';
+  /**
+   * @var AdditionalPodRangesConfig
+   */
+  public $additionalPodRangesConfig;
   protected $additionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $additionalPodRangesConfigDataType = '';
+  /**
+   * @var AddonsConfig
+   */
+  public $desiredAddonsConfig;
   protected $desiredAddonsConfigType = AddonsConfig::class;
   protected $desiredAddonsConfigDataType = '';
+  /**
+   * @var AuthenticatorGroupsConfig
+   */
+  public $desiredAuthenticatorGroupsConfig;
   protected $desiredAuthenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $desiredAuthenticatorGroupsConfigDataType = '';
+  /**
+   * @var WorkloadPolicyConfig
+   */
+  public $desiredAutopilotWorkloadPolicyConfig;
   protected $desiredAutopilotWorkloadPolicyConfigType = WorkloadPolicyConfig::class;
   protected $desiredAutopilotWorkloadPolicyConfigDataType = '';
+  /**
+   * @var BinaryAuthorization
+   */
+  public $desiredBinaryAuthorization;
   protected $desiredBinaryAuthorizationType = BinaryAuthorization::class;
   protected $desiredBinaryAuthorizationDataType = '';
+  /**
+   * @var ClusterAutoscaling
+   */
+  public $desiredClusterAutoscaling;
   protected $desiredClusterAutoscalingType = ClusterAutoscaling::class;
   protected $desiredClusterAutoscalingDataType = '';
+  /**
+   * @var CostManagementConfig
+   */
+  public $desiredCostManagementConfig;
   protected $desiredCostManagementConfigType = CostManagementConfig::class;
   protected $desiredCostManagementConfigDataType = '';
+  /**
+   * @var DatabaseEncryption
+   */
+  public $desiredDatabaseEncryption;
   protected $desiredDatabaseEncryptionType = DatabaseEncryption::class;
   protected $desiredDatabaseEncryptionDataType = '';
   /**
    * @var string
    */
   public $desiredDatapathProvider;
+  /**
+   * @var DefaultSnatStatus
+   */
+  public $desiredDefaultSnatStatus;
   protected $desiredDefaultSnatStatusType = DefaultSnatStatus::class;
   protected $desiredDefaultSnatStatusDataType = '';
+  /**
+   * @var DNSConfig
+   */
+  public $desiredDnsConfig;
   protected $desiredDnsConfigType = DNSConfig::class;
   protected $desiredDnsConfigDataType = '';
   /**
@@ -52,100 +92,212 @@ class ClusterUpdate extends \Google\Collection
    * @var bool
    */
   public $desiredEnablePrivateEndpoint;
+  /**
+   * @var Fleet
+   */
+  public $desiredFleet;
   protected $desiredFleetType = Fleet::class;
   protected $desiredFleetDataType = '';
+  /**
+   * @var GatewayAPIConfig
+   */
+  public $desiredGatewayApiConfig;
   protected $desiredGatewayApiConfigType = GatewayAPIConfig::class;
   protected $desiredGatewayApiConfigDataType = '';
+  /**
+   * @var GcfsConfig
+   */
+  public $desiredGcfsConfig;
   protected $desiredGcfsConfigType = GcfsConfig::class;
   protected $desiredGcfsConfigDataType = '';
+  /**
+   * @var IdentityServiceConfig
+   */
+  public $desiredIdentityServiceConfig;
   protected $desiredIdentityServiceConfigType = IdentityServiceConfig::class;
   protected $desiredIdentityServiceConfigDataType = '';
   /**
    * @var string
    */
   public $desiredImageType;
+  /**
+   * @var IntraNodeVisibilityConfig
+   */
+  public $desiredIntraNodeVisibilityConfig;
   protected $desiredIntraNodeVisibilityConfigType = IntraNodeVisibilityConfig::class;
   protected $desiredIntraNodeVisibilityConfigDataType = '';
+  /**
+   * @var K8sBetaAPIConfig
+   */
+  public $desiredK8sBetaApis;
   protected $desiredK8sBetaApisType = K8sBetaAPIConfig::class;
   protected $desiredK8sBetaApisDataType = '';
+  /**
+   * @var ILBSubsettingConfig
+   */
+  public $desiredL4ilbSubsettingConfig;
   protected $desiredL4ilbSubsettingConfigType = ILBSubsettingConfig::class;
   protected $desiredL4ilbSubsettingConfigDataType = '';
   /**
    * @var string[]
    */
   public $desiredLocations;
+  /**
+   * @var LoggingConfig
+   */
+  public $desiredLoggingConfig;
   protected $desiredLoggingConfigType = LoggingConfig::class;
   protected $desiredLoggingConfigDataType = '';
   /**
    * @var string
    */
   public $desiredLoggingService;
+  /**
+   * @var MasterAuthorizedNetworksConfig
+   */
+  public $desiredMasterAuthorizedNetworksConfig;
   protected $desiredMasterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $desiredMasterAuthorizedNetworksConfigDataType = '';
   /**
    * @var string
    */
   public $desiredMasterVersion;
+  /**
+   * @var MeshCertificates
+   */
+  public $desiredMeshCertificates;
   protected $desiredMeshCertificatesType = MeshCertificates::class;
   protected $desiredMeshCertificatesDataType = '';
+  /**
+   * @var MonitoringConfig
+   */
+  public $desiredMonitoringConfig;
   protected $desiredMonitoringConfigType = MonitoringConfig::class;
   protected $desiredMonitoringConfigDataType = '';
   /**
    * @var string
    */
   public $desiredMonitoringService;
+  /**
+   * @var ClusterNetworkPerformanceConfig
+   */
+  public $desiredNetworkPerformanceConfig;
   protected $desiredNetworkPerformanceConfigType = ClusterNetworkPerformanceConfig::class;
   protected $desiredNetworkPerformanceConfigDataType = '';
+  /**
+   * @var NetworkTags
+   */
+  public $desiredNodePoolAutoConfigNetworkTags;
   protected $desiredNodePoolAutoConfigNetworkTagsType = NetworkTags::class;
   protected $desiredNodePoolAutoConfigNetworkTagsDataType = '';
+  /**
+   * @var ResourceManagerTags
+   */
+  public $desiredNodePoolAutoConfigResourceManagerTags;
   protected $desiredNodePoolAutoConfigResourceManagerTagsType = ResourceManagerTags::class;
   protected $desiredNodePoolAutoConfigResourceManagerTagsDataType = '';
+  /**
+   * @var NodePoolAutoscaling
+   */
+  public $desiredNodePoolAutoscaling;
   protected $desiredNodePoolAutoscalingType = NodePoolAutoscaling::class;
   protected $desiredNodePoolAutoscalingDataType = '';
   /**
    * @var string
    */
   public $desiredNodePoolId;
+  /**
+   * @var NodePoolLoggingConfig
+   */
+  public $desiredNodePoolLoggingConfig;
   protected $desiredNodePoolLoggingConfigType = NodePoolLoggingConfig::class;
   protected $desiredNodePoolLoggingConfigDataType = '';
   /**
    * @var string
    */
   public $desiredNodeVersion;
+  /**
+   * @var NotificationConfig
+   */
+  public $desiredNotificationConfig;
   protected $desiredNotificationConfigType = NotificationConfig::class;
   protected $desiredNotificationConfigDataType = '';
+  /**
+   * @var ParentProductConfig
+   */
+  public $desiredParentProductConfig;
   protected $desiredParentProductConfigType = ParentProductConfig::class;
   protected $desiredParentProductConfigDataType = '';
+  /**
+   * @var PrivateClusterConfig
+   */
+  public $desiredPrivateClusterConfig;
   protected $desiredPrivateClusterConfigType = PrivateClusterConfig::class;
   protected $desiredPrivateClusterConfigDataType = '';
   /**
    * @var string
    */
   public $desiredPrivateIpv6GoogleAccess;
+  /**
+   * @var ReleaseChannel
+   */
+  public $desiredReleaseChannel;
   protected $desiredReleaseChannelType = ReleaseChannel::class;
   protected $desiredReleaseChannelDataType = '';
+  /**
+   * @var ResourceUsageExportConfig
+   */
+  public $desiredResourceUsageExportConfig;
   protected $desiredResourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $desiredResourceUsageExportConfigDataType = '';
+  /**
+   * @var SecurityPostureConfig
+   */
+  public $desiredSecurityPostureConfig;
   protected $desiredSecurityPostureConfigType = SecurityPostureConfig::class;
   protected $desiredSecurityPostureConfigDataType = '';
+  /**
+   * @var ServiceExternalIPsConfig
+   */
+  public $desiredServiceExternalIpsConfig;
   protected $desiredServiceExternalIpsConfigType = ServiceExternalIPsConfig::class;
   protected $desiredServiceExternalIpsConfigDataType = '';
+  /**
+   * @var ShieldedNodes
+   */
+  public $desiredShieldedNodes;
   protected $desiredShieldedNodesType = ShieldedNodes::class;
   protected $desiredShieldedNodesDataType = '';
   /**
    * @var string
    */
   public $desiredStackType;
+  /**
+   * @var VerticalPodAutoscaling
+   */
+  public $desiredVerticalPodAutoscaling;
   protected $desiredVerticalPodAutoscalingType = VerticalPodAutoscaling::class;
   protected $desiredVerticalPodAutoscalingDataType = '';
+  /**
+   * @var WorkloadIdentityConfig
+   */
+  public $desiredWorkloadIdentityConfig;
   protected $desiredWorkloadIdentityConfigType = WorkloadIdentityConfig::class;
   protected $desiredWorkloadIdentityConfigDataType = '';
+  /**
+   * @var K8sBetaAPIConfig
+   */
+  public $enableK8sBetaApis;
   protected $enableK8sBetaApisType = K8sBetaAPIConfig::class;
   protected $enableK8sBetaApisDataType = '';
   /**
    * @var string
    */
   public $etag;
+  /**
+   * @var AdditionalPodRangesConfig
+   */
+  public $removedAdditionalPodRangesConfig;
   protected $removedAdditionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $removedAdditionalPodRangesConfigDataType = '';
 
