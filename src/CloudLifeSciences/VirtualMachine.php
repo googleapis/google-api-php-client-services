@@ -20,6 +20,10 @@ namespace Google\Service\CloudLifeSciences;
 class VirtualMachine extends \Google\Collection
 {
   protected $collection_key = 'volumes';
+  /**
+   * @var Accelerator[]
+   */
+  public $accelerators;
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class VirtualMachine extends \Google\Collection
    * @var string
    */
   public $cpuPlatform;
+  /**
+   * @var Disk[]
+   */
+  public $disks;
   protected $disksType = Disk::class;
   protected $disksDataType = 'array';
   /**
@@ -52,6 +60,10 @@ class VirtualMachine extends \Google\Collection
    * @var string
    */
   public $machineType;
+  /**
+   * @var Network
+   */
+  public $network;
   protected $networkType = Network::class;
   protected $networkDataType = '';
   /**
@@ -66,8 +78,16 @@ class VirtualMachine extends \Google\Collection
    * @var string
    */
   public $reservation;
+  /**
+   * @var ServiceAccount
+   */
+  public $serviceAccount;
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
+  /**
+   * @var Volume[]
+   */
+  public $volumes;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
 

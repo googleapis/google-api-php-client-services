@@ -20,14 +20,26 @@ namespace Google\Service\CloudLifeSciences;
 class Pipeline extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var Action[]
+   */
+  public $actions;
   protected $actionsType = Action::class;
   protected $actionsDataType = 'array';
+  /**
+   * @var Secret
+   */
+  public $encryptedEnvironment;
   protected $encryptedEnvironmentType = Secret::class;
   protected $encryptedEnvironmentDataType = '';
   /**
    * @var string[]
    */
   public $environment;
+  /**
+   * @var Resources
+   */
+  public $resources;
   protected $resourcesType = Resources::class;
   protected $resourcesDataType = '';
   /**

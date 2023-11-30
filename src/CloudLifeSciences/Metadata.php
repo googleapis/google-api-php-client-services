@@ -28,12 +28,20 @@ class Metadata extends \Google\Collection
    * @var string
    */
   public $endTime;
+  /**
+   * @var Event[]
+   */
+  public $events;
   protected $eventsType = Event::class;
   protected $eventsDataType = 'array';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var Pipeline
+   */
+  public $pipeline;
   protected $pipelineType = Pipeline::class;
   protected $pipelineDataType = '';
   /**

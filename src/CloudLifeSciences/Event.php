@@ -19,32 +19,72 @@ namespace Google\Service\CloudLifeSciences;
 
 class Event extends \Google\Model
 {
+  /**
+   * @var ContainerKilledEvent
+   */
+  public $containerKilled;
   protected $containerKilledType = ContainerKilledEvent::class;
   protected $containerKilledDataType = '';
+  /**
+   * @var ContainerStartedEvent
+   */
+  public $containerStarted;
   protected $containerStartedType = ContainerStartedEvent::class;
   protected $containerStartedDataType = '';
+  /**
+   * @var ContainerStoppedEvent
+   */
+  public $containerStopped;
   protected $containerStoppedType = ContainerStoppedEvent::class;
   protected $containerStoppedDataType = '';
+  /**
+   * @var DelayedEvent
+   */
+  public $delayed;
   protected $delayedType = DelayedEvent::class;
   protected $delayedDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var FailedEvent
+   */
+  public $failed;
   protected $failedType = FailedEvent::class;
   protected $failedDataType = '';
+  /**
+   * @var PullStartedEvent
+   */
+  public $pullStarted;
   protected $pullStartedType = PullStartedEvent::class;
   protected $pullStartedDataType = '';
+  /**
+   * @var PullStoppedEvent
+   */
+  public $pullStopped;
   protected $pullStoppedType = PullStoppedEvent::class;
   protected $pullStoppedDataType = '';
   /**
    * @var string
    */
   public $timestamp;
+  /**
+   * @var UnexpectedExitStatusEvent
+   */
+  public $unexpectedExitStatus;
   protected $unexpectedExitStatusType = UnexpectedExitStatusEvent::class;
   protected $unexpectedExitStatusDataType = '';
+  /**
+   * @var WorkerAssignedEvent
+   */
+  public $workerAssigned;
   protected $workerAssignedType = WorkerAssignedEvent::class;
   protected $workerAssignedDataType = '';
+  /**
+   * @var WorkerReleasedEvent
+   */
+  public $workerReleased;
   protected $workerReleasedType = WorkerReleasedEvent::class;
   protected $workerReleasedDataType = '';
 

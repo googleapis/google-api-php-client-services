@@ -23,6 +23,10 @@ class RunPipelineRequest extends \Google\Model
    * @var string[]
    */
   public $labels;
+  /**
+   * @var Pipeline
+   */
+  public $pipeline;
   protected $pipelineType = Pipeline::class;
   protected $pipelineDataType = '';
   /**
