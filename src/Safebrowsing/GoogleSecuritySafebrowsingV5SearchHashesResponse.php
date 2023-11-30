@@ -24,6 +24,10 @@ class GoogleSecuritySafebrowsingV5SearchHashesResponse extends \Google\Collectio
    * @var string
    */
   public $cacheDuration;
+  /**
+   * @var GoogleSecuritySafebrowsingV5FullHash[]
+   */
+  public $fullHashes;
   protected $fullHashesType = GoogleSecuritySafebrowsingV5FullHash::class;
   protected $fullHashesDataType = 'array';
 
