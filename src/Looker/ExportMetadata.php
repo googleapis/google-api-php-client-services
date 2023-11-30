@@ -20,6 +20,10 @@ namespace Google\Service\Looker;
 class ExportMetadata extends \Google\Collection
 {
   protected $collection_key = 'filePaths';
+  /**
+   * @var ExportMetadataEncryptionKey
+   */
+  public $exportEncryptionKey;
   protected $exportEncryptionKeyType = ExportMetadataEncryptionKey::class;
   protected $exportEncryptionKeyDataType = '';
   /**
