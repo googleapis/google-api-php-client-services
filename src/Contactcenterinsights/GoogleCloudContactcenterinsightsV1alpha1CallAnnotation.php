@@ -19,28 +19,68 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1alpha1CallAnnotation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary
+   */
+  public $annotationEndBoundary;
   protected $annotationEndBoundaryType = GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary::class;
   protected $annotationEndBoundaryDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary
+   */
+  public $annotationStartBoundary;
   protected $annotationStartBoundaryType = GoogleCloudContactcenterinsightsV1alpha1AnnotationBoundary::class;
   protected $annotationStartBoundaryDataType = '';
   /**
    * @var int
    */
   public $channelTag;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1EntityMentionData
+   */
+  public $entityMentionData;
   protected $entityMentionDataType = GoogleCloudContactcenterinsightsV1alpha1EntityMentionData::class;
   protected $entityMentionDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1HoldData
+   */
+  public $holdData;
   protected $holdDataType = GoogleCloudContactcenterinsightsV1alpha1HoldData::class;
   protected $holdDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1IntentMatchData
+   */
+  public $intentMatchData;
   protected $intentMatchDataType = GoogleCloudContactcenterinsightsV1alpha1IntentMatchData::class;
   protected $intentMatchDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1InterruptionData
+   */
+  public $interruptionData;
   protected $interruptionDataType = GoogleCloudContactcenterinsightsV1alpha1InterruptionData::class;
   protected $interruptionDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1IssueMatchData
+   */
+  public $issueMatchData;
   protected $issueMatchDataType = GoogleCloudContactcenterinsightsV1alpha1IssueMatchData::class;
   protected $issueMatchDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData
+   */
+  public $phraseMatchData;
   protected $phraseMatchDataType = GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData::class;
   protected $phraseMatchDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1SentimentData
+   */
+  public $sentimentData;
   protected $sentimentDataType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1SilenceData
+   */
+  public $silenceData;
   protected $silenceDataType = GoogleCloudContactcenterinsightsV1alpha1SilenceData::class;
   protected $silenceDataDataType = '';
 

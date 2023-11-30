@@ -19,18 +19,38 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1IngestConversationsRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig
+   */
+  public $conversationConfig;
   protected $conversationConfigType = GoogleCloudContactcenterinsightsV1IngestConversationsRequestConversationConfig::class;
   protected $conversationConfigDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudContactcenterinsightsV1IngestConversationsRequestGcsSource::class;
   protected $gcsSourceDataType = '';
   /**
    * @var string
    */
   public $parent;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1RedactionConfig
+   */
+  public $redactionConfig;
   protected $redactionConfigType = GoogleCloudContactcenterinsightsV1RedactionConfig::class;
   protected $redactionConfigDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1SpeechConfig
+   */
+  public $speechConfig;
   protected $speechConfigType = GoogleCloudContactcenterinsightsV1SpeechConfig::class;
   protected $speechConfigDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig
+   */
+  public $transcriptObjectConfig;
   protected $transcriptObjectConfigType = GoogleCloudContactcenterinsightsV1IngestConversationsRequestTranscriptObjectConfig::class;
   protected $transcriptObjectConfigDataType = '';
 

@@ -28,10 +28,22 @@ class GoogleCloudContactcenterinsightsV1IngestConversationsMetadata extends \Goo
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats
+   */
+  public $ingestConversationsStats;
   protected $ingestConversationsStatsType = GoogleCloudContactcenterinsightsV1IngestConversationsMetadataIngestConversationsStats::class;
   protected $ingestConversationsStatsDataType = '';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $partialErrors;
   protected $partialErrorsType = GoogleRpcStatus::class;
   protected $partialErrorsDataType = 'array';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1IngestConversationsRequest
+   */
+  public $request;
   protected $requestType = GoogleCloudContactcenterinsightsV1IngestConversationsRequest::class;
   protected $requestDataType = '';
 

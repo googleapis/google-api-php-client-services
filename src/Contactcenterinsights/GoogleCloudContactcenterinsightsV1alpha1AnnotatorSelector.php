@@ -60,6 +60,10 @@ class GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelector extends \Google\
    * @var bool
    */
   public $runSummarizationAnnotator;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorSummarizationConfig
+   */
+  public $summarizationConfig;
   protected $summarizationConfigType = GoogleCloudContactcenterinsightsV1alpha1AnnotatorSelectorSummarizationConfig::class;
   protected $summarizationConfigDataType = '';
 

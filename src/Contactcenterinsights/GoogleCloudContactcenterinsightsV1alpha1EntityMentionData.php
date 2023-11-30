@@ -23,6 +23,10 @@ class GoogleCloudContactcenterinsightsV1alpha1EntityMentionData extends \Google\
    * @var string
    */
   public $entityUniqueId;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1SentimentData
+   */
+  public $sentiment;
   protected $sentimentType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataType = '';
   /**

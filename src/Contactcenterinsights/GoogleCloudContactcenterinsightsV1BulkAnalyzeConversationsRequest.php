@@ -23,6 +23,10 @@ class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest extends 
    * @var float
    */
   public $analysisPercentage;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1AnnotatorSelector
+   */
+  public $annotatorSelector;
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
   /**

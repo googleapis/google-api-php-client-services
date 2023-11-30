@@ -24,6 +24,10 @@ class GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeries extends
    * @var string
    */
   public $intervalDuration;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesInterval[]
+   */
+  public $points;
   protected $pointsType = GoogleCloudContactcenterinsightsV1CalculateStatsResponseTimeSeriesInterval::class;
   protected $pointsDataType = 'array';
 

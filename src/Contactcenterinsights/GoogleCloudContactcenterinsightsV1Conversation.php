@@ -24,14 +24,26 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
    * @var string
    */
   public $agentId;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1ConversationCallMetadata
+   */
+  public $callMetadata;
   protected $callMetadataType = GoogleCloudContactcenterinsightsV1ConversationCallMetadata::class;
   protected $callMetadataDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1ConversationDataSource
+   */
+  public $dataSource;
   protected $dataSourceType = GoogleCloudContactcenterinsightsV1ConversationDataSource::class;
   protected $dataSourceDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1DialogflowIntent[]
+   */
+  public $dialogflowIntents;
   protected $dialogflowIntentsType = GoogleCloudContactcenterinsightsV1DialogflowIntent::class;
   protected $dialogflowIntentsDataType = 'map';
   /**
@@ -50,8 +62,16 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1Analysis
+   */
+  public $latestAnalysis;
   protected $latestAnalysisType = GoogleCloudContactcenterinsightsV1Analysis::class;
   protected $latestAnalysisDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData
+   */
+  public $latestSummary;
   protected $latestSummaryType = GoogleCloudContactcenterinsightsV1ConversationSummarizationSuggestionData::class;
   protected $latestSummaryDataType = '';
   /**
@@ -66,12 +86,20 @@ class GoogleCloudContactcenterinsightsV1Conversation extends \Google\Collection
    * @var string
    */
   public $obfuscatedUserId;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1RuntimeAnnotation[]
+   */
+  public $runtimeAnnotations;
   protected $runtimeAnnotationsType = GoogleCloudContactcenterinsightsV1RuntimeAnnotation::class;
   protected $runtimeAnnotationsDataType = 'array';
   /**
    * @var string
    */
   public $startTime;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1ConversationTranscript
+   */
+  public $transcript;
   protected $transcriptType = GoogleCloudContactcenterinsightsV1ConversationTranscript::class;
   protected $transcriptDataType = '';
   /**

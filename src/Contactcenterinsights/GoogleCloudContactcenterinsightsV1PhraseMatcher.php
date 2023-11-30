@@ -36,6 +36,10 @@ class GoogleCloudContactcenterinsightsV1PhraseMatcher extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup[]
+   */
+  public $phraseMatchRuleGroups;
   protected $phraseMatchRuleGroupsType = GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup::class;
   protected $phraseMatchRuleGroupsDataType = 'array';
   /**

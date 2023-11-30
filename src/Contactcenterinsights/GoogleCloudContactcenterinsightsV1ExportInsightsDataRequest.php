@@ -19,6 +19,10 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1ExportInsightsDataRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination
+   */
+  public $bigQueryDestination;
   protected $bigQueryDestinationType = GoogleCloudContactcenterinsightsV1ExportInsightsDataRequestBigQueryDestination::class;
   protected $bigQueryDestinationDataType = '';
   /**

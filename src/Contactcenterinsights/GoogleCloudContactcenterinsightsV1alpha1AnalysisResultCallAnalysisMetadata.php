@@ -20,16 +20,40 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata extends \Google\Collection
 {
   protected $collection_key = 'sentiments';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1CallAnnotation[]
+   */
+  public $annotations;
   protected $annotationsType = GoogleCloudContactcenterinsightsV1alpha1CallAnnotation::class;
   protected $annotationsDataType = 'array';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1Entity[]
+   */
+  public $entities;
   protected $entitiesType = GoogleCloudContactcenterinsightsV1alpha1Entity::class;
   protected $entitiesDataType = 'map';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1Intent[]
+   */
+  public $intents;
   protected $intentsType = GoogleCloudContactcenterinsightsV1alpha1Intent::class;
   protected $intentsDataType = 'map';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1IssueModelResult
+   */
+  public $issueModelResult;
   protected $issueModelResultType = GoogleCloudContactcenterinsightsV1alpha1IssueModelResult::class;
   protected $issueModelResultDataType = '';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData[]
+   */
+  public $phraseMatchers;
   protected $phraseMatchersType = GoogleCloudContactcenterinsightsV1alpha1PhraseMatchData::class;
   protected $phraseMatchersDataType = 'map';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSentiment[]
+   */
+  public $sentiments;
   protected $sentimentsType = GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSentiment::class;
   protected $sentimentsDataType = 'array';
 

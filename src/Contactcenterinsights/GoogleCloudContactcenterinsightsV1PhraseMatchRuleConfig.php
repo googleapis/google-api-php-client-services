@@ -19,6 +19,10 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContactcenterinsightsV1ExactMatchConfig
+   */
+  public $exactMatchConfig;
   protected $exactMatchConfigType = GoogleCloudContactcenterinsightsV1ExactMatchConfig::class;
   protected $exactMatchConfigDataType = '';
 

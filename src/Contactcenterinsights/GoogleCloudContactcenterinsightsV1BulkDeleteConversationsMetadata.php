@@ -28,8 +28,16 @@ class GoogleCloudContactcenterinsightsV1BulkDeleteConversationsMetadata extends 
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $partialErrors;
   protected $partialErrorsType = GoogleRpcStatus::class;
   protected $partialErrorsDataType = 'array';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest
+   */
+  public $request;
   protected $requestType = GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest::class;
   protected $requestDataType = '';
 

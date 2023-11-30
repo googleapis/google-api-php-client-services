@@ -27,6 +27,10 @@ class GoogleCloudContactcenterinsightsV1UndeployIssueModelMetadata extends \Goog
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest
+   */
+  public $request;
   protected $requestType = GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest::class;
   protected $requestDataType = '';
 

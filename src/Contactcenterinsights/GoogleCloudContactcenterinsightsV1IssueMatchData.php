@@ -19,6 +19,10 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1IssueMatchData extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContactcenterinsightsV1IssueAssignment
+   */
+  public $issueAssignment;
   protected $issueAssignmentType = GoogleCloudContactcenterinsightsV1IssueAssignment::class;
   protected $issueAssignmentDataType = '';
 

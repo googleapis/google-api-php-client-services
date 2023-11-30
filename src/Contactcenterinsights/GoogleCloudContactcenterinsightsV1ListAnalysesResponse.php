@@ -20,6 +20,10 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ListAnalysesResponse extends \Google\Collection
 {
   protected $collection_key = 'analyses';
+  /**
+   * @var GoogleCloudContactcenterinsightsV1Analysis[]
+   */
+  public $analyses;
   protected $analysesType = GoogleCloudContactcenterinsightsV1Analysis::class;
   protected $analysesDataType = 'array';
   /**
