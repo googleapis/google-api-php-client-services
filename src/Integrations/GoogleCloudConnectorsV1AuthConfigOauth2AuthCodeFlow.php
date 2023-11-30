@@ -32,6 +32,10 @@ class GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow extends \Google\Collec
    * @var string
    */
   public $clientId;
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $clientSecret;
   protected $clientSecretType = GoogleCloudConnectorsV1Secret::class;
   protected $clientSecretDataType = '';
   /**

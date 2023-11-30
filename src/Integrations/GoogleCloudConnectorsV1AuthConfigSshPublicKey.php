@@ -23,8 +23,16 @@ class GoogleCloudConnectorsV1AuthConfigSshPublicKey extends \Google\Model
    * @var string
    */
   public $certType;
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $sshClientCert;
   protected $sshClientCertType = GoogleCloudConnectorsV1Secret::class;
   protected $sshClientCertDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $sshClientCertPass;
   protected $sshClientCertPassType = GoogleCloudConnectorsV1Secret::class;
   protected $sshClientCertPassDataType = '';
   /**

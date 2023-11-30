@@ -19,6 +19,10 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoCustomSuspensionRequest extends \Google\Model
 {
+  /**
+   * @var GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest
+   */
+  public $postToQueueWithTriggerIdRequest;
   protected $postToQueueWithTriggerIdRequestType = GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest::class;
   protected $postToQueueWithTriggerIdRequestDataType = '';
   /**

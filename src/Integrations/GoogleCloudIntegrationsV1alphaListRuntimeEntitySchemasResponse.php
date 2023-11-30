@@ -24,6 +24,10 @@ class GoogleCloudIntegrationsV1alphaListRuntimeEntitySchemasResponse extends \Go
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaRuntimeEntitySchema[]
+   */
+  public $runtimeEntitySchemas;
   protected $runtimeEntitySchemasType = GoogleCloudIntegrationsV1alphaRuntimeEntitySchema::class;
   protected $runtimeEntitySchemasDataType = 'array';
 

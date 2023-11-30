@@ -19,6 +19,10 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusStats extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmEventbusStatsDimensions
+   */
+  public $dimensions;
   protected $dimensionsType = EnterpriseCrmEventbusStatsDimensions::class;
   protected $dimensionsDataType = '';
   public $durationInSeconds;

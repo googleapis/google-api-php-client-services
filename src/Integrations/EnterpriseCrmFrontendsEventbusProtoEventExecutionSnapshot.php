@@ -24,8 +24,16 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionSnapshot extends \Google\
    * @var string
    */
   public $checkpointTaskNumber;
+  /**
+   * @var EnterpriseCrmEventbusProtoConditionResult[]
+   */
+  public $conditionResults;
   protected $conditionResultsType = EnterpriseCrmEventbusProtoConditionResult::class;
   protected $conditionResultsDataType = 'array';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
+   */
+  public $diffParams;
   protected $diffParamsType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $diffParamsDataType = '';
   /**
@@ -36,14 +44,26 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionSnapshot extends \Google\
    * @var string
    */
   public $eventExecutionSnapshotId;
+  /**
+   * @var EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata
+   */
+  public $eventExecutionSnapshotMetadata;
   protected $eventExecutionSnapshotMetadataType = EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMetadata::class;
   protected $eventExecutionSnapshotMetadataDataType = '';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
+   */
+  public $eventParams;
   protected $eventParamsType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $eventParamsDataType = '';
   /**
    * @var string
    */
   public $snapshotTime;
+  /**
+   * @var EnterpriseCrmEventbusProtoTaskExecutionDetails[]
+   */
+  public $taskExecutionDetails;
   protected $taskExecutionDetailsType = EnterpriseCrmEventbusProtoTaskExecutionDetails::class;
   protected $taskExecutionDetailsDataType = 'array';
   /**

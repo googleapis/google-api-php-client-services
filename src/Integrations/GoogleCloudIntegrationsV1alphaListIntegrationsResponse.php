@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListIntegrationsResponse extends \Google\Collection
 {
   protected $collection_key = 'integrations';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaIntegration[]
+   */
+  public $integrations;
   protected $integrationsType = GoogleCloudIntegrationsV1alphaIntegration::class;
   protected $integrationsDataType = 'array';
   /**

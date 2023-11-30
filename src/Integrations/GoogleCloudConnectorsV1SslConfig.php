@@ -20,18 +20,38 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1SslConfig extends \Google\Collection
 {
   protected $collection_key = 'additionalVariables';
+  /**
+   * @var GoogleCloudConnectorsV1ConfigVariable[]
+   */
+  public $additionalVariables;
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   /**
    * @var string
    */
   public $clientCertType;
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $clientCertificate;
   protected $clientCertificateType = GoogleCloudConnectorsV1Secret::class;
   protected $clientCertificateDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $clientPrivateKey;
   protected $clientPrivateKeyType = GoogleCloudConnectorsV1Secret::class;
   protected $clientPrivateKeyDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $clientPrivateKeyPass;
   protected $clientPrivateKeyPassType = GoogleCloudConnectorsV1Secret::class;
   protected $clientPrivateKeyPassDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $privateServerCertificate;
   protected $privateServerCertificateType = GoogleCloudConnectorsV1Secret::class;
   protected $privateServerCertificateDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListAuthConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'authConfigs';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaAuthConfig[]
+   */
+  public $authConfigs;
   protected $authConfigsType = GoogleCloudIntegrationsV1alphaAuthConfig::class;
   protected $authConfigsDataType = 'array';
   /**

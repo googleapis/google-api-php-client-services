@@ -23,6 +23,10 @@ class GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials extends \Google\M
    * @var string
    */
   public $clientId;
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $clientSecret;
   protected $clientSecretType = GoogleCloudConnectorsV1Secret::class;
   protected $clientSecretDataType = '';
 

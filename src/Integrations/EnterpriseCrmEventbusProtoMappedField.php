@@ -19,8 +19,16 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoMappedField extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmEventbusProtoField
+   */
+  public $inputField;
   protected $inputFieldType = EnterpriseCrmEventbusProtoField::class;
   protected $inputFieldDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoField
+   */
+  public $outputField;
   protected $outputFieldType = EnterpriseCrmEventbusProtoField::class;
   protected $outputFieldDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListCertificatesResponse extends \Google\Collection
 {
   protected $collection_key = 'certificates';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaCertificate[]
+   */
+  public $certificates;
   protected $certificatesType = GoogleCloudIntegrationsV1alphaCertificate::class;
   protected $certificatesDataType = 'array';
   /**

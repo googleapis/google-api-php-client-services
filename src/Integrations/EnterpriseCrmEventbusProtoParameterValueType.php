@@ -19,29 +19,53 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoParameterValueType extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmEventbusProtoBooleanParameterArray
+   */
+  public $booleanArray;
   protected $booleanArrayType = EnterpriseCrmEventbusProtoBooleanParameterArray::class;
   protected $booleanArrayDataType = '';
   /**
    * @var bool
    */
   public $booleanValue;
+  /**
+   * @var EnterpriseCrmEventbusProtoDoubleParameterArray
+   */
+  public $doubleArray;
   protected $doubleArrayType = EnterpriseCrmEventbusProtoDoubleParameterArray::class;
   protected $doubleArrayDataType = '';
   public $doubleValue;
+  /**
+   * @var EnterpriseCrmEventbusProtoIntParameterArray
+   */
+  public $intArray;
   protected $intArrayType = EnterpriseCrmEventbusProtoIntParameterArray::class;
   protected $intArrayDataType = '';
   /**
    * @var string
    */
   public $intValue;
+  /**
+   * @var EnterpriseCrmEventbusProtoProtoParameterArray
+   */
+  public $protoArray;
   protected $protoArrayType = EnterpriseCrmEventbusProtoProtoParameterArray::class;
   protected $protoArrayDataType = '';
   /**
    * @var array[]
    */
   public $protoValue;
+  /**
+   * @var EnterpriseCrmEventbusProtoSerializedObjectParameter
+   */
+  public $serializedObjectValue;
   protected $serializedObjectValueType = EnterpriseCrmEventbusProtoSerializedObjectParameter::class;
   protected $serializedObjectValueDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoStringParameterArray
+   */
+  public $stringArray;
   protected $stringArrayType = EnterpriseCrmEventbusProtoStringParameterArray::class;
   protected $stringArrayDataType = '';
   /**

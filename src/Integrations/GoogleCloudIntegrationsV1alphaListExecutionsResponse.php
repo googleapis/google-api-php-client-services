@@ -20,8 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListExecutionsResponse extends \Google\Collection
 {
   protected $collection_key = 'executions';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo[]
+   */
+  public $executionInfos;
   protected $executionInfosType = EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo::class;
   protected $executionInfosDataType = 'array';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaExecution[]
+   */
+  public $executions;
   protected $executionsType = GoogleCloudIntegrationsV1alphaExecution::class;
   protected $executionsDataType = 'array';
   /**

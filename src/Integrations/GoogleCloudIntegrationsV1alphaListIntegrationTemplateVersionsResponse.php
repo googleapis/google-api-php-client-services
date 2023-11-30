@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListIntegrationTemplateVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'integrationTemplateVersions';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion[]
+   */
+  public $integrationTemplateVersions;
   protected $integrationTemplateVersionsType = GoogleCloudIntegrationsV1alphaIntegrationTemplateVersion::class;
   protected $integrationTemplateVersionsDataType = 'array';
   /**

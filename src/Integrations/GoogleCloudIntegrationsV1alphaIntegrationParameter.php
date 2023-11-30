@@ -23,6 +23,10 @@ class GoogleCloudIntegrationsV1alphaIntegrationParameter extends \Google\Model
    * @var string
    */
   public $dataType;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaValueType
+   */
+  public $defaultValue;
   protected $defaultValueType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $defaultValueDataType = '';
   /**

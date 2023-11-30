@@ -19,28 +19,76 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoFunctionType extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmEventbusProtoBaseFunction
+   */
+  public $baseFunction;
   protected $baseFunctionType = EnterpriseCrmEventbusProtoBaseFunction::class;
   protected $baseFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoBooleanArrayFunction
+   */
+  public $booleanArrayFunction;
   protected $booleanArrayFunctionType = EnterpriseCrmEventbusProtoBooleanArrayFunction::class;
   protected $booleanArrayFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoBooleanFunction
+   */
+  public $booleanFunction;
   protected $booleanFunctionType = EnterpriseCrmEventbusProtoBooleanFunction::class;
   protected $booleanFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoDoubleArrayFunction
+   */
+  public $doubleArrayFunction;
   protected $doubleArrayFunctionType = EnterpriseCrmEventbusProtoDoubleArrayFunction::class;
   protected $doubleArrayFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoDoubleFunction
+   */
+  public $doubleFunction;
   protected $doubleFunctionType = EnterpriseCrmEventbusProtoDoubleFunction::class;
   protected $doubleFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoIntArrayFunction
+   */
+  public $intArrayFunction;
   protected $intArrayFunctionType = EnterpriseCrmEventbusProtoIntArrayFunction::class;
   protected $intArrayFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoIntFunction
+   */
+  public $intFunction;
   protected $intFunctionType = EnterpriseCrmEventbusProtoIntFunction::class;
   protected $intFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoJsonFunction
+   */
+  public $jsonFunction;
   protected $jsonFunctionType = EnterpriseCrmEventbusProtoJsonFunction::class;
   protected $jsonFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoProtoArrayFunction
+   */
+  public $protoArrayFunction;
   protected $protoArrayFunctionType = EnterpriseCrmEventbusProtoProtoArrayFunction::class;
   protected $protoArrayFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoProtoFunction
+   */
+  public $protoFunction;
   protected $protoFunctionType = EnterpriseCrmEventbusProtoProtoFunction::class;
   protected $protoFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoStringArrayFunction
+   */
+  public $stringArrayFunction;
   protected $stringArrayFunctionType = EnterpriseCrmEventbusProtoStringArrayFunction::class;
   protected $stringArrayFunctionDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoStringFunction
+   */
+  public $stringFunction;
   protected $stringFunctionType = EnterpriseCrmEventbusProtoStringFunction::class;
   protected $stringFunctionDataType = '';
 

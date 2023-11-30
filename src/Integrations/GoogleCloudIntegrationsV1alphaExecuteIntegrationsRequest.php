@@ -28,10 +28,22 @@ class GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest extends \Google\C
    * @var string
    */
   public $executionId;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaValueType[]
+   */
+  public $inputParameters;
   protected $inputParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $inputParametersDataType = 'map';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoParameterEntry[]
+   */
+  public $parameterEntries;
   protected $parameterEntriesType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parameterEntriesDataType = 'array';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
+   */
+  public $parameters;
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $parametersDataType = '';
   /**

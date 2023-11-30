@@ -24,6 +24,10 @@ class EnterpriseCrmEventbusProtoTaskMetadata extends \Google\Collection
    * @var string
    */
   public $activeTaskName;
+  /**
+   * @var EnterpriseCrmEventbusProtoTaskMetadataAdmin[]
+   */
+  public $admins;
   protected $adminsType = EnterpriseCrmEventbusProtoTaskMetadataAdmin::class;
   protected $adminsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoTaskExecutionDetails extends \Google\Collection
 {
   protected $collection_key = 'taskAttemptStats';
+  /**
+   * @var EnterpriseCrmEventbusProtoTaskExecutionDetailsTaskAttemptStats[]
+   */
+  public $taskAttemptStats;
   protected $taskAttemptStatsType = EnterpriseCrmEventbusProtoTaskExecutionDetailsTaskAttemptStats::class;
   protected $taskAttemptStatsDataType = 'array';
   /**

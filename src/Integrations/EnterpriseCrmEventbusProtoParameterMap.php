@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoParameterMap extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var EnterpriseCrmEventbusProtoParameterMapEntry[]
+   */
+  public $entries;
   protected $entriesType = EnterpriseCrmEventbusProtoParameterMapEntry::class;
   protected $entriesDataType = 'array';
   /**

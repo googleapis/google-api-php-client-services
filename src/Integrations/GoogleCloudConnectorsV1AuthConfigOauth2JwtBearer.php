@@ -19,8 +19,16 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer extends \Google\Model
 {
+  /**
+   * @var GoogleCloudConnectorsV1Secret
+   */
+  public $clientKey;
   protected $clientKeyType = GoogleCloudConnectorsV1Secret::class;
   protected $clientKeyDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims
+   */
+  public $jwtClaims;
   protected $jwtClaimsType = GoogleCloudConnectorsV1AuthConfigOauth2JwtBearerJwtClaims::class;
   protected $jwtClaimsDataType = '';
 

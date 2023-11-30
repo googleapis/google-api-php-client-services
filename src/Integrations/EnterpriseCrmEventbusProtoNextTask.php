@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoNextTask extends \Google\Collection
 {
   protected $collection_key = 'combinedConditions';
+  /**
+   * @var EnterpriseCrmEventbusProtoCombinedCondition[]
+   */
+  public $combinedConditions;
   protected $combinedConditionsType = EnterpriseCrmEventbusProtoCombinedCondition::class;
   protected $combinedConditionsDataType = 'array';
   /**

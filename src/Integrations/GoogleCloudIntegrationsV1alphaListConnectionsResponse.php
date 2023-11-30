@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListConnectionsResponse extends \Google\Collection
 {
   protected $collection_key = 'connections';
+  /**
+   * @var GoogleCloudConnectorsV1Connection[]
+   */
+  public $connections;
   protected $connectionsType = GoogleCloudConnectorsV1Connection::class;
   protected $connectionsDataType = 'array';
   /**

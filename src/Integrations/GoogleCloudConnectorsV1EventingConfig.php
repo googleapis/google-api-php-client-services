@@ -20,10 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
 {
   protected $collection_key = 'additionalVariables';
+  /**
+   * @var GoogleCloudConnectorsV1ConfigVariable[]
+   */
+  public $additionalVariables;
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfig
+   */
+  public $authConfig;
   protected $authConfigType = GoogleCloudConnectorsV1AuthConfig::class;
   protected $authConfigDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1ConfigVariable
+   */
+  public $encryptionKey;
   protected $encryptionKeyType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $encryptionKeyDataType = '';
   /**
@@ -38,6 +50,10 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
    * @var bool
    */
   public $privateConnectivityEnabled;
+  /**
+   * @var GoogleCloudConnectorsV1DestinationConfig
+   */
+  public $registrationDestinationConfig;
   protected $registrationDestinationConfigType = GoogleCloudConnectorsV1DestinationConfig::class;
   protected $registrationDestinationConfigDataType = '';
 

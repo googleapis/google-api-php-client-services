@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
 {
   protected $collection_key = 'additionalVariables';
+  /**
+   * @var GoogleCloudConnectorsV1ConfigVariable[]
+   */
+  public $additionalVariables;
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   /**
@@ -30,14 +34,34 @@ class GoogleCloudConnectorsV1AuthConfig extends \Google\Collection
    * @var string
    */
   public $authType;
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow
+   */
+  public $oauth2AuthCodeFlow;
   protected $oauth2AuthCodeFlowType = GoogleCloudConnectorsV1AuthConfigOauth2AuthCodeFlow::class;
   protected $oauth2AuthCodeFlowDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials
+   */
+  public $oauth2ClientCredentials;
   protected $oauth2ClientCredentialsType = GoogleCloudConnectorsV1AuthConfigOauth2ClientCredentials::class;
   protected $oauth2ClientCredentialsDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer
+   */
+  public $oauth2JwtBearer;
   protected $oauth2JwtBearerType = GoogleCloudConnectorsV1AuthConfigOauth2JwtBearer::class;
   protected $oauth2JwtBearerDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfigSshPublicKey
+   */
+  public $sshPublicKey;
   protected $sshPublicKeyType = GoogleCloudConnectorsV1AuthConfigSshPublicKey::class;
   protected $sshPublicKeyDataType = '';
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfigUserPassword
+   */
+  public $userPassword;
   protected $userPasswordType = GoogleCloudConnectorsV1AuthConfigUserPassword::class;
   protected $userPasswordDataType = '';
 

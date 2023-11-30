@@ -19,8 +19,16 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoNotification extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmEventbusProtoBuganizerNotification
+   */
+  public $buganizerNotification;
   protected $buganizerNotificationType = EnterpriseCrmEventbusProtoBuganizerNotification::class;
   protected $buganizerNotificationDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoAddress
+   */
+  public $emailAddress;
   protected $emailAddressType = EnterpriseCrmEventbusProtoAddress::class;
   protected $emailAddressDataType = '';
   /**
@@ -31,6 +39,10 @@ class EnterpriseCrmEventbusProtoNotification extends \Google\Model
    * @var string
    */
   public $pubsubTopic;
+  /**
+   * @var EnterpriseCrmEventbusProtoCustomSuspensionRequest
+   */
+  public $request;
   protected $requestType = EnterpriseCrmEventbusProtoCustomSuspensionRequest::class;
   protected $requestDataType = '';
 

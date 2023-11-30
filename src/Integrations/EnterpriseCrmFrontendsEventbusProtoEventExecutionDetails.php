@@ -20,8 +20,16 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails extends \Google\Collection
 {
   protected $collection_key = 'eventExecutionSnapshot';
+  /**
+   * @var EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats[]
+   */
+  public $eventAttemptStats;
   protected $eventAttemptStatsType = EnterpriseCrmEventbusProtoEventExecutionDetailsEventAttemptStats::class;
   protected $eventAttemptStatsDataType = 'array';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventExecutionSnapshot[]
+   */
+  public $eventExecutionSnapshot;
   protected $eventExecutionSnapshotType = EnterpriseCrmFrontendsEventbusProtoEventExecutionSnapshot::class;
   protected $eventExecutionSnapshotDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudConnectorsV1DestinationConfig extends \Google\Collection
 {
   protected $collection_key = 'destinations';
+  /**
+   * @var GoogleCloudConnectorsV1Destination[]
+   */
+  public $destinations;
   protected $destinationsType = GoogleCloudConnectorsV1Destination::class;
   protected $destinationsDataType = 'array';
   /**

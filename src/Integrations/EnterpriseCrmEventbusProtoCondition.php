@@ -27,6 +27,10 @@ class EnterpriseCrmEventbusProtoCondition extends \Google\Model
    * @var string
    */
   public $operator;
+  /**
+   * @var EnterpriseCrmEventbusProtoValueType
+   */
+  public $value;
   protected $valueType = EnterpriseCrmEventbusProtoValueType::class;
   protected $valueDataType = '';
 

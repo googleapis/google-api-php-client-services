@@ -36,6 +36,10 @@ class GoogleCloudIntegrationsV1alphaAuthConfig extends \Google\Collection
    * @var string
    */
   public $credentialType;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaCredential
+   */
+  public $decryptedCredential;
   protected $decryptedCredentialType = GoogleCloudIntegrationsV1alphaCredential::class;
   protected $decryptedCredentialDataType = '';
   /**

@@ -19,15 +19,27 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray
+   */
+  public $booleanArray;
   protected $booleanArrayType = EnterpriseCrmFrontendsEventbusProtoBooleanParameterArray::class;
   protected $booleanArrayDataType = '';
   /**
    * @var bool
    */
   public $booleanValue;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray
+   */
+  public $doubleArray;
   protected $doubleArrayType = EnterpriseCrmFrontendsEventbusProtoDoubleParameterArray::class;
   protected $doubleArrayDataType = '';
   public $doubleValue;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoIntParameterArray
+   */
+  public $intArray;
   protected $intArrayType = EnterpriseCrmFrontendsEventbusProtoIntParameterArray::class;
   protected $intArrayDataType = '';
   /**
@@ -38,14 +50,26 @@ class EnterpriseCrmFrontendsEventbusProtoParameterValueType extends \Google\Mode
    * @var string
    */
   public $jsonValue;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoProtoParameterArray
+   */
+  public $protoArray;
   protected $protoArrayType = EnterpriseCrmFrontendsEventbusProtoProtoParameterArray::class;
   protected $protoArrayDataType = '';
   /**
    * @var array[]
    */
   public $protoValue;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter
+   */
+  public $serializedObjectValue;
   protected $serializedObjectValueType = EnterpriseCrmFrontendsEventbusProtoSerializedObjectParameter::class;
   protected $serializedObjectValueDataType = '';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoStringParameterArray
+   */
+  public $stringArray;
   protected $stringArrayType = EnterpriseCrmFrontendsEventbusProtoStringParameterArray::class;
   protected $stringArrayDataType = '';
   /**

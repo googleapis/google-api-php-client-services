@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmFrontendsEventbusProtoWorkflowParameters extends \Google\Collection
 {
   protected $collection_key = 'parameters';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry[]
+   */
+  public $parameters;
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoWorkflowParameterEntry::class;
   protected $parametersDataType = 'array';
 

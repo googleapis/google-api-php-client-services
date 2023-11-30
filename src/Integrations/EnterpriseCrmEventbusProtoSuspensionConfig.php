@@ -24,10 +24,22 @@ class EnterpriseCrmEventbusProtoSuspensionConfig extends \Google\Collection
    * @var string
    */
   public $customMessage;
+  /**
+   * @var EnterpriseCrmEventbusProtoNotification[]
+   */
+  public $notifications;
   protected $notificationsType = EnterpriseCrmEventbusProtoNotification::class;
   protected $notificationsDataType = 'array';
+  /**
+   * @var EnterpriseCrmEventbusProtoSuspensionExpiration
+   */
+  public $suspensionExpiration;
   protected $suspensionExpirationType = EnterpriseCrmEventbusProtoSuspensionExpiration::class;
   protected $suspensionExpirationDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoSuspensionAuthPermissions[]
+   */
+  public $whoMayResolve;
   protected $whoMayResolveType = EnterpriseCrmEventbusProtoSuspensionAuthPermissions::class;
   protected $whoMayResolveDataType = 'array';
 

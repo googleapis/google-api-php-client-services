@@ -19,8 +19,16 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoSuspensionAuthPermissions extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity
+   */
+  public $gaiaIdentity;
   protected $gaiaIdentityType = EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity::class;
   protected $gaiaIdentityDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity
+   */
+  public $googleGroup;
   protected $googleGroupType = EnterpriseCrmEventbusProtoSuspensionAuthPermissionsGaiaIdentity::class;
   protected $googleGroupDataType = '';
   /**

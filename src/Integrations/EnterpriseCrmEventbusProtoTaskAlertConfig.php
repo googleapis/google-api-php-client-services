@@ -39,6 +39,10 @@ class EnterpriseCrmEventbusProtoTaskAlertConfig extends \Google\Model
    * @var string
    */
   public $durationThresholdMs;
+  /**
+   * @var EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList
+   */
+  public $errorEnumList;
   protected $errorEnumListType = EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList::class;
   protected $errorEnumListDataType = '';
   /**
@@ -61,8 +65,16 @@ class EnterpriseCrmEventbusProtoTaskAlertConfig extends \Google\Model
    * @var string
    */
   public $thresholdType;
+  /**
+   * @var EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue
+   */
+  public $thresholdValue;
   protected $thresholdValueType = EnterpriseCrmEventbusProtoBaseAlertConfigThresholdValue::class;
   protected $thresholdValueDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList
+   */
+  public $warningEnumList;
   protected $warningEnumListType = EnterpriseCrmEventbusProtoBaseAlertConfigErrorEnumList::class;
   protected $warningEnumListDataType = '';
 

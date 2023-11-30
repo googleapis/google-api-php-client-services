@@ -28,16 +28,32 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends \Google\Coll
    * @var string
    */
   public $createTime;
+  /**
+   * @var CrmlogErrorCode
+   */
+  public $errorCode;
   protected $errorCodeType = CrmlogErrorCode::class;
   protected $errorCodeDataType = '';
+  /**
+   * @var EnterpriseCrmEventbusProtoErrorDetail[]
+   */
+  public $errors;
   protected $errorsType = EnterpriseCrmEventbusProtoErrorDetail::class;
   protected $errorsDataType = 'array';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails
+   */
+  public $eventExecutionDetails;
   protected $eventExecutionDetailsType = EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails::class;
   protected $eventExecutionDetailsDataType = '';
   /**
    * @var string
    */
   public $eventExecutionInfoId;
+  /**
+   * @var EnterpriseCrmEventbusProtoExecutionTraceInfo
+   */
+  public $executionTraceInfo;
   protected $executionTraceInfoType = EnterpriseCrmEventbusProtoExecutionTraceInfo::class;
   protected $executionTraceInfoDataType = '';
   /**
@@ -56,8 +72,16 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionInfo extends \Google\Coll
    * @var string
    */
   public $requestId;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
+   */
+  public $requestParams;
   protected $requestParamsType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $requestParamsDataType = '';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
+   */
+  public $responseParams;
   protected $responseParamsType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $responseParamsDataType = '';
   /**

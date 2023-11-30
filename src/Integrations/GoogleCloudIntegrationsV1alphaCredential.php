@@ -19,24 +19,56 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaCredential extends \Google\Model
 {
+  /**
+   * @var GoogleCloudIntegrationsV1alphaAuthToken
+   */
+  public $authToken;
   protected $authTokenType = GoogleCloudIntegrationsV1alphaAuthToken::class;
   protected $authTokenDataType = '';
   /**
    * @var string
    */
   public $credentialType;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaJwt
+   */
+  public $jwt;
   protected $jwtType = GoogleCloudIntegrationsV1alphaJwt::class;
   protected $jwtDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode
+   */
+  public $oauth2AuthorizationCode;
   protected $oauth2AuthorizationCodeType = GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode::class;
   protected $oauth2AuthorizationCodeDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials
+   */
+  public $oauth2ClientCredentials;
   protected $oauth2ClientCredentialsType = GoogleCloudIntegrationsV1alphaOAuth2ClientCredentials::class;
   protected $oauth2ClientCredentialsDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials
+   */
+  public $oauth2ResourceOwnerCredentials;
   protected $oauth2ResourceOwnerCredentialsType = GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials::class;
   protected $oauth2ResourceOwnerCredentialsDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaOidcToken
+   */
+  public $oidcToken;
   protected $oidcTokenType = GoogleCloudIntegrationsV1alphaOidcToken::class;
   protected $oidcTokenDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaServiceAccountCredentials
+   */
+  public $serviceAccountCredentials;
   protected $serviceAccountCredentialsType = GoogleCloudIntegrationsV1alphaServiceAccountCredentials::class;
   protected $serviceAccountCredentialsDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaUsernameAndPassword
+   */
+  public $usernameAndPassword;
   protected $usernameAndPasswordType = GoogleCloudIntegrationsV1alphaUsernameAndPassword::class;
   protected $usernameAndPasswordDataType = '';
 

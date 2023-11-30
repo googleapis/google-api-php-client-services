@@ -23,6 +23,10 @@ class EnterpriseCrmEventbusProtoLogSettings extends \Google\Model
    * @var string
    */
   public $logFieldName;
+  /**
+   * @var EnterpriseCrmLoggingGwsSanitizeOptions
+   */
+  public $sanitizeOptions;
   protected $sanitizeOptionsType = EnterpriseCrmLoggingGwsSanitizeOptions::class;
   protected $sanitizeOptionsDataType = '';
   /**
@@ -33,6 +37,10 @@ class EnterpriseCrmEventbusProtoLogSettings extends \Google\Model
    * @var string
    */
   public $seedScope;
+  /**
+   * @var EnterpriseCrmLoggingGwsFieldLimits
+   */
+  public $shorteningLimits;
   protected $shorteningLimitsType = EnterpriseCrmLoggingGwsFieldLimits::class;
   protected $shorteningLimitsDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmFrontendsEventbusProtoParameterMapField extends \Google\Model
 {
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoParameterValueType
+   */
+  public $literalValue;
   protected $literalValueType = EnterpriseCrmFrontendsEventbusProtoParameterValueType::class;
   protected $literalValueDataType = '';
   /**

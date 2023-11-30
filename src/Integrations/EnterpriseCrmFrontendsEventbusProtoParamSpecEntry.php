@@ -27,12 +27,20 @@ class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry extends \Google\Model
    * @var string
    */
   public $collectionElementClassName;
+  /**
+   * @var EnterpriseCrmEventbusProtoParamSpecEntryConfig
+   */
+  public $config;
   protected $configType = EnterpriseCrmEventbusProtoParamSpecEntryConfig::class;
   protected $configDataType = '';
   /**
    * @var string
    */
   public $dataType;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoParameterValueType
+   */
+  public $defaultValue;
   protected $defaultValueType = EnterpriseCrmFrontendsEventbusProtoParameterValueType::class;
   protected $defaultValueDataType = '';
   /**
@@ -51,12 +59,20 @@ class EnterpriseCrmFrontendsEventbusProtoParamSpecEntry extends \Google\Model
    * @var string
    */
   public $key;
+  /**
+   * @var EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition
+   */
+  public $protoDef;
   protected $protoDefType = EnterpriseCrmEventbusProtoParamSpecEntryProtoDefinition::class;
   protected $protoDefDataType = '';
   /**
    * @var bool
    */
   public $required;
+  /**
+   * @var EnterpriseCrmEventbusProtoParamSpecEntryValidationRule
+   */
+  public $validationRule;
   protected $validationRuleType = EnterpriseCrmEventbusProtoParamSpecEntryValidationRule::class;
   protected $validationRuleDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse extends \Google\Collection
 {
   protected $collection_key = 'parameterEntries';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
+   */
+  public $eventParameters;
   protected $eventParametersType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $eventParametersDataType = '';
   /**
@@ -34,6 +38,10 @@ class GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse extends \Google\
    * @var array[]
    */
   public $outputParameters;
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoParameterEntry[]
+   */
+  public $parameterEntries;
   protected $parameterEntriesType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parameterEntriesDataType = 'array';
 

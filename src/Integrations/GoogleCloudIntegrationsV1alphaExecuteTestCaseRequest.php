@@ -19,6 +19,10 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudIntegrationsV1alphaValueType[]
+   */
+  public $inputParameters;
   protected $inputParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $inputParametersDataType = 'map';
 

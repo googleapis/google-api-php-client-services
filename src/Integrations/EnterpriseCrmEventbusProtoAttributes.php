@@ -24,6 +24,10 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
    * @var string
    */
   public $dataType;
+  /**
+   * @var EnterpriseCrmEventbusProtoValueType
+   */
+  public $defaultValue;
   protected $defaultValueType = EnterpriseCrmEventbusProtoValueType::class;
   protected $defaultValueDataType = '';
   /**
@@ -34,6 +38,10 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
    * @var bool
    */
   public $isSearchable;
+  /**
+   * @var EnterpriseCrmEventbusProtoLogSettings
+   */
+  public $logSettings;
   protected $logSettingsType = EnterpriseCrmEventbusProtoLogSettings::class;
   protected $logSettingsDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoEventBusProperties extends \Google\Collection
 {
   protected $collection_key = 'properties';
+  /**
+   * @var EnterpriseCrmEventbusProtoPropertyEntry[]
+   */
+  public $properties;
   protected $propertiesType = EnterpriseCrmEventbusProtoPropertyEntry::class;
   protected $propertiesDataType = 'array';
 

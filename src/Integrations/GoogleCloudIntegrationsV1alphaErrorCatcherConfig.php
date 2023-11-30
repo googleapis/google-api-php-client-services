@@ -36,8 +36,16 @@ class GoogleCloudIntegrationsV1alphaErrorCatcherConfig extends \Google\Collectio
    * @var string
    */
   public $label;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public $position;
   protected $positionType = GoogleCloudIntegrationsV1alphaCoordinate::class;
   protected $positionDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaNextTask[]
+   */
+  public $startErrorTasks;
   protected $startErrorTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $startErrorTasksDataType = 'array';
 
