@@ -39,12 +39,20 @@ class GoogleCloudApigeeV1AsyncQuery extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudApigeeV1QueryMetadata
+   */
+  public $queryParams;
   protected $queryParamsType = GoogleCloudApigeeV1QueryMetadata::class;
   protected $queryParamsDataType = '';
   /**
    * @var string
    */
   public $reportDefinitionId;
+  /**
+   * @var GoogleCloudApigeeV1AsyncQueryResult
+   */
+  public $result;
   protected $resultType = GoogleCloudApigeeV1AsyncQueryResult::class;
   protected $resultDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ProfileConfig extends \Google\Collection
 {
   protected $collection_key = 'categories';
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigCategory[]
+   */
+  public $categories;
   protected $categoriesType = GoogleCloudApigeeV1ProfileConfigCategory::class;
   protected $categoriesDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict extends \Google\Model
 {
+  /**
+   * @var GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment
+   */
+  public $conflictingDeployment;
   protected $conflictingDeploymentType = GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment::class;
   protected $conflictingDeploymentDataType = '';
   /**

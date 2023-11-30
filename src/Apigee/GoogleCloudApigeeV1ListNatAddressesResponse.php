@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListNatAddressesResponse extends \Google\Collection
 {
   protected $collection_key = 'natAddresses';
+  /**
+   * @var GoogleCloudApigeeV1NatAddress[]
+   */
+  public $natAddresses;
   protected $natAddressesType = GoogleCloudApigeeV1NatAddress::class;
   protected $natAddressesDataType = 'array';
   /**

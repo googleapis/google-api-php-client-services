@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Properties extends \Google\Collection
 {
   protected $collection_key = 'property';
+  /**
+   * @var GoogleCloudApigeeV1Property[]
+   */
+  public $property;
   protected $propertyType = GoogleCloudApigeeV1Property::class;
   protected $propertyDataType = 'array';
 

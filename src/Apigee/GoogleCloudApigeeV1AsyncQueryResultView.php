@@ -28,6 +28,10 @@ class GoogleCloudApigeeV1AsyncQueryResultView extends \Google\Collection
    * @var string
    */
   public $error;
+  /**
+   * @var GoogleCloudApigeeV1QueryMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudApigeeV1QueryMetadata::class;
   protected $metadataDataType = '';
   /**

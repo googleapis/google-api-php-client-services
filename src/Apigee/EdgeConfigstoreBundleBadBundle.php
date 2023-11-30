@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class EdgeConfigstoreBundleBadBundle extends \Google\Collection
 {
   protected $collection_key = 'violations';
+  /**
+   * @var EdgeConfigstoreBundleBadBundleViolation[]
+   */
+  public $violations;
   protected $violationsType = EdgeConfigstoreBundleBadBundleViolation::class;
   protected $violationsDataType = 'array';
 

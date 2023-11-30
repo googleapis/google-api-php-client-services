@@ -24,10 +24,22 @@ class GoogleCloudApigeeV1Access extends \Google\Model
         "remove" => "Remove",
         "set" => "Set",
   ];
+  /**
+   * @var GoogleCloudApigeeV1AccessGet
+   */
+  public $get;
   protected $getType = GoogleCloudApigeeV1AccessGet::class;
   protected $getDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1AccessRemove
+   */
+  public $remove;
   protected $removeType = GoogleCloudApigeeV1AccessRemove::class;
   protected $removeDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1AccessSet
+   */
+  public $set;
   protected $setType = GoogleCloudApigeeV1AccessSet::class;
   protected $setDataType = '';
 

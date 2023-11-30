@@ -20,8 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1InstanceDeploymentStatus extends \Google\Collection
 {
   protected $collection_key = 'deployedRoutes';
+  /**
+   * @var GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRevision[]
+   */
+  public $deployedRevisions;
   protected $deployedRevisionsType = GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRevision::class;
   protected $deployedRevisionsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRoute[]
+   */
+  public $deployedRoutes;
   protected $deployedRoutesType = GoogleCloudApigeeV1InstanceDeploymentStatusDeployedRoute::class;
   protected $deployedRoutesDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DeveloperBalance extends \Google\Collection
 {
   protected $collection_key = 'wallets';
+  /**
+   * @var GoogleCloudApigeeV1DeveloperBalanceWallet[]
+   */
+  public $wallets;
   protected $walletsType = GoogleCloudApigeeV1DeveloperBalanceWallet::class;
   protected $walletsDataType = 'array';
 

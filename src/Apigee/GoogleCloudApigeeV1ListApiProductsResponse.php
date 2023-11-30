@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListApiProductsResponse extends \Google\Collection
 {
   protected $collection_key = 'apiProduct';
+  /**
+   * @var GoogleCloudApigeeV1ApiProduct[]
+   */
+  public $apiProduct;
   protected $apiProductType = GoogleCloudApigeeV1ApiProduct::class;
   protected $apiProductDataType = 'array';
 

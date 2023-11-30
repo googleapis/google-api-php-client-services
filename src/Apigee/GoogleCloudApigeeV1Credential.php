@@ -20,8 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Credential extends \Google\Collection
 {
   protected $collection_key = 'scopes';
+  /**
+   * @var GoogleCloudApigeeV1ApiProductRef[]
+   */
+  public $apiProducts;
   protected $apiProductsType = GoogleCloudApigeeV1ApiProductRef::class;
   protected $apiProductsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**

@@ -22,6 +22,10 @@ class GoogleCloudApigeeV1OptimizedStats extends \Google\Model
   protected $internal_gapi_mappings = [
         "response" => "Response",
   ];
+  /**
+   * @var GoogleCloudApigeeV1OptimizedStatsResponse
+   */
+  public $response;
   protected $responseType = GoogleCloudApigeeV1OptimizedStatsResponse::class;
   protected $responseDataType = '';
 

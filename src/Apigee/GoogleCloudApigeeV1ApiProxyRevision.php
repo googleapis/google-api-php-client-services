@@ -28,6 +28,10 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
    * @var string[]
    */
   public $basepaths;
+  /**
+   * @var GoogleCloudApigeeV1ConfigVersion
+   */
+  public $configurationVersion;
   protected $configurationVersionType = GoogleCloudApigeeV1ConfigVersion::class;
   protected $configurationVersionDataType = '';
   /**
@@ -78,6 +82,10 @@ class GoogleCloudApigeeV1ApiProxyRevision extends \Google\Collection
    * @var string[]
    */
   public $proxyEndpoints;
+  /**
+   * @var GoogleCloudApigeeV1ResourceFiles
+   */
+  public $resourceFiles;
   protected $resourceFilesType = GoogleCloudApigeeV1ResourceFiles::class;
   protected $resourceFilesDataType = '';
   /**

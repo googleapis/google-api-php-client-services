@@ -19,16 +19,40 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1ProfileConfigCategory extends \Google\Model
 {
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigAbuse
+   */
+  public $abuse;
   protected $abuseType = GoogleCloudApigeeV1ProfileConfigAbuse::class;
   protected $abuseDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigAuthorization
+   */
+  public $authorization;
   protected $authorizationType = GoogleCloudApigeeV1ProfileConfigAuthorization::class;
   protected $authorizationDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigCORS
+   */
+  public $cors;
   protected $corsType = GoogleCloudApigeeV1ProfileConfigCORS::class;
   protected $corsDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigMediation
+   */
+  public $mediation;
   protected $mediationType = GoogleCloudApigeeV1ProfileConfigMediation::class;
   protected $mediationDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigMTLS
+   */
+  public $mtls;
   protected $mtlsType = GoogleCloudApigeeV1ProfileConfigMTLS::class;
   protected $mtlsDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ProfileConfigThreat
+   */
+  public $threat;
   protected $threatType = GoogleCloudApigeeV1ProfileConfigThreat::class;
   protected $threatDataType = '';
 

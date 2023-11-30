@@ -28,6 +28,10 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsRequest extends \Google\Collection
    * @var string
    */
   public $filter;
+  /**
+   * @var GoogleCloudApigeeV1MetricAggregation[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudApigeeV1MetricAggregation::class;
   protected $metricsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class GoogleCloudApigeeV1QueryTimeSeriesStatsRequest extends \Google\Collection
    * @var string
    */
   public $pageToken;
+  /**
+   * @var GoogleTypeInterval
+   */
+  public $timeRange;
   protected $timeRangeType = GoogleTypeInterval::class;
   protected $timeRangeDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1GetAsyncQueryResultUrlResponse extends \Google\Collection
 {
   protected $collection_key = 'urls';
+  /**
+   * @var GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo[]
+   */
+  public $urls;
   protected $urlsType = GoogleCloudApigeeV1GetAsyncQueryResultUrlResponseURLInfo::class;
   protected $urlsDataType = 'array';
 

@@ -24,6 +24,10 @@ class GoogleCloudApigeeV1ListSecurityProfilesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudApigeeV1SecurityProfile[]
+   */
+  public $securityProfiles;
   protected $securityProfilesType = GoogleCloudApigeeV1SecurityProfile::class;
   protected $securityProfilesDataType = 'array';
 

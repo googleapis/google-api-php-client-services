@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListSharedFlowsResponse extends \Google\Collection
 {
   protected $collection_key = 'sharedFlows';
+  /**
+   * @var GoogleCloudApigeeV1SharedFlow[]
+   */
+  public $sharedFlows;
   protected $sharedFlowsType = GoogleCloudApigeeV1SharedFlow::class;
   protected $sharedFlowsDataType = 'array';
 

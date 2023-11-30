@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Attributes extends \Google\Collection
 {
   protected $collection_key = 'attribute';
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $attribute;
   protected $attributeType = GoogleCloudApigeeV1Attribute::class;
   protected $attributeDataType = 'array';
 

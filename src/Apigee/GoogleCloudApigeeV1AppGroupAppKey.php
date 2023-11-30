@@ -20,8 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1AppGroupAppKey extends \Google\Collection
 {
   protected $collection_key = 'scopes';
+  /**
+   * @var GoogleCloudApigeeV1APIProductAssociation[]
+   */
+  public $apiProducts;
   protected $apiProductsType = GoogleCloudApigeeV1APIProductAssociation::class;
   protected $apiProductsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**

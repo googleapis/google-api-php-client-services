@@ -28,6 +28,10 @@ class GoogleCloudApigeeV1RatePlan extends \Google\Collection
    * @var string
    */
   public $billingPeriod;
+  /**
+   * @var GoogleCloudApigeeV1RateRange[]
+   */
+  public $consumptionPricingRates;
   protected $consumptionPricingRatesType = GoogleCloudApigeeV1RateRange::class;
   protected $consumptionPricingRatesDataType = 'array';
   /**
@@ -58,6 +62,10 @@ class GoogleCloudApigeeV1RatePlan extends \Google\Collection
    * @var int
    */
   public $fixedFeeFrequency;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $fixedRecurringFee;
   protected $fixedRecurringFeeType = GoogleTypeMoney::class;
   protected $fixedRecurringFeeDataType = '';
   /**
@@ -72,12 +80,20 @@ class GoogleCloudApigeeV1RatePlan extends \Google\Collection
    * @var string
    */
   public $paymentFundingModel;
+  /**
+   * @var GoogleCloudApigeeV1RevenueShareRange[]
+   */
+  public $revenueShareRates;
   protected $revenueShareRatesType = GoogleCloudApigeeV1RevenueShareRange::class;
   protected $revenueShareRatesDataType = 'array';
   /**
    * @var string
    */
   public $revenueShareType;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $setupFee;
   protected $setupFeeType = GoogleTypeMoney::class;
   protected $setupFeeDataType = '';
   /**

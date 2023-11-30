@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListDeveloperSubscriptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'developerSubscriptions';
+  /**
+   * @var GoogleCloudApigeeV1DeveloperSubscription[]
+   */
+  public $developerSubscriptions;
   protected $developerSubscriptionsType = GoogleCloudApigeeV1DeveloperSubscription::class;
   protected $developerSubscriptionsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1App extends \Google\Collection
 {
   protected $collection_key = 'scopes';
+  /**
+   * @var GoogleCloudApigeeV1ApiProductRef[]
+   */
+  public $apiProducts;
   protected $apiProductsType = GoogleCloudApigeeV1ApiProductRef::class;
   protected $apiProductsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class GoogleCloudApigeeV1App extends \Google\Collection
    * @var string
    */
   public $appId;
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
@@ -44,6 +52,10 @@ class GoogleCloudApigeeV1App extends \Google\Collection
    * @var string
    */
   public $createdAt;
+  /**
+   * @var GoogleCloudApigeeV1Credential[]
+   */
+  public $credentials;
   protected $credentialsType = GoogleCloudApigeeV1Credential::class;
   protected $credentialsDataType = 'array';
   /**

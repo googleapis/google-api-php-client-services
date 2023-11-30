@@ -20,10 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1DeploymentChangeReport extends \Google\Collection
 {
   protected $collection_key = 'routingConflicts';
+  /**
+   * @var GoogleCloudApigeeV1DeploymentChangeReportRoutingChange[]
+   */
+  public $routingChanges;
   protected $routingChangesType = GoogleCloudApigeeV1DeploymentChangeReportRoutingChange::class;
   protected $routingChangesDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict[]
+   */
+  public $routingConflicts;
   protected $routingConflictsType = GoogleCloudApigeeV1DeploymentChangeReportRoutingConflict::class;
   protected $routingConflictsDataType = 'array';
+  /**
+   * @var GoogleRpcPreconditionFailure
+   */
+  public $validationErrors;
   protected $validationErrorsType = GoogleRpcPreconditionFailure::class;
   protected $validationErrorsDataType = '';
 

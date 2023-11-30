@@ -24,6 +24,10 @@ class GoogleCloudApigeeV1GraphQLOperationGroup extends \Google\Collection
    * @var string
    */
   public $operationConfigType;
+  /**
+   * @var GoogleCloudApigeeV1GraphQLOperationConfig[]
+   */
+  public $operationConfigs;
   protected $operationConfigsType = GoogleCloudApigeeV1GraphQLOperationConfig::class;
   protected $operationConfigsDataType = 'array';
 

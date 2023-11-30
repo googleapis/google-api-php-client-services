@@ -24,12 +24,20 @@ class GoogleCloudApigeeV1GrpcOperationConfig extends \Google\Collection
    * @var string
    */
   public $apiSource;
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
    * @var string[]
    */
   public $methods;
+  /**
+   * @var GoogleCloudApigeeV1Quota
+   */
+  public $quota;
   protected $quotaType = GoogleCloudApigeeV1Quota::class;
   protected $quotaDataType = '';
   /**

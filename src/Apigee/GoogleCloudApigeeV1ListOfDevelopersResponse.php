@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListOfDevelopersResponse extends \Google\Collection
 {
   protected $collection_key = 'developer';
+  /**
+   * @var GoogleCloudApigeeV1Developer[]
+   */
+  public $developer;
   protected $developerType = GoogleCloudApigeeV1Developer::class;
   protected $developerDataType = 'array';
 

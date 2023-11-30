@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListKeyValueEntriesResponse extends \Google\Collection
 {
   protected $collection_key = 'keyValueEntries';
+  /**
+   * @var GoogleCloudApigeeV1KeyValueEntry[]
+   */
+  public $keyValueEntries;
   protected $keyValueEntriesType = GoogleCloudApigeeV1KeyValueEntry::class;
   protected $keyValueEntriesDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListApiCategoriesResponse extends \Google\Collection
 {
   protected $collection_key = 'data';
+  /**
+   * @var GoogleCloudApigeeV1ApiCategory[]
+   */
+  public $data;
   protected $dataType = GoogleCloudApigeeV1ApiCategory::class;
   protected $dataDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListCustomReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'qualifier';
+  /**
+   * @var GoogleCloudApigeeV1CustomReport[]
+   */
+  public $qualifier;
   protected $qualifierType = GoogleCloudApigeeV1CustomReport::class;
   protected $qualifierDataType = 'array';
 

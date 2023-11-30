@@ -24,10 +24,22 @@ class GoogleCloudApigeeV1GraphQLOperationConfig extends \Google\Collection
    * @var string
    */
   public $apiSource;
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1GraphQLOperation[]
+   */
+  public $operations;
   protected $operationsType = GoogleCloudApigeeV1GraphQLOperation::class;
   protected $operationsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1Quota
+   */
+  public $quota;
   protected $quotaType = GoogleCloudApigeeV1Quota::class;
   protected $quotaDataType = '';
 

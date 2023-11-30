@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListAsyncQueriesResponse extends \Google\Collection
 {
   protected $collection_key = 'queries';
+  /**
+   * @var GoogleCloudApigeeV1AsyncQuery[]
+   */
+  public $queries;
   protected $queriesType = GoogleCloudApigeeV1AsyncQuery::class;
   protected $queriesDataType = 'array';
 

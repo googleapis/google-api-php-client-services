@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListOrganizationsResponse extends \Google\Collection
 {
   protected $collection_key = 'organizations';
+  /**
+   * @var GoogleCloudApigeeV1OrganizationProjectMapping[]
+   */
+  public $organizations;
   protected $organizationsType = GoogleCloudApigeeV1OrganizationProjectMapping::class;
   protected $organizationsDataType = 'array';
 

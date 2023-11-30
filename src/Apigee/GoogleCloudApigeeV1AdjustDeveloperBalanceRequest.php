@@ -19,6 +19,10 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1AdjustDeveloperBalanceRequest extends \Google\Model
 {
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $adjustment;
   protected $adjustmentType = GoogleTypeMoney::class;
   protected $adjustmentDataType = '';
 

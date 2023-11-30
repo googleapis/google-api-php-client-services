@@ -24,6 +24,10 @@ class GoogleCloudApigeeV1ComputeEnvironmentScoresResponse extends \Google\Collec
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudApigeeV1Score[]
+   */
+  public $scores;
   protected $scoresType = GoogleCloudApigeeV1Score::class;
   protected $scoresDataType = 'array';
 

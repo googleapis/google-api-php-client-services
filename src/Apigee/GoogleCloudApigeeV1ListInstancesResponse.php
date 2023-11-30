@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListInstancesResponse extends \Google\Collection
 {
   protected $collection_key = 'instances';
+  /**
+   * @var GoogleCloudApigeeV1Instance[]
+   */
+  public $instances;
   protected $instancesType = GoogleCloudApigeeV1Instance::class;
   protected $instancesDataType = 'array';
   /**

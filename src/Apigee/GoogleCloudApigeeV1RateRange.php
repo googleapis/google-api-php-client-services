@@ -23,6 +23,10 @@ class GoogleCloudApigeeV1RateRange extends \Google\Model
    * @var string
    */
   public $end;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $fee;
   protected $feeType = GoogleTypeMoney::class;
   protected $feeDataType = '';
   /**

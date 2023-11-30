@@ -19,16 +19,40 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1AddonsConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudApigeeV1AdvancedApiOpsConfig
+   */
+  public $advancedApiOpsConfig;
   protected $advancedApiOpsConfigType = GoogleCloudApigeeV1AdvancedApiOpsConfig::class;
   protected $advancedApiOpsConfigDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1AnalyticsConfig
+   */
+  public $analyticsConfig;
   protected $analyticsConfigType = GoogleCloudApigeeV1AnalyticsConfig::class;
   protected $analyticsConfigDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ApiSecurityConfig
+   */
+  public $apiSecurityConfig;
   protected $apiSecurityConfigType = GoogleCloudApigeeV1ApiSecurityConfig::class;
   protected $apiSecurityConfigDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ConnectorsPlatformConfig
+   */
+  public $connectorsPlatformConfig;
   protected $connectorsPlatformConfigType = GoogleCloudApigeeV1ConnectorsPlatformConfig::class;
   protected $connectorsPlatformConfigDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1IntegrationConfig
+   */
+  public $integrationConfig;
   protected $integrationConfigType = GoogleCloudApigeeV1IntegrationConfig::class;
   protected $integrationConfigDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1MonetizationConfig
+   */
+  public $monetizationConfig;
   protected $monetizationConfigType = GoogleCloudApigeeV1MonetizationConfig::class;
   protected $monetizationConfigDataType = '';
 

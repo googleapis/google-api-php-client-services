@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListDataCollectorsResponse extends \Google\Collection
 {
   protected $collection_key = 'dataCollectors';
+  /**
+   * @var GoogleCloudApigeeV1DataCollector[]
+   */
+  public $dataCollectors;
   protected $dataCollectorsType = GoogleCloudApigeeV1DataCollector::class;
   protected $dataCollectorsDataType = 'array';
   /**

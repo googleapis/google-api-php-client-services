@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListDatastoresResponse extends \Google\Collection
 {
   protected $collection_key = 'datastores';
+  /**
+   * @var GoogleCloudApigeeV1Datastore[]
+   */
+  public $datastores;
   protected $datastoresType = GoogleCloudApigeeV1Datastore::class;
   protected $datastoresDataType = 'array';
 

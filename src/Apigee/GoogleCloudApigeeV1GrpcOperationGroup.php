@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1GrpcOperationGroup extends \Google\Collection
 {
   protected $collection_key = 'operationConfigs';
+  /**
+   * @var GoogleCloudApigeeV1GrpcOperationConfig[]
+   */
+  public $operationConfigs;
   protected $operationConfigsType = GoogleCloudApigeeV1GrpcOperationConfig::class;
   protected $operationConfigsDataType = 'array';
 

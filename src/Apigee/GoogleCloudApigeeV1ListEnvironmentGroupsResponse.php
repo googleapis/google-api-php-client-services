@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListEnvironmentGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'environmentGroups';
+  /**
+   * @var GoogleCloudApigeeV1EnvironmentGroup[]
+   */
+  public $environmentGroups;
   protected $environmentGroupsType = GoogleCloudApigeeV1EnvironmentGroup::class;
   protected $environmentGroupsDataType = 'array';
   /**

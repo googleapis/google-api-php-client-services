@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListHybridIssuersResponse extends \Google\Collection
 {
   protected $collection_key = 'issuers';
+  /**
+   * @var GoogleCloudApigeeV1ServiceIssuersMapping[]
+   */
+  public $issuers;
   protected $issuersType = GoogleCloudApigeeV1ServiceIssuersMapping::class;
   protected $issuersDataType = 'array';
 

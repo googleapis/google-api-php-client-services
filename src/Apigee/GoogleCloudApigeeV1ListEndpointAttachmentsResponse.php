@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListEndpointAttachmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'endpointAttachments';
+  /**
+   * @var GoogleCloudApigeeV1EndpointAttachment[]
+   */
+  public $endpointAttachments;
   protected $endpointAttachmentsType = GoogleCloudApigeeV1EndpointAttachment::class;
   protected $endpointAttachmentsDataType = 'array';
   /**

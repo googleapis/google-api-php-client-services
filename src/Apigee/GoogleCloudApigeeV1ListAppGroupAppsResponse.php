@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListAppGroupAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'appGroupApps';
+  /**
+   * @var GoogleCloudApigeeV1AppGroupApp[]
+   */
+  public $appGroupApps;
   protected $appGroupAppsType = GoogleCloudApigeeV1AppGroupApp::class;
   protected $appGroupAppsDataType = 'array';
   /**

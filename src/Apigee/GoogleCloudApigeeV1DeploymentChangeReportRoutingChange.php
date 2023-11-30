@@ -27,12 +27,20 @@ class GoogleCloudApigeeV1DeploymentChangeReportRoutingChange extends \Google\Mod
    * @var string
    */
   public $environmentGroup;
+  /**
+   * @var GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment
+   */
+  public $fromDeployment;
   protected $fromDeploymentType = GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment::class;
   protected $fromDeploymentDataType = '';
   /**
    * @var bool
    */
   public $shouldSequenceRollout;
+  /**
+   * @var GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment
+   */
+  public $toDeployment;
   protected $toDeploymentType = GoogleCloudApigeeV1DeploymentChangeReportRoutingDeployment::class;
   protected $toDeploymentDataType = '';
 

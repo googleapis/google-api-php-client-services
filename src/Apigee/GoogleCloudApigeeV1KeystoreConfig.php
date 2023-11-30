@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1KeystoreConfig extends \Google\Collection
 {
   protected $collection_key = 'aliases';
+  /**
+   * @var GoogleCloudApigeeV1AliasRevisionConfig[]
+   */
+  public $aliases;
   protected $aliasesType = GoogleCloudApigeeV1AliasRevisionConfig::class;
   protected $aliasesDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class GoogleCloudApigeeV1ReportProperty extends \Google\Collection
    * @var string
    */
   public $property;
+  /**
+   * @var GoogleCloudApigeeV1Attribute[]
+   */
+  public $value;
   protected $valueType = GoogleCloudApigeeV1Attribute::class;
   protected $valueDataType = 'array';
 

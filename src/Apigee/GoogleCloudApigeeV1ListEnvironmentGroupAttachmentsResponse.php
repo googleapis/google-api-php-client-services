@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListEnvironmentGroupAttachmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'environmentGroupAttachments';
+  /**
+   * @var GoogleCloudApigeeV1EnvironmentGroupAttachment[]
+   */
+  public $environmentGroupAttachments;
   protected $environmentGroupAttachmentsType = GoogleCloudApigeeV1EnvironmentGroupAttachment::class;
   protected $environmentGroupAttachmentsDataType = 'array';
   /**

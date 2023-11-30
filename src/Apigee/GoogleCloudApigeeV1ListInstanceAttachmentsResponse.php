@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListInstanceAttachmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'attachments';
+  /**
+   * @var GoogleCloudApigeeV1InstanceAttachment[]
+   */
+  public $attachments;
   protected $attachmentsType = GoogleCloudApigeeV1InstanceAttachment::class;
   protected $attachmentsDataType = 'array';
   /**

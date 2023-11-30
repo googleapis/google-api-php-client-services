@@ -24,6 +24,10 @@ class GoogleCloudApigeeV1ListRatePlansResponse extends \Google\Collection
    * @var string
    */
   public $nextStartKey;
+  /**
+   * @var GoogleCloudApigeeV1RatePlan[]
+   */
+  public $ratePlans;
   protected $ratePlansType = GoogleCloudApigeeV1RatePlan::class;
   protected $ratePlansDataType = 'array';
 
