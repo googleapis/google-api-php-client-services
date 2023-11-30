@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class SslCertificatesScopedList extends \Google\Collection
 {
   protected $collection_key = 'sslCertificates';
+  /**
+   * @var SslCertificate[]
+   */
+  public $sslCertificates;
   protected $sslCertificatesType = SslCertificate::class;
   protected $sslCertificatesDataType = 'array';
+  /**
+   * @var SslCertificatesScopedListWarning
+   */
+  public $warning;
   protected $warningType = SslCertificatesScopedListWarning::class;
   protected $warningDataType = '';
 

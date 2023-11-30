@@ -24,6 +24,10 @@ class ServiceAttachmentAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ServiceAttachmentAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = ServiceAttachmentAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

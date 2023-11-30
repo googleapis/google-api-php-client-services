@@ -24,6 +24,10 @@ class TargetHttpsProxyList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var TargetHttpsProxy[]
+   */
+  public $items;
   protected $itemsType = TargetHttpsProxy::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class TargetHttpsProxyList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var TargetHttpsProxyListWarning
+   */
+  public $warning;
   protected $warningType = TargetHttpsProxyListWarning::class;
   protected $warningDataType = '';
 

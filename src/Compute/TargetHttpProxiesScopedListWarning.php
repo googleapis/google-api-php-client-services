@@ -24,6 +24,10 @@ class TargetHttpProxiesScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var TargetHttpProxiesScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = TargetHttpProxiesScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

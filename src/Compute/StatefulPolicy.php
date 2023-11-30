@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class StatefulPolicy extends \Google\Model
 {
+  /**
+   * @var StatefulPolicyPreservedState
+   */
+  public $preservedState;
   protected $preservedStateType = StatefulPolicyPreservedState::class;
   protected $preservedStateDataType = '';
 

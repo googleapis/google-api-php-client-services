@@ -24,6 +24,10 @@ class SubnetworkList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Subnetwork[]
+   */
+  public $items;
   protected $itemsType = Subnetwork::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class SubnetworkList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var SubnetworkListWarning
+   */
+  public $warning;
   protected $warningType = SubnetworkListWarning::class;
   protected $warningDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyAdaptiveProtectionConfig extends \Google\Model
 {
+  /**
+   * @var SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
+   */
+  public $layer7DdosDefenseConfig;
   protected $layer7DdosDefenseConfigType = SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig::class;
   protected $layer7DdosDefenseConfigDataType = '';
 

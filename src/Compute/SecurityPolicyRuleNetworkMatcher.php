@@ -48,6 +48,10 @@ class SecurityPolicyRuleNetworkMatcher extends \Google\Collection
    * @var string[]
    */
   public $srcRegionCodes;
+  /**
+   * @var SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch[]
+   */
+  public $userDefinedFields;
   protected $userDefinedFieldsType = SecurityPolicyRuleNetworkMatcherUserDefinedFieldMatch::class;
   protected $userDefinedFieldsDataType = 'array';
 

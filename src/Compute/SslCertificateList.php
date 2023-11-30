@@ -24,6 +24,10 @@ class SslCertificateList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var SslCertificate[]
+   */
+  public $items;
   protected $itemsType = SslCertificate::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class SslCertificateList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var SslCertificateListWarning
+   */
+  public $warning;
   protected $warningType = SslCertificateListWarning::class;
   protected $warningDataType = '';
 

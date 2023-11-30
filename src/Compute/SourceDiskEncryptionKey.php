@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class SourceDiskEncryptionKey extends \Google\Model
 {
+  /**
+   * @var CustomerEncryptionKey
+   */
+  public $diskEncryptionKey;
   protected $diskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $diskEncryptionKeyDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class SnapshotSettings extends \Google\Model
 {
+  /**
+   * @var SnapshotSettingsStorageLocationSettings
+   */
+  public $storageLocation;
   protected $storageLocationType = SnapshotSettingsStorageLocationSettings::class;
   protected $storageLocationDataType = '';
 

@@ -28,6 +28,10 @@ class SecurityPoliciesAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var SecurityPoliciesScopedList[]
+   */
+  public $items;
   protected $itemsType = SecurityPoliciesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,6 +50,10 @@ class SecurityPoliciesAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
+  /**
+   * @var SecurityPoliciesAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = SecurityPoliciesAggregatedListWarning::class;
   protected $warningDataType = '';
 

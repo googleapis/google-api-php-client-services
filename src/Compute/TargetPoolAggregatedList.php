@@ -24,6 +24,10 @@ class TargetPoolAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var TargetPoolsScopedList[]
+   */
+  public $items;
   protected $itemsType = TargetPoolsScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -42,6 +46,10 @@ class TargetPoolAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
+  /**
+   * @var TargetPoolAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = TargetPoolAggregatedListWarning::class;
   protected $warningDataType = '';
 

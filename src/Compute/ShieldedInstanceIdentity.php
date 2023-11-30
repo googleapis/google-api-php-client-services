@@ -19,12 +19,20 @@ namespace Google\Service\Compute;
 
 class ShieldedInstanceIdentity extends \Google\Model
 {
+  /**
+   * @var ShieldedInstanceIdentityEntry
+   */
+  public $encryptionKey;
   protected $encryptionKeyType = ShieldedInstanceIdentityEntry::class;
   protected $encryptionKeyDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var ShieldedInstanceIdentityEntry
+   */
+  public $signingKey;
   protected $signingKeyType = ShieldedInstanceIdentityEntry::class;
   protected $signingKeyDataType = '';
 

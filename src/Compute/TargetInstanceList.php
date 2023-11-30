@@ -24,6 +24,10 @@ class TargetInstanceList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var TargetInstance[]
+   */
+  public $items;
   protected $itemsType = TargetInstance::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class TargetInstanceList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var TargetInstanceListWarning
+   */
+  public $warning;
   protected $warningType = TargetInstanceListWarning::class;
   protected $warningDataType = '';
 

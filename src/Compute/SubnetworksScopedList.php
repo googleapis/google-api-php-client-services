@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class SubnetworksScopedList extends \Google\Collection
 {
   protected $collection_key = 'subnetworks';
+  /**
+   * @var Subnetwork[]
+   */
+  public $subnetworks;
   protected $subnetworksType = Subnetwork::class;
   protected $subnetworksDataType = 'array';
+  /**
+   * @var SubnetworksScopedListWarning
+   */
+  public $warning;
   protected $warningType = SubnetworksScopedListWarning::class;
   protected $warningDataType = '';
 

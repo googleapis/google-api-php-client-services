@@ -68,6 +68,10 @@ class Subnetwork extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var SubnetworkLogConfig
+   */
+  public $logConfig;
   protected $logConfigType = SubnetworkLogConfig::class;
   protected $logConfigDataType = '';
   /**
@@ -98,6 +102,10 @@ class Subnetwork extends \Google\Collection
    * @var string
    */
   public $role;
+  /**
+   * @var SubnetworkSecondaryRange[]
+   */
+  public $secondaryIpRanges;
   protected $secondaryIpRangesType = SubnetworkSecondaryRange::class;
   protected $secondaryIpRangesDataType = 'array';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class SecurityPoliciesScopedList extends \Google\Collection
 {
   protected $collection_key = 'securityPolicies';
+  /**
+   * @var SecurityPolicy[]
+   */
+  public $securityPolicies;
   protected $securityPoliciesType = SecurityPolicy::class;
   protected $securityPoliciesDataType = 'array';
+  /**
+   * @var SecurityPoliciesScopedListWarning
+   */
+  public $warning;
   protected $warningType = SecurityPoliciesScopedListWarning::class;
   protected $warningDataType = '';
 

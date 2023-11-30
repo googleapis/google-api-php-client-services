@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class SecuritySettings extends \Google\Collection
 {
   protected $collection_key = 'subjectAltNames';
+  /**
+   * @var AWSV4Signature
+   */
+  public $awsV4Authentication;
   protected $awsV4AuthenticationType = AWSV4Signature::class;
   protected $awsV4AuthenticationDataType = '';
   /**

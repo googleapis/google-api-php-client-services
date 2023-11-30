@@ -20,12 +20,28 @@ namespace Google\Service\Compute;
 class SecurityPolicyRulePreconfiguredWafConfigExclusion extends \Google\Collection
 {
   protected $collection_key = 'targetRuleIds';
+  /**
+   * @var SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[]
+   */
+  public $requestCookiesToExclude;
   protected $requestCookiesToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestCookiesToExcludeDataType = 'array';
+  /**
+   * @var SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[]
+   */
+  public $requestHeadersToExclude;
   protected $requestHeadersToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestHeadersToExcludeDataType = 'array';
+  /**
+   * @var SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[]
+   */
+  public $requestQueryParamsToExclude;
   protected $requestQueryParamsToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestQueryParamsToExcludeDataType = 'array';
+  /**
+   * @var SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams[]
+   */
+  public $requestUrisToExclude;
   protected $requestUrisToExcludeType = SecurityPolicyRulePreconfiguredWafConfigExclusionFieldParams::class;
   protected $requestUrisToExcludeDataType = 'array';
   /**

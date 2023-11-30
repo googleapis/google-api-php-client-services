@@ -24,6 +24,10 @@ class SecurityPolicyListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var SecurityPolicyListWarningData[]
+   */
+  public $data;
   protected $dataType = SecurityPolicyListWarningData::class;
   protected $dataDataType = 'array';
   /**

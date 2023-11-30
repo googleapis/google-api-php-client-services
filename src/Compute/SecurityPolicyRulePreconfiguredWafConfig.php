@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class SecurityPolicyRulePreconfiguredWafConfig extends \Google\Collection
 {
   protected $collection_key = 'exclusions';
+  /**
+   * @var SecurityPolicyRulePreconfiguredWafConfigExclusion[]
+   */
+  public $exclusions;
   protected $exclusionsType = SecurityPolicyRulePreconfiguredWafConfigExclusion::class;
   protected $exclusionsDataType = 'array';
 

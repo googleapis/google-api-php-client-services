@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class SecurityPolicyAdvancedOptionsConfig extends \Google\Collection
 {
   protected $collection_key = 'userIpRequestHeaders';
+  /**
+   * @var SecurityPolicyAdvancedOptionsConfigJsonCustomConfig
+   */
+  public $jsonCustomConfig;
   protected $jsonCustomConfigType = SecurityPolicyAdvancedOptionsConfigJsonCustomConfig::class;
   protected $jsonCustomConfigDataType = '';
   /**

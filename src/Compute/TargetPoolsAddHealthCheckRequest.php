@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class TargetPoolsAddHealthCheckRequest extends \Google\Collection
 {
   protected $collection_key = 'healthChecks';
+  /**
+   * @var HealthCheckReference[]
+   */
+  public $healthChecks;
   protected $healthChecksType = HealthCheckReference::class;
   protected $healthChecksDataType = 'array';
 

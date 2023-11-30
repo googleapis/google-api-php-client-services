@@ -44,6 +44,10 @@ class RouterStatusNatStatus extends \Google\Collection
    * @var int
    */
   public $numVmEndpointsWithNatMappings;
+  /**
+   * @var RouterStatusNatStatusNatRuleStatus[]
+   */
+  public $ruleStatus;
   protected $ruleStatusType = RouterStatusNatStatusNatRuleStatus::class;
   protected $ruleStatusDataType = 'array';
   /**

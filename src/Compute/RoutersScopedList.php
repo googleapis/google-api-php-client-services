@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class RoutersScopedList extends \Google\Collection
 {
   protected $collection_key = 'routers';
+  /**
+   * @var Router[]
+   */
+  public $routers;
   protected $routersType = Router::class;
   protected $routersDataType = 'array';
+  /**
+   * @var RoutersScopedListWarning
+   */
+  public $warning;
   protected $warningType = RoutersScopedListWarning::class;
   protected $warningDataType = '';
 

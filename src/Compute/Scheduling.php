@@ -28,6 +28,10 @@ class Scheduling extends \Google\Collection
    * @var string
    */
   public $instanceTerminationAction;
+  /**
+   * @var Duration
+   */
+  public $localSsdRecoveryTimeout;
   protected $localSsdRecoveryTimeoutType = Duration::class;
   protected $localSsdRecoveryTimeoutDataType = '';
   /**
@@ -38,6 +42,10 @@ class Scheduling extends \Google\Collection
    * @var int
    */
   public $minNodeCpus;
+  /**
+   * @var SchedulingNodeAffinity[]
+   */
+  public $nodeAffinities;
   protected $nodeAffinitiesType = SchedulingNodeAffinity::class;
   protected $nodeAffinitiesDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class ServiceAttachmentAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var ServiceAttachmentsScopedList[]
+   */
+  public $items;
   protected $itemsType = ServiceAttachmentsScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -42,6 +46,10 @@ class ServiceAttachmentAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
+  /**
+   * @var ServiceAttachmentAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = ServiceAttachmentAggregatedListWarning::class;
   protected $warningDataType = '';
 

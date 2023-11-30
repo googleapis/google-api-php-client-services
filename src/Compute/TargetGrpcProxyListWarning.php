@@ -24,6 +24,10 @@ class TargetGrpcProxyListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var TargetGrpcProxyListWarningData[]
+   */
+  public $data;
   protected $dataType = TargetGrpcProxyListWarningData::class;
   protected $dataDataType = 'array';
   /**

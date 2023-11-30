@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class TargetInstancesScopedList extends \Google\Collection
 {
   protected $collection_key = 'targetInstances';
+  /**
+   * @var TargetInstance[]
+   */
+  public $targetInstances;
   protected $targetInstancesType = TargetInstance::class;
   protected $targetInstancesDataType = 'array';
+  /**
+   * @var TargetInstancesScopedListWarning
+   */
+  public $warning;
   protected $warningType = TargetInstancesScopedListWarning::class;
   protected $warningDataType = '';
 

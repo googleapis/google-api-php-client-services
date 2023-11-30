@@ -24,6 +24,10 @@ class SecurityPolicyRuleRateLimitOptions extends \Google\Collection
    * @var int
    */
   public $banDurationSec;
+  /**
+   * @var SecurityPolicyRuleRateLimitOptionsThreshold
+   */
+  public $banThreshold;
   protected $banThresholdType = SecurityPolicyRuleRateLimitOptionsThreshold::class;
   protected $banThresholdDataType = '';
   /**
@@ -34,6 +38,10 @@ class SecurityPolicyRuleRateLimitOptions extends \Google\Collection
    * @var string
    */
   public $enforceOnKey;
+  /**
+   * @var SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig[]
+   */
+  public $enforceOnKeyConfigs;
   protected $enforceOnKeyConfigsType = SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig::class;
   protected $enforceOnKeyConfigsDataType = 'array';
   /**
@@ -44,8 +52,16 @@ class SecurityPolicyRuleRateLimitOptions extends \Google\Collection
    * @var string
    */
   public $exceedAction;
+  /**
+   * @var SecurityPolicyRuleRedirectOptions
+   */
+  public $exceedRedirectOptions;
   protected $exceedRedirectOptionsType = SecurityPolicyRuleRedirectOptions::class;
   protected $exceedRedirectOptionsDataType = '';
+  /**
+   * @var SecurityPolicyRuleRateLimitOptionsThreshold
+   */
+  public $rateLimitThreshold;
   protected $rateLimitThresholdType = SecurityPolicyRuleRateLimitOptionsThreshold::class;
   protected $rateLimitThresholdDataType = '';
 

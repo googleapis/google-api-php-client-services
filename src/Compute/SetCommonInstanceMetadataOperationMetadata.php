@@ -23,6 +23,10 @@ class SetCommonInstanceMetadataOperationMetadata extends \Google\Model
    * @var string
    */
   public $clientOperationId;
+  /**
+   * @var SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo[]
+   */
+  public $perLocationOperations;
   protected $perLocationOperationsType = SetCommonInstanceMetadataOperationMetadataPerLocationOperationInfo::class;
   protected $perLocationOperationsDataType = 'map';
 

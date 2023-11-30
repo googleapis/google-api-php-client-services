@@ -24,6 +24,10 @@ class SecurityPolicyList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var SecurityPolicy[]
+   */
+  public $items;
   protected $itemsType = SecurityPolicy::class;
   protected $itemsDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class SecurityPolicyList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var SecurityPolicyListWarning
+   */
+  public $warning;
   protected $warningType = SecurityPolicyListWarning::class;
   protected $warningDataType = '';
 

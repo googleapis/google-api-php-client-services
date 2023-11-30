@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class TargetPoolInstanceHealth extends \Google\Collection
 {
   protected $collection_key = 'healthStatus';
+  /**
+   * @var HealthStatus[]
+   */
+  public $healthStatus;
   protected $healthStatusType = HealthStatus::class;
   protected $healthStatusDataType = 'array';
   /**

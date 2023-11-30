@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class TargetPoolsScopedList extends \Google\Collection
 {
   protected $collection_key = 'targetPools';
+  /**
+   * @var TargetPool[]
+   */
+  public $targetPools;
   protected $targetPoolsType = TargetPool::class;
   protected $targetPoolsDataType = 'array';
+  /**
+   * @var TargetPoolsScopedListWarning
+   */
+  public $warning;
   protected $warningType = TargetPoolsScopedListWarning::class;
   protected $warningDataType = '';
 

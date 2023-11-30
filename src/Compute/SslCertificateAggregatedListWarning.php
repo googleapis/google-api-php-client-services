@@ -24,6 +24,10 @@ class SslCertificateAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var SslCertificateAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = SslCertificateAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**
