@@ -19,8 +19,16 @@ namespace Google\Service\AndroidManagement;
 
 class TermsAndConditions extends \Google\Model
 {
+  /**
+   * @var UserFacingMessage
+   */
+  public $content;
   protected $contentType = UserFacingMessage::class;
   protected $contentDataType = '';
+  /**
+   * @var UserFacingMessage
+   */
+  public $header;
   protected $headerType = UserFacingMessage::class;
   protected $headerDataType = '';
 

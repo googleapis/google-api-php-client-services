@@ -20,6 +20,10 @@ namespace Google\Service\AndroidManagement;
 class PostureDetail extends \Google\Collection
 {
   protected $collection_key = 'advice';
+  /**
+   * @var UserFacingMessage[]
+   */
+  public $advice;
   protected $adviceType = UserFacingMessage::class;
   protected $adviceDataType = 'array';
   /**

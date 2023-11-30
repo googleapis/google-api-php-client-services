@@ -24,6 +24,10 @@ class ListPoliciesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Policy[]
+   */
+  public $policies;
   protected $policiesType = Policy::class;
   protected $policiesDataType = 'array';
 

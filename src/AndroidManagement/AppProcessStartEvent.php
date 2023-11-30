@@ -19,6 +19,10 @@ namespace Google\Service\AndroidManagement;
 
 class AppProcessStartEvent extends \Google\Model
 {
+  /**
+   * @var AppProcessInfo
+   */
+  public $processInfo;
   protected $processInfoType = AppProcessInfo::class;
   protected $processInfoDataType = '';
 

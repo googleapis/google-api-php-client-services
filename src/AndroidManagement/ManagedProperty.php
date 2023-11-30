@@ -28,12 +28,20 @@ class ManagedProperty extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var ManagedPropertyEntry[]
+   */
+  public $entries;
   protected $entriesType = ManagedPropertyEntry::class;
   protected $entriesDataType = 'array';
   /**
    * @var string
    */
   public $key;
+  /**
+   * @var ManagedProperty[]
+   */
+  public $nestedProperties;
   protected $nestedPropertiesType = ManagedProperty::class;
   protected $nestedPropertiesDataType = 'array';
   /**

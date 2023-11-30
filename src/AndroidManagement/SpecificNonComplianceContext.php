@@ -19,8 +19,16 @@ namespace Google\Service\AndroidManagement;
 
 class SpecificNonComplianceContext extends \Google\Model
 {
+  /**
+   * @var OncWifiContext
+   */
+  public $oncWifiContext;
   protected $oncWifiContextType = OncWifiContext::class;
   protected $oncWifiContextDataType = '';
+  /**
+   * @var PasswordPoliciesContext
+   */
+  public $passwordPoliciesContext;
   protected $passwordPoliciesContextType = PasswordPoliciesContext::class;
   protected $passwordPoliciesContextDataType = '';
 

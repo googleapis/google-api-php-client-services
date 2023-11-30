@@ -19,24 +19,64 @@ namespace Google\Service\AndroidManagement;
 
 class UsageLogEvent extends \Google\Model
 {
+  /**
+   * @var AdbShellCommandEvent
+   */
+  public $adbShellCommandEvent;
   protected $adbShellCommandEventType = AdbShellCommandEvent::class;
   protected $adbShellCommandEventDataType = '';
+  /**
+   * @var AdbShellInteractiveEvent
+   */
+  public $adbShellInteractiveEvent;
   protected $adbShellInteractiveEventType = AdbShellInteractiveEvent::class;
   protected $adbShellInteractiveEventDataType = '';
+  /**
+   * @var AppProcessStartEvent
+   */
+  public $appProcessStartEvent;
   protected $appProcessStartEventType = AppProcessStartEvent::class;
   protected $appProcessStartEventDataType = '';
+  /**
+   * @var CertAuthorityInstalledEvent
+   */
+  public $certAuthorityInstalledEvent;
   protected $certAuthorityInstalledEventType = CertAuthorityInstalledEvent::class;
   protected $certAuthorityInstalledEventDataType = '';
+  /**
+   * @var CertAuthorityRemovedEvent
+   */
+  public $certAuthorityRemovedEvent;
   protected $certAuthorityRemovedEventType = CertAuthorityRemovedEvent::class;
   protected $certAuthorityRemovedEventDataType = '';
+  /**
+   * @var CertValidationFailureEvent
+   */
+  public $certValidationFailureEvent;
   protected $certValidationFailureEventType = CertValidationFailureEvent::class;
   protected $certValidationFailureEventDataType = '';
+  /**
+   * @var ConnectEvent
+   */
+  public $connectEvent;
   protected $connectEventType = ConnectEvent::class;
   protected $connectEventDataType = '';
+  /**
+   * @var CryptoSelfTestCompletedEvent
+   */
+  public $cryptoSelfTestCompletedEvent;
   protected $cryptoSelfTestCompletedEventType = CryptoSelfTestCompletedEvent::class;
   protected $cryptoSelfTestCompletedEventDataType = '';
+  /**
+   * @var DnsEvent
+   */
+  public $dnsEvent;
   protected $dnsEventType = DnsEvent::class;
   protected $dnsEventDataType = '';
+  /**
+   * @var EnrollmentCompleteEvent
+   */
+  public $enrollmentCompleteEvent;
   protected $enrollmentCompleteEventType = EnrollmentCompleteEvent::class;
   protected $enrollmentCompleteEventDataType = '';
   /**
@@ -51,46 +91,130 @@ class UsageLogEvent extends \Google\Model
    * @var string
    */
   public $eventType;
+  /**
+   * @var FilePulledEvent
+   */
+  public $filePulledEvent;
   protected $filePulledEventType = FilePulledEvent::class;
   protected $filePulledEventDataType = '';
+  /**
+   * @var FilePushedEvent
+   */
+  public $filePushedEvent;
   protected $filePushedEventType = FilePushedEvent::class;
   protected $filePushedEventDataType = '';
+  /**
+   * @var KeyDestructionEvent
+   */
+  public $keyDestructionEvent;
   protected $keyDestructionEventType = KeyDestructionEvent::class;
   protected $keyDestructionEventDataType = '';
+  /**
+   * @var KeyGeneratedEvent
+   */
+  public $keyGeneratedEvent;
   protected $keyGeneratedEventType = KeyGeneratedEvent::class;
   protected $keyGeneratedEventDataType = '';
+  /**
+   * @var KeyImportEvent
+   */
+  public $keyImportEvent;
   protected $keyImportEventType = KeyImportEvent::class;
   protected $keyImportEventDataType = '';
+  /**
+   * @var KeyIntegrityViolationEvent
+   */
+  public $keyIntegrityViolationEvent;
   protected $keyIntegrityViolationEventType = KeyIntegrityViolationEvent::class;
   protected $keyIntegrityViolationEventDataType = '';
+  /**
+   * @var KeyguardDismissAuthAttemptEvent
+   */
+  public $keyguardDismissAuthAttemptEvent;
   protected $keyguardDismissAuthAttemptEventType = KeyguardDismissAuthAttemptEvent::class;
   protected $keyguardDismissAuthAttemptEventDataType = '';
+  /**
+   * @var KeyguardDismissedEvent
+   */
+  public $keyguardDismissedEvent;
   protected $keyguardDismissedEventType = KeyguardDismissedEvent::class;
   protected $keyguardDismissedEventDataType = '';
+  /**
+   * @var KeyguardSecuredEvent
+   */
+  public $keyguardSecuredEvent;
   protected $keyguardSecuredEventType = KeyguardSecuredEvent::class;
   protected $keyguardSecuredEventDataType = '';
+  /**
+   * @var LogBufferSizeCriticalEvent
+   */
+  public $logBufferSizeCriticalEvent;
   protected $logBufferSizeCriticalEventType = LogBufferSizeCriticalEvent::class;
   protected $logBufferSizeCriticalEventDataType = '';
+  /**
+   * @var LoggingStartedEvent
+   */
+  public $loggingStartedEvent;
   protected $loggingStartedEventType = LoggingStartedEvent::class;
   protected $loggingStartedEventDataType = '';
+  /**
+   * @var LoggingStoppedEvent
+   */
+  public $loggingStoppedEvent;
   protected $loggingStoppedEventType = LoggingStoppedEvent::class;
   protected $loggingStoppedEventDataType = '';
+  /**
+   * @var LostModeLocationEvent
+   */
+  public $lostModeLocationEvent;
   protected $lostModeLocationEventType = LostModeLocationEvent::class;
   protected $lostModeLocationEventDataType = '';
+  /**
+   * @var LostModeOutgoingPhoneCallEvent
+   */
+  public $lostModeOutgoingPhoneCallEvent;
   protected $lostModeOutgoingPhoneCallEventType = LostModeOutgoingPhoneCallEvent::class;
   protected $lostModeOutgoingPhoneCallEventDataType = '';
+  /**
+   * @var MediaMountEvent
+   */
+  public $mediaMountEvent;
   protected $mediaMountEventType = MediaMountEvent::class;
   protected $mediaMountEventDataType = '';
+  /**
+   * @var MediaUnmountEvent
+   */
+  public $mediaUnmountEvent;
   protected $mediaUnmountEventType = MediaUnmountEvent::class;
   protected $mediaUnmountEventDataType = '';
+  /**
+   * @var OsShutdownEvent
+   */
+  public $osShutdownEvent;
   protected $osShutdownEventType = OsShutdownEvent::class;
   protected $osShutdownEventDataType = '';
+  /**
+   * @var OsStartupEvent
+   */
+  public $osStartupEvent;
   protected $osStartupEventType = OsStartupEvent::class;
   protected $osStartupEventDataType = '';
+  /**
+   * @var RemoteLockEvent
+   */
+  public $remoteLockEvent;
   protected $remoteLockEventType = RemoteLockEvent::class;
   protected $remoteLockEventDataType = '';
+  /**
+   * @var StopLostModeUserAttemptEvent
+   */
+  public $stopLostModeUserAttemptEvent;
   protected $stopLostModeUserAttemptEventType = StopLostModeUserAttemptEvent::class;
   protected $stopLostModeUserAttemptEventDataType = '';
+  /**
+   * @var WipeFailureEvent
+   */
+  public $wipeFailureEvent;
   protected $wipeFailureEventType = WipeFailureEvent::class;
   protected $wipeFailureEventDataType = '';
 

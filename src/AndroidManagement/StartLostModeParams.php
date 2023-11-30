@@ -23,12 +23,28 @@ class StartLostModeParams extends \Google\Model
    * @var string
    */
   public $lostEmailAddress;
+  /**
+   * @var UserFacingMessage
+   */
+  public $lostMessage;
   protected $lostMessageType = UserFacingMessage::class;
   protected $lostMessageDataType = '';
+  /**
+   * @var UserFacingMessage
+   */
+  public $lostOrganization;
   protected $lostOrganizationType = UserFacingMessage::class;
   protected $lostOrganizationDataType = '';
+  /**
+   * @var UserFacingMessage
+   */
+  public $lostPhoneNumber;
   protected $lostPhoneNumberType = UserFacingMessage::class;
   protected $lostPhoneNumberDataType = '';
+  /**
+   * @var UserFacingMessage
+   */
+  public $lostStreetAddress;
   protected $lostStreetAddressType = UserFacingMessage::class;
   protected $lostStreetAddressDataType = '';
 

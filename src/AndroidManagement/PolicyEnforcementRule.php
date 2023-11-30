@@ -19,12 +19,20 @@ namespace Google\Service\AndroidManagement;
 
 class PolicyEnforcementRule extends \Google\Model
 {
+  /**
+   * @var BlockAction
+   */
+  public $blockAction;
   protected $blockActionType = BlockAction::class;
   protected $blockActionDataType = '';
   /**
    * @var string
    */
   public $settingName;
+  /**
+   * @var WipeAction
+   */
+  public $wipeAction;
   protected $wipeActionType = WipeAction::class;
   protected $wipeActionDataType = '';
 

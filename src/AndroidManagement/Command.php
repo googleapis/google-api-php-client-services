@@ -20,8 +20,16 @@ namespace Google\Service\AndroidManagement;
 class Command extends \Google\Collection
 {
   protected $collection_key = 'resetPasswordFlags';
+  /**
+   * @var ClearAppsDataParams
+   */
+  public $clearAppsDataParams;
   protected $clearAppsDataParamsType = ClearAppsDataParams::class;
   protected $clearAppsDataParamsDataType = '';
+  /**
+   * @var ClearAppsDataStatus
+   */
+  public $clearAppsDataStatus;
   protected $clearAppsDataStatusType = ClearAppsDataStatus::class;
   protected $clearAppsDataStatusDataType = '';
   /**
@@ -44,12 +52,28 @@ class Command extends \Google\Collection
    * @var string[]
    */
   public $resetPasswordFlags;
+  /**
+   * @var StartLostModeParams
+   */
+  public $startLostModeParams;
   protected $startLostModeParamsType = StartLostModeParams::class;
   protected $startLostModeParamsDataType = '';
+  /**
+   * @var StartLostModeStatus
+   */
+  public $startLostModeStatus;
   protected $startLostModeStatusType = StartLostModeStatus::class;
   protected $startLostModeStatusDataType = '';
+  /**
+   * @var StopLostModeParams
+   */
+  public $stopLostModeParams;
   protected $stopLostModeParamsType = StopLostModeParams::class;
   protected $stopLostModeParamsDataType = '';
+  /**
+   * @var StopLostModeStatus
+   */
+  public $stopLostModeStatus;
   protected $stopLostModeStatusType = StopLostModeStatus::class;
   protected $stopLostModeStatusDataType = '';
   /**

@@ -19,10 +19,22 @@ namespace Google\Service\AndroidManagement;
 
 class SetupAction extends \Google\Model
 {
+  /**
+   * @var UserFacingMessage
+   */
+  public $description;
   protected $descriptionType = UserFacingMessage::class;
   protected $descriptionDataType = '';
+  /**
+   * @var LaunchAppAction
+   */
+  public $launchApp;
   protected $launchAppType = LaunchAppAction::class;
   protected $launchAppDataType = '';
+  /**
+   * @var UserFacingMessage
+   */
+  public $title;
   protected $titleType = UserFacingMessage::class;
   protected $titleDataType = '';
 

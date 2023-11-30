@@ -20,6 +20,10 @@ namespace Google\Service\AndroidManagement;
 class ListEnrollmentTokensResponse extends \Google\Collection
 {
   protected $collection_key = 'enrollmentTokens';
+  /**
+   * @var EnrollmentToken[]
+   */
+  public $enrollmentTokens;
   protected $enrollmentTokensType = EnrollmentToken::class;
   protected $enrollmentTokensDataType = 'array';
   /**

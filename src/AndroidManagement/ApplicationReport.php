@@ -28,12 +28,20 @@ class ApplicationReport extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var ApplicationEvent[]
+   */
+  public $events;
   protected $eventsType = ApplicationEvent::class;
   protected $eventsDataType = 'array';
   /**
    * @var string
    */
   public $installerPackageName;
+  /**
+   * @var KeyedAppState[]
+   */
+  public $keyedAppStates;
   protected $keyedAppStatesType = KeyedAppState::class;
   protected $keyedAppStatesDataType = 'array';
   /**

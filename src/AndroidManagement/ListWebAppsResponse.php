@@ -24,6 +24,10 @@ class ListWebAppsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var WebApp[]
+   */
+  public $webApps;
   protected $webAppsType = WebApp::class;
   protected $webAppsDataType = 'array';
 

@@ -27,6 +27,10 @@ class CrossProfilePolicies extends \Google\Model
    * @var string
    */
   public $crossProfileDataSharing;
+  /**
+   * @var PackageNameList
+   */
+  public $exemptionsToShowWorkContactsInPersonalProfile;
   protected $exemptionsToShowWorkContactsInPersonalProfileType = PackageNameList::class;
   protected $exemptionsToShowWorkContactsInPersonalProfileDataType = '';
   /**

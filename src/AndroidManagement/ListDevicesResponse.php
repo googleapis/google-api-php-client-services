@@ -20,6 +20,10 @@ namespace Google\Service\AndroidManagement;
 class ListDevicesResponse extends \Google\Collection
 {
   protected $collection_key = 'devices';
+  /**
+   * @var Device[]
+   */
+  public $devices;
   protected $devicesType = Device::class;
   protected $devicesDataType = 'array';
   /**
