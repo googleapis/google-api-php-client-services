@@ -20,6 +20,10 @@ namespace Google\Service\Localservices;
 class GoogleAdsHomeservicesLocalservicesV1SearchAccountReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'accountReports';
+  /**
+   * @var GoogleAdsHomeservicesLocalservicesV1AccountReport[]
+   */
+  public $accountReports;
   protected $accountReportsType = GoogleAdsHomeservicesLocalservicesV1AccountReport::class;
   protected $accountReportsDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class GoogleAdsHomeservicesLocalservicesV1AccountReport extends \Google\Model
    * @var string
    */
   public $accountId;
+  /**
+   * @var GoogleAdsHomeservicesLocalservicesV1AggregatorInfo
+   */
+  public $aggregatorInfo;
   protected $aggregatorInfoType = GoogleAdsHomeservicesLocalservicesV1AggregatorInfo::class;
   protected $aggregatorInfoDataType = '';
   public $averageFiveStarRating;
