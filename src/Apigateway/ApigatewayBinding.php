@@ -20,6 +20,10 @@ namespace Google\Service\Apigateway;
 class ApigatewayBinding extends \Google\Collection
 {
   protected $collection_key = 'members';
+  /**
+   * @var ApigatewayExpr
+   */
+  public $condition;
   protected $conditionType = ApigatewayExpr::class;
   protected $conditionDataType = '';
   /**

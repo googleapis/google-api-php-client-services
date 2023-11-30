@@ -20,6 +20,10 @@ namespace Google\Service\Apigateway;
 class ApigatewayAuditConfig extends \Google\Collection
 {
   protected $collection_key = 'auditLogConfigs';
+  /**
+   * @var ApigatewayAuditLogConfig[]
+   */
+  public $auditLogConfigs;
   protected $auditLogConfigsType = ApigatewayAuditLogConfig::class;
   protected $auditLogConfigsDataType = 'array';
   /**

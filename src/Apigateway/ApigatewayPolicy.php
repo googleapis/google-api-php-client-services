@@ -20,8 +20,16 @@ namespace Google\Service\Apigateway;
 class ApigatewayPolicy extends \Google\Collection
 {
   protected $collection_key = 'bindings';
+  /**
+   * @var ApigatewayAuditConfig[]
+   */
+  public $auditConfigs;
   protected $auditConfigsType = ApigatewayAuditConfig::class;
   protected $auditConfigsDataType = 'array';
+  /**
+   * @var ApigatewayBinding[]
+   */
+  public $bindings;
   protected $bindingsType = ApigatewayBinding::class;
   protected $bindingsDataType = 'array';
   /**

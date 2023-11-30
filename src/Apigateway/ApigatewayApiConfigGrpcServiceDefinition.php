@@ -20,8 +20,16 @@ namespace Google\Service\Apigateway;
 class ApigatewayApiConfigGrpcServiceDefinition extends \Google\Collection
 {
   protected $collection_key = 'source';
+  /**
+   * @var ApigatewayApiConfigFile
+   */
+  public $fileDescriptorSet;
   protected $fileDescriptorSetType = ApigatewayApiConfigFile::class;
   protected $fileDescriptorSetDataType = '';
+  /**
+   * @var ApigatewayApiConfigFile[]
+   */
+  public $source;
   protected $sourceType = ApigatewayApiConfigFile::class;
   protected $sourceDataType = 'array';
 

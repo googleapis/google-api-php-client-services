@@ -24,6 +24,10 @@ class ApigatewayListOperationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ApigatewayOperation[]
+   */
+  public $operations;
   protected $operationsType = ApigatewayOperation::class;
   protected $operationsDataType = 'array';
 

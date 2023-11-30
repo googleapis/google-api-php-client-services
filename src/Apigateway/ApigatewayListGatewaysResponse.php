@@ -20,6 +20,10 @@ namespace Google\Service\Apigateway;
 class ApigatewayListGatewaysResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
+  /**
+   * @var ApigatewayGateway[]
+   */
+  public $gateways;
   protected $gatewaysType = ApigatewayGateway::class;
   protected $gatewaysDataType = 'array';
   /**
