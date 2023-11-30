@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class DiskTypesScopedList extends \Google\Collection
 {
   protected $collection_key = 'diskTypes';
+  /**
+   * @var DiskType[]
+   */
+  public $diskTypes;
   protected $diskTypesType = DiskType::class;
   protected $diskTypesDataType = 'array';
+  /**
+   * @var DiskTypesScopedListWarning
+   */
+  public $warning;
   protected $warningType = DiskTypesScopedListWarning::class;
   protected $warningDataType = '';
 

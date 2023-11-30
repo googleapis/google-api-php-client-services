@@ -24,6 +24,10 @@ class ForwardingRuleAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ForwardingRuleAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = ForwardingRuleAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

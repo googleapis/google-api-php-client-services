@@ -32,6 +32,10 @@ class ExternalVpnGateway extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var ExternalVpnGatewayInterface[]
+   */
+  public $interfaces;
   protected $interfacesType = ExternalVpnGatewayInterface::class;
   protected $interfacesDataType = 'array';
   /**

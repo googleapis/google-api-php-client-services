@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class AddressesScopedList extends \Google\Collection
 {
   protected $collection_key = 'addresses';
+  /**
+   * @var Address[]
+   */
+  public $addresses;
   protected $addressesType = Address::class;
   protected $addressesDataType = 'array';
+  /**
+   * @var AddressesScopedListWarning
+   */
+  public $warning;
   protected $warningType = AddressesScopedListWarning::class;
   protected $warningDataType = '';
 

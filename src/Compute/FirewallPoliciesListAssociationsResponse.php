@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class FirewallPoliciesListAssociationsResponse extends \Google\Collection
 {
   protected $collection_key = 'associations';
+  /**
+   * @var FirewallPolicyAssociation[]
+   */
+  public $associations;
   protected $associationsType = FirewallPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**

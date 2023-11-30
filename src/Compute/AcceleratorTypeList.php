@@ -24,6 +24,10 @@ class AcceleratorTypeList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var AcceleratorType[]
+   */
+  public $items;
   protected $itemsType = AcceleratorType::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class AcceleratorTypeList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var AcceleratorTypeListWarning
+   */
+  public $warning;
   protected $warningType = AcceleratorTypeListWarning::class;
   protected $warningDataType = '';
 

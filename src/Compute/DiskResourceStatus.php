@@ -19,8 +19,16 @@ namespace Google\Service\Compute;
 
 class DiskResourceStatus extends \Google\Model
 {
+  /**
+   * @var DiskResourceStatusAsyncReplicationStatus
+   */
+  public $asyncPrimaryDisk;
   protected $asyncPrimaryDiskType = DiskResourceStatusAsyncReplicationStatus::class;
   protected $asyncPrimaryDiskDataType = '';
+  /**
+   * @var DiskResourceStatusAsyncReplicationStatus[]
+   */
+  public $asyncSecondaryDisks;
   protected $asyncSecondaryDisksType = DiskResourceStatusAsyncReplicationStatus::class;
   protected $asyncSecondaryDisksDataType = 'map';
 

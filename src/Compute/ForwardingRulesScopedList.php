@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class ForwardingRulesScopedList extends \Google\Collection
 {
   protected $collection_key = 'forwardingRules';
+  /**
+   * @var ForwardingRule[]
+   */
+  public $forwardingRules;
   protected $forwardingRulesType = ForwardingRule::class;
   protected $forwardingRulesDataType = 'array';
+  /**
+   * @var ForwardingRulesScopedListWarning
+   */
+  public $warning;
   protected $warningType = ForwardingRulesScopedListWarning::class;
   protected $warningDataType = '';
 

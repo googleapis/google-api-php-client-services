@@ -24,6 +24,10 @@ class CommitmentAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var CommitmentsScopedList[]
+   */
+  public $items;
   protected $itemsType = CommitmentsScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -42,6 +46,10 @@ class CommitmentAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
+  /**
+   * @var CommitmentAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = CommitmentAggregatedListWarning::class;
   protected $warningDataType = '';
 

@@ -24,6 +24,10 @@ class BackendServiceListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var BackendServiceListWarningData[]
+   */
+  public $data;
   protected $dataType = BackendServiceListWarningData::class;
   protected $dataDataType = 'array';
   /**

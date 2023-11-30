@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class DiskAsyncReplicationList extends \Google\Model
 {
+  /**
+   * @var DiskAsyncReplication
+   */
+  public $asyncReplicationDisk;
   protected $asyncReplicationDiskType = DiskAsyncReplication::class;
   protected $asyncReplicationDiskDataType = '';
 

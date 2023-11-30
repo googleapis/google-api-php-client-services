@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class ConsistentHashLoadBalancerSettings extends \Google\Model
 {
+  /**
+   * @var ConsistentHashLoadBalancerSettingsHttpCookie
+   */
+  public $httpCookie;
   protected $httpCookieType = ConsistentHashLoadBalancerSettingsHttpCookie::class;
   protected $httpCookieDataType = '';
   /**

@@ -24,6 +24,10 @@ class CommitmentAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var CommitmentAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = CommitmentAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

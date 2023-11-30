@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class CommitmentsScopedList extends \Google\Collection
 {
   protected $collection_key = 'commitments';
+  /**
+   * @var Commitment[]
+   */
+  public $commitments;
   protected $commitmentsType = Commitment::class;
   protected $commitmentsDataType = 'array';
+  /**
+   * @var CommitmentsScopedListWarning
+   */
+  public $warning;
   protected $warningType = CommitmentsScopedListWarning::class;
   protected $warningDataType = '';
 

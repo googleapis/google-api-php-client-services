@@ -24,6 +24,10 @@ class BackendServiceGroupHealth extends \Google\Collection
    * @var string[]
    */
   public $annotations;
+  /**
+   * @var HealthStatus[]
+   */
+  public $healthStatus;
   protected $healthStatusType = HealthStatus::class;
   protected $healthStatusDataType = 'array';
   /**

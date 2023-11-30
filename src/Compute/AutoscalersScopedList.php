@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class AutoscalersScopedList extends \Google\Collection
 {
   protected $collection_key = 'autoscalers';
+  /**
+   * @var Autoscaler[]
+   */
+  public $autoscalers;
   protected $autoscalersType = Autoscaler::class;
   protected $autoscalersDataType = 'array';
+  /**
+   * @var AutoscalersScopedListWarning
+   */
+  public $warning;
   protected $warningType = AutoscalersScopedListWarning::class;
   protected $warningDataType = '';
 

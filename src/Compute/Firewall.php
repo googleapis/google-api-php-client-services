@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class Firewall extends \Google\Collection
 {
   protected $collection_key = 'targetTags';
+  /**
+   * @var FirewallAllowed[]
+   */
+  public $allowed;
   protected $allowedType = FirewallAllowed::class;
   protected $allowedDataType = 'array';
   /**
    * @var string
    */
   public $creationTimestamp;
+  /**
+   * @var FirewallDenied[]
+   */
+  public $denied;
   protected $deniedType = FirewallDenied::class;
   protected $deniedDataType = 'array';
   /**
@@ -52,6 +60,10 @@ class Firewall extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var FirewallLogConfig
+   */
+  public $logConfig;
   protected $logConfigType = FirewallLogConfig::class;
   protected $logConfigDataType = '';
   /**

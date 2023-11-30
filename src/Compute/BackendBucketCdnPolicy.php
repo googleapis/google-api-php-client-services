@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class BackendBucketCdnPolicy extends \Google\Collection
 {
   protected $collection_key = 'signedUrlKeyNames';
+  /**
+   * @var BackendBucketCdnPolicyBypassCacheOnRequestHeader[]
+   */
+  public $bypassCacheOnRequestHeaders;
   protected $bypassCacheOnRequestHeadersType = BackendBucketCdnPolicyBypassCacheOnRequestHeader::class;
   protected $bypassCacheOnRequestHeadersDataType = 'array';
+  /**
+   * @var BackendBucketCdnPolicyCacheKeyPolicy
+   */
+  public $cacheKeyPolicy;
   protected $cacheKeyPolicyType = BackendBucketCdnPolicyCacheKeyPolicy::class;
   protected $cacheKeyPolicyDataType = '';
   /**
@@ -44,6 +52,10 @@ class BackendBucketCdnPolicy extends \Google\Collection
    * @var bool
    */
   public $negativeCaching;
+  /**
+   * @var BackendBucketCdnPolicyNegativeCachingPolicy[]
+   */
+  public $negativeCachingPolicy;
   protected $negativeCachingPolicyType = BackendBucketCdnPolicyNegativeCachingPolicy::class;
   protected $negativeCachingPolicyDataType = 'array';
   /**

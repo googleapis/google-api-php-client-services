@@ -24,6 +24,10 @@ class ExchangedPeeringRoutesList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var ExchangedPeeringRoute[]
+   */
+  public $items;
   protected $itemsType = ExchangedPeeringRoute::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class ExchangedPeeringRoutesList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var ExchangedPeeringRoutesListWarning
+   */
+  public $warning;
   protected $warningType = ExchangedPeeringRoutesListWarning::class;
   protected $warningDataType = '';
 

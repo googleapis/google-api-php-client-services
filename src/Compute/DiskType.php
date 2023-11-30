@@ -27,6 +27,10 @@ class DiskType extends \Google\Model
    * @var string
    */
   public $defaultDiskSizeGb;
+  /**
+   * @var DeprecationStatus
+   */
+  public $deprecated;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**

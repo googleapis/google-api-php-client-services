@@ -40,6 +40,10 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
    * @var string[]
    */
   public $destThreatIntelligences;
+  /**
+   * @var FirewallPolicyRuleMatcherLayer4Config[]
+   */
+  public $layer4Configs;
   protected $layer4ConfigsType = FirewallPolicyRuleMatcherLayer4Config::class;
   protected $layer4ConfigsDataType = 'array';
   /**
@@ -58,6 +62,10 @@ class FirewallPolicyRuleMatcher extends \Google\Collection
    * @var string[]
    */
   public $srcRegionCodes;
+  /**
+   * @var FirewallPolicyRuleSecureTag[]
+   */
+  public $srcSecureTags;
   protected $srcSecureTagsType = FirewallPolicyRuleSecureTag::class;
   protected $srcSecureTagsDataType = 'array';
   /**

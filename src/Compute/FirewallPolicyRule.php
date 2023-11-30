@@ -44,6 +44,10 @@ class FirewallPolicyRule extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var FirewallPolicyRuleMatcher
+   */
+  public $match;
   protected $matchType = FirewallPolicyRuleMatcher::class;
   protected $matchDataType = '';
   /**
@@ -62,6 +66,10 @@ class FirewallPolicyRule extends \Google\Collection
    * @var string[]
    */
   public $targetResources;
+  /**
+   * @var FirewallPolicyRuleSecureTag[]
+   */
+  public $targetSecureTags;
   protected $targetSecureTagsType = FirewallPolicyRuleSecureTag::class;
   protected $targetSecureTagsDataType = 'array';
   /**

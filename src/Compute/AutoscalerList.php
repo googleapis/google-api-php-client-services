@@ -24,6 +24,10 @@ class AutoscalerList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Autoscaler[]
+   */
+  public $items;
   protected $itemsType = Autoscaler::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class AutoscalerList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var AutoscalerListWarning
+   */
+  public $warning;
   protected $warningType = AutoscalerListWarning::class;
   protected $warningDataType = '';
 

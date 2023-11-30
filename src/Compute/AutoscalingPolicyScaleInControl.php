@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class AutoscalingPolicyScaleInControl extends \Google\Model
 {
+  /**
+   * @var FixedOrPercent
+   */
+  public $maxScaledInReplicas;
   protected $maxScaledInReplicasType = FixedOrPercent::class;
   protected $maxScaledInReplicasDataType = '';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class BackendServicesScopedList extends \Google\Collection
 {
   protected $collection_key = 'backendServices';
+  /**
+   * @var BackendService[]
+   */
+  public $backendServices;
   protected $backendServicesType = BackendService::class;
   protected $backendServicesDataType = 'array';
+  /**
+   * @var BackendServicesScopedListWarning
+   */
+  public $warning;
   protected $warningType = BackendServicesScopedListWarning::class;
   protected $warningDataType = '';
 

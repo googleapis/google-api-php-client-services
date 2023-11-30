@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class AllocationSpecificSKUAllocationReservedInstanceProperties extends \Google\Collection
 {
   protected $collection_key = 'localSsds';
+  /**
+   * @var AcceleratorConfig[]
+   */
+  public $guestAccelerators;
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
+  /**
+   * @var AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk[]
+   */
+  public $localSsds;
   protected $localSsdsType = AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDisk::class;
   protected $localSsdsDataType = 'array';
   /**

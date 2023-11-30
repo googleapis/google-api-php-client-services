@@ -24,6 +24,10 @@ class DiskTypeListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var DiskTypeListWarningData[]
+   */
+  public $data;
   protected $dataType = DiskTypeListWarningData::class;
   protected $dataDataType = 'array';
   /**

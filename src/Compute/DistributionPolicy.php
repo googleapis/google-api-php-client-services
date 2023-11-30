@@ -24,6 +24,10 @@ class DistributionPolicy extends \Google\Collection
    * @var string
    */
   public $targetShape;
+  /**
+   * @var DistributionPolicyZoneConfiguration[]
+   */
+  public $zones;
   protected $zonesType = DistributionPolicyZoneConfiguration::class;
   protected $zonesDataType = 'array';
 

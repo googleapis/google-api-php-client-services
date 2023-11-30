@@ -24,6 +24,10 @@ class AutoscalerAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var AutoscalerAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = AutoscalerAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**
