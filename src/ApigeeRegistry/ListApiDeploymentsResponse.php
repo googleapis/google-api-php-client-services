@@ -20,6 +20,10 @@ namespace Google\Service\ApigeeRegistry;
 class ListApiDeploymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'apiDeployments';
+  /**
+   * @var ApiDeployment[]
+   */
+  public $apiDeployments;
   protected $apiDeploymentsType = ApiDeployment::class;
   protected $apiDeploymentsDataType = 'array';
   /**

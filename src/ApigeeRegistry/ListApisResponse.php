@@ -20,6 +20,10 @@ namespace Google\Service\ApigeeRegistry;
 class ListApisResponse extends \Google\Collection
 {
   protected $collection_key = 'apis';
+  /**
+   * @var Api[]
+   */
+  public $apis;
   protected $apisType = Api::class;
   protected $apisDataType = 'array';
   /**

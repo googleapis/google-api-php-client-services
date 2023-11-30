@@ -19,8 +19,16 @@ namespace Google\Service\ApigeeRegistry;
 
 class Instance extends \Google\Model
 {
+  /**
+   * @var Build
+   */
+  public $build;
   protected $buildType = Build::class;
   protected $buildDataType = '';
+  /**
+   * @var Config
+   */
+  public $config;
   protected $configType = Config::class;
   protected $configDataType = '';
   /**

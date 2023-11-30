@@ -20,6 +20,10 @@ namespace Google\Service\ApigeeRegistry;
 class ListApiSpecRevisionsResponse extends \Google\Collection
 {
   protected $collection_key = 'apiSpecs';
+  /**
+   * @var ApiSpec[]
+   */
+  public $apiSpecs;
   protected $apiSpecsType = ApiSpec::class;
   protected $apiSpecsDataType = 'array';
   /**

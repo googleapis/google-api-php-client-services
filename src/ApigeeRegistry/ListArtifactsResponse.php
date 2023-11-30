@@ -20,6 +20,10 @@ namespace Google\Service\ApigeeRegistry;
 class ListArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'artifacts';
+  /**
+   * @var Artifact[]
+   */
+  public $artifacts;
   protected $artifactsType = Artifact::class;
   protected $artifactsDataType = 'array';
   /**
