@@ -19,12 +19,20 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class AnnotateTextRequest extends \Google\Model
 {
+  /**
+   * @var Document
+   */
+  public $document;
   protected $documentType = Document::class;
   protected $documentDataType = '';
   /**
    * @var string
    */
   public $encodingType;
+  /**
+   * @var Features
+   */
+  public $features;
   protected $featuresType = Features::class;
   protected $featuresDataType = '';
 

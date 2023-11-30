@@ -19,8 +19,16 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class Sentence extends \Google\Model
 {
+  /**
+   * @var Sentiment
+   */
+  public $sentiment;
   protected $sentimentType = Sentiment::class;
   protected $sentimentDataType = '';
+  /**
+   * @var TextSpan
+   */
+  public $text;
   protected $textType = TextSpan::class;
   protected $textDataType = '';
 

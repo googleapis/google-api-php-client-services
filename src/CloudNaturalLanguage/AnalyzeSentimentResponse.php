@@ -20,6 +20,10 @@ namespace Google\Service\CloudNaturalLanguage;
 class AnalyzeSentimentResponse extends \Google\Collection
 {
   protected $collection_key = 'sentences';
+  /**
+   * @var Sentiment
+   */
+  public $documentSentiment;
   protected $documentSentimentType = Sentiment::class;
   protected $documentSentimentDataType = '';
   /**
@@ -30,6 +34,10 @@ class AnalyzeSentimentResponse extends \Google\Collection
    * @var bool
    */
   public $languageSupported;
+  /**
+   * @var Sentence[]
+   */
+  public $sentences;
   protected $sentencesType = Sentence::class;
   protected $sentencesDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\CloudNaturalLanguage;
 class Entity extends \Google\Collection
 {
   protected $collection_key = 'mentions';
+  /**
+   * @var EntityMention[]
+   */
+  public $mentions;
   protected $mentionsType = EntityMention::class;
   protected $mentionsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class Entity extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var Sentiment
+   */
+  public $sentiment;
   protected $sentimentType = Sentiment::class;
   protected $sentimentDataType = '';
   /**
