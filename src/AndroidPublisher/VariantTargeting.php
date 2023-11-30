@@ -19,14 +19,34 @@ namespace Google\Service\AndroidPublisher;
 
 class VariantTargeting extends \Google\Model
 {
+  /**
+   * @var AbiTargeting
+   */
+  public $abiTargeting;
   protected $abiTargetingType = AbiTargeting::class;
   protected $abiTargetingDataType = '';
+  /**
+   * @var MultiAbiTargeting
+   */
+  public $multiAbiTargeting;
   protected $multiAbiTargetingType = MultiAbiTargeting::class;
   protected $multiAbiTargetingDataType = '';
+  /**
+   * @var ScreenDensityTargeting
+   */
+  public $screenDensityTargeting;
   protected $screenDensityTargetingType = ScreenDensityTargeting::class;
   protected $screenDensityTargetingDataType = '';
+  /**
+   * @var SdkVersionTargeting
+   */
+  public $sdkVersionTargeting;
   protected $sdkVersionTargetingType = SdkVersionTargeting::class;
   protected $sdkVersionTargetingDataType = '';
+  /**
+   * @var TextureCompressionFormatTargeting
+   */
+  public $textureCompressionFormatTargeting;
   protected $textureCompressionFormatTargetingType = TextureCompressionFormatTargeting::class;
   protected $textureCompressionFormatTargetingDataType = '';
 

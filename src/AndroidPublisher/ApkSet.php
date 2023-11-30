@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class ApkSet extends \Google\Collection
 {
   protected $collection_key = 'apkDescription';
+  /**
+   * @var ApkDescription[]
+   */
+  public $apkDescription;
   protected $apkDescriptionType = ApkDescription::class;
   protected $apkDescriptionDataType = 'array';
+  /**
+   * @var ModuleMetadata
+   */
+  public $moduleMetadata;
   protected $moduleMetadataType = ModuleMetadata::class;
   protected $moduleMetadataDataType = '';
 

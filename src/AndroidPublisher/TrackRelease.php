@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class TrackRelease extends \Google\Collection
 {
   protected $collection_key = 'versionCodes';
+  /**
+   * @var CountryTargeting
+   */
+  public $countryTargeting;
   protected $countryTargetingType = CountryTargeting::class;
   protected $countryTargetingDataType = '';
   /**
@@ -30,6 +34,10 @@ class TrackRelease extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var LocalizedText[]
+   */
+  public $releaseNotes;
   protected $releaseNotesType = LocalizedText::class;
   protected $releaseNotesDataType = 'array';
   /**

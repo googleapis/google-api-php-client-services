@@ -20,10 +20,22 @@ namespace Google\Service\AndroidPublisher;
 class VoidedPurchasesListResponse extends \Google\Collection
 {
   protected $collection_key = 'voidedPurchases';
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
+  /**
+   * @var VoidedPurchase[]
+   */
+  public $voidedPurchases;
   protected $voidedPurchasesType = VoidedPurchase::class;
   protected $voidedPurchasesDataType = 'array';
 

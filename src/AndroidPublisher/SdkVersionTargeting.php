@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class SdkVersionTargeting extends \Google\Collection
 {
   protected $collection_key = 'value';
+  /**
+   * @var SdkVersion[]
+   */
+  public $alternatives;
   protected $alternativesType = SdkVersion::class;
   protected $alternativesDataType = 'array';
+  /**
+   * @var SdkVersion[]
+   */
+  public $value;
   protected $valueType = SdkVersion::class;
   protected $valueDataType = 'array';
 

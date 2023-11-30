@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class MultiAbiTargeting extends \Google\Collection
 {
   protected $collection_key = 'value';
+  /**
+   * @var MultiAbi[]
+   */
+  public $alternatives;
   protected $alternativesType = MultiAbi::class;
   protected $alternativesDataType = 'array';
+  /**
+   * @var MultiAbi[]
+   */
+  public $value;
   protected $valueType = MultiAbi::class;
   protected $valueDataType = 'array';
 

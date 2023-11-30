@@ -36,6 +36,10 @@ class User extends \Google\Collection
    * @var string
    */
   public $expirationTime;
+  /**
+   * @var Grant[]
+   */
+  public $grants;
   protected $grantsType = Grant::class;
   protected $grantsDataType = 'array';
   /**

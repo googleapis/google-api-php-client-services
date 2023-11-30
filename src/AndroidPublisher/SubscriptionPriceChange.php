@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class SubscriptionPriceChange extends \Google\Model
 {
+  /**
+   * @var Price
+   */
+  public $newPrice;
   protected $newPriceType = Price::class;
   protected $newPriceDataType = '';
   /**

@@ -19,12 +19,20 @@ namespace Google\Service\AndroidPublisher;
 
 class OtherRegionsBasePlanConfig extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $eurPrice;
   protected $eurPriceType = Money::class;
   protected $eurPriceDataType = '';
   /**
    * @var bool
    */
   public $newSubscriberAvailability;
+  /**
+   * @var Money
+   */
+  public $usdPrice;
   protected $usdPriceType = Money::class;
   protected $usdPriceDataType = '';
 

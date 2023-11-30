@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class SystemApksListResponse extends \Google\Collection
 {
   protected $collection_key = 'variants';
+  /**
+   * @var Variant[]
+   */
+  public $variants;
   protected $variantsType = Variant::class;
   protected $variantsDataType = 'array';
 

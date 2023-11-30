@@ -27,6 +27,10 @@ class ManagedProductTaxAndComplianceSettings extends \Google\Model
    * @var bool
    */
   public $isTokenizedDigitalAsset;
+  /**
+   * @var RegionalTaxRateInfo[]
+   */
+  public $taxRateInfoByRegionCode;
   protected $taxRateInfoByRegionCodeType = RegionalTaxRateInfo::class;
   protected $taxRateInfoByRegionCodeDataType = 'map';
 

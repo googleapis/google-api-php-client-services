@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class ConvertRegionPricesRequest extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $price;
   protected $priceType = Money::class;
   protected $priceDataType = '';
 

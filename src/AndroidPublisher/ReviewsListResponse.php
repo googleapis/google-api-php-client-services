@@ -20,10 +20,22 @@ namespace Google\Service\AndroidPublisher;
 class ReviewsListResponse extends \Google\Collection
 {
   protected $collection_key = 'reviews';
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var Review[]
+   */
+  public $reviews;
   protected $reviewsType = Review::class;
   protected $reviewsDataType = 'array';
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
 

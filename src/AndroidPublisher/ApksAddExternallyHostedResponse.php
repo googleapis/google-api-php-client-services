@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class ApksAddExternallyHostedResponse extends \Google\Model
 {
+  /**
+   * @var ExternallyHostedApk
+   */
+  public $externallyHostedApk;
   protected $externallyHostedApkType = ExternallyHostedApk::class;
   protected $externallyHostedApkDataType = '';
 

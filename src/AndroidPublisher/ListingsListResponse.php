@@ -24,6 +24,10 @@ class ListingsListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var Listing[]
+   */
+  public $listings;
   protected $listingsType = Listing::class;
   protected $listingsDataType = 'array';
 

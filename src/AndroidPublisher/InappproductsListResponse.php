@@ -20,14 +20,26 @@ namespace Google\Service\AndroidPublisher;
 class InappproductsListResponse extends \Google\Collection
 {
   protected $collection_key = 'inappproduct';
+  /**
+   * @var InAppProduct[]
+   */
+  public $inappproduct;
   protected $inappproductType = InAppProduct::class;
   protected $inappproductDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
 

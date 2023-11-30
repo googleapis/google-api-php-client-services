@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class UserInitiatedCancellation extends \Google\Model
 {
+  /**
+   * @var CancelSurveyResult
+   */
+  public $cancelSurveyResult;
   protected $cancelSurveyResultType = CancelSurveyResult::class;
   protected $cancelSurveyResultDataType = '';
   /**

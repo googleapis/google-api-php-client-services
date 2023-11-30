@@ -19,8 +19,16 @@ namespace Google\Service\AndroidPublisher;
 
 class Variant extends \Google\Model
 {
+  /**
+   * @var DeviceSpec
+   */
+  public $deviceSpec;
   protected $deviceSpecType = DeviceSpec::class;
   protected $deviceSpecDataType = '';
+  /**
+   * @var SystemApkOptions
+   */
+  public $options;
   protected $optionsType = SystemApkOptions::class;
   protected $optionsDataType = '';
   /**

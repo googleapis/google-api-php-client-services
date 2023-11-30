@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class GeneratedApksListResponse extends \Google\Collection
 {
   protected $collection_key = 'generatedApks';
+  /**
+   * @var GeneratedApksPerSigningKey[]
+   */
+  public $generatedApks;
   protected $generatedApksType = GeneratedApksPerSigningKey::class;
   protected $generatedApksDataType = 'array';
 

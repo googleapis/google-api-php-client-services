@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class DeviceGroup extends \Google\Collection
 {
   protected $collection_key = 'deviceSelectors';
+  /**
+   * @var DeviceSelector[]
+   */
+  public $deviceSelectors;
   protected $deviceSelectorsType = DeviceSelector::class;
   protected $deviceSelectorsDataType = 'array';
   /**

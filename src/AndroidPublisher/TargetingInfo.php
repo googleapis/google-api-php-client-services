@@ -20,12 +20,20 @@ namespace Google\Service\AndroidPublisher;
 class TargetingInfo extends \Google\Collection
 {
   protected $collection_key = 'variant';
+  /**
+   * @var AssetSliceSet[]
+   */
+  public $assetSliceSet;
   protected $assetSliceSetType = AssetSliceSet::class;
   protected $assetSliceSetDataType = 'array';
   /**
    * @var string
    */
   public $packageName;
+  /**
+   * @var SplitApkVariant[]
+   */
+  public $variant;
   protected $variantType = SplitApkVariant::class;
   protected $variantDataType = 'array';
 

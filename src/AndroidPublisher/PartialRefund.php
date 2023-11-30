@@ -23,6 +23,10 @@ class PartialRefund extends \Google\Model
    * @var string
    */
   public $refundId;
+  /**
+   * @var Price
+   */
+  public $refundPreTaxAmount;
   protected $refundPreTaxAmountType = Price::class;
   protected $refundPreTaxAmountDataType = '';
 

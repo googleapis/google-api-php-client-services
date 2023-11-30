@@ -19,8 +19,16 @@ namespace Google\Service\AndroidPublisher;
 
 class RegionalSubscriptionOfferPhaseConfig extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $absoluteDiscount;
   protected $absoluteDiscountType = Money::class;
   protected $absoluteDiscountDataType = '';
+  /**
+   * @var Money
+   */
+  public $price;
   protected $priceType = Money::class;
   protected $priceDataType = '';
   /**

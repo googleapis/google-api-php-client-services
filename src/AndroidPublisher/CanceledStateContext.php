@@ -19,12 +19,28 @@ namespace Google\Service\AndroidPublisher;
 
 class CanceledStateContext extends \Google\Model
 {
+  /**
+   * @var DeveloperInitiatedCancellation
+   */
+  public $developerInitiatedCancellation;
   protected $developerInitiatedCancellationType = DeveloperInitiatedCancellation::class;
   protected $developerInitiatedCancellationDataType = '';
+  /**
+   * @var ReplacementCancellation
+   */
+  public $replacementCancellation;
   protected $replacementCancellationType = ReplacementCancellation::class;
   protected $replacementCancellationDataType = '';
+  /**
+   * @var SystemInitiatedCancellation
+   */
+  public $systemInitiatedCancellation;
   protected $systemInitiatedCancellationType = SystemInitiatedCancellation::class;
   protected $systemInitiatedCancellationDataType = '';
+  /**
+   * @var UserInitiatedCancellation
+   */
+  public $userInitiatedCancellation;
   protected $userInitiatedCancellationType = UserInitiatedCancellation::class;
   protected $userInitiatedCancellationDataType = '';
 

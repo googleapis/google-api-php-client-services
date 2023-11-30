@@ -19,8 +19,16 @@ namespace Google\Service\AndroidPublisher;
 
 class OtherRegionsSubscriptionOfferPhasePrices extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $eurPrice;
   protected $eurPriceType = Money::class;
   protected $eurPriceDataType = '';
+  /**
+   * @var Money
+   */
+  public $usdPrice;
   protected $usdPriceType = Money::class;
   protected $usdPriceDataType = '';
 

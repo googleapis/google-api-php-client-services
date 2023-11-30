@@ -36,6 +36,10 @@ class ModuleMetadata extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ModuleTargeting
+   */
+  public $targeting;
   protected $targetingType = ModuleTargeting::class;
   protected $targetingDataType = '';
 

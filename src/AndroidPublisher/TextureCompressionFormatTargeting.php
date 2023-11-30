@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class TextureCompressionFormatTargeting extends \Google\Collection
 {
   protected $collection_key = 'value';
+  /**
+   * @var TextureCompressionFormat[]
+   */
+  public $alternatives;
   protected $alternativesType = TextureCompressionFormat::class;
   protected $alternativesDataType = 'array';
+  /**
+   * @var TextureCompressionFormat[]
+   */
+  public $value;
   protected $valueType = TextureCompressionFormat::class;
   protected $valueDataType = 'array';
 

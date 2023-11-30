@@ -20,14 +20,34 @@ namespace Google\Service\AndroidPublisher;
 class DeviceSelector extends \Google\Collection
 {
   protected $collection_key = 'requiredSystemFeatures';
+  /**
+   * @var DeviceRam
+   */
+  public $deviceRam;
   protected $deviceRamType = DeviceRam::class;
   protected $deviceRamDataType = '';
+  /**
+   * @var DeviceId[]
+   */
+  public $excludedDeviceIds;
   protected $excludedDeviceIdsType = DeviceId::class;
   protected $excludedDeviceIdsDataType = 'array';
+  /**
+   * @var SystemFeature[]
+   */
+  public $forbiddenSystemFeatures;
   protected $forbiddenSystemFeaturesType = SystemFeature::class;
   protected $forbiddenSystemFeaturesDataType = 'array';
+  /**
+   * @var DeviceId[]
+   */
+  public $includedDeviceIds;
   protected $includedDeviceIdsType = DeviceId::class;
   protected $includedDeviceIdsDataType = 'array';
+  /**
+   * @var SystemFeature[]
+   */
+  public $requiredSystemFeatures;
   protected $requiredSystemFeaturesType = SystemFeature::class;
   protected $requiredSystemFeaturesDataType = 'array';
 

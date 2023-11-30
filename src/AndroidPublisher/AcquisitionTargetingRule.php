@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class AcquisitionTargetingRule extends \Google\Model
 {
+  /**
+   * @var TargetingRuleScope
+   */
+  public $scope;
   protected $scopeType = TargetingRuleScope::class;
   protected $scopeDataType = '';
 

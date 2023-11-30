@@ -24,6 +24,10 @@ class TracksListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var Track[]
+   */
+  public $tracks;
   protected $tracksType = Track::class;
   protected $tracksDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class ImagesDeleteAllResponse extends \Google\Collection
 {
   protected $collection_key = 'deleted';
+  /**
+   * @var Image[]
+   */
+  public $deleted;
   protected $deletedType = Image::class;
   protected $deletedDataType = 'array';
 

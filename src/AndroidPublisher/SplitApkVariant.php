@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class SplitApkVariant extends \Google\Collection
 {
   protected $collection_key = 'apkSet';
+  /**
+   * @var ApkSet[]
+   */
+  public $apkSet;
   protected $apkSetType = ApkSet::class;
   protected $apkSetDataType = 'array';
+  /**
+   * @var VariantTargeting
+   */
+  public $targeting;
   protected $targetingType = VariantTargeting::class;
   protected $targetingDataType = '';
   /**

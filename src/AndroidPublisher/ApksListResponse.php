@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class ApksListResponse extends \Google\Collection
 {
   protected $collection_key = 'apks';
+  /**
+   * @var Apk[]
+   */
+  public $apks;
   protected $apksType = Apk::class;
   protected $apksDataType = 'array';
   /**

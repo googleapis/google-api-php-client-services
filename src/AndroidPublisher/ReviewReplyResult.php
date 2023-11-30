@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class ReviewReplyResult extends \Google\Model
 {
+  /**
+   * @var Timestamp
+   */
+  public $lastEdited;
   protected $lastEditedType = Timestamp::class;
   protected $lastEditedDataType = '';
   /**

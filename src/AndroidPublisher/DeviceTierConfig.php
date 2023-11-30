@@ -20,14 +20,26 @@ namespace Google\Service\AndroidPublisher;
 class DeviceTierConfig extends \Google\Collection
 {
   protected $collection_key = 'userCountrySets';
+  /**
+   * @var DeviceGroup[]
+   */
+  public $deviceGroups;
   protected $deviceGroupsType = DeviceGroup::class;
   protected $deviceGroupsDataType = 'array';
   /**
    * @var string
    */
   public $deviceTierConfigId;
+  /**
+   * @var DeviceTierSet
+   */
+  public $deviceTierSet;
   protected $deviceTierSetType = DeviceTierSet::class;
   protected $deviceTierSetDataType = '';
+  /**
+   * @var UserCountrySet[]
+   */
+  public $userCountrySets;
   protected $userCountrySetsType = UserCountrySet::class;
   protected $userCountrySetsDataType = 'array';
 

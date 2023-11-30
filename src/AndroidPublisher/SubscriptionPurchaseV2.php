@@ -24,8 +24,16 @@ class SubscriptionPurchaseV2 extends \Google\Collection
    * @var string
    */
   public $acknowledgementState;
+  /**
+   * @var CanceledStateContext
+   */
+  public $canceledStateContext;
   protected $canceledStateContextType = CanceledStateContext::class;
   protected $canceledStateContextDataType = '';
+  /**
+   * @var ExternalAccountIdentifiers
+   */
+  public $externalAccountIdentifiers;
   protected $externalAccountIdentifiersType = ExternalAccountIdentifiers::class;
   protected $externalAccountIdentifiersDataType = '';
   /**
@@ -36,12 +44,20 @@ class SubscriptionPurchaseV2 extends \Google\Collection
    * @var string
    */
   public $latestOrderId;
+  /**
+   * @var SubscriptionPurchaseLineItem[]
+   */
+  public $lineItems;
   protected $lineItemsType = SubscriptionPurchaseLineItem::class;
   protected $lineItemsDataType = 'array';
   /**
    * @var string
    */
   public $linkedPurchaseToken;
+  /**
+   * @var PausedStateContext
+   */
+  public $pausedStateContext;
   protected $pausedStateContextType = PausedStateContext::class;
   protected $pausedStateContextDataType = '';
   /**
@@ -52,12 +68,20 @@ class SubscriptionPurchaseV2 extends \Google\Collection
    * @var string
    */
   public $startTime;
+  /**
+   * @var SubscribeWithGoogleInfo
+   */
+  public $subscribeWithGoogleInfo;
   protected $subscribeWithGoogleInfoType = SubscribeWithGoogleInfo::class;
   protected $subscribeWithGoogleInfoDataType = '';
   /**
    * @var string
    */
   public $subscriptionState;
+  /**
+   * @var TestPurchase
+   */
+  public $testPurchase;
   protected $testPurchaseType = TestPurchase::class;
   protected $testPurchaseDataType = '';
 

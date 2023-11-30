@@ -24,12 +24,20 @@ class SubscriptionOfferPhase extends \Google\Collection
    * @var string
    */
   public $duration;
+  /**
+   * @var OtherRegionsSubscriptionOfferPhaseConfig
+   */
+  public $otherRegionsConfig;
   protected $otherRegionsConfigType = OtherRegionsSubscriptionOfferPhaseConfig::class;
   protected $otherRegionsConfigDataType = '';
   /**
    * @var int
    */
   public $recurrenceCount;
+  /**
+   * @var RegionalSubscriptionOfferPhaseConfig[]
+   */
+  public $regionalConfigs;
   protected $regionalConfigsType = RegionalSubscriptionOfferPhaseConfig::class;
   protected $regionalConfigsDataType = 'array';
 

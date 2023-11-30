@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class ExpansionFilesUploadResponse extends \Google\Model
 {
+  /**
+   * @var ExpansionFile
+   */
+  public $expansionFile;
   protected $expansionFileType = ExpansionFile::class;
   protected $expansionFileDataType = '';
 

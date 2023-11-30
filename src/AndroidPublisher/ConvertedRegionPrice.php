@@ -19,12 +19,20 @@ namespace Google\Service\AndroidPublisher;
 
 class ConvertedRegionPrice extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $price;
   protected $priceType = Money::class;
   protected $priceDataType = '';
   /**
    * @var string
    */
   public $regionCode;
+  /**
+   * @var Money
+   */
+  public $taxAmount;
   protected $taxAmountType = Money::class;
   protected $taxAmountDataType = '';
 

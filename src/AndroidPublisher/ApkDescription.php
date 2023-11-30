@@ -19,18 +19,38 @@ namespace Google\Service\AndroidPublisher;
 
 class ApkDescription extends \Google\Model
 {
+  /**
+   * @var SplitApkMetadata
+   */
+  public $assetSliceMetadata;
   protected $assetSliceMetadataType = SplitApkMetadata::class;
   protected $assetSliceMetadataDataType = '';
+  /**
+   * @var SplitApkMetadata
+   */
+  public $instantApkMetadata;
   protected $instantApkMetadataType = SplitApkMetadata::class;
   protected $instantApkMetadataDataType = '';
   /**
    * @var string
    */
   public $path;
+  /**
+   * @var SplitApkMetadata
+   */
+  public $splitApkMetadata;
   protected $splitApkMetadataType = SplitApkMetadata::class;
   protected $splitApkMetadataDataType = '';
+  /**
+   * @var StandaloneApkMetadata
+   */
+  public $standaloneApkMetadata;
   protected $standaloneApkMetadataType = StandaloneApkMetadata::class;
   protected $standaloneApkMetadataDataType = '';
+  /**
+   * @var ApkTargeting
+   */
+  public $targeting;
   protected $targetingType = ApkTargeting::class;
   protected $targetingDataType = '';
 

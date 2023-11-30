@@ -20,18 +20,38 @@ namespace Google\Service\AndroidPublisher;
 class BasePlan extends \Google\Collection
 {
   protected $collection_key = 'regionalConfigs';
+  /**
+   * @var AutoRenewingBasePlanType
+   */
+  public $autoRenewingBasePlanType;
   protected $autoRenewingBasePlanTypeType = AutoRenewingBasePlanType::class;
   protected $autoRenewingBasePlanTypeDataType = '';
   /**
    * @var string
    */
   public $basePlanId;
+  /**
+   * @var OfferTag[]
+   */
+  public $offerTags;
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
+  /**
+   * @var OtherRegionsBasePlanConfig
+   */
+  public $otherRegionsConfig;
   protected $otherRegionsConfigType = OtherRegionsBasePlanConfig::class;
   protected $otherRegionsConfigDataType = '';
+  /**
+   * @var PrepaidBasePlanType
+   */
+  public $prepaidBasePlanType;
   protected $prepaidBasePlanTypeType = PrepaidBasePlanType::class;
   protected $prepaidBasePlanTypeDataType = '';
+  /**
+   * @var RegionalBasePlanConfig[]
+   */
+  public $regionalConfigs;
   protected $regionalConfigsType = RegionalBasePlanConfig::class;
   protected $regionalConfigsDataType = 'array';
   /**

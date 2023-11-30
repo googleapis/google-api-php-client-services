@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class AssetSliceSet extends \Google\Collection
 {
   protected $collection_key = 'apkDescription';
+  /**
+   * @var ApkDescription[]
+   */
+  public $apkDescription;
   protected $apkDescriptionType = ApkDescription::class;
   protected $apkDescriptionDataType = 'array';
+  /**
+   * @var AssetModuleMetadata
+   */
+  public $assetModuleMetadata;
   protected $assetModuleMetadataType = AssetModuleMetadata::class;
   protected $assetModuleMetadataDataType = '';
 

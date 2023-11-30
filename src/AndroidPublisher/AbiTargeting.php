@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class AbiTargeting extends \Google\Collection
 {
   protected $collection_key = 'value';
+  /**
+   * @var Abi[]
+   */
+  public $alternatives;
   protected $alternativesType = Abi::class;
   protected $alternativesDataType = 'array';
+  /**
+   * @var Abi[]
+   */
+  public $value;
   protected $valueType = Abi::class;
   protected $valueDataType = 'array';
 

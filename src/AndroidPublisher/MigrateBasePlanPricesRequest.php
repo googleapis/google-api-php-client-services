@@ -20,8 +20,16 @@ namespace Google\Service\AndroidPublisher;
 class MigrateBasePlanPricesRequest extends \Google\Collection
 {
   protected $collection_key = 'regionalPriceMigrations';
+  /**
+   * @var RegionalPriceMigrationConfig[]
+   */
+  public $regionalPriceMigrations;
   protected $regionalPriceMigrationsType = RegionalPriceMigrationConfig::class;
   protected $regionalPriceMigrationsDataType = 'array';
+  /**
+   * @var RegionsVersion
+   */
+  public $regionsVersion;
   protected $regionsVersionType = RegionsVersion::class;
   protected $regionsVersionDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class ImagesUploadResponse extends \Google\Model
 {
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
 

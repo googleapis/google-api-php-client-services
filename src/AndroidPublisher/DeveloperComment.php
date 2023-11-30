@@ -19,6 +19,10 @@ namespace Google\Service\AndroidPublisher;
 
 class DeveloperComment extends \Google\Model
 {
+  /**
+   * @var Timestamp
+   */
+  public $lastModified;
   protected $lastModifiedType = Timestamp::class;
   protected $lastModifiedDataType = '';
   /**

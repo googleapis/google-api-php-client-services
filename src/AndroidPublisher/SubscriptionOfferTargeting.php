@@ -19,8 +19,16 @@ namespace Google\Service\AndroidPublisher;
 
 class SubscriptionOfferTargeting extends \Google\Model
 {
+  /**
+   * @var AcquisitionTargetingRule
+   */
+  public $acquisitionRule;
   protected $acquisitionRuleType = AcquisitionTargetingRule::class;
   protected $acquisitionRuleDataType = '';
+  /**
+   * @var UpgradeTargetingRule
+   */
+  public $upgradeRule;
   protected $upgradeRuleType = UpgradeTargetingRule::class;
   protected $upgradeRuleDataType = '';
 

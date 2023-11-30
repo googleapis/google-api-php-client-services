@@ -20,10 +20,22 @@ namespace Google\Service\AndroidPublisher;
 class ModuleTargeting extends \Google\Collection
 {
   protected $collection_key = 'deviceFeatureTargeting';
+  /**
+   * @var DeviceFeatureTargeting[]
+   */
+  public $deviceFeatureTargeting;
   protected $deviceFeatureTargetingType = DeviceFeatureTargeting::class;
   protected $deviceFeatureTargetingDataType = 'array';
+  /**
+   * @var SdkVersionTargeting
+   */
+  public $sdkVersionTargeting;
   protected $sdkVersionTargetingType = SdkVersionTargeting::class;
   protected $sdkVersionTargetingDataType = '';
+  /**
+   * @var UserCountriesTargeting
+   */
+  public $userCountriesTargeting;
   protected $userCountriesTargetingType = UserCountriesTargeting::class;
   protected $userCountriesTargetingDataType = '';
 

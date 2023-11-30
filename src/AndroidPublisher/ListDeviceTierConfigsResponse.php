@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class ListDeviceTierConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'deviceTierConfigs';
+  /**
+   * @var DeviceTierConfig[]
+   */
+  public $deviceTierConfigs;
   protected $deviceTierConfigsType = DeviceTierConfig::class;
   protected $deviceTierConfigsDataType = 'array';
   /**

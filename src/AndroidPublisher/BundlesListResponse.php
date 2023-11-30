@@ -20,6 +20,10 @@ namespace Google\Service\AndroidPublisher;
 class BundlesListResponse extends \Google\Collection
 {
   protected $collection_key = 'bundles';
+  /**
+   * @var Bundle[]
+   */
+  public $bundles;
   protected $bundlesType = Bundle::class;
   protected $bundlesDataType = 'array';
   /**

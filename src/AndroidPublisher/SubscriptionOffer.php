@@ -28,26 +28,46 @@ class SubscriptionOffer extends \Google\Collection
    * @var string
    */
   public $offerId;
+  /**
+   * @var OfferTag[]
+   */
+  public $offerTags;
   protected $offerTagsType = OfferTag::class;
   protected $offerTagsDataType = 'array';
+  /**
+   * @var OtherRegionsSubscriptionOfferConfig
+   */
+  public $otherRegionsConfig;
   protected $otherRegionsConfigType = OtherRegionsSubscriptionOfferConfig::class;
   protected $otherRegionsConfigDataType = '';
   /**
    * @var string
    */
   public $packageName;
+  /**
+   * @var SubscriptionOfferPhase[]
+   */
+  public $phases;
   protected $phasesType = SubscriptionOfferPhase::class;
   protected $phasesDataType = 'array';
   /**
    * @var string
    */
   public $productId;
+  /**
+   * @var RegionalSubscriptionOfferConfig[]
+   */
+  public $regionalConfigs;
   protected $regionalConfigsType = RegionalSubscriptionOfferConfig::class;
   protected $regionalConfigsDataType = 'array';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var SubscriptionOfferTargeting
+   */
+  public $targeting;
   protected $targetingType = SubscriptionOfferTargeting::class;
   protected $targetingDataType = '';
 
