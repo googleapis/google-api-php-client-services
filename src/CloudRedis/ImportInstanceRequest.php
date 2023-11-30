@@ -19,6 +19,10 @@ namespace Google\Service\CloudRedis;
 
 class ImportInstanceRequest extends \Google\Model
 {
+  /**
+   * @var InputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = InputConfig::class;
   protected $inputConfigDataType = '';
 

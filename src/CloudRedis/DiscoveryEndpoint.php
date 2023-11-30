@@ -27,6 +27,10 @@ class DiscoveryEndpoint extends \Google\Model
    * @var int
    */
   public $port;
+  /**
+   * @var PscConfig
+   */
+  public $pscConfig;
   protected $pscConfigType = PscConfig::class;
   protected $pscConfigDataType = '';
 

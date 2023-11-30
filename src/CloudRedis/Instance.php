@@ -68,8 +68,16 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $locationId;
+  /**
+   * @var MaintenancePolicy
+   */
+  public $maintenancePolicy;
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
+  /**
+   * @var MaintenanceSchedule
+   */
+  public $maintenanceSchedule;
   protected $maintenanceScheduleType = MaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
@@ -84,8 +92,16 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var NodeInfo[]
+   */
+  public $nodes;
   protected $nodesType = NodeInfo::class;
   protected $nodesDataType = 'array';
+  /**
+   * @var PersistenceConfig
+   */
+  public $persistenceConfig;
   protected $persistenceConfigType = PersistenceConfig::class;
   protected $persistenceConfigDataType = '';
   /**
@@ -132,6 +148,10 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $secondaryIpRange;
+  /**
+   * @var TlsCertificate[]
+   */
+  public $serverCaCerts;
   protected $serverCaCertsType = TlsCertificate::class;
   protected $serverCaCertsDataType = 'array';
   /**

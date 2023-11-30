@@ -32,6 +32,10 @@ class MaintenancePolicy extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var WeeklyMaintenanceWindow[]
+   */
+  public $weeklyMaintenanceWindow;
   protected $weeklyMaintenanceWindowType = WeeklyMaintenanceWindow::class;
   protected $weeklyMaintenanceWindowDataType = 'array';
 

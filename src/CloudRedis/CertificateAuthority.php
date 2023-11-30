@@ -19,6 +19,10 @@ namespace Google\Service\CloudRedis;
 
 class CertificateAuthority extends \Google\Model
 {
+  /**
+   * @var ManagedCertificateAuthority
+   */
+  public $managedServerCa;
   protected $managedServerCaType = ManagedCertificateAuthority::class;
   protected $managedServerCaDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\CloudRedis;
 class ManagedCertificateAuthority extends \Google\Collection
 {
   protected $collection_key = 'caCerts';
+  /**
+   * @var CertChain[]
+   */
+  public $caCerts;
   protected $caCertsType = CertChain::class;
   protected $caCertsDataType = 'array';
 

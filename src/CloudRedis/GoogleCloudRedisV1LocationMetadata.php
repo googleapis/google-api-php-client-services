@@ -19,6 +19,10 @@ namespace Google\Service\CloudRedis;
 
 class GoogleCloudRedisV1LocationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRedisV1ZoneMetadata[]
+   */
+  public $availableZones;
   protected $availableZonesType = GoogleCloudRedisV1ZoneMetadata::class;
   protected $availableZonesDataType = 'map';
 
