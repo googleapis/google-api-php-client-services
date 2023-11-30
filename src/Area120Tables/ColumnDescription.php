@@ -24,14 +24,26 @@ class ColumnDescription extends \Google\Collection
    * @var string
    */
   public $dataType;
+  /**
+   * @var DateDetails
+   */
+  public $dateDetails;
   protected $dateDetailsType = DateDetails::class;
   protected $dateDetailsDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var LabeledItem[]
+   */
+  public $labels;
   protected $labelsType = LabeledItem::class;
   protected $labelsDataType = 'array';
+  /**
+   * @var LookupDetails
+   */
+  public $lookupDetails;
   protected $lookupDetailsType = LookupDetails::class;
   protected $lookupDetailsDataType = '';
   /**
@@ -46,6 +58,10 @@ class ColumnDescription extends \Google\Collection
    * @var bool
    */
   public $readonly;
+  /**
+   * @var RelationshipDetails
+   */
+  public $relationshipDetails;
   protected $relationshipDetailsType = RelationshipDetails::class;
   protected $relationshipDetailsDataType = '';
 
