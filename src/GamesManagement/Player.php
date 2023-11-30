@@ -35,12 +35,20 @@ class Player extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GamesPlayerExperienceInfoResource
+   */
+  public $experienceInfo;
   protected $experienceInfoType = GamesPlayerExperienceInfoResource::class;
   protected $experienceInfoDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var PlayerName
+   */
+  public $name;
   protected $nameType = PlayerName::class;
   protected $nameDataType = '';
   /**
@@ -51,6 +59,10 @@ class Player extends \Google\Model
    * @var string
    */
   public $playerId;
+  /**
+   * @var ProfileSettings
+   */
+  public $profileSettings;
   protected $profileSettingsType = ProfileSettings::class;
   protected $profileSettingsDataType = '';
   /**

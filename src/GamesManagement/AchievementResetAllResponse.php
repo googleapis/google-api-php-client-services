@@ -24,6 +24,10 @@ class AchievementResetAllResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var AchievementResetResponse[]
+   */
+  public $results;
   protected $resultsType = AchievementResetResponse::class;
   protected $resultsDataType = 'array';
 

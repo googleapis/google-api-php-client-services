@@ -27,6 +27,10 @@ class HiddenPlayer extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var Player
+   */
+  public $player;
   protected $playerType = Player::class;
   protected $playerDataType = '';
 

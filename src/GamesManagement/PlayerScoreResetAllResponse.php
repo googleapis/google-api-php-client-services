@@ -24,6 +24,10 @@ class PlayerScoreResetAllResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var PlayerScoreResetResponse[]
+   */
+  public $results;
   protected $resultsType = PlayerScoreResetResponse::class;
   protected $resultsDataType = 'array';
 
