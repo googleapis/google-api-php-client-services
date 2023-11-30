@@ -19,8 +19,16 @@ namespace Google\Service\CloudTalentSolution;
 
 class JobResult extends \Google\Model
 {
+  /**
+   * @var Job
+   */
+  public $job;
   protected $jobType = Job::class;
   protected $jobDataType = '';
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

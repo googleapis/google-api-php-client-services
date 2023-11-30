@@ -23,6 +23,10 @@ class RequestMetadata extends \Google\Model
    * @var bool
    */
   public $allowMissingIds;
+  /**
+   * @var DeviceInfo
+   */
+  public $deviceInfo;
   protected $deviceInfoType = DeviceInfo::class;
   protected $deviceInfoDataType = '';
   /**

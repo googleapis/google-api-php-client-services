@@ -20,6 +20,10 @@ namespace Google\Service\CloudTalentSolution;
 class SearchJobsRequest extends \Google\Collection
 {
   protected $collection_key = 'histogramQueries';
+  /**
+   * @var CustomRankingInfo
+   */
+  public $customRankingInfo;
   protected $customRankingInfoType = CustomRankingInfo::class;
   protected $customRankingInfoDataType = '';
   /**
@@ -34,8 +38,16 @@ class SearchJobsRequest extends \Google\Collection
    * @var bool
    */
   public $enableBroadening;
+  /**
+   * @var HistogramQuery[]
+   */
+  public $histogramQueries;
   protected $histogramQueriesType = HistogramQuery::class;
   protected $histogramQueriesDataType = 'array';
+  /**
+   * @var JobQuery
+   */
+  public $jobQuery;
   protected $jobQueryType = JobQuery::class;
   protected $jobQueryDataType = '';
   /**
@@ -62,6 +74,10 @@ class SearchJobsRequest extends \Google\Collection
    * @var string
    */
   public $pageToken;
+  /**
+   * @var RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = RequestMetadata::class;
   protected $requestMetadataDataType = '';
   /**

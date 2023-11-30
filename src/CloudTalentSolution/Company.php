@@ -24,6 +24,10 @@ class Company extends \Google\Collection
    * @var string
    */
   public $careerSiteUri;
+  /**
+   * @var CompanyDerivedInfo
+   */
+  public $derivedInfo;
   protected $derivedInfoType = CompanyDerivedInfo::class;
   protected $derivedInfoDataType = '';
   /**

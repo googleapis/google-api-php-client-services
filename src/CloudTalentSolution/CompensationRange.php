@@ -19,8 +19,16 @@ namespace Google\Service\CloudTalentSolution;
 
 class CompensationRange extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $maxCompensation;
   protected $maxCompensationType = Money::class;
   protected $maxCompensationDataType = '';
+  /**
+   * @var Money
+   */
+  public $minCompensation;
   protected $minCompensationType = Money::class;
   protected $minCompensationDataType = '';
 

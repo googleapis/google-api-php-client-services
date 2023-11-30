@@ -20,8 +20,16 @@ namespace Google\Service\CloudTalentSolution;
 class CompleteQueryResponse extends \Google\Collection
 {
   protected $collection_key = 'completionResults';
+  /**
+   * @var CompletionResult[]
+   */
+  public $completionResults;
   protected $completionResultsType = CompletionResult::class;
   protected $completionResultsDataType = 'array';
+  /**
+   * @var ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = ResponseMetadata::class;
   protected $metadataDataType = '';
 

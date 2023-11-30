@@ -24,18 +24,38 @@ class SearchJobsResponse extends \Google\Collection
    * @var int
    */
   public $broadenedQueryJobsCount;
+  /**
+   * @var HistogramQueryResult[]
+   */
+  public $histogramQueryResults;
   protected $histogramQueryResultsType = HistogramQueryResult::class;
   protected $histogramQueryResultsDataType = 'array';
+  /**
+   * @var Location[]
+   */
+  public $locationFilters;
   protected $locationFiltersType = Location::class;
   protected $locationFiltersDataType = 'array';
+  /**
+   * @var MatchingJob[]
+   */
+  public $matchingJobs;
   protected $matchingJobsType = MatchingJob::class;
   protected $matchingJobsDataType = 'array';
+  /**
+   * @var ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = ResponseMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var SpellingCorrection
+   */
+  public $spellCorrection;
   protected $spellCorrectionType = SpellingCorrection::class;
   protected $spellCorrectionDataType = '';
   /**

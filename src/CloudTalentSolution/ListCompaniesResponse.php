@@ -20,8 +20,16 @@ namespace Google\Service\CloudTalentSolution;
 class ListCompaniesResponse extends \Google\Collection
 {
   protected $collection_key = 'companies';
+  /**
+   * @var Company[]
+   */
+  public $companies;
   protected $companiesType = Company::class;
   protected $companiesDataType = 'array';
+  /**
+   * @var ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = ResponseMetadata::class;
   protected $metadataDataType = '';
   /**

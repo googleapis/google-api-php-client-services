@@ -20,10 +20,22 @@ namespace Google\Service\CloudTalentSolution;
 class CompensationInfo extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var CompensationRange
+   */
+  public $annualizedBaseCompensationRange;
   protected $annualizedBaseCompensationRangeType = CompensationRange::class;
   protected $annualizedBaseCompensationRangeDataType = '';
+  /**
+   * @var CompensationRange
+   */
+  public $annualizedTotalCompensationRange;
   protected $annualizedTotalCompensationRangeType = CompensationRange::class;
   protected $annualizedTotalCompensationRangeDataType = '';
+  /**
+   * @var CompensationEntry[]
+   */
+  public $entries;
   protected $entriesType = CompensationEntry::class;
   protected $entriesDataType = 'array';
 

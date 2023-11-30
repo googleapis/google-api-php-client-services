@@ -24,6 +24,10 @@ class Job extends \Google\Collection
    * @var string[]
    */
   public $addresses;
+  /**
+   * @var ApplicationInfo
+   */
+  public $applicationInfo;
   protected $applicationInfoType = ApplicationInfo::class;
   protected $applicationInfoDataType = '';
   /**
@@ -34,8 +38,16 @@ class Job extends \Google\Collection
    * @var string
    */
   public $companyDisplayName;
+  /**
+   * @var CompensationInfo
+   */
+  public $compensationInfo;
   protected $compensationInfoType = CompensationInfo::class;
   protected $compensationInfoDataType = '';
+  /**
+   * @var CustomAttribute[]
+   */
+  public $customAttributes;
   protected $customAttributesType = CustomAttribute::class;
   protected $customAttributesDataType = 'map';
   /**
@@ -46,6 +58,10 @@ class Job extends \Google\Collection
    * @var string
    */
   public $department;
+  /**
+   * @var JobDerivedInfo
+   */
+  public $derivedInfo;
   protected $derivedInfoType = JobDerivedInfo::class;
   protected $derivedInfoDataType = '';
   /**
@@ -104,6 +120,10 @@ class Job extends \Google\Collection
    * @var string
    */
   public $postingUpdateTime;
+  /**
+   * @var ProcessingOptions
+   */
+  public $processingOptions;
   protected $processingOptionsType = ProcessingOptions::class;
   protected $processingOptionsDataType = '';
   /**

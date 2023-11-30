@@ -19,8 +19,16 @@ namespace Google\Service\CloudTalentSolution;
 
 class MatchingJob extends \Google\Model
 {
+  /**
+   * @var CommuteInfo
+   */
+  public $commuteInfo;
   protected $commuteInfoType = CommuteInfo::class;
   protected $commuteInfoDataType = '';
+  /**
+   * @var Job
+   */
+  public $job;
   protected $jobType = Job::class;
   protected $jobDataType = '';
   /**

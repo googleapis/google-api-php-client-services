@@ -20,6 +20,10 @@ namespace Google\Service\CloudTalentSolution;
 class BatchUpdateJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobResults';
+  /**
+   * @var JobResult[]
+   */
+  public $jobResults;
   protected $jobResultsType = JobResult::class;
   protected $jobResultsDataType = 'array';
 

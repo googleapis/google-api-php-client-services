@@ -20,12 +20,20 @@ namespace Google\Service\CloudTalentSolution;
 class ListTenantsResponse extends \Google\Collection
 {
   protected $collection_key = 'tenants';
+  /**
+   * @var ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = ResponseMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Tenant[]
+   */
+  public $tenants;
   protected $tenantsType = Tenant::class;
   protected $tenantsDataType = 'array';
 

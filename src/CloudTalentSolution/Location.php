@@ -19,12 +19,20 @@ namespace Google\Service\CloudTalentSolution;
 
 class Location extends \Google\Model
 {
+  /**
+   * @var LatLng
+   */
+  public $latLng;
   protected $latLngType = LatLng::class;
   protected $latLngDataType = '';
   /**
    * @var string
    */
   public $locationType;
+  /**
+   * @var PostalAddress
+   */
+  public $postalAddress;
   protected $postalAddressType = PostalAddress::class;
   protected $postalAddressDataType = '';
   public $radiusMiles;
