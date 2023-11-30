@@ -19,12 +19,20 @@ namespace Google\Service\Assuredworkloads;
 
 class GoogleCloudAssuredworkloadsV1MoveAnalysisGroup extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAssuredworkloadsV1MoveAnalysisResult
+   */
+  public $analysisResult;
   protected $analysisResultType = GoogleCloudAssuredworkloadsV1MoveAnalysisResult::class;
   protected $analysisResultDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
 

@@ -28,6 +28,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $complianceRegime;
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus
+   */
+  public $complianceStatus;
   protected $complianceStatusType = GoogleCloudAssuredworkloadsV1WorkloadComplianceStatus::class;
   protected $complianceStatusDataType = '';
   /**
@@ -42,6 +46,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse
+   */
+  public $ekmProvisioningResponse;
   protected $ekmProvisioningResponseType = GoogleCloudAssuredworkloadsV1WorkloadEkmProvisioningResponse::class;
   protected $ekmProvisioningResponseDataType = '';
   /**
@@ -56,6 +64,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $kajEnrollmentState;
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadKMSSettings
+   */
+  public $kmsSettings;
   protected $kmsSettingsType = GoogleCloudAssuredworkloadsV1WorkloadKMSSettings::class;
   protected $kmsSettingsDataType = '';
   /**
@@ -70,6 +82,10 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var string
    */
   public $partner;
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions
+   */
+  public $partnerPermissions;
   protected $partnerPermissionsType = GoogleCloudAssuredworkloadsV1WorkloadPartnerPermissions::class;
   protected $partnerPermissionsDataType = '';
   /**
@@ -80,10 +96,22 @@ class GoogleCloudAssuredworkloadsV1Workload extends \Google\Collection
    * @var bool
    */
   public $resourceMonitoringEnabled;
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadResourceSettings[]
+   */
+  public $resourceSettings;
   protected $resourceSettingsType = GoogleCloudAssuredworkloadsV1WorkloadResourceSettings::class;
   protected $resourceSettingsDataType = 'array';
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadResourceInfo[]
+   */
+  public $resources;
   protected $resourcesType = GoogleCloudAssuredworkloadsV1WorkloadResourceInfo::class;
   protected $resourcesDataType = 'array';
+  /**
+   * @var GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse
+   */
+  public $saaEnrollmentResponse;
   protected $saaEnrollmentResponseType = GoogleCloudAssuredworkloadsV1WorkloadSaaEnrollmentResponse::class;
   protected $saaEnrollmentResponseDataType = '';
   /**

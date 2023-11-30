@@ -19,8 +19,16 @@ namespace Google\Service\Assuredworkloads;
 
 class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole
+   */
+  public $consoleInstructions;
   protected $consoleInstructionsType = GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole::class;
   protected $consoleInstructionsDataType = '';
+  /**
+   * @var GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud
+   */
+  public $gcloudInstructions;
   protected $gcloudInstructionsType = GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud::class;
   protected $gcloudInstructionsDataType = '';
 

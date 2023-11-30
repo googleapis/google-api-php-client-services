@@ -20,6 +20,10 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1AssetMoveAnalysis extends \Google\Collection
 {
   protected $collection_key = 'analysisGroups';
+  /**
+   * @var GoogleCloudAssuredworkloadsV1MoveAnalysisGroup[]
+   */
+  public $analysisGroups;
   protected $analysisGroupsType = GoogleCloudAssuredworkloadsV1MoveAnalysisGroup::class;
   protected $analysisGroupsDataType = 'array';
   /**

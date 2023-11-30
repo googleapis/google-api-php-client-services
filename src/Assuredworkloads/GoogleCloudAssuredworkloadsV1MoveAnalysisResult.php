@@ -20,8 +20,16 @@ namespace Google\Service\Assuredworkloads;
 class GoogleCloudAssuredworkloadsV1MoveAnalysisResult extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var GoogleCloudAssuredworkloadsV1MoveImpact[]
+   */
+  public $blockers;
   protected $blockersType = GoogleCloudAssuredworkloadsV1MoveImpact::class;
   protected $blockersDataType = 'array';
+  /**
+   * @var GoogleCloudAssuredworkloadsV1MoveImpact[]
+   */
+  public $warnings;
   protected $warningsType = GoogleCloudAssuredworkloadsV1MoveImpact::class;
   protected $warningsDataType = 'array';
 
