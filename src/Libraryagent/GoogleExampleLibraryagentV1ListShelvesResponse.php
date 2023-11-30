@@ -24,6 +24,10 @@ class GoogleExampleLibraryagentV1ListShelvesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleExampleLibraryagentV1Shelf[]
+   */
+  public $shelves;
   protected $shelvesType = GoogleExampleLibraryagentV1Shelf::class;
   protected $shelvesDataType = 'array';
 
