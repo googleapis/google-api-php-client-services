@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class InterconnectAttachmentsScopedList extends \Google\Collection
 {
   protected $collection_key = 'interconnectAttachments';
+  /**
+   * @var InterconnectAttachment[]
+   */
+  public $interconnectAttachments;
   protected $interconnectAttachmentsType = InterconnectAttachment::class;
   protected $interconnectAttachmentsDataType = 'array';
+  /**
+   * @var InterconnectAttachmentsScopedListWarning
+   */
+  public $warning;
   protected $warningType = InterconnectAttachmentsScopedListWarning::class;
   protected $warningDataType = '';
 

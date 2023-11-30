@@ -19,8 +19,16 @@ namespace Google\Service\Compute;
 
 class InstanceManagedByIgmError extends \Google\Model
 {
+  /**
+   * @var InstanceManagedByIgmErrorManagedInstanceError
+   */
+  public $error;
   protected $errorType = InstanceManagedByIgmErrorManagedInstanceError::class;
   protected $errorDataType = '';
+  /**
+   * @var InstanceManagedByIgmErrorInstanceActionDetails
+   */
+  public $instanceActionDetails;
   protected $instanceActionDetailsType = InstanceManagedByIgmErrorInstanceActionDetails::class;
   protected $instanceActionDetailsDataType = '';
   /**

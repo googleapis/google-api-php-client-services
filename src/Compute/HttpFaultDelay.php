@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class HttpFaultDelay extends \Google\Model
 {
+  /**
+   * @var Duration
+   */
+  public $fixedDelay;
   protected $fixedDelayType = Duration::class;
   protected $fixedDelayDataType = '';
   public $percentage;

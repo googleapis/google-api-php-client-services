@@ -24,6 +24,10 @@ class InstanceListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var InstanceListWarningData[]
+   */
+  public $data;
   protected $dataType = InstanceListWarningData::class;
   protected $dataDataType = 'array';
   /**

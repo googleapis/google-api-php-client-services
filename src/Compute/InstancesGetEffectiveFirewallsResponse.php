@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class InstancesGetEffectiveFirewallsResponse extends \Google\Collection
 {
   protected $collection_key = 'firewalls';
+  /**
+   * @var InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy[]
+   */
+  public $firewallPolicys;
   protected $firewallPolicysType = InstancesGetEffectiveFirewallsResponseEffectiveFirewallPolicy::class;
   protected $firewallPolicysDataType = 'array';
+  /**
+   * @var Firewall[]
+   */
+  public $firewalls;
   protected $firewallsType = Firewall::class;
   protected $firewallsDataType = 'array';
 

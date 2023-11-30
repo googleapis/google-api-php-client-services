@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class InstanceGroupManagersPatchPerInstanceConfigsReq extends \Google\Collection
 {
   protected $collection_key = 'perInstanceConfigs';
+  /**
+   * @var PerInstanceConfig[]
+   */
+  public $perInstanceConfigs;
   protected $perInstanceConfigsType = PerInstanceConfig::class;
   protected $perInstanceConfigsDataType = 'array';
 

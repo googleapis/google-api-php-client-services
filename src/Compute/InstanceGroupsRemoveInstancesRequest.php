@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class InstanceGroupsRemoveInstancesRequest extends \Google\Collection
 {
   protected $collection_key = 'instances';
+  /**
+   * @var InstanceReference[]
+   */
+  public $instances;
   protected $instancesType = InstanceReference::class;
   protected $instancesDataType = 'array';
 

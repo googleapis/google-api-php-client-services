@@ -24,6 +24,10 @@ class InstanceGroupManagerAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var InstanceGroupManagerAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = InstanceGroupManagerAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class HealthChecksScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var HealthChecksScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = HealthChecksScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

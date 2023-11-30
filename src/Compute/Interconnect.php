@@ -28,6 +28,10 @@ class Interconnect extends \Google\Collection
    * @var string[]
    */
   public $availableFeatures;
+  /**
+   * @var InterconnectCircuitInfo[]
+   */
+  public $circuitInfos;
   protected $circuitInfosType = InterconnectCircuitInfo::class;
   protected $circuitInfosDataType = 'array';
   /**
@@ -42,6 +46,10 @@ class Interconnect extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var InterconnectOutageNotification[]
+   */
+  public $expectedOutages;
   protected $expectedOutagesType = InterconnectOutageNotification::class;
   protected $expectedOutagesDataType = 'array';
   /**
@@ -84,6 +92,10 @@ class Interconnect extends \Google\Collection
    * @var string
    */
   public $location;
+  /**
+   * @var InterconnectMacsec
+   */
+  public $macsec;
   protected $macsecType = InterconnectMacsec::class;
   protected $macsecDataType = '';
   /**

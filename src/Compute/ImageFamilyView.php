@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class ImageFamilyView extends \Google\Model
 {
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
 

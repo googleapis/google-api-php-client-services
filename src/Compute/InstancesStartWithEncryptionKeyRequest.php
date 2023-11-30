@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class InstancesStartWithEncryptionKeyRequest extends \Google\Collection
 {
   protected $collection_key = 'disks';
+  /**
+   * @var CustomerEncryptionKeyProtectedDisk[]
+   */
+  public $disks;
   protected $disksType = CustomerEncryptionKeyProtectedDisk::class;
   protected $disksDataType = 'array';
 

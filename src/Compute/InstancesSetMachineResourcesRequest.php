@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class InstancesSetMachineResourcesRequest extends \Google\Collection
 {
   protected $collection_key = 'guestAccelerators';
+  /**
+   * @var AcceleratorConfig[]
+   */
+  public $guestAccelerators;
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
 

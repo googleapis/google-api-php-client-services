@@ -20,12 +20,28 @@ namespace Google\Service\Compute;
 class InitialStateConfig extends \Google\Collection
 {
   protected $collection_key = 'keks';
+  /**
+   * @var FileContentBuffer[]
+   */
+  public $dbs;
   protected $dbsType = FileContentBuffer::class;
   protected $dbsDataType = 'array';
+  /**
+   * @var FileContentBuffer[]
+   */
+  public $dbxs;
   protected $dbxsType = FileContentBuffer::class;
   protected $dbxsDataType = 'array';
+  /**
+   * @var FileContentBuffer[]
+   */
+  public $keks;
   protected $keksType = FileContentBuffer::class;
   protected $keksDataType = 'array';
+  /**
+   * @var FileContentBuffer
+   */
+  public $pk;
   protected $pkType = FileContentBuffer::class;
   protected $pkDataType = '';
 

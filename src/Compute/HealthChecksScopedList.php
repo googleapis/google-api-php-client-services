@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class HealthChecksScopedList extends \Google\Collection
 {
   protected $collection_key = 'healthChecks';
+  /**
+   * @var HealthCheck[]
+   */
+  public $healthChecks;
   protected $healthChecksType = HealthCheck::class;
   protected $healthChecksDataType = 'array';
+  /**
+   * @var HealthChecksScopedListWarning
+   */
+  public $warning;
   protected $warningType = HealthChecksScopedListWarning::class;
   protected $warningDataType = '';
 

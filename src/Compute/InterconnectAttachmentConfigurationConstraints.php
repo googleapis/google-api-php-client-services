@@ -24,6 +24,10 @@ class InterconnectAttachmentConfigurationConstraints extends \Google\Collection
    * @var string
    */
   public $bgpMd5;
+  /**
+   * @var InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange[]
+   */
+  public $bgpPeerAsnRanges;
   protected $bgpPeerAsnRangesType = InterconnectAttachmentConfigurationConstraintsBgpPeerASNRange::class;
   protected $bgpPeerAsnRangesDataType = 'array';
 

@@ -27,6 +27,10 @@ class InstanceGroupManagerVersion extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var FixedOrPercent
+   */
+  public $targetSize;
   protected $targetSizeType = FixedOrPercent::class;
   protected $targetSizeDataType = '';
 

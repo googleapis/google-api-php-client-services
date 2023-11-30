@@ -24,6 +24,10 @@ class InterconnectAttachmentsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var InterconnectAttachmentsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = InterconnectAttachmentsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

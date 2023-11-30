@@ -20,20 +20,52 @@ namespace Google\Service\Compute;
 class HttpRouteAction extends \Google\Collection
 {
   protected $collection_key = 'weightedBackendServices';
+  /**
+   * @var CorsPolicy
+   */
+  public $corsPolicy;
   protected $corsPolicyType = CorsPolicy::class;
   protected $corsPolicyDataType = '';
+  /**
+   * @var HttpFaultInjection
+   */
+  public $faultInjectionPolicy;
   protected $faultInjectionPolicyType = HttpFaultInjection::class;
   protected $faultInjectionPolicyDataType = '';
+  /**
+   * @var Duration
+   */
+  public $maxStreamDuration;
   protected $maxStreamDurationType = Duration::class;
   protected $maxStreamDurationDataType = '';
+  /**
+   * @var RequestMirrorPolicy
+   */
+  public $requestMirrorPolicy;
   protected $requestMirrorPolicyType = RequestMirrorPolicy::class;
   protected $requestMirrorPolicyDataType = '';
+  /**
+   * @var HttpRetryPolicy
+   */
+  public $retryPolicy;
   protected $retryPolicyType = HttpRetryPolicy::class;
   protected $retryPolicyDataType = '';
+  /**
+   * @var Duration
+   */
+  public $timeout;
   protected $timeoutType = Duration::class;
   protected $timeoutDataType = '';
+  /**
+   * @var UrlRewrite
+   */
+  public $urlRewrite;
   protected $urlRewriteType = UrlRewrite::class;
   protected $urlRewriteDataType = '';
+  /**
+   * @var WeightedBackendService[]
+   */
+  public $weightedBackendServices;
   protected $weightedBackendServicesType = WeightedBackendService::class;
   protected $weightedBackendServicesDataType = 'array';
 

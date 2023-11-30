@@ -27,6 +27,10 @@ class InstanceManagedByIgmErrorInstanceActionDetails extends \Google\Model
    * @var string
    */
   public $instance;
+  /**
+   * @var ManagedInstanceVersion
+   */
+  public $version;
   protected $versionType = ManagedInstanceVersion::class;
   protected $versionDataType = '';
 

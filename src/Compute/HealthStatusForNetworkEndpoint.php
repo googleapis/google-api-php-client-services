@@ -19,12 +19,28 @@ namespace Google\Service\Compute;
 
 class HealthStatusForNetworkEndpoint extends \Google\Model
 {
+  /**
+   * @var BackendServiceReference
+   */
+  public $backendService;
   protected $backendServiceType = BackendServiceReference::class;
   protected $backendServiceDataType = '';
+  /**
+   * @var ForwardingRuleReference
+   */
+  public $forwardingRule;
   protected $forwardingRuleType = ForwardingRuleReference::class;
   protected $forwardingRuleDataType = '';
+  /**
+   * @var HealthCheckReference
+   */
+  public $healthCheck;
   protected $healthCheckType = HealthCheckReference::class;
   protected $healthCheckDataType = '';
+  /**
+   * @var HealthCheckServiceReference
+   */
+  public $healthCheckService;
   protected $healthCheckServiceType = HealthCheckServiceReference::class;
   protected $healthCheckServiceDataType = '';
   /**

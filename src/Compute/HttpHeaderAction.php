@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class HttpHeaderAction extends \Google\Collection
 {
   protected $collection_key = 'responseHeadersToRemove';
+  /**
+   * @var HttpHeaderOption[]
+   */
+  public $requestHeadersToAdd;
   protected $requestHeadersToAddType = HttpHeaderOption::class;
   protected $requestHeadersToAddDataType = 'array';
   /**
    * @var string[]
    */
   public $requestHeadersToRemove;
+  /**
+   * @var HttpHeaderOption[]
+   */
+  public $responseHeadersToAdd;
   protected $responseHeadersToAddType = HttpHeaderOption::class;
   protected $responseHeadersToAddDataType = 'array';
   /**

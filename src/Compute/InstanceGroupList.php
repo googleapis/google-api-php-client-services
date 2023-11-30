@@ -24,6 +24,10 @@ class InstanceGroupList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var InstanceGroup[]
+   */
+  public $items;
   protected $itemsType = InstanceGroup::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class InstanceGroupList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var InstanceGroupListWarning
+   */
+  public $warning;
   protected $warningType = InstanceGroupListWarning::class;
   protected $warningDataType = '';
 

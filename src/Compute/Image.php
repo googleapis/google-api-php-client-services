@@ -32,6 +32,10 @@ class Image extends \Google\Collection
    * @var string
    */
   public $creationTimestamp;
+  /**
+   * @var DeprecationStatus
+   */
+  public $deprecated;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**
@@ -46,12 +50,20 @@ class Image extends \Google\Collection
    * @var string
    */
   public $family;
+  /**
+   * @var GuestOsFeature[]
+   */
+  public $guestOsFeatures;
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var CustomerEncryptionKey
+   */
+  public $imageEncryptionKey;
   protected $imageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $imageEncryptionKeyDataType = '';
   /**
@@ -78,6 +90,10 @@ class Image extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ImageRawDisk
+   */
+  public $rawDisk;
   protected $rawDiskType = ImageRawDisk::class;
   protected $rawDiskDataType = '';
   /**
@@ -88,12 +104,20 @@ class Image extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var InitialStateConfig
+   */
+  public $shieldedInstanceInitialState;
   protected $shieldedInstanceInitialStateType = InitialStateConfig::class;
   protected $shieldedInstanceInitialStateDataType = '';
   /**
    * @var string
    */
   public $sourceDisk;
+  /**
+   * @var CustomerEncryptionKey
+   */
+  public $sourceDiskEncryptionKey;
   protected $sourceDiskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceDiskEncryptionKeyDataType = '';
   /**
@@ -104,6 +128,10 @@ class Image extends \Google\Collection
    * @var string
    */
   public $sourceImage;
+  /**
+   * @var CustomerEncryptionKey
+   */
+  public $sourceImageEncryptionKey;
   protected $sourceImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceImageEncryptionKeyDataType = '';
   /**
@@ -114,6 +142,10 @@ class Image extends \Google\Collection
    * @var string
    */
   public $sourceSnapshot;
+  /**
+   * @var CustomerEncryptionKey
+   */
+  public $sourceSnapshotEncryptionKey;
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
   /**

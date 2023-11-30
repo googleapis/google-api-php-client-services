@@ -24,6 +24,10 @@ class InstanceWithNamedPorts extends \Google\Collection
    * @var string
    */
   public $instance;
+  /**
+   * @var NamedPort[]
+   */
+  public $namedPorts;
   protected $namedPortsType = NamedPort::class;
   protected $namedPortsDataType = 'array';
   /**

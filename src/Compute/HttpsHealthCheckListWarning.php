@@ -24,6 +24,10 @@ class HttpsHealthCheckListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var HttpsHealthCheckListWarningData[]
+   */
+  public $data;
   protected $dataType = HttpsHealthCheckListWarningData::class;
   protected $dataDataType = 'array';
   /**

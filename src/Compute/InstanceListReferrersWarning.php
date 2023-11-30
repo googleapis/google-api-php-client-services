@@ -24,6 +24,10 @@ class InstanceListReferrersWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var InstanceListReferrersWarningData[]
+   */
+  public $data;
   protected $dataType = InstanceListReferrersWarningData::class;
   protected $dataDataType = 'array';
   /**

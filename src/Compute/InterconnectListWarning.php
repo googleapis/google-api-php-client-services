@@ -24,6 +24,10 @@ class InterconnectListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var InterconnectListWarningData[]
+   */
+  public $data;
   protected $dataType = InterconnectListWarningData::class;
   protected $dataDataType = 'array';
   /**

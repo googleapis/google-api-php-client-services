@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class InstanceGroupsScopedList extends \Google\Collection
 {
   protected $collection_key = 'instanceGroups';
+  /**
+   * @var InstanceGroup[]
+   */
+  public $instanceGroups;
   protected $instanceGroupsType = InstanceGroup::class;
   protected $instanceGroupsDataType = 'array';
+  /**
+   * @var InstanceGroupsScopedListWarning
+   */
+  public $warning;
   protected $warningType = InstanceGroupsScopedListWarning::class;
   protected $warningDataType = '';
 

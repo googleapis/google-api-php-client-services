@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class InstanceConsumptionData extends \Google\Model
 {
+  /**
+   * @var InstanceConsumptionInfo
+   */
+  public $consumptionInfo;
   protected $consumptionInfoType = InstanceConsumptionInfo::class;
   protected $consumptionInfoDataType = '';
   /**

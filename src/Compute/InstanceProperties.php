@@ -20,20 +20,36 @@ namespace Google\Service\Compute;
 class InstanceProperties extends \Google\Collection
 {
   protected $collection_key = 'serviceAccounts';
+  /**
+   * @var AdvancedMachineFeatures
+   */
+  public $advancedMachineFeatures;
   protected $advancedMachineFeaturesType = AdvancedMachineFeatures::class;
   protected $advancedMachineFeaturesDataType = '';
   /**
    * @var bool
    */
   public $canIpForward;
+  /**
+   * @var ConfidentialInstanceConfig
+   */
+  public $confidentialInstanceConfig;
   protected $confidentialInstanceConfigType = ConfidentialInstanceConfig::class;
   protected $confidentialInstanceConfigDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var AttachedDisk[]
+   */
+  public $disks;
   protected $disksType = AttachedDisk::class;
   protected $disksDataType = 'array';
+  /**
+   * @var AcceleratorConfig[]
+   */
+  public $guestAccelerators;
   protected $guestAcceleratorsType = AcceleratorConfig::class;
   protected $guestAcceleratorsDataType = 'array';
   /**
@@ -48,20 +64,36 @@ class InstanceProperties extends \Google\Collection
    * @var string
    */
   public $machineType;
+  /**
+   * @var Metadata
+   */
+  public $metadata;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $minCpuPlatform;
+  /**
+   * @var NetworkInterface[]
+   */
+  public $networkInterfaces;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
+  /**
+   * @var NetworkPerformanceConfig
+   */
+  public $networkPerformanceConfig;
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
   /**
    * @var string
    */
   public $privateIpv6GoogleAccess;
+  /**
+   * @var ReservationAffinity
+   */
+  public $reservationAffinity;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
   /**
@@ -72,12 +104,28 @@ class InstanceProperties extends \Google\Collection
    * @var string[]
    */
   public $resourcePolicies;
+  /**
+   * @var Scheduling
+   */
+  public $scheduling;
   protected $schedulingType = Scheduling::class;
   protected $schedulingDataType = '';
+  /**
+   * @var ServiceAccount[]
+   */
+  public $serviceAccounts;
   protected $serviceAccountsType = ServiceAccount::class;
   protected $serviceAccountsDataType = 'array';
+  /**
+   * @var ShieldedInstanceConfig
+   */
+  public $shieldedInstanceConfig;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
+  /**
+   * @var Tags
+   */
+  public $tags;
   protected $tagsType = Tags::class;
   protected $tagsDataType = '';
 

@@ -24,20 +24,36 @@ class HttpRouteRule extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var HttpHeaderAction
+   */
+  public $headerAction;
   protected $headerActionType = HttpHeaderAction::class;
   protected $headerActionDataType = '';
+  /**
+   * @var HttpRouteRuleMatch[]
+   */
+  public $matchRules;
   protected $matchRulesType = HttpRouteRuleMatch::class;
   protected $matchRulesDataType = 'array';
   /**
    * @var int
    */
   public $priority;
+  /**
+   * @var HttpRouteAction
+   */
+  public $routeAction;
   protected $routeActionType = HttpRouteAction::class;
   protected $routeActionDataType = '';
   /**
    * @var string
    */
   public $service;
+  /**
+   * @var HttpRedirectAction
+   */
+  public $urlRedirect;
   protected $urlRedirectType = HttpRedirectAction::class;
   protected $urlRedirectDataType = '';
 
