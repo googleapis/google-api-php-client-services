@@ -20,6 +20,10 @@ namespace Google\Service\Appengine;
 class AuthorizedCertificate extends \Google\Collection
 {
   protected $collection_key = 'visibleDomainMappings';
+  /**
+   * @var CertificateRawData
+   */
+  public $certificateRawData;
   protected $certificateRawDataType = CertificateRawData::class;
   protected $certificateRawDataDataType = '';
   /**
@@ -42,6 +46,10 @@ class AuthorizedCertificate extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var ManagedCertificate
+   */
+  public $managedCertificate;
   protected $managedCertificateType = ManagedCertificate::class;
   protected $managedCertificateDataType = '';
   /**

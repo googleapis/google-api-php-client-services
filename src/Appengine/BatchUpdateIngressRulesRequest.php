@@ -20,6 +20,10 @@ namespace Google\Service\Appengine;
 class BatchUpdateIngressRulesRequest extends \Google\Collection
 {
   protected $collection_key = 'ingressRules';
+  /**
+   * @var FirewallRule[]
+   */
+  public $ingressRules;
   protected $ingressRulesType = FirewallRule::class;
   protected $ingressRulesDataType = 'array';
 

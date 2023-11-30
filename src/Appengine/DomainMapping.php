@@ -28,8 +28,16 @@ class DomainMapping extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ResourceRecord[]
+   */
+  public $resourceRecords;
   protected $resourceRecordsType = ResourceRecord::class;
   protected $resourceRecordsDataType = 'array';
+  /**
+   * @var SslSettings
+   */
+  public $sslSettings;
   protected $sslSettingsType = SslSettings::class;
   protected $sslSettingsDataType = '';
 

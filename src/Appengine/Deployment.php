@@ -19,12 +19,28 @@ namespace Google\Service\Appengine;
 
 class Deployment extends \Google\Model
 {
+  /**
+   * @var CloudBuildOptions
+   */
+  public $cloudBuildOptions;
   protected $cloudBuildOptionsType = CloudBuildOptions::class;
   protected $cloudBuildOptionsDataType = '';
+  /**
+   * @var ContainerInfo
+   */
+  public $container;
   protected $containerType = ContainerInfo::class;
   protected $containerDataType = '';
+  /**
+   * @var FileInfo[]
+   */
+  public $files;
   protected $filesType = FileInfo::class;
   protected $filesDataType = 'map';
+  /**
+   * @var ZipInfo
+   */
+  public $zip;
   protected $zipType = ZipInfo::class;
   protected $zipDataType = '';
 

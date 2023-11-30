@@ -20,6 +20,10 @@ namespace Google\Service\Appengine;
 class ListAuthorizedDomainsResponse extends \Google\Collection
 {
   protected $collection_key = 'domains';
+  /**
+   * @var AuthorizedDomain[]
+   */
+  public $domains;
   protected $domainsType = AuthorizedDomain::class;
   protected $domainsDataType = 'array';
   /**

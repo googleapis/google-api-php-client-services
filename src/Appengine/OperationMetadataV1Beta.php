@@ -20,6 +20,10 @@ namespace Google\Service\Appengine;
 class OperationMetadataV1Beta extends \Google\Collection
 {
   protected $collection_key = 'warning';
+  /**
+   * @var CreateVersionMetadataV1Beta
+   */
+  public $createVersionMetadata;
   protected $createVersionMetadataType = CreateVersionMetadataV1Beta::class;
   protected $createVersionMetadataDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Appengine;
 class ListDomainMappingsResponse extends \Google\Collection
 {
   protected $collection_key = 'domainMappings';
+  /**
+   * @var DomainMapping[]
+   */
+  public $domainMappings;
   protected $domainMappingsType = DomainMapping::class;
   protected $domainMappingsDataType = 'array';
   /**

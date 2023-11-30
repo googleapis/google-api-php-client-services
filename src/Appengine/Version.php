@@ -20,14 +20,26 @@ namespace Google\Service\Appengine;
 class Version extends \Google\Collection
 {
   protected $collection_key = 'zones';
+  /**
+   * @var ApiConfigHandler
+   */
+  public $apiConfig;
   protected $apiConfigType = ApiConfigHandler::class;
   protected $apiConfigDataType = '';
   /**
    * @var bool
    */
   public $appEngineApis;
+  /**
+   * @var AutomaticScaling
+   */
+  public $automaticScaling;
   protected $automaticScalingType = AutomaticScaling::class;
   protected $automaticScalingDataType = '';
+  /**
+   * @var BasicScaling
+   */
+  public $basicScaling;
   protected $basicScalingType = BasicScaling::class;
   protected $basicScalingDataType = '';
   /**
@@ -50,14 +62,26 @@ class Version extends \Google\Collection
    * @var string
    */
   public $defaultExpiration;
+  /**
+   * @var Deployment
+   */
+  public $deployment;
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
   /**
    * @var string
    */
   public $diskUsageBytes;
+  /**
+   * @var EndpointsApiService
+   */
+  public $endpointsApiService;
   protected $endpointsApiServiceType = EndpointsApiService::class;
   protected $endpointsApiServiceDataType = '';
+  /**
+   * @var Entrypoint
+   */
+  public $entrypoint;
   protected $entrypointType = Entrypoint::class;
   protected $entrypointDataType = '';
   /**
@@ -68,16 +92,32 @@ class Version extends \Google\Collection
    * @var string[]
    */
   public $envVariables;
+  /**
+   * @var ErrorHandler[]
+   */
+  public $errorHandlers;
   protected $errorHandlersType = ErrorHandler::class;
   protected $errorHandlersDataType = 'array';
+  /**
+   * @var FlexibleRuntimeSettings
+   */
+  public $flexibleRuntimeSettings;
   protected $flexibleRuntimeSettingsType = FlexibleRuntimeSettings::class;
   protected $flexibleRuntimeSettingsDataType = '';
   /**
    * @var array[]
    */
   public $generatedCustomerMetadata;
+  /**
+   * @var UrlMap[]
+   */
+  public $handlers;
   protected $handlersType = UrlMap::class;
   protected $handlersDataType = 'array';
+  /**
+   * @var HealthCheck
+   */
+  public $healthCheck;
   protected $healthCheckType = HealthCheck::class;
   protected $healthCheckDataType = '';
   /**
@@ -92,24 +132,48 @@ class Version extends \Google\Collection
    * @var string
    */
   public $instanceClass;
+  /**
+   * @var Library[]
+   */
+  public $libraries;
   protected $librariesType = Library::class;
   protected $librariesDataType = 'array';
+  /**
+   * @var LivenessCheck
+   */
+  public $livenessCheck;
   protected $livenessCheckType = LivenessCheck::class;
   protected $livenessCheckDataType = '';
+  /**
+   * @var ManualScaling
+   */
+  public $manualScaling;
   protected $manualScalingType = ManualScaling::class;
   protected $manualScalingDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Network
+   */
+  public $network;
   protected $networkType = Network::class;
   protected $networkDataType = '';
   /**
    * @var string
    */
   public $nobuildFilesRegex;
+  /**
+   * @var ReadinessCheck
+   */
+  public $readinessCheck;
   protected $readinessCheckType = ReadinessCheck::class;
   protected $readinessCheckDataType = '';
+  /**
+   * @var Resources
+   */
+  public $resources;
   protected $resourcesType = Resources::class;
   protected $resourcesDataType = '';
   /**
@@ -148,6 +212,10 @@ class Version extends \Google\Collection
    * @var bool
    */
   public $vm;
+  /**
+   * @var VpcAccessConnector
+   */
+  public $vpcAccessConnector;
   protected $vpcAccessConnectorType = VpcAccessConnector::class;
   protected $vpcAccessConnectorDataType = '';
   /**

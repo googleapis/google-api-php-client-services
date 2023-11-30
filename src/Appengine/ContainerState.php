@@ -19,8 +19,16 @@ namespace Google\Service\Appengine;
 
 class ContainerState extends \Google\Model
 {
+  /**
+   * @var Reasons
+   */
+  public $currentReasons;
   protected $currentReasonsType = Reasons::class;
   protected $currentReasonsDataType = '';
+  /**
+   * @var Reasons
+   */
+  public $previousReasons;
   protected $previousReasonsType = Reasons::class;
   protected $previousReasonsDataType = '';
   /**

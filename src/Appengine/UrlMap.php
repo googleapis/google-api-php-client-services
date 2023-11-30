@@ -19,6 +19,10 @@ namespace Google\Service\Appengine;
 
 class UrlMap extends \Google\Model
 {
+  /**
+   * @var ApiEndpointHandler
+   */
+  public $apiEndpoint;
   protected $apiEndpointType = ApiEndpointHandler::class;
   protected $apiEndpointDataType = '';
   /**
@@ -33,12 +37,20 @@ class UrlMap extends \Google\Model
    * @var string
    */
   public $redirectHttpResponseCode;
+  /**
+   * @var ScriptHandler
+   */
+  public $script;
   protected $scriptType = ScriptHandler::class;
   protected $scriptDataType = '';
   /**
    * @var string
    */
   public $securityLevel;
+  /**
+   * @var StaticFilesHandler
+   */
+  public $staticFiles;
   protected $staticFilesType = StaticFilesHandler::class;
   protected $staticFilesDataType = '';
   /**

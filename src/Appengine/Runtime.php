@@ -20,10 +20,22 @@ namespace Google\Service\Appengine;
 class Runtime extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var Date
+   */
+  public $decommissionedDate;
   protected $decommissionedDateType = Date::class;
   protected $decommissionedDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $deprecationDate;
   protected $deprecationDateType = Date::class;
   protected $deprecationDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $endOfSupportDate;
   protected $endOfSupportDateType = Date::class;
   protected $endOfSupportDateDataType = '';
   /**
