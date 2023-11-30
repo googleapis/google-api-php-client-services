@@ -19,6 +19,10 @@ namespace Google\Service\DataprocMetastore;
 
 class MetadataIntegration extends \Google\Model
 {
+  /**
+   * @var DataCatalogConfig
+   */
+  public $dataCatalogConfig;
   protected $dataCatalogConfigType = DataCatalogConfig::class;
   protected $dataCatalogConfigDataType = '';
 

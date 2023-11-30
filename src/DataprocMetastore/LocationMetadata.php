@@ -20,8 +20,16 @@ namespace Google\Service\DataprocMetastore;
 class LocationMetadata extends \Google\Collection
 {
   protected $collection_key = 'supportedHiveMetastoreVersions';
+  /**
+   * @var MultiRegionMetadata
+   */
+  public $multiRegionMetadata;
   protected $multiRegionMetadataType = MultiRegionMetadata::class;
   protected $multiRegionMetadataDataType = '';
+  /**
+   * @var HiveMetastoreVersion[]
+   */
+  public $supportedHiveMetastoreVersions;
   protected $supportedHiveMetastoreVersionsType = HiveMetastoreVersion::class;
   protected $supportedHiveMetastoreVersionsDataType = 'array';
 

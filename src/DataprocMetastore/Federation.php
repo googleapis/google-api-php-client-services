@@ -19,6 +19,10 @@ namespace Google\Service\DataprocMetastore;
 
 class Federation extends \Google\Model
 {
+  /**
+   * @var BackendMetastore[]
+   */
+  public $backendMetastores;
   protected $backendMetastoresType = BackendMetastore::class;
   protected $backendMetastoresDataType = 'map';
   /**

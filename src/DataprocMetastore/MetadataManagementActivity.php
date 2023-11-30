@@ -20,8 +20,16 @@ namespace Google\Service\DataprocMetastore;
 class MetadataManagementActivity extends \Google\Collection
 {
   protected $collection_key = 'restores';
+  /**
+   * @var MetadataExport[]
+   */
+  public $metadataExports;
   protected $metadataExportsType = MetadataExport::class;
   protected $metadataExportsDataType = 'array';
+  /**
+   * @var Restore[]
+   */
+  public $restores;
   protected $restoresType = Restore::class;
   protected $restoresDataType = 'array';
 
