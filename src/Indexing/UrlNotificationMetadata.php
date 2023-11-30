@@ -19,8 +19,16 @@ namespace Google\Service\Indexing;
 
 class UrlNotificationMetadata extends \Google\Model
 {
+  /**
+   * @var UrlNotification
+   */
+  public $latestRemove;
   protected $latestRemoveType = UrlNotification::class;
   protected $latestRemoveDataType = '';
+  /**
+   * @var UrlNotification
+   */
+  public $latestUpdate;
   protected $latestUpdateType = UrlNotification::class;
   protected $latestUpdateDataType = '';
   /**
