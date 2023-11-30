@@ -20,6 +20,10 @@ namespace Google\Service\CloudComposer;
 class WebServerNetworkAccessControl extends \Google\Collection
 {
   protected $collection_key = 'allowedIpRanges';
+  /**
+   * @var AllowedIpRange[]
+   */
+  public $allowedIpRanges;
   protected $allowedIpRangesType = AllowedIpRange::class;
   protected $allowedIpRangesDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\CloudComposer;
 
 class RecoveryConfig extends \Google\Model
 {
+  /**
+   * @var ScheduledSnapshotsConfig
+   */
+  public $scheduledSnapshotsConfig;
   protected $scheduledSnapshotsConfigType = ScheduledSnapshotsConfig::class;
   protected $scheduledSnapshotsConfigDataType = '';
 

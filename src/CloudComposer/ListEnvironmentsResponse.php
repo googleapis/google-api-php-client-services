@@ -20,6 +20,10 @@ namespace Google\Service\CloudComposer;
 class ListEnvironmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'environments';
+  /**
+   * @var Environment[]
+   */
+  public $environments;
   protected $environmentsType = Environment::class;
   protected $environmentsDataType = 'array';
   /**

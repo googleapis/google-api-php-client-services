@@ -19,12 +19,28 @@ namespace Google\Service\CloudComposer;
 
 class WorkloadsConfig extends \Google\Model
 {
+  /**
+   * @var SchedulerResource
+   */
+  public $scheduler;
   protected $schedulerType = SchedulerResource::class;
   protected $schedulerDataType = '';
+  /**
+   * @var TriggererResource
+   */
+  public $triggerer;
   protected $triggererType = TriggererResource::class;
   protected $triggererDataType = '';
+  /**
+   * @var WebServerResource
+   */
+  public $webServer;
   protected $webServerType = WebServerResource::class;
   protected $webServerDataType = '';
+  /**
+   * @var WorkerResource
+   */
+  public $worker;
   protected $workerType = WorkerResource::class;
   protected $workerDataType = '';
 

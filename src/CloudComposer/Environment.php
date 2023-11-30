@@ -19,6 +19,10 @@ namespace Google\Service\CloudComposer;
 
 class Environment extends \Google\Model
 {
+  /**
+   * @var EnvironmentConfig
+   */
+  public $config;
   protected $configType = EnvironmentConfig::class;
   protected $configDataType = '';
   /**
@@ -41,6 +45,10 @@ class Environment extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var StorageConfig
+   */
+  public $storageConfig;
   protected $storageConfigType = StorageConfig::class;
   protected $storageConfigDataType = '';
   /**

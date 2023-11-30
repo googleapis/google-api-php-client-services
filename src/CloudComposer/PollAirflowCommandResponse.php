@@ -20,8 +20,16 @@ namespace Google\Service\CloudComposer;
 class PollAirflowCommandResponse extends \Google\Collection
 {
   protected $collection_key = 'output';
+  /**
+   * @var ExitInfo
+   */
+  public $exitInfo;
   protected $exitInfoType = ExitInfo::class;
   protected $exitInfoDataType = '';
+  /**
+   * @var Line[]
+   */
+  public $output;
   protected $outputType = Line::class;
   protected $outputDataType = 'array';
   /**

@@ -32,6 +32,10 @@ class ImageVersion extends \Google\Collection
    * @var bool
    */
   public $isDefault;
+  /**
+   * @var Date
+   */
+  public $releaseDate;
   protected $releaseDateType = Date::class;
   protected $releaseDateDataType = '';
   /**
