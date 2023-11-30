@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class ManagedConfigurationsSettingsListResponse extends \Google\Collection
 {
   protected $collection_key = 'managedConfigurationsSettings';
+  /**
+   * @var ManagedConfigurationsSettings[]
+   */
+  public $managedConfigurationsSettings;
   protected $managedConfigurationsSettingsType = ManagedConfigurationsSettings::class;
   protected $managedConfigurationsSettingsDataType = 'array';
 

@@ -20,10 +20,22 @@ namespace Google\Service\AndroidEnterprise;
 class ProductsListResponse extends \Google\Collection
 {
   protected $collection_key = 'product';
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var Product[]
+   */
+  public $product;
   protected $productType = Product::class;
   protected $productDataType = 'array';
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
 

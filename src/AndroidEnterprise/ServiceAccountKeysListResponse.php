@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class ServiceAccountKeysListResponse extends \Google\Collection
 {
   protected $collection_key = 'serviceAccountKey';
+  /**
+   * @var ServiceAccountKey[]
+   */
+  public $serviceAccountKey;
   protected $serviceAccountKeyType = ServiceAccountKey::class;
   protected $serviceAccountKeyDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class GroupLicensesListResponse extends \Google\Collection
 {
   protected $collection_key = 'groupLicense';
+  /**
+   * @var GroupLicense[]
+   */
+  public $groupLicense;
   protected $groupLicenseType = GroupLicense::class;
   protected $groupLicenseDataType = 'array';
 

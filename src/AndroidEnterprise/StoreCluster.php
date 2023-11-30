@@ -24,6 +24,10 @@ class StoreCluster extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var LocalizedText[]
+   */
+  public $name;
   protected $nameType = LocalizedText::class;
   protected $nameDataType = 'array';
   /**

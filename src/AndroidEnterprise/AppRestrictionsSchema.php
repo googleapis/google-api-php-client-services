@@ -24,6 +24,10 @@ class AppRestrictionsSchema extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var AppRestrictionsSchemaRestriction[]
+   */
+  public $restrictions;
   protected $restrictionsType = AppRestrictionsSchemaRestriction::class;
   protected $restrictionsDataType = 'array';
 

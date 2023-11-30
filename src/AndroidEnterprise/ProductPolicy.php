@@ -20,14 +20,26 @@ namespace Google\Service\AndroidEnterprise;
 class ProductPolicy extends \Google\Collection
 {
   protected $collection_key = 'tracks';
+  /**
+   * @var AutoInstallPolicy
+   */
+  public $autoInstallPolicy;
   protected $autoInstallPolicyType = AutoInstallPolicy::class;
   protected $autoInstallPolicyDataType = '';
   /**
    * @var string
    */
   public $autoUpdateMode;
+  /**
+   * @var EnterpriseAuthenticationAppLinkConfig[]
+   */
+  public $enterpriseAuthenticationAppLinkConfigs;
   protected $enterpriseAuthenticationAppLinkConfigsType = EnterpriseAuthenticationAppLinkConfig::class;
   protected $enterpriseAuthenticationAppLinkConfigsDataType = 'array';
+  /**
+   * @var ManagedConfiguration
+   */
+  public $managedConfiguration;
   protected $managedConfigurationType = ManagedConfiguration::class;
   protected $managedConfigurationDataType = '';
   /**

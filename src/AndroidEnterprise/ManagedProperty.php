@@ -28,8 +28,16 @@ class ManagedProperty extends \Google\Collection
    * @var bool
    */
   public $valueBool;
+  /**
+   * @var ManagedPropertyBundle
+   */
+  public $valueBundle;
   protected $valueBundleType = ManagedPropertyBundle::class;
   protected $valueBundleDataType = '';
+  /**
+   * @var ManagedPropertyBundle[]
+   */
+  public $valueBundleArray;
   protected $valueBundleArrayType = ManagedPropertyBundle::class;
   protected $valueBundleArrayDataType = 'array';
   /**

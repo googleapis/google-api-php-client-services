@@ -19,6 +19,10 @@ namespace Google\Service\AndroidEnterprise;
 
 class ServiceAccount extends \Google\Model
 {
+  /**
+   * @var ServiceAccountKey
+   */
+  public $key;
   protected $keyType = ServiceAccountKey::class;
   protected $keyDataType = '';
   /**

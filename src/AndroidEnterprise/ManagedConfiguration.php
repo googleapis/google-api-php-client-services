@@ -20,12 +20,20 @@ namespace Google\Service\AndroidEnterprise;
 class ManagedConfiguration extends \Google\Collection
 {
   protected $collection_key = 'managedProperty';
+  /**
+   * @var ConfigurationVariables
+   */
+  public $configurationVariables;
   protected $configurationVariablesType = ConfigurationVariables::class;
   protected $configurationVariablesDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var ManagedProperty[]
+   */
+  public $managedProperty;
   protected $managedPropertyType = ManagedProperty::class;
   protected $managedPropertyDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class WebAppsListResponse extends \Google\Collection
 {
   protected $collection_key = 'webApp';
+  /**
+   * @var WebApp[]
+   */
+  public $webApp;
   protected $webAppType = WebApp::class;
   protected $webAppDataType = 'array';
 

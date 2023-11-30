@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class ManagedConfigurationsForDeviceListResponse extends \Google\Collection
 {
   protected $collection_key = 'managedConfigurationForDevice';
+  /**
+   * @var ManagedConfiguration[]
+   */
+  public $managedConfigurationForDevice;
   protected $managedConfigurationForDeviceType = ManagedConfiguration::class;
   protected $managedConfigurationForDeviceDataType = 'array';
 

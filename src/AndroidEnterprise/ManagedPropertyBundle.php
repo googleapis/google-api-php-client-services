@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class ManagedPropertyBundle extends \Google\Collection
 {
   protected $collection_key = 'managedProperty';
+  /**
+   * @var ManagedProperty[]
+   */
+  public $managedProperty;
   protected $managedPropertyType = ManagedProperty::class;
   protected $managedPropertyDataType = 'array';
 

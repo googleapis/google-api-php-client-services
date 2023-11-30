@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class EntitlementsListResponse extends \Google\Collection
 {
   protected $collection_key = 'entitlement';
+  /**
+   * @var Entitlement[]
+   */
+  public $entitlement;
   protected $entitlementType = Entitlement::class;
   protected $entitlementDataType = 'array';
 

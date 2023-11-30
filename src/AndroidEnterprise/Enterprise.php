@@ -20,8 +20,16 @@ namespace Google\Service\AndroidEnterprise;
 class Enterprise extends \Google\Collection
 {
   protected $collection_key = 'administrator';
+  /**
+   * @var Administrator[]
+   */
+  public $administrator;
   protected $administratorType = Administrator::class;
   protected $administratorDataType = 'array';
+  /**
+   * @var GoogleAuthenticationSettings
+   */
+  public $googleAuthenticationSettings;
   protected $googleAuthenticationSettingsType = GoogleAuthenticationSettings::class;
   protected $googleAuthenticationSettingsDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class AdministratorWebTokenSpec extends \Google\Collection
 {
   protected $collection_key = 'permission';
+  /**
+   * @var AdministratorWebTokenSpecManagedConfigurations
+   */
+  public $managedConfigurations;
   protected $managedConfigurationsType = AdministratorWebTokenSpecManagedConfigurations::class;
   protected $managedConfigurationsDataType = '';
   /**
@@ -30,14 +34,34 @@ class AdministratorWebTokenSpec extends \Google\Collection
    * @var string[]
    */
   public $permission;
+  /**
+   * @var AdministratorWebTokenSpecPlaySearch
+   */
+  public $playSearch;
   protected $playSearchType = AdministratorWebTokenSpecPlaySearch::class;
   protected $playSearchDataType = '';
+  /**
+   * @var AdministratorWebTokenSpecPrivateApps
+   */
+  public $privateApps;
   protected $privateAppsType = AdministratorWebTokenSpecPrivateApps::class;
   protected $privateAppsDataType = '';
+  /**
+   * @var AdministratorWebTokenSpecStoreBuilder
+   */
+  public $storeBuilder;
   protected $storeBuilderType = AdministratorWebTokenSpecStoreBuilder::class;
   protected $storeBuilderDataType = '';
+  /**
+   * @var AdministratorWebTokenSpecWebApps
+   */
+  public $webApps;
   protected $webAppsType = AdministratorWebTokenSpecWebApps::class;
   protected $webAppsDataType = '';
+  /**
+   * @var AdministratorWebTokenSpecZeroTouch
+   */
+  public $zeroTouch;
   protected $zeroTouchType = AdministratorWebTokenSpecZeroTouch::class;
   protected $zeroTouchDataType = '';
 

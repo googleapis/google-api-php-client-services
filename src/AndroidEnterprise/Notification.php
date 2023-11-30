@@ -19,28 +19,60 @@ namespace Google\Service\AndroidEnterprise;
 
 class Notification extends \Google\Model
 {
+  /**
+   * @var AppRestrictionsSchemaChangeEvent
+   */
+  public $appRestrictionsSchemaChangeEvent;
   protected $appRestrictionsSchemaChangeEventType = AppRestrictionsSchemaChangeEvent::class;
   protected $appRestrictionsSchemaChangeEventDataType = '';
+  /**
+   * @var AppUpdateEvent
+   */
+  public $appUpdateEvent;
   protected $appUpdateEventType = AppUpdateEvent::class;
   protected $appUpdateEventDataType = '';
+  /**
+   * @var DeviceReportUpdateEvent
+   */
+  public $deviceReportUpdateEvent;
   protected $deviceReportUpdateEventType = DeviceReportUpdateEvent::class;
   protected $deviceReportUpdateEventDataType = '';
   /**
    * @var string
    */
   public $enterpriseId;
+  /**
+   * @var InstallFailureEvent
+   */
+  public $installFailureEvent;
   protected $installFailureEventType = InstallFailureEvent::class;
   protected $installFailureEventDataType = '';
+  /**
+   * @var NewDeviceEvent
+   */
+  public $newDeviceEvent;
   protected $newDeviceEventType = NewDeviceEvent::class;
   protected $newDeviceEventDataType = '';
+  /**
+   * @var NewPermissionsEvent
+   */
+  public $newPermissionsEvent;
   protected $newPermissionsEventType = NewPermissionsEvent::class;
   protected $newPermissionsEventDataType = '';
   /**
    * @var string
    */
   public $notificationType;
+  /**
+   * @var ProductApprovalEvent
+   */
+  public $productApprovalEvent;
   protected $productApprovalEventType = ProductApprovalEvent::class;
   protected $productApprovalEventDataType = '';
+  /**
+   * @var ProductAvailabilityChangeEvent
+   */
+  public $productAvailabilityChangeEvent;
   protected $productAvailabilityChangeEventType = ProductAvailabilityChangeEvent::class;
   protected $productAvailabilityChangeEventDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class ProductPermissions extends \Google\Collection
 {
   protected $collection_key = 'permission';
+  /**
+   * @var ProductPermission[]
+   */
+  public $permission;
   protected $permissionType = ProductPermission::class;
   protected $permissionDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class AutoInstallPolicy extends \Google\Collection
 {
   protected $collection_key = 'autoInstallConstraint';
+  /**
+   * @var AutoInstallConstraint[]
+   */
+  public $autoInstallConstraint;
   protected $autoInstallConstraintType = AutoInstallConstraint::class;
   protected $autoInstallConstraintDataType = 'array';
   /**

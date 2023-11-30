@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class StoreLayoutClustersListResponse extends \Google\Collection
 {
   protected $collection_key = 'cluster';
+  /**
+   * @var StoreCluster[]
+   */
+  public $cluster;
   protected $clusterType = StoreCluster::class;
   protected $clusterDataType = 'array';
 

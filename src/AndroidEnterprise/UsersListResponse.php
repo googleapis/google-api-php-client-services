@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class UsersListResponse extends \Google\Collection
 {
   protected $collection_key = 'user';
+  /**
+   * @var User[]
+   */
+  public $user;
   protected $userType = User::class;
   protected $userDataType = 'array';
 

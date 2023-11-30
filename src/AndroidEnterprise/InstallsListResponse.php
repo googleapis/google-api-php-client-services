@@ -20,6 +20,10 @@ namespace Google\Service\AndroidEnterprise;
 class InstallsListResponse extends \Google\Collection
 {
   protected $collection_key = 'install';
+  /**
+   * @var Install[]
+   */
+  public $install;
   protected $installType = Install::class;
   protected $installDataType = 'array';
 

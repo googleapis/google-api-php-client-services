@@ -20,10 +20,22 @@ namespace Google\Service\AndroidEnterprise;
 class Product extends \Google\Collection
 {
   protected $collection_key = 'screenshotUrls';
+  /**
+   * @var AppRestrictionsSchema
+   */
+  public $appRestrictionsSchema;
   protected $appRestrictionsSchemaType = AppRestrictionsSchema::class;
   protected $appRestrictionsSchemaDataType = '';
+  /**
+   * @var TrackInfo[]
+   */
+  public $appTracks;
   protected $appTracksType = TrackInfo::class;
   protected $appTracksDataType = 'array';
+  /**
+   * @var AppVersion[]
+   */
+  public $appVersion;
   protected $appVersionType = AppVersion::class;
   protected $appVersionDataType = 'array';
   /**
@@ -78,6 +90,10 @@ class Product extends \Google\Collection
    * @var int
    */
   public $minAndroidSdkVersion;
+  /**
+   * @var ProductPermission[]
+   */
+  public $permissions;
   protected $permissionsType = ProductPermission::class;
   protected $permissionsDataType = 'array';
   /**
@@ -100,6 +116,10 @@ class Product extends \Google\Collection
    * @var string[]
    */
   public $screenshotUrls;
+  /**
+   * @var ProductSigningCertificate
+   */
+  public $signingCertificate;
   protected $signingCertificateType = ProductSigningCertificate::class;
   protected $signingCertificateDataType = '';
   /**
