@@ -20,12 +20,28 @@ namespace Google\Service\ContainerAnalysis;
 class SlsaProvenance extends \Google\Collection
 {
   protected $collection_key = 'materials';
+  /**
+   * @var SlsaBuilder
+   */
+  public $builder;
   protected $builderType = SlsaBuilder::class;
   protected $builderDataType = '';
+  /**
+   * @var Material[]
+   */
+  public $materials;
   protected $materialsType = Material::class;
   protected $materialsDataType = 'array';
+  /**
+   * @var SlsaMetadata
+   */
+  public $metadata;
   protected $metadataType = SlsaMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SlsaRecipe
+   */
+  public $recipe;
   protected $recipeType = SlsaRecipe::class;
   protected $recipeDataType = '';
 

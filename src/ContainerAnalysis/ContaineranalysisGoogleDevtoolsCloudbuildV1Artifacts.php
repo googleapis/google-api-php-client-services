@@ -24,12 +24,28 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts extends \Google\Colle
    * @var string[]
    */
   public $images;
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact[]
+   */
+  public $mavenArtifacts;
   protected $mavenArtifactsType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsMavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage[]
+   */
+  public $npmPackages;
   protected $npmPackagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsNpmPackage::class;
   protected $npmPackagesDataType = 'array';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects
+   */
+  public $objects;
   protected $objectsType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects::class;
   protected $objectsDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage[]
+   */
+  public $pythonPackages;
   protected $pythonPackagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsPythonPackage::class;
   protected $pythonPackagesDataType = 'array';
 

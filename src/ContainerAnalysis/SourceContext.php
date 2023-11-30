@@ -19,10 +19,22 @@ namespace Google\Service\ContainerAnalysis;
 
 class SourceContext extends \Google\Model
 {
+  /**
+   * @var CloudRepoSourceContext
+   */
+  public $cloudRepo;
   protected $cloudRepoType = CloudRepoSourceContext::class;
   protected $cloudRepoDataType = '';
+  /**
+   * @var GerritSourceContext
+   */
+  public $gerrit;
   protected $gerritType = GerritSourceContext::class;
   protected $gerritDataType = '';
+  /**
+   * @var GitSourceContext
+   */
+  public $git;
   protected $gitType = GitSourceContext::class;
   protected $gitDataType = '';
   /**

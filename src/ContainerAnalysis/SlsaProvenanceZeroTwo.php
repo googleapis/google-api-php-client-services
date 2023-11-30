@@ -28,12 +28,28 @@ class SlsaProvenanceZeroTwo extends \Google\Collection
    * @var string
    */
   public $buildType;
+  /**
+   * @var GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder
+   */
+  public $builder;
   protected $builderType = GrafeasV1SlsaProvenanceZeroTwoSlsaBuilder::class;
   protected $builderDataType = '';
+  /**
+   * @var GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation
+   */
+  public $invocation;
   protected $invocationType = GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation::class;
   protected $invocationDataType = '';
+  /**
+   * @var GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial[]
+   */
+  public $materials;
   protected $materialsType = GrafeasV1SlsaProvenanceZeroTwoSlsaMaterial::class;
   protected $materialsDataType = 'array';
+  /**
+   * @var GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata
+   */
+  public $metadata;
   protected $metadataType = GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata::class;
   protected $metadataDataType = '';
 

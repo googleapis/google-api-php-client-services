@@ -19,6 +19,10 @@ namespace Google\Service\ContainerAnalysis;
 
 class BatchCreateNotesRequest extends \Google\Model
 {
+  /**
+   * @var Note[]
+   */
+  public $notes;
   protected $notesType = Note::class;
   protected $notesDataType = 'map';
 

@@ -20,10 +20,22 @@ namespace Google\Service\ContainerAnalysis;
 class RunDetails extends \Google\Collection
 {
   protected $collection_key = 'byproducts';
+  /**
+   * @var ProvenanceBuilder
+   */
+  public $builder;
   protected $builderType = ProvenanceBuilder::class;
   protected $builderDataType = '';
+  /**
+   * @var ResourceDescriptor[]
+   */
+  public $byproducts;
   protected $byproductsType = ResourceDescriptor::class;
   protected $byproductsDataType = 'array';
+  /**
+   * @var BuildMetadata
+   */
+  public $metadata;
   protected $metadataType = BuildMetadata::class;
   protected $metadataDataType = '';
 

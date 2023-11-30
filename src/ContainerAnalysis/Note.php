@@ -20,26 +20,54 @@ namespace Google\Service\ContainerAnalysis;
 class Note extends \Google\Collection
 {
   protected $collection_key = 'relatedUrl';
+  /**
+   * @var AttestationNote
+   */
+  public $attestation;
   protected $attestationType = AttestationNote::class;
   protected $attestationDataType = '';
+  /**
+   * @var BuildNote
+   */
+  public $build;
   protected $buildType = BuildNote::class;
   protected $buildDataType = '';
+  /**
+   * @var ComplianceNote
+   */
+  public $compliance;
   protected $complianceType = ComplianceNote::class;
   protected $complianceDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var DeploymentNote
+   */
+  public $deployment;
   protected $deploymentType = DeploymentNote::class;
   protected $deploymentDataType = '';
+  /**
+   * @var DiscoveryNote
+   */
+  public $discovery;
   protected $discoveryType = DiscoveryNote::class;
   protected $discoveryDataType = '';
+  /**
+   * @var DSSEAttestationNote
+   */
+  public $dsseAttestation;
   protected $dsseAttestationType = DSSEAttestationNote::class;
   protected $dsseAttestationDataType = '';
   /**
    * @var string
    */
   public $expirationTime;
+  /**
+   * @var ImageNote
+   */
+  public $image;
   protected $imageType = ImageNote::class;
   protected $imageDataType = '';
   /**
@@ -54,14 +82,26 @@ class Note extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var PackageNote
+   */
+  public $package;
   protected $packageType = PackageNote::class;
   protected $packageDataType = '';
   /**
    * @var string[]
    */
   public $relatedNoteNames;
+  /**
+   * @var RelatedUrl[]
+   */
+  public $relatedUrl;
   protected $relatedUrlType = RelatedUrl::class;
   protected $relatedUrlDataType = 'array';
+  /**
+   * @var SBOMReferenceNote
+   */
+  public $sbomReference;
   protected $sbomReferenceType = SBOMReferenceNote::class;
   protected $sbomReferenceDataType = '';
   /**
@@ -72,10 +112,22 @@ class Note extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var UpgradeNote
+   */
+  public $upgrade;
   protected $upgradeType = UpgradeNote::class;
   protected $upgradeDataType = '';
+  /**
+   * @var VulnerabilityNote
+   */
+  public $vulnerability;
   protected $vulnerabilityType = VulnerabilityNote::class;
   protected $vulnerabilityDataType = '';
+  /**
+   * @var VulnerabilityAssessmentNote
+   */
+  public $vulnerabilityAssessment;
   protected $vulnerabilityAssessmentType = VulnerabilityAssessmentNote::class;
   protected $vulnerabilityAssessmentDataType = '';
 

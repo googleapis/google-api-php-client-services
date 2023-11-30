@@ -19,16 +19,40 @@ namespace Google\Service\ContainerAnalysis;
 
 class ContaineranalysisGoogleDevtoolsCloudbuildV1SourceProvenance extends \Google\Model
 {
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes[]
+   */
+  public $fileHashes;
   protected $fileHashesType = ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes::class;
   protected $fileHashesDataType = 'map';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository
+   */
+  public $resolvedConnectedRepository;
   protected $resolvedConnectedRepositoryType = ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository::class;
   protected $resolvedConnectedRepositoryDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource
+   */
+  public $resolvedGitSource;
   protected $resolvedGitSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource::class;
   protected $resolvedGitSourceDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource
+   */
+  public $resolvedRepoSource;
   protected $resolvedRepoSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource::class;
   protected $resolvedRepoSourceDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource
+   */
+  public $resolvedStorageSource;
   protected $resolvedStorageSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource::class;
   protected $resolvedStorageSourceDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest
+   */
+  public $resolvedStorageSourceManifest;
   protected $resolvedStorageSourceManifestType = ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest::class;
   protected $resolvedStorageSourceManifestDataType = '';
 

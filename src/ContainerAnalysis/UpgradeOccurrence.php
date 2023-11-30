@@ -19,14 +19,26 @@ namespace Google\Service\ContainerAnalysis;
 
 class UpgradeOccurrence extends \Google\Model
 {
+  /**
+   * @var UpgradeDistribution
+   */
+  public $distribution;
   protected $distributionType = UpgradeDistribution::class;
   protected $distributionDataType = '';
   /**
    * @var string
    */
   public $package;
+  /**
+   * @var Version
+   */
+  public $parsedVersion;
   protected $parsedVersionType = Version::class;
   protected $parsedVersionDataType = '';
+  /**
+   * @var WindowsUpdate
+   */
+  public $windowsUpdate;
   protected $windowsUpdateType = WindowsUpdate::class;
   protected $windowsUpdateDataType = '';
 

@@ -31,12 +31,28 @@ class InTotoStatement extends \Google\Collection
    * @var string
    */
   public $predicateType;
+  /**
+   * @var InTotoProvenance
+   */
+  public $provenance;
   protected $provenanceType = InTotoProvenance::class;
   protected $provenanceDataType = '';
+  /**
+   * @var SlsaProvenance
+   */
+  public $slsaProvenance;
   protected $slsaProvenanceType = SlsaProvenance::class;
   protected $slsaProvenanceDataType = '';
+  /**
+   * @var SlsaProvenanceZeroTwo
+   */
+  public $slsaProvenanceZeroTwo;
   protected $slsaProvenanceZeroTwoType = SlsaProvenanceZeroTwo::class;
   protected $slsaProvenanceZeroTwoDataType = '';
+  /**
+   * @var Subject[]
+   */
+  public $subject;
   protected $subjectType = Subject::class;
   protected $subjectDataType = 'array';
 

@@ -31,6 +31,10 @@ class GrafeasV1SlsaProvenanceZeroTwoSlsaMetadata extends \Google\Model
    * @var string
    */
   public $buildStartedOn;
+  /**
+   * @var GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness
+   */
+  public $completeness;
   protected $completenessType = GrafeasV1SlsaProvenanceZeroTwoSlsaCompleteness::class;
   protected $completenessDataType = '';
   /**

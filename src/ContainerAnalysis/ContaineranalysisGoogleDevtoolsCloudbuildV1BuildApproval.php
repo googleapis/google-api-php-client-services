@@ -19,8 +19,16 @@ namespace Google\Service\ContainerAnalysis;
 
 class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildApproval extends \Google\Model
 {
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ApprovalConfig
+   */
+  public $config;
   protected $configType = ContaineranalysisGoogleDevtoolsCloudbuildV1ApprovalConfig::class;
   protected $configDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ApprovalResult
+   */
+  public $result;
   protected $resultType = ContaineranalysisGoogleDevtoolsCloudbuildV1ApprovalResult::class;
   protected $resultDataType = '';
   /**

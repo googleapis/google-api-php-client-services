@@ -20,14 +20,26 @@ namespace Google\Service\ContainerAnalysis;
 class UpgradeNote extends \Google\Collection
 {
   protected $collection_key = 'distributions';
+  /**
+   * @var UpgradeDistribution[]
+   */
+  public $distributions;
   protected $distributionsType = UpgradeDistribution::class;
   protected $distributionsDataType = 'array';
   /**
    * @var string
    */
   public $package;
+  /**
+   * @var Version
+   */
+  public $version;
   protected $versionType = Version::class;
   protected $versionDataType = '';
+  /**
+   * @var WindowsUpdate
+   */
+  public $windowsUpdate;
   protected $windowsUpdateType = WindowsUpdate::class;
   protected $windowsUpdateDataType = '';
 

@@ -24,6 +24,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends \Google\Collect
    * @var string
    */
   public $artifactManifest;
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan
+   */
+  public $artifactTiming;
   protected $artifactTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $artifactTimingDataType = '';
   /**
@@ -34,16 +38,32 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends \Google\Collect
    * @var string[]
    */
   public $buildStepOutputs;
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage[]
+   */
+  public $images;
   protected $imagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage::class;
   protected $imagesDataType = 'array';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact[]
+   */
+  public $mavenArtifacts;
   protected $mavenArtifactsType = ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage[]
+   */
+  public $npmPackages;
   protected $npmPackagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedNpmPackage::class;
   protected $npmPackagesDataType = 'array';
   /**
    * @var string
    */
   public $numArtifacts;
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage[]
+   */
+  public $pythonPackages;
   protected $pythonPackagesType = ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage::class;
   protected $pythonPackagesDataType = 'array';
 

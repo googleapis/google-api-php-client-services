@@ -31,6 +31,10 @@ class Distribution extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var Version
+   */
+  public $latestVersion;
   protected $latestVersionType = Version::class;
   protected $latestVersionDataType = '';
   /**

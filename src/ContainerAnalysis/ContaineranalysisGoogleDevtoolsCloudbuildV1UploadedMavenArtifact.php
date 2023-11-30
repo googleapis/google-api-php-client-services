@@ -19,8 +19,16 @@ namespace Google\Service\ContainerAnalysis;
 
 class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
 {
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes
+   */
+  public $fileHashes;
   protected $fileHashesType = ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes::class;
   protected $fileHashesDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan
+   */
+  public $pushTiming;
   protected $pushTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pushTimingDataType = '';
   /**

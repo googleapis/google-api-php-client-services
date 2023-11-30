@@ -27,11 +27,19 @@ class InTotoSlsaProvenanceV1 extends \Google\Collection
    * @var string
    */
   public $type;
+  /**
+   * @var SlsaProvenanceV1
+   */
+  public $predicate;
   protected $predicateDataType = '';
   /**
    * @var string
    */
   public $predicateType;
+  /**
+   * @var Subject[]
+   */
+  public $subject;
   protected $subjectType = Subject::class;
   protected $subjectDataType = 'array';
 

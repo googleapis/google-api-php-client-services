@@ -19,8 +19,16 @@ namespace Google\Service\ContainerAnalysis;
 
 class DSSEAttestationOccurrence extends \Google\Model
 {
+  /**
+   * @var Envelope
+   */
+  public $envelope;
   protected $envelopeType = Envelope::class;
   protected $envelopeDataType = '';
+  /**
+   * @var InTotoStatement
+   */
+  public $statement;
   protected $statementType = InTotoStatement::class;
   protected $statementDataType = '';
 

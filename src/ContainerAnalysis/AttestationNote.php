@@ -19,6 +19,10 @@ namespace Google\Service\ContainerAnalysis;
 
 class AttestationNote extends \Google\Model
 {
+  /**
+   * @var Hint
+   */
+  public $hint;
   protected $hintType = Hint::class;
   protected $hintDataType = '';
 

@@ -20,8 +20,16 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1Secrets extends \Google\Collection
 {
   protected $collection_key = 'secretManager';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1InlineSecret[]
+   */
+  public $inline;
   protected $inlineType = ContaineranalysisGoogleDevtoolsCloudbuildV1InlineSecret::class;
   protected $inlineDataType = 'array';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1SecretManagerSecret[]
+   */
+  public $secretManager;
   protected $secretManagerType = ContaineranalysisGoogleDevtoolsCloudbuildV1SecretManagerSecret::class;
   protected $secretManagerDataType = 'array';
 

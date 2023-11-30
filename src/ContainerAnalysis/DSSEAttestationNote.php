@@ -19,6 +19,10 @@ namespace Google\Service\ContainerAnalysis;
 
 class DSSEAttestationNote extends \Google\Model
 {
+  /**
+   * @var DSSEHint
+   */
+  public $hint;
   protected $hintType = DSSEHint::class;
   protected $hintDataType = '';
 

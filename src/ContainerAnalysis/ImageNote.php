@@ -19,6 +19,10 @@ namespace Google\Service\ContainerAnalysis;
 
 class ImageNote extends \Google\Model
 {
+  /**
+   * @var Fingerprint
+   */
+  public $fingerprint;
   protected $fingerprintType = Fingerprint::class;
   protected $fingerprintDataType = '';
   /**

@@ -19,24 +19,56 @@ namespace Google\Service\ContainerAnalysis;
 
 class Occurrence extends \Google\Model
 {
+  /**
+   * @var AttestationOccurrence
+   */
+  public $attestation;
   protected $attestationType = AttestationOccurrence::class;
   protected $attestationDataType = '';
+  /**
+   * @var BuildOccurrence
+   */
+  public $build;
   protected $buildType = BuildOccurrence::class;
   protected $buildDataType = '';
+  /**
+   * @var ComplianceOccurrence
+   */
+  public $compliance;
   protected $complianceType = ComplianceOccurrence::class;
   protected $complianceDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var DeploymentOccurrence
+   */
+  public $deployment;
   protected $deploymentType = DeploymentOccurrence::class;
   protected $deploymentDataType = '';
+  /**
+   * @var DiscoveryOccurrence
+   */
+  public $discovery;
   protected $discoveryType = DiscoveryOccurrence::class;
   protected $discoveryDataType = '';
+  /**
+   * @var DSSEAttestationOccurrence
+   */
+  public $dsseAttestation;
   protected $dsseAttestationType = DSSEAttestationOccurrence::class;
   protected $dsseAttestationDataType = '';
+  /**
+   * @var Envelope
+   */
+  public $envelope;
   protected $envelopeType = Envelope::class;
   protected $envelopeDataType = '';
+  /**
+   * @var ImageOccurrence
+   */
+  public $image;
   protected $imageType = ImageOccurrence::class;
   protected $imageDataType = '';
   /**
@@ -51,6 +83,10 @@ class Occurrence extends \Google\Model
    * @var string
    */
   public $noteName;
+  /**
+   * @var PackageOccurrence
+   */
+  public $package;
   protected $packageType = PackageOccurrence::class;
   protected $packageDataType = '';
   /**
@@ -61,14 +97,26 @@ class Occurrence extends \Google\Model
    * @var string
    */
   public $resourceUri;
+  /**
+   * @var SBOMReferenceOccurrence
+   */
+  public $sbomReference;
   protected $sbomReferenceType = SBOMReferenceOccurrence::class;
   protected $sbomReferenceDataType = '';
   /**
    * @var string
    */
   public $updateTime;
+  /**
+   * @var UpgradeOccurrence
+   */
+  public $upgrade;
   protected $upgradeType = UpgradeOccurrence::class;
   protected $upgradeDataType = '';
+  /**
+   * @var VulnerabilityOccurrence
+   */
+  public $vulnerability;
   protected $vulnerabilityType = VulnerabilityOccurrence::class;
   protected $vulnerabilityDataType = '';
 

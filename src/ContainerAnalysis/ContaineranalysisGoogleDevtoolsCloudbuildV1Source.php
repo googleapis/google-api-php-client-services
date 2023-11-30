@@ -19,14 +19,34 @@ namespace Google\Service\ContainerAnalysis;
 
 class ContaineranalysisGoogleDevtoolsCloudbuildV1Source extends \Google\Model
 {
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository
+   */
+  public $connectedRepository;
   protected $connectedRepositoryType = ContaineranalysisGoogleDevtoolsCloudbuildV1ConnectedRepository::class;
   protected $connectedRepositoryDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource
+   */
+  public $gitSource;
   protected $gitSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1GitSource::class;
   protected $gitSourceDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource
+   */
+  public $repoSource;
   protected $repoSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1RepoSource::class;
   protected $repoSourceDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource
+   */
+  public $storageSource;
   protected $storageSourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSource::class;
   protected $storageSourceDataType = '';
+  /**
+   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest
+   */
+  public $storageSourceManifest;
   protected $storageSourceManifestType = ContaineranalysisGoogleDevtoolsCloudbuildV1StorageSourceManifest::class;
   protected $storageSourceManifestDataType = '';
 

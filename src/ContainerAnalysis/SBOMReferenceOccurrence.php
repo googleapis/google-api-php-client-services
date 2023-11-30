@@ -20,11 +20,19 @@ namespace Google\Service\ContainerAnalysis;
 class SBOMReferenceOccurrence extends \Google\Collection
 {
   protected $collection_key = 'signatures';
+  /**
+   * @var SbomReferenceIntotoPayload
+   */
+  public $payload;
   protected $payloadDataType = '';
   /**
    * @var string
    */
   public $payloadType;
+  /**
+   * @var EnvelopeSignature[]
+   */
+  public $signatures;
   protected $signaturesType = EnvelopeSignature::class;
   protected $signaturesDataType = 'array';
 

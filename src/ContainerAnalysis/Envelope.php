@@ -28,6 +28,10 @@ class Envelope extends \Google\Collection
    * @var string
    */
   public $payloadType;
+  /**
+   * @var EnvelopeSignature[]
+   */
+  public $signatures;
   protected $signaturesType = EnvelopeSignature::class;
   protected $signaturesDataType = 'array';
 

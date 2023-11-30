@@ -20,14 +20,26 @@ namespace Google\Service\ContainerAnalysis;
 class InTotoProvenance extends \Google\Collection
 {
   protected $collection_key = 'materials';
+  /**
+   * @var BuilderConfig
+   */
+  public $builderConfig;
   protected $builderConfigType = BuilderConfig::class;
   protected $builderConfigDataType = '';
   /**
    * @var string[]
    */
   public $materials;
+  /**
+   * @var Metadata
+   */
+  public $metadata;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var Recipe
+   */
+  public $recipe;
   protected $recipeType = Recipe::class;
   protected $recipeDataType = '';
 
