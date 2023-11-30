@@ -28,16 +28,32 @@ class Action extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var JsonSchema
+   */
+  public $inputJsonSchema;
   protected $inputJsonSchemaType = JsonSchema::class;
   protected $inputJsonSchemaDataType = '';
+  /**
+   * @var InputParameter[]
+   */
+  public $inputParameters;
   protected $inputParametersType = InputParameter::class;
   protected $inputParametersDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var JsonSchema
+   */
+  public $resultJsonSchema;
   protected $resultJsonSchemaType = JsonSchema::class;
   protected $resultJsonSchemaDataType = '';
+  /**
+   * @var ResultMetadata[]
+   */
+  public $resultMetadata;
   protected $resultMetadataType = ResultMetadata::class;
   protected $resultMetadataDataType = 'array';
 

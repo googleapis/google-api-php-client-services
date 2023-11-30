@@ -20,8 +20,16 @@ namespace Google\Service\Connectors;
 class EntityType extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var Field[]
+   */
+  public $fields;
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
+  /**
+   * @var JsonSchema
+   */
+  public $jsonSchema;
   protected $jsonSchemaType = JsonSchema::class;
   protected $jsonSchemaDataType = '';
   /**

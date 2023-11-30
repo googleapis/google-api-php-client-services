@@ -40,12 +40,20 @@ class JsonSchema extends \Google\Collection
    * @var string
    */
   public $format;
+  /**
+   * @var JsonSchema
+   */
+  public $items;
   protected $itemsType = JsonSchema::class;
   protected $itemsDataType = '';
   /**
    * @var string
    */
   public $jdbcType;
+  /**
+   * @var JsonSchema[]
+   */
+  public $properties;
   protected $propertiesType = JsonSchema::class;
   protected $propertiesDataType = 'map';
   /**

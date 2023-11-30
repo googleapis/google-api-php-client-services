@@ -28,6 +28,10 @@ class Query extends \Google\Collection
    * @var string
    */
   public $query;
+  /**
+   * @var QueryParameter[]
+   */
+  public $queryParameters;
   protected $queryParametersType = QueryParameter::class;
   protected $queryParametersDataType = 'array';
   /**

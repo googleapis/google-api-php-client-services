@@ -19,6 +19,10 @@ namespace Google\Service\Connectors;
 
 class ExecuteSqlQueryRequest extends \Google\Model
 {
+  /**
+   * @var Query
+   */
+  public $query;
   protected $queryType = Query::class;
   protected $queryDataType = '';
 
