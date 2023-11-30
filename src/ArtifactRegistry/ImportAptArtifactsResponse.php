@@ -20,8 +20,16 @@ namespace Google\Service\ArtifactRegistry;
 class ImportAptArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var AptArtifact[]
+   */
+  public $aptArtifacts;
   protected $aptArtifactsType = AptArtifact::class;
   protected $aptArtifactsDataType = 'array';
+  /**
+   * @var ImportAptArtifactsErrorInfo[]
+   */
+  public $errors;
   protected $errorsType = ImportAptArtifactsErrorInfo::class;
   protected $errorsDataType = 'array';
 

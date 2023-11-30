@@ -20,6 +20,10 @@ namespace Google\Service\ArtifactRegistry;
 class UploadYumArtifactResponse extends \Google\Collection
 {
   protected $collection_key = 'yumArtifacts';
+  /**
+   * @var YumArtifact[]
+   */
+  public $yumArtifacts;
   protected $yumArtifactsType = YumArtifact::class;
   protected $yumArtifactsDataType = 'array';
 

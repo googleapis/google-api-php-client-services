@@ -19,6 +19,10 @@ namespace Google\Service\ArtifactRegistry;
 
 class UploadGoModuleMediaResponse extends \Google\Model
 {
+  /**
+   * @var Operation
+   */
+  public $operation;
   protected $operationType = Operation::class;
   protected $operationDataType = '';
 

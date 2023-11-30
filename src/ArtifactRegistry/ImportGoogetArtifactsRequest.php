@@ -19,6 +19,10 @@ namespace Google\Service\ArtifactRegistry;
 
 class ImportGoogetArtifactsRequest extends \Google\Model
 {
+  /**
+   * @var ImportGoogetArtifactsGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = ImportGoogetArtifactsGcsSource::class;
   protected $gcsSourceDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\ArtifactRegistry;
 class UploadAptArtifactResponse extends \Google\Collection
 {
   protected $collection_key = 'aptArtifacts';
+  /**
+   * @var AptArtifact[]
+   */
+  public $aptArtifacts;
   protected $aptArtifactsType = AptArtifact::class;
   protected $aptArtifactsDataType = 'array';
 

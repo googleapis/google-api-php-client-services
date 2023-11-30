@@ -20,8 +20,16 @@ namespace Google\Service\ArtifactRegistry;
 class ImportYumArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'yumArtifacts';
+  /**
+   * @var ImportYumArtifactsErrorInfo[]
+   */
+  public $errors;
   protected $errorsType = ImportYumArtifactsErrorInfo::class;
   protected $errorsDataType = 'array';
+  /**
+   * @var YumArtifact[]
+   */
+  public $yumArtifacts;
   protected $yumArtifactsType = YumArtifact::class;
   protected $yumArtifactsDataType = 'array';
 

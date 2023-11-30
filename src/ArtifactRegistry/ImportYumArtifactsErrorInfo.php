@@ -19,8 +19,16 @@ namespace Google\Service\ArtifactRegistry;
 
 class ImportYumArtifactsErrorInfo extends \Google\Model
 {
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var ImportYumArtifactsGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = ImportYumArtifactsGcsSource::class;
   protected $gcsSourceDataType = '';
 

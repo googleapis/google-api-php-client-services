@@ -23,12 +23,20 @@ class CleanupPolicy extends \Google\Model
    * @var string
    */
   public $action;
+  /**
+   * @var CleanupPolicyCondition
+   */
+  public $condition;
   protected $conditionType = CleanupPolicyCondition::class;
   protected $conditionDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var CleanupPolicyMostRecentVersions
+   */
+  public $mostRecentVersions;
   protected $mostRecentVersionsType = CleanupPolicyMostRecentVersions::class;
   protected $mostRecentVersionsDataType = '';
 

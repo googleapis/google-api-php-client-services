@@ -20,6 +20,10 @@ namespace Google\Service\ArtifactRegistry;
 class VirtualRepositoryConfig extends \Google\Collection
 {
   protected $collection_key = 'upstreamPolicies';
+  /**
+   * @var UpstreamPolicy[]
+   */
+  public $upstreamPolicies;
   protected $upstreamPoliciesType = UpstreamPolicy::class;
   protected $upstreamPoliciesDataType = 'array';
 

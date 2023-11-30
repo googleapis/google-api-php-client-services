@@ -20,8 +20,16 @@ namespace Google\Service\ArtifactRegistry;
 class ImportGoogetArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'googetArtifacts';
+  /**
+   * @var ImportGoogetArtifactsErrorInfo[]
+   */
+  public $errors;
   protected $errorsType = ImportGoogetArtifactsErrorInfo::class;
   protected $errorsDataType = 'array';
+  /**
+   * @var GoogetArtifact[]
+   */
+  public $googetArtifacts;
   protected $googetArtifactsType = GoogetArtifact::class;
   protected $googetArtifactsDataType = 'array';
 

@@ -24,6 +24,10 @@ class ListTagsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Tag[]
+   */
+  public $tags;
   protected $tagsType = Tag::class;
   protected $tagsDataType = 'array';
 

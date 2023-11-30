@@ -19,8 +19,16 @@ namespace Google\Service\ArtifactRegistry;
 
 class ImportAptArtifactsErrorInfo extends \Google\Model
 {
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var ImportAptArtifactsGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = ImportAptArtifactsGcsSource::class;
   protected $gcsSourceDataType = '';
 

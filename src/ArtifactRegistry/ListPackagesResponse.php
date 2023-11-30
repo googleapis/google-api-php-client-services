@@ -24,6 +24,10 @@ class ListPackagesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Package[]
+   */
+  public $packages;
   protected $packagesType = Package::class;
   protected $packagesDataType = 'array';
 
