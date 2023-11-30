@@ -20,6 +20,10 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class WeeklyCycle extends \Google\Collection
 {
   protected $collection_key = 'schedule';
+  /**
+   * @var Schedule[]
+   */
+  public $schedule;
   protected $scheduleType = Schedule::class;
   protected $scheduleDataType = 'array';
 

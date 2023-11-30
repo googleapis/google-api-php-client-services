@@ -19,6 +19,10 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 
 class LocationMetadata extends \Google\Model
 {
+  /**
+   * @var ZoneMetadata[]
+   */
+  public $availableZones;
   protected $availableZonesType = ZoneMetadata::class;
   protected $availableZonesDataType = 'map';
 

@@ -20,8 +20,16 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 class GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata extends \Google\Collection
 {
   protected $collection_key = 'nodes';
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata[]
+   */
+  public $nodes;
   protected $nodesType = GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata::class;
   protected $nodesDataType = 'array';
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility
+   */
+  public $perSliEligibility;
   protected $perSliEligibilityType = GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility::class;
   protected $perSliEligibilityDataType = '';
   /**

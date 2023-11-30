@@ -36,20 +36,36 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var InstanceMessage[]
+   */
+  public $instanceMessages;
   protected $instanceMessagesType = InstanceMessage::class;
   protected $instanceMessagesDataType = 'array';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var GoogleCloudMemcacheV1MaintenancePolicy
+   */
+  public $maintenancePolicy;
   protected $maintenancePolicyType = GoogleCloudMemcacheV1MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
+  /**
+   * @var MaintenanceSchedule
+   */
+  public $maintenanceSchedule;
   protected $maintenanceScheduleType = MaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
   /**
    * @var string
    */
   public $memcacheFullVersion;
+  /**
+   * @var Node[]
+   */
+  public $memcacheNodes;
   protected $memcacheNodesType = Node::class;
   protected $memcacheNodesDataType = 'array';
   /**
@@ -60,12 +76,20 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var NodeConfig
+   */
+  public $nodeConfig;
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
   /**
    * @var int
    */
   public $nodeCount;
+  /**
+   * @var MemcacheParameters
+   */
+  public $parameters;
   protected $parametersType = MemcacheParameters::class;
   protected $parametersDataType = '';
   /**
