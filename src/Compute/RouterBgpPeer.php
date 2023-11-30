@@ -28,14 +28,26 @@ class RouterBgpPeer extends \Google\Collection
    * @var string[]
    */
   public $advertisedGroups;
+  /**
+   * @var RouterAdvertisedIpRange[]
+   */
+  public $advertisedIpRanges;
   protected $advertisedIpRangesType = RouterAdvertisedIpRange::class;
   protected $advertisedIpRangesDataType = 'array';
   /**
    * @var string
    */
   public $advertisedRoutePriority;
+  /**
+   * @var RouterBgpPeerBfd
+   */
+  public $bfd;
   protected $bfdType = RouterBgpPeerBfd::class;
   protected $bfdDataType = '';
+  /**
+   * @var RouterBgpPeerCustomLearnedIpRange[]
+   */
+  public $customLearnedIpRanges;
   protected $customLearnedIpRangesType = RouterBgpPeerCustomLearnedIpRange::class;
   protected $customLearnedIpRangesDataType = 'array';
   /**

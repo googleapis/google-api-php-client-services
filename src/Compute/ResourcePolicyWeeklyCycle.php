@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class ResourcePolicyWeeklyCycle extends \Google\Collection
 {
   protected $collection_key = 'dayOfWeeks';
+  /**
+   * @var ResourcePolicyWeeklyCycleDayOfWeek[]
+   */
+  public $dayOfWeeks;
   protected $dayOfWeeksType = ResourcePolicyWeeklyCycleDayOfWeek::class;
   protected $dayOfWeeksDataType = 'array';
 

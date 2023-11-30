@@ -24,6 +24,10 @@ class PacketMirroringsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var PacketMirroringsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = PacketMirroringsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class ProjectsEnableXpnResourceRequest extends \Google\Model
 {
+  /**
+   * @var XpnResourceId
+   */
+  public $xpnResource;
   protected $xpnResourceType = XpnResourceId::class;
   protected $xpnResourceDataType = '';
 

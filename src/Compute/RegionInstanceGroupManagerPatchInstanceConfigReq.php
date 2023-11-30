@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class RegionInstanceGroupManagerPatchInstanceConfigReq extends \Google\Collection
 {
   protected $collection_key = 'perInstanceConfigs';
+  /**
+   * @var PerInstanceConfig[]
+   */
+  public $perInstanceConfigs;
   protected $perInstanceConfigsType = PerInstanceConfig::class;
   protected $perInstanceConfigsDataType = 'array';
 

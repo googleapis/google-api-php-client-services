@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class RegionSetPolicyRequest extends \Google\Collection
 {
   protected $collection_key = 'bindings';
+  /**
+   * @var Binding[]
+   */
+  public $bindings;
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
   /**
    * @var string
    */
   public $etag;
+  /**
+   * @var Policy
+   */
+  public $policy;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
 

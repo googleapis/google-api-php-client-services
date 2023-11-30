@@ -24,6 +24,10 @@ class ResourcePolicyAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ResourcePolicyAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = ResourcePolicyAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

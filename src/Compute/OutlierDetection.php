@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class OutlierDetection extends \Google\Model
 {
+  /**
+   * @var Duration
+   */
+  public $baseEjectionTime;
   protected $baseEjectionTimeType = Duration::class;
   protected $baseEjectionTimeDataType = '';
   /**
@@ -41,6 +45,10 @@ class OutlierDetection extends \Google\Model
    * @var int
    */
   public $enforcingSuccessRate;
+  /**
+   * @var Duration
+   */
+  public $interval;
   protected $intervalType = Duration::class;
   protected $intervalDataType = '';
   /**

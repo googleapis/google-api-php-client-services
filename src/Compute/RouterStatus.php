@@ -20,12 +20,28 @@ namespace Google\Service\Compute;
 class RouterStatus extends \Google\Collection
 {
   protected $collection_key = 'natStatus';
+  /**
+   * @var Route[]
+   */
+  public $bestRoutes;
   protected $bestRoutesType = Route::class;
   protected $bestRoutesDataType = 'array';
+  /**
+   * @var Route[]
+   */
+  public $bestRoutesForRouter;
   protected $bestRoutesForRouterType = Route::class;
   protected $bestRoutesForRouterDataType = 'array';
+  /**
+   * @var RouterStatusBgpPeerStatus[]
+   */
+  public $bgpPeerStatus;
   protected $bgpPeerStatusType = RouterStatusBgpPeerStatus::class;
   protected $bgpPeerStatusDataType = 'array';
+  /**
+   * @var RouterStatusNatStatus[]
+   */
+  public $natStatus;
   protected $natStatusType = RouterStatusNatStatus::class;
   protected $natStatusDataType = 'array';
   /**

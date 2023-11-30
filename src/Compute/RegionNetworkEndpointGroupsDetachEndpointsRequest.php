@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class RegionNetworkEndpointGroupsDetachEndpointsRequest extends \Google\Collection
 {
   protected $collection_key = 'networkEndpoints';
+  /**
+   * @var NetworkEndpoint[]
+   */
+  public $networkEndpoints;
   protected $networkEndpointsType = NetworkEndpoint::class;
   protected $networkEndpointsDataType = 'array';
 

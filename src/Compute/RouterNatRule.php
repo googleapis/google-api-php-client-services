@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class RouterNatRule extends \Google\Model
 {
+  /**
+   * @var RouterNatRuleAction
+   */
+  public $action;
   protected $actionType = RouterNatRuleAction::class;
   protected $actionDataType = '';
   /**

@@ -24,6 +24,10 @@ class ReservationAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ReservationAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = ReservationAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class ReservationsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ReservationsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = ReservationsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

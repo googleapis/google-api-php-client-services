@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class PublicDelegatedPrefixesScopedList extends \Google\Collection
 {
   protected $collection_key = 'publicDelegatedPrefixes';
+  /**
+   * @var PublicDelegatedPrefix[]
+   */
+  public $publicDelegatedPrefixes;
   protected $publicDelegatedPrefixesType = PublicDelegatedPrefix::class;
   protected $publicDelegatedPrefixesDataType = 'array';
+  /**
+   * @var PublicDelegatedPrefixesScopedListWarning
+   */
+  public $warning;
   protected $warningType = PublicDelegatedPrefixesScopedListWarning::class;
   protected $warningDataType = '';
 

@@ -19,12 +19,28 @@ namespace Google\Service\Compute;
 
 class OperationErrorErrorsErrorDetails extends \Google\Model
 {
+  /**
+   * @var ErrorInfo
+   */
+  public $errorInfo;
   protected $errorInfoType = ErrorInfo::class;
   protected $errorInfoDataType = '';
+  /**
+   * @var Help
+   */
+  public $help;
   protected $helpType = Help::class;
   protected $helpDataType = '';
+  /**
+   * @var LocalizedMessage
+   */
+  public $localizedMessage;
   protected $localizedMessageType = LocalizedMessage::class;
   protected $localizedMessageDataType = '';
+  /**
+   * @var QuotaExceededInfo
+   */
+  public $quotaInfo;
   protected $quotaInfoType = QuotaExceededInfo::class;
   protected $quotaInfoDataType = '';
 

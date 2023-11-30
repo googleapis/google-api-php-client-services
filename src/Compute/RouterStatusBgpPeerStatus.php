@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class RouterStatusBgpPeerStatus extends \Google\Collection
 {
   protected $collection_key = 'advertisedRoutes';
+  /**
+   * @var Route[]
+   */
+  public $advertisedRoutes;
   protected $advertisedRoutesType = Route::class;
   protected $advertisedRoutesDataType = 'array';
+  /**
+   * @var BfdStatus
+   */
+  public $bfdStatus;
   protected $bfdStatusType = BfdStatus::class;
   protected $bfdStatusDataType = '';
   /**

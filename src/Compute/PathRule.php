@@ -24,12 +24,20 @@ class PathRule extends \Google\Collection
    * @var string[]
    */
   public $paths;
+  /**
+   * @var HttpRouteAction
+   */
+  public $routeAction;
   protected $routeActionType = HttpRouteAction::class;
   protected $routeActionDataType = '';
   /**
    * @var string
    */
   public $service;
+  /**
+   * @var HttpRedirectAction
+   */
+  public $urlRedirect;
   protected $urlRedirectType = HttpRedirectAction::class;
   protected $urlRedirectDataType = '';
 

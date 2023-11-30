@@ -20,26 +20,46 @@ namespace Google\Service\Compute;
 class PathMatcher extends \Google\Collection
 {
   protected $collection_key = 'routeRules';
+  /**
+   * @var HttpRouteAction
+   */
+  public $defaultRouteAction;
   protected $defaultRouteActionType = HttpRouteAction::class;
   protected $defaultRouteActionDataType = '';
   /**
    * @var string
    */
   public $defaultService;
+  /**
+   * @var HttpRedirectAction
+   */
+  public $defaultUrlRedirect;
   protected $defaultUrlRedirectType = HttpRedirectAction::class;
   protected $defaultUrlRedirectDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var HttpHeaderAction
+   */
+  public $headerAction;
   protected $headerActionType = HttpHeaderAction::class;
   protected $headerActionDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var PathRule[]
+   */
+  public $pathRules;
   protected $pathRulesType = PathRule::class;
   protected $pathRulesDataType = 'array';
+  /**
+   * @var HttpRouteRule[]
+   */
+  public $routeRules;
   protected $routeRulesType = HttpRouteRule::class;
   protected $routeRulesDataType = 'array';
 

@@ -28,6 +28,10 @@ class ResourcePolicyList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var ResourcePolicy[]
+   */
+  public $items;
   protected $itemsType = ResourcePolicy::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,6 +46,10 @@ class ResourcePolicyList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var ResourcePolicyListWarning
+   */
+  public $warning;
   protected $warningType = ResourcePolicyListWarning::class;
   protected $warningDataType = '';
 

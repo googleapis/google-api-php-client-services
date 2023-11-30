@@ -24,6 +24,10 @@ class ResourcePoliciesScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ResourcePoliciesScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = ResourcePoliciesScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

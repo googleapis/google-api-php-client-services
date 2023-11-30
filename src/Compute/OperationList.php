@@ -24,6 +24,10 @@ class OperationList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Operation[]
+   */
+  public $items;
   protected $itemsType = Operation::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class OperationList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var OperationListWarning
+   */
+  public $warning;
   protected $warningType = OperationListWarning::class;
   protected $warningDataType = '';
 

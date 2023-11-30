@@ -20,14 +20,26 @@ namespace Google\Service\Compute;
 class Policy extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  /**
+   * @var AuditConfig[]
+   */
+  public $auditConfigs;
   protected $auditConfigsType = AuditConfig::class;
   protected $auditConfigsDataType = 'array';
+  /**
+   * @var Binding[]
+   */
+  public $bindings;
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
   /**
    * @var string
    */
   public $etag;
+  /**
+   * @var Rule[]
+   */
+  public $rules;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
   /**

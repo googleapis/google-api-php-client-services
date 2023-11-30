@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class RegionInstanceGroupManagersListErrorsResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var InstanceManagedByIgmError[]
+   */
+  public $items;
   protected $itemsType = InstanceManagedByIgmError::class;
   protected $itemsDataType = 'array';
   /**

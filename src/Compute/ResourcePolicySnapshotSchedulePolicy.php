@@ -19,10 +19,22 @@ namespace Google\Service\Compute;
 
 class ResourcePolicySnapshotSchedulePolicy extends \Google\Model
 {
+  /**
+   * @var ResourcePolicySnapshotSchedulePolicyRetentionPolicy
+   */
+  public $retentionPolicy;
   protected $retentionPolicyType = ResourcePolicySnapshotSchedulePolicyRetentionPolicy::class;
   protected $retentionPolicyDataType = '';
+  /**
+   * @var ResourcePolicySnapshotSchedulePolicySchedule
+   */
+  public $schedule;
   protected $scheduleType = ResourcePolicySnapshotSchedulePolicySchedule::class;
   protected $scheduleDataType = '';
+  /**
+   * @var ResourcePolicySnapshotSchedulePolicySnapshotProperties
+   */
+  public $snapshotProperties;
   protected $snapshotPropertiesType = ResourcePolicySnapshotSchedulePolicySnapshotProperties::class;
   protected $snapshotPropertiesDataType = '';
 

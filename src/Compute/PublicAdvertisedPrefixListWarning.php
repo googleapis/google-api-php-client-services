@@ -24,6 +24,10 @@ class PublicAdvertisedPrefixListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var PublicAdvertisedPrefixListWarningData[]
+   */
+  public $data;
   protected $dataType = PublicAdvertisedPrefixListWarningData::class;
   protected $dataDataType = 'array';
   /**

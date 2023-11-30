@@ -19,10 +19,22 @@ namespace Google\Service\Compute;
 
 class PreservedState extends \Google\Model
 {
+  /**
+   * @var PreservedStatePreservedDisk[]
+   */
+  public $disks;
   protected $disksType = PreservedStatePreservedDisk::class;
   protected $disksDataType = 'map';
+  /**
+   * @var PreservedStatePreservedNetworkIp[]
+   */
+  public $externalIPs;
   protected $externalIPsType = PreservedStatePreservedNetworkIp::class;
   protected $externalIPsDataType = 'map';
+  /**
+   * @var PreservedStatePreservedNetworkIp[]
+   */
+  public $internalIPs;
   protected $internalIPsType = PreservedStatePreservedNetworkIp::class;
   protected $internalIPsDataType = 'map';
   /**

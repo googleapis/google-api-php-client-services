@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class OperationsScopedList extends \Google\Collection
 {
   protected $collection_key = 'operations';
+  /**
+   * @var Operation[]
+   */
+  public $operations;
   protected $operationsType = Operation::class;
   protected $operationsDataType = 'array';
+  /**
+   * @var OperationsScopedListWarning
+   */
+  public $warning;
   protected $warningType = OperationsScopedListWarning::class;
   protected $warningDataType = '';
 

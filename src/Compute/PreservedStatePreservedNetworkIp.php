@@ -23,6 +23,10 @@ class PreservedStatePreservedNetworkIp extends \Google\Model
    * @var string
    */
   public $autoDelete;
+  /**
+   * @var PreservedStatePreservedNetworkIpIpAddress
+   */
+  public $ipAddress;
   protected $ipAddressType = PreservedStatePreservedNetworkIpIpAddress::class;
   protected $ipAddressDataType = '';
 

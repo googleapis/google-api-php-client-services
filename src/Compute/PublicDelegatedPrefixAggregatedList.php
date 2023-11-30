@@ -24,6 +24,10 @@ class PublicDelegatedPrefixAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var PublicDelegatedPrefixesScopedList[]
+   */
+  public $items;
   protected $itemsType = PublicDelegatedPrefixesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -42,6 +46,10 @@ class PublicDelegatedPrefixAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
+  /**
+   * @var PublicDelegatedPrefixAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = PublicDelegatedPrefixAggregatedListWarning::class;
   protected $warningDataType = '';
 

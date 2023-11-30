@@ -24,6 +24,10 @@ class RouterAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var RouterAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = RouterAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

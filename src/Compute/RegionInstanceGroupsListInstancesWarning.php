@@ -24,6 +24,10 @@ class RegionInstanceGroupsListInstancesWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var RegionInstanceGroupsListInstancesWarningData[]
+   */
+  public $data;
   protected $dataType = RegionInstanceGroupsListInstancesWarningData::class;
   protected $dataDataType = 'array';
   /**

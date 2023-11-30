@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class Router extends \Google\Collection
 {
   protected $collection_key = 'nats';
+  /**
+   * @var RouterBgp
+   */
+  public $bgp;
   protected $bgpType = RouterBgp::class;
   protected $bgpDataType = '';
+  /**
+   * @var RouterBgpPeer[]
+   */
+  public $bgpPeers;
   protected $bgpPeersType = RouterBgpPeer::class;
   protected $bgpPeersDataType = 'array';
   /**
@@ -40,18 +48,30 @@ class Router extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var RouterInterface[]
+   */
+  public $interfaces;
   protected $interfacesType = RouterInterface::class;
   protected $interfacesDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var RouterMd5AuthenticationKey[]
+   */
+  public $md5AuthenticationKeys;
   protected $md5AuthenticationKeysType = RouterMd5AuthenticationKey::class;
   protected $md5AuthenticationKeysDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var RouterNat[]
+   */
+  public $nats;
   protected $natsType = RouterNat::class;
   protected $natsDataType = 'array';
   /**

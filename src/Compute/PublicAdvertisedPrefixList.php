@@ -24,6 +24,10 @@ class PublicAdvertisedPrefixList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var PublicAdvertisedPrefix[]
+   */
+  public $items;
   protected $itemsType = PublicAdvertisedPrefix::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class PublicAdvertisedPrefixList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var PublicAdvertisedPrefixListWarning
+   */
+  public $warning;
   protected $warningType = PublicAdvertisedPrefixListWarning::class;
   protected $warningDataType = '';
 

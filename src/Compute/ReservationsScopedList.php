@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class ReservationsScopedList extends \Google\Collection
 {
   protected $collection_key = 'reservations';
+  /**
+   * @var Reservation[]
+   */
+  public $reservations;
   protected $reservationsType = Reservation::class;
   protected $reservationsDataType = 'array';
+  /**
+   * @var ReservationsScopedListWarning
+   */
+  public $warning;
   protected $warningType = ReservationsScopedListWarning::class;
   protected $warningDataType = '';
 

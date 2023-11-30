@@ -24,6 +24,10 @@ class RegionDiskTypeListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var RegionDiskTypeListWarningData[]
+   */
+  public $data;
   protected $dataType = RegionDiskTypeListWarningData::class;
   protected $dataDataType = 'array';
   /**

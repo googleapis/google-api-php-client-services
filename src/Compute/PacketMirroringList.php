@@ -24,6 +24,10 @@ class PacketMirroringList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var PacketMirroring[]
+   */
+  public $items;
   protected $itemsType = PacketMirroring::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class PacketMirroringList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var PacketMirroringListWarning
+   */
+  public $warning;
   protected $warningType = PacketMirroringListWarning::class;
   protected $warningDataType = '';
 

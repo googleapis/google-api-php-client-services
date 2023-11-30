@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class PacketMirroringMirroredResourceInfo extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  /**
+   * @var PacketMirroringMirroredResourceInfoInstanceInfo[]
+   */
+  public $instances;
   protected $instancesType = PacketMirroringMirroredResourceInfoInstanceInfo::class;
   protected $instancesDataType = 'array';
+  /**
+   * @var PacketMirroringMirroredResourceInfoSubnetInfo[]
+   */
+  public $subnetworks;
   protected $subnetworksType = PacketMirroringMirroredResourceInfoSubnetInfo::class;
   protected $subnetworksDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class RegionAutoscalerListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var RegionAutoscalerListWarningData[]
+   */
+  public $data;
   protected $dataType = RegionAutoscalerListWarningData::class;
   protected $dataDataType = 'array';
   /**

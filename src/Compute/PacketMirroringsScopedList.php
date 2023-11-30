@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class PacketMirroringsScopedList extends \Google\Collection
 {
   protected $collection_key = 'packetMirrorings';
+  /**
+   * @var PacketMirroring[]
+   */
+  public $packetMirrorings;
   protected $packetMirroringsType = PacketMirroring::class;
   protected $packetMirroringsDataType = 'array';
+  /**
+   * @var PacketMirroringsScopedListWarning
+   */
+  public $warning;
   protected $warningType = PacketMirroringsScopedListWarning::class;
   protected $warningDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class RegionUrlMapsValidateRequest extends \Google\Model
 {
+  /**
+   * @var UrlMap
+   */
+  public $resource;
   protected $resourceType = UrlMap::class;
   protected $resourceDataType = '';
 
