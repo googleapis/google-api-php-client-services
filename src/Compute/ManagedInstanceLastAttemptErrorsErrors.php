@@ -24,6 +24,10 @@ class ManagedInstanceLastAttemptErrorsErrors extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ManagedInstanceLastAttemptErrorsErrorsErrorDetails[]
+   */
+  public $errorDetails;
   protected $errorDetailsType = ManagedInstanceLastAttemptErrorsErrorsErrorDetails::class;
   protected $errorDetailsDataType = 'array';
   /**

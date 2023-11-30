@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class NetworksUpdatePeeringRequest extends \Google\Model
 {
+  /**
+   * @var NetworkPeering
+   */
+  public $networkPeering;
   protected $networkPeeringType = NetworkPeering::class;
   protected $networkPeeringDataType = '';
 

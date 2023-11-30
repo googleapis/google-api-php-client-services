@@ -24,6 +24,10 @@ class NodeTemplateList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var NodeTemplate[]
+   */
+  public $items;
   protected $itemsType = NodeTemplate::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class NodeTemplateList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var NodeTemplateListWarning
+   */
+  public $warning;
   protected $warningType = NodeTemplateListWarning::class;
   protected $warningDataType = '';
 

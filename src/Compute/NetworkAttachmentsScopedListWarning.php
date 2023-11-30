@@ -24,6 +24,10 @@ class NetworkAttachmentsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NetworkAttachmentsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = NetworkAttachmentsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

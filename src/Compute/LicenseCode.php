@@ -36,6 +36,10 @@ class LicenseCode extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var LicenseCodeLicenseAlias[]
+   */
+  public $licenseAlias;
   protected $licenseAliasType = LicenseCodeLicenseAlias::class;
   protected $licenseAliasDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class MachineTypeList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var MachineType[]
+   */
+  public $items;
   protected $itemsType = MachineType::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class MachineTypeList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var MachineTypeListWarning
+   */
+  public $warning;
   protected $warningType = MachineTypeListWarning::class;
   protected $warningDataType = '';
 

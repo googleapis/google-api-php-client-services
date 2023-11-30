@@ -27,6 +27,10 @@ class InterconnectRemoteLocationConstraints extends \Google\Model
    * @var string
    */
   public $portPairVlan;
+  /**
+   * @var InterconnectRemoteLocationConstraintsSubnetLengthRange
+   */
+  public $subnetLengthRange;
   protected $subnetLengthRangeType = InterconnectRemoteLocationConstraintsSubnetLengthRange::class;
   protected $subnetLengthRangeDataType = '';
 

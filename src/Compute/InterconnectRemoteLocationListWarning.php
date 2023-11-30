@@ -24,6 +24,10 @@ class InterconnectRemoteLocationListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var InterconnectRemoteLocationListWarningData[]
+   */
+  public $data;
   protected $dataType = InterconnectRemoteLocationListWarningData::class;
   protected $dataDataType = 'array';
   /**

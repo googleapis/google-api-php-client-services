@@ -23,10 +23,22 @@ class NetworkEndpointGroup extends \Google\Model
    * @var string[]
    */
   public $annotations;
+  /**
+   * @var NetworkEndpointGroupAppEngine
+   */
+  public $appEngine;
   protected $appEngineType = NetworkEndpointGroupAppEngine::class;
   protected $appEngineDataType = '';
+  /**
+   * @var NetworkEndpointGroupCloudFunction
+   */
+  public $cloudFunction;
   protected $cloudFunctionType = NetworkEndpointGroupCloudFunction::class;
   protected $cloudFunctionDataType = '';
+  /**
+   * @var NetworkEndpointGroupCloudRun
+   */
+  public $cloudRun;
   protected $cloudRunType = NetworkEndpointGroupCloudRun::class;
   protected $cloudRunDataType = '';
   /**
@@ -61,6 +73,10 @@ class NetworkEndpointGroup extends \Google\Model
    * @var string
    */
   public $networkEndpointType;
+  /**
+   * @var NetworkEndpointGroupPscData
+   */
+  public $pscData;
   protected $pscDataType = NetworkEndpointGroupPscData::class;
   protected $pscDataDataType = '';
   /**

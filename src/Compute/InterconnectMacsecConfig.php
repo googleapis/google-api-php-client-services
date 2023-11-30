@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class InterconnectMacsecConfig extends \Google\Collection
 {
   protected $collection_key = 'preSharedKeys';
+  /**
+   * @var InterconnectMacsecConfigPreSharedKey[]
+   */
+  public $preSharedKeys;
   protected $preSharedKeysType = InterconnectMacsecConfigPreSharedKey::class;
   protected $preSharedKeysDataType = 'array';
 

@@ -23,6 +23,10 @@ class InterconnectsGetMacsecConfigResponse extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var InterconnectMacsecConfig
+   */
+  public $result;
   protected $resultType = InterconnectMacsecConfig::class;
   protected $resultDataType = '';
 

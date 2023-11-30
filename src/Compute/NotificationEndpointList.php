@@ -24,6 +24,10 @@ class NotificationEndpointList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var NotificationEndpoint[]
+   */
+  public $items;
   protected $itemsType = NotificationEndpoint::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class NotificationEndpointList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var NotificationEndpointListWarning
+   */
+  public $warning;
   protected $warningType = NotificationEndpointListWarning::class;
   protected $warningDataType = '';
 

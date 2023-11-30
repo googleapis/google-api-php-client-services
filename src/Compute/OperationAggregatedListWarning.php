@@ -24,6 +24,10 @@ class OperationAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var OperationAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = OperationAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

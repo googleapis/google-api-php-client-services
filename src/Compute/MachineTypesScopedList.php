@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class MachineTypesScopedList extends \Google\Collection
 {
   protected $collection_key = 'machineTypes';
+  /**
+   * @var MachineType[]
+   */
+  public $machineTypes;
   protected $machineTypesType = MachineType::class;
   protected $machineTypesDataType = 'array';
+  /**
+   * @var MachineTypesScopedListWarning
+   */
+  public $warning;
   protected $warningType = MachineTypesScopedListWarning::class;
   protected $warningDataType = '';
 

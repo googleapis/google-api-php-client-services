@@ -24,6 +24,10 @@ class NodeTemplateAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NodeTemplateAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = NodeTemplateAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

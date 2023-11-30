@@ -24,6 +24,10 @@ class NetworkListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NetworkListWarningData[]
+   */
+  public $data;
   protected $dataType = NetworkListWarningData::class;
   protected $dataDataType = 'array';
   /**

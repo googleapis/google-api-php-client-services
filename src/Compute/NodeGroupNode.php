@@ -20,16 +20,32 @@ namespace Google\Service\Compute;
 class NodeGroupNode extends \Google\Collection
 {
   protected $collection_key = 'instances';
+  /**
+   * @var AcceleratorConfig[]
+   */
+  public $accelerators;
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
+  /**
+   * @var InstanceConsumptionInfo
+   */
+  public $consumedResources;
   protected $consumedResourcesType = InstanceConsumptionInfo::class;
   protected $consumedResourcesDataType = '';
   /**
    * @var string
    */
   public $cpuOvercommitType;
+  /**
+   * @var LocalDisk[]
+   */
+  public $disks;
   protected $disksType = LocalDisk::class;
   protected $disksDataType = 'array';
+  /**
+   * @var InstanceConsumptionData[]
+   */
+  public $instanceConsumptionData;
   protected $instanceConsumptionDataType = InstanceConsumptionData::class;
   protected $instanceConsumptionDataDataType = 'array';
   /**
@@ -48,6 +64,10 @@ class NodeGroupNode extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * @var ServerBinding
+   */
+  public $serverBinding;
   protected $serverBindingType = ServerBinding::class;
   protected $serverBindingDataType = '';
   /**
@@ -58,6 +78,10 @@ class NodeGroupNode extends \Google\Collection
    * @var string
    */
   public $status;
+  /**
+   * @var InstanceConsumptionInfo
+   */
+  public $totalResources;
   protected $totalResourcesType = InstanceConsumptionInfo::class;
   protected $totalResourcesDataType = '';
 

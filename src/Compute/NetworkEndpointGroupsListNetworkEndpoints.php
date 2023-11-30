@@ -24,6 +24,10 @@ class NetworkEndpointGroupsListNetworkEndpoints extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var NetworkEndpointWithHealthStatus[]
+   */
+  public $items;
   protected $itemsType = NetworkEndpointWithHealthStatus::class;
   protected $itemsDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class NetworkEndpointGroupsListNetworkEndpoints extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var NetworkEndpointGroupsListNetworkEndpointsWarning
+   */
+  public $warning;
   protected $warningType = NetworkEndpointGroupsListNetworkEndpointsWarning::class;
   protected $warningDataType = '';
 

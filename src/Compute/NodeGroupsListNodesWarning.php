@@ -24,6 +24,10 @@ class NodeGroupsListNodesWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NodeGroupsListNodesWarningData[]
+   */
+  public $data;
   protected $dataType = NodeGroupsListNodesWarningData::class;
   protected $dataDataType = 'array';
   /**

@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class MachineType extends \Google\Collection
 {
   protected $collection_key = 'scratchDisks';
+  /**
+   * @var MachineTypeAccelerators[]
+   */
+  public $accelerators;
   protected $acceleratorsType = MachineTypeAccelerators::class;
   protected $acceleratorsDataType = 'array';
   /**
    * @var string
    */
   public $creationTimestamp;
+  /**
+   * @var DeprecationStatus
+   */
+  public $deprecated;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**
@@ -68,6 +76,10 @@ class MachineType extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var MachineTypeScratchDisks[]
+   */
+  public $scratchDisks;
   protected $scratchDisksType = MachineTypeScratchDisks::class;
   protected $scratchDisksDataType = 'array';
   /**

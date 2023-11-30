@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class NetworkEndpointWithHealthStatus extends \Google\Collection
 {
   protected $collection_key = 'healths';
+  /**
+   * @var HealthStatusForNetworkEndpoint[]
+   */
+  public $healths;
   protected $healthsType = HealthStatusForNetworkEndpoint::class;
   protected $healthsDataType = 'array';
+  /**
+   * @var NetworkEndpoint
+   */
+  public $networkEndpoint;
   protected $networkEndpointType = NetworkEndpoint::class;
   protected $networkEndpointDataType = '';
 

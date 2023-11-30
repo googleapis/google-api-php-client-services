@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class NodeGroupsScopedList extends \Google\Collection
 {
   protected $collection_key = 'nodeGroups';
+  /**
+   * @var NodeGroup[]
+   */
+  public $nodeGroups;
   protected $nodeGroupsType = NodeGroup::class;
   protected $nodeGroupsDataType = 'array';
+  /**
+   * @var NodeGroupsScopedListWarning
+   */
+  public $warning;
   protected $warningType = NodeGroupsScopedListWarning::class;
   protected $warningDataType = '';
 

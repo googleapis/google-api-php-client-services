@@ -24,6 +24,10 @@ class NodeGroupsListNodes extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var NodeGroupNode[]
+   */
+  public $items;
   protected $itemsType = NodeGroupNode::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class NodeGroupsListNodes extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var NodeGroupsListNodesWarning
+   */
+  public $warning;
   protected $warningType = NodeGroupsListNodesWarning::class;
   protected $warningDataType = '';
 

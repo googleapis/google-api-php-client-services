@@ -24,6 +24,10 @@ class NetworkEdgeSecurityServicesScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NetworkEdgeSecurityServicesScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = NetworkEdgeSecurityServicesScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

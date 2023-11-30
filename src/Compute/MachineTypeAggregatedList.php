@@ -24,6 +24,10 @@ class MachineTypeAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var MachineTypesScopedList[]
+   */
+  public $items;
   protected $itemsType = MachineTypesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -42,6 +46,10 @@ class MachineTypeAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
+  /**
+   * @var MachineTypeAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = MachineTypeAggregatedListWarning::class;
   protected $warningDataType = '';
 

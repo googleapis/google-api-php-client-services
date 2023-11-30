@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class ManagedInstanceLastAttempt extends \Google\Model
 {
+  /**
+   * @var ManagedInstanceLastAttemptErrors
+   */
+  public $errors;
   protected $errorsType = ManagedInstanceLastAttemptErrors::class;
   protected $errorsDataType = '';
 

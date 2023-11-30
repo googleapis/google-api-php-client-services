@@ -24,6 +24,10 @@ class NetworkEndpointGroupsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NetworkEndpointGroupsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = NetworkEndpointGroupsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

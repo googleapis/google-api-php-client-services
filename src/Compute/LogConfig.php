@@ -19,10 +19,22 @@ namespace Google\Service\Compute;
 
 class LogConfig extends \Google\Model
 {
+  /**
+   * @var LogConfigCloudAuditOptions
+   */
+  public $cloudAudit;
   protected $cloudAuditType = LogConfigCloudAuditOptions::class;
   protected $cloudAuditDataType = '';
+  /**
+   * @var LogConfigCounterOptions
+   */
+  public $counter;
   protected $counterType = LogConfigCounterOptions::class;
   protected $counterDataType = '';
+  /**
+   * @var LogConfigDataAccessOptions
+   */
+  public $dataAccess;
   protected $dataAccessType = LogConfigDataAccessOptions::class;
   protected $dataAccessDataType = '';
 

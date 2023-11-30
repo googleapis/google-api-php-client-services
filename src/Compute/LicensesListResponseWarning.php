@@ -24,6 +24,10 @@ class LicensesListResponseWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var LicensesListResponseWarningData[]
+   */
+  public $data;
   protected $dataType = LicensesListResponseWarningData::class;
   protected $dataDataType = 'array';
   /**

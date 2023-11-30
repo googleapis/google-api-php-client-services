@@ -24,6 +24,10 @@ class MachineImageListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var MachineImageListWarningData[]
+   */
+  public $data;
   protected $dataType = MachineImageListWarningData::class;
   protected $dataDataType = 'array';
   /**

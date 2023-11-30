@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class LocationPolicyLocation extends \Google\Model
 {
+  /**
+   * @var LocationPolicyLocationConstraints
+   */
+  public $constraints;
   protected $constraintsType = LocationPolicyLocationConstraints::class;
   protected $constraintsDataType = '';
   /**

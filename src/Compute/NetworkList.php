@@ -24,6 +24,10 @@ class NetworkList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Network[]
+   */
+  public $items;
   protected $itemsType = Network::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class NetworkList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var NetworkListWarning
+   */
+  public $warning;
   protected $warningType = NetworkListWarning::class;
   protected $warningDataType = '';
 

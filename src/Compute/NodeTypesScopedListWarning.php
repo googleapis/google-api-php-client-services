@@ -24,6 +24,10 @@ class NodeTypesScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var NodeTypesScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = NodeTypesScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**
