@@ -19,6 +19,10 @@ namespace Google\Service\Logging;
 
 class Link extends \Google\Model
 {
+  /**
+   * @var BigQueryDataset
+   */
+  public $bigqueryDataset;
   protected $bigqueryDatasetType = BigQueryDataset::class;
   protected $bigqueryDatasetDataType = '';
   /**

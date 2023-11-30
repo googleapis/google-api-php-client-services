@@ -24,6 +24,10 @@ class WriteLogEntriesRequest extends \Google\Collection
    * @var bool
    */
   public $dryRun;
+  /**
+   * @var LogEntry[]
+   */
+  public $entries;
   protected $entriesType = LogEntry::class;
   protected $entriesDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class WriteLogEntriesRequest extends \Google\Collection
    * @var bool
    */
   public $partialSuccess;
+  /**
+   * @var MonitoredResource
+   */
+  public $resource;
   protected $resourceType = MonitoredResource::class;
   protected $resourceDataType = '';
 

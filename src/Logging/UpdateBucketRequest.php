@@ -19,6 +19,10 @@ namespace Google\Service\Logging;
 
 class UpdateBucketRequest extends \Google\Model
 {
+  /**
+   * @var LogBucket
+   */
+  public $bucket;
   protected $bucketType = LogBucket::class;
   protected $bucketDataType = '';
   /**

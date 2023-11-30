@@ -19,6 +19,10 @@ namespace Google\Service\Logging;
 
 class CreateLinkRequest extends \Google\Model
 {
+  /**
+   * @var Link
+   */
+  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Logging;
 
 class Settings extends \Google\Model
 {
+  /**
+   * @var DefaultSinkConfig
+   */
+  public $defaultSinkConfig;
   protected $defaultSinkConfigType = DefaultSinkConfig::class;
   protected $defaultSinkConfigDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Logging;
 
 class CreateBucketRequest extends \Google\Model
 {
+  /**
+   * @var LogBucket
+   */
+  public $bucket;
   protected $bucketType = LogBucket::class;
   protected $bucketDataType = '';
   /**

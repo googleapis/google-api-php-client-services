@@ -20,8 +20,16 @@ namespace Google\Service\Logging;
 class LogEntry extends \Google\Collection
 {
   protected $collection_key = 'errorGroups';
+  /**
+   * @var LogErrorGroup[]
+   */
+  public $errorGroups;
   protected $errorGroupsType = LogErrorGroup::class;
   protected $errorGroupsDataType = 'array';
+  /**
+   * @var HttpRequest
+   */
+  public $httpRequest;
   protected $httpRequestType = HttpRequest::class;
   protected $httpRequestDataType = '';
   /**
@@ -40,8 +48,16 @@ class LogEntry extends \Google\Collection
    * @var string
    */
   public $logName;
+  /**
+   * @var MonitoredResourceMetadata
+   */
+  public $metadata;
   protected $metadataType = MonitoredResourceMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var LogEntryOperation
+   */
+  public $operation;
   protected $operationType = LogEntryOperation::class;
   protected $operationDataType = '';
   /**
@@ -52,18 +68,30 @@ class LogEntry extends \Google\Collection
    * @var string
    */
   public $receiveTimestamp;
+  /**
+   * @var MonitoredResource
+   */
+  public $resource;
   protected $resourceType = MonitoredResource::class;
   protected $resourceDataType = '';
   /**
    * @var string
    */
   public $severity;
+  /**
+   * @var LogEntrySourceLocation
+   */
+  public $sourceLocation;
   protected $sourceLocationType = LogEntrySourceLocation::class;
   protected $sourceLocationDataType = '';
   /**
    * @var string
    */
   public $spanId;
+  /**
+   * @var LogSplit
+   */
+  public $split;
   protected $splitType = LogSplit::class;
   protected $splitDataType = '';
   /**

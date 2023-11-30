@@ -20,8 +20,16 @@ namespace Google\Service\Logging;
 class TailLogEntriesResponse extends \Google\Collection
 {
   protected $collection_key = 'suppressionInfo';
+  /**
+   * @var LogEntry[]
+   */
+  public $entries;
   protected $entriesType = LogEntry::class;
   protected $entriesDataType = 'array';
+  /**
+   * @var SuppressionInfo[]
+   */
+  public $suppressionInfo;
   protected $suppressionInfoType = SuppressionInfo::class;
   protected $suppressionInfoDataType = 'array';
 
