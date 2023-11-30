@@ -23,6 +23,10 @@ class GoogleCloudApigeeV1SchemaSchemaElement extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudApigeeV1SchemaSchemaProperty
+   */
+  public $properties;
   protected $propertiesType = GoogleCloudApigeeV1SchemaSchemaProperty::class;
   protected $propertiesDataType = '';
 

@@ -19,14 +19,26 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityAction extends \Google\Model
 {
+  /**
+   * @var GoogleCloudApigeeV1SecurityActionAllow
+   */
+  public $allow;
   protected $allowType = GoogleCloudApigeeV1SecurityActionAllow::class;
   protected $allowDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1SecurityActionConditionConfig
+   */
+  public $conditionConfig;
   protected $conditionConfigType = GoogleCloudApigeeV1SecurityActionConditionConfig::class;
   protected $conditionConfigDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudApigeeV1SecurityActionDeny
+   */
+  public $deny;
   protected $denyType = GoogleCloudApigeeV1SecurityActionDeny::class;
   protected $denyDataType = '';
   /**
@@ -37,6 +49,10 @@ class GoogleCloudApigeeV1SecurityAction extends \Google\Model
    * @var string
    */
   public $expireTime;
+  /**
+   * @var GoogleCloudApigeeV1SecurityActionFlag
+   */
+  public $flag;
   protected $flagType = GoogleCloudApigeeV1SecurityActionFlag::class;
   protected $flagDataType = '';
   /**

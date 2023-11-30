@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ScoreComponentRecommendation extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var GoogleCloudApigeeV1ScoreComponentRecommendationAction[]
+   */
+  public $actions;
   protected $actionsType = GoogleCloudApigeeV1ScoreComponentRecommendationAction::class;
   protected $actionsDataType = 'array';
   /**

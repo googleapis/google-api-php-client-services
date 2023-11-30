@@ -24,6 +24,10 @@ class GoogleLongrunningListOperationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleLongrunningOperation[]
+   */
+  public $operations;
   protected $operationsType = GoogleLongrunningOperation::class;
   protected $operationsDataType = 'array';
 

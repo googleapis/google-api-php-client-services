@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ResourceFiles extends \Google\Collection
 {
   protected $collection_key = 'resourceFile';
+  /**
+   * @var GoogleCloudApigeeV1ResourceFile[]
+   */
+  public $resourceFile;
   protected $resourceFileType = GoogleCloudApigeeV1ResourceFile::class;
   protected $resourceFileDataType = 'array';
 

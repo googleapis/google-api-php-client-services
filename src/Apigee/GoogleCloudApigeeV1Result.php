@@ -27,14 +27,26 @@ class GoogleCloudApigeeV1Result extends \Google\Collection
    * @var string
    */
   public $actionResult;
+  /**
+   * @var GoogleCloudApigeeV1Access[]
+   */
+  public $accessList;
   protected $accessListType = GoogleCloudApigeeV1Access::class;
   protected $accessListDataType = 'array';
   /**
    * @var string
    */
   public $content;
+  /**
+   * @var GoogleCloudApigeeV1Property[]
+   */
+  public $headers;
   protected $headersType = GoogleCloudApigeeV1Property::class;
   protected $headersDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1Properties
+   */
+  public $properties;
   protected $propertiesType = GoogleCloudApigeeV1Properties::class;
   protected $propertiesDataType = '';
   /**

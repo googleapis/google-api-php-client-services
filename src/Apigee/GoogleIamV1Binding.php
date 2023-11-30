@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleIamV1Binding extends \Google\Collection
 {
   protected $collection_key = 'members';
+  /**
+   * @var GoogleTypeExpr
+   */
+  public $condition;
   protected $conditionType = GoogleTypeExpr::class;
   protected $conditionDataType = '';
   /**

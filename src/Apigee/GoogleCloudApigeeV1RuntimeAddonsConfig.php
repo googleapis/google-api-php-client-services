@@ -19,8 +19,16 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1RuntimeAddonsConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudApigeeV1RuntimeAnalyticsConfig
+   */
+  public $analyticsConfig;
   protected $analyticsConfigType = GoogleCloudApigeeV1RuntimeAnalyticsConfig::class;
   protected $analyticsConfigDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1RuntimeApiSecurityConfig
+   */
+  public $apiSecurityConfig;
   protected $apiSecurityConfigType = GoogleCloudApigeeV1RuntimeApiSecurityConfig::class;
   protected $apiSecurityConfigDataType = '';
   /**

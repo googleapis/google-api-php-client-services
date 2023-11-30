@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SharedFlowRevision extends \Google\Collection
 {
   protected $collection_key = 'sharedFlows';
+  /**
+   * @var GoogleCloudApigeeV1ConfigVersion
+   */
+  public $configurationVersion;
   protected $configurationVersionType = GoogleCloudApigeeV1ConfigVersion::class;
   protected $configurationVersionDataType = '';
   /**
@@ -54,6 +58,10 @@ class GoogleCloudApigeeV1SharedFlowRevision extends \Google\Collection
    * @var string[]
    */
   public $policies;
+  /**
+   * @var GoogleCloudApigeeV1ResourceFiles
+   */
+  public $resourceFiles;
   protected $resourceFilesType = GoogleCloudApigeeV1ResourceFiles::class;
   protected $resourceFilesDataType = '';
   /**

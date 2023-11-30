@@ -20,10 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Score extends \Google\Collection
 {
   protected $collection_key = 'subcomponents';
+  /**
+   * @var GoogleCloudApigeeV1ScoreComponent
+   */
+  public $component;
   protected $componentType = GoogleCloudApigeeV1ScoreComponent::class;
   protected $componentDataType = '';
+  /**
+   * @var GoogleCloudApigeeV1ScoreComponent[]
+   */
+  public $subcomponents;
   protected $subcomponentsType = GoogleCloudApigeeV1ScoreComponent::class;
   protected $subcomponentsDataType = 'array';
+  /**
+   * @var GoogleTypeInterval
+   */
+  public $timeRange;
   protected $timeRangeType = GoogleTypeInterval::class;
   protected $timeRangeDataType = '';
 

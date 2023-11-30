@@ -20,6 +20,10 @@ namespace Google\Service\Apigee;
 class GoogleRpcPreconditionFailure extends \Google\Collection
 {
   protected $collection_key = 'violations';
+  /**
+   * @var GoogleRpcPreconditionFailureViolation[]
+   */
+  public $violations;
   protected $violationsType = GoogleRpcPreconditionFailureViolation::class;
   protected $violationsDataType = 'array';
 

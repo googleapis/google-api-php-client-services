@@ -20,8 +20,16 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1StatsHostStats extends \Google\Collection
 {
   protected $collection_key = 'metrics';
+  /**
+   * @var GoogleCloudApigeeV1DimensionMetric[]
+   */
+  public $dimensions;
   protected $dimensionsType = GoogleCloudApigeeV1DimensionMetric::class;
   protected $dimensionsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1Metric[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudApigeeV1Metric::class;
   protected $metricsDataType = 'array';
   /**

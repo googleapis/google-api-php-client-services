@@ -20,10 +20,22 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Stats extends \Google\Collection
 {
   protected $collection_key = 'hosts';
+  /**
+   * @var GoogleCloudApigeeV1StatsEnvironmentStats[]
+   */
+  public $environments;
   protected $environmentsType = GoogleCloudApigeeV1StatsEnvironmentStats::class;
   protected $environmentsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1StatsHostStats[]
+   */
+  public $hosts;
   protected $hostsType = GoogleCloudApigeeV1StatsHostStats::class;
   protected $hostsDataType = 'array';
+  /**
+   * @var GoogleCloudApigeeV1Metadata
+   */
+  public $metaData;
   protected $metaDataType = GoogleCloudApigeeV1Metadata::class;
   protected $metaDataDataType = '';
 

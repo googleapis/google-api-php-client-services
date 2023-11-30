@@ -20,12 +20,20 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Schema extends \Google\Collection
 {
   protected $collection_key = 'metrics';
+  /**
+   * @var GoogleCloudApigeeV1SchemaSchemaElement[]
+   */
+  public $dimensions;
   protected $dimensionsType = GoogleCloudApigeeV1SchemaSchemaElement::class;
   protected $dimensionsDataType = 'array';
   /**
    * @var string[]
    */
   public $meta;
+  /**
+   * @var GoogleCloudApigeeV1SchemaSchemaElement[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudApigeeV1SchemaSchemaElement::class;
   protected $metricsDataType = 'array';
 

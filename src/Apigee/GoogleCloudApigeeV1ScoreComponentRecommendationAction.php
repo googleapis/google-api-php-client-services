@@ -19,6 +19,10 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1ScoreComponentRecommendationAction extends \Google\Model
 {
+  /**
+   * @var GoogleCloudApigeeV1ScoreComponentRecommendationActionActionContext
+   */
+  public $actionContext;
   protected $actionContextType = GoogleCloudApigeeV1ScoreComponentRecommendationActionActionContext::class;
   protected $actionContextDataType = '';
   /**

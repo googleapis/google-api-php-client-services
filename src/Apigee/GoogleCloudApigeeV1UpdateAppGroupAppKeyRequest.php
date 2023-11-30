@@ -28,6 +28,10 @@ class GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest extends \Google\Collection
    * @var string[]
    */
   public $apiProducts;
+  /**
+   * @var GoogleCloudApigeeV1AppGroupAppKey
+   */
+  public $appGroupAppKey;
   protected $appGroupAppKeyType = GoogleCloudApigeeV1AppGroupAppKey::class;
   protected $appGroupAppKeyDataType = '';
 
