@@ -23,6 +23,10 @@ class OperationMetadata extends \Google\Model
    * @var string
    */
   public $apiVersion;
+  /**
+   * @var ContactCenter
+   */
+  public $contactCenter;
   protected $contactCenterType = ContactCenter::class;
   protected $contactCenterDataType = '';
   /**
