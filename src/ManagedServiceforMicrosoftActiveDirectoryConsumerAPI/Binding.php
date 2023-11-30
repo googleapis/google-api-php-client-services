@@ -20,6 +20,10 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class Binding extends \Google\Collection
 {
   protected $collection_key = 'members';
+  /**
+   * @var Expr
+   */
+  public $condition;
   protected $conditionType = Expr::class;
   protected $conditionDataType = '';
   /**

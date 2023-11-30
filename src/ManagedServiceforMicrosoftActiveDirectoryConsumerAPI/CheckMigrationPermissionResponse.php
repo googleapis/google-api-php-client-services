@@ -20,6 +20,10 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class CheckMigrationPermissionResponse extends \Google\Collection
 {
   protected $collection_key = 'onpremDomains';
+  /**
+   * @var OnPremDomainSIDDetails[]
+   */
+  public $onpremDomains;
   protected $onpremDomainsType = OnPremDomainSIDDetails::class;
   protected $onpremDomainsDataType = 'array';
   /**

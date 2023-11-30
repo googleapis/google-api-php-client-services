@@ -39,6 +39,10 @@ class MaintenancePolicy extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var UpdatePolicy
+   */
+  public $updatePolicy;
   protected $updatePolicyType = UpdatePolicy::class;
   protected $updatePolicyDataType = '';
   /**

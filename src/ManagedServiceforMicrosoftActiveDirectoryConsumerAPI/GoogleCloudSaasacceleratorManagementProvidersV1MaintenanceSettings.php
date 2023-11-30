@@ -27,6 +27,10 @@ class GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings extends
    * @var bool
    */
   public $isRollback;
+  /**
+   * @var MaintenancePolicy[]
+   */
+  public $maintenancePolicies;
   protected $maintenancePoliciesType = MaintenancePolicy::class;
   protected $maintenancePoliciesDataType = 'map';
 

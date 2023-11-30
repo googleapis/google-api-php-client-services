@@ -24,6 +24,10 @@ class Certificate extends \Google\Collection
    * @var string
    */
   public $expireTime;
+  /**
+   * @var Certificate
+   */
+  public $issuingCertificate;
   protected $issuingCertificateType = Certificate::class;
   protected $issuingCertificateDataType = '';
   /**

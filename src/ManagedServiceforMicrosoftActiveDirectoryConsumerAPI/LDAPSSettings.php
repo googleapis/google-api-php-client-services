@@ -19,6 +19,10 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 
 class LDAPSSettings extends \Google\Model
 {
+  /**
+   * @var Certificate
+   */
+  public $certificate;
   protected $certificateType = Certificate::class;
   protected $certificateDataType = '';
   /**

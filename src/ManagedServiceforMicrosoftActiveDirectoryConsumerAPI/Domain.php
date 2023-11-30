@@ -64,6 +64,10 @@ class Domain extends \Google\Collection
    * @var string
    */
   public $statusMessage;
+  /**
+   * @var Trust[]
+   */
+  public $trusts;
   protected $trustsType = Trust::class;
   protected $trustsDataType = 'array';
   /**
