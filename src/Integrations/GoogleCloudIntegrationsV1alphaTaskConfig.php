@@ -36,24 +36,48 @@ class GoogleCloudIntegrationsV1alphaTaskConfig extends \Google\Collection
    * @var string
    */
   public $externalTaskType;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaFailurePolicy
+   */
+  public $failurePolicy;
   protected $failurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $failurePolicyDataType = '';
   /**
    * @var string
    */
   public $jsonValidationOption;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaNextTask[]
+   */
+  public $nextTasks;
   protected $nextTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $nextTasksDataType = 'array';
   /**
    * @var string
    */
   public $nextTasksExecutionPolicy;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaEventParameter[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parametersDataType = 'map';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public $position;
   protected $positionType = GoogleCloudIntegrationsV1alphaCoordinate::class;
   protected $positionDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaSuccessPolicy
+   */
+  public $successPolicy;
   protected $successPolicyType = GoogleCloudIntegrationsV1alphaSuccessPolicy::class;
   protected $successPolicyDataType = '';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaFailurePolicy
+   */
+  public $synchronousCallFailurePolicy;
   protected $synchronousCallFailurePolicyType = GoogleCloudIntegrationsV1alphaFailurePolicy::class;
   protected $synchronousCallFailurePolicyDataType = '';
   /**

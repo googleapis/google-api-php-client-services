@@ -20,8 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
 {
   protected $collection_key = 'startTasks';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaIntegrationAlertConfig[]
+   */
+  public $alertConfig;
   protected $alertConfigType = GoogleCloudIntegrationsV1alphaIntegrationAlertConfig::class;
   protected $alertConfigDataType = 'array';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaCloudSchedulerConfig
+   */
+  public $cloudSchedulerConfig;
   protected $cloudSchedulerConfigType = GoogleCloudIntegrationsV1alphaCloudSchedulerConfig::class;
   protected $cloudSchedulerConfigDataType = '';
   /**
@@ -40,12 +48,20 @@ class GoogleCloudIntegrationsV1alphaTriggerConfig extends \Google\Collection
    * @var string
    */
   public $nextTasksExecutionPolicy;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaCoordinate
+   */
+  public $position;
   protected $positionType = GoogleCloudIntegrationsV1alphaCoordinate::class;
   protected $positionDataType = '';
   /**
    * @var string[]
    */
   public $properties;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaNextTask[]
+   */
+  public $startTasks;
   protected $startTasksType = GoogleCloudIntegrationsV1alphaNextTask::class;
   protected $startTasksDataType = 'array';
   /**

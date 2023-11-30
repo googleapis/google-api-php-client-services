@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaListTestCaseExecutionsResponse extends \Google\Collection
 {
   protected $collection_key = 'executions';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaExecution[]
+   */
+  public $executions;
   protected $executionsType = GoogleCloudIntegrationsV1alphaExecution::class;
   protected $executionsDataType = 'array';
   /**

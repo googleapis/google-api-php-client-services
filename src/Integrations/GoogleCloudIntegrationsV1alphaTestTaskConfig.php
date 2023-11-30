@@ -20,8 +20,16 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaTestTaskConfig extends \Google\Collection
 {
   protected $collection_key = 'assertions';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaAssertion[]
+   */
+  public $assertions;
   protected $assertionsType = GoogleCloudIntegrationsV1alphaAssertion::class;
   protected $assertionsDataType = 'array';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaMockConfig
+   */
+  public $mockConfig;
   protected $mockConfigType = GoogleCloudIntegrationsV1alphaMockConfig::class;
   protected $mockConfigDataType = '';
   /**

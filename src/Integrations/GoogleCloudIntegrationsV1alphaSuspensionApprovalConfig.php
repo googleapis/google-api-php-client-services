@@ -28,6 +28,10 @@ class GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig extends \Google\Col
    * @var string[]
    */
   public $emailAddresses;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaSuspensionApprovalExpiration
+   */
+  public $expiration;
   protected $expirationType = GoogleCloudIntegrationsV1alphaSuspensionApprovalExpiration::class;
   protected $expirationDataType = '';
 

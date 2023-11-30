@@ -20,10 +20,22 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest extends \Google\Collection
 {
   protected $collection_key = 'parameterEntries';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaValueType[]
+   */
+  public $inputParameters;
   protected $inputParametersType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $inputParametersDataType = 'map';
+  /**
+   * @var EnterpriseCrmFrontendsEventbusProtoParameterEntry[]
+   */
+  public $parameterEntries;
   protected $parameterEntriesType = EnterpriseCrmFrontendsEventbusProtoParameterEntry::class;
   protected $parameterEntriesDataType = 'array';
+  /**
+   * @var EnterpriseCrmEventbusProtoEventParameters
+   */
+  public $parameters;
   protected $parametersType = EnterpriseCrmEventbusProtoEventParameters::class;
   protected $parametersDataType = '';
   /**

@@ -27,6 +27,10 @@ class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest extends \G
    * @var bool
    */
   public $ignoreErrorIfNoActiveWorkflow;
+  /**
+   * @var EnterpriseCrmEventbusProtoEventParameters
+   */
+  public $parameters;
   protected $parametersType = EnterpriseCrmEventbusProtoEventParameters::class;
   protected $parametersDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Google\Model
 {
+  /**
+   * @var GoogleCloudIntegrationsV1alphaAccessToken
+   */
+  public $accessToken;
   protected $accessTokenType = GoogleCloudIntegrationsV1alphaAccessToken::class;
   protected $accessTokenDataType = '';
   /**
@@ -45,6 +49,10 @@ class GoogleCloudIntegrationsV1alphaOAuth2ResourceOwnerCredentials extends \Goog
    * @var string
    */
   public $tokenEndpoint;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaParameterMap
+   */
+  public $tokenParams;
   protected $tokenParamsType = GoogleCloudIntegrationsV1alphaParameterMap::class;
   protected $tokenParamsDataType = '';
   /**

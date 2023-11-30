@@ -52,8 +52,16 @@ class GoogleCloudIntegrationsV1alphaTestCase extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaIntegrationParameter[]
+   */
+  public $testInputParameters;
   protected $testInputParametersType = GoogleCloudIntegrationsV1alphaIntegrationParameter::class;
   protected $testInputParametersDataType = 'array';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaTestTaskConfig[]
+   */
+  public $testTaskConfigs;
   protected $testTaskConfigsType = GoogleCloudIntegrationsV1alphaTestTaskConfig::class;
   protected $testTaskConfigsDataType = 'array';
   /**

@@ -19,15 +19,27 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaValueType extends \Google\Model
 {
+  /**
+   * @var GoogleCloudIntegrationsV1alphaBooleanParameterArray
+   */
+  public $booleanArray;
   protected $booleanArrayType = GoogleCloudIntegrationsV1alphaBooleanParameterArray::class;
   protected $booleanArrayDataType = '';
   /**
    * @var bool
    */
   public $booleanValue;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaDoubleParameterArray
+   */
+  public $doubleArray;
   protected $doubleArrayType = GoogleCloudIntegrationsV1alphaDoubleParameterArray::class;
   protected $doubleArrayDataType = '';
   public $doubleValue;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaIntParameterArray
+   */
+  public $intArray;
   protected $intArrayType = GoogleCloudIntegrationsV1alphaIntParameterArray::class;
   protected $intArrayDataType = '';
   /**
@@ -38,6 +50,10 @@ class GoogleCloudIntegrationsV1alphaValueType extends \Google\Model
    * @var string
    */
   public $jsonValue;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaStringParameterArray
+   */
+  public $stringArray;
   protected $stringArrayType = GoogleCloudIntegrationsV1alphaStringParameterArray::class;
   protected $stringArrayDataType = '';
   /**

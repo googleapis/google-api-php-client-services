@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaParameterMap extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaParameterMapEntry[]
+   */
+  public $entries;
   protected $entriesType = GoogleCloudIntegrationsV1alphaParameterMapEntry::class;
   protected $entriesDataType = 'array';
   /**

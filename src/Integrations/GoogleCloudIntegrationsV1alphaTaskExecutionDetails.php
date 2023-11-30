@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaTaskExecutionDetails extends \Google\Collection
 {
   protected $collection_key = 'taskAttemptStats';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaAttemptStats[]
+   */
+  public $taskAttemptStats;
   protected $taskAttemptStatsType = GoogleCloudIntegrationsV1alphaAttemptStats::class;
   protected $taskAttemptStatsDataType = 'array';
   /**

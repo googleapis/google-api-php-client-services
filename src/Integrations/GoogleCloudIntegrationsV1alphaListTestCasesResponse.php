@@ -24,6 +24,10 @@ class GoogleCloudIntegrationsV1alphaListTestCasesResponse extends \Google\Collec
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaTestCase[]
+   */
+  public $testCases;
   protected $testCasesType = GoogleCloudIntegrationsV1alphaTestCase::class;
   protected $testCasesDataType = 'array';
 

@@ -28,6 +28,10 @@ class GoogleCloudIntegrationsV1alphaMockConfig extends \Google\Collection
    * @var string
    */
   public $mockStrategy;
+  /**
+   * @var GoogleCloudIntegrationsV1alphaEventParameter[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parametersDataType = 'array';
 
