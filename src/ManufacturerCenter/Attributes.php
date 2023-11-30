@@ -20,6 +20,10 @@ namespace Google\Service\ManufacturerCenter;
 class Attributes extends \Google\Collection
 {
   protected $collection_key = 'videoLink';
+  /**
+   * @var Image[]
+   */
+  public $additionalImageLink;
   protected $additionalImageLinkType = Image::class;
   protected $additionalImageLinkDataType = 'array';
   /**
@@ -30,14 +34,26 @@ class Attributes extends \Google\Collection
    * @var string
    */
   public $brand;
+  /**
+   * @var Capacity
+   */
+  public $capacity;
   protected $capacityType = Capacity::class;
   protected $capacityDataType = '';
+  /**
+   * @var GoogleShoppingManufacturersV1ProductCertification[]
+   */
+  public $certification;
   protected $certificationType = GoogleShoppingManufacturersV1ProductCertification::class;
   protected $certificationDataType = 'array';
   /**
    * @var string
    */
   public $color;
+  /**
+   * @var Count
+   */
+  public $count;
   protected $countType = Count::class;
   protected $countDataType = '';
   /**
@@ -52,6 +68,10 @@ class Attributes extends \Google\Collection
    * @var string[]
    */
   public $excludedDestination;
+  /**
+   * @var FeatureDescription[]
+   */
+  public $featureDescription;
   protected $featureDescriptionType = FeatureDescription::class;
   protected $featureDescriptionDataType = 'array';
   /**
@@ -66,12 +86,20 @@ class Attributes extends \Google\Collection
    * @var string
    */
   public $gender;
+  /**
+   * @var Grocery
+   */
+  public $grocery;
   protected $groceryType = Grocery::class;
   protected $groceryDataType = '';
   /**
    * @var string[]
    */
   public $gtin;
+  /**
+   * @var Image
+   */
+  public $imageLink;
   protected $imageLinkType = Image::class;
   protected $imageLinkDataType = '';
   /**
@@ -90,12 +118,20 @@ class Attributes extends \Google\Collection
    * @var string
    */
   public $mpn;
+  /**
+   * @var Nutrition
+   */
+  public $nutrition;
   protected $nutritionType = Nutrition::class;
   protected $nutritionDataType = '';
   /**
    * @var string
    */
   public $pattern;
+  /**
+   * @var ProductDetail[]
+   */
+  public $productDetail;
   protected $productDetailType = ProductDetail::class;
   protected $productDetailDataType = 'array';
   /**
@@ -142,6 +178,10 @@ class Attributes extends \Google\Collection
    * @var string[]
    */
   public $sizeType;
+  /**
+   * @var Price
+   */
+  public $suggestedRetailPrice;
   protected $suggestedRetailPriceType = Price::class;
   protected $suggestedRetailPriceDataType = '';
   /**

@@ -20,14 +20,26 @@ namespace Google\Service\ManufacturerCenter;
 class Product extends \Google\Collection
 {
   protected $collection_key = 'issues';
+  /**
+   * @var Attributes
+   */
+  public $attributes;
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
    * @var string
    */
   public $contentLanguage;
+  /**
+   * @var DestinationStatus[]
+   */
+  public $destinationStatuses;
   protected $destinationStatusesType = DestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
+  /**
+   * @var Issue[]
+   */
+  public $issues;
   protected $issuesType = Issue::class;
   protected $issuesDataType = 'array';
   /**

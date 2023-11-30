@@ -24,14 +24,26 @@ class ProductCertification extends \Google\Collection
    * @var string
    */
   public $brand;
+  /**
+   * @var Certification[]
+   */
+  public $certification;
   protected $certificationType = Certification::class;
   protected $certificationDataType = 'array';
   /**
    * @var string[]
    */
   public $countryCode;
+  /**
+   * @var DestinationStatus[]
+   */
+  public $destinationStatuses;
   protected $destinationStatusesType = DestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
+  /**
+   * @var Issue[]
+   */
+  public $issues;
   protected $issuesType = Issue::class;
   protected $issuesDataType = 'array';
   /**

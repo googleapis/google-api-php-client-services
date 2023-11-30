@@ -24,6 +24,10 @@ class VoluntaryNutritionFact extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var FloatUnit
+   */
+  public $value;
   protected $valueType = FloatUnit::class;
   protected $valueDataType = '';
 
