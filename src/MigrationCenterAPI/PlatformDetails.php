@@ -19,14 +19,34 @@ namespace Google\Service\MigrationCenterAPI;
 
 class PlatformDetails extends \Google\Model
 {
+  /**
+   * @var AwsEc2PlatformDetails
+   */
+  public $awsEc2Details;
   protected $awsEc2DetailsType = AwsEc2PlatformDetails::class;
   protected $awsEc2DetailsDataType = '';
+  /**
+   * @var AzureVmPlatformDetails
+   */
+  public $azureVmDetails;
   protected $azureVmDetailsType = AzureVmPlatformDetails::class;
   protected $azureVmDetailsDataType = '';
+  /**
+   * @var GenericPlatformDetails
+   */
+  public $genericDetails;
   protected $genericDetailsType = GenericPlatformDetails::class;
   protected $genericDetailsDataType = '';
+  /**
+   * @var PhysicalPlatformDetails
+   */
+  public $physicalDetails;
   protected $physicalDetailsType = PhysicalPlatformDetails::class;
   protected $physicalDetailsDataType = '';
+  /**
+   * @var VmwarePlatformDetails
+   */
+  public $vmwareDetails;
   protected $vmwareDetailsType = VmwarePlatformDetails::class;
   protected $vmwareDetailsDataType = '';
 

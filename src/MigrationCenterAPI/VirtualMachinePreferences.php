@@ -23,20 +23,36 @@ class VirtualMachinePreferences extends \Google\Model
    * @var string
    */
   public $commitmentPlan;
+  /**
+   * @var ComputeEnginePreferences
+   */
+  public $computeEnginePreferences;
   protected $computeEnginePreferencesType = ComputeEnginePreferences::class;
   protected $computeEnginePreferencesDataType = '';
+  /**
+   * @var RegionPreferences
+   */
+  public $regionPreferences;
   protected $regionPreferencesType = RegionPreferences::class;
   protected $regionPreferencesDataType = '';
   /**
    * @var string
    */
   public $sizingOptimizationStrategy;
+  /**
+   * @var SoleTenancyPreferences
+   */
+  public $soleTenancyPreferences;
   protected $soleTenancyPreferencesType = SoleTenancyPreferences::class;
   protected $soleTenancyPreferencesDataType = '';
   /**
    * @var string
    */
   public $targetProduct;
+  /**
+   * @var VmwareEnginePreferences
+   */
+  public $vmwareEnginePreferences;
   protected $vmwareEnginePreferencesType = VmwareEnginePreferences::class;
   protected $vmwareEnginePreferencesDataType = '';
 

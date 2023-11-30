@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class HostsEntryList extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var HostsEntry[]
+   */
+  public $entries;
   protected $entriesType = HostsEntry::class;
   protected $entriesDataType = 'array';
 

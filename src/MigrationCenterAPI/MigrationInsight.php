@@ -19,8 +19,16 @@ namespace Google\Service\MigrationCenterAPI;
 
 class MigrationInsight extends \Google\Model
 {
+  /**
+   * @var ComputeEngineMigrationTarget
+   */
+  public $computeEngineTarget;
   protected $computeEngineTargetType = ComputeEngineMigrationTarget::class;
   protected $computeEngineTargetDataType = '';
+  /**
+   * @var FitDescriptor
+   */
+  public $fit;
   protected $fitType = FitDescriptor::class;
   protected $fitDataType = '';
 

@@ -28,8 +28,16 @@ class ErrorFrame extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var AssetFrame
+   */
+  public $originalFrame;
   protected $originalFrameType = AssetFrame::class;
   protected $originalFrameDataType = '';
+  /**
+   * @var FrameViolationEntry[]
+   */
+  public $violations;
   protected $violationsType = FrameViolationEntry::class;
   protected $violationsDataType = 'array';
 

@@ -32,18 +32,30 @@ class Asset extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var InsightList
+   */
+  public $insightList;
   protected $insightListType = InsightList::class;
   protected $insightListDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var MachineDetails
+   */
+  public $machineDetails;
   protected $machineDetailsType = MachineDetails::class;
   protected $machineDetailsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var AssetPerformanceData
+   */
+  public $performanceData;
   protected $performanceDataType = AssetPerformanceData::class;
   protected $performanceDataDataType = '';
   /**

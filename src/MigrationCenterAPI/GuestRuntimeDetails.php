@@ -23,6 +23,10 @@ class GuestRuntimeDetails extends \Google\Model
    * @var string
    */
   public $domain;
+  /**
+   * @var GuestInstalledApplicationList
+   */
+  public $installedApps;
   protected $installedAppsType = GuestInstalledApplicationList::class;
   protected $installedAppsDataType = '';
   /**
@@ -33,12 +37,28 @@ class GuestRuntimeDetails extends \Google\Model
    * @var string
    */
   public $machineName;
+  /**
+   * @var RuntimeNetworkInfo
+   */
+  public $network;
   protected $networkType = RuntimeNetworkInfo::class;
   protected $networkDataType = '';
+  /**
+   * @var OpenFileList
+   */
+  public $openFileList;
   protected $openFileListType = OpenFileList::class;
   protected $openFileListDataType = '';
+  /**
+   * @var RunningProcessList
+   */
+  public $processes;
   protected $processesType = RunningProcessList::class;
   protected $processesDataType = '';
+  /**
+   * @var RunningServiceList
+   */
+  public $services;
   protected $servicesType = RunningServiceList::class;
   protected $servicesDataType = '';
 

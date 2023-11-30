@@ -19,8 +19,16 @@ namespace Google\Service\MigrationCenterAPI;
 
 class DailyResourceUsageAggregationNetwork extends \Google\Model
 {
+  /**
+   * @var DailyResourceUsageAggregationStats
+   */
+  public $egressBps;
   protected $egressBpsType = DailyResourceUsageAggregationStats::class;
   protected $egressBpsDataType = '';
+  /**
+   * @var DailyResourceUsageAggregationStats
+   */
+  public $ingressBps;
   protected $ingressBpsType = DailyResourceUsageAggregationStats::class;
   protected $ingressBpsDataType = '';
 

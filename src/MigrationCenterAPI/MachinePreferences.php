@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class MachinePreferences extends \Google\Collection
 {
   protected $collection_key = 'allowedMachineSeries';
+  /**
+   * @var MachineSeries[]
+   */
+  public $allowedMachineSeries;
   protected $allowedMachineSeriesType = MachineSeries::class;
   protected $allowedMachineSeriesDataType = 'array';
 

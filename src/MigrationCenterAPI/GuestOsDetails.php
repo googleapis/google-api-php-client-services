@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class GuestOsDetails extends \Google\Model
 {
+  /**
+   * @var GuestConfigDetails
+   */
+  public $config;
   protected $configType = GuestConfigDetails::class;
   protected $configDataType = '';
   /**
@@ -29,6 +33,10 @@ class GuestOsDetails extends \Google\Model
    * @var string
    */
   public $osName;
+  /**
+   * @var GuestRuntimeDetails
+   */
+  public $runtime;
   protected $runtimeType = GuestRuntimeDetails::class;
   protected $runtimeDataType = '';
   /**

@@ -23,6 +23,10 @@ class ReportSummaryMachineSeriesAllocation extends \Google\Model
    * @var string
    */
   public $allocatedAssetCount;
+  /**
+   * @var MachineSeries
+   */
+  public $machineSeries;
   protected $machineSeriesType = MachineSeries::class;
   protected $machineSeriesDataType = '';
 

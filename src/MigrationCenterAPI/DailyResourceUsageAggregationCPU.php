@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class DailyResourceUsageAggregationCPU extends \Google\Model
 {
+  /**
+   * @var DailyResourceUsageAggregationStats
+   */
+  public $utilizationPercentage;
   protected $utilizationPercentageType = DailyResourceUsageAggregationStats::class;
   protected $utilizationPercentageDataType = '';
 

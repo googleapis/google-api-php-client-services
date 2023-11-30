@@ -19,16 +19,40 @@ namespace Google\Service\MigrationCenterAPI;
 
 class ReportSummaryAssetAggregateStats extends \Google\Model
 {
+  /**
+   * @var ReportSummaryHistogramChartData
+   */
+  public $coreCountHistogram;
   protected $coreCountHistogramType = ReportSummaryHistogramChartData::class;
   protected $coreCountHistogramDataType = '';
+  /**
+   * @var ReportSummaryHistogramChartData
+   */
+  public $memoryBytesHistogram;
   protected $memoryBytesHistogramType = ReportSummaryHistogramChartData::class;
   protected $memoryBytesHistogramDataType = '';
+  /**
+   * @var ReportSummaryUtilizationChartData
+   */
+  public $memoryUtilizationChart;
   protected $memoryUtilizationChartType = ReportSummaryUtilizationChartData::class;
   protected $memoryUtilizationChartDataType = '';
+  /**
+   * @var ReportSummaryChartData
+   */
+  public $operatingSystem;
   protected $operatingSystemType = ReportSummaryChartData::class;
   protected $operatingSystemDataType = '';
+  /**
+   * @var ReportSummaryHistogramChartData
+   */
+  public $storageBytesHistogram;
   protected $storageBytesHistogramType = ReportSummaryHistogramChartData::class;
   protected $storageBytesHistogramDataType = '';
+  /**
+   * @var ReportSummaryUtilizationChartData
+   */
+  public $storageUtilizationChart;
   protected $storageUtilizationChartType = ReportSummaryUtilizationChartData::class;
   protected $storageUtilizationChartDataType = '';
   /**

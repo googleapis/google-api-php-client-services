@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class DailyResourceUsageAggregationDisk extends \Google\Model
 {
+  /**
+   * @var DailyResourceUsageAggregationStats
+   */
+  public $iops;
   protected $iopsType = DailyResourceUsageAggregationStats::class;
   protected $iopsDataType = '';
 

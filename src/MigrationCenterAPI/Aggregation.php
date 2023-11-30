@@ -19,16 +19,32 @@ namespace Google\Service\MigrationCenterAPI;
 
 class Aggregation extends \Google\Model
 {
+  /**
+   * @var AggregationCount
+   */
+  public $count;
   protected $countType = AggregationCount::class;
   protected $countDataType = '';
   /**
    * @var string
    */
   public $field;
+  /**
+   * @var AggregationFrequency
+   */
+  public $frequency;
   protected $frequencyType = AggregationFrequency::class;
   protected $frequencyDataType = '';
+  /**
+   * @var AggregationHistogram
+   */
+  public $histogram;
   protected $histogramType = AggregationHistogram::class;
   protected $histogramDataType = '';
+  /**
+   * @var AggregationSum
+   */
+  public $sum;
   protected $sumType = AggregationSum::class;
   protected $sumDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class RuntimeNetworkInfo extends \Google\Model
 {
+  /**
+   * @var NetworkConnectionList
+   */
+  public $connections;
   protected $connectionsType = NetworkConnectionList::class;
   protected $connectionsDataType = '';
   /**

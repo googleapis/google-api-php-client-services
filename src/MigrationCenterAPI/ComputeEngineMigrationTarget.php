@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class ComputeEngineMigrationTarget extends \Google\Model
 {
+  /**
+   * @var ComputeEngineShapeDescriptor
+   */
+  public $shape;
   protected $shapeType = ComputeEngineShapeDescriptor::class;
   protected $shapeDataType = '';
 

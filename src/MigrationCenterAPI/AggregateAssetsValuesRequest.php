@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class AggregateAssetsValuesRequest extends \Google\Collection
 {
   protected $collection_key = 'aggregations';
+  /**
+   * @var Aggregation[]
+   */
+  public $aggregations;
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummaryGroupFinding extends \Google\Collection
 {
   protected $collection_key = 'preferenceSetFindings';
+  /**
+   * @var ReportSummaryAssetAggregateStats
+   */
+  public $assetAggregateStats;
   protected $assetAggregateStatsType = ReportSummaryAssetAggregateStats::class;
   protected $assetAggregateStatsDataType = '';
   /**
@@ -34,6 +38,10 @@ class ReportSummaryGroupFinding extends \Google\Collection
    * @var string
    */
   public $overlappingAssetCount;
+  /**
+   * @var ReportSummaryGroupPreferenceSetFinding[]
+   */
+  public $preferenceSetFindings;
   protected $preferenceSetFindingsType = ReportSummaryGroupPreferenceSetFinding::class;
   protected $preferenceSetFindingsDataType = 'array';
 

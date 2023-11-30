@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class NfsExportList extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var NfsExport[]
+   */
+  public $entries;
   protected $entriesType = NfsExport::class;
   protected $entriesDataType = 'array';
 

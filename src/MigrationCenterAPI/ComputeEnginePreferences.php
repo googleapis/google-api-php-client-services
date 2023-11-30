@@ -23,6 +23,10 @@ class ComputeEnginePreferences extends \Google\Model
    * @var string
    */
   public $licenseType;
+  /**
+   * @var MachinePreferences
+   */
+  public $machinePreferences;
   protected $machinePreferencesType = MachinePreferences::class;
   protected $machinePreferencesDataType = '';
 

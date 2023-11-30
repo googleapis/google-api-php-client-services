@@ -20,8 +20,16 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummary extends \Google\Collection
 {
   protected $collection_key = 'groupFindings';
+  /**
+   * @var ReportSummaryAssetAggregateStats
+   */
+  public $allAssetsStats;
   protected $allAssetsStatsType = ReportSummaryAssetAggregateStats::class;
   protected $allAssetsStatsDataType = '';
+  /**
+   * @var ReportSummaryGroupFinding[]
+   */
+  public $groupFindings;
   protected $groupFindingsType = ReportSummaryGroupFinding::class;
   protected $groupFindingsDataType = 'array';
 

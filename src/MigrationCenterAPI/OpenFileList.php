@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class OpenFileList extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var OpenFileDetails[]
+   */
+  public $entries;
   protected $entriesType = OpenFileDetails::class;
   protected $entriesDataType = 'array';
 

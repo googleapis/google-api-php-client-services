@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class UpdateAssetRequest extends \Google\Model
 {
+  /**
+   * @var Asset
+   */
+  public $asset;
   protected $assetType = Asset::class;
   protected $assetDataType = '';
   /**

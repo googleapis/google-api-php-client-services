@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class RunningProcessList extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var RunningProcess[]
+   */
+  public $entries;
   protected $entriesType = RunningProcess::class;
   protected $entriesDataType = 'array';
 

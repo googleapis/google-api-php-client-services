@@ -27,6 +27,10 @@ class ReportSummaryVmwareNodeAllocation extends \Google\Model
    * @var string
    */
   public $nodeCount;
+  /**
+   * @var ReportSummaryVmwareNode
+   */
+  public $vmwareNode;
   protected $vmwareNodeType = ReportSummaryVmwareNode::class;
   protected $vmwareNodeDataType = '';
 

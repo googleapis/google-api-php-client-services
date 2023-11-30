@@ -19,14 +19,34 @@ namespace Google\Service\MigrationCenterAPI;
 
 class DailyResourceUsageAggregation extends \Google\Model
 {
+  /**
+   * @var DailyResourceUsageAggregationCPU
+   */
+  public $cpu;
   protected $cpuType = DailyResourceUsageAggregationCPU::class;
   protected $cpuDataType = '';
+  /**
+   * @var Date
+   */
+  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
+  /**
+   * @var DailyResourceUsageAggregationDisk
+   */
+  public $disk;
   protected $diskType = DailyResourceUsageAggregationDisk::class;
   protected $diskDataType = '';
+  /**
+   * @var DailyResourceUsageAggregationMemory
+   */
+  public $memory;
   protected $memoryType = DailyResourceUsageAggregationMemory::class;
   protected $memoryDataType = '';
+  /**
+   * @var DailyResourceUsageAggregationNetwork
+   */
+  public $network;
   protected $networkType = DailyResourceUsageAggregationNetwork::class;
   protected $networkDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class ListImportJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var ImportJob[]
+   */
+  public $importJobs;
   protected $importJobsType = ImportJob::class;
   protected $importJobsDataType = 'array';
   /**

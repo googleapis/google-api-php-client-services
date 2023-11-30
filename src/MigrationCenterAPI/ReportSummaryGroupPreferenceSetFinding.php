@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
 {
+  /**
+   * @var ReportSummaryComputeEngineFinding
+   */
+  public $computeEngineFinding;
   protected $computeEngineFindingType = ReportSummaryComputeEngineFinding::class;
   protected $computeEngineFindingDataType = '';
   /**
@@ -29,22 +33,58 @@ class ReportSummaryGroupPreferenceSetFinding extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var VirtualMachinePreferences
+   */
+  public $machinePreferences;
   protected $machinePreferencesType = VirtualMachinePreferences::class;
   protected $machinePreferencesDataType = '';
+  /**
+   * @var Money
+   */
+  public $monthlyCostCompute;
   protected $monthlyCostComputeType = Money::class;
   protected $monthlyCostComputeDataType = '';
+  /**
+   * @var Money
+   */
+  public $monthlyCostNetworkEgress;
   protected $monthlyCostNetworkEgressType = Money::class;
   protected $monthlyCostNetworkEgressDataType = '';
+  /**
+   * @var Money
+   */
+  public $monthlyCostOsLicense;
   protected $monthlyCostOsLicenseType = Money::class;
   protected $monthlyCostOsLicenseDataType = '';
+  /**
+   * @var Money
+   */
+  public $monthlyCostOther;
   protected $monthlyCostOtherType = Money::class;
   protected $monthlyCostOtherDataType = '';
+  /**
+   * @var Money
+   */
+  public $monthlyCostStorage;
   protected $monthlyCostStorageType = Money::class;
   protected $monthlyCostStorageDataType = '';
+  /**
+   * @var Money
+   */
+  public $monthlyCostTotal;
   protected $monthlyCostTotalType = Money::class;
   protected $monthlyCostTotalDataType = '';
+  /**
+   * @var ReportSummarySoleTenantFinding
+   */
+  public $soleTenantFinding;
   protected $soleTenantFindingType = ReportSummarySoleTenantFinding::class;
   protected $soleTenantFindingDataType = '';
+  /**
+   * @var ReportSummaryVmwareEngineFinding
+   */
+  public $vmwareEngineFinding;
   protected $vmwareEngineFindingType = ReportSummaryVmwareEngineFinding::class;
   protected $vmwareEngineFindingDataType = '';
 

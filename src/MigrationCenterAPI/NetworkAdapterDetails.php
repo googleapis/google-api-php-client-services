@@ -23,6 +23,10 @@ class NetworkAdapterDetails extends \Google\Model
    * @var string
    */
   public $adapterType;
+  /**
+   * @var NetworkAddressList
+   */
+  public $addresses;
   protected $addressesType = NetworkAddressList::class;
   protected $addressesDataType = '';
   /**

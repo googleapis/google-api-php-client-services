@@ -43,8 +43,16 @@ class DiskEntry extends \Google\Model
    * @var string
    */
   public $interfaceType;
+  /**
+   * @var DiskPartitionList
+   */
+  public $partitions;
   protected $partitionsType = DiskPartitionList::class;
   protected $partitionsDataType = '';
+  /**
+   * @var VmwareDiskConfig
+   */
+  public $vmware;
   protected $vmwareType = VmwareDiskConfig::class;
   protected $vmwareDataType = '';
 

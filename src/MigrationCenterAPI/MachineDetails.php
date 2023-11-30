@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class MachineDetails extends \Google\Model
 {
+  /**
+   * @var MachineArchitectureDetails
+   */
+  public $architecture;
   protected $architectureType = MachineArchitectureDetails::class;
   protected $architectureDataType = '';
   /**
@@ -29,8 +33,16 @@ class MachineDetails extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var MachineDiskDetails
+   */
+  public $disks;
   protected $disksType = MachineDiskDetails::class;
   protected $disksDataType = '';
+  /**
+   * @var GuestOsDetails
+   */
+  public $guestOs;
   protected $guestOsType = GuestOsDetails::class;
   protected $guestOsDataType = '';
   /**
@@ -41,8 +53,16 @@ class MachineDetails extends \Google\Model
    * @var int
    */
   public $memoryMb;
+  /**
+   * @var MachineNetworkDetails
+   */
+  public $network;
   protected $networkType = MachineNetworkDetails::class;
   protected $networkDataType = '';
+  /**
+   * @var PlatformDetails
+   */
+  public $platform;
   protected $platformType = PlatformDetails::class;
   protected $platformDataType = '';
   /**

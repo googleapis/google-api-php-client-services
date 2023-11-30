@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class InsightList extends \Google\Collection
 {
   protected $collection_key = 'insights';
+  /**
+   * @var Insight[]
+   */
+  public $insights;
   protected $insightsType = Insight::class;
   protected $insightsDataType = 'array';
   /**

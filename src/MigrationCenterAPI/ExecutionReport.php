@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class ExecutionReport extends \Google\Model
 {
+  /**
+   * @var ValidationReport
+   */
+  public $executionErrors;
   protected $executionErrorsType = ValidationReport::class;
   protected $executionErrorsDataType = '';
   /**

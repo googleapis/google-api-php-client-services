@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class NetworkAdapterList extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var NetworkAdapterDetails[]
+   */
+  public $entries;
   protected $entriesType = NetworkAdapterDetails::class;
   protected $entriesDataType = 'array';
 

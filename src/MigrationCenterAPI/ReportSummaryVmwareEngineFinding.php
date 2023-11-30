@@ -28,6 +28,10 @@ class ReportSummaryVmwareEngineFinding extends \Google\Collection
    * @var string[]
    */
   public $allocatedRegions;
+  /**
+   * @var ReportSummaryVmwareNodeAllocation[]
+   */
+  public $nodeAllocations;
   protected $nodeAllocationsType = ReportSummaryVmwareNodeAllocation::class;
   protected $nodeAllocationsDataType = 'array';
 

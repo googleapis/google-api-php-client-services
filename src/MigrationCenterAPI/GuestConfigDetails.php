@@ -19,14 +19,26 @@ namespace Google\Service\MigrationCenterAPI;
 
 class GuestConfigDetails extends \Google\Model
 {
+  /**
+   * @var FstabEntryList
+   */
+  public $fstab;
   protected $fstabType = FstabEntryList::class;
   protected $fstabDataType = '';
+  /**
+   * @var HostsEntryList
+   */
+  public $hosts;
   protected $hostsType = HostsEntryList::class;
   protected $hostsDataType = '';
   /**
    * @var string
    */
   public $issue;
+  /**
+   * @var NfsExportList
+   */
+  public $nfsExports;
   protected $nfsExportsType = NfsExportList::class;
   protected $nfsExportsDataType = '';
   /**

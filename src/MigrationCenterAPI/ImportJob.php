@@ -35,6 +35,10 @@ class ImportJob extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var ExecutionReport
+   */
+  public $executionReport;
   protected $executionReportType = ExecutionReport::class;
   protected $executionReportDataType = '';
   /**
@@ -53,6 +57,10 @@ class ImportJob extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var ValidationReport
+   */
+  public $validationReport;
   protected $validationReportType = ValidationReport::class;
   protected $validationReportDataType = '';
 

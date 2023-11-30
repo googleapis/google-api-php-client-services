@@ -19,6 +19,10 @@ namespace Google\Service\MigrationCenterAPI;
 
 class MachineNetworkDetails extends \Google\Model
 {
+  /**
+   * @var NetworkAdapterList
+   */
+  public $adapters;
   protected $adaptersType = NetworkAdapterList::class;
   protected $adaptersDataType = '';
   /**

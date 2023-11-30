@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class ListAssetsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Asset[]
+   */
+  public $assets;
   protected $assetsType = Asset::class;
   protected $assetsDataType = 'array';
   /**

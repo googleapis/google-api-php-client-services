@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummaryChartData extends \Google\Collection
 {
   protected $collection_key = 'dataPoints';
+  /**
+   * @var ReportSummaryChartDataDataPoint[]
+   */
+  public $dataPoints;
   protected $dataPointsType = ReportSummaryChartDataDataPoint::class;
   protected $dataPointsDataType = 'array';
 

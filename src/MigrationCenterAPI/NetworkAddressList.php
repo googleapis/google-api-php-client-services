@@ -20,6 +20,10 @@ namespace Google\Service\MigrationCenterAPI;
 class NetworkAddressList extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var NetworkAddress[]
+   */
+  public $entries;
   protected $entriesType = NetworkAddress::class;
   protected $entriesDataType = 'array';
 
