@@ -20,6 +20,10 @@ namespace Google\Service\ApiKeysService;
 class V2ListKeysResponse extends \Google\Collection
 {
   protected $collection_key = 'keys';
+  /**
+   * @var V2Key[]
+   */
+  public $keys;
   protected $keysType = V2Key::class;
   protected $keysDataType = 'array';
   /**

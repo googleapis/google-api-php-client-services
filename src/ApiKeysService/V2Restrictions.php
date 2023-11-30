@@ -20,14 +20,34 @@ namespace Google\Service\ApiKeysService;
 class V2Restrictions extends \Google\Collection
 {
   protected $collection_key = 'apiTargets';
+  /**
+   * @var V2AndroidKeyRestrictions
+   */
+  public $androidKeyRestrictions;
   protected $androidKeyRestrictionsType = V2AndroidKeyRestrictions::class;
   protected $androidKeyRestrictionsDataType = '';
+  /**
+   * @var V2ApiTarget[]
+   */
+  public $apiTargets;
   protected $apiTargetsType = V2ApiTarget::class;
   protected $apiTargetsDataType = 'array';
+  /**
+   * @var V2BrowserKeyRestrictions
+   */
+  public $browserKeyRestrictions;
   protected $browserKeyRestrictionsType = V2BrowserKeyRestrictions::class;
   protected $browserKeyRestrictionsDataType = '';
+  /**
+   * @var V2IosKeyRestrictions
+   */
+  public $iosKeyRestrictions;
   protected $iosKeyRestrictionsType = V2IosKeyRestrictions::class;
   protected $iosKeyRestrictionsDataType = '';
+  /**
+   * @var V2ServerKeyRestrictions
+   */
+  public $serverKeyRestrictions;
   protected $serverKeyRestrictionsType = V2ServerKeyRestrictions::class;
   protected $serverKeyRestrictionsDataType = '';
 

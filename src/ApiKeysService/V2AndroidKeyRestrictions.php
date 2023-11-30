@@ -20,6 +20,10 @@ namespace Google\Service\ApiKeysService;
 class V2AndroidKeyRestrictions extends \Google\Collection
 {
   protected $collection_key = 'allowedApplications';
+  /**
+   * @var V2AndroidApplication[]
+   */
+  public $allowedApplications;
   protected $allowedApplicationsType = V2AndroidApplication::class;
   protected $allowedApplicationsDataType = 'array';
 
