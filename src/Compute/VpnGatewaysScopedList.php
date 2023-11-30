@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class VpnGatewaysScopedList extends \Google\Collection
 {
   protected $collection_key = 'vpnGateways';
+  /**
+   * @var VpnGateway[]
+   */
+  public $vpnGateways;
   protected $vpnGatewaysType = VpnGateway::class;
   protected $vpnGatewaysDataType = 'array';
+  /**
+   * @var VpnGatewaysScopedListWarning
+   */
+  public $warning;
   protected $warningType = VpnGatewaysScopedListWarning::class;
   protected $warningDataType = '';
 

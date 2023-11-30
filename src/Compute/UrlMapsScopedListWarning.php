@@ -24,6 +24,10 @@ class UrlMapsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var UrlMapsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = UrlMapsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

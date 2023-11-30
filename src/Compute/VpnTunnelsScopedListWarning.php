@@ -24,6 +24,10 @@ class VpnTunnelsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var VpnTunnelsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = VpnTunnelsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

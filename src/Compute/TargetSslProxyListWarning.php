@@ -24,6 +24,10 @@ class TargetSslProxyListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var TargetSslProxyListWarningData[]
+   */
+  public $data;
   protected $dataType = TargetSslProxyListWarningData::class;
   protected $dataDataType = 'array';
   /**

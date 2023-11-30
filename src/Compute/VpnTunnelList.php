@@ -24,6 +24,10 @@ class VpnTunnelList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var VpnTunnel[]
+   */
+  public $items;
   protected $itemsType = VpnTunnel::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class VpnTunnelList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var VpnTunnelListWarning
+   */
+  public $warning;
   protected $warningType = VpnTunnelListWarning::class;
   protected $warningDataType = '';
 

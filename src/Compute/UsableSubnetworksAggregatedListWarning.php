@@ -24,6 +24,10 @@ class UsableSubnetworksAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var UsableSubnetworksAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = UsableSubnetworksAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

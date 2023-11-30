@@ -24,6 +24,10 @@ class TargetTcpProxyList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var TargetTcpProxy[]
+   */
+  public $items;
   protected $itemsType = TargetTcpProxy::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class TargetTcpProxyList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var TargetTcpProxyListWarning
+   */
+  public $warning;
   protected $warningType = TargetTcpProxyListWarning::class;
   protected $warningDataType = '';
 

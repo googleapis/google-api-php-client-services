@@ -24,6 +24,10 @@ class TargetVpnGatewayListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var TargetVpnGatewayListWarningData[]
+   */
+  public $data;
   protected $dataType = TargetVpnGatewayListWarningData::class;
   protected $dataDataType = 'array';
   /**

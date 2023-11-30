@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class UrlMapsScopedList extends \Google\Collection
 {
   protected $collection_key = 'urlMaps';
+  /**
+   * @var UrlMap[]
+   */
+  public $urlMaps;
   protected $urlMapsType = UrlMap::class;
   protected $urlMapsDataType = 'array';
+  /**
+   * @var UrlMapsScopedListWarning
+   */
+  public $warning;
   protected $warningType = UrlMapsScopedListWarning::class;
   protected $warningDataType = '';
 

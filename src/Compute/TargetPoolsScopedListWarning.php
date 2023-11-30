@@ -24,6 +24,10 @@ class TargetPoolsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var TargetPoolsScopedListWarningData[]
+   */
+  public $data;
   protected $dataType = TargetPoolsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

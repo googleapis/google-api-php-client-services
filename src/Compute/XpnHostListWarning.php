@@ -24,6 +24,10 @@ class XpnHostListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var XpnHostListWarningData[]
+   */
+  public $data;
   protected $dataType = XpnHostListWarningData::class;
   protected $dataDataType = 'array';
   /**

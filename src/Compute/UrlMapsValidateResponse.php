@@ -19,6 +19,10 @@ namespace Google\Service\Compute;
 
 class UrlMapsValidateResponse extends \Google\Model
 {
+  /**
+   * @var UrlMapValidationResult
+   */
+  public $result;
   protected $resultType = UrlMapValidationResult::class;
   protected $resultDataType = '';
 

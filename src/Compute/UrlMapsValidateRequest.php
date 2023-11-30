@@ -24,6 +24,10 @@ class UrlMapsValidateRequest extends \Google\Collection
    * @var string[]
    */
   public $loadBalancingSchemes;
+  /**
+   * @var UrlMap
+   */
+  public $resource;
   protected $resourceType = UrlMap::class;
   protected $resourceDataType = '';
 

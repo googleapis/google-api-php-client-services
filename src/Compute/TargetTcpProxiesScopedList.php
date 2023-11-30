@@ -20,8 +20,16 @@ namespace Google\Service\Compute;
 class TargetTcpProxiesScopedList extends \Google\Collection
 {
   protected $collection_key = 'targetTcpProxies';
+  /**
+   * @var TargetTcpProxy[]
+   */
+  public $targetTcpProxies;
   protected $targetTcpProxiesType = TargetTcpProxy::class;
   protected $targetTcpProxiesDataType = 'array';
+  /**
+   * @var TargetTcpProxiesScopedListWarning
+   */
+  public $warning;
   protected $warningType = TargetTcpProxiesScopedListWarning::class;
   protected $warningDataType = '';
 

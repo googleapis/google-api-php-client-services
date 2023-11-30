@@ -24,6 +24,10 @@ class XpnHostList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Project[]
+   */
+  public $items;
   protected $itemsType = Project::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class XpnHostList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var XpnHostListWarning
+   */
+  public $warning;
   protected $warningType = XpnHostListWarning::class;
   protected $warningDataType = '';
 

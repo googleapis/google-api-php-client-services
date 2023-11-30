@@ -24,12 +24,20 @@ class UrlMap extends \Google\Collection
    * @var string
    */
   public $creationTimestamp;
+  /**
+   * @var HttpRouteAction
+   */
+  public $defaultRouteAction;
   protected $defaultRouteActionType = HttpRouteAction::class;
   protected $defaultRouteActionDataType = '';
   /**
    * @var string
    */
   public $defaultService;
+  /**
+   * @var HttpRedirectAction
+   */
+  public $defaultUrlRedirect;
   protected $defaultUrlRedirectType = HttpRedirectAction::class;
   protected $defaultUrlRedirectDataType = '';
   /**
@@ -40,8 +48,16 @@ class UrlMap extends \Google\Collection
    * @var string
    */
   public $fingerprint;
+  /**
+   * @var HttpHeaderAction
+   */
+  public $headerAction;
   protected $headerActionType = HttpHeaderAction::class;
   protected $headerActionDataType = '';
+  /**
+   * @var HostRule[]
+   */
+  public $hostRules;
   protected $hostRulesType = HostRule::class;
   protected $hostRulesDataType = 'array';
   /**
@@ -56,6 +72,10 @@ class UrlMap extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var PathMatcher[]
+   */
+  public $pathMatchers;
   protected $pathMatchersType = PathMatcher::class;
   protected $pathMatchersDataType = 'array';
   /**
@@ -66,6 +86,10 @@ class UrlMap extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var UrlMapTest[]
+   */
+  public $tests;
   protected $testsType = UrlMapTest::class;
   protected $testsDataType = 'array';
 

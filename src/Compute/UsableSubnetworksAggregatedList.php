@@ -24,6 +24,10 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var UsableSubnetwork[]
+   */
+  public $items;
   protected $itemsType = UsableSubnetwork::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class UsableSubnetworksAggregatedList extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var UsableSubnetworksAggregatedListWarning
+   */
+  public $warning;
   protected $warningType = UsableSubnetworksAggregatedListWarning::class;
   protected $warningDataType = '';
 

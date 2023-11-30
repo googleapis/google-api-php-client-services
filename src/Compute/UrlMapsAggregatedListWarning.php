@@ -24,6 +24,10 @@ class UrlMapsAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var UrlMapsAggregatedListWarningData[]
+   */
+  public $data;
   protected $dataType = UrlMapsAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**
