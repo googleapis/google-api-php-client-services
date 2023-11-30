@@ -23,6 +23,10 @@ class CreatePermissionRequest extends \Google\Model
    * @var string
    */
   public $parent;
+  /**
+   * @var Permission
+   */
+  public $permission;
   protected $permissionType = Permission::class;
   protected $permissionDataType = '';
 

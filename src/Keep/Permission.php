@@ -27,8 +27,16 @@ class Permission extends \Google\Model
    * @var string
    */
   public $email;
+  /**
+   * @var Family
+   */
+  public $family;
   protected $familyType = Family::class;
   protected $familyDataType = '';
+  /**
+   * @var Group
+   */
+  public $group;
   protected $groupType = Group::class;
   protected $groupDataType = '';
   /**
@@ -39,6 +47,10 @@ class Permission extends \Google\Model
    * @var string
    */
   public $role;
+  /**
+   * @var User
+   */
+  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

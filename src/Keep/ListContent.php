@@ -20,6 +20,10 @@ namespace Google\Service\Keep;
 class ListContent extends \Google\Collection
 {
   protected $collection_key = 'listItems';
+  /**
+   * @var ListItem[]
+   */
+  public $listItems;
   protected $listItemsType = ListItem::class;
   protected $listItemsDataType = 'array';
 
