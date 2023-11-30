@@ -19,8 +19,16 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class FinalizedDeal extends \Google\Model
 {
+  /**
+   * @var Deal
+   */
+  public $deal;
   protected $dealType = Deal::class;
   protected $dealDataType = '';
+  /**
+   * @var DealPausingInfo
+   */
+  public $dealPausingInfo;
   protected $dealPausingInfoType = DealPausingInfo::class;
   protected $dealPausingInfoDataType = '';
   /**
@@ -35,6 +43,10 @@ class FinalizedDeal extends \Google\Model
    * @var bool
    */
   public $readyToServe;
+  /**
+   * @var RtbMetrics
+   */
+  public $rtbMetrics;
   protected $rtbMetricsType = RtbMetrics::class;
   protected $rtbMetricsDataType = '';
 

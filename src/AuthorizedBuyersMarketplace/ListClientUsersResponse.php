@@ -20,6 +20,10 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class ListClientUsersResponse extends \Google\Collection
 {
   protected $collection_key = 'clientUsers';
+  /**
+   * @var ClientUser[]
+   */
+  public $clientUsers;
   protected $clientUsersType = ClientUser::class;
   protected $clientUsersDataType = 'array';
   /**

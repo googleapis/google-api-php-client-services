@@ -19,6 +19,10 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class PreferredDealTerms extends \Google\Model
 {
+  /**
+   * @var Price
+   */
+  public $fixedPrice;
   protected $fixedPriceType = Price::class;
   protected $fixedPriceDataType = '';
 

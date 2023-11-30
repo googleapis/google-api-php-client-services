@@ -19,8 +19,16 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class PlacementTargeting extends \Google\Model
 {
+  /**
+   * @var MobileApplicationTargeting
+   */
+  public $mobileApplicationTargeting;
   protected $mobileApplicationTargetingType = MobileApplicationTargeting::class;
   protected $mobileApplicationTargetingDataType = '';
+  /**
+   * @var UriTargeting
+   */
+  public $uriTargeting;
   protected $uriTargetingType = UriTargeting::class;
   protected $uriTargetingDataType = '';
 

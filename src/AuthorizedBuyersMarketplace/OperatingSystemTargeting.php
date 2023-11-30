@@ -19,8 +19,16 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class OperatingSystemTargeting extends \Google\Model
 {
+  /**
+   * @var CriteriaTargeting
+   */
+  public $operatingSystemCriteria;
   protected $operatingSystemCriteriaType = CriteriaTargeting::class;
   protected $operatingSystemCriteriaDataType = '';
+  /**
+   * @var CriteriaTargeting
+   */
+  public $operatingSystemVersionCriteria;
   protected $operatingSystemVersionCriteriaType = CriteriaTargeting::class;
   protected $operatingSystemVersionCriteriaDataType = '';
 

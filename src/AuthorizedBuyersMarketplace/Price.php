@@ -19,6 +19,10 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class Price extends \Google\Model
 {
+  /**
+   * @var Money
+   */
+  public $amount;
   protected $amountType = Money::class;
   protected $amountDataType = '';
   /**

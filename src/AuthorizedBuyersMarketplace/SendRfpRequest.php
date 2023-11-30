@@ -20,6 +20,10 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class SendRfpRequest extends \Google\Collection
 {
   protected $collection_key = 'buyerContacts';
+  /**
+   * @var Contact[]
+   */
+  public $buyerContacts;
   protected $buyerContactsType = Contact::class;
   protected $buyerContactsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class SendRfpRequest extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var Money
+   */
+  public $estimatedGrossSpend;
   protected $estimatedGrossSpendType = Money::class;
   protected $estimatedGrossSpendDataType = '';
   /**
@@ -40,16 +48,32 @@ class SendRfpRequest extends \Google\Collection
    * @var string
    */
   public $flightStartTime;
+  /**
+   * @var CriteriaTargeting
+   */
+  public $geoTargeting;
   protected $geoTargetingType = CriteriaTargeting::class;
   protected $geoTargetingDataType = '';
+  /**
+   * @var InventorySizeTargeting
+   */
+  public $inventorySizeTargeting;
   protected $inventorySizeTargetingType = InventorySizeTargeting::class;
   protected $inventorySizeTargetingDataType = '';
   /**
    * @var string
    */
   public $note;
+  /**
+   * @var PreferredDealTerms
+   */
+  public $preferredDealTerms;
   protected $preferredDealTermsType = PreferredDealTerms::class;
   protected $preferredDealTermsDataType = '';
+  /**
+   * @var ProgrammaticGuaranteedTerms
+   */
+  public $programmaticGuaranteedTerms;
   protected $programmaticGuaranteedTermsType = ProgrammaticGuaranteedTerms::class;
   protected $programmaticGuaranteedTermsDataType = '';
   /**

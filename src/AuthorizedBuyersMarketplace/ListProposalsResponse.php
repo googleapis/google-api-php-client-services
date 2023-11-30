@@ -24,6 +24,10 @@ class ListProposalsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Proposal[]
+   */
+  public $proposals;
   protected $proposalsType = Proposal::class;
   protected $proposalsDataType = 'array';
 

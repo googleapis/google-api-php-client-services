@@ -19,20 +19,52 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class MarketplaceTargeting extends \Google\Model
 {
+  /**
+   * @var DayPartTargeting
+   */
+  public $daypartTargeting;
   protected $daypartTargetingType = DayPartTargeting::class;
   protected $daypartTargetingDataType = '';
+  /**
+   * @var CriteriaTargeting
+   */
+  public $geoTargeting;
   protected $geoTargetingType = CriteriaTargeting::class;
   protected $geoTargetingDataType = '';
+  /**
+   * @var InventorySizeTargeting
+   */
+  public $inventorySizeTargeting;
   protected $inventorySizeTargetingType = InventorySizeTargeting::class;
   protected $inventorySizeTargetingDataType = '';
+  /**
+   * @var InventoryTypeTargeting
+   */
+  public $inventoryTypeTargeting;
   protected $inventoryTypeTargetingType = InventoryTypeTargeting::class;
   protected $inventoryTypeTargetingDataType = '';
+  /**
+   * @var PlacementTargeting
+   */
+  public $placementTargeting;
   protected $placementTargetingType = PlacementTargeting::class;
   protected $placementTargetingDataType = '';
+  /**
+   * @var TechnologyTargeting
+   */
+  public $technologyTargeting;
   protected $technologyTargetingType = TechnologyTargeting::class;
   protected $technologyTargetingDataType = '';
+  /**
+   * @var CriteriaTargeting
+   */
+  public $userListTargeting;
   protected $userListTargetingType = CriteriaTargeting::class;
   protected $userListTargetingDataType = '';
+  /**
+   * @var VideoTargeting
+   */
+  public $videoTargeting;
   protected $videoTargetingType = VideoTargeting::class;
   protected $videoTargetingDataType = '';
 

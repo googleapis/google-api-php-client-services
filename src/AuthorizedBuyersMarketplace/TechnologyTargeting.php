@@ -19,10 +19,22 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class TechnologyTargeting extends \Google\Model
 {
+  /**
+   * @var CriteriaTargeting
+   */
+  public $deviceCapabilityTargeting;
   protected $deviceCapabilityTargetingType = CriteriaTargeting::class;
   protected $deviceCapabilityTargetingDataType = '';
+  /**
+   * @var CriteriaTargeting
+   */
+  public $deviceCategoryTargeting;
   protected $deviceCategoryTargetingType = CriteriaTargeting::class;
   protected $deviceCategoryTargetingDataType = '';
+  /**
+   * @var OperatingSystemTargeting
+   */
+  public $operatingSystemTargeting;
   protected $operatingSystemTargetingType = OperatingSystemTargeting::class;
   protected $operatingSystemTargetingDataType = '';
 

@@ -48,6 +48,10 @@ class PublisherProfile extends \Google\Collection
    * @var string
    */
   public $mediaKitUrl;
+  /**
+   * @var PublisherProfileMobileApplication[]
+   */
+  public $mobileApps;
   protected $mobileAppsType = PublisherProfileMobileApplication::class;
   protected $mobileAppsDataType = 'array';
   /**

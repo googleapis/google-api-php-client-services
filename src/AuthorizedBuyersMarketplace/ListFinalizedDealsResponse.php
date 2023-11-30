@@ -20,6 +20,10 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class ListFinalizedDealsResponse extends \Google\Collection
 {
   protected $collection_key = 'finalizedDeals';
+  /**
+   * @var FinalizedDeal[]
+   */
+  public $finalizedDeals;
   protected $finalizedDealsType = FinalizedDeal::class;
   protected $finalizedDealsDataType = 'array';
   /**

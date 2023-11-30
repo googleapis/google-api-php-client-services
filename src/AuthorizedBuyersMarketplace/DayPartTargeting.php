@@ -20,6 +20,10 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class DayPartTargeting extends \Google\Collection
 {
   protected $collection_key = 'dayParts';
+  /**
+   * @var DayPart[]
+   */
+  public $dayParts;
   protected $dayPartsType = DayPart::class;
   protected $dayPartsDataType = 'array';
   /**
