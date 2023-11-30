@@ -19,14 +19,26 @@ namespace Google\Service\ResourceSettings;
 
 class GoogleCloudResourcesettingsV1Setting extends \Google\Model
 {
+  /**
+   * @var GoogleCloudResourcesettingsV1Value
+   */
+  public $effectiveValue;
   protected $effectiveValueType = GoogleCloudResourcesettingsV1Value::class;
   protected $effectiveValueDataType = '';
   /**
    * @var string
    */
   public $etag;
+  /**
+   * @var GoogleCloudResourcesettingsV1Value
+   */
+  public $localValue;
   protected $localValueType = GoogleCloudResourcesettingsV1Value::class;
   protected $localValueDataType = '';
+  /**
+   * @var GoogleCloudResourcesettingsV1SettingMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudResourcesettingsV1SettingMetadata::class;
   protected $metadataDataType = '';
   /**

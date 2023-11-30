@@ -27,10 +27,22 @@ class GoogleCloudResourcesettingsV1Value extends \Google\Model
    * @var string
    */
   public $durationValue;
+  /**
+   * @var GoogleCloudResourcesettingsV1ValueEnumValue
+   */
+  public $enumValue;
   protected $enumValueType = GoogleCloudResourcesettingsV1ValueEnumValue::class;
   protected $enumValueDataType = '';
+  /**
+   * @var GoogleCloudResourcesettingsV1ValueStringMap
+   */
+  public $stringMapValue;
   protected $stringMapValueType = GoogleCloudResourcesettingsV1ValueStringMap::class;
   protected $stringMapValueDataType = '';
+  /**
+   * @var GoogleCloudResourcesettingsV1ValueStringSet
+   */
+  public $stringSetValue;
   protected $stringSetValueType = GoogleCloudResourcesettingsV1ValueStringSet::class;
   protected $stringSetValueDataType = '';
   /**
