@@ -23,6 +23,10 @@ class GoogleAnalyticsAdminV1betaAccessNumericFilter extends \Google\Model
    * @var string
    */
   public $operation;
+  /**
+   * @var GoogleAnalyticsAdminV1betaNumericValue
+   */
+  public $value;
   protected $valueType = GoogleAnalyticsAdminV1betaNumericValue::class;
   protected $valueDataType = '';
 

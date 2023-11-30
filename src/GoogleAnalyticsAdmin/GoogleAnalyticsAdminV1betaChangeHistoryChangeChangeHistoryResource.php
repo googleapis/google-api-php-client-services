@@ -19,20 +19,52 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaChangeHistoryChangeChangeHistoryResource extends \Google\Model
 {
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccount
+   */
+  public $account;
   protected $accountType = GoogleAnalyticsAdminV1betaAccount::class;
   protected $accountDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaConversionEvent
+   */
+  public $conversionEvent;
   protected $conversionEventType = GoogleAnalyticsAdminV1betaConversionEvent::class;
   protected $conversionEventDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaDataRetentionSettings
+   */
+  public $dataRetentionSettings;
   protected $dataRetentionSettingsType = GoogleAnalyticsAdminV1betaDataRetentionSettings::class;
   protected $dataRetentionSettingsDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaDataStream
+   */
+  public $dataStream;
   protected $dataStreamType = GoogleAnalyticsAdminV1betaDataStream::class;
   protected $dataStreamDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaFirebaseLink
+   */
+  public $firebaseLink;
   protected $firebaseLinkType = GoogleAnalyticsAdminV1betaFirebaseLink::class;
   protected $firebaseLinkDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaGoogleAdsLink
+   */
+  public $googleAdsLink;
   protected $googleAdsLinkType = GoogleAnalyticsAdminV1betaGoogleAdsLink::class;
   protected $googleAdsLinkDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaMeasurementProtocolSecret
+   */
+  public $measurementProtocolSecret;
   protected $measurementProtocolSecretType = GoogleAnalyticsAdminV1betaMeasurementProtocolSecret::class;
   protected $measurementProtocolSecretDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaProperty
+   */
+  public $property;
   protected $propertyType = GoogleAnalyticsAdminV1betaProperty::class;
   protected $propertyDataType = '';
 

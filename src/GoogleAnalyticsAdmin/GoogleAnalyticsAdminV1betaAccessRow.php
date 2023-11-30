@@ -20,8 +20,16 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaAccessRow extends \Google\Collection
 {
   protected $collection_key = 'metricValues';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessDimensionValue[]
+   */
+  public $dimensionValues;
   protected $dimensionValuesType = GoogleAnalyticsAdminV1betaAccessDimensionValue::class;
   protected $dimensionValuesDataType = 'array';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessMetricValue[]
+   */
+  public $metricValues;
   protected $metricValuesType = GoogleAnalyticsAdminV1betaAccessMetricValue::class;
   protected $metricValuesDataType = 'array';
 

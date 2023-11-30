@@ -20,6 +20,10 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaListCustomDimensionsResponse extends \Google\Collection
 {
   protected $collection_key = 'customDimensions';
+  /**
+   * @var GoogleAnalyticsAdminV1betaCustomDimension[]
+   */
+  public $customDimensions;
   protected $customDimensionsType = GoogleAnalyticsAdminV1betaCustomDimension::class;
   protected $customDimensionsDataType = 'array';
   /**

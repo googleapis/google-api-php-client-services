@@ -20,6 +20,10 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaListDataStreamsResponse extends \Google\Collection
 {
   protected $collection_key = 'dataStreams';
+  /**
+   * @var GoogleAnalyticsAdminV1betaDataStream[]
+   */
+  public $dataStreams;
   protected $dataStreamsType = GoogleAnalyticsAdminV1betaDataStream::class;
   protected $dataStreamsDataType = 'array';
   /**

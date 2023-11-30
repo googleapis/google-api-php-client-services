@@ -19,8 +19,16 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaAccessBetweenFilter extends \Google\Model
 {
+  /**
+   * @var GoogleAnalyticsAdminV1betaNumericValue
+   */
+  public $fromValue;
   protected $fromValueType = GoogleAnalyticsAdminV1betaNumericValue::class;
   protected $fromValueDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaNumericValue
+   */
+  public $toValue;
   protected $toValueType = GoogleAnalyticsAdminV1betaNumericValue::class;
   protected $toValueDataType = '';
 

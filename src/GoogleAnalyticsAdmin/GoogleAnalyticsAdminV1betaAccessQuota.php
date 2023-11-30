@@ -19,14 +19,34 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaAccessQuota extends \Google\Model
 {
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessQuotaStatus
+   */
+  public $concurrentRequests;
   protected $concurrentRequestsType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $concurrentRequestsDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessQuotaStatus
+   */
+  public $serverErrorsPerProjectPerHour;
   protected $serverErrorsPerProjectPerHourType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $serverErrorsPerProjectPerHourDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessQuotaStatus
+   */
+  public $tokensPerDay;
   protected $tokensPerDayType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $tokensPerDayDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessQuotaStatus
+   */
+  public $tokensPerHour;
   protected $tokensPerHourType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $tokensPerHourDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessQuotaStatus
+   */
+  public $tokensPerProjectPerHour;
   protected $tokensPerProjectPerHourType = GoogleAnalyticsAdminV1betaAccessQuotaStatus::class;
   protected $tokensPerProjectPerHourDataType = '';
 

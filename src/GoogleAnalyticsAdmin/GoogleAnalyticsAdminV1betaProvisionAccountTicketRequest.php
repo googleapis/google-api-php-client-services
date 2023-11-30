@@ -19,6 +19,10 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaProvisionAccountTicketRequest extends \Google\Model
 {
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccount
+   */
+  public $account;
   protected $accountType = GoogleAnalyticsAdminV1betaAccount::class;
   protected $accountDataType = '';
   /**

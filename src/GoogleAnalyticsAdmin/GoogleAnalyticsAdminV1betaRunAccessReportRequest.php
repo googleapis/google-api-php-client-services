@@ -20,10 +20,22 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaRunAccessReportRequest extends \Google\Collection
 {
   protected $collection_key = 'orderBys';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessDateRange[]
+   */
+  public $dateRanges;
   protected $dateRangesType = GoogleAnalyticsAdminV1betaAccessDateRange::class;
   protected $dateRangesDataType = 'array';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessFilterExpression
+   */
+  public $dimensionFilter;
   protected $dimensionFilterType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $dimensionFilterDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessDimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = GoogleAnalyticsAdminV1betaAccessDimension::class;
   protected $dimensionsDataType = 'array';
   /**
@@ -38,14 +50,26 @@ class GoogleAnalyticsAdminV1betaRunAccessReportRequest extends \Google\Collectio
    * @var string
    */
   public $limit;
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessFilterExpression
+   */
+  public $metricFilter;
   protected $metricFilterType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $metricFilterDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessMetric[]
+   */
+  public $metrics;
   protected $metricsType = GoogleAnalyticsAdminV1betaAccessMetric::class;
   protected $metricsDataType = 'array';
   /**
    * @var string
    */
   public $offset;
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessOrderBy[]
+   */
+  public $orderBys;
   protected $orderBysType = GoogleAnalyticsAdminV1betaAccessOrderBy::class;
   protected $orderBysDataType = 'array';
   /**

@@ -19,16 +19,32 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaAccessFilter extends \Google\Model
 {
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessBetweenFilter
+   */
+  public $betweenFilter;
   protected $betweenFilterType = GoogleAnalyticsAdminV1betaAccessBetweenFilter::class;
   protected $betweenFilterDataType = '';
   /**
    * @var string
    */
   public $fieldName;
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessInListFilter
+   */
+  public $inListFilter;
   protected $inListFilterType = GoogleAnalyticsAdminV1betaAccessInListFilter::class;
   protected $inListFilterDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessNumericFilter
+   */
+  public $numericFilter;
   protected $numericFilterType = GoogleAnalyticsAdminV1betaAccessNumericFilter::class;
   protected $numericFilterDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessStringFilter
+   */
+  public $stringFilter;
   protected $stringFilterType = GoogleAnalyticsAdminV1betaAccessStringFilter::class;
   protected $stringFilterDataType = '';
 

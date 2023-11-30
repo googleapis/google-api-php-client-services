@@ -20,6 +20,10 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaListConversionEventsResponse extends \Google\Collection
 {
   protected $collection_key = 'conversionEvents';
+  /**
+   * @var GoogleAnalyticsAdminV1betaConversionEvent[]
+   */
+  public $conversionEvents;
   protected $conversionEventsType = GoogleAnalyticsAdminV1betaConversionEvent::class;
   protected $conversionEventsDataType = 'array';
   /**

@@ -31,6 +31,10 @@ class GoogleAnalyticsAdminV1betaConversionEvent extends \Google\Model
    * @var bool
    */
   public $custom;
+  /**
+   * @var GoogleAnalyticsAdminV1betaConversionEventDefaultConversionValue
+   */
+  public $defaultConversionValue;
   protected $defaultConversionValueType = GoogleAnalyticsAdminV1betaConversionEventDefaultConversionValue::class;
   protected $defaultConversionValueDataType = '';
   /**

@@ -19,12 +19,28 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaAccessFilterExpression extends \Google\Model
 {
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessFilter
+   */
+  public $accessFilter;
   protected $accessFilterType = GoogleAnalyticsAdminV1betaAccessFilter::class;
   protected $accessFilterDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessFilterExpressionList
+   */
+  public $andGroup;
   protected $andGroupType = GoogleAnalyticsAdminV1betaAccessFilterExpressionList::class;
   protected $andGroupDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessFilterExpression
+   */
+  public $notExpression;
   protected $notExpressionType = GoogleAnalyticsAdminV1betaAccessFilterExpression::class;
   protected $notExpressionDataType = '';
+  /**
+   * @var GoogleAnalyticsAdminV1betaAccessFilterExpressionList
+   */
+  public $orGroup;
   protected $orGroupType = GoogleAnalyticsAdminV1betaAccessFilterExpressionList::class;
   protected $orGroupDataType = '';
 
