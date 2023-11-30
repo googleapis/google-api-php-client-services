@@ -47,8 +47,16 @@ class Customer extends \Google\Model
    * @var string
    */
   public $phoneNumber;
+  /**
+   * @var Address
+   */
+  public $postalAddress;
   protected $postalAddressType = Address::class;
   protected $postalAddressDataType = '';
+  /**
+   * @var PrimaryAdmin
+   */
+  public $primaryAdmin;
   protected $primaryAdminType = PrimaryAdmin::class;
   protected $primaryAdminDataType = '';
   /**

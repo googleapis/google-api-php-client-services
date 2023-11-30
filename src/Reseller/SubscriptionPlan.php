@@ -19,6 +19,10 @@ namespace Google\Service\Reseller;
 
 class SubscriptionPlan extends \Google\Model
 {
+  /**
+   * @var SubscriptionPlanCommitmentInterval
+   */
+  public $commitmentInterval;
   protected $commitmentIntervalType = SubscriptionPlanCommitmentInterval::class;
   protected $commitmentIntervalDataType = '';
   /**
