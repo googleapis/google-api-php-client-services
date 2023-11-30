@@ -19,10 +19,22 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2ProductInputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailV2BigQuerySource
+   */
+  public $bigQuerySource;
   protected $bigQuerySourceType = GoogleCloudRetailV2BigQuerySource::class;
   protected $bigQuerySourceDataType = '';
+  /**
+   * @var GoogleCloudRetailV2GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudRetailV2GcsSource::class;
   protected $gcsSourceDataType = '';
+  /**
+   * @var GoogleCloudRetailV2ProductInlineSource
+   */
+  public $productInlineSource;
   protected $productInlineSourceType = GoogleCloudRetailV2ProductInlineSource::class;
   protected $productInlineSourceDataType = '';
 

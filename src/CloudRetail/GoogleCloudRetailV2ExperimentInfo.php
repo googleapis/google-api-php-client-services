@@ -23,6 +23,10 @@ class GoogleCloudRetailV2ExperimentInfo extends \Google\Model
    * @var string
    */
   public $experiment;
+  /**
+   * @var GoogleCloudRetailV2ExperimentInfoServingConfigExperiment
+   */
+  public $servingConfigExperiment;
   protected $servingConfigExperimentType = GoogleCloudRetailV2ExperimentInfoServingConfigExperiment::class;
   protected $servingConfigExperimentDataType = '';
 

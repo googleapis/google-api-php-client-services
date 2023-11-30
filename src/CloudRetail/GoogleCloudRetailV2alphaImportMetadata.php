@@ -39,6 +39,10 @@ class GoogleCloudRetailV2alphaImportMetadata extends \Google\Model
    * @var string
    */
   public $successCount;
+  /**
+   * @var GoogleCloudRetailV2alphaTransformedUserEventsMetadata
+   */
+  public $transformedUserEventsMetadata;
   protected $transformedUserEventsMetadataType = GoogleCloudRetailV2alphaTransformedUserEventsMetadata::class;
   protected $transformedUserEventsMetadataDataType = '';
   /**

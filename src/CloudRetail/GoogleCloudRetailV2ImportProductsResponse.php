@@ -20,8 +20,16 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ImportProductsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $errorSamples;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
+  /**
+   * @var GoogleCloudRetailV2ImportErrorsConfig
+   */
+  public $errorsConfig;
   protected $errorsConfigType = GoogleCloudRetailV2ImportErrorsConfig::class;
   protected $errorsConfigDataType = '';
 

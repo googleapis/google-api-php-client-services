@@ -27,6 +27,10 @@ class GoogleCloudRetailV2CatalogAttribute extends \Google\Model
    * @var string
    */
   public $exactSearchableOption;
+  /**
+   * @var GoogleCloudRetailV2CatalogAttributeFacetConfig
+   */
+  public $facetConfig;
   protected $facetConfigType = GoogleCloudRetailV2CatalogAttributeFacetConfig::class;
   protected $facetConfigDataType = '';
   /**

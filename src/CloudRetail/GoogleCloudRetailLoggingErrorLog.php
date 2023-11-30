@@ -19,8 +19,16 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailLoggingErrorLog extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailLoggingErrorContext
+   */
+  public $context;
   protected $contextType = GoogleCloudRetailLoggingErrorContext::class;
   protected $contextDataType = '';
+  /**
+   * @var GoogleCloudRetailLoggingImportErrorContext
+   */
+  public $importPayload;
   protected $importPayloadType = GoogleCloudRetailLoggingImportErrorContext::class;
   protected $importPayloadDataType = '';
   /**
@@ -35,8 +43,16 @@ class GoogleCloudRetailLoggingErrorLog extends \Google\Model
    * @var array[]
    */
   public $responsePayload;
+  /**
+   * @var GoogleCloudRetailLoggingServiceContext
+   */
+  public $serviceContext;
   protected $serviceContextType = GoogleCloudRetailLoggingServiceContext::class;
   protected $serviceContextDataType = '';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

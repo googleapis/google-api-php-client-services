@@ -19,6 +19,10 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2CompletionDataInputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailV2BigQuerySource
+   */
+  public $bigQuerySource;
   protected $bigQuerySourceType = GoogleCloudRetailV2BigQuerySource::class;
   protected $bigQuerySourceDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2CompleteQueryResponseCompletionResult extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailV2CustomAttribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudRetailV2CustomAttribute::class;
   protected $attributesDataType = 'map';
   /**

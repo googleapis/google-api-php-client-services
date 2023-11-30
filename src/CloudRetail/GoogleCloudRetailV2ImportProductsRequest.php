@@ -19,8 +19,16 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2ImportProductsRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailV2ImportErrorsConfig
+   */
+  public $errorsConfig;
   protected $errorsConfigType = GoogleCloudRetailV2ImportErrorsConfig::class;
   protected $errorsConfigDataType = '';
+  /**
+   * @var GoogleCloudRetailV2ProductInputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudRetailV2ProductInputConfig::class;
   protected $inputConfigDataType = '';
   /**

@@ -20,10 +20,22 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ImportUserEventsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $errorSamples;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
+  /**
+   * @var GoogleCloudRetailV2ImportErrorsConfig
+   */
+  public $errorsConfig;
   protected $errorsConfigType = GoogleCloudRetailV2ImportErrorsConfig::class;
   protected $errorsConfigDataType = '';
+  /**
+   * @var GoogleCloudRetailV2UserEventImportSummary
+   */
+  public $importSummary;
   protected $importSummaryType = GoogleCloudRetailV2UserEventImportSummary::class;
   protected $importSummaryDataType = '';
 

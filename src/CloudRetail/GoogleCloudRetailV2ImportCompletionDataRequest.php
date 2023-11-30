@@ -19,6 +19,10 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2ImportCompletionDataRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailV2CompletionDataInputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudRetailV2CompletionDataInputConfig::class;
   protected $inputConfigDataType = '';
   /**

@@ -28,6 +28,10 @@ class GoogleCloudRetailV2PredictResponse extends \Google\Collection
    * @var string[]
    */
   public $missingIds;
+  /**
+   * @var GoogleCloudRetailV2PredictResponsePredictionResult[]
+   */
+  public $results;
   protected $resultsType = GoogleCloudRetailV2PredictResponsePredictionResult::class;
   protected $resultsDataType = 'array';
   /**

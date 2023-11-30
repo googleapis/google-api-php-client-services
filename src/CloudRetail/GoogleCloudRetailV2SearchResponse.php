@@ -32,22 +32,42 @@ class GoogleCloudRetailV2SearchResponse extends \Google\Collection
    * @var string
    */
   public $correctedQuery;
+  /**
+   * @var GoogleCloudRetailV2ExperimentInfo[]
+   */
+  public $experimentInfo;
   protected $experimentInfoType = GoogleCloudRetailV2ExperimentInfo::class;
   protected $experimentInfoDataType = 'array';
+  /**
+   * @var GoogleCloudRetailV2SearchResponseFacet[]
+   */
+  public $facets;
   protected $facetsType = GoogleCloudRetailV2SearchResponseFacet::class;
   protected $facetsDataType = 'array';
+  /**
+   * @var GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec[]
+   */
+  public $invalidConditionBoostSpecs;
   protected $invalidConditionBoostSpecsType = GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec::class;
   protected $invalidConditionBoostSpecsDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudRetailV2SearchResponseQueryExpansionInfo
+   */
+  public $queryExpansionInfo;
   protected $queryExpansionInfoType = GoogleCloudRetailV2SearchResponseQueryExpansionInfo::class;
   protected $queryExpansionInfoDataType = '';
   /**
    * @var string
    */
   public $redirectUri;
+  /**
+   * @var GoogleCloudRetailV2SearchResponseSearchResult[]
+   */
+  public $results;
   protected $resultsType = GoogleCloudRetailV2SearchResponseSearchResult::class;
   protected $resultsDataType = 'array';
   /**

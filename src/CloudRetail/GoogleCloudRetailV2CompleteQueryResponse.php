@@ -24,8 +24,16 @@ class GoogleCloudRetailV2CompleteQueryResponse extends \Google\Collection
    * @var string
    */
   public $attributionToken;
+  /**
+   * @var GoogleCloudRetailV2CompleteQueryResponseCompletionResult[]
+   */
+  public $completionResults;
   protected $completionResultsType = GoogleCloudRetailV2CompleteQueryResponseCompletionResult::class;
   protected $completionResultsDataType = 'array';
+  /**
+   * @var GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult[]
+   */
+  public $recentSearchResults;
   protected $recentSearchResultsType = GoogleCloudRetailV2CompleteQueryResponseRecentSearchResult::class;
   protected $recentSearchResultsDataType = 'array';
 

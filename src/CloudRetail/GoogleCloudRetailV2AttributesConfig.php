@@ -23,6 +23,10 @@ class GoogleCloudRetailV2AttributesConfig extends \Google\Model
    * @var string
    */
   public $attributeConfigLevel;
+  /**
+   * @var GoogleCloudRetailV2CatalogAttribute[]
+   */
+  public $catalogAttributes;
   protected $catalogAttributesType = GoogleCloudRetailV2CatalogAttribute::class;
   protected $catalogAttributesDataType = 'map';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ProductInlineSource extends \Google\Collection
 {
   protected $collection_key = 'products';
+  /**
+   * @var GoogleCloudRetailV2Product[]
+   */
+  public $products;
   protected $productsType = GoogleCloudRetailV2Product::class;
   protected $productsDataType = 'array';
 

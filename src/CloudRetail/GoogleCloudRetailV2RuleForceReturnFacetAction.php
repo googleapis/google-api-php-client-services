@@ -20,6 +20,10 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2RuleForceReturnFacetAction extends \Google\Collection
 {
   protected $collection_key = 'facetPositionAdjustments';
+  /**
+   * @var GoogleCloudRetailV2RuleForceReturnFacetActionFacetPositionAdjustment[]
+   */
+  public $facetPositionAdjustments;
   protected $facetPositionAdjustmentsType = GoogleCloudRetailV2RuleForceReturnFacetActionFacetPositionAdjustment::class;
   protected $facetPositionAdjustmentsDataType = 'array';
 

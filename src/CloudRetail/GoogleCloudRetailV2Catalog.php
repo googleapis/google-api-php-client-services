@@ -27,6 +27,10 @@ class GoogleCloudRetailV2Catalog extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudRetailV2ProductLevelConfig
+   */
+  public $productLevelConfig;
   protected $productLevelConfigType = GoogleCloudRetailV2ProductLevelConfig::class;
   protected $productLevelConfigDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2AddCatalogAttributeRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRetailV2CatalogAttribute
+   */
+  public $catalogAttribute;
   protected $catalogAttributeType = GoogleCloudRetailV2CatalogAttribute::class;
   protected $catalogAttributeDataType = '';
 

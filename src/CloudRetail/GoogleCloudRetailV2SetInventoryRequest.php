@@ -23,6 +23,10 @@ class GoogleCloudRetailV2SetInventoryRequest extends \Google\Model
    * @var bool
    */
   public $allowMissing;
+  /**
+   * @var GoogleCloudRetailV2Product
+   */
+  public $inventory;
   protected $inventoryType = GoogleCloudRetailV2Product::class;
   protected $inventoryDataType = '';
   /**

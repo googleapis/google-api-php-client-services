@@ -20,6 +20,10 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2SearchRequestBoostSpec extends \Google\Collection
 {
   protected $collection_key = 'conditionBoostSpecs';
+  /**
+   * @var GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec[]
+   */
+  public $conditionBoostSpecs;
   protected $conditionBoostSpecsType = GoogleCloudRetailV2SearchRequestBoostSpecConditionBoostSpec::class;
   protected $conditionBoostSpecsDataType = 'array';
   /**

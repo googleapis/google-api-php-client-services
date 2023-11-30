@@ -20,6 +20,10 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2ListModelsResponse extends \Google\Collection
 {
   protected $collection_key = 'models';
+  /**
+   * @var GoogleCloudRetailV2Model[]
+   */
+  public $models;
   protected $modelsType = GoogleCloudRetailV2Model::class;
   protected $modelsDataType = 'array';
   /**

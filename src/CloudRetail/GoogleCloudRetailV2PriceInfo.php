@@ -43,6 +43,10 @@ class GoogleCloudRetailV2PriceInfo extends \Google\Model
    * @var string
    */
   public $priceExpireTime;
+  /**
+   * @var GoogleCloudRetailV2PriceInfoPriceRange
+   */
+  public $priceRange;
   protected $priceRangeType = GoogleCloudRetailV2PriceInfoPriceRange::class;
   protected $priceRangeDataType = '';
 

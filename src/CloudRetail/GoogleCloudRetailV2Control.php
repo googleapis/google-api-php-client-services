@@ -32,6 +32,10 @@ class GoogleCloudRetailV2Control extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudRetailV2Rule
+   */
+  public $rule;
   protected $ruleType = GoogleCloudRetailV2Rule::class;
   protected $ruleDataType = '';
   /**

@@ -24,6 +24,10 @@ class GoogleCloudRetailV2ListServingConfigsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudRetailV2ServingConfig[]
+   */
+  public $servingConfigs;
   protected $servingConfigsType = GoogleCloudRetailV2ServingConfig::class;
   protected $servingConfigsDataType = 'array';
 
