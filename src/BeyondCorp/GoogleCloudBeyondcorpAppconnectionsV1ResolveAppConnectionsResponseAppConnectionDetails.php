@@ -20,6 +20,10 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpAppconnectionsV1ResolveAppConnectionsResponseAppConnectionDetails extends \Google\Collection
 {
   protected $collection_key = 'recentMigVms';
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectionsV1AppConnection
+   */
+  public $appConnection;
   protected $appConnectionType = GoogleCloudBeyondcorpAppconnectionsV1AppConnection::class;
   protected $appConnectionDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\BeyondCorp;
 class AppGateway extends \Google\Collection
 {
   protected $collection_key = 'allocatedConnections';
+  /**
+   * @var AllocatedConnection[]
+   */
+  public $allocatedConnections;
   protected $allocatedConnectionsType = AllocatedConnection::class;
   protected $allocatedConnectionsDataType = 'array';
   /**

@@ -19,12 +19,20 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectorsV1ImageConfig
+   */
+  public $imageConfig;
   protected $imageConfigType = GoogleCloudBeyondcorpAppconnectorsV1ImageConfig::class;
   protected $imageConfigDataType = '';
   /**
    * @var array[]
    */
   public $instanceConfig;
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig
+   */
+  public $notificationConfig;
   protected $notificationConfigType = GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig::class;
   protected $notificationConfigDataType = '';
   /**

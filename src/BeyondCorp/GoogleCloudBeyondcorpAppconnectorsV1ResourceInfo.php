@@ -32,6 +32,10 @@ class GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo extends \Google\Collectio
    * @var string
    */
   public $status;
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo[]
+   */
+  public $sub;
   protected $subType = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo::class;
   protected $subDataType = 'array';
   /**

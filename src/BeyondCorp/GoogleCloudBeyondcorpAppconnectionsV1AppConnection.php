@@ -20,6 +20,10 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpAppconnectionsV1AppConnection extends \Google\Collection
 {
   protected $collection_key = 'connectors';
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint
+   */
+  public $applicationEndpoint;
   protected $applicationEndpointType = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionApplicationEndpoint::class;
   protected $applicationEndpointDataType = '';
   /**
@@ -34,6 +38,10 @@ class GoogleCloudBeyondcorpAppconnectionsV1AppConnection extends \Google\Collect
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway
+   */
+  public $gateway;
   protected $gatewayType = GoogleCloudBeyondcorpAppconnectionsV1AppConnectionGateway::class;
   protected $gatewayDataType = '';
   /**

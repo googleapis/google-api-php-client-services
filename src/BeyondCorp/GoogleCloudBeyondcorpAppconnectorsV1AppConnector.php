@@ -35,8 +35,16 @@ class GoogleCloudBeyondcorpAppconnectorsV1AppConnector extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo
+   */
+  public $principalInfo;
   protected $principalInfoType = GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo::class;
   protected $principalInfoDataType = '';
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo
+   */
+  public $resourceInfo;
   protected $resourceInfoType = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo::class;
   protected $resourceInfoDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpAppconnectorsV1NotificationConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig
+   */
+  public $pubsubNotification;
   protected $pubsubNotificationType = GoogleCloudBeyondcorpAppconnectorsV1NotificationConfigCloudPubSubNotificationConfig::class;
   protected $pubsubNotificationDataType = '';
 
