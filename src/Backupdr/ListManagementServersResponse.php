@@ -20,6 +20,10 @@ namespace Google\Service\Backupdr;
 class ListManagementServersResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var ManagementServer[]
+   */
+  public $managementServers;
   protected $managementServersType = ManagementServer::class;
   protected $managementServersDataType = 'array';
   /**
