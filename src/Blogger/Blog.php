@@ -35,14 +35,26 @@ class Blog extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var BlogLocale
+   */
+  public $locale;
   protected $localeType = BlogLocale::class;
   protected $localeDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var BlogPages
+   */
+  public $pages;
   protected $pagesType = BlogPages::class;
   protected $pagesDataType = '';
+  /**
+   * @var BlogPosts
+   */
+  public $posts;
   protected $postsType = BlogPosts::class;
   protected $postsDataType = '';
   /**

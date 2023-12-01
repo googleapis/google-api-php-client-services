@@ -26,8 +26,16 @@ class PostUserInfo extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var Post
+   */
+  public $post;
   protected $postType = Post::class;
   protected $postDataType = '';
+  /**
+   * @var PostPerUserInfo
+   */
+  public $postUserInfo;
   protected $postUserInfoType = PostPerUserInfo::class;
   protected $postUserInfoDataType = '';
 

@@ -20,8 +20,16 @@ namespace Google\Service\Blogger;
 class BlogList extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var BlogUserInfo[]
+   */
+  public $blogUserInfos;
   protected $blogUserInfosType = BlogUserInfo::class;
   protected $blogUserInfosDataType = 'array';
+  /**
+   * @var Blog[]
+   */
+  public $items;
   protected $itemsType = Blog::class;
   protected $itemsDataType = 'array';
   /**

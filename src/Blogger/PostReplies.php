@@ -20,6 +20,10 @@ namespace Google\Service\Blogger;
 class PostReplies extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Comment[]
+   */
+  public $items;
   protected $itemsType = Comment::class;
   protected $itemsDataType = 'array';
   /**

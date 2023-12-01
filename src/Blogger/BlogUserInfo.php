@@ -22,8 +22,16 @@ class BlogUserInfo extends \Google\Model
   protected $internal_gapi_mappings = [
         "blogUserInfo" => "blog_user_info",
   ];
+  /**
+   * @var Blog
+   */
+  public $blog;
   protected $blogType = Blog::class;
   protected $blogDataType = '';
+  /**
+   * @var BlogPerUserInfo
+   */
+  public $blogUserInfo;
   protected $blogUserInfoType = BlogPerUserInfo::class;
   protected $blogUserInfoDataType = '';
   /**

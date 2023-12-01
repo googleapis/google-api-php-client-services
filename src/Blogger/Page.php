@@ -19,8 +19,16 @@ namespace Google\Service\Blogger;
 
 class Page extends \Google\Model
 {
+  /**
+   * @var PageAuthor
+   */
+  public $author;
   protected $authorType = PageAuthor::class;
   protected $authorDataType = '';
+  /**
+   * @var PageBlog
+   */
+  public $blog;
   protected $blogType = PageBlog::class;
   protected $blogDataType = '';
   /**
