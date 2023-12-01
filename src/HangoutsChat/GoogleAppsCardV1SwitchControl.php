@@ -27,6 +27,10 @@ class GoogleAppsCardV1SwitchControl extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleAppsCardV1Action
+   */
+  public $onChangeAction;
   protected $onChangeActionType = GoogleAppsCardV1Action::class;
   protected $onChangeActionDataType = '';
   /**

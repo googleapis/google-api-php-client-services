@@ -32,6 +32,10 @@ class GoogleAppsCardV1Section extends \Google\Collection
    * @var int
    */
   public $uncollapsibleWidgetsCount;
+  /**
+   * @var GoogleAppsCardV1Widget[]
+   */
+  public $widgets;
   protected $widgetsType = GoogleAppsCardV1Widget::class;
   protected $widgetsDataType = 'array';
 

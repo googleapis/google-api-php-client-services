@@ -19,12 +19,28 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1OnClick extends \Google\Model
 {
+  /**
+   * @var GoogleAppsCardV1Action
+   */
+  public $action;
   protected $actionType = GoogleAppsCardV1Action::class;
   protected $actionDataType = '';
+  /**
+   * @var GoogleAppsCardV1Card
+   */
+  public $card;
   protected $cardType = GoogleAppsCardV1Card::class;
   protected $cardDataType = '';
+  /**
+   * @var GoogleAppsCardV1Action
+   */
+  public $openDynamicLinkAction;
   protected $openDynamicLinkActionType = GoogleAppsCardV1Action::class;
   protected $openDynamicLinkActionDataType = '';
+  /**
+   * @var GoogleAppsCardV1OpenLink
+   */
+  public $openLink;
   protected $openLinkType = GoogleAppsCardV1OpenLink::class;
   protected $openLinkDataType = '';
 

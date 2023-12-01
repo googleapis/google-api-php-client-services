@@ -20,14 +20,26 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Grid extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var GoogleAppsCardV1BorderStyle
+   */
+  public $borderStyle;
   protected $borderStyleType = GoogleAppsCardV1BorderStyle::class;
   protected $borderStyleDataType = '';
   /**
    * @var int
    */
   public $columnCount;
+  /**
+   * @var GoogleAppsCardV1GridItem[]
+   */
+  public $items;
   protected $itemsType = GoogleAppsCardV1GridItem::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var GoogleAppsCardV1OnClick
+   */
+  public $onClick;
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
   /**

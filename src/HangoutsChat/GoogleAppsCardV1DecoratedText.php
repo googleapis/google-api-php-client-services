@@ -23,16 +23,40 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
    * @var string
    */
   public $bottomLabel;
+  /**
+   * @var GoogleAppsCardV1Button
+   */
+  public $button;
   protected $buttonType = GoogleAppsCardV1Button::class;
   protected $buttonDataType = '';
+  /**
+   * @var GoogleAppsCardV1Icon
+   */
+  public $endIcon;
   protected $endIconType = GoogleAppsCardV1Icon::class;
   protected $endIconDataType = '';
+  /**
+   * @var GoogleAppsCardV1Icon
+   */
+  public $icon;
   protected $iconType = GoogleAppsCardV1Icon::class;
   protected $iconDataType = '';
+  /**
+   * @var GoogleAppsCardV1OnClick
+   */
+  public $onClick;
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
+  /**
+   * @var GoogleAppsCardV1Icon
+   */
+  public $startIcon;
   protected $startIconType = GoogleAppsCardV1Icon::class;
   protected $startIconDataType = '';
+  /**
+   * @var GoogleAppsCardV1SwitchControl
+   */
+  public $switchControl;
   protected $switchControlType = GoogleAppsCardV1SwitchControl::class;
   protected $switchControlDataType = '';
   /**

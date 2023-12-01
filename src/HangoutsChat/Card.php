@@ -20,14 +20,26 @@ namespace Google\Service\HangoutsChat;
 class Card extends \Google\Collection
 {
   protected $collection_key = 'sections';
+  /**
+   * @var CardAction[]
+   */
+  public $cardActions;
   protected $cardActionsType = CardAction::class;
   protected $cardActionsDataType = 'array';
+  /**
+   * @var CardHeader
+   */
+  public $header;
   protected $headerType = CardHeader::class;
   protected $headerDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Section[]
+   */
+  public $sections;
   protected $sectionsType = Section::class;
   protected $sectionsDataType = 'array';
 

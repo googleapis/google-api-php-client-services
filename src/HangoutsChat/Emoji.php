@@ -19,6 +19,10 @@ namespace Google\Service\HangoutsChat;
 
 class Emoji extends \Google\Model
 {
+  /**
+   * @var CustomEmoji
+   */
+  public $customEmoji;
   protected $customEmojiType = CustomEmoji::class;
   protected $customEmojiDataType = '';
   /**

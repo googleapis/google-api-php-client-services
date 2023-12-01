@@ -23,6 +23,10 @@ class GoogleAppsCardV1GridItem extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleAppsCardV1ImageComponent
+   */
+  public $image;
   protected $imageType = GoogleAppsCardV1ImageComponent::class;
   protected $imageDataType = '';
   /**

@@ -20,12 +20,28 @@ namespace Google\Service\HangoutsChat;
 class WidgetMarkup extends \Google\Collection
 {
   protected $collection_key = 'buttons';
+  /**
+   * @var Button[]
+   */
+  public $buttons;
   protected $buttonsType = Button::class;
   protected $buttonsDataType = 'array';
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
+  /**
+   * @var KeyValue
+   */
+  public $keyValue;
   protected $keyValueType = KeyValue::class;
   protected $keyValueDataType = '';
+  /**
+   * @var TextParagraph
+   */
+  public $textParagraph;
   protected $textParagraphType = TextParagraph::class;
   protected $textParagraphDataType = '';
 

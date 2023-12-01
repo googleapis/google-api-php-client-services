@@ -19,8 +19,16 @@ namespace Google\Service\HangoutsChat;
 
 class OnClick extends \Google\Model
 {
+  /**
+   * @var FormAction
+   */
+  public $action;
   protected $actionType = FormAction::class;
   protected $actionDataType = '';
+  /**
+   * @var OpenLink
+   */
+  public $openLink;
   protected $openLinkType = OpenLink::class;
   protected $openLinkDataType = '';
 

@@ -32,6 +32,10 @@ class GoogleAppsCardV1Action extends \Google\Collection
    * @var string
    */
   public $loadIndicator;
+  /**
+   * @var GoogleAppsCardV1ActionParameter[]
+   */
+  public $parameters;
   protected $parametersType = GoogleAppsCardV1ActionParameter::class;
   protected $parametersDataType = 'array';
   /**

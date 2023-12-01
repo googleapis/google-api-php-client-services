@@ -23,8 +23,16 @@ class GoogleAppsCardV1ImageComponent extends \Google\Model
    * @var string
    */
   public $altText;
+  /**
+   * @var GoogleAppsCardV1BorderStyle
+   */
+  public $borderStyle;
   protected $borderStyleType = GoogleAppsCardV1BorderStyle::class;
   protected $borderStyleDataType = '';
+  /**
+   * @var GoogleAppsCardV1ImageCropStyle
+   */
+  public $cropStyle;
   protected $cropStyleType = GoogleAppsCardV1ImageCropStyle::class;
   protected $cropStyleDataType = '';
   /**

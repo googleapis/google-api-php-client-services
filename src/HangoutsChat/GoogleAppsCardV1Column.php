@@ -32,6 +32,10 @@ class GoogleAppsCardV1Column extends \Google\Collection
    * @var string
    */
   public $verticalAlignment;
+  /**
+   * @var GoogleAppsCardV1Widgets[]
+   */
+  public $widgets;
   protected $widgetsType = GoogleAppsCardV1Widgets::class;
   protected $widgetsDataType = 'array';
 

@@ -24,6 +24,10 @@ class Section extends \Google\Collection
    * @var string
    */
   public $header;
+  /**
+   * @var WidgetMarkup[]
+   */
+  public $widgets;
   protected $widgetsType = WidgetMarkup::class;
   protected $widgetsDataType = 'array';
 

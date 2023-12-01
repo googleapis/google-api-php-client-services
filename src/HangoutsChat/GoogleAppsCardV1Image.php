@@ -27,6 +27,10 @@ class GoogleAppsCardV1Image extends \Google\Model
    * @var string
    */
   public $imageUrl;
+  /**
+   * @var GoogleAppsCardV1OnClick
+   */
+  public $onClick;
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
 

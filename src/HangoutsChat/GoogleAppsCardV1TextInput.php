@@ -19,12 +19,20 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1TextInput extends \Google\Model
 {
+  /**
+   * @var GoogleAppsCardV1Action
+   */
+  public $autoCompleteAction;
   protected $autoCompleteActionType = GoogleAppsCardV1Action::class;
   protected $autoCompleteActionDataType = '';
   /**
    * @var string
    */
   public $hintText;
+  /**
+   * @var GoogleAppsCardV1Suggestions
+   */
+  public $initialSuggestions;
   protected $initialSuggestionsType = GoogleAppsCardV1Suggestions::class;
   protected $initialSuggestionsDataType = '';
   /**
@@ -35,6 +43,10 @@ class GoogleAppsCardV1TextInput extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleAppsCardV1Action
+   */
+  public $onChangeAction;
   protected $onChangeActionType = GoogleAppsCardV1Action::class;
   protected $onChangeActionDataType = '';
   /**

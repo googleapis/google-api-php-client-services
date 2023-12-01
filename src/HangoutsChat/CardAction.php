@@ -23,6 +23,10 @@ class CardAction extends \Google\Model
    * @var string
    */
   public $actionLabel;
+  /**
+   * @var OnClick
+   */
+  public $onClick;
   protected $onClickType = OnClick::class;
   protected $onClickDataType = '';
 

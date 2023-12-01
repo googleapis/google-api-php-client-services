@@ -19,6 +19,10 @@ namespace Google\Service\HangoutsChat;
 
 class SlashCommandMetadata extends \Google\Model
 {
+  /**
+   * @var User
+   */
+  public $bot;
   protected $botType = User::class;
   protected $botDataType = '';
   /**

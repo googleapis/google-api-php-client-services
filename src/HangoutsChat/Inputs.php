@@ -19,12 +19,28 @@ namespace Google\Service\HangoutsChat;
 
 class Inputs extends \Google\Model
 {
+  /**
+   * @var DateInput
+   */
+  public $dateInput;
   protected $dateInputType = DateInput::class;
   protected $dateInputDataType = '';
+  /**
+   * @var DateTimeInput
+   */
+  public $dateTimeInput;
   protected $dateTimeInputType = DateTimeInput::class;
   protected $dateTimeInputDataType = '';
+  /**
+   * @var StringInputs
+   */
+  public $stringInputs;
   protected $stringInputsType = StringInputs::class;
   protected $stringInputsDataType = '';
+  /**
+   * @var TimeInput
+   */
+  public $timeInput;
   protected $timeInputType = TimeInput::class;
   protected $timeInputDataType = '';
 

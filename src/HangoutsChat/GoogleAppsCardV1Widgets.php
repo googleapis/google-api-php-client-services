@@ -19,18 +19,46 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1Widgets extends \Google\Model
 {
+  /**
+   * @var GoogleAppsCardV1ButtonList
+   */
+  public $buttonList;
   protected $buttonListType = GoogleAppsCardV1ButtonList::class;
   protected $buttonListDataType = '';
+  /**
+   * @var GoogleAppsCardV1DateTimePicker
+   */
+  public $dateTimePicker;
   protected $dateTimePickerType = GoogleAppsCardV1DateTimePicker::class;
   protected $dateTimePickerDataType = '';
+  /**
+   * @var GoogleAppsCardV1DecoratedText
+   */
+  public $decoratedText;
   protected $decoratedTextType = GoogleAppsCardV1DecoratedText::class;
   protected $decoratedTextDataType = '';
+  /**
+   * @var GoogleAppsCardV1Image
+   */
+  public $image;
   protected $imageType = GoogleAppsCardV1Image::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleAppsCardV1SelectionInput
+   */
+  public $selectionInput;
   protected $selectionInputType = GoogleAppsCardV1SelectionInput::class;
   protected $selectionInputDataType = '';
+  /**
+   * @var GoogleAppsCardV1TextInput
+   */
+  public $textInput;
   protected $textInputType = GoogleAppsCardV1TextInput::class;
   protected $textInputDataType = '';
+  /**
+   * @var GoogleAppsCardV1TextParagraph
+   */
+  public $textParagraph;
   protected $textParagraphType = GoogleAppsCardV1TextParagraph::class;
   protected $textParagraphDataType = '';
 

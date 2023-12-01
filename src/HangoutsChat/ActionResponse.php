@@ -19,12 +19,22 @@ namespace Google\Service\HangoutsChat;
 
 class ActionResponse extends \Google\Model
 {
+  /**
+   * @var DialogAction
+   */
+  public $dialogAction;
   protected $dialogActionType = DialogAction::class;
   protected $dialogActionDataType = '';
   /**
    * @var string
    */
   public $type;
+  /**
+   * @var UpdatedWidget
+   */
+  public $updatedWidget;
+  protected $updatedWidgetType = UpdatedWidget::class;
+  protected $updatedWidgetDataType = '';
   /**
    * @var string
    */
@@ -57,6 +67,20 @@ class ActionResponse extends \Google\Model
   public function getType()
   {
     return $this->type;
+  }
+  /**
+   * @param UpdatedWidget
+   */
+  public function setUpdatedWidget(UpdatedWidget $updatedWidget)
+  {
+    $this->updatedWidget = $updatedWidget;
+  }
+  /**
+   * @return UpdatedWidget
+   */
+  public function getUpdatedWidget()
+  {
+    return $this->updatedWidget;
   }
   /**
    * @param string

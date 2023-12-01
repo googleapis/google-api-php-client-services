@@ -19,12 +19,20 @@ namespace Google\Service\HangoutsChat;
 
 class Reaction extends \Google\Model
 {
+  /**
+   * @var Emoji
+   */
+  public $emoji;
   protected $emojiType = Emoji::class;
   protected $emojiDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var User
+   */
+  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

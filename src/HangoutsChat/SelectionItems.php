@@ -17,48 +17,31 @@
 
 namespace Google\Service\HangoutsChat;
 
-class EmojiReactionSummary extends \Google\Model
+class SelectionItems extends \Google\Collection
 {
+  protected $collection_key = 'items';
   /**
-   * @var Emoji
+   * @var GoogleAppsCardV1SelectionItem[]
    */
-  public $emoji;
-  protected $emojiType = Emoji::class;
-  protected $emojiDataType = '';
-  /**
-   * @var int
-   */
-  public $reactionCount;
+  public $items;
+  protected $itemsType = GoogleAppsCardV1SelectionItem::class;
+  protected $itemsDataType = 'array';
 
   /**
-   * @param Emoji
+   * @param GoogleAppsCardV1SelectionItem[]
    */
-  public function setEmoji(Emoji $emoji)
+  public function setItems($items)
   {
-    $this->emoji = $emoji;
+    $this->items = $items;
   }
   /**
-   * @return Emoji
+   * @return GoogleAppsCardV1SelectionItem[]
    */
-  public function getEmoji()
+  public function getItems()
   {
-    return $this->emoji;
-  }
-  /**
-   * @param int
-   */
-  public function setReactionCount($reactionCount)
-  {
-    $this->reactionCount = $reactionCount;
-  }
-  /**
-   * @return int
-   */
-  public function getReactionCount()
-  {
-    return $this->reactionCount;
+    return $this->items;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EmojiReactionSummary::class, 'Google_Service_HangoutsChat_EmojiReactionSummary');
+class_alias(SelectionItems::class, 'Google_Service_HangoutsChat_SelectionItems');

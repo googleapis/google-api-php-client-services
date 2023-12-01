@@ -17,48 +17,48 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1CardAction extends \Google\Model
+class UpdatedWidget extends \Google\Model
 {
+  /**
+   * @var SelectionItems
+   */
+  public $suggestions;
+  protected $suggestionsType = SelectionItems::class;
+  protected $suggestionsDataType = '';
   /**
    * @var string
    */
-  public $actionLabel;
-  /**
-   * @var GoogleAppsCardV1OnClick
-   */
-  public $onClick;
-  protected $onClickType = GoogleAppsCardV1OnClick::class;
-  protected $onClickDataType = '';
+  public $widget;
 
+  /**
+   * @param SelectionItems
+   */
+  public function setSuggestions(SelectionItems $suggestions)
+  {
+    $this->suggestions = $suggestions;
+  }
+  /**
+   * @return SelectionItems
+   */
+  public function getSuggestions()
+  {
+    return $this->suggestions;
+  }
   /**
    * @param string
    */
-  public function setActionLabel($actionLabel)
+  public function setWidget($widget)
   {
-    $this->actionLabel = $actionLabel;
+    $this->widget = $widget;
   }
   /**
    * @return string
    */
-  public function getActionLabel()
+  public function getWidget()
   {
-    return $this->actionLabel;
-  }
-  /**
-   * @param GoogleAppsCardV1OnClick
-   */
-  public function setOnClick(GoogleAppsCardV1OnClick $onClick)
-  {
-    $this->onClick = $onClick;
-  }
-  /**
-   * @return GoogleAppsCardV1OnClick
-   */
-  public function getOnClick()
-  {
-    return $this->onClick;
+    return $this->widget;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAppsCardV1CardAction::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1CardAction');
+class_alias(UpdatedWidget::class, 'Google_Service_HangoutsChat_UpdatedWidget');

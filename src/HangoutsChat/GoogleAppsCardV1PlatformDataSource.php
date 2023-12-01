@@ -23,6 +23,10 @@ class GoogleAppsCardV1PlatformDataSource extends \Google\Model
    * @var string
    */
   public $commonDataSource;
+  /**
+   * @var HostAppDataSourceMarkup
+   */
+  public $hostAppDataSource;
   protected $hostAppDataSourceType = HostAppDataSourceMarkup::class;
   protected $hostAppDataSourceDataType = '';
 

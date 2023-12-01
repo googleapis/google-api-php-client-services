@@ -19,6 +19,10 @@ namespace Google\Service\HangoutsChat;
 
 class TextButton extends \Google\Model
 {
+  /**
+   * @var OnClick
+   */
+  public $onClick;
   protected $onClickType = OnClick::class;
   protected $onClickDataType = '';
   /**

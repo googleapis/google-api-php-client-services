@@ -23,6 +23,10 @@ class KeyValue extends \Google\Model
    * @var string
    */
   public $bottomLabel;
+  /**
+   * @var Button
+   */
+  public $button;
   protected $buttonType = Button::class;
   protected $buttonDataType = '';
   /**
@@ -41,6 +45,10 @@ class KeyValue extends \Google\Model
    * @var string
    */
   public $iconUrl;
+  /**
+   * @var OnClick
+   */
+  public $onClick;
   protected $onClickType = OnClick::class;
   protected $onClickDataType = '';
   /**

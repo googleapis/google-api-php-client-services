@@ -20,26 +20,46 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Card extends \Google\Collection
 {
   protected $collection_key = 'sections';
+  /**
+   * @var GoogleAppsCardV1CardAction[]
+   */
+  public $cardActions;
   protected $cardActionsType = GoogleAppsCardV1CardAction::class;
   protected $cardActionsDataType = 'array';
   /**
    * @var string
    */
   public $displayStyle;
+  /**
+   * @var GoogleAppsCardV1CardFixedFooter
+   */
+  public $fixedFooter;
   protected $fixedFooterType = GoogleAppsCardV1CardFixedFooter::class;
   protected $fixedFooterDataType = '';
+  /**
+   * @var GoogleAppsCardV1CardHeader
+   */
+  public $header;
   protected $headerType = GoogleAppsCardV1CardHeader::class;
   protected $headerDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleAppsCardV1CardHeader
+   */
+  public $peekCardHeader;
   protected $peekCardHeaderType = GoogleAppsCardV1CardHeader::class;
   protected $peekCardHeaderDataType = '';
   /**
    * @var string
    */
   public $sectionDividerStyle;
+  /**
+   * @var GoogleAppsCardV1Section[]
+   */
+  public $sections;
   protected $sectionsType = GoogleAppsCardV1Section::class;
   protected $sectionsDataType = 'array';
 
