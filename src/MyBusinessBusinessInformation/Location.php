@@ -20,8 +20,16 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class Location extends \Google\Collection
 {
   protected $collection_key = 'serviceItems';
+  /**
+   * @var AdWordsLocationExtensions
+   */
+  public $adWordsLocationExtensions;
   protected $adWordsLocationExtensionsType = AdWordsLocationExtensions::class;
   protected $adWordsLocationExtensionsDataType = '';
+  /**
+   * @var Categories
+   */
+  public $categories;
   protected $categoriesType = Categories::class;
   protected $categoriesDataType = '';
   /**
@@ -32,36 +40,84 @@ class Location extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  /**
+   * @var LatLng
+   */
+  public $latlng;
   protected $latlngType = LatLng::class;
   protected $latlngDataType = '';
+  /**
+   * @var Metadata
+   */
+  public $metadata;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var MoreHours[]
+   */
+  public $moreHours;
   protected $moreHoursType = MoreHours::class;
   protected $moreHoursDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var OpenInfo
+   */
+  public $openInfo;
   protected $openInfoType = OpenInfo::class;
   protected $openInfoDataType = '';
+  /**
+   * @var PhoneNumbers
+   */
+  public $phoneNumbers;
   protected $phoneNumbersType = PhoneNumbers::class;
   protected $phoneNumbersDataType = '';
+  /**
+   * @var Profile
+   */
+  public $profile;
   protected $profileType = Profile::class;
   protected $profileDataType = '';
+  /**
+   * @var BusinessHours
+   */
+  public $regularHours;
   protected $regularHoursType = BusinessHours::class;
   protected $regularHoursDataType = '';
+  /**
+   * @var RelationshipData
+   */
+  public $relationshipData;
   protected $relationshipDataType = RelationshipData::class;
   protected $relationshipDataDataType = '';
+  /**
+   * @var ServiceAreaBusiness
+   */
+  public $serviceArea;
   protected $serviceAreaType = ServiceAreaBusiness::class;
   protected $serviceAreaDataType = '';
+  /**
+   * @var ServiceItem[]
+   */
+  public $serviceItems;
   protected $serviceItemsType = ServiceItem::class;
   protected $serviceItemsDataType = 'array';
+  /**
+   * @var SpecialHours
+   */
+  public $specialHours;
   protected $specialHoursType = SpecialHours::class;
   protected $specialHoursDataType = '';
   /**
    * @var string
    */
   public $storeCode;
+  /**
+   * @var PostalAddress
+   */
+  public $storefrontAddress;
   protected $storefrontAddressType = PostalAddress::class;
   protected $storefrontAddressDataType = '';
   /**

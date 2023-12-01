@@ -19,10 +19,22 @@ namespace Google\Service\MyBusinessBusinessInformation;
 
 class ServiceItem extends \Google\Model
 {
+  /**
+   * @var FreeFormServiceItem
+   */
+  public $freeFormServiceItem;
   protected $freeFormServiceItemType = FreeFormServiceItem::class;
   protected $freeFormServiceItemDataType = '';
+  /**
+   * @var Money
+   */
+  public $price;
   protected $priceType = Money::class;
   protected $priceDataType = '';
+  /**
+   * @var StructuredServiceItem
+   */
+  public $structuredServiceItem;
   protected $structuredServiceItemType = StructuredServiceItem::class;
   protected $structuredServiceItemDataType = '';
 

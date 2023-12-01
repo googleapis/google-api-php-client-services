@@ -24,8 +24,16 @@ class Attribute extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var RepeatedEnumAttributeValue
+   */
+  public $repeatedEnumValue;
   protected $repeatedEnumValueType = RepeatedEnumAttributeValue::class;
   protected $repeatedEnumValueDataType = '';
+  /**
+   * @var UriAttributeValue[]
+   */
+  public $uriValues;
   protected $uriValuesType = UriAttributeValue::class;
   protected $uriValuesDataType = 'array';
   /**

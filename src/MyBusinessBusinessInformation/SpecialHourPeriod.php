@@ -19,16 +19,32 @@ namespace Google\Service\MyBusinessBusinessInformation;
 
 class SpecialHourPeriod extends \Google\Model
 {
+  /**
+   * @var TimeOfDay
+   */
+  public $closeTime;
   protected $closeTimeType = TimeOfDay::class;
   protected $closeTimeDataType = '';
   /**
    * @var bool
    */
   public $closed;
+  /**
+   * @var Date
+   */
+  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
+  /**
+   * @var TimeOfDay
+   */
+  public $openTime;
   protected $openTimeType = TimeOfDay::class;
   protected $openTimeDataType = '';
+  /**
+   * @var Date
+   */
+  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class SearchGoogleLocationsResponse extends \Google\Collection
 {
   protected $collection_key = 'googleLocations';
+  /**
+   * @var GoogleLocation[]
+   */
+  public $googleLocations;
   protected $googleLocationsType = GoogleLocation::class;
   protected $googleLocationsDataType = 'array';
 

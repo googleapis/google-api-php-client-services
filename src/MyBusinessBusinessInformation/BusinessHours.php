@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class BusinessHours extends \Google\Collection
 {
   protected $collection_key = 'periods';
+  /**
+   * @var TimePeriod[]
+   */
+  public $periods;
   protected $periodsType = TimePeriod::class;
   protected $periodsDataType = 'array';
 

@@ -40,6 +40,10 @@ class AttributeMetadata extends \Google\Collection
    * @var bool
    */
   public $repeatable;
+  /**
+   * @var AttributeValueMetadata[]
+   */
+  public $valueMetadata;
   protected $valueMetadataType = AttributeValueMetadata::class;
   protected $valueMetadataDataType = 'array';
   /**

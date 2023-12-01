@@ -23,6 +23,10 @@ class ServiceAreaBusiness extends \Google\Model
    * @var string
    */
   public $businessType;
+  /**
+   * @var Places
+   */
+  public $places;
   protected $placesType = Places::class;
   protected $placesDataType = '';
   /**

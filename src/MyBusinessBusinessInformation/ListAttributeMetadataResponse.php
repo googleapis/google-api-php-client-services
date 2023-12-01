@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class ListAttributeMetadataResponse extends \Google\Collection
 {
   protected $collection_key = 'attributeMetadata';
+  /**
+   * @var AttributeMetadata[]
+   */
+  public $attributeMetadata;
   protected $attributeMetadataType = AttributeMetadata::class;
   protected $attributeMetadataDataType = 'array';
   /**

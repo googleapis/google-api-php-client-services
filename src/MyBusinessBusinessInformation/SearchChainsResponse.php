@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class SearchChainsResponse extends \Google\Collection
 {
   protected $collection_key = 'chains';
+  /**
+   * @var Chain[]
+   */
+  public $chains;
   protected $chainsType = Chain::class;
   protected $chainsDataType = 'array';
 

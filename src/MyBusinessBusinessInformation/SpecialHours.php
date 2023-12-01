@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class SpecialHours extends \Google\Collection
 {
   protected $collection_key = 'specialHourPeriods';
+  /**
+   * @var SpecialHourPeriod[]
+   */
+  public $specialHourPeriods;
   protected $specialHourPeriodsType = SpecialHourPeriod::class;
   protected $specialHourPeriodsDataType = 'array';
 

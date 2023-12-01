@@ -20,8 +20,16 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class Categories extends \Google\Collection
 {
   protected $collection_key = 'additionalCategories';
+  /**
+   * @var Category[]
+   */
+  public $additionalCategories;
   protected $additionalCategoriesType = Category::class;
   protected $additionalCategoriesDataType = 'array';
+  /**
+   * @var Category
+   */
+  public $primaryCategory;
   protected $primaryCategoryType = Category::class;
   protected $primaryCategoryDataType = '';
 
