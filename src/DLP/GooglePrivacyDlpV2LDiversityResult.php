@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2LDiversityResult extends \Google\Collection
 {
   protected $collection_key = 'sensitiveValueFrequencyHistogramBuckets';
+  /**
+   * @var GooglePrivacyDlpV2LDiversityHistogramBucket[]
+   */
+  public $sensitiveValueFrequencyHistogramBuckets;
   protected $sensitiveValueFrequencyHistogramBucketsType = GooglePrivacyDlpV2LDiversityHistogramBucket::class;
   protected $sensitiveValueFrequencyHistogramBucketsDataType = 'array';
 

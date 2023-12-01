@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2LDiversityConfig extends \Google\Collection
 {
   protected $collection_key = 'quasiIds';
+  /**
+   * @var GooglePrivacyDlpV2FieldId[]
+   */
+  public $quasiIds;
   protected $quasiIdsType = GooglePrivacyDlpV2FieldId::class;
   protected $quasiIdsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $sensitiveAttribute;
   protected $sensitiveAttributeType = GooglePrivacyDlpV2FieldId::class;
   protected $sensitiveAttributeDataType = '';
 

@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RecordKey extends \Google\Collection
 {
   protected $collection_key = 'idValues';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryKey
+   */
+  public $bigQueryKey;
   protected $bigQueryKeyType = GooglePrivacyDlpV2BigQueryKey::class;
   protected $bigQueryKeyDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DatastoreKey
+   */
+  public $datastoreKey;
   protected $datastoreKeyType = GooglePrivacyDlpV2DatastoreKey::class;
   protected $datastoreKeyDataType = '';
   /**

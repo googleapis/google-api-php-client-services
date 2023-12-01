@@ -19,10 +19,22 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2RequestedDeidentifyOptions extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DeidentifyTemplate
+   */
+  public $snapshotDeidentifyTemplate;
   protected $snapshotDeidentifyTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $snapshotDeidentifyTemplateDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DeidentifyTemplate
+   */
+  public $snapshotImageRedactTemplate;
   protected $snapshotImageRedactTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $snapshotImageRedactTemplateDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DeidentifyTemplate
+   */
+  public $snapshotStructuredDeidentifyTemplate;
   protected $snapshotStructuredDeidentifyTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $snapshotStructuredDeidentifyTemplateDataType = '';
 

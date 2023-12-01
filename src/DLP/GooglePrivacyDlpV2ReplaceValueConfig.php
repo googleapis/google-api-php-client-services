@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ReplaceValueConfig extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $newValue;
   protected $newValueType = GooglePrivacyDlpV2Value::class;
   protected $newValueDataType = '';
 

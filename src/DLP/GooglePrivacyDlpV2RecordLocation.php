@@ -19,10 +19,22 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2RecordLocation extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $fieldId;
   protected $fieldIdType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldIdDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2RecordKey
+   */
+  public $recordKey;
   protected $recordKeyType = GooglePrivacyDlpV2RecordKey::class;
   protected $recordKeyDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TableLocation
+   */
+  public $tableLocation;
   protected $tableLocationType = GooglePrivacyDlpV2TableLocation::class;
   protected $tableLocationDataType = '';
 

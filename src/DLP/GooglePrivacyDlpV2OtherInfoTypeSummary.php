@@ -27,6 +27,10 @@ class GooglePrivacyDlpV2OtherInfoTypeSummary extends \Google\Model
    * @var bool
    */
   public $excludedFromAnalysis;
+  /**
+   * @var GooglePrivacyDlpV2InfoType
+   */
+  public $infoType;
   protected $infoTypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypeDataType = '';
 

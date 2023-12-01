@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RecordTransformations extends \Google\Collection
 {
   protected $collection_key = 'recordSuppressions';
+  /**
+   * @var GooglePrivacyDlpV2FieldTransformation[]
+   */
+  public $fieldTransformations;
   protected $fieldTransformationsType = GooglePrivacyDlpV2FieldTransformation::class;
   protected $fieldTransformationsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2RecordSuppression[]
+   */
+  public $recordSuppressions;
   protected $recordSuppressionsType = GooglePrivacyDlpV2RecordSuppression::class;
   protected $recordSuppressionsDataType = 'array';
 

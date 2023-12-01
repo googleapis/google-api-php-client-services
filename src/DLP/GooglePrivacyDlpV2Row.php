@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Row extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var GooglePrivacyDlpV2Value[]
+   */
+  public $values;
   protected $valuesType = GooglePrivacyDlpV2Value::class;
   protected $valuesDataType = 'array';
 

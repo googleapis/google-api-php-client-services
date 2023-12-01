@@ -20,12 +20,28 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Location extends \Google\Collection
 {
   protected $collection_key = 'contentLocations';
+  /**
+   * @var GooglePrivacyDlpV2Range
+   */
+  public $byteRange;
   protected $byteRangeType = GooglePrivacyDlpV2Range::class;
   protected $byteRangeDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Range
+   */
+  public $codepointRange;
   protected $codepointRangeType = GooglePrivacyDlpV2Range::class;
   protected $codepointRangeDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Container
+   */
+  public $container;
   protected $containerType = GooglePrivacyDlpV2Container::class;
   protected $containerDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ContentLocation[]
+   */
+  public $contentLocations;
   protected $contentLocationsType = GooglePrivacyDlpV2ContentLocation::class;
   protected $contentLocationsDataType = 'array';
 

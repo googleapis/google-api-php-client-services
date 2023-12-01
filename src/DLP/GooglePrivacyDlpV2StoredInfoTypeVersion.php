@@ -20,18 +20,30 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2StoredInfoTypeVersion extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var GooglePrivacyDlpV2StoredInfoTypeConfig
+   */
+  public $config;
   protected $configType = GooglePrivacyDlpV2StoredInfoTypeConfig::class;
   protected $configDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GooglePrivacyDlpV2Error[]
+   */
+  public $errors;
   protected $errorsType = GooglePrivacyDlpV2Error::class;
   protected $errorsDataType = 'array';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var GooglePrivacyDlpV2StoredInfoTypeStats
+   */
+  public $stats;
   protected $statsType = GooglePrivacyDlpV2StoredInfoTypeStats::class;
   protected $statsDataType = '';
 

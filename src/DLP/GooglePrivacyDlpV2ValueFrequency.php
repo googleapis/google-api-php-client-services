@@ -23,6 +23,10 @@ class GooglePrivacyDlpV2ValueFrequency extends \Google\Model
    * @var string
    */
   public $count;
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $value;
   protected $valueType = GooglePrivacyDlpV2Value::class;
   protected $valueDataType = '';
 

@@ -23,14 +23,26 @@ class GooglePrivacyDlpV2StoredInfoTypeConfig extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var GooglePrivacyDlpV2Dictionary
+   */
+  public $dictionary;
   protected $dictionaryType = GooglePrivacyDlpV2Dictionary::class;
   protected $dictionaryDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var GooglePrivacyDlpV2LargeCustomDictionaryConfig
+   */
+  public $largeCustomDictionary;
   protected $largeCustomDictionaryType = GooglePrivacyDlpV2LargeCustomDictionaryConfig::class;
   protected $largeCustomDictionaryDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Regex
+   */
+  public $regex;
   protected $regexType = GooglePrivacyDlpV2Regex::class;
   protected $regexDataType = '';
 

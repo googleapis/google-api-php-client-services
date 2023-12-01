@@ -28,6 +28,10 @@ class GooglePrivacyDlpV2KAnonymityHistogramBucket extends \Google\Collection
    * @var string
    */
   public $bucketValueCount;
+  /**
+   * @var GooglePrivacyDlpV2KAnonymityEquivalenceClass[]
+   */
+  public $bucketValues;
   protected $bucketValuesType = GooglePrivacyDlpV2KAnonymityEquivalenceClass::class;
   protected $bucketValuesDataType = 'array';
   /**

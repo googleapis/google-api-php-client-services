@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Trigger extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Manual
+   */
+  public $manual;
   protected $manualType = GooglePrivacyDlpV2Manual::class;
   protected $manualDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Schedule
+   */
+  public $schedule;
   protected $scheduleType = GooglePrivacyDlpV2Schedule::class;
   protected $scheduleDataType = '';
 

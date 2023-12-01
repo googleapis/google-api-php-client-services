@@ -23,6 +23,10 @@ class GooglePrivacyDlpV2QuasiIdField extends \Google\Model
    * @var string
    */
   public $customTag;
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $field;
   protected $fieldType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldDataType = '';
 

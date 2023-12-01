@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2UpdateDiscoveryConfigRequest extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryConfig
+   */
+  public $discoveryConfig;
   protected $discoveryConfigType = GooglePrivacyDlpV2DiscoveryConfig::class;
   protected $discoveryConfigDataType = '';
   /**

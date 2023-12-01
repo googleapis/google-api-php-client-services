@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2KMapEstimationConfig extends \Google\Collection
 {
   protected $collection_key = 'quasiIds';
+  /**
+   * @var GooglePrivacyDlpV2AuxiliaryTable[]
+   */
+  public $auxiliaryTables;
   protected $auxiliaryTablesType = GooglePrivacyDlpV2AuxiliaryTable::class;
   protected $auxiliaryTablesDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2TaggedField[]
+   */
+  public $quasiIds;
   protected $quasiIdsType = GooglePrivacyDlpV2TaggedField::class;
   protected $quasiIdsDataType = 'array';
   /**

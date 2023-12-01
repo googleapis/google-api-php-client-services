@@ -19,14 +19,34 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2StorageConfig extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2BigQueryOptions
+   */
+  public $bigQueryOptions;
   protected $bigQueryOptionsType = GooglePrivacyDlpV2BigQueryOptions::class;
   protected $bigQueryOptionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2CloudStorageOptions
+   */
+  public $cloudStorageOptions;
   protected $cloudStorageOptionsType = GooglePrivacyDlpV2CloudStorageOptions::class;
   protected $cloudStorageOptionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DatastoreOptions
+   */
+  public $datastoreOptions;
   protected $datastoreOptionsType = GooglePrivacyDlpV2DatastoreOptions::class;
   protected $datastoreOptionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2HybridOptions
+   */
+  public $hybridOptions;
   protected $hybridOptionsType = GooglePrivacyDlpV2HybridOptions::class;
   protected $hybridOptionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TimespanConfig
+   */
+  public $timespanConfig;
   protected $timespanConfigType = GooglePrivacyDlpV2TimespanConfig::class;
   protected $timespanConfigDataType = '';
 

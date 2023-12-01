@@ -24,6 +24,10 @@ class GooglePrivacyDlpV2KAnonymityEquivalenceClass extends \Google\Collection
    * @var string
    */
   public $equivalenceClassSize;
+  /**
+   * @var GooglePrivacyDlpV2Value[]
+   */
+  public $quasiIdsValues;
   protected $quasiIdsValuesType = GooglePrivacyDlpV2Value::class;
   protected $quasiIdsValuesDataType = 'array';
 

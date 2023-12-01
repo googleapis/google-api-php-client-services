@@ -19,28 +19,76 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2PrimitiveTransformation extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2BucketingConfig
+   */
+  public $bucketingConfig;
   protected $bucketingConfigType = GooglePrivacyDlpV2BucketingConfig::class;
   protected $bucketingConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2CharacterMaskConfig
+   */
+  public $characterMaskConfig;
   protected $characterMaskConfigType = GooglePrivacyDlpV2CharacterMaskConfig::class;
   protected $characterMaskConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2CryptoDeterministicConfig
+   */
+  public $cryptoDeterministicConfig;
   protected $cryptoDeterministicConfigType = GooglePrivacyDlpV2CryptoDeterministicConfig::class;
   protected $cryptoDeterministicConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2CryptoHashConfig
+   */
+  public $cryptoHashConfig;
   protected $cryptoHashConfigType = GooglePrivacyDlpV2CryptoHashConfig::class;
   protected $cryptoHashConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig
+   */
+  public $cryptoReplaceFfxFpeConfig;
   protected $cryptoReplaceFfxFpeConfigType = GooglePrivacyDlpV2CryptoReplaceFfxFpeConfig::class;
   protected $cryptoReplaceFfxFpeConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DateShiftConfig
+   */
+  public $dateShiftConfig;
   protected $dateShiftConfigType = GooglePrivacyDlpV2DateShiftConfig::class;
   protected $dateShiftConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2FixedSizeBucketingConfig
+   */
+  public $fixedSizeBucketingConfig;
   protected $fixedSizeBucketingConfigType = GooglePrivacyDlpV2FixedSizeBucketingConfig::class;
   protected $fixedSizeBucketingConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2RedactConfig
+   */
+  public $redactConfig;
   protected $redactConfigType = GooglePrivacyDlpV2RedactConfig::class;
   protected $redactConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ReplaceValueConfig
+   */
+  public $replaceConfig;
   protected $replaceConfigType = GooglePrivacyDlpV2ReplaceValueConfig::class;
   protected $replaceConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ReplaceDictionaryConfig
+   */
+  public $replaceDictionaryConfig;
   protected $replaceDictionaryConfigType = GooglePrivacyDlpV2ReplaceDictionaryConfig::class;
   protected $replaceDictionaryConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ReplaceWithInfoTypeConfig
+   */
+  public $replaceWithInfoTypeConfig;
   protected $replaceWithInfoTypeConfigType = GooglePrivacyDlpV2ReplaceWithInfoTypeConfig::class;
   protected $replaceWithInfoTypeConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TimePartConfig
+   */
+  public $timePartConfig;
   protected $timePartConfigType = GooglePrivacyDlpV2TimePartConfig::class;
   protected $timePartConfigDataType = '';
 

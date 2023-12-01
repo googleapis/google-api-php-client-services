@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ListDiscoveryConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'discoveryConfigs';
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryConfig[]
+   */
+  public $discoveryConfigs;
   protected $discoveryConfigsType = GooglePrivacyDlpV2DiscoveryConfig::class;
   protected $discoveryConfigsDataType = 'array';
   /**

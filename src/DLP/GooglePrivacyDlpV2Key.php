@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Key extends \Google\Collection
 {
   protected $collection_key = 'path';
+  /**
+   * @var GooglePrivacyDlpV2PartitionId
+   */
+  public $partitionId;
   protected $partitionIdType = GooglePrivacyDlpV2PartitionId::class;
   protected $partitionIdDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PathElement[]
+   */
+  public $path;
   protected $pathType = GooglePrivacyDlpV2PathElement::class;
   protected $pathDataType = 'array';
 

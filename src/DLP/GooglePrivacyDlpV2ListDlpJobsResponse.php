@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ListDlpJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
+  /**
+   * @var GooglePrivacyDlpV2DlpJob[]
+   */
+  public $jobs;
   protected $jobsType = GooglePrivacyDlpV2DlpJob::class;
   protected $jobsDataType = 'array';
   /**

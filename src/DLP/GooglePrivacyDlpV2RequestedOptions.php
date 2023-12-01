@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2RequestedOptions extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2InspectJobConfig
+   */
+  public $jobConfig;
   protected $jobConfigType = GooglePrivacyDlpV2InspectJobConfig::class;
   protected $jobConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2InspectTemplate
+   */
+  public $snapshotInspectTemplate;
   protected $snapshotInspectTemplateType = GooglePrivacyDlpV2InspectTemplate::class;
   protected $snapshotInspectTemplateDataType = '';
 

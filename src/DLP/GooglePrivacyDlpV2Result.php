@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Result extends \Google\Collection
 {
   protected $collection_key = 'infoTypeStats';
+  /**
+   * @var GooglePrivacyDlpV2HybridInspectStatistics
+   */
+  public $hybridStats;
   protected $hybridStatsType = GooglePrivacyDlpV2HybridInspectStatistics::class;
   protected $hybridStatsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2InfoTypeStats[]
+   */
+  public $infoTypeStats;
   protected $infoTypeStatsType = GooglePrivacyDlpV2InfoTypeStats::class;
   protected $infoTypeStatsDataType = 'array';
   /**

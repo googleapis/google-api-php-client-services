@@ -20,10 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2StatisticalTable extends \Google\Collection
 {
   protected $collection_key = 'quasiIds';
+  /**
+   * @var GooglePrivacyDlpV2QuasiIdentifierField[]
+   */
+  public $quasiIds;
   protected $quasiIdsType = GooglePrivacyDlpV2QuasiIdentifierField::class;
   protected $quasiIdsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $relativeFrequency;
   protected $relativeFrequencyType = GooglePrivacyDlpV2FieldId::class;
   protected $relativeFrequencyDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTable
+   */
+  public $table;
   protected $tableType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $tableDataType = '';
 

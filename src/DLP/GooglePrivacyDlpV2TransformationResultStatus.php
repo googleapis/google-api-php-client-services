@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2TransformationResultStatus extends \Google\Model
 {
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $details;
   protected $detailsType = GoogleRpcStatus::class;
   protected $detailsDataType = '';
   /**

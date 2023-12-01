@@ -27,6 +27,10 @@ class GooglePrivacyDlpV2RecordTransformation extends \Google\Model
    * @var string
    */
   public $containerVersion;
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $fieldId;
   protected $fieldIdType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldIdDataType = '';
 

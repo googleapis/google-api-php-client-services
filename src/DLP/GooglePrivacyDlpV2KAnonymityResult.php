@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2KAnonymityResult extends \Google\Collection
 {
   protected $collection_key = 'equivalenceClassHistogramBuckets';
+  /**
+   * @var GooglePrivacyDlpV2KAnonymityHistogramBucket[]
+   */
+  public $equivalenceClassHistogramBuckets;
   protected $equivalenceClassHistogramBucketsType = GooglePrivacyDlpV2KAnonymityHistogramBucket::class;
   protected $equivalenceClassHistogramBucketsDataType = 'array';
 

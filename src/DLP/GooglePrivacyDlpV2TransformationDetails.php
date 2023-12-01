@@ -28,10 +28,22 @@ class GooglePrivacyDlpV2TransformationDetails extends \Google\Collection
    * @var string
    */
   public $resourceName;
+  /**
+   * @var GooglePrivacyDlpV2TransformationResultStatus
+   */
+  public $statusDetails;
   protected $statusDetailsType = GooglePrivacyDlpV2TransformationResultStatus::class;
   protected $statusDetailsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TransformationDescription[]
+   */
+  public $transformation;
   protected $transformationType = GooglePrivacyDlpV2TransformationDescription::class;
   protected $transformationDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2TransformationLocation
+   */
+  public $transformationLocation;
   protected $transformationLocationType = GooglePrivacyDlpV2TransformationLocation::class;
   protected $transformationLocationDataType = '';
   /**

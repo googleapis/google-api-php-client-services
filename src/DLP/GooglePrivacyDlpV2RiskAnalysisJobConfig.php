@@ -20,10 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RiskAnalysisJobConfig extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var GooglePrivacyDlpV2Action[]
+   */
+  public $actions;
   protected $actionsType = GooglePrivacyDlpV2Action::class;
   protected $actionsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2PrivacyMetric
+   */
+  public $privacyMetric;
   protected $privacyMetricType = GooglePrivacyDlpV2PrivacyMetric::class;
   protected $privacyMetricDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTable
+   */
+  public $sourceTable;
   protected $sourceTableType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $sourceTableDataType = '';
 

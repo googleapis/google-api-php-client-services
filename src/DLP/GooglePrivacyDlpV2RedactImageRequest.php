@@ -20,14 +20,26 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2RedactImageRequest extends \Google\Collection
 {
   protected $collection_key = 'imageRedactionConfigs';
+  /**
+   * @var GooglePrivacyDlpV2ByteContentItem
+   */
+  public $byteItem;
   protected $byteItemType = GooglePrivacyDlpV2ByteContentItem::class;
   protected $byteItemDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ImageRedactionConfig[]
+   */
+  public $imageRedactionConfigs;
   protected $imageRedactionConfigsType = GooglePrivacyDlpV2ImageRedactionConfig::class;
   protected $imageRedactionConfigsDataType = 'array';
   /**
    * @var bool
    */
   public $includeFindings;
+  /**
+   * @var GooglePrivacyDlpV2InspectConfig
+   */
+  public $inspectConfig;
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**

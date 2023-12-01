@@ -19,16 +19,40 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2PrivacyMetric extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2CategoricalStatsConfig
+   */
+  public $categoricalStatsConfig;
   protected $categoricalStatsConfigType = GooglePrivacyDlpV2CategoricalStatsConfig::class;
   protected $categoricalStatsConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DeltaPresenceEstimationConfig
+   */
+  public $deltaPresenceEstimationConfig;
   protected $deltaPresenceEstimationConfigType = GooglePrivacyDlpV2DeltaPresenceEstimationConfig::class;
   protected $deltaPresenceEstimationConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2KAnonymityConfig
+   */
+  public $kAnonymityConfig;
   protected $kAnonymityConfigType = GooglePrivacyDlpV2KAnonymityConfig::class;
   protected $kAnonymityConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2KMapEstimationConfig
+   */
+  public $kMapEstimationConfig;
   protected $kMapEstimationConfigType = GooglePrivacyDlpV2KMapEstimationConfig::class;
   protected $kMapEstimationConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2LDiversityConfig
+   */
+  public $lDiversityConfig;
   protected $lDiversityConfigType = GooglePrivacyDlpV2LDiversityConfig::class;
   protected $lDiversityConfigDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2NumericalStatsConfig
+   */
+  public $numericalStatsConfig;
   protected $numericalStatsConfigType = GooglePrivacyDlpV2NumericalStatsConfig::class;
   protected $numericalStatsConfigDataType = '';
 

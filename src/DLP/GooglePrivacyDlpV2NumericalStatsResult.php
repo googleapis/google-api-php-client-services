@@ -20,10 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2NumericalStatsResult extends \Google\Collection
 {
   protected $collection_key = 'quantileValues';
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $maxValue;
   protected $maxValueType = GooglePrivacyDlpV2Value::class;
   protected $maxValueDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $minValue;
   protected $minValueType = GooglePrivacyDlpV2Value::class;
   protected $minValueDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Value[]
+   */
+  public $quantileValues;
   protected $quantileValuesType = GooglePrivacyDlpV2Value::class;
   protected $quantileValuesDataType = 'array';
 

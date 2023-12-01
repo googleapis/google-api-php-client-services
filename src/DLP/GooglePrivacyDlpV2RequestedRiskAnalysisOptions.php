@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2RequestedRiskAnalysisOptions extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2RiskAnalysisJobConfig
+   */
+  public $jobConfig;
   protected $jobConfigType = GooglePrivacyDlpV2RiskAnalysisJobConfig::class;
   protected $jobConfigDataType = '';
 

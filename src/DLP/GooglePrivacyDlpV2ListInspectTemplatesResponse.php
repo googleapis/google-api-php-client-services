@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ListInspectTemplatesResponse extends \Google\Collection
 {
   protected $collection_key = 'inspectTemplates';
+  /**
+   * @var GooglePrivacyDlpV2InspectTemplate[]
+   */
+  public $inspectTemplates;
   protected $inspectTemplatesType = GooglePrivacyDlpV2InspectTemplate::class;
   protected $inspectTemplatesDataType = 'array';
   /**

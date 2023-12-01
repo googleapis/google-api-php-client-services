@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ReplaceDictionaryConfig extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2WordList
+   */
+  public $wordList;
   protected $wordListType = GooglePrivacyDlpV2WordList::class;
   protected $wordListDataType = '';
 

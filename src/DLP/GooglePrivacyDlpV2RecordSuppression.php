@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2RecordSuppression extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2RecordCondition
+   */
+  public $condition;
   protected $conditionType = GooglePrivacyDlpV2RecordCondition::class;
   protected $conditionDataType = '';
 

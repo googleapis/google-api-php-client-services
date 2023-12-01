@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ListInfoTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'infoTypes';
+  /**
+   * @var GooglePrivacyDlpV2InfoTypeDescription[]
+   */
+  public $infoTypes;
   protected $infoTypesType = GooglePrivacyDlpV2InfoTypeDescription::class;
   protected $infoTypesDataType = 'array';
 

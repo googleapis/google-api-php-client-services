@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2StoredInfoTypeStats extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2LargeCustomDictionaryStats
+   */
+  public $largeCustomDictionary;
   protected $largeCustomDictionaryType = GooglePrivacyDlpV2LargeCustomDictionaryStats::class;
   protected $largeCustomDictionaryDataType = '';
 
