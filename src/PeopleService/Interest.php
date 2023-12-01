@@ -19,6 +19,10 @@ namespace Google\Service\PeopleService;
 
 class Interest extends \Google\Model
 {
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

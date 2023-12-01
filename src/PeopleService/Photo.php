@@ -23,6 +23,10 @@ class Photo extends \Google\Model
    * @var bool
    */
   public $default;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

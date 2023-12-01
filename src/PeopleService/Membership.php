@@ -19,10 +19,22 @@ namespace Google\Service\PeopleService;
 
 class Membership extends \Google\Model
 {
+  /**
+   * @var ContactGroupMembership
+   */
+  public $contactGroupMembership;
   protected $contactGroupMembershipType = ContactGroupMembership::class;
   protected $contactGroupMembershipDataType = '';
+  /**
+   * @var DomainMembership
+   */
+  public $domainMembership;
   protected $domainMembershipType = DomainMembership::class;
   protected $domainMembershipDataType = '';
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\PeopleService;
 
 class ContactToCreate extends \Google\Model
 {
+  /**
+   * @var Person
+   */
+  public $contactPerson;
   protected $contactPersonType = Person::class;
   protected $contactPersonDataType = '';
 

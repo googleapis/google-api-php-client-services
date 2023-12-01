@@ -27,6 +27,10 @@ class ImClient extends \Google\Model
    * @var string
    */
   public $formattedType;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

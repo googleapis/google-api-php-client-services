@@ -23,6 +23,10 @@ class RelationshipStatus extends \Google\Model
    * @var string
    */
   public $formattedValue;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

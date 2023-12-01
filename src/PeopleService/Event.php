@@ -19,12 +19,20 @@ namespace Google\Service\PeopleService;
 
 class Event extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**
    * @var string
    */
   public $formattedType;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

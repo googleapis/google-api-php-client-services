@@ -23,6 +23,10 @@ class AgeRangeType extends \Google\Model
    * @var string
    */
   public $ageRange;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
 

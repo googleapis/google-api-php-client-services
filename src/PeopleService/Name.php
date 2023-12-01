@@ -43,6 +43,10 @@ class Name extends \Google\Model
    * @var string
    */
   public $honorificSuffix;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

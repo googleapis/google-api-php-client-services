@@ -23,6 +23,10 @@ class Biography extends \Google\Model
    * @var string
    */
   public $contentType;
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

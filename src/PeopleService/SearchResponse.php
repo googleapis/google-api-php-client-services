@@ -20,6 +20,10 @@ namespace Google\Service\PeopleService;
 class SearchResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var SearchResult[]
+   */
+  public $results;
   protected $resultsType = SearchResult::class;
   protected $resultsDataType = 'array';
 

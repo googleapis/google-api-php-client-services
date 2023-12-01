@@ -20,6 +20,10 @@ namespace Google\Service\PeopleService;
 class ContactGroup extends \Google\Collection
 {
   protected $collection_key = 'memberResourceNames';
+  /**
+   * @var GroupClientData[]
+   */
+  public $clientData;
   protected $clientDataType = GroupClientData::class;
   protected $clientDataDataType = 'array';
   /**
@@ -42,6 +46,10 @@ class ContactGroup extends \Google\Collection
    * @var string[]
    */
   public $memberResourceNames;
+  /**
+   * @var ContactGroupMetadata
+   */
+  public $metadata;
   protected $metadataType = ContactGroupMetadata::class;
   protected $metadataDataType = '';
   /**

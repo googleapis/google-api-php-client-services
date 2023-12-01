@@ -19,6 +19,10 @@ namespace Google\Service\PeopleService;
 
 class SearchResult extends \Google\Model
 {
+  /**
+   * @var Person
+   */
+  public $person;
   protected $personType = Person::class;
   protected $personDataType = '';
 

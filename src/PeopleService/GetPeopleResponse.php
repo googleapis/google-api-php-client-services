@@ -20,6 +20,10 @@ namespace Google\Service\PeopleService;
 class GetPeopleResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var PersonResponse[]
+   */
+  public $responses;
   protected $responsesType = PersonResponse::class;
   protected $responsesDataType = 'array';
 

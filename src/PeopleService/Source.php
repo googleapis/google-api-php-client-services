@@ -27,6 +27,10 @@ class Source extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var ProfileMetadata
+   */
+  public $profileMetadata;
   protected $profileMetadataType = ProfileMetadata::class;
   protected $profileMetadataDataType = '';
   /**

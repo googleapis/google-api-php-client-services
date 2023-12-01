@@ -19,6 +19,10 @@ namespace Google\Service\PeopleService;
 
 class Nickname extends \Google\Model
 {
+  /**
+   * @var FieldMetadata
+   */
+  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
