@@ -20,6 +20,10 @@ namespace Google\Service\Transcoder;
 class Image extends \Google\Model
 {
   public $alpha;
+  /**
+   * @var NormalizedCoordinate
+   */
+  public $resolution;
   protected $resolutionType = NormalizedCoordinate::class;
   protected $resolutionDataType = '';
   /**

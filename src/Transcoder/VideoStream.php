@@ -19,10 +19,22 @@ namespace Google\Service\Transcoder;
 
 class VideoStream extends \Google\Model
 {
+  /**
+   * @var H264CodecSettings
+   */
+  public $h264;
   protected $h264Type = H264CodecSettings::class;
   protected $h264DataType = '';
+  /**
+   * @var H265CodecSettings
+   */
+  public $h265;
   protected $h265Type = H265CodecSettings::class;
   protected $h265DataType = '';
+  /**
+   * @var Vp9CodecSettings
+   */
+  public $vp9;
   protected $vp9Type = Vp9CodecSettings::class;
   protected $vp9DataType = '';
 

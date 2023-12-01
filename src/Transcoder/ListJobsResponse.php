@@ -20,6 +20,10 @@ namespace Google\Service\Transcoder;
 class ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Job[]
+   */
+  public $jobs;
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**

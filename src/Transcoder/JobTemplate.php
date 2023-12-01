@@ -19,6 +19,10 @@ namespace Google\Service\Transcoder;
 
 class JobTemplate extends \Google\Model
 {
+  /**
+   * @var JobConfig
+   */
+  public $config;
   protected $configType = JobConfig::class;
   protected $configDataType = '';
   /**

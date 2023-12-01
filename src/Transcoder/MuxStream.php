@@ -36,12 +36,20 @@ class MuxStream extends \Google\Collection
    * @var string
    */
   public $fileName;
+  /**
+   * @var Fmp4Config
+   */
+  public $fmp4;
   protected $fmp4Type = Fmp4Config::class;
   protected $fmp4DataType = '';
   /**
    * @var string
    */
   public $key;
+  /**
+   * @var SegmentSettings
+   */
+  public $segmentSettings;
   protected $segmentSettingsType = SegmentSettings::class;
   protected $segmentSettingsDataType = '';
 

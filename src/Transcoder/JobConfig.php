@@ -20,26 +20,70 @@ namespace Google\Service\Transcoder;
 class JobConfig extends \Google\Collection
 {
   protected $collection_key = 'spriteSheets';
+  /**
+   * @var AdBreak[]
+   */
+  public $adBreaks;
   protected $adBreaksType = AdBreak::class;
   protected $adBreaksDataType = 'array';
+  /**
+   * @var EditAtom[]
+   */
+  public $editList;
   protected $editListType = EditAtom::class;
   protected $editListDataType = 'array';
+  /**
+   * @var ElementaryStream[]
+   */
+  public $elementaryStreams;
   protected $elementaryStreamsType = ElementaryStream::class;
   protected $elementaryStreamsDataType = 'array';
+  /**
+   * @var Encryption[]
+   */
+  public $encryptions;
   protected $encryptionsType = Encryption::class;
   protected $encryptionsDataType = 'array';
+  /**
+   * @var Input[]
+   */
+  public $inputs;
   protected $inputsType = Input::class;
   protected $inputsDataType = 'array';
+  /**
+   * @var Manifest[]
+   */
+  public $manifests;
   protected $manifestsType = Manifest::class;
   protected $manifestsDataType = 'array';
+  /**
+   * @var MuxStream[]
+   */
+  public $muxStreams;
   protected $muxStreamsType = MuxStream::class;
   protected $muxStreamsDataType = 'array';
+  /**
+   * @var Output
+   */
+  public $output;
   protected $outputType = Output::class;
   protected $outputDataType = '';
+  /**
+   * @var Overlay[]
+   */
+  public $overlays;
   protected $overlaysType = Overlay::class;
   protected $overlaysDataType = 'array';
+  /**
+   * @var PubsubDestination
+   */
+  public $pubsubDestination;
   protected $pubsubDestinationType = PubsubDestination::class;
   protected $pubsubDestinationDataType = '';
+  /**
+   * @var SpriteSheet[]
+   */
+  public $spriteSheets;
   protected $spriteSheetsType = SpriteSheet::class;
   protected $spriteSheetsDataType = 'array';
 

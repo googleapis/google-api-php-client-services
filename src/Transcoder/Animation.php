@@ -19,10 +19,22 @@ namespace Google\Service\Transcoder;
 
 class Animation extends \Google\Model
 {
+  /**
+   * @var AnimationEnd
+   */
+  public $animationEnd;
   protected $animationEndType = AnimationEnd::class;
   protected $animationEndDataType = '';
+  /**
+   * @var AnimationFade
+   */
+  public $animationFade;
   protected $animationFadeType = AnimationFade::class;
   protected $animationFadeDataType = '';
+  /**
+   * @var AnimationStatic
+   */
+  public $animationStatic;
   protected $animationStaticType = AnimationStatic::class;
   protected $animationStaticDataType = '';
 

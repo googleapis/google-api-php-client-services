@@ -19,12 +19,28 @@ namespace Google\Service\Transcoder;
 
 class DrmSystems extends \Google\Model
 {
+  /**
+   * @var Clearkey
+   */
+  public $clearkey;
   protected $clearkeyType = Clearkey::class;
   protected $clearkeyDataType = '';
+  /**
+   * @var Fairplay
+   */
+  public $fairplay;
   protected $fairplayType = Fairplay::class;
   protected $fairplayDataType = '';
+  /**
+   * @var Playready
+   */
+  public $playready;
   protected $playreadyType = Playready::class;
   protected $playreadyDataType = '';
+  /**
+   * @var Widevine
+   */
+  public $widevine;
   protected $widevineType = Widevine::class;
   protected $widevineDataType = '';
 

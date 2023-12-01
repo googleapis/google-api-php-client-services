@@ -20,8 +20,16 @@ namespace Google\Service\Transcoder;
 class Overlay extends \Google\Collection
 {
   protected $collection_key = 'animations';
+  /**
+   * @var Animation[]
+   */
+  public $animations;
   protected $animationsType = Animation::class;
   protected $animationsDataType = 'array';
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
 

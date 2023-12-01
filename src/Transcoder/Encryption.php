@@ -19,18 +19,38 @@ namespace Google\Service\Transcoder;
 
 class Encryption extends \Google\Model
 {
+  /**
+   * @var Aes128Encryption
+   */
+  public $aes128;
   protected $aes128Type = Aes128Encryption::class;
   protected $aes128DataType = '';
+  /**
+   * @var DrmSystems
+   */
+  public $drmSystems;
   protected $drmSystemsType = DrmSystems::class;
   protected $drmSystemsDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var MpegCommonEncryption
+   */
+  public $mpegCenc;
   protected $mpegCencType = MpegCommonEncryption::class;
   protected $mpegCencDataType = '';
+  /**
+   * @var SampleAesEncryption
+   */
+  public $sampleAes;
   protected $sampleAesType = SampleAesEncryption::class;
   protected $sampleAesDataType = '';
+  /**
+   * @var SecretManagerSource
+   */
+  public $secretManagerKeySource;
   protected $secretManagerKeySourceType = SecretManagerSource::class;
   protected $secretManagerKeySourceDataType = '';
 

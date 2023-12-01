@@ -19,14 +19,26 @@ namespace Google\Service\Transcoder;
 
 class ElementaryStream extends \Google\Model
 {
+  /**
+   * @var AudioStream
+   */
+  public $audioStream;
   protected $audioStreamType = AudioStream::class;
   protected $audioStreamDataType = '';
   /**
    * @var string
    */
   public $key;
+  /**
+   * @var TextStream
+   */
+  public $textStream;
   protected $textStreamType = TextStream::class;
   protected $textStreamDataType = '';
+  /**
+   * @var VideoStream
+   */
+  public $videoStream;
   protected $videoStreamType = VideoStream::class;
   protected $videoStreamDataType = '';
 

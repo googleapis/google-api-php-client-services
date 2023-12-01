@@ -19,8 +19,16 @@ namespace Google\Service\Transcoder;
 
 class Deinterlace extends \Google\Model
 {
+  /**
+   * @var BwdifConfig
+   */
+  public $bwdif;
   protected $bwdifType = BwdifConfig::class;
   protected $bwdifDataType = '';
+  /**
+   * @var YadifConfig
+   */
+  public $yadif;
   protected $yadifType = YadifConfig::class;
   protected $yadifDataType = '';
 
