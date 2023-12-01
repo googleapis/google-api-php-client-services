@@ -20,10 +20,22 @@ namespace Google\Service\AIPlatformNotebooks;
 class Config extends \Google\Collection
 {
   protected $collection_key = 'availableImages';
+  /**
+   * @var ImageRelease[]
+   */
+  public $availableImages;
   protected $availableImagesType = ImageRelease::class;
   protected $availableImagesDataType = 'array';
+  /**
+   * @var DefaultValues
+   */
+  public $defaultValues;
   protected $defaultValuesType = DefaultValues::class;
   protected $defaultValuesDataType = '';
+  /**
+   * @var SupportedValues
+   */
+  public $supportedValues;
   protected $supportedValuesType = SupportedValues::class;
   protected $supportedValuesDataType = '';
 

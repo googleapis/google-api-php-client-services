@@ -32,6 +32,10 @@ class Instance extends \Google\Collection
    * @var bool
    */
   public $disableProxyAccess;
+  /**
+   * @var GceSetup
+   */
+  public $gceSetup;
   protected $gceSetupType = GceSetup::class;
   protected $gceSetupDataType = '';
   /**
@@ -70,6 +74,10 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var UpgradeHistoryEntry[]
+   */
+  public $upgradeHistory;
   protected $upgradeHistoryType = UpgradeHistoryEntry::class;
   protected $upgradeHistoryDataType = 'array';
 

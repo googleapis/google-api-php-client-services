@@ -20,6 +20,10 @@ namespace Google\Service\AIPlatformNotebooks;
 class ListInstancesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Instance[]
+   */
+  public $instances;
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**
