@@ -19,6 +19,10 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails extends \Google\Model
 {
+  /**
+   * @var GoogleChecksReportV1alphaEndpoint
+   */
+  public $endpoint;
   protected $endpointType = GoogleChecksReportV1alphaEndpoint::class;
   protected $endpointDataType = '';
 

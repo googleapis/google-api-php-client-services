@@ -23,6 +23,10 @@ class GoogleChecksReportV1alphaCheckDataTypeEvidence extends \Google\Model
    * @var string
    */
   public $dataType;
+  /**
+   * @var GoogleChecksReportV1alphaDataTypeEvidence
+   */
+  public $dataTypeEvidence;
   protected $dataTypeEvidenceType = GoogleChecksReportV1alphaDataTypeEvidence::class;
   protected $dataTypeEvidenceDataType = '';
 

@@ -19,12 +19,20 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaDataMonitoringEndpointResult extends \Google\Model
 {
+  /**
+   * @var GoogleChecksReportV1alphaEndpoint
+   */
+  public $endpoint;
   protected $endpointType = GoogleChecksReportV1alphaEndpoint::class;
   protected $endpointDataType = '';
   /**
    * @var int
    */
   public $hitCount;
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringResultMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleChecksReportV1alphaDataMonitoringResultMetadata::class;
   protected $metadataDataType = '';
 

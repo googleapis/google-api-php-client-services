@@ -19,8 +19,16 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaDataMonitoringPermissionResult extends \Google\Model
 {
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringResultMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleChecksReportV1alphaDataMonitoringResultMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleChecksReportV1alphaPermission
+   */
+  public $permission;
   protected $permissionType = GoogleChecksReportV1alphaPermission::class;
   protected $permissionDataType = '';
 

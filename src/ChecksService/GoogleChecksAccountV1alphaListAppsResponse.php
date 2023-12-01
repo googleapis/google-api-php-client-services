@@ -20,6 +20,10 @@ namespace Google\Service\ChecksService;
 class GoogleChecksAccountV1alphaListAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'apps';
+  /**
+   * @var GoogleChecksAccountV1alphaApp[]
+   */
+  public $apps;
   protected $appsType = GoogleChecksAccountV1alphaApp::class;
   protected $appsDataType = 'array';
   /**

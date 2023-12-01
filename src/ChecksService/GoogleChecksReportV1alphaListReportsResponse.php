@@ -24,6 +24,10 @@ class GoogleChecksReportV1alphaListReportsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleChecksReportV1alphaReport[]
+   */
+  public $reports;
   protected $reportsType = GoogleChecksReportV1alphaReport::class;
   protected $reportsDataType = 'array';
 

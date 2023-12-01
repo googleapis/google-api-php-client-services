@@ -19,6 +19,10 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaDataTypePrivacyPolicyTextEvidence extends \Google\Model
 {
+  /**
+   * @var GoogleChecksReportV1alphaPolicyFragment
+   */
+  public $policyFragment;
   protected $policyFragmentType = GoogleChecksReportV1alphaPolicyFragment::class;
   protected $policyFragmentDataType = '';
 

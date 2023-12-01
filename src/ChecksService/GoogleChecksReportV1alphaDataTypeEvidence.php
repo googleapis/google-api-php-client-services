@@ -20,10 +20,22 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaDataTypeEvidence extends \Google\Collection
 {
   protected $collection_key = 'privacyPolicyTexts';
+  /**
+   * @var GoogleChecksReportV1alphaDataTypeEndpointEvidence[]
+   */
+  public $endpoints;
   protected $endpointsType = GoogleChecksReportV1alphaDataTypeEndpointEvidence::class;
   protected $endpointsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataTypePermissionEvidence[]
+   */
+  public $permissions;
   protected $permissionsType = GoogleChecksReportV1alphaDataTypePermissionEvidence::class;
   protected $permissionsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataTypePrivacyPolicyTextEvidence[]
+   */
+  public $privacyPolicyTexts;
   protected $privacyPolicyTextsType = GoogleChecksReportV1alphaDataTypePrivacyPolicyTextEvidence::class;
   protected $privacyPolicyTextsDataType = 'array';
 

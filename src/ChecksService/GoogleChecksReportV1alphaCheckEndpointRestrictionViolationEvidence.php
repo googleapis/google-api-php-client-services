@@ -20,6 +20,10 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence extends \Google\Collection
 {
   protected $collection_key = 'endpointDetails';
+  /**
+   * @var GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails[]
+   */
+  public $endpointDetails;
   protected $endpointDetailsType = GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidenceEndpointDetails::class;
   protected $endpointDetailsDataType = 'array';
 

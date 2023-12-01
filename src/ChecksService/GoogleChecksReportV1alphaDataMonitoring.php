@@ -20,12 +20,28 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaDataMonitoring extends \Google\Collection
 {
   protected $collection_key = 'sdks';
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringDataTypeResult[]
+   */
+  public $dataTypes;
   protected $dataTypesType = GoogleChecksReportV1alphaDataMonitoringDataTypeResult::class;
   protected $dataTypesDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringEndpointResult[]
+   */
+  public $endpoints;
   protected $endpointsType = GoogleChecksReportV1alphaDataMonitoringEndpointResult::class;
   protected $endpointsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringPermissionResult[]
+   */
+  public $permissions;
   protected $permissionsType = GoogleChecksReportV1alphaDataMonitoringPermissionResult::class;
   protected $permissionsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringSdkResult[]
+   */
+  public $sdks;
   protected $sdksType = GoogleChecksReportV1alphaDataMonitoringSdkResult::class;
   protected $sdksDataType = 'array';
 

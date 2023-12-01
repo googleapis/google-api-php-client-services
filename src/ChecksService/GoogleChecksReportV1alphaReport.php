@@ -20,10 +20,22 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaReport extends \Google\Collection
 {
   protected $collection_key = 'checks';
+  /**
+   * @var GoogleChecksReportV1alphaAppBundle
+   */
+  public $appBundle;
   protected $appBundleType = GoogleChecksReportV1alphaAppBundle::class;
   protected $appBundleDataType = '';
+  /**
+   * @var GoogleChecksReportV1alphaCheck[]
+   */
+  public $checks;
   protected $checksType = GoogleChecksReportV1alphaCheck::class;
   protected $checksDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoring
+   */
+  public $dataMonitoring;
   protected $dataMonitoringType = GoogleChecksReportV1alphaDataMonitoring::class;
   protected $dataMonitoringDataType = '';
   /**

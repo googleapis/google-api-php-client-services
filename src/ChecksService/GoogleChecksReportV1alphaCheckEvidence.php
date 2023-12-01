@@ -20,24 +20,64 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaCheckEvidence extends \Google\Collection
 {
   protected $collection_key = 'sdks';
+  /**
+   * @var GoogleChecksReportV1alphaCheckDataSecurityEvidence
+   */
+  public $dataSecurity;
   protected $dataSecurityType = GoogleChecksReportV1alphaCheckDataSecurityEvidence::class;
   protected $dataSecurityDataType = '';
+  /**
+   * @var GoogleChecksReportV1alphaCheckDataTypeEvidence[]
+   */
+  public $dataTypes;
   protected $dataTypesType = GoogleChecksReportV1alphaCheckDataTypeEvidence::class;
   protected $dataTypesDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence[]
+   */
+  public $endpointRestrictionViolations;
   protected $endpointRestrictionViolationsType = GoogleChecksReportV1alphaCheckEndpointRestrictionViolationEvidence::class;
   protected $endpointRestrictionViolationsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckEndpointEvidence[]
+   */
+  public $endpoints;
   protected $endpointsType = GoogleChecksReportV1alphaCheckEndpointEvidence::class;
   protected $endpointsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidence[]
+   */
+  public $permissionRestrictionViolations;
   protected $permissionRestrictionViolationsType = GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidence::class;
   protected $permissionRestrictionViolationsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckPermissionEvidence[]
+   */
+  public $permissions;
   protected $permissionsType = GoogleChecksReportV1alphaCheckPermissionEvidence::class;
   protected $permissionsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence[]
+   */
+  public $privacyPolicyTexts;
   protected $privacyPolicyTextsType = GoogleChecksReportV1alphaCheckPrivacyPolicyTextEvidence::class;
   protected $privacyPolicyTextsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckSdkIssueEvidence[]
+   */
+  public $sdkIssues;
   protected $sdkIssuesType = GoogleChecksReportV1alphaCheckSdkIssueEvidence::class;
   protected $sdkIssuesDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckSdkRestrictionViolationEvidence[]
+   */
+  public $sdkRestrictionViolations;
   protected $sdkRestrictionViolationsType = GoogleChecksReportV1alphaCheckSdkRestrictionViolationEvidence::class;
   protected $sdkRestrictionViolationsDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaCheckSdkEvidence[]
+   */
+  public $sdks;
   protected $sdksType = GoogleChecksReportV1alphaCheckSdkEvidence::class;
   protected $sdksDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaCheckDataSecurityEvidence extends \Google\Collection
 {
   protected $collection_key = 'dataInTransitInfo';
+  /**
+   * @var GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo[]
+   */
+  public $dataInTransitInfo;
   protected $dataInTransitInfoType = GoogleChecksReportV1alphaCheckDataSecurityEvidenceDataInTransitInfo::class;
   protected $dataInTransitInfoDataType = 'array';
 

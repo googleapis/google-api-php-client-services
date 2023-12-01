@@ -19,8 +19,16 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaDataMonitoringSdkResult extends \Google\Model
 {
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringResultMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleChecksReportV1alphaDataMonitoringResultMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleChecksReportV1alphaSdk
+   */
+  public $sdk;
   protected $sdkType = GoogleChecksReportV1alphaSdk::class;
   protected $sdkDataType = '';
 

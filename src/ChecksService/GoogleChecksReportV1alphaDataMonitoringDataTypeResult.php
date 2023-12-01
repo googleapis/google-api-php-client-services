@@ -23,8 +23,16 @@ class GoogleChecksReportV1alphaDataMonitoringDataTypeResult extends \Google\Mode
    * @var string
    */
   public $dataType;
+  /**
+   * @var GoogleChecksReportV1alphaDataTypeEvidence
+   */
+  public $dataTypeEvidence;
   protected $dataTypeEvidenceType = GoogleChecksReportV1alphaDataTypeEvidence::class;
   protected $dataTypeEvidenceDataType = '';
+  /**
+   * @var GoogleChecksReportV1alphaDataMonitoringResultMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleChecksReportV1alphaDataMonitoringResultMetadata::class;
   protected $metadataDataType = '';
 

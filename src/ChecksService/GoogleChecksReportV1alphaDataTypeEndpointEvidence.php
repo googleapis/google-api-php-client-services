@@ -20,8 +20,16 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaDataTypeEndpointEvidence extends \Google\Collection
 {
   protected $collection_key = 'endpointDetails';
+  /**
+   * @var GoogleChecksReportV1alphaDataTypeEndpointEvidenceAttributedSdk[]
+   */
+  public $attributedSdks;
   protected $attributedSdksType = GoogleChecksReportV1alphaDataTypeEndpointEvidenceAttributedSdk::class;
   protected $attributedSdksDataType = 'array';
+  /**
+   * @var GoogleChecksReportV1alphaDataTypeEndpointEvidenceEndpointDetails[]
+   */
+  public $endpointDetails;
   protected $endpointDetailsType = GoogleChecksReportV1alphaDataTypeEndpointEvidenceEndpointDetails::class;
   protected $endpointDetailsDataType = 'array';
   /**
