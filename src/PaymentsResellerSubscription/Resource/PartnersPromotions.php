@@ -33,8 +33,8 @@ class PartnersPromotions extends \Google\Service\Resource
 {
   /**
    * To find eligible promotions for the current user. The API requires user
-   * authorization via OAuth. The user is inferred from the authenticated OAuth
-   * credential. (promotions.findEligible)
+   * authorization via OAuth. The bare minimum oauth scope `openid` is sufficient,
+   * which will skip the consent screen. (promotions.findEligible)
    *
    * @param string $parent Required. The parent, the partner that can resell.
    * Format: partners/{partner}

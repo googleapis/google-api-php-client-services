@@ -19,6 +19,10 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class GoogleCloudPaymentsResellerSubscriptionV1Extension extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1Duration
+   */
+  public $duration;
   protected $durationType = GoogleCloudPaymentsResellerSubscriptionV1Duration::class;
   protected $durationDataType = '';
   /**

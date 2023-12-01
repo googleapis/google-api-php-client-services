@@ -19,8 +19,16 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class GoogleCloudPaymentsResellerSubscriptionV1ProductPayload extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload
+   */
+  public $googleOnePayload;
   protected $googleOnePayloadType = GoogleCloudPaymentsResellerSubscriptionV1GoogleOnePayload::class;
   protected $googleOnePayloadDataType = '';
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload
+   */
+  public $youtubePayload;
   protected $youtubePayloadType = GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload::class;
   protected $youtubePayloadDataType = '';
 

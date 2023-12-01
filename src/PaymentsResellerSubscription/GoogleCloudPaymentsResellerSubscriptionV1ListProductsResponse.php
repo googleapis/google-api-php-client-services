@@ -24,6 +24,10 @@ class GoogleCloudPaymentsResellerSubscriptionV1ListProductsResponse extends \Goo
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1Product[]
+   */
+  public $products;
   protected $productsType = GoogleCloudPaymentsResellerSubscriptionV1Product::class;
   protected $productsDataType = 'array';
 

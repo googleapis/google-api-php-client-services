@@ -19,8 +19,16 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1Duration
+   */
+  public $freeTrialDuration;
   protected $freeTrialDurationType = GoogleCloudPaymentsResellerSubscriptionV1Duration::class;
   protected $freeTrialDurationDataType = '';
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails
+   */
+  public $introductoryPricingDetails;
   protected $introductoryPricingDetailsType = GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails::class;
   protected $introductoryPricingDetailsDataType = '';
   /**

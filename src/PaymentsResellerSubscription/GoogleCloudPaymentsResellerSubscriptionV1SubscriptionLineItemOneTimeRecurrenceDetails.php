@@ -19,6 +19,10 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItemOneTimeRecurrenceDetails extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod
+   */
+  public $servicePeriod;
   protected $servicePeriodType = GoogleCloudPaymentsResellerSubscriptionV1ServicePeriod::class;
   protected $servicePeriodDataType = '';
 

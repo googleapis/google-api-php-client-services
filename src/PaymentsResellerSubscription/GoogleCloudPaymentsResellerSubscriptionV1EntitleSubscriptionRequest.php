@@ -20,6 +20,10 @@ namespace Google\Service\PaymentsResellerSubscription;
 class GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequest extends \Google\Collection
 {
   protected $collection_key = 'lineItemEntitlementDetails';
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequestLineItemEntitlementDetails[]
+   */
+  public $lineItemEntitlementDetails;
   protected $lineItemEntitlementDetailsType = GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionRequestLineItemEntitlementDetails::class;
   protected $lineItemEntitlementDetailsDataType = 'array';
 

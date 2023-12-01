@@ -20,6 +20,10 @@ namespace Google\Service\PaymentsResellerSubscription;
 class ProductBundleDetails extends \Google\Collection
 {
   protected $collection_key = 'bundleElements';
+  /**
+   * @var GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement[]
+   */
+  public $bundleElements;
   protected $bundleElementsType = GoogleCloudPaymentsResellerSubscriptionV1ProductBundleDetailsBundleElement::class;
   protected $bundleElementsDataType = 'array';
   /**
