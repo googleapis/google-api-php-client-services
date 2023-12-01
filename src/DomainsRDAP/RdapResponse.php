@@ -28,12 +28,20 @@ class RdapResponse extends \Google\Collection
    * @var int
    */
   public $errorCode;
+  /**
+   * @var HttpBody
+   */
+  public $jsonResponse;
   protected $jsonResponseType = HttpBody::class;
   protected $jsonResponseDataType = '';
   /**
    * @var string
    */
   public $lang;
+  /**
+   * @var Notice[]
+   */
+  public $notices;
   protected $noticesType = Notice::class;
   protected $noticesDataType = 'array';
   /**
