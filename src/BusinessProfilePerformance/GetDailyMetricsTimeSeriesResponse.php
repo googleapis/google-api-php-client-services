@@ -19,6 +19,10 @@ namespace Google\Service\BusinessProfilePerformance;
 
 class GetDailyMetricsTimeSeriesResponse extends \Google\Model
 {
+  /**
+   * @var TimeSeries
+   */
+  public $timeSeries;
   protected $timeSeriesType = TimeSeries::class;
   protected $timeSeriesDataType = '';
 

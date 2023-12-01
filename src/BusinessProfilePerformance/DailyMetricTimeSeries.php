@@ -23,8 +23,16 @@ class DailyMetricTimeSeries extends \Google\Model
    * @var string
    */
   public $dailyMetric;
+  /**
+   * @var DailySubEntityType
+   */
+  public $dailySubEntityType;
   protected $dailySubEntityTypeType = DailySubEntityType::class;
   protected $dailySubEntityTypeDataType = '';
+  /**
+   * @var TimeSeries
+   */
+  public $timeSeries;
   protected $timeSeriesType = TimeSeries::class;
   protected $timeSeriesDataType = '';
 
