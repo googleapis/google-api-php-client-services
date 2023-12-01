@@ -24,6 +24,10 @@ class ListPartnersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Partner[]
+   */
+  public $partners;
   protected $partnersType = Partner::class;
   protected $partnersDataType = 'array';
 

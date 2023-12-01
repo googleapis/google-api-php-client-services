@@ -19,6 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class PrismaConfig extends \Google\Model
 {
+  /**
+   * @var PrismaCpeCode
+   */
+  public $prismaCpeCode;
   protected $prismaCpeCodeType = PrismaCpeCode::class;
   protected $prismaCpeCodeDataType = '';
   /**

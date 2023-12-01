@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListLineItemsResponse extends \Google\Collection
 {
   protected $collection_key = 'lineItems';
+  /**
+   * @var LineItem[]
+   */
+  public $lineItems;
   protected $lineItemsType = LineItem::class;
   protected $lineItemsDataType = 'array';
   /**

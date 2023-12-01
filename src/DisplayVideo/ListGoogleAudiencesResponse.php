@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListGoogleAudiencesResponse extends \Google\Collection
 {
   protected $collection_key = 'googleAudiences';
+  /**
+   * @var GoogleAudience[]
+   */
+  public $googleAudiences;
   protected $googleAudiencesType = GoogleAudience::class;
   protected $googleAudiencesDataType = 'array';
   /**

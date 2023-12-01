@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ReplaceNegativeKeywordsRequest extends \Google\Collection
 {
   protected $collection_key = 'newNegativeKeywords';
+  /**
+   * @var NegativeKeyword[]
+   */
+  public $newNegativeKeywords;
   protected $newNegativeKeywordsType = NegativeKeyword::class;
   protected $newNegativeKeywordsDataType = 'array';
 

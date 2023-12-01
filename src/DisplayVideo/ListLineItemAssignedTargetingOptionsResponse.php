@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListLineItemAssignedTargetingOptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'assignedTargetingOptions';
+  /**
+   * @var AssignedTargetingOption[]
+   */
+  public $assignedTargetingOptions;
   protected $assignedTargetingOptionsType = AssignedTargetingOption::class;
   protected $assignedTargetingOptionsDataType = 'array';
   /**

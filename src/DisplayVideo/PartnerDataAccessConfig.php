@@ -19,6 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class PartnerDataAccessConfig extends \Google\Model
 {
+  /**
+   * @var SdfConfig
+   */
+  public $sdfConfig;
   protected $sdfConfigType = SdfConfig::class;
   protected $sdfConfigDataType = '';
 

@@ -24,6 +24,10 @@ class VideoAdSequenceSettings extends \Google\Collection
    * @var string
    */
   public $minimumDuration;
+  /**
+   * @var VideoAdSequenceStep[]
+   */
+  public $steps;
   protected $stepsType = VideoAdSequenceStep::class;
   protected $stepsDataType = 'array';
 

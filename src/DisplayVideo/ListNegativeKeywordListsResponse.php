@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListNegativeKeywordListsResponse extends \Google\Collection
 {
   protected $collection_key = 'negativeKeywordLists';
+  /**
+   * @var NegativeKeywordList[]
+   */
+  public $negativeKeywordLists;
   protected $negativeKeywordListsType = NegativeKeywordList::class;
   protected $negativeKeywordListsDataType = 'array';
   /**
