@@ -20,6 +20,10 @@ namespace Google\Service\BigQueryDataTransfer;
 class ListDataSourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'dataSources';
+  /**
+   * @var DataSource[]
+   */
+  public $dataSources;
   protected $dataSourcesType = DataSource::class;
   protected $dataSourcesDataType = 'array';
   /**
