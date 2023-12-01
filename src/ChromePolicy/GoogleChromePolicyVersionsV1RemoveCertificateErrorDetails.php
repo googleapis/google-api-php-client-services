@@ -20,6 +20,10 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1RemoveCertificateErrorDetails extends \Google\Collection
 {
   protected $collection_key = 'certificateReferences';
+  /**
+   * @var GoogleChromePolicyVersionsV1CertificateReference[]
+   */
+  public $certificateReferences;
   protected $certificateReferencesType = GoogleChromePolicyVersionsV1CertificateReference::class;
   protected $certificateReferencesDataType = 'array';
 

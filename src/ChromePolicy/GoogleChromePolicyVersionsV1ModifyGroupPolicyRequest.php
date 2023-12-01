@@ -19,8 +19,16 @@ namespace Google\Service\ChromePolicy;
 
 class GoogleChromePolicyVersionsV1ModifyGroupPolicyRequest extends \Google\Model
 {
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
+   */
+  public $policyTargetKey;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyValue
+   */
+  public $policyValue;
   protected $policyValueType = GoogleChromePolicyVersionsV1PolicyValue::class;
   protected $policyValueDataType = '';
   /**

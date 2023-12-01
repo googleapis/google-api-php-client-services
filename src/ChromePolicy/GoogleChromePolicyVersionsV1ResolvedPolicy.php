@@ -19,12 +19,28 @@ namespace Google\Service\ChromePolicy;
 
 class GoogleChromePolicyVersionsV1ResolvedPolicy extends \Google\Model
 {
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
+   */
+  public $addedSourceKey;
   protected $addedSourceKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $addedSourceKeyDataType = '';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
+   */
+  public $sourceKey;
   protected $sourceKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $sourceKeyDataType = '';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
+   */
+  public $targetKey;
   protected $targetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $targetKeyDataType = '';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyValue
+   */
+  public $value;
   protected $valueType = GoogleChromePolicyVersionsV1PolicyValue::class;
   protected $valueDataType = '';
 

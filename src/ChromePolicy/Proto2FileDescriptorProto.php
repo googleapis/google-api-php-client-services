@@ -24,8 +24,16 @@ class Proto2FileDescriptorProto extends \Google\Collection
    * @var string
    */
   public $editionDeprecated;
+  /**
+   * @var Proto2EnumDescriptorProto[]
+   */
+  public $enumType;
   protected $enumTypeType = Proto2EnumDescriptorProto::class;
   protected $enumTypeDataType = 'array';
+  /**
+   * @var Proto2DescriptorProto[]
+   */
+  public $messageType;
   protected $messageTypeType = Proto2DescriptorProto::class;
   protected $messageTypeDataType = 'array';
   /**

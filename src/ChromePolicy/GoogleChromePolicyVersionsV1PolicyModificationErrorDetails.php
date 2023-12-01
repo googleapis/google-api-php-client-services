@@ -20,6 +20,10 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1PolicyModificationErrorDetails extends \Google\Collection
 {
   protected $collection_key = 'modificationErrors';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyModificationError[]
+   */
+  public $modificationErrors;
   protected $modificationErrorsType = GoogleChromePolicyVersionsV1PolicyModificationError::class;
   protected $modificationErrorsDataType = 'array';
 

@@ -20,16 +20,32 @@ namespace Google\Service\ChromePolicy;
 class Proto2DescriptorProto extends \Google\Collection
 {
   protected $collection_key = 'oneofDecl';
+  /**
+   * @var Proto2EnumDescriptorProto[]
+   */
+  public $enumType;
   protected $enumTypeType = Proto2EnumDescriptorProto::class;
   protected $enumTypeDataType = 'array';
+  /**
+   * @var Proto2FieldDescriptorProto[]
+   */
+  public $field;
   protected $fieldType = Proto2FieldDescriptorProto::class;
   protected $fieldDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Proto2DescriptorProto[]
+   */
+  public $nestedType;
   protected $nestedTypeType = Proto2DescriptorProto::class;
   protected $nestedTypeDataType = 'array';
+  /**
+   * @var Proto2OneofDescriptorProto[]
+   */
+  public $oneofDecl;
   protected $oneofDeclType = Proto2OneofDescriptorProto::class;
   protected $oneofDeclDataType = 'array';
 

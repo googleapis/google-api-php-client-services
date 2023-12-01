@@ -32,8 +32,16 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription extends \Google\C
    * @var string
    */
   public $field;
+  /**
+   * @var GoogleChromePolicyVersionsV1FieldConstraints
+   */
+  public $fieldConstraints;
   protected $fieldConstraintsType = GoogleChromePolicyVersionsV1FieldConstraints::class;
   protected $fieldConstraintsDataType = '';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[]
+   */
+  public $fieldDependencies;
   protected $fieldDependenciesType = GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies::class;
   protected $fieldDependenciesDataType = 'array';
   /**
@@ -44,14 +52,26 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldDescription extends \Google\C
    * @var string
    */
   public $inputConstraint;
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription[]
+   */
+  public $knownValueDescriptions;
   protected $knownValueDescriptionsType = GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription::class;
   protected $knownValueDescriptionsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicySchemaFieldDescription[]
+   */
+  public $nestedFieldDescriptions;
   protected $nestedFieldDescriptionsType = GoogleChromePolicyVersionsV1PolicySchemaFieldDescription::class;
   protected $nestedFieldDescriptionsDataType = 'array';
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicySchemaRequiredItems[]
+   */
+  public $requiredItems;
   protected $requiredItemsType = GoogleChromePolicyVersionsV1PolicySchemaRequiredItems::class;
   protected $requiredItemsDataType = 'array';
 

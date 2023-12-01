@@ -24,6 +24,10 @@ class GoogleChromePolicyVersionsV1PolicySchemaFieldKnownValueDescription extends
    * @var string
    */
   public $description;
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies[]
+   */
+  public $fieldDependencies;
   protected $fieldDependenciesType = GoogleChromePolicyVersionsV1PolicySchemaFieldDependencies::class;
   protected $fieldDependenciesDataType = 'array';
   /**

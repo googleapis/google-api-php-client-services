@@ -24,6 +24,10 @@ class GoogleChromePolicyVersionsV1ListPolicySchemasResponse extends \Google\Coll
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicySchema[]
+   */
+  public $policySchemas;
   protected $policySchemasType = GoogleChromePolicyVersionsV1PolicySchema::class;
   protected $policySchemasDataType = 'array';
 

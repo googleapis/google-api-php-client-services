@@ -31,6 +31,10 @@ class GoogleChromePolicyVersionsV1ResolveRequest extends \Google\Model
    * @var string
    */
   public $policySchemaFilter;
+  /**
+   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
+   */
+  public $policyTargetKey;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
 

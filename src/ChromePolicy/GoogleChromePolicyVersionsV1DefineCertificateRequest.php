@@ -28,6 +28,10 @@ class GoogleChromePolicyVersionsV1DefineCertificateRequest extends \Google\Colle
    * @var string
    */
   public $certificate;
+  /**
+   * @var GoogleChromePolicyVersionsV1NetworkSetting[]
+   */
+  public $settings;
   protected $settingsType = GoogleChromePolicyVersionsV1NetworkSetting::class;
   protected $settingsDataType = 'array';
   /**
