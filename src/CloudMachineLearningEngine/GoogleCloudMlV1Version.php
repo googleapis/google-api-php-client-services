@@ -20,10 +20,22 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1Version extends \Google\Collection
 {
   protected $collection_key = 'packageUris';
+  /**
+   * @var GoogleCloudMlV1AcceleratorConfig
+   */
+  public $acceleratorConfig;
   protected $acceleratorConfigType = GoogleCloudMlV1AcceleratorConfig::class;
   protected $acceleratorConfigDataType = '';
+  /**
+   * @var GoogleCloudMlV1AutoScaling
+   */
+  public $autoScaling;
   protected $autoScalingType = GoogleCloudMlV1AutoScaling::class;
   protected $autoScalingDataType = '';
+  /**
+   * @var GoogleCloudMlV1ContainerSpec
+   */
+  public $container;
   protected $containerType = GoogleCloudMlV1ContainerSpec::class;
   protected $containerDataType = '';
   /**
@@ -46,6 +58,10 @@ class GoogleCloudMlV1Version extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var GoogleCloudMlV1ExplanationConfig
+   */
+  public $explanationConfig;
   protected $explanationConfigType = GoogleCloudMlV1ExplanationConfig::class;
   protected $explanationConfigDataType = '';
   /**
@@ -76,6 +92,10 @@ class GoogleCloudMlV1Version extends \Google\Collection
    * @var string
    */
   public $machineType;
+  /**
+   * @var GoogleCloudMlV1ManualScaling
+   */
+  public $manualScaling;
   protected $manualScalingType = GoogleCloudMlV1ManualScaling::class;
   protected $manualScalingDataType = '';
   /**
@@ -94,8 +114,16 @@ class GoogleCloudMlV1Version extends \Google\Collection
    * @var string
    */
   public $pythonVersion;
+  /**
+   * @var GoogleCloudMlV1RequestLoggingConfig
+   */
+  public $requestLoggingConfig;
   protected $requestLoggingConfigType = GoogleCloudMlV1RequestLoggingConfig::class;
   protected $requestLoggingConfigDataType = '';
+  /**
+   * @var GoogleCloudMlV1RouteMap
+   */
+  public $routes;
   protected $routesType = GoogleCloudMlV1RouteMap::class;
   protected $routesDataType = '';
   /**

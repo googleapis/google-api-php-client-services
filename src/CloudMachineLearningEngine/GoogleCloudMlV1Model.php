@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1Model extends \Google\Collection
 {
   protected $collection_key = 'regions';
+  /**
+   * @var GoogleCloudMlV1Version
+   */
+  public $defaultVersion;
   protected $defaultVersionType = GoogleCloudMlV1Version::class;
   protected $defaultVersionDataType = '';
   /**

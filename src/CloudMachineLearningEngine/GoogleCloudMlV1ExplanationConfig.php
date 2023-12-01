@@ -19,10 +19,22 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1ExplanationConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudMlV1IntegratedGradientsAttribution
+   */
+  public $integratedGradientsAttribution;
   protected $integratedGradientsAttributionType = GoogleCloudMlV1IntegratedGradientsAttribution::class;
   protected $integratedGradientsAttributionDataType = '';
+  /**
+   * @var GoogleCloudMlV1SampledShapleyAttribution
+   */
+  public $sampledShapleyAttribution;
   protected $sampledShapleyAttributionType = GoogleCloudMlV1SampledShapleyAttribution::class;
   protected $sampledShapleyAttributionDataType = '';
+  /**
+   * @var GoogleCloudMlV1XraiAttribution
+   */
+  public $xraiAttribution;
   protected $xraiAttributionType = GoogleCloudMlV1XraiAttribution::class;
   protected $xraiAttributionDataType = '';
 

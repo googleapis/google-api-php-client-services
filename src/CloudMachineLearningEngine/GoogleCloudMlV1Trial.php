@@ -28,18 +28,30 @@ class GoogleCloudMlV1Trial extends \Google\Collection
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudMlV1Measurement
+   */
+  public $finalMeasurement;
   protected $finalMeasurementType = GoogleCloudMlV1Measurement::class;
   protected $finalMeasurementDataType = '';
   /**
    * @var string
    */
   public $infeasibleReason;
+  /**
+   * @var GoogleCloudMlV1Measurement[]
+   */
+  public $measurements;
   protected $measurementsType = GoogleCloudMlV1Measurement::class;
   protected $measurementsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudMlV1TrialParameter[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudMlV1TrialParameter::class;
   protected $parametersDataType = 'array';
   /**

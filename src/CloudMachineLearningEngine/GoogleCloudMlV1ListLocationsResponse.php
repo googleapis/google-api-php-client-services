@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ListLocationsResponse extends \Google\Collection
 {
   protected $collection_key = 'locations';
+  /**
+   * @var GoogleCloudMlV1Location[]
+   */
+  public $locations;
   protected $locationsType = GoogleCloudMlV1Location::class;
   protected $locationsDataType = 'array';
   /**

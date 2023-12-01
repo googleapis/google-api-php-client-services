@@ -19,6 +19,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1CompleteTrialRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudMlV1Measurement
+   */
+  public $finalMeasurement;
   protected $finalMeasurementType = GoogleCloudMlV1Measurement::class;
   protected $finalMeasurementDataType = '';
   /**

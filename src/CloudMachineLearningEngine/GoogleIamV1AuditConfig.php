@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleIamV1AuditConfig extends \Google\Collection
 {
   protected $collection_key = 'auditLogConfigs';
+  /**
+   * @var GoogleIamV1AuditLogConfig[]
+   */
+  public $auditLogConfigs;
   protected $auditLogConfigsType = GoogleIamV1AuditLogConfig::class;
   protected $auditLogConfigsDataType = 'array';
   /**

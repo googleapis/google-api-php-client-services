@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ListStudiesResponse extends \Google\Collection
 {
   protected $collection_key = 'studies';
+  /**
+   * @var GoogleCloudMlV1Study[]
+   */
+  public $studies;
   protected $studiesType = GoogleCloudMlV1Study::class;
   protected $studiesDataType = 'array';
 

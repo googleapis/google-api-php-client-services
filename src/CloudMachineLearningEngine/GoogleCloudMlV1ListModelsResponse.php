@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ListModelsResponse extends \Google\Collection
 {
   protected $collection_key = 'models';
+  /**
+   * @var GoogleCloudMlV1Model[]
+   */
+  public $models;
   protected $modelsType = GoogleCloudMlV1Model::class;
   protected $modelsDataType = 'array';
   /**

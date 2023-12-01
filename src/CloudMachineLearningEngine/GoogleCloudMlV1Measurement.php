@@ -24,6 +24,10 @@ class GoogleCloudMlV1Measurement extends \Google\Collection
    * @var string
    */
   public $elapsedTime;
+  /**
+   * @var GoogleCloudMlV1MeasurementMetric[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudMlV1MeasurementMetric::class;
   protected $metricsDataType = 'array';
   /**

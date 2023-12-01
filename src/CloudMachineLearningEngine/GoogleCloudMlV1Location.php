@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1Location extends \Google\Collection
 {
   protected $collection_key = 'capabilities';
+  /**
+   * @var GoogleCloudMlV1Capability[]
+   */
+  public $capabilities;
   protected $capabilitiesType = GoogleCloudMlV1Capability::class;
   protected $capabilitiesDataType = 'array';
   /**

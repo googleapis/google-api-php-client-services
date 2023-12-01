@@ -20,14 +20,26 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1HyperparameterOutput extends \Google\Collection
 {
   protected $collection_key = 'allMetrics';
+  /**
+   * @var GoogleCloudMlV1HyperparameterOutputHyperparameterMetric[]
+   */
+  public $allMetrics;
   protected $allMetricsType = GoogleCloudMlV1HyperparameterOutputHyperparameterMetric::class;
   protected $allMetricsDataType = 'array';
+  /**
+   * @var GoogleCloudMlV1BuiltInAlgorithmOutput
+   */
+  public $builtInAlgorithmOutput;
   protected $builtInAlgorithmOutputType = GoogleCloudMlV1BuiltInAlgorithmOutput::class;
   protected $builtInAlgorithmOutputDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudMlV1HyperparameterOutputHyperparameterMetric
+   */
+  public $finalMetric;
   protected $finalMetricType = GoogleCloudMlV1HyperparameterOutputHyperparameterMetric::class;
   protected $finalMetricDataType = '';
   /**

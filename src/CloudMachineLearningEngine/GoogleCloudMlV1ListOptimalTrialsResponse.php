@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ListOptimalTrialsResponse extends \Google\Collection
 {
   protected $collection_key = 'trials';
+  /**
+   * @var GoogleCloudMlV1Trial[]
+   */
+  public $trials;
   protected $trialsType = GoogleCloudMlV1Trial::class;
   protected $trialsDataType = 'array';
 

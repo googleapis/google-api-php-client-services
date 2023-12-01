@@ -28,8 +28,16 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
    * @var bool
    */
   public $enableWebAccess;
+  /**
+   * @var GoogleCloudMlV1EncryptionConfig
+   */
+  public $encryptionConfig;
   protected $encryptionConfigType = GoogleCloudMlV1EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
+  /**
+   * @var GoogleCloudMlV1ReplicaConfig
+   */
+  public $evaluatorConfig;
   protected $evaluatorConfigType = GoogleCloudMlV1ReplicaConfig::class;
   protected $evaluatorConfigDataType = '';
   /**
@@ -40,12 +48,20 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
    * @var string
    */
   public $evaluatorType;
+  /**
+   * @var GoogleCloudMlV1HyperparameterSpec
+   */
+  public $hyperparameters;
   protected $hyperparametersType = GoogleCloudMlV1HyperparameterSpec::class;
   protected $hyperparametersDataType = '';
   /**
    * @var string
    */
   public $jobDir;
+  /**
+   * @var GoogleCloudMlV1ReplicaConfig
+   */
+  public $masterConfig;
   protected $masterConfigType = GoogleCloudMlV1ReplicaConfig::class;
   protected $masterConfigDataType = '';
   /**
@@ -60,6 +76,10 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
    * @var string[]
    */
   public $packageUris;
+  /**
+   * @var GoogleCloudMlV1ReplicaConfig
+   */
+  public $parameterServerConfig;
   protected $parameterServerConfigType = GoogleCloudMlV1ReplicaConfig::class;
   protected $parameterServerConfigDataType = '';
   /**
@@ -90,6 +110,10 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
    * @var string
    */
   public $scaleTier;
+  /**
+   * @var GoogleCloudMlV1Scheduling
+   */
+  public $scheduling;
   protected $schedulingType = GoogleCloudMlV1Scheduling::class;
   protected $schedulingDataType = '';
   /**
@@ -100,6 +124,10 @@ class GoogleCloudMlV1TrainingInput extends \Google\Collection
    * @var bool
    */
   public $useChiefInTfConfig;
+  /**
+   * @var GoogleCloudMlV1ReplicaConfig
+   */
+  public $workerConfig;
   protected $workerConfigType = GoogleCloudMlV1ReplicaConfig::class;
   protected $workerConfigDataType = '';
   /**

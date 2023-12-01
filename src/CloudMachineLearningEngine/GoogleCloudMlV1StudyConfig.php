@@ -24,10 +24,22 @@ class GoogleCloudMlV1StudyConfig extends \Google\Collection
    * @var string
    */
   public $algorithm;
+  /**
+   * @var GoogleCloudMlV1AutomatedStoppingConfig
+   */
+  public $automatedStoppingConfig;
   protected $automatedStoppingConfigType = GoogleCloudMlV1AutomatedStoppingConfig::class;
   protected $automatedStoppingConfigDataType = '';
+  /**
+   * @var GoogleCloudMlV1StudyConfigMetricSpec[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudMlV1StudyConfigMetricSpec::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var GoogleCloudMlV1StudyConfigParameterSpec[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudMlV1StudyConfigParameterSpec::class;
   protected $parametersDataType = 'array';
 

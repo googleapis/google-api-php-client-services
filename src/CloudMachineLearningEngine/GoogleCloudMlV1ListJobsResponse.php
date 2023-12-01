@@ -20,6 +20,10 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
+  /**
+   * @var GoogleCloudMlV1Job[]
+   */
+  public $jobs;
   protected $jobsType = GoogleCloudMlV1Job::class;
   protected $jobsDataType = 'array';
   /**

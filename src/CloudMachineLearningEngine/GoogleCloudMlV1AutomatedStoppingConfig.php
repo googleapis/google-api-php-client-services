@@ -19,8 +19,16 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1AutomatedStoppingConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig
+   */
+  public $decayCurveStoppingConfig;
   protected $decayCurveStoppingConfigType = GoogleCloudMlV1AutomatedStoppingConfigDecayCurveAutomatedStoppingConfig::class;
   protected $decayCurveStoppingConfigDataType = '';
+  /**
+   * @var GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig
+   */
+  public $medianAutomatedStoppingConfig;
   protected $medianAutomatedStoppingConfigType = GoogleCloudMlV1AutomatedStoppingConfigMedianAutomatedStoppingConfig::class;
   protected $medianAutomatedStoppingConfigDataType = '';
 
