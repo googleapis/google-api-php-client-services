@@ -19,20 +19,36 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta1DocumentStyle extends \Google\Model
 {
+  /**
+   * @var GoogleTypeColor
+   */
+  public $backgroundColor;
   protected $backgroundColorType = GoogleTypeColor::class;
   protected $backgroundColorDataType = '';
+  /**
+   * @var GoogleTypeColor
+   */
+  public $color;
   protected $colorType = GoogleTypeColor::class;
   protected $colorDataType = '';
   /**
    * @var string
    */
   public $fontFamily;
+  /**
+   * @var GoogleCloudDocumentaiV1beta1DocumentStyleFontSize
+   */
+  public $fontSize;
   protected $fontSizeType = GoogleCloudDocumentaiV1beta1DocumentStyleFontSize::class;
   protected $fontSizeDataType = '';
   /**
    * @var string
    */
   public $fontWeight;
+  /**
+   * @var GoogleCloudDocumentaiV1beta1DocumentTextAnchor
+   */
+  public $textAnchor;
   protected $textAnchorType = GoogleCloudDocumentaiV1beta1DocumentTextAnchor::class;
   protected $textAnchorDataType = '';
   /**

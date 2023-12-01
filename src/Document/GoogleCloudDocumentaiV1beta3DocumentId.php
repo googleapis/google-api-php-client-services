@@ -19,10 +19,22 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta3DocumentId extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId
+   */
+  public $gcsManagedDocId;
   protected $gcsManagedDocIdType = GoogleCloudDocumentaiV1beta3DocumentIdGCSManagedDocumentId::class;
   protected $gcsManagedDocIdDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta3RevisionRef
+   */
+  public $revisionRef;
   protected $revisionRefType = GoogleCloudDocumentaiV1beta3RevisionRef::class;
   protected $revisionRefDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId
+   */
+  public $unmanagedDocId;
   protected $unmanagedDocIdType = GoogleCloudDocumentaiV1beta3DocumentIdUnmanagedDocumentId::class;
   protected $unmanagedDocIdDataType = '';
 

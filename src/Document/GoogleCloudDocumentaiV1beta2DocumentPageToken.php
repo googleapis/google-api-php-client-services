@@ -20,14 +20,34 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta2DocumentPageToken extends \Google\Collection
 {
   protected $collection_key = 'detectedLanguages';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreak
+   */
+  public $detectedBreak;
   protected $detectedBreakType = GoogleCloudDocumentaiV1beta2DocumentPageTokenDetectedBreak::class;
   protected $detectedBreakDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[]
+   */
+  public $detectedLanguages;
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageLayout
+   */
+  public $layout;
   protected $layoutType = GoogleCloudDocumentaiV1beta2DocumentPageLayout::class;
   protected $layoutDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentProvenance
+   */
+  public $provenance;
   protected $provenanceType = GoogleCloudDocumentaiV1beta2DocumentProvenance::class;
   protected $provenanceDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo
+   */
+  public $styleInfo;
   protected $styleInfoType = GoogleCloudDocumentaiV1beta2DocumentPageTokenStyleInfo::class;
   protected $styleInfoDataType = '';
 

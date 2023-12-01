@@ -24,30 +24,66 @@ class GoogleCloudDocumentaiV1beta2Document extends \Google\Collection
    * @var string
    */
   public $content;
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentEntity[]
+   */
+  public $entities;
   protected $entitiesType = GoogleCloudDocumentaiV1beta2DocumentEntity::class;
   protected $entitiesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentEntityRelation[]
+   */
+  public $entityRelations;
   protected $entityRelationsType = GoogleCloudDocumentaiV1beta2DocumentEntityRelation::class;
   protected $entityRelationsDataType = 'array';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentLabel[]
+   */
+  public $labels;
   protected $labelsType = GoogleCloudDocumentaiV1beta2DocumentLabel::class;
   protected $labelsDataType = 'array';
   /**
    * @var string
    */
   public $mimeType;
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPage[]
+   */
+  public $pages;
   protected $pagesType = GoogleCloudDocumentaiV1beta2DocumentPage::class;
   protected $pagesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentRevision[]
+   */
+  public $revisions;
   protected $revisionsType = GoogleCloudDocumentaiV1beta2DocumentRevision::class;
   protected $revisionsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentShardInfo
+   */
+  public $shardInfo;
   protected $shardInfoType = GoogleCloudDocumentaiV1beta2DocumentShardInfo::class;
   protected $shardInfoDataType = '';
   /**
    * @var string
    */
   public $text;
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentTextChange[]
+   */
+  public $textChanges;
   protected $textChangesType = GoogleCloudDocumentaiV1beta2DocumentTextChange::class;
   protected $textChangesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentStyle[]
+   */
+  public $textStyles;
   protected $textStylesType = GoogleCloudDocumentaiV1beta2DocumentStyle::class;
   protected $textStylesDataType = 'array';
   /**

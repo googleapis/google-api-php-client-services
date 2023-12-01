@@ -20,10 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta3ImportDocumentsMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualImportStatuses';
+  /**
+   * @var GoogleCloudDocumentaiV1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiV1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationResult[]
+   */
+  public $importConfigValidationResults;
   protected $importConfigValidationResultsType = GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataImportConfigValidationResult::class;
   protected $importConfigValidationResultsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus[]
+   */
+  public $individualImportStatuses;
   protected $individualImportStatusesType = GoogleCloudDocumentaiV1beta3ImportDocumentsMetadataIndividualImportStatus::class;
   protected $individualImportStatusesDataType = 'array';
   /**

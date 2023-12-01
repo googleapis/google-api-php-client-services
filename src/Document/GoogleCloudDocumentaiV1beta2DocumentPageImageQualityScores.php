@@ -20,6 +20,10 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores extends \Google\Collection
 {
   protected $collection_key = 'detectedDefects';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedDefect[]
+   */
+  public $detectedDefects;
   protected $detectedDefectsType = GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScoresDetectedDefect::class;
   protected $detectedDefectsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1beta3GcsPrefix
+   */
+  public $gcsPrefix;
   protected $gcsPrefixType = GoogleCloudDocumentaiV1beta3GcsPrefix::class;
   protected $gcsPrefixDataType = '';
 

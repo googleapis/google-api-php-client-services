@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta1InputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1beta1GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudDocumentaiV1beta1GcsSource::class;
   protected $gcsSourceDataType = '';
   /**

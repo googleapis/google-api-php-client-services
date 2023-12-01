@@ -20,40 +20,104 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta2DocumentPage extends \Google\Collection
 {
   protected $collection_key = 'visualElements';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageBlock[]
+   */
+  public $blocks;
   protected $blocksType = GoogleCloudDocumentaiV1beta2DocumentPageBlock::class;
   protected $blocksDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode[]
+   */
+  public $detectedBarcodes;
   protected $detectedBarcodesType = GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode::class;
   protected $detectedBarcodesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage[]
+   */
+  public $detectedLanguages;
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1beta2DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageDimension
+   */
+  public $dimension;
   protected $dimensionType = GoogleCloudDocumentaiV1beta2DocumentPageDimension::class;
   protected $dimensionDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageFormField[]
+   */
+  public $formFields;
   protected $formFieldsType = GoogleCloudDocumentaiV1beta2DocumentPageFormField::class;
   protected $formFieldsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDocumentaiV1beta2DocumentPageImage::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores
+   */
+  public $imageQualityScores;
   protected $imageQualityScoresType = GoogleCloudDocumentaiV1beta2DocumentPageImageQualityScores::class;
   protected $imageQualityScoresDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageLayout
+   */
+  public $layout;
   protected $layoutType = GoogleCloudDocumentaiV1beta2DocumentPageLayout::class;
   protected $layoutDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageLine[]
+   */
+  public $lines;
   protected $linesType = GoogleCloudDocumentaiV1beta2DocumentPageLine::class;
   protected $linesDataType = 'array';
   /**
    * @var int
    */
   public $pageNumber;
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageParagraph[]
+   */
+  public $paragraphs;
   protected $paragraphsType = GoogleCloudDocumentaiV1beta2DocumentPageParagraph::class;
   protected $paragraphsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentProvenance
+   */
+  public $provenance;
   protected $provenanceType = GoogleCloudDocumentaiV1beta2DocumentProvenance::class;
   protected $provenanceDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageSymbol[]
+   */
+  public $symbols;
   protected $symbolsType = GoogleCloudDocumentaiV1beta2DocumentPageSymbol::class;
   protected $symbolsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageTable[]
+   */
+  public $tables;
   protected $tablesType = GoogleCloudDocumentaiV1beta2DocumentPageTable::class;
   protected $tablesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageToken[]
+   */
+  public $tokens;
   protected $tokensType = GoogleCloudDocumentaiV1beta2DocumentPageToken::class;
   protected $tokensDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageMatrix[]
+   */
+  public $transforms;
   protected $transformsType = GoogleCloudDocumentaiV1beta2DocumentPageMatrix::class;
   protected $transformsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageVisualElement[]
+   */
+  public $visualElements;
   protected $visualElementsType = GoogleCloudDocumentaiV1beta2DocumentPageVisualElement::class;
   protected $visualElementsDataType = 'array';
 

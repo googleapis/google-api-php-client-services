@@ -20,8 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta2BoundingPoly extends \Google\Collection
 {
   protected $collection_key = 'vertices';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2NormalizedVertex[]
+   */
+  public $normalizedVertices;
   protected $normalizedVerticesType = GoogleCloudDocumentaiV1beta2NormalizedVertex::class;
   protected $normalizedVerticesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2Vertex[]
+   */
+  public $vertices;
   protected $verticesType = GoogleCloudDocumentaiV1beta2Vertex::class;
   protected $verticesDataType = 'array';
 

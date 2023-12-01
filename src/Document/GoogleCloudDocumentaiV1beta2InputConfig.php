@@ -23,6 +23,10 @@ class GoogleCloudDocumentaiV1beta2InputConfig extends \Google\Model
    * @var string
    */
   public $contents;
+  /**
+   * @var GoogleCloudDocumentaiV1beta2GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudDocumentaiV1beta2GcsSource::class;
   protected $gcsSourceDataType = '';
   /**

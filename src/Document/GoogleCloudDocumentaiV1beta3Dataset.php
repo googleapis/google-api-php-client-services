@@ -19,20 +19,36 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta3Dataset extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig
+   */
+  public $documentWarehouseConfig;
   protected $documentWarehouseConfigType = GoogleCloudDocumentaiV1beta3DatasetDocumentWarehouseConfig::class;
   protected $documentWarehouseConfigDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig
+   */
+  public $gcsManagedConfig;
   protected $gcsManagedConfigType = GoogleCloudDocumentaiV1beta3DatasetGCSManagedConfig::class;
   protected $gcsManagedConfigDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig
+   */
+  public $spannerIndexingConfig;
   protected $spannerIndexingConfigType = GoogleCloudDocumentaiV1beta3DatasetSpannerIndexingConfig::class;
   protected $spannerIndexingConfigDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudDocumentaiV1beta3DatasetUnmanagedDatasetConfig
+   */
+  public $unmanagedDatasetConfig;
   protected $unmanagedDatasetConfigType = GoogleCloudDocumentaiV1beta3DatasetUnmanagedDatasetConfig::class;
   protected $unmanagedDatasetConfigDataType = '';
 

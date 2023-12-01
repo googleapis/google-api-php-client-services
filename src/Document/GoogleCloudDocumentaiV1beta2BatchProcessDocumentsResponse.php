@@ -20,6 +20,10 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1beta2BatchProcessDocumentsResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2ProcessDocumentResponse[]
+   */
+  public $responses;
   protected $responsesType = GoogleCloudDocumentaiV1beta2ProcessDocumentResponse::class;
   protected $responsesDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta1OutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1beta1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudDocumentaiV1beta1GcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**

@@ -24,6 +24,10 @@ class GoogleCloudDocumentaiV1beta2DocumentProvenance extends \Google\Collection
    * @var int
    */
   public $id;
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentProvenanceParent[]
+   */
+  public $parents;
   protected $parentsType = GoogleCloudDocumentaiV1beta2DocumentProvenanceParent::class;
   protected $parentsDataType = 'array';
   /**

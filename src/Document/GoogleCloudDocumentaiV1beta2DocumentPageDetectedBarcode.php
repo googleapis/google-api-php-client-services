@@ -19,8 +19,16 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta2DocumentPageDetectedBarcode extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1beta2Barcode
+   */
+  public $barcode;
   protected $barcodeType = GoogleCloudDocumentaiV1beta2Barcode::class;
   protected $barcodeDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1beta2DocumentPageLayout
+   */
+  public $layout;
   protected $layoutType = GoogleCloudDocumentaiV1beta2DocumentPageLayout::class;
   protected $layoutDataType = '';
 
