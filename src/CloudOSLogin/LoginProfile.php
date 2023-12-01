@@ -24,8 +24,16 @@ class LoginProfile extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var PosixAccount[]
+   */
+  public $posixAccounts;
   protected $posixAccountsType = PosixAccount::class;
   protected $posixAccountsDataType = 'array';
+  /**
+   * @var SshPublicKey[]
+   */
+  public $sshPublicKeys;
   protected $sshPublicKeysType = SshPublicKey::class;
   protected $sshPublicKeysDataType = 'map';
 
