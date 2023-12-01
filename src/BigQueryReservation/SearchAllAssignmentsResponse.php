@@ -20,6 +20,10 @@ namespace Google\Service\BigQueryReservation;
 class SearchAllAssignmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'assignments';
+  /**
+   * @var Assignment[]
+   */
+  public $assignments;
   protected $assignmentsType = Assignment::class;
   protected $assignmentsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\BigQueryReservation;
 class ListCapacityCommitmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'capacityCommitments';
+  /**
+   * @var CapacityCommitment[]
+   */
+  public $capacityCommitments;
   protected $capacityCommitmentsType = CapacityCommitment::class;
   protected $capacityCommitmentsDataType = 'array';
   /**

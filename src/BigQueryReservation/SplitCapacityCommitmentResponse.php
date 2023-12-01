@@ -19,8 +19,16 @@ namespace Google\Service\BigQueryReservation;
 
 class SplitCapacityCommitmentResponse extends \Google\Model
 {
+  /**
+   * @var CapacityCommitment
+   */
+  public $first;
   protected $firstType = CapacityCommitment::class;
   protected $firstDataType = '';
+  /**
+   * @var CapacityCommitment
+   */
+  public $second;
   protected $secondType = CapacityCommitment::class;
   protected $secondDataType = '';
 

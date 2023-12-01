@@ -31,6 +31,10 @@ class CapacityCommitment extends \Google\Model
    * @var string
    */
   public $edition;
+  /**
+   * @var Status
+   */
+  public $failureStatus;
   protected $failureStatusType = Status::class;
   protected $failureStatusDataType = '';
   /**
