@@ -20,18 +20,30 @@ namespace Google\Service\CloudDomains;
 class TransferDomainRequest extends \Google\Collection
 {
   protected $collection_key = 'contactNotices';
+  /**
+   * @var AuthorizationCode
+   */
+  public $authorizationCode;
   protected $authorizationCodeType = AuthorizationCode::class;
   protected $authorizationCodeDataType = '';
   /**
    * @var string[]
    */
   public $contactNotices;
+  /**
+   * @var Registration
+   */
+  public $registration;
   protected $registrationType = Registration::class;
   protected $registrationDataType = '';
   /**
    * @var bool
    */
   public $validateOnly;
+  /**
+   * @var Money
+   */
+  public $yearlyPrice;
   protected $yearlyPriceType = Money::class;
   protected $yearlyPriceDataType = '';
 

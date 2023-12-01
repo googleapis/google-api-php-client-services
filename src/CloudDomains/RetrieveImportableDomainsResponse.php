@@ -20,6 +20,10 @@ namespace Google\Service\CloudDomains;
 class RetrieveImportableDomainsResponse extends \Google\Collection
 {
   protected $collection_key = 'domains';
+  /**
+   * @var Domain[]
+   */
+  public $domains;
   protected $domainsType = Domain::class;
   protected $domainsDataType = 'array';
   /**

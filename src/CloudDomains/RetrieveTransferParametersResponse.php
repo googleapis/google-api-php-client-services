@@ -19,6 +19,10 @@ namespace Google\Service\CloudDomains;
 
 class RetrieveTransferParametersResponse extends \Google\Model
 {
+  /**
+   * @var TransferParameters
+   */
+  public $transferParameters;
   protected $transferParametersType = TransferParameters::class;
   protected $transferParametersDataType = '';
 

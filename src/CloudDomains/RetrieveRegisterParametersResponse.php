@@ -19,6 +19,10 @@ namespace Google\Service\CloudDomains;
 
 class RetrieveRegisterParametersResponse extends \Google\Model
 {
+  /**
+   * @var RegisterParameters
+   */
+  public $registerParameters;
   protected $registerParametersType = RegisterParameters::class;
   protected $registerParametersDataType = '';
 

@@ -27,6 +27,10 @@ class Domain extends \Google\Model
    * @var string
    */
   public $resourceState;
+  /**
+   * @var Money
+   */
+  public $yearlyPrice;
   protected $yearlyPriceType = Money::class;
   protected $yearlyPriceDataType = '';
 

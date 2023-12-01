@@ -28,12 +28,20 @@ class RegisterDomainRequest extends \Google\Collection
    * @var string[]
    */
   public $domainNotices;
+  /**
+   * @var Registration
+   */
+  public $registration;
   protected $registrationType = Registration::class;
   protected $registrationDataType = '';
   /**
    * @var bool
    */
   public $validateOnly;
+  /**
+   * @var Money
+   */
+  public $yearlyPrice;
   protected $yearlyPriceType = Money::class;
   protected $yearlyPriceDataType = '';
 

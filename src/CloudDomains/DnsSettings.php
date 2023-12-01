@@ -20,10 +20,22 @@ namespace Google\Service\CloudDomains;
 class DnsSettings extends \Google\Collection
 {
   protected $collection_key = 'glueRecords';
+  /**
+   * @var CustomDns
+   */
+  public $customDns;
   protected $customDnsType = CustomDns::class;
   protected $customDnsDataType = '';
+  /**
+   * @var GlueRecord[]
+   */
+  public $glueRecords;
   protected $glueRecordsType = GlueRecord::class;
   protected $glueRecordsDataType = 'array';
+  /**
+   * @var GoogleDomainsDns
+   */
+  public $googleDomainsDns;
   protected $googleDomainsDnsType = GoogleDomainsDns::class;
   protected $googleDomainsDnsDataType = '';
 

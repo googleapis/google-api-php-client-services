@@ -20,6 +20,10 @@ namespace Google\Service\CloudDomains;
 class CustomDns extends \Google\Collection
 {
   protected $collection_key = 'nameServers';
+  /**
+   * @var DsRecord[]
+   */
+  public $dsRecords;
   protected $dsRecordsType = DsRecord::class;
   protected $dsRecordsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\CloudDomains;
 
 class ConfigureDnsSettingsRequest extends \Google\Model
 {
+  /**
+   * @var DnsSettings
+   */
+  public $dnsSettings;
   protected $dnsSettingsType = DnsSettings::class;
   protected $dnsSettingsDataType = '';
   /**
