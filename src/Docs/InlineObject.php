@@ -20,6 +20,10 @@ namespace Google\Service\Docs;
 class InlineObject extends \Google\Collection
 {
   protected $collection_key = 'suggestedDeletionIds';
+  /**
+   * @var InlineObjectProperties
+   */
+  public $inlineObjectProperties;
   protected $inlineObjectPropertiesType = InlineObjectProperties::class;
   protected $inlineObjectPropertiesDataType = '';
   /**
@@ -30,6 +34,10 @@ class InlineObject extends \Google\Collection
    * @var string[]
    */
   public $suggestedDeletionIds;
+  /**
+   * @var SuggestedInlineObjectProperties[]
+   */
+  public $suggestedInlineObjectPropertiesChanges;
   protected $suggestedInlineObjectPropertiesChangesType = SuggestedInlineObjectProperties::class;
   protected $suggestedInlineObjectPropertiesChangesDataType = 'map';
   /**

@@ -23,22 +23,58 @@ class EmbeddedObject extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var EmbeddedDrawingProperties
+   */
+  public $embeddedDrawingProperties;
   protected $embeddedDrawingPropertiesType = EmbeddedDrawingProperties::class;
   protected $embeddedDrawingPropertiesDataType = '';
+  /**
+   * @var EmbeddedObjectBorder
+   */
+  public $embeddedObjectBorder;
   protected $embeddedObjectBorderType = EmbeddedObjectBorder::class;
   protected $embeddedObjectBorderDataType = '';
+  /**
+   * @var ImageProperties
+   */
+  public $imageProperties;
   protected $imagePropertiesType = ImageProperties::class;
   protected $imagePropertiesDataType = '';
+  /**
+   * @var LinkedContentReference
+   */
+  public $linkedContentReference;
   protected $linkedContentReferenceType = LinkedContentReference::class;
   protected $linkedContentReferenceDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $marginBottom;
   protected $marginBottomType = Dimension::class;
   protected $marginBottomDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $marginLeft;
   protected $marginLeftType = Dimension::class;
   protected $marginLeftDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $marginRight;
   protected $marginRightType = Dimension::class;
   protected $marginRightDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $marginTop;
   protected $marginTopType = Dimension::class;
   protected $marginTopDataType = '';
+  /**
+   * @var Size
+   */
+  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
   /**

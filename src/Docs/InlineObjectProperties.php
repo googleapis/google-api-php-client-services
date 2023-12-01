@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class InlineObjectProperties extends \Google\Model
 {
+  /**
+   * @var EmbeddedObject
+   */
+  public $embeddedObject;
   protected $embeddedObjectType = EmbeddedObject::class;
   protected $embeddedObjectDataType = '';
 

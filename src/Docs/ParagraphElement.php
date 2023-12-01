@@ -19,32 +19,72 @@ namespace Google\Service\Docs;
 
 class ParagraphElement extends \Google\Model
 {
+  /**
+   * @var AutoText
+   */
+  public $autoText;
   protected $autoTextType = AutoText::class;
   protected $autoTextDataType = '';
+  /**
+   * @var ColumnBreak
+   */
+  public $columnBreak;
   protected $columnBreakType = ColumnBreak::class;
   protected $columnBreakDataType = '';
   /**
    * @var int
    */
   public $endIndex;
+  /**
+   * @var Equation
+   */
+  public $equation;
   protected $equationType = Equation::class;
   protected $equationDataType = '';
+  /**
+   * @var FootnoteReference
+   */
+  public $footnoteReference;
   protected $footnoteReferenceType = FootnoteReference::class;
   protected $footnoteReferenceDataType = '';
+  /**
+   * @var HorizontalRule
+   */
+  public $horizontalRule;
   protected $horizontalRuleType = HorizontalRule::class;
   protected $horizontalRuleDataType = '';
+  /**
+   * @var InlineObjectElement
+   */
+  public $inlineObjectElement;
   protected $inlineObjectElementType = InlineObjectElement::class;
   protected $inlineObjectElementDataType = '';
+  /**
+   * @var PageBreak
+   */
+  public $pageBreak;
   protected $pageBreakType = PageBreak::class;
   protected $pageBreakDataType = '';
+  /**
+   * @var Person
+   */
+  public $person;
   protected $personType = Person::class;
   protected $personDataType = '';
+  /**
+   * @var RichLink
+   */
+  public $richLink;
   protected $richLinkType = RichLink::class;
   protected $richLinkDataType = '';
   /**
    * @var int
    */
   public $startIndex;
+  /**
+   * @var TextRun
+   */
+  public $textRun;
   protected $textRunType = TextRun::class;
   protected $textRunDataType = '';
 

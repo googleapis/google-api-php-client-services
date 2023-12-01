@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class InlineObjectPropertiesSuggestionState extends \Google\Model
 {
+  /**
+   * @var EmbeddedObjectSuggestionState
+   */
+  public $embeddedObjectSuggestionState;
   protected $embeddedObjectSuggestionStateType = EmbeddedObjectSuggestionState::class;
   protected $embeddedObjectSuggestionStateDataType = '';
 

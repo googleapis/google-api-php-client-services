@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedBullet extends \Google\Model
 {
+  /**
+   * @var Bullet
+   */
+  public $bullet;
   protected $bulletType = Bullet::class;
   protected $bulletDataType = '';
+  /**
+   * @var BulletSuggestionState
+   */
+  public $bulletSuggestionState;
   protected $bulletSuggestionStateType = BulletSuggestionState::class;
   protected $bulletSuggestionStateDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class DeleteTableColumnRequest extends \Google\Model
 {
+  /**
+   * @var TableCellLocation
+   */
+  public $tableCellLocation;
   protected $tableCellLocationType = TableCellLocation::class;
   protected $tableCellLocationDataType = '';
 

@@ -19,70 +19,202 @@ namespace Google\Service\Docs;
 
 class Request extends \Google\Model
 {
+  /**
+   * @var CreateFooterRequest
+   */
+  public $createFooter;
   protected $createFooterType = CreateFooterRequest::class;
   protected $createFooterDataType = '';
+  /**
+   * @var CreateFootnoteRequest
+   */
+  public $createFootnote;
   protected $createFootnoteType = CreateFootnoteRequest::class;
   protected $createFootnoteDataType = '';
+  /**
+   * @var CreateHeaderRequest
+   */
+  public $createHeader;
   protected $createHeaderType = CreateHeaderRequest::class;
   protected $createHeaderDataType = '';
+  /**
+   * @var CreateNamedRangeRequest
+   */
+  public $createNamedRange;
   protected $createNamedRangeType = CreateNamedRangeRequest::class;
   protected $createNamedRangeDataType = '';
+  /**
+   * @var CreateParagraphBulletsRequest
+   */
+  public $createParagraphBullets;
   protected $createParagraphBulletsType = CreateParagraphBulletsRequest::class;
   protected $createParagraphBulletsDataType = '';
+  /**
+   * @var DeleteContentRangeRequest
+   */
+  public $deleteContentRange;
   protected $deleteContentRangeType = DeleteContentRangeRequest::class;
   protected $deleteContentRangeDataType = '';
+  /**
+   * @var DeleteFooterRequest
+   */
+  public $deleteFooter;
   protected $deleteFooterType = DeleteFooterRequest::class;
   protected $deleteFooterDataType = '';
+  /**
+   * @var DeleteHeaderRequest
+   */
+  public $deleteHeader;
   protected $deleteHeaderType = DeleteHeaderRequest::class;
   protected $deleteHeaderDataType = '';
+  /**
+   * @var DeleteNamedRangeRequest
+   */
+  public $deleteNamedRange;
   protected $deleteNamedRangeType = DeleteNamedRangeRequest::class;
   protected $deleteNamedRangeDataType = '';
+  /**
+   * @var DeleteParagraphBulletsRequest
+   */
+  public $deleteParagraphBullets;
   protected $deleteParagraphBulletsType = DeleteParagraphBulletsRequest::class;
   protected $deleteParagraphBulletsDataType = '';
+  /**
+   * @var DeletePositionedObjectRequest
+   */
+  public $deletePositionedObject;
   protected $deletePositionedObjectType = DeletePositionedObjectRequest::class;
   protected $deletePositionedObjectDataType = '';
+  /**
+   * @var DeleteTableColumnRequest
+   */
+  public $deleteTableColumn;
   protected $deleteTableColumnType = DeleteTableColumnRequest::class;
   protected $deleteTableColumnDataType = '';
+  /**
+   * @var DeleteTableRowRequest
+   */
+  public $deleteTableRow;
   protected $deleteTableRowType = DeleteTableRowRequest::class;
   protected $deleteTableRowDataType = '';
+  /**
+   * @var InsertInlineImageRequest
+   */
+  public $insertInlineImage;
   protected $insertInlineImageType = InsertInlineImageRequest::class;
   protected $insertInlineImageDataType = '';
+  /**
+   * @var InsertPageBreakRequest
+   */
+  public $insertPageBreak;
   protected $insertPageBreakType = InsertPageBreakRequest::class;
   protected $insertPageBreakDataType = '';
+  /**
+   * @var InsertSectionBreakRequest
+   */
+  public $insertSectionBreak;
   protected $insertSectionBreakType = InsertSectionBreakRequest::class;
   protected $insertSectionBreakDataType = '';
+  /**
+   * @var InsertTableRequest
+   */
+  public $insertTable;
   protected $insertTableType = InsertTableRequest::class;
   protected $insertTableDataType = '';
+  /**
+   * @var InsertTableColumnRequest
+   */
+  public $insertTableColumn;
   protected $insertTableColumnType = InsertTableColumnRequest::class;
   protected $insertTableColumnDataType = '';
+  /**
+   * @var InsertTableRowRequest
+   */
+  public $insertTableRow;
   protected $insertTableRowType = InsertTableRowRequest::class;
   protected $insertTableRowDataType = '';
+  /**
+   * @var InsertTextRequest
+   */
+  public $insertText;
   protected $insertTextType = InsertTextRequest::class;
   protected $insertTextDataType = '';
+  /**
+   * @var MergeTableCellsRequest
+   */
+  public $mergeTableCells;
   protected $mergeTableCellsType = MergeTableCellsRequest::class;
   protected $mergeTableCellsDataType = '';
+  /**
+   * @var PinTableHeaderRowsRequest
+   */
+  public $pinTableHeaderRows;
   protected $pinTableHeaderRowsType = PinTableHeaderRowsRequest::class;
   protected $pinTableHeaderRowsDataType = '';
+  /**
+   * @var ReplaceAllTextRequest
+   */
+  public $replaceAllText;
   protected $replaceAllTextType = ReplaceAllTextRequest::class;
   protected $replaceAllTextDataType = '';
+  /**
+   * @var ReplaceImageRequest
+   */
+  public $replaceImage;
   protected $replaceImageType = ReplaceImageRequest::class;
   protected $replaceImageDataType = '';
+  /**
+   * @var ReplaceNamedRangeContentRequest
+   */
+  public $replaceNamedRangeContent;
   protected $replaceNamedRangeContentType = ReplaceNamedRangeContentRequest::class;
   protected $replaceNamedRangeContentDataType = '';
+  /**
+   * @var UnmergeTableCellsRequest
+   */
+  public $unmergeTableCells;
   protected $unmergeTableCellsType = UnmergeTableCellsRequest::class;
   protected $unmergeTableCellsDataType = '';
+  /**
+   * @var UpdateDocumentStyleRequest
+   */
+  public $updateDocumentStyle;
   protected $updateDocumentStyleType = UpdateDocumentStyleRequest::class;
   protected $updateDocumentStyleDataType = '';
+  /**
+   * @var UpdateParagraphStyleRequest
+   */
+  public $updateParagraphStyle;
   protected $updateParagraphStyleType = UpdateParagraphStyleRequest::class;
   protected $updateParagraphStyleDataType = '';
+  /**
+   * @var UpdateSectionStyleRequest
+   */
+  public $updateSectionStyle;
   protected $updateSectionStyleType = UpdateSectionStyleRequest::class;
   protected $updateSectionStyleDataType = '';
+  /**
+   * @var UpdateTableCellStyleRequest
+   */
+  public $updateTableCellStyle;
   protected $updateTableCellStyleType = UpdateTableCellStyleRequest::class;
   protected $updateTableCellStyleDataType = '';
+  /**
+   * @var UpdateTableColumnPropertiesRequest
+   */
+  public $updateTableColumnProperties;
   protected $updateTableColumnPropertiesType = UpdateTableColumnPropertiesRequest::class;
   protected $updateTableColumnPropertiesDataType = '';
+  /**
+   * @var UpdateTableRowStyleRequest
+   */
+  public $updateTableRowStyle;
   protected $updateTableRowStyleType = UpdateTableRowStyleRequest::class;
   protected $updateTableRowStyleDataType = '';
+  /**
+   * @var UpdateTextStyleRequest
+   */
+  public $updateTextStyle;
   protected $updateTextStyleType = UpdateTextStyleRequest::class;
   protected $updateTextStyleDataType = '';
 

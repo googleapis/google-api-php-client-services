@@ -19,12 +19,20 @@ namespace Google\Service\Docs;
 
 class TableCellBorder extends \Google\Model
 {
+  /**
+   * @var OptionalColor
+   */
+  public $color;
   protected $colorType = OptionalColor::class;
   protected $colorDataType = '';
   /**
    * @var string
    */
   public $dashStyle;
+  /**
+   * @var Dimension
+   */
+  public $width;
   protected $widthType = Dimension::class;
   protected $widthDataType = '';
 

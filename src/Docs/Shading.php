@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class Shading extends \Google\Model
 {
+  /**
+   * @var OptionalColor
+   */
+  public $backgroundColor;
   protected $backgroundColorType = OptionalColor::class;
   protected $backgroundColorDataType = '';
 

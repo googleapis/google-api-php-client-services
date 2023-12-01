@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedTableCellStyle extends \Google\Model
 {
+  /**
+   * @var TableCellStyle
+   */
+  public $tableCellStyle;
   protected $tableCellStyleType = TableCellStyle::class;
   protected $tableCellStyleDataType = '';
+  /**
+   * @var TableCellStyleSuggestionState
+   */
+  public $tableCellStyleSuggestionState;
   protected $tableCellStyleSuggestionStateType = TableCellStyleSuggestionState::class;
   protected $tableCellStyleSuggestionStateDataType = '';
 

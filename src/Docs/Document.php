@@ -19,36 +19,84 @@ namespace Google\Service\Docs;
 
 class Document extends \Google\Model
 {
+  /**
+   * @var Body
+   */
+  public $body;
   protected $bodyType = Body::class;
   protected $bodyDataType = '';
   /**
    * @var string
    */
   public $documentId;
+  /**
+   * @var DocumentStyle
+   */
+  public $documentStyle;
   protected $documentStyleType = DocumentStyle::class;
   protected $documentStyleDataType = '';
+  /**
+   * @var Footer[]
+   */
+  public $footers;
   protected $footersType = Footer::class;
   protected $footersDataType = 'map';
+  /**
+   * @var Footnote[]
+   */
+  public $footnotes;
   protected $footnotesType = Footnote::class;
   protected $footnotesDataType = 'map';
+  /**
+   * @var Header[]
+   */
+  public $headers;
   protected $headersType = Header::class;
   protected $headersDataType = 'map';
+  /**
+   * @var InlineObject[]
+   */
+  public $inlineObjects;
   protected $inlineObjectsType = InlineObject::class;
   protected $inlineObjectsDataType = 'map';
+  /**
+   * @var DocsList[]
+   */
+  public $lists;
   protected $listsType = DocsList::class;
   protected $listsDataType = 'map';
+  /**
+   * @var NamedRanges[]
+   */
+  public $namedRanges;
   protected $namedRangesType = NamedRanges::class;
   protected $namedRangesDataType = 'map';
+  /**
+   * @var NamedStyles
+   */
+  public $namedStyles;
   protected $namedStylesType = NamedStyles::class;
   protected $namedStylesDataType = '';
+  /**
+   * @var PositionedObject[]
+   */
+  public $positionedObjects;
   protected $positionedObjectsType = PositionedObject::class;
   protected $positionedObjectsDataType = 'map';
   /**
    * @var string
    */
   public $revisionId;
+  /**
+   * @var SuggestedDocumentStyle[]
+   */
+  public $suggestedDocumentStyleChanges;
   protected $suggestedDocumentStyleChangesType = SuggestedDocumentStyle::class;
   protected $suggestedDocumentStyleChangesDataType = 'map';
+  /**
+   * @var SuggestedNamedStyles[]
+   */
+  public $suggestedNamedStylesChanges;
   protected $suggestedNamedStylesChangesType = SuggestedNamedStyles::class;
   protected $suggestedNamedStylesChangesDataType = 'map';
   /**

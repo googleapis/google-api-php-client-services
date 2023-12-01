@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedNamedStyles extends \Google\Model
 {
+  /**
+   * @var NamedStyles
+   */
+  public $namedStyles;
   protected $namedStylesType = NamedStyles::class;
   protected $namedStylesDataType = '';
+  /**
+   * @var NamedStylesSuggestionState
+   */
+  public $namedStylesSuggestionState;
   protected $namedStylesSuggestionStateType = NamedStylesSuggestionState::class;
   protected $namedStylesSuggestionStateDataType = '';
 

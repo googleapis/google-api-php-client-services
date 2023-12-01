@@ -36,10 +36,22 @@ class TableRow extends \Google\Collection
    * @var string[]
    */
   public $suggestedInsertionIds;
+  /**
+   * @var SuggestedTableRowStyle[]
+   */
+  public $suggestedTableRowStyleChanges;
   protected $suggestedTableRowStyleChangesType = SuggestedTableRowStyle::class;
   protected $suggestedTableRowStyleChangesDataType = 'map';
+  /**
+   * @var TableCell[]
+   */
+  public $tableCells;
   protected $tableCellsType = TableCell::class;
   protected $tableCellsDataType = 'array';
+  /**
+   * @var TableRowStyle
+   */
+  public $tableRowStyle;
   protected $tableRowStyleType = TableRowStyle::class;
   protected $tableRowStyleDataType = '';
 

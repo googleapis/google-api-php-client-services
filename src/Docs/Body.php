@@ -20,6 +20,10 @@ namespace Google\Service\Docs;
 class Body extends \Google\Collection
 {
   protected $collection_key = 'content';
+  /**
+   * @var StructuralElement[]
+   */
+  public $content;
   protected $contentType = StructuralElement::class;
   protected $contentDataType = 'array';
 

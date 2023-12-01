@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedListProperties extends \Google\Model
 {
+  /**
+   * @var ListProperties
+   */
+  public $listProperties;
   protected $listPropertiesType = ListProperties::class;
   protected $listPropertiesDataType = '';
+  /**
+   * @var ListPropertiesSuggestionState
+   */
+  public $listPropertiesSuggestionState;
   protected $listPropertiesSuggestionStateType = ListPropertiesSuggestionState::class;
   protected $listPropertiesSuggestionStateDataType = '';
 

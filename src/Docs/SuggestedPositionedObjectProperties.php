@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedPositionedObjectProperties extends \Google\Model
 {
+  /**
+   * @var PositionedObjectProperties
+   */
+  public $positionedObjectProperties;
   protected $positionedObjectPropertiesType = PositionedObjectProperties::class;
   protected $positionedObjectPropertiesDataType = '';
+  /**
+   * @var PositionedObjectPropertiesSuggestionState
+   */
+  public $positionedObjectPropertiesSuggestionState;
   protected $positionedObjectPropertiesSuggestionStateType = PositionedObjectPropertiesSuggestionState::class;
   protected $positionedObjectPropertiesSuggestionStateDataType = '';
 

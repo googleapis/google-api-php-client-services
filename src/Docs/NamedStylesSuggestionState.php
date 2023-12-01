@@ -20,6 +20,10 @@ namespace Google\Service\Docs;
 class NamedStylesSuggestionState extends \Google\Collection
 {
   protected $collection_key = 'stylesSuggestionStates';
+  /**
+   * @var NamedStyleSuggestionState[]
+   */
+  public $stylesSuggestionStates;
   protected $stylesSuggestionStatesType = NamedStyleSuggestionState::class;
   protected $stylesSuggestionStatesDataType = 'array';
 

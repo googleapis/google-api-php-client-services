@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class Background extends \Google\Model
 {
+  /**
+   * @var OptionalColor
+   */
+  public $color;
   protected $colorType = OptionalColor::class;
   protected $colorDataType = '';
 

@@ -23,8 +23,16 @@ class InsertTableRequest extends \Google\Model
    * @var int
    */
   public $columns;
+  /**
+   * @var EndOfSegmentLocation
+   */
+  public $endOfSegmentLocation;
   protected $endOfSegmentLocationType = EndOfSegmentLocation::class;
   protected $endOfSegmentLocationDataType = '';
+  /**
+   * @var Location
+   */
+  public $location;
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**

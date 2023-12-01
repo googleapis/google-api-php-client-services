@@ -28,6 +28,10 @@ class NamedRange extends \Google\Collection
    * @var string
    */
   public $namedRangeId;
+  /**
+   * @var Range[]
+   */
+  public $ranges;
   protected $rangesType = Range::class;
   protected $rangesDataType = 'array';
 

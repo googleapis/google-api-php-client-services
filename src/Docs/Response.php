@@ -19,18 +19,46 @@ namespace Google\Service\Docs;
 
 class Response extends \Google\Model
 {
+  /**
+   * @var CreateFooterResponse
+   */
+  public $createFooter;
   protected $createFooterType = CreateFooterResponse::class;
   protected $createFooterDataType = '';
+  /**
+   * @var CreateFootnoteResponse
+   */
+  public $createFootnote;
   protected $createFootnoteType = CreateFootnoteResponse::class;
   protected $createFootnoteDataType = '';
+  /**
+   * @var CreateHeaderResponse
+   */
+  public $createHeader;
   protected $createHeaderType = CreateHeaderResponse::class;
   protected $createHeaderDataType = '';
+  /**
+   * @var CreateNamedRangeResponse
+   */
+  public $createNamedRange;
   protected $createNamedRangeType = CreateNamedRangeResponse::class;
   protected $createNamedRangeDataType = '';
+  /**
+   * @var InsertInlineImageResponse
+   */
+  public $insertInlineImage;
   protected $insertInlineImageType = InsertInlineImageResponse::class;
   protected $insertInlineImageDataType = '';
+  /**
+   * @var InsertInlineSheetsChartResponse
+   */
+  public $insertInlineSheetsChart;
   protected $insertInlineSheetsChartType = InsertInlineSheetsChartResponse::class;
   protected $insertInlineSheetsChartDataType = '';
+  /**
+   * @var ReplaceAllTextResponse
+   */
+  public $replaceAllText;
   protected $replaceAllTextType = ReplaceAllTextResponse::class;
   protected $replaceAllTextDataType = '';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedDocumentStyle extends \Google\Model
 {
+  /**
+   * @var DocumentStyle
+   */
+  public $documentStyle;
   protected $documentStyleType = DocumentStyle::class;
   protected $documentStyleDataType = '';
+  /**
+   * @var DocumentStyleSuggestionState
+   */
+  public $documentStyleSuggestionState;
   protected $documentStyleSuggestionStateType = DocumentStyleSuggestionState::class;
   protected $documentStyleSuggestionStateDataType = '';
 

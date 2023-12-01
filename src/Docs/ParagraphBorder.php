@@ -19,14 +19,26 @@ namespace Google\Service\Docs;
 
 class ParagraphBorder extends \Google\Model
 {
+  /**
+   * @var OptionalColor
+   */
+  public $color;
   protected $colorType = OptionalColor::class;
   protected $colorDataType = '';
   /**
    * @var string
    */
   public $dashStyle;
+  /**
+   * @var Dimension
+   */
+  public $padding;
   protected $paddingType = Dimension::class;
   protected $paddingDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $width;
   protected $widthType = Dimension::class;
   protected $widthDataType = '';
 

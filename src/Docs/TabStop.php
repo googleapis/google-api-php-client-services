@@ -23,6 +23,10 @@ class TabStop extends \Google\Model
    * @var string
    */
   public $alignment;
+  /**
+   * @var Dimension
+   */
+  public $offset;
   protected $offsetType = Dimension::class;
   protected $offsetDataType = '';
 

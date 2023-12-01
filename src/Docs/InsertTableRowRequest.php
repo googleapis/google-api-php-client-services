@@ -23,6 +23,10 @@ class InsertTableRowRequest extends \Google\Model
    * @var bool
    */
   public $insertBelow;
+  /**
+   * @var TableCellLocation
+   */
+  public $tableCellLocation;
   protected $tableCellLocationType = TableCellLocation::class;
   protected $tableCellLocationDataType = '';
 

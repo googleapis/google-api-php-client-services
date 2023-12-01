@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class OptionalColor extends \Google\Model
 {
+  /**
+   * @var Color
+   */
+  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
 

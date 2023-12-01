@@ -23,6 +23,10 @@ class PinTableHeaderRowsRequest extends \Google\Model
    * @var int
    */
   public $pinnedHeaderRowsCount;
+  /**
+   * @var Location
+   */
+  public $tableStartLocation;
   protected $tableStartLocationType = Location::class;
   protected $tableStartLocationDataType = '';
 

@@ -19,14 +19,34 @@ namespace Google\Service\Docs;
 
 class TableCellStyle extends \Google\Model
 {
+  /**
+   * @var OptionalColor
+   */
+  public $backgroundColor;
   protected $backgroundColorType = OptionalColor::class;
   protected $backgroundColorDataType = '';
+  /**
+   * @var TableCellBorder
+   */
+  public $borderBottom;
   protected $borderBottomType = TableCellBorder::class;
   protected $borderBottomDataType = '';
+  /**
+   * @var TableCellBorder
+   */
+  public $borderLeft;
   protected $borderLeftType = TableCellBorder::class;
   protected $borderLeftDataType = '';
+  /**
+   * @var TableCellBorder
+   */
+  public $borderRight;
   protected $borderRightType = TableCellBorder::class;
   protected $borderRightDataType = '';
+  /**
+   * @var TableCellBorder
+   */
+  public $borderTop;
   protected $borderTopType = TableCellBorder::class;
   protected $borderTopDataType = '';
   /**
@@ -37,12 +57,28 @@ class TableCellStyle extends \Google\Model
    * @var string
    */
   public $contentAlignment;
+  /**
+   * @var Dimension
+   */
+  public $paddingBottom;
   protected $paddingBottomType = Dimension::class;
   protected $paddingBottomDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $paddingLeft;
   protected $paddingLeftType = Dimension::class;
   protected $paddingLeftDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $paddingRight;
   protected $paddingRightType = Dimension::class;
   protected $paddingRightDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $paddingTop;
   protected $paddingTopType = Dimension::class;
   protected $paddingTopDataType = '';
   /**

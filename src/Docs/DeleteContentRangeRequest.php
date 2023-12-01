@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class DeleteContentRangeRequest extends \Google\Model
 {
+  /**
+   * @var Range
+   */
+  public $range;
   protected $rangeType = Range::class;
   protected $rangeDataType = '';
 

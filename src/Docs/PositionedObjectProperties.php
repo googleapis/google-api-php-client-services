@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class PositionedObjectProperties extends \Google\Model
 {
+  /**
+   * @var EmbeddedObject
+   */
+  public $embeddedObject;
   protected $embeddedObjectType = EmbeddedObject::class;
   protected $embeddedObjectDataType = '';
+  /**
+   * @var PositionedObjectPositioning
+   */
+  public $positioning;
   protected $positioningType = PositionedObjectPositioning::class;
   protected $positioningDataType = '';
 

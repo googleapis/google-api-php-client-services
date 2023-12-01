@@ -20,6 +20,10 @@ namespace Google\Service\Docs;
 class TableCell extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
+  /**
+   * @var StructuralElement[]
+   */
+  public $content;
   protected $contentType = StructuralElement::class;
   protected $contentDataType = 'array';
   /**
@@ -38,8 +42,16 @@ class TableCell extends \Google\Collection
    * @var string[]
    */
   public $suggestedInsertionIds;
+  /**
+   * @var SuggestedTableCellStyle[]
+   */
+  public $suggestedTableCellStyleChanges;
   protected $suggestedTableCellStyleChangesType = SuggestedTableCellStyle::class;
   protected $suggestedTableCellStyleChangesDataType = 'map';
+  /**
+   * @var TableCellStyle
+   */
+  public $tableCellStyle;
   protected $tableCellStyleType = TableCellStyle::class;
   protected $tableCellStyleDataType = '';
 

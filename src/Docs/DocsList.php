@@ -20,6 +20,10 @@ namespace Google\Service\Docs;
 class DocsList extends \Google\Collection
 {
   protected $collection_key = 'suggestedDeletionIds';
+  /**
+   * @var ListProperties
+   */
+  public $listProperties;
   protected $listPropertiesType = ListProperties::class;
   protected $listPropertiesDataType = '';
   /**
@@ -30,6 +34,10 @@ class DocsList extends \Google\Collection
    * @var string
    */
   public $suggestedInsertionId;
+  /**
+   * @var SuggestedListProperties[]
+   */
+  public $suggestedListPropertiesChanges;
   protected $suggestedListPropertiesChangesType = SuggestedListProperties::class;
   protected $suggestedListPropertiesChangesDataType = 'map';
 

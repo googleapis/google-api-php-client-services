@@ -24,6 +24,10 @@ class Person extends \Google\Collection
    * @var string
    */
   public $personId;
+  /**
+   * @var PersonProperties
+   */
+  public $personProperties;
   protected $personPropertiesType = PersonProperties::class;
   protected $personPropertiesDataType = '';
   /**
@@ -34,8 +38,16 @@ class Person extends \Google\Collection
    * @var string[]
    */
   public $suggestedInsertionIds;
+  /**
+   * @var SuggestedTextStyle[]
+   */
+  public $suggestedTextStyleChanges;
   protected $suggestedTextStyleChangesType = SuggestedTextStyle::class;
   protected $suggestedTextStyleChangesDataType = 'map';
+  /**
+   * @var TextStyle
+   */
+  public $textStyle;
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
 

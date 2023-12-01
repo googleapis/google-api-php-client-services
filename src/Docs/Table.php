@@ -36,8 +36,16 @@ class Table extends \Google\Collection
    * @var string[]
    */
   public $suggestedInsertionIds;
+  /**
+   * @var TableRow[]
+   */
+  public $tableRows;
   protected $tableRowsType = TableRow::class;
   protected $tableRowsDataType = 'array';
+  /**
+   * @var TableStyle
+   */
+  public $tableStyle;
   protected $tableStyleType = TableStyle::class;
   protected $tableStyleDataType = '';
 

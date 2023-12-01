@@ -19,8 +19,16 @@ namespace Google\Service\Docs;
 
 class SuggestedTextStyle extends \Google\Model
 {
+  /**
+   * @var TextStyle
+   */
+  public $textStyle;
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
+  /**
+   * @var TextStyleSuggestionState
+   */
+  public $textStyleSuggestionState;
   protected $textStyleSuggestionStateType = TextStyleSuggestionState::class;
   protected $textStyleSuggestionStateDataType = '';
 

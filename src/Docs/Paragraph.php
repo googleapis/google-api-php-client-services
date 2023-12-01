@@ -20,20 +20,44 @@ namespace Google\Service\Docs;
 class Paragraph extends \Google\Collection
 {
   protected $collection_key = 'positionedObjectIds';
+  /**
+   * @var Bullet
+   */
+  public $bullet;
   protected $bulletType = Bullet::class;
   protected $bulletDataType = '';
+  /**
+   * @var ParagraphElement[]
+   */
+  public $elements;
   protected $elementsType = ParagraphElement::class;
   protected $elementsDataType = 'array';
+  /**
+   * @var ParagraphStyle
+   */
+  public $paragraphStyle;
   protected $paragraphStyleType = ParagraphStyle::class;
   protected $paragraphStyleDataType = '';
   /**
    * @var string[]
    */
   public $positionedObjectIds;
+  /**
+   * @var SuggestedBullet[]
+   */
+  public $suggestedBulletChanges;
   protected $suggestedBulletChangesType = SuggestedBullet::class;
   protected $suggestedBulletChangesDataType = 'map';
+  /**
+   * @var SuggestedParagraphStyle[]
+   */
+  public $suggestedParagraphStyleChanges;
   protected $suggestedParagraphStyleChangesType = SuggestedParagraphStyle::class;
   protected $suggestedParagraphStyleChangesDataType = 'map';
+  /**
+   * @var ObjectReferences[]
+   */
+  public $suggestedPositionedObjectIds;
   protected $suggestedPositionedObjectIdsType = ObjectReferences::class;
   protected $suggestedPositionedObjectIdsDataType = 'map';
 

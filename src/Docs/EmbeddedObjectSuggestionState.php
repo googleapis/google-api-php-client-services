@@ -23,12 +23,28 @@ class EmbeddedObjectSuggestionState extends \Google\Model
    * @var bool
    */
   public $descriptionSuggested;
+  /**
+   * @var EmbeddedDrawingPropertiesSuggestionState
+   */
+  public $embeddedDrawingPropertiesSuggestionState;
   protected $embeddedDrawingPropertiesSuggestionStateType = EmbeddedDrawingPropertiesSuggestionState::class;
   protected $embeddedDrawingPropertiesSuggestionStateDataType = '';
+  /**
+   * @var EmbeddedObjectBorderSuggestionState
+   */
+  public $embeddedObjectBorderSuggestionState;
   protected $embeddedObjectBorderSuggestionStateType = EmbeddedObjectBorderSuggestionState::class;
   protected $embeddedObjectBorderSuggestionStateDataType = '';
+  /**
+   * @var ImagePropertiesSuggestionState
+   */
+  public $imagePropertiesSuggestionState;
   protected $imagePropertiesSuggestionStateType = ImagePropertiesSuggestionState::class;
   protected $imagePropertiesSuggestionStateDataType = '';
+  /**
+   * @var LinkedContentReferenceSuggestionState
+   */
+  public $linkedContentReferenceSuggestionState;
   protected $linkedContentReferenceSuggestionStateType = LinkedContentReferenceSuggestionState::class;
   protected $linkedContentReferenceSuggestionStateDataType = '';
   /**
@@ -47,6 +63,10 @@ class EmbeddedObjectSuggestionState extends \Google\Model
    * @var bool
    */
   public $marginTopSuggested;
+  /**
+   * @var SizeSuggestionState
+   */
+  public $sizeSuggestionState;
   protected $sizeSuggestionStateType = SizeSuggestionState::class;
   protected $sizeSuggestionStateDataType = '';
   /**

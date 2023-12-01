@@ -19,6 +19,10 @@ namespace Google\Service\Docs;
 
 class CreateFooterRequest extends \Google\Model
 {
+  /**
+   * @var Location
+   */
+  public $sectionBreakLocation;
   protected $sectionBreakLocationType = Location::class;
   protected $sectionBreakLocationDataType = '';
   /**

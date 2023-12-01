@@ -23,16 +23,32 @@ class StructuralElement extends \Google\Model
    * @var int
    */
   public $endIndex;
+  /**
+   * @var Paragraph
+   */
+  public $paragraph;
   protected $paragraphType = Paragraph::class;
   protected $paragraphDataType = '';
+  /**
+   * @var SectionBreak
+   */
+  public $sectionBreak;
   protected $sectionBreakType = SectionBreak::class;
   protected $sectionBreakDataType = '';
   /**
    * @var int
    */
   public $startIndex;
+  /**
+   * @var Table
+   */
+  public $table;
   protected $tableType = Table::class;
   protected $tableDataType = '';
+  /**
+   * @var TableOfContents
+   */
+  public $tableOfContents;
   protected $tableOfContentsType = TableOfContents::class;
   protected $tableOfContentsDataType = '';
 

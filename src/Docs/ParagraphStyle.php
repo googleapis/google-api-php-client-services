@@ -28,14 +28,34 @@ class ParagraphStyle extends \Google\Collection
    * @var bool
    */
   public $avoidWidowAndOrphan;
+  /**
+   * @var ParagraphBorder
+   */
+  public $borderBetween;
   protected $borderBetweenType = ParagraphBorder::class;
   protected $borderBetweenDataType = '';
+  /**
+   * @var ParagraphBorder
+   */
+  public $borderBottom;
   protected $borderBottomType = ParagraphBorder::class;
   protected $borderBottomDataType = '';
+  /**
+   * @var ParagraphBorder
+   */
+  public $borderLeft;
   protected $borderLeftType = ParagraphBorder::class;
   protected $borderLeftDataType = '';
+  /**
+   * @var ParagraphBorder
+   */
+  public $borderRight;
   protected $borderRightType = ParagraphBorder::class;
   protected $borderRightDataType = '';
+  /**
+   * @var ParagraphBorder
+   */
+  public $borderTop;
   protected $borderTopType = ParagraphBorder::class;
   protected $borderTopDataType = '';
   /**
@@ -46,10 +66,22 @@ class ParagraphStyle extends \Google\Collection
    * @var string
    */
   public $headingId;
+  /**
+   * @var Dimension
+   */
+  public $indentEnd;
   protected $indentEndType = Dimension::class;
   protected $indentEndDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $indentFirstLine;
   protected $indentFirstLineType = Dimension::class;
   protected $indentFirstLineDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $indentStart;
   protected $indentStartType = Dimension::class;
   protected $indentStartDataType = '';
   /**
@@ -72,16 +104,32 @@ class ParagraphStyle extends \Google\Collection
    * @var bool
    */
   public $pageBreakBefore;
+  /**
+   * @var Shading
+   */
+  public $shading;
   protected $shadingType = Shading::class;
   protected $shadingDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $spaceAbove;
   protected $spaceAboveType = Dimension::class;
   protected $spaceAboveDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $spaceBelow;
   protected $spaceBelowType = Dimension::class;
   protected $spaceBelowDataType = '';
   /**
    * @var string
    */
   public $spacingMode;
+  /**
+   * @var TabStop[]
+   */
+  public $tabStops;
   protected $tabStopsType = TabStop::class;
   protected $tabStopsDataType = 'array';
 

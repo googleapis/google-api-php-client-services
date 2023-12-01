@@ -35,6 +35,10 @@ class ImageProperties extends \Google\Model
    * @var float
    */
   public $contrast;
+  /**
+   * @var CropProperties
+   */
+  public $cropProperties;
   protected $cropPropertiesType = CropProperties::class;
   protected $cropPropertiesDataType = '';
   /**
