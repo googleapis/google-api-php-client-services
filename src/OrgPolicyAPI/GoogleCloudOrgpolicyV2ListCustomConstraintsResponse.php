@@ -20,6 +20,10 @@ namespace Google\Service\OrgPolicyAPI;
 class GoogleCloudOrgpolicyV2ListCustomConstraintsResponse extends \Google\Collection
 {
   protected $collection_key = 'customConstraints';
+  /**
+   * @var GoogleCloudOrgpolicyV2CustomConstraint[]
+   */
+  public $customConstraints;
   protected $customConstraintsType = GoogleCloudOrgpolicyV2CustomConstraint::class;
   protected $customConstraintsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\OrgPolicyAPI;
 
 class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
 {
+  /**
+   * @var GoogleCloudOrgpolicyV2ConstraintBooleanConstraint
+   */
+  public $booleanConstraint;
   protected $booleanConstraintType = GoogleCloudOrgpolicyV2ConstraintBooleanConstraint::class;
   protected $booleanConstraintDataType = '';
   /**
@@ -33,6 +37,10 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudOrgpolicyV2ConstraintListConstraint
+   */
+  public $listConstraint;
   protected $listConstraintType = GoogleCloudOrgpolicyV2ConstraintListConstraint::class;
   protected $listConstraintDataType = '';
   /**

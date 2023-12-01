@@ -32,6 +32,10 @@ class GoogleCloudOrgpolicyV2PolicySpec extends \Google\Collection
    * @var bool
    */
   public $reset;
+  /**
+   * @var GoogleCloudOrgpolicyV2PolicySpecPolicyRule[]
+   */
+  public $rules;
   protected $rulesType = GoogleCloudOrgpolicyV2PolicySpecPolicyRule::class;
   protected $rulesDataType = 'array';
   /**
