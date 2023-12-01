@@ -23,12 +23,20 @@ class GooglePrivacyDlpV2DiscoveryBigQueryConditions extends \Google\Model
    * @var string
    */
   public $createdAfter;
+  /**
+   * @var GooglePrivacyDlpV2OrConditions
+   */
+  public $orConditions;
   protected $orConditionsType = GooglePrivacyDlpV2OrConditions::class;
   protected $orConditionsDataType = '';
   /**
    * @var string
    */
   public $typeCollection;
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTableTypes
+   */
+  public $types;
   protected $typesType = GooglePrivacyDlpV2BigQueryTableTypes::class;
   protected $typesDataType = '';
 

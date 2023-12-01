@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DiscoveryGenerationCadence extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DiscoverySchemaModifiedCadence
+   */
+  public $schemaModifiedCadence;
   protected $schemaModifiedCadenceType = GooglePrivacyDlpV2DiscoverySchemaModifiedCadence::class;
   protected $schemaModifiedCadenceDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryTableModifiedCadence
+   */
+  public $tableModifiedCadence;
   protected $tableModifiedCadenceType = GooglePrivacyDlpV2DiscoveryTableModifiedCadence::class;
   protected $tableModifiedCadenceDataType = '';
 

@@ -19,10 +19,22 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Bucket extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $max;
   protected $maxType = GooglePrivacyDlpV2Value::class;
   protected $maxDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $min;
   protected $minType = GooglePrivacyDlpV2Value::class;
   protected $minDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $replacementValue;
   protected $replacementValueType = GooglePrivacyDlpV2Value::class;
   protected $replacementValueDataType = '';
 

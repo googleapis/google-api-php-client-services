@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
 {
   protected $collection_key = 'versions';
+  /**
+   * @var GooglePrivacyDlpV2InfoTypeCategory[]
+   */
+  public $categories;
   protected $categoriesType = GooglePrivacyDlpV2InfoTypeCategory::class;
   protected $categoriesDataType = 'array';
   /**
@@ -34,12 +38,20 @@ class GooglePrivacyDlpV2InfoTypeDescription extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GooglePrivacyDlpV2SensitivityScore
+   */
+  public $sensitivityScore;
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**
    * @var string[]
    */
   public $supportedBy;
+  /**
+   * @var GooglePrivacyDlpV2VersionDescription[]
+   */
+  public $versions;
   protected $versionsType = GooglePrivacyDlpV2VersionDescription::class;
   protected $versionsDataType = 'array';
 

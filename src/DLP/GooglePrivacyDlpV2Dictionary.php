@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Dictionary extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2CloudStoragePath
+   */
+  public $cloudStoragePath;
   protected $cloudStoragePathType = GooglePrivacyDlpV2CloudStoragePath::class;
   protected $cloudStoragePathDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2WordList
+   */
+  public $wordList;
   protected $wordListType = GooglePrivacyDlpV2WordList::class;
   protected $wordListDataType = '';
 

@@ -19,12 +19,20 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ImageRedactionConfig extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2InfoType
+   */
+  public $infoType;
   protected $infoTypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypeDataType = '';
   /**
    * @var bool
    */
   public $redactAllText;
+  /**
+   * @var GooglePrivacyDlpV2Color
+   */
+  public $redactionColor;
   protected $redactionColorType = GooglePrivacyDlpV2Color::class;
   protected $redactionColorDataType = '';
 

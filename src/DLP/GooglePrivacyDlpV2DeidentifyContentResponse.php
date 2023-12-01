@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DeidentifyContentResponse extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2ContentItem
+   */
+  public $item;
   protected $itemType = GooglePrivacyDlpV2ContentItem::class;
   protected $itemDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TransformationOverview
+   */
+  public $overview;
   protected $overviewType = GooglePrivacyDlpV2TransformationOverview::class;
   protected $overviewDataType = '';
 

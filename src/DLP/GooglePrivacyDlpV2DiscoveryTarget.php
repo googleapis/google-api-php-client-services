@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DiscoveryTarget extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2BigQueryDiscoveryTarget
+   */
+  public $bigQueryTarget;
   protected $bigQueryTargetType = GooglePrivacyDlpV2BigQueryDiscoveryTarget::class;
   protected $bigQueryTargetDataType = '';
 

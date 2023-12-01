@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2InspectDataSourceDetails extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2RequestedOptions
+   */
+  public $requestedOptions;
   protected $requestedOptionsType = GooglePrivacyDlpV2RequestedOptions::class;
   protected $requestedOptionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Result
+   */
+  public $result;
   protected $resultType = GooglePrivacyDlpV2Result::class;
   protected $resultDataType = '';
 

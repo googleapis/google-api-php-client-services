@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DataProfilePubSubCondition extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2PubSubExpressions
+   */
+  public $expressions;
   protected $expressionsType = GooglePrivacyDlpV2PubSubExpressions::class;
   protected $expressionsDataType = '';
 

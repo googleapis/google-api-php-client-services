@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2BigQueryField extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $field;
   protected $fieldType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTable
+   */
+  public $table;
   protected $tableType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $tableDataType = '';
 

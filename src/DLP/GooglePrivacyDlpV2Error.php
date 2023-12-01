@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Error extends \Google\Collection
 {
   protected $collection_key = 'timestamps';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $details;
   protected $detailsType = GoogleRpcStatus::class;
   protected $detailsDataType = '';
   /**

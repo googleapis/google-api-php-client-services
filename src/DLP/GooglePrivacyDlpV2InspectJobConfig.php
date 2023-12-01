@@ -20,14 +20,26 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InspectJobConfig extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var GooglePrivacyDlpV2Action[]
+   */
+  public $actions;
   protected $actionsType = GooglePrivacyDlpV2Action::class;
   protected $actionsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2InspectConfig
+   */
+  public $inspectConfig;
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**
    * @var string
    */
   public $inspectTemplateName;
+  /**
+   * @var GooglePrivacyDlpV2StorageConfig
+   */
+  public $storageConfig;
   protected $storageConfigType = GooglePrivacyDlpV2StorageConfig::class;
   protected $storageConfigDataType = '';
 

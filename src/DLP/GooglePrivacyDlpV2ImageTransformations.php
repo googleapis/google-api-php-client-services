@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ImageTransformations extends \Google\Collection
 {
   protected $collection_key = 'transforms';
+  /**
+   * @var GooglePrivacyDlpV2ImageTransformation[]
+   */
+  public $transforms;
   protected $transformsType = GooglePrivacyDlpV2ImageTransformation::class;
   protected $transformsDataType = 'array';
 

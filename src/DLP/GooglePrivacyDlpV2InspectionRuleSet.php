@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InspectionRuleSet extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  /**
+   * @var GooglePrivacyDlpV2InfoType[]
+   */
+  public $infoTypes;
   protected $infoTypesType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypesDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2InspectionRule[]
+   */
+  public $rules;
   protected $rulesType = GooglePrivacyDlpV2InspectionRule::class;
   protected $rulesDataType = 'array';
 

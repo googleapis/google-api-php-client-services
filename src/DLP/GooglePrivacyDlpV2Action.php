@@ -19,18 +19,46 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Action extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Deidentify
+   */
+  public $deidentify;
   protected $deidentifyType = GooglePrivacyDlpV2Deidentify::class;
   protected $deidentifyDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2JobNotificationEmails
+   */
+  public $jobNotificationEmails;
   protected $jobNotificationEmailsType = GooglePrivacyDlpV2JobNotificationEmails::class;
   protected $jobNotificationEmailsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PublishToPubSub
+   */
+  public $pubSub;
   protected $pubSubType = GooglePrivacyDlpV2PublishToPubSub::class;
   protected $pubSubDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog
+   */
+  public $publishFindingsToCloudDataCatalog;
   protected $publishFindingsToCloudDataCatalogType = GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog::class;
   protected $publishFindingsToCloudDataCatalogDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PublishSummaryToCscc
+   */
+  public $publishSummaryToCscc;
   protected $publishSummaryToCsccType = GooglePrivacyDlpV2PublishSummaryToCscc::class;
   protected $publishSummaryToCsccDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PublishToStackdriver
+   */
+  public $publishToStackdriver;
   protected $publishToStackdriverType = GooglePrivacyDlpV2PublishToStackdriver::class;
   protected $publishToStackdriverDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2SaveFindings
+   */
+  public $saveFindings;
   protected $saveFindingsType = GooglePrivacyDlpV2SaveFindings::class;
   protected $saveFindingsDataType = '';
 

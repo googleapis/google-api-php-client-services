@@ -20,12 +20,28 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2FieldTransformation extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var GooglePrivacyDlpV2RecordCondition
+   */
+  public $condition;
   protected $conditionType = GooglePrivacyDlpV2RecordCondition::class;
   protected $conditionDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2FieldId[]
+   */
+  public $fields;
   protected $fieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2InfoTypeTransformations
+   */
+  public $infoTypeTransformations;
   protected $infoTypeTransformationsType = GooglePrivacyDlpV2InfoTypeTransformations::class;
   protected $infoTypeTransformationsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PrimitiveTransformation
+   */
+  public $primitiveTransformation;
   protected $primitiveTransformationType = GooglePrivacyDlpV2PrimitiveTransformation::class;
   protected $primitiveTransformationDataType = '';
 

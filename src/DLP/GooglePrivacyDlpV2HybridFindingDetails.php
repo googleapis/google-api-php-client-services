@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Container
+   */
+  public $containerDetails;
   protected $containerDetailsType = GooglePrivacyDlpV2Container::class;
   protected $containerDetailsDataType = '';
   /**
@@ -33,6 +37,10 @@ class GooglePrivacyDlpV2HybridFindingDetails extends \Google\Model
    * @var string
    */
   public $rowOffset;
+  /**
+   * @var GooglePrivacyDlpV2TableOptions
+   */
+  public $tableOptions;
   protected $tableOptionsType = GooglePrivacyDlpV2TableOptions::class;
   protected $tableOptionsDataType = '';
 

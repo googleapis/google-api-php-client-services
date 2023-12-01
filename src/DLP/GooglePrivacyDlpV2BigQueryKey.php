@@ -23,6 +23,10 @@ class GooglePrivacyDlpV2BigQueryKey extends \Google\Model
    * @var string
    */
   public $rowNumber;
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTable
+   */
+  public $tableReference;
   protected $tableReferenceType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $tableReferenceDataType = '';
 

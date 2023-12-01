@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2BucketingConfig extends \Google\Collection
 {
   protected $collection_key = 'buckets';
+  /**
+   * @var GooglePrivacyDlpV2Bucket[]
+   */
+  public $buckets;
   protected $bucketsType = GooglePrivacyDlpV2Bucket::class;
   protected $bucketsDataType = 'array';
 

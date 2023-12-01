@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DiscoveryBigQueryFilter extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2AllOtherBigQueryTables
+   */
+  public $otherTables;
   protected $otherTablesType = GooglePrivacyDlpV2AllOtherBigQueryTables::class;
   protected $otherTablesDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTableCollection
+   */
+  public $tables;
   protected $tablesType = GooglePrivacyDlpV2BigQueryTableCollection::class;
   protected $tablesDataType = '';
 

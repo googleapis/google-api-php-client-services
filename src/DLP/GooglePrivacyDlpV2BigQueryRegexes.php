@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2BigQueryRegexes extends \Google\Collection
 {
   protected $collection_key = 'patterns';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryRegex[]
+   */
+  public $patterns;
   protected $patternsType = GooglePrivacyDlpV2BigQueryRegex::class;
   protected $patternsDataType = 'array';
 

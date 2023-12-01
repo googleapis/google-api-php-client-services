@@ -20,10 +20,22 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
 {
   protected $collection_key = 'includedFields';
+  /**
+   * @var GooglePrivacyDlpV2FieldId[]
+   */
+  public $excludedFields;
   protected $excludedFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $excludedFieldsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2FieldId[]
+   */
+  public $identifyingFields;
   protected $identifyingFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $identifyingFieldsDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2FieldId[]
+   */
+  public $includedFields;
   protected $includedFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $includedFieldsDataType = 'array';
   /**
@@ -38,6 +50,10 @@ class GooglePrivacyDlpV2BigQueryOptions extends \Google\Collection
    * @var string
    */
   public $sampleMethod;
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTable
+   */
+  public $tableReference;
   protected $tableReferenceType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $tableReferenceDataType = '';
 

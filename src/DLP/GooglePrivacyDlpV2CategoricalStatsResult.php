@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2CategoricalStatsResult extends \Google\Collection
 {
   protected $collection_key = 'valueFrequencyHistogramBuckets';
+  /**
+   * @var GooglePrivacyDlpV2CategoricalStatsHistogramBucket[]
+   */
+  public $valueFrequencyHistogramBuckets;
   protected $valueFrequencyHistogramBucketsType = GooglePrivacyDlpV2CategoricalStatsHistogramBucket::class;
   protected $valueFrequencyHistogramBucketsDataType = 'array';
 

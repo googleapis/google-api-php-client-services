@@ -20,8 +20,16 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DeltaPresenceEstimationConfig extends \Google\Collection
 {
   protected $collection_key = 'quasiIds';
+  /**
+   * @var GooglePrivacyDlpV2StatisticalTable[]
+   */
+  public $auxiliaryTables;
   protected $auxiliaryTablesType = GooglePrivacyDlpV2StatisticalTable::class;
   protected $auxiliaryTablesDataType = 'array';
+  /**
+   * @var GooglePrivacyDlpV2QuasiId[]
+   */
+  public $quasiIds;
   protected $quasiIdsType = GooglePrivacyDlpV2QuasiId::class;
   protected $quasiIdsDataType = 'array';
   /**

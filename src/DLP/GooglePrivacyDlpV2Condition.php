@@ -19,12 +19,20 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Condition extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2FieldId
+   */
+  public $field;
   protected $fieldType = GooglePrivacyDlpV2FieldId::class;
   protected $fieldDataType = '';
   /**
    * @var string
    */
   public $operator;
+  /**
+   * @var GooglePrivacyDlpV2Value
+   */
+  public $value;
   protected $valueType = GooglePrivacyDlpV2Value::class;
   protected $valueDataType = '';
 

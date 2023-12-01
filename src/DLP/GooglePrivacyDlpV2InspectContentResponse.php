@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2InspectContentResponse extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2InspectResult
+   */
+  public $result;
   protected $resultType = GooglePrivacyDlpV2InspectResult::class;
   protected $resultDataType = '';
 

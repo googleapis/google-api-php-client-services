@@ -23,6 +23,10 @@ class GooglePrivacyDlpV2CreateDiscoveryConfigRequest extends \Google\Model
    * @var string
    */
   public $configId;
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryConfig
+   */
+  public $discoveryConfig;
   protected $discoveryConfigType = GooglePrivacyDlpV2DiscoveryConfig::class;
   protected $discoveryConfigDataType = '';
 

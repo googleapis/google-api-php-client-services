@@ -19,12 +19,28 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2BigQueryDiscoveryTarget extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryGenerationCadence
+   */
+  public $cadence;
   protected $cadenceType = GooglePrivacyDlpV2DiscoveryGenerationCadence::class;
   protected $cadenceDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryBigQueryConditions
+   */
+  public $conditions;
   protected $conditionsType = GooglePrivacyDlpV2DiscoveryBigQueryConditions::class;
   protected $conditionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Disabled
+   */
+  public $disabled;
   protected $disabledType = GooglePrivacyDlpV2Disabled::class;
   protected $disabledDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryBigQueryFilter
+   */
+  public $filter;
   protected $filterType = GooglePrivacyDlpV2DiscoveryBigQueryFilter::class;
   protected $filterDataType = '';
 

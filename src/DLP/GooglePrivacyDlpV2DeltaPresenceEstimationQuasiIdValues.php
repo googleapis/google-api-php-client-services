@@ -21,6 +21,10 @@ class GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues extends \Google\Col
 {
   protected $collection_key = 'quasiIdsValues';
   public $estimatedProbability;
+  /**
+   * @var GooglePrivacyDlpV2Value[]
+   */
+  public $quasiIdsValues;
   protected $quasiIdsValuesType = GooglePrivacyDlpV2Value::class;
   protected $quasiIdsValuesDataType = 'array';
 

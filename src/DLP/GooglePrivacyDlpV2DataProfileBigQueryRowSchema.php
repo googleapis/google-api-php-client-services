@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DataProfileBigQueryRowSchema extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2ColumnDataProfile
+   */
+  public $columnProfile;
   protected $columnProfileType = GooglePrivacyDlpV2ColumnDataProfile::class;
   protected $columnProfileDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TableDataProfile
+   */
+  public $tableProfile;
   protected $tableProfileType = GooglePrivacyDlpV2TableDataProfile::class;
   protected $tableProfileDataType = '';
 

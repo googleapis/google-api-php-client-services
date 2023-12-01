@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2CreateDeidentifyTemplateRequest extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DeidentifyTemplate
+   */
+  public $deidentifyTemplate;
   protected $deidentifyTemplateType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $deidentifyTemplateDataType = '';
   /**

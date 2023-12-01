@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2HybridInspectJobTriggerRequest extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2HybridContentItem
+   */
+  public $hybridItem;
   protected $hybridItemType = GooglePrivacyDlpV2HybridContentItem::class;
   protected $hybridItemDataType = '';
 

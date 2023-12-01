@@ -19,18 +19,30 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DeidentifyContentRequest extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DeidentifyConfig
+   */
+  public $deidentifyConfig;
   protected $deidentifyConfigType = GooglePrivacyDlpV2DeidentifyConfig::class;
   protected $deidentifyConfigDataType = '';
   /**
    * @var string
    */
   public $deidentifyTemplateName;
+  /**
+   * @var GooglePrivacyDlpV2InspectConfig
+   */
+  public $inspectConfig;
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**
    * @var string
    */
   public $inspectTemplateName;
+  /**
+   * @var GooglePrivacyDlpV2ContentItem
+   */
+  public $item;
   protected $itemType = GooglePrivacyDlpV2ContentItem::class;
   protected $itemDataType = '';
   /**

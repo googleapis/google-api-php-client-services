@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2InfoTypeLikelihood extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2InfoType
+   */
+  public $infoType;
   protected $infoTypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypeDataType = '';
   /**

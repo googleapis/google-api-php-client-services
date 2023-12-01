@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2CryptoHashConfig extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2CryptoKey
+   */
+  public $cryptoKey;
   protected $cryptoKeyType = GooglePrivacyDlpV2CryptoKey::class;
   protected $cryptoKeyDataType = '';
 

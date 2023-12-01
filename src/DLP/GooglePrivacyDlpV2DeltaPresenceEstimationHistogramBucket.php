@@ -28,6 +28,10 @@ class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket extends \Google\C
    * @var string
    */
   public $bucketValueCount;
+  /**
+   * @var GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues[]
+   */
+  public $bucketValues;
   protected $bucketValuesType = GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValues::class;
   protected $bucketValuesDataType = 'array';
   public $maxProbability;

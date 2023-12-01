@@ -19,16 +19,32 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ExclusionRule extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Dictionary
+   */
+  public $dictionary;
   protected $dictionaryType = GooglePrivacyDlpV2Dictionary::class;
   protected $dictionaryDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ExcludeByHotword
+   */
+  public $excludeByHotword;
   protected $excludeByHotwordType = GooglePrivacyDlpV2ExcludeByHotword::class;
   protected $excludeByHotwordDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ExcludeInfoTypes
+   */
+  public $excludeInfoTypes;
   protected $excludeInfoTypesType = GooglePrivacyDlpV2ExcludeInfoTypes::class;
   protected $excludeInfoTypesDataType = '';
   /**
    * @var string
    */
   public $matchingType;
+  /**
+   * @var GooglePrivacyDlpV2Regex
+   */
+  public $regex;
   protected $regexType = GooglePrivacyDlpV2Regex::class;
   protected $regexDataType = '';
 

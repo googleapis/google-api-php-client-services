@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InspectResult extends \Google\Collection
 {
   protected $collection_key = 'findings';
+  /**
+   * @var GooglePrivacyDlpV2Finding[]
+   */
+  public $findings;
   protected $findingsType = GooglePrivacyDlpV2Finding::class;
   protected $findingsDataType = 'array';
   /**

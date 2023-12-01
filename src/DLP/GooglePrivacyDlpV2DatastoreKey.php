@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DatastoreKey extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2Key
+   */
+  public $entityKey;
   protected $entityKeyType = GooglePrivacyDlpV2Key::class;
   protected $entityKeyDataType = '';
 

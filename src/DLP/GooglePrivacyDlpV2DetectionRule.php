@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DetectionRule extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2HotwordRule
+   */
+  public $hotwordRule;
   protected $hotwordRuleType = GooglePrivacyDlpV2HotwordRule::class;
   protected $hotwordRuleDataType = '';
 

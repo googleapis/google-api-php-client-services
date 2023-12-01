@@ -19,14 +19,26 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DateTime extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDate
+   */
+  public $date;
   protected $dateType = GoogleTypeDate::class;
   protected $dateDataType = '';
   /**
    * @var string
    */
   public $dayOfWeek;
+  /**
+   * @var GoogleTypeTimeOfDay
+   */
+  public $time;
   protected $timeType = GoogleTypeTimeOfDay::class;
   protected $timeDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TimeZone
+   */
+  public $timeZone;
   protected $timeZoneType = GooglePrivacyDlpV2TimeZone::class;
   protected $timeZoneDataType = '';
 

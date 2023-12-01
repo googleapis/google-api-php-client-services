@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2HybridContentItem extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2HybridFindingDetails
+   */
+  public $findingDetails;
   protected $findingDetailsType = GooglePrivacyDlpV2HybridFindingDetails::class;
   protected $findingDetailsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2ContentItem
+   */
+  public $item;
   protected $itemType = GooglePrivacyDlpV2ContentItem::class;
   protected $itemDataType = '';
 

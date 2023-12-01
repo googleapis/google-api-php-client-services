@@ -19,8 +19,16 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DeidentifyDataSourceDetails extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2DeidentifyDataSourceStats
+   */
+  public $deidentifyStats;
   protected $deidentifyStatsType = GooglePrivacyDlpV2DeidentifyDataSourceStats::class;
   protected $deidentifyStatsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2RequestedDeidentifyOptions
+   */
+  public $requestedOptions;
   protected $requestedOptionsType = GooglePrivacyDlpV2RequestedDeidentifyOptions::class;
   protected $requestedOptionsDataType = '';
 

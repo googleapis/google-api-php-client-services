@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DiscoveryConfig extends \Google\Collection
 {
   protected $collection_key = 'targets';
+  /**
+   * @var GooglePrivacyDlpV2DataProfileAction[]
+   */
+  public $actions;
   protected $actionsType = GooglePrivacyDlpV2DataProfileAction::class;
   protected $actionsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class GooglePrivacyDlpV2DiscoveryConfig extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GooglePrivacyDlpV2Error[]
+   */
+  public $errors;
   protected $errorsType = GooglePrivacyDlpV2Error::class;
   protected $errorsDataType = 'array';
   /**
@@ -44,12 +52,20 @@ class GooglePrivacyDlpV2DiscoveryConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GooglePrivacyDlpV2OrgConfig
+   */
+  public $orgConfig;
   protected $orgConfigType = GooglePrivacyDlpV2OrgConfig::class;
   protected $orgConfigDataType = '';
   /**
    * @var string
    */
   public $status;
+  /**
+   * @var GooglePrivacyDlpV2DiscoveryTarget[]
+   */
+  public $targets;
   protected $targetsType = GooglePrivacyDlpV2DiscoveryTarget::class;
   protected $targetsDataType = 'array';
   /**

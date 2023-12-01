@@ -28,6 +28,10 @@ class GooglePrivacyDlpV2CloudStorageOptions extends \Google\Collection
    * @var int
    */
   public $bytesLimitPerFilePercent;
+  /**
+   * @var GooglePrivacyDlpV2FileSet
+   */
+  public $fileSet;
   protected $fileSetType = GooglePrivacyDlpV2FileSet::class;
   protected $fileSetDataType = '';
   /**

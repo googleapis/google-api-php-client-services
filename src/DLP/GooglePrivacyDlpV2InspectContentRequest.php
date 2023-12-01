@@ -19,12 +19,20 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2InspectContentRequest extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2InspectConfig
+   */
+  public $inspectConfig;
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**
    * @var string
    */
   public $inspectTemplateName;
+  /**
+   * @var GooglePrivacyDlpV2ContentItem
+   */
+  public $item;
   protected $itemType = GooglePrivacyDlpV2ContentItem::class;
   protected $itemDataType = '';
   /**

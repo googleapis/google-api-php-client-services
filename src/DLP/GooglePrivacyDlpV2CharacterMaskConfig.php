@@ -20,6 +20,10 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2CharacterMaskConfig extends \Google\Collection
 {
   protected $collection_key = 'charactersToIgnore';
+  /**
+   * @var GooglePrivacyDlpV2CharsToIgnore[]
+   */
+  public $charactersToIgnore;
   protected $charactersToIgnoreType = GooglePrivacyDlpV2CharsToIgnore::class;
   protected $charactersToIgnoreDataType = 'array';
   /**

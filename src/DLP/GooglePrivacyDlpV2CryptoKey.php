@@ -19,10 +19,22 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2CryptoKey extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2KmsWrappedCryptoKey
+   */
+  public $kmsWrapped;
   protected $kmsWrappedType = GooglePrivacyDlpV2KmsWrappedCryptoKey::class;
   protected $kmsWrappedDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2TransientCryptoKey
+   */
+  public $transient;
   protected $transientType = GooglePrivacyDlpV2TransientCryptoKey::class;
   protected $transientDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2UnwrappedCryptoKey
+   */
+  public $unwrapped;
   protected $unwrappedType = GooglePrivacyDlpV2UnwrappedCryptoKey::class;
   protected $unwrappedDataType = '';
 

@@ -19,12 +19,28 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ImageTransformation extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2AllInfoTypes
+   */
+  public $allInfoTypes;
   protected $allInfoTypesType = GooglePrivacyDlpV2AllInfoTypes::class;
   protected $allInfoTypesDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2AllText
+   */
+  public $allText;
   protected $allTextType = GooglePrivacyDlpV2AllText::class;
   protected $allTextDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2Color
+   */
+  public $redactionColor;
   protected $redactionColorType = GooglePrivacyDlpV2Color::class;
   protected $redactionColorDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2SelectedInfoTypes
+   */
+  public $selectedInfoTypes;
   protected $selectedInfoTypesType = GooglePrivacyDlpV2SelectedInfoTypes::class;
   protected $selectedInfoTypesDataType = '';
 

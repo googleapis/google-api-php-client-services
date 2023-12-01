@@ -19,22 +19,58 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2CategoricalStatsResult
+   */
+  public $categoricalStatsResult;
   protected $categoricalStatsResultType = GooglePrivacyDlpV2CategoricalStatsResult::class;
   protected $categoricalStatsResultDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2DeltaPresenceEstimationResult
+   */
+  public $deltaPresenceEstimationResult;
   protected $deltaPresenceEstimationResultType = GooglePrivacyDlpV2DeltaPresenceEstimationResult::class;
   protected $deltaPresenceEstimationResultDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2KAnonymityResult
+   */
+  public $kAnonymityResult;
   protected $kAnonymityResultType = GooglePrivacyDlpV2KAnonymityResult::class;
   protected $kAnonymityResultDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2KMapEstimationResult
+   */
+  public $kMapEstimationResult;
   protected $kMapEstimationResultType = GooglePrivacyDlpV2KMapEstimationResult::class;
   protected $kMapEstimationResultDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2LDiversityResult
+   */
+  public $lDiversityResult;
   protected $lDiversityResultType = GooglePrivacyDlpV2LDiversityResult::class;
   protected $lDiversityResultDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2NumericalStatsResult
+   */
+  public $numericalStatsResult;
   protected $numericalStatsResultType = GooglePrivacyDlpV2NumericalStatsResult::class;
   protected $numericalStatsResultDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2RequestedRiskAnalysisOptions
+   */
+  public $requestedOptions;
   protected $requestedOptionsType = GooglePrivacyDlpV2RequestedRiskAnalysisOptions::class;
   protected $requestedOptionsDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2PrivacyMetric
+   */
+  public $requestedPrivacyMetric;
   protected $requestedPrivacyMetricType = GooglePrivacyDlpV2PrivacyMetric::class;
   protected $requestedPrivacyMetricDataType = '';
+  /**
+   * @var GooglePrivacyDlpV2BigQueryTable
+   */
+  public $requestedSourceTable;
   protected $requestedSourceTableType = GooglePrivacyDlpV2BigQueryTable::class;
   protected $requestedSourceTableDataType = '';
 

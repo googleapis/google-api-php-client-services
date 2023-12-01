@@ -19,6 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2FileSet extends \Google\Model
 {
+  /**
+   * @var GooglePrivacyDlpV2CloudStorageRegexFileSet
+   */
+  public $regexFileSet;
   protected $regexFileSetType = GooglePrivacyDlpV2CloudStorageRegexFileSet::class;
   protected $regexFileSetDataType = '';
   /**
