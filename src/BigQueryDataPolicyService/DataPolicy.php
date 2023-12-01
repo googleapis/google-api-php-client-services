@@ -19,6 +19,10 @@ namespace Google\Service\BigQueryDataPolicyService;
 
 class DataPolicy extends \Google\Model
 {
+  /**
+   * @var DataMaskingPolicy
+   */
+  public $dataMaskingPolicy;
   protected $dataMaskingPolicyType = DataMaskingPolicy::class;
   protected $dataMaskingPolicyDataType = '';
   /**
