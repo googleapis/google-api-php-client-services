@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class JobStatistics2 extends \Google\Collection
 {
   protected $collection_key = 'undeclaredQueryParameters';
+  /**
+   * @var BiEngineStatistics
+   */
+  public $biEngineStatistics;
   protected $biEngineStatisticsType = BiEngineStatistics::class;
   protected $biEngineStatisticsDataType = '';
   /**
@@ -34,28 +38,60 @@ class JobStatistics2 extends \Google\Collection
    * @var string
    */
   public $ddlAffectedRowAccessPolicyCount;
+  /**
+   * @var TableReference
+   */
+  public $ddlDestinationTable;
   protected $ddlDestinationTableType = TableReference::class;
   protected $ddlDestinationTableDataType = '';
   /**
    * @var string
    */
   public $ddlOperationPerformed;
+  /**
+   * @var DatasetReference
+   */
+  public $ddlTargetDataset;
   protected $ddlTargetDatasetType = DatasetReference::class;
   protected $ddlTargetDatasetDataType = '';
+  /**
+   * @var RoutineReference
+   */
+  public $ddlTargetRoutine;
   protected $ddlTargetRoutineType = RoutineReference::class;
   protected $ddlTargetRoutineDataType = '';
+  /**
+   * @var RowAccessPolicyReference
+   */
+  public $ddlTargetRowAccessPolicy;
   protected $ddlTargetRowAccessPolicyType = RowAccessPolicyReference::class;
   protected $ddlTargetRowAccessPolicyDataType = '';
+  /**
+   * @var TableReference
+   */
+  public $ddlTargetTable;
   protected $ddlTargetTableType = TableReference::class;
   protected $ddlTargetTableDataType = '';
+  /**
+   * @var DmlStatistics
+   */
+  public $dmlStats;
   protected $dmlStatsType = DmlStatistics::class;
   protected $dmlStatsDataType = '';
   /**
    * @var string
    */
   public $estimatedBytesProcessed;
+  /**
+   * @var MlStatistics
+   */
+  public $mlStatistics;
   protected $mlStatisticsType = MlStatistics::class;
   protected $mlStatisticsDataType = '';
+  /**
+   * @var BigQueryModelTraining
+   */
+  public $modelTraining;
   protected $modelTrainingType = BigQueryModelTraining::class;
   protected $modelTrainingDataType = '';
   /**
@@ -70,24 +106,56 @@ class JobStatistics2 extends \Google\Collection
    * @var string
    */
   public $numDmlAffectedRows;
+  /**
+   * @var ExplainQueryStage[]
+   */
+  public $queryPlan;
   protected $queryPlanType = ExplainQueryStage::class;
   protected $queryPlanDataType = 'array';
+  /**
+   * @var RoutineReference[]
+   */
+  public $referencedRoutines;
   protected $referencedRoutinesType = RoutineReference::class;
   protected $referencedRoutinesDataType = 'array';
+  /**
+   * @var TableReference[]
+   */
+  public $referencedTables;
   protected $referencedTablesType = TableReference::class;
   protected $referencedTablesDataType = 'array';
+  /**
+   * @var JobStatistics2ReservationUsage[]
+   */
+  public $reservationUsage;
   protected $reservationUsageType = JobStatistics2ReservationUsage::class;
   protected $reservationUsageDataType = 'array';
+  /**
+   * @var TableSchema
+   */
+  public $schema;
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
+  /**
+   * @var SearchStatistics
+   */
+  public $searchStatistics;
   protected $searchStatisticsType = SearchStatistics::class;
   protected $searchStatisticsDataType = '';
+  /**
+   * @var SparkStatistics
+   */
+  public $sparkStatistics;
   protected $sparkStatisticsType = SparkStatistics::class;
   protected $sparkStatisticsDataType = '';
   /**
    * @var string
    */
   public $statementType;
+  /**
+   * @var QueryTimelineSample[]
+   */
+  public $timeline;
   protected $timelineType = QueryTimelineSample::class;
   protected $timelineDataType = 'array';
   /**
@@ -114,6 +182,10 @@ class JobStatistics2 extends \Google\Collection
    * @var string
    */
   public $transferredBytes;
+  /**
+   * @var QueryParameter[]
+   */
+  public $undeclaredQueryParameters;
   protected $undeclaredQueryParametersType = QueryParameter::class;
   protected $undeclaredQueryParametersDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class Routine extends \Google\Collection
 {
   protected $collection_key = 'importedLibraries';
+  /**
+   * @var Argument[]
+   */
+  public $arguments;
   protected $argumentsType = Argument::class;
   protected $argumentsDataType = 'array';
   /**
@@ -58,12 +62,28 @@ class Routine extends \Google\Collection
    * @var string
    */
   public $lastModifiedTime;
+  /**
+   * @var RemoteFunctionOptions
+   */
+  public $remoteFunctionOptions;
   protected $remoteFunctionOptionsType = RemoteFunctionOptions::class;
   protected $remoteFunctionOptionsDataType = '';
+  /**
+   * @var StandardSqlTableType
+   */
+  public $returnTableType;
   protected $returnTableTypeType = StandardSqlTableType::class;
   protected $returnTableTypeDataType = '';
+  /**
+   * @var StandardSqlDataType
+   */
+  public $returnType;
   protected $returnTypeType = StandardSqlDataType::class;
   protected $returnTypeDataType = '';
+  /**
+   * @var RoutineReference
+   */
+  public $routineReference;
   protected $routineReferenceType = RoutineReference::class;
   protected $routineReferenceDataType = '';
   /**
@@ -74,6 +94,10 @@ class Routine extends \Google\Collection
    * @var string
    */
   public $securityMode;
+  /**
+   * @var SparkOptions
+   */
+  public $sparkOptions;
   protected $sparkOptionsType = SparkOptions::class;
   protected $sparkOptionsDataType = '';
   /**

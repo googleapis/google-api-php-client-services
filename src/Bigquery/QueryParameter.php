@@ -23,8 +23,16 @@ class QueryParameter extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var QueryParameterType
+   */
+  public $parameterType;
   protected $parameterTypeType = QueryParameterType::class;
   protected $parameterTypeDataType = '';
+  /**
+   * @var QueryParameterValue
+   */
+  public $parameterValue;
   protected $parameterValueType = QueryParameterValue::class;
   protected $parameterValueDataType = '';
 

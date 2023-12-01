@@ -19,18 +19,46 @@ namespace Google\Service\Bigquery;
 
 class EvaluationMetrics extends \Google\Model
 {
+  /**
+   * @var ArimaForecastingMetrics
+   */
+  public $arimaForecastingMetrics;
   protected $arimaForecastingMetricsType = ArimaForecastingMetrics::class;
   protected $arimaForecastingMetricsDataType = '';
+  /**
+   * @var BinaryClassificationMetrics
+   */
+  public $binaryClassificationMetrics;
   protected $binaryClassificationMetricsType = BinaryClassificationMetrics::class;
   protected $binaryClassificationMetricsDataType = '';
+  /**
+   * @var ClusteringMetrics
+   */
+  public $clusteringMetrics;
   protected $clusteringMetricsType = ClusteringMetrics::class;
   protected $clusteringMetricsDataType = '';
+  /**
+   * @var DimensionalityReductionMetrics
+   */
+  public $dimensionalityReductionMetrics;
   protected $dimensionalityReductionMetricsType = DimensionalityReductionMetrics::class;
   protected $dimensionalityReductionMetricsDataType = '';
+  /**
+   * @var MultiClassClassificationMetrics
+   */
+  public $multiClassClassificationMetrics;
   protected $multiClassClassificationMetricsType = MultiClassClassificationMetrics::class;
   protected $multiClassClassificationMetricsDataType = '';
+  /**
+   * @var RankingMetrics
+   */
+  public $rankingMetrics;
   protected $rankingMetricsType = RankingMetrics::class;
   protected $rankingMetricsDataType = '';
+  /**
+   * @var RegressionMetrics
+   */
+  public $regressionMetrics;
   protected $regressionMetricsType = RegressionMetrics::class;
   protected $regressionMetricsDataType = '';
 

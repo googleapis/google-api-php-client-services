@@ -19,12 +19,20 @@ namespace Google\Service\Bigquery;
 
 class JobConfiguration extends \Google\Model
 {
+  /**
+   * @var JobConfigurationTableCopy
+   */
+  public $copy;
   protected $copyType = JobConfigurationTableCopy::class;
   protected $copyDataType = '';
   /**
    * @var bool
    */
   public $dryRun;
+  /**
+   * @var JobConfigurationExtract
+   */
+  public $extract;
   protected $extractType = JobConfigurationExtract::class;
   protected $extractDataType = '';
   /**
@@ -39,8 +47,16 @@ class JobConfiguration extends \Google\Model
    * @var string[]
    */
   public $labels;
+  /**
+   * @var JobConfigurationLoad
+   */
+  public $load;
   protected $loadType = JobConfigurationLoad::class;
   protected $loadDataType = '';
+  /**
+   * @var JobConfigurationQuery
+   */
+  public $query;
   protected $queryType = JobConfigurationQuery::class;
   protected $queryDataType = '';
 

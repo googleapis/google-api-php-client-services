@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class BqmlTrainingRun extends \Google\Collection
 {
   protected $collection_key = 'iterationResults';
+  /**
+   * @var BqmlIterationResult[]
+   */
+  public $iterationResults;
   protected $iterationResultsType = BqmlIterationResult::class;
   protected $iterationResultsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class BqmlTrainingRun extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var BqmlTrainingRunTrainingOptions
+   */
+  public $trainingOptions;
   protected $trainingOptionsType = BqmlTrainingRunTrainingOptions::class;
   protected $trainingOptionsDataType = '';
 

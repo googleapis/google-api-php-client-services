@@ -19,6 +19,10 @@ namespace Google\Service\Bigquery;
 
 class JobCancelResponse extends \Google\Model
 {
+  /**
+   * @var Job
+   */
+  public $job;
   protected $jobType = Job::class;
   protected $jobDataType = '';
   /**

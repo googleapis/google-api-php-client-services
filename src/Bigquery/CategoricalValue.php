@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class CategoricalValue extends \Google\Collection
 {
   protected $collection_key = 'categoryCounts';
+  /**
+   * @var CategoryCount[]
+   */
+  public $categoryCounts;
   protected $categoryCountsType = CategoryCount::class;
   protected $categoryCountsDataType = 'array';
 

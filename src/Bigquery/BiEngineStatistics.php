@@ -28,6 +28,10 @@ class BiEngineStatistics extends \Google\Collection
    * @var string
    */
   public $biEngineMode;
+  /**
+   * @var BiEngineReason[]
+   */
+  public $biEngineReasons;
   protected $biEngineReasonsType = BiEngineReason::class;
   protected $biEngineReasonsDataType = 'array';
 

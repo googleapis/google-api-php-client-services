@@ -20,14 +20,26 @@ namespace Google\Service\Bigquery;
 class ArimaForecastingMetrics extends \Google\Collection
 {
   protected $collection_key = 'timeSeriesId';
+  /**
+   * @var ArimaFittingMetrics[]
+   */
+  public $arimaFittingMetrics;
   protected $arimaFittingMetricsType = ArimaFittingMetrics::class;
   protected $arimaFittingMetricsDataType = 'array';
+  /**
+   * @var ArimaSingleModelForecastingMetrics[]
+   */
+  public $arimaSingleModelForecastingMetrics;
   protected $arimaSingleModelForecastingMetricsType = ArimaSingleModelForecastingMetrics::class;
   protected $arimaSingleModelForecastingMetricsDataType = 'array';
   /**
    * @var bool[]
    */
   public $hasDrift;
+  /**
+   * @var ArimaOrder[]
+   */
+  public $nonSeasonalOrder;
   protected $nonSeasonalOrderType = ArimaOrder::class;
   protected $nonSeasonalOrderDataType = 'array';
   /**

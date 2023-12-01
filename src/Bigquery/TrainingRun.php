@@ -20,20 +20,44 @@ namespace Google\Service\Bigquery;
 class TrainingRun extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var GlobalExplanation[]
+   */
+  public $classLevelGlobalExplanations;
   protected $classLevelGlobalExplanationsType = GlobalExplanation::class;
   protected $classLevelGlobalExplanationsDataType = 'array';
+  /**
+   * @var DataSplitResult
+   */
+  public $dataSplitResult;
   protected $dataSplitResultType = DataSplitResult::class;
   protected $dataSplitResultDataType = '';
+  /**
+   * @var EvaluationMetrics
+   */
+  public $evaluationMetrics;
   protected $evaluationMetricsType = EvaluationMetrics::class;
   protected $evaluationMetricsDataType = '';
+  /**
+   * @var GlobalExplanation
+   */
+  public $modelLevelGlobalExplanation;
   protected $modelLevelGlobalExplanationType = GlobalExplanation::class;
   protected $modelLevelGlobalExplanationDataType = '';
+  /**
+   * @var IterationResult[]
+   */
+  public $results;
   protected $resultsType = IterationResult::class;
   protected $resultsDataType = 'array';
   /**
    * @var string
    */
   public $startTime;
+  /**
+   * @var TrainingOptions
+   */
+  public $trainingOptions;
   protected $trainingOptionsType = TrainingOptions::class;
   protected $trainingOptionsDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Bigquery;
 
 class IndexUnusedReason extends \Google\Model
 {
+  /**
+   * @var TableReference
+   */
+  public $baseTable;
   protected $baseTableType = TableReference::class;
   protected $baseTableDataType = '';
   /**

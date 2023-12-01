@@ -32,6 +32,10 @@ class TableDataList extends \Google\Collection
    * @var string
    */
   public $pageToken;
+  /**
+   * @var TableRow[]
+   */
+  public $rows;
   protected $rowsType = TableRow::class;
   protected $rowsDataType = 'array';
   /**

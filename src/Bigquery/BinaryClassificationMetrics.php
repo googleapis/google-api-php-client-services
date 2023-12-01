@@ -20,8 +20,16 @@ namespace Google\Service\Bigquery;
 class BinaryClassificationMetrics extends \Google\Collection
 {
   protected $collection_key = 'binaryConfusionMatrixList';
+  /**
+   * @var AggregateClassificationMetrics
+   */
+  public $aggregateClassificationMetrics;
   protected $aggregateClassificationMetricsType = AggregateClassificationMetrics::class;
   protected $aggregateClassificationMetricsDataType = '';
+  /**
+   * @var BinaryConfusionMatrix[]
+   */
+  public $binaryConfusionMatrixList;
   protected $binaryConfusionMatrixListType = BinaryConfusionMatrix::class;
   protected $binaryConfusionMatrixListDataType = 'array';
   /**

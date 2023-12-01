@@ -19,8 +19,16 @@ namespace Google\Service\Bigquery;
 
 class DoubleHparamSearchSpace extends \Google\Model
 {
+  /**
+   * @var DoubleCandidates
+   */
+  public $candidates;
   protected $candidatesType = DoubleCandidates::class;
   protected $candidatesDataType = '';
+  /**
+   * @var DoubleRange
+   */
+  public $range;
   protected $rangeType = DoubleRange::class;
   protected $rangeDataType = '';
 

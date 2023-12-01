@@ -24,20 +24,36 @@ class JobConfigurationTableCopy extends \Google\Collection
    * @var string
    */
   public $createDisposition;
+  /**
+   * @var EncryptionConfiguration
+   */
+  public $destinationEncryptionConfiguration;
   protected $destinationEncryptionConfigurationType = EncryptionConfiguration::class;
   protected $destinationEncryptionConfigurationDataType = '';
   /**
    * @var array
    */
   public $destinationExpirationTime;
+  /**
+   * @var TableReference
+   */
+  public $destinationTable;
   protected $destinationTableType = TableReference::class;
   protected $destinationTableDataType = '';
   /**
    * @var string
    */
   public $operationType;
+  /**
+   * @var TableReference
+   */
+  public $sourceTable;
   protected $sourceTableType = TableReference::class;
   protected $sourceTableDataType = '';
+  /**
+   * @var TableReference[]
+   */
+  public $sourceTables;
   protected $sourceTablesType = TableReference::class;
   protected $sourceTablesDataType = 'array';
   /**

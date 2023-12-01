@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class TableDataInsertAllResponseInsertErrors extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var ErrorProto[]
+   */
+  public $errors;
   protected $errorsType = ErrorProto::class;
   protected $errorsDataType = 'array';
   /**

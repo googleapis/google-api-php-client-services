@@ -19,48 +19,136 @@ namespace Google\Service\Bigquery;
 
 class HparamSearchSpaces extends \Google\Model
 {
+  /**
+   * @var StringHparamSearchSpace
+   */
+  public $activationFn;
   protected $activationFnType = StringHparamSearchSpace::class;
   protected $activationFnDataType = '';
+  /**
+   * @var IntHparamSearchSpace
+   */
+  public $batchSize;
   protected $batchSizeType = IntHparamSearchSpace::class;
   protected $batchSizeDataType = '';
+  /**
+   * @var StringHparamSearchSpace
+   */
+  public $boosterType;
   protected $boosterTypeType = StringHparamSearchSpace::class;
   protected $boosterTypeDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $colsampleBylevel;
   protected $colsampleBylevelType = DoubleHparamSearchSpace::class;
   protected $colsampleBylevelDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $colsampleBynode;
   protected $colsampleBynodeType = DoubleHparamSearchSpace::class;
   protected $colsampleBynodeDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $colsampleBytree;
   protected $colsampleBytreeType = DoubleHparamSearchSpace::class;
   protected $colsampleBytreeDataType = '';
+  /**
+   * @var StringHparamSearchSpace
+   */
+  public $dartNormalizeType;
   protected $dartNormalizeTypeType = StringHparamSearchSpace::class;
   protected $dartNormalizeTypeDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $dropout;
   protected $dropoutType = DoubleHparamSearchSpace::class;
   protected $dropoutDataType = '';
+  /**
+   * @var IntArrayHparamSearchSpace
+   */
+  public $hiddenUnits;
   protected $hiddenUnitsType = IntArrayHparamSearchSpace::class;
   protected $hiddenUnitsDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $l1Reg;
   protected $l1RegType = DoubleHparamSearchSpace::class;
   protected $l1RegDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $l2Reg;
   protected $l2RegType = DoubleHparamSearchSpace::class;
   protected $l2RegDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $learnRate;
   protected $learnRateType = DoubleHparamSearchSpace::class;
   protected $learnRateDataType = '';
+  /**
+   * @var IntHparamSearchSpace
+   */
+  public $maxTreeDepth;
   protected $maxTreeDepthType = IntHparamSearchSpace::class;
   protected $maxTreeDepthDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $minSplitLoss;
   protected $minSplitLossType = DoubleHparamSearchSpace::class;
   protected $minSplitLossDataType = '';
+  /**
+   * @var IntHparamSearchSpace
+   */
+  public $minTreeChildWeight;
   protected $minTreeChildWeightType = IntHparamSearchSpace::class;
   protected $minTreeChildWeightDataType = '';
+  /**
+   * @var IntHparamSearchSpace
+   */
+  public $numClusters;
   protected $numClustersType = IntHparamSearchSpace::class;
   protected $numClustersDataType = '';
+  /**
+   * @var IntHparamSearchSpace
+   */
+  public $numFactors;
   protected $numFactorsType = IntHparamSearchSpace::class;
   protected $numFactorsDataType = '';
+  /**
+   * @var IntHparamSearchSpace
+   */
+  public $numParallelTree;
   protected $numParallelTreeType = IntHparamSearchSpace::class;
   protected $numParallelTreeDataType = '';
+  /**
+   * @var StringHparamSearchSpace
+   */
+  public $optimizer;
   protected $optimizerType = StringHparamSearchSpace::class;
   protected $optimizerDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $subsample;
   protected $subsampleType = DoubleHparamSearchSpace::class;
   protected $subsampleDataType = '';
+  /**
+   * @var StringHparamSearchSpace
+   */
+  public $treeMethod;
   protected $treeMethodType = StringHparamSearchSpace::class;
   protected $treeMethodDataType = '';
+  /**
+   * @var DoubleHparamSearchSpace
+   */
+  public $walsAlpha;
   protected $walsAlphaType = DoubleHparamSearchSpace::class;
   protected $walsAlphaDataType = '';
 

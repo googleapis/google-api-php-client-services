@@ -32,6 +32,10 @@ class ViewDefinition extends \Google\Collection
    * @var bool
    */
   public $useLegacySql;
+  /**
+   * @var UserDefinedFunctionResource[]
+   */
+  public $userDefinedFunctionResources;
   protected $userDefinedFunctionResourcesType = UserDefinedFunctionResource::class;
   protected $userDefinedFunctionResourcesDataType = 'array';
 

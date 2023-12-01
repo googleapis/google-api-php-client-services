@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class IntArrayHparamSearchSpace extends \Google\Collection
 {
   protected $collection_key = 'candidates';
+  /**
+   * @var IntArray[]
+   */
+  public $candidates;
   protected $candidatesType = IntArray::class;
   protected $candidatesDataType = 'array';
 

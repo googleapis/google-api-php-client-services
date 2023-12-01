@@ -19,6 +19,10 @@ namespace Google\Service\Bigquery;
 
 class DatasetAccess extends \Google\Model
 {
+  /**
+   * @var DatasetAccessEntry
+   */
+  public $dataset;
   protected $datasetType = DatasetAccessEntry::class;
   protected $datasetDataType = '';
   /**
@@ -37,6 +41,10 @@ class DatasetAccess extends \Google\Model
    * @var string
    */
   public $role;
+  /**
+   * @var RoutineReference
+   */
+  public $routine;
   protected $routineType = RoutineReference::class;
   protected $routineDataType = '';
   /**
@@ -47,6 +55,10 @@ class DatasetAccess extends \Google\Model
    * @var string
    */
   public $userByEmail;
+  /**
+   * @var TableReference
+   */
+  public $view;
   protected $viewType = TableReference::class;
   protected $viewDataType = '';
 

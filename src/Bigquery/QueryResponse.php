@@ -24,8 +24,16 @@ class QueryResponse extends \Google\Collection
    * @var bool
    */
   public $cacheHit;
+  /**
+   * @var DmlStatistics
+   */
+  public $dmlStats;
   protected $dmlStatsType = DmlStatistics::class;
   protected $dmlStatsDataType = '';
+  /**
+   * @var ErrorProto[]
+   */
+  public $errors;
   protected $errorsType = ErrorProto::class;
   protected $errorsDataType = 'array';
   /**
@@ -36,6 +44,10 @@ class QueryResponse extends \Google\Collection
    * @var array
    */
   public $jobCreationReason;
+  /**
+   * @var JobReference
+   */
+  public $jobReference;
   protected $jobReferenceType = JobReference::class;
   protected $jobReferenceDataType = '';
   /**
@@ -54,10 +66,22 @@ class QueryResponse extends \Google\Collection
    * @var string
    */
   public $queryId;
+  /**
+   * @var TableRow[]
+   */
+  public $rows;
   protected $rowsType = TableRow::class;
   protected $rowsDataType = 'array';
+  /**
+   * @var TableSchema
+   */
+  public $schema;
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
+  /**
+   * @var SessionInfo
+   */
+  public $sessionInfo;
   protected $sessionInfoType = SessionInfo::class;
   protected $sessionInfoDataType = '';
   /**

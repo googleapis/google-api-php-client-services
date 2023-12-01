@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class MlStatistics extends \Google\Collection
 {
   protected $collection_key = 'iterationResults';
+  /**
+   * @var IterationResult[]
+   */
+  public $iterationResults;
   protected $iterationResultsType = IterationResult::class;
   protected $iterationResultsDataType = 'array';
   /**

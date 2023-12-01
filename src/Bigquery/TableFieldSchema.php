@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class TableFieldSchema extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var TableFieldSchemaCategories
+   */
+  public $categories;
   protected $categoriesType = TableFieldSchemaCategories::class;
   protected $categoriesDataType = '';
   /**
@@ -34,6 +38,10 @@ class TableFieldSchema extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var TableFieldSchema[]
+   */
+  public $fields;
   protected $fieldsType = TableFieldSchema::class;
   protected $fieldsDataType = 'array';
   /**
@@ -48,12 +56,20 @@ class TableFieldSchema extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var TableFieldSchemaPolicyTags
+   */
+  public $policyTags;
   protected $policyTagsType = TableFieldSchemaPolicyTags::class;
   protected $policyTagsDataType = '';
   /**
    * @var string
    */
   public $precision;
+  /**
+   * @var TableFieldSchemaRangeElementType
+   */
+  public $rangeElementType;
   protected $rangeElementTypeType = TableFieldSchemaRangeElementType::class;
   protected $rangeElementTypeDataType = '';
   /**

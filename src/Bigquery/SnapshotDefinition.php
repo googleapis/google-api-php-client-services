@@ -19,6 +19,10 @@ namespace Google\Service\Bigquery;
 
 class SnapshotDefinition extends \Google\Model
 {
+  /**
+   * @var TableReference
+   */
+  public $baseTableReference;
   protected $baseTableReferenceType = TableReference::class;
   protected $baseTableReferenceDataType = '';
   /**

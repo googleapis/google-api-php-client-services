@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class SearchStatistics extends \Google\Collection
 {
   protected $collection_key = 'indexUnusedReasons';
+  /**
+   * @var IndexUnusedReason[]
+   */
+  public $indexUnusedReasons;
   protected $indexUnusedReasonsType = IndexUnusedReason::class;
   protected $indexUnusedReasonsDataType = 'array';
   /**

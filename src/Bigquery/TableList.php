@@ -32,6 +32,10 @@ class TableList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TableListTables[]
+   */
+  public $tables;
   protected $tablesType = TableListTables::class;
   protected $tablesDataType = 'array';
   /**

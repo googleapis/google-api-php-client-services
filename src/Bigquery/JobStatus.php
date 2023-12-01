@@ -20,8 +20,16 @@ namespace Google\Service\Bigquery;
 class JobStatus extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var ErrorProto
+   */
+  public $errorResult;
   protected $errorResultType = ErrorProto::class;
   protected $errorResultDataType = '';
+  /**
+   * @var ErrorProto[]
+   */
+  public $errors;
   protected $errorsType = ErrorProto::class;
   protected $errorsDataType = 'array';
   /**

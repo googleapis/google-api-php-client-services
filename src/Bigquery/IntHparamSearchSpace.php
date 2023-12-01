@@ -19,8 +19,16 @@ namespace Google\Service\Bigquery;
 
 class IntHparamSearchSpace extends \Google\Model
 {
+  /**
+   * @var IntCandidates
+   */
+  public $candidates;
   protected $candidatesType = IntCandidates::class;
   protected $candidatesDataType = '';
+  /**
+   * @var IntRange
+   */
+  public $range;
   protected $rangeType = IntRange::class;
   protected $rangeDataType = '';
 

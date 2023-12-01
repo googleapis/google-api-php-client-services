@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class StandardSqlStructType extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var StandardSqlField[]
+   */
+  public $fields;
   protected $fieldsType = StandardSqlField::class;
   protected $fieldsDataType = 'array';
 

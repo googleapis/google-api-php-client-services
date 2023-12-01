@@ -24,6 +24,10 @@ class ScriptStatistics extends \Google\Collection
    * @var string
    */
   public $evaluationKind;
+  /**
+   * @var ScriptStackFrame[]
+   */
+  public $stackFrames;
   protected $stackFramesType = ScriptStackFrame::class;
   protected $stackFramesDataType = 'array';
 

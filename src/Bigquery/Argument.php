@@ -23,6 +23,10 @@ class Argument extends \Google\Model
    * @var string
    */
   public $argumentKind;
+  /**
+   * @var StandardSqlDataType
+   */
+  public $dataType;
   protected $dataTypeType = StandardSqlDataType::class;
   protected $dataTypeDataType = '';
   /**

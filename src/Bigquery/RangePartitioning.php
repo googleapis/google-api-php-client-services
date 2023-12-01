@@ -23,6 +23,10 @@ class RangePartitioning extends \Google\Model
    * @var string
    */
   public $field;
+  /**
+   * @var RangePartitioningRange
+   */
+  public $range;
   protected $rangeType = RangePartitioningRange::class;
   protected $rangeDataType = '';
 

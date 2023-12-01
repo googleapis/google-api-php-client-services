@@ -20,6 +20,10 @@ namespace Google\Service\Bigquery;
 class ClusteringMetrics extends \Google\Collection
 {
   protected $collection_key = 'clusters';
+  /**
+   * @var Cluster[]
+   */
+  public $clusters;
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
   public $daviesBouldinIndex;
