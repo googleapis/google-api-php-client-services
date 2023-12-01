@@ -20,6 +20,10 @@ namespace Google\Service\BigLakeService;
 class ListCatalogsResponse extends \Google\Collection
 {
   protected $collection_key = 'catalogs';
+  /**
+   * @var Catalog[]
+   */
+  public $catalogs;
   protected $catalogsType = Catalog::class;
   protected $catalogsDataType = 'array';
   /**

@@ -31,6 +31,10 @@ class StorageDescriptor extends \Google\Model
    * @var string
    */
   public $outputFormat;
+  /**
+   * @var SerDeInfo
+   */
+  public $serdeInfo;
   protected $serdeInfoType = SerDeInfo::class;
   protected $serdeInfoDataType = '';
 
