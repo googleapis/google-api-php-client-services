@@ -24,6 +24,10 @@ class GoogleChromeManagementV1ListTelemetryNotificationConfigsResponse extends \
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleChromeManagementV1TelemetryNotificationConfig[]
+   */
+  public $telemetryNotificationConfigs;
   protected $telemetryNotificationConfigsType = GoogleChromeManagementV1TelemetryNotificationConfig::class;
   protected $telemetryNotificationConfigsDataType = 'array';
 

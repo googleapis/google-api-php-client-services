@@ -23,6 +23,10 @@ class GoogleChromeManagementV1MemoryInfo extends \Google\Model
    * @var string
    */
   public $availableRamBytes;
+  /**
+   * @var GoogleChromeManagementV1TotalMemoryEncryptionInfo
+   */
+  public $totalMemoryEncryption;
   protected $totalMemoryEncryptionType = GoogleChromeManagementV1TotalMemoryEncryptionInfo::class;
   protected $totalMemoryEncryptionDataType = '';
   /**

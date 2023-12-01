@@ -20,16 +20,40 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
 {
   protected $collection_key = 'thunderboltInfo';
+  /**
+   * @var GoogleChromeManagementV1AudioStatusReport[]
+   */
+  public $audioStatusReport;
   protected $audioStatusReportType = GoogleChromeManagementV1AudioStatusReport::class;
   protected $audioStatusReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1BatteryInfo[]
+   */
+  public $batteryInfo;
   protected $batteryInfoType = GoogleChromeManagementV1BatteryInfo::class;
   protected $batteryInfoDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1BatteryStatusReport[]
+   */
+  public $batteryStatusReport;
   protected $batteryStatusReportType = GoogleChromeManagementV1BatteryStatusReport::class;
   protected $batteryStatusReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1BootPerformanceReport[]
+   */
+  public $bootPerformanceReport;
   protected $bootPerformanceReportType = GoogleChromeManagementV1BootPerformanceReport::class;
   protected $bootPerformanceReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1CpuInfo[]
+   */
+  public $cpuInfo;
   protected $cpuInfoType = GoogleChromeManagementV1CpuInfo::class;
   protected $cpuInfoDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1CpuStatusReport[]
+   */
+  public $cpuStatusReport;
   protected $cpuStatusReportType = GoogleChromeManagementV1CpuStatusReport::class;
   protected $cpuStatusReportDataType = 'array';
   /**
@@ -40,46 +64,106 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
    * @var string
    */
   public $deviceId;
+  /**
+   * @var GoogleChromeManagementV1GraphicsInfo
+   */
+  public $graphicsInfo;
   protected $graphicsInfoType = GoogleChromeManagementV1GraphicsInfo::class;
   protected $graphicsInfoDataType = '';
+  /**
+   * @var GoogleChromeManagementV1GraphicsStatusReport[]
+   */
+  public $graphicsStatusReport;
   protected $graphicsStatusReportType = GoogleChromeManagementV1GraphicsStatusReport::class;
   protected $graphicsStatusReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1HeartbeatStatusReport[]
+   */
+  public $heartbeatStatusReport;
   protected $heartbeatStatusReportType = GoogleChromeManagementV1HeartbeatStatusReport::class;
   protected $heartbeatStatusReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1KioskAppStatusReport[]
+   */
+  public $kioskAppStatusReport;
   protected $kioskAppStatusReportType = GoogleChromeManagementV1KioskAppStatusReport::class;
   protected $kioskAppStatusReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1MemoryInfo
+   */
+  public $memoryInfo;
   protected $memoryInfoType = GoogleChromeManagementV1MemoryInfo::class;
   protected $memoryInfoDataType = '';
+  /**
+   * @var GoogleChromeManagementV1MemoryStatusReport[]
+   */
+  public $memoryStatusReport;
   protected $memoryStatusReportType = GoogleChromeManagementV1MemoryStatusReport::class;
   protected $memoryStatusReportDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleChromeManagementV1NetworkBandwidthReport[]
+   */
+  public $networkBandwidthReport;
   protected $networkBandwidthReportType = GoogleChromeManagementV1NetworkBandwidthReport::class;
   protected $networkBandwidthReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1NetworkDiagnosticsReport[]
+   */
+  public $networkDiagnosticsReport;
   protected $networkDiagnosticsReportType = GoogleChromeManagementV1NetworkDiagnosticsReport::class;
   protected $networkDiagnosticsReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1NetworkInfo
+   */
+  public $networkInfo;
   protected $networkInfoType = GoogleChromeManagementV1NetworkInfo::class;
   protected $networkInfoDataType = '';
+  /**
+   * @var GoogleChromeManagementV1NetworkStatusReport[]
+   */
+  public $networkStatusReport;
   protected $networkStatusReportType = GoogleChromeManagementV1NetworkStatusReport::class;
   protected $networkStatusReportDataType = 'array';
   /**
    * @var string
    */
   public $orgUnitId;
+  /**
+   * @var GoogleChromeManagementV1OsUpdateStatus[]
+   */
+  public $osUpdateStatus;
   protected $osUpdateStatusType = GoogleChromeManagementV1OsUpdateStatus::class;
   protected $osUpdateStatusDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1PeripheralsReport[]
+   */
+  public $peripheralsReport;
   protected $peripheralsReportType = GoogleChromeManagementV1PeripheralsReport::class;
   protected $peripheralsReportDataType = 'array';
   /**
    * @var string
    */
   public $serialNumber;
+  /**
+   * @var GoogleChromeManagementV1StorageInfo
+   */
+  public $storageInfo;
   protected $storageInfoType = GoogleChromeManagementV1StorageInfo::class;
   protected $storageInfoDataType = '';
+  /**
+   * @var GoogleChromeManagementV1StorageStatusReport[]
+   */
+  public $storageStatusReport;
   protected $storageStatusReportType = GoogleChromeManagementV1StorageStatusReport::class;
   protected $storageStatusReportDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1ThunderboltInfo[]
+   */
+  public $thunderboltInfo;
   protected $thunderboltInfoType = GoogleChromeManagementV1ThunderboltInfo::class;
   protected $thunderboltInfoDataType = 'array';
 

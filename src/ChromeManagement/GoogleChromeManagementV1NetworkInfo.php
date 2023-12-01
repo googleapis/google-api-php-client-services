@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1NetworkInfo extends \Google\Collection
 {
   protected $collection_key = 'networkDevices';
+  /**
+   * @var GoogleChromeManagementV1NetworkDevice[]
+   */
+  public $networkDevices;
   protected $networkDevicesType = GoogleChromeManagementV1NetworkDevice::class;
   protected $networkDevicesDataType = 'array';
 

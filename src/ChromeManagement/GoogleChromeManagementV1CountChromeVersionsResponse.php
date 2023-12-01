@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountChromeVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'browserVersions';
+  /**
+   * @var GoogleChromeManagementV1BrowserVersion[]
+   */
+  public $browserVersions;
   protected $browserVersionsType = GoogleChromeManagementV1BrowserVersion::class;
   protected $browserVersionsDataType = 'array';
   /**

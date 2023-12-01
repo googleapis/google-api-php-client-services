@@ -24,6 +24,10 @@ class GoogleChromeManagementV1CountPrintJobsByPrinterResponse extends \Google\Co
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleChromeManagementV1PrinterReport[]
+   */
+  public $printerReports;
   protected $printerReportsType = GoogleChromeManagementV1PrinterReport::class;
   protected $printerReportsDataType = 'array';
   /**

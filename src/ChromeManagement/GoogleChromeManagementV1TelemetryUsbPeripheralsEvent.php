@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TelemetryUsbPeripheralsEvent extends \Google\Collection
 {
   protected $collection_key = 'usbPeripheralReport';
+  /**
+   * @var GoogleChromeManagementV1UsbPeripheralReport[]
+   */
+  public $usbPeripheralReport;
   protected $usbPeripheralReportType = GoogleChromeManagementV1UsbPeripheralReport::class;
   protected $usbPeripheralReportDataType = 'array';
 

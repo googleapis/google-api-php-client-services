@@ -20,12 +20,28 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse extends \Google\Collection
 {
   protected $collection_key = 'storageReports';
+  /**
+   * @var GoogleChromeManagementV1DeviceHardwareCountReport[]
+   */
+  public $cpuReports;
   protected $cpuReportsType = GoogleChromeManagementV1DeviceHardwareCountReport::class;
   protected $cpuReportsDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1DeviceHardwareCountReport[]
+   */
+  public $memoryReports;
   protected $memoryReportsType = GoogleChromeManagementV1DeviceHardwareCountReport::class;
   protected $memoryReportsDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1DeviceHardwareCountReport[]
+   */
+  public $modelReports;
   protected $modelReportsType = GoogleChromeManagementV1DeviceHardwareCountReport::class;
   protected $modelReportsDataType = 'array';
+  /**
+   * @var GoogleChromeManagementV1DeviceHardwareCountReport[]
+   */
+  public $storageReports;
   protected $storageReportsType = GoogleChromeManagementV1DeviceHardwareCountReport::class;
   protected $storageReportsDataType = 'array';
 

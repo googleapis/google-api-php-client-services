@@ -24,6 +24,10 @@ class GoogleChromeManagementV1EnumeratePrintJobsResponse extends \Google\Collect
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleChromeManagementV1PrintJob[]
+   */
+  public $printJobs;
   protected $printJobsType = GoogleChromeManagementV1PrintJob::class;
   protected $printJobsDataType = 'array';
   /**

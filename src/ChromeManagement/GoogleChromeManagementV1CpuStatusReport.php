@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CpuStatusReport extends \Google\Collection
 {
   protected $collection_key = 'cpuTemperatureInfo';
+  /**
+   * @var GoogleChromeManagementV1CpuTemperatureInfo[]
+   */
+  public $cpuTemperatureInfo;
   protected $cpuTemperatureInfoType = GoogleChromeManagementV1CpuTemperatureInfo::class;
   protected $cpuTemperatureInfoDataType = 'array';
   /**

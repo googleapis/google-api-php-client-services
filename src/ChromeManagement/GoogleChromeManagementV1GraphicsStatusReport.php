@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1GraphicsStatusReport extends \Google\Collection
 {
   protected $collection_key = 'displays';
+  /**
+   * @var GoogleChromeManagementV1DisplayInfo[]
+   */
+  public $displays;
   protected $displaysType = GoogleChromeManagementV1DisplayInfo::class;
   protected $displaysDataType = 'array';
   /**

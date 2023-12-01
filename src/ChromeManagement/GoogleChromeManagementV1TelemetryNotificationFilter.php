@@ -27,6 +27,10 @@ class GoogleChromeManagementV1TelemetryNotificationFilter extends \Google\Model
    * @var string
    */
   public $deviceOrgUnitId;
+  /**
+   * @var GoogleChromeManagementV1TelemetryEventNotificationFilter
+   */
+  public $telemetryEventNotificationFilter;
   protected $telemetryEventNotificationFilterType = GoogleChromeManagementV1TelemetryEventNotificationFilter::class;
   protected $telemetryEventNotificationFilterDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1TouchScreenInfo extends \Google\Collection
 {
   protected $collection_key = 'devices';
+  /**
+   * @var GoogleChromeManagementV1TouchScreenDevice[]
+   */
+  public $devices;
   protected $devicesType = GoogleChromeManagementV1TouchScreenDevice::class;
   protected $devicesDataType = 'array';
   /**

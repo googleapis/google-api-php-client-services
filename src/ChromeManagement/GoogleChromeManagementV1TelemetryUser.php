@@ -32,6 +32,10 @@ class GoogleChromeManagementV1TelemetryUser extends \Google\Collection
    * @var string
    */
   public $orgUnitId;
+  /**
+   * @var GoogleChromeManagementV1TelemetryUserDevice[]
+   */
+  public $userDevice;
   protected $userDeviceType = GoogleChromeManagementV1TelemetryUserDevice::class;
   protected $userDeviceDataType = 'array';
   /**

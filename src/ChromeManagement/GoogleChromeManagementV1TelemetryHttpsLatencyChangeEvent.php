@@ -19,6 +19,10 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1TelemetryHttpsLatencyChangeEvent extends \Google\Model
 {
+  /**
+   * @var GoogleChromeManagementV1HttpsLatencyRoutineData
+   */
+  public $httpsLatencyRoutineData;
   protected $httpsLatencyRoutineDataType = GoogleChromeManagementV1HttpsLatencyRoutineData::class;
   protected $httpsLatencyRoutineDataDataType = '';
   /**

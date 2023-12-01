@@ -20,14 +20,26 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1GraphicsInfo extends \Google\Collection
 {
   protected $collection_key = 'displayDevices';
+  /**
+   * @var GoogleChromeManagementV1GraphicsAdapterInfo
+   */
+  public $adapterInfo;
   protected $adapterInfoType = GoogleChromeManagementV1GraphicsAdapterInfo::class;
   protected $adapterInfoDataType = '';
+  /**
+   * @var GoogleChromeManagementV1DisplayDevice[]
+   */
+  public $displayDevices;
   protected $displayDevicesType = GoogleChromeManagementV1DisplayDevice::class;
   protected $displayDevicesDataType = 'array';
   /**
    * @var bool
    */
   public $eprivacySupported;
+  /**
+   * @var GoogleChromeManagementV1TouchScreenInfo
+   */
+  public $touchScreenInfo;
   protected $touchScreenInfoType = GoogleChromeManagementV1TouchScreenInfo::class;
   protected $touchScreenInfoDataType = '';
 

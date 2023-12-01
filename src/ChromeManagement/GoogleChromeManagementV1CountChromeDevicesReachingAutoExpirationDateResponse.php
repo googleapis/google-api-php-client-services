@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse extends \Google\Collection
 {
   protected $collection_key = 'deviceAueCountReports';
+  /**
+   * @var GoogleChromeManagementV1DeviceAueCountReport[]
+   */
+  public $deviceAueCountReports;
   protected $deviceAueCountReportsType = GoogleChromeManagementV1DeviceAueCountReport::class;
   protected $deviceAueCountReportsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1StorageStatusReport extends \Google\Collection
 {
   protected $collection_key = 'disk';
+  /**
+   * @var GoogleChromeManagementV1DiskInfo[]
+   */
+  public $disk;
   protected $diskType = GoogleChromeManagementV1DiskInfo::class;
   protected $diskDataType = 'array';
   /**
