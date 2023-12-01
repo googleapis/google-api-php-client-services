@@ -32,8 +32,16 @@ class TextRun extends \Google\Collection
    * @var string[]
    */
   public $suggestedInsertionIds;
+  /**
+   * @var SuggestedTextStyle[]
+   */
+  public $suggestedTextStyleChanges;
   protected $suggestedTextStyleChangesType = SuggestedTextStyle::class;
   protected $suggestedTextStyleChangesDataType = 'map';
+  /**
+   * @var TextStyle
+   */
+  public $textStyle;
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
 

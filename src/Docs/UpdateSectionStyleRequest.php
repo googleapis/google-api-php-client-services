@@ -23,8 +23,16 @@ class UpdateSectionStyleRequest extends \Google\Model
    * @var string
    */
   public $fields;
+  /**
+   * @var Range
+   */
+  public $range;
   protected $rangeType = Range::class;
   protected $rangeDataType = '';
+  /**
+   * @var SectionStyle
+   */
+  public $sectionStyle;
   protected $sectionStyleType = SectionStyle::class;
   protected $sectionStyleDataType = '';
 

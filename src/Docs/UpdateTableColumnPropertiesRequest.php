@@ -28,8 +28,16 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
    * @var string
    */
   public $fields;
+  /**
+   * @var TableColumnProperties
+   */
+  public $tableColumnProperties;
   protected $tableColumnPropertiesType = TableColumnProperties::class;
   protected $tableColumnPropertiesDataType = '';
+  /**
+   * @var Location
+   */
+  public $tableStartLocation;
   protected $tableStartLocationType = Location::class;
   protected $tableStartLocationDataType = '';
 

@@ -28,8 +28,16 @@ class UpdateTableRowStyleRequest extends \Google\Collection
    * @var int[]
    */
   public $rowIndices;
+  /**
+   * @var TableRowStyle
+   */
+  public $tableRowStyle;
   protected $tableRowStyleType = TableRowStyle::class;
   protected $tableRowStyleDataType = '';
+  /**
+   * @var Location
+   */
+  public $tableStartLocation;
   protected $tableStartLocationType = Location::class;
   protected $tableStartLocationDataType = '';
 

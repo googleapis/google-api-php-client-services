@@ -20,6 +20,10 @@ namespace Google\Service\Docs;
 class TableStyle extends \Google\Collection
 {
   protected $collection_key = 'tableColumnProperties';
+  /**
+   * @var TableColumnProperties[]
+   */
+  public $tableColumnProperties;
   protected $tableColumnPropertiesType = TableColumnProperties::class;
   protected $tableColumnPropertiesDataType = 'array';
 
