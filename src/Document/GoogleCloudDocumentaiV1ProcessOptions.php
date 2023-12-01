@@ -27,8 +27,16 @@ class GoogleCloudDocumentaiV1ProcessOptions extends \Google\Model
    * @var int
    */
   public $fromStart;
+  /**
+   * @var GoogleCloudDocumentaiV1ProcessOptionsIndividualPageSelector
+   */
+  public $individualPageSelector;
   protected $individualPageSelectorType = GoogleCloudDocumentaiV1ProcessOptionsIndividualPageSelector::class;
   protected $individualPageSelectorDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1OcrConfig
+   */
+  public $ocrConfig;
   protected $ocrConfigType = GoogleCloudDocumentaiV1OcrConfig::class;
   protected $ocrConfigDataType = '';
 

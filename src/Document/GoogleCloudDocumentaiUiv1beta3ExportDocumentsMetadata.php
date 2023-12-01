@@ -20,10 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3ExportDocumentsMetadata extends \Google\Collection
 {
   protected $collection_key = 'splitExportStats';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3ExportDocumentsMetadataIndividualExportStatus[]
+   */
+  public $individualExportStatuses;
   protected $individualExportStatusesType = GoogleCloudDocumentaiUiv1beta3ExportDocumentsMetadataIndividualExportStatus::class;
   protected $individualExportStatusesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3ExportDocumentsMetadataSplitExportStat[]
+   */
+  public $splitExportStats;
   protected $splitExportStatsType = GoogleCloudDocumentaiUiv1beta3ExportDocumentsMetadataSplitExportStat::class;
   protected $splitExportStatsDataType = 'array';
 

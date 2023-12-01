@@ -44,6 +44,10 @@ class GoogleCloudDocumentaiV1Processor extends \Google\Collection
    * @var string
    */
   public $processEndpoint;
+  /**
+   * @var GoogleCloudDocumentaiV1ProcessorVersionAlias[]
+   */
+  public $processorVersionAliases;
   protected $processorVersionAliasesType = GoogleCloudDocumentaiV1ProcessorVersionAlias::class;
   protected $processorVersionAliasesDataType = 'array';
   /**

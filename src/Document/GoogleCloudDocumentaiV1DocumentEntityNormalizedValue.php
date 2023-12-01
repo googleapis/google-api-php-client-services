@@ -19,14 +19,26 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
 {
+  /**
+   * @var GoogleTypePostalAddress
+   */
+  public $addressValue;
   protected $addressValueType = GoogleTypePostalAddress::class;
   protected $addressValueDataType = '';
   /**
    * @var bool
    */
   public $booleanValue;
+  /**
+   * @var GoogleTypeDate
+   */
+  public $dateValue;
   protected $dateValueType = GoogleTypeDate::class;
   protected $dateValueDataType = '';
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $datetimeValue;
   protected $datetimeValueType = GoogleTypeDateTime::class;
   protected $datetimeValueDataType = '';
   /**
@@ -37,6 +49,10 @@ class GoogleCloudDocumentaiV1DocumentEntityNormalizedValue extends \Google\Model
    * @var int
    */
   public $integerValue;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $moneyValue;
   protected $moneyValueType = GoogleTypeMoney::class;
   protected $moneyValueDataType = '';
   /**

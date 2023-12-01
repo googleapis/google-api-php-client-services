@@ -20,10 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponse extends \Google\Collection
 {
   protected $collection_key = 'selectedDocuments';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $sampleTestStatus;
   protected $sampleTestStatusType = GoogleRpcStatus::class;
   protected $sampleTestStatusDataType = '';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $sampleTrainingStatus;
   protected $sampleTrainingStatusType = GoogleRpcStatus::class;
   protected $sampleTrainingStatusDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponseSelectedDocument[]
+   */
+  public $selectedDocuments;
   protected $selectedDocumentsType = GoogleCloudDocumentaiUiv1beta3SampleDocumentsResponseSelectedDocument::class;
   protected $selectedDocumentsDataType = 'array';
 

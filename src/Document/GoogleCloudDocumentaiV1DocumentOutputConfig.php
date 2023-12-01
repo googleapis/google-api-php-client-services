@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1DocumentOutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig
+   */
+  public $gcsOutputConfig;
   protected $gcsOutputConfigType = GoogleCloudDocumentaiV1DocumentOutputConfigGcsOutputConfig::class;
   protected $gcsOutputConfigDataType = '';
 

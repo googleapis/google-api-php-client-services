@@ -44,8 +44,16 @@ class GoogleCloudDocumentaiV1OcrConfig extends \Google\Collection
    * @var bool
    */
   public $enableSymbol;
+  /**
+   * @var GoogleCloudDocumentaiV1OcrConfigHints
+   */
+  public $hints;
   protected $hintsType = GoogleCloudDocumentaiV1OcrConfigHints::class;
   protected $hintsDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1OcrConfigPremiumFeatures
+   */
+  public $premiumFeatures;
   protected $premiumFeaturesType = GoogleCloudDocumentaiV1OcrConfigPremiumFeatures::class;
   protected $premiumFeaturesDataType = '';
 

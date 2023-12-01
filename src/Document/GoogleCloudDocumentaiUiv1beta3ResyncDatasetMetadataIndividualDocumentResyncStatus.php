@@ -19,12 +19,20 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3DocumentId
+   */
+  public $documentId;
   protected $documentIdType = GoogleCloudDocumentaiUiv1beta3DocumentId::class;
   protected $documentIdDataType = '';
   /**
    * @var string
    */
   public $documentInconsistencyType;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

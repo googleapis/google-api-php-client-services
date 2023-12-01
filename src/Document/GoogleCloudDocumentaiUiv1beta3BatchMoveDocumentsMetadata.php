@@ -20,6 +20,10 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualBatchMoveStatuses';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
   /**
@@ -30,6 +34,10 @@ class GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadata extends \Google\C
    * @var string
    */
   public $destSplitType;
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus[]
+   */
+  public $individualBatchMoveStatuses;
   protected $individualBatchMoveStatusesType = GoogleCloudDocumentaiUiv1beta3BatchMoveDocumentsMetadataIndividualBatchMoveStatus::class;
   protected $individualBatchMoveStatusesDataType = 'array';
 

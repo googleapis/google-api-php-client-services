@@ -20,6 +20,10 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1GcsDocuments extends \Google\Collection
 {
   protected $collection_key = 'documents';
+  /**
+   * @var GoogleCloudDocumentaiV1GcsDocument[]
+   */
+  public $documents;
   protected $documentsType = GoogleCloudDocumentaiV1GcsDocument::class;
   protected $documentsDataType = 'array';
 

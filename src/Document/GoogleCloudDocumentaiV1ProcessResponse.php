@@ -19,8 +19,16 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1ProcessResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1Document
+   */
+  public $document;
   protected $documentType = GoogleCloudDocumentaiV1Document::class;
   protected $documentDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1HumanReviewStatus
+   */
+  public $humanReviewStatus;
   protected $humanReviewStatusType = GoogleCloudDocumentaiV1HumanReviewStatus::class;
   protected $humanReviewStatusDataType = '';
 

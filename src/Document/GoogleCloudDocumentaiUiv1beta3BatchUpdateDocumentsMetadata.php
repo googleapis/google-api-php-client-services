@@ -20,8 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualBatchUpdateStatuses';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataIndividualBatchUpdateStatus[]
+   */
+  public $individualBatchUpdateStatuses;
   protected $individualBatchUpdateStatusesType = GoogleCloudDocumentaiUiv1beta3BatchUpdateDocumentsMetadataIndividualBatchUpdateStatus::class;
   protected $individualBatchUpdateStatusesDataType = 'array';
 

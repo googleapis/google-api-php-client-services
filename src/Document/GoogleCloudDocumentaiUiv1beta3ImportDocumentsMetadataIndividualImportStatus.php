@@ -23,12 +23,20 @@ class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataIndividualImportStatu
    * @var string
    */
   public $inputGcsSource;
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3DocumentId
+   */
+  public $outputDocumentId;
   protected $outputDocumentIdType = GoogleCloudDocumentaiUiv1beta3DocumentId::class;
   protected $outputDocumentIdDataType = '';
   /**
    * @var string
    */
   public $outputGcsDestination;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

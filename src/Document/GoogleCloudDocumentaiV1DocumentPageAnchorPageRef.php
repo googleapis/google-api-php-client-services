@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1DocumentPageAnchorPageRef extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudDocumentaiV1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**

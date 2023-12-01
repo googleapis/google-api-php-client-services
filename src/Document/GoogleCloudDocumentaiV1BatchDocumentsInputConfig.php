@@ -19,8 +19,16 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1BatchDocumentsInputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1GcsDocuments
+   */
+  public $gcsDocuments;
   protected $gcsDocumentsType = GoogleCloudDocumentaiV1GcsDocuments::class;
   protected $gcsDocumentsDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1GcsPrefix
+   */
+  public $gcsPrefix;
   protected $gcsPrefixType = GoogleCloudDocumentaiV1GcsPrefix::class;
   protected $gcsPrefixDataType = '';
 

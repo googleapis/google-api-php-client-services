@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1DocumentPageLayout extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudDocumentaiV1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
@@ -29,6 +33,10 @@ class GoogleCloudDocumentaiV1DocumentPageLayout extends \Google\Model
    * @var string
    */
   public $orientation;
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentTextAnchor
+   */
+  public $textAnchor;
   protected $textAnchorType = GoogleCloudDocumentaiV1DocumentTextAnchor::class;
   protected $textAnchorDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
 {
+  /**
+   * @var GoogleTypeColor
+   */
+  public $backgroundColor;
   protected $backgroundColorType = GoogleTypeColor::class;
   protected $backgroundColorDataType = '';
   /**
@@ -63,6 +67,10 @@ class GoogleCloudDocumentaiV1DocumentPageTokenStyleInfo extends \Google\Model
    * @var bool
    */
   public $superscript;
+  /**
+   * @var GoogleTypeColor
+   */
+  public $textColor;
   protected $textColorType = GoogleTypeColor::class;
   protected $textColorDataType = '';
   /**

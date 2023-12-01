@@ -19,14 +19,26 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1Evaluation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics
+   */
+  public $allEntitiesMetrics;
   protected $allEntitiesMetricsType = GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics::class;
   protected $allEntitiesMetricsDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationCounters
+   */
+  public $documentCounters;
   protected $documentCountersType = GoogleCloudDocumentaiV1EvaluationCounters::class;
   protected $documentCountersDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics[]
+   */
+  public $entityMetrics;
   protected $entityMetricsType = GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics::class;
   protected $entityMetricsDataType = 'map';
   /**

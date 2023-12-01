@@ -19,10 +19,22 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation
+   */
+  public $testDatasetValidation;
   protected $testDatasetValidationType = GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation::class;
   protected $testDatasetValidationDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation
+   */
+  public $trainingDatasetValidation;
   protected $trainingDatasetValidationType = GoogleCloudDocumentaiUiv1beta3TrainProcessorVersionMetadataDatasetValidation::class;
   protected $trainingDatasetValidationDataType = '';
 

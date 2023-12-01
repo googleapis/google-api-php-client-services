@@ -19,6 +19,10 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1DisableProcessorMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiV1CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
 

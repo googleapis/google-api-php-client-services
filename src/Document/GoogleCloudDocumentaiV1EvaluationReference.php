@@ -19,8 +19,16 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1EvaluationReference extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationMetrics
+   */
+  public $aggregateMetrics;
   protected $aggregateMetricsType = GoogleCloudDocumentaiV1EvaluationMetrics::class;
   protected $aggregateMetricsDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationMetrics
+   */
+  public $aggregateMetricsExact;
   protected $aggregateMetricsExactType = GoogleCloudDocumentaiV1EvaluationMetrics::class;
   protected $aggregateMetricsExactDataType = '';
   /**

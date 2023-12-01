@@ -20,12 +20,20 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualBatchDeleteStatuses';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
   /**
    * @var int
    */
   public $errorDocumentCount;
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus[]
+   */
+  public $individualBatchDeleteStatuses;
   protected $individualBatchDeleteStatusesType = GoogleCloudDocumentaiUiv1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus::class;
   protected $individualBatchDeleteStatusesDataType = 'array';
   /**

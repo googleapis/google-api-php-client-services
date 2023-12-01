@@ -36,18 +36,38 @@ class GoogleCloudDocumentaiV1DocumentEntity extends \Google\Collection
    * @var string
    */
   public $mentionText;
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentEntityNormalizedValue
+   */
+  public $normalizedValue;
   protected $normalizedValueType = GoogleCloudDocumentaiV1DocumentEntityNormalizedValue::class;
   protected $normalizedValueDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageAnchor
+   */
+  public $pageAnchor;
   protected $pageAnchorType = GoogleCloudDocumentaiV1DocumentPageAnchor::class;
   protected $pageAnchorDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentEntity[]
+   */
+  public $properties;
   protected $propertiesType = GoogleCloudDocumentaiV1DocumentEntity::class;
   protected $propertiesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentProvenance
+   */
+  public $provenance;
   protected $provenanceType = GoogleCloudDocumentaiV1DocumentProvenance::class;
   protected $provenanceDataType = '';
   /**
    * @var bool
    */
   public $redacted;
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentTextAnchor
+   */
+  public $textAnchor;
   protected $textAnchorType = GoogleCloudDocumentaiV1DocumentTextAnchor::class;
   protected $textAnchorDataType = '';
   /**

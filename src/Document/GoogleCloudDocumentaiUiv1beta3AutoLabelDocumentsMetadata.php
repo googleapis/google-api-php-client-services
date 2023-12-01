@@ -20,8 +20,16 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualAutoLabelStatuses';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus[]
+   */
+  public $individualAutoLabelStatuses;
   protected $individualAutoLabelStatusesType = GoogleCloudDocumentaiUiv1beta3AutoLabelDocumentsMetadataIndividualAutoLabelStatus::class;
   protected $individualAutoLabelStatusesDataType = 'array';
   /**

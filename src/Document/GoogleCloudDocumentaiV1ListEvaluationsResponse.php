@@ -20,6 +20,10 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1ListEvaluationsResponse extends \Google\Collection
 {
   protected $collection_key = 'evaluations';
+  /**
+   * @var GoogleCloudDocumentaiV1Evaluation[]
+   */
+  public $evaluations;
   protected $evaluationsType = GoogleCloudDocumentaiV1Evaluation::class;
   protected $evaluationsDataType = 'array';
   /**

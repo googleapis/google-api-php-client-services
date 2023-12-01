@@ -24,12 +24,20 @@ class GoogleCloudDocumentaiV1TrainProcessorVersionMetadataDatasetValidation exte
    * @var int
    */
   public $datasetErrorCount;
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $datasetErrors;
   protected $datasetErrorsType = GoogleRpcStatus::class;
   protected $datasetErrorsDataType = 'array';
   /**
    * @var int
    */
   public $documentErrorCount;
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $documentErrors;
   protected $documentErrorsType = GoogleRpcStatus::class;
   protected $documentErrorsDataType = 'array';
 

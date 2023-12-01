@@ -28,8 +28,16 @@ class GoogleCloudDocumentaiV1EvaluationMultiConfidenceMetrics extends \Google\Co
    * @var float
    */
   public $auprcExact;
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics[]
+   */
+  public $confidenceLevelMetrics;
   protected $confidenceLevelMetricsType = GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics::class;
   protected $confidenceLevelMetricsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics[]
+   */
+  public $confidenceLevelMetricsExact;
   protected $confidenceLevelMetricsExactType = GoogleCloudDocumentaiV1EvaluationConfidenceLevelMetrics::class;
   protected $confidenceLevelMetricsExactDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class GoogleCloudDocumentaiUiv1beta3ImportDocumentsMetadataImportConfigValidatio
    * @var string
    */
   public $inputGcsSource;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

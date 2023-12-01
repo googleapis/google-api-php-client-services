@@ -20,10 +20,22 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualDocumentResyncStatuses';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
+   */
+  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus[]
+   */
+  public $datasetResyncStatuses;
   protected $datasetResyncStatusesType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataDatasetResyncStatus::class;
   protected $datasetResyncStatusesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus[]
+   */
+  public $individualDocumentResyncStatuses;
   protected $individualDocumentResyncStatusesType = GoogleCloudDocumentaiUiv1beta3ResyncDatasetMetadataIndividualDocumentResyncStatus::class;
   protected $individualDocumentResyncStatusesDataType = 'array';
 
