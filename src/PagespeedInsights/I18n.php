@@ -19,6 +19,10 @@ namespace Google\Service\PagespeedInsights;
 
 class I18n extends \Google\Model
 {
+  /**
+   * @var RendererFormattedStrings
+   */
+  public $rendererFormattedStrings;
   protected $rendererFormattedStringsType = RendererFormattedStrings::class;
   protected $rendererFormattedStringsDataType = '';
 

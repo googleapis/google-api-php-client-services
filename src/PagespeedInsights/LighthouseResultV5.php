@@ -20,16 +20,40 @@ namespace Google\Service\PagespeedInsights;
 class LighthouseResultV5 extends \Google\Collection
 {
   protected $collection_key = 'stackPacks';
+  /**
+   * @var LighthouseAuditResultV5[]
+   */
+  public $audits;
   protected $auditsType = LighthouseAuditResultV5::class;
   protected $auditsDataType = 'map';
+  /**
+   * @var Categories
+   */
+  public $categories;
   protected $categoriesType = Categories::class;
   protected $categoriesDataType = '';
+  /**
+   * @var CategoryGroupV5[]
+   */
+  public $categoryGroups;
   protected $categoryGroupsType = CategoryGroupV5::class;
   protected $categoryGroupsDataType = 'map';
+  /**
+   * @var ConfigSettings
+   */
+  public $configSettings;
   protected $configSettingsType = ConfigSettings::class;
   protected $configSettingsDataType = '';
+  /**
+   * @var LhrEntity[]
+   */
+  public $entities;
   protected $entitiesType = LhrEntity::class;
   protected $entitiesDataType = 'array';
+  /**
+   * @var Environment
+   */
+  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
   /**
@@ -48,6 +72,10 @@ class LighthouseResultV5 extends \Google\Collection
    * @var array
    */
   public $fullPageScreenshot;
+  /**
+   * @var I18n
+   */
+  public $i18n;
   protected $i18nType = I18n::class;
   protected $i18nDataType = '';
   /**
@@ -66,10 +94,22 @@ class LighthouseResultV5 extends \Google\Collection
    * @var array[]
    */
   public $runWarnings;
+  /**
+   * @var RuntimeError
+   */
+  public $runtimeError;
   protected $runtimeErrorType = RuntimeError::class;
   protected $runtimeErrorDataType = '';
+  /**
+   * @var StackPack[]
+   */
+  public $stackPacks;
   protected $stackPacksType = StackPack::class;
   protected $stackPacksDataType = 'array';
+  /**
+   * @var Timing
+   */
+  public $timing;
   protected $timingType = Timing::class;
   protected $timingDataType = '';
   /**

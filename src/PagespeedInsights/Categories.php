@@ -22,14 +22,34 @@ class Categories extends \Google\Model
   protected $internal_gapi_mappings = [
         "bestPractices" => "best-practices",
   ];
+  /**
+   * @var LighthouseCategoryV5
+   */
+  public $accessibility;
   protected $accessibilityType = LighthouseCategoryV5::class;
   protected $accessibilityDataType = '';
+  /**
+   * @var LighthouseCategoryV5
+   */
+  public $bestPractices;
   protected $bestPracticesType = LighthouseCategoryV5::class;
   protected $bestPracticesDataType = '';
+  /**
+   * @var LighthouseCategoryV5
+   */
+  public $performance;
   protected $performanceType = LighthouseCategoryV5::class;
   protected $performanceDataType = '';
+  /**
+   * @var LighthouseCategoryV5
+   */
+  public $pwa;
   protected $pwaType = LighthouseCategoryV5::class;
   protected $pwaDataType = '';
+  /**
+   * @var LighthouseCategoryV5
+   */
+  public $seo;
   protected $seoType = LighthouseCategoryV5::class;
   protected $seoDataType = '';
 

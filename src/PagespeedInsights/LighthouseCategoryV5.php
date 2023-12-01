@@ -20,6 +20,10 @@ namespace Google\Service\PagespeedInsights;
 class LighthouseCategoryV5 extends \Google\Collection
 {
   protected $collection_key = 'auditRefs';
+  /**
+   * @var AuditRefs[]
+   */
+  public $auditRefs;
   protected $auditRefsType = AuditRefs::class;
   protected $auditRefsDataType = 'array';
   /**
