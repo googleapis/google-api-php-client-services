@@ -20,12 +20,20 @@ namespace Google\Service\OnDemandScanning;
 class AttestationOccurrence extends \Google\Collection
 {
   protected $collection_key = 'signatures';
+  /**
+   * @var Jwt[]
+   */
+  public $jwts;
   protected $jwtsType = Jwt::class;
   protected $jwtsDataType = 'array';
   /**
    * @var string
    */
   public $serializedPayload;
+  /**
+   * @var Signature[]
+   */
+  public $signatures;
   protected $signaturesType = Signature::class;
   protected $signaturesDataType = 'array';
 

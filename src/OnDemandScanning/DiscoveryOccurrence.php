@@ -20,14 +20,26 @@ namespace Google\Service\OnDemandScanning;
 class DiscoveryOccurrence extends \Google\Collection
 {
   protected $collection_key = 'analysisError';
+  /**
+   * @var AnalysisCompleted
+   */
+  public $analysisCompleted;
   protected $analysisCompletedType = AnalysisCompleted::class;
   protected $analysisCompletedDataType = '';
+  /**
+   * @var Status[]
+   */
+  public $analysisError;
   protected $analysisErrorType = Status::class;
   protected $analysisErrorDataType = 'array';
   /**
    * @var string
    */
   public $analysisStatus;
+  /**
+   * @var Status
+   */
+  public $analysisStatusError;
   protected $analysisStatusErrorType = Status::class;
   protected $analysisStatusErrorDataType = '';
   /**
@@ -46,6 +58,10 @@ class DiscoveryOccurrence extends \Google\Collection
    * @var string
    */
   public $lastScanTime;
+  /**
+   * @var SBOMStatus
+   */
+  public $sbomStatus;
   protected $sbomStatusType = SBOMStatus::class;
   protected $sbomStatusDataType = '';
 

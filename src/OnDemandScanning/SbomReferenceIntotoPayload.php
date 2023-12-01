@@ -27,11 +27,19 @@ class SbomReferenceIntotoPayload extends \Google\Collection
    * @var string
    */
   public $type;
+  /**
+   * @var SbomReferenceIntotoPredicate
+   */
+  public $predicate;
   protected $predicateDataType = '';
   /**
    * @var string
    */
   public $predicateType;
+  /**
+   * @var Subject[]
+   */
+  public $subject;
   protected $subjectType = Subject::class;
   protected $subjectDataType = 'array';
 

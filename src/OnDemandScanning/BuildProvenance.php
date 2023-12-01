@@ -28,8 +28,16 @@ class BuildProvenance extends \Google\Collection
    * @var string
    */
   public $builderVersion;
+  /**
+   * @var Artifact[]
+   */
+  public $builtArtifacts;
   protected $builtArtifactsType = Artifact::class;
   protected $builtArtifactsDataType = 'array';
+  /**
+   * @var Command[]
+   */
+  public $commands;
   protected $commandsType = Command::class;
   protected $commandsDataType = 'array';
   /**
@@ -56,6 +64,10 @@ class BuildProvenance extends \Google\Collection
    * @var string
    */
   public $projectId;
+  /**
+   * @var Source
+   */
+  public $sourceProvenance;
   protected $sourceProvenanceType = Source::class;
   protected $sourceProvenanceDataType = '';
   /**

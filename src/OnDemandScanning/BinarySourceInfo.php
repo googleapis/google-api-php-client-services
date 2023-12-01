@@ -19,8 +19,16 @@ namespace Google\Service\OnDemandScanning;
 
 class BinarySourceInfo extends \Google\Model
 {
+  /**
+   * @var PackageVersion
+   */
+  public $binaryVersion;
   protected $binaryVersionType = PackageVersion::class;
   protected $binaryVersionDataType = '';
+  /**
+   * @var PackageVersion
+   */
+  public $sourceVersion;
   protected $sourceVersionType = PackageVersion::class;
   protected $sourceVersionDataType = '';
 

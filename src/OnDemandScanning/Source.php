@@ -20,14 +20,26 @@ namespace Google\Service\OnDemandScanning;
 class Source extends \Google\Collection
 {
   protected $collection_key = 'additionalContexts';
+  /**
+   * @var SourceContext[]
+   */
+  public $additionalContexts;
   protected $additionalContextsType = SourceContext::class;
   protected $additionalContextsDataType = 'array';
   /**
    * @var string
    */
   public $artifactStorageSourceUri;
+  /**
+   * @var SourceContext
+   */
+  public $context;
   protected $contextType = SourceContext::class;
   protected $contextDataType = '';
+  /**
+   * @var FileHashes[]
+   */
+  public $fileHashes;
   protected $fileHashesType = FileHashes::class;
   protected $fileHashesDataType = 'map';
 

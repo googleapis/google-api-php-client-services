@@ -31,6 +31,10 @@ class SlsaMetadata extends \Google\Model
    * @var string
    */
   public $buildStartedOn;
+  /**
+   * @var SlsaCompleteness
+   */
+  public $completeness;
   protected $completenessType = SlsaCompleteness::class;
   protected $completenessDataType = '';
   /**

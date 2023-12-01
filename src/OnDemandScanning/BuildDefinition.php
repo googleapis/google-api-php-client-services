@@ -32,6 +32,10 @@ class BuildDefinition extends \Google\Collection
    * @var array[]
    */
   public $internalParameters;
+  /**
+   * @var ResourceDescriptor[]
+   */
+  public $resolvedDependencies;
   protected $resolvedDependenciesType = ResourceDescriptor::class;
   protected $resolvedDependenciesDataType = 'array';
 
