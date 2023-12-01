@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListAdvertisersResponse extends \Google\Collection
 {
   protected $collection_key = 'advertisers';
+  /**
+   * @var Advertiser[]
+   */
+  public $advertisers;
   protected $advertisersType = Advertiser::class;
   protected $advertisersDataType = 'array';
   /**

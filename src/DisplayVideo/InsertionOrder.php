@@ -24,8 +24,16 @@ class InsertionOrder extends \Google\Collection
    * @var string
    */
   public $advertiserId;
+  /**
+   * @var BiddingStrategy
+   */
+  public $bidStrategy;
   protected $bidStrategyType = BiddingStrategy::class;
   protected $bidStrategyDataType = '';
+  /**
+   * @var InsertionOrderBudget
+   */
+  public $budget;
   protected $budgetType = InsertionOrderBudget::class;
   protected $budgetDataType = '';
   /**
@@ -40,6 +48,10 @@ class InsertionOrder extends \Google\Collection
    * @var string
    */
   public $entityStatus;
+  /**
+   * @var FrequencyCap
+   */
+  public $frequencyCap;
   protected $frequencyCapType = FrequencyCap::class;
   protected $frequencyCapDataType = '';
   /**
@@ -50,16 +62,32 @@ class InsertionOrder extends \Google\Collection
    * @var string
    */
   public $insertionOrderType;
+  /**
+   * @var IntegrationDetails
+   */
+  public $integrationDetails;
   protected $integrationDetailsType = IntegrationDetails::class;
   protected $integrationDetailsDataType = '';
+  /**
+   * @var Kpi
+   */
+  public $kpi;
   protected $kpiType = Kpi::class;
   protected $kpiDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Pacing
+   */
+  public $pacing;
   protected $pacingType = Pacing::class;
   protected $pacingDataType = '';
+  /**
+   * @var PartnerCost[]
+   */
+  public $partnerCosts;
   protected $partnerCostsType = PartnerCost::class;
   protected $partnerCostsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListCampaignsResponse extends \Google\Collection
 {
   protected $collection_key = 'campaigns';
+  /**
+   * @var Campaign[]
+   */
+  public $campaigns;
   protected $campaignsType = Campaign::class;
   protected $campaignsDataType = 'array';
   /**

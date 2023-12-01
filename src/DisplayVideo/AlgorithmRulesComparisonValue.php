@@ -23,8 +23,16 @@ class AlgorithmRulesComparisonValue extends \Google\Model
    * @var bool
    */
   public $boolValue;
+  /**
+   * @var Dimensions
+   */
+  public $creativeDimensionValue;
   protected $creativeDimensionValueType = Dimensions::class;
   protected $creativeDimensionValueDataType = '';
+  /**
+   * @var DayAndTime
+   */
+  public $dayAndTimeValue;
   protected $dayAndTimeValueType = DayAndTime::class;
   protected $dayAndTimeValueDataType = '';
   /**

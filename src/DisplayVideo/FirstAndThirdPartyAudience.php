@@ -35,6 +35,10 @@ class FirstAndThirdPartyAudience extends \Google\Model
    * @var string
    */
   public $audienceType;
+  /**
+   * @var ContactInfoList
+   */
+  public $contactInfoList;
   protected $contactInfoListType = ContactInfoList::class;
   protected $contactInfoListDataType = '';
   /**
@@ -77,6 +81,10 @@ class FirstAndThirdPartyAudience extends \Google\Model
    * @var string
    */
   public $membershipDurationDays;
+  /**
+   * @var MobileDeviceIdList
+   */
+  public $mobileDeviceIdList;
   protected $mobileDeviceIdListType = MobileDeviceIdList::class;
   protected $mobileDeviceIdListDataType = '';
   /**

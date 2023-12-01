@@ -19,6 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class AdvertiserDataAccessConfig extends \Google\Model
 {
+  /**
+   * @var AdvertiserSdfConfig
+   */
+  public $sdfConfig;
   protected $sdfConfigType = AdvertiserSdfConfig::class;
   protected $sdfConfigDataType = '';
 

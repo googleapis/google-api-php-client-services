@@ -23,6 +23,10 @@ class AdGroupAssignedTargetingOption extends \Google\Model
    * @var string
    */
   public $adGroupId;
+  /**
+   * @var AssignedTargetingOption
+   */
+  public $assignedTargetingOption;
   protected $assignedTargetingOptionType = AssignedTargetingOption::class;
   protected $assignedTargetingOptionDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class BulkListAssignedTargetingOptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'lineItemAssignedTargetingOptions';
+  /**
+   * @var LineItemAssignedTargetingOption[]
+   */
+  public $lineItemAssignedTargetingOptions;
   protected $lineItemAssignedTargetingOptionsType = LineItemAssignedTargetingOption::class;
   protected $lineItemAssignedTargetingOptionsDataType = 'array';
   /**

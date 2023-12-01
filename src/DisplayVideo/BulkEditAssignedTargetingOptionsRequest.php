@@ -20,8 +20,16 @@ namespace Google\Service\DisplayVideo;
 class BulkEditAssignedTargetingOptionsRequest extends \Google\Collection
 {
   protected $collection_key = 'lineItemIds';
+  /**
+   * @var CreateAssignedTargetingOptionsRequest[]
+   */
+  public $createRequests;
   protected $createRequestsType = CreateAssignedTargetingOptionsRequest::class;
   protected $createRequestsDataType = 'array';
+  /**
+   * @var DeleteAssignedTargetingOptionsRequest[]
+   */
+  public $deleteRequests;
   protected $deleteRequestsType = DeleteAssignedTargetingOptionsRequest::class;
   protected $deleteRequestsDataType = 'array';
   /**

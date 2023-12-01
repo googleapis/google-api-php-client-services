@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class BulkEditAssignedTargetingOptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'updatedLineItemIds';
+  /**
+   * @var Status[]
+   */
+  public $errors;
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListCustomBiddingAlgorithmRulesResponse extends \Google\Collection
 {
   protected $collection_key = 'customBiddingRules';
+  /**
+   * @var CustomBiddingAlgorithmRules[]
+   */
+  public $customBiddingRules;
   protected $customBiddingRulesType = CustomBiddingAlgorithmRules::class;
   protected $customBiddingRulesDataType = 'array';
   /**

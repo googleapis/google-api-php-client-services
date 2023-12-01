@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class BulkEditAssignedUserRolesResponse extends \Google\Collection
 {
   protected $collection_key = 'createdAssignedUserRoles';
+  /**
+   * @var AssignedUserRole[]
+   */
+  public $createdAssignedUserRoles;
   protected $createdAssignedUserRolesType = AssignedUserRole::class;
   protected $createdAssignedUserRolesDataType = 'array';
 

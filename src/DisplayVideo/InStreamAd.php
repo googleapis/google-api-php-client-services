@@ -19,6 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class InStreamAd extends \Google\Model
 {
+  /**
+   * @var CommonInStreamAttribute
+   */
+  public $commonInStreamAttribute;
   protected $commonInStreamAttributeType = CommonInStreamAttribute::class;
   protected $commonInStreamAttributeDataType = '';
   /**

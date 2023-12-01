@@ -19,6 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class LineItemFlight extends \Google\Model
 {
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   /**

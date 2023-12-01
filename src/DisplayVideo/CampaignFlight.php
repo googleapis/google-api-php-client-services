@@ -19,6 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class CampaignFlight extends \Google\Model
 {
+  /**
+   * @var DateRange
+   */
+  public $plannedDates;
   protected $plannedDatesType = DateRange::class;
   protected $plannedDatesDataType = '';
   /**

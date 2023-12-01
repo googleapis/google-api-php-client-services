@@ -19,8 +19,16 @@ namespace Google\Service\DisplayVideo;
 
 class DateRange extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class CombinedAudienceGroup extends \Google\Collection
 {
   protected $collection_key = 'settings';
+  /**
+   * @var CombinedAudienceTargetingSetting[]
+   */
+  public $settings;
   protected $settingsType = CombinedAudienceTargetingSetting::class;
   protected $settingsDataType = 'array';
 

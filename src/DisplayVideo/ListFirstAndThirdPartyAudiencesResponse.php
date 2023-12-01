@@ -20,6 +20,10 @@ namespace Google\Service\DisplayVideo;
 class ListFirstAndThirdPartyAudiencesResponse extends \Google\Collection
 {
   protected $collection_key = 'firstAndThirdPartyAudiences';
+  /**
+   * @var FirstAndThirdPartyAudience[]
+   */
+  public $firstAndThirdPartyAudiences;
   protected $firstAndThirdPartyAudiencesType = FirstAndThirdPartyAudience::class;
   protected $firstAndThirdPartyAudiencesDataType = 'array';
   /**
