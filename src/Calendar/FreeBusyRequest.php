@@ -28,6 +28,10 @@ class FreeBusyRequest extends \Google\Collection
    * @var int
    */
   public $groupExpansionMax;
+  /**
+   * @var FreeBusyRequestItem[]
+   */
+  public $items;
   protected $itemsType = FreeBusyRequestItem::class;
   protected $itemsDataType = 'array';
   /**

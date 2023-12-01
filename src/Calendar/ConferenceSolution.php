@@ -23,6 +23,10 @@ class ConferenceSolution extends \Google\Model
    * @var string
    */
   public $iconUri;
+  /**
+   * @var ConferenceSolutionKey
+   */
+  public $key;
   protected $keyType = ConferenceSolutionKey::class;
   protected $keyDataType = '';
   /**

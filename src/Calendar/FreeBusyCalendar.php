@@ -20,8 +20,16 @@ namespace Google\Service\Calendar;
 class FreeBusyCalendar extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var TimePeriod[]
+   */
+  public $busy;
   protected $busyType = TimePeriod::class;
   protected $busyDataType = 'array';
+  /**
+   * @var Error[]
+   */
+  public $errors;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
 

@@ -19,12 +19,20 @@ namespace Google\Service\Calendar;
 
 class EventWorkingLocationProperties extends \Google\Model
 {
+  /**
+   * @var EventWorkingLocationPropertiesCustomLocation
+   */
+  public $customLocation;
   protected $customLocationType = EventWorkingLocationPropertiesCustomLocation::class;
   protected $customLocationDataType = '';
   /**
    * @var array
    */
   public $homeOffice;
+  /**
+   * @var EventWorkingLocationPropertiesOfficeLocation
+   */
+  public $officeLocation;
   protected $officeLocationType = EventWorkingLocationPropertiesOfficeLocation::class;
   protected $officeLocationDataType = '';
   /**

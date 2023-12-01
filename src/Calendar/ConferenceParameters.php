@@ -19,6 +19,10 @@ namespace Google\Service\Calendar;
 
 class ConferenceParameters extends \Google\Model
 {
+  /**
+   * @var ConferenceParametersAddOnParameters
+   */
+  public $addOnParameters;
   protected $addOnParametersType = ConferenceParametersAddOnParameters::class;
   protected $addOnParametersDataType = '';
 

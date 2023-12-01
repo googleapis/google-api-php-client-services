@@ -200,11 +200,7 @@ class Events extends \Google\Service\Resource
    * @opt_param string eventTypes Event types to return. Optional. Possible values
    * are: - "default"  - "focusTime"  - "outOfOffice"  - "workingLocation"This
    * parameter can be repeated multiple times to return events of different types.
-   * Currently, these are the only allowed values for this field:  - ["default",
-   * "focusTime", "outOfOffice"]  - ["default", "focusTime", "outOfOffice",
-   * "workingLocation"]  - ["workingLocation"] The default is ["default",
-   * "focusTime", "outOfOffice"]. Additional combinations of these four event
-   * types will be made available in later releases.
+   * The default is ["default", "focusTime", "outOfOffice"].
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
@@ -438,11 +434,7 @@ class Events extends \Google\Service\Resource
    * @opt_param string eventTypes Event types to return. Optional. Possible values
    * are: - "default"  - "focusTime"  - "outOfOffice"  - "workingLocation"This
    * parameter can be repeated multiple times to return events of different types.
-   * Currently, these are the only allowed values for this field:  - ["default",
-   * "focusTime", "outOfOffice"]  - ["default", "focusTime", "outOfOffice",
-   * "workingLocation"]  - ["workingLocation"] The default is ["default",
-   * "focusTime", "outOfOffice"]. Additional combinations of these four event
-   * types will be made available in later releases.
+   * The default is ["default", "focusTime", "outOfOffice"].
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.

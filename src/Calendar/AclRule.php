@@ -35,6 +35,10 @@ class AclRule extends \Google\Model
    * @var string
    */
   public $role;
+  /**
+   * @var AclRuleScope
+   */
+  public $scope;
   protected $scopeType = AclRuleScope::class;
   protected $scopeDataType = '';
 

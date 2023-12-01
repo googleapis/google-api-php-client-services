@@ -24,6 +24,10 @@ class Events extends \Google\Collection
    * @var string
    */
   public $accessRole;
+  /**
+   * @var EventReminder[]
+   */
+  public $defaultReminders;
   protected $defaultRemindersType = EventReminder::class;
   protected $defaultRemindersDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class Events extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var Event[]
+   */
+  public $items;
   protected $itemsType = Event::class;
   protected $itemsDataType = 'array';
   /**

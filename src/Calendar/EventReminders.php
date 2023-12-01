@@ -20,6 +20,10 @@ namespace Google\Service\Calendar;
 class EventReminders extends \Google\Collection
 {
   protected $collection_key = 'overrides';
+  /**
+   * @var EventReminder[]
+   */
+  public $overrides;
   protected $overridesType = EventReminder::class;
   protected $overridesDataType = 'array';
   /**

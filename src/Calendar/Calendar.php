@@ -19,6 +19,10 @@ namespace Google\Service\Calendar;
 
 class Calendar extends \Google\Model
 {
+  /**
+   * @var ConferenceProperties
+   */
+  public $conferenceProperties;
   protected $conferencePropertiesType = ConferenceProperties::class;
   protected $conferencePropertiesDataType = '';
   /**

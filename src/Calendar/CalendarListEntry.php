@@ -32,8 +32,16 @@ class CalendarListEntry extends \Google\Collection
    * @var string
    */
   public $colorId;
+  /**
+   * @var ConferenceProperties
+   */
+  public $conferenceProperties;
   protected $conferencePropertiesType = ConferenceProperties::class;
   protected $conferencePropertiesDataType = '';
+  /**
+   * @var EventReminder[]
+   */
+  public $defaultReminders;
   protected $defaultRemindersType = EventReminder::class;
   protected $defaultRemindersDataType = 'array';
   /**
@@ -68,6 +76,10 @@ class CalendarListEntry extends \Google\Collection
    * @var string
    */
   public $location;
+  /**
+   * @var CalendarListEntryNotificationSettings
+   */
+  public $notificationSettings;
   protected $notificationSettingsType = CalendarListEntryNotificationSettings::class;
   protected $notificationSettingsDataType = '';
   /**

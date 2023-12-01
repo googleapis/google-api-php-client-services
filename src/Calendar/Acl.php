@@ -24,6 +24,10 @@ class Acl extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var AclRule[]
+   */
+  public $items;
   protected $itemsType = AclRule::class;
   protected $itemsDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class Settings extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var Setting[]
+   */
+  public $items;
   protected $itemsType = Setting::class;
   protected $itemsDataType = 'array';
   /**
