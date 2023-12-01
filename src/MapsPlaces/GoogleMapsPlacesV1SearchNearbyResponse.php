@@ -20,6 +20,10 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1SearchNearbyResponse extends \Google\Collection
 {
   protected $collection_key = 'places';
+  /**
+   * @var GoogleMapsPlacesV1Place[]
+   */
+  public $places;
   protected $placesType = GoogleMapsPlacesV1Place::class;
   protected $placesDataType = 'array';
 

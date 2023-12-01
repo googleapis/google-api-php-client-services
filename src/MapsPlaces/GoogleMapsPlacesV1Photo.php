@@ -20,6 +20,10 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1Photo extends \Google\Collection
 {
   protected $collection_key = 'authorAttributions';
+  /**
+   * @var GoogleMapsPlacesV1AuthorAttribution[]
+   */
+  public $authorAttributions;
   protected $authorAttributionsType = GoogleMapsPlacesV1AuthorAttribution::class;
   protected $authorAttributionsDataType = 'array';
   /**

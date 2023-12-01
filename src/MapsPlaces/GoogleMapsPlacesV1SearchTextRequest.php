@@ -28,8 +28,16 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleMapsPlacesV1SearchTextRequestLocationBias
+   */
+  public $locationBias;
   protected $locationBiasType = GoogleMapsPlacesV1SearchTextRequestLocationBias::class;
   protected $locationBiasDataType = '';
+  /**
+   * @var GoogleMapsPlacesV1SearchTextRequestLocationRestriction
+   */
+  public $locationRestriction;
   protected $locationRestrictionType = GoogleMapsPlacesV1SearchTextRequestLocationRestriction::class;
   protected $locationRestrictionDataType = '';
   /**

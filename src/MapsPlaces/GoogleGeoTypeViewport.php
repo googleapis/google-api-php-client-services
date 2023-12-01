@@ -19,8 +19,16 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleGeoTypeViewport extends \Google\Model
 {
+  /**
+   * @var GoogleTypeLatLng
+   */
+  public $high;
   protected $highType = GoogleTypeLatLng::class;
   protected $highDataType = '';
+  /**
+   * @var GoogleTypeLatLng
+   */
+  public $low;
   protected $lowType = GoogleTypeLatLng::class;
   protected $lowDataType = '';
 

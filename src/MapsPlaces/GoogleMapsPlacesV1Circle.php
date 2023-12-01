@@ -19,6 +19,10 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleMapsPlacesV1Circle extends \Google\Model
 {
+  /**
+   * @var GoogleTypeLatLng
+   */
+  public $center;
   protected $centerType = GoogleTypeLatLng::class;
   protected $centerDataType = '';
   public $radius;

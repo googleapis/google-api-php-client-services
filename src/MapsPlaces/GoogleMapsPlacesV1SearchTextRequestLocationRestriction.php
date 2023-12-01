@@ -19,6 +19,10 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleMapsPlacesV1SearchTextRequestLocationRestriction extends \Google\Model
 {
+  /**
+   * @var GoogleGeoTypeViewport
+   */
+  public $rectangle;
   protected $rectangleType = GoogleGeoTypeViewport::class;
   protected $rectangleDataType = '';
 

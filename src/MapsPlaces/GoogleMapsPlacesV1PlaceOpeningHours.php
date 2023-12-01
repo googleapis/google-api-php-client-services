@@ -24,12 +24,20 @@ class GoogleMapsPlacesV1PlaceOpeningHours extends \Google\Collection
    * @var bool
    */
   public $openNow;
+  /**
+   * @var GoogleMapsPlacesV1PlaceOpeningHoursPeriod[]
+   */
+  public $periods;
   protected $periodsType = GoogleMapsPlacesV1PlaceOpeningHoursPeriod::class;
   protected $periodsDataType = 'array';
   /**
    * @var string
    */
   public $secondaryHoursType;
+  /**
+   * @var GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay[]
+   */
+  public $specialDays;
   protected $specialDaysType = GoogleMapsPlacesV1PlaceOpeningHoursSpecialDay::class;
   protected $specialDaysDataType = 'array';
   /**

@@ -19,8 +19,16 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleMapsPlacesV1SearchTextRequestLocationBias extends \Google\Model
 {
+  /**
+   * @var GoogleMapsPlacesV1Circle
+   */
+  public $circle;
   protected $circleType = GoogleMapsPlacesV1Circle::class;
   protected $circleDataType = '';
+  /**
+   * @var GoogleGeoTypeViewport
+   */
+  public $rectangle;
   protected $rectangleType = GoogleGeoTypeViewport::class;
   protected $rectangleDataType = '';
 

@@ -19,8 +19,16 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleMapsPlacesV1PlaceOpeningHoursPeriod extends \Google\Model
 {
+  /**
+   * @var GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint
+   */
+  public $close;
   protected $closeType = GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint::class;
   protected $closeDataType = '';
+  /**
+   * @var GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint
+   */
+  public $open;
   protected $openType = GoogleMapsPlacesV1PlaceOpeningHoursPeriodPoint::class;
   protected $openDataType = '';
 

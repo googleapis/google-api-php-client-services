@@ -40,6 +40,10 @@ class GoogleMapsPlacesV1SearchNearbyRequest extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleMapsPlacesV1SearchNearbyRequestLocationRestriction
+   */
+  public $locationRestriction;
   protected $locationRestrictionType = GoogleMapsPlacesV1SearchNearbyRequestLocationRestriction::class;
   protected $locationRestrictionDataType = '';
   /**
