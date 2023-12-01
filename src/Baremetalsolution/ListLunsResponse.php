@@ -20,6 +20,10 @@ namespace Google\Service\Baremetalsolution;
 class ListLunsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Lun[]
+   */
+  public $luns;
   protected $lunsType = Lun::class;
   protected $lunsDataType = 'array';
   /**

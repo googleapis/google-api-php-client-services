@@ -24,6 +24,10 @@ class ListOSImagesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var OSImage[]
+   */
+  public $osImages;
   protected $osImagesType = OSImage::class;
   protected $osImagesDataType = 'array';
 

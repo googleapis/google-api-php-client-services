@@ -100,6 +100,10 @@ class Volume extends \Google\Collection
    * @var bool
    */
   public $snapshotEnabled;
+  /**
+   * @var SnapshotReservationDetail
+   */
+  public $snapshotReservationDetail;
   protected $snapshotReservationDetailType = SnapshotReservationDetail::class;
   protected $snapshotReservationDetailDataType = '';
   /**

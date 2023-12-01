@@ -20,6 +20,10 @@ namespace Google\Service\Baremetalsolution;
 class ListNetworksResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Network[]
+   */
+  public $networks;
   protected $networksType = Network::class;
   protected $networksDataType = 'array';
   /**

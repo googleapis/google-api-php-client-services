@@ -48,6 +48,10 @@ class Network extends \Google\Collection
    * @var string[]
    */
   public $macAddress;
+  /**
+   * @var NetworkMountPoint[]
+   */
+  public $mountPoints;
   protected $mountPointsType = NetworkMountPoint::class;
   protected $mountPointsDataType = 'array';
   /**
@@ -58,6 +62,10 @@ class Network extends \Google\Collection
    * @var string
    */
   public $pod;
+  /**
+   * @var NetworkAddressReservation[]
+   */
+  public $reservations;
   protected $reservationsType = NetworkAddressReservation::class;
   protected $reservationsDataType = 'array';
   /**
@@ -76,6 +84,10 @@ class Network extends \Google\Collection
    * @var string
    */
   public $vlanId;
+  /**
+   * @var VRF
+   */
+  public $vrf;
   protected $vrfType = VRF::class;
   protected $vrfDataType = '';
   /**

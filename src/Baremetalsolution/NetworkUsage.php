@@ -20,6 +20,10 @@ namespace Google\Service\Baremetalsolution;
 class NetworkUsage extends \Google\Collection
 {
   protected $collection_key = 'usedIps';
+  /**
+   * @var Network
+   */
+  public $network;
   protected $networkType = Network::class;
   protected $networkDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Baremetalsolution;
 class ListNetworkUsageResponse extends \Google\Collection
 {
   protected $collection_key = 'networks';
+  /**
+   * @var NetworkUsage[]
+   */
+  public $networks;
   protected $networksType = NetworkUsage::class;
   protected $networksDataType = 'array';
 

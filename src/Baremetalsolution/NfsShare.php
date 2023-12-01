@@ -20,6 +20,10 @@ namespace Google\Service\Baremetalsolution;
 class NfsShare extends \Google\Collection
 {
   protected $collection_key = 'allowedClients';
+  /**
+   * @var AllowedClient[]
+   */
+  public $allowedClients;
   protected $allowedClientsType = AllowedClient::class;
   protected $allowedClientsDataType = 'array';
   /**

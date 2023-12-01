@@ -36,6 +36,10 @@ class ProvisioningConfig extends \Google\Collection
    * @var string
    */
   public $handoverServiceAccount;
+  /**
+   * @var InstanceConfig[]
+   */
+  public $instances;
   protected $instancesType = InstanceConfig::class;
   protected $instancesDataType = 'array';
   /**
@@ -46,6 +50,10 @@ class ProvisioningConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var NetworkConfig[]
+   */
+  public $networks;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
   /**
@@ -68,6 +76,10 @@ class ProvisioningConfig extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VolumeConfig[]
+   */
+  public $volumes;
   protected $volumesType = VolumeConfig::class;
   protected $volumesDataType = 'array';
   /**
