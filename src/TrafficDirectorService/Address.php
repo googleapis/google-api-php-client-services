@@ -19,10 +19,22 @@ namespace Google\Service\TrafficDirectorService;
 
 class Address extends \Google\Model
 {
+  /**
+   * @var EnvoyInternalAddress
+   */
+  public $envoyInternalAddress;
   protected $envoyInternalAddressType = EnvoyInternalAddress::class;
   protected $envoyInternalAddressDataType = '';
+  /**
+   * @var Pipe
+   */
+  public $pipe;
   protected $pipeType = Pipe::class;
   protected $pipeDataType = '';
+  /**
+   * @var SocketAddress
+   */
+  public $socketAddress;
   protected $socketAddressType = SocketAddress::class;
   protected $socketAddressDataType = '';
 

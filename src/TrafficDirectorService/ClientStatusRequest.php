@@ -24,8 +24,16 @@ class ClientStatusRequest extends \Google\Collection
    * @var bool
    */
   public $excludeResourceContents;
+  /**
+   * @var Node
+   */
+  public $node;
   protected $nodeType = Node::class;
   protected $nodeDataType = '';
+  /**
+   * @var NodeMatcher[]
+   */
+  public $nodeMatchers;
   protected $nodeMatchersType = NodeMatcher::class;
   protected $nodeMatchersDataType = 'array';
 

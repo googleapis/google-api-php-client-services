@@ -27,6 +27,10 @@ class DynamicCluster extends \Google\Model
    * @var array[]
    */
   public $cluster;
+  /**
+   * @var UpdateFailureState
+   */
+  public $errorState;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
   /**

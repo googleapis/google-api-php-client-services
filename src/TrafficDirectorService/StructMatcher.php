@@ -20,8 +20,16 @@ namespace Google\Service\TrafficDirectorService;
 class StructMatcher extends \Google\Collection
 {
   protected $collection_key = 'path';
+  /**
+   * @var PathSegment[]
+   */
+  public $path;
   protected $pathType = PathSegment::class;
   protected $pathDataType = 'array';
+  /**
+   * @var ValueMatcher
+   */
+  public $value;
   protected $valueType = ValueMatcher::class;
   protected $valueDataType = '';
 

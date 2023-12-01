@@ -35,6 +35,10 @@ class StringMatcher extends \Google\Model
    * @var string
    */
   public $prefix;
+  /**
+   * @var RegexMatcher
+   */
+  public $safeRegex;
   protected $safeRegexType = RegexMatcher::class;
   protected $safeRegexDataType = '';
   /**

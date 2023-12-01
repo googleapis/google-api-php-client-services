@@ -20,8 +20,16 @@ namespace Google\Service\TrafficDirectorService;
 class RoutesConfigDump extends \Google\Collection
 {
   protected $collection_key = 'staticRouteConfigs';
+  /**
+   * @var DynamicRouteConfig[]
+   */
+  public $dynamicRouteConfigs;
   protected $dynamicRouteConfigsType = DynamicRouteConfig::class;
   protected $dynamicRouteConfigsDataType = 'array';
+  /**
+   * @var StaticRouteConfig[]
+   */
+  public $staticRouteConfigs;
   protected $staticRouteConfigsType = StaticRouteConfig::class;
   protected $staticRouteConfigsDataType = 'array';
 

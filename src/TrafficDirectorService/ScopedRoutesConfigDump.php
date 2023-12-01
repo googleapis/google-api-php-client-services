@@ -20,8 +20,16 @@ namespace Google\Service\TrafficDirectorService;
 class ScopedRoutesConfigDump extends \Google\Collection
 {
   protected $collection_key = 'inlineScopedRouteConfigs';
+  /**
+   * @var DynamicScopedRouteConfigs[]
+   */
+  public $dynamicScopedRouteConfigs;
   protected $dynamicScopedRouteConfigsType = DynamicScopedRouteConfigs::class;
   protected $dynamicScopedRouteConfigsDataType = 'array';
+  /**
+   * @var InlineScopedRouteConfigs[]
+   */
+  public $inlineScopedRouteConfigs;
   protected $inlineScopedRouteConfigsType = InlineScopedRouteConfigs::class;
   protected $inlineScopedRouteConfigsDataType = 'array';
 

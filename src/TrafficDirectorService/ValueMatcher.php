@@ -23,18 +23,38 @@ class ValueMatcher extends \Google\Model
    * @var bool
    */
   public $boolMatch;
+  /**
+   * @var DoubleMatcher
+   */
+  public $doubleMatch;
   protected $doubleMatchType = DoubleMatcher::class;
   protected $doubleMatchDataType = '';
+  /**
+   * @var ListMatcher
+   */
+  public $listMatch;
   protected $listMatchType = ListMatcher::class;
   protected $listMatchDataType = '';
+  /**
+   * @var NullMatch
+   */
+  public $nullMatch;
   protected $nullMatchType = NullMatch::class;
   protected $nullMatchDataType = '';
+  /**
+   * @var OrMatcher
+   */
+  public $orMatch;
   protected $orMatchType = OrMatcher::class;
   protected $orMatchDataType = '';
   /**
    * @var bool
    */
   public $presentMatch;
+  /**
+   * @var StringMatcher
+   */
+  public $stringMatch;
   protected $stringMatchType = StringMatcher::class;
   protected $stringMatchDataType = '';
 

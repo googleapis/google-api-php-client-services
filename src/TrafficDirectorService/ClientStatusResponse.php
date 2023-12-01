@@ -20,6 +20,10 @@ namespace Google\Service\TrafficDirectorService;
 class ClientStatusResponse extends \Google\Collection
 {
   protected $collection_key = 'config';
+  /**
+   * @var ClientConfig[]
+   */
+  public $config;
   protected $configType = ClientConfig::class;
   protected $configDataType = 'array';
 

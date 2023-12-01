@@ -20,6 +20,10 @@ namespace Google\Service\TrafficDirectorService;
 class OrMatcher extends \Google\Collection
 {
   protected $collection_key = 'valueMatchers';
+  /**
+   * @var ValueMatcher[]
+   */
+  public $valueMatchers;
   protected $valueMatchersType = ValueMatcher::class;
   protected $valueMatchersDataType = 'array';
 

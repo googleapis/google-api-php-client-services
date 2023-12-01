@@ -23,14 +23,34 @@ class PerXdsConfig extends \Google\Model
    * @var string
    */
   public $clientStatus;
+  /**
+   * @var ClustersConfigDump
+   */
+  public $clusterConfig;
   protected $clusterConfigType = ClustersConfigDump::class;
   protected $clusterConfigDataType = '';
+  /**
+   * @var EndpointsConfigDump
+   */
+  public $endpointConfig;
   protected $endpointConfigType = EndpointsConfigDump::class;
   protected $endpointConfigDataType = '';
+  /**
+   * @var ListenersConfigDump
+   */
+  public $listenerConfig;
   protected $listenerConfigType = ListenersConfigDump::class;
   protected $listenerConfigDataType = '';
+  /**
+   * @var RoutesConfigDump
+   */
+  public $routeConfig;
   protected $routeConfigType = RoutesConfigDump::class;
   protected $routeConfigDataType = '';
+  /**
+   * @var ScopedRoutesConfigDump
+   */
+  public $scopedRouteConfig;
   protected $scopedRouteConfigType = ScopedRoutesConfigDump::class;
   protected $scopedRouteConfigDataType = '';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\TrafficDirectorService;
 class EndpointsConfigDump extends \Google\Collection
 {
   protected $collection_key = 'staticEndpointConfigs';
+  /**
+   * @var DynamicEndpointConfig[]
+   */
+  public $dynamicEndpointConfigs;
   protected $dynamicEndpointConfigsType = DynamicEndpointConfig::class;
   protected $dynamicEndpointConfigsDataType = 'array';
+  /**
+   * @var StaticEndpointConfig[]
+   */
+  public $staticEndpointConfigs;
   protected $staticEndpointConfigsType = StaticEndpointConfig::class;
   protected $staticEndpointConfigsDataType = 'array';
 

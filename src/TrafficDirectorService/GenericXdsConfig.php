@@ -27,6 +27,10 @@ class GenericXdsConfig extends \Google\Model
    * @var string
    */
   public $configStatus;
+  /**
+   * @var UpdateFailureState
+   */
+  public $errorState;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
   /**

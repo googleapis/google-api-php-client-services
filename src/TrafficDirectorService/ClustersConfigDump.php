@@ -20,10 +20,22 @@ namespace Google\Service\TrafficDirectorService;
 class ClustersConfigDump extends \Google\Collection
 {
   protected $collection_key = 'staticClusters';
+  /**
+   * @var DynamicCluster[]
+   */
+  public $dynamicActiveClusters;
   protected $dynamicActiveClustersType = DynamicCluster::class;
   protected $dynamicActiveClustersDataType = 'array';
+  /**
+   * @var DynamicCluster[]
+   */
+  public $dynamicWarmingClusters;
   protected $dynamicWarmingClustersType = DynamicCluster::class;
   protected $dynamicWarmingClustersDataType = 'array';
+  /**
+   * @var StaticCluster[]
+   */
+  public $staticClusters;
   protected $staticClustersType = StaticCluster::class;
   protected $staticClustersDataType = 'array';
   /**

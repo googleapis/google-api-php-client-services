@@ -40,6 +40,10 @@ class Extension extends \Google\Collection
    * @var string[]
    */
   public $typeUrls;
+  /**
+   * @var BuildVersion
+   */
+  public $version;
   protected $versionType = BuildVersion::class;
   protected $versionDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\TrafficDirectorService;
 
 class RegexMatcher extends \Google\Model
 {
+  /**
+   * @var GoogleRE2
+   */
+  public $googleRe2;
   protected $googleRe2Type = GoogleRE2::class;
   protected $googleRe2DataType = '';
   /**
