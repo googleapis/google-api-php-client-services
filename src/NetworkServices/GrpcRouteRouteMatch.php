@@ -20,8 +20,16 @@ namespace Google\Service\NetworkServices;
 class GrpcRouteRouteMatch extends \Google\Collection
 {
   protected $collection_key = 'headers';
+  /**
+   * @var GrpcRouteHeaderMatch[]
+   */
+  public $headers;
   protected $headersType = GrpcRouteHeaderMatch::class;
   protected $headersDataType = 'array';
+  /**
+   * @var GrpcRouteMethodMatch
+   */
+  public $method;
   protected $methodType = GrpcRouteMethodMatch::class;
   protected $methodDataType = '';
 

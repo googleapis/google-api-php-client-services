@@ -48,6 +48,10 @@ class GrpcRoute extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GrpcRouteRouteRule[]
+   */
+  public $rules;
   protected $rulesType = GrpcRouteRouteRule::class;
   protected $rulesDataType = 'array';
   /**

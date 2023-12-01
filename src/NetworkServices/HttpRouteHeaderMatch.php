@@ -39,6 +39,10 @@ class HttpRouteHeaderMatch extends \Google\Model
    * @var bool
    */
   public $presentMatch;
+  /**
+   * @var HttpRouteHeaderMatchIntegerRange
+   */
+  public $rangeMatch;
   protected $rangeMatchType = HttpRouteHeaderMatchIntegerRange::class;
   protected $rangeMatchDataType = '';
   /**

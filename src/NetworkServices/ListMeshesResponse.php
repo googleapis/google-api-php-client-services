@@ -20,6 +20,10 @@ namespace Google\Service\NetworkServices;
 class ListMeshesResponse extends \Google\Collection
 {
   protected $collection_key = 'meshes';
+  /**
+   * @var Mesh[]
+   */
+  public $meshes;
   protected $meshesType = Mesh::class;
   protected $meshesDataType = 'array';
   /**

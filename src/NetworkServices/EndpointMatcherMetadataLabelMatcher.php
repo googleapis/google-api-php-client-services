@@ -24,6 +24,10 @@ class EndpointMatcherMetadataLabelMatcher extends \Google\Collection
    * @var string
    */
   public $metadataLabelMatchCriteria;
+  /**
+   * @var EndpointMatcherMetadataLabelMatcherMetadataLabels[]
+   */
+  public $metadataLabels;
   protected $metadataLabelsType = EndpointMatcherMetadataLabelMatcherMetadataLabels::class;
   protected $metadataLabelsDataType = 'array';
 

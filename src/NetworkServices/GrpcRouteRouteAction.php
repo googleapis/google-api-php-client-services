@@ -20,12 +20,28 @@ namespace Google\Service\NetworkServices;
 class GrpcRouteRouteAction extends \Google\Collection
 {
   protected $collection_key = 'destinations';
+  /**
+   * @var GrpcRouteDestination[]
+   */
+  public $destinations;
   protected $destinationsType = GrpcRouteDestination::class;
   protected $destinationsDataType = 'array';
+  /**
+   * @var GrpcRouteFaultInjectionPolicy
+   */
+  public $faultInjectionPolicy;
   protected $faultInjectionPolicyType = GrpcRouteFaultInjectionPolicy::class;
   protected $faultInjectionPolicyDataType = '';
+  /**
+   * @var GrpcRouteRetryPolicy
+   */
+  public $retryPolicy;
   protected $retryPolicyType = GrpcRouteRetryPolicy::class;
   protected $retryPolicyDataType = '';
+  /**
+   * @var GrpcRouteStatefulSessionAffinityPolicy
+   */
+  public $statefulSessionAffinity;
   protected $statefulSessionAffinityType = GrpcRouteStatefulSessionAffinityPolicy::class;
   protected $statefulSessionAffinityDataType = '';
   /**

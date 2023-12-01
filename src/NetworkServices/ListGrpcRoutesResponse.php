@@ -20,6 +20,10 @@ namespace Google\Service\NetworkServices;
 class ListGrpcRoutesResponse extends \Google\Collection
 {
   protected $collection_key = 'grpcRoutes';
+  /**
+   * @var GrpcRoute[]
+   */
+  public $grpcRoutes;
   protected $grpcRoutesType = GrpcRoute::class;
   protected $grpcRoutesDataType = 'array';
   /**

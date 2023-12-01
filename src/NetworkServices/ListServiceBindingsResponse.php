@@ -24,6 +24,10 @@ class ListServiceBindingsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ServiceBinding[]
+   */
+  public $serviceBindings;
   protected $serviceBindingsType = ServiceBinding::class;
   protected $serviceBindingsDataType = 'array';
 

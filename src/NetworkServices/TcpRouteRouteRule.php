@@ -20,8 +20,16 @@ namespace Google\Service\NetworkServices;
 class TcpRouteRouteRule extends \Google\Collection
 {
   protected $collection_key = 'matches';
+  /**
+   * @var TcpRouteRouteAction
+   */
+  public $action;
   protected $actionType = TcpRouteRouteAction::class;
   protected $actionDataType = '';
+  /**
+   * @var TcpRouteRouteMatch[]
+   */
+  public $matches;
   protected $matchesType = TcpRouteRouteMatch::class;
   protected $matchesDataType = 'array';
 

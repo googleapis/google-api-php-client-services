@@ -20,6 +20,10 @@ namespace Google\Service\NetworkServices;
 class TlsRouteRouteAction extends \Google\Collection
 {
   protected $collection_key = 'destinations';
+  /**
+   * @var TlsRouteRouteDestination[]
+   */
+  public $destinations;
   protected $destinationsType = TlsRouteRouteDestination::class;
   protected $destinationsDataType = 'array';
 

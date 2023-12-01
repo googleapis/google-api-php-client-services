@@ -20,8 +20,16 @@ namespace Google\Service\NetworkServices;
 class HttpRouteRouteRule extends \Google\Collection
 {
   protected $collection_key = 'matches';
+  /**
+   * @var HttpRouteRouteAction
+   */
+  public $action;
   protected $actionType = HttpRouteRouteAction::class;
   protected $actionDataType = '';
+  /**
+   * @var HttpRouteRouteMatch[]
+   */
+  public $matches;
   protected $matchesType = HttpRouteRouteMatch::class;
   protected $matchesDataType = 'array';
 

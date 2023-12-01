@@ -20,8 +20,16 @@ namespace Google\Service\NetworkServices;
 class GrpcRouteRouteRule extends \Google\Collection
 {
   protected $collection_key = 'matches';
+  /**
+   * @var GrpcRouteRouteAction
+   */
+  public $action;
   protected $actionType = GrpcRouteRouteAction::class;
   protected $actionDataType = '';
+  /**
+   * @var GrpcRouteRouteMatch[]
+   */
+  public $matches;
   protected $matchesType = GrpcRouteRouteMatch::class;
   protected $matchesDataType = 'array';
 

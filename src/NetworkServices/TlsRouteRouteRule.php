@@ -20,8 +20,16 @@ namespace Google\Service\NetworkServices;
 class TlsRouteRouteRule extends \Google\Collection
 {
   protected $collection_key = 'matches';
+  /**
+   * @var TlsRouteRouteAction
+   */
+  public $action;
   protected $actionType = TlsRouteRouteAction::class;
   protected $actionDataType = '';
+  /**
+   * @var TlsRouteRouteMatch[]
+   */
+  public $matches;
   protected $matchesType = TlsRouteRouteMatch::class;
   protected $matchesDataType = 'array';
 
