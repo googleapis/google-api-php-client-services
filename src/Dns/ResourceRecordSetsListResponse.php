@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class ResourceRecordSetsListResponse extends \Google\Collection
 {
   protected $collection_key = 'rrsets';
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
   /**
@@ -30,6 +34,10 @@ class ResourceRecordSetsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ResourceRecordSet[]
+   */
+  public $rrsets;
   protected $rrsetsType = ResourceRecordSet::class;
   protected $rrsetsDataType = 'array';
 

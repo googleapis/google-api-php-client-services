@@ -19,8 +19,16 @@ namespace Google\Service\Dns;
 
 class PoliciesUpdateResponse extends \Google\Model
 {
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
+  /**
+   * @var Policy
+   */
+  public $policy;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
 

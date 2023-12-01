@@ -20,8 +20,16 @@ namespace Google\Service\Dns;
 class ChangesListResponse extends \Google\Collection
 {
   protected $collection_key = 'changes';
+  /**
+   * @var Change[]
+   */
+  public $changes;
   protected $changesType = Change::class;
   protected $changesDataType = 'array';
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class ManagedZoneDnsSecConfig extends \Google\Collection
 {
   protected $collection_key = 'defaultKeySpecs';
+  /**
+   * @var DnsKeySpec[]
+   */
+  public $defaultKeySpecs;
   protected $defaultKeySpecsType = DnsKeySpec::class;
   protected $defaultKeySpecsDataType = 'array';
   /**

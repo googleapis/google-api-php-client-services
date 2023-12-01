@@ -19,12 +19,20 @@ namespace Google\Service\Dns;
 
 class RRSetRoutingPolicyPrimaryBackupPolicy extends \Google\Model
 {
+  /**
+   * @var RRSetRoutingPolicyGeoPolicy
+   */
+  public $backupGeoTargets;
   protected $backupGeoTargetsType = RRSetRoutingPolicyGeoPolicy::class;
   protected $backupGeoTargetsDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var RRSetRoutingPolicyHealthCheckTargets
+   */
+  public $primaryTargets;
   protected $primaryTargetsType = RRSetRoutingPolicyHealthCheckTargets::class;
   protected $primaryTargetsDataType = '';
   public $trickleTraffic;

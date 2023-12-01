@@ -19,8 +19,16 @@ namespace Google\Service\Dns;
 
 class OperationManagedZoneContext extends \Google\Model
 {
+  /**
+   * @var ManagedZone
+   */
+  public $newValue;
   protected $newValueType = ManagedZone::class;
   protected $newValueDataType = '';
+  /**
+   * @var ManagedZone
+   */
+  public $oldValue;
   protected $oldValueType = ManagedZone::class;
   protected $oldValueDataType = '';
 

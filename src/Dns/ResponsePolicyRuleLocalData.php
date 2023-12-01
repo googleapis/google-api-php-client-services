@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class ResponsePolicyRuleLocalData extends \Google\Collection
 {
   protected $collection_key = 'localDatas';
+  /**
+   * @var ResourceRecordSet[]
+   */
+  public $localDatas;
   protected $localDatasType = ResourceRecordSet::class;
   protected $localDatasDataType = 'array';
 

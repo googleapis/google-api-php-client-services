@@ -20,12 +20,20 @@ namespace Google\Service\Dns;
 class ResponsePolicyRulesListResponse extends \Google\Collection
 {
   protected $collection_key = 'responsePolicyRules';
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ResponsePolicyRule[]
+   */
+  public $responsePolicyRules;
   protected $responsePolicyRulesType = ResponsePolicyRule::class;
   protected $responsePolicyRulesDataType = 'array';
 

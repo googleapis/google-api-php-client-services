@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class Policy extends \Google\Collection
 {
   protected $collection_key = 'networks';
+  /**
+   * @var PolicyAlternativeNameServerConfig
+   */
+  public $alternativeNameServerConfig;
   protected $alternativeNameServerConfigType = PolicyAlternativeNameServerConfig::class;
   protected $alternativeNameServerConfigDataType = '';
   /**
@@ -46,6 +50,10 @@ class Policy extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var PolicyNetwork[]
+   */
+  public $networks;
   protected $networksType = PolicyNetwork::class;
   protected $networksDataType = 'array';
 

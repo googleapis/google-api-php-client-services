@@ -20,8 +20,16 @@ namespace Google\Service\Dns;
 class DnsKeysListResponse extends \Google\Collection
 {
   protected $collection_key = 'dnsKeys';
+  /**
+   * @var DnsKey[]
+   */
+  public $dnsKeys;
   protected $dnsKeysType = DnsKey::class;
   protected $dnsKeysDataType = 'array';
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Dns;
 class Change extends \Google\Collection
 {
   protected $collection_key = 'deletions';
+  /**
+   * @var ResourceRecordSet[]
+   */
+  public $additions;
   protected $additionsType = ResourceRecordSet::class;
   protected $additionsDataType = 'array';
+  /**
+   * @var ResourceRecordSet[]
+   */
+  public $deletions;
   protected $deletionsType = ResourceRecordSet::class;
   protected $deletionsDataType = 'array';
   /**

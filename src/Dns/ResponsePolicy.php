@@ -24,6 +24,10 @@ class ResponsePolicy extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var ResponsePolicyGKECluster[]
+   */
+  public $gkeClusters;
   protected $gkeClustersType = ResponsePolicyGKECluster::class;
   protected $gkeClustersDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class ResponsePolicy extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var ResponsePolicyNetwork[]
+   */
+  public $networks;
   protected $networksType = ResponsePolicyNetwork::class;
   protected $networksDataType = 'array';
   /**

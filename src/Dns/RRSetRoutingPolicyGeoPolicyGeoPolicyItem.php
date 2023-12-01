@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class RRSetRoutingPolicyGeoPolicyGeoPolicyItem extends \Google\Collection
 {
   protected $collection_key = 'signatureRrdatas';
+  /**
+   * @var RRSetRoutingPolicyHealthCheckTargets
+   */
+  public $healthCheckedTargets;
   protected $healthCheckedTargetsType = RRSetRoutingPolicyHealthCheckTargets::class;
   protected $healthCheckedTargetsDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class ManagedZone extends \Google\Collection
 {
   protected $collection_key = 'nameServers';
+  /**
+   * @var ManagedZoneCloudLoggingConfig
+   */
+  public $cloudLoggingConfig;
   protected $cloudLoggingConfigType = ManagedZoneCloudLoggingConfig::class;
   protected $cloudLoggingConfigDataType = '';
   /**
@@ -34,8 +38,16 @@ class ManagedZone extends \Google\Collection
    * @var string
    */
   public $dnsName;
+  /**
+   * @var ManagedZoneDnsSecConfig
+   */
+  public $dnssecConfig;
   protected $dnssecConfigType = ManagedZoneDnsSecConfig::class;
   protected $dnssecConfigDataType = '';
+  /**
+   * @var ManagedZoneForwardingConfig
+   */
+  public $forwardingConfig;
   protected $forwardingConfigType = ManagedZoneForwardingConfig::class;
   protected $forwardingConfigDataType = '';
   /**
@@ -62,12 +74,28 @@ class ManagedZone extends \Google\Collection
    * @var string[]
    */
   public $nameServers;
+  /**
+   * @var ManagedZonePeeringConfig
+   */
+  public $peeringConfig;
   protected $peeringConfigType = ManagedZonePeeringConfig::class;
   protected $peeringConfigDataType = '';
+  /**
+   * @var ManagedZonePrivateVisibilityConfig
+   */
+  public $privateVisibilityConfig;
   protected $privateVisibilityConfigType = ManagedZonePrivateVisibilityConfig::class;
   protected $privateVisibilityConfigDataType = '';
+  /**
+   * @var ManagedZoneReverseLookupConfig
+   */
+  public $reverseLookupConfig;
   protected $reverseLookupConfigType = ManagedZoneReverseLookupConfig::class;
   protected $reverseLookupConfigDataType = '';
+  /**
+   * @var ManagedZoneServiceDirectoryConfig
+   */
+  public $serviceDirectoryConfig;
   protected $serviceDirectoryConfigType = ManagedZoneServiceDirectoryConfig::class;
   protected $serviceDirectoryConfigDataType = '';
   /**

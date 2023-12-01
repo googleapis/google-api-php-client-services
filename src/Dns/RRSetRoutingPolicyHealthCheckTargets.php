@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class RRSetRoutingPolicyHealthCheckTargets extends \Google\Collection
 {
   protected $collection_key = 'internalLoadBalancers';
+  /**
+   * @var RRSetRoutingPolicyLoadBalancerTarget[]
+   */
+  public $internalLoadBalancers;
   protected $internalLoadBalancersType = RRSetRoutingPolicyLoadBalancerTarget::class;
   protected $internalLoadBalancersDataType = 'array';
 

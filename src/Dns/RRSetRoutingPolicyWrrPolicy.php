@@ -20,6 +20,10 @@ namespace Google\Service\Dns;
 class RRSetRoutingPolicyWrrPolicy extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var RRSetRoutingPolicyWrrPolicyWrrPolicyItem[]
+   */
+  public $items;
   protected $itemsType = RRSetRoutingPolicyWrrPolicyWrrPolicyItem::class;
   protected $itemsDataType = 'array';
   /**

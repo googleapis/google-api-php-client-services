@@ -19,8 +19,16 @@ namespace Google\Service\Dns;
 
 class ResponsePolicyRulesPatchResponse extends \Google\Model
 {
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
+  /**
+   * @var ResponsePolicyRule
+   */
+  public $responsePolicyRule;
   protected $responsePolicyRuleType = ResponsePolicyRule::class;
   protected $responsePolicyRuleDataType = '';
 

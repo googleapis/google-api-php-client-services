@@ -32,6 +32,10 @@ class DnsKey extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var DnsKeyDigest[]
+   */
+  public $digests;
   protected $digestsType = DnsKeyDigest::class;
   protected $digestsDataType = 'array';
   /**

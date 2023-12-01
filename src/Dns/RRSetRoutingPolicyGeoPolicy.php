@@ -24,6 +24,10 @@ class RRSetRoutingPolicyGeoPolicy extends \Google\Collection
    * @var bool
    */
   public $enableFencing;
+  /**
+   * @var RRSetRoutingPolicyGeoPolicyGeoPolicyItem[]
+   */
+  public $items;
   protected $itemsType = RRSetRoutingPolicyGeoPolicyGeoPolicyItem::class;
   protected $itemsDataType = 'array';
   /**

@@ -20,12 +20,20 @@ namespace Google\Service\Dns;
 class ManagedZonesListResponse extends \Google\Collection
 {
   protected $collection_key = 'managedZones';
+  /**
+   * @var ResponseHeader
+   */
+  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var ManagedZone[]
+   */
+  public $managedZones;
   protected $managedZonesType = ManagedZone::class;
   protected $managedZonesDataType = 'array';
   /**
