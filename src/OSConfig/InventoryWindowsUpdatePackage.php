@@ -20,6 +20,10 @@ namespace Google\Service\OSConfig;
 class InventoryWindowsUpdatePackage extends \Google\Collection
 {
   protected $collection_key = 'moreInfoUrls';
+  /**
+   * @var InventoryWindowsUpdatePackageWindowsUpdateCategory[]
+   */
+  public $categories;
   protected $categoriesType = InventoryWindowsUpdatePackageWindowsUpdateCategory::class;
   protected $categoriesDataType = 'array';
   /**

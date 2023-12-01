@@ -19,22 +19,50 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyResourcePackageResource extends \Google\Model
 {
+  /**
+   * @var OSPolicyResourcePackageResourceAPT
+   */
+  public $apt;
   protected $aptType = OSPolicyResourcePackageResourceAPT::class;
   protected $aptDataType = '';
+  /**
+   * @var OSPolicyResourcePackageResourceDeb
+   */
+  public $deb;
   protected $debType = OSPolicyResourcePackageResourceDeb::class;
   protected $debDataType = '';
   /**
    * @var string
    */
   public $desiredState;
+  /**
+   * @var OSPolicyResourcePackageResourceGooGet
+   */
+  public $googet;
   protected $googetType = OSPolicyResourcePackageResourceGooGet::class;
   protected $googetDataType = '';
+  /**
+   * @var OSPolicyResourcePackageResourceMSI
+   */
+  public $msi;
   protected $msiType = OSPolicyResourcePackageResourceMSI::class;
   protected $msiDataType = '';
+  /**
+   * @var OSPolicyResourcePackageResourceRPM
+   */
+  public $rpm;
   protected $rpmType = OSPolicyResourcePackageResourceRPM::class;
   protected $rpmDataType = '';
+  /**
+   * @var OSPolicyResourcePackageResourceYUM
+   */
+  public $yum;
   protected $yumType = OSPolicyResourcePackageResourceYUM::class;
   protected $yumDataType = '';
+  /**
+   * @var OSPolicyResourcePackageResourceZypper
+   */
+  public $zypper;
   protected $zypperType = OSPolicyResourcePackageResourceZypper::class;
   protected $zypperDataType = '';
 

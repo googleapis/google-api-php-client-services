@@ -19,6 +19,10 @@ namespace Google\Service\OSConfig;
 
 class InventoryItem extends \Google\Model
 {
+  /**
+   * @var InventorySoftwarePackage
+   */
+  public $availablePackage;
   protected $availablePackageType = InventorySoftwarePackage::class;
   protected $availablePackageDataType = '';
   /**
@@ -29,6 +33,10 @@ class InventoryItem extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var InventorySoftwarePackage
+   */
+  public $installedPackage;
   protected $installedPackageType = InventorySoftwarePackage::class;
   protected $installedPackageDataType = '';
   /**

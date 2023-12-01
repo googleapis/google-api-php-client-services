@@ -19,16 +19,32 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyResource extends \Google\Model
 {
+  /**
+   * @var OSPolicyResourceExecResource
+   */
+  public $exec;
   protected $execType = OSPolicyResourceExecResource::class;
   protected $execDataType = '';
+  /**
+   * @var OSPolicyResourceFileResource
+   */
+  public $file;
   protected $fileType = OSPolicyResourceFileResource::class;
   protected $fileDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var OSPolicyResourcePackageResource
+   */
+  public $pkg;
   protected $pkgType = OSPolicyResourcePackageResource::class;
   protected $pkgDataType = '';
+  /**
+   * @var OSPolicyResourceRepositoryResource
+   */
+  public $repository;
   protected $repositoryType = OSPolicyResourceRepositoryResource::class;
   protected $repositoryDataType = '';
 

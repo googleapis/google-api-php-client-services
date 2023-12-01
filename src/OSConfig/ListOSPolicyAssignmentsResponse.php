@@ -24,6 +24,10 @@ class ListOSPolicyAssignmentsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var OSPolicyAssignment[]
+   */
+  public $osPolicyAssignments;
   protected $osPolicyAssignmentsType = OSPolicyAssignment::class;
   protected $osPolicyAssignmentsDataType = 'array';
 

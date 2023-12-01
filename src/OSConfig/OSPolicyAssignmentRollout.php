@@ -19,6 +19,10 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyAssignmentRollout extends \Google\Model
 {
+  /**
+   * @var FixedOrPercent
+   */
+  public $disruptionBudget;
   protected $disruptionBudgetType = FixedOrPercent::class;
   protected $disruptionBudgetDataType = '';
   /**

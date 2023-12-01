@@ -23,6 +23,10 @@ class MonthlySchedule extends \Google\Model
    * @var int
    */
   public $monthDay;
+  /**
+   * @var WeekDayOfMonth
+   */
+  public $weekDayOfMonth;
   protected $weekDayOfMonthType = WeekDayOfMonth::class;
   protected $weekDayOfMonthDataType = '';
 

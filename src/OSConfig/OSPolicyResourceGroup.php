@@ -20,8 +20,16 @@ namespace Google\Service\OSConfig;
 class OSPolicyResourceGroup extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  /**
+   * @var OSPolicyInventoryFilter[]
+   */
+  public $inventoryFilters;
   protected $inventoryFiltersType = OSPolicyInventoryFilter::class;
   protected $inventoryFiltersDataType = 'array';
+  /**
+   * @var OSPolicyResource[]
+   */
+  public $resources;
   protected $resourcesType = OSPolicyResource::class;
   protected $resourcesDataType = 'array';
 

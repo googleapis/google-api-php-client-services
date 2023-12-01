@@ -36,6 +36,10 @@ class OSPolicyAssignmentReport extends \Google\Collection
    * @var string
    */
   public $osPolicyAssignment;
+  /**
+   * @var OSPolicyAssignmentReportOSPolicyCompliance[]
+   */
+  public $osPolicyCompliances;
   protected $osPolicyCompliancesType = OSPolicyAssignmentReportOSPolicyCompliance::class;
   protected $osPolicyCompliancesDataType = 'array';
   /**

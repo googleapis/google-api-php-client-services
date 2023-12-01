@@ -43,14 +43,26 @@ class PatchJob extends \Google\Model
    * @var string
    */
   public $errorMessage;
+  /**
+   * @var PatchJobInstanceDetailsSummary
+   */
+  public $instanceDetailsSummary;
   protected $instanceDetailsSummaryType = PatchJobInstanceDetailsSummary::class;
   protected $instanceDetailsSummaryDataType = '';
+  /**
+   * @var PatchInstanceFilter
+   */
+  public $instanceFilter;
   protected $instanceFilterType = PatchInstanceFilter::class;
   protected $instanceFilterDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var PatchConfig
+   */
+  public $patchConfig;
   protected $patchConfigType = PatchConfig::class;
   protected $patchConfigDataType = '';
   /**
@@ -58,6 +70,10 @@ class PatchJob extends \Google\Model
    */
   public $patchDeployment;
   public $percentComplete;
+  /**
+   * @var PatchRollout
+   */
+  public $rollout;
   protected $rolloutType = PatchRollout::class;
   protected $rolloutDataType = '';
   /**

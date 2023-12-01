@@ -19,12 +19,20 @@ namespace Google\Service\OSConfig;
 
 class Inventory extends \Google\Model
 {
+  /**
+   * @var InventoryItem[]
+   */
+  public $items;
   protected $itemsType = InventoryItem::class;
   protected $itemsDataType = 'map';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var InventoryOsInfo
+   */
+  public $osInfo;
   protected $osInfoType = InventoryOsInfo::class;
   protected $osInfoDataType = '';
   /**

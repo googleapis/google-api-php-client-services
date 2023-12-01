@@ -36,6 +36,10 @@ class OSPolicy extends \Google\Collection
    * @var string
    */
   public $mode;
+  /**
+   * @var OSPolicyResourceGroup[]
+   */
+  public $resourceGroups;
   protected $resourceGroupsType = OSPolicyResourceGroup::class;
   protected $resourceGroupsDataType = 'array';
 

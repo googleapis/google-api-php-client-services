@@ -24,10 +24,22 @@ class OSPolicyAssignmentInstanceFilter extends \Google\Collection
    * @var bool
    */
   public $all;
+  /**
+   * @var OSPolicyAssignmentLabelSet[]
+   */
+  public $exclusionLabels;
   protected $exclusionLabelsType = OSPolicyAssignmentLabelSet::class;
   protected $exclusionLabelsDataType = 'array';
+  /**
+   * @var OSPolicyAssignmentLabelSet[]
+   */
+  public $inclusionLabels;
   protected $inclusionLabelsType = OSPolicyAssignmentLabelSet::class;
   protected $inclusionLabelsDataType = 'array';
+  /**
+   * @var OSPolicyAssignmentInstanceFilterInventory[]
+   */
+  public $inventories;
   protected $inventoriesType = OSPolicyAssignmentInstanceFilterInventory::class;
   protected $inventoriesDataType = 'array';
 

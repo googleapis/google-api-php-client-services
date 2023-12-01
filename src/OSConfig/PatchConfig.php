@@ -19,26 +19,54 @@ namespace Google\Service\OSConfig;
 
 class PatchConfig extends \Google\Model
 {
+  /**
+   * @var AptSettings
+   */
+  public $apt;
   protected $aptType = AptSettings::class;
   protected $aptDataType = '';
+  /**
+   * @var GooSettings
+   */
+  public $goo;
   protected $gooType = GooSettings::class;
   protected $gooDataType = '';
   /**
    * @var bool
    */
   public $migInstancesAllowed;
+  /**
+   * @var ExecStep
+   */
+  public $postStep;
   protected $postStepType = ExecStep::class;
   protected $postStepDataType = '';
+  /**
+   * @var ExecStep
+   */
+  public $preStep;
   protected $preStepType = ExecStep::class;
   protected $preStepDataType = '';
   /**
    * @var string
    */
   public $rebootConfig;
+  /**
+   * @var WindowsUpdateSettings
+   */
+  public $windowsUpdate;
   protected $windowsUpdateType = WindowsUpdateSettings::class;
   protected $windowsUpdateDataType = '';
+  /**
+   * @var YumSettings
+   */
+  public $yum;
   protected $yumType = YumSettings::class;
   protected $yumDataType = '';
+  /**
+   * @var ZypperSettings
+   */
+  public $zypper;
   protected $zypperType = ZypperSettings::class;
   protected $zypperDataType = '';
 

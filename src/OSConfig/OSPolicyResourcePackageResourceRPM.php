@@ -23,6 +23,10 @@ class OSPolicyResourcePackageResourceRPM extends \Google\Model
    * @var bool
    */
   public $pullDeps;
+  /**
+   * @var OSPolicyResourceFile
+   */
+  public $source;
   protected $sourceType = OSPolicyResourceFile::class;
   protected $sourceDataType = '';
 

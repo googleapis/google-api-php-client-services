@@ -19,22 +19,58 @@ namespace Google\Service\OSConfig;
 
 class InventorySoftwarePackage extends \Google\Model
 {
+  /**
+   * @var InventoryVersionedPackage
+   */
+  public $aptPackage;
   protected $aptPackageType = InventoryVersionedPackage::class;
   protected $aptPackageDataType = '';
+  /**
+   * @var InventoryVersionedPackage
+   */
+  public $cosPackage;
   protected $cosPackageType = InventoryVersionedPackage::class;
   protected $cosPackageDataType = '';
+  /**
+   * @var InventoryVersionedPackage
+   */
+  public $googetPackage;
   protected $googetPackageType = InventoryVersionedPackage::class;
   protected $googetPackageDataType = '';
+  /**
+   * @var InventoryWindowsQuickFixEngineeringPackage
+   */
+  public $qfePackage;
   protected $qfePackageType = InventoryWindowsQuickFixEngineeringPackage::class;
   protected $qfePackageDataType = '';
+  /**
+   * @var InventoryWindowsApplication
+   */
+  public $windowsApplication;
   protected $windowsApplicationType = InventoryWindowsApplication::class;
   protected $windowsApplicationDataType = '';
+  /**
+   * @var InventoryWindowsUpdatePackage
+   */
+  public $wuaPackage;
   protected $wuaPackageType = InventoryWindowsUpdatePackage::class;
   protected $wuaPackageDataType = '';
+  /**
+   * @var InventoryVersionedPackage
+   */
+  public $yumPackage;
   protected $yumPackageType = InventoryVersionedPackage::class;
   protected $yumPackageDataType = '';
+  /**
+   * @var InventoryVersionedPackage
+   */
+  public $zypperPackage;
   protected $zypperPackageType = InventoryVersionedPackage::class;
   protected $zypperPackageDataType = '';
+  /**
+   * @var InventoryZypperPatch
+   */
+  public $zypperPatch;
   protected $zypperPatchType = InventoryZypperPatch::class;
   protected $zypperPatchDataType = '';
 

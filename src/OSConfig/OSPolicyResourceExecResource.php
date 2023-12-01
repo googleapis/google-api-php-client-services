@@ -19,8 +19,16 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyResourceExecResource extends \Google\Model
 {
+  /**
+   * @var OSPolicyResourceExecResourceExec
+   */
+  public $enforce;
   protected $enforceType = OSPolicyResourceExecResourceExec::class;
   protected $enforceDataType = '';
+  /**
+   * @var OSPolicyResourceExecResourceExec
+   */
+  public $validate;
   protected $validateType = OSPolicyResourceExecResourceExec::class;
   protected $validateDataType = '';
 

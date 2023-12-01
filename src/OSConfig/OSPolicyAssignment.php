@@ -36,12 +36,20 @@ class OSPolicyAssignment extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var OSPolicyAssignmentInstanceFilter
+   */
+  public $instanceFilter;
   protected $instanceFilterType = OSPolicyAssignmentInstanceFilter::class;
   protected $instanceFilterDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var OSPolicy[]
+   */
+  public $osPolicies;
   protected $osPoliciesType = OSPolicy::class;
   protected $osPoliciesDataType = 'array';
   /**
@@ -56,6 +64,10 @@ class OSPolicyAssignment extends \Google\Collection
    * @var string
    */
   public $revisionId;
+  /**
+   * @var OSPolicyAssignmentRollout
+   */
+  public $rollout;
   protected $rolloutType = OSPolicyAssignmentRollout::class;
   protected $rolloutDataType = '';
   /**

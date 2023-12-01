@@ -28,8 +28,16 @@ class OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceCompliance exten
    * @var string
    */
   public $complianceStateReason;
+  /**
+   * @var OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep[]
+   */
+  public $configSteps;
   protected $configStepsType = OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceOSPolicyResourceConfigStep::class;
   protected $configStepsDataType = 'array';
+  /**
+   * @var OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput
+   */
+  public $execResourceOutput;
   protected $execResourceOutputType = OSPolicyAssignmentReportOSPolicyComplianceOSPolicyResourceComplianceExecResourceOutput::class;
   protected $execResourceOutputDataType = '';
   /**

@@ -19,12 +19,28 @@ namespace Google\Service\OSConfig;
 
 class OSPolicyResourceRepositoryResource extends \Google\Model
 {
+  /**
+   * @var OSPolicyResourceRepositoryResourceAptRepository
+   */
+  public $apt;
   protected $aptType = OSPolicyResourceRepositoryResourceAptRepository::class;
   protected $aptDataType = '';
+  /**
+   * @var OSPolicyResourceRepositoryResourceGooRepository
+   */
+  public $goo;
   protected $gooType = OSPolicyResourceRepositoryResourceGooRepository::class;
   protected $gooDataType = '';
+  /**
+   * @var OSPolicyResourceRepositoryResourceYumRepository
+   */
+  public $yum;
   protected $yumType = OSPolicyResourceRepositoryResourceYumRepository::class;
   protected $yumDataType = '';
+  /**
+   * @var OSPolicyResourceRepositoryResourceZypperRepository
+   */
+  public $zypper;
   protected $zypperType = OSPolicyResourceRepositoryResourceZypperRepository::class;
   protected $zypperDataType = '';
 
