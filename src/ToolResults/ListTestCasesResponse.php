@@ -24,6 +24,10 @@ class ListTestCasesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TestCase[]
+   */
+  public $testCases;
   protected $testCasesType = TestCase::class;
   protected $testCasesDataType = 'array';
 

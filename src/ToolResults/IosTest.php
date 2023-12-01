@@ -19,14 +19,34 @@ namespace Google\Service\ToolResults;
 
 class IosTest extends \Google\Model
 {
+  /**
+   * @var IosAppInfo
+   */
+  public $iosAppInfo;
   protected $iosAppInfoType = IosAppInfo::class;
   protected $iosAppInfoDataType = '';
+  /**
+   * @var IosRoboTest
+   */
+  public $iosRoboTest;
   protected $iosRoboTestType = IosRoboTest::class;
   protected $iosRoboTestDataType = '';
+  /**
+   * @var IosTestLoop
+   */
+  public $iosTestLoop;
   protected $iosTestLoopType = IosTestLoop::class;
   protected $iosTestLoopDataType = '';
+  /**
+   * @var IosXcTest
+   */
+  public $iosXcTest;
   protected $iosXcTestType = IosXcTest::class;
   protected $iosXcTestDataType = '';
+  /**
+   * @var Duration
+   */
+  public $testTimeout;
   protected $testTimeoutType = Duration::class;
   protected $testTimeoutDataType = '';
 

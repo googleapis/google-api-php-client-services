@@ -20,18 +20,38 @@ namespace Google\Service\ToolResults;
 class Execution extends \Google\Collection
 {
   protected $collection_key = 'dimensionDefinitions';
+  /**
+   * @var Timestamp
+   */
+  public $completionTime;
   protected $completionTimeType = Timestamp::class;
   protected $completionTimeDataType = '';
+  /**
+   * @var Timestamp
+   */
+  public $creationTime;
   protected $creationTimeType = Timestamp::class;
   protected $creationTimeDataType = '';
+  /**
+   * @var MatrixDimensionDefinition[]
+   */
+  public $dimensionDefinitions;
   protected $dimensionDefinitionsType = MatrixDimensionDefinition::class;
   protected $dimensionDefinitionsDataType = 'array';
   /**
    * @var string
    */
   public $executionId;
+  /**
+   * @var Outcome
+   */
+  public $outcome;
   protected $outcomeType = Outcome::class;
   protected $outcomeDataType = '';
+  /**
+   * @var Specification
+   */
+  public $specification;
   protected $specificationType = Specification::class;
   protected $specificationDataType = '';
   /**

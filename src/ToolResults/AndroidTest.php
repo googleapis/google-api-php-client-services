@@ -19,14 +19,34 @@ namespace Google\Service\ToolResults;
 
 class AndroidTest extends \Google\Model
 {
+  /**
+   * @var AndroidAppInfo
+   */
+  public $androidAppInfo;
   protected $androidAppInfoType = AndroidAppInfo::class;
   protected $androidAppInfoDataType = '';
+  /**
+   * @var AndroidInstrumentationTest
+   */
+  public $androidInstrumentationTest;
   protected $androidInstrumentationTestType = AndroidInstrumentationTest::class;
   protected $androidInstrumentationTestDataType = '';
+  /**
+   * @var AndroidRoboTest
+   */
+  public $androidRoboTest;
   protected $androidRoboTestType = AndroidRoboTest::class;
   protected $androidRoboTestDataType = '';
+  /**
+   * @var AndroidTestLoop
+   */
+  public $androidTestLoop;
   protected $androidTestLoopType = AndroidTestLoop::class;
   protected $androidTestLoopDataType = '';
+  /**
+   * @var Duration
+   */
+  public $testTimeout;
   protected $testTimeoutType = Duration::class;
   protected $testTimeoutDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\ToolResults;
 class GraphicsStats extends \Google\Collection
 {
   protected $collection_key = 'buckets';
+  /**
+   * @var GraphicsStatsBucket[]
+   */
+  public $buckets;
   protected $bucketsType = GraphicsStatsBucket::class;
   protected $bucketsDataType = 'array';
   /**

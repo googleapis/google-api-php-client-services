@@ -20,18 +20,30 @@ namespace Google\Service\ToolResults;
 class PerfMetricsSummary extends \Google\Collection
 {
   protected $collection_key = 'perfMetrics';
+  /**
+   * @var AppStartTime
+   */
+  public $appStartTime;
   protected $appStartTimeType = AppStartTime::class;
   protected $appStartTimeDataType = '';
   /**
    * @var string
    */
   public $executionId;
+  /**
+   * @var GraphicsStats
+   */
+  public $graphicsStats;
   protected $graphicsStatsType = GraphicsStats::class;
   protected $graphicsStatsDataType = '';
   /**
    * @var string
    */
   public $historyId;
+  /**
+   * @var PerfEnvironment
+   */
+  public $perfEnvironment;
   protected $perfEnvironmentType = PerfEnvironment::class;
   protected $perfEnvironmentDataType = '';
   /**

@@ -23,6 +23,10 @@ class MultiStep extends \Google\Model
    * @var int
    */
   public $multistepNumber;
+  /**
+   * @var PrimaryStep
+   */
+  public $primaryStep;
   protected $primaryStepType = PrimaryStep::class;
   protected $primaryStepDataType = '';
   /**

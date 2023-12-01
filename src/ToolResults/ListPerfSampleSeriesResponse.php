@@ -20,6 +20,10 @@ namespace Google\Service\ToolResults;
 class ListPerfSampleSeriesResponse extends \Google\Collection
 {
   protected $collection_key = 'perfSampleSeries';
+  /**
+   * @var PerfSampleSeries[]
+   */
+  public $perfSampleSeries;
   protected $perfSampleSeriesType = PerfSampleSeries::class;
   protected $perfSampleSeriesDataType = 'array';
 

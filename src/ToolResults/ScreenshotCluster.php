@@ -28,8 +28,16 @@ class ScreenshotCluster extends \Google\Collection
    * @var string
    */
   public $clusterId;
+  /**
+   * @var Screen
+   */
+  public $keyScreen;
   protected $keyScreenType = Screen::class;
   protected $keyScreenDataType = '';
+  /**
+   * @var Screen[]
+   */
+  public $screens;
   protected $screensType = Screen::class;
   protected $screensDataType = 'array';
 

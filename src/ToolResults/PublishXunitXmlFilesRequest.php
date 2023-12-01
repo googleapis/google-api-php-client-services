@@ -20,6 +20,10 @@ namespace Google\Service\ToolResults;
 class PublishXunitXmlFilesRequest extends \Google\Collection
 {
   protected $collection_key = 'xunitXmlFiles';
+  /**
+   * @var FileReference[]
+   */
+  public $xunitXmlFiles;
   protected $xunitXmlFilesType = FileReference::class;
   protected $xunitXmlFilesDataType = 'array';
 

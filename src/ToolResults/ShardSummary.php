@@ -20,8 +20,16 @@ namespace Google\Service\ToolResults;
 class ShardSummary extends \Google\Collection
 {
   protected $collection_key = 'runs';
+  /**
+   * @var StepSummary[]
+   */
+  public $runs;
   protected $runsType = StepSummary::class;
   protected $runsDataType = 'array';
+  /**
+   * @var MergedResult
+   */
+  public $shardResult;
   protected $shardResultType = MergedResult::class;
   protected $shardResultDataType = '';
 

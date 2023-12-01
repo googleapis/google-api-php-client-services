@@ -19,14 +19,26 @@ namespace Google\Service\ToolResults;
 
 class Image extends \Google\Model
 {
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var ToolOutputReference
+   */
+  public $sourceImage;
   protected $sourceImageType = ToolOutputReference::class;
   protected $sourceImageDataType = '';
   /**
    * @var string
    */
   public $stepId;
+  /**
+   * @var Thumbnail
+   */
+  public $thumbnail;
   protected $thumbnailType = Thumbnail::class;
   protected $thumbnailDataType = '';
 

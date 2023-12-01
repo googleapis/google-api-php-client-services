@@ -20,32 +20,64 @@ namespace Google\Service\ToolResults;
 class Step extends \Google\Collection
 {
   protected $collection_key = 'labels';
+  /**
+   * @var Timestamp
+   */
+  public $completionTime;
   protected $completionTimeType = Timestamp::class;
   protected $completionTimeDataType = '';
+  /**
+   * @var Timestamp
+   */
+  public $creationTime;
   protected $creationTimeType = Timestamp::class;
   protected $creationTimeDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var Duration
+   */
+  public $deviceUsageDuration;
   protected $deviceUsageDurationType = Duration::class;
   protected $deviceUsageDurationDataType = '';
+  /**
+   * @var StepDimensionValueEntry[]
+   */
+  public $dimensionValue;
   protected $dimensionValueType = StepDimensionValueEntry::class;
   protected $dimensionValueDataType = 'array';
   /**
    * @var bool
    */
   public $hasImages;
+  /**
+   * @var StepLabelsEntry[]
+   */
+  public $labels;
   protected $labelsType = StepLabelsEntry::class;
   protected $labelsDataType = 'array';
+  /**
+   * @var MultiStep
+   */
+  public $multiStep;
   protected $multiStepType = MultiStep::class;
   protected $multiStepDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Outcome
+   */
+  public $outcome;
   protected $outcomeType = Outcome::class;
   protected $outcomeDataType = '';
+  /**
+   * @var Duration
+   */
+  public $runDuration;
   protected $runDurationType = Duration::class;
   protected $runDurationDataType = '';
   /**
@@ -56,8 +88,16 @@ class Step extends \Google\Collection
    * @var string
    */
   public $stepId;
+  /**
+   * @var TestExecutionStep
+   */
+  public $testExecutionStep;
   protected $testExecutionStepType = TestExecutionStep::class;
   protected $testExecutionStepDataType = '';
+  /**
+   * @var ToolExecutionStep
+   */
+  public $toolExecutionStep;
   protected $toolExecutionStepType = ToolExecutionStep::class;
   protected $toolExecutionStepDataType = '';
 

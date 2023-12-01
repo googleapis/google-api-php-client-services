@@ -19,8 +19,16 @@ namespace Google\Service\ToolResults;
 
 class AppStartTime extends \Google\Model
 {
+  /**
+   * @var Duration
+   */
+  public $fullyDrawnTime;
   protected $fullyDrawnTimeType = Duration::class;
   protected $fullyDrawnTimeDataType = '';
+  /**
+   * @var Duration
+   */
+  public $initialDisplayTime;
   protected $initialDisplayTimeType = Duration::class;
   protected $initialDisplayTimeDataType = '';
 

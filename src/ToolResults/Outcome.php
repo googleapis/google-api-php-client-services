@@ -19,12 +19,28 @@ namespace Google\Service\ToolResults;
 
 class Outcome extends \Google\Model
 {
+  /**
+   * @var FailureDetail
+   */
+  public $failureDetail;
   protected $failureDetailType = FailureDetail::class;
   protected $failureDetailDataType = '';
+  /**
+   * @var InconclusiveDetail
+   */
+  public $inconclusiveDetail;
   protected $inconclusiveDetailType = InconclusiveDetail::class;
   protected $inconclusiveDetailDataType = '';
+  /**
+   * @var SkippedDetail
+   */
+  public $skippedDetail;
   protected $skippedDetailType = SkippedDetail::class;
   protected $skippedDetailDataType = '';
+  /**
+   * @var SuccessDetail
+   */
+  public $successDetail;
   protected $successDetailType = SuccessDetail::class;
   protected $successDetailDataType = '';
   /**

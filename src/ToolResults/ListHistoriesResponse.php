@@ -20,6 +20,10 @@ namespace Google\Service\ToolResults;
 class ListHistoriesResponse extends \Google\Collection
 {
   protected $collection_key = 'histories';
+  /**
+   * @var History[]
+   */
+  public $histories;
   protected $historiesType = History::class;
   protected $historiesDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\ToolResults;
 class BatchCreatePerfSamplesRequest extends \Google\Collection
 {
   protected $collection_key = 'perfSamples';
+  /**
+   * @var PerfSample[]
+   */
+  public $perfSamples;
   protected $perfSamplesType = PerfSample::class;
   protected $perfSamplesDataType = 'array';
 

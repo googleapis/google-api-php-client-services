@@ -19,8 +19,16 @@ namespace Google\Service\ToolResults;
 
 class ResultsStorage extends \Google\Model
 {
+  /**
+   * @var FileReference
+   */
+  public $resultsStoragePath;
   protected $resultsStoragePathType = FileReference::class;
   protected $resultsStoragePathDataType = '';
+  /**
+   * @var FileReference
+   */
+  public $xunitXmlFile;
   protected $xunitXmlFileType = FileReference::class;
   protected $xunitXmlFileDataType = '';
 

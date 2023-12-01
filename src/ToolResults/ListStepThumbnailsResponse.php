@@ -24,6 +24,10 @@ class ListStepThumbnailsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Image[]
+   */
+  public $thumbnails;
   protected $thumbnailsType = Image::class;
   protected $thumbnailsDataType = 'array';
 

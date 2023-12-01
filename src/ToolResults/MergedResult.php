@@ -20,12 +20,20 @@ namespace Google\Service\ToolResults;
 class MergedResult extends \Google\Collection
 {
   protected $collection_key = 'testSuiteOverviews';
+  /**
+   * @var Outcome
+   */
+  public $outcome;
   protected $outcomeType = Outcome::class;
   protected $outcomeDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var TestSuiteOverview[]
+   */
+  public $testSuiteOverviews;
   protected $testSuiteOverviewsType = TestSuiteOverview::class;
   protected $testSuiteOverviewsDataType = 'array';
 

@@ -20,16 +20,32 @@ namespace Google\Service\ToolResults;
 class TestCase extends \Google\Collection
 {
   protected $collection_key = 'toolOutputs';
+  /**
+   * @var Duration
+   */
+  public $elapsedTime;
   protected $elapsedTimeType = Duration::class;
   protected $elapsedTimeDataType = '';
+  /**
+   * @var Timestamp
+   */
+  public $endTime;
   protected $endTimeType = Timestamp::class;
   protected $endTimeDataType = '';
   /**
    * @var string
    */
   public $skippedMessage;
+  /**
+   * @var StackTrace[]
+   */
+  public $stackTraces;
   protected $stackTracesType = StackTrace::class;
   protected $stackTracesDataType = 'array';
+  /**
+   * @var Timestamp
+   */
+  public $startTime;
   protected $startTimeType = Timestamp::class;
   protected $startTimeDataType = '';
   /**
@@ -40,8 +56,16 @@ class TestCase extends \Google\Collection
    * @var string
    */
   public $testCaseId;
+  /**
+   * @var TestCaseReference
+   */
+  public $testCaseReference;
   protected $testCaseReferenceType = TestCaseReference::class;
   protected $testCaseReferenceDataType = '';
+  /**
+   * @var ToolOutputReference[]
+   */
+  public $toolOutputs;
   protected $toolOutputsType = ToolOutputReference::class;
   protected $toolOutputsDataType = 'array';
 

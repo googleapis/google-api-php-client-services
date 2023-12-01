@@ -19,6 +19,10 @@ namespace Google\Service\ToolResults;
 
 class ANR extends \Google\Model
 {
+  /**
+   * @var StackTrace
+   */
+  public $stackTrace;
   protected $stackTraceType = StackTrace::class;
   protected $stackTraceDataType = '';
 

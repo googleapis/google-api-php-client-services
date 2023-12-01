@@ -19,6 +19,10 @@ namespace Google\Service\ToolResults;
 
 class TestSuiteOverview extends \Google\Model
 {
+  /**
+   * @var Duration
+   */
+  public $elapsedTime;
   protected $elapsedTimeType = Duration::class;
   protected $elapsedTimeDataType = '';
   /**
@@ -45,6 +49,10 @@ class TestSuiteOverview extends \Google\Model
    * @var int
    */
   public $totalCount;
+  /**
+   * @var FileReference
+   */
+  public $xmlSource;
   protected $xmlSourceType = FileReference::class;
   protected $xmlSourceDataType = '';
 

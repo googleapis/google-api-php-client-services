@@ -19,10 +19,22 @@ namespace Google\Service\ToolResults;
 
 class ToolOutputReference extends \Google\Model
 {
+  /**
+   * @var Timestamp
+   */
+  public $creationTime;
   protected $creationTimeType = Timestamp::class;
   protected $creationTimeDataType = '';
+  /**
+   * @var FileReference
+   */
+  public $output;
   protected $outputType = FileReference::class;
   protected $outputDataType = '';
+  /**
+   * @var TestCaseReference
+   */
+  public $testCase;
   protected $testCaseType = TestCaseReference::class;
   protected $testCaseDataType = '';
 

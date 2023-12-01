@@ -20,6 +20,10 @@ namespace Google\Service\ToolResults;
 class ListScreenshotClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'clusters';
+  /**
+   * @var ScreenshotCluster[]
+   */
+  public $clusters;
   protected $clustersType = ScreenshotCluster::class;
   protected $clustersDataType = 'array';
 

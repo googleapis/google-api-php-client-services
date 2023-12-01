@@ -20,12 +20,28 @@ namespace Google\Service\ToolResults;
 class TestExecutionStep extends \Google\Collection
 {
   protected $collection_key = 'testSuiteOverviews';
+  /**
+   * @var TestIssue[]
+   */
+  public $testIssues;
   protected $testIssuesType = TestIssue::class;
   protected $testIssuesDataType = 'array';
+  /**
+   * @var TestSuiteOverview[]
+   */
+  public $testSuiteOverviews;
   protected $testSuiteOverviewsType = TestSuiteOverview::class;
   protected $testSuiteOverviewsDataType = 'array';
+  /**
+   * @var TestTiming
+   */
+  public $testTiming;
   protected $testTimingType = TestTiming::class;
   protected $testTimingDataType = '';
+  /**
+   * @var ToolExecution
+   */
+  public $toolExecution;
   protected $toolExecutionType = ToolExecution::class;
   protected $toolExecutionDataType = '';
 

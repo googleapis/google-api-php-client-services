@@ -24,10 +24,22 @@ class ToolExecution extends \Google\Collection
    * @var string[]
    */
   public $commandLineArguments;
+  /**
+   * @var ToolExitCode
+   */
+  public $exitCode;
   protected $exitCodeType = ToolExitCode::class;
   protected $exitCodeDataType = '';
+  /**
+   * @var FileReference[]
+   */
+  public $toolLogs;
   protected $toolLogsType = FileReference::class;
   protected $toolLogsDataType = 'array';
+  /**
+   * @var ToolOutputReference[]
+   */
+  public $toolOutputs;
   protected $toolOutputsType = ToolOutputReference::class;
   protected $toolOutputsDataType = 'array';
 

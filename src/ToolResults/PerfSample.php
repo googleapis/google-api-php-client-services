@@ -19,6 +19,10 @@ namespace Google\Service\ToolResults;
 
 class PerfSample extends \Google\Model
 {
+  /**
+   * @var Timestamp
+   */
+  public $sampleTime;
   protected $sampleTimeType = Timestamp::class;
   protected $sampleTimeDataType = '';
   public $value;

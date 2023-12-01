@@ -19,8 +19,16 @@ namespace Google\Service\ToolResults;
 
 class PerfEnvironment extends \Google\Model
 {
+  /**
+   * @var CPUInfo
+   */
+  public $cpuInfo;
   protected $cpuInfoType = CPUInfo::class;
   protected $cpuInfoDataType = '';
+  /**
+   * @var MemoryInfo
+   */
+  public $memoryInfo;
   protected $memoryInfoType = MemoryInfo::class;
   protected $memoryInfoDataType = '';
 
