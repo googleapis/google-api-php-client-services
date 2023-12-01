@@ -40,6 +40,10 @@ class TrustConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var TrustStore[]
+   */
+  public $trustStores;
   protected $trustStoresType = TrustStore::class;
   protected $trustStoresDataType = 'array';
   /**

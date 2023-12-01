@@ -27,6 +27,10 @@ class DnsAuthorization extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var DnsResourceRecord
+   */
+  public $dnsResourceRecord;
   protected $dnsResourceRecordType = DnsResourceRecord::class;
   protected $dnsResourceRecordDataType = '';
   /**

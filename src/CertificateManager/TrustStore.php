@@ -20,8 +20,16 @@ namespace Google\Service\CertificateManager;
 class TrustStore extends \Google\Collection
 {
   protected $collection_key = 'trustAnchors';
+  /**
+   * @var IntermediateCA[]
+   */
+  public $intermediateCas;
   protected $intermediateCasType = IntermediateCA::class;
   protected $intermediateCasDataType = 'array';
+  /**
+   * @var TrustAnchor[]
+   */
+  public $trustAnchors;
   protected $trustAnchorsType = TrustAnchor::class;
   protected $trustAnchorsDataType = 'array';
 

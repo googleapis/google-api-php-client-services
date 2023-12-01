@@ -20,6 +20,10 @@ namespace Google\Service\CertificateManager;
 class GclbTarget extends \Google\Collection
 {
   protected $collection_key = 'ipConfigs';
+  /**
+   * @var IpConfig[]
+   */
+  public $ipConfigs;
   protected $ipConfigsType = IpConfig::class;
   protected $ipConfigsDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class ListTrustConfigsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TrustConfig[]
+   */
+  public $trustConfigs;
   protected $trustConfigsType = TrustConfig::class;
   protected $trustConfigsDataType = 'array';
   /**

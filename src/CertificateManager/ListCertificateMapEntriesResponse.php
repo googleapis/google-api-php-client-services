@@ -20,6 +20,10 @@ namespace Google\Service\CertificateManager;
 class ListCertificateMapEntriesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CertificateMapEntry[]
+   */
+  public $certificateMapEntries;
   protected $certificateMapEntriesType = CertificateMapEntry::class;
   protected $certificateMapEntriesDataType = 'array';
   /**
