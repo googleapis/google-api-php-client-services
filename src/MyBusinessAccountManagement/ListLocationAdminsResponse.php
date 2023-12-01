@@ -20,6 +20,10 @@ namespace Google\Service\MyBusinessAccountManagement;
 class ListLocationAdminsResponse extends \Google\Collection
 {
   protected $collection_key = 'admins';
+  /**
+   * @var Admin[]
+   */
+  public $admins;
   protected $adminsType = Admin::class;
   protected $adminsDataType = 'array';
 

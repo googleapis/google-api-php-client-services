@@ -19,6 +19,10 @@ namespace Google\Service\MyBusinessAccountManagement;
 
 class OrganizationInfo extends \Google\Model
 {
+  /**
+   * @var PostalAddress
+   */
+  public $address;
   protected $addressType = PostalAddress::class;
   protected $addressDataType = '';
   /**

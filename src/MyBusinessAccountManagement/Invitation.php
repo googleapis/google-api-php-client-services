@@ -27,8 +27,16 @@ class Invitation extends \Google\Model
    * @var string
    */
   public $role;
+  /**
+   * @var Account
+   */
+  public $targetAccount;
   protected $targetAccountType = Account::class;
   protected $targetAccountDataType = '';
+  /**
+   * @var TargetLocation
+   */
+  public $targetLocation;
   protected $targetLocationType = TargetLocation::class;
   protected $targetLocationDataType = '';
   /**
