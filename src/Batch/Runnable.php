@@ -27,14 +27,26 @@ class Runnable extends \Google\Model
    * @var bool
    */
   public $background;
+  /**
+   * @var Barrier
+   */
+  public $barrier;
   protected $barrierType = Barrier::class;
   protected $barrierDataType = '';
+  /**
+   * @var Container
+   */
+  public $container;
   protected $containerType = Container::class;
   protected $containerDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var Environment
+   */
+  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
   /**
@@ -45,6 +57,10 @@ class Runnable extends \Google\Model
    * @var string[]
    */
   public $labels;
+  /**
+   * @var Script
+   */
+  public $script;
   protected $scriptType = Script::class;
   protected $scriptDataType = '';
   /**

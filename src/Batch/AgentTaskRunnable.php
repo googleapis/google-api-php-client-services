@@ -27,14 +27,26 @@ class AgentTaskRunnable extends \Google\Model
    * @var bool
    */
   public $background;
+  /**
+   * @var AgentContainer
+   */
+  public $container;
   protected $containerType = AgentContainer::class;
   protected $containerDataType = '';
+  /**
+   * @var AgentEnvironment
+   */
+  public $environment;
   protected $environmentType = AgentEnvironment::class;
   protected $environmentDataType = '';
   /**
    * @var bool
    */
   public $ignoreExitStatus;
+  /**
+   * @var AgentScript
+   */
+  public $script;
   protected $scriptType = AgentScript::class;
   protected $scriptDataType = '';
   /**

@@ -20,14 +20,26 @@ namespace Google\Service\Batch;
 class AgentTaskSpec extends \Google\Collection
 {
   protected $collection_key = 'runnables';
+  /**
+   * @var AgentEnvironment
+   */
+  public $environment;
   protected $environmentType = AgentEnvironment::class;
   protected $environmentDataType = '';
   /**
    * @var string
    */
   public $maxRunDuration;
+  /**
+   * @var AgentTaskRunnable[]
+   */
+  public $runnables;
   protected $runnablesType = AgentTaskRunnable::class;
   protected $runnablesDataType = 'array';
+  /**
+   * @var AgentTaskUserAccount
+   */
+  public $userAccount;
   protected $userAccountType = AgentTaskUserAccount::class;
   protected $userAccountDataType = '';
 

@@ -20,18 +20,38 @@ namespace Google\Service\Batch;
 class AllocationPolicy extends \Google\Collection
 {
   protected $collection_key = 'instances';
+  /**
+   * @var InstancePolicyOrTemplate[]
+   */
+  public $instances;
   protected $instancesType = InstancePolicyOrTemplate::class;
   protected $instancesDataType = 'array';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var LocationPolicy
+   */
+  public $location;
   protected $locationType = LocationPolicy::class;
   protected $locationDataType = '';
+  /**
+   * @var NetworkPolicy
+   */
+  public $network;
   protected $networkType = NetworkPolicy::class;
   protected $networkDataType = '';
+  /**
+   * @var PlacementPolicy
+   */
+  public $placement;
   protected $placementType = PlacementPolicy::class;
   protected $placementDataType = '';
+  /**
+   * @var ServiceAccount
+   */
+  public $serviceAccount;
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
 

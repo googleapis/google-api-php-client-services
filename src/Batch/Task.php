@@ -23,6 +23,10 @@ class Task extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var TaskStatus
+   */
+  public $status;
   protected $statusType = TaskStatus::class;
   protected $statusDataType = '';
 

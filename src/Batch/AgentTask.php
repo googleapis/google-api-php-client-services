@@ -19,6 +19,10 @@ namespace Google\Service\Batch;
 
 class AgentTask extends \Google\Model
 {
+  /**
+   * @var AgentTaskSpec
+   */
+  public $agentTaskSpec;
   protected $agentTaskSpecType = AgentTaskSpec::class;
   protected $agentTaskSpecDataType = '';
   /**
@@ -29,8 +33,16 @@ class AgentTask extends \Google\Model
    * @var string
    */
   public $reachedBarrier;
+  /**
+   * @var TaskSpec
+   */
+  public $spec;
   protected $specType = TaskSpec::class;
   protected $specDataType = '';
+  /**
+   * @var TaskStatus
+   */
+  public $status;
   protected $statusType = TaskStatus::class;
   protected $statusDataType = '';
   /**

@@ -19,10 +19,22 @@ namespace Google\Service\Batch;
 
 class ReportAgentStateRequest extends \Google\Model
 {
+  /**
+   * @var AgentInfo
+   */
+  public $agentInfo;
   protected $agentInfoType = AgentInfo::class;
   protected $agentInfoDataType = '';
+  /**
+   * @var AgentTimingInfo
+   */
+  public $agentTimingInfo;
   protected $agentTimingInfoType = AgentTimingInfo::class;
   protected $agentTimingInfoDataType = '';
+  /**
+   * @var AgentMetadata
+   */
+  public $metadata;
   protected $metadataType = AgentMetadata::class;
   protected $metadataDataType = '';
 

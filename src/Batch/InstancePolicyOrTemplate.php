@@ -27,6 +27,10 @@ class InstancePolicyOrTemplate extends \Google\Model
    * @var string
    */
   public $instanceTemplate;
+  /**
+   * @var InstancePolicy
+   */
+  public $policy;
   protected $policyType = InstancePolicy::class;
   protected $policyDataType = '';
 

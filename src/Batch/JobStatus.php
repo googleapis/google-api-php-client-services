@@ -28,8 +28,16 @@ class JobStatus extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var StatusEvent[]
+   */
+  public $statusEvents;
   protected $statusEventsType = StatusEvent::class;
   protected $statusEventsDataType = 'array';
+  /**
+   * @var TaskGroupStatus[]
+   */
+  public $taskGroups;
   protected $taskGroupsType = TaskGroupStatus::class;
   protected $taskGroupsDataType = 'map';
 

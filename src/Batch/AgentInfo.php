@@ -36,6 +36,10 @@ class AgentInfo extends \Google\Collection
    * @var string
    */
   public $taskGroupId;
+  /**
+   * @var AgentTaskInfo[]
+   */
+  public $tasks;
   protected $tasksType = AgentTaskInfo::class;
   protected $tasksDataType = 'array';
 

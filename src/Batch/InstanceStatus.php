@@ -19,6 +19,10 @@ namespace Google\Service\Batch;
 
 class InstanceStatus extends \Google\Model
 {
+  /**
+   * @var Disk
+   */
+  public $bootDisk;
   protected $bootDiskType = Disk::class;
   protected $bootDiskDataType = '';
   /**

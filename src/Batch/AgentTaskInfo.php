@@ -27,6 +27,10 @@ class AgentTaskInfo extends \Google\Model
    * @var string
    */
   public $taskId;
+  /**
+   * @var TaskStatus
+   */
+  public $taskStatus;
   protected $taskStatusType = TaskStatus::class;
   protected $taskStatusDataType = '';
 

@@ -28,6 +28,10 @@ class ReportAgentStateResponse extends \Google\Collection
    * @var string
    */
   public $minReportInterval;
+  /**
+   * @var AgentTask[]
+   */
+  public $tasks;
   protected $tasksType = AgentTask::class;
   protected $tasksDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Batch;
 class Job extends \Google\Collection
 {
   protected $collection_key = 'taskGroups';
+  /**
+   * @var AllocationPolicy
+   */
+  public $allocationPolicy;
   protected $allocationPolicyType = AllocationPolicy::class;
   protected $allocationPolicyDataType = '';
   /**
@@ -30,20 +34,36 @@ class Job extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var LogsPolicy
+   */
+  public $logsPolicy;
   protected $logsPolicyType = LogsPolicy::class;
   protected $logsPolicyDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var JobNotification[]
+   */
+  public $notifications;
   protected $notificationsType = JobNotification::class;
   protected $notificationsDataType = 'array';
   /**
    * @var string
    */
   public $priority;
+  /**
+   * @var JobStatus
+   */
+  public $status;
   protected $statusType = JobStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var TaskGroup[]
+   */
+  public $taskGroups;
   protected $taskGroupsType = TaskGroup::class;
   protected $taskGroupsDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class Volume extends \Google\Collection
    * @var string
    */
   public $deviceName;
+  /**
+   * @var GCS
+   */
+  public $gcs;
   protected $gcsType = GCS::class;
   protected $gcsDataType = '';
   /**
@@ -34,6 +38,10 @@ class Volume extends \Google\Collection
    * @var string
    */
   public $mountPath;
+  /**
+   * @var NFS
+   */
+  public $nfs;
   protected $nfsType = NFS::class;
   protected $nfsDataType = '';
 

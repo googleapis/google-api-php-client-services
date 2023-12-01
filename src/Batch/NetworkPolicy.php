@@ -20,6 +20,10 @@ namespace Google\Service\Batch;
 class NetworkPolicy extends \Google\Collection
 {
   protected $collection_key = 'networkInterfaces';
+  /**
+   * @var NetworkInterface[]
+   */
+  public $networkInterfaces;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
 

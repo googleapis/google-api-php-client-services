@@ -48,8 +48,16 @@ class TaskGroup extends \Google\Collection
    * @var string
    */
   public $taskCountPerNode;
+  /**
+   * @var Environment[]
+   */
+  public $taskEnvironments;
   protected $taskEnvironmentsType = Environment::class;
   protected $taskEnvironmentsDataType = 'array';
+  /**
+   * @var TaskSpec
+   */
+  public $taskSpec;
   protected $taskSpecType = TaskSpec::class;
   protected $taskSpecDataType = '';
 
