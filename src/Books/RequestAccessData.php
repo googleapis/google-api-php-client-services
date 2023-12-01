@@ -19,8 +19,16 @@ namespace Google\Service\Books;
 
 class RequestAccessData extends \Google\Model
 {
+  /**
+   * @var ConcurrentAccessRestriction
+   */
+  public $concurrentAccess;
   protected $concurrentAccessType = ConcurrentAccessRestriction::class;
   protected $concurrentAccessDataType = '';
+  /**
+   * @var DownloadAccessRestriction
+   */
+  public $downloadAccess;
   protected $downloadAccessType = DownloadAccessRestriction::class;
   protected $downloadAccessDataType = '';
   /**

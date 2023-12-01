@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class Bookshelves extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Bookshelf[]
+   */
+  public $items;
   protected $itemsType = Bookshelf::class;
   protected $itemsDataType = 'array';
   /**

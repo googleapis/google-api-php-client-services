@@ -23,6 +23,10 @@ class DictionaryAnnotationdata extends \Google\Model
    * @var string
    */
   public $annotationType;
+  /**
+   * @var Dictlayerdata
+   */
+  public $data;
   protected $dataType = Dictlayerdata::class;
   protected $dataDataType = '';
   /**

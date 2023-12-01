@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class DownloadAccesses extends \Google\Collection
 {
   protected $collection_key = 'downloadAccessList';
+  /**
+   * @var DownloadAccessRestriction[]
+   */
+  public $downloadAccessList;
   protected $downloadAccessListType = DownloadAccessRestriction::class;
   protected $downloadAccessListDataType = 'array';
   /**

@@ -27,6 +27,10 @@ class VolumeAccessInfo extends \Google\Model
    * @var string
    */
   public $country;
+  /**
+   * @var DownloadAccessRestriction
+   */
+  public $downloadAccess;
   protected $downloadAccessType = DownloadAccessRestriction::class;
   protected $downloadAccessDataType = '';
   /**
@@ -37,12 +41,20 @@ class VolumeAccessInfo extends \Google\Model
    * @var bool
    */
   public $embeddable;
+  /**
+   * @var VolumeAccessInfoEpub
+   */
+  public $epub;
   protected $epubType = VolumeAccessInfoEpub::class;
   protected $epubDataType = '';
   /**
    * @var bool
    */
   public $explicitOfflineLicenseManagement;
+  /**
+   * @var VolumeAccessInfoPdf
+   */
+  public $pdf;
   protected $pdfType = VolumeAccessInfoPdf::class;
   protected $pdfDataType = '';
   /**

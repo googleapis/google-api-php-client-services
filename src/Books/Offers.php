@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class Offers extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var OffersItems[]
+   */
+  public $items;
   protected $itemsType = OffersItems::class;
   protected $itemsDataType = 'array';
   /**

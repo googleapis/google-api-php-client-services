@@ -20,8 +20,16 @@ namespace Google\Service\Books;
 class DictlayerdataDictWordsSenses extends \Google\Collection
 {
   protected $collection_key = 'synonyms';
+  /**
+   * @var DictlayerdataDictWordsSensesConjugations[]
+   */
+  public $conjugations;
   protected $conjugationsType = DictlayerdataDictWordsSensesConjugations::class;
   protected $conjugationsDataType = 'array';
+  /**
+   * @var DictlayerdataDictWordsSensesDefinitions[]
+   */
+  public $definitions;
   protected $definitionsType = DictlayerdataDictWordsSensesDefinitions::class;
   protected $definitionsDataType = 'array';
   /**
@@ -36,12 +44,20 @@ class DictlayerdataDictWordsSenses extends \Google\Collection
    * @var string
    */
   public $pronunciationUrl;
+  /**
+   * @var DictlayerdataDictWordsSensesSource
+   */
+  public $source;
   protected $sourceType = DictlayerdataDictWordsSensesSource::class;
   protected $sourceDataType = '';
   /**
    * @var string
    */
   public $syllabification;
+  /**
+   * @var DictlayerdataDictWordsSensesSynonyms[]
+   */
+  public $synonyms;
   protected $synonymsType = DictlayerdataDictWordsSensesSynonyms::class;
   protected $synonymsDataType = 'array';
 

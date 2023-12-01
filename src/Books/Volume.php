@@ -19,6 +19,10 @@ namespace Google\Service\Books;
 
 class Volume extends \Google\Model
 {
+  /**
+   * @var VolumeAccessInfo
+   */
+  public $accessInfo;
   protected $accessInfoType = VolumeAccessInfo::class;
   protected $accessInfoDataType = '';
   /**
@@ -33,20 +37,44 @@ class Volume extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var VolumeLayerInfo
+   */
+  public $layerInfo;
   protected $layerInfoType = VolumeLayerInfo::class;
   protected $layerInfoDataType = '';
+  /**
+   * @var VolumeRecommendedInfo
+   */
+  public $recommendedInfo;
   protected $recommendedInfoType = VolumeRecommendedInfo::class;
   protected $recommendedInfoDataType = '';
+  /**
+   * @var VolumeSaleInfo
+   */
+  public $saleInfo;
   protected $saleInfoType = VolumeSaleInfo::class;
   protected $saleInfoDataType = '';
+  /**
+   * @var VolumeSearchInfo
+   */
+  public $searchInfo;
   protected $searchInfoType = VolumeSearchInfo::class;
   protected $searchInfoDataType = '';
   /**
    * @var string
    */
   public $selfLink;
+  /**
+   * @var VolumeUserInfo
+   */
+  public $userInfo;
   protected $userInfoType = VolumeUserInfo::class;
   protected $userInfoDataType = '';
+  /**
+   * @var VolumeVolumeInfo
+   */
+  public $volumeInfo;
   protected $volumeInfoType = VolumeVolumeInfo::class;
   protected $volumeInfoDataType = '';
 

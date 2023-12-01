@@ -23,6 +23,10 @@ class GeoAnnotationdata extends \Google\Model
    * @var string
    */
   public $annotationType;
+  /**
+   * @var Geolayerdata
+   */
+  public $data;
   protected $dataType = Geolayerdata::class;
   protected $dataDataType = '';
   /**

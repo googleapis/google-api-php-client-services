@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class Volumeannotations extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Volumeannotation[]
+   */
+  public $items;
   protected $itemsType = Volumeannotation::class;
   protected $itemsDataType = 'array';
   /**

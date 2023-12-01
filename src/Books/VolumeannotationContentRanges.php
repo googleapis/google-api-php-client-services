@@ -19,14 +19,26 @@ namespace Google\Service\Books;
 
 class VolumeannotationContentRanges extends \Google\Model
 {
+  /**
+   * @var BooksAnnotationsRange
+   */
+  public $cfiRange;
   protected $cfiRangeType = BooksAnnotationsRange::class;
   protected $cfiRangeDataType = '';
   /**
    * @var string
    */
   public $contentVersion;
+  /**
+   * @var BooksAnnotationsRange
+   */
+  public $gbImageRange;
   protected $gbImageRangeType = BooksAnnotationsRange::class;
   protected $gbImageRangeDataType = '';
+  /**
+   * @var BooksAnnotationsRange
+   */
+  public $gbTextRange;
   protected $gbTextRangeType = BooksAnnotationsRange::class;
   protected $gbTextRangeDataType = '';
 

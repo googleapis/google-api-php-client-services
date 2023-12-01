@@ -20,12 +20,28 @@ namespace Google\Service\Books;
 class DictlayerdataDictWords extends \Google\Collection
 {
   protected $collection_key = 'senses';
+  /**
+   * @var DictlayerdataDictWordsDerivatives[]
+   */
+  public $derivatives;
   protected $derivativesType = DictlayerdataDictWordsDerivatives::class;
   protected $derivativesDataType = 'array';
+  /**
+   * @var DictlayerdataDictWordsExamples[]
+   */
+  public $examples;
   protected $examplesType = DictlayerdataDictWordsExamples::class;
   protected $examplesDataType = 'array';
+  /**
+   * @var DictlayerdataDictWordsSenses[]
+   */
+  public $senses;
   protected $sensesType = DictlayerdataDictWordsSenses::class;
   protected $sensesDataType = 'array';
+  /**
+   * @var DictlayerdataDictWordsSource
+   */
+  public $source;
   protected $sourceType = DictlayerdataDictWordsSource::class;
   protected $sourceDataType = '';
 

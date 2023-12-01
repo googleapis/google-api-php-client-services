@@ -24,6 +24,10 @@ class AnnotationsSummary extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var AnnotationsSummaryLayers[]
+   */
+  public $layers;
   protected $layersType = AnnotationsSummaryLayers::class;
   protected $layersDataType = 'array';
 

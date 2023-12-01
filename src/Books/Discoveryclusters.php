@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class Discoveryclusters extends \Google\Collection
 {
   protected $collection_key = 'clusters';
+  /**
+   * @var DiscoveryclustersClusters[]
+   */
+  public $clusters;
   protected $clustersType = DiscoveryclustersClusters::class;
   protected $clustersDataType = 'array';
   /**

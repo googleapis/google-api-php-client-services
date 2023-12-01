@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class Annotationsdata extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var GeoAnnotationdata[]
+   */
+  public $items;
   protected $itemsType = GeoAnnotationdata::class;
   protected $itemsDataType = 'array';
   /**

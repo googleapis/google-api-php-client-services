@@ -19,6 +19,10 @@ namespace Google\Service\Books;
 
 class DictlayerdataDictWordsExamples extends \Google\Model
 {
+  /**
+   * @var DictlayerdataDictWordsExamplesSource
+   */
+  public $source;
   protected $sourceType = DictlayerdataDictWordsExamplesSource::class;
   protected $sourceDataType = '';
   /**

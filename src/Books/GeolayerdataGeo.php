@@ -38,6 +38,10 @@ class GeolayerdataGeo extends \Google\Collection
    * @var string
    */
   public $mapType;
+  /**
+   * @var GeolayerdataGeoViewport
+   */
+  public $viewport;
   protected $viewportType = GeolayerdataGeoViewport::class;
   protected $viewportDataType = '';
   /**

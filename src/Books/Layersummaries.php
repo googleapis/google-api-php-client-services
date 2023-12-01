@@ -20,6 +20,10 @@ namespace Google\Service\Books;
 class Layersummaries extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Layersummary[]
+   */
+  public $items;
   protected $itemsType = Layersummary::class;
   protected $itemsDataType = 'array';
   /**

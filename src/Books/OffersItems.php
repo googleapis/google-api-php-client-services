@@ -32,6 +32,10 @@ class OffersItems extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var OffersItemsItems[]
+   */
+  public $items;
   protected $itemsType = OffersItemsItems::class;
   protected $itemsDataType = 'array';
 

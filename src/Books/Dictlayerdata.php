@@ -19,8 +19,16 @@ namespace Google\Service\Books;
 
 class Dictlayerdata extends \Google\Model
 {
+  /**
+   * @var DictlayerdataCommon
+   */
+  public $common;
   protected $commonType = DictlayerdataCommon::class;
   protected $commonDataType = '';
+  /**
+   * @var DictlayerdataDict
+   */
+  public $dict;
   protected $dictType = DictlayerdataDict::class;
   protected $dictDataType = '';
   /**

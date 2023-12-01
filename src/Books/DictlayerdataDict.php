@@ -20,8 +20,16 @@ namespace Google\Service\Books;
 class DictlayerdataDict extends \Google\Collection
 {
   protected $collection_key = 'words';
+  /**
+   * @var DictlayerdataDictSource
+   */
+  public $source;
   protected $sourceType = DictlayerdataDictSource::class;
   protected $sourceDataType = '';
+  /**
+   * @var DictlayerdataDictWords[]
+   */
+  public $words;
   protected $wordsType = DictlayerdataDictWords::class;
   protected $wordsDataType = 'array';
 

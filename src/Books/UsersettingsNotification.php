@@ -19,14 +19,34 @@ namespace Google\Service\Books;
 
 class UsersettingsNotification extends \Google\Model
 {
+  /**
+   * @var UsersettingsNotificationMatchMyInterests
+   */
+  public $matchMyInterests;
   protected $matchMyInterestsType = UsersettingsNotificationMatchMyInterests::class;
   protected $matchMyInterestsDataType = '';
+  /**
+   * @var UsersettingsNotificationMoreFromAuthors
+   */
+  public $moreFromAuthors;
   protected $moreFromAuthorsType = UsersettingsNotificationMoreFromAuthors::class;
   protected $moreFromAuthorsDataType = '';
+  /**
+   * @var UsersettingsNotificationMoreFromSeries
+   */
+  public $moreFromSeries;
   protected $moreFromSeriesType = UsersettingsNotificationMoreFromSeries::class;
   protected $moreFromSeriesDataType = '';
+  /**
+   * @var UsersettingsNotificationPriceDrop
+   */
+  public $priceDrop;
   protected $priceDropType = UsersettingsNotificationPriceDrop::class;
   protected $priceDropDataType = '';
+  /**
+   * @var UsersettingsNotificationRewardExpirations
+   */
+  public $rewardExpirations;
   protected $rewardExpirationsType = UsersettingsNotificationRewardExpirations::class;
   protected $rewardExpirationsDataType = '';
 

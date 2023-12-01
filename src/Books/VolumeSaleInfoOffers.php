@@ -27,10 +27,22 @@ class VolumeSaleInfoOffers extends \Google\Model
    * @var bool
    */
   public $giftable;
+  /**
+   * @var VolumeSaleInfoOffersListPrice
+   */
+  public $listPrice;
   protected $listPriceType = VolumeSaleInfoOffersListPrice::class;
   protected $listPriceDataType = '';
+  /**
+   * @var VolumeSaleInfoOffersRentalDuration
+   */
+  public $rentalDuration;
   protected $rentalDurationType = VolumeSaleInfoOffersRentalDuration::class;
   protected $rentalDurationDataType = '';
+  /**
+   * @var VolumeSaleInfoOffersRetailPrice
+   */
+  public $retailPrice;
   protected $retailPriceType = VolumeSaleInfoOffersRetailPrice::class;
   protected $retailPriceDataType = '';
 

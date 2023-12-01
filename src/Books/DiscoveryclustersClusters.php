@@ -23,6 +23,10 @@ class DiscoveryclustersClusters extends \Google\Collection
   protected $internal_gapi_mappings = [
         "bannerWithContentContainer" => "banner_with_content_container",
   ];
+  /**
+   * @var DiscoveryclustersClustersBannerWithContentContainer
+   */
+  public $bannerWithContentContainer;
   protected $bannerWithContentContainerType = DiscoveryclustersClustersBannerWithContentContainer::class;
   protected $bannerWithContentContainerDataType = '';
   /**
@@ -41,6 +45,10 @@ class DiscoveryclustersClusters extends \Google\Collection
    * @var string
    */
   public $uid;
+  /**
+   * @var Volume[]
+   */
+  public $volumes;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
 
