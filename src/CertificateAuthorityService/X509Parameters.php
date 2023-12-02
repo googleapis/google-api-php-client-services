@@ -20,18 +20,38 @@ namespace Google\Service\CertificateAuthorityService;
 class X509Parameters extends \Google\Collection
 {
   protected $collection_key = 'policyIds';
+  /**
+   * @var X509Extension[]
+   */
+  public $additionalExtensions;
   protected $additionalExtensionsType = X509Extension::class;
   protected $additionalExtensionsDataType = 'array';
   /**
    * @var string[]
    */
   public $aiaOcspServers;
+  /**
+   * @var CaOptions
+   */
+  public $caOptions;
   protected $caOptionsType = CaOptions::class;
   protected $caOptionsDataType = '';
+  /**
+   * @var KeyUsage
+   */
+  public $keyUsage;
   protected $keyUsageType = KeyUsage::class;
   protected $keyUsageDataType = '';
+  /**
+   * @var NameConstraints
+   */
+  public $nameConstraints;
   protected $nameConstraintsType = NameConstraints::class;
   protected $nameConstraintsDataType = '';
+  /**
+   * @var ObjectId[]
+   */
+  public $policyIds;
   protected $policyIdsType = ObjectId::class;
   protected $policyIdsDataType = 'array';
 

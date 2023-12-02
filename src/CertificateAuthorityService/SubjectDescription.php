@@ -35,8 +35,16 @@ class SubjectDescription extends \Google\Model
    * @var string
    */
   public $notBeforeTime;
+  /**
+   * @var Subject
+   */
+  public $subject;
   protected $subjectType = Subject::class;
   protected $subjectDataType = '';
+  /**
+   * @var SubjectAltNames
+   */
+  public $subjectAltName;
   protected $subjectAltNameType = SubjectAltNames::class;
   protected $subjectAltNameDataType = '';
 

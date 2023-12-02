@@ -20,12 +20,20 @@ namespace Google\Service\CertificateAuthorityService;
 class Certificate extends \Google\Collection
 {
   protected $collection_key = 'pemCertificateChain';
+  /**
+   * @var CertificateDescription
+   */
+  public $certificateDescription;
   protected $certificateDescriptionType = CertificateDescription::class;
   protected $certificateDescriptionDataType = '';
   /**
    * @var string
    */
   public $certificateTemplate;
+  /**
+   * @var CertificateConfig
+   */
+  public $config;
   protected $configType = CertificateConfig::class;
   protected $configDataType = '';
   /**
@@ -60,6 +68,10 @@ class Certificate extends \Google\Collection
    * @var string
    */
   public $pemCsr;
+  /**
+   * @var RevocationDetails
+   */
+  public $revocationDetails;
   protected $revocationDetailsType = RevocationDetails::class;
   protected $revocationDetailsDataType = '';
   /**

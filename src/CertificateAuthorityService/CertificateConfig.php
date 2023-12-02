@@ -19,10 +19,22 @@ namespace Google\Service\CertificateAuthorityService;
 
 class CertificateConfig extends \Google\Model
 {
+  /**
+   * @var PublicKey
+   */
+  public $publicKey;
   protected $publicKeyType = PublicKey::class;
   protected $publicKeyDataType = '';
+  /**
+   * @var SubjectConfig
+   */
+  public $subjectConfig;
   protected $subjectConfigType = SubjectConfig::class;
   protected $subjectConfigDataType = '';
+  /**
+   * @var X509Parameters
+   */
+  public $x509Config;
   protected $x509ConfigType = X509Parameters::class;
   protected $x509ConfigDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\CertificateAuthorityService;
 class ListCertificateTemplatesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CertificateTemplate[]
+   */
+  public $certificateTemplates;
   protected $certificateTemplatesType = CertificateTemplate::class;
   protected $certificateTemplatesDataType = 'array';
   /**

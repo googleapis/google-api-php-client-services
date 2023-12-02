@@ -27,6 +27,10 @@ class ActivateCertificateAuthorityRequest extends \Google\Model
    * @var string
    */
   public $requestId;
+  /**
+   * @var SubordinateConfig
+   */
+  public $subordinateConfig;
   protected $subordinateConfigType = SubordinateConfig::class;
   protected $subordinateConfigDataType = '';
 

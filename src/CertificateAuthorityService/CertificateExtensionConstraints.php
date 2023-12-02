@@ -20,6 +20,10 @@ namespace Google\Service\CertificateAuthorityService;
 class CertificateExtensionConstraints extends \Google\Collection
 {
   protected $collection_key = 'knownExtensions';
+  /**
+   * @var ObjectId[]
+   */
+  public $additionalExtensions;
   protected $additionalExtensionsType = ObjectId::class;
   protected $additionalExtensionsDataType = 'array';
   /**

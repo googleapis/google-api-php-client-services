@@ -20,10 +20,22 @@ namespace Google\Service\CertificateAuthorityService;
 class KeyUsage extends \Google\Collection
 {
   protected $collection_key = 'unknownExtendedKeyUsages';
+  /**
+   * @var KeyUsageOptions
+   */
+  public $baseKeyUsage;
   protected $baseKeyUsageType = KeyUsageOptions::class;
   protected $baseKeyUsageDataType = '';
+  /**
+   * @var ExtendedKeyUsageOptions
+   */
+  public $extendedKeyUsage;
   protected $extendedKeyUsageType = ExtendedKeyUsageOptions::class;
   protected $extendedKeyUsageDataType = '';
+  /**
+   * @var ObjectId[]
+   */
+  public $unknownExtendedKeyUsages;
   protected $unknownExtendedKeyUsagesType = ObjectId::class;
   protected $unknownExtendedKeyUsagesDataType = 'array';
 

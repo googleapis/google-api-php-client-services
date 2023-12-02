@@ -20,18 +20,38 @@ namespace Google\Service\CertificateAuthorityService;
 class IssuancePolicy extends \Google\Collection
 {
   protected $collection_key = 'allowedKeyTypes';
+  /**
+   * @var IssuanceModes
+   */
+  public $allowedIssuanceModes;
   protected $allowedIssuanceModesType = IssuanceModes::class;
   protected $allowedIssuanceModesDataType = '';
+  /**
+   * @var AllowedKeyType[]
+   */
+  public $allowedKeyTypes;
   protected $allowedKeyTypesType = AllowedKeyType::class;
   protected $allowedKeyTypesDataType = 'array';
+  /**
+   * @var X509Parameters
+   */
+  public $baselineValues;
   protected $baselineValuesType = X509Parameters::class;
   protected $baselineValuesDataType = '';
+  /**
+   * @var CertificateIdentityConstraints
+   */
+  public $identityConstraints;
   protected $identityConstraintsType = CertificateIdentityConstraints::class;
   protected $identityConstraintsDataType = '';
   /**
    * @var string
    */
   public $maximumLifetime;
+  /**
+   * @var CertificateExtensionConstraints
+   */
+  public $passthroughExtensions;
   protected $passthroughExtensionsType = CertificateExtensionConstraints::class;
   protected $passthroughExtensionsDataType = '';
 

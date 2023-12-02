@@ -20,6 +20,10 @@ namespace Google\Service\CertificateAuthorityService;
 class ListCaPoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CaPool[]
+   */
+  public $caPools;
   protected $caPoolsType = CaPool::class;
   protected $caPoolsDataType = 'array';
   /**

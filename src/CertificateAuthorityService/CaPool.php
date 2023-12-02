@@ -19,6 +19,10 @@ namespace Google\Service\CertificateAuthorityService;
 
 class CaPool extends \Google\Model
 {
+  /**
+   * @var IssuancePolicy
+   */
+  public $issuancePolicy;
   protected $issuancePolicyType = IssuancePolicy::class;
   protected $issuancePolicyDataType = '';
   /**
@@ -29,6 +33,10 @@ class CaPool extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PublishingOptions
+   */
+  public $publishingOptions;
   protected $publishingOptionsType = PublishingOptions::class;
   protected $publishingOptionsDataType = '';
   /**
