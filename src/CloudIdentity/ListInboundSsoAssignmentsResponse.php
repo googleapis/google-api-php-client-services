@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class ListInboundSsoAssignmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'inboundSsoAssignments';
+  /**
+   * @var InboundSsoAssignment[]
+   */
+  public $inboundSsoAssignments;
   protected $inboundSsoAssignmentsType = InboundSsoAssignment::class;
   protected $inboundSsoAssignmentsDataType = 'array';
   /**

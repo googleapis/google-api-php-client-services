@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class SearchDirectGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'memberships';
+  /**
+   * @var MembershipRelation[]
+   */
+  public $memberships;
   protected $membershipsType = MembershipRelation::class;
   protected $membershipsDataType = 'array';
   /**

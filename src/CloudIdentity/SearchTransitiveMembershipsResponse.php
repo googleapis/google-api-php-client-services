@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class SearchTransitiveMembershipsResponse extends \Google\Collection
 {
   protected $collection_key = 'memberships';
+  /**
+   * @var MemberRelation[]
+   */
+  public $memberships;
   protected $membershipsType = MemberRelation::class;
   protected $membershipsDataType = 'array';
   /**

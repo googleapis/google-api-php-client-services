@@ -23,6 +23,10 @@ class UpdateMembershipRolesParams extends \Google\Model
    * @var string
    */
   public $fieldMask;
+  /**
+   * @var MembershipRole
+   */
+  public $membershipRole;
   protected $membershipRoleType = MembershipRole::class;
   protected $membershipRoleDataType = '';
 

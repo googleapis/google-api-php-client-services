@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class MembershipAdjacencyList extends \Google\Collection
 {
   protected $collection_key = 'edges';
+  /**
+   * @var Membership[]
+   */
+  public $edges;
   protected $edgesType = Membership::class;
   protected $edgesDataType = 'array';
   /**

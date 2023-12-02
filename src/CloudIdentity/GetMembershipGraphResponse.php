@@ -20,8 +20,16 @@ namespace Google\Service\CloudIdentity;
 class GetMembershipGraphResponse extends \Google\Collection
 {
   protected $collection_key = 'groups';
+  /**
+   * @var MembershipAdjacencyList[]
+   */
+  public $adjacencyList;
   protected $adjacencyListType = MembershipAdjacencyList::class;
   protected $adjacencyListDataType = 'array';
+  /**
+   * @var Group[]
+   */
+  public $groups;
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
 

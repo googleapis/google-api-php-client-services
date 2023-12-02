@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class GoogleAppsCloudidentityDevicesV1Device extends \Google\Collection
 {
   protected $collection_key = 'wifiMacAddresses';
+  /**
+   * @var GoogleAppsCloudidentityDevicesV1AndroidAttributes
+   */
+  public $androidSpecificAttributes;
   protected $androidSpecificAttributesType = GoogleAppsCloudidentityDevicesV1AndroidAttributes::class;
   protected $androidSpecificAttributesDataType = '';
   /**

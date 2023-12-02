@@ -20,8 +20,16 @@ namespace Google\Service\CloudIdentity;
 class DynamicGroupMetadata extends \Google\Collection
 {
   protected $collection_key = 'queries';
+  /**
+   * @var DynamicGroupQuery[]
+   */
+  public $queries;
   protected $queriesType = DynamicGroupQuery::class;
   protected $queriesDataType = 'array';
+  /**
+   * @var DynamicGroupStatus
+   */
+  public $status;
   protected $statusType = DynamicGroupStatus::class;
   protected $statusDataType = '';
 

@@ -32,8 +32,16 @@ class Membership extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var EntityKey
+   */
+  public $preferredMemberKey;
   protected $preferredMemberKeyType = EntityKey::class;
   protected $preferredMemberKeyDataType = '';
+  /**
+   * @var MembershipRole[]
+   */
+  public $roles;
   protected $rolesType = MembershipRole::class;
   protected $rolesDataType = 'array';
   /**

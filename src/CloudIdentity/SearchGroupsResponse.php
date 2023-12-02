@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class SearchGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'groups';
+  /**
+   * @var Group[]
+   */
+  public $groups;
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
   /**

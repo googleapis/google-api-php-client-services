@@ -31,8 +31,16 @@ class InboundSsoAssignment extends \Google\Model
    * @var int
    */
   public $rank;
+  /**
+   * @var SamlSsoInfo
+   */
+  public $samlSsoInfo;
   protected $samlSsoInfoType = SamlSsoInfo::class;
   protected $samlSsoInfoDataType = '';
+  /**
+   * @var SignInBehavior
+   */
+  public $signInBehavior;
   protected $signInBehaviorType = SignInBehavior::class;
   protected $signInBehaviorDataType = '';
   /**

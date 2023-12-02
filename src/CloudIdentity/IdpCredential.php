@@ -19,12 +19,20 @@ namespace Google\Service\CloudIdentity;
 
 class IdpCredential extends \Google\Model
 {
+  /**
+   * @var DsaPublicKeyInfo
+   */
+  public $dsaKeyInfo;
   protected $dsaKeyInfoType = DsaPublicKeyInfo::class;
   protected $dsaKeyInfoDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var RsaPublicKeyInfo
+   */
+  public $rsaKeyInfo;
   protected $rsaKeyInfoType = RsaPublicKeyInfo::class;
   protected $rsaKeyInfoDataType = '';
   /**

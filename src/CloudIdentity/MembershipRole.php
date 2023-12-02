@@ -19,12 +19,20 @@ namespace Google\Service\CloudIdentity;
 
 class MembershipRole extends \Google\Model
 {
+  /**
+   * @var ExpiryDetail
+   */
+  public $expiryDetail;
   protected $expiryDetailType = ExpiryDetail::class;
   protected $expiryDetailDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var RestrictionEvaluations
+   */
+  public $restrictionEvaluations;
   protected $restrictionEvaluationsType = RestrictionEvaluations::class;
   protected $restrictionEvaluationsDataType = '';
 

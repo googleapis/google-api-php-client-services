@@ -32,6 +32,10 @@ class MembershipRelation extends \Google\Collection
    * @var string
    */
   public $group;
+  /**
+   * @var EntityKey
+   */
+  public $groupKey;
   protected $groupKeyType = EntityKey::class;
   protected $groupKeyDataType = '';
   /**
@@ -42,6 +46,10 @@ class MembershipRelation extends \Google\Collection
    * @var string
    */
   public $membership;
+  /**
+   * @var MembershipRole[]
+   */
+  public $roles;
   protected $rolesType = MembershipRole::class;
   protected $rolesDataType = 'array';
 

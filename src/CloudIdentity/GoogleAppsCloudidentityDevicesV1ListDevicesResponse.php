@@ -20,6 +20,10 @@ namespace Google\Service\CloudIdentity;
 class GoogleAppsCloudidentityDevicesV1ListDevicesResponse extends \Google\Collection
 {
   protected $collection_key = 'devices';
+  /**
+   * @var GoogleAppsCloudidentityDevicesV1Device[]
+   */
+  public $devices;
   protected $devicesType = GoogleAppsCloudidentityDevicesV1Device::class;
   protected $devicesDataType = 'array';
   /**
