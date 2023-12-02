@@ -20,6 +20,10 @@ namespace Google\Service\CivicInfo;
 class ElectionsQueryResponse extends \Google\Collection
 {
   protected $collection_key = 'elections';
+  /**
+   * @var Election[]
+   */
+  public $elections;
   protected $electionsType = Election::class;
   protected $electionsDataType = 'array';
   /**

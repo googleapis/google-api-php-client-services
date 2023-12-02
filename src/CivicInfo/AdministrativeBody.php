@@ -31,6 +31,10 @@ class AdministrativeBody extends \Google\Collection
    * @var string
    */
   public $ballotInfoUrl;
+  /**
+   * @var SimpleAddressType
+   */
+  public $correspondenceAddress;
   protected $correspondenceAddressType = SimpleAddressType::class;
   protected $correspondenceAddressDataType = '';
   /**
@@ -45,6 +49,10 @@ class AdministrativeBody extends \Google\Collection
    * @var string
    */
   public $electionNoticeUrl;
+  /**
+   * @var ElectionOfficial[]
+   */
+  public $electionOfficials;
   protected $electionOfficialsType = ElectionOfficial::class;
   protected $electionOfficialsDataType = 'array';
   /**
@@ -67,6 +75,10 @@ class AdministrativeBody extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var SimpleAddressType
+   */
+  public $physicalAddress;
   protected $physicalAddressType = SimpleAddressType::class;
   protected $physicalAddressDataType = '';
   /**

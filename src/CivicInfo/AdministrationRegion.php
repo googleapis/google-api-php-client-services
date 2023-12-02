@@ -23,14 +23,26 @@ class AdministrationRegion extends \Google\Collection
   protected $internal_gapi_mappings = [
         "localJurisdiction" => "local_jurisdiction",
   ];
+  /**
+   * @var AdministrativeBody
+   */
+  public $electionAdministrationBody;
   protected $electionAdministrationBodyType = AdministrativeBody::class;
   protected $electionAdministrationBodyDataType = '';
+  /**
+   * @var AdministrationRegion
+   */
+  public $localJurisdiction;
   protected $localJurisdictionType = AdministrationRegion::class;
   protected $localJurisdictionDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Source[]
+   */
+  public $sources;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
 

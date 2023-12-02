@@ -20,16 +20,32 @@ namespace Google\Service\CivicInfo;
 class RepresentativeInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'officials';
+  /**
+   * @var GeographicDivision[]
+   */
+  public $divisions;
   protected $divisionsType = GeographicDivision::class;
   protected $divisionsDataType = 'map';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var SimpleAddressType
+   */
+  public $normalizedInput;
   protected $normalizedInputType = SimpleAddressType::class;
   protected $normalizedInputDataType = '';
+  /**
+   * @var Office[]
+   */
+  public $offices;
   protected $officesType = Office::class;
   protected $officesDataType = 'array';
+  /**
+   * @var Official[]
+   */
+  public $officials;
   protected $officialsType = Official::class;
   protected $officialsDataType = 'array';
 

@@ -20,12 +20,28 @@ namespace Google\Service\CivicInfo;
 class VoterInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'state';
+  /**
+   * @var Contest[]
+   */
+  public $contests;
   protected $contestsType = Contest::class;
   protected $contestsDataType = 'array';
+  /**
+   * @var PollingLocation[]
+   */
+  public $dropOffLocations;
   protected $dropOffLocationsType = PollingLocation::class;
   protected $dropOffLocationsDataType = 'array';
+  /**
+   * @var PollingLocation[]
+   */
+  public $earlyVoteSites;
   protected $earlyVoteSitesType = PollingLocation::class;
   protected $earlyVoteSitesDataType = 'array';
+  /**
+   * @var Election
+   */
+  public $election;
   protected $electionType = Election::class;
   protected $electionDataType = '';
   /**
@@ -36,18 +52,38 @@ class VoterInfoResponse extends \Google\Collection
    * @var bool
    */
   public $mailOnly;
+  /**
+   * @var SimpleAddressType
+   */
+  public $normalizedInput;
   protected $normalizedInputType = SimpleAddressType::class;
   protected $normalizedInputDataType = '';
+  /**
+   * @var Election[]
+   */
+  public $otherElections;
   protected $otherElectionsType = Election::class;
   protected $otherElectionsDataType = 'array';
+  /**
+   * @var PollingLocation[]
+   */
+  public $pollingLocations;
   protected $pollingLocationsType = PollingLocation::class;
   protected $pollingLocationsDataType = 'array';
   /**
    * @var string
    */
   public $precinctId;
+  /**
+   * @var Precinct[]
+   */
+  public $precincts;
   protected $precinctsType = Precinct::class;
   protected $precinctsDataType = 'array';
+  /**
+   * @var AdministrationRegion[]
+   */
+  public $state;
   protected $stateType = AdministrationRegion::class;
   protected $stateDataType = 'array';
 
