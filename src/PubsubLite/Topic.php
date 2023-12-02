@@ -23,10 +23,22 @@ class Topic extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PartitionConfig
+   */
+  public $partitionConfig;
   protected $partitionConfigType = PartitionConfig::class;
   protected $partitionConfigDataType = '';
+  /**
+   * @var ReservationConfig
+   */
+  public $reservationConfig;
   protected $reservationConfigType = ReservationConfig::class;
   protected $reservationConfigDataType = '';
+  /**
+   * @var RetentionConfig
+   */
+  public $retentionConfig;
   protected $retentionConfigType = RetentionConfig::class;
   protected $retentionConfigDataType = '';
 

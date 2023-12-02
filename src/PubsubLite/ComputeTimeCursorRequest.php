@@ -23,6 +23,10 @@ class ComputeTimeCursorRequest extends \Google\Model
    * @var string
    */
   public $partition;
+  /**
+   * @var TimeTarget
+   */
+  public $target;
   protected $targetType = TimeTarget::class;
   protected $targetDataType = '';
 

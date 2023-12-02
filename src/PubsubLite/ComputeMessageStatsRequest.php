@@ -19,12 +19,20 @@ namespace Google\Service\PubsubLite;
 
 class ComputeMessageStatsRequest extends \Google\Model
 {
+  /**
+   * @var Cursor
+   */
+  public $endCursor;
   protected $endCursorType = Cursor::class;
   protected $endCursorDataType = '';
   /**
    * @var string
    */
   public $partition;
+  /**
+   * @var Cursor
+   */
+  public $startCursor;
   protected $startCursorType = Cursor::class;
   protected $startCursorDataType = '';
 

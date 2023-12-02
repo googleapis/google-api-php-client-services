@@ -19,6 +19,10 @@ namespace Google\Service\PubsubLite;
 
 class PartitionCursor extends \Google\Model
 {
+  /**
+   * @var Cursor
+   */
+  public $cursor;
   protected $cursorType = Cursor::class;
   protected $cursorDataType = '';
   /**

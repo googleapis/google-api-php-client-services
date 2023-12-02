@@ -19,8 +19,16 @@ namespace Google\Service\PubsubLite;
 
 class Subscription extends \Google\Model
 {
+  /**
+   * @var DeliveryConfig
+   */
+  public $deliveryConfig;
   protected $deliveryConfigType = DeliveryConfig::class;
   protected $deliveryConfigDataType = '';
+  /**
+   * @var ExportConfig
+   */
+  public $exportConfig;
   protected $exportConfigType = ExportConfig::class;
   protected $exportConfigDataType = '';
   /**

@@ -31,6 +31,10 @@ class ExportConfig extends \Google\Model
    * @var string
    */
   public $desiredState;
+  /**
+   * @var PubSubConfig
+   */
+  public $pubsubConfig;
   protected $pubsubConfigType = PubSubConfig::class;
   protected $pubsubConfigDataType = '';
 
