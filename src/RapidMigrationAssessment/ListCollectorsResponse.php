@@ -20,6 +20,10 @@ namespace Google\Service\RapidMigrationAssessment;
 class ListCollectorsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Collector[]
+   */
+  public $collectors;
   protected $collectorsType = Collector::class;
   protected $collectorsDataType = 'array';
   /**

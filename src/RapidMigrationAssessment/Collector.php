@@ -51,6 +51,10 @@ class Collector extends \Google\Model
    * @var string
    */
   public $expectedAssetCount;
+  /**
+   * @var GuestOsScan
+   */
+  public $guestOsScan;
   protected $guestOsScanType = GuestOsScan::class;
   protected $guestOsScanDataType = '';
   /**
@@ -73,6 +77,10 @@ class Collector extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VSphereScan
+   */
+  public $vsphereScan;
   protected $vsphereScanType = VSphereScan::class;
   protected $vsphereScanDataType = '';
 
