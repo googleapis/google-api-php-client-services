@@ -20,6 +20,10 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1SearchErrorReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorReports';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1ErrorReport[]
+   */
+  public $errorReports;
   protected $errorReportsType = GooglePlayDeveloperReportingV1beta1ErrorReport::class;
   protected $errorReportsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1ReleaseFilterOptions extends \Google\Collection
 {
   protected $collection_key = 'tracks';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1Track[]
+   */
+  public $tracks;
   protected $tracksType = GooglePlayDeveloperReportingV1beta1Track::class;
   protected $tracksDataType = 'array';
 

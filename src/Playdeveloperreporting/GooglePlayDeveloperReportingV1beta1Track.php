@@ -24,6 +24,10 @@ class GooglePlayDeveloperReportingV1beta1Track extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1Release[]
+   */
+  public $servingReleases;
   protected $servingReleasesType = GooglePlayDeveloperReportingV1beta1Release::class;
   protected $servingReleasesDataType = 'array';
   /**

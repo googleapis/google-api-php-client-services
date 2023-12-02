@@ -40,6 +40,10 @@ class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRequest extends
    * @var string
    */
   public $pageToken;
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1TimelineSpec
+   */
+  public $timelineSpec;
   protected $timelineSpecType = GooglePlayDeveloperReportingV1beta1TimelineSpec::class;
   protected $timelineSpecDataType = '';
 

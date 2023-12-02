@@ -27,26 +27,46 @@ class GooglePlayDeveloperReportingV1beta1ErrorIssue extends \Google\Model
    * @var string
    */
   public $distinctUsers;
+  /**
+   * @var GoogleTypeDecimal
+   */
+  public $distinctUsersPercent;
   protected $distinctUsersPercentType = GoogleTypeDecimal::class;
   protected $distinctUsersPercentDataType = '';
   /**
    * @var string
    */
   public $errorReportCount;
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1AppVersion
+   */
+  public $firstAppVersion;
   protected $firstAppVersionType = GooglePlayDeveloperReportingV1beta1AppVersion::class;
   protected $firstAppVersionDataType = '';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1OsVersion
+   */
+  public $firstOsVersion;
   protected $firstOsVersionType = GooglePlayDeveloperReportingV1beta1OsVersion::class;
   protected $firstOsVersionDataType = '';
   /**
    * @var string
    */
   public $issueUri;
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1AppVersion
+   */
+  public $lastAppVersion;
   protected $lastAppVersionType = GooglePlayDeveloperReportingV1beta1AppVersion::class;
   protected $lastAppVersionDataType = '';
   /**
    * @var string
    */
   public $lastErrorReportTime;
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1OsVersion
+   */
+  public $lastOsVersion;
   protected $lastOsVersionType = GooglePlayDeveloperReportingV1beta1OsVersion::class;
   protected $lastOsVersionDataType = '';
   /**

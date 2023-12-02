@@ -20,6 +20,10 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1FreshnessInfo extends \Google\Collection
 {
   protected $collection_key = 'freshnesses';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness[]
+   */
+  public $freshnesses;
   protected $freshnessesType = GooglePlayDeveloperReportingV1beta1FreshnessInfoFreshness::class;
   protected $freshnessesDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Playdeveloperreporting;
 
 class GooglePlayDeveloperReportingV1beta1StuckBackgroundWakelockRateMetricSet extends \Google\Model
 {
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1FreshnessInfo
+   */
+  public $freshnessInfo;
   protected $freshnessInfoType = GooglePlayDeveloperReportingV1beta1FreshnessInfo::class;
   protected $freshnessInfoDataType = '';
   /**

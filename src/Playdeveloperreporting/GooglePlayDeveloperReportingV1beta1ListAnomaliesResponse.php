@@ -20,6 +20,10 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1ListAnomaliesResponse extends \Google\Collection
 {
   protected $collection_key = 'anomalies';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1Anomaly[]
+   */
+  public $anomalies;
   protected $anomaliesType = GooglePlayDeveloperReportingV1beta1Anomaly::class;
   protected $anomaliesDataType = 'array';
   /**

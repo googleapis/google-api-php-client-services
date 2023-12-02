@@ -24,10 +24,22 @@ class GooglePlayDeveloperReportingV1beta1MetricsRow extends \Google\Collection
    * @var string
    */
   public $aggregationPeriod;
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1DimensionValue[]
+   */
+  public $dimensions;
   protected $dimensionsType = GooglePlayDeveloperReportingV1beta1DimensionValue::class;
   protected $dimensionsDataType = 'array';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1MetricValue[]
+   */
+  public $metrics;
   protected $metricsType = GooglePlayDeveloperReportingV1beta1MetricValue::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $startTime;
   protected $startTimeType = GoogleTypeDateTime::class;
   protected $startTimeDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1SearchAccessibleAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'apps';
+  /**
+   * @var GooglePlayDeveloperReportingV1beta1App[]
+   */
+  public $apps;
   protected $appsType = GooglePlayDeveloperReportingV1beta1App::class;
   protected $appsDataType = 'array';
   /**
