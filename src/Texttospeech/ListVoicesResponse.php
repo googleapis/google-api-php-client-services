@@ -20,6 +20,10 @@ namespace Google\Service\Texttospeech;
 class ListVoicesResponse extends \Google\Collection
 {
   protected $collection_key = 'voices';
+  /**
+   * @var Voice[]
+   */
+  public $voices;
   protected $voicesType = Voice::class;
   protected $voicesDataType = 'array';
 

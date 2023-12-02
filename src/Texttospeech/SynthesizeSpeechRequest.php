@@ -19,10 +19,22 @@ namespace Google\Service\Texttospeech;
 
 class SynthesizeSpeechRequest extends \Google\Model
 {
+  /**
+   * @var AudioConfig
+   */
+  public $audioConfig;
   protected $audioConfigType = AudioConfig::class;
   protected $audioConfigDataType = '';
+  /**
+   * @var SynthesisInput
+   */
+  public $input;
   protected $inputType = SynthesisInput::class;
   protected $inputDataType = '';
+  /**
+   * @var VoiceSelectionParams
+   */
+  public $voice;
   protected $voiceType = VoiceSelectionParams::class;
   protected $voiceDataType = '';
 
