@@ -19,6 +19,10 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaRecommendResponseRecommendationResult extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaDocument
+   */
+  public $document;
   protected $documentType = GoogleCloudDiscoveryengineV1betaDocument::class;
   protected $documentDataType = '';
   /**

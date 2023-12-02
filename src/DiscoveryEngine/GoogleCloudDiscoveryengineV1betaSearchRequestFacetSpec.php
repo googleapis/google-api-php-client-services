@@ -28,6 +28,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec extends \Google\Col
    * @var string[]
    */
   public $excludedFilterKeys;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpecFacetKey
+   */
+  public $facetKey;
   protected $facetKeyType = GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpecFacetKey::class;
   protected $facetKeyDataType = '';
   /**

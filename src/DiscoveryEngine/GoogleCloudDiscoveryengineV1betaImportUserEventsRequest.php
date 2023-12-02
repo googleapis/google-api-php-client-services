@@ -19,12 +19,28 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaImportUserEventsRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaBigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudDiscoveryengineV1betaBigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaImportErrorConfig
+   */
+  public $errorConfig;
   protected $errorConfigType = GoogleCloudDiscoveryengineV1betaImportErrorConfig::class;
   protected $errorConfigDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudDiscoveryengineV1betaGcsSource::class;
   protected $gcsSourceDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource
+   */
+  public $inlineSource;
   protected $inlineSourceType = GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource::class;
   protected $inlineSourceDataType = '';
 

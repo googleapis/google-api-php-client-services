@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig ext
    * @var string
    */
   public $optimizationObjective;
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig
+   */
+  public $optimizationObjectiveConfig;
   protected $optimizationObjectiveConfigType = GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig::class;
   protected $optimizationObjectiveConfigDataType = '';
   /**

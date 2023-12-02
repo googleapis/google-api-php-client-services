@@ -32,24 +32,48 @@ class GoogleCloudDiscoveryengineV1betaSearchResponse extends \Google\Collection
    * @var string
    */
   public $correctedQuery;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseFacet[]
+   */
+  public $facets;
   protected $facetsType = GoogleCloudDiscoveryengineV1betaSearchResponseFacet::class;
   protected $facetsDataType = 'array';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo[]
+   */
+  public $geoSearchDebugInfo;
   protected $geoSearchDebugInfoType = GoogleCloudDiscoveryengineV1betaSearchResponseGeoSearchDebugInfo::class;
   protected $geoSearchDebugInfoDataType = 'array';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResult
+   */
+  public $guidedSearchResult;
   protected $guidedSearchResultType = GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResult::class;
   protected $guidedSearchResultDataType = '';
   /**
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseQueryExpansionInfo
+   */
+  public $queryExpansionInfo;
   protected $queryExpansionInfoType = GoogleCloudDiscoveryengineV1betaSearchResponseQueryExpansionInfo::class;
   protected $queryExpansionInfoDataType = '';
   /**
    * @var string
    */
   public $redirectUri;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult[]
+   */
+  public $results;
   protected $resultsType = GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummary
+   */
+  public $summary;
   protected $summaryType = GoogleCloudDiscoveryengineV1betaSearchResponseSummary::class;
   protected $summaryDataType = '';
   /**

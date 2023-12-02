@@ -19,6 +19,10 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig
+   */
+  public $agentCreationConfig;
   protected $agentCreationConfigType = GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig::class;
   protected $agentCreationConfigDataType = '';
   /**

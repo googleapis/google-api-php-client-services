@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaImportUserEventsRequestInlineSource extends \Google\Collection
 {
   protected $collection_key = 'userEvents';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaUserEvent[]
+   */
+  public $userEvents;
   protected $userEventsType = GoogleCloudDiscoveryengineV1betaUserEvent::class;
   protected $userEventsDataType = 'array';
 

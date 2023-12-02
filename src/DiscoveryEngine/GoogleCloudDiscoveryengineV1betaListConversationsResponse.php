@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaListConversationsResponse extends \Google\Collection
 {
   protected $collection_key = 'conversations';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaConversation[]
+   */
+  public $conversations;
   protected $conversationsType = GoogleCloudDiscoveryengineV1betaConversation::class;
   protected $conversationsDataType = 'array';
   /**

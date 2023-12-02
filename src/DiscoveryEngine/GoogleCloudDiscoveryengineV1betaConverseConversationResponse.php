@@ -20,14 +20,26 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaConverseConversationResponse extends \Google\Collection
 {
   protected $collection_key = 'searchResults';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaConversation
+   */
+  public $conversation;
   protected $conversationType = GoogleCloudDiscoveryengineV1betaConversation::class;
   protected $conversationDataType = '';
   /**
    * @var string[]
    */
   public $relatedQuestions;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaReply
+   */
+  public $reply;
   protected $replyType = GoogleCloudDiscoveryengineV1betaReply::class;
   protected $replyDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult[]
+   */
+  public $searchResults;
   protected $searchResultsType = GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult::class;
   protected $searchResultsDataType = 'array';
 

@@ -20,12 +20,20 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaReply extends \Google\Collection
 {
   protected $collection_key = 'references';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaReplyReference[]
+   */
+  public $references;
   protected $referencesType = GoogleCloudDiscoveryengineV1betaReplyReference::class;
   protected $referencesDataType = 'array';
   /**
    * @var string
    */
   public $reply;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummary
+   */
+  public $summary;
   protected $summaryType = GoogleCloudDiscoveryengineV1betaSearchResponseSummary::class;
   protected $summaryDataType = '';
 

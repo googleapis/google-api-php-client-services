@@ -19,6 +19,10 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaDocument extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaDocumentContent
+   */
+  public $content;
   protected $contentType = GoogleCloudDiscoveryengineV1betaDocumentContent::class;
   protected $contentDataType = '';
   /**

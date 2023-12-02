@@ -28,6 +28,10 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpecFacetKey extends \Go
    * @var string[]
    */
   public $contains;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaInterval[]
+   */
+  public $intervals;
   protected $intervalsType = GoogleCloudDiscoveryengineV1betaInterval::class;
   protected $intervalsDataType = 'array';
   /**

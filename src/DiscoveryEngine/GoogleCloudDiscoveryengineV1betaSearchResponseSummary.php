@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Collection
 {
   protected $collection_key = 'summarySkippedReasons';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes
+   */
+  public $safetyAttributes;
   protected $safetyAttributesType = GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes::class;
   protected $safetyAttributesDataType = '';
   /**

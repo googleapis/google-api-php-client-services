@@ -23,8 +23,16 @@ class GoogleCloudDiscoveryengineV1betaConversationMessage extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaReply
+   */
+  public $reply;
   protected $replyType = GoogleCloudDiscoveryengineV1betaReply::class;
   protected $replyDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaTextInput
+   */
+  public $userInput;
   protected $userInputType = GoogleCloudDiscoveryengineV1betaTextInput::class;
   protected $userInputDataType = '';
 

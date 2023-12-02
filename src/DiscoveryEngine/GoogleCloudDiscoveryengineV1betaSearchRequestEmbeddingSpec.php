@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec extends \Google\Collection
 {
   protected $collection_key = 'embeddingVectors';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpecEmbeddingVector[]
+   */
+  public $embeddingVectors;
   protected $embeddingVectorsType = GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpecEmbeddingVector::class;
   protected $embeddingVectorsDataType = 'array';
 

@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
    * @var bool
    */
   public $exactMatch;
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason
+   */
+  public $failureReason;
   protected $failureReasonType = GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReason::class;
   protected $failureReasonDataType = '';
   /**
@@ -41,6 +45,10 @@ class GoogleCloudDiscoveryengineV1alphaTargetSite extends \Google\Model
    * @var string
    */
   public $providedUriPattern;
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo
+   */
+  public $siteVerificationInfo;
   protected $siteVerificationInfoType = GoogleCloudDiscoveryengineV1alphaSiteVerificationInfo::class;
   protected $siteVerificationInfoDataType = '';
   /**

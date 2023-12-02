@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo extends \Google\Collection
 {
   protected $collection_key = 'failureReasons';
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfoFailureReason[]
+   */
+  public $failureReasons;
   protected $failureReasonsType = GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfoFailureReason::class;
   protected $failureReasonsDataType = 'array';
   /**

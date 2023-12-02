@@ -24,6 +24,10 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResult extends \
    * @var string[]
    */
   public $followUpQuestions;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResultRefinementAttribute[]
+   */
+  public $refinementAttributes;
   protected $refinementAttributesType = GoogleCloudDiscoveryengineV1betaSearchResponseGuidedSearchResultRefinementAttribute::class;
   protected $refinementAttributesDataType = 'array';
 

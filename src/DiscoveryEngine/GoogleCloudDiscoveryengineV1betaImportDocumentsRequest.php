@@ -23,16 +23,32 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
    * @var bool
    */
   public $autoGenerateIds;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaBigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudDiscoveryengineV1betaBigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaImportErrorConfig
+   */
+  public $errorConfig;
   protected $errorConfigType = GoogleCloudDiscoveryengineV1betaImportErrorConfig::class;
   protected $errorConfigDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudDiscoveryengineV1betaGcsSource::class;
   protected $gcsSourceDataType = '';
   /**
    * @var string
    */
   public $idField;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource
+   */
+  public $inlineSource;
   protected $inlineSourceType = GoogleCloudDiscoveryengineV1betaImportDocumentsRequestInlineSource::class;
   protected $inlineSourceDataType = '';
   /**

@@ -24,6 +24,10 @@ class GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponse extends \Google\Colle
    * @var string[]
    */
   public $failedUris;
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo[]
+   */
+  public $failureSamples;
   protected $failureSamplesType = GoogleCloudDiscoveryengineV1alphaRecrawlUrisResponseFailureInfo::class;
   protected $failureSamplesDataType = 'array';
 

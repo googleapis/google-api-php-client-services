@@ -20,8 +20,16 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaImportDocumentsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaImportErrorConfig
+   */
+  public $errorConfig;
   protected $errorConfigType = GoogleCloudDiscoveryengineV1alphaImportErrorConfig::class;
   protected $errorConfigDataType = '';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $errorSamples;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
 

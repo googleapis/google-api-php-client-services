@@ -19,8 +19,16 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineLoggingErrorLog extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineLoggingErrorContext
+   */
+  public $context;
   protected $contextType = GoogleCloudDiscoveryengineLoggingErrorContext::class;
   protected $contextDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineLoggingImportErrorContext
+   */
+  public $importPayload;
   protected $importPayloadType = GoogleCloudDiscoveryengineLoggingImportErrorContext::class;
   protected $importPayloadDataType = '';
   /**
@@ -35,8 +43,16 @@ class GoogleCloudDiscoveryengineLoggingErrorLog extends \Google\Model
    * @var array[]
    */
   public $responsePayload;
+  /**
+   * @var GoogleCloudDiscoveryengineLoggingServiceContext
+   */
+  public $serviceContext;
   protected $serviceContextType = GoogleCloudDiscoveryengineLoggingServiceContext::class;
   protected $serviceContextDataType = '';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

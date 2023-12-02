@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaCompleteQueryResponse extends \Google\Collection
 {
   protected $collection_key = 'querySuggestions';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaCompleteQueryResponseQuerySuggestion[]
+   */
+  public $querySuggestions;
   protected $querySuggestionsType = GoogleCloudDiscoveryengineV1betaCompleteQueryResponseQuerySuggestion::class;
   protected $querySuggestionsDataType = 'array';
   /**

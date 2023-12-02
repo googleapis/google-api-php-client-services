@@ -19,12 +19,20 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaDocument
+   */
+  public $document;
   protected $documentType = GoogleCloudDiscoveryengineV1betaDocument::class;
   protected $documentDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaDoubleList[]
+   */
+  public $modelScores;
   protected $modelScoresType = GoogleCloudDiscoveryengineV1betaDoubleList::class;
   protected $modelScoresDataType = 'map';
 

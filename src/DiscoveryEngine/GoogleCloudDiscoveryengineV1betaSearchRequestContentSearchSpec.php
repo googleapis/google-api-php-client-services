@@ -19,10 +19,22 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec
+   */
+  public $extractiveContentSpec;
   protected $extractiveContentSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecExtractiveContentSpec::class;
   protected $extractiveContentSpecDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSnippetSpec
+   */
+  public $snippetSpec;
   protected $snippetSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSnippetSpec::class;
   protected $snippetSpecDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec
+   */
+  public $summarySpec;
   protected $summarySpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec::class;
   protected $summarySpecDataType = '';
 

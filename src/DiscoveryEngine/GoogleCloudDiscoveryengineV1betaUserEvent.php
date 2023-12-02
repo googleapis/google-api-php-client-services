@@ -20,18 +20,30 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
 {
   protected $collection_key = 'tagIds';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaCustomAttribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudDiscoveryengineV1betaCustomAttribute::class;
   protected $attributesDataType = 'map';
   /**
    * @var string
    */
   public $attributionToken;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaCompletionInfo
+   */
+  public $completionInfo;
   protected $completionInfoType = GoogleCloudDiscoveryengineV1betaCompletionInfo::class;
   protected $completionInfoDataType = '';
   /**
    * @var bool
    */
   public $directUserRequest;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaDocumentInfo[]
+   */
+  public $documents;
   protected $documentsType = GoogleCloudDiscoveryengineV1betaDocumentInfo::class;
   protected $documentsDataType = 'array';
   /**
@@ -46,16 +58,32 @@ class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
    * @var string
    */
   public $filter;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaMediaInfo
+   */
+  public $mediaInfo;
   protected $mediaInfoType = GoogleCloudDiscoveryengineV1betaMediaInfo::class;
   protected $mediaInfoDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaPageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = GoogleCloudDiscoveryengineV1betaPageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaPanelInfo
+   */
+  public $panel;
   protected $panelType = GoogleCloudDiscoveryengineV1betaPanelInfo::class;
   protected $panelDataType = '';
   /**
    * @var string[]
    */
   public $promotionIds;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchInfo
+   */
+  public $searchInfo;
   protected $searchInfoType = GoogleCloudDiscoveryengineV1betaSearchInfo::class;
   protected $searchInfoDataType = '';
   /**
@@ -66,8 +94,16 @@ class GoogleCloudDiscoveryengineV1betaUserEvent extends \Google\Collection
    * @var string[]
    */
   public $tagIds;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaTransactionInfo
+   */
+  public $transactionInfo;
   protected $transactionInfoType = GoogleCloudDiscoveryengineV1betaTransactionInfo::class;
   protected $transactionInfoDataType = '';
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaUserInfo
+   */
+  public $userInfo;
   protected $userInfoType = GoogleCloudDiscoveryengineV1betaUserInfo::class;
   protected $userInfoDataType = '';
   /**

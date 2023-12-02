@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseFacetFacetValue extends \Goo
    * @var string
    */
   public $count;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaInterval
+   */
+  public $interval;
   protected $intervalType = GoogleCloudDiscoveryengineV1betaInterval::class;
   protected $intervalDataType = '';
   /**
