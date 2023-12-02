@@ -20,6 +20,10 @@ namespace Google\Service\CloudProfiler;
 class CreateProfileRequest extends \Google\Collection
 {
   protected $collection_key = 'profileType';
+  /**
+   * @var Deployment
+   */
+  public $deployment;
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
   /**

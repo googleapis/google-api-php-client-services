@@ -19,6 +19,10 @@ namespace Google\Service\CloudProfiler;
 
 class Profile extends \Google\Model
 {
+  /**
+   * @var Deployment
+   */
+  public $deployment;
   protected $deploymentType = Deployment::class;
   protected $deploymentDataType = '';
   /**
