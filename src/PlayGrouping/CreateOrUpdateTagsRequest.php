@@ -20,6 +20,10 @@ namespace Google\Service\PlayGrouping;
 class CreateOrUpdateTagsRequest extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  /**
+   * @var Tag[]
+   */
+  public $tags;
   protected $tagsType = Tag::class;
   protected $tagsDataType = 'array';
 
