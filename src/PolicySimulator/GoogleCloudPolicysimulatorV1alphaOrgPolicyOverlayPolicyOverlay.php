@@ -19,6 +19,10 @@ namespace Google\Service\PolicySimulator;
 
 class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayPolicyOverlay extends \Google\Model
 {
+  /**
+   * @var GoogleCloudOrgpolicyV2Policy
+   */
+  public $policy;
   protected $policyType = GoogleCloudOrgpolicyV2Policy::class;
   protected $policyDataType = '';
   /**

@@ -19,12 +19,20 @@ namespace Google\Service\PolicySimulator;
 
 class GoogleCloudPolicysimulatorV1Replay extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPolicysimulatorV1ReplayConfig
+   */
+  public $config;
   protected $configType = GoogleCloudPolicysimulatorV1ReplayConfig::class;
   protected $configDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudPolicysimulatorV1ReplayResultsSummary
+   */
+  public $resultsSummary;
   protected $resultsSummaryType = GoogleCloudPolicysimulatorV1ReplayResultsSummary::class;
   protected $resultsSummaryDataType = '';
   /**

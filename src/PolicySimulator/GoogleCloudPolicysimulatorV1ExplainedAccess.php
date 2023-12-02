@@ -24,8 +24,16 @@ class GoogleCloudPolicysimulatorV1ExplainedAccess extends \Google\Collection
    * @var string
    */
   public $accessState;
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $errors;
   protected $errorsType = GoogleRpcStatus::class;
   protected $errorsDataType = 'array';
+  /**
+   * @var GoogleCloudPolicysimulatorV1ExplainedPolicy[]
+   */
+  public $policies;
   protected $policiesType = GoogleCloudPolicysimulatorV1ExplainedPolicy::class;
   protected $policiesDataType = 'array';
 

@@ -23,6 +23,10 @@ class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends \Google\Model
    * @var bool
    */
   public $allowAll;
+  /**
+   * @var GoogleTypeExpr
+   */
+  public $condition;
   protected $conditionType = GoogleTypeExpr::class;
   protected $conditionDataType = '';
   /**
@@ -33,6 +37,10 @@ class GoogleCloudOrgpolicyV2PolicySpecPolicyRule extends \Google\Model
    * @var bool
    */
   public $enforce;
+  /**
+   * @var GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues
+   */
+  public $values;
   protected $valuesType = GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValues::class;
   protected $valuesDataType = '';
 

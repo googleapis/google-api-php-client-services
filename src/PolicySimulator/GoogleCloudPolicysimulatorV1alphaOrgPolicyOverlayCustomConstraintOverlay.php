@@ -19,6 +19,10 @@ namespace Google\Service\PolicySimulator;
 
 class GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlayCustomConstraintOverlay extends \Google\Model
 {
+  /**
+   * @var GoogleCloudOrgpolicyV2CustomConstraint
+   */
+  public $customConstraint;
   protected $customConstraintType = GoogleCloudOrgpolicyV2CustomConstraint::class;
   protected $customConstraintDataType = '';
   /**

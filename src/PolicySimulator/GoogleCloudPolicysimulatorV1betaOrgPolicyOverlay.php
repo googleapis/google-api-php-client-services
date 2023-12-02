@@ -20,8 +20,16 @@ namespace Google\Service\PolicySimulator;
 class GoogleCloudPolicysimulatorV1betaOrgPolicyOverlay extends \Google\Collection
 {
   protected $collection_key = 'policies';
+  /**
+   * @var GoogleCloudPolicysimulatorV1betaOrgPolicyOverlayCustomConstraintOverlay[]
+   */
+  public $customConstraints;
   protected $customConstraintsType = GoogleCloudPolicysimulatorV1betaOrgPolicyOverlayCustomConstraintOverlay::class;
   protected $customConstraintsDataType = 'array';
+  /**
+   * @var GoogleCloudPolicysimulatorV1betaOrgPolicyOverlayPolicyOverlay[]
+   */
+  public $policies;
   protected $policiesType = GoogleCloudPolicysimulatorV1betaOrgPolicyOverlayPolicyOverlay::class;
   protected $policiesDataType = 'array';
 

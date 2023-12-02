@@ -19,12 +19,28 @@ namespace Google\Service\PolicySimulator;
 
 class GoogleCloudPolicysimulatorV1ReplayResult extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPolicysimulatorV1AccessTuple
+   */
+  public $accessTuple;
   protected $accessTupleType = GoogleCloudPolicysimulatorV1AccessTuple::class;
   protected $accessTupleDataType = '';
+  /**
+   * @var GoogleCloudPolicysimulatorV1ReplayDiff
+   */
+  public $diff;
   protected $diffType = GoogleCloudPolicysimulatorV1ReplayDiff::class;
   protected $diffDataType = '';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $lastSeenDate;
   protected $lastSeenDateType = GoogleTypeDate::class;
   protected $lastSeenDateDataType = '';
   /**
