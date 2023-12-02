@@ -24,12 +24,20 @@ class GoogleCloudPolicytroubleshooterV1ExplainedPolicy extends \Google\Collectio
    * @var string
    */
   public $access;
+  /**
+   * @var GoogleCloudPolicytroubleshooterV1BindingExplanation[]
+   */
+  public $bindingExplanations;
   protected $bindingExplanationsType = GoogleCloudPolicytroubleshooterV1BindingExplanation::class;
   protected $bindingExplanationsDataType = 'array';
   /**
    * @var string
    */
   public $fullResourceName;
+  /**
+   * @var GoogleIamV1Policy
+   */
+  public $policy;
   protected $policyType = GoogleIamV1Policy::class;
   protected $policyDataType = '';
   /**

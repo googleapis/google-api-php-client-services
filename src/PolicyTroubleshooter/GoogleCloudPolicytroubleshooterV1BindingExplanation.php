@@ -23,8 +23,16 @@ class GoogleCloudPolicytroubleshooterV1BindingExplanation extends \Google\Model
    * @var string
    */
   public $access;
+  /**
+   * @var GoogleTypeExpr
+   */
+  public $condition;
   protected $conditionType = GoogleTypeExpr::class;
   protected $conditionDataType = '';
+  /**
+   * @var GoogleCloudPolicytroubleshooterV1BindingExplanationAnnotatedMembership[]
+   */
+  public $memberships;
   protected $membershipsType = GoogleCloudPolicytroubleshooterV1BindingExplanationAnnotatedMembership::class;
   protected $membershipsDataType = 'map';
   /**

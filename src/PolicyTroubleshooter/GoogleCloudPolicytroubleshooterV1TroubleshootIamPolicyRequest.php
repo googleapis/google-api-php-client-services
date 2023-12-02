@@ -19,6 +19,10 @@ namespace Google\Service\PolicyTroubleshooter;
 
 class GoogleCloudPolicytroubleshooterV1TroubleshootIamPolicyRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudPolicytroubleshooterV1AccessTuple
+   */
+  public $accessTuple;
   protected $accessTupleType = GoogleCloudPolicytroubleshooterV1AccessTuple::class;
   protected $accessTupleDataType = '';
 
