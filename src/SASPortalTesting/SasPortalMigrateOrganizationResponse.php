@@ -20,6 +20,10 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalMigrateOrganizationResponse extends \Google\Collection
 {
   protected $collection_key = 'deploymentAssociation';
+  /**
+   * @var SasPortalDeploymentAssociation[]
+   */
+  public $deploymentAssociation;
   protected $deploymentAssociationType = SasPortalDeploymentAssociation::class;
   protected $deploymentAssociationDataType = 'array';
 

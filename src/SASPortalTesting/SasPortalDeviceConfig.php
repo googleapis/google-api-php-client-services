@@ -20,6 +20,10 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalDeviceConfig extends \Google\Collection
 {
   protected $collection_key = 'measurementCapabilities';
+  /**
+   * @var SasPortalDeviceAirInterface
+   */
+  public $airInterface;
   protected $airInterfaceType = SasPortalDeviceAirInterface::class;
   protected $airInterfaceDataType = '';
   /**
@@ -30,6 +34,10 @@ class SasPortalDeviceConfig extends \Google\Collection
    * @var string
    */
   public $category;
+  /**
+   * @var SasPortalInstallationParams
+   */
+  public $installationParams;
   protected $installationParamsType = SasPortalInstallationParams::class;
   protected $installationParamsDataType = '';
   /**
@@ -40,6 +48,10 @@ class SasPortalDeviceConfig extends \Google\Collection
    * @var string[]
    */
   public $measurementCapabilities;
+  /**
+   * @var SasPortalDeviceModel
+   */
+  public $model;
   protected $modelType = SasPortalDeviceModel::class;
   protected $modelDataType = '';
   /**
