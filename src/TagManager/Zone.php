@@ -24,8 +24,16 @@ class Zone extends \Google\Collection
    * @var string
    */
   public $accountId;
+  /**
+   * @var ZoneBoundary
+   */
+  public $boundary;
   protected $boundaryType = ZoneBoundary::class;
   protected $boundaryDataType = '';
+  /**
+   * @var ZoneChildContainer[]
+   */
+  public $childContainer;
   protected $childContainerType = ZoneChildContainer::class;
   protected $childContainerDataType = 'array';
   /**
@@ -52,6 +60,10 @@ class Zone extends \Google\Collection
    * @var string
    */
   public $tagManagerUrl;
+  /**
+   * @var ZoneTypeRestriction
+   */
+  public $typeRestriction;
   protected $typeRestrictionType = ZoneTypeRestriction::class;
   protected $typeRestrictionDataType = '';
   /**

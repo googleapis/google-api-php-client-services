@@ -19,6 +19,10 @@ namespace Google\Service\TagManager;
 
 class RevertTagResponse extends \Google\Model
 {
+  /**
+   * @var Tag
+   */
+  public $tag;
   protected $tagType = Tag::class;
   protected $tagDataType = '';
 

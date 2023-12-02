@@ -32,6 +32,10 @@ class Tag extends \Google\Collection
    * @var string[]
    */
   public $blockingTriggerId;
+  /**
+   * @var TagConsentSetting
+   */
+  public $consentSettings;
   protected $consentSettingsType = TagConsentSetting::class;
   protected $consentSettingsDataType = '';
   /**
@@ -54,6 +58,10 @@ class Tag extends \Google\Collection
    * @var bool
    */
   public $liveOnly;
+  /**
+   * @var Parameter
+   */
+  public $monitoringMetadata;
   protected $monitoringMetadataType = Parameter::class;
   protected $monitoringMetadataDataType = '';
   /**
@@ -68,6 +76,10 @@ class Tag extends \Google\Collection
    * @var string
    */
   public $notes;
+  /**
+   * @var Parameter[]
+   */
+  public $parameter;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
   /**
@@ -82,6 +94,10 @@ class Tag extends \Google\Collection
    * @var bool
    */
   public $paused;
+  /**
+   * @var Parameter
+   */
+  public $priority;
   protected $priorityType = Parameter::class;
   protected $priorityDataType = '';
   /**
@@ -92,6 +108,10 @@ class Tag extends \Google\Collection
    * @var string
    */
   public $scheduleStartMs;
+  /**
+   * @var SetupTag[]
+   */
+  public $setupTag;
   protected $setupTagType = SetupTag::class;
   protected $setupTagDataType = 'array';
   /**
@@ -106,6 +126,10 @@ class Tag extends \Google\Collection
    * @var string
    */
   public $tagManagerUrl;
+  /**
+   * @var TeardownTag[]
+   */
+  public $teardownTag;
   protected $teardownTagType = TeardownTag::class;
   protected $teardownTagDataType = 'array';
   /**

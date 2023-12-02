@@ -19,6 +19,10 @@ namespace Google\Service\TagManager;
 
 class RevertTriggerResponse extends \Google\Model
 {
+  /**
+   * @var Trigger
+   */
+  public $trigger;
   protected $triggerType = Trigger::class;
   protected $triggerDataType = '';
 

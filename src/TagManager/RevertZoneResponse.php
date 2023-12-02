@@ -19,6 +19,10 @@ namespace Google\Service\TagManager;
 
 class RevertZoneResponse extends \Google\Model
 {
+  /**
+   * @var Zone
+   */
+  public $zone;
   protected $zoneType = Zone::class;
   protected $zoneDataType = '';
 

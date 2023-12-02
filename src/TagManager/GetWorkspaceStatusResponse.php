@@ -20,8 +20,16 @@ namespace Google\Service\TagManager;
 class GetWorkspaceStatusResponse extends \Google\Collection
 {
   protected $collection_key = 'workspaceChange';
+  /**
+   * @var MergeConflict[]
+   */
+  public $mergeConflict;
   protected $mergeConflictType = MergeConflict::class;
   protected $mergeConflictDataType = 'array';
+  /**
+   * @var Entity[]
+   */
+  public $workspaceChange;
   protected $workspaceChangeType = Entity::class;
   protected $workspaceChangeDataType = 'array';
 

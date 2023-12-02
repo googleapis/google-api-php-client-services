@@ -24,10 +24,22 @@ class FolderEntities extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Tag[]
+   */
+  public $tag;
   protected $tagType = Tag::class;
   protected $tagDataType = 'array';
+  /**
+   * @var Trigger[]
+   */
+  public $trigger;
   protected $triggerType = Trigger::class;
   protected $triggerDataType = 'array';
+  /**
+   * @var Variable[]
+   */
+  public $variable;
   protected $variableType = Variable::class;
   protected $variableDataType = 'array';
 

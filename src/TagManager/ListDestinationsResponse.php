@@ -20,6 +20,10 @@ namespace Google\Service\TagManager;
 class ListDestinationsResponse extends \Google\Collection
 {
   protected $collection_key = 'destination';
+  /**
+   * @var Destination[]
+   */
+  public $destination;
   protected $destinationType = Destination::class;
   protected $destinationDataType = 'array';
   /**

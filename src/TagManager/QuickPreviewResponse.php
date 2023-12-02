@@ -23,8 +23,16 @@ class QuickPreviewResponse extends \Google\Model
    * @var bool
    */
   public $compilerError;
+  /**
+   * @var ContainerVersion
+   */
+  public $containerVersion;
   protected $containerVersionType = ContainerVersion::class;
   protected $containerVersionDataType = '';
+  /**
+   * @var SyncStatus
+   */
+  public $syncStatus;
   protected $syncStatusType = SyncStatus::class;
   protected $syncStatusDataType = '';
 

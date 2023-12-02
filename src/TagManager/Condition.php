@@ -20,6 +20,10 @@ namespace Google\Service\TagManager;
 class Condition extends \Google\Collection
 {
   protected $collection_key = 'parameter';
+  /**
+   * @var Parameter[]
+   */
+  public $parameter;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
   /**

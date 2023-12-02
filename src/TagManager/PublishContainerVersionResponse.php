@@ -23,6 +23,10 @@ class PublishContainerVersionResponse extends \Google\Model
    * @var bool
    */
   public $compilerError;
+  /**
+   * @var ContainerVersion
+   */
+  public $containerVersion;
   protected $containerVersionType = ContainerVersion::class;
   protected $containerVersionDataType = '';
 

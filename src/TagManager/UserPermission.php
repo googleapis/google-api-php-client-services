@@ -20,12 +20,20 @@ namespace Google\Service\TagManager;
 class UserPermission extends \Google\Collection
 {
   protected $collection_key = 'containerAccess';
+  /**
+   * @var AccountAccess
+   */
+  public $accountAccess;
   protected $accountAccessType = AccountAccess::class;
   protected $accountAccessDataType = '';
   /**
    * @var string
    */
   public $accountId;
+  /**
+   * @var ContainerAccess[]
+   */
+  public $containerAccess;
   protected $containerAccessType = ContainerAccess::class;
   protected $containerAccessDataType = 'array';
   /**

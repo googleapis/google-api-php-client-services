@@ -24,34 +24,78 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $accountId;
+  /**
+   * @var Condition[]
+   */
+  public $autoEventFilter;
   protected $autoEventFilterType = Condition::class;
   protected $autoEventFilterDataType = 'array';
+  /**
+   * @var Parameter
+   */
+  public $checkValidation;
   protected $checkValidationType = Parameter::class;
   protected $checkValidationDataType = '';
   /**
    * @var string
    */
   public $containerId;
+  /**
+   * @var Parameter
+   */
+  public $continuousTimeMinMilliseconds;
   protected $continuousTimeMinMillisecondsType = Parameter::class;
   protected $continuousTimeMinMillisecondsDataType = '';
+  /**
+   * @var Condition[]
+   */
+  public $customEventFilter;
   protected $customEventFilterType = Condition::class;
   protected $customEventFilterDataType = 'array';
+  /**
+   * @var Parameter
+   */
+  public $eventName;
   protected $eventNameType = Parameter::class;
   protected $eventNameDataType = '';
+  /**
+   * @var Condition[]
+   */
+  public $filter;
   protected $filterType = Condition::class;
   protected $filterDataType = 'array';
   /**
    * @var string
    */
   public $fingerprint;
+  /**
+   * @var Parameter
+   */
+  public $horizontalScrollPercentageList;
   protected $horizontalScrollPercentageListType = Parameter::class;
   protected $horizontalScrollPercentageListDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $interval;
   protected $intervalType = Parameter::class;
   protected $intervalDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $intervalSeconds;
   protected $intervalSecondsType = Parameter::class;
   protected $intervalSecondsDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $limit;
   protected $limitType = Parameter::class;
   protected $limitDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $maxTimerLengthSeconds;
   protected $maxTimerLengthSecondsType = Parameter::class;
   protected $maxTimerLengthSecondsDataType = '';
   /**
@@ -62,6 +106,10 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $notes;
+  /**
+   * @var Parameter[]
+   */
+  public $parameter;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
   /**
@@ -72,12 +120,20 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $path;
+  /**
+   * @var Parameter
+   */
+  public $selector;
   protected $selectorType = Parameter::class;
   protected $selectorDataType = '';
   /**
    * @var string
    */
   public $tagManagerUrl;
+  /**
+   * @var Parameter
+   */
+  public $totalTimeMinMilliseconds;
   protected $totalTimeMinMillisecondsType = Parameter::class;
   protected $totalTimeMinMillisecondsDataType = '';
   /**
@@ -88,18 +144,46 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $type;
+  /**
+   * @var Parameter
+   */
+  public $uniqueTriggerId;
   protected $uniqueTriggerIdType = Parameter::class;
   protected $uniqueTriggerIdDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $verticalScrollPercentageList;
   protected $verticalScrollPercentageListType = Parameter::class;
   protected $verticalScrollPercentageListDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $visibilitySelector;
   protected $visibilitySelectorType = Parameter::class;
   protected $visibilitySelectorDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $visiblePercentageMax;
   protected $visiblePercentageMaxType = Parameter::class;
   protected $visiblePercentageMaxDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $visiblePercentageMin;
   protected $visiblePercentageMinType = Parameter::class;
   protected $visiblePercentageMinDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $waitForTags;
   protected $waitForTagsType = Parameter::class;
   protected $waitForTagsDataType = '';
+  /**
+   * @var Parameter
+   */
+  public $waitForTagsTimeout;
   protected $waitForTagsTimeoutType = Parameter::class;
   protected $waitForTagsTimeoutDataType = '';
   /**

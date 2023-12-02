@@ -19,6 +19,10 @@ namespace Google\Service\TagManager;
 
 class RevertFolderResponse extends \Google\Model
 {
+  /**
+   * @var Folder
+   */
+  public $folder;
   protected $folderType = Folder::class;
   protected $folderDataType = '';
 

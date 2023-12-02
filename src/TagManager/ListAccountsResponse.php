@@ -20,6 +20,10 @@ namespace Google\Service\TagManager;
 class ListAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'account';
+  /**
+   * @var Account[]
+   */
+  public $account;
   protected $accountType = Account::class;
   protected $accountDataType = 'array';
   /**

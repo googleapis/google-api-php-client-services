@@ -23,6 +23,10 @@ class TagConsentSetting extends \Google\Model
    * @var string
    */
   public $consentStatus;
+  /**
+   * @var Parameter
+   */
+  public $consentType;
   protected $consentTypeType = Parameter::class;
   protected $consentTypeDataType = '';
 

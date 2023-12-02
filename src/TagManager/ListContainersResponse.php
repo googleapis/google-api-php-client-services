@@ -20,6 +20,10 @@ namespace Google\Service\TagManager;
 class ListContainersResponse extends \Google\Collection
 {
   protected $collection_key = 'container';
+  /**
+   * @var Container[]
+   */
+  public $container;
   protected $containerType = Container::class;
   protected $containerDataType = 'array';
   /**

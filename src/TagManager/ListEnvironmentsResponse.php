@@ -20,6 +20,10 @@ namespace Google\Service\TagManager;
 class ListEnvironmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'environment';
+  /**
+   * @var Environment[]
+   */
+  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\TagManager;
 class ListGtagConfigResponse extends \Google\Collection
 {
   protected $collection_key = 'gtagConfig';
+  /**
+   * @var GtagConfig[]
+   */
+  public $gtagConfig;
   protected $gtagConfigType = GtagConfig::class;
   protected $gtagConfigDataType = 'array';
   /**

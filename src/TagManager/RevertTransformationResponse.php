@@ -19,6 +19,10 @@ namespace Google\Service\TagManager;
 
 class RevertTransformationResponse extends \Google\Model
 {
+  /**
+   * @var Transformation
+   */
+  public $transformation;
   protected $transformationType = Transformation::class;
   protected $transformationDataType = '';
 

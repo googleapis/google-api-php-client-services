@@ -23,6 +23,10 @@ class Account extends \Google\Model
    * @var string
    */
   public $accountId;
+  /**
+   * @var AccountFeatures
+   */
+  public $features;
   protected $featuresType = AccountFeatures::class;
   protected $featuresDataType = '';
   /**

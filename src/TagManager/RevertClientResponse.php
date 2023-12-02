@@ -19,6 +19,10 @@ namespace Google\Service\TagManager;
 
 class RevertClientResponse extends \Google\Model
 {
+  /**
+   * @var Client
+   */
+  public $client;
   protected $clientType = Client::class;
   protected $clientDataType = '';
 
