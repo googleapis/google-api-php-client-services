@@ -28,6 +28,10 @@ class ResourceSearchResult extends \Google\Collection
    * @var string
    */
   public $assetType;
+  /**
+   * @var AttachedResource[]
+   */
+  public $attachedResources;
   protected $attachedResourcesType = AttachedResource::class;
   protected $attachedResourcesDataType = 'array';
   /**
@@ -42,6 +46,10 @@ class ResourceSearchResult extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var EffectiveTagDetails[]
+   */
+  public $effectiveTags;
   protected $effectiveTagsType = EffectiveTagDetails::class;
   protected $effectiveTagsDataType = 'array';
   /**
@@ -88,6 +96,10 @@ class ResourceSearchResult extends \Google\Collection
    * @var string
    */
   public $project;
+  /**
+   * @var RelatedResources[]
+   */
+  public $relationships;
   protected $relationshipsType = RelatedResources::class;
   protected $relationshipsDataType = 'map';
   /**
@@ -110,12 +122,20 @@ class ResourceSearchResult extends \Google\Collection
    * @var string[]
    */
   public $tagValues;
+  /**
+   * @var Tag[]
+   */
+  public $tags;
   protected $tagsType = Tag::class;
   protected $tagsDataType = 'array';
   /**
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VersionedResource[]
+   */
+  public $versionedResources;
   protected $versionedResourcesType = VersionedResource::class;
   protected $versionedResourcesDataType = 'array';
 

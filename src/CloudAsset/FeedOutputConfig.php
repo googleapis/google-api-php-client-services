@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class FeedOutputConfig extends \Google\Model
 {
+  /**
+   * @var PubsubDestination
+   */
+  public $pubsubDestination;
   protected $pubsubDestinationType = PubsubDestination::class;
   protected $pubsubDestinationDataType = '';
 

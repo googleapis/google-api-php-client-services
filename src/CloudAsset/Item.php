@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class Item extends \Google\Model
 {
+  /**
+   * @var SoftwarePackage
+   */
+  public $availablePackage;
   protected $availablePackageType = SoftwarePackage::class;
   protected $availablePackageDataType = '';
   /**
@@ -29,6 +33,10 @@ class Item extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var SoftwarePackage
+   */
+  public $installedPackage;
   protected $installedPackageType = SoftwarePackage::class;
   protected $installedPackageDataType = '';
   /**

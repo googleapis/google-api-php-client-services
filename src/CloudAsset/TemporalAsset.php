@@ -19,18 +19,30 @@ namespace Google\Service\CloudAsset;
 
 class TemporalAsset extends \Google\Model
 {
+  /**
+   * @var Asset
+   */
+  public $asset;
   protected $assetType = Asset::class;
   protected $assetDataType = '';
   /**
    * @var bool
    */
   public $deleted;
+  /**
+   * @var Asset
+   */
+  public $priorAsset;
   protected $priorAssetType = Asset::class;
   protected $priorAssetDataType = '';
   /**
    * @var string
    */
   public $priorAssetState;
+  /**
+   * @var TimeWindow
+   */
+  public $window;
   protected $windowType = TimeWindow::class;
   protected $windowDataType = '';
 

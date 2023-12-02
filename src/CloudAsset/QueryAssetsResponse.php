@@ -23,14 +23,26 @@ class QueryAssetsResponse extends \Google\Model
    * @var bool
    */
   public $done;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
    * @var string
    */
   public $jobReference;
+  /**
+   * @var QueryAssetsOutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = QueryAssetsOutputConfig::class;
   protected $outputConfigDataType = '';
+  /**
+   * @var QueryResult
+   */
+  public $queryResult;
   protected $queryResultType = QueryResult::class;
   protected $queryResultDataType = '';
 

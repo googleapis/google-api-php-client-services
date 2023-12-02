@@ -19,8 +19,16 @@ namespace Google\Service\CloudAsset;
 
 class GoogleIdentityAccesscontextmanagerV1EgressPolicy extends \Google\Model
 {
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1EgressFrom
+   */
+  public $egressFrom;
   protected $egressFromType = GoogleIdentityAccesscontextmanagerV1EgressFrom::class;
   protected $egressFromDataType = '';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1EgressTo
+   */
+  public $egressTo;
   protected $egressToType = GoogleIdentityAccesscontextmanagerV1EgressTo::class;
   protected $egressToDataType = '';
 

@@ -19,22 +19,58 @@ namespace Google\Service\CloudAsset;
 
 class SoftwarePackage extends \Google\Model
 {
+  /**
+   * @var VersionedPackage
+   */
+  public $aptPackage;
   protected $aptPackageType = VersionedPackage::class;
   protected $aptPackageDataType = '';
+  /**
+   * @var VersionedPackage
+   */
+  public $cosPackage;
   protected $cosPackageType = VersionedPackage::class;
   protected $cosPackageDataType = '';
+  /**
+   * @var VersionedPackage
+   */
+  public $googetPackage;
   protected $googetPackageType = VersionedPackage::class;
   protected $googetPackageDataType = '';
+  /**
+   * @var WindowsQuickFixEngineeringPackage
+   */
+  public $qfePackage;
   protected $qfePackageType = WindowsQuickFixEngineeringPackage::class;
   protected $qfePackageDataType = '';
+  /**
+   * @var WindowsApplication
+   */
+  public $windowsApplication;
   protected $windowsApplicationType = WindowsApplication::class;
   protected $windowsApplicationDataType = '';
+  /**
+   * @var WindowsUpdatePackage
+   */
+  public $wuaPackage;
   protected $wuaPackageType = WindowsUpdatePackage::class;
   protected $wuaPackageDataType = '';
+  /**
+   * @var VersionedPackage
+   */
+  public $yumPackage;
   protected $yumPackageType = VersionedPackage::class;
   protected $yumPackageDataType = '';
+  /**
+   * @var VersionedPackage
+   */
+  public $zypperPackage;
   protected $zypperPackageType = VersionedPackage::class;
   protected $zypperPackageDataType = '';
+  /**
+   * @var ZypperPatch
+   */
+  public $zypperPatch;
   protected $zypperPatchType = ZypperPatch::class;
   protected $zypperPatchDataType = '';
 

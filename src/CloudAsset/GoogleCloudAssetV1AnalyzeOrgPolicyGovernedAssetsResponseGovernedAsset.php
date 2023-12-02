@@ -20,12 +20,28 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset extends \Google\Collection
 {
   protected $collection_key = 'policyBundle';
+  /**
+   * @var AnalyzerOrgPolicy
+   */
+  public $consolidatedPolicy;
   protected $consolidatedPolicyType = AnalyzerOrgPolicy::class;
   protected $consolidatedPolicyDataType = '';
+  /**
+   * @var GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy
+   */
+  public $governedIamPolicy;
   protected $governedIamPolicyType = GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy::class;
   protected $governedIamPolicyDataType = '';
+  /**
+   * @var GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource
+   */
+  public $governedResource;
   protected $governedResourceType = GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedResource::class;
   protected $governedResourceDataType = '';
+  /**
+   * @var AnalyzerOrgPolicy[]
+   */
+  public $policyBundle;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
 

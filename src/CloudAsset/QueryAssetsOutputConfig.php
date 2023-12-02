@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class QueryAssetsOutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination
+   */
+  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudAssetV1QueryAssetsOutputConfigBigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class BatchGetEffectiveIamPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'policyResults';
+  /**
+   * @var EffectiveIamPolicy[]
+   */
+  public $policyResults;
   protected $policyResultsType = EffectiveIamPolicy::class;
   protected $policyResultsDataType = 'array';
 

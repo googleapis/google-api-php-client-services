@@ -20,8 +20,16 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1IdentityList extends \Google\Collection
 {
   protected $collection_key = 'identities';
+  /**
+   * @var GoogleCloudAssetV1Edge[]
+   */
+  public $groupEdges;
   protected $groupEdgesType = GoogleCloudAssetV1Edge::class;
   protected $groupEdgesDataType = 'array';
+  /**
+   * @var GoogleCloudAssetV1Identity[]
+   */
+  public $identities;
   protected $identitiesType = GoogleCloudAssetV1Identity::class;
   protected $identitiesDataType = 'array';
 

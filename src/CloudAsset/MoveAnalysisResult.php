@@ -20,8 +20,16 @@ namespace Google\Service\CloudAsset;
 class MoveAnalysisResult extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var MoveImpact[]
+   */
+  public $blockers;
   protected $blockersType = MoveImpact::class;
   protected $blockersDataType = 'array';
+  /**
+   * @var MoveImpact[]
+   */
+  public $warnings;
   protected $warningsType = MoveImpact::class;
   protected $warningsDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\CloudAsset;
 
 class IamPolicyAnalysisOutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudAssetV1BigQueryDestination
+   */
+  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudAssetV1BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
+  /**
+   * @var GoogleCloudAssetV1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAssetV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

@@ -20,12 +20,28 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1AccessControlList extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  /**
+   * @var GoogleCloudAssetV1Access[]
+   */
+  public $accesses;
   protected $accessesType = GoogleCloudAssetV1Access::class;
   protected $accessesDataType = 'array';
+  /**
+   * @var ConditionEvaluation
+   */
+  public $conditionEvaluation;
   protected $conditionEvaluationType = ConditionEvaluation::class;
   protected $conditionEvaluationDataType = '';
+  /**
+   * @var GoogleCloudAssetV1Edge[]
+   */
+  public $resourceEdges;
   protected $resourceEdgesType = GoogleCloudAssetV1Edge::class;
   protected $resourceEdgesDataType = 'array';
+  /**
+   * @var GoogleCloudAssetV1Resource[]
+   */
+  public $resources;
   protected $resourcesType = GoogleCloudAssetV1Resource::class;
   protected $resourcesDataType = 'array';
 

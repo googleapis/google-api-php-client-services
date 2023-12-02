@@ -19,8 +19,16 @@ namespace Google\Service\CloudAsset;
 
 class GoogleIdentityAccesscontextmanagerV1AccessLevel extends \Google\Model
 {
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1BasicLevel
+   */
+  public $basic;
   protected $basicType = GoogleIdentityAccesscontextmanagerV1BasicLevel::class;
   protected $basicDataType = '';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1CustomLevel
+   */
+  public $custom;
   protected $customType = GoogleIdentityAccesscontextmanagerV1CustomLevel::class;
   protected $customDataType = '';
   /**

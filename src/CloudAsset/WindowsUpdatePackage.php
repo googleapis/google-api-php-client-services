@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class WindowsUpdatePackage extends \Google\Collection
 {
   protected $collection_key = 'moreInfoUrls';
+  /**
+   * @var WindowsUpdateCategory[]
+   */
+  public $categories;
   protected $categoriesType = WindowsUpdateCategory::class;
   protected $categoriesDataType = 'array';
   /**

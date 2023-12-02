@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class GoogleIdentityAccesscontextmanagerV1IngressTo extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1ApiOperation[]
+   */
+  public $operations;
   protected $operationsType = GoogleIdentityAccesscontextmanagerV1ApiOperation::class;
   protected $operationsDataType = 'array';
   /**

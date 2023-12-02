@@ -20,8 +20,16 @@ namespace Google\Service\CloudAsset;
 class AnalyzeOrgPolicyGovernedContainersResponse extends \Google\Collection
 {
   protected $collection_key = 'governedContainers';
+  /**
+   * @var AnalyzerOrgPolicyConstraint
+   */
+  public $constraint;
   protected $constraintType = AnalyzerOrgPolicyConstraint::class;
   protected $constraintDataType = '';
+  /**
+   * @var GoogleCloudAssetV1GovernedContainer[]
+   */
+  public $governedContainers;
   protected $governedContainersType = GoogleCloudAssetV1GovernedContainer::class;
   protected $governedContainersDataType = 'array';
   /**

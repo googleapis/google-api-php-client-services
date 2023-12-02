@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class BatchGetAssetsHistoryResponse extends \Google\Collection
 {
   protected $collection_key = 'assets';
+  /**
+   * @var TemporalAsset[]
+   */
+  public $assets;
   protected $assetsType = TemporalAsset::class;
   protected $assetsDataType = 'array';
 

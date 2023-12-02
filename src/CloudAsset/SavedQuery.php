@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class SavedQuery extends \Google\Model
 {
+  /**
+   * @var QueryContent
+   */
+  public $content;
   protected $contentType = QueryContent::class;
   protected $contentDataType = '';
   /**

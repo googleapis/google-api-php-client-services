@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class RelatedResources extends \Google\Collection
 {
   protected $collection_key = 'relatedResources';
+  /**
+   * @var RelatedResource[]
+   */
+  public $relatedResources;
   protected $relatedResourcesType = RelatedResource::class;
   protected $relatedResourcesDataType = 'array';
 

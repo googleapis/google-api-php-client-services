@@ -19,12 +19,20 @@ namespace Google\Service\CloudAsset;
 
 class MoveAnalysis extends \Google\Model
 {
+  /**
+   * @var MoveAnalysisResult
+   */
+  public $analysis;
   protected $analysisType = MoveAnalysisResult::class;
   protected $analysisDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
 

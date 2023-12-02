@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class Explanation extends \Google\Model
 {
+  /**
+   * @var Permissions[]
+   */
+  public $matchedPermissions;
   protected $matchedPermissionsType = Permissions::class;
   protected $matchedPermissionsDataType = 'map';
 

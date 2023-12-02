@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class IamPolicyAnalysisResult extends \Google\Collection
 {
   protected $collection_key = 'accessControlLists';
+  /**
+   * @var GoogleCloudAssetV1AccessControlList[]
+   */
+  public $accessControlLists;
   protected $accessControlListsType = GoogleCloudAssetV1AccessControlList::class;
   protected $accessControlListsDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class IamPolicyAnalysisResult extends \Google\Collection
    * @var bool
    */
   public $fullyExplored;
+  /**
+   * @var Binding
+   */
+  public $iamBinding;
   protected $iamBindingType = Binding::class;
   protected $iamBindingDataType = '';
+  /**
+   * @var GoogleCloudAssetV1IdentityList
+   */
+  public $identityList;
   protected $identityListType = GoogleCloudAssetV1IdentityList::class;
   protected $identityListDataType = '';
 

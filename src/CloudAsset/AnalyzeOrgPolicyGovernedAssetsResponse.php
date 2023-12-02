@@ -20,8 +20,16 @@ namespace Google\Service\CloudAsset;
 class AnalyzeOrgPolicyGovernedAssetsResponse extends \Google\Collection
 {
   protected $collection_key = 'governedAssets';
+  /**
+   * @var AnalyzerOrgPolicyConstraint
+   */
+  public $constraint;
   protected $constraintType = AnalyzerOrgPolicyConstraint::class;
   protected $constraintDataType = '';
+  /**
+   * @var GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset[]
+   */
+  public $governedAssets;
   protected $governedAssetsType = GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedAsset::class;
   protected $governedAssetsDataType = 'array';
   /**

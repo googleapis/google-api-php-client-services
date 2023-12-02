@@ -19,12 +19,20 @@ namespace Google\Service\CloudAsset;
 
 class Inventory extends \Google\Model
 {
+  /**
+   * @var Item[]
+   */
+  public $items;
   protected $itemsType = Item::class;
   protected $itemsDataType = 'map';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var OsInfo
+   */
+  public $osInfo;
   protected $osInfoType = OsInfo::class;
   protected $osInfoDataType = '';
   /**

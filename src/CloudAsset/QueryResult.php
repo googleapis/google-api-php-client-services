@@ -28,6 +28,10 @@ class QueryResult extends \Google\Collection
    * @var array[]
    */
   public $rows;
+  /**
+   * @var TableSchema
+   */
+  public $schema;
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
   /**

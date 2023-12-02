@@ -19,14 +19,34 @@ namespace Google\Service\CloudAsset;
 
 class IamPolicyAnalysisQuery extends \Google\Model
 {
+  /**
+   * @var AccessSelector
+   */
+  public $accessSelector;
   protected $accessSelectorType = AccessSelector::class;
   protected $accessSelectorDataType = '';
+  /**
+   * @var ConditionContext
+   */
+  public $conditionContext;
   protected $conditionContextType = ConditionContext::class;
   protected $conditionContextDataType = '';
+  /**
+   * @var IdentitySelector
+   */
+  public $identitySelector;
   protected $identitySelectorType = IdentitySelector::class;
   protected $identitySelectorDataType = '';
+  /**
+   * @var Options
+   */
+  public $options;
   protected $optionsType = Options::class;
   protected $optionsDataType = '';
+  /**
+   * @var ResourceSelector
+   */
+  public $resourceSelector;
   protected $resourceSelectorType = ResourceSelector::class;
   protected $resourceSelectorDataType = '';
   /**

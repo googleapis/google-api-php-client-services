@@ -20,14 +20,26 @@ namespace Google\Service\CloudAsset;
 class IamPolicyAnalysis extends \Google\Collection
 {
   protected $collection_key = 'nonCriticalErrors';
+  /**
+   * @var IamPolicyAnalysisQuery
+   */
+  public $analysisQuery;
   protected $analysisQueryType = IamPolicyAnalysisQuery::class;
   protected $analysisQueryDataType = '';
+  /**
+   * @var IamPolicyAnalysisResult[]
+   */
+  public $analysisResults;
   protected $analysisResultsType = IamPolicyAnalysisResult::class;
   protected $analysisResultsDataType = 'array';
   /**
    * @var bool
    */
   public $fullyExplored;
+  /**
+   * @var IamPolicyAnalysisState[]
+   */
+  public $nonCriticalErrors;
   protected $nonCriticalErrorsType = IamPolicyAnalysisState::class;
   protected $nonCriticalErrorsDataType = 'array';
 

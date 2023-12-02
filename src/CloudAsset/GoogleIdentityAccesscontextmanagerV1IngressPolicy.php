@@ -19,8 +19,16 @@ namespace Google\Service\CloudAsset;
 
 class GoogleIdentityAccesscontextmanagerV1IngressPolicy extends \Google\Model
 {
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1IngressFrom
+   */
+  public $ingressFrom;
   protected $ingressFromType = GoogleIdentityAccesscontextmanagerV1IngressFrom::class;
   protected $ingressFromDataType = '';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1IngressTo
+   */
+  public $ingressTo;
   protected $ingressToType = GoogleIdentityAccesscontextmanagerV1IngressTo::class;
   protected $ingressToDataType = '';
 

@@ -28,12 +28,20 @@ class Feed extends \Google\Collection
    * @var string[]
    */
   public $assetTypes;
+  /**
+   * @var Expr
+   */
+  public $condition;
   protected $conditionType = Expr::class;
   protected $conditionDataType = '';
   /**
    * @var string
    */
   public $contentType;
+  /**
+   * @var FeedOutputConfig
+   */
+  public $feedOutputConfig;
   protected $feedOutputConfigType = FeedOutputConfig::class;
   protected $feedOutputConfigDataType = '';
   /**

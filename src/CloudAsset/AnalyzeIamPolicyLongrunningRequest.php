@@ -19,8 +19,16 @@ namespace Google\Service\CloudAsset;
 
 class AnalyzeIamPolicyLongrunningRequest extends \Google\Model
 {
+  /**
+   * @var IamPolicyAnalysisQuery
+   */
+  public $analysisQuery;
   protected $analysisQueryType = IamPolicyAnalysisQuery::class;
   protected $analysisQueryDataType = '';
+  /**
+   * @var IamPolicyAnalysisOutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = IamPolicyAnalysisOutputConfig::class;
   protected $outputConfigDataType = '';
   /**

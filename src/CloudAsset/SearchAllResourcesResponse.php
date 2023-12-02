@@ -24,6 +24,10 @@ class SearchAllResourcesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ResourceSearchResult[]
+   */
+  public $results;
   protected $resultsType = ResourceSearchResult::class;
   protected $resultsDataType = 'array';
 

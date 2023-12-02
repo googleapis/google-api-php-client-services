@@ -24,8 +24,16 @@ class AnalyzeIamPolicyResponse extends \Google\Collection
    * @var bool
    */
   public $fullyExplored;
+  /**
+   * @var IamPolicyAnalysis
+   */
+  public $mainAnalysis;
   protected $mainAnalysisType = IamPolicyAnalysis::class;
   protected $mainAnalysisDataType = '';
+  /**
+   * @var IamPolicyAnalysis[]
+   */
+  public $serviceAccountImpersonationAnalysis;
   protected $serviceAccountImpersonationAnalysisType = IamPolicyAnalysis::class;
   protected $serviceAccountImpersonationAnalysisDataType = 'array';
 

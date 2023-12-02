@@ -20,6 +20,10 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1GovernedContainer extends \Google\Collection
 {
   protected $collection_key = 'policyBundle';
+  /**
+   * @var AnalyzerOrgPolicy
+   */
+  public $consolidatedPolicy;
   protected $consolidatedPolicyType = AnalyzerOrgPolicy::class;
   protected $consolidatedPolicyDataType = '';
   /**
@@ -30,6 +34,10 @@ class GoogleCloudAssetV1GovernedContainer extends \Google\Collection
    * @var string
    */
   public $parent;
+  /**
+   * @var AnalyzerOrgPolicy[]
+   */
+  public $policyBundle;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
 

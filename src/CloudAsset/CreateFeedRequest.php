@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class CreateFeedRequest extends \Google\Model
 {
+  /**
+   * @var Feed
+   */
+  public $feed;
   protected $feedType = Feed::class;
   protected $feedDataType = '';
   /**

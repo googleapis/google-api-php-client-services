@@ -20,8 +20,16 @@ namespace Google\Service\CloudAsset;
 class GoogleCloudAssetV1p7beta1Asset extends \Google\Collection
 {
   protected $collection_key = 'orgPolicy';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1AccessLevel
+   */
+  public $accessLevel;
   protected $accessLevelType = GoogleIdentityAccesscontextmanagerV1AccessLevel::class;
   protected $accessLevelDataType = '';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1AccessPolicy
+   */
+  public $accessPolicy;
   protected $accessPolicyType = GoogleIdentityAccesscontextmanagerV1AccessPolicy::class;
   protected $accessPolicyDataType = '';
   /**
@@ -32,18 +40,38 @@ class GoogleCloudAssetV1p7beta1Asset extends \Google\Collection
    * @var string
    */
   public $assetType;
+  /**
+   * @var Policy
+   */
+  public $iamPolicy;
   protected $iamPolicyType = Policy::class;
   protected $iamPolicyDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudOrgpolicyV1Policy[]
+   */
+  public $orgPolicy;
   protected $orgPolicyType = GoogleCloudOrgpolicyV1Policy::class;
   protected $orgPolicyDataType = 'array';
+  /**
+   * @var GoogleCloudAssetV1p7beta1RelatedAssets
+   */
+  public $relatedAssets;
   protected $relatedAssetsType = GoogleCloudAssetV1p7beta1RelatedAssets::class;
   protected $relatedAssetsDataType = '';
+  /**
+   * @var GoogleCloudAssetV1p7beta1Resource
+   */
+  public $resource;
   protected $resourceType = GoogleCloudAssetV1p7beta1Resource::class;
   protected $resourceDataType = '';
+  /**
+   * @var GoogleIdentityAccesscontextmanagerV1ServicePerimeter
+   */
+  public $servicePerimeter;
   protected $servicePerimeterType = GoogleIdentityAccesscontextmanagerV1ServicePerimeter::class;
   protected $servicePerimeterDataType = '';
   /**

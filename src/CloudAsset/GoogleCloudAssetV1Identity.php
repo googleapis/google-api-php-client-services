@@ -19,6 +19,10 @@ namespace Google\Service\CloudAsset;
 
 class GoogleCloudAssetV1Identity extends \Google\Model
 {
+  /**
+   * @var IamPolicyAnalysisState
+   */
+  public $analysisState;
   protected $analysisStateType = IamPolicyAnalysisState::class;
   protected $analysisStateDataType = '';
   /**

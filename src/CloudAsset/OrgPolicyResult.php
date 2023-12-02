@@ -20,8 +20,16 @@ namespace Google\Service\CloudAsset;
 class OrgPolicyResult extends \Google\Collection
 {
   protected $collection_key = 'policyBundle';
+  /**
+   * @var AnalyzerOrgPolicy
+   */
+  public $consolidatedPolicy;
   protected $consolidatedPolicyType = AnalyzerOrgPolicy::class;
   protected $consolidatedPolicyDataType = '';
+  /**
+   * @var AnalyzerOrgPolicy[]
+   */
+  public $policyBundle;
   protected $policyBundleType = AnalyzerOrgPolicy::class;
   protected $policyBundleDataType = 'array';
 
