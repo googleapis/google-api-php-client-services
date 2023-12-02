@@ -56,12 +56,20 @@ class GoogleCloudRecaptchaenterpriseV1Event extends \Google\Collection
    * @var string
    */
   public $token;
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionData
+   */
+  public $transactionData;
   protected $transactionDataType = GoogleCloudRecaptchaenterpriseV1TransactionData::class;
   protected $transactionDataDataType = '';
   /**
    * @var string
    */
   public $userAgent;
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1UserInfo
+   */
+  public $userInfo;
   protected $userInfoType = GoogleCloudRecaptchaenterpriseV1UserInfo::class;
   protected $userInfoDataType = '';
   /**

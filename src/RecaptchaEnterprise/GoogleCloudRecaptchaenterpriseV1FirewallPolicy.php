@@ -20,6 +20,10 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1FirewallPolicy extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallAction[]
+   */
+  public $actions;
   protected $actionsType = GoogleCloudRecaptchaenterpriseV1FirewallAction::class;
   protected $actionsDataType = 'array';
   /**

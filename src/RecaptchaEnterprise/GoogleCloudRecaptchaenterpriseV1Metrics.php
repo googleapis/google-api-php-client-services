@@ -20,12 +20,20 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1Metrics extends \Google\Collection
 {
   protected $collection_key = 'scoreMetrics';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1ChallengeMetrics[]
+   */
+  public $challengeMetrics;
   protected $challengeMetricsType = GoogleCloudRecaptchaenterpriseV1ChallengeMetrics::class;
   protected $challengeMetricsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1ScoreMetrics[]
+   */
+  public $scoreMetrics;
   protected $scoreMetricsType = GoogleCloudRecaptchaenterpriseV1ScoreMetrics::class;
   protected $scoreMetricsDataType = 'array';
   /**

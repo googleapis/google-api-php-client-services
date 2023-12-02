@@ -20,6 +20,10 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1TransactionData extends \Google\Collection
 {
   protected $collection_key = 'merchants';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionDataAddress
+   */
+  public $billingAddress;
   protected $billingAddressType = GoogleCloudRecaptchaenterpriseV1TransactionDataAddress::class;
   protected $billingAddressDataType = '';
   /**
@@ -34,16 +38,32 @@ class GoogleCloudRecaptchaenterpriseV1TransactionData extends \Google\Collection
    * @var string
    */
   public $currencyCode;
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo
+   */
+  public $gatewayInfo;
   protected $gatewayInfoType = GoogleCloudRecaptchaenterpriseV1TransactionDataGatewayInfo::class;
   protected $gatewayInfoDataType = '';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionDataItem[]
+   */
+  public $items;
   protected $itemsType = GoogleCloudRecaptchaenterpriseV1TransactionDataItem::class;
   protected $itemsDataType = 'array';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionDataUser[]
+   */
+  public $merchants;
   protected $merchantsType = GoogleCloudRecaptchaenterpriseV1TransactionDataUser::class;
   protected $merchantsDataType = 'array';
   /**
    * @var string
    */
   public $paymentMethod;
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionDataAddress
+   */
+  public $shippingAddress;
   protected $shippingAddressType = GoogleCloudRecaptchaenterpriseV1TransactionDataAddress::class;
   protected $shippingAddressDataType = '';
   public $shippingValue;
@@ -51,6 +71,10 @@ class GoogleCloudRecaptchaenterpriseV1TransactionData extends \Google\Collection
    * @var string
    */
   public $transactionId;
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1TransactionDataUser
+   */
+  public $user;
   protected $userType = GoogleCloudRecaptchaenterpriseV1TransactionDataUser::class;
   protected $userDataType = '';
   public $value;

@@ -19,8 +19,16 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1ScoreMetrics extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1ScoreDistribution[]
+   */
+  public $actionMetrics;
   protected $actionMetricsType = GoogleCloudRecaptchaenterpriseV1ScoreDistribution::class;
   protected $actionMetricsDataType = 'map';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1ScoreDistribution
+   */
+  public $overallMetrics;
   protected $overallMetricsType = GoogleCloudRecaptchaenterpriseV1ScoreDistribution::class;
   protected $overallMetricsDataType = '';
 

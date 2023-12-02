@@ -19,14 +19,34 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1FirewallAction extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallActionAllowAction
+   */
+  public $allow;
   protected $allowType = GoogleCloudRecaptchaenterpriseV1FirewallActionAllowAction::class;
   protected $allowDataType = '';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallActionBlockAction
+   */
+  public $block;
   protected $blockType = GoogleCloudRecaptchaenterpriseV1FirewallActionBlockAction::class;
   protected $blockDataType = '';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction
+   */
+  public $redirect;
   protected $redirectType = GoogleCloudRecaptchaenterpriseV1FirewallActionRedirectAction::class;
   protected $redirectDataType = '';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction
+   */
+  public $setHeader;
   protected $setHeaderType = GoogleCloudRecaptchaenterpriseV1FirewallActionSetHeaderAction::class;
   protected $setHeaderDataType = '';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction
+   */
+  public $substitute;
   protected $substituteType = GoogleCloudRecaptchaenterpriseV1FirewallActionSubstituteAction::class;
   protected $substituteDataType = '';
 

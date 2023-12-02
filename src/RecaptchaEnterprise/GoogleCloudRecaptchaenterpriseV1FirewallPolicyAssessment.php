@@ -19,8 +19,16 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1FirewallPolicyAssessment extends \Google\Model
 {
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudRecaptchaenterpriseV1FirewallPolicy
+   */
+  public $firewallPolicy;
   protected $firewallPolicyType = GoogleCloudRecaptchaenterpriseV1FirewallPolicy::class;
   protected $firewallPolicyDataType = '';
 
