@@ -19,10 +19,22 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ReportResultsMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = GoogleCloudChannelV1DateRange::class;
   protected $dateRangeDataType = '';
+  /**
+   * @var GoogleCloudChannelV1DateRange
+   */
+  public $precedingDateRange;
   protected $precedingDateRangeType = GoogleCloudChannelV1DateRange::class;
   protected $precedingDateRangeDataType = '';
+  /**
+   * @var GoogleCloudChannelV1Report
+   */
+  public $report;
   protected $reportType = GoogleCloudChannelV1Report::class;
   protected $reportDataType = '';
   /**

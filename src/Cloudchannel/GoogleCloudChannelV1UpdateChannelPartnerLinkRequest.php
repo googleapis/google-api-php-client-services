@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1UpdateChannelPartnerLinkRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1ChannelPartnerLink
+   */
+  public $channelPartnerLink;
   protected $channelPartnerLinkType = GoogleCloudChannelV1ChannelPartnerLink::class;
   protected $channelPartnerLinkDataType = '';
   /**

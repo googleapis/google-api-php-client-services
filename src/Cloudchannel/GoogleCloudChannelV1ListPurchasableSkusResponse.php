@@ -24,6 +24,10 @@ class GoogleCloudChannelV1ListPurchasableSkusResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudChannelV1PurchasableSku[]
+   */
+  public $purchasableSkus;
   protected $purchasableSkusType = GoogleCloudChannelV1PurchasableSku::class;
   protected $purchasableSkusDataType = 'array';
 

@@ -23,6 +23,10 @@ class GoogleCloudChannelV1CommitmentSettings extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudChannelV1RenewalSettings
+   */
+  public $renewalSettings;
   protected $renewalSettingsType = GoogleCloudChannelV1RenewalSettings::class;
   protected $renewalSettingsDataType = '';
   /**

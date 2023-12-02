@@ -20,10 +20,22 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ParameterDefinition extends \Google\Collection
 {
   protected $collection_key = 'allowedValues';
+  /**
+   * @var GoogleCloudChannelV1Value[]
+   */
+  public $allowedValues;
   protected $allowedValuesType = GoogleCloudChannelV1Value::class;
   protected $allowedValuesDataType = 'array';
+  /**
+   * @var GoogleCloudChannelV1Value
+   */
+  public $maxValue;
   protected $maxValueType = GoogleCloudChannelV1Value::class;
   protected $maxValueDataType = '';
+  /**
+   * @var GoogleCloudChannelV1Value
+   */
+  public $minValue;
   protected $minValueType = GoogleCloudChannelV1Value::class;
   protected $minValueDataType = '';
   /**

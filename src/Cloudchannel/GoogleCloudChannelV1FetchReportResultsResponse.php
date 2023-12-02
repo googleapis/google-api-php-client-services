@@ -24,8 +24,16 @@ class GoogleCloudChannelV1FetchReportResultsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudChannelV1ReportResultsMetadata
+   */
+  public $reportMetadata;
   protected $reportMetadataType = GoogleCloudChannelV1ReportResultsMetadata::class;
   protected $reportMetadataDataType = '';
+  /**
+   * @var GoogleCloudChannelV1Row[]
+   */
+  public $rows;
   protected $rowsType = GoogleCloudChannelV1Row::class;
   protected $rowsDataType = 'array';
 

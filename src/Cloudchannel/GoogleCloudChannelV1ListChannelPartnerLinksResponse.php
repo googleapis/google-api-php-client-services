@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ListChannelPartnerLinksResponse extends \Google\Collection
 {
   protected $collection_key = 'channelPartnerLinks';
+  /**
+   * @var GoogleCloudChannelV1ChannelPartnerLink[]
+   */
+  public $channelPartnerLinks;
   protected $channelPartnerLinksType = GoogleCloudChannelV1ChannelPartnerLink::class;
   protected $channelPartnerLinksDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ChannelPartnerLink extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1CloudIdentityInfo
+   */
+  public $channelPartnerCloudIdentityInfo;
   protected $channelPartnerCloudIdentityInfoType = GoogleCloudChannelV1CloudIdentityInfo::class;
   protected $channelPartnerCloudIdentityInfoDataType = '';
   /**

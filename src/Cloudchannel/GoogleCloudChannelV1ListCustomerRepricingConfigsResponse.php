@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ListCustomerRepricingConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'customerRepricingConfigs';
+  /**
+   * @var GoogleCloudChannelV1CustomerRepricingConfig[]
+   */
+  public $customerRepricingConfigs;
   protected $customerRepricingConfigsType = GoogleCloudChannelV1CustomerRepricingConfig::class;
   protected $customerRepricingConfigsDataType = 'array';
   /**

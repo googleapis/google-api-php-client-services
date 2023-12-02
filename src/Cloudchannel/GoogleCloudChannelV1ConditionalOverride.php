@@ -19,12 +19,20 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ConditionalOverride extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1RepricingAdjustment
+   */
+  public $adjustment;
   protected $adjustmentType = GoogleCloudChannelV1RepricingAdjustment::class;
   protected $adjustmentDataType = '';
   /**
    * @var string
    */
   public $rebillingBasis;
+  /**
+   * @var GoogleCloudChannelV1RepricingCondition
+   */
+  public $repricingCondition;
   protected $repricingConditionType = GoogleCloudChannelV1RepricingCondition::class;
   protected $repricingConditionDataType = '';
 

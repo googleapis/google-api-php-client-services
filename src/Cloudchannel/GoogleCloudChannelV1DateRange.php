@@ -19,12 +19,28 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1DateRange extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDate
+   */
+  public $invoiceEndDate;
   protected $invoiceEndDateType = GoogleTypeDate::class;
   protected $invoiceEndDateDataType = '';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $invoiceStartDate;
   protected $invoiceStartDateType = GoogleTypeDate::class;
   protected $invoiceStartDateDataType = '';
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $usageEndDateTime;
   protected $usageEndDateTimeType = GoogleTypeDateTime::class;
   protected $usageEndDateTimeDataType = '';
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $usageStartDateTime;
   protected $usageStartDateTimeType = GoogleTypeDateTime::class;
   protected $usageStartDateTimeDataType = '';
 

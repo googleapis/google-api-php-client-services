@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1Constraints extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1CustomerConstraints
+   */
+  public $customerConstraints;
   protected $customerConstraintsType = GoogleCloudChannelV1CustomerConstraints::class;
   protected $customerConstraintsDataType = '';
 

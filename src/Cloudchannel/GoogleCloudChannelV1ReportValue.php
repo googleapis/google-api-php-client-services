@@ -19,16 +19,32 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ReportValue extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $dateTimeValue;
   protected $dateTimeValueType = GoogleTypeDateTime::class;
   protected $dateTimeValueDataType = '';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $dateValue;
   protected $dateValueType = GoogleTypeDate::class;
   protected $dateValueDataType = '';
+  /**
+   * @var GoogleTypeDecimal
+   */
+  public $decimalValue;
   protected $decimalValueType = GoogleTypeDecimal::class;
   protected $decimalValueDataType = '';
   /**
    * @var string
    */
   public $intValue;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $moneyValue;
   protected $moneyValueType = GoogleTypeMoney::class;
   protected $moneyValueDataType = '';
   /**

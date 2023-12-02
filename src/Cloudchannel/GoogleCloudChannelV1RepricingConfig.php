@@ -20,14 +20,34 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1RepricingConfig extends \Google\Collection
 {
   protected $collection_key = 'conditionalOverrides';
+  /**
+   * @var GoogleCloudChannelV1RepricingAdjustment
+   */
+  public $adjustment;
   protected $adjustmentType = GoogleCloudChannelV1RepricingAdjustment::class;
   protected $adjustmentDataType = '';
+  /**
+   * @var GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity
+   */
+  public $channelPartnerGranularity;
   protected $channelPartnerGranularityType = GoogleCloudChannelV1RepricingConfigChannelPartnerGranularity::class;
   protected $channelPartnerGranularityDataType = '';
+  /**
+   * @var GoogleCloudChannelV1ConditionalOverride[]
+   */
+  public $conditionalOverrides;
   protected $conditionalOverridesType = GoogleCloudChannelV1ConditionalOverride::class;
   protected $conditionalOverridesDataType = 'array';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $effectiveInvoiceMonth;
   protected $effectiveInvoiceMonthType = GoogleTypeDate::class;
   protected $effectiveInvoiceMonthDataType = '';
+  /**
+   * @var GoogleCloudChannelV1RepricingConfigEntitlementGranularity
+   */
+  public $entitlementGranularity;
   protected $entitlementGranularityType = GoogleCloudChannelV1RepricingConfigEntitlementGranularity::class;
   protected $entitlementGranularityDataType = '';
   /**

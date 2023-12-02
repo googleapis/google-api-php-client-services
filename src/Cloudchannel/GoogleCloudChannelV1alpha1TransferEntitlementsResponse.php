@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1TransferEntitlementsResponse extends \Google\Collection
 {
   protected $collection_key = 'entitlements';
+  /**
+   * @var GoogleCloudChannelV1alpha1Entitlement[]
+   */
+  public $entitlements;
   protected $entitlementsType = GoogleCloudChannelV1alpha1Entitlement::class;
   protected $entitlementsDataType = 'array';
 

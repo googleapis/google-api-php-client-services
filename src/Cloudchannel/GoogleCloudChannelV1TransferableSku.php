@@ -19,10 +19,22 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1TransferableSku extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1Sku
+   */
+  public $legacySku;
   protected $legacySkuType = GoogleCloudChannelV1Sku::class;
   protected $legacySkuDataType = '';
+  /**
+   * @var GoogleCloudChannelV1Sku
+   */
+  public $sku;
   protected $skuType = GoogleCloudChannelV1Sku::class;
   protected $skuDataType = '';
+  /**
+   * @var GoogleCloudChannelV1TransferEligibility
+   */
+  public $transferEligibility;
   protected $transferEligibilityType = GoogleCloudChannelV1TransferEligibility::class;
   protected $transferEligibilityDataType = '';
 

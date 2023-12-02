@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1RepricingCondition extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1SkuGroupCondition
+   */
+  public $skuGroupCondition;
   protected $skuGroupConditionType = GoogleCloudChannelV1SkuGroupCondition::class;
   protected $skuGroupConditionDataType = '';
 

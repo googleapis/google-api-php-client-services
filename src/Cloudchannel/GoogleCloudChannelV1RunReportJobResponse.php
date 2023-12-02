@@ -19,8 +19,16 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1RunReportJobResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1ReportJob
+   */
+  public $reportJob;
   protected $reportJobType = GoogleCloudChannelV1ReportJob::class;
   protected $reportJobDataType = '';
+  /**
+   * @var GoogleCloudChannelV1ReportResultsMetadata
+   */
+  public $reportMetadata;
   protected $reportMetadataType = GoogleCloudChannelV1ReportResultsMetadata::class;
   protected $reportMetadataDataType = '';
 

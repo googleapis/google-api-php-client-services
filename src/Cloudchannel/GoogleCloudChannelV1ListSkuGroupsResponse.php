@@ -24,6 +24,10 @@ class GoogleCloudChannelV1ListSkuGroupsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudChannelV1SkuGroup[]
+   */
+  public $skuGroups;
   protected $skuGroupsType = GoogleCloudChannelV1SkuGroup::class;
   protected $skuGroupsDataType = 'array';
 

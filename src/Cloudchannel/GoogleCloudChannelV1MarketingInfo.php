@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1MarketingInfo extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1Media
+   */
+  public $defaultLogo;
   protected $defaultLogoType = GoogleCloudChannelV1Media::class;
   protected $defaultLogoDataType = '';
   /**

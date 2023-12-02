@@ -23,6 +23,10 @@ class GoogleCloudChannelV1Plan extends \Google\Model
    * @var string
    */
   public $billingAccount;
+  /**
+   * @var GoogleCloudChannelV1Period
+   */
+  public $paymentCycle;
   protected $paymentCycleType = GoogleCloudChannelV1Period::class;
   protected $paymentCycleDataType = '';
   /**
@@ -33,6 +37,10 @@ class GoogleCloudChannelV1Plan extends \Google\Model
    * @var string
    */
   public $paymentType;
+  /**
+   * @var GoogleCloudChannelV1Period
+   */
+  public $trialPeriod;
   protected $trialPeriodType = GoogleCloudChannelV1Period::class;
   protected $trialPeriodDataType = '';
 

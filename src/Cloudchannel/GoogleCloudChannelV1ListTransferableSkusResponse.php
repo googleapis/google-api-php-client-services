@@ -24,6 +24,10 @@ class GoogleCloudChannelV1ListTransferableSkusResponse extends \Google\Collectio
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudChannelV1TransferableSku[]
+   */
+  public $transferableSkus;
   protected $transferableSkusType = GoogleCloudChannelV1TransferableSku::class;
   protected $transferableSkusDataType = 'array';
 

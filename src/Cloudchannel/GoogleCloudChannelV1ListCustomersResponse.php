@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ListCustomersResponse extends \Google\Collection
 {
   protected $collection_key = 'customers';
+  /**
+   * @var GoogleCloudChannelV1Customer[]
+   */
+  public $customers;
   protected $customersType = GoogleCloudChannelV1Customer::class;
   protected $customersDataType = 'array';
   /**

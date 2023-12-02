@@ -19,8 +19,16 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1SubscriberEvent extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1CustomerEvent
+   */
+  public $customerEvent;
   protected $customerEventType = GoogleCloudChannelV1CustomerEvent::class;
   protected $customerEventDataType = '';
+  /**
+   * @var GoogleCloudChannelV1EntitlementEvent
+   */
+  public $entitlementEvent;
   protected $entitlementEventType = GoogleCloudChannelV1EntitlementEvent::class;
   protected $entitlementEventDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1Offer extends \Google\Collection
 {
   protected $collection_key = 'priceByResources';
+  /**
+   * @var GoogleCloudChannelV1Constraints
+   */
+  public $constraints;
   protected $constraintsType = GoogleCloudChannelV1Constraints::class;
   protected $constraintsDataType = '';
   /**
@@ -30,18 +34,38 @@ class GoogleCloudChannelV1Offer extends \Google\Collection
    * @var string
    */
   public $endTime;
+  /**
+   * @var GoogleCloudChannelV1MarketingInfo
+   */
+  public $marketingInfo;
   protected $marketingInfoType = GoogleCloudChannelV1MarketingInfo::class;
   protected $marketingInfoDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudChannelV1ParameterDefinition[]
+   */
+  public $parameterDefinitions;
   protected $parameterDefinitionsType = GoogleCloudChannelV1ParameterDefinition::class;
   protected $parameterDefinitionsDataType = 'array';
+  /**
+   * @var GoogleCloudChannelV1Plan
+   */
+  public $plan;
   protected $planType = GoogleCloudChannelV1Plan::class;
   protected $planDataType = '';
+  /**
+   * @var GoogleCloudChannelV1PriceByResource[]
+   */
+  public $priceByResources;
   protected $priceByResourcesType = GoogleCloudChannelV1PriceByResource::class;
   protected $priceByResourcesDataType = 'array';
+  /**
+   * @var GoogleCloudChannelV1Sku
+   */
+  public $sku;
   protected $skuType = GoogleCloudChannelV1Sku::class;
   protected $skuDataType = '';
   /**

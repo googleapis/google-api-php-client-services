@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1Product extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1MarketingInfo
+   */
+  public $marketingInfo;
   protected $marketingInfoType = GoogleCloudChannelV1MarketingInfo::class;
   protected $marketingInfoDataType = '';
   /**

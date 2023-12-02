@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1CheckCloudIdentityAccountsExistResponse extends \Google\Collection
 {
   protected $collection_key = 'cloudIdentityAccounts';
+  /**
+   * @var GoogleCloudChannelV1CloudIdentityCustomerAccount[]
+   */
+  public $cloudIdentityAccounts;
   protected $cloudIdentityAccountsType = GoogleCloudChannelV1CloudIdentityCustomerAccount::class;
   protected $cloudIdentityAccountsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ListSkuGroupBillableSkusResponse extends \Google\Collection
 {
   protected $collection_key = 'billableSkus';
+  /**
+   * @var GoogleCloudChannelV1BillableSku[]
+   */
+  public $billableSkus;
   protected $billableSkusType = GoogleCloudChannelV1BillableSku::class;
   protected $billableSkusDataType = 'array';
   /**

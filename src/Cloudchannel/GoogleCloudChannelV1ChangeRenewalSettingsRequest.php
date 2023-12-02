@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ChangeRenewalSettingsRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1RenewalSettings
+   */
+  public $renewalSettings;
   protected $renewalSettingsType = GoogleCloudChannelV1RenewalSettings::class;
   protected $renewalSettingsDataType = '';
   /**

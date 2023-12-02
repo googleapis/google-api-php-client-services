@@ -19,6 +19,10 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1BillingAccountPurchaseInfo extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1BillingAccount
+   */
+  public $billingAccount;
   protected $billingAccountType = GoogleCloudChannelV1BillingAccount::class;
   protected $billingAccountDataType = '';
 

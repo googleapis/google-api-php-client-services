@@ -19,8 +19,16 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1ProvisionCloudIdentityRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudChannelV1CloudIdentityInfo
+   */
+  public $cloudIdentityInfo;
   protected $cloudIdentityInfoType = GoogleCloudChannelV1CloudIdentityInfo::class;
   protected $cloudIdentityInfoDataType = '';
+  /**
+   * @var GoogleCloudChannelV1AdminUser
+   */
+  public $user;
   protected $userType = GoogleCloudChannelV1AdminUser::class;
   protected $userDataType = '';
   /**

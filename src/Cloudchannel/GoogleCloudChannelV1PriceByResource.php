@@ -20,8 +20,16 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1PriceByResource extends \Google\Collection
 {
   protected $collection_key = 'pricePhases';
+  /**
+   * @var GoogleCloudChannelV1Price
+   */
+  public $price;
   protected $priceType = GoogleCloudChannelV1Price::class;
   protected $priceDataType = '';
+  /**
+   * @var GoogleCloudChannelV1PricePhase[]
+   */
+  public $pricePhases;
   protected $pricePhasesType = GoogleCloudChannelV1PricePhase::class;
   protected $pricePhasesDataType = 'array';
   /**

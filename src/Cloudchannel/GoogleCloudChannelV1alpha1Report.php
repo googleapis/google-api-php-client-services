@@ -20,6 +20,10 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1alpha1Report extends \Google\Collection
 {
   protected $collection_key = 'columns';
+  /**
+   * @var GoogleCloudChannelV1alpha1Column[]
+   */
+  public $columns;
   protected $columnsType = GoogleCloudChannelV1alpha1Column::class;
   protected $columnsDataType = 'array';
   /**

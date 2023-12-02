@@ -27,6 +27,10 @@ class GoogleCloudChannelV1alpha1Parameter extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudChannelV1alpha1Value
+   */
+  public $value;
   protected $valueType = GoogleCloudChannelV1alpha1Value::class;
   protected $valueDataType = '';
 
