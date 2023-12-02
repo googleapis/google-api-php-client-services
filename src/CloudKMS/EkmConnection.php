@@ -40,6 +40,10 @@ class EkmConnection extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ServiceResolver[]
+   */
+  public $serviceResolvers;
   protected $serviceResolversType = ServiceResolver::class;
   protected $serviceResolversDataType = 'array';
 

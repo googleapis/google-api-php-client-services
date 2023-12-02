@@ -47,6 +47,10 @@ class CryptoKey extends \Google\Model
    * @var string
    */
   public $nextRotationTime;
+  /**
+   * @var CryptoKeyVersion
+   */
+  public $primary;
   protected $primaryType = CryptoKeyVersion::class;
   protected $primaryDataType = '';
   /**
@@ -57,6 +61,10 @@ class CryptoKey extends \Google\Model
    * @var string
    */
   public $rotationPeriod;
+  /**
+   * @var CryptoKeyVersionTemplate
+   */
+  public $versionTemplate;
   protected $versionTemplateType = CryptoKeyVersionTemplate::class;
   protected $versionTemplateDataType = '';
 

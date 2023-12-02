@@ -23,6 +23,10 @@ class CryptoKeyVersion extends \Google\Model
    * @var string
    */
   public $algorithm;
+  /**
+   * @var KeyOperationAttestation
+   */
+  public $attestation;
   protected $attestationType = KeyOperationAttestation::class;
   protected $attestationDataType = '';
   /**
@@ -41,6 +45,10 @@ class CryptoKeyVersion extends \Google\Model
    * @var string
    */
   public $externalDestructionFailureReason;
+  /**
+   * @var ExternalProtectionLevelOptions
+   */
+  public $externalProtectionLevelOptions;
   protected $externalProtectionLevelOptionsType = ExternalProtectionLevelOptions::class;
   protected $externalProtectionLevelOptionsDataType = '';
   /**

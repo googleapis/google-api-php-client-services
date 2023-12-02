@@ -19,6 +19,10 @@ namespace Google\Service\CloudKMS;
 
 class ImportJob extends \Google\Model
 {
+  /**
+   * @var KeyOperationAttestation
+   */
+  public $attestation;
   protected $attestationType = KeyOperationAttestation::class;
   protected $attestationDataType = '';
   /**
@@ -49,6 +53,10 @@ class ImportJob extends \Google\Model
    * @var string
    */
   public $protectionLevel;
+  /**
+   * @var WrappingPublicKey
+   */
+  public $publicKey;
   protected $publicKeyType = WrappingPublicKey::class;
   protected $publicKeyDataType = '';
   /**

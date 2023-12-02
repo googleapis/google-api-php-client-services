@@ -20,6 +20,10 @@ namespace Google\Service\CloudKMS;
 class ListImportJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'importJobs';
+  /**
+   * @var ImportJob[]
+   */
+  public $importJobs;
   protected $importJobsType = ImportJob::class;
   protected $importJobsDataType = 'array';
   /**

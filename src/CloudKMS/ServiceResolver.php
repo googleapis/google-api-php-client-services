@@ -28,6 +28,10 @@ class ServiceResolver extends \Google\Collection
    * @var string
    */
   public $hostname;
+  /**
+   * @var Certificate[]
+   */
+  public $serverCertificates;
   protected $serverCertificatesType = Certificate::class;
   protected $serverCertificatesDataType = 'array';
   /**
