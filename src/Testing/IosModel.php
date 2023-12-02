@@ -36,6 +36,10 @@ class IosModel extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var PerIosVersionInfo[]
+   */
+  public $perVersionInfo;
   protected $perVersionInfoType = PerIosVersionInfo::class;
   protected $perVersionInfoDataType = 'array';
   /**

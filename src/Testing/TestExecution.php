@@ -19,6 +19,10 @@ namespace Google\Service\Testing;
 
 class TestExecution extends \Google\Model
 {
+  /**
+   * @var Environment
+   */
+  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
   /**
@@ -33,20 +37,36 @@ class TestExecution extends \Google\Model
    * @var string
    */
   public $projectId;
+  /**
+   * @var Shard
+   */
+  public $shard;
   protected $shardType = Shard::class;
   protected $shardDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var TestDetails
+   */
+  public $testDetails;
   protected $testDetailsType = TestDetails::class;
   protected $testDetailsDataType = '';
+  /**
+   * @var TestSpecification
+   */
+  public $testSpecification;
   protected $testSpecificationType = TestSpecification::class;
   protected $testSpecificationDataType = '';
   /**
    * @var string
    */
   public $timestamp;
+  /**
+   * @var ToolResultsStep
+   */
+  public $toolResultsStep;
   protected $toolResultsStepType = ToolResultsStep::class;
   protected $toolResultsStepDataType = '';
 

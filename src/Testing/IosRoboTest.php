@@ -23,8 +23,16 @@ class IosRoboTest extends \Google\Model
    * @var string
    */
   public $appBundleId;
+  /**
+   * @var FileReference
+   */
+  public $appIpa;
   protected $appIpaType = FileReference::class;
   protected $appIpaDataType = '';
+  /**
+   * @var FileReference
+   */
+  public $roboScript;
   protected $roboScriptType = FileReference::class;
   protected $roboScriptDataType = '';
 

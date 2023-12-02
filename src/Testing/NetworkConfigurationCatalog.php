@@ -20,6 +20,10 @@ namespace Google\Service\Testing;
 class NetworkConfigurationCatalog extends \Google\Collection
 {
   protected $collection_key = 'configurations';
+  /**
+   * @var NetworkConfiguration[]
+   */
+  public $configurations;
   protected $configurationsType = NetworkConfiguration::class;
   protected $configurationsDataType = 'array';
 

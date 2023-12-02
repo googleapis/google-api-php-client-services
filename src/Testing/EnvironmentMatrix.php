@@ -19,10 +19,22 @@ namespace Google\Service\Testing;
 
 class EnvironmentMatrix extends \Google\Model
 {
+  /**
+   * @var AndroidDeviceList
+   */
+  public $androidDeviceList;
   protected $androidDeviceListType = AndroidDeviceList::class;
   protected $androidDeviceListDataType = '';
+  /**
+   * @var AndroidMatrix
+   */
+  public $androidMatrix;
   protected $androidMatrixType = AndroidMatrix::class;
   protected $androidMatrixDataType = '';
+  /**
+   * @var IosDeviceList
+   */
+  public $iosDeviceList;
   protected $iosDeviceListType = IosDeviceList::class;
   protected $iosDeviceListDataType = '';
 

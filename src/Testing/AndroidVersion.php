@@ -28,12 +28,20 @@ class AndroidVersion extends \Google\Collection
    * @var string
    */
   public $codeName;
+  /**
+   * @var Distribution
+   */
+  public $distribution;
   protected $distributionType = Distribution::class;
   protected $distributionDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var Date
+   */
+  public $releaseDate;
   protected $releaseDateType = Date::class;
   protected $releaseDateDataType = '';
   /**

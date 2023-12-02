@@ -31,6 +31,10 @@ class Shard extends \Google\Model
    * @var int
    */
   public $shardIndex;
+  /**
+   * @var TestTargetsForShard
+   */
+  public $testTargetsForShard;
   protected $testTargetsForShardType = TestTargetsForShard::class;
   protected $testTargetsForShardDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Testing;
 class ClientInfo extends \Google\Collection
 {
   protected $collection_key = 'clientInfoDetails';
+  /**
+   * @var ClientInfoDetail[]
+   */
+  public $clientInfoDetails;
   protected $clientInfoDetailsType = ClientInfoDetail::class;
   protected $clientInfoDetailsDataType = 'array';
   /**

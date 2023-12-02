@@ -19,6 +19,10 @@ namespace Google\Service\Testing;
 
 class ObbFile extends \Google\Model
 {
+  /**
+   * @var FileReference
+   */
+  public $obb;
   protected $obbType = FileReference::class;
   protected $obbDataType = '';
   /**

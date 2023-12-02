@@ -20,12 +20,28 @@ namespace Google\Service\Testing;
 class IosDeviceCatalog extends \Google\Collection
 {
   protected $collection_key = 'xcodeVersions';
+  /**
+   * @var IosModel[]
+   */
+  public $models;
   protected $modelsType = IosModel::class;
   protected $modelsDataType = 'array';
+  /**
+   * @var IosRuntimeConfiguration
+   */
+  public $runtimeConfiguration;
   protected $runtimeConfigurationType = IosRuntimeConfiguration::class;
   protected $runtimeConfigurationDataType = '';
+  /**
+   * @var IosVersion[]
+   */
+  public $versions;
   protected $versionsType = IosVersion::class;
   protected $versionsDataType = 'array';
+  /**
+   * @var XcodeVersion[]
+   */
+  public $xcodeVersions;
   protected $xcodeVersionsType = XcodeVersion::class;
   protected $xcodeVersionsDataType = 'array';
 

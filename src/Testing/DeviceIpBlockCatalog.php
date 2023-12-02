@@ -20,6 +20,10 @@ namespace Google\Service\Testing;
 class DeviceIpBlockCatalog extends \Google\Collection
 {
   protected $collection_key = 'ipBlocks';
+  /**
+   * @var DeviceIpBlock[]
+   */
+  public $ipBlocks;
   protected $ipBlocksType = DeviceIpBlock::class;
   protected $ipBlocksDataType = 'array';
 

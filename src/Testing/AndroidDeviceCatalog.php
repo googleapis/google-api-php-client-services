@@ -20,10 +20,22 @@ namespace Google\Service\Testing;
 class AndroidDeviceCatalog extends \Google\Collection
 {
   protected $collection_key = 'versions';
+  /**
+   * @var AndroidModel[]
+   */
+  public $models;
   protected $modelsType = AndroidModel::class;
   protected $modelsDataType = 'array';
+  /**
+   * @var AndroidRuntimeConfiguration
+   */
+  public $runtimeConfiguration;
   protected $runtimeConfigurationType = AndroidRuntimeConfiguration::class;
   protected $runtimeConfigurationDataType = '';
+  /**
+   * @var AndroidVersion[]
+   */
+  public $versions;
   protected $versionsType = AndroidVersion::class;
   protected $versionsDataType = 'array';
 

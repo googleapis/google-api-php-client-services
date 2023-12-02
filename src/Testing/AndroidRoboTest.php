@@ -20,8 +20,16 @@ namespace Google\Service\Testing;
 class AndroidRoboTest extends \Google\Collection
 {
   protected $collection_key = 'startingIntents';
+  /**
+   * @var FileReference
+   */
+  public $appApk;
   protected $appApkType = FileReference::class;
   protected $appApkDataType = '';
+  /**
+   * @var AppBundle
+   */
+  public $appBundle;
   protected $appBundleType = AppBundle::class;
   protected $appBundleDataType = '';
   /**
@@ -40,14 +48,26 @@ class AndroidRoboTest extends \Google\Collection
    * @var int
    */
   public $maxSteps;
+  /**
+   * @var RoboDirective[]
+   */
+  public $roboDirectives;
   protected $roboDirectivesType = RoboDirective::class;
   protected $roboDirectivesDataType = 'array';
   /**
    * @var string
    */
   public $roboMode;
+  /**
+   * @var FileReference
+   */
+  public $roboScript;
   protected $roboScriptType = FileReference::class;
   protected $roboScriptDataType = '';
+  /**
+   * @var RoboStartingIntent[]
+   */
+  public $startingIntents;
   protected $startingIntentsType = RoboStartingIntent::class;
   protected $startingIntentsDataType = 'array';
 

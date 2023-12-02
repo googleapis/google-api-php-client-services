@@ -20,6 +20,10 @@ namespace Google\Service\Testing;
 class IosDeviceList extends \Google\Collection
 {
   protected $collection_key = 'iosDevices';
+  /**
+   * @var IosDevice[]
+   */
+  public $iosDevices;
   protected $iosDevicesType = IosDevice::class;
   protected $iosDevicesDataType = 'array';
 

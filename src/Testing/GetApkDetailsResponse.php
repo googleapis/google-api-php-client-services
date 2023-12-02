@@ -19,6 +19,10 @@ namespace Google\Service\Testing;
 
 class GetApkDetailsResponse extends \Google\Model
 {
+  /**
+   * @var ApkDetail
+   */
+  public $apkDetail;
   protected $apkDetailType = ApkDetail::class;
   protected $apkDetailDataType = '';
 

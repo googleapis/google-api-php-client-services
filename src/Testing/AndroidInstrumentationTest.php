@@ -20,8 +20,16 @@ namespace Google\Service\Testing;
 class AndroidInstrumentationTest extends \Google\Collection
 {
   protected $collection_key = 'testTargets';
+  /**
+   * @var FileReference
+   */
+  public $appApk;
   protected $appApkType = FileReference::class;
   protected $appApkDataType = '';
+  /**
+   * @var AppBundle
+   */
+  public $appBundle;
   protected $appBundleType = AppBundle::class;
   protected $appBundleDataType = '';
   /**
@@ -32,8 +40,16 @@ class AndroidInstrumentationTest extends \Google\Collection
    * @var string
    */
   public $orchestratorOption;
+  /**
+   * @var ShardingOption
+   */
+  public $shardingOption;
   protected $shardingOptionType = ShardingOption::class;
   protected $shardingOptionDataType = '';
+  /**
+   * @var FileReference
+   */
+  public $testApk;
   protected $testApkType = FileReference::class;
   protected $testApkDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Testing;
 
 class AppBundle extends \Google\Model
 {
+  /**
+   * @var FileReference
+   */
+  public $bundleLocation;
   protected $bundleLocationType = FileReference::class;
   protected $bundleLocationDataType = '';
 

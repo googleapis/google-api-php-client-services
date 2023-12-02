@@ -19,12 +19,20 @@ namespace Google\Service\Testing;
 
 class NetworkConfiguration extends \Google\Model
 {
+  /**
+   * @var TrafficRule
+   */
+  public $downRule;
   protected $downRuleType = TrafficRule::class;
   protected $downRuleDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var TrafficRule
+   */
+  public $upRule;
   protected $upRuleType = TrafficRule::class;
   protected $upRuleDataType = '';
 

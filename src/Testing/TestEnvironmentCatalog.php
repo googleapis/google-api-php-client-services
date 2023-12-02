@@ -19,14 +19,34 @@ namespace Google\Service\Testing;
 
 class TestEnvironmentCatalog extends \Google\Model
 {
+  /**
+   * @var AndroidDeviceCatalog
+   */
+  public $androidDeviceCatalog;
   protected $androidDeviceCatalogType = AndroidDeviceCatalog::class;
   protected $androidDeviceCatalogDataType = '';
+  /**
+   * @var DeviceIpBlockCatalog
+   */
+  public $deviceIpBlockCatalog;
   protected $deviceIpBlockCatalogType = DeviceIpBlockCatalog::class;
   protected $deviceIpBlockCatalogDataType = '';
+  /**
+   * @var IosDeviceCatalog
+   */
+  public $iosDeviceCatalog;
   protected $iosDeviceCatalogType = IosDeviceCatalog::class;
   protected $iosDeviceCatalogDataType = '';
+  /**
+   * @var NetworkConfigurationCatalog
+   */
+  public $networkConfigurationCatalog;
   protected $networkConfigurationCatalogType = NetworkConfigurationCatalog::class;
   protected $networkConfigurationCatalogDataType = '';
+  /**
+   * @var ProvidedSoftwareCatalog
+   */
+  public $softwareCatalog;
   protected $softwareCatalogType = ProvidedSoftwareCatalog::class;
   protected $softwareCatalogDataType = '';
 

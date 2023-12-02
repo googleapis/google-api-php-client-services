@@ -19,14 +19,26 @@ namespace Google\Service\Testing;
 
 class ResultStorage extends \Google\Model
 {
+  /**
+   * @var GoogleCloudStorage
+   */
+  public $googleCloudStorage;
   protected $googleCloudStorageType = GoogleCloudStorage::class;
   protected $googleCloudStorageDataType = '';
   /**
    * @var string
    */
   public $resultsUrl;
+  /**
+   * @var ToolResultsExecution
+   */
+  public $toolResultsExecution;
   protected $toolResultsExecutionType = ToolResultsExecution::class;
   protected $toolResultsExecutionDataType = '';
+  /**
+   * @var ToolResultsHistory
+   */
+  public $toolResultsHistory;
   protected $toolResultsHistoryType = ToolResultsHistory::class;
   protected $toolResultsHistoryDataType = '';
 

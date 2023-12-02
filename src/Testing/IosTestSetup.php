@@ -20,14 +20,26 @@ namespace Google\Service\Testing;
 class IosTestSetup extends \Google\Collection
 {
   protected $collection_key = 'pushFiles';
+  /**
+   * @var FileReference[]
+   */
+  public $additionalIpas;
   protected $additionalIpasType = FileReference::class;
   protected $additionalIpasDataType = 'array';
   /**
    * @var string
    */
   public $networkProfile;
+  /**
+   * @var IosDeviceFile[]
+   */
+  public $pullDirectories;
   protected $pullDirectoriesType = IosDeviceFile::class;
   protected $pullDirectoriesDataType = 'array';
+  /**
+   * @var IosDeviceFile[]
+   */
+  public $pushFiles;
   protected $pushFilesType = IosDeviceFile::class;
   protected $pushFilesDataType = 'array';
 

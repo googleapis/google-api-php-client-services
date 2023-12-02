@@ -19,6 +19,10 @@ namespace Google\Service\Testing;
 
 class RegularFile extends \Google\Model
 {
+  /**
+   * @var FileReference
+   */
+  public $content;
   protected $contentType = FileReference::class;
   protected $contentDataType = '';
   /**
