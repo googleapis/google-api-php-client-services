@@ -20,20 +20,36 @@ namespace Google\Service\Storagetransfer;
 class TransferOperation extends \Google\Collection
 {
   protected $collection_key = 'errorBreakdowns';
+  /**
+   * @var TransferCounters
+   */
+  public $counters;
   protected $countersType = TransferCounters::class;
   protected $countersDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var ErrorSummary[]
+   */
+  public $errorBreakdowns;
   protected $errorBreakdownsType = ErrorSummary::class;
   protected $errorBreakdownsDataType = 'array';
+  /**
+   * @var LoggingConfig
+   */
+  public $loggingConfig;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var NotificationConfig
+   */
+  public $notificationConfig;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
   /**
@@ -52,6 +68,10 @@ class TransferOperation extends \Google\Collection
    * @var string
    */
   public $transferJobName;
+  /**
+   * @var TransferSpec
+   */
+  public $transferSpec;
   protected $transferSpecType = TransferSpec::class;
   protected $transferSpecDataType = '';
 

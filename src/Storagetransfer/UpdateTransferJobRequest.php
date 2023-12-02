@@ -23,6 +23,10 @@ class UpdateTransferJobRequest extends \Google\Model
    * @var string
    */
   public $projectId;
+  /**
+   * @var TransferJob
+   */
+  public $transferJob;
   protected $transferJobType = TransferJob::class;
   protected $transferJobDataType = '';
   /**

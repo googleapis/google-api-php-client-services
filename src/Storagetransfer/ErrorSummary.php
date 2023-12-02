@@ -28,6 +28,10 @@ class ErrorSummary extends \Google\Collection
    * @var string
    */
   public $errorCount;
+  /**
+   * @var ErrorLogEntry[]
+   */
+  public $errorLogEntries;
   protected $errorLogEntriesType = ErrorLogEntry::class;
   protected $errorLogEntriesDataType = 'array';
 

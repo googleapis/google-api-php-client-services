@@ -35,6 +35,10 @@ class AwsS3CompatibleData extends \Google\Model
    * @var string
    */
   public $region;
+  /**
+   * @var S3CompatibleMetadata
+   */
+  public $s3Metadata;
   protected $s3MetadataType = S3CompatibleMetadata::class;
   protected $s3MetadataDataType = '';
 

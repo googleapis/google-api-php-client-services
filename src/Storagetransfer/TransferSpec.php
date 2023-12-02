@@ -19,24 +19,64 @@ namespace Google\Service\Storagetransfer;
 
 class TransferSpec extends \Google\Model
 {
+  /**
+   * @var AwsS3CompatibleData
+   */
+  public $awsS3CompatibleDataSource;
   protected $awsS3CompatibleDataSourceType = AwsS3CompatibleData::class;
   protected $awsS3CompatibleDataSourceDataType = '';
+  /**
+   * @var AwsS3Data
+   */
+  public $awsS3DataSource;
   protected $awsS3DataSourceType = AwsS3Data::class;
   protected $awsS3DataSourceDataType = '';
+  /**
+   * @var AzureBlobStorageData
+   */
+  public $azureBlobStorageDataSource;
   protected $azureBlobStorageDataSourceType = AzureBlobStorageData::class;
   protected $azureBlobStorageDataSourceDataType = '';
+  /**
+   * @var GcsData
+   */
+  public $gcsDataSink;
   protected $gcsDataSinkType = GcsData::class;
   protected $gcsDataSinkDataType = '';
+  /**
+   * @var GcsData
+   */
+  public $gcsDataSource;
   protected $gcsDataSourceType = GcsData::class;
   protected $gcsDataSourceDataType = '';
+  /**
+   * @var GcsData
+   */
+  public $gcsIntermediateDataLocation;
   protected $gcsIntermediateDataLocationType = GcsData::class;
   protected $gcsIntermediateDataLocationDataType = '';
+  /**
+   * @var HttpData
+   */
+  public $httpDataSource;
   protected $httpDataSourceType = HttpData::class;
   protected $httpDataSourceDataType = '';
+  /**
+   * @var ObjectConditions
+   */
+  public $objectConditions;
   protected $objectConditionsType = ObjectConditions::class;
   protected $objectConditionsDataType = '';
+  /**
+   * @var PosixFilesystem
+   */
+  public $posixDataSink;
   protected $posixDataSinkType = PosixFilesystem::class;
   protected $posixDataSinkDataType = '';
+  /**
+   * @var PosixFilesystem
+   */
+  public $posixDataSource;
   protected $posixDataSourceType = PosixFilesystem::class;
   protected $posixDataSourceDataType = '';
   /**
@@ -47,8 +87,16 @@ class TransferSpec extends \Google\Model
    * @var string
    */
   public $sourceAgentPoolName;
+  /**
+   * @var TransferManifest
+   */
+  public $transferManifest;
   protected $transferManifestType = TransferManifest::class;
   protected $transferManifestDataType = '';
+  /**
+   * @var TransferOptions
+   */
+  public $transferOptions;
   protected $transferOptionsType = TransferOptions::class;
   protected $transferOptionsDataType = '';
 

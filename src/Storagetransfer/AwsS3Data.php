@@ -19,6 +19,10 @@ namespace Google\Service\Storagetransfer;
 
 class AwsS3Data extends \Google\Model
 {
+  /**
+   * @var AwsAccessKey
+   */
+  public $awsAccessKey;
   protected $awsAccessKeyType = AwsAccessKey::class;
   protected $awsAccessKeyDataType = '';
   /**

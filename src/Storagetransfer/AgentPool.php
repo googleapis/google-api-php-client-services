@@ -19,6 +19,10 @@ namespace Google\Service\Storagetransfer;
 
 class AgentPool extends \Google\Model
 {
+  /**
+   * @var BandwidthLimit
+   */
+  public $bandwidthLimit;
   protected $bandwidthLimitType = BandwidthLimit::class;
   protected $bandwidthLimitDataType = '';
   /**

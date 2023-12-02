@@ -19,16 +19,32 @@ namespace Google\Service\Storagetransfer;
 
 class Schedule extends \Google\Model
 {
+  /**
+   * @var TimeOfDay
+   */
+  public $endTimeOfDay;
   protected $endTimeOfDayType = TimeOfDay::class;
   protected $endTimeOfDayDataType = '';
   /**
    * @var string
    */
   public $repeatInterval;
+  /**
+   * @var Date
+   */
+  public $scheduleEndDate;
   protected $scheduleEndDateType = Date::class;
   protected $scheduleEndDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $scheduleStartDate;
   protected $scheduleStartDateType = Date::class;
   protected $scheduleStartDateDataType = '';
+  /**
+   * @var TimeOfDay
+   */
+  public $startTimeOfDay;
   protected $startTimeOfDayType = TimeOfDay::class;
   protected $startTimeOfDayDataType = '';
 
