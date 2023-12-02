@@ -20,12 +20,28 @@ namespace Google\Service\RealTimeBidding;
 class CreativeServingDecision extends \Google\Collection
 {
   protected $collection_key = 'detectedVendorIds';
+  /**
+   * @var AdTechnologyProviders
+   */
+  public $adTechnologyProviders;
   protected $adTechnologyProvidersType = AdTechnologyProviders::class;
   protected $adTechnologyProvidersDataType = '';
+  /**
+   * @var PolicyCompliance
+   */
+  public $chinaPolicyCompliance;
   protected $chinaPolicyComplianceType = PolicyCompliance::class;
   protected $chinaPolicyComplianceDataType = '';
+  /**
+   * @var PolicyCompliance
+   */
+  public $dealsPolicyCompliance;
   protected $dealsPolicyComplianceType = PolicyCompliance::class;
   protected $dealsPolicyComplianceDataType = '';
+  /**
+   * @var AdvertiserAndBrand[]
+   */
+  public $detectedAdvertisers;
   protected $detectedAdvertisersType = AdvertiserAndBrand::class;
   protected $detectedAdvertisersDataType = 'array';
   /**
@@ -60,10 +76,22 @@ class CreativeServingDecision extends \Google\Collection
    * @var string
    */
   public $lastStatusUpdate;
+  /**
+   * @var PolicyCompliance
+   */
+  public $networkPolicyCompliance;
   protected $networkPolicyComplianceType = PolicyCompliance::class;
   protected $networkPolicyComplianceDataType = '';
+  /**
+   * @var PolicyCompliance
+   */
+  public $platformPolicyCompliance;
   protected $platformPolicyComplianceType = PolicyCompliance::class;
   protected $platformPolicyComplianceDataType = '';
+  /**
+   * @var PolicyCompliance
+   */
+  public $russiaPolicyCompliance;
   protected $russiaPolicyComplianceType = PolicyCompliance::class;
   protected $russiaPolicyComplianceDataType = '';
 

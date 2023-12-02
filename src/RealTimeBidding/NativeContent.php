@@ -23,6 +23,10 @@ class NativeContent extends \Google\Model
    * @var string
    */
   public $advertiserName;
+  /**
+   * @var Image
+   */
+  public $appIcon;
   protected $appIconType = Image::class;
   protected $appIconDataType = '';
   /**
@@ -45,8 +49,16 @@ class NativeContent extends \Google\Model
    * @var string
    */
   public $headline;
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
+  /**
+   * @var Image
+   */
+  public $logo;
   protected $logoType = Image::class;
   protected $logoDataType = '';
   /**

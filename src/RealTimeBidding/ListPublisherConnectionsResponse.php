@@ -24,6 +24,10 @@ class ListPublisherConnectionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PublisherConnection[]
+   */
+  public $publisherConnections;
   protected $publisherConnectionsType = PublisherConnection::class;
   protected $publisherConnectionsDataType = 'array';
 

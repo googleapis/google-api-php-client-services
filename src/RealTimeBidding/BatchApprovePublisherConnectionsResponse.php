@@ -20,6 +20,10 @@ namespace Google\Service\RealTimeBidding;
 class BatchApprovePublisherConnectionsResponse extends \Google\Collection
 {
   protected $collection_key = 'publisherConnections';
+  /**
+   * @var PublisherConnection[]
+   */
+  public $publisherConnections;
   protected $publisherConnectionsType = PublisherConnection::class;
   protected $publisherConnectionsDataType = 'array';
 

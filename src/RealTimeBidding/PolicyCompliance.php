@@ -24,6 +24,10 @@ class PolicyCompliance extends \Google\Collection
    * @var string
    */
   public $status;
+  /**
+   * @var PolicyTopicEntry[]
+   */
+  public $topics;
   protected $topicsType = PolicyTopicEntry::class;
   protected $topicsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\RealTimeBidding;
 class PolicyTopicEntry extends \Google\Collection
 {
   protected $collection_key = 'evidences';
+  /**
+   * @var PolicyTopicEvidence[]
+   */
+  public $evidences;
   protected $evidencesType = PolicyTopicEvidence::class;
   protected $evidencesDataType = 'array';
   /**

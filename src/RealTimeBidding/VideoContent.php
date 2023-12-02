@@ -19,6 +19,10 @@ namespace Google\Service\RealTimeBidding;
 
 class VideoContent extends \Google\Model
 {
+  /**
+   * @var VideoMetadata
+   */
+  public $videoMetadata;
   protected $videoMetadataType = VideoMetadata::class;
   protected $videoMetadataDataType = '';
   /**

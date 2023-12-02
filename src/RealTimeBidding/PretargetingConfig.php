@@ -24,6 +24,10 @@ class PretargetingConfig extends \Google\Collection
    * @var string[]
    */
   public $allowedUserTargetingModes;
+  /**
+   * @var AppTargeting
+   */
+  public $appTargeting;
   protected $appTargetingType = AppTargeting::class;
   protected $appTargetingDataType = '';
   /**
@@ -38,8 +42,16 @@ class PretargetingConfig extends \Google\Collection
    * @var string[]
    */
   public $excludedContentLabelIds;
+  /**
+   * @var NumericTargetingDimension
+   */
+  public $geoTargeting;
   protected $geoTargetingType = NumericTargetingDimension::class;
   protected $geoTargetingDataType = '';
+  /**
+   * @var CreativeDimensions[]
+   */
+  public $includedCreativeDimensions;
   protected $includedCreativeDimensionsType = CreativeDimensions::class;
   protected $includedCreativeDimensionsDataType = 'array';
   /**
@@ -86,16 +98,32 @@ class PretargetingConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var StringTargetingDimension
+   */
+  public $publisherTargeting;
   protected $publisherTargetingType = StringTargetingDimension::class;
   protected $publisherTargetingDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var NumericTargetingDimension
+   */
+  public $userListTargeting;
   protected $userListTargetingType = NumericTargetingDimension::class;
   protected $userListTargetingDataType = '';
+  /**
+   * @var NumericTargetingDimension
+   */
+  public $verticalTargeting;
   protected $verticalTargetingType = NumericTargetingDimension::class;
   protected $verticalTargetingDataType = '';
+  /**
+   * @var StringTargetingDimension
+   */
+  public $webTargeting;
   protected $webTargetingType = StringTargetingDimension::class;
   protected $webTargetingDataType = '';
 

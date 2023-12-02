@@ -19,18 +19,46 @@ namespace Google\Service\RealTimeBidding;
 
 class PolicyTopicEvidence extends \Google\Model
 {
+  /**
+   * @var DestinationNotCrawlableEvidence
+   */
+  public $destinationNotCrawlable;
   protected $destinationNotCrawlableType = DestinationNotCrawlableEvidence::class;
   protected $destinationNotCrawlableDataType = '';
+  /**
+   * @var DestinationNotWorkingEvidence
+   */
+  public $destinationNotWorking;
   protected $destinationNotWorkingType = DestinationNotWorkingEvidence::class;
   protected $destinationNotWorkingDataType = '';
+  /**
+   * @var DestinationUrlEvidence
+   */
+  public $destinationUrl;
   protected $destinationUrlType = DestinationUrlEvidence::class;
   protected $destinationUrlDataType = '';
+  /**
+   * @var DomainCallEvidence
+   */
+  public $domainCall;
   protected $domainCallType = DomainCallEvidence::class;
   protected $domainCallDataType = '';
+  /**
+   * @var DownloadSizeEvidence
+   */
+  public $downloadSize;
   protected $downloadSizeType = DownloadSizeEvidence::class;
   protected $downloadSizeDataType = '';
+  /**
+   * @var HttpCallEvidence
+   */
+  public $httpCall;
   protected $httpCallType = HttpCallEvidence::class;
   protected $httpCallDataType = '';
+  /**
+   * @var HttpCookieEvidence
+   */
+  public $httpCookie;
   protected $httpCookieType = HttpCookieEvidence::class;
   protected $httpCookieDataType = '';
 
