@@ -28,6 +28,10 @@ class GradebookSettings extends \Google\Collection
    * @var string
    */
   public $displaySetting;
+  /**
+   * @var GradeCategory[]
+   */
+  public $gradeCategories;
   protected $gradeCategoriesType = GradeCategory::class;
   protected $gradeCategoriesDataType = 'array';
 

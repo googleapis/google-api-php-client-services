@@ -44,8 +44,16 @@ class Announcement extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var IndividualStudentsOptions
+   */
+  public $individualStudentsOptions;
   protected $individualStudentsOptionsType = IndividualStudentsOptions::class;
   protected $individualStudentsOptionsDataType = '';
+  /**
+   * @var Material[]
+   */
+  public $materials;
   protected $materialsType = Material::class;
   protected $materialsDataType = 'array';
   /**

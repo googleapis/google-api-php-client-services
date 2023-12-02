@@ -19,12 +19,28 @@ namespace Google\Service\Classroom;
 
 class Material extends \Google\Model
 {
+  /**
+   * @var SharedDriveFile
+   */
+  public $driveFile;
   protected $driveFileType = SharedDriveFile::class;
   protected $driveFileDataType = '';
+  /**
+   * @var Form
+   */
+  public $form;
   protected $formType = Form::class;
   protected $formDataType = '';
+  /**
+   * @var Link
+   */
+  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
+  /**
+   * @var YouTubeVideo
+   */
+  public $youtubeVideo;
   protected $youtubeVideoType = YouTubeVideo::class;
   protected $youtubeVideoDataType = '';
 

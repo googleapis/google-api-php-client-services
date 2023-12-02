@@ -20,6 +20,10 @@ namespace Google\Service\Classroom;
 class ListInvitationsResponse extends \Google\Collection
 {
   protected $collection_key = 'invitations';
+  /**
+   * @var Invitation[]
+   */
+  public $invitations;
   protected $invitationsType = Invitation::class;
   protected $invitationsDataType = 'array';
   /**

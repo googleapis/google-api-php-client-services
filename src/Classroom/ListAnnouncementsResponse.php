@@ -20,6 +20,10 @@ namespace Google\Service\Classroom;
 class ListAnnouncementsResponse extends \Google\Collection
 {
   protected $collection_key = 'announcements';
+  /**
+   * @var Announcement[]
+   */
+  public $announcements;
   protected $announcementsType = Announcement::class;
   protected $announcementsDataType = 'array';
   /**

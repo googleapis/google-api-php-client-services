@@ -19,6 +19,10 @@ namespace Google\Service\Classroom;
 
 class SharedDriveFile extends \Google\Model
 {
+  /**
+   * @var DriveFile
+   */
+  public $driveFile;
   protected $driveFileType = DriveFile::class;
   protected $driveFileDataType = '';
   /**

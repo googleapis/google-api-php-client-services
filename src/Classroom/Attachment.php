@@ -19,12 +19,28 @@ namespace Google\Service\Classroom;
 
 class Attachment extends \Google\Model
 {
+  /**
+   * @var DriveFile
+   */
+  public $driveFile;
   protected $driveFileType = DriveFile::class;
   protected $driveFileDataType = '';
+  /**
+   * @var Form
+   */
+  public $form;
   protected $formType = Form::class;
   protected $formDataType = '';
+  /**
+   * @var Link
+   */
+  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
+  /**
+   * @var YouTubeVideo
+   */
+  public $youTubeVideo;
   protected $youTubeVideoType = YouTubeVideo::class;
   protected $youTubeVideoDataType = '';
 

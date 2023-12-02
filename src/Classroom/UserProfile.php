@@ -28,8 +28,16 @@ class UserProfile extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Name
+   */
+  public $name;
   protected $nameType = Name::class;
   protected $nameDataType = '';
+  /**
+   * @var GlobalPermission[]
+   */
+  public $permissions;
   protected $permissionsType = GlobalPermission::class;
   protected $permissionsDataType = 'array';
   /**

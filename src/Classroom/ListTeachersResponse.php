@@ -24,6 +24,10 @@ class ListTeachersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Teacher[]
+   */
+  public $teachers;
   protected $teachersType = Teacher::class;
   protected $teachersDataType = 'array';
 

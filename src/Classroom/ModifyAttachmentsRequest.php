@@ -20,6 +20,10 @@ namespace Google\Service\Classroom;
 class ModifyAttachmentsRequest extends \Google\Collection
 {
   protected $collection_key = 'addAttachments';
+  /**
+   * @var Attachment[]
+   */
+  public $addAttachments;
   protected $addAttachmentsType = Attachment::class;
   protected $addAttachmentsDataType = 'array';
 

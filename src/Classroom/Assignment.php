@@ -19,6 +19,10 @@ namespace Google\Service\Classroom;
 
 class Assignment extends \Google\Model
 {
+  /**
+   * @var DriveFolder
+   */
+  public $studentWorkFolder;
   protected $studentWorkFolderType = DriveFolder::class;
   protected $studentWorkFolderDataType = '';
 

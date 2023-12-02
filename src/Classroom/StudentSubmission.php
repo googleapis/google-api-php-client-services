@@ -25,6 +25,10 @@ class StudentSubmission extends \Google\Collection
    */
   public $alternateLink;
   public $assignedGrade;
+  /**
+   * @var AssignmentSubmission
+   */
+  public $assignmentSubmission;
   protected $assignmentSubmissionType = AssignmentSubmission::class;
   protected $assignmentSubmissionDataType = '';
   /**
@@ -56,14 +60,26 @@ class StudentSubmission extends \Google\Collection
    * @var bool
    */
   public $late;
+  /**
+   * @var MultipleChoiceSubmission
+   */
+  public $multipleChoiceSubmission;
   protected $multipleChoiceSubmissionType = MultipleChoiceSubmission::class;
   protected $multipleChoiceSubmissionDataType = '';
+  /**
+   * @var ShortAnswerSubmission
+   */
+  public $shortAnswerSubmission;
   protected $shortAnswerSubmissionType = ShortAnswerSubmission::class;
   protected $shortAnswerSubmissionDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var SubmissionHistory[]
+   */
+  public $submissionHistory;
   protected $submissionHistoryType = SubmissionHistory::class;
   protected $submissionHistoryDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Classroom;
 class ListCoursesResponse extends \Google\Collection
 {
   protected $collection_key = 'courses';
+  /**
+   * @var Course[]
+   */
+  public $courses;
   protected $coursesType = Course::class;
   protected $coursesDataType = 'array';
   /**

@@ -19,8 +19,16 @@ namespace Google\Service\Classroom;
 
 class Feed extends \Google\Model
 {
+  /**
+   * @var CourseRosterChangesInfo
+   */
+  public $courseRosterChangesInfo;
   protected $courseRosterChangesInfoType = CourseRosterChangesInfo::class;
   protected $courseRosterChangesInfoDataType = '';
+  /**
+   * @var CourseWorkChangesInfo
+   */
+  public $courseWorkChangesInfo;
   protected $courseWorkChangesInfoType = CourseWorkChangesInfo::class;
   protected $courseWorkChangesInfoDataType = '';
   /**

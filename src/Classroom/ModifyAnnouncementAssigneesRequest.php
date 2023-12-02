@@ -23,6 +23,10 @@ class ModifyAnnouncementAssigneesRequest extends \Google\Model
    * @var string
    */
   public $assigneeMode;
+  /**
+   * @var ModifyIndividualStudentsOptions
+   */
+  public $modifyIndividualStudentsOptions;
   protected $modifyIndividualStudentsOptionsType = ModifyIndividualStudentsOptions::class;
   protected $modifyIndividualStudentsOptionsDataType = '';
 
