@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class RepairRolloutRule extends \Google\Collection
 {
   protected $collection_key = 'sourcePhases';
+  /**
+   * @var AutomationRuleCondition
+   */
+  public $condition;
   protected $conditionType = AutomationRuleCondition::class;
   protected $conditionDataType = '';
   /**
@@ -30,6 +34,10 @@ class RepairRolloutRule extends \Google\Collection
    * @var string[]
    */
   public $jobs;
+  /**
+   * @var RepairMode[]
+   */
+  public $repairModes;
   protected $repairModesType = RepairMode::class;
   protected $repairModesDataType = 'array';
   /**

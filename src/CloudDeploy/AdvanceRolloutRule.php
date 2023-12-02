@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class AdvanceRolloutRule extends \Google\Collection
 {
   protected $collection_key = 'sourcePhases';
+  /**
+   * @var AutomationRuleCondition
+   */
+  public $condition;
   protected $conditionType = AutomationRuleCondition::class;
   protected $conditionDataType = '';
   /**

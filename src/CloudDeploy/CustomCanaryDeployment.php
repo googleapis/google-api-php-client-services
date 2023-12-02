@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class CustomCanaryDeployment extends \Google\Collection
 {
   protected $collection_key = 'phaseConfigs';
+  /**
+   * @var PhaseConfig[]
+   */
+  public $phaseConfigs;
   protected $phaseConfigsType = PhaseConfig::class;
   protected $phaseConfigsDataType = 'array';
 

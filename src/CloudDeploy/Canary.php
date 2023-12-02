@@ -19,10 +19,22 @@ namespace Google\Service\CloudDeploy;
 
 class Canary extends \Google\Model
 {
+  /**
+   * @var CanaryDeployment
+   */
+  public $canaryDeployment;
   protected $canaryDeploymentType = CanaryDeployment::class;
   protected $canaryDeploymentDataType = '';
+  /**
+   * @var CustomCanaryDeployment
+   */
+  public $customCanaryDeployment;
   protected $customCanaryDeploymentType = CustomCanaryDeployment::class;
   protected $customCanaryDeploymentDataType = '';
+  /**
+   * @var RuntimeConfig
+   */
+  public $runtimeConfig;
   protected $runtimeConfigType = RuntimeConfig::class;
   protected $runtimeConfigDataType = '';
 

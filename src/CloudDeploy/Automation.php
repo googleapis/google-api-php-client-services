@@ -44,8 +44,16 @@ class Automation extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var AutomationRule[]
+   */
+  public $rules;
   protected $rulesType = AutomationRule::class;
   protected $rulesDataType = 'array';
+  /**
+   * @var AutomationResourceSelector
+   */
+  public $selector;
   protected $selectorType = AutomationResourceSelector::class;
   protected $selectorDataType = '';
   /**

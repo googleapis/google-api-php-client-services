@@ -20,8 +20,16 @@ namespace Google\Service\CloudDeploy;
 class ChildRolloutJobs extends \Google\Collection
 {
   protected $collection_key = 'createRolloutJobs';
+  /**
+   * @var Job[]
+   */
+  public $advanceRolloutJobs;
   protected $advanceRolloutJobsType = Job::class;
   protected $advanceRolloutJobsDataType = 'array';
+  /**
+   * @var Job[]
+   */
+  public $createRolloutJobs;
   protected $createRolloutJobsType = Job::class;
   protected $createRolloutJobsDataType = 'array';
 

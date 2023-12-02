@@ -27,6 +27,10 @@ class TargetArtifact extends \Google\Model
    * @var string
    */
   public $manifestPath;
+  /**
+   * @var PhaseArtifact[]
+   */
+  public $phaseArtifacts;
   protected $phaseArtifactsType = PhaseArtifact::class;
   protected $phaseArtifactsDataType = 'map';
   /**

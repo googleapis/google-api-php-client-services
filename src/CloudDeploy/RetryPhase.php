@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class RetryPhase extends \Google\Collection
 {
   protected $collection_key = 'attempts';
+  /**
+   * @var RetryAttempt[]
+   */
+  public $attempts;
   protected $attemptsType = RetryAttempt::class;
   protected $attemptsDataType = 'array';
   /**

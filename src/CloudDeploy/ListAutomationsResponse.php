@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class ListAutomationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Automation[]
+   */
+  public $automations;
   protected $automationsType = Automation::class;
   protected $automationsDataType = 'array';
   /**

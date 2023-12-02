@@ -19,8 +19,16 @@ namespace Google\Service\CloudDeploy;
 
 class Phase extends \Google\Model
 {
+  /**
+   * @var ChildRolloutJobs
+   */
+  public $childRolloutJobs;
   protected $childRolloutJobsType = ChildRolloutJobs::class;
   protected $childRolloutJobsDataType = '';
+  /**
+   * @var DeploymentJobs
+   */
+  public $deploymentJobs;
   protected $deploymentJobsType = DeploymentJobs::class;
   protected $deploymentJobsDataType = '';
   /**

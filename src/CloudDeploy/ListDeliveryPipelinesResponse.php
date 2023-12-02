@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class ListDeliveryPipelinesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var DeliveryPipeline[]
+   */
+  public $deliveryPipelines;
   protected $deliveryPipelinesType = DeliveryPipeline::class;
   protected $deliveryPipelinesDataType = 'array';
   /**

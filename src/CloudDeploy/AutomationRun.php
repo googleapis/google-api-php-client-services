@@ -19,12 +19,20 @@ namespace Google\Service\CloudDeploy;
 
 class AutomationRun extends \Google\Model
 {
+  /**
+   * @var AdvanceRolloutOperation
+   */
+  public $advanceRolloutOperation;
   protected $advanceRolloutOperationType = AdvanceRolloutOperation::class;
   protected $advanceRolloutOperationDataType = '';
   /**
    * @var string
    */
   public $automationId;
+  /**
+   * @var Automation
+   */
+  public $automationSnapshot;
   protected $automationSnapshotType = Automation::class;
   protected $automationSnapshotDataType = '';
   /**
@@ -43,8 +51,16 @@ class AutomationRun extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PromoteReleaseOperation
+   */
+  public $promoteReleaseOperation;
   protected $promoteReleaseOperationType = PromoteReleaseOperation::class;
   protected $promoteReleaseOperationDataType = '';
+  /**
+   * @var RepairRolloutOperation
+   */
+  public $repairRolloutOperation;
   protected $repairRolloutOperationType = RepairRolloutOperation::class;
   protected $repairRolloutOperationDataType = '';
   /**

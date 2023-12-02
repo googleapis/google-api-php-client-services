@@ -19,10 +19,22 @@ namespace Google\Service\CloudDeploy;
 
 class AutomationRule extends \Google\Model
 {
+  /**
+   * @var AdvanceRolloutRule
+   */
+  public $advanceRolloutRule;
   protected $advanceRolloutRuleType = AdvanceRolloutRule::class;
   protected $advanceRolloutRuleDataType = '';
+  /**
+   * @var PromoteReleaseRule
+   */
+  public $promoteReleaseRule;
   protected $promoteReleaseRuleType = PromoteReleaseRule::class;
   protected $promoteReleaseRuleDataType = '';
+  /**
+   * @var RepairRolloutRule
+   */
+  public $repairRolloutRule;
   protected $repairRolloutRuleType = RepairRolloutRule::class;
   protected $repairRolloutRuleDataType = '';
 

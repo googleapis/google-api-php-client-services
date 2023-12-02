@@ -24,12 +24,20 @@ class ExecutionConfig extends \Google\Collection
    * @var string
    */
   public $artifactStorage;
+  /**
+   * @var DefaultPool
+   */
+  public $defaultPool;
   protected $defaultPoolType = DefaultPool::class;
   protected $defaultPoolDataType = '';
   /**
    * @var string
    */
   public $executionTimeout;
+  /**
+   * @var PrivatePool
+   */
+  public $privatePool;
   protected $privatePoolType = PrivatePool::class;
   protected $privatePoolDataType = '';
   /**

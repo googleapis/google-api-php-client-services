@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class ListJobRunsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var JobRun[]
+   */
+  public $jobRuns;
   protected $jobRunsType = JobRun::class;
   protected $jobRunsDataType = 'array';
   /**

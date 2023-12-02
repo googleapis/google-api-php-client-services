@@ -19,12 +19,28 @@ namespace Google\Service\CloudDeploy;
 
 class DeploymentJobs extends \Google\Model
 {
+  /**
+   * @var Job
+   */
+  public $deployJob;
   protected $deployJobType = Job::class;
   protected $deployJobDataType = '';
+  /**
+   * @var Job
+   */
+  public $postdeployJob;
   protected $postdeployJobType = Job::class;
   protected $postdeployJobDataType = '';
+  /**
+   * @var Job
+   */
+  public $predeployJob;
   protected $predeployJobType = Job::class;
   protected $predeployJobDataType = '';
+  /**
+   * @var Job
+   */
+  public $verifyJob;
   protected $verifyJobType = Job::class;
   protected $verifyJobDataType = '';
 

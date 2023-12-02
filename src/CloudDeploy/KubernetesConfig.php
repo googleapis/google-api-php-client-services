@@ -19,8 +19,16 @@ namespace Google\Service\CloudDeploy;
 
 class KubernetesConfig extends \Google\Model
 {
+  /**
+   * @var GatewayServiceMesh
+   */
+  public $gatewayServiceMesh;
   protected $gatewayServiceMeshType = GatewayServiceMesh::class;
   protected $gatewayServiceMeshDataType = '';
+  /**
+   * @var ServiceNetworking
+   */
+  public $serviceNetworking;
   protected $serviceNetworkingType = ServiceNetworking::class;
   protected $serviceNetworkingDataType = '';
 

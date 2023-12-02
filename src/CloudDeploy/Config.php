@@ -28,6 +28,10 @@ class Config extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var SkaffoldVersion[]
+   */
+  public $supportedVersions;
   protected $supportedVersionsType = SkaffoldVersion::class;
   protected $supportedVersionsDataType = 'array';
 

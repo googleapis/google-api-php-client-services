@@ -23,6 +23,10 @@ class RollbackTargetRequest extends \Google\Model
    * @var string
    */
   public $releaseId;
+  /**
+   * @var RollbackTargetConfig
+   */
+  public $rollbackConfig;
   protected $rollbackConfigType = RollbackTargetConfig::class;
   protected $rollbackConfigDataType = '';
   /**

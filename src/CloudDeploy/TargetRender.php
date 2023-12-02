@@ -27,6 +27,10 @@ class TargetRender extends \Google\Model
    * @var string
    */
   public $failureMessage;
+  /**
+   * @var RenderMetadata
+   */
+  public $metadata;
   protected $metadataType = RenderMetadata::class;
   protected $metadataDataType = '';
   /**

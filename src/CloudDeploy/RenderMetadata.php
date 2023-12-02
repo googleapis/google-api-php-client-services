@@ -19,6 +19,10 @@ namespace Google\Service\CloudDeploy;
 
 class RenderMetadata extends \Google\Model
 {
+  /**
+   * @var CloudRunRenderMetadata
+   */
+  public $cloudRun;
   protected $cloudRunType = CloudRunRenderMetadata::class;
   protected $cloudRunDataType = '';
 

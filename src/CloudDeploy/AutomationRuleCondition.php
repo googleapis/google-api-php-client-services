@@ -19,6 +19,10 @@ namespace Google\Service\CloudDeploy;
 
 class AutomationRuleCondition extends \Google\Model
 {
+  /**
+   * @var TargetsPresentCondition
+   */
+  public $targetsPresentCondition;
   protected $targetsPresentConditionType = TargetsPresentCondition::class;
   protected $targetsPresentConditionDataType = '';
 

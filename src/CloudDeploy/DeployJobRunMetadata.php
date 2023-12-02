@@ -19,6 +19,10 @@ namespace Google\Service\CloudDeploy;
 
 class DeployJobRunMetadata extends \Google\Model
 {
+  /**
+   * @var CloudRunMetadata
+   */
+  public $cloudRun;
   protected $cloudRunType = CloudRunMetadata::class;
   protected $cloudRunDataType = '';
 

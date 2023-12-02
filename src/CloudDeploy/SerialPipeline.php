@@ -20,6 +20,10 @@ namespace Google\Service\CloudDeploy;
 class SerialPipeline extends \Google\Collection
 {
   protected $collection_key = 'stages';
+  /**
+   * @var Stage[]
+   */
+  public $stages;
   protected $stagesType = Stage::class;
   protected $stagesDataType = 'array';
 

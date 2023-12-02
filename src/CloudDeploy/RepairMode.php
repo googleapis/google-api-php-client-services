@@ -19,8 +19,16 @@ namespace Google\Service\CloudDeploy;
 
 class RepairMode extends \Google\Model
 {
+  /**
+   * @var Retry
+   */
+  public $retry;
   protected $retryType = Retry::class;
   protected $retryDataType = '';
+  /**
+   * @var Rollback
+   */
+  public $rollback;
   protected $rollbackType = Rollback::class;
   protected $rollbackDataType = '';
 
