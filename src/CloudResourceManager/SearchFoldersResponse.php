@@ -20,6 +20,10 @@ namespace Google\Service\CloudResourceManager;
 class SearchFoldersResponse extends \Google\Collection
 {
   protected $collection_key = 'folders';
+  /**
+   * @var Folder[]
+   */
+  public $folders;
   protected $foldersType = Folder::class;
   protected $foldersDataType = 'array';
   /**

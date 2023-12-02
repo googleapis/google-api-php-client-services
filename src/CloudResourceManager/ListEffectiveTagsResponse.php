@@ -20,6 +20,10 @@ namespace Google\Service\CloudResourceManager;
 class ListEffectiveTagsResponse extends \Google\Collection
 {
   protected $collection_key = 'effectiveTags';
+  /**
+   * @var EffectiveTag[]
+   */
+  public $effectiveTags;
   protected $effectiveTagsType = EffectiveTag::class;
   protected $effectiveTagsDataType = 'array';
   /**
