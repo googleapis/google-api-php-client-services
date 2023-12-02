@@ -19,8 +19,16 @@ namespace Google\Service\ChromeUXReport;
 
 class QueryHistoryResponse extends \Google\Model
 {
+  /**
+   * @var HistoryRecord
+   */
+  public $record;
   protected $recordType = HistoryRecord::class;
   protected $recordDataType = '';
+  /**
+   * @var UrlNormalization
+   */
+  public $urlNormalizationDetails;
   protected $urlNormalizationDetailsType = UrlNormalization::class;
   protected $urlNormalizationDetailsDataType = '';
 

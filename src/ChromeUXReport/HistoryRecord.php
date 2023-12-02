@@ -20,10 +20,22 @@ namespace Google\Service\ChromeUXReport;
 class HistoryRecord extends \Google\Collection
 {
   protected $collection_key = 'collectionPeriods';
+  /**
+   * @var CollectionPeriod[]
+   */
+  public $collectionPeriods;
   protected $collectionPeriodsType = CollectionPeriod::class;
   protected $collectionPeriodsDataType = 'array';
+  /**
+   * @var HistoryKey
+   */
+  public $key;
   protected $keyType = HistoryKey::class;
   protected $keyDataType = '';
+  /**
+   * @var MetricTimeseries[]
+   */
+  public $metrics;
   protected $metricsType = MetricTimeseries::class;
   protected $metricsDataType = 'map';
 

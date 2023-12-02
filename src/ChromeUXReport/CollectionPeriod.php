@@ -19,8 +19,16 @@ namespace Google\Service\ChromeUXReport;
 
 class CollectionPeriod extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $firstDate;
   protected $firstDateType = Date::class;
   protected $firstDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $lastDate;
   protected $lastDateType = Date::class;
   protected $lastDateDataType = '';
 
