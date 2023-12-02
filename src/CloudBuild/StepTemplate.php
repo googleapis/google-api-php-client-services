@@ -20,6 +20,10 @@ namespace Google\Service\CloudBuild;
 class StepTemplate extends \Google\Collection
 {
   protected $collection_key = 'env';
+  /**
+   * @var EnvVar[]
+   */
+  public $env;
   protected $envType = EnvVar::class;
   protected $envDataType = 'array';
 

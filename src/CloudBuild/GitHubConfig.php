@@ -23,6 +23,10 @@ class GitHubConfig extends \Google\Model
    * @var string
    */
   public $appInstallationId;
+  /**
+   * @var OAuthCredential
+   */
+  public $authorizerCredential;
   protected $authorizerCredentialType = OAuthCredential::class;
   protected $authorizerCredentialDataType = '';
 

@@ -27,6 +27,10 @@ class TaskResult extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PropertySpec[]
+   */
+  public $properties;
   protected $propertiesType = PropertySpec::class;
   protected $propertiesDataType = 'map';
   /**

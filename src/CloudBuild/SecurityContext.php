@@ -23,6 +23,10 @@ class SecurityContext extends \Google\Model
    * @var bool
    */
   public $allowPrivilegeEscalation;
+  /**
+   * @var Capabilities
+   */
+  public $capabilities;
   protected $capabilitiesType = Capabilities::class;
   protected $capabilitiesDataType = '';
   /**

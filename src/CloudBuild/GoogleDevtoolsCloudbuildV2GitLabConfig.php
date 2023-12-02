@@ -19,18 +19,30 @@ namespace Google\Service\CloudBuild;
 
 class GoogleDevtoolsCloudbuildV2GitLabConfig extends \Google\Model
 {
+  /**
+   * @var UserCredential
+   */
+  public $authorizerCredential;
   protected $authorizerCredentialType = UserCredential::class;
   protected $authorizerCredentialDataType = '';
   /**
    * @var string
    */
   public $hostUri;
+  /**
+   * @var UserCredential
+   */
+  public $readAuthorizerCredential;
   protected $readAuthorizerCredentialType = UserCredential::class;
   protected $readAuthorizerCredentialDataType = '';
   /**
    * @var string
    */
   public $serverVersion;
+  /**
+   * @var GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig
+   */
+  public $serviceDirectoryConfig;
   protected $serviceDirectoryConfigType = GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig::class;
   protected $serviceDirectoryConfigDataType = '';
   /**

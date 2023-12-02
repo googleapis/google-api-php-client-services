@@ -20,6 +20,10 @@ namespace Google\Service\CloudBuild;
 class BatchCreateRepositoriesResponse extends \Google\Collection
 {
   protected $collection_key = 'repositories';
+  /**
+   * @var Repository[]
+   */
+  public $repositories;
   protected $repositoriesType = Repository::class;
   protected $repositoriesDataType = 'array';
 

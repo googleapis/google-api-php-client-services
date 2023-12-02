@@ -28,6 +28,10 @@ class Sidecar extends \Google\Collection
    * @var string[]
    */
   public $command;
+  /**
+   * @var EnvVar[]
+   */
+  public $env;
   protected $envType = EnvVar::class;
   protected $envDataType = 'array';
   /**
@@ -38,14 +42,26 @@ class Sidecar extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var Probe
+   */
+  public $readinessProbe;
   protected $readinessProbeType = Probe::class;
   protected $readinessProbeDataType = '';
   /**
    * @var string
    */
   public $script;
+  /**
+   * @var SecurityContext
+   */
+  public $securityContext;
   protected $securityContextType = SecurityContext::class;
   protected $securityContextDataType = '';
+  /**
+   * @var VolumeMount[]
+   */
+  public $volumeMounts;
   protected $volumeMountsType = VolumeMount::class;
   protected $volumeMountsDataType = 'array';
   /**

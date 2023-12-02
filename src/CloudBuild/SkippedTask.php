@@ -28,6 +28,10 @@ class SkippedTask extends \Google\Collection
    * @var string
    */
   public $reason;
+  /**
+   * @var WhenExpression[]
+   */
+  public $whenExpressions;
   protected $whenExpressionsType = WhenExpression::class;
   protected $whenExpressionsDataType = 'array';
 

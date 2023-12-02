@@ -28,6 +28,10 @@ class Step extends \Google\Collection
    * @var string[]
    */
   public $command;
+  /**
+   * @var EnvVar[]
+   */
+  public $env;
   protected $envType = EnvVar::class;
   protected $envDataType = 'array';
   /**
@@ -42,12 +46,20 @@ class Step extends \Google\Collection
    * @var string
    */
   public $script;
+  /**
+   * @var SecurityContext
+   */
+  public $securityContext;
   protected $securityContextType = SecurityContext::class;
   protected $securityContextDataType = '';
   /**
    * @var string
    */
   public $timeout;
+  /**
+   * @var VolumeMount[]
+   */
+  public $volumeMounts;
   protected $volumeMountsType = VolumeMount::class;
   protected $volumeMountsDataType = 'array';
   /**

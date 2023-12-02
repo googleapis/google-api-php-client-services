@@ -20,16 +20,32 @@ namespace Google\Service\CloudBuild;
 class PipelineSpec extends \Google\Collection
 {
   protected $collection_key = 'workspaces';
+  /**
+   * @var PipelineTask[]
+   */
+  public $finallyTasks;
   protected $finallyTasksType = PipelineTask::class;
   protected $finallyTasksDataType = 'array';
   /**
    * @var string
    */
   public $generatedYaml;
+  /**
+   * @var ParamSpec[]
+   */
+  public $params;
   protected $paramsType = ParamSpec::class;
   protected $paramsDataType = 'array';
+  /**
+   * @var PipelineTask[]
+   */
+  public $tasks;
   protected $tasksType = PipelineTask::class;
   protected $tasksDataType = 'array';
+  /**
+   * @var PipelineWorkspaceDeclaration[]
+   */
+  public $workspaces;
   protected $workspacesType = PipelineWorkspaceDeclaration::class;
   protected $workspacesDataType = 'array';
 

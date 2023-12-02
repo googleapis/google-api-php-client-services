@@ -35,12 +35,28 @@ class Connection extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var GitHubConfig
+   */
+  public $githubConfig;
   protected $githubConfigType = GitHubConfig::class;
   protected $githubConfigDataType = '';
+  /**
+   * @var GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig
+   */
+  public $githubEnterpriseConfig;
   protected $githubEnterpriseConfigType = GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig::class;
   protected $githubEnterpriseConfigDataType = '';
+  /**
+   * @var GoogleDevtoolsCloudbuildV2GitLabConfig
+   */
+  public $gitlabConfig;
   protected $gitlabConfigType = GoogleDevtoolsCloudbuildV2GitLabConfig::class;
   protected $gitlabConfigDataType = '';
+  /**
+   * @var InstallationState
+   */
+  public $installationState;
   protected $installationStateType = InstallationState::class;
   protected $installationStateDataType = '';
   /**
