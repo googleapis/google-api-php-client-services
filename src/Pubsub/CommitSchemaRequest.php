@@ -19,6 +19,10 @@ namespace Google\Service\Pubsub;
 
 class CommitSchemaRequest extends \Google\Model
 {
+  /**
+   * @var Schema
+   */
+  public $schema;
   protected $schemaType = Schema::class;
   protected $schemaDataType = '';
 

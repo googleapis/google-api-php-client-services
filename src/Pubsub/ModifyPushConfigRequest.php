@@ -19,6 +19,10 @@ namespace Google\Service\Pubsub;
 
 class ModifyPushConfigRequest extends \Google\Model
 {
+  /**
+   * @var PushConfig
+   */
+  public $pushConfig;
   protected $pushConfigType = PushConfig::class;
   protected $pushConfigDataType = '';
 

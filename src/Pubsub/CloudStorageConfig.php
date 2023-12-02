@@ -19,6 +19,10 @@ namespace Google\Service\Pubsub;
 
 class CloudStorageConfig extends \Google\Model
 {
+  /**
+   * @var AvroConfig
+   */
+  public $avroConfig;
   protected $avroConfigType = AvroConfig::class;
   protected $avroConfigDataType = '';
   /**
@@ -45,6 +49,10 @@ class CloudStorageConfig extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var TextConfig
+   */
+  public $textConfig;
   protected $textConfigType = TextConfig::class;
   protected $textConfigDataType = '';
 

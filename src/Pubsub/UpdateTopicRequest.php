@@ -19,6 +19,10 @@ namespace Google\Service\Pubsub;
 
 class UpdateTopicRequest extends \Google\Model
 {
+  /**
+   * @var Topic
+   */
+  public $topic;
   protected $topicType = Topic::class;
   protected $topicDataType = '';
   /**
