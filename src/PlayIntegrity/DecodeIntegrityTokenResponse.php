@@ -19,6 +19,10 @@ namespace Google\Service\PlayIntegrity;
 
 class DecodeIntegrityTokenResponse extends \Google\Model
 {
+  /**
+   * @var TokenPayloadExternal
+   */
+  public $tokenPayloadExternal;
   protected $tokenPayloadExternalType = TokenPayloadExternal::class;
   protected $tokenPayloadExternalDataType = '';
 

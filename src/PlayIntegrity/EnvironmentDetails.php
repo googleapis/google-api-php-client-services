@@ -19,6 +19,10 @@ namespace Google\Service\PlayIntegrity;
 
 class EnvironmentDetails extends \Google\Model
 {
+  /**
+   * @var AppAccessRiskVerdict
+   */
+  public $appAccessRiskVerdict;
   protected $appAccessRiskVerdictType = AppAccessRiskVerdict::class;
   protected $appAccessRiskVerdictDataType = '';
   /**

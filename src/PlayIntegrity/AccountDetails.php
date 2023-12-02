@@ -19,6 +19,10 @@ namespace Google\Service\PlayIntegrity;
 
 class AccountDetails extends \Google\Model
 {
+  /**
+   * @var AccountActivity
+   */
+  public $accountActivity;
   protected $accountActivityType = AccountActivity::class;
   protected $accountActivityDataType = '';
   /**
