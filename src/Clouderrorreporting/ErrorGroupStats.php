@@ -20,6 +20,10 @@ namespace Google\Service\Clouderrorreporting;
 class ErrorGroupStats extends \Google\Collection
 {
   protected $collection_key = 'timedCounts';
+  /**
+   * @var ServiceContext[]
+   */
+  public $affectedServices;
   protected $affectedServicesType = ServiceContext::class;
   protected $affectedServicesDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class ErrorGroupStats extends \Google\Collection
    * @var string
    */
   public $firstSeenTime;
+  /**
+   * @var ErrorGroup
+   */
+  public $group;
   protected $groupType = ErrorGroup::class;
   protected $groupDataType = '';
   /**
@@ -44,8 +52,16 @@ class ErrorGroupStats extends \Google\Collection
    * @var int
    */
   public $numAffectedServices;
+  /**
+   * @var ErrorEvent
+   */
+  public $representative;
   protected $representativeType = ErrorEvent::class;
   protected $representativeDataType = '';
+  /**
+   * @var TimedCount[]
+   */
+  public $timedCounts;
   protected $timedCountsType = TimedCount::class;
   protected $timedCountsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Clouderrorreporting;
 class ListGroupStatsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorGroupStats';
+  /**
+   * @var ErrorGroupStats[]
+   */
+  public $errorGroupStats;
   protected $errorGroupStatsType = ErrorGroupStats::class;
   protected $errorGroupStatsDataType = 'array';
   /**

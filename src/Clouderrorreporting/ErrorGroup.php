@@ -32,6 +32,10 @@ class ErrorGroup extends \Google\Collection
    * @var string
    */
   public $resolutionStatus;
+  /**
+   * @var TrackingIssue[]
+   */
+  public $trackingIssues;
   protected $trackingIssuesType = TrackingIssue::class;
   protected $trackingIssuesDataType = 'array';
 

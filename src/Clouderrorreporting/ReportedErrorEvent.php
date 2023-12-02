@@ -19,6 +19,10 @@ namespace Google\Service\Clouderrorreporting;
 
 class ReportedErrorEvent extends \Google\Model
 {
+  /**
+   * @var ErrorContext
+   */
+  public $context;
   protected $contextType = ErrorContext::class;
   protected $contextDataType = '';
   /**
@@ -29,6 +33,10 @@ class ReportedErrorEvent extends \Google\Model
    * @var string
    */
   public $message;
+  /**
+   * @var ServiceContext
+   */
+  public $serviceContext;
   protected $serviceContextType = ServiceContext::class;
   protected $serviceContextDataType = '';
 
