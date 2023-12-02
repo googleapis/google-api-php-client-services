@@ -24,6 +24,10 @@ class BulkCheckResponse extends \Google\Collection
    * @var string
    */
   public $bulkErrorCode;
+  /**
+   * @var CheckResponse[]
+   */
+  public $checkResults;
   protected $checkResultsType = CheckResponse::class;
   protected $checkResultsDataType = 'array';
 
