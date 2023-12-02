@@ -24,6 +24,10 @@ class ListPhotoSequencesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Operation[]
+   */
+  public $photoSequences;
   protected $photoSequencesType = Operation::class;
   protected $photoSequencesDataType = 'array';
 

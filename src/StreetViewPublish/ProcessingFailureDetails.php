@@ -19,14 +19,34 @@ namespace Google\Service\StreetViewPublish;
 
 class ProcessingFailureDetails extends \Google\Model
 {
+  /**
+   * @var GpsDataGapFailureDetails
+   */
+  public $gpsDataGapDetails;
   protected $gpsDataGapDetailsType = GpsDataGapFailureDetails::class;
   protected $gpsDataGapDetailsDataType = '';
+  /**
+   * @var ImuDataGapFailureDetails
+   */
+  public $imuDataGapDetails;
   protected $imuDataGapDetailsType = ImuDataGapFailureDetails::class;
   protected $imuDataGapDetailsDataType = '';
+  /**
+   * @var InsufficientGpsFailureDetails
+   */
+  public $insufficientGpsDetails;
   protected $insufficientGpsDetailsType = InsufficientGpsFailureDetails::class;
   protected $insufficientGpsDetailsDataType = '';
+  /**
+   * @var NoOverlapGpsFailureDetails
+   */
+  public $noOverlapGpsDetails;
   protected $noOverlapGpsDetailsType = NoOverlapGpsFailureDetails::class;
   protected $noOverlapGpsDetailsDataType = '';
+  /**
+   * @var NotOutdoorsFailureDetails
+   */
+  public $notOutdoorsDetails;
   protected $notOutdoorsDetailsType = NotOutdoorsFailureDetails::class;
   protected $notOutdoorsDetailsDataType = '';
 

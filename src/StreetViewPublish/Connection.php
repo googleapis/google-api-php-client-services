@@ -19,6 +19,10 @@ namespace Google\Service\StreetViewPublish;
 
 class Connection extends \Google\Model
 {
+  /**
+   * @var PhotoId
+   */
+  public $target;
   protected $targetType = PhotoId::class;
   protected $targetDataType = '';
 

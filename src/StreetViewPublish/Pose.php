@@ -29,8 +29,16 @@ class Pose extends \Google\Model
    */
   public $gpsRecordTimestampUnixEpoch;
   public $heading;
+  /**
+   * @var LatLng
+   */
+  public $latLngPair;
   protected $latLngPairType = LatLng::class;
   protected $latLngPairDataType = '';
+  /**
+   * @var Level
+   */
+  public $level;
   protected $levelType = Level::class;
   protected $levelDataType = '';
   public $pitch;

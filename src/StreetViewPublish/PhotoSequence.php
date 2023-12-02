@@ -25,6 +25,10 @@ class PhotoSequence extends \Google\Collection
    */
   public $captureTimeOverride;
   public $distanceMeters;
+  /**
+   * @var ProcessingFailureDetails
+   */
+  public $failureDetails;
   protected $failureDetailsType = ProcessingFailureDetails::class;
   protected $failureDetailsDataType = '';
   /**
@@ -43,18 +47,38 @@ class PhotoSequence extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Imu
+   */
+  public $imu;
   protected $imuType = Imu::class;
   protected $imuDataType = '';
+  /**
+   * @var Photo[]
+   */
+  public $photos;
   protected $photosType = Photo::class;
   protected $photosDataType = 'array';
   /**
    * @var string
    */
   public $processingState;
+  /**
+   * @var Pose[]
+   */
+  public $rawGpsTimeline;
   protected $rawGpsTimelineType = Pose::class;
   protected $rawGpsTimelineDataType = 'array';
+  /**
+   * @var LatLngBounds
+   */
+  public $sequenceBounds;
   protected $sequenceBoundsType = LatLngBounds::class;
   protected $sequenceBoundsDataType = '';
+  /**
+   * @var UploadRef
+   */
+  public $uploadReference;
   protected $uploadReferenceType = UploadRef::class;
   protected $uploadReferenceDataType = '';
   /**

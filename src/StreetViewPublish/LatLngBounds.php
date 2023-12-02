@@ -19,8 +19,16 @@ namespace Google\Service\StreetViewPublish;
 
 class LatLngBounds extends \Google\Model
 {
+  /**
+   * @var LatLng
+   */
+  public $northeast;
   protected $northeastType = LatLng::class;
   protected $northeastDataType = '';
+  /**
+   * @var LatLng
+   */
+  public $southwest;
   protected $southwestType = LatLng::class;
   protected $southwestDataType = '';
 

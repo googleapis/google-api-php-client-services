@@ -19,8 +19,16 @@ namespace Google\Service\StreetViewPublish;
 
 class PhotoResponse extends \Google\Model
 {
+  /**
+   * @var Photo
+   */
+  public $photo;
   protected $photoType = Photo::class;
   protected $photoDataType = '';
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

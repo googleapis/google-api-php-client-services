@@ -20,10 +20,22 @@ namespace Google\Service\StreetViewPublish;
 class Imu extends \Google\Collection
 {
   protected $collection_key = 'magUt';
+  /**
+   * @var Measurement3d[]
+   */
+  public $accelMpsps;
   protected $accelMpspsType = Measurement3d::class;
   protected $accelMpspsDataType = 'array';
+  /**
+   * @var Measurement3d[]
+   */
+  public $gyroRps;
   protected $gyroRpsType = Measurement3d::class;
   protected $gyroRpsDataType = 'array';
+  /**
+   * @var Measurement3d[]
+   */
+  public $magUt;
   protected $magUtType = Measurement3d::class;
   protected $magUtDataType = 'array';
 
