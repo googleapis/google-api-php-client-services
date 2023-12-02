@@ -20,6 +20,10 @@ namespace Google\Service\CloudSecurityToken;
 class GoogleIdentityStsV1Options extends \Google\Collection
 {
   protected $collection_key = 'audiences';
+  /**
+   * @var GoogleIdentityStsV1AccessBoundary
+   */
+  public $accessBoundary;
   protected $accessBoundaryType = GoogleIdentityStsV1AccessBoundary::class;
   protected $accessBoundaryDataType = '';
   /**

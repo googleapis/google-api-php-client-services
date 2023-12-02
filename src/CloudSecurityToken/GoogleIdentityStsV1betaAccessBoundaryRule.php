@@ -20,6 +20,10 @@ namespace Google\Service\CloudSecurityToken;
 class GoogleIdentityStsV1betaAccessBoundaryRule extends \Google\Collection
 {
   protected $collection_key = 'availablePermissions';
+  /**
+   * @var GoogleTypeExpr
+   */
+  public $availabilityCondition;
   protected $availabilityConditionType = GoogleTypeExpr::class;
   protected $availabilityConditionDataType = '';
   /**

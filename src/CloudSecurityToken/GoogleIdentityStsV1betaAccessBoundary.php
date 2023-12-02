@@ -20,6 +20,10 @@ namespace Google\Service\CloudSecurityToken;
 class GoogleIdentityStsV1betaAccessBoundary extends \Google\Collection
 {
   protected $collection_key = 'accessBoundaryRules';
+  /**
+   * @var GoogleIdentityStsV1betaAccessBoundaryRule[]
+   */
+  public $accessBoundaryRules;
   protected $accessBoundaryRulesType = GoogleIdentityStsV1betaAccessBoundaryRule::class;
   protected $accessBoundaryRulesDataType = 'array';
 
