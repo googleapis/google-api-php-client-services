@@ -20,6 +20,10 @@ namespace Google\Service\Cloudbilling;
 class TierRate extends \Google\Model
 {
   public $startUsageAmount;
+  /**
+   * @var Money
+   */
+  public $unitPrice;
   protected $unitPriceType = Money::class;
   protected $unitPriceDataType = '';
 

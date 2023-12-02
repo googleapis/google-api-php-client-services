@@ -20,18 +20,30 @@ namespace Google\Service\Cloudbilling;
 class Sku extends \Google\Collection
 {
   protected $collection_key = 'serviceRegions';
+  /**
+   * @var Category
+   */
+  public $category;
   protected $categoryType = Category::class;
   protected $categoryDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var GeoTaxonomy
+   */
+  public $geoTaxonomy;
   protected $geoTaxonomyType = GeoTaxonomy::class;
   protected $geoTaxonomyDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var PricingInfo[]
+   */
+  public $pricingInfo;
   protected $pricingInfoType = PricingInfo::class;
   protected $pricingInfoDataType = 'array';
   /**
