@@ -56,8 +56,16 @@ class ServiceConfig extends \Google\Collection
    * @var string
    */
   public $revision;
+  /**
+   * @var SecretEnvVar[]
+   */
+  public $secretEnvironmentVariables;
   protected $secretEnvironmentVariablesType = SecretEnvVar::class;
   protected $secretEnvironmentVariablesDataType = 'array';
+  /**
+   * @var SecretVolume[]
+   */
+  public $secretVolumes;
   protected $secretVolumesType = SecretVolume::class;
   protected $secretVolumesDataType = 'array';
   /**

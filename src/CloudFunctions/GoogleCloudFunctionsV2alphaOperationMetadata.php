@@ -44,6 +44,10 @@ class GoogleCloudFunctionsV2alphaOperationMetadata extends \Google\Collection
    * @var string
    */
   public $sourceToken;
+  /**
+   * @var GoogleCloudFunctionsV2alphaStage[]
+   */
+  public $stages;
   protected $stagesType = GoogleCloudFunctionsV2alphaStage::class;
   protected $stagesDataType = 'array';
   /**

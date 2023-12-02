@@ -20,6 +20,10 @@ namespace Google\Service\CloudFunctions;
 class ListFunctionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CloudfunctionsFunction[]
+   */
+  public $functions;
   protected $functionsType = CloudfunctionsFunction::class;
   protected $functionsDataType = 'array';
   /**

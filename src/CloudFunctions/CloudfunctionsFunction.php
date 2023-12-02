@@ -20,6 +20,10 @@ namespace Google\Service\CloudFunctions;
 class CloudfunctionsFunction extends \Google\Collection
 {
   protected $collection_key = 'stateMessages';
+  /**
+   * @var BuildConfig
+   */
+  public $buildConfig;
   protected $buildConfigType = BuildConfig::class;
   protected $buildConfigDataType = '';
   /**
@@ -30,6 +34,10 @@ class CloudfunctionsFunction extends \Google\Collection
    * @var string
    */
   public $environment;
+  /**
+   * @var EventTrigger
+   */
+  public $eventTrigger;
   protected $eventTriggerType = EventTrigger::class;
   protected $eventTriggerDataType = '';
   /**
@@ -48,12 +56,20 @@ class CloudfunctionsFunction extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * @var ServiceConfig
+   */
+  public $serviceConfig;
   protected $serviceConfigType = ServiceConfig::class;
   protected $serviceConfigDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudFunctionsV2StateMessage[]
+   */
+  public $stateMessages;
   protected $stateMessagesType = GoogleCloudFunctionsV2StateMessage::class;
   protected $stateMessagesDataType = 'array';
   /**
