@@ -20,10 +20,22 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1TaggedEntry extends \Google\Collection
 {
   protected $collection_key = 'presentTags';
+  /**
+   * @var GoogleCloudDatacatalogV1Tag[]
+   */
+  public $absentTags;
   protected $absentTagsType = GoogleCloudDatacatalogV1Tag::class;
   protected $absentTagsDataType = 'array';
+  /**
+   * @var GoogleCloudDatacatalogV1Tag[]
+   */
+  public $presentTags;
   protected $presentTagsType = GoogleCloudDatacatalogV1Tag::class;
   protected $presentTagsDataType = 'array';
+  /**
+   * @var GoogleCloudDatacatalogV1Entry
+   */
+  public $v1Entry;
   protected $v1EntryType = GoogleCloudDatacatalogV1Entry::class;
   protected $v1EntryDataType = '';
 

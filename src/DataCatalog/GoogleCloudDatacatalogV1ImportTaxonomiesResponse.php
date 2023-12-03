@@ -20,6 +20,10 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1ImportTaxonomiesResponse extends \Google\Collection
 {
   protected $collection_key = 'taxonomies';
+  /**
+   * @var GoogleCloudDatacatalogV1Taxonomy[]
+   */
+  public $taxonomies;
   protected $taxonomiesType = GoogleCloudDatacatalogV1Taxonomy::class;
   protected $taxonomiesDataType = 'array';
 

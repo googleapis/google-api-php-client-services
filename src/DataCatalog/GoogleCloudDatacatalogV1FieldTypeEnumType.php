@@ -20,6 +20,10 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1FieldTypeEnumType extends \Google\Collection
 {
   protected $collection_key = 'allowedValues';
+  /**
+   * @var GoogleCloudDatacatalogV1FieldTypeEnumTypeEnumValue[]
+   */
+  public $allowedValues;
   protected $allowedValuesType = GoogleCloudDatacatalogV1FieldTypeEnumTypeEnumValue::class;
   protected $allowedValuesDataType = 'array';
 

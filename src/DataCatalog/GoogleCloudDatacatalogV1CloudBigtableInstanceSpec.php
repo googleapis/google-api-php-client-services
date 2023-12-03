@@ -20,6 +20,10 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1CloudBigtableInstanceSpec extends \Google\Collection
 {
   protected $collection_key = 'cloudBigtableClusterSpecs';
+  /**
+   * @var GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec[]
+   */
+  public $cloudBigtableClusterSpecs;
   protected $cloudBigtableClusterSpecsType = GoogleCloudDatacatalogV1CloudBigtableInstanceSpecCloudBigtableClusterSpec::class;
   protected $cloudBigtableClusterSpecsDataType = 'array';
 

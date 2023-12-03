@@ -39,6 +39,10 @@ class GoogleCloudDatacatalogV1TagTemplateField extends \Google\Model
    * @var int
    */
   public $order;
+  /**
+   * @var GoogleCloudDatacatalogV1FieldType
+   */
+  public $type;
   protected $typeType = GoogleCloudDatacatalogV1FieldType::class;
   protected $typeDataType = '';
 

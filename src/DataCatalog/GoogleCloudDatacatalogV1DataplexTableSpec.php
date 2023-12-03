@@ -20,8 +20,16 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1DataplexTableSpec extends \Google\Collection
 {
   protected $collection_key = 'externalTables';
+  /**
+   * @var GoogleCloudDatacatalogV1DataplexSpec
+   */
+  public $dataplexSpec;
   protected $dataplexSpecType = GoogleCloudDatacatalogV1DataplexSpec::class;
   protected $dataplexSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1DataplexExternalTable[]
+   */
+  public $externalTables;
   protected $externalTablesType = GoogleCloudDatacatalogV1DataplexExternalTable::class;
   protected $externalTablesDataType = 'array';
   /**

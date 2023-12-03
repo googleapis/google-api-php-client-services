@@ -19,16 +19,40 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1PhysicalSchema extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema
+   */
+  public $avro;
   protected $avroType = GoogleCloudDatacatalogV1PhysicalSchemaAvroSchema::class;
   protected $avroDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1PhysicalSchemaCsvSchema
+   */
+  public $csv;
   protected $csvType = GoogleCloudDatacatalogV1PhysicalSchemaCsvSchema::class;
   protected $csvDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1PhysicalSchemaOrcSchema
+   */
+  public $orc;
   protected $orcType = GoogleCloudDatacatalogV1PhysicalSchemaOrcSchema::class;
   protected $orcDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1PhysicalSchemaParquetSchema
+   */
+  public $parquet;
   protected $parquetType = GoogleCloudDatacatalogV1PhysicalSchemaParquetSchema::class;
   protected $parquetDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema
+   */
+  public $protobuf;
   protected $protobufType = GoogleCloudDatacatalogV1PhysicalSchemaProtobufSchema::class;
   protected $protobufDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema
+   */
+  public $thrift;
   protected $thriftType = GoogleCloudDatacatalogV1PhysicalSchemaThriftSchema::class;
   protected $thriftDataType = '';
 

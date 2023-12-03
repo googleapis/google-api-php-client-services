@@ -20,6 +20,10 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1ListEntriesResponse extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var GoogleCloudDatacatalogV1Entry[]
+   */
+  public $entries;
   protected $entriesType = GoogleCloudDatacatalogV1Entry::class;
   protected $entriesDataType = 'array';
   /**

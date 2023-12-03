@@ -28,6 +28,10 @@ class GoogleCloudDatacatalogV1ReconcileTagsRequest extends \Google\Collection
    * @var string
    */
   public $tagTemplate;
+  /**
+   * @var GoogleCloudDatacatalogV1Tag[]
+   */
+  public $tags;
   protected $tagsType = GoogleCloudDatacatalogV1Tag::class;
   protected $tagsDataType = 'array';
 

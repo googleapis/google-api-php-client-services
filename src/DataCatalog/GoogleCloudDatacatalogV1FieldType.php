@@ -19,6 +19,10 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1FieldType extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1FieldTypeEnumType
+   */
+  public $enumType;
   protected $enumTypeType = GoogleCloudDatacatalogV1FieldTypeEnumType::class;
   protected $enumTypeDataType = '';
   /**

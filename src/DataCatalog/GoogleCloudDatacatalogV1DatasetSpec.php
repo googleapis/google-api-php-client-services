@@ -19,6 +19,10 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1DatasetSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1VertexDatasetSpec
+   */
+  public $vertexDatasetSpec;
   protected $vertexDatasetSpecType = GoogleCloudDatacatalogV1VertexDatasetSpec::class;
   protected $vertexDatasetSpecDataType = '';
 

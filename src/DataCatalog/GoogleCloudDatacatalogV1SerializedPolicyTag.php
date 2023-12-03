@@ -20,6 +20,10 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1SerializedPolicyTag extends \Google\Collection
 {
   protected $collection_key = 'childPolicyTags';
+  /**
+   * @var GoogleCloudDatacatalogV1SerializedPolicyTag[]
+   */
+  public $childPolicyTags;
   protected $childPolicyTagsType = GoogleCloudDatacatalogV1SerializedPolicyTag::class;
   protected $childPolicyTagsDataType = 'array';
   /**

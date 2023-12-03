@@ -36,6 +36,10 @@ class GoogleCloudDatacatalogV1VertexModelSpec extends \Google\Collection
    * @var string
    */
   public $versionId;
+  /**
+   * @var GoogleCloudDatacatalogV1VertexModelSourceInfo
+   */
+  public $vertexModelSourceInfo;
   protected $vertexModelSourceInfoType = GoogleCloudDatacatalogV1VertexModelSourceInfo::class;
   protected $vertexModelSourceInfoDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1Schema extends \Google\Collection
 {
   protected $collection_key = 'columns';
+  /**
+   * @var GoogleCloudDatacatalogV1ColumnSchema[]
+   */
+  public $columns;
   protected $columnsType = GoogleCloudDatacatalogV1ColumnSchema::class;
   protected $columnsDataType = 'array';
 

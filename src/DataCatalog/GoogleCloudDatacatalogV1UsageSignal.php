@@ -19,6 +19,10 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1UsageSignal extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1CommonUsageStats[]
+   */
+  public $commonUsageWithinTimeRange;
   protected $commonUsageWithinTimeRangeType = GoogleCloudDatacatalogV1CommonUsageStats::class;
   protected $commonUsageWithinTimeRangeDataType = 'map';
   /**
@@ -29,6 +33,10 @@ class GoogleCloudDatacatalogV1UsageSignal extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var GoogleCloudDatacatalogV1UsageStats[]
+   */
+  public $usageWithinTimeRange;
   protected $usageWithinTimeRangeType = GoogleCloudDatacatalogV1UsageStats::class;
   protected $usageWithinTimeRangeDataType = 'map';
 

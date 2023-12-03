@@ -19,6 +19,10 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1ReplaceTaxonomyRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1SerializedTaxonomy
+   */
+  public $serializedTaxonomy;
   protected $serializedTaxonomyType = GoogleCloudDatacatalogV1SerializedTaxonomy::class;
   protected $serializedTaxonomyDataType = '';
 

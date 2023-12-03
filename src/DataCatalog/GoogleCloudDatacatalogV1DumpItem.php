@@ -19,6 +19,10 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1DumpItem extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1TaggedEntry
+   */
+  public $taggedEntry;
   protected $taggedEntryType = GoogleCloudDatacatalogV1TaggedEntry::class;
   protected $taggedEntryDataType = '';
 

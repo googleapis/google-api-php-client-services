@@ -23,6 +23,10 @@ class GoogleCloudDatacatalogV1TagTemplate extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudDatacatalogV1TagTemplateField[]
+   */
+  public $fields;
   protected $fieldsType = GoogleCloudDatacatalogV1TagTemplateField::class;
   protected $fieldsDataType = 'map';
   /**

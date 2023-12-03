@@ -19,6 +19,10 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1ReconcileTagsMetadata extends \Google\Model
 {
+  /**
+   * @var Status[]
+   */
+  public $errors;
   protected $errorsType = Status::class;
   protected $errorsDataType = 'map';
   /**

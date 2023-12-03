@@ -19,20 +19,52 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1Entry extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogV1BigQueryDateShardedSpec
+   */
+  public $bigqueryDateShardedSpec;
   protected $bigqueryDateShardedSpecType = GoogleCloudDatacatalogV1BigQueryDateShardedSpec::class;
   protected $bigqueryDateShardedSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1BigQueryTableSpec
+   */
+  public $bigqueryTableSpec;
   protected $bigqueryTableSpecType = GoogleCloudDatacatalogV1BigQueryTableSpec::class;
   protected $bigqueryTableSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1BusinessContext
+   */
+  public $businessContext;
   protected $businessContextType = GoogleCloudDatacatalogV1BusinessContext::class;
   protected $businessContextDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1CloudBigtableSystemSpec
+   */
+  public $cloudBigtableSystemSpec;
   protected $cloudBigtableSystemSpecType = GoogleCloudDatacatalogV1CloudBigtableSystemSpec::class;
   protected $cloudBigtableSystemSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1DataSource
+   */
+  public $dataSource;
   protected $dataSourceType = GoogleCloudDatacatalogV1DataSource::class;
   protected $dataSourceDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1DataSourceConnectionSpec
+   */
+  public $dataSourceConnectionSpec;
   protected $dataSourceConnectionSpecType = GoogleCloudDatacatalogV1DataSourceConnectionSpec::class;
   protected $dataSourceConnectionSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1DatabaseTableSpec
+   */
+  public $databaseTableSpec;
   protected $databaseTableSpecType = GoogleCloudDatacatalogV1DatabaseTableSpec::class;
   protected $databaseTableSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1DatasetSpec
+   */
+  public $datasetSpec;
   protected $datasetSpecType = GoogleCloudDatacatalogV1DatasetSpec::class;
   protected $datasetSpecDataType = '';
   /**
@@ -43,12 +75,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudDatacatalogV1FilesetSpec
+   */
+  public $filesetSpec;
   protected $filesetSpecType = GoogleCloudDatacatalogV1FilesetSpec::class;
   protected $filesetSpecDataType = '';
   /**
    * @var string
    */
   public $fullyQualifiedName;
+  /**
+   * @var GoogleCloudDatacatalogV1GcsFilesetSpec
+   */
+  public $gcsFilesetSpec;
   protected $gcsFilesetSpecType = GoogleCloudDatacatalogV1GcsFilesetSpec::class;
   protected $gcsFilesetSpecDataType = '';
   /**
@@ -63,30 +103,66 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
    * @var string
    */
   public $linkedResource;
+  /**
+   * @var GoogleCloudDatacatalogV1LookerSystemSpec
+   */
+  public $lookerSystemSpec;
   protected $lookerSystemSpecType = GoogleCloudDatacatalogV1LookerSystemSpec::class;
   protected $lookerSystemSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1ModelSpec
+   */
+  public $modelSpec;
   protected $modelSpecType = GoogleCloudDatacatalogV1ModelSpec::class;
   protected $modelSpecDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDatacatalogV1PersonalDetails
+   */
+  public $personalDetails;
   protected $personalDetailsType = GoogleCloudDatacatalogV1PersonalDetails::class;
   protected $personalDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1RoutineSpec
+   */
+  public $routineSpec;
   protected $routineSpecType = GoogleCloudDatacatalogV1RoutineSpec::class;
   protected $routineSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1Schema
+   */
+  public $schema;
   protected $schemaType = GoogleCloudDatacatalogV1Schema::class;
   protected $schemaDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1ServiceSpec
+   */
+  public $serviceSpec;
   protected $serviceSpecType = GoogleCloudDatacatalogV1ServiceSpec::class;
   protected $serviceSpecDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1SystemTimestamps
+   */
+  public $sourceSystemTimestamps;
   protected $sourceSystemTimestampsType = GoogleCloudDatacatalogV1SystemTimestamps::class;
   protected $sourceSystemTimestampsDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogV1SqlDatabaseSystemSpec
+   */
+  public $sqlDatabaseSystemSpec;
   protected $sqlDatabaseSystemSpecType = GoogleCloudDatacatalogV1SqlDatabaseSystemSpec::class;
   protected $sqlDatabaseSystemSpecDataType = '';
   /**
    * @var string
    */
   public $type;
+  /**
+   * @var GoogleCloudDatacatalogV1UsageSignal
+   */
+  public $usageSignal;
   protected $usageSignalType = GoogleCloudDatacatalogV1UsageSignal::class;
   protected $usageSignalDataType = '';
   /**

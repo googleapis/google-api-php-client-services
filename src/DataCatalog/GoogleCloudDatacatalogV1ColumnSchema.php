@@ -40,6 +40,10 @@ class GoogleCloudDatacatalogV1ColumnSchema extends \Google\Collection
    * @var string
    */
   public $highestIndexingType;
+  /**
+   * @var GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec
+   */
+  public $lookerColumnSpec;
   protected $lookerColumnSpecType = GoogleCloudDatacatalogV1ColumnSchemaLookerColumnSpec::class;
   protected $lookerColumnSpecDataType = '';
   /**
@@ -50,6 +54,10 @@ class GoogleCloudDatacatalogV1ColumnSchema extends \Google\Collection
    * @var int
    */
   public $ordinalPosition;
+  /**
+   * @var GoogleCloudDatacatalogV1ColumnSchema[]
+   */
+  public $subcolumns;
   protected $subcolumnsType = GoogleCloudDatacatalogV1ColumnSchema::class;
   protected $subcolumnsDataType = 'array';
   /**

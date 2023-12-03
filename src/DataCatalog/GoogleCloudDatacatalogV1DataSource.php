@@ -31,6 +31,10 @@ class GoogleCloudDatacatalogV1DataSource extends \Google\Model
    * @var string
    */
   public $sourceEntry;
+  /**
+   * @var GoogleCloudDatacatalogV1StorageProperties
+   */
+  public $storageProperties;
   protected $storagePropertiesType = GoogleCloudDatacatalogV1StorageProperties::class;
   protected $storagePropertiesDataType = '';
 
