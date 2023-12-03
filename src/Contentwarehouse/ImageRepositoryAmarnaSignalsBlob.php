@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageRepositoryAmarnaSignalsBlob extends \Google\Model
 {
+  /**
+   * @var DrishtiFeatureSetDataSequence
+   */
+  public $frameFeatures;
   protected $frameFeaturesType = DrishtiFeatureSetDataSequence::class;
   protected $frameFeaturesDataType = '';
 

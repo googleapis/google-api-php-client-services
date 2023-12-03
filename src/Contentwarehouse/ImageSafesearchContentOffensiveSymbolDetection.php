@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageSafesearchContentOffensiveSymbolDetection extends \Google\Collection
 {
   protected $collection_key = 'matches';
+  /**
+   * @var ImageSafesearchContentOffensiveSymbolMatch[]
+   */
+  public $matches;
   protected $matchesType = ImageSafesearchContentOffensiveSymbolMatch::class;
   protected $matchesDataType = 'array';
 

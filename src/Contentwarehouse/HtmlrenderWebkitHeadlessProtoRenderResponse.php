@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class HtmlrenderWebkitHeadlessProtoRenderResponse extends \Google\Collection
 {
   protected $collection_key = 'sessionStorage';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoChromiumTrace
+   */
+  public $chromiumTrace;
   protected $chromiumTraceType = HtmlrenderWebkitHeadlessProtoChromiumTrace::class;
   protected $chromiumTraceDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoCookie[]
+   */
+  public $cookie;
   protected $cookieType = HtmlrenderWebkitHeadlessProtoCookie::class;
   protected $cookieDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoDocument
+   */
+  public $document;
   protected $documentType = HtmlrenderWebkitHeadlessProtoDocument::class;
   protected $documentDataType = '';
   /**
@@ -34,24 +46,56 @@ class HtmlrenderWebkitHeadlessProtoRenderResponse extends \Google\Collection
    * @var string
    */
   public $exceptions;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoRenderExtensionResult
+   */
+  public $extensionResult;
   protected $extensionResultType = HtmlrenderWebkitHeadlessProtoRenderExtensionResult::class;
   protected $extensionResultDataType = '';
   /**
    * @var string
    */
   public $finalClientUrl;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoImage[]
+   */
+  public $image;
   protected $imageType = HtmlrenderWebkitHeadlessProtoImage::class;
   protected $imageDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoDOMStorageItem[]
+   */
+  public $localStorage;
   protected $localStorageType = HtmlrenderWebkitHeadlessProtoDOMStorageItem::class;
   protected $localStorageDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoPartialRender[]
+   */
+  public $partialRender;
   protected $partialRenderType = HtmlrenderWebkitHeadlessProtoPartialRender::class;
   protected $partialRenderDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoPdf
+   */
+  public $pdf;
   protected $pdfType = HtmlrenderWebkitHeadlessProtoPdf::class;
   protected $pdfDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoResource[]
+   */
+  public $referencedResourceContent;
   protected $referencedResourceContentType = HtmlrenderWebkitHeadlessProtoResource::class;
   protected $referencedResourceContentDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoRenderStats
+   */
+  public $renderStats;
   protected $renderStatsType = HtmlrenderWebkitHeadlessProtoRenderStats::class;
   protected $renderStatsDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoDOMStorageItem[]
+   */
+  public $sessionStorage;
   protected $sessionStorageType = HtmlrenderWebkitHeadlessProtoDOMStorageItem::class;
   protected $sessionStorageDataType = 'array';
   /**

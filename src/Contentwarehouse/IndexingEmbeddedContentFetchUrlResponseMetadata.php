@@ -55,6 +55,10 @@ class IndexingEmbeddedContentFetchUrlResponseMetadata extends \Google\Model
    * @var string
    */
   public $rewriteMethod;
+  /**
+   * @var IndexingConverterRobotsInfo
+   */
+  public $robotsInfo;
   protected $robotsInfoType = IndexingConverterRobotsInfo::class;
   protected $robotsInfoDataType = '';
 

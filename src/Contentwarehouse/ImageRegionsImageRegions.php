@@ -28,6 +28,10 @@ class ImageRegionsImageRegions extends \Google\Collection
    * @var float
    */
   public $finalViolenceScore;
+  /**
+   * @var ImageContentFlowProtoProd
+   */
+  public $flowOutput;
   protected $flowOutputType = ImageContentFlowProtoProd::class;
   protected $flowOutputDataType = '';
   /**
@@ -46,12 +50,20 @@ class ImageRegionsImageRegions extends \Google\Collection
    * @var float
    */
   public $pedoScore;
+  /**
+   * @var PrecomputedRestricts
+   */
+  public $precomputedRestricts;
   protected $precomputedRestrictsType = PrecomputedRestricts::class;
   protected $precomputedRestrictsDataType = '';
   /**
    * @var float
    */
   public $racyScore;
+  /**
+   * @var ImageRegionsImageRegion[]
+   */
+  public $region;
   protected $regionType = ImageRegionsImageRegion::class;
   protected $regionDataType = 'array';
 

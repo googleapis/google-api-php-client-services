@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositoryFramePerdocs extends \Google\Collection
 {
   protected $collection_key = 'framePerdoc';
+  /**
+   * @var ImageRepositoryFramePerdoc[]
+   */
+  public $framePerdoc;
   protected $framePerdocType = ImageRepositoryFramePerdoc::class;
   protected $framePerdocDataType = 'array';
 

@@ -28,16 +28,32 @@ class ImageRepositoryAmarnaCloudSpeechSignals extends \Google\Collection
    * @var string
    */
   public $langWithoutLocale;
+  /**
+   * @var ImageRepositoryLanguageIdentificationResult
+   */
+  public $langidInput;
   protected $langidInputType = ImageRepositoryLanguageIdentificationResult::class;
   protected $langidInputDataType = '';
   /**
    * @var string
    */
   public $modelIdentifier;
+  /**
+   * @var ImageRepositorySpeechRecognitionResult[]
+   */
+  public $results;
   protected $resultsType = ImageRepositorySpeechRecognitionResult::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var ImageRepositoryS3RecognizerMetadataResponse
+   */
+  public $s3RecognizerMetadataResponse;
   protected $s3RecognizerMetadataResponseType = ImageRepositoryS3RecognizerMetadataResponse::class;
   protected $s3RecognizerMetadataResponseDataType = '';
+  /**
+   * @var PseudoVideoData
+   */
+  public $transcriptAsr;
   protected $transcriptAsrType = PseudoVideoData::class;
   protected $transcriptAsrDataType = '';
 

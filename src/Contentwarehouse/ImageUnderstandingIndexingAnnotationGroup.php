@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageUnderstandingIndexingAnnotationGroup extends \Google\Collection
 {
   protected $collection_key = 'annotation';
+  /**
+   * @var ImageUnderstandingIndexingAnnotation[]
+   */
+  public $annotation;
   protected $annotationType = ImageUnderstandingIndexingAnnotation::class;
   protected $annotationDataType = 'array';
 

@@ -32,64 +32,168 @@ class ImageRepositoryContentBasedVideoMetadata extends \Google\Collection
    * @var bool
    */
   public $audioOnly;
+  /**
+   * @var ImageRepositoryAmarnaCloudSpeechSignals
+   */
+  public $cloudSpeechSignals;
   protected $cloudSpeechSignalsType = ImageRepositoryAmarnaCloudSpeechSignals::class;
   protected $cloudSpeechSignalsDataType = '';
+  /**
+   * @var DrishtiFeatureSetData
+   */
+  public $featureSetData;
   protected $featureSetDataType = DrishtiFeatureSetData::class;
   protected $featureSetDataDataType = '';
+  /**
+   * @var DrishtiFeatureSetData
+   */
+  public $golden7SoapboxSummary;
   protected $golden7SoapboxSummaryType = DrishtiFeatureSetData::class;
   protected $golden7SoapboxSummaryDataType = '';
+  /**
+   * @var ImageRepositoryAmarnaSignalsBlobInfo
+   */
+  public $golden7SoapboxTracksBlobInfo;
   protected $golden7SoapboxTracksBlobInfoType = ImageRepositoryAmarnaSignalsBlobInfo::class;
   protected $golden7SoapboxTracksBlobInfoDataType = '';
+  /**
+   * @var VideoCrawlVideoInlinePlaybackMetadata
+   */
+  public $inlinePlayback;
   protected $inlinePlaybackType = VideoCrawlVideoInlinePlaybackMetadata::class;
   protected $inlinePlaybackDataType = '';
+  /**
+   * @var VideoTimedtextS4ALIResults
+   */
+  public $languageIdentification;
   protected $languageIdentificationType = VideoTimedtextS4ALIResults::class;
   protected $languageIdentificationDataType = '';
+  /**
+   * @var VideoLegosLegosAnnotationsSets
+   */
+  public $legosAnnotationData;
   protected $legosAnnotationDataType = VideoLegosLegosAnnotationsSets::class;
   protected $legosAnnotationDataDataType = '';
+  /**
+   * @var ImageRepositoryFramePerdocs
+   */
+  public $lmsPreviewFramePerdocs;
   protected $lmsPreviewFramePerdocsType = ImageRepositoryFramePerdocs::class;
   protected $lmsPreviewFramePerdocsDataType = '';
+  /**
+   * @var VideoStorageLoudnessData
+   */
+  public $loudnessData;
   protected $loudnessDataType = VideoStorageLoudnessData::class;
   protected $loudnessDataDataType = '';
+  /**
+   * @var VideoMediaInfo
+   */
+  public $mediaInfo;
   protected $mediaInfoType = VideoMediaInfo::class;
   protected $mediaInfoDataType = '';
+  /**
+   * @var ImageRepositoryFramePerdocs
+   */
+  public $multiThumbnailsFramePerdocs;
   protected $multiThumbnailsFramePerdocsType = ImageRepositoryFramePerdocs::class;
   protected $multiThumbnailsFramePerdocsDataType = '';
+  /**
+   * @var ImageData
+   */
+  public $representativeFrameData;
   protected $representativeFrameDataType = ImageData::class;
   protected $representativeFrameDataDataType = '';
+  /**
+   * @var ImageRepositoryAmarnaCloudSpeechSignals
+   */
+  public $s3Asr;
   protected $s3AsrType = ImageRepositoryAmarnaCloudSpeechSignals::class;
   protected $s3AsrDataType = '';
+  /**
+   * @var ImageRepositoryS3LangIdSignals
+   */
+  public $s3LanguageIdentification;
   protected $s3LanguageIdentificationType = ImageRepositoryS3LangIdSignals::class;
   protected $s3LanguageIdentificationDataType = '';
+  /**
+   * @var SafesearchVideoContentSignals
+   */
+  public $safesearchVideoContentSignals;
   protected $safesearchVideoContentSignalsType = SafesearchVideoContentSignals::class;
   protected $safesearchVideoContentSignalsDataType = '';
   /**
    * @var string
    */
   public $searchDocid;
+  /**
+   * @var ImageRepositoryAmarnaSignalsBlob
+   */
+  public $signalsBlob;
   protected $signalsBlobType = ImageRepositoryAmarnaSignalsBlob::class;
   protected $signalsBlobDataType = '';
+  /**
+   * @var ImageRepositoryAmarnaSignalsBlobInfo
+   */
+  public $signalsBlobInfo;
   protected $signalsBlobInfoType = ImageRepositoryAmarnaSignalsBlobInfo::class;
   protected $signalsBlobInfoDataType = '';
+  /**
+   * @var IndexingSpeechSpeechPropertiesProto
+   */
+  public $speechProperties;
   protected $speechPropertiesType = IndexingSpeechSpeechPropertiesProto::class;
   protected $speechPropertiesDataType = '';
+  /**
+   * @var VideoThumbnailsThumbnailScore
+   */
+  public $thumbnailQualityScore;
   protected $thumbnailQualityScoreType = VideoThumbnailsThumbnailScore::class;
   protected $thumbnailQualityScoreDataType = '';
+  /**
+   * @var VideoPipelineViperThumbnailerColumnData
+   */
+  public $thumbnailerData;
   protected $thumbnailerDataType = VideoPipelineViperThumbnailerColumnData::class;
   protected $thumbnailerDataDataType = '';
+  /**
+   * @var ImageRepositoryApiItagSpecificMetadata[]
+   */
+  public $transcodeMetadata;
   protected $transcodeMetadataType = ImageRepositoryApiItagSpecificMetadata::class;
   protected $transcodeMetadataDataType = 'array';
+  /**
+   * @var PseudoVideoData
+   */
+  public $transcriptAsr;
   protected $transcriptAsrType = PseudoVideoData::class;
   protected $transcriptAsrDataType = '';
+  /**
+   * @var ImageRepositoryFileTruncationInfo
+   */
+  public $truncationInfo;
   protected $truncationInfoType = ImageRepositoryFileTruncationInfo::class;
   protected $truncationInfoDataType = '';
+  /**
+   * @var ImageRepositoryUnwantedContent
+   */
+  public $unwantedContent;
   protected $unwantedContentType = ImageRepositoryUnwantedContent::class;
   protected $unwantedContentDataType = '';
   /**
    * @var string
    */
   public $venomId;
+  /**
+   * @var ImageRepositoryVenomProcessingInfo
+   */
+  public $venomProcessingInfo;
   protected $venomProcessingInfoType = ImageRepositoryVenomProcessingInfo::class;
   protected $venomProcessingInfoDataType = '';
+  /**
+   * @var VideoContentSearchVideoAnchorSets
+   */
+  public $videoAnchorSet;
   protected $videoAnchorSetType = VideoContentSearchVideoAnchorSets::class;
   protected $videoAnchorSetDataType = '';
   public $videoDurationSec;
@@ -101,14 +205,34 @@ class ImageRepositoryContentBasedVideoMetadata extends \Google\Collection
    * @var float
    */
   public $videoPornScoreV4;
+  /**
+   * @var ImageRepositoryVideoPreviewsVideoPreview[]
+   */
+  public $videoPreviewBytes;
   protected $videoPreviewBytesType = ImageRepositoryVideoPreviewsVideoPreview::class;
   protected $videoPreviewBytesDataType = 'array';
+  /**
+   * @var ImageBaseVideoPreviewMetadata[]
+   */
+  public $videoPreviews;
   protected $videoPreviewsType = ImageBaseVideoPreviewMetadata::class;
   protected $videoPreviewsDataType = 'array';
+  /**
+   * @var VideoPipelineViperVSIColumnData
+   */
+  public $videoStreamInfo;
   protected $videoStreamInfoType = VideoPipelineViperVSIColumnData::class;
   protected $videoStreamInfoDataType = '';
+  /**
+   * @var QualityWebanswersVideoTranscriptAnnotations
+   */
+  public $videoTranscriptAnnotations;
   protected $videoTranscriptAnnotationsType = QualityWebanswersVideoTranscriptAnnotations::class;
   protected $videoTranscriptAnnotationsDataType = '';
+  /**
+   * @var ImageRepositoryYoutubeProcessingFilter
+   */
+  public $youtubeProcessingFilter;
   protected $youtubeProcessingFilterType = ImageRepositoryYoutubeProcessingFilter::class;
   protected $youtubeProcessingFilterDataType = '';
 

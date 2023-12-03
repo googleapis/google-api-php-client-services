@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositorySpeechRecognitionResult extends \Google\Collection
 {
   protected $collection_key = 'alternatives';
+  /**
+   * @var ImageRepositorySpeechRecognitionAlternative[]
+   */
+  public $alternatives;
   protected $alternativesType = ImageRepositorySpeechRecognitionAlternative::class;
   protected $alternativesDataType = 'array';
   /**

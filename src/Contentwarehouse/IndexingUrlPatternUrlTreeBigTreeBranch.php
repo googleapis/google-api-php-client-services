@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingUrlPatternUrlTreeBigTreeBranch extends \Google\Model
 {
+  /**
+   * @var IndexingUrlPatternUrlTreeUrlFeatures
+   */
+  public $features;
   protected $featuresType = IndexingUrlPatternUrlTreeUrlFeatures::class;
   protected $featuresDataType = '';
   /**
    * @var string
    */
   public $patternId;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $payload;
   protected $payloadType = Proto2BridgeMessageSet::class;
   protected $payloadDataType = '';
 

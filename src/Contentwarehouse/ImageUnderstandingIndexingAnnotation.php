@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class ImageUnderstandingIndexingAnnotation extends \Google\Collection
 {
   protected $collection_key = 'labelGroup';
+  /**
+   * @var ImageUnderstandingIndexingFeature[]
+   */
+  public $feature;
   protected $featureType = ImageUnderstandingIndexingFeature::class;
   protected $featureDataType = 'array';
+  /**
+   * @var ImageUnderstandingIndexingLabelGroup[]
+   */
+  public $labelGroup;
   protected $labelGroupType = ImageUnderstandingIndexingLabelGroup::class;
   protected $labelGroupDataType = 'array';
+  /**
+   * @var ImageUnderstandingIndexingImageRegion
+   */
+  public $roi;
   protected $roiType = ImageUnderstandingIndexingImageRegion::class;
   protected $roiDataType = '';
 

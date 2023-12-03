@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class IndexingEmbeddedContentRenderingOutputMetadata extends \Google\Collection
 {
   protected $collection_key = 'renderEvent';
+  /**
+   * @var IndexingEmbeddedContentRenderRequestConfigConfigParams
+   */
+  public $configParams;
   protected $configParamsType = IndexingEmbeddedContentRenderRequestConfigConfigParams::class;
   protected $configParamsDataType = '';
   /**
@@ -30,6 +34,10 @@ class IndexingEmbeddedContentRenderingOutputMetadata extends \Google\Collection
    * @var int
    */
   public $experimentalRenderTimeMsec;
+  /**
+   * @var IndexingEmbeddedContentOutputGenerationTimestamps
+   */
+  public $generationTimestamps;
   protected $generationTimestampsType = IndexingEmbeddedContentOutputGenerationTimestamps::class;
   protected $generationTimestampsDataType = '';
   /**
@@ -49,12 +57,20 @@ class IndexingEmbeddedContentRenderingOutputMetadata extends \Google\Collection
    * @var bool
    */
   public $refresh;
+  /**
+   * @var IndexingEmbeddedContentRenderCacheStats
+   */
+  public $renderCacheStats;
   protected $renderCacheStatsType = IndexingEmbeddedContentRenderCacheStats::class;
   protected $renderCacheStatsDataType = '';
   /**
    * @var string
    */
   public $renderEngine;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoRenderEvent[]
+   */
+  public $renderEvent;
   protected $renderEventType = HtmlrenderWebkitHeadlessProtoRenderEvent::class;
   protected $renderEventDataType = 'array';
   /**
@@ -70,8 +86,16 @@ class IndexingEmbeddedContentRenderingOutputMetadata extends \Google\Collection
    * @var string
    */
   public $renderedTimeUsec;
+  /**
+   * @var IndexingEmbeddedContentRenderingFetchStats
+   */
+  public $renderingFetchStats;
   protected $renderingFetchStatsType = IndexingEmbeddedContentRenderingFetchStats::class;
   protected $renderingFetchStatsDataType = '';
+  /**
+   * @var IndexingEmbeddedContentSelectionResult
+   */
+  public $selectionResult;
   protected $selectionResultType = IndexingEmbeddedContentSelectionResult::class;
   protected $selectionResultDataType = '';
   public $snapshotQualityScore;

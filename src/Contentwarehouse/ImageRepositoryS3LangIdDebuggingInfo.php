@@ -39,6 +39,10 @@ class ImageRepositoryS3LangIdDebuggingInfo extends \Google\Model
    * @var int
    */
   public $segmentStride;
+  /**
+   * @var SpeechWaveHeader
+   */
+  public $waveHeader;
   protected $waveHeaderType = SpeechWaveHeader::class;
   protected $waveHeaderDataType = '';
 

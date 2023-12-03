@@ -36,18 +36,30 @@ class HtmlrenderWebkitHeadlessProtoReferencedResource extends \Google\Collection
    * @var bool
    */
   public $failedHttpAccessControlCheck;
+  /**
+   * @var WirelessTranscoderFetchFetchSourceInfo[]
+   */
+  public $fetchSourceInfo;
   protected $fetchSourceInfoType = WirelessTranscoderFetchFetchSourceInfo::class;
   protected $fetchSourceInfoDataType = 'array';
   /**
    * @var string
    */
   public $fetchStatus;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader[]
+   */
+  public $httpHeader;
   protected $httpHeaderType = HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader::class;
   protected $httpHeaderDataType = 'array';
   /**
    * @var int
    */
   public $httpResponseCode;
+  /**
+   * @var WirelessTranscoderFetchFetchMetadata[]
+   */
+  public $metadata;
   protected $metadataType = WirelessTranscoderFetchFetchMetadata::class;
   protected $metadataDataType = 'array';
   /**
@@ -62,6 +74,10 @@ class HtmlrenderWebkitHeadlessProtoReferencedResource extends \Google\Collection
    * @var int
    */
   public $referencedResourceContentIndex;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader[]
+   */
+  public $requestHeader;
   protected $requestHeaderType = HtmlrenderWebkitHeadlessProtoReferencedResourceHttpHeader::class;
   protected $requestHeaderDataType = 'array';
   /**
@@ -76,12 +92,20 @@ class HtmlrenderWebkitHeadlessProtoReferencedResource extends \Google\Collection
    * @var bool
    */
   public $synchronouslyFetched;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoReferencedResourceFetchTiming[]
+   */
+  public $timing;
   protected $timingType = HtmlrenderWebkitHeadlessProtoReferencedResourceFetchTiming::class;
   protected $timingDataType = 'array';
   /**
    * @var string
    */
   public $url;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoWebKitFetchMetadata
+   */
+  public $webkitMetadata;
   protected $webkitMetadataType = HtmlrenderWebkitHeadlessProtoWebKitFetchMetadata::class;
   protected $webkitMetadataDataType = '';
 

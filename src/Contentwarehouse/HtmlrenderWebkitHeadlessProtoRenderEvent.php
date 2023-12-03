@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class HtmlrenderWebkitHeadlessProtoRenderEvent extends \Google\Model
 {
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoFrameResizeEvent
+   */
+  public $frameResize;
   protected $frameResizeType = HtmlrenderWebkitHeadlessProtoFrameResizeEvent::class;
   protected $frameResizeDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoInitialLoadEvent
+   */
+  public $initialLoad;
   protected $initialLoadType = HtmlrenderWebkitHeadlessProtoInitialLoadEvent::class;
   protected $initialLoadDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoModalDialogEvent
+   */
+  public $modalDialog;
   protected $modalDialogType = HtmlrenderWebkitHeadlessProtoModalDialogEvent::class;
   protected $modalDialogDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoRedirectEvent
+   */
+  public $redirect;
   protected $redirectType = HtmlrenderWebkitHeadlessProtoRedirectEvent::class;
   protected $redirectDataType = '';
   /**
@@ -32,6 +48,10 @@ class HtmlrenderWebkitHeadlessProtoRenderEvent extends \Google\Model
    */
   public $scriptOriginUrl;
   public $virtualTimeOffset;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoWindowOpenEvent
+   */
+  public $windowOpen;
   protected $windowOpenType = HtmlrenderWebkitHeadlessProtoWindowOpenEvent::class;
   protected $windowOpenDataType = '';
 

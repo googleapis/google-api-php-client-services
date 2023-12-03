@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageUnderstandingIndexingLabelGroup extends \Google\Collection
 {
   protected $collection_key = 'label';
+  /**
+   * @var ImageUnderstandingIndexingLabel[]
+   */
+  public $label;
   protected $labelType = ImageUnderstandingIndexingLabel::class;
   protected $labelDataType = 'array';
   /**

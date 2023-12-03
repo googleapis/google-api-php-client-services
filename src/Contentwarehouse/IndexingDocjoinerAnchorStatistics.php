@@ -28,6 +28,10 @@ class IndexingDocjoinerAnchorStatistics extends \Google\Collection
    * @var int
    */
   public $anchorPhraseCount;
+  /**
+   * @var IndexingDocjoinerAnchorSpamInfo
+   */
+  public $anchorSpamInfo;
   protected $anchorSpamInfoType = IndexingDocjoinerAnchorSpamInfo::class;
   protected $anchorSpamInfoDataType = '';
   /**
@@ -150,16 +154,32 @@ class IndexingDocjoinerAnchorStatistics extends \Google\Collection
    * @var bool
    */
   public $penguinTooManySources;
+  /**
+   * @var IndexingDocjoinerAnchorStatisticsPerDupStats[]
+   */
+  public $perdupstats;
   protected $perdupstatsType = IndexingDocjoinerAnchorStatisticsPerDupStats::class;
   protected $perdupstatsDataType = 'array';
+  /**
+   * @var IndexingDocjoinerAnchorPhraseSpamInfo
+   */
+  public $phraseAnchorSpamInfo;
   protected $phraseAnchorSpamInfoType = IndexingDocjoinerAnchorPhraseSpamInfo::class;
   protected $phraseAnchorSpamInfoDataType = '';
   /**
    * @var int
    */
   public $redundantAnchorForPhraseCapCount;
+  /**
+   * @var IndexingDocjoinerAnchorStatisticsRedundantAnchorInfo[]
+   */
+  public $redundantanchorinfo;
   protected $redundantanchorinfoType = IndexingDocjoinerAnchorStatisticsRedundantAnchorInfo::class;
   protected $redundantanchorinfoDataType = 'array';
+  /**
+   * @var IndexingDocjoinerAnchorStatisticsRedundantAnchorInfoForPhraseCap[]
+   */
+  public $redundantanchorinfoforphrasecap;
   protected $redundantanchorinfoforphrasecapType = IndexingDocjoinerAnchorStatisticsRedundantAnchorInfoForPhraseCap::class;
   protected $redundantanchorinfoforphrasecapDataType = 'array';
   /**

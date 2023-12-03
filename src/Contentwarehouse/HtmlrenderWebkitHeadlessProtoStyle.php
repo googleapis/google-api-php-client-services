@@ -48,16 +48,32 @@ class HtmlrenderWebkitHeadlessProtoStyle extends \Google\Collection
    * @var string
    */
   public $backgroundImageUrl;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $backgroundImageXPos;
   protected $backgroundImageXPosType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $backgroundImageXPosDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $backgroundImageYPos;
   protected $backgroundImageYPosType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $backgroundImageYPosDataType = '';
   /**
    * @var string
    */
   public $backgroundSize;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $backgroundSizeHeight;
   protected $backgroundSizeHeightType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $backgroundSizeHeightDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $backgroundSizeWidth;
   protected $backgroundSizeWidthType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $backgroundSizeWidthDataType = '';
   /**
@@ -108,6 +124,10 @@ class HtmlrenderWebkitHeadlessProtoStyle extends \Google\Collection
    * @var string
    */
   public $borderStyleTop;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoRectangle
+   */
+  public $clip;
   protected $clipType = HtmlrenderWebkitHeadlessProtoRectangle::class;
   protected $clipDataType = '';
   /**
@@ -150,12 +170,28 @@ class HtmlrenderWebkitHeadlessProtoStyle extends \Google\Collection
    * @var string
    */
   public $listStyleType;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $marginBottom;
   protected $marginBottomType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $marginBottomDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $marginLeft;
   protected $marginLeftType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $marginLeftDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $marginRight;
   protected $marginRightType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $marginRightDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $marginTop;
   protected $marginTopType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $marginTopDataType = '';
   /**
@@ -170,12 +206,28 @@ class HtmlrenderWebkitHeadlessProtoStyle extends \Google\Collection
    * @var string
    */
   public $overflowY;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $paddingBottom;
   protected $paddingBottomType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $paddingBottomDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $paddingLeft;
   protected $paddingLeftType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $paddingLeftDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $paddingRight;
   protected $paddingRightType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $paddingRightDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $paddingTop;
   protected $paddingTopType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $paddingTopDataType = '';
   /**

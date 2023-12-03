@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class IndexingEmbeddedContentEmbeddedLinksInfo extends \Google\Collection
 {
   protected $collection_key = 'uncrawledLinkUrl';
+  /**
+   * @var IndexingEmbeddedContentEmbedderInfo
+   */
+  public $embedderInfo;
   protected $embedderInfoType = IndexingEmbeddedContentEmbedderInfo::class;
   protected $embedderInfoDataType = '';
+  /**
+   * @var IndexingEmbeddedContentLinkInfo[]
+   */
+  public $link;
   protected $linkType = IndexingEmbeddedContentLinkInfo::class;
   protected $linkDataType = 'array';
+  /**
+   * @var IndexingEmbeddedContentPageSizeInfo
+   */
+  public $pageSizeInfo;
   protected $pageSizeInfoType = IndexingEmbeddedContentPageSizeInfo::class;
   protected $pageSizeInfoDataType = '';
   /**

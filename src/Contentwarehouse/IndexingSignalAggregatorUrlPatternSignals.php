@@ -20,16 +20,40 @@ namespace Google\Service\Contentwarehouse;
 class IndexingSignalAggregatorUrlPatternSignals extends \Google\Collection
 {
   protected $collection_key = 'priorSignal';
+  /**
+   * @var IndexingSignalAggregatorAgeWeightedCoverageData
+   */
+  public $coverage;
   protected $coverageType = IndexingSignalAggregatorAgeWeightedCoverageData::class;
   protected $coverageDataType = '';
+  /**
+   * @var IndexingSignalAggregatorAggregatedScore
+   */
+  public $pagerankScore;
   protected $pagerankScoreType = IndexingSignalAggregatorAggregatedScore::class;
   protected $pagerankScoreDataType = '';
+  /**
+   * @var IndexingSignalAggregatorAggregatedScore
+   */
+  public $patternScore;
   protected $patternScoreType = IndexingSignalAggregatorAggregatedScore::class;
   protected $patternScoreDataType = '';
+  /**
+   * @var IndexingSignalAggregatorUrlPatternSignalsPriorSignal[]
+   */
+  public $priorSignal;
   protected $priorSignalType = IndexingSignalAggregatorUrlPatternSignalsPriorSignal::class;
   protected $priorSignalDataType = 'array';
+  /**
+   * @var IndexingSignalAggregatorAggregatedScore
+   */
+  public $regexpPatternScore;
   protected $regexpPatternScoreType = IndexingSignalAggregatorAggregatedScore::class;
   protected $regexpPatternScoreDataType = '';
+  /**
+   * @var IndexingSignalAggregatorSccData
+   */
+  public $sccData;
   protected $sccDataType = IndexingSignalAggregatorSccData::class;
   protected $sccDataDataType = '';
 

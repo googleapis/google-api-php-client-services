@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class IndexingMobileInterstitialsProtoDesktopInterstitials extends \Google\Collection
 {
   protected $collection_key = 'details';
+  /**
+   * @var IndexingMobileInterstitialsProtoDesktopInterstitialsDetails[]
+   */
+  public $details;
   protected $detailsType = IndexingMobileInterstitialsProtoDesktopInterstitialsDetails::class;
   protected $detailsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class IndexingMobileInterstitialsProtoDesktopInterstitials extends \Google\Colle
    * @var string
    */
   public $pipelinePattern;
+  /**
+   * @var IndexingUrlPatternUrlTreeUrlTree
+   */
+  public $urlTree;
   protected $urlTreeType = IndexingUrlPatternUrlTreeUrlTree::class;
   protected $urlTreeDataType = '';
   /**

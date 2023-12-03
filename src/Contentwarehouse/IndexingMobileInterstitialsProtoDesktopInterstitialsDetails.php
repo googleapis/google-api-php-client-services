@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingMobileInterstitialsProtoDesktopInterstitialsDetails extends \Google\Model
 {
+  /**
+   * @var IndexingMobileInterstitialsProtoInterstitialBasicInfo
+   */
+  public $basicInfo;
   protected $basicInfoType = IndexingMobileInterstitialsProtoInterstitialBasicInfo::class;
   protected $basicInfoDataType = '';
   /**

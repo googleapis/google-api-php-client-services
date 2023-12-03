@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingDupsLocalizedLocalizedClusterTargetLink extends \Google\Model
 {
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkLink
+   */
+  public $linkData;
   protected $linkDataType = IndexingDupsLocalizedLocalizedClusterTargetLinkLink::class;
   protected $linkDataDataType = '';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkMetadata
+   */
+  public $metaData;
   protected $metaDataType = IndexingDupsLocalizedLocalizedClusterTargetLinkMetadata::class;
   protected $metaDataDataType = '';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkTargetDocData
+   */
+  public $targetDocData;
   protected $targetDocDataType = IndexingDupsLocalizedLocalizedClusterTargetLinkTargetDocData::class;
   protected $targetDocDataDataType = '';
   /**

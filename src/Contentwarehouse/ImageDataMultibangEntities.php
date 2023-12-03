@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageDataMultibangEntities extends \Google\Collection
 {
   protected $collection_key = 'entity';
+  /**
+   * @var ImageDataMultibangEntitiesMultibangEntity[]
+   */
+  public $entity;
   protected $entityType = ImageDataMultibangEntitiesMultibangEntity::class;
   protected $entityDataType = 'array';
 

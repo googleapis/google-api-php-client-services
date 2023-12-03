@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageExactBoost extends \Google\Collection
 {
   protected $collection_key = 'navquery';
+  /**
+   * @var ImageExactBoostNavQuery[]
+   */
+  public $navquery;
   protected $navqueryType = ImageExactBoostNavQuery::class;
   protected $navqueryDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositoryApiXtagList extends \Google\Collection
 {
   protected $collection_key = 'xtags';
+  /**
+   * @var ImageRepositoryApiXtag[]
+   */
+  public $xtags;
   protected $xtagsType = ImageRepositoryApiXtag::class;
   protected $xtagsDataType = 'array';
 

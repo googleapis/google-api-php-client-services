@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class IndexingDupsLocalizedLocalizedClusterTargetLinkLink extends \Google\Collection
 {
   protected $collection_key = 'annotationSourceInfo';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkLinkAnnotationSourceInfo[]
+   */
+  public $annotationSourceInfo;
   protected $annotationSourceInfoType = IndexingDupsLocalizedLocalizedClusterTargetLinkLinkAnnotationSourceInfo::class;
   protected $annotationSourceInfoDataType = 'array';
   /**

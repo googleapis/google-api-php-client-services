@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositoryShoppingProductInformation extends \Google\Collection
 {
   protected $collection_key = 'productSets';
+  /**
+   * @var ImageRepositoryShoppingProductInformationVersionedProductInformationSet[]
+   */
+  public $productSets;
   protected $productSetsType = ImageRepositoryShoppingProductInformationVersionedProductInformationSet::class;
   protected $productSetsDataType = 'array';
 

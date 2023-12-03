@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositoryVideoIndexingInfo extends \Google\Collection
 {
   protected $collection_key = 'notIndexedVideoLink';
+  /**
+   * @var ImageRepositoryVideoLinkIndexingInfo[]
+   */
+  public $notIndexedVideoLink;
   protected $notIndexedVideoLinkType = ImageRepositoryVideoLinkIndexingInfo::class;
   protected $notIndexedVideoLinkDataType = 'array';
 

@@ -23,6 +23,10 @@ class IndexingEmbeddedContentEmbedderInfo extends \Google\Model
    * @var int
    */
   public $importanceAsEmbedder;
+  /**
+   * @var IndexingEmbeddedContentLinkInfo
+   */
+  public $linkInfo;
   protected $linkInfoType = IndexingEmbeddedContentLinkInfo::class;
   protected $linkInfoDataType = '';
 

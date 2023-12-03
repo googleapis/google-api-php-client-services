@@ -23,10 +23,22 @@ class ImageRepositoryVideoPreviewsVideoPreview extends \Google\Model
    * @var string
    */
   public $content;
+  /**
+   * @var ImageRepositoryVideoPreviewsDebuggingInfo
+   */
+  public $debuggingInfo;
   protected $debuggingInfoType = ImageRepositoryVideoPreviewsDebuggingInfo::class;
   protected $debuggingInfoDataType = '';
+  /**
+   * @var ImageBaseVideoPreviewMetadata
+   */
+  public $metadata;
   protected $metadataType = ImageBaseVideoPreviewMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var DrishtiVesperVideoThumbnail
+   */
+  public $previewFrameZero;
   protected $previewFrameZeroType = DrishtiVesperVideoThumbnail::class;
   protected $previewFrameZeroDataType = '';
 

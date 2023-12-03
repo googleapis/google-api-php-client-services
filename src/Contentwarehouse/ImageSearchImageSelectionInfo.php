@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageSearchImageSelectionInfo extends \Google\Model
 {
+  /**
+   * @var ImageMustangImageLinkSelectionInfo
+   */
+  public $imageLinkSelectionInfo;
   protected $imageLinkSelectionInfoType = ImageMustangImageLinkSelectionInfo::class;
   protected $imageLinkSelectionInfoDataType = '';
   /**

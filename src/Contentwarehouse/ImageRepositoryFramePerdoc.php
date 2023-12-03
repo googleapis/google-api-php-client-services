@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageRepositoryFramePerdoc extends \Google\Model
 {
+  /**
+   * @var ImageRepositoryFrameIdentifier
+   */
+  public $frameIdentifier;
   protected $frameIdentifierType = ImageRepositoryFrameIdentifier::class;
   protected $frameIdentifierDataType = '';
+  /**
+   * @var ImageData
+   */
+  public $perdoc;
   protected $perdocType = ImageData::class;
   protected $perdocDataType = '';
   /**

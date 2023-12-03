@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class IndexingEmbeddedContentRenderingFetchStats extends \Google\Collection
 {
   protected $collection_key = 'fetchHostCount';
+  /**
+   * @var IndexingEmbeddedContentFetchHostCount[]
+   */
+  public $fetchHostCount;
   protected $fetchHostCountType = IndexingEmbeddedContentFetchHostCount::class;
   protected $fetchHostCountDataType = 'array';
 

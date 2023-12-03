@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class HtmlrenderWebkitHeadlessProtoRectangle extends \Google\Model
 {
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $bottom;
   protected $bottomType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $bottomDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $left;
   protected $leftType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $leftDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $right;
   protected $rightType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $rightDataType = '';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoOffset
+   */
+  public $top;
   protected $topType = HtmlrenderWebkitHeadlessProtoOffset::class;
   protected $topDataType = '';
 

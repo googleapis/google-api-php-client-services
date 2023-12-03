@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingDocjoinerCDocBuildInfo extends \Google\Model
 {
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $extraMessage;
   protected $extraMessageType = Proto2BridgeMessageSet::class;
   protected $extraMessageDataType = '';
 

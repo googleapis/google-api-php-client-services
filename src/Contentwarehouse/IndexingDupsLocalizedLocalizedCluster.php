@@ -24,20 +24,44 @@ class IndexingDupsLocalizedLocalizedCluster extends \Google\Collection
    * @var bool
    */
   public $boostSourceBlocker;
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterCluster[]
+   */
+  public $cluster;
   protected $clusterType = IndexingDupsLocalizedLocalizedClusterCluster::class;
   protected $clusterDataType = 'array';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo
+   */
+  public $deprecatedHreflangInfo;
   protected $deprecatedHreflangInfoType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo::class;
   protected $deprecatedHreflangInfoDataType = '';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo
+   */
+  public $deprecatedOutlinksInfo;
   protected $deprecatedOutlinksInfoType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo::class;
   protected $deprecatedOutlinksInfoDataType = '';
   /**
    * @var string
    */
   public $documentLanguage;
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkSets
+   */
+  public $hreflangTargetLink;
   protected $hreflangTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLinkSets::class;
   protected $hreflangTargetLinkDataType = '';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkSets
+   */
+  public $inbodyTargetLink;
   protected $inbodyTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLinkSets::class;
   protected $inbodyTargetLinkDataType = '';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkSets
+   */
+  public $outlinksTargetLink;
   protected $outlinksTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLinkSets::class;
   protected $outlinksTargetLinkDataType = '';
   /**

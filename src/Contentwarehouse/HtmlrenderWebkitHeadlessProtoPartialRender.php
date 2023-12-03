@@ -20,18 +20,30 @@ namespace Google\Service\Contentwarehouse;
 class HtmlrenderWebkitHeadlessProtoPartialRender extends \Google\Collection
 {
   protected $collection_key = 'cookie';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoCookie[]
+   */
+  public $cookie;
   protected $cookieType = HtmlrenderWebkitHeadlessProtoCookie::class;
   protected $cookieDataType = 'array';
   /**
    * @var string
    */
   public $currentClientUrl;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoDocument
+   */
+  public $document;
   protected $documentType = HtmlrenderWebkitHeadlessProtoDocument::class;
   protected $documentDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoImage
+   */
+  public $image;
   protected $imageType = HtmlrenderWebkitHeadlessProtoImage::class;
   protected $imageDataType = '';
 

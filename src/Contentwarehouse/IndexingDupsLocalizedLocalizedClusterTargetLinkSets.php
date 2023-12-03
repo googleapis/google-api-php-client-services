@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class IndexingDupsLocalizedLocalizedClusterTargetLinkSets extends \Google\Collection
 {
   protected $collection_key = 'indirectTargetLink';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLink[]
+   */
+  public $directTargetLink;
   protected $directTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLink::class;
   protected $directTargetLinkDataType = 'array';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLink[]
+   */
+  public $indirectTargetLink;
   protected $indirectTargetLinkType = IndexingDupsLocalizedLocalizedClusterTargetLink::class;
   protected $indirectTargetLinkDataType = 'array';
 

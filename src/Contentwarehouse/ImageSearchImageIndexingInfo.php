@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class ImageSearchImageIndexingInfo extends \Google\Collection
 {
   protected $collection_key = 'selectedNotIndexedImageLink';
+  /**
+   * @var ImageSearchImageSelectionInfo[]
+   */
+  public $imageLinkSelectionInfo;
   protected $imageLinkSelectionInfoType = ImageSearchImageSelectionInfo::class;
   protected $imageLinkSelectionInfoDataType = 'array';
+  /**
+   * @var ImageSearchUnindexedImageLink[]
+   */
+  public $rejectedNotIndexedImageLink;
   protected $rejectedNotIndexedImageLinkType = ImageSearchUnindexedImageLink::class;
   protected $rejectedNotIndexedImageLinkDataType = 'array';
+  /**
+   * @var ImageSearchUnindexedImageLink[]
+   */
+  public $selectedNotIndexedImageLink;
   protected $selectedNotIndexedImageLinkType = ImageSearchUnindexedImageLink::class;
   protected $selectedNotIndexedImageLinkDataType = 'array';
 

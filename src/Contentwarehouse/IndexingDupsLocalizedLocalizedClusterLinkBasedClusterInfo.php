@@ -32,8 +32,16 @@ class IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfo extends \Google\
    * @var string
    */
   public $lastProcessedOutputTimestampMs;
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkMember[]
+   */
+  public $linkMember;
   protected $linkMemberType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkMember::class;
   protected $linkMemberDataType = 'array';
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkData[]
+   */
+  public $unvalidatedOutlink;
   protected $unvalidatedOutlinkType = IndexingDupsLocalizedLocalizedClusterLinkBasedClusterInfoLinkData::class;
   protected $unvalidatedOutlinkDataType = 'array';
 

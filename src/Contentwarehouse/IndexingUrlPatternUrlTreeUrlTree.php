@@ -20,12 +20,28 @@ namespace Google\Service\Contentwarehouse;
 class IndexingUrlPatternUrlTreeUrlTree extends \Google\Collection
 {
   protected $collection_key = 'node';
+  /**
+   * @var IndexingUrlPatternUrlTreeBigTreeBranch[]
+   */
+  public $bigBranch;
   protected $bigBranchType = IndexingUrlPatternUrlTreeBigTreeBranch::class;
   protected $bigBranchDataType = 'array';
+  /**
+   * @var IndexingUrlPatternUrlTreeUrlTreeDebugInfo
+   */
+  public $debugInfo;
   protected $debugInfoType = IndexingUrlPatternUrlTreeUrlTreeDebugInfo::class;
   protected $debugInfoDataType = '';
+  /**
+   * @var IndexingUrlPatternUrlTreeUrlTreeKey
+   */
+  public $key;
   protected $keyType = IndexingUrlPatternUrlTreeUrlTreeKey::class;
   protected $keyDataType = '';
+  /**
+   * @var IndexingUrlPatternUrlTreeUrlTreeNode[]
+   */
+  public $node;
   protected $nodeType = IndexingUrlPatternUrlTreeUrlTreeNode::class;
   protected $nodeDataType = 'array';
   /**
@@ -40,6 +56,10 @@ class IndexingUrlPatternUrlTreeUrlTree extends \Google\Collection
    * @var int
    */
   public $timestamp;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $treeInfo;
   protected $treeInfoType = Proto2BridgeMessageSet::class;
   protected $treeInfoDataType = '';
 

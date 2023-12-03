@@ -24,6 +24,10 @@ class ImageRepositoryShoppingProductInformationVersionedProductInformationSet ex
    * @var string
    */
   public $modelType;
+  /**
+   * @var ImageRepositoryShoppingProductInformationProductInformation[]
+   */
+  public $products;
   protected $productsType = ImageRepositoryShoppingProductInformationProductInformation::class;
   protected $productsDataType = 'array';
   /**

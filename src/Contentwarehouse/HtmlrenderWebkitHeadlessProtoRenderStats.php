@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
 {
   protected $collection_key = 'counter';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoAnonTimingStatPair[]
+   */
+  public $anonRenderFineTimingStats;
   protected $anonRenderFineTimingStatsType = HtmlrenderWebkitHeadlessProtoAnonTimingStatPair::class;
   protected $anonRenderFineTimingStatsDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoConsoleLogEntry[]
+   */
+  public $consoleLogEntry;
   protected $consoleLogEntryType = HtmlrenderWebkitHeadlessProtoConsoleLogEntry::class;
   protected $consoleLogEntryDataType = 'array';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoRenderStatsCounter[]
+   */
+  public $counter;
   protected $counterType = HtmlrenderWebkitHeadlessProtoRenderStatsCounter::class;
   protected $counterDataType = 'array';
   /**

@@ -32,8 +32,16 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $adaboostImageFeaturePornVersion;
+  /**
+   * @var ImageRepositoryAnimatedImagePerdocData
+   */
+  public $animatedImageData;
   protected $animatedImageDataType = ImageRepositoryAnimatedImagePerdocData::class;
   protected $animatedImageDataDataType = '';
+  /**
+   * @var ImageSafesearchContentBrainPornAnnotation
+   */
+  public $brainPornScores;
   protected $brainPornScoresType = ImageSafesearchContentBrainPornAnnotation::class;
   protected $brainPornScoresDataType = '';
   /**
@@ -80,28 +88,60 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $contentFirstCrawlTime;
+  /**
+   * @var CorpusSelectionInfo[]
+   */
+  public $corpusSelectionInfo;
   protected $corpusSelectionInfoType = CorpusSelectionInfo::class;
   protected $corpusSelectionInfoDataType = 'array';
+  /**
+   * @var ContentAwareCropsIndexing
+   */
+  public $crops;
   protected $cropsType = ContentAwareCropsIndexing::class;
   protected $cropsDataType = '';
+  /**
+   * @var DeepCropIndexing
+   */
+  public $deepCrop;
   protected $deepCropType = DeepCropIndexing::class;
   protected $deepCropDataType = '';
+  /**
+   * @var ImageRepositoryDeepImageEngagingnessOutput
+   */
+  public $deepImageEngagingness;
   protected $deepImageEngagingnessType = ImageRepositoryDeepImageEngagingnessOutput::class;
   protected $deepImageEngagingnessDataType = '';
+  /**
+   * @var CommerceDatastoreImageDeepTags
+   */
+  public $deepTags;
   protected $deepTagsType = CommerceDatastoreImageDeepTags::class;
   protected $deepTagsDataType = '';
   /**
    * @var string
    */
   public $docid;
+  /**
+   * @var ImageExifImageEmbeddedMetadata
+   */
+  public $embeddedMetadata;
   protected $embeddedMetadataType = ImageExifImageEmbeddedMetadata::class;
   protected $embeddedMetadataDataType = '';
   /**
    * @var string
    */
   public $expirationTimestamp;
+  /**
+   * @var PhotosImageMetadata
+   */
+  public $extendedExif;
   protected $extendedExifType = PhotosImageMetadata::class;
   protected $extendedExifDataType = '';
+  /**
+   * @var ImageMonetizationFeaturedImageProperties
+   */
+  public $featuredImageProp;
   protected $featuredImagePropType = ImageMonetizationFeaturedImageProperties::class;
   protected $featuredImagePropDataType = '';
   /**
@@ -128,6 +168,10 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $flags;
+  /**
+   * @var ImageContentFlowProtoProd
+   */
+  public $flowOutput;
   protected $flowOutputType = ImageContentFlowProtoProd::class;
   protected $flowOutputDataType = '';
   /**
@@ -138,24 +182,48 @@ class ImageData extends \Google\Collection
    * @var float
    */
   public $h2i;
+  /**
+   * @var ImageUnderstandingIndexingAnnotationGroup
+   */
+  public $hateLogoDetection;
   protected $hateLogoDetectionType = ImageUnderstandingIndexingAnnotationGroup::class;
   protected $hateLogoDetectionDataType = '';
   /**
    * @var int
    */
   public $height;
+  /**
+   * @var ImageContentQueryBoost
+   */
+  public $imageContentQueryBoost;
   protected $imageContentQueryBoostType = ImageContentQueryBoost::class;
   protected $imageContentQueryBoostDataType = '';
+  /**
+   * @var ImageExactBoost
+   */
+  public $imageExactBoost;
   protected $imageExactBoostType = ImageExactBoost::class;
   protected $imageExactBoostDataType = '';
+  /**
+   * @var ImageSearchImageLicenseInfo
+   */
+  public $imageLicenseInfo;
   protected $imageLicenseInfoType = ImageSearchImageLicenseInfo::class;
   protected $imageLicenseInfoDataType = '';
+  /**
+   * @var ImageRegionsImageRegions
+   */
+  public $imageRegions;
   protected $imageRegionsType = ImageRegionsImageRegions::class;
   protected $imageRegionsDataType = '';
   /**
    * @var int
    */
   public $imagerank;
+  /**
+   * @var ImageDataVerticalIndexingInfoImage[]
+   */
+  public $indexedVerticals;
   protected $indexedVerticalsType = ImageDataVerticalIndexingInfoImage::class;
   protected $indexedVerticalsDataType = 'array';
   /**
@@ -206,6 +274,10 @@ class ImageData extends \Google\Collection
    * @var string
    */
   public $linkinfoType;
+  /**
+   * @var ImageDataMultibangEntities
+   */
+  public $multibangKgEntities;
   protected $multibangKgEntitiesType = ImageDataMultibangEntities::class;
   protected $multibangKgEntitiesDataType = '';
   /**
@@ -224,8 +296,16 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $nearDupFeaturesVersion;
+  /**
+   * @var ImageRepositoryNimaOutput
+   */
+  public $nimaAva;
   protected $nimaAvaType = ImageRepositoryNimaOutput::class;
   protected $nimaAvaDataType = '';
+  /**
+   * @var ImageRepositoryNimaOutput
+   */
+  public $nimaVq;
   protected $nimaVqType = ImageRepositoryNimaOutput::class;
   protected $nimaVqDataType = '';
   /**
@@ -236,22 +316,50 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $numberFaces;
+  /**
+   * @var GoodocDocument
+   */
+  public $ocrGoodoc;
   protected $ocrGoodocType = GoodocDocument::class;
   protected $ocrGoodocDataType = '';
+  /**
+   * @var GoodocDocument
+   */
+  public $ocrTaser;
   protected $ocrTaserType = GoodocDocument::class;
   protected $ocrTaserDataType = '';
+  /**
+   * @var OcrPhotoTextBox[]
+   */
+  public $ocrTextboxes;
   protected $ocrTextboxesType = OcrPhotoTextBox::class;
   protected $ocrTextboxesDataType = 'array';
   /**
    * @var string
    */
   public $onPageAlternateUrl;
+  /**
+   * @var QualityOrbitOrbitImageIntents
+   */
+  public $orbitIntents;
   protected $orbitIntentsType = QualityOrbitOrbitImageIntents::class;
   protected $orbitIntentsDataType = '';
+  /**
+   * @var FaceIndexing
+   */
+  public $packedFullFaceInfo;
   protected $packedFullFaceInfoType = FaceIndexing::class;
   protected $packedFullFaceInfoDataType = '';
+  /**
+   * @var LensDiscoveryStylePersonAttributes
+   */
+  public $personAttributes;
   protected $personAttributesType = LensDiscoveryStylePersonAttributes::class;
   protected $personAttributesDataType = '';
+  /**
+   * @var LensDiscoveryStylePersonDetectionSignals
+   */
+  public $personDetectionSignals;
   protected $personDetectionSignalsType = LensDiscoveryStylePersonDetectionSignals::class;
   protected $personDetectionSignalsDataType = '';
   /**
@@ -262,8 +370,16 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $photoDetectorVersion;
+  /**
+   * @var PornFlagData
+   */
+  public $pornFlagData;
   protected $pornFlagDataType = PornFlagData::class;
   protected $pornFlagDataDataType = '';
+  /**
+   * @var PrecomputedRestricts
+   */
+  public $precomputedRestricts;
   protected $precomputedRestrictsType = PrecomputedRestricts::class;
   protected $precomputedRestrictsDataType = '';
   /**
@@ -278,6 +394,10 @@ class ImageData extends \Google\Collection
    * @var string
    */
   public $robotedAgents;
+  /**
+   * @var ImageRepositoryShoppingProductInformation
+   */
+  public $shoppingProductInformation;
   protected $shoppingProductInformationType = ImageRepositoryShoppingProductInformation::class;
   protected $shoppingProductInformationDataType = '';
   /**
@@ -288,10 +408,22 @@ class ImageData extends \Google\Collection
    * @var string[]
    */
   public $smearedTopWebLandingPageDocids;
+  /**
+   * @var SmearedWebLandingPageEntry[]
+   */
+  public $smearedTopWebLandingPages;
   protected $smearedTopWebLandingPagesType = SmearedWebLandingPageEntry::class;
   protected $smearedTopWebLandingPagesDataType = 'array';
+  /**
+   * @var LensDiscoveryStyleAestheticsScoreSignals
+   */
+  public $styleAestheticsScore;
   protected $styleAestheticsScoreType = LensDiscoveryStyleAestheticsScoreSignals::class;
   protected $styleAestheticsScoreDataType = '';
+  /**
+   * @var LensDiscoveryStyleStyleImageTypeSignals
+   */
+  public $styleImageType;
   protected $styleImageTypeType = LensDiscoveryStyleStyleImageTypeSignals::class;
   protected $styleImageTypeDataType = '';
   /**
@@ -310,6 +442,10 @@ class ImageData extends \Google\Collection
    * @var int
    */
   public $thumbWidth;
+  /**
+   * @var ImageDataThumbnail[]
+   */
+  public $thumbnail;
   protected $thumbnailType = ImageDataThumbnail::class;
   protected $thumbnailDataType = 'array';
   /**

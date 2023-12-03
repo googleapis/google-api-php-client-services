@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageRegionsImageRegion extends \Google\Model
 {
+  /**
+   * @var PhotosVisionGroundtruthdbNormalizedBoundingBox
+   */
+  public $boundingBox;
   protected $boundingBoxType = PhotosVisionGroundtruthdbNormalizedBoundingBox::class;
   protected $boundingBoxDataType = '';
   /**
@@ -34,18 +38,30 @@ class ImageRegionsImageRegion extends \Google\Model
    */
   public $isProduct;
   public $knnScore;
+  /**
+   * @var ImageUnderstandingIndexingLabelGroup
+   */
+  public $labelGroup;
   protected $labelGroupType = ImageUnderstandingIndexingLabelGroup::class;
   protected $labelGroupDataType = '';
   /**
    * @var string
    */
   public $labelVersion;
+  /**
+   * @var ImageUnderstandingIndexingLabel
+   */
+  public $primaryLabel;
   protected $primaryLabelType = ImageUnderstandingIndexingLabel::class;
   protected $primaryLabelDataType = '';
   /**
    * @var string
    */
   public $renderType;
+  /**
+   * @var ImageUnderstandingIndexingFeature
+   */
+  public $starburstV4;
   protected $starburstV4Type = ImageUnderstandingIndexingFeature::class;
   protected $starburstV4DataType = '';
 

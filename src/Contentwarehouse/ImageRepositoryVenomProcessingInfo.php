@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositoryVenomProcessingInfo extends \Google\Collection
 {
   protected $collection_key = 'venomStatus';
+  /**
+   * @var ImageRepositoryVenomStatus[]
+   */
+  public $venomStatus;
   protected $venomStatusType = ImageRepositoryVenomStatus::class;
   protected $venomStatusDataType = 'array';
 

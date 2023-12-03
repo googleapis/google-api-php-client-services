@@ -36,14 +36,26 @@ class ImageRepositoryShoppingProductInformationProductInformation extends \Googl
    * @var string
    */
   public $embedding;
+  /**
+   * @var ImageRepositoryShoppingProductInformationEntity[]
+   */
+  public $entities;
   protected $entitiesType = ImageRepositoryShoppingProductInformationEntity::class;
   protected $entitiesDataType = 'array';
   /**
    * @var string
    */
   public $featureType;
+  /**
+   * @var ImageRepositoryShoppingProductInformationBoundingBox
+   */
+  public $productLocation;
   protected $productLocationType = ImageRepositoryShoppingProductInformationBoundingBox::class;
   protected $productLocationDataType = '';
+  /**
+   * @var ImageRepositoryShoppingProductInformationProductInformationTokenGroup[]
+   */
+  public $tokenGroups;
   protected $tokenGroupsType = ImageRepositoryShoppingProductInformationProductInformationTokenGroup::class;
   protected $tokenGroupsDataType = 'array';
 

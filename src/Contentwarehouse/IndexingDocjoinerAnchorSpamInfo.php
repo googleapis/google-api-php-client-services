@@ -72,6 +72,10 @@ class IndexingDocjoinerAnchorSpamInfo extends \Google\Collection
    * @var bool
    */
   public $sampled;
+  /**
+   * @var IndexingDocjoinerAnchorTrustedInfo[]
+   */
+  public $sources;
   protected $sourcesType = IndexingDocjoinerAnchorTrustedInfo::class;
   protected $sourcesDataType = 'array';
   /**

@@ -24,12 +24,20 @@ class HtmlrenderWebkitHeadlessProtoResource extends \Google\Collection
    * @var string
    */
   public $content;
+  /**
+   * @var WirelessTranscoderFetchFetchSourceInfo[]
+   */
+  public $fetchSourceInfo;
   protected $fetchSourceInfoType = WirelessTranscoderFetchFetchSourceInfo::class;
   protected $fetchSourceInfoDataType = 'array';
   /**
    * @var string
    */
   public $finalContentUrl;
+  /**
+   * @var WirelessTranscoderFetchFetchMetadata[]
+   */
+  public $metadata;
   protected $metadataType = WirelessTranscoderFetchFetchMetadata::class;
   protected $metadataDataType = 'array';
   /**
@@ -40,6 +48,10 @@ class HtmlrenderWebkitHeadlessProtoResource extends \Google\Collection
    * @var string
    */
   public $postData;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoResourceHttpHeader[]
+   */
+  public $requestHeader;
   protected $requestHeaderType = HtmlrenderWebkitHeadlessProtoResourceHttpHeader::class;
   protected $requestHeaderDataType = 'array';
   /**

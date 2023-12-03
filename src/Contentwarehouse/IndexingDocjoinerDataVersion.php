@@ -19,1070 +19,3202 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingDocjoinerDataVersion extends \Google\Model
 {
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $acceleratedShoppingSignal;
   protected $acceleratedShoppingSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $acceleratedShoppingSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $adsAdsaiMagicApfelApfelRegionFinderAnnotation;
   protected $adsAdsaiMagicApfelApfelRegionFinderAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $adsAdsaiMagicApfelApfelRegionFinderAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $adsAdsaiMagicMagicPageTypeAnnotation;
   protected $adsAdsaiMagicMagicPageTypeAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $adsAdsaiMagicMagicPageTypeAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $adsShoppingWebpxRawShoppingAnnotation;
   protected $adsShoppingWebpxRawShoppingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $adsShoppingWebpxRawShoppingAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $amphtmlSignedExchangeErrorDetails;
   protected $amphtmlSignedExchangeErrorDetailsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $amphtmlSignedExchangeErrorDetailsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $amphtmlSignedExchangeValidationPayload;
   protected $amphtmlSignedExchangeValidationPayloadType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $amphtmlSignedExchangeValidationPayloadDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $analyticsSiteidAnalyticsPropertyAnnotation;
   protected $analyticsSiteidAnalyticsPropertyAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $analyticsSiteidAnalyticsPropertyAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $analyticsSiteidAnalyticsRenderedOutput;
   protected $analyticsSiteidAnalyticsRenderedOutputType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $analyticsSiteidAnalyticsRenderedOutputDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $authenticSiteRankData;
   protected $authenticSiteRankDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $authenticSiteRankDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $babelEncoderBabelEncodings;
   protected $babelEncoderBabelEncodingsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $babelEncoderBabelEncodingsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $badurlsBadurlsForceSelectionSignal;
   protected $badurlsBadurlsForceSelectionSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $badurlsBadurlsForceSelectionSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $boilerplateAnnotations;
   protected $boilerplateAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $boilerplateAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $boilerplateVisibleBytesEstimates;
   protected $boilerplateVisibleBytesEstimatesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $boilerplateVisibleBytesEstimatesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $chromeCounts;
   protected $chromeCountsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $chromeCountsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $commerceDataqualityOrganicCrawledSellerData;
   protected $commerceDataqualityOrganicCrawledSellerDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $commerceDataqualityOrganicCrawledSellerDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $commerceDataqualityOrganicShoppingAnnotationSignal;
   protected $commerceDataqualityOrganicShoppingAnnotationSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $commerceDataqualityOrganicShoppingAnnotationSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $commerceDataqualityOrganicShoppingSiteQuality;
   protected $commerceDataqualityOrganicShoppingSiteQualityType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $commerceDataqualityOrganicShoppingSiteQualityDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $commonsenseQueriosityGoldmineQnaAnnotations;
   protected $commonsenseQueriosityGoldmineQnaAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $commonsenseQueriosityGoldmineQnaAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $commonsenseScoredCompoundReferenceAnnotation;
   protected $commonsenseScoredCompoundReferenceAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $commonsenseScoredCompoundReferenceAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $commonsenseStoneSoupProtoRaffiaInstructionsSeq;
   protected $commonsenseStoneSoupProtoRaffiaInstructionsSeqType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $commonsenseStoneSoupProtoRaffiaInstructionsSeqDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $contraContentReviewAnnotations;
   protected $contraContentReviewAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $contraContentReviewAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $contraCuratedContent;
   protected $contraCuratedContentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $contraCuratedContentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $countryCountryAttachment;
   protected $countryCountryAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $countryCountryAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $crawzallSignal;
   protected $crawzallSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $crawzallSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $creator;
   protected $creatorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $creatorDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $datacommonsDatacommonsTriplesSignal;
   protected $datacommonsDatacommonsTriplesSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $datacommonsDatacommonsTriplesSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $dateAnnotationTags;
   protected $dateAnnotationTagsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $dateAnnotationTagsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $dateAnnotations;
   protected $dateAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $dateAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $dateRangeAnnotations;
   protected $dateRangeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $dateRangeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $dateTimeAnnotations;
   protected $dateTimeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $dateTimeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $discoverSource;
   protected $discoverSourceType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $discoverSourceDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $discussion;
   protected $discussionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $discussionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $documentIntent;
   protected $documentIntentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $documentIntentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $dotsGaramondSignal;
   protected $dotsGaramondSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $dotsGaramondSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $dotsNewsstandSignal;
   protected $dotsNewsstandSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $dotsNewsstandSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $emailAddressAnnotations;
   protected $emailAddressAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $emailAddressAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $extractedBookInfo;
   protected $extractedBookInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $extractedBookInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $fatcatCompactDocClassification;
   protected $fatcatCompactDocClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $fatcatCompactDocClassificationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $fatcatSiteVerticalsAnnotation;
   protected $fatcatSiteVerticalsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $fatcatSiteVerticalsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $firstseen;
   protected $firstseenType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $firstseenDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $fontsAnalysisAnnotatorFontsAnnotation;
   protected $fontsAnalysisAnnotatorFontsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $fontsAnalysisAnnotatorFontsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $forumRankingForumPostsSafeSearchAnnotation;
   protected $forumRankingForumPostsSafeSearchAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $forumRankingForumPostsSafeSearchAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $foundationSplinterSignal;
   protected $foundationSplinterSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $foundationSplinterSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $freshboxFreshboxArticleAnnotation;
   protected $freshboxFreshboxArticleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $freshboxFreshboxArticleAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $geoPointAnnotations;
   protected $geoPointAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $geoPointAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $geoPointResolution;
   protected $geoPointResolutionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $geoPointResolutionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $geostoreAddressProto;
   protected $geostoreAddressProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $geostoreAddressProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $i2eV2ImageEntitiesInfos;
   protected $i2eV2ImageEntitiesInfosType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $i2eV2ImageEntitiesInfosDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageContentAnnotationLabels;
   protected $imageContentAnnotationLabelsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageContentAnnotationLabelsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageContentColorSearchColorDetectionResults;
   protected $imageContentColorSearchColorDetectionResultsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageContentColorSearchColorDetectionResultsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageDataList;
   protected $imageDataListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageDataListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageExtraImageExtraTerms;
   protected $imageExtraImageExtraTermsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageExtraImageExtraTermsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageMonetizationFeaturedDocumentProperties;
   protected $imageMonetizationFeaturedDocumentPropertiesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageMonetizationFeaturedDocumentPropertiesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageMustangFaviconInfo;
   protected $imageMustangFaviconInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageMustangFaviconInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageMustangWebsearchImageSnippetResponse;
   protected $imageMustangWebsearchImageSnippetResponseType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageMustangWebsearchImageSnippetResponseDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualityLabelmakerDocMediaLabels;
   protected $imageQualityLabelmakerDocMediaLabelsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualityLabelmakerDocMediaLabelsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualityLandingPageProtoLandingPageSalientTextSet;
   protected $imageQualityLandingPageProtoLandingPageSalientTextSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualityLandingPageProtoLandingPageSalientTextSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualityLayoutDocument;
   protected $imageQualityLayoutDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualityLayoutDocumentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualityRichdataProtoImageAnchor;
   protected $imageQualityRichdataProtoImageAnchorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualityRichdataProtoImageAnchorDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualityRichdataProtoRichdata;
   protected $imageQualityRichdataProtoRichdataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualityRichdataProtoRichdataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualitySalientTermsImageQuerySmearingList;
   protected $imageQualitySalientTermsImageQuerySmearingListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualitySalientTermsImageQuerySmearingListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualitySalientTermsImageSalientTermSetMap;
   protected $imageQualitySalientTermsImageSalientTermSetMapType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualitySalientTermsImageSalientTermSetMapDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualitySensitiveFaceSkinToneSignals;
   protected $imageQualitySensitiveFaceSkinToneSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualitySensitiveFaceSkinToneSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageQualitySensitiveMediaOrPeopleEntities;
   protected $imageQualitySensitiveMediaOrPeopleEntitiesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageQualitySensitiveMediaOrPeopleEntitiesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageRepositoryGeolocation;
   protected $imageRepositoryGeolocationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageRepositoryGeolocationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageRepositoryPicasaGeoData;
   protected $imageRepositoryPicasaGeoDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageRepositoryPicasaGeoDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageSearchRejectedImageInfoList;
   protected $imageSearchRejectedImageInfoListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageSearchRejectedImageInfoListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageStockStockImageAnnotation;
   protected $imageStockStockImageAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageStockStockImageAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageembed;
   protected $imageembedType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageembedDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $imageembedDomainNorm;
   protected $imageembedDomainNormType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $imageembedDomainNormDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsAnnotationMeta;
   protected $indexingAnnotationsAnnotationMetaType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAnnotationMetaDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsAppMarketAppMarketAnnotation;
   protected $indexingAnnotationsAppMarketAppMarketAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAppMarketAppMarketAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsAppsCacheColonAnnotation;
   protected $indexingAnnotationsAppsCacheColonAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAppsCacheColonAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsAppsDocRestrictionsDocPreviewRestrictionsAnnotation;
   protected $indexingAnnotationsAppsDocRestrictionsDocPreviewRestrictionsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAppsDocRestrictionsDocPreviewRestrictionsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsAutomobileVinAnnotatorAutomobileVinAnnotations;
   protected $indexingAnnotationsAutomobileVinAnnotatorAutomobileVinAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsAutomobileVinAnnotatorAutomobileVinAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsCanonicalUrl;
   protected $indexingAnnotationsCanonicalUrlType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsCanonicalUrlDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsCleanTextProto;
   protected $indexingAnnotationsCleanTextProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsCleanTextProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsCollectionsDocCollections;
   protected $indexingAnnotationsCollectionsDocCollectionsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsCollectionsDocCollectionsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsCommentBlockGroups;
   protected $indexingAnnotationsCommentBlockGroupsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsCommentBlockGroupsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsDatasetModelAnnotation;
   protected $indexingAnnotationsDatasetModelAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsDatasetModelAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsDatesDateTimes;
   protected $indexingAnnotationsDatesDateTimesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsDatesDateTimesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsDocImportance;
   protected $indexingAnnotationsDocImportanceType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsDocImportanceDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsDocRestrictionsInDocRestrictionsAnnotation;
   protected $indexingAnnotationsDocRestrictionsInDocRestrictionsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsDocRestrictionsInDocRestrictionsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsEntityPage;
   protected $indexingAnnotationsEntityPageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsEntityPageDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsFeedbackSet;
   protected $indexingAnnotationsFeedbackSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsFeedbackSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsIBertEmbeddingAnnotation;
   protected $indexingAnnotationsIBertEmbeddingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsIBertEmbeddingAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsImageRepositoryImageLicenseInfoAnnotation;
   protected $indexingAnnotationsImageRepositoryImageLicenseInfoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsImageRepositoryImageLicenseInfoAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsPcuAmpError;
   protected $indexingAnnotationsPcuAmpErrorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsPcuAmpErrorDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsPcuSignedExchangeInfo;
   protected $indexingAnnotationsPcuSignedExchangeInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsPcuSignedExchangeInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsPersonPersonAnnotation;
   protected $indexingAnnotationsPersonPersonAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsPersonPersonAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsSduPageTypeAnnotation;
   protected $indexingAnnotationsSduPageTypeAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsSduPageTypeAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsSocialLinksSocialLinksAnnotation;
   protected $indexingAnnotationsSocialLinksSocialLinksAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsSocialLinksSocialLinksAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsSubscribewithgoogleSwgAnnotation;
   protected $indexingAnnotationsSubscribewithgoogleSwgAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsSubscribewithgoogleSwgAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsTwitterEmbeddedTweetsAnnotation;
   protected $indexingAnnotationsTwitterEmbeddedTweetsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsTwitterEmbeddedTweetsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsTypedNumberTypedNumberAnnotations;
   protected $indexingAnnotationsTypedNumberTypedNumberAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsTypedNumberTypedNumberAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsWaPassagesQueryToPassageAnnotations;
   protected $indexingAnnotationsWaPassagesQueryToPassageAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsWaPassagesQueryToPassageAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAnnotationsWaPassagesTrimmedQueryToPassageAnnotations;
   protected $indexingAnnotationsWaPassagesTrimmedQueryToPassageAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAnnotationsWaPassagesTrimmedQueryToPassageAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAppsAffiliatedInstantAppInfo;
   protected $indexingAppsAffiliatedInstantAppInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAppsAffiliatedInstantAppInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingAppsMergedAppInfoAnnotation;
   protected $indexingAppsMergedAppInfoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingAppsMergedAppInfoAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingBadpagesBadPageParseResult;
   protected $indexingBadpagesBadPageParseResultType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingBadpagesBadPageParseResultDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingBadpagesCollapserInfo;
   protected $indexingBadpagesCollapserInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingBadpagesCollapserInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingBadpagesIndexSelectionRemoval;
   protected $indexingBadpagesIndexSelectionRemovalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingBadpagesIndexSelectionRemovalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingBadpagesLoginPageResult;
   protected $indexingBadpagesLoginPageResultType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingBadpagesLoginPageResultDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingBadpagesUnifiedModelFeatures;
   protected $indexingBadpagesUnifiedModelFeaturesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingBadpagesUnifiedModelFeaturesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingBeringPublisherOnPageAdsAnnotation;
   protected $indexingBeringPublisherOnPageAdsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingBeringPublisherOnPageAdsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingCenterpieceCenterPieceAnnotations;
   protected $indexingCenterpieceCenterPieceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCenterpieceCenterPieceAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingCenterpieceCenterpieceChecksums;
   protected $indexingCenterpieceCenterpieceChecksumsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCenterpieceCenterpieceChecksumsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingCenterpieceComponentLearningSource;
   protected $indexingCenterpieceComponentLearningSourceType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCenterpieceComponentLearningSourceDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingCenterpieceSectionTitleAnnotations;
   protected $indexingCenterpieceSectionTitleAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCenterpieceSectionTitleAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterContentGenerationInfo;
   protected $indexingConverterContentGenerationInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterContentGenerationInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterContentParserResults;
   protected $indexingConverterContentParserResultsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterContentParserResultsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterFileMetaInfo;
   protected $indexingConverterFileMetaInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterFileMetaInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterLinkRelOutlinks;
   protected $indexingConverterLinkRelOutlinksType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterLinkRelOutlinksDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterMetaDetectorsResultsProto;
   protected $indexingConverterMetaDetectorsResultsProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterMetaDetectorsResultsProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterPdfFileMetaInfo;
   protected $indexingConverterPdfFileMetaInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterPdfFileMetaInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingConverterPdfPageAnnotations;
   protected $indexingConverterPdfPageAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingConverterPdfPageAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingCustomCorpusCdmAnnotations;
   protected $indexingCustomCorpusCdmAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCustomCorpusCdmAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingDeepwebStoreListAnnotation;
   protected $indexingDeepwebStoreListAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingDeepwebStoreListAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingDocjoinerServingTimeClusterIds;
   protected $indexingDocjoinerServingTimeClusterIdsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingDocjoinerServingTimeClusterIdsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingDocjoinerWikiInfo;
   protected $indexingDocjoinerWikiInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingDocjoinerWikiInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingDocskeletonRepeatedPatternRepeatedPatternAnnotation;
   protected $indexingDocskeletonRepeatedPatternRepeatedPatternAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingDocskeletonRepeatedPatternRepeatedPatternAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingDupsLocalizedLocalizedCluster;
   protected $indexingDupsLocalizedLocalizedClusterType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingDupsLocalizedLocalizedClusterDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingFreshSchedulerFreshSchedulerDoubleInstantExtension;
   protected $indexingFreshSchedulerFreshSchedulerDoubleInstantExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingFreshSchedulerFreshSchedulerDoubleInstantExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingFreshSchedulerOutlinkDiscoveryHistoricalHubsSignal;
   protected $indexingFreshSchedulerOutlinkDiscoveryHistoricalHubsSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingFreshSchedulerOutlinkDiscoveryHistoricalHubsSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingImagesRelatedImageSignal;
   protected $indexingImagesRelatedImageSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingImagesRelatedImageSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantActiveClusterScorerSignal;
   protected $indexingInstantActiveClusterScorerSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantActiveClusterScorerSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantBaseReindexWhitelistData;
   protected $indexingInstantBaseReindexWhitelistDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantBaseReindexWhitelistDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantClusterScorerArticle;
   protected $indexingInstantClusterScorerArticleType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantClusterScorerArticleDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantClusterScorerSignal;
   protected $indexingInstantClusterScorerSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantClusterScorerSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantHistoricalContentSignals;
   protected $indexingInstantHistoricalContentSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantHistoricalContentSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantNewsHighlyCitedDocumentSignal;
   protected $indexingInstantNewsHighlyCitedDocumentSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantNewsHighlyCitedDocumentSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantNewsImagesInfo;
   protected $indexingInstantNewsImagesInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantNewsImagesInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingInstantSignalSourceTagsExtension;
   protected $indexingInstantSignalSourceTagsExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingInstantSignalSourceTagsExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingLatticeLatticeAnnotations;
   protected $indexingLatticeLatticeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingLatticeLatticeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMetricsUrlIndexingProps;
   protected $indexingMetricsUrlIndexingPropsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMetricsUrlIndexingPropsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlDomNodeSegments;
   protected $indexingMlDomNodeSegmentsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlDomNodeSegmentsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlEntityInfoboxes;
   protected $indexingMlEntityInfoboxesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlEntityInfoboxesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlPageStructure;
   protected $indexingMlPageStructureType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlPageStructureDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlSemanticArticle;
   protected $indexingMlSemanticArticleType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlSemanticArticleDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlShoppingUniverseAnnotation;
   protected $indexingMlShoppingUniverseAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlShoppingUniverseAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlVerticalVerticalClassificationResult;
   protected $indexingMlVerticalVerticalClassificationResultType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlVerticalVerticalClassificationResultDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMlVerticalVerticalClassificationV2;
   protected $indexingMlVerticalVerticalClassificationV2Type = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMlVerticalVerticalClassificationV2DataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMobileClientDependentInfo;
   protected $indexingMobileClientDependentInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMobileClientDependentInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMobileInterstitialsProtoDesktopInterstitials;
   protected $indexingMobileInterstitialsProtoDesktopInterstitialsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMobileInterstitialsProtoDesktopInterstitialsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMobileObelixInfo;
   protected $indexingMobileObelixInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMobileObelixInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMobileSmartphoneContentAnnotations;
   protected $indexingMobileSmartphoneContentAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMobileSmartphoneContentAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMobileSmartphonePatternClassification;
   protected $indexingMobileSmartphonePatternClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMobileSmartphonePatternClassificationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingMobileSpeedPageSpeedFieldData;
   protected $indexingMobileSpeedPageSpeedFieldDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingMobileSpeedPageSpeedFieldDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingPlusonePlusOneSignal;
   protected $indexingPlusonePlusOneSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingPlusonePlusOneSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingPlusoneSocialScoreSignal;
   protected $indexingPlusoneSocialScoreSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingPlusoneSocialScoreSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingRaffiaDataRecoveryInfo;
   protected $indexingRaffiaDataRecoveryInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingRaffiaDataRecoveryInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingRaffiaIndexingIntermediate;
   protected $indexingRaffiaIndexingIntermediateType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingRaffiaIndexingIntermediateDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingRaffiaMediaProcessingMetadata;
   protected $indexingRaffiaMediaProcessingMetadataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingRaffiaMediaProcessingMetadataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingRaffiaOverlayCDocAttachment;
   protected $indexingRaffiaOverlayCDocAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingRaffiaOverlayCDocAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionAcquisitionMetadataAttachment;
   protected $indexingSelectionAcquisitionMetadataAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionAcquisitionMetadataAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionDoubleIndexingExtension;
   protected $indexingSelectionDoubleIndexingExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionDoubleIndexingExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionFastServingPush;
   protected $indexingSelectionFastServingPushType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionFastServingPushDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionFreshdocsPassthroughExtension;
   protected $indexingSelectionFreshdocsPassthroughExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionFreshdocsPassthroughExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionImageImageSelectionAttachment;
   protected $indexingSelectionImageImageSelectionAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionImageImageSelectionAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionLanguageExtension;
   protected $indexingSelectionLanguageExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionLanguageExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionPriorScorerParameterSet;
   protected $indexingSelectionPriorScorerParameterSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionPriorScorerParameterSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionProcessingPriorityExtension;
   protected $indexingSelectionProcessingPriorityExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionProcessingPriorityExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionProtoBasePromotionInfo;
   protected $indexingSelectionProtoBasePromotionInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionProtoBasePromotionInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSelectionTensorFlowExtension;
   protected $indexingSelectionTensorFlowExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionTensorFlowExtensionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSignalAggregatorUrlPatternSignals;
   protected $indexingSignalAggregatorUrlPatternSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSignalAggregatorUrlPatternSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSignalsAccumulatedOnlineSignals;
   protected $indexingSignalsAccumulatedOnlineSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSignalsAccumulatedOnlineSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSignalsImpressionsPerDayContainer;
   protected $indexingSignalsImpressionsPerDayContainerType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSignalsImpressionsPerDayContainerDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSocialCountsSocialWidgetsIndicator;
   protected $indexingSocialCountsSocialWidgetsIndicatorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSocialCountsSocialWidgetsIndicatorDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSpeechGoldminePodcastAnnotation;
   protected $indexingSpeechGoldminePodcastAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSpeechGoldminePodcastAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingSpeechSpeechPagePropertiesProto;
   protected $indexingSpeechSpeechPagePropertiesProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSpeechSpeechPagePropertiesProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingThirdpartyThirdPartyInputs;
   protected $indexingThirdpartyThirdPartyInputsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingThirdpartyThirdPartyInputsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingUgcPageParamInfo;
   protected $indexingUgcPageParamInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingUgcPageParamInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingUnionKeyData;
   protected $indexingUnionKeyDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingUnionKeyDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingUrlPatternUrlTreeUrlPatternAnnotations;
   protected $indexingUrlPatternUrlTreeUrlPatternAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingUrlPatternUrlTreeUrlPatternAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingVideosVideoAnchorSourceInfo;
   protected $indexingVideosVideoAnchorSourceInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingVideosVideoAnchorSourceInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingVideosVideoPlaylistAnchorSignal;
   protected $indexingVideosVideoPlaylistAnchorSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingVideosVideoPlaylistAnchorSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $indexingWebChannelsWebChannelAnnotations;
   protected $indexingWebChannelsWebChannelAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingWebChannelsWebChannelAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $infoextractionPinpointPinpointAnnotationSignal;
   protected $infoextractionPinpointPinpointAnnotationSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $infoextractionPinpointPinpointAnnotationSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $infoextractionPinpointPinpointSignal;
   protected $infoextractionPinpointPinpointSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $infoextractionPinpointPinpointSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $instantChromeViews;
   protected $instantChromeViewsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $instantChromeViewsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $instantNavboost;
   protected $instantNavboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $instantNavboostDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeGraphAcquisitionFeedsQuotesQuotesAnnotation;
   protected $knowledgeGraphAcquisitionFeedsQuotesQuotesAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeGraphAcquisitionFeedsQuotesQuotesAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsDocumentSignals;
   protected $knowledgeMiningFactsDocumentSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsDocumentSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsFactEvaluationSignals;
   protected $knowledgeMiningFactsFactEvaluationSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsFactEvaluationSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsHtmlTableSignal;
   protected $knowledgeMiningFactsHtmlTableSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsHtmlTableSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsKatsSignals;
   protected $knowledgeMiningFactsKatsSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsKatsSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsLocalizedFact;
   protected $knowledgeMiningFactsLocalizedFactType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsLocalizedFactDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsObjectAnnotationsSignal;
   protected $knowledgeMiningFactsObjectAnnotationsSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsObjectAnnotationsSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsProductCompositionSignal;
   protected $knowledgeMiningFactsProductCompositionSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsProductCompositionSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsServingData;
   protected $knowledgeMiningFactsServingDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsServingDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsShoppingSignals;
   protected $knowledgeMiningFactsShoppingSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsShoppingSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsStructuredSnippetsSignal;
   protected $knowledgeMiningFactsStructuredSnippetsSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsStructuredSnippetsSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsUdrExtraFactData;
   protected $knowledgeMiningFactsUdrExtraFactDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsUdrExtraFactDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsUdrExtraFactMentionData;
   protected $knowledgeMiningFactsUdrExtraFactMentionDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsUdrExtraFactMentionDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsUniversalFactMetadata;
   protected $knowledgeMiningFactsUniversalFactMetadataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsUniversalFactMetadataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsUniversalFactScores;
   protected $knowledgeMiningFactsUniversalFactScoresType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsUniversalFactScoresDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsUniversalTableSignal;
   protected $knowledgeMiningFactsUniversalTableSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsUniversalTableSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningFactsWebKvSiteGroupSignal;
   protected $knowledgeMiningFactsWebKvSiteGroupSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningFactsWebKvSiteGroupSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningShoppingBrowseonomyData;
   protected $knowledgeMiningShoppingBrowseonomyDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningShoppingBrowseonomyDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMiningShoppingTwdModelVersions;
   protected $knowledgeMiningShoppingTwdModelVersionsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningShoppingTwdModelVersionsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMumStoryTeaserAnnotation;
   protected $knowledgeMumStoryTeaserAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMumStoryTeaserAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMumStorytimeStampEngagementAnnotation;
   protected $knowledgeMumStorytimeStampEngagementAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMumStorytimeStampEngagementAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeMumStorytimeStampQualityAnnotation;
   protected $knowledgeMumStorytimeStampQualityAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMumStorytimeStampQualityAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeTablesTableInternalData;
   protected $knowledgeTablesTableInternalDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeTablesTableInternalDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeTablesUniversalTableAnnotations;
   protected $knowledgeTablesUniversalTableAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeTablesUniversalTableAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeTasksUniversalTaskAnnotation;
   protected $knowledgeTasksUniversalTaskAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeTasksUniversalTaskAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $knowledgeTpfHowtodoHowtoVideoAnnotation;
   protected $knowledgeTpfHowtodoHowtoVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeTpfHowtodoHowtoVideoAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $langIdLangReasonerDocumentLanguages;
   protected $langIdLangReasonerDocumentLanguagesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $langIdLangReasonerDocumentLanguagesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $lensVsaiDatasets;
   protected $lensVsaiDatasetsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $lensVsaiDatasetsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $localsearchAuthoritySiteAnnotation;
   protected $localsearchAuthoritySiteAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $localsearchAuthoritySiteAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $localyp;
   protected $localypType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $localypDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $mapsSyntheticsGeoDocFetchKey;
   protected $mapsSyntheticsGeoDocFetchKeyType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $mapsSyntheticsGeoDocFetchKeyDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $measurementAnnotations;
   protected $measurementAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $measurementAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $metawebExtractionDocumentEvidence;
   protected $metawebExtractionDocumentEvidenceType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $metawebExtractionDocumentEvidenceDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $modernFormatContent;
   protected $modernFormatContentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $modernFormatContentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $navBoostDocument;
   protected $navBoostDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $navBoostDocumentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $navboost;
   protected $navboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $navboostDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsAnnotationsContentAnnotations;
   protected $newsAnnotationsContentAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsAnnotationsContentAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusHubPageAnnotations;
   protected $newsCorpusHubPageAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusHubPageAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusLeafPageAnnotation;
   protected $newsCorpusLeafPageAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusLeafPageAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusNewsAggregateSignal;
   protected $newsCorpusNewsAggregateSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusNewsAggregateSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusNewsCorpusAnnotation;
   protected $newsCorpusNewsCorpusAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusNewsCorpusAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusNewsCorpusRootAnnotation;
   protected $newsCorpusNewsCorpusRootAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusNewsCorpusRootAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusNewsCorpusStatusAnnotation;
   protected $newsCorpusNewsCorpusStatusAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusNewsCorpusStatusAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusNewsinessAnnotation;
   protected $newsCorpusNewsinessAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusNewsinessAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCorpusPositionRankAnnotations;
   protected $newsCorpusPositionRankAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusPositionRankAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsCrawlFilterNewsLinkCrawlSignal;
   protected $newsCrawlFilterNewsLinkCrawlSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCrawlFilterNewsLinkCrawlSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsExtractionNewsPbeAnnotations;
   protected $newsExtractionNewsPbeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsExtractionNewsPbeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNarIndexingMetadata;
   protected $newsNarIndexingMetadataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNarIndexingMetadataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNarRow;
   protected $newsNarRowType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNarRowDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNarRowContainer;
   protected $newsNarRowContainerType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNarRowContainerDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNearDupsInfo;
   protected $newsNearDupsInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNearDupsInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNewromanIndexingNewRomanSignal;
   protected $newsNewromanIndexingNewRomanSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNewromanIndexingNewRomanSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNewsArticleChecksum;
   protected $newsNewsArticleChecksumType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNewsArticleChecksumDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNewsClassifications;
   protected $newsNewsClassificationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNewsClassificationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNewsContentSignals;
   protected $newsNewsContentSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNewsContentSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsNewsForEducationReadingStatistics;
   protected $newsNewsForEducationReadingStatisticsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsNewsForEducationReadingStatisticsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsVideosNewsAnchorSourceInfo;
   protected $newsVideosNewsAnchorSourceInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsVideosNewsAnchorSourceInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $newsVideosNewsVideoAnnotationSignals;
   protected $newsVideosNewsVideoAnnotationSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsVideosNewsVideoAnnotationSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $nlpAtcClaraAnnotation;
   protected $nlpAtcClaraAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $nlpAtcClaraAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $nlpSaftDocument;
   protected $nlpSaftDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $nlpSaftDocumentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $nlpSaftNlxDocAnnotatorMigration;
   protected $nlpSaftNlxDocAnnotatorMigrationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $nlpSaftNlxDocAnnotatorMigrationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $nlpSaftRodinClassification;
   protected $nlpSaftRodinClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $nlpSaftRodinClassificationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $nlpSentimentSentimentAnnotation;
   protected $nlpSentimentSentimentAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $nlpSentimentSentimentAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $nlxDocAnnotation;
   protected $nlxDocAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $nlxDocAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $noindexedImageDataList;
   protected $noindexedImageDataListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $noindexedImageDataListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $numberAnnotations;
   protected $numberAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $numberAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanLibrarianBookMetadata;
   protected $oceanLibrarianBookMetadataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanLibrarianBookMetadataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanLibrarianPopulatorData;
   protected $oceanLibrarianPopulatorDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanLibrarianPopulatorDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanLibrarianPopulatorPageData;
   protected $oceanLibrarianPopulatorPageDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanLibrarianPopulatorPageDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataAllItemSpecificBibdatas;
   protected $oceanMetadataAllItemSpecificBibdatasType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataAllItemSpecificBibdatasDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataAvailabilityInfoComponent;
   protected $oceanMetadataAvailabilityInfoComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataAvailabilityInfoComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataAvailabilitySnapshot;
   protected $oceanMetadataAvailabilitySnapshotType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataAvailabilitySnapshotDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataAvailabilitySnapshotHolder;
   protected $oceanMetadataAvailabilitySnapshotHolderType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataAvailabilitySnapshotHolderDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataBibkeyComponent;
   protected $oceanMetadataBibkeyComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataBibkeyComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataClusterHorizontalReference;
   protected $oceanMetadataClusterHorizontalReferenceType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataClusterHorizontalReferenceDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataClusterRecord;
   protected $oceanMetadataClusterRecordType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataClusterRecordDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataClusterVolumes;
   protected $oceanMetadataClusterVolumesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataClusterVolumesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataClusteringSeriesSeriesInfo;
   protected $oceanMetadataClusteringSeriesSeriesInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataClusteringSeriesSeriesInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataClusteringTomeHorizontalLinkDescriptor;
   protected $oceanMetadataClusteringTomeHorizontalLinkDescriptorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataClusteringTomeHorizontalLinkDescriptorDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataContributorLinks;
   protected $oceanMetadataContributorLinksType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataContributorLinksDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataItemSpecificBibdataComponent;
   protected $oceanMetadataItemSpecificBibdataComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataItemSpecificBibdataComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataKgTopicLinks;
   protected $oceanMetadataKgTopicLinksType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataKgTopicLinksDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataLanguageInfoComponent;
   protected $oceanMetadataLanguageInfoComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataLanguageInfoComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataMaterialInfoComponent;
   protected $oceanMetadataMaterialInfoComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataMaterialInfoComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataParsedAccessTerms;
   protected $oceanMetadataParsedAccessTermsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataParsedAccessTermsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataParsedSuDoc;
   protected $oceanMetadataParsedSuDocType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataParsedSuDocDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataPatentPublicationDetails;
   protected $oceanMetadataPatentPublicationDetailsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataPatentPublicationDetailsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataPhysicalMeasurementsComponent;
   protected $oceanMetadataPhysicalMeasurementsComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataPhysicalMeasurementsComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataPublicDomainInfo;
   protected $oceanMetadataPublicDomainInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataPublicDomainInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataPublicationDetailsComponent;
   protected $oceanMetadataPublicationDetailsComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataPublicationDetailsComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataRightsComponent;
   protected $oceanMetadataRightsComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataRightsComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataSeriesInfoComponent;
   protected $oceanMetadataSeriesInfoComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataSeriesInfoComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataTomeDetailsComponent;
   protected $oceanMetadataTomeDetailsComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataTomeDetailsComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataTomeMembersComponent;
   protected $oceanMetadataTomeMembersComponentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataTomeMembersComponentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanMetadataTomePriceInfo;
   protected $oceanMetadataTomePriceInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanMetadataTomePriceInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanReviewsForWork;
   protected $oceanReviewsForWorkType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanReviewsForWorkDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $oceanRightsOptOutRequest;
   protected $oceanRightsOptOutRequestType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $oceanRightsOptOutRequestDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $officialPagesQuerySet;
   protected $officialPagesQuerySetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $officialPagesQuerySetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $perDocLangidData;
   protected $perDocLangidDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $perDocLangidDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $personalizationGameWebeventsConsolidatedEvents;
   protected $personalizationGameWebeventsConsolidatedEventsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $personalizationGameWebeventsConsolidatedEventsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $personalizationGameWebeventsEvent;
   protected $personalizationGameWebeventsEventType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $personalizationGameWebeventsEventDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $personalizationGameWebeventsEvents;
   protected $personalizationGameWebeventsEventsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $personalizationGameWebeventsEventsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $photosGeoAnnotation;
   protected $photosGeoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $photosGeoAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $predictedAuthenticity;
   protected $predictedAuthenticityType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $predictedAuthenticityDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $priceAnnotations;
   protected $priceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $priceAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityAnchorsOutdegreeOutdegreeInfo;
   protected $qualityAnchorsOutdegreeOutdegreeInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityAnchorsOutdegreeOutdegreeInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityAnimaLivewebLivewebAttachment;
   protected $qualityAnimaLivewebLivewebAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityAnimaLivewebLivewebAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityAnimaRoutinesRoutinesPropertiesProto;
   protected $qualityAnimaRoutinesRoutinesPropertiesProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityAnimaRoutinesRoutinesPropertiesProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityAuthorityTopicEmbeddings;
   protected $qualityAuthorityTopicEmbeddingsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityAuthorityTopicEmbeddingsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityAuthorshipAuthorAnnotations;
   protected $qualityAuthorshipAuthorAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityAuthorshipAuthorAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityBreadcrumbsBreadcrumbAnnotations;
   protected $qualityBreadcrumbsBreadcrumbAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityBreadcrumbsBreadcrumbAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityCalypsoAppsLink;
   protected $qualityCalypsoAppsLinkType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityCalypsoAppsLinkDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityChardDocument;
   protected $qualityChardDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityChardDocumentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityChardPredictedQueryFringeScore;
   protected $qualityChardPredictedQueryFringeScoreType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityChardPredictedQueryFringeScoreDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityChardPredictedXlq;
   protected $qualityChardPredictedXlqType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityChardPredictedXlqDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityContraSelectedAttributions;
   protected $qualityContraSelectedAttributionsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityContraSelectedAttributionsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityCopiaFireflySiteInfo;
   protected $qualityCopiaFireflySiteInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityCopiaFireflySiteInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityDiscoverUgcScatScatEmbeddingAnnotation;
   protected $qualityDiscoverUgcScatScatEmbeddingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityDiscoverUgcScatScatEmbeddingAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityDniNewsstandPcu;
   protected $qualityDniNewsstandPcuType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityDniNewsstandPcuDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityDniPcuAuxiliaryData;
   protected $qualityDniPcuAuxiliaryDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityDniPcuAuxiliaryDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityDniPcuMetaAnnotation;
   protected $qualityDniPcuMetaAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityDniPcuMetaAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityDniPcuParsedData;
   protected $qualityDniPcuParsedDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityDniPcuParsedDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityDniPcuRawData;
   protected $qualityDniPcuRawDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityDniPcuRawDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityExploreQueryableFeedEcsAnnotation;
   protected $qualityExploreQueryableFeedEcsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityExploreQueryableFeedEcsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityExploreQueryableFeedHashtagAnnotation;
   protected $qualityExploreQueryableFeedHashtagAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityExploreQueryableFeedHashtagAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityExploreQueryableFeedHashtagListAnnotation;
   protected $qualityExploreQueryableFeedHashtagListAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityExploreQueryableFeedHashtagListAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityExploreQueryableFeedTopicFeedScoringSignals;
   protected $qualityExploreQueryableFeedTopicFeedScoringSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityExploreQueryableFeedTopicFeedScoringSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityFreshnessAbacusInstantNegativeClicksInfo;
   protected $qualityFreshnessAbacusInstantNegativeClicksInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityFreshnessAbacusInstantNegativeClicksInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityFringeFringeQueryPrior;
   protected $qualityFringeFringeQueryPriorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityFringeFringeQueryPriorDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityGeoBrainlocGoldmineBrainlocAnnotation;
   protected $qualityGeoBrainlocGoldmineBrainlocAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityGeoBrainlocGoldmineBrainlocAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityGeoLoglocGoldmineDocumentLocationAnnotation;
   protected $qualityGeoLoglocGoldmineDocumentLocationAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityGeoLoglocGoldmineDocumentLocationAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityHistoricalContentAge;
   protected $qualityHistoricalContentAgeType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityHistoricalContentAgeDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityHorizonProtoHorizonEmbeddings;
   protected $qualityHorizonProtoHorizonEmbeddingsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityHorizonProtoHorizonEmbeddingsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityHorizonRecordInfoAnnotation;
   protected $qualityHorizonRecordInfoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityHorizonRecordInfoAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityImprovDocToQueries;
   protected $qualityImprovDocToQueriesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityImprovDocToQueriesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityImprovImprovAnchors;
   protected $qualityImprovImprovAnchorsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityImprovImprovAnchorsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityLisztomaniaDocument;
   protected $qualityLisztomaniaDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityLisztomaniaDocumentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNavboostCrapsCrapsData;
   protected $qualityNavboostCrapsCrapsDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNavboostCrapsCrapsDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNavboostCrapsCrapsPatternSignal;
   protected $qualityNavboostCrapsCrapsPatternSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNavboostCrapsCrapsPatternSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNegativeClicksNegativeClicksInfo;
   protected $qualityNegativeClicksNegativeClicksInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNegativeClicksNegativeClicksInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNlqStructuredSearchAnnotationAnalysisAutomaticExtractionAnnotations;
   protected $qualityNlqStructuredSearchAnnotationAnalysisAutomaticExtractionAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNlqStructuredSearchAnnotationAnalysisAutomaticExtractionAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNlqStructuredSearchListingPagesListingPageAnnotations;
   protected $qualityNlqStructuredSearchListingPagesListingPageAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNlqStructuredSearchListingPagesListingPageAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrDokiAnnotation;
   protected $qualityNsrDokiAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrDokiAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrNsrData;
   protected $qualityNsrNsrDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrNsrDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrNsrSitechunksAnnotation;
   protected $qualityNsrNsrSitechunksAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrNsrSitechunksAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrPairwiseqPairwiseQData;
   protected $qualityNsrPairwiseqPairwiseQDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrPairwiseqPairwiseQDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrPqData;
   protected $qualityNsrPqDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrPqDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrSiteAuthority;
   protected $qualityNsrSiteAuthorityType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrSiteAuthorityDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityNsrUvSitechunksAnnotation;
   protected $qualityNsrUvSitechunksAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNsrUvSitechunksAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityOrbitAsteroidBeltIntermediateDocumentIntentScores;
   protected $qualityOrbitAsteroidBeltIntermediateDocumentIntentScoresType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityOrbitAsteroidBeltIntermediateDocumentIntentScoresDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPagemasterPagemasterAnnotations;
   protected $qualityPagemasterPagemasterAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPagemasterPagemasterAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPanopticIndexingDiscoverCorpusAnnotation;
   protected $qualityPanopticIndexingDiscoverCorpusAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPanopticIndexingDiscoverCorpusAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPanopticIndexingDiscoverDocumentSignal;
   protected $qualityPanopticIndexingDiscoverDocumentSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPanopticIndexingDiscoverDocumentSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPanopticIndexingPanopticAnnotation;
   protected $qualityPanopticIndexingPanopticAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPanopticIndexingPanopticAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPanopticStorytimeAnnotation;
   protected $qualityPanopticStorytimeAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPanopticStorytimeAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPanopticStorytimeScoringSignals;
   protected $qualityPanopticStorytimeScoringSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPanopticStorytimeScoringSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPanopticVoiceUgcAnnotation;
   protected $qualityPanopticVoiceUgcAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPanopticVoiceUgcAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPeoplesearchNamedetectorNameOccurrenceAnnotations;
   protected $qualityPeoplesearchNamedetectorNameOccurrenceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPeoplesearchNamedetectorNameOccurrenceAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPopfeedsChromeBackgroundAnnotation;
   protected $qualityPopfeedsChromeBackgroundAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsChromeBackgroundAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPopfeedsHubDataAnnotations;
   protected $qualityPopfeedsHubDataAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsHubDataAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPopfeedsUrlPredictionAnnotations;
   protected $qualityPopfeedsUrlPredictionAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsUrlPredictionAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPopfeedsUrlSourceAnnotations;
   protected $qualityPopfeedsUrlSourceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsUrlSourceAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPricedetectorKefirPriceAnnotations;
   protected $qualityPricedetectorKefirPriceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPricedetectorKefirPriceAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityPricedetectorProductBlockAnnotations;
   protected $qualityPricedetectorProductBlockAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPricedetectorProductBlockAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityProseJsonLdAnnotation;
   protected $qualityProseJsonLdAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityProseJsonLdAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityProseThumbnailSelection;
   protected $qualityProseThumbnailSelectionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityProseThumbnailSelectionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityQ2QualityBoost;
   protected $qualityQ2QualityBoostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityQ2QualityBoostDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityQ2SiteQualityFeatures;
   protected $qualityQ2SiteQualityFeaturesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityQ2SiteQualityFeaturesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRealtimeBoostRealtimeBoostEvent;
   protected $qualityRealtimeBoostRealtimeBoostEventType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRealtimeBoostRealtimeBoostEventDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRealtimeBoostRealtimeBoostResponse;
   protected $qualityRealtimeBoostRealtimeBoostResponseType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRealtimeBoostRealtimeBoostResponseDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRealtimeBoostSeismographEventAnnotations;
   protected $qualityRealtimeBoostSeismographEventAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRealtimeBoostSeismographEventAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRealtimeRealtimeResultInfo;
   protected $qualityRealtimeRealtimeResultInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRealtimeRealtimeResultInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRealtimeRtFactAnnotations;
   protected $qualityRealtimeRtFactAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRealtimeRtFactAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityResultFilteringIndexingClusterAnnotations;
   protected $qualityResultFilteringIndexingClusterAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityResultFilteringIndexingClusterAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRichsnippetsAppsProtosApplicationInformationAttachment;
   protected $qualityRichsnippetsAppsProtosApplicationInformationAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRichsnippetsAppsProtosApplicationInformationAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityRodinRodinSiteSignal;
   protected $qualityRodinRodinSiteSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityRodinRodinSiteSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySalientCountriesSalientCountrySet;
   protected $qualitySalientCountriesSalientCountrySetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySalientCountriesSalientCountrySetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySalientStructuresSalientStructureSet;
   protected $qualitySalientStructuresSalientStructureSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySalientStructuresSalientStructureSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySalientStuffSalientStuffSet;
   protected $qualitySalientStuffSalientStuffSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySalientStuffSalientStuffSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySalientTermsQuerySmearingModel;
   protected $qualitySalientTermsQuerySmearingModelType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySalientTermsQuerySmearingModelDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySalientTermsSalientTermSet;
   protected $qualitySalientTermsSalientTermSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySalientTermsSalientTermSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySearchoversiteAnnotatorStructuredResultsAnnotation;
   protected $qualitySearchoversiteAnnotatorStructuredResultsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySearchoversiteAnnotatorStructuredResultsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySherlockKnexAnnotation;
   protected $qualitySherlockKnexAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySherlockKnexAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityShoppingProductReview;
   protected $qualityShoppingProductReviewType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityShoppingProductReviewDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityShoppingProductReviewPage;
   protected $qualityShoppingProductReviewPageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityShoppingProductReviewPageDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityShoppingShoppingProductReviewAnnotation;
   protected $qualityShoppingShoppingProductReviewAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityShoppingShoppingProductReviewAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySimilarpagesRelatedInfoSignal;
   protected $qualitySimilarpagesRelatedInfoSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySimilarpagesRelatedInfoSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySitemapDocument;
   protected $qualitySitemapDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySitemapDocumentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySitemapThirdPartyCarouselsItemLists;
   protected $qualitySitemapThirdPartyCarouselsItemListsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySitemapThirdPartyCarouselsItemListsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySixfaceSixfaceUrlData;
   protected $qualitySixfaceSixfaceUrlDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySixfaceSixfaceUrlDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySnippetsHiddenTextHiddenSpanAnnotations;
   protected $qualitySnippetsHiddenTextHiddenSpanAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySnippetsHiddenTextHiddenSpanAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySnippetsListSnippetsAnnotations;
   protected $qualitySnippetsListSnippetsAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySnippetsListSnippetsAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySnippetsMetadescriptionDuplicateMetaSiteSignal;
   protected $qualitySnippetsMetadescriptionDuplicateMetaSiteSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySnippetsMetadescriptionDuplicateMetaSiteSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySnippetsSnippetSpansInfo;
   protected $qualitySnippetsSnippetSpansInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySnippetsSnippetSpansInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySosGoldmineSosAnnotation;
   protected $qualitySosGoldmineSosAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySosGoldmineSosAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualitySummarySummary;
   protected $qualitySummarySummaryType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySummarySummaryDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityTangramInformationTypes;
   protected $qualityTangramInformationTypesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityTangramInformationTypesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityTimebasedTimeSensitivityTimeSensitivityAnnotation;
   protected $qualityTimebasedTimeSensitivityTimeSensitivityAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityTimebasedTimeSensitivityTimeSensitivityAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityTitlesAlternativeTitlesInfo;
   protected $qualityTitlesAlternativeTitlesInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityTitlesAlternativeTitlesInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityTitlesSitelinksTargetTitleInfo;
   protected $qualityTitlesSitelinksTargetTitleInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityTitlesSitelinksTargetTitleInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityTwiddlerDomainClassification;
   protected $qualityTwiddlerDomainClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityTwiddlerDomainClassificationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityViewsAnswersAnswerAnnotationInfo;
   protected $qualityViewsAnswersAnswerAnnotationInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityViewsAnswersAnswerAnnotationInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityVisualwebVisualWebAnnotation;
   protected $qualityVisualwebVisualWebAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityVisualwebVisualWebAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityVisualwebVisualWebModelsAnnotation;
   protected $qualityVisualwebVisualWebModelsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityVisualwebVisualWebModelsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityWebanswersAltTitleSaftDoc;
   protected $qualityWebanswersAltTitleSaftDocType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityWebanswersAltTitleSaftDocDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityWebanswersTranscriptAnnotations;
   protected $qualityWebanswersTranscriptAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityWebanswersTranscriptAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityWebfeederDocEmbedding;
   protected $qualityWebfeederDocEmbeddingType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityWebfeederDocEmbeddingDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $qualityWebshineDocResources;
   protected $qualityWebshineDocResourcesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityWebshineDocResourcesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $rankBoostDocAttachment;
   protected $rankBoostDocAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $rankBoostDocAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $rankembed;
   protected $rankembedType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $rankembedDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $relativeDateAnnotations;
   protected $relativeDateAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $relativeDateAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsAddressAnnotations;
   protected $repositoryAnnotationsAddressAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsAddressAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsAmenitiesAmenitiesAnnotations;
   protected $repositoryAnnotationsAmenitiesAmenitiesAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsAmenitiesAmenitiesAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsCrawzallAnnotations;
   protected $repositoryAnnotationsCrawzallAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsCrawzallAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsDiscussionThreadDiscussionViewProto;
   protected $repositoryAnnotationsDiscussionThreadDiscussionViewProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsDiscussionThreadDiscussionViewProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsLicensedResources;
   protected $repositoryAnnotationsLicensedResourcesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsLicensedResourcesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsListFilterAnnotations;
   protected $repositoryAnnotationsListFilterAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsListFilterAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsListSummaryAnnotations;
   protected $repositoryAnnotationsListSummaryAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsListSummaryAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsMicrodataMicrodataAnnotations;
   protected $repositoryAnnotationsMicrodataMicrodataAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsMicrodataMicrodataAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsMicroformatsHproduct;
   protected $repositoryAnnotationsMicroformatsHproductType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsMicroformatsHproductDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsMicroformatsMicroformatAnnotations;
   protected $repositoryAnnotationsMicroformatsMicroformatAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsMicroformatsMicroformatAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsPhoneTypePhoneTypeAnnotations;
   protected $repositoryAnnotationsPhoneTypePhoneTypeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsPhoneTypePhoneTypeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsRdfaRdfaAnnotations;
   protected $repositoryAnnotationsRdfaRdfaAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsRdfaRdfaAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsRodinArticleAnnotation;
   protected $repositoryAnnotationsRodinArticleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsRodinArticleAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSectionHeadingAnnotations;
   protected $repositoryAnnotationsSectionHeadingAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSectionHeadingAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSnippetSegmentSnippetSegmentAnnotations;
   protected $repositoryAnnotationsSnippetSegmentSnippetSegmentAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSnippetSegmentSnippetSegmentAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSporeAuthoritySignal;
   protected $repositoryAnnotationsSporeAuthoritySignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSporeAuthoritySignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSporeDeeplinkAnnotations;
   protected $repositoryAnnotationsSporeDeeplinkAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSporeDeeplinkAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSporeExtractorTopicAnnotations;
   protected $repositoryAnnotationsSporeExtractorTopicAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSporeExtractorTopicAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSporeExtractorTripleAnnotations;
   protected $repositoryAnnotationsSporeExtractorTripleAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSporeExtractorTripleAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSporeSporeEtlAnnotation;
   protected $repositoryAnnotationsSporeSporeEtlAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSporeSporeEtlAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsSporeSporeEtlInputAnnotations;
   protected $repositoryAnnotationsSporeSporeEtlInputAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsSporeSporeEtlInputAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsStorehoursStoreHoursAnnotations;
   protected $repositoryAnnotationsStorehoursStoreHoursAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsStorehoursStoreHoursAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsVerseAnnotations;
   protected $repositoryAnnotationsVerseAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsVerseAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryAnnotationsWebanswersContextItemAnnotations;
   protected $repositoryAnnotationsWebanswersContextItemAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryAnnotationsWebanswersContextItemAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryProtiumEncyclojoinsEncycloJoin;
   protected $repositoryProtiumEncyclojoinsEncycloJoinType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryProtiumEncyclojoinsEncycloJoinDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryProtiumGoldmineTriplificationResult;
   protected $repositoryProtiumGoldmineTriplificationResultType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryProtiumGoldmineTriplificationResultDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryProtiumGoldmineTypeAssertionOutput;
   protected $repositoryProtiumGoldmineTypeAssertionOutputType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryProtiumGoldmineTypeAssertionOutputDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryProtiumWebkvWebKv;
   protected $repositoryProtiumWebkvWebKvType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryProtiumWebkvWebKvDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryProtiumWikiaWikiaInfo;
   protected $repositoryProtiumWikiaWikiaInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryProtiumWikiaWikiaInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryUpdaterIndexSelectionAttachment;
   protected $repositoryUpdaterIndexSelectionAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryUpdaterIndexSelectionAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefEntityJoin;
   protected $repositoryWebrefEntityJoinType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefEntityJoinDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefExperimentalWebrefEntitiesAttachment;
   protected $repositoryWebrefExperimentalWebrefEntitiesAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefExperimentalWebrefEntitiesAttachmentDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefGraphMention;
   protected $repositoryWebrefGraphMentionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefGraphMentionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefJuggernautIndices;
   protected $repositoryWebrefJuggernautIndicesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefJuggernautIndicesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefPageClassificationAnchorSignalsSet;
   protected $repositoryWebrefPageClassificationAnchorSignalsSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPageClassificationAnchorSignalsSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefPageClassificationSignalsSet;
   protected $repositoryWebrefPageClassificationSignalsSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPageClassificationSignalsSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefPiannoDocumentIntents;
   protected $repositoryWebrefPiannoDocumentIntentsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPiannoDocumentIntentsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefPiannoTvSeasonEpisode;
   protected $repositoryWebrefPiannoTvSeasonEpisodeType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPiannoTvSeasonEpisodeDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefPreprocessingReferencePageCandidateList;
   protected $repositoryWebrefPreprocessingReferencePageCandidateListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPreprocessingReferencePageCandidateListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefReconcileResponse;
   protected $repositoryWebrefReconcileResponseType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefReconcileResponseDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefRefconJugglerReferencePageMappings;
   protected $repositoryWebrefRefconJugglerReferencePageMappingsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefRefconJugglerReferencePageMappingsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefReferencePagesClassifierScoredPage;
   protected $repositoryWebrefReferencePagesClassifierScoredPageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefReferencePagesClassifierScoredPageDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefSalientEntitySet;
   protected $repositoryWebrefSalientEntitySetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefSalientEntitySetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefUndermergedEntities;
   protected $repositoryWebrefUndermergedEntitiesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefUndermergedEntitiesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefUniversalEmbeddingRetrievalDebug;
   protected $repositoryWebrefUniversalEmbeddingRetrievalDebugType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefUniversalEmbeddingRetrievalDebugDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefWebitIntermediaryMids;
   protected $repositoryWebrefWebitIntermediaryMidsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefWebitIntermediaryMidsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefWebitScopeFprint;
   protected $repositoryWebrefWebitScopeFprintType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefWebitScopeFprintDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefWebitScopeSignals;
   protected $repositoryWebrefWebitScopeSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefWebitScopeSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefWebitTripleSignals;
   protected $repositoryWebrefWebitTripleSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefWebitTripleSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefWebrefEntities;
   protected $repositoryWebrefWebrefEntitiesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefWebrefEntitiesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebrefWebrefStatus;
   protected $repositoryWebrefWebrefStatusType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefWebrefStatusDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebtablesDataTableAnnotations;
   protected $repositoryWebtablesDataTableAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebtablesDataTableAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebtablesDataTableMidAnnotation;
   protected $repositoryWebtablesDataTableMidAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebtablesDataTableMidAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWebtablesTranslationMessage;
   protected $repositoryWebtablesTranslationMessageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebtablesTranslationMessageDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaAliasList;
   protected $repositoryWikipediaAliasListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaAliasListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaAnnotatorWikipediaPageComponentAnnotations;
   protected $repositoryWikipediaAnnotatorWikipediaPageComponentAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaAnnotatorWikipediaPageComponentAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaSentenceCompressionAnnotation;
   protected $repositoryWikipediaSentenceCompressionAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaSentenceCompressionAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaWikiJoin;
   protected $repositoryWikipediaWikiJoinType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaWikiJoinDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaWikiMapperTripleSet;
   protected $repositoryWikipediaWikiMapperTripleSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaWikiMapperTripleSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaWikibaseEntity;
   protected $repositoryWikipediaWikibaseEntityType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaWikibaseEntityDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaWikidataOrgTripleSet;
   protected $repositoryWikipediaWikidataOrgTripleSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaWikidataOrgTripleSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $repositoryWikipediaWikitrustWikiTrustInfo;
   protected $repositoryWikipediaWikitrustWikiTrustInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWikipediaWikitrustWikiTrustInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $researchCoauthorOpinionAnnotations;
   protected $researchCoauthorOpinionAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $researchCoauthorOpinionAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $researchStructuredDataInadvertentAnchorScoreAnnotation;
   protected $researchStructuredDataInadvertentAnchorScoreAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $researchStructuredDataInadvertentAnchorScoreAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $researchStructuredDataKnowledgeExplorationAnnotations;
   protected $researchStructuredDataKnowledgeExplorationAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $researchStructuredDataKnowledgeExplorationAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $researchStructuredDataNewsEmbeddingAnnotations;
   protected $researchStructuredDataNewsEmbeddingAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $researchStructuredDataNewsEmbeddingAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $richsnippetsDataObject;
   protected $richsnippetsDataObjectType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsDataObjectDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $richsnippetsFeedPageMap;
   protected $richsnippetsFeedPageMapType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsFeedPageMapDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $richsnippetsPageMap;
   protected $richsnippetsPageMapType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsPageMapDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $richsnippetsPageMapAnnotations;
   protected $richsnippetsPageMapAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsPageMapAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $richsnippetsSchemaThing;
   protected $richsnippetsSchemaThingType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsSchemaThingDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $rosettaLanguage;
   protected $rosettaLanguageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $rosettaLanguageDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $safesearchPageClassifierOutput;
   protected $safesearchPageClassifierOutputType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $safesearchPageClassifierOutputDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $safesearchSafeSearchInternalPageSignals;
   protected $safesearchSafeSearchInternalPageSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $safesearchSafeSearchInternalPageSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $scienceIndexSignal;
   protected $scienceIndexSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $scienceIndexSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $searchEngagementHighlightSharedHighlightSignal;
   protected $searchEngagementHighlightSharedHighlightSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $searchEngagementHighlightSharedHighlightSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $searcharSearchArPipelineSignal;
   protected $searcharSearchArPipelineSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $searcharSearchArPipelineSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $shoppingQualityShoppingSiteClassifier;
   protected $shoppingQualityShoppingSiteClassifierType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $shoppingQualityShoppingSiteClassifierDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $shoppingQualityShoppingSiteClassifierShopfab;
   protected $shoppingQualityShoppingSiteClassifierShopfabType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $shoppingQualityShoppingSiteClassifierShopfabDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $shoppingWebentityShoppingAnnotation;
   protected $shoppingWebentityShoppingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $shoppingWebentityShoppingAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $sitemapsSitemapsSignals;
   protected $sitemapsSitemapsSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $sitemapsSitemapsSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $smearingSmearedTerms;
   protected $smearingSmearedTermsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $smearingSmearedTermsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $socialPersonalizationKnexAnnotation;
   protected $socialPersonalizationKnexAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $socialPersonalizationKnexAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamBrainSpamBrainData;
   protected $spamBrainSpamBrainDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamBrainSpamBrainDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamBrainSpamBrainPageClassifierAnnotation;
   protected $spamBrainSpamBrainPageClassifierAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamBrainSpamBrainPageClassifierAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamContentAnchorDist;
   protected $spamContentAnchorDistType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamContentAnchorDistDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamContentAuthenticAuthenticTextAnnotation;
   protected $spamContentAuthenticAuthenticTextAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamContentAuthenticAuthenticTextAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamContentImageMapPb;
   protected $spamContentImageMapPbType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamContentImageMapPbDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamContentSiteAgeStats;
   protected $spamContentSiteAgeStatsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamContentSiteAgeStatsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamCookbookCookbookAnnotations;
   protected $spamCookbookCookbookAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamCookbookCookbookAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamCookbookCookbookSitechunkAnnotations;
   protected $spamCookbookCookbookSitechunkAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamCookbookCookbookSitechunkAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamFatpingIndexFeed;
   protected $spamFatpingIndexFeedType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamFatpingIndexFeedDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamGodclusterAffIdAnnotation;
   protected $spamGodclusterAffIdAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamGodclusterAffIdAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamGodclusterServerHeaderAnnotation;
   protected $spamGodclusterServerHeaderAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamGodclusterServerHeaderAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamGooglebombsGooglebombsAnnotation;
   protected $spamGooglebombsGooglebombsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamGooglebombsGooglebombsAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamHackedSitesDocSpamInfo;
   protected $spamHackedSitesDocSpamInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamHackedSitesDocSpamInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamHackedSitesGpgbGpgbNgramStats;
   protected $spamHackedSitesGpgbGpgbNgramStatsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamHackedSitesGpgbGpgbNgramStatsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamHackedSitesWordFrequencies;
   protected $spamHackedSitesWordFrequenciesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamHackedSitesWordFrequenciesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamJsJsInfo;
   protected $spamJsJsInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamJsJsInfoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamScamScamness;
   protected $spamScamScamnessType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamScamScamnessDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamScamUnauthoritativeSite;
   protected $spamScamUnauthoritativeSiteType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamScamUnauthoritativeSiteDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $spamTokensSpamTokensAnnotation;
   protected $spamTokensSpamTokensAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamTokensSpamTokensAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $tableTalkStrideOfferPagePriceAnnotation;
   protected $tableTalkStrideOfferPagePriceAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $tableTalkStrideOfferPagePriceAnnotationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $tasksTabaTabaDocSignals;
   protected $tasksTabaTabaDocSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $tasksTabaTabaDocSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $telephoneNumberAnnotations;
   protected $telephoneNumberAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $telephoneNumberAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $timeAnnotationTags;
   protected $timeAnnotationTagsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $timeAnnotationTagsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $timeAnnotations;
   protected $timeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $timeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $timeRangeAnnotations;
   protected $timeRangeAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $timeRangeAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $travelAssistantTravelDocClassification;
   protected $travelAssistantTravelDocClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $travelAssistantTravelDocClassificationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $ucpSignal;
   protected $ucpSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $ucpSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $udrConverterDocumentShoppingData;
   protected $udrConverterDocumentShoppingDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrConverterDocumentShoppingDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $udrConverterOffer;
   protected $udrConverterOfferType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrConverterOfferDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $udrConverterProductBlockData;
   protected $udrConverterProductBlockDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrConverterProductBlockDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $udrProtoDetailedEntityScores;
   protected $udrProtoDetailedEntityScoresType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrProtoDetailedEntityScoresDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $udrProtoOverlay;
   protected $udrProtoOverlayType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrProtoOverlayDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $udrProtoWebrefMention;
   protected $udrProtoWebrefMentionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $udrProtoWebrefMentionDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $universalFacts;
   protected $universalFactsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $universalFactsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $unwantedImageDataList;
   protected $unwantedImageDataListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $unwantedImageDataListDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $uriAnnotations;
   protected $uriAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $uriAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $utilStatusProto;
   protected $utilStatusProtoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $utilStatusProtoDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $verticalsDiscussionDiscussionAnnotationTag;
   protected $verticalsDiscussionDiscussionAnnotationTagType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $verticalsDiscussionDiscussionAnnotationTagDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlAutomatedAudioExtractionSignals;
   protected $videoCrawlAutomatedAudioExtractionSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlAutomatedAudioExtractionSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlAutomatedExtractionSignals;
   protected $videoCrawlAutomatedExtractionSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlAutomatedExtractionSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlDomainVideoClickData;
   protected $videoCrawlDomainVideoClickDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlDomainVideoClickDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlVideoClickData;
   protected $videoCrawlVideoClickDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlVideoClickDataDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlVideoSalientTermSet;
   protected $videoCrawlVideoSalientTermSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlVideoSalientTermSetDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlVideoScoringSignals;
   protected $videoCrawlVideoScoringSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlVideoScoringSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlWatchPagePatternClassification;
   protected $videoCrawlWatchPagePatternClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlWatchPagePatternClassificationDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoCrawlYoutubeEmbedSignal;
   protected $videoCrawlYoutubeEmbedSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoCrawlYoutubeEmbedSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoScoringSignal;
   protected $videoScoringSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoScoringSignalDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoWebGallery;
   protected $videoWebGalleryType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoWebGalleryDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $videoYoutubeLiveCardioCardioStats;
   protected $videoYoutubeLiveCardioCardioStatsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoYoutubeLiveCardioCardioStatsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $volt;
   protected $voltType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $voltDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $watchpageLanguageWatchPageLanguageResult;
   protected $watchpageLanguageWatchPageLanguageResultType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $watchpageLanguageWatchPageLanguageResultDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $websitetoolsFeedsAnnotationsFeedContentAnnotations;
   protected $websitetoolsFeedsAnnotationsFeedContentAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $websitetoolsFeedsAnnotationsFeedContentAnnotationsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $websitetoolsFeedsLinkedFeedLinkedFeed;
   protected $websitetoolsFeedsLinkedFeedLinkedFeedType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $websitetoolsFeedsLinkedFeedLinkedFeedDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $websitetoolsFeedsPodcastPodcastSignals;
   protected $websitetoolsFeedsPodcastPodcastSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $websitetoolsFeedsPodcastPodcastSignalsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $websitetoolsFeedsSporeFeedsSporeTriples;
   protected $websitetoolsFeedsSporeFeedsSporeTriplesType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $websitetoolsFeedsSporeFeedsSporeTriplesDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $whatshappStrideExtractions;
   protected $whatshappStrideExtractionsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $whatshappStrideExtractionsDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $youtubeAlexandriaYoutubeBody;
   protected $youtubeAlexandriaYoutubeBodyType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $youtubeAlexandriaYoutubeBodyDataType = '';
+  /**
+   * @var IndexingDocjoinerDataVersionVersionInfo
+   */
+  public $youtubeAlexandriaYoutubeSignal;
   protected $youtubeAlexandriaYoutubeSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $youtubeAlexandriaYoutubeSignalDataType = '';
 

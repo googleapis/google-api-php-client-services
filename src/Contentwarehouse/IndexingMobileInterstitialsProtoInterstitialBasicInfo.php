@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingMobileInterstitialsProtoInterstitialBasicInfo extends \Google\Model
 {
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoBox
+   */
+  public $absoluteBox;
   protected $absoluteBoxType = HtmlrenderWebkitHeadlessProtoBox::class;
   protected $absoluteBoxDataType = '';
   /**

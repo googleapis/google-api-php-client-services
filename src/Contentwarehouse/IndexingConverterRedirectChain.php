@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class IndexingConverterRedirectChain extends \Google\Collection
 {
   protected $collection_key = 'hop';
+  /**
+   * @var IndexingConverterRedirectChainHop[]
+   */
+  public $hop;
   protected $hopType = IndexingConverterRedirectChainHop::class;
   protected $hopDataType = 'array';
 

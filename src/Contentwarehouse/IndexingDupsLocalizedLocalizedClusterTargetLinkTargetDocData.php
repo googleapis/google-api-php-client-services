@@ -36,6 +36,10 @@ class IndexingDupsLocalizedLocalizedClusterTargetLinkTargetDocData extends \Goog
    * @var bool
    */
   public $isCanonical;
+  /**
+   * @var IndexingDupsLocalizedLocalizedClusterTargetLinkLink[]
+   */
+  public $outgoingLinkData;
   protected $outgoingLinkDataType = IndexingDupsLocalizedLocalizedClusterTargetLinkLink::class;
   protected $outgoingLinkDataDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ImageContentQueryBoost extends \Google\Collection
 {
   protected $collection_key = 'queryboost';
+  /**
+   * @var ImageContentQueryBoostQueryBoost[]
+   */
+  public $queryboost;
   protected $queryboostType = ImageContentQueryBoostQueryBoost::class;
   protected $queryboostDataType = 'array';
 

@@ -28,6 +28,10 @@ class ImageRepositorySpeechRecognitionAlternative extends \Google\Collection
    * @var string
    */
   public $transcript;
+  /**
+   * @var ImageRepositoryWordInfo[]
+   */
+  public $words;
   protected $wordsType = ImageRepositoryWordInfo::class;
   protected $wordsDataType = 'array';
 

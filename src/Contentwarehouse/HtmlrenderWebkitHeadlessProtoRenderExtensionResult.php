@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class HtmlrenderWebkitHeadlessProtoRenderExtensionResult extends \Google\Collection
 {
   protected $collection_key = 'consoleLogEntry';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoConsoleLogEntry[]
+   */
+  public $consoleLogEntry;
   protected $consoleLogEntryType = HtmlrenderWebkitHeadlessProtoConsoleLogEntry::class;
   protected $consoleLogEntryDataType = 'array';
   /**
