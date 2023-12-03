@@ -19,8 +19,16 @@ namespace Google\Service\CloudSearch;
 
 class UpdateDataSourceRequest extends \Google\Model
 {
+  /**
+   * @var DebugOptions
+   */
+  public $debugOptions;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
+  /**
+   * @var DataSource
+   */
+  public $source;
   protected $sourceType = DataSource::class;
   protected $sourceDataType = '';
   /**

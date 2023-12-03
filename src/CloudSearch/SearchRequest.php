@@ -20,10 +20,22 @@ namespace Google\Service\CloudSearch;
 class SearchRequest extends \Google\Collection
 {
   protected $collection_key = 'facetOptions';
+  /**
+   * @var ContextAttribute[]
+   */
+  public $contextAttributes;
   protected $contextAttributesType = ContextAttribute::class;
   protected $contextAttributesDataType = 'array';
+  /**
+   * @var DataSourceRestriction[]
+   */
+  public $dataSourceRestrictions;
   protected $dataSourceRestrictionsType = DataSourceRestriction::class;
   protected $dataSourceRestrictionsDataType = 'array';
+  /**
+   * @var FacetOptions[]
+   */
+  public $facetOptions;
   protected $facetOptionsType = FacetOptions::class;
   protected $facetOptionsDataType = 'array';
   /**
@@ -34,10 +46,22 @@ class SearchRequest extends \Google\Collection
    * @var string
    */
   public $query;
+  /**
+   * @var QueryInterpretationOptions
+   */
+  public $queryInterpretationOptions;
   protected $queryInterpretationOptionsType = QueryInterpretationOptions::class;
   protected $queryInterpretationOptionsDataType = '';
+  /**
+   * @var RequestOptions
+   */
+  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
+  /**
+   * @var SortOptions
+   */
+  public $sortOptions;
   protected $sortOptionsType = SortOptions::class;
   protected $sortOptionsDataType = '';
   /**

@@ -19,12 +19,28 @@ namespace Google\Service\CloudSearch;
 
 class RestrictItem extends \Google\Model
 {
+  /**
+   * @var DriveFollowUpRestrict
+   */
+  public $driveFollowUpRestrict;
   protected $driveFollowUpRestrictType = DriveFollowUpRestrict::class;
   protected $driveFollowUpRestrictDataType = '';
+  /**
+   * @var DriveLocationRestrict
+   */
+  public $driveLocationRestrict;
   protected $driveLocationRestrictType = DriveLocationRestrict::class;
   protected $driveLocationRestrictDataType = '';
+  /**
+   * @var DriveMimeTypeRestrict
+   */
+  public $driveMimeTypeRestrict;
   protected $driveMimeTypeRestrictType = DriveMimeTypeRestrict::class;
   protected $driveMimeTypeRestrictDataType = '';
+  /**
+   * @var DriveTimeSpanRestrict
+   */
+  public $driveTimeSpanRestrict;
   protected $driveTimeSpanRestrictType = DriveTimeSpanRestrict::class;
   protected $driveTimeSpanRestrictDataType = '';
   /**

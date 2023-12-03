@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class Snippet extends \Google\Collection
 {
   protected $collection_key = 'matchRanges';
+  /**
+   * @var MatchRange[]
+   */
+  public $matchRanges;
   protected $matchRangesType = MatchRange::class;
   protected $matchRangesDataType = 'array';
   /**

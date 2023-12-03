@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class SearchApplicationUserStats extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**

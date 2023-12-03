@@ -20,8 +20,16 @@ namespace Google\Service\CloudSearch;
 class SearchApplicationQueryStats extends \Google\Collection
 {
   protected $collection_key = 'queryCountByStatus';
+  /**
+   * @var Date
+   */
+  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
+  /**
+   * @var QueryCountByStatus[]
+   */
+  public $queryCountByStatus;
   protected $queryCountByStatusType = QueryCountByStatus::class;
   protected $queryCountByStatusDataType = 'array';
 

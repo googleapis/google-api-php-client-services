@@ -23,6 +23,10 @@ class Value extends \Google\Model
    * @var bool
    */
   public $booleanValue;
+  /**
+   * @var Date
+   */
+  public $dateValue;
   protected $dateValueType = Date::class;
   protected $dateValueDataType = '';
   public $doubleValue;

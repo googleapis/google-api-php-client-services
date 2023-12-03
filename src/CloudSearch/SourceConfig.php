@@ -19,10 +19,22 @@ namespace Google\Service\CloudSearch;
 
 class SourceConfig extends \Google\Model
 {
+  /**
+   * @var SourceCrowdingConfig
+   */
+  public $crowdingConfig;
   protected $crowdingConfigType = SourceCrowdingConfig::class;
   protected $crowdingConfigDataType = '';
+  /**
+   * @var SourceScoringConfig
+   */
+  public $scoringConfig;
   protected $scoringConfigType = SourceScoringConfig::class;
   protected $scoringConfigDataType = '';
+  /**
+   * @var Source
+   */
+  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
 

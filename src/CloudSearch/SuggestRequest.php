@@ -20,12 +20,20 @@ namespace Google\Service\CloudSearch;
 class SuggestRequest extends \Google\Collection
 {
   protected $collection_key = 'dataSourceRestrictions';
+  /**
+   * @var DataSourceRestriction[]
+   */
+  public $dataSourceRestrictions;
   protected $dataSourceRestrictionsType = DataSourceRestriction::class;
   protected $dataSourceRestrictionsDataType = 'array';
   /**
    * @var string
    */
   public $query;
+  /**
+   * @var RequestOptions
+   */
+  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
 

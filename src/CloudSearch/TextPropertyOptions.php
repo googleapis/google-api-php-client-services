@@ -19,8 +19,16 @@ namespace Google\Service\CloudSearch;
 
 class TextPropertyOptions extends \Google\Model
 {
+  /**
+   * @var TextOperatorOptions
+   */
+  public $operatorOptions;
   protected $operatorOptionsType = TextOperatorOptions::class;
   protected $operatorOptionsDataType = '';
+  /**
+   * @var RetrievalImportance
+   */
+  public $retrievalImportance;
   protected $retrievalImportanceType = RetrievalImportance::class;
   protected $retrievalImportanceDataType = '';
 

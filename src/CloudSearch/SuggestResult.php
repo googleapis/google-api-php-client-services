@@ -19,10 +19,22 @@ namespace Google\Service\CloudSearch;
 
 class SuggestResult extends \Google\Model
 {
+  /**
+   * @var PeopleSuggestion
+   */
+  public $peopleSuggestion;
   protected $peopleSuggestionType = PeopleSuggestion::class;
   protected $peopleSuggestionDataType = '';
+  /**
+   * @var QuerySuggestion
+   */
+  public $querySuggestion;
   protected $querySuggestionType = QuerySuggestion::class;
   protected $querySuggestionDataType = '';
+  /**
+   * @var Source
+   */
+  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class ResultDisplayLine extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var ResultDisplayField[]
+   */
+  public $fields;
   protected $fieldsType = ResultDisplayField::class;
   protected $fieldsDataType = 'array';
 

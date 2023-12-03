@@ -28,6 +28,10 @@ class ProcessingError extends \Google\Collection
    * @var string
    */
   public $errorMessage;
+  /**
+   * @var FieldViolation[]
+   */
+  public $fieldViolations;
   protected $fieldViolationsType = FieldViolation::class;
   protected $fieldViolationsDataType = 'array';
 

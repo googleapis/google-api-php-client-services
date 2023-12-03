@@ -19,18 +19,46 @@ namespace Google\Service\CloudSearch;
 
 class PropertyDefinition extends \Google\Model
 {
+  /**
+   * @var BooleanPropertyOptions
+   */
+  public $booleanPropertyOptions;
   protected $booleanPropertyOptionsType = BooleanPropertyOptions::class;
   protected $booleanPropertyOptionsDataType = '';
+  /**
+   * @var DatePropertyOptions
+   */
+  public $datePropertyOptions;
   protected $datePropertyOptionsType = DatePropertyOptions::class;
   protected $datePropertyOptionsDataType = '';
+  /**
+   * @var PropertyDisplayOptions
+   */
+  public $displayOptions;
   protected $displayOptionsType = PropertyDisplayOptions::class;
   protected $displayOptionsDataType = '';
+  /**
+   * @var DoublePropertyOptions
+   */
+  public $doublePropertyOptions;
   protected $doublePropertyOptionsType = DoublePropertyOptions::class;
   protected $doublePropertyOptionsDataType = '';
+  /**
+   * @var EnumPropertyOptions
+   */
+  public $enumPropertyOptions;
   protected $enumPropertyOptionsType = EnumPropertyOptions::class;
   protected $enumPropertyOptionsDataType = '';
+  /**
+   * @var HtmlPropertyOptions
+   */
+  public $htmlPropertyOptions;
   protected $htmlPropertyOptionsType = HtmlPropertyOptions::class;
   protected $htmlPropertyOptionsDataType = '';
+  /**
+   * @var IntegerPropertyOptions
+   */
+  public $integerPropertyOptions;
   protected $integerPropertyOptionsType = IntegerPropertyOptions::class;
   protected $integerPropertyOptionsDataType = '';
   /**
@@ -61,10 +89,22 @@ class PropertyDefinition extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var ObjectPropertyOptions
+   */
+  public $objectPropertyOptions;
   protected $objectPropertyOptionsType = ObjectPropertyOptions::class;
   protected $objectPropertyOptionsDataType = '';
+  /**
+   * @var TextPropertyOptions
+   */
+  public $textPropertyOptions;
   protected $textPropertyOptionsType = TextPropertyOptions::class;
   protected $textPropertyOptionsDataType = '';
+  /**
+   * @var TimestampPropertyOptions
+   */
+  public $timestampPropertyOptions;
   protected $timestampPropertyOptionsType = TimestampPropertyOptions::class;
   protected $timestampPropertyOptionsDataType = '';
 

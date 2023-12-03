@@ -20,10 +20,22 @@ namespace Google\Service\CloudSearch;
 class SearchApplication extends \Google\Collection
 {
   protected $collection_key = 'sourceConfig';
+  /**
+   * @var DataSourceRestriction[]
+   */
+  public $dataSourceRestrictions;
   protected $dataSourceRestrictionsType = DataSourceRestriction::class;
   protected $dataSourceRestrictionsDataType = 'array';
+  /**
+   * @var FacetOptions[]
+   */
+  public $defaultFacetOptions;
   protected $defaultFacetOptionsType = FacetOptions::class;
   protected $defaultFacetOptionsDataType = 'array';
+  /**
+   * @var SortOptions
+   */
+  public $defaultSortOptions;
   protected $defaultSortOptionsType = SortOptions::class;
   protected $defaultSortOptionsDataType = '';
   /**
@@ -42,14 +54,26 @@ class SearchApplication extends \Google\Collection
    * @var string[]
    */
   public $operationIds;
+  /**
+   * @var QueryInterpretationConfig
+   */
+  public $queryInterpretationConfig;
   protected $queryInterpretationConfigType = QueryInterpretationConfig::class;
   protected $queryInterpretationConfigDataType = '';
   /**
    * @var bool
    */
   public $returnResultThumbnailUrls;
+  /**
+   * @var ScoringConfig
+   */
+  public $scoringConfig;
   protected $scoringConfigType = ScoringConfig::class;
   protected $scoringConfigDataType = '';
+  /**
+   * @var SourceConfig[]
+   */
+  public $sourceConfig;
   protected $sourceConfigType = SourceConfig::class;
   protected $sourceConfigDataType = 'array';
 

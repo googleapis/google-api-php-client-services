@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class StructuredDataObject extends \Google\Collection
 {
   protected $collection_key = 'properties';
+  /**
+   * @var NamedProperty[]
+   */
+  public $properties;
   protected $propertiesType = NamedProperty::class;
   protected $propertiesDataType = 'array';
 

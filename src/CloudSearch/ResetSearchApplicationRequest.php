@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class ResetSearchApplicationRequest extends \Google\Model
 {
+  /**
+   * @var DebugOptions
+   */
+  public $debugOptions;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
 

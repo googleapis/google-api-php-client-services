@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class UnmappedIdentity extends \Google\Model
 {
+  /**
+   * @var Principal
+   */
+  public $externalIdentity;
   protected $externalIdentityType = Principal::class;
   protected $externalIdentityDataType = '';
   /**

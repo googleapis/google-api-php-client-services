@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class SearchItemsByViewUrlResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Item[]
+   */
+  public $items;
   protected $itemsType = Item::class;
   protected $itemsDataType = 'array';
   /**

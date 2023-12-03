@@ -20,16 +20,32 @@ namespace Google\Service\CloudSearch;
 class SearchResponse extends \Google\Collection
 {
   protected $collection_key = 'structuredResults';
+  /**
+   * @var ResponseDebugInfo
+   */
+  public $debugInfo;
   protected $debugInfoType = ResponseDebugInfo::class;
   protected $debugInfoDataType = '';
+  /**
+   * @var ErrorInfo
+   */
+  public $errorInfo;
   protected $errorInfoType = ErrorInfo::class;
   protected $errorInfoDataType = '';
+  /**
+   * @var FacetResult[]
+   */
+  public $facetResults;
   protected $facetResultsType = FacetResult::class;
   protected $facetResultsDataType = 'array';
   /**
    * @var bool
    */
   public $hasMoreResults;
+  /**
+   * @var QueryInterpretation
+   */
+  public $queryInterpretation;
   protected $queryInterpretationType = QueryInterpretation::class;
   protected $queryInterpretationDataType = '';
   /**
@@ -40,12 +56,28 @@ class SearchResponse extends \Google\Collection
    * @var string
    */
   public $resultCountExact;
+  /**
+   * @var ResultCounts
+   */
+  public $resultCounts;
   protected $resultCountsType = ResultCounts::class;
   protected $resultCountsDataType = '';
+  /**
+   * @var SearchResult[]
+   */
+  public $results;
   protected $resultsType = SearchResult::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var SpellResult[]
+   */
+  public $spellResults;
   protected $spellResultsType = SpellResult::class;
   protected $spellResultsDataType = 'array';
+  /**
+   * @var StructuredResult[]
+   */
+  public $structuredResults;
   protected $structuredResultsType = StructuredResult::class;
   protected $structuredResultsDataType = 'array';
 

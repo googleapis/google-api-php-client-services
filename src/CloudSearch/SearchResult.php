@@ -20,12 +20,28 @@ namespace Google\Service\CloudSearch;
 class SearchResult extends \Google\Collection
 {
   protected $collection_key = 'clusteredResults';
+  /**
+   * @var SearchResult[]
+   */
+  public $clusteredResults;
   protected $clusteredResultsType = SearchResult::class;
   protected $clusteredResultsDataType = 'array';
+  /**
+   * @var ResultDebugInfo
+   */
+  public $debugInfo;
   protected $debugInfoType = ResultDebugInfo::class;
   protected $debugInfoDataType = '';
+  /**
+   * @var Metadata
+   */
+  public $metadata;
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var Snippet
+   */
+  public $snippet;
   protected $snippetType = Snippet::class;
   protected $snippetDataType = '';
   /**
