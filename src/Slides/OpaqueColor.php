@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class OpaqueColor extends \Google\Model
 {
+  /**
+   * @var RgbColor
+   */
+  public $rgbColor;
   protected $rgbColorType = RgbColor::class;
   protected $rgbColorDataType = '';
   /**

@@ -27,18 +27,38 @@ class ParagraphStyle extends \Google\Model
    * @var string
    */
   public $direction;
+  /**
+   * @var Dimension
+   */
+  public $indentEnd;
   protected $indentEndType = Dimension::class;
   protected $indentEndDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $indentFirstLine;
   protected $indentFirstLineType = Dimension::class;
   protected $indentFirstLineDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $indentStart;
   protected $indentStartType = Dimension::class;
   protected $indentStartDataType = '';
   /**
    * @var float
    */
   public $lineSpacing;
+  /**
+   * @var Dimension
+   */
+  public $spaceAbove;
   protected $spaceAboveType = Dimension::class;
   protected $spaceAboveDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $spaceBelow;
   protected $spaceBelowType = Dimension::class;
   protected $spaceBelowDataType = '';
   /**

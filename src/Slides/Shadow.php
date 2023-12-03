@@ -27,8 +27,16 @@ class Shadow extends \Google\Model
    * @var float
    */
   public $alpha;
+  /**
+   * @var Dimension
+   */
+  public $blurRadius;
   protected $blurRadiusType = Dimension::class;
   protected $blurRadiusDataType = '';
+  /**
+   * @var OpaqueColor
+   */
+  public $color;
   protected $colorType = OpaqueColor::class;
   protected $colorDataType = '';
   /**
@@ -39,6 +47,10 @@ class Shadow extends \Google\Model
    * @var bool
    */
   public $rotateWithShape;
+  /**
+   * @var AffineTransform
+   */
+  public $transform;
   protected $transformType = AffineTransform::class;
   protected $transformDataType = '';
   /**

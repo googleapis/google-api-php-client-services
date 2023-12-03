@@ -20,18 +20,38 @@ namespace Google\Service\Slides;
 class Page extends \Google\Collection
 {
   protected $collection_key = 'pageElements';
+  /**
+   * @var LayoutProperties
+   */
+  public $layoutProperties;
   protected $layoutPropertiesType = LayoutProperties::class;
   protected $layoutPropertiesDataType = '';
+  /**
+   * @var MasterProperties
+   */
+  public $masterProperties;
   protected $masterPropertiesType = MasterProperties::class;
   protected $masterPropertiesDataType = '';
+  /**
+   * @var NotesProperties
+   */
+  public $notesProperties;
   protected $notesPropertiesType = NotesProperties::class;
   protected $notesPropertiesDataType = '';
   /**
    * @var string
    */
   public $objectId;
+  /**
+   * @var PageElement[]
+   */
+  public $pageElements;
   protected $pageElementsType = PageElement::class;
   protected $pageElementsDataType = 'array';
+  /**
+   * @var PageProperties
+   */
+  public $pageProperties;
   protected $pagePropertiesType = PageProperties::class;
   protected $pagePropertiesDataType = '';
   /**
@@ -42,6 +62,10 @@ class Page extends \Google\Collection
    * @var string
    */
   public $revisionId;
+  /**
+   * @var SlideProperties
+   */
+  public $slideProperties;
   protected $slidePropertiesType = SlideProperties::class;
   protected $slidePropertiesDataType = '';
 

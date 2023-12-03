@@ -19,92 +19,268 @@ namespace Google\Service\Slides;
 
 class Request extends \Google\Model
 {
+  /**
+   * @var CreateImageRequest
+   */
+  public $createImage;
   protected $createImageType = CreateImageRequest::class;
   protected $createImageDataType = '';
+  /**
+   * @var CreateLineRequest
+   */
+  public $createLine;
   protected $createLineType = CreateLineRequest::class;
   protected $createLineDataType = '';
+  /**
+   * @var CreateParagraphBulletsRequest
+   */
+  public $createParagraphBullets;
   protected $createParagraphBulletsType = CreateParagraphBulletsRequest::class;
   protected $createParagraphBulletsDataType = '';
+  /**
+   * @var CreateShapeRequest
+   */
+  public $createShape;
   protected $createShapeType = CreateShapeRequest::class;
   protected $createShapeDataType = '';
+  /**
+   * @var CreateSheetsChartRequest
+   */
+  public $createSheetsChart;
   protected $createSheetsChartType = CreateSheetsChartRequest::class;
   protected $createSheetsChartDataType = '';
+  /**
+   * @var CreateSlideRequest
+   */
+  public $createSlide;
   protected $createSlideType = CreateSlideRequest::class;
   protected $createSlideDataType = '';
+  /**
+   * @var CreateTableRequest
+   */
+  public $createTable;
   protected $createTableType = CreateTableRequest::class;
   protected $createTableDataType = '';
+  /**
+   * @var CreateVideoRequest
+   */
+  public $createVideo;
   protected $createVideoType = CreateVideoRequest::class;
   protected $createVideoDataType = '';
+  /**
+   * @var DeleteObjectRequest
+   */
+  public $deleteObject;
   protected $deleteObjectType = DeleteObjectRequest::class;
   protected $deleteObjectDataType = '';
+  /**
+   * @var DeleteParagraphBulletsRequest
+   */
+  public $deleteParagraphBullets;
   protected $deleteParagraphBulletsType = DeleteParagraphBulletsRequest::class;
   protected $deleteParagraphBulletsDataType = '';
+  /**
+   * @var DeleteTableColumnRequest
+   */
+  public $deleteTableColumn;
   protected $deleteTableColumnType = DeleteTableColumnRequest::class;
   protected $deleteTableColumnDataType = '';
+  /**
+   * @var DeleteTableRowRequest
+   */
+  public $deleteTableRow;
   protected $deleteTableRowType = DeleteTableRowRequest::class;
   protected $deleteTableRowDataType = '';
+  /**
+   * @var DeleteTextRequest
+   */
+  public $deleteText;
   protected $deleteTextType = DeleteTextRequest::class;
   protected $deleteTextDataType = '';
+  /**
+   * @var DuplicateObjectRequest
+   */
+  public $duplicateObject;
   protected $duplicateObjectType = DuplicateObjectRequest::class;
   protected $duplicateObjectDataType = '';
+  /**
+   * @var GroupObjectsRequest
+   */
+  public $groupObjects;
   protected $groupObjectsType = GroupObjectsRequest::class;
   protected $groupObjectsDataType = '';
+  /**
+   * @var InsertTableColumnsRequest
+   */
+  public $insertTableColumns;
   protected $insertTableColumnsType = InsertTableColumnsRequest::class;
   protected $insertTableColumnsDataType = '';
+  /**
+   * @var InsertTableRowsRequest
+   */
+  public $insertTableRows;
   protected $insertTableRowsType = InsertTableRowsRequest::class;
   protected $insertTableRowsDataType = '';
+  /**
+   * @var InsertTextRequest
+   */
+  public $insertText;
   protected $insertTextType = InsertTextRequest::class;
   protected $insertTextDataType = '';
+  /**
+   * @var MergeTableCellsRequest
+   */
+  public $mergeTableCells;
   protected $mergeTableCellsType = MergeTableCellsRequest::class;
   protected $mergeTableCellsDataType = '';
+  /**
+   * @var RefreshSheetsChartRequest
+   */
+  public $refreshSheetsChart;
   protected $refreshSheetsChartType = RefreshSheetsChartRequest::class;
   protected $refreshSheetsChartDataType = '';
+  /**
+   * @var ReplaceAllShapesWithImageRequest
+   */
+  public $replaceAllShapesWithImage;
   protected $replaceAllShapesWithImageType = ReplaceAllShapesWithImageRequest::class;
   protected $replaceAllShapesWithImageDataType = '';
+  /**
+   * @var ReplaceAllShapesWithSheetsChartRequest
+   */
+  public $replaceAllShapesWithSheetsChart;
   protected $replaceAllShapesWithSheetsChartType = ReplaceAllShapesWithSheetsChartRequest::class;
   protected $replaceAllShapesWithSheetsChartDataType = '';
+  /**
+   * @var ReplaceAllTextRequest
+   */
+  public $replaceAllText;
   protected $replaceAllTextType = ReplaceAllTextRequest::class;
   protected $replaceAllTextDataType = '';
+  /**
+   * @var ReplaceImageRequest
+   */
+  public $replaceImage;
   protected $replaceImageType = ReplaceImageRequest::class;
   protected $replaceImageDataType = '';
+  /**
+   * @var RerouteLineRequest
+   */
+  public $rerouteLine;
   protected $rerouteLineType = RerouteLineRequest::class;
   protected $rerouteLineDataType = '';
+  /**
+   * @var UngroupObjectsRequest
+   */
+  public $ungroupObjects;
   protected $ungroupObjectsType = UngroupObjectsRequest::class;
   protected $ungroupObjectsDataType = '';
+  /**
+   * @var UnmergeTableCellsRequest
+   */
+  public $unmergeTableCells;
   protected $unmergeTableCellsType = UnmergeTableCellsRequest::class;
   protected $unmergeTableCellsDataType = '';
+  /**
+   * @var UpdateImagePropertiesRequest
+   */
+  public $updateImageProperties;
   protected $updateImagePropertiesType = UpdateImagePropertiesRequest::class;
   protected $updateImagePropertiesDataType = '';
+  /**
+   * @var UpdateLineCategoryRequest
+   */
+  public $updateLineCategory;
   protected $updateLineCategoryType = UpdateLineCategoryRequest::class;
   protected $updateLineCategoryDataType = '';
+  /**
+   * @var UpdateLinePropertiesRequest
+   */
+  public $updateLineProperties;
   protected $updateLinePropertiesType = UpdateLinePropertiesRequest::class;
   protected $updateLinePropertiesDataType = '';
+  /**
+   * @var UpdatePageElementAltTextRequest
+   */
+  public $updatePageElementAltText;
   protected $updatePageElementAltTextType = UpdatePageElementAltTextRequest::class;
   protected $updatePageElementAltTextDataType = '';
+  /**
+   * @var UpdatePageElementTransformRequest
+   */
+  public $updatePageElementTransform;
   protected $updatePageElementTransformType = UpdatePageElementTransformRequest::class;
   protected $updatePageElementTransformDataType = '';
+  /**
+   * @var UpdatePageElementsZOrderRequest
+   */
+  public $updatePageElementsZOrder;
   protected $updatePageElementsZOrderType = UpdatePageElementsZOrderRequest::class;
   protected $updatePageElementsZOrderDataType = '';
+  /**
+   * @var UpdatePagePropertiesRequest
+   */
+  public $updatePageProperties;
   protected $updatePagePropertiesType = UpdatePagePropertiesRequest::class;
   protected $updatePagePropertiesDataType = '';
+  /**
+   * @var UpdateParagraphStyleRequest
+   */
+  public $updateParagraphStyle;
   protected $updateParagraphStyleType = UpdateParagraphStyleRequest::class;
   protected $updateParagraphStyleDataType = '';
+  /**
+   * @var UpdateShapePropertiesRequest
+   */
+  public $updateShapeProperties;
   protected $updateShapePropertiesType = UpdateShapePropertiesRequest::class;
   protected $updateShapePropertiesDataType = '';
+  /**
+   * @var UpdateSlidePropertiesRequest
+   */
+  public $updateSlideProperties;
   protected $updateSlidePropertiesType = UpdateSlidePropertiesRequest::class;
   protected $updateSlidePropertiesDataType = '';
+  /**
+   * @var UpdateSlidesPositionRequest
+   */
+  public $updateSlidesPosition;
   protected $updateSlidesPositionType = UpdateSlidesPositionRequest::class;
   protected $updateSlidesPositionDataType = '';
+  /**
+   * @var UpdateTableBorderPropertiesRequest
+   */
+  public $updateTableBorderProperties;
   protected $updateTableBorderPropertiesType = UpdateTableBorderPropertiesRequest::class;
   protected $updateTableBorderPropertiesDataType = '';
+  /**
+   * @var UpdateTableCellPropertiesRequest
+   */
+  public $updateTableCellProperties;
   protected $updateTableCellPropertiesType = UpdateTableCellPropertiesRequest::class;
   protected $updateTableCellPropertiesDataType = '';
+  /**
+   * @var UpdateTableColumnPropertiesRequest
+   */
+  public $updateTableColumnProperties;
   protected $updateTableColumnPropertiesType = UpdateTableColumnPropertiesRequest::class;
   protected $updateTableColumnPropertiesDataType = '';
+  /**
+   * @var UpdateTableRowPropertiesRequest
+   */
+  public $updateTableRowProperties;
   protected $updateTableRowPropertiesType = UpdateTableRowPropertiesRequest::class;
   protected $updateTableRowPropertiesDataType = '';
+  /**
+   * @var UpdateTextStyleRequest
+   */
+  public $updateTextStyle;
   protected $updateTextStyleType = UpdateTextStyleRequest::class;
   protected $updateTextStyleDataType = '';
+  /**
+   * @var UpdateVideoPropertiesRequest
+   */
+  public $updateVideoProperties;
   protected $updateVideoPropertiesType = UpdateVideoPropertiesRequest::class;
   protected $updateVideoPropertiesDataType = '';
 

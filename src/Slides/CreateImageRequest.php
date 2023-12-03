@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class CreateImageRequest extends \Google\Model
 {
+  /**
+   * @var PageElementProperties
+   */
+  public $elementProperties;
   protected $elementPropertiesType = PageElementProperties::class;
   protected $elementPropertiesDataType = '';
   /**

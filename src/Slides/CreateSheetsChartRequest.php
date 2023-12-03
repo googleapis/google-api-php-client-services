@@ -23,6 +23,10 @@ class CreateSheetsChartRequest extends \Google\Model
    * @var int
    */
   public $chartId;
+  /**
+   * @var PageElementProperties
+   */
+  public $elementProperties;
   protected $elementPropertiesType = PageElementProperties::class;
   protected $elementPropertiesDataType = '';
   /**

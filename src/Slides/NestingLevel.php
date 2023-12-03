@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class NestingLevel extends \Google\Model
 {
+  /**
+   * @var TextStyle
+   */
+  public $bulletStyle;
   protected $bulletStyleType = TextStyle::class;
   protected $bulletStyleDataType = '';
 

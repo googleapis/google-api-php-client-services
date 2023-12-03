@@ -20,16 +20,32 @@ namespace Google\Service\Slides;
 class Presentation extends \Google\Collection
 {
   protected $collection_key = 'slides';
+  /**
+   * @var Page[]
+   */
+  public $layouts;
   protected $layoutsType = Page::class;
   protected $layoutsDataType = 'array';
   /**
    * @var string
    */
   public $locale;
+  /**
+   * @var Page[]
+   */
+  public $masters;
   protected $mastersType = Page::class;
   protected $mastersDataType = 'array';
+  /**
+   * @var Page
+   */
+  public $notesMaster;
   protected $notesMasterType = Page::class;
   protected $notesMasterDataType = '';
+  /**
+   * @var Size
+   */
+  public $pageSize;
   protected $pageSizeType = Size::class;
   protected $pageSizeDataType = '';
   /**
@@ -40,6 +56,10 @@ class Presentation extends \Google\Collection
    * @var string
    */
   public $revisionId;
+  /**
+   * @var Page[]
+   */
+  public $slides;
   protected $slidesType = Page::class;
   protected $slidesDataType = 'array';
   /**

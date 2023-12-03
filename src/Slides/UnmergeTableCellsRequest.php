@@ -23,6 +23,10 @@ class UnmergeTableCellsRequest extends \Google\Model
    * @var string
    */
   public $objectId;
+  /**
+   * @var TableRange
+   */
+  public $tableRange;
   protected $tableRangeType = TableRange::class;
   protected $tableRangeDataType = '';
 

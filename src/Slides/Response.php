@@ -19,28 +19,76 @@ namespace Google\Service\Slides;
 
 class Response extends \Google\Model
 {
+  /**
+   * @var CreateImageResponse
+   */
+  public $createImage;
   protected $createImageType = CreateImageResponse::class;
   protected $createImageDataType = '';
+  /**
+   * @var CreateLineResponse
+   */
+  public $createLine;
   protected $createLineType = CreateLineResponse::class;
   protected $createLineDataType = '';
+  /**
+   * @var CreateShapeResponse
+   */
+  public $createShape;
   protected $createShapeType = CreateShapeResponse::class;
   protected $createShapeDataType = '';
+  /**
+   * @var CreateSheetsChartResponse
+   */
+  public $createSheetsChart;
   protected $createSheetsChartType = CreateSheetsChartResponse::class;
   protected $createSheetsChartDataType = '';
+  /**
+   * @var CreateSlideResponse
+   */
+  public $createSlide;
   protected $createSlideType = CreateSlideResponse::class;
   protected $createSlideDataType = '';
+  /**
+   * @var CreateTableResponse
+   */
+  public $createTable;
   protected $createTableType = CreateTableResponse::class;
   protected $createTableDataType = '';
+  /**
+   * @var CreateVideoResponse
+   */
+  public $createVideo;
   protected $createVideoType = CreateVideoResponse::class;
   protected $createVideoDataType = '';
+  /**
+   * @var DuplicateObjectResponse
+   */
+  public $duplicateObject;
   protected $duplicateObjectType = DuplicateObjectResponse::class;
   protected $duplicateObjectDataType = '';
+  /**
+   * @var GroupObjectsResponse
+   */
+  public $groupObjects;
   protected $groupObjectsType = GroupObjectsResponse::class;
   protected $groupObjectsDataType = '';
+  /**
+   * @var ReplaceAllShapesWithImageResponse
+   */
+  public $replaceAllShapesWithImage;
   protected $replaceAllShapesWithImageType = ReplaceAllShapesWithImageResponse::class;
   protected $replaceAllShapesWithImageDataType = '';
+  /**
+   * @var ReplaceAllShapesWithSheetsChartResponse
+   */
+  public $replaceAllShapesWithSheetsChart;
   protected $replaceAllShapesWithSheetsChartType = ReplaceAllShapesWithSheetsChartResponse::class;
   protected $replaceAllShapesWithSheetsChartDataType = '';
+  /**
+   * @var ReplaceAllTextResponse
+   */
+  public $replaceAllText;
   protected $replaceAllTextType = ReplaceAllTextResponse::class;
   protected $replaceAllTextDataType = '';
 

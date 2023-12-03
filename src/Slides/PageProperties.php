@@ -19,8 +19,16 @@ namespace Google\Service\Slides;
 
 class PageProperties extends \Google\Model
 {
+  /**
+   * @var ColorScheme
+   */
+  public $colorScheme;
   protected $colorSchemeType = ColorScheme::class;
   protected $colorSchemeDataType = '';
+  /**
+   * @var PageBackgroundFill
+   */
+  public $pageBackgroundFill;
   protected $pageBackgroundFillType = PageBackgroundFill::class;
   protected $pageBackgroundFillDataType = '';
 

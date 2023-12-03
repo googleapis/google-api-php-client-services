@@ -31,8 +31,16 @@ class UpdateTableBorderPropertiesRequest extends \Google\Model
    * @var string
    */
   public $objectId;
+  /**
+   * @var TableBorderProperties
+   */
+  public $tableBorderProperties;
   protected $tableBorderPropertiesType = TableBorderProperties::class;
   protected $tableBorderPropertiesDataType = '';
+  /**
+   * @var TableRange
+   */
+  public $tableRange;
   protected $tableRangeType = TableRange::class;
   protected $tableRangeDataType = '';
 

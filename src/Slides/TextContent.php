@@ -20,8 +20,16 @@ namespace Google\Service\Slides;
 class TextContent extends \Google\Collection
 {
   protected $collection_key = 'textElements';
+  /**
+   * @var SlidesList[]
+   */
+  public $lists;
   protected $listsType = SlidesList::class;
   protected $listsDataType = 'map';
+  /**
+   * @var TextElement[]
+   */
+  public $textElements;
   protected $textElementsType = TextElement::class;
   protected $textElementsDataType = 'array';
 

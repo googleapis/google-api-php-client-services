@@ -24,16 +24,32 @@ class Table extends \Google\Collection
    * @var int
    */
   public $columns;
+  /**
+   * @var TableBorderRow[]
+   */
+  public $horizontalBorderRows;
   protected $horizontalBorderRowsType = TableBorderRow::class;
   protected $horizontalBorderRowsDataType = 'array';
   /**
    * @var int
    */
   public $rows;
+  /**
+   * @var TableColumnProperties[]
+   */
+  public $tableColumns;
   protected $tableColumnsType = TableColumnProperties::class;
   protected $tableColumnsDataType = 'array';
+  /**
+   * @var TableRow[]
+   */
+  public $tableRows;
   protected $tableRowsType = TableRow::class;
   protected $tableRowsDataType = 'array';
+  /**
+   * @var TableBorderRow[]
+   */
+  public $verticalBorderRows;
   protected $verticalBorderRowsType = TableBorderRow::class;
   protected $verticalBorderRowsDataType = 'array';
 

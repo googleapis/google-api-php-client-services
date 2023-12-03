@@ -32,6 +32,10 @@ class UpdateTableColumnPropertiesRequest extends \Google\Collection
    * @var string
    */
   public $objectId;
+  /**
+   * @var TableColumnProperties
+   */
+  public $tableColumnProperties;
   protected $tableColumnPropertiesType = TableColumnProperties::class;
   protected $tableColumnPropertiesDataType = '';
 

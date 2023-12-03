@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class TableBorderFill extends \Google\Model
 {
+  /**
+   * @var SolidFill
+   */
+  public $solidFill;
   protected $solidFillType = SolidFill::class;
   protected $solidFillDataType = '';
 

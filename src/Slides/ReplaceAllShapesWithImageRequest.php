@@ -20,6 +20,10 @@ namespace Google\Service\Slides;
 class ReplaceAllShapesWithImageRequest extends \Google\Collection
 {
   protected $collection_key = 'pageObjectIds';
+  /**
+   * @var SubstringMatchCriteria
+   */
+  public $containsText;
   protected $containsTextType = SubstringMatchCriteria::class;
   protected $containsTextDataType = '';
   /**

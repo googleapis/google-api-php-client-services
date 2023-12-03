@@ -27,18 +27,38 @@ class LineProperties extends \Google\Model
    * @var string
    */
   public $endArrow;
+  /**
+   * @var LineConnection
+   */
+  public $endConnection;
   protected $endConnectionType = LineConnection::class;
   protected $endConnectionDataType = '';
+  /**
+   * @var LineFill
+   */
+  public $lineFill;
   protected $lineFillType = LineFill::class;
   protected $lineFillDataType = '';
+  /**
+   * @var Link
+   */
+  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**
    * @var string
    */
   public $startArrow;
+  /**
+   * @var LineConnection
+   */
+  public $startConnection;
   protected $startConnectionType = LineConnection::class;
   protected $startConnectionDataType = '';
+  /**
+   * @var Dimension
+   */
+  public $weight;
   protected $weightType = Dimension::class;
   protected $weightDataType = '';
 

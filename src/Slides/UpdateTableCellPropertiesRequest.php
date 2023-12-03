@@ -27,8 +27,16 @@ class UpdateTableCellPropertiesRequest extends \Google\Model
    * @var string
    */
   public $objectId;
+  /**
+   * @var TableCellProperties
+   */
+  public $tableCellProperties;
   protected $tableCellPropertiesType = TableCellProperties::class;
   protected $tableCellPropertiesDataType = '';
+  /**
+   * @var TableRange
+   */
+  public $tableRange;
   protected $tableRangeType = TableRange::class;
   protected $tableRangeDataType = '';
 

@@ -23,14 +23,26 @@ class TableCell extends \Google\Model
    * @var int
    */
   public $columnSpan;
+  /**
+   * @var TableCellLocation
+   */
+  public $location;
   protected $locationType = TableCellLocation::class;
   protected $locationDataType = '';
   /**
    * @var int
    */
   public $rowSpan;
+  /**
+   * @var TableCellProperties
+   */
+  public $tableCellProperties;
   protected $tableCellPropertiesType = TableCellProperties::class;
   protected $tableCellPropertiesDataType = '';
+  /**
+   * @var TextContent
+   */
+  public $text;
   protected $textType = TextContent::class;
   protected $textDataType = '';
 

@@ -19,14 +19,26 @@ namespace Google\Service\Slides;
 
 class Shape extends \Google\Model
 {
+  /**
+   * @var Placeholder
+   */
+  public $placeholder;
   protected $placeholderType = Placeholder::class;
   protected $placeholderDataType = '';
+  /**
+   * @var ShapeProperties
+   */
+  public $shapeProperties;
   protected $shapePropertiesType = ShapeProperties::class;
   protected $shapePropertiesDataType = '';
   /**
    * @var string
    */
   public $shapeType;
+  /**
+   * @var TextContent
+   */
+  public $text;
   protected $textType = TextContent::class;
   protected $textDataType = '';
 

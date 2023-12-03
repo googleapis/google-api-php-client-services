@@ -19,12 +19,20 @@ namespace Google\Service\Slides;
 
 class DeleteTextRequest extends \Google\Model
 {
+  /**
+   * @var TableCellLocation
+   */
+  public $cellLocation;
   protected $cellLocationType = TableCellLocation::class;
   protected $cellLocationDataType = '';
   /**
    * @var string
    */
   public $objectId;
+  /**
+   * @var Range
+   */
+  public $textRange;
   protected $textRangeType = Range::class;
   protected $textRangeDataType = '';
 

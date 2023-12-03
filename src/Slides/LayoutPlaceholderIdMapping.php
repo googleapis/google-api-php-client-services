@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class LayoutPlaceholderIdMapping extends \Google\Model
 {
+  /**
+   * @var Placeholder
+   */
+  public $layoutPlaceholder;
   protected $layoutPlaceholderType = Placeholder::class;
   protected $layoutPlaceholderDataType = '';
   /**

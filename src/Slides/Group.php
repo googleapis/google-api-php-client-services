@@ -20,6 +20,10 @@ namespace Google\Service\Slides;
 class Group extends \Google\Collection
 {
   protected $collection_key = 'children';
+  /**
+   * @var PageElement[]
+   */
+  public $children;
   protected $childrenType = PageElement::class;
   protected $childrenDataType = 'array';
 

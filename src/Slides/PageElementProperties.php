@@ -23,8 +23,16 @@ class PageElementProperties extends \Google\Model
    * @var string
    */
   public $pageObjectId;
+  /**
+   * @var Size
+   */
+  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
+  /**
+   * @var AffineTransform
+   */
+  public $transform;
   protected $transformType = AffineTransform::class;
   protected $transformDataType = '';
 

@@ -27,6 +27,10 @@ class SheetsChart extends \Google\Model
    * @var string
    */
   public $contentUrl;
+  /**
+   * @var SheetsChartProperties
+   */
+  public $sheetsChartProperties;
   protected $sheetsChartPropertiesType = SheetsChartProperties::class;
   protected $sheetsChartPropertiesDataType = '';
   /**

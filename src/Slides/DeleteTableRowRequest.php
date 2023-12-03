@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class DeleteTableRowRequest extends \Google\Model
 {
+  /**
+   * @var TableCellLocation
+   */
+  public $cellLocation;
   protected $cellLocationType = TableCellLocation::class;
   protected $cellLocationDataType = '';
   /**

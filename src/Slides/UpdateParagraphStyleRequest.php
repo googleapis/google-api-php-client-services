@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class UpdateParagraphStyleRequest extends \Google\Model
 {
+  /**
+   * @var TableCellLocation
+   */
+  public $cellLocation;
   protected $cellLocationType = TableCellLocation::class;
   protected $cellLocationDataType = '';
   /**
@@ -29,8 +33,16 @@ class UpdateParagraphStyleRequest extends \Google\Model
    * @var string
    */
   public $objectId;
+  /**
+   * @var ParagraphStyle
+   */
+  public $style;
   protected $styleType = ParagraphStyle::class;
   protected $styleDataType = '';
+  /**
+   * @var Range
+   */
+  public $textRange;
   protected $textRangeType = Range::class;
   protected $textRangeDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Slides;
 class ColorScheme extends \Google\Collection
 {
   protected $collection_key = 'colors';
+  /**
+   * @var ThemeColorPair[]
+   */
+  public $colors;
   protected $colorsType = ThemeColorPair::class;
   protected $colorsDataType = 'array';
 

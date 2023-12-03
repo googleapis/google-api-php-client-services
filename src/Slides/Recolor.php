@@ -24,6 +24,10 @@ class Recolor extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ColorStop[]
+   */
+  public $recolorStops;
   protected $recolorStopsType = ColorStop::class;
   protected $recolorStopsDataType = 'array';
 

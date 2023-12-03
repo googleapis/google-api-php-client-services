@@ -19,8 +19,16 @@ namespace Google\Service\Slides;
 
 class ParagraphMarker extends \Google\Model
 {
+  /**
+   * @var Bullet
+   */
+  public $bullet;
   protected $bulletType = Bullet::class;
   protected $bulletDataType = '';
+  /**
+   * @var ParagraphStyle
+   */
+  public $style;
   protected $styleType = ParagraphStyle::class;
   protected $styleDataType = '';
 

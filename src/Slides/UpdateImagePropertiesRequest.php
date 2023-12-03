@@ -23,6 +23,10 @@ class UpdateImagePropertiesRequest extends \Google\Model
    * @var string
    */
   public $fields;
+  /**
+   * @var ImageProperties
+   */
+  public $imageProperties;
   protected $imagePropertiesType = ImageProperties::class;
   protected $imagePropertiesDataType = '';
   /**

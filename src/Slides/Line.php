@@ -23,6 +23,10 @@ class Line extends \Google\Model
    * @var string
    */
   public $lineCategory;
+  /**
+   * @var LineProperties
+   */
+  public $lineProperties;
   protected $linePropertiesType = LineProperties::class;
   protected $linePropertiesDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class TableRowProperties extends \Google\Model
 {
+  /**
+   * @var Dimension
+   */
+  public $minRowHeight;
   protected $minRowHeightType = Dimension::class;
   protected $minRowHeightDataType = '';
 

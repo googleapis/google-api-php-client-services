@@ -19,18 +19,30 @@ namespace Google\Service\Slides;
 
 class TextElement extends \Google\Model
 {
+  /**
+   * @var AutoText
+   */
+  public $autoText;
   protected $autoTextType = AutoText::class;
   protected $autoTextDataType = '';
   /**
    * @var int
    */
   public $endIndex;
+  /**
+   * @var ParagraphMarker
+   */
+  public $paragraphMarker;
   protected $paragraphMarkerType = ParagraphMarker::class;
   protected $paragraphMarkerDataType = '';
   /**
    * @var int
    */
   public $startIndex;
+  /**
+   * @var TextRun
+   */
+  public $textRun;
   protected $textRunType = TextRun::class;
   protected $textRunDataType = '';
 

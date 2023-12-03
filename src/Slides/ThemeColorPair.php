@@ -19,6 +19,10 @@ namespace Google\Service\Slides;
 
 class ThemeColorPair extends \Google\Model
 {
+  /**
+   * @var RgbColor
+   */
+  public $color;
   protected $colorType = RgbColor::class;
   protected $colorDataType = '';
   /**

@@ -23,6 +23,10 @@ class CreateTableRequest extends \Google\Model
    * @var int
    */
   public $columns;
+  /**
+   * @var PageElementProperties
+   */
+  public $elementProperties;
   protected $elementPropertiesType = PageElementProperties::class;
   protected $elementPropertiesDataType = '';
   /**

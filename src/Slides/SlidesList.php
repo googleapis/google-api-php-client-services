@@ -23,6 +23,10 @@ class SlidesList extends \Google\Model
    * @var string
    */
   public $listId;
+  /**
+   * @var NestingLevel[]
+   */
+  public $nestingLevel;
   protected $nestingLevelType = NestingLevel::class;
   protected $nestingLevelDataType = 'map';
 

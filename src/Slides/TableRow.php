@@ -20,10 +20,22 @@ namespace Google\Service\Slides;
 class TableRow extends \Google\Collection
 {
   protected $collection_key = 'tableCells';
+  /**
+   * @var Dimension
+   */
+  public $rowHeight;
   protected $rowHeightType = Dimension::class;
   protected $rowHeightDataType = '';
+  /**
+   * @var TableCell[]
+   */
+  public $tableCells;
   protected $tableCellsType = TableCell::class;
   protected $tableCellsDataType = 'array';
+  /**
+   * @var TableRowProperties
+   */
+  public $tableRowProperties;
   protected $tableRowPropertiesType = TableRowProperties::class;
   protected $tableRowPropertiesDataType = '';
 

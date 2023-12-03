@@ -19,18 +19,38 @@ namespace Google\Service\Slides;
 
 class ShapeProperties extends \Google\Model
 {
+  /**
+   * @var Autofit
+   */
+  public $autofit;
   protected $autofitType = Autofit::class;
   protected $autofitDataType = '';
   /**
    * @var string
    */
   public $contentAlignment;
+  /**
+   * @var Link
+   */
+  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
+  /**
+   * @var Outline
+   */
+  public $outline;
   protected $outlineType = Outline::class;
   protected $outlineDataType = '';
+  /**
+   * @var Shadow
+   */
+  public $shadow;
   protected $shadowType = Shadow::class;
   protected $shadowDataType = '';
+  /**
+   * @var ShapeBackgroundFill
+   */
+  public $shapeBackgroundFill;
   protected $shapeBackgroundFillType = ShapeBackgroundFill::class;
   protected $shapeBackgroundFillDataType = '';
 

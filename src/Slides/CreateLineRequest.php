@@ -23,6 +23,10 @@ class CreateLineRequest extends \Google\Model
    * @var string
    */
   public $category;
+  /**
+   * @var PageElementProperties
+   */
+  public $elementProperties;
   protected $elementPropertiesType = PageElementProperties::class;
   protected $elementPropertiesDataType = '';
   /**
