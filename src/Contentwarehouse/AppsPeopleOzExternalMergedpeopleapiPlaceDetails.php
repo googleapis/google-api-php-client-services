@@ -23,10 +23,22 @@ class AppsPeopleOzExternalMergedpeopleapiPlaceDetails extends \Google\Model
    * @var string
    */
   public $googleUrl;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiLatLng
+   */
+  public $latLng;
   protected $latLngType = AppsPeopleOzExternalMergedpeopleapiLatLng::class;
   protected $latLngDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiOpeningHours
+   */
+  public $openingHours;
   protected $openingHoursType = AppsPeopleOzExternalMergedpeopleapiOpeningHours::class;
   protected $openingHoursDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AbuseiamGeoRestriction extends \Google\Collection
 {
   protected $collection_key = 'locale';
+  /**
+   * @var AbuseiamGeoRestrictionLocale[]
+   */
+  public $locale;
   protected $localeType = AbuseiamGeoRestrictionLocale::class;
   protected $localeDataType = 'array';
 

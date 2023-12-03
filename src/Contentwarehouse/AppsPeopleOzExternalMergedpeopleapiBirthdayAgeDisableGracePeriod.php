@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDate
+   */
+  public $calendarDay;
   protected $calendarDayType = GoogleTypeDate::class;
   protected $calendarDayDataType = '';
   /**
@@ -33,6 +37,10 @@ class AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod extends \
    * @var string
    */
   public $gracePeriodType;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriodManualGracePeriodInfo
+   */
+  public $manualGracePeriodInfo;
   protected $manualGracePeriodInfoType = AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriodManualGracePeriodInfo::class;
   protected $manualGracePeriodInfoDataType = '';
 

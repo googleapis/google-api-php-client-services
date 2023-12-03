@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedData extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataNameDisplayOptions
+   */
+  public $nameDisplayOptions;
   protected $nameDisplayOptionsType = AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataNameDisplayOptions::class;
   protected $nameDisplayOptionsDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataPhotosCompareData
+   */
+  public $photosCompareData;
   protected $photosCompareDataType = AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataPhotosCompareData::class;
   protected $photosCompareDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataProfileEditability
+   */
+  public $profileEditability;
   protected $profileEditabilityType = AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataProfileEditability::class;
   protected $profileEditabilityDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataProfileNameModificationHistory
+   */
+  public $profileNameModificationHistory;
   protected $profileNameModificationHistoryType = AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataProfileNameModificationHistory::class;
   protected $profileNameModificationHistoryDataType = '';
 

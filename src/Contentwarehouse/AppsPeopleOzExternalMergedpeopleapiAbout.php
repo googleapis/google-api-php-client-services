@@ -23,8 +23,16 @@ class AppsPeopleOzExternalMergedpeopleapiAbout extends \Google\Model
    * @var string
    */
   public $contentType;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var WebutilHtmlTypesSafeHtmlProto
+   */
+  public $safeHtmlValue;
   protected $safeHtmlValueType = WebutilHtmlTypesSafeHtmlProto::class;
   protected $safeHtmlValueDataType = '';
   /**

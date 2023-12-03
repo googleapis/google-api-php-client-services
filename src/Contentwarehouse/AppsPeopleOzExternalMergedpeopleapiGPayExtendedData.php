@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiGPayExtendedData extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiProductProfileFailure
+   */
+  public $failure;
   protected $failureType = AppsPeopleOzExternalMergedpeopleapiProductProfileFailure::class;
   protected $failureDataType = '';
   /**

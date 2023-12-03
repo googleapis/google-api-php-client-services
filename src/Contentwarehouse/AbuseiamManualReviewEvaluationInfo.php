@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AbuseiamManualReviewEvaluationInfo extends \Google\Model
 {
+  /**
+   * @var AbuseiamManualReviewerInfo
+   */
+  public $reviewer;
   protected $reviewerType = AbuseiamManualReviewerInfo::class;
   protected $reviewerDataType = '';
+  /**
+   * @var AbuseiamManualReviewTool
+   */
+  public $tool;
   protected $toolType = AbuseiamManualReviewTool::class;
   protected $toolDataType = '';
 

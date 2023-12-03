@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AbuseiamVerdict extends \Google\Collection
 {
   protected $collection_key = 'userNotification';
+  /**
+   * @var AbuseiamClient
+   */
+  public $client;
   protected $clientType = AbuseiamClient::class;
   protected $clientDataType = '';
   /**
@@ -34,28 +38,52 @@ class AbuseiamVerdict extends \Google\Collection
    * @var int
    */
   public $durationMins;
+  /**
+   * @var AbuseiamEvaluation[]
+   */
+  public $evaluation;
   protected $evaluationType = AbuseiamEvaluation::class;
   protected $evaluationDataType = 'array';
+  /**
+   * @var AbuseiamHash[]
+   */
+  public $hashes;
   protected $hashesType = AbuseiamHash::class;
   protected $hashesDataType = 'array';
   /**
    * @var bool
    */
   public $isLegalIssued;
+  /**
+   * @var AbuseiamNameValuePair[]
+   */
+  public $miscScores;
   protected $miscScoresType = AbuseiamNameValuePair::class;
   protected $miscScoresDataType = 'array';
   /**
    * @var string
    */
   public $reasonCode;
+  /**
+   * @var AbuseiamRegion[]
+   */
+  public $region;
   protected $regionType = AbuseiamRegion::class;
   protected $regionDataType = 'array';
+  /**
+   * @var AbuseiamVerdictRestriction[]
+   */
+  public $restriction;
   protected $restrictionType = AbuseiamVerdictRestriction::class;
   protected $restrictionDataType = 'array';
   /**
    * @var string
    */
   public $strikeCategory;
+  /**
+   * @var AbuseiamTarget
+   */
+  public $target;
   protected $targetType = AbuseiamTarget::class;
   protected $targetDataType = '';
   /**
@@ -66,6 +94,10 @@ class AbuseiamVerdict extends \Google\Collection
    * @var string
    */
   public $timestampMicros;
+  /**
+   * @var AbuseiamUserNotification[]
+   */
+  public $userNotification;
   protected $userNotificationType = AbuseiamUserNotification::class;
   protected $userNotificationDataType = 'array';
   /**

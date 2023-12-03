@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiAffinity extends \Google\Model
 {
+  /**
+   * @var SocialGraphWireProtoPeopleapiAffinityMetadata
+   */
+  public $affinityMetadata;
   protected $affinityMetadataType = SocialGraphWireProtoPeopleapiAffinityMetadata::class;
   protected $affinityMetadataDataType = '';
   /**

@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiEvent extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDate
+   */
+  public $calendarDay;
   protected $calendarDayType = GoogleTypeDate::class;
   protected $calendarDayDataType = '';
   /**
    * @var string
    */
   public $formattedType;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SocialGraphApiProtoPrompt
+   */
+  public $prompt;
   protected $promptType = SocialGraphApiProtoPrompt::class;
   protected $promptDataType = '';
   /**

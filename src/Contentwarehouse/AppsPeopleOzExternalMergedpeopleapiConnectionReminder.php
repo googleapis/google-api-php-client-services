@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiConnectionReminder extends \Google\Collection
 {
   protected $collection_key = 'prompt';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SocialGraphApiProtoPrompt[]
+   */
+  public $prompt;
   protected $promptType = SocialGraphApiProtoPrompt::class;
   protected $promptDataType = 'array';
 

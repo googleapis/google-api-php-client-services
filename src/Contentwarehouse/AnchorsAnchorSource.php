@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AnchorsAnchorSource extends \Google\Collection
 {
   protected $collection_key = 'pageTags';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $additionalInfo;
   protected $additionalInfoType = Proto2BridgeMessageSet::class;
   protected $additionalInfoDataType = '';
   /**

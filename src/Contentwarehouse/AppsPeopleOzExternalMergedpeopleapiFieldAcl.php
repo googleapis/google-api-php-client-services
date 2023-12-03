@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiFieldAcl extends \Google\Collection
 {
   protected $collection_key = 'predefinedAclEntry';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntry[]
+   */
+  public $aclEntry;
   protected $aclEntryType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntry::class;
   protected $aclEntryDataType = 'array';
   /**

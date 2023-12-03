@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiManagementUpchain extends \Google\Collection
 {
   protected $collection_key = 'indirectManager';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiManagementUpchainIndirectManager[]
+   */
+  public $indirectManager;
   protected $indirectManagerType = AppsPeopleOzExternalMergedpeopleapiManagementUpchainIndirectManager::class;
   protected $indirectManagerDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

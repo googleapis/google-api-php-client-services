@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extends \Google\Collection
 {
   protected $collection_key = 'productMetadata';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiFieldAcl[]
+   */
+  public $aclChoices;
   protected $aclChoicesType = AppsPeopleOzExternalMergedpeopleapiFieldAcl::class;
   protected $aclChoicesDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAdditionalContainerInfo
+   */
+  public $additionalContainerInfo;
   protected $additionalContainerInfoType = AppsPeopleOzExternalMergedpeopleapiAdditionalContainerInfo::class;
   protected $additionalContainerInfoDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAffinity[]
+   */
+  public $affinity;
   protected $affinityType = AppsPeopleOzExternalMergedpeopleapiAffinity::class;
   protected $affinityDataType = 'array';
   /**
@@ -50,6 +62,10 @@ class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extends \Google\Col
    * @var bool
    */
   public $crossDeviceAllowed;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiFieldAcl
+   */
+  public $defaultAclChoice;
   protected $defaultAclChoiceType = AppsPeopleOzExternalMergedpeopleapiFieldAcl::class;
   protected $defaultAclChoiceDataType = '';
   /**
@@ -60,26 +76,46 @@ class AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata extends \Google\Col
    * @var bool
    */
   public $edgeKey;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiEdgeKeyInfo[]
+   */
+  public $edgeKeyInfo;
   protected $edgeKeyInfoType = AppsPeopleOzExternalMergedpeopleapiEdgeKeyInfo::class;
   protected $edgeKeyInfoDataType = 'array';
   /**
    * @var string
    */
   public $encodedContainerId;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiFieldAcl
+   */
+  public $fieldAcl;
   protected $fieldAclType = AppsPeopleOzExternalMergedpeopleapiFieldAcl::class;
   protected $fieldAclDataType = '';
   /**
    * @var string
    */
   public $lastUpdateTime;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiMatchInfo[]
+   */
+  public $matchingInfo;
   protected $matchingInfoType = AppsPeopleOzExternalMergedpeopleapiMatchInfo::class;
   protected $matchingInfoDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiDedupedContainerInfo[]
+   */
+  public $otherDedupedContainers;
   protected $otherDedupedContainersType = AppsPeopleOzExternalMergedpeopleapiDedupedContainerInfo::class;
   protected $otherDedupedContainersDataType = 'array';
   /**
    * @var bool
    */
   public $primary;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiProductMetadata[]
+   */
+  public $productMetadata;
   protected $productMetadataType = AppsPeopleOzExternalMergedpeopleapiProductMetadata::class;
   protected $productMetadataDataType = 'array';
   /**

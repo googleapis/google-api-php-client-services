@@ -23,6 +23,10 @@ class AppsPeopleOzExternalMergedpeopleapiPersonAttribute extends \Google\Model
    * @var string
    */
   public $attributeKey;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

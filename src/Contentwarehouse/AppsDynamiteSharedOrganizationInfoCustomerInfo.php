@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsDynamiteSharedOrganizationInfoCustomerInfo extends \Google\Model
 {
+  /**
+   * @var AppsDynamiteCustomerId
+   */
+  public $customerId;
   protected $customerIdType = AppsDynamiteCustomerId::class;
   protected $customerIdDataType = '';
 

@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiMapsProfile extends \Google\Collection
 {
   protected $collection_key = 'fieldRestriction';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiMapsProfileFieldRestriction[]
+   */
+  public $fieldRestriction;
   protected $fieldRestrictionType = AppsPeopleOzExternalMergedpeopleapiMapsProfileFieldRestriction::class;
   protected $fieldRestrictionDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $tagline;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiMapsProfileUrlLink
+   */
+  public $websiteLink;
   protected $websiteLinkType = AppsPeopleOzExternalMergedpeopleapiMapsProfileUrlLink::class;
   protected $websiteLinkDataType = '';
 

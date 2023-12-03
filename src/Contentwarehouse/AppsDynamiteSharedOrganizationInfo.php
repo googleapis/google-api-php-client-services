@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsDynamiteSharedOrganizationInfo extends \Google\Model
 {
+  /**
+   * @var AppsDynamiteSharedOrganizationInfoConsumerInfo
+   */
+  public $consumerInfo;
   protected $consumerInfoType = AppsDynamiteSharedOrganizationInfoConsumerInfo::class;
   protected $consumerInfoDataType = '';
+  /**
+   * @var AppsDynamiteSharedOrganizationInfoCustomerInfo
+   */
+  public $customerInfo;
   protected $customerInfoType = AppsDynamiteSharedOrganizationInfoCustomerInfo::class;
   protected $customerInfoDataType = '';
 

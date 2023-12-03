@@ -20,44 +20,100 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPersonExtendedData extends \Google\Collection
 {
   protected $collection_key = 'domainName';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedData
+   */
+  public $aboutMeExtendedData;
   protected $aboutMeExtendedDataType = AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedData::class;
   protected $aboutMeExtendedDataDataType = '';
+  /**
+   * @var SocialGraphWireProtoPeopleapiExtensionAppsWaldoExtendedData
+   */
+  public $appsWaldoExtendedData;
   protected $appsWaldoExtendedDataType = SocialGraphWireProtoPeopleapiExtensionAppsWaldoExtendedData::class;
   protected $appsWaldoExtendedDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiCallerIdExtendedData
+   */
+  public $callerIdExtendedData;
   protected $callerIdExtendedDataType = AppsPeopleOzExternalMergedpeopleapiCallerIdExtendedData::class;
   protected $callerIdExtendedDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiWebContactsExtendedData
+   */
+  public $contactsExtendedData;
   protected $contactsExtendedDataType = AppsPeopleOzExternalMergedpeopleapiWebContactsExtendedData::class;
   protected $contactsExtendedDataDataType = '';
   /**
    * @var string[]
    */
   public $domainName;
+  /**
+   * @var SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData
+   */
+  public $dynamiteExtendedData;
   protected $dynamiteExtendedDataType = SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData::class;
   protected $dynamiteExtendedDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiGPayExtendedData
+   */
+  public $gpayExtendedData;
   protected $gpayExtendedDataType = AppsPeopleOzExternalMergedpeopleapiGPayExtendedData::class;
   protected $gpayExtendedDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiGplusExtendedData
+   */
+  public $gplusExtendedData;
   protected $gplusExtendedDataType = AppsPeopleOzExternalMergedpeopleapiGplusExtendedData::class;
   protected $gplusExtendedDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiHangoutsExtendedData
+   */
+  public $hangoutsExtendedData;
   protected $hangoutsExtendedDataType = AppsPeopleOzExternalMergedpeopleapiHangoutsExtendedData::class;
   protected $hangoutsExtendedDataDataType = '';
   /**
    * @var bool
    */
   public $isPlaceholder;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiMapsExtendedData
+   */
+  public $mapsExtendedData;
   protected $mapsExtendedDataType = AppsPeopleOzExternalMergedpeopleapiMapsExtendedData::class;
   protected $mapsExtendedDataDataType = '';
+  /**
+   * @var SocialGraphWireProtoPeopleapiExtensionPaisaExtendedData
+   */
+  public $paisaExtendedData;
   protected $paisaExtendedDataType = SocialGraphWireProtoPeopleapiExtensionPaisaExtendedData::class;
   protected $paisaExtendedDataDataType = '';
+  /**
+   * @var SocialGraphWireProtoPeopleapiExtensionPeopleStackExtendedData
+   */
+  public $peopleStackExtendedData;
   protected $peopleStackExtendedDataType = SocialGraphWireProtoPeopleapiExtensionPeopleStackExtendedData::class;
   protected $peopleStackExtendedDataDataType = '';
+  /**
+   * @var SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtendedData
+   */
+  public $peopleStackPersonExtendedData;
   protected $peopleStackPersonExtendedDataType = SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtendedData::class;
   protected $peopleStackPersonExtendedDataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedData
+   */
+  public $playGamesExtendedData;
   protected $playGamesExtendedDataType = AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedData::class;
   protected $playGamesExtendedDataDataType = '';
   /**
    * @var bool
    */
   public $tlsIsPlaceholder;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiYoutubeExtendedData
+   */
+  public $youtubeExtendedData;
   protected $youtubeExtendedDataType = AppsPeopleOzExternalMergedpeopleapiYoutubeExtendedData::class;
   protected $youtubeExtendedDataDataType = '';
 

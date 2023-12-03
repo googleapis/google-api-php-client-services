@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiMapsExtendedData extends \Google\Collection
 {
   protected $collection_key = 'topicExpertise';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiProductProfileFailure
+   */
+  public $failure;
   protected $failureType = AppsPeopleOzExternalMergedpeopleapiProductProfileFailure::class;
   protected $failureDataType = '';
   /**

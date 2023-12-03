@@ -19,18 +19,46 @@ namespace Google\Service\Contentwarehouse;
 
 class AbuseiamUserRestriction extends \Google\Model
 {
+  /**
+   * @var AbuseiamAgeRestriction
+   */
+  public $ageRestriction;
   protected $ageRestrictionType = AbuseiamAgeRestriction::class;
   protected $ageRestrictionDataType = '';
+  /**
+   * @var AbuseiamAndRestriction
+   */
+  public $andRestriction;
   protected $andRestrictionType = AbuseiamAndRestriction::class;
   protected $andRestrictionDataType = '';
+  /**
+   * @var AbuseiamConstantRestriction
+   */
+  public $constantRestriction;
   protected $constantRestrictionType = AbuseiamConstantRestriction::class;
   protected $constantRestrictionDataType = '';
+  /**
+   * @var AbuseiamGeoRestriction
+   */
+  public $geoRestriction;
   protected $geoRestrictionType = AbuseiamGeoRestriction::class;
   protected $geoRestrictionDataType = '';
+  /**
+   * @var AbuseiamNotRestriction
+   */
+  public $notRestriction;
   protected $notRestrictionType = AbuseiamNotRestriction::class;
   protected $notRestrictionDataType = '';
+  /**
+   * @var AbuseiamOrRestriction
+   */
+  public $orRestriction;
   protected $orRestrictionType = AbuseiamOrRestriction::class;
   protected $orRestrictionDataType = '';
+  /**
+   * @var AbuseiamSpecialRestriction
+   */
+  public $specialRestriction;
   protected $specialRestrictionType = AbuseiamSpecialRestriction::class;
   protected $specialRestrictionDataType = '';
 

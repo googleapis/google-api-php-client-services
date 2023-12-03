@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiOrganization extends \Google\Collection
 {
   protected $collection_key = 'project';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiOrganizationAssignment[]
+   */
+  public $assignment;
   protected $assignmentType = AppsPeopleOzExternalMergedpeopleapiOrganizationAssignment::class;
   protected $assignmentDataType = 'array';
   /**
@@ -46,6 +50,10 @@ class AppsPeopleOzExternalMergedpeopleapiOrganization extends \Google\Collection
    * @var string
    */
   public $domain;
+  /**
+   * @var GoogleTypeDate
+   */
+  public $endCalendarDay;
   protected $endCalendarDayType = GoogleTypeDate::class;
   protected $endCalendarDayDataType = '';
   /**
@@ -72,14 +80,26 @@ class AppsPeopleOzExternalMergedpeopleapiOrganization extends \Google\Collection
    * @var string
    */
   public $location;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiOrganizationProject[]
+   */
+  public $project;
   protected $projectType = AppsPeopleOzExternalMergedpeopleapiOrganizationProject::class;
   protected $projectDataType = 'array';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $startCalendarDay;
   protected $startCalendarDayType = GoogleTypeDate::class;
   protected $startCalendarDayDataType = '';
   /**

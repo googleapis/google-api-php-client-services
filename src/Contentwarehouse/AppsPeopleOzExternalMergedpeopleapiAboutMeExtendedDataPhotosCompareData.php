@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataPhotosCompareData extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataPhotosCompareDataDiffData
+   */
+  public $diffData;
   protected $diffDataType = AppsPeopleOzExternalMergedpeopleapiAboutMeExtendedDataPhotosCompareDataDiffData::class;
   protected $diffDataDataType = '';
   /**

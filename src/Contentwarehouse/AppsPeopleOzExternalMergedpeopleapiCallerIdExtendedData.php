@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiCallerIdExtendedData extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiCallerIdExtendedDataCallerIdSource
+   */
+  public $callerIdSource;
   protected $callerIdSourceType = AppsPeopleOzExternalMergedpeopleapiCallerIdExtendedDataCallerIdSource::class;
   protected $callerIdSourceDataType = '';
 

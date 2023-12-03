@@ -20,22 +20,42 @@ namespace Google\Service\Contentwarehouse;
 class AbuseiamEvaluation extends \Google\Collection
 {
   protected $collection_key = 'region';
+  /**
+   * @var AbuseiamAbuseType
+   */
+  public $abuseType;
   protected $abuseTypeType = AbuseiamAbuseType::class;
   protected $abuseTypeDataType = '';
   /**
    * @var string
    */
   public $backend;
+  /**
+   * @var AbuseiamClusterEvaluationContext
+   */
+  public $clusterEvaluationContext;
   protected $clusterEvaluationContextType = AbuseiamClusterEvaluationContext::class;
   protected $clusterEvaluationContextDataType = '';
   /**
    * @var string
    */
   public $comment;
+  /**
+   * @var AbuseiamFeature[]
+   */
+  public $feature;
   protected $featureType = AbuseiamFeature::class;
   protected $featureDataType = 'array';
+  /**
+   * @var AbuseiamManualReviewEvaluationInfo
+   */
+  public $manualReviewInfo;
   protected $manualReviewInfoType = AbuseiamManualReviewEvaluationInfo::class;
   protected $manualReviewInfoDataType = '';
+  /**
+   * @var AbuseiamNameValuePair[]
+   */
+  public $miscData;
   protected $miscDataType = AbuseiamNameValuePair::class;
   protected $miscDataDataType = 'array';
   /**
@@ -46,6 +66,10 @@ class AbuseiamEvaluation extends \Google\Collection
    * @var string
    */
   public $processedMicros;
+  /**
+   * @var AbuseiamRegion[]
+   */
+  public $region;
   protected $regionType = AbuseiamRegion::class;
   protected $regionDataType = 'array';
   public $score;
@@ -53,18 +77,30 @@ class AbuseiamEvaluation extends \Google\Collection
    * @var string
    */
   public $status;
+  /**
+   * @var AbuseiamTarget
+   */
+  public $target;
   protected $targetType = AbuseiamTarget::class;
   protected $targetDataType = '';
   /**
    * @var string
    */
   public $timestampMicros;
+  /**
+   * @var AbuseiamUserRestriction
+   */
+  public $userRestriction;
   protected $userRestrictionType = AbuseiamUserRestriction::class;
   protected $userRestrictionDataType = '';
   /**
    * @var string
    */
   public $version;
+  /**
+   * @var AbuseiamVideoReviewData
+   */
+  public $videoReviewData;
   protected $videoReviewDataType = AbuseiamVideoReviewData::class;
   protected $videoReviewDataDataType = '';
 

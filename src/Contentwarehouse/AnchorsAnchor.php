@@ -108,6 +108,10 @@ class AnchorsAnchor extends \Google\Collection
    * @var int
    */
   public $lastUpdateTimestamp;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $linkAdditionalInfo;
   protected $linkAdditionalInfoType = Proto2BridgeMessageSet::class;
   protected $linkAdditionalInfoDataType = '';
   /**
@@ -146,6 +150,10 @@ class AnchorsAnchor extends \Google\Collection
    * @var float
    */
   public $setiPagerankWeight;
+  /**
+   * @var AnchorsAnchorSource
+   */
+  public $source;
   protected $sourceDataType = '';
   /**
    * @var int

@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiBirthday extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod
+   */
+  public $ageDisableGracePeriod;
   protected $ageDisableGracePeriodType = AppsPeopleOzExternalMergedpeopleapiBirthdayAgeDisableGracePeriod::class;
   protected $ageDisableGracePeriodDataType = '';
+  /**
+   * @var SocialGraphApiProtoBirthdayDecoration
+   */
+  public $birthdayDecoration;
   protected $birthdayDecorationType = SocialGraphApiProtoBirthdayDecoration::class;
   protected $birthdayDecorationDataType = '';
   /**
    * @var string
    */
   public $birthdayResolution;
+  /**
+   * @var GoogleTypeDate
+   */
+  public $calendarDay;
   protected $calendarDayType = GoogleTypeDate::class;
   protected $calendarDayDataType = '';
   /**
@@ -37,8 +49,16 @@ class AppsPeopleOzExternalMergedpeopleapiBirthday extends \Google\Model
    * @var string
    */
   public $dateMsAsNumber;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SocialGraphApiProtoPrompt
+   */
+  public $prompt;
   protected $promptType = SocialGraphApiProtoPrompt::class;
   protected $promptDataType = '';
   /**

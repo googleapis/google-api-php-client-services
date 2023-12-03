@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiLimitedProfileSettingsField extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoLimitedProfileSettings
+   */
+  public $limitedProfileSettings;
   protected $limitedProfileSettingsType = SocialGraphApiProtoLimitedProfileSettings::class;
   protected $limitedProfileSettingsDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

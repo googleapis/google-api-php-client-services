@@ -20,26 +20,46 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiEmail extends \Google\Collection
 {
   protected $collection_key = 'contactGroupPreference';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiEmailCertificate[]
+   */
+  public $certificate;
   protected $certificateType = AppsPeopleOzExternalMergedpeopleapiEmailCertificate::class;
   protected $certificateDataType = 'array';
   /**
    * @var string
    */
   public $classification;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreference[]
+   */
+  public $contactGroupPreference;
   protected $contactGroupPreferenceType = AppsPeopleOzExternalMergedpeopleapiEmailContactGroupPreference::class;
   protected $contactGroupPreferenceDataType = 'array';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiEmailExtendedData
+   */
+  public $extendedData;
   protected $extendedDataType = AppsPeopleOzExternalMergedpeopleapiEmailExtendedData::class;
   protected $extendedDataDataType = '';
   /**
    * @var string
    */
   public $formattedType;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiEmailSignupEmailMetadata
+   */
+  public $signupEmailMetadata;
   protected $signupEmailMetadataType = AppsPeopleOzExternalMergedpeopleapiEmailSignupEmailMetadata::class;
   protected $signupEmailMetadataDataType = '';
   /**

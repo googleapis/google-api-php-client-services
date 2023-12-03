@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiOpeningHoursPeriod extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiOpeningHoursEndpoint
+   */
+  public $close;
   protected $closeType = AppsPeopleOzExternalMergedpeopleapiOpeningHoursEndpoint::class;
   protected $closeDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiOpeningHoursEndpoint
+   */
+  public $open;
   protected $openType = AppsPeopleOzExternalMergedpeopleapiOpeningHoursEndpoint::class;
   protected $openDataType = '';
 

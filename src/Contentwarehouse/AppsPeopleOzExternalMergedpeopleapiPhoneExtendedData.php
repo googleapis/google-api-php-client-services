@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiPhoneExtendedData extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiStructuredPhone
+   */
+  public $structuredPhone;
   protected $structuredPhoneType = AppsPeopleOzExternalMergedpeopleapiStructuredPhone::class;
   protected $structuredPhoneDataType = '';
 

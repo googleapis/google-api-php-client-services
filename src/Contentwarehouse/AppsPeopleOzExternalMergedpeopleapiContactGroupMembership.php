@@ -23,8 +23,16 @@ class AppsPeopleOzExternalMergedpeopleapiContactGroupMembership extends \Google\
    * @var string
    */
   public $contactGroupId;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiDelegatedGroupInfo
+   */
+  public $delegatedGroupInfo;
   protected $delegatedGroupInfoType = AppsPeopleOzExternalMergedpeopleapiDelegatedGroupInfo::class;
   protected $delegatedGroupInfoDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

@@ -28,6 +28,10 @@ class AppsPeopleOzExternalMergedpeopleapiIdentityInfo extends \Google\Collection
    * @var string[]
    */
   public $previousPersonId;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiSourceIdentity[]
+   */
+  public $sourceIds;
   protected $sourceIdsType = AppsPeopleOzExternalMergedpeopleapiSourceIdentity::class;
   protected $sourceIdsDataType = 'array';
 

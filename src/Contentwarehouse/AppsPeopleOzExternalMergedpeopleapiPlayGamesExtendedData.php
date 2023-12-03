@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedData extends \Google\Collection
 {
   protected $collection_key = 'achievements';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedDataAchievement[]
+   */
+  public $achievements;
   protected $achievementsType = AppsPeopleOzExternalMergedpeopleapiPlayGamesExtendedDataAchievement::class;
   protected $achievementsDataType = 'array';
   /**
    * @var string
    */
   public $avatarImageUrl;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiProductProfileFailure
+   */
+  public $failure;
   protected $failureType = AppsPeopleOzExternalMergedpeopleapiProductProfileFailure::class;
   protected $failureDataType = '';
   /**

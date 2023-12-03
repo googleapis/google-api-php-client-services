@@ -47,6 +47,10 @@ class AppsPeopleOzExternalMergedpeopleapiLocation extends \Google\Model
    * @var string
    */
   public $lastUpdateTime;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

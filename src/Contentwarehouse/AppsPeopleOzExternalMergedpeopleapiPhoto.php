@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
 {
   protected $collection_key = 'htmlAttribution';
+  /**
+   * @var SocialGraphApiProtoDecorationOverlay[]
+   */
+  public $decoration;
   protected $decorationType = SocialGraphApiProtoDecorationOverlay::class;
   protected $decorationDataType = 'array';
   /**
@@ -42,14 +46,26 @@ class AppsPeopleOzExternalMergedpeopleapiPhoto extends \Google\Collection
    * @var bool
    */
   public $isMonogram;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $monogramBackground;
+  /**
+   * @var SocialGraphApiProtoImageReference
+   */
+  public $originalPhoto;
   protected $originalPhotoType = SocialGraphApiProtoImageReference::class;
   protected $originalPhotoDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPhotoPhotoStorageId
+   */
+  public $photoId;
   protected $photoIdType = AppsPeopleOzExternalMergedpeopleapiPhotoPhotoStorageId::class;
   protected $photoIdDataType = '';
   /**

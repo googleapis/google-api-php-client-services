@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiContactStateInfo extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoContactState
+   */
+  public $contactState;
   protected $contactStateType = SocialGraphApiProtoContactState::class;
   protected $contactStateDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiNamePronunciationAudioMetadataInfo extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SocialGraphApiProtoNamePronunciationAudioMetadata
+   */
+  public $namePronunciationAudioMetadata;
   protected $namePronunciationAudioMetadataType = SocialGraphApiProtoNamePronunciationAudioMetadata::class;
   protected $namePronunciationAudioMetadataDataType = '';
 

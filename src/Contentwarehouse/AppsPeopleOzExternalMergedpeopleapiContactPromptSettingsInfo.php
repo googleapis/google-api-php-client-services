@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiContactPromptSettingsInfo extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoContactPromptSettings
+   */
+  public $contactPromptSettings;
   protected $contactPromptSettingsType = SocialGraphApiProtoContactPromptSettings::class;
   protected $contactPromptSettingsDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 
