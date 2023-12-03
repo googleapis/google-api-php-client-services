@@ -24,6 +24,10 @@ class AssistantApiSettingsDowntimeSchedule extends \Google\Collection
    * @var bool
    */
   public $enabled;
+  /**
+   * @var AssistantApiSettingsDowntimePeriod[]
+   */
+  public $periods;
   protected $periodsType = AssistantApiSettingsDowntimePeriod::class;
   protected $periodsDataType = 'array';
 

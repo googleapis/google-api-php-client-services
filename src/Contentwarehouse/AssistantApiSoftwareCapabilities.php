@@ -20,52 +20,140 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiSoftwareCapabilities extends \Google\Collection
 {
   protected $collection_key = 'supportedClientOp';
+  /**
+   * @var AssistantApiAppCapabilities[]
+   */
+  public $appCapabilities;
   protected $appCapabilitiesType = AssistantApiAppCapabilities::class;
   protected $appCapabilitiesDataType = 'array';
+  /**
+   * @var AssistantApiAppCapabilitiesDelta[]
+   */
+  public $appCapabilitiesDelta;
   protected $appCapabilitiesDeltaType = AssistantApiAppCapabilitiesDelta::class;
   protected $appCapabilitiesDeltaDataType = 'array';
+  /**
+   * @var AssistantApiAppIntegrationsSettings[]
+   */
+  public $appIntegrationsSettings;
   protected $appIntegrationsSettingsType = AssistantApiAppIntegrationsSettings::class;
   protected $appIntegrationsSettingsDataType = 'map';
+  /**
+   * @var AssistantApiCarAssistantCapabilities
+   */
+  public $carAssistantCapabilities;
   protected $carAssistantCapabilitiesType = AssistantApiCarAssistantCapabilities::class;
   protected $carAssistantCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiClockCapabilities
+   */
+  public $clockCapabilities;
   protected $clockCapabilitiesType = AssistantApiClockCapabilities::class;
   protected $clockCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiSupportedConversationVersion
+   */
+  public $conversationVersion;
   protected $conversationVersionType = AssistantApiSupportedConversationVersion::class;
   protected $conversationVersionDataType = '';
+  /**
+   * @var AssistantApiCrossDeviceExecutionCapability
+   */
+  public $crossDeviceExecutionCapabilities;
   protected $crossDeviceExecutionCapabilitiesType = AssistantApiCrossDeviceExecutionCapability::class;
   protected $crossDeviceExecutionCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiGacsCapabilities
+   */
+  public $gacsCapabilities;
   protected $gacsCapabilitiesType = AssistantApiGacsCapabilities::class;
   protected $gacsCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiGcmCapabilities
+   */
+  public $gcmCapabilities;
   protected $gcmCapabilitiesType = AssistantApiGcmCapabilities::class;
   protected $gcmCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiLiveTvChannelCapabilities
+   */
+  public $liveTvChannelCapabilities;
   protected $liveTvChannelCapabilitiesType = AssistantApiLiveTvChannelCapabilities::class;
   protected $liveTvChannelCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiOemCapabilities
+   */
+  public $oemCapabilities;
   protected $oemCapabilitiesType = AssistantApiOemCapabilities::class;
   protected $oemCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiOnDeviceAssistantCapabilities
+   */
+  public $onDeviceAssistantCapabilities;
   protected $onDeviceAssistantCapabilitiesType = AssistantApiOnDeviceAssistantCapabilities::class;
   protected $onDeviceAssistantCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiOnDeviceSmartHomeCapabilities
+   */
+  public $onDeviceSmartHomeCapabilities;
   protected $onDeviceSmartHomeCapabilitiesType = AssistantApiOnDeviceSmartHomeCapabilities::class;
   protected $onDeviceSmartHomeCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiOnDeviceStorageCapabilities
+   */
+  public $onDeviceStorageCapabilities;
   protected $onDeviceStorageCapabilitiesType = AssistantApiOnDeviceStorageCapabilities::class;
   protected $onDeviceStorageCapabilitiesDataType = '';
   /**
    * @var string
    */
   public $operatingSystem;
+  /**
+   * @var AssistantApiLiveTvProvider[]
+   */
+  public $orderedLiveTvProviders;
   protected $orderedLiveTvProvidersType = AssistantApiLiveTvProvider::class;
   protected $orderedLiveTvProvidersDataType = 'array';
+  /**
+   * @var AssistantApiSelinaCapabilites
+   */
+  public $selinaCapabilities;
   protected $selinaCapabilitiesType = AssistantApiSelinaCapabilites::class;
   protected $selinaCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiSettingsAppCapabilities
+   */
+  public $settingsAppCapabilities;
   protected $settingsAppCapabilitiesType = AssistantApiSettingsAppCapabilities::class;
   protected $settingsAppCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiSupportedClientOp[]
+   */
+  public $supportedClientOp;
   protected $supportedClientOpType = AssistantApiSupportedClientOp::class;
   protected $supportedClientOpDataType = 'array';
+  /**
+   * @var AssistantApiSupportedFeatures
+   */
+  public $supportedFeatures;
   protected $supportedFeaturesType = AssistantApiSupportedFeatures::class;
   protected $supportedFeaturesDataType = '';
+  /**
+   * @var AssistantApiSupportedProtocolVersion
+   */
+  public $supportedMsgVersion;
   protected $supportedMsgVersionType = AssistantApiSupportedProtocolVersion::class;
   protected $supportedMsgVersionDataType = '';
+  /**
+   * @var AssistantApiSupportedProviderTypes
+   */
+  public $supportedProviderTypes;
   protected $supportedProviderTypesType = AssistantApiSupportedProviderTypes::class;
   protected $supportedProviderTypesDataType = '';
+  /**
+   * @var AssistantApiSurfaceProperties
+   */
+  public $surfaceProperties;
   protected $surfacePropertiesType = AssistantApiSurfaceProperties::class;
   protected $surfacePropertiesDataType = '';
 

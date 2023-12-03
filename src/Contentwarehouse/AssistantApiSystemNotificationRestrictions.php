@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiSystemNotificationRestrictions extends \Google\Collection
 {
   protected $collection_key = 'channelState';
+  /**
+   * @var AssistantApiSystemNotificationRestrictionsNotificationCategoryState[]
+   */
+  public $categoryState;
   protected $categoryStateType = AssistantApiSystemNotificationRestrictionsNotificationCategoryState::class;
   protected $categoryStateDataType = 'array';
+  /**
+   * @var AssistantApiSystemNotificationRestrictionsNotificationChannelState[]
+   */
+  public $channelState;
   protected $channelStateType = AssistantApiSystemNotificationRestrictionsNotificationChannelState::class;
   protected $channelStateDataType = 'array';
   /**

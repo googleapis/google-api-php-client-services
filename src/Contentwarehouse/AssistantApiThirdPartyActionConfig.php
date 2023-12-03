@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiThirdPartyActionConfig extends \Google\Collection
 {
   protected $collection_key = 'projectConfigs';
+  /**
+   * @var AssistantDevicesPlatformProtoDeviceActionCapability
+   */
+  public $deviceActionCapability;
   protected $deviceActionCapabilityType = AssistantDevicesPlatformProtoDeviceActionCapability::class;
   protected $deviceActionCapabilityDataType = '';
+  /**
+   * @var AssistantApiThirdPartyActionConfigProjectConfig[]
+   */
+  public $projectConfigs;
   protected $projectConfigsType = AssistantApiThirdPartyActionConfigProjectConfig::class;
   protected $projectConfigsDataType = 'array';
 

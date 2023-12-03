@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiRosterDetails extends \Google\Collection
 {
   protected $collection_key = 'abridgedRosterMemberships';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiRosterMember[]
+   */
+  public $abridgedRosterMemberships;
   protected $abridgedRosterMembershipsType = AppsPeopleOzExternalMergedpeopleapiRosterMember::class;
   protected $abridgedRosterMembershipsDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiRosterMemberCount
+   */
+  public $rosterMemberCount;
   protected $rosterMemberCountType = AppsPeopleOzExternalMergedpeopleapiRosterMemberCount::class;
   protected $rosterMemberCountDataType = '';
 

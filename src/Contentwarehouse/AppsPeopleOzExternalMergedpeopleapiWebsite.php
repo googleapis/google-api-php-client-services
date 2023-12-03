@@ -24,8 +24,16 @@ class AppsPeopleOzExternalMergedpeopleapiWebsite extends \Google\Collection
    * @var string
    */
   public $formattedType;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiWebsiteRelationshipInfo[]
+   */
+  public $rel;
   protected $relType = AppsPeopleOzExternalMergedpeopleapiWebsiteRelationshipInfo::class;
   protected $relDataType = 'array';
   /**

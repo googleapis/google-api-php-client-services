@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesProviderDelta extends \Google\Model
 {
+  /**
+   * @var AssistantApiCoreTypesAndroidAppInfoDelta
+   */
+  public $androidAppInfoDelta;
   protected $androidAppInfoDeltaType = AssistantApiCoreTypesAndroidAppInfoDelta::class;
   protected $androidAppInfoDeltaDataType = '';
   /**

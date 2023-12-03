@@ -32,6 +32,10 @@ class AssistantApiSettingsLinkedUser extends \Google\Collection
    * @var string
    */
   public $gaiaId;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiName[]
+   */
+  public $names;
   protected $namesType = AppsPeopleOzExternalMergedpeopleapiName::class;
   protected $namesDataType = 'array';
 

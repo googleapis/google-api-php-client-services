@@ -23,6 +23,10 @@ class AppsPeopleOzExternalMergedpeopleapiRelationshipInterest extends \Google\Mo
    * @var string
    */
   public $formattedType;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

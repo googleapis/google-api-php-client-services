@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiSocialConnection extends \Google\Collection
 {
   protected $collection_key = 'type';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

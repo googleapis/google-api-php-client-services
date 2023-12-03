@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsReauthTrustedDeviceSettings extends \Google\Model
 {
+  /**
+   * @var AssistantApiSettingsReauthTrustedDeviceSettingsTrustSettings[]
+   */
+  public $trustSettingsForClient;
   protected $trustSettingsForClientType = AssistantApiSettingsReauthTrustedDeviceSettingsTrustSettings::class;
   protected $trustSettingsForClientDataType = 'map';
 

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiYoutubeExtendedData extends \Google\Collection
 {
   protected $collection_key = 'channelData';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiChannelData[]
+   */
+  public $channelData;
   protected $channelDataType = AppsPeopleOzExternalMergedpeopleapiChannelData::class;
   protected $channelDataDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiProductProfileFailure
+   */
+  public $failure;
   protected $failureType = AppsPeopleOzExternalMergedpeopleapiProductProfileFailure::class;
   protected $failureDataType = '';
 

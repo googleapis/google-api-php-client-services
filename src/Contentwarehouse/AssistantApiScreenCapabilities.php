@@ -28,10 +28,22 @@ class AssistantApiScreenCapabilities extends \Google\Collection
    * @var string[]
    */
   public $inputType;
+  /**
+   * @var AssistantApiScreenCapabilitiesMask
+   */
+  public $mask;
   protected $maskType = AssistantApiScreenCapabilitiesMask::class;
   protected $maskDataType = '';
+  /**
+   * @var AssistantApiScreenCapabilitiesProtoLayoutVersion
+   */
+  public $protoLayoutTargetedSchema;
   protected $protoLayoutTargetedSchemaType = AssistantApiScreenCapabilitiesProtoLayoutVersion::class;
   protected $protoLayoutTargetedSchemaDataType = '';
+  /**
+   * @var AssistantApiScreenCapabilitiesResolution
+   */
+  public $resolution;
   protected $resolutionType = AssistantApiScreenCapabilitiesResolution::class;
   protected $resolutionDataType = '';
   /**

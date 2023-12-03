@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSurfaceProperties extends \Google\Model
 {
+  /**
+   * @var AssistantApiSurfacePropertiesExecutionCapabilities
+   */
+  public $executionCapabilities;
   protected $executionCapabilitiesType = AssistantApiSurfacePropertiesExecutionCapabilities::class;
   protected $executionCapabilitiesDataType = '';
   /**

@@ -32,18 +32,38 @@ class AssistantDevicesPlatformProtoDeviceActionCapability extends \Google\Collec
    * @var string
    */
   public $customIntentMode;
+  /**
+   * @var AssistantDevicesPlatformProtoExecutionConfig
+   */
+  public $defaultExecutionConfig;
   protected $defaultExecutionConfigType = AssistantDevicesPlatformProtoExecutionConfig::class;
   protected $defaultExecutionConfigDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoInlinedActionCapability
+   */
+  public $inlinedActionCapability;
   protected $inlinedActionCapabilityType = AssistantDevicesPlatformProtoInlinedActionCapability::class;
   protected $inlinedActionCapabilityDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoIntent[]
+   */
+  public $intents;
   protected $intentsType = AssistantDevicesPlatformProtoIntent::class;
   protected $intentsDataType = 'array';
+  /**
+   * @var AssistantDevicesPlatformProtoProvidedData[]
+   */
+  public $providedData;
   protected $providedDataType = AssistantDevicesPlatformProtoProvidedData::class;
   protected $providedDataDataType = 'array';
   /**
    * @var string[]
    */
   public $traits;
+  /**
+   * @var AssistantDevicesPlatformProtoUnderstandingConfig
+   */
+  public $understandingConfig;
   protected $understandingConfigType = AssistantDevicesPlatformProtoUnderstandingConfig::class;
   protected $understandingConfigDataType = '';
 

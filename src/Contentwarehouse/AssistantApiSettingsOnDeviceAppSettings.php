@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsOnDeviceAppSettings extends \Google\Model
 {
+  /**
+   * @var AssistantApiSettingsCarrierCallDeviceSettings
+   */
+  public $carrierCallDeviceSettings;
   protected $carrierCallDeviceSettingsType = AssistantApiSettingsCarrierCallDeviceSettings::class;
   protected $carrierCallDeviceSettingsDataType = '';
+  /**
+   * @var AssistantApiSettingsDuoCallDeviceSettings
+   */
+  public $duoCallDeviceSettings;
   protected $duoCallDeviceSettingsType = AssistantApiSettingsDuoCallDeviceSettings::class;
   protected $duoCallDeviceSettingsDataType = '';
 

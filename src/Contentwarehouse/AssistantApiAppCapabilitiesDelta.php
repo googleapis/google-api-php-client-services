@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiAppCapabilitiesDelta extends \Google\Model
 {
+  /**
+   * @var AssistantApiAppIntegrationsSettings
+   */
+  public $appIntegrationsSettings;
   protected $appIntegrationsSettingsType = AssistantApiAppIntegrationsSettings::class;
   protected $appIntegrationsSettingsDataType = '';
+  /**
+   * @var AssistantApiCoreTypesProviderDelta
+   */
+  public $providerDelta;
   protected $providerDeltaType = AssistantApiCoreTypesProviderDelta::class;
   protected $providerDeltaDataType = '';
 

@@ -28,14 +28,26 @@ class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo extends \Google\Co
    * @var string
    */
   public $accountType;
+  /**
+   * @var SocialGraphApiAppContactData[]
+   */
+  public $appContactData;
   protected $appContactDataType = SocialGraphApiAppContactData::class;
   protected $appContactDataDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo
+   */
+  public $appInfo;
   protected $appInfoType = AppsPeopleOzExternalMergedpeopleapiAppUniqueInfo::class;
   protected $appInfoDataType = '';
   /**
    * @var bool
    */
   public $crossDeviceAllowed;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiDeviceContactExtraMetadata
+   */
+  public $deviceContactMetadata;
   protected $deviceContactMetadataType = AppsPeopleOzExternalMergedpeopleapiDeviceContactExtraMetadata::class;
   protected $deviceContactMetadataDataType = '';
   /**
@@ -54,6 +66,10 @@ class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo extends \Google\Co
    * @var string
    */
   public $rawContactId;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiRawDeviceContactAnalyticalInfo
+   */
+  public $rawDeviceContactAnalyticalInfo;
   protected $rawDeviceContactAnalyticalInfoType = AppsPeopleOzExternalMergedpeopleapiRawDeviceContactAnalyticalInfo::class;
   protected $rawDeviceContactAnalyticalInfoDataType = '';
 

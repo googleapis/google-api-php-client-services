@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiNotificationOutputRestrictionsOptOutState extends \Google\Collection
 {
   protected $collection_key = 'categoryState';
+  /**
+   * @var AssistantApiNotificationOutputRestrictionsOptOutStateCategoryGroupState[]
+   */
+  public $categoryGroupState;
   protected $categoryGroupStateType = AssistantApiNotificationOutputRestrictionsOptOutStateCategoryGroupState::class;
   protected $categoryGroupStateDataType = 'array';
+  /**
+   * @var AssistantApiNotificationOutputRestrictionsOptOutStateCategoryState[]
+   */
+  public $categoryState;
   protected $categoryStateType = AssistantApiNotificationOutputRestrictionsOptOutStateCategoryState::class;
   protected $categoryStateDataType = 'array';
 

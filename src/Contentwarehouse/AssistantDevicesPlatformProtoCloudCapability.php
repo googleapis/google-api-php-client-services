@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantDevicesPlatformProtoCloudCapability extends \Google\Collection
 {
   protected $collection_key = 'cloudEndpoints';
+  /**
+   * @var AssistantDevicesPlatformProtoCloudEndpoint[]
+   */
+  public $cloudEndpoints;
   protected $cloudEndpointsType = AssistantDevicesPlatformProtoCloudEndpoint::class;
   protected $cloudEndpointsDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiDateTimeRange extends \Google\Model
 {
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $endDate;
   protected $endDateType = AssistantApiDateTime::class;
   protected $endDateDataType = '';
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $startDate;
   protected $startDateType = AssistantApiDateTime::class;
   protected $startDateDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
 {
   protected $collection_key = 'rooms';
+  /**
+   * @var AssistantApiCoreTypesCalendarEventAttendee[]
+   */
+  public $attendees;
   protected $attendeesType = AssistantApiCoreTypesCalendarEventAttendee::class;
   protected $attendeesDataType = 'array';
   /**
@@ -30,12 +34,20 @@ class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
    * @var string
    */
   public $calendarId;
+  /**
+   * @var AssistantApiCoreTypesCalendarEventAttendee
+   */
+  public $creator;
   protected $creatorType = AssistantApiCoreTypesCalendarEventAttendee::class;
   protected $creatorDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $end;
   protected $endType = AssistantApiDateTime::class;
   protected $endDataType = '';
   /**
@@ -78,8 +90,16 @@ class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
    * @var string
    */
   public $location;
+  /**
+   * @var AssistantApiCoreTypesCalendarEventMeetingContact[]
+   */
+  public $meetingContacts;
   protected $meetingContactsType = AssistantApiCoreTypesCalendarEventMeetingContact::class;
   protected $meetingContactsDataType = 'array';
+  /**
+   * @var AssistantApiCoreTypesCalendarEventAttendee
+   */
+  public $organizer;
   protected $organizerType = AssistantApiCoreTypesCalendarEventAttendee::class;
   protected $organizerDataType = '';
   /**
@@ -94,8 +114,16 @@ class AssistantApiCoreTypesCalendarEvent extends \Google\Collection
    * @var string
    */
   public $recurringEventId;
+  /**
+   * @var AssistantApiCoreTypesCalendarEventRoom[]
+   */
+  public $rooms;
   protected $roomsType = AssistantApiCoreTypesCalendarEventRoom::class;
   protected $roomsDataType = 'array';
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $start;
   protected $startType = AssistantApiDateTime::class;
   protected $startDataType = '';
   /**

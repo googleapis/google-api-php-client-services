@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantDevicesPlatformProtoArgSpec extends \Google\Model
 {
+  /**
+   * @var AssistantDevicesPlatformProtoIntValueSpec
+   */
+  public $intValueSpec;
   protected $intValueSpecType = AssistantDevicesPlatformProtoIntValueSpec::class;
   protected $intValueSpecDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoOptionValueSpec
+   */
+  public $optionValueSpec;
   protected $optionValueSpecType = AssistantDevicesPlatformProtoOptionValueSpec::class;
   protected $optionValueSpecDataType = '';
   /**

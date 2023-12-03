@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiSearchProfile extends \Google\Model
 {
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
+   */
+  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SocialGraphApiProtoSearchProfileData
+   */
+  public $searchProfileData;
   protected $searchProfileDataType = SocialGraphApiProtoSearchProfileData::class;
   protected $searchProfileDataDataType = '';
 

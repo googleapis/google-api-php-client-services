@@ -20,20 +20,44 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiTeamsExtendedData extends \Google\Collection
 {
   protected $collection_key = 'managementChain';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPerson[]
+   */
+  public $adminTo;
   protected $adminToType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $adminToDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPerson[]
+   */
+  public $admins;
   protected $adminsType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $adminsDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPerson[]
+   */
+  public $dottedLineManagers;
   protected $dottedLineManagersType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $dottedLineManagersDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonListWithTotalNumber
+   */
+  public $dottedLineReports;
   protected $dottedLineReportsType = AppsPeopleOzExternalMergedpeopleapiPersonListWithTotalNumber::class;
   protected $dottedLineReportsDataType = '';
   /**
    * @var string[]
    */
   public $failures;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPerson[]
+   */
+  public $managementChain;
   protected $managementChainType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $managementChainDataType = 'array';
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPersonListWithTotalNumber
+   */
+  public $reports;
   protected $reportsType = AppsPeopleOzExternalMergedpeopleapiPersonListWithTotalNumber::class;
   protected $reportsDataType = '';
 

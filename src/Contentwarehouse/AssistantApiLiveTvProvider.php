@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiLiveTvProvider extends \Google\Model
 {
+  /**
+   * @var AssistantApiCoreTypesProvider
+   */
+  public $providerInfo;
   protected $providerInfoType = AssistantApiCoreTypesProvider::class;
   protected $providerInfoDataType = '';
   /**

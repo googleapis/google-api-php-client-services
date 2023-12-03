@@ -27,8 +27,16 @@ class AssistantApiSettingsHospitalityCardSettingsCardConfig extends \Google\Mode
    * @var bool
    */
   public $dismissable;
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $effectiveTime;
   protected $effectiveTimeType = AssistantApiTimestamp::class;
   protected $effectiveTimeDataType = '';
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $expiryTime;
   protected $expiryTimeType = AssistantApiTimestamp::class;
   protected $expiryTimeDataType = '';
   /**

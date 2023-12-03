@@ -43,6 +43,10 @@ class AssistantApiLoggingOnlyData extends \Google\Model
    * @var string
    */
   public $boardRevision;
+  /**
+   * @var AssistantApiCastAssistantSettingLinkingResult
+   */
+  public $castAssistantSettingLinkingResult;
   protected $castAssistantSettingLinkingResultType = AssistantApiCastAssistantSettingLinkingResult::class;
   protected $castAssistantSettingLinkingResultDataType = '';
   /**

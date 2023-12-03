@@ -23,6 +23,10 @@ class AssistantApiCoreTypesGovernedRingtoneTaskMetadata extends \Google\Model
    * @var string
    */
   public $category;
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadataCharacterAlarmMetadata
+   */
+  public $characterAlarmMetadata;
   protected $characterAlarmMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadataCharacterAlarmMetadata::class;
   protected $characterAlarmMetadataDataType = '';
   /**
@@ -33,18 +37,38 @@ class AssistantApiCoreTypesGovernedRingtoneTaskMetadata extends \Google\Model
    * @var string
    */
   public $entityMid;
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadataFuntimeMetadata
+   */
+  public $funtimeMetadata;
   protected $funtimeMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadataFuntimeMetadata::class;
   protected $funtimeMetadataDataType = '';
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadataGenMlAlarmMetadata
+   */
+  public $genMlAlarmMetadata;
   protected $genMlAlarmMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadataGenMlAlarmMetadata::class;
   protected $genMlAlarmMetadataDataType = '';
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadataGentleWakeInfo
+   */
+  public $gentleWakeInfo;
   protected $gentleWakeInfoType = AssistantApiCoreTypesGovernedRingtoneTaskMetadataGentleWakeInfo::class;
   protected $gentleWakeInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadataOnDeviceAlarmMetadata
+   */
+  public $onDeviceAlarmMetadata;
   protected $onDeviceAlarmMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadataOnDeviceAlarmMetadata::class;
   protected $onDeviceAlarmMetadataDataType = '';
   /**
    * @var string
    */
   public $onDeviceAlarmSound;
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadataRoutineAlarmMetadata
+   */
+  public $routineAlarmMetadata;
   protected $routineAlarmMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadataRoutineAlarmMetadata::class;
   protected $routineAlarmMetadataDataType = '';
 

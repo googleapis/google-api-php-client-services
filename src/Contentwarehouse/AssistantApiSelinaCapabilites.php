@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSelinaCapabilites extends \Google\Model
 {
+  /**
+   * @var AssistantApiGestureCapabilities
+   */
+  public $gestureCapabilities;
   protected $gestureCapabilitiesType = AssistantApiGestureCapabilities::class;
   protected $gestureCapabilitiesDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiAndroidIntentCapabilities extends \Google\Collection
 {
   protected $collection_key = 'androidIntentCapability';
+  /**
+   * @var AssistantApiAndroidIntentCapabilitiesAndroidIntentCapability[]
+   */
+  public $androidIntentCapability;
   protected $androidIntentCapabilityType = AssistantApiAndroidIntentCapabilitiesAndroidIntentCapability::class;
   protected $androidIntentCapabilityDataType = 'array';
 

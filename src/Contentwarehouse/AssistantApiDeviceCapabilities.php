@@ -20,34 +20,78 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiDeviceCapabilities extends \Google\Collection
 {
   protected $collection_key = 'supportedLocale';
+  /**
+   * @var AssistantApiAndroidIntentCapabilities
+   */
+  public $androidIntentCapabilities;
   protected $androidIntentCapabilitiesType = AssistantApiAndroidIntentCapabilities::class;
   protected $androidIntentCapabilitiesDataType = '';
   /**
    * @var string
    */
   public $assistantCapability;
+  /**
+   * @var AssistantApiAudioInput
+   */
+  public $audioInput;
   protected $audioInputType = AssistantApiAudioInput::class;
   protected $audioInputDataType = '';
+  /**
+   * @var AssistantApiAudioOutput
+   */
+  public $audioOutput;
   protected $audioOutputType = AssistantApiAudioOutput::class;
   protected $audioOutputDataType = '';
+  /**
+   * @var AssistantApiBluetoothCapabilities
+   */
+  public $bluetoothCapabilities;
   protected $bluetoothCapabilitiesType = AssistantApiBluetoothCapabilities::class;
   protected $bluetoothCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiCallCapabilities
+   */
+  public $callCapabilities;
   protected $callCapabilitiesType = AssistantApiCallCapabilities::class;
   protected $callCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiCameraCapabilities
+   */
+  public $camera;
   protected $cameraType = AssistantApiCameraCapabilities::class;
   protected $cameraDataType = '';
   /**
    * @var string[]
    */
   public $carUxRestrictions;
+  /**
+   * @var AssistantApiCastCapabilities
+   */
+  public $cast;
   protected $castType = AssistantApiCastCapabilities::class;
   protected $castDataType = '';
+  /**
+   * @var AssistantApiCommunicationUiCapabilities
+   */
+  public $communicationUiCapabilities;
   protected $communicationUiCapabilitiesType = AssistantApiCommunicationUiCapabilities::class;
   protected $communicationUiCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiContactLookupCapabilities
+   */
+  public $contactLookupCapabilities;
   protected $contactLookupCapabilitiesType = AssistantApiContactLookupCapabilities::class;
   protected $contactLookupCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiDataValidateCapabilities
+   */
+  public $dataValidateCapabilities;
   protected $dataValidateCapabilitiesType = AssistantApiDataValidateCapabilities::class;
   protected $dataValidateCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**
@@ -58,24 +102,56 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
    * @var bool
    */
   public $hasVoiceTelephony;
+  /**
+   * @var AssistantApiJwnCapabilities
+   */
+  public $jwnCapabilities;
   protected $jwnCapabilitiesType = AssistantApiJwnCapabilities::class;
   protected $jwnCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiLensPerceptionCapabilities
+   */
+  public $lensPerceptionCapabilities;
   protected $lensPerceptionCapabilitiesType = AssistantApiLensPerceptionCapabilities::class;
   protected $lensPerceptionCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiLocationCapabilities
+   */
+  public $location;
   protected $locationType = AssistantApiLocationCapabilities::class;
   protected $locationDataType = '';
+  /**
+   * @var AssistantApiLoggingOnlyData
+   */
+  public $loggingOnlyData;
   protected $loggingOnlyDataType = AssistantApiLoggingOnlyData::class;
   protected $loggingOnlyDataDataType = '';
+  /**
+   * @var AssistantApiMessageCapabilities
+   */
+  public $messageCapabilities;
   protected $messageCapabilitiesType = AssistantApiMessageCapabilities::class;
   protected $messageCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiMovementCapabilities
+   */
+  public $movement;
   protected $movementType = AssistantApiMovementCapabilities::class;
   protected $movementDataType = '';
   /**
    * @var string
    */
   public $notificationCapabilities;
+  /**
+   * @var AssistantApiNotificationOutputRestrictions
+   */
+  public $notificationOutputRestrictions;
   protected $notificationOutputRestrictionsType = AssistantApiNotificationOutputRestrictions::class;
   protected $notificationOutputRestrictionsDataType = '';
+  /**
+   * @var AssistantApiOutputRestrictions
+   */
+  public $outputRestrictions;
   protected $outputRestrictionsType = AssistantApiOutputRestrictions::class;
   protected $outputRestrictionsDataType = '';
   /**
@@ -86,26 +162,54 @@ class AssistantApiDeviceCapabilities extends \Google\Collection
    * @var string
    */
   public $safetyRestrictions;
+  /**
+   * @var AssistantApiScreenCapabilities
+   */
+  public $screen;
   protected $screenType = AssistantApiScreenCapabilities::class;
   protected $screenDataType = '';
+  /**
+   * @var AssistantApiSodaCapabilities
+   */
+  public $sodaCapabilities;
   protected $sodaCapabilitiesType = AssistantApiSodaCapabilities::class;
   protected $sodaCapabilitiesDataType = '';
+  /**
+   * @var AssistantApiSoftwareCapabilities
+   */
+  public $software;
   protected $softwareType = AssistantApiSoftwareCapabilities::class;
   protected $softwareDataType = '';
+  /**
+   * @var AssistantApiSpeechCapabilities
+   */
+  public $speechCapabilities;
   protected $speechCapabilitiesType = AssistantApiSpeechCapabilities::class;
   protected $speechCapabilitiesDataType = '';
   /**
    * @var string[]
    */
   public $supportedLocale;
+  /**
+   * @var AssistantApiCoreTypesSurfaceIdentity
+   */
+  public $surfaceIdentity;
   protected $surfaceIdentityType = AssistantApiCoreTypesSurfaceIdentity::class;
   protected $surfaceIdentityDataType = '';
   /**
    * @var string
    */
   public $surfaceTypeString;
+  /**
+   * @var AssistantApiSystemNotificationRestrictions
+   */
+  public $systemNotificationRestrictions;
   protected $systemNotificationRestrictionsType = AssistantApiSystemNotificationRestrictions::class;
   protected $systemNotificationRestrictionsDataType = '';
+  /**
+   * @var AssistantApiThirdPartyCapabilities
+   */
+  public $thirdPartyCapabilities;
   protected $thirdPartyCapabilitiesType = AssistantApiThirdPartyCapabilities::class;
   protected $thirdPartyCapabilitiesDataType = '';
 

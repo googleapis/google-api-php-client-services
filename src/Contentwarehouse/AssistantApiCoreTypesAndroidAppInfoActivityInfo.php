@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiCoreTypesAndroidAppInfoActivityInfo extends \Google\Collection
 {
   protected $collection_key = 'activeLaunchableActivities';
+  /**
+   * @var AssistantApiCoreTypesAndroidAppInfoActivityInfoActivity[]
+   */
+  public $activeLaunchableActivities;
   protected $activeLaunchableActivitiesType = AssistantApiCoreTypesAndroidAppInfoActivityInfoActivity::class;
   protected $activeLaunchableActivitiesDataType = 'array';
 

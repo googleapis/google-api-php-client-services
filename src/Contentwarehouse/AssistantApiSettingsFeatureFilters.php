@@ -19,20 +19,52 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsFeatureFilters extends \Google\Model
 {
+  /**
+   * @var AssistantApiSettingsCommunicationsFilter
+   */
+  public $communicationsFilter;
   protected $communicationsFilterType = AssistantApiSettingsCommunicationsFilter::class;
   protected $communicationsFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsMusicFilter
+   */
+  public $musicFilter;
   protected $musicFilterType = AssistantApiSettingsMusicFilter::class;
   protected $musicFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsNewsFilter
+   */
+  public $newsFilter;
   protected $newsFilterType = AssistantApiSettingsNewsFilter::class;
   protected $newsFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsPodcastFilter
+   */
+  public $podcastFilter;
   protected $podcastFilterType = AssistantApiSettingsPodcastFilter::class;
   protected $podcastFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsSearchFilter
+   */
+  public $searchFilter;
   protected $searchFilterType = AssistantApiSettingsSearchFilter::class;
   protected $searchFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsThirdPartyAppsFilter
+   */
+  public $thirdPartyAppsFilter;
   protected $thirdPartyAppsFilterType = AssistantApiSettingsThirdPartyAppsFilter::class;
   protected $thirdPartyAppsFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsVideoFilter
+   */
+  public $videoFilter;
   protected $videoFilterType = AssistantApiSettingsVideoFilter::class;
   protected $videoFilterDataType = '';
+  /**
+   * @var AssistantApiSettingsWebviewFilter
+   */
+  public $webviewFilter;
   protected $webviewFilterType = AssistantApiSettingsWebviewFilter::class;
   protected $webviewFilterDataType = '';
 

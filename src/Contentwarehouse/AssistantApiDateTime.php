@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiDateTime extends \Google\Model
 {
+  /**
+   * @var AssistantApiDate
+   */
+  public $date;
   protected $dateType = AssistantApiDate::class;
   protected $dateDataType = '';
+  /**
+   * @var AssistantApiTimeOfDay
+   */
+  public $timeOfDay;
   protected $timeOfDayType = AssistantApiTimeOfDay::class;
   protected $timeOfDayDataType = '';
+  /**
+   * @var AssistantApiTimeZone
+   */
+  public $timeZone;
   protected $timeZoneType = AssistantApiTimeZone::class;
   protected $timeZoneDataType = '';
 

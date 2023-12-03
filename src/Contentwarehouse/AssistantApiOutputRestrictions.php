@@ -23,6 +23,10 @@ class AssistantApiOutputRestrictions extends \Google\Model
    * @var string
    */
   public $googlePhotoContent;
+  /**
+   * @var AssistantApiGuestAccessOutput
+   */
+  public $guestAccessOutput;
   protected $guestAccessOutputType = AssistantApiGuestAccessOutput::class;
   protected $guestAccessOutputDataType = '';
   /**
@@ -33,6 +37,10 @@ class AssistantApiOutputRestrictions extends \Google\Model
    * @var string
    */
   public $proactiveNotificationOutput;
+  /**
+   * @var AssistantApiProactiveOutput
+   */
+  public $proactiveOutput;
   protected $proactiveOutputType = AssistantApiProactiveOutput::class;
   protected $proactiveOutputDataType = '';
   /**

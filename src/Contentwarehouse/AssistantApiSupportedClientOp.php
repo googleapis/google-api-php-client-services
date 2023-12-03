@@ -23,8 +23,16 @@ class AssistantApiSupportedClientOp extends \Google\Model
    * @var string
    */
   public $clientOpName;
+  /**
+   * @var AssistantApiProtobuf
+   */
+  public $clientOpProperties;
   protected $clientOpPropertiesType = AssistantApiProtobuf::class;
   protected $clientOpPropertiesDataType = '';
+  /**
+   * @var AssistantApiSupportedClientOpSupportedExecution
+   */
+  public $supportedExecution;
   protected $supportedExecutionType = AssistantApiSupportedClientOpSupportedExecution::class;
   protected $supportedExecutionDataType = '';
   /**

@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsMasqueradeMode extends \Google\Model
 {
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $lastEnterGuestModeTimestamp;
   protected $lastEnterGuestModeTimestampType = AssistantApiTimestamp::class;
   protected $lastEnterGuestModeTimestampDataType = '';
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $lastExitGuestModeTimestamp;
   protected $lastExitGuestModeTimestampType = AssistantApiTimestamp::class;
   protected $lastExitGuestModeTimestampDataType = '';
   /**

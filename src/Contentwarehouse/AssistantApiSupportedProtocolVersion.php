@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiSupportedProtocolVersion extends \Google\Collection
 {
   protected $collection_key = 'messageVersion';
+  /**
+   * @var AssistantApiSupportedProtocolVersionMessageVersionPair[]
+   */
+  public $messageVersion;
   protected $messageVersionType = AssistantApiSupportedProtocolVersionMessageVersionPair::class;
   protected $messageVersionDataType = 'array';
 

@@ -36,16 +36,32 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var bool
    */
   public $allowIncomingCalls;
+  /**
+   * @var AssistantApiSettingsAmbientSettings
+   */
+  public $ambientSettings;
   protected $ambientSettingsType = AssistantApiSettingsAmbientSettings::class;
   protected $ambientSettingsDataType = '';
+  /**
+   * @var AssistantApiSettingsInternalAncillaryDeviceId
+   */
+  public $ancillaryDeviceId;
   protected $ancillaryDeviceIdType = AssistantApiSettingsInternalAncillaryDeviceId::class;
   protected $ancillaryDeviceIdDataType = '';
+  /**
+   * @var AssistantApiSettingsAutoFramingSettings
+   */
+  public $autoFramingSettings;
   protected $autoFramingSettingsType = AssistantApiSettingsAutoFramingSettings::class;
   protected $autoFramingSettingsDataType = '';
   /**
    * @var bool
    */
   public $blueSteelEnabled;
+  /**
+   * @var AssistantApiDeviceCapabilities
+   */
+  public $capabilities;
   protected $capabilitiesType = AssistantApiDeviceCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
@@ -60,16 +76,32 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var string
    */
   public $creationTimestampMs;
+  /**
+   * @var AssistantApiSettingsDeviceSettingsCrossSurfaceAvailability
+   */
+  public $crossSurfaceAvailability;
   protected $crossSurfaceAvailabilityType = AssistantApiSettingsDeviceSettingsCrossSurfaceAvailability::class;
   protected $crossSurfaceAvailabilityDataType = '';
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $defaultAudioDeviceId;
   protected $defaultAudioDeviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $defaultAudioDeviceIdDataType = '';
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $defaultVideoDeviceId;
   protected $defaultVideoDeviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $defaultVideoDeviceIdDataType = '';
   /**
    * @var string
    */
   public $deviceBrand;
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**
@@ -96,26 +128,46 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var bool
    */
   public $faceMatchEnabled;
+  /**
+   * @var AssistantApiSettingsGcmSettings
+   */
+  public $gcmSettings;
   protected $gcmSettingsType = AssistantApiSettingsGcmSettings::class;
   protected $gcmSettingsDataType = '';
+  /**
+   * @var AssistantApiSettingsHomeGraphData
+   */
+  public $homeGraphData;
   protected $homeGraphDataType = AssistantApiSettingsHomeGraphData::class;
   protected $homeGraphDataDataType = '';
   /**
    * @var string
    */
   public $homeGraphId;
+  /**
+   * @var AssistantApiSettingsHospitalityMode
+   */
+  public $hospitalityModeStatus;
   protected $hospitalityModeStatusType = AssistantApiSettingsHospitalityMode::class;
   protected $hospitalityModeStatusDataType = '';
   /**
    * @var string
    */
   public $hotwordSensitivity;
+  /**
+   * @var AssistantApiSettingsHotwordThresholdAdjustmentFactor
+   */
+  public $hotwordThresholdAdjustmentFactor;
   protected $hotwordThresholdAdjustmentFactorType = AssistantApiSettingsHotwordThresholdAdjustmentFactor::class;
   protected $hotwordThresholdAdjustmentFactorDataType = '';
   /**
    * @var string
    */
   public $humanFriendlyName;
+  /**
+   * @var AssistantApiSettingsInternalVersion
+   */
+  public $internalVersion;
   protected $internalVersionType = AssistantApiSettingsInternalVersion::class;
   protected $internalVersionDataType = '';
   /**
@@ -126,6 +178,10 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var bool
    */
   public $isDeviceActivationCacheEnabled;
+  /**
+   * @var AssistantApiSettingsKidsMode
+   */
+  public $kidsMode;
   protected $kidsModeType = AssistantApiSettingsKidsMode::class;
   protected $kidsModeDataType = '';
   /**
@@ -136,44 +192,92 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var string
    */
   public $lastUsedCoarseTimestamp;
+  /**
+   * @var AssistantApiCoreTypesDeviceId[]
+   */
+  public $linkedDeviceId;
   protected $linkedDeviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $linkedDeviceIdDataType = 'array';
+  /**
+   * @var AssistantApiSettingsLinkedUser[]
+   */
+  public $linkedUsers;
   protected $linkedUsersType = AssistantApiSettingsLinkedUser::class;
   protected $linkedUsersDataType = 'array';
   /**
    * @var string
    */
   public $locale;
+  /**
+   * @var AssistantApiCoreTypesLocationCoordinates
+   */
+  public $locationCoordinates;
   protected $locationCoordinatesType = AssistantApiCoreTypesLocationCoordinates::class;
   protected $locationCoordinatesDataType = '';
+  /**
+   * @var GeostoreFeatureProto
+   */
+  public $locationFeature;
   protected $locationFeatureType = GeostoreFeatureProto::class;
   protected $locationFeatureDataType = '';
+  /**
+   * @var AssistantApiSettingsMarketplaceDisclosure
+   */
+  public $marketplaceDisclosure;
   protected $marketplaceDisclosureType = AssistantApiSettingsMarketplaceDisclosure::class;
   protected $marketplaceDisclosureDataType = '';
+  /**
+   * @var AssistantApiSettingsMasqueradeMode
+   */
+  public $masqueradeMode;
   protected $masqueradeModeType = AssistantApiSettingsMasqueradeMode::class;
   protected $masqueradeModeDataType = '';
+  /**
+   * @var AssistantApiSettingsNotificationProfile
+   */
+  public $notificationProfile;
   protected $notificationProfileType = AssistantApiSettingsNotificationProfile::class;
   protected $notificationProfileDataType = '';
   /**
    * @var string
    */
   public $oauthClientId;
+  /**
+   * @var AssistantApiSettingsOnDeviceAppSettings
+   */
+  public $onDeviceAppSettings;
   protected $onDeviceAppSettingsType = AssistantApiSettingsOnDeviceAppSettings::class;
   protected $onDeviceAppSettingsDataType = '';
+  /**
+   * @var AssistantApiSettingsDeviceLogsOptIn
+   */
+  public $optInStatus;
   protected $optInStatusType = AssistantApiSettingsDeviceLogsOptIn::class;
   protected $optInStatusDataType = '';
   /**
    * @var bool
    */
   public $paymentsEnabled;
+  /**
+   * @var AssistantApiSettingsPersonalizationMetadata
+   */
+  public $personalizationMetadata;
   protected $personalizationMetadataType = AssistantApiSettingsPersonalizationMetadata::class;
   protected $personalizationMetadataDataType = '';
+  /**
+   * @var AssistantApiSettingsPoliteMode
+   */
+  public $politeMode;
   protected $politeModeType = AssistantApiSettingsPoliteMode::class;
   protected $politeModeDataType = '';
   /**
    * @var string
    */
   public $postalCode;
+  /**
+   * @var AssistantApiSettingsReauthTrustedDeviceSettings
+   */
+  public $reauthTrustedDeviceSettings;
   protected $reauthTrustedDeviceSettingsType = AssistantApiSettingsReauthTrustedDeviceSettings::class;
   protected $reauthTrustedDeviceSettingsDataType = '';
   /**
@@ -184,16 +288,40 @@ class AssistantApiSettingsDeviceSettings extends \Google\Collection
    * @var bool
    */
   public $speakerIdEnabled;
+  /**
+   * @var AssistantApiSettingsSpeechOutputSettings
+   */
+  public $speechOutputSettings;
   protected $speechOutputSettingsType = AssistantApiSettingsSpeechOutputSettings::class;
   protected $speechOutputSettingsDataType = '';
+  /**
+   * @var AssistantApiSettingsSpeechSettings
+   */
+  public $speechSettings;
   protected $speechSettingsType = AssistantApiSettingsSpeechSettings::class;
   protected $speechSettingsDataType = '';
+  /**
+   * @var AssistantApiSettingsDeviceSupervisionSettings
+   */
+  public $supervisionSettings;
   protected $supervisionSettingsType = AssistantApiSettingsDeviceSupervisionSettings::class;
   protected $supervisionSettingsDataType = '';
+  /**
+   * @var AssistantApiCoreTypesSurfaceType
+   */
+  public $surfaceType;
   protected $surfaceTypeType = AssistantApiCoreTypesSurfaceType::class;
   protected $surfaceTypeDataType = '';
+  /**
+   * @var AssistantApiSettingsTetheredInfo
+   */
+  public $tetheredInfo;
   protected $tetheredInfoType = AssistantApiSettingsTetheredInfo::class;
   protected $tetheredInfoDataType = '';
+  /**
+   * @var AssistantApiTimeZone
+   */
+  public $timeZone;
   protected $timeZoneType = AssistantApiTimeZone::class;
   protected $timeZoneDataType = '';
   /**

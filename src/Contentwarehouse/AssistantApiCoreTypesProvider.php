@@ -19,32 +19,72 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesProvider extends \Google\Model
 {
+  /**
+   * @var AssistantApiCoreTypesAndroidAppInfo
+   */
+  public $androidAppInfo;
   protected $androidAppInfoType = AssistantApiCoreTypesAndroidAppInfo::class;
   protected $androidAppInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesCastAppInfo
+   */
+  public $castAppInfo;
   protected $castAppInfoType = AssistantApiCoreTypesCastAppInfo::class;
   protected $castAppInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesChromeOsAppInfo
+   */
+  public $chromeosAppInfo;
   protected $chromeosAppInfoType = AssistantApiCoreTypesChromeOsAppInfo::class;
   protected $chromeosAppInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesCloudProviderInfo
+   */
+  public $cloudProviderInfo;
   protected $cloudProviderInfoType = AssistantApiCoreTypesCloudProviderInfo::class;
   protected $cloudProviderInfoDataType = '';
   /**
    * @var string
    */
   public $fallbackUrl;
+  /**
+   * @var AssistantApiCoreTypesHomeAppInfo
+   */
+  public $homeAppInfo;
   protected $homeAppInfoType = AssistantApiCoreTypesHomeAppInfo::class;
   protected $homeAppInfoDataType = '';
   /**
    * @var string
    */
   public $iconImageUrl;
+  /**
+   * @var AssistantApiCoreTypesInternalProviderInfo
+   */
+  public $internalProviderInfo;
   protected $internalProviderInfoType = AssistantApiCoreTypesInternalProviderInfo::class;
   protected $internalProviderInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesIosAppInfo
+   */
+  public $iosAppInfo;
   protected $iosAppInfoType = AssistantApiCoreTypesIosAppInfo::class;
   protected $iosAppInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesKaiOsAppInfo
+   */
+  public $kaiosAppInfo;
   protected $kaiosAppInfoType = AssistantApiCoreTypesKaiOsAppInfo::class;
   protected $kaiosAppInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesSipProviderInfo
+   */
+  public $sipProviderInfo;
   protected $sipProviderInfoType = AssistantApiCoreTypesSipProviderInfo::class;
   protected $sipProviderInfoDataType = '';
+  /**
+   * @var AssistantApiCoreTypesWebProviderInfo
+   */
+  public $webProviderInfo;
   protected $webProviderInfoType = AssistantApiCoreTypesWebProviderInfo::class;
   protected $webProviderInfoDataType = '';
 

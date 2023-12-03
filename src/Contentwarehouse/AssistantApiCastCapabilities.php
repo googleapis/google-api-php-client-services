@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiCastCapabilities extends \Google\Collection
 {
   protected $collection_key = 'cameraStreamSupportedProtocols';
+  /**
+   * @var AssistantApiCameraReceiverCapabilities
+   */
+  public $cameraReceiverCapabilities;
   protected $cameraReceiverCapabilitiesType = AssistantApiCameraReceiverCapabilities::class;
   protected $cameraReceiverCapabilitiesDataType = '';
   /**
@@ -30,6 +34,10 @@ class AssistantApiCastCapabilities extends \Google\Collection
    * @var bool
    */
   public $canReceiveCast;
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**
