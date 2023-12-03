@@ -19,18 +19,46 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQueryAnnotationLayerSignals extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersIntentQueryCustomVehicleActionArgumentAnnotatorSignals
+   */
+  public $customVehicleActionArgumentAnnotatorSignals;
   protected $customVehicleActionArgumentAnnotatorSignalsType = KnowledgeAnswersIntentQueryCustomVehicleActionArgumentAnnotatorSignals::class;
   protected $customVehicleActionArgumentAnnotatorSignalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryFreetextAnnotationSignals
+   */
+  public $freetextAnnotationSignals;
   protected $freetextAnnotationSignalsType = KnowledgeAnswersIntentQueryFreetextAnnotationSignals::class;
   protected $freetextAnnotationSignalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryNimbleAnnotationSignals
+   */
+  public $nimbleAnnotationSignals;
   protected $nimbleAnnotationSignalsType = KnowledgeAnswersIntentQueryNimbleAnnotationSignals::class;
   protected $nimbleAnnotationSignalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryNTPRAnnotationSignals
+   */
+  public $ntprAnnotationSignals;
   protected $ntprAnnotationSignalsType = KnowledgeAnswersIntentQueryNTPRAnnotationSignals::class;
   protected $ntprAnnotationSignalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryQrefAnnotationSignals
+   */
+  public $qrefAnnotationSignals;
   protected $qrefAnnotationSignalsType = KnowledgeAnswersIntentQueryQrefAnnotationSignals::class;
   protected $qrefAnnotationSignalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQuerySemanticAnnotationSignals
+   */
+  public $semanticAnnotationSignals;
   protected $semanticAnnotationSignalsType = KnowledgeAnswersIntentQuerySemanticAnnotationSignals::class;
   protected $semanticAnnotationSignalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryTeleportArgumentAnnotatorSignals
+   */
+  public $teleportArgumentAnnotatorSignals;
   protected $teleportArgumentAnnotatorSignalsType = KnowledgeAnswersIntentQueryTeleportArgumentAnnotatorSignals::class;
   protected $teleportArgumentAnnotatorSignalsDataType = '';
 

@@ -24,14 +24,26 @@ class KnowledgeGraphTriple extends \Google\Collection
    * @var bool
    */
   public $isNegation;
+  /**
+   * @var KnowledgeGraphTripleObj
+   */
+  public $obj;
   protected $objType = KnowledgeGraphTripleObj::class;
   protected $objDataType = '';
   /**
    * @var string
    */
   public $pred;
+  /**
+   * @var KnowledgeGraphTripleProvenance[]
+   */
+  public $provenance;
   protected $provenanceType = KnowledgeGraphTripleProvenance::class;
   protected $provenanceDataType = 'array';
+  /**
+   * @var KnowledgeGraphQualifierSet[]
+   */
+  public $qualifierSets;
   protected $qualifierSetsType = KnowledgeGraphQualifierSet::class;
   protected $qualifierSetsDataType = 'array';
   /**

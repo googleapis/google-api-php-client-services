@@ -29,8 +29,16 @@ class LegalCitationCourtDocumentOpinionInfo extends \Google\Model
    * @var int
    */
   public $bench;
+  /**
+   * @var LegalPerson
+   */
+  public $deliveredBy;
   protected $deliveredByType = LegalPerson::class;
   protected $deliveredByDataType = '';
+  /**
+   * @var LegalPerson
+   */
+  public $joinedBy;
   protected $joinedByType = LegalPerson::class;
   protected $joinedByDataType = '';
   /**

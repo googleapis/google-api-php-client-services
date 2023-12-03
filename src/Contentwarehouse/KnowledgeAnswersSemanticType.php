@@ -24,6 +24,10 @@ class KnowledgeAnswersSemanticType extends \Google\Collection
    * @var bool
    */
   public $allowAll;
+  /**
+   * @var NlpMeaningComponentSpecificContracts
+   */
+  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
   /**
@@ -34,10 +38,22 @@ class KnowledgeAnswersSemanticType extends \Google\Collection
    * @var string[]
    */
   public $name;
+  /**
+   * @var NlpMeaningSemanticTypeNameComponentSpecificContracts[]
+   */
+  public $nameContracts;
   protected $nameContractsType = NlpMeaningSemanticTypeNameComponentSpecificContracts::class;
   protected $nameContractsDataType = 'array';
+  /**
+   * @var NlpMeaningSemanticTypeNameMeaningRemodelings[]
+   */
+  public $nameRemodelings;
   protected $nameRemodelingsType = NlpMeaningSemanticTypeNameMeaningRemodelings::class;
   protected $nameRemodelingsDataType = 'array';
+  /**
+   * @var NlpMeaningMeaningRemodelings
+   */
+  public $remodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
 

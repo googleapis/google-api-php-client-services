@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class LocalsearchProtoInternalFoodOrderingActionMetadataServiceInfo extends \Google\Collection
 {
   protected $collection_key = 'availablePartnerInfo';
+  /**
+   * @var LocalsearchProtoInternalFoodOrderingActionMetadataAvailablePartnerInfo[]
+   */
+  public $availablePartnerInfo;
   protected $availablePartnerInfoType = LocalsearchProtoInternalFoodOrderingActionMetadataAvailablePartnerInfo::class;
   protected $availablePartnerInfoDataType = 'array';
   /**
    * @var string
    */
   public $maxWaitTimeSec;
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $minDeliveryFee;
   protected $minDeliveryFeeType = GoogleTypeMoney::class;
   protected $minDeliveryFeeDataType = '';
   /**

@@ -23,6 +23,10 @@ class KnowledgeAnswersIntentQueryArgumentProvenanceAttentionalEntity extends \Go
    * @var string
    */
   public $attentionalEntityKey;
+  /**
+   * @var AttentionalEntitiesMentionProperties
+   */
+  public $mentionProperties;
   protected $mentionPropertiesType = AttentionalEntitiesMentionProperties::class;
   protected $mentionPropertiesDataType = '';
 

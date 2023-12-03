@@ -24,6 +24,10 @@ class MustangReposWwwSnippetsSnippetCandidate extends \Google\Collection
    * @var int
    */
   public $dataSourceType;
+  /**
+   * @var MustangReposWwwSnippetsCandidateFeature[]
+   */
+  public $features;
   protected $featuresType = MustangReposWwwSnippetsCandidateFeature::class;
   protected $featuresDataType = 'array';
   /**

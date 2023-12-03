@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class MediaIndexVideoCentroid extends \Google\Collection
 {
   protected $collection_key = 'domainScores';
+  /**
+   * @var MediaIndexVideoCentroidDomainScore[]
+   */
+  public $domainScores;
   protected $domainScoresType = MediaIndexVideoCentroidDomainScore::class;
   protected $domainScoresDataType = 'array';
 

@@ -19,20 +19,52 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQueryArgumentProvenance extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenanceQueryAnaphor
+   */
+  public $anaphor;
   protected $anaphorType = KnowledgeAnswersIntentQueryArgumentProvenanceQueryAnaphor::class;
   protected $anaphorDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenanceAttentionalEntity
+   */
+  public $attentionalEntity;
   protected $attentionalEntityType = KnowledgeAnswersIntentQueryArgumentProvenanceAttentionalEntity::class;
   protected $attentionalEntityDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery
+   */
+  public $currentQuery;
   protected $currentQueryType = KnowledgeAnswersIntentQueryArgumentProvenanceCurrentQuery::class;
   protected $currentQueryDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenanceInjectedContextualSchema
+   */
+  public $injectedContextualSchema;
   protected $injectedContextualSchemaType = KnowledgeAnswersIntentQueryArgumentProvenanceInjectedContextualSchema::class;
   protected $injectedContextualSchemaDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery
+   */
+  public $previousQuery;
   protected $previousQueryType = KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery::class;
   protected $previousQueryDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenancePreviousResponseMeaning
+   */
+  public $previousResponseMeaning;
   protected $previousResponseMeaningType = KnowledgeAnswersIntentQueryArgumentProvenancePreviousResponseMeaning::class;
   protected $previousResponseMeaningDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenancePreviousTaskState
+   */
+  public $previousTaskState;
   protected $previousTaskStateType = KnowledgeAnswersIntentQueryArgumentProvenancePreviousTaskState::class;
   protected $previousTaskStateDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenanceSearchAnswerValue
+   */
+  public $searchAnswerValue;
   protected $searchAnswerValueType = KnowledgeAnswersIntentQueryArgumentProvenanceSearchAnswerValue::class;
   protected $searchAnswerValueDataType = '';
 

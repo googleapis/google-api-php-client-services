@@ -19,16 +19,32 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersSensitivityInstruction extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersSensitivityInstructionArgument
+   */
+  public $argument;
   protected $argumentType = KnowledgeAnswersSensitivityInstructionArgument::class;
   protected $argumentDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityInstructionIntent
+   */
+  public $intent;
   protected $intentType = KnowledgeAnswersSensitivityInstructionIntent::class;
   protected $intentDataType = '';
+  /**
+   * @var SearchPolicyRankableSensitivity
+   */
+  public $legacyAssistantSensitivity;
   protected $legacyAssistantSensitivityType = SearchPolicyRankableSensitivity::class;
   protected $legacyAssistantSensitivityDataType = '';
   /**
    * @var bool
    */
   public $multiAccountAllowed;
+  /**
+   * @var KnowledgeAnswersSensitivityInstructionPreviousQuery
+   */
+  public $previousQuery;
   protected $previousQueryType = KnowledgeAnswersSensitivityInstructionPreviousQuery::class;
   protected $previousQueryDataType = '';
 

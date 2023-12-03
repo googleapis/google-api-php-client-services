@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class ListSnippetResponse extends \Google\Collection
 {
   protected $collection_key = 'row';
+  /**
+   * @var ListSnippetResponseRow
+   */
+  public $header;
   protected $headerType = ListSnippetResponseRow::class;
   protected $headerDataType = '';
   /**
    * @var bool
    */
   public $isTable;
+  /**
+   * @var ListSnippetResponseRow[]
+   */
+  public $row;
   protected $rowType = ListSnippetResponseRow::class;
   protected $rowDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryLocalSignals extends \Google\Collection
 {
   protected $collection_key = 'localResultSignals';
+  /**
+   * @var KnowledgeAnswersIntentQueryLocalResultSignals[]
+   */
+  public $localResultSignals;
   protected $localResultSignalsType = KnowledgeAnswersIntentQueryLocalResultSignals::class;
   protected $localResultSignalsDataType = 'array';
   /**

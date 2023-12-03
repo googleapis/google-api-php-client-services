@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQueryConceptInfo extends \Google\Model
 {
+  /**
+   * @var ConceptsConceptId
+   */
+  public $id;
   protected $idType = ConceptsConceptId::class;
   protected $idDataType = '';
 

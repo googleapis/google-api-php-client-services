@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class LocalWWWInfoOpeningHours extends \Google\Model
 {
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $hours;
   protected $hoursType = GeostoreTimeScheduleProto::class;
   protected $hoursDataType = '';
   /**

@@ -42,6 +42,10 @@ class LegalCitationCourtDocumentCourt extends \Google\Collection
    * @var string
    */
   public $originalName;
+  /**
+   * @var LegalCitationCourtDocumentCourtNameComponent[]
+   */
+  public $namecomponent;
   protected $namecomponentType = LegalCitationCourtDocumentCourtNameComponent::class;
   protected $namecomponentDataType = 'array';
 

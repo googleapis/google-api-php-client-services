@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class MediaIndexVideoFrames extends \Google\Collection
 {
   protected $collection_key = 'videoFrames';
+  /**
+   * @var MediaIndexVideoFrame[]
+   */
+  public $videoFrames;
   protected $videoFramesType = MediaIndexVideoFrame::class;
   protected $videoFramesDataType = 'array';
 

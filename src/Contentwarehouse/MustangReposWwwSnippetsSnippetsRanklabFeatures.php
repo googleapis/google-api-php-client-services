@@ -24,14 +24,26 @@ class MustangReposWwwSnippetsSnippetsRanklabFeatures extends \Google\Collection
    * @var int
    */
   public $browserWidth;
+  /**
+   * @var MustangReposWwwSnippetsSnippetCandidate[]
+   */
+  public $candidates;
   protected $candidatesType = MustangReposWwwSnippetsSnippetCandidate::class;
   protected $candidatesDataType = 'array';
+  /**
+   * @var QualityPreviewRanklabSnippet
+   */
+  public $displaySnippet;
   protected $displaySnippetType = QualityPreviewRanklabSnippet::class;
   protected $displaySnippetDataType = '';
   /**
    * @var string
    */
   public $documentLanguage;
+  /**
+   * @var QualityPreviewSnippetQueryTermCoverageFeatures
+   */
+  public $originalQueryTermCoverages;
   protected $originalQueryTermCoveragesType = QualityPreviewSnippetQueryTermCoverageFeatures::class;
   protected $originalQueryTermCoveragesDataType = '';
   /**
@@ -46,6 +58,10 @@ class MustangReposWwwSnippetsSnippetsRanklabFeatures extends \Google\Collection
    * @var float
    */
   public $snippetQueryTermCoverage;
+  /**
+   * @var QualityPreviewRanklabSnippet[]
+   */
+  public $snippets;
   protected $snippetsType = QualityPreviewRanklabSnippet::class;
   protected $snippetsDataType = 'array';
   /**
@@ -60,6 +76,10 @@ class MustangReposWwwSnippetsSnippetsRanklabFeatures extends \Google\Collection
    * @var float
    */
   public $titleSnippetQueryTermCoverage;
+  /**
+   * @var QualityPreviewRanklabTitle[]
+   */
+  public $titles;
   protected $titlesType = QualityPreviewRanklabTitle::class;
   protected $titlesDataType = 'array';
 

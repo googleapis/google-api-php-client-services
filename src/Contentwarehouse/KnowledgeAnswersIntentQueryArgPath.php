@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryArgPath extends \Google\Collection
 {
   protected $collection_key = 'components';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgPathComponent[]
+   */
+  public $components;
   protected $componentsType = KnowledgeAnswersIntentQueryArgPathComponent::class;
   protected $componentsDataType = 'array';
 

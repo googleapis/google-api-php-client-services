@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQueryArgumentProvenanceSearchAnswerValue extends \Google\Model
 {
+  /**
+   * @var EventIdMessage
+   */
+  public $eventId;
   protected $eventIdType = EventIdMessage::class;
   protected $eventIdDataType = '';
   /**

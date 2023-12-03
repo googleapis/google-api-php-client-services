@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class LogsSemanticInterpretationIntentQueryEntityLinkMetadata extends \Google\Collection
 {
   protected $collection_key = 'kindInfo';
+  /**
+   * @var LogsSemanticInterpretationIntentQueryLinkKindFlags
+   */
+  public $aggregateFlags;
   protected $aggregateFlagsType = LogsSemanticInterpretationIntentQueryLinkKindFlags::class;
   protected $aggregateFlagsDataType = '';
+  /**
+   * @var LogsSemanticInterpretationIntentQueryLinkKindInfo[]
+   */
+  public $kindInfo;
   protected $kindInfoType = LogsSemanticInterpretationIntentQueryLinkKindInfo::class;
   protected $kindInfoDataType = 'array';
 

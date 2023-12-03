@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersMarker extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersMarkerCommand
+   */
+  public $command;
   protected $commandType = KnowledgeAnswersMarkerCommand::class;
   protected $commandDataType = '';
+  /**
+   * @var KnowledgeAnswersMarkerOpenQuestion
+   */
+  public $openQuestion;
   protected $openQuestionType = KnowledgeAnswersMarkerOpenQuestion::class;
   protected $openQuestionDataType = '';
+  /**
+   * @var KnowledgeAnswersMarkerPolarQuestion
+   */
+  public $polarQuestion;
   protected $polarQuestionType = KnowledgeAnswersMarkerPolarQuestion::class;
   protected $polarQuestionDataType = '';
+  /**
+   * @var KnowledgeAnswersMarkerStateOfAffairs
+   */
+  public $stateOfAffairs;
   protected $stateOfAffairsType = KnowledgeAnswersMarkerStateOfAffairs::class;
   protected $stateOfAffairsDataType = '';
 

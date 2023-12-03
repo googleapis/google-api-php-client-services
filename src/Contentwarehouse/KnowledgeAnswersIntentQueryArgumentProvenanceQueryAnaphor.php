@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryArgumentProvenanceQueryAnaphor extends \Google\Collection
 {
   protected $collection_key = 'evalData';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData[]
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = 'array';
 

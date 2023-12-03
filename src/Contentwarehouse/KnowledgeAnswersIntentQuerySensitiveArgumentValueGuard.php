@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQuerySensitiveArgumentValueGuard extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentValue
+   */
+  public $doNotUseDebugOnlyDecryptedValue;
   protected $doNotUseDebugOnlyDecryptedValueType = KnowledgeAnswersIntentQueryArgumentValue::class;
   protected $doNotUseDebugOnlyDecryptedValueDataType = '';
   /**

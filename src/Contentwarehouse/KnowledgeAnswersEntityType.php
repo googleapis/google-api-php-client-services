@@ -24,6 +24,10 @@ class KnowledgeAnswersEntityType extends \Google\Collection
    * @var string[]
    */
   public $collection;
+  /**
+   * @var NlpMeaningComponentSpecificContracts
+   */
+  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
   /**
@@ -34,6 +38,10 @@ class KnowledgeAnswersEntityType extends \Google\Collection
    * @var string[]
    */
   public $id;
+  /**
+   * @var KnowledgeAnswersIntentQueryIdentifier[]
+   */
+  public $identifier;
   protected $identifierType = KnowledgeAnswersIntentQueryIdentifier::class;
   protected $identifierDataType = 'array';
   /**
@@ -44,6 +52,10 @@ class KnowledgeAnswersEntityType extends \Google\Collection
    * @var bool
    */
   public $includeGeolocationData;
+  /**
+   * @var NlpMeaningMeaningRemodelings
+   */
+  public $remodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
 

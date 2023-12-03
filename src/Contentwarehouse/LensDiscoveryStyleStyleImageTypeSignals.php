@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class LensDiscoveryStyleStyleImageTypeSignals extends \Google\Collection
 {
   protected $collection_key = 'styleImageTypePredictions';
+  /**
+   * @var LensDiscoveryStyleStyleImageTypeSignalsStyleImageTypePrediction[]
+   */
+  public $styleImageTypePredictions;
   protected $styleImageTypePredictionsType = LensDiscoveryStyleStyleImageTypeSignalsStyleImageTypePrediction::class;
   protected $styleImageTypePredictionsDataType = 'array';
   /**

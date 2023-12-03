@@ -20,34 +20,78 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryFunctionCall extends \Google\Collection
 {
   protected $collection_key = 'unexplainedTokens';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgument[]
+   */
+  public $argument;
   protected $argumentType = KnowledgeAnswersIntentQueryArgument::class;
   protected $argumentDataType = 'array';
   /**
    * @var string
    */
   public $catalogVersion;
+  /**
+   * @var KnowledgeAnswersIntentQueryConceptInfo
+   */
+  public $conceptInfo;
   protected $conceptInfoType = KnowledgeAnswersIntentQueryConceptInfo::class;
   protected $conceptInfoDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivitySensitivity[]
+   */
+  public $contextualSensitivity;
   protected $contextualSensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
   protected $contextualSensitivityDataType = 'array';
+  /**
+   * @var NlpMeaningMeaningRemodelingControl
+   */
+  public $enabledRemodelings;
   protected $enabledRemodelingsType = NlpMeaningMeaningRemodelingControl::class;
   protected $enabledRemodelingsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryTokens[]
+   */
+  public $ignoredTokens;
   protected $ignoredTokensType = KnowledgeAnswersIntentQueryTokens::class;
   protected $ignoredTokensDataType = 'array';
+  /**
+   * @var KnowledgeAnswersMeaningSchemaKey
+   */
+  public $key;
   protected $keyType = KnowledgeAnswersMeaningSchemaKey::class;
   protected $keyDataType = '';
+  /**
+   * @var KnowledgeAnswersMarker
+   */
+  public $marker;
   protected $markerType = KnowledgeAnswersMarker::class;
   protected $markerDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentModifiers
+   */
+  public $modifiers;
   protected $modifiersType = KnowledgeAnswersIntentModifiers::class;
   protected $modifiersDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var KnowledgeAnswersSensitivitySensitivity
+   */
+  public $sensitivity;
   protected $sensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
   protected $sensitivityDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryFunctionCallSignals
+   */
+  public $signals;
   protected $signalsType = KnowledgeAnswersIntentQueryFunctionCallSignals::class;
   protected $signalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryTokens[]
+   */
+  public $unexplainedTokens;
   protected $unexplainedTokensType = KnowledgeAnswersIntentQueryTokens::class;
   protected $unexplainedTokensDataType = 'array';
 

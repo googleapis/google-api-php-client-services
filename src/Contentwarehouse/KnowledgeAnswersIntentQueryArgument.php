@@ -19,20 +19,44 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQueryArgument extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $heuristicEvalData;
   protected $heuristicEvalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $heuristicEvalDataDataType = '';
+  /**
+   * @var KnowledgeAnswersMeaningSchemaSlotKey
+   */
+  public $key;
   protected $keyType = KnowledgeAnswersMeaningSchemaSlotKey::class;
   protected $keyDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentModifiers
+   */
+  public $modifiers;
   protected $modifiersType = KnowledgeAnswersIntentModifiers::class;
   protected $modifiersDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentSignals
+   */
+  public $signals;
   protected $signalsType = KnowledgeAnswersIntentQueryArgumentSignals::class;
   protected $signalsDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentValue
+   */
+  public $value;
   protected $valueType = KnowledgeAnswersIntentQueryArgumentValue::class;
   protected $valueDataType = '';
 

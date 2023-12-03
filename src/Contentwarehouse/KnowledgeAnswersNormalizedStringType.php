@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersNormalizedStringType extends \Google\Collection
 {
   protected $collection_key = 'normalizedValue';
+  /**
+   * @var NlpMeaningComponentSpecificContracts
+   */
+  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
   /**
    * @var string[]
    */
   public $normalizedValue;
+  /**
+   * @var NlpMeaningMeaningRemodelings
+   */
+  public $remodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
 

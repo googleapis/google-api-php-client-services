@@ -19,66 +19,190 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersOpaqueType extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersOpaqueAogType
+   */
+  public $aogType;
   protected $aogTypeType = KnowledgeAnswersOpaqueAogType::class;
   protected $aogTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueAppAnnotationType
+   */
+  public $appAnnotationType;
   protected $appAnnotationTypeType = KnowledgeAnswersOpaqueAppAnnotationType::class;
   protected $appAnnotationTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueAudioType
+   */
+  public $audioType;
   protected $audioTypeType = KnowledgeAnswersOpaqueAudioType::class;
   protected $audioTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueCalendarEventType
+   */
+  public $calendarEventType;
   protected $calendarEventTypeType = KnowledgeAnswersOpaqueCalendarEventType::class;
   protected $calendarEventTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueCalendarEventWrapperType
+   */
+  public $calendarEventWrapperType;
   protected $calendarEventWrapperTypeType = KnowledgeAnswersOpaqueCalendarEventWrapperType::class;
   protected $calendarEventWrapperTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueCalendarReferenceType
+   */
+  public $calendarReferenceType;
   protected $calendarReferenceTypeType = KnowledgeAnswersOpaqueCalendarReferenceType::class;
   protected $calendarReferenceTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueComplexQueriesRewriteType
+   */
+  public $complexQueriesRewriteType;
   protected $complexQueriesRewriteTypeType = KnowledgeAnswersOpaqueComplexQueriesRewriteType::class;
   protected $complexQueriesRewriteTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueComponentReferenceIndexType
+   */
+  public $componentReferenceType;
   protected $componentReferenceTypeType = KnowledgeAnswersOpaqueComponentReferenceIndexType::class;
   protected $componentReferenceTypeDataType = '';
+  /**
+   * @var NlpMeaningComponentSpecificContracts
+   */
+  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueDeviceIdType
+   */
+  public $deviceIdType;
   protected $deviceIdTypeType = KnowledgeAnswersOpaqueDeviceIdType::class;
   protected $deviceIdTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueDeviceType
+   */
+  public $deviceType;
   protected $deviceTypeType = KnowledgeAnswersOpaqueDeviceType::class;
   protected $deviceTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueDeviceUserIdentityType
+   */
+  public $deviceUserIdentityType;
   protected $deviceUserIdentityTypeType = KnowledgeAnswersOpaqueDeviceUserIdentityType::class;
   protected $deviceUserIdentityTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueHomeAutomationDeviceType
+   */
+  public $homeAutomationDeviceType;
   protected $homeAutomationDeviceTypeType = KnowledgeAnswersOpaqueHomeAutomationDeviceType::class;
   protected $homeAutomationDeviceTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueLocationType
+   */
+  public $locationType;
   protected $locationTypeType = KnowledgeAnswersOpaqueLocationType::class;
   protected $locationTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueMediaType
+   */
+  public $mediaType;
   protected $mediaTypeType = KnowledgeAnswersOpaqueMediaType::class;
   protected $mediaTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueMessageNotificationType
+   */
+  public $messageNotificationType;
   protected $messageNotificationTypeType = KnowledgeAnswersOpaqueMessageNotificationType::class;
   protected $messageNotificationTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueMoneyType
+   */
+  public $moneyType;
   protected $moneyTypeType = KnowledgeAnswersOpaqueMoneyType::class;
   protected $moneyTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueNewsProviderType
+   */
+  public $narrativeNewsProviderType;
   protected $narrativeNewsProviderTypeType = KnowledgeAnswersOpaqueNewsProviderType::class;
   protected $narrativeNewsProviderTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueOnDeviceType
+   */
+  public $onDeviceType;
   protected $onDeviceTypeType = KnowledgeAnswersOpaqueOnDeviceType::class;
   protected $onDeviceTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaquePersonType
+   */
+  public $personType;
   protected $personTypeType = KnowledgeAnswersOpaquePersonType::class;
   protected $personTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaquePersonalIntelligenceEntityType
+   */
+  public $personalIntelligenceEntityType;
   protected $personalIntelligenceEntityTypeType = KnowledgeAnswersOpaquePersonalIntelligenceEntityType::class;
   protected $personalIntelligenceEntityTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueProductivityListItemType
+   */
+  public $productivityListItemType;
   protected $productivityListItemTypeType = KnowledgeAnswersOpaqueProductivityListItemType::class;
   protected $productivityListItemTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueRecurrenceType
+   */
+  public $recurrenceType;
   protected $recurrenceTypeType = KnowledgeAnswersOpaqueRecurrenceType::class;
   protected $recurrenceTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueReminderType
+   */
+  public $reminderType;
   protected $reminderTypeType = KnowledgeAnswersOpaqueReminderType::class;
   protected $reminderTypeDataType = '';
+  /**
+   * @var NlpMeaningMeaningRemodelings
+   */
+  public $remodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueShoppingMerchantType
+   */
+  public $shoppingMerchantType;
   protected $shoppingMerchantTypeType = KnowledgeAnswersOpaqueShoppingMerchantType::class;
   protected $shoppingMerchantTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueShoppingOfferType
+   */
+  public $shoppingOfferType;
   protected $shoppingOfferTypeType = KnowledgeAnswersOpaqueShoppingOfferType::class;
   protected $shoppingOfferTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueShoppingProductExpressionType
+   */
+  public $shoppingProductExpressionType;
   protected $shoppingProductExpressionTypeType = KnowledgeAnswersOpaqueShoppingProductExpressionType::class;
   protected $shoppingProductExpressionTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueShoppingProductType
+   */
+  public $shoppingProductType;
   protected $shoppingProductTypeType = KnowledgeAnswersOpaqueShoppingProductType::class;
   protected $shoppingProductTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueShoppingStoreType
+   */
+  public $shoppingStoreType;
   protected $shoppingStoreTypeType = KnowledgeAnswersOpaqueShoppingStoreType::class;
   protected $shoppingStoreTypeDataType = '';
+  /**
+   * @var KnowledgeAnswersOpaqueTimerType
+   */
+  public $timerType;
   protected $timerTypeType = KnowledgeAnswersOpaqueTimerType::class;
   protected $timerTypeDataType = '';
 

@@ -39,8 +39,16 @@ class LensDiscoveryStylePersonAttributes extends \Google\Model
    * @var int
    */
   public $discretizedVisualSaliencyScore;
+  /**
+   * @var LensDiscoveryStyleBoundingBox
+   */
+  public $personBoundingBox;
   protected $personBoundingBoxType = LensDiscoveryStyleBoundingBox::class;
   protected $personBoundingBoxDataType = '';
+  /**
+   * @var LensDiscoveryStylePersonAttributesPersonVisibilityScores
+   */
+  public $personVisibilityScores;
   protected $personVisibilityScoresType = LensDiscoveryStylePersonAttributesPersonVisibilityScores::class;
   protected $personVisibilityScoresDataType = '';
   /**

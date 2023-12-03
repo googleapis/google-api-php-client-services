@@ -32,12 +32,28 @@ class LegalCitationCourtDocumentPerDocketInfo extends \Google\Collection
    * @var string
    */
   public $docketID;
+  /**
+   * @var LegalPerson[]
+   */
+  public $petitioner;
   protected $petitionerType = LegalPerson::class;
   protected $petitionerDataType = 'array';
+  /**
+   * @var LegalPerson[]
+   */
+  public $petitionerCounsel;
   protected $petitionerCounselType = LegalPerson::class;
   protected $petitionerCounselDataType = 'array';
+  /**
+   * @var LegalPerson[]
+   */
+  public $respondent;
   protected $respondentType = LegalPerson::class;
   protected $respondentDataType = 'array';
+  /**
+   * @var LegalPerson[]
+   */
+  public $respondentCounsel;
   protected $respondentCounselType = LegalPerson::class;
   protected $respondentCounselDataType = 'array';
   /**

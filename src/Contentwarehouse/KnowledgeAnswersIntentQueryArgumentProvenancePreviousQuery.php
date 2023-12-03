@@ -20,14 +20,34 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryArgumentProvenancePreviousQuery extends \Google\Collection
 {
   protected $collection_key = 'evalData';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData[]
+   */
+  public $currentQueryEvalData;
   protected $currentQueryEvalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $currentQueryEvalDataDataType = 'array';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData[]
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = 'array';
+  /**
+   * @var EventIdMessage
+   */
+  public $eventId;
   protected $eventIdType = EventIdMessage::class;
   protected $eventIdDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator
+   */
+  public $neuralLocationAnnotator;
   protected $neuralLocationAnnotatorType = KnowledgeAnswersIntentQueryArgumentProvenanceNeuralLocationAnnotator::class;
   protected $neuralLocationAnnotatorDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgumentProvenancePreviousQueryRole
+   */
+  public $role;
   protected $roleType = KnowledgeAnswersIntentQueryArgumentProvenancePreviousQueryRole::class;
   protected $roleDataType = '';
   /**

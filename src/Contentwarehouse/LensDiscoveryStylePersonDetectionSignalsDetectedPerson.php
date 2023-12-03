@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class LensDiscoveryStylePersonDetectionSignalsDetectedPerson extends \Google\Model
 {
+  /**
+   * @var LensDiscoveryStyleBoundingBox
+   */
+  public $boundingBox;
   protected $boundingBoxType = LensDiscoveryStyleBoundingBox::class;
   protected $boundingBoxDataType = '';
 

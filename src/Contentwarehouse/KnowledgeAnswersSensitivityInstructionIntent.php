@@ -19,14 +19,34 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersSensitivityInstructionIntent extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersSensitivityIntentEvalPolicy
+   */
+  public $eval;
   protected $evalType = KnowledgeAnswersSensitivityIntentEvalPolicy::class;
   protected $evalDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityMyActivityPolicy
+   */
+  public $footprints;
   protected $footprintsType = KnowledgeAnswersSensitivityMyActivityPolicy::class;
   protected $footprintsDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityLoggingPolicy
+   */
+  public $logging;
   protected $loggingType = KnowledgeAnswersSensitivityLoggingPolicy::class;
   protected $loggingDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityServingPolicy
+   */
+  public $serving;
   protected $servingType = KnowledgeAnswersSensitivityServingPolicy::class;
   protected $servingDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityStoragePolicy
+   */
+  public $storage;
   protected $storageType = KnowledgeAnswersSensitivityStoragePolicy::class;
   protected $storageDataType = '';
 

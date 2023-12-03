@@ -23,6 +23,10 @@ class MediaIndexFrameIdentifierPreviewFrameZeroVariant extends \Google\Model
    * @var string
    */
   public $previewLength;
+  /**
+   * @var MediaIndexXtagList
+   */
+  public $xtagList;
   protected $xtagListType = MediaIndexXtagList::class;
   protected $xtagListDataType = '';
 

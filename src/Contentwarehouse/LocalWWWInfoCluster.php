@@ -44,6 +44,10 @@ class LocalWWWInfoCluster extends \Google\Collection
    * @var int
    */
   public $featureType;
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $hours;
   protected $hoursType = GeostoreTimeScheduleProto::class;
   protected $hoursDataType = '';
   /**
@@ -86,8 +90,16 @@ class LocalWWWInfoCluster extends \Google\Collection
    * @var string
    */
   public $phoneFprint;
+  /**
+   * @var TelephoneNumber
+   */
+  public $phoneNumber;
   protected $phoneNumberType = TelephoneNumber::class;
   protected $phoneNumberDataType = '';
+  /**
+   * @var PostalAddress
+   */
+  public $postalAddress;
   protected $postalAddressType = PostalAddress::class;
   protected $postalAddressDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class LogsSemanticInterpretationIntentQueryLinkKindInfo extends \Google\Model
 {
+  /**
+   * @var LogsSemanticInterpretationIntentQueryLinkKindFlags
+   */
+  public $flags;
   protected $flagsType = LogsSemanticInterpretationIntentQueryLinkKindFlags::class;
   protected $flagsDataType = '';
   /**

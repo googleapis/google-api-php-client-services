@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersNumberType extends \Google\Collection
 {
   protected $collection_key = 'subType';
+  /**
+   * @var NlpMeaningComponentSpecificContracts
+   */
+  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
   /**
    * @var bool
    */
   public $keepAsString;
+  /**
+   * @var KnowledgeAnswersRangeConstraint
+   */
+  public $rangeConstraint;
   protected $rangeConstraintType = KnowledgeAnswersRangeConstraint::class;
   protected $rangeConstraintDataType = '';
+  /**
+   * @var NlpMeaningMeaningRemodelings
+   */
+  public $remodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
   /**

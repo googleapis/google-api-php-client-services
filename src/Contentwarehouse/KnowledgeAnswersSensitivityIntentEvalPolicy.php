@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersSensitivityIntentEvalPolicy extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersSensitivityArgumentEvalPolicy
+   */
+  public $allArguments;
   protected $allArgumentsType = KnowledgeAnswersSensitivityArgumentEvalPolicy::class;
   protected $allArgumentsDataType = '';
   /**

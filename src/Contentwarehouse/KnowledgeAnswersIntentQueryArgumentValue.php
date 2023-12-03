@@ -20,80 +20,232 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryArgumentValue extends \Google\Collection
 {
   protected $collection_key = 'sensitivity';
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleAogSlot
+   */
+  public $aogSlot;
   protected $aogSlotType = NlpSemanticParsingProtoActionsOnGoogleAogSlot::class;
   protected $aogSlotDataType = '';
+  /**
+   * @var NlpSemanticParsingAppAnnotation
+   */
+  public $appAnnotation;
   protected $appAnnotationType = NlpSemanticParsingAppAnnotation::class;
   protected $appAnnotationDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaAudio
+   */
+  public $audio;
   protected $audioType = NlpSemanticParsingModelsMediaAudio::class;
   protected $audioDataType = '';
+  /**
+   * @var AssistantApiCoreTypesCalendarEvent
+   */
+  public $calendarEvent;
   protected $calendarEventType = AssistantApiCoreTypesCalendarEvent::class;
   protected $calendarEventDataType = '';
+  /**
+   * @var AssistantApiCoreTypesCalendarEventWrapper
+   */
+  public $calendarEventWrapper;
   protected $calendarEventWrapperType = AssistantApiCoreTypesCalendarEventWrapper::class;
   protected $calendarEventWrapperDataType = '';
+  /**
+   * @var QualityQrewriteCalendarReference
+   */
+  public $calendarReference;
   protected $calendarReferenceType = QualityQrewriteCalendarReference::class;
   protected $calendarReferenceDataType = '';
+  /**
+   * @var QualityGenieComplexQueriesComplexQueriesOutputRewrite
+   */
+  public $complexQueriesRewrite;
   protected $complexQueriesRewriteType = QualityGenieComplexQueriesComplexQueriesOutputRewrite::class;
   protected $complexQueriesRewriteDataType = '';
+  /**
+   * @var RepositoryWebrefComponentReference
+   */
+  public $componentReference;
   protected $componentReferenceType = RepositoryWebrefComponentReference::class;
   protected $componentReferenceDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryCoreference
+   */
+  public $coreference;
   protected $coreferenceType = KnowledgeAnswersIntentQueryCoreference::class;
   protected $coreferenceDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $dateTime;
   protected $dateTimeType = NlpSemanticParsingDatetimeDateTime::class;
   protected $dateTimeDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaCastDeviceAnnotation
+   */
+  public $device;
   protected $deviceType = NlpSemanticParsingModelsMediaCastDeviceAnnotation::class;
   protected $deviceDataType = '';
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
+  /**
+   * @var AssistantApiCoreTypesDeviceUserIdentity
+   */
+  public $deviceUserIdentity;
   protected $deviceUserIdentityType = AssistantApiCoreTypesDeviceUserIdentity::class;
   protected $deviceUserIdentityDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeDuration
+   */
+  public $duration;
   protected $durationType = NlpSemanticParsingDatetimeDuration::class;
   protected $durationDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryFunctionCall
+   */
+  public $funcall;
   protected $funcallType = KnowledgeAnswersIntentQueryFunctionCall::class;
   protected $funcallDataType = '';
+  /**
+   * @var AssistantVerticalsHomeautomationProtoHomeAutomationDevice
+   */
+  public $homeAutomationDevice;
   protected $homeAutomationDeviceType = AssistantVerticalsHomeautomationProtoHomeAutomationDevice::class;
   protected $homeAutomationDeviceDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalLocation
+   */
+  public $location;
   protected $locationType = NlpSemanticParsingLocalLocation::class;
   protected $locationDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaMediaAnnotation
+   */
+  public $media;
   protected $mediaType = NlpSemanticParsingModelsMediaMediaAnnotation::class;
   protected $mediaDataType = '';
+  /**
+   * @var AssistantApiCoreTypesMessageNotification
+   */
+  public $messageNotification;
   protected $messageNotificationType = AssistantApiCoreTypesMessageNotification::class;
   protected $messageNotificationDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMoneyMoney
+   */
+  public $money;
   protected $moneyType = NlpSemanticParsingModelsMoneyMoney::class;
   protected $moneyDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsNarrativeNewsNewsProvider
+   */
+  public $narrativeNewsProvider;
   protected $narrativeNewsProviderType = NlpSemanticParsingModelsNarrativeNewsNewsProvider::class;
   protected $narrativeNewsProviderDataType = '';
+  /**
+   * @var NlpSemanticParsingNumberNumber
+   */
+  public $number;
   protected $numberType = NlpSemanticParsingNumberNumber::class;
   protected $numberDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsOnDevice
+   */
+  public $onDevice;
   protected $onDeviceType = NlpSemanticParsingModelsOnDevice::class;
   protected $onDeviceDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsPersonPerson
+   */
+  public $person;
   protected $personType = NlpSemanticParsingModelsPersonPerson::class;
   protected $personDataType = '';
+  /**
+   * @var NlpSemanticParsingPersonalIntelligenceEntity
+   */
+  public $personalIntelligenceEntity;
   protected $personalIntelligenceEntityType = NlpSemanticParsingPersonalIntelligenceEntity::class;
   protected $personalIntelligenceEntityDataType = '';
+  /**
+   * @var AssistantProductivityListItem
+   */
+  public $productivityListItem;
   protected $productivityListItemType = AssistantProductivityListItem::class;
   protected $productivityListItemDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsRecurrence
+   */
+  public $recurrence;
   protected $recurrenceType = NlpSemanticParsingModelsRecurrence::class;
   protected $recurrenceDataType = '';
+  /**
+   * @var QualityActionsReminder
+   */
+  public $reminder;
   protected $reminderType = QualityActionsReminder::class;
   protected $reminderDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQuerySensitiveArgumentValueGuard
+   */
+  public $sensitiveValue;
   protected $sensitiveValueType = KnowledgeAnswersIntentQuerySensitiveArgumentValueGuard::class;
   protected $sensitiveValueDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivitySensitivity[]
+   */
+  public $sensitivity;
   protected $sensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
   protected $sensitivityDataType = 'array';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantMerchant
+   */
+  public $shoppingMerchant;
   protected $shoppingMerchantType = NlpSemanticParsingModelsShoppingAssistantMerchant::class;
   protected $shoppingMerchantDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantOffer
+   */
+  public $shoppingOffer;
   protected $shoppingOfferType = NlpSemanticParsingModelsShoppingAssistantOffer::class;
   protected $shoppingOfferDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProduct
+   */
+  public $shoppingProduct;
   protected $shoppingProductType = NlpSemanticParsingModelsShoppingAssistantProduct::class;
   protected $shoppingProductDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductExpression
+   */
+  public $shoppingProductExpression;
   protected $shoppingProductExpressionType = NlpSemanticParsingModelsShoppingAssistantProductExpression::class;
   protected $shoppingProductExpressionDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantStore
+   */
+  public $shoppingStore;
   protected $shoppingStoreType = NlpSemanticParsingModelsShoppingAssistantStore::class;
   protected $shoppingStoreDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQuerySimpleValue
+   */
+  public $simpleValue;
   protected $simpleValueType = KnowledgeAnswersIntentQuerySimpleValue::class;
   protected $simpleValueDataType = '';
+  /**
+   * @var QualityActionsTimer
+   */
+  public $timer;
   protected $timerType = QualityActionsTimer::class;
   protected $timerDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeTimeZone
+   */
+  public $timezone;
   protected $timezoneType = NlpSemanticParsingDatetimeTimeZone::class;
   protected $timezoneDataType = '';
 

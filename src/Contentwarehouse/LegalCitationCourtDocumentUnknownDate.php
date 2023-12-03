@@ -23,6 +23,10 @@ class LegalCitationCourtDocumentUnknownDate extends \Google\Model
         "date" => "Date",
         "description" => "Description",
   ];
+  /**
+   * @var LegalDate
+   */
+  public $date;
   protected $dateType = LegalDate::class;
   protected $dateDataType = '';
   /**

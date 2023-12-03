@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeGraphNestedStruct extends \Google\Collection
 {
   protected $collection_key = 'predicateObjs';
+  /**
+   * @var KnowledgeGraphNestedStructPredicateObjs[]
+   */
+  public $predicateObjs;
   protected $predicateObjsType = KnowledgeGraphNestedStructPredicateObjs::class;
   protected $predicateObjsDataType = 'array';
 

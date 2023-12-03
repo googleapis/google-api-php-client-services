@@ -32,8 +32,16 @@ class LegalCitationCourtDocument extends \Google\Collection
         "modifiedDate" => "ModifiedDate",
         "syllabus" => "Syllabus",
   ];
+  /**
+   * @var LegalPerson[]
+   */
+  public $arguedBefore;
   protected $arguedBeforeType = LegalPerson::class;
   protected $arguedBeforeDataType = 'array';
+  /**
+   * @var LegalDate
+   */
+  public $arguedDate;
   protected $arguedDateType = LegalDate::class;
   protected $arguedDateDataType = '';
   /**
@@ -48,28 +56,60 @@ class LegalCitationCourtDocument extends \Google\Collection
    * @var string
    */
   public $courtTerm;
+  /**
+   * @var LegalDate
+   */
+  public $decidedDate;
   protected $decidedDateType = LegalDate::class;
   protected $decidedDateDataType = '';
+  /**
+   * @var LegalDate
+   */
+  public $filedDate;
   protected $filedDateType = LegalDate::class;
   protected $filedDateDataType = '';
   /**
    * @var string
    */
   public $memoID;
+  /**
+   * @var LegalDate
+   */
+  public $modifiedDate;
   protected $modifiedDateType = LegalDate::class;
   protected $modifiedDateDataType = '';
   /**
    * @var string
    */
   public $syllabus;
+  /**
+   * @var LegalCitationCourtDocumentCourt
+   */
+  public $court;
   protected $courtType = LegalCitationCourtDocumentCourt::class;
   protected $courtDataType = '';
+  /**
+   * @var LegalCitationCourtDocumentOpinionInfo[]
+   */
+  public $opinioninfo;
   protected $opinioninfoType = LegalCitationCourtDocumentOpinionInfo::class;
   protected $opinioninfoDataType = 'array';
+  /**
+   * @var LegalCitationCourtDocumentPerDocketInfo[]
+   */
+  public $perdocketinfo;
   protected $perdocketinfoType = LegalCitationCourtDocumentPerDocketInfo::class;
   protected $perdocketinfoDataType = 'array';
+  /**
+   * @var LegalCitationCourtDocumentPub[]
+   */
+  public $pub;
   protected $pubType = LegalCitationCourtDocumentPub::class;
   protected $pubDataType = 'array';
+  /**
+   * @var LegalCitationCourtDocumentUnknownDate[]
+   */
+  public $unknowndate;
   protected $unknowndateType = LegalCitationCourtDocumentUnknownDate::class;
   protected $unknowndateDataType = 'array';
 

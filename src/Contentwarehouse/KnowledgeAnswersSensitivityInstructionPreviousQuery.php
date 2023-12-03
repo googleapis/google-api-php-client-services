@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersSensitivityInstructionPreviousQuery extends \Google\Model
 {
+  /**
+   * @var KnowledgeAnswersSensitivityLoggingPolicy
+   */
+  public $logging;
   protected $loggingType = KnowledgeAnswersSensitivityLoggingPolicy::class;
   protected $loggingDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityServingPolicy
+   */
+  public $serving;
   protected $servingType = KnowledgeAnswersSensitivityServingPolicy::class;
   protected $servingDataType = '';
+  /**
+   * @var KnowledgeAnswersSensitivityStoragePolicy
+   */
+  public $storage;
   protected $storageType = KnowledgeAnswersSensitivityStoragePolicy::class;
   protected $storageDataType = '';
 

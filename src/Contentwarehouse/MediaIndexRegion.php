@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class MediaIndexRegion extends \Google\Collection
 {
   protected $collection_key = 'starburstTokensV5';
+  /**
+   * @var MediaIndexBoundingbox
+   */
+  public $boundingBox;
   protected $boundingBoxType = MediaIndexBoundingbox::class;
   protected $boundingBoxDataType = '';
+  /**
+   * @var MediaIndexEntityField[]
+   */
+  public $entityFields;
   protected $entityFieldsType = MediaIndexEntityField::class;
   protected $entityFieldsDataType = 'array';
+  /**
+   * @var MediaIndexSparseFloatVector
+   */
+  public $labels;
   protected $labelsType = MediaIndexSparseFloatVector::class;
   protected $labelsDataType = '';
   /**
@@ -58,8 +70,16 @@ class MediaIndexRegion extends \Google\Collection
    * @var string[]
    */
   public $starburstTokensV5;
+  /**
+   * @var ImageContentStarburstVersionGroup
+   */
+  public $starburstV4;
   protected $starburstV4Type = ImageContentStarburstVersionGroup::class;
   protected $starburstV4DataType = '';
+  /**
+   * @var ImageContentStarburstVersionGroup
+   */
+  public $starburstV5;
   protected $starburstV5Type = ImageContentStarburstVersionGroup::class;
   protected $starburstV5DataType = '';
 

@@ -28,6 +28,10 @@ class KnowledgeAnswersIntentQuerySemanticAnnotationSignals extends \Google\Colle
    * @var string
    */
   public $domain;
+  /**
+   * @var KnowledgeAnswersIntentQuerySemanticAnnotationSignalsFeature[]
+   */
+  public $features;
   protected $featuresType = KnowledgeAnswersIntentQuerySemanticAnnotationSignalsFeature::class;
   protected $featuresDataType = 'array';
   public $score;

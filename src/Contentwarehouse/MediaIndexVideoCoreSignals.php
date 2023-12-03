@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class MediaIndexVideoCoreSignals extends \Google\Collection
 {
   protected $collection_key = 'videoFrames';
+  /**
+   * @var MediaIndexVideoCentroid
+   */
+  public $centroid;
   protected $centroidType = MediaIndexVideoCentroid::class;
   protected $centroidDataType = '';
+  /**
+   * @var MediaIndexVideoFrame[]
+   */
+  public $videoFrames;
   protected $videoFramesType = MediaIndexVideoFrame::class;
   protected $videoFramesDataType = 'array';
 

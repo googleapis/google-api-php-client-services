@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpMeaningMeaningRemodelings extends \Google\Collection
 {
   protected $collection_key = 'remodeling';
+  /**
+   * @var NlpMeaningMeaningRemodeling[]
+   */
+  public $remodeling;
   protected $remodelingType = NlpMeaningMeaningRemodeling::class;
   protected $remodelingDataType = 'array';
 

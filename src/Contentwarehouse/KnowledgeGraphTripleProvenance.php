@@ -36,8 +36,16 @@ class KnowledgeGraphTripleProvenance extends \Google\Collection
    * @var bool
    */
   public $isSupportingData;
+  /**
+   * @var StorageGraphBfgLivegraphProvenanceMetadata
+   */
+  public $lgMetadata;
   protected $lgMetadataType = StorageGraphBfgLivegraphProvenanceMetadata::class;
   protected $lgMetadataDataType = '';
+  /**
+   * @var StorageGraphBfgPolicyMetadata
+   */
+  public $policyMetadata;
   protected $policyMetadataType = StorageGraphBfgPolicyMetadata::class;
   protected $policyMetadataDataType = '';
   /**
@@ -60,6 +68,10 @@ class KnowledgeGraphTripleProvenance extends \Google\Collection
    * @var string
    */
   public $sourceUrl;
+  /**
+   * @var StorageGraphBfgSpiiCertification
+   */
+  public $spiiCertification;
   protected $spiiCertificationType = StorageGraphBfgSpiiCertification::class;
   protected $spiiCertificationDataType = '';
 

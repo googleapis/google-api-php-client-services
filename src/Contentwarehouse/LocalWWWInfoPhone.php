@@ -23,6 +23,10 @@ class LocalWWWInfoPhone extends \Google\Model
    * @var string
    */
   public $phoneFprint;
+  /**
+   * @var TelephoneNumber
+   */
+  public $phoneNumber;
   protected $phoneNumberType = TelephoneNumber::class;
   protected $phoneNumberDataType = '';
 

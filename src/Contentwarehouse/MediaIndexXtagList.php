@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class MediaIndexXtagList extends \Google\Collection
 {
   protected $collection_key = 'xtags';
+  /**
+   * @var MediaIndexXtag[]
+   */
+  public $xtags;
   protected $xtagsType = MediaIndexXtag::class;
   protected $xtagsDataType = 'array';
 
