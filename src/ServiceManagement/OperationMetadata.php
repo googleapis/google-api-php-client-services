@@ -32,6 +32,10 @@ class OperationMetadata extends \Google\Collection
    * @var string
    */
   public $startTime;
+  /**
+   * @var Step[]
+   */
+  public $steps;
   protected $stepsType = Step::class;
   protected $stepsDataType = 'array';
 

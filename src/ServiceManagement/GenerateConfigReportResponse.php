@@ -20,8 +20,16 @@ namespace Google\Service\ServiceManagement;
 class GenerateConfigReportResponse extends \Google\Collection
 {
   protected $collection_key = 'diagnostics';
+  /**
+   * @var ChangeReport[]
+   */
+  public $changeReports;
   protected $changeReportsType = ChangeReport::class;
   protected $changeReportsDataType = 'array';
+  /**
+   * @var Diagnostic[]
+   */
+  public $diagnostics;
   protected $diagnosticsType = Diagnostic::class;
   protected $diagnosticsDataType = 'array';
   /**

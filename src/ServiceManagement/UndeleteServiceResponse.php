@@ -19,6 +19,10 @@ namespace Google\Service\ServiceManagement;
 
 class UndeleteServiceResponse extends \Google\Model
 {
+  /**
+   * @var ManagedService
+   */
+  public $service;
   protected $serviceType = ManagedService::class;
   protected $serviceDataType = '';
 

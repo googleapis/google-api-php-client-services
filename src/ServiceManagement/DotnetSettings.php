@@ -20,6 +20,10 @@ namespace Google\Service\ServiceManagement;
 class DotnetSettings extends \Google\Collection
 {
   protected $collection_key = 'ignoredResources';
+  /**
+   * @var CommonLanguageSettings
+   */
+  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
   /**

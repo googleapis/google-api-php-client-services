@@ -20,6 +20,10 @@ namespace Google\Service\ServiceManagement;
 class ChangeReport extends \Google\Collection
 {
   protected $collection_key = 'configChanges';
+  /**
+   * @var ConfigChange[]
+   */
+  public $configChanges;
   protected $configChangesType = ConfigChange::class;
   protected $configChangesDataType = 'array';
 

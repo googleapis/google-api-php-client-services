@@ -20,6 +20,10 @@ namespace Google\Service\ServiceManagement;
 class Billing extends \Google\Collection
 {
   protected $collection_key = 'consumerDestinations';
+  /**
+   * @var BillingDestination[]
+   */
+  public $consumerDestinations;
   protected $consumerDestinationsType = BillingDestination::class;
   protected $consumerDestinationsDataType = 'array';
 

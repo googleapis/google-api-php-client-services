@@ -24,6 +24,10 @@ class Control extends \Google\Collection
    * @var string
    */
   public $environment;
+  /**
+   * @var MethodPolicy[]
+   */
+  public $methodPolicies;
   protected $methodPoliciesType = MethodPolicy::class;
   protected $methodPoliciesDataType = 'array';
 

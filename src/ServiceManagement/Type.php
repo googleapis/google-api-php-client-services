@@ -24,6 +24,10 @@ class Type extends \Google\Collection
    * @var string
    */
   public $edition;
+  /**
+   * @var Field[]
+   */
+  public $fields;
   protected $fieldsType = Field::class;
   protected $fieldsDataType = 'array';
   /**
@@ -34,8 +38,16 @@ class Type extends \Google\Collection
    * @var string[]
    */
   public $oneofs;
+  /**
+   * @var Option[]
+   */
+  public $options;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
+  /**
+   * @var SourceContext
+   */
+  public $sourceContext;
   protected $sourceContextType = SourceContext::class;
   protected $sourceContextDataType = '';
   /**

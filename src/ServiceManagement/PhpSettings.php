@@ -19,6 +19,10 @@ namespace Google\Service\ServiceManagement;
 
 class PhpSettings extends \Google\Model
 {
+  /**
+   * @var CommonLanguageSettings
+   */
+  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
 

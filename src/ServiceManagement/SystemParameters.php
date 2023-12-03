@@ -20,6 +20,10 @@ namespace Google\Service\ServiceManagement;
 class SystemParameters extends \Google\Collection
 {
   protected $collection_key = 'rules';
+  /**
+   * @var SystemParameterRule[]
+   */
+  public $rules;
   protected $rulesType = SystemParameterRule::class;
   protected $rulesDataType = 'array';
 
