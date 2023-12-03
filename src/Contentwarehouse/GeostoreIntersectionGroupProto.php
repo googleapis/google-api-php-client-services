@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreIntersectionGroupProto extends \Google\Collection
 {
   protected $collection_key = 'intersection';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $childGroup;
   protected $childGroupType = GeostoreFeatureIdProto::class;
   protected $childGroupDataType = 'array';
   /**
    * @var string
    */
   public $groupType;
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $intersection;
   protected $intersectionType = GeostoreFeatureIdProto::class;
   protected $intersectionDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $parentGroup;
   protected $parentGroupType = GeostoreFeatureIdProto::class;
   protected $parentGroupDataType = '';
 

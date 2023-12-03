@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreInternalSegmentProto extends \Google\Collection
 {
   protected $collection_key = 'travelAllowance';
+  /**
+   * @var GeostoreInternalSegmentProtoLaneConnectionReference[]
+   */
+  public $disallowedConnections;
   protected $disallowedConnectionsType = GeostoreInternalSegmentProtoLaneConnectionReference::class;
   protected $disallowedConnectionsDataType = 'array';
+  /**
+   * @var GeostoreInternalSegmentProtoLaneConnectionReference[]
+   */
+  public $disallowedPrimaryConnection;
   protected $disallowedPrimaryConnectionType = GeostoreInternalSegmentProtoLaneConnectionReference::class;
   protected $disallowedPrimaryConnectionDataType = 'array';
+  /**
+   * @var GeostoreRestrictionProto[]
+   */
+  public $travelAllowance;
   protected $travelAllowanceType = GeostoreRestrictionProto::class;
   protected $travelAllowanceDataType = 'array';
 

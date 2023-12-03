@@ -28,6 +28,10 @@ class GeostoreDurationBasedRateProto extends \Google\Collection
    * @var int
    */
   public $periodicitySeconds;
+  /**
+   * @var FreebaseTopic[]
+   */
+  public $price;
   protected $priceType = FreebaseTopic::class;
   protected $priceDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class GenericSnippetResponse extends \Google\Collection
    * @var string[]
    */
   public $debugInfo;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**
@@ -34,6 +38,10 @@ class GenericSnippetResponse extends \Google\Collection
    * @var string
    */
   public $title;
+  /**
+   * @var WWWSnippetResponse
+   */
+  public $wwwSnippetResponse;
   protected $wwwSnippetResponseType = WWWSnippetResponse::class;
   protected $wwwSnippetResponseDataType = '';
 

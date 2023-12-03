@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCurvatureProto extends \Google\Collection
 {
   protected $collection_key = 'pointCurvature';
+  /**
+   * @var GeostorePointCurvatureProto[]
+   */
+  public $pointCurvature;
   protected $pointCurvatureType = GeostorePointCurvatureProto::class;
   protected $pointCurvatureDataType = 'array';
 

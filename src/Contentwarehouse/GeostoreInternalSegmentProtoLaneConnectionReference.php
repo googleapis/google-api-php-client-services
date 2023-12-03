@@ -23,6 +23,10 @@ class GeostoreInternalSegmentProtoLaneConnectionReference extends \Google\Model
    * @var int
    */
   public $fromLaneNumber;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $segment;
   protected $segmentType = GeostoreFeatureIdProto::class;
   protected $segmentDataType = '';
   /**

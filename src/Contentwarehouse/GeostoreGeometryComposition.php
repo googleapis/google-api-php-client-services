@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreGeometryComposition extends \Google\Collection
 {
   protected $collection_key = 'includesGeometryOf';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $excludesGeometryOf;
   protected $excludesGeometryOfType = GeostoreFeatureIdProto::class;
   protected $excludesGeometryOfDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $includesGeometryOf;
   protected $includesGeometryOfType = GeostoreFeatureIdProto::class;
   protected $includesGeometryOfDataType = 'array';
 

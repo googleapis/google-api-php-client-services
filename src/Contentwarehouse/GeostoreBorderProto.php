@@ -20,12 +20,28 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreBorderProto extends \Google\Collection
 {
   protected $collection_key = 'overrideStatus';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $featureIdLeft;
   protected $featureIdLeftType = GeostoreFeatureIdProto::class;
   protected $featureIdLeftDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $featureIdRight;
   protected $featureIdRightType = GeostoreFeatureIdProto::class;
   protected $featureIdRightDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $logicalBorder;
   protected $logicalBorderType = GeostoreFeatureIdProto::class;
   protected $logicalBorderDataType = 'array';
+  /**
+   * @var GeostoreOverrideBorderStatusProto[]
+   */
+  public $overrideStatus;
   protected $overrideStatusType = GeostoreOverrideBorderStatusProto::class;
   protected $overrideStatusDataType = 'array';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFoodMenuItemProto extends \Google\Collection
 {
   protected $collection_key = 'nameInfo';
+  /**
+   * @var GeostoreFoodMenuItemOptionProto[]
+   */
+  public $itemOption;
   protected $itemOptionType = GeostoreFoodMenuItemOptionProto::class;
   protected $itemOptionDataType = 'array';
+  /**
+   * @var GeostorePriceListNameInfoProto[]
+   */
+  public $nameInfo;
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
 

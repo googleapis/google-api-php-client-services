@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreEntranceReferenceProto extends \Google\Model
 {
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $featureId;
   protected $featureIdType = GeostoreFeatureIdProto::class;
   protected $featureIdDataType = '';
 

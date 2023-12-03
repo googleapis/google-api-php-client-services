@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFeatureIdListProto extends \Google\Collection
 {
   protected $collection_key = 'id';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $id;
   protected $idType = GeostoreFeatureIdProto::class;
   protected $idDataType = 'array';
 

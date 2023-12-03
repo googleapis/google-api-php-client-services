@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCityJsonProtoCityObjectGeometrySolid extends \Google\Collection
 {
   protected $collection_key = 'shells';
+  /**
+   * @var GeostoreCityJsonProtoCityObjectGeometryMultiSurface[]
+   */
+  public $shells;
   protected $shellsType = GeostoreCityJsonProtoCityObjectGeometryMultiSurface::class;
   protected $shellsDataType = 'array';
 

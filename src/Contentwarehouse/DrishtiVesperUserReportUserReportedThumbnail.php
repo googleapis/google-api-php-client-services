@@ -28,6 +28,10 @@ class DrishtiVesperUserReportUserReportedThumbnail extends \Google\Collection
    * @var int
    */
   public $duration;
+  /**
+   * @var DrishtiVesperUserReportHumanLabel
+   */
+  public $humanLabel;
   protected $humanLabelType = DrishtiVesperUserReportHumanLabel::class;
   protected $humanLabelDataType = '';
   /**
@@ -38,14 +42,26 @@ class DrishtiVesperUserReportUserReportedThumbnail extends \Google\Collection
    * @var bool
    */
   public $needHumanLabel;
+  /**
+   * @var DrishtiVesperUserReportHumanLabel[]
+   */
+  public $rawHumanLabels;
   protected $rawHumanLabelsType = DrishtiVesperUserReportHumanLabel::class;
   protected $rawHumanLabelsDataType = 'array';
+  /**
+   * @var DrishtiVesperUserReportModelScore
+   */
+  public $reportScore;
   protected $reportScoreType = DrishtiVesperUserReportModelScore::class;
   protected $reportScoreDataType = '';
   /**
    * @var string
    */
   public $reportType;
+  /**
+   * @var DrishtiVesperUserReportModelScore
+   */
+  public $score;
   protected $scoreType = DrishtiVesperUserReportModelScore::class;
   protected $scoreDataType = '';
   /**

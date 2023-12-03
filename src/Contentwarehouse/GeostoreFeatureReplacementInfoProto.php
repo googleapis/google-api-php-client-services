@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFeatureReplacementInfoProto extends \Google\Collection
 {
   protected $collection_key = 'replacedBy';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $derivedFrom;
   protected $derivedFromType = GeostoreFeatureIdProto::class;
   protected $derivedFromDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $replacedBy;
   protected $replacedByType = GeostoreFeatureIdProto::class;
   protected $replacedByDataType = 'array';
 

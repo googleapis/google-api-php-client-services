@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class FreebasePropertyValue extends \Google\Collection
 {
   protected $collection_key = 'value';
+  /**
+   * @var FreebaseId
+   */
+  public $property;
   protected $propertyType = FreebaseId::class;
   protected $propertyDataType = '';
   /**
    * @var string
    */
   public $totalValueCount;
+  /**
+   * @var FreebaseValue[]
+   */
+  public $value;
   protected $valueType = FreebaseValue::class;
   protected $valueDataType = 'array';
   /**

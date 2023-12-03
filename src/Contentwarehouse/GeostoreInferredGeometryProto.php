@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreInferredGeometryProto extends \Google\Collection
 {
   protected $collection_key = 'definesGeometryFor';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $definesGeometryFor;
   protected $definesGeometryForType = GeostoreFeatureIdProto::class;
   protected $definesGeometryForDataType = 'array';
+  /**
+   * @var GeostoreGeometryComposition
+   */
+  public $geometryComposition;
   protected $geometryCompositionType = GeostoreGeometryComposition::class;
   protected $geometryCompositionDataType = '';
 

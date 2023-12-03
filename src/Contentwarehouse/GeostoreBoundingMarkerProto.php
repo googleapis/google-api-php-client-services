@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreBoundingMarkerProto extends \Google\Model
 {
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $boundingMarker;
   protected $boundingMarkerType = GeostoreFeatureIdProto::class;
   protected $boundingMarkerDataType = '';
   /**

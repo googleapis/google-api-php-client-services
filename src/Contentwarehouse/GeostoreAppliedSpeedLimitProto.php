@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreAppliedSpeedLimitProto extends \Google\Model
 {
+  /**
+   * @var GeostoreSpeedLimitProto
+   */
+  public $speedLimit;
   protected $speedLimitType = GeostoreSpeedLimitProto::class;
   protected $speedLimitDataType = '';
   /**

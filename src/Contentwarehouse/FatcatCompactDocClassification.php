@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class FatcatCompactDocClassification extends \Google\Collection
 {
   protected $collection_key = 'taxonomic';
+  /**
+   * @var FatcatCompactBinaryClassification[]
+   */
+  public $binary;
   protected $binaryType = FatcatCompactBinaryClassification::class;
   protected $binaryDataType = 'array';
+  /**
+   * @var FatcatCompactRephilClusters
+   */
+  public $clusters;
   protected $clustersType = FatcatCompactRephilClusters::class;
   protected $clustersDataType = '';
   /**
@@ -36,6 +44,10 @@ class FatcatCompactDocClassification extends \Google\Collection
    * @var int
    */
   public $rephilModelId;
+  /**
+   * @var FatcatCompactTaxonomicClassification[]
+   */
+  public $taxonomic;
   protected $taxonomicType = FatcatCompactTaxonomicClassification::class;
   protected $taxonomicDataType = 'array';
   /**

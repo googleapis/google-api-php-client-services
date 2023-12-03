@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreLaneMarkerProto extends \Google\Model
 {
+  /**
+   * @var GeostoreBarrierLogicalMaterialProto
+   */
+  public $barrierMaterials;
   protected $barrierMaterialsType = GeostoreBarrierLogicalMaterialProto::class;
   protected $barrierMaterialsDataType = '';
+  /**
+   * @var GeostoreCrossingStripePatternProto
+   */
+  public $crossingPattern;
   protected $crossingPatternType = GeostoreCrossingStripePatternProto::class;
   protected $crossingPatternDataType = '';
+  /**
+   * @var GeostoreLinearStripePatternProto
+   */
+  public $linearPattern;
   protected $linearPatternType = GeostoreLinearStripePatternProto::class;
   protected $linearPatternDataType = '';
 

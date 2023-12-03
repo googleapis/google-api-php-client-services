@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreGeopoliticalGeometryProto extends \Google\Model
 {
+  /**
+   * @var GeostorePolygonProto
+   */
+  public $restOfWorldPolygon;
   protected $restOfWorldPolygonType = GeostorePolygonProto::class;
   protected $restOfWorldPolygonDataType = '';
+  /**
+   * @var GeostorePolygonProto
+   */
+  public $selfPolygon;
   protected $selfPolygonType = GeostorePolygonProto::class;
   protected $selfPolygonDataType = '';
 

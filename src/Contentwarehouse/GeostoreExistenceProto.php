@@ -27,8 +27,16 @@ class GeostoreExistenceProto extends \Google\Model
    * @var bool
    */
   public $closed;
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $endAsOfDate;
   protected $endAsOfDateType = GeostoreDateTimeProto::class;
   protected $endAsOfDateDataType = '';
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $endDate;
   protected $endDateType = GeostoreDateTimeProto::class;
   protected $endDateDataType = '';
   /**
@@ -43,6 +51,10 @@ class GeostoreExistenceProto extends \Google\Model
    * @var string
    */
   public $removedReason;
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $startDate;
   protected $startDateType = GeostoreDateTimeProto::class;
   protected $startDateDataType = '';
 

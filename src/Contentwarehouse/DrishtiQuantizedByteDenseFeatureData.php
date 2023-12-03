@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class DrishtiQuantizedByteDenseFeatureData extends \Google\Collection
 {
   protected $collection_key = 'extra';
+  /**
+   * @var DrishtiFeatureExtra[]
+   */
+  public $extra;
   protected $extraType = DrishtiFeatureExtra::class;
   protected $extraDataType = 'array';
+  /**
+   * @var DrishtiFeatureExtra
+   */
+  public $generalExtra;
   protected $generalExtraType = DrishtiFeatureExtra::class;
   protected $generalExtraDataType = '';
   /**

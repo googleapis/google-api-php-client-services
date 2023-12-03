@@ -23,10 +23,22 @@ class GeostoreCityJsonProtoCityObjectGeometry extends \Google\Model
    * @var string
    */
   public $lod;
+  /**
+   * @var GeostoreCityJsonProtoCityObjectGeometryMultiPoint
+   */
+  public $multipoint;
   protected $multipointType = GeostoreCityJsonProtoCityObjectGeometryMultiPoint::class;
   protected $multipointDataType = '';
+  /**
+   * @var GeostoreCityJsonProtoCityObjectGeometryMultiSurface
+   */
+  public $multisurface;
   protected $multisurfaceType = GeostoreCityJsonProtoCityObjectGeometryMultiSurface::class;
   protected $multisurfaceDataType = '';
+  /**
+   * @var GeostoreCityJsonProtoCityObjectGeometrySolid
+   */
+  public $solid;
   protected $solidType = GeostoreCityJsonProtoCityObjectGeometrySolid::class;
   protected $solidDataType = '';
 

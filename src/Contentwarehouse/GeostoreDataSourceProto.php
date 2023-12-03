@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreDataSourceProto extends \Google\Collection
 {
   protected $collection_key = 'rawMetadata';
+  /**
+   * @var GeostoreUrlProto[]
+   */
+  public $attributionUrl;
   protected $attributionUrlType = GeostoreUrlProto::class;
   protected $attributionUrlDataType = 'array';
   /**
@@ -58,12 +62,20 @@ class GeostoreDataSourceProto extends \Google\Collection
    * @var string
    */
   public $provider;
+  /**
+   * @var GeostoreRawMetadataProto[]
+   */
+  public $rawMetadata;
   protected $rawMetadataType = GeostoreRawMetadataProto::class;
   protected $rawMetadataDataType = 'array';
   /**
    * @var string
    */
   public $release;
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $releaseDate;
   protected $releaseDateType = GeostoreDateTimeProto::class;
   protected $releaseDateDataType = '';
   /**

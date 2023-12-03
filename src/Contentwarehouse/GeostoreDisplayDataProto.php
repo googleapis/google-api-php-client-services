@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreDisplayDataProto extends \Google\Model
 {
+  /**
+   * @var GeostorePointProto
+   */
+  public $displayLocation;
   protected $displayLocationType = GeostorePointProto::class;
   protected $displayLocationDataType = '';
 

@@ -20,18 +20,38 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreComposableItemProto extends \Google\Collection
 {
   protected $collection_key = 'nameInfo';
+  /**
+   * @var GeostoreCallToActionProto
+   */
+  public $callToAction;
   protected $callToActionType = GeostoreCallToActionProto::class;
   protected $callToActionDataType = '';
+  /**
+   * @var GeostoreJobMetadata
+   */
+  public $jobMetadata;
   protected $jobMetadataType = GeostoreJobMetadata::class;
   protected $jobMetadataDataType = '';
+  /**
+   * @var GeostoreMediaItemProto[]
+   */
+  public $media;
   protected $mediaType = GeostoreMediaItemProto::class;
   protected $mediaDataType = 'array';
+  /**
+   * @var GeostorePriceListNameInfoProto[]
+   */
+  public $nameInfo;
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
   /**
    * @var string
    */
   public $offered;
+  /**
+   * @var GeostorePriceRangeProto
+   */
+  public $price;
   protected $priceType = GeostorePriceRangeProto::class;
   protected $priceDataType = '';
   /**

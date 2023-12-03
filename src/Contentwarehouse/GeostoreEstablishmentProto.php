@@ -20,16 +20,40 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreEstablishmentProto extends \Google\Collection
 {
   protected $collection_key = 'telephone';
+  /**
+   * @var GeostoreBizBuilderReferenceProto
+   */
+  public $bizbuilderReference;
   protected $bizbuilderReferenceType = GeostoreBizBuilderReferenceProto::class;
   protected $bizbuilderReferenceDataType = '';
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $hours;
   protected $hoursType = GeostoreTimeScheduleProto::class;
   protected $hoursDataType = '';
+  /**
+   * @var GeostoreOpeningHoursProto
+   */
+  public $openingHours;
   protected $openingHoursType = GeostoreOpeningHoursProto::class;
   protected $openingHoursDataType = '';
+  /**
+   * @var GeostorePriceInfoProto
+   */
+  public $priceInfo;
   protected $priceInfoType = GeostorePriceInfoProto::class;
   protected $priceInfoDataType = '';
+  /**
+   * @var GeostoreServiceAreaProto
+   */
+  public $serviceArea;
   protected $serviceAreaType = GeostoreServiceAreaProto::class;
   protected $serviceAreaDataType = '';
+  /**
+   * @var GeostoreTelephoneProto[]
+   */
+  public $telephone;
   protected $telephoneType = GeostoreTelephoneProto::class;
   protected $telephoneDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class FreebaseMeasurementUnit extends \Google\Model
    * @var int
    */
   public $power;
+  /**
+   * @var FreebaseId
+   */
+  public $unit;
   protected $unitType = FreebaseId::class;
   protected $unitDataType = '';
   /**

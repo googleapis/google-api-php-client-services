@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreAddressComponentProto extends \Google\Collection
 {
   protected $collection_key = 'textAffix';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $featureId;
   protected $featureIdType = GeostoreFeatureIdProto::class;
   protected $featureIdDataType = '';
   /**
@@ -30,12 +34,28 @@ class GeostoreAddressComponentProto extends \Google\Collection
    * @var int
    */
   public $index;
+  /**
+   * @var GeostoreNameProto[]
+   */
+  public $parsedName;
   protected $parsedNameType = GeostoreNameProto::class;
   protected $parsedNameDataType = 'array';
+  /**
+   * @var GeostoreAddressRangeProto
+   */
+  public $range;
   protected $rangeType = GeostoreAddressRangeProto::class;
   protected $rangeDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
+  /**
+   * @var GeostoreTextAffixProto[]
+   */
+  public $textAffix;
   protected $textAffixType = GeostoreTextAffixProto::class;
   protected $textAffixDataType = 'array';
   /**

@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCrossingStripePatternProto extends \Google\Collection
 {
   protected $collection_key = 'color';
+  /**
+   * @var GeostorePhysicalLineProto
+   */
+  public $borderLine;
   protected $borderLineType = GeostorePhysicalLineProto::class;
   protected $borderLineDataType = '';
   /**
    * @var string
    */
   public $borderPattern;
+  /**
+   * @var GeostorePaintedElementLogicalColorProto[]
+   */
+  public $color;
   protected $colorType = GeostorePaintedElementLogicalColorProto::class;
   protected $colorDataType = 'array';
   /**

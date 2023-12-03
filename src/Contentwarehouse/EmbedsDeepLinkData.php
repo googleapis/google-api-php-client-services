@@ -24,6 +24,10 @@ class EmbedsDeepLinkData extends \Google\Collection
    * @var string
    */
   public $appId;
+  /**
+   * @var EmbedsPackagingServiceClient[]
+   */
+  public $client;
   protected $clientType = EmbedsPackagingServiceClient::class;
   protected $clientDataType = 'array';
   /**

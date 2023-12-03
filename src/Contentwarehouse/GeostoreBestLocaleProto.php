@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreBestLocaleProto extends \Google\Model
 {
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $locale;
   protected $localeType = GeostoreFeatureIdProto::class;
   protected $localeDataType = '';
   /**
    * @var string
    */
   public $localizationPolicyId;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
 

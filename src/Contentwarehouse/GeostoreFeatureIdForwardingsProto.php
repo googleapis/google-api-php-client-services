@@ -20,14 +20,34 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFeatureIdForwardingsProto extends \Google\Collection
 {
   protected $collection_key = 'inactiveDuplicate';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $duplicateOf;
   protected $duplicateOfType = GeostoreFeatureIdProto::class;
   protected $duplicateOfDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $forwardedId;
   protected $forwardedIdType = GeostoreFeatureIdProto::class;
   protected $forwardedIdDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $inactiveDuplicate;
   protected $inactiveDuplicateType = GeostoreFeatureIdProto::class;
   protected $inactiveDuplicateDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdListProto
+   */
+  public $replacedBy;
   protected $replacedByType = GeostoreFeatureIdListProto::class;
   protected $replacedByDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $transitivelyDuplicateOf;
   protected $transitivelyDuplicateOfType = GeostoreFeatureIdProto::class;
   protected $transitivelyDuplicateOfDataType = '';
 

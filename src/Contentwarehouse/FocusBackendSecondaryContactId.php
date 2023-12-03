@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class FocusBackendSecondaryContactId extends \Google\Collection
 {
   protected $collection_key = 'contactDetailHash';
+  /**
+   * @var FocusBackendContactDetailHash[]
+   */
+  public $contactDetailHash;
   protected $contactDetailHashType = FocusBackendContactDetailHash::class;
   protected $contactDetailHashDataType = 'array';
   /**

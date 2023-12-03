@@ -23,6 +23,10 @@ class FocusBackendDeviceRawContactId extends \Google\Model
         "deviceId" => "DeviceId",
         "rawContactId" => "RawContactId",
   ];
+  /**
+   * @var FocusBackendDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = FocusBackendDeviceId::class;
   protected $deviceIdDataType = '';
   /**

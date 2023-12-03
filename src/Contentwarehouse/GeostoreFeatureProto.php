@@ -20,195 +20,551 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFeatureProto extends \Google\Collection
 {
   protected $collection_key = 'website';
+  /**
+   * @var GeostoreAccessPointProto[]
+   */
+  public $accessPoint;
   protected $accessPointType = GeostoreAccessPointProto::class;
   protected $accessPointDataType = 'array';
+  /**
+   * @var GeostoreAddressProto[]
+   */
+  public $address;
   protected $addressType = GeostoreAddressProto::class;
   protected $addressDataType = 'array';
+  /**
+   * @var GeostoreAnchoredGeometryProto
+   */
+  public $anchoredGeometry;
   protected $anchoredGeometryType = GeostoreAnchoredGeometryProto::class;
   protected $anchoredGeometryDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $associatedEvChargingStation;
   protected $associatedEvChargingStationType = GeostoreFeatureIdProto::class;
   protected $associatedEvChargingStationDataType = 'array';
+  /**
+   * @var GeostoreAttachmentsAttachmentProto[]
+   */
+  public $attachment;
   protected $attachmentType = GeostoreAttachmentsAttachmentProto::class;
   protected $attachmentDataType = 'array';
+  /**
+   * @var GeostoreAttributeProto[]
+   */
+  public $attribute;
   protected $attributeType = GeostoreAttributeProto::class;
   protected $attributeDataType = 'array';
+  /**
+   * @var GeostoreBestLocaleProto
+   */
+  public $bestLocale;
   protected $bestLocaleType = GeostoreBestLocaleProto::class;
   protected $bestLocaleDataType = '';
+  /**
+   * @var GeostoreBorderProto
+   */
+  public $border;
   protected $borderType = GeostoreBorderProto::class;
   protected $borderDataType = '';
+  /**
+   * @var GeostoreRectProto
+   */
+  public $bound;
   protected $boundType = GeostoreRectProto::class;
   protected $boundDataType = '';
+  /**
+   * @var GeostoreBuildingProto
+   */
+  public $building;
   protected $buildingType = GeostoreBuildingProto::class;
   protected $buildingDataType = '';
+  /**
+   * @var GeostoreBusinessChainProto
+   */
+  public $businessChain;
   protected $businessChainType = GeostoreBusinessChainProto::class;
   protected $businessChainDataType = '';
+  /**
+   * @var GeostorePointProto
+   */
+  public $center;
   protected $centerType = GeostorePointProto::class;
   protected $centerDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $child;
   protected $childType = GeostoreFeatureIdProto::class;
   protected $childDataType = 'array';
+  /**
+   * @var GeostoreCellCoveringProto
+   */
+  public $covering;
   protected $coveringType = GeostoreCellCoveringProto::class;
   protected $coveringDataType = '';
+  /**
+   * @var GeostoreDataSourceProto
+   */
+  public $dataSource;
   protected $dataSourceType = GeostoreDataSourceProto::class;
   protected $dataSourceDataType = '';
+  /**
+   * @var GeostoreDisplayDataProto
+   */
+  public $displayData;
   protected $displayDataType = GeostoreDisplayDataProto::class;
   protected $displayDataDataType = '';
+  /**
+   * @var GeostoreDisputedAreaProto
+   */
+  public $disputedArea;
   protected $disputedAreaType = GeostoreDisputedAreaProto::class;
   protected $disputedAreaDataType = '';
+  /**
+   * @var GeostoreDoodleProto
+   */
+  public $doodle;
   protected $doodleType = GeostoreDoodleProto::class;
   protected $doodleDataType = '';
+  /**
+   * @var GeostoreElevationProto
+   */
+  public $elevation;
   protected $elevationType = GeostoreElevationProto::class;
   protected $elevationDataType = '';
+  /**
+   * @var GeostoreElevationModelProto
+   */
+  public $elevationModel;
   protected $elevationModelType = GeostoreElevationModelProto::class;
   protected $elevationModelDataType = '';
+  /**
+   * @var GeostoreEntranceProto
+   */
+  public $entrance;
   protected $entranceType = GeostoreEntranceProto::class;
   protected $entranceDataType = '';
+  /**
+   * @var GeostoreEstablishmentProto
+   */
+  public $establishment;
   protected $establishmentType = GeostoreEstablishmentProto::class;
   protected $establishmentDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $exemptRegulatedArea;
   protected $exemptRegulatedAreaType = GeostoreFeatureIdProto::class;
   protected $exemptRegulatedAreaDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $futureGeometry;
   protected $futureGeometryType = GeostoreFeatureIdProto::class;
   protected $futureGeometryDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $futureGeometryFor;
   protected $futureGeometryForType = GeostoreFeatureIdProto::class;
   protected $futureGeometryForDataType = '';
+  /**
+   * @var GeostoreGeometryStoreReferenceProto
+   */
+  public $geometry3d;
   protected $geometry3dType = GeostoreGeometryStoreReferenceProto::class;
   protected $geometry3dDataType = '';
   public $geometryPrecisionMeters;
+  /**
+   * @var GeostoreGeopoliticalProto
+   */
+  public $geopolitical;
   protected $geopoliticalType = GeostoreGeopoliticalProto::class;
   protected $geopoliticalDataType = '';
+  /**
+   * @var GeostoreGeopoliticalGeometryProto
+   */
+  public $geopoliticalGeometry;
   protected $geopoliticalGeometryType = GeostoreGeopoliticalGeometryProto::class;
   protected $geopoliticalGeometryDataType = '';
+  /**
+   * @var GeostoreHtmlTextProto[]
+   */
+  public $htmlText;
   protected $htmlTextType = GeostoreHtmlTextProto::class;
   protected $htmlTextDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $id;
   protected $idType = GeostoreFeatureIdProto::class;
   protected $idDataType = '';
+  /**
+   * @var GeostoreInferredGeometryProto
+   */
+  public $inferredGeometry;
   protected $inferredGeometryType = GeostoreInferredGeometryProto::class;
   protected $inferredGeometryDataType = '';
+  /**
+   * @var GeostoreCellCoveringProto
+   */
+  public $interiorCovering;
   protected $interiorCoveringType = GeostoreCellCoveringProto::class;
   protected $interiorCoveringDataType = '';
+  /**
+   * @var GeostoreInternalFeatureProto
+   */
+  public $internal;
   protected $internalType = GeostoreInternalFeatureProto::class;
   protected $internalDataType = '';
+  /**
+   * @var GeostoreIntersectionProto
+   */
+  public $intersection;
   protected $intersectionType = GeostoreIntersectionProto::class;
   protected $intersectionDataType = '';
+  /**
+   * @var GeostoreIntersectionGroupProto
+   */
+  public $intersectionGroup;
   protected $intersectionGroupType = GeostoreIntersectionGroupProto::class;
   protected $intersectionGroupDataType = '';
+  /**
+   * @var FreebasePropertyValue[]
+   */
+  public $kgProperty;
   protected $kgPropertyType = FreebasePropertyValue::class;
   protected $kgPropertyDataType = 'array';
+  /**
+   * @var GeostoreKnowledgeGraphReferenceProto
+   */
+  public $knowledgeGraphReference;
   protected $knowledgeGraphReferenceType = GeostoreKnowledgeGraphReferenceProto::class;
   protected $knowledgeGraphReferenceDataType = '';
+  /**
+   * @var GeostoreLaneMarkerProto
+   */
+  public $laneMarker;
   protected $laneMarkerType = GeostoreLaneMarkerProto::class;
   protected $laneMarkerDataType = '';
+  /**
+   * @var GeostoreLevelProto
+   */
+  public $level;
   protected $levelType = GeostoreLevelProto::class;
   protected $levelDataType = '';
+  /**
+   * @var GeostoreLocaleProto
+   */
+  public $locale;
   protected $localeType = GeostoreLocaleProto::class;
   protected $localeDataType = '';
+  /**
+   * @var GeostoreLogicalBorderProto
+   */
+  public $logicalBorder;
   protected $logicalBorderType = GeostoreLogicalBorderProto::class;
   protected $logicalBorderDataType = '';
+  /**
+   * @var GeostoreFeatureMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFeatureMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var GeostoreNameProto[]
+   */
+  public $name;
   protected $nameType = GeostoreNameProto::class;
   protected $nameDataType = 'array';
+  /**
+   * @var GeostoreOperationsProto
+   */
+  public $operations;
   protected $operationsType = GeostoreOperationsProto::class;
   protected $operationsDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $originalId;
   protected $originalIdType = GeostoreFeatureIdProto::class;
   protected $originalIdDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $parent;
   protected $parentType = GeostoreFeatureIdProto::class;
   protected $parentDataType = 'array';
+  /**
+   * @var GeostoreParkingProto
+   */
+  public $parking;
   protected $parkingType = GeostoreParkingProto::class;
   protected $parkingDataType = '';
+  /**
+   * @var GeostorePointProto[]
+   */
+  public $point;
   protected $pointType = GeostorePointProto::class;
   protected $pointDataType = 'array';
+  /**
+   * @var GeostorePoliticalProto
+   */
+  public $political;
   protected $politicalType = GeostorePoliticalProto::class;
   protected $politicalDataType = '';
+  /**
+   * @var GeostorePolygonProto[]
+   */
+  public $polygon;
   protected $polygonType = GeostorePolygonProto::class;
   protected $polygonDataType = 'array';
+  /**
+   * @var GeostorePolygonProto
+   */
+  public $polygonForDisplay;
   protected $polygonForDisplayType = GeostorePolygonProto::class;
   protected $polygonForDisplayDataType = '';
+  /**
+   * @var GeostorePolyLineProto[]
+   */
+  public $polyline;
   protected $polylineType = GeostorePolyLineProto::class;
   protected $polylineDataType = 'array';
+  /**
+   * @var GeostorePoseProto
+   */
+  public $pose;
   protected $poseType = GeostorePoseProto::class;
   protected $poseDataType = '';
+  /**
+   * @var GeostoreRectProto
+   */
+  public $preferredViewport;
   protected $preferredViewportType = GeostoreRectProto::class;
   protected $preferredViewportDataType = '';
+  /**
+   * @var GeostorePropertyValueStatusProto[]
+   */
+  public $propertyValueStatus;
   protected $propertyValueStatusType = GeostorePropertyValueStatusProto::class;
   protected $propertyValueStatusDataType = 'array';
   /**
    * @var float
    */
   public $rank;
+  /**
+   * @var GeostoreRankDetailsProto
+   */
+  public $rankDetails;
   protected $rankDetailsType = GeostoreRankDetailsProto::class;
   protected $rankDetailsDataType = '';
+  /**
+   * @var GeostoreOntologyRawGConceptInstanceContainerProto
+   */
+  public $rawGconceptInstanceContainer;
   protected $rawGconceptInstanceContainerType = GeostoreOntologyRawGConceptInstanceContainerProto::class;
   protected $rawGconceptInstanceContainerDataType = '';
+  /**
+   * @var GeostoreRegulatedAreaProto
+   */
+  public $regulatedArea;
   protected $regulatedAreaType = GeostoreRegulatedAreaProto::class;
   protected $regulatedAreaDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $relatedBorder;
   protected $relatedBorderType = GeostoreFeatureIdProto::class;
   protected $relatedBorderDataType = 'array';
+  /**
+   * @var GeostoreEntranceReferenceProto[]
+   */
+  public $relatedEntrance;
   protected $relatedEntranceType = GeostoreEntranceReferenceProto::class;
   protected $relatedEntranceDataType = 'array';
+  /**
+   * @var GeostoreRelationProto[]
+   */
+  public $relatedFeature;
   protected $relatedFeatureType = GeostoreRelationProto::class;
   protected $relatedFeatureDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $relatedTerminalPoint;
   protected $relatedTerminalPointType = GeostoreFeatureIdProto::class;
   protected $relatedTerminalPointDataType = 'array';
+  /**
+   * @var GeostoreTimezoneProto[]
+   */
+  public $relatedTimezone;
   protected $relatedTimezoneType = GeostoreTimezoneProto::class;
   protected $relatedTimezoneDataType = 'array';
+  /**
+   * @var GeostoreRestrictionGroupProto
+   */
+  public $restrictionGroup;
   protected $restrictionGroupType = GeostoreRestrictionGroupProto::class;
   protected $restrictionGroupDataType = '';
+  /**
+   * @var GeostoreRoadMonitorProto
+   */
+  public $roadMonitor;
   protected $roadMonitorType = GeostoreRoadMonitorProto::class;
   protected $roadMonitorDataType = '';
+  /**
+   * @var GeostoreRouteProto
+   */
+  public $route;
   protected $routeType = GeostoreRouteProto::class;
   protected $routeDataType = '';
+  /**
+   * @var GeostoreSchoolDistrictProto
+   */
+  public $schoolDistrict;
   protected $schoolDistrictType = GeostoreSchoolDistrictProto::class;
   protected $schoolDistrictDataType = '';
+  /**
+   * @var GeostoreSegmentProto
+   */
+  public $segment;
   protected $segmentType = GeostoreSegmentProto::class;
   protected $segmentDataType = '';
+  /**
+   * @var GeostoreSegmentPathProto
+   */
+  public $segmentPath;
   protected $segmentPathType = GeostoreSegmentPathProto::class;
   protected $segmentPathDataType = '';
+  /**
+   * @var GeostoreRoadSignProto
+   */
+  public $sign;
   protected $signType = GeostoreRoadSignProto::class;
   protected $signDataType = '';
+  /**
+   * @var GeostoreSkiBoundaryProto
+   */
+  public $skiBoundary;
   protected $skiBoundaryType = GeostoreSkiBoundaryProto::class;
   protected $skiBoundaryDataType = '';
+  /**
+   * @var GeostoreSkiLiftProto
+   */
+  public $skiLift;
   protected $skiLiftType = GeostoreSkiLiftProto::class;
   protected $skiLiftDataType = '';
+  /**
+   * @var GeostoreSkiTrailProto
+   */
+  public $skiTrail;
   protected $skiTrailType = GeostoreSkiTrailProto::class;
   protected $skiTrailDataType = '';
+  /**
+   * @var GeostoreSocialReferenceProto
+   */
+  public $socialReference;
   protected $socialReferenceType = GeostoreSocialReferenceProto::class;
   protected $socialReferenceDataType = '';
+  /**
+   * @var GeostoreSourceInfoProto[]
+   */
+  public $sourceInfo;
   protected $sourceInfoType = GeostoreSourceInfoProto::class;
   protected $sourceInfoDataType = 'array';
+  /**
+   * @var GeostoreExistenceProto
+   */
+  public $status;
   protected $statusType = GeostoreExistenceProto::class;
   protected $statusDataType = '';
+  /**
+   * @var GeostoreAnchoredGeometryProto[]
+   */
+  public $storefrontGeometry;
   protected $storefrontGeometryType = GeostoreAnchoredGeometryProto::class;
   protected $storefrontGeometryDataType = 'array';
+  /**
+   * @var GeostoreGeometryStoreReferenceProto
+   */
+  public $storefrontGeometryModel;
   protected $storefrontGeometryModelType = GeostoreGeometryStoreReferenceProto::class;
   protected $storefrontGeometryModelDataType = '';
   /**
    * @var bool
    */
   public $syntheticGeometry;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
+  /**
+   * @var GeostoreThreeDimensionalModelProto
+   */
+  public $threeDimModel;
   protected $threeDimModelType = GeostoreThreeDimensionalModelProto::class;
   protected $threeDimModelDataType = '';
+  /**
+   * @var GeostoreTollClusterProto
+   */
+  public $tollCluster;
   protected $tollClusterType = GeostoreTollClusterProto::class;
   protected $tollClusterDataType = '';
+  /**
+   * @var GeostoreTrackProto[]
+   */
+  public $track;
   protected $trackType = GeostoreTrackProto::class;
   protected $trackDataType = 'array';
+  /**
+   * @var GeostoreTransitLineProto
+   */
+  public $transitLine;
   protected $transitLineType = GeostoreTransitLineProto::class;
   protected $transitLineDataType = '';
+  /**
+   * @var GeostoreTransitLineVariantProto
+   */
+  public $transitLineVariant;
   protected $transitLineVariantType = GeostoreTransitLineVariantProto::class;
   protected $transitLineVariantDataType = '';
+  /**
+   * @var GeostoreTransitStationProto
+   */
+  public $transitStation;
   protected $transitStationType = GeostoreTransitStationProto::class;
   protected $transitStationDataType = '';
   /**
    * @var string
    */
   public $type;
+  /**
+   * @var GeostoreVerticalOrderingProto
+   */
+  public $verticalOrdering;
   protected $verticalOrderingType = GeostoreVerticalOrderingProto::class;
   protected $verticalOrderingDataType = '';
+  /**
+   * @var GeostoreGeometryStoreReferenceProto
+   */
+  public $visualizationArea;
   protected $visualizationAreaType = GeostoreGeometryStoreReferenceProto::class;
   protected $visualizationAreaDataType = '';
+  /**
+   * @var GeostorePolygonProto
+   */
+  public $waterRemovedPolygon;
   protected $waterRemovedPolygonType = GeostorePolygonProto::class;
   protected $waterRemovedPolygonDataType = '';
+  /**
+   * @var GeostoreUrlProto[]
+   */
+  public $website;
   protected $websiteType = GeostoreUrlProto::class;
   protected $websiteDataType = 'array';
 

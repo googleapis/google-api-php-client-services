@@ -20,20 +20,44 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreAddressProto extends \Google\Collection
 {
   protected $collection_key = 'crossStreet';
+  /**
+   * @var GeostoreAddressLinesProto[]
+   */
+  public $addressLines;
   protected $addressLinesType = GeostoreAddressLinesProto::class;
   protected $addressLinesDataType = 'array';
+  /**
+   * @var GeostoreAddressComponentProto[]
+   */
+  public $component;
   protected $componentType = GeostoreAddressComponentProto::class;
   protected $componentDataType = 'array';
+  /**
+   * @var GeostoreAddressComponentProto[]
+   */
+  public $crossStreet;
   protected $crossStreetType = GeostoreAddressComponentProto::class;
   protected $crossStreetDataType = 'array';
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var GeostoreAddressProto
+   */
+  public $partialDenormalization;
   protected $partialDenormalizationType = GeostoreAddressProto::class;
   protected $partialDenormalizationDataType = '';
   /**
    * @var string
    */
   public $templateId;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
 

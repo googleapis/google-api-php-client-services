@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class FatcatCompactRephilClusters extends \Google\Collection
 {
   protected $collection_key = 'cluster';
+  /**
+   * @var FatcatCompactRephilClustersCluster[]
+   */
+  public $cluster;
   protected $clusterType = FatcatCompactRephilClustersCluster::class;
   protected $clusterDataType = 'array';
 

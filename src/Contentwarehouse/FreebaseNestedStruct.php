@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class FreebaseNestedStruct extends \Google\Collection
 {
   protected $collection_key = 'propertyValue';
+  /**
+   * @var FreebasePropertyValue[]
+   */
+  public $propertyValue;
   protected $propertyValueType = FreebasePropertyValue::class;
   protected $propertyValueDataType = 'array';
 

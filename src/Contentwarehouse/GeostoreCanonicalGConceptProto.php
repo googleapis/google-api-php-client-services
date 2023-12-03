@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreCanonicalGConceptProto extends \Google\Model
 {
+  /**
+   * @var GeostoreGConceptInstanceProto
+   */
+  public $gconcept;
   protected $gconceptType = GeostoreGConceptInstanceProto::class;
   protected $gconceptDataType = '';
   /**

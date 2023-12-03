@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreExceptionalHoursProto extends \Google\Model
 {
+  /**
+   * @var GeostoreBusinessHoursProto
+   */
+  public $hours;
   protected $hoursType = GeostoreBusinessHoursProto::class;
   protected $hoursDataType = '';
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var GeostoreTimeIntervalProto
+   */
+  public $range;
   protected $rangeType = GeostoreTimeIntervalProto::class;
   protected $rangeDataType = '';
 

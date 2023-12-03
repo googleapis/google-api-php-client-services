@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreBusinessChainProto extends \Google\Collection
 {
   protected $collection_key = 'canonicalGconcepts';
+  /**
+   * @var GeostoreCanonicalGConceptProto[]
+   */
+  public $canonicalGconcepts;
   protected $canonicalGconceptsType = GeostoreCanonicalGConceptProto::class;
   protected $canonicalGconceptsDataType = 'array';
 

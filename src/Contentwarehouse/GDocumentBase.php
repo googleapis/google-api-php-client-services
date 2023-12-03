@@ -116,6 +116,10 @@ class GDocumentBase extends \Google\Collection
    * @var string
    */
   public $repid;
+  /**
+   * @var ScienceCitation
+   */
+  public $scienceMetadata;
   protected $scienceMetadataType = ScienceCitation::class;
   protected $scienceMetadataDataType = '';
   /**
@@ -130,20 +134,44 @@ class GDocumentBase extends \Google\Collection
    * @var int
    */
   public $uRLEncoding;
+  /**
+   * @var GDocumentBaseContent
+   */
+  public $content;
   protected $contentType = GDocumentBaseContent::class;
   protected $contentDataType = '';
+  /**
+   * @var GDocumentBaseDirectory[]
+   */
+  public $directory;
   protected $directoryType = GDocumentBaseDirectory::class;
   protected $directoryDataType = 'array';
   /**
    * @var string
    */
   public $ecnFp;
+  /**
+   * @var IndexingCrawlerIdServingDocumentIdentifier
+   */
+  public $id;
   protected $idType = IndexingCrawlerIdServingDocumentIdentifier::class;
   protected $idDataType = '';
+  /**
+   * @var LocalsearchDocInfo
+   */
+  public $localsearchDocInfo;
   protected $localsearchDocInfoType = LocalsearchDocInfo::class;
   protected $localsearchDocInfoDataType = '';
+  /**
+   * @var OceanDocInfo
+   */
+  public $oceanDocInfo;
   protected $oceanDocInfoType = OceanDocInfo::class;
   protected $oceanDocInfoDataType = '';
+  /**
+   * @var GDocumentBaseOriginalContent
+   */
+  public $originalcontent;
   protected $originalcontentType = GDocumentBaseOriginalContent::class;
   protected $originalcontentDataType = '';
   /**

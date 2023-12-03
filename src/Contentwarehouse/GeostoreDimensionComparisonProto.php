@@ -23,6 +23,10 @@ class GeostoreDimensionComparisonProto extends \Google\Model
    * @var string
    */
   public $comparisonOperator;
+  /**
+   * @var GeostoreDimensionProto
+   */
+  public $dimensionWithUnit;
   protected $dimensionWithUnitType = GeostoreDimensionProto::class;
   protected $dimensionWithUnitDataType = '';
 

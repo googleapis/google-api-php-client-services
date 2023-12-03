@@ -23,6 +23,10 @@ class GeostoreInternalFieldMetadataProto extends \Google\Model
    * @var bool
    */
   public $isAuto;
+  /**
+   * @var GeostoreInternalSourceSummaryProto
+   */
+  public $sourceSummary;
   protected $sourceSummaryType = GeostoreInternalSourceSummaryProto::class;
   protected $sourceSummaryDataType = '';
 

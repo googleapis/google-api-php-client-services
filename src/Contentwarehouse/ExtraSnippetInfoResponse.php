@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class ExtraSnippetInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'tidbit';
+  /**
+   * @var ExtraSnippetInfoResponseMatchInfo
+   */
+  public $matchinfo;
   protected $matchinfoType = ExtraSnippetInfoResponseMatchInfo::class;
   protected $matchinfoDataType = '';
+  /**
+   * @var ExtraSnippetInfoResponseQuerySubitem[]
+   */
+  public $querysubitem;
   protected $querysubitemType = ExtraSnippetInfoResponseQuerySubitem::class;
   protected $querysubitemDataType = 'array';
+  /**
+   * @var ExtraSnippetInfoResponseTidbit[]
+   */
+  public $tidbit;
   protected $tidbitType = ExtraSnippetInfoResponseTidbit::class;
   protected $tidbitDataType = 'array';
 

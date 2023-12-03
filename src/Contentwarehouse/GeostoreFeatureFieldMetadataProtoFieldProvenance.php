@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFeatureFieldMetadataProtoFieldProvenance extends \Google\Collection
 {
   protected $collection_key = 'fieldPath';
+  /**
+   * @var GeostoreStableFieldPathProto[]
+   */
+  public $fieldPath;
   protected $fieldPathType = GeostoreStableFieldPathProto::class;
   protected $fieldPathDataType = 'array';
+  /**
+   * @var GeostoreProvenanceProto
+   */
+  public $provenance;
   protected $provenanceType = GeostoreProvenanceProto::class;
   protected $provenanceDataType = '';
 
