@@ -20,8 +20,16 @@ namespace Google\Service\ServiceControl;
 class AuditLog extends \Google\Collection
 {
   protected $collection_key = 'authorizationInfo';
+  /**
+   * @var AuthenticationInfo
+   */
+  public $authenticationInfo;
   protected $authenticationInfoType = AuthenticationInfo::class;
   protected $authenticationInfoDataType = '';
+  /**
+   * @var AuthorizationInfo[]
+   */
+  public $authorizationInfo;
   protected $authorizationInfoType = AuthorizationInfo::class;
   protected $authorizationInfoDataType = 'array';
   /**
@@ -36,14 +44,26 @@ class AuditLog extends \Google\Collection
    * @var string
    */
   public $numResponseItems;
+  /**
+   * @var PolicyViolationInfo
+   */
+  public $policyViolationInfo;
   protected $policyViolationInfoType = PolicyViolationInfo::class;
   protected $policyViolationInfoDataType = '';
   /**
    * @var array[]
    */
   public $request;
+  /**
+   * @var RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = RequestMetadata::class;
   protected $requestMetadataDataType = '';
+  /**
+   * @var ResourceLocation
+   */
+  public $resourceLocation;
   protected $resourceLocationType = ResourceLocation::class;
   protected $resourceLocationDataType = '';
   /**
@@ -66,6 +86,10 @@ class AuditLog extends \Google\Collection
    * @var string
    */
   public $serviceName;
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

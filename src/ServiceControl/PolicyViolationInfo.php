@@ -19,6 +19,10 @@ namespace Google\Service\ServiceControl;
 
 class PolicyViolationInfo extends \Google\Model
 {
+  /**
+   * @var OrgPolicyViolationInfo
+   */
+  public $orgPolicyViolationInfo;
   protected $orgPolicyViolationInfoType = OrgPolicyViolationInfo::class;
   protected $orgPolicyViolationInfoDataType = '';
 

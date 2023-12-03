@@ -20,12 +20,20 @@ namespace Google\Service\ServiceControl;
 class CheckRequest extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  /**
+   * @var AttributeContext
+   */
+  public $attributes;
   protected $attributesType = AttributeContext::class;
   protected $attributesDataType = '';
   /**
    * @var string
    */
   public $flags;
+  /**
+   * @var ResourceInfo[]
+   */
+  public $resources;
   protected $resourcesType = ResourceInfo::class;
   protected $resourcesDataType = 'array';
   /**

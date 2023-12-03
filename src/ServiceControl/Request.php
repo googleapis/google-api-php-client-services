@@ -19,6 +19,10 @@ namespace Google\Service\ServiceControl;
 
 class Request extends \Google\Model
 {
+  /**
+   * @var Auth
+   */
+  public $auth;
   protected $authType = Auth::class;
   protected $authDataType = '';
   /**

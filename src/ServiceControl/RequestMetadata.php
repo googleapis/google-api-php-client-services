@@ -31,8 +31,16 @@ class RequestMetadata extends \Google\Model
    * @var string
    */
   public $callerSuppliedUserAgent;
+  /**
+   * @var Peer
+   */
+  public $destinationAttributes;
   protected $destinationAttributesType = Peer::class;
   protected $destinationAttributesDataType = '';
+  /**
+   * @var Request
+   */
+  public $requestAttributes;
   protected $requestAttributesType = Request::class;
   protected $requestAttributesDataType = '';
 

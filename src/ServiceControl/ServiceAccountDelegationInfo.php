@@ -19,12 +19,20 @@ namespace Google\Service\ServiceControl;
 
 class ServiceAccountDelegationInfo extends \Google\Model
 {
+  /**
+   * @var FirstPartyPrincipal
+   */
+  public $firstPartyPrincipal;
   protected $firstPartyPrincipalType = FirstPartyPrincipal::class;
   protected $firstPartyPrincipalDataType = '';
   /**
    * @var string
    */
   public $principalSubject;
+  /**
+   * @var ThirdPartyPrincipal
+   */
+  public $thirdPartyPrincipal;
   protected $thirdPartyPrincipalType = ThirdPartyPrincipal::class;
   protected $thirdPartyPrincipalDataType = '';
 

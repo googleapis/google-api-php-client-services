@@ -23,6 +23,10 @@ class CheckResponse extends \Google\Model
    * @var string[]
    */
   public $headers;
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

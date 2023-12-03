@@ -20,22 +20,50 @@ namespace Google\Service\ServiceControl;
 class AttributeContext extends \Google\Collection
 {
   protected $collection_key = 'extensions';
+  /**
+   * @var Api
+   */
+  public $api;
   protected $apiType = Api::class;
   protected $apiDataType = '';
+  /**
+   * @var Peer
+   */
+  public $destination;
   protected $destinationType = Peer::class;
   protected $destinationDataType = '';
   /**
    * @var array[]
    */
   public $extensions;
+  /**
+   * @var Peer
+   */
+  public $origin;
   protected $originType = Peer::class;
   protected $originDataType = '';
+  /**
+   * @var Request
+   */
+  public $request;
   protected $requestType = Request::class;
   protected $requestDataType = '';
+  /**
+   * @var ServicecontrolResource
+   */
+  public $resource;
   protected $resourceType = ServicecontrolResource::class;
   protected $resourceDataType = '';
+  /**
+   * @var Response
+   */
+  public $response;
   protected $responseType = Response::class;
   protected $responseDataType = '';
+  /**
+   * @var Peer
+   */
+  public $source;
   protected $sourceType = Peer::class;
   protected $sourceDataType = '';
 

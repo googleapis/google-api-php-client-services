@@ -20,6 +20,10 @@ namespace Google\Service\ServiceControl;
 class ReportRequest extends \Google\Collection
 {
   protected $collection_key = 'operations';
+  /**
+   * @var AttributeContext[]
+   */
+  public $operations;
   protected $operationsType = AttributeContext::class;
   protected $operationsDataType = 'array';
   /**
