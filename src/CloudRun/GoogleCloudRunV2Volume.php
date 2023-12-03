@@ -19,14 +19,26 @@ namespace Google\Service\CloudRun;
 
 class GoogleCloudRunV2Volume extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRunV2CloudSqlInstance
+   */
+  public $cloudSqlInstance;
   protected $cloudSqlInstanceType = GoogleCloudRunV2CloudSqlInstance::class;
   protected $cloudSqlInstanceDataType = '';
+  /**
+   * @var GoogleCloudRunV2EmptyDirVolumeSource
+   */
+  public $emptyDir;
   protected $emptyDirType = GoogleCloudRunV2EmptyDirVolumeSource::class;
   protected $emptyDirDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudRunV2SecretVolumeSource
+   */
+  public $secret;
   protected $secretType = GoogleCloudRunV2SecretVolumeSource::class;
   protected $secretDataType = '';
 

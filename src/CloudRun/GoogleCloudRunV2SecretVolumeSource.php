@@ -24,6 +24,10 @@ class GoogleCloudRunV2SecretVolumeSource extends \Google\Collection
    * @var int
    */
   public $defaultMode;
+  /**
+   * @var GoogleCloudRunV2VersionToPath[]
+   */
+  public $items;
   protected $itemsType = GoogleCloudRunV2VersionToPath::class;
   protected $itemsDataType = 'array';
   /**

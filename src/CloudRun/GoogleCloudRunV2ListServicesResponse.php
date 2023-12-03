@@ -24,6 +24,10 @@ class GoogleCloudRunV2ListServicesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudRunV2Service[]
+   */
+  public $services;
   protected $servicesType = GoogleCloudRunV2Service::class;
   protected $servicesDataType = 'array';
 

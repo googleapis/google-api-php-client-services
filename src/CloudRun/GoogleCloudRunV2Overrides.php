@@ -20,6 +20,10 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2Overrides extends \Google\Collection
 {
   protected $collection_key = 'containerOverrides';
+  /**
+   * @var GoogleCloudRunV2ContainerOverride[]
+   */
+  public $containerOverrides;
   protected $containerOverridesType = GoogleCloudRunV2ContainerOverride::class;
   protected $containerOverridesDataType = 'array';
   /**

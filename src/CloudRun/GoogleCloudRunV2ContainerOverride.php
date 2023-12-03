@@ -28,6 +28,10 @@ class GoogleCloudRunV2ContainerOverride extends \Google\Collection
    * @var bool
    */
   public $clearArgs;
+  /**
+   * @var GoogleCloudRunV2EnvVar[]
+   */
+  public $env;
   protected $envType = GoogleCloudRunV2EnvVar::class;
   protected $envDataType = 'array';
   /**

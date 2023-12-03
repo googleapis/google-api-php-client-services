@@ -20,6 +20,10 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2HTTPGetAction extends \Google\Collection
 {
   protected $collection_key = 'httpHeaders';
+  /**
+   * @var GoogleCloudRunV2HTTPHeader[]
+   */
+  public $httpHeaders;
   protected $httpHeadersType = GoogleCloudRunV2HTTPHeader::class;
   protected $httpHeadersDataType = 'array';
   /**

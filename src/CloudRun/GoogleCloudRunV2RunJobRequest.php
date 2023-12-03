@@ -23,6 +23,10 @@ class GoogleCloudRunV2RunJobRequest extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var GoogleCloudRunV2Overrides
+   */
+  public $overrides;
   protected $overridesType = GoogleCloudRunV2Overrides::class;
   protected $overridesDataType = '';
   /**

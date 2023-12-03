@@ -23,8 +23,16 @@ class GoogleCloudRunV2Probe extends \Google\Model
    * @var int
    */
   public $failureThreshold;
+  /**
+   * @var GoogleCloudRunV2GRPCAction
+   */
+  public $grpc;
   protected $grpcType = GoogleCloudRunV2GRPCAction::class;
   protected $grpcDataType = '';
+  /**
+   * @var GoogleCloudRunV2HTTPGetAction
+   */
+  public $httpGet;
   protected $httpGetType = GoogleCloudRunV2HTTPGetAction::class;
   protected $httpGetDataType = '';
   /**
@@ -35,6 +43,10 @@ class GoogleCloudRunV2Probe extends \Google\Model
    * @var int
    */
   public $periodSeconds;
+  /**
+   * @var GoogleCloudRunV2TCPSocketAction
+   */
+  public $tcpSocket;
   protected $tcpSocketType = GoogleCloudRunV2TCPSocketAction::class;
   protected $tcpSocketDataType = '';
   /**

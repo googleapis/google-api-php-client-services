@@ -24,8 +24,16 @@ class GoogleCloudRunV2Revision extends \Google\Collection
    * @var string[]
    */
   public $annotations;
+  /**
+   * @var GoogleCloudRunV2Condition[]
+   */
+  public $conditions;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
+  /**
+   * @var GoogleCloudRunV2Container[]
+   */
+  public $containers;
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
   /**
@@ -96,8 +104,16 @@ class GoogleCloudRunV2Revision extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * @var GoogleCloudRunV2RevisionScaling
+   */
+  public $scaling;
   protected $scalingType = GoogleCloudRunV2RevisionScaling::class;
   protected $scalingDataType = '';
+  /**
+   * @var GoogleCloudRunV2RevisionScalingStatus
+   */
+  public $scalingStatus;
   protected $scalingStatusType = GoogleCloudRunV2RevisionScalingStatus::class;
   protected $scalingStatusDataType = '';
   /**
@@ -124,8 +140,16 @@ class GoogleCloudRunV2Revision extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var GoogleCloudRunV2Volume[]
+   */
+  public $volumes;
   protected $volumesType = GoogleCloudRunV2Volume::class;
   protected $volumesDataType = 'array';
+  /**
+   * @var GoogleCloudRunV2VpcAccess
+   */
+  public $vpcAccess;
   protected $vpcAccessType = GoogleCloudRunV2VpcAccess::class;
   protected $vpcAccessDataType = '';
 

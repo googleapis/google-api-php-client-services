@@ -28,6 +28,10 @@ class GoogleCloudRunV2VpcAccess extends \Google\Collection
    * @var string
    */
   public $egress;
+  /**
+   * @var GoogleCloudRunV2NetworkInterface[]
+   */
+  public $networkInterfaces;
   protected $networkInterfacesType = GoogleCloudRunV2NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
 

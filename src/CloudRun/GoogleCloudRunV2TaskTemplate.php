@@ -20,6 +20,10 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2TaskTemplate extends \Google\Collection
 {
   protected $collection_key = 'volumes';
+  /**
+   * @var GoogleCloudRunV2Container[]
+   */
+  public $containers;
   protected $containersType = GoogleCloudRunV2Container::class;
   protected $containersDataType = 'array';
   /**
@@ -42,8 +46,16 @@ class GoogleCloudRunV2TaskTemplate extends \Google\Collection
    * @var string
    */
   public $timeout;
+  /**
+   * @var GoogleCloudRunV2Volume[]
+   */
+  public $volumes;
   protected $volumesType = GoogleCloudRunV2Volume::class;
   protected $volumesDataType = 'array';
+  /**
+   * @var GoogleCloudRunV2VpcAccess
+   */
+  public $vpcAccess;
   protected $vpcAccessType = GoogleCloudRunV2VpcAccess::class;
   protected $vpcAccessDataType = '';
 

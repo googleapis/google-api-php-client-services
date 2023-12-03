@@ -20,6 +20,10 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2ListExecutionsResponse extends \Google\Collection
 {
   protected $collection_key = 'executions';
+  /**
+   * @var GoogleCloudRunV2Execution[]
+   */
+  public $executions;
   protected $executionsType = GoogleCloudRunV2Execution::class;
   protected $executionsDataType = 'array';
   /**
