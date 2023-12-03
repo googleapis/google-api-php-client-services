@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphWireProtoPeopleapiExtensionAppsWaldoExtendedData extends \Google\Model
 {
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaUserAvailabilities
+   */
+  public $availabilities;
   protected $availabilitiesType = GoogleInternalAppsWaldoV1alphaUserAvailabilities::class;
   protected $availabilitiesDataType = '';
 

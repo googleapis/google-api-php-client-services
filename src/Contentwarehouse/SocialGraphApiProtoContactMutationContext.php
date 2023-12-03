@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoContactMutationContext extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoAndroidDeviceInfo
+   */
+  public $androidDeviceInfo;
   protected $androidDeviceInfoType = SocialGraphApiProtoAndroidDeviceInfo::class;
   protected $androidDeviceInfoDataType = '';
+  /**
+   * @var SocialGraphApiProtoHostAppInfo
+   */
+  public $hostAppInfo;
   protected $hostAppInfoType = SocialGraphApiProtoHostAppInfo::class;
   protected $hostAppInfoDataType = '';
   /**
    * @var string
    */
   public $source;
+  /**
+   * @var SocialGraphApiProtoThirdPartyInfo
+   */
+  public $thirdPartyInfo;
   protected $thirdPartyInfoType = SocialGraphApiProtoThirdPartyInfo::class;
   protected $thirdPartyInfoDataType = '';
   /**

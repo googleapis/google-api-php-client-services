@@ -19,28 +19,60 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoRecurrence extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoDailyRecurrence
+   */
+  public $dailyRecurrence;
   protected $dailyRecurrenceType = SocialGraphApiProtoDailyRecurrence::class;
   protected $dailyRecurrenceDataType = '';
   /**
    * @var int
    */
   public $every;
+  /**
+   * @var SocialGraphApiProtoMonthlyRecurrence
+   */
+  public $monthlyRecurrence;
   protected $monthlyRecurrenceType = SocialGraphApiProtoMonthlyRecurrence::class;
   protected $monthlyRecurrenceDataType = '';
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $recurrenceEndDate;
   protected $recurrenceEndDateType = GoogleTypeDateTime::class;
   protected $recurrenceEndDateDataType = '';
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $recurrenceStart;
   protected $recurrenceStartType = GoogleTypeDateTime::class;
   protected $recurrenceStartDataType = '';
   /**
    * @var int
    */
   public $repeatCount;
+  /**
+   * @var SocialGraphApiProtoRecurrenceRepeatForever
+   */
+  public $repeatForever;
   protected $repeatForeverType = SocialGraphApiProtoRecurrenceRepeatForever::class;
   protected $repeatForeverDataType = '';
+  /**
+   * @var SocialGraphApiProtoSingleRecurrence
+   */
+  public $singleRecurrence;
   protected $singleRecurrenceType = SocialGraphApiProtoSingleRecurrence::class;
   protected $singleRecurrenceDataType = '';
+  /**
+   * @var SocialGraphApiProtoWeeklyRecurrence
+   */
+  public $weeklyRecurrence;
   protected $weeklyRecurrenceType = SocialGraphApiProtoWeeklyRecurrence::class;
   protected $weeklyRecurrenceDataType = '';
+  /**
+   * @var SocialGraphApiProtoYearlyRecurrence
+   */
+  public $yearlyRecurrence;
   protected $yearlyRecurrenceType = SocialGraphApiProtoYearlyRecurrence::class;
   protected $yearlyRecurrenceDataType = '';
 

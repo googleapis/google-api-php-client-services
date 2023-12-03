@@ -19,60 +19,164 @@ namespace Google\Service\Contentwarehouse;
 
 class SecurityCredentialsPrincipalProto extends \Google\Model
 {
+  /**
+   * @var SecurityCredentialsAllAuthenticatedUsersProto
+   */
+  public $allAuthenticatedUsers;
   protected $allAuthenticatedUsersType = SecurityCredentialsAllAuthenticatedUsersProto::class;
   protected $allAuthenticatedUsersDataType = '';
+  /**
+   * @var SecurityCredentialsCapTokenHolderProto
+   */
+  public $capTokenHolder;
   protected $capTokenHolderType = SecurityCredentialsCapTokenHolderProto::class;
   protected $capTokenHolderDataType = '';
+  /**
+   * @var SecurityCredentialsChatProto
+   */
+  public $chat;
   protected $chatType = SecurityCredentialsChatProto::class;
   protected $chatDataType = '';
+  /**
+   * @var SecurityCredentialsCircleProto
+   */
+  public $circle;
   protected $circleType = SecurityCredentialsCircleProto::class;
   protected $circleDataType = '';
+  /**
+   * @var SecurityCredentialsCloudPrincipalProto
+   */
+  public $cloudPrincipal;
   protected $cloudPrincipalType = SecurityCredentialsCloudPrincipalProto::class;
   protected $cloudPrincipalDataType = '';
+  /**
+   * @var SecurityCredentialsContactGroupProto
+   */
+  public $contactGroup;
   protected $contactGroupType = SecurityCredentialsContactGroupProto::class;
   protected $contactGroupDataType = '';
+  /**
+   * @var SecurityCredentialsEmailOwnerProto
+   */
+  public $emailOwner;
   protected $emailOwnerType = SecurityCredentialsEmailOwnerProto::class;
   protected $emailOwnerDataType = '';
+  /**
+   * @var SecurityCredentialsEventProto
+   */
+  public $event;
   protected $eventType = SecurityCredentialsEventProto::class;
   protected $eventDataType = '';
+  /**
+   * @var SecurityCredentialsGaiaGroupProto
+   */
+  public $gaiaGroup;
   protected $gaiaGroupType = SecurityCredentialsGaiaGroupProto::class;
   protected $gaiaGroupDataType = '';
+  /**
+   * @var SecurityCredentialsGaiaUserProto
+   */
+  public $gaiaUser;
   protected $gaiaUserType = SecurityCredentialsGaiaUserProto::class;
   protected $gaiaUserDataType = '';
+  /**
+   * @var SecurityCredentialsHostProto
+   */
+  public $host;
   protected $hostType = SecurityCredentialsHostProto::class;
   protected $hostDataType = '';
+  /**
+   * @var SecurityCredentialsLdapGroupProto
+   */
+  public $ldapGroup;
   protected $ldapGroupType = SecurityCredentialsLdapGroupProto::class;
   protected $ldapGroupDataType = '';
+  /**
+   * @var SecurityCredentialsLdapUserProto
+   */
+  public $ldapUser;
   protected $ldapUserType = SecurityCredentialsLdapUserProto::class;
   protected $ldapUserDataType = '';
+  /**
+   * @var SecurityCredentialsMdbGroupProto
+   */
+  public $mdbGroup;
   protected $mdbGroupType = SecurityCredentialsMdbGroupProto::class;
   protected $mdbGroupDataType = '';
+  /**
+   * @var SecurityCredentialsMdbUserProto
+   */
+  public $mdbUser;
   protected $mdbUserType = SecurityCredentialsMdbUserProto::class;
   protected $mdbUserDataType = '';
+  /**
+   * @var SecurityCredentialsOAuthConsumerProto
+   */
+  public $oauthConsumer;
   protected $oauthConsumerType = SecurityCredentialsOAuthConsumerProto::class;
   protected $oauthConsumerDataType = '';
+  /**
+   * @var SecurityCredentialsPostiniUserProto
+   */
+  public $postiniUser;
   protected $postiniUserType = SecurityCredentialsPostiniUserProto::class;
   protected $postiniUserDataType = '';
+  /**
+   * @var SecurityCredentialsRbacRoleProto
+   */
+  public $rbacRole;
   protected $rbacRoleType = SecurityCredentialsRbacRoleProto::class;
   protected $rbacRoleDataType = '';
+  /**
+   * @var SecurityCredentialsRbacSubjectProto
+   */
+  public $rbacSubject;
   protected $rbacSubjectType = SecurityCredentialsRbacSubjectProto::class;
   protected $rbacSubjectDataType = '';
+  /**
+   * @var SecurityCredentialsResourceRoleProto
+   */
+  public $resourceRole;
   protected $resourceRoleType = SecurityCredentialsResourceRoleProto::class;
   protected $resourceRoleDataType = '';
   /**
    * @var string
    */
   public $scope;
+  /**
+   * @var SecurityCredentialsSigningKeyPossessorProto
+   */
+  public $signingKeyPossessor;
   protected $signingKeyPossessorType = SecurityCredentialsSigningKeyPossessorProto::class;
   protected $signingKeyPossessorDataType = '';
+  /**
+   * @var SecurityCredentialsSimpleSecretHolderProto
+   */
+  public $simpleSecretHolder;
   protected $simpleSecretHolderType = SecurityCredentialsSimpleSecretHolderProto::class;
   protected $simpleSecretHolderDataType = '';
+  /**
+   * @var SecurityCredentialsSocialGraphNodeProto
+   */
+  public $socialGraphNode;
   protected $socialGraphNodeType = SecurityCredentialsSocialGraphNodeProto::class;
   protected $socialGraphNodeDataType = '';
+  /**
+   * @var SecurityCredentialsSquareProto
+   */
+  public $square;
   protected $squareType = SecurityCredentialsSquareProto::class;
   protected $squareDataType = '';
+  /**
+   * @var SecurityCredentialsYoutubeUserProto
+   */
+  public $youtubeUser;
   protected $youtubeUserType = SecurityCredentialsYoutubeUserProto::class;
   protected $youtubeUserDataType = '';
+  /**
+   * @var SecurityCredentialsZwiebackSessionProto
+   */
+  public $zwiebackSession;
   protected $zwiebackSessionType = SecurityCredentialsZwiebackSessionProto::class;
   protected $zwiebackSessionDataType = '';
 

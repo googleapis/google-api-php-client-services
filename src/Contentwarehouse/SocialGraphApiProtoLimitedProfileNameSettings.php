@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoLimitedProfileNameSettings extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoPartialNameOptions
+   */
+  public $partialNameOptions;
   protected $partialNameOptionsType = SocialGraphApiProtoPartialNameOptions::class;
   protected $partialNameOptionsDataType = '';
   /**

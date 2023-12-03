@@ -24,18 +24,38 @@ class SocialGraphApiProtoSearchProfileData extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var SocialGraphApiProtoSearchProfileEducation[]
+   */
+  public $education;
   protected $educationType = SocialGraphApiProtoSearchProfileEducation::class;
   protected $educationDataType = 'array';
+  /**
+   * @var SocialGraphApiProtoSearchProfileEntity[]
+   */
+  public $interest;
   protected $interestType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $interestDataType = 'array';
   /**
    * @var string
    */
   public $language;
+  /**
+   * @var SocialGraphApiProtoSearchProfileLocation[]
+   */
+  public $location;
   protected $locationType = SocialGraphApiProtoSearchProfileLocation::class;
   protected $locationDataType = 'array';
+  /**
+   * @var SocialGraphApiProtoSearchProfileMetadata
+   */
+  public $metadata;
   protected $metadataType = SocialGraphApiProtoSearchProfileMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var SocialGraphApiProtoSearchProfileEntity[]
+   */
+  public $occupation;
   protected $occupationType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $occupationDataType = 'array';
   /**
@@ -46,12 +66,20 @@ class SocialGraphApiProtoSearchProfileData extends \Google\Collection
    * @var string[]
    */
   public $publicPhoneNumber;
+  /**
+   * @var SocialGraphApiProtoSearchProfileSocialLink[]
+   */
+  public $socialLink;
   protected $socialLinkType = SocialGraphApiProtoSearchProfileSocialLink::class;
   protected $socialLinkDataType = 'array';
   /**
    * @var string[]
    */
   public $website;
+  /**
+   * @var SocialGraphApiProtoSearchProfileWorkplace[]
+   */
+  public $workplace;
   protected $workplaceType = SocialGraphApiProtoSearchProfileWorkplace::class;
   protected $workplaceDataType = 'array';
 

@@ -47,12 +47,20 @@ class SocialGraphWireProtoPeopleapiExtensionDynamiteExtendedData extends \Google
    * @var string
    */
   public $memberCount;
+  /**
+   * @var AppsDynamiteSharedOrganizationInfo
+   */
+  public $organizationInfo;
   protected $organizationInfoType = AppsDynamiteSharedOrganizationInfo::class;
   protected $organizationInfoDataType = '';
   /**
    * @var string
    */
   public $presence;
+  /**
+   * @var AppsDynamiteSharedSegmentedMembershipCounts
+   */
+  public $segmentedMembershipCounts;
   protected $segmentedMembershipCountsType = AppsDynamiteSharedSegmentedMembershipCounts::class;
   protected $segmentedMembershipCountsDataType = '';
 

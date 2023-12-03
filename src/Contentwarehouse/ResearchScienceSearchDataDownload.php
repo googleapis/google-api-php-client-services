@@ -35,6 +35,10 @@ class ResearchScienceSearchDataDownload extends \Google\Model
    * @var string
    */
   public $fileFormatClass;
+  /**
+   * @var ResearchScienceSearchDataSize
+   */
+  public $parsedContentSize;
   protected $parsedContentSizeType = ResearchScienceSearchDataSize::class;
   protected $parsedContentSizeDataType = '';
 

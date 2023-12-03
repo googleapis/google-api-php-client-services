@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class ResearchScamQueryMetadata extends \Google\Model
 {
+  /**
+   * @var ResearchScamNeighborSelectionOverride
+   */
+  public $neighborSelectionOverride;
   protected $neighborSelectionOverrideType = ResearchScamNeighborSelectionOverride::class;
   protected $neighborSelectionOverrideDataType = '';
 

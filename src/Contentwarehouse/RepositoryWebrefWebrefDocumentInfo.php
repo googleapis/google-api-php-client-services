@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefWebrefDocumentInfo extends \Google\Collection
 {
   protected $collection_key = 'webrefParsedContentSentence';
+  /**
+   * @var RepositoryWebrefDocumentMetadata
+   */
+  public $documentMetadata;
   protected $documentMetadataType = RepositoryWebrefDocumentMetadata::class;
   protected $documentMetadataDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $extensions;
   protected $extensionsType = Proto2BridgeMessageSet::class;
   protected $extensionsDataType = '';
   /**

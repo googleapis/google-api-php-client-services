@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoContactCreateContext extends \Google\Model
 {
+  /**
+   * @var SocialGraphApiProtoContactMutationContext
+   */
+  public $mutationContext;
   protected $mutationContextType = SocialGraphApiProtoContactMutationContext::class;
   protected $mutationContextDataType = '';
 

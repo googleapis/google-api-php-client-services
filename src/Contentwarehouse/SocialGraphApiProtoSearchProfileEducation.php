@@ -20,12 +20,28 @@ namespace Google\Service\Contentwarehouse;
 class SocialGraphApiProtoSearchProfileEducation extends \Google\Collection
 {
   protected $collection_key = 'fieldOfStudy';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $endTime;
   protected $endTimeType = GoogleTypeDate::class;
   protected $endTimeDataType = '';
+  /**
+   * @var SocialGraphApiProtoSearchProfileEntity[]
+   */
+  public $fieldOfStudy;
   protected $fieldOfStudyType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $fieldOfStudyDataType = 'array';
+  /**
+   * @var SocialGraphApiProtoSearchProfileEntity
+   */
+  public $institution;
   protected $institutionType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $institutionDataType = '';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $startTime;
   protected $startTimeType = GoogleTypeDate::class;
   protected $startTimeDataType = '';
 

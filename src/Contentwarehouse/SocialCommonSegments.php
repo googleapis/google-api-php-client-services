@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SocialCommonSegments extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var SocialCommonSegment[]
+   */
+  public $segments;
   protected $segmentsType = SocialCommonSegment::class;
   protected $segmentsDataType = 'array';
 

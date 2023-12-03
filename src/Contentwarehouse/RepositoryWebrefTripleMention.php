@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefTripleMention extends \Google\Model
 {
+  /**
+   * @var RepositoryWebrefSegmentMention
+   */
+  public $predMention;
   protected $predMentionType = RepositoryWebrefSegmentMention::class;
   protected $predMentionDataType = '';
   /**
@@ -33,10 +37,22 @@ class RepositoryWebrefTripleMention extends \Google\Model
    * @var string
    */
   public $scopeFprint;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $stuff;
   protected $stuffType = Proto2BridgeMessageSet::class;
   protected $stuffDataType = '';
+  /**
+   * @var RepositoryWebrefSegmentMention
+   */
+  public $subMention;
   protected $subMentionType = RepositoryWebrefSegmentMention::class;
   protected $subMentionDataType = '';
+  /**
+   * @var RepositoryWebrefSegmentMention
+   */
+  public $valueMention;
   protected $valueMentionType = RepositoryWebrefSegmentMention::class;
   protected $valueMentionDataType = '';
 

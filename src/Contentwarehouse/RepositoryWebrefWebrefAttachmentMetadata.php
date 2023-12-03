@@ -35,6 +35,10 @@ class RepositoryWebrefWebrefAttachmentMetadata extends \Google\Model
    * @var string
    */
   public $lngE7;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $oysterId;
   protected $oysterIdType = GeostoreFeatureIdProto::class;
   protected $oysterIdDataType = '';
 

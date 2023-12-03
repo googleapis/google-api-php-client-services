@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SocialGraphApiAppContactData extends \Google\Collection
 {
   protected $collection_key = 'data';
+  /**
+   * @var SocialGraphApiDataColumn[]
+   */
+  public $data;
   protected $dataType = SocialGraphApiDataColumn::class;
   protected $dataDataType = 'array';
   /**

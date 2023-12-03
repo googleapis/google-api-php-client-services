@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class ResearchScienceSearchScholarlyArticle extends \Google\Model
 {
+  /**
+   * @var ScienceCitation
+   */
+  public $citation;
   protected $citationType = ScienceCitation::class;
   protected $citationDataType = '';
   /**

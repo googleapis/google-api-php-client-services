@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SdrPageAnchorsSitelink extends \Google\Model
 {
+  /**
+   * @var SdrEmbedding
+   */
+  public $embedding;
   protected $embeddingType = SdrEmbedding::class;
   protected $embeddingDataType = '';
   /**
@@ -37,6 +41,10 @@ class SdrPageAnchorsSitelink extends \Google\Model
    * @var int
    */
   public $level;
+  /**
+   * @var SdrScrollTo
+   */
+  public $scrollTo;
   protected $scrollToType = SdrScrollTo::class;
   protected $scrollToDataType = '';
   /**

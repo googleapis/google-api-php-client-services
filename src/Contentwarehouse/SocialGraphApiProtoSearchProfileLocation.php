@@ -19,16 +19,32 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoSearchProfileLocation extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDate
+   */
+  public $endTime;
   protected $endTimeType = GoogleTypeDate::class;
   protected $endTimeDataType = '';
   /**
    * @var string
    */
   public $lengthOfStay;
+  /**
+   * @var SocialGraphApiProtoSearchProfileEntity
+   */
+  public $place;
   protected $placeType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $placeDataType = '';
+  /**
+   * @var SocialGraphApiProtoSearchProfileLocationInfo
+   */
+  public $point;
   protected $pointType = SocialGraphApiProtoSearchProfileLocationInfo::class;
   protected $pointDataType = '';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $startTime;
   protected $startTimeType = GoogleTypeDate::class;
   protected $startTimeDataType = '';
   /**

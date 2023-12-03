@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialCommonAttachmentAttachment extends \Google\Model
 {
+  /**
+   * @var EmbedsEmbedClientItem
+   */
+  public $embedItem;
   protected $embedItemType = EmbedsEmbedClientItem::class;
   protected $embedItemDataType = '';
   /**

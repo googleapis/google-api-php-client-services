@@ -23,6 +23,10 @@ class SafesearchVideoContentSignalsMultiLabelClassificationInfo extends \Google\
    * @var bool
    */
   public $frameFeaturesPresent;
+  /**
+   * @var SafesearchVideoContentSignalsMultiLabelOutput
+   */
+  public $output;
   protected $outputType = SafesearchVideoContentSignalsMultiLabelOutput::class;
   protected $outputDataType = '';
 

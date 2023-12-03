@@ -23,14 +23,26 @@ class SdrPageAnchorsSitelinkWrapper extends \Google\Model
    * @var string
    */
   public $abbreviatedHeadingText;
+  /**
+   * @var SdrEmbedding
+   */
+  public $abbrvEmbedding;
   protected $abbrvEmbeddingType = SdrEmbedding::class;
   protected $abbrvEmbeddingDataType = '';
+  /**
+   * @var SdrEmbedding
+   */
+  public $headingEmbedding;
   protected $headingEmbeddingType = SdrEmbedding::class;
   protected $headingEmbeddingDataType = '';
   /**
    * @var string
    */
   public $normalizedHeadingText;
+  /**
+   * @var SdrEmbedding
+   */
+  public $passageEmbedding;
   protected $passageEmbeddingType = SdrEmbedding::class;
   protected $passageEmbeddingDataType = '';
   /**

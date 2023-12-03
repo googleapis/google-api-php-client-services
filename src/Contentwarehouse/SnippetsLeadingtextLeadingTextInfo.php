@@ -24,6 +24,10 @@ class SnippetsLeadingtextLeadingTextInfo extends \Google\Collection
    * @var int
    */
   public $beginPos;
+  /**
+   * @var SnippetsLeadingtextLeadingTextAnnotation[]
+   */
+  public $leadingtext;
   protected $leadingtextType = SnippetsLeadingtextLeadingTextAnnotation::class;
   protected $leadingtextDataType = 'array';
   /**

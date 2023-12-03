@@ -82,6 +82,10 @@ class ScienceIndexSignal extends \Google\Collection
    * @var int
    */
   public $visiblePrefixTerms;
+  /**
+   * @var ScienceIndexSignalAuthor[]
+   */
+  public $author;
   protected $authorType = ScienceIndexSignalAuthor::class;
   protected $authorDataType = 'array';
 

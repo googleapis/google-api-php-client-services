@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SocialGraphApiProtoPronunciations extends \Google\Collection
 {
   protected $collection_key = 'pronunciation';
+  /**
+   * @var SocialGraphApiProtoPronunciation[]
+   */
+  public $pronunciation;
   protected $pronunciationType = SocialGraphApiProtoPronunciation::class;
   protected $pronunciationDataType = 'array';
 

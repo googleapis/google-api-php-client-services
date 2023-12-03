@@ -28,6 +28,10 @@ class SocialGraphWireProtoPeopleapiExtensionPeopleStackPersonExtendedData extend
    * @var string
    */
   public $familyStatus;
+  /**
+   * @var SocialDiscoveryExternalEntityKey[]
+   */
+  public $hiddenKeys;
   protected $hiddenKeysType = SocialDiscoveryExternalEntityKey::class;
   protected $hiddenKeysDataType = 'array';
   /**

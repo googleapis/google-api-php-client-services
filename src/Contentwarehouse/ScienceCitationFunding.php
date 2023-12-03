@@ -38,6 +38,10 @@ class ScienceCitationFunding extends \Google\Collection
    * @var string
    */
   public $agencyName;
+  /**
+   * @var ScienceCitationFundingExtractionInfo[]
+   */
+  public $debugExtractionInfo;
   protected $debugExtractionInfoType = ScienceCitationFundingExtractionInfo::class;
   protected $debugExtractionInfoDataType = 'array';
   /**

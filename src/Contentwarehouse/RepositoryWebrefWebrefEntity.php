@@ -20,16 +20,40 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefWebrefEntity extends \Google\Collection
 {
   protected $collection_key = 'mrf';
+  /**
+   * @var RepositoryWebrefWebrefEntityRelationship[]
+   */
+  public $annotatedRelationship;
   protected $annotatedRelationshipType = RepositoryWebrefWebrefEntityRelationship::class;
   protected $annotatedRelationshipDataType = 'array';
+  /**
+   * @var RepositoryWebrefEntityAnnotations
+   */
+  public $annotations;
   protected $annotationsType = RepositoryWebrefEntityAnnotations::class;
   protected $annotationsDataType = '';
+  /**
+   * @var RepositoryWebrefWebrefEntityCollections
+   */
+  public $collections;
   protected $collectionsType = RepositoryWebrefWebrefEntityCollections::class;
   protected $collectionsDataType = '';
+  /**
+   * @var RepositoryWebrefEntityJoin
+   */
+  public $entityJoin;
   protected $entityJoinType = RepositoryWebrefEntityJoin::class;
   protected $entityJoinDataType = '';
+  /**
+   * @var RepositoryWebrefWebrefEntityId
+   */
+  public $id;
   protected $idType = RepositoryWebrefWebrefEntityId::class;
   protected $idDataType = '';
+  /**
+   * @var KnowledgeAnswersIntentQueryArgument[]
+   */
+  public $mrf;
   protected $mrfType = KnowledgeAnswersIntentQueryArgument::class;
   protected $mrfDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ResearchScamCoscamEasyConjunction extends \Google\Collection
 {
   protected $collection_key = 'disjunctions';
+  /**
+   * @var ResearchScamCoscamEasyDisjunction[]
+   */
+  public $disjunctions;
   protected $disjunctionsType = ResearchScamCoscamEasyDisjunction::class;
   protected $disjunctionsDataType = 'array';
 

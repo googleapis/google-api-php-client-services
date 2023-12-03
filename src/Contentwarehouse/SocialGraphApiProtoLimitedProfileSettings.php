@@ -43,8 +43,16 @@ class SocialGraphApiProtoLimitedProfileSettings extends \Google\Model
    * @var bool
    */
   public $myAccount;
+  /**
+   * @var SocialGraphApiProtoLimitedProfileNameSettings
+   */
+  public $nameSettings;
   protected $nameSettingsType = SocialGraphApiProtoLimitedProfileNameSettings::class;
   protected $nameSettingsDataType = '';
+  /**
+   * @var SocialGraphApiProtoLimitedProfilePictureSettings
+   */
+  public $profilePictureSettings;
   protected $profilePictureSettingsType = SocialGraphApiProtoLimitedProfilePictureSettings::class;
   protected $profilePictureSettingsDataType = '';
 

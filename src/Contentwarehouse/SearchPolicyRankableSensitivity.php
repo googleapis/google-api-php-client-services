@@ -20,28 +20,60 @@ namespace Google\Service\Contentwarehouse;
 class SearchPolicyRankableSensitivity extends \Google\Collection
 {
   protected $collection_key = 'accountProvenance';
+  /**
+   * @var QualityQrewriteAccountProvenance[]
+   */
+  public $accountProvenance;
   protected $accountProvenanceType = QualityQrewriteAccountProvenance::class;
   protected $accountProvenanceDataType = 'array';
+  /**
+   * @var SearchPolicyRankableSensitivityAttentionalEntity
+   */
+  public $attentionalEntity;
   protected $attentionalEntityType = SearchPolicyRankableSensitivityAttentionalEntity::class;
   protected $attentionalEntityDataType = '';
   /**
    * @var bool
    */
   public $dasherUser;
+  /**
+   * @var SearchPolicyRankableSensitivityFollowOn
+   */
+  public $followon;
   protected $followonType = SearchPolicyRankableSensitivityFollowOn::class;
   protected $followonDataType = '';
+  /**
+   * @var SearchPolicyRankableSensitivityGroundingProvider
+   */
+  public $groundingProvider;
   protected $groundingProviderType = SearchPolicyRankableSensitivityGroundingProvider::class;
   protected $groundingProviderDataType = '';
+  /**
+   * @var SearchPolicyRankableSensitivityPrefilter
+   */
+  public $prefilter;
   protected $prefilterType = SearchPolicyRankableSensitivityPrefilter::class;
   protected $prefilterDataType = '';
+  /**
+   * @var SearchPolicyRankableSensitivityQueryUnderstanding
+   */
+  public $qu;
   protected $quType = SearchPolicyRankableSensitivityQueryUnderstanding::class;
   protected $quDataType = '';
   /**
    * @var string
    */
   public $sensitivityMode;
+  /**
+   * @var SearchPolicyRankableSensitivitySyntheticIntent
+   */
+  public $syntheticIntent;
   protected $syntheticIntentType = SearchPolicyRankableSensitivitySyntheticIntent::class;
   protected $syntheticIntentDataType = '';
+  /**
+   * @var SearchPolicyRankableSensitivityFulfillment
+   */
+  public $winningFulfillment;
   protected $winningFulfillmentType = SearchPolicyRankableSensitivityFulfillment::class;
   protected $winningFulfillmentDataType = '';
 

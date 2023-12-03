@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ResearchScamCoscamRestrictTokensV2 extends \Google\Collection
 {
   protected $collection_key = 'tokenGroups';
+  /**
+   * @var ResearchScamCoscamTokenGroup[]
+   */
+  public $tokenGroups;
   protected $tokenGroupsType = ResearchScamCoscamTokenGroup::class;
   protected $tokenGroupsDataType = 'array';
 

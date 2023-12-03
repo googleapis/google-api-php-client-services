@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefWebrefOutlinkInfos extends \Google\Collection
 {
   protected $collection_key = 'outlinkInfo';
+  /**
+   * @var RepositoryWebrefWebrefOutlinkInfo[]
+   */
+  public $outlinkInfo;
   protected $outlinkInfoType = RepositoryWebrefWebrefOutlinkInfo::class;
   protected $outlinkInfoDataType = 'array';
 

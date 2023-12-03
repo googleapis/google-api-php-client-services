@@ -20,24 +20,64 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefWebrefEntities extends \Google\Collection
 {
   protected $collection_key = 'rangeAnnotations';
+  /**
+   * @var RepositoryWebrefWebrefAnnotationStats
+   */
+  public $annotationStats;
   protected $annotationStatsType = RepositoryWebrefWebrefAnnotationStats::class;
   protected $annotationStatsDataType = '';
+  /**
+   * @var RepositoryWebrefAnnotatorCheckpointFprint[]
+   */
+  public $annotatorCheckpointFingerprints;
   protected $annotatorCheckpointFingerprintsType = RepositoryWebrefAnnotatorCheckpointFprint::class;
   protected $annotatorCheckpointFingerprintsDataType = 'array';
+  /**
+   * @var RepositoryWebrefCategoryAnnotation[]
+   */
+  public $category;
   protected $categoryType = RepositoryWebrefCategoryAnnotation::class;
   protected $categoryDataType = 'array';
+  /**
+   * @var RepositoryWebrefSemanticDateRange[]
+   */
+  public $dateRange;
   protected $dateRangeType = RepositoryWebrefSemanticDateRange::class;
   protected $dateRangeDataType = 'array';
+  /**
+   * @var RepositoryWebrefWebrefDocumentInfo
+   */
+  public $documentInfo;
   protected $documentInfoType = RepositoryWebrefWebrefDocumentInfo::class;
   protected $documentInfoDataType = '';
+  /**
+   * @var RepositoryWebrefWebrefEntity[]
+   */
+  public $entity;
   protected $entityType = RepositoryWebrefWebrefEntity::class;
   protected $entityDataType = 'array';
+  /**
+   * @var RepositoryWebrefRangeAnnotations[]
+   */
+  public $rangeAnnotations;
   protected $rangeAnnotationsType = RepositoryWebrefRangeAnnotations::class;
   protected $rangeAnnotationsDataType = 'array';
+  /**
+   * @var RepositoryWebrefWebrefStatus
+   */
+  public $status;
   protected $statusType = RepositoryWebrefWebrefStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $stuff;
   protected $stuffType = Proto2BridgeMessageSet::class;
   protected $stuffDataType = '';
+  /**
+   * @var RepositoryWebrefTripleAnnotations
+   */
+  public $tripleAnnotations;
   protected $tripleAnnotationsType = RepositoryWebrefTripleAnnotations::class;
   protected $tripleAnnotationsDataType = '';
 

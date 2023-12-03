@@ -23,6 +23,10 @@ class RichsnippetsPageMap extends \Google\Collection
   protected $internal_gapi_mappings = [
         "dataObject" => "DataObject",
   ];
+  /**
+   * @var RichsnippetsDataObject[]
+   */
+  public $dataObject;
   protected $dataObjectType = RichsnippetsDataObject::class;
   protected $dataObjectDataType = 'array';
   /**
@@ -33,6 +37,10 @@ class RichsnippetsPageMap extends \Google\Collection
    * @var string
    */
   public $src;
+  /**
+   * @var RichsnippetsPageMapTemplateType[]
+   */
+  public $templatetype;
   protected $templatetypeType = RichsnippetsPageMapTemplateType::class;
   protected $templatetypeDataType = 'array';
 

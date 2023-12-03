@@ -32,6 +32,10 @@ class ShoppingWebentityShoppingAnnotationInferredImage extends \Google\Collectio
    * @var string
    */
   public $inferredImageType;
+  /**
+   * @var ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo[]
+   */
+  public $neardupInfo;
   protected $neardupInfoType = ShoppingWebentityShoppingAnnotationInferredImageNeardupInfo::class;
   protected $neardupInfoDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SnippetExtraInfo extends \Google\Collection
 {
   protected $collection_key = 'candidateInfo';
+  /**
+   * @var SnippetExtraInfoSnippetCandidateInfo[]
+   */
+  public $candidateInfo;
   protected $candidateInfoType = SnippetExtraInfoSnippetCandidateInfo::class;
   protected $candidateInfoDataType = 'array';
   /**
@@ -46,6 +50,10 @@ class SnippetExtraInfo extends \Google\Collection
    * @var int
    */
   public $snippetBrainSelectedCandidateIndex;
+  /**
+   * @var SnippetExtraInfoSnippetsBrainModelInfo
+   */
+  public $snippetsbrainModelInfo;
   protected $snippetsbrainModelInfoType = SnippetExtraInfoSnippetsBrainModelInfo::class;
   protected $snippetsbrainModelInfoDataType = '';
 

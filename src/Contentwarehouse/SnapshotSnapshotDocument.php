@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SnapshotSnapshotDocument extends \Google\Collection
 {
   protected $collection_key = 'textNode';
+  /**
+   * @var SnapshotImageNode[]
+   */
+  public $imageNode;
   protected $imageNodeType = SnapshotImageNode::class;
   protected $imageNodeDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class SnapshotSnapshotDocument extends \Google\Collection
    * @var bool
    */
   public $metaNoSnippet;
+  /**
+   * @var TeragoogleDocumentInfo
+   */
+  public $teradoc;
   protected $teradocType = TeragoogleDocumentInfo::class;
   protected $teradocDataType = '';
+  /**
+   * @var SnapshotTextNode[]
+   */
+  public $textNode;
   protected $textNodeType = SnapshotTextNode::class;
   protected $textNodeDataType = 'array';
   /**

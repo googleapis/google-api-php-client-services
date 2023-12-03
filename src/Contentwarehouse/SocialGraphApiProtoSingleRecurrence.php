@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoSingleRecurrence extends \Google\Model
 {
+  /**
+   * @var GoogleTypeDate
+   */
+  public $date;
   protected $dateType = GoogleTypeDate::class;
   protected $dateDataType = '';
 

@@ -36,8 +36,16 @@ class RepositoryWebrefWebrefMustangAttachment extends \Google\Collection
    * @var string[]
    */
   public $encodedMid;
+  /**
+   * @var RepositoryWebrefWebrefAttachmentMetadata[]
+   */
+  public $entityMetadata;
   protected $entityMetadataType = RepositoryWebrefWebrefAttachmentMetadata::class;
   protected $entityMetadataDataType = 'array';
+  /**
+   * @var KnowledgeAnswersIntentQueryIndexingIQLAttachment
+   */
+  public $iqlAttachment;
   protected $iqlAttachmentType = KnowledgeAnswersIntentQueryIndexingIQLAttachment::class;
   protected $iqlAttachmentDataType = '';
   /**

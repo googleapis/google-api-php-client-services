@@ -28,10 +28,22 @@ class ResearchScamNearestNeighbors extends \Google\Collection
    * @var string
    */
   public $metadata;
+  /**
+   * @var ResearchScamNearestNeighborsNeighbor[]
+   */
+  public $neighbor;
   protected $neighborType = ResearchScamNearestNeighborsNeighbor::class;
   protected $neighborDataType = 'array';
+  /**
+   * @var ResearchScamNeighborSelectionOverride
+   */
+  public $neighborSelectionOverride;
   protected $neighborSelectionOverrideType = ResearchScamNeighborSelectionOverride::class;
   protected $neighborSelectionOverrideDataType = '';
+  /**
+   * @var ResearchScamGenericFeatureVector
+   */
+  public $query;
   protected $queryType = ResearchScamGenericFeatureVector::class;
   protected $queryDataType = '';
   /**

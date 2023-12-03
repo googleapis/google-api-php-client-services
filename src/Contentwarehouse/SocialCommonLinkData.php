@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialCommonLinkData extends \Google\Model
 {
+  /**
+   * @var SocialCommonAttachmentAttachment
+   */
+  public $attachment;
   protected $attachmentType = SocialCommonAttachmentAttachment::class;
   protected $attachmentDataType = '';
   /**

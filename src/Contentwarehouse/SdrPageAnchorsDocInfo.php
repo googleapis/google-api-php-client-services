@@ -24,12 +24,20 @@ class SdrPageAnchorsDocInfo extends \Google\Collection
    * @var float
    */
   public $articleness;
+  /**
+   * @var SdrPageAnchorsSitelink[]
+   */
+  public $pageAnchors;
   protected $pageAnchorsType = SdrPageAnchorsSitelink::class;
   protected $pageAnchorsDataType = 'array';
   /**
    * @var float
    */
   public $qscore;
+  /**
+   * @var SdrPageAnchorsSitelinkWrapper[]
+   */
+  public $sitelinkWrapper;
   protected $sitelinkWrapperType = SdrPageAnchorsSitelinkWrapper::class;
   protected $sitelinkWrapperDataType = 'array';
   /**

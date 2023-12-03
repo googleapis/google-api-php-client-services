@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
 {
   protected $collection_key = 'snippet';
+  /**
+   * @var QualitySnippetsTruncationSnippetBoldedRange[]
+   */
+  public $boldedRanges;
   protected $boldedRangesType = QualitySnippetsTruncationSnippetBoldedRange::class;
   protected $boldedRangesDataType = 'array';
+  /**
+   * @var SnippetExtraInfoSnippetCandidateInfoExtendedSnippet
+   */
+  public $extendedSnippet;
   protected $extendedSnippetType = SnippetExtraInfoSnippetCandidateInfoExtendedSnippet::class;
   protected $extendedSnippetDataType = '';
   /**
@@ -36,10 +44,22 @@ class SnippetExtraInfoSnippetCandidateInfo extends \Google\Collection
    * @var bool
    */
   public $isSnippetBrainBoldingTriggered;
+  /**
+   * @var MustangReposWwwSnippetsOrganicListSnippetResponse
+   */
+  public $listInfo;
   protected $listInfoType = MustangReposWwwSnippetsOrganicListSnippetResponse::class;
   protected $listInfoDataType = '';
+  /**
+   * @var SnippetExtraInfoSnippetScoringInfo
+   */
+  public $scoringInfo;
   protected $scoringInfoType = SnippetExtraInfoSnippetScoringInfo::class;
   protected $scoringInfoDataType = '';
+  /**
+   * @var QualitySnippetsTruncationSnippetBoldedRangePosition[]
+   */
+  public $sentenceStarts;
   protected $sentenceStartsType = QualitySnippetsTruncationSnippetBoldedRangePosition::class;
   protected $sentenceStartsDataType = 'array';
   /**

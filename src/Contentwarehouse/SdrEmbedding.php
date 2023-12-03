@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SdrEmbedding extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var QualityRankembedMustangMustangRankEmbedInfo
+   */
+  public $compressedEmbeddings;
   protected $compressedEmbeddingsType = QualityRankembedMustangMustangRankEmbedInfo::class;
   protected $compressedEmbeddingsDataType = '';
   /**

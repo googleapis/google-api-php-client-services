@@ -27,6 +27,10 @@ class RichsnippetsDataObject extends \Google\Collection
    * @var string
    */
   public $accessKey;
+  /**
+   * @var RichsnippetsDataObjectAttribute[]
+   */
+  public $attribute;
   protected $attributeType = RichsnippetsDataObjectAttribute::class;
   protected $attributeDataType = 'array';
   /**

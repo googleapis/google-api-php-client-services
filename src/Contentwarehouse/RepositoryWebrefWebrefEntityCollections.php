@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefWebrefEntityCollections extends \Google\Collection
 {
   protected $collection_key = 'collection';
+  /**
+   * @var RepositoryWebrefKGCollection[]
+   */
+  public $collection;
   protected $collectionType = RepositoryWebrefKGCollection::class;
   protected $collectionDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ResearchScamQueryResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var ResearchScamOnlineSearchLatencyStats[]
+   */
+  public $latency;
   protected $latencyType = ResearchScamOnlineSearchLatencyStats::class;
   protected $latencyDataType = 'array';
   /**
@@ -38,10 +42,22 @@ class ResearchScamQueryResponse extends \Google\Collection
    * @var string
    */
   public $numUnreachableMachines;
+  /**
+   * @var ResearchScamRestrictStats[]
+   */
+  public $restrictStats;
   protected $restrictStatsType = ResearchScamRestrictStats::class;
   protected $restrictStatsDataType = 'array';
+  /**
+   * @var ResearchScamNearestNeighbors[]
+   */
+  public $results;
   protected $resultsType = ResearchScamNearestNeighbors::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var UtilStatusProto
+   */
+  public $status;
   protected $statusType = UtilStatusProto::class;
   protected $statusDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SecurityCredentialsSimpleSecretHolderProto extends \Google\Model
 {
+  /**
+   * @var SecurityCredentialsSimpleSecretLabelProto
+   */
+  public $label;
   protected $labelType = SecurityCredentialsSimpleSecretLabelProto::class;
   protected $labelDataType = '';
 

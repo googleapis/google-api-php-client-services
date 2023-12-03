@@ -23,8 +23,16 @@ class SocialGraphApiProtoPartialNameOptions extends \Google\Model
    * @var string
    */
   public $language;
+  /**
+   * @var SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec
+   */
+  public $parsedDisplayNameSpec;
   protected $parsedDisplayNameSpecType = SocialGraphApiProtoPartialNameOptionsParsedDisplayNameSpec::class;
   protected $parsedDisplayNameSpecDataType = '';
+  /**
+   * @var SocialGraphApiProtoPartialNameOptionsTwoPartNameSpec
+   */
+  public $twoPartNameSpec;
   protected $twoPartNameSpecType = SocialGraphApiProtoPartialNameOptionsTwoPartNameSpec::class;
   protected $twoPartNameSpecDataType = '';
 

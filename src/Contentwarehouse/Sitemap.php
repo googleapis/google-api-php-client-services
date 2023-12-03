@@ -28,10 +28,22 @@ class Sitemap extends \Google\Collection
    * @var string
    */
   public $dEPRECATEDSourceTitle;
+  /**
+   * @var QualitySitemapTargetGroup[]
+   */
+  public $targetGroups;
   protected $targetGroupsType = QualitySitemapTargetGroup::class;
   protected $targetGroupsDataType = 'array';
+  /**
+   * @var SitemapDEPRECATEDTarget[]
+   */
+  public $deprecatedTarget;
   protected $deprecatedTargetType = SitemapDEPRECATEDTarget::class;
   protected $deprecatedTargetDataType = 'array';
+  /**
+   * @var SdrPageAnchorsDocInfo
+   */
+  public $pageAnchorsDocInfo;
   protected $pageAnchorsDocInfoType = SdrPageAnchorsDocInfo::class;
   protected $pageAnchorsDocInfoDataType = '';
   /**
@@ -50,6 +62,10 @@ class Sitemap extends \Google\Collection
    * @var string
    */
   public $sourceUrl;
+  /**
+   * @var QualitySitemapSubresultList
+   */
+  public $subresultList;
   protected $subresultListType = QualitySitemapSubresultList::class;
   protected $subresultListDataType = '';
 

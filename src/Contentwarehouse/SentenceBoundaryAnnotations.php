@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class SentenceBoundaryAnnotations extends \Google\Collection
 {
   protected $collection_key = 'instance';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
+  /**
+   * @var SentenceBoundaryAnnotationsInstance[]
+   */
+  public $instance;
   protected $instanceType = SentenceBoundaryAnnotationsInstance::class;
   protected $instanceDataType = 'array';
 
