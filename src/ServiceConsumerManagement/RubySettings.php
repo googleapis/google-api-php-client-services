@@ -19,6 +19,10 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class RubySettings extends \Google\Model
 {
+  /**
+   * @var CommonLanguageSettings
+   */
+  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
 

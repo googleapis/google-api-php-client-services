@@ -20,6 +20,10 @@ namespace Google\Service\ServiceConsumerManagement;
 class CustomError extends \Google\Collection
 {
   protected $collection_key = 'types';
+  /**
+   * @var CustomErrorRule[]
+   */
+  public $rules;
   protected $rulesType = CustomErrorRule::class;
   protected $rulesDataType = 'array';
   /**

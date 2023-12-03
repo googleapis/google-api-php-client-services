@@ -20,8 +20,16 @@ namespace Google\Service\ServiceConsumerManagement;
 class Monitoring extends \Google\Collection
 {
   protected $collection_key = 'producerDestinations';
+  /**
+   * @var MonitoringDestination[]
+   */
+  public $consumerDestinations;
   protected $consumerDestinationsType = MonitoringDestination::class;
   protected $consumerDestinationsDataType = 'array';
+  /**
+   * @var MonitoringDestination[]
+   */
+  public $producerDestinations;
   protected $producerDestinationsType = MonitoringDestination::class;
   protected $producerDestinationsDataType = 'array';
 

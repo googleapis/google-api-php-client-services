@@ -20,6 +20,10 @@ namespace Google\Service\ServiceConsumerManagement;
 class V1Beta1ImportProducerQuotaPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'policies';
+  /**
+   * @var V1Beta1ProducerQuotaPolicy[]
+   */
+  public $policies;
   protected $policiesType = V1Beta1ProducerQuotaPolicy::class;
   protected $policiesDataType = 'array';
 

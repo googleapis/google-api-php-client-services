@@ -20,6 +20,10 @@ namespace Google\Service\ServiceConsumerManagement;
 class TenantProjectConfig extends \Google\Collection
 {
   protected $collection_key = 'services';
+  /**
+   * @var BillingConfig
+   */
+  public $billingConfig;
   protected $billingConfigType = BillingConfig::class;
   protected $billingConfigDataType = '';
   /**
@@ -30,12 +34,20 @@ class TenantProjectConfig extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var ServiceAccountConfig
+   */
+  public $serviceAccountConfig;
   protected $serviceAccountConfigType = ServiceAccountConfig::class;
   protected $serviceAccountConfigDataType = '';
   /**
    * @var string[]
    */
   public $services;
+  /**
+   * @var TenantProjectPolicy
+   */
+  public $tenantProjectPolicy;
   protected $tenantProjectPolicyType = TenantProjectPolicy::class;
   protected $tenantProjectPolicyDataType = '';
 

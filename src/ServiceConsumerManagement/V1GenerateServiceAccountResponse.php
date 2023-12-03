@@ -19,6 +19,10 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class V1GenerateServiceAccountResponse extends \Google\Model
 {
+  /**
+   * @var V1ServiceAccount
+   */
+  public $account;
   protected $accountType = V1ServiceAccount::class;
   protected $accountDataType = '';
 

@@ -20,16 +20,32 @@ namespace Google\Service\ServiceConsumerManagement;
 class Api extends \Google\Collection
 {
   protected $collection_key = 'options';
+  /**
+   * @var Method[]
+   */
+  public $methods;
   protected $methodsType = Method::class;
   protected $methodsDataType = 'array';
+  /**
+   * @var Mixin[]
+   */
+  public $mixins;
   protected $mixinsType = Mixin::class;
   protected $mixinsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Option[]
+   */
+  public $options;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
+  /**
+   * @var SourceContext
+   */
+  public $sourceContext;
   protected $sourceContextType = SourceContext::class;
   protected $sourceContextDataType = '';
   /**

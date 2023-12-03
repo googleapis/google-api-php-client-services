@@ -20,6 +20,10 @@ namespace Google\Service\ServiceConsumerManagement;
 class V1Beta1ImportProducerOverridesResponse extends \Google\Collection
 {
   protected $collection_key = 'overrides';
+  /**
+   * @var V1Beta1QuotaOverride[]
+   */
+  public $overrides;
   protected $overridesType = V1Beta1QuotaOverride::class;
   protected $overridesDataType = 'array';
 
