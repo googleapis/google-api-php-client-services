@@ -23,8 +23,16 @@ class ScriptFile extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleAppsScriptTypeFunctionSet
+   */
+  public $functionSet;
   protected $functionSetType = GoogleAppsScriptTypeFunctionSet::class;
   protected $functionSetDataType = '';
+  /**
+   * @var GoogleAppsScriptTypeUser
+   */
+  public $lastModifyUser;
   protected $lastModifyUserType = GoogleAppsScriptTypeUser::class;
   protected $lastModifyUserDataType = '';
   /**

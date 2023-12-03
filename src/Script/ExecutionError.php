@@ -28,6 +28,10 @@ class ExecutionError extends \Google\Collection
    * @var string
    */
   public $errorType;
+  /**
+   * @var ScriptStackTraceElement[]
+   */
+  public $scriptStackTraceElements;
   protected $scriptStackTraceElementsType = ScriptStackTraceElement::class;
   protected $scriptStackTraceElementsDataType = 'array';
 

@@ -19,14 +19,26 @@ namespace Google\Service\Script;
 
 class EntryPoint extends \Google\Model
 {
+  /**
+   * @var GoogleAppsScriptTypeAddOnEntryPoint
+   */
+  public $addOn;
   protected $addOnType = GoogleAppsScriptTypeAddOnEntryPoint::class;
   protected $addOnDataType = '';
   /**
    * @var string
    */
   public $entryPointType;
+  /**
+   * @var GoogleAppsScriptTypeExecutionApiEntryPoint
+   */
+  public $executionApi;
   protected $executionApiType = GoogleAppsScriptTypeExecutionApiEntryPoint::class;
   protected $executionApiDataType = '';
+  /**
+   * @var GoogleAppsScriptTypeWebAppEntryPoint
+   */
+  public $webApp;
   protected $webAppType = GoogleAppsScriptTypeWebAppEntryPoint::class;
   protected $webAppDataType = '';
 

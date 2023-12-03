@@ -19,6 +19,10 @@ namespace Google\Service\Script;
 
 class ScriptExecutionResult extends \Google\Model
 {
+  /**
+   * @var Value
+   */
+  public $returnValue;
   protected $returnValueType = Value::class;
   protected $returnValueDataType = '';
 

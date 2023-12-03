@@ -20,6 +20,10 @@ namespace Google\Service\Script;
 class GoogleAppsScriptTypeFunctionSet extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var GoogleAppsScriptTypeFunction[]
+   */
+  public $values;
   protected $valuesType = GoogleAppsScriptTypeFunction::class;
   protected $valuesDataType = 'array';
 

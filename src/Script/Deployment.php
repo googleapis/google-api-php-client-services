@@ -20,12 +20,20 @@ namespace Google\Service\Script;
 class Deployment extends \Google\Collection
 {
   protected $collection_key = 'entryPoints';
+  /**
+   * @var DeploymentConfig
+   */
+  public $deploymentConfig;
   protected $deploymentConfigType = DeploymentConfig::class;
   protected $deploymentConfigDataType = '';
   /**
    * @var string
    */
   public $deploymentId;
+  /**
+   * @var EntryPoint[]
+   */
+  public $entryPoints;
   protected $entryPointsType = EntryPoint::class;
   protected $entryPointsDataType = 'array';
   /**

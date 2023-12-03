@@ -20,6 +20,10 @@ namespace Google\Service\Script;
 class Content extends \Google\Collection
 {
   protected $collection_key = 'files';
+  /**
+   * @var ScriptFile[]
+   */
+  public $files;
   protected $filesType = ScriptFile::class;
   protected $filesDataType = 'array';
   /**
