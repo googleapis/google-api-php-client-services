@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class ReturnPolicyOnlineReturnShippingFee extends \Google\Model
 {
+  /**
+   * @var PriceAmount
+   */
+  public $fixedFee;
   protected $fixedFeeType = PriceAmount::class;
   protected $fixedFeeDataType = '';
   /**

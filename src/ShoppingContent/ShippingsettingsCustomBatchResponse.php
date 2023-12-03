@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ShippingsettingsCustomBatchResponse extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var ShippingsettingsCustomBatchResponseEntry[]
+   */
+  public $entries;
   protected $entriesType = ShippingsettingsCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**

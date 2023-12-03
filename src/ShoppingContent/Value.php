@@ -23,6 +23,10 @@ class Value extends \Google\Model
    * @var string
    */
   public $carrierRateName;
+  /**
+   * @var Price
+   */
+  public $flatRate;
   protected $flatRateType = Price::class;
   protected $flatRateDataType = '';
   /**

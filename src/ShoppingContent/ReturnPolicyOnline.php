@@ -36,8 +36,16 @@ class ReturnPolicyOnline extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ReturnPolicyOnlinePolicy
+   */
+  public $policy;
   protected $policyType = ReturnPolicyOnlinePolicy::class;
   protected $policyDataType = '';
+  /**
+   * @var ReturnPolicyOnlineRestockingFee
+   */
+  public $restockingFee;
   protected $restockingFeeType = ReturnPolicyOnlineRestockingFee::class;
   protected $restockingFeeDataType = '';
   /**
@@ -52,6 +60,10 @@ class ReturnPolicyOnline extends \Google\Collection
    * @var string
    */
   public $returnPolicyUri;
+  /**
+   * @var ReturnPolicyOnlineReturnReasonCategoryInfo[]
+   */
+  public $returnReasonCategoryInfo;
   protected $returnReasonCategoryInfoType = ReturnPolicyOnlineReturnReasonCategoryInfo::class;
   protected $returnReasonCategoryInfoDataType = 'array';
 

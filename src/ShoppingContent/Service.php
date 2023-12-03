@@ -32,28 +32,52 @@ class Service extends \Google\Collection
    * @var string
    */
   public $deliveryCountry;
+  /**
+   * @var DeliveryTime
+   */
+  public $deliveryTime;
   protected $deliveryTimeType = DeliveryTime::class;
   protected $deliveryTimeDataType = '';
   /**
    * @var string
    */
   public $eligibility;
+  /**
+   * @var Price
+   */
+  public $minimumOrderValue;
   protected $minimumOrderValueType = Price::class;
   protected $minimumOrderValueDataType = '';
+  /**
+   * @var MinimumOrderValueTable
+   */
+  public $minimumOrderValueTable;
   protected $minimumOrderValueTableType = MinimumOrderValueTable::class;
   protected $minimumOrderValueTableDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var PickupCarrierService
+   */
+  public $pickupService;
   protected $pickupServiceType = PickupCarrierService::class;
   protected $pickupServiceDataType = '';
+  /**
+   * @var RateGroup[]
+   */
+  public $rateGroups;
   protected $rateGroupsType = RateGroup::class;
   protected $rateGroupsDataType = 'array';
   /**
    * @var string
    */
   public $shipmentType;
+  /**
+   * @var ServiceStoreConfig
+   */
+  public $storeConfig;
   protected $storeConfigType = ServiceStoreConfig::class;
   protected $storeConfigDataType = '';
 

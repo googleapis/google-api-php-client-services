@@ -20,8 +20,16 @@ namespace Google\Service\ShoppingContent;
 class ServiceStoreConfig extends \Google\Collection
 {
   protected $collection_key = 'storeCodes';
+  /**
+   * @var ServiceStoreConfigCutoffConfig
+   */
+  public $cutoffConfig;
   protected $cutoffConfigType = ServiceStoreConfigCutoffConfig::class;
   protected $cutoffConfigDataType = '';
+  /**
+   * @var Distance
+   */
+  public $serviceRadius;
   protected $serviceRadiusType = Distance::class;
   protected $serviceRadiusDataType = '';
   /**

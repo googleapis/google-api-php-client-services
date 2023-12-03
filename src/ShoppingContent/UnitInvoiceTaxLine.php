@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class UnitInvoiceTaxLine extends \Google\Model
 {
+  /**
+   * @var Price
+   */
+  public $taxAmount;
   protected $taxAmountType = Price::class;
   protected $taxAmountDataType = '';
   /**

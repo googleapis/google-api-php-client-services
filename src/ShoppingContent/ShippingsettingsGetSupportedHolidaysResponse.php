@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ShippingsettingsGetSupportedHolidaysResponse extends \Google\Collection
 {
   protected $collection_key = 'holidays';
+  /**
+   * @var HolidaysHoliday[]
+   */
+  public $holidays;
   protected $holidaysType = HolidaysHoliday::class;
   protected $holidaysDataType = 'array';
   /**

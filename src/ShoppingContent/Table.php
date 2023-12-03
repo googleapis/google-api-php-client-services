@@ -20,14 +20,26 @@ namespace Google\Service\ShoppingContent;
 class Table extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  /**
+   * @var Headers
+   */
+  public $columnHeaders;
   protected $columnHeadersType = Headers::class;
   protected $columnHeadersDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Headers
+   */
+  public $rowHeaders;
   protected $rowHeadersType = Headers::class;
   protected $rowHeadersDataType = '';
+  /**
+   * @var Row[]
+   */
+  public $rows;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
 

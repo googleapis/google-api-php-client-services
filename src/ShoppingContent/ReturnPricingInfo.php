@@ -23,12 +23,28 @@ class ReturnPricingInfo extends \Google\Model
    * @var bool
    */
   public $chargeReturnShippingFee;
+  /**
+   * @var MonetaryAmount
+   */
+  public $maxReturnShippingFee;
   protected $maxReturnShippingFeeType = MonetaryAmount::class;
   protected $maxReturnShippingFeeDataType = '';
+  /**
+   * @var MonetaryAmount
+   */
+  public $refundableItemsTotalAmount;
   protected $refundableItemsTotalAmountType = MonetaryAmount::class;
   protected $refundableItemsTotalAmountDataType = '';
+  /**
+   * @var MonetaryAmount
+   */
+  public $refundableShippingAmount;
   protected $refundableShippingAmountType = MonetaryAmount::class;
   protected $refundableShippingAmountDataType = '';
+  /**
+   * @var MonetaryAmount
+   */
+  public $totalRefundedAmount;
   protected $totalRefundedAmountType = MonetaryAmount::class;
   protected $totalRefundedAmountDataType = '';
 

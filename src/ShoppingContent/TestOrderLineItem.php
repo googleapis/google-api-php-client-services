@@ -19,14 +19,26 @@ namespace Google\Service\ShoppingContent;
 
 class TestOrderLineItem extends \Google\Model
 {
+  /**
+   * @var TestOrderLineItemProduct
+   */
+  public $product;
   protected $productType = TestOrderLineItemProduct::class;
   protected $productDataType = '';
   /**
    * @var string
    */
   public $quantityOrdered;
+  /**
+   * @var OrderLineItemReturnInfo
+   */
+  public $returnInfo;
   protected $returnInfoType = OrderLineItemReturnInfo::class;
   protected $returnInfoDataType = '';
+  /**
+   * @var OrderLineItemShippingDetails
+   */
+  public $shippingDetails;
   protected $shippingDetailsType = OrderLineItemShippingDetails::class;
   protected $shippingDetailsDataType = '';
 

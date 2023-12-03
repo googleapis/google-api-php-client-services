@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class TransitTableTransitTimeRow extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var TransitTableTransitTimeRowTransitTimeValue[]
+   */
+  public $values;
   protected $valuesType = TransitTableTransitTimeRowTransitTimeValue::class;
   protected $valuesDataType = 'array';
 

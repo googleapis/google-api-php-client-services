@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class UnitInvoiceAdditionalCharge extends \Google\Model
 {
+  /**
+   * @var Amount
+   */
+  public $additionalChargeAmount;
   protected $additionalChargeAmountType = Amount::class;
   protected $additionalChargeAmountDataType = '';
   /**

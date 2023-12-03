@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class TestOrder extends \Google\Collection
 {
   protected $collection_key = 'promotions';
+  /**
+   * @var TestOrderDeliveryDetails
+   */
+  public $deliveryDetails;
   protected $deliveryDetailsType = TestOrderDeliveryDetails::class;
   protected $deliveryDetailsDataType = '';
   /**
@@ -30,12 +34,20 @@ class TestOrder extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var TestOrderLineItem[]
+   */
+  public $lineItems;
   protected $lineItemsType = TestOrderLineItem::class;
   protected $lineItemsDataType = 'array';
   /**
    * @var string
    */
   public $notificationMode;
+  /**
+   * @var TestOrderPickupDetails
+   */
+  public $pickupDetails;
   protected $pickupDetailsType = TestOrderPickupDetails::class;
   protected $pickupDetailsDataType = '';
   /**
@@ -54,8 +66,16 @@ class TestOrder extends \Google\Collection
    * @var string
    */
   public $predefinedPickupDetails;
+  /**
+   * @var OrderPromotion[]
+   */
+  public $promotions;
   protected $promotionsType = OrderPromotion::class;
   protected $promotionsDataType = 'array';
+  /**
+   * @var Price
+   */
+  public $shippingCost;
   protected $shippingCostType = Price::class;
   protected $shippingCostDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class ServiceStoreConfigCutoffConfig extends \Google\Model
 {
+  /**
+   * @var ServiceStoreConfigCutoffConfigLocalCutoffTime
+   */
+  public $localCutoffTime;
   protected $localCutoffTimeType = ServiceStoreConfigCutoffConfigLocalCutoffTime::class;
   protected $localCutoffTimeDataType = '';
   /**

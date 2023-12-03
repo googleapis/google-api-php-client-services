@@ -23,12 +23,20 @@ class ReturnpolicyCustomBatchResponseEntry extends \Google\Model
    * @var string
    */
   public $batchId;
+  /**
+   * @var Errors
+   */
+  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var ReturnPolicy
+   */
+  public $returnPolicy;
   protected $returnPolicyType = ReturnPolicy::class;
   protected $returnPolicyDataType = '';
 
