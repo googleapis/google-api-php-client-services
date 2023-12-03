@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class YoutubeDiscoveryLegosLegosSemanticRelationshipContext extends \Google\Model
 {
+  /**
+   * @var YoutubeDiscoveryLegosLegosEntity
+   */
+  public $subject;
   protected $subjectType = YoutubeDiscoveryLegosLegosEntity::class;
   protected $subjectDataType = '';
   /**

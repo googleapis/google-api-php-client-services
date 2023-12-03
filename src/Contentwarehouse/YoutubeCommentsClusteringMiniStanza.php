@@ -22,6 +22,10 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
   protected $collection_key = 'videoTimestamps';
   public $ansibleScores;
   public $automodScores;
+  /**
+   * @var YoutubeDistillerBlarneyStoneScores
+   */
+  public $blarneyStoneScore;
   protected $blarneyStoneScoreType = YoutubeDistillerBlarneyStoneScores::class;
   protected $blarneyStoneScoreDataType = '';
   /**
@@ -40,6 +44,10 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    */
   public $commentClassificationBuckets;
   public $commentClassificationRanking;
+  /**
+   * @var YoutubeCommentsApiCommentModeratedRestriction[]
+   */
+  public $commentModeratedRestrictions;
   protected $commentModeratedRestrictionsType = YoutubeCommentsApiCommentModeratedRestriction::class;
   protected $commentModeratedRestrictionsDataType = 'array';
   /**
@@ -70,12 +78,20 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    * @var string
    */
   public $detailedLanguageCode;
+  /**
+   * @var AppsPeopleActivityStreamqualityDistillerEngagements
+   */
+  public $distillerEngagements;
   protected $distillerEngagementsType = AppsPeopleActivityStreamqualityDistillerEngagements::class;
   protected $distillerEngagementsDataType = '';
   /**
    * @var string[]
    */
   public $eligibleQualifiedTeaserFilters;
+  /**
+   * @var VideoYoutubeCommentsRankingCTRMetrics
+   */
+  public $empiricalCtrs;
   protected $empiricalCtrsType = VideoYoutubeCommentsRankingCTRMetrics::class;
   protected $empiricalCtrsDataType = '';
   public $fds;
@@ -163,23 +179,43 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    * @var string
    */
   public $rankingPostLanguage;
+  /**
+   * @var SocialCommonSegments
+   */
+  public $segments;
   protected $segmentsType = SocialCommonSegments::class;
   protected $segmentsDataType = '';
   public $sensitivityScores;
+  /**
+   * @var YoutubeCommentsSentimentSentiment
+   */
+  public $sentiment;
   protected $sentimentType = YoutubeCommentsSentimentSentiment::class;
   protected $sentimentDataType = '';
   /**
    * @var string
    */
   public $shortReplyVideoId;
+  /**
+   * @var VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply[]
+   */
+  public $smartReplies;
   protected $smartRepliesType = VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply::class;
   protected $smartRepliesDataType = 'map';
   /**
    * @var string
    */
   public $stanzaId;
+  /**
+   * @var SocialStanzaStanzaRestriction[]
+   */
+  public $stanzaRestrictions;
   protected $stanzaRestrictionsType = SocialStanzaStanzaRestriction::class;
   protected $stanzaRestrictionsDataType = 'array';
+  /**
+   * @var SecurityCredentialsPrincipalProto
+   */
+  public $subject;
   protected $subjectType = SecurityCredentialsPrincipalProto::class;
   protected $subjectDataType = '';
   /**
@@ -190,16 +226,32 @@ class YoutubeCommentsClusteringMiniStanza extends \Google\Collection
    * @var string
    */
   public $subscriptionTimestamp;
+  /**
+   * @var YoutubeBackstageSuperVodCommentInfo
+   */
+  public $superThanksInfo;
   protected $superThanksInfoType = YoutubeBackstageSuperVodCommentInfo::class;
   protected $superThanksInfoDataType = '';
+  /**
+   * @var YoutubeCommentsRankingYouTubeCommentTextEmbedding[]
+   */
+  public $textEmbedding;
   protected $textEmbeddingType = YoutubeCommentsRankingYouTubeCommentTextEmbedding::class;
   protected $textEmbeddingDataType = 'map';
   /**
    * @var int
    */
   public $textLength;
+  /**
+   * @var YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation
+   */
+  public $textQualityScores;
   protected $textQualityScoresType = YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation::class;
   protected $textQualityScoresDataType = '';
+  /**
+   * @var YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation
+   */
+  public $textQualityScores2;
   protected $textQualityScores2Type = YoutubeCommentsRankingYouTubeCommentTextQualityAnnotation::class;
   protected $textQualityScores2DataType = '';
   /**

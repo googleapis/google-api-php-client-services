@@ -19,14 +19,34 @@ namespace Google\Service\Contentwarehouse;
 
 class YoutubeDiscoveryLegosLegosAnnotation extends \Google\Model
 {
+  /**
+   * @var YoutubeDiscoveryLegosLegosEntity
+   */
+  public $entity;
   protected $entityType = YoutubeDiscoveryLegosLegosEntity::class;
   protected $entityDataType = '';
+  /**
+   * @var YoutubeDiscoveryLegosLegosFormatRelationship
+   */
+  public $format;
   protected $formatType = YoutubeDiscoveryLegosLegosFormatRelationship::class;
   protected $formatDataType = '';
+  /**
+   * @var YoutubeDiscoveryLegosLegosPresentRelationship
+   */
+  public $present;
   protected $presentType = YoutubeDiscoveryLegosLegosPresentRelationship::class;
   protected $presentDataType = '';
+  /**
+   * @var YoutubeDiscoveryLegosLegosSemanticRelationship
+   */
+  public $semantic;
   protected $semanticType = YoutubeDiscoveryLegosLegosSemanticRelationship::class;
   protected $semanticDataType = '';
+  /**
+   * @var YoutubeDiscoveryLegosLegosTaxonomicRelationship
+   */
+  public $taxonomic;
   protected $taxonomicType = YoutubeDiscoveryLegosLegosTaxonomicRelationship::class;
   protected $taxonomicDataType = '';
 

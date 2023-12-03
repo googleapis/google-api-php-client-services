@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class YoutubeCommentsSentimentSentiment extends \Google\Collection
 {
   protected $collection_key = 'entitySentiment';
+  /**
+   * @var YoutubeCommentsSentimentSentimentEntitySentimentAnnotation[]
+   */
+  public $entitySentiment;
   protected $entitySentimentType = YoutubeCommentsSentimentSentimentEntitySentimentAnnotation::class;
   protected $entitySentimentDataType = 'array';
   /**
