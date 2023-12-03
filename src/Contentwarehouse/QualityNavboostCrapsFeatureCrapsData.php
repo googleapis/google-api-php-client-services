@@ -35,8 +35,16 @@ class QualityNavboostCrapsFeatureCrapsData extends \Google\Model
    * @var int
    */
   public $locationId;
+  /**
+   * @var QualityNavboostCrapsCrapsClickSignals
+   */
+  public $signals;
   protected $signalsType = QualityNavboostCrapsCrapsClickSignals::class;
   protected $signalsDataType = '';
+  /**
+   * @var QualityNavboostGlueVoterTokenBitmapMessage
+   */
+  public $voterTokenBitmap;
   protected $voterTokenBitmapType = QualityNavboostGlueVoterTokenBitmapMessage::class;
   protected $voterTokenBitmapDataType = '';
 

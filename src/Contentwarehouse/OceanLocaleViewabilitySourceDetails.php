@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class OceanLocaleViewabilitySourceDetails extends \Google\Model
 {
+  /**
+   * @var OceanVolumeImprint
+   */
+  public $imprint;
   protected $imprintType = OceanVolumeImprint::class;
   protected $imprintDataType = '';
 

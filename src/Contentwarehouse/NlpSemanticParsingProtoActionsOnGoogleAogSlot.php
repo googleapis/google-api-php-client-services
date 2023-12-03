@@ -35,14 +35,26 @@ class NlpSemanticParsingProtoActionsOnGoogleAogSlot extends \Google\Model
    * @var string
    */
   public $parameterName;
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleSlotList
+   */
+  public $slotList;
   protected $slotListType = NlpSemanticParsingProtoActionsOnGoogleSlotList::class;
   protected $slotListDataType = '';
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleSlotMap
+   */
+  public $slotMap;
   protected $slotMapType = NlpSemanticParsingProtoActionsOnGoogleSlotMap::class;
   protected $slotMapDataType = '';
   /**
    * @var int
    */
   public $startByte;
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleSlotValue
+   */
+  public $value;
   protected $valueType = NlpSemanticParsingProtoActionsOnGoogleSlotValue::class;
   protected $valueDataType = '';
 

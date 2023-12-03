@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class QualityActionsCustomizedNotification extends \Google\Collection
 {
   protected $collection_key = 'buttons';
+  /**
+   * @var QualityActionsCustomizedNotificationButton[]
+   */
+  public $buttons;
   protected $buttonsType = QualityActionsCustomizedNotificationButton::class;
   protected $buttonsDataType = 'array';
   /**
    * @var string
    */
   public $surfaceType;
+  /**
+   * @var QualityActionsCustomizedNotificationPayload
+   */
+  public $tapAction;
   protected $tapActionType = QualityActionsCustomizedNotificationPayload::class;
   protected $tapActionDataType = '';
   /**

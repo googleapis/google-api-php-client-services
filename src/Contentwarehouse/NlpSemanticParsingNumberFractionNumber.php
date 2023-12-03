@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingNumberFractionNumber extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingNumberSimpleNumber
+   */
+  public $denominator;
   protected $denominatorType = NlpSemanticParsingNumberSimpleNumber::class;
   protected $denominatorDataType = '';
+  /**
+   * @var NlpSemanticParsingNumberSimpleNumber
+   */
+  public $numerator;
   protected $numeratorType = NlpSemanticParsingNumberSimpleNumber::class;
   protected $numeratorDataType = '';
   /**
    * @var int
    */
   public $precision;
+  /**
+   * @var NlpSemanticParsingNumberSimpleNumber
+   */
+  public $wholeNumber;
   protected $wholeNumberType = NlpSemanticParsingNumberSimpleNumber::class;
   protected $wholeNumberDataType = '';
 

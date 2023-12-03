@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingPersonalReferenceAnnotation extends \Google\Collection
 {
   protected $collection_key = 'resolutions';
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $reference;
   protected $referenceType = NlpSemanticParsingQRefAnnotation::class;
   protected $referenceDataType = '';
+  /**
+   * @var NlpSemanticParsingQRefAnnotation[]
+   */
+  public $resolutions;
   protected $resolutionsType = NlpSemanticParsingQRefAnnotation::class;
   protected $resolutionsDataType = 'array';
 

@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityNavboostCrapsAgingData extends \Google\Model
 {
+  /**
+   * @var QualityNavboostCrapsAgingDataAgingAgeBucket
+   */
+  public $lastMonthBucket;
   protected $lastMonthBucketType = QualityNavboostCrapsAgingDataAgingAgeBucket::class;
   protected $lastMonthBucketDataType = '';
+  /**
+   * @var QualityNavboostCrapsAgingDataAgingAgeBucket
+   */
+  public $lastWeekBucket;
   protected $lastWeekBucketType = QualityNavboostCrapsAgingDataAgingAgeBucket::class;
   protected $lastWeekBucketDataType = '';
+  /**
+   * @var QualityNavboostCrapsAgingDataAgingAgeBucket
+   */
+  public $lastYearBucket;
   protected $lastYearBucketType = QualityNavboostCrapsAgingDataAgingAgeBucket::class;
   protected $lastYearBucketDataType = '';
+  /**
+   * @var QualityNavboostCrapsAgingDataAgingAgeBucket
+   */
+  public $yearPlusBucket;
   protected $yearPlusBucketType = QualityNavboostCrapsAgingDataAgingAgeBucket::class;
   protected $yearPlusBucketDataType = '';
 

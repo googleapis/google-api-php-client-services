@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingProtoActionsOnGoogleSlotValue extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleSlotValueSingleValue[]
+   */
+  public $values;
   protected $valuesType = NlpSemanticParsingProtoActionsOnGoogleSlotValueSingleValue::class;
   protected $valuesDataType = 'array';
 

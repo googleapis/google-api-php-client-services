@@ -28,12 +28,20 @@ class QualitySalientTermsSalientTerm extends \Google\Collection
    * @var string
    */
   public $label;
+  /**
+   * @var QualitySalientTermsSalientTerm[]
+   */
+  public $originalTerm;
   protected $originalTermType = QualitySalientTermsSalientTerm::class;
   protected $originalTermDataType = 'array';
   /**
    * @var float
    */
   public $salience;
+  /**
+   * @var QualitySalientTermsSignalTermData[]
+   */
+  public $signalTerm;
   protected $signalTermType = QualitySalientTermsSignalTermData::class;
   protected $signalTermDataType = 'array';
   /**

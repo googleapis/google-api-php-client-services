@@ -36,6 +36,10 @@ class OceanDocTagMagazineSpecific extends \Google\Collection
    * @var int
    */
   public $issueStart;
+  /**
+   * @var OceanDataDocinfoWoodwingItemMetadata[]
+   */
+  public $item;
   protected $itemType = OceanDataDocinfoWoodwingItemMetadata::class;
   protected $itemDataType = 'array';
   /**

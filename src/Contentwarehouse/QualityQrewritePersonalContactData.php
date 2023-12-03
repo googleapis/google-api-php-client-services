@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityQrewritePersonalContactData extends \Google\Collection
 {
   protected $collection_key = 'relationshipMemory';
+  /**
+   * @var QualityQrewriteAccountProvenance
+   */
+  public $accountProvenance;
   protected $accountProvenanceType = QualityQrewriteAccountProvenance::class;
   protected $accountProvenanceDataType = '';
   /**
@@ -79,6 +83,10 @@ class QualityQrewritePersonalContactData extends \Google\Collection
    * @var string
    */
   public $lookupNameSource;
+  /**
+   * @var AssistantVerticalsCommonContactMatchSignal
+   */
+  public $matchSignal;
   protected $matchSignalType = AssistantVerticalsCommonContactMatchSignal::class;
   protected $matchSignalDataType = '';
   /**
@@ -89,10 +97,22 @@ class QualityQrewritePersonalContactData extends \Google\Collection
    * @var string
    */
   public $matchedRecognitionAlternateName;
+  /**
+   * @var AppsPeopleOzExternalMergedpeopleapiPerson
+   */
+  public $personData;
   protected $personDataType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $personDataDataType = '';
+  /**
+   * @var AssistantLogsCommunicationPersonalContactDataLog
+   */
+  public $personalContactDataLog;
   protected $personalContactDataLogType = AssistantLogsCommunicationPersonalContactDataLog::class;
   protected $personalContactDataLogDataType = '';
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $pkgPerson;
   protected $pkgPersonType = NlpSemanticParsingQRefAnnotation::class;
   protected $pkgPersonDataType = '';
   /**
@@ -107,8 +127,16 @@ class QualityQrewritePersonalContactData extends \Google\Collection
    * @var string
    */
   public $recognitionAlternateSource;
+  /**
+   * @var CopleyLexicalMetadata
+   */
+  public $relationshipLexicalInfo;
   protected $relationshipLexicalInfoType = CopleyLexicalMetadata::class;
   protected $relationshipLexicalInfoDataType = '';
+  /**
+   * @var QualityQrewriteRelationshipMemoryData[]
+   */
+  public $relationshipMemory;
   protected $relationshipMemoryType = QualityQrewriteRelationshipMemoryData::class;
   protected $relationshipMemoryDataType = 'array';
   /**

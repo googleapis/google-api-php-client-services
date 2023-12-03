@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityCalypsoAppsUniversalAuLiveOpsDetailInfo extends \Google\Collection
 {
   protected $collection_key = 'liveOpEvents';
+  /**
+   * @var QualityCalypsoAppsUniversalAuLiveOpDetail[]
+   */
+  public $liveOpEvents;
   protected $liveOpEventsType = QualityCalypsoAppsUniversalAuLiveOpDetail::class;
   protected $liveOpEventsDataType = 'array';
   /**

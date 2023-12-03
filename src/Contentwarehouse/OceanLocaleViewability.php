@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class OceanLocaleViewability extends \Google\Model
 {
+  /**
+   * @var OceanVolumeAccessRights
+   */
+  public $accessRights;
   protected $accessRightsType = OceanVolumeAccessRights::class;
   protected $accessRightsDataType = '';
   /**
@@ -65,10 +69,22 @@ class OceanLocaleViewability extends \Google\Model
    * @var string
    */
   public $clientId;
+  /**
+   * @var OceanVolumeComputedAccessRights
+   */
+  public $computedAccessRights;
   protected $computedAccessRightsType = OceanVolumeComputedAccessRights::class;
   protected $computedAccessRightsDataType = '';
+  /**
+   * @var OceanLocaleViewabilityDates
+   */
+  public $dates;
   protected $datesType = OceanLocaleViewabilityDates::class;
   protected $datesDataType = '';
+  /**
+   * @var OceanVolumeDisplayDetails
+   */
+  public $displayDetails;
   protected $displayDetailsType = OceanVolumeDisplayDetails::class;
   protected $displayDetailsDataType = '';
   /**
@@ -87,6 +103,10 @@ class OceanLocaleViewability extends \Google\Model
    * @var bool
    */
   public $publicDomain;
+  /**
+   * @var OceanLocaleViewabilitySourceDetails
+   */
+  public $sourcedetails;
   protected $sourcedetailsType = OceanLocaleViewabilitySourceDetails::class;
   protected $sourcedetailsDataType = '';
   /**

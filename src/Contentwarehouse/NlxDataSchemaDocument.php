@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class NlxDataSchemaDocument extends \Google\Collection
 {
   protected $collection_key = 'languageCode';
+  /**
+   * @var MultiscalePointerIndex[]
+   */
+  public $author;
   protected $authorType = MultiscalePointerIndex::class;
   protected $authorDataType = 'array';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $bytes;
   protected $bytesType = MultiscalePointerSpan::class;
   protected $bytesDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $characters;
   protected $charactersType = MultiscalePointerSpan::class;
   protected $charactersDataType = '';
   /**
@@ -34,18 +46,38 @@ class NlxDataSchemaDocument extends \Google\Collection
    * @var string[]
    */
   public $languageCode;
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $languageSpans;
   protected $languageSpansType = MultiscalePointerSpan::class;
   protected $languageSpansDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $mentions;
   protected $mentionsType = MultiscalePointerSpan::class;
   protected $mentionsDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $paragraphs;
   protected $paragraphsType = MultiscalePointerSpan::class;
   protected $paragraphsDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $sentences;
   protected $sentencesType = MultiscalePointerSpan::class;
   protected $sentencesDataType = '';
   /**
    * @var string
    */
   public $text;
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $tokens;
   protected $tokensType = MultiscalePointerSpan::class;
   protected $tokensDataType = '';
   /**

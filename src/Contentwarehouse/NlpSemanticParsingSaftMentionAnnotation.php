@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingSaftMentionAnnotation extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingSaftCoreference
+   */
+  public $coreference;
   protected $coreferenceType = NlpSemanticParsingSaftCoreference::class;
   protected $coreferenceDataType = '';
+  /**
+   * @var NlpSemanticParsingSaftSpan
+   */
+  public $entity;
   protected $entityType = NlpSemanticParsingSaftSpan::class;
   protected $entityDataType = '';
+  /**
+   * @var NlpSemanticParsingSaftMeasure
+   */
+  public $measure;
   protected $measureType = NlpSemanticParsingSaftMeasure::class;
   protected $measureDataType = '';
+  /**
+   * @var NlpSemanticParsingSaftSpan
+   */
+  public $title;
   protected $titleType = NlpSemanticParsingSaftSpan::class;
   protected $titleDataType = '';
 

@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityPreviewRanklabSnippet extends \Google\Model
 {
+  /**
+   * @var QualityPreviewSnippetBrainFeatures
+   */
+  public $brainFeatures;
   protected $brainFeaturesType = QualityPreviewSnippetBrainFeatures::class;
   protected $brainFeaturesDataType = '';
+  /**
+   * @var QualityPreviewSnippetDocumentFeatures
+   */
+  public $documentFeatures;
   protected $documentFeaturesType = QualityPreviewSnippetDocumentFeatures::class;
   protected $documentFeaturesDataType = '';
+  /**
+   * @var QualityPreviewSnippetExperimentalFeatures
+   */
+  public $experimentalFeatures;
   protected $experimentalFeaturesType = QualityPreviewSnippetExperimentalFeatures::class;
   protected $experimentalFeaturesDataType = '';
   /**
@@ -33,16 +45,40 @@ class QualityPreviewRanklabSnippet extends \Google\Model
    * @var bool
    */
   public $isMuppetSelectedSnippet;
+  /**
+   * @var QualityPreviewSnippetQueryTermCoverageFeatures
+   */
+  public $originalQueryTermCoverageFeatures;
   protected $originalQueryTermCoverageFeaturesType = QualityPreviewSnippetQueryTermCoverageFeatures::class;
   protected $originalQueryTermCoverageFeaturesDataType = '';
+  /**
+   * @var QualityPreviewSnippetQualityFeatures
+   */
+  public $qualityFeatures;
   protected $qualityFeaturesType = QualityPreviewSnippetQualityFeatures::class;
   protected $qualityFeaturesDataType = '';
+  /**
+   * @var QualityPreviewSnippetQueryFeatures
+   */
+  public $queryFeatures;
   protected $queryFeaturesType = QualityPreviewSnippetQueryFeatures::class;
   protected $queryFeaturesDataType = '';
+  /**
+   * @var QualityPreviewSnippetQueryTermCoverageFeatures
+   */
+  public $queryTermCoverageFeatures;
   protected $queryTermCoverageFeaturesType = QualityPreviewSnippetQueryTermCoverageFeatures::class;
   protected $queryTermCoverageFeaturesDataType = '';
+  /**
+   * @var QualityPreviewSnippetRadishFeatures
+   */
+  public $radishFeatures;
   protected $radishFeaturesType = QualityPreviewSnippetRadishFeatures::class;
   protected $radishFeaturesDataType = '';
+  /**
+   * @var QualityPreviewChosenSnippetInfo
+   */
+  public $snippetInfo;
   protected $snippetInfoType = QualityPreviewChosenSnippetInfo::class;
   protected $snippetInfoDataType = '';
 

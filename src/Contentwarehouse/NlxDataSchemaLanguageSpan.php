@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class NlxDataSchemaLanguageSpan extends \Google\Collection
 {
   protected $collection_key = 'languageCode';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $bytes;
   protected $bytesType = MultiscalePointerSpan::class;
   protected $bytesDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $characters;
   protected $charactersType = MultiscalePointerSpan::class;
   protected $charactersDataType = '';
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $document;
   protected $documentType = MultiscalePointerIndex::class;
   protected $documentDataType = '';
   /**

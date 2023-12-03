@@ -24,6 +24,10 @@ class QualityActionsReminder extends \Google\Collection
    * @var bool
    */
   public $archived;
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $archivedTime;
   protected $archivedTimeType = AssistantApiDateTime::class;
   protected $archivedTimeDataType = '';
   /**
@@ -34,6 +38,10 @@ class QualityActionsReminder extends \Google\Collection
    * @var string
    */
   public $asyncInteractionType;
+  /**
+   * @var AssistantRemindersAttachment[]
+   */
+  public $attachment;
   protected $attachmentType = AssistantRemindersAttachment::class;
   protected $attachmentDataType = 'array';
   /**
@@ -44,26 +52,54 @@ class QualityActionsReminder extends \Google\Collection
    * @var string
    */
   public $clientId;
+  /**
+   * @var QualityDialogManagerReminderClientType
+   */
+  public $clientType;
   protected $clientTypeType = QualityDialogManagerReminderClientType::class;
   protected $clientTypeDataType = '';
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $createTime;
   protected $createTimeType = AssistantApiDateTime::class;
   protected $createTimeDataType = '';
   /**
    * @var string
    */
   public $createTimestamp;
+  /**
+   * @var QualityActionsReminderPerson
+   */
+  public $creator;
   protected $creatorType = QualityActionsReminderPerson::class;
   protected $creatorDataType = '';
+  /**
+   * @var QualityActionsCustomizedNotification[]
+   */
+  public $customizedNotificationCard;
   protected $customizedNotificationCardType = QualityActionsCustomizedNotification::class;
   protected $customizedNotificationCardDataType = 'array';
+  /**
+   * @var AssistantApiDateTime
+   */
+  public $datetime;
   protected $datetimeType = AssistantApiDateTime::class;
   protected $datetimeDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var QualityActionsReminderDocument
+   */
+  public $documentAssignmentSource;
   protected $documentAssignmentSourceType = QualityActionsReminderDocument::class;
   protected $documentAssignmentSourceDataType = '';
+  /**
+   * @var QualityActionsReminderDynamiteGroup
+   */
+  public $dynamiteGroupAssignmentSource;
   protected $dynamiteGroupAssignmentSourceType = QualityActionsReminderDynamiteGroup::class;
   protected $dynamiteGroupAssignmentSourceDataType = '';
   /**
@@ -74,20 +110,44 @@ class QualityActionsReminder extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var QualityActionsReminderLocation
+   */
+  public $location;
   protected $locationType = QualityActionsReminderLocation::class;
   protected $locationDataType = '';
+  /**
+   * @var AssistantLogsReminderLog
+   */
+  public $log;
   protected $logType = AssistantLogsReminderLog::class;
   protected $logDataType = '';
+  /**
+   * @var AssistantRemindersMemoryPayload
+   */
+  public $memoryPayload;
   protected $memoryPayloadType = AssistantRemindersMemoryPayload::class;
   protected $memoryPayloadDataType = '';
   /**
    * @var bool
    */
   public $notifying;
+  /**
+   * @var CopleySourceTypeList
+   */
+  public $personalReferenceMetadata;
   protected $personalReferenceMetadataType = CopleySourceTypeList::class;
   protected $personalReferenceMetadataDataType = '';
+  /**
+   * @var QualityActionsReminderPerson
+   */
+  public $recipient;
   protected $recipientType = QualityActionsReminderPerson::class;
   protected $recipientDataType = '';
+  /**
+   * @var QualityActionsReminderRecurrenceInfo
+   */
+  public $recurrence;
   protected $recurrenceType = QualityActionsReminderRecurrenceInfo::class;
   protected $recurrenceDataType = '';
   /**

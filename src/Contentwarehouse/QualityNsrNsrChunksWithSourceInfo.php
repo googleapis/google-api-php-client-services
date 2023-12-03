@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityNsrNsrChunksWithSourceInfo extends \Google\Model
 {
+  /**
+   * @var QualityNsrNsrChunksProto
+   */
+  public $nsrChunks;
   protected $nsrChunksType = QualityNsrNsrChunksProto::class;
   protected $nsrChunksDataType = '';
   /**

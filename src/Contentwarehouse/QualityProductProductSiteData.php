@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityProductProductSiteData extends \Google\Collection
 {
   protected $collection_key = 'locale';
+  /**
+   * @var QualityProductProductSiteDataLocaleData[]
+   */
+  public $locale;
   protected $localeType = QualityProductProductSiteDataLocaleData::class;
   protected $localeDataType = 'array';
 

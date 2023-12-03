@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class OceanGEPrice extends \Google\Collection
 {
   protected $collection_key = 'locale';
+  /**
+   * @var OceanGEPriceLocale[]
+   */
+  public $locale;
   protected $localeType = OceanGEPriceLocale::class;
   protected $localeDataType = 'array';
 

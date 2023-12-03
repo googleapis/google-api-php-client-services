@@ -32,6 +32,10 @@ class OceanDocTagBookSpecific extends \Google\Collection
    * @var int
    */
   public $numRatingHalfStars;
+  /**
+   * @var OceanDocTagBookSpecificNumberingRange[]
+   */
+  public $numberingrange;
   protected $numberingrangeType = OceanDocTagBookSpecificNumberingRange::class;
   protected $numberingrangeDataType = 'array';
   /**

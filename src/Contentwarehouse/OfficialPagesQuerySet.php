@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class OfficialPagesQuerySet extends \Google\Collection
 {
   protected $collection_key = 'queryCountryLanguageFingerprints';
+  /**
+   * @var OfficialPagesOfficialKey[]
+   */
+  public $queries;
   protected $queriesType = OfficialPagesOfficialKey::class;
   protected $queriesDataType = 'array';
   /**

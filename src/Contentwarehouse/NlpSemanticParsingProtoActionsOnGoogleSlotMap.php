@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingProtoActionsOnGoogleSlotMap extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleAogSlot[]
+   */
+  public $slots;
   protected $slotsType = NlpSemanticParsingProtoActionsOnGoogleAogSlot::class;
   protected $slotsDataType = 'map';
 

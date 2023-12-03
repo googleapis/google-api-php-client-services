@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityQrewriteCalendarReference extends \Google\Model
 {
+  /**
+   * @var QualityQrewriteQRewriteAccountAwareCalendarAliasWrapper
+   */
+  public $calendarAlias;
   protected $calendarAliasType = QualityQrewriteQRewriteAccountAwareCalendarAliasWrapper::class;
   protected $calendarAliasDataType = '';
+  /**
+   * @var QualityQrewriteContactCalendarName
+   */
+  public $contactCalendarName;
   protected $contactCalendarNameType = QualityQrewriteContactCalendarName::class;
   protected $contactCalendarNameDataType = '';
+  /**
+   * @var QualityQrewriteFamilyCalendarAlias
+   */
+  public $familyCalendarAlias;
   protected $familyCalendarAliasType = QualityQrewriteFamilyCalendarAlias::class;
   protected $familyCalendarAliasDataType = '';
+  /**
+   * @var QualityQrewritePrimaryCalendarAlias
+   */
+  public $primaryCalendarAlias;
   protected $primaryCalendarAliasType = QualityQrewritePrimaryCalendarAlias::class;
   protected $primaryCalendarAliasDataType = '';
 

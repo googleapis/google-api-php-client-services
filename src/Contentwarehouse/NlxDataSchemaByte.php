@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlxDataSchemaByte extends \Google\Model
 {
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $document;
   protected $documentType = MultiscalePointerIndex::class;
   protected $documentDataType = '';
 

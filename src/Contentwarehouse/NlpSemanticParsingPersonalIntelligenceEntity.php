@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingPersonalIntelligenceEntity extends \Google\Model
 {
+  /**
+   * @var TravelFlightsAirlineConfig
+   */
+  public $airlineConfig;
   protected $airlineConfigType = TravelFlightsAirlineConfig::class;
   protected $airlineConfigDataType = '';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $qrefAnnotation;
   protected $qrefAnnotationType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefAnnotationDataType = '';
 

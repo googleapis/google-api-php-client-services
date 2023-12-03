@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class OcrPhotoCurvedBoundingBox extends \Google\Model
 {
+  /**
+   * @var OcrPhotoCurve
+   */
+  public $midLineCurve;
   protected $midLineCurveType = OcrPhotoCurve::class;
   protected $midLineCurveDataType = '';
   public $thickness;

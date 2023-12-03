@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityRichsnippetsAppsProtosLaunchAppInfoPerDocData extends \Google\Collection
 {
   protected $collection_key = 'app';
+  /**
+   * @var QualityRichsnippetsAppsProtosLaunchableAppPerDocData[]
+   */
+  public $app;
   protected $appType = QualityRichsnippetsAppsProtosLaunchableAppPerDocData::class;
   protected $appDataType = 'array';
 

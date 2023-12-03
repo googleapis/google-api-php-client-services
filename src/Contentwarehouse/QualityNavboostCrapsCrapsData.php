@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityNavboostCrapsCrapsData extends \Google\Collection
 {
   protected $collection_key = 'features';
+  /**
+   * @var QualityNavboostCrapsAgingData
+   */
+  public $agingCounts;
   protected $agingCountsType = QualityNavboostCrapsAgingData::class;
   protected $agingCountsDataType = '';
   public $badClicks;
@@ -28,8 +32,16 @@ class QualityNavboostCrapsCrapsData extends \Google\Collection
    * @var string
    */
   public $country;
+  /**
+   * @var QualityNavboostCrapsCrapsDevice
+   */
+  public $device;
   protected $deviceType = QualityNavboostCrapsCrapsDevice::class;
   protected $deviceDataType = '';
+  /**
+   * @var QualityNavboostCrapsFeatureCrapsData[]
+   */
+  public $features;
   protected $featuresType = QualityNavboostCrapsFeatureCrapsData::class;
   protected $featuresDataType = 'array';
   public $goodClicks;
@@ -39,8 +51,16 @@ class QualityNavboostCrapsCrapsData extends \Google\Collection
    */
   public $language;
   public $lastLongestClicks;
+  /**
+   * @var QualityNavboostCrapsCrapsData
+   */
+  public $mobileData;
   protected $mobileDataType = QualityNavboostCrapsCrapsData::class;
   protected $mobileDataDataType = '';
+  /**
+   * @var QualityNavboostCrapsCrapsClickSignals
+   */
+  public $mobileSignals;
   protected $mobileSignalsType = QualityNavboostCrapsCrapsClickSignals::class;
   protected $mobileSignalsDataType = '';
   /**
@@ -51,6 +71,10 @@ class QualityNavboostCrapsCrapsData extends \Google\Collection
    * @var int
    */
   public $patternLevel;
+  /**
+   * @var QualityNavboostCrapsStatsWithWeightsProto
+   */
+  public $patternSccStats;
   protected $patternSccStatsType = QualityNavboostCrapsStatsWithWeightsProto::class;
   protected $patternSccStatsDataType = '';
   /**
@@ -61,11 +85,23 @@ class QualityNavboostCrapsCrapsData extends \Google\Collection
    * @var string
    */
   public $sliceTag;
+  /**
+   * @var QualityNavboostCrapsCrapsClickSignals
+   */
+  public $squashed;
   protected $squashedType = QualityNavboostCrapsCrapsClickSignals::class;
   protected $squashedDataType = '';
   public $unscaledIpPriorBadFraction;
+  /**
+   * @var QualityNavboostCrapsCrapsClickSignals
+   */
+  public $unsquashed;
   protected $unsquashedType = QualityNavboostCrapsCrapsClickSignals::class;
   protected $unsquashedDataType = '';
+  /**
+   * @var QualityNavboostCrapsCrapsClickSignals
+   */
+  public $unsquashedMobileSignals;
   protected $unsquashedMobileSignalsType = QualityNavboostCrapsCrapsClickSignals::class;
   protected $unsquashedMobileSignalsDataType = '';
   /**

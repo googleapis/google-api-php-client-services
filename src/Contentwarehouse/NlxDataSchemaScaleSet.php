@@ -20,150 +20,442 @@ namespace Google\Service\Contentwarehouse;
 class NlxDataSchemaScaleSet extends \Google\Collection
 {
   protected $collection_key = 'token';
+  /**
+   * @var NlxDataSchemaByte[]
+   */
+  public $byte;
   protected $byteType = NlxDataSchemaByte::class;
   protected $byteDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $byteDocumentPresence;
   protected $byteDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $byteDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $bytePresence;
   protected $bytePresenceType = MultiscaleLayerPresence::class;
   protected $bytePresenceDataType = '';
+  /**
+   * @var NlxDataSchemaCharacter[]
+   */
+  public $character;
   protected $characterType = NlxDataSchemaCharacter::class;
   protected $characterDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $characterDocumentPresence;
   protected $characterDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $characterDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $characterParagraphPresence;
   protected $characterParagraphPresenceType = MultiscaleFieldPresence::class;
   protected $characterParagraphPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $characterPresence;
   protected $characterPresenceType = MultiscaleLayerPresence::class;
   protected $characterPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $characterSentencePresence;
   protected $characterSentencePresenceType = MultiscaleFieldPresence::class;
   protected $characterSentencePresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $characterTextPresence;
   protected $characterTextPresenceType = MultiscaleFieldPresence::class;
   protected $characterTextPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $characterTokenPresence;
   protected $characterTokenPresenceType = MultiscaleFieldPresence::class;
   protected $characterTokenPresenceDataType = '';
+  /**
+   * @var NlxDataSchemaDocument[]
+   */
+  public $document;
   protected $documentType = NlxDataSchemaDocument::class;
   protected $documentDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentAuthorPresence;
   protected $documentAuthorPresenceType = MultiscaleFieldPresence::class;
   protected $documentAuthorPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentBytesPresence;
   protected $documentBytesPresenceType = MultiscaleFieldPresence::class;
   protected $documentBytesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentCharactersPresence;
   protected $documentCharactersPresenceType = MultiscaleFieldPresence::class;
   protected $documentCharactersPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentIdPresence;
   protected $documentIdPresenceType = MultiscaleFieldPresence::class;
   protected $documentIdPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentLanguageCodePresence;
   protected $documentLanguageCodePresenceType = MultiscaleFieldPresence::class;
   protected $documentLanguageCodePresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentLanguageSpansPresence;
   protected $documentLanguageSpansPresenceType = MultiscaleFieldPresence::class;
   protected $documentLanguageSpansPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentMentionsPresence;
   protected $documentMentionsPresenceType = MultiscaleFieldPresence::class;
   protected $documentMentionsPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentParagraphsPresence;
   protected $documentParagraphsPresenceType = MultiscaleFieldPresence::class;
   protected $documentParagraphsPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $documentPresence;
   protected $documentPresenceType = MultiscaleLayerPresence::class;
   protected $documentPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentSentencesPresence;
   protected $documentSentencesPresenceType = MultiscaleFieldPresence::class;
   protected $documentSentencesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentTextPresence;
   protected $documentTextPresenceType = MultiscaleFieldPresence::class;
   protected $documentTextPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentTokensPresence;
   protected $documentTokensPresenceType = MultiscaleFieldPresence::class;
   protected $documentTokensPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $documentUrlPresence;
   protected $documentUrlPresenceType = MultiscaleFieldPresence::class;
   protected $documentUrlPresenceDataType = '';
+  /**
+   * @var NlxDataSchemaEntity[]
+   */
+  public $entity;
   protected $entityType = NlxDataSchemaEntity::class;
   protected $entityDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $entityGenderPresence;
   protected $entityGenderPresenceType = MultiscaleFieldPresence::class;
   protected $entityGenderPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $entityMidPresence;
   protected $entityMidPresenceType = MultiscaleFieldPresence::class;
   protected $entityMidPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $entityNamePresence;
   protected $entityNamePresenceType = MultiscaleFieldPresence::class;
   protected $entityNamePresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $entityPresence;
   protected $entityPresenceType = MultiscaleLayerPresence::class;
   protected $entityPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $entityTypePresence;
   protected $entityTypePresenceType = MultiscaleFieldPresence::class;
   protected $entityTypePresenceDataType = '';
+  /**
+   * @var NlxDataSchemaLanguageSpan[]
+   */
+  public $languageSpan;
   protected $languageSpanType = NlxDataSchemaLanguageSpan::class;
   protected $languageSpanDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $languageSpanBytesPresence;
   protected $languageSpanBytesPresenceType = MultiscaleFieldPresence::class;
   protected $languageSpanBytesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $languageSpanCharactersPresence;
   protected $languageSpanCharactersPresenceType = MultiscaleFieldPresence::class;
   protected $languageSpanCharactersPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $languageSpanDocumentPresence;
   protected $languageSpanDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $languageSpanDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $languageSpanLanguageCodePresence;
   protected $languageSpanLanguageCodePresenceType = MultiscaleFieldPresence::class;
   protected $languageSpanLanguageCodePresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $languageSpanPresence;
   protected $languageSpanPresenceType = MultiscaleLayerPresence::class;
   protected $languageSpanPresenceDataType = '';
+  /**
+   * @var NlxDataSchemaMention[]
+   */
+  public $mention;
   protected $mentionType = NlxDataSchemaMention::class;
   protected $mentionDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionBytesPresence;
   protected $mentionBytesPresenceType = MultiscaleFieldPresence::class;
   protected $mentionBytesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionDocumentPresence;
   protected $mentionDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $mentionDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionEntityPresence;
   protected $mentionEntityPresenceType = MultiscaleFieldPresence::class;
   protected $mentionEntityPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionKindPresence;
   protected $mentionKindPresenceType = MultiscaleFieldPresence::class;
   protected $mentionKindPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $mentionPresence;
   protected $mentionPresenceType = MultiscaleLayerPresence::class;
   protected $mentionPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionTextPresence;
   protected $mentionTextPresenceType = MultiscaleFieldPresence::class;
   protected $mentionTextPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionTokensPresence;
   protected $mentionTokensPresenceType = MultiscaleFieldPresence::class;
   protected $mentionTokensPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $mentionTypePresence;
   protected $mentionTypePresenceType = MultiscaleFieldPresence::class;
   protected $mentionTypePresenceDataType = '';
+  /**
+   * @var NlxDataSchemaParagraph[]
+   */
+  public $paragraph;
   protected $paragraphType = NlxDataSchemaParagraph::class;
   protected $paragraphDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $paragraphBytesPresence;
   protected $paragraphBytesPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphBytesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $paragraphCharactersPresence;
   protected $paragraphCharactersPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphCharactersPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $paragraphDocumentPresence;
   protected $paragraphDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $paragraphPresence;
   protected $paragraphPresenceType = MultiscaleLayerPresence::class;
   protected $paragraphPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $paragraphSentencesPresence;
   protected $paragraphSentencesPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphSentencesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $paragraphTextPresence;
   protected $paragraphTextPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphTextPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $paragraphTokensPresence;
   protected $paragraphTokensPresenceType = MultiscaleFieldPresence::class;
   protected $paragraphTokensPresenceDataType = '';
+  /**
+   * @var NlxDataSchemaSentence[]
+   */
+  public $sentence;
   protected $sentenceType = NlxDataSchemaSentence::class;
   protected $sentenceDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $sentenceBytesPresence;
   protected $sentenceBytesPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceBytesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $sentenceCharactersPresence;
   protected $sentenceCharactersPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceCharactersPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $sentenceDocumentPresence;
   protected $sentenceDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $sentenceParagraphPresence;
   protected $sentenceParagraphPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceParagraphPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $sentencePresence;
   protected $sentencePresenceType = MultiscaleLayerPresence::class;
   protected $sentencePresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $sentenceTextPresence;
   protected $sentenceTextPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceTextPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $sentenceTokensPresence;
   protected $sentenceTokensPresenceType = MultiscaleFieldPresence::class;
   protected $sentenceTokensPresenceDataType = '';
+  /**
+   * @var NlxDataSchemaToken[]
+   */
+  public $token;
   protected $tokenType = NlxDataSchemaToken::class;
   protected $tokenDataType = 'array';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenBytesPresence;
   protected $tokenBytesPresenceType = MultiscaleFieldPresence::class;
   protected $tokenBytesPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenCharactersPresence;
   protected $tokenCharactersPresenceType = MultiscaleFieldPresence::class;
   protected $tokenCharactersPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenDependencyHeadPresence;
   protected $tokenDependencyHeadPresenceType = MultiscaleFieldPresence::class;
   protected $tokenDependencyHeadPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenDependencyLabelPresence;
   protected $tokenDependencyLabelPresenceType = MultiscaleFieldPresence::class;
   protected $tokenDependencyLabelPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenDependencyPresence;
   protected $tokenDependencyPresenceType = MultiscaleFieldPresence::class;
   protected $tokenDependencyPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenDocumentPresence;
   protected $tokenDocumentPresenceType = MultiscaleFieldPresence::class;
   protected $tokenDocumentPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenParagraphPresence;
   protected $tokenParagraphPresenceType = MultiscaleFieldPresence::class;
   protected $tokenParagraphPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenPosPresence;
   protected $tokenPosPresenceType = MultiscaleFieldPresence::class;
   protected $tokenPosPresenceDataType = '';
+  /**
+   * @var MultiscaleLayerPresence
+   */
+  public $tokenPresence;
   protected $tokenPresenceType = MultiscaleLayerPresence::class;
   protected $tokenPresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenSentencePresence;
   protected $tokenSentencePresenceType = MultiscaleFieldPresence::class;
   protected $tokenSentencePresenceDataType = '';
+  /**
+   * @var MultiscaleFieldPresence
+   */
+  public $tokenTextPresence;
   protected $tokenTextPresenceType = MultiscaleFieldPresence::class;
   protected $tokenTextPresenceDataType = '';
 

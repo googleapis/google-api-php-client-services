@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityQrewriteContactCalendarName extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsPersonPerson
+   */
+  public $contact;
   protected $contactType = NlpSemanticParsingModelsPersonPerson::class;
   protected $contactDataType = '';
 

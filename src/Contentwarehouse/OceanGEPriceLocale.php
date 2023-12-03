@@ -23,6 +23,10 @@ class OceanGEPriceLocale extends \Google\Model
    * @var string
    */
   public $locale;
+  /**
+   * @var OceanGEMoney
+   */
+  public $offerPrice;
   protected $offerPriceType = OceanGEMoney::class;
   protected $offerPriceDataType = '';
   /**

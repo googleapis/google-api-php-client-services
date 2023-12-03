@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class PersonalizationSettingsApiProtoLocalDiscoveryLocalDiscoverySettingsMetadata extends \Google\Model
 {
+  /**
+   * @var PersonalizationSettingsApiProtoLocalDiscoveryOpaRecipesContext
+   */
+  public $opaRecipesContext;
   protected $opaRecipesContextType = PersonalizationSettingsApiProtoLocalDiscoveryOpaRecipesContext::class;
   protected $opaRecipesContextDataType = '';
   /**

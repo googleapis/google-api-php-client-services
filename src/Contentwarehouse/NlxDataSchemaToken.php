@@ -19,26 +19,54 @@ namespace Google\Service\Contentwarehouse;
 
 class NlxDataSchemaToken extends \Google\Model
 {
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $bytes;
   protected $bytesType = MultiscalePointerSpan::class;
   protected $bytesDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $characters;
   protected $charactersType = MultiscalePointerSpan::class;
   protected $charactersDataType = '';
+  /**
+   * @var NlxDataSchemaTokenDependencyEdge
+   */
+  public $dependency;
   protected $dependencyType = NlxDataSchemaTokenDependencyEdge::class;
   protected $dependencyDataType = '';
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $dependencyHead;
   protected $dependencyHeadType = MultiscalePointerIndex::class;
   protected $dependencyHeadDataType = '';
   /**
    * @var string
    */
   public $dependencyLabel;
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $document;
   protected $documentType = MultiscalePointerIndex::class;
   protected $documentDataType = '';
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $paragraph;
   protected $paragraphType = MultiscalePointerIndex::class;
   protected $paragraphDataType = '';
   /**
    * @var string
    */
   public $pos;
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $sentence;
   protected $sentenceType = MultiscalePointerIndex::class;
   protected $sentenceDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityQrewriteAlternativeNameInfo extends \Google\Model
 {
+  /**
+   * @var AssistantVerticalsCommonContactMatchSignal
+   */
+  public $matchSignal;
   protected $matchSignalType = AssistantVerticalsCommonContactMatchSignal::class;
   protected $matchSignalDataType = '';
   /**

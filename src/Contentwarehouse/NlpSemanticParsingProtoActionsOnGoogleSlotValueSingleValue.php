@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingProtoActionsOnGoogleSlotValueSingleValue extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleDateTime
+   */
+  public $dateTimeValue;
   protected $dateTimeValueType = NlpSemanticParsingProtoActionsOnGoogleDateTime::class;
   protected $dateTimeValueDataType = '';
   /**
    * @var string
    */
   public $stringValue;
+  /**
+   * @var NlpSemanticParsingProtoActionsOnGoogleTypedValue
+   */
+  public $typeValue;
   protected $typeValueType = NlpSemanticParsingProtoActionsOnGoogleTypedValue::class;
   protected $typeValueDataType = '';
 

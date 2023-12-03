@@ -35,6 +35,10 @@ class QualityPreviewSnippetExperimentalFeatures extends \Google\Model
    * @var string
    */
   public $numVisibleTokens;
+  /**
+   * @var QualityPreviewSnippetRadishFeatures
+   */
+  public $radish;
   protected $radishType = QualityPreviewSnippetRadishFeatures::class;
   protected $radishDataType = '';
 

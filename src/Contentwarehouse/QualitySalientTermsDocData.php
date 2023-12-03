@@ -32,6 +32,10 @@ class QualitySalientTermsDocData extends \Google\Collection
    * @var string
    */
   public $language;
+  /**
+   * @var QualitySalientTermsSignalData[]
+   */
+  public $signalData;
   protected $signalDataType = QualitySalientTermsSignalData::class;
   protected $signalDataDataType = 'array';
   /**

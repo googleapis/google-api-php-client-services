@@ -19,18 +19,38 @@ namespace Google\Service\Contentwarehouse;
 
 class NlxDataSchemaSentence extends \Google\Model
 {
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $bytes;
   protected $bytesType = MultiscalePointerSpan::class;
   protected $bytesDataType = '';
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $characters;
   protected $charactersType = MultiscalePointerSpan::class;
   protected $charactersDataType = '';
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $document;
   protected $documentType = MultiscalePointerIndex::class;
   protected $documentDataType = '';
+  /**
+   * @var MultiscalePointerIndex
+   */
+  public $paragraph;
   protected $paragraphType = MultiscalePointerIndex::class;
   protected $paragraphDataType = '';
   /**
    * @var string
    */
   public $text;
+  /**
+   * @var MultiscalePointerSpan
+   */
+  public $tokens;
   protected $tokensType = MultiscalePointerSpan::class;
   protected $tokensDataType = '';
 

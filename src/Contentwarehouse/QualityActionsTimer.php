@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityActionsTimer extends \Google\Model
 {
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $creationTime;
   protected $creationTimeType = AssistantApiTimestamp::class;
   protected $creationTimeDataType = '';
+  /**
+   * @var AssistantApiSettingsDeviceSettings
+   */
+  public $device;
   protected $deviceType = AssistantApiSettingsDeviceSettings::class;
   protected $deviceDataType = '';
   /**
    * @var string
    */
   public $expireTime;
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $expireTimerTime;
   protected $expireTimerTimeType = NlpSemanticParsingDatetimeDateTime::class;
   protected $expireTimerTimeDataType = '';
   /**
@@ -37,26 +49,54 @@ class QualityActionsTimer extends \Google\Model
    * @var string
    */
   public $label;
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $lastUpdated;
   protected $lastUpdatedType = AssistantApiTimestamp::class;
   protected $lastUpdatedDataType = '';
   /**
    * @var string
    */
   public $originalDuration;
+  /**
+   * @var NlpSemanticParsingDatetimeDuration
+   */
+  public $originalTimerDuration;
   protected $originalTimerDurationType = NlpSemanticParsingDatetimeDuration::class;
   protected $originalTimerDurationDataType = '';
+  /**
+   * @var AssistantApiCoreTypesProvider
+   */
+  public $provider;
   protected $providerType = AssistantApiCoreTypesProvider::class;
   protected $providerDataType = '';
   /**
    * @var string
    */
   public $remainingDuration;
+  /**
+   * @var NlpSemanticParsingDatetimeDuration
+   */
+  public $remainingTimerDuration;
   protected $remainingTimerDurationType = NlpSemanticParsingDatetimeDuration::class;
   protected $remainingTimerDurationDataType = '';
+  /**
+   * @var QualityActionsRingtone
+   */
+  public $ringtone;
   protected $ringtoneType = QualityActionsRingtone::class;
   protected $ringtoneDataType = '';
+  /**
+   * @var AssistantApiCoreTypesGovernedRingtoneTaskMetadata
+   */
+  public $ringtoneTaskMetadata;
   protected $ringtoneTaskMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadata::class;
   protected $ringtoneTaskMetadataDataType = '';
+  /**
+   * @var QualityActionsRoom
+   */
+  public $room;
   protected $roomType = QualityActionsRoom::class;
   protected $roomDataType = '';
   /**

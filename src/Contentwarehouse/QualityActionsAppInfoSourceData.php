@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityActionsAppInfoSourceData extends \Google\Model
 {
+  /**
+   * @var QualityActionsAppInfoSourceDataAllowListSourceData
+   */
+  public $allowListSourceData;
   protected $allowListSourceDataType = QualityActionsAppInfoSourceDataAllowListSourceData::class;
   protected $allowListSourceDataDataType = '';
   /**
@@ -33,12 +37,20 @@ class QualityActionsAppInfoSourceData extends \Google\Model
    * @var bool
    */
   public $isCategorical;
+  /**
+   * @var QualityActionsAppInfoSourceDataMediaProviderSourceData
+   */
+  public $mediaProviderSourceData;
   protected $mediaProviderSourceDataType = QualityActionsAppInfoSourceDataMediaProviderSourceData::class;
   protected $mediaProviderSourceDataDataType = '';
   /**
    * @var string
    */
   public $source;
+  /**
+   * @var AssistantTeleportTeleportNicknameSignals
+   */
+  public $teleportSourceData;
   protected $teleportSourceDataType = AssistantTeleportTeleportNicknameSignals::class;
   protected $teleportSourceDataDataType = '';
 

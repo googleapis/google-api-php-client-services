@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityLabelsGoogleLabelData extends \Google\Collection
 {
   protected $collection_key = 'label';
+  /**
+   * @var QualityLabelsGoogleLabelDataLabel[]
+   */
+  public $label;
   protected $labelType = QualityLabelsGoogleLabelDataLabel::class;
   protected $labelDataType = 'array';
 

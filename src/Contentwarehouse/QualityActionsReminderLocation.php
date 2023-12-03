@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityActionsReminderLocation extends \Google\Model
 {
+  /**
+   * @var QualityActionsReminderLocationCategoryInfo
+   */
+  public $categoryInfo;
   protected $categoryInfoType = QualityActionsReminderLocationCategoryInfo::class;
   protected $categoryInfoDataType = '';
+  /**
+   * @var QualityActionsReminderLocationChainInfo
+   */
+  public $chainInfo;
   protected $chainInfoType = QualityActionsReminderLocationChainInfo::class;
   protected $chainInfoDataType = '';
   /**
@@ -31,6 +39,10 @@ class QualityActionsReminderLocation extends \Google\Model
    * @var string
    */
   public $displayAddress;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $geoFeatureId;
   protected $geoFeatureIdType = GeostoreFeatureIdProto::class;
   protected $geoFeatureIdDataType = '';
   public $lat;
@@ -43,6 +55,10 @@ class QualityActionsReminderLocation extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var CopleySourceTypeList
+   */
+  public $personalLocationMetadata;
   protected $personalLocationMetadataType = CopleySourceTypeList::class;
   protected $personalLocationMetadataDataType = '';
   /**
