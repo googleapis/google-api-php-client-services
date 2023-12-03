@@ -24,12 +24,28 @@ class RunMobileFriendlyTestResponse extends \Google\Collection
    * @var string
    */
   public $mobileFriendliness;
+  /**
+   * @var MobileFriendlyIssue[]
+   */
+  public $mobileFriendlyIssues;
   protected $mobileFriendlyIssuesType = MobileFriendlyIssue::class;
   protected $mobileFriendlyIssuesDataType = 'array';
+  /**
+   * @var ResourceIssue[]
+   */
+  public $resourceIssues;
   protected $resourceIssuesType = ResourceIssue::class;
   protected $resourceIssuesDataType = 'array';
+  /**
+   * @var Image
+   */
+  public $screenshot;
   protected $screenshotType = Image::class;
   protected $screenshotDataType = '';
+  /**
+   * @var TestStatus
+   */
+  public $testStatus;
   protected $testStatusType = TestStatus::class;
   protected $testStatusDataType = '';
 

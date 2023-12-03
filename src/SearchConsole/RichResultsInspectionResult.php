@@ -20,6 +20,10 @@ namespace Google\Service\SearchConsole;
 class RichResultsInspectionResult extends \Google\Collection
 {
   protected $collection_key = 'detectedItems';
+  /**
+   * @var DetectedItems[]
+   */
+  public $detectedItems;
   protected $detectedItemsType = DetectedItems::class;
   protected $detectedItemsDataType = 'array';
   /**

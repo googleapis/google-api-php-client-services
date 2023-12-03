@@ -24,6 +24,10 @@ class SearchAnalyticsQueryResponse extends \Google\Collection
    * @var string
    */
   public $responseAggregationType;
+  /**
+   * @var ApiDataRow[]
+   */
+  public $rows;
   protected $rowsType = ApiDataRow::class;
   protected $rowsDataType = 'array';
 

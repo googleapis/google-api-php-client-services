@@ -19,16 +19,32 @@ namespace Google\Service\SearchConsole;
 
 class UrlInspectionResult extends \Google\Model
 {
+  /**
+   * @var AmpInspectionResult
+   */
+  public $ampResult;
   protected $ampResultType = AmpInspectionResult::class;
   protected $ampResultDataType = '';
+  /**
+   * @var IndexStatusInspectionResult
+   */
+  public $indexStatusResult;
   protected $indexStatusResultType = IndexStatusInspectionResult::class;
   protected $indexStatusResultDataType = '';
   /**
    * @var string
    */
   public $inspectionResultLink;
+  /**
+   * @var MobileUsabilityInspectionResult
+   */
+  public $mobileUsabilityResult;
   protected $mobileUsabilityResultType = MobileUsabilityInspectionResult::class;
   protected $mobileUsabilityResultDataType = '';
+  /**
+   * @var RichResultsInspectionResult
+   */
+  public $richResultsResult;
   protected $richResultsResultType = RichResultsInspectionResult::class;
   protected $richResultsResultDataType = '';
 

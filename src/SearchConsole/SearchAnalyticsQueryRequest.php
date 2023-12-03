@@ -28,6 +28,10 @@ class SearchAnalyticsQueryRequest extends \Google\Collection
    * @var string
    */
   public $dataState;
+  /**
+   * @var ApiDimensionFilterGroup[]
+   */
+  public $dimensionFilterGroups;
   protected $dimensionFilterGroupsType = ApiDimensionFilterGroup::class;
   protected $dimensionFilterGroupsDataType = 'array';
   /**

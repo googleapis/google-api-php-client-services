@@ -20,6 +20,10 @@ namespace Google\Service\SearchConsole;
 class SitesListResponse extends \Google\Collection
 {
   protected $collection_key = 'siteEntry';
+  /**
+   * @var WmxSite[]
+   */
+  public $siteEntry;
   protected $siteEntryType = WmxSite::class;
   protected $siteEntryDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\SearchConsole;
 class WmxSitemap extends \Google\Collection
 {
   protected $collection_key = 'contents';
+  /**
+   * @var WmxSitemapContent[]
+   */
+  public $contents;
   protected $contentsType = WmxSitemapContent::class;
   protected $contentsDataType = 'array';
   /**
