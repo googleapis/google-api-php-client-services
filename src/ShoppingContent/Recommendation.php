@@ -20,12 +20,28 @@ namespace Google\Service\ShoppingContent;
 class Recommendation extends \Google\Collection
 {
   protected $collection_key = 'creative';
+  /**
+   * @var RecommendationCallToAction[]
+   */
+  public $additionalCallToAction;
   protected $additionalCallToActionType = RecommendationCallToAction::class;
   protected $additionalCallToActionDataType = 'array';
+  /**
+   * @var RecommendationDescription[]
+   */
+  public $additionalDescriptions;
   protected $additionalDescriptionsType = RecommendationDescription::class;
   protected $additionalDescriptionsDataType = 'array';
+  /**
+   * @var RecommendationCreative[]
+   */
+  public $creative;
   protected $creativeType = RecommendationCreative::class;
   protected $creativeDataType = 'array';
+  /**
+   * @var RecommendationCallToAction
+   */
+  public $defaultCallToAction;
   protected $defaultCallToActionType = RecommendationCallToAction::class;
   protected $defaultCallToActionDataType = '';
   /**

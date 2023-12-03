@@ -19,8 +19,16 @@ namespace Google\Service\ShoppingContent;
 
 class OrderLineItemAdjustment extends \Google\Model
 {
+  /**
+   * @var Price
+   */
+  public $priceAdjustment;
   protected $priceAdjustmentType = Price::class;
   protected $priceAdjustmentDataType = '';
+  /**
+   * @var Price
+   */
+  public $taxAdjustment;
   protected $taxAdjustmentType = Price::class;
   protected $taxAdjustmentDataType = '';
   /**

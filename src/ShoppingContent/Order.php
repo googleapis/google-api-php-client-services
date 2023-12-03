@@ -24,12 +24,28 @@ class Order extends \Google\Collection
    * @var bool
    */
   public $acknowledged;
+  /**
+   * @var OrderOrderAnnotation[]
+   */
+  public $annotations;
   protected $annotationsType = OrderOrderAnnotation::class;
   protected $annotationsDataType = 'array';
+  /**
+   * @var OrderAddress
+   */
+  public $billingAddress;
   protected $billingAddressType = OrderAddress::class;
   protected $billingAddressDataType = '';
+  /**
+   * @var OrderCustomer
+   */
+  public $customer;
   protected $customerType = OrderCustomer::class;
   protected $customerDataType = '';
+  /**
+   * @var OrderDeliveryDetails
+   */
+  public $deliveryDetails;
   protected $deliveryDetailsType = OrderDeliveryDetails::class;
   protected $deliveryDetailsDataType = '';
   /**
@@ -40,6 +56,10 @@ class Order extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var OrderLineItem[]
+   */
+  public $lineItems;
   protected $lineItemsType = OrderLineItem::class;
   protected $lineItemsDataType = 'array';
   /**
@@ -50,28 +70,60 @@ class Order extends \Google\Collection
    * @var string
    */
   public $merchantOrderId;
+  /**
+   * @var Price
+   */
+  public $netPriceAmount;
   protected $netPriceAmountType = Price::class;
   protected $netPriceAmountDataType = '';
+  /**
+   * @var Price
+   */
+  public $netTaxAmount;
   protected $netTaxAmountType = Price::class;
   protected $netTaxAmountDataType = '';
   /**
    * @var string
    */
   public $paymentStatus;
+  /**
+   * @var OrderPickupDetails
+   */
+  public $pickupDetails;
   protected $pickupDetailsType = OrderPickupDetails::class;
   protected $pickupDetailsDataType = '';
   /**
    * @var string
    */
   public $placedDate;
+  /**
+   * @var OrderPromotion[]
+   */
+  public $promotions;
   protected $promotionsType = OrderPromotion::class;
   protected $promotionsDataType = 'array';
+  /**
+   * @var OrderRefund[]
+   */
+  public $refunds;
   protected $refundsType = OrderRefund::class;
   protected $refundsDataType = 'array';
+  /**
+   * @var OrderShipment[]
+   */
+  public $shipments;
   protected $shipmentsType = OrderShipment::class;
   protected $shipmentsDataType = 'array';
+  /**
+   * @var Price
+   */
+  public $shippingCost;
   protected $shippingCostType = Price::class;
   protected $shippingCostDataType = '';
+  /**
+   * @var Price
+   */
+  public $shippingCostTax;
   protected $shippingCostTaxType = Price::class;
   protected $shippingCostTaxDataType = '';
   /**

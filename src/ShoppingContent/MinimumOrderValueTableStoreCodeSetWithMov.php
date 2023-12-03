@@ -24,6 +24,10 @@ class MinimumOrderValueTableStoreCodeSetWithMov extends \Google\Collection
    * @var string[]
    */
   public $storeCodes;
+  /**
+   * @var Price
+   */
+  public $value;
   protected $valueType = Price::class;
   protected $valueDataType = '';
 

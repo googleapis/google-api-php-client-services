@@ -27,6 +27,10 @@ class OrdersCreateTestOrderRequest extends \Google\Model
    * @var string
    */
   public $templateName;
+  /**
+   * @var TestOrder
+   */
+  public $testOrder;
   protected $testOrderType = TestOrder::class;
   protected $testOrderDataType = '';
 

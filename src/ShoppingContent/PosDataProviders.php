@@ -24,6 +24,10 @@ class PosDataProviders extends \Google\Collection
    * @var string
    */
   public $country;
+  /**
+   * @var PosDataProvidersPosDataProvider[]
+   */
+  public $posDataProviders;
   protected $posDataProvidersType = PosDataProvidersPosDataProvider::class;
   protected $posDataProvidersDataType = 'array';
 

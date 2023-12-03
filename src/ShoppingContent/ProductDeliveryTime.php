@@ -20,8 +20,16 @@ namespace Google\Service\ShoppingContent;
 class ProductDeliveryTime extends \Google\Collection
 {
   protected $collection_key = 'areaDeliveryTimes';
+  /**
+   * @var ProductDeliveryTimeAreaDeliveryTime[]
+   */
+  public $areaDeliveryTimes;
   protected $areaDeliveryTimesType = ProductDeliveryTimeAreaDeliveryTime::class;
   protected $areaDeliveryTimesDataType = 'array';
+  /**
+   * @var ProductId
+   */
+  public $productId;
   protected $productIdType = ProductId::class;
   protected $productIdDataType = '';
 

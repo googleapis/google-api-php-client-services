@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ProductIssueImpact extends \Google\Collection
 {
   protected $collection_key = 'breakdowns';
+  /**
+   * @var Breakdown[]
+   */
+  public $breakdowns;
   protected $breakdownsType = Breakdown::class;
   protected $breakdownsDataType = 'array';
   /**

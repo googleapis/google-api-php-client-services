@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class RegionPostalCodeArea extends \Google\Collection
 {
   protected $collection_key = 'postalCodes';
+  /**
+   * @var RegionPostalCodeAreaPostalCodeRange[]
+   */
+  public $postalCodes;
   protected $postalCodesType = RegionPostalCodeAreaPostalCodeRange::class;
   protected $postalCodesDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class OrdersSetLineItemMetadataRequest extends \Google\Collection
 {
   protected $collection_key = 'annotations';
+  /**
+   * @var OrderMerchantProvidedAnnotation[]
+   */
+  public $annotations;
   protected $annotationsType = OrderMerchantProvidedAnnotation::class;
   protected $annotationsDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class PosCustomBatchResponse extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var PosCustomBatchResponseEntry[]
+   */
+  public $entries;
   protected $entriesType = PosCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**

@@ -28,6 +28,10 @@ class PostalCodeGroup extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var PostalCodeRange[]
+   */
+  public $postalCodeRanges;
   protected $postalCodeRangesType = PostalCodeRange::class;
   protected $postalCodeRangesDataType = 'array';
 

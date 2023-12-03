@@ -19,8 +19,16 @@ namespace Google\Service\ShoppingContent;
 
 class MonetaryAmount extends \Google\Model
 {
+  /**
+   * @var Price
+   */
+  public $priceAmount;
   protected $priceAmountType = Price::class;
   protected $priceAmountDataType = '';
+  /**
+   * @var Price
+   */
+  public $taxAmount;
   protected $taxAmountType = Price::class;
   protected $taxAmountDataType = '';
 

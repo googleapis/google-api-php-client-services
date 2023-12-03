@@ -20,18 +20,38 @@ namespace Google\Service\ShoppingContent;
 class OrderLineItem extends \Google\Collection
 {
   protected $collection_key = 'returns';
+  /**
+   * @var OrderLineItemAdjustment[]
+   */
+  public $adjustments;
   protected $adjustmentsType = OrderLineItemAdjustment::class;
   protected $adjustmentsDataType = 'array';
+  /**
+   * @var OrderMerchantProvidedAnnotation[]
+   */
+  public $annotations;
   protected $annotationsType = OrderMerchantProvidedAnnotation::class;
   protected $annotationsDataType = 'array';
+  /**
+   * @var OrderCancellation[]
+   */
+  public $cancellations;
   protected $cancellationsType = OrderCancellation::class;
   protected $cancellationsDataType = 'array';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var Price
+   */
+  public $price;
   protected $priceType = Price::class;
   protected $priceDataType = '';
+  /**
+   * @var OrderLineItemProduct
+   */
+  public $product;
   protected $productType = OrderLineItemProduct::class;
   protected $productDataType = '';
   /**
@@ -66,12 +86,28 @@ class OrderLineItem extends \Google\Collection
    * @var string
    */
   public $quantityUndeliverable;
+  /**
+   * @var OrderLineItemReturnInfo
+   */
+  public $returnInfo;
   protected $returnInfoType = OrderLineItemReturnInfo::class;
   protected $returnInfoDataType = '';
+  /**
+   * @var OrderReturn[]
+   */
+  public $returns;
   protected $returnsType = OrderReturn::class;
   protected $returnsDataType = 'array';
+  /**
+   * @var OrderLineItemShippingDetails
+   */
+  public $shippingDetails;
   protected $shippingDetailsType = OrderLineItemShippingDetails::class;
   protected $shippingDetailsDataType = '';
+  /**
+   * @var Price
+   */
+  public $tax;
   protected $taxType = Price::class;
   protected $taxDataType = '';
 

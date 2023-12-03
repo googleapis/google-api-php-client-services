@@ -20,8 +20,16 @@ namespace Google\Service\ShoppingContent;
 class RenderProductIssuesResponse extends \Google\Collection
 {
   protected $collection_key = 'issues';
+  /**
+   * @var AlternateDisputeResolution
+   */
+  public $alternateDisputeResolution;
   protected $alternateDisputeResolutionType = AlternateDisputeResolution::class;
   protected $alternateDisputeResolutionDataType = '';
+  /**
+   * @var ProductIssue[]
+   */
+  public $issues;
   protected $issuesType = ProductIssue::class;
   protected $issuesDataType = 'array';
 

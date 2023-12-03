@@ -23,6 +23,10 @@ class OrdersGetByMerchantOrderIdResponse extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var Order
+   */
+  public $order;
   protected $orderType = Order::class;
   protected $orderDataType = '';
 

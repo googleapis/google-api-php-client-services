@@ -27,8 +27,16 @@ class OrderCustomer extends \Google\Model
    * @var string
    */
   public $invoiceReceivingEmail;
+  /**
+   * @var OrderCustomerLoyaltyInfo
+   */
+  public $loyaltyInfo;
   protected $loyaltyInfoType = OrderCustomerLoyaltyInfo::class;
   protected $loyaltyInfoDataType = '';
+  /**
+   * @var OrderCustomerMarketingRightsInfo
+   */
+  public $marketingRightsInfo;
   protected $marketingRightsInfoType = OrderCustomerMarketingRightsInfo::class;
   protected $marketingRightsInfoDataType = '';
 

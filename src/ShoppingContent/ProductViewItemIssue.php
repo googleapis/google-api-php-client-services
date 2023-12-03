@@ -19,12 +19,20 @@ namespace Google\Service\ShoppingContent;
 
 class ProductViewItemIssue extends \Google\Model
 {
+  /**
+   * @var ProductViewItemIssueItemIssueType
+   */
+  public $issueType;
   protected $issueTypeType = ProductViewItemIssueItemIssueType::class;
   protected $issueTypeDataType = '';
   /**
    * @var string
    */
   public $resolution;
+  /**
+   * @var ProductViewItemIssueItemIssueSeverity
+   */
+  public $severity;
   protected $severityType = ProductViewItemIssueItemIssueSeverity::class;
   protected $severityDataType = '';
 

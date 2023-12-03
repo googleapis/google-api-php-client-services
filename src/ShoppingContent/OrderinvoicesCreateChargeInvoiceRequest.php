@@ -24,8 +24,16 @@ class OrderinvoicesCreateChargeInvoiceRequest extends \Google\Collection
    * @var string
    */
   public $invoiceId;
+  /**
+   * @var InvoiceSummary
+   */
+  public $invoiceSummary;
   protected $invoiceSummaryType = InvoiceSummary::class;
   protected $invoiceSummaryDataType = '';
+  /**
+   * @var ShipmentInvoiceLineItemInvoice[]
+   */
+  public $lineItemInvoices;
   protected $lineItemInvoicesType = ShipmentInvoiceLineItemInvoice::class;
   protected $lineItemInvoicesDataType = 'array';
   /**

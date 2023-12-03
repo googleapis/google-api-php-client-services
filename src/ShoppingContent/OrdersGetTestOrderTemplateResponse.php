@@ -23,6 +23,10 @@ class OrdersGetTestOrderTemplateResponse extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var TestOrder
+   */
+  public $template;
   protected $templateType = TestOrder::class;
   protected $templateDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class OrdersShipLineItemsRequest extends \Google\Collection
 {
   protected $collection_key = 'shipmentInfos';
+  /**
+   * @var OrderShipmentLineItemShipment[]
+   */
+  public $lineItems;
   protected $lineItemsType = OrderShipmentLineItemShipment::class;
   protected $lineItemsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class OrdersShipLineItemsRequest extends \Google\Collection
    * @var string
    */
   public $shipmentGroupId;
+  /**
+   * @var OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo[]
+   */
+  public $shipmentInfos;
   protected $shipmentInfosType = OrdersCustomBatchRequestEntryShipLineItemsShipmentInfo::class;
   protected $shipmentInfosDataType = 'array';
 

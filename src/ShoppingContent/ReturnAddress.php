@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class ReturnAddress extends \Google\Model
 {
+  /**
+   * @var ReturnAddressAddress
+   */
+  public $address;
   protected $addressType = ReturnAddressAddress::class;
   protected $addressDataType = '';
   /**

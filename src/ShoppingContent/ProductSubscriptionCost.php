@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class ProductSubscriptionCost extends \Google\Model
 {
+  /**
+   * @var Price
+   */
+  public $amount;
   protected $amountType = Price::class;
   protected $amountDataType = '';
   /**

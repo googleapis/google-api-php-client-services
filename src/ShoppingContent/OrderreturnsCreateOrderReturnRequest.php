@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class OrderreturnsCreateOrderReturnRequest extends \Google\Collection
 {
   protected $collection_key = 'lineItems';
+  /**
+   * @var OrderreturnsLineItem[]
+   */
+  public $lineItems;
   protected $lineItemsType = OrderreturnsLineItem::class;
   protected $lineItemsDataType = 'array';
   /**

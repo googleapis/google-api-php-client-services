@@ -19,8 +19,16 @@ namespace Google\Service\ShoppingContent;
 
 class ProductDeliveryTimeAreaDeliveryTime extends \Google\Model
 {
+  /**
+   * @var DeliveryArea
+   */
+  public $deliveryArea;
   protected $deliveryAreaType = DeliveryArea::class;
   protected $deliveryAreaDataType = '';
+  /**
+   * @var ProductDeliveryTimeAreaDeliveryTimeDeliveryTime
+   */
+  public $deliveryTime;
   protected $deliveryTimeType = ProductDeliveryTimeAreaDeliveryTimeDeliveryTime::class;
   protected $deliveryTimeDataType = '';
 

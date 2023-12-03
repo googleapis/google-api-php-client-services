@@ -44,6 +44,10 @@ class Promotion extends \Google\Collection
    * @var string
    */
   public $freeGiftItemId;
+  /**
+   * @var PriceAmount
+   */
+  public $freeGiftValue;
   protected $freeGiftValueType = PriceAmount::class;
   protected $freeGiftValueDataType = '';
   /**
@@ -78,20 +82,36 @@ class Promotion extends \Google\Collection
    * @var int
    */
   public $limitQuantity;
+  /**
+   * @var PriceAmount
+   */
+  public $limitValue;
   protected $limitValueType = PriceAmount::class;
   protected $limitValueDataType = '';
   /**
    * @var string
    */
   public $longTitle;
+  /**
+   * @var PriceAmount
+   */
+  public $minimumPurchaseAmount;
   protected $minimumPurchaseAmountType = PriceAmount::class;
   protected $minimumPurchaseAmountDataType = '';
   /**
    * @var int
    */
   public $minimumPurchaseQuantity;
+  /**
+   * @var PriceAmount
+   */
+  public $moneyBudget;
   protected $moneyBudgetType = PriceAmount::class;
   protected $moneyBudgetDataType = '';
+  /**
+   * @var PriceAmount
+   */
+  public $moneyOffAmount;
   protected $moneyOffAmountType = PriceAmount::class;
   protected $moneyOffAmountDataType = '';
   /**
@@ -126,18 +146,30 @@ class Promotion extends \Google\Collection
    * @var string
    */
   public $promotionDisplayDates;
+  /**
+   * @var TimePeriod
+   */
+  public $promotionDisplayTimePeriod;
   protected $promotionDisplayTimePeriodType = TimePeriod::class;
   protected $promotionDisplayTimePeriodDataType = '';
   /**
    * @var string
    */
   public $promotionEffectiveDates;
+  /**
+   * @var TimePeriod
+   */
+  public $promotionEffectiveTimePeriod;
   protected $promotionEffectiveTimePeriodType = TimePeriod::class;
   protected $promotionEffectiveTimePeriodDataType = '';
   /**
    * @var string
    */
   public $promotionId;
+  /**
+   * @var PromotionPromotionStatus
+   */
+  public $promotionStatus;
   protected $promotionStatusType = PromotionPromotionStatus::class;
   protected $promotionStatusDataType = '';
   /**

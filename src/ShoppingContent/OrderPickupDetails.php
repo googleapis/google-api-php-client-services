@@ -20,8 +20,16 @@ namespace Google\Service\ShoppingContent;
 class OrderPickupDetails extends \Google\Collection
 {
   protected $collection_key = 'collectors';
+  /**
+   * @var OrderAddress
+   */
+  public $address;
   protected $addressType = OrderAddress::class;
   protected $addressDataType = '';
+  /**
+   * @var OrderPickupDetailsCollector[]
+   */
+  public $collectors;
   protected $collectorsType = OrderPickupDetailsCollector::class;
   protected $collectorsDataType = 'array';
   /**

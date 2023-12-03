@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class OrdersRefundOrderRequest extends \Google\Model
 {
+  /**
+   * @var MonetaryAmount
+   */
+  public $amount;
   protected $amountType = MonetaryAmount::class;
   protected $amountDataType = '';
   /**

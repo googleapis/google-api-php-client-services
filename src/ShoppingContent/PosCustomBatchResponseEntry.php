@@ -23,16 +23,32 @@ class PosCustomBatchResponseEntry extends \Google\Model
    * @var string
    */
   public $batchId;
+  /**
+   * @var Errors
+   */
+  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
+  /**
+   * @var PosInventory
+   */
+  public $inventory;
   protected $inventoryType = PosInventory::class;
   protected $inventoryDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var PosSale
+   */
+  public $sale;
   protected $saleType = PosSale::class;
   protected $saleDataType = '';
+  /**
+   * @var PosStore
+   */
+  public $store;
   protected $storeType = PosStore::class;
   protected $storeDataType = '';
 

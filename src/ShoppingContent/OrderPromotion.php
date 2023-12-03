@@ -20,8 +20,16 @@ namespace Google\Service\ShoppingContent;
 class OrderPromotion extends \Google\Collection
 {
   protected $collection_key = 'appliedItems';
+  /**
+   * @var OrderPromotionItem[]
+   */
+  public $applicableItems;
   protected $applicableItemsType = OrderPromotionItem::class;
   protected $applicableItemsDataType = 'array';
+  /**
+   * @var OrderPromotionItem[]
+   */
+  public $appliedItems;
   protected $appliedItemsType = OrderPromotionItem::class;
   protected $appliedItemsDataType = 'array';
   /**
@@ -36,6 +44,10 @@ class OrderPromotion extends \Google\Collection
    * @var string
    */
   public $merchantPromotionId;
+  /**
+   * @var Price
+   */
+  public $priceValue;
   protected $priceValueType = Price::class;
   protected $priceValueDataType = '';
   /**
@@ -50,6 +62,10 @@ class OrderPromotion extends \Google\Collection
    * @var string
    */
   public $subtype;
+  /**
+   * @var Price
+   */
+  public $taxValue;
   protected $taxValueType = Price::class;
   protected $taxValueDataType = '';
   /**
