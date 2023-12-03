@@ -20,6 +20,10 @@ namespace Google\Service\ServiceDirectory;
 class ListNamespacesResponse extends \Google\Collection
 {
   protected $collection_key = 'namespaces';
+  /**
+   * @var ServicedirectoryNamespace[]
+   */
+  public $namespaces;
   protected $namespacesType = ServicedirectoryNamespace::class;
   protected $namespacesDataType = 'array';
   /**

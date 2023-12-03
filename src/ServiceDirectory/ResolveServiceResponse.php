@@ -19,6 +19,10 @@ namespace Google\Service\ServiceDirectory;
 
 class ResolveServiceResponse extends \Google\Model
 {
+  /**
+   * @var Service
+   */
+  public $service;
   protected $serviceType = Service::class;
   protected $serviceDataType = '';
 
