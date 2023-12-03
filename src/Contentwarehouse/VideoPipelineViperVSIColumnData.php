@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoPipelineViperVSIColumnData extends \Google\Collection
 {
   protected $collection_key = 'vsiStats';
+  /**
+   * @var VideoVideoStreamInfo
+   */
+  public $info;
   protected $infoType = VideoVideoStreamInfo::class;
   protected $infoDataType = '';
   public $inputReadTime;
@@ -28,6 +32,10 @@ class VideoPipelineViperVSIColumnData extends \Google\Collection
    */
   public $partialFile;
   public $totalVsiTime;
+  /**
+   * @var VideoPipelineViperVSIColumnDataVsiStats[]
+   */
+  public $vsiStats;
   protected $vsiStatsType = VideoPipelineViperVSIColumnDataVsiStats::class;
   protected $vsiStatsDataType = 'array';
 

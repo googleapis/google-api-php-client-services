@@ -19,18 +19,38 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchVideoScoreInfo extends \Google\Model
 {
+  /**
+   * @var VideoContentSearchVideoCommonFeatures
+   */
+  public $commonFeatures;
   protected $commonFeaturesType = VideoContentSearchVideoCommonFeatures::class;
   protected $commonFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchOcrVideoFeature
+   */
+  public $ocrVideoFeature;
   protected $ocrVideoFeatureType = VideoContentSearchOcrVideoFeature::class;
   protected $ocrVideoFeatureDataType = '';
+  /**
+   * @var ClassifierPornQueryMultiLabelClassifierOutput
+   */
+  public $safeSearchClassifierOutput;
   protected $safeSearchClassifierOutputType = ClassifierPornQueryMultiLabelClassifierOutput::class;
   protected $safeSearchClassifierOutputDataType = '';
   /**
    * @var string
    */
   public $version;
+  /**
+   * @var VideoContentSearchVideoGeneratedQueryFeatures
+   */
+  public $videoGeneratedQueryFeatures;
   protected $videoGeneratedQueryFeaturesType = VideoContentSearchVideoGeneratedQueryFeatures::class;
   protected $videoGeneratedQueryFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchVideoMultimodalTopicFeatures
+   */
+  public $videoMultimodalTopicFeatures;
   protected $videoMultimodalTopicFeaturesType = VideoContentSearchVideoMultimodalTopicFeatures::class;
   protected $videoMultimodalTopicFeaturesDataType = '';
 

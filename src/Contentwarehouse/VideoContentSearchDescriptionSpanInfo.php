@@ -23,8 +23,16 @@ class VideoContentSearchDescriptionSpanInfo extends \Google\Model
    * @var int
    */
   public $contextTokenCount;
+  /**
+   * @var VideoContentSearchSpanDolphinScores
+   */
+  public $dolphinScores;
   protected $dolphinScoresType = VideoContentSearchSpanDolphinScores::class;
   protected $dolphinScoresDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $spanDolphinScoreStats;
   protected $spanDolphinScoreStatsType = VideoContentSearchMetricStats::class;
   protected $spanDolphinScoreStatsDataType = '';
   /**

@@ -19,32 +19,80 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchVideoAnchorsScoreInfo extends \Google\Model
 {
+  /**
+   * @var VideoContentSearchAnchorsCommonFeatureSet
+   */
+  public $anchorsCommonFeatureSet;
   protected $anchorsCommonFeatureSetType = VideoContentSearchAnchorsCommonFeatureSet::class;
   protected $anchorsCommonFeatureSetDataType = '';
+  /**
+   * @var VideoContentSearchCaptionEntityAnchorSetFeatures
+   */
+  public $captionEntityAnchorSetFeatures;
   protected $captionEntityAnchorSetFeaturesType = VideoContentSearchCaptionEntityAnchorSetFeatures::class;
   protected $captionEntityAnchorSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchCaptionSpanAnchorSetFeatures
+   */
+  public $captionSpanAnchorSetFeatures;
   protected $captionSpanAnchorSetFeaturesType = VideoContentSearchCaptionSpanAnchorSetFeatures::class;
   protected $captionSpanAnchorSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchCommentAnchorSetFeatures
+   */
+  public $commentAnchorSetFeatures;
   protected $commentAnchorSetFeaturesType = VideoContentSearchCommentAnchorSetFeatures::class;
   protected $commentAnchorSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchDescriptionAnchorSetFeatures
+   */
+  public $descriptionAnchorSetFeatures;
   protected $descriptionAnchorSetFeaturesType = VideoContentSearchDescriptionAnchorSetFeatures::class;
   protected $descriptionAnchorSetFeaturesDataType = '';
   /**
    * @var bool
    */
   public $filtered;
+  /**
+   * @var VideoContentSearchListAnchorSetFeatures
+   */
+  public $listAnchorSetFeatures;
   protected $listAnchorSetFeaturesType = VideoContentSearchListAnchorSetFeatures::class;
   protected $listAnchorSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchListTrainingDataSetFeatures
+   */
+  public $listTrainingDataSetFeatures;
   protected $listTrainingDataSetFeaturesType = VideoContentSearchListTrainingDataSetFeatures::class;
   protected $listTrainingDataSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchOnScreenTextClusterFeature
+   */
+  public $ocrAnchorClusterFeature;
   protected $ocrAnchorClusterFeatureType = VideoContentSearchOnScreenTextClusterFeature::class;
   protected $ocrAnchorClusterFeatureDataType = '';
+  /**
+   * @var VideoContentSearchOcrDescriptionTrainingDataSetFeatures
+   */
+  public $ocrDescriptionTrainingDataSetFeatures;
   protected $ocrDescriptionTrainingDataSetFeaturesType = VideoContentSearchOcrDescriptionTrainingDataSetFeatures::class;
   protected $ocrDescriptionTrainingDataSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchQnaAnchorSetFeatures
+   */
+  public $qnaAnchorSetFeatures;
   protected $qnaAnchorSetFeaturesType = VideoContentSearchQnaAnchorSetFeatures::class;
   protected $qnaAnchorSetFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchVideoAnchorSetRatingScore
+   */
+  public $ratingScore;
   protected $ratingScoreType = VideoContentSearchVideoAnchorSetRatingScore::class;
   protected $ratingScoreDataType = '';
+  /**
+   * @var VideoContentSearchSportsKeyMomentsAnchorSetFeatures
+   */
+  public $sportsKeyMomentsAnchorSetFeatures;
   protected $sportsKeyMomentsAnchorSetFeaturesType = VideoContentSearchSportsKeyMomentsAnchorSetFeatures::class;
   protected $sportsKeyMomentsAnchorSetFeaturesDataType = '';
 

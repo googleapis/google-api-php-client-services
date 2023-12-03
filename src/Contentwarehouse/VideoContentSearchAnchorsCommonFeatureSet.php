@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchAnchorsCommonFeatureSet extends \Google\Model
 {
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $dolphinDescriptivenessStats;
   protected $dolphinDescriptivenessStatsType = VideoContentSearchMetricStats::class;
   protected $dolphinDescriptivenessStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $dolphinUsefulnessStats;
   protected $dolphinUsefulnessStatsType = VideoContentSearchMetricStats::class;
   protected $dolphinUsefulnessStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $mumDescriptivenessStats;
   protected $mumDescriptivenessStatsType = VideoContentSearchMetricStats::class;
   protected $mumDescriptivenessStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $mumUsefulnessStats;
   protected $mumUsefulnessStatsType = VideoContentSearchMetricStats::class;
   protected $mumUsefulnessStatsDataType = '';
 

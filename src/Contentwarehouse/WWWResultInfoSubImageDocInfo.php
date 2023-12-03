@@ -60,6 +60,10 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
    * @var float
    */
   public $estSigmaU;
+  /**
+   * @var ImageContentFlowProtoProd
+   */
+  public $flowOutput;
   protected $flowOutputType = ImageContentFlowProtoProd::class;
   protected $flowOutputDataType = '';
   /**

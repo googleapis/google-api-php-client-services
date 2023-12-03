@@ -267,6 +267,10 @@ class SuperrootPodcastsRecommendationsPodcastRecsFeatures extends \Google\Collec
    * @var string
    */
   public $trendingScorePercent;
+  /**
+   * @var SuperrootPodcastsRecommendationsPodcastRecsFeaturesUserLanguage[]
+   */
+  public $ulpLanguage;
   protected $ulpLanguageType = SuperrootPodcastsRecommendationsPodcastRecsFeaturesUserLanguage::class;
   protected $ulpLanguageDataType = 'array';
   /**
@@ -279,6 +283,10 @@ class SuperrootPodcastsRecommendationsPodcastRecsFeatures extends \Google\Collec
   public $userClusterDistance;
   public $userInterestsSalientSimilarity;
   public $userInterestsWebrefSimilarity;
+  /**
+   * @var SuperrootPodcastsRecommendationsPodcastRecsFeaturesUserLanguage[]
+   */
+  public $userLanguage;
   protected $userLanguageType = SuperrootPodcastsRecommendationsPodcastRecsFeaturesUserLanguage::class;
   protected $userLanguageDataType = 'array';
   public $violenceScore;

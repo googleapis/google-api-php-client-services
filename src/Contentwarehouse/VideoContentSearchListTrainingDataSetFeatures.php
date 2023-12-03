@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchListTrainingDataSetFeatures extends \Google\Model
 {
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $editDistanceRatioStats;
   protected $editDistanceRatioStatsType = VideoContentSearchMetricStats::class;
   protected $editDistanceRatioStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $editDistanceStats;
   protected $editDistanceStatsType = VideoContentSearchMetricStats::class;
   protected $editDistanceStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $matchedDescriptionAnchorsTimegapStats;
   protected $matchedDescriptionAnchorsTimegapStatsType = VideoContentSearchMetricStats::class;
   protected $matchedDescriptionAnchorsTimegapStatsDataType = '';
   /**

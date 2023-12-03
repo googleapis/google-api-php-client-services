@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoThumbnailsFrameFileList extends \Google\Collection
 {
   protected $collection_key = 'frameFiles';
+  /**
+   * @var VideoThumbnailsFrameFile[]
+   */
+  public $frameFiles;
   protected $frameFilesType = VideoThumbnailsFrameFile::class;
   protected $frameFilesDataType = 'array';
 

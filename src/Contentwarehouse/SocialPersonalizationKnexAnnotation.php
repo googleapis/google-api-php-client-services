@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SocialPersonalizationKnexAnnotation extends \Google\Collection
 {
   protected $collection_key = 'item';
+  /**
+   * @var SocialPersonalizationKnexAnnotationItem[]
+   */
+  public $item;
   protected $itemType = SocialPersonalizationKnexAnnotationItem::class;
   protected $itemDataType = 'array';
 

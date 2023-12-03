@@ -27,6 +27,10 @@ class StorageGraphBfgUmpPolicyMetadata extends \Google\Model
    * @var string
    */
   public $availabilityStarts;
+  /**
+   * @var KeGovernanceTypedRegions
+   */
+  public $regionsAllowed;
   protected $regionsAllowedType = KeGovernanceTypedRegions::class;
   protected $regionsAllowedDataType = '';
 

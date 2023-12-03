@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoVideoStreamInfoAudioStream extends \Google\Collection
 {
   protected $collection_key = 'metadata';
+  /**
+   * @var VideoAmbisonicsAmbisonicsMetadata
+   */
+  public $ambisonics;
   protected $ambisonicsType = VideoAmbisonicsAmbisonicsMetadata::class;
   protected $ambisonicsDataType = '';
   /**
@@ -71,6 +75,10 @@ class VideoVideoStreamInfoAudioStream extends \Google\Collection
    */
   public $language;
   public $length;
+  /**
+   * @var VideoClipInfo[]
+   */
+  public $metadata;
   protected $metadataType = VideoClipInfo::class;
   protected $metadataDataType = 'array';
   /**

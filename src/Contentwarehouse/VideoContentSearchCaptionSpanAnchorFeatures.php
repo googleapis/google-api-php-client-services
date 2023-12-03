@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchCaptionSpanAnchorFeatures extends \Google\Collection
 {
   protected $collection_key = 'embeddingDistance';
+  /**
+   * @var VideoContentSearchSpanDolphinFeatures
+   */
+  public $dolphinFeatures;
   protected $dolphinFeaturesType = VideoContentSearchSpanDolphinFeatures::class;
   protected $dolphinFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchSpanDolphinScores
+   */
+  public $dolphinScores;
   protected $dolphinScoresType = VideoContentSearchSpanDolphinScores::class;
   protected $dolphinScoresDataType = '';
   /**
@@ -52,8 +60,16 @@ class VideoContentSearchCaptionSpanAnchorFeatures extends \Google\Collection
    * @var int
    */
   public $saftTranscriptStartCharOffset;
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $spanAsrConfidenceStats;
   protected $spanAsrConfidenceStatsType = VideoContentSearchMetricStats::class;
   protected $spanAsrConfidenceStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $spanDolphinScore;
   protected $spanDolphinScoreType = VideoContentSearchMetricStats::class;
   protected $spanDolphinScoreDataType = '';
   /**

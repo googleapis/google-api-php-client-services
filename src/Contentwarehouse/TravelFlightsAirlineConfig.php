@@ -24,26 +24,46 @@ class TravelFlightsAirlineConfig extends \Google\Collection
    * @var string
    */
   public $alliance;
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $baggageCarryonLimitationsUrls;
   protected $baggageCarryonLimitationsUrlsType = TravelFlightsNameCatalogProto::class;
   protected $baggageCarryonLimitationsUrlsDataType = '';
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $baggageFeeUrls;
   protected $baggageFeeUrlsType = TravelFlightsNameCatalogProto::class;
   protected $baggageFeeUrlsDataType = '';
   /**
    * @var string
    */
   public $countryCode;
+  /**
+   * @var TravelFlightsAirlineConfigCountryContactInfo[]
+   */
+  public $countryContactInfo;
   protected $countryContactInfoType = TravelFlightsAirlineConfigCountryContactInfo::class;
   protected $countryContactInfoDataType = 'array';
   /**
    * @var bool
    */
   public $dupFlag;
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $fareFamilyUrls;
   protected $fareFamilyUrlsType = TravelFlightsNameCatalogProto::class;
   protected $fareFamilyUrlsDataType = '';
   /**
    * @var string[]
    */
   public $fqtvPartnerCode;
+  /**
+   * @var TravelFlightsAirlineConfigGreenFaresInfo
+   */
+  public $greenFaresInfo;
   protected $greenFaresInfoType = TravelFlightsAirlineConfigGreenFaresInfo::class;
   protected $greenFaresInfoDataType = '';
   /**
@@ -58,30 +78,58 @@ class TravelFlightsAirlineConfig extends \Google\Collection
    * @var string
    */
   public $innovataCode;
+  /**
+   * @var TravelFlightsAirlineConfigLocalizedContactInfo[]
+   */
+  public $localizedContactInfo;
   protected $localizedContactInfoType = TravelFlightsAirlineConfigLocalizedContactInfo::class;
   protected $localizedContactInfoDataType = 'array';
   /**
    * @var string
    */
   public $mid;
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $names;
   protected $namesType = TravelFlightsNameCatalogProto::class;
   protected $namesDataType = '';
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $passengerAssistanceUrls;
   protected $passengerAssistanceUrlsType = TravelFlightsNameCatalogProto::class;
   protected $passengerAssistanceUrlsDataType = '';
   /**
    * @var int
    */
   public $popularity;
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $shortNames;
   protected $shortNamesType = TravelFlightsNameCatalogProto::class;
   protected $shortNamesDataType = '';
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $sustainabilityProgramUrls;
   protected $sustainabilityProgramUrlsType = TravelFlightsNameCatalogProto::class;
   protected $sustainabilityProgramUrlsDataType = '';
   /**
    * @var string
    */
   public $type;
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $urls;
   protected $urlsType = TravelFlightsNameCatalogProto::class;
   protected $urlsDataType = '';
+  /**
+   * @var TravelFlightsNameCatalogProto
+   */
+  public $waiverSummaryUrls;
   protected $waiverSummaryUrlsType = TravelFlightsNameCatalogProto::class;
   protected $waiverSummaryUrlsDataType = '';
 

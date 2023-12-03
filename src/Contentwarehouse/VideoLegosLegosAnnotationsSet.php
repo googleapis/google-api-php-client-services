@@ -23,6 +23,10 @@ class VideoLegosLegosAnnotationsSet extends \Google\Model
    * @var string
    */
   public $featureSetName;
+  /**
+   * @var YoutubeDiscoveryLegosLegosAnnotations
+   */
+  public $legosAnnotations;
   protected $legosAnnotationsType = YoutubeDiscoveryLegosLegosAnnotations::class;
   protected $legosAnnotationsDataType = '';
 

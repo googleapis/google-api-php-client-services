@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class TravelFlightsNameCatalogProto extends \Google\Collection
 {
   protected $collection_key = 'name';
+  /**
+   * @var TravelFlightsNameCatalogEntry[]
+   */
+  public $name;
   protected $nameType = TravelFlightsNameCatalogEntry::class;
   protected $nameDataType = 'array';
 

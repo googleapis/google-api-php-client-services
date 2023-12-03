@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchInstructionTrainingDataAnchorFeatures extends \Google\Collection
 {
   protected $collection_key = 'instructionAnchorsMatchInfo';
+  /**
+   * @var VideoContentSearchSimilarityMatchInfo[]
+   */
+  public $bestAsrAndDescriptionAnchorsMatchInfo;
   protected $bestAsrAndDescriptionAnchorsMatchInfoType = VideoContentSearchSimilarityMatchInfo::class;
   protected $bestAsrAndDescriptionAnchorsMatchInfoDataType = 'array';
+  /**
+   * @var VideoContentSearchSimilarityMatchInfo[]
+   */
+  public $bestDescriptionAndInstructionAnchorsMatchInfo;
   protected $bestDescriptionAndInstructionAnchorsMatchInfoType = VideoContentSearchSimilarityMatchInfo::class;
   protected $bestDescriptionAndInstructionAnchorsMatchInfoDataType = 'array';
+  /**
+   * @var VideoContentSearchSimilarityMatchInfo[]
+   */
+  public $instructionAnchorsMatchInfo;
   protected $instructionAnchorsMatchInfoType = VideoContentSearchSimilarityMatchInfo::class;
   protected $instructionAnchorsMatchInfoDataType = 'array';
 

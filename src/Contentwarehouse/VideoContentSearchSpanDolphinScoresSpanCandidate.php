@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchSpanDolphinScoresSpanCandidate extends \Google\Model
 {
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $asrConfidenceStats;
   protected $asrConfidenceStatsType = VideoContentSearchMetricStats::class;
   protected $asrConfidenceStatsDataType = '';
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $scoreStats;
   protected $scoreStatsType = VideoContentSearchMetricStats::class;
   protected $scoreStatsDataType = '';
   /**

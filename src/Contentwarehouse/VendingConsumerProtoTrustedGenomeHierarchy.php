@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VendingConsumerProtoTrustedGenomeHierarchy extends \Google\Collection
 {
   protected $collection_key = 'entity';
+  /**
+   * @var VendingConsumerProtoTrustedGenomeEntity[]
+   */
+  public $entity;
   protected $entityType = VendingConsumerProtoTrustedGenomeEntity::class;
   protected $entityDataType = 'array';
   /**

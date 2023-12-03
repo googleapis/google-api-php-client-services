@@ -27,8 +27,16 @@ class VideoContentSearchAnchorThumbnail extends \Google\Model
    * @var bool
    */
   public $isThumbnailMissing;
+  /**
+   * @var ImageBaseThumbnailMetadata
+   */
+  public $servingMetadata;
   protected $servingMetadataType = ImageBaseThumbnailMetadata::class;
   protected $servingMetadataDataType = '';
+  /**
+   * @var VideoContentSearchAnchorThumbnailInfo
+   */
+  public $thumbnailInfo;
   protected $thumbnailInfoType = VideoContentSearchAnchorThumbnailInfo::class;
   protected $thumbnailInfoDataType = '';
   /**

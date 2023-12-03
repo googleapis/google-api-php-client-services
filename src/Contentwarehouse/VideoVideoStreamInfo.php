@@ -54,6 +54,10 @@ class VideoVideoStreamInfo extends \Google\Collection
    * @var string
    */
   public $audioStartTimestamp;
+  /**
+   * @var VideoVideoStreamInfoAudioStream[]
+   */
+  public $audioStream;
   protected $audioStreamType = VideoVideoStreamInfoAudioStream::class;
   protected $audioStreamDataType = 'array';
   /**
@@ -82,6 +86,10 @@ class VideoVideoStreamInfo extends \Google\Collection
    * @var bool
    */
   public $containsChapters;
+  /**
+   * @var VideoVideoStreamInfoDataStream[]
+   */
+  public $dataStream;
   protected $dataStreamType = VideoVideoStreamInfoDataStream::class;
   protected $dataStreamDataType = 'array';
   /**
@@ -116,8 +124,16 @@ class VideoVideoStreamInfo extends \Google\Collection
    * @var int
    */
   public $fileType;
+  /**
+   * @var VideoGoogleVideoClipInfo
+   */
+  public $googleVideoClipInfo;
   protected $googleVideoClipInfoType = VideoGoogleVideoClipInfo::class;
   protected $googleVideoClipInfoDataType = '';
+  /**
+   * @var VideoVideoStreamInfoVideoStream[]
+   */
+  public $imageStream;
   protected $imageStreamType = VideoVideoStreamInfoVideoStream::class;
   protected $imageStreamDataType = 'array';
   /**
@@ -136,6 +152,10 @@ class VideoVideoStreamInfo extends \Google\Collection
    * @var int
    */
   public $level;
+  /**
+   * @var VideoVideoStreamInfoMetadata
+   */
+  public $metadata;
   protected $metadataType = VideoVideoStreamInfoMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -178,9 +198,17 @@ class VideoVideoStreamInfo extends \Google\Collection
    * @var string
    */
   public $profile;
+  /**
+   * @var VideoVideoStreamInfoTimedTextStream[]
+   */
+  public $timedtextStream;
   protected $timedtextStreamType = VideoVideoStreamInfoTimedTextStream::class;
   protected $timedtextStreamDataType = 'array';
   public $videoBitrate;
+  /**
+   * @var VideoVideoClipInfo
+   */
+  public $videoClipInfo;
   protected $videoClipInfoType = VideoVideoClipInfo::class;
   protected $videoClipInfoDataType = '';
   /**
@@ -254,6 +282,10 @@ class VideoVideoStreamInfo extends \Google\Collection
    * @var string
    */
   public $videoStartTimestamp;
+  /**
+   * @var VideoVideoStreamInfoVideoStream[]
+   */
+  public $videoStream;
   protected $videoStreamType = VideoVideoStreamInfoVideoStream::class;
   protected $videoStreamDataType = 'array';
   /**

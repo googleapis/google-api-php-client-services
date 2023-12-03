@@ -43,12 +43,20 @@ class TrawlerFetchReplyDataRedirects extends \Google\Model
    * @var string
    */
   public $badSSLCertificate;
+  /**
+   * @var TrawlerCrawlTimes
+   */
+  public $crawlTimes;
   protected $crawlTimesType = TrawlerCrawlTimes::class;
   protected $crawlTimesDataType = '';
   /**
    * @var int
    */
   public $downloadTime;
+  /**
+   * @var TrawlerTCPIPInfo
+   */
+  public $endpoints;
   protected $endpointsType = TrawlerTCPIPInfo::class;
   protected $endpointsDataType = '';
   /**
@@ -95,6 +103,10 @@ class TrawlerFetchReplyDataRedirects extends \Google\Model
    * @var string
    */
   public $robotsTxt;
+  /**
+   * @var TrawlerFetchBodyData
+   */
+  public $sourceBody;
   protected $sourceBodyType = TrawlerFetchBodyData::class;
   protected $sourceBodyDataType = '';
   /**

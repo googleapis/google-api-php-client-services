@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchCaptionLabelFeatures extends \Google\Collection
 {
   protected $collection_key = 'alignedOcrTexts';
+  /**
+   * @var VideoContentSearchOCRText[]
+   */
+  public $alignedOcrTexts;
   protected $alignedOcrTextsType = VideoContentSearchOCRText::class;
   protected $alignedOcrTextsDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class VideoContentSearchCaptionLabelFeatures extends \Google\Collection
    * @var string
    */
   public $labelText;
+  /**
+   * @var VideoContentSearchTextSimilarityFeatures
+   */
+  public $textSimilarityFeatures;
   protected $textSimilarityFeaturesType = VideoContentSearchTextSimilarityFeatures::class;
   protected $textSimilarityFeaturesDataType = '';
   /**

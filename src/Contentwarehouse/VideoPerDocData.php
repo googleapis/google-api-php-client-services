@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoPerDocData extends \Google\Model
 {
+  /**
+   * @var MediaIndexVideoCoreSignals
+   */
+  public $coreSignals;
   protected $coreSignalsType = MediaIndexVideoCoreSignals::class;
   protected $coreSignalsDataType = '';
+  /**
+   * @var MediaIndexVideoFrames
+   */
+  public $frames;
   protected $framesType = MediaIndexVideoFrames::class;
   protected $framesDataType = '';
 

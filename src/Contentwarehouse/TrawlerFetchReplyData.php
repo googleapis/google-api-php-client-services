@@ -76,12 +76,20 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var string
    */
   public $badSSLCertificate;
+  /**
+   * @var TrawlerClientServiceInfo
+   */
+  public $clientServiceInfo;
   protected $clientServiceInfoType = TrawlerClientServiceInfo::class;
   protected $clientServiceInfoDataType = '';
   /**
    * @var bool
    */
   public $compressedBody;
+  /**
+   * @var TrawlerCrawlTimes
+   */
+  public $crawlTimes;
   protected $crawlTimesType = TrawlerCrawlTimes::class;
   protected $crawlTimesDataType = '';
   /**
@@ -100,8 +108,16 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var string
    */
   public $eligibleGeoCrawlEgressRegion;
+  /**
+   * @var TrawlerTCPIPInfo
+   */
+  public $endpoints;
   protected $endpointsType = TrawlerTCPIPInfo::class;
   protected $endpointsDataType = '';
+  /**
+   * @var TrawlerEvent[]
+   */
+  public $events;
   protected $eventsType = TrawlerEvent::class;
   protected $eventsDataType = 'array';
   /**
@@ -128,6 +144,10 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var string
    */
   public $hSTSInfo;
+  /**
+   * @var TrawlerFetchReplyDataHTTPHeader[]
+   */
+  public $hTTPTrailers;
   protected $hTTPTrailersType = TrawlerFetchReplyDataHTTPHeader::class;
   protected $hTTPTrailersDataType = 'array';
   /**
@@ -146,6 +166,10 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var int
    */
   public $hopRobotsInfo;
+  /**
+   * @var TrawlerHostBucketData
+   */
+  public $hostBucketData;
   protected $hostBucketDataType = TrawlerHostBucketData::class;
   protected $hostBucketDataDataType = '';
   /**
@@ -172,8 +196,16 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var string
    */
   public $iD;
+  /**
+   * @var TrawlerFetchStatus
+   */
+  public $lastUrlStatus;
   protected $lastUrlStatusType = TrawlerFetchStatus::class;
   protected $lastUrlStatusDataType = '';
+  /**
+   * @var TrawlerPolicyData[]
+   */
+  public $policyData;
   protected $policyDataType = TrawlerPolicyData::class;
   protected $policyDataDataType = 'array';
   /**
@@ -208,14 +240,26 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var int
    */
   public $robotsInfo;
+  /**
+   * @var TrawlerFetchStatus
+   */
+  public $robotsStatus;
   protected $robotsStatusType = TrawlerFetchStatus::class;
   protected $robotsStatusDataType = '';
   /**
    * @var string
    */
   public $robotsTxt;
+  /**
+   * @var TrawlerFetchStatus
+   */
+  public $status;
   protected $statusType = TrawlerFetchStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var TrawlerThrottleClientData
+   */
+  public $throttleClient;
   protected $throttleClientType = TrawlerThrottleClientData::class;
   protected $throttleClientDataType = '';
   /**
@@ -234,6 +278,10 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var string[]
    */
   public $transparentRewrites;
+  /**
+   * @var TrawlerTrawlerPrivateFetchReplyData
+   */
+  public $trawlerPrivate;
   protected $trawlerPrivateType = TrawlerTrawlerPrivateFetchReplyData::class;
   protected $trawlerPrivateDataType = '';
   /**
@@ -248,26 +296,54 @@ class TrawlerFetchReplyData extends \Google\Collection
    * @var bool
    */
   public $useHtmlCompressDictionary;
+  /**
+   * @var TrawlerFetchReplyDataCrawlDates
+   */
+  public $crawldates;
   protected $crawldatesType = TrawlerFetchReplyDataCrawlDates::class;
   protected $crawldatesDataType = '';
+  /**
+   * @var TrawlerFetchReplyDataDeliveryReport
+   */
+  public $deliveryReport;
   protected $deliveryReportType = TrawlerFetchReplyDataDeliveryReport::class;
   protected $deliveryReportDataType = '';
+  /**
+   * @var TrawlerFetchReplyDataFetchStats
+   */
+  public $fetchstats;
   protected $fetchstatsType = TrawlerFetchReplyDataFetchStats::class;
   protected $fetchstatsDataType = '';
   /**
    * @var string
    */
   public $originalProtocolUrl;
+  /**
+   * @var TrawlerFetchReplyDataPartialResponse
+   */
+  public $partialresponse;
   protected $partialresponseType = TrawlerFetchReplyDataPartialResponse::class;
   protected $partialresponseDataType = '';
+  /**
+   * @var TrawlerFetchReplyDataProtocolResponse
+   */
+  public $protocolresponse;
   protected $protocolresponseType = TrawlerFetchReplyDataProtocolResponse::class;
   protected $protocolresponseDataType = '';
+  /**
+   * @var TrawlerFetchReplyDataRedirects[]
+   */
+  public $redirects;
   protected $redirectsType = TrawlerFetchReplyDataRedirects::class;
   protected $redirectsDataType = 'array';
   /**
    * @var string
    */
   public $trafficType;
+  /**
+   * @var TrawlerFetchReplyDataWebIOInfo
+   */
+  public $webioInfo;
   protected $webioInfoType = TrawlerFetchReplyDataWebIOInfo::class;
   protected $webioInfoDataType = '';
 

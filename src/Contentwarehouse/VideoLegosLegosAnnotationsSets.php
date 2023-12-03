@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoLegosLegosAnnotationsSets extends \Google\Collection
 {
   protected $collection_key = 'annotationsSet';
+  /**
+   * @var VideoLegosLegosAnnotationsSet[]
+   */
+  public $annotationsSet;
   protected $annotationsSetType = VideoLegosLegosAnnotationsSet::class;
   protected $annotationsSetDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoYoutubeCommentsClassificationProtoYouTubeCommentSmartReply extends \Google\Collection
 {
   protected $collection_key = 'smartSuggestions';
+  /**
+   * @var VideoYoutubeCommentsClassificationProtoSmartSuggestion[]
+   */
+  public $smartSuggestions;
   protected $smartSuggestionsType = VideoYoutubeCommentsClassificationProtoSmartSuggestion::class;
   protected $smartSuggestionsDataType = 'array';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class VideoPipelineViperThumbnailerColumnData extends \Google\Collection
 {
   protected $collection_key = 'frameBlobRefs';
+  /**
+   * @var BlobstoreBlobRef[]
+   */
+  public $frameBlobRefs;
   protected $frameBlobRefsType = BlobstoreBlobRef::class;
   protected $frameBlobRefsDataType = 'array';
+  /**
+   * @var VideoThumbnailsFrameFileList
+   */
+  public $frameFileList;
   protected $frameFileListType = VideoThumbnailsFrameFileList::class;
   protected $frameFileListDataType = '';
   /**

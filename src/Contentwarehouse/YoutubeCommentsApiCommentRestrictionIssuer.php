@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class YoutubeCommentsApiCommentRestrictionIssuer extends \Google\Model
 {
+  /**
+   * @var YoutubeCommentsApiCommentRestrictionIssuerChannelModeratorDetails
+   */
+  public $channelModeratorDetails;
   protected $channelModeratorDetailsType = YoutubeCommentsApiCommentRestrictionIssuerChannelModeratorDetails::class;
   protected $channelModeratorDetailsDataType = '';
+  /**
+   * @var YoutubeCommentsApiCommentRestrictionIssuerChannelOwnerDetails
+   */
+  public $channelOwnerDetails;
   protected $channelOwnerDetailsType = YoutubeCommentsApiCommentRestrictionIssuerChannelOwnerDetails::class;
   protected $channelOwnerDetailsDataType = '';
   /**

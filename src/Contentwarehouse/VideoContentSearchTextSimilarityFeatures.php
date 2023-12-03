@@ -48,6 +48,10 @@ class VideoContentSearchTextSimilarityFeatures extends \Google\Collection
    * @var float
    */
   public $tokenMatchPercent;
+  /**
+   * @var VideoContentSearchTokenAlignment[]
+   */
+  public $wordAlignment;
   protected $wordAlignmentType = VideoContentSearchTokenAlignment::class;
   protected $wordAlignmentDataType = 'array';
 

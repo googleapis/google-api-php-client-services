@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchListAnchorFeatures extends \Google\Collection
 {
   protected $collection_key = 'matchScores';
+  /**
+   * @var VideoContentSearchTextMatchInfo
+   */
+  public $babelMatch;
   protected $babelMatchType = VideoContentSearchTextMatchInfo::class;
   protected $babelMatchDataType = '';
+  /**
+   * @var VideoContentSearchDescriptionSpanInfo
+   */
+  public $descriptionSpanInfo;
   protected $descriptionSpanInfoType = VideoContentSearchDescriptionSpanInfo::class;
   protected $descriptionSpanInfoDataType = '';
   /**
    * @var int
    */
   public $listItemIndex;
+  /**
+   * @var VideoContentSearchMatchScores[]
+   */
+  public $matchScores;
   protected $matchScoresType = VideoContentSearchMatchScores::class;
   protected $matchScoresDataType = 'array';
   /**

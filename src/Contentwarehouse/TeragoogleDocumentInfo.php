@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class TeragoogleDocumentInfo extends \Google\Collection
 {
   protected $collection_key = 'section';
+  /**
+   * @var TeragoogleDocumentInfoAttachment[]
+   */
+  public $attachment;
   protected $attachmentType = TeragoogleDocumentInfoAttachment::class;
   protected $attachmentDataType = 'array';
   /**
    * @var int
    */
   public $averageTermWeight;
+  /**
+   * @var GDocumentBase
+   */
+  public $doc;
   protected $docType = GDocumentBase::class;
   protected $docDataType = '';
   /**
@@ -40,6 +48,10 @@ class TeragoogleDocumentInfo extends \Google\Collection
    * @var int
    */
   public $originalEncoding;
+  /**
+   * @var TeragoogleDocumentInfoSection[]
+   */
+  public $section;
   protected $sectionDataType = 'array';
   /**
    * @var string

@@ -20,22 +20,42 @@ namespace Google\Service\Contentwarehouse;
 class SocialStanzaStanzaRestriction extends \Google\Collection
 {
   protected $collection_key = 'deleteReason';
+  /**
+   * @var AbuseiamAbuseType[]
+   */
+  public $abuseTypes;
   protected $abuseTypesType = AbuseiamAbuseType::class;
   protected $abuseTypesDataType = 'array';
   /**
    * @var string
    */
   public $appealState;
+  /**
+   * @var AbuseiamContentRestriction
+   */
+  public $contentRestriction;
   protected $contentRestrictionType = AbuseiamContentRestriction::class;
   protected $contentRestrictionDataType = '';
   /**
    * @var string[]
    */
   public $deleteReason;
+  /**
+   * @var SocialStanzaDeliveryRestriction
+   */
+  public $deliveryRestriction;
   protected $deliveryRestrictionType = SocialStanzaDeliveryRestriction::class;
   protected $deliveryRestrictionDataType = '';
+  /**
+   * @var AppsPeopleActivityBackendDestinationStream
+   */
+  public $destinationStream;
   protected $destinationStreamType = AppsPeopleActivityBackendDestinationStream::class;
   protected $destinationStreamDataType = '';
+  /**
+   * @var SocialStanzaModerationInfo
+   */
+  public $moderationInfo;
   protected $moderationInfoType = SocialStanzaModerationInfo::class;
   protected $moderationInfoDataType = '';
   /**

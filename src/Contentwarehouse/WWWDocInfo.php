@@ -108,6 +108,10 @@ class WWWDocInfo extends \Google\Collection
    * @var int
    */
   public $imageHeight;
+  /**
+   * @var ImageSearchImageLicenseInfo
+   */
+  public $imageLicenseInfo;
   protected $imageLicenseInfoType = ImageSearchImageLicenseInfo::class;
   protected $imageLicenseInfoDataType = '';
   /**
@@ -210,6 +214,10 @@ class WWWDocInfo extends \Google\Collection
    * @var string
    */
   public $referrerUrl;
+  /**
+   * @var WWWDocInfoRelatedImages[]
+   */
+  public $relatedimages;
   protected $relatedimagesType = WWWDocInfoRelatedImages::class;
   protected $relatedimagesDataType = 'array';
   /**
@@ -240,8 +248,16 @@ class WWWDocInfo extends \Google\Collection
    * @var bool
    */
   public $seenNotranslate;
+  /**
+   * @var QualityShoppingShoppingAttachment
+   */
+  public $shoppingAttachment;
   protected $shoppingAttachmentType = QualityShoppingShoppingAttachment::class;
   protected $shoppingAttachmentDataType = '';
+  /**
+   * @var ImageMustangShoppingOffer[]
+   */
+  public $shoppingOffers;
   protected $shoppingOffersType = ImageMustangShoppingOffer::class;
   protected $shoppingOffersDataType = 'array';
   /**
@@ -256,6 +272,10 @@ class WWWDocInfo extends \Google\Collection
    * @var int
    */
   public $thumbWidth;
+  /**
+   * @var WWWDocInfoThumbnail[]
+   */
+  public $thumbnail;
   protected $thumbnailType = WWWDocInfoThumbnail::class;
   protected $thumbnailDataType = 'array';
   /**

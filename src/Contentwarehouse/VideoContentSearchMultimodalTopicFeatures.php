@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchMultimodalTopicFeatures extends \Google\Collection
 {
   protected $collection_key = 'generativeTopicPredictionFeatures';
+  /**
+   * @var VideoContentSearchFrameSimilarityInterval[]
+   */
+  public $frameSimilarityInterval;
   protected $frameSimilarityIntervalType = VideoContentSearchFrameSimilarityInterval::class;
   protected $frameSimilarityIntervalDataType = 'array';
+  /**
+   * @var VideoContentSearchGenerativeTopicPredictionFeatures[]
+   */
+  public $generativeTopicPredictionFeatures;
   protected $generativeTopicPredictionFeaturesType = VideoContentSearchGenerativeTopicPredictionFeatures::class;
   protected $generativeTopicPredictionFeaturesDataType = 'array';
+  /**
+   * @var VideoContentSearchNavboostAnchorFeatures
+   */
+  public $navboostAnchorFeatures;
   protected $navboostAnchorFeaturesType = VideoContentSearchNavboostAnchorFeatures::class;
   protected $navboostAnchorFeaturesDataType = '';
   /**

@@ -194,12 +194,20 @@ class TrawlerTrawlerPrivateFetchReplyData extends \Google\Model
    * @var string
    */
   public $largeStoreHitLocation;
+  /**
+   * @var TrawlerMultiverseClientIdentifier
+   */
+  public $multiverseClientIdentifier;
   protected $multiverseClientIdentifierType = TrawlerMultiverseClientIdentifier::class;
   protected $multiverseClientIdentifierDataType = '';
   /**
    * @var string
    */
   public $numDroppedReplies;
+  /**
+   * @var TrawlerOriginalClientParams
+   */
+  public $originalClientParams;
   protected $originalClientParamsType = TrawlerOriginalClientParams::class;
   protected $originalClientParamsDataType = '';
   /**
@@ -218,6 +226,10 @@ class TrawlerTrawlerPrivateFetchReplyData extends \Google\Model
    * @var string
    */
   public $tier;
+  /**
+   * @var TrawlerLoggedVPCDestination
+   */
+  public $vpcDestination;
   protected $vpcDestinationType = TrawlerLoggedVPCDestination::class;
   protected $vpcDestinationDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class TravelFlightsAirlineConfigLocalizedContactInfo extends \Google\Collection
 {
   protected $collection_key = 'contactInfo';
+  /**
+   * @var TravelFlightsAirlineConfigContactInfo[]
+   */
+  public $contactInfo;
   protected $contactInfoType = TravelFlightsAirlineConfigContactInfo::class;
   protected $contactInfoDataType = 'array';
   /**

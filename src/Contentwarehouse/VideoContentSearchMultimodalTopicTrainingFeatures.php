@@ -20,16 +20,32 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchMultimodalTopicTrainingFeatures extends \Google\Collection
 {
   protected $collection_key = 'topicDenseVector';
+  /**
+   * @var VideoContentSearchFrameSimilarityInterval
+   */
+  public $maxFrameSimilarityInterval;
   protected $maxFrameSimilarityIntervalType = VideoContentSearchFrameSimilarityInterval::class;
   protected $maxFrameSimilarityIntervalDataType = '';
   /**
    * @var string
    */
   public $normalizedTopic;
+  /**
+   * @var VideoContentSearchQbstTermsOverlapFeatures
+   */
+  public $qbstTermsOverlapFeatures;
   protected $qbstTermsOverlapFeaturesType = VideoContentSearchQbstTermsOverlapFeatures::class;
   protected $qbstTermsOverlapFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchRankEmbedNearestNeighborsFeatures
+   */
+  public $rankembedNearestNeighborsFeatures;
   protected $rankembedNearestNeighborsFeaturesType = VideoContentSearchRankEmbedNearestNeighborsFeatures::class;
   protected $rankembedNearestNeighborsFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchSaftEntityInfo
+   */
+  public $saftEntityInfo;
   protected $saftEntityInfoType = VideoContentSearchSaftEntityInfo::class;
   protected $saftEntityInfoDataType = '';
   /**

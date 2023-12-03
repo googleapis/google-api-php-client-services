@@ -19,14 +19,34 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoFileSphericalMetadata extends \Google\Model
 {
+  /**
+   * @var VideoFileSphericalMetadataFOVBounds
+   */
+  public $clampedOptimalFovBounds;
   protected $clampedOptimalFovBoundsType = VideoFileSphericalMetadataFOVBounds::class;
   protected $clampedOptimalFovBoundsDataType = '';
+  /**
+   * @var VideoFileSphericalMetadataCubemapProjection
+   */
+  public $cubemap;
   protected $cubemapType = VideoFileSphericalMetadataCubemapProjection::class;
   protected $cubemapDataType = '';
+  /**
+   * @var VideoFileSphericalMetadataCroppedArea
+   */
+  public $deprecatedCroppedArea;
   protected $deprecatedCroppedAreaType = VideoFileSphericalMetadataCroppedArea::class;
   protected $deprecatedCroppedAreaDataType = '';
+  /**
+   * @var VideoFileSphericalMetadataViewDirection
+   */
+  public $deprecatedInitialView;
   protected $deprecatedInitialViewType = VideoFileSphericalMetadataViewDirection::class;
   protected $deprecatedInitialViewDataType = '';
+  /**
+   * @var VideoFileSphericalMetadataEquirectProjection
+   */
+  public $equirect;
   protected $equirectType = VideoFileSphericalMetadataEquirectProjection::class;
   protected $equirectDataType = '';
   /**
@@ -37,14 +57,26 @@ class VideoFileSphericalMetadata extends \Google\Model
    * @var int
    */
   public $fullPanoWidthPixels;
+  /**
+   * @var VideoFileSphericalMetadataMeshProjection
+   */
+  public $mesh;
   protected $meshType = VideoFileSphericalMetadataMeshProjection::class;
   protected $meshDataType = '';
   /**
    * @var string
    */
   public $metadataSource;
+  /**
+   * @var VideoFileSphericalMetadataFOVBounds
+   */
+  public $optimalFovBounds;
   protected $optimalFovBoundsType = VideoFileSphericalMetadataFOVBounds::class;
   protected $optimalFovBoundsDataType = '';
+  /**
+   * @var VideoFileSphericalMetadataPose
+   */
+  public $pose;
   protected $poseType = VideoFileSphericalMetadataPose::class;
   protected $poseDataType = '';
   /**

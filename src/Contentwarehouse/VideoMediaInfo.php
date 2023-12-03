@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class VideoMediaInfo extends \Google\Collection
 {
   protected $collection_key = 'videoStream';
+  /**
+   * @var VideoAudioStream[]
+   */
+  public $audioStream;
   protected $audioStreamType = VideoAudioStream::class;
   protected $audioStreamDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class VideoMediaInfo extends \Google\Collection
    * @var string
    */
   public $fileSize;
+  /**
+   * @var VideoMediaOverview
+   */
+  public $overview;
   protected $overviewType = VideoMediaOverview::class;
   protected $overviewDataType = '';
+  /**
+   * @var VideoVideoStream[]
+   */
+  public $videoStream;
   protected $videoStreamType = VideoVideoStream::class;
   protected $videoStreamDataType = 'array';
 

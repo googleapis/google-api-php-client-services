@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class YoutubeCommentsApiCommentModeratedRestriction extends \Google\Collection
 {
   protected $collection_key = 'autoModEnforcements';
+  /**
+   * @var YoutubeCommentsApiCommentModeratedRestrictionAutoModDecisionEnforcement[]
+   */
+  public $autoModEnforcements;
   protected $autoModEnforcementsType = YoutubeCommentsApiCommentModeratedRestrictionAutoModDecisionEnforcement::class;
   protected $autoModEnforcementsDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class YoutubeCommentsApiCommentModeratedRestriction extends \Google\Collection
    * @var string
    */
   public $externalCommentId;
+  /**
+   * @var YoutubeCommentsApiCommentRestrictionIssuer
+   */
+  public $issuer;
   protected $issuerType = YoutubeCommentsApiCommentRestrictionIssuer::class;
   protected $issuerDataType = '';
+  /**
+   * @var YoutubeCommentsApiCommentRestrictionReason
+   */
+  public $reason;
   protected $reasonType = YoutubeCommentsApiCommentRestrictionReason::class;
   protected $reasonDataType = '';
   /**

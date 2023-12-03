@@ -20,18 +20,38 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
 {
   protected $collection_key = 'textSimilarityFeatures';
+  /**
+   * @var VideoContentSearchAnchorCommonFeatureSet
+   */
+  public $anchorCommonFeatureSet;
   protected $anchorCommonFeatureSetType = VideoContentSearchAnchorCommonFeatureSet::class;
   protected $anchorCommonFeatureSetDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $attachments;
   protected $attachmentsType = Proto2BridgeMessageSet::class;
   protected $attachmentsDataType = '';
   /**
    * @var string
    */
   public $babelCheckpointPath;
+  /**
+   * @var VideoContentSearchCaptionEntityAnchorFeatures
+   */
+  public $captionEntityAnchorFeatures;
   protected $captionEntityAnchorFeaturesType = VideoContentSearchCaptionEntityAnchorFeatures::class;
   protected $captionEntityAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchCaptionSpanAnchorFeatures
+   */
+  public $captionSpanAnchorFeatures;
   protected $captionSpanAnchorFeaturesType = VideoContentSearchCaptionSpanAnchorFeatures::class;
   protected $captionSpanAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchDescriptionAnchorFeatures
+   */
+  public $descriptionAnchorFeatures;
   protected $descriptionAnchorFeaturesType = VideoContentSearchDescriptionAnchorFeatures::class;
   protected $descriptionAnchorFeaturesDataType = '';
   /**
@@ -42,44 +62,108 @@ class VideoContentSearchVideoAnchorScoreInfo extends \Google\Collection
    * @var bool
    */
   public $filtered;
+  /**
+   * @var VideoContentSearchGenerativePredictionFeatures[]
+   */
+  public $generativeFeatures;
   protected $generativeFeaturesType = VideoContentSearchGenerativePredictionFeatures::class;
   protected $generativeFeaturesDataType = 'array';
+  /**
+   * @var VideoContentSearchInstructionAnchorFeatures
+   */
+  public $instructionAnchorFeatures;
   protected $instructionAnchorFeaturesType = VideoContentSearchInstructionAnchorFeatures::class;
   protected $instructionAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchInstructionTrainingDataAnchorFeatures
+   */
+  public $instructionTrainingDataAnchorFeatures;
   protected $instructionTrainingDataAnchorFeaturesType = VideoContentSearchInstructionTrainingDataAnchorFeatures::class;
   protected $instructionTrainingDataAnchorFeaturesDataType = '';
   /**
    * @var string
    */
   public $labelLanguage;
+  /**
+   * @var VideoContentSearchVideoAnchorScoreInfoLabelTransformation[]
+   */
+  public $labelTransformation;
   protected $labelTransformationType = VideoContentSearchVideoAnchorScoreInfoLabelTransformation::class;
   protected $labelTransformationDataType = 'array';
+  /**
+   * @var VideoContentSearchListAnchorFeatures
+   */
+  public $listAnchorFeatures;
   protected $listAnchorFeaturesType = VideoContentSearchListAnchorFeatures::class;
   protected $listAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchListTrainingDataAnchorFeatures
+   */
+  public $listTrainingDataAnchorFeatures;
   protected $listTrainingDataAnchorFeaturesType = VideoContentSearchListTrainingDataAnchorFeatures::class;
   protected $listTrainingDataAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchMultimodalTopicFeatures
+   */
+  public $multimodalTopicFeatures;
   protected $multimodalTopicFeaturesType = VideoContentSearchMultimodalTopicFeatures::class;
   protected $multimodalTopicFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchMultimodalTopicTrainingFeatures
+   */
+  public $multimodalTopicTrainingFeatures;
   protected $multimodalTopicTrainingFeaturesType = VideoContentSearchMultimodalTopicTrainingFeatures::class;
   protected $multimodalTopicTrainingFeaturesDataType = '';
   /**
    * @var float[]
    */
   public $normalizedBabelEmbedding;
+  /**
+   * @var VideoContentSearchOnScreenTextFeature
+   */
+  public $ocrAnchorFeature;
   protected $ocrAnchorFeatureType = VideoContentSearchOnScreenTextFeature::class;
   protected $ocrAnchorFeatureDataType = '';
+  /**
+   * @var VideoContentSearchOcrDescriptionTrainingDataAnchorFeatures
+   */
+  public $ocrDescriptionTrainingDataAnchorFeatures;
   protected $ocrDescriptionTrainingDataAnchorFeaturesType = VideoContentSearchOcrDescriptionTrainingDataAnchorFeatures::class;
   protected $ocrDescriptionTrainingDataAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchShoppingOpinionsAnchorFeatures
+   */
+  public $opinionsAnchorFeatures;
   protected $opinionsAnchorFeaturesType = VideoContentSearchShoppingOpinionsAnchorFeatures::class;
   protected $opinionsAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchQnaAnchorFeatures
+   */
+  public $qnaAnchorFeatures;
   protected $qnaAnchorFeaturesType = VideoContentSearchQnaAnchorFeatures::class;
   protected $qnaAnchorFeaturesDataType = '';
+  /**
+   * @var VideoContentSearchVideoAnchorRatingScore
+   */
+  public $ratingScore;
   protected $ratingScoreType = VideoContentSearchVideoAnchorRatingScore::class;
   protected $ratingScoreDataType = '';
+  /**
+   * @var ClassifierPornQueryMultiLabelClassifierOutput
+   */
+  public $safeSearchClassifierOutput;
   protected $safeSearchClassifierOutputType = ClassifierPornQueryMultiLabelClassifierOutput::class;
   protected $safeSearchClassifierOutputDataType = '';
+  /**
+   * @var VideoContentSearchTextSimilarityFeatures[]
+   */
+  public $textSimilarityFeatures;
   protected $textSimilarityFeaturesType = VideoContentSearchTextSimilarityFeatures::class;
   protected $textSimilarityFeaturesDataType = 'array';
+  /**
+   * @var VideoContentSearchAnchorThumbnailInfo
+   */
+  public $thumbnailInfo;
   protected $thumbnailInfoType = VideoContentSearchAnchorThumbnailInfo::class;
   protected $thumbnailInfoDataType = '';
 

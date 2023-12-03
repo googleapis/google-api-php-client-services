@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchCaptionSpanAnchorSetFeatures extends \Google\Model
 {
+  /**
+   * @var VideoContentSearchMetricStats
+   */
+  public $anchorSetDolphinScoreStats;
   protected $anchorSetDolphinScoreStatsType = VideoContentSearchMetricStats::class;
   protected $anchorSetDolphinScoreStatsDataType = '';
 

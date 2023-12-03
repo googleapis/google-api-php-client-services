@@ -20,12 +20,28 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchVideoAnchorSets extends \Google\Collection
 {
   protected $collection_key = 'videoAnchors';
+  /**
+   * @var VideoContentSearchVideoActions
+   */
+  public $videoActions;
   protected $videoActionsType = VideoContentSearchVideoActions::class;
   protected $videoActionsDataType = '';
+  /**
+   * @var VideoContentSearchVideoAnchors[]
+   */
+  public $videoAnchors;
   protected $videoAnchorsType = VideoContentSearchVideoAnchors::class;
   protected $videoAnchorsDataType = 'array';
+  /**
+   * @var VideoContentSearchVideoInfo
+   */
+  public $videoInfo;
   protected $videoInfoType = VideoContentSearchVideoInfo::class;
   protected $videoInfoDataType = '';
+  /**
+   * @var VideoContentSearchVideoScoreInfo
+   */
+  public $videoScoreInfo;
   protected $videoScoreInfoType = VideoContentSearchVideoScoreInfo::class;
   protected $videoScoreInfoDataType = '';
 
