@@ -20,6 +20,10 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1ListInsightsResponse extends \Google\Collection
 {
   protected $collection_key = 'insights';
+  /**
+   * @var GoogleCloudRecommenderV1Insight[]
+   */
+  public $insights;
   protected $insightsType = GoogleCloudRecommenderV1Insight::class;
   protected $insightsDataType = 'array';
   /**

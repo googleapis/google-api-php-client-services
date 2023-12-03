@@ -20,6 +20,10 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1OperationGroup extends \Google\Collection
 {
   protected $collection_key = 'operations';
+  /**
+   * @var GoogleCloudRecommenderV1Operation[]
+   */
+  public $operations;
   protected $operationsType = GoogleCloudRecommenderV1Operation::class;
   protected $operationsDataType = 'array';
 

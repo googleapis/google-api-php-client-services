@@ -20,10 +20,22 @@ namespace Google\Service\Recommender;
 class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
 {
   protected $collection_key = 'associatedInsights';
+  /**
+   * @var GoogleCloudRecommenderV1Impact[]
+   */
+  public $additionalImpact;
   protected $additionalImpactType = GoogleCloudRecommenderV1Impact::class;
   protected $additionalImpactDataType = 'array';
+  /**
+   * @var GoogleCloudRecommenderV1RecommendationInsightReference[]
+   */
+  public $associatedInsights;
   protected $associatedInsightsType = GoogleCloudRecommenderV1RecommendationInsightReference::class;
   protected $associatedInsightsDataType = 'array';
+  /**
+   * @var GoogleCloudRecommenderV1RecommendationContent
+   */
+  public $content;
   protected $contentType = GoogleCloudRecommenderV1RecommendationContent::class;
   protected $contentDataType = '';
   /**
@@ -42,6 +54,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudRecommenderV1Impact
+   */
+  public $primaryImpact;
   protected $primaryImpactType = GoogleCloudRecommenderV1Impact::class;
   protected $primaryImpactDataType = '';
   /**
@@ -52,6 +68,10 @@ class GoogleCloudRecommenderV1Recommendation extends \Google\Collection
    * @var string
    */
   public $recommenderSubtype;
+  /**
+   * @var GoogleCloudRecommenderV1RecommendationStateInfo
+   */
+  public $stateInfo;
   protected $stateInfoType = GoogleCloudRecommenderV1RecommendationStateInfo::class;
   protected $stateInfoDataType = '';
   /**

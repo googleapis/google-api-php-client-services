@@ -19,6 +19,10 @@ namespace Google\Service\Recommender;
 
 class GoogleCloudRecommenderV1CostProjection extends \Google\Model
 {
+  /**
+   * @var GoogleTypeMoney
+   */
+  public $cost;
   protected $costType = GoogleTypeMoney::class;
   protected $costDataType = '';
   /**

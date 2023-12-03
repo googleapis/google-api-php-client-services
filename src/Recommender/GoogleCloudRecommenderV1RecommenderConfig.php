@@ -35,6 +35,10 @@ class GoogleCloudRecommenderV1RecommenderConfig extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudRecommenderV1RecommenderGenerationConfig
+   */
+  public $recommenderGenerationConfig;
   protected $recommenderGenerationConfigType = GoogleCloudRecommenderV1RecommenderGenerationConfig::class;
   protected $recommenderGenerationConfigDataType = '';
   /**
