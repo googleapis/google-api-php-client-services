@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleAssistantAccessoryV1DeviceState extends \Google\Collection
 {
   protected $collection_key = 'unavailableSettings';
+  /**
+   * @var GoogleAssistantEmbeddedV1Alarms
+   */
+  public $alarmState;
   protected $alarmStateType = GoogleAssistantEmbeddedV1Alarms::class;
   protected $alarmStateDataType = '';
   /**
@@ -30,20 +34,36 @@ class GoogleAssistantAccessoryV1DeviceState extends \Google\Collection
    * @var string
    */
   public $deviceTime;
+  /**
+   * @var GoogleTypeTimeZone
+   */
+  public $deviceTimeZone;
   protected $deviceTimeZoneType = GoogleTypeTimeZone::class;
   protected $deviceTimeZoneDataType = '';
   /**
    * @var bool
    */
   public $doNotDisturb;
+  /**
+   * @var GoogleAssistantEmbeddedV1FitnessActivities
+   */
+  public $fitnessActivitiesState;
   protected $fitnessActivitiesStateType = GoogleAssistantEmbeddedV1FitnessActivities::class;
   protected $fitnessActivitiesStateDataType = '';
+  /**
+   * @var GoogleAssistantAccessoryV1DeviceStateInstalledAppsState
+   */
+  public $installedApps;
   protected $installedAppsType = GoogleAssistantAccessoryV1DeviceStateInstalledAppsState::class;
   protected $installedAppsDataType = '';
   /**
    * @var string
    */
   public $installedAppsZlib;
+  /**
+   * @var GoogleAssistantEmbeddedV1Timers
+   */
+  public $timerState;
   protected $timerStateType = GoogleAssistantEmbeddedV1Timers::class;
   protected $timerStateDataType = '';
   /**

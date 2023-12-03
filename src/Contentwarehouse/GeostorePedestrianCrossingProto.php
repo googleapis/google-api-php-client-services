@@ -33,6 +33,10 @@ class GeostorePedestrianCrossingProto extends \Google\Collection
    * @var float
    */
   public $offset;
+  /**
+   * @var GeostoreRestrictionProto[]
+   */
+  public $restriction;
   protected $restrictionType = GeostoreRestrictionProto::class;
   protected $restrictionDataType = 'array';
   /**

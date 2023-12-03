@@ -24,6 +24,10 @@ class GeostoreTrackProto extends \Google\Collection
    * @var int
    */
   public $index;
+  /**
+   * @var GeostorePoseProto[]
+   */
+  public $pose;
   protected $poseType = GeostorePoseProto::class;
   protected $poseDataType = 'array';
 

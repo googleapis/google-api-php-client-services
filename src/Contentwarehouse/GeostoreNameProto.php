@@ -28,6 +28,10 @@ class GeostoreNameProto extends \Google\Collection
    * @var string
    */
   public $language;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
   /**
@@ -38,6 +42,10 @@ class GeostoreNameProto extends \Google\Collection
    * @var string
    */
   public $shortText;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
   /**

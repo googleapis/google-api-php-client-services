@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GeostorePolyLineProto extends \Google\Collection
 {
   protected $collection_key = 'vertex';
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
+  /**
+   * @var GeostorePointProto[]
+   */
+  public $vertex;
   protected $vertexType = GeostorePointProto::class;
   protected $vertexDataType = 'array';
 

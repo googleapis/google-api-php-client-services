@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreLocaleProto extends \Google\Collection
 {
   protected $collection_key = 'language';
+  /**
+   * @var GeostoreLocaleLanguageProto[]
+   */
+  public $language;
   protected $languageType = GeostoreLocaleLanguageProto::class;
   protected $languageDataType = 'array';
   /**

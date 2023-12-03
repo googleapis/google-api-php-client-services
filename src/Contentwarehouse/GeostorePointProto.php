@@ -27,8 +27,16 @@ class GeostorePointProto extends \Google\Model
    * @var string
    */
   public $lngE7;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
 

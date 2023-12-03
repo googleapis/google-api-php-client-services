@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTimeScheduleProto extends \Google\Collection
 {
   protected $collection_key = 'component';
+  /**
+   * @var GeostoreTimeComponentProto[]
+   */
+  public $component;
   protected $componentType = GeostoreTimeComponentProto::class;
   protected $componentDataType = 'array';
 

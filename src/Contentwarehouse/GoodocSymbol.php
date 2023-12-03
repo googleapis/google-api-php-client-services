@@ -26,16 +26,32 @@ class GoodocSymbol extends \Google\Collection
         "label" => "Label",
         "rotatedBox" => "RotatedBox",
   ];
+  /**
+   * @var GoodocBoundingBox
+   */
+  public $box;
   protected $boxType = GoodocBoundingBox::class;
   protected $boxDataType = '';
   /**
    * @var int
    */
   public $code;
+  /**
+   * @var GoodocLabel
+   */
+  public $label;
   protected $labelType = GoodocLabel::class;
   protected $labelDataType = '';
+  /**
+   * @var GoodocRotatedBoundingBox
+   */
+  public $rotatedBox;
   protected $rotatedBoxType = GoodocRotatedBoundingBox::class;
   protected $rotatedBoxDataType = '';
+  /**
+   * @var GoodocSymbolSymbolVariant[]
+   */
+  public $symbolvariant;
   protected $symbolvariantType = GoodocSymbolSymbolVariant::class;
   protected $symbolvariantDataType = 'array';
 

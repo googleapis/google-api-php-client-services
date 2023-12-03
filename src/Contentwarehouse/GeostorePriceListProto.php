@@ -24,16 +24,32 @@ class GeostorePriceListProto extends \Google\Collection
    * @var string
    */
   public $aggregatorId;
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $availableTime;
   protected $availableTimeType = GeostoreTimeScheduleProto::class;
   protected $availableTimeDataType = '';
   /**
    * @var string[]
    */
   public $cuisines;
+  /**
+   * @var GeostorePriceListNameInfoProto[]
+   */
+  public $nameInfo;
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
+  /**
+   * @var GeostorePriceListSectionProto[]
+   */
+  public $section;
   protected $sectionType = GeostorePriceListSectionProto::class;
   protected $sectionDataType = 'array';
+  /**
+   * @var GeostoreUrlListProto
+   */
+  public $sourceUrl;
   protected $sourceUrlType = GeostoreUrlListProto::class;
   protected $sourceUrlDataType = '';
 

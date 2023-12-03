@@ -23,6 +23,10 @@ class GoodocParagraphDroppedCap extends \Google\Model
         "box" => "Box",
         "lettersCount" => "LettersCount",
   ];
+  /**
+   * @var GoodocBoundingBox
+   */
+  public $box;
   protected $boxType = GoodocBoundingBox::class;
   protected $boxDataType = '';
   /**

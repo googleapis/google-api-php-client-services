@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleAssistantAccessoryV1ResponseConfig extends \Google\Model
 {
+  /**
+   * @var GoogleAssistantAccessoryV1AudioOutConfig
+   */
+  public $audioOutConfig;
   protected $audioOutConfigType = GoogleAssistantAccessoryV1AudioOutConfig::class;
   protected $audioOutConfigDataType = '';
+  /**
+   * @var GoogleAssistantAccessoryV1DeviceConfig
+   */
+  public $deviceConfig;
   protected $deviceConfigType = GoogleAssistantAccessoryV1DeviceConfig::class;
   protected $deviceConfigDataType = '';
   /**
    * @var string
    */
   public $deviceInteraction;
+  /**
+   * @var GoogleAssistantAccessoryV1DeviceState
+   */
+  public $deviceState;
   protected $deviceStateType = GoogleAssistantAccessoryV1DeviceState::class;
   protected $deviceStateDataType = '';
   /**
@@ -45,6 +57,10 @@ class GoogleAssistantAccessoryV1ResponseConfig extends \Google\Model
    * @var string
    */
   public $responseType;
+  /**
+   * @var GoogleAssistantAccessoryV1ScreenOutConfig
+   */
+  public $screenOutConfig;
   protected $screenOutConfigType = GoogleAssistantAccessoryV1ScreenOutConfig::class;
   protected $screenOutConfigDataType = '';
 

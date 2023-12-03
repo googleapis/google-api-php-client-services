@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRegulatedAreaProto extends \Google\Collection
 {
   protected $collection_key = 'restriction';
+  /**
+   * @var GeostoreRestrictionProto[]
+   */
+  public $restriction;
   protected $restrictionType = GeostoreRestrictionProto::class;
   protected $restrictionDataType = 'array';
 

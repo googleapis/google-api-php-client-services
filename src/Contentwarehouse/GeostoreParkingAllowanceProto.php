@@ -28,14 +28,26 @@ class GeostoreParkingAllowanceProto extends \Google\Collection
    * @var bool
    */
   public $isDiscount;
+  /**
+   * @var FreebaseTopic[]
+   */
+  public $minPurchaseForValidation;
   protected $minPurchaseForValidationType = FreebaseTopic::class;
   protected $minPurchaseForValidationDataType = 'array';
+  /**
+   * @var GeostoreLanguageTaggedTextProto[]
+   */
+  public $permitType;
   protected $permitTypeType = GeostoreLanguageTaggedTextProto::class;
   protected $permitTypeDataType = 'array';
   /**
    * @var string[]
    */
   public $serviceType;
+  /**
+   * @var GeostoreTimeBasedRateProto[]
+   */
+  public $timeBasedRate;
   protected $timeBasedRateType = GeostoreTimeBasedRateProto::class;
   protected $timeBasedRateDataType = 'array';
   /**

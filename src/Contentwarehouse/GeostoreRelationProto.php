@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRelationProto extends \Google\Collection
 {
   protected $collection_key = 'otherFeatureName';
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $otherFeatureCountryCode;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $otherFeatureId;
   protected $otherFeatureIdType = GeostoreFeatureIdProto::class;
   protected $otherFeatureIdDataType = '';
+  /**
+   * @var GeostoreNameProto[]
+   */
+  public $otherFeatureName;
   protected $otherFeatureNameType = GeostoreNameProto::class;
   protected $otherFeatureNameDataType = 'array';
   /**
@@ -50,6 +62,10 @@ class GeostoreRelationProto extends \Google\Collection
    * @var bool
    */
   public $relationIsReversed;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
 

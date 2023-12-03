@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTransitLineProto extends \Google\Collection
 {
   protected $collection_key = 'stations';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $agency;
   protected $agencyType = GeostoreFeatureIdProto::class;
   protected $agencyDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class GeostoreTransitLineProto extends \Google\Collection
    * @var string
    */
   public $labelTextColor;
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $stations;
   protected $stationsType = GeostoreFeatureIdProto::class;
   protected $stationsDataType = 'array';
   /**

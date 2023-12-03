@@ -20,12 +20,28 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1CreateDocumentResponse extends \Google\Collection
 {
   protected $collection_key = 'longRunningOperations';
+  /**
+   * @var GoogleCloudContentwarehouseV1Document
+   */
+  public $document;
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
+  /**
+   * @var GoogleLongrunningOperation[]
+   */
+  public $longRunningOperations;
   protected $longRunningOperationsType = GoogleLongrunningOperation::class;
   protected $longRunningOperationsDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RuleEngineOutput
+   */
+  public $ruleEngineOutput;
   protected $ruleEngineOutputType = GoogleCloudContentwarehouseV1RuleEngineOutput::class;
   protected $ruleEngineOutputDataType = '';
 

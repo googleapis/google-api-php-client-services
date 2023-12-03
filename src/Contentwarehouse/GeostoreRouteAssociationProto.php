@@ -23,8 +23,16 @@ class GeostoreRouteAssociationProto extends \Google\Model
    * @var string
    */
   public $displayPreference;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $route;
   protected $routeType = GeostoreFeatureIdProto::class;
   protected $routeDataType = '';
   /**

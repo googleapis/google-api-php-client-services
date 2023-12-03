@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleAssistantAccessoryV1DeviceConfig extends \Google\Model
 {
+  /**
+   * @var GoogleAssistantEmbeddedV1DeviceModelCapabilitiesOverride
+   */
+  public $deviceModelCapabilitiesOverride;
   protected $deviceModelCapabilitiesOverrideType = GoogleAssistantEmbeddedV1DeviceModelCapabilitiesOverride::class;
   protected $deviceModelCapabilitiesOverrideDataType = '';
   /**
    * @var string
    */
   public $heterodyneToken;
+  /**
+   * @var GoogleAssistantEmbeddedV1SurfaceIdentity
+   */
+  public $surfaceIdentity;
   protected $surfaceIdentityType = GoogleAssistantEmbeddedV1SurfaceIdentity::class;
   protected $surfaceIdentityDataType = '';
 

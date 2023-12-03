@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRoadMonitorProto extends \Google\Collection
 {
   protected $collection_key = 'monitoredRoad';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $monitoredRoad;
   protected $monitoredRoadType = GeostoreFeatureIdProto::class;
   protected $monitoredRoadDataType = 'array';
 

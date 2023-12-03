@@ -19,16 +19,32 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1CreateDocumentRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1CloudAIDocumentOption
+   */
+  public $cloudAiDocumentOption;
   protected $cloudAiDocumentOptionType = GoogleCloudContentwarehouseV1CloudAIDocumentOption::class;
   protected $cloudAiDocumentOptionDataType = '';
   /**
    * @var string
    */
   public $createMask;
+  /**
+   * @var GoogleCloudContentwarehouseV1Document
+   */
+  public $document;
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
+  /**
+   * @var GoogleIamV1Policy
+   */
+  public $policy;
   protected $policyType = GoogleIamV1Policy::class;
   protected $policyDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
 

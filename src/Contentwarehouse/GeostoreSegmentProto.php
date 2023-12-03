@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreSegmentProto extends \Google\Collection
 {
   protected $collection_key = 'visibleLandmark';
+  /**
+   * @var GeostoreAppliedSpeedLimitProto[]
+   */
+  public $advisoryMaximumSpeed;
   protected $advisoryMaximumSpeedType = GeostoreAppliedSpeedLimitProto::class;
   protected $advisoryMaximumSpeedDataType = 'array';
   /**
@@ -30,12 +34,20 @@ class GeostoreSegmentProto extends \Google\Collection
    * @var float
    */
   public $avgSpeedKph;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $avgSpeedKphMetadata;
   protected $avgSpeedKphMetadataType = GeostoreFieldMetadataProto::class;
   protected $avgSpeedKphMetadataDataType = '';
   /**
    * @var string
    */
   public $barrier;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $barrierMetadata;
   protected $barrierMetadataType = GeostoreFieldMetadataProto::class;
   protected $barrierMetadataDataType = '';
   /**
@@ -50,16 +62,32 @@ class GeostoreSegmentProto extends \Google\Collection
    * @var string
    */
   public $condition;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $conditionMetadata;
   protected $conditionMetadataType = GeostoreFieldMetadataProto::class;
   protected $conditionMetadataDataType = '';
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $constructionBeginDate;
   protected $constructionBeginDateType = GeostoreDateTimeProto::class;
   protected $constructionBeginDateDataType = '';
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $constructionEndDate;
   protected $constructionEndDateType = GeostoreDateTimeProto::class;
   protected $constructionEndDateDataType = '';
   /**
    * @var string
    */
   public $constructionStatus;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $constructionStatusMetadata;
   protected $constructionStatusMetadataType = GeostoreFieldMetadataProto::class;
   protected $constructionStatusMetadataDataType = '';
   /**
@@ -70,6 +98,10 @@ class GeostoreSegmentProto extends \Google\Collection
    * @var float
    */
   public $distanceToEdge;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $distanceToEdgeMetadata;
   protected $distanceToEdgeMetadataType = GeostoreFieldMetadataProto::class;
   protected $distanceToEdgeMetadataDataType = '';
   /**
@@ -84,44 +116,84 @@ class GeostoreSegmentProto extends \Google\Collection
    * @var string
    */
   public $elevation;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $elevationMetadata;
   protected $elevationMetadataType = GeostoreFieldMetadataProto::class;
   protected $elevationMetadataDataType = '';
   /**
    * @var string
    */
   public $endpoint;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $endpointMetadata;
   protected $endpointMetadataType = GeostoreFieldMetadataProto::class;
   protected $endpointMetadataDataType = '';
+  /**
+   * @var GeostoreGradeLevelProto[]
+   */
+  public $gradeLevel;
   protected $gradeLevelType = GeostoreGradeLevelProto::class;
   protected $gradeLevelDataType = 'array';
+  /**
+   * @var GeostoreInternalSegmentProto
+   */
+  public $internal;
   protected $internalType = GeostoreInternalSegmentProto::class;
   protected $internalDataType = '';
   /**
    * @var float
    */
   public $interpolationOffsetMeters;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $intersection;
   protected $intersectionType = GeostoreFeatureIdProto::class;
   protected $intersectionDataType = '';
   /**
    * @var bool
    */
   public $isMaxPermittedSpeedDerived;
+  /**
+   * @var GeostoreLaneProto[]
+   */
+  public $lane;
   protected $laneType = GeostoreLaneProto::class;
   protected $laneDataType = 'array';
+  /**
+   * @var GeostoreAppliedSpeedLimitProto[]
+   */
+  public $legalMaximumSpeed;
   protected $legalMaximumSpeedType = GeostoreAppliedSpeedLimitProto::class;
   protected $legalMaximumSpeedDataType = 'array';
+  /**
+   * @var GeostoreAppliedSpeedLimitProto[]
+   */
+  public $legalMinimumSpeed;
   protected $legalMinimumSpeedType = GeostoreAppliedSpeedLimitProto::class;
   protected $legalMinimumSpeedDataType = 'array';
   /**
    * @var float
    */
   public $maxPermittedSpeedKph;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $maxPermittedSpeedKphMetadata;
   protected $maxPermittedSpeedKphMetadataType = GeostoreFieldMetadataProto::class;
   protected $maxPermittedSpeedKphMetadataDataType = '';
   /**
    * @var bool
    */
   public $onRight;
+  /**
+   * @var GeostorePedestrianCrossingProto
+   */
+  public $pedestrianCrossing;
   protected $pedestrianCrossingType = GeostorePedestrianCrossingProto::class;
   protected $pedestrianCrossingDataType = '';
   /**
@@ -136,34 +208,78 @@ class GeostoreSegmentProto extends \Google\Collection
    * @var string
    */
   public $priority;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $priorityMetadata;
   protected $priorityMetadataType = GeostoreFieldMetadataProto::class;
   protected $priorityMetadataDataType = '';
+  /**
+   * @var GeostoreSegmentProtoRampProto
+   */
+  public $ramp;
   protected $rampType = GeostoreSegmentProtoRampProto::class;
   protected $rampDataType = '';
+  /**
+   * @var GeostoreRestrictionProto[]
+   */
+  public $restriction;
   protected $restrictionType = GeostoreRestrictionProto::class;
   protected $restrictionDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $roadMonitor;
   protected $roadMonitorType = GeostoreFeatureIdProto::class;
   protected $roadMonitorDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $roadSign;
   protected $roadSignType = GeostoreFeatureIdProto::class;
   protected $roadSignDataType = 'array';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $route;
   protected $routeType = GeostoreFeatureIdProto::class;
   protected $routeDataType = 'array';
+  /**
+   * @var GeostoreRouteAssociationProto[]
+   */
+  public $routeAssociation;
   protected $routeAssociationType = GeostoreRouteAssociationProto::class;
   protected $routeAssociationDataType = 'array';
   /**
    * @var bool
    */
   public $separatedRoadways;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $sibling;
   protected $siblingType = GeostoreFeatureIdProto::class;
   protected $siblingDataType = '';
+  /**
+   * @var GeostoreSlopeProto[]
+   */
+  public $slope;
   protected $slopeType = GeostoreSlopeProto::class;
   protected $slopeDataType = 'array';
   /**
    * @var string
    */
   public $surface;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $surfaceMetadata;
   protected $surfaceMetadataType = GeostoreFieldMetadataProto::class;
   protected $surfaceMetadataDataType = '';
+  /**
+   * @var GeostoreSweepProto[]
+   */
+  public $sweep;
   protected $sweepType = GeostoreSweepProto::class;
   protected $sweepDataType = 'array';
   /**
@@ -174,6 +290,10 @@ class GeostoreSegmentProto extends \Google\Collection
    * @var string
    */
   public $usage;
+  /**
+   * @var GeostoreLandmarkReferenceProto[]
+   */
+  public $visibleLandmark;
   protected $visibleLandmarkType = GeostoreLandmarkReferenceProto::class;
   protected $visibleLandmarkDataType = 'array';
 

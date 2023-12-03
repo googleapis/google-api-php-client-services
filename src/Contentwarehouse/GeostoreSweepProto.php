@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreSweepProto extends \Google\Model
 {
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $otherSegmentFeatureId;
   protected $otherSegmentFeatureIdType = GeostoreFeatureIdProto::class;
   protected $otherSegmentFeatureIdDataType = '';
+  /**
+   * @var GeostorePolygonProto
+   */
+  public $polygon;
   protected $polygonType = GeostorePolygonProto::class;
   protected $polygonDataType = '';
+  /**
+   * @var GeostoreCurveConnectionProto
+   */
+  public $sweepCurve;
   protected $sweepCurveType = GeostoreCurveConnectionProto::class;
   protected $sweepCurveDataType = '';
   /**

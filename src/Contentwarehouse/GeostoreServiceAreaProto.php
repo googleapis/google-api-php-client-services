@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreServiceAreaProto extends \Google\Collection
 {
   protected $collection_key = 'servedFeature';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $servedFeature;
   protected $servedFeatureType = GeostoreFeatureIdProto::class;
   protected $servedFeatureDataType = 'array';
 

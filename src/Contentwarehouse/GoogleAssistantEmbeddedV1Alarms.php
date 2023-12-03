@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleAssistantEmbeddedV1Alarms extends \Google\Collection
 {
   protected $collection_key = 'alarms';
+  /**
+   * @var GoogleAssistantEmbeddedV1Alarm[]
+   */
+  public $alarms;
   protected $alarmsType = GoogleAssistantEmbeddedV1Alarm::class;
   protected $alarmsDataType = 'array';
   /**

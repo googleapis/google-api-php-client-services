@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTransitStationProto extends \Google\Collection
 {
   protected $collection_key = 'agencyAssociations';
+  /**
+   * @var GeostoreTransitStationProtoTransitAgencyAssociationProto[]
+   */
+  public $agencyAssociations;
   protected $agencyAssociationsType = GeostoreTransitStationProtoTransitAgencyAssociationProto::class;
   protected $agencyAssociationsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreLinearStripePatternProto extends \Google\Collection
 {
   protected $collection_key = 'line';
+  /**
+   * @var GeostorePhysicalLineProto[]
+   */
+  public $line;
   protected $lineType = GeostorePhysicalLineProto::class;
   protected $lineDataType = 'array';
 

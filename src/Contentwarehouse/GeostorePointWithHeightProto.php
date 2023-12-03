@@ -23,6 +23,10 @@ class GeostorePointWithHeightProto extends \Google\Model
    * @var float
    */
   public $altitudeMeters;
+  /**
+   * @var GeostorePointProto
+   */
+  public $point;
   protected $pointType = GeostorePointProto::class;
   protected $pointDataType = '';
 

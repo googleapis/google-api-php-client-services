@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1CreateDocumentLinkRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1DocumentLink
+   */
+  public $documentLink;
   protected $documentLinkType = GoogleCloudContentwarehouseV1DocumentLink::class;
   protected $documentLinkDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
 

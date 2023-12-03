@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreOntologyRawGConceptInstanceContainerProto extends \Google\Collection
 {
   protected $collection_key = 'instance';
+  /**
+   * @var GeostoreOntologyRawGConceptInstanceProto[]
+   */
+  public $instance;
   protected $instanceType = GeostoreOntologyRawGConceptInstanceProto::class;
   protected $instanceDataType = 'array';
 

@@ -62,8 +62,16 @@ class GoodocSemanticLabel extends \Google\Collection
    * @var bool
    */
   public $continuesOnNextPage;
+  /**
+   * @var GoodocLogicalEntity
+   */
+  public $endOfSpanningLabel;
   protected $endOfSpanningLabelType = GoodocLogicalEntity::class;
   protected $endOfSpanningLabelDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $experimentalData;
   protected $experimentalDataType = Proto2BridgeMessageSet::class;
   protected $experimentalDataDataType = '';
   /**
@@ -74,24 +82,56 @@ class GoodocSemanticLabel extends \Google\Collection
    * @var string
    */
   public $modificationRecord;
+  /**
+   * @var GoodocOrdinal
+   */
+  public $pageNumberOrdinal;
   protected $pageNumberOrdinalType = GoodocOrdinal::class;
   protected $pageNumberOrdinalDataType = '';
   /**
    * @var int
    */
   public $appearance;
+  /**
+   * @var GoodocSemanticLabelColumnDetails
+   */
+  public $columndetails;
   protected $columndetailsType = GoodocSemanticLabelColumnDetails::class;
   protected $columndetailsDataType = '';
+  /**
+   * @var GoodocSemanticLabelContentLink
+   */
+  public $contentlink;
   protected $contentlinkType = GoodocSemanticLabelContentLink::class;
   protected $contentlinkDataType = '';
+  /**
+   * @var GoodocSemanticLabelEditCorrectionCandidate[]
+   */
+  public $editcorrectioncandidate;
   protected $editcorrectioncandidateType = GoodocSemanticLabelEditCorrectionCandidate::class;
   protected $editcorrectioncandidateDataType = 'array';
+  /**
+   * @var GoodocOverrides
+   */
+  public $overrides;
   protected $overridesType = GoodocOverrides::class;
   protected $overridesDataType = '';
+  /**
+   * @var GoodocSemanticLabelSnippetFilter[]
+   */
+  public $snippetfilter;
   protected $snippetfilterType = GoodocSemanticLabelSnippetFilter::class;
   protected $snippetfilterDataType = 'array';
+  /**
+   * @var GoodocSemanticLabelTableCellDetails
+   */
+  public $tablecelldetails;
   protected $tablecelldetailsType = GoodocSemanticLabelTableCellDetails::class;
   protected $tablecelldetailsDataType = '';
+  /**
+   * @var GoodocSemanticLabelTableDetails
+   */
+  public $tabledetails;
   protected $tabledetailsType = GoodocSemanticLabelTableDetails::class;
   protected $tabledetailsDataType = '';
 

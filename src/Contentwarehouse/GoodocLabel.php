@@ -27,14 +27,34 @@ class GoodocLabel extends \Google\Collection
         "languageLabel" => "LanguageLabel",
         "semanticLabel" => "SemanticLabel",
   ];
+  /**
+   * @var GoodocAnchorLabel[]
+   */
+  public $anchorLabel;
   protected $anchorLabelType = GoodocAnchorLabel::class;
   protected $anchorLabelDataType = 'array';
+  /**
+   * @var GoodocBreakLabel
+   */
+  public $breakLabel;
   protected $breakLabelType = GoodocBreakLabel::class;
   protected $breakLabelDataType = '';
+  /**
+   * @var GoodocCharLabel
+   */
+  public $charLabel;
   protected $charLabelType = GoodocCharLabel::class;
   protected $charLabelDataType = '';
+  /**
+   * @var GoodocLanguageLabel[]
+   */
+  public $languageLabel;
   protected $languageLabelType = GoodocLanguageLabel::class;
   protected $languageLabelDataType = 'array';
+  /**
+   * @var GoodocSemanticLabel
+   */
+  public $semanticLabel;
   protected $semanticLabelType = GoodocSemanticLabel::class;
   protected $semanticLabelDataType = '';
 

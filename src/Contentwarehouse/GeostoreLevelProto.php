@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreLevelProto extends \Google\Collection
 {
   protected $collection_key = 'building';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $building;
   protected $buildingType = GeostoreFeatureIdProto::class;
   protected $buildingDataType = 'array';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreOpeningHoursProto extends \Google\Collection
 {
   protected $collection_key = 'exception';
+  /**
+   * @var GeostoreExceptionalHoursProto[]
+   */
+  public $exception;
   protected $exceptionType = GeostoreExceptionalHoursProto::class;
   protected $exceptionDataType = 'array';
+  /**
+   * @var GeostoreBusinessHoursProto
+   */
+  public $regularHours;
   protected $regularHoursType = GeostoreBusinessHoursProto::class;
   protected $regularHoursDataType = '';
 

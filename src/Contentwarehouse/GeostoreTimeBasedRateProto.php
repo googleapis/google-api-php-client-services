@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTimeBasedRateProto extends \Google\Collection
 {
   protected $collection_key = 'durationBasedRate';
+  /**
+   * @var GeostoreDurationBasedRateProto[]
+   */
+  public $durationBasedRate;
   protected $durationBasedRateType = GeostoreDurationBasedRateProto::class;
   protected $durationBasedRateDataType = 'array';
   /**
    * @var bool
    */
   public $taxIncluded;
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $validEndWithin;
   protected $validEndWithinType = GeostoreTimeScheduleProto::class;
   protected $validEndWithinDataType = '';
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $validStartWithin;
   protected $validStartWithinType = GeostoreTimeScheduleProto::class;
   protected $validStartWithinDataType = '';
 

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostorePoliticalProto extends \Google\Collection
 {
   protected $collection_key = 'claim';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $capital;
   protected $capitalType = GeostoreFeatureIdProto::class;
   protected $capitalDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $claim;
   protected $claimType = GeostoreFeatureIdProto::class;
   protected $claimDataType = 'array';
   public $grossDomesticProductUsdMillions;

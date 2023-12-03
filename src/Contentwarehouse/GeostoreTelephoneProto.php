@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTelephoneProto extends \Google\Collection
 {
   protected $collection_key = 'serviceLocationFeature';
+  /**
+   * @var GeostorePriceRangeProto[]
+   */
+  public $callRate;
   protected $callRateType = GeostorePriceRangeProto::class;
   protected $callRateDataType = 'array';
   /**
@@ -34,18 +38,38 @@ class GeostoreTelephoneProto extends \Google\Collection
    * @var bool
    */
   public $isSharedNumber;
+  /**
+   * @var GeostoreNameProto[]
+   */
+  public $label;
   protected $labelType = GeostoreNameProto::class;
   protected $labelDataType = 'array';
   /**
    * @var string[]
    */
   public $language;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var TelephoneNumber
+   */
+  public $number;
   protected $numberType = TelephoneNumber::class;
   protected $numberDataType = '';
+  /**
+   * @var I18nPhonenumbersPhoneNumber
+   */
+  public $phoneNumber;
   protected $phoneNumberType = I18nPhonenumbersPhoneNumber::class;
   protected $phoneNumberDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $serviceLocationFeature;
   protected $serviceLocationFeatureType = GeostoreFeatureIdProto::class;
   protected $serviceLocationFeatureDataType = 'array';
   /**

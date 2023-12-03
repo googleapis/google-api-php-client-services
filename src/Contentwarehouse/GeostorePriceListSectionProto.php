@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GeostorePriceListSectionProto extends \Google\Collection
 {
   protected $collection_key = 'nameInfo';
+  /**
+   * @var GeostoreCallToActionProto
+   */
+  public $callToAction;
   protected $callToActionType = GeostoreCallToActionProto::class;
   protected $callToActionDataType = '';
+  /**
+   * @var GeostoreFoodMenuItemProto[]
+   */
+  public $foodItem;
   protected $foodItemType = GeostoreFoodMenuItemProto::class;
   protected $foodItemDataType = 'array';
+  /**
+   * @var GeostoreComposableItemProto[]
+   */
+  public $item;
   protected $itemDataType = 'array';
   /**
    * @var string[]
@@ -33,8 +45,16 @@ class GeostorePriceListSectionProto extends \Google\Collection
    * @var string
    */
   public $language;
+  /**
+   * @var GeostoreMediaItemProto[]
+   */
+  public $media;
   protected $mediaType = GeostoreMediaItemProto::class;
   protected $mediaDataType = 'array';
+  /**
+   * @var GeostorePriceListNameInfoProto[]
+   */
+  public $nameInfo;
   protected $nameInfoType = GeostorePriceListNameInfoProto::class;
   protected $nameInfoDataType = 'array';
 

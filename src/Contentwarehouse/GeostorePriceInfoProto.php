@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GeostorePriceInfoProto extends \Google\Collection
 {
   protected $collection_key = 'priceListUrl';
+  /**
+   * @var GeostorePriceListProto[]
+   */
+  public $priceList;
   protected $priceListType = GeostorePriceListProto::class;
   protected $priceListDataType = 'array';
+  /**
+   * @var GeostoreUrlListProto[]
+   */
+  public $priceListUrl;
   protected $priceListUrlType = GeostoreUrlListProto::class;
   protected $priceListUrlDataType = 'array';
+  /**
+   * @var GeostorePriceInfoStatus
+   */
+  public $status;
   protected $statusType = GeostorePriceInfoStatus::class;
   protected $statusDataType = '';
 

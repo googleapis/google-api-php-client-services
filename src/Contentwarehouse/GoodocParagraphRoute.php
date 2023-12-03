@@ -26,14 +26,26 @@ class GoodocParagraphRoute extends \Google\Collection
         "weight" => "Weight",
         "word" => "Word",
   ];
+  /**
+   * @var GoodocRoutePoint
+   */
+  public $endPoint;
   protected $endPointType = GoodocRoutePoint::class;
   protected $endPointDataType = '';
+  /**
+   * @var GoodocRoutePoint
+   */
+  public $startPoint;
   protected $startPointType = GoodocRoutePoint::class;
   protected $startPointDataType = '';
   /**
    * @var int
    */
   public $weight;
+  /**
+   * @var GoodocWord[]
+   */
+  public $word;
   protected $wordType = GoodocWord::class;
   protected $wordDataType = 'array';
 

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRoadConditionalProto extends \Google\Collection
 {
   protected $collection_key = 'vehicleType';
+  /**
+   * @var GeostoreTimeScheduleProto
+   */
+  public $timeSchedule;
   protected $timeScheduleType = GeostoreTimeScheduleProto::class;
   protected $timeScheduleDataType = '';
+  /**
+   * @var GeostoreVehicleAttributeFilterProto
+   */
+  public $vehicleAttribute;
   protected $vehicleAttributeType = GeostoreVehicleAttributeFilterProto::class;
   protected $vehicleAttributeDataType = '';
   /**

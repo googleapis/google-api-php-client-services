@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreRankSignalProto extends \Google\Model
 {
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
   /**

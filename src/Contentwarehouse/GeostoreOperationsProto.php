@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreOperationsProto extends \Google\Collection
 {
   protected $collection_key = 'temporaryClosure';
+  /**
+   * @var GeostoreTemporaryClosureProto[]
+   */
+  public $temporaryClosure;
   protected $temporaryClosureType = GeostoreTemporaryClosureProto::class;
   protected $temporaryClosureDataType = 'array';
 

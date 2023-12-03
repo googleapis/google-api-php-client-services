@@ -19,22 +19,50 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1Action extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1AccessControlAction
+   */
+  public $accessControl;
   protected $accessControlType = GoogleCloudContentwarehouseV1AccessControlAction::class;
   protected $accessControlDataType = '';
   /**
    * @var string
    */
   public $actionId;
+  /**
+   * @var GoogleCloudContentwarehouseV1AddToFolderAction
+   */
+  public $addToFolder;
   protected $addToFolderType = GoogleCloudContentwarehouseV1AddToFolderAction::class;
   protected $addToFolderDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1DataUpdateAction
+   */
+  public $dataUpdate;
   protected $dataUpdateType = GoogleCloudContentwarehouseV1DataUpdateAction::class;
   protected $dataUpdateDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1DataValidationAction
+   */
+  public $dataValidation;
   protected $dataValidationType = GoogleCloudContentwarehouseV1DataValidationAction::class;
   protected $dataValidationDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1DeleteDocumentAction
+   */
+  public $deleteDocumentAction;
   protected $deleteDocumentActionType = GoogleCloudContentwarehouseV1DeleteDocumentAction::class;
   protected $deleteDocumentActionDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1PublishAction
+   */
+  public $publishToPubSub;
   protected $publishToPubSubType = GoogleCloudContentwarehouseV1PublishAction::class;
   protected $publishToPubSubDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RemoveFromFolderAction
+   */
+  public $removeFromFolderAction;
   protected $removeFromFolderActionType = GoogleCloudContentwarehouseV1RemoveFromFolderAction::class;
   protected $removeFromFolderActionDataType = '';
 

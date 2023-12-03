@@ -20,16 +20,32 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreParkingProto extends \Google\Collection
 {
   protected $collection_key = 'restriction';
+  /**
+   * @var GeostoreParkingAllowanceProto[]
+   */
+  public $allowance;
   protected $allowanceType = GeostoreParkingAllowanceProto::class;
   protected $allowanceDataType = 'array';
+  /**
+   * @var GeostoreOpeningHoursProto
+   */
+  public $openingHours;
   protected $openingHoursType = GeostoreOpeningHoursProto::class;
   protected $openingHoursDataType = '';
   /**
    * @var bool
    */
   public $parkingAvailable;
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $parkingProviderFeature;
   protected $parkingProviderFeatureType = GeostoreFeatureIdProto::class;
   protected $parkingProviderFeatureDataType = 'array';
+  /**
+   * @var GeostoreParkingRestrictionProto[]
+   */
+  public $restriction;
   protected $restrictionType = GeostoreParkingRestrictionProto::class;
   protected $restrictionDataType = 'array';
 

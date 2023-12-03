@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreSourceInfoProto extends \Google\Collection
 {
   protected $collection_key = 'rawData';
+  /**
+   * @var GeostoreUrlProto[]
+   */
+  public $attributionUrl;
   protected $attributionUrlType = GeostoreUrlProto::class;
   protected $attributionUrlDataType = 'array';
+  /**
+   * @var GeostoreDateTimeProto
+   */
+  public $collectionDate;
   protected $collectionDateType = GeostoreDateTimeProto::class;
   protected $collectionDateDataType = '';
   /**
@@ -36,6 +44,10 @@ class GeostoreSourceInfoProto extends \Google\Collection
    * @var string
    */
   public $gaiaId;
+  /**
+   * @var GeostoreUserProto
+   */
+  public $impersonationUser;
   protected $impersonationUserType = GeostoreUserProto::class;
   protected $impersonationUserDataType = '';
   /**
@@ -50,16 +62,32 @@ class GeostoreSourceInfoProto extends \Google\Collection
    * @var int
    */
   public $provider;
+  /**
+   * @var GeostoreRawDataProto[]
+   */
+  public $rawData;
   protected $rawDataType = GeostoreRawDataProto::class;
   protected $rawDataDataType = 'array';
   /**
    * @var string
    */
   public $release;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $sourceId;
   protected $sourceIdType = GeostoreFeatureIdProto::class;
   protected $sourceIdDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
+  /**
+   * @var GeostoreUserProto
+   */
+  public $user;
   protected $userType = GeostoreUserProto::class;
   protected $userDataType = '';
 

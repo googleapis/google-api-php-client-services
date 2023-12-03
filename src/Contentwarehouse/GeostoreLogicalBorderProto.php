@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreLogicalBorderProto extends \Google\Collection
 {
   protected $collection_key = 'borderSegment';
+  /**
+   * @var GeostoreFeatureIdProto[]
+   */
+  public $borderSegment;
   protected $borderSegmentType = GeostoreFeatureIdProto::class;
   protected $borderSegmentDataType = 'array';
   /**

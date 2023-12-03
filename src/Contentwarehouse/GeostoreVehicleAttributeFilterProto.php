@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreVehicleAttributeFilterProto extends \Google\Collection
 {
   protected $collection_key = 'vehicleWidth';
+  /**
+   * @var GeostoreCountComparisonProto[]
+   */
+  public $axleCount;
   protected $axleCountType = GeostoreCountComparisonProto::class;
   protected $axleCountDataType = 'array';
   /**
@@ -30,16 +34,40 @@ class GeostoreVehicleAttributeFilterProto extends \Google\Collection
    * @var string[]
    */
   public $hazardousGoods;
+  /**
+   * @var GeostoreCountComparisonProto[]
+   */
+  public $numTrailers;
   protected $numTrailersType = GeostoreCountComparisonProto::class;
   protected $numTrailersDataType = 'array';
+  /**
+   * @var GeostoreDimensionComparisonProto[]
+   */
+  public $trailerLength;
   protected $trailerLengthType = GeostoreDimensionComparisonProto::class;
   protected $trailerLengthDataType = 'array';
+  /**
+   * @var GeostoreDimensionComparisonProto[]
+   */
+  public $vehicleHeight;
   protected $vehicleHeightType = GeostoreDimensionComparisonProto::class;
   protected $vehicleHeightDataType = 'array';
+  /**
+   * @var GeostoreDimensionComparisonProto[]
+   */
+  public $vehicleLength;
   protected $vehicleLengthType = GeostoreDimensionComparisonProto::class;
   protected $vehicleLengthDataType = 'array';
+  /**
+   * @var GeostoreWeightComparisonProto[]
+   */
+  public $vehicleWeight;
   protected $vehicleWeightType = GeostoreWeightComparisonProto::class;
   protected $vehicleWeightDataType = 'array';
+  /**
+   * @var GeostoreDimensionComparisonProto[]
+   */
+  public $vehicleWidth;
   protected $vehicleWidthType = GeostoreDimensionComparisonProto::class;
   protected $vehicleWidthDataType = 'array';
 

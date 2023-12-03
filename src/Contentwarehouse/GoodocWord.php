@@ -39,12 +39,20 @@ class GoodocWord extends \Google\Collection
    * @var int
    */
   public $baseline;
+  /**
+   * @var GoodocBoundingBox
+   */
+  public $box;
   protected $boxType = GoodocBoundingBox::class;
   protected $boxDataType = '';
   /**
    * @var int
    */
   public $capline;
+  /**
+   * @var GoodocBoxPartitions
+   */
+  public $compactSymbolBoxes;
   protected $compactSymbolBoxesType = GoodocBoxPartitions::class;
   protected $compactSymbolBoxesDataType = '';
   /**
@@ -67,16 +75,32 @@ class GoodocWord extends \Google\Collection
    * @var bool
    */
   public $isNumeric;
+  /**
+   * @var GoodocLabel
+   */
+  public $label;
   protected $labelType = GoodocLabel::class;
   protected $labelDataType = '';
   /**
    * @var int
    */
   public $penalty;
+  /**
+   * @var GoodocRotatedBoundingBox
+   */
+  public $rotatedBox;
   protected $rotatedBoxType = GoodocRotatedBoundingBox::class;
   protected $rotatedBoxDataType = '';
+  /**
+   * @var GoodocSymbol[]
+   */
+  public $symbol;
   protected $symbolType = GoodocSymbol::class;
   protected $symbolDataType = 'array';
+  /**
+   * @var GoodocWordAlternates
+   */
+  public $alternates;
   protected $alternatesType = GoodocWordAlternates::class;
   protected $alternatesDataType = '';
   /**

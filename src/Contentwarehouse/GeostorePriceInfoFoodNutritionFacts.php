@@ -19,16 +19,40 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostorePriceInfoFoodNutritionFacts extends \Google\Model
 {
+  /**
+   * @var GeostorePriceInfoFoodNutritionFactsCaloriesFact
+   */
+  public $calories;
   protected $caloriesType = GeostorePriceInfoFoodNutritionFactsCaloriesFact::class;
   protected $caloriesDataType = '';
+  /**
+   * @var GeostorePriceInfoFoodNutritionFactsNutritionFact
+   */
+  public $cholesterol;
   protected $cholesterolType = GeostorePriceInfoFoodNutritionFactsNutritionFact::class;
   protected $cholesterolDataType = '';
+  /**
+   * @var GeostorePriceInfoFoodNutritionFactsNutritionFact
+   */
+  public $protein;
   protected $proteinType = GeostorePriceInfoFoodNutritionFactsNutritionFact::class;
   protected $proteinDataType = '';
+  /**
+   * @var GeostorePriceInfoFoodNutritionFactsNutritionFact
+   */
+  public $sodium;
   protected $sodiumType = GeostorePriceInfoFoodNutritionFactsNutritionFact::class;
   protected $sodiumDataType = '';
+  /**
+   * @var GeostorePriceInfoFoodNutritionFactsNutritionFact
+   */
+  public $totalCarbohydrate;
   protected $totalCarbohydrateType = GeostorePriceInfoFoodNutritionFactsNutritionFact::class;
   protected $totalCarbohydrateDataType = '';
+  /**
+   * @var GeostorePriceInfoFoodNutritionFactsNutritionFact
+   */
+  public $totalFat;
   protected $totalFatType = GeostorePriceInfoFoodNutritionFactsNutritionFact::class;
   protected $totalFatDataType = '';
 

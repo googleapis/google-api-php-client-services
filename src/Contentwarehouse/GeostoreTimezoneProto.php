@@ -23,6 +23,10 @@ class GeostoreTimezoneProto extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
 

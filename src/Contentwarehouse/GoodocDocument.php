@@ -38,10 +38,22 @@ class GoodocDocument extends \Google\Collection
    * @var string[]
    */
   public $logicalEntityMessageName;
+  /**
+   * @var GoodocDocument[]
+   */
+  public $subDocuments;
   protected $subDocumentsType = GoodocDocument::class;
   protected $subDocumentsDataType = 'array';
+  /**
+   * @var GoodocDocumentHeader
+   */
+  public $header;
   protected $headerType = GoodocDocumentHeader::class;
   protected $headerDataType = '';
+  /**
+   * @var GoodocDocumentPage[]
+   */
+  public $page;
   protected $pageType = GoodocDocumentPage::class;
   protected $pageDataType = 'array';
 

@@ -32,6 +32,10 @@ class GoodocDocumentHeader extends \Google\Collection
    * @var string
    */
   public $ocrEngineVersion;
+  /**
+   * @var GoodocDocumentHeaderFont[]
+   */
+  public $font;
   protected $fontType = GoodocDocumentHeaderFont::class;
   protected $fontDataType = 'array';
 

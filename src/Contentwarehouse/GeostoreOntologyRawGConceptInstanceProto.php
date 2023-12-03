@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreOntologyRawGConceptInstanceProto extends \Google\Model
 {
+  /**
+   * @var GeostoreGConceptInstanceProto
+   */
+  public $instance;
   protected $instanceType = GeostoreGConceptInstanceProto::class;
   protected $instanceDataType = '';
   /**

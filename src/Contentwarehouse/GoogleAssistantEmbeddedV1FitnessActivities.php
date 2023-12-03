@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleAssistantEmbeddedV1FitnessActivities extends \Google\Collection
 {
   protected $collection_key = 'fitnessActivities';
+  /**
+   * @var GoogleAssistantEmbeddedV1FitnessActivity[]
+   */
+  public $fitnessActivities;
   protected $fitnessActivitiesType = GoogleAssistantEmbeddedV1FitnessActivity::class;
   protected $fitnessActivitiesDataType = 'array';
 

@@ -36,10 +36,22 @@ class GeostorePolygonProto extends \Google\Collection
    * @var float
    */
   public $heightMeters;
+  /**
+   * @var GeostorePolyLineProto[]
+   */
+  public $loop;
   protected $loopType = GeostorePolyLineProto::class;
   protected $loopDataType = 'array';
+  /**
+   * @var GeostoreFieldMetadataProto
+   */
+  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $temporaryData;
   protected $temporaryDataType = Proto2BridgeMessageSet::class;
   protected $temporaryDataDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreServicedStopProto extends \Google\Model
 {
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $id;
   protected $idType = GeostoreFeatureIdProto::class;
   protected $idDataType = '';
   /**
