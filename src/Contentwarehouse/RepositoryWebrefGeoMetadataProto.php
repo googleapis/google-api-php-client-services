@@ -20,21 +20,45 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefGeoMetadataProto extends \Google\Collection
 {
   protected $collection_key = 'wpLocation';
+  /**
+   * @var GeostoreAddressProto
+   */
+  public $address;
   protected $addressType = GeostoreAddressProto::class;
   protected $addressDataType = '';
+  /**
+   * @var RepositoryWebrefGeoMetadataProtoAddressSynonym[]
+   */
+  public $addressSynonyms;
   protected $addressSynonymsType = RepositoryWebrefGeoMetadataProtoAddressSynonym::class;
   protected $addressSynonymsDataType = 'array';
   public $areaKm2;
+  /**
+   * @var GeostoreRectProto
+   */
+  public $bound;
   protected $boundType = GeostoreRectProto::class;
   protected $boundDataType = '';
   /**
    * @var string
    */
   public $countryCode;
+  /**
+   * @var GeostorePointProto
+   */
+  public $location;
   protected $locationType = GeostorePointProto::class;
   protected $locationDataType = '';
+  /**
+   * @var GeostoreNameProto
+   */
+  public $name;
   protected $nameType = GeostoreNameProto::class;
   protected $nameDataType = '';
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $oysterId;
   protected $oysterIdType = GeostoreFeatureIdProto::class;
   protected $oysterIdDataType = '';
   /**
@@ -45,6 +69,10 @@ class RepositoryWebrefGeoMetadataProto extends \Google\Collection
    * @var string
    */
   public $timezone;
+  /**
+   * @var RepositoryWebrefWikipediaGeocode[]
+   */
+  public $wpLocation;
   protected $wpLocationType = RepositoryWebrefWikipediaGeocode::class;
   protected $wpLocationDataType = 'array';
 

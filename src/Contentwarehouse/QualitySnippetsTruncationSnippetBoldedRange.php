@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class QualitySnippetsTruncationSnippetBoldedRange extends \Google\Model
 {
+  /**
+   * @var QualitySnippetsTruncationSnippetBoldedRangePosition
+   */
+  public $begin;
   protected $beginType = QualitySnippetsTruncationSnippetBoldedRangePosition::class;
   protected $beginDataType = '';
+  /**
+   * @var QualitySnippetsTruncationSnippetBoldedRangePosition
+   */
+  public $end;
   protected $endType = QualitySnippetsTruncationSnippetBoldedRangePosition::class;
   protected $endDataType = '';
   /**

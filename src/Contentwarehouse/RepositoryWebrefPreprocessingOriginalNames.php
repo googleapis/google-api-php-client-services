@@ -24,6 +24,10 @@ class RepositoryWebrefPreprocessingOriginalNames extends \Google\Collection
    * @var int
    */
   public $count;
+  /**
+   * @var RepositoryWebrefPreprocessingOriginalNamesOriginalName[]
+   */
+  public $name;
   protected $nameType = RepositoryWebrefPreprocessingOriginalNamesOriginalName::class;
   protected $nameDataType = 'array';
 

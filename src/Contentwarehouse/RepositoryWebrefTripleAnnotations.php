@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefTripleAnnotations extends \Google\Collection
 {
   protected $collection_key = 'annotations';
+  /**
+   * @var RepositoryWebrefTripleAnnotation[]
+   */
+  public $annotations;
   protected $annotationsType = RepositoryWebrefTripleAnnotation::class;
   protected $annotationsDataType = 'array';
 

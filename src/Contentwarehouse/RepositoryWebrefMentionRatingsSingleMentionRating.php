@@ -48,6 +48,10 @@ class RepositoryWebrefMentionRatingsSingleMentionRating extends \Google\Collecti
    * @var int
    */
   public $resultCount;
+  /**
+   * @var RepositoryWebrefTaskData
+   */
+  public $taskData;
   protected $taskDataType = RepositoryWebrefTaskData::class;
   protected $taskDataDataType = '';
   /**

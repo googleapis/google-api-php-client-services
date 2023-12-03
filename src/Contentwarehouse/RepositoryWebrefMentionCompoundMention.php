@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefMentionCompoundMention extends \Google\Collection
 {
   protected $collection_key = 'mrfIndex';
+  /**
+   * @var RepositoryWebrefMentionComponent[]
+   */
+  public $component;
   protected $componentType = RepositoryWebrefMentionComponent::class;
   protected $componentDataType = 'array';
   /**

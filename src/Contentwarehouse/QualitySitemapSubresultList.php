@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualitySitemapSubresultList extends \Google\Collection
 {
   protected $collection_key = 'subresult';
+  /**
+   * @var QualitySitemapSubresult[]
+   */
+  public $subresult;
   protected $subresultType = QualitySitemapSubresult::class;
   protected $subresultDataType = 'array';
 

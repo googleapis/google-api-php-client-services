@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefNgramContext extends \Google\Collection
 {
   protected $collection_key = 'mention';
+  /**
+   * @var RepositoryWebrefNgramMention[]
+   */
+  public $mention;
   protected $mentionType = RepositoryWebrefNgramMention::class;
   protected $mentionDataType = 'array';
   /**

@@ -28,6 +28,10 @@ class QualitySitemapTargetGroup extends \Google\Collection
    * @var int
    */
   public $dEPRECATEDCountry;
+  /**
+   * @var QualitySitemapTarget[]
+   */
+  public $target;
   protected $targetType = QualitySitemapTarget::class;
   protected $targetDataType = 'array';
   /**
@@ -38,8 +42,16 @@ class QualitySitemapTargetGroup extends \Google\Collection
    * @var bool
    */
   public $allTargetsNamedTopictagsScrollto;
+  /**
+   * @var QualitySitemapBreadcrumbTarget
+   */
+  public $breadcrumbTarget;
   protected $breadcrumbTargetType = QualitySitemapBreadcrumbTarget::class;
   protected $breadcrumbTargetDataType = '';
+  /**
+   * @var QualitySitemapCoClickTarget[]
+   */
+  public $coClickTarget;
   protected $coClickTargetType = QualitySitemapCoClickTarget::class;
   protected $coClickTargetDataType = 'array';
   /**
@@ -58,10 +70,22 @@ class QualitySitemapTargetGroup extends \Google\Collection
    * @var bool
    */
   public $modifiedByHostcardHandler;
+  /**
+   * @var QualitySitemapScoringSignals
+   */
+  public $scoringSignals;
   protected $scoringSignalsType = QualitySitemapScoringSignals::class;
   protected $scoringSignalsDataType = '';
+  /**
+   * @var QualitySitemapTopURL[]
+   */
+  public $topUrl;
   protected $topUrlType = QualitySitemapTopURL::class;
   protected $topUrlDataType = 'array';
+  /**
+   * @var QualitySitemapTwoLevelTarget[]
+   */
+  public $twoLevelTarget;
   protected $twoLevelTargetType = QualitySitemapTwoLevelTarget::class;
   protected $twoLevelTargetDataType = 'array';
 

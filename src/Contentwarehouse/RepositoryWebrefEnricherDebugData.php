@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefEnricherDebugData extends \Google\Collection
 {
   protected $collection_key = 'relatedPage';
+  /**
+   * @var RepositoryWebrefCompactFlatPropertyValue[]
+   */
+  public $nonMidProperties;
   protected $nonMidPropertiesType = RepositoryWebrefCompactFlatPropertyValue::class;
   protected $nonMidPropertiesDataType = 'array';
+  /**
+   * @var RepositoryWebrefSimplifiedCompositeDoc[]
+   */
+  public $referencePage;
   protected $referencePageType = RepositoryWebrefSimplifiedCompositeDoc::class;
   protected $referencePageDataType = 'array';
+  /**
+   * @var RepositoryWebrefSimplifiedCompositeDoc[]
+   */
+  public $relatedPage;
   protected $relatedPageType = RepositoryWebrefSimplifiedCompositeDoc::class;
   protected $relatedPageDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityWebanswersTranscriptAnnotations extends \Google\Collection
 {
   protected $collection_key = 'videoTranscriptAnnotations';
+  /**
+   * @var QualityWebanswersVideoTranscriptAnnotations[]
+   */
+  public $videoTranscriptAnnotations;
   protected $videoTranscriptAnnotationsType = QualityWebanswersVideoTranscriptAnnotations::class;
   protected $videoTranscriptAnnotationsDataType = 'array';
 

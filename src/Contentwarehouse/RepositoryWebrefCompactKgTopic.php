@@ -24,6 +24,10 @@ class RepositoryWebrefCompactKgTopic extends \Google\Collection
    * @var string
    */
   public $mid;
+  /**
+   * @var RepositoryWebrefCompactKgPropertyValue[]
+   */
+  public $propertyValue;
   protected $propertyValueType = RepositoryWebrefCompactKgPropertyValue::class;
   protected $propertyValueDataType = 'array';
 

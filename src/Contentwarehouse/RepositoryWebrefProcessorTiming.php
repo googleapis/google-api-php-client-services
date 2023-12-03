@@ -28,8 +28,16 @@ class RepositoryWebrefProcessorTiming extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var RepositoryWebrefProcessorCounter[]
+   */
+  public $processorCounters;
   protected $processorCountersType = RepositoryWebrefProcessorCounter::class;
   protected $processorCountersDataType = 'array';
+  /**
+   * @var RepositoryWebrefProcessorTiming[]
+   */
+  public $processorTimings;
   protected $processorTimingsType = RepositoryWebrefProcessorTiming::class;
   protected $processorTimingsDataType = 'array';
   /**

@@ -31,6 +31,10 @@ class RepositoryWebrefTaskData extends \Google\Model
    * @var string
    */
   public $projectId;
+  /**
+   * @var RepositoryWebrefTaskDetails
+   */
+  public $taskDetails;
   protected $taskDetailsType = RepositoryWebrefTaskDetails::class;
   protected $taskDetailsDataType = '';
   /**

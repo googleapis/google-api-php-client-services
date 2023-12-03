@@ -23,6 +23,10 @@ class RepositoryWebrefClusterMetadata extends \Google\Model
    * @var bool
    */
   public $isSet;
+  /**
+   * @var RepositoryWebrefClusterProtoRuleInstance
+   */
+  public $ruleInstance;
   protected $ruleInstanceType = RepositoryWebrefClusterProtoRuleInstance::class;
   protected $ruleInstanceDataType = '';
 

@@ -19,16 +19,40 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefSubSegmentIndex extends \Google\Model
 {
+  /**
+   * @var RepositoryWebrefAnchorIndices
+   */
+  public $anchorIndex;
   protected $anchorIndexType = RepositoryWebrefAnchorIndices::class;
   protected $anchorIndexDataType = '';
+  /**
+   * @var RepositoryWebrefGenericIndices
+   */
+  public $genericIndex;
   protected $genericIndexType = RepositoryWebrefGenericIndices::class;
   protected $genericIndexDataType = '';
+  /**
+   * @var RepositoryWebrefImageQueryIndices
+   */
+  public $imageQueryIndex;
   protected $imageQueryIndexType = RepositoryWebrefImageQueryIndices::class;
   protected $imageQueryIndexDataType = '';
+  /**
+   * @var RepositoryWebrefJuggernautIndices
+   */
+  public $jgnIndex;
   protected $jgnIndexType = RepositoryWebrefJuggernautIndices::class;
   protected $jgnIndexDataType = '';
+  /**
+   * @var RepositoryWebrefMetaTagIndices
+   */
+  public $metaTagIndex;
   protected $metaTagIndexType = RepositoryWebrefMetaTagIndices::class;
   protected $metaTagIndexDataType = '';
+  /**
+   * @var RepositoryWebrefQueryIndices
+   */
+  public $queryIndex;
   protected $queryIndexType = RepositoryWebrefQueryIndices::class;
   protected $queryIndexDataType = '';
 

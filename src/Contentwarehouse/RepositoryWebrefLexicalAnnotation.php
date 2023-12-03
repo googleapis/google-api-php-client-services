@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefLexicalAnnotation extends \Google\Collection
 {
   protected $collection_key = 'lexicalRange';
+  /**
+   * @var RepositoryWebrefLexicalRange[]
+   */
+  public $lexicalRange;
   protected $lexicalRangeType = RepositoryWebrefLexicalRange::class;
   protected $lexicalRangeDataType = 'array';
 

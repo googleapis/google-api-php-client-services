@@ -36,6 +36,10 @@ class RepositoryWebrefMdvcMetadata extends \Google\Collection
    * @var bool
    */
   public $isSynthetic;
+  /**
+   * @var RepositoryWebrefMdvcMetadataPerVertical[]
+   */
+  public $perVertical;
   protected $perVerticalType = RepositoryWebrefMdvcMetadataPerVertical::class;
   protected $perVerticalDataType = 'array';
   /**

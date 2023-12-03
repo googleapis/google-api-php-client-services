@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefClusterProtoRuleInstance extends \Google\Collection
 {
   protected $collection_key = 'relation';
+  /**
+   * @var RepositoryWebrefClusterProtoMidListRuleInstance
+   */
+  public $midList;
   protected $midListType = RepositoryWebrefClusterProtoMidListRuleInstance::class;
   protected $midListDataType = '';
+  /**
+   * @var RepositoryWebrefClusterProtoRelationRuleInstance[]
+   */
+  public $relation;
   protected $relationType = RepositoryWebrefClusterProtoRelationRuleInstance::class;
   protected $relationDataType = 'array';
 

@@ -20,24 +20,56 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefNameInfo extends \Google\Collection
 {
   protected $collection_key = 'source';
+  /**
+   * @var RepositoryWebrefAggregatedEntityNameScores
+   */
+  public $aggregatedScores;
   protected $aggregatedScoresType = RepositoryWebrefAggregatedEntityNameScores::class;
   protected $aggregatedScoresDataType = '';
+  /**
+   * @var RepositoryWebrefAnnotatedCategoryInfo[]
+   */
+  public $annotatedCategory;
   protected $annotatedCategoryType = RepositoryWebrefAnnotatedCategoryInfo::class;
   protected $annotatedCategoryDataType = 'array';
+  /**
+   * @var RepositoryWebrefNameDebugInfo[]
+   */
+  public $debugDetails;
   protected $debugDetailsType = RepositoryWebrefNameDebugInfo::class;
   protected $debugDetailsDataType = 'array';
   /**
    * @var bool
    */
   public $includeInModel;
+  /**
+   * @var RepositoryWebrefLocalizedString
+   */
+  public $name;
   protected $nameType = RepositoryWebrefLocalizedString::class;
   protected $nameDataType = '';
+  /**
+   * @var RepositoryWebrefUniversalNgramData
+   */
+  public $ngramData;
   protected $ngramDataType = RepositoryWebrefUniversalNgramData::class;
   protected $ngramDataDataType = '';
+  /**
+   * @var RepositoryWebrefLightweightTokensPerNameLightweightToken
+   */
+  public $perNameLightweightToken;
   protected $perNameLightweightTokenType = RepositoryWebrefLightweightTokensPerNameLightweightToken::class;
   protected $perNameLightweightTokenDataType = '';
+  /**
+   * @var RepositoryWebrefNameScores
+   */
+  public $scores;
   protected $scoresType = RepositoryWebrefNameScores::class;
   protected $scoresDataType = '';
+  /**
+   * @var RepositoryWebrefEntityNameSource[]
+   */
+  public $source;
   protected $sourceType = RepositoryWebrefEntityNameSource::class;
   protected $sourceDataType = 'array';
 

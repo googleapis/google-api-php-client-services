@@ -40,6 +40,10 @@ class QualityShoppingShoppingAttachmentOffer extends \Google\Collection
    * @var string[]
    */
   public $imageId;
+  /**
+   * @var ShoppingWebentityShoppingAnnotationInferredImage[]
+   */
+  public $inferredImages;
   protected $inferredImagesType = ShoppingWebentityShoppingAnnotationInferredImage::class;
   protected $inferredImagesDataType = 'array';
   /**
@@ -70,6 +74,10 @@ class QualityShoppingShoppingAttachmentOffer extends \Google\Collection
    * @var int
    */
   public $nonDisplayableOrganicScoreMillis;
+  /**
+   * @var ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo
+   */
+  public $nonDisplayableStaleAvailability;
   protected $nonDisplayableStaleAvailabilityType = ShoppingWebentityShoppingAnnotationOfferAvailabilityInfo::class;
   protected $nonDisplayableStaleAvailabilityDataType = '';
   /**
@@ -80,6 +88,10 @@ class QualityShoppingShoppingAttachmentOffer extends \Google\Collection
    * @var string
    */
   public $refType;
+  /**
+   * @var ShoppingWebentityShoppingAnnotationSoriVersionId
+   */
+  public $soriVersionId;
   protected $soriVersionIdType = ShoppingWebentityShoppingAnnotationSoriVersionId::class;
   protected $soriVersionIdDataType = '';
 

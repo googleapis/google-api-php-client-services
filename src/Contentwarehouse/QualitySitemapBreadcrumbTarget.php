@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualitySitemapBreadcrumbTarget extends \Google\Collection
 {
   protected $collection_key = 'docs';
+  /**
+   * @var QualitySitemapBreadcrumbTargetDoc[]
+   */
+  public $docs;
   protected $docsType = QualitySitemapBreadcrumbTargetDoc::class;
   protected $docsDataType = 'array';
 

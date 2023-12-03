@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefPreprocessingNameVariantSignals extends \Google\Model
 {
+  /**
+   * @var RepositoryWebrefPreprocessingNameEntityScores
+   */
+  public $scores;
   protected $scoresType = RepositoryWebrefPreprocessingNameEntityScores::class;
   protected $scoresDataType = '';
   /**

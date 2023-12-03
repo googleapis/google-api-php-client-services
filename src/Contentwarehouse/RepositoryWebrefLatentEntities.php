@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefLatentEntities extends \Google\Collection
 {
   protected $collection_key = 'latentEntity';
+  /**
+   * @var RepositoryWebrefLatentEntity[]
+   */
+  public $latentEntity;
   protected $latentEntityType = RepositoryWebrefLatentEntity::class;
   protected $latentEntityDataType = 'array';
 

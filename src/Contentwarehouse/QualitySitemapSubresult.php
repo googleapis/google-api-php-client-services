@@ -23,6 +23,10 @@ class QualitySitemapSubresult extends \Google\Model
    * @var string
    */
   public $docid;
+  /**
+   * @var QualitySitemapThirdPartyCarouselsListItemMuppetMetadata
+   */
+  public $itemMetadata;
   protected $itemMetadataType = QualitySitemapThirdPartyCarouselsListItemMuppetMetadata::class;
   protected $itemMetadataDataType = '';
 

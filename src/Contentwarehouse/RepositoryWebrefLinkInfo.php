@@ -28,8 +28,16 @@ class RepositoryWebrefLinkInfo extends \Google\Collection
    * @var bool
    */
   public $isPreferredDirection;
+  /**
+   * @var RepositoryWebrefEntityLinkMetadata
+   */
+  public $metadata;
   protected $metadataType = RepositoryWebrefEntityLinkMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var RepositoryWebrefEntityLinkSource[]
+   */
+  public $source;
   protected $sourceType = RepositoryWebrefEntityLinkSource::class;
   protected $sourceDataType = 'array';
 

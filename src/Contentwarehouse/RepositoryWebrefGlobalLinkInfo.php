@@ -32,6 +32,10 @@ class RepositoryWebrefGlobalLinkInfo extends \Google\Collection
    * @var string
    */
   public $targetMid;
+  /**
+   * @var RepositoryWebrefLinkInfo[]
+   */
+  public $variantInfo;
   protected $variantInfoType = RepositoryWebrefLinkInfo::class;
   protected $variantInfoDataType = 'array';
 

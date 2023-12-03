@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefSimplifiedAnchor extends \Google\Model
 {
+  /**
+   * @var RepositoryWebrefAnchorIndices
+   */
+  public $anchorIndices;
   protected $anchorIndicesType = RepositoryWebrefAnchorIndices::class;
   protected $anchorIndicesDataType = '';
+  /**
+   * @var RepositoryWebrefLocalizedString
+   */
+  public $anchorText;
   protected $anchorTextType = RepositoryWebrefLocalizedString::class;
   protected $anchorTextDataType = '';
   /**

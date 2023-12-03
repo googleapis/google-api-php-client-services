@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefNameDebugInfo extends \Google\Collection
 {
   protected $collection_key = 'candidates';
+  /**
+   * @var RepositoryWebrefNameDebugInfoCandidateInfo[]
+   */
+  public $candidates;
   protected $candidatesType = RepositoryWebrefNameDebugInfoCandidateInfo::class;
   protected $candidatesDataType = 'array';
+  /**
+   * @var RepositoryWebrefLocalizedString
+   */
+  public $query;
   protected $queryType = RepositoryWebrefLocalizedString::class;
   protected $queryDataType = '';
   /**

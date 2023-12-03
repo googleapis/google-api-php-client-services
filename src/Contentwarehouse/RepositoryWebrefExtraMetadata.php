@@ -20,40 +20,96 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefExtraMetadata extends \Google\Collection
 {
   protected $collection_key = 'supportTransferRules';
+  /**
+   * @var RepositoryWebrefBookEditionMetadata[]
+   */
+  public $bookEditionMetadata;
   protected $bookEditionMetadataType = RepositoryWebrefBookEditionMetadata::class;
   protected $bookEditionMetadataDataType = 'array';
+  /**
+   * @var RepositoryWebrefCategoryInfo
+   */
+  public $categoryInfo;
   protected $categoryInfoType = RepositoryWebrefCategoryInfo::class;
   protected $categoryInfoDataType = '';
+  /**
+   * @var RepositoryWebrefClusterMetadata
+   */
+  public $clusterMetadata;
   protected $clusterMetadataType = RepositoryWebrefClusterMetadata::class;
   protected $clusterMetadataDataType = '';
+  /**
+   * @var RepositoryWebrefDisplayInfo
+   */
+  public $displayInfo;
   protected $displayInfoType = RepositoryWebrefDisplayInfo::class;
   protected $displayInfoDataType = '';
+  /**
+   * @var RepositoryWebrefEntityScores
+   */
+  public $entityScores;
   protected $entityScoresType = RepositoryWebrefEntityScores::class;
   protected $entityScoresDataType = '';
+  /**
+   * @var RepositoryWebrefWebrefEntityId[]
+   */
+  public $equivalentEntityId;
   protected $equivalentEntityIdType = RepositoryWebrefWebrefEntityId::class;
   protected $equivalentEntityIdDataType = 'array';
+  /**
+   * @var RepositoryWebrefGeoMetadataProto
+   */
+  public $geoMetadata;
   protected $geoMetadataType = RepositoryWebrefGeoMetadataProto::class;
   protected $geoMetadataDataType = '';
+  /**
+   * @var RepositoryWebrefKCAttributeMetadata
+   */
+  public $kcAttributeMetadata;
   protected $kcAttributeMetadataType = RepositoryWebrefKCAttributeMetadata::class;
   protected $kcAttributeMetadataDataType = '';
+  /**
+   * @var RepositoryWebrefLatentEntities
+   */
+  public $latentEntities;
   protected $latentEntitiesType = RepositoryWebrefLatentEntities::class;
   protected $latentEntitiesDataType = '';
+  /**
+   * @var RepositoryWebrefMdvcMetadata
+   */
+  public $mdvcMetadata;
   protected $mdvcMetadataType = RepositoryWebrefMdvcMetadata::class;
   protected $mdvcMetadataDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $otherMetadata;
   protected $otherMetadataType = Proto2BridgeMessageSet::class;
   protected $otherMetadataDataType = '';
   /**
    * @var string
    */
   public $primaryRecording;
+  /**
+   * @var RepositoryWebrefProductMetadata
+   */
+  public $productMetadata;
   protected $productMetadataType = RepositoryWebrefProductMetadata::class;
   protected $productMetadataDataType = '';
   /**
    * @var string
    */
   public $specialEntityType;
+  /**
+   * @var MapsQualitySpecialWordsProto[]
+   */
+  public $specialWord;
   protected $specialWordType = MapsQualitySpecialWordsProto::class;
   protected $specialWordDataType = 'array';
+  /**
+   * @var RepositoryWebrefSupportTransferRule[]
+   */
+  public $supportTransferRules;
   protected $supportTransferRulesType = RepositoryWebrefSupportTransferRule::class;
   protected $supportTransferRulesDataType = 'array';
 

@@ -47,6 +47,10 @@ class RepositoryWebrefDetailedEntityScores extends \Google\Model
    * @var string
    */
   public $profileUrl;
+  /**
+   * @var RepositoryWebrefReferencePageScores
+   */
+  public $referencePageScores;
   protected $referencePageScoresType = RepositoryWebrefReferencePageScores::class;
   protected $referencePageScoresDataType = '';
   /**

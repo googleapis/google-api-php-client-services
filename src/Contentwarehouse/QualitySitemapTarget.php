@@ -39,18 +39,30 @@ class QualitySitemapTarget extends \Google\Collection
    * @var int[]
    */
   public $languages;
+  /**
+   * @var WWWResultInfoSubImageDocInfo
+   */
+  public $salientImage;
   protected $salientImageType = WWWResultInfoSubImageDocInfo::class;
   protected $salientImageDataType = '';
   /**
    * @var float
    */
   public $score;
+  /**
+   * @var QualitySitemapScoringSignals
+   */
+  public $scoringSignals;
   protected $scoringSignalsType = QualitySitemapScoringSignals::class;
   protected $scoringSignalsDataType = '';
   /**
    * @var string[]
    */
   public $sectionTexts;
+  /**
+   * @var GenericSnippetResponse
+   */
+  public $snippetResponse;
   protected $snippetResponseType = GenericSnippetResponse::class;
   protected $snippetResponseDataType = '';
   /**

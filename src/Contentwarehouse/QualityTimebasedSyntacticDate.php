@@ -27,6 +27,10 @@ class QualityTimebasedSyntacticDate extends \Google\Model
    * @var string
    */
   public $date;
+  /**
+   * @var QualityTimebasedSyntacticDateDateRange
+   */
+  public $daterange;
   protected $daterangeType = QualityTimebasedSyntacticDateDateRange::class;
   protected $daterangeDataType = '';
   /**
@@ -41,6 +45,10 @@ class QualityTimebasedSyntacticDate extends \Google\Model
    * @var int
    */
   public $info;
+  /**
+   * @var QualityTimebasedSyntacticDatePosition
+   */
+  public $position;
   protected $positionType = QualityTimebasedSyntacticDatePosition::class;
   protected $positionDataType = '';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryAnnotationsGeoTopic extends \Google\Collection
 {
   protected $collection_key = 'componentScores';
+  /**
+   * @var GeostoreAddressProto
+   */
+  public $address;
   protected $addressType = GeostoreAddressProto::class;
   protected $addressDataType = '';
+  /**
+   * @var RepositoryAnnotationsGeoTopicalityScore[]
+   */
+  public $componentScores;
   protected $componentScoresType = RepositoryAnnotationsGeoTopicalityScore::class;
   protected $componentScoresDataType = 'array';
   /**
@@ -52,6 +60,10 @@ class RepositoryAnnotationsGeoTopic extends \Google\Collection
    * @var float
    */
   public $normalizedScore;
+  /**
+   * @var GeostoreFeatureIdProto
+   */
+  public $oysterId;
   protected $oysterIdType = GeostoreFeatureIdProto::class;
   protected $oysterIdDataType = '';
   /**

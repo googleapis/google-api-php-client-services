@@ -20,18 +20,46 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefCategoryInfo extends \Google\Collection
 {
   protected $collection_key = 'wpCategory';
+  /**
+   * @var RepositoryWebrefFreebaseType[]
+   */
+  public $allTypes;
   protected $allTypesType = RepositoryWebrefFreebaseType::class;
   protected $allTypesDataType = 'array';
+  /**
+   * @var RepositoryWebrefFreebaseType[]
+   */
+  public $freebaseType;
   protected $freebaseTypeType = RepositoryWebrefFreebaseType::class;
   protected $freebaseTypeDataType = 'array';
+  /**
+   * @var RepositoryWebrefKGCollection[]
+   */
+  public $kgCollection;
   protected $kgCollectionType = RepositoryWebrefKGCollection::class;
   protected $kgCollectionDataType = 'array';
+  /**
+   * @var RepositoryWebrefOysterType
+   */
+  public $oysterType;
   protected $oysterTypeType = RepositoryWebrefOysterType::class;
   protected $oysterTypeDataType = '';
+  /**
+   * @var RepositoryWebrefFatcatCategory[]
+   */
+  public $salientCategory;
   protected $salientCategoryType = RepositoryWebrefFatcatCategory::class;
   protected $salientCategoryDataType = 'array';
+  /**
+   * @var RepositoryWebrefWikipediaCategory[]
+   */
+  public $wikipediaCategory;
   protected $wikipediaCategoryType = RepositoryWebrefWikipediaCategory::class;
   protected $wikipediaCategoryDataType = 'array';
+  /**
+   * @var RepositoryWebrefFreebaseType[]
+   */
+  public $wpCategory;
   protected $wpCategoryType = RepositoryWebrefFreebaseType::class;
   protected $wpCategoryDataType = 'array';
 

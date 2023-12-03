@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualityTravelGoodSitesData extends \Google\Collection
 {
   protected $collection_key = 'signal';
+  /**
+   * @var QualityTravelGoodSitesDataI18n[]
+   */
+  public $i18n;
   protected $i18nType = QualityTravelGoodSitesDataI18n::class;
   protected $i18nDataType = 'array';
   /**
@@ -42,6 +46,10 @@ class QualityTravelGoodSitesData extends \Google\Collection
    * @var float
    */
   public $normalizationFactor;
+  /**
+   * @var QualityTravelGoodSitesDataSignal[]
+   */
+  public $signal;
   protected $signalType = QualityTravelGoodSitesDataSignal::class;
   protected $signalDataType = 'array';
   /**

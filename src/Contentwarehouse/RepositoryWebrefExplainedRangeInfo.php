@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefExplainedRangeInfo extends \Google\Collection
 {
   protected $collection_key = 'explainedRange';
+  /**
+   * @var RepositoryWebrefExplainedRangeInfoExplainedRange[]
+   */
+  public $explainedRange;
   protected $explainedRangeType = RepositoryWebrefExplainedRangeInfoExplainedRange::class;
   protected $explainedRangeDataType = 'array';
   /**

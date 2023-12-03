@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefRefconDocumentMentionSpans extends \Google\Collection
 {
   protected $collection_key = 'mentionSpan';
+  /**
+   * @var RepositoryWebrefRefconMentionSpans[]
+   */
+  public $mentionSpan;
   protected $mentionSpanType = RepositoryWebrefRefconMentionSpans::class;
   protected $mentionSpanDataType = 'array';
 

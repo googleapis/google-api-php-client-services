@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class QualitySalientTermsSalientTermSet extends \Google\Collection
 {
   protected $collection_key = 'salientTerm';
+  /**
+   * @var QualitySalientTermsDocData
+   */
+  public $docData;
   protected $docDataType = QualitySalientTermsDocData::class;
   protected $docDataDataType = '';
+  /**
+   * @var QualitySalientTermsSalientTerm[]
+   */
+  public $salientTerm;
   protected $salientTermType = QualitySalientTermsSalientTerm::class;
   protected $salientTermDataType = 'array';
   /**

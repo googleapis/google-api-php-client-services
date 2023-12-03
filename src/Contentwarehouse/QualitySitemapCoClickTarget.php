@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class QualitySitemapCoClickTarget extends \Google\Collection
 {
   protected $collection_key = 'docs';
+  /**
+   * @var QualitySitemapCoClickTargetDoc[]
+   */
+  public $docs;
   protected $docsType = QualitySitemapCoClickTargetDoc::class;
   protected $docsDataType = 'array';
   /**

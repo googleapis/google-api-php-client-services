@@ -99,6 +99,10 @@ class RepositoryWebrefPreprocessingNameEntityMetadata extends \Google\Model
    * @var bool
    */
   public $notGeneratedName;
+  /**
+   * @var RepositoryWebrefPreprocessingOriginalNames
+   */
+  public $originalNames;
   protected $originalNamesType = RepositoryWebrefPreprocessingOriginalNames::class;
   protected $originalNamesDataType = '';
   /**

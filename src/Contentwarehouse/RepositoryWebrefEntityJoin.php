@@ -20,28 +20,76 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefEntityJoin extends \Google\Collection
 {
   protected $collection_key = 'representation';
+  /**
+   * @var RepositoryWebrefWebrefEntityId
+   */
+  public $annotatedEntityId;
   protected $annotatedEntityIdType = RepositoryWebrefWebrefEntityId::class;
   protected $annotatedEntityIdDataType = '';
+  /**
+   * @var RepositoryWebrefSimplifiedCompositeDoc[]
+   */
+  public $cdoc;
   protected $cdocType = RepositoryWebrefSimplifiedCompositeDoc::class;
   protected $cdocDataType = 'array';
+  /**
+   * @var RepositoryWebrefGlobalNameInfo[]
+   */
+  public $contextNameInfo;
   protected $contextNameInfoType = RepositoryWebrefGlobalNameInfo::class;
   protected $contextNameInfoDataType = 'array';
+  /**
+   * @var RepositoryWebrefEntityDebugInfo[]
+   */
+  public $debugInfo;
   protected $debugInfoType = RepositoryWebrefEntityDebugInfo::class;
   protected $debugInfoDataType = 'array';
+  /**
+   * @var RepositoryWebrefAnnotatorProfile
+   */
+  public $enricherAnnotatorProfile;
   protected $enricherAnnotatorProfileType = RepositoryWebrefAnnotatorProfile::class;
   protected $enricherAnnotatorProfileDataType = '';
+  /**
+   * @var RepositoryWebrefEnricherDebugData
+   */
+  public $enricherDebugData;
   protected $enricherDebugDataType = RepositoryWebrefEnricherDebugData::class;
   protected $enricherDebugDataDataType = '';
+  /**
+   * @var RepositoryWebrefExtraMetadata
+   */
+  public $extraData;
   protected $extraDataType = RepositoryWebrefExtraMetadata::class;
   protected $extraDataDataType = '';
+  /**
+   * @var RepositoryWebrefHumanRatings
+   */
+  public $humanRatings;
   protected $humanRatingsType = RepositoryWebrefHumanRatings::class;
   protected $humanRatingsDataType = '';
+  /**
+   * @var RepositoryWebrefGlobalLinkInfo[]
+   */
+  public $linkInfo;
   protected $linkInfoType = RepositoryWebrefGlobalLinkInfo::class;
   protected $linkInfoDataType = 'array';
+  /**
+   * @var RepositoryWebrefGlobalNameInfo[]
+   */
+  public $nameInfo;
   protected $nameInfoType = RepositoryWebrefGlobalNameInfo::class;
   protected $nameInfoDataType = 'array';
+  /**
+   * @var RepositoryWebrefRefconRefconNameInfo[]
+   */
+  public $refconNameInfo;
   protected $refconNameInfoType = RepositoryWebrefRefconRefconNameInfo::class;
   protected $refconNameInfoDataType = 'array';
+  /**
+   * @var RepositoryWebrefDomainSpecificRepresentation[]
+   */
+  public $representation;
   protected $representationType = RepositoryWebrefDomainSpecificRepresentation::class;
   protected $representationDataType = 'array';
 
