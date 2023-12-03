@@ -23,6 +23,10 @@ class CreateTaskRequest extends \Google\Model
    * @var string
    */
   public $responseView;
+  /**
+   * @var Task
+   */
+  public $task;
   protected $taskType = Task::class;
   protected $taskDataType = '';
 

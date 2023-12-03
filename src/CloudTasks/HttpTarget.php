@@ -20,16 +20,32 @@ namespace Google\Service\CloudTasks;
 class HttpTarget extends \Google\Collection
 {
   protected $collection_key = 'headerOverrides';
+  /**
+   * @var HeaderOverride[]
+   */
+  public $headerOverrides;
   protected $headerOverridesType = HeaderOverride::class;
   protected $headerOverridesDataType = 'array';
   /**
    * @var string
    */
   public $httpMethod;
+  /**
+   * @var OAuthToken
+   */
+  public $oauthToken;
   protected $oauthTokenType = OAuthToken::class;
   protected $oauthTokenDataType = '';
+  /**
+   * @var OidcToken
+   */
+  public $oidcToken;
   protected $oidcTokenType = OidcToken::class;
   protected $oidcTokenDataType = '';
+  /**
+   * @var UriOverride
+   */
+  public $uriOverride;
   protected $uriOverrideType = UriOverride::class;
   protected $uriOverrideDataType = '';
 

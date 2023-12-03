@@ -24,6 +24,10 @@ class ListQueuesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Queue[]
+   */
+  public $queues;
   protected $queuesType = Queue::class;
   protected $queuesDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\CloudTasks;
 
 class BufferTaskResponse extends \Google\Model
 {
+  /**
+   * @var Task
+   */
+  public $task;
   protected $taskType = Task::class;
   protected $taskDataType = '';
 

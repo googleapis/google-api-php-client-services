@@ -23,6 +23,10 @@ class Attempt extends \Google\Model
    * @var string
    */
   public $dispatchTime;
+  /**
+   * @var Status
+   */
+  public $responseStatus;
   protected $responseStatusType = Status::class;
   protected $responseStatusDataType = '';
   /**
