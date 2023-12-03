@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class DataSourceObjectReferences extends \Google\Collection
 {
   protected $collection_key = 'references';
+  /**
+   * @var DataSourceObjectReference[]
+   */
+  public $references;
   protected $referencesType = DataSourceObjectReference::class;
   protected $referencesDataType = 'array';
 

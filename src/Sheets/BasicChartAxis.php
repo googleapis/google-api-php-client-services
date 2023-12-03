@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class BasicChartAxis extends \Google\Model
 {
+  /**
+   * @var TextFormat
+   */
+  public $format;
   protected $formatType = TextFormat::class;
   protected $formatDataType = '';
   /**
@@ -29,8 +33,16 @@ class BasicChartAxis extends \Google\Model
    * @var string
    */
   public $title;
+  /**
+   * @var TextPosition
+   */
+  public $titleTextPosition;
   protected $titleTextPositionType = TextPosition::class;
   protected $titleTextPositionDataType = '';
+  /**
+   * @var ChartAxisViewWindowOptions
+   */
+  public $viewWindowOptions;
   protected $viewWindowOptionsType = ChartAxisViewWindowOptions::class;
   protected $viewWindowOptionsDataType = '';
 

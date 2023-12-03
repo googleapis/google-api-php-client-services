@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class DataSourceChartProperties extends \Google\Model
 {
+  /**
+   * @var DataExecutionStatus
+   */
+  public $dataExecutionStatus;
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   /**

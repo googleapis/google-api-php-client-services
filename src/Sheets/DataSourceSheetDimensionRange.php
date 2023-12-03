@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class DataSourceSheetDimensionRange extends \Google\Collection
 {
   protected $collection_key = 'columnReferences';
+  /**
+   * @var DataSourceColumnReference[]
+   */
+  public $columnReferences;
   protected $columnReferencesType = DataSourceColumnReference::class;
   protected $columnReferencesDataType = 'array';
   /**

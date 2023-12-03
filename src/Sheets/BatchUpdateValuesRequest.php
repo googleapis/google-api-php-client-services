@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class BatchUpdateValuesRequest extends \Google\Collection
 {
   protected $collection_key = 'data';
+  /**
+   * @var ValueRange[]
+   */
+  public $data;
   protected $dataType = ValueRange::class;
   protected $dataDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class BatchUpdateValuesResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var UpdateValuesResponse[]
+   */
+  public $responses;
   protected $responsesType = UpdateValuesResponse::class;
   protected $responsesDataType = 'array';
   /**

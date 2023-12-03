@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class ChartSourceRange extends \Google\Collection
 {
   protected $collection_key = 'sources';
+  /**
+   * @var GridRange[]
+   */
+  public $sources;
   protected $sourcesType = GridRange::class;
   protected $sourcesDataType = 'array';
 

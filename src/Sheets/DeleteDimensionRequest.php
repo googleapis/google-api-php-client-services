@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class DeleteDimensionRequest extends \Google\Model
 {
+  /**
+   * @var DimensionRange
+   */
+  public $range;
   protected $rangeType = DimensionRange::class;
   protected $rangeDataType = '';
 

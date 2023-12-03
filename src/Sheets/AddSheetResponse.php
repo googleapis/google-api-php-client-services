@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class AddSheetResponse extends \Google\Model
 {
+  /**
+   * @var SheetProperties
+   */
+  public $properties;
   protected $propertiesType = SheetProperties::class;
   protected $propertiesDataType = '';
 

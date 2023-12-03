@@ -19,8 +19,16 @@ namespace Google\Service\Sheets;
 
 class BooleanRule extends \Google\Model
 {
+  /**
+   * @var BooleanCondition
+   */
+  public $condition;
   protected $conditionType = BooleanCondition::class;
   protected $conditionDataType = '';
+  /**
+   * @var CellFormat
+   */
+  public $format;
   protected $formatType = CellFormat::class;
   protected $formatDataType = '';
 

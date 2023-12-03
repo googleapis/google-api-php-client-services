@@ -24,6 +24,10 @@ class BatchUpdateSpreadsheetRequest extends \Google\Collection
    * @var bool
    */
   public $includeSpreadsheetInResponse;
+  /**
+   * @var Request[]
+   */
+  public $requests;
   protected $requestsType = Request::class;
   protected $requestsDataType = 'array';
   /**

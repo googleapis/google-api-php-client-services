@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class AddProtectedRangeRequest extends \Google\Model
 {
+  /**
+   * @var ProtectedRange
+   */
+  public $protectedRange;
   protected $protectedRangeType = ProtectedRange::class;
   protected $protectedRangeDataType = '';
 

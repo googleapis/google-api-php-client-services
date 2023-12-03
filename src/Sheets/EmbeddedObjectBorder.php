@@ -19,8 +19,16 @@ namespace Google\Service\Sheets;
 
 class EmbeddedObjectBorder extends \Google\Model
 {
+  /**
+   * @var Color
+   */
+  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
+  /**
+   * @var ColorStyle
+   */
+  public $colorStyle;
   protected $colorStyleType = ColorStyle::class;
   protected $colorStyleDataType = '';
 

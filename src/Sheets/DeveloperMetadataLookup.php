@@ -35,6 +35,10 @@ class DeveloperMetadataLookup extends \Google\Model
    * @var string
    */
   public $metadataKey;
+  /**
+   * @var DeveloperMetadataLocation
+   */
+  public $metadataLocation;
   protected $metadataLocationType = DeveloperMetadataLocation::class;
   protected $metadataLocationDataType = '';
   /**

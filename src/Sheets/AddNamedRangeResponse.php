@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class AddNamedRangeResponse extends \Google\Model
 {
+  /**
+   * @var NamedRange
+   */
+  public $namedRange;
   protected $namedRangeType = NamedRange::class;
   protected $namedRangeDataType = '';
 

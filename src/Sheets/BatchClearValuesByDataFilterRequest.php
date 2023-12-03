@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class BatchClearValuesByDataFilterRequest extends \Google\Collection
 {
   protected $collection_key = 'dataFilters';
+  /**
+   * @var DataFilter[]
+   */
+  public $dataFilters;
   protected $dataFiltersType = DataFilter::class;
   protected $dataFiltersDataType = 'array';
 

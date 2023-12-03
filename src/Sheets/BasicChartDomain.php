@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class BasicChartDomain extends \Google\Model
 {
+  /**
+   * @var ChartData
+   */
+  public $domain;
   protected $domainType = ChartData::class;
   protected $domainDataType = '';
   /**

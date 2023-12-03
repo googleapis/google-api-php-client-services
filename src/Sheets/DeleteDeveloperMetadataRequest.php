@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class DeleteDeveloperMetadataRequest extends \Google\Model
 {
+  /**
+   * @var DataFilter
+   */
+  public $dataFilter;
   protected $dataFilterType = DataFilter::class;
   protected $dataFilterDataType = '';
 

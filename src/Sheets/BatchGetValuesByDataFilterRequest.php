@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class BatchGetValuesByDataFilterRequest extends \Google\Collection
 {
   protected $collection_key = 'dataFilters';
+  /**
+   * @var DataFilter[]
+   */
+  public $dataFilters;
   protected $dataFiltersType = DataFilter::class;
   protected $dataFiltersDataType = 'array';
   /**

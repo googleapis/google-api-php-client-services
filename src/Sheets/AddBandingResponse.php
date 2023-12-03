@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class AddBandingResponse extends \Google\Model
 {
+  /**
+   * @var BandedRange
+   */
+  public $bandedRange;
   protected $bandedRangeType = BandedRange::class;
   protected $bandedRangeDataType = '';
 
