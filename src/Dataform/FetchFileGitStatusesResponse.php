@@ -20,6 +20,10 @@ namespace Google\Service\Dataform;
 class FetchFileGitStatusesResponse extends \Google\Collection
 {
   protected $collection_key = 'uncommittedFileChanges';
+  /**
+   * @var UncommittedFileChange[]
+   */
+  public $uncommittedFileChanges;
   protected $uncommittedFileChangesType = UncommittedFileChange::class;
   protected $uncommittedFileChangesDataType = 'array';
 

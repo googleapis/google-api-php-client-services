@@ -19,6 +19,10 @@ namespace Google\Service\Dataform;
 
 class Declaration extends \Google\Model
 {
+  /**
+   * @var RelationDescriptor
+   */
+  public $relationDescriptor;
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
 

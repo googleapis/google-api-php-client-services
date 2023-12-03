@@ -28,6 +28,10 @@ class InvocationConfig extends \Google\Collection
    * @var string[]
    */
   public $includedTags;
+  /**
+   * @var Target[]
+   */
+  public $includedTargets;
   protected $includedTargetsType = Target::class;
   protected $includedTargetsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Dataform;
 
 class PullGitCommitsRequest extends \Google\Model
 {
+  /**
+   * @var CommitAuthor
+   */
+  public $author;
   protected $authorType = CommitAuthor::class;
   protected $authorDataType = '';
   /**

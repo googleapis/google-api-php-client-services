@@ -20,6 +20,10 @@ namespace Google\Service\Dataform;
 class ReleaseConfig extends \Google\Collection
 {
   protected $collection_key = 'recentScheduledReleaseRecords';
+  /**
+   * @var CodeCompilationConfig
+   */
+  public $codeCompilationConfig;
   protected $codeCompilationConfigType = CodeCompilationConfig::class;
   protected $codeCompilationConfigDataType = '';
   /**
@@ -34,6 +38,10 @@ class ReleaseConfig extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ScheduledReleaseRecord[]
+   */
+  public $recentScheduledReleaseRecords;
   protected $recentScheduledReleaseRecordsType = ScheduledReleaseRecord::class;
   protected $recentScheduledReleaseRecordsDataType = 'array';
   /**

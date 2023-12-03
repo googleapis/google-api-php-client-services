@@ -20,6 +20,10 @@ namespace Google\Service\Dataform;
 class Operations extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  /**
+   * @var Target[]
+   */
+  public $dependencyTargets;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class Operations extends \Google\Collection
    * @var string[]
    */
   public $queries;
+  /**
+   * @var RelationDescriptor
+   */
+  public $relationDescriptor;
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
   /**

@@ -19,20 +19,36 @@ namespace Google\Service\Dataform;
 
 class WorkflowInvocationAction extends \Google\Model
 {
+  /**
+   * @var BigQueryAction
+   */
+  public $bigqueryAction;
   protected $bigqueryActionType = BigQueryAction::class;
   protected $bigqueryActionDataType = '';
+  /**
+   * @var Target
+   */
+  public $canonicalTarget;
   protected $canonicalTargetType = Target::class;
   protected $canonicalTargetDataType = '';
   /**
    * @var string
    */
   public $failureReason;
+  /**
+   * @var Interval
+   */
+  public $invocationTiming;
   protected $invocationTimingType = Interval::class;
   protected $invocationTimingDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var Target
+   */
+  public $target;
   protected $targetType = Target::class;
   protected $targetDataType = '';
 

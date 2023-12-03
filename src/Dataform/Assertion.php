@@ -20,14 +20,26 @@ namespace Google\Service\Dataform;
 class Assertion extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  /**
+   * @var Target[]
+   */
+  public $dependencyTargets;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
    * @var bool
    */
   public $disabled;
+  /**
+   * @var Target
+   */
+  public $parentAction;
   protected $parentActionType = Target::class;
   protected $parentActionDataType = '';
+  /**
+   * @var RelationDescriptor
+   */
+  public $relationDescriptor;
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
   /**

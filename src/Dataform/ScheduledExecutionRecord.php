@@ -19,6 +19,10 @@ namespace Google\Service\Dataform;
 
 class ScheduledExecutionRecord extends \Google\Model
 {
+  /**
+   * @var Status
+   */
+  public $errorStatus;
   protected $errorStatusType = Status::class;
   protected $errorStatusDataType = '';
   /**

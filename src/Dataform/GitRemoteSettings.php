@@ -27,6 +27,10 @@ class GitRemoteSettings extends \Google\Model
    * @var string
    */
   public $defaultBranch;
+  /**
+   * @var SshAuthenticationConfig
+   */
+  public $sshAuthenticationConfig;
   protected $sshAuthenticationConfigType = SshAuthenticationConfig::class;
   protected $sshAuthenticationConfigDataType = '';
   /**

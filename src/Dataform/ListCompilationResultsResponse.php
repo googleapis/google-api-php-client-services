@@ -20,6 +20,10 @@ namespace Google\Service\Dataform;
 class ListCompilationResultsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CompilationResult[]
+   */
+  public $compilationResults;
   protected $compilationResultsType = CompilationResult::class;
   protected $compilationResultsDataType = 'array';
   /**

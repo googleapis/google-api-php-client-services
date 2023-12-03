@@ -19,6 +19,10 @@ namespace Google\Service\Dataform;
 
 class CompilationError extends \Google\Model
 {
+  /**
+   * @var Target
+   */
+  public $actionTarget;
   protected $actionTargetType = Target::class;
   protected $actionTargetDataType = '';
   /**

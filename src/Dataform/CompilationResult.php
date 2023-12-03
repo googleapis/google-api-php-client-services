@@ -20,8 +20,16 @@ namespace Google\Service\Dataform;
 class CompilationResult extends \Google\Collection
 {
   protected $collection_key = 'compilationErrors';
+  /**
+   * @var CodeCompilationConfig
+   */
+  public $codeCompilationConfig;
   protected $codeCompilationConfigType = CodeCompilationConfig::class;
   protected $codeCompilationConfigDataType = '';
+  /**
+   * @var CompilationError[]
+   */
+  public $compilationErrors;
   protected $compilationErrorsType = CompilationError::class;
   protected $compilationErrorsDataType = 'array';
   /**

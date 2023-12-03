@@ -23,8 +23,16 @@ class WorkflowInvocation extends \Google\Model
    * @var string
    */
   public $compilationResult;
+  /**
+   * @var InvocationConfig
+   */
+  public $invocationConfig;
   protected $invocationConfigType = InvocationConfig::class;
   protected $invocationConfigDataType = '';
+  /**
+   * @var Interval
+   */
+  public $invocationTiming;
   protected $invocationTimingType = Interval::class;
   protected $invocationTimingDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dataform;
 class FetchRepositoryHistoryResponse extends \Google\Collection
 {
   protected $collection_key = 'commits';
+  /**
+   * @var CommitLogEntry[]
+   */
+  public $commits;
   protected $commitsType = CommitLogEntry::class;
   protected $commitsDataType = 'array';
   /**
