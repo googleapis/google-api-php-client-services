@@ -23,6 +23,10 @@ class CompositeMedia extends \Google\Model
    * @var string
    */
   public $blobRef;
+  /**
+   * @var Blobstore2Info
+   */
+  public $blobstore2Info;
   protected $blobstore2InfoType = Blobstore2Info::class;
   protected $blobstore2InfoDataType = '';
   /**
@@ -45,6 +49,10 @@ class CompositeMedia extends \Google\Model
    * @var string
    */
   public $md5Hash;
+  /**
+   * @var ObjectId
+   */
+  public $objectId;
   protected $objectIdType = ObjectId::class;
   protected $objectIdDataType = '';
   /**

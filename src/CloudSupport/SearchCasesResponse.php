@@ -20,6 +20,10 @@ namespace Google\Service\CloudSupport;
 class SearchCasesResponse extends \Google\Collection
 {
   protected $collection_key = 'cases';
+  /**
+   * @var CloudsupportCase[]
+   */
+  public $cases;
   protected $casesType = CloudsupportCase::class;
   protected $casesDataType = 'array';
   /**

@@ -19,12 +19,20 @@ namespace Google\Service\CloudSupport;
 
 class DiffChecksumsResponse extends \Google\Model
 {
+  /**
+   * @var CompositeMedia
+   */
+  public $checksumsLocation;
   protected $checksumsLocationType = CompositeMedia::class;
   protected $checksumsLocationDataType = '';
   /**
    * @var string
    */
   public $chunkSizeBytes;
+  /**
+   * @var CompositeMedia
+   */
+  public $objectLocation;
   protected $objectLocationType = CompositeMedia::class;
   protected $objectLocationDataType = '';
   /**

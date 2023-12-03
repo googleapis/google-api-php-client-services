@@ -32,14 +32,26 @@ class Media extends \Google\Collection
    * @var string
    */
   public $blobRef;
+  /**
+   * @var Blobstore2Info
+   */
+  public $blobstore2Info;
   protected $blobstore2InfoType = Blobstore2Info::class;
   protected $blobstore2InfoDataType = '';
+  /**
+   * @var CompositeMedia[]
+   */
+  public $compositeMedia;
   protected $compositeMediaType = CompositeMedia::class;
   protected $compositeMediaDataType = 'array';
   /**
    * @var string
    */
   public $contentType;
+  /**
+   * @var ContentTypeInfo
+   */
+  public $contentTypeInfo;
   protected $contentTypeInfoType = ContentTypeInfo::class;
   protected $contentTypeInfoDataType = '';
   /**
@@ -50,16 +62,40 @@ class Media extends \Google\Collection
    * @var string
    */
   public $crc32cHash;
+  /**
+   * @var DiffChecksumsResponse
+   */
+  public $diffChecksumsResponse;
   protected $diffChecksumsResponseType = DiffChecksumsResponse::class;
   protected $diffChecksumsResponseDataType = '';
+  /**
+   * @var DiffDownloadResponse
+   */
+  public $diffDownloadResponse;
   protected $diffDownloadResponseType = DiffDownloadResponse::class;
   protected $diffDownloadResponseDataType = '';
+  /**
+   * @var DiffUploadRequest
+   */
+  public $diffUploadRequest;
   protected $diffUploadRequestType = DiffUploadRequest::class;
   protected $diffUploadRequestDataType = '';
+  /**
+   * @var DiffUploadResponse
+   */
+  public $diffUploadResponse;
   protected $diffUploadResponseType = DiffUploadResponse::class;
   protected $diffUploadResponseDataType = '';
+  /**
+   * @var DiffVersionResponse
+   */
+  public $diffVersionResponse;
   protected $diffVersionResponseType = DiffVersionResponse::class;
   protected $diffVersionResponseDataType = '';
+  /**
+   * @var DownloadParameters
+   */
+  public $downloadParameters;
   protected $downloadParametersType = DownloadParameters::class;
   protected $downloadParametersDataType = '';
   /**
@@ -94,6 +130,10 @@ class Media extends \Google\Collection
    * @var string
    */
   public $mediaId;
+  /**
+   * @var ObjectId
+   */
+  public $objectId;
   protected $objectIdType = ObjectId::class;
   protected $objectIdDataType = '';
   /**

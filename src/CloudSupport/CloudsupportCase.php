@@ -20,6 +20,10 @@ namespace Google\Service\CloudSupport;
 class CloudsupportCase extends \Google\Collection
 {
   protected $collection_key = 'subscriberEmailAddresses';
+  /**
+   * @var CaseClassification
+   */
+  public $classification;
   protected $classificationType = CaseClassification::class;
   protected $classificationDataType = '';
   /**
@@ -30,6 +34,10 @@ class CloudsupportCase extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var Actor
+   */
+  public $creator;
   protected $creatorType = Actor::class;
   protected $creatorDataType = '';
   /**

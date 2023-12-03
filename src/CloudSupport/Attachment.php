@@ -23,6 +23,10 @@ class Attachment extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var Actor
+   */
+  public $creator;
   protected $creatorType = Actor::class;
   protected $creatorDataType = '';
   /**

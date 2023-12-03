@@ -19,6 +19,10 @@ namespace Google\Service\CloudSupport;
 
 class DiffDownloadResponse extends \Google\Model
 {
+  /**
+   * @var CompositeMedia
+   */
+  public $objectLocation;
   protected $objectLocationType = CompositeMedia::class;
   protected $objectLocationDataType = '';
 
