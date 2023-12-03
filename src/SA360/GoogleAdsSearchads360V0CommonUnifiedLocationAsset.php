@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonUnifiedLocationAsset extends \Google\Collection
 {
   protected $collection_key = 'businessProfileLocations';
+  /**
+   * @var GoogleAdsSearchads360V0CommonBusinessProfileLocation[]
+   */
+  public $businessProfileLocations;
   protected $businessProfileLocationsType = GoogleAdsSearchads360V0CommonBusinessProfileLocation::class;
   protected $businessProfileLocationsDataType = 'array';
   /**

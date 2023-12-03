@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionPath extends \Google\Collection
 {
   protected $collection_key = 'dimensions';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimension::class;
   protected $dimensionsDataType = 'array';
 

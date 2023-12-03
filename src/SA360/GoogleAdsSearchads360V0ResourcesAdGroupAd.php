@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAdGroupAd extends \Google\Collection
 {
   protected $collection_key = 'labels';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesAd
+   */
+  public $ad;
   protected $adType = GoogleAdsSearchads360V0ResourcesAd::class;
   protected $adDataType = '';
   /**

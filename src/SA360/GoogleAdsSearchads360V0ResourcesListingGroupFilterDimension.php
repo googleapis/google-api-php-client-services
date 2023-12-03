@@ -19,18 +19,46 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesListingGroupFilterDimension extends \Google\Model
 {
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductBiddingCategory
+   */
+  public $productBiddingCategory;
   protected $productBiddingCategoryType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductBiddingCategory::class;
   protected $productBiddingCategoryDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductBrand
+   */
+  public $productBrand;
   protected $productBrandType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductBrand::class;
   protected $productBrandDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductChannel
+   */
+  public $productChannel;
   protected $productChannelType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductChannel::class;
   protected $productChannelDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductCondition
+   */
+  public $productCondition;
   protected $productConditionType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductCondition::class;
   protected $productConditionDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductCustomAttribute
+   */
+  public $productCustomAttribute;
   protected $productCustomAttributeType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductCustomAttribute::class;
   protected $productCustomAttributeDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductItemId
+   */
+  public $productItemId;
   protected $productItemIdType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductItemId::class;
   protected $productItemIdDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductType
+   */
+  public $productType;
   protected $productTypeType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionProductType::class;
   protected $productTypeDataType = '';
 

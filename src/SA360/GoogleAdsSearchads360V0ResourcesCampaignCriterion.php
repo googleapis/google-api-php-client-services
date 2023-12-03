@@ -19,6 +19,10 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends \Google\Model
 {
+  /**
+   * @var GoogleAdsSearchads360V0CommonAgeRangeInfo
+   */
+  public $ageRange;
   protected $ageRangeType = GoogleAdsSearchads360V0CommonAgeRangeInfo::class;
   protected $ageRangeDataType = '';
   /**
@@ -29,24 +33,48 @@ class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends \Google\Model
    * @var string
    */
   public $criterionId;
+  /**
+   * @var GoogleAdsSearchads360V0CommonDeviceInfo
+   */
+  public $device;
   protected $deviceType = GoogleAdsSearchads360V0CommonDeviceInfo::class;
   protected $deviceDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleAdsSearchads360V0CommonGenderInfo
+   */
+  public $gender;
   protected $genderType = GoogleAdsSearchads360V0CommonGenderInfo::class;
   protected $genderDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonKeywordInfo
+   */
+  public $keyword;
   protected $keywordType = GoogleAdsSearchads360V0CommonKeywordInfo::class;
   protected $keywordDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonLanguageInfo
+   */
+  public $language;
   protected $languageType = GoogleAdsSearchads360V0CommonLanguageInfo::class;
   protected $languageDataType = '';
   /**
    * @var string
    */
   public $lastModifiedTime;
+  /**
+   * @var GoogleAdsSearchads360V0CommonLocationInfo
+   */
+  public $location;
   protected $locationType = GoogleAdsSearchads360V0CommonLocationInfo::class;
   protected $locationDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonLocationGroupInfo
+   */
+  public $locationGroup;
   protected $locationGroupType = GoogleAdsSearchads360V0CommonLocationGroupInfo::class;
   protected $locationGroupDataType = '';
   /**
@@ -65,8 +93,16 @@ class GoogleAdsSearchads360V0ResourcesCampaignCriterion extends \Google\Model
    * @var string
    */
   public $type;
+  /**
+   * @var GoogleAdsSearchads360V0CommonUserListInfo
+   */
+  public $userList;
   protected $userListType = GoogleAdsSearchads360V0CommonUserListInfo::class;
   protected $userListDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonWebpageInfo
+   */
+  public $webpage;
   protected $webpageType = GoogleAdsSearchads360V0CommonWebpageInfo::class;
   protected $webpageDataType = '';
 

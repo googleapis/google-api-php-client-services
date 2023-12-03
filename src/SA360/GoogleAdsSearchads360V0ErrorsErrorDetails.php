@@ -19,6 +19,10 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ErrorsErrorDetails extends \Google\Model
 {
+  /**
+   * @var GoogleAdsSearchads360V0ErrorsQuotaErrorDetails
+   */
+  public $quotaErrorDetails;
   protected $quotaErrorDetailsType = GoogleAdsSearchads360V0ErrorsQuotaErrorDetails::class;
   protected $quotaErrorDetailsDataType = '';
   /**

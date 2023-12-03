@@ -20,10 +20,22 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
 {
   protected $collection_key = 'finalUrls';
+  /**
+   * @var GoogleAdsSearchads360V0CommonUnifiedCallAsset
+   */
+  public $callAsset;
   protected $callAssetType = GoogleAdsSearchads360V0CommonUnifiedCallAsset::class;
   protected $callAssetDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonCallToActionAsset
+   */
+  public $callToActionAsset;
   protected $callToActionAssetType = GoogleAdsSearchads360V0CommonCallToActionAsset::class;
   protected $callToActionAssetDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonUnifiedCalloutAsset
+   */
+  public $calloutAsset;
   protected $calloutAssetType = GoogleAdsSearchads360V0CommonUnifiedCalloutAsset::class;
   protected $calloutAssetDataType = '';
   /**
@@ -42,32 +54,56 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleAdsSearchads360V0CommonImageAsset
+   */
+  public $imageAsset;
   protected $imageAssetType = GoogleAdsSearchads360V0CommonImageAsset::class;
   protected $imageAssetDataType = '';
   /**
    * @var string
    */
   public $lastModifiedTime;
+  /**
+   * @var GoogleAdsSearchads360V0CommonUnifiedLocationAsset
+   */
+  public $locationAsset;
   protected $locationAssetType = GoogleAdsSearchads360V0CommonUnifiedLocationAsset::class;
   protected $locationAssetDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonMobileAppAsset
+   */
+  public $mobileAppAsset;
   protected $mobileAppAssetType = GoogleAdsSearchads360V0CommonMobileAppAsset::class;
   protected $mobileAppAssetDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset
+   */
+  public $pageFeedAsset;
   protected $pageFeedAssetType = GoogleAdsSearchads360V0CommonUnifiedPageFeedAsset::class;
   protected $pageFeedAssetDataType = '';
   /**
    * @var string
    */
   public $resourceName;
+  /**
+   * @var GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset
+   */
+  public $sitelinkAsset;
   protected $sitelinkAssetType = GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset::class;
   protected $sitelinkAssetDataType = '';
   /**
    * @var string
    */
   public $status;
+  /**
+   * @var GoogleAdsSearchads360V0CommonTextAsset
+   */
+  public $textAsset;
   protected $textAssetType = GoogleAdsSearchads360V0CommonTextAsset::class;
   protected $textAssetDataType = '';
   /**
@@ -78,6 +114,10 @@ class GoogleAdsSearchads360V0ResourcesAsset extends \Google\Collection
    * @var string
    */
   public $type;
+  /**
+   * @var GoogleAdsSearchads360V0CommonYoutubeVideoAsset
+   */
+  public $youtubeVideoAsset;
   protected $youtubeVideoAssetType = GoogleAdsSearchads360V0CommonYoutubeVideoAsset::class;
   protected $youtubeVideoAssetDataType = '';
 

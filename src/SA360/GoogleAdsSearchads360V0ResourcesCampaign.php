@@ -56,6 +56,10 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
    * @var string
    */
   public $creationTime;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting
+   */
+  public $dynamicSearchAdsSetting;
   protected $dynamicSearchAdsSettingType = GoogleAdsSearchads360V0ResourcesCampaignDynamicSearchAdsSetting::class;
   protected $dynamicSearchAdsSettingDataType = '';
   /**
@@ -74,8 +78,16 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
    * @var string
    */
   public $finalUrlSuffix;
+  /**
+   * @var GoogleAdsSearchads360V0CommonFrequencyCapEntry[]
+   */
+  public $frequencyCaps;
   protected $frequencyCapsType = GoogleAdsSearchads360V0CommonFrequencyCapEntry::class;
   protected $frequencyCapsDataType = 'array';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting
+   */
+  public $geoTargetTypeSetting;
   protected $geoTargetTypeSettingType = GoogleAdsSearchads360V0ResourcesCampaignGeoTargetTypeSetting::class;
   protected $geoTargetTypeSettingDataType = '';
   /**
@@ -90,38 +102,82 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
    * @var string
    */
   public $lastModifiedTime;
+  /**
+   * @var GoogleAdsSearchads360V0CommonManualCpa
+   */
+  public $manualCpa;
   protected $manualCpaType = GoogleAdsSearchads360V0CommonManualCpa::class;
   protected $manualCpaDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonManualCpc
+   */
+  public $manualCpc;
   protected $manualCpcType = GoogleAdsSearchads360V0CommonManualCpc::class;
   protected $manualCpcDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonManualCpm
+   */
+  public $manualCpm;
   protected $manualCpmType = GoogleAdsSearchads360V0CommonManualCpm::class;
   protected $manualCpmDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonMaximizeConversionValue
+   */
+  public $maximizeConversionValue;
   protected $maximizeConversionValueType = GoogleAdsSearchads360V0CommonMaximizeConversionValue::class;
   protected $maximizeConversionValueDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonMaximizeConversions
+   */
+  public $maximizeConversions;
   protected $maximizeConversionsType = GoogleAdsSearchads360V0CommonMaximizeConversions::class;
   protected $maximizeConversionsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings
+   */
+  public $networkSettings;
   protected $networkSettingsType = GoogleAdsSearchads360V0ResourcesCampaignNetworkSettings::class;
   protected $networkSettingsDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting
+   */
+  public $optimizationGoalSetting;
   protected $optimizationGoalSettingType = GoogleAdsSearchads360V0ResourcesCampaignOptimizationGoalSetting::class;
   protected $optimizationGoalSettingDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonPercentCpc
+   */
+  public $percentCpc;
   protected $percentCpcType = GoogleAdsSearchads360V0CommonPercentCpc::class;
   protected $percentCpcDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonRealTimeBiddingSetting
+   */
+  public $realTimeBiddingSetting;
   protected $realTimeBiddingSettingType = GoogleAdsSearchads360V0CommonRealTimeBiddingSetting::class;
   protected $realTimeBiddingSettingDataType = '';
   /**
    * @var string
    */
   public $resourceName;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization
+   */
+  public $selectiveOptimization;
   protected $selectiveOptimizationType = GoogleAdsSearchads360V0ResourcesCampaignSelectiveOptimization::class;
   protected $selectiveOptimizationDataType = '';
   /**
    * @var string
    */
   public $servingStatus;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting
+   */
+  public $shoppingSetting;
   protected $shoppingSettingType = GoogleAdsSearchads360V0ResourcesCampaignShoppingSetting::class;
   protected $shoppingSettingDataType = '';
   /**
@@ -132,22 +188,50 @@ class GoogleAdsSearchads360V0ResourcesCampaign extends \Google\Collection
    * @var string
    */
   public $status;
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetCpa
+   */
+  public $targetCpa;
   protected $targetCpaType = GoogleAdsSearchads360V0CommonTargetCpa::class;
   protected $targetCpaDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetCpm
+   */
+  public $targetCpm;
   protected $targetCpmType = GoogleAdsSearchads360V0CommonTargetCpm::class;
   protected $targetCpmDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetImpressionShare
+   */
+  public $targetImpressionShare;
   protected $targetImpressionShareType = GoogleAdsSearchads360V0CommonTargetImpressionShare::class;
   protected $targetImpressionShareDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetRoas
+   */
+  public $targetRoas;
   protected $targetRoasType = GoogleAdsSearchads360V0CommonTargetRoas::class;
   protected $targetRoasDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetSpend
+   */
+  public $targetSpend;
   protected $targetSpendType = GoogleAdsSearchads360V0CommonTargetSpend::class;
   protected $targetSpendDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting
+   */
+  public $trackingSetting;
   protected $trackingSettingType = GoogleAdsSearchads360V0ResourcesCampaignTrackingSetting::class;
   protected $trackingSettingDataType = '';
   /**
    * @var string
    */
   public $trackingUrlTemplate;
+  /**
+   * @var GoogleAdsSearchads360V0CommonCustomParameter[]
+   */
+  public $urlCustomParameters;
   protected $urlCustomParametersType = GoogleAdsSearchads360V0CommonCustomParameter::class;
   protected $urlCustomParametersDataType = 'array';
   /**

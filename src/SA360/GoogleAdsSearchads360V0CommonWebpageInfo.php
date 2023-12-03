@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonWebpageInfo extends \Google\Collection
 {
   protected $collection_key = 'conditions';
+  /**
+   * @var GoogleAdsSearchads360V0CommonWebpageConditionInfo[]
+   */
+  public $conditions;
   protected $conditionsType = GoogleAdsSearchads360V0CommonWebpageConditionInfo::class;
   protected $conditionsDataType = 'array';
   public $coveragePercentage;

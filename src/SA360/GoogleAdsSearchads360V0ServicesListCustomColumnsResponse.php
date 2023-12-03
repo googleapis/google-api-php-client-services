@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesListCustomColumnsResponse extends \Google\Collection
 {
   protected $collection_key = 'customColumns';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesCustomColumn[]
+   */
+  public $customColumns;
   protected $customColumnsType = GoogleAdsSearchads360V0ResourcesCustomColumn::class;
   protected $customColumnsDataType = 'array';
 

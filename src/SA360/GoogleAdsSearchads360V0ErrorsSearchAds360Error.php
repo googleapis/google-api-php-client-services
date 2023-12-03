@@ -19,16 +19,32 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0ErrorsSearchAds360Error extends \Google\Model
 {
+  /**
+   * @var GoogleAdsSearchads360V0ErrorsErrorDetails
+   */
+  public $details;
   protected $detailsType = GoogleAdsSearchads360V0ErrorsErrorDetails::class;
   protected $detailsDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ErrorsErrorCode
+   */
+  public $errorCode;
   protected $errorCodeType = GoogleAdsSearchads360V0ErrorsErrorCode::class;
   protected $errorCodeDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ErrorsErrorLocation
+   */
+  public $location;
   protected $locationType = GoogleAdsSearchads360V0ErrorsErrorLocation::class;
   protected $locationDataType = '';
   /**
    * @var string
    */
   public $message;
+  /**
+   * @var GoogleAdsSearchads360V0CommonValue
+   */
+  public $trigger;
   protected $triggerType = GoogleAdsSearchads360V0CommonValue::class;
   protected $triggerDataType = '';
 

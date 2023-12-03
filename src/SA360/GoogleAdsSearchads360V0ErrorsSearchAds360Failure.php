@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ErrorsSearchAds360Failure extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var GoogleAdsSearchads360V0ErrorsSearchAds360Error[]
+   */
+  public $errors;
   protected $errorsType = GoogleAdsSearchads360V0ErrorsSearchAds360Error::class;
   protected $errorsDataType = 'array';
   /**

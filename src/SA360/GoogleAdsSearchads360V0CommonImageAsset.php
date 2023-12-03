@@ -23,6 +23,10 @@ class GoogleAdsSearchads360V0CommonImageAsset extends \Google\Model
    * @var string
    */
   public $fileSize;
+  /**
+   * @var GoogleAdsSearchads360V0CommonImageDimension
+   */
+  public $fullSize;
   protected $fullSizeType = GoogleAdsSearchads360V0CommonImageDimension::class;
   protected $fullSizeDataType = '';
   /**

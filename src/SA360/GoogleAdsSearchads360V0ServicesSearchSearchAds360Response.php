@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var GoogleAdsSearchads360V0ServicesCustomColumnHeader[]
+   */
+  public $customColumnHeaders;
   protected $customColumnHeadersType = GoogleAdsSearchads360V0ServicesCustomColumnHeader::class;
   protected $customColumnHeadersDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class GoogleAdsSearchads360V0ServicesSearchSearchAds360Response extends \Google\
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleAdsSearchads360V0ServicesSearchAds360Row[]
+   */
+  public $results;
   protected $resultsType = GoogleAdsSearchads360V0ServicesSearchAds360Row::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var GoogleAdsSearchads360V0ServicesSearchAds360Row
+   */
+  public $summaryRow;
   protected $summaryRowType = GoogleAdsSearchads360V0ServicesSearchAds360Row::class;
   protected $summaryRowDataType = '';
   /**

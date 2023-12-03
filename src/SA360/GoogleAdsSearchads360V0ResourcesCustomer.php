@@ -31,6 +31,10 @@ class GoogleAdsSearchads360V0ResourcesCustomer extends \Google\Model
    * @var bool
    */
   public $autoTaggingEnabled;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesConversionTrackingSetting
+   */
+  public $conversionTrackingSetting;
   protected $conversionTrackingSettingType = GoogleAdsSearchads360V0ResourcesConversionTrackingSetting::class;
   protected $conversionTrackingSettingDataType = '';
   /**
@@ -45,6 +49,10 @@ class GoogleAdsSearchads360V0ResourcesCustomer extends \Google\Model
    * @var string
    */
   public $descriptiveName;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting
+   */
+  public $doubleClickCampaignManagerSetting;
   protected $doubleClickCampaignManagerSettingType = GoogleAdsSearchads360V0ResourcesDoubleClickCampaignManagerSetting::class;
   protected $doubleClickCampaignManagerSettingDataType = '';
   /**

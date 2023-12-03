@@ -23,6 +23,10 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter extends \Goog
    * @var string
    */
   public $assetGroup;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimension
+   */
+  public $caseValue;
   protected $caseValueType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimension::class;
   protected $caseValueDataType = '';
   /**
@@ -33,6 +37,10 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupListingGroupFilter extends \Goog
    * @var string
    */
   public $parentListingGroupFilter;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionPath
+   */
+  public $path;
   protected $pathType = GoogleAdsSearchads360V0ResourcesListingGroupFilterDimensionPath::class;
   protected $pathDataType = '';
   /**

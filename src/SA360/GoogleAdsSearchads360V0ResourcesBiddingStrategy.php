@@ -31,14 +31,26 @@ class GoogleAdsSearchads360V0ResourcesBiddingStrategy extends \Google\Model
    * @var string
    */
   public $effectiveCurrencyCode;
+  /**
+   * @var GoogleAdsSearchads360V0CommonEnhancedCpc
+   */
+  public $enhancedCpc;
   protected $enhancedCpcType = GoogleAdsSearchads360V0CommonEnhancedCpc::class;
   protected $enhancedCpcDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleAdsSearchads360V0CommonMaximizeConversionValue
+   */
+  public $maximizeConversionValue;
   protected $maximizeConversionValueType = GoogleAdsSearchads360V0CommonMaximizeConversionValue::class;
   protected $maximizeConversionValueDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonMaximizeConversions
+   */
+  public $maximizeConversions;
   protected $maximizeConversionsType = GoogleAdsSearchads360V0CommonMaximizeConversions::class;
   protected $maximizeConversionsDataType = '';
   /**
@@ -57,14 +69,34 @@ class GoogleAdsSearchads360V0ResourcesBiddingStrategy extends \Google\Model
    * @var string
    */
   public $status;
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetCpa
+   */
+  public $targetCpa;
   protected $targetCpaType = GoogleAdsSearchads360V0CommonTargetCpa::class;
   protected $targetCpaDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetImpressionShare
+   */
+  public $targetImpressionShare;
   protected $targetImpressionShareType = GoogleAdsSearchads360V0CommonTargetImpressionShare::class;
   protected $targetImpressionShareDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetOutrankShare
+   */
+  public $targetOutrankShare;
   protected $targetOutrankShareType = GoogleAdsSearchads360V0CommonTargetOutrankShare::class;
   protected $targetOutrankShareDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetRoas
+   */
+  public $targetRoas;
   protected $targetRoasType = GoogleAdsSearchads360V0CommonTargetRoas::class;
   protected $targetRoasDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetSpend
+   */
+  public $targetSpend;
   protected $targetSpendType = GoogleAdsSearchads360V0CommonTargetSpend::class;
   protected $targetSpendDataType = '';
   /**

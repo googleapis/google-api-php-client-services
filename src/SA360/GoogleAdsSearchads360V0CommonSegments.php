@@ -23,6 +23,10 @@ class GoogleAdsSearchads360V0CommonSegments extends \Google\Model
    * @var string
    */
   public $adNetworkType;
+  /**
+   * @var GoogleAdsSearchads360V0CommonAssetInteractionTarget
+   */
+  public $assetInteractionTarget;
   protected $assetInteractionTargetType = GoogleAdsSearchads360V0CommonAssetInteractionTarget::class;
   protected $assetInteractionTargetDataType = '';
   /**
@@ -49,6 +53,10 @@ class GoogleAdsSearchads360V0CommonSegments extends \Google\Model
    * @var string
    */
   public $device;
+  /**
+   * @var GoogleAdsSearchads360V0CommonKeyword
+   */
+  public $keyword;
   protected $keywordType = GoogleAdsSearchads360V0CommonKeyword::class;
   protected $keywordDataType = '';
   /**

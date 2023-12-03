@@ -20,6 +20,10 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonTargetingSetting extends \Google\Collection
 {
   protected $collection_key = 'targetRestrictions';
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetRestriction[]
+   */
+  public $targetRestrictions;
   protected $targetRestrictionsType = GoogleAdsSearchads360V0CommonTargetRestriction::class;
   protected $targetRestrictionsDataType = 'array';
 

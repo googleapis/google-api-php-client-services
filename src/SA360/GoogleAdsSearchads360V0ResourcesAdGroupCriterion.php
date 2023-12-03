@@ -24,6 +24,10 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * @var string
    */
   public $adGroup;
+  /**
+   * @var GoogleAdsSearchads360V0CommonAgeRangeInfo
+   */
+  public $ageRange;
   protected $ageRangeType = GoogleAdsSearchads360V0CommonAgeRangeInfo::class;
   protected $ageRangeDataType = '';
   public $bidModifier;
@@ -59,8 +63,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * @var string[]
    */
   public $finalUrls;
+  /**
+   * @var GoogleAdsSearchads360V0CommonGenderInfo
+   */
+  public $gender;
   protected $genderType = GoogleAdsSearchads360V0CommonGenderInfo::class;
   protected $genderDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonKeywordInfo
+   */
+  public $keyword;
   protected $keywordType = GoogleAdsSearchads360V0CommonKeywordInfo::class;
   protected $keywordDataType = '';
   /**
@@ -71,16 +83,32 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * @var string
    */
   public $lastModifiedTime;
+  /**
+   * @var GoogleAdsSearchads360V0CommonListingGroupInfo
+   */
+  public $listingGroup;
   protected $listingGroupType = GoogleAdsSearchads360V0CommonListingGroupInfo::class;
   protected $listingGroupDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonLocationInfo
+   */
+  public $location;
   protected $locationType = GoogleAdsSearchads360V0CommonLocationInfo::class;
   protected $locationDataType = '';
   /**
    * @var bool
    */
   public $negative;
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates
+   */
+  public $positionEstimates;
   protected $positionEstimatesType = GoogleAdsSearchads360V0ResourcesAdGroupCriterionPositionEstimates::class;
   protected $positionEstimatesDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo
+   */
+  public $qualityInfo;
   protected $qualityInfoType = GoogleAdsSearchads360V0ResourcesAdGroupCriterionQualityInfo::class;
   protected $qualityInfoDataType = '';
   /**
@@ -99,8 +127,16 @@ class GoogleAdsSearchads360V0ResourcesAdGroupCriterion extends \Google\Collectio
    * @var string
    */
   public $type;
+  /**
+   * @var GoogleAdsSearchads360V0CommonUserListInfo
+   */
+  public $userList;
   protected $userListType = GoogleAdsSearchads360V0CommonUserListInfo::class;
   protected $userListDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonWebpageInfo
+   */
+  public $webpage;
   protected $webpageType = GoogleAdsSearchads360V0CommonWebpageInfo::class;
   protected $webpageDataType = '';
 

@@ -24,8 +24,16 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
    * @var string
    */
   public $displayUrl;
+  /**
+   * @var GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo
+   */
+  public $expandedDynamicSearchAd;
   protected $expandedDynamicSearchAdType = GoogleAdsSearchads360V0CommonSearchAds360ExpandedDynamicSearchAdInfo::class;
   protected $expandedDynamicSearchAdDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo
+   */
+  public $expandedTextAd;
   protected $expandedTextAdType = GoogleAdsSearchads360V0CommonSearchAds360ExpandedTextAdInfo::class;
   protected $expandedTextAdDataType = '';
   /**
@@ -40,14 +48,26 @@ class GoogleAdsSearchads360V0ResourcesAd extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo
+   */
+  public $productAd;
   protected $productAdType = GoogleAdsSearchads360V0CommonSearchAds360ProductAdInfo::class;
   protected $productAdDataType = '';
   /**
    * @var string
    */
   public $resourceName;
+  /**
+   * @var GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo
+   */
+  public $responsiveSearchAd;
   protected $responsiveSearchAdType = GoogleAdsSearchads360V0CommonSearchAds360ResponsiveSearchAdInfo::class;
   protected $responsiveSearchAdDataType = '';
+  /**
+   * @var GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo
+   */
+  public $textAd;
   protected $textAdType = GoogleAdsSearchads360V0CommonSearchAds360TextAdInfo::class;
   protected $textAdDataType = '';
   /**

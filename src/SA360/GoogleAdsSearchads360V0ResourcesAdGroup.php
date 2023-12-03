@@ -76,6 +76,10 @@ class GoogleAdsSearchads360V0ResourcesAdGroup extends \Google\Collection
    * @var string
    */
   public $status;
+  /**
+   * @var GoogleAdsSearchads360V0CommonTargetingSetting
+   */
+  public $targetingSetting;
   protected $targetingSettingType = GoogleAdsSearchads360V0CommonTargetingSetting::class;
   protected $targetingSettingDataType = '';
   /**
