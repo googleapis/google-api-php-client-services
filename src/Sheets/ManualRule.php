@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class ManualRule extends \Google\Collection
 {
   protected $collection_key = 'groups';
+  /**
+   * @var ManualRuleGroup[]
+   */
+  public $groups;
   protected $groupsType = ManualRuleGroup::class;
   protected $groupsDataType = 'array';
 

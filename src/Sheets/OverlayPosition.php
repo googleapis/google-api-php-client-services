@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class OverlayPosition extends \Google\Model
 {
+  /**
+   * @var GridCoordinate
+   */
+  public $anchorCell;
   protected $anchorCellType = GridCoordinate::class;
   protected $anchorCellDataType = '';
   /**

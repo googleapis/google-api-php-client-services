@@ -19,8 +19,16 @@ namespace Google\Service\Sheets;
 
 class SheetProperties extends \Google\Model
 {
+  /**
+   * @var DataSourceSheetProperties
+   */
+  public $dataSourceSheetProperties;
   protected $dataSourceSheetPropertiesType = DataSourceSheetProperties::class;
   protected $dataSourceSheetPropertiesDataType = '';
+  /**
+   * @var GridProperties
+   */
+  public $gridProperties;
   protected $gridPropertiesType = GridProperties::class;
   protected $gridPropertiesDataType = '';
   /**
@@ -43,8 +51,16 @@ class SheetProperties extends \Google\Model
    * @var string
    */
   public $sheetType;
+  /**
+   * @var Color
+   */
+  public $tabColor;
   protected $tabColorType = Color::class;
   protected $tabColorDataType = '';
+  /**
+   * @var ColorStyle
+   */
+  public $tabColorStyle;
   protected $tabColorStyleType = ColorStyle::class;
   protected $tabColorStyleDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Sheets;
 class SearchDeveloperMetadataResponse extends \Google\Collection
 {
   protected $collection_key = 'matchedDeveloperMetadata';
+  /**
+   * @var MatchedDeveloperMetadata[]
+   */
+  public $matchedDeveloperMetadata;
   protected $matchedDeveloperMetadataType = MatchedDeveloperMetadata::class;
   protected $matchedDeveloperMetadataDataType = 'array';
 

@@ -24,6 +24,10 @@ class ProtectedRange extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var Editors
+   */
+  public $editors;
   protected $editorsType = Editors::class;
   protected $editorsDataType = '';
   /**
@@ -34,12 +38,20 @@ class ProtectedRange extends \Google\Collection
    * @var int
    */
   public $protectedRangeId;
+  /**
+   * @var GridRange
+   */
+  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
   /**
    * @var bool
    */
   public $requestingUserCanEdit;
+  /**
+   * @var GridRange[]
+   */
+  public $unprotectedRanges;
   protected $unprotectedRangesType = GridRange::class;
   protected $unprotectedRangesDataType = 'array';
   /**

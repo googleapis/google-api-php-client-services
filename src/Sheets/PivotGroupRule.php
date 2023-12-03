@@ -19,10 +19,22 @@ namespace Google\Service\Sheets;
 
 class PivotGroupRule extends \Google\Model
 {
+  /**
+   * @var DateTimeRule
+   */
+  public $dateTimeRule;
   protected $dateTimeRuleType = DateTimeRule::class;
   protected $dateTimeRuleDataType = '';
+  /**
+   * @var HistogramRule
+   */
+  public $histogramRule;
   protected $histogramRuleType = HistogramRule::class;
   protected $histogramRuleDataType = '';
+  /**
+   * @var ManualRule
+   */
+  public $manualRule;
   protected $manualRuleType = ManualRule::class;
   protected $manualRuleDataType = '';
 

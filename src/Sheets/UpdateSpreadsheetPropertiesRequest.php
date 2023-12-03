@@ -23,6 +23,10 @@ class UpdateSpreadsheetPropertiesRequest extends \Google\Model
    * @var string
    */
   public $fields;
+  /**
+   * @var SpreadsheetProperties
+   */
+  public $properties;
   protected $propertiesType = SpreadsheetProperties::class;
   protected $propertiesDataType = '';
 

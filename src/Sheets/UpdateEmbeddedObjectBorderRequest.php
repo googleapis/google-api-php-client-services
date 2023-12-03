@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class UpdateEmbeddedObjectBorderRequest extends \Google\Model
 {
+  /**
+   * @var EmbeddedObjectBorder
+   */
+  public $border;
   protected $borderType = EmbeddedObjectBorder::class;
   protected $borderDataType = '';
   /**

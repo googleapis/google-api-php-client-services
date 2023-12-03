@@ -24,10 +24,22 @@ class UpdateCellsRequest extends \Google\Collection
    * @var string
    */
   public $fields;
+  /**
+   * @var GridRange
+   */
+  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
+  /**
+   * @var RowData[]
+   */
+  public $rows;
   protected $rowsType = RowData::class;
   protected $rowsDataType = 'array';
+  /**
+   * @var GridCoordinate
+   */
+  public $start;
   protected $startType = GridCoordinate::class;
   protected $startDataType = '';
 

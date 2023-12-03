@@ -27,6 +27,10 @@ class TextToColumnsRequest extends \Google\Model
    * @var string
    */
   public $delimiterType;
+  /**
+   * @var GridRange
+   */
+  public $source;
   protected $sourceType = GridRange::class;
   protected $sourceDataType = '';
 

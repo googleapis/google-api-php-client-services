@@ -19,8 +19,16 @@ namespace Google\Service\Sheets;
 
 class RefreshDataSourceObjectExecutionStatus extends \Google\Model
 {
+  /**
+   * @var DataExecutionStatus
+   */
+  public $dataExecutionStatus;
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
+  /**
+   * @var DataSourceObjectReference
+   */
+  public $reference;
   protected $referenceType = DataSourceObjectReference::class;
   protected $referenceDataType = '';
 

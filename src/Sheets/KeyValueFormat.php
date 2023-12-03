@@ -19,8 +19,16 @@ namespace Google\Service\Sheets;
 
 class KeyValueFormat extends \Google\Model
 {
+  /**
+   * @var TextPosition
+   */
+  public $position;
   protected $positionType = TextPosition::class;
   protected $positionDataType = '';
+  /**
+   * @var TextFormat
+   */
+  public $textFormat;
   protected $textFormatType = TextFormat::class;
   protected $textFormatDataType = '';
 

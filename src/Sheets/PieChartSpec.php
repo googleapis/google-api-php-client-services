@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class PieChartSpec extends \Google\Model
 {
+  /**
+   * @var ChartData
+   */
+  public $domain;
   protected $domainType = ChartData::class;
   protected $domainDataType = '';
   /**
@@ -26,6 +30,10 @@ class PieChartSpec extends \Google\Model
    */
   public $legendPosition;
   public $pieHole;
+  /**
+   * @var ChartData
+   */
+  public $series;
   protected $seriesType = ChartData::class;
   protected $seriesDataType = '';
   /**

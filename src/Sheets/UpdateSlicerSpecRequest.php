@@ -27,6 +27,10 @@ class UpdateSlicerSpecRequest extends \Google\Model
    * @var int
    */
   public $slicerId;
+  /**
+   * @var SlicerSpec
+   */
+  public $spec;
   protected $specType = SlicerSpec::class;
   protected $specDataType = '';
 

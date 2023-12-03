@@ -19,10 +19,22 @@ namespace Google\Service\Sheets;
 
 class GradientRule extends \Google\Model
 {
+  /**
+   * @var InterpolationPoint
+   */
+  public $maxpoint;
   protected $maxpointType = InterpolationPoint::class;
   protected $maxpointDataType = '';
+  /**
+   * @var InterpolationPoint
+   */
+  public $midpoint;
   protected $midpointType = InterpolationPoint::class;
   protected $midpointDataType = '';
+  /**
+   * @var InterpolationPoint
+   */
+  public $minpoint;
   protected $minpointType = InterpolationPoint::class;
   protected $minpointDataType = '';
 

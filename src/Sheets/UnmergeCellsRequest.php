@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class UnmergeCellsRequest extends \Google\Model
 {
+  /**
+   * @var GridRange
+   */
+  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
 

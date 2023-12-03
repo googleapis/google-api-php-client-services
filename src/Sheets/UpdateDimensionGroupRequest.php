@@ -19,6 +19,10 @@ namespace Google\Service\Sheets;
 
 class UpdateDimensionGroupRequest extends \Google\Model
 {
+  /**
+   * @var DimensionGroup
+   */
+  public $dimensionGroup;
   protected $dimensionGroupType = DimensionGroup::class;
   protected $dimensionGroupDataType = '';
   /**
