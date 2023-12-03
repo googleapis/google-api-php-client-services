@@ -19,8 +19,16 @@ namespace Google\Service\CloudTrace;
 
 class TimeEvent extends \Google\Model
 {
+  /**
+   * @var Annotation
+   */
+  public $annotation;
   protected $annotationType = Annotation::class;
   protected $annotationDataType = '';
+  /**
+   * @var MessageEvent
+   */
+  public $messageEvent;
   protected $messageEventType = MessageEvent::class;
   protected $messageEventDataType = '';
   /**

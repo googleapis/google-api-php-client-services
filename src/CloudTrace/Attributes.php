@@ -19,6 +19,10 @@ namespace Google\Service\CloudTrace;
 
 class Attributes extends \Google\Model
 {
+  /**
+   * @var AttributeValue[]
+   */
+  public $attributeMap;
   protected $attributeMapType = AttributeValue::class;
   protected $attributeMapDataType = 'map';
   /**

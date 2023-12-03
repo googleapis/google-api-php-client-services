@@ -24,6 +24,10 @@ class StackFrames extends \Google\Collection
    * @var int
    */
   public $droppedFramesCount;
+  /**
+   * @var StackFrame[]
+   */
+  public $frame;
   protected $frameType = StackFrame::class;
   protected $frameDataType = 'array';
 

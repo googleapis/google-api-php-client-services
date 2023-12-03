@@ -23,18 +23,38 @@ class StackFrame extends \Google\Model
    * @var string
    */
   public $columnNumber;
+  /**
+   * @var TruncatableString
+   */
+  public $fileName;
   protected $fileNameType = TruncatableString::class;
   protected $fileNameDataType = '';
+  /**
+   * @var TruncatableString
+   */
+  public $functionName;
   protected $functionNameType = TruncatableString::class;
   protected $functionNameDataType = '';
   /**
    * @var string
    */
   public $lineNumber;
+  /**
+   * @var Module
+   */
+  public $loadModule;
   protected $loadModuleType = Module::class;
   protected $loadModuleDataType = '';
+  /**
+   * @var TruncatableString
+   */
+  public $originalFunctionName;
   protected $originalFunctionNameType = TruncatableString::class;
   protected $originalFunctionNameDataType = '';
+  /**
+   * @var TruncatableString
+   */
+  public $sourceVersion;
   protected $sourceVersionType = TruncatableString::class;
   protected $sourceVersionDataType = '';
 

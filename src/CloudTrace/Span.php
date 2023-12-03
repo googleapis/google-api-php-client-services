@@ -19,18 +19,30 @@ namespace Google\Service\CloudTrace;
 
 class Span extends \Google\Model
 {
+  /**
+   * @var Attributes
+   */
+  public $attributes;
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
    * @var int
    */
   public $childSpanCount;
+  /**
+   * @var TruncatableString
+   */
+  public $displayName;
   protected $displayNameType = TruncatableString::class;
   protected $displayNameDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var Links
+   */
+  public $links;
   protected $linksType = Links::class;
   protected $linksDataType = '';
   /**
@@ -53,14 +65,26 @@ class Span extends \Google\Model
    * @var string
    */
   public $spanKind;
+  /**
+   * @var StackTrace
+   */
+  public $stackTrace;
   protected $stackTraceType = StackTrace::class;
   protected $stackTraceDataType = '';
   /**
    * @var string
    */
   public $startTime;
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
+  /**
+   * @var TimeEvents
+   */
+  public $timeEvents;
   protected $timeEventsType = TimeEvents::class;
   protected $timeEventsDataType = '';
 

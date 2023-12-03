@@ -24,6 +24,10 @@ class Links extends \Google\Collection
    * @var int
    */
   public $droppedLinksCount;
+  /**
+   * @var Link[]
+   */
+  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\CloudTrace;
 
 class Annotation extends \Google\Model
 {
+  /**
+   * @var Attributes
+   */
+  public $attributes;
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
+  /**
+   * @var TruncatableString
+   */
+  public $description;
   protected $descriptionType = TruncatableString::class;
   protected $descriptionDataType = '';
 
