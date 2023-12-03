@@ -20,12 +20,20 @@ namespace Google\Service\Dataflow;
 class SeqMapTask extends \Google\Collection
 {
   protected $collection_key = 'outputInfos';
+  /**
+   * @var SideInputInfo[]
+   */
+  public $inputs;
   protected $inputsType = SideInputInfo::class;
   protected $inputsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var SeqMapTaskOutputInfo[]
+   */
+  public $outputInfos;
   protected $outputInfosType = SeqMapTaskOutputInfo::class;
   protected $outputInfosDataType = 'array';
   /**

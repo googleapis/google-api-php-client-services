@@ -21,6 +21,10 @@ class ProgressTimeseries extends \Google\Collection
 {
   protected $collection_key = 'dataPoints';
   public $currentProgress;
+  /**
+   * @var Point[]
+   */
+  public $dataPoints;
   protected $dataPointsType = Point::class;
   protected $dataPointsDataType = 'array';
 

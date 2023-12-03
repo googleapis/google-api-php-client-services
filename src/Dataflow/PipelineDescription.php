@@ -20,10 +20,22 @@ namespace Google\Service\Dataflow;
 class PipelineDescription extends \Google\Collection
 {
   protected $collection_key = 'originalPipelineTransform';
+  /**
+   * @var DisplayData[]
+   */
+  public $displayData;
   protected $displayDataType = DisplayData::class;
   protected $displayDataDataType = 'array';
+  /**
+   * @var ExecutionStageSummary[]
+   */
+  public $executionPipelineStage;
   protected $executionPipelineStageType = ExecutionStageSummary::class;
   protected $executionPipelineStageDataType = 'array';
+  /**
+   * @var TransformSummary[]
+   */
+  public $originalPipelineTransform;
   protected $originalPipelineTransformType = TransformSummary::class;
   protected $originalPipelineTransformDataType = 'array';
   /**

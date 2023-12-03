@@ -28,6 +28,10 @@ class ParameterMetadata extends \Google\Collection
    * @var string
    */
   public $defaultValue;
+  /**
+   * @var ParameterMetadataEnumOption[]
+   */
+  public $enumOptions;
   protected $enumOptionsType = ParameterMetadataEnumOption::class;
   protected $enumOptionsDataType = 'array';
   /**

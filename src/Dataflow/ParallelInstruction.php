@@ -20,6 +20,10 @@ namespace Google\Service\Dataflow;
 class ParallelInstruction extends \Google\Collection
 {
   protected $collection_key = 'outputs';
+  /**
+   * @var FlattenInstruction
+   */
+  public $flatten;
   protected $flattenType = FlattenInstruction::class;
   protected $flattenDataType = '';
   /**
@@ -30,18 +34,38 @@ class ParallelInstruction extends \Google\Collection
    * @var string
    */
   public $originalName;
+  /**
+   * @var InstructionOutput[]
+   */
+  public $outputs;
   protected $outputsType = InstructionOutput::class;
   protected $outputsDataType = 'array';
+  /**
+   * @var ParDoInstruction
+   */
+  public $parDo;
   protected $parDoType = ParDoInstruction::class;
   protected $parDoDataType = '';
+  /**
+   * @var PartialGroupByKeyInstruction
+   */
+  public $partialGroupByKey;
   protected $partialGroupByKeyType = PartialGroupByKeyInstruction::class;
   protected $partialGroupByKeyDataType = '';
+  /**
+   * @var ReadInstruction
+   */
+  public $read;
   protected $readType = ReadInstruction::class;
   protected $readDataType = '';
   /**
    * @var string
    */
   public $systemName;
+  /**
+   * @var WriteInstruction
+   */
+  public $write;
   protected $writeType = WriteInstruction::class;
   protected $writeDataType = '';
 

@@ -20,14 +20,26 @@ namespace Google\Service\Dataflow;
 class ExecutionStageSummary extends \Google\Collection
 {
   protected $collection_key = 'prerequisiteStage';
+  /**
+   * @var ComponentSource[]
+   */
+  public $componentSource;
   protected $componentSourceType = ComponentSource::class;
   protected $componentSourceDataType = 'array';
+  /**
+   * @var ComponentTransform[]
+   */
+  public $componentTransform;
   protected $componentTransformType = ComponentTransform::class;
   protected $componentTransformDataType = 'array';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var StageSource[]
+   */
+  public $inputSource;
   protected $inputSourceType = StageSource::class;
   protected $inputSourceDataType = 'array';
   /**
@@ -38,6 +50,10 @@ class ExecutionStageSummary extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var StageSource[]
+   */
+  public $outputSource;
   protected $outputSourceType = StageSource::class;
   protected $outputSourceDataType = 'array';
   /**

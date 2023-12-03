@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class HotKeyDebuggingInfo extends \Google\Model
 {
+  /**
+   * @var HotKeyInfo[]
+   */
+  public $detectedHotKeys;
   protected $detectedHotKeysType = HotKeyInfo::class;
   protected $detectedHotKeysDataType = 'map';
 

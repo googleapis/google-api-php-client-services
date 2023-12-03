@@ -20,8 +20,16 @@ namespace Google\Service\Dataflow;
 class WorkerPool extends \Google\Collection
 {
   protected $collection_key = 'sdkHarnessContainerImages';
+  /**
+   * @var AutoscalingSettings
+   */
+  public $autoscalingSettings;
   protected $autoscalingSettingsType = AutoscalingSettings::class;
   protected $autoscalingSettingsDataType = '';
+  /**
+   * @var Disk[]
+   */
+  public $dataDisks;
   protected $dataDisksType = Disk::class;
   protected $dataDisksDataType = 'array';
   /**
@@ -72,18 +80,30 @@ class WorkerPool extends \Google\Collection
    * @var string
    */
   public $onHostMaintenance;
+  /**
+   * @var Package[]
+   */
+  public $packages;
   protected $packagesType = Package::class;
   protected $packagesDataType = 'array';
   /**
    * @var array[]
    */
   public $poolArgs;
+  /**
+   * @var SdkHarnessContainerImage[]
+   */
+  public $sdkHarnessContainerImages;
   protected $sdkHarnessContainerImagesType = SdkHarnessContainerImage::class;
   protected $sdkHarnessContainerImagesDataType = 'array';
   /**
    * @var string
    */
   public $subnetwork;
+  /**
+   * @var TaskRunnerSettings
+   */
+  public $taskrunnerSettings;
   protected $taskrunnerSettingsType = TaskRunnerSettings::class;
   protected $taskrunnerSettingsDataType = '';
   /**

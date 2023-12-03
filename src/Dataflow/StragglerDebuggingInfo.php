@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class StragglerDebuggingInfo extends \Google\Model
 {
+  /**
+   * @var HotKeyDebuggingInfo
+   */
+  public $hotKey;
   protected $hotKeyType = HotKeyDebuggingInfo::class;
   protected $hotKeyDataType = '';
 

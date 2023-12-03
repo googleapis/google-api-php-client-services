@@ -20,6 +20,10 @@ namespace Google\Service\Dataflow;
 class TransformSummary extends \Google\Collection
 {
   protected $collection_key = 'outputCollectionName';
+  /**
+   * @var DisplayData[]
+   */
+  public $displayData;
   protected $displayDataType = DisplayData::class;
   protected $displayDataDataType = 'array';
   /**

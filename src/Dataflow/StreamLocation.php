@@ -19,12 +19,28 @@ namespace Google\Service\Dataflow;
 
 class StreamLocation extends \Google\Model
 {
+  /**
+   * @var CustomSourceLocation
+   */
+  public $customSourceLocation;
   protected $customSourceLocationType = CustomSourceLocation::class;
   protected $customSourceLocationDataType = '';
+  /**
+   * @var PubsubLocation
+   */
+  public $pubsubLocation;
   protected $pubsubLocationType = PubsubLocation::class;
   protected $pubsubLocationDataType = '';
+  /**
+   * @var StreamingSideInputLocation
+   */
+  public $sideInputLocation;
   protected $sideInputLocationType = StreamingSideInputLocation::class;
   protected $sideInputLocationDataType = '';
+  /**
+   * @var StreamingStageLocation
+   */
+  public $streamingStageLocation;
   protected $streamingStageLocationType = StreamingStageLocation::class;
   protected $streamingStageLocationDataType = '';
 

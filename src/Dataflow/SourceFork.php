@@ -19,12 +19,28 @@ namespace Google\Service\Dataflow;
 
 class SourceFork extends \Google\Model
 {
+  /**
+   * @var SourceSplitShard
+   */
+  public $primary;
   protected $primaryType = SourceSplitShard::class;
   protected $primaryDataType = '';
+  /**
+   * @var DerivedSource
+   */
+  public $primarySource;
   protected $primarySourceType = DerivedSource::class;
   protected $primarySourceDataType = '';
+  /**
+   * @var SourceSplitShard
+   */
+  public $residual;
   protected $residualType = SourceSplitShard::class;
   protected $residualDataType = '';
+  /**
+   * @var DerivedSource
+   */
+  public $residualSource;
   protected $residualSourceType = DerivedSource::class;
   protected $residualSourceDataType = '';
 

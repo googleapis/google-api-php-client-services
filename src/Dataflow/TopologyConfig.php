@@ -20,8 +20,16 @@ namespace Google\Service\Dataflow;
 class TopologyConfig extends \Google\Collection
 {
   protected $collection_key = 'dataDiskAssignments';
+  /**
+   * @var ComputationTopology[]
+   */
+  public $computations;
   protected $computationsType = ComputationTopology::class;
   protected $computationsDataType = 'array';
+  /**
+   * @var DataDiskAssignment[]
+   */
+  public $dataDiskAssignments;
   protected $dataDiskAssignmentsType = DataDiskAssignment::class;
   protected $dataDiskAssignmentsDataType = 'array';
   /**

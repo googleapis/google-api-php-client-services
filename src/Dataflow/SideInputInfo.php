@@ -24,6 +24,10 @@ class SideInputInfo extends \Google\Collection
    * @var array[]
    */
   public $kind;
+  /**
+   * @var Source[]
+   */
+  public $sources;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
   /**

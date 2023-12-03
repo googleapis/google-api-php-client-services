@@ -20,8 +20,16 @@ namespace Google\Service\Dataflow;
 class StreamingComputationTask extends \Google\Collection
 {
   protected $collection_key = 'dataDisks';
+  /**
+   * @var StreamingComputationRanges[]
+   */
+  public $computationRanges;
   protected $computationRangesType = StreamingComputationRanges::class;
   protected $computationRangesDataType = 'array';
+  /**
+   * @var MountedDataDisk[]
+   */
+  public $dataDisks;
   protected $dataDisksType = MountedDataDisk::class;
   protected $dataDisksDataType = 'array';
   /**

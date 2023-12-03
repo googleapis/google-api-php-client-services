@@ -20,8 +20,16 @@ namespace Google\Service\Dataflow;
 class ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
+  /**
+   * @var FailedLocation[]
+   */
+  public $failedLocation;
   protected $failedLocationType = FailedLocation::class;
   protected $failedLocationDataType = 'array';
+  /**
+   * @var Job[]
+   */
+  public $jobs;
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**

@@ -28,6 +28,10 @@ class StructuredMessage extends \Google\Collection
    * @var string
    */
   public $messageText;
+  /**
+   * @var Parameter[]
+   */
+  public $parameters;
   protected $parametersType = Parameter::class;
   protected $parametersDataType = 'array';
 

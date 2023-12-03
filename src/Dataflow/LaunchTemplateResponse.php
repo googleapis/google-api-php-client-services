@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class LaunchTemplateResponse extends \Google\Model
 {
+  /**
+   * @var Job
+   */
+  public $job;
   protected $jobType = Job::class;
   protected $jobDataType = '';
 

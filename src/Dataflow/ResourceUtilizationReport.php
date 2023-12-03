@@ -20,10 +20,22 @@ namespace Google\Service\Dataflow;
 class ResourceUtilizationReport extends \Google\Collection
 {
   protected $collection_key = 'memoryInfo';
+  /**
+   * @var ResourceUtilizationReport[]
+   */
+  public $containers;
   protected $containersType = ResourceUtilizationReport::class;
   protected $containersDataType = 'map';
+  /**
+   * @var CPUTime[]
+   */
+  public $cpuTime;
   protected $cpuTimeType = CPUTime::class;
   protected $cpuTimeDataType = 'array';
+  /**
+   * @var MemInfo[]
+   */
+  public $memoryInfo;
   protected $memoryInfoType = MemInfo::class;
   protected $memoryInfoDataType = 'array';
 

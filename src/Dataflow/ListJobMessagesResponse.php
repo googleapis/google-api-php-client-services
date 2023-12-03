@@ -20,8 +20,16 @@ namespace Google\Service\Dataflow;
 class ListJobMessagesResponse extends \Google\Collection
 {
   protected $collection_key = 'jobMessages';
+  /**
+   * @var AutoscalingEvent[]
+   */
+  public $autoscalingEvents;
   protected $autoscalingEventsType = AutoscalingEvent::class;
   protected $autoscalingEventsDataType = 'array';
+  /**
+   * @var JobMessage[]
+   */
+  public $jobMessages;
   protected $jobMessagesType = JobMessage::class;
   protected $jobMessagesDataType = 'array';
   /**

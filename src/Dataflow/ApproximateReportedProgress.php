@@ -19,11 +19,23 @@ namespace Google\Service\Dataflow;
 
 class ApproximateReportedProgress extends \Google\Model
 {
+  /**
+   * @var ReportedParallelism
+   */
+  public $consumedParallelism;
   protected $consumedParallelismType = ReportedParallelism::class;
   protected $consumedParallelismDataType = '';
   public $fractionConsumed;
+  /**
+   * @var Position
+   */
+  public $position;
   protected $positionType = Position::class;
   protected $positionDataType = '';
+  /**
+   * @var ReportedParallelism
+   */
+  public $remainingParallelism;
   protected $remainingParallelismType = ReportedParallelism::class;
   protected $remainingParallelismDataType = '';
 

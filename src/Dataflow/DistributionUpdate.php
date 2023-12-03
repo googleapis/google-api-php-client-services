@@ -19,14 +19,34 @@ namespace Google\Service\Dataflow;
 
 class DistributionUpdate extends \Google\Model
 {
+  /**
+   * @var SplitInt64
+   */
+  public $count;
   protected $countType = SplitInt64::class;
   protected $countDataType = '';
+  /**
+   * @var Histogram
+   */
+  public $histogram;
   protected $histogramType = Histogram::class;
   protected $histogramDataType = '';
+  /**
+   * @var SplitInt64
+   */
+  public $max;
   protected $maxType = SplitInt64::class;
   protected $maxDataType = '';
+  /**
+   * @var SplitInt64
+   */
+  public $min;
   protected $minType = SplitInt64::class;
   protected $minDataType = '';
+  /**
+   * @var SplitInt64
+   */
+  public $sum;
   protected $sumType = SplitInt64::class;
   protected $sumDataType = '';
   public $sumOfSquares;

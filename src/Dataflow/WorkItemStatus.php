@@ -24,30 +24,66 @@ class WorkItemStatus extends \Google\Collection
    * @var bool
    */
   public $completed;
+  /**
+   * @var CounterUpdate[]
+   */
+  public $counterUpdates;
   protected $counterUpdatesType = CounterUpdate::class;
   protected $counterUpdatesDataType = 'array';
+  /**
+   * @var DynamicSourceSplit
+   */
+  public $dynamicSourceSplit;
   protected $dynamicSourceSplitType = DynamicSourceSplit::class;
   protected $dynamicSourceSplitDataType = '';
+  /**
+   * @var Status[]
+   */
+  public $errors;
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
+  /**
+   * @var MetricUpdate[]
+   */
+  public $metricUpdates;
   protected $metricUpdatesType = MetricUpdate::class;
   protected $metricUpdatesDataType = 'array';
+  /**
+   * @var ApproximateProgress
+   */
+  public $progress;
   protected $progressType = ApproximateProgress::class;
   protected $progressDataType = '';
   /**
    * @var string
    */
   public $reportIndex;
+  /**
+   * @var ApproximateReportedProgress
+   */
+  public $reportedProgress;
   protected $reportedProgressType = ApproximateReportedProgress::class;
   protected $reportedProgressDataType = '';
   /**
    * @var string
    */
   public $requestedLeaseDuration;
+  /**
+   * @var SourceFork
+   */
+  public $sourceFork;
   protected $sourceForkType = SourceFork::class;
   protected $sourceForkDataType = '';
+  /**
+   * @var SourceOperationResponse
+   */
+  public $sourceOperationResponse;
   protected $sourceOperationResponseType = SourceOperationResponse::class;
   protected $sourceOperationResponseDataType = '';
+  /**
+   * @var Position
+   */
+  public $stopPosition;
   protected $stopPositionType = Position::class;
   protected $stopPositionDataType = '';
   public $totalThrottlerWaitTimeSeconds;

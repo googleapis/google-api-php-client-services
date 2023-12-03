@@ -19,8 +19,16 @@ namespace Google\Service\Dataflow;
 
 class IntegerMean extends \Google\Model
 {
+  /**
+   * @var SplitInt64
+   */
+  public $count;
   protected $countType = SplitInt64::class;
   protected $countDataType = '';
+  /**
+   * @var SplitInt64
+   */
+  public $sum;
   protected $sumType = SplitInt64::class;
   protected $sumDataType = '';
 

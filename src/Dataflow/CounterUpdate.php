@@ -27,33 +27,73 @@ class CounterUpdate extends \Google\Model
    * @var bool
    */
   public $cumulative;
+  /**
+   * @var DistributionUpdate
+   */
+  public $distribution;
   protected $distributionType = DistributionUpdate::class;
   protected $distributionDataType = '';
   public $floatingPoint;
+  /**
+   * @var FloatingPointList
+   */
+  public $floatingPointList;
   protected $floatingPointListType = FloatingPointList::class;
   protected $floatingPointListDataType = '';
+  /**
+   * @var FloatingPointMean
+   */
+  public $floatingPointMean;
   protected $floatingPointMeanType = FloatingPointMean::class;
   protected $floatingPointMeanDataType = '';
+  /**
+   * @var SplitInt64
+   */
+  public $integer;
   protected $integerType = SplitInt64::class;
   protected $integerDataType = '';
+  /**
+   * @var IntegerGauge
+   */
+  public $integerGauge;
   protected $integerGaugeType = IntegerGauge::class;
   protected $integerGaugeDataType = '';
+  /**
+   * @var IntegerList
+   */
+  public $integerList;
   protected $integerListType = IntegerList::class;
   protected $integerListDataType = '';
+  /**
+   * @var IntegerMean
+   */
+  public $integerMean;
   protected $integerMeanType = IntegerMean::class;
   protected $integerMeanDataType = '';
   /**
    * @var array
    */
   public $internal;
+  /**
+   * @var NameAndKind
+   */
+  public $nameAndKind;
   protected $nameAndKindType = NameAndKind::class;
   protected $nameAndKindDataType = '';
   /**
    * @var string
    */
   public $shortId;
+  /**
+   * @var StringList
+   */
+  public $stringList;
   protected $stringListType = StringList::class;
   protected $stringListDataType = '';
+  /**
+   * @var CounterStructuredNameAndMetadata
+   */
+  public $structuredNameAndMetadata;
   protected $structuredNameAndMetadataType = CounterStructuredNameAndMetadata::class;
   protected $structuredNameAndMetadataDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class DebugOptions extends \Google\Model
 {
+  /**
+   * @var DataSamplingConfig
+   */
+  public $dataSampling;
   protected $dataSamplingType = DataSamplingConfig::class;
   protected $dataSamplingDataType = '';
   /**

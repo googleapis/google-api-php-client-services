@@ -20,6 +20,10 @@ namespace Google\Service\Dataflow;
 class SdkVersion extends \Google\Collection
 {
   protected $collection_key = 'bugs';
+  /**
+   * @var SdkBug[]
+   */
+  public $bugs;
   protected $bugsType = SdkBug::class;
   protected $bugsDataType = 'array';
   /**

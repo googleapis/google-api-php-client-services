@@ -20,8 +20,16 @@ namespace Google\Service\Dataflow;
 class RuntimeMetadata extends \Google\Collection
 {
   protected $collection_key = 'parameters';
+  /**
+   * @var ParameterMetadata[]
+   */
+  public $parameters;
   protected $parametersType = ParameterMetadata::class;
   protected $parametersDataType = 'array';
+  /**
+   * @var SDKInfo
+   */
+  public $sdkInfo;
   protected $sdkInfoType = SDKInfo::class;
   protected $sdkInfoDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class SeqMapTaskOutputInfo extends \Google\Model
 {
+  /**
+   * @var Sink
+   */
+  public $sink;
   protected $sinkType = Sink::class;
   protected $sinkDataType = '';
   /**

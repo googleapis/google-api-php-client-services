@@ -40,8 +40,16 @@ class WorkItem extends \Google\Collection
    * @var string
    */
   public $leaseExpireTime;
+  /**
+   * @var MapTask
+   */
+  public $mapTask;
   protected $mapTaskType = MapTask::class;
   protected $mapTaskDataType = '';
+  /**
+   * @var Package[]
+   */
+  public $packages;
   protected $packagesType = Package::class;
   protected $packagesDataType = 'array';
   /**
@@ -52,16 +60,40 @@ class WorkItem extends \Google\Collection
    * @var string
    */
   public $reportStatusInterval;
+  /**
+   * @var SeqMapTask
+   */
+  public $seqMapTask;
   protected $seqMapTaskType = SeqMapTask::class;
   protected $seqMapTaskDataType = '';
+  /**
+   * @var ShellTask
+   */
+  public $shellTask;
   protected $shellTaskType = ShellTask::class;
   protected $shellTaskDataType = '';
+  /**
+   * @var SourceOperationRequest
+   */
+  public $sourceOperationTask;
   protected $sourceOperationTaskType = SourceOperationRequest::class;
   protected $sourceOperationTaskDataType = '';
+  /**
+   * @var StreamingComputationTask
+   */
+  public $streamingComputationTask;
   protected $streamingComputationTaskType = StreamingComputationTask::class;
   protected $streamingComputationTaskDataType = '';
+  /**
+   * @var StreamingConfigTask
+   */
+  public $streamingConfigTask;
   protected $streamingConfigTaskType = StreamingConfigTask::class;
   protected $streamingConfigTaskDataType = '';
+  /**
+   * @var StreamingSetupTask
+   */
+  public $streamingSetupTask;
   protected $streamingSetupTaskType = StreamingSetupTask::class;
   protected $streamingSetupTaskDataType = '';
 

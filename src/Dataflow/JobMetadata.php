@@ -20,18 +20,46 @@ namespace Google\Service\Dataflow;
 class JobMetadata extends \Google\Collection
 {
   protected $collection_key = 'spannerDetails';
+  /**
+   * @var BigTableIODetails[]
+   */
+  public $bigTableDetails;
   protected $bigTableDetailsType = BigTableIODetails::class;
   protected $bigTableDetailsDataType = 'array';
+  /**
+   * @var BigQueryIODetails[]
+   */
+  public $bigqueryDetails;
   protected $bigqueryDetailsType = BigQueryIODetails::class;
   protected $bigqueryDetailsDataType = 'array';
+  /**
+   * @var DatastoreIODetails[]
+   */
+  public $datastoreDetails;
   protected $datastoreDetailsType = DatastoreIODetails::class;
   protected $datastoreDetailsDataType = 'array';
+  /**
+   * @var FileIODetails[]
+   */
+  public $fileDetails;
   protected $fileDetailsType = FileIODetails::class;
   protected $fileDetailsDataType = 'array';
+  /**
+   * @var PubSubIODetails[]
+   */
+  public $pubsubDetails;
   protected $pubsubDetailsType = PubSubIODetails::class;
   protected $pubsubDetailsDataType = 'array';
+  /**
+   * @var SdkVersion
+   */
+  public $sdkVersion;
   protected $sdkVersionType = SdkVersion::class;
   protected $sdkVersionDataType = '';
+  /**
+   * @var SpannerIODetails[]
+   */
+  public $spannerDetails;
   protected $spannerDetailsType = SpannerIODetails::class;
   protected $spannerDetailsDataType = 'array';
   /**

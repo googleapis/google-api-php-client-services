@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class LaunchFlexTemplateRequest extends \Google\Model
 {
+  /**
+   * @var LaunchFlexTemplateParameter
+   */
+  public $launchParameter;
   protected $launchParameterType = LaunchFlexTemplateParameter::class;
   protected $launchParameterDataType = '';
   /**

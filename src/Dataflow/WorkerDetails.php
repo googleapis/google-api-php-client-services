@@ -20,6 +20,10 @@ namespace Google\Service\Dataflow;
 class WorkerDetails extends \Google\Collection
 {
   protected $collection_key = 'workItems';
+  /**
+   * @var WorkItemDetails[]
+   */
+  public $workItems;
   protected $workItemsType = WorkItemDetails::class;
   protected $workItemsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class LaunchTemplateParameters extends \Google\Model
 {
+  /**
+   * @var RuntimeEnvironment
+   */
+  public $environment;
   protected $environmentType = RuntimeEnvironment::class;
   protected $environmentDataType = '';
   /**

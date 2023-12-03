@@ -28,6 +28,10 @@ class TemplateMetadata extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var ParameterMetadata[]
+   */
+  public $parameters;
   protected $parametersType = ParameterMetadata::class;
   protected $parametersDataType = 'array';
 

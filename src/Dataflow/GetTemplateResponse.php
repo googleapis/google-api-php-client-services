@@ -19,10 +19,22 @@ namespace Google\Service\Dataflow;
 
 class GetTemplateResponse extends \Google\Model
 {
+  /**
+   * @var TemplateMetadata
+   */
+  public $metadata;
   protected $metadataType = TemplateMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var RuntimeMetadata
+   */
+  public $runtimeMetadata;
   protected $runtimeMetadataType = RuntimeMetadata::class;
   protected $runtimeMetadataDataType = '';
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dataflow;
 class StragglerSummary extends \Google\Collection
 {
   protected $collection_key = 'recentStragglers';
+  /**
+   * @var Straggler[]
+   */
+  public $recentStragglers;
   protected $recentStragglersType = Straggler::class;
   protected $recentStragglersDataType = 'array';
   /**

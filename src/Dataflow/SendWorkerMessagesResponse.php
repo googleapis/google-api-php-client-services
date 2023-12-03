@@ -20,6 +20,10 @@ namespace Google\Service\Dataflow;
 class SendWorkerMessagesResponse extends \Google\Collection
 {
   protected $collection_key = 'workerMessageResponses';
+  /**
+   * @var WorkerMessageResponse[]
+   */
+  public $workerMessageResponses;
   protected $workerMessageResponsesType = WorkerMessageResponse::class;
   protected $workerMessageResponsesDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Dataflow;
 
 class DynamicSourceSplit extends \Google\Model
 {
+  /**
+   * @var DerivedSource
+   */
+  public $primary;
   protected $primaryType = DerivedSource::class;
   protected $primaryDataType = '';
+  /**
+   * @var DerivedSource
+   */
+  public $residual;
   protected $residualType = DerivedSource::class;
   protected $residualDataType = '';
 

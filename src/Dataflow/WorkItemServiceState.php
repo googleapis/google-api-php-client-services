@@ -20,18 +20,30 @@ namespace Google\Service\Dataflow;
 class WorkItemServiceState extends \Google\Collection
 {
   protected $collection_key = 'metricShortId';
+  /**
+   * @var Status
+   */
+  public $completeWorkStatus;
   protected $completeWorkStatusType = Status::class;
   protected $completeWorkStatusDataType = '';
   /**
    * @var array[]
    */
   public $harnessData;
+  /**
+   * @var HotKeyDetection
+   */
+  public $hotKeyDetection;
   protected $hotKeyDetectionType = HotKeyDetection::class;
   protected $hotKeyDetectionDataType = '';
   /**
    * @var string
    */
   public $leaseExpireTime;
+  /**
+   * @var MetricShortId[]
+   */
+  public $metricShortId;
   protected $metricShortIdType = MetricShortId::class;
   protected $metricShortIdDataType = 'array';
   /**
@@ -42,10 +54,22 @@ class WorkItemServiceState extends \Google\Collection
    * @var string
    */
   public $reportStatusInterval;
+  /**
+   * @var ApproximateSplitRequest
+   */
+  public $splitRequest;
   protected $splitRequestType = ApproximateSplitRequest::class;
   protected $splitRequestDataType = '';
+  /**
+   * @var ApproximateProgress
+   */
+  public $suggestedStopPoint;
   protected $suggestedStopPointType = ApproximateProgress::class;
   protected $suggestedStopPointDataType = '';
+  /**
+   * @var Position
+   */
+  public $suggestedStopPosition;
   protected $suggestedStopPositionType = Position::class;
   protected $suggestedStopPositionDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Dataflow;
 
 class JobExecutionInfo extends \Google\Model
 {
+  /**
+   * @var JobExecutionStageInfo[]
+   */
+  public $stages;
   protected $stagesType = JobExecutionStageInfo::class;
   protected $stagesDataType = 'map';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Dataflow;
 
 class CounterStructuredNameAndMetadata extends \Google\Model
 {
+  /**
+   * @var CounterMetadata
+   */
+  public $metadata;
   protected $metadataType = CounterMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var CounterStructuredName
+   */
+  public $name;
   protected $nameType = CounterStructuredName::class;
   protected $nameDataType = '';
 
