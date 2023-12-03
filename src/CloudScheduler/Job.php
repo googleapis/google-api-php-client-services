@@ -19,6 +19,10 @@ namespace Google\Service\CloudScheduler;
 
 class Job extends \Google\Model
 {
+  /**
+   * @var AppEngineHttpTarget
+   */
+  public $appEngineHttpTarget;
   protected $appEngineHttpTargetType = AppEngineHttpTarget::class;
   protected $appEngineHttpTargetDataType = '';
   /**
@@ -29,6 +33,10 @@ class Job extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var HttpTarget
+   */
+  public $httpTarget;
   protected $httpTargetType = HttpTarget::class;
   protected $httpTargetDataType = '';
   /**
@@ -39,8 +47,16 @@ class Job extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PubsubTarget
+   */
+  public $pubsubTarget;
   protected $pubsubTargetType = PubsubTarget::class;
   protected $pubsubTargetDataType = '';
+  /**
+   * @var RetryConfig
+   */
+  public $retryConfig;
   protected $retryConfigType = RetryConfig::class;
   protected $retryConfigDataType = '';
   /**
@@ -55,6 +71,10 @@ class Job extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
   /**

@@ -31,8 +31,16 @@ class HttpTarget extends \Google\Model
    * @var string
    */
   public $httpMethod;
+  /**
+   * @var OAuthToken
+   */
+  public $oauthToken;
   protected $oauthTokenType = OAuthToken::class;
   protected $oauthTokenDataType = '';
+  /**
+   * @var OidcToken
+   */
+  public $oidcToken;
   protected $oidcTokenType = OidcToken::class;
   protected $oidcTokenDataType = '';
   /**
