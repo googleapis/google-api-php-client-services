@@ -19,6 +19,10 @@ namespace Google\Service\SiteVerification;
 
 class SiteVerificationWebResourceGettokenRequest extends \Google\Model
 {
+  /**
+   * @var SiteVerificationWebResourceGettokenRequestSite
+   */
+  public $site;
   protected $siteType = SiteVerificationWebResourceGettokenRequestSite::class;
   protected $siteDataType = '';
   /**

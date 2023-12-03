@@ -20,6 +20,10 @@ namespace Google\Service\SiteVerification;
 class SiteVerificationWebResourceListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var SiteVerificationWebResourceResource[]
+   */
+  public $items;
   protected $itemsType = SiteVerificationWebResourceResource::class;
   protected $itemsDataType = 'array';
 
