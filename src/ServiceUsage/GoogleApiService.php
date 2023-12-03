@@ -20,44 +20,108 @@ namespace Google\Service\ServiceUsage;
 class GoogleApiService extends \Google\Collection
 {
   protected $collection_key = 'types';
+  /**
+   * @var Api[]
+   */
+  public $apis;
   protected $apisType = Api::class;
   protected $apisDataType = 'array';
+  /**
+   * @var Authentication
+   */
+  public $authentication;
   protected $authenticationType = Authentication::class;
   protected $authenticationDataType = '';
+  /**
+   * @var Backend
+   */
+  public $backend;
   protected $backendType = Backend::class;
   protected $backendDataType = '';
+  /**
+   * @var Billing
+   */
+  public $billing;
   protected $billingType = Billing::class;
   protected $billingDataType = '';
   /**
    * @var string
    */
   public $configVersion;
+  /**
+   * @var Context
+   */
+  public $context;
   protected $contextType = Context::class;
   protected $contextDataType = '';
+  /**
+   * @var Control
+   */
+  public $control;
   protected $controlType = Control::class;
   protected $controlDataType = '';
+  /**
+   * @var CustomError
+   */
+  public $customError;
   protected $customErrorType = CustomError::class;
   protected $customErrorDataType = '';
+  /**
+   * @var Documentation
+   */
+  public $documentation;
   protected $documentationType = Documentation::class;
   protected $documentationDataType = '';
+  /**
+   * @var Endpoint[]
+   */
+  public $endpoints;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
+  /**
+   * @var Enum[]
+   */
+  public $enums;
   protected $enumsType = Enum::class;
   protected $enumsDataType = 'array';
+  /**
+   * @var Http
+   */
+  public $http;
   protected $httpType = Http::class;
   protected $httpDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var Logging
+   */
+  public $logging;
   protected $loggingType = Logging::class;
   protected $loggingDataType = '';
+  /**
+   * @var LogDescriptor[]
+   */
+  public $logs;
   protected $logsType = LogDescriptor::class;
   protected $logsDataType = 'array';
+  /**
+   * @var MetricDescriptor[]
+   */
+  public $metrics;
   protected $metricsType = MetricDescriptor::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var MonitoredResourceDescriptor[]
+   */
+  public $monitoredResources;
   protected $monitoredResourcesType = MonitoredResourceDescriptor::class;
   protected $monitoredResourcesDataType = 'array';
+  /**
+   * @var Monitoring
+   */
+  public $monitoring;
   protected $monitoringType = Monitoring::class;
   protected $monitoringDataType = '';
   /**
@@ -68,22 +132,50 @@ class GoogleApiService extends \Google\Collection
    * @var string
    */
   public $producerProjectId;
+  /**
+   * @var Publishing
+   */
+  public $publishing;
   protected $publishingType = Publishing::class;
   protected $publishingDataType = '';
+  /**
+   * @var Quota
+   */
+  public $quota;
   protected $quotaType = Quota::class;
   protected $quotaDataType = '';
+  /**
+   * @var SourceInfo
+   */
+  public $sourceInfo;
   protected $sourceInfoType = SourceInfo::class;
   protected $sourceInfoDataType = '';
+  /**
+   * @var SystemParameters
+   */
+  public $systemParameters;
   protected $systemParametersType = SystemParameters::class;
   protected $systemParametersDataType = '';
+  /**
+   * @var Type[]
+   */
+  public $systemTypes;
   protected $systemTypesType = Type::class;
   protected $systemTypesDataType = 'array';
   /**
    * @var string
    */
   public $title;
+  /**
+   * @var Type[]
+   */
+  public $types;
   protected $typesType = Type::class;
   protected $typesDataType = 'array';
+  /**
+   * @var Usage
+   */
+  public $usage;
   protected $usageType = Usage::class;
   protected $usageDataType = '';
 

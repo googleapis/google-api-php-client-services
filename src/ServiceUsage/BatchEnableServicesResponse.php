@@ -20,8 +20,16 @@ namespace Google\Service\ServiceUsage;
 class BatchEnableServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'services';
+  /**
+   * @var EnableFailure[]
+   */
+  public $failures;
   protected $failuresType = EnableFailure::class;
   protected $failuresDataType = 'array';
+  /**
+   * @var GoogleApiServiceusageV1Service[]
+   */
+  public $services;
   protected $servicesType = GoogleApiServiceusageV1Service::class;
   protected $servicesDataType = 'array';
 

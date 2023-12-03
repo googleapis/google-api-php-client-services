@@ -20,8 +20,16 @@ namespace Google\Service\ServiceUsage;
 class Quota extends \Google\Collection
 {
   protected $collection_key = 'metricRules';
+  /**
+   * @var QuotaLimit[]
+   */
+  public $limits;
   protected $limitsType = QuotaLimit::class;
   protected $limitsDataType = 'array';
+  /**
+   * @var MetricRule[]
+   */
+  public $metricRules;
   protected $metricRulesType = MetricRule::class;
   protected $metricRulesDataType = 'array';
 

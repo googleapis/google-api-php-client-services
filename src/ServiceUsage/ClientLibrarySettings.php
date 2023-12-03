@@ -19,28 +19,60 @@ namespace Google\Service\ServiceUsage;
 
 class ClientLibrarySettings extends \Google\Model
 {
+  /**
+   * @var CppSettings
+   */
+  public $cppSettings;
   protected $cppSettingsType = CppSettings::class;
   protected $cppSettingsDataType = '';
+  /**
+   * @var DotnetSettings
+   */
+  public $dotnetSettings;
   protected $dotnetSettingsType = DotnetSettings::class;
   protected $dotnetSettingsDataType = '';
+  /**
+   * @var GoSettings
+   */
+  public $goSettings;
   protected $goSettingsType = GoSettings::class;
   protected $goSettingsDataType = '';
+  /**
+   * @var JavaSettings
+   */
+  public $javaSettings;
   protected $javaSettingsType = JavaSettings::class;
   protected $javaSettingsDataType = '';
   /**
    * @var string
    */
   public $launchStage;
+  /**
+   * @var NodeSettings
+   */
+  public $nodeSettings;
   protected $nodeSettingsType = NodeSettings::class;
   protected $nodeSettingsDataType = '';
+  /**
+   * @var PhpSettings
+   */
+  public $phpSettings;
   protected $phpSettingsType = PhpSettings::class;
   protected $phpSettingsDataType = '';
+  /**
+   * @var PythonSettings
+   */
+  public $pythonSettings;
   protected $pythonSettingsType = PythonSettings::class;
   protected $pythonSettingsDataType = '';
   /**
    * @var bool
    */
   public $restNumericEnums;
+  /**
+   * @var RubySettings
+   */
+  public $rubySettings;
   protected $rubySettingsType = RubySettings::class;
   protected $rubySettingsDataType = '';
   /**

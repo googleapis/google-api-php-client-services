@@ -20,6 +20,10 @@ namespace Google\Service\ServiceUsage;
 class ImportAdminQuotaPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'policies';
+  /**
+   * @var AdminQuotaPolicy[]
+   */
+  public $policies;
   protected $policiesType = AdminQuotaPolicy::class;
   protected $policiesDataType = 'array';
 

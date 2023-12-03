@@ -20,6 +20,10 @@ namespace Google\Service\ServiceUsage;
 class BatchCreateAdminOverridesResponse extends \Google\Collection
 {
   protected $collection_key = 'overrides';
+  /**
+   * @var QuotaOverride[]
+   */
+  public $overrides;
   protected $overridesType = QuotaOverride::class;
   protected $overridesDataType = 'array';
 

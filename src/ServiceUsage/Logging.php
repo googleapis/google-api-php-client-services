@@ -20,8 +20,16 @@ namespace Google\Service\ServiceUsage;
 class Logging extends \Google\Collection
 {
   protected $collection_key = 'producerDestinations';
+  /**
+   * @var LoggingDestination[]
+   */
+  public $consumerDestinations;
   protected $consumerDestinationsType = LoggingDestination::class;
   protected $consumerDestinationsDataType = 'array';
+  /**
+   * @var LoggingDestination[]
+   */
+  public $producerDestinations;
   protected $producerDestinationsType = LoggingDestination::class;
   protected $producerDestinationsDataType = 'array';
 

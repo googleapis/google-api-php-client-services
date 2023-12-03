@@ -24,6 +24,10 @@ class Method extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var Option[]
+   */
+  public $options;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
   /**

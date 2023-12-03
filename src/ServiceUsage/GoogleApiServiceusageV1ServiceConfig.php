@@ -20,28 +20,60 @@ namespace Google\Service\ServiceUsage;
 class GoogleApiServiceusageV1ServiceConfig extends \Google\Collection
 {
   protected $collection_key = 'monitoredResources';
+  /**
+   * @var Api[]
+   */
+  public $apis;
   protected $apisType = Api::class;
   protected $apisDataType = 'array';
+  /**
+   * @var Authentication
+   */
+  public $authentication;
   protected $authenticationType = Authentication::class;
   protected $authenticationDataType = '';
+  /**
+   * @var Documentation
+   */
+  public $documentation;
   protected $documentationType = Documentation::class;
   protected $documentationDataType = '';
+  /**
+   * @var Endpoint[]
+   */
+  public $endpoints;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
+  /**
+   * @var MonitoredResourceDescriptor[]
+   */
+  public $monitoredResources;
   protected $monitoredResourcesType = MonitoredResourceDescriptor::class;
   protected $monitoredResourcesDataType = 'array';
+  /**
+   * @var Monitoring
+   */
+  public $monitoring;
   protected $monitoringType = Monitoring::class;
   protected $monitoringDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Quota
+   */
+  public $quota;
   protected $quotaType = Quota::class;
   protected $quotaDataType = '';
   /**
    * @var string
    */
   public $title;
+  /**
+   * @var Usage
+   */
+  public $usage;
   protected $usageType = Usage::class;
   protected $usageDataType = '';
 

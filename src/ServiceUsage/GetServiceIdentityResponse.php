@@ -19,6 +19,10 @@ namespace Google\Service\ServiceUsage;
 
 class GetServiceIdentityResponse extends \Google\Model
 {
+  /**
+   * @var ServiceIdentity
+   */
+  public $identity;
   protected $identityType = ServiceIdentity::class;
   protected $identityDataType = '';
   /**
