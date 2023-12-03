@@ -19,6 +19,10 @@ namespace Google\Service\CloudShell;
 
 class StartEnvironmentResponse extends \Google\Model
 {
+  /**
+   * @var Environment
+   */
+  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
 
