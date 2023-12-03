@@ -44,10 +44,22 @@ class Secret extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var Replication
+   */
+  public $replication;
   protected $replicationType = Replication::class;
   protected $replicationDataType = '';
+  /**
+   * @var Rotation
+   */
+  public $rotation;
   protected $rotationType = Rotation::class;
   protected $rotationDataType = '';
+  /**
+   * @var Topic[]
+   */
+  public $topics;
   protected $topicsType = Topic::class;
   protected $topicsDataType = 'array';
   /**

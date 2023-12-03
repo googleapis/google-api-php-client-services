@@ -20,6 +20,10 @@ namespace Google\Service\SecretManager;
 class UserManaged extends \Google\Collection
 {
   protected $collection_key = 'replicas';
+  /**
+   * @var Replica[]
+   */
+  public $replicas;
   protected $replicasType = Replica::class;
   protected $replicasDataType = 'array';
 

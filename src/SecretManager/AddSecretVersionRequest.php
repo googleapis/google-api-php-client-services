@@ -19,6 +19,10 @@ namespace Google\Service\SecretManager;
 
 class AddSecretVersionRequest extends \Google\Model
 {
+  /**
+   * @var SecretPayload
+   */
+  public $payload;
   protected $payloadType = SecretPayload::class;
   protected $payloadDataType = '';
 

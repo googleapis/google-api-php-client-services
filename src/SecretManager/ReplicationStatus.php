@@ -19,8 +19,16 @@ namespace Google\Service\SecretManager;
 
 class ReplicationStatus extends \Google\Model
 {
+  /**
+   * @var AutomaticStatus
+   */
+  public $automatic;
   protected $automaticType = AutomaticStatus::class;
   protected $automaticDataType = '';
+  /**
+   * @var UserManagedStatus
+   */
+  public $userManaged;
   protected $userManagedType = UserManagedStatus::class;
   protected $userManagedDataType = '';
 

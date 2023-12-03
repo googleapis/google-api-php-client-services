@@ -19,6 +19,10 @@ namespace Google\Service\SecretManager;
 
 class Replica extends \Google\Model
 {
+  /**
+   * @var CustomerManagedEncryption
+   */
+  public $customerManagedEncryption;
   protected $customerManagedEncryptionType = CustomerManagedEncryption::class;
   protected $customerManagedEncryptionDataType = '';
   /**

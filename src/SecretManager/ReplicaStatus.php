@@ -19,6 +19,10 @@ namespace Google\Service\SecretManager;
 
 class ReplicaStatus extends \Google\Model
 {
+  /**
+   * @var CustomerManagedEncryptionStatus
+   */
+  public $customerManagedEncryption;
   protected $customerManagedEncryptionType = CustomerManagedEncryptionStatus::class;
   protected $customerManagedEncryptionDataType = '';
   /**
