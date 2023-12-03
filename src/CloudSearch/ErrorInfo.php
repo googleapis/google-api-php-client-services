@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class ErrorInfo extends \Google\Collection
 {
   protected $collection_key = 'errorMessages';
+  /**
+   * @var ErrorMessage[]
+   */
+  public $errorMessages;
   protected $errorMessagesType = ErrorMessage::class;
   protected $errorMessagesDataType = 'array';
 

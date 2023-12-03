@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickAnswerAnswerList extends \Google\Collection
 {
   protected $collection_key = 'labeledAnswer';
+  /**
+   * @var EnterpriseTopazSidekickAnswerAnswerListLabeledAnswer[]
+   */
+  public $labeledAnswer;
   protected $labeledAnswerType = EnterpriseTopazSidekickAnswerAnswerListLabeledAnswer::class;
   protected $labeledAnswerDataType = 'array';
   /**

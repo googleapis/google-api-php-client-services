@@ -23,6 +23,10 @@ class EnterpriseTopazFrontendTeamsPersonCorePhoneNumber extends \Google\Model
    * @var string
    */
   public $phoneNumber;
+  /**
+   * @var SafeUrlProto
+   */
+  public $phoneUrl;
   protected $phoneUrlType = SafeUrlProto::class;
   protected $phoneUrlDataType = '';
   /**

@@ -24,18 +24,38 @@ class PersonCore extends \Google\Collection
    * @var string
    */
   public $addressMeAs;
+  /**
+   * @var PersonCore[]
+   */
+  public $adminTo;
   protected $adminToType = PersonCore::class;
   protected $adminToDataType = 'array';
+  /**
+   * @var PersonCore[]
+   */
+  public $admins;
   protected $adminsType = PersonCore::class;
   protected $adminsDataType = 'array';
   /**
    * @var string
    */
   public $availabilityStatus;
+  /**
+   * @var Date
+   */
+  public $birthday;
   protected $birthdayType = Date::class;
   protected $birthdayDataType = '';
+  /**
+   * @var SafeUrlProto
+   */
+  public $calendarUrl;
   protected $calendarUrlType = SafeUrlProto::class;
   protected $calendarUrlDataType = '';
+  /**
+   * @var SafeUrlProto
+   */
+  public $chatUrl;
   protected $chatUrlType = SafeUrlProto::class;
   protected $chatUrlDataType = '';
   /**
@@ -46,10 +66,22 @@ class PersonCore extends \Google\Collection
    * @var string
    */
   public $department;
+  /**
+   * @var PersonCore[]
+   */
+  public $directReports;
   protected $directReportsType = PersonCore::class;
   protected $directReportsDataType = 'array';
+  /**
+   * @var PersonCore[]
+   */
+  public $dottedLineManagers;
   protected $dottedLineManagersType = PersonCore::class;
   protected $dottedLineManagersDataType = 'array';
+  /**
+   * @var PersonCore[]
+   */
+  public $dottedLineReports;
   protected $dottedLineReportsType = PersonCore::class;
   protected $dottedLineReportsDataType = 'array';
   /**
@@ -68,6 +100,10 @@ class PersonCore extends \Google\Collection
    * @var string
    */
   public $ftePermille;
+  /**
+   * @var MapInfo
+   */
+  public $geoLocation;
   protected $geoLocationType = MapInfo::class;
   protected $geoLocationDataType = '';
   /**
@@ -86,12 +122,20 @@ class PersonCore extends \Google\Collection
    * @var string[]
    */
   public $keywords;
+  /**
+   * @var EnterpriseTopazFrontendTeamsLink[]
+   */
+  public $links;
   protected $linksType = EnterpriseTopazFrontendTeamsLink::class;
   protected $linksDataType = 'array';
   /**
    * @var string
    */
   public $location;
+  /**
+   * @var PersonCore[]
+   */
+  public $managers;
   protected $managersType = PersonCore::class;
   protected $managersDataType = 'array';
   /**
@@ -110,8 +154,16 @@ class PersonCore extends \Google\Collection
    * @var string
    */
   public $personId;
+  /**
+   * @var EnterpriseTopazFrontendTeamsPersonCorePhoneNumber[]
+   */
+  public $phoneNumbers;
   protected $phoneNumbersType = EnterpriseTopazFrontendTeamsPersonCorePhoneNumber::class;
   protected $phoneNumbersDataType = 'array';
+  /**
+   * @var SafeUrlProto
+   */
+  public $photoUrl;
   protected $photoUrlType = SafeUrlProto::class;
   protected $photoUrlDataType = '';
   /**

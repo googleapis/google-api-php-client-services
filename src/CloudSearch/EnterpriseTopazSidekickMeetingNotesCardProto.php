@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickMeetingNotesCardProto extends \Google\Model
 {
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry
+   */
+  public $event;
   protected $eventType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $eventDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class ObjectDisplayOptions extends \Google\Collection
 {
   protected $collection_key = 'metalines';
+  /**
+   * @var Metaline[]
+   */
+  public $metalines;
   protected $metalinesType = Metaline::class;
   protected $metalinesDataType = 'array';
   /**

@@ -23,18 +23,30 @@ class EnterpriseTopazSidekickCommonDocument extends \Google\Model
    * @var string
    */
   public $accessType;
+  /**
+   * @var EnterpriseTopazSidekickCommonDebugInfo
+   */
+  public $debugInfo;
   protected $debugInfoType = EnterpriseTopazSidekickCommonDebugInfo::class;
   protected $debugInfoDataType = '';
   /**
    * @var string
    */
   public $documentId;
+  /**
+   * @var EnterpriseTopazSidekickCommonDocumentDriveDocumentMetadata
+   */
+  public $driveDocumentMetadata;
   protected $driveDocumentMetadataType = EnterpriseTopazSidekickCommonDocumentDriveDocumentMetadata::class;
   protected $driveDocumentMetadataDataType = '';
   /**
    * @var string
    */
   public $genericUrl;
+  /**
+   * @var EnterpriseTopazSidekickCommonDocumentJustification
+   */
+  public $justification;
   protected $justificationType = EnterpriseTopazSidekickCommonDocumentJustification::class;
   protected $justificationDataType = '';
   /**

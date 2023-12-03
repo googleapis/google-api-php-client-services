@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickPeopleDisambiguationCard extends \Google\Collection
 {
   protected $collection_key = 'person';
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson[]
+   */
+  public $person;
   protected $personType = EnterpriseTopazSidekickCommonPerson::class;
   protected $personDataType = 'array';
 

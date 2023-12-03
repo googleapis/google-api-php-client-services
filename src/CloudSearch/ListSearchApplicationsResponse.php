@@ -24,6 +24,10 @@ class ListSearchApplicationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var SearchApplication[]
+   */
+  public $searchApplications;
   protected $searchApplicationsType = SearchApplication::class;
   protected $searchApplicationsDataType = 'array';
 

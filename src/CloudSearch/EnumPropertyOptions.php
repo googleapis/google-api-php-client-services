@@ -20,12 +20,20 @@ namespace Google\Service\CloudSearch;
 class EnumPropertyOptions extends \Google\Collection
 {
   protected $collection_key = 'possibleValues';
+  /**
+   * @var EnumOperatorOptions
+   */
+  public $operatorOptions;
   protected $operatorOptionsType = EnumOperatorOptions::class;
   protected $operatorOptionsDataType = '';
   /**
    * @var string
    */
   public $orderedRanking;
+  /**
+   * @var EnumValuePair[]
+   */
+  public $possibleValues;
   protected $possibleValuesType = EnumValuePair::class;
   protected $possibleValuesDataType = 'array';
 

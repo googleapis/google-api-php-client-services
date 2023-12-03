@@ -19,14 +19,26 @@ namespace Google\Service\CloudSearch;
 
 class Item extends \Google\Model
 {
+  /**
+   * @var ItemAcl
+   */
+  public $acl;
   protected $aclType = ItemAcl::class;
   protected $aclDataType = '';
+  /**
+   * @var ItemContent
+   */
+  public $content;
   protected $contentType = ItemContent::class;
   protected $contentDataType = '';
   /**
    * @var string
    */
   public $itemType;
+  /**
+   * @var ItemMetadata
+   */
+  public $metadata;
   protected $metadataType = ItemMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -41,8 +53,16 @@ class Item extends \Google\Model
    * @var string
    */
   public $queue;
+  /**
+   * @var ItemStatus
+   */
+  public $status;
   protected $statusType = ItemStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var ItemStructuredData
+   */
+  public $structuredData;
   protected $structuredDataType = ItemStructuredData::class;
   protected $structuredDataDataType = '';
   /**

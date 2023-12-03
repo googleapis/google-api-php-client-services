@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickCommonPerson extends \Google\Model
 {
+  /**
+   * @var EnterpriseTopazSidekickCommonPersonBirthday
+   */
+  public $birthday;
   protected $birthdayType = EnterpriseTopazSidekickCommonPersonBirthday::class;
   protected $birthdayDataType = '';
   /**
@@ -65,6 +69,10 @@ class EnterpriseTopazSidekickCommonPerson extends \Google\Model
    * @var string
    */
   public $jobTitle;
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson
+   */
+  public $manager;
   protected $managerType = EnterpriseTopazSidekickCommonPerson::class;
   protected $managerDataType = '';
   /**

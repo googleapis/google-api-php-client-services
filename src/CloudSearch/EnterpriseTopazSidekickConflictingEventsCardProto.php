@@ -20,8 +20,16 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickConflictingEventsCardProto extends \Google\Collection
 {
   protected $collection_key = 'conflictingEvent';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry[]
+   */
+  public $conflictingEvent;
   protected $conflictingEventType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $conflictingEventDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry
+   */
+  public $mainEvent;
   protected $mainEventType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $mainEventDataType = '';
 

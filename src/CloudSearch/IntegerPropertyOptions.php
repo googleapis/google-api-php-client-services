@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class IntegerPropertyOptions extends \Google\Model
 {
+  /**
+   * @var IntegerFacetingOptions
+   */
+  public $integerFacetingOptions;
   protected $integerFacetingOptionsType = IntegerFacetingOptions::class;
   protected $integerFacetingOptionsDataType = '';
   /**
@@ -29,6 +33,10 @@ class IntegerPropertyOptions extends \Google\Model
    * @var string
    */
   public $minimumValue;
+  /**
+   * @var IntegerOperatorOptions
+   */
+  public $operatorOptions;
   protected $operatorOptionsType = IntegerOperatorOptions::class;
   protected $operatorOptionsDataType = '';
   /**

@@ -20,10 +20,22 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickPeopleAnswerRelatedPeopleAnswerCard extends \Google\Collection
 {
   protected $collection_key = 'relatedPeople';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo
+   */
+  public $disambiguationInfo;
   protected $disambiguationInfoType = EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo::class;
   protected $disambiguationInfoDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader
+   */
+  public $header;
   protected $headerType = EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader::class;
   protected $headerDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson[]
+   */
+  public $relatedPeople;
   protected $relatedPeopleType = EnterpriseTopazSidekickCommonPerson::class;
   protected $relatedPeopleDataType = 'array';
   /**
@@ -38,6 +50,10 @@ class EnterpriseTopazSidekickPeopleAnswerRelatedPeopleAnswerCard extends \Google
    * @var string
    */
   public $statusMessage;
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson
+   */
+  public $subject;
   protected $subjectType = EnterpriseTopazSidekickCommonPerson::class;
   protected $subjectDataType = '';
 

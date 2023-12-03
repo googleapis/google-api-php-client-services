@@ -47,6 +47,10 @@ class EnterpriseTopazSidekickCommonDocumentDriveDocumentMetadata extends \Google
    * @var string
    */
   public $lastViewTimeMs;
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson
+   */
+  public $owner;
   protected $ownerType = EnterpriseTopazSidekickCommonPerson::class;
   protected $ownerDataType = '';
   /**

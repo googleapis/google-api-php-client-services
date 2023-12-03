@@ -20,8 +20,16 @@ namespace Google\Service\CloudSearch;
 class ObjectOptions extends \Google\Collection
 {
   protected $collection_key = 'suggestionFilteringOperators';
+  /**
+   * @var ObjectDisplayOptions
+   */
+  public $displayOptions;
   protected $displayOptionsType = ObjectDisplayOptions::class;
   protected $displayOptionsDataType = '';
+  /**
+   * @var FreshnessOptions
+   */
+  public $freshnessOptions;
   protected $freshnessOptionsType = FreshnessOptions::class;
   protected $freshnessOptionsDataType = '';
   /**

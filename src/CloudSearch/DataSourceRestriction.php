@@ -20,8 +20,16 @@ namespace Google\Service\CloudSearch;
 class DataSourceRestriction extends \Google\Collection
 {
   protected $collection_key = 'filterOptions';
+  /**
+   * @var FilterOptions[]
+   */
+  public $filterOptions;
   protected $filterOptionsType = FilterOptions::class;
   protected $filterOptionsDataType = 'array';
+  /**
+   * @var Source
+   */
+  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
 

@@ -23,6 +23,10 @@ class EnterpriseTopazFrontendTeamsLink extends \Google\Model
    * @var string
    */
   public $type;
+  /**
+   * @var SafeUrlProto
+   */
+  public $url;
   protected $urlType = SafeUrlProto::class;
   protected $urlDataType = '';
 

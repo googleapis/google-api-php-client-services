@@ -23,12 +23,20 @@ class FacetBucket extends \Google\Model
    * @var int
    */
   public $count;
+  /**
+   * @var Filter
+   */
+  public $filter;
   protected $filterType = Filter::class;
   protected $filterDataType = '';
   /**
    * @var int
    */
   public $percentage;
+  /**
+   * @var Value
+   */
+  public $value;
   protected $valueType = Value::class;
   protected $valueDataType = '';
 

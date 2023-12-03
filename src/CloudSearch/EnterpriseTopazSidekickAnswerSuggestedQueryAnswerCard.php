@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickAnswerSuggestedQueryAnswerCard extends \Google\Collection
 {
   protected $collection_key = 'suggestedQueryCategory';
+  /**
+   * @var EnterpriseTopazSidekickAnswerSuggestedQueryCategory[]
+   */
+  public $suggestedQueryCategory;
   protected $suggestedQueryCategoryType = EnterpriseTopazSidekickAnswerSuggestedQueryCategory::class;
   protected $suggestedQueryCategoryDataType = 'array';
 

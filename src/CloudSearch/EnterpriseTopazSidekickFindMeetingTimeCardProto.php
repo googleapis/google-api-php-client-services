@@ -20,16 +20,40 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickFindMeetingTimeCardProto extends \Google\Collection
 {
   protected $collection_key = 'skippedInvitees';
+  /**
+   * @var EnterpriseTopazSidekickTimeSlot[]
+   */
+  public $commonAvailableTimeSlots;
   protected $commonAvailableTimeSlotsType = EnterpriseTopazSidekickTimeSlot::class;
   protected $commonAvailableTimeSlotsDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickPerson[]
+   */
+  public $invitees;
   protected $inviteesType = EnterpriseTopazSidekickPerson::class;
   protected $inviteesDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickPerson
+   */
+  public $requester;
   protected $requesterType = EnterpriseTopazSidekickPerson::class;
   protected $requesterDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickScheduledMeeting
+   */
+  public $scheduledMeeting;
   protected $scheduledMeetingType = EnterpriseTopazSidekickScheduledMeeting::class;
   protected $scheduledMeetingDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPerson[]
+   */
+  public $skippedInvitees;
   protected $skippedInviteesType = EnterpriseTopazSidekickPerson::class;
   protected $skippedInviteesDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickTimeSlot
+   */
+  public $timeBoundaries;
   protected $timeBoundariesType = EnterpriseTopazSidekickTimeSlot::class;
   protected $timeBoundariesDataType = '';
   /**

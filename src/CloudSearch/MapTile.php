@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class MapTile extends \Google\Model
 {
+  /**
+   * @var SafeUrlProto
+   */
+  public $imageUrl;
   protected $imageUrlType = SafeUrlProto::class;
   protected $imageUrlDataType = '';
   public $tileX;

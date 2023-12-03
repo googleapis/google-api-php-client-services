@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class ObjectValues extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var StructuredDataObject[]
+   */
+  public $values;
   protected $valuesType = StructuredDataObject::class;
   protected $valuesDataType = 'array';
 

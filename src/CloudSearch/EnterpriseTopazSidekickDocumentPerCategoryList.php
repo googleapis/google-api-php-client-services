@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickDocumentPerCategoryList extends \Google\Collection
 {
   protected $collection_key = 'documents';
+  /**
+   * @var EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry[]
+   */
+  public $documents;
   protected $documentsType = EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry::class;
   protected $documentsDataType = 'array';
   /**

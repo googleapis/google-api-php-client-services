@@ -20,12 +20,28 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collection
 {
   protected $collection_key = 'answer';
+  /**
+   * @var SafeHtmlProto[]
+   */
+  public $answer;
   protected $answerType = SafeHtmlProto::class;
   protected $answerDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickAnswerAnswerList
+   */
+  public $answerText;
   protected $answerTextType = EnterpriseTopazSidekickAnswerAnswerList::class;
   protected $answerTextDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo
+   */
+  public $disambiguationInfo;
   protected $disambiguationInfoType = EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo::class;
   protected $disambiguationInfoDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader
+   */
+  public $header;
   protected $headerType = EnterpriseTopazSidekickPeopleAnswerPeopleAnswerCardHeader::class;
   protected $headerDataType = '';
   /**
@@ -36,6 +52,10 @@ class EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard extends \Google\Collec
    * @var string
    */
   public $statusMessage;
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson
+   */
+  public $subject;
   protected $subjectType = EnterpriseTopazSidekickCommonPerson::class;
   protected $subjectDataType = '';
 

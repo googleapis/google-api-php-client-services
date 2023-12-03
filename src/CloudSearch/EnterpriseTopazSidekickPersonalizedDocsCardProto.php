@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickPersonalizedDocsCardProto extends \Google\Collection
 {
   protected $collection_key = 'documentGroup';
+  /**
+   * @var EnterpriseTopazSidekickDocumentGroup[]
+   */
+  public $documentGroup;
   protected $documentGroupType = EnterpriseTopazSidekickDocumentGroup::class;
   protected $documentGroupDataType = 'array';
 

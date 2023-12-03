@@ -20,8 +20,16 @@ namespace Google\Service\CloudSearch;
 class DataSourceIndexStats extends \Google\Collection
 {
   protected $collection_key = 'itemCountByStatus';
+  /**
+   * @var Date
+   */
+  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
+  /**
+   * @var ItemCountByStatus[]
+   */
+  public $itemCountByStatus;
   protected $itemCountByStatusType = ItemCountByStatus::class;
   protected $itemCountByStatusDataType = 'array';
 

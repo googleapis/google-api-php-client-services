@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class BooleanPropertyOptions extends \Google\Model
 {
+  /**
+   * @var BooleanOperatorOptions
+   */
+  public $operatorOptions;
   protected $operatorOptionsType = BooleanOperatorOptions::class;
   protected $operatorOptionsDataType = '';
 

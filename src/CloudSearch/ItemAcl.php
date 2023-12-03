@@ -24,14 +24,26 @@ class ItemAcl extends \Google\Collection
    * @var string
    */
   public $aclInheritanceType;
+  /**
+   * @var Principal[]
+   */
+  public $deniedReaders;
   protected $deniedReadersType = Principal::class;
   protected $deniedReadersDataType = 'array';
   /**
    * @var string
    */
   public $inheritAclFrom;
+  /**
+   * @var Principal[]
+   */
+  public $owners;
   protected $ownersType = Principal::class;
   protected $ownersDataType = 'array';
+  /**
+   * @var Principal[]
+   */
+  public $readers;
   protected $readersType = Principal::class;
   protected $readersDataType = 'array';
 

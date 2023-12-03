@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class DoublePropertyOptions extends \Google\Model
 {
+  /**
+   * @var DoubleOperatorOptions
+   */
+  public $operatorOptions;
   protected $operatorOptionsType = DoubleOperatorOptions::class;
   protected $operatorOptionsDataType = '';
 

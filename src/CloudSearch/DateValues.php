@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class DateValues extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var Date[]
+   */
+  public $values;
   protected $valuesType = Date::class;
   protected $valuesDataType = 'array';
 

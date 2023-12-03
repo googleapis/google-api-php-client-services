@@ -19,10 +19,22 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickGetAndKeepAheadCardProto extends \Google\Model
 {
+  /**
+   * @var EnterpriseTopazSidekickGetAndKeepAheadCardProtoDeclinedEvents
+   */
+  public $declinedEvents;
   protected $declinedEventsType = EnterpriseTopazSidekickGetAndKeepAheadCardProtoDeclinedEvents::class;
   protected $declinedEventsDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickDocumentPerCategoryList
+   */
+  public $mentionedDocuments;
   protected $mentionedDocumentsType = EnterpriseTopazSidekickDocumentPerCategoryList::class;
   protected $mentionedDocumentsDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickDocumentPerCategoryList
+   */
+  public $sharedDocuments;
   protected $sharedDocumentsType = EnterpriseTopazSidekickDocumentPerCategoryList::class;
   protected $sharedDocumentsDataType = '';
 

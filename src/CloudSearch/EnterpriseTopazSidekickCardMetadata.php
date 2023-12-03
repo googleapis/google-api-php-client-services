@@ -35,8 +35,16 @@ class EnterpriseTopazSidekickCardMetadata extends \Google\Model
    * @var string
    */
   public $debugInfo;
+  /**
+   * @var EnterpriseTopazSidekickNlpMetadata
+   */
+  public $nlpMetadata;
   protected $nlpMetadataType = EnterpriseTopazSidekickNlpMetadata::class;
   protected $nlpMetadataDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickRankingParams
+   */
+  public $rankingParams;
   protected $rankingParamsType = EnterpriseTopazSidekickRankingParams::class;
   protected $rankingParamsDataType = '';
   /**

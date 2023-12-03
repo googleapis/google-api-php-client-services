@@ -20,8 +20,16 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickShareMeetingDocsCardProto extends \Google\Collection
 {
   protected $collection_key = 'document';
+  /**
+   * @var EnterpriseTopazSidekickCommonDocument[]
+   */
+  public $document;
   protected $documentType = EnterpriseTopazSidekickCommonDocument::class;
   protected $documentDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry
+   */
+  public $event;
   protected $eventType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $eventDataType = '';
 

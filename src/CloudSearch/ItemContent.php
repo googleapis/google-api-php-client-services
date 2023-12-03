@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class ItemContent extends \Google\Model
 {
+  /**
+   * @var UploadItemRef
+   */
+  public $contentDataRef;
   protected $contentDataRefType = UploadItemRef::class;
   protected $contentDataRefDataType = '';
   /**

@@ -19,8 +19,16 @@ namespace Google\Service\CloudSearch;
 
 class CustomerSettings extends \Google\Model
 {
+  /**
+   * @var AuditLoggingSettings
+   */
+  public $auditLoggingSettings;
   protected $auditLoggingSettingsType = AuditLoggingSettings::class;
   protected $auditLoggingSettingsDataType = '';
+  /**
+   * @var VPCSettings
+   */
+  public $vpcSettings;
   protected $vpcSettingsType = VPCSettings::class;
   protected $vpcSettingsDataType = '';
 

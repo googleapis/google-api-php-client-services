@@ -24,8 +24,16 @@ class EnterpriseTopazSidekickMeetingNotesCardRequest extends \Google\Collection
    * @var string[]
    */
   public $canCreateFor;
+  /**
+   * @var EnterpriseTopazSidekickMeetingNotesCardError
+   */
+  public $error;
   protected $errorType = EnterpriseTopazSidekickMeetingNotesCardError::class;
   protected $errorDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry
+   */
+  public $event;
   protected $eventType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $eventDataType = '';
 

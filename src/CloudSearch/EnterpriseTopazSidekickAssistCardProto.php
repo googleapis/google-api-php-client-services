@@ -19,52 +19,140 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickAssistCardProto extends \Google\Model
 {
+  /**
+   * @var EnterpriseTopazSidekickAgendaGroupCardProto
+   */
+  public $agendaGroupCardProto;
   protected $agendaGroupCardProtoType = EnterpriseTopazSidekickAgendaGroupCardProto::class;
   protected $agendaGroupCardProtoDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickCardMetadata
+   */
+  public $cardMetadata;
   protected $cardMetadataType = EnterpriseTopazSidekickCardMetadata::class;
   protected $cardMetadataDataType = '';
   /**
    * @var string
    */
   public $cardType;
+  /**
+   * @var EnterpriseTopazSidekickConflictingEventsCardProto
+   */
+  public $conflictingMeetingsCard;
   protected $conflictingMeetingsCardType = EnterpriseTopazSidekickConflictingEventsCardProto::class;
   protected $conflictingMeetingsCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickDocumentPerCategoryList
+   */
+  public $documentListCard;
   protected $documentListCardType = EnterpriseTopazSidekickDocumentPerCategoryList::class;
   protected $documentListCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickDocumentPerCategoryList
+   */
+  public $documentsWithMentions;
   protected $documentsWithMentionsType = EnterpriseTopazSidekickDocumentPerCategoryList::class;
   protected $documentsWithMentionsDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickFindMeetingTimeCardProto
+   */
+  public $findMeetingTimeCard;
   protected $findMeetingTimeCardType = EnterpriseTopazSidekickFindMeetingTimeCardProto::class;
   protected $findMeetingTimeCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickGenericAnswerCard
+   */
+  public $genericAnswerCard;
   protected $genericAnswerCardType = EnterpriseTopazSidekickGenericAnswerCard::class;
   protected $genericAnswerCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickGetAndKeepAheadCardProto
+   */
+  public $getAndKeepAheadCard;
   protected $getAndKeepAheadCardType = EnterpriseTopazSidekickGetAndKeepAheadCardProto::class;
   protected $getAndKeepAheadCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry
+   */
+  public $meeting;
   protected $meetingType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $meetingDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickMeetingNotesCardProto
+   */
+  public $meetingNotesCard;
   protected $meetingNotesCardType = EnterpriseTopazSidekickMeetingNotesCardProto::class;
   protected $meetingNotesCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickMeetingNotesCardRequest
+   */
+  public $meetingNotesCardRequest;
   protected $meetingNotesCardRequestType = EnterpriseTopazSidekickMeetingNotesCardRequest::class;
   protected $meetingNotesCardRequestDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPeopleDisambiguationCard
+   */
+  public $peopleDisambiguationCard;
   protected $peopleDisambiguationCardType = EnterpriseTopazSidekickPeopleDisambiguationCard::class;
   protected $peopleDisambiguationCardDataType = '';
+  /**
+   * @var PeoplePromotionCard
+   */
+  public $peoplePromotionCard;
   protected $peoplePromotionCardType = PeoplePromotionCard::class;
   protected $peoplePromotionCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard
+   */
+  public $personAnswerCard;
   protected $personAnswerCardType = EnterpriseTopazSidekickPeopleAnswerPersonAnswerCard::class;
   protected $personAnswerCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPersonProfileCard
+   */
+  public $personProfileCard;
   protected $personProfileCardType = EnterpriseTopazSidekickPersonProfileCard::class;
   protected $personProfileCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPersonalizedDocsCardProto
+   */
+  public $personalizedDocsCard;
   protected $personalizedDocsCardType = EnterpriseTopazSidekickPersonalizedDocsCardProto::class;
   protected $personalizedDocsCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerRelatedPeopleAnswerCard
+   */
+  public $relatedPeopleAnswerCard;
   protected $relatedPeopleAnswerCardType = EnterpriseTopazSidekickPeopleAnswerRelatedPeopleAnswerCard::class;
   protected $relatedPeopleAnswerCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickShareMeetingDocsCardProto
+   */
+  public $shareMeetingDocsCard;
   protected $shareMeetingDocsCardType = EnterpriseTopazSidekickShareMeetingDocsCardProto::class;
   protected $shareMeetingDocsCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickDocumentPerCategoryList
+   */
+  public $sharedDocuments;
   protected $sharedDocumentsType = EnterpriseTopazSidekickDocumentPerCategoryList::class;
   protected $sharedDocumentsDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickAnswerSuggestedQueryAnswerCard
+   */
+  public $suggestedQueryAnswerCard;
   protected $suggestedQueryAnswerCardType = EnterpriseTopazSidekickAnswerSuggestedQueryAnswerCard::class;
   protected $suggestedQueryAnswerCardDataType = '';
+  /**
+   * @var ThirdPartyGenericCard
+   */
+  public $thirdPartyAnswerCard;
   protected $thirdPartyAnswerCardType = ThirdPartyGenericCard::class;
   protected $thirdPartyAnswerCardDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickRecentDocumentsCardProto
+   */
+  public $workInProgressCardProto;
   protected $workInProgressCardProtoType = EnterpriseTopazSidekickRecentDocumentsCardProto::class;
   protected $workInProgressCardProtoDataType = '';
 

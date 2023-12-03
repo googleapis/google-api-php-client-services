@@ -24,6 +24,10 @@ class EnterpriseTopazSidekickDocumentGroup extends \Google\Collection
    * @var string
    */
   public $groupType;
+  /**
+   * @var EnterpriseTopazSidekickCommonDocument[]
+   */
+  public $personalizedDocument;
   protected $personalizedDocumentType = EnterpriseTopazSidekickCommonDocument::class;
   protected $personalizedDocumentDataType = 'array';
 

@@ -19,10 +19,22 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickAgendaItem extends \Google\Model
 {
+  /**
+   * @var EnterpriseTopazSidekickConflictingEventsCardProto
+   */
+  public $conflictedGroup;
   protected $conflictedGroupType = EnterpriseTopazSidekickConflictingEventsCardProto::class;
   protected $conflictedGroupDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickGap
+   */
+  public $gapBefore;
   protected $gapBeforeType = EnterpriseTopazSidekickGap::class;
   protected $gapBeforeDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry
+   */
+  public $meeting;
   protected $meetingType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $meetingDataType = '';
 

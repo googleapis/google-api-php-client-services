@@ -20,12 +20,28 @@ namespace Google\Service\CloudSearch;
 class Content extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var Action[]
+   */
+  public $actions;
   protected $actionsType = Action::class;
   protected $actionsDataType = 'array';
+  /**
+   * @var SafeHtmlProto
+   */
+  public $description;
   protected $descriptionType = SafeHtmlProto::class;
   protected $descriptionDataType = '';
+  /**
+   * @var BackgroundColoredText
+   */
+  public $subtitle;
   protected $subtitleType = BackgroundColoredText::class;
   protected $subtitleDataType = '';
+  /**
+   * @var BackgroundColoredText
+   */
+  public $title;
   protected $titleType = BackgroundColoredText::class;
   protected $titleDataType = '';
 

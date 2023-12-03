@@ -19,8 +19,16 @@ namespace Google\Service\CloudSearch;
 
 class Filter extends \Google\Model
 {
+  /**
+   * @var CompositeFilter
+   */
+  public $compositeFilter;
   protected $compositeFilterType = CompositeFilter::class;
   protected $compositeFilterDataType = '';
+  /**
+   * @var ValueFilter
+   */
+  public $valueFilter;
   protected $valueFilterType = ValueFilter::class;
   protected $valueFilterDataType = '';
 

@@ -24,8 +24,16 @@ class Metadata extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var ResultDisplayMetadata
+   */
+  public $displayOptions;
   protected $displayOptionsType = ResultDisplayMetadata::class;
   protected $displayOptionsDataType = '';
+  /**
+   * @var NamedProperty[]
+   */
+  public $fields;
   protected $fieldsType = NamedProperty::class;
   protected $fieldsDataType = 'array';
   /**
@@ -36,8 +44,16 @@ class Metadata extends \Google\Collection
    * @var string
    */
   public $objectType;
+  /**
+   * @var Person
+   */
+  public $owner;
   protected $ownerType = Person::class;
   protected $ownerDataType = '';
+  /**
+   * @var Source
+   */
+  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
   /**

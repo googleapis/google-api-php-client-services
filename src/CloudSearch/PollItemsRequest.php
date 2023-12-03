@@ -24,6 +24,10 @@ class PollItemsRequest extends \Google\Collection
    * @var string
    */
   public $connectorName;
+  /**
+   * @var DebugOptions
+   */
+  public $debugOptions;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
   /**

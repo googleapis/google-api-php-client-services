@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class EnterpriseTopazSidekickPeopleAnswerDisambiguationInfoDisambiguationPerson extends \Google\Model
 {
+  /**
+   * @var EnterpriseTopazSidekickCommonPerson
+   */
+  public $person;
   protected $personType = EnterpriseTopazSidekickCommonPerson::class;
   protected $personDataType = '';
   /**

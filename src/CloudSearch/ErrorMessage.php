@@ -23,6 +23,10 @@ class ErrorMessage extends \Google\Model
    * @var string
    */
   public $errorMessage;
+  /**
+   * @var Source
+   */
+  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickGetAndKeepAheadCardProtoDeclinedEvents extends \Google\Collection
 {
   protected $collection_key = 'events';
+  /**
+   * @var EnterpriseTopazSidekickAgendaEntry[]
+   */
+  public $events;
   protected $eventsType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $eventsDataType = 'array';
 

@@ -23,6 +23,10 @@ class Interaction extends \Google\Model
    * @var string
    */
   public $interactionTime;
+  /**
+   * @var Principal
+   */
+  public $principal;
   protected $principalType = Principal::class;
   protected $principalDataType = '';
   /**

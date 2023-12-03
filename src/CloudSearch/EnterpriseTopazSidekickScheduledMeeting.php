@@ -23,6 +23,10 @@ class EnterpriseTopazSidekickScheduledMeeting extends \Google\Model
    * @var string
    */
   public $meetingLocation;
+  /**
+   * @var EnterpriseTopazSidekickTimeSlot
+   */
+  public $meetingTime;
   protected $meetingTimeType = EnterpriseTopazSidekickTimeSlot::class;
   protected $meetingTimeDataType = '';
   /**

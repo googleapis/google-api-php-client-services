@@ -20,10 +20,22 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickAgendaGroupCardProto extends \Google\Collection
 {
   protected $collection_key = 'agendaItem';
+  /**
+   * @var EnterpriseTopazSidekickAgendaItem[]
+   */
+  public $agendaItem;
   protected $agendaItemType = EnterpriseTopazSidekickAgendaItem::class;
   protected $agendaItemDataType = 'array';
+  /**
+   * @var EnterpriseTopazSidekickAgendaGroupCardProtoContext
+   */
+  public $context;
   protected $contextType = EnterpriseTopazSidekickAgendaGroupCardProtoContext::class;
   protected $contextDataType = '';
+  /**
+   * @var EnterpriseTopazSidekickAgendaItem
+   */
+  public $currentAgendaItem;
   protected $currentAgendaItemType = EnterpriseTopazSidekickAgendaItem::class;
   protected $currentAgendaItemDataType = '';
 

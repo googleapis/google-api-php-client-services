@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickPeopleAnswerDisambiguationInfo extends \Google\Collection
 {
   protected $collection_key = 'disambiguation';
+  /**
+   * @var EnterpriseTopazSidekickPeopleAnswerDisambiguationInfoDisambiguationPerson[]
+   */
+  public $disambiguation;
   protected $disambiguationType = EnterpriseTopazSidekickPeopleAnswerDisambiguationInfoDisambiguationPerson::class;
   protected $disambiguationDataType = 'array';
   /**

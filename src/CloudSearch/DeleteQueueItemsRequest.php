@@ -23,6 +23,10 @@ class DeleteQueueItemsRequest extends \Google\Model
    * @var string
    */
   public $connectorName;
+  /**
+   * @var DebugOptions
+   */
+  public $debugOptions;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
   /**

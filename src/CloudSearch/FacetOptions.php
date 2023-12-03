@@ -19,6 +19,10 @@ namespace Google\Service\CloudSearch;
 
 class FacetOptions extends \Google\Model
 {
+  /**
+   * @var IntegerFacetingOptions
+   */
+  public $integerFacetingOptions;
   protected $integerFacetingOptionsType = IntegerFacetingOptions::class;
   protected $integerFacetingOptionsDataType = '';
   /**

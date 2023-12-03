@@ -24,6 +24,10 @@ class ListUnmappedIdentitiesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var UnmappedIdentity[]
+   */
+  public $unmappedIdentities;
   protected $unmappedIdentitiesType = UnmappedIdentity::class;
   protected $unmappedIdentitiesDataType = 'array';
 

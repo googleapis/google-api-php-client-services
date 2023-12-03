@@ -20,6 +20,10 @@ namespace Google\Service\CloudSearch;
 class Person extends \Google\Collection
 {
   protected $collection_key = 'photos';
+  /**
+   * @var EmailAddress[]
+   */
+  public $emailAddresses;
   protected $emailAddressesType = EmailAddress::class;
   protected $emailAddressesDataType = 'array';
   /**
@@ -30,10 +34,22 @@ class Person extends \Google\Collection
    * @var string
    */
   public $obfuscatedId;
+  /**
+   * @var Name[]
+   */
+  public $personNames;
   protected $personNamesType = Name::class;
   protected $personNamesDataType = 'array';
+  /**
+   * @var PhoneNumber[]
+   */
+  public $phoneNumbers;
   protected $phoneNumbersType = PhoneNumber::class;
   protected $phoneNumbersDataType = 'array';
+  /**
+   * @var Photo[]
+   */
+  public $photos;
   protected $photosType = Photo::class;
   protected $photosDataType = 'array';
 

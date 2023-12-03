@@ -24,8 +24,16 @@ class ItemStatus extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var ProcessingError[]
+   */
+  public $processingErrors;
   protected $processingErrorsType = ProcessingError::class;
   protected $processingErrorsDataType = 'array';
+  /**
+   * @var RepositoryError[]
+   */
+  public $repositoryErrors;
   protected $repositoryErrorsType = RepositoryError::class;
   protected $repositoryErrorsDataType = 'array';
 
