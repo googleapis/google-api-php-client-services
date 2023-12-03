@@ -19,6 +19,10 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1EventDetail
+   */
+  public $eventDetail;
   protected $eventDetailType = GoogleCloudRecommendationengineV1beta1EventDetail::class;
   protected $eventDetailDataType = '';
   /**
@@ -33,8 +37,16 @@ class GoogleCloudRecommendationengineV1beta1UserEvent extends \Google\Model
    * @var string
    */
   public $eventType;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ProductEventDetail
+   */
+  public $productEventDetail;
   protected $productEventDetailType = GoogleCloudRecommendationengineV1beta1ProductEventDetail::class;
   protected $productEventDetailDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1UserInfo
+   */
+  public $userInfo;
   protected $userInfoType = GoogleCloudRecommendationengineV1beta1UserInfo::class;
   protected $userInfoDataType = '';
 

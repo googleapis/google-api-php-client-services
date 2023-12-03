@@ -19,6 +19,10 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1CreatePredictionApiKeyRegistrationRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration
+   */
+  public $predictionApiKeyRegistration;
   protected $predictionApiKeyRegistrationType = GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration::class;
   protected $predictionApiKeyRegistrationDataType = '';
 

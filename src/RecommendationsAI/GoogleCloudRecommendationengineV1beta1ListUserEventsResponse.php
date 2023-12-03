@@ -24,6 +24,10 @@ class GoogleCloudRecommendationengineV1beta1ListUserEventsResponse extends \Goog
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1UserEvent[]
+   */
+  public $userEvents;
   protected $userEventsType = GoogleCloudRecommendationengineV1beta1UserEvent::class;
   protected $userEventsDataType = 'array';
 

@@ -28,10 +28,22 @@ class GoogleCloudRecommendationengineV1beta1ProductEventDetail extends \Google\C
    * @var string
    */
   public $listId;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[]
+   */
+  public $pageCategories;
   protected $pageCategoriesType = GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy::class;
   protected $pageCategoriesDataType = 'array';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ProductDetail[]
+   */
+  public $productDetails;
   protected $productDetailsType = GoogleCloudRecommendationengineV1beta1ProductDetail::class;
   protected $productDetailsDataType = 'array';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1PurchaseTransaction
+   */
+  public $purchaseTransaction;
   protected $purchaseTransactionType = GoogleCloudRecommendationengineV1beta1PurchaseTransaction::class;
   protected $purchaseTransactionDataType = '';
   /**

@@ -36,10 +36,22 @@ class GoogleCloudRecommendationengineV1beta1ProductCatalogItem extends \Google\C
    * @var string
    */
   public $currencyCode;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice
+   */
+  public $exactPrice;
   protected $exactPriceType = GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPrice::class;
   protected $exactPriceDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1Image[]
+   */
+  public $images;
   protected $imagesType = GoogleCloudRecommendationengineV1beta1Image::class;
   protected $imagesDataType = 'array';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange
+   */
+  public $priceRange;
   protected $priceRangeType = GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRange::class;
   protected $priceRangeDataType = '';
   /**

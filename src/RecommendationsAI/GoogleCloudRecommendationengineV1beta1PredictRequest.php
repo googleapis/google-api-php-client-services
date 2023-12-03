@@ -43,6 +43,10 @@ class GoogleCloudRecommendationengineV1beta1PredictRequest extends \Google\Model
    * @var array[]
    */
   public $params;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1UserEvent
+   */
+  public $userEvent;
   protected $userEventType = GoogleCloudRecommendationengineV1beta1UserEvent::class;
   protected $userEventDataType = '';
 

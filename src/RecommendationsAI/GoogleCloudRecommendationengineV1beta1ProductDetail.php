@@ -35,6 +35,10 @@ class GoogleCloudRecommendationengineV1beta1ProductDetail extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1FeatureMap
+   */
+  public $itemAttributes;
   protected $itemAttributesType = GoogleCloudRecommendationengineV1beta1FeatureMap::class;
   protected $itemAttributesDataType = '';
   /**

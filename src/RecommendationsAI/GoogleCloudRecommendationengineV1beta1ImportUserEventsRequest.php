@@ -19,8 +19,16 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1ImportUserEventsRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ImportErrorsConfig
+   */
+  public $errorsConfig;
   protected $errorsConfigType = GoogleCloudRecommendationengineV1beta1ImportErrorsConfig::class;
   protected $errorsConfigDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1InputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudRecommendationengineV1beta1InputConfig::class;
   protected $inputConfigDataType = '';
   /**

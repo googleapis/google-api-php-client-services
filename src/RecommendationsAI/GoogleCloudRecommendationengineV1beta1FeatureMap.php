@@ -19,8 +19,16 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1FeatureMap extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1FeatureMapStringList[]
+   */
+  public $categoricalFeatures;
   protected $categoricalFeaturesType = GoogleCloudRecommendationengineV1beta1FeatureMapStringList::class;
   protected $categoricalFeaturesDataType = 'map';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1FeatureMapFloatList[]
+   */
+  public $numericalFeatures;
   protected $numericalFeaturesType = GoogleCloudRecommendationengineV1beta1FeatureMapFloatList::class;
   protected $numericalFeaturesDataType = 'map';
 

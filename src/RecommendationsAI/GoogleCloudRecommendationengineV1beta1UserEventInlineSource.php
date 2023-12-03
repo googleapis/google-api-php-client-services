@@ -20,6 +20,10 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1UserEventInlineSource extends \Google\Collection
 {
   protected $collection_key = 'userEvents';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1UserEvent[]
+   */
+  public $userEvents;
   protected $userEventsType = GoogleCloudRecommendationengineV1beta1UserEvent::class;
   protected $userEventsDataType = 'array';
 

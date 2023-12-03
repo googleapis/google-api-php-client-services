@@ -20,8 +20,16 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1ImportCatalogItemsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $errorSamples;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ImportErrorsConfig
+   */
+  public $errorsConfig;
   protected $errorsConfigType = GoogleCloudRecommendationengineV1beta1ImportErrorsConfig::class;
   protected $errorsConfigDataType = '';
 

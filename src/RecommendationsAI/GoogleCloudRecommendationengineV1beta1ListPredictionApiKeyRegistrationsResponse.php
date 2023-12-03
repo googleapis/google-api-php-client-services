@@ -24,6 +24,10 @@ class GoogleCloudRecommendationengineV1beta1ListPredictionApiKeyRegistrationsRes
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration[]
+   */
+  public $predictionApiKeyRegistrations;
   protected $predictionApiKeyRegistrationsType = GoogleCloudRecommendationengineV1beta1PredictionApiKeyRegistration::class;
   protected $predictionApiKeyRegistrationsDataType = 'array';
 

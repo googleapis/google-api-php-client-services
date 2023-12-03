@@ -20,6 +20,10 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1EventDetail extends \Google\Collection
 {
   protected $collection_key = 'experimentIds';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1FeatureMap
+   */
+  public $eventAttributes;
   protected $eventAttributesType = GoogleCloudRecommendationengineV1beta1FeatureMap::class;
   protected $eventAttributesDataType = '';
   /**

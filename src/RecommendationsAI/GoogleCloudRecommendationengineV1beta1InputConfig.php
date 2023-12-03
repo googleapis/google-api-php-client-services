@@ -19,12 +19,28 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1InputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1BigQuerySource
+   */
+  public $bigQuerySource;
   protected $bigQuerySourceType = GoogleCloudRecommendationengineV1beta1BigQuerySource::class;
   protected $bigQuerySourceDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1CatalogInlineSource
+   */
+  public $catalogInlineSource;
   protected $catalogInlineSourceType = GoogleCloudRecommendationengineV1beta1CatalogInlineSource::class;
   protected $catalogInlineSourceDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudRecommendationengineV1beta1GcsSource::class;
   protected $gcsSourceDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1UserEventInlineSource
+   */
+  public $userEventInlineSource;
   protected $userEventInlineSourceType = GoogleCloudRecommendationengineV1beta1UserEventInlineSource::class;
   protected $userEventInlineSourceDataType = '';
 

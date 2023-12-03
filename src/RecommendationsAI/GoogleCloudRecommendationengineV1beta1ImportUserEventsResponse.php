@@ -20,10 +20,22 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1ImportUserEventsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $errorSamples;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1ImportErrorsConfig
+   */
+  public $errorsConfig;
   protected $errorsConfigType = GoogleCloudRecommendationengineV1beta1ImportErrorsConfig::class;
   protected $errorsConfigDataType = '';
+  /**
+   * @var GoogleCloudRecommendationengineV1beta1UserEventImportSummary
+   */
+  public $importSummary;
   protected $importSummaryType = GoogleCloudRecommendationengineV1beta1UserEventImportSummary::class;
   protected $importSummaryDataType = '';
 
