@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem extends \Google\Collection
 {
   protected $collection_key = 'matchedItemValue';
+  /**
+   * @var AssistantVerticalsHomeautomationProtoHomeAutomationMetaData
+   */
+  public $homeautomationMetadata;
   protected $homeautomationMetadataType = AssistantVerticalsHomeautomationProtoHomeAutomationMetaData::class;
   protected $homeautomationMetadataDataType = '';
   /**

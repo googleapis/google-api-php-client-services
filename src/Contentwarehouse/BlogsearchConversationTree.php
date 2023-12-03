@@ -24,6 +24,10 @@ class BlogsearchConversationTree extends \Google\Collection
    * @var string
    */
   public $convId;
+  /**
+   * @var BlogsearchConversationNode[]
+   */
+  public $nodes;
   protected $nodesType = BlogsearchConversationNode::class;
   protected $nodesDataType = 'array';
 

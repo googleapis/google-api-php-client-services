@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantLogsDefaultDeviceLog extends \Google\Model
 {
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $defaultSpeaker;
   protected $defaultSpeakerType = AssistantLogsDeviceInfoLog::class;
   protected $defaultSpeakerDataType = '';
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $defaultTv;
   protected $defaultTvType = AssistantLogsDeviceInfoLog::class;
   protected $defaultTvDataType = '';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class CopleySubreferenceMetadata extends \Google\Collection
 {
   protected $collection_key = 'mostCompoundResolvedEntities';
+  /**
+   * @var CopleySubreferenceResolution[]
+   */
+  public $mostCompoundResolvedEntities;
   protected $mostCompoundResolvedEntitiesType = CopleySubreferenceResolution::class;
   protected $mostCompoundResolvedEntitiesDataType = 'array';
+  /**
+   * @var CopleySubreferenceReference
+   */
+  public $mostNestedUnresolvedReference;
   protected $mostNestedUnresolvedReferenceType = CopleySubreferenceReference::class;
   protected $mostNestedUnresolvedReferenceDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantVerticalsHomeautomationProtoAttributes extends \Google\Collection
 {
   protected $collection_key = 'attributeProtos';
+  /**
+   * @var AssistantVerticalsHomeautomationProtoAttribute[]
+   */
+  public $attributeProtos;
   protected $attributeProtosType = AssistantVerticalsHomeautomationProtoAttribute::class;
   protected $attributeProtosDataType = 'array';
 

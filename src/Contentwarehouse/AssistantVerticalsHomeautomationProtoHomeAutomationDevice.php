@@ -20,14 +20,34 @@ namespace Google\Service\Contentwarehouse;
 class AssistantVerticalsHomeautomationProtoHomeAutomationDevice extends \Google\Collection
 {
   protected $collection_key = 'matchedItemValue';
+  /**
+   * @var AssistantLogsDeviceSelectionLog
+   */
+  public $deviceSelectionLog;
   protected $deviceSelectionLogType = AssistantLogsDeviceSelectionLog::class;
   protected $deviceSelectionLogDataType = '';
+  /**
+   * @var AssistantDeviceTargetingDeviceTargetingError
+   */
+  public $dtoError;
   protected $dtoErrorType = AssistantDeviceTargetingDeviceTargetingError::class;
   protected $dtoErrorDataType = '';
+  /**
+   * @var AssistantVerticalsHomeautomationProtoDeviceTargetingOutputQueryInfo
+   */
+  public $dtoQueryInfo;
   protected $dtoQueryInfoType = AssistantVerticalsHomeautomationProtoDeviceTargetingOutputQueryInfo::class;
   protected $dtoQueryInfoDataType = '';
+  /**
+   * @var AssistantVerticalsHomeautomationProtoHomeAutomationMetaData
+   */
+  public $homeautomationMetadata;
   protected $homeautomationMetadataType = AssistantVerticalsHomeautomationProtoHomeAutomationMetaData::class;
   protected $homeautomationMetadataDataType = '';
+  /**
+   * @var AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem[]
+   */
+  public $list;
   protected $listType = AssistantVerticalsHomeautomationProtoHomeAutomationDeviceItem::class;
   protected $listDataType = 'array';
   /**

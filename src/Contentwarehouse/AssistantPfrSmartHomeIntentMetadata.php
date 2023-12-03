@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantPfrSmartHomeIntentMetadata extends \Google\Collection
 {
   protected $collection_key = 'deviceRdMetadata';
+  /**
+   * @var AssistantPfrDeviceRdMetadata[]
+   */
+  public $deviceRdMetadata;
   protected $deviceRdMetadataType = AssistantPfrDeviceRdMetadata::class;
   protected $deviceRdMetadataDataType = 'array';
   /**

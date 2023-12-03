@@ -57,6 +57,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $generatedByLegacyAquaDomain;
   public $groundabilityScore;
+  /**
+   * @var AssistantGroundingRankerGroundingProviderFeatures
+   */
+  public $groundingProviderFeatures;
   protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
   protected $groundingProviderFeaturesDataType = '';
   /**
@@ -149,6 +153,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var int
    */
   public $kscorerRank;
+  /**
+   * @var AssistantGroundingRankerLaaFeatures
+   */
+  public $laaFeatures;
   protected $laaFeaturesType = AssistantGroundingRankerLaaFeatures::class;
   protected $laaFeaturesDataType = '';
   /**
@@ -196,12 +204,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var string
    */
   public $searchDispatch;
+  /**
+   * @var AssistantPfrSmartHomeIntentMetadata
+   */
+  public $smarthomeIntentMetadata;
   protected $smarthomeIntentMetadataType = AssistantPfrSmartHomeIntentMetadata::class;
   protected $smarthomeIntentMetadataDataType = '';
   /**
    * @var string
    */
   public $subIntentType;
+  /**
+   * @var AssistantPfrTiebreakingMetadata
+   */
+  public $tiebreakingMetadata;
   protected $tiebreakingMetadataType = AssistantPfrTiebreakingMetadata::class;
   protected $tiebreakingMetadataDataType = '';
   /**

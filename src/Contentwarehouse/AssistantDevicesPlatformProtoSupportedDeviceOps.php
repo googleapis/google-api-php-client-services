@@ -19,36 +19,100 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantDevicesPlatformProtoSupportedDeviceOps extends \Google\Model
 {
+  /**
+   * @var AssistantDevicesPlatformProtoCallCallCapability
+   */
+  public $callCall;
   protected $callCallType = AssistantDevicesPlatformProtoCallCallCapability::class;
   protected $callCallDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoClientReconnectCapability
+   */
+  public $clientReconnect;
   protected $clientReconnectType = AssistantDevicesPlatformProtoClientReconnectCapability::class;
   protected $clientReconnectDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoCoreDismissAssistantCapability
+   */
+  public $coreDismissAssistant;
   protected $coreDismissAssistantType = AssistantDevicesPlatformProtoCoreDismissAssistantCapability::class;
   protected $coreDismissAssistantDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoDeviceModifySettingCapability
+   */
+  public $deviceModifySetting;
   protected $deviceModifySettingType = AssistantDevicesPlatformProtoDeviceModifySettingCapability::class;
   protected $deviceModifySettingDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoDeviceTakePhotoCapability
+   */
+  public $deviceTakePhoto;
   protected $deviceTakePhotoType = AssistantDevicesPlatformProtoDeviceTakePhotoCapability::class;
   protected $deviceTakePhotoDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoExecutionWaitCapability
+   */
+  public $executionWait;
   protected $executionWaitType = AssistantDevicesPlatformProtoExecutionWaitCapability::class;
   protected $executionWaitDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaNextCapability
+   */
+  public $mediaNext;
   protected $mediaNextType = AssistantDevicesPlatformProtoMediaNextCapability::class;
   protected $mediaNextDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaPauseCapability
+   */
+  public $mediaPause;
   protected $mediaPauseType = AssistantDevicesPlatformProtoMediaPauseCapability::class;
   protected $mediaPauseDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaPlayMediaCapability
+   */
+  public $mediaPlayMedia;
   protected $mediaPlayMediaType = AssistantDevicesPlatformProtoMediaPlayMediaCapability::class;
   protected $mediaPlayMediaDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaPreviousCapability
+   */
+  public $mediaPrevious;
   protected $mediaPreviousType = AssistantDevicesPlatformProtoMediaPreviousCapability::class;
   protected $mediaPreviousDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaResumeCapability
+   */
+  public $mediaResume;
   protected $mediaResumeType = AssistantDevicesPlatformProtoMediaResumeCapability::class;
   protected $mediaResumeDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaShowControlsCapability
+   */
+  public $mediaShowControls;
   protected $mediaShowControlsType = AssistantDevicesPlatformProtoMediaShowControlsCapability::class;
   protected $mediaShowControlsDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoMediaStopCapability
+   */
+  public $mediaStop;
   protected $mediaStopType = AssistantDevicesPlatformProtoMediaStopCapability::class;
   protected $mediaStopDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoProviderFulfillCapability
+   */
+  public $providerFulfill;
   protected $providerFulfillType = AssistantDevicesPlatformProtoProviderFulfillCapability::class;
   protected $providerFulfillDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoProviderOpenCapability
+   */
+  public $providerOpen;
   protected $providerOpenType = AssistantDevicesPlatformProtoProviderOpenCapability::class;
   protected $providerOpenDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoSendChatMessageCapability
+   */
+  public $sendChatMessage;
   protected $sendChatMessageType = AssistantDevicesPlatformProtoSendChatMessageCapability::class;
   protected $sendChatMessageDataType = '';
 

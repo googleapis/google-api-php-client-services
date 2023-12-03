@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class CountryCountryAttachment extends \Google\Collection
 {
   protected $collection_key = 'salientCountries';
+  /**
+   * @var CountryClickDistribution
+   */
+  public $clickDistribution;
   protected $clickDistributionType = CountryClickDistribution::class;
   protected $clickDistributionDataType = '';
   /**
@@ -70,6 +74,10 @@ class CountryCountryAttachment extends \Google\Collection
    * @var bool
    */
   public $fromWmx;
+  /**
+   * @var CountryGeoLocations
+   */
+  public $geoLocations;
   protected $geoLocationsType = CountryGeoLocations::class;
   protected $geoLocationsDataType = '';
   /**
@@ -88,14 +96,26 @@ class CountryCountryAttachment extends \Google\Collection
    * @var int[]
    */
   public $localCountryCodes;
+  /**
+   * @var CountryMetroNBFeature[]
+   */
+  public $metroIdList;
   protected $metroIdListType = CountryMetroNBFeature::class;
   protected $metroIdListDataType = 'array';
   /**
    * @var string[]
    */
   public $metroLocationId;
+  /**
+   * @var CountryMetroNBFeature[]
+   */
+  public $metroNavboost;
   protected $metroNavboostType = CountryMetroNBFeature::class;
   protected $metroNavboostDataType = 'array';
+  /**
+   * @var CountryProvinceGeotoken[]
+   */
+  public $provinceGeotokenList;
   protected $provinceGeotokenListType = CountryProvinceGeotoken::class;
   protected $provinceGeotokenListDataType = 'array';
   /**
@@ -110,8 +130,16 @@ class CountryCountryAttachment extends \Google\Collection
    * @var string[]
    */
   public $restrictCountries;
+  /**
+   * @var CountrySalientCountry[]
+   */
+  public $salientCountries;
   protected $salientCountriesType = CountrySalientCountry::class;
   protected $salientCountriesDataType = 'array';
+  /**
+   * @var QualitySalientCountriesSalientCountrySet
+   */
+  public $salientCountrySet;
   protected $salientCountrySetType = QualitySalientCountriesSalientCountrySet::class;
   protected $salientCountrySetDataType = '';
   /**

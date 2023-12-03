@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class CountryGeoLocations extends \Google\Collection
 {
   protected $collection_key = 'geoLocation';
+  /**
+   * @var CountryGeoLocation[]
+   */
+  public $geoLocation;
   protected $geoLocationType = CountryGeoLocation::class;
   protected $geoLocationDataType = 'array';
   /**

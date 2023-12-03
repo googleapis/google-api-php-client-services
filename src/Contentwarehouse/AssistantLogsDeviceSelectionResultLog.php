@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsDeviceSelectionResultLog extends \Google\Collection
 {
   protected $collection_key = 'processorInfo';
+  /**
+   * @var AssistantLogsAmbiguousTargetDeviceLog
+   */
+  public $ambiguousTargetDevices;
   protected $ambiguousTargetDevicesType = AssistantLogsAmbiguousTargetDeviceLog::class;
   protected $ambiguousTargetDevicesDataType = '';
+  /**
+   * @var AssistantLogsMediaDeviceSelectionDecisionSummary
+   */
+  public $deviceSelectionDecisionSummary;
   protected $deviceSelectionDecisionSummaryType = AssistantLogsMediaDeviceSelectionDecisionSummary::class;
   protected $deviceSelectionDecisionSummaryDataType = '';
   /**
@@ -32,18 +40,38 @@ class AssistantLogsDeviceSelectionResultLog extends \Google\Collection
    * @var string
    */
   public $finalLumosStage;
+  /**
+   * @var AssistantLogsLowConfidenceTargetDeviceLog
+   */
+  public $lowConfidenceTargetDevice;
   protected $lowConfidenceTargetDeviceType = AssistantLogsLowConfidenceTargetDeviceLog::class;
   protected $lowConfidenceTargetDeviceDataType = '';
   /**
    * @var string
    */
   public $mediaFocusSelectionErrorType;
+  /**
+   * @var AssistantLogsLumosProcessorInfo[]
+   */
+  public $processorInfo;
   protected $processorInfoType = AssistantLogsLumosProcessorInfo::class;
   protected $processorInfoDataType = 'array';
+  /**
+   * @var AssistantLogsAmbiguousTargetDeviceLog
+   */
+  public $qualifiedDevices;
   protected $qualifiedDevicesType = AssistantLogsAmbiguousTargetDeviceLog::class;
   protected $qualifiedDevicesDataType = '';
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $singleTargetDevice;
   protected $singleTargetDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $singleTargetDeviceDataType = '';
+  /**
+   * @var AssistantLogsTargetDeviceLog
+   */
+  public $targetDevice;
   protected $targetDeviceType = AssistantLogsTargetDeviceLog::class;
   protected $targetDeviceDataType = '';
 

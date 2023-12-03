@@ -19,30 +19,58 @@ namespace Google\Service\Contentwarehouse;
 
 class AttentionalEntitiesMentionProperties extends \Google\Model
 {
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
+  /**
+   * @var EventIdMessage
+   */
+  public $eventId;
   protected $eventIdType = EventIdMessage::class;
   protected $eventIdDataType = '';
   /**
    * @var float
    */
   public $factoidScore;
+  /**
+   * @var AttentionalEntitiesMentionPropertiesListEntryInfo
+   */
+  public $listEntryInfo;
   protected $listEntryInfoType = AttentionalEntitiesMentionPropertiesListEntryInfo::class;
   protected $listEntryInfoDataType = '';
   /**
    * @var string
    */
   public $recency;
+  /**
+   * @var AttentionalEntitiesSemanticRoleId
+   */
+  public $role;
   protected $roleType = AttentionalEntitiesSemanticRoleId::class;
   protected $roleDataType = '';
   /**
    * @var string
    */
   public $salience;
+  /**
+   * @var AttentionalEntitiesMentionPropertiesSource
+   */
+  public $source;
   protected $sourceType = AttentionalEntitiesMentionPropertiesSource::class;
   protected $sourceDataType = '';
+  /**
+   * @var AttentionalEntitiesSpatialProperties
+   */
+  public $spatialProperties;
   protected $spatialPropertiesType = AttentionalEntitiesSpatialProperties::class;
   protected $spatialPropertiesDataType = '';
+  /**
+   * @var AttentionalEntitiesSurfaceForm
+   */
+  public $surfaceForm;
   protected $surfaceFormType = AttentionalEntitiesSurfaceForm::class;
   protected $surfaceFormDataType = '';
   /**

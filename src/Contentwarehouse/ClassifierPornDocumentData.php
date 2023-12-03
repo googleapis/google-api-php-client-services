@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class ClassifierPornDocumentData extends \Google\Model
 {
+  /**
+   * @var ClassifierPornClassifierData
+   */
+  public $classifierdata;
   protected $classifierdataType = ClassifierPornClassifierData::class;
   protected $classifierdataDataType = '';
+  /**
+   * @var ClassifierPornSiteData
+   */
+  public $sitedata;
   protected $sitedataType = ClassifierPornSiteData::class;
   protected $sitedataDataType = '';
 

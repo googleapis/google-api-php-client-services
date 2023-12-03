@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collection
 {
   protected $collection_key = 'systemContactGroupId';
+  /**
+   * @var AssistantLogsCommunicationGoogleAccountProvenance
+   */
+  public $accountProvenance;
   protected $accountProvenanceType = AssistantLogsCommunicationGoogleAccountProvenance::class;
   protected $accountProvenanceDataType = '';
   /**
@@ -38,6 +42,10 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
    * @var int
    */
   public $emailIdCount;
+  /**
+   * @var AssistantLogsCommunicationFuzzyNgramMatchLog[]
+   */
+  public $fuzzyNgramMatch;
   protected $fuzzyNgramMatchType = AssistantLogsCommunicationFuzzyNgramMatchLog::class;
   protected $fuzzyNgramMatchDataType = 'array';
   /**
@@ -76,6 +84,10 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
    * @var string[]
    */
   public $matchedStarlightLookupName;
+  /**
+   * @var AssistantLogsCommunicationPersonMetadataLog
+   */
+  public $metadata;
   protected $metadataType = AssistantLogsCommunicationPersonMetadataLog::class;
   protected $metadataDataType = '';
   /**
@@ -86,6 +98,10 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
    * @var string
    */
   public $originalQueryName;
+  /**
+   * @var AssistantLogsCommunicationPhoneLog[]
+   */
+  public $phone;
   protected $phoneType = AssistantLogsCommunicationPhoneLog::class;
   protected $phoneDataType = 'array';
   /**
@@ -108,8 +124,16 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
    * @var int
    */
   public $relationshipMemoryCount;
+  /**
+   * @var AssistantLogsCommunicationPhoneLog
+   */
+  public $selectedPhone;
   protected $selectedPhoneType = AssistantLogsCommunicationPhoneLog::class;
   protected $selectedPhoneDataType = '';
+  /**
+   * @var MajelContactInformationShortcutInformation
+   */
+  public $shortcutContactInfo;
   protected $shortcutContactInfoType = MajelContactInformationShortcutInformation::class;
   protected $shortcutContactInfoDataType = '';
   /**

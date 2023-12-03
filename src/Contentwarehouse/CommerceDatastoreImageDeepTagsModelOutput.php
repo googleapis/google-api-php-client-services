@@ -20,22 +20,58 @@ namespace Google\Service\Contentwarehouse;
 class CommerceDatastoreImageDeepTagsModelOutput extends \Google\Collection
 {
   protected $collection_key = 'textOverlay';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $backgroundType;
   protected $backgroundTypeType = CommerceDatastoreDeepTag::class;
   protected $backgroundTypeDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $collage;
   protected $collageType = CommerceDatastoreDeepTag::class;
   protected $collageDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $cropping;
   protected $croppingType = CommerceDatastoreDeepTag::class;
   protected $croppingDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $modelType;
   protected $modelTypeType = CommerceDatastoreDeepTag::class;
   protected $modelTypeDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $nfs;
   protected $nfsType = CommerceDatastoreDeepTag::class;
   protected $nfsDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $objectCount;
   protected $objectCountType = CommerceDatastoreDeepTag::class;
   protected $objectCountDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $overlay;
   protected $overlayType = CommerceDatastoreDeepTag::class;
   protected $overlayDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag
+   */
+  public $selfie;
   protected $selfieType = CommerceDatastoreDeepTag::class;
   protected $selfieDataType = '';
+  /**
+   * @var CommerceDatastoreDeepTag[]
+   */
+  public $textOverlay;
   protected $textOverlayType = CommerceDatastoreDeepTag::class;
   protected $textOverlayDataType = 'array';
   /**

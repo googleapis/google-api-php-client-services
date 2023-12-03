@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantDevicesPlatformProtoIntent extends \Google\Collection
 {
   protected $collection_key = 'triggerConditions';
+  /**
+   * @var AssistantDevicesPlatformProtoArgSpec[]
+   */
+  public $argSpecs;
   protected $argSpecsType = AssistantDevicesPlatformProtoArgSpec::class;
   protected $argSpecsDataType = 'map';
+  /**
+   * @var AssistantDevicesPlatformProtoExecutionConfig
+   */
+  public $executionConfig;
   protected $executionConfigType = AssistantDevicesPlatformProtoExecutionConfig::class;
   protected $executionConfigDataType = '';
   /**
@@ -32,8 +40,16 @@ class AssistantDevicesPlatformProtoIntent extends \Google\Collection
    * @var string[]
    */
   public $providedDataNames;
+  /**
+   * @var AssistantDevicesPlatformProtoSecurityConfig
+   */
+  public $securityConfig;
   protected $securityConfigType = AssistantDevicesPlatformProtoSecurityConfig::class;
   protected $securityConfigDataType = '';
+  /**
+   * @var AssistantDevicesPlatformProtoTriggerCondition[]
+   */
+  public $triggerConditions;
   protected $triggerConditionsType = AssistantDevicesPlatformProtoTriggerCondition::class;
   protected $triggerConditionsDataType = 'array';
 

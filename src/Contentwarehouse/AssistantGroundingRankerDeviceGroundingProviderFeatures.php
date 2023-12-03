@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantGroundingRankerDeviceGroundingProviderFeatures extends \Google\Model
 {
+  /**
+   * @var AssistantApiCoreTypesGovernedDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesGovernedDeviceId::class;
   protected $deviceIdDataType = '';
+  /**
+   * @var AssistantGroundingRankerDeviceTargetingFeatures
+   */
+  public $deviceTargetingFeatures;
   protected $deviceTargetingFeaturesType = AssistantGroundingRankerDeviceTargetingFeatures::class;
   protected $deviceTargetingFeaturesDataType = '';
+  /**
+   * @var AssistantGroundingRankerDeviceTargetingLabels
+   */
+  public $deviceTargetingLabels;
   protected $deviceTargetingLabelsType = AssistantGroundingRankerDeviceTargetingLabels::class;
   protected $deviceTargetingLabelsDataType = '';
+  /**
+   * @var AssistantApiCoreTypesGovernedSurfaceIdentity
+   */
+  public $surfaceIdentity;
   protected $surfaceIdentityType = AssistantApiCoreTypesGovernedSurfaceIdentity::class;
   protected $surfaceIdentityDataType = '';
 

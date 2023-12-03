@@ -28,12 +28,20 @@ class DocProperties extends \Google\Collection
    * @var bool
    */
   public $badTitle;
+  /**
+   * @var DocPropertiesBadTitleInfo[]
+   */
+  public $badtitleinfo;
   protected $badtitleinfoType = DocPropertiesBadTitleInfo::class;
   protected $badtitleinfoDataType = 'array';
   /**
    * @var int[]
    */
   public $languages;
+  /**
+   * @var SnippetsLeadingtextLeadingTextInfo
+   */
+  public $leadingtext;
   protected $leadingtextType = SnippetsLeadingtextLeadingTextInfo::class;
   protected $leadingtextDataType = '';
   /**

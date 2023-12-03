@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantGroundingRankerLaaFeaturesProvider extends \Google\Model
 {
+  /**
+   * @var AssistantGroundingRankerAssistantInteractionFeatures
+   */
+  public $assistantInteractionFeatures;
   protected $assistantInteractionFeaturesType = AssistantGroundingRankerAssistantInteractionFeatures::class;
   protected $assistantInteractionFeaturesDataType = '';
 

@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class CloudAiPlatformTenantresourceTenantProjectConfig extends \Google\Collection
 {
   protected $collection_key = 'services';
+  /**
+   * @var GoogleApiServiceconsumermanagementV1BillingConfig
+   */
+  public $billingConfig;
   protected $billingConfigType = GoogleApiServiceconsumermanagementV1BillingConfig::class;
   protected $billingConfigDataType = '';
   /**
    * @var string
    */
   public $folder;
+  /**
+   * @var GoogleApiServiceconsumermanagementV1PolicyBinding[]
+   */
+  public $policyBindings;
   protected $policyBindingsType = GoogleApiServiceconsumermanagementV1PolicyBinding::class;
   protected $policyBindingsDataType = 'array';
   /**

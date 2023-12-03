@@ -23,6 +23,10 @@ class AssistantRemindersAttachmentLink extends \Google\Model
    * @var string
    */
   public $linkUrl;
+  /**
+   * @var AssistantRemindersNlgTemplateKey
+   */
+  public $notificationText;
   protected $notificationTextType = AssistantRemindersNlgTemplateKey::class;
   protected $notificationTextDataType = '';
 

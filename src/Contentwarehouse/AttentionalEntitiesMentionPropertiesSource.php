@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class AttentionalEntitiesMentionPropertiesSource extends \Google\Model
 {
+  /**
+   * @var AttentionalEntitiesMentionPropertiesSourceClient
+   */
+  public $client;
   protected $clientType = AttentionalEntitiesMentionPropertiesSourceClient::class;
   protected $clientDataType = '';
+  /**
+   * @var AttentionalEntitiesMentionPropertiesSourceSystem
+   */
+  public $system;
   protected $systemType = AttentionalEntitiesMentionPropertiesSourceSystem::class;
   protected $systemDataType = '';
+  /**
+   * @var AttentionalEntitiesMentionPropertiesSourceUser
+   */
+  public $user;
   protected $userType = AttentionalEntitiesMentionPropertiesSourceUser::class;
   protected $userDataType = '';
 

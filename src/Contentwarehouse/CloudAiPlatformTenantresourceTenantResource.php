@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class CloudAiPlatformTenantresourceTenantResource extends \Google\Collection
 {
   protected $collection_key = 'tenantProjectResources';
+  /**
+   * @var CloudAiPlatformTenantresourceServiceAccountIdentity[]
+   */
+  public $p4ServiceAccounts;
   protected $p4ServiceAccountsType = CloudAiPlatformTenantresourceServiceAccountIdentity::class;
   protected $p4ServiceAccountsDataType = 'array';
+  /**
+   * @var CloudAiPlatformTenantresourceTenantProjectResource[]
+   */
+  public $tenantProjectResources;
   protected $tenantProjectResourcesType = CloudAiPlatformTenantresourceTenantProjectResource::class;
   protected $tenantProjectResourcesDataType = 'array';
 

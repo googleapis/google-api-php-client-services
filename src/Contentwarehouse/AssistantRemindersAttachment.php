@@ -24,6 +24,10 @@ class AssistantRemindersAttachment extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var AssistantRemindersAttachmentLink
+   */
+  public $link;
   protected $linkType = AssistantRemindersAttachmentLink::class;
   protected $linkDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantVerticalsHomeautomationProtoAttribute extends \Google\Model
 {
+  /**
+   * @var AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutine
+   */
+  public $structureBasedRoutine;
   protected $structureBasedRoutineType = AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutine::class;
   protected $structureBasedRoutineDataType = '';
 

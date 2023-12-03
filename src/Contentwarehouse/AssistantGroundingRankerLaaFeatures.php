@@ -20,14 +20,34 @@ namespace Google\Service\Contentwarehouse;
 class AssistantGroundingRankerLaaFeatures extends \Google\Collection
 {
   protected $collection_key = 'features';
+  /**
+   * @var AssistantGroundingRankerLaaFeaturesBindingSet
+   */
+  public $bindingSet;
   protected $bindingSetType = AssistantGroundingRankerLaaFeaturesBindingSet::class;
   protected $bindingSetDataType = '';
+  /**
+   * @var AssistantGroundingRankerLaaFeaturesCommunicationEndpoint
+   */
+  public $communicationEndpoint;
   protected $communicationEndpointType = AssistantGroundingRankerLaaFeaturesCommunicationEndpoint::class;
   protected $communicationEndpointDataType = '';
+  /**
+   * @var AssistantGroundingRankerLaaFeaturesContact
+   */
+  public $contact;
   protected $contactType = AssistantGroundingRankerLaaFeaturesContact::class;
   protected $contactDataType = '';
+  /**
+   * @var AssistantGroundingRankerLaaFeature[]
+   */
+  public $features;
   protected $featuresType = AssistantGroundingRankerLaaFeature::class;
   protected $featuresDataType = 'array';
+  /**
+   * @var AssistantGroundingRankerLaaFeaturesProvider
+   */
+  public $provider;
   protected $providerType = AssistantGroundingRankerLaaFeaturesProvider::class;
   protected $providerDataType = '';
 

@@ -24,6 +24,10 @@ class BusinessHours extends \Google\Collection
    * @var int
    */
   public $dayopen;
+  /**
+   * @var BusinessHoursInterval[]
+   */
+  public $interval;
   protected $intervalType = BusinessHoursInterval::class;
   protected $intervalDataType = 'array';
 

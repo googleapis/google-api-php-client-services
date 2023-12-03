@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsDefaultDevicesLog extends \Google\Collection
 {
   protected $collection_key = 'nearbyDefaultDevices';
+  /**
+   * @var AssistantLogsDefaultDeviceLog
+   */
+  public $localDefaultDevices;
   protected $localDefaultDevicesType = AssistantLogsDefaultDeviceLog::class;
   protected $localDefaultDevicesDataType = '';
+  /**
+   * @var AssistantLogsDefaultDeviceLog[]
+   */
+  public $nearbyDefaultDevices;
   protected $nearbyDefaultDevicesType = AssistantLogsDefaultDeviceLog::class;
   protected $nearbyDefaultDevicesDataType = 'array';
 

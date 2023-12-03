@@ -48,12 +48,20 @@ class ClassifierPornSiteData extends \Google\Collection
    * @var float
    */
   public $siteSoftpornRatio;
+  /**
+   * @var ClassifierPornSiteDataVersionedScore[]
+   */
+  public $versionedscore;
   protected $versionedscoreType = ClassifierPornSiteDataVersionedScore::class;
   protected $versionedscoreDataType = 'array';
   /**
    * @var float
    */
   public $violenceScore;
+  /**
+   * @var ClassifierPornSiteViolenceStats
+   */
+  public $violenceStats;
   protected $violenceStatsType = ClassifierPornSiteViolenceStats::class;
   protected $violenceStatsDataType = '';
 

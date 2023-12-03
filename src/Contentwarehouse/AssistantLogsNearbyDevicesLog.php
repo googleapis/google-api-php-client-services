@@ -44,8 +44,16 @@ class AssistantLogsNearbyDevicesLog extends \Google\Collection
    * @var int
    */
   public $eliminatedByUnregisteredDevice;
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $localDevice;
   protected $localDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $localDeviceDataType = '';
+  /**
+   * @var AssistantLogsDeviceInfoLog[]
+   */
+  public $nearbyDevices;
   protected $nearbyDevicesType = AssistantLogsDeviceInfoLog::class;
   protected $nearbyDevicesDataType = 'array';
   /**

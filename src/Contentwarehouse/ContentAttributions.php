@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class ContentAttributions extends \Google\Collection
 {
   protected $collection_key = 'onlineOutgoing';
+  /**
+   * @var ContentAttributionsOutgoingAttribution[]
+   */
+  public $freshdocsOutgoing;
   protected $freshdocsOutgoingType = ContentAttributionsOutgoingAttribution::class;
   protected $freshdocsOutgoingDataType = 'array';
+  /**
+   * @var ContentAttributionsOutgoingAttribution[]
+   */
+  public $offlineOutgoing;
   protected $offlineOutgoingType = ContentAttributionsOutgoingAttribution::class;
   protected $offlineOutgoingDataType = 'array';
+  /**
+   * @var ContentAttributionsOutgoingAttribution[]
+   */
+  public $onlineOutgoing;
   protected $onlineOutgoingType = ContentAttributionsOutgoingAttribution::class;
   protected $onlineOutgoingDataType = 'array';
 

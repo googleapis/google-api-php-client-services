@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class CompositeDocLocalizedVariations extends \Google\Collection
 {
   protected $collection_key = 'webmasterAlternateNames';
+  /**
+   * @var IndexingDupsComputedLocalizedAlternateNamesLocaleEntry[]
+   */
+  public $dupsComputedAlternateNames;
   protected $dupsComputedAlternateNamesType = IndexingDupsComputedLocalizedAlternateNamesLocaleEntry::class;
   protected $dupsComputedAlternateNamesDataType = 'array';
+  /**
+   * @var IndexingConverterLocalizedAlternateName[]
+   */
+  public $webmasterAlternateNames;
   protected $webmasterAlternateNamesType = IndexingConverterLocalizedAlternateName::class;
   protected $webmasterAlternateNamesDataType = 'array';
 

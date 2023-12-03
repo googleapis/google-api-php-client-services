@@ -19,16 +19,40 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantGroundingRankerGroundingProviderFeatures extends \Google\Model
 {
+  /**
+   * @var AssistantGroundingRankerContactGroundingProviderFeatures
+   */
+  public $contactGroundingProviderFeatures;
   protected $contactGroundingProviderFeaturesType = AssistantGroundingRankerContactGroundingProviderFeatures::class;
   protected $contactGroundingProviderFeaturesDataType = '';
+  /**
+   * @var AssistantGroundingRankerDeviceGroundingProviderFeatures
+   */
+  public $deviceGroundingProviderFeatures;
   protected $deviceGroundingProviderFeaturesType = AssistantGroundingRankerDeviceGroundingProviderFeatures::class;
   protected $deviceGroundingProviderFeaturesDataType = '';
+  /**
+   * @var AssistantGroundingRankerEndpointGroundingProviderFeatures
+   */
+  public $endpointGroundingProviderFeatures;
   protected $endpointGroundingProviderFeaturesType = AssistantGroundingRankerEndpointGroundingProviderFeatures::class;
   protected $endpointGroundingProviderFeaturesDataType = '';
+  /**
+   * @var AssistantGroundingRankerMediaGroundingProviderFeatures
+   */
+  public $mediaGroundingProviderFeatures;
   protected $mediaGroundingProviderFeaturesType = AssistantGroundingRankerMediaGroundingProviderFeatures::class;
   protected $mediaGroundingProviderFeaturesDataType = '';
+  /**
+   * @var AssistantGroundingRankerPodcastGroundingProviderFeatures
+   */
+  public $podcastGroundingProviderFeatures;
   protected $podcastGroundingProviderFeaturesType = AssistantGroundingRankerPodcastGroundingProviderFeatures::class;
   protected $podcastGroundingProviderFeaturesDataType = '';
+  /**
+   * @var AssistantGroundingRankerProviderGroundingProviderFeatures
+   */
+  public $providerGroundingProviderFeatures;
   protected $providerGroundingProviderFeaturesType = AssistantGroundingRankerProviderGroundingProviderFeatures::class;
   protected $providerGroundingProviderFeaturesDataType = '';
 

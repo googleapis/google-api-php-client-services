@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsTargetDeviceLog extends \Google\Collection
 {
   protected $collection_key = 'devices';
+  /**
+   * @var AssistantLogsDeviceInfoLog[]
+   */
+  public $devices;
   protected $devicesType = AssistantLogsDeviceInfoLog::class;
   protected $devicesDataType = 'array';
   /**

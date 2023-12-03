@@ -44,6 +44,10 @@ class CrawlerChangerateUrlChange extends \Google\Model
    * @var bool
    */
   public $onDomainLinksCountChange;
+  /**
+   * @var IndexingConverterShingleFingerprint
+   */
+  public $shingleSimhash;
   protected $shingleSimhashType = IndexingConverterShingleFingerprint::class;
   protected $shingleSimhashDataType = '';
   /**

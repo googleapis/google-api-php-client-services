@@ -26,14 +26,26 @@ class CompositeDocIncludedContent extends \Google\Model
    * @var string
    */
   public $sourceTypeBitfield;
+  /**
+   * @var GDocumentBase
+   */
+  public $includedDoc;
   protected $includedDocType = GDocumentBase::class;
   protected $includedDocDataType = '';
   /**
    * @var string
    */
   public $linkUrl;
+  /**
+   * @var PerDocData
+   */
+  public $perDocData;
   protected $perDocDataType = PerDocData::class;
   protected $perDocDataDataType = '';
+  /**
+   * @var DocProperties
+   */
+  public $properties;
   protected $propertiesType = DocProperties::class;
   protected $propertiesDataType = '';
 

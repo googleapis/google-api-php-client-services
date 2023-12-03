@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class CrowdingPerDocData extends \Google\Collection
 {
   protected $collection_key = 'newscluster';
+  /**
+   * @var CrowdingPerDocDataNewsCluster[]
+   */
+  public $newscluster;
   protected $newsclusterType = CrowdingPerDocDataNewsCluster::class;
   protected $newsclusterDataType = 'array';
 

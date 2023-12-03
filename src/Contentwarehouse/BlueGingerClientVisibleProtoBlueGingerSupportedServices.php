@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class BlueGingerClientVisibleProtoBlueGingerSupportedServices extends \Google\Collection
 {
   protected $collection_key = 'modules';
+  /**
+   * @var BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule[]
+   */
+  public $modules;
   protected $modulesType = BlueGingerClientVisibleProtoBlueGingerSupportedServicesBlueGingerModule::class;
   protected $modulesDataType = 'array';
 

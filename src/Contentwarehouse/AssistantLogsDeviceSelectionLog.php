@@ -20,38 +20,90 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsDeviceSelectionLog extends \Google\Collection
 {
   protected $collection_key = 'testCodes';
+  /**
+   * @var AssistantLogsDefaultDeviceLog[]
+   */
+  public $allDefaultDevices;
   protected $allDefaultDevicesType = AssistantLogsDefaultDeviceLog::class;
   protected $allDefaultDevicesDataType = 'array';
+  /**
+   * @var AssistantLogsAllMediaStreamLog
+   */
+  public $allMediaStreamLog;
   protected $allMediaStreamLogType = AssistantLogsAllMediaStreamLog::class;
   protected $allMediaStreamLogDataType = '';
+  /**
+   * @var AssistantLogsDeviceSelectionLog
+   */
+  public $counterfactualDeviceSelectionLog;
   protected $counterfactualDeviceSelectionLogType = AssistantLogsDeviceSelectionLog::class;
   protected $counterfactualDeviceSelectionLogDataType = '';
+  /**
+   * @var AssistantLogsDefaultDeviceLog
+   */
+  public $defaultDevices;
   protected $defaultDevicesType = AssistantLogsDefaultDeviceLog::class;
   protected $defaultDevicesDataType = '';
+  /**
+   * @var AssistantLogsDefaultDevicesLog
+   */
+  public $defaultDevicesLog;
   protected $defaultDevicesLogType = AssistantLogsDefaultDevicesLog::class;
   protected $defaultDevicesLogDataType = '';
   /**
    * @var string[]
    */
   public $devicesStr;
+  /**
+   * @var AssistantLogsInputErrorLog[]
+   */
+  public $inputErrorLog;
   protected $inputErrorLogType = AssistantLogsInputErrorLog::class;
   protected $inputErrorLogDataType = 'array';
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $localDevice;
   protected $localDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $localDeviceDataType = '';
   /**
    * @var string
    */
   public $logDataSource;
+  /**
+   * @var AssistantLogsMediaFocusInfoLog
+   */
+  public $mediaFocus;
   protected $mediaFocusType = AssistantLogsMediaFocusInfoLog::class;
   protected $mediaFocusDataType = '';
+  /**
+   * @var AssistantLogsMediaFocusesLog
+   */
+  public $mediaFocusesLog;
   protected $mediaFocusesLogType = AssistantLogsMediaFocusesLog::class;
   protected $mediaFocusesLogDataType = '';
+  /**
+   * @var AssistantLogsNearbyDevicesLog
+   */
+  public $nearbyDevicesLog;
   protected $nearbyDevicesLogType = AssistantLogsNearbyDevicesLog::class;
   protected $nearbyDevicesLogDataType = '';
+  /**
+   * @var AssistantLogsQueryAnnotationLog
+   */
+  public $queryAnnotation;
   protected $queryAnnotationType = AssistantLogsQueryAnnotationLog::class;
   protected $queryAnnotationDataType = '';
+  /**
+   * @var AssistantLogsDeviceSelectionResultLog
+   */
+  public $selectionResult;
   protected $selectionResultType = AssistantLogsDeviceSelectionResultLog::class;
   protected $selectionResultDataType = '';
+  /**
+   * @var AssistantLogsDeviceTargetingTestCode[]
+   */
+  public $testCodes;
   protected $testCodesType = AssistantLogsDeviceTargetingTestCode::class;
   protected $testCodesDataType = 'array';
 

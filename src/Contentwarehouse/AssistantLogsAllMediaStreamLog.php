@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsAllMediaStreamLog extends \Google\Collection
 {
   protected $collection_key = 'streams';
+  /**
+   * @var AssistantLogsMediaStreamLog[]
+   */
+  public $streams;
   protected $streamsType = AssistantLogsMediaStreamLog::class;
   protected $streamsDataType = 'array';
+  /**
+   * @var AssistantLogsMediaStreamLog
+   */
+  public $targetStream;
   protected $targetStreamType = AssistantLogsMediaStreamLog::class;
   protected $targetStreamDataType = '';
 

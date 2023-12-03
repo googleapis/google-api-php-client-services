@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class CopleySourceTypeList extends \Google\Collection
 {
   protected $collection_key = 'sourceTypeMetadata';
+  /**
+   * @var CopleySourceTypeMetadata[]
+   */
+  public $sourceTypeMetadata;
   protected $sourceTypeMetadataType = CopleySourceTypeMetadata::class;
   protected $sourceTypeMetadataDataType = 'array';
 

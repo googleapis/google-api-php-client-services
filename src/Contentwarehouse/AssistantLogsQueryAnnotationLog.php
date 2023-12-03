@@ -20,16 +20,40 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsQueryAnnotationLog extends \Google\Collection
 {
   protected $collection_key = 'structureAnnotations';
+  /**
+   * @var AssistantLogsDeviceAnnotationLog
+   */
+  public $deviceAnnotation;
   protected $deviceAnnotationType = AssistantLogsDeviceAnnotationLog::class;
   protected $deviceAnnotationDataType = '';
+  /**
+   * @var AssistantLogsDeviceAnnotationLog[]
+   */
+  public $deviceAnnotations;
   protected $deviceAnnotationsType = AssistantLogsDeviceAnnotationLog::class;
   protected $deviceAnnotationsDataType = 'array';
+  /**
+   * @var AssistantLogsProviderAnnotationLog
+   */
+  public $providerAnnotation;
   protected $providerAnnotationType = AssistantLogsProviderAnnotationLog::class;
   protected $providerAnnotationDataType = '';
+  /**
+   * @var AssistantLogsRoomAnnotationLog
+   */
+  public $roomAnnotation;
   protected $roomAnnotationType = AssistantLogsRoomAnnotationLog::class;
   protected $roomAnnotationDataType = '';
+  /**
+   * @var AssistantLogsRoomAnnotationLog[]
+   */
+  public $roomAnnotations;
   protected $roomAnnotationsType = AssistantLogsRoomAnnotationLog::class;
   protected $roomAnnotationsDataType = 'array';
+  /**
+   * @var AssistantLogsStructureAnnotationLog[]
+   */
+  public $structureAnnotations;
   protected $structureAnnotationsType = AssistantLogsStructureAnnotationLog::class;
   protected $structureAnnotationsDataType = 'array';
 

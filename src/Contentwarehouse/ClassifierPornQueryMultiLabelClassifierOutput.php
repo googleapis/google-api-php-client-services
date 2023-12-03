@@ -19,22 +19,58 @@ namespace Google\Service\Contentwarehouse;
 
 class ClassifierPornQueryMultiLabelClassifierOutput extends \Google\Model
 {
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $csai;
   protected $csaiType = ClassifierPornQueryClassifierOutput::class;
   protected $csaiDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $fringe;
   protected $fringeType = ClassifierPornQueryClassifierOutput::class;
   protected $fringeDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $medical;
   protected $medicalType = ClassifierPornQueryClassifierOutput::class;
   protected $medicalDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $minor;
   protected $minorType = ClassifierPornQueryClassifierOutput::class;
   protected $minorDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $offensive;
   protected $offensiveType = ClassifierPornQueryClassifierOutput::class;
   protected $offensiveDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $porn;
   protected $pornType = ClassifierPornQueryClassifierOutput::class;
   protected $pornDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $spoof;
   protected $spoofType = ClassifierPornQueryClassifierOutput::class;
   protected $spoofDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $violence;
   protected $violenceType = ClassifierPornQueryClassifierOutput::class;
   protected $violenceDataType = '';
+  /**
+   * @var ClassifierPornQueryClassifierOutput
+   */
+  public $vulgar;
   protected $vulgarType = ClassifierPornQueryClassifierOutput::class;
   protected $vulgarDataType = '';
 

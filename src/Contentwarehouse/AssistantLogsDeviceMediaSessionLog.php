@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsDeviceMediaSessionLog extends \Google\Collection
 {
   protected $collection_key = 'supportedTransportControl';
+  /**
+   * @var AssistantApiCoreTypesDeviceId
+   */
+  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**

@@ -20,18 +20,38 @@ namespace Google\Service\Contentwarehouse;
 class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collection
 {
   protected $collection_key = 'tenantServiceAccounts';
+  /**
+   * @var CloudAiPlatformTenantresourceCloudSqlInstanceConfig[]
+   */
+  public $cloudSqlInstances;
   protected $cloudSqlInstancesType = CloudAiPlatformTenantresourceCloudSqlInstanceConfig::class;
   protected $cloudSqlInstancesDataType = 'array';
+  /**
+   * @var CloudAiPlatformTenantresourceGcsBucketConfig[]
+   */
+  public $gcsBuckets;
   protected $gcsBucketsType = CloudAiPlatformTenantresourceGcsBucketConfig::class;
   protected $gcsBucketsDataType = 'array';
+  /**
+   * @var CloudAiPlatformTenantresourceIamPolicyBinding[]
+   */
+  public $iamPolicyBindings;
   protected $iamPolicyBindingsType = CloudAiPlatformTenantresourceIamPolicyBinding::class;
   protected $iamPolicyBindingsDataType = 'array';
+  /**
+   * @var CloudAiPlatformTenantresourceInfraSpannerConfig[]
+   */
+  public $infraSpannerConfigs;
   protected $infraSpannerConfigsType = CloudAiPlatformTenantresourceInfraSpannerConfig::class;
   protected $infraSpannerConfigsDataType = 'array';
   /**
    * @var string
    */
   public $tag;
+  /**
+   * @var CloudAiPlatformTenantresourceTenantProjectConfig
+   */
+  public $tenantProjectConfig;
   protected $tenantProjectConfigType = CloudAiPlatformTenantresourceTenantProjectConfig::class;
   protected $tenantProjectConfigDataType = '';
   /**
@@ -42,6 +62,10 @@ class CloudAiPlatformTenantresourceTenantProjectResource extends \Google\Collect
    * @var string
    */
   public $tenantProjectNumber;
+  /**
+   * @var CloudAiPlatformTenantresourceTenantServiceAccountIdentity[]
+   */
+  public $tenantServiceAccounts;
   protected $tenantServiceAccountsType = CloudAiPlatformTenantresourceTenantServiceAccountIdentity::class;
   protected $tenantServiceAccountsDataType = 'array';
 

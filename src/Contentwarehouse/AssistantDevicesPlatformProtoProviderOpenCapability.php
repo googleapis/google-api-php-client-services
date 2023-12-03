@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantDevicesPlatformProtoProviderOpenCapability extends \Google\Model
 {
+  /**
+   * @var AssistantApiClientOpPropertiesProviderOpenClientOpProperty
+   */
+  public $clientOpProperty;
   protected $clientOpPropertyType = AssistantApiClientOpPropertiesProviderOpenClientOpProperty::class;
   protected $clientOpPropertyDataType = '';
 

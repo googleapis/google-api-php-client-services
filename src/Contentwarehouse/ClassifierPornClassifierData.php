@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class ClassifierPornClassifierData extends \Google\Collection
 {
   protected $collection_key = 'classification';
+  /**
+   * @var ClassifierPornClassifierDataClassification[]
+   */
+  public $classification;
   protected $classificationType = ClassifierPornClassifierDataClassification::class;
   protected $classificationDataType = 'array';
   /**

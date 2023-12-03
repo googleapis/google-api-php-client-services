@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantDevicesPlatformProtoTriggerCondition extends \Google\Model
 {
+  /**
+   * @var AssistantDevicesPlatformProtoArgSpec[]
+   */
+  public $requiredStateValues;
   protected $requiredStateValuesType = AssistantDevicesPlatformProtoArgSpec::class;
   protected $requiredStateValuesDataType = 'map';
   /**

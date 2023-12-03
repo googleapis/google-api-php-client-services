@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class CompositeDocLiveExperimentInfo extends \Google\Collection
 {
   protected $collection_key = 'perLiveExperimentInfo';
+  /**
+   * @var CompositeDocLiveExperimentInfoPerLiveExperimentInfo[]
+   */
+  public $perLiveExperimentInfo;
   protected $perLiveExperimentInfoType = CompositeDocLiveExperimentInfoPerLiveExperimentInfo::class;
   protected $perLiveExperimentInfoDataType = 'array';
 

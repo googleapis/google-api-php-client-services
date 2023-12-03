@@ -43,6 +43,10 @@ class AssistantGroundingProviderProviderSignalResult extends \Google\Model
    * @var bool
    */
   public $isQueryRestrictedProvider;
+  /**
+   * @var AssistantContextProviderSelectionResult
+   */
+  public $providerSelectionResult;
   protected $providerSelectionResultType = AssistantContextProviderSelectionResult::class;
   protected $providerSelectionResultDataType = '';
   /**

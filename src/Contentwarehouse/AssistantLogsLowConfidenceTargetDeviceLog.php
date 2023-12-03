@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantLogsLowConfidenceTargetDeviceLog extends \Google\Model
 {
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $fallbackDeviceLog;
   protected $fallbackDeviceLogType = AssistantLogsDeviceInfoLog::class;
   protected $fallbackDeviceLogDataType = '';
+  /**
+   * @var AssistantLogsDeviceInfoLog
+   */
+  public $lowConfTargetDeviceLog;
   protected $lowConfTargetDeviceLogType = AssistantLogsDeviceInfoLog::class;
   protected $lowConfTargetDeviceLogDataType = '';
 

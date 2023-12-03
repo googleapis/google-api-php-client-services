@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class AssistantLogsCommunicationPersonMetadataLog extends \Google\Collection
 {
   protected $collection_key = 'deviceContactInfo';
+  /**
+   * @var AssistantLogsCommunicationDeviceContactInfoLog[]
+   */
+  public $deviceContactInfo;
   protected $deviceContactInfoType = AssistantLogsCommunicationDeviceContactInfoLog::class;
   protected $deviceContactInfoDataType = 'array';
 

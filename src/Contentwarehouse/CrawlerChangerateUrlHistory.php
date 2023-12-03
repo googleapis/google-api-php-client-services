@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class CrawlerChangerateUrlHistory extends \Google\Collection
 {
   protected $collection_key = 'change';
+  /**
+   * @var CrawlerChangerateUrlChange[]
+   */
+  public $change;
   protected $changeType = CrawlerChangerateUrlChange::class;
   protected $changeDataType = 'array';
+  /**
+   * @var CrawlerChangerateUrlVersion
+   */
+  public $latestVersion;
   protected $latestVersionType = CrawlerChangerateUrlVersion::class;
   protected $latestVersionDataType = '';
   /**
