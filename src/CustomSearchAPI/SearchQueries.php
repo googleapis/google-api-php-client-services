@@ -20,10 +20,22 @@ namespace Google\Service\CustomSearchAPI;
 class SearchQueries extends \Google\Collection
 {
   protected $collection_key = 'request';
+  /**
+   * @var SearchQueriesNextPage[]
+   */
+  public $nextPage;
   protected $nextPageType = SearchQueriesNextPage::class;
   protected $nextPageDataType = 'array';
+  /**
+   * @var SearchQueriesPreviousPage[]
+   */
+  public $previousPage;
   protected $previousPageType = SearchQueriesPreviousPage::class;
   protected $previousPageDataType = 'array';
+  /**
+   * @var SearchQueriesRequest[]
+   */
+  public $request;
   protected $requestType = SearchQueriesRequest::class;
   protected $requestDataType = 'array';
 

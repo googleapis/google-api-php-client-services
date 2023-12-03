@@ -24,20 +24,44 @@ class Search extends \Google\Collection
    * @var array[]
    */
   public $context;
+  /**
+   * @var Result[]
+   */
+  public $items;
   protected $itemsType = Result::class;
   protected $itemsDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Promotion[]
+   */
+  public $promotions;
   protected $promotionsType = Promotion::class;
   protected $promotionsDataType = 'array';
+  /**
+   * @var SearchQueries
+   */
+  public $queries;
   protected $queriesType = SearchQueries::class;
   protected $queriesDataType = '';
+  /**
+   * @var SearchSearchInformation
+   */
+  public $searchInformation;
   protected $searchInformationType = SearchSearchInformation::class;
   protected $searchInformationDataType = '';
+  /**
+   * @var SearchSpelling
+   */
+  public $spelling;
   protected $spellingType = SearchSpelling::class;
   protected $spellingDataType = '';
+  /**
+   * @var SearchUrl
+   */
+  public $url;
   protected $urlType = SearchUrl::class;
   protected $urlDataType = '';
 
