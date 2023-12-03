@@ -20,22 +20,42 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1RunPipelineMetadata extends \Google\Collection
 {
   protected $collection_key = 'individualDocumentStatuses';
+  /**
+   * @var GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata
+   */
+  public $exportToCdwPipelineMetadata;
   protected $exportToCdwPipelineMetadataType = GoogleCloudContentwarehouseV1RunPipelineMetadataExportToCdwPipelineMetadata::class;
   protected $exportToCdwPipelineMetadataDataType = '';
   /**
    * @var int
    */
   public $failedFileCount;
+  /**
+   * @var GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata
+   */
+  public $gcsIngestPipelineMetadata;
   protected $gcsIngestPipelineMetadataType = GoogleCloudContentwarehouseV1RunPipelineMetadataGcsIngestPipelineMetadata::class;
   protected $gcsIngestPipelineMetadataDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus[]
+   */
+  public $individualDocumentStatuses;
   protected $individualDocumentStatusesType = GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus::class;
   protected $individualDocumentStatusesDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata
+   */
+  public $processWithDocAiPipelineMetadata;
   protected $processWithDocAiPipelineMetadataType = GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMetadata::class;
   protected $processWithDocAiPipelineMetadataDataType = '';
   /**
    * @var int
    */
   public $totalFileCount;
+  /**
+   * @var GoogleCloudContentwarehouseV1UserInfo
+   */
+  public $userInfo;
   protected $userInfoType = GoogleCloudContentwarehouseV1UserInfo::class;
   protected $userInfoDataType = '';
 

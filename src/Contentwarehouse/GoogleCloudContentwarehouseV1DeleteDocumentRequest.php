@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1DeleteDocumentRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
 

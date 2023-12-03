@@ -24,6 +24,10 @@ class GoogleCloudContentwarehouseV1ListSynonymSetsResponse extends \Google\Colle
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudContentwarehouseV1SynonymSet[]
+   */
+  public $synonymSets;
   protected $synonymSetsType = GoogleCloudContentwarehouseV1SynonymSet::class;
   protected $synonymSetsDataType = 'array';
 

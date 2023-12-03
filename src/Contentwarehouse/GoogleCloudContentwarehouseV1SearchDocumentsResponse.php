@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1SearchDocumentsResponse extends \Google\Collection
 {
   protected $collection_key = 'matchingDocuments';
+  /**
+   * @var GoogleCloudContentwarehouseV1HistogramQueryResult[]
+   */
+  public $histogramQueryResults;
   protected $histogramQueryResultsType = GoogleCloudContentwarehouseV1HistogramQueryResult::class;
   protected $histogramQueryResultsDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingDocument[]
+   */
+  public $matchingDocuments;
   protected $matchingDocumentsType = GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingDocument::class;
   protected $matchingDocumentsDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
   /**

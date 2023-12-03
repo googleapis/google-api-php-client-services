@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1PropertyTypeOptions extends \Google\Collection
 {
   protected $collection_key = 'propertyDefinitions';
+  /**
+   * @var GoogleCloudContentwarehouseV1PropertyDefinition[]
+   */
+  public $propertyDefinitions;
   protected $propertyDefinitionsType = GoogleCloudContentwarehouseV1PropertyDefinition::class;
   protected $propertyDefinitionsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class HomeGraphCommonRoutingTable extends \Google\Collection
 {
   protected $collection_key = 'supportedRoutes';
+  /**
+   * @var HomeGraphCommonRoute[]
+   */
+  public $supportedRoutes;
   protected $supportedRoutesType = HomeGraphCommonRoute::class;
   protected $supportedRoutesDataType = 'array';
 

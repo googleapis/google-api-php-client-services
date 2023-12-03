@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1ListDocumentSchemasResponse extends \Google\Collection
 {
   protected $collection_key = 'documentSchemas';
+  /**
+   * @var GoogleCloudContentwarehouseV1DocumentSchema[]
+   */
+  public $documentSchemas;
   protected $documentSchemasType = GoogleCloudContentwarehouseV1DocumentSchema::class;
   protected $documentSchemasDataType = 'array';
   /**

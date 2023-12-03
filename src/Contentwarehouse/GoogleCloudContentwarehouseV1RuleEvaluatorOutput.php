@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1RuleEvaluatorOutput extends \Google\Collection
 {
   protected $collection_key = 'triggeredRules';
+  /**
+   * @var GoogleCloudContentwarehouseV1InvalidRule[]
+   */
+  public $invalidRules;
   protected $invalidRulesType = GoogleCloudContentwarehouseV1InvalidRule::class;
   protected $invalidRulesDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1Rule[]
+   */
+  public $matchedRules;
   protected $matchedRulesType = GoogleCloudContentwarehouseV1Rule::class;
   protected $matchedRulesDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1Rule[]
+   */
+  public $triggeredRules;
   protected $triggeredRulesType = GoogleCloudContentwarehouseV1Rule::class;
   protected $triggeredRulesDataType = 'array';
 

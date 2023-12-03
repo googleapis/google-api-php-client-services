@@ -19,24 +19,56 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1Property extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1DateTimeArray
+   */
+  public $dateTimeValues;
   protected $dateTimeValuesType = GoogleCloudContentwarehouseV1DateTimeArray::class;
   protected $dateTimeValuesDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1EnumArray
+   */
+  public $enumValues;
   protected $enumValuesType = GoogleCloudContentwarehouseV1EnumArray::class;
   protected $enumValuesDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1FloatArray
+   */
+  public $floatValues;
   protected $floatValuesType = GoogleCloudContentwarehouseV1FloatArray::class;
   protected $floatValuesDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1IntegerArray
+   */
+  public $integerValues;
   protected $integerValuesType = GoogleCloudContentwarehouseV1IntegerArray::class;
   protected $integerValuesDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1MapProperty
+   */
+  public $mapProperty;
   protected $mapPropertyType = GoogleCloudContentwarehouseV1MapProperty::class;
   protected $mapPropertyDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudContentwarehouseV1PropertyArray
+   */
+  public $propertyValues;
   protected $propertyValuesType = GoogleCloudContentwarehouseV1PropertyArray::class;
   protected $propertyValuesDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1TextArray
+   */
+  public $textValues;
   protected $textValuesType = GoogleCloudContentwarehouseV1TextArray::class;
   protected $textValuesDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1TimestampArray
+   */
+  public $timestampValues;
   protected $timestampValuesType = GoogleCloudContentwarehouseV1TimestampArray::class;
   protected $timestampValuesDataType = '';
 

@@ -23,6 +23,10 @@ class GoogleCloudContentwarehouseV1GcsIngestPipeline extends \Google\Model
    * @var string
    */
   public $inputPath;
+  /**
+   * @var GoogleCloudContentwarehouseV1IngestPipelineConfig
+   */
+  public $pipelineConfig;
   protected $pipelineConfigType = GoogleCloudContentwarehouseV1IngestPipelineConfig::class;
   protected $pipelineConfigDataType = '';
   /**

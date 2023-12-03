@@ -24,28 +24,60 @@ class GoogleCloudDocumentaiV1Document extends \Google\Collection
    * @var string
    */
   public $content;
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentEntity[]
+   */
+  public $entities;
   protected $entitiesType = GoogleCloudDocumentaiV1DocumentEntity::class;
   protected $entitiesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentEntityRelation[]
+   */
+  public $entityRelations;
   protected $entityRelationsType = GoogleCloudDocumentaiV1DocumentEntityRelation::class;
   protected $entityRelationsDataType = 'array';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
    * @var string
    */
   public $mimeType;
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPage[]
+   */
+  public $pages;
   protected $pagesType = GoogleCloudDocumentaiV1DocumentPage::class;
   protected $pagesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentRevision[]
+   */
+  public $revisions;
   protected $revisionsType = GoogleCloudDocumentaiV1DocumentRevision::class;
   protected $revisionsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentShardInfo
+   */
+  public $shardInfo;
   protected $shardInfoType = GoogleCloudDocumentaiV1DocumentShardInfo::class;
   protected $shardInfoDataType = '';
   /**
    * @var string
    */
   public $text;
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentTextChange[]
+   */
+  public $textChanges;
   protected $textChangesType = GoogleCloudDocumentaiV1DocumentTextChange::class;
   protected $textChangesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentStyle[]
+   */
+  public $textStyles;
   protected $textStylesType = GoogleCloudDocumentaiV1DocumentStyle::class;
   protected $textStylesDataType = 'array';
   /**

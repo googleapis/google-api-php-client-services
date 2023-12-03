@@ -28,6 +28,10 @@ class GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline extends \Google\Coll
    * @var string
    */
   public $exportFolderPath;
+  /**
+   * @var GoogleCloudContentwarehouseV1ProcessorInfo
+   */
+  public $processorInfo;
   protected $processorInfoType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $processorInfoDataType = '';
   /**

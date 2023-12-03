@@ -19,16 +19,40 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaUserStatus extends \Google\Model
 {
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaCalendarBusy
+   */
+  public $calendarBusy;
   protected $calendarBusyType = GoogleInternalAppsWaldoV1alphaCalendarBusy::class;
   protected $calendarBusyDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaDoNotDisturb
+   */
+  public $doNotDisturb;
   protected $doNotDisturbType = GoogleInternalAppsWaldoV1alphaDoNotDisturb::class;
   protected $doNotDisturbDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaInMeeting
+   */
+  public $inMeeting;
   protected $inMeetingType = GoogleInternalAppsWaldoV1alphaInMeeting::class;
   protected $inMeetingDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaInactive
+   */
+  public $inactive;
   protected $inactiveType = GoogleInternalAppsWaldoV1alphaInactive::class;
   protected $inactiveDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaOutOfOffice
+   */
+  public $outOfOffice;
   protected $outOfOfficeType = GoogleInternalAppsWaldoV1alphaOutOfOffice::class;
   protected $outOfOfficeDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaOutsideWorkingHours
+   */
+  public $outsideWorkingHours;
   protected $outsideWorkingHoursType = GoogleInternalAppsWaldoV1alphaOutsideWorkingHours::class;
   protected $outsideWorkingHoursDataType = '';
 

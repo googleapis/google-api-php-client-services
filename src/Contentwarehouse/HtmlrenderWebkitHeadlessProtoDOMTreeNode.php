@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends \Google\Collection
 {
   protected $collection_key = 'renderTreeNodeIndex';
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoDOMTreeNodeAttribute[]
+   */
+  public $attribute;
   protected $attributeType = HtmlrenderWebkitHeadlessProtoDOMTreeNodeAttribute::class;
   protected $attributeDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class HtmlrenderWebkitHeadlessProtoDOMTreeNode extends \Google\Collection
    * @var string
    */
   public $currentSourceUrl;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoDocument
+   */
+  public $document;
   protected $documentType = HtmlrenderWebkitHeadlessProtoDocument::class;
   protected $documentDataType = '';
   /**

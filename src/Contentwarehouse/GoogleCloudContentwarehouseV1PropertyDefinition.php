@@ -20,16 +20,32 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
 {
   protected $collection_key = 'schemaSources';
+  /**
+   * @var GoogleCloudContentwarehouseV1DateTimeTypeOptions
+   */
+  public $dateTimeTypeOptions;
   protected $dateTimeTypeOptionsType = GoogleCloudContentwarehouseV1DateTimeTypeOptions::class;
   protected $dateTimeTypeOptionsDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudContentwarehouseV1EnumTypeOptions
+   */
+  public $enumTypeOptions;
   protected $enumTypeOptionsType = GoogleCloudContentwarehouseV1EnumTypeOptions::class;
   protected $enumTypeOptionsDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1FloatTypeOptions
+   */
+  public $floatTypeOptions;
   protected $floatTypeOptionsType = GoogleCloudContentwarehouseV1FloatTypeOptions::class;
   protected $floatTypeOptionsDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1IntegerTypeOptions
+   */
+  public $integerTypeOptions;
   protected $integerTypeOptionsType = GoogleCloudContentwarehouseV1IntegerTypeOptions::class;
   protected $integerTypeOptionsDataType = '';
   /**
@@ -52,22 +68,42 @@ class GoogleCloudContentwarehouseV1PropertyDefinition extends \Google\Collection
    * @var bool
    */
   public $isSearchable;
+  /**
+   * @var GoogleCloudContentwarehouseV1MapTypeOptions
+   */
+  public $mapTypeOptions;
   protected $mapTypeOptionsType = GoogleCloudContentwarehouseV1MapTypeOptions::class;
   protected $mapTypeOptionsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudContentwarehouseV1PropertyTypeOptions
+   */
+  public $propertyTypeOptions;
   protected $propertyTypeOptionsType = GoogleCloudContentwarehouseV1PropertyTypeOptions::class;
   protected $propertyTypeOptionsDataType = '';
   /**
    * @var string
    */
   public $retrievalImportance;
+  /**
+   * @var GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource[]
+   */
+  public $schemaSources;
   protected $schemaSourcesType = GoogleCloudContentwarehouseV1PropertyDefinitionSchemaSource::class;
   protected $schemaSourcesDataType = 'array';
+  /**
+   * @var GoogleCloudContentwarehouseV1TextTypeOptions
+   */
+  public $textTypeOptions;
   protected $textTypeOptionsType = GoogleCloudContentwarehouseV1TextTypeOptions::class;
   protected $textTypeOptionsDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1TimestampTypeOptions
+   */
+  public $timestampTypeOptions;
   protected $timestampTypeOptionsType = GoogleCloudContentwarehouseV1TimestampTypeOptions::class;
   protected $timestampTypeOptionsDataType = '';
 

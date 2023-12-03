@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1SearchDocumentsResponseMatchingDocument extends \Google\Collection
 {
   protected $collection_key = 'matchedTokenPageIndices';
+  /**
+   * @var GoogleCloudContentwarehouseV1Document
+   */
+  public $document;
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
   /**
    * @var string[]
    */
   public $matchedTokenPageIndices;
+  /**
+   * @var GoogleCloudContentwarehouseV1QAResult
+   */
+  public $qaResult;
   protected $qaResultType = GoogleCloudContentwarehouseV1QAResult::class;
   protected $qaResultDataType = '';
   /**

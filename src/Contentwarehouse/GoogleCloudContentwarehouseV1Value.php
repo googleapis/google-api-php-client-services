@@ -23,8 +23,16 @@ class GoogleCloudContentwarehouseV1Value extends \Google\Model
    * @var bool
    */
   public $booleanValue;
+  /**
+   * @var GoogleTypeDateTime
+   */
+  public $datetimeValue;
   protected $datetimeValueType = GoogleTypeDateTime::class;
   protected $datetimeValueDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1EnumValue
+   */
+  public $enumValue;
   protected $enumValueType = GoogleCloudContentwarehouseV1EnumValue::class;
   protected $enumValueDataType = '';
   /**
@@ -39,6 +47,10 @@ class GoogleCloudContentwarehouseV1Value extends \Google\Model
    * @var string
    */
   public $stringValue;
+  /**
+   * @var GoogleCloudContentwarehouseV1TimestampValue
+   */
+  public $timestampValue;
   protected $timestampValueType = GoogleCloudContentwarehouseV1TimestampValue::class;
   protected $timestampValueDataType = '';
 

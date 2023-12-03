@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends \Google\Collection
 {
   protected $collection_key = 'extractProcessorInfos';
+  /**
+   * @var GoogleCloudContentwarehouseV1ProcessorInfo[]
+   */
+  public $extractProcessorInfos;
   protected $extractProcessorInfosType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $extractProcessorInfosDataType = 'array';
   /**
    * @var string
    */
   public $inputPath;
+  /**
+   * @var GoogleCloudContentwarehouseV1IngestPipelineConfig
+   */
+  public $pipelineConfig;
   protected $pipelineConfigType = GoogleCloudContentwarehouseV1IngestPipelineConfig::class;
   protected $pipelineConfigDataType = '';
   /**
@@ -36,6 +44,10 @@ class GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline extends 
    * @var bool
    */
   public $skipIngestedDocuments;
+  /**
+   * @var GoogleCloudContentwarehouseV1ProcessorInfo
+   */
+  public $splitClassifyProcessorInfo;
   protected $splitClassifyProcessorInfoType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $splitClassifyProcessorInfoDataType = '';
 

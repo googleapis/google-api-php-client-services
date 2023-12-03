@@ -19,14 +19,34 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1RunPipelineRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1ExportToCdwPipeline
+   */
+  public $exportCdwPipeline;
   protected $exportCdwPipelineType = GoogleCloudContentwarehouseV1ExportToCdwPipeline::class;
   protected $exportCdwPipelineDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1GcsIngestPipeline
+   */
+  public $gcsIngestPipeline;
   protected $gcsIngestPipelineType = GoogleCloudContentwarehouseV1GcsIngestPipeline::class;
   protected $gcsIngestPipelineDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline
+   */
+  public $gcsIngestWithDocAiProcessorsPipeline;
   protected $gcsIngestWithDocAiProcessorsPipelineType = GoogleCloudContentwarehouseV1GcsIngestWithDocAiProcessorsPipeline::class;
   protected $gcsIngestWithDocAiProcessorsPipelineDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline
+   */
+  public $processWithDocAiPipeline;
   protected $processWithDocAiPipelineType = GoogleCloudContentwarehouseV1ProcessWithDocAiPipeline::class;
   protected $processWithDocAiPipelineDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
 

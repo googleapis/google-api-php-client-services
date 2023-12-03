@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaUserAvailability extends \Google\Model
 {
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaUserContext
+   */
+  public $contexts;
   protected $contextsType = GoogleInternalAppsWaldoV1alphaUserContext::class;
   protected $contextsDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaUserStatus
+   */
+  public $status;
   protected $statusType = GoogleInternalAppsWaldoV1alphaUserStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaTimeRange
+   */
+  public $timeRange;
   protected $timeRangeType = GoogleInternalAppsWaldoV1alphaTimeRange::class;
   protected $timeRangeDataType = '';
 

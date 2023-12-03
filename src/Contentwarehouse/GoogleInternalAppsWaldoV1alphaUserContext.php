@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaUserContext extends \Google\Model
 {
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaLocalTimeContext
+   */
+  public $localTime;
   protected $localTimeType = GoogleInternalAppsWaldoV1alphaLocalTimeContext::class;
   protected $localTimeDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext
+   */
+  public $upcomingCommitmentContext;
   protected $upcomingCommitmentContextType = GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext::class;
   protected $upcomingCommitmentContextDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaUpcomingOooContext
+   */
+  public $upcomingOoo;
   protected $upcomingOooType = GoogleInternalAppsWaldoV1alphaUpcomingOooContext::class;
   protected $upcomingOooDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext
+   */
+  public $workingElsewhere;
   protected $workingElsewhereType = GoogleInternalAppsWaldoV1alphaWorkingElsewhereContext::class;
   protected $workingElsewhereDataType = '';
 

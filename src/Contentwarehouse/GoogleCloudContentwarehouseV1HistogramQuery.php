@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1HistogramQuery extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter
+   */
+  public $filters;
   protected $filtersType = GoogleCloudContentwarehouseV1HistogramQueryPropertyNameFilter::class;
   protected $filtersDataType = '';
   /**

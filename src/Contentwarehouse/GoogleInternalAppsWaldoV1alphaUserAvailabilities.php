@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class GoogleInternalAppsWaldoV1alphaUserAvailabilities extends \Google\Collection
 {
   protected $collection_key = 'availabilities';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaUserAvailability[]
+   */
+  public $availabilities;
   protected $availabilitiesType = GoogleInternalAppsWaldoV1alphaUserAvailability::class;
   protected $availabilitiesDataType = 'array';
   /**
    * @var string
    */
   public $nextPollTime;
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaWorkingHours
+   */
+  public $workingHours;
   protected $workingHoursType = GoogleInternalAppsWaldoV1alphaWorkingHours::class;
   protected $workingHoursDataType = '';
 

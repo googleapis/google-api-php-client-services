@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1UpdateDocumentResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1Document
+   */
+  public $document;
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1ResponseMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RuleEngineOutput
+   */
+  public $ruleEngineOutput;
   protected $ruleEngineOutputType = GoogleCloudContentwarehouseV1RuleEngineOutput::class;
   protected $ruleEngineOutputDataType = '';
 

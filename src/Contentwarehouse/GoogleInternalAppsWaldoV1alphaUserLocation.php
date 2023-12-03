@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaUserLocation extends \Google\Model
 {
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaCustomLocation
+   */
+  public $customLocation;
   protected $customLocationType = GoogleInternalAppsWaldoV1alphaCustomLocation::class;
   protected $customLocationDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaHomeLocation
+   */
+  public $homeLocation;
   protected $homeLocationType = GoogleInternalAppsWaldoV1alphaHomeLocation::class;
   protected $homeLocationDataType = '';
+  /**
+   * @var GoogleInternalAppsWaldoV1alphaOfficeLocation
+   */
+  public $officeLocation;
   protected $officeLocationType = GoogleInternalAppsWaldoV1alphaOfficeLocation::class;
   protected $officeLocationDataType = '';
 

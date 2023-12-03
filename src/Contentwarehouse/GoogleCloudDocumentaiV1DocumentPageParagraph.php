@@ -20,10 +20,22 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudDocumentaiV1DocumentPageParagraph extends \Google\Collection
 {
   protected $collection_key = 'detectedLanguages';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[]
+   */
+  public $detectedLanguages;
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageLayout
+   */
+  public $layout;
   protected $layoutType = GoogleCloudDocumentaiV1DocumentPageLayout::class;
   protected $layoutDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentProvenance
+   */
+  public $provenance;
   protected $provenanceType = GoogleCloudDocumentaiV1DocumentProvenance::class;
   protected $provenanceDataType = '';
 

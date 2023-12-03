@@ -20,14 +20,34 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudDocumentaiV1DocumentPageTable extends \Google\Collection
 {
   protected $collection_key = 'headerRows';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageTableTableRow[]
+   */
+  public $bodyRows;
   protected $bodyRowsType = GoogleCloudDocumentaiV1DocumentPageTableTableRow::class;
   protected $bodyRowsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageDetectedLanguage[]
+   */
+  public $detectedLanguages;
   protected $detectedLanguagesType = GoogleCloudDocumentaiV1DocumentPageDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageTableTableRow[]
+   */
+  public $headerRows;
   protected $headerRowsType = GoogleCloudDocumentaiV1DocumentPageTableTableRow::class;
   protected $headerRowsDataType = 'array';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentPageLayout
+   */
+  public $layout;
   protected $layoutType = GoogleCloudDocumentaiV1DocumentPageLayout::class;
   protected $layoutDataType = '';
+  /**
+   * @var GoogleCloudDocumentaiV1DocumentProvenance
+   */
+  public $provenance;
   protected $provenanceType = GoogleCloudDocumentaiV1DocumentProvenance::class;
   protected $provenanceDataType = '';
 

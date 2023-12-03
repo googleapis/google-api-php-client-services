@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1MapProperty extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1Value[]
+   */
+  public $fields;
   protected $fieldsType = GoogleCloudContentwarehouseV1Value::class;
   protected $fieldsDataType = 'map';
 

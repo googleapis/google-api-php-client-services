@@ -36,6 +36,10 @@ class HtmlrenderWebkitHeadlessProtoConsoleLogEntry extends \Google\Collection
    * @var string
    */
   public $sourceUrl;
+  /**
+   * @var HtmlrenderWebkitHeadlessProtoScriptStackFrame[]
+   */
+  public $stackTrace;
   protected $stackTraceType = HtmlrenderWebkitHeadlessProtoScriptStackFrame::class;
   protected $stackTraceDataType = 'array';
   public $timestamp;

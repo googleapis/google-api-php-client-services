@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1UpdateRuleSetRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1RuleSet
+   */
+  public $ruleSet;
   protected $ruleSetType = GoogleCloudContentwarehouseV1RuleSet::class;
   protected $ruleSetDataType = '';
 

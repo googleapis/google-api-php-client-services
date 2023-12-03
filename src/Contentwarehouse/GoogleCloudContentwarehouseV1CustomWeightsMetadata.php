@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1CustomWeightsMetadata extends \Google\Collection
 {
   protected $collection_key = 'weightedSchemaProperties';
+  /**
+   * @var GoogleCloudContentwarehouseV1WeightedSchemaProperty[]
+   */
+  public $weightedSchemaProperties;
   protected $weightedSchemaPropertiesType = GoogleCloudContentwarehouseV1WeightedSchemaProperty::class;
   protected $weightedSchemaPropertiesDataType = 'array';
 

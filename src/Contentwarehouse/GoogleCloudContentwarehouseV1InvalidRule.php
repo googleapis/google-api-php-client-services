@@ -23,6 +23,10 @@ class GoogleCloudContentwarehouseV1InvalidRule extends \Google\Model
    * @var string
    */
   public $error;
+  /**
+   * @var GoogleCloudContentwarehouseV1Rule
+   */
+  public $rule;
   protected $ruleType = GoogleCloudContentwarehouseV1Rule::class;
   protected $ruleDataType = '';
 

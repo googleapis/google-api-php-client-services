@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1TimestampArray extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var GoogleCloudContentwarehouseV1TimestampValue[]
+   */
+  public $values;
   protected $valuesType = GoogleCloudContentwarehouseV1TimestampValue::class;
   protected $valuesDataType = 'array';
 

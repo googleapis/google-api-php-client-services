@@ -28,6 +28,10 @@ class GoogleCloudContentwarehouseV1SynonymSet extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudContentwarehouseV1SynonymSetSynonym[]
+   */
+  public $synonyms;
   protected $synonymsType = GoogleCloudContentwarehouseV1SynonymSetSynonym::class;
   protected $synonymsDataType = 'array';
 

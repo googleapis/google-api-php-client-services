@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1Rule extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var GoogleCloudContentwarehouseV1Action[]
+   */
+  public $actions;
   protected $actionsType = GoogleCloudContentwarehouseV1Action::class;
   protected $actionsDataType = 'array';
   /**

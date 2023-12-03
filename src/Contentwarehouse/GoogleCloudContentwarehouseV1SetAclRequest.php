@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1SetAclRequest extends \Google\Model
 {
+  /**
+   * @var GoogleIamV1Policy
+   */
+  public $policy;
   protected $policyType = GoogleIamV1Policy::class;
   protected $policyDataType = '';
   /**
    * @var bool
    */
   public $projectOwner;
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
 

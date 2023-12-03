@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends \Google\Collection
 {
   protected $collection_key = 'histogramQueries';
+  /**
+   * @var GoogleCloudContentwarehouseV1DocumentQuery
+   */
+  public $documentQuery;
   protected $documentQueryType = GoogleCloudContentwarehouseV1DocumentQuery::class;
   protected $documentQueryDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1HistogramQuery[]
+   */
+  public $histogramQueries;
   protected $histogramQueriesType = GoogleCloudContentwarehouseV1HistogramQuery::class;
   protected $histogramQueriesDataType = 'array';
   /**
@@ -44,6 +52,10 @@ class GoogleCloudContentwarehouseV1SearchDocumentsRequest extends \Google\Collec
    * @var int
    */
   public $qaSizeLimit;
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1RequestMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1UserInfo
+   */
+  public $userInfo;
   protected $userInfoType = GoogleCloudContentwarehouseV1UserInfo::class;
   protected $userInfoDataType = '';
 

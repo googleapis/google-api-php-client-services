@@ -31,12 +31,20 @@ class GoogleCloudContentwarehouseV1DocumentLink extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudContentwarehouseV1DocumentReference
+   */
+  public $sourceDocumentReference;
   protected $sourceDocumentReferenceType = GoogleCloudContentwarehouseV1DocumentReference::class;
   protected $sourceDocumentReferenceDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudContentwarehouseV1DocumentReference
+   */
+  public $targetDocumentReference;
   protected $targetDocumentReferenceType = GoogleCloudContentwarehouseV1DocumentReference::class;
   protected $targetDocumentReferenceDataType = '';
   /**

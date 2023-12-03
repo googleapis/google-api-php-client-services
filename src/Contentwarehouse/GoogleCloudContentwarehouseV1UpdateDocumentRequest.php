@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1UpdateDocumentRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1CloudAIDocumentOption
+   */
+  public $cloudAiDocumentOption;
   protected $cloudAiDocumentOptionType = GoogleCloudContentwarehouseV1CloudAIDocumentOption::class;
   protected $cloudAiDocumentOptionDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1Document
+   */
+  public $document;
   protected $documentType = GoogleCloudContentwarehouseV1Document::class;
   protected $documentDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1RequestMetadata
+   */
+  public $requestMetadata;
   protected $requestMetadataType = GoogleCloudContentwarehouseV1RequestMetadata::class;
   protected $requestMetadataDataType = '';
+  /**
+   * @var GoogleCloudContentwarehouseV1UpdateOptions
+   */
+  public $updateOptions;
   protected $updateOptionsType = GoogleCloudContentwarehouseV1UpdateOptions::class;
   protected $updateOptionsDataType = '';
 

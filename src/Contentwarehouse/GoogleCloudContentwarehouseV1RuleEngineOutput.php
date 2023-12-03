@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1RuleEngineOutput extends \Google\Model
 {
+  /**
+   * @var GoogleCloudContentwarehouseV1ActionExecutorOutput
+   */
+  public $actionExecutorOutput;
   protected $actionExecutorOutputType = GoogleCloudContentwarehouseV1ActionExecutorOutput::class;
   protected $actionExecutorOutputDataType = '';
   /**
    * @var string
    */
   public $documentName;
+  /**
+   * @var GoogleCloudContentwarehouseV1RuleEvaluatorOutput
+   */
+  public $ruleEvaluatorOutput;
   protected $ruleEvaluatorOutputType = GoogleCloudContentwarehouseV1RuleEvaluatorOutput::class;
   protected $ruleEvaluatorOutputDataType = '';
 
