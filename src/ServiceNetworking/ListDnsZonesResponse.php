@@ -20,6 +20,10 @@ namespace Google\Service\ServiceNetworking;
 class ListDnsZonesResponse extends \Google\Collection
 {
   protected $collection_key = 'dnsZonePairs';
+  /**
+   * @var DnsZonePair[]
+   */
+  public $dnsZonePairs;
   protected $dnsZonePairsType = DnsZonePair::class;
   protected $dnsZonePairsDataType = 'array';
 

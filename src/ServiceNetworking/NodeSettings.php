@@ -19,6 +19,10 @@ namespace Google\Service\ServiceNetworking;
 
 class NodeSettings extends \Google\Model
 {
+  /**
+   * @var CommonLanguageSettings
+   */
+  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
 

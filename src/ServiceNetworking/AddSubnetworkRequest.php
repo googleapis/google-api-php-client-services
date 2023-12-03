@@ -80,6 +80,10 @@ class AddSubnetworkRequest extends \Google\Collection
    * @var string
    */
   public $role;
+  /**
+   * @var SecondaryIpRangeSpec[]
+   */
+  public $secondaryIpRangeSpecs;
   protected $secondaryIpRangeSpecsType = SecondaryIpRangeSpec::class;
   protected $secondaryIpRangeSpecsDataType = 'array';
   /**

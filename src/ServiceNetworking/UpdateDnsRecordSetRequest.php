@@ -23,8 +23,16 @@ class UpdateDnsRecordSetRequest extends \Google\Model
    * @var string
    */
   public $consumerNetwork;
+  /**
+   * @var DnsRecordSet
+   */
+  public $existingDnsRecordSet;
   protected $existingDnsRecordSetType = DnsRecordSet::class;
   protected $existingDnsRecordSetDataType = '';
+  /**
+   * @var DnsRecordSet
+   */
+  public $newDnsRecordSet;
   protected $newDnsRecordSetType = DnsRecordSet::class;
   protected $newDnsRecordSetDataType = '';
   /**

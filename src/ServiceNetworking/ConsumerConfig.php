@@ -20,6 +20,10 @@ namespace Google\Service\ServiceNetworking;
 class ConsumerConfig extends \Google\Collection
 {
   protected $collection_key = 'usedIpRanges';
+  /**
+   * @var CloudSQLConfig[]
+   */
+  public $cloudsqlConfigs;
   protected $cloudsqlConfigsType = CloudSQLConfig::class;
   protected $cloudsqlConfigsDataType = 'array';
   /**
@@ -58,6 +62,10 @@ class ConsumerConfig extends \Google\Collection
    * @var string
    */
   public $producerNetwork;
+  /**
+   * @var GoogleCloudServicenetworkingV1ConsumerConfigReservedRange[]
+   */
+  public $reservedRanges;
   protected $reservedRangesType = GoogleCloudServicenetworkingV1ConsumerConfigReservedRange::class;
   protected $reservedRangesDataType = 'array';
   /**

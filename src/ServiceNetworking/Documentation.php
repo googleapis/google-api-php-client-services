@@ -28,10 +28,22 @@ class Documentation extends \Google\Collection
    * @var string
    */
   public $overview;
+  /**
+   * @var Page[]
+   */
+  public $pages;
   protected $pagesType = Page::class;
   protected $pagesDataType = 'array';
+  /**
+   * @var DocumentationRule[]
+   */
+  public $rules;
   protected $rulesType = DocumentationRule::class;
   protected $rulesDataType = 'array';
+  /**
+   * @var Page[]
+   */
+  public $sectionOverrides;
   protected $sectionOverridesType = Page::class;
   protected $sectionOverridesDataType = 'array';
   /**

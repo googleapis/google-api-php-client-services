@@ -19,6 +19,10 @@ namespace Google\Service\ServiceNetworking;
 
 class UpdateConsumerConfigRequest extends \Google\Model
 {
+  /**
+   * @var ConsumerConfig
+   */
+  public $consumerConfig;
   protected $consumerConfigType = ConsumerConfig::class;
   protected $consumerConfigDataType = '';
 

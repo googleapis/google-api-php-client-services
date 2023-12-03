@@ -20,6 +20,10 @@ namespace Google\Service\ServiceNetworking;
 class AddRolesResponse extends \Google\Collection
 {
   protected $collection_key = 'policyBinding';
+  /**
+   * @var PolicyBinding[]
+   */
+  public $policyBinding;
   protected $policyBindingType = PolicyBinding::class;
   protected $policyBindingDataType = 'array';
 

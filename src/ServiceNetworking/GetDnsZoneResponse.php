@@ -19,8 +19,16 @@ namespace Google\Service\ServiceNetworking;
 
 class GetDnsZoneResponse extends \Google\Model
 {
+  /**
+   * @var DnsZone
+   */
+  public $consumerPeeringZone;
   protected $consumerPeeringZoneType = DnsZone::class;
   protected $consumerPeeringZoneDataType = '';
+  /**
+   * @var DnsZone
+   */
+  public $producerPrivateZone;
   protected $producerPrivateZoneType = DnsZone::class;
   protected $producerPrivateZoneDataType = '';
 

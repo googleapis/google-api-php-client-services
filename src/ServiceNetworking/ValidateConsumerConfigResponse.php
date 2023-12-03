@@ -20,6 +20,10 @@ namespace Google\Service\ServiceNetworking;
 class ValidateConsumerConfigResponse extends \Google\Collection
 {
   protected $collection_key = 'existingSubnetworkCandidates';
+  /**
+   * @var Subnetwork[]
+   */
+  public $existingSubnetworkCandidates;
   protected $existingSubnetworkCandidatesType = Subnetwork::class;
   protected $existingSubnetworkCandidatesDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\ServiceNetworking;
 class ListPeeredDnsDomainsResponse extends \Google\Collection
 {
   protected $collection_key = 'peeredDnsDomains';
+  /**
+   * @var PeeredDnsDomain[]
+   */
+  public $peeredDnsDomains;
   protected $peeredDnsDomainsType = PeeredDnsDomain::class;
   protected $peeredDnsDomainsDataType = 'array';
 

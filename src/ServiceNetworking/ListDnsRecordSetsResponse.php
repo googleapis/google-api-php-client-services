@@ -20,6 +20,10 @@ namespace Google\Service\ServiceNetworking;
 class ListDnsRecordSetsResponse extends \Google\Collection
 {
   protected $collection_key = 'dnsRecordSets';
+  /**
+   * @var DnsRecordSet[]
+   */
+  public $dnsRecordSets;
   protected $dnsRecordSetsType = DnsRecordSet::class;
   protected $dnsRecordSetsDataType = 'array';
 
