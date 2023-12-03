@@ -20,12 +20,20 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsShoppingAssistantMerchant extends \Google\Collection
 {
   protected $collection_key = 'merchantId';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var string
    */
   public $localMerchantId;
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantMerchantMerchantCenterId[]
+   */
+  public $mcid;
   protected $mcidType = NlpSemanticParsingModelsShoppingAssistantMerchantMerchantCenterId::class;
   protected $mcidDataType = 'array';
   /**

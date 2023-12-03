@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsRecurrenceRecurrenceStart extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingDateTimeAnnotation
+   */
+  public $startDateTime;
   protected $startDateTimeType = NlpSemanticParsingDateTimeAnnotation::class;
   protected $startDateTimeDataType = '';
   /**

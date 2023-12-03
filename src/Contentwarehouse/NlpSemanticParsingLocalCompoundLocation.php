@@ -19,10 +19,22 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingLocalCompoundLocation extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingLocalJoiner
+   */
+  public $joiner;
   protected $joinerType = NlpSemanticParsingLocalJoiner::class;
   protected $joinerDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalLocation
+   */
+  public $location1;
   protected $location1Type = NlpSemanticParsingLocalLocation::class;
   protected $location1DataType = '';
+  /**
+   * @var NlpSemanticParsingLocalLocation
+   */
+  public $location2;
   protected $location2Type = NlpSemanticParsingLocalLocation::class;
   protected $location2DataType = '';
 

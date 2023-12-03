@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSaftAnnotatedPhrase extends \Google\Model
 {
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
+  /**
+   * @var NlpSaftPhrase
+   */
+  public $phrase;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
 

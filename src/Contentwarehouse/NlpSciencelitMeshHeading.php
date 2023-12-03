@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class NlpSciencelitMeshHeading extends \Google\Collection
 {
   protected $collection_key = 'meshQualifier';
+  /**
+   * @var NlpSciencelitSubjectHeading
+   */
+  public $meshDescriptor;
   protected $meshDescriptorType = NlpSciencelitSubjectHeading::class;
   protected $meshDescriptorDataType = '';
+  /**
+   * @var NlpSciencelitSubjectHeading[]
+   */
+  public $meshQualifier;
   protected $meshQualifierType = NlpSciencelitSubjectHeading::class;
   protected $meshQualifierDataType = 'array';
 

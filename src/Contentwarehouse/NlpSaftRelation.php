@@ -20,14 +20,26 @@ namespace Google\Service\Contentwarehouse;
 class NlpSaftRelation extends \Google\Collection
 {
   protected $collection_key = 'mention';
+  /**
+   * @var NlpSaftIdentifier
+   */
+  public $identifier;
   protected $identifierType = NlpSaftIdentifier::class;
   protected $identifierDataType = '';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var NlpSaftRelationMention[]
+   */
+  public $mention;
   protected $mentionType = NlpSaftRelationMention::class;
   protected $mentionDataType = 'array';
   /**

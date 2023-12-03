@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingDatetimeDateTime extends \Google\Collection
 {
   protected $collection_key = 'range';
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $compositionElement;
   protected $compositionElementType = NlpSemanticParsingDatetimeDateTime::class;
   protected $compositionElementDataType = '';
   /**
@@ -30,22 +34,50 @@ class NlpSemanticParsingDatetimeDateTime extends \Google\Collection
    * @var bool
    */
   public $deleted8;
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var string
    */
   public $groundingStage;
+  /**
+   * @var NlpSemanticParsingDatetimeAbsoluteDateTime[]
+   */
+  public $point;
   protected $pointType = NlpSemanticParsingDatetimeAbsoluteDateTime::class;
   protected $pointDataType = 'array';
+  /**
+   * @var NlpSemanticParsingDatetimeResolutionProperties
+   */
+  public $properties;
   protected $propertiesType = NlpSemanticParsingDatetimeResolutionProperties::class;
   protected $propertiesDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeRange[]
+   */
+  public $range;
   protected $rangeType = NlpSemanticParsingDatetimeRange::class;
   protected $rangeDataType = 'array';
+  /**
+   * @var NlpSemanticParsingDatetimeRecurrent
+   */
+  public $recurrent;
   protected $recurrentType = NlpSemanticParsingDatetimeRecurrent::class;
   protected $recurrentDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeRelativeDateTime
+   */
+  public $relative;
   protected $relativeType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $relativeDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeSpan
+   */
+  public $span;
   protected $spanType = NlpSemanticParsingDatetimeSpan::class;
   protected $spanDataType = '';
 

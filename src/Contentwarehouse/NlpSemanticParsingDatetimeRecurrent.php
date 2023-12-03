@@ -24,6 +24,10 @@ class NlpSemanticParsingDatetimeRecurrent extends \Google\Collection
    * @var int
    */
   public $countRestriction;
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime[]
+   */
+  public $exception;
   protected $exceptionType = NlpSemanticParsingDatetimeDateTime::class;
   protected $exceptionDataType = 'array';
   /**
@@ -38,22 +42,58 @@ class NlpSemanticParsingDatetimeRecurrent extends \Google\Collection
    * @var string
    */
   public $period;
+  /**
+   * @var NlpSemanticParsingDatetimeRange
+   */
+  public $rangeRestriction;
   protected $rangeRestrictionType = NlpSemanticParsingDatetimeRange::class;
   protected $rangeRestrictionDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeRelativeDateTime
+   */
+  public $relativeRangeRestriction;
   protected $relativeRangeRestrictionType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $relativeRangeRestrictionDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $restriction;
   protected $restrictionType = NlpSemanticParsingDatetimeDateTime::class;
   protected $restrictionDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime[]
+   */
+  public $start;
   protected $startType = NlpSemanticParsingDatetimeDateTime::class;
   protected $startDataType = 'array';
+  /**
+   * @var NlpSemanticParsingDatetimeAbsoluteDateTime[]
+   */
+  public $startPoint;
   protected $startPointType = NlpSemanticParsingDatetimeAbsoluteDateTime::class;
   protected $startPointDataType = 'array';
+  /**
+   * @var NlpSemanticParsingDatetimeRange[]
+   */
+  public $startRange;
   protected $startRangeType = NlpSemanticParsingDatetimeRange::class;
   protected $startRangeDataType = 'array';
+  /**
+   * @var NlpSemanticParsingDatetimeRelativeDateTime[]
+   */
+  public $startRelative;
   protected $startRelativeType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $startRelativeDataType = 'array';
+  /**
+   * @var NlpSemanticParsingDatetimeTargetToFetch
+   */
+  public $target;
   protected $targetType = NlpSemanticParsingDatetimeTargetToFetch::class;
   protected $targetDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeQuantity
+   */
+  public $timeInterval;
   protected $timeIntervalType = NlpSemanticParsingDatetimeQuantity::class;
   protected $timeIntervalDataType = '';
   /**

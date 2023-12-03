@@ -28,6 +28,10 @@ class NlpSaftConstituencyNode extends \Google\Collection
    * @var string
    */
   public $label;
+  /**
+   * @var NlpSaftPhrase
+   */
+  public $phrase;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
 

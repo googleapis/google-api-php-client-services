@@ -27,6 +27,10 @@ class NlpSemanticParsingModelsMediaNewsInfo extends \Google\Model
    * @var string
    */
   public $newsContentType;
+  /**
+   * @var AssistantApiTimestamp
+   */
+  public $publicationTime;
   protected $publicationTimeType = AssistantApiTimestamp::class;
   protected $publicationTimeDataType = '';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class NlpSaftDocument extends \Google\Collection
 {
   protected $collection_key = 'topic';
+  /**
+   * @var NlpSaftAnnotatedPhrase[]
+   */
+  public $annotatedPhrase;
   protected $annotatedPhraseType = NlpSaftAnnotatedPhrase::class;
   protected $annotatedPhraseDataType = 'array';
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $annotations;
   protected $annotationsType = Proto2BridgeMessageSet::class;
   protected $annotationsDataType = '';
   /**
@@ -32,6 +40,10 @@ class NlpSaftDocument extends \Google\Collection
    * @var string
    */
   public $bylineDate;
+  /**
+   * @var NlpSaftConstituencyNode[]
+   */
+  public $constituencyNode;
   protected $constituencyNodeType = NlpSaftConstituencyNode::class;
   protected $constituencyNodeDataType = 'array';
   /**
@@ -58,6 +70,10 @@ class NlpSaftDocument extends \Google\Collection
    * @var string
    */
   public $docid;
+  /**
+   * @var NlpSaftEntity[]
+   */
+  public $entity;
   protected $entityType = NlpSaftEntity::class;
   protected $entityDataType = 'array';
   /**
@@ -76,8 +92,16 @@ class NlpSaftDocument extends \Google\Collection
    * @var string
    */
   public $httpHeaders;
+  /**
+   * @var NlpSaftHyperlink[]
+   */
+  public $hyperlink;
   protected $hyperlinkType = NlpSaftHyperlink::class;
   protected $hyperlinkDataType = 'array';
+  /**
+   * @var NlpSaftLabeledSpans[]
+   */
+  public $labeledSpans;
   protected $labeledSpansType = NlpSaftLabeledSpans::class;
   protected $labeledSpansDataType = 'map';
   /**
@@ -88,20 +112,36 @@ class NlpSaftDocument extends \Google\Collection
    * @var string
    */
   public $lastSignificantUpdate;
+  /**
+   * @var NlpSaftMeasure[]
+   */
+  public $measure;
   protected $measureType = NlpSaftMeasure::class;
   protected $measureDataType = 'array';
   /**
    * @var bool
    */
   public $privacySensitive;
+  /**
+   * @var NlpSaftRelation[]
+   */
+  public $relation;
   protected $relationType = NlpSaftRelation::class;
   protected $relationDataType = 'array';
   /**
    * @var bool
    */
   public $rpcError;
+  /**
+   * @var NlpSaftSemanticNode[]
+   */
+  public $semanticNode;
   protected $semanticNodeType = NlpSaftSemanticNode::class;
   protected $semanticNodeDataType = 'array';
+  /**
+   * @var NlpSaftDocument[]
+   */
+  public $subsection;
   protected $subsectionType = NlpSaftDocument::class;
   protected $subsectionDataType = 'array';
   /**
@@ -116,8 +156,16 @@ class NlpSaftDocument extends \Google\Collection
    * @var string
    */
   public $title;
+  /**
+   * @var NlpSaftToken[]
+   */
+  public $token;
   protected $tokenType = NlpSaftToken::class;
   protected $tokenDataType = 'array';
+  /**
+   * @var NlpSaftDocumentTopic[]
+   */
+  public $topic;
   protected $topicType = NlpSaftDocumentTopic::class;
   protected $topicDataType = 'array';
   /**

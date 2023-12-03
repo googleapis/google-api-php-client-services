@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsRecurrenceYearlyPattern extends \Google\Collection
 {
   protected $collection_key = 'yearMonth';
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceMonthlyPattern
+   */
+  public $monthlyPattern;
   protected $monthlyPatternType = NlpSemanticParsingModelsRecurrenceMonthlyPattern::class;
   protected $monthlyPatternDataType = '';
   /**

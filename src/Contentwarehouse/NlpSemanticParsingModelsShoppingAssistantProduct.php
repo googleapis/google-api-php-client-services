@@ -23,14 +23,26 @@ class NlpSemanticParsingModelsShoppingAssistantProduct extends \Google\Model
    * @var string
    */
   public $catalogId;
+  /**
+   * @var NlpSemanticParsingModelsMoneyMoney
+   */
+  public $maxPrice;
   protected $maxPriceType = NlpSemanticParsingModelsMoneyMoney::class;
   protected $maxPriceDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductMediaProduct
+   */
+  public $mediaProduct;
   protected $mediaProductType = NlpSemanticParsingModelsShoppingAssistantProductMediaProduct::class;
   protected $mediaProductDataType = '';
   /**
    * @var string
    */
   public $mid;
+  /**
+   * @var NlpSemanticParsingModelsMoneyMoney
+   */
+  public $minPrice;
   protected $minPriceType = NlpSemanticParsingModelsMoneyMoney::class;
   protected $minPriceDataType = '';
   /**

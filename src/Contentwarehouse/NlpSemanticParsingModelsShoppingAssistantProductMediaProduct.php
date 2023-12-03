@@ -19,14 +19,34 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsShoppingAssistantProductMediaProduct extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue
+   */
+  public $author;
   protected $authorType = NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue::class;
   protected $authorDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue
+   */
+  public $genre;
   protected $genreType = NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue::class;
   protected $genreDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue
+   */
+  public $mediaTitle;
   protected $mediaTitleType = NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue::class;
   protected $mediaTitleDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue
+   */
+  public $orderInSeries;
   protected $orderInSeriesType = NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue::class;
   protected $orderInSeriesDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue
+   */
+  public $topic;
   protected $topicType = NlpSemanticParsingModelsShoppingAssistantProductMediaProductMediaAttributeValue::class;
   protected $topicDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsDevice extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsDeviceName
+   */
+  public $deviceName;
   protected $deviceNameType = NlpSemanticParsingModelsDeviceName::class;
   protected $deviceNameDataType = '';
   /**

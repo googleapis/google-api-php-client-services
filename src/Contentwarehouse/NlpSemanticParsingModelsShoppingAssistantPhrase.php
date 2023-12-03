@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsShoppingAssistantPhrase extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantBrandPhrase
+   */
+  public $brand;
   protected $brandType = NlpSemanticParsingModelsShoppingAssistantBrandPhrase::class;
   protected $brandDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantOffer
+   */
+  public $offer;
   protected $offerType = NlpSemanticParsingModelsShoppingAssistantOffer::class;
   protected $offerDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductPhrase
+   */
+  public $product;
   protected $productType = NlpSemanticParsingModelsShoppingAssistantProductPhrase::class;
   protected $productDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantUnrecognizedPhrase
+   */
+  public $unrecognized;
   protected $unrecognizedType = NlpSemanticParsingModelsShoppingAssistantUnrecognizedPhrase::class;
   protected $unrecognizedDataType = '';
 

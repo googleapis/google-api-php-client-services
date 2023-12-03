@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsOnDevice extends \Google\Collection
 {
   protected $collection_key = 'device';
+  /**
+   * @var NlpSemanticParsingModelsDevice[]
+   */
+  public $device;
   protected $deviceType = NlpSemanticParsingModelsDevice::class;
   protected $deviceDataType = 'array';
 

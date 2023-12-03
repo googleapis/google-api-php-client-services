@@ -31,6 +31,10 @@ class NlpSaftHyperlink extends \Google\Model
    * @var int
    */
   public $byteStart;
+  /**
+   * @var NlpSaftPhrase
+   */
+  public $phrase;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
   /**

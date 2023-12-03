@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingAppAnnotation extends \Google\Collection
 {
   protected $collection_key = 'appInfo';
+  /**
+   * @var QualityActionsAppInfo[]
+   */
+  public $appInfo;
   protected $appInfoType = QualityActionsAppInfo::class;
   protected $appInfoDataType = 'array';
 

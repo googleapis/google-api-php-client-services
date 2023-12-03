@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaNewsTopic extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**

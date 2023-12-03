@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaAlbumTitle extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsMediaMediaAnnotationList
+   */
+  public $annotationList;
   protected $annotationListType = NlpSemanticParsingModelsMediaMediaAnnotationList::class;
   protected $annotationListDataType = '';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -43,6 +51,10 @@ class NlpSemanticParsingModelsMediaAlbumTitle extends \Google\Model
    * @var bool
    */
   public $playMore;
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $qref;
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   /**

@@ -20,16 +20,32 @@ namespace Google\Service\Contentwarehouse;
 class NlpSciencelitArticleData extends \Google\Collection
 {
   protected $collection_key = 'scholarDocument';
+  /**
+   * @var NlxDataSchemaScaleSet
+   */
+  public $analyzedText;
   protected $analyzedTextType = NlxDataSchemaScaleSet::class;
   protected $analyzedTextDataType = '';
+  /**
+   * @var NlpSciencelitArticleId[]
+   */
+  public $articleId;
   protected $articleIdType = NlpSciencelitArticleId::class;
   protected $articleIdDataType = 'array';
+  /**
+   * @var NlpSciencelitCitationData[]
+   */
+  public $citation;
   protected $citationType = NlpSciencelitCitationData::class;
   protected $citationDataType = 'array';
   /**
    * @var string
    */
   public $earliestPubDate;
+  /**
+   * @var NlpSciencelitArticleMetadata
+   */
+  public $metadata;
   protected $metadataType = NlpSciencelitArticleMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -40,14 +56,34 @@ class NlpSciencelitArticleData extends \Google\Collection
    * @var string
    */
   public $parsedFrom;
+  /**
+   * @var NlpSciencelitPubDate[]
+   */
+  public $pubDate;
   protected $pubDateType = NlpSciencelitPubDate::class;
   protected $pubDateDataType = 'array';
+  /**
+   * @var NlpSciencelitReferencedBlock[]
+   */
+  public $referencedBlock;
   protected $referencedBlockType = NlpSciencelitReferencedBlock::class;
   protected $referencedBlockDataType = 'array';
+  /**
+   * @var ScienceCitation
+   */
+  public $scholarCitation;
   protected $scholarCitationType = ScienceCitation::class;
   protected $scholarCitationDataType = '';
+  /**
+   * @var CompositeDoc[]
+   */
+  public $scholarDocument;
   protected $scholarDocumentType = CompositeDoc::class;
   protected $scholarDocumentDataType = 'array';
+  /**
+   * @var ScienceIndexSignal
+   */
+  public $scholarSignal;
   protected $scholarSignalType = ScienceIndexSignal::class;
   protected $scholarSignalDataType = '';
   /**

@@ -19,20 +19,44 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingDatetimeRange extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingDatetimeAbsoluteDateTime
+   */
+  public $begin;
   protected $beginType = NlpSemanticParsingDatetimeAbsoluteDateTime::class;
   protected $beginDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeRelativeDateTime
+   */
+  public $beginRelative;
   protected $beginRelativeType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $beginRelativeDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeQuantity
+   */
+  public $duration;
   protected $durationType = NlpSemanticParsingDatetimeQuantity::class;
   protected $durationDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeAbsoluteDateTime
+   */
+  public $end;
   protected $endType = NlpSemanticParsingDatetimeAbsoluteDateTime::class;
   protected $endDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeRelativeDateTime
+   */
+  public $endRelative;
   protected $endRelativeType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $endRelativeDataType = '';
   /**
    * @var bool
    */
   public $exclusive;
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $finish;
   protected $finishType = NlpSemanticParsingDatetimeDateTime::class;
   protected $finishDataType = '';
   /**
@@ -43,12 +67,20 @@ class NlpSemanticParsingDatetimeRange extends \Google\Model
    * @var string
    */
   public $metadata;
+  /**
+   * @var NlpSemanticParsingDatetimeResolutionProperties
+   */
+  public $properties;
   protected $propertiesType = NlpSemanticParsingDatetimeResolutionProperties::class;
   protected $propertiesDataType = '';
   /**
    * @var string
    */
   public $rangeModifier;
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $start;
   protected $startType = NlpSemanticParsingDatetimeDateTime::class;
   protected $startDataType = '';
   /**

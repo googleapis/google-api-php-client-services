@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSciencelitRetrievalSearchResultSetDebugInfo extends \Google\Model
 {
+  /**
+   * @var NlpSciencelitRetrievalQueryEncodingDebugInfo
+   */
+  public $queryEncoding;
   protected $queryEncodingType = NlpSciencelitRetrievalQueryEncodingDebugInfo::class;
   protected $queryEncodingDataType = '';
+  /**
+   * @var ResearchScamQueryResponse
+   */
+  public $scamResponse;
   protected $scamResponseType = ResearchScamQueryResponse::class;
   protected $scamResponseDataType = '';
 

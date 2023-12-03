@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSciencelitRetrievalQueryEncodingDebugInfo extends \Google\Model
 {
+  /**
+   * @var ResearchScamGenericFeatureVector
+   */
+  public $scamQueryEncoding;
   protected $scamQueryEncodingType = ResearchScamGenericFeatureVector::class;
   protected $scamQueryEncodingDataType = '';
 

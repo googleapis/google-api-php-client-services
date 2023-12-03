@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMoneyMoney extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingNumberNumber
+   */
+  public $amount;
   protected $amountType = NlpSemanticParsingNumberNumber::class;
   protected $amountDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMoneyCurrency
+   */
+  public $currency;
   protected $currencyType = NlpSemanticParsingModelsMoneyCurrency::class;
   protected $currencyDataType = '';
 

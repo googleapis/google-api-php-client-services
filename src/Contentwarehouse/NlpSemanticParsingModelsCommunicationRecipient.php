@@ -19,12 +19,28 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsCommunicationRecipient extends \Google\Model
 {
+  /**
+   * @var AssistantApiCoreTypesCalendarEvent
+   */
+  public $calendarEvent;
   protected $calendarEventType = AssistantApiCoreTypesCalendarEvent::class;
   protected $calendarEventDataType = '';
+  /**
+   * @var AssistantApiCoreTypesCalendarEventWrapper
+   */
+  public $calendarEventWrapper;
   protected $calendarEventWrapperType = AssistantApiCoreTypesCalendarEventWrapper::class;
   protected $calendarEventWrapperDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsPersonPerson
+   */
+  public $contact;
   protected $contactType = NlpSemanticParsingModelsPersonPerson::class;
   protected $contactDataType = '';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -47,6 +63,10 @@ class NlpSemanticParsingModelsCommunicationRecipient extends \Google\Model
    * @var string
    */
   public $recipientType;
+  /**
+   * @var NlpSemanticParsingModelsCommunicationRelationshipArgument
+   */
+  public $relationship;
   protected $relationshipType = NlpSemanticParsingModelsCommunicationRelationshipArgument::class;
   protected $relationshipDataType = '';
   /**

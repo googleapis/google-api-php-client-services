@@ -20,16 +20,32 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsMediaTVShow extends \Google\Collection
 {
   protected $collection_key = 'providerMetadata';
+  /**
+   * @var NlpSemanticParsingModelsMediaMediaAnnotationList
+   */
+  public $annotationList;
   protected $annotationListType = NlpSemanticParsingModelsMediaMediaAnnotationList::class;
   protected $annotationListDataType = '';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var bool
    */
   public $isFromFastPath;
+  /**
+   * @var NlpSemanticParsingModelsMediaProviderMetadata[]
+   */
+  public $providerMetadata;
   protected $providerMetadataType = NlpSemanticParsingModelsMediaProviderMetadata::class;
   protected $providerMetadataDataType = 'array';
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $qref;
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   /**

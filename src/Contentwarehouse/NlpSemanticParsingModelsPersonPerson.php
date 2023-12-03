@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsPersonPerson extends \Google\Collection
 {
   protected $collection_key = 'contactData';
+  /**
+   * @var QualityQrewriteAlternativeNameInfo[]
+   */
+  public $alternativeNameInfo;
   protected $alternativeNameInfoType = QualityQrewriteAlternativeNameInfo::class;
   protected $alternativeNameInfoDataType = 'array';
   /**
@@ -30,8 +34,16 @@ class NlpSemanticParsingModelsPersonPerson extends \Google\Collection
    * @var string[]
    */
   public $annotationSource;
+  /**
+   * @var QualityQrewritePersonalContactData[]
+   */
+  public $contactData;
   protected $contactDataType = QualityQrewritePersonalContactData::class;
   protected $contactDataDataType = 'array';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -50,6 +62,10 @@ class NlpSemanticParsingModelsPersonPerson extends \Google\Collection
    * @var string
    */
   public $normalizedText;
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $pkgSemantics;
   protected $pkgSemanticsType = NlpSemanticParsingQRefAnnotation::class;
   protected $pkgSemanticsDataType = '';
   /**

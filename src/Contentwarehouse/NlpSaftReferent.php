@@ -25,8 +25,16 @@ class NlpSaftReferent extends \Google\Collection
    * @var string
    */
   public $explicitness;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
+  /**
+   * @var NlpSaftPhrase
+   */
+  public $phrase;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
   public $prominence;
@@ -34,6 +42,10 @@ class NlpSaftReferent extends \Google\Collection
    * @var string
    */
   public $role;
+  /**
+   * @var NlpSaftToken[]
+   */
+  public $token;
   protected $tokenType = NlpSaftToken::class;
   protected $tokenDataType = 'array';
 

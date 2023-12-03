@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSciencelitReferencedBlock extends \Google\Model
 {
+  /**
+   * @var NlpSciencelitTokenizedText
+   */
+  public $caption;
   protected $captionType = NlpSciencelitTokenizedText::class;
   protected $captionDataType = '';
   /**
    * @var string
    */
   public $reference;
+  /**
+   * @var NlpSciencelitTokenizedText
+   */
+  public $title;
   protected $titleType = NlpSciencelitTokenizedText::class;
   protected $titleDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSaftLabeledSpans extends \Google\Collection
 {
   protected $collection_key = 'labeledSpan';
+  /**
+   * @var NlpSaftLabeledSpan[]
+   */
+  public $labeledSpan;
   protected $labeledSpanType = NlpSaftLabeledSpan::class;
   protected $labeledSpanDataType = 'array';
 

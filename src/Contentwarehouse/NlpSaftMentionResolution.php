@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSaftMentionResolution extends \Google\Model
 {
+  /**
+   * @var NlpSaftEntityProfile
+   */
+  public $profile;
   protected $profileType = NlpSaftEntityProfile::class;
   protected $profileDataType = '';
   /**

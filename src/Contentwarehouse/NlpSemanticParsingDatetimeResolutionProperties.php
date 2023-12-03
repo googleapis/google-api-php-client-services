@@ -27,6 +27,10 @@ class NlpSemanticParsingDatetimeResolutionProperties extends \Google\Model
    * @var string
    */
   public $metadata;
+  /**
+   * @var NlpSemanticParsingDatetimeRelativeDateTime
+   */
+  public $relative;
   protected $relativeType = NlpSemanticParsingDatetimeRelativeDateTime::class;
   protected $relativeDataType = '';
 

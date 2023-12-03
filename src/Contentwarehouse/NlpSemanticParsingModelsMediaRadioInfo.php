@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaRadioInfo extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsMediaFrequency
+   */
+  public $frequency;
   protected $frequencyType = NlpSemanticParsingModelsMediaFrequency::class;
   protected $frequencyDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaLatLng
+   */
+  public $location;
   protected $locationType = NlpSemanticParsingModelsMediaLatLng::class;
   protected $locationDataType = '';
   public $popularity;

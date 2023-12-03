@@ -39,6 +39,10 @@ class NlpSaftToken extends \Google\Model
    * @var int
    */
   public $head;
+  /**
+   * @var Proto2BridgeMessageSet
+   */
+  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**
@@ -49,6 +53,10 @@ class NlpSaftToken extends \Google\Model
    * @var string
    */
   public $lemma;
+  /**
+   * @var NlpSaftMorphology
+   */
+  public $morph;
   protected $morphType = NlpSaftMorphology::class;
   protected $morphDataType = '';
   /**

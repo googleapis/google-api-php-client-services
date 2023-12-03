@@ -19,12 +19,20 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingLocalVicinityLocation extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingLocalLocation
+   */
+  public $base;
   protected $baseType = NlpSemanticParsingLocalLocation::class;
   protected $baseDataType = '';
   /**
    * @var string
    */
   public $connector;
+  /**
+   * @var NlpSemanticParsingLocalExtent
+   */
+  public $extent;
   protected $extentType = NlpSemanticParsingLocalExtent::class;
   protected $extentDataType = '';
 

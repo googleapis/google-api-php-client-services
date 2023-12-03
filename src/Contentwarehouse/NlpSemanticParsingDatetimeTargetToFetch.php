@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingDatetimeTargetToFetch extends \Google\Collection
 {
   protected $collection_key = 'weekday';
+  /**
+   * @var NlpSemanticParsingDatetimeEvent
+   */
+  public $event;
   protected $eventType = NlpSemanticParsingDatetimeEvent::class;
   protected $eventDataType = '';
   /**

@@ -19,14 +19,26 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingDatetimeDuration extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var string
    */
   public $modifier;
+  /**
+   * @var NlpSemanticParsingDatetimeQuantity
+   */
+  public $quantity;
   protected $quantityType = NlpSemanticParsingDatetimeQuantity::class;
   protected $quantityDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeSpan
+   */
+  public $span;
   protected $spanType = NlpSemanticParsingDatetimeSpan::class;
   protected $spanDataType = '';
 

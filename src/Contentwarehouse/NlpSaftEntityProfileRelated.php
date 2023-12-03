@@ -31,6 +31,10 @@ class NlpSaftEntityProfileRelated extends \Google\Model
    * @var int
    */
   public $relationId;
+  /**
+   * @var NlpSaftIdentifier
+   */
+  public $relationIdentifier;
   protected $relationIdentifierType = NlpSaftIdentifier::class;
   protected $relationIdentifierDataType = '';
   /**
@@ -41,6 +45,10 @@ class NlpSaftEntityProfileRelated extends \Google\Model
    * @var string
    */
   public $targetId;
+  /**
+   * @var NlpSaftIdentifier
+   */
+  public $targetIdentifier;
   protected $targetIdentifierType = NlpSaftIdentifier::class;
   protected $targetIdentifierDataType = '';
   /**

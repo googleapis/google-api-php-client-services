@@ -20,22 +20,42 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingLocalLocation extends \Google\Collection
 {
   protected $collection_key = 'locationConstraint';
+  /**
+   * @var NlpSemanticParsingLocalBasicLocation
+   */
+  public $basicLocation;
   protected $basicLocationType = NlpSemanticParsingLocalBasicLocation::class;
   protected $basicLocationDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalCompoundLocation
+   */
+  public $compoundLocation;
   protected $compoundLocationType = NlpSemanticParsingLocalCompoundLocation::class;
   protected $compoundLocationDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalContactLocation
+   */
+  public $contactLocation;
   protected $contactLocationType = NlpSemanticParsingLocalContactLocation::class;
   protected $contactLocationDataType = '';
   /**
    * @var bool
    */
   public $isMerged;
+  /**
+   * @var NlpSemanticParsingLocalLocationConstraint[]
+   */
+  public $locationConstraint;
   protected $locationConstraintType = NlpSemanticParsingLocalLocationConstraint::class;
   protected $locationConstraintDataType = 'array';
   /**
    * @var int
    */
   public $numBytes;
+  /**
+   * @var QualityDialogManagerLocalResult
+   */
+  public $resolvedLocalResult;
   protected $resolvedLocalResultType = QualityDialogManagerLocalResult::class;
   protected $resolvedLocalResultDataType = '';
   /**
@@ -46,8 +66,16 @@ class NlpSemanticParsingLocalLocation extends \Google\Collection
    * @var string
    */
   public $text;
+  /**
+   * @var KnowledgeVerticalsWeatherProtoUserSpecifiedLocation
+   */
+  public $userSpecifiedLocation;
   protected $userSpecifiedLocationType = KnowledgeVerticalsWeatherProtoUserSpecifiedLocation::class;
   protected $userSpecifiedLocationDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalVicinityLocation
+   */
+  public $vicinityLocation;
   protected $vicinityLocationType = NlpSemanticParsingLocalVicinityLocation::class;
   protected $vicinityLocationDataType = '';
 

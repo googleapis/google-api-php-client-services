@@ -19,6 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaPodcast extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -29,6 +33,10 @@ class NlpSemanticParsingModelsMediaPodcast extends \Google\Model
    * @var string
    */
   public $normalizedText;
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $qref;
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   /**

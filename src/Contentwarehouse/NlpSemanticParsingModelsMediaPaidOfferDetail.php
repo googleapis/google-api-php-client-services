@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsMediaPaidOfferDetail extends \Google\Collection
 {
   protected $collection_key = 'cost';
+  /**
+   * @var NlpSemanticParsingModelsMediaCost[]
+   */
+  public $cost;
   protected $costType = NlpSemanticParsingModelsMediaCost::class;
   protected $costDataType = 'array';
   /**

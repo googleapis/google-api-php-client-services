@@ -20,16 +20,32 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingLocalLocationElement extends \Google\Collection
 {
   protected $collection_key = 'dialogReferents';
+  /**
+   * @var PersonalizationMapsAliasIcon[]
+   */
+  public $aliasIcon;
   protected $aliasIconType = PersonalizationMapsAliasIcon::class;
   protected $aliasIconDataType = 'array';
   /**
    * @var string
    */
   public $aliasLocation;
+  /**
+   * @var NlpSemanticParsingLocalBusinessType
+   */
+  public $businessType;
   protected $businessTypeType = NlpSemanticParsingLocalBusinessType::class;
   protected $businessTypeDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalContactLocation
+   */
+  public $contactLocation;
   protected $contactLocationType = NlpSemanticParsingLocalContactLocation::class;
   protected $contactLocationDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsDialogReferentsDialogReferents[]
+   */
+  public $dialogReferents;
   protected $dialogReferentsType = NlpSemanticParsingModelsDialogReferentsDialogReferents::class;
   protected $dialogReferentsDataType = 'array';
   /**
@@ -40,12 +56,28 @@ class NlpSemanticParsingLocalLocationElement extends \Google\Collection
    * @var bool
    */
   public $genericLocation;
+  /**
+   * @var NlpSemanticParsingLocalHotelType
+   */
+  public $hotelType;
   protected $hotelTypeType = NlpSemanticParsingLocalHotelType::class;
   protected $hotelTypeDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalHyperReliableData
+   */
+  public $hyperReliableData;
   protected $hyperReliableDataType = NlpSemanticParsingLocalHyperReliableData::class;
   protected $hyperReliableDataDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalImplicitLocalCategory
+   */
+  public $implicitLocalCategory;
   protected $implicitLocalCategoryType = NlpSemanticParsingLocalImplicitLocalCategory::class;
   protected $implicitLocalCategoryDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalLocalResultId
+   */
+  public $localResultId;
   protected $localResultIdType = NlpSemanticParsingLocalLocalResultId::class;
   protected $localResultIdDataType = '';
   /**
@@ -56,10 +88,22 @@ class NlpSemanticParsingLocalLocationElement extends \Google\Collection
    * @var int
    */
   public $number;
+  /**
+   * @var NlpSemanticParsingPersonalReferenceAnnotation
+   */
+  public $personalReferenceLocation;
   protected $personalReferenceLocationType = NlpSemanticParsingPersonalReferenceAnnotation::class;
   protected $personalReferenceLocationDataType = '';
+  /**
+   * @var NlpSemanticParsingQRefAnnotation
+   */
+  public $qrefLocation;
   protected $qrefLocationType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefLocationDataType = '';
+  /**
+   * @var NlpSemanticParsingSaftMentionAnnotation
+   */
+  public $saftLocation;
   protected $saftLocationType = NlpSemanticParsingSaftMentionAnnotation::class;
   protected $saftLocationDataType = '';
   /**

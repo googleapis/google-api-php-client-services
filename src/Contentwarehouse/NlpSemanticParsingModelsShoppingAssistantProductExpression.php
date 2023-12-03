@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsShoppingAssistantProductExpression extends \Google\Collection
 {
   protected $collection_key = 'phrases';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -30,10 +34,22 @@ class NlpSemanticParsingModelsShoppingAssistantProductExpression extends \Google
    * @var string
    */
   public $grammaticalNumber;
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantPhrase[]
+   */
+  public $phrases;
   protected $phrasesType = NlpSemanticParsingModelsShoppingAssistantPhrase::class;
   protected $phrasesDataType = 'array';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantProductClassification
+   */
+  public $productClassification;
   protected $productClassificationType = NlpSemanticParsingModelsShoppingAssistantProductClassification::class;
   protected $productClassificationDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsShoppingAssistantShoppingListItemInfo
+   */
+  public $shoppingListItemInfo;
   protected $shoppingListItemInfoType = NlpSemanticParsingModelsShoppingAssistantShoppingListItemInfo::class;
   protected $shoppingListItemInfoDataType = '';
 

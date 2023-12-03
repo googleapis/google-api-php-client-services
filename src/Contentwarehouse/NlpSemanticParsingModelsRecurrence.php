@@ -19,8 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsRecurrence extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceDailyPattern
+   */
+  public $dailyPattern;
   protected $dailyPatternType = NlpSemanticParsingModelsRecurrenceDailyPattern::class;
   protected $dailyPatternDataType = '';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -31,20 +39,44 @@ class NlpSemanticParsingModelsRecurrence extends \Google\Model
    * @var string
    */
   public $frequency;
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceMonthlyPattern
+   */
+  public $monthlyPattern;
   protected $monthlyPatternType = NlpSemanticParsingModelsRecurrenceMonthlyPattern::class;
   protected $monthlyPatternDataType = '';
   /**
    * @var int
    */
   public $numInstancesInFrequency;
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceRecurrenceEnd
+   */
+  public $recurrenceEnd;
   protected $recurrenceEndType = NlpSemanticParsingModelsRecurrenceRecurrenceEnd::class;
   protected $recurrenceEndDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceRecurrenceStart
+   */
+  public $recurrenceStart;
   protected $recurrenceStartType = NlpSemanticParsingModelsRecurrenceRecurrenceStart::class;
   protected $recurrenceStartDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $time;
   protected $timeType = NlpSemanticParsingDatetimeDateTime::class;
   protected $timeDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceWeeklyPattern
+   */
+  public $weeklyPattern;
   protected $weeklyPatternType = NlpSemanticParsingModelsRecurrenceWeeklyPattern::class;
   protected $weeklyPatternDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsRecurrenceYearlyPattern
+   */
+  public $yearlyPattern;
   protected $yearlyPatternType = NlpSemanticParsingModelsRecurrenceYearlyPattern::class;
   protected $yearlyPatternDataType = '';
 

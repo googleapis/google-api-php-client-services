@@ -20,18 +20,38 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsDialogReferentsDialogReferents extends \Google\Collection
 {
   protected $collection_key = 'taskMention';
+  /**
+   * @var NlpSemanticParsingAnnotationEvalData
+   */
+  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsDialogReferentsListSelection
+   */
+  public $field;
   protected $fieldType = NlpSemanticParsingModelsDialogReferentsListSelection::class;
   protected $fieldDataType = '';
   /**
    * @var int
    */
   public $index;
+  /**
+   * @var NlpSemanticParsingModelsDialogReferentsDialogReferents
+   */
+  public $next;
   protected $nextType = NlpSemanticParsingModelsDialogReferentsDialogReferents::class;
   protected $nextDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsDialogReferentsListSelection[]
+   */
+  public $selection;
   protected $selectionType = NlpSemanticParsingModelsDialogReferentsListSelection::class;
   protected $selectionDataType = 'array';
+  /**
+   * @var NlpSemanticParsingModelsDialogReferentsListSelection[]
+   */
+  public $taskMention;
   protected $taskMentionType = NlpSemanticParsingModelsDialogReferentsListSelection::class;
   protected $taskMentionDataType = 'array';
 

@@ -36,14 +36,26 @@ class NlpSemanticParsingDatetimeFetchedRelativeDateTime extends \Google\Collecti
    * @var int[]
    */
   public $ordinal;
+  /**
+   * @var NlpSemanticParsingDatetimeRange
+   */
+  public $range;
   protected $rangeType = NlpSemanticParsingDatetimeRange::class;
   protected $rangeDataType = '';
   /**
    * @var string
    */
   public $rangeModifier;
+  /**
+   * @var NlpSemanticParsingDatetimeResolutionProperties
+   */
+  public $relativeRange;
   protected $relativeRangeType = NlpSemanticParsingDatetimeResolutionProperties::class;
   protected $relativeRangeDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeTargetToFetch
+   */
+  public $target;
   protected $targetType = NlpSemanticParsingDatetimeTargetToFetch::class;
   protected $targetDataType = '';
 

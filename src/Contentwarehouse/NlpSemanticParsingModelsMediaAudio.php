@@ -20,36 +20,92 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsMediaAudio extends \Google\Collection
 {
   protected $collection_key = 'tag';
+  /**
+   * @var NlpSemanticParsingModelsMediaAlbumTitle
+   */
+  public $album;
   protected $albumType = NlpSemanticParsingModelsMediaAlbumTitle::class;
   protected $albumDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaMusicArtist
+   */
+  public $artist;
   protected $artistType = NlpSemanticParsingModelsMediaMusicArtist::class;
   protected $artistDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaBook
+   */
+  public $book;
   protected $bookType = NlpSemanticParsingModelsMediaBook::class;
   protected $bookDataType = '';
+  /**
+   * @var NlpSemanticParsingDatetimeDateTime
+   */
+  public $dateTime;
   protected $dateTimeType = NlpSemanticParsingDatetimeDateTime::class;
   protected $dateTimeDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaEpisodeConstraint[]
+   */
+  public $episodeConstraint;
   protected $episodeConstraintType = NlpSemanticParsingModelsMediaEpisodeConstraint::class;
   protected $episodeConstraintDataType = 'array';
+  /**
+   * @var NlpSemanticParsingModelsMediaGame
+   */
+  public $game;
   protected $gameType = NlpSemanticParsingModelsMediaGame::class;
   protected $gameDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaGenericMusic
+   */
+  public $genericMusic;
   protected $genericMusicType = NlpSemanticParsingModelsMediaGenericMusic::class;
   protected $genericMusicDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaMusicGenre
+   */
+  public $genre;
   protected $genreType = NlpSemanticParsingModelsMediaMusicGenre::class;
   protected $genreDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaMovie
+   */
+  public $movie;
   protected $movieType = NlpSemanticParsingModelsMediaMovie::class;
   protected $movieDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaNewsTopic
+   */
+  public $newsTopic;
   protected $newsTopicType = NlpSemanticParsingModelsMediaNewsTopic::class;
   protected $newsTopicDataType = '';
   /**
    * @var bool
    */
   public $noExplicitAudio;
+  /**
+   * @var NlpSemanticParsingModelsMediaMusicPlaylist
+   */
+  public $playlist;
   protected $playlistType = NlpSemanticParsingModelsMediaMusicPlaylist::class;
   protected $playlistDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaPodcast
+   */
+  public $podcast;
   protected $podcastType = NlpSemanticParsingModelsMediaPodcast::class;
   protected $podcastDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaRadio
+   */
+  public $radio;
   protected $radioType = NlpSemanticParsingModelsMediaRadio::class;
   protected $radioDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaRadioNetwork
+   */
+  public $radioNetwork;
   protected $radioNetworkType = NlpSemanticParsingModelsMediaRadioNetwork::class;
   protected $radioNetworkDataType = '';
   /**
@@ -60,14 +116,26 @@ class NlpSemanticParsingModelsMediaAudio extends \Google\Collection
    * @var string
    */
   public $scoreType;
+  /**
+   * @var NlpSemanticParsingModelsMediaSeasonConstraint
+   */
+  public $seasonConstraint;
   protected $seasonConstraintType = NlpSemanticParsingModelsMediaSeasonConstraint::class;
   protected $seasonConstraintDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaSong
+   */
+  public $song;
   protected $songType = NlpSemanticParsingModelsMediaSong::class;
   protected $songDataType = '';
   /**
    * @var string[]
    */
   public $tag;
+  /**
+   * @var NlpSemanticParsingModelsMediaTVShow
+   */
+  public $tvShow;
   protected $tvShowType = NlpSemanticParsingModelsMediaTVShow::class;
   protected $tvShowDataType = '';
 

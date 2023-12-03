@@ -24,18 +24,30 @@ class NlpSemanticParsingModelsMediaMediaAnnotation extends \Google\Collection
    * @var string
    */
   public $artistName;
+  /**
+   * @var NlpSemanticParsingModelsMediaAudiobookInfo
+   */
+  public $audiobookInfo;
   protected $audiobookInfoType = NlpSemanticParsingModelsMediaAudiobookInfo::class;
   protected $audiobookInfoDataType = '';
   /**
    * @var string
    */
   public $contentType;
+  /**
+   * @var AssistantApiCoreTypesImage[]
+   */
+  public $image;
   protected $imageType = AssistantApiCoreTypesImage::class;
   protected $imageDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var NlpSemanticParsingModelsMediaNewsInfo
+   */
+  public $newsInfo;
   protected $newsInfoType = NlpSemanticParsingModelsMediaNewsInfo::class;
   protected $newsInfoDataType = '';
   /**
@@ -46,24 +58,48 @@ class NlpSemanticParsingModelsMediaMediaAnnotation extends \Google\Collection
    * @var string
    */
   public $playlistVisibility;
+  /**
+   * @var NlpSemanticParsingModelsMediaPodcastInfo
+   */
+  public $podcastInfo;
   protected $podcastInfoType = NlpSemanticParsingModelsMediaPodcastInfo::class;
   protected $podcastInfoDataType = '';
   /**
    * @var string
    */
   public $primaryEntityMid;
+  /**
+   * @var NlpSemanticParsingModelsMediaMediaProviderInfo[]
+   */
+  public $providerInfo;
   protected $providerInfoType = NlpSemanticParsingModelsMediaMediaProviderInfo::class;
   protected $providerInfoDataType = 'array';
+  /**
+   * @var NlpSemanticParsingModelsMediaPurchaseInfo
+   */
+  public $purchaseInfo;
   protected $purchaseInfoType = NlpSemanticParsingModelsMediaPurchaseInfo::class;
   protected $purchaseInfoDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaRadioInfo
+   */
+  public $radioInfo;
   protected $radioInfoType = NlpSemanticParsingModelsMediaRadioInfo::class;
   protected $radioInfoDataType = '';
+  /**
+   * @var NlpSemanticParsingModelsMediaRentalInfo
+   */
+  public $rentalInfo;
   protected $rentalInfoType = NlpSemanticParsingModelsMediaRentalInfo::class;
   protected $rentalInfoDataType = '';
   /**
    * @var string
    */
   public $source;
+  /**
+   * @var NlpSemanticParsingModelsMediaYouTubePlaylistInfo
+   */
+  public $youtubePlaylistInfo;
   protected $youtubePlaylistInfoType = NlpSemanticParsingModelsMediaYouTubePlaylistInfo::class;
   protected $youtubePlaylistInfoDataType = '';
 

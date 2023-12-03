@@ -31,6 +31,10 @@ class NlpSemanticParsingDatetimeAbsoluteDateTime extends \Google\Model
    * @var string
    */
   public $deleted11;
+  /**
+   * @var NlpSemanticParsingDatetimeHoliday
+   */
+  public $holiday;
   protected $holidayType = NlpSemanticParsingDatetimeHoliday::class;
   protected $holidayDataType = '';
   /**
@@ -61,9 +65,17 @@ class NlpSemanticParsingDatetimeAbsoluteDateTime extends \Google\Model
    * @var string
    */
   public $month;
+  /**
+   * @var NlpSemanticParsingDatetimeNonGregorianDate
+   */
+  public $nonGregorianDate;
   protected $nonGregorianDateType = NlpSemanticParsingDatetimeNonGregorianDate::class;
   protected $nonGregorianDateDataType = '';
   public $partialSecond;
+  /**
+   * @var NlpSemanticParsingDatetimeDateTimeProperty
+   */
+  public $properties;
   protected $propertiesType = NlpSemanticParsingDatetimeDateTimeProperty::class;
   protected $propertiesDataType = '';
   /**

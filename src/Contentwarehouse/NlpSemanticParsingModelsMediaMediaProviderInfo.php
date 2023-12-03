@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsMediaMediaProviderInfo extends \Google\Collection
 {
   protected $collection_key = 'deeplinkInfo';
+  /**
+   * @var NlpSemanticParsingModelsMediaDeeplinkInfo[]
+   */
+  public $deeplinkInfo;
   protected $deeplinkInfoType = NlpSemanticParsingModelsMediaDeeplinkInfo::class;
   protected $deeplinkInfoDataType = 'array';
   /**

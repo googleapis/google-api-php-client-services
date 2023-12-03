@@ -19,24 +19,64 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingLocalLocationConstraint extends \Google\Model
 {
+  /**
+   * @var NlpSemanticParsingLocalAmenities
+   */
+  public $amenities;
   protected $amenitiesType = NlpSemanticParsingLocalAmenities::class;
   protected $amenitiesDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalChainMemberConstraint
+   */
+  public $chainMember;
   protected $chainMemberType = NlpSemanticParsingLocalChainMemberConstraint::class;
   protected $chainMemberDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalCuisineConstraint
+   */
+  public $cuisine;
   protected $cuisineType = NlpSemanticParsingLocalCuisineConstraint::class;
   protected $cuisineDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalEvChargingStationConnectorConstraint
+   */
+  public $evcsConnectorConstraint;
   protected $evcsConnectorConstraintType = NlpSemanticParsingLocalEvChargingStationConnectorConstraint::class;
   protected $evcsConnectorConstraintDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalEvChargingStationPaymentConstraint
+   */
+  public $evcsPaymentConstraint;
   protected $evcsPaymentConstraintType = NlpSemanticParsingLocalEvChargingStationPaymentConstraint::class;
   protected $evcsPaymentConstraintDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalEvChargingStationSpeedConstraint
+   */
+  public $evcsSpeedConstraint;
   protected $evcsSpeedConstraintType = NlpSemanticParsingLocalEvChargingStationSpeedConstraint::class;
   protected $evcsSpeedConstraintDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalGcidConstraint
+   */
+  public $gcidConstraint;
   protected $gcidConstraintType = NlpSemanticParsingLocalGcidConstraint::class;
   protected $gcidConstraintDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalHealthInsuranceConstraint
+   */
+  public $healthInsurance;
   protected $healthInsuranceType = NlpSemanticParsingLocalHealthInsuranceConstraint::class;
   protected $healthInsuranceDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalHyperReliableData
+   */
+  public $hyperReliableData;
   protected $hyperReliableDataType = NlpSemanticParsingLocalHyperReliableData::class;
   protected $hyperReliableDataDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalMenuItem
+   */
+  public $menuItem;
   protected $menuItemType = NlpSemanticParsingLocalMenuItem::class;
   protected $menuItemDataType = '';
   /**
@@ -51,14 +91,34 @@ class NlpSemanticParsingLocalLocationConstraint extends \Google\Model
    * @var bool
    */
   public $open24Hours;
+  /**
+   * @var NlpSemanticParsingLocalPriceConstraint
+   */
+  public $price;
   protected $priceType = NlpSemanticParsingLocalPriceConstraint::class;
   protected $priceDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalQualityConstraint
+   */
+  public $quality;
   protected $qualityType = NlpSemanticParsingLocalQualityConstraint::class;
   protected $qualityDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalRoomConstraint
+   */
+  public $rooms;
   protected $roomsType = NlpSemanticParsingLocalRoomConstraint::class;
   protected $roomsDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalScalableAttribute
+   */
+  public $scalableAttribute;
   protected $scalableAttributeType = NlpSemanticParsingLocalScalableAttribute::class;
   protected $scalableAttributeDataType = '';
+  /**
+   * @var NlpSemanticParsingLocalServiceConstraint
+   */
+  public $service;
   protected $serviceType = NlpSemanticParsingLocalServiceConstraint::class;
   protected $serviceDataType = '';
   /**
@@ -81,6 +141,10 @@ class NlpSemanticParsingLocalLocationConstraint extends \Google\Model
    * @var string
    */
   public $vaccineType;
+  /**
+   * @var NlpSemanticParsingLocalVisitHistoryConstraint
+   */
+  public $visitHistory;
   protected $visitHistoryType = NlpSemanticParsingLocalVisitHistoryConstraint::class;
   protected $visitHistoryDataType = '';
 
