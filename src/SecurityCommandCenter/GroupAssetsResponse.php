@@ -20,6 +20,10 @@ namespace Google\Service\SecurityCommandCenter;
 class GroupAssetsResponse extends \Google\Collection
 {
   protected $collection_key = 'groupByResults';
+  /**
+   * @var GroupResult[]
+   */
+  public $groupByResults;
   protected $groupByResultsType = GroupResult::class;
   protected $groupByResultsDataType = 'array';
   /**

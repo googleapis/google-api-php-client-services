@@ -19,10 +19,22 @@ namespace Google\Service\SecurityCommandCenter;
 
 class SimulatedResult extends \Google\Model
 {
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var Finding
+   */
+  public $finding;
   protected $findingType = Finding::class;
   protected $findingDataType = '';
+  /**
+   * @var SecuritycenterEmpty
+   */
+  public $noViolation;
   protected $noViolationType = SecuritycenterEmpty::class;
   protected $noViolationDataType = '';
 

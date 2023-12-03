@@ -23,12 +23,20 @@ class CustomModuleValidationError extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var Position
+   */
+  public $end;
   protected $endType = Position::class;
   protected $endDataType = '';
   /**
    * @var string
    */
   public $fieldPath;
+  /**
+   * @var Position
+   */
+  public $start;
   protected $startType = Position::class;
   protected $startDataType = '';
 

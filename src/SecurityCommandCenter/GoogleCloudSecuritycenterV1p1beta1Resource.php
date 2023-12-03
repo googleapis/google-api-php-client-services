@@ -20,6 +20,10 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV1p1beta1Resource extends \Google\Collection
 {
   protected $collection_key = 'folders';
+  /**
+   * @var GoogleCloudSecuritycenterV1p1beta1Folder[]
+   */
+  public $folders;
   protected $foldersType = GoogleCloudSecuritycenterV1p1beta1Folder::class;
   protected $foldersDataType = 'array';
   /**

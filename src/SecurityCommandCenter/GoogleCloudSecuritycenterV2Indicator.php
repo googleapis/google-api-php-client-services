@@ -28,6 +28,10 @@ class GoogleCloudSecuritycenterV2Indicator extends \Google\Collection
    * @var string[]
    */
   public $ipAddresses;
+  /**
+   * @var GoogleCloudSecuritycenterV2ProcessSignature[]
+   */
+  public $signatures;
   protected $signaturesType = GoogleCloudSecuritycenterV2ProcessSignature::class;
   protected $signaturesDataType = 'array';
   /**

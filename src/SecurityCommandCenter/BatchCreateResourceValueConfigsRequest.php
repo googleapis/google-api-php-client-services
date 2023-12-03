@@ -20,6 +20,10 @@ namespace Google\Service\SecurityCommandCenter;
 class BatchCreateResourceValueConfigsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
+  /**
+   * @var CreateResourceValueConfigRequest[]
+   */
+  public $requests;
   protected $requestsType = CreateResourceValueConfigRequest::class;
   protected $requestsDataType = 'array';
 

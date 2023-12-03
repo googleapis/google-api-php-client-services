@@ -19,8 +19,16 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ListFindingsResult extends \Google\Model
 {
+  /**
+   * @var Finding
+   */
+  public $finding;
   protected $findingType = Finding::class;
   protected $findingDataType = '';
+  /**
+   * @var SecuritycenterResource
+   */
+  public $resource;
   protected $resourceType = SecuritycenterResource::class;
   protected $resourceDataType = '';
   /**

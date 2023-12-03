@@ -23,6 +23,10 @@ class GoogleCloudSecuritycenterV1Property extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var Expr
+   */
+  public $valueExpression;
   protected $valueExpressionType = Expr::class;
   protected $valueExpressionDataType = '';
 

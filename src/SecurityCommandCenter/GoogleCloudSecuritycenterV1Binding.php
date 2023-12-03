@@ -28,8 +28,16 @@ class GoogleCloudSecuritycenterV1Binding extends \Google\Collection
    * @var string
    */
   public $ns;
+  /**
+   * @var Role
+   */
+  public $role;
   protected $roleType = Role::class;
   protected $roleDataType = '';
+  /**
+   * @var Subject[]
+   */
+  public $subjects;
   protected $subjectsType = Subject::class;
   protected $subjectsDataType = 'array';
 

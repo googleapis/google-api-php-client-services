@@ -24,6 +24,10 @@ class ListDescendantSecurityHealthAnalyticsCustomModulesResponse extends \Google
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule[]
+   */
+  public $securityHealthAnalyticsCustomModules;
   protected $securityHealthAnalyticsCustomModulesType = GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule::class;
   protected $securityHealthAnalyticsCustomModulesDataType = 'array';
 

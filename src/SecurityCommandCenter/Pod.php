@@ -20,8 +20,16 @@ namespace Google\Service\SecurityCommandCenter;
 class Pod extends \Google\Collection
 {
   protected $collection_key = 'labels';
+  /**
+   * @var Container[]
+   */
+  public $containers;
   protected $containersType = Container::class;
   protected $containersDataType = 'array';
+  /**
+   * @var Label[]
+   */
+  public $labels;
   protected $labelsType = Label::class;
   protected $labelsDataType = 'array';
   /**

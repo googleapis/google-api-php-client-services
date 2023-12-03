@@ -20,6 +20,10 @@ namespace Google\Service\SecurityCommandCenter;
 class SecuritycenterObject extends \Google\Collection
 {
   protected $collection_key = 'containers';
+  /**
+   * @var Container[]
+   */
+  public $containers;
   protected $containersType = Container::class;
   protected $containersDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule extends \Google\Model
 {
+  /**
+   * @var GoogleCloudSecuritycenterV1CustomConfig
+   */
+  public $customConfig;
   protected $customConfigType = GoogleCloudSecuritycenterV1CustomConfig::class;
   protected $customConfigDataType = '';
   /**

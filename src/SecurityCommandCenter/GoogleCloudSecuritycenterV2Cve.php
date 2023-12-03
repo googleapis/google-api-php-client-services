@@ -20,12 +20,20 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Cve extends \Google\Collection
 {
   protected $collection_key = 'references';
+  /**
+   * @var GoogleCloudSecuritycenterV2Cvssv3
+   */
+  public $cvssv3;
   protected $cvssv3Type = GoogleCloudSecuritycenterV2Cvssv3::class;
   protected $cvssv3DataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleCloudSecuritycenterV2Reference[]
+   */
+  public $references;
   protected $referencesType = GoogleCloudSecuritycenterV2Reference::class;
   protected $referencesDataType = 'array';
   /**

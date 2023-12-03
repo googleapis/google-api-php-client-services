@@ -24,6 +24,10 @@ class GoogleCloudSecuritycenterV2NodePool extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudSecuritycenterV2Node[]
+   */
+  public $nodes;
   protected $nodesType = GoogleCloudSecuritycenterV2Node::class;
   protected $nodesDataType = 'array';
 

@@ -24,6 +24,10 @@ class Access extends \Google\Collection
    * @var string
    */
   public $callerIp;
+  /**
+   * @var Geolocation
+   */
+  public $callerIpGeo;
   protected $callerIpGeoType = Geolocation::class;
   protected $callerIpGeoDataType = '';
   /**
@@ -38,6 +42,10 @@ class Access extends \Google\Collection
    * @var string
    */
   public $principalSubject;
+  /**
+   * @var ServiceAccountDelegationInfo[]
+   */
+  public $serviceAccountDelegationInfo;
   protected $serviceAccountDelegationInfoType = ServiceAccountDelegationInfo::class;
   protected $serviceAccountDelegationInfoDataType = 'array';
   /**

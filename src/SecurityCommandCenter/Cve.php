@@ -20,12 +20,20 @@ namespace Google\Service\SecurityCommandCenter;
 class Cve extends \Google\Collection
 {
   protected $collection_key = 'references';
+  /**
+   * @var Cvssv3
+   */
+  public $cvssv3;
   protected $cvssv3Type = Cvssv3::class;
   protected $cvssv3DataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var Reference[]
+   */
+  public $references;
   protected $referencesType = Reference::class;
   protected $referencesDataType = 'array';
   /**

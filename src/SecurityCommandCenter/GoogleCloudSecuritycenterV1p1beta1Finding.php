@@ -51,6 +51,10 @@ class GoogleCloudSecuritycenterV1p1beta1Finding extends \Google\Model
    * @var string
    */
   public $resourceName;
+  /**
+   * @var GoogleCloudSecuritycenterV1p1beta1SecurityMarks
+   */
+  public $securityMarks;
   protected $securityMarksType = GoogleCloudSecuritycenterV1p1beta1SecurityMarks::class;
   protected $securityMarksDataType = '';
   /**

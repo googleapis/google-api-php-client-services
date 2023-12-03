@@ -20,6 +20,10 @@ namespace Google\Service\SecurityCommandCenter;
 class BatchCreateResourceValueConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'resourceValueConfigs';
+  /**
+   * @var GoogleCloudSecuritycenterV1ResourceValueConfig[]
+   */
+  public $resourceValueConfigs;
   protected $resourceValueConfigsType = GoogleCloudSecuritycenterV1ResourceValueConfig::class;
   protected $resourceValueConfigsDataType = 'array';
 

@@ -170,9 +170,10 @@ class FoldersSecurityHealthAnalyticsSettingsCustomModules extends \Google\Servic
    * (customModules.simulate)
    *
    * @param string $parent Required. The relative resource name of the
-   * organization, project, or folder. See:
-   * https://cloud.google.com/apis/design/resource_names#relative_resource_name An
-   * example is: "organizations/{organization_id}".
+   * organization, project, or folder. For more information about relative
+   * resource names, see [Relative Resource Name](https://cloud.google.com/apis/de
+   * sign/resource_names#relative_resource_name) Example:
+   * `organizations/{organization_id}`
    * @param SimulateSecurityHealthAnalyticsCustomModuleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SimulateSecurityHealthAnalyticsCustomModuleResponse

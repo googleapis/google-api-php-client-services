@@ -17,31 +17,46 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV1CustomOutputSpec extends \Google\Collection
+class Application extends \Google\Model
 {
-  protected $collection_key = 'properties';
   /**
-   * @var GoogleCloudSecuritycenterV1Property[]
+   * @var string
    */
-  public $properties;
-  protected $propertiesType = GoogleCloudSecuritycenterV1Property::class;
-  protected $propertiesDataType = 'array';
+  public $baseUri;
+  /**
+   * @var string
+   */
+  public $fullUri;
 
   /**
-   * @param GoogleCloudSecuritycenterV1Property[]
+   * @param string
    */
-  public function setProperties($properties)
+  public function setBaseUri($baseUri)
   {
-    $this->properties = $properties;
+    $this->baseUri = $baseUri;
   }
   /**
-   * @return GoogleCloudSecuritycenterV1Property[]
+   * @return string
    */
-  public function getProperties()
+  public function getBaseUri()
   {
-    return $this->properties;
+    return $this->baseUri;
+  }
+  /**
+   * @param string
+   */
+  public function setFullUri($fullUri)
+  {
+    $this->fullUri = $fullUri;
+  }
+  /**
+   * @return string
+   */
+  public function getFullUri()
+  {
+    return $this->fullUri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudSecuritycenterV1CustomOutputSpec::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV1CustomOutputSpec');
+class_alias(Application::class, 'Google_Service_SecurityCommandCenter_Application');

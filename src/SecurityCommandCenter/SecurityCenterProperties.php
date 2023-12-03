@@ -20,6 +20,10 @@ namespace Google\Service\SecurityCommandCenter;
 class SecurityCenterProperties extends \Google\Collection
 {
   protected $collection_key = 'resourceOwners';
+  /**
+   * @var Folder[]
+   */
+  public $folders;
   protected $foldersType = Folder::class;
   protected $foldersDataType = 'array';
   /**

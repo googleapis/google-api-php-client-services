@@ -20,12 +20,20 @@ namespace Google\Service\SecurityCommandCenter;
 class AttackPath extends \Google\Collection
 {
   protected $collection_key = 'pathNodes';
+  /**
+   * @var AttackPathEdge[]
+   */
+  public $edges;
   protected $edgesType = AttackPathEdge::class;
   protected $edgesDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var AttackPathNode[]
+   */
+  public $pathNodes;
   protected $pathNodesType = AttackPathNode::class;
   protected $pathNodesDataType = 'array';
 

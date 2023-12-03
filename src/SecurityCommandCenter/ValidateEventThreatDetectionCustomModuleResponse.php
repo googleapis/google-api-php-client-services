@@ -19,6 +19,10 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ValidateEventThreatDetectionCustomModuleResponse extends \Google\Model
 {
+  /**
+   * @var CustomModuleValidationErrors
+   */
+  public $errors;
   protected $errorsType = CustomModuleValidationErrors::class;
   protected $errorsDataType = '';
 

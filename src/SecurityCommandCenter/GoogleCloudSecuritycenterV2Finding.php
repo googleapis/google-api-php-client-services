@@ -20,10 +20,30 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
 {
   protected $collection_key = 'processes';
+  /**
+   * @var GoogleCloudSecuritycenterV2Access
+   */
+  public $access;
   protected $accessType = GoogleCloudSecuritycenterV2Access::class;
   protected $accessDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2Application
+   */
+  public $application;
+  protected $applicationType = GoogleCloudSecuritycenterV2Application::class;
+  protected $applicationDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2AttackExposure
+   */
+  public $attackExposure;
   protected $attackExposureType = GoogleCloudSecuritycenterV2AttackExposure::class;
   protected $attackExposureDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2BackupDisasterRecovery
+   */
+  public $backupDisasterRecovery;
+  protected $backupDisasterRecoveryType = GoogleCloudSecuritycenterV2BackupDisasterRecovery::class;
+  protected $backupDisasterRecoveryDataType = '';
   /**
    * @var string
    */
@@ -32,22 +52,50 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $category;
+  /**
+   * @var GoogleCloudSecuritycenterV2CloudDlpDataProfile
+   */
+  public $cloudDlpDataProfile;
   protected $cloudDlpDataProfileType = GoogleCloudSecuritycenterV2CloudDlpDataProfile::class;
   protected $cloudDlpDataProfileDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2CloudDlpInspection
+   */
+  public $cloudDlpInspection;
   protected $cloudDlpInspectionType = GoogleCloudSecuritycenterV2CloudDlpInspection::class;
   protected $cloudDlpInspectionDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2Compliance[]
+   */
+  public $compliances;
   protected $compliancesType = GoogleCloudSecuritycenterV2Compliance::class;
   protected $compliancesDataType = 'array';
+  /**
+   * @var GoogleCloudSecuritycenterV2Connection[]
+   */
+  public $connections;
   protected $connectionsType = GoogleCloudSecuritycenterV2Connection::class;
   protected $connectionsDataType = 'array';
+  /**
+   * @var GoogleCloudSecuritycenterV2ContactDetails[]
+   */
+  public $contacts;
   protected $contactsType = GoogleCloudSecuritycenterV2ContactDetails::class;
   protected $contactsDataType = 'map';
+  /**
+   * @var GoogleCloudSecuritycenterV2Container[]
+   */
+  public $containers;
   protected $containersType = GoogleCloudSecuritycenterV2Container::class;
   protected $containersDataType = 'array';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudSecuritycenterV2Database
+   */
+  public $database;
   protected $databaseType = GoogleCloudSecuritycenterV2Database::class;
   protected $databaseDataType = '';
   /**
@@ -58,32 +106,72 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $eventTime;
+  /**
+   * @var GoogleCloudSecuritycenterV2Exfiltration
+   */
+  public $exfiltration;
   protected $exfiltrationType = GoogleCloudSecuritycenterV2Exfiltration::class;
   protected $exfiltrationDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2ExternalSystem[]
+   */
+  public $externalSystems;
   protected $externalSystemsType = GoogleCloudSecuritycenterV2ExternalSystem::class;
   protected $externalSystemsDataType = 'map';
   /**
    * @var string
    */
   public $externalUri;
+  /**
+   * @var GoogleCloudSecuritycenterV2File[]
+   */
+  public $files;
   protected $filesType = GoogleCloudSecuritycenterV2File::class;
   protected $filesDataType = 'array';
   /**
    * @var string
    */
   public $findingClass;
+  /**
+   * @var GoogleCloudSecuritycenterV2IamBinding[]
+   */
+  public $iamBindings;
   protected $iamBindingsType = GoogleCloudSecuritycenterV2IamBinding::class;
   protected $iamBindingsDataType = 'array';
+  /**
+   * @var GoogleCloudSecuritycenterV2Indicator
+   */
+  public $indicator;
   protected $indicatorType = GoogleCloudSecuritycenterV2Indicator::class;
   protected $indicatorDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2KernelRootkit
+   */
+  public $kernelRootkit;
   protected $kernelRootkitType = GoogleCloudSecuritycenterV2KernelRootkit::class;
   protected $kernelRootkitDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2Kubernetes
+   */
+  public $kubernetes;
   protected $kubernetesType = GoogleCloudSecuritycenterV2Kubernetes::class;
   protected $kubernetesDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2LoadBalancer[]
+   */
+  public $loadBalancers;
   protected $loadBalancersType = GoogleCloudSecuritycenterV2LoadBalancer::class;
   protected $loadBalancersDataType = 'array';
+  /**
+   * @var GoogleCloudSecuritycenterV2LogEntry[]
+   */
+  public $logEntries;
   protected $logEntriesType = GoogleCloudSecuritycenterV2LogEntry::class;
   protected $logEntriesDataType = 'array';
+  /**
+   * @var GoogleCloudSecuritycenterV2MitreAttack
+   */
+  public $mitreAttack;
   protected $mitreAttackType = GoogleCloudSecuritycenterV2MitreAttack::class;
   protected $mitreAttackDataType = '';
   /**
@@ -110,6 +198,10 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $nextSteps;
+  /**
+   * @var GoogleCloudSecuritycenterV2OrgPolicy[]
+   */
+  public $orgPolicies;
   protected $orgPoliciesType = GoogleCloudSecuritycenterV2OrgPolicy::class;
   protected $orgPoliciesDataType = 'array';
   /**
@@ -120,14 +212,26 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $parentDisplayName;
+  /**
+   * @var GoogleCloudSecuritycenterV2Process[]
+   */
+  public $processes;
   protected $processesType = GoogleCloudSecuritycenterV2Process::class;
   protected $processesDataType = 'array';
   /**
    * @var string
    */
   public $resourceName;
+  /**
+   * @var GoogleCloudSecuritycenterV2SecurityMarks
+   */
+  public $securityMarks;
   protected $securityMarksType = GoogleCloudSecuritycenterV2SecurityMarks::class;
   protected $securityMarksDataType = '';
+  /**
+   * @var GoogleCloudSecuritycenterV2SecurityPosture
+   */
+  public $securityPosture;
   protected $securityPostureType = GoogleCloudSecuritycenterV2SecurityPosture::class;
   protected $securityPostureDataType = '';
   /**
@@ -142,6 +246,10 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudSecuritycenterV2Vulnerability
+   */
+  public $vulnerability;
   protected $vulnerabilityType = GoogleCloudSecuritycenterV2Vulnerability::class;
   protected $vulnerabilityDataType = '';
 
@@ -160,6 +268,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
     return $this->access;
   }
   /**
+   * @param GoogleCloudSecuritycenterV2Application
+   */
+  public function setApplication(GoogleCloudSecuritycenterV2Application $application)
+  {
+    $this->application = $application;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2Application
+   */
+  public function getApplication()
+  {
+    return $this->application;
+  }
+  /**
    * @param GoogleCloudSecuritycenterV2AttackExposure
    */
   public function setAttackExposure(GoogleCloudSecuritycenterV2AttackExposure $attackExposure)
@@ -172,6 +294,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getAttackExposure()
   {
     return $this->attackExposure;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2BackupDisasterRecovery
+   */
+  public function setBackupDisasterRecovery(GoogleCloudSecuritycenterV2BackupDisasterRecovery $backupDisasterRecovery)
+  {
+    $this->backupDisasterRecovery = $backupDisasterRecovery;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2BackupDisasterRecovery
+   */
+  public function getBackupDisasterRecovery()
+  {
+    return $this->backupDisasterRecovery;
   }
   /**
    * @param string

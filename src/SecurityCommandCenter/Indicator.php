@@ -28,6 +28,10 @@ class Indicator extends \Google\Collection
    * @var string[]
    */
   public $ipAddresses;
+  /**
+   * @var ProcessSignature[]
+   */
+  public $signatures;
   protected $signaturesType = ProcessSignature::class;
   protected $signaturesDataType = 'array';
   /**

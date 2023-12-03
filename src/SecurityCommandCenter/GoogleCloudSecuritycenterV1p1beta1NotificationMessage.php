@@ -19,12 +19,20 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV1p1beta1NotificationMessage extends \Google\Model
 {
+  /**
+   * @var GoogleCloudSecuritycenterV1p1beta1Finding
+   */
+  public $finding;
   protected $findingType = GoogleCloudSecuritycenterV1p1beta1Finding::class;
   protected $findingDataType = '';
   /**
    * @var string
    */
   public $notificationConfigName;
+  /**
+   * @var GoogleCloudSecuritycenterV1p1beta1Resource
+   */
+  public $resource;
   protected $resourceType = GoogleCloudSecuritycenterV1p1beta1Resource::class;
   protected $resourceDataType = '';
 

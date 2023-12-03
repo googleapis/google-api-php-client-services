@@ -19,18 +19,30 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV1CustomConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudSecuritycenterV1CustomOutputSpec
+   */
+  public $customOutput;
   protected $customOutputType = GoogleCloudSecuritycenterV1CustomOutputSpec::class;
   protected $customOutputDataType = '';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var Expr
+   */
+  public $predicate;
   protected $predicateType = Expr::class;
   protected $predicateDataType = '';
   /**
    * @var string
    */
   public $recommendation;
+  /**
+   * @var GoogleCloudSecuritycenterV1ResourceSelector
+   */
+  public $resourceSelector;
   protected $resourceSelectorType = GoogleCloudSecuritycenterV1ResourceSelector::class;
   protected $resourceSelectorDataType = '';
   /**

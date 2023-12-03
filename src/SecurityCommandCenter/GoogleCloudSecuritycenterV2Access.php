@@ -24,6 +24,10 @@ class GoogleCloudSecuritycenterV2Access extends \Google\Collection
    * @var string
    */
   public $callerIp;
+  /**
+   * @var GoogleCloudSecuritycenterV2Geolocation
+   */
+  public $callerIpGeo;
   protected $callerIpGeoType = GoogleCloudSecuritycenterV2Geolocation::class;
   protected $callerIpGeoDataType = '';
   /**
@@ -38,6 +42,10 @@ class GoogleCloudSecuritycenterV2Access extends \Google\Collection
    * @var string
    */
   public $principalSubject;
+  /**
+   * @var GoogleCloudSecuritycenterV2ServiceAccountDelegationInfo[]
+   */
+  public $serviceAccountDelegationInfo;
   protected $serviceAccountDelegationInfoType = GoogleCloudSecuritycenterV2ServiceAccountDelegationInfo::class;
   protected $serviceAccountDelegationInfoDataType = 'array';
   /**

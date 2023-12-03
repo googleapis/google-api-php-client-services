@@ -24,6 +24,10 @@ class GoogleCloudSecuritycenterV2MemoryHashSignature extends \Google\Collection
    * @var string
    */
   public $binaryFamily;
+  /**
+   * @var GoogleCloudSecuritycenterV2Detection[]
+   */
+  public $detections;
   protected $detectionsType = GoogleCloudSecuritycenterV2Detection::class;
   protected $detectionsDataType = 'array';
 
