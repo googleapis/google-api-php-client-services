@@ -20,8 +20,16 @@ namespace Google\Service\ShoppingContent;
 class InvoiceSummary extends \Google\Collection
 {
   protected $collection_key = 'additionalChargeSummaries';
+  /**
+   * @var InvoiceSummaryAdditionalChargeSummary[]
+   */
+  public $additionalChargeSummaries;
   protected $additionalChargeSummariesType = InvoiceSummaryAdditionalChargeSummary::class;
   protected $additionalChargeSummariesDataType = 'array';
+  /**
+   * @var Amount
+   */
+  public $productTotal;
   protected $productTotalType = Amount::class;
   protected $productTotalDataType = '';
 

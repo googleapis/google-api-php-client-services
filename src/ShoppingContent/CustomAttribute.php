@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class CustomAttribute extends \Google\Collection
 {
   protected $collection_key = 'groupValues';
+  /**
+   * @var CustomAttribute[]
+   */
+  public $groupValues;
   protected $groupValuesType = CustomAttribute::class;
   protected $groupValuesDataType = 'array';
   /**

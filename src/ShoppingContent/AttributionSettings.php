@@ -28,6 +28,10 @@ class AttributionSettings extends \Google\Collection
    * @var string
    */
   public $attributionModel;
+  /**
+   * @var AttributionSettingsConversionType[]
+   */
+  public $conversionType;
   protected $conversionTypeType = AttributionSettingsConversionType::class;
   protected $conversionTypeDataType = 'array';
 

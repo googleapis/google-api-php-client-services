@@ -24,6 +24,10 @@ class ListCollectionStatusesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var CollectionStatus[]
+   */
+  public $resources;
   protected $resourcesType = CollectionStatus::class;
   protected $resourcesDataType = 'array';
 

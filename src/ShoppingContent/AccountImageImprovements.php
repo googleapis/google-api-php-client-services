@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class AccountImageImprovements extends \Google\Model
 {
+  /**
+   * @var AccountImageImprovementsSettings
+   */
+  public $accountImageImprovementsSettings;
   protected $accountImageImprovementsSettingsType = AccountImageImprovementsSettings::class;
   protected $accountImageImprovementsSettingsDataType = '';
   /**

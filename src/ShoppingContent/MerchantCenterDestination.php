@@ -19,6 +19,10 @@ namespace Google\Service\ShoppingContent;
 
 class MerchantCenterDestination extends \Google\Model
 {
+  /**
+   * @var AttributionSettings
+   */
+  public $attributionSettings;
   protected $attributionSettingsType = AttributionSettings::class;
   protected $attributionSettingsDataType = '';
   /**

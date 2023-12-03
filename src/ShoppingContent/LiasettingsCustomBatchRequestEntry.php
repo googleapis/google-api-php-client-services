@@ -43,6 +43,10 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
    * @var string
    */
   public $gmbEmail;
+  /**
+   * @var LiaSettings
+   */
+  public $liaSettings;
   protected $liaSettingsType = LiaSettings::class;
   protected $liaSettingsDataType = '';
   /**
@@ -53,6 +57,10 @@ class LiasettingsCustomBatchRequestEntry extends \Google\Model
    * @var string
    */
   public $method;
+  /**
+   * @var LiaOmnichannelExperience
+   */
+  public $omnichannelExperience;
   protected $omnichannelExperienceType = LiaOmnichannelExperience::class;
   protected $omnichannelExperienceDataType = '';
   /**

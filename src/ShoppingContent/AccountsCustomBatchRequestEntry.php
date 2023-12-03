@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class AccountsCustomBatchRequestEntry extends \Google\Collection
 {
   protected $collection_key = 'labelIds';
+  /**
+   * @var Account
+   */
+  public $account;
   protected $accountType = Account::class;
   protected $accountDataType = '';
   /**
@@ -38,6 +42,10 @@ class AccountsCustomBatchRequestEntry extends \Google\Collection
    * @var string[]
    */
   public $labelIds;
+  /**
+   * @var AccountsCustomBatchRequestEntryLinkRequest
+   */
+  public $linkRequest;
   protected $linkRequestType = AccountsCustomBatchRequestEntryLinkRequest::class;
   protected $linkRequestDataType = '';
   /**

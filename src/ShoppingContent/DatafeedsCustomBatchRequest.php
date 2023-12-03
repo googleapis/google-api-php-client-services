@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class DatafeedsCustomBatchRequest extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var DatafeedsCustomBatchRequestEntry[]
+   */
+  public $entries;
   protected $entriesType = DatafeedsCustomBatchRequestEntry::class;
   protected $entriesDataType = 'array';
 

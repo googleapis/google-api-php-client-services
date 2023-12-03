@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ListMethodQuotasResponse extends \Google\Collection
 {
   protected $collection_key = 'methodQuotas';
+  /**
+   * @var MethodQuota[]
+   */
+  public $methodQuotas;
   protected $methodQuotasType = MethodQuota::class;
   protected $methodQuotasDataType = 'array';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class AccountsAuthInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'accountIdentifiers';
+  /**
+   * @var AccountIdentifier[]
+   */
+  public $accountIdentifiers;
   protected $accountIdentifiersType = AccountIdentifier::class;
   protected $accountIdentifiersDataType = 'array';
   /**

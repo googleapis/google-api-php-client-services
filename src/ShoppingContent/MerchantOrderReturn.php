@@ -36,10 +36,22 @@ class MerchantOrderReturn extends \Google\Collection
    * @var string
    */
   public $orderReturnId;
+  /**
+   * @var MerchantOrderReturnItem[]
+   */
+  public $returnItems;
   protected $returnItemsType = MerchantOrderReturnItem::class;
   protected $returnItemsDataType = 'array';
+  /**
+   * @var ReturnPricingInfo
+   */
+  public $returnPricingInfo;
   protected $returnPricingInfoType = ReturnPricingInfo::class;
   protected $returnPricingInfoDataType = '';
+  /**
+   * @var ReturnShipment[]
+   */
+  public $returnShipments;
   protected $returnShipmentsType = ReturnShipment::class;
   protected $returnShipmentsDataType = 'array';
 

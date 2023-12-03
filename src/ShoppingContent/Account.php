@@ -24,28 +24,52 @@ class Account extends \Google\Collection
    * @var string
    */
   public $accountManagement;
+  /**
+   * @var AccountAdsLink[]
+   */
+  public $adsLinks;
   protected $adsLinksType = AccountAdsLink::class;
   protected $adsLinksDataType = 'array';
   /**
    * @var bool
    */
   public $adultContent;
+  /**
+   * @var AccountAutomaticImprovements
+   */
+  public $automaticImprovements;
   protected $automaticImprovementsType = AccountAutomaticImprovements::class;
   protected $automaticImprovementsDataType = '';
   /**
    * @var string[]
    */
   public $automaticLabelIds;
+  /**
+   * @var AccountBusinessIdentity
+   */
+  public $businessIdentity;
   protected $businessIdentityType = AccountBusinessIdentity::class;
   protected $businessIdentityDataType = '';
+  /**
+   * @var AccountBusinessInformation
+   */
+  public $businessInformation;
   protected $businessInformationType = AccountBusinessInformation::class;
   protected $businessInformationDataType = '';
+  /**
+   * @var AccountConversionSettings
+   */
+  public $conversionSettings;
   protected $conversionSettingsType = AccountConversionSettings::class;
   protected $conversionSettingsDataType = '';
   /**
    * @var string
    */
   public $cssId;
+  /**
+   * @var AccountGoogleMyBusinessLink
+   */
+  public $googleMyBusinessLink;
   protected $googleMyBusinessLinkType = AccountGoogleMyBusinessLink::class;
   protected $googleMyBusinessLinkDataType = '';
   /**
@@ -68,12 +92,20 @@ class Account extends \Google\Collection
    * @var string
    */
   public $sellerId;
+  /**
+   * @var AccountUser[]
+   */
+  public $users;
   protected $usersType = AccountUser::class;
   protected $usersDataType = 'array';
   /**
    * @var string
    */
   public $websiteUrl;
+  /**
+   * @var AccountYouTubeChannelLink[]
+   */
+  public $youtubeChannelLinks;
   protected $youtubeChannelLinksType = AccountYouTubeChannelLink::class;
   protected $youtubeChannelLinksDataType = 'array';
 

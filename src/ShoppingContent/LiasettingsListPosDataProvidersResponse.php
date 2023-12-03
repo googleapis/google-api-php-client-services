@@ -24,6 +24,10 @@ class LiasettingsListPosDataProvidersResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var PosDataProviders[]
+   */
+  public $posDataProviders;
   protected $posDataProvidersType = PosDataProviders::class;
   protected $posDataProvidersDataType = 'array';
 

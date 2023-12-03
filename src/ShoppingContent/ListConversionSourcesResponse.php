@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ListConversionSourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'conversionSources';
+  /**
+   * @var ConversionSource[]
+   */
+  public $conversionSources;
   protected $conversionSourcesType = ConversionSource::class;
   protected $conversionSourcesDataType = 'array';
   /**

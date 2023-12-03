@@ -23,8 +23,16 @@ class DatafeedsCustomBatchResponseEntry extends \Google\Model
    * @var string
    */
   public $batchId;
+  /**
+   * @var Datafeed
+   */
+  public $datafeed;
   protected $datafeedType = Datafeed::class;
   protected $datafeedDataType = '';
+  /**
+   * @var Errors
+   */
+  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
 

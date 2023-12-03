@@ -19,12 +19,20 @@ namespace Google\Service\ShoppingContent;
 
 class AccountstatusesCustomBatchResponseEntry extends \Google\Model
 {
+  /**
+   * @var AccountStatus
+   */
+  public $accountStatus;
   protected $accountStatusType = AccountStatus::class;
   protected $accountStatusDataType = '';
   /**
    * @var string
    */
   public $batchId;
+  /**
+   * @var Errors
+   */
+  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
 

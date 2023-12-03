@@ -24,6 +24,10 @@ class AccountsLinkRequest extends \Google\Collection
    * @var string
    */
   public $action;
+  /**
+   * @var ECommercePlatformLinkInfo
+   */
+  public $eCommercePlatformLinkInfo;
   protected $eCommercePlatformLinkInfoType = ECommercePlatformLinkInfo::class;
   protected $eCommercePlatformLinkInfoDataType = '';
   /**
@@ -34,6 +38,10 @@ class AccountsLinkRequest extends \Google\Collection
    * @var string
    */
   public $linkedAccountId;
+  /**
+   * @var PaymentServiceProviderLinkInfo
+   */
+  public $paymentServiceProviderLinkInfo;
   protected $paymentServiceProviderLinkInfoType = PaymentServiceProviderLinkInfo::class;
   protected $paymentServiceProviderLinkInfoDataType = '';
   /**

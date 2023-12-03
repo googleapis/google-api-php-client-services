@@ -20,12 +20,20 @@ namespace Google\Service\ShoppingContent;
 class CollectionStatus extends \Google\Collection
 {
   protected $collection_key = 'destinationStatuses';
+  /**
+   * @var CollectionStatusItemLevelIssue[]
+   */
+  public $collectionLevelIssuses;
   protected $collectionLevelIssusesType = CollectionStatusItemLevelIssue::class;
   protected $collectionLevelIssusesDataType = 'array';
   /**
    * @var string
    */
   public $creationDate;
+  /**
+   * @var CollectionStatusDestinationStatus[]
+   */
+  public $destinationStatuses;
   protected $destinationStatusesType = CollectionStatusDestinationStatus::class;
   protected $destinationStatusesDataType = 'array';
   /**

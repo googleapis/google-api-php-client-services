@@ -19,10 +19,22 @@ namespace Google\Service\ShoppingContent;
 
 class AccountAutomaticImprovements extends \Google\Model
 {
+  /**
+   * @var AccountImageImprovements
+   */
+  public $imageImprovements;
   protected $imageImprovementsType = AccountImageImprovements::class;
   protected $imageImprovementsDataType = '';
+  /**
+   * @var AccountItemUpdates
+   */
+  public $itemUpdates;
   protected $itemUpdatesType = AccountItemUpdates::class;
   protected $itemUpdatesDataType = '';
+  /**
+   * @var AccountShippingImprovements
+   */
+  public $shippingImprovements;
   protected $shippingImprovementsType = AccountShippingImprovements::class;
   protected $shippingImprovementsDataType = '';
 

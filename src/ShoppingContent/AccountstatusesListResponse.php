@@ -28,6 +28,10 @@ class AccountstatusesListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var AccountStatus[]
+   */
+  public $resources;
   protected $resourcesType = AccountStatus::class;
   protected $resourcesDataType = 'array';
 

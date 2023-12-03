@@ -20,18 +20,30 @@ namespace Google\Service\ShoppingContent;
 class Action extends \Google\Collection
 {
   protected $collection_key = 'reasons';
+  /**
+   * @var BuiltInSimpleAction
+   */
+  public $builtinSimpleAction;
   protected $builtinSimpleActionType = BuiltInSimpleAction::class;
   protected $builtinSimpleActionDataType = '';
   /**
    * @var string
    */
   public $buttonLabel;
+  /**
+   * @var ExternalAction
+   */
+  public $externalAction;
   protected $externalActionType = ExternalAction::class;
   protected $externalActionDataType = '';
   /**
    * @var bool
    */
   public $isAvailable;
+  /**
+   * @var ActionReason[]
+   */
+  public $reasons;
   protected $reasonsType = ActionReason::class;
   protected $reasonsDataType = 'array';
 

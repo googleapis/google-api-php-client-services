@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ListAccountLabelsResponse extends \Google\Collection
 {
   protected $collection_key = 'accountLabels';
+  /**
+   * @var AccountLabel[]
+   */
+  public $accountLabels;
   protected $accountLabelsType = AccountLabel::class;
   protected $accountLabelsDataType = 'array';
   /**

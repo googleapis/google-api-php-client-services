@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class GenerateRecommendationsResponse extends \Google\Collection
 {
   protected $collection_key = 'recommendations';
+  /**
+   * @var Recommendation[]
+   */
+  public $recommendations;
   protected $recommendationsType = Recommendation::class;
   protected $recommendationsDataType = 'array';
   /**

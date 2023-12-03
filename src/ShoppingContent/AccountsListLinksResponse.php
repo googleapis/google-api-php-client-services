@@ -24,6 +24,10 @@ class AccountsListLinksResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var LinkedAccount[]
+   */
+  public $links;
   protected $linksType = LinkedAccount::class;
   protected $linksDataType = 'array';
   /**

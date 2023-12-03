@@ -20,6 +20,10 @@ namespace Google\Service\ShoppingContent;
 class ListReturnPolicyOnlineResponse extends \Google\Collection
 {
   protected $collection_key = 'returnPolicies';
+  /**
+   * @var ReturnPolicyOnline[]
+   */
+  public $returnPolicies;
   protected $returnPoliciesType = ReturnPolicyOnline::class;
   protected $returnPoliciesDataType = 'array';
 
