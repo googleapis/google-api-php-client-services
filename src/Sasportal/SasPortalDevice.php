@@ -20,10 +20,22 @@ namespace Google\Service\Sasportal;
 class SasPortalDevice extends \Google\Collection
 {
   protected $collection_key = 'grants';
+  /**
+   * @var SasPortalDeviceConfig
+   */
+  public $activeConfig;
   protected $activeConfigType = SasPortalDeviceConfig::class;
   protected $activeConfigDataType = '';
+  /**
+   * @var SasPortalChannelWithScore[]
+   */
+  public $currentChannels;
   protected $currentChannelsType = SasPortalChannelWithScore::class;
   protected $currentChannelsDataType = 'array';
+  /**
+   * @var SasPortalDeviceMetadata
+   */
+  public $deviceMetadata;
   protected $deviceMetadataType = SasPortalDeviceMetadata::class;
   protected $deviceMetadataDataType = '';
   /**
@@ -34,14 +46,26 @@ class SasPortalDevice extends \Google\Collection
    * @var string
    */
   public $fccId;
+  /**
+   * @var SasPortalFrequencyRange[]
+   */
+  public $grantRangeAllowlists;
   protected $grantRangeAllowlistsType = SasPortalFrequencyRange::class;
   protected $grantRangeAllowlistsDataType = 'array';
+  /**
+   * @var SasPortalDeviceGrant[]
+   */
+  public $grants;
   protected $grantsType = SasPortalDeviceGrant::class;
   protected $grantsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var SasPortalDeviceConfig
+   */
+  public $preloadedConfig;
   protected $preloadedConfigType = SasPortalDeviceConfig::class;
   protected $preloadedConfigDataType = '';
   /**

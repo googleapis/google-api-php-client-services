@@ -28,6 +28,10 @@ class SasPortalDeviceGrant extends \Google\Collection
    * @var string
    */
   public $expireTime;
+  /**
+   * @var SasPortalFrequencyRange
+   */
+  public $frequencyRange;
   protected $frequencyRangeType = SasPortalFrequencyRange::class;
   protected $frequencyRangeDataType = '';
   /**
@@ -39,6 +43,10 @@ class SasPortalDeviceGrant extends \Google\Collection
    */
   public $lastHeartbeatTransmitExpireTime;
   public $maxEirp;
+  /**
+   * @var SasPortalDpaMoveList[]
+   */
+  public $moveList;
   protected $moveListType = SasPortalDpaMoveList::class;
   protected $moveListDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class SasPortalOperation extends \Google\Model
    * @var bool
    */
   public $done;
+  /**
+   * @var SasPortalStatus
+   */
+  public $error;
   protected $errorType = SasPortalStatus::class;
   protected $errorDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Sasportal;
 class SasPortalPolicy extends \Google\Collection
 {
   protected $collection_key = 'assignments';
+  /**
+   * @var SasPortalAssignment[]
+   */
+  public $assignments;
   protected $assignmentsType = SasPortalAssignment::class;
   protected $assignmentsDataType = 'array';
   /**

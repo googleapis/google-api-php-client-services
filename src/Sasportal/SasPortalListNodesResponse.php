@@ -24,6 +24,10 @@ class SasPortalListNodesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var SasPortalNode[]
+   */
+  public $nodes;
   protected $nodesType = SasPortalNode::class;
   protected $nodesDataType = 'array';
 

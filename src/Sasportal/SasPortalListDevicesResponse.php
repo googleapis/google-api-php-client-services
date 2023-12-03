@@ -20,6 +20,10 @@ namespace Google\Service\Sasportal;
 class SasPortalListDevicesResponse extends \Google\Collection
 {
   protected $collection_key = 'devices';
+  /**
+   * @var SasPortalDevice[]
+   */
+  public $devices;
   protected $devicesType = SasPortalDevice::class;
   protected $devicesDataType = 'array';
   /**
