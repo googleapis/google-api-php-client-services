@@ -20,6 +20,10 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1ProcessLinks extends \Google\Collection
 {
   protected $collection_key = 'links';
+  /**
+   * @var GoogleCloudDatacatalogLineageV1ProcessLinkInfo[]
+   */
+  public $links;
   protected $linksType = GoogleCloudDatacatalogLineageV1ProcessLinkInfo::class;
   protected $linksDataType = 'array';
   /**

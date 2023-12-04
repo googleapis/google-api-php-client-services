@@ -31,6 +31,10 @@ class GoogleCloudDatacatalogLineageV1Process extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDatacatalogLineageV1Origin
+   */
+  public $origin;
   protected $originType = GoogleCloudDatacatalogLineageV1Origin::class;
   protected $originDataType = '';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Datalineage;
 
 class GoogleCloudDatacatalogLineageV1EventLink extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatacatalogLineageV1EntityReference
+   */
+  public $source;
   protected $sourceType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $sourceDataType = '';
+  /**
+   * @var GoogleCloudDatacatalogLineageV1EntityReference
+   */
+  public $target;
   protected $targetType = GoogleCloudDatacatalogLineageV1EntityReference::class;
   protected $targetDataType = '';
 
