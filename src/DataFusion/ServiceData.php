@@ -17,48 +17,30 @@
 
 namespace Google\Service\DataFusion;
 
-class SetIamPolicyRequest extends \Google\Model
+class ServiceData extends \Google\Model
 {
   /**
-   * @var Policy
+   * @var PersistentDiskData
    */
-  public $policy;
-  protected $policyType = Policy::class;
-  protected $policyDataType = '';
-  /**
-   * @var string
-   */
-  public $updateMask;
+  public $pd;
+  protected $pdType = PersistentDiskData::class;
+  protected $pdDataType = '';
 
   /**
-   * @param Policy
+   * @param PersistentDiskData
    */
-  public function setPolicy(Policy $policy)
+  public function setPd(PersistentDiskData $pd)
   {
-    $this->policy = $policy;
+    $this->pd = $pd;
   }
   /**
-   * @return Policy
+   * @return PersistentDiskData
    */
-  public function getPolicy()
+  public function getPd()
   {
-    return $this->policy;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateMask($updateMask)
-  {
-    $this->updateMask = $updateMask;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateMask()
-  {
-    return $this->updateMask;
+    return $this->pd;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SetIamPolicyRequest::class, 'Google_Service_DataFusion_SetIamPolicyRequest');
+class_alias(ServiceData::class, 'Google_Service_DataFusion_ServiceData');

@@ -17,49 +17,47 @@
 
 namespace Google\Service\DataFusion;
 
-class ListLocationsResponse extends \Google\Collection
+class PersistentDiskData extends \Google\Collection
 {
-  protected $collection_key = 'locations';
+  protected $collection_key = 'gcsBucketNames';
   /**
-   * @var Location[]
+   * @var string[]
    */
-  public $locations;
-  protected $locationsType = Location::class;
-  protected $locationsDataType = 'array';
+  public $cfsRoots;
   /**
-   * @var string
+   * @var string[]
    */
-  public $nextPageToken;
+  public $gcsBucketNames;
 
   /**
-   * @param Location[]
+   * @param string[]
    */
-  public function setLocations($locations)
+  public function setCfsRoots($cfsRoots)
   {
-    $this->locations = $locations;
+    $this->cfsRoots = $cfsRoots;
   }
   /**
-   * @return Location[]
+   * @return string[]
    */
-  public function getLocations()
+  public function getCfsRoots()
   {
-    return $this->locations;
+    return $this->cfsRoots;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setNextPageToken($nextPageToken)
+  public function setGcsBucketNames($gcsBucketNames)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->gcsBucketNames = $gcsBucketNames;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getNextPageToken()
+  public function getGcsBucketNames()
   {
-    return $this->nextPageToken;
+    return $this->gcsBucketNames;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListLocationsResponse::class, 'Google_Service_DataFusion_ListLocationsResponse');
+class_alias(PersistentDiskData::class, 'Google_Service_DataFusion_PersistentDiskData');

@@ -20,6 +20,10 @@ namespace Google\Service\DataFusion;
 class ListAvailableVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'availableVersions';
+  /**
+   * @var Version[]
+   */
+  public $availableVersions;
   protected $availableVersionsType = Version::class;
   protected $availableVersionsDataType = 'array';
   /**
