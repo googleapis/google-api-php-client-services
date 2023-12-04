@@ -23,6 +23,10 @@ class AlloyDbConnectionProfile extends \Google\Model
    * @var string
    */
   public $clusterId;
+  /**
+   * @var AlloyDbSettings
+   */
+  public $settings;
   protected $settingsType = AlloyDbSettings::class;
   protected $settingsDataType = '';
 

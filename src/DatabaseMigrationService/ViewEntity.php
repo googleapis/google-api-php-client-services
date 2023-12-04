@@ -20,6 +20,10 @@ namespace Google\Service\DatabaseMigrationService;
 class ViewEntity extends \Google\Collection
 {
   protected $collection_key = 'constraints';
+  /**
+   * @var ConstraintEntity[]
+   */
+  public $constraints;
   protected $constraintsType = ConstraintEntity::class;
   protected $constraintsDataType = 'array';
   /**

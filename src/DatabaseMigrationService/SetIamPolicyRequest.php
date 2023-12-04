@@ -19,6 +19,10 @@ namespace Google\Service\DatabaseMigrationService;
 
 class SetIamPolicyRequest extends \Google\Model
 {
+  /**
+   * @var Policy
+   */
+  public $policy;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
   /**

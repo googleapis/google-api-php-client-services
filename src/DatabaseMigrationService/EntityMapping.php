@@ -28,6 +28,10 @@ class EntityMapping extends \Google\Collection
    * @var string
    */
   public $draftType;
+  /**
+   * @var EntityMappingLogEntry[]
+   */
+  public $mappingLog;
   protected $mappingLogType = EntityMappingLogEntry::class;
   protected $mappingLogDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $cmekKeyName;
+  /**
+   * @var ConversionWorkspaceInfo
+   */
+  public $conversionWorkspace;
   protected $conversionWorkspaceType = ConversionWorkspaceInfo::class;
   protected $conversionWorkspaceDataType = '';
   /**
@@ -33,12 +37,20 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $destination;
+  /**
+   * @var DatabaseType
+   */
+  public $destinationDatabase;
   protected $destinationDatabaseType = DatabaseType::class;
   protected $destinationDatabaseDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var DumpFlags
+   */
+  public $dumpFlags;
   protected $dumpFlagsType = DumpFlags::class;
   protected $dumpFlagsDataType = '';
   /**
@@ -53,6 +65,10 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
@@ -67,24 +83,40 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PerformanceConfig
+   */
+  public $performanceConfig;
   protected $performanceConfigType = PerformanceConfig::class;
   protected $performanceConfigDataType = '';
   /**
    * @var string
    */
   public $phase;
+  /**
+   * @var ReverseSshConnectivity
+   */
+  public $reverseSshConnectivity;
   protected $reverseSshConnectivityType = ReverseSshConnectivity::class;
   protected $reverseSshConnectivityDataType = '';
   /**
    * @var string
    */
   public $source;
+  /**
+   * @var DatabaseType
+   */
+  public $sourceDatabase;
   protected $sourceDatabaseType = DatabaseType::class;
   protected $sourceDatabaseDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var StaticIpConnectivity
+   */
+  public $staticIpConnectivity;
   protected $staticIpConnectivityType = StaticIpConnectivity::class;
   protected $staticIpConnectivityDataType = '';
   /**
@@ -95,6 +127,10 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VpcPeeringConnectivity
+   */
+  public $vpcPeeringConnectivity;
   protected $vpcPeeringConnectivityType = VpcPeeringConnectivity::class;
   protected $vpcPeeringConnectivityDataType = '';
 

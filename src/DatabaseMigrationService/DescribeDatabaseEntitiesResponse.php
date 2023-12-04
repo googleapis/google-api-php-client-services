@@ -20,6 +20,10 @@ namespace Google\Service\DatabaseMigrationService;
 class DescribeDatabaseEntitiesResponse extends \Google\Collection
 {
   protected $collection_key = 'databaseEntities';
+  /**
+   * @var DatabaseEntity[]
+   */
+  public $databaseEntities;
   protected $databaseEntitiesType = DatabaseEntity::class;
   protected $databaseEntitiesDataType = 'array';
   /**

@@ -47,10 +47,22 @@ class PostgreSqlConnectionProfile extends \Google\Model
    * @var int
    */
   public $port;
+  /**
+   * @var PrivateServiceConnectConnectivity
+   */
+  public $privateServiceConnectConnectivity;
   protected $privateServiceConnectConnectivityType = PrivateServiceConnectConnectivity::class;
   protected $privateServiceConnectConnectivityDataType = '';
+  /**
+   * @var SslConfig
+   */
+  public $ssl;
   protected $sslType = SslConfig::class;
   protected $sslDataType = '';
+  /**
+   * @var StaticIpConnectivity
+   */
+  public $staticIpConnectivity;
   protected $staticIpConnectivityType = StaticIpConnectivity::class;
   protected $staticIpConnectivityDataType = '';
   /**

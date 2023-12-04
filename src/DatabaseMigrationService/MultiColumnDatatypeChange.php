@@ -47,8 +47,16 @@ class MultiColumnDatatypeChange extends \Google\Model
    * @var string
    */
   public $sourceDataTypeFilter;
+  /**
+   * @var SourceNumericFilter
+   */
+  public $sourceNumericFilter;
   protected $sourceNumericFilterType = SourceNumericFilter::class;
   protected $sourceNumericFilterDataType = '';
+  /**
+   * @var SourceTextFilter
+   */
+  public $sourceTextFilter;
   protected $sourceTextFilterType = SourceTextFilter::class;
   protected $sourceTextFilterDataType = '';
 

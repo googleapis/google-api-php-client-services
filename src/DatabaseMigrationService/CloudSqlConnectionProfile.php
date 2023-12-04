@@ -35,6 +35,10 @@ class CloudSqlConnectionProfile extends \Google\Model
    * @var string
    */
   public $publicIp;
+  /**
+   * @var CloudSqlSettings
+   */
+  public $settings;
   protected $settingsType = CloudSqlSettings::class;
   protected $settingsDataType = '';
 

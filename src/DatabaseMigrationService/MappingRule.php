@@ -19,22 +19,50 @@ namespace Google\Service\DatabaseMigrationService;
 
 class MappingRule extends \Google\Model
 {
+  /**
+   * @var ConditionalColumnSetValue
+   */
+  public $conditionalColumnSetValue;
   protected $conditionalColumnSetValueType = ConditionalColumnSetValue::class;
   protected $conditionalColumnSetValueDataType = '';
+  /**
+   * @var ConvertRowIdToColumn
+   */
+  public $convertRowidColumn;
   protected $convertRowidColumnType = ConvertRowIdToColumn::class;
   protected $convertRowidColumnDataType = '';
   /**
    * @var string
    */
   public $displayName;
+  /**
+   * @var EntityMove
+   */
+  public $entityMove;
   protected $entityMoveType = EntityMove::class;
   protected $entityMoveDataType = '';
+  /**
+   * @var MappingRuleFilter
+   */
+  public $filter;
   protected $filterType = MappingRuleFilter::class;
   protected $filterDataType = '';
+  /**
+   * @var FilterTableColumns
+   */
+  public $filterTableColumns;
   protected $filterTableColumnsType = FilterTableColumns::class;
   protected $filterTableColumnsDataType = '';
+  /**
+   * @var MultiColumnDatatypeChange
+   */
+  public $multiColumnDataTypeChange;
   protected $multiColumnDataTypeChangeType = MultiColumnDatatypeChange::class;
   protected $multiColumnDataTypeChangeDataType = '';
+  /**
+   * @var MultiEntityRename
+   */
+  public $multiEntityRename;
   protected $multiEntityRenameType = MultiEntityRename::class;
   protected $multiEntityRenameDataType = '';
   /**
@@ -57,14 +85,34 @@ class MappingRule extends \Google\Model
    * @var string
    */
   public $ruleScope;
+  /**
+   * @var SetTablePrimaryKey
+   */
+  public $setTablePrimaryKey;
   protected $setTablePrimaryKeyType = SetTablePrimaryKey::class;
   protected $setTablePrimaryKeyDataType = '';
+  /**
+   * @var SingleColumnChange
+   */
+  public $singleColumnChange;
   protected $singleColumnChangeType = SingleColumnChange::class;
   protected $singleColumnChangeDataType = '';
+  /**
+   * @var SingleEntityRename
+   */
+  public $singleEntityRename;
   protected $singleEntityRenameType = SingleEntityRename::class;
   protected $singleEntityRenameDataType = '';
+  /**
+   * @var SinglePackageChange
+   */
+  public $singlePackageChange;
   protected $singlePackageChangeType = SinglePackageChange::class;
   protected $singlePackageChangeDataType = '';
+  /**
+   * @var SourceSqlChange
+   */
+  public $sourceSqlChange;
   protected $sourceSqlChangeType = SourceSqlChange::class;
   protected $sourceSqlChangeDataType = '';
   /**

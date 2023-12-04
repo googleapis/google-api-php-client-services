@@ -19,8 +19,16 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ConnectionProfile extends \Google\Model
 {
+  /**
+   * @var AlloyDbConnectionProfile
+   */
+  public $alloydb;
   protected $alloydbType = AlloyDbConnectionProfile::class;
   protected $alloydbDataType = '';
+  /**
+   * @var CloudSqlConnectionProfile
+   */
+  public $cloudsql;
   protected $cloudsqlType = CloudSqlConnectionProfile::class;
   protected $cloudsqlDataType = '';
   /**
@@ -31,20 +39,36 @@ class ConnectionProfile extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var MySqlConnectionProfile
+   */
+  public $mysql;
   protected $mysqlType = MySqlConnectionProfile::class;
   protected $mysqlDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var OracleConnectionProfile
+   */
+  public $oracle;
   protected $oracleType = OracleConnectionProfile::class;
   protected $oracleDataType = '';
+  /**
+   * @var PostgreSqlConnectionProfile
+   */
+  public $postgresql;
   protected $postgresqlType = PostgreSqlConnectionProfile::class;
   protected $postgresqlDataType = '';
   /**

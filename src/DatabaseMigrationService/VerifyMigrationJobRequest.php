@@ -19,6 +19,10 @@ namespace Google\Service\DatabaseMigrationService;
 
 class VerifyMigrationJobRequest extends \Google\Model
 {
+  /**
+   * @var MigrationJob
+   */
+  public $migrationJob;
   protected $migrationJobType = MigrationJob::class;
   protected $migrationJobDataType = '';
   /**

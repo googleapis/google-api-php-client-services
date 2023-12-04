@@ -39,6 +39,10 @@ class EntityIssue extends \Google\Model
    * @var string
    */
   public $message;
+  /**
+   * @var Position
+   */
+  public $position;
   protected $positionType = Position::class;
   protected $positionDataType = '';
   /**

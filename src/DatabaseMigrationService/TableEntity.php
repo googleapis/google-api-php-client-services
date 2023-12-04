@@ -20,20 +20,36 @@ namespace Google\Service\DatabaseMigrationService;
 class TableEntity extends \Google\Collection
 {
   protected $collection_key = 'triggers';
+  /**
+   * @var ColumnEntity[]
+   */
+  public $columns;
   protected $columnsType = ColumnEntity::class;
   protected $columnsDataType = 'array';
   /**
    * @var string
    */
   public $comment;
+  /**
+   * @var ConstraintEntity[]
+   */
+  public $constraints;
   protected $constraintsType = ConstraintEntity::class;
   protected $constraintsDataType = 'array';
   /**
    * @var array[]
    */
   public $customFeatures;
+  /**
+   * @var IndexEntity[]
+   */
+  public $indices;
   protected $indicesType = IndexEntity::class;
   protected $indicesDataType = 'array';
+  /**
+   * @var TriggerEntity[]
+   */
+  public $triggers;
   protected $triggersType = TriggerEntity::class;
   protected $triggersDataType = 'array';
 

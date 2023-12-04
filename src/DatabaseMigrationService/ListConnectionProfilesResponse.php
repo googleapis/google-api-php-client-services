@@ -20,6 +20,10 @@ namespace Google\Service\DatabaseMigrationService;
 class ListConnectionProfilesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var ConnectionProfile[]
+   */
+  public $connectionProfiles;
   protected $connectionProfilesType = ConnectionProfile::class;
   protected $connectionProfilesDataType = 'array';
   /**

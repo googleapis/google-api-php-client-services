@@ -19,24 +19,64 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ValueTransformation extends \Google\Model
 {
+  /**
+   * @var ApplyHash
+   */
+  public $applyHash;
   protected $applyHashType = ApplyHash::class;
   protected $applyHashDataType = '';
+  /**
+   * @var DatamigrationEmpty
+   */
+  public $assignMaxValue;
   protected $assignMaxValueType = DatamigrationEmpty::class;
   protected $assignMaxValueDataType = '';
+  /**
+   * @var DatamigrationEmpty
+   */
+  public $assignMinValue;
   protected $assignMinValueType = DatamigrationEmpty::class;
   protected $assignMinValueDataType = '';
+  /**
+   * @var DatamigrationEmpty
+   */
+  public $assignNull;
   protected $assignNullType = DatamigrationEmpty::class;
   protected $assignNullDataType = '';
+  /**
+   * @var AssignSpecificValue
+   */
+  public $assignSpecificValue;
   protected $assignSpecificValueType = AssignSpecificValue::class;
   protected $assignSpecificValueDataType = '';
+  /**
+   * @var DoubleComparisonFilter
+   */
+  public $doubleComparison;
   protected $doubleComparisonType = DoubleComparisonFilter::class;
   protected $doubleComparisonDataType = '';
+  /**
+   * @var IntComparisonFilter
+   */
+  public $intComparison;
   protected $intComparisonType = IntComparisonFilter::class;
   protected $intComparisonDataType = '';
+  /**
+   * @var DatamigrationEmpty
+   */
+  public $isNull;
   protected $isNullType = DatamigrationEmpty::class;
   protected $isNullDataType = '';
+  /**
+   * @var RoundToScale
+   */
+  public $roundScale;
   protected $roundScaleType = RoundToScale::class;
   protected $roundScaleDataType = '';
+  /**
+   * @var ValueListFilter
+   */
+  public $valueList;
   protected $valueListType = ValueListFilter::class;
   protected $valueListDataType = '';
 
