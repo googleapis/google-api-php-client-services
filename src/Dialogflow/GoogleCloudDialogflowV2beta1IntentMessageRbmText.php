@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageRbmText extends \Google\Collection
 {
   protected $collection_key = 'rbmSuggestion';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[]
+   */
+  public $rbmSuggestion;
   protected $rbmSuggestionType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion::class;
   protected $rbmSuggestionDataType = 'array';
   /**

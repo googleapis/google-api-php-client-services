@@ -23,8 +23,16 @@ class GoogleCloudDialogflowV2beta1ConversationEvent extends \Google\Model
    * @var string
    */
   public $conversation;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $errorStatus;
   protected $errorStatusType = GoogleRpcStatus::class;
   protected $errorStatusDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1Message
+   */
+  public $newMessagePayload;
   protected $newMessagePayloadType = GoogleCloudDialogflowV2beta1Message::class;
   protected $newMessagePayloadDataType = '';
   /**

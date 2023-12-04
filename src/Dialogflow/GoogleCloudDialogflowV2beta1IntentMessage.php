@@ -19,20 +19,52 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1IntentMessage extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageBasicCard
+   */
+  public $basicCard;
   protected $basicCardType = GoogleCloudDialogflowV2beta1IntentMessageBasicCard::class;
   protected $basicCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard
+   */
+  public $browseCarouselCard;
   protected $browseCarouselCardType = GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCard::class;
   protected $browseCarouselCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageCard
+   */
+  public $card;
   protected $cardType = GoogleCloudDialogflowV2beta1IntentMessageCard::class;
   protected $cardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect
+   */
+  public $carouselSelect;
   protected $carouselSelectType = GoogleCloudDialogflowV2beta1IntentMessageCarouselSelect::class;
   protected $carouselSelectDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDialogflowV2beta1IntentMessageImage::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion
+   */
+  public $linkOutSuggestion;
   protected $linkOutSuggestionType = GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestion::class;
   protected $linkOutSuggestionDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageListSelect
+   */
+  public $listSelect;
   protected $listSelectType = GoogleCloudDialogflowV2beta1IntentMessageListSelect::class;
   protected $listSelectDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageMediaContent
+   */
+  public $mediaContent;
   protected $mediaContentType = GoogleCloudDialogflowV2beta1IntentMessageMediaContent::class;
   protected $mediaContentDataType = '';
   /**
@@ -43,26 +75,70 @@ class GoogleCloudDialogflowV2beta1IntentMessage extends \Google\Model
    * @var string
    */
   public $platform;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageQuickReplies
+   */
+  public $quickReplies;
   protected $quickRepliesType = GoogleCloudDialogflowV2beta1IntentMessageQuickReplies::class;
   protected $quickRepliesDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard
+   */
+  public $rbmCarouselRichCard;
   protected $rbmCarouselRichCardType = GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard::class;
   protected $rbmCarouselRichCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard
+   */
+  public $rbmStandaloneRichCard;
   protected $rbmStandaloneRichCardType = GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard::class;
   protected $rbmStandaloneRichCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmText
+   */
+  public $rbmText;
   protected $rbmTextType = GoogleCloudDialogflowV2beta1IntentMessageRbmText::class;
   protected $rbmTextDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses
+   */
+  public $simpleResponses;
   protected $simpleResponsesType = GoogleCloudDialogflowV2beta1IntentMessageSimpleResponses::class;
   protected $simpleResponsesDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageSuggestions
+   */
+  public $suggestions;
   protected $suggestionsType = GoogleCloudDialogflowV2beta1IntentMessageSuggestions::class;
   protected $suggestionsDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageTableCard
+   */
+  public $tableCard;
   protected $tableCardType = GoogleCloudDialogflowV2beta1IntentMessageTableCard::class;
   protected $tableCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio
+   */
+  public $telephonyPlayAudio;
   protected $telephonyPlayAudioType = GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudio::class;
   protected $telephonyPlayAudioDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech
+   */
+  public $telephonySynthesizeSpeech;
   protected $telephonySynthesizeSpeechType = GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeech::class;
   protected $telephonySynthesizeSpeechDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall
+   */
+  public $telephonyTransferCall;
   protected $telephonyTransferCallType = GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCall::class;
   protected $telephonyTransferCallDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageText
+   */
+  public $text;
   protected $textType = GoogleCloudDialogflowV2beta1IntentMessageText::class;
   protected $textDataType = '';
 

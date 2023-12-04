@@ -23,8 +23,16 @@ class GoogleCloudDialogflowV2beta1IntentMessageListSelectItem extends \Google\Mo
    * @var string
    */
   public $description;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDialogflowV2beta1IntentMessageImage::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfo
+   */
+  public $info;
   protected $infoType = GoogleCloudDialogflowV2beta1IntentMessageSelectItemInfo::class;
   protected $infoDataType = '';
   /**

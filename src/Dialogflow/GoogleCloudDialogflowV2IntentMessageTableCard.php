@@ -20,12 +20,28 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageTableCard extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageBasicCardButton[]
+   */
+  public $buttons;
   protected $buttonsType = GoogleCloudDialogflowV2IntentMessageBasicCardButton::class;
   protected $buttonsDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageColumnProperties[]
+   */
+  public $columnProperties;
   protected $columnPropertiesType = GoogleCloudDialogflowV2IntentMessageColumnProperties::class;
   protected $columnPropertiesDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDialogflowV2IntentMessageImage::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageTableCardRow[]
+   */
+  public $rows;
   protected $rowsType = GoogleCloudDialogflowV2IntentMessageTableCardRow::class;
   protected $rowsDataType = 'array';
   /**

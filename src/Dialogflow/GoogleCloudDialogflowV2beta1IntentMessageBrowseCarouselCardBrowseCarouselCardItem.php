@@ -27,8 +27,16 @@ class GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselC
    * @var string
    */
   public $footer;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDialogflowV2beta1IntentMessageImage::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction
+   */
+  public $openUriAction;
   protected $openUriActionType = GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardBrowseCarouselCardItemOpenUrlAction::class;
   protected $openUriActionDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageTableCardRow extends \Google\Collection
 {
   protected $collection_key = 'cells';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageTableCardCell[]
+   */
+  public $cells;
   protected $cellsType = GoogleCloudDialogflowV2beta1IntentMessageTableCardCell::class;
   protected $cellsDataType = 'array';
   /**

@@ -19,12 +19,28 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2SuggestionResult extends \Google\Model
 {
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2SuggestArticlesResponse
+   */
+  public $suggestArticlesResponse;
   protected $suggestArticlesResponseType = GoogleCloudDialogflowV2SuggestArticlesResponse::class;
   protected $suggestArticlesResponseDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2SuggestFaqAnswersResponse
+   */
+  public $suggestFaqAnswersResponse;
   protected $suggestFaqAnswersResponseType = GoogleCloudDialogflowV2SuggestFaqAnswersResponse::class;
   protected $suggestFaqAnswersResponseDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2SuggestSmartRepliesResponse
+   */
+  public $suggestSmartRepliesResponse;
   protected $suggestSmartRepliesResponseType = GoogleCloudDialogflowV2SuggestSmartRepliesResponse::class;
   protected $suggestSmartRepliesResponseDataType = '';
 

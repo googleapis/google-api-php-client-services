@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1ExportOperationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2beta1GcsDestination
+   */
+  public $exportedGcsDestination;
   protected $exportedGcsDestinationType = GoogleCloudDialogflowV2beta1GcsDestination::class;
   protected $exportedGcsDestinationDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2SessionEntityType extends \Google\Collection
 {
   protected $collection_key = 'entities';
+  /**
+   * @var GoogleCloudDialogflowV2EntityTypeEntity[]
+   */
+  public $entities;
   protected $entitiesType = GoogleCloudDialogflowV2EntityTypeEntity::class;
   protected $entitiesDataType = 'array';
   /**

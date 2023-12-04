@@ -36,12 +36,20 @@ class GoogleCloudDialogflowV2QueryResult extends \Google\Collection
    * @var array[]
    */
   public $diagnosticInfo;
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessage[]
+   */
+  public $fulfillmentMessages;
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
   /**
    * @var string
    */
   public $fulfillmentText;
+  /**
+   * @var GoogleCloudDialogflowV2Intent
+   */
+  public $intent;
   protected $intentType = GoogleCloudDialogflowV2Intent::class;
   protected $intentDataType = '';
   /**
@@ -52,6 +60,10 @@ class GoogleCloudDialogflowV2QueryResult extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleCloudDialogflowV2Context[]
+   */
+  public $outputContexts;
   protected $outputContextsType = GoogleCloudDialogflowV2Context::class;
   protected $outputContextsDataType = 'array';
   /**
@@ -62,6 +74,10 @@ class GoogleCloudDialogflowV2QueryResult extends \Google\Collection
    * @var string
    */
   public $queryText;
+  /**
+   * @var GoogleCloudDialogflowV2SentimentAnalysisResult
+   */
+  public $sentimentAnalysisResult;
   protected $sentimentAnalysisResultType = GoogleCloudDialogflowV2SentimentAnalysisResult::class;
   protected $sentimentAnalysisResultDataType = '';
   /**

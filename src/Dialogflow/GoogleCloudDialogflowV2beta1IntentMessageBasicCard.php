@@ -20,12 +20,20 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageBasicCard extends \Google\Collection
 {
   protected $collection_key = 'buttons';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton[]
+   */
+  public $buttons;
   protected $buttonsType = GoogleCloudDialogflowV2beta1IntentMessageBasicCardButton::class;
   protected $buttonsDataType = 'array';
   /**
    * @var string
    */
   public $formattedText;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDialogflowV2beta1IntentMessageImage::class;
   protected $imageDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1KnowledgeAnswers extends \Google\Collection
 {
   protected $collection_key = 'answers';
+  /**
+   * @var GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer[]
+   */
+  public $answers;
   protected $answersType = GoogleCloudDialogflowV2beta1KnowledgeAnswersAnswer::class;
   protected $answersDataType = 'array';
 

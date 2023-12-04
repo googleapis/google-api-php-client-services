@@ -36,24 +36,40 @@ class GoogleCloudDialogflowV2beta1QueryResult extends \Google\Collection
    * @var array[]
    */
   public $diagnosticInfo;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessage[]
+   */
+  public $fulfillmentMessages;
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2beta1IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
   /**
    * @var string
    */
   public $fulfillmentText;
+  /**
+   * @var GoogleCloudDialogflowV2beta1Intent
+   */
+  public $intent;
   protected $intentType = GoogleCloudDialogflowV2beta1Intent::class;
   protected $intentDataType = '';
   /**
    * @var float
    */
   public $intentDetectionConfidence;
+  /**
+   * @var GoogleCloudDialogflowV2beta1KnowledgeAnswers
+   */
+  public $knowledgeAnswers;
   protected $knowledgeAnswersType = GoogleCloudDialogflowV2beta1KnowledgeAnswers::class;
   protected $knowledgeAnswersDataType = '';
   /**
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleCloudDialogflowV2beta1Context[]
+   */
+  public $outputContexts;
   protected $outputContextsType = GoogleCloudDialogflowV2beta1Context::class;
   protected $outputContextsDataType = 'array';
   /**
@@ -64,6 +80,10 @@ class GoogleCloudDialogflowV2beta1QueryResult extends \Google\Collection
    * @var string
    */
   public $queryText;
+  /**
+   * @var GoogleCloudDialogflowV2beta1SentimentAnalysisResult
+   */
+  public $sentimentAnalysisResult;
   protected $sentimentAnalysisResultType = GoogleCloudDialogflowV2beta1SentimentAnalysisResult::class;
   protected $sentimentAnalysisResultDataType = '';
   /**

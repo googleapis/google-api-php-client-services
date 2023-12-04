@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1ImportDocumentsResponse extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $warnings;
   protected $warningsType = GoogleRpcStatus::class;
   protected $warningsDataType = 'array';
 

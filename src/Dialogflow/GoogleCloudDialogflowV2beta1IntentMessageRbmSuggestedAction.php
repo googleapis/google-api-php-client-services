@@ -19,14 +19,26 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial
+   */
+  public $dial;
   protected $dialType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionDial::class;
   protected $dialDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri
+   */
+  public $openUrl;
   protected $openUrlType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionOpenUri::class;
   protected $openUrlDataType = '';
   /**
    * @var string
    */
   public $postbackData;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocation
+   */
+  public $shareLocation;
   protected $shareLocationType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedActionRbmSuggestedActionShareLocation::class;
   protected $shareLocationDataType = '';
   /**

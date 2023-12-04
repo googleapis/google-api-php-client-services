@@ -20,10 +20,22 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1WebhookRequest extends \Google\Collection
 {
   protected $collection_key = 'alternativeQueryResults';
+  /**
+   * @var GoogleCloudDialogflowV2beta1QueryResult[]
+   */
+  public $alternativeQueryResults;
   protected $alternativeQueryResultsType = GoogleCloudDialogflowV2beta1QueryResult::class;
   protected $alternativeQueryResultsDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowV2beta1OriginalDetectIntentRequest
+   */
+  public $originalDetectIntentRequest;
   protected $originalDetectIntentRequestType = GoogleCloudDialogflowV2beta1OriginalDetectIntentRequest::class;
   protected $originalDetectIntentRequestDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1QueryResult
+   */
+  public $queryResult;
   protected $queryResultType = GoogleCloudDialogflowV2beta1QueryResult::class;
   protected $queryResultDataType = '';
   /**

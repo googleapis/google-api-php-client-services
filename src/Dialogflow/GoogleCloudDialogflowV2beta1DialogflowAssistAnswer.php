@@ -23,8 +23,16 @@ class GoogleCloudDialogflowV2beta1DialogflowAssistAnswer extends \Google\Model
    * @var string
    */
   public $answerRecord;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentSuggestion
+   */
+  public $intentSuggestion;
   protected $intentSuggestionType = GoogleCloudDialogflowV2beta1IntentSuggestion::class;
   protected $intentSuggestionDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1QueryResult
+   */
+  public $queryResult;
   protected $queryResultType = GoogleCloudDialogflowV2beta1QueryResult::class;
   protected $queryResultDataType = '';
 

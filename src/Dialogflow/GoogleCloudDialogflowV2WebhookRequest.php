@@ -19,8 +19,16 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2WebhookRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2OriginalDetectIntentRequest
+   */
+  public $originalDetectIntentRequest;
   protected $originalDetectIntentRequestType = GoogleCloudDialogflowV2OriginalDetectIntentRequest::class;
   protected $originalDetectIntentRequestDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2QueryResult
+   */
+  public $queryResult;
   protected $queryResultType = GoogleCloudDialogflowV2QueryResult::class;
   protected $queryResultDataType = '';
   /**

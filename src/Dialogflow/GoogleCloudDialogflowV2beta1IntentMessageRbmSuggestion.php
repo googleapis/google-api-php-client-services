@@ -19,8 +19,16 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction
+   */
+  public $action;
   protected $actionType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedAction::class;
   protected $actionDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReply
+   */
+  public $reply;
   protected $replyType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestedReply::class;
   protected $replyDataType = '';
 

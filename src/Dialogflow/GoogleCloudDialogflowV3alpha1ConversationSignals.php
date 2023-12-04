@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV3alpha1ConversationSignals extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV3alpha1TurnSignals
+   */
+  public $turnSignals;
   protected $turnSignalsType = GoogleCloudDialogflowV3alpha1TurnSignals::class;
   protected $turnSignalsDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1SuggestArticlesResponse extends \Google\Collection
 {
   protected $collection_key = 'articleAnswers';
+  /**
+   * @var GoogleCloudDialogflowV2beta1ArticleAnswer[]
+   */
+  public $articleAnswers;
   protected $articleAnswersType = GoogleCloudDialogflowV2beta1ArticleAnswer::class;
   protected $articleAnswersDataType = 'array';
   /**

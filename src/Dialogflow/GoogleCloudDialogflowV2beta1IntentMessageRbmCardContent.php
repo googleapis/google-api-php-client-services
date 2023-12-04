@@ -24,8 +24,16 @@ class GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent extends \Google\Co
    * @var string
    */
   public $description;
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia
+   */
+  public $media;
   protected $mediaType = GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentRbmMedia::class;
   protected $mediaDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion[]
+   */
+  public $suggestions;
   protected $suggestionsType = GoogleCloudDialogflowV2beta1IntentMessageRbmSuggestion::class;
   protected $suggestionsDataType = 'array';
   /**

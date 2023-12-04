@@ -20,20 +20,36 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2WebhookResponse extends \Google\Collection
 {
   protected $collection_key = 'sessionEntityTypes';
+  /**
+   * @var GoogleCloudDialogflowV2EventInput
+   */
+  public $followupEventInput;
   protected $followupEventInputType = GoogleCloudDialogflowV2EventInput::class;
   protected $followupEventInputDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessage[]
+   */
+  public $fulfillmentMessages;
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
   /**
    * @var string
    */
   public $fulfillmentText;
+  /**
+   * @var GoogleCloudDialogflowV2Context[]
+   */
+  public $outputContexts;
   protected $outputContextsType = GoogleCloudDialogflowV2Context::class;
   protected $outputContextsDataType = 'array';
   /**
    * @var array[]
    */
   public $payload;
+  /**
+   * @var GoogleCloudDialogflowV2SessionEntityType[]
+   */
+  public $sessionEntityTypes;
   protected $sessionEntityTypesType = GoogleCloudDialogflowV2SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
   /**

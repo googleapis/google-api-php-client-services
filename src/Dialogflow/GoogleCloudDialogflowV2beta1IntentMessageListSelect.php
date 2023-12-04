@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageListSelect extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var GoogleCloudDialogflowV2beta1IntentMessageListSelectItem[]
+   */
+  public $items;
   protected $itemsType = GoogleCloudDialogflowV2beta1IntentMessageListSelectItem::class;
   protected $itemsDataType = 'array';
   /**
