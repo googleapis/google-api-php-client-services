@@ -28,6 +28,10 @@ class RepairClusterRequest extends \Google\Collection
    * @var string
    */
   public $gracefulDecommissionTimeout;
+  /**
+   * @var NodePool[]
+   */
+  public $nodePools;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
   /**

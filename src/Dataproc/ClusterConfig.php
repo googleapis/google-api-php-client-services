@@ -20,42 +20,102 @@ namespace Google\Service\Dataproc;
 class ClusterConfig extends \Google\Collection
 {
   protected $collection_key = 'initializationActions';
+  /**
+   * @var AutoscalingConfig
+   */
+  public $autoscalingConfig;
   protected $autoscalingConfigType = AutoscalingConfig::class;
   protected $autoscalingConfigDataType = '';
+  /**
+   * @var AuxiliaryNodeGroup[]
+   */
+  public $auxiliaryNodeGroups;
   protected $auxiliaryNodeGroupsType = AuxiliaryNodeGroup::class;
   protected $auxiliaryNodeGroupsDataType = 'array';
   /**
    * @var string
    */
   public $configBucket;
+  /**
+   * @var DataprocMetricConfig
+   */
+  public $dataprocMetricConfig;
   protected $dataprocMetricConfigType = DataprocMetricConfig::class;
   protected $dataprocMetricConfigDataType = '';
+  /**
+   * @var EncryptionConfig
+   */
+  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
+  /**
+   * @var EndpointConfig
+   */
+  public $endpointConfig;
   protected $endpointConfigType = EndpointConfig::class;
   protected $endpointConfigDataType = '';
+  /**
+   * @var GceClusterConfig
+   */
+  public $gceClusterConfig;
   protected $gceClusterConfigType = GceClusterConfig::class;
   protected $gceClusterConfigDataType = '';
+  /**
+   * @var GkeClusterConfig
+   */
+  public $gkeClusterConfig;
   protected $gkeClusterConfigType = GkeClusterConfig::class;
   protected $gkeClusterConfigDataType = '';
+  /**
+   * @var NodeInitializationAction[]
+   */
+  public $initializationActions;
   protected $initializationActionsType = NodeInitializationAction::class;
   protected $initializationActionsDataType = 'array';
+  /**
+   * @var LifecycleConfig
+   */
+  public $lifecycleConfig;
   protected $lifecycleConfigType = LifecycleConfig::class;
   protected $lifecycleConfigDataType = '';
+  /**
+   * @var InstanceGroupConfig
+   */
+  public $masterConfig;
   protected $masterConfigType = InstanceGroupConfig::class;
   protected $masterConfigDataType = '';
+  /**
+   * @var MetastoreConfig
+   */
+  public $metastoreConfig;
   protected $metastoreConfigType = MetastoreConfig::class;
   protected $metastoreConfigDataType = '';
+  /**
+   * @var InstanceGroupConfig
+   */
+  public $secondaryWorkerConfig;
   protected $secondaryWorkerConfigType = InstanceGroupConfig::class;
   protected $secondaryWorkerConfigDataType = '';
+  /**
+   * @var SecurityConfig
+   */
+  public $securityConfig;
   protected $securityConfigType = SecurityConfig::class;
   protected $securityConfigDataType = '';
+  /**
+   * @var SoftwareConfig
+   */
+  public $softwareConfig;
   protected $softwareConfigType = SoftwareConfig::class;
   protected $softwareConfigDataType = '';
   /**
    * @var string
    */
   public $tempBucket;
+  /**
+   * @var InstanceGroupConfig
+   */
+  public $workerConfig;
   protected $workerConfigType = InstanceGroupConfig::class;
   protected $workerConfigDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Dataproc;
 
 class AutoscalingPolicy extends \Google\Model
 {
+  /**
+   * @var BasicAutoscalingAlgorithm
+   */
+  public $basicAlgorithm;
   protected $basicAlgorithmType = BasicAutoscalingAlgorithm::class;
   protected $basicAlgorithmDataType = '';
   /**
@@ -33,8 +37,16 @@ class AutoscalingPolicy extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var InstanceGroupAutoscalingPolicyConfig
+   */
+  public $secondaryWorkerConfig;
   protected $secondaryWorkerConfigType = InstanceGroupAutoscalingPolicyConfig::class;
   protected $secondaryWorkerConfigDataType = '';
+  /**
+   * @var InstanceGroupAutoscalingPolicyConfig
+   */
+  public $workerConfig;
   protected $workerConfigType = InstanceGroupAutoscalingPolicyConfig::class;
   protected $workerConfigDataType = '';
 

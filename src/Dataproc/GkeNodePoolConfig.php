@@ -20,8 +20,16 @@ namespace Google\Service\Dataproc;
 class GkeNodePoolConfig extends \Google\Collection
 {
   protected $collection_key = 'locations';
+  /**
+   * @var GkeNodePoolAutoscalingConfig
+   */
+  public $autoscaling;
   protected $autoscalingType = GkeNodePoolAutoscalingConfig::class;
   protected $autoscalingDataType = '';
+  /**
+   * @var GkeNodeConfig
+   */
+  public $config;
   protected $configType = GkeNodeConfig::class;
   protected $configDataType = '';
   /**

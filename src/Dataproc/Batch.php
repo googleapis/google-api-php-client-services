@@ -28,6 +28,10 @@ class Batch extends \Google\Collection
    * @var string
    */
   public $creator;
+  /**
+   * @var EnvironmentConfig
+   */
+  public $environmentConfig;
   protected $environmentConfigType = EnvironmentConfig::class;
   protected $environmentConfigDataType = '';
   /**
@@ -42,22 +46,50 @@ class Batch extends \Google\Collection
    * @var string
    */
   public $operation;
+  /**
+   * @var PySparkBatch
+   */
+  public $pysparkBatch;
   protected $pysparkBatchType = PySparkBatch::class;
   protected $pysparkBatchDataType = '';
+  /**
+   * @var RuntimeConfig
+   */
+  public $runtimeConfig;
   protected $runtimeConfigType = RuntimeConfig::class;
   protected $runtimeConfigDataType = '';
+  /**
+   * @var RuntimeInfo
+   */
+  public $runtimeInfo;
   protected $runtimeInfoType = RuntimeInfo::class;
   protected $runtimeInfoDataType = '';
+  /**
+   * @var SparkBatch
+   */
+  public $sparkBatch;
   protected $sparkBatchType = SparkBatch::class;
   protected $sparkBatchDataType = '';
+  /**
+   * @var SparkRBatch
+   */
+  public $sparkRBatch;
   protected $sparkRBatchType = SparkRBatch::class;
   protected $sparkRBatchDataType = '';
+  /**
+   * @var SparkSqlBatch
+   */
+  public $sparkSqlBatch;
   protected $sparkSqlBatchType = SparkSqlBatch::class;
   protected $sparkSqlBatchDataType = '';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var StateHistory[]
+   */
+  public $stateHistory;
   protected $stateHistoryType = StateHistory::class;
   protected $stateHistoryDataType = 'array';
   /**

@@ -28,8 +28,16 @@ class Session extends \Google\Collection
    * @var string
    */
   public $creator;
+  /**
+   * @var EnvironmentConfig
+   */
+  public $environmentConfig;
   protected $environmentConfigType = EnvironmentConfig::class;
   protected $environmentConfigDataType = '';
+  /**
+   * @var JupyterConfig
+   */
+  public $jupyterSession;
   protected $jupyterSessionType = JupyterConfig::class;
   protected $jupyterSessionDataType = '';
   /**
@@ -40,8 +48,16 @@ class Session extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var RuntimeConfig
+   */
+  public $runtimeConfig;
   protected $runtimeConfigType = RuntimeConfig::class;
   protected $runtimeConfigDataType = '';
+  /**
+   * @var RuntimeInfo
+   */
+  public $runtimeInfo;
   protected $runtimeInfoType = RuntimeInfo::class;
   protected $runtimeInfoDataType = '';
   /**
@@ -52,6 +68,10 @@ class Session extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var SessionStateHistory[]
+   */
+  public $stateHistory;
   protected $stateHistoryType = SessionStateHistory::class;
   protected $stateHistoryDataType = 'array';
   /**

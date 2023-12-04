@@ -20,6 +20,10 @@ namespace Google\Service\Dataproc;
 class GkeNodeConfig extends \Google\Collection
 {
   protected $collection_key = 'accelerators';
+  /**
+   * @var GkeNodePoolAcceleratorConfig[]
+   */
+  public $accelerators;
   protected $acceleratorsType = GkeNodePoolAcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
   /**

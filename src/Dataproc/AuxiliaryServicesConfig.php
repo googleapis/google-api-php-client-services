@@ -19,8 +19,16 @@ namespace Google\Service\Dataproc;
 
 class AuxiliaryServicesConfig extends \Google\Model
 {
+  /**
+   * @var MetastoreConfig
+   */
+  public $metastoreConfig;
   protected $metastoreConfigType = MetastoreConfig::class;
   protected $metastoreConfigDataType = '';
+  /**
+   * @var SparkHistoryServerConfig
+   */
+  public $sparkHistoryServerConfig;
   protected $sparkHistoryServerConfigType = SparkHistoryServerConfig::class;
   protected $sparkHistoryServerConfigDataType = '';
 

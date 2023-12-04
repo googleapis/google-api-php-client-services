@@ -19,8 +19,16 @@ namespace Google\Service\Dataproc;
 
 class SecurityConfig extends \Google\Model
 {
+  /**
+   * @var IdentityConfig
+   */
+  public $identityConfig;
   protected $identityConfigType = IdentityConfig::class;
   protected $identityConfigDataType = '';
+  /**
+   * @var KerberosConfig
+   */
+  public $kerberosConfig;
   protected $kerberosConfigType = KerberosConfig::class;
   protected $kerberosConfigDataType = '';
 

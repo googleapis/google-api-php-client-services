@@ -31,8 +31,16 @@ class SessionTemplate extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var EnvironmentConfig
+   */
+  public $environmentConfig;
   protected $environmentConfigType = EnvironmentConfig::class;
   protected $environmentConfigDataType = '';
+  /**
+   * @var JupyterConfig
+   */
+  public $jupyterSession;
   protected $jupyterSessionType = JupyterConfig::class;
   protected $jupyterSessionDataType = '';
   /**
@@ -43,6 +51,10 @@ class SessionTemplate extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var RuntimeConfig
+   */
+  public $runtimeConfig;
   protected $runtimeConfigType = RuntimeConfig::class;
   protected $runtimeConfigDataType = '';
   /**

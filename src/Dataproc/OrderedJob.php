@@ -20,38 +20,82 @@ namespace Google\Service\Dataproc;
 class OrderedJob extends \Google\Collection
 {
   protected $collection_key = 'prerequisiteStepIds';
+  /**
+   * @var FlinkJob
+   */
+  public $flinkJob;
   protected $flinkJobType = FlinkJob::class;
   protected $flinkJobDataType = '';
+  /**
+   * @var HadoopJob
+   */
+  public $hadoopJob;
   protected $hadoopJobType = HadoopJob::class;
   protected $hadoopJobDataType = '';
+  /**
+   * @var HiveJob
+   */
+  public $hiveJob;
   protected $hiveJobType = HiveJob::class;
   protected $hiveJobDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var PigJob
+   */
+  public $pigJob;
   protected $pigJobType = PigJob::class;
   protected $pigJobDataType = '';
   /**
    * @var string[]
    */
   public $prerequisiteStepIds;
+  /**
+   * @var PrestoJob
+   */
+  public $prestoJob;
   protected $prestoJobType = PrestoJob::class;
   protected $prestoJobDataType = '';
+  /**
+   * @var PySparkJob
+   */
+  public $pysparkJob;
   protected $pysparkJobType = PySparkJob::class;
   protected $pysparkJobDataType = '';
+  /**
+   * @var JobScheduling
+   */
+  public $scheduling;
   protected $schedulingType = JobScheduling::class;
   protected $schedulingDataType = '';
+  /**
+   * @var SparkJob
+   */
+  public $sparkJob;
   protected $sparkJobType = SparkJob::class;
   protected $sparkJobDataType = '';
+  /**
+   * @var SparkRJob
+   */
+  public $sparkRJob;
   protected $sparkRJobType = SparkRJob::class;
   protected $sparkRJobDataType = '';
+  /**
+   * @var SparkSqlJob
+   */
+  public $sparkSqlJob;
   protected $sparkSqlJobType = SparkSqlJob::class;
   protected $sparkSqlJobDataType = '';
   /**
    * @var string
    */
   public $stepId;
+  /**
+   * @var TrinoJob
+   */
+  public $trinoJob;
   protected $trinoJobType = TrinoJob::class;
   protected $trinoJobDataType = '';
 

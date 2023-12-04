@@ -24,8 +24,16 @@ class GkeClusterConfig extends \Google\Collection
    * @var string
    */
   public $gkeClusterTarget;
+  /**
+   * @var NamespacedGkeDeploymentTarget
+   */
+  public $namespacedGkeDeploymentTarget;
   protected $namespacedGkeDeploymentTargetType = NamespacedGkeDeploymentTarget::class;
   protected $namespacedGkeDeploymentTargetDataType = '';
+  /**
+   * @var GkeNodePoolTarget[]
+   */
+  public $nodePoolTarget;
   protected $nodePoolTargetType = GkeNodePoolTarget::class;
   protected $nodePoolTargetDataType = 'array';
 

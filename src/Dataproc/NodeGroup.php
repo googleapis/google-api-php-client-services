@@ -28,6 +28,10 @@ class NodeGroup extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var InstanceGroupConfig
+   */
+  public $nodeGroupConfig;
   protected $nodeGroupConfigType = InstanceGroupConfig::class;
   protected $nodeGroupConfigDataType = '';
   /**

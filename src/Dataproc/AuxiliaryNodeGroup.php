@@ -19,6 +19,10 @@ namespace Google\Service\Dataproc;
 
 class AuxiliaryNodeGroup extends \Google\Model
 {
+  /**
+   * @var NodeGroup
+   */
+  public $nodeGroup;
   protected $nodeGroupType = NodeGroup::class;
   protected $nodeGroupDataType = '';
   /**

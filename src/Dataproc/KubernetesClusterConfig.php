@@ -19,12 +19,20 @@ namespace Google\Service\Dataproc;
 
 class KubernetesClusterConfig extends \Google\Model
 {
+  /**
+   * @var GkeClusterConfig
+   */
+  public $gkeClusterConfig;
   protected $gkeClusterConfigType = GkeClusterConfig::class;
   protected $gkeClusterConfigDataType = '';
   /**
    * @var string
    */
   public $kubernetesNamespace;
+  /**
+   * @var KubernetesSoftwareConfig
+   */
+  public $kubernetesSoftwareConfig;
   protected $kubernetesSoftwareConfigType = KubernetesSoftwareConfig::class;
   protected $kubernetesSoftwareConfigDataType = '';
 

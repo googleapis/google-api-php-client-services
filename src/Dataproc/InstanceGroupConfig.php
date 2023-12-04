@@ -20,20 +20,36 @@ namespace Google\Service\Dataproc;
 class InstanceGroupConfig extends \Google\Collection
 {
   protected $collection_key = 'instanceReferences';
+  /**
+   * @var AcceleratorConfig[]
+   */
+  public $accelerators;
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
+  /**
+   * @var DiskConfig
+   */
+  public $diskConfig;
   protected $diskConfigType = DiskConfig::class;
   protected $diskConfigDataType = '';
   /**
    * @var string
    */
   public $imageUri;
+  /**
+   * @var InstanceFlexibilityPolicy
+   */
+  public $instanceFlexibilityPolicy;
   protected $instanceFlexibilityPolicyType = InstanceFlexibilityPolicy::class;
   protected $instanceFlexibilityPolicyDataType = '';
   /**
    * @var string[]
    */
   public $instanceNames;
+  /**
+   * @var InstanceReference[]
+   */
+  public $instanceReferences;
   protected $instanceReferencesType = InstanceReference::class;
   protected $instanceReferencesDataType = 'array';
   /**
@@ -44,6 +60,10 @@ class InstanceGroupConfig extends \Google\Collection
    * @var string
    */
   public $machineTypeUri;
+  /**
+   * @var ManagedGroupConfig
+   */
+  public $managedGroupConfig;
   protected $managedGroupConfigType = ManagedGroupConfig::class;
   protected $managedGroupConfigDataType = '';
   /**
@@ -62,6 +82,10 @@ class InstanceGroupConfig extends \Google\Collection
    * @var string
    */
   public $preemptibility;
+  /**
+   * @var StartupConfig
+   */
+  public $startupConfig;
   protected $startupConfigType = StartupConfig::class;
   protected $startupConfigDataType = '';
 

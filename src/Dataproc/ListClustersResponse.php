@@ -20,6 +20,10 @@ namespace Google\Service\Dataproc;
 class ListClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'clusters';
+  /**
+   * @var Cluster[]
+   */
+  public $clusters;
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
   /**

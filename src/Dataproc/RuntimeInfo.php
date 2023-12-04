@@ -19,8 +19,16 @@ namespace Google\Service\Dataproc;
 
 class RuntimeInfo extends \Google\Model
 {
+  /**
+   * @var UsageMetrics
+   */
+  public $approximateUsage;
   protected $approximateUsageType = UsageMetrics::class;
   protected $approximateUsageDataType = '';
+  /**
+   * @var UsageSnapshot
+   */
+  public $currentUsage;
   protected $currentUsageType = UsageSnapshot::class;
   protected $currentUsageDataType = '';
   /**

@@ -23,8 +23,16 @@ class BasicAutoscalingAlgorithm extends \Google\Model
    * @var string
    */
   public $cooldownPeriod;
+  /**
+   * @var SparkStandaloneAutoscalingConfig
+   */
+  public $sparkStandaloneConfig;
   protected $sparkStandaloneConfigType = SparkStandaloneAutoscalingConfig::class;
   protected $sparkStandaloneConfigDataType = '';
+  /**
+   * @var BasicYarnAutoscalingConfig
+   */
+  public $yarnConfig;
   protected $yarnConfigType = BasicYarnAutoscalingConfig::class;
   protected $yarnConfigDataType = '';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Dataproc;
 
 class WorkflowTemplatePlacement extends \Google\Model
 {
+  /**
+   * @var ClusterSelector
+   */
+  public $clusterSelector;
   protected $clusterSelectorType = ClusterSelector::class;
   protected $clusterSelectorDataType = '';
+  /**
+   * @var ManagedCluster
+   */
+  public $managedCluster;
   protected $managedClusterType = ManagedCluster::class;
   protected $managedClusterDataType = '';
 

@@ -28,22 +28,42 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $clusterUuid;
+  /**
+   * @var ClusterConfig
+   */
+  public $config;
   protected $configType = ClusterConfig::class;
   protected $configDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var ClusterMetrics
+   */
+  public $metrics;
   protected $metricsType = ClusterMetrics::class;
   protected $metricsDataType = '';
   /**
    * @var string
    */
   public $projectId;
+  /**
+   * @var ClusterStatus
+   */
+  public $status;
   protected $statusType = ClusterStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var ClusterStatus[]
+   */
+  public $statusHistory;
   protected $statusHistoryType = ClusterStatus::class;
   protected $statusHistoryDataType = 'array';
+  /**
+   * @var VirtualClusterConfig
+   */
+  public $virtualClusterConfig;
   protected $virtualClusterConfigType = VirtualClusterConfig::class;
   protected $virtualClusterConfigDataType = '';
 

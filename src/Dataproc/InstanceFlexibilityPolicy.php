@@ -20,8 +20,16 @@ namespace Google\Service\Dataproc;
 class InstanceFlexibilityPolicy extends \Google\Collection
 {
   protected $collection_key = 'instanceSelectionResults';
+  /**
+   * @var InstanceSelection[]
+   */
+  public $instanceSelectionList;
   protected $instanceSelectionListType = InstanceSelection::class;
   protected $instanceSelectionListDataType = 'array';
+  /**
+   * @var InstanceSelectionResult[]
+   */
+  public $instanceSelectionResults;
   protected $instanceSelectionResultsType = InstanceSelectionResult::class;
   protected $instanceSelectionResultsDataType = 'array';
 

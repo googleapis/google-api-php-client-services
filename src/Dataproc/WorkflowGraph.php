@@ -20,6 +20,10 @@ namespace Google\Service\Dataproc;
 class WorkflowGraph extends \Google\Collection
 {
   protected $collection_key = 'nodes';
+  /**
+   * @var WorkflowNode[]
+   */
+  public $nodes;
   protected $nodesType = WorkflowNode::class;
   protected $nodesDataType = 'array';
 

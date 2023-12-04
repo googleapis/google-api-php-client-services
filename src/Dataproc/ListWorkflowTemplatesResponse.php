@@ -24,6 +24,10 @@ class ListWorkflowTemplatesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var WorkflowTemplate[]
+   */
+  public $templates;
   protected $templatesType = WorkflowTemplate::class;
   protected $templatesDataType = 'array';
   /**
