@@ -19,6 +19,10 @@ namespace Google\Service\Vault;
 
 class CountArtifactsRequest extends \Google\Model
 {
+  /**
+   * @var Query
+   */
+  public $query;
   protected $queryType = Query::class;
   protected $queryDataType = '';
   /**

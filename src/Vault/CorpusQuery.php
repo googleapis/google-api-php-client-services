@@ -19,14 +19,34 @@ namespace Google\Service\Vault;
 
 class CorpusQuery extends \Google\Model
 {
+  /**
+   * @var HeldDriveQuery
+   */
+  public $driveQuery;
   protected $driveQueryType = HeldDriveQuery::class;
   protected $driveQueryDataType = '';
+  /**
+   * @var HeldGroupsQuery
+   */
+  public $groupsQuery;
   protected $groupsQueryType = HeldGroupsQuery::class;
   protected $groupsQueryDataType = '';
+  /**
+   * @var HeldHangoutsChatQuery
+   */
+  public $hangoutsChatQuery;
   protected $hangoutsChatQueryType = HeldHangoutsChatQuery::class;
   protected $hangoutsChatQueryDataType = '';
+  /**
+   * @var HeldMailQuery
+   */
+  public $mailQuery;
   protected $mailQueryType = HeldMailQuery::class;
   protected $mailQueryDataType = '';
+  /**
+   * @var HeldVoiceQuery
+   */
+  public $voiceQuery;
   protected $voiceQueryType = HeldVoiceQuery::class;
   protected $voiceQueryDataType = '';
 

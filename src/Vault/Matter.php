@@ -28,6 +28,10 @@ class Matter extends \Google\Collection
    * @var string
    */
   public $matterId;
+  /**
+   * @var MatterPermission[]
+   */
+  public $matterPermissions;
   protected $matterPermissionsType = MatterPermission::class;
   protected $matterPermissionsDataType = 'array';
   /**

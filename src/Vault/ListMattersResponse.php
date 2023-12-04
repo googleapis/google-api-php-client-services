@@ -20,6 +20,10 @@ namespace Google\Service\Vault;
 class ListMattersResponse extends \Google\Collection
 {
   protected $collection_key = 'matters';
+  /**
+   * @var Matter[]
+   */
+  public $matters;
   protected $mattersType = Matter::class;
   protected $mattersDataType = 'array';
   /**

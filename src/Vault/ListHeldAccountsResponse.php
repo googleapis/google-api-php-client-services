@@ -20,6 +20,10 @@ namespace Google\Service\Vault;
 class ListHeldAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'accounts';
+  /**
+   * @var HeldAccount[]
+   */
+  public $accounts;
   protected $accountsType = HeldAccount::class;
   protected $accountsDataType = 'array';
 

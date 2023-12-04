@@ -20,6 +20,10 @@ namespace Google\Service\Vault;
 class CloudStorageSink extends \Google\Collection
 {
   protected $collection_key = 'files';
+  /**
+   * @var CloudStorageFile[]
+   */
+  public $files;
   protected $filesType = CloudStorageFile::class;
   protected $filesDataType = 'array';
 

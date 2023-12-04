@@ -20,8 +20,16 @@ namespace Google\Service\Vault;
 class MailCountResult extends \Google\Collection
 {
   protected $collection_key = 'nonQueryableAccounts';
+  /**
+   * @var AccountCountError[]
+   */
+  public $accountCountErrors;
   protected $accountCountErrorsType = AccountCountError::class;
   protected $accountCountErrorsDataType = 'array';
+  /**
+   * @var AccountCount[]
+   */
+  public $accountCounts;
   protected $accountCountsType = AccountCount::class;
   protected $accountCountsDataType = 'array';
   /**

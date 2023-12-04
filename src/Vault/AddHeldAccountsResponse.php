@@ -20,6 +20,10 @@ namespace Google\Service\Vault;
 class AddHeldAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var AddHeldAccountResult[]
+   */
+  public $responses;
   protected $responsesType = AddHeldAccountResult::class;
   protected $responsesDataType = 'array';
 

@@ -19,8 +19,16 @@ namespace Google\Service\Vault;
 
 class AddHeldAccountResult extends \Google\Model
 {
+  /**
+   * @var HeldAccount
+   */
+  public $account;
   protected $accountType = HeldAccount::class;
   protected $accountDataType = '';
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

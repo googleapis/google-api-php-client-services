@@ -19,18 +19,38 @@ namespace Google\Service\Vault;
 
 class ExportOptions extends \Google\Model
 {
+  /**
+   * @var DriveExportOptions
+   */
+  public $driveOptions;
   protected $driveOptionsType = DriveExportOptions::class;
   protected $driveOptionsDataType = '';
+  /**
+   * @var GroupsExportOptions
+   */
+  public $groupsOptions;
   protected $groupsOptionsType = GroupsExportOptions::class;
   protected $groupsOptionsDataType = '';
+  /**
+   * @var HangoutsChatExportOptions
+   */
+  public $hangoutsChatOptions;
   protected $hangoutsChatOptionsType = HangoutsChatExportOptions::class;
   protected $hangoutsChatOptionsDataType = '';
+  /**
+   * @var MailExportOptions
+   */
+  public $mailOptions;
   protected $mailOptionsType = MailExportOptions::class;
   protected $mailOptionsDataType = '';
   /**
    * @var string
    */
   public $region;
+  /**
+   * @var VoiceExportOptions
+   */
+  public $voiceOptions;
   protected $voiceOptionsType = VoiceExportOptions::class;
   protected $voiceOptionsDataType = '';
 

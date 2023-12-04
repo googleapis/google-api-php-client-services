@@ -20,6 +20,10 @@ namespace Google\Service\Vault;
 class RemoveHeldAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'statuses';
+  /**
+   * @var Status[]
+   */
+  public $statuses;
   protected $statusesType = Status::class;
   protected $statusesDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Vault;
 class Hold extends \Google\Collection
 {
   protected $collection_key = 'accounts';
+  /**
+   * @var HeldAccount[]
+   */
+  public $accounts;
   protected $accountsType = HeldAccount::class;
   protected $accountsDataType = 'array';
   /**
@@ -34,8 +38,16 @@ class Hold extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var HeldOrgUnit
+   */
+  public $orgUnit;
   protected $orgUnitType = HeldOrgUnit::class;
   protected $orgUnitDataType = '';
+  /**
+   * @var CorpusQuery
+   */
+  public $query;
   protected $queryType = CorpusQuery::class;
   protected $queryDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Vault;
 
 class AccountCountError extends \Google\Model
 {
+  /**
+   * @var UserInfo
+   */
+  public $account;
   protected $accountType = UserInfo::class;
   protected $accountDataType = '';
   /**

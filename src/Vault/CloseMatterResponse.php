@@ -19,6 +19,10 @@ namespace Google\Service\Vault;
 
 class CloseMatterResponse extends \Google\Model
 {
+  /**
+   * @var Matter
+   */
+  public $matter;
   protected $matterType = Matter::class;
   protected $matterDataType = '';
 
