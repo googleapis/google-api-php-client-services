@@ -19,6 +19,10 @@ namespace Google\Service\Speech;
 
 class CreateCustomClassRequest extends \Google\Model
 {
+  /**
+   * @var CustomClass
+   */
+  public $customClass;
   protected $customClassType = CustomClass::class;
   protected $customClassDataType = '';
   /**

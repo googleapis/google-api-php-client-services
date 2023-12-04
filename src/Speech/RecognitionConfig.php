@@ -20,6 +20,10 @@ namespace Google\Service\Speech;
 class RecognitionConfig extends \Google\Collection
 {
   protected $collection_key = 'speechContexts';
+  /**
+   * @var SpeechAdaptation
+   */
+  public $adaptation;
   protected $adaptationType = SpeechAdaptation::class;
   protected $adaptationDataType = '';
   /**
@@ -30,6 +34,10 @@ class RecognitionConfig extends \Google\Collection
    * @var int
    */
   public $audioChannelCount;
+  /**
+   * @var SpeakerDiarizationConfig
+   */
+  public $diarizationConfig;
   protected $diarizationConfigType = SpeakerDiarizationConfig::class;
   protected $diarizationConfigDataType = '';
   /**
@@ -68,6 +76,10 @@ class RecognitionConfig extends \Google\Collection
    * @var int
    */
   public $maxAlternatives;
+  /**
+   * @var RecognitionMetadata
+   */
+  public $metadata;
   protected $metadataType = RecognitionMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -82,8 +94,16 @@ class RecognitionConfig extends \Google\Collection
    * @var int
    */
   public $sampleRateHertz;
+  /**
+   * @var SpeechContext[]
+   */
+  public $speechContexts;
   protected $speechContextsType = SpeechContext::class;
   protected $speechContextsDataType = 'array';
+  /**
+   * @var TranscriptNormalization
+   */
+  public $transcriptNormalization;
   protected $transcriptNormalizationType = TranscriptNormalization::class;
   protected $transcriptNormalizationDataType = '';
   /**

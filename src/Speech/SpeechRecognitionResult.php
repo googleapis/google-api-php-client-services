@@ -20,6 +20,10 @@ namespace Google\Service\Speech;
 class SpeechRecognitionResult extends \Google\Collection
 {
   protected $collection_key = 'alternatives';
+  /**
+   * @var SpeechRecognitionAlternative[]
+   */
+  public $alternatives;
   protected $alternativesType = SpeechRecognitionAlternative::class;
   protected $alternativesDataType = 'array';
   /**

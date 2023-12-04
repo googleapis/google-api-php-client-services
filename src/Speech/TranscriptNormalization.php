@@ -20,6 +20,10 @@ namespace Google\Service\Speech;
 class TranscriptNormalization extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var Entry[]
+   */
+  public $entries;
   protected $entriesType = Entry::class;
   protected $entriesDataType = 'array';
 

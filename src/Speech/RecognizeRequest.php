@@ -19,8 +19,16 @@ namespace Google\Service\Speech;
 
 class RecognizeRequest extends \Google\Model
 {
+  /**
+   * @var RecognitionAudio
+   */
+  public $audio;
   protected $audioType = RecognitionAudio::class;
   protected $audioDataType = '';
+  /**
+   * @var RecognitionConfig
+   */
+  public $config;
   protected $configType = RecognitionConfig::class;
   protected $configDataType = '';
 

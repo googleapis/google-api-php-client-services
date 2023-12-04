@@ -20,6 +20,10 @@ namespace Google\Service\Speech;
 class ListCustomClassesResponse extends \Google\Collection
 {
   protected $collection_key = 'customClasses';
+  /**
+   * @var CustomClass[]
+   */
+  public $customClasses;
   protected $customClassesType = CustomClass::class;
   protected $customClassesDataType = 'array';
   /**

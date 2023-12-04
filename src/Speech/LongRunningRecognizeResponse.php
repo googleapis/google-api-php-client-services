@@ -20,16 +20,32 @@ namespace Google\Service\Speech;
 class LongRunningRecognizeResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var TranscriptOutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = TranscriptOutputConfig::class;
   protected $outputConfigDataType = '';
+  /**
+   * @var Status
+   */
+  public $outputError;
   protected $outputErrorType = Status::class;
   protected $outputErrorDataType = '';
   /**
    * @var string
    */
   public $requestId;
+  /**
+   * @var SpeechRecognitionResult[]
+   */
+  public $results;
   protected $resultsType = SpeechRecognitionResult::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var SpeechAdaptationInfo
+   */
+  public $speechAdaptationInfo;
   protected $speechAdaptationInfoType = SpeechAdaptationInfo::class;
   protected $speechAdaptationInfoDataType = '';
   /**

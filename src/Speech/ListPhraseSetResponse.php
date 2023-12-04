@@ -24,6 +24,10 @@ class ListPhraseSetResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PhraseSet[]
+   */
+  public $phraseSets;
   protected $phraseSetsType = PhraseSet::class;
   protected $phraseSetsDataType = 'array';
 

@@ -44,6 +44,10 @@ class CustomClass extends \Google\Collection
    * @var string
    */
   public $expireTime;
+  /**
+   * @var ClassItem[]
+   */
+  public $items;
   protected $itemsType = ClassItem::class;
   protected $itemsDataType = 'array';
   /**

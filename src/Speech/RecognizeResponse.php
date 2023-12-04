@@ -24,8 +24,16 @@ class RecognizeResponse extends \Google\Collection
    * @var string
    */
   public $requestId;
+  /**
+   * @var SpeechRecognitionResult[]
+   */
+  public $results;
   protected $resultsType = SpeechRecognitionResult::class;
   protected $resultsDataType = 'array';
+  /**
+   * @var SpeechAdaptationInfo
+   */
+  public $speechAdaptationInfo;
   protected $speechAdaptationInfoType = SpeechAdaptationInfo::class;
   protected $speechAdaptationInfoDataType = '';
   /**

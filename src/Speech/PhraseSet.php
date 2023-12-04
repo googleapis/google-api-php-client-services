@@ -56,6 +56,10 @@ class PhraseSet extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var Phrase[]
+   */
+  public $phrases;
   protected $phrasesType = Phrase::class;
   protected $phrasesDataType = 'array';
   /**
