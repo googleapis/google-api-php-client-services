@@ -39,6 +39,10 @@ class VerifyChallengeResponseResult extends \Google\Model
    * @var string
    */
   public $deviceSignal;
+  /**
+   * @var DeviceSignals
+   */
+  public $deviceSignals;
   protected $deviceSignalsType = DeviceSignals::class;
   protected $deviceSignalsDataType = '';
   /**
