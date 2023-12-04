@@ -19,6 +19,10 @@ namespace Google\Service\Doubleclicksearch;
 
 class ReportRequestOrderBy extends \Google\Model
 {
+  /**
+   * @var ReportApiColumnSpec
+   */
+  public $column;
   protected $columnType = ReportApiColumnSpec::class;
   protected $columnDataType = '';
   /**

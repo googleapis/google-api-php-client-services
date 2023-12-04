@@ -20,6 +20,10 @@ namespace Google\Service\Doubleclicksearch;
 class ConversionList extends \Google\Collection
 {
   protected $collection_key = 'conversion';
+  /**
+   * @var Conversion[]
+   */
+  public $conversion;
   protected $conversionType = Conversion::class;
   protected $conversionDataType = 'array';
   /**

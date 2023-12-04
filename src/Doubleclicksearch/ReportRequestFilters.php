@@ -20,6 +20,10 @@ namespace Google\Service\Doubleclicksearch;
 class ReportRequestFilters extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var ReportApiColumnSpec
+   */
+  public $column;
   protected $columnType = ReportApiColumnSpec::class;
   protected $columnDataType = '';
   /**

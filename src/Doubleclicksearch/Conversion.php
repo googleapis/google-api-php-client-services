@@ -80,8 +80,16 @@ class Conversion extends \Google\Collection
    * @var string
    */
   public $currencyCode;
+  /**
+   * @var CustomDimension[]
+   */
+  public $customDimension;
   protected $customDimensionType = CustomDimension::class;
   protected $customDimensionDataType = 'array';
+  /**
+   * @var CustomMetric[]
+   */
+  public $customMetric;
   protected $customMetricType = CustomMetric::class;
   protected $customMetricDataType = 'array';
   /**

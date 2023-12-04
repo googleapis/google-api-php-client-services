@@ -20,6 +20,10 @@ namespace Google\Service\Doubleclicksearch;
 class SavedColumnList extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var SavedColumn[]
+   */
+  public $items;
   protected $itemsType = SavedColumn::class;
   protected $itemsDataType = 'array';
   /**
