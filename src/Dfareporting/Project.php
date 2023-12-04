@@ -59,6 +59,10 @@ class Project extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $lastModifiedInfo;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**

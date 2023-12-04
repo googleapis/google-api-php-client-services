@@ -28,6 +28,10 @@ class TargetableRemarketingListsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TargetableRemarketingList[]
+   */
+  public $targetableRemarketingLists;
   protected $targetableRemarketingListsType = TargetableRemarketingList::class;
   protected $targetableRemarketingListsDataType = 'array';
 

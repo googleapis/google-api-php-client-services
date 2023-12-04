@@ -23,10 +23,22 @@ class Report extends \Google\Model
    * @var string
    */
   public $accountId;
+  /**
+   * @var ReportCriteria
+   */
+  public $criteria;
   protected $criteriaType = ReportCriteria::class;
   protected $criteriaDataType = '';
+  /**
+   * @var ReportCrossDimensionReachCriteria
+   */
+  public $crossDimensionReachCriteria;
   protected $crossDimensionReachCriteriaType = ReportCrossDimensionReachCriteria::class;
   protected $crossDimensionReachCriteriaDataType = '';
+  /**
+   * @var ReportDelivery
+   */
+  public $delivery;
   protected $deliveryType = ReportDelivery::class;
   protected $deliveryDataType = '';
   /**
@@ -37,6 +49,10 @@ class Report extends \Google\Model
    * @var string
    */
   public $fileName;
+  /**
+   * @var ReportFloodlightCriteria
+   */
+  public $floodlightCriteria;
   protected $floodlightCriteriaType = ReportFloodlightCriteria::class;
   protected $floodlightCriteriaDataType = '';
   /**
@@ -63,14 +79,34 @@ class Report extends \Google\Model
    * @var string
    */
   public $ownerProfileId;
+  /**
+   * @var ReportPathAttributionCriteria
+   */
+  public $pathAttributionCriteria;
   protected $pathAttributionCriteriaType = ReportPathAttributionCriteria::class;
   protected $pathAttributionCriteriaDataType = '';
+  /**
+   * @var ReportPathCriteria
+   */
+  public $pathCriteria;
   protected $pathCriteriaType = ReportPathCriteria::class;
   protected $pathCriteriaDataType = '';
+  /**
+   * @var ReportPathToConversionCriteria
+   */
+  public $pathToConversionCriteria;
   protected $pathToConversionCriteriaType = ReportPathToConversionCriteria::class;
   protected $pathToConversionCriteriaDataType = '';
+  /**
+   * @var ReportReachCriteria
+   */
+  public $reachCriteria;
   protected $reachCriteriaType = ReportReachCriteria::class;
   protected $reachCriteriaDataType = '';
+  /**
+   * @var ReportSchedule
+   */
+  public $schedule;
   protected $scheduleType = ReportSchedule::class;
   protected $scheduleDataType = '';
   /**

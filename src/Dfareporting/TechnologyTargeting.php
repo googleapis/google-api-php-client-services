@@ -20,16 +20,40 @@ namespace Google\Service\Dfareporting;
 class TechnologyTargeting extends \Google\Collection
 {
   protected $collection_key = 'platformTypes';
+  /**
+   * @var Browser[]
+   */
+  public $browsers;
   protected $browsersType = Browser::class;
   protected $browsersDataType = 'array';
+  /**
+   * @var ConnectionType[]
+   */
+  public $connectionTypes;
   protected $connectionTypesType = ConnectionType::class;
   protected $connectionTypesDataType = 'array';
+  /**
+   * @var MobileCarrier[]
+   */
+  public $mobileCarriers;
   protected $mobileCarriersType = MobileCarrier::class;
   protected $mobileCarriersDataType = 'array';
+  /**
+   * @var OperatingSystemVersion[]
+   */
+  public $operatingSystemVersions;
   protected $operatingSystemVersionsType = OperatingSystemVersion::class;
   protected $operatingSystemVersionsDataType = 'array';
+  /**
+   * @var OperatingSystem[]
+   */
+  public $operatingSystems;
   protected $operatingSystemsType = OperatingSystem::class;
   protected $operatingSystemsDataType = 'array';
+  /**
+   * @var PlatformType[]
+   */
+  public $platformTypes;
   protected $platformTypesType = PlatformType::class;
   protected $platformTypesDataType = 'array';
 

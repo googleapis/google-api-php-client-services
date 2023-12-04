@@ -24,6 +24,10 @@ class PostalCodesListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var PostalCode[]
+   */
+  public $postalCodes;
   protected $postalCodesType = PostalCode::class;
   protected $postalCodesDataType = 'array';
 

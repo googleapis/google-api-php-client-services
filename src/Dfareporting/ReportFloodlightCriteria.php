@@ -20,20 +20,44 @@ namespace Google\Service\Dfareporting;
 class ReportFloodlightCriteria extends \Google\Collection
 {
   protected $collection_key = 'metricNames';
+  /**
+   * @var DimensionValue[]
+   */
+  public $customRichMediaEvents;
   protected $customRichMediaEventsType = DimensionValue::class;
   protected $customRichMediaEventsDataType = 'array';
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
+  /**
+   * @var DimensionValue[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
+  /**
+   * @var SortedDimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
+  /**
+   * @var DimensionValue
+   */
+  public $floodlightConfigId;
   protected $floodlightConfigIdType = DimensionValue::class;
   protected $floodlightConfigIdDataType = '';
   /**
    * @var string[]
    */
   public $metricNames;
+  /**
+   * @var ReportFloodlightCriteriaReportProperties
+   */
+  public $reportProperties;
   protected $reportPropertiesType = ReportFloodlightCriteriaReportProperties::class;
   protected $reportPropertiesDataType = '';
 

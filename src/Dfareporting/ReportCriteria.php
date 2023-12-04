@@ -20,14 +20,34 @@ namespace Google\Service\Dfareporting;
 class ReportCriteria extends \Google\Collection
 {
   protected $collection_key = 'metricNames';
+  /**
+   * @var Activities
+   */
+  public $activities;
   protected $activitiesType = Activities::class;
   protected $activitiesDataType = '';
+  /**
+   * @var CustomRichMediaEvents
+   */
+  public $customRichMediaEvents;
   protected $customRichMediaEventsType = CustomRichMediaEvents::class;
   protected $customRichMediaEventsDataType = '';
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
+  /**
+   * @var DimensionValue[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
+  /**
+   * @var SortedDimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
   /**

@@ -28,6 +28,10 @@ class SubaccountsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Subaccount[]
+   */
+  public $subaccounts;
   protected $subaccountsType = Subaccount::class;
   protected $subaccountsDataType = 'array';
 

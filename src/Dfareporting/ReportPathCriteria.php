@@ -20,20 +20,44 @@ namespace Google\Service\Dfareporting;
 class ReportPathCriteria extends \Google\Collection
 {
   protected $collection_key = 'pathFilters';
+  /**
+   * @var DimensionValue[]
+   */
+  public $activityFilters;
   protected $activityFiltersType = DimensionValue::class;
   protected $activityFiltersDataType = 'array';
+  /**
+   * @var ChannelGrouping
+   */
+  public $customChannelGrouping;
   protected $customChannelGroupingType = ChannelGrouping::class;
   protected $customChannelGroupingDataType = '';
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
+  /**
+   * @var SortedDimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
+  /**
+   * @var DimensionValue
+   */
+  public $floodlightConfigId;
   protected $floodlightConfigIdType = DimensionValue::class;
   protected $floodlightConfigIdDataType = '';
   /**
    * @var string[]
    */
   public $metricNames;
+  /**
+   * @var PathFilter[]
+   */
+  public $pathFilters;
   protected $pathFiltersType = PathFilter::class;
   protected $pathFiltersDataType = 'array';
 

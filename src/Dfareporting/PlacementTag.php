@@ -24,6 +24,10 @@ class PlacementTag extends \Google\Collection
    * @var string
    */
   public $placementId;
+  /**
+   * @var TagData[]
+   */
+  public $tagDatas;
   protected $tagDatasType = TagData::class;
   protected $tagDatasDataType = 'array';
 

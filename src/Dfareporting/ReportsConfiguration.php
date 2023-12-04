@@ -23,6 +23,10 @@ class ReportsConfiguration extends \Google\Model
    * @var bool
    */
   public $exposureToConversionEnabled;
+  /**
+   * @var LookbackConfiguration
+   */
+  public $lookbackConfiguration;
   protected $lookbackConfigurationType = LookbackConfiguration::class;
   protected $lookbackConfigurationDataType = '';
   /**

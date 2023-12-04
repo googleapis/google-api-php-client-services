@@ -32,12 +32,20 @@ class PlacementGroup extends \Google\Collection
    * @var string
    */
   public $advertiserId;
+  /**
+   * @var DimensionValue
+   */
+  public $advertiserIdDimensionValue;
   protected $advertiserIdDimensionValueType = DimensionValue::class;
   protected $advertiserIdDimensionValueDataType = '';
   /**
    * @var string
    */
   public $campaignId;
+  /**
+   * @var DimensionValue
+   */
+  public $campaignIdDimensionValue;
   protected $campaignIdDimensionValueType = DimensionValue::class;
   protected $campaignIdDimensionValueDataType = '';
   /**
@@ -52,12 +60,20 @@ class PlacementGroup extends \Google\Collection
    * @var string
    */
   public $contentCategoryId;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $createInfo;
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
   /**
    * @var string
    */
   public $directorySiteId;
+  /**
+   * @var DimensionValue
+   */
+  public $directorySiteIdDimensionValue;
   protected $directorySiteIdDimensionValueType = DimensionValue::class;
   protected $directorySiteIdDimensionValueDataType = '';
   /**
@@ -68,12 +84,20 @@ class PlacementGroup extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var DimensionValue
+   */
+  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $lastModifiedInfo;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
@@ -88,18 +112,30 @@ class PlacementGroup extends \Google\Collection
    * @var string
    */
   public $placementStrategyId;
+  /**
+   * @var PricingSchedule
+   */
+  public $pricingSchedule;
   protected $pricingScheduleType = PricingSchedule::class;
   protected $pricingScheduleDataType = '';
   /**
    * @var string
    */
   public $primaryPlacementId;
+  /**
+   * @var DimensionValue
+   */
+  public $primaryPlacementIdDimensionValue;
   protected $primaryPlacementIdDimensionValueType = DimensionValue::class;
   protected $primaryPlacementIdDimensionValueDataType = '';
   /**
    * @var string
    */
   public $siteId;
+  /**
+   * @var DimensionValue
+   */
+  public $siteIdDimensionValue;
   protected $siteIdDimensionValueType = DimensionValue::class;
   protected $siteIdDimensionValueDataType = '';
   /**

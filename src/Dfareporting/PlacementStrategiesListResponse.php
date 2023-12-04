@@ -28,6 +28,10 @@ class PlacementStrategiesListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PlacementStrategy[]
+   */
+  public $placementStrategies;
   protected $placementStrategiesType = PlacementStrategy::class;
   protected $placementStrategiesDataType = 'array';
 

@@ -28,6 +28,10 @@ class PlacementsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Placement[]
+   */
+  public $placements;
   protected $placementsType = Placement::class;
   protected $placementsDataType = 'array';
 

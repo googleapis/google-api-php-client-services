@@ -20,18 +20,38 @@ namespace Google\Service\Dfareporting;
 class ReachReportCompatibleFields extends \Google\Collection
 {
   protected $collection_key = 'reachByFrequencyMetrics';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = Dimension::class;
   protected $dimensionFiltersDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var Metric[]
+   */
+  public $pivotedActivityMetrics;
   protected $pivotedActivityMetricsType = Metric::class;
   protected $pivotedActivityMetricsDataType = 'array';
+  /**
+   * @var Metric[]
+   */
+  public $reachByFrequencyMetrics;
   protected $reachByFrequencyMetricsType = Metric::class;
   protected $reachByFrequencyMetricsDataType = 'array';
 

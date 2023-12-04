@@ -31,6 +31,10 @@ class RemarketingList extends \Google\Model
    * @var string
    */
   public $advertiserId;
+  /**
+   * @var DimensionValue
+   */
+  public $advertiserIdDimensionValue;
   protected $advertiserIdDimensionValueType = DimensionValue::class;
   protected $advertiserIdDimensionValueDataType = '';
   /**
@@ -49,6 +53,10 @@ class RemarketingList extends \Google\Model
    * @var string
    */
   public $lifeSpan;
+  /**
+   * @var ListPopulationRule
+   */
+  public $listPopulationRule;
   protected $listPopulationRuleType = ListPopulationRule::class;
   protected $listPopulationRuleDataType = '';
   /**

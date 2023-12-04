@@ -20,16 +20,32 @@ namespace Google\Service\Dfareporting;
 class PathToConversionReportCompatibleFields extends \Google\Collection
 {
   protected $collection_key = 'perInteractionDimensions';
+  /**
+   * @var Dimension[]
+   */
+  public $conversionDimensions;
   protected $conversionDimensionsType = Dimension::class;
   protected $conversionDimensionsDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $customFloodlightVariables;
   protected $customFloodlightVariablesType = Dimension::class;
   protected $customFloodlightVariablesDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $perInteractionDimensions;
   protected $perInteractionDimensionsType = Dimension::class;
   protected $perInteractionDimensionsDataType = 'array';
 

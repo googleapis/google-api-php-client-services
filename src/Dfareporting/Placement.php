@@ -32,18 +32,30 @@ class Placement extends \Google\Collection
    * @var bool
    */
   public $adBlockingOptOut;
+  /**
+   * @var Size[]
+   */
+  public $additionalSizes;
   protected $additionalSizesType = Size::class;
   protected $additionalSizesDataType = 'array';
   /**
    * @var string
    */
   public $advertiserId;
+  /**
+   * @var DimensionValue
+   */
+  public $advertiserIdDimensionValue;
   protected $advertiserIdDimensionValueType = DimensionValue::class;
   protected $advertiserIdDimensionValueDataType = '';
   /**
    * @var string
    */
   public $campaignId;
+  /**
+   * @var DimensionValue
+   */
+  public $campaignIdDimensionValue;
   protected $campaignIdDimensionValueType = DimensionValue::class;
   protected $campaignIdDimensionValueDataType = '';
   /**
@@ -58,12 +70,20 @@ class Placement extends \Google\Collection
    * @var string
    */
   public $contentCategoryId;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $createInfo;
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
   /**
    * @var string
    */
   public $directorySiteId;
+  /**
+   * @var DimensionValue
+   */
+  public $directorySiteIdDimensionValue;
   protected $directorySiteIdDimensionValueType = DimensionValue::class;
   protected $directorySiteIdDimensionValueDataType = '';
   /**
@@ -74,6 +94,10 @@ class Placement extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var DimensionValue
+   */
+  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
@@ -84,14 +108,26 @@ class Placement extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $lastModifiedInfo;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
+  /**
+   * @var LookbackConfiguration
+   */
+  public $lookbackConfiguration;
   protected $lookbackConfigurationType = LookbackConfiguration::class;
   protected $lookbackConfigurationDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var MeasurementPartnerWrappingData
+   */
+  public $partnerWrappingData;
   protected $partnerWrappingDataType = MeasurementPartnerWrappingData::class;
   protected $partnerWrappingDataDataType = '';
   /**
@@ -106,26 +142,46 @@ class Placement extends \Google\Collection
    * @var string
    */
   public $placementGroupId;
+  /**
+   * @var DimensionValue
+   */
+  public $placementGroupIdDimensionValue;
   protected $placementGroupIdDimensionValueType = DimensionValue::class;
   protected $placementGroupIdDimensionValueDataType = '';
   /**
    * @var string
    */
   public $placementStrategyId;
+  /**
+   * @var PricingSchedule
+   */
+  public $pricingSchedule;
   protected $pricingScheduleType = PricingSchedule::class;
   protected $pricingScheduleDataType = '';
   /**
    * @var bool
    */
   public $primary;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $publisherUpdateInfo;
   protected $publisherUpdateInfoType = LastModifiedInfo::class;
   protected $publisherUpdateInfoDataType = '';
   /**
    * @var string
    */
   public $siteId;
+  /**
+   * @var DimensionValue
+   */
+  public $siteIdDimensionValue;
   protected $siteIdDimensionValueType = DimensionValue::class;
   protected $siteIdDimensionValueDataType = '';
+  /**
+   * @var Size
+   */
+  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
   /**
@@ -144,12 +200,20 @@ class Placement extends \Google\Collection
    * @var string[]
    */
   public $tagFormats;
+  /**
+   * @var TagSetting
+   */
+  public $tagSetting;
   protected $tagSettingType = TagSetting::class;
   protected $tagSettingDataType = '';
   /**
    * @var bool
    */
   public $videoActiveViewOptOut;
+  /**
+   * @var VideoSettings
+   */
+  public $videoSettings;
   protected $videoSettingsType = VideoSettings::class;
   protected $videoSettingsDataType = '';
   /**

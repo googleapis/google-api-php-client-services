@@ -20,14 +20,26 @@ namespace Google\Service\Dfareporting;
 class ReportCrossDimensionReachCriteria extends \Google\Collection
 {
   protected $collection_key = 'overlapMetricNames';
+  /**
+   * @var SortedDimension[]
+   */
+  public $breakdown;
   protected $breakdownType = SortedDimension::class;
   protected $breakdownDataType = 'array';
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   /**
    * @var string
    */
   public $dimension;
+  /**
+   * @var DimensionValue[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = DimensionValue::class;
   protected $dimensionFiltersDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Dfareporting;
 
 class UserIdentifier extends \Google\Model
 {
+  /**
+   * @var OfflineUserAddressInfo
+   */
+  public $addressInfo;
   protected $addressInfoType = OfflineUserAddressInfo::class;
   protected $addressInfoDataType = '';
   /**

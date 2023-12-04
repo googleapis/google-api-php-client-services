@@ -31,6 +31,10 @@ class VideoFormat extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var Size
+   */
+  public $resolution;
   protected $resolutionType = Size::class;
   protected $resolutionDataType = '';
   /**

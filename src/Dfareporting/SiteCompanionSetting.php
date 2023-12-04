@@ -24,6 +24,10 @@ class SiteCompanionSetting extends \Google\Collection
    * @var bool
    */
   public $companionsDisabled;
+  /**
+   * @var Size[]
+   */
+  public $enabledSizes;
   protected $enabledSizesType = Size::class;
   protected $enabledSizesDataType = 'array';
   /**

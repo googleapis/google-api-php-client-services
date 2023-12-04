@@ -24,6 +24,10 @@ class UserRolePermissionGroupsListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var UserRolePermissionGroup[]
+   */
+  public $userRolePermissionGroups;
   protected $userRolePermissionGroupsType = UserRolePermissionGroup::class;
   protected $userRolePermissionGroupsDataType = 'array';
 

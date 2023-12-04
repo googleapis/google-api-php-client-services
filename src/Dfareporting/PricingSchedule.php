@@ -36,6 +36,10 @@ class PricingSchedule extends \Google\Collection
    * @var string
    */
   public $floodlightActivityId;
+  /**
+   * @var PricingSchedulePricingPeriod[]
+   */
+  public $pricingPeriods;
   protected $pricingPeriodsType = PricingSchedulePricingPeriod::class;
   protected $pricingPeriodsDataType = 'array';
   /**

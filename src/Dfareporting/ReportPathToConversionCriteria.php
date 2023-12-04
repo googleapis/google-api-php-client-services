@@ -20,24 +20,56 @@ namespace Google\Service\Dfareporting;
 class ReportPathToConversionCriteria extends \Google\Collection
 {
   protected $collection_key = 'perInteractionDimensions';
+  /**
+   * @var DimensionValue[]
+   */
+  public $activityFilters;
   protected $activityFiltersType = DimensionValue::class;
   protected $activityFiltersDataType = 'array';
+  /**
+   * @var SortedDimension[]
+   */
+  public $conversionDimensions;
   protected $conversionDimensionsType = SortedDimension::class;
   protected $conversionDimensionsDataType = 'array';
+  /**
+   * @var SortedDimension[]
+   */
+  public $customFloodlightVariables;
   protected $customFloodlightVariablesType = SortedDimension::class;
   protected $customFloodlightVariablesDataType = 'array';
+  /**
+   * @var DimensionValue[]
+   */
+  public $customRichMediaEvents;
   protected $customRichMediaEventsType = DimensionValue::class;
   protected $customRichMediaEventsDataType = 'array';
+  /**
+   * @var DateRange
+   */
+  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
+  /**
+   * @var DimensionValue
+   */
+  public $floodlightConfigId;
   protected $floodlightConfigIdType = DimensionValue::class;
   protected $floodlightConfigIdDataType = '';
   /**
    * @var string[]
    */
   public $metricNames;
+  /**
+   * @var SortedDimension[]
+   */
+  public $perInteractionDimensions;
   protected $perInteractionDimensionsType = SortedDimension::class;
   protected $perInteractionDimensionsDataType = 'array';
+  /**
+   * @var ReportPathToConversionCriteriaReportProperties
+   */
+  public $reportProperties;
   protected $reportPropertiesType = ReportPathToConversionCriteriaReportProperties::class;
   protected $reportPropertiesDataType = '';
 
