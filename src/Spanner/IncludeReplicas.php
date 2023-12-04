@@ -24,6 +24,10 @@ class IncludeReplicas extends \Google\Collection
    * @var bool
    */
   public $autoFailoverDisabled;
+  /**
+   * @var ReplicaSelection[]
+   */
+  public $replicaSelections;
   protected $replicaSelectionsType = ReplicaSelection::class;
   protected $replicaSelectionsDataType = 'array';
 

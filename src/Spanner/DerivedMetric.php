@@ -19,8 +19,16 @@ namespace Google\Service\Spanner;
 
 class DerivedMetric extends \Google\Model
 {
+  /**
+   * @var LocalizedString
+   */
+  public $denominator;
   protected $denominatorType = LocalizedString::class;
   protected $denominatorDataType = '';
+  /**
+   * @var LocalizedString
+   */
+  public $numerator;
   protected $numeratorType = LocalizedString::class;
   protected $numeratorDataType = '';
 

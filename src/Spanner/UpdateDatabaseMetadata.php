@@ -23,8 +23,16 @@ class UpdateDatabaseMetadata extends \Google\Model
    * @var string
    */
   public $cancelTime;
+  /**
+   * @var OperationProgress
+   */
+  public $progress;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = '';
+  /**
+   * @var UpdateDatabaseRequest
+   */
+  public $request;
   protected $requestType = UpdateDatabaseRequest::class;
   protected $requestDataType = '';
 

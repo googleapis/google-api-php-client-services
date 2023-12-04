@@ -19,10 +19,22 @@ namespace Google\Service\Spanner;
 
 class TransactionOptions extends \Google\Model
 {
+  /**
+   * @var PartitionedDml
+   */
+  public $partitionedDml;
   protected $partitionedDmlType = PartitionedDml::class;
   protected $partitionedDmlDataType = '';
+  /**
+   * @var SpannerReadOnly
+   */
+  public $readOnly;
   protected $readOnlyType = SpannerReadOnly::class;
   protected $readOnlyDataType = '';
+  /**
+   * @var ReadWrite
+   */
+  public $readWrite;
   protected $readWriteType = ReadWrite::class;
   protected $readWriteDataType = '';
 

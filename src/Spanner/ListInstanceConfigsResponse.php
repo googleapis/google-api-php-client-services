@@ -20,6 +20,10 @@ namespace Google\Service\Spanner;
 class ListInstanceConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'instanceConfigs';
+  /**
+   * @var InstanceConfig[]
+   */
+  public $instanceConfigs;
   protected $instanceConfigsType = InstanceConfig::class;
   protected $instanceConfigsDataType = 'array';
   /**

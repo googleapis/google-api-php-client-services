@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class CreateInstanceRequest extends \Google\Model
 {
+  /**
+   * @var Instance
+   */
+  public $instance;
   protected $instanceType = Instance::class;
   protected $instanceDataType = '';
   /**

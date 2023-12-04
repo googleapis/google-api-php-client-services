@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class CreateSessionRequest extends \Google\Model
 {
+  /**
+   * @var Session
+   */
+  public $session;
   protected $sessionType = Session::class;
   protected $sessionDataType = '';
 

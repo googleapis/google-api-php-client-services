@@ -23,8 +23,16 @@ class CreateInstanceConfigMetadata extends \Google\Model
    * @var string
    */
   public $cancelTime;
+  /**
+   * @var InstanceConfig
+   */
+  public $instanceConfig;
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
+  /**
+   * @var InstanceOperationProgress
+   */
+  public $progress;
   protected $progressType = InstanceOperationProgress::class;
   protected $progressDataType = '';
 

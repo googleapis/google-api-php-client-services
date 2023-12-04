@@ -23,10 +23,22 @@ class Metric extends \Google\Model
    * @var string
    */
   public $aggregation;
+  /**
+   * @var LocalizedString
+   */
+  public $category;
   protected $categoryType = LocalizedString::class;
   protected $categoryDataType = '';
+  /**
+   * @var DerivedMetric
+   */
+  public $derived;
   protected $derivedType = DerivedMetric::class;
   protected $derivedDataType = '';
+  /**
+   * @var LocalizedString
+   */
+  public $displayLabel;
   protected $displayLabelType = LocalizedString::class;
   protected $displayLabelDataType = '';
   /**
@@ -37,14 +49,34 @@ class Metric extends \Google\Model
    * @var float
    */
   public $hotValue;
+  /**
+   * @var IndexedHotKey[]
+   */
+  public $indexedHotKeys;
   protected $indexedHotKeysType = IndexedHotKey::class;
   protected $indexedHotKeysDataType = 'map';
+  /**
+   * @var IndexedKeyRangeInfos[]
+   */
+  public $indexedKeyRangeInfos;
   protected $indexedKeyRangeInfosType = IndexedKeyRangeInfos::class;
   protected $indexedKeyRangeInfosDataType = 'map';
+  /**
+   * @var LocalizedString
+   */
+  public $info;
   protected $infoType = LocalizedString::class;
   protected $infoDataType = '';
+  /**
+   * @var MetricMatrix
+   */
+  public $matrix;
   protected $matrixType = MetricMatrix::class;
   protected $matrixDataType = '';
+  /**
+   * @var LocalizedString
+   */
+  public $unit;
   protected $unitType = LocalizedString::class;
   protected $unitDataType = '';
   /**

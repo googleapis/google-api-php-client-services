@@ -20,14 +20,26 @@ namespace Google\Service\Spanner;
 class CommitRequest extends \Google\Collection
 {
   protected $collection_key = 'mutations';
+  /**
+   * @var Mutation[]
+   */
+  public $mutations;
   protected $mutationsType = Mutation::class;
   protected $mutationsDataType = 'array';
+  /**
+   * @var RequestOptions
+   */
+  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
   /**
    * @var bool
    */
   public $returnCommitStats;
+  /**
+   * @var TransactionOptions
+   */
+  public $singleUseTransaction;
   protected $singleUseTransactionType = TransactionOptions::class;
   protected $singleUseTransactionDataType = '';
   /**

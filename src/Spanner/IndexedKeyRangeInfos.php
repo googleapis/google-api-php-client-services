@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class IndexedKeyRangeInfos extends \Google\Model
 {
+  /**
+   * @var KeyRangeInfos[]
+   */
+  public $keyRangeInfos;
   protected $keyRangeInfosType = KeyRangeInfos::class;
   protected $keyRangeInfosDataType = 'map';
 

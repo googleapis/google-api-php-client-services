@@ -27,6 +27,10 @@ class UpdateInstanceMetadata extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var Instance
+   */
+  public $instance;
   protected $instanceType = Instance::class;
   protected $instanceDataType = '';
   /**

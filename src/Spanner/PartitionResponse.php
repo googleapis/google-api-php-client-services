@@ -20,8 +20,16 @@ namespace Google\Service\Spanner;
 class PartitionResponse extends \Google\Collection
 {
   protected $collection_key = 'partitions';
+  /**
+   * @var Partition[]
+   */
+  public $partitions;
   protected $partitionsType = Partition::class;
   protected $partitionsDataType = 'array';
+  /**
+   * @var Transaction
+   */
+  public $transaction;
   protected $transactionType = Transaction::class;
   protected $transactionDataType = '';
 

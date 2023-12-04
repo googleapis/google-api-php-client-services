@@ -19,18 +19,30 @@ namespace Google\Service\Spanner;
 
 class PartitionQueryRequest extends \Google\Model
 {
+  /**
+   * @var Type[]
+   */
+  public $paramTypes;
   protected $paramTypesType = Type::class;
   protected $paramTypesDataType = 'map';
   /**
    * @var array[]
    */
   public $params;
+  /**
+   * @var PartitionOptions
+   */
+  public $partitionOptions;
   protected $partitionOptionsType = PartitionOptions::class;
   protected $partitionOptionsDataType = '';
   /**
    * @var string
    */
   public $sql;
+  /**
+   * @var TransactionSelector
+   */
+  public $transaction;
   protected $transactionType = TransactionSelector::class;
   protected $transactionDataType = '';
 

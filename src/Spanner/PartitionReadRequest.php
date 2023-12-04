@@ -28,14 +28,26 @@ class PartitionReadRequest extends \Google\Collection
    * @var string
    */
   public $index;
+  /**
+   * @var KeySet
+   */
+  public $keySet;
   protected $keySetType = KeySet::class;
   protected $keySetDataType = '';
+  /**
+   * @var PartitionOptions
+   */
+  public $partitionOptions;
   protected $partitionOptionsType = PartitionOptions::class;
   protected $partitionOptionsDataType = '';
   /**
    * @var string
    */
   public $table;
+  /**
+   * @var TransactionSelector
+   */
+  public $transaction;
   protected $transactionType = TransactionSelector::class;
   protected $transactionDataType = '';
 

@@ -24,6 +24,10 @@ class ListScansResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Scan[]
+   */
+  public $scans;
   protected $scansType = Scan::class;
   protected $scansDataType = 'array';
 

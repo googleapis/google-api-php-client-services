@@ -20,6 +20,10 @@ namespace Google\Service\Spanner;
 class QueryAdvisorResult extends \Google\Collection
 {
   protected $collection_key = 'indexAdvice';
+  /**
+   * @var IndexAdvice[]
+   */
+  public $indexAdvice;
   protected $indexAdviceType = IndexAdvice::class;
   protected $indexAdviceDataType = 'array';
 

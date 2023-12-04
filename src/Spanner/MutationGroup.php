@@ -20,6 +20,10 @@ namespace Google\Service\Spanner;
 class MutationGroup extends \Google\Collection
 {
   protected $collection_key = 'mutations';
+  /**
+   * @var Mutation[]
+   */
+  public $mutations;
   protected $mutationsType = Mutation::class;
   protected $mutationsDataType = 'array';
 

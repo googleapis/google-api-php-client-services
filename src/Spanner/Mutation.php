@@ -19,14 +19,34 @@ namespace Google\Service\Spanner;
 
 class Mutation extends \Google\Model
 {
+  /**
+   * @var Delete
+   */
+  public $delete;
   protected $deleteType = Delete::class;
   protected $deleteDataType = '';
+  /**
+   * @var Write
+   */
+  public $insert;
   protected $insertType = Write::class;
   protected $insertDataType = '';
+  /**
+   * @var Write
+   */
+  public $insertOrUpdate;
   protected $insertOrUpdateType = Write::class;
   protected $insertOrUpdateDataType = '';
+  /**
+   * @var Write
+   */
+  public $replace;
   protected $replaceType = Write::class;
   protected $replaceDataType = '';
+  /**
+   * @var Write
+   */
+  public $update;
   protected $updateType = Write::class;
   protected $updateDataType = '';
 

@@ -20,18 +20,30 @@ namespace Google\Service\Spanner;
 class KeyRangeInfo extends \Google\Collection
 {
   protected $collection_key = 'contextValues';
+  /**
+   * @var ContextValue[]
+   */
+  public $contextValues;
   protected $contextValuesType = ContextValue::class;
   protected $contextValuesDataType = 'array';
   /**
    * @var int
    */
   public $endKeyIndex;
+  /**
+   * @var LocalizedString
+   */
+  public $info;
   protected $infoType = LocalizedString::class;
   protected $infoDataType = '';
   /**
    * @var string
    */
   public $keysCount;
+  /**
+   * @var LocalizedString
+   */
+  public $metric;
   protected $metricType = LocalizedString::class;
   protected $metricDataType = '';
   /**
@@ -42,6 +54,10 @@ class KeyRangeInfo extends \Google\Collection
    * @var string
    */
   public $timeOffset;
+  /**
+   * @var LocalizedString
+   */
+  public $unit;
   protected $unitType = LocalizedString::class;
   protected $unitDataType = '';
   /**

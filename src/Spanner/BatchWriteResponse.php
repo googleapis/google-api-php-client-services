@@ -28,6 +28,10 @@ class BatchWriteResponse extends \Google\Collection
    * @var int[]
    */
   public $indexes;
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class ScanData extends \Google\Model
 {
+  /**
+   * @var VisualizationData
+   */
+  public $data;
   protected $dataType = VisualizationData::class;
   protected $dataDataType = '';
   /**

@@ -28,6 +28,10 @@ class CreateDatabaseRequest extends \Google\Collection
    * @var string
    */
   public $databaseDialect;
+  /**
+   * @var EncryptionConfig
+   */
+  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**

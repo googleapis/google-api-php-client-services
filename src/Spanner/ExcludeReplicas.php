@@ -20,6 +20,10 @@ namespace Google\Service\Spanner;
 class ExcludeReplicas extends \Google\Collection
 {
   protected $collection_key = 'replicaSelections';
+  /**
+   * @var ReplicaSelection[]
+   */
+  public $replicaSelections;
   protected $replicaSelectionsType = ReplicaSelection::class;
   protected $replicaSelectionsDataType = 'array';
 

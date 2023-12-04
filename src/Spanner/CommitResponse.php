@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class CommitResponse extends \Google\Model
 {
+  /**
+   * @var CommitStats
+   */
+  public $commitStats;
   protected $commitStatsType = CommitStats::class;
   protected $commitStatsDataType = '';
   /**

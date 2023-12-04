@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class Statement extends \Google\Model
 {
+  /**
+   * @var Type[]
+   */
+  public $paramTypes;
   protected $paramTypesType = Type::class;
   protected $paramTypesDataType = 'map';
   /**

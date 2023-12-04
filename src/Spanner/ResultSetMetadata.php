@@ -19,10 +19,22 @@ namespace Google\Service\Spanner;
 
 class ResultSetMetadata extends \Google\Model
 {
+  /**
+   * @var StructType
+   */
+  public $rowType;
   protected $rowTypeType = StructType::class;
   protected $rowTypeDataType = '';
+  /**
+   * @var Transaction
+   */
+  public $transaction;
   protected $transactionType = Transaction::class;
   protected $transactionDataType = '';
+  /**
+   * @var StructType
+   */
+  public $undeclaredParameters;
   protected $undeclaredParametersType = StructType::class;
   protected $undeclaredParametersDataType = '';
 

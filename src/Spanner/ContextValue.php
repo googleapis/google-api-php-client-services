@@ -19,6 +19,10 @@ namespace Google\Service\Spanner;
 
 class ContextValue extends \Google\Model
 {
+  /**
+   * @var LocalizedString
+   */
+  public $label;
   protected $labelType = LocalizedString::class;
   protected $labelDataType = '';
   /**
