@@ -19,8 +19,16 @@ namespace Google\Service\TravelImpactModel;
 
 class FlightWithEmissions extends \Google\Model
 {
+  /**
+   * @var EmissionsGramsPerPax
+   */
+  public $emissionsGramsPerPax;
   protected $emissionsGramsPerPaxType = EmissionsGramsPerPax::class;
   protected $emissionsGramsPerPaxDataType = '';
+  /**
+   * @var Flight
+   */
+  public $flight;
   protected $flightType = Flight::class;
   protected $flightDataType = '';
 

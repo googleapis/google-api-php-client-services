@@ -19,6 +19,10 @@ namespace Google\Service\TravelImpactModel;
 
 class Flight extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $departureDate;
   protected $departureDateType = Date::class;
   protected $departureDateDataType = '';
   /**
