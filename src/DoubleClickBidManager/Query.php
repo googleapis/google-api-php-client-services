@@ -19,14 +19,26 @@ namespace Google\Service\DoubleClickBidManager;
 
 class Query extends \Google\Model
 {
+  /**
+   * @var QueryMetadata
+   */
+  public $metadata;
   protected $metadataType = QueryMetadata::class;
   protected $metadataDataType = '';
+  /**
+   * @var Parameters
+   */
+  public $params;
   protected $paramsType = Parameters::class;
   protected $paramsDataType = '';
   /**
    * @var string
    */
   public $queryId;
+  /**
+   * @var QuerySchedule
+   */
+  public $schedule;
   protected $scheduleType = QuerySchedule::class;
   protected $scheduleDataType = '';
 

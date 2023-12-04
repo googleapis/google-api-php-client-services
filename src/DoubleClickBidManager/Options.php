@@ -23,6 +23,10 @@ class Options extends \Google\Model
    * @var bool
    */
   public $includeOnlyTargetedUserLists;
+  /**
+   * @var PathQueryOptions
+   */
+  public $pathQueryOptions;
   protected $pathQueryOptionsType = PathQueryOptions::class;
   protected $pathQueryOptionsDataType = '';
 

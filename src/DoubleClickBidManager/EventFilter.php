@@ -19,6 +19,10 @@ namespace Google\Service\DoubleClickBidManager;
 
 class EventFilter extends \Google\Model
 {
+  /**
+   * @var PathQueryOptionsFilter
+   */
+  public $dimensionFilter;
   protected $dimensionFilterType = PathQueryOptionsFilter::class;
   protected $dimensionFilterDataType = '';
 

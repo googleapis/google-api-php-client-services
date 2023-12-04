@@ -19,6 +19,10 @@ namespace Google\Service\DoubleClickBidManager;
 
 class RunQueryRequest extends \Google\Model
 {
+  /**
+   * @var DataRange
+   */
+  public $dataRange;
   protected $dataRangeType = DataRange::class;
   protected $dataRangeDataType = '';
 

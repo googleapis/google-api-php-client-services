@@ -19,6 +19,10 @@ namespace Google\Service\DoubleClickBidManager;
 
 class QuerySchedule extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
   /**
@@ -29,6 +33,10 @@ class QuerySchedule extends \Google\Model
    * @var string
    */
   public $nextRunTimezoneCode;
+  /**
+   * @var Date
+   */
+  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\DoubleClickBidManager;
 class QueryMetadata extends \Google\Collection
 {
   protected $collection_key = 'shareEmailAddress';
+  /**
+   * @var DataRange
+   */
+  public $dataRange;
   protected $dataRangeType = DataRange::class;
   protected $dataRangeDataType = '';
   /**

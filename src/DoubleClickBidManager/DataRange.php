@@ -19,8 +19,16 @@ namespace Google\Service\DoubleClickBidManager;
 
 class DataRange extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $customEndDate;
   protected $customEndDateType = Date::class;
   protected $customEndDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $customStartDate;
   protected $customStartDateType = Date::class;
   protected $customStartDateDataType = '';
   /**

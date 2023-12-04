@@ -20,8 +20,16 @@ namespace Google\Service\DoubleClickBidManager;
 class PathQueryOptions extends \Google\Collection
 {
   protected $collection_key = 'pathFilters';
+  /**
+   * @var ChannelGrouping
+   */
+  public $channelGrouping;
   protected $channelGroupingType = ChannelGrouping::class;
   protected $channelGroupingDataType = '';
+  /**
+   * @var PathFilter[]
+   */
+  public $pathFilters;
   protected $pathFiltersType = PathFilter::class;
   protected $pathFiltersDataType = 'array';
 
