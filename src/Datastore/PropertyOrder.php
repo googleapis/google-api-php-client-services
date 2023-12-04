@@ -23,6 +23,10 @@ class PropertyOrder extends \Google\Model
    * @var string
    */
   public $direction;
+  /**
+   * @var PropertyReference
+   */
+  public $property;
   protected $propertyType = PropertyReference::class;
   protected $propertyDataType = '';
 

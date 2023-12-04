@@ -20,8 +20,16 @@ namespace Google\Service\Datastore;
 class Key extends \Google\Collection
 {
   protected $collection_key = 'path';
+  /**
+   * @var PartitionId
+   */
+  public $partitionId;
   protected $partitionIdType = PartitionId::class;
   protected $partitionIdDataType = '';
+  /**
+   * @var PathElement[]
+   */
+  public $path;
   protected $pathType = PathElement::class;
   protected $pathDataType = 'array';
 

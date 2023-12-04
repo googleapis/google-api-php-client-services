@@ -19,16 +19,32 @@ namespace Google\Service\Datastore;
 
 class GoogleDatastoreAdminV1beta1ImportEntitiesMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleDatastoreAdminV1beta1CommonMetadata
+   */
+  public $common;
   protected $commonType = GoogleDatastoreAdminV1beta1CommonMetadata::class;
   protected $commonDataType = '';
+  /**
+   * @var GoogleDatastoreAdminV1beta1EntityFilter
+   */
+  public $entityFilter;
   protected $entityFilterType = GoogleDatastoreAdminV1beta1EntityFilter::class;
   protected $entityFilterDataType = '';
   /**
    * @var string
    */
   public $inputUrl;
+  /**
+   * @var GoogleDatastoreAdminV1beta1Progress
+   */
+  public $progressBytes;
   protected $progressBytesType = GoogleDatastoreAdminV1beta1Progress::class;
   protected $progressBytesDataType = '';
+  /**
+   * @var GoogleDatastoreAdminV1beta1Progress
+   */
+  public $progressEntities;
   protected $progressEntitiesType = GoogleDatastoreAdminV1beta1Progress::class;
   protected $progressEntitiesDataType = '';
 

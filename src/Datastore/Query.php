@@ -20,14 +20,26 @@ namespace Google\Service\Datastore;
 class Query extends \Google\Collection
 {
   protected $collection_key = 'projection';
+  /**
+   * @var PropertyReference[]
+   */
+  public $distinctOn;
   protected $distinctOnType = PropertyReference::class;
   protected $distinctOnDataType = 'array';
   /**
    * @var string
    */
   public $endCursor;
+  /**
+   * @var Filter
+   */
+  public $filter;
   protected $filterType = Filter::class;
   protected $filterDataType = '';
+  /**
+   * @var KindExpression[]
+   */
+  public $kind;
   protected $kindType = KindExpression::class;
   protected $kindDataType = 'array';
   /**
@@ -38,8 +50,16 @@ class Query extends \Google\Collection
    * @var int
    */
   public $offset;
+  /**
+   * @var PropertyOrder[]
+   */
+  public $order;
   protected $orderType = PropertyOrder::class;
   protected $orderDataType = 'array';
+  /**
+   * @var Projection[]
+   */
+  public $projection;
   protected $projectionType = Projection::class;
   protected $projectionDataType = 'array';
   /**

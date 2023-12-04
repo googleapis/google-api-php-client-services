@@ -19,12 +19,20 @@ namespace Google\Service\Datastore;
 
 class GoogleDatastoreAdminV1IndexOperationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleDatastoreAdminV1CommonMetadata
+   */
+  public $common;
   protected $commonType = GoogleDatastoreAdminV1CommonMetadata::class;
   protected $commonDataType = '';
   /**
    * @var string
    */
   public $indexId;
+  /**
+   * @var GoogleDatastoreAdminV1Progress
+   */
+  public $progressEntities;
   protected $progressEntitiesType = GoogleDatastoreAdminV1Progress::class;
   protected $progressEntitiesDataType = '';
 

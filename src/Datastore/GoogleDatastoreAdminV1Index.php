@@ -36,6 +36,10 @@ class GoogleDatastoreAdminV1Index extends \Google\Collection
    * @var string
    */
   public $projectId;
+  /**
+   * @var GoogleDatastoreAdminV1IndexedProperty[]
+   */
+  public $properties;
   protected $propertiesType = GoogleDatastoreAdminV1IndexedProperty::class;
   protected $propertiesDataType = 'array';
   /**

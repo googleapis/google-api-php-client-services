@@ -20,6 +20,10 @@ namespace Google\Service\Datastore;
 class AllocateIdsResponse extends \Google\Collection
 {
   protected $collection_key = 'keys';
+  /**
+   * @var Key[]
+   */
+  public $keys;
   protected $keysType = Key::class;
   protected $keysDataType = 'array';
 

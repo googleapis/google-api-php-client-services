@@ -20,8 +20,16 @@ namespace Google\Service\Datastore;
 class AggregationQuery extends \Google\Collection
 {
   protected $collection_key = 'aggregations';
+  /**
+   * @var Aggregation[]
+   */
+  public $aggregations;
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
+  /**
+   * @var Query
+   */
+  public $nestedQuery;
   protected $nestedQueryType = Query::class;
   protected $nestedQueryDataType = '';
 

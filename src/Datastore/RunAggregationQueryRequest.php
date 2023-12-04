@@ -19,16 +19,32 @@ namespace Google\Service\Datastore;
 
 class RunAggregationQueryRequest extends \Google\Model
 {
+  /**
+   * @var AggregationQuery
+   */
+  public $aggregationQuery;
   protected $aggregationQueryType = AggregationQuery::class;
   protected $aggregationQueryDataType = '';
   /**
    * @var string
    */
   public $databaseId;
+  /**
+   * @var GqlQuery
+   */
+  public $gqlQuery;
   protected $gqlQueryType = GqlQuery::class;
   protected $gqlQueryDataType = '';
+  /**
+   * @var PartitionId
+   */
+  public $partitionId;
   protected $partitionIdType = PartitionId::class;
   protected $partitionIdDataType = '';
+  /**
+   * @var ReadOptions
+   */
+  public $readOptions;
   protected $readOptionsType = ReadOptions::class;
   protected $readOptionsDataType = '';
 

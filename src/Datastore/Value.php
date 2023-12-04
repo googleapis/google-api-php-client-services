@@ -19,6 +19,10 @@ namespace Google\Service\Datastore;
 
 class Value extends \Google\Model
 {
+  /**
+   * @var ArrayValue
+   */
+  public $arrayValue;
   protected $arrayValueType = ArrayValue::class;
   protected $arrayValueDataType = '';
   /**
@@ -30,18 +34,30 @@ class Value extends \Google\Model
    */
   public $booleanValue;
   public $doubleValue;
+  /**
+   * @var Entity
+   */
+  public $entityValue;
   protected $entityValueType = Entity::class;
   protected $entityValueDataType = '';
   /**
    * @var bool
    */
   public $excludeFromIndexes;
+  /**
+   * @var LatLng
+   */
+  public $geoPointValue;
   protected $geoPointValueType = LatLng::class;
   protected $geoPointValueDataType = '';
   /**
    * @var string
    */
   public $integerValue;
+  /**
+   * @var Key
+   */
+  public $keyValue;
   protected $keyValueType = Key::class;
   protected $keyValueDataType = '';
   /**

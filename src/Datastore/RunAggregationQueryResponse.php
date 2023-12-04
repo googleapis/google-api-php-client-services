@@ -19,8 +19,16 @@ namespace Google\Service\Datastore;
 
 class RunAggregationQueryResponse extends \Google\Model
 {
+  /**
+   * @var AggregationResultBatch
+   */
+  public $batch;
   protected $batchType = AggregationResultBatch::class;
   protected $batchDataType = '';
+  /**
+   * @var AggregationQuery
+   */
+  public $query;
   protected $queryType = AggregationQuery::class;
   protected $queryDataType = '';
   /**

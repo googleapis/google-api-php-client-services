@@ -28,6 +28,10 @@ class QueryResultBatch extends \Google\Collection
    * @var string
    */
   public $entityResultType;
+  /**
+   * @var EntityResult[]
+   */
+  public $entityResults;
   protected $entityResultsType = EntityResult::class;
   protected $entityResultsDataType = 'array';
   /**

@@ -24,8 +24,16 @@ class LookupRequest extends \Google\Collection
    * @var string
    */
   public $databaseId;
+  /**
+   * @var Key[]
+   */
+  public $keys;
   protected $keysType = Key::class;
   protected $keysDataType = 'array';
+  /**
+   * @var ReadOptions
+   */
+  public $readOptions;
   protected $readOptionsType = ReadOptions::class;
   protected $readOptionsDataType = '';
 

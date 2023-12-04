@@ -20,6 +20,10 @@ namespace Google\Service\Datastore;
 class AggregationResultBatch extends \Google\Collection
 {
   protected $collection_key = 'aggregationResults';
+  /**
+   * @var AggregationResult[]
+   */
+  public $aggregationResults;
   protected $aggregationResultsType = AggregationResult::class;
   protected $aggregationResultsDataType = 'array';
   /**

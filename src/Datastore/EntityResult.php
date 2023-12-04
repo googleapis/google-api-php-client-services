@@ -27,6 +27,10 @@ class EntityResult extends \Google\Model
    * @var string
    */
   public $cursor;
+  /**
+   * @var Entity
+   */
+  public $entity;
   protected $entityType = Entity::class;
   protected $entityDataType = '';
   /**

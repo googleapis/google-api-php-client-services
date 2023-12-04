@@ -19,6 +19,10 @@ namespace Google\Service\Datastore;
 
 class AggregationResult extends \Google\Model
 {
+  /**
+   * @var Value[]
+   */
+  public $aggregateProperties;
   protected $aggregatePropertiesType = Value::class;
   protected $aggregatePropertiesDataType = 'map';
 
