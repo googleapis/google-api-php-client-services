@@ -23,6 +23,10 @@ class GoogleCloudDatapipelinesV1Job extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudDatapipelinesV1DataflowJobDetails
+   */
+  public $dataflowJobDetails;
   protected $dataflowJobDetailsType = GoogleCloudDatapipelinesV1DataflowJobDetails::class;
   protected $dataflowJobDetailsDataType = '';
   /**
@@ -41,6 +45,10 @@ class GoogleCloudDatapipelinesV1Job extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

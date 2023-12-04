@@ -19,6 +19,10 @@ namespace Google\Service\Datapipelines;
 
 class GoogleCloudDatapipelinesV1RunPipelineResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatapipelinesV1Job
+   */
+  public $job;
   protected $jobType = GoogleCloudDatapipelinesV1Job::class;
   protected $jobDataType = '';
 

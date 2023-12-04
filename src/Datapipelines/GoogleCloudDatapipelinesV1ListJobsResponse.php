@@ -20,6 +20,10 @@ namespace Google\Service\Datapipelines;
 class GoogleCloudDatapipelinesV1ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
+  /**
+   * @var GoogleCloudDatapipelinesV1Job[]
+   */
+  public $jobs;
   protected $jobsType = GoogleCloudDatapipelinesV1Job::class;
   protected $jobsDataType = 'array';
   /**

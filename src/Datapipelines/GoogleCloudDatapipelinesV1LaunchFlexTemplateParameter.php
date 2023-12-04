@@ -23,6 +23,10 @@ class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter extends \Google\Mode
    * @var string
    */
   public $containerSpecGcsPath;
+  /**
+   * @var GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment
+   */
+  public $environment;
   protected $environmentType = GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironment::class;
   protected $environmentDataType = '';
   /**

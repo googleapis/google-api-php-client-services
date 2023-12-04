@@ -19,6 +19,10 @@ namespace Google\Service\Datapipelines;
 
 class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter
+   */
+  public $launchParameter;
   protected $launchParameterType = GoogleCloudDatapipelinesV1LaunchFlexTemplateParameter::class;
   protected $launchParameterDataType = '';
   /**
