@@ -20,14 +20,26 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p2beta1Paragraph extends \Google\Collection
 {
   protected $collection_key = 'words';
+  /**
+   * @var GoogleCloudVisionV1p2beta1BoundingPoly
+   */
+  public $boundingBox;
   protected $boundingBoxType = GoogleCloudVisionV1p2beta1BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var GoogleCloudVisionV1p2beta1TextAnnotationTextProperty
+   */
+  public $property;
   protected $propertyType = GoogleCloudVisionV1p2beta1TextAnnotationTextProperty::class;
   protected $propertyDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p2beta1Word[]
+   */
+  public $words;
   protected $wordsType = GoogleCloudVisionV1p2beta1Word::class;
   protected $wordsDataType = 'array';
 

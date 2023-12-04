@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class AsyncAnnotateFileResponse extends \Google\Model
 {
+  /**
+   * @var OutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
 

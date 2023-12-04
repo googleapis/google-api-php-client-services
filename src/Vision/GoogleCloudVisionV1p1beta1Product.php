@@ -36,6 +36,10 @@ class GoogleCloudVisionV1p1beta1Product extends \Google\Collection
    * @var string
    */
   public $productCategory;
+  /**
+   * @var GoogleCloudVisionV1p1beta1ProductKeyValue[]
+   */
+  public $productLabels;
   protected $productLabelsType = GoogleCloudVisionV1p1beta1ProductKeyValue::class;
   protected $productLabelsDataType = 'array';
 

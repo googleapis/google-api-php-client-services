@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class CropHint extends \Google\Model
 {
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**

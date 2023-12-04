@@ -20,10 +20,22 @@ namespace Google\Service\Vision;
 class AnnotateImageRequest extends \Google\Collection
 {
   protected $collection_key = 'features';
+  /**
+   * @var Feature[]
+   */
+  public $features;
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
+  /**
+   * @var ImageContext
+   */
+  public $imageContext;
   protected $imageContextType = ImageContext::class;
   protected $imageContextDataType = '';
 

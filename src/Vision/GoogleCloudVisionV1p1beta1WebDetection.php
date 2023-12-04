@@ -20,16 +20,40 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p1beta1WebDetection extends \Google\Collection
 {
   protected $collection_key = 'webEntities';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetectionWebLabel[]
+   */
+  public $bestGuessLabels;
   protected $bestGuessLabelsType = GoogleCloudVisionV1p1beta1WebDetectionWebLabel::class;
   protected $bestGuessLabelsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetectionWebImage[]
+   */
+  public $fullMatchingImages;
   protected $fullMatchingImagesType = GoogleCloudVisionV1p1beta1WebDetectionWebImage::class;
   protected $fullMatchingImagesDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetectionWebPage[]
+   */
+  public $pagesWithMatchingImages;
   protected $pagesWithMatchingImagesType = GoogleCloudVisionV1p1beta1WebDetectionWebPage::class;
   protected $pagesWithMatchingImagesDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetectionWebImage[]
+   */
+  public $partialMatchingImages;
   protected $partialMatchingImagesType = GoogleCloudVisionV1p1beta1WebDetectionWebImage::class;
   protected $partialMatchingImagesDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetectionWebImage[]
+   */
+  public $visuallySimilarImages;
   protected $visuallySimilarImagesType = GoogleCloudVisionV1p1beta1WebDetectionWebImage::class;
   protected $visuallySimilarImagesDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetectionWebEntity[]
+   */
+  public $webEntities;
   protected $webEntitiesType = GoogleCloudVisionV1p1beta1WebDetectionWebEntity::class;
   protected $webEntitiesDataType = 'array';
 

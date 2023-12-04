@@ -20,10 +20,22 @@ namespace Google\Service\Vision;
 class AnnotateFileResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var InputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = InputConfig::class;
   protected $inputConfigDataType = '';
+  /**
+   * @var AnnotateImageResponse[]
+   */
+  public $responses;
   protected $responsesType = AnnotateImageResponse::class;
   protected $responsesDataType = 'array';
   /**

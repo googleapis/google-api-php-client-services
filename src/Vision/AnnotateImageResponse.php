@@ -20,32 +20,88 @@ namespace Google\Service\Vision;
 class AnnotateImageResponse extends \Google\Collection
 {
   protected $collection_key = 'textAnnotations';
+  /**
+   * @var ImageAnnotationContext
+   */
+  public $context;
   protected $contextType = ImageAnnotationContext::class;
   protected $contextDataType = '';
+  /**
+   * @var CropHintsAnnotation
+   */
+  public $cropHintsAnnotation;
   protected $cropHintsAnnotationType = CropHintsAnnotation::class;
   protected $cropHintsAnnotationDataType = '';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var FaceAnnotation[]
+   */
+  public $faceAnnotations;
   protected $faceAnnotationsType = FaceAnnotation::class;
   protected $faceAnnotationsDataType = 'array';
+  /**
+   * @var TextAnnotation
+   */
+  public $fullTextAnnotation;
   protected $fullTextAnnotationType = TextAnnotation::class;
   protected $fullTextAnnotationDataType = '';
+  /**
+   * @var ImageProperties
+   */
+  public $imagePropertiesAnnotation;
   protected $imagePropertiesAnnotationType = ImageProperties::class;
   protected $imagePropertiesAnnotationDataType = '';
+  /**
+   * @var EntityAnnotation[]
+   */
+  public $labelAnnotations;
   protected $labelAnnotationsType = EntityAnnotation::class;
   protected $labelAnnotationsDataType = 'array';
+  /**
+   * @var EntityAnnotation[]
+   */
+  public $landmarkAnnotations;
   protected $landmarkAnnotationsType = EntityAnnotation::class;
   protected $landmarkAnnotationsDataType = 'array';
+  /**
+   * @var LocalizedObjectAnnotation[]
+   */
+  public $localizedObjectAnnotations;
   protected $localizedObjectAnnotationsType = LocalizedObjectAnnotation::class;
   protected $localizedObjectAnnotationsDataType = 'array';
+  /**
+   * @var EntityAnnotation[]
+   */
+  public $logoAnnotations;
   protected $logoAnnotationsType = EntityAnnotation::class;
   protected $logoAnnotationsDataType = 'array';
+  /**
+   * @var ProductSearchResults
+   */
+  public $productSearchResults;
   protected $productSearchResultsType = ProductSearchResults::class;
   protected $productSearchResultsDataType = '';
+  /**
+   * @var SafeSearchAnnotation
+   */
+  public $safeSearchAnnotation;
   protected $safeSearchAnnotationType = SafeSearchAnnotation::class;
   protected $safeSearchAnnotationDataType = '';
+  /**
+   * @var EntityAnnotation[]
+   */
+  public $textAnnotations;
   protected $textAnnotationsType = EntityAnnotation::class;
   protected $textAnnotationsDataType = 'array';
+  /**
+   * @var WebDetection
+   */
+  public $webDetection;
   protected $webDetectionType = WebDetection::class;
   protected $webDetectionDataType = '';
 

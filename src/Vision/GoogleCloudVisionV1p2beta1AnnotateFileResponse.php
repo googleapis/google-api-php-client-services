@@ -20,10 +20,22 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p2beta1AnnotateFileResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p2beta1InputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudVisionV1p2beta1InputConfig::class;
   protected $inputConfigDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p2beta1AnnotateImageResponse[]
+   */
+  public $responses;
   protected $responsesType = GoogleCloudVisionV1p2beta1AnnotateImageResponse::class;
   protected $responsesDataType = 'array';
   /**

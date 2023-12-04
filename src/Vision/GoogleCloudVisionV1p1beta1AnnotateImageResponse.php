@@ -20,32 +20,88 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p1beta1AnnotateImageResponse extends \Google\Collection
 {
   protected $collection_key = 'textAnnotations';
+  /**
+   * @var GoogleCloudVisionV1p1beta1ImageAnnotationContext
+   */
+  public $context;
   protected $contextType = GoogleCloudVisionV1p1beta1ImageAnnotationContext::class;
   protected $contextDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p1beta1CropHintsAnnotation
+   */
+  public $cropHintsAnnotation;
   protected $cropHintsAnnotationType = GoogleCloudVisionV1p1beta1CropHintsAnnotation::class;
   protected $cropHintsAnnotationDataType = '';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p1beta1FaceAnnotation[]
+   */
+  public $faceAnnotations;
   protected $faceAnnotationsType = GoogleCloudVisionV1p1beta1FaceAnnotation::class;
   protected $faceAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1TextAnnotation
+   */
+  public $fullTextAnnotation;
   protected $fullTextAnnotationType = GoogleCloudVisionV1p1beta1TextAnnotation::class;
   protected $fullTextAnnotationDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p1beta1ImageProperties
+   */
+  public $imagePropertiesAnnotation;
   protected $imagePropertiesAnnotationType = GoogleCloudVisionV1p1beta1ImageProperties::class;
   protected $imagePropertiesAnnotationDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p1beta1EntityAnnotation[]
+   */
+  public $labelAnnotations;
   protected $labelAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $labelAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1EntityAnnotation[]
+   */
+  public $landmarkAnnotations;
   protected $landmarkAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $landmarkAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation[]
+   */
+  public $localizedObjectAnnotations;
   protected $localizedObjectAnnotationsType = GoogleCloudVisionV1p1beta1LocalizedObjectAnnotation::class;
   protected $localizedObjectAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1EntityAnnotation[]
+   */
+  public $logoAnnotations;
   protected $logoAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $logoAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1ProductSearchResults
+   */
+  public $productSearchResults;
   protected $productSearchResultsType = GoogleCloudVisionV1p1beta1ProductSearchResults::class;
   protected $productSearchResultsDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p1beta1SafeSearchAnnotation
+   */
+  public $safeSearchAnnotation;
   protected $safeSearchAnnotationType = GoogleCloudVisionV1p1beta1SafeSearchAnnotation::class;
   protected $safeSearchAnnotationDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p1beta1EntityAnnotation[]
+   */
+  public $textAnnotations;
   protected $textAnnotationsType = GoogleCloudVisionV1p1beta1EntityAnnotation::class;
   protected $textAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p1beta1WebDetection
+   */
+  public $webDetection;
   protected $webDetectionType = GoogleCloudVisionV1p1beta1WebDetection::class;
   protected $webDetectionDataType = '';
 

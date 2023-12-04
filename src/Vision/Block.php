@@ -24,14 +24,26 @@ class Block extends \Google\Collection
    * @var string
    */
   public $blockType;
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingBox;
   protected $boundingBoxType = BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var Paragraph[]
+   */
+  public $paragraphs;
   protected $paragraphsType = Paragraph::class;
   protected $paragraphsDataType = 'array';
+  /**
+   * @var TextProperty
+   */
+  public $property;
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
 

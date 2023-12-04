@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1DominantColorsAnnotation extends \Google\Collection
 {
   protected $collection_key = 'colors';
+  /**
+   * @var GoogleCloudVisionV1p3beta1ColorInfo[]
+   */
+  public $colors;
   protected $colorsType = GoogleCloudVisionV1p3beta1ColorInfo::class;
   protected $colorsDataType = 'array';
 

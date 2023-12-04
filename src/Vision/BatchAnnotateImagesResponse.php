@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class BatchAnnotateImagesResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var AnnotateImageResponse[]
+   */
+  public $responses;
   protected $responsesType = AnnotateImageResponse::class;
   protected $responsesDataType = 'array';
 

@@ -24,8 +24,16 @@ class GoogleCloudVisionV1p2beta1ProductSearchResults extends \Google\Collection
    * @var string
    */
   public $indexTime;
+  /**
+   * @var GoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult[]
+   */
+  public $productGroupedResults;
   protected $productGroupedResultsType = GoogleCloudVisionV1p2beta1ProductSearchResultsGroupedResult::class;
   protected $productGroupedResultsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p2beta1ProductSearchResultsResult[]
+   */
+  public $results;
   protected $resultsType = GoogleCloudVisionV1p2beta1ProductSearchResultsResult::class;
   protected $resultsDataType = 'array';
 

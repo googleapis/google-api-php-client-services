@@ -23,6 +23,10 @@ class GoogleCloudVisionV1p2beta1OutputConfig extends \Google\Model
    * @var int
    */
   public $batchSize;
+  /**
+   * @var GoogleCloudVisionV1p2beta1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudVisionV1p2beta1GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

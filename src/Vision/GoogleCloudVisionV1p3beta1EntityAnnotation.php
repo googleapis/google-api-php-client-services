@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1EntityAnnotation extends \Google\Collection
 {
   protected $collection_key = 'properties';
+  /**
+   * @var GoogleCloudVisionV1p3beta1BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudVisionV1p3beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
@@ -34,12 +38,20 @@ class GoogleCloudVisionV1p3beta1EntityAnnotation extends \Google\Collection
    * @var string
    */
   public $locale;
+  /**
+   * @var GoogleCloudVisionV1p3beta1LocationInfo[]
+   */
+  public $locations;
   protected $locationsType = GoogleCloudVisionV1p3beta1LocationInfo::class;
   protected $locationsDataType = 'array';
   /**
    * @var string
    */
   public $mid;
+  /**
+   * @var GoogleCloudVisionV1p3beta1Property[]
+   */
+  public $properties;
   protected $propertiesType = GoogleCloudVisionV1p3beta1Property::class;
   protected $propertiesDataType = 'array';
   /**

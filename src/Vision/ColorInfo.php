@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class ColorInfo extends \Google\Model
 {
+  /**
+   * @var Color
+   */
+  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
   /**

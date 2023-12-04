@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class AsyncBatchAnnotateFilesResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var AsyncAnnotateFileResponse[]
+   */
+  public $responses;
   protected $responsesType = AsyncAnnotateFileResponse::class;
   protected $responsesDataType = 'array';
 

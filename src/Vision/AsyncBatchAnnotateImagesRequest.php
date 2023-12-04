@@ -24,12 +24,20 @@ class AsyncBatchAnnotateImagesRequest extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var OutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
   /**
    * @var string
    */
   public $parent;
+  /**
+   * @var AnnotateImageRequest[]
+   */
+  public $requests;
   protected $requestsType = AnnotateImageRequest::class;
   protected $requestsDataType = 'array';
 
