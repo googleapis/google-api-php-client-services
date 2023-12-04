@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageSuggestions extends \Google\Collection
 {
   protected $collection_key = 'suggestions';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageSuggestion[]
+   */
+  public $suggestions;
   protected $suggestionsType = GoogleCloudDialogflowV2IntentMessageSuggestion::class;
   protected $suggestionsDataType = 'array';
 

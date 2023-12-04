@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3VersionVariants extends \Google\Collection
 {
   protected $collection_key = 'variants';
+  /**
+   * @var GoogleCloudDialogflowCxV3VersionVariantsVariant[]
+   */
+  public $variants;
   protected $variantsType = GoogleCloudDialogflowCxV3VersionVariantsVariant::class;
   protected $variantsDataType = 'array';
 

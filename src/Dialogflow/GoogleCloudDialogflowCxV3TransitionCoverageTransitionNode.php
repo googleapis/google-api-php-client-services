@@ -19,8 +19,16 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3Flow
+   */
+  public $flow;
   protected $flowType = GoogleCloudDialogflowCxV3Flow::class;
   protected $flowDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3Page
+   */
+  public $page;
   protected $pageType = GoogleCloudDialogflowCxV3Page::class;
   protected $pageDataType = '';
 

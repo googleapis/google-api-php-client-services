@@ -28,6 +28,10 @@ class GoogleCloudDialogflowCxV3TransitionRouteGroup extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDialogflowCxV3TransitionRoute[]
+   */
+  public $transitionRoutes;
   protected $transitionRoutesType = GoogleCloudDialogflowCxV3TransitionRoute::class;
   protected $transitionRoutesDataType = 'array';
 

@@ -43,6 +43,10 @@ class GoogleCloudDialogflowCxV3beta1TransitionRoute extends \Google\Model
    * @var string
    */
   public $targetPage;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1Fulfillment
+   */
+  public $triggerFulfillment;
   protected $triggerFulfillmentType = GoogleCloudDialogflowCxV3beta1Fulfillment::class;
   protected $triggerFulfillmentDataType = '';
 

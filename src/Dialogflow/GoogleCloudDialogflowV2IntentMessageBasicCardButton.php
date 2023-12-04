@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2IntentMessageBasicCardButton extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAction
+   */
+  public $openUriAction;
   protected $openUriActionType = GoogleCloudDialogflowV2IntentMessageBasicCardButtonOpenUriAction::class;
   protected $openUriActionDataType = '';
   /**

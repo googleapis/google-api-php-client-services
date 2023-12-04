@@ -19,20 +19,52 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2IntentMessage extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageBasicCard
+   */
+  public $basicCard;
   protected $basicCardType = GoogleCloudDialogflowV2IntentMessageBasicCard::class;
   protected $basicCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard
+   */
+  public $browseCarouselCard;
   protected $browseCarouselCardType = GoogleCloudDialogflowV2IntentMessageBrowseCarouselCard::class;
   protected $browseCarouselCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageCard
+   */
+  public $card;
   protected $cardType = GoogleCloudDialogflowV2IntentMessageCard::class;
   protected $cardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageCarouselSelect
+   */
+  public $carouselSelect;
   protected $carouselSelectType = GoogleCloudDialogflowV2IntentMessageCarouselSelect::class;
   protected $carouselSelectDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageImage
+   */
+  public $image;
   protected $imageType = GoogleCloudDialogflowV2IntentMessageImage::class;
   protected $imageDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion
+   */
+  public $linkOutSuggestion;
   protected $linkOutSuggestionType = GoogleCloudDialogflowV2IntentMessageLinkOutSuggestion::class;
   protected $linkOutSuggestionDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageListSelect
+   */
+  public $listSelect;
   protected $listSelectType = GoogleCloudDialogflowV2IntentMessageListSelect::class;
   protected $listSelectDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageMediaContent
+   */
+  public $mediaContent;
   protected $mediaContentType = GoogleCloudDialogflowV2IntentMessageMediaContent::class;
   protected $mediaContentDataType = '';
   /**
@@ -43,14 +75,34 @@ class GoogleCloudDialogflowV2IntentMessage extends \Google\Model
    * @var string
    */
   public $platform;
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageQuickReplies
+   */
+  public $quickReplies;
   protected $quickRepliesType = GoogleCloudDialogflowV2IntentMessageQuickReplies::class;
   protected $quickRepliesDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageSimpleResponses
+   */
+  public $simpleResponses;
   protected $simpleResponsesType = GoogleCloudDialogflowV2IntentMessageSimpleResponses::class;
   protected $simpleResponsesDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageSuggestions
+   */
+  public $suggestions;
   protected $suggestionsType = GoogleCloudDialogflowV2IntentMessageSuggestions::class;
   protected $suggestionsDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageTableCard
+   */
+  public $tableCard;
   protected $tableCardType = GoogleCloudDialogflowV2IntentMessageTableCard::class;
   protected $tableCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageText
+   */
+  public $text;
   protected $textType = GoogleCloudDialogflowV2IntentMessageText::class;
   protected $textDataType = '';
 

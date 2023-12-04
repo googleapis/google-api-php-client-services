@@ -19,8 +19,16 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3TestCaseError extends \Google\Model
 {
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3TestCase
+   */
+  public $testCase;
   protected $testCaseType = GoogleCloudDialogflowCxV3TestCase::class;
   protected $testCaseDataType = '';
 

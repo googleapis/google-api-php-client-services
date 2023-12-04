@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageSimpleResponses extends \Google\Collection
 {
   protected $collection_key = 'simpleResponses';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageSimpleResponse[]
+   */
+  public $simpleResponses;
   protected $simpleResponsesType = GoogleCloudDialogflowV2IntentMessageSimpleResponse::class;
   protected $simpleResponsesDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3beta1RunTestCaseResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1TestCaseResult
+   */
+  public $result;
   protected $resultType = GoogleCloudDialogflowCxV3beta1TestCaseResult::class;
   protected $resultDataType = '';
 

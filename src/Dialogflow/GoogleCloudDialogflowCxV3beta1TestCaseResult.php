@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1TestCaseResult extends \Google\Collection
 {
   protected $collection_key = 'conversationTurns';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1ConversationTurn[]
+   */
+  public $conversationTurns;
   protected $conversationTurnsType = GoogleCloudDialogflowCxV3beta1ConversationTurn::class;
   protected $conversationTurnsDataType = 'array';
   /**

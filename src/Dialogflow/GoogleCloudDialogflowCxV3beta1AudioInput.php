@@ -23,6 +23,10 @@ class GoogleCloudDialogflowCxV3beta1AudioInput extends \Google\Model
    * @var string
    */
   public $audio;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1InputAudioConfig
+   */
+  public $config;
   protected $configType = GoogleCloudDialogflowCxV3beta1InputAudioConfig::class;
   protected $configDataType = '';
 

@@ -23,16 +23,32 @@ class GoogleCloudDialogflowCxV3TransitionCoverageTransition extends \Google\Mode
    * @var bool
    */
   public $covered;
+  /**
+   * @var GoogleCloudDialogflowCxV3EventHandler
+   */
+  public $eventHandler;
   protected $eventHandlerType = GoogleCloudDialogflowCxV3EventHandler::class;
   protected $eventHandlerDataType = '';
   /**
    * @var int
    */
   public $index;
+  /**
+   * @var GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode
+   */
+  public $source;
   protected $sourceType = GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode::class;
   protected $sourceDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode
+   */
+  public $target;
   protected $targetType = GoogleCloudDialogflowCxV3TransitionCoverageTransitionNode::class;
   protected $targetDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3TransitionRoute
+   */
+  public $transitionRoute;
   protected $transitionRouteType = GoogleCloudDialogflowCxV3TransitionRoute::class;
   protected $transitionRouteDataType = '';
 

@@ -35,6 +35,10 @@ class GoogleCloudDialogflowCxV3Version extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDialogflowCxV3NluSettings
+   */
+  public $nluSettings;
   protected $nluSettingsType = GoogleCloudDialogflowCxV3NluSettings::class;
   protected $nluSettingsDataType = '';
   /**

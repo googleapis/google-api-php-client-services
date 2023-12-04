@@ -28,24 +28,48 @@ class GoogleCloudDialogflowCxV3WebhookRequest extends \Google\Collection
    * @var string
    */
   public $dtmfDigits;
+  /**
+   * @var GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo
+   */
+  public $fulfillmentInfo;
   protected $fulfillmentInfoType = GoogleCloudDialogflowCxV3WebhookRequestFulfillmentInfo::class;
   protected $fulfillmentInfoDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3WebhookRequestIntentInfo
+   */
+  public $intentInfo;
   protected $intentInfoType = GoogleCloudDialogflowCxV3WebhookRequestIntentInfo::class;
   protected $intentInfoDataType = '';
   /**
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessage[]
+   */
+  public $messages;
   protected $messagesType = GoogleCloudDialogflowCxV3ResponseMessage::class;
   protected $messagesDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowCxV3PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = GoogleCloudDialogflowCxV3PageInfo::class;
   protected $pageInfoDataType = '';
   /**
    * @var array[]
    */
   public $payload;
+  /**
+   * @var GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult
+   */
+  public $sentimentAnalysisResult;
   protected $sentimentAnalysisResultType = GoogleCloudDialogflowCxV3WebhookRequestSentimentAnalysisResult::class;
   protected $sentimentAnalysisResultDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3SessionInfo
+   */
+  public $sessionInfo;
   protected $sessionInfoType = GoogleCloudDialogflowCxV3SessionInfo::class;
   protected $sessionInfoDataType = '';
   /**

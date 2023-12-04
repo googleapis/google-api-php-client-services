@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudio extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegment[]
+   */
+  public $segments;
   protected $segmentsType = GoogleCloudDialogflowCxV3beta1ResponseMessageMixedAudioSegment::class;
   protected $segmentsDataType = 'array';
 

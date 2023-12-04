@@ -28,6 +28,10 @@ class GoogleCloudDialogflowV2HumanAgentAssistantEvent extends \Google\Collection
    * @var string
    */
   public $participant;
+  /**
+   * @var GoogleCloudDialogflowV2SuggestionResult[]
+   */
+  public $suggestionResults;
   protected $suggestionResultsType = GoogleCloudDialogflowV2SuggestionResult::class;
   protected $suggestionResultsDataType = 'array';
 

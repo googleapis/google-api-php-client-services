@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1RunContinuousTestMetadata extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1TestError[]
+   */
+  public $errors;
   protected $errorsType = GoogleCloudDialogflowCxV3beta1TestError::class;
   protected $errorsDataType = 'array';
 

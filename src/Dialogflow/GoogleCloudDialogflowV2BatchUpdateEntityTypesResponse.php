@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2BatchUpdateEntityTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'entityTypes';
+  /**
+   * @var GoogleCloudDialogflowV2EntityType[]
+   */
+  public $entityTypes;
   protected $entityTypesType = GoogleCloudDialogflowV2EntityType::class;
   protected $entityTypesDataType = 'array';
 

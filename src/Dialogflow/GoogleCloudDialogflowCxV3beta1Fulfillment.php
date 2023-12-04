@@ -20,20 +20,36 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1Fulfillment extends \Google\Collection
 {
   protected $collection_key = 'setParameterActions';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1AdvancedSettings
+   */
+  public $advancedSettings;
   protected $advancedSettingsType = GoogleCloudDialogflowCxV3beta1AdvancedSettings::class;
   protected $advancedSettingsDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases[]
+   */
+  public $conditionalCases;
   protected $conditionalCasesType = GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases::class;
   protected $conditionalCasesDataType = 'array';
   /**
    * @var bool
    */
   public $enableGenerativeFallback;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1ResponseMessage[]
+   */
+  public $messages;
   protected $messagesType = GoogleCloudDialogflowCxV3beta1ResponseMessage::class;
   protected $messagesDataType = 'array';
   /**
    * @var bool
    */
   public $returnPartialResponses;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction[]
+   */
+  public $setParameterActions;
   protected $setParameterActionsType = GoogleCloudDialogflowCxV3beta1FulfillmentSetParameterAction::class;
   protected $setParameterActionsDataType = 'array';
   /**

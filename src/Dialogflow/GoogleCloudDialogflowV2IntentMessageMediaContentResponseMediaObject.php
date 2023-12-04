@@ -27,8 +27,16 @@ class GoogleCloudDialogflowV2IntentMessageMediaContentResponseMediaObject extend
    * @var string
    */
   public $description;
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageImage
+   */
+  public $icon;
   protected $iconType = GoogleCloudDialogflowV2IntentMessageImage::class;
   protected $iconDataType = '';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageImage
+   */
+  public $largeImage;
   protected $largeImageType = GoogleCloudDialogflowV2IntentMessageImage::class;
   protected $largeImageDataType = '';
   /**

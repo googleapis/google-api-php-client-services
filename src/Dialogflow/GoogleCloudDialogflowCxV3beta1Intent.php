@@ -40,12 +40,20 @@ class GoogleCloudDialogflowCxV3beta1Intent extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1IntentParameter[]
+   */
+  public $parameters;
   protected $parametersType = GoogleCloudDialogflowCxV3beta1IntentParameter::class;
   protected $parametersDataType = 'array';
   /**
    * @var int
    */
   public $priority;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase[]
+   */
+  public $trainingPhrases;
   protected $trainingPhrasesType = GoogleCloudDialogflowCxV3beta1IntentTrainingPhrase::class;
   protected $trainingPhrasesDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2BatchUpdateIntentsResponse extends \Google\Collection
 {
   protected $collection_key = 'intents';
+  /**
+   * @var GoogleCloudDialogflowV2Intent[]
+   */
+  public $intents;
   protected $intentsType = GoogleCloudDialogflowV2Intent::class;
   protected $intentsDataType = 'array';
 

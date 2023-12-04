@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2IntentMessageCard extends \Google\Collection
 {
   protected $collection_key = 'buttons';
+  /**
+   * @var GoogleCloudDialogflowV2IntentMessageCardButton[]
+   */
+  public $buttons;
   protected $buttonsType = GoogleCloudDialogflowV2IntentMessageCardButton::class;
   protected $buttonsDataType = 'array';
   /**

@@ -19,18 +19,38 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3beta1QueryInput extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1AudioInput
+   */
+  public $audio;
   protected $audioType = GoogleCloudDialogflowCxV3beta1AudioInput::class;
   protected $audioDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1DtmfInput
+   */
+  public $dtmf;
   protected $dtmfType = GoogleCloudDialogflowCxV3beta1DtmfInput::class;
   protected $dtmfDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1EventInput
+   */
+  public $event;
   protected $eventType = GoogleCloudDialogflowCxV3beta1EventInput::class;
   protected $eventDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1IntentInput
+   */
+  public $intent;
   protected $intentType = GoogleCloudDialogflowCxV3beta1IntentInput::class;
   protected $intentDataType = '';
   /**
    * @var string
    */
   public $languageCode;
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1TextInput
+   */
+  public $text;
   protected $textType = GoogleCloudDialogflowCxV3beta1TextInput::class;
   protected $textDataType = '';
 

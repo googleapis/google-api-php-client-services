@@ -19,10 +19,22 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3beta1AdvancedSettings extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1GcsDestination
+   */
+  public $audioExportGcsDestination;
   protected $audioExportGcsDestinationType = GoogleCloudDialogflowCxV3beta1GcsDestination::class;
   protected $audioExportGcsDestinationDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings
+   */
+  public $dtmfSettings;
   protected $dtmfSettingsType = GoogleCloudDialogflowCxV3beta1AdvancedSettingsDtmfSettings::class;
   protected $dtmfSettingsDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
+   */
+  public $loggingSettings;
   protected $loggingSettingsType = GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings::class;
   protected $loggingSettingsDataType = '';
 

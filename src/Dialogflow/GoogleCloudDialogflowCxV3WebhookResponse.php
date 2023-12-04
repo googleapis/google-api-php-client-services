@@ -19,14 +19,26 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3WebhookResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3WebhookResponseFulfillmentResponse
+   */
+  public $fulfillmentResponse;
   protected $fulfillmentResponseType = GoogleCloudDialogflowCxV3WebhookResponseFulfillmentResponse::class;
   protected $fulfillmentResponseDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = GoogleCloudDialogflowCxV3PageInfo::class;
   protected $pageInfoDataType = '';
   /**
    * @var array[]
    */
   public $payload;
+  /**
+   * @var GoogleCloudDialogflowCxV3SessionInfo
+   */
+  public $sessionInfo;
   protected $sessionInfoType = GoogleCloudDialogflowCxV3SessionInfo::class;
   protected $sessionInfoDataType = '';
   /**

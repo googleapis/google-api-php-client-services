@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCases extends \Google\Collection
 {
   protected $collection_key = 'cases';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase[]
+   */
+  public $cases;
   protected $casesType = GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase::class;
   protected $casesDataType = 'array';
 

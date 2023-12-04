@@ -20,8 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3beta1FormParameterFillBehavior extends \Google\Collection
 {
   protected $collection_key = 'repromptEventHandlers';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1Fulfillment
+   */
+  public $initialPromptFulfillment;
   protected $initialPromptFulfillmentType = GoogleCloudDialogflowCxV3beta1Fulfillment::class;
   protected $initialPromptFulfillmentDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3beta1EventHandler[]
+   */
+  public $repromptEventHandlers;
   protected $repromptEventHandlersType = GoogleCloudDialogflowCxV3beta1EventHandler::class;
   protected $repromptEventHandlersDataType = 'array';
 

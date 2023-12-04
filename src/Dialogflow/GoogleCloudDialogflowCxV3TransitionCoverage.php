@@ -24,6 +24,10 @@ class GoogleCloudDialogflowCxV3TransitionCoverage extends \Google\Collection
    * @var float
    */
   public $coverageScore;
+  /**
+   * @var GoogleCloudDialogflowCxV3TransitionCoverageTransition[]
+   */
+  public $transitions;
   protected $transitionsType = GoogleCloudDialogflowCxV3TransitionCoverageTransition::class;
   protected $transitionsDataType = 'array';
 

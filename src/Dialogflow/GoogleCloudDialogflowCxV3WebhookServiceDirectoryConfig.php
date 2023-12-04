@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3WebhookGenericWebService
+   */
+  public $genericWebService;
   protected $genericWebServiceType = GoogleCloudDialogflowCxV3WebhookGenericWebService::class;
   protected $genericWebServiceDataType = '';
   /**
