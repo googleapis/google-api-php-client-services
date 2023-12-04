@@ -20,12 +20,20 @@ namespace Google\Service\SQLAdmin;
 class SqlInstancesVerifyExternalSyncSettingsResponse extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var SqlExternalSyncSettingError[]
+   */
+  public $errors;
   protected $errorsType = SqlExternalSyncSettingError::class;
   protected $errorsDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var SqlExternalSyncSettingError[]
+   */
+  public $warnings;
   protected $warningsType = SqlExternalSyncSettingError::class;
   protected $warningsDataType = 'array';
 

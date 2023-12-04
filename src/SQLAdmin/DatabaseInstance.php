@@ -48,8 +48,16 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $databaseVersion;
+  /**
+   * @var DiskEncryptionConfiguration
+   */
+  public $diskEncryptionConfiguration;
   protected $diskEncryptionConfigurationType = DiskEncryptionConfiguration::class;
   protected $diskEncryptionConfigurationDataType = '';
+  /**
+   * @var DiskEncryptionStatus
+   */
+  public $diskEncryptionStatus;
   protected $diskEncryptionStatusType = DiskEncryptionStatus::class;
   protected $diskEncryptionStatusDataType = '';
   /**
@@ -60,6 +68,10 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var DatabaseInstanceFailoverReplica
+   */
+  public $failoverReplica;
   protected $failoverReplicaType = DatabaseInstanceFailoverReplica::class;
   protected $failoverReplicaDataType = '';
   /**
@@ -70,6 +82,10 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $instanceType;
+  /**
+   * @var IpMapping[]
+   */
+  public $ipAddresses;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   /**
@@ -96,8 +112,16 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var OnPremisesConfiguration
+   */
+  public $onPremisesConfiguration;
   protected $onPremisesConfigurationType = OnPremisesConfiguration::class;
   protected $onPremisesConfigurationDataType = '';
+  /**
+   * @var SqlOutOfDiskReport
+   */
+  public $outOfDiskReport;
   protected $outOfDiskReportType = SqlOutOfDiskReport::class;
   protected $outOfDiskReportDataType = '';
   /**
@@ -116,6 +140,10 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $region;
+  /**
+   * @var ReplicaConfiguration
+   */
+  public $replicaConfiguration;
   protected $replicaConfigurationType = ReplicaConfiguration::class;
   protected $replicaConfigurationDataType = '';
   /**
@@ -130,6 +158,10 @@ class DatabaseInstance extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * @var SqlScheduledMaintenance
+   */
+  public $scheduledMaintenance;
   protected $scheduledMaintenanceType = SqlScheduledMaintenance::class;
   protected $scheduledMaintenanceDataType = '';
   /**
@@ -140,12 +172,20 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var SslCert
+   */
+  public $serverCaCert;
   protected $serverCaCertType = SslCert::class;
   protected $serverCaCertDataType = '';
   /**
    * @var string
    */
   public $serviceAccountEmailAddress;
+  /**
+   * @var Settings
+   */
+  public $settings;
   protected $settingsType = Settings::class;
   protected $settingsDataType = '';
   /**

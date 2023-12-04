@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class FlagsListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Flag[]
+   */
+  public $items;
   protected $itemsType = Flag::class;
   protected $itemsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesDemoteRequest extends \Google\Model
 {
+  /**
+   * @var DemoteContext
+   */
+  public $demoteContext;
   protected $demoteContextType = DemoteContext::class;
   protected $demoteContextDataType = '';
 

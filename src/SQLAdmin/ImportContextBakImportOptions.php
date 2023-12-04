@@ -23,6 +23,10 @@ class ImportContextBakImportOptions extends \Google\Model
    * @var string
    */
   public $bakType;
+  /**
+   * @var ImportContextBakImportOptionsEncryptionOptions
+   */
+  public $encryptionOptions;
   protected $encryptionOptionsType = ImportContextBakImportOptionsEncryptionOptions::class;
   protected $encryptionOptionsDataType = '';
   /**

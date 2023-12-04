@@ -35,6 +35,10 @@ class UserPasswordValidationPolicy extends \Google\Model
    * @var string
    */
   public $passwordExpirationDuration;
+  /**
+   * @var PasswordStatus
+   */
+  public $status;
   protected $statusType = PasswordStatus::class;
   protected $statusDataType = '';
 

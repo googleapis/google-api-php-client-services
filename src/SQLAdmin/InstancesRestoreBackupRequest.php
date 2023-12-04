@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesRestoreBackupRequest extends \Google\Model
 {
+  /**
+   * @var RestoreBackupContext
+   */
+  public $restoreBackupContext;
   protected $restoreBackupContextType = RestoreBackupContext::class;
   protected $restoreBackupContextDataType = '';
 

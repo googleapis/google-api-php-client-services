@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class InstancesListResponse extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var DatabaseInstance[]
+   */
+  public $items;
   protected $itemsType = DatabaseInstance::class;
   protected $itemsDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class InstancesListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ApiWarning[]
+   */
+  public $warnings;
   protected $warningsType = ApiWarning::class;
   protected $warningsDataType = 'array';
 

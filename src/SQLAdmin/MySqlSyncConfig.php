@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class MySqlSyncConfig extends \Google\Collection
 {
   protected $collection_key = 'initialSyncFlags';
+  /**
+   * @var SyncFlags[]
+   */
+  public $initialSyncFlags;
   protected $initialSyncFlagsType = SyncFlags::class;
   protected $initialSyncFlagsDataType = 'array';
 

@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesRotateServerCaRequest extends \Google\Model
 {
+  /**
+   * @var RotateServerCaContext
+   */
+  public $rotateServerCaContext;
   protected $rotateServerCaContextType = RotateServerCaContext::class;
   protected $rotateServerCaContextDataType = '';
 

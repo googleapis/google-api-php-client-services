@@ -19,14 +19,26 @@ namespace Google\Service\SQLAdmin;
 
 class SslCertsInsertResponse extends \Google\Model
 {
+  /**
+   * @var SslCertDetail
+   */
+  public $clientCert;
   protected $clientCertType = SslCertDetail::class;
   protected $clientCertDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Operation
+   */
+  public $operation;
   protected $operationType = Operation::class;
   protected $operationDataType = '';
+  /**
+   * @var SslCert
+   */
+  public $serverCaCert;
   protected $serverCaCertType = SslCert::class;
   protected $serverCaCertDataType = '';
 

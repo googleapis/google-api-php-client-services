@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class ExportContextSqlExportOptions extends \Google\Collection
 {
   protected $collection_key = 'tables';
+  /**
+   * @var ExportContextSqlExportOptionsMysqlExportOptions
+   */
+  public $mysqlExportOptions;
   protected $mysqlExportOptionsType = ExportContextSqlExportOptionsMysqlExportOptions::class;
   protected $mysqlExportOptionsDataType = '';
   /**

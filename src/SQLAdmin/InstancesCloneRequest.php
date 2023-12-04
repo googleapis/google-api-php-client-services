@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesCloneRequest extends \Google\Model
 {
+  /**
+   * @var CloneContext
+   */
+  public $cloneContext;
   protected $cloneContextType = CloneContext::class;
   protected $cloneContextDataType = '';
 

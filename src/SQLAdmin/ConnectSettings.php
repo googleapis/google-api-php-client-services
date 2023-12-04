@@ -32,6 +32,10 @@ class ConnectSettings extends \Google\Collection
    * @var string
    */
   public $dnsName;
+  /**
+   * @var IpMapping[]
+   */
+  public $ipAddresses;
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   /**
@@ -46,6 +50,10 @@ class ConnectSettings extends \Google\Collection
    * @var string
    */
   public $region;
+  /**
+   * @var SslCert
+   */
+  public $serverCaCert;
   protected $serverCaCertType = SslCert::class;
   protected $serverCaCertDataType = '';
 

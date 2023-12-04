@@ -47,6 +47,10 @@ class OnPremisesConfiguration extends \Google\Model
    * @var string
    */
   public $password;
+  /**
+   * @var InstanceReference
+   */
+  public $sourceInstance;
   protected $sourceInstanceType = InstanceReference::class;
   protected $sourceInstanceDataType = '';
   /**

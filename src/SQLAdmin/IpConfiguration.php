@@ -24,6 +24,10 @@ class IpConfiguration extends \Google\Collection
    * @var string
    */
   public $allocatedIpRange;
+  /**
+   * @var AclEntry[]
+   */
+  public $authorizedNetworks;
   protected $authorizedNetworksType = AclEntry::class;
   protected $authorizedNetworksDataType = 'array';
   /**
@@ -38,6 +42,10 @@ class IpConfiguration extends \Google\Collection
    * @var string
    */
   public $privateNetwork;
+  /**
+   * @var PscConfig
+   */
+  public $pscConfig;
   protected $pscConfigType = PscConfig::class;
   protected $pscConfigDataType = '';
   /**

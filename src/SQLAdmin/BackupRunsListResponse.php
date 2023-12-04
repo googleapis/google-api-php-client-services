@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class BackupRunsListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var BackupRun[]
+   */
+  public $items;
   protected $itemsType = BackupRun::class;
   protected $itemsDataType = 'array';
   /**

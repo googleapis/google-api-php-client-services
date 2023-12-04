@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesTruncateLogRequest extends \Google\Model
 {
+  /**
+   * @var TruncateLogContext
+   */
+  public $truncateLogContext;
   protected $truncateLogContextType = TruncateLogContext::class;
   protected $truncateLogContextDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesImportRequest extends \Google\Model
 {
+  /**
+   * @var ImportContext
+   */
+  public $importContext;
   protected $importContextType = ImportContext::class;
   protected $importContextDataType = '';
 

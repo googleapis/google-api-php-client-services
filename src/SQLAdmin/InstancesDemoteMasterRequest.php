@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesDemoteMasterRequest extends \Google\Model
 {
+  /**
+   * @var DemoteMasterContext
+   */
+  public $demoteMasterContext;
   protected $demoteMasterContextType = DemoteMasterContext::class;
   protected $demoteMasterContextDataType = '';
 

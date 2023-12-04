@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class OperationsListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Operation[]
+   */
+  public $items;
   protected $itemsType = Operation::class;
   protected $itemsDataType = 'array';
   /**

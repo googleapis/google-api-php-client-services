@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class SslCertsListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var SslCert[]
+   */
+  public $items;
   protected $itemsType = SslCert::class;
   protected $itemsDataType = 'array';
   /**

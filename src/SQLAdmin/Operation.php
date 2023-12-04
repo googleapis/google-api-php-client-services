@@ -19,18 +19,38 @@ namespace Google\Service\SQLAdmin;
 
 class Operation extends \Google\Model
 {
+  /**
+   * @var ApiWarning
+   */
+  public $apiWarning;
   protected $apiWarningType = ApiWarning::class;
   protected $apiWarningDataType = '';
+  /**
+   * @var BackupContext
+   */
+  public $backupContext;
   protected $backupContextType = BackupContext::class;
   protected $backupContextDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var OperationErrors
+   */
+  public $error;
   protected $errorType = OperationErrors::class;
   protected $errorDataType = '';
+  /**
+   * @var ExportContext
+   */
+  public $exportContext;
   protected $exportContextType = ExportContext::class;
   protected $exportContextDataType = '';
+  /**
+   * @var ImportContext
+   */
+  public $importContext;
   protected $importContextType = ImportContext::class;
   protected $importContextDataType = '';
   /**

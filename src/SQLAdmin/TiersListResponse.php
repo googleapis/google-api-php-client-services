@@ -20,6 +20,10 @@ namespace Google\Service\SQLAdmin;
 class TiersListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Tier[]
+   */
+  public $items;
   protected $itemsType = Tier::class;
   protected $itemsDataType = 'array';
   /**

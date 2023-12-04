@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class GenerateEphemeralCertResponse extends \Google\Model
 {
+  /**
+   * @var SslCert
+   */
+  public $ephemeralCert;
   protected $ephemeralCertType = SslCert::class;
   protected $ephemeralCertDataType = '';
 
