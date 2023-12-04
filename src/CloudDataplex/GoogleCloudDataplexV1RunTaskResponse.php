@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1RunTaskResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1Job
+   */
+  public $job;
   protected $jobType = GoogleCloudDataplexV1Job::class;
   protected $jobDataType = '';
 

@@ -24,6 +24,10 @@ class GoogleCloudDataplexV1ListSessionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudDataplexV1Session[]
+   */
+  public $sessions;
   protected $sessionsType = GoogleCloudDataplexV1Session::class;
   protected $sessionsDataType = 'array';
 

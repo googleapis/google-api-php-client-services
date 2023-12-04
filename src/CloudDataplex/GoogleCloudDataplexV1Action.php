@@ -36,14 +36,34 @@ class GoogleCloudDataplexV1Action extends \Google\Collection
    * @var string
    */
   public $detectTime;
+  /**
+   * @var GoogleCloudDataplexV1ActionFailedSecurityPolicyApply
+   */
+  public $failedSecurityPolicyApply;
   protected $failedSecurityPolicyApplyType = GoogleCloudDataplexV1ActionFailedSecurityPolicyApply::class;
   protected $failedSecurityPolicyApplyDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1ActionIncompatibleDataSchema
+   */
+  public $incompatibleDataSchema;
   protected $incompatibleDataSchemaType = GoogleCloudDataplexV1ActionIncompatibleDataSchema::class;
   protected $incompatibleDataSchemaDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1ActionInvalidDataFormat
+   */
+  public $invalidDataFormat;
   protected $invalidDataFormatType = GoogleCloudDataplexV1ActionInvalidDataFormat::class;
   protected $invalidDataFormatDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1ActionInvalidDataOrganization
+   */
+  public $invalidDataOrganization;
   protected $invalidDataOrganizationType = GoogleCloudDataplexV1ActionInvalidDataOrganization::class;
   protected $invalidDataOrganizationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1ActionInvalidDataPartition
+   */
+  public $invalidDataPartition;
   protected $invalidDataPartitionType = GoogleCloudDataplexV1ActionInvalidDataPartition::class;
   protected $invalidDataPartitionDataType = '';
   /**
@@ -54,14 +74,26 @@ class GoogleCloudDataplexV1Action extends \Google\Collection
    * @var string
    */
   public $lake;
+  /**
+   * @var GoogleCloudDataplexV1ActionMissingData
+   */
+  public $missingData;
   protected $missingDataType = GoogleCloudDataplexV1ActionMissingData::class;
   protected $missingDataDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1ActionMissingResource
+   */
+  public $missingResource;
   protected $missingResourceType = GoogleCloudDataplexV1ActionMissingResource::class;
   protected $missingResourceDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDataplexV1ActionUnauthorizedResource
+   */
+  public $unauthorizedResource;
   protected $unauthorizedResourceType = GoogleCloudDataplexV1ActionUnauthorizedResource::class;
   protected $unauthorizedResourceDataType = '';
   /**

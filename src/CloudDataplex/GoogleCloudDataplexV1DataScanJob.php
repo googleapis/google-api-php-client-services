@@ -19,12 +19,28 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataScanJob extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1DataProfileResult
+   */
+  public $dataProfileResult;
   protected $dataProfileResultType = GoogleCloudDataplexV1DataProfileResult::class;
   protected $dataProfileResultDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataProfileSpec
+   */
+  public $dataProfileSpec;
   protected $dataProfileSpecType = GoogleCloudDataplexV1DataProfileSpec::class;
   protected $dataProfileSpecDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityResult
+   */
+  public $dataQualityResult;
   protected $dataQualityResultType = GoogleCloudDataplexV1DataQualityResult::class;
   protected $dataQualityResultDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualitySpec
+   */
+  public $dataQualitySpec;
   protected $dataQualitySpecType = GoogleCloudDataplexV1DataQualitySpec::class;
   protected $dataQualitySpecDataType = '';
   /**

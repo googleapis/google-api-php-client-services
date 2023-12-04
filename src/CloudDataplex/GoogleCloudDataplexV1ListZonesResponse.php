@@ -24,6 +24,10 @@ class GoogleCloudDataplexV1ListZonesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudDataplexV1Zone[]
+   */
+  public $zones;
   protected $zonesType = GoogleCloudDataplexV1Zone::class;
   protected $zonesDataType = 'array';
 

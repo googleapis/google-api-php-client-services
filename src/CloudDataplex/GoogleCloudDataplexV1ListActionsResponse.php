@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListActionsResponse extends \Google\Collection
 {
   protected $collection_key = 'actions';
+  /**
+   * @var GoogleCloudDataplexV1Action[]
+   */
+  public $actions;
   protected $actionsType = GoogleCloudDataplexV1Action::class;
   protected $actionsDataType = 'array';
   /**

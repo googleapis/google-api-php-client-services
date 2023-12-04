@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListAssetsResponse extends \Google\Collection
 {
   protected $collection_key = 'assets';
+  /**
+   * @var GoogleCloudDataplexV1Asset[]
+   */
+  public $assets;
   protected $assetsType = GoogleCloudDataplexV1Asset::class;
   protected $assetsDataType = 'array';
   /**

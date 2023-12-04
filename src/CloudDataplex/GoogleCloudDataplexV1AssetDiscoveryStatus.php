@@ -35,6 +35,10 @@ class GoogleCloudDataplexV1AssetDiscoveryStatus extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var GoogleCloudDataplexV1AssetDiscoveryStatusStats
+   */
+  public $stats;
   protected $statsType = GoogleCloudDataplexV1AssetDiscoveryStatusStats::class;
   protected $statsDataType = '';
   /**

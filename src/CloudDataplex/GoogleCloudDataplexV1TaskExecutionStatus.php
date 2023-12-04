@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1TaskExecutionStatus extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1Job
+   */
+  public $latestJob;
   protected $latestJobType = GoogleCloudDataplexV1Job::class;
   protected $latestJobDataType = '';
   /**

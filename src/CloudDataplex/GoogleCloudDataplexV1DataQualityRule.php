@@ -39,21 +39,53 @@ class GoogleCloudDataplexV1DataQualityRule extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleNonNullExpectation
+   */
+  public $nonNullExpectation;
   protected $nonNullExpectationType = GoogleCloudDataplexV1DataQualityRuleNonNullExpectation::class;
   protected $nonNullExpectationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleRangeExpectation
+   */
+  public $rangeExpectation;
   protected $rangeExpectationType = GoogleCloudDataplexV1DataQualityRuleRangeExpectation::class;
   protected $rangeExpectationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleRegexExpectation
+   */
+  public $regexExpectation;
   protected $regexExpectationType = GoogleCloudDataplexV1DataQualityRuleRegexExpectation::class;
   protected $regexExpectationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation
+   */
+  public $rowConditionExpectation;
   protected $rowConditionExpectationType = GoogleCloudDataplexV1DataQualityRuleRowConditionExpectation::class;
   protected $rowConditionExpectationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleSetExpectation
+   */
+  public $setExpectation;
   protected $setExpectationType = GoogleCloudDataplexV1DataQualityRuleSetExpectation::class;
   protected $setExpectationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation
+   */
+  public $statisticRangeExpectation;
   protected $statisticRangeExpectationType = GoogleCloudDataplexV1DataQualityRuleStatisticRangeExpectation::class;
   protected $statisticRangeExpectationDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation
+   */
+  public $tableConditionExpectation;
   protected $tableConditionExpectationType = GoogleCloudDataplexV1DataQualityRuleTableConditionExpectation::class;
   protected $tableConditionExpectationDataType = '';
   public $threshold;
+  /**
+   * @var GoogleCloudDataplexV1DataQualityRuleUniquenessExpectation
+   */
+  public $uniquenessExpectation;
   protected $uniquenessExpectationType = GoogleCloudDataplexV1DataQualityRuleUniquenessExpectation::class;
   protected $uniquenessExpectationDataType = '';
 

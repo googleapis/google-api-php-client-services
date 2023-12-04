@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1AssetDiscoverySpec extends \Google\Collection
 {
   protected $collection_key = 'includePatterns';
+  /**
+   * @var GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions
+   */
+  public $csvOptions;
   protected $csvOptionsType = GoogleCloudDataplexV1AssetDiscoverySpecCsvOptions::class;
   protected $csvOptionsDataType = '';
   /**
@@ -34,6 +38,10 @@ class GoogleCloudDataplexV1AssetDiscoverySpec extends \Google\Collection
    * @var string[]
    */
   public $includePatterns;
+  /**
+   * @var GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions
+   */
+  public $jsonOptions;
   protected $jsonOptionsType = GoogleCloudDataplexV1AssetDiscoverySpecJsonOptions::class;
   protected $jsonOptionsDataType = '';
   /**

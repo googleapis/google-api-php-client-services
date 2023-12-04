@@ -24,6 +24,10 @@ class GoogleCloudDataplexV1ListPartitionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudDataplexV1Partition[]
+   */
+  public $partitions;
   protected $partitionsType = GoogleCloudDataplexV1Partition::class;
   protected $partitionsDataType = 'array';
 

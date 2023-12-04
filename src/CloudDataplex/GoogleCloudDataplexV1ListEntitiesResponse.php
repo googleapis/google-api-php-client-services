@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListEntitiesResponse extends \Google\Collection
 {
   protected $collection_key = 'entities';
+  /**
+   * @var GoogleCloudDataplexV1Entity[]
+   */
+  public $entities;
   protected $entitiesType = GoogleCloudDataplexV1Entity::class;
   protected $entitiesDataType = 'array';
   /**

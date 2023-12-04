@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1GovernanceEvent extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1GovernanceEventEntity
+   */
+  public $entity;
   protected $entityType = GoogleCloudDataplexV1GovernanceEventEntity::class;
   protected $entityDataType = '';
   /**

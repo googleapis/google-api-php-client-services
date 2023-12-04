@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListEnvironmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'environments';
+  /**
+   * @var GoogleCloudDataplexV1Environment[]
+   */
+  public $environments;
   protected $environmentsType = GoogleCloudDataplexV1Environment::class;
   protected $environmentsDataType = 'array';
   /**

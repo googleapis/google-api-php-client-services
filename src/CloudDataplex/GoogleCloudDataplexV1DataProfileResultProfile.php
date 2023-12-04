@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataProfileResultProfile extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var GoogleCloudDataplexV1DataProfileResultProfileField[]
+   */
+  public $fields;
   protected $fieldsType = GoogleCloudDataplexV1DataProfileResultProfileField::class;
   protected $fieldsDataType = 'array';
 

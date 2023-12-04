@@ -39,12 +39,20 @@ class GoogleCloudDataplexV1Content extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDataplexV1ContentNotebook
+   */
+  public $notebook;
   protected $notebookType = GoogleCloudDataplexV1ContentNotebook::class;
   protected $notebookDataType = '';
   /**
    * @var string
    */
   public $path;
+  /**
+   * @var GoogleCloudDataplexV1ContentSqlScript
+   */
+  public $sqlScript;
   protected $sqlScriptType = GoogleCloudDataplexV1ContentSqlScript::class;
   protected $sqlScriptDataType = '';
   /**

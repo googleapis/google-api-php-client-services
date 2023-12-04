@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataQualityDimensionResult extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1DataQualityDimension
+   */
+  public $dimension;
   protected $dimensionType = GoogleCloudDataplexV1DataQualityDimension::class;
   protected $dimensionDataType = '';
   /**

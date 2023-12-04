@@ -19,10 +19,22 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1TaskInfrastructureSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources
+   */
+  public $batch;
   protected $batchType = GoogleCloudDataplexV1TaskInfrastructureSpecBatchComputeResources::class;
   protected $batchDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime
+   */
+  public $containerImage;
   protected $containerImageType = GoogleCloudDataplexV1TaskInfrastructureSpecContainerImageRuntime::class;
   protected $containerImageDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork
+   */
+  public $vpcNetwork;
   protected $vpcNetworkType = GoogleCloudDataplexV1TaskInfrastructureSpecVpcNetwork::class;
   protected $vpcNetworkDataType = '';
 

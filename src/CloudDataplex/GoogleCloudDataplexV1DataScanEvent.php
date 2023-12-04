@@ -23,12 +23,28 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleCloudDataplexV1DataScanEventDataProfileResult
+   */
+  public $dataProfile;
   protected $dataProfileType = GoogleCloudDataplexV1DataScanEventDataProfileResult::class;
   protected $dataProfileDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs
+   */
+  public $dataProfileConfigs;
   protected $dataProfileConfigsType = GoogleCloudDataplexV1DataScanEventDataProfileAppliedConfigs::class;
   protected $dataProfileConfigsDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataScanEventDataQualityResult
+   */
+  public $dataQuality;
   protected $dataQualityType = GoogleCloudDataplexV1DataScanEventDataQualityResult::class;
   protected $dataQualityDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs
+   */
+  public $dataQualityConfigs;
   protected $dataQualityConfigsType = GoogleCloudDataplexV1DataScanEventDataQualityAppliedConfigs::class;
   protected $dataQualityConfigsDataType = '';
   /**
@@ -47,6 +63,10 @@ class GoogleCloudDataplexV1DataScanEvent extends \Google\Model
    * @var string
    */
   public $message;
+  /**
+   * @var GoogleCloudDataplexV1DataScanEventPostScanActionsResult
+   */
+  public $postScanActionsResult;
   protected $postScanActionsResultType = GoogleCloudDataplexV1DataScanEventPostScanActionsResult::class;
   protected $postScanActionsResultDataType = '';
   /**

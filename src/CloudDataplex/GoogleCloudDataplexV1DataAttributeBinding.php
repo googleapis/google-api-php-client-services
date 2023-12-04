@@ -48,6 +48,10 @@ class GoogleCloudDataplexV1DataAttributeBinding extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDataplexV1DataAttributeBindingPath[]
+   */
+  public $paths;
   protected $pathsType = GoogleCloudDataplexV1DataAttributeBindingPath::class;
   protected $pathsDataType = 'array';
   /**

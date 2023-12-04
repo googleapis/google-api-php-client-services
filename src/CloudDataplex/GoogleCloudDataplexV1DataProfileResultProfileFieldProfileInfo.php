@@ -21,13 +21,29 @@ class GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfo extends \Goo
 {
   protected $collection_key = 'topNValues';
   public $distinctRatio;
+  /**
+   * @var GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo
+   */
+  public $doubleProfile;
   protected $doubleProfileType = GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoDoubleFieldInfo::class;
   protected $doubleProfileDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo
+   */
+  public $integerProfile;
   protected $integerProfileType = GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoIntegerFieldInfo::class;
   protected $integerProfileDataType = '';
   public $nullRatio;
+  /**
+   * @var GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo
+   */
+  public $stringProfile;
   protected $stringProfileType = GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoStringFieldInfo::class;
   protected $stringProfileDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue[]
+   */
+  public $topNValues;
   protected $topNValuesType = GoogleCloudDataplexV1DataProfileResultProfileFieldProfileInfoTopNValue::class;
   protected $topNValuesDataType = 'array';
 

@@ -19,10 +19,22 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataProfileSpec extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDataplexV1DataProfileSpecSelectedFields
+   */
+  public $excludeFields;
   protected $excludeFieldsType = GoogleCloudDataplexV1DataProfileSpecSelectedFields::class;
   protected $excludeFieldsDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataProfileSpecSelectedFields
+   */
+  public $includeFields;
   protected $includeFieldsType = GoogleCloudDataplexV1DataProfileSpecSelectedFields::class;
   protected $includeFieldsDataType = '';
+  /**
+   * @var GoogleCloudDataplexV1DataProfileSpecPostScanActions
+   */
+  public $postScanActions;
   protected $postScanActionsType = GoogleCloudDataplexV1DataProfileSpecPostScanActions::class;
   protected $postScanActionsDataType = '';
   /**

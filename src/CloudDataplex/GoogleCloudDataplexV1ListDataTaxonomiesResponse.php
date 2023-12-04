@@ -20,6 +20,10 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListDataTaxonomiesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
+  /**
+   * @var GoogleCloudDataplexV1DataTaxonomy[]
+   */
+  public $dataTaxonomies;
   protected $dataTaxonomiesType = GoogleCloudDataplexV1DataTaxonomy::class;
   protected $dataTaxonomiesDataType = 'array';
   /**
