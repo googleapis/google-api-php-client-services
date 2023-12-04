@@ -20,8 +20,16 @@ namespace Google\Service\Translate;
 class BatchTranslateTextRequest extends \Google\Collection
 {
   protected $collection_key = 'targetLanguageCodes';
+  /**
+   * @var TranslateTextGlossaryConfig[]
+   */
+  public $glossaries;
   protected $glossariesType = TranslateTextGlossaryConfig::class;
   protected $glossariesDataType = 'map';
+  /**
+   * @var InputConfig[]
+   */
+  public $inputConfigs;
   protected $inputConfigsType = InputConfig::class;
   protected $inputConfigsDataType = 'array';
   /**
@@ -32,6 +40,10 @@ class BatchTranslateTextRequest extends \Google\Collection
    * @var string[]
    */
   public $models;
+  /**
+   * @var OutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
   /**

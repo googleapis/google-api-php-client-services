@@ -20,6 +20,10 @@ namespace Google\Service\Translate;
 class DetectLanguageResponse extends \Google\Collection
 {
   protected $collection_key = 'languages';
+  /**
+   * @var DetectedLanguage[]
+   */
+  public $languages;
   protected $languagesType = DetectedLanguage::class;
   protected $languagesDataType = 'array';
 

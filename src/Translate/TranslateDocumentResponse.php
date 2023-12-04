@@ -19,10 +19,22 @@ namespace Google\Service\Translate;
 
 class TranslateDocumentResponse extends \Google\Model
 {
+  /**
+   * @var DocumentTranslation
+   */
+  public $documentTranslation;
   protected $documentTranslationType = DocumentTranslation::class;
   protected $documentTranslationDataType = '';
+  /**
+   * @var TranslateTextGlossaryConfig
+   */
+  public $glossaryConfig;
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
+  /**
+   * @var DocumentTranslation
+   */
+  public $glossaryDocumentTranslation;
   protected $glossaryDocumentTranslationType = DocumentTranslation::class;
   protected $glossaryDocumentTranslationDataType = '';
   /**

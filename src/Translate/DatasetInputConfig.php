@@ -20,6 +20,10 @@ namespace Google\Service\Translate;
 class DatasetInputConfig extends \Google\Collection
 {
   protected $collection_key = 'inputFiles';
+  /**
+   * @var InputFile[]
+   */
+  public $inputFiles;
   protected $inputFilesType = InputFile::class;
   protected $inputFilesDataType = 'array';
 

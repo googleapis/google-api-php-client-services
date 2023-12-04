@@ -23,8 +23,16 @@ class TranslateDocumentRequest extends \Google\Model
    * @var string
    */
   public $customizedAttribution;
+  /**
+   * @var DocumentInputConfig
+   */
+  public $documentInputConfig;
   protected $documentInputConfigType = DocumentInputConfig::class;
   protected $documentInputConfigDataType = '';
+  /**
+   * @var DocumentOutputConfig
+   */
+  public $documentOutputConfig;
   protected $documentOutputConfigType = DocumentOutputConfig::class;
   protected $documentOutputConfigDataType = '';
   /**
@@ -35,6 +43,10 @@ class TranslateDocumentRequest extends \Google\Model
    * @var bool
    */
   public $enableShadowRemovalNativePdf;
+  /**
+   * @var TranslateTextGlossaryConfig
+   */
+  public $glossaryConfig;
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
   /**

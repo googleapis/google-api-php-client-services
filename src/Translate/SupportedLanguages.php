@@ -20,6 +20,10 @@ namespace Google\Service\Translate;
 class SupportedLanguages extends \Google\Collection
 {
   protected $collection_key = 'languages';
+  /**
+   * @var SupportedLanguage[]
+   */
+  public $languages;
   protected $languagesType = SupportedLanguage::class;
   protected $languagesDataType = 'array';
 

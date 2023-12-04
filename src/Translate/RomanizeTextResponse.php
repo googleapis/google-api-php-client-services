@@ -20,6 +20,10 @@ namespace Google\Service\Translate;
 class RomanizeTextResponse extends \Google\Collection
 {
   protected $collection_key = 'romanizations';
+  /**
+   * @var Romanization[]
+   */
+  public $romanizations;
   protected $romanizationsType = Romanization::class;
   protected $romanizationsDataType = 'array';
 

@@ -23,6 +23,10 @@ class Translation extends \Google\Model
    * @var string
    */
   public $detectedLanguageCode;
+  /**
+   * @var TranslateTextGlossaryConfig
+   */
+  public $glossaryConfig;
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
   /**

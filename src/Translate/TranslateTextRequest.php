@@ -24,6 +24,10 @@ class TranslateTextRequest extends \Google\Collection
    * @var string[]
    */
   public $contents;
+  /**
+   * @var TranslateTextGlossaryConfig
+   */
+  public $glossaryConfig;
   protected $glossaryConfigType = TranslateTextGlossaryConfig::class;
   protected $glossaryConfigDataType = '';
   /**
@@ -46,6 +50,10 @@ class TranslateTextRequest extends \Google\Collection
    * @var string
    */
   public $targetLanguageCode;
+  /**
+   * @var TransliterationConfig
+   */
+  public $transliterationConfig;
   protected $transliterationConfigType = TransliterationConfig::class;
   protected $transliterationConfigDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Translate;
 class ListDatasetsResponse extends \Google\Collection
 {
   protected $collection_key = 'datasets';
+  /**
+   * @var Dataset[]
+   */
+  public $datasets;
   protected $datasetsType = Dataset::class;
   protected $datasetsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Translate;
 
 class ImportDataRequest extends \Google\Model
 {
+  /**
+   * @var DatasetInputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = DatasetInputConfig::class;
   protected $inputConfigDataType = '';
 

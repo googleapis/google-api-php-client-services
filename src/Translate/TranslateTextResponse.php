@@ -20,8 +20,16 @@ namespace Google\Service\Translate;
 class TranslateTextResponse extends \Google\Collection
 {
   protected $collection_key = 'translations';
+  /**
+   * @var Translation[]
+   */
+  public $glossaryTranslations;
   protected $glossaryTranslationsType = Translation::class;
   protected $glossaryTranslationsDataType = 'array';
+  /**
+   * @var Translation[]
+   */
+  public $translations;
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'array';
 

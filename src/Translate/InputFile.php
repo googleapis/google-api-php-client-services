@@ -19,6 +19,10 @@ namespace Google\Service\Translate;
 
 class InputFile extends \Google\Model
 {
+  /**
+   * @var GcsInputSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GcsInputSource::class;
   protected $gcsSourceDataType = '';
   /**
