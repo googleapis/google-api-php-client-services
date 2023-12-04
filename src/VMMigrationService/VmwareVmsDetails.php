@@ -20,6 +20,10 @@ namespace Google\Service\VMMigrationService;
 class VmwareVmsDetails extends \Google\Collection
 {
   protected $collection_key = 'details';
+  /**
+   * @var VmwareVmDetails[]
+   */
+  public $details;
   protected $detailsType = VmwareVmDetails::class;
   protected $detailsDataType = 'array';
 

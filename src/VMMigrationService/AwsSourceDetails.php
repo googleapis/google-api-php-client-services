@@ -20,18 +20,30 @@ namespace Google\Service\VMMigrationService;
 class AwsSourceDetails extends \Google\Collection
 {
   protected $collection_key = 'inventoryTagList';
+  /**
+   * @var AccessKeyCredentials
+   */
+  public $accessKeyCreds;
   protected $accessKeyCredsType = AccessKeyCredentials::class;
   protected $accessKeyCredsDataType = '';
   /**
    * @var string
    */
   public $awsRegion;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
    * @var string[]
    */
   public $inventorySecurityGroupNames;
+  /**
+   * @var Tag[]
+   */
+  public $inventoryTagList;
   protected $inventoryTagListType = Tag::class;
   protected $inventoryTagListDataType = 'array';
   /**

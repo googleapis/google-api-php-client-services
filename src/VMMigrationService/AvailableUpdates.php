@@ -19,8 +19,16 @@ namespace Google\Service\VMMigrationService;
 
 class AvailableUpdates extends \Google\Model
 {
+  /**
+   * @var ApplianceVersion
+   */
+  public $inPlaceUpdate;
   protected $inPlaceUpdateType = ApplianceVersion::class;
   protected $inPlaceUpdateDataType = '';
+  /**
+   * @var ApplianceVersion
+   */
+  public $newDeployableAppliance;
   protected $newDeployableApplianceType = ApplianceVersion::class;
   protected $newDeployableApplianceDataType = '';
 

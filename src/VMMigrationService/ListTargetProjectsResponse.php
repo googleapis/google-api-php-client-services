@@ -24,6 +24,10 @@ class ListTargetProjectsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TargetProject[]
+   */
+  public $targetProjects;
   protected $targetProjectsType = TargetProject::class;
   protected $targetProjectsDataType = 'array';
   /**

@@ -31,8 +31,16 @@ class BootDiskDefaults extends \Google\Model
    * @var string
    */
   public $diskType;
+  /**
+   * @var Encryption
+   */
+  public $encryption;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
+  /**
+   * @var DiskImageDefaults
+   */
+  public $image;
   protected $imageType = DiskImageDefaults::class;
   protected $imageDataType = '';
 

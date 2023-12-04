@@ -20,14 +20,26 @@ namespace Google\Service\VMMigrationService;
 class MigrationWarning extends \Google\Collection
 {
   protected $collection_key = 'helpLinks';
+  /**
+   * @var LocalizedMessage
+   */
+  public $actionItem;
   protected $actionItemType = LocalizedMessage::class;
   protected $actionItemDataType = '';
   /**
    * @var string
    */
   public $code;
+  /**
+   * @var Link[]
+   */
+  public $helpLinks;
   protected $helpLinksType = Link::class;
   protected $helpLinksDataType = 'array';
+  /**
+   * @var LocalizedMessage
+   */
+  public $warningMessage;
   protected $warningMessageType = LocalizedMessage::class;
   protected $warningMessageDataType = '';
   /**

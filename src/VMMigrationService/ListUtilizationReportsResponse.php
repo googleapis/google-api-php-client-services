@@ -28,6 +28,10 @@ class ListUtilizationReportsResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
+  /**
+   * @var UtilizationReport[]
+   */
+  public $utilizationReports;
   protected $utilizationReportsType = UtilizationReport::class;
   protected $utilizationReportsDataType = 'array';
 

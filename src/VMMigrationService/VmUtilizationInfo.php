@@ -19,12 +19,20 @@ namespace Google\Service\VMMigrationService;
 
 class VmUtilizationInfo extends \Google\Model
 {
+  /**
+   * @var VmUtilizationMetrics
+   */
+  public $utilization;
   protected $utilizationType = VmUtilizationMetrics::class;
   protected $utilizationDataType = '';
   /**
    * @var string
    */
   public $vmId;
+  /**
+   * @var VmwareVmDetails
+   */
+  public $vmwareVmDetails;
   protected $vmwareVmDetailsType = VmwareVmDetails::class;
   protected $vmwareVmDetailsDataType = '';
 

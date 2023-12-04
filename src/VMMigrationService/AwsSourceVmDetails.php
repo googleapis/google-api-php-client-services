@@ -24,12 +24,20 @@ class AwsSourceVmDetails extends \Google\Collection
    * @var string
    */
   public $committedStorageBytes;
+  /**
+   * @var AwsDiskDetails[]
+   */
+  public $disks;
   protected $disksType = AwsDiskDetails::class;
   protected $disksDataType = 'array';
   /**
    * @var string
    */
   public $firmware;
+  /**
+   * @var VmCapabilities
+   */
+  public $vmCapabilitiesInfo;
   protected $vmCapabilitiesInfoType = VmCapabilities::class;
   protected $vmCapabilitiesInfoDataType = '';
 

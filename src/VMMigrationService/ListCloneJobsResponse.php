@@ -20,6 +20,10 @@ namespace Google\Service\VMMigrationService;
 class ListCloneJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CloneJob[]
+   */
+  public $cloneJobs;
   protected $cloneJobsType = CloneJob::class;
   protected $cloneJobsDataType = 'array';
   /**

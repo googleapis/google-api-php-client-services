@@ -20,14 +20,26 @@ namespace Google\Service\VMMigrationService;
 class ComputeEngineDisksTargetDefaults extends \Google\Collection
 {
   protected $collection_key = 'disks';
+  /**
+   * @var PersistentDiskDefaults[]
+   */
+  public $disks;
   protected $disksType = PersistentDiskDefaults::class;
   protected $disksDataType = 'array';
+  /**
+   * @var DisksMigrationDisksTargetDefaults
+   */
+  public $disksTargetDefaults;
   protected $disksTargetDefaultsType = DisksMigrationDisksTargetDefaults::class;
   protected $disksTargetDefaultsDataType = '';
   /**
    * @var string
    */
   public $targetProject;
+  /**
+   * @var DisksMigrationVmTargetDefaults
+   */
+  public $vmTargetDefaults;
   protected $vmTargetDefaultsType = DisksMigrationVmTargetDefaults::class;
   protected $vmTargetDefaultsDataType = '';
   /**

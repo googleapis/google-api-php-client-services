@@ -23,14 +23,34 @@ class CutoverStep extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var ReplicationCycle
+   */
+  public $finalSync;
   protected $finalSyncType = ReplicationCycle::class;
   protected $finalSyncDataType = '';
+  /**
+   * @var InstantiatingMigratedVMStep
+   */
+  public $instantiatingMigratedVm;
   protected $instantiatingMigratedVmType = InstantiatingMigratedVMStep::class;
   protected $instantiatingMigratedVmDataType = '';
+  /**
+   * @var PreparingVMDisksStep
+   */
+  public $preparingVmDisks;
   protected $preparingVmDisksType = PreparingVMDisksStep::class;
   protected $preparingVmDisksDataType = '';
+  /**
+   * @var ReplicationCycle
+   */
+  public $previousReplicationCycle;
   protected $previousReplicationCycleType = ReplicationCycle::class;
   protected $previousReplicationCycleDataType = '';
+  /**
+   * @var ShuttingDownSourceVMStep
+   */
+  public $shuttingDownSourceVm;
   protected $shuttingDownSourceVmType = ShuttingDownSourceVMStep::class;
   protected $shuttingDownSourceVmDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\VMMigrationService;
 class ListDatacenterConnectorsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var DatacenterConnector[]
+   */
+  public $datacenterConnectors;
   protected $datacenterConnectorsType = DatacenterConnector::class;
   protected $datacenterConnectorsDataType = 'array';
   /**

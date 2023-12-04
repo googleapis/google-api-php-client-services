@@ -20,6 +20,10 @@ namespace Google\Service\VMMigrationService;
 class ListCutoverJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var CutoverJob[]
+   */
+  public $cutoverJobs;
   protected $cutoverJobsType = CutoverJob::class;
   protected $cutoverJobsDataType = 'array';
   /**

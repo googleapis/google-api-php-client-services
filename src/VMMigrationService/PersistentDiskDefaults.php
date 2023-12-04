@@ -31,12 +31,20 @@ class PersistentDiskDefaults extends \Google\Model
    * @var string
    */
   public $diskType;
+  /**
+   * @var Encryption
+   */
+  public $encryption;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
   /**
    * @var int
    */
   public $sourceDiskNumber;
+  /**
+   * @var VmAttachmentDetails
+   */
+  public $vmAttachmentDetails;
   protected $vmAttachmentDetailsType = VmAttachmentDetails::class;
   protected $vmAttachmentDetailsDataType = '';
 

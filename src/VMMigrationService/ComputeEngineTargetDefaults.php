@@ -24,18 +24,30 @@ class ComputeEngineTargetDefaults extends \Google\Collection
    * @var string[]
    */
   public $additionalLicenses;
+  /**
+   * @var AppliedLicense
+   */
+  public $appliedLicense;
   protected $appliedLicenseType = AppliedLicense::class;
   protected $appliedLicenseDataType = '';
   /**
    * @var string
    */
   public $bootOption;
+  /**
+   * @var ComputeScheduling
+   */
+  public $computeScheduling;
   protected $computeSchedulingType = ComputeScheduling::class;
   protected $computeSchedulingDataType = '';
   /**
    * @var string
    */
   public $diskType;
+  /**
+   * @var Encryption
+   */
+  public $encryption;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
   /**
@@ -62,6 +74,10 @@ class ComputeEngineTargetDefaults extends \Google\Collection
    * @var string[]
    */
   public $metadata;
+  /**
+   * @var NetworkInterface[]
+   */
+  public $networkInterfaces;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class ListReplicationCyclesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var ReplicationCycle[]
+   */
+  public $replicationCycles;
   protected $replicationCyclesType = ReplicationCycle::class;
   protected $replicationCyclesDataType = 'array';
   /**

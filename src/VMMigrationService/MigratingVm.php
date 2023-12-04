@@ -20,20 +20,44 @@ namespace Google\Service\VMMigrationService;
 class MigratingVm extends \Google\Collection
 {
   protected $collection_key = 'recentCutoverJobs';
+  /**
+   * @var AwsSourceVmDetails
+   */
+  public $awsSourceVmDetails;
   protected $awsSourceVmDetailsType = AwsSourceVmDetails::class;
   protected $awsSourceVmDetailsDataType = '';
+  /**
+   * @var AzureSourceVmDetails
+   */
+  public $azureSourceVmDetails;
   protected $azureSourceVmDetailsType = AzureSourceVmDetails::class;
   protected $azureSourceVmDetailsDataType = '';
+  /**
+   * @var ComputeEngineDisksTargetDefaults
+   */
+  public $computeEngineDisksTargetDefaults;
   protected $computeEngineDisksTargetDefaultsType = ComputeEngineDisksTargetDefaults::class;
   protected $computeEngineDisksTargetDefaultsDataType = '';
+  /**
+   * @var ComputeEngineTargetDefaults
+   */
+  public $computeEngineTargetDefaults;
   protected $computeEngineTargetDefaultsType = ComputeEngineTargetDefaults::class;
   protected $computeEngineTargetDefaultsDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var ReplicationCycle
+   */
+  public $currentSyncInfo;
   protected $currentSyncInfoType = ReplicationCycle::class;
   protected $currentSyncInfoDataType = '';
+  /**
+   * @var CutoverForecast
+   */
+  public $cutoverForecast;
   protected $cutoverForecastType = CutoverForecast::class;
   protected $cutoverForecastDataType = '';
   /**
@@ -44,6 +68,10 @@ class MigratingVm extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
@@ -54,18 +82,38 @@ class MigratingVm extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  /**
+   * @var ReplicationCycle
+   */
+  public $lastReplicationCycle;
   protected $lastReplicationCycleType = ReplicationCycle::class;
   protected $lastReplicationCycleDataType = '';
+  /**
+   * @var ReplicationSync
+   */
+  public $lastSync;
   protected $lastSyncType = ReplicationSync::class;
   protected $lastSyncDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var SchedulePolicy
+   */
+  public $policy;
   protected $policyType = SchedulePolicy::class;
   protected $policyDataType = '';
+  /**
+   * @var CloneJob[]
+   */
+  public $recentCloneJobs;
   protected $recentCloneJobsType = CloneJob::class;
   protected $recentCloneJobsDataType = 'array';
+  /**
+   * @var CutoverJob[]
+   */
+  public $recentCutoverJobs;
   protected $recentCutoverJobsType = CutoverJob::class;
   protected $recentCutoverJobsDataType = 'array';
   /**
@@ -84,6 +132,10 @@ class MigratingVm extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var VmwareSourceVmDetails
+   */
+  public $vmwareSourceVmDetails;
   protected $vmwareSourceVmDetailsType = VmwareSourceVmDetails::class;
   protected $vmwareSourceVmDetailsDataType = '';
 

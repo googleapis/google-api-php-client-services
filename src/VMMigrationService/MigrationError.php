@@ -20,18 +20,30 @@ namespace Google\Service\VMMigrationService;
 class MigrationError extends \Google\Collection
 {
   protected $collection_key = 'helpLinks';
+  /**
+   * @var LocalizedMessage
+   */
+  public $actionItem;
   protected $actionItemType = LocalizedMessage::class;
   protected $actionItemDataType = '';
   /**
    * @var string
    */
   public $code;
+  /**
+   * @var LocalizedMessage
+   */
+  public $errorMessage;
   protected $errorMessageType = LocalizedMessage::class;
   protected $errorMessageDataType = '';
   /**
    * @var string
    */
   public $errorTime;
+  /**
+   * @var Link[]
+   */
+  public $helpLinks;
   protected $helpLinksType = Link::class;
   protected $helpLinksDataType = 'array';
 

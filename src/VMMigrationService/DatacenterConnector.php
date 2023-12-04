@@ -27,6 +27,10 @@ class DatacenterConnector extends \Google\Model
    * @var string
    */
   public $applianceSoftwareVersion;
+  /**
+   * @var AvailableUpdates
+   */
+  public $availableVersions;
   protected $availableVersionsType = AvailableUpdates::class;
   protected $availableVersionsDataType = '';
   /**
@@ -37,6 +41,10 @@ class DatacenterConnector extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
@@ -63,6 +71,10 @@ class DatacenterConnector extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var UpgradeStatus
+   */
+  public $upgradeStatus;
   protected $upgradeStatusType = UpgradeStatus::class;
   protected $upgradeStatusDataType = '';
   /**

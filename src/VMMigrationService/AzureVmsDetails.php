@@ -20,6 +20,10 @@ namespace Google\Service\VMMigrationService;
 class AzureVmsDetails extends \Google\Collection
 {
   protected $collection_key = 'details';
+  /**
+   * @var AzureVmDetails[]
+   */
+  public $details;
   protected $detailsType = AzureVmDetails::class;
   protected $detailsDataType = 'array';
 

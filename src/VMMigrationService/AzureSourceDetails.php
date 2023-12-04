@@ -23,8 +23,16 @@ class AzureSourceDetails extends \Google\Model
    * @var string
    */
   public $azureLocation;
+  /**
+   * @var ClientSecretCredentials
+   */
+  public $clientSecretCreds;
   protected $clientSecretCredsType = ClientSecretCredentials::class;
   protected $clientSecretCredsDataType = '';
+  /**
+   * @var Status
+   */
+  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**

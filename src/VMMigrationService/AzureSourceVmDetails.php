@@ -24,12 +24,20 @@ class AzureSourceVmDetails extends \Google\Collection
    * @var string
    */
   public $committedStorageBytes;
+  /**
+   * @var AzureDiskDetails[]
+   */
+  public $disks;
   protected $disksType = AzureDiskDetails::class;
   protected $disksDataType = 'array';
   /**
    * @var string
    */
   public $firmware;
+  /**
+   * @var VmCapabilities
+   */
+  public $vmCapabilitiesInfo;
   protected $vmCapabilitiesInfoType = VmCapabilities::class;
   protected $vmCapabilitiesInfoDataType = '';
 

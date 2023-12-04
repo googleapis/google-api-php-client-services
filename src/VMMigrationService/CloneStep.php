@@ -19,14 +19,26 @@ namespace Google\Service\VMMigrationService;
 
 class CloneStep extends \Google\Model
 {
+  /**
+   * @var AdaptingOSStep
+   */
+  public $adaptingOs;
   protected $adaptingOsType = AdaptingOSStep::class;
   protected $adaptingOsDataType = '';
   /**
    * @var string
    */
   public $endTime;
+  /**
+   * @var InstantiatingMigratedVMStep
+   */
+  public $instantiatingMigratedVm;
   protected $instantiatingMigratedVmType = InstantiatingMigratedVMStep::class;
   protected $instantiatingMigratedVmDataType = '';
+  /**
+   * @var PreparingVMDisksStep
+   */
+  public $preparingVmDisks;
   protected $preparingVmDisksType = PreparingVMDisksStep::class;
   protected $preparingVmDisksDataType = '';
   /**
