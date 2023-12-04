@@ -20,6 +20,10 @@ namespace Google\Service\Storage;
 class ManagedFolders extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var ManagedFolder[]
+   */
+  public $items;
   protected $itemsType = ManagedFolder::class;
   protected $itemsDataType = 'array';
   /**

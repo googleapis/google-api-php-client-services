@@ -126,7 +126,7 @@ class Storage extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'b/{bucket}/anywhereCache',
+              'path' => 'b/{bucket}/anywhereCaches',
               'httpMethod' => 'GET',
               'parameters' => [
                 'bucket' => [

@@ -19,12 +19,20 @@ namespace Google\Service\Storage;
 
 class BucketIamConfiguration extends \Google\Model
 {
+  /**
+   * @var BucketIamConfigurationBucketPolicyOnly
+   */
+  public $bucketPolicyOnly;
   protected $bucketPolicyOnlyType = BucketIamConfigurationBucketPolicyOnly::class;
   protected $bucketPolicyOnlyDataType = '';
   /**
    * @var string
    */
   public $publicAccessPrevention;
+  /**
+   * @var BucketIamConfigurationUniformBucketLevelAccess
+   */
+  public $uniformBucketLevelAccess;
   protected $uniformBucketLevelAccessType = BucketIamConfigurationUniformBucketLevelAccess::class;
   protected $uniformBucketLevelAccessDataType = '';
 

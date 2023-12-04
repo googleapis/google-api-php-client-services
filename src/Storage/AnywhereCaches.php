@@ -20,6 +20,10 @@ namespace Google\Service\Storage;
 class AnywhereCaches extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var AnywhereCache[]
+   */
+  public $items;
   protected $itemsType = AnywhereCache::class;
   protected $itemsDataType = 'array';
   /**

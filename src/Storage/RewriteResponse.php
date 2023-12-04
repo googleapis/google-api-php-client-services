@@ -31,6 +31,10 @@ class RewriteResponse extends \Google\Model
    * @var string
    */
   public $objectSize;
+  /**
+   * @var StorageObject
+   */
+  public $resource;
   protected $resourceType = StorageObject::class;
   protected $resourceDataType = '';
   /**

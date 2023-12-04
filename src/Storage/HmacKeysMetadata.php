@@ -20,6 +20,10 @@ namespace Google\Service\Storage;
 class HmacKeysMetadata extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var HmacKeyMetadata[]
+   */
+  public $items;
   protected $itemsType = HmacKeyMetadata::class;
   protected $itemsDataType = 'array';
   /**

@@ -20,12 +20,20 @@ namespace Google\Service\Storage;
 class ComposeRequest extends \Google\Collection
 {
   protected $collection_key = 'sourceObjects';
+  /**
+   * @var StorageObject
+   */
+  public $destination;
   protected $destinationType = StorageObject::class;
   protected $destinationDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var ComposeRequestSourceObjects[]
+   */
+  public $sourceObjects;
   protected $sourceObjectsType = ComposeRequestSourceObjects::class;
   protected $sourceObjectsDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Storage;
 class BucketLifecycle extends \Google\Collection
 {
   protected $collection_key = 'rule';
+  /**
+   * @var BucketLifecycleRule[]
+   */
+  public $rule;
   protected $ruleType = BucketLifecycleRule::class;
   protected $ruleDataType = 'array';
 

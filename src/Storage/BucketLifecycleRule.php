@@ -19,8 +19,16 @@ namespace Google\Service\Storage;
 
 class BucketLifecycleRule extends \Google\Model
 {
+  /**
+   * @var BucketLifecycleRuleAction
+   */
+  public $action;
   protected $actionType = BucketLifecycleRuleAction::class;
   protected $actionDataType = '';
+  /**
+   * @var BucketLifecycleRuleCondition
+   */
+  public $condition;
   protected $conditionType = BucketLifecycleRuleCondition::class;
   protected $conditionDataType = '';
 

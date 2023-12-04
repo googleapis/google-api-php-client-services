@@ -20,6 +20,10 @@ namespace Google\Service\Storage;
 class BucketAccessControls extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var BucketAccessControl[]
+   */
+  public $items;
   protected $itemsType = BucketAccessControl::class;
   protected $itemsDataType = 'array';
   /**

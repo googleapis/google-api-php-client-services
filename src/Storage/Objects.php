@@ -20,6 +20,10 @@ namespace Google\Service\Storage;
 class Objects extends \Google\Collection
 {
   protected $collection_key = 'prefixes';
+  /**
+   * @var StorageObject[]
+   */
+  public $items;
   protected $itemsType = StorageObject::class;
   protected $itemsDataType = 'array';
   /**
