@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3BatchRunTestCasesResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var GoogleCloudDialogflowCxV3TestCaseResult[]
+   */
+  public $results;
   protected $resultsType = GoogleCloudDialogflowCxV3TestCaseResult::class;
   protected $resultsDataType = 'array';
 

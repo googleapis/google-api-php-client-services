@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListChangelogsResponse extends \Google\Collection
 {
   protected $collection_key = 'changelogs';
+  /**
+   * @var GoogleCloudDialogflowCxV3Changelog[]
+   */
+  public $changelogs;
   protected $changelogsType = GoogleCloudDialogflowCxV3Changelog::class;
   protected $changelogsDataType = 'array';
   /**

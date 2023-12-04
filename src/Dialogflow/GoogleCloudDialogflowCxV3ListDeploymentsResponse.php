@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListDeploymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'deployments';
+  /**
+   * @var GoogleCloudDialogflowCxV3Deployment[]
+   */
+  public $deployments;
   protected $deploymentsType = GoogleCloudDialogflowCxV3Deployment::class;
   protected $deploymentsDataType = 'array';
   /**

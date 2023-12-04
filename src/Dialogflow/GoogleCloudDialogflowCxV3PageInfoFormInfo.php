@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3PageInfoFormInfo extends \Google\Collection
 {
   protected $collection_key = 'parameterInfo';
+  /**
+   * @var GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo[]
+   */
+  public $parameterInfo;
   protected $parameterInfoType = GoogleCloudDialogflowCxV3PageInfoFormInfoParameterInfo::class;
   protected $parameterInfoDataType = 'array';
 

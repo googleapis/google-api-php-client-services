@@ -23,6 +23,10 @@ class GoogleCloudDialogflowCxV3ImportFlowRequest extends \Google\Model
    * @var string
    */
   public $flowContent;
+  /**
+   * @var GoogleCloudDialogflowCxV3FlowImportStrategy
+   */
+  public $flowImportStrategy;
   protected $flowImportStrategyType = GoogleCloudDialogflowCxV3FlowImportStrategy::class;
   protected $flowImportStrategyDataType = '';
   /**

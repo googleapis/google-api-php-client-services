@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListEnvironmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'environments';
+  /**
+   * @var GoogleCloudDialogflowCxV3Environment[]
+   */
+  public $environments;
   protected $environmentsType = GoogleCloudDialogflowCxV3Environment::class;
   protected $environmentsDataType = 'array';
   /**

@@ -20,22 +20,42 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutput extends \Google\Collection
 {
   protected $collection_key = 'textResponses';
+  /**
+   * @var GoogleCloudDialogflowCxV3Page
+   */
+  public $currentPage;
   protected $currentPageType = GoogleCloudDialogflowCxV3Page::class;
   protected $currentPageDataType = '';
   /**
    * @var array[]
    */
   public $diagnosticInfo;
+  /**
+   * @var GoogleCloudDialogflowCxV3TestRunDifference[]
+   */
+  public $differences;
   protected $differencesType = GoogleCloudDialogflowCxV3TestRunDifference::class;
   protected $differencesDataType = 'array';
   /**
    * @var array[]
    */
   public $sessionParameters;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageText[]
+   */
+  public $textResponses;
   protected $textResponsesType = GoogleCloudDialogflowCxV3ResponseMessageText::class;
   protected $textResponsesDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowCxV3Intent
+   */
+  public $triggeredIntent;
   protected $triggeredIntentType = GoogleCloudDialogflowCxV3Intent::class;
   protected $triggeredIntentDataType = '';
 

@@ -26,6 +26,10 @@ class GoogleCloudDialogflowCxV3SynthesizeSpeechConfig extends \Google\Collection
   public $effectsProfileId;
   public $pitch;
   public $speakingRate;
+  /**
+   * @var GoogleCloudDialogflowCxV3VoiceSelectionParams
+   */
+  public $voice;
   protected $voiceType = GoogleCloudDialogflowCxV3VoiceSelectionParams::class;
   protected $voiceDataType = '';
   public $volumeGainDb;

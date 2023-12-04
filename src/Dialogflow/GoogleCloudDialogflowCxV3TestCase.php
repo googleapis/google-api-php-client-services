@@ -28,6 +28,10 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var GoogleCloudDialogflowCxV3TestCaseResult
+   */
+  public $lastTestResult;
   protected $lastTestResultType = GoogleCloudDialogflowCxV3TestCaseResult::class;
   protected $lastTestResultDataType = '';
   /**
@@ -42,8 +46,16 @@ class GoogleCloudDialogflowCxV3TestCase extends \Google\Collection
    * @var string[]
    */
   public $tags;
+  /**
+   * @var GoogleCloudDialogflowCxV3ConversationTurn[]
+   */
+  public $testCaseConversationTurns;
   protected $testCaseConversationTurnsType = GoogleCloudDialogflowCxV3ConversationTurn::class;
   protected $testCaseConversationTurnsDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowCxV3TestConfig
+   */
+  public $testConfig;
   protected $testConfigType = GoogleCloudDialogflowCxV3TestConfig::class;
   protected $testConfigDataType = '';
 

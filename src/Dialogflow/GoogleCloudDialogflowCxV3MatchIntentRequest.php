@@ -23,8 +23,16 @@ class GoogleCloudDialogflowCxV3MatchIntentRequest extends \Google\Model
    * @var bool
    */
   public $persistParameterChanges;
+  /**
+   * @var GoogleCloudDialogflowCxV3QueryInput
+   */
+  public $queryInput;
   protected $queryInputType = GoogleCloudDialogflowCxV3QueryInput::class;
   protected $queryInputDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3QueryParameters
+   */
+  public $queryParams;
   protected $queryParamsType = GoogleCloudDialogflowCxV3QueryParameters::class;
   protected $queryParamsDataType = '';
 

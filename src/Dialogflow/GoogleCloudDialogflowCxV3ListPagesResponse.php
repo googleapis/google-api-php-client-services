@@ -24,6 +24,10 @@ class GoogleCloudDialogflowCxV3ListPagesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudDialogflowCxV3Page[]
+   */
+  public $pages;
   protected $pagesType = GoogleCloudDialogflowCxV3Page::class;
   protected $pagesDataType = 'array';
 

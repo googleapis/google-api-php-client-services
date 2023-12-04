@@ -19,10 +19,22 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3FulfillIntentRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3Match
+   */
+  public $match;
   protected $matchType = GoogleCloudDialogflowCxV3Match::class;
   protected $matchDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3MatchIntentRequest
+   */
+  public $matchIntentRequest;
   protected $matchIntentRequestType = GoogleCloudDialogflowCxV3MatchIntentRequest::class;
   protected $matchIntentRequestDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3OutputAudioConfig
+   */
+  public $outputAudioConfig;
   protected $outputAudioConfigType = GoogleCloudDialogflowCxV3OutputAudioConfig::class;
   protected $outputAudioConfigDataType = '';
 

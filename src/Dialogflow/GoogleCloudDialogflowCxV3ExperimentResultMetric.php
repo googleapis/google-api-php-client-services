@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ExperimentResultMetric extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval
+   */
+  public $confidenceInterval;
   protected $confidenceIntervalType = GoogleCloudDialogflowCxV3ExperimentResultConfidenceInterval::class;
   protected $confidenceIntervalDataType = '';
   public $count;

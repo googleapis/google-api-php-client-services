@@ -24,6 +24,10 @@ class GoogleCloudDialogflowCxV3BoostSpecs extends \Google\Collection
    * @var string[]
    */
   public $dataStores;
+  /**
+   * @var GoogleCloudDialogflowCxV3BoostSpec[]
+   */
+  public $spec;
   protected $specType = GoogleCloudDialogflowCxV3BoostSpec::class;
   protected $specDataType = 'array';
 

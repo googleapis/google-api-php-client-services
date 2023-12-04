@@ -32,14 +32,26 @@ class GoogleCloudDialogflowCxV3Environment extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig
+   */
+  public $testCasesConfig;
   protected $testCasesConfigType = GoogleCloudDialogflowCxV3EnvironmentTestCasesConfig::class;
   protected $testCasesConfigDataType = '';
   /**
    * @var string
    */
   public $updateTime;
+  /**
+   * @var GoogleCloudDialogflowCxV3EnvironmentVersionConfig[]
+   */
+  public $versionConfigs;
   protected $versionConfigsType = GoogleCloudDialogflowCxV3EnvironmentVersionConfig::class;
   protected $versionConfigsDataType = 'array';
+  /**
+   * @var GoogleCloudDialogflowCxV3EnvironmentWebhookConfig
+   */
+  public $webhookConfig;
   protected $webhookConfigType = GoogleCloudDialogflowCxV3EnvironmentWebhookConfig::class;
   protected $webhookConfigDataType = '';
 

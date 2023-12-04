@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListAgentsResponse extends \Google\Collection
 {
   protected $collection_key = 'agents';
+  /**
+   * @var GoogleCloudDialogflowCxV3Agent[]
+   */
+  public $agents;
   protected $agentsType = GoogleCloudDialogflowCxV3Agent::class;
   protected $agentsDataType = 'array';
   /**

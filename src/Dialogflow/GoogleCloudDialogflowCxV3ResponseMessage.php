@@ -23,30 +23,66 @@ class GoogleCloudDialogflowCxV3ResponseMessage extends \Google\Model
    * @var string
    */
   public $channel;
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess
+   */
+  public $conversationSuccess;
   protected $conversationSuccessType = GoogleCloudDialogflowCxV3ResponseMessageConversationSuccess::class;
   protected $conversationSuccessDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageEndInteraction
+   */
+  public $endInteraction;
   protected $endInteractionType = GoogleCloudDialogflowCxV3ResponseMessageEndInteraction::class;
   protected $endInteractionDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard
+   */
+  public $knowledgeInfoCard;
   protected $knowledgeInfoCardType = GoogleCloudDialogflowCxV3ResponseMessageKnowledgeInfoCard::class;
   protected $knowledgeInfoCardDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff
+   */
+  public $liveAgentHandoff;
   protected $liveAgentHandoffType = GoogleCloudDialogflowCxV3ResponseMessageLiveAgentHandoff::class;
   protected $liveAgentHandoffDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageMixedAudio
+   */
+  public $mixedAudio;
   protected $mixedAudioType = GoogleCloudDialogflowCxV3ResponseMessageMixedAudio::class;
   protected $mixedAudioDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText
+   */
+  public $outputAudioText;
   protected $outputAudioTextType = GoogleCloudDialogflowCxV3ResponseMessageOutputAudioText::class;
   protected $outputAudioTextDataType = '';
   /**
    * @var array[]
    */
   public $payload;
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessagePlayAudio
+   */
+  public $playAudio;
   protected $playAudioType = GoogleCloudDialogflowCxV3ResponseMessagePlayAudio::class;
   protected $playAudioDataType = '';
   /**
    * @var string
    */
   public $responseType;
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall
+   */
+  public $telephonyTransferCall;
   protected $telephonyTransferCallType = GoogleCloudDialogflowCxV3ResponseMessageTelephonyTransferCall::class;
   protected $telephonyTransferCallDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3ResponseMessageText
+   */
+  public $text;
   protected $textType = GoogleCloudDialogflowCxV3ResponseMessageText::class;
   protected $textDataType = '';
 

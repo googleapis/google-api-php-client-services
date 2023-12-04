@@ -28,6 +28,10 @@ class GoogleCloudDialogflowCxV3FlowValidationResult extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  /**
+   * @var GoogleCloudDialogflowCxV3ValidationMessage[]
+   */
+  public $validationMessages;
   protected $validationMessagesType = GoogleCloudDialogflowCxV3ValidationMessage::class;
   protected $validationMessagesDataType = 'array';
 

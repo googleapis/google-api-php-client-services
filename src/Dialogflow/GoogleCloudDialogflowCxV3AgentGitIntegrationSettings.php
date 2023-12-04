@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3AgentGitIntegrationSettings extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings
+   */
+  public $githubSettings;
   protected $githubSettingsType = GoogleCloudDialogflowCxV3AgentGitIntegrationSettingsGithubSettings::class;
   protected $githubSettingsDataType = '';
 

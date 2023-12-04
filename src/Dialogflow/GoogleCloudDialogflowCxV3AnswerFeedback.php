@@ -27,6 +27,10 @@ class GoogleCloudDialogflowCxV3AnswerFeedback extends \Google\Model
    * @var string
    */
   public $rating;
+  /**
+   * @var GoogleCloudDialogflowCxV3AnswerFeedbackRatingReason
+   */
+  public $ratingReason;
   protected $ratingReasonType = GoogleCloudDialogflowCxV3AnswerFeedbackRatingReason::class;
   protected $ratingReasonDataType = '';
 

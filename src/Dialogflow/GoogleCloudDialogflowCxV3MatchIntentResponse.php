@@ -20,8 +20,16 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3MatchIntentResponse extends \Google\Collection
 {
   protected $collection_key = 'matches';
+  /**
+   * @var GoogleCloudDialogflowCxV3Page
+   */
+  public $currentPage;
   protected $currentPageType = GoogleCloudDialogflowCxV3Page::class;
   protected $currentPageDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3Match[]
+   */
+  public $matches;
   protected $matchesType = GoogleCloudDialogflowCxV3Match::class;
   protected $matchesDataType = 'array';
   /**

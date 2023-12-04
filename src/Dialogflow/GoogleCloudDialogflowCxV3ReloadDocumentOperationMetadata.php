@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ReloadDocumentOperationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3GenericKnowledgeOperationMetadata
+   */
+  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudDialogflowCxV3GenericKnowledgeOperationMetadata::class;
   protected $genericMetadataDataType = '';
 

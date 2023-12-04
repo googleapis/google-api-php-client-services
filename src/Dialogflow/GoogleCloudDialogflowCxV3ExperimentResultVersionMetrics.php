@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics extends \Google\Collection
 {
   protected $collection_key = 'metrics';
+  /**
+   * @var GoogleCloudDialogflowCxV3ExperimentResultMetric[]
+   */
+  public $metrics;
   protected $metricsType = GoogleCloudDialogflowCxV3ExperimentResultMetric::class;
   protected $metricsDataType = 'array';
   /**

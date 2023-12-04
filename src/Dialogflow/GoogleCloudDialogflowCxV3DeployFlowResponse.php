@@ -23,6 +23,10 @@ class GoogleCloudDialogflowCxV3DeployFlowResponse extends \Google\Model
    * @var string
    */
   public $deployment;
+  /**
+   * @var GoogleCloudDialogflowCxV3Environment
+   */
+  public $environment;
   protected $environmentType = GoogleCloudDialogflowCxV3Environment::class;
   protected $environmentDataType = '';
 

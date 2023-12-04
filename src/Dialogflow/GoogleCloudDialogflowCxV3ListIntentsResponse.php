@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListIntentsResponse extends \Google\Collection
 {
   protected $collection_key = 'intents';
+  /**
+   * @var GoogleCloudDialogflowCxV3Intent[]
+   */
+  public $intents;
   protected $intentsType = GoogleCloudDialogflowCxV3Intent::class;
   protected $intentsDataType = 'array';
   /**

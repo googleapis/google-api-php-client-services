@@ -24,6 +24,10 @@ class GoogleCloudDialogflowCxV3InputAudioConfig extends \Google\Collection
    * @var string
    */
   public $audioEncoding;
+  /**
+   * @var GoogleCloudDialogflowCxV3BargeInConfig
+   */
+  public $bargeInConfig;
   protected $bargeInConfigType = GoogleCloudDialogflowCxV3BargeInConfig::class;
   protected $bargeInConfigDataType = '';
   /**

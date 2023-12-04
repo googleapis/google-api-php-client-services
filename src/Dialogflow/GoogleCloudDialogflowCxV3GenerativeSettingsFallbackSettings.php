@@ -20,6 +20,10 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettings extends \Google\Collection
 {
   protected $collection_key = 'promptTemplates';
+  /**
+   * @var GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettingsPromptTemplate[]
+   */
+  public $promptTemplates;
   protected $promptTemplatesType = GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettingsPromptTemplate::class;
   protected $promptTemplatesDataType = 'array';
   /**

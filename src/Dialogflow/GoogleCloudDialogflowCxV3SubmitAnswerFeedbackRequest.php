@@ -19,6 +19,10 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3SubmitAnswerFeedbackRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3AnswerFeedback
+   */
+  public $answerFeedback;
   protected $answerFeedbackType = GoogleCloudDialogflowCxV3AnswerFeedback::class;
   protected $answerFeedbackDataType = '';
   /**

@@ -24,6 +24,10 @@ class GoogleCloudDialogflowCxV3ListWebhooksResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleCloudDialogflowCxV3Webhook[]
+   */
+  public $webhooks;
   protected $webhooksType = GoogleCloudDialogflowCxV3Webhook::class;
   protected $webhooksDataType = 'array';
 

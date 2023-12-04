@@ -27,6 +27,10 @@ class GoogleCloudDialogflowCxV3RestoreAgentRequest extends \Google\Model
    * @var string
    */
   public $agentUri;
+  /**
+   * @var GoogleCloudDialogflowCxV3RestoreAgentRequestGitSource
+   */
+  public $gitSource;
   protected $gitSourceType = GoogleCloudDialogflowCxV3RestoreAgentRequestGitSource::class;
   protected $gitSourceDataType = '';
   /**

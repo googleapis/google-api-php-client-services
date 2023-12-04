@@ -19,10 +19,22 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3GenerativeSettings extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettings
+   */
+  public $fallbackSettings;
   protected $fallbackSettingsType = GoogleCloudDialogflowCxV3GenerativeSettingsFallbackSettings::class;
   protected $fallbackSettingsDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3SafetySettings
+   */
+  public $generativeSafetySettings;
   protected $generativeSafetySettingsType = GoogleCloudDialogflowCxV3SafetySettings::class;
   protected $generativeSafetySettingsDataType = '';
+  /**
+   * @var GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings
+   */
+  public $knowledgeConnectorSettings;
   protected $knowledgeConnectorSettingsType = GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings::class;
   protected $knowledgeConnectorSettingsDataType = '';
   /**
