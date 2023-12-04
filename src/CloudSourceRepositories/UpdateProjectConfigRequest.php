@@ -19,6 +19,10 @@ namespace Google\Service\CloudSourceRepositories;
 
 class UpdateProjectConfigRequest extends \Google\Model
 {
+  /**
+   * @var ProjectConfig
+   */
+  public $projectConfig;
   protected $projectConfigType = ProjectConfig::class;
   protected $projectConfigDataType = '';
   /**

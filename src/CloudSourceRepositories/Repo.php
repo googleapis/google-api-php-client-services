@@ -19,12 +19,20 @@ namespace Google\Service\CloudSourceRepositories;
 
 class Repo extends \Google\Model
 {
+  /**
+   * @var MirrorConfig
+   */
+  public $mirrorConfig;
   protected $mirrorConfigType = MirrorConfig::class;
   protected $mirrorConfigDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var PubsubConfig[]
+   */
+  public $pubsubConfigs;
   protected $pubsubConfigsType = PubsubConfig::class;
   protected $pubsubConfigsDataType = 'map';
   /**

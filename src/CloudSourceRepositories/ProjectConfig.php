@@ -27,6 +27,10 @@ class ProjectConfig extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var PubsubConfig[]
+   */
+  public $pubsubConfigs;
   protected $pubsubConfigsType = PubsubConfig::class;
   protected $pubsubConfigsDataType = 'map';
 
