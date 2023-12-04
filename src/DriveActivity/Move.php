@@ -20,8 +20,16 @@ namespace Google\Service\DriveActivity;
 class Move extends \Google\Collection
 {
   protected $collection_key = 'removedParents';
+  /**
+   * @var TargetReference[]
+   */
+  public $addedParents;
   protected $addedParentsType = TargetReference::class;
   protected $addedParentsDataType = 'array';
+  /**
+   * @var TargetReference[]
+   */
+  public $removedParents;
   protected $removedParentsType = TargetReference::class;
   protected $removedParentsDataType = 'array';
 

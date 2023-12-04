@@ -19,14 +19,34 @@ namespace Google\Service\DriveActivity;
 
 class Actor extends \Google\Model
 {
+  /**
+   * @var Administrator
+   */
+  public $administrator;
   protected $administratorType = Administrator::class;
   protected $administratorDataType = '';
+  /**
+   * @var AnonymousUser
+   */
+  public $anonymous;
   protected $anonymousType = AnonymousUser::class;
   protected $anonymousDataType = '';
+  /**
+   * @var Impersonation
+   */
+  public $impersonation;
   protected $impersonationType = Impersonation::class;
   protected $impersonationDataType = '';
+  /**
+   * @var SystemEvent
+   */
+  public $system;
   protected $systemType = SystemEvent::class;
   protected $systemDataType = '';
+  /**
+   * @var User
+   */
+  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

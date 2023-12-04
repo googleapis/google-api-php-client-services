@@ -19,12 +19,28 @@ namespace Google\Service\DriveActivity;
 
 class Owner extends \Google\Model
 {
+  /**
+   * @var Domain
+   */
+  public $domain;
   protected $domainType = Domain::class;
   protected $domainDataType = '';
+  /**
+   * @var DriveReference
+   */
+  public $drive;
   protected $driveType = DriveReference::class;
   protected $driveDataType = '';
+  /**
+   * @var TeamDriveReference
+   */
+  public $teamDrive;
   protected $teamDriveType = TeamDriveReference::class;
   protected $teamDriveDataType = '';
+  /**
+   * @var User
+   */
+  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

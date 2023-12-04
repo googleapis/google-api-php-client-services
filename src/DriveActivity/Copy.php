@@ -19,6 +19,10 @@ namespace Google\Service\DriveActivity;
 
 class Copy extends \Google\Model
 {
+  /**
+   * @var TargetReference
+   */
+  public $originalObject;
   protected $originalObjectType = TargetReference::class;
   protected $originalObjectDataType = '';
 

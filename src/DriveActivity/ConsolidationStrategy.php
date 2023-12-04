@@ -19,8 +19,16 @@ namespace Google\Service\DriveActivity;
 
 class ConsolidationStrategy extends \Google\Model
 {
+  /**
+   * @var Legacy
+   */
+  public $legacy;
   protected $legacyType = Legacy::class;
   protected $legacyDataType = '';
+  /**
+   * @var NoConsolidation
+   */
+  public $none;
   protected $noneType = NoConsolidation::class;
   protected $noneDataType = '';
 

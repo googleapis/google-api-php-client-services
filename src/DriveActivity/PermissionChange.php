@@ -20,8 +20,16 @@ namespace Google\Service\DriveActivity;
 class PermissionChange extends \Google\Collection
 {
   protected $collection_key = 'removedPermissions';
+  /**
+   * @var Permission[]
+   */
+  public $addedPermissions;
   protected $addedPermissionsType = Permission::class;
   protected $addedPermissionsDataType = 'array';
+  /**
+   * @var Permission[]
+   */
+  public $removedPermissions;
   protected $removedPermissionsType = Permission::class;
   protected $removedPermissionsDataType = 'array';
 

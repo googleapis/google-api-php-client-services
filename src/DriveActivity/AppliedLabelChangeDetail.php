@@ -20,6 +20,10 @@ namespace Google\Service\DriveActivity;
 class AppliedLabelChangeDetail extends \Google\Collection
 {
   protected $collection_key = 'types';
+  /**
+   * @var FieldValueChange[]
+   */
+  public $fieldChanges;
   protected $fieldChangesType = FieldValueChange::class;
   protected $fieldChangesDataType = 'array';
   /**

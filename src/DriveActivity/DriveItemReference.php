@@ -19,12 +19,28 @@ namespace Google\Service\DriveActivity;
 
 class DriveItemReference extends \Google\Model
 {
+  /**
+   * @var DriveFile
+   */
+  public $driveFile;
   protected $driveFileType = DriveFile::class;
   protected $driveFileDataType = '';
+  /**
+   * @var DriveFolder
+   */
+  public $driveFolder;
   protected $driveFolderType = DriveFolder::class;
   protected $driveFolderDataType = '';
+  /**
+   * @var DriveactivityFile
+   */
+  public $file;
   protected $fileType = DriveactivityFile::class;
   protected $fileDataType = '';
+  /**
+   * @var Folder
+   */
+  public $folder;
   protected $folderType = Folder::class;
   protected $folderDataType = '';
   /**

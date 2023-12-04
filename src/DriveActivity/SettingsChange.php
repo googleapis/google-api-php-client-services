@@ -20,6 +20,10 @@ namespace Google\Service\DriveActivity;
 class SettingsChange extends \Google\Collection
 {
   protected $collection_key = 'restrictionChanges';
+  /**
+   * @var RestrictionChange[]
+   */
+  public $restrictionChanges;
   protected $restrictionChangesType = RestrictionChange::class;
   protected $restrictionChangesDataType = 'array';
 

@@ -20,14 +20,34 @@ namespace Google\Service\DriveActivity;
 class DriveActivity extends \Google\Collection
 {
   protected $collection_key = 'targets';
+  /**
+   * @var Action[]
+   */
+  public $actions;
   protected $actionsType = Action::class;
   protected $actionsDataType = 'array';
+  /**
+   * @var Actor[]
+   */
+  public $actors;
   protected $actorsType = Actor::class;
   protected $actorsDataType = 'array';
+  /**
+   * @var ActionDetail
+   */
+  public $primaryActionDetail;
   protected $primaryActionDetailType = ActionDetail::class;
   protected $primaryActionDetailDataType = '';
+  /**
+   * @var Target[]
+   */
+  public $targets;
   protected $targetsType = Target::class;
   protected $targetsDataType = 'array';
+  /**
+   * @var TimeRange
+   */
+  public $timeRange;
   protected $timeRangeType = TimeRange::class;
   protected $timeRangeDataType = '';
   /**

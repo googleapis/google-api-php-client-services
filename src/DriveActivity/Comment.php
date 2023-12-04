@@ -20,12 +20,28 @@ namespace Google\Service\DriveActivity;
 class Comment extends \Google\Collection
 {
   protected $collection_key = 'mentionedUsers';
+  /**
+   * @var Assignment
+   */
+  public $assignment;
   protected $assignmentType = Assignment::class;
   protected $assignmentDataType = '';
+  /**
+   * @var User[]
+   */
+  public $mentionedUsers;
   protected $mentionedUsersType = User::class;
   protected $mentionedUsersDataType = 'array';
+  /**
+   * @var Post
+   */
+  public $post;
   protected $postType = Post::class;
   protected $postDataType = '';
+  /**
+   * @var Suggestion
+   */
+  public $suggestion;
   protected $suggestionType = Suggestion::class;
   protected $suggestionDataType = '';
 

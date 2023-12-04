@@ -19,12 +19,28 @@ namespace Google\Service\DriveActivity;
 
 class Target extends \Google\Model
 {
+  /**
+   * @var Drive
+   */
+  public $drive;
   protected $driveType = Drive::class;
   protected $driveDataType = '';
+  /**
+   * @var DriveItem
+   */
+  public $driveItem;
   protected $driveItemType = DriveItem::class;
   protected $driveItemDataType = '';
+  /**
+   * @var FileComment
+   */
+  public $fileComment;
   protected $fileCommentType = FileComment::class;
   protected $fileCommentDataType = '';
+  /**
+   * @var TeamDrive
+   */
+  public $teamDrive;
   protected $teamDriveType = TeamDrive::class;
   protected $teamDriveDataType = '';
 

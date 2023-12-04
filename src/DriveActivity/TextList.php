@@ -20,6 +20,10 @@ namespace Google\Service\DriveActivity;
 class TextList extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var Text[]
+   */
+  public $values;
   protected $valuesType = Text::class;
   protected $valuesDataType = 'array';
 

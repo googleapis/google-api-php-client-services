@@ -19,28 +19,76 @@ namespace Google\Service\DriveActivity;
 
 class ActionDetail extends \Google\Model
 {
+  /**
+   * @var AppliedLabelChange
+   */
+  public $appliedLabelChange;
   protected $appliedLabelChangeType = AppliedLabelChange::class;
   protected $appliedLabelChangeDataType = '';
+  /**
+   * @var Comment
+   */
+  public $comment;
   protected $commentType = Comment::class;
   protected $commentDataType = '';
+  /**
+   * @var Create
+   */
+  public $create;
   protected $createType = Create::class;
   protected $createDataType = '';
+  /**
+   * @var Delete
+   */
+  public $delete;
   protected $deleteType = Delete::class;
   protected $deleteDataType = '';
+  /**
+   * @var DataLeakPreventionChange
+   */
+  public $dlpChange;
   protected $dlpChangeType = DataLeakPreventionChange::class;
   protected $dlpChangeDataType = '';
+  /**
+   * @var Edit
+   */
+  public $edit;
   protected $editType = Edit::class;
   protected $editDataType = '';
+  /**
+   * @var Move
+   */
+  public $move;
   protected $moveType = Move::class;
   protected $moveDataType = '';
+  /**
+   * @var PermissionChange
+   */
+  public $permissionChange;
   protected $permissionChangeType = PermissionChange::class;
   protected $permissionChangeDataType = '';
+  /**
+   * @var ApplicationReference
+   */
+  public $reference;
   protected $referenceType = ApplicationReference::class;
   protected $referenceDataType = '';
+  /**
+   * @var Rename
+   */
+  public $rename;
   protected $renameType = Rename::class;
   protected $renameDataType = '';
+  /**
+   * @var Restore
+   */
+  public $restore;
   protected $restoreType = Restore::class;
   protected $restoreDataType = '';
+  /**
+   * @var SettingsChange
+   */
+  public $settingsChange;
   protected $settingsChangeType = SettingsChange::class;
   protected $settingsChangeDataType = '';
 

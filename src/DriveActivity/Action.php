@@ -19,12 +19,28 @@ namespace Google\Service\DriveActivity;
 
 class Action extends \Google\Model
 {
+  /**
+   * @var Actor
+   */
+  public $actor;
   protected $actorType = Actor::class;
   protected $actorDataType = '';
+  /**
+   * @var ActionDetail
+   */
+  public $detail;
   protected $detailType = ActionDetail::class;
   protected $detailDataType = '';
+  /**
+   * @var Target
+   */
+  public $target;
   protected $targetType = Target::class;
   protected $targetDataType = '';
+  /**
+   * @var TimeRange
+   */
+  public $timeRange;
   protected $timeRangeType = TimeRange::class;
   protected $timeRangeDataType = '';
   /**

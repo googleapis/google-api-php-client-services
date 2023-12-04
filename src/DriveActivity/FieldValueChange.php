@@ -27,8 +27,16 @@ class FieldValueChange extends \Google\Model
    * @var string
    */
   public $fieldId;
+  /**
+   * @var FieldValue
+   */
+  public $newValue;
   protected $newValueType = FieldValue::class;
   protected $newValueDataType = '';
+  /**
+   * @var FieldValue
+   */
+  public $oldValue;
   protected $oldValueType = FieldValue::class;
   protected $oldValueDataType = '';
 

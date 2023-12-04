@@ -19,20 +19,52 @@ namespace Google\Service\DriveActivity;
 
 class FieldValue extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
+  /**
+   * @var DriveactivityInteger
+   */
+  public $integer;
   protected $integerType = DriveactivityInteger::class;
   protected $integerDataType = '';
+  /**
+   * @var Selection
+   */
+  public $selection;
   protected $selectionType = Selection::class;
   protected $selectionDataType = '';
+  /**
+   * @var SelectionList
+   */
+  public $selectionList;
   protected $selectionListType = SelectionList::class;
   protected $selectionListDataType = '';
+  /**
+   * @var Text
+   */
+  public $text;
   protected $textType = Text::class;
   protected $textDataType = '';
+  /**
+   * @var TextList
+   */
+  public $textList;
   protected $textListType = TextList::class;
   protected $textListDataType = '';
+  /**
+   * @var SingleUser
+   */
+  public $user;
   protected $userType = SingleUser::class;
   protected $userDataType = '';
+  /**
+   * @var UserList
+   */
+  public $userList;
   protected $userListType = UserList::class;
   protected $userListDataType = '';
 
