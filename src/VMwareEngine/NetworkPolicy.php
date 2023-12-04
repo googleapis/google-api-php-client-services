@@ -31,8 +31,16 @@ class NetworkPolicy extends \Google\Model
    * @var string
    */
   public $edgeServicesCidr;
+  /**
+   * @var NetworkService
+   */
+  public $externalIp;
   protected $externalIpType = NetworkService::class;
   protected $externalIpDataType = '';
+  /**
+   * @var NetworkService
+   */
+  public $internetAccess;
   protected $internetAccessType = NetworkService::class;
   protected $internetAccessDataType = '';
   /**

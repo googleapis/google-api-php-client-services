@@ -19,6 +19,10 @@ namespace Google\Service\VMwareEngine;
 
 class GrantDnsBindPermissionRequest extends \Google\Model
 {
+  /**
+   * @var Principal
+   */
+  public $principal;
   protected $principalType = Principal::class;
   protected $principalDataType = '';
   /**

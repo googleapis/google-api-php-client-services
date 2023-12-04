@@ -24,6 +24,10 @@ class ListPrivateCloudsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PrivateCloud[]
+   */
+  public $privateClouds;
   protected $privateCloudsType = PrivateCloud::class;
   protected $privateCloudsDataType = 'array';
   /**

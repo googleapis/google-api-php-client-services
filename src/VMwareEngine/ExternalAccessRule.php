@@ -32,6 +32,10 @@ class ExternalAccessRule extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var IpRange[]
+   */
+  public $destinationIpRanges;
   protected $destinationIpRangesType = IpRange::class;
   protected $destinationIpRangesDataType = 'array';
   /**
@@ -50,6 +54,10 @@ class ExternalAccessRule extends \Google\Collection
    * @var int
    */
   public $priority;
+  /**
+   * @var IpRange[]
+   */
+  public $sourceIpRanges;
   protected $sourceIpRangesType = IpRange::class;
   protected $sourceIpRangesDataType = 'array';
   /**

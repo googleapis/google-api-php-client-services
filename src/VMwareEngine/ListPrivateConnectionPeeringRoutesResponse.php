@@ -24,6 +24,10 @@ class ListPrivateConnectionPeeringRoutesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PeeringRoute[]
+   */
+  public $peeringRoutes;
   protected $peeringRoutesType = PeeringRoute::class;
   protected $peeringRoutesDataType = 'array';
 

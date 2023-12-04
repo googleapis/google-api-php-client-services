@@ -23,8 +23,16 @@ class ManagementCluster extends \Google\Model
    * @var string
    */
   public $clusterId;
+  /**
+   * @var NodeTypeConfig[]
+   */
+  public $nodeTypeConfigs;
   protected $nodeTypeConfigsType = NodeTypeConfig::class;
   protected $nodeTypeConfigsDataType = 'map';
+  /**
+   * @var StretchedClusterConfig
+   */
+  public $stretchedClusterConfig;
   protected $stretchedClusterConfigType = StretchedClusterConfig::class;
   protected $stretchedClusterConfigDataType = '';
 

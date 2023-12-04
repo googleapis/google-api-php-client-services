@@ -20,6 +20,10 @@ namespace Google\Service\VMwareEngine;
 class ListNetworkPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var NetworkPolicy[]
+   */
+  public $networkPolicies;
   protected $networkPoliciesType = NetworkPolicy::class;
   protected $networkPoliciesDataType = 'array';
   /**

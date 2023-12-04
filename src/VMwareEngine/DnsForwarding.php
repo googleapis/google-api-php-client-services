@@ -24,6 +24,10 @@ class DnsForwarding extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var ForwardingRule[]
+   */
+  public $forwardingRules;
   protected $forwardingRulesType = ForwardingRule::class;
   protected $forwardingRulesDataType = 'array';
   /**

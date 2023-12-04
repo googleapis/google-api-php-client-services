@@ -20,6 +20,10 @@ namespace Google\Service\VMwareEngine;
 class ListNetworkPeeringsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var NetworkPeering[]
+   */
+  public $networkPeerings;
   protected $networkPeeringsType = NetworkPeering::class;
   protected $networkPeeringsDataType = 'array';
   /**

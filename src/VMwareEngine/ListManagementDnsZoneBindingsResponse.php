@@ -20,6 +20,10 @@ namespace Google\Service\VMwareEngine;
 class ListManagementDnsZoneBindingsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var ManagementDnsZoneBinding[]
+   */
+  public $managementDnsZoneBindings;
   protected $managementDnsZoneBindingsType = ManagementDnsZoneBinding::class;
   protected $managementDnsZoneBindingsDataType = 'array';
   /**

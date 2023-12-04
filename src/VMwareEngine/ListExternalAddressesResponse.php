@@ -20,6 +20,10 @@ namespace Google\Service\VMwareEngine;
 class ListExternalAddressesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var ExternalAddress[]
+   */
+  public $externalAddresses;
   protected $externalAddressesType = ExternalAddress::class;
   protected $externalAddressesDataType = 'array';
   /**

@@ -24,6 +24,10 @@ class ListSubnetsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Subnet[]
+   */
+  public $subnets;
   protected $subnetsType = Subnet::class;
   protected $subnetsDataType = 'array';
   /**
