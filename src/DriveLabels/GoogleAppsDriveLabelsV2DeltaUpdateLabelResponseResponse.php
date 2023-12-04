@@ -19,27 +19,75 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateFieldResponse
+   */
+  public $createField;
   protected $createFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateFieldResponse::class;
   protected $createFieldDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse
+   */
+  public $createSelectionChoice;
   protected $createSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseCreateSelectionChoiceResponse::class;
   protected $createSelectionChoiceDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDeleteFieldResponse
+   */
+  public $deleteField;
   protected $deleteFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDeleteFieldResponse::class;
   protected $deleteFieldDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDeleteSelectionChoiceResponse
+   */
+  public $deleteSelectionChoice;
   protected $deleteSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDeleteSelectionChoiceResponse::class;
   protected $deleteSelectionChoiceDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDisableFieldResponse
+   */
+  public $disableField;
   protected $disableFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDisableFieldResponse::class;
   protected $disableFieldDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDisableSelectionChoiceResponse
+   */
+  public $disableSelectionChoice;
   protected $disableSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseDisableSelectionChoiceResponse::class;
   protected $disableSelectionChoiceDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseEnableFieldResponse
+   */
+  public $enableField;
   protected $enableFieldType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseEnableFieldResponse::class;
   protected $enableFieldDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseEnableSelectionChoiceResponse
+   */
+  public $enableSelectionChoice;
   protected $enableSelectionChoiceType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseEnableSelectionChoiceResponse::class;
   protected $enableSelectionChoiceDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateFieldPropertiesResponse
+   */
+  public $updateField;
   protected $updateFieldDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateFieldTypeResponse
+   */
+  public $updateFieldType;
   protected $updateFieldTypeType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateFieldTypeResponse::class;
   protected $updateFieldTypeDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateLabelPropertiesResponse
+   */
+  public $updateLabel;
   protected $updateLabelType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateLabelPropertiesResponse::class;
   protected $updateLabelDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse
+   */
+  public $updateSelectionChoiceProperties;
   protected $updateSelectionChoicePropertiesType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseUpdateSelectionChoicePropertiesResponse::class;
   protected $updateSelectionChoicePropertiesDataType = '';
 

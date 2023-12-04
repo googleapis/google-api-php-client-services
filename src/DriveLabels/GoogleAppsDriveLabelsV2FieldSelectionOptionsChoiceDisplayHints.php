@@ -19,12 +19,20 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2FieldSelectionOptionsChoiceDisplayHints extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2BadgeColors
+   */
+  public $badgeColors;
   protected $badgeColorsType = GoogleAppsDriveLabelsV2BadgeColors::class;
   protected $badgeColorsDataType = '';
   /**
    * @var string
    */
   public $badgePriority;
+  /**
+   * @var GoogleAppsDriveLabelsV2BadgeColors
+   */
+  public $darkBadgeColors;
   protected $darkBadgeColorsType = GoogleAppsDriveLabelsV2BadgeColors::class;
   protected $darkBadgeColorsDataType = '';
   /**

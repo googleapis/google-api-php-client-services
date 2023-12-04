@@ -20,8 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2FieldSelectionOptions extends \Google\Collection
 {
   protected $collection_key = 'choices';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice[]
+   */
+  public $choices;
   protected $choicesType = GoogleAppsDriveLabelsV2FieldSelectionOptionsChoice::class;
   protected $choicesDataType = 'array';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldListOptions
+   */
+  public $listOptions;
   protected $listOptionsType = GoogleAppsDriveLabelsV2FieldListOptions::class;
   protected $listOptionsDataType = '';
 

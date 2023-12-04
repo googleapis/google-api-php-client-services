@@ -19,10 +19,22 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2FieldLimits extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2DateLimits
+   */
+  public $dateLimits;
   protected $dateLimitsType = GoogleAppsDriveLabelsV2DateLimits::class;
   protected $dateLimitsDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2IntegerLimits
+   */
+  public $integerLimits;
   protected $integerLimitsType = GoogleAppsDriveLabelsV2IntegerLimits::class;
   protected $integerLimitsDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2LongTextLimits
+   */
+  public $longTextLimits;
   protected $longTextLimitsType = GoogleAppsDriveLabelsV2LongTextLimits::class;
   protected $longTextLimitsDataType = '';
   /**
@@ -37,10 +49,22 @@ class GoogleAppsDriveLabelsV2FieldLimits extends \Google\Model
    * @var int
    */
   public $maxIdLength;
+  /**
+   * @var GoogleAppsDriveLabelsV2SelectionLimits
+   */
+  public $selectionLimits;
   protected $selectionLimitsType = GoogleAppsDriveLabelsV2SelectionLimits::class;
   protected $selectionLimitsDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2TextLimits
+   */
+  public $textLimits;
   protected $textLimitsType = GoogleAppsDriveLabelsV2TextLimits::class;
   protected $textLimitsDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2UserLimits
+   */
+  public $userLimits;
   protected $userLimitsType = GoogleAppsDriveLabelsV2UserLimits::class;
   protected $userLimitsDataType = '';
 

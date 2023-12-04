@@ -19,6 +19,10 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2Lifecycle extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2LifecycleDisabledPolicy
+   */
+  public $disabledPolicy;
   protected $disabledPolicyType = GoogleAppsDriveLabelsV2LifecycleDisabledPolicy::class;
   protected $disabledPolicyDataType = '';
   /**

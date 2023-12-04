@@ -19,10 +19,22 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2BadgeColors extends \Google\Model
 {
+  /**
+   * @var GoogleTypeColor
+   */
+  public $backgroundColor;
   protected $backgroundColorType = GoogleTypeColor::class;
   protected $backgroundColorDataType = '';
+  /**
+   * @var GoogleTypeColor
+   */
+  public $foregroundColor;
   protected $foregroundColorType = GoogleTypeColor::class;
   protected $foregroundColorDataType = '';
+  /**
+   * @var GoogleTypeColor
+   */
+  public $soloColor;
   protected $soloColorType = GoogleTypeColor::class;
   protected $soloColorDataType = '';
 

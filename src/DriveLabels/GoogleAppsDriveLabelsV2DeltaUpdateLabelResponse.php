@@ -20,8 +20,16 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse[]
+   */
+  public $responses;
   protected $responsesType = GoogleAppsDriveLabelsV2DeltaUpdateLabelResponseResponse::class;
   protected $responsesDataType = 'array';
+  /**
+   * @var GoogleAppsDriveLabelsV2Label
+   */
+  public $updatedLabel;
   protected $updatedLabelType = GoogleAppsDriveLabelsV2Label::class;
   protected $updatedLabelDataType = '';
 

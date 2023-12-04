@@ -19,6 +19,10 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestCreateFieldRequest extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2Field
+   */
+  public $field;
   protected $fieldType = GoogleAppsDriveLabelsV2Field::class;
   protected $fieldDataType = '';
 

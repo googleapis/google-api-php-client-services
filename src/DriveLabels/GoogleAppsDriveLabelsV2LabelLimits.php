@@ -19,6 +19,10 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2LabelLimits extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldLimits
+   */
+  public $fieldLimits;
   protected $fieldLimitsType = GoogleAppsDriveLabelsV2FieldLimits::class;
   protected $fieldLimitsDataType = '';
   /**

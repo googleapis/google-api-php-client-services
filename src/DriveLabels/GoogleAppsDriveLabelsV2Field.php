@@ -19,54 +19,114 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2Field extends \Google\Model
 {
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldAppliedCapabilities
+   */
+  public $appliedCapabilities;
   protected $appliedCapabilitiesType = GoogleAppsDriveLabelsV2FieldAppliedCapabilities::class;
   protected $appliedCapabilitiesDataType = '';
   /**
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleAppsDriveLabelsV2UserInfo
+   */
+  public $creator;
   protected $creatorType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $creatorDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldDateOptions
+   */
+  public $dateOptions;
   protected $dateOptionsType = GoogleAppsDriveLabelsV2FieldDateOptions::class;
   protected $dateOptionsDataType = '';
   /**
    * @var string
    */
   public $disableTime;
+  /**
+   * @var GoogleAppsDriveLabelsV2UserInfo
+   */
+  public $disabler;
   protected $disablerType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $disablerDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldDisplayHints
+   */
+  public $displayHints;
   protected $displayHintsType = GoogleAppsDriveLabelsV2FieldDisplayHints::class;
   protected $displayHintsDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldIntegerOptions
+   */
+  public $integerOptions;
   protected $integerOptionsType = GoogleAppsDriveLabelsV2FieldIntegerOptions::class;
   protected $integerOptionsDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2Lifecycle
+   */
+  public $lifecycle;
   protected $lifecycleType = GoogleAppsDriveLabelsV2Lifecycle::class;
   protected $lifecycleDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2LockStatus
+   */
+  public $lockStatus;
   protected $lockStatusType = GoogleAppsDriveLabelsV2LockStatus::class;
   protected $lockStatusDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldProperties
+   */
+  public $properties;
   protected $propertiesType = GoogleAppsDriveLabelsV2FieldProperties::class;
   protected $propertiesDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2UserInfo
+   */
+  public $publisher;
   protected $publisherType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $publisherDataType = '';
   /**
    * @var string
    */
   public $queryKey;
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldSchemaCapabilities
+   */
+  public $schemaCapabilities;
   protected $schemaCapabilitiesType = GoogleAppsDriveLabelsV2FieldSchemaCapabilities::class;
   protected $schemaCapabilitiesDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldSelectionOptions
+   */
+  public $selectionOptions;
   protected $selectionOptionsType = GoogleAppsDriveLabelsV2FieldSelectionOptions::class;
   protected $selectionOptionsDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldTextOptions
+   */
+  public $textOptions;
   protected $textOptionsType = GoogleAppsDriveLabelsV2FieldTextOptions::class;
   protected $textOptionsDataType = '';
   /**
    * @var string
    */
   public $updateTime;
+  /**
+   * @var GoogleAppsDriveLabelsV2UserInfo
+   */
+  public $updater;
   protected $updaterType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $updaterDataType = '';
+  /**
+   * @var GoogleAppsDriveLabelsV2FieldUserOptions
+   */
+  public $userOptions;
   protected $userOptionsType = GoogleAppsDriveLabelsV2FieldUserOptions::class;
   protected $userOptionsDataType = '';
 
