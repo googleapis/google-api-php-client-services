@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class SourceHierarchyDatasets extends \Google\Model
 {
+  /**
+   * @var DatasetTemplate
+   */
+  public $datasetTemplate;
   protected $datasetTemplateType = DatasetTemplate::class;
   protected $datasetTemplateDataType = '';
 

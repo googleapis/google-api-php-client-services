@@ -20,6 +20,10 @@ namespace Google\Service\Datastream;
 class MysqlRdbms extends \Google\Collection
 {
   protected $collection_key = 'mysqlDatabases';
+  /**
+   * @var MysqlDatabase[]
+   */
+  public $mysqlDatabases;
   protected $mysqlDatabasesType = MysqlDatabase::class;
   protected $mysqlDatabasesDataType = 'array';
 

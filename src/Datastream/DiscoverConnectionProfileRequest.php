@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class DiscoverConnectionProfileRequest extends \Google\Model
 {
+  /**
+   * @var ConnectionProfile
+   */
+  public $connectionProfile;
   protected $connectionProfileType = ConnectionProfile::class;
   protected $connectionProfileDataType = '';
   /**
@@ -33,10 +37,22 @@ class DiscoverConnectionProfileRequest extends \Google\Model
    * @var int
    */
   public $hierarchyDepth;
+  /**
+   * @var MysqlRdbms
+   */
+  public $mysqlRdbms;
   protected $mysqlRdbmsType = MysqlRdbms::class;
   protected $mysqlRdbmsDataType = '';
+  /**
+   * @var OracleRdbms
+   */
+  public $oracleRdbms;
   protected $oracleRdbmsType = OracleRdbms::class;
   protected $oracleRdbmsDataType = '';
+  /**
+   * @var PostgresqlRdbms
+   */
+  public $postgresqlRdbms;
   protected $postgresqlRdbmsType = PostgresqlRdbms::class;
   protected $postgresqlRdbmsDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class ConnectionProfile extends \Google\Model
 {
+  /**
+   * @var BigQueryProfile
+   */
+  public $bigqueryProfile;
   protected $bigqueryProfileType = BigQueryProfile::class;
   protected $bigqueryProfileDataType = '';
   /**
@@ -29,26 +33,54 @@ class ConnectionProfile extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var ForwardSshTunnelConnectivity
+   */
+  public $forwardSshConnectivity;
   protected $forwardSshConnectivityType = ForwardSshTunnelConnectivity::class;
   protected $forwardSshConnectivityDataType = '';
+  /**
+   * @var GcsProfile
+   */
+  public $gcsProfile;
   protected $gcsProfileType = GcsProfile::class;
   protected $gcsProfileDataType = '';
   /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var MysqlProfile
+   */
+  public $mysqlProfile;
   protected $mysqlProfileType = MysqlProfile::class;
   protected $mysqlProfileDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var OracleProfile
+   */
+  public $oracleProfile;
   protected $oracleProfileType = OracleProfile::class;
   protected $oracleProfileDataType = '';
+  /**
+   * @var PostgresqlProfile
+   */
+  public $postgresqlProfile;
   protected $postgresqlProfileType = PostgresqlProfile::class;
   protected $postgresqlProfileDataType = '';
+  /**
+   * @var PrivateConnectivity
+   */
+  public $privateConnectivity;
   protected $privateConnectivityType = PrivateConnectivity::class;
   protected $privateConnectivityDataType = '';
+  /**
+   * @var StaticServiceIpConnectivity
+   */
+  public $staticServiceIpConnectivity;
   protected $staticServiceIpConnectivityType = StaticServiceIpConnectivity::class;
   protected $staticServiceIpConnectivityDataType = '';
   /**

@@ -28,6 +28,10 @@ class Validation extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var ValidationMessage[]
+   */
+  public $message;
   protected $messageType = ValidationMessage::class;
   protected $messageDataType = 'array';
   /**

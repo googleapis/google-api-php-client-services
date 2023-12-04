@@ -20,6 +20,10 @@ namespace Google\Service\Datastream;
 class OracleTable extends \Google\Collection
 {
   protected $collection_key = 'oracleColumns';
+  /**
+   * @var OracleColumn[]
+   */
+  public $oracleColumns;
   protected $oracleColumnsType = OracleColumn::class;
   protected $oracleColumnsDataType = 'array';
   /**

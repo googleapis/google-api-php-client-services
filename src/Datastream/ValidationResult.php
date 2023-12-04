@@ -20,6 +20,10 @@ namespace Google\Service\Datastream;
 class ValidationResult extends \Google\Collection
 {
   protected $collection_key = 'validations';
+  /**
+   * @var Validation[]
+   */
+  public $validations;
   protected $validationsType = Validation::class;
   protected $validationsDataType = 'array';
 

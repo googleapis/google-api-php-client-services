@@ -19,8 +19,16 @@ namespace Google\Service\Datastream;
 
 class MysqlSourceConfig extends \Google\Model
 {
+  /**
+   * @var MysqlRdbms
+   */
+  public $excludeObjects;
   protected $excludeObjectsType = MysqlRdbms::class;
   protected $excludeObjectsDataType = '';
+  /**
+   * @var MysqlRdbms
+   */
+  public $includeObjects;
   protected $includeObjectsType = MysqlRdbms::class;
   protected $includeObjectsDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class LookupStreamObjectRequest extends \Google\Model
 {
+  /**
+   * @var SourceObjectIdentifier
+   */
+  public $sourceObjectIdentifier;
   protected $sourceObjectIdentifierType = SourceObjectIdentifier::class;
   protected $sourceObjectIdentifierDataType = '';
 

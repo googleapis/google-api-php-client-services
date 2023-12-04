@@ -19,10 +19,22 @@ namespace Google\Service\Datastream;
 
 class CdcStrategy extends \Google\Model
 {
+  /**
+   * @var MostRecentStartPosition
+   */
+  public $mostRecentStartPosition;
   protected $mostRecentStartPositionType = MostRecentStartPosition::class;
   protected $mostRecentStartPositionDataType = '';
+  /**
+   * @var NextAvailableStartPosition
+   */
+  public $nextAvailableStartPosition;
   protected $nextAvailableStartPositionType = NextAvailableStartPosition::class;
   protected $nextAvailableStartPositionDataType = '';
+  /**
+   * @var SpecificStartPosition
+   */
+  public $specificStartPosition;
   protected $specificStartPositionType = SpecificStartPosition::class;
   protected $specificStartPositionDataType = '';
 

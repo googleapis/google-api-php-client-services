@@ -31,6 +31,10 @@ class OracleProfile extends \Google\Model
    * @var string
    */
   public $hostname;
+  /**
+   * @var OracleSslConfig
+   */
+  public $oracleSslConfig;
   protected $oracleSslConfigType = OracleSslConfig::class;
   protected $oracleSslConfigDataType = '';
   /**

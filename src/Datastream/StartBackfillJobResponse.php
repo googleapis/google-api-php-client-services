@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class StartBackfillJobResponse extends \Google\Model
 {
+  /**
+   * @var StreamObject
+   */
+  public $object;
   protected $objectType = StreamObject::class;
   protected $objectDataType = '';
 

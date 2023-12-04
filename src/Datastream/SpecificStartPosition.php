@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class SpecificStartPosition extends \Google\Model
 {
+  /**
+   * @var MysqlLogPosition
+   */
+  public $mysqlLogPosition;
   protected $mysqlLogPositionType = MysqlLogPosition::class;
   protected $mysqlLogPositionDataType = '';
 

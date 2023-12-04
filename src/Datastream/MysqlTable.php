@@ -20,6 +20,10 @@ namespace Google\Service\Datastream;
 class MysqlTable extends \Google\Collection
 {
   protected $collection_key = 'mysqlColumns';
+  /**
+   * @var MysqlColumn[]
+   */
+  public $mysqlColumns;
   protected $mysqlColumnsType = MysqlColumn::class;
   protected $mysqlColumnsDataType = 'array';
   /**

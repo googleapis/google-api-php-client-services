@@ -19,6 +19,10 @@ namespace Google\Service\Datastream;
 
 class GcsDestinationConfig extends \Google\Model
 {
+  /**
+   * @var AvroFileFormat
+   */
+  public $avroFileFormat;
   protected $avroFileFormatType = AvroFileFormat::class;
   protected $avroFileFormatDataType = '';
   /**
@@ -29,6 +33,10 @@ class GcsDestinationConfig extends \Google\Model
    * @var int
    */
   public $fileRotationMb;
+  /**
+   * @var JsonFileFormat
+   */
+  public $jsonFileFormat;
   protected $jsonFileFormatType = JsonFileFormat::class;
   protected $jsonFileFormatDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Datastream;
 class PostgresqlRdbms extends \Google\Collection
 {
   protected $collection_key = 'postgresqlSchemas';
+  /**
+   * @var PostgresqlSchema[]
+   */
+  public $postgresqlSchemas;
   protected $postgresqlSchemasType = PostgresqlSchema::class;
   protected $postgresqlSchemasDataType = 'array';
 

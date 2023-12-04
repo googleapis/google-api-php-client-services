@@ -19,10 +19,22 @@ namespace Google\Service\Datastream;
 
 class SourceObjectIdentifier extends \Google\Model
 {
+  /**
+   * @var MysqlObjectIdentifier
+   */
+  public $mysqlIdentifier;
   protected $mysqlIdentifierType = MysqlObjectIdentifier::class;
   protected $mysqlIdentifierDataType = '';
+  /**
+   * @var OracleObjectIdentifier
+   */
+  public $oracleIdentifier;
   protected $oracleIdentifierType = OracleObjectIdentifier::class;
   protected $oracleIdentifierDataType = '';
+  /**
+   * @var PostgresqlObjectIdentifier
+   */
+  public $postgresqlIdentifier;
   protected $postgresqlIdentifierType = PostgresqlObjectIdentifier::class;
   protected $postgresqlIdentifierDataType = '';
 
