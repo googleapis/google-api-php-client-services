@@ -24,6 +24,10 @@ class OperationWarnings extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var OperationWarningsData[]
+   */
+  public $data;
   protected $dataType = OperationWarningsData::class;
   protected $dataDataType = 'array';
   /**

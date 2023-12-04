@@ -20,6 +20,10 @@ namespace Google\Service\DeploymentManager;
 class OperationError extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var OperationErrorErrors[]
+   */
+  public $errors;
   protected $errorsType = OperationErrorErrors::class;
   protected $errorsDataType = 'array';
 

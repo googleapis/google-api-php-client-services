@@ -24,6 +24,10 @@ class DeploymentmanagerResourceWarnings extends \Google\Collection
    * @var string
    */
   public $code;
+  /**
+   * @var DeploymentmanagerResourceWarningsData[]
+   */
+  public $data;
   protected $dataType = DeploymentmanagerResourceWarningsData::class;
   protected $dataDataType = 'array';
   /**

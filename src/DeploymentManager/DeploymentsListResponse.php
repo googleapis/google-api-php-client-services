@@ -20,6 +20,10 @@ namespace Google\Service\DeploymentManager;
 class DeploymentsListResponse extends \Google\Collection
 {
   protected $collection_key = 'deployments';
+  /**
+   * @var Deployment[]
+   */
+  public $deployments;
   protected $deploymentsType = Deployment::class;
   protected $deploymentsDataType = 'array';
   /**

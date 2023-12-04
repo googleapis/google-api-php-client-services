@@ -36,6 +36,10 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $endTime;
+  /**
+   * @var OperationError
+   */
+  public $error;
   protected $errorType = OperationError::class;
   protected $errorDataType = '';
   /**
@@ -54,6 +58,10 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $insertTime;
+  /**
+   * @var InstancesBulkInsertOperationMetadata
+   */
+  public $instancesBulkInsertOperationMetadata;
   protected $instancesBulkInsertOperationMetadataType = InstancesBulkInsertOperationMetadata::class;
   protected $instancesBulkInsertOperationMetadataDataType = '';
   /**
@@ -84,6 +92,10 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var SetCommonInstanceMetadataOperationMetadata
+   */
+  public $setCommonInstanceMetadataOperationMetadata;
   protected $setCommonInstanceMetadataOperationMetadataType = SetCommonInstanceMetadataOperationMetadata::class;
   protected $setCommonInstanceMetadataOperationMetadataDataType = '';
   /**
@@ -110,6 +122,10 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $user;
+  /**
+   * @var OperationWarnings[]
+   */
+  public $warnings;
   protected $warningsType = OperationWarnings::class;
   protected $warningsDataType = 'array';
   /**

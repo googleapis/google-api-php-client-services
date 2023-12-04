@@ -20,8 +20,16 @@ namespace Google\Service\DeploymentManager;
 class ResourceUpdate extends \Google\Collection
 {
   protected $collection_key = 'warnings';
+  /**
+   * @var ResourceAccessControl
+   */
+  public $accessControl;
   protected $accessControlType = ResourceAccessControl::class;
   protected $accessControlDataType = '';
+  /**
+   * @var ResourceUpdateError
+   */
+  public $error;
   protected $errorType = ResourceUpdateError::class;
   protected $errorDataType = '';
   /**
@@ -44,6 +52,10 @@ class ResourceUpdate extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var ResourceUpdateWarnings[]
+   */
+  public $warnings;
   protected $warningsType = ResourceUpdateWarnings::class;
   protected $warningsDataType = 'array';
 

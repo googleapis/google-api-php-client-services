@@ -20,6 +20,10 @@ namespace Google\Service\DeploymentManager;
 class ManifestsListResponse extends \Google\Collection
 {
   protected $collection_key = 'manifests';
+  /**
+   * @var Manifest[]
+   */
+  public $manifests;
   protected $manifestsType = Manifest::class;
   protected $manifestsDataType = 'array';
   /**

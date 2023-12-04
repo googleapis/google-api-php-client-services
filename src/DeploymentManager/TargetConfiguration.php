@@ -20,8 +20,16 @@ namespace Google\Service\DeploymentManager;
 class TargetConfiguration extends \Google\Collection
 {
   protected $collection_key = 'imports';
+  /**
+   * @var ConfigFile
+   */
+  public $config;
   protected $configType = ConfigFile::class;
   protected $configDataType = '';
+  /**
+   * @var ImportFile[]
+   */
+  public $imports;
   protected $importsType = ImportFile::class;
   protected $importsDataType = 'array';
 

@@ -24,6 +24,10 @@ class OperationsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Operation[]
+   */
+  public $operations;
   protected $operationsType = Operation::class;
   protected $operationsDataType = 'array';
 

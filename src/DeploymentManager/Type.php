@@ -31,6 +31,10 @@ class Type extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var Operation
+   */
+  public $operation;
   protected $operationType = Operation::class;
   protected $operationDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\DeploymentManager;
 class Manifest extends \Google\Collection
 {
   protected $collection_key = 'imports';
+  /**
+   * @var ConfigFile
+   */
+  public $config;
   protected $configType = ConfigFile::class;
   protected $configDataType = '';
   /**
@@ -30,6 +34,10 @@ class Manifest extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var ImportFile[]
+   */
+  public $imports;
   protected $importsType = ImportFile::class;
   protected $importsDataType = 'array';
   /**
