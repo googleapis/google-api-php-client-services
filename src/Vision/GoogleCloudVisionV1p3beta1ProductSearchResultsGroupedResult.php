@@ -20,10 +20,22 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1ProductSearchResultsGroupedResult extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var GoogleCloudVisionV1p3beta1BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudVisionV1p3beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation[]
+   */
+  public $objectAnnotations;
   protected $objectAnnotationsType = GoogleCloudVisionV1p3beta1ProductSearchResultsObjectAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVisionV1p3beta1ProductSearchResultsResult[]
+   */
+  public $results;
   protected $resultsType = GoogleCloudVisionV1p3beta1ProductSearchResultsResult::class;
   protected $resultsDataType = 'array';
 

@@ -28,12 +28,20 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
    * @var string
    */
   public $blurredLikelihood;
+  /**
+   * @var GoogleCloudVisionV1p4beta1BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudVisionV1p4beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
    * @var float
    */
   public $detectionConfidence;
+  /**
+   * @var GoogleCloudVisionV1p4beta1BoundingPoly
+   */
+  public $fdBoundingPoly;
   protected $fdBoundingPolyType = GoogleCloudVisionV1p4beta1BoundingPoly::class;
   protected $fdBoundingPolyDataType = '';
   /**
@@ -48,12 +56,20 @@ class GoogleCloudVisionV1p4beta1FaceAnnotation extends \Google\Collection
    * @var float
    */
   public $landmarkingConfidence;
+  /**
+   * @var GoogleCloudVisionV1p4beta1FaceAnnotationLandmark[]
+   */
+  public $landmarks;
   protected $landmarksType = GoogleCloudVisionV1p4beta1FaceAnnotationLandmark::class;
   protected $landmarksDataType = 'array';
   /**
    * @var float
    */
   public $panAngle;
+  /**
+   * @var GoogleCloudVisionV1p4beta1FaceRecognitionResult[]
+   */
+  public $recognitionResult;
   protected $recognitionResultType = GoogleCloudVisionV1p4beta1FaceRecognitionResult::class;
   protected $recognitionResultDataType = 'array';
   /**

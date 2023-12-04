@@ -20,10 +20,22 @@ namespace Google\Service\Vision;
 class GroupedResult extends \Google\Collection
 {
   protected $collection_key = 'results';
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = BoundingPoly::class;
   protected $boundingPolyDataType = '';
+  /**
+   * @var ObjectAnnotation[]
+   */
+  public $objectAnnotations;
   protected $objectAnnotationsType = ObjectAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
+  /**
+   * @var Result[]
+   */
+  public $results;
   protected $resultsType = Result::class;
   protected $resultsDataType = 'array';
 

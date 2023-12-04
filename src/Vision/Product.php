@@ -36,6 +36,10 @@ class Product extends \Google\Collection
    * @var string
    */
   public $productCategory;
+  /**
+   * @var KeyValue[]
+   */
+  public $productLabels;
   protected $productLabelsType = KeyValue::class;
   protected $productLabelsDataType = 'array';
 

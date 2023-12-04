@@ -23,6 +23,10 @@ class ProductSet extends \Google\Model
    * @var string
    */
   public $displayName;
+  /**
+   * @var Status
+   */
+  public $indexError;
   protected $indexErrorType = Status::class;
   protected $indexErrorDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class ImportProductSetsInputConfig extends \Google\Model
 {
+  /**
+   * @var ImportProductSetsGcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = ImportProductSetsGcsSource::class;
   protected $gcsSourceDataType = '';
 

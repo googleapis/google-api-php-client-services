@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1ReferenceImage extends \Google\Collection
 {
   protected $collection_key = 'boundingPolys';
+  /**
+   * @var GoogleCloudVisionV1p3beta1BoundingPoly[]
+   */
+  public $boundingPolys;
   protected $boundingPolysType = GoogleCloudVisionV1p3beta1BoundingPoly::class;
   protected $boundingPolysDataType = 'array';
   /**

@@ -20,8 +20,16 @@ namespace Google\Service\Vision;
 class TextProperty extends \Google\Collection
 {
   protected $collection_key = 'detectedLanguages';
+  /**
+   * @var DetectedBreak
+   */
+  public $detectedBreak;
   protected $detectedBreakType = DetectedBreak::class;
   protected $detectedBreakDataType = '';
+  /**
+   * @var DetectedLanguage[]
+   */
+  public $detectedLanguages;
   protected $detectedLanguagesType = DetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class ProductSearchParams extends \Google\Collection
 {
   protected $collection_key = 'productCategories';
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**

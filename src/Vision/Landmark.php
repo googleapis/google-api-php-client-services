@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class Landmark extends \Google\Model
 {
+  /**
+   * @var Position
+   */
+  public $position;
   protected $positionType = Position::class;
   protected $positionDataType = '';
   /**

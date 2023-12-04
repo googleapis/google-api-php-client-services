@@ -20,8 +20,16 @@ namespace Google\Service\Vision;
 class ImportProductSetsResponse extends \Google\Collection
 {
   protected $collection_key = 'statuses';
+  /**
+   * @var ReferenceImage[]
+   */
+  public $referenceImages;
   protected $referenceImagesType = ReferenceImage::class;
   protected $referenceImagesDataType = 'array';
+  /**
+   * @var Status[]
+   */
+  public $statuses;
   protected $statusesType = Status::class;
   protected $statusesDataType = 'array';
 

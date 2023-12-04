@@ -20,8 +20,16 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1TextAnnotationTextProperty extends \Google\Collection
 {
   protected $collection_key = 'detectedLanguages';
+  /**
+   * @var GoogleCloudVisionV1p3beta1TextAnnotationDetectedBreak
+   */
+  public $detectedBreak;
   protected $detectedBreakType = GoogleCloudVisionV1p3beta1TextAnnotationDetectedBreak::class;
   protected $detectedBreakDataType = '';
+  /**
+   * @var GoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage[]
+   */
+  public $detectedLanguages;
   protected $detectedLanguagesType = GoogleCloudVisionV1p3beta1TextAnnotationDetectedLanguage::class;
   protected $detectedLanguagesDataType = 'array';
 

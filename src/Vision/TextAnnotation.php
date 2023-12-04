@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class TextAnnotation extends \Google\Collection
 {
   protected $collection_key = 'pages';
+  /**
+   * @var Page[]
+   */
+  public $pages;
   protected $pagesType = Page::class;
   protected $pagesDataType = 'array';
   /**

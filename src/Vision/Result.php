@@ -23,6 +23,10 @@ class Result extends \Google\Model
    * @var string
    */
   public $image;
+  /**
+   * @var Product
+   */
+  public $product;
   protected $productType = Product::class;
   protected $productDataType = '';
   /**

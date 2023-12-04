@@ -20,14 +20,26 @@ namespace Google\Service\Vision;
 class Paragraph extends \Google\Collection
 {
   protected $collection_key = 'words';
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingBox;
   protected $boundingBoxType = BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var TextProperty
+   */
+  public $property;
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
+  /**
+   * @var Word[]
+   */
+  public $words;
   protected $wordsType = Word::class;
   protected $wordsDataType = 'array';
 

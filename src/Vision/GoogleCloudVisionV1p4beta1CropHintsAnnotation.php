@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1CropHintsAnnotation extends \Google\Collection
 {
   protected $collection_key = 'cropHints';
+  /**
+   * @var GoogleCloudVisionV1p4beta1CropHint[]
+   */
+  public $cropHints;
   protected $cropHintsType = GoogleCloudVisionV1p4beta1CropHint::class;
   protected $cropHintsDataType = 'array';
 

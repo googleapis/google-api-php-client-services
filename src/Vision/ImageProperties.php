@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class ImageProperties extends \Google\Model
 {
+  /**
+   * @var DominantColorsAnnotation
+   */
+  public $dominantColors;
   protected $dominantColorsType = DominantColorsAnnotation::class;
   protected $dominantColorsDataType = '';
 

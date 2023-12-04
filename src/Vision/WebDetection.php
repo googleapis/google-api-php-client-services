@@ -20,16 +20,40 @@ namespace Google\Service\Vision;
 class WebDetection extends \Google\Collection
 {
   protected $collection_key = 'webEntities';
+  /**
+   * @var WebLabel[]
+   */
+  public $bestGuessLabels;
   protected $bestGuessLabelsType = WebLabel::class;
   protected $bestGuessLabelsDataType = 'array';
+  /**
+   * @var WebImage[]
+   */
+  public $fullMatchingImages;
   protected $fullMatchingImagesType = WebImage::class;
   protected $fullMatchingImagesDataType = 'array';
+  /**
+   * @var WebPage[]
+   */
+  public $pagesWithMatchingImages;
   protected $pagesWithMatchingImagesType = WebPage::class;
   protected $pagesWithMatchingImagesDataType = 'array';
+  /**
+   * @var WebImage[]
+   */
+  public $partialMatchingImages;
   protected $partialMatchingImagesType = WebImage::class;
   protected $partialMatchingImagesDataType = 'array';
+  /**
+   * @var WebImage[]
+   */
+  public $visuallySimilarImages;
   protected $visuallySimilarImagesType = WebImage::class;
   protected $visuallySimilarImagesDataType = 'array';
+  /**
+   * @var WebEntity[]
+   */
+  public $webEntities;
   protected $webEntitiesType = WebEntity::class;
   protected $webEntitiesDataType = 'array';
 

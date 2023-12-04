@@ -28,6 +28,10 @@ class ListReferenceImagesResponse extends \Google\Collection
    * @var int
    */
   public $pageSize;
+  /**
+   * @var ReferenceImage[]
+   */
+  public $referenceImages;
   protected $referenceImagesType = ReferenceImage::class;
   protected $referenceImagesDataType = 'array';
 

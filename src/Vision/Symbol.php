@@ -19,12 +19,20 @@ namespace Google\Service\Vision;
 
 class Symbol extends \Google\Model
 {
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingBox;
   protected $boundingBoxType = BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var TextProperty
+   */
+  public $property;
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
   /**

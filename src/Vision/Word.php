@@ -20,14 +20,26 @@ namespace Google\Service\Vision;
 class Word extends \Google\Collection
 {
   protected $collection_key = 'symbols';
+  /**
+   * @var BoundingPoly
+   */
+  public $boundingBox;
   protected $boundingBoxType = BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var TextProperty
+   */
+  public $property;
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
+  /**
+   * @var Symbol[]
+   */
+  public $symbols;
   protected $symbolsType = Symbol::class;
   protected $symbolsDataType = 'array';
 

@@ -27,6 +27,10 @@ class PurgeProductsRequest extends \Google\Model
    * @var bool
    */
   public $force;
+  /**
+   * @var ProductSetPurgeConfig
+   */
+  public $productSetPurgeConfig;
   protected $productSetPurgeConfigType = ProductSetPurgeConfig::class;
   protected $productSetPurgeConfigDataType = '';
 

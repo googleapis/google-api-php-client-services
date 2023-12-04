@@ -23,6 +23,10 @@ class OutputConfig extends \Google\Model
    * @var int
    */
   public $batchSize;
+  /**
+   * @var GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

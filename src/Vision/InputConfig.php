@@ -23,6 +23,10 @@ class InputConfig extends \Google\Model
    * @var string
    */
   public $content;
+  /**
+   * @var GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GcsSource::class;
   protected $gcsSourceDataType = '';
   /**

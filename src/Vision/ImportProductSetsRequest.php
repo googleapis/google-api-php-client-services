@@ -19,6 +19,10 @@ namespace Google\Service\Vision;
 
 class ImportProductSetsRequest extends \Google\Model
 {
+  /**
+   * @var ImportProductSetsInputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = ImportProductSetsInputConfig::class;
   protected $inputConfigDataType = '';
 

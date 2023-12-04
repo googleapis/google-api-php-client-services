@@ -20,12 +20,20 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1WebDetectionWebPage extends \Google\Collection
 {
   protected $collection_key = 'partialMatchingImages';
+  /**
+   * @var GoogleCloudVisionV1p4beta1WebDetectionWebImage[]
+   */
+  public $fullMatchingImages;
   protected $fullMatchingImagesType = GoogleCloudVisionV1p4beta1WebDetectionWebImage::class;
   protected $fullMatchingImagesDataType = 'array';
   /**
    * @var string
    */
   public $pageTitle;
+  /**
+   * @var GoogleCloudVisionV1p4beta1WebDetectionWebImage[]
+   */
+  public $partialMatchingImages;
   protected $partialMatchingImagesType = GoogleCloudVisionV1p4beta1WebDetectionWebImage::class;
   protected $partialMatchingImagesDataType = 'array';
   /**

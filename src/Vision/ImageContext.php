@@ -20,18 +20,38 @@ namespace Google\Service\Vision;
 class ImageContext extends \Google\Collection
 {
   protected $collection_key = 'languageHints';
+  /**
+   * @var CropHintsParams
+   */
+  public $cropHintsParams;
   protected $cropHintsParamsType = CropHintsParams::class;
   protected $cropHintsParamsDataType = '';
   /**
    * @var string[]
    */
   public $languageHints;
+  /**
+   * @var LatLongRect
+   */
+  public $latLongRect;
   protected $latLongRectType = LatLongRect::class;
   protected $latLongRectDataType = '';
+  /**
+   * @var ProductSearchParams
+   */
+  public $productSearchParams;
   protected $productSearchParamsType = ProductSearchParams::class;
   protected $productSearchParamsDataType = '';
+  /**
+   * @var TextDetectionParams
+   */
+  public $textDetectionParams;
   protected $textDetectionParamsType = TextDetectionParams::class;
   protected $textDetectionParamsDataType = '';
+  /**
+   * @var WebDetectionParams
+   */
+  public $webDetectionParams;
   protected $webDetectionParamsType = WebDetectionParams::class;
   protected $webDetectionParamsDataType = '';
 

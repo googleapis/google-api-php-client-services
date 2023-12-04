@@ -19,12 +19,20 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p3beta1Symbol extends \Google\Model
 {
+  /**
+   * @var GoogleCloudVisionV1p3beta1BoundingPoly
+   */
+  public $boundingBox;
   protected $boundingBoxType = GoogleCloudVisionV1p3beta1BoundingPoly::class;
   protected $boundingBoxDataType = '';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var GoogleCloudVisionV1p3beta1TextAnnotationTextProperty
+   */
+  public $property;
   protected $propertyType = GoogleCloudVisionV1p3beta1TextAnnotationTextProperty::class;
   protected $propertyDataType = '';
   /**

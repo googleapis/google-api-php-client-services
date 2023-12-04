@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p4beta1BatchAnnotateFilesResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
+  /**
+   * @var GoogleCloudVisionV1p4beta1AnnotateFileResponse[]
+   */
+  public $responses;
   protected $responsesType = GoogleCloudVisionV1p4beta1AnnotateFileResponse::class;
   protected $responsesDataType = 'array';
 

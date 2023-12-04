@@ -20,6 +20,10 @@ namespace Google\Service\Vision;
 class ReferenceImage extends \Google\Collection
 {
   protected $collection_key = 'boundingPolys';
+  /**
+   * @var BoundingPoly[]
+   */
+  public $boundingPolys;
   protected $boundingPolysType = BoundingPoly::class;
   protected $boundingPolysDataType = 'array';
   /**

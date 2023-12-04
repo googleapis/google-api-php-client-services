@@ -24,6 +24,10 @@ class ListProductsInProductSetResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Product[]
+   */
+  public $products;
   protected $productsType = Product::class;
   protected $productsDataType = 'array';
 
