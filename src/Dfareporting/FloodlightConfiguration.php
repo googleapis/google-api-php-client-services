@@ -28,12 +28,20 @@ class FloodlightConfiguration extends \Google\Collection
    * @var string
    */
   public $advertiserId;
+  /**
+   * @var DimensionValue
+   */
+  public $advertiserIdDimensionValue;
   protected $advertiserIdDimensionValueType = DimensionValue::class;
   protected $advertiserIdDimensionValueDataType = '';
   /**
    * @var bool
    */
   public $analyticsDataSharingEnabled;
+  /**
+   * @var CustomViewabilityMetric
+   */
+  public $customViewabilityMetric;
   protected $customViewabilityMetricType = CustomViewabilityMetric::class;
   protected $customViewabilityMetricDataType = '';
   /**
@@ -48,6 +56,10 @@ class FloodlightConfiguration extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var DimensionValue
+   */
+  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
@@ -58,22 +70,42 @@ class FloodlightConfiguration extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var LookbackConfiguration
+   */
+  public $lookbackConfiguration;
   protected $lookbackConfigurationType = LookbackConfiguration::class;
   protected $lookbackConfigurationDataType = '';
   /**
    * @var string
    */
   public $naturalSearchConversionAttributionOption;
+  /**
+   * @var OmnitureSettings
+   */
+  public $omnitureSettings;
   protected $omnitureSettingsType = OmnitureSettings::class;
   protected $omnitureSettingsDataType = '';
   /**
    * @var string
    */
   public $subaccountId;
+  /**
+   * @var TagSettings
+   */
+  public $tagSettings;
   protected $tagSettingsType = TagSettings::class;
   protected $tagSettingsDataType = '';
+  /**
+   * @var ThirdPartyAuthenticationToken[]
+   */
+  public $thirdPartyAuthenticationTokens;
   protected $thirdPartyAuthenticationTokensType = ThirdPartyAuthenticationToken::class;
   protected $thirdPartyAuthenticationTokensDataType = 'array';
+  /**
+   * @var UserDefinedVariableConfiguration[]
+   */
+  public $userDefinedVariableConfigurations;
   protected $userDefinedVariableConfigurationsType = UserDefinedVariableConfiguration::class;
   protected $userDefinedVariableConfigurationsDataType = 'array';
 

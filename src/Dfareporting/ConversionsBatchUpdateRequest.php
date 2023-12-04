@@ -20,8 +20,16 @@ namespace Google\Service\Dfareporting;
 class ConversionsBatchUpdateRequest extends \Google\Collection
 {
   protected $collection_key = 'conversions';
+  /**
+   * @var Conversion[]
+   */
+  public $conversions;
   protected $conversionsType = Conversion::class;
   protected $conversionsDataType = 'array';
+  /**
+   * @var EncryptionInfo
+   */
+  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class AudienceSegmentGroup extends \Google\Collection
 {
   protected $collection_key = 'audienceSegments';
+  /**
+   * @var AudienceSegment[]
+   */
+  public $audienceSegments;
   protected $audienceSegmentsType = AudienceSegment::class;
   protected $audienceSegmentsDataType = 'array';
   /**

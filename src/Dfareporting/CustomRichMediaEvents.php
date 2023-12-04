@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class CustomRichMediaEvents extends \Google\Collection
 {
   protected $collection_key = 'filteredEventIds';
+  /**
+   * @var DimensionValue[]
+   */
+  public $filteredEventIds;
   protected $filteredEventIdsType = DimensionValue::class;
   protected $filteredEventIdsDataType = 'array';
   /**

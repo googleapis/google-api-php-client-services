@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class BillingProfilesListResponse extends \Google\Collection
 {
   protected $collection_key = 'billingProfiles';
+  /**
+   * @var BillingProfile[]
+   */
+  public $billingProfiles;
   protected $billingProfilesType = BillingProfile::class;
   protected $billingProfilesDataType = 'array';
   /**

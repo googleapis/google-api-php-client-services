@@ -32,6 +32,10 @@ class Ad extends \Google\Collection
    * @var string
    */
   public $advertiserId;
+  /**
+   * @var DimensionValue
+   */
+  public $advertiserIdDimensionValue;
   protected $advertiserIdDimensionValueType = DimensionValue::class;
   protected $advertiserIdDimensionValueDataType = '';
   /**
@@ -46,10 +50,22 @@ class Ad extends \Google\Collection
    * @var string
    */
   public $campaignId;
+  /**
+   * @var DimensionValue
+   */
+  public $campaignIdDimensionValue;
   protected $campaignIdDimensionValueType = DimensionValue::class;
   protected $campaignIdDimensionValueDataType = '';
+  /**
+   * @var ClickThroughUrl
+   */
+  public $clickThroughUrl;
   protected $clickThroughUrlType = ClickThroughUrl::class;
   protected $clickThroughUrlDataType = '';
+  /**
+   * @var ClickThroughUrlSuffixProperties
+   */
+  public $clickThroughUrlSuffixProperties;
   protected $clickThroughUrlSuffixPropertiesType = ClickThroughUrlSuffixProperties::class;
   protected $clickThroughUrlSuffixPropertiesDataType = '';
   /**
@@ -60,16 +76,40 @@ class Ad extends \Google\Collection
    * @var string
    */
   public $compatibility;
+  /**
+   * @var LastModifiedInfo
+   */
+  public $createInfo;
   protected $createInfoType = LastModifiedInfo::class;
   protected $createInfoDataType = '';
+  /**
+   * @var CreativeGroupAssignment[]
+   */
+  public $creativeGroupAssignments;
   protected $creativeGroupAssignmentsType = CreativeGroupAssignment::class;
   protected $creativeGroupAssignmentsDataType = 'array';
+  /**
+   * @var CreativeRotation
+   */
+  public $creativeRotation;
   protected $creativeRotationType = CreativeRotation::class;
   protected $creativeRotationDataType = '';
+  /**
+   * @var DayPartTargeting
+   */
+  public $dayPartTargeting;
   protected $dayPartTargetingType = DayPartTargeting::class;
   protected $dayPartTargetingDataType = '';
+  /**
+   * @var DefaultClickThroughEventTagProperties
+   */
+  public $defaultClickThroughEventTagProperties;
   protected $defaultClickThroughEventTagPropertiesType = DefaultClickThroughEventTagProperties::class;
   protected $defaultClickThroughEventTagPropertiesDataType = '';
+  /**
+   * @var DeliverySchedule
+   */
+  public $deliverySchedule;
   protected $deliveryScheduleType = DeliverySchedule::class;
   protected $deliveryScheduleDataType = '';
   /**
@@ -80,34 +120,70 @@ class Ad extends \Google\Collection
    * @var string
    */
   public $endTime;
+  /**
+   * @var EventTagOverride[]
+   */
+  public $eventTagOverrides;
   protected $eventTagOverridesType = EventTagOverride::class;
   protected $eventTagOverridesDataType = 'array';
+  /**
+   * @var GeoTargeting
+   */
+  public $geoTargeting;
   protected $geoTargetingType = GeoTargeting::class;
   protected $geoTargetingDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var DimensionValue
+   */
+  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
+  /**
+   * @var KeyValueTargetingExpression
+   */
+  public $keyValueTargetingExpression;
   protected $keyValueTargetingExpressionType = KeyValueTargetingExpression::class;
   protected $keyValueTargetingExpressionDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var LanguageTargeting
+   */
+  public $languageTargeting;
   protected $languageTargetingType = LanguageTargeting::class;
   protected $languageTargetingDataType = '';
+  /**
+   * @var LastModifiedInfo
+   */
+  public $lastModifiedInfo;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var PlacementAssignment[]
+   */
+  public $placementAssignments;
   protected $placementAssignmentsType = PlacementAssignment::class;
   protected $placementAssignmentsDataType = 'array';
+  /**
+   * @var ListTargetingExpression
+   */
+  public $remarketingListExpression;
   protected $remarketingListExpressionType = ListTargetingExpression::class;
   protected $remarketingListExpressionDataType = '';
+  /**
+   * @var Size
+   */
+  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
   /**
@@ -130,6 +206,10 @@ class Ad extends \Google\Collection
    * @var string
    */
   public $targetingTemplateId;
+  /**
+   * @var TechnologyTargeting
+   */
+  public $technologyTargeting;
   protected $technologyTargetingType = TechnologyTargeting::class;
   protected $technologyTargetingDataType = '';
   /**

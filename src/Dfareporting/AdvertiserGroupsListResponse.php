@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class AdvertiserGroupsListResponse extends \Google\Collection
 {
   protected $collection_key = 'advertiserGroups';
+  /**
+   * @var AdvertiserGroup[]
+   */
+  public $advertiserGroups;
   protected $advertiserGroupsType = AdvertiserGroup::class;
   protected $advertiserGroupsDataType = 'array';
   /**

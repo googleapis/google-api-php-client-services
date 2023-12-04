@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class AdsListResponse extends \Google\Collection
 {
   protected $collection_key = 'ads';
+  /**
+   * @var Ad[]
+   */
+  public $ads;
   protected $adsType = Ad::class;
   protected $adsDataType = 'array';
   /**

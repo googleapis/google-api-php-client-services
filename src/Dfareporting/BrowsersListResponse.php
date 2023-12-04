@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class BrowsersListResponse extends \Google\Collection
 {
   protected $collection_key = 'browsers';
+  /**
+   * @var Browser[]
+   */
+  public $browsers;
   protected $browsersType = Browser::class;
   protected $browsersDataType = 'array';
   /**

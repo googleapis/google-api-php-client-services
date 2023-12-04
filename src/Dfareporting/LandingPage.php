@@ -28,6 +28,10 @@ class LandingPage extends \Google\Collection
    * @var bool
    */
   public $archived;
+  /**
+   * @var DeepLink[]
+   */
+  public $deepLinks;
   protected $deepLinksType = DeepLink::class;
   protected $deepLinksDataType = 'array';
   /**

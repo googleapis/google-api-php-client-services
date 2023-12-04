@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class FloodlightActivitiesListResponse extends \Google\Collection
 {
   protected $collection_key = 'floodlightActivities';
+  /**
+   * @var FloodlightActivity[]
+   */
+  public $floodlightActivities;
   protected $floodlightActivitiesType = FloodlightActivity::class;
   protected $floodlightActivitiesDataType = 'array';
   /**

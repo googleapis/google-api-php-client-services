@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class CountriesListResponse extends \Google\Collection
 {
   protected $collection_key = 'countries';
+  /**
+   * @var Country[]
+   */
+  public $countries;
   protected $countriesType = Country::class;
   protected $countriesDataType = 'array';
   /**

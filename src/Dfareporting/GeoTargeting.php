@@ -20,18 +20,38 @@ namespace Google\Service\Dfareporting;
 class GeoTargeting extends \Google\Collection
 {
   protected $collection_key = 'regions';
+  /**
+   * @var City[]
+   */
+  public $cities;
   protected $citiesType = City::class;
   protected $citiesDataType = 'array';
+  /**
+   * @var Country[]
+   */
+  public $countries;
   protected $countriesType = Country::class;
   protected $countriesDataType = 'array';
   /**
    * @var bool
    */
   public $excludeCountries;
+  /**
+   * @var Metro[]
+   */
+  public $metros;
   protected $metrosType = Metro::class;
   protected $metrosDataType = 'array';
+  /**
+   * @var PostalCode[]
+   */
+  public $postalCodes;
   protected $postalCodesType = PostalCode::class;
   protected $postalCodesDataType = 'array';
+  /**
+   * @var Region[]
+   */
+  public $regions;
   protected $regionsType = Region::class;
   protected $regionsDataType = 'array';
 

@@ -20,8 +20,16 @@ namespace Google\Service\Dfareporting;
 class ConversionStatus extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var Conversion
+   */
+  public $conversion;
   protected $conversionType = Conversion::class;
   protected $conversionDataType = '';
+  /**
+   * @var ConversionError[]
+   */
+  public $errors;
   protected $errorsType = ConversionError::class;
   protected $errorsDataType = 'array';
   /**

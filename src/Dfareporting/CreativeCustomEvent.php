@@ -39,12 +39,20 @@ class CreativeCustomEvent extends \Google\Model
    * @var string
    */
   public $artworkType;
+  /**
+   * @var CreativeClickThroughUrl
+   */
+  public $exitClickThroughUrl;
   protected $exitClickThroughUrlType = CreativeClickThroughUrl::class;
   protected $exitClickThroughUrlDataType = '';
   /**
    * @var string
    */
   public $id;
+  /**
+   * @var PopupWindowProperties
+   */
+  public $popupWindowProperties;
   protected $popupWindowPropertiesType = PopupWindowProperties::class;
   protected $popupWindowPropertiesDataType = '';
   /**

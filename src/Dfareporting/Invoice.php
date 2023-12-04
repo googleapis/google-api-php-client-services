@@ -23,6 +23,10 @@ class Invoice extends \Google\Collection
   protected $internal_gapi_mappings = [
         "campaignSummaries" => "campaign_summaries",
   ];
+  /**
+   * @var CampaignSummary[]
+   */
+  public $campaignSummaries;
   protected $campaignSummariesType = CampaignSummary::class;
   protected $campaignSummariesDataType = 'array';
   /**

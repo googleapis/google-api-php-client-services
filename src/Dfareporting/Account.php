@@ -84,6 +84,10 @@ class Account extends \Google\Collection
    * @var bool
    */
   public $nielsenOcrEnabled;
+  /**
+   * @var ReportsConfiguration
+   */
+  public $reportsConfiguration;
   protected $reportsConfigurationType = ReportsConfiguration::class;
   protected $reportsConfigurationDataType = '';
   /**

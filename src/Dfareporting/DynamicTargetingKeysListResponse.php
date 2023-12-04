@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class DynamicTargetingKeysListResponse extends \Google\Collection
 {
   protected $collection_key = 'dynamicTargetingKeys';
+  /**
+   * @var DynamicTargetingKey[]
+   */
+  public $dynamicTargetingKeys;
   protected $dynamicTargetingKeysType = DynamicTargetingKey::class;
   protected $dynamicTargetingKeysDataType = 'array';
   /**

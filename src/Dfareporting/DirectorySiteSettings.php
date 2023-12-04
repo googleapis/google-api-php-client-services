@@ -23,6 +23,10 @@ class DirectorySiteSettings extends \Google\Model
    * @var bool
    */
   public $activeViewOptOut;
+  /**
+   * @var DfpSettings
+   */
+  public $dfpSettings;
   protected $dfpSettingsType = DfpSettings::class;
   protected $dfpSettingsDataType = '';
   /**

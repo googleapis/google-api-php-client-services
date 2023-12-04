@@ -24,6 +24,10 @@ class OperatingSystemVersionsListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var OperatingSystemVersion[]
+   */
+  public $operatingSystemVersions;
   protected $operatingSystemVersionsType = OperatingSystemVersion::class;
   protected $operatingSystemVersionsDataType = 'array';
 

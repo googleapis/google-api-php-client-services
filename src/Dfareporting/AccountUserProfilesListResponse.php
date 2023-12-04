@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class AccountUserProfilesListResponse extends \Google\Collection
 {
   protected $collection_key = 'accountUserProfiles';
+  /**
+   * @var AccountUserProfile[]
+   */
+  public $accountUserProfiles;
   protected $accountUserProfilesType = AccountUserProfile::class;
   protected $accountUserProfilesDataType = 'array';
   /**

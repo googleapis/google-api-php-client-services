@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class BillingAssignmentsListResponse extends \Google\Collection
 {
   protected $collection_key = 'billingAssignments';
+  /**
+   * @var BillingAssignment[]
+   */
+  public $billingAssignments;
   protected $billingAssignmentsType = BillingAssignment::class;
   protected $billingAssignmentsDataType = 'array';
   /**

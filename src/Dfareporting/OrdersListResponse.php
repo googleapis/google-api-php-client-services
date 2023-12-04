@@ -28,6 +28,10 @@ class OrdersListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Order[]
+   */
+  public $orders;
   protected $ordersType = Order::class;
   protected $ordersDataType = 'array';
 

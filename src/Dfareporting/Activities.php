@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class Activities extends \Google\Collection
 {
   protected $collection_key = 'metricNames';
+  /**
+   * @var DimensionValue[]
+   */
+  public $filters;
   protected $filtersType = DimensionValue::class;
   protected $filtersDataType = 'array';
   /**

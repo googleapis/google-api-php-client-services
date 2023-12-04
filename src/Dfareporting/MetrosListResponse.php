@@ -24,6 +24,10 @@ class MetrosListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var Metro[]
+   */
+  public $metros;
   protected $metrosType = Metro::class;
   protected $metrosDataType = 'array';
 

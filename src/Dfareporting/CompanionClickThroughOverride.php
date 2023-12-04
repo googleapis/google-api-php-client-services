@@ -19,6 +19,10 @@ namespace Google\Service\Dfareporting;
 
 class CompanionClickThroughOverride extends \Google\Model
 {
+  /**
+   * @var ClickThroughUrl
+   */
+  public $clickThroughUrl;
   protected $clickThroughUrlType = ClickThroughUrl::class;
   protected $clickThroughUrlDataType = '';
   /**

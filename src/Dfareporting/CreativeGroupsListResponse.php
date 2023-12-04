@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class CreativeGroupsListResponse extends \Google\Collection
 {
   protected $collection_key = 'creativeGroups';
+  /**
+   * @var CreativeGroup[]
+   */
+  public $creativeGroups;
   protected $creativeGroupsType = CreativeGroup::class;
   protected $creativeGroupsDataType = 'array';
   /**

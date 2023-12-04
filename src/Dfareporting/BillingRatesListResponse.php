@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class BillingRatesListResponse extends \Google\Collection
 {
   protected $collection_key = 'billingRates';
+  /**
+   * @var BillingRate[]
+   */
+  public $billingRates;
   protected $billingRatesType = BillingRate::class;
   protected $billingRatesDataType = 'array';
   /**

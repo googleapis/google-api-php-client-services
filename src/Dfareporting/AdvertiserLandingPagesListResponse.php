@@ -24,6 +24,10 @@ class AdvertiserLandingPagesListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var LandingPage[]
+   */
+  public $landingPages;
   protected $landingPagesType = LandingPage::class;
   protected $landingPagesDataType = 'array';
   /**

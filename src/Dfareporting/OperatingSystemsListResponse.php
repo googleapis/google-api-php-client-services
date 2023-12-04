@@ -24,6 +24,10 @@ class OperatingSystemsListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var OperatingSystem[]
+   */
+  public $operatingSystems;
   protected $operatingSystemsType = OperatingSystem::class;
   protected $operatingSystemsDataType = 'array';
 

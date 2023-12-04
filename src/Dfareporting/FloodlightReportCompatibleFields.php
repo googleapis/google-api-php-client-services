@@ -20,14 +20,26 @@ namespace Google\Service\Dfareporting;
 class FloodlightReportCompatibleFields extends \Google\Collection
 {
   protected $collection_key = 'metrics';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = Dimension::class;
   protected $dimensionFiltersDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
 

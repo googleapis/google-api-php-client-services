@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class CreativeFieldValuesListResponse extends \Google\Collection
 {
   protected $collection_key = 'creativeFieldValues';
+  /**
+   * @var CreativeFieldValue[]
+   */
+  public $creativeFieldValues;
   protected $creativeFieldValuesType = CreativeFieldValue::class;
   protected $creativeFieldValuesDataType = 'array';
   /**

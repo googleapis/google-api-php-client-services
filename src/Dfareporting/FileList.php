@@ -24,6 +24,10 @@ class FileList extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var DfareportingFile[]
+   */
+  public $items;
   protected $itemsType = DfareportingFile::class;
   protected $itemsDataType = 'array';
   /**

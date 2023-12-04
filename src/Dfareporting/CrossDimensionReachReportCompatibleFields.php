@@ -20,16 +20,32 @@ namespace Google\Service\Dfareporting;
 class CrossDimensionReachReportCompatibleFields extends \Google\Collection
 {
   protected $collection_key = 'overlapMetrics';
+  /**
+   * @var Dimension[]
+   */
+  public $breakdown;
   protected $breakdownType = Dimension::class;
   protected $breakdownDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensionFilters;
   protected $dimensionFiltersType = Dimension::class;
   protected $dimensionFiltersDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var Metric[]
+   */
+  public $overlapMetrics;
   protected $overlapMetricsType = Metric::class;
   protected $overlapMetricsDataType = 'array';
 

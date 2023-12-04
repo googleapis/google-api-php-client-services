@@ -20,16 +20,32 @@ namespace Google\Service\Dfareporting;
 class PathReportCompatibleFields extends \Google\Collection
 {
   protected $collection_key = 'pathFilters';
+  /**
+   * @var Dimension[]
+   */
+  public $channelGroupings;
   protected $channelGroupingsType = Dimension::class;
   protected $channelGroupingsDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $dimensions;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var Metric[]
+   */
+  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
+  /**
+   * @var Dimension[]
+   */
+  public $pathFilters;
   protected $pathFiltersType = Dimension::class;
   protected $pathFiltersDataType = 'array';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class InventoryItemsListResponse extends \Google\Collection
 {
   protected $collection_key = 'inventoryItems';
+  /**
+   * @var InventoryItem[]
+   */
+  public $inventoryItems;
   protected $inventoryItemsType = InventoryItem::class;
   protected $inventoryItemsDataType = 'array';
   /**

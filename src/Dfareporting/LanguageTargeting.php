@@ -20,6 +20,10 @@ namespace Google\Service\Dfareporting;
 class LanguageTargeting extends \Google\Collection
 {
   protected $collection_key = 'languages';
+  /**
+   * @var Language[]
+   */
+  public $languages;
   protected $languagesType = Language::class;
   protected $languagesDataType = 'array';
 
