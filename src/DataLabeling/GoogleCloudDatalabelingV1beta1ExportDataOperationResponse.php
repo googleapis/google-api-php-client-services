@@ -31,8 +31,16 @@ class GoogleCloudDatalabelingV1beta1ExportDataOperationResponse extends \Google\
    * @var int
    */
   public $exportCount;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelStats
+   */
+  public $labelStats;
   protected $labelStatsType = GoogleCloudDatalabelingV1beta1LabelStats::class;
   protected $labelStatsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1OutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = GoogleCloudDatalabelingV1beta1OutputConfig::class;
   protected $outputConfigDataType = '';
   /**

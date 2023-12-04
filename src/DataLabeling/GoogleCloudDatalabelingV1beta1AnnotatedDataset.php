@@ -52,8 +52,16 @@ class GoogleCloudDatalabelingV1beta1AnnotatedDataset extends \Google\Collection
    * @var string
    */
   public $exampleCount;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelStats
+   */
+  public $labelStats;
   protected $labelStatsType = GoogleCloudDatalabelingV1beta1LabelStats::class;
   protected $labelStatsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata
+   */
+  public $metadata;
   protected $metadataType = GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata::class;
   protected $metadataDataType = '';
   /**

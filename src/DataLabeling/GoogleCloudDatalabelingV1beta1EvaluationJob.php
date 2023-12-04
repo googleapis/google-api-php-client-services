@@ -24,6 +24,10 @@ class GoogleCloudDatalabelingV1beta1EvaluationJob extends \Google\Collection
    * @var string
    */
   public $annotationSpecSet;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1Attempt[]
+   */
+  public $attempts;
   protected $attemptsType = GoogleCloudDatalabelingV1beta1Attempt::class;
   protected $attemptsDataType = 'array';
   /**
@@ -34,6 +38,10 @@ class GoogleCloudDatalabelingV1beta1EvaluationJob extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EvaluationJobConfig
+   */
+  public $evaluationJobConfig;
   protected $evaluationJobConfigType = GoogleCloudDatalabelingV1beta1EvaluationJobConfig::class;
   protected $evaluationJobConfigDataType = '';
   /**

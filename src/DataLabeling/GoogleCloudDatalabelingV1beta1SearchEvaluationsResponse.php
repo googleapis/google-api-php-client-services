@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1SearchEvaluationsResponse extends \Google\Collection
 {
   protected $collection_key = 'evaluations';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1Evaluation[]
+   */
+  public $evaluations;
   protected $evaluationsType = GoogleCloudDatalabelingV1beta1Evaluation::class;
   protected $evaluationsDataType = 'array';
   /**

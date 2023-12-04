@@ -19,14 +19,26 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1LabelTextRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   */
+  public $basicConfig;
   protected $basicConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $basicConfigDataType = '';
   /**
    * @var string
    */
   public $feature;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextClassificationConfig
+   */
+  public $textClassificationConfig;
   protected $textClassificationConfigType = GoogleCloudDatalabelingV1beta1TextClassificationConfig::class;
   protected $textClassificationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig
+   */
+  public $textEntityExtractionConfig;
   protected $textEntityExtractionConfigType = GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig::class;
   protected $textEntityExtractionConfigDataType = '';
 

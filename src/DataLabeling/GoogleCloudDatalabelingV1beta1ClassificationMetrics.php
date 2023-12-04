@@ -19,8 +19,16 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1ClassificationMetrics extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ConfusionMatrix
+   */
+  public $confusionMatrix;
   protected $confusionMatrixType = GoogleCloudDatalabelingV1beta1ConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1PrCurve
+   */
+  public $prCurve;
   protected $prCurveType = GoogleCloudDatalabelingV1beta1PrCurve::class;
   protected $prCurveDataType = '';
 

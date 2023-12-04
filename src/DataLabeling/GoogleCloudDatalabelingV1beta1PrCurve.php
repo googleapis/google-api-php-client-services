@@ -20,12 +20,20 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1PrCurve extends \Google\Collection
 {
   protected $collection_key = 'confidenceMetricsEntries';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec
+   */
+  public $annotationSpec;
   protected $annotationSpecType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecDataType = '';
   /**
    * @var float
    */
   public $areaUnderCurve;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ConfidenceMetricsEntry[]
+   */
+  public $confidenceMetricsEntries;
   protected $confidenceMetricsEntriesType = GoogleCloudDatalabelingV1beta1ConfidenceMetricsEntry::class;
   protected $confidenceMetricsEntriesDataType = 'array';
   /**

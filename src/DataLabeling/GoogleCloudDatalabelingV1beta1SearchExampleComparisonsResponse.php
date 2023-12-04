@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1SearchExampleComparisonsResponse extends \Google\Collection
 {
   protected $collection_key = 'exampleComparisons';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ExampleComparison[]
+   */
+  public $exampleComparisons;
   protected $exampleComparisonsType = GoogleCloudDatalabelingV1beta1ExampleComparison::class;
   protected $exampleComparisonsDataType = 'array';
   /**

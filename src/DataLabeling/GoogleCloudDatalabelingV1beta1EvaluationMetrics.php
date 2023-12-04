@@ -19,8 +19,16 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1EvaluationMetrics extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ClassificationMetrics
+   */
+  public $classificationMetrics;
   protected $classificationMetricsType = GoogleCloudDatalabelingV1beta1ClassificationMetrics::class;
   protected $classificationMetricsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics
+   */
+  public $objectDetectionMetrics;
   protected $objectDetectionMetricsType = GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics::class;
   protected $objectDetectionMetricsDataType = '';
 

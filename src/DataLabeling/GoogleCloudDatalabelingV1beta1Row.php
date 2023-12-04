@@ -20,8 +20,16 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1Row extends \Google\Collection
 {
   protected $collection_key = 'entries';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec
+   */
+  public $annotationSpec;
   protected $annotationSpecType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry[]
+   */
+  public $entries;
   protected $entriesType = GoogleCloudDatalabelingV1beta1ConfusionMatrixEntry::class;
   protected $entriesDataType = 'array';
 

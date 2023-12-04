@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListFeedbackThreadsResponse extends \Google\Collection
 {
   protected $collection_key = 'feedbackThreads';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1FeedbackThread[]
+   */
+  public $feedbackThreads;
   protected $feedbackThreadsType = GoogleCloudDatalabelingV1beta1FeedbackThread::class;
   protected $feedbackThreadsDataType = 'array';
   /**

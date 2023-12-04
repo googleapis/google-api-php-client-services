@@ -27,6 +27,10 @@ class GoogleCloudDatalabelingV1beta1ExportDataRequest extends \Google\Model
    * @var string
    */
   public $filter;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1OutputConfig
+   */
+  public $outputConfig;
   protected $outputConfigType = GoogleCloudDatalabelingV1beta1OutputConfig::class;
   protected $outputConfigDataType = '';
   /**

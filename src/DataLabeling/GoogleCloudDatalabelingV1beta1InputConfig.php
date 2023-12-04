@@ -23,16 +23,32 @@ class GoogleCloudDatalabelingV1beta1InputConfig extends \Google\Model
    * @var string
    */
   public $annotationType;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1BigQuerySource
+   */
+  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudDatalabelingV1beta1BigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ClassificationMetadata
+   */
+  public $classificationMetadata;
   protected $classificationMetadataType = GoogleCloudDatalabelingV1beta1ClassificationMetadata::class;
   protected $classificationMetadataDataType = '';
   /**
    * @var string
    */
   public $dataType;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1GcsSource
+   */
+  public $gcsSource;
   protected $gcsSourceType = GoogleCloudDatalabelingV1beta1GcsSource::class;
   protected $gcsSourceDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextMetadata
+   */
+  public $textMetadata;
   protected $textMetadataType = GoogleCloudDatalabelingV1beta1TextMetadata::class;
   protected $textMetadataDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1NormalizedPolyline extends \Google\Collection
 {
   protected $collection_key = 'normalizedVertices';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1NormalizedVertex[]
+   */
+  public $normalizedVertices;
   protected $normalizedVerticesType = GoogleCloudDatalabelingV1beta1NormalizedVertex::class;
   protected $normalizedVerticesDataType = 'array';
 

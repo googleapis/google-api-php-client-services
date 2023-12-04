@@ -19,10 +19,22 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec
+   */
+  public $annotationSpec;
   protected $annotationSpecType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1BoundingPoly
+   */
+  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudDatalabelingV1beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly
+   */
+  public $normalizedBoundingPoly;
   protected $normalizedBoundingPolyType = GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly::class;
   protected $normalizedBoundingPolyDataType = '';
 

@@ -32,6 +32,10 @@ class GoogleCloudDatalabelingV1beta1VideoPayload extends \Google\Collection
    * @var string
    */
   public $signedUri;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoThumbnail[]
+   */
+  public $videoThumbnails;
   protected $videoThumbnailsType = GoogleCloudDatalabelingV1beta1VideoThumbnail::class;
   protected $videoThumbnailsDataType = 'array';
   /**

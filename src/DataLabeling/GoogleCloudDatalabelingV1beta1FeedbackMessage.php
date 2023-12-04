@@ -35,8 +35,16 @@ class GoogleCloudDatalabelingV1beta1FeedbackMessage extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadata
+   */
+  public $operatorFeedbackMetadata;
   protected $operatorFeedbackMetadataType = GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadata::class;
   protected $operatorFeedbackMetadataDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadata
+   */
+  public $requesterFeedbackMetadata;
   protected $requesterFeedbackMetadataType = GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadata::class;
   protected $requesterFeedbackMetadataDataType = '';
 

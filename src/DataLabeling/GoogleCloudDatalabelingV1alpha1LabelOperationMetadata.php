@@ -32,34 +32,86 @@ class GoogleCloudDatalabelingV1alpha1LabelOperationMetadata extends \Google\Coll
    * @var string
    */
   public $dataset;
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelImageBoundingBoxOperationMetadata
+   */
+  public $imageBoundingBoxDetails;
   protected $imageBoundingBoxDetailsType = GoogleCloudDatalabelingV1alpha1LabelImageBoundingBoxOperationMetadata::class;
   protected $imageBoundingBoxDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelImageBoundingPolyOperationMetadata
+   */
+  public $imageBoundingPolyDetails;
   protected $imageBoundingPolyDetailsType = GoogleCloudDatalabelingV1alpha1LabelImageBoundingPolyOperationMetadata::class;
   protected $imageBoundingPolyDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelImageClassificationOperationMetadata
+   */
+  public $imageClassificationDetails;
   protected $imageClassificationDetailsType = GoogleCloudDatalabelingV1alpha1LabelImageClassificationOperationMetadata::class;
   protected $imageClassificationDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelImageOrientedBoundingBoxOperationMetadata
+   */
+  public $imageOrientedBoundingBoxDetails;
   protected $imageOrientedBoundingBoxDetailsType = GoogleCloudDatalabelingV1alpha1LabelImageOrientedBoundingBoxOperationMetadata::class;
   protected $imageOrientedBoundingBoxDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelImagePolylineOperationMetadata
+   */
+  public $imagePolylineDetails;
   protected $imagePolylineDetailsType = GoogleCloudDatalabelingV1alpha1LabelImagePolylineOperationMetadata::class;
   protected $imagePolylineDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelImageSegmentationOperationMetadata
+   */
+  public $imageSegmentationDetails;
   protected $imageSegmentationDetailsType = GoogleCloudDatalabelingV1alpha1LabelImageSegmentationOperationMetadata::class;
   protected $imageSegmentationDetailsDataType = '';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $partialFailures;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
   /**
    * @var int
    */
   public $progressPercent;
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelTextClassificationOperationMetadata
+   */
+  public $textClassificationDetails;
   protected $textClassificationDetailsType = GoogleCloudDatalabelingV1alpha1LabelTextClassificationOperationMetadata::class;
   protected $textClassificationDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelTextEntityExtractionOperationMetadata
+   */
+  public $textEntityExtractionDetails;
   protected $textEntityExtractionDetailsType = GoogleCloudDatalabelingV1alpha1LabelTextEntityExtractionOperationMetadata::class;
   protected $textEntityExtractionDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelVideoClassificationOperationMetadata
+   */
+  public $videoClassificationDetails;
   protected $videoClassificationDetailsType = GoogleCloudDatalabelingV1alpha1LabelVideoClassificationOperationMetadata::class;
   protected $videoClassificationDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelVideoEventOperationMetadata
+   */
+  public $videoEventDetails;
   protected $videoEventDetailsType = GoogleCloudDatalabelingV1alpha1LabelVideoEventOperationMetadata::class;
   protected $videoEventDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelVideoObjectDetectionOperationMetadata
+   */
+  public $videoObjectDetectionDetails;
   protected $videoObjectDetectionDetailsType = GoogleCloudDatalabelingV1alpha1LabelVideoObjectDetectionOperationMetadata::class;
   protected $videoObjectDetectionDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1LabelVideoObjectTrackingOperationMetadata
+   */
+  public $videoObjectTrackingDetails;
   protected $videoObjectTrackingDetailsType = GoogleCloudDatalabelingV1alpha1LabelVideoObjectTrackingOperationMetadata::class;
   protected $videoObjectTrackingDetailsDataType = '';
 

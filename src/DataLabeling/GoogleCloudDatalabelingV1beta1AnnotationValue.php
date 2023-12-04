@@ -19,22 +19,58 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1AnnotationValue extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation
+   */
+  public $imageBoundingPolyAnnotation;
   protected $imageBoundingPolyAnnotationType = GoogleCloudDatalabelingV1beta1ImageBoundingPolyAnnotation::class;
   protected $imageBoundingPolyAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImageClassificationAnnotation
+   */
+  public $imageClassificationAnnotation;
   protected $imageClassificationAnnotationType = GoogleCloudDatalabelingV1beta1ImageClassificationAnnotation::class;
   protected $imageClassificationAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation
+   */
+  public $imagePolylineAnnotation;
   protected $imagePolylineAnnotationType = GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation::class;
   protected $imagePolylineAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImageSegmentationAnnotation
+   */
+  public $imageSegmentationAnnotation;
   protected $imageSegmentationAnnotationType = GoogleCloudDatalabelingV1beta1ImageSegmentationAnnotation::class;
   protected $imageSegmentationAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextClassificationAnnotation
+   */
+  public $textClassificationAnnotation;
   protected $textClassificationAnnotationType = GoogleCloudDatalabelingV1beta1TextClassificationAnnotation::class;
   protected $textClassificationAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation
+   */
+  public $textEntityExtractionAnnotation;
   protected $textEntityExtractionAnnotationType = GoogleCloudDatalabelingV1beta1TextEntityExtractionAnnotation::class;
   protected $textEntityExtractionAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation
+   */
+  public $videoClassificationAnnotation;
   protected $videoClassificationAnnotationType = GoogleCloudDatalabelingV1beta1VideoClassificationAnnotation::class;
   protected $videoClassificationAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoEventAnnotation
+   */
+  public $videoEventAnnotation;
   protected $videoEventAnnotationType = GoogleCloudDatalabelingV1beta1VideoEventAnnotation::class;
   protected $videoEventAnnotationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation
+   */
+  public $videoObjectTrackingAnnotation;
   protected $videoObjectTrackingAnnotationType = GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation::class;
   protected $videoObjectTrackingAnnotationDataType = '';
 

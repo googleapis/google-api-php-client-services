@@ -19,8 +19,16 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1alpha1OutputConfig extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1GcsDestination
+   */
+  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudDatalabelingV1alpha1GcsDestination::class;
   protected $gcsDestinationDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1GcsFolderDestination
+   */
+  public $gcsFolderDestination;
   protected $gcsFolderDestinationType = GoogleCloudDatalabelingV1alpha1GcsFolderDestination::class;
   protected $gcsFolderDestinationDataType = '';
 

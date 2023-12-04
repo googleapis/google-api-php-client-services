@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListEvaluationJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'evaluationJobs';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EvaluationJob[]
+   */
+  public $evaluationJobs;
   protected $evaluationJobsType = GoogleCloudDatalabelingV1beta1EvaluationJob::class;
   protected $evaluationJobsDataType = 'array';
   /**

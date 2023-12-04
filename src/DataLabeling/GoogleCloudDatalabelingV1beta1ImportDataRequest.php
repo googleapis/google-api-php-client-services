@@ -19,6 +19,10 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1ImportDataRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1InputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudDatalabelingV1beta1InputConfig::class;
   protected $inputConfigDataType = '';
   /**

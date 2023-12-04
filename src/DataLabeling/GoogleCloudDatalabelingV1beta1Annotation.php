@@ -19,6 +19,10 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1Annotation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationMetadata
+   */
+  public $annotationMetadata;
   protected $annotationMetadataType = GoogleCloudDatalabelingV1beta1AnnotationMetadata::class;
   protected $annotationMetadataDataType = '';
   /**
@@ -29,6 +33,10 @@ class GoogleCloudDatalabelingV1beta1Annotation extends \Google\Model
    * @var string
    */
   public $annotationSource;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationValue
+   */
+  public $annotationValue;
   protected $annotationValueType = GoogleCloudDatalabelingV1beta1AnnotationValue::class;
   protected $annotationValueDataType = '';
   /**

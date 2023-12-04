@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListDataItemsResponse extends \Google\Collection
 {
   protected $collection_key = 'dataItems';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1DataItem[]
+   */
+  public $dataItems;
   protected $dataItemsType = GoogleCloudDatalabelingV1beta1DataItem::class;
   protected $dataItemsDataType = 'array';
   /**

@@ -23,6 +23,10 @@ class GoogleCloudDatalabelingV1beta1Evaluation extends \Google\Model
    * @var string
    */
   public $annotationType;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EvaluationConfig
+   */
+  public $config;
   protected $configType = GoogleCloudDatalabelingV1beta1EvaluationConfig::class;
   protected $configDataType = '';
   /**
@@ -37,6 +41,10 @@ class GoogleCloudDatalabelingV1beta1Evaluation extends \Google\Model
    * @var string
    */
   public $evaluationJobRunTime;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EvaluationMetrics
+   */
+  public $evaluationMetrics;
   protected $evaluationMetricsType = GoogleCloudDatalabelingV1beta1EvaluationMetrics::class;
   protected $evaluationMetricsDataType = '';
   /**

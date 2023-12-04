@@ -19,6 +19,10 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1alpha1LabelImagePolylineOperationMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1alpha1HumanAnnotationConfig
+   */
+  public $basicConfig;
   protected $basicConfigType = GoogleCloudDatalabelingV1alpha1HumanAnnotationConfig::class;
   protected $basicConfigDataType = '';
 

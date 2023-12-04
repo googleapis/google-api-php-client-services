@@ -32,34 +32,86 @@ class GoogleCloudDatalabelingV1beta1LabelOperationMetadata extends \Google\Colle
    * @var string
    */
   public $dataset;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelImageBoundingBoxOperationMetadata
+   */
+  public $imageBoundingBoxDetails;
   protected $imageBoundingBoxDetailsType = GoogleCloudDatalabelingV1beta1LabelImageBoundingBoxOperationMetadata::class;
   protected $imageBoundingBoxDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelImageBoundingPolyOperationMetadata
+   */
+  public $imageBoundingPolyDetails;
   protected $imageBoundingPolyDetailsType = GoogleCloudDatalabelingV1beta1LabelImageBoundingPolyOperationMetadata::class;
   protected $imageBoundingPolyDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelImageClassificationOperationMetadata
+   */
+  public $imageClassificationDetails;
   protected $imageClassificationDetailsType = GoogleCloudDatalabelingV1beta1LabelImageClassificationOperationMetadata::class;
   protected $imageClassificationDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelImageOrientedBoundingBoxOperationMetadata
+   */
+  public $imageOrientedBoundingBoxDetails;
   protected $imageOrientedBoundingBoxDetailsType = GoogleCloudDatalabelingV1beta1LabelImageOrientedBoundingBoxOperationMetadata::class;
   protected $imageOrientedBoundingBoxDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelImagePolylineOperationMetadata
+   */
+  public $imagePolylineDetails;
   protected $imagePolylineDetailsType = GoogleCloudDatalabelingV1beta1LabelImagePolylineOperationMetadata::class;
   protected $imagePolylineDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelImageSegmentationOperationMetadata
+   */
+  public $imageSegmentationDetails;
   protected $imageSegmentationDetailsType = GoogleCloudDatalabelingV1beta1LabelImageSegmentationOperationMetadata::class;
   protected $imageSegmentationDetailsDataType = '';
+  /**
+   * @var GoogleRpcStatus[]
+   */
+  public $partialFailures;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
   /**
    * @var int
    */
   public $progressPercent;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelTextClassificationOperationMetadata
+   */
+  public $textClassificationDetails;
   protected $textClassificationDetailsType = GoogleCloudDatalabelingV1beta1LabelTextClassificationOperationMetadata::class;
   protected $textClassificationDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelTextEntityExtractionOperationMetadata
+   */
+  public $textEntityExtractionDetails;
   protected $textEntityExtractionDetailsType = GoogleCloudDatalabelingV1beta1LabelTextEntityExtractionOperationMetadata::class;
   protected $textEntityExtractionDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelVideoClassificationOperationMetadata
+   */
+  public $videoClassificationDetails;
   protected $videoClassificationDetailsType = GoogleCloudDatalabelingV1beta1LabelVideoClassificationOperationMetadata::class;
   protected $videoClassificationDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelVideoEventOperationMetadata
+   */
+  public $videoEventDetails;
   protected $videoEventDetailsType = GoogleCloudDatalabelingV1beta1LabelVideoEventOperationMetadata::class;
   protected $videoEventDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelVideoObjectDetectionOperationMetadata
+   */
+  public $videoObjectDetectionDetails;
   protected $videoObjectDetectionDetailsType = GoogleCloudDatalabelingV1beta1LabelVideoObjectDetectionOperationMetadata::class;
   protected $videoObjectDetectionDetailsDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1LabelVideoObjectTrackingOperationMetadata
+   */
+  public $videoObjectTrackingDetails;
   protected $videoObjectTrackingDetailsType = GoogleCloudDatalabelingV1beta1LabelVideoObjectTrackingOperationMetadata::class;
   protected $videoObjectTrackingDetailsDataType = '';
 

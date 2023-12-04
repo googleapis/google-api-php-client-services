@@ -23,10 +23,22 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
    * @var string[]
    */
   public $bigqueryImportKeys;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1BoundingPolyConfig
+   */
+  public $boundingPolyConfig;
   protected $boundingPolyConfigType = GoogleCloudDatalabelingV1beta1BoundingPolyConfig::class;
   protected $boundingPolyConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EvaluationConfig
+   */
+  public $evaluationConfig;
   protected $evaluationConfigType = GoogleCloudDatalabelingV1beta1EvaluationConfig::class;
   protected $evaluationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig
+   */
+  public $evaluationJobAlertConfig;
   protected $evaluationJobAlertConfigType = GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfig::class;
   protected $evaluationJobAlertConfigDataType = '';
   /**
@@ -34,12 +46,28 @@ class GoogleCloudDatalabelingV1beta1EvaluationJobConfig extends \Google\Model
    */
   public $exampleCount;
   public $exampleSamplePercentage;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   */
+  public $humanAnnotationConfig;
   protected $humanAnnotationConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $humanAnnotationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImageClassificationConfig
+   */
+  public $imageClassificationConfig;
   protected $imageClassificationConfigType = GoogleCloudDatalabelingV1beta1ImageClassificationConfig::class;
   protected $imageClassificationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1InputConfig
+   */
+  public $inputConfig;
   protected $inputConfigType = GoogleCloudDatalabelingV1beta1InputConfig::class;
   protected $inputConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextClassificationConfig
+   */
+  public $textClassificationConfig;
   protected $textClassificationConfigType = GoogleCloudDatalabelingV1beta1TextClassificationConfig::class;
   protected $textClassificationConfigDataType = '';
 

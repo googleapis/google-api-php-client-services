@@ -19,26 +19,70 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1AnnotatedDatasetMetadata extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1BoundingPolyConfig
+   */
+  public $boundingPolyConfig;
   protected $boundingPolyConfigType = GoogleCloudDatalabelingV1beta1BoundingPolyConfig::class;
   protected $boundingPolyConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EventConfig
+   */
+  public $eventConfig;
   protected $eventConfigType = GoogleCloudDatalabelingV1beta1EventConfig::class;
   protected $eventConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   */
+  public $humanAnnotationConfig;
   protected $humanAnnotationConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $humanAnnotationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImageClassificationConfig
+   */
+  public $imageClassificationConfig;
   protected $imageClassificationConfigType = GoogleCloudDatalabelingV1beta1ImageClassificationConfig::class;
   protected $imageClassificationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ObjectDetectionConfig
+   */
+  public $objectDetectionConfig;
   protected $objectDetectionConfigType = GoogleCloudDatalabelingV1beta1ObjectDetectionConfig::class;
   protected $objectDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ObjectTrackingConfig
+   */
+  public $objectTrackingConfig;
   protected $objectTrackingConfigType = GoogleCloudDatalabelingV1beta1ObjectTrackingConfig::class;
   protected $objectTrackingConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1PolylineConfig
+   */
+  public $polylineConfig;
   protected $polylineConfigType = GoogleCloudDatalabelingV1beta1PolylineConfig::class;
   protected $polylineConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1SegmentationConfig
+   */
+  public $segmentationConfig;
   protected $segmentationConfigType = GoogleCloudDatalabelingV1beta1SegmentationConfig::class;
   protected $segmentationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextClassificationConfig
+   */
+  public $textClassificationConfig;
   protected $textClassificationConfigType = GoogleCloudDatalabelingV1beta1TextClassificationConfig::class;
   protected $textClassificationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig
+   */
+  public $textEntityExtractionConfig;
   protected $textEntityExtractionConfigType = GoogleCloudDatalabelingV1beta1TextEntityExtractionConfig::class;
   protected $textEntityExtractionConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoClassificationConfig
+   */
+  public $videoClassificationConfig;
   protected $videoClassificationConfigType = GoogleCloudDatalabelingV1beta1VideoClassificationConfig::class;
   protected $videoClassificationConfigDataType = '';
 

@@ -19,18 +19,38 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1LabelImageRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   */
+  public $basicConfig;
   protected $basicConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $basicConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1BoundingPolyConfig
+   */
+  public $boundingPolyConfig;
   protected $boundingPolyConfigType = GoogleCloudDatalabelingV1beta1BoundingPolyConfig::class;
   protected $boundingPolyConfigDataType = '';
   /**
    * @var string
    */
   public $feature;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImageClassificationConfig
+   */
+  public $imageClassificationConfig;
   protected $imageClassificationConfigType = GoogleCloudDatalabelingV1beta1ImageClassificationConfig::class;
   protected $imageClassificationConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1PolylineConfig
+   */
+  public $polylineConfig;
   protected $polylineConfigType = GoogleCloudDatalabelingV1beta1PolylineConfig::class;
   protected $polylineConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1SegmentationConfig
+   */
+  public $segmentationConfig;
   protected $segmentationConfigType = GoogleCloudDatalabelingV1beta1SegmentationConfig::class;
   protected $segmentationConfigDataType = '';
 

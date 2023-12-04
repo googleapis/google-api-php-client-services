@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1AnnotationSpecSet extends \Google\Collection
 {
   protected $collection_key = 'blockingResources';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec[]
+   */
+  public $annotationSpecs;
   protected $annotationSpecsType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecsDataType = 'array';
   /**

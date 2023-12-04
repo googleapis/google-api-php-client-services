@@ -19,10 +19,22 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1ImagePolylineAnnotation extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec
+   */
+  public $annotationSpec;
   protected $annotationSpecType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1NormalizedPolyline
+   */
+  public $normalizedPolyline;
   protected $normalizedPolylineType = GoogleCloudDatalabelingV1beta1NormalizedPolyline::class;
   protected $normalizedPolylineDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1Polyline
+   */
+  public $polyline;
   protected $polylineType = GoogleCloudDatalabelingV1beta1Polyline::class;
   protected $polylineDataType = '';
 

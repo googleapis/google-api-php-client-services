@@ -20,16 +20,32 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1Example extends \Google\Collection
 {
   protected $collection_key = 'annotations';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1Annotation[]
+   */
+  public $annotations;
   protected $annotationsType = GoogleCloudDatalabelingV1beta1Annotation::class;
   protected $annotationsDataType = 'array';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ImagePayload
+   */
+  public $imagePayload;
   protected $imagePayloadType = GoogleCloudDatalabelingV1beta1ImagePayload::class;
   protected $imagePayloadDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TextPayload
+   */
+  public $textPayload;
   protected $textPayloadType = GoogleCloudDatalabelingV1beta1TextPayload::class;
   protected $textPayloadDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoPayload
+   */
+  public $videoPayload;
   protected $videoPayloadType = GoogleCloudDatalabelingV1beta1VideoPayload::class;
   protected $videoPayloadDataType = '';
 

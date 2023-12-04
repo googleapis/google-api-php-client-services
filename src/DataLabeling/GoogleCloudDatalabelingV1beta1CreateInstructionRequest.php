@@ -19,6 +19,10 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1CreateInstructionRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1Instruction
+   */
+  public $instruction;
   protected $instructionType = GoogleCloudDatalabelingV1beta1Instruction::class;
   protected $instructionDataType = '';
 

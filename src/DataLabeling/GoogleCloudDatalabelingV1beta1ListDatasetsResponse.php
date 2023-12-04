@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListDatasetsResponse extends \Google\Collection
 {
   protected $collection_key = 'datasets';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1Dataset[]
+   */
+  public $datasets;
   protected $datasetsType = GoogleCloudDatalabelingV1beta1Dataset::class;
   protected $datasetsDataType = 'array';
   /**

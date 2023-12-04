@@ -20,6 +20,10 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListFeedbackMessagesResponse extends \Google\Collection
 {
   protected $collection_key = 'feedbackMessages';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1FeedbackMessage[]
+   */
+  public $feedbackMessages;
   protected $feedbackMessagesType = GoogleCloudDatalabelingV1beta1FeedbackMessage::class;
   protected $feedbackMessagesDataType = 'array';
   /**

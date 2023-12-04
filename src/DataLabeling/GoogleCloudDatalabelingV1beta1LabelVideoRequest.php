@@ -19,18 +19,38 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1LabelVideoRequest extends \Google\Model
 {
+  /**
+   * @var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
+   */
+  public $basicConfig;
   protected $basicConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $basicConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1EventConfig
+   */
+  public $eventConfig;
   protected $eventConfigType = GoogleCloudDatalabelingV1beta1EventConfig::class;
   protected $eventConfigDataType = '';
   /**
    * @var string
    */
   public $feature;
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ObjectDetectionConfig
+   */
+  public $objectDetectionConfig;
   protected $objectDetectionConfigType = GoogleCloudDatalabelingV1beta1ObjectDetectionConfig::class;
   protected $objectDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ObjectTrackingConfig
+   */
+  public $objectTrackingConfig;
   protected $objectTrackingConfigType = GoogleCloudDatalabelingV1beta1ObjectTrackingConfig::class;
   protected $objectTrackingConfigDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1VideoClassificationConfig
+   */
+  public $videoClassificationConfig;
   protected $videoClassificationConfigType = GoogleCloudDatalabelingV1beta1VideoClassificationConfig::class;
   protected $videoClassificationConfigDataType = '';
 

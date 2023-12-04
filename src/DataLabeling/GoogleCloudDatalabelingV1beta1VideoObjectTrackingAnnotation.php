@@ -20,10 +20,22 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1VideoObjectTrackingAnnotation extends \Google\Collection
 {
   protected $collection_key = 'objectTrackingFrames';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec
+   */
+  public $annotationSpec;
   protected $annotationSpecType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecDataType = '';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1ObjectTrackingFrame[]
+   */
+  public $objectTrackingFrames;
   protected $objectTrackingFramesType = GoogleCloudDatalabelingV1beta1ObjectTrackingFrame::class;
   protected $objectTrackingFramesDataType = 'array';
+  /**
+   * @var GoogleCloudDatalabelingV1beta1TimeSegment
+   */
+  public $timeSegment;
   protected $timeSegmentType = GoogleCloudDatalabelingV1beta1TimeSegment::class;
   protected $timeSegmentDataType = '';
 
