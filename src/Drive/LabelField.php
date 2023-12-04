@@ -44,6 +44,10 @@ class LabelField extends \Google\Collection
    * @var string[]
    */
   public $text;
+  /**
+   * @var User[]
+   */
+  public $user;
   protected $userType = User::class;
   protected $userDataType = 'array';
   /**

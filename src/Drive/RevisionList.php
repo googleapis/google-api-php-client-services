@@ -28,6 +28,10 @@ class RevisionList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Revision[]
+   */
+  public $revisions;
   protected $revisionsType = Revision::class;
   protected $revisionsDataType = 'array';
 

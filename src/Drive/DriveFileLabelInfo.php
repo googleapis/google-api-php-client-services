@@ -20,6 +20,10 @@ namespace Google\Service\Drive;
 class DriveFileLabelInfo extends \Google\Collection
 {
   protected $collection_key = 'labels';
+  /**
+   * @var Label[]
+   */
+  public $labels;
   protected $labelsType = Label::class;
   protected $labelsDataType = 'array';
 

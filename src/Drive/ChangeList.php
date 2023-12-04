@@ -20,6 +20,10 @@ namespace Google\Service\Drive;
 class ChangeList extends \Google\Collection
 {
   protected $collection_key = 'changes';
+  /**
+   * @var Change[]
+   */
+  public $changes;
   protected $changesType = Change::class;
   protected $changesDataType = 'array';
   /**

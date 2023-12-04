@@ -31,12 +31,20 @@ class ContentRestriction extends \Google\Model
    * @var string
    */
   public $reason;
+  /**
+   * @var User
+   */
+  public $restrictingUser;
   protected $restrictingUserType = User::class;
   protected $restrictingUserDataType = '';
   /**
    * @var string
    */
   public $restrictionTime;
+  /**
+   * @var bool
+   */
+  public $systemRestricted;
   /**
    * @var string
    */
@@ -111,6 +119,20 @@ class ContentRestriction extends \Google\Model
   public function getRestrictionTime()
   {
     return $this->restrictionTime;
+  }
+  /**
+   * @param bool
+   */
+  public function setSystemRestricted($systemRestricted)
+  {
+    $this->systemRestricted = $systemRestricted;
+  }
+  /**
+   * @return bool
+   */
+  public function getSystemRestricted()
+  {
+    return $this->systemRestricted;
   }
   /**
    * @param string

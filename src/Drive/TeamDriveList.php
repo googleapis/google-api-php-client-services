@@ -28,6 +28,10 @@ class TeamDriveList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var TeamDrive[]
+   */
+  public $teamDrives;
   protected $teamDrivesType = TeamDrive::class;
   protected $teamDrivesDataType = 'array';
 

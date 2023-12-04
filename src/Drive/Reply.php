@@ -23,6 +23,10 @@ class Reply extends \Google\Model
    * @var string
    */
   public $action;
+  /**
+   * @var User
+   */
+  public $author;
   protected $authorType = User::class;
   protected $authorDataType = '';
   /**

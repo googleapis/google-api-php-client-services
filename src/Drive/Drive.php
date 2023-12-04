@@ -19,12 +19,20 @@ namespace Google\Service\Drive;
 
 class Drive extends \Google\Model
 {
+  /**
+   * @var DriveBackgroundImageFile
+   */
+  public $backgroundImageFile;
   protected $backgroundImageFileType = DriveBackgroundImageFile::class;
   protected $backgroundImageFileDataType = '';
   /**
    * @var string
    */
   public $backgroundImageLink;
+  /**
+   * @var DriveCapabilities
+   */
+  public $capabilities;
   protected $capabilitiesType = DriveCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
@@ -55,6 +63,10 @@ class Drive extends \Google\Model
    * @var string
    */
   public $orgUnitId;
+  /**
+   * @var DriveRestrictions
+   */
+  public $restrictions;
   protected $restrictionsType = DriveRestrictions::class;
   protected $restrictionsDataType = '';
   /**

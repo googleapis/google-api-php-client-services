@@ -35,6 +35,10 @@ class Revision extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var User
+   */
+  public $lastModifyingUser;
   protected $lastModifyingUserType = User::class;
   protected $lastModifyingUserDataType = '';
   /**

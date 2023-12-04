@@ -19,12 +19,20 @@ namespace Google\Service\Drive;
 
 class TeamDrive extends \Google\Model
 {
+  /**
+   * @var TeamDriveBackgroundImageFile
+   */
+  public $backgroundImageFile;
   protected $backgroundImageFileType = TeamDriveBackgroundImageFile::class;
   protected $backgroundImageFileDataType = '';
   /**
    * @var string
    */
   public $backgroundImageLink;
+  /**
+   * @var TeamDriveCapabilities
+   */
+  public $capabilities;
   protected $capabilitiesType = TeamDriveCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
@@ -51,6 +59,10 @@ class TeamDrive extends \Google\Model
    * @var string
    */
   public $orgUnitId;
+  /**
+   * @var TeamDriveRestrictions
+   */
+  public $restrictions;
   protected $restrictionsType = TeamDriveRestrictions::class;
   protected $restrictionsDataType = '';
   /**
