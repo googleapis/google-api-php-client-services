@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseRules;
 class TestSuite extends \Google\Collection
 {
   protected $collection_key = 'testCases';
+  /**
+   * @var TestCase[]
+   */
+  public $testCases;
   protected $testCasesType = TestCase::class;
   protected $testCasesDataType = 'array';
 

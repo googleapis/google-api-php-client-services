@@ -24,16 +24,32 @@ class TestResult extends \Google\Collection
    * @var string[]
    */
   public $debugMessages;
+  /**
+   * @var SourcePosition
+   */
+  public $errorPosition;
   protected $errorPositionType = SourcePosition::class;
   protected $errorPositionDataType = '';
+  /**
+   * @var ExpressionReport[]
+   */
+  public $expressionReports;
   protected $expressionReportsType = ExpressionReport::class;
   protected $expressionReportsDataType = 'array';
+  /**
+   * @var FunctionCall[]
+   */
+  public $functionCalls;
   protected $functionCallsType = FunctionCall::class;
   protected $functionCallsDataType = 'array';
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var VisitedExpression[]
+   */
+  public $visitedExpressions;
   protected $visitedExpressionsType = VisitedExpression::class;
   protected $visitedExpressionsDataType = 'array';
 

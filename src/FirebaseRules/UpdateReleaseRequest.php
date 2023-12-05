@@ -19,6 +19,10 @@ namespace Google\Service\FirebaseRules;
 
 class UpdateReleaseRequest extends \Google\Model
 {
+  /**
+   * @var Release
+   */
+  public $release;
   protected $releaseType = Release::class;
   protected $releaseDataType = '';
   /**

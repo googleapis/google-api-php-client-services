@@ -20,10 +20,22 @@ namespace Google\Service\FirebaseRules;
 class ExpressionReport extends \Google\Collection
 {
   protected $collection_key = 'values';
+  /**
+   * @var ExpressionReport[]
+   */
+  public $children;
   protected $childrenType = ExpressionReport::class;
   protected $childrenDataType = 'array';
+  /**
+   * @var SourcePosition
+   */
+  public $sourcePosition;
   protected $sourcePositionType = SourcePosition::class;
   protected $sourcePositionDataType = '';
+  /**
+   * @var ValueCount[]
+   */
+  public $values;
   protected $valuesType = ValueCount::class;
   protected $valuesDataType = 'array';
 

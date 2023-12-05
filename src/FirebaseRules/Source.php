@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseRules;
 class Source extends \Google\Collection
 {
   protected $collection_key = 'files';
+  /**
+   * @var FirebaserulesFile[]
+   */
+  public $files;
   protected $filesType = FirebaserulesFile::class;
   protected $filesDataType = 'array';
 

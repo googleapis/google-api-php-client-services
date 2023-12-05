@@ -24,6 +24,10 @@ class ListRulesetsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Ruleset[]
+   */
+  public $rulesets;
   protected $rulesetsType = Ruleset::class;
   protected $rulesetsDataType = 'array';
 

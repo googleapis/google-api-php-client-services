@@ -19,6 +19,10 @@ namespace Google\Service\FirebaseRules;
 
 class Result extends \Google\Model
 {
+  /**
+   * @var FirebaserulesEmpty
+   */
+  public $undefined;
   protected $undefinedType = FirebaserulesEmpty::class;
   protected $undefinedDataType = '';
   /**

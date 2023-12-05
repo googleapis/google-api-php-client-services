@@ -19,6 +19,10 @@ namespace Google\Service\FirebaseRules;
 
 class Arg extends \Google\Model
 {
+  /**
+   * @var FirebaserulesEmpty
+   */
+  public $anyValue;
   protected $anyValueType = FirebaserulesEmpty::class;
   protected $anyValueDataType = '';
   /**

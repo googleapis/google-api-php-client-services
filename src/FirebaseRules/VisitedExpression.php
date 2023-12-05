@@ -19,6 +19,10 @@ namespace Google\Service\FirebaseRules;
 
 class VisitedExpression extends \Google\Model
 {
+  /**
+   * @var SourcePosition
+   */
+  public $sourcePosition;
   protected $sourcePositionType = SourcePosition::class;
   protected $sourcePositionDataType = '';
   /**

@@ -28,6 +28,10 @@ class TestCase extends \Google\Collection
    * @var string
    */
   public $expressionReportLevel;
+  /**
+   * @var FunctionMock[]
+   */
+  public $functionMocks;
   protected $functionMocksType = FunctionMock::class;
   protected $functionMocksDataType = 'array';
   /**

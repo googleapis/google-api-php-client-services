@@ -20,8 +20,16 @@ namespace Google\Service\FirebaseRules;
 class TestRulesetResponse extends \Google\Collection
 {
   protected $collection_key = 'testResults';
+  /**
+   * @var Issue[]
+   */
+  public $issues;
   protected $issuesType = Issue::class;
   protected $issuesDataType = 'array';
+  /**
+   * @var TestResult[]
+   */
+  public $testResults;
   protected $testResultsType = TestResult::class;
   protected $testResultsDataType = 'array';
 

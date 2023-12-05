@@ -20,12 +20,20 @@ namespace Google\Service\FirebaseRules;
 class FunctionMock extends \Google\Collection
 {
   protected $collection_key = 'args';
+  /**
+   * @var Arg[]
+   */
+  public $args;
   protected $argsType = Arg::class;
   protected $argsDataType = 'array';
   /**
    * @var string
    */
   public $function;
+  /**
+   * @var Result
+   */
+  public $result;
   protected $resultType = Result::class;
   protected $resultDataType = '';
 
