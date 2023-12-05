@@ -28,6 +28,10 @@ class Release extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var Interval
+   */
+  public $serving;
   protected $servingType = Interval::class;
   protected $servingDataType = '';
   /**
