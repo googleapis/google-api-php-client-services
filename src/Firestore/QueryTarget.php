@@ -23,6 +23,10 @@ class QueryTarget extends \Google\Model
    * @var string
    */
   public $parent;
+  /**
+   * @var StructuredQuery
+   */
+  public $structuredQuery;
   protected $structuredQueryType = StructuredQuery::class;
   protected $structuredQueryDataType = '';
 

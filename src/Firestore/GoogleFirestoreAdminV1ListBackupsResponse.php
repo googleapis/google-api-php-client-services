@@ -20,6 +20,10 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1ListBackupsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var GoogleFirestoreAdminV1Backup[]
+   */
+  public $backups;
   protected $backupsType = GoogleFirestoreAdminV1Backup::class;
   protected $backupsDataType = 'array';
   /**

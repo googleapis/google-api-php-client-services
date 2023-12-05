@@ -19,12 +19,20 @@ namespace Google\Service\Firestore;
 
 class FieldFilter extends \Google\Model
 {
+  /**
+   * @var FieldReference
+   */
+  public $field;
   protected $fieldType = FieldReference::class;
   protected $fieldDataType = '';
   /**
    * @var string
    */
   public $op;
+  /**
+   * @var Value
+   */
+  public $value;
   protected $valueType = Value::class;
   protected $valueDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1ListFieldsResponse extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var GoogleFirestoreAdminV1Field[]
+   */
+  public $fields;
   protected $fieldsType = GoogleFirestoreAdminV1Field::class;
   protected $fieldsDataType = 'array';
   /**

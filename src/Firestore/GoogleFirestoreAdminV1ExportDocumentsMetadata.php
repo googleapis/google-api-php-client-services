@@ -40,8 +40,16 @@ class GoogleFirestoreAdminV1ExportDocumentsMetadata extends \Google\Collection
    * @var string
    */
   public $outputUriPrefix;
+  /**
+   * @var GoogleFirestoreAdminV1Progress
+   */
+  public $progressBytes;
   protected $progressBytesType = GoogleFirestoreAdminV1Progress::class;
   protected $progressBytesDataType = '';
+  /**
+   * @var GoogleFirestoreAdminV1Progress
+   */
+  public $progressDocuments;
   protected $progressDocumentsType = GoogleFirestoreAdminV1Progress::class;
   protected $progressDocumentsDataType = '';
   /**

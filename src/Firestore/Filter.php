@@ -19,10 +19,22 @@ namespace Google\Service\Firestore;
 
 class Filter extends \Google\Model
 {
+  /**
+   * @var CompositeFilter
+   */
+  public $compositeFilter;
   protected $compositeFilterType = CompositeFilter::class;
   protected $compositeFilterDataType = '';
+  /**
+   * @var FieldFilter
+   */
+  public $fieldFilter;
   protected $fieldFilterType = FieldFilter::class;
   protected $fieldFilterDataType = '';
+  /**
+   * @var UnaryFilter
+   */
+  public $unaryFilter;
   protected $unaryFilterType = UnaryFilter::class;
   protected $unaryFilterDataType = '';
 

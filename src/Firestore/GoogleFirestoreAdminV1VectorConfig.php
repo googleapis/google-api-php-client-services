@@ -23,6 +23,10 @@ class GoogleFirestoreAdminV1VectorConfig extends \Google\Model
    * @var int
    */
   public $dimension;
+  /**
+   * @var GoogleFirestoreAdminV1FlatIndex
+   */
+  public $flat;
   protected $flatType = GoogleFirestoreAdminV1FlatIndex::class;
   protected $flatDataType = '';
 

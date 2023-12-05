@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class BloomFilter extends \Google\Model
 {
+  /**
+   * @var BitSequence
+   */
+  public $bits;
   protected $bitsType = BitSequence::class;
   protected $bitsDataType = '';
   /**

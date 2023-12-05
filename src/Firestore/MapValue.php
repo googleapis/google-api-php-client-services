@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class MapValue extends \Google\Model
 {
+  /**
+   * @var Value[]
+   */
+  public $fields;
   protected $fieldsType = Value::class;
   protected $fieldsDataType = 'map';
 

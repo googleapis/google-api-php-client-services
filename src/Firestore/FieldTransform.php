@@ -19,18 +19,38 @@ namespace Google\Service\Firestore;
 
 class FieldTransform extends \Google\Model
 {
+  /**
+   * @var ArrayValue
+   */
+  public $appendMissingElements;
   protected $appendMissingElementsType = ArrayValue::class;
   protected $appendMissingElementsDataType = '';
   /**
    * @var string
    */
   public $fieldPath;
+  /**
+   * @var Value
+   */
+  public $increment;
   protected $incrementType = Value::class;
   protected $incrementDataType = '';
+  /**
+   * @var Value
+   */
+  public $maximum;
   protected $maximumType = Value::class;
   protected $maximumDataType = '';
+  /**
+   * @var Value
+   */
+  public $minimum;
   protected $minimumType = Value::class;
   protected $minimumDataType = '';
+  /**
+   * @var ArrayValue
+   */
+  public $removeAllFromArray;
   protected $removeAllFromArrayType = ArrayValue::class;
   protected $removeAllFromArrayDataType = '';
   /**

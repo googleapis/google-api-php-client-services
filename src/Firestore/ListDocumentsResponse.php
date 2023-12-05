@@ -20,6 +20,10 @@ namespace Google\Service\Firestore;
 class ListDocumentsResponse extends \Google\Collection
 {
   protected $collection_key = 'documents';
+  /**
+   * @var Document[]
+   */
+  public $documents;
   protected $documentsType = Document::class;
   protected $documentsDataType = 'array';
   /**

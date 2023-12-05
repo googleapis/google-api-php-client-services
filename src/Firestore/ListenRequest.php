@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class ListenRequest extends \Google\Model
 {
+  /**
+   * @var Target
+   */
+  public $addTarget;
   protected $addTargetType = Target::class;
   protected $addTargetDataType = '';
   /**

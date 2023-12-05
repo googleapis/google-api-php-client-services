@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class Value extends \Google\Model
 {
+  /**
+   * @var ArrayValue
+   */
+  public $arrayValue;
   protected $arrayValueType = ArrayValue::class;
   protected $arrayValueDataType = '';
   /**
@@ -30,12 +34,20 @@ class Value extends \Google\Model
    */
   public $bytesValue;
   public $doubleValue;
+  /**
+   * @var LatLng
+   */
+  public $geoPointValue;
   protected $geoPointValueType = LatLng::class;
   protected $geoPointValueDataType = '';
   /**
    * @var string
    */
   public $integerValue;
+  /**
+   * @var MapValue
+   */
+  public $mapValue;
   protected $mapValueType = MapValue::class;
   protected $mapValueDataType = '';
   /**

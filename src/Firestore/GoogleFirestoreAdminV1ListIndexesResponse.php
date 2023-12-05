@@ -20,6 +20,10 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1ListIndexesResponse extends \Google\Collection
 {
   protected $collection_key = 'indexes';
+  /**
+   * @var GoogleFirestoreAdminV1Index[]
+   */
+  public $indexes;
   protected $indexesType = GoogleFirestoreAdminV1Index::class;
   protected $indexesDataType = 'array';
   /**

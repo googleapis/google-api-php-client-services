@@ -20,18 +20,38 @@ namespace Google\Service\Firestore;
 class Write extends \Google\Collection
 {
   protected $collection_key = 'updateTransforms';
+  /**
+   * @var Precondition
+   */
+  public $currentDocument;
   protected $currentDocumentType = Precondition::class;
   protected $currentDocumentDataType = '';
   /**
    * @var string
    */
   public $delete;
+  /**
+   * @var DocumentTransform
+   */
+  public $transform;
   protected $transformType = DocumentTransform::class;
   protected $transformDataType = '';
+  /**
+   * @var Document
+   */
+  public $update;
   protected $updateType = Document::class;
   protected $updateDataType = '';
+  /**
+   * @var DocumentMask
+   */
+  public $updateMask;
   protected $updateMaskType = DocumentMask::class;
   protected $updateMaskDataType = '';
+  /**
+   * @var FieldTransform[]
+   */
+  public $updateTransforms;
   protected $updateTransformsType = FieldTransform::class;
   protected $updateTransformsDataType = 'array';
 

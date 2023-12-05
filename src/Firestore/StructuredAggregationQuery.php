@@ -20,8 +20,16 @@ namespace Google\Service\Firestore;
 class StructuredAggregationQuery extends \Google\Collection
 {
   protected $collection_key = 'aggregations';
+  /**
+   * @var Aggregation[]
+   */
+  public $aggregations;
   protected $aggregationsType = Aggregation::class;
   protected $aggregationsDataType = 'array';
+  /**
+   * @var StructuredQuery
+   */
+  public $structuredQuery;
   protected $structuredQueryType = StructuredQuery::class;
   protected $structuredQueryDataType = '';
 

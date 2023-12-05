@@ -32,6 +32,10 @@ class WriteRequest extends \Google\Collection
    * @var string
    */
   public $streamToken;
+  /**
+   * @var Write[]
+   */
+  public $writes;
   protected $writesType = Write::class;
   protected $writesDataType = 'array';
 

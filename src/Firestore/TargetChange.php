@@ -20,6 +20,10 @@ namespace Google\Service\Firestore;
 class TargetChange extends \Google\Collection
 {
   protected $collection_key = 'targetIds';
+  /**
+   * @var Status
+   */
+  public $cause;
   protected $causeType = Status::class;
   protected $causeDataType = '';
   /**

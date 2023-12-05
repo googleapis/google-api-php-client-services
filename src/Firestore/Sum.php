@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class Sum extends \Google\Model
 {
+  /**
+   * @var FieldReference
+   */
+  public $field;
   protected $fieldType = FieldReference::class;
   protected $fieldDataType = '';
 

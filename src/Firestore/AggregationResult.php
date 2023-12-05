@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class AggregationResult extends \Google\Model
 {
+  /**
+   * @var Value[]
+   */
+  public $aggregateFields;
   protected $aggregateFieldsType = Value::class;
   protected $aggregateFieldsDataType = 'map';
 

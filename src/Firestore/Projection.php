@@ -20,6 +20,10 @@ namespace Google\Service\Firestore;
 class Projection extends \Google\Collection
 {
   protected $collection_key = 'fields';
+  /**
+   * @var FieldReference[]
+   */
+  public $fields;
   protected $fieldsType = FieldReference::class;
   protected $fieldsDataType = 'array';
 

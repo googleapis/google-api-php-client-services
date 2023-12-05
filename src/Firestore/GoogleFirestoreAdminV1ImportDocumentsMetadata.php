@@ -40,8 +40,16 @@ class GoogleFirestoreAdminV1ImportDocumentsMetadata extends \Google\Collection
    * @var string
    */
   public $operationState;
+  /**
+   * @var GoogleFirestoreAdminV1Progress
+   */
+  public $progressBytes;
   protected $progressBytesType = GoogleFirestoreAdminV1Progress::class;
   protected $progressBytesDataType = '';
+  /**
+   * @var GoogleFirestoreAdminV1Progress
+   */
+  public $progressDocuments;
   protected $progressDocumentsType = GoogleFirestoreAdminV1Progress::class;
   protected $progressDocumentsDataType = '';
   /**

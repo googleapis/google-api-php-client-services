@@ -35,6 +35,10 @@ class GoogleFirestoreAdminV1RestoreDatabaseMetadata extends \Google\Model
    * @var string
    */
   public $operationState;
+  /**
+   * @var GoogleFirestoreAdminV1Progress
+   */
+  public $progressPercentage;
   protected $progressPercentageType = GoogleFirestoreAdminV1Progress::class;
   protected $progressPercentageDataType = '';
   /**

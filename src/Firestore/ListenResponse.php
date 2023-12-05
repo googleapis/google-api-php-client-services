@@ -19,14 +19,34 @@ namespace Google\Service\Firestore;
 
 class ListenResponse extends \Google\Model
 {
+  /**
+   * @var DocumentChange
+   */
+  public $documentChange;
   protected $documentChangeType = DocumentChange::class;
   protected $documentChangeDataType = '';
+  /**
+   * @var DocumentDelete
+   */
+  public $documentDelete;
   protected $documentDeleteType = DocumentDelete::class;
   protected $documentDeleteDataType = '';
+  /**
+   * @var DocumentRemove
+   */
+  public $documentRemove;
   protected $documentRemoveType = DocumentRemove::class;
   protected $documentRemoveDataType = '';
+  /**
+   * @var ExistenceFilter
+   */
+  public $filter;
   protected $filterType = ExistenceFilter::class;
   protected $filterDataType = '';
+  /**
+   * @var TargetChange
+   */
+  public $targetChange;
   protected $targetChangeType = TargetChange::class;
   protected $targetChangeDataType = '';
 

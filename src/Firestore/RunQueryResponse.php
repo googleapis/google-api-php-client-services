@@ -19,6 +19,10 @@ namespace Google\Service\Firestore;
 
 class RunQueryResponse extends \Google\Model
 {
+  /**
+   * @var Document
+   */
+  public $document;
   protected $documentType = Document::class;
   protected $documentDataType = '';
   /**

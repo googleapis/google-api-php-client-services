@@ -23,6 +23,10 @@ class GoogleFirestoreAdminV1BackupSchedule extends \Google\Model
    * @var string
    */
   public $createTime;
+  /**
+   * @var GoogleFirestoreAdminV1DailyRecurrence
+   */
+  public $dailyRecurrence;
   protected $dailyRecurrenceType = GoogleFirestoreAdminV1DailyRecurrence::class;
   protected $dailyRecurrenceDataType = '';
   /**
@@ -37,6 +41,10 @@ class GoogleFirestoreAdminV1BackupSchedule extends \Google\Model
    * @var string
    */
   public $updateTime;
+  /**
+   * @var GoogleFirestoreAdminV1WeeklyRecurrence
+   */
+  public $weeklyRecurrence;
   protected $weeklyRecurrenceType = GoogleFirestoreAdminV1WeeklyRecurrence::class;
   protected $weeklyRecurrenceDataType = '';
 

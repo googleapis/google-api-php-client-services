@@ -24,8 +24,16 @@ class BatchGetDocumentsRequest extends \Google\Collection
    * @var string[]
    */
   public $documents;
+  /**
+   * @var DocumentMask
+   */
+  public $mask;
   protected $maskType = DocumentMask::class;
   protected $maskDataType = '';
+  /**
+   * @var TransactionOptions
+   */
+  public $newTransaction;
   protected $newTransactionType = TransactionOptions::class;
   protected $newTransactionDataType = '';
   /**

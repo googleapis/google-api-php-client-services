@@ -20,8 +20,16 @@ namespace Google\Service\Firestore;
 class BatchWriteResponse extends \Google\Collection
 {
   protected $collection_key = 'writeResults';
+  /**
+   * @var Status[]
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = 'array';
+  /**
+   * @var WriteResult[]
+   */
+  public $writeResults;
   protected $writeResultsType = WriteResult::class;
   protected $writeResultsDataType = 'array';
 

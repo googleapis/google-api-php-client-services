@@ -31,6 +31,10 @@ class GoogleFirestoreAdminV1IndexField extends \Google\Model
    * @var string
    */
   public $order;
+  /**
+   * @var GoogleFirestoreAdminV1VectorConfig
+   */
+  public $vectorConfig;
   protected $vectorConfigType = GoogleFirestoreAdminV1VectorConfig::class;
   protected $vectorConfigDataType = '';
 
