@@ -19,6 +19,10 @@ namespace Google\Service\CloudFilestore;
 
 class GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility extends \Google\Model
 {
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility[]
+   */
+  public $eligibilities;
   protected $eligibilitiesType = GoogleCloudSaasacceleratorManagementProvidersV1SloEligibility::class;
   protected $eligibilitiesDataType = 'map';
 

@@ -32,6 +32,10 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var FileShareConfig[]
+   */
+  public $fileShares;
   protected $fileSharesType = FileShareConfig::class;
   protected $fileSharesDataType = 'array';
   /**
@@ -46,8 +50,16 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var NetworkConfig[]
+   */
+  public $networks;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $satisfiesPzi;
   /**
    * @var bool
    */
@@ -180,6 +192,20 @@ class Instance extends \Google\Collection
   public function getNetworks()
   {
     return $this->networks;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
   }
   /**
    * @param bool

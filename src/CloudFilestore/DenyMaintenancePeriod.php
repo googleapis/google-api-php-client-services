@@ -19,10 +19,22 @@ namespace Google\Service\CloudFilestore;
 
 class DenyMaintenancePeriod extends \Google\Model
 {
+  /**
+   * @var Date
+   */
+  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
+  /**
+   * @var Date
+   */
+  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
+  /**
+   * @var TimeOfDay
+   */
+  public $time;
   protected $timeType = TimeOfDay::class;
   protected $timeDataType = '';
 

@@ -24,6 +24,10 @@ class ListSnapshotsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Snapshot[]
+   */
+  public $snapshots;
   protected $snapshotsType = Snapshot::class;
   protected $snapshotsDataType = 'array';
 

@@ -40,26 +40,46 @@ class GoogleCloudSaasacceleratorManagementProvidersV1Instance extends \Google\Co
    * @var string[]
    */
   public $maintenancePolicyNames;
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule[]
+   */
+  public $maintenanceSchedules;
   protected $maintenanceSchedulesType = GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSchedule::class;
   protected $maintenanceSchedulesDataType = 'map';
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings
+   */
+  public $maintenanceSettings;
   protected $maintenanceSettingsType = GoogleCloudSaasacceleratorManagementProvidersV1MaintenanceSettings::class;
   protected $maintenanceSettingsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter[]
+   */
+  public $notificationParameters;
   protected $notificationParametersType = GoogleCloudSaasacceleratorManagementProvidersV1NotificationParameter::class;
   protected $notificationParametersDataType = 'map';
   /**
    * @var string[]
    */
   public $producerMetadata;
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource[]
+   */
+  public $provisionedResources;
   protected $provisionedResourcesType = GoogleCloudSaasacceleratorManagementProvidersV1ProvisionedResource::class;
   protected $provisionedResourcesDataType = 'array';
   /**
    * @var string
    */
   public $slmInstanceTemplate;
+  /**
+   * @var GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata
+   */
+  public $sloMetadata;
   protected $sloMetadataType = GoogleCloudSaasacceleratorManagementProvidersV1SloMetadata::class;
   protected $sloMetadataDataType = '';
   /**

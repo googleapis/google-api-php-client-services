@@ -20,6 +20,10 @@ namespace Google\Service\CloudFilestore;
 class ListBackupsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Backup[]
+   */
+  public $backups;
   protected $backupsType = Backup::class;
   protected $backupsDataType = 'array';
   /**
