@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1ListFeedbackReportsResponse extends \Google\Collection
 {
   protected $collection_key = 'feedbackReports';
+  /**
+   * @var GoogleFirebaseAppdistroV1FeedbackReport[]
+   */
+  public $feedbackReports;
   protected $feedbackReportsType = GoogleFirebaseAppdistroV1FeedbackReport::class;
   protected $feedbackReportsDataType = 'array';
   /**

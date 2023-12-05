@@ -43,6 +43,10 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleFirebaseAppdistroV1ReleaseNotes
+   */
+  public $releaseNotes;
   protected $releaseNotesType = GoogleFirebaseAppdistroV1ReleaseNotes::class;
   protected $releaseNotesDataType = '';
   /**

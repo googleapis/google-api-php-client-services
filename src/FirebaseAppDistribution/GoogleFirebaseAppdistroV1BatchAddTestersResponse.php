@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1BatchAddTestersResponse extends \Google\Collection
 {
   protected $collection_key = 'testers';
+  /**
+   * @var GoogleFirebaseAppdistroV1Tester[]
+   */
+  public $testers;
   protected $testersType = GoogleFirebaseAppdistroV1Tester::class;
   protected $testersDataType = 'array';
 

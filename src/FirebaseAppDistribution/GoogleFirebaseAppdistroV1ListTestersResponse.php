@@ -24,6 +24,10 @@ class GoogleFirebaseAppdistroV1ListTestersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var GoogleFirebaseAppdistroV1Tester[]
+   */
+  public $testers;
   protected $testersType = GoogleFirebaseAppdistroV1Tester::class;
   protected $testersDataType = 'array';
 

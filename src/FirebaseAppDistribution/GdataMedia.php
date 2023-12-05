@@ -32,14 +32,26 @@ class GdataMedia extends \Google\Collection
    * @var string
    */
   public $blobRef;
+  /**
+   * @var GdataBlobstore2Info
+   */
+  public $blobstore2Info;
   protected $blobstore2InfoType = GdataBlobstore2Info::class;
   protected $blobstore2InfoDataType = '';
+  /**
+   * @var GdataCompositeMedia[]
+   */
+  public $compositeMedia;
   protected $compositeMediaType = GdataCompositeMedia::class;
   protected $compositeMediaDataType = 'array';
   /**
    * @var string
    */
   public $contentType;
+  /**
+   * @var GdataContentTypeInfo
+   */
+  public $contentTypeInfo;
   protected $contentTypeInfoType = GdataContentTypeInfo::class;
   protected $contentTypeInfoDataType = '';
   /**
@@ -50,16 +62,40 @@ class GdataMedia extends \Google\Collection
    * @var string
    */
   public $crc32cHash;
+  /**
+   * @var GdataDiffChecksumsResponse
+   */
+  public $diffChecksumsResponse;
   protected $diffChecksumsResponseType = GdataDiffChecksumsResponse::class;
   protected $diffChecksumsResponseDataType = '';
+  /**
+   * @var GdataDiffDownloadResponse
+   */
+  public $diffDownloadResponse;
   protected $diffDownloadResponseType = GdataDiffDownloadResponse::class;
   protected $diffDownloadResponseDataType = '';
+  /**
+   * @var GdataDiffUploadRequest
+   */
+  public $diffUploadRequest;
   protected $diffUploadRequestType = GdataDiffUploadRequest::class;
   protected $diffUploadRequestDataType = '';
+  /**
+   * @var GdataDiffUploadResponse
+   */
+  public $diffUploadResponse;
   protected $diffUploadResponseType = GdataDiffUploadResponse::class;
   protected $diffUploadResponseDataType = '';
+  /**
+   * @var GdataDiffVersionResponse
+   */
+  public $diffVersionResponse;
   protected $diffVersionResponseType = GdataDiffVersionResponse::class;
   protected $diffVersionResponseDataType = '';
+  /**
+   * @var GdataDownloadParameters
+   */
+  public $downloadParameters;
   protected $downloadParametersType = GdataDownloadParameters::class;
   protected $downloadParametersDataType = '';
   /**
@@ -94,6 +130,10 @@ class GdataMedia extends \Google\Collection
    * @var string
    */
   public $mediaId;
+  /**
+   * @var GdataObjectId
+   */
+  public $objectId;
   protected $objectIdType = GdataObjectId::class;
   protected $objectIdDataType = '';
   /**

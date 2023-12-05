@@ -19,6 +19,10 @@ namespace Google\Service\FirebaseAppDistribution;
 
 class GoogleFirebaseAppdistroV1UploadReleaseRequest extends \Google\Model
 {
+  /**
+   * @var GdataMedia
+   */
+  public $blob;
   protected $blobType = GdataMedia::class;
   protected $blobDataType = '';
 

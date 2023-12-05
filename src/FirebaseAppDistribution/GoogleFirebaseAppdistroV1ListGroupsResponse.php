@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseAppDistribution;
 class GoogleFirebaseAppdistroV1ListGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'groups';
+  /**
+   * @var GoogleFirebaseAppdistroV1Group[]
+   */
+  public $groups;
   protected $groupsType = GoogleFirebaseAppdistroV1Group::class;
   protected $groupsDataType = 'array';
   /**
