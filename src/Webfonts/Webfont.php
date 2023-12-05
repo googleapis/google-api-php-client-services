@@ -20,6 +20,10 @@ namespace Google\Service\Webfonts;
 class Webfont extends \Google\Collection
 {
   protected $collection_key = 'variants';
+  /**
+   * @var Axis[]
+   */
+  public $axes;
   protected $axesType = Axis::class;
   protected $axesDataType = 'array';
   /**
