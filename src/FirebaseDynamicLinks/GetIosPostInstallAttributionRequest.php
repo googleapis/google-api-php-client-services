@@ -27,6 +27,10 @@ class GetIosPostInstallAttributionRequest extends \Google\Model
    * @var string
    */
   public $bundleId;
+  /**
+   * @var DeviceInfo
+   */
+  public $device;
   protected $deviceType = DeviceInfo::class;
   protected $deviceDataType = '';
   /**

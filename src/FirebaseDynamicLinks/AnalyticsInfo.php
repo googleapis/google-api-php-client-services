@@ -19,8 +19,16 @@ namespace Google\Service\FirebaseDynamicLinks;
 
 class AnalyticsInfo extends \Google\Model
 {
+  /**
+   * @var GooglePlayAnalytics
+   */
+  public $googlePlayAnalytics;
   protected $googlePlayAnalyticsType = GooglePlayAnalytics::class;
   protected $googlePlayAnalyticsDataType = '';
+  /**
+   * @var ITunesConnectAnalytics
+   */
+  public $itunesConnectAnalytics;
   protected $itunesConnectAnalyticsType = ITunesConnectAnalytics::class;
   protected $itunesConnectAnalyticsDataType = '';
 

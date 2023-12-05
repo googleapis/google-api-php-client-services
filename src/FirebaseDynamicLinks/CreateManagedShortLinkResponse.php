@@ -20,12 +20,20 @@ namespace Google\Service\FirebaseDynamicLinks;
 class CreateManagedShortLinkResponse extends \Google\Collection
 {
   protected $collection_key = 'warning';
+  /**
+   * @var ManagedShortLink
+   */
+  public $managedShortLink;
   protected $managedShortLinkType = ManagedShortLink::class;
   protected $managedShortLinkDataType = '';
   /**
    * @var string
    */
   public $previewLink;
+  /**
+   * @var DynamicLinkWarning[]
+   */
+  public $warning;
   protected $warningType = DynamicLinkWarning::class;
   protected $warningDataType = 'array';
 
