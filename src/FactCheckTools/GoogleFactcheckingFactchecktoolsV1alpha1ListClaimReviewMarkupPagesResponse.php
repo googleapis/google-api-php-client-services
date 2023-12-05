@@ -20,6 +20,10 @@ namespace Google\Service\FactCheckTools;
 class GoogleFactcheckingFactchecktoolsV1alpha1ListClaimReviewMarkupPagesResponse extends \Google\Collection
 {
   protected $collection_key = 'claimReviewMarkupPages';
+  /**
+   * @var GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage[]
+   */
+  public $claimReviewMarkupPages;
   protected $claimReviewMarkupPagesType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkupPage::class;
   protected $claimReviewMarkupPagesDataType = 'array';
   /**

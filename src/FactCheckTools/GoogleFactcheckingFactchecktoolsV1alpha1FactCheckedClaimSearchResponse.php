@@ -20,6 +20,10 @@ namespace Google\Service\FactCheckTools;
 class GoogleFactcheckingFactchecktoolsV1alpha1FactCheckedClaimSearchResponse extends \Google\Collection
 {
   protected $collection_key = 'claims';
+  /**
+   * @var GoogleFactcheckingFactchecktoolsV1alpha1Claim[]
+   */
+  public $claims;
   protected $claimsType = GoogleFactcheckingFactchecktoolsV1alpha1Claim::class;
   protected $claimsDataType = 'array';
   /**
