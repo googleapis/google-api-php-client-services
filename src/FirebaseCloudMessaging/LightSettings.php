@@ -19,6 +19,10 @@ namespace Google\Service\FirebaseCloudMessaging;
 
 class LightSettings extends \Google\Model
 {
+  /**
+   * @var Color
+   */
+  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
   /**

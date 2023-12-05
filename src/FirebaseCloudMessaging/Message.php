@@ -19,8 +19,16 @@ namespace Google\Service\FirebaseCloudMessaging;
 
 class Message extends \Google\Model
 {
+  /**
+   * @var AndroidConfig
+   */
+  public $android;
   protected $androidType = AndroidConfig::class;
   protected $androidDataType = '';
+  /**
+   * @var ApnsConfig
+   */
+  public $apns;
   protected $apnsType = ApnsConfig::class;
   protected $apnsDataType = '';
   /**
@@ -31,12 +39,20 @@ class Message extends \Google\Model
    * @var string[]
    */
   public $data;
+  /**
+   * @var FcmOptions
+   */
+  public $fcmOptions;
   protected $fcmOptionsType = FcmOptions::class;
   protected $fcmOptionsDataType = '';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var Notification
+   */
+  public $notification;
   protected $notificationType = Notification::class;
   protected $notificationDataType = '';
   /**
@@ -47,6 +63,10 @@ class Message extends \Google\Model
    * @var string
    */
   public $topic;
+  /**
+   * @var WebpushConfig
+   */
+  public $webpush;
   protected $webpushType = WebpushConfig::class;
   protected $webpushDataType = '';
 
