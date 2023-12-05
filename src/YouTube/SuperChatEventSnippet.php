@@ -51,8 +51,16 @@ class SuperChatEventSnippet extends \Google\Model
    * @var string
    */
   public $messageType;
+  /**
+   * @var SuperStickerMetadata
+   */
+  public $superStickerMetadata;
   protected $superStickerMetadataType = SuperStickerMetadata::class;
   protected $superStickerMetadataDataType = '';
+  /**
+   * @var ChannelProfileDetails
+   */
+  public $supporterDetails;
   protected $supporterDetailsType = ChannelProfileDetails::class;
   protected $supporterDetailsDataType = '';
 

@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class ChannelSection extends \Google\Model
 {
+  /**
+   * @var ChannelSectionContentDetails
+   */
+  public $contentDetails;
   protected $contentDetailsType = ChannelSectionContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
@@ -33,10 +37,22 @@ class ChannelSection extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var ChannelSectionLocalization[]
+   */
+  public $localizations;
   protected $localizationsType = ChannelSectionLocalization::class;
   protected $localizationsDataType = 'map';
+  /**
+   * @var ChannelSectionSnippet
+   */
+  public $snippet;
   protected $snippetType = ChannelSectionSnippet::class;
   protected $snippetDataType = '';
+  /**
+   * @var ChannelSectionTargeting
+   */
+  public $targeting;
   protected $targetingType = ChannelSectionTargeting::class;
   protected $targetingDataType = '';
 

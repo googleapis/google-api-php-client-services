@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class RelatedEntity extends \Google\Model
 {
+  /**
+   * @var Entity
+   */
+  public $entity;
   protected $entityType = Entity::class;
   protected $entityDataType = '';
 

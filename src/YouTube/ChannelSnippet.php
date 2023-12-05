@@ -35,12 +35,20 @@ class ChannelSnippet extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var ChannelLocalization
+   */
+  public $localized;
   protected $localizedType = ChannelLocalization::class;
   protected $localizedDataType = '';
   /**
    * @var string
    */
   public $publishedAt;
+  /**
+   * @var ThumbnailDetails
+   */
+  public $thumbnails;
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   /**

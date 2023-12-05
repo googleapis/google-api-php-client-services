@@ -20,14 +20,26 @@ namespace Google\Service\YouTube;
 class AbuseReport extends \Google\Collection
 {
   protected $collection_key = 'relatedEntities';
+  /**
+   * @var AbuseType[]
+   */
+  public $abuseTypes;
   protected $abuseTypesType = AbuseType::class;
   protected $abuseTypesDataType = 'array';
   /**
    * @var string
    */
   public $description;
+  /**
+   * @var RelatedEntity[]
+   */
+  public $relatedEntities;
   protected $relatedEntitiesType = RelatedEntity::class;
   protected $relatedEntitiesDataType = 'array';
+  /**
+   * @var Entity
+   */
+  public $subject;
   protected $subjectType = Entity::class;
   protected $subjectDataType = '';
 

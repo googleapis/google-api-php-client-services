@@ -31,6 +31,10 @@ class Caption extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var CaptionSnippet
+   */
+  public $snippet;
   protected $snippetType = CaptionSnippet::class;
   protected $snippetDataType = '';
 

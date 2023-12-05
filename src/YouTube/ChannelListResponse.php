@@ -28,6 +28,10 @@ class ChannelListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var Channel[]
+   */
+  public $items;
   protected $itemsType = Channel::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,12 +42,20 @@ class ChannelListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
    * @var string
    */
   public $prevPageToken;
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class Playlist extends \Google\Model
 {
+  /**
+   * @var PlaylistContentDetails
+   */
+  public $contentDetails;
   protected $contentDetailsType = PlaylistContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
@@ -33,12 +37,28 @@ class Playlist extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var PlaylistLocalization[]
+   */
+  public $localizations;
   protected $localizationsType = PlaylistLocalization::class;
   protected $localizationsDataType = 'map';
+  /**
+   * @var PlaylistPlayer
+   */
+  public $player;
   protected $playerType = PlaylistPlayer::class;
   protected $playerDataType = '';
+  /**
+   * @var PlaylistSnippet
+   */
+  public $snippet;
   protected $snippetType = PlaylistSnippet::class;
   protected $snippetDataType = '';
+  /**
+   * @var PlaylistStatus
+   */
+  public $status;
   protected $statusType = PlaylistStatus::class;
   protected $statusDataType = '';
 

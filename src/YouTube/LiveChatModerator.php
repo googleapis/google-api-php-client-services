@@ -31,6 +31,10 @@ class LiveChatModerator extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var LiveChatModeratorSnippet
+   */
+  public $snippet;
   protected $snippetType = LiveChatModeratorSnippet::class;
   protected $snippetDataType = '';
 

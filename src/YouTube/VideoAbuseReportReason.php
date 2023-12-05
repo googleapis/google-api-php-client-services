@@ -31,6 +31,10 @@ class VideoAbuseReportReason extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var VideoAbuseReportReasonSnippet
+   */
+  public $snippet;
   protected $snippetType = VideoAbuseReportReasonSnippet::class;
   protected $snippetDataType = '';
 

@@ -28,6 +28,10 @@ class I18nLanguageListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var I18nLanguage[]
+   */
+  public $items;
   protected $itemsType = I18nLanguage::class;
   protected $itemsDataType = 'array';
   /**

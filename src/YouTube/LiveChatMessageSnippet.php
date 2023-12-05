@@ -27,8 +27,16 @@ class LiveChatMessageSnippet extends \Google\Model
    * @var string
    */
   public $displayMessage;
+  /**
+   * @var LiveChatFanFundingEventDetails
+   */
+  public $fanFundingEventDetails;
   protected $fanFundingEventDetailsType = LiveChatFanFundingEventDetails::class;
   protected $fanFundingEventDetailsDataType = '';
+  /**
+   * @var LiveChatGiftMembershipReceivedDetails
+   */
+  public $giftMembershipReceivedDetails;
   protected $giftMembershipReceivedDetailsType = LiveChatGiftMembershipReceivedDetails::class;
   protected $giftMembershipReceivedDetailsDataType = '';
   /**
@@ -39,30 +47,66 @@ class LiveChatMessageSnippet extends \Google\Model
    * @var string
    */
   public $liveChatId;
+  /**
+   * @var LiveChatMemberMilestoneChatDetails
+   */
+  public $memberMilestoneChatDetails;
   protected $memberMilestoneChatDetailsType = LiveChatMemberMilestoneChatDetails::class;
   protected $memberMilestoneChatDetailsDataType = '';
+  /**
+   * @var LiveChatMembershipGiftingDetails
+   */
+  public $membershipGiftingDetails;
   protected $membershipGiftingDetailsType = LiveChatMembershipGiftingDetails::class;
   protected $membershipGiftingDetailsDataType = '';
+  /**
+   * @var LiveChatMessageDeletedDetails
+   */
+  public $messageDeletedDetails;
   protected $messageDeletedDetailsType = LiveChatMessageDeletedDetails::class;
   protected $messageDeletedDetailsDataType = '';
+  /**
+   * @var LiveChatMessageRetractedDetails
+   */
+  public $messageRetractedDetails;
   protected $messageRetractedDetailsType = LiveChatMessageRetractedDetails::class;
   protected $messageRetractedDetailsDataType = '';
+  /**
+   * @var LiveChatNewSponsorDetails
+   */
+  public $newSponsorDetails;
   protected $newSponsorDetailsType = LiveChatNewSponsorDetails::class;
   protected $newSponsorDetailsDataType = '';
   /**
    * @var string
    */
   public $publishedAt;
+  /**
+   * @var LiveChatSuperChatDetails
+   */
+  public $superChatDetails;
   protected $superChatDetailsType = LiveChatSuperChatDetails::class;
   protected $superChatDetailsDataType = '';
+  /**
+   * @var LiveChatSuperStickerDetails
+   */
+  public $superStickerDetails;
   protected $superStickerDetailsType = LiveChatSuperStickerDetails::class;
   protected $superStickerDetailsDataType = '';
+  /**
+   * @var LiveChatTextMessageDetails
+   */
+  public $textMessageDetails;
   protected $textMessageDetailsType = LiveChatTextMessageDetails::class;
   protected $textMessageDetailsDataType = '';
   /**
    * @var string
    */
   public $type;
+  /**
+   * @var LiveChatUserBannedMessageDetails
+   */
+  public $userBannedDetails;
   protected $userBannedDetailsType = LiveChatUserBannedMessageDetails::class;
   protected $userBannedDetailsDataType = '';
 

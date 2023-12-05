@@ -27,12 +27,20 @@ class InvideoBranding extends \Google\Model
    * @var string
    */
   public $imageUrl;
+  /**
+   * @var InvideoPosition
+   */
+  public $position;
   protected $positionType = InvideoPosition::class;
   protected $positionDataType = '';
   /**
    * @var string
    */
   public $targetChannelId;
+  /**
+   * @var InvideoTiming
+   */
+  public $timing;
   protected $timingType = InvideoTiming::class;
   protected $timingDataType = '';
 

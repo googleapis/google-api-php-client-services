@@ -23,8 +23,16 @@ class ActivityContentDetailsRecommendation extends \Google\Model
    * @var string
    */
   public $reason;
+  /**
+   * @var ResourceId
+   */
+  public $resourceId;
   protected $resourceIdType = ResourceId::class;
   protected $resourceIdDataType = '';
+  /**
+   * @var ResourceId
+   */
+  public $seedResourceId;
   protected $seedResourceIdType = ResourceId::class;
   protected $seedResourceIdDataType = '';
 

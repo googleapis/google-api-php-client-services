@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class LiveBroadcastMonetizationDetails extends \Google\Model
 {
+  /**
+   * @var CuepointSchedule
+   */
+  public $cuepointSchedule;
   protected $cuepointScheduleType = CuepointSchedule::class;
   protected $cuepointScheduleDataType = '';
 

@@ -28,6 +28,10 @@ class I18nRegionListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var I18nRegion[]
+   */
+  public $items;
   protected $itemsType = I18nRegion::class;
   protected $itemsDataType = 'array';
   /**

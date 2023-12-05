@@ -19,14 +19,26 @@ namespace Google\Service\YouTube;
 
 class Video extends \Google\Model
 {
+  /**
+   * @var VideoAgeGating
+   */
+  public $ageGating;
   protected $ageGatingType = VideoAgeGating::class;
   protected $ageGatingDataType = '';
+  /**
+   * @var VideoContentDetails
+   */
+  public $contentDetails;
   protected $contentDetailsType = VideoContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
    * @var string
    */
   public $etag;
+  /**
+   * @var VideoFileDetails
+   */
+  public $fileDetails;
   protected $fileDetailsType = VideoFileDetails::class;
   protected $fileDetailsDataType = '';
   /**
@@ -37,28 +49,76 @@ class Video extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var VideoLiveStreamingDetails
+   */
+  public $liveStreamingDetails;
   protected $liveStreamingDetailsType = VideoLiveStreamingDetails::class;
   protected $liveStreamingDetailsDataType = '';
+  /**
+   * @var VideoLocalization[]
+   */
+  public $localizations;
   protected $localizationsType = VideoLocalization::class;
   protected $localizationsDataType = 'map';
+  /**
+   * @var VideoMonetizationDetails
+   */
+  public $monetizationDetails;
   protected $monetizationDetailsType = VideoMonetizationDetails::class;
   protected $monetizationDetailsDataType = '';
+  /**
+   * @var VideoPlayer
+   */
+  public $player;
   protected $playerType = VideoPlayer::class;
   protected $playerDataType = '';
+  /**
+   * @var VideoProcessingDetails
+   */
+  public $processingDetails;
   protected $processingDetailsType = VideoProcessingDetails::class;
   protected $processingDetailsDataType = '';
+  /**
+   * @var VideoProjectDetails
+   */
+  public $projectDetails;
   protected $projectDetailsType = VideoProjectDetails::class;
   protected $projectDetailsDataType = '';
+  /**
+   * @var VideoRecordingDetails
+   */
+  public $recordingDetails;
   protected $recordingDetailsType = VideoRecordingDetails::class;
   protected $recordingDetailsDataType = '';
+  /**
+   * @var VideoSnippet
+   */
+  public $snippet;
   protected $snippetType = VideoSnippet::class;
   protected $snippetDataType = '';
+  /**
+   * @var VideoStatistics
+   */
+  public $statistics;
   protected $statisticsType = VideoStatistics::class;
   protected $statisticsDataType = '';
+  /**
+   * @var VideoStatus
+   */
+  public $status;
   protected $statusType = VideoStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var VideoSuggestions
+   */
+  public $suggestions;
   protected $suggestionsType = VideoSuggestions::class;
   protected $suggestionsDataType = '';
+  /**
+   * @var VideoTopicDetails
+   */
+  public $topicDetails;
   protected $topicDetailsType = VideoTopicDetails::class;
   protected $topicDetailsDataType = '';
 

@@ -32,8 +32,16 @@ class MembershipsDetails extends \Google\Collection
    * @var string
    */
   public $highestAccessibleLevelDisplayName;
+  /**
+   * @var MembershipsDuration
+   */
+  public $membershipsDuration;
   protected $membershipsDurationType = MembershipsDuration::class;
   protected $membershipsDurationDataType = '';
+  /**
+   * @var MembershipsDurationAtLevel[]
+   */
+  public $membershipsDurationAtLevels;
   protected $membershipsDurationAtLevelsType = MembershipsDurationAtLevel::class;
   protected $membershipsDurationAtLevelsDataType = 'array';
 

@@ -36,6 +36,10 @@ class PlaylistSnippet extends \Google\Collection
    * @var string
    */
   public $description;
+  /**
+   * @var PlaylistLocalization
+   */
+  public $localized;
   protected $localizedType = PlaylistLocalization::class;
   protected $localizedDataType = '';
   /**
@@ -50,6 +54,10 @@ class PlaylistSnippet extends \Google\Collection
    * @var string
    */
   public $thumbnailVideoId;
+  /**
+   * @var ThumbnailDetails
+   */
+  public $thumbnails;
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   /**

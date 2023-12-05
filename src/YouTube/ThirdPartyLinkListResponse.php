@@ -24,6 +24,10 @@ class ThirdPartyLinkListResponse extends \Google\Collection
    * @var string
    */
   public $etag;
+  /**
+   * @var ThirdPartyLink[]
+   */
+  public $items;
   protected $itemsType = ThirdPartyLink::class;
   protected $itemsDataType = 'array';
   /**

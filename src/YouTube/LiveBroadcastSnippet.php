@@ -55,6 +55,10 @@ class LiveBroadcastSnippet extends \Google\Model
    * @var string
    */
   public $scheduledStartTime;
+  /**
+   * @var ThumbnailDetails
+   */
+  public $thumbnails;
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   /**

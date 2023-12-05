@@ -23,8 +23,16 @@ class VideoContentDetails extends \Google\Model
    * @var string
    */
   public $caption;
+  /**
+   * @var ContentRating
+   */
+  public $contentRating;
   protected $contentRatingType = ContentRating::class;
   protected $contentRatingDataType = '';
+  /**
+   * @var AccessPolicy
+   */
+  public $countryRestriction;
   protected $countryRestrictionType = AccessPolicy::class;
   protected $countryRestrictionDataType = '';
   /**
@@ -51,6 +59,10 @@ class VideoContentDetails extends \Google\Model
    * @var string
    */
   public $projection;
+  /**
+   * @var VideoContentDetailsRegionRestriction
+   */
+  public $regionRestriction;
   protected $regionRestrictionType = VideoContentDetailsRegionRestriction::class;
   protected $regionRestrictionDataType = '';
 

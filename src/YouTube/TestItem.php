@@ -31,6 +31,10 @@ class TestItem extends \Google\Model
    * @var string
    */
   public $id;
+  /**
+   * @var TestItemTestItemSnippet
+   */
+  public $snippet;
   protected $snippetType = TestItemTestItemSnippet::class;
   protected $snippetDataType = '';
 

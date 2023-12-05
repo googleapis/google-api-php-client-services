@@ -19,14 +19,34 @@ namespace Google\Service\YouTube;
 
 class ThumbnailDetails extends \Google\Model
 {
+  /**
+   * @var Thumbnail
+   */
+  public $default;
   protected $defaultType = Thumbnail::class;
   protected $defaultDataType = '';
+  /**
+   * @var Thumbnail
+   */
+  public $high;
   protected $highType = Thumbnail::class;
   protected $highDataType = '';
+  /**
+   * @var Thumbnail
+   */
+  public $maxres;
   protected $maxresType = Thumbnail::class;
   protected $maxresDataType = '';
+  /**
+   * @var Thumbnail
+   */
+  public $medium;
   protected $mediumType = Thumbnail::class;
   protected $mediumDataType = '';
+  /**
+   * @var Thumbnail
+   */
+  public $standard;
   protected $standardType = Thumbnail::class;
   protected $standardDataType = '';
 

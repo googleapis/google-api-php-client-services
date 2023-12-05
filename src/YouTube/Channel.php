@@ -19,14 +19,34 @@ namespace Google\Service\YouTube;
 
 class Channel extends \Google\Model
 {
+  /**
+   * @var ChannelAuditDetails
+   */
+  public $auditDetails;
   protected $auditDetailsType = ChannelAuditDetails::class;
   protected $auditDetailsDataType = '';
+  /**
+   * @var ChannelBrandingSettings
+   */
+  public $brandingSettings;
   protected $brandingSettingsType = ChannelBrandingSettings::class;
   protected $brandingSettingsDataType = '';
+  /**
+   * @var ChannelContentDetails
+   */
+  public $contentDetails;
   protected $contentDetailsType = ChannelContentDetails::class;
   protected $contentDetailsDataType = '';
+  /**
+   * @var ChannelContentOwnerDetails
+   */
+  public $contentOwnerDetails;
   protected $contentOwnerDetailsType = ChannelContentOwnerDetails::class;
   protected $contentOwnerDetailsDataType = '';
+  /**
+   * @var ChannelConversionPings
+   */
+  public $conversionPings;
   protected $conversionPingsType = ChannelConversionPings::class;
   protected $conversionPingsDataType = '';
   /**
@@ -41,14 +61,34 @@ class Channel extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var ChannelLocalization[]
+   */
+  public $localizations;
   protected $localizationsType = ChannelLocalization::class;
   protected $localizationsDataType = 'map';
+  /**
+   * @var ChannelSnippet
+   */
+  public $snippet;
   protected $snippetType = ChannelSnippet::class;
   protected $snippetDataType = '';
+  /**
+   * @var ChannelStatistics
+   */
+  public $statistics;
   protected $statisticsType = ChannelStatistics::class;
   protected $statisticsDataType = '';
+  /**
+   * @var ChannelStatus
+   */
+  public $status;
   protected $statusType = ChannelStatus::class;
   protected $statusDataType = '';
+  /**
+   * @var ChannelTopicDetails
+   */
+  public $topicDetails;
   protected $topicDetailsType = ChannelTopicDetails::class;
   protected $topicDetailsDataType = '';
 

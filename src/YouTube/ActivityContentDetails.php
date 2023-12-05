@@ -19,26 +19,70 @@ namespace Google\Service\YouTube;
 
 class ActivityContentDetails extends \Google\Model
 {
+  /**
+   * @var ActivityContentDetailsBulletin
+   */
+  public $bulletin;
   protected $bulletinType = ActivityContentDetailsBulletin::class;
   protected $bulletinDataType = '';
+  /**
+   * @var ActivityContentDetailsChannelItem
+   */
+  public $channelItem;
   protected $channelItemType = ActivityContentDetailsChannelItem::class;
   protected $channelItemDataType = '';
+  /**
+   * @var ActivityContentDetailsComment
+   */
+  public $comment;
   protected $commentType = ActivityContentDetailsComment::class;
   protected $commentDataType = '';
+  /**
+   * @var ActivityContentDetailsFavorite
+   */
+  public $favorite;
   protected $favoriteType = ActivityContentDetailsFavorite::class;
   protected $favoriteDataType = '';
+  /**
+   * @var ActivityContentDetailsLike
+   */
+  public $like;
   protected $likeType = ActivityContentDetailsLike::class;
   protected $likeDataType = '';
+  /**
+   * @var ActivityContentDetailsPlaylistItem
+   */
+  public $playlistItem;
   protected $playlistItemType = ActivityContentDetailsPlaylistItem::class;
   protected $playlistItemDataType = '';
+  /**
+   * @var ActivityContentDetailsPromotedItem
+   */
+  public $promotedItem;
   protected $promotedItemType = ActivityContentDetailsPromotedItem::class;
   protected $promotedItemDataType = '';
+  /**
+   * @var ActivityContentDetailsRecommendation
+   */
+  public $recommendation;
   protected $recommendationType = ActivityContentDetailsRecommendation::class;
   protected $recommendationDataType = '';
+  /**
+   * @var ActivityContentDetailsSocial
+   */
+  public $social;
   protected $socialType = ActivityContentDetailsSocial::class;
   protected $socialDataType = '';
+  /**
+   * @var ActivityContentDetailsSubscription
+   */
+  public $subscription;
   protected $subscriptionType = ActivityContentDetailsSubscription::class;
   protected $subscriptionDataType = '';
+  /**
+   * @var ActivityContentDetailsUpload
+   */
+  public $upload;
   protected $uploadType = ActivityContentDetailsUpload::class;
   protected $uploadDataType = '';
 

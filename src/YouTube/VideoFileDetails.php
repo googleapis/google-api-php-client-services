@@ -20,6 +20,10 @@ namespace Google\Service\YouTube;
 class VideoFileDetails extends \Google\Collection
 {
   protected $collection_key = 'videoStreams';
+  /**
+   * @var VideoFileDetailsAudioStream[]
+   */
+  public $audioStreams;
   protected $audioStreamsType = VideoFileDetailsAudioStream::class;
   protected $audioStreamsDataType = 'array';
   /**
@@ -50,6 +54,10 @@ class VideoFileDetails extends \Google\Collection
    * @var string
    */
   public $fileType;
+  /**
+   * @var VideoFileDetailsVideoStream[]
+   */
+  public $videoStreams;
   protected $videoStreamsType = VideoFileDetailsVideoStream::class;
   protected $videoStreamsDataType = 'array';
 

@@ -28,6 +28,10 @@ class MemberListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var Member[]
+   */
+  public $items;
   protected $itemsType = Member::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,8 +42,16 @@ class MemberListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**

@@ -27,6 +27,10 @@ class LiveChatUserBannedMessageDetails extends \Google\Model
    * @var string
    */
   public $banType;
+  /**
+   * @var ChannelProfileDetails
+   */
+  public $bannedUserDetails;
   protected $bannedUserDetailsType = ChannelProfileDetails::class;
   protected $bannedUserDetailsDataType = '';
 

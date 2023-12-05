@@ -28,6 +28,10 @@ class PlaylistListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var Playlist[]
+   */
+  public $items;
   protected $itemsType = Playlist::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,12 +42,20 @@ class PlaylistListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
    * @var string
    */
   public $prevPageToken;
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**

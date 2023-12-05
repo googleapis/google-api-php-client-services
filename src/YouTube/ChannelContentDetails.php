@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class ChannelContentDetails extends \Google\Model
 {
+  /**
+   * @var ChannelContentDetailsRelatedPlaylists
+   */
+  public $relatedPlaylists;
   protected $relatedPlaylistsType = ChannelContentDetailsRelatedPlaylists::class;
   protected $relatedPlaylistsDataType = '';
 

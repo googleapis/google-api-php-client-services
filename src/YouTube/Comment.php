@@ -31,6 +31,10 @@ class Comment extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var CommentSnippet
+   */
+  public $snippet;
   protected $snippetType = CommentSnippet::class;
   protected $snippetDataType = '';
 

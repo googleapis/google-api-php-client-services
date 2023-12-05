@@ -28,6 +28,10 @@ class VideoGetRatingResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var VideoRating[]
+   */
+  public $items;
   protected $itemsType = VideoRating::class;
   protected $itemsDataType = 'array';
   /**

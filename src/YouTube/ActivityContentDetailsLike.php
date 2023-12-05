@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class ActivityContentDetailsLike extends \Google\Model
 {
+  /**
+   * @var ResourceId
+   */
+  public $resourceId;
   protected $resourceIdType = ResourceId::class;
   protected $resourceIdDataType = '';
 

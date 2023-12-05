@@ -23,12 +23,20 @@ class SearchResult extends \Google\Model
    * @var string
    */
   public $etag;
+  /**
+   * @var ResourceId
+   */
+  public $id;
   protected $idType = ResourceId::class;
   protected $idDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var SearchResultSnippet
+   */
+  public $snippet;
   protected $snippetType = SearchResultSnippet::class;
   protected $snippetDataType = '';
 

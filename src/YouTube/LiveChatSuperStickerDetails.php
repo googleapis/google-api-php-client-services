@@ -31,6 +31,10 @@ class LiveChatSuperStickerDetails extends \Google\Model
    * @var string
    */
   public $currency;
+  /**
+   * @var SuperStickerMetadata
+   */
+  public $superStickerMetadata;
   protected $superStickerMetadataType = SuperStickerMetadata::class;
   protected $superStickerMetadataDataType = '';
   /**

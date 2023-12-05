@@ -19,8 +19,16 @@ namespace Google\Service\YouTube;
 
 class LiveStream extends \Google\Model
 {
+  /**
+   * @var CdnSettings
+   */
+  public $cdn;
   protected $cdnType = CdnSettings::class;
   protected $cdnDataType = '';
+  /**
+   * @var LiveStreamContentDetails
+   */
+  public $contentDetails;
   protected $contentDetailsType = LiveStreamContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
@@ -35,8 +43,16 @@ class LiveStream extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var LiveStreamSnippet
+   */
+  public $snippet;
   protected $snippetType = LiveStreamSnippet::class;
   protected $snippetDataType = '';
+  /**
+   * @var LiveStreamStatus
+   */
+  public $status;
   protected $statusType = LiveStreamStatus::class;
   protected $statusDataType = '';
 

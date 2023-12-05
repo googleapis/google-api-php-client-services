@@ -28,6 +28,10 @@ class SuperChatEventListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var SuperChatEvent[]
+   */
+  public $items;
   protected $itemsType = SuperChatEvent::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,8 +42,16 @@ class SuperChatEventListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**

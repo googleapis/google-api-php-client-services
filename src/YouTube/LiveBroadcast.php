@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class LiveBroadcast extends \Google\Model
 {
+  /**
+   * @var LiveBroadcastContentDetails
+   */
+  public $contentDetails;
   protected $contentDetailsType = LiveBroadcastContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
@@ -33,12 +37,28 @@ class LiveBroadcast extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var LiveBroadcastMonetizationDetails
+   */
+  public $monetizationDetails;
   protected $monetizationDetailsType = LiveBroadcastMonetizationDetails::class;
   protected $monetizationDetailsDataType = '';
+  /**
+   * @var LiveBroadcastSnippet
+   */
+  public $snippet;
   protected $snippetType = LiveBroadcastSnippet::class;
   protected $snippetDataType = '';
+  /**
+   * @var LiveBroadcastStatistics
+   */
+  public $statistics;
   protected $statisticsType = LiveBroadcastStatistics::class;
   protected $statisticsDataType = '';
+  /**
+   * @var LiveBroadcastStatus
+   */
+  public $status;
   protected $statusType = LiveBroadcastStatus::class;
   protected $statusDataType = '';
 

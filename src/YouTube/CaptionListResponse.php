@@ -28,6 +28,10 @@ class CaptionListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var Caption[]
+   */
+  public $items;
   protected $itemsType = Caption::class;
   protected $itemsDataType = 'array';
   /**
