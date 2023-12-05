@@ -20,8 +20,16 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p3beta1CelebrityTrack extends \Google\Collection
 {
   protected $collection_key = 'celebrities';
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1RecognizedCelebrity[]
+   */
+  public $celebrities;
   protected $celebritiesType = GoogleCloudVideointelligenceV1p3beta1RecognizedCelebrity::class;
   protected $celebritiesDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1Track
+   */
+  public $faceTrack;
   protected $faceTrackType = GoogleCloudVideointelligenceV1p3beta1Track::class;
   protected $faceTrackDataType = '';
 

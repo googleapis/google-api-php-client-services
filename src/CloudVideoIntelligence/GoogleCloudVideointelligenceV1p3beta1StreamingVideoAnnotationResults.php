@@ -20,16 +20,32 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p3beta1StreamingVideoAnnotationResults extends \Google\Collection
 {
   protected $collection_key = 'shotAnnotations';
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1ExplicitContentAnnotation
+   */
+  public $explicitAnnotation;
   protected $explicitAnnotationType = GoogleCloudVideointelligenceV1p3beta1ExplicitContentAnnotation::class;
   protected $explicitAnnotationDataType = '';
   /**
    * @var string
    */
   public $frameTimestamp;
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1LabelAnnotation[]
+   */
+  public $labelAnnotations;
   protected $labelAnnotationsType = GoogleCloudVideointelligenceV1p3beta1LabelAnnotation::class;
   protected $labelAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1ObjectTrackingAnnotation[]
+   */
+  public $objectAnnotations;
   protected $objectAnnotationsType = GoogleCloudVideointelligenceV1p3beta1ObjectTrackingAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1VideoSegment[]
+   */
+  public $shotAnnotations;
   protected $shotAnnotationsType = GoogleCloudVideointelligenceV1p3beta1VideoSegment::class;
   protected $shotAnnotationsDataType = 'array';
 

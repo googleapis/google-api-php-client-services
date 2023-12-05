@@ -19,6 +19,10 @@ namespace Google\Service\CloudVideoIntelligence;
 
 class GoogleCloudVideointelligenceV1p3beta1RecognizedCelebrity extends \Google\Model
 {
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1Celebrity
+   */
+  public $celebrity;
   protected $celebrityType = GoogleCloudVideointelligenceV1p3beta1Celebrity::class;
   protected $celebrityDataType = '';
   /**

@@ -19,12 +19,20 @@ namespace Google\Service\CloudVideoIntelligence;
 
 class GoogleCloudVideointelligenceV1p3beta1StreamingAnnotateVideoResponse extends \Google\Model
 {
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1StreamingVideoAnnotationResults
+   */
+  public $annotationResults;
   protected $annotationResultsType = GoogleCloudVideointelligenceV1p3beta1StreamingVideoAnnotationResults::class;
   protected $annotationResultsDataType = '';
   /**
    * @var string
    */
   public $annotationResultsUri;
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
 

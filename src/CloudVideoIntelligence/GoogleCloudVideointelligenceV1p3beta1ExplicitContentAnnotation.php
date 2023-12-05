@@ -20,6 +20,10 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p3beta1ExplicitContentAnnotation extends \Google\Collection
 {
   protected $collection_key = 'frames';
+  /**
+   * @var GoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame[]
+   */
+  public $frames;
   protected $framesType = GoogleCloudVideointelligenceV1p3beta1ExplicitContentFrame::class;
   protected $framesDataType = 'array';
   /**
