@@ -20,6 +20,10 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1ListDebugTokensResponse extends \Google\Collection
 {
   protected $collection_key = 'debugTokens';
+  /**
+   * @var GoogleFirebaseAppcheckV1DebugToken[]
+   */
+  public $debugTokens;
   protected $debugTokensType = GoogleFirebaseAppcheckV1DebugToken::class;
   protected $debugTokensDataType = 'array';
   /**

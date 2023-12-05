@@ -19,6 +19,10 @@ namespace Google\Service\Firebaseappcheck;
 
 class GoogleFirebaseAppcheckV1UpdateServiceRequest extends \Google\Model
 {
+  /**
+   * @var GoogleFirebaseAppcheckV1Service
+   */
+  public $service;
   protected $serviceType = GoogleFirebaseAppcheckV1Service::class;
   protected $serviceDataType = '';
   /**

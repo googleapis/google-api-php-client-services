@@ -20,6 +20,10 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1PublicJwkSet extends \Google\Collection
 {
   protected $collection_key = 'keys';
+  /**
+   * @var GoogleFirebaseAppcheckV1PublicJwk[]
+   */
+  public $keys;
   protected $keysType = GoogleFirebaseAppcheckV1PublicJwk::class;
   protected $keysDataType = 'array';
 

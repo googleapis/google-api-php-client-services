@@ -20,6 +20,10 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchGetRecaptchaV3ConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'configs';
+  /**
+   * @var GoogleFirebaseAppcheckV1RecaptchaV3Config[]
+   */
+  public $configs;
   protected $configsType = GoogleFirebaseAppcheckV1RecaptchaV3Config::class;
   protected $configsDataType = 'array';
 

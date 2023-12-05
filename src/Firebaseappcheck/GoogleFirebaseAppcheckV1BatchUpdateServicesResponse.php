@@ -20,6 +20,10 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchUpdateServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'services';
+  /**
+   * @var GoogleFirebaseAppcheckV1Service[]
+   */
+  public $services;
   protected $servicesType = GoogleFirebaseAppcheckV1Service::class;
   protected $servicesDataType = 'array';
 

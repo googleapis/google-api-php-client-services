@@ -20,6 +20,10 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchGetDeviceCheckConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'configs';
+  /**
+   * @var GoogleFirebaseAppcheckV1DeviceCheckConfig[]
+   */
+  public $configs;
   protected $configsType = GoogleFirebaseAppcheckV1DeviceCheckConfig::class;
   protected $configsDataType = 'array';
 

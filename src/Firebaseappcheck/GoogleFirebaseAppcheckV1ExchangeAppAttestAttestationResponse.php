@@ -19,6 +19,10 @@ namespace Google\Service\Firebaseappcheck;
 
 class GoogleFirebaseAppcheckV1ExchangeAppAttestAttestationResponse extends \Google\Model
 {
+  /**
+   * @var GoogleFirebaseAppcheckV1AppCheckToken
+   */
+  public $appCheckToken;
   protected $appCheckTokenType = GoogleFirebaseAppcheckV1AppCheckToken::class;
   protected $appCheckTokenDataType = '';
   /**

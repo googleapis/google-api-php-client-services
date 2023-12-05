@@ -20,6 +20,10 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchGetSafetyNetConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'configs';
+  /**
+   * @var GoogleFirebaseAppcheckV1SafetyNetConfig[]
+   */
+  public $configs;
   protected $configsType = GoogleFirebaseAppcheckV1SafetyNetConfig::class;
   protected $configsDataType = 'array';
 
