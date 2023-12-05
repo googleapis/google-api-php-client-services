@@ -20,6 +20,10 @@ namespace Google\Service\WorkloadManager;
 class ResourceFilter extends \Google\Collection
 {
   protected $collection_key = 'scopes';
+  /**
+   * @var GceInstanceFilter
+   */
+  public $gceInstanceFilter;
   protected $gceInstanceFilterType = GceInstanceFilter::class;
   protected $gceInstanceFilterDataType = '';
   /**

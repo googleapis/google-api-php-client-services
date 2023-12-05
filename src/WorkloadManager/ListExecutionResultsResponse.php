@@ -20,6 +20,10 @@ namespace Google\Service\WorkloadManager;
 class ListExecutionResultsResponse extends \Google\Collection
 {
   protected $collection_key = 'executionResults';
+  /**
+   * @var ExecutionResult[]
+   */
+  public $executionResults;
   protected $executionResultsType = ExecutionResult::class;
   protected $executionResultsDataType = 'array';
   /**

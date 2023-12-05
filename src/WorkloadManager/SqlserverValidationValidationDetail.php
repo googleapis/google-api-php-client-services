@@ -20,6 +20,10 @@ namespace Google\Service\WorkloadManager;
 class SqlserverValidationValidationDetail extends \Google\Collection
 {
   protected $collection_key = 'details';
+  /**
+   * @var SqlserverValidationDetails[]
+   */
+  public $details;
   protected $detailsType = SqlserverValidationDetails::class;
   protected $detailsDataType = 'array';
   /**

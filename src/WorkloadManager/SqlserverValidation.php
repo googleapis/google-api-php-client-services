@@ -32,6 +32,10 @@ class SqlserverValidation extends \Google\Collection
    * @var string
    */
   public $projectId;
+  /**
+   * @var SqlserverValidationValidationDetail[]
+   */
+  public $validationDetails;
   protected $validationDetailsType = SqlserverValidationValidationDetail::class;
   protected $validationDetailsDataType = 'array';
 

@@ -23,14 +23,26 @@ class Insight extends \Google\Model
    * @var string
    */
   public $instanceId;
+  /**
+   * @var SapDiscovery
+   */
+  public $sapDiscovery;
   protected $sapDiscoveryType = SapDiscovery::class;
   protected $sapDiscoveryDataType = '';
+  /**
+   * @var SapValidation
+   */
+  public $sapValidation;
   protected $sapValidationType = SapValidation::class;
   protected $sapValidationDataType = '';
   /**
    * @var string
    */
   public $sentTime;
+  /**
+   * @var SqlserverValidation
+   */
+  public $sqlserverValidation;
   protected $sqlserverValidationType = SqlserverValidation::class;
   protected $sqlserverValidationDataType = '';
 

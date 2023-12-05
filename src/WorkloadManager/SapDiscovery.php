@@ -19,10 +19,22 @@ namespace Google\Service\WorkloadManager;
 
 class SapDiscovery extends \Google\Model
 {
+  /**
+   * @var SapDiscoveryComponent
+   */
+  public $applicationLayer;
   protected $applicationLayerType = SapDiscoveryComponent::class;
   protected $applicationLayerDataType = '';
+  /**
+   * @var SapDiscoveryComponent
+   */
+  public $databaseLayer;
   protected $databaseLayerType = SapDiscoveryComponent::class;
   protected $databaseLayerDataType = '';
+  /**
+   * @var SapDiscoveryMetadata
+   */
+  public $metadata;
   protected $metadataType = SapDiscoveryMetadata::class;
   protected $metadataDataType = '';
   /**

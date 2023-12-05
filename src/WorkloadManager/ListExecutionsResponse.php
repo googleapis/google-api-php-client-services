@@ -20,6 +20,10 @@ namespace Google\Service\WorkloadManager;
 class ListExecutionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var Execution[]
+   */
+  public $executions;
   protected $executionsType = Execution::class;
   protected $executionsDataType = 'array';
   /**

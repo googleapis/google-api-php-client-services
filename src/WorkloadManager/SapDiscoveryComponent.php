@@ -20,14 +20,26 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryComponent extends \Google\Collection
 {
   protected $collection_key = 'resources';
+  /**
+   * @var SapDiscoveryComponentApplicationProperties
+   */
+  public $applicationProperties;
   protected $applicationPropertiesType = SapDiscoveryComponentApplicationProperties::class;
   protected $applicationPropertiesDataType = '';
+  /**
+   * @var SapDiscoveryComponentDatabaseProperties
+   */
+  public $databaseProperties;
   protected $databasePropertiesType = SapDiscoveryComponentDatabaseProperties::class;
   protected $databasePropertiesDataType = '';
   /**
    * @var string
    */
   public $hostProject;
+  /**
+   * @var SapDiscoveryResource[]
+   */
+  public $resources;
   protected $resourcesType = SapDiscoveryResource::class;
   protected $resourcesDataType = 'array';
   /**
