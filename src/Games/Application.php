@@ -28,12 +28,20 @@ class Application extends \Google\Collection
    * @var int
    */
   public $achievementCount;
+  /**
+   * @var ImageAsset[]
+   */
+  public $assets;
   protected $assetsType = ImageAsset::class;
   protected $assetsDataType = 'array';
   /**
    * @var string
    */
   public $author;
+  /**
+   * @var ApplicationCategory
+   */
+  public $category;
   protected $categoryType = ApplicationCategory::class;
   protected $categoryDataType = '';
   /**
@@ -48,6 +56,10 @@ class Application extends \Google\Collection
    * @var string
    */
   public $id;
+  /**
+   * @var Instance[]
+   */
+  public $instances;
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**

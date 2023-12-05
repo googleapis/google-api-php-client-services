@@ -20,14 +20,26 @@ namespace Google\Service\Games;
 class EventUpdateResponse extends \Google\Collection
 {
   protected $collection_key = 'playerEvents';
+  /**
+   * @var EventBatchRecordFailure[]
+   */
+  public $batchFailures;
   protected $batchFailuresType = EventBatchRecordFailure::class;
   protected $batchFailuresDataType = 'array';
+  /**
+   * @var EventRecordFailure[]
+   */
+  public $eventFailures;
   protected $eventFailuresType = EventRecordFailure::class;
   protected $eventFailuresDataType = 'array';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var PlayerEvent[]
+   */
+  public $playerEvents;
   protected $playerEventsType = PlayerEvent::class;
   protected $playerEventsDataType = 'array';
 

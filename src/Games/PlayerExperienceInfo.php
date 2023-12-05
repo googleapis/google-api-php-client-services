@@ -23,6 +23,10 @@ class PlayerExperienceInfo extends \Google\Model
    * @var string
    */
   public $currentExperiencePoints;
+  /**
+   * @var PlayerLevel
+   */
+  public $currentLevel;
   protected $currentLevelType = PlayerLevel::class;
   protected $currentLevelDataType = '';
   /**
@@ -33,6 +37,10 @@ class PlayerExperienceInfo extends \Google\Model
    * @var string
    */
   public $lastLevelUpTimestampMillis;
+  /**
+   * @var PlayerLevel
+   */
+  public $nextLevel;
   protected $nextLevelType = PlayerLevel::class;
   protected $nextLevelDataType = '';
 

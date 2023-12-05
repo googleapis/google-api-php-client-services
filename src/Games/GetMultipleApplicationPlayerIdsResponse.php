@@ -20,6 +20,10 @@ namespace Google\Service\Games;
 class GetMultipleApplicationPlayerIdsResponse extends \Google\Collection
 {
   protected $collection_key = 'playerIds';
+  /**
+   * @var ApplicationPlayerId[]
+   */
+  public $playerIds;
   protected $playerIdsType = ApplicationPlayerId::class;
   protected $playerIdsDataType = 'array';
 

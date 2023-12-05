@@ -20,6 +20,10 @@ namespace Google\Service\Games;
 class EventDefinition extends \Google\Collection
 {
   protected $collection_key = 'childEvents';
+  /**
+   * @var EventChild[]
+   */
+  public $childEvents;
   protected $childEventsType = EventChild::class;
   protected $childEventsDataType = 'array';
   /**

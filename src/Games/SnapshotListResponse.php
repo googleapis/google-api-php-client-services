@@ -20,6 +20,10 @@ namespace Google\Service\Games;
 class SnapshotListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Snapshot[]
+   */
+  public $items;
   protected $itemsType = Snapshot::class;
   protected $itemsDataType = 'array';
   /**

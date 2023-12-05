@@ -20,6 +20,10 @@ namespace Google\Service\Games;
 class AchievementDefinitionsListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var AchievementDefinition[]
+   */
+  public $items;
   protected $itemsType = AchievementDefinition::class;
   protected $itemsDataType = 'array';
   /**

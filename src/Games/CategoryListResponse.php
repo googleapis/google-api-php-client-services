@@ -20,6 +20,10 @@ namespace Google\Service\Games;
 class CategoryListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Category[]
+   */
+  public $items;
   protected $itemsType = Category::class;
   protected $itemsDataType = 'array';
   /**

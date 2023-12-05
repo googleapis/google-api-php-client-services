@@ -20,6 +20,10 @@ namespace Google\Service\Games;
 class EventDefinitionListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var EventDefinition[]
+   */
+  public $items;
   protected $itemsType = EventDefinition::class;
   protected $itemsDataType = 'array';
   /**

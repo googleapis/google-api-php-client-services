@@ -22,6 +22,10 @@ class PlayerLeaderboardScore extends \Google\Model
   protected $internal_gapi_mappings = [
         "leaderboardId" => "leaderboard_id",
   ];
+  /**
+   * @var LeaderboardScoreRank
+   */
+  public $friendsRank;
   protected $friendsRankType = LeaderboardScoreRank::class;
   protected $friendsRankDataType = '';
   /**
@@ -32,6 +36,10 @@ class PlayerLeaderboardScore extends \Google\Model
    * @var string
    */
   public $leaderboardId;
+  /**
+   * @var LeaderboardScoreRank
+   */
+  public $publicRank;
   protected $publicRankType = LeaderboardScoreRank::class;
   protected $publicRankDataType = '';
   /**
@@ -46,6 +54,10 @@ class PlayerLeaderboardScore extends \Google\Model
    * @var string
    */
   public $scoreValue;
+  /**
+   * @var LeaderboardScoreRank
+   */
+  public $socialRank;
   protected $socialRankType = LeaderboardScoreRank::class;
   protected $socialRankDataType = '';
   /**

@@ -24,8 +24,16 @@ class EventPeriodUpdate extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var EventPeriodRange
+   */
+  public $timePeriod;
   protected $timePeriodType = EventPeriodRange::class;
   protected $timePeriodDataType = '';
+  /**
+   * @var EventUpdateRequest[]
+   */
+  public $updates;
   protected $updatesType = EventUpdateRequest::class;
   protected $updatesDataType = 'array';
 
