@@ -20,6 +20,10 @@ namespace Google\Service\Fitness;
 class ListSessionsResponse extends \Google\Collection
 {
   protected $collection_key = 'session';
+  /**
+   * @var Session[]
+   */
+  public $deletedSession;
   protected $deletedSessionType = Session::class;
   protected $deletedSessionDataType = 'array';
   /**
@@ -30,6 +34,10 @@ class ListSessionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Session[]
+   */
+  public $session;
   protected $sessionType = Session::class;
   protected $sessionDataType = 'array';
 

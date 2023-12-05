@@ -24,8 +24,16 @@ class ListDataPointChangesResponse extends \Google\Collection
    * @var string
    */
   public $dataSourceId;
+  /**
+   * @var DataPoint[]
+   */
+  public $deletedDataPoint;
   protected $deletedDataPointType = DataPoint::class;
   protected $deletedDataPointDataType = 'array';
+  /**
+   * @var DataPoint[]
+   */
+  public $insertedDataPoint;
   protected $insertedDataPointType = DataPoint::class;
   protected $insertedDataPointDataType = 'array';
   /**

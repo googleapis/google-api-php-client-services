@@ -20,14 +20,34 @@ namespace Google\Service\Fitness;
 class AggregateRequest extends \Google\Collection
 {
   protected $collection_key = 'filteredDataQualityStandard';
+  /**
+   * @var AggregateBy[]
+   */
+  public $aggregateBy;
   protected $aggregateByType = AggregateBy::class;
   protected $aggregateByDataType = 'array';
+  /**
+   * @var BucketByActivity
+   */
+  public $bucketByActivitySegment;
   protected $bucketByActivitySegmentType = BucketByActivity::class;
   protected $bucketByActivitySegmentDataType = '';
+  /**
+   * @var BucketByActivity
+   */
+  public $bucketByActivityType;
   protected $bucketByActivityTypeType = BucketByActivity::class;
   protected $bucketByActivityTypeDataType = '';
+  /**
+   * @var BucketBySession
+   */
+  public $bucketBySession;
   protected $bucketBySessionType = BucketBySession::class;
   protected $bucketBySessionDataType = '';
+  /**
+   * @var BucketByTime
+   */
+  public $bucketByTime;
   protected $bucketByTimeType = BucketByTime::class;
   protected $bucketByTimeDataType = '';
   /**

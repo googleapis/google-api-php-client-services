@@ -27,6 +27,10 @@ class Session extends \Google\Model
    * @var int
    */
   public $activityType;
+  /**
+   * @var Application
+   */
+  public $application;
   protected $applicationType = Application::class;
   protected $applicationDataType = '';
   /**

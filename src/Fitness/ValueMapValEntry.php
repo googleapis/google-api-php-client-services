@@ -23,6 +23,10 @@ class ValueMapValEntry extends \Google\Model
    * @var string
    */
   public $key;
+  /**
+   * @var MapValue
+   */
+  public $value;
   protected $valueType = MapValue::class;
   protected $valueDataType = '';
 

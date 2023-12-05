@@ -20,6 +20,10 @@ namespace Google\Service\Fitness;
 class AggregateResponse extends \Google\Collection
 {
   protected $collection_key = 'bucket';
+  /**
+   * @var AggregateBucket[]
+   */
+  public $bucket;
   protected $bucketType = AggregateBucket::class;
   protected $bucketDataType = 'array';
 

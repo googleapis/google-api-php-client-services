@@ -23,6 +23,10 @@ class BucketByTime extends \Google\Model
    * @var string
    */
   public $durationMillis;
+  /**
+   * @var BucketByTimePeriod
+   */
+  public $period;
   protected $periodType = BucketByTimePeriod::class;
   protected $periodDataType = '';
 

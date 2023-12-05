@@ -24,12 +24,20 @@ class AggregateBucket extends \Google\Collection
    * @var int
    */
   public $activity;
+  /**
+   * @var Dataset[]
+   */
+  public $dataset;
   protected $datasetType = Dataset::class;
   protected $datasetDataType = 'array';
   /**
    * @var string
    */
   public $endTimeMillis;
+  /**
+   * @var Session
+   */
+  public $session;
   protected $sessionType = Session::class;
   protected $sessionDataType = '';
   /**
