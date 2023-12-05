@@ -59,6 +59,12 @@ class EthereumDetails extends \Google\Model
    * @var string
    */
   public $nodeType;
+  /**
+   * @var ValidatorConfig
+   */
+  public $validatorConfig;
+  protected $validatorConfigType = ValidatorConfig::class;
+  protected $validatorConfigDataType = '';
 
   /**
    * @param EthereumEndpoints
@@ -185,6 +191,20 @@ class EthereumDetails extends \Google\Model
   public function getNodeType()
   {
     return $this->nodeType;
+  }
+  /**
+   * @param ValidatorConfig
+   */
+  public function setValidatorConfig(ValidatorConfig $validatorConfig)
+  {
+    $this->validatorConfig = $validatorConfig;
+  }
+  /**
+   * @return ValidatorConfig
+   */
+  public function getValidatorConfig()
+  {
+    return $this->validatorConfig;
   }
 }
 
