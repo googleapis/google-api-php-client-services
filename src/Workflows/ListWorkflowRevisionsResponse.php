@@ -24,6 +24,10 @@ class ListWorkflowRevisionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Workflow[]
+   */
+  public $workflows;
   protected $workflowsType = Workflow::class;
   protected $workflowsDataType = 'array';
 
