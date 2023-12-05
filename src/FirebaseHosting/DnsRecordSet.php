@@ -20,12 +20,20 @@ namespace Google\Service\FirebaseHosting;
 class DnsRecordSet extends \Google\Collection
 {
   protected $collection_key = 'records';
+  /**
+   * @var Status
+   */
+  public $checkError;
   protected $checkErrorType = Status::class;
   protected $checkErrorDataType = '';
   /**
    * @var string
    */
   public $domainName;
+  /**
+   * @var DnsRecord[]
+   */
+  public $records;
   protected $recordsType = DnsRecord::class;
   protected $recordsDataType = 'array';
 

@@ -24,8 +24,16 @@ class DnsUpdates extends \Google\Collection
    * @var string
    */
   public $checkTime;
+  /**
+   * @var DnsRecordSet[]
+   */
+  public $desired;
   protected $desiredType = DnsRecordSet::class;
   protected $desiredDataType = 'array';
+  /**
+   * @var DnsRecordSet[]
+   */
+  public $discovered;
   protected $discoveredType = DnsRecordSet::class;
   protected $discoveredDataType = 'array';
 

@@ -20,10 +20,22 @@ namespace Google\Service\FirebaseHosting;
 class LiveMigrationStep extends \Google\Collection
 {
   protected $collection_key = 'issues';
+  /**
+   * @var CertVerification
+   */
+  public $certVerification;
   protected $certVerificationType = CertVerification::class;
   protected $certVerificationDataType = '';
+  /**
+   * @var DnsUpdates
+   */
+  public $dnsUpdates;
   protected $dnsUpdatesType = DnsUpdates::class;
   protected $dnsUpdatesDataType = '';
+  /**
+   * @var Status[]
+   */
+  public $issues;
   protected $issuesType = Status::class;
   protected $issuesDataType = 'array';
   /**

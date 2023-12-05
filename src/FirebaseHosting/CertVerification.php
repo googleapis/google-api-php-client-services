@@ -19,8 +19,16 @@ namespace Google\Service\FirebaseHosting;
 
 class CertVerification extends \Google\Model
 {
+  /**
+   * @var DnsUpdates
+   */
+  public $dns;
   protected $dnsType = DnsUpdates::class;
   protected $dnsDataType = '';
+  /**
+   * @var HttpUpdate
+   */
+  public $http;
   protected $httpType = HttpUpdate::class;
   protected $httpDataType = '';
 
