@@ -19,6 +19,10 @@ namespace Google\Service\YouTubeAnalytics;
 
 class GroupItem extends \Google\Model
 {
+  /**
+   * @var Errors
+   */
+  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
@@ -37,6 +41,10 @@ class GroupItem extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var GroupItemResource
+   */
+  public $resource;
   protected $resourceType = GroupItemResource::class;
   protected $resourceDataType = '';
 

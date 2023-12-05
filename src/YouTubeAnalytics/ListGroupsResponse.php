@@ -20,12 +20,20 @@ namespace Google\Service\YouTubeAnalytics;
 class ListGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
+  /**
+   * @var Errors
+   */
+  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
    * @var string
    */
   public $etag;
+  /**
+   * @var Group[]
+   */
+  public $items;
   protected $itemsType = Group::class;
   protected $itemsDataType = 'array';
   /**
