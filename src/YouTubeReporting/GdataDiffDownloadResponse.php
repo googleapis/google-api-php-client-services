@@ -19,6 +19,10 @@ namespace Google\Service\YouTubeReporting;
 
 class GdataDiffDownloadResponse extends \Google\Model
 {
+  /**
+   * @var GdataCompositeMedia
+   */
+  public $objectLocation;
   protected $objectLocationType = GdataCompositeMedia::class;
   protected $objectLocationDataType = '';
 

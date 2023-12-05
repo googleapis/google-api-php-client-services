@@ -19,12 +19,20 @@ namespace Google\Service\YouTubeReporting;
 
 class GdataDiffChecksumsResponse extends \Google\Model
 {
+  /**
+   * @var GdataCompositeMedia
+   */
+  public $checksumsLocation;
   protected $checksumsLocationType = GdataCompositeMedia::class;
   protected $checksumsLocationDataType = '';
   /**
    * @var string
    */
   public $chunkSizeBytes;
+  /**
+   * @var GdataCompositeMedia
+   */
+  public $objectLocation;
   protected $objectLocationType = GdataCompositeMedia::class;
   protected $objectLocationDataType = '';
   /**
