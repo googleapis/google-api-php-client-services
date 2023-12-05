@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class VideoRecordingDetails extends \Google\Model
 {
+  /**
+   * @var GeoPoint
+   */
+  public $location;
   protected $locationType = GeoPoint::class;
   protected $locationDataType = '';
   /**

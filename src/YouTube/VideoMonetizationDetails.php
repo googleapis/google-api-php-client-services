@@ -19,6 +19,10 @@ namespace Google\Service\YouTube;
 
 class VideoMonetizationDetails extends \Google\Model
 {
+  /**
+   * @var AccessPolicy
+   */
+  public $access;
   protected $accessType = AccessPolicy::class;
   protected $accessDataType = '';
 

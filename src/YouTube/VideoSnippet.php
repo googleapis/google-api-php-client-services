@@ -48,6 +48,10 @@ class VideoSnippet extends \Google\Collection
    * @var string
    */
   public $liveBroadcastContent;
+  /**
+   * @var VideoLocalization
+   */
+  public $localized;
   protected $localizedType = VideoLocalization::class;
   protected $localizedDataType = '';
   /**
@@ -58,6 +62,10 @@ class VideoSnippet extends \Google\Collection
    * @var string[]
    */
   public $tags;
+  /**
+   * @var ThumbnailDetails
+   */
+  public $thumbnails;
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   /**

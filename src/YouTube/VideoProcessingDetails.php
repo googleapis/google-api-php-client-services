@@ -35,6 +35,10 @@ class VideoProcessingDetails extends \Google\Model
    * @var string
    */
   public $processingIssuesAvailability;
+  /**
+   * @var VideoProcessingDetailsProcessingProgress
+   */
+  public $processingProgress;
   protected $processingProgressType = VideoProcessingDetailsProcessingProgress::class;
   protected $processingProgressDataType = '';
   /**

@@ -28,6 +28,10 @@ class VideoListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
+  /**
+   * @var Video[]
+   */
+  public $items;
   protected $itemsType = Video::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,12 +42,20 @@ class VideoListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var PageInfo
+   */
+  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
    * @var string
    */
   public $prevPageToken;
+  /**
+   * @var TokenPagination
+   */
+  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**
