@@ -19,6 +19,10 @@ namespace Google\Service\WorkflowExecutions;
 
 class StackTraceElement extends \Google\Model
 {
+  /**
+   * @var Position
+   */
+  public $position;
   protected $positionType = Position::class;
   protected $positionDataType = '';
   /**

@@ -35,6 +35,10 @@ class Execution extends \Google\Model
    * @var string
    */
   public $endTime;
+  /**
+   * @var Error
+   */
+  public $error;
   protected $errorType = Error::class;
   protected $errorDataType = '';
   /**
@@ -57,8 +61,16 @@ class Execution extends \Google\Model
    * @var string
    */
   public $state;
+  /**
+   * @var StateError
+   */
+  public $stateError;
   protected $stateErrorType = StateError::class;
   protected $stateErrorDataType = '';
+  /**
+   * @var Status
+   */
+  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
   /**

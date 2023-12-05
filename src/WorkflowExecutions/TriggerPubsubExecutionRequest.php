@@ -30,6 +30,10 @@ class TriggerPubsubExecutionRequest extends \Google\Model
    * @var int
    */
   public $deliveryAttempt;
+  /**
+   * @var PubsubMessage
+   */
+  public $message;
   protected $messageType = PubsubMessage::class;
   protected $messageDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\WorkflowExecutions;
 class ListExecutionsResponse extends \Google\Collection
 {
   protected $collection_key = 'executions';
+  /**
+   * @var Execution[]
+   */
+  public $executions;
   protected $executionsType = Execution::class;
   protected $executionsDataType = 'array';
   /**
