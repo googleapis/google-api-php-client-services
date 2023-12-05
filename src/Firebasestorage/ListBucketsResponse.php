@@ -20,6 +20,10 @@ namespace Google\Service\Firebasestorage;
 class ListBucketsResponse extends \Google\Collection
 {
   protected $collection_key = 'buckets';
+  /**
+   * @var Bucket[]
+   */
+  public $buckets;
   protected $bucketsType = Bucket::class;
   protected $bucketsDataType = 'array';
   /**
