@@ -19,6 +19,10 @@ namespace Google\Service\CloudWorkstations;
 
 class Host extends \Google\Model
 {
+  /**
+   * @var GceInstance
+   */
+  public $gceInstance;
   protected $gceInstanceType = GceInstance::class;
   protected $gceInstanceDataType = '';
 

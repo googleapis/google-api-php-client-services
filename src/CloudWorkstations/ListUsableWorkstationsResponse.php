@@ -28,6 +28,10 @@ class ListUsableWorkstationsResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
+  /**
+   * @var Workstation[]
+   */
+  public $workstations;
   protected $workstationsType = Workstation::class;
   protected $workstationsDataType = 'array';
 

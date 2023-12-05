@@ -19,6 +19,10 @@ namespace Google\Service\CloudWorkstations;
 
 class PersistentDirectory extends \Google\Model
 {
+  /**
+   * @var GceRegionalPersistentDisk
+   */
+  public $gcePd;
   protected $gcePdType = GceRegionalPersistentDisk::class;
   protected $gcePdDataType = '';
   /**
