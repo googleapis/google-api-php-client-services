@@ -23,12 +23,28 @@ class Destination extends \Google\Model
    * @var string
    */
   public $cloudFunction;
+  /**
+   * @var CloudRun
+   */
+  public $cloudRun;
   protected $cloudRunType = CloudRun::class;
   protected $cloudRunDataType = '';
+  /**
+   * @var GKE
+   */
+  public $gke;
   protected $gkeType = GKE::class;
   protected $gkeDataType = '';
+  /**
+   * @var HttpEndpoint
+   */
+  public $httpEndpoint;
   protected $httpEndpointType = HttpEndpoint::class;
   protected $httpEndpointDataType = '';
+  /**
+   * @var NetworkConfig
+   */
+  public $networkConfig;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
   /**

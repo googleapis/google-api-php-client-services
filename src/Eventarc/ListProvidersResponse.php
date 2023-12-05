@@ -24,6 +24,10 @@ class ListProvidersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var Provider[]
+   */
+  public $providers;
   protected $providersType = Provider::class;
   protected $providersDataType = 'array';
   /**

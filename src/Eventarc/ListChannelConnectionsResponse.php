@@ -20,6 +20,10 @@ namespace Google\Service\Eventarc;
 class ListChannelConnectionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  /**
+   * @var ChannelConnection[]
+   */
+  public $channelConnections;
   protected $channelConnectionsType = ChannelConnection::class;
   protected $channelConnectionsDataType = 'array';
   /**

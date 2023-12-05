@@ -19,6 +19,10 @@ namespace Google\Service\Eventarc;
 
 class Transport extends \Google\Model
 {
+  /**
+   * @var Pubsub
+   */
+  public $pubsub;
   protected $pubsubType = Pubsub::class;
   protected $pubsubDataType = '';
 

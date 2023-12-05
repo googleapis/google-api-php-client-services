@@ -24,6 +24,10 @@ class Provider extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var EventType[]
+   */
+  public $eventTypes;
   protected $eventTypesType = EventType::class;
   protected $eventTypesDataType = 'array';
   /**
