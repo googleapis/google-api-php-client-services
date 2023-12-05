@@ -20,8 +20,16 @@ namespace Google\Service\FirebaseManagement;
 class AnalyticsDetails extends \Google\Collection
 {
   protected $collection_key = 'streamMappings';
+  /**
+   * @var AnalyticsProperty
+   */
+  public $analyticsProperty;
   protected $analyticsPropertyType = AnalyticsProperty::class;
   protected $analyticsPropertyDataType = '';
+  /**
+   * @var StreamMapping[]
+   */
+  public $streamMappings;
   protected $streamMappingsType = StreamMapping::class;
   protected $streamMappingsDataType = 'array';
 

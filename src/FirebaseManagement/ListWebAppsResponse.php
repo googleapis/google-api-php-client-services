@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseManagement;
 class ListWebAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'apps';
+  /**
+   * @var WebApp[]
+   */
+  public $apps;
   protected $appsType = WebApp::class;
   protected $appsDataType = 'array';
   /**

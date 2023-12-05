@@ -20,6 +20,10 @@ namespace Google\Service\FirebaseManagement;
 class SearchFirebaseAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'apps';
+  /**
+   * @var FirebaseAppInfo[]
+   */
+  public $apps;
   protected $appsType = FirebaseAppInfo::class;
   protected $appsDataType = 'array';
   /**
