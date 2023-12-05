@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class UpdateFormInfoRequest extends \Google\Model
 {
+  /**
+   * @var Info
+   */
+  public $info;
   protected $infoType = Info::class;
   protected $infoDataType = '';
   /**

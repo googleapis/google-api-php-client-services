@@ -23,6 +23,10 @@ class VideoItem extends \Google\Model
    * @var string
    */
   public $caption;
+  /**
+   * @var Video
+   */
+  public $video;
   protected $videoType = Video::class;
   protected $videoDataType = '';
 

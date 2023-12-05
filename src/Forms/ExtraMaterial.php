@@ -19,8 +19,16 @@ namespace Google\Service\Forms;
 
 class ExtraMaterial extends \Google\Model
 {
+  /**
+   * @var TextLink
+   */
+  public $link;
   protected $linkType = TextLink::class;
   protected $linkDataType = '';
+  /**
+   * @var VideoLink
+   */
+  public $video;
   protected $videoType = VideoLink::class;
   protected $videoDataType = '';
 

@@ -20,10 +20,22 @@ namespace Google\Service\Forms;
 class BatchUpdateFormResponse extends \Google\Collection
 {
   protected $collection_key = 'replies';
+  /**
+   * @var Form
+   */
+  public $form;
   protected $formType = Form::class;
   protected $formDataType = '';
+  /**
+   * @var Response[]
+   */
+  public $replies;
   protected $repliesType = Response::class;
   protected $repliesDataType = 'array';
+  /**
+   * @var WriteControl
+   */
+  public $writeControl;
   protected $writeControlType = WriteControl::class;
   protected $writeControlDataType = '';
 

@@ -20,6 +20,10 @@ namespace Google\Service\Forms;
 class Feedback extends \Google\Collection
 {
   protected $collection_key = 'material';
+  /**
+   * @var ExtraMaterial[]
+   */
+  public $material;
   protected $materialType = ExtraMaterial::class;
   protected $materialDataType = 'array';
   /**

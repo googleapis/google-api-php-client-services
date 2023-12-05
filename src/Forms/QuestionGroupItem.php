@@ -20,10 +20,22 @@ namespace Google\Service\Forms;
 class QuestionGroupItem extends \Google\Collection
 {
   protected $collection_key = 'questions';
+  /**
+   * @var Grid
+   */
+  public $grid;
   protected $gridType = Grid::class;
   protected $gridDataType = '';
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
+  /**
+   * @var Question[]
+   */
+  public $questions;
   protected $questionsType = Question::class;
   protected $questionsDataType = 'array';
 

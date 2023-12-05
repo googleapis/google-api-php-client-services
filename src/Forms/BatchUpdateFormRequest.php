@@ -24,8 +24,16 @@ class BatchUpdateFormRequest extends \Google\Collection
    * @var bool
    */
   public $includeFormInResponse;
+  /**
+   * @var Request[]
+   */
+  public $requests;
   protected $requestsType = Request::class;
   protected $requestsDataType = 'array';
+  /**
+   * @var WriteControl
+   */
+  public $writeControl;
   protected $writeControlType = WriteControl::class;
   protected $writeControlDataType = '';
 

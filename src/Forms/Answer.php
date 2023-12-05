@@ -19,14 +19,26 @@ namespace Google\Service\Forms;
 
 class Answer extends \Google\Model
 {
+  /**
+   * @var FileUploadAnswers
+   */
+  public $fileUploadAnswers;
   protected $fileUploadAnswersType = FileUploadAnswers::class;
   protected $fileUploadAnswersDataType = '';
+  /**
+   * @var Grade
+   */
+  public $grade;
   protected $gradeType = Grade::class;
   protected $gradeDataType = '';
   /**
    * @var string
    */
   public $questionId;
+  /**
+   * @var TextAnswers
+   */
+  public $textAnswers;
   protected $textAnswersType = TextAnswers::class;
   protected $textAnswersDataType = '';
 

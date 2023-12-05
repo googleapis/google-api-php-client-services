@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class Response extends \Google\Model
 {
+  /**
+   * @var CreateItemResponse
+   */
+  public $createItem;
   protected $createItemType = CreateItemResponse::class;
   protected $createItemDataType = '';
 

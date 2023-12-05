@@ -19,8 +19,16 @@ namespace Google\Service\Forms;
 
 class QuestionItem extends \Google\Model
 {
+  /**
+   * @var Image
+   */
+  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
+  /**
+   * @var Question
+   */
+  public $question;
   protected $questionType = Question::class;
   protected $questionDataType = '';
 

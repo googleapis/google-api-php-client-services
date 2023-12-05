@@ -20,6 +20,10 @@ namespace Google\Service\Forms;
 class ChoiceQuestion extends \Google\Collection
 {
   protected $collection_key = 'options';
+  /**
+   * @var Option[]
+   */
+  public $options;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
   /**

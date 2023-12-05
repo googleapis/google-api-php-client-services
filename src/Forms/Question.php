@@ -19,12 +19,28 @@ namespace Google\Service\Forms;
 
 class Question extends \Google\Model
 {
+  /**
+   * @var ChoiceQuestion
+   */
+  public $choiceQuestion;
   protected $choiceQuestionType = ChoiceQuestion::class;
   protected $choiceQuestionDataType = '';
+  /**
+   * @var DateQuestion
+   */
+  public $dateQuestion;
   protected $dateQuestionType = DateQuestion::class;
   protected $dateQuestionDataType = '';
+  /**
+   * @var FileUploadQuestion
+   */
+  public $fileUploadQuestion;
   protected $fileUploadQuestionType = FileUploadQuestion::class;
   protected $fileUploadQuestionDataType = '';
+  /**
+   * @var Grading
+   */
+  public $grading;
   protected $gradingType = Grading::class;
   protected $gradingDataType = '';
   /**
@@ -35,12 +51,28 @@ class Question extends \Google\Model
    * @var bool
    */
   public $required;
+  /**
+   * @var RowQuestion
+   */
+  public $rowQuestion;
   protected $rowQuestionType = RowQuestion::class;
   protected $rowQuestionDataType = '';
+  /**
+   * @var ScaleQuestion
+   */
+  public $scaleQuestion;
   protected $scaleQuestionType = ScaleQuestion::class;
   protected $scaleQuestionDataType = '';
+  /**
+   * @var TextQuestion
+   */
+  public $textQuestion;
   protected $textQuestionType = TextQuestion::class;
   protected $textQuestionDataType = '';
+  /**
+   * @var TimeQuestion
+   */
+  public $timeQuestion;
   protected $timeQuestionType = TimeQuestion::class;
   protected $timeQuestionDataType = '';
 

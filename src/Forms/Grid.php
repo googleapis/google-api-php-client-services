@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class Grid extends \Google\Model
 {
+  /**
+   * @var ChoiceQuestion
+   */
+  public $columns;
   protected $columnsType = ChoiceQuestion::class;
   protected $columnsDataType = '';
   /**

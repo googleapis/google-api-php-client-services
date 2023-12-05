@@ -19,16 +19,40 @@ namespace Google\Service\Forms;
 
 class Request extends \Google\Model
 {
+  /**
+   * @var CreateItemRequest
+   */
+  public $createItem;
   protected $createItemType = CreateItemRequest::class;
   protected $createItemDataType = '';
+  /**
+   * @var DeleteItemRequest
+   */
+  public $deleteItem;
   protected $deleteItemType = DeleteItemRequest::class;
   protected $deleteItemDataType = '';
+  /**
+   * @var MoveItemRequest
+   */
+  public $moveItem;
   protected $moveItemType = MoveItemRequest::class;
   protected $moveItemDataType = '';
+  /**
+   * @var UpdateFormInfoRequest
+   */
+  public $updateFormInfo;
   protected $updateFormInfoType = UpdateFormInfoRequest::class;
   protected $updateFormInfoDataType = '';
+  /**
+   * @var UpdateItemRequest
+   */
+  public $updateItem;
   protected $updateItemType = UpdateItemRequest::class;
   protected $updateItemDataType = '';
+  /**
+   * @var UpdateSettingsRequest
+   */
+  public $updateSettings;
   protected $updateSettingsType = UpdateSettingsRequest::class;
   protected $updateSettingsDataType = '';
 

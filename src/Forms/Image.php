@@ -27,6 +27,10 @@ class Image extends \Google\Model
    * @var string
    */
   public $contentUri;
+  /**
+   * @var MediaProperties
+   */
+  public $properties;
   protected $propertiesType = MediaProperties::class;
   protected $propertiesDataType = '';
   /**

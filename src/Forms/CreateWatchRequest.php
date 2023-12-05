@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class CreateWatchRequest extends \Google\Model
 {
+  /**
+   * @var Watch
+   */
+  public $watch;
   protected $watchType = Watch::class;
   protected $watchDataType = '';
   /**

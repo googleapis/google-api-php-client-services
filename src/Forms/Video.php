@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class Video extends \Google\Model
 {
+  /**
+   * @var MediaProperties
+   */
+  public $properties;
   protected $propertiesType = MediaProperties::class;
   protected $propertiesDataType = '';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class UpdateSettingsRequest extends \Google\Model
 {
+  /**
+   * @var FormSettings
+   */
+  public $settings;
   protected $settingsType = FormSettings::class;
   protected $settingsDataType = '';
   /**

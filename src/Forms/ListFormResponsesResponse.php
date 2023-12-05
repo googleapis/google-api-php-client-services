@@ -24,6 +24,10 @@ class ListFormResponsesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var FormResponse[]
+   */
+  public $responses;
   protected $responsesType = FormResponse::class;
   protected $responsesDataType = 'array';
 

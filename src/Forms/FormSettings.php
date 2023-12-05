@@ -19,6 +19,10 @@ namespace Google\Service\Forms;
 
 class FormSettings extends \Google\Model
 {
+  /**
+   * @var QuizSettings
+   */
+  public $quizSettings;
   protected $quizSettingsType = QuizSettings::class;
   protected $quizSettingsDataType = '';
 

@@ -23,24 +23,48 @@ class Item extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var ImageItem
+   */
+  public $imageItem;
   protected $imageItemType = ImageItem::class;
   protected $imageItemDataType = '';
   /**
    * @var string
    */
   public $itemId;
+  /**
+   * @var PageBreakItem
+   */
+  public $pageBreakItem;
   protected $pageBreakItemType = PageBreakItem::class;
   protected $pageBreakItemDataType = '';
+  /**
+   * @var QuestionGroupItem
+   */
+  public $questionGroupItem;
   protected $questionGroupItemType = QuestionGroupItem::class;
   protected $questionGroupItemDataType = '';
+  /**
+   * @var QuestionItem
+   */
+  public $questionItem;
   protected $questionItemType = QuestionItem::class;
   protected $questionItemDataType = '';
+  /**
+   * @var TextItem
+   */
+  public $textItem;
   protected $textItemType = TextItem::class;
   protected $textItemDataType = '';
   /**
    * @var string
    */
   public $title;
+  /**
+   * @var VideoItem
+   */
+  public $videoItem;
   protected $videoItemType = VideoItem::class;
   protected $videoItemDataType = '';
 
