@@ -27,8 +27,16 @@ class GoogleFirebaseFcmDataV1beta1AndroidDeliveryData extends \Google\Model
    * @var string
    */
   public $appId;
+  /**
+   * @var GoogleFirebaseFcmDataV1beta1Data
+   */
+  public $data;
   protected $dataType = GoogleFirebaseFcmDataV1beta1Data::class;
   protected $dataDataType = '';
+  /**
+   * @var GoogleTypeDate
+   */
+  public $date;
   protected $dateType = GoogleTypeDate::class;
   protected $dateDataType = '';
 
