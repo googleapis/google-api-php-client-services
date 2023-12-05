@@ -20,8 +20,16 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1beta2FaceAnnotation extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2FaceFrame[]
+   */
+  public $frames;
   protected $framesType = GoogleCloudVideointelligenceV1beta2FaceFrame::class;
   protected $framesDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2FaceSegment[]
+   */
+  public $segments;
   protected $segmentsType = GoogleCloudVideointelligenceV1beta2FaceSegment::class;
   protected $segmentsDataType = 'array';
   /**

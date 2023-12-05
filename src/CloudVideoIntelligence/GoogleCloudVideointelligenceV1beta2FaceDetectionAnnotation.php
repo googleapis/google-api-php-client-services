@@ -24,6 +24,10 @@ class GoogleCloudVideointelligenceV1beta2FaceDetectionAnnotation extends \Google
    * @var string
    */
   public $thumbnail;
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2Track[]
+   */
+  public $tracks;
   protected $tracksType = GoogleCloudVideointelligenceV1beta2Track::class;
   protected $tracksDataType = 'array';
   /**

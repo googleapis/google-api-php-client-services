@@ -20,6 +20,10 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1beta2FaceFrame extends \Google\Collection
 {
   protected $collection_key = 'normalizedBoundingBoxes';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2NormalizedBoundingBox[]
+   */
+  public $normalizedBoundingBoxes;
   protected $normalizedBoundingBoxesType = GoogleCloudVideointelligenceV1beta2NormalizedBoundingBox::class;
   protected $normalizedBoundingBoxesDataType = 'array';
   /**

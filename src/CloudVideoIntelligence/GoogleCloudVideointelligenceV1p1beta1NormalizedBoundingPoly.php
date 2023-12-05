@@ -20,6 +20,10 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p1beta1NormalizedBoundingPoly extends \Google\Collection
 {
   protected $collection_key = 'vertices';
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1NormalizedVertex[]
+   */
+  public $vertices;
   protected $verticesType = GoogleCloudVideointelligenceV1p1beta1NormalizedVertex::class;
   protected $verticesDataType = 'array';
 

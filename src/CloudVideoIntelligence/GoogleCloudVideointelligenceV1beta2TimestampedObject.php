@@ -20,10 +20,22 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1beta2TimestampedObject extends \Google\Collection
 {
   protected $collection_key = 'landmarks';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2DetectedAttribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudVideointelligenceV1beta2DetectedAttribute::class;
   protected $attributesDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2DetectedLandmark[]
+   */
+  public $landmarks;
   protected $landmarksType = GoogleCloudVideointelligenceV1beta2DetectedLandmark::class;
   protected $landmarksDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2NormalizedBoundingBox
+   */
+  public $normalizedBoundingBox;
   protected $normalizedBoundingBoxType = GoogleCloudVideointelligenceV1beta2NormalizedBoundingBox::class;
   protected $normalizedBoundingBoxDataType = '';
   /**

@@ -20,6 +20,10 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p2beta1AnnotateVideoProgress extends \Google\Collection
 {
   protected $collection_key = 'annotationProgress';
+  /**
+   * @var GoogleCloudVideointelligenceV1p2beta1VideoAnnotationProgress[]
+   */
+  public $annotationProgress;
   protected $annotationProgressType = GoogleCloudVideointelligenceV1p2beta1VideoAnnotationProgress::class;
   protected $annotationProgressDataType = 'array';
 

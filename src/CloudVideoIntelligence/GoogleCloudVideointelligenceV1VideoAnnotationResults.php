@@ -20,40 +20,104 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1VideoAnnotationResults extends \Google\Collection
 {
   protected $collection_key = 'textAnnotations';
+  /**
+   * @var GoogleRpcStatus
+   */
+  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1ExplicitContentAnnotation
+   */
+  public $explicitAnnotation;
   protected $explicitAnnotationType = GoogleCloudVideointelligenceV1ExplicitContentAnnotation::class;
   protected $explicitAnnotationDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1FaceAnnotation[]
+   */
+  public $faceAnnotations;
   protected $faceAnnotationsType = GoogleCloudVideointelligenceV1FaceAnnotation::class;
   protected $faceAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1FaceDetectionAnnotation[]
+   */
+  public $faceDetectionAnnotations;
   protected $faceDetectionAnnotationsType = GoogleCloudVideointelligenceV1FaceDetectionAnnotation::class;
   protected $faceDetectionAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1LabelAnnotation[]
+   */
+  public $frameLabelAnnotations;
   protected $frameLabelAnnotationsType = GoogleCloudVideointelligenceV1LabelAnnotation::class;
   protected $frameLabelAnnotationsDataType = 'array';
   /**
    * @var string
    */
   public $inputUri;
+  /**
+   * @var GoogleCloudVideointelligenceV1LogoRecognitionAnnotation[]
+   */
+  public $logoRecognitionAnnotations;
   protected $logoRecognitionAnnotationsType = GoogleCloudVideointelligenceV1LogoRecognitionAnnotation::class;
   protected $logoRecognitionAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1ObjectTrackingAnnotation[]
+   */
+  public $objectAnnotations;
   protected $objectAnnotationsType = GoogleCloudVideointelligenceV1ObjectTrackingAnnotation::class;
   protected $objectAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1PersonDetectionAnnotation[]
+   */
+  public $personDetectionAnnotations;
   protected $personDetectionAnnotationsType = GoogleCloudVideointelligenceV1PersonDetectionAnnotation::class;
   protected $personDetectionAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1VideoSegment
+   */
+  public $segment;
   protected $segmentType = GoogleCloudVideointelligenceV1VideoSegment::class;
   protected $segmentDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1LabelAnnotation[]
+   */
+  public $segmentLabelAnnotations;
   protected $segmentLabelAnnotationsType = GoogleCloudVideointelligenceV1LabelAnnotation::class;
   protected $segmentLabelAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1LabelAnnotation[]
+   */
+  public $segmentPresenceLabelAnnotations;
   protected $segmentPresenceLabelAnnotationsType = GoogleCloudVideointelligenceV1LabelAnnotation::class;
   protected $segmentPresenceLabelAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1VideoSegment[]
+   */
+  public $shotAnnotations;
   protected $shotAnnotationsType = GoogleCloudVideointelligenceV1VideoSegment::class;
   protected $shotAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1LabelAnnotation[]
+   */
+  public $shotLabelAnnotations;
   protected $shotLabelAnnotationsType = GoogleCloudVideointelligenceV1LabelAnnotation::class;
   protected $shotLabelAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1LabelAnnotation[]
+   */
+  public $shotPresenceLabelAnnotations;
   protected $shotPresenceLabelAnnotationsType = GoogleCloudVideointelligenceV1LabelAnnotation::class;
   protected $shotPresenceLabelAnnotationsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1SpeechTranscription[]
+   */
+  public $speechTranscriptions;
   protected $speechTranscriptionsType = GoogleCloudVideointelligenceV1SpeechTranscription::class;
   protected $speechTranscriptionsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1TextAnnotation[]
+   */
+  public $textAnnotations;
   protected $textAnnotationsType = GoogleCloudVideointelligenceV1TextAnnotation::class;
   protected $textAnnotationsDataType = 'array';
 

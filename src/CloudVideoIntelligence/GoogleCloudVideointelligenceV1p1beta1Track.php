@@ -20,14 +20,26 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p1beta1Track extends \Google\Collection
 {
   protected $collection_key = 'timestampedObjects';
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1DetectedAttribute[]
+   */
+  public $attributes;
   protected $attributesType = GoogleCloudVideointelligenceV1p1beta1DetectedAttribute::class;
   protected $attributesDataType = 'array';
   /**
    * @var float
    */
   public $confidence;
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1VideoSegment
+   */
+  public $segment;
   protected $segmentType = GoogleCloudVideointelligenceV1p1beta1VideoSegment::class;
   protected $segmentDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1TimestampedObject[]
+   */
+  public $timestampedObjects;
   protected $timestampedObjectsType = GoogleCloudVideointelligenceV1p1beta1TimestampedObject::class;
   protected $timestampedObjectsDataType = 'array';
 

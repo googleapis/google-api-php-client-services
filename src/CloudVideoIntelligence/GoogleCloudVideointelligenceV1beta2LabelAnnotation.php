@@ -20,12 +20,28 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1beta2LabelAnnotation extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2Entity[]
+   */
+  public $categoryEntities;
   protected $categoryEntitiesType = GoogleCloudVideointelligenceV1beta2Entity::class;
   protected $categoryEntitiesDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2Entity
+   */
+  public $entity;
   protected $entityType = GoogleCloudVideointelligenceV1beta2Entity::class;
   protected $entityDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2LabelFrame[]
+   */
+  public $frames;
   protected $framesType = GoogleCloudVideointelligenceV1beta2LabelFrame::class;
   protected $framesDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2LabelSegment[]
+   */
+  public $segments;
   protected $segmentsType = GoogleCloudVideointelligenceV1beta2LabelSegment::class;
   protected $segmentsDataType = 'array';
   /**

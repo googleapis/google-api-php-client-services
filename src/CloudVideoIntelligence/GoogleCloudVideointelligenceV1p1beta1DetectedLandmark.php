@@ -27,6 +27,10 @@ class GoogleCloudVideointelligenceV1p1beta1DetectedLandmark extends \Google\Mode
    * @var string
    */
   public $name;
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1NormalizedVertex
+   */
+  public $point;
   protected $pointType = GoogleCloudVideointelligenceV1p1beta1NormalizedVertex::class;
   protected $pointDataType = '';
 

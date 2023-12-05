@@ -24,10 +24,22 @@ class GoogleCloudVideointelligenceV1p1beta1ObjectTrackingAnnotation extends \Goo
    * @var float
    */
   public $confidence;
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1Entity
+   */
+  public $entity;
   protected $entityType = GoogleCloudVideointelligenceV1p1beta1Entity::class;
   protected $entityDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1ObjectTrackingFrame[]
+   */
+  public $frames;
   protected $framesType = GoogleCloudVideointelligenceV1p1beta1ObjectTrackingFrame::class;
   protected $framesDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1p1beta1VideoSegment
+   */
+  public $segment;
   protected $segmentType = GoogleCloudVideointelligenceV1p1beta1VideoSegment::class;
   protected $segmentDataType = '';
   /**

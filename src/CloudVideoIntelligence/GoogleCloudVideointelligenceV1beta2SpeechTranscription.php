@@ -20,6 +20,10 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1beta2SpeechTranscription extends \Google\Collection
 {
   protected $collection_key = 'alternatives';
+  /**
+   * @var GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative[]
+   */
+  public $alternatives;
   protected $alternativesType = GoogleCloudVideointelligenceV1beta2SpeechRecognitionAlternative::class;
   protected $alternativesDataType = 'array';
   /**

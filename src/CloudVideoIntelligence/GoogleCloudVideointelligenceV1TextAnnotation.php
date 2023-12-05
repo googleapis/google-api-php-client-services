@@ -20,6 +20,10 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1TextAnnotation extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var GoogleCloudVideointelligenceV1TextSegment[]
+   */
+  public $segments;
   protected $segmentsType = GoogleCloudVideointelligenceV1TextSegment::class;
   protected $segmentsDataType = 'array';
   /**

@@ -19,6 +19,10 @@ namespace Google\Service\CloudVideoIntelligence;
 
 class GoogleCloudVideointelligenceV1p2beta1FaceSegment extends \Google\Model
 {
+  /**
+   * @var GoogleCloudVideointelligenceV1p2beta1VideoSegment
+   */
+  public $segment;
   protected $segmentType = GoogleCloudVideointelligenceV1p2beta1VideoSegment::class;
   protected $segmentDataType = '';
 

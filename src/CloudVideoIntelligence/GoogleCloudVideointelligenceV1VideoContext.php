@@ -20,22 +20,58 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1VideoContext extends \Google\Collection
 {
   protected $collection_key = 'segments';
+  /**
+   * @var GoogleCloudVideointelligenceV1ExplicitContentDetectionConfig
+   */
+  public $explicitContentDetectionConfig;
   protected $explicitContentDetectionConfigType = GoogleCloudVideointelligenceV1ExplicitContentDetectionConfig::class;
   protected $explicitContentDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1FaceDetectionConfig
+   */
+  public $faceDetectionConfig;
   protected $faceDetectionConfigType = GoogleCloudVideointelligenceV1FaceDetectionConfig::class;
   protected $faceDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1LabelDetectionConfig
+   */
+  public $labelDetectionConfig;
   protected $labelDetectionConfigType = GoogleCloudVideointelligenceV1LabelDetectionConfig::class;
   protected $labelDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1ObjectTrackingConfig
+   */
+  public $objectTrackingConfig;
   protected $objectTrackingConfigType = GoogleCloudVideointelligenceV1ObjectTrackingConfig::class;
   protected $objectTrackingConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1PersonDetectionConfig
+   */
+  public $personDetectionConfig;
   protected $personDetectionConfigType = GoogleCloudVideointelligenceV1PersonDetectionConfig::class;
   protected $personDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1VideoSegment[]
+   */
+  public $segments;
   protected $segmentsType = GoogleCloudVideointelligenceV1VideoSegment::class;
   protected $segmentsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1ShotChangeDetectionConfig
+   */
+  public $shotChangeDetectionConfig;
   protected $shotChangeDetectionConfigType = GoogleCloudVideointelligenceV1ShotChangeDetectionConfig::class;
   protected $shotChangeDetectionConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1SpeechTranscriptionConfig
+   */
+  public $speechTranscriptionConfig;
   protected $speechTranscriptionConfigType = GoogleCloudVideointelligenceV1SpeechTranscriptionConfig::class;
   protected $speechTranscriptionConfigDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1TextDetectionConfig
+   */
+  public $textDetectionConfig;
   protected $textDetectionConfigType = GoogleCloudVideointelligenceV1TextDetectionConfig::class;
   protected $textDetectionConfigDataType = '';
 

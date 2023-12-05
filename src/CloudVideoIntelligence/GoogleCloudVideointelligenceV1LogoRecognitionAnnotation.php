@@ -20,10 +20,22 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1LogoRecognitionAnnotation extends \Google\Collection
 {
   protected $collection_key = 'tracks';
+  /**
+   * @var GoogleCloudVideointelligenceV1Entity
+   */
+  public $entity;
   protected $entityType = GoogleCloudVideointelligenceV1Entity::class;
   protected $entityDataType = '';
+  /**
+   * @var GoogleCloudVideointelligenceV1VideoSegment[]
+   */
+  public $segments;
   protected $segmentsType = GoogleCloudVideointelligenceV1VideoSegment::class;
   protected $segmentsDataType = 'array';
+  /**
+   * @var GoogleCloudVideointelligenceV1Track[]
+   */
+  public $tracks;
   protected $tracksType = GoogleCloudVideointelligenceV1Track::class;
   protected $tracksDataType = 'array';
 
