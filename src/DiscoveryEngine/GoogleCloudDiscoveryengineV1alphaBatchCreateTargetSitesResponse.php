@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaBatchCreateTargetSitesResponse extends \Google\Collection
 {
   protected $collection_key = 'targetSites';
+  /**
+   * @var GoogleCloudDiscoveryengineV1alphaTargetSite[]
+   */
+  public $targetSites;
   protected $targetSitesType = GoogleCloudDiscoveryengineV1alphaTargetSite::class;
   protected $targetSitesDataType = 'array';
 

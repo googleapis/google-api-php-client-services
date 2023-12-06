@@ -28,10 +28,10 @@ use Google\Service\DiscoveryEngine\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $conversations = $discoveryengineService->projects_locations_dataStores_conversations;
+ *   $conversations = $discoveryengineService->projects_locations_collections_engines_conversations;
  *  </code>
  */
-class ProjectsLocationsDataStoresConversations extends \Google\Service\Resource
+class ProjectsLocationsCollectionsEnginesConversations extends \Google\Service\Resource
 {
   /**
    * Converses a conversation. (conversations.converse)
@@ -103,7 +103,7 @@ class ProjectsLocationsDataStoresConversations extends \Google\Service\Resource
   }
   /**
    * Lists all Conversations by their parent DataStore.
-   * (conversations.listProjectsLocationsDataStoresConversations)
+   * (conversations.listProjectsLocationsCollectionsEnginesConversations)
    *
    * @param string $parent Required. The data store resource name. Format: `projec
    * ts/{project_number}/locations/{location_id}/collections/{collection}/dataStor
@@ -122,7 +122,7 @@ class ProjectsLocationsDataStoresConversations extends \Google\Service\Resource
    * `ListConversations` call. Provide this to retrieve the subsequent page.
    * @return GoogleCloudDiscoveryengineV1betaListConversationsResponse
    */
-  public function listProjectsLocationsDataStoresConversations($parent, $optParams = [])
+  public function listProjectsLocationsCollectionsEnginesConversations($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -153,4 +153,4 @@ class ProjectsLocationsDataStoresConversations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsDataStoresConversations::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsDataStoresConversations');
+class_alias(ProjectsLocationsCollectionsEnginesConversations::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsEnginesConversations');

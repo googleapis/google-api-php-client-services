@@ -36,6 +36,12 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
    */
   public $languageCode;
   /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec
+   */
+  public $modelSpec;
+  protected $modelSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec::class;
+  protected $modelSpecDataType = '';
+  /**
    * @var int
    */
   public $summaryResultCount;
@@ -95,6 +101,20 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec
+   */
+  public function setModelSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec $modelSpec)
+  {
+    $this->modelSpec = $modelSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec
+   */
+  public function getModelSpec()
+  {
+    return $this->modelSpec;
   }
   /**
    * @param int
