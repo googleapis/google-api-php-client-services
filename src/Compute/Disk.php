@@ -51,6 +51,10 @@ class Disk extends \Google\Collection
   protected $diskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $diskEncryptionKeyDataType = '';
   /**
+   * @var bool
+   */
+  public $enableConfidentialCompute;
+  /**
    * @var GuestOsFeature[]
    */
   public $guestOsFeatures;
@@ -296,6 +300,20 @@ class Disk extends \Google\Collection
   public function getDiskEncryptionKey()
   {
     return $this->diskEncryptionKey;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableConfidentialCompute($enableConfidentialCompute)
+  {
+    $this->enableConfidentialCompute = $enableConfidentialCompute;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableConfidentialCompute()
+  {
+    return $this->enableConfidentialCompute;
   }
   /**
    * @param GuestOsFeature[]

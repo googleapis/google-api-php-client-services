@@ -283,8 +283,8 @@ class TargetSslProxies extends \Google\Service\Resource
   /**
    * Sets the SSL policy for TargetSslProxy. The SSL policy specifies the server-
    * side support for SSL features. This affects connections between clients and
-   * the SSL proxy load balancer. They do not affect the connection between the
-   * load balancer and the backends. (targetSslProxies.setSslPolicy)
+   * the load balancer. They do not affect the connection between the load
+   * balancer and the backends. (targetSslProxies.setSslPolicy)
    *
    * @param string $project Project ID for this request.
    * @param string $targetSslProxy Name of the TargetSslProxy resource whose SSL
