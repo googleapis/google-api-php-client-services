@@ -161,6 +161,16 @@ class Assuredworkloads extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'enableResourceMonitoring' => [
+              'path' => 'v1/{+name}:enableResourceMonitoring',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
