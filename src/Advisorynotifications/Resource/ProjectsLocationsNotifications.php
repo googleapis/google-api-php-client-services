@@ -25,10 +25,10 @@ use Google\Service\Advisorynotifications\GoogleCloudAdvisorynotificationsV1Notif
  * Typical usage is:
  *  <code>
  *   $advisorynotificationsService = new Google\Service\Advisorynotifications(...);
- *   $notifications = $advisorynotificationsService->organizations_locations_notifications;
+ *   $notifications = $advisorynotificationsService->projects_locations_notifications;
  *  </code>
  */
-class OrganizationsLocationsNotifications extends \Google\Service\Resource
+class ProjectsLocationsNotifications extends \Google\Service\Resource
 {
   /**
    * Gets a notification. (notifications.get)
@@ -53,7 +53,7 @@ class OrganizationsLocationsNotifications extends \Google\Service\Resource
   }
   /**
    * Lists notifications under a given parent.
-   * (notifications.listOrganizationsLocationsNotifications)
+   * (notifications.listProjectsLocationsNotifications)
    *
    * @param string $parent Required. The parent, which owns this collection of
    * notifications. Must be of the form
@@ -77,7 +77,7 @@ class OrganizationsLocationsNotifications extends \Google\Service\Resource
    * should be returned in the response.
    * @return GoogleCloudAdvisorynotificationsV1ListNotificationsResponse
    */
-  public function listOrganizationsLocationsNotifications($parent, $optParams = [])
+  public function listProjectsLocationsNotifications($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -86,4 +86,4 @@ class OrganizationsLocationsNotifications extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OrganizationsLocationsNotifications::class, 'Google_Service_Advisorynotifications_Resource_OrganizationsLocationsNotifications');
+class_alias(ProjectsLocationsNotifications::class, 'Google_Service_Advisorynotifications_Resource_ProjectsLocationsNotifications');

@@ -46,7 +46,7 @@ class OrganizationsLocations extends \Google\Service\Resource
   /**
    * Update notification settings. (locations.updateSettings)
    *
-   * @param string $name Output only. The resource name of the settings to
+   * @param string $name Identifier. The resource name of the settings to
    * retrieve. Format: organizations/{organization}/locations/{location}/settings.
    * @param GoogleCloudAdvisorynotificationsV1Settings $postBody
    * @param array $optParams Optional parameters.

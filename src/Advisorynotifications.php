@@ -40,6 +40,7 @@ class Advisorynotifications extends \Google\Service
 
   public $organizations_locations;
   public $organizations_locations_notifications;
+  public $projects_locations_notifications;
 
   /**
    * Constructs the internal representation of the Advisorynotifications
@@ -89,6 +90,56 @@ class Advisorynotifications extends \Google\Service
         ]
     );
     $this->organizations_locations_notifications = new Advisorynotifications\Resource\OrganizationsLocationsNotifications(
+        $this,
+        $this->serviceName,
+        'notifications',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/notifications',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_notifications = new Advisorynotifications\Resource\ProjectsLocationsNotifications(
         $this,
         $this->serviceName,
         'notifications',
