@@ -17,6 +17,8 @@
 
 namespace Google\Service\Translate\Resource;
 
+use Google\Service\Translate\AdaptiveMtTranslateRequest;
+use Google\Service\Translate\AdaptiveMtTranslateResponse;
 use Google\Service\Translate\BatchTranslateDocumentRequest;
 use Google\Service\Translate\BatchTranslateTextRequest;
 use Google\Service\Translate\DetectLanguageRequest;
@@ -42,6 +44,21 @@ use Google\Service\Translate\TranslateTextResponse;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Translate text using Adaptive MT. (locations.adaptiveMtTranslate)
+   *
+   * @param string $parent Required. Location to make a regional call. Format:
+   * `projects/{project-number-or-id}/locations/{location-id}`.
+   * @param AdaptiveMtTranslateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return AdaptiveMtTranslateResponse
+   */
+  public function adaptiveMtTranslate($parent, AdaptiveMtTranslateRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('adaptiveMtTranslate', [$params], AdaptiveMtTranslateResponse::class);
+  }
   /**
    * Translates a large volume of document in asynchronous batch mode. This
    * function provides real-time output as the inputs are being processed. If
