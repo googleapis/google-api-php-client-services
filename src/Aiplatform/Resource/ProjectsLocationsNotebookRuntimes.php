@@ -21,6 +21,7 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1AssignNotebookRuntimeReques
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListNotebookRuntimesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1NotebookRuntime;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1StartNotebookRuntimeRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest;
 use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
 /**
@@ -147,6 +148,23 @@ class ProjectsLocationsNotebookRuntimes extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('start', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Upgrades a NotebookRuntime. (notebookRuntimes.upgrade)
+   *
+   * @param string $name Required. The name of the NotebookRuntime resource to be
+   * upgrade. Instead of checking whether the name is in valid NotebookRuntime
+   * resource name format, directly throw NotFound exception if there is no such
+   * NotebookRuntime in spanner.
+   * @param GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   */
+  public function upgrade($name, GoogleCloudAiplatformV1UpgradeNotebookRuntimeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('upgrade', [$params], GoogleLongrunningOperation::class);
   }
 }
 

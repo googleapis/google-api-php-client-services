@@ -150,9 +150,9 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViews extends \Google\Service\R
   /**
    * Updates the parameters of a single FeatureView. (featureViews.patch)
    *
-   * @param string $name Output only. Name of the FeatureView. Format: `projects/{
-   * project}/locations/{location}/featureOnlineStores/{feature_online_store}/feat
-   * ureViews/{feature_view}`
+   * @param string $name Identifier. Name of the FeatureView. Format: `projects/{p
+   * roject}/locations/{location}/featureOnlineStores/{feature_online_store}/featu
+   * reViews/{feature_view}`
    * @param GoogleCloudAiplatformV1FeatureView $postBody
    * @param array $optParams Optional parameters.
    *

@@ -127,9 +127,8 @@ class ProjectsLocationsFeatureOnlineStores extends \Google\Service\Resource
    * Updates the parameters of a single FeatureOnlineStore.
    * (featureOnlineStores.patch)
    *
-   * @param string $name Output only. Name of the FeatureOnlineStore. Format: `pro
-   * jects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}
-   * `
+   * @param string $name Identifier. Name of the FeatureOnlineStore. Format: `proj
+   * ects/{project}/locations/{location}/featureOnlineStores/{featureOnlineStore}`
    * @param GoogleCloudAiplatformV1FeatureOnlineStore $postBody
    * @param array $optParams Optional parameters.
    *

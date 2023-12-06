@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1DeployedIndexRef extends \Google\Model
+class GoogleCloudAiplatformV1Blob extends \Google\Model
 {
   /**
    * @var string
    */
-  public $deployedIndexId;
+  public $data;
   /**
    * @var string
    */
-  public $displayName;
-  /**
-   * @var string
-   */
-  public $indexEndpoint;
+  public $mimeType;
 
   /**
    * @param string
    */
-  public function setDeployedIndexId($deployedIndexId)
+  public function setData($data)
   {
-    $this->deployedIndexId = $deployedIndexId;
+    $this->data = $data;
   }
   /**
    * @return string
    */
-  public function getDeployedIndexId()
+  public function getData()
   {
-    return $this->deployedIndexId;
+    return $this->data;
   }
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setMimeType($mimeType)
   {
-    $this->displayName = $displayName;
+    $this->mimeType = $mimeType;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getMimeType()
   {
-    return $this->displayName;
-  }
-  /**
-   * @param string
-   */
-  public function setIndexEndpoint($indexEndpoint)
-  {
-    $this->indexEndpoint = $indexEndpoint;
-  }
-  /**
-   * @return string
-   */
-  public function getIndexEndpoint()
-  {
-    return $this->indexEndpoint;
+    return $this->mimeType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1DeployedIndexRef::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1DeployedIndexRef');
+class_alias(GoogleCloudAiplatformV1Blob::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Blob');

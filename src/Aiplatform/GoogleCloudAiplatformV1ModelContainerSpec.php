@@ -39,6 +39,12 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * @var GoogleCloudAiplatformV1Port[]
+   */
+  public $grpcPorts;
+  protected $grpcPortsType = GoogleCloudAiplatformV1Port::class;
+  protected $grpcPortsDataType = 'array';
+  /**
    * @var GoogleCloudAiplatformV1Probe
    */
   public $healthProbe;
@@ -128,6 +134,20 @@ class GoogleCloudAiplatformV1ModelContainerSpec extends \Google\Collection
   public function getEnv()
   {
     return $this->env;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1Port[]
+   */
+  public function setGrpcPorts($grpcPorts)
+  {
+    $this->grpcPorts = $grpcPorts;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Port[]
+   */
+  public function getGrpcPorts()
+  {
+    return $this->grpcPorts;
   }
   /**
    * @param GoogleCloudAiplatformV1Probe

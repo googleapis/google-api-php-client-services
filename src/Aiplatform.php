@@ -1569,6 +1569,26 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'directPredict' => [
+              'path' => 'v1/{+endpoint}:directPredict',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'directRawPredict' => [
+              'path' => 'v1/{+endpoint}:directRawPredict',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'explain' => [
               'path' => 'v1/{+endpoint}:explain',
               'httpMethod' => 'POST',
@@ -5192,6 +5212,16 @@ class Aiplatform extends \Google\Service
               ],
             ],'start' => [
               'path' => 'v1/{+name}:start',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'upgrade' => [
+              'path' => 'v1/{+name}:upgrade',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [

@@ -35,6 +35,12 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
    */
   public $createTime;
   /**
+   * @var GoogleCloudAiplatformV1ModelDataStats
+   */
+  public $dataStats;
+  protected $dataStatsType = GoogleCloudAiplatformV1ModelDataStats::class;
+  protected $dataStatsDataType = '';
+  /**
    * @var GoogleCloudAiplatformV1DeployedModelRef[]
    */
   public $deployedModels;
@@ -194,6 +200,20 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ModelDataStats
+   */
+  public function setDataStats(GoogleCloudAiplatformV1ModelDataStats $dataStats)
+  {
+    $this->dataStats = $dataStats;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ModelDataStats
+   */
+  public function getDataStats()
+  {
+    return $this->dataStats;
   }
   /**
    * @param GoogleCloudAiplatformV1DeployedModelRef[]

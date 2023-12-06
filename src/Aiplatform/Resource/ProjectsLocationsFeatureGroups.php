@@ -125,7 +125,7 @@ class ProjectsLocationsFeatureGroups extends \Google\Service\Resource
   /**
    * Updates the parameters of a single FeatureGroup. (featureGroups.patch)
    *
-   * @param string $name Output only. Name of the FeatureGroup. Format:
+   * @param string $name Identifier. Name of the FeatureGroup. Format:
    * `projects/{project}/locations/{location}/featureGroups/{featureGroup}`
    * @param GoogleCloudAiplatformV1FeatureGroup $postBody
    * @param array $optParams Optional parameters.

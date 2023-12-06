@@ -41,6 +41,10 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
   /**
    * @var string
    */
+  public $note;
+  /**
+   * @var string
+   */
   public $promptType;
   /**
    * @var string[]
@@ -118,6 +122,20 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
   public function getMaxOutputTokens()
   {
     return $this->maxOutputTokens;
+  }
+  /**
+   * @param string
+   */
+  public function setNote($note)
+  {
+    $this->note = $note;
+  }
+  /**
+   * @return string
+   */
+  public function getNote()
+  {
+    return $this->note;
   }
   /**
    * @param string

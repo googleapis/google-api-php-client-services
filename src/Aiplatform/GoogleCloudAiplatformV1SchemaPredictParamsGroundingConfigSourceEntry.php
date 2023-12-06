@@ -26,6 +26,10 @@ class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry exten
   /**
    * @var string
    */
+  public $inlineContext;
+  /**
+   * @var string
+   */
   public $type;
   /**
    * @var string
@@ -45,6 +49,20 @@ class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry exten
   public function getEnterpriseDatastore()
   {
     return $this->enterpriseDatastore;
+  }
+  /**
+   * @param string
+   */
+  public function setInlineContext($inlineContext)
+  {
+    $this->inlineContext = $inlineContext;
+  }
+  /**
+   * @return string
+   */
+  public function getInlineContext()
+  {
+    return $this->inlineContext;
   }
   /**
    * @param string

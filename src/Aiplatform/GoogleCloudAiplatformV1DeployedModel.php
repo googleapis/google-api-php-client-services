@@ -75,6 +75,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
    * @var string
    */
   public $serviceAccount;
+  /**
+   * @var string
+   */
+  public $sharedResources;
 
   /**
    * @param GoogleCloudAiplatformV1AutomaticResources
@@ -243,6 +247,20 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param string
+   */
+  public function setSharedResources($sharedResources)
+  {
+    $this->sharedResources = $sharedResources;
+  }
+  /**
+   * @return string
+   */
+  public function getSharedResources()
+  {
+    return $this->sharedResources;
   }
 }
 

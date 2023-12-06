@@ -22,7 +22,21 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
   /**
    * @var string
    */
+  public $annotationSchemaUri;
+  /**
+   * @var string
+   */
   public $annotationsFilter;
+  /**
+   * @var string
+   */
+  public $exportUse;
+  /**
+   * @var GoogleCloudAiplatformV1ExportFilterSplit
+   */
+  public $filterSplit;
+  protected $filterSplitType = GoogleCloudAiplatformV1ExportFilterSplit::class;
+  protected $filterSplitDataType = '';
   /**
    * @var GoogleCloudAiplatformV1ExportFractionSplit
    */
@@ -35,7 +49,25 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
   public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
+  /**
+   * @var string
+   */
+  public $savedQueryId;
 
+  /**
+   * @param string
+   */
+  public function setAnnotationSchemaUri($annotationSchemaUri)
+  {
+    $this->annotationSchemaUri = $annotationSchemaUri;
+  }
+  /**
+   * @return string
+   */
+  public function getAnnotationSchemaUri()
+  {
+    return $this->annotationSchemaUri;
+  }
   /**
    * @param string
    */
@@ -49,6 +81,34 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
   public function getAnnotationsFilter()
   {
     return $this->annotationsFilter;
+  }
+  /**
+   * @param string
+   */
+  public function setExportUse($exportUse)
+  {
+    $this->exportUse = $exportUse;
+  }
+  /**
+   * @return string
+   */
+  public function getExportUse()
+  {
+    return $this->exportUse;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ExportFilterSplit
+   */
+  public function setFilterSplit(GoogleCloudAiplatformV1ExportFilterSplit $filterSplit)
+  {
+    $this->filterSplit = $filterSplit;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ExportFilterSplit
+   */
+  public function getFilterSplit()
+  {
+    return $this->filterSplit;
   }
   /**
    * @param GoogleCloudAiplatformV1ExportFractionSplit
@@ -77,6 +137,20 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
   public function getGcsDestination()
   {
     return $this->gcsDestination;
+  }
+  /**
+   * @param string
+   */
+  public function setSavedQueryId($savedQueryId)
+  {
+    $this->savedQueryId = $savedQueryId;
+  }
+  /**
+   * @return string
+   */
+  public function getSavedQueryId()
+  {
+    return $this->savedQueryId;
   }
 }
 

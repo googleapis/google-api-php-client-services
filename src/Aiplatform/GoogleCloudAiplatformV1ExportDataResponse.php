@@ -21,10 +21,30 @@ class GoogleCloudAiplatformV1ExportDataResponse extends \Google\Collection
 {
   protected $collection_key = 'exportedFiles';
   /**
+   * @var GoogleCloudAiplatformV1ModelDataStats
+   */
+  public $dataStats;
+  protected $dataStatsType = GoogleCloudAiplatformV1ModelDataStats::class;
+  protected $dataStatsDataType = '';
+  /**
    * @var string[]
    */
   public $exportedFiles;
 
+  /**
+   * @param GoogleCloudAiplatformV1ModelDataStats
+   */
+  public function setDataStats(GoogleCloudAiplatformV1ModelDataStats $dataStats)
+  {
+    $this->dataStats = $dataStats;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ModelDataStats
+   */
+  public function getDataStats()
+  {
+    return $this->dataStats;
+  }
   /**
    * @param string[]
    */

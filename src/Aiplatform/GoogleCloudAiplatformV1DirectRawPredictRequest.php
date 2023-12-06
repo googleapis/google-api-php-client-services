@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1DeployedIndexRef extends \Google\Model
+class GoogleCloudAiplatformV1DirectRawPredictRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $deployedIndexId;
+  public $input;
   /**
    * @var string
    */
-  public $displayName;
-  /**
-   * @var string
-   */
-  public $indexEndpoint;
+  public $methodName;
 
   /**
    * @param string
    */
-  public function setDeployedIndexId($deployedIndexId)
+  public function setInput($input)
   {
-    $this->deployedIndexId = $deployedIndexId;
+    $this->input = $input;
   }
   /**
    * @return string
    */
-  public function getDeployedIndexId()
+  public function getInput()
   {
-    return $this->deployedIndexId;
+    return $this->input;
   }
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setMethodName($methodName)
   {
-    $this->displayName = $displayName;
+    $this->methodName = $methodName;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getMethodName()
   {
-    return $this->displayName;
-  }
-  /**
-   * @param string
-   */
-  public function setIndexEndpoint($indexEndpoint)
-  {
-    $this->indexEndpoint = $indexEndpoint;
-  }
-  /**
-   * @return string
-   */
-  public function getIndexEndpoint()
-  {
-    return $this->indexEndpoint;
+    return $this->methodName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1DeployedIndexRef::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1DeployedIndexRef');
+class_alias(GoogleCloudAiplatformV1DirectRawPredictRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1DirectRawPredictRequest');

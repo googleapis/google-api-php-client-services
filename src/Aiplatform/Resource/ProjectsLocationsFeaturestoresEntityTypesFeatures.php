@@ -144,7 +144,7 @@ class ProjectsLocationsFeaturestoresEntityTypesFeatures extends \Google\Service\
    * @opt_param string pageToken A page token, received from a previous
    * FeaturestoreService.ListFeatures call or FeatureRegistryService.ListFeatures
    * call. Provide this to retrieve the subsequent page. When paginating, all
-   * other parameters provided to FeaturestoreService.ListFeatures or or
+   * other parameters provided to FeaturestoreService.ListFeatures or
    * FeatureRegistryService.ListFeatures must match the call that provided the
    * page token.
    * @opt_param string readMask Mask specifying which fields to read.

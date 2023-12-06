@@ -23,6 +23,10 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1DeployModelRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1DirectPredictRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1DirectPredictResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1DirectRawPredictRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1DirectRawPredictResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1Endpoint;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExplainRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ExplainResponse;
@@ -134,6 +138,40 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
     $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('deployModel', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Perform an unary online prediction request for Vertex first-party products
+   * and frameworks. (endpoints.directPredict)
+   *
+   * @param string $endpoint Required. The name of the Endpoint requested to serve
+   * the prediction. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @param GoogleCloudAiplatformV1DirectPredictRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1DirectPredictResponse
+   */
+  public function directPredict($endpoint, GoogleCloudAiplatformV1DirectPredictRequest $postBody, $optParams = [])
+  {
+    $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('directPredict', [$params], GoogleCloudAiplatformV1DirectPredictResponse::class);
+  }
+  /**
+   * Perform an online prediction request through gRPC.
+   * (endpoints.directRawPredict)
+   *
+   * @param string $endpoint Required. The name of the Endpoint requested to serve
+   * the prediction. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @param GoogleCloudAiplatformV1DirectRawPredictRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1DirectRawPredictResponse
+   */
+  public function directRawPredict($endpoint, GoogleCloudAiplatformV1DirectRawPredictRequest $postBody, $optParams = [])
+  {
+    $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('directRawPredict', [$params], GoogleCloudAiplatformV1DirectRawPredictResponse::class);
   }
   /**
    * Perform an online explanation. If deployed_model_id is specified, the
