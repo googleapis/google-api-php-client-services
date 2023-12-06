@@ -24,6 +24,12 @@ class Membership extends \Google\Model
    */
   public $createTime;
   /**
+   * @var Group
+   */
+  public $groupMember;
+  protected $groupMemberType = Group::class;
+  protected $groupMemberDataType = '';
+  /**
    * @var User
    */
   public $member;
@@ -55,6 +61,20 @@ class Membership extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param Group
+   */
+  public function setGroupMember(Group $groupMember)
+  {
+    $this->groupMember = $groupMember;
+  }
+  /**
+   * @return Group
+   */
+  public function getGroupMember()
+  {
+    return $this->groupMember;
   }
   /**
    * @param User

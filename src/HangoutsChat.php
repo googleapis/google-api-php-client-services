@@ -274,6 +274,10 @@ class HangoutsChat extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'showGroups' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'showInvited' => [
                   'location' => 'query',
                   'type' => 'boolean',

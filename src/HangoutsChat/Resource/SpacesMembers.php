@@ -159,6 +159,10 @@ class SpacesMembers extends \Google\Service\Resource
    * page. When paginating, all other parameters provided should match the call
    * that provided the page token. Passing different values to the other
    * parameters might lead to unexpected results.
+   * @opt_param bool showGroups Optional. When `true`, also returns memberships
+   * associated with a Google Group, in addition to other types of memberships. If
+   * a filter is set, Google Group memberships that don't match the filter
+   * criteria aren't returned.
    * @opt_param bool showInvited Optional. When `true`, also returns memberships
    * associated with invited members, in addition to other types of memberships.
    * If a filter is set, invited memberships that don't match the filter criteria
