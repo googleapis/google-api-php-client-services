@@ -178,6 +178,16 @@ class Baremetalsolution extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'loadAuthInfo' => [
+              'path' => 'v2/{+name}:loadAuthInfo',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'patch' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'PATCH',

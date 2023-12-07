@@ -43,6 +43,10 @@ class InstanceConfig extends \Google\Collection
    */
   public $instanceType;
   /**
+   * @var string
+   */
+  public $kmsKeyVersion;
+  /**
    * @var GoogleCloudBaremetalsolutionV2LogicalInterface[]
    */
   public $logicalInterfaces;
@@ -148,6 +152,20 @@ class InstanceConfig extends \Google\Collection
   public function getInstanceType()
   {
     return $this->instanceType;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKeyVersion($kmsKeyVersion)
+  {
+    $this->kmsKeyVersion = $kmsKeyVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyVersion()
+  {
+    return $this->kmsKeyVersion;
   }
   /**
    * @param GoogleCloudBaremetalsolutionV2LogicalInterface[]

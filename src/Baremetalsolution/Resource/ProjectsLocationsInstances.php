@@ -22,6 +22,7 @@ use Google\Service\Baremetalsolution\DisableInteractiveSerialConsoleRequest;
 use Google\Service\Baremetalsolution\EnableInteractiveSerialConsoleRequest;
 use Google\Service\Baremetalsolution\Instance;
 use Google\Service\Baremetalsolution\ListInstancesResponse;
+use Google\Service\Baremetalsolution\LoadInstanceAuthInfoResponse;
 use Google\Service\Baremetalsolution\Operation;
 use Google\Service\Baremetalsolution\RenameInstanceRequest;
 use Google\Service\Baremetalsolution\ResetInstanceRequest;
@@ -114,6 +115,19 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListInstancesResponse::class);
+  }
+  /**
+   * Load auth info for a server. (instances.loadAuthInfo)
+   *
+   * @param string $name Required. Name of the server.
+   * @param array $optParams Optional parameters.
+   * @return LoadInstanceAuthInfoResponse
+   */
+  public function loadAuthInfo($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('loadAuthInfo', [$params], LoadInstanceAuthInfoResponse::class);
   }
   /**
    * Update details of a single server. (instances.patch)
