@@ -87,8 +87,8 @@ class ProjectsLocationsSourcesMigratingVmsCloneJobs extends \Google\Service\Reso
     return $this->call('get', [$params], CloneJob::class);
   }
   /**
-   * Lists CloneJobs of a given migrating VM.
-   * (cloneJobs.listProjectsLocationsSourcesMigratingVmsCloneJobs)
+   * Lists the CloneJobs of a migrating VM. Only the 25 most recent CloneJobs are
+   * returned. (cloneJobs.listProjectsLocationsSourcesMigratingVmsCloneJobs)
    *
    * @param string $parent Required. The parent, which owns this collection of
    * source VMs.

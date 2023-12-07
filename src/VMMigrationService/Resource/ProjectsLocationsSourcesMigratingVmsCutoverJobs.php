@@ -89,7 +89,8 @@ class ProjectsLocationsSourcesMigratingVmsCutoverJobs extends \Google\Service\Re
     return $this->call('get', [$params], CutoverJob::class);
   }
   /**
-   * Lists CutoverJobs of a given migrating VM.
+   * Lists the CutoverJobs of a migrating VM. Only the 25 most recent CutoverJobs
+   * are returned.
    * (cutoverJobs.listProjectsLocationsSourcesMigratingVmsCutoverJobs)
    *
    * @param string $parent Required. The parent, which owns this collection of
