@@ -28,6 +28,10 @@ class RRSetRoutingPolicy extends \Google\Model
   /**
    * @var string
    */
+  public $healthCheck;
+  /**
+   * @var string
+   */
   public $kind;
   /**
    * @var RRSetRoutingPolicyPrimaryBackupPolicy
@@ -55,6 +59,20 @@ class RRSetRoutingPolicy extends \Google\Model
   public function getGeo()
   {
     return $this->geo;
+  }
+  /**
+   * @param string
+   */
+  public function setHealthCheck($healthCheck)
+  {
+    $this->healthCheck = $healthCheck;
+  }
+  /**
+   * @return string
+   */
+  public function getHealthCheck()
+  {
+    return $this->healthCheck;
   }
   /**
    * @param string
