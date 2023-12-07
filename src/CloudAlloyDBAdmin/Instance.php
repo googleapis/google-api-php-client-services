@@ -103,6 +103,10 @@ class Instance extends \Google\Collection
    */
   public $reconciling;
   /**
+   * @var bool
+   */
+  public $satisfiesPzs;
+  /**
    * @var string
    */
   public $state;
@@ -372,6 +376,20 @@ class Instance extends \Google\Collection
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzs($satisfiesPzs)
+  {
+    $this->satisfiesPzs = $satisfiesPzs;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzs()
+  {
+    return $this->satisfiesPzs;
   }
   /**
    * @param string
