@@ -402,8 +402,8 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Optional filter for the returned list in
-   * go/filtering format. Filtering is only currently supported on the `path`
-   * field.
+   * filtering format. Filtering is only currently supported on the `path` field.
+   * See https://google.aip.dev/160 for details.
    * @opt_param int pageSize Optional. Maximum number of search results to return.
    * The server may return fewer items than requested. If unspecified, the server
    * will pick an appropriate default.
