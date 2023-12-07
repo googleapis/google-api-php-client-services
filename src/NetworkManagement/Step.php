@@ -118,6 +118,18 @@ class Step extends \Google\Model
   protected $loadBalancerType = LoadBalancerInfo::class;
   protected $loadBalancerDataType = '';
   /**
+   * @var LoadBalancerBackendInfo
+   */
+  public $loadBalancerBackendInfo;
+  protected $loadBalancerBackendInfoType = LoadBalancerBackendInfo::class;
+  protected $loadBalancerBackendInfoDataType = '';
+  /**
+   * @var NatInfo
+   */
+  public $nat;
+  protected $natType = NatInfo::class;
+  protected $natDataType = '';
+  /**
    * @var NetworkInfo
    */
   public $network;
@@ -127,6 +139,12 @@ class Step extends \Google\Model
    * @var string
    */
   public $projectId;
+  /**
+   * @var ProxyConnectionInfo
+   */
+  public $proxyConnection;
+  protected $proxyConnectionType = ProxyConnectionInfo::class;
+  protected $proxyConnectionDataType = '';
   /**
    * @var RouteInfo
    */
@@ -395,6 +413,34 @@ class Step extends \Google\Model
     return $this->loadBalancer;
   }
   /**
+   * @param LoadBalancerBackendInfo
+   */
+  public function setLoadBalancerBackendInfo(LoadBalancerBackendInfo $loadBalancerBackendInfo)
+  {
+    $this->loadBalancerBackendInfo = $loadBalancerBackendInfo;
+  }
+  /**
+   * @return LoadBalancerBackendInfo
+   */
+  public function getLoadBalancerBackendInfo()
+  {
+    return $this->loadBalancerBackendInfo;
+  }
+  /**
+   * @param NatInfo
+   */
+  public function setNat(NatInfo $nat)
+  {
+    $this->nat = $nat;
+  }
+  /**
+   * @return NatInfo
+   */
+  public function getNat()
+  {
+    return $this->nat;
+  }
+  /**
    * @param NetworkInfo
    */
   public function setNetwork(NetworkInfo $network)
@@ -421,6 +467,20 @@ class Step extends \Google\Model
   public function getProjectId()
   {
     return $this->projectId;
+  }
+  /**
+   * @param ProxyConnectionInfo
+   */
+  public function setProxyConnection(ProxyConnectionInfo $proxyConnection)
+  {
+    $this->proxyConnection = $proxyConnection;
+  }
+  /**
+   * @return ProxyConnectionInfo
+   */
+  public function getProxyConnection()
+  {
+    return $this->proxyConnection;
   }
   /**
    * @param RouteInfo
