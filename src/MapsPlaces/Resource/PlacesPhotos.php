@@ -33,10 +33,10 @@ class PlacesPhotos extends \Google\Service\Resource
    * Get a photo media with a photo reference string. (photos.getMedia)
    *
    * @param string $name Required. The resource name of a photo media in the
-   * format: `"places/place_id/photos/photo_reference/media"`. The resource name
+   * format: `places/{place_id}/photos/{photo_reference}/media`. The resource name
    * of a photo as returned in a Place object's `photos.name` field comes with the
-   * format `"places/place_id/photos/photo_reference"`. You need to append
-   * `"/media"` at the end of the photo resource to get the photo media resource
+   * format `places/{place_id}/photos/{photo_reference}`. You need to append
+   * `/media` at the end of the photo resource to get the photo media resource
    * name.
    * @param array $optParams Optional parameters.
    *
