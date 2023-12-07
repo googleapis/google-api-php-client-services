@@ -17,50 +17,64 @@
 
 namespace Google\Service\CloudDeploy;
 
-class RenderMetadata extends \Google\Model
+class SkaffoldGitSource extends \Google\Model
 {
   /**
-   * @var CloudRunRenderMetadata
+   * @var string
    */
-  public $cloudRun;
-  protected $cloudRunType = CloudRunRenderMetadata::class;
-  protected $cloudRunDataType = '';
+  public $path;
   /**
-   * @var CustomMetadata
+   * @var string
    */
-  public $custom;
-  protected $customType = CustomMetadata::class;
-  protected $customDataType = '';
+  public $ref;
+  /**
+   * @var string
+   */
+  public $repo;
 
   /**
-   * @param CloudRunRenderMetadata
+   * @param string
    */
-  public function setCloudRun(CloudRunRenderMetadata $cloudRun)
+  public function setPath($path)
   {
-    $this->cloudRun = $cloudRun;
+    $this->path = $path;
   }
   /**
-   * @return CloudRunRenderMetadata
+   * @return string
    */
-  public function getCloudRun()
+  public function getPath()
   {
-    return $this->cloudRun;
+    return $this->path;
   }
   /**
-   * @param CustomMetadata
+   * @param string
    */
-  public function setCustom(CustomMetadata $custom)
+  public function setRef($ref)
   {
-    $this->custom = $custom;
+    $this->ref = $ref;
   }
   /**
-   * @return CustomMetadata
+   * @return string
    */
-  public function getCustom()
+  public function getRef()
   {
-    return $this->custom;
+    return $this->ref;
+  }
+  /**
+   * @param string
+   */
+  public function setRepo($repo)
+  {
+    $this->repo = $repo;
+  }
+  /**
+   * @return string
+   */
+  public function getRepo()
+  {
+    return $this->repo;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderMetadata::class, 'Google_Service_CloudDeploy_RenderMetadata');
+class_alias(SkaffoldGitSource::class, 'Google_Service_CloudDeploy_SkaffoldGitSource');

@@ -17,31 +17,31 @@
 
 namespace Google\Service\CloudDeploy\Resource;
 
-use Google\Service\CloudDeploy\Automation;
-use Google\Service\CloudDeploy\ListAutomationsResponse;
+use Google\Service\CloudDeploy\CustomTargetType;
+use Google\Service\CloudDeploy\ListCustomTargetTypesResponse;
 use Google\Service\CloudDeploy\Operation;
 
 /**
- * The "automations" collection of methods.
+ * The "customTargetTypes" collection of methods.
  * Typical usage is:
  *  <code>
  *   $clouddeployService = new Google\Service\CloudDeploy(...);
- *   $automations = $clouddeployService->projects_locations_deliveryPipelines_automations;
+ *   $customTargetTypes = $clouddeployService->projects_locations_customTargetTypes;
  *  </code>
  */
-class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Resource
+class ProjectsLocationsCustomTargetTypes extends \Google\Service\Resource
 {
   /**
-   * Creates a new Automation in a given project and location.
-   * (automations.create)
+   * Creates a new CustomTargetType in a given project and location.
+   * (customTargetTypes.create)
    *
    * @param string $parent Required. The parent collection in which the
-   * `Automation` should be created. Format should be `projects/{project_id}/locat
-   * ions/{location_name}/deliveryPipelines/{pipeline_name}`.
-   * @param Automation $postBody
+   * `CustomTargetType` should be created in. Format should be
+   * `projects/{project_id}/locations/{location_name}`.
+   * @param CustomTargetType $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string automationId Required. ID of the `Automation`.
+   * @opt_param string customTargetTypeId Required. ID of the `CustomTargetType`.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed. The
@@ -58,26 +58,25 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * change is made.
    * @return Operation
    */
-  public function create($parent, Automation $postBody, $optParams = [])
+  public function create($parent, CustomTargetType $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single Automation resource. (automations.delete)
+   * Deletes a single CustomTargetType. (customTargetTypes.delete)
    *
-   * @param string $name Required. The name of the `Automation` to delete. Format
-   * should be `projects/{project_id}/locations/{location_name}/deliveryPipelines/
-   * {pipeline_name}/automations/{automation_name}`.
+   * @param string $name Required. The name of the `CustomTargetType` to delete.
+   * Format must be `projects/{project_id}/locations/{location_name}/customTargetT
+   * ypes/{custom_target_type}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowMissing Optional. If set to true, then deleting an
-   * already deleted or non-existing `Automation` will succeed.
-   * @opt_param string etag Optional. The weak etag of the request. This checksum
-   * is computed by the server based on the value of other fields, and may be sent
-   * on update and delete requests to ensure the client has an up-to-date value
-   * before proceeding.
+   * already deleted or non-existing `CustomTargetType` will succeed.
+   * @opt_param string etag Optional. This checksum is computed by the server
+   * based on the value of other fields, and may be sent on update and delete
+   * requests to ensure the client has an up-to-date value before proceeding.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed. The
@@ -89,8 +88,8 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * from accidentally creating duplicate commitments. The request ID must be a
    * valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param bool validateOnly Optional. If set, validate the request and
-   * verify whether the resource exists, but do not actually post it.
+   * @opt_param bool validateOnly Optional. If set to true, the request is
+   * validated but no actual change is made.
    * @return Operation
    */
   public function delete($name, $optParams = [])
@@ -100,60 +99,60 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets details of a single Automation. (automations.get)
+   * Gets details of a single CustomTargetType. (customTargetTypes.get)
    *
-   * @param string $name Required. Name of the `Automation`. Format must be `proje
-   * cts/{project_id}/locations/{location_name}/deliveryPipelines/{pipeline_name}/
-   * automations/{automation_name}`.
+   * @param string $name Required. Name of the `CustomTargetType`. Format must be
+   * `projects/{project_id}/locations/{location_name}/customTargetTypes/{custom_ta
+   * rget_type}`.
    * @param array $optParams Optional parameters.
-   * @return Automation
+   * @return CustomTargetType
    */
   public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Automation::class);
+    return $this->call('get', [$params], CustomTargetType::class);
   }
   /**
-   * Lists Automations in a given project and location.
-   * (automations.listProjectsLocationsDeliveryPipelinesAutomations)
+   * Lists CustomTargetTypes in a given project and location.
+   * (customTargetTypes.listProjectsLocationsCustomTargetTypes)
    *
-   * @param string $parent Required. The parent `Delivery Pipeline`, which owns
-   * this collection of automations. Format must be `projects/{project_id}/locatio
-   * ns/{location_name}/deliveryPipelines/{pipeline_name}`.
+   * @param string $parent Required. The parent that owns this collection of
+   * custom target types. Format must be
+   * `projects/{project_id}/locations/{location_name}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filter automations to be returned. All fields can be
-   * used in the filter.
-   * @opt_param string orderBy Field to sort by.
-   * @opt_param int pageSize The maximum number of automations to return. The
-   * service may return fewer than this value. If unspecified, at most 50
-   * automations will be returned. The maximum value is 1000; values above 1000
-   * will be set to 1000.
-   * @opt_param string pageToken A page token, received from a previous
-   * `ListAutomations` call. Provide this to retrieve the subsequent page. When
-   * paginating, all other provided parameters match the call that provided the
-   * page token.
-   * @return ListAutomationsResponse
+   * @opt_param string filter Optional. Filter custom target types to be returned.
+   * See https://google.aip.dev/160 for more details.
+   * @opt_param string orderBy Optional. Field to sort by. See
+   * https://google.aip.dev/132#ordering for more details.
+   * @opt_param int pageSize Optional. The maximum number of `CustomTargetType`
+   * objects to return. The service may return fewer than this value. If
+   * unspecified, at most 50 `CustomTargetType` objects will be returned. The
+   * maximum value is 1000; values above 1000 will be set to 1000.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `ListCustomTargetTypes` call. Provide this to retrieve the subsequent page.
+   * When paginating, all other provided parameters match the call that provided
+   * the page token.
+   * @return ListCustomTargetTypesResponse
    */
-  public function listProjectsLocationsDeliveryPipelinesAutomations($parent, $optParams = [])
+  public function listProjectsLocationsCustomTargetTypes($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListAutomationsResponse::class);
+    return $this->call('list', [$params], ListCustomTargetTypesResponse::class);
   }
   /**
-   * Updates the parameters of a single Automation resource. (automations.patch)
+   * Updates a single CustomTargetType. (customTargetTypes.patch)
    *
-   * @param string $name Output only. Name of the `Automation`. Format is `project
-   * s/{project}/locations/{location}/deliveryPipelines/{delivery_pipeline}/automa
-   * tions/{automation}`.
-   * @param Automation $postBody
+   * @param string $name Optional. Name of the `CustomTargetType`. Format is
+   * `projects/{project}/locations/{location}/customTargetTypes/a-z{0,62}`.
+   * @param CustomTargetType $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowMissing Optional. If set to true, updating a
-   * `Automation` that does not exist will result in the creation of a new
-   * `Automation`.
+   * `CustomTargetType` that does not exist will result in the creation of a new
+   * `CustomTargetType`.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
    * server will know to ignore the request if it has already been completed. The
@@ -166,8 +165,8 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @opt_param string updateMask Required. Field mask is used to specify the
-   * fields to be overwritten in the `Automation` resource by the update. The
-   * fields specified in the update_mask are relative to the resource, not the
+   * fields to be overwritten in the `CustomTargetType` resource by the update.
+   * The fields specified in the update_mask are relative to the resource, not the
    * full request. A field will be overwritten if it is in the mask. If the user
    * does not provide a mask then all fields will be overwritten.
    * @opt_param bool validateOnly Optional. If set to true, the request is
@@ -175,7 +174,7 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * change is made.
    * @return Operation
    */
-  public function patch($name, Automation $postBody, $optParams = [])
+  public function patch($name, CustomTargetType $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
@@ -184,4 +183,4 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsDeliveryPipelinesAutomations::class, 'Google_Service_CloudDeploy_Resource_ProjectsLocationsDeliveryPipelinesAutomations');
+class_alias(ProjectsLocationsCustomTargetTypes::class, 'Google_Service_CloudDeploy_Resource_ProjectsLocationsCustomTargetTypes');

@@ -70,9 +70,9 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
    * Lists AutomationRuns in a given project and location.
    * (automationRuns.listProjectsLocationsDeliveryPipelinesAutomationRuns)
    *
-   * @param string $parent Required. The parent, which owns this collection of
-   * automationRuns. Format must be `projects/{project}/locations/{location}/deliv
-   * eryPipelines/{delivery_pipeline}`.
+   * @param string $parent Required. The parent `Delivery Pipeline`, which owns
+   * this collection of automationRuns. Format must be `projects/{project}/locatio
+   * ns/{location}/deliveryPipelines/{delivery_pipeline}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Filter automationRuns to be returned. All fields can

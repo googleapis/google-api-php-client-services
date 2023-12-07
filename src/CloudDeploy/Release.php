@@ -45,6 +45,12 @@ class Release extends \Google\Collection
    */
   public $createTime;
   /**
+   * @var CustomTargetType[]
+   */
+  public $customTargetTypeSnapshots;
+  protected $customTargetTypeSnapshotsType = CustomTargetType::class;
+  protected $customTargetTypeSnapshotsDataType = 'array';
+  /**
    * @var DeliveryPipeline
    */
   public $deliveryPipelineSnapshot;
@@ -186,6 +192,20 @@ class Release extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param CustomTargetType[]
+   */
+  public function setCustomTargetTypeSnapshots($customTargetTypeSnapshots)
+  {
+    $this->customTargetTypeSnapshots = $customTargetTypeSnapshots;
+  }
+  /**
+   * @return CustomTargetType[]
+   */
+  public function getCustomTargetTypeSnapshots()
+  {
+    return $this->customTargetTypeSnapshots;
   }
   /**
    * @param DeliveryPipeline
