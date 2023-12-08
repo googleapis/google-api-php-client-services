@@ -17,8 +17,14 @@
 
 namespace Google\Service\Connectors\Resource;
 
+use Google\Service\Connectors\CheckReadinessResponse;
+use Google\Service\Connectors\CheckStatusResponse;
+use Google\Service\Connectors\ExchangeAuthCodeRequest;
+use Google\Service\Connectors\ExchangeAuthCodeResponse;
 use Google\Service\Connectors\ExecuteSqlQueryRequest;
 use Google\Service\Connectors\ExecuteSqlQueryResponse;
+use Google\Service\Connectors\RefreshAccessTokenRequest;
+use Google\Service\Connectors\RefreshAccessTokenResponse;
 
 /**
  * The "connections" collection of methods.
@@ -30,6 +36,54 @@ use Google\Service\Connectors\ExecuteSqlQueryResponse;
  */
 class ProjectsLocationsConnections extends \Google\Service\Resource
 {
+  /**
+   * Reports readiness status of the connector. Similar logic to GetStatus but
+   * modified for kubernetes health check to understand.
+   * (connections.checkReadiness)
+   *
+   * @param string $name
+   * @param array $optParams Optional parameters.
+   * @return CheckReadinessResponse
+   */
+  public function checkReadiness($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkReadiness', [$params], CheckReadinessResponse::class);
+  }
+  /**
+   * Reports the status of the connection. Note that when the connection is in a
+   * state that is not ACTIVE, the implementation of this RPC method must return a
+   * Status with the corresponding State instead of returning a gRPC status code
+   * that is not "OK", which indicates that ConnectionStatus itself, not the
+   * connection, failed. (connections.checkStatus)
+   *
+   * @param string $name
+   * @param array $optParams Optional parameters.
+   * @return CheckStatusResponse
+   */
+  public function checkStatus($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('checkStatus', [$params], CheckStatusResponse::class);
+  }
+  /**
+   * ExchangeAuthCode exchanges the OAuth authorization code (and other necessary
+   * data) for an access token (and associated credentials).
+   * (connections.exchangeAuthCode)
+   *
+   * @param string $name
+   * @param ExchangeAuthCodeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ExchangeAuthCodeResponse
+   */
+  public function exchangeAuthCode($name, ExchangeAuthCodeRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('exchangeAuthCode', [$params], ExchangeAuthCodeResponse::class);
+  }
   /**
    * Executes a SQL statement specified in the body of the request. An example of
    * this SQL statement in the case of Salesforce connector would be 'select *
@@ -47,6 +101,22 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
     $params = ['connection' => $connection, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('executeSqlQuery', [$params], ExecuteSqlQueryResponse::class);
+  }
+  /**
+   * RefreshAccessToken exchanges the OAuth refresh token (and other necessary
+   * data) for a new access token (and new associated credentials).
+   * (connections.refreshAccessToken)
+   *
+   * @param string $name
+   * @param RefreshAccessTokenRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RefreshAccessTokenResponse
+   */
+  public function refreshAccessToken($name, RefreshAccessTokenRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('refreshAccessToken', [$params], RefreshAccessTokenResponse::class);
   }
 }
 

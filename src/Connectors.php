@@ -66,11 +66,51 @@ class Connectors extends \Google\Service
         'connections',
         [
           'methods' => [
-            'executeSqlQuery' => [
+            'checkReadiness' => [
+              'path' => 'v2/{+name}:checkReadiness',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'checkStatus' => [
+              'path' => 'v2/{+name}:checkStatus',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'exchangeAuthCode' => [
+              'path' => 'v2/{+name}:exchangeAuthCode',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'executeSqlQuery' => [
               'path' => 'v2/{+connection}:executeSqlQuery',
               'httpMethod' => 'POST',
               'parameters' => [
                 'connection' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'refreshAccessToken' => [
+              'path' => 'v2/{+name}:refreshAccessToken',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
