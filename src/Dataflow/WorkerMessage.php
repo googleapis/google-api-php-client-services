@@ -30,6 +30,12 @@ class WorkerMessage extends \Google\Model
    */
   public $labels;
   /**
+   * @var StreamingScalingReport
+   */
+  public $streamingScalingReport;
+  protected $streamingScalingReportType = StreamingScalingReport::class;
+  protected $streamingScalingReportDataType = '';
+  /**
    * @var string
    */
   public $time;
@@ -97,6 +103,20 @@ class WorkerMessage extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param StreamingScalingReport
+   */
+  public function setStreamingScalingReport(StreamingScalingReport $streamingScalingReport)
+  {
+    $this->streamingScalingReport = $streamingScalingReport;
+  }
+  /**
+   * @return StreamingScalingReport
+   */
+  public function getStreamingScalingReport()
+  {
+    return $this->streamingScalingReport;
   }
   /**
    * @param string
