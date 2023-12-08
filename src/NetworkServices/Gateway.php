@@ -41,6 +41,10 @@ class Gateway extends \Google\Collection
    */
   public $gatewaySecurityPolicy;
   /**
+   * @var string
+   */
+  public $ipVersion;
+  /**
    * @var string[]
    */
   public $labels;
@@ -150,6 +154,20 @@ class Gateway extends \Google\Collection
   public function getGatewaySecurityPolicy()
   {
     return $this->gatewaySecurityPolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setIpVersion($ipVersion)
+  {
+    $this->ipVersion = $ipVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getIpVersion()
+  {
+    return $this->ipVersion;
   }
   /**
    * @param string[]
