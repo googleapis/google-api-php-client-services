@@ -21,19 +21,11 @@ class ClusterUpgradeMembershipState extends \Google\Collection
 {
   protected $collection_key = 'upgrades';
   /**
-   * @var string
-   */
-  public $fleet;
-  /**
    * @var ClusterUpgradeIgnoredMembership
    */
   public $ignored;
   protected $ignoredType = ClusterUpgradeIgnoredMembership::class;
   protected $ignoredDataType = '';
-  /**
-   * @var string[]
-   */
-  public $scopes;
   /**
    * @var ClusterUpgradeMembershipGKEUpgradeState[]
    */
@@ -41,20 +33,6 @@ class ClusterUpgradeMembershipState extends \Google\Collection
   protected $upgradesType = ClusterUpgradeMembershipGKEUpgradeState::class;
   protected $upgradesDataType = 'array';
 
-  /**
-   * @param string
-   */
-  public function setFleet($fleet)
-  {
-    $this->fleet = $fleet;
-  }
-  /**
-   * @return string
-   */
-  public function getFleet()
-  {
-    return $this->fleet;
-  }
   /**
    * @param ClusterUpgradeIgnoredMembership
    */
@@ -68,20 +46,6 @@ class ClusterUpgradeMembershipState extends \Google\Collection
   public function getIgnored()
   {
     return $this->ignored;
-  }
-  /**
-   * @param string[]
-   */
-  public function setScopes($scopes)
-  {
-    $this->scopes = $scopes;
-  }
-  /**
-   * @return string[]
-   */
-  public function getScopes()
-  {
-    return $this->scopes;
   }
   /**
    * @param ClusterUpgradeMembershipGKEUpgradeState[]
