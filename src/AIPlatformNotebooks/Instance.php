@@ -73,6 +73,10 @@ class Instance extends \Google\Collection
   /**
    * @var string
    */
+  public $thirdPartyProxyUrl;
+  /**
+   * @var string
+   */
   public $updateTime;
   /**
    * @var UpgradeHistoryEntry[]
@@ -248,6 +252,20 @@ class Instance extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setThirdPartyProxyUrl($thirdPartyProxyUrl)
+  {
+    $this->thirdPartyProxyUrl = $thirdPartyProxyUrl;
+  }
+  /**
+   * @return string
+   */
+  public function getThirdPartyProxyUrl()
+  {
+    return $this->thirdPartyProxyUrl;
   }
   /**
    * @param string
