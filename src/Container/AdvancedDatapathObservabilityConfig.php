@@ -24,6 +24,10 @@ class AdvancedDatapathObservabilityConfig extends \Google\Model
    */
   public $enableMetrics;
   /**
+   * @var bool
+   */
+  public $enableRelay;
+  /**
    * @var string
    */
   public $relayMode;
@@ -41,6 +45,20 @@ class AdvancedDatapathObservabilityConfig extends \Google\Model
   public function getEnableMetrics()
   {
     return $this->enableMetrics;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableRelay($enableRelay)
+  {
+    $this->enableRelay = $enableRelay;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableRelay()
+  {
+    return $this->enableRelay;
   }
   /**
    * @param string
