@@ -49,8 +49,8 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
     return $this->call('cancel', [$params], Execution::class);
   }
   /**
-   * Creates a new execution using the latest revision of the given workflow.
-   * (executions.create)
+   * Creates a new execution using the latest revision of the given workflow. For
+   * more information, see Execute a workflow. (executions.create)
    *
    * @param string $parent Required. Name of the workflow for which an execution
    * should be created. Format:
