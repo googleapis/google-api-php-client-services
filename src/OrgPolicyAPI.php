@@ -116,6 +116,10 @@ class OrgPolicyAPI extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'get' => [
               'path' => 'v2/{+name}',
@@ -294,6 +298,10 @@ class OrgPolicyAPI extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'get' => [
               'path' => 'v2/{+name}',
@@ -403,6 +411,10 @@ class OrgPolicyAPI extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'get' => [
