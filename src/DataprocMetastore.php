@@ -312,6 +312,16 @@ class DataprocMetastore extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'alterTableProperties' => [
+              'path' => 'v1/{+service}:alterTableProperties',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'service' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'create' => [
               'path' => 'v1/{+parent}/services',
               'httpMethod' => 'POST',

@@ -18,6 +18,7 @@
 namespace Google\Service\DataprocMetastore\Resource;
 
 use Google\Service\DataprocMetastore\AlterMetadataResourceLocationRequest;
+use Google\Service\DataprocMetastore\AlterTablePropertiesRequest;
 use Google\Service\DataprocMetastore\ExportMetadataRequest;
 use Google\Service\DataprocMetastore\ListServicesResponse;
 use Google\Service\DataprocMetastore\MoveTableToDatabaseRequest;
@@ -58,6 +59,23 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     $params = ['service' => $service, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('alterLocation', [$params], Operation::class);
+  }
+  /**
+   * Alter metadata table properties. (services.alterTableProperties)
+   *
+   * @param string $service Required. The relative resource name of the Dataproc
+   * Metastore service that's being used to mutate metadata table properties, in
+   * the following
+   * format:projects/{project_id}/locations/{location_id}/services/{service_id}.
+   * @param AlterTablePropertiesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function alterTableProperties($service, AlterTablePropertiesRequest $postBody, $optParams = [])
+  {
+    $params = ['service' => $service, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('alterTableProperties', [$params], Operation::class);
   }
   /**
    * Creates a metastore service in a project and location. (services.create)

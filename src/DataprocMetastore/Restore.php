@@ -26,10 +26,6 @@ class Restore extends \Google\Model
   /**
    * @var string
    */
-  public $backupLocation;
-  /**
-   * @var string
-   */
   public $details;
   /**
    * @var string
@@ -61,20 +57,6 @@ class Restore extends \Google\Model
   public function getBackup()
   {
     return $this->backup;
-  }
-  /**
-   * @param string
-   */
-  public function setBackupLocation($backupLocation)
-  {
-    $this->backupLocation = $backupLocation;
-  }
-  /**
-   * @return string
-   */
-  public function getBackupLocation()
-  {
-    return $this->backupLocation;
   }
   /**
    * @param string
