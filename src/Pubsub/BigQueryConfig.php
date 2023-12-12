@@ -34,6 +34,10 @@ class BigQueryConfig extends \Google\Model
   /**
    * @var bool
    */
+  public $useTableSchema;
+  /**
+   * @var bool
+   */
   public $useTopicSchema;
   /**
    * @var bool
@@ -81,6 +85,20 @@ class BigQueryConfig extends \Google\Model
   public function getTable()
   {
     return $this->table;
+  }
+  /**
+   * @param bool
+   */
+  public function setUseTableSchema($useTableSchema)
+  {
+    $this->useTableSchema = $useTableSchema;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseTableSchema()
+  {
+    return $this->useTableSchema;
   }
   /**
    * @param bool
