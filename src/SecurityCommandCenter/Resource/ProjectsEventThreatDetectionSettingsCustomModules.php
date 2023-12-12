@@ -18,6 +18,7 @@
 namespace Google\Service\SecurityCommandCenter\Resource;
 
 use Google\Service\SecurityCommandCenter\EventThreatDetectionCustomModule;
+use Google\Service\SecurityCommandCenter\ListDescendantEventThreatDetectionCustomModulesResponse;
 use Google\Service\SecurityCommandCenter\ListEventThreatDetectionCustomModulesResponse;
 use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
 
@@ -32,8 +33,10 @@ use Google\Service\SecurityCommandCenter\SecuritycenterEmpty;
 class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\Resource
 {
   /**
-   * Creates an ETD custom module at the given level. Creating a module has a
-   * side-effect of creating modules at all descendants. (customModules.create)
+   * Creates a resident Event Threat Detection custom module at the scope of the
+   * given Resource Manager parent, and also creates inherited custom modules for
+   * all descendants of the given parent. These modules are enabled by default.
+   * (customModules.create)
    *
    * @param string $parent Required. The new custom module's parent. Its format
    * is: * "organizations/{organization}/eventThreatDetectionSettings". *
@@ -50,9 +53,9 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
     return $this->call('create', [$params], EventThreatDetectionCustomModule::class);
   }
   /**
-   * Deletes an ETD custom module. Deletion at resident level also deletes modules
-   * at all descendants. Deletion at any other level is not supported.
-   * (customModules.delete)
+   * Deletes the specified Event Threat Detection custom module and all of its
+   * descendants in the Resource Manager hierarchy. This method is only supported
+   * for resident custom modules. (customModules.delete)
    *
    * @param string $name Required. Name of the custom module to delete. Its format
    * is: * "organizations/{organization}/eventThreatDetectionSettings/customModule
@@ -69,8 +72,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
     return $this->call('delete', [$params], SecuritycenterEmpty::class);
   }
   /**
-   * Gets an ETD custom module. Retrieves the module at the given level.
-   * (customModules.get)
+   * Gets an Event Threat Detection custom module. (customModules.get)
    *
    * @param string $name Required. Name of the custom module to get. Its format
    * is: * "organizations/{organization}/eventThreatDetectionSettings/customModule
@@ -87,13 +89,15 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
     return $this->call('get', [$params], EventThreatDetectionCustomModule::class);
   }
   /**
-   * Lists ETD custom modules. Retrieve all resident and inherited modules at the
-   * given level (no descendants).
+   * Lists all Event Threat Detection custom modules for the given Resource
+   * Manager parent. This includes resident modules defined at the scope of the
+   * parent along with modules inherited from ancestors.
    * (customModules.listProjectsEventThreatDetectionSettingsCustomModules)
    *
-   * @param string $parent Required. Name of the parent to list custom modules.
-   * Its format is: * "organizations/{organization}/eventThreatDetectionSettings".
-   * * "folders/{folder}/eventThreatDetectionSettings". *
+   * @param string $parent Required. Name of the parent to list custom modules
+   * under. Its format is: *
+   * "organizations/{organization}/eventThreatDetectionSettings". *
+   * "folders/{folder}/eventThreatDetectionSettings". *
    * "projects/{project}/eventThreatDetectionSettings".
    * @param array $optParams Optional parameters.
    *
@@ -115,11 +119,40 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
     return $this->call('list', [$params], ListEventThreatDetectionCustomModulesResponse::class);
   }
   /**
-   * Updates an ETD custom module at the given level. All config fields can be
-   * updated when updating the module at resident level. Only enablement state can
-   * be updated when updating the module at inherited levels. Updating the module
-   * has a side-effect that it updates all descendants that are inherited from
-   * this module. (customModules.patch)
+   * Lists all resident Event Threat Detection custom modules under the given
+   * Resource Manager parent and its descendants. (customModules.listDescendant)
+   *
+   * @param string $parent Required. Name of the parent to list custom modules
+   * under. Its format is: *
+   * "organizations/{organization}/eventThreatDetectionSettings". *
+   * "folders/{folder}/eventThreatDetectionSettings". *
+   * "projects/{project}/eventThreatDetectionSettings".
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize The maximum number of modules to return. The service
+   * may return fewer than this value. If unspecified, at most 10 configs will be
+   * returned. The maximum value is 1000; values above 1000 will be coerced to
+   * 1000.
+   * @opt_param string pageToken A page token, received from a previous
+   * `ListDescendantEventThreatDetectionCustomModules` call. Provide this to
+   * retrieve the subsequent page. When paginating, all other parameters provided
+   * to `ListDescendantEventThreatDetectionCustomModules` must match the call that
+   * provided the page token.
+   * @return ListDescendantEventThreatDetectionCustomModulesResponse
+   */
+  public function listDescendant($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('listDescendant', [$params], ListDescendantEventThreatDetectionCustomModulesResponse::class);
+  }
+  /**
+   * Updates the Event Threat Detection custom module with the given name based on
+   * the given update mask. Updating the enablement state is supported for both
+   * resident and inherited modules (though resident modules cannot have an
+   * enablement state of "inherited"). Updating the display name or configuration
+   * of a module is supported for resident modules only. The type of a module
+   * cannot be changed. (customModules.patch)
    *
    * @param string $name Immutable. The resource name of the Event Threat
    * Detection custom module. Its format is: * "organizations/{organization}/event

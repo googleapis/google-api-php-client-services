@@ -17,12 +17,8 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class EventThreatDetectionCustomModule extends \Google\Model
+class EffectiveEventThreatDetectionCustomModule extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $ancestorModule;
   /**
    * @var array[]
    */
@@ -42,34 +38,12 @@ class EventThreatDetectionCustomModule extends \Google\Model
   /**
    * @var string
    */
-  public $lastEditor;
-  /**
-   * @var string
-   */
   public $name;
   /**
    * @var string
    */
   public $type;
-  /**
-   * @var string
-   */
-  public $updateTime;
 
-  /**
-   * @param string
-   */
-  public function setAncestorModule($ancestorModule)
-  {
-    $this->ancestorModule = $ancestorModule;
-  }
-  /**
-   * @return string
-   */
-  public function getAncestorModule()
-  {
-    return $this->ancestorModule;
-  }
   /**
    * @param array[]
    */
@@ -129,20 +103,6 @@ class EventThreatDetectionCustomModule extends \Google\Model
   /**
    * @param string
    */
-  public function setLastEditor($lastEditor)
-  {
-    $this->lastEditor = $lastEditor;
-  }
-  /**
-   * @return string
-   */
-  public function getLastEditor()
-  {
-    return $this->lastEditor;
-  }
-  /**
-   * @param string
-   */
   public function setName($name)
   {
     $this->name = $name;
@@ -168,21 +128,7 @@ class EventThreatDetectionCustomModule extends \Google\Model
   {
     return $this->type;
   }
-  /**
-   * @param string
-   */
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EventThreatDetectionCustomModule::class, 'Google_Service_SecurityCommandCenter_EventThreatDetectionCustomModule');
+class_alias(EffectiveEventThreatDetectionCustomModule::class, 'Google_Service_SecurityCommandCenter_EffectiveEventThreatDetectionCustomModule');
