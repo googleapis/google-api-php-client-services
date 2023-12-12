@@ -18,6 +18,9 @@
 namespace Google\Service\AndroidPublisher\Resource;
 
 use Google\Service\AndroidPublisher\ArchiveSubscriptionRequest;
+use Google\Service\AndroidPublisher\BatchGetSubscriptionsResponse;
+use Google\Service\AndroidPublisher\BatchUpdateSubscriptionsRequest;
+use Google\Service\AndroidPublisher\BatchUpdateSubscriptionsResponse;
 use Google\Service\AndroidPublisher\ListSubscriptionsResponse;
 use Google\Service\AndroidPublisher\Subscription;
 
@@ -50,6 +53,42 @@ class MonetizationSubscriptions extends \Google\Service\Resource
     $params = ['packageName' => $packageName, 'productId' => $productId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('archive', [$params], Subscription::class);
+  }
+  /**
+   * Reads one or more subscriptions. (subscriptions.batchGet)
+   *
+   * @param string $packageName Required. The parent app (package name) for which
+   * the subscriptions should be retrieved. Must be equal to the package_name
+   * field on all the requests.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string productIds Required. A list of up to 100 subscription
+   * product IDs to retrieve. All the IDs must be different.
+   * @return BatchGetSubscriptionsResponse
+   */
+  public function batchGet($packageName, $optParams = [])
+  {
+    $params = ['packageName' => $packageName];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchGet', [$params], BatchGetSubscriptionsResponse::class);
+  }
+  /**
+   * Updates a batch of subscriptions. Set the latencyTolerance field on nested
+   * requests to PRODUCT_UPDATE_LATENCY_TOLERANCE_LATENCY_TOLERANT to achieve
+   * maximum update throughput. (subscriptions.batchUpdate)
+   *
+   * @param string $packageName Required. The parent app (package name) for which
+   * the subscriptions should be updated. Must be equal to the package_name field
+   * on all the Subscription resources.
+   * @param BatchUpdateSubscriptionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return BatchUpdateSubscriptionsResponse
+   */
+  public function batchUpdate($packageName, BatchUpdateSubscriptionsRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchUpdate', [$params], BatchUpdateSubscriptionsResponse::class);
   }
   /**
    * Creates a new subscription. Newly added base plans will remain in draft state
@@ -151,6 +190,11 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @param Subscription $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool allowMissing Optional. If set to true, and the subscription
+   * with the given package_name and product_id doesn't exist, the subscription
+   * will be created. If a new subscription is created, update_mask is ignored.
+   * @opt_param string latencyTolerance Optional. The latency tolerance for the
+   * propagation of this product update. Defaults to latency-sensitive.
    * @opt_param string regionsVersion.version Required. A string representing the
    * version of available regions being used for the specified resource. Regional
    * prices for the resource have to be specified according to the information

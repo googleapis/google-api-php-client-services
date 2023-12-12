@@ -17,7 +17,7 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class DeactivateBasePlanRequest extends \Google\Model
+class GetSubscriptionOfferRequest extends \Google\Model
 {
   /**
    * @var string
@@ -26,7 +26,7 @@ class DeactivateBasePlanRequest extends \Google\Model
   /**
    * @var string
    */
-  public $latencyTolerance;
+  public $offerId;
   /**
    * @var string
    */
@@ -53,16 +53,16 @@ class DeactivateBasePlanRequest extends \Google\Model
   /**
    * @param string
    */
-  public function setLatencyTolerance($latencyTolerance)
+  public function setOfferId($offerId)
   {
-    $this->latencyTolerance = $latencyTolerance;
+    $this->offerId = $offerId;
   }
   /**
    * @return string
    */
-  public function getLatencyTolerance()
+  public function getOfferId()
   {
-    return $this->latencyTolerance;
+    return $this->offerId;
   }
   /**
    * @param string
@@ -95,4 +95,4 @@ class DeactivateBasePlanRequest extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeactivateBasePlanRequest::class, 'Google_Service_AndroidPublisher_DeactivateBasePlanRequest');
+class_alias(GetSubscriptionOfferRequest::class, 'Google_Service_AndroidPublisher_GetSubscriptionOfferRequest');

@@ -17,12 +17,8 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class DeactivateBasePlanRequest extends \Google\Model
+class InappproductsDeleteRequest extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $basePlanId;
   /**
    * @var string
    */
@@ -34,22 +30,8 @@ class DeactivateBasePlanRequest extends \Google\Model
   /**
    * @var string
    */
-  public $productId;
+  public $sku;
 
-  /**
-   * @param string
-   */
-  public function setBasePlanId($basePlanId)
-  {
-    $this->basePlanId = $basePlanId;
-  }
-  /**
-   * @return string
-   */
-  public function getBasePlanId()
-  {
-    return $this->basePlanId;
-  }
   /**
    * @param string
    */
@@ -81,18 +63,18 @@ class DeactivateBasePlanRequest extends \Google\Model
   /**
    * @param string
    */
-  public function setProductId($productId)
+  public function setSku($sku)
   {
-    $this->productId = $productId;
+    $this->sku = $sku;
   }
   /**
    * @return string
    */
-  public function getProductId()
+  public function getSku()
   {
-    return $this->productId;
+    return $this->sku;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeactivateBasePlanRequest::class, 'Google_Service_AndroidPublisher_DeactivateBasePlanRequest');
+class_alias(InappproductsDeleteRequest::class, 'Google_Service_AndroidPublisher_InappproductsDeleteRequest');

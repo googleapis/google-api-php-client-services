@@ -17,12 +17,22 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class DeactivateBasePlanRequest extends \Google\Model
+class InappproductsUpdateRequest extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $basePlanId;
+  public $allowMissing;
+  /**
+   * @var bool
+   */
+  public $autoConvertMissingPrices;
+  /**
+   * @var InAppProduct
+   */
+  public $inappproduct;
+  protected $inappproductType = InAppProduct::class;
+  protected $inappproductDataType = '';
   /**
    * @var string
    */
@@ -34,21 +44,49 @@ class DeactivateBasePlanRequest extends \Google\Model
   /**
    * @var string
    */
-  public $productId;
+  public $sku;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setBasePlanId($basePlanId)
+  public function setAllowMissing($allowMissing)
   {
-    $this->basePlanId = $basePlanId;
+    $this->allowMissing = $allowMissing;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getBasePlanId()
+  public function getAllowMissing()
   {
-    return $this->basePlanId;
+    return $this->allowMissing;
+  }
+  /**
+   * @param bool
+   */
+  public function setAutoConvertMissingPrices($autoConvertMissingPrices)
+  {
+    $this->autoConvertMissingPrices = $autoConvertMissingPrices;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoConvertMissingPrices()
+  {
+    return $this->autoConvertMissingPrices;
+  }
+  /**
+   * @param InAppProduct
+   */
+  public function setInappproduct(InAppProduct $inappproduct)
+  {
+    $this->inappproduct = $inappproduct;
+  }
+  /**
+   * @return InAppProduct
+   */
+  public function getInappproduct()
+  {
+    return $this->inappproduct;
   }
   /**
    * @param string
@@ -81,18 +119,18 @@ class DeactivateBasePlanRequest extends \Google\Model
   /**
    * @param string
    */
-  public function setProductId($productId)
+  public function setSku($sku)
   {
-    $this->productId = $productId;
+    $this->sku = $sku;
   }
   /**
    * @return string
    */
-  public function getProductId()
+  public function getSku()
   {
-    return $this->productId;
+    return $this->sku;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeactivateBasePlanRequest::class, 'Google_Service_AndroidPublisher_DeactivateBasePlanRequest');
+class_alias(InappproductsUpdateRequest::class, 'Google_Service_AndroidPublisher_InappproductsUpdateRequest');
