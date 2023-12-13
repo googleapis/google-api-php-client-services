@@ -17,82 +17,73 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelResourceReference extends \Google\Model
+class CloudAiLargeModelsVisionFilteredText extends \Google\Model
 {
   /**
    * @var string
    */
-  public $description;
+  public $category;
   /**
    * @var string
    */
-  public $resourceName;
+  public $confidence;
   /**
    * @var string
    */
-  public $uri;
-  /**
-   * @var string
-   */
-  public $useCase;
+  public $prompt;
+  public $score;
 
   /**
    * @param string
    */
-  public function setDescription($description)
+  public function setCategory($category)
   {
-    $this->description = $description;
+    $this->category = $category;
   }
   /**
    * @return string
    */
-  public function getDescription()
+  public function getCategory()
   {
-    return $this->description;
+    return $this->category;
   }
   /**
    * @param string
    */
-  public function setResourceName($resourceName)
+  public function setConfidence($confidence)
   {
-    $this->resourceName = $resourceName;
+    $this->confidence = $confidence;
   }
   /**
    * @return string
    */
-  public function getResourceName()
+  public function getConfidence()
   {
-    return $this->resourceName;
+    return $this->confidence;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setPrompt($prompt)
   {
-    $this->uri = $uri;
+    $this->prompt = $prompt;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getPrompt()
   {
-    return $this->uri;
+    return $this->prompt;
   }
-  /**
-   * @param string
-   */
-  public function setUseCase($useCase)
+  public function setScore($score)
   {
-    $this->useCase = $useCase;
+    $this->score = $score;
   }
-  /**
-   * @return string
-   */
-  public function getUseCase()
+  public function getScore()
   {
-    return $this->useCase;
+    return $this->score;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelResourceReference::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelResourceReference');
+class_alias(CloudAiLargeModelsVisionFilteredText::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionFilteredText');

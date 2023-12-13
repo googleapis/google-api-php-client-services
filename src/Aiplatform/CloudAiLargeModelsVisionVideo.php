@@ -17,16 +17,8 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelResourceReference extends \Google\Model
+class CloudAiLargeModelsVisionVideo extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $description;
-  /**
-   * @var string
-   */
-  public $resourceName;
   /**
    * @var string
    */
@@ -34,36 +26,8 @@ class GoogleCloudAiplatformV1PublisherModelResourceReference extends \Google\Mod
   /**
    * @var string
    */
-  public $useCase;
+  public $video;
 
-  /**
-   * @param string
-   */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceName($resourceName)
-  {
-    $this->resourceName = $resourceName;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceName()
-  {
-    return $this->resourceName;
-  }
   /**
    * @param string
    */
@@ -81,18 +45,18 @@ class GoogleCloudAiplatformV1PublisherModelResourceReference extends \Google\Mod
   /**
    * @param string
    */
-  public function setUseCase($useCase)
+  public function setVideo($video)
   {
-    $this->useCase = $useCase;
+    $this->video = $video;
   }
   /**
    * @return string
    */
-  public function getUseCase()
+  public function getVideo()
   {
-    return $this->useCase;
+    return $this->video;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelResourceReference::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelResourceReference');
+class_alias(CloudAiLargeModelsVisionVideo::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionVideo');

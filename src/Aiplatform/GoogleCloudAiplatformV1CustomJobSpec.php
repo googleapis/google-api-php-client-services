@@ -43,6 +43,10 @@ class GoogleCloudAiplatformV1CustomJobSpec extends \Google\Collection
    */
   public $experimentRun;
   /**
+   * @var string[]
+   */
+  public $models;
+  /**
    * @var string
    */
   public $network;
@@ -144,6 +148,20 @@ class GoogleCloudAiplatformV1CustomJobSpec extends \Google\Collection
   public function getExperimentRun()
   {
     return $this->experimentRun;
+  }
+  /**
+   * @param string[]
+   */
+  public function setModels($models)
+  {
+    $this->models = $models;
+  }
+  /**
+   * @return string[]
+   */
+  public function getModels()
+  {
+    return $this->models;
   }
   /**
    * @param string
