@@ -34,6 +34,12 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Coll
    * @var string
    */
   public $summaryText;
+  /**
+   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata
+   */
+  public $summaryWithMetadata;
+  protected $summaryWithMetadataType = GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata::class;
+  protected $summaryWithMetadataDataType = '';
 
   /**
    * @param GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes
@@ -76,6 +82,20 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Coll
   public function getSummaryText()
   {
     return $this->summaryText;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata
+   */
+  public function setSummaryWithMetadata(GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata $summaryWithMetadata)
+  {
+    $this->summaryWithMetadata = $summaryWithMetadata;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata
+   */
+  public function getSummaryWithMetadata()
+  {
+    return $this->summaryWithMetadata;
   }
 }
 
