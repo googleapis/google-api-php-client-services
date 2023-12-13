@@ -51,6 +51,12 @@ class WorkstationCluster extends \Google\Collection
    */
   public $displayName;
   /**
+   * @var DomainConfig
+   */
+  public $domainConfig;
+  protected $domainConfigType = DomainConfig::class;
+  protected $domainConfigDataType = '';
+  /**
    * @var string
    */
   public $etag;
@@ -186,6 +192,20 @@ class WorkstationCluster extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param DomainConfig
+   */
+  public function setDomainConfig(DomainConfig $domainConfig)
+  {
+    $this->domainConfig = $domainConfig;
+  }
+  /**
+   * @return DomainConfig
+   */
+  public function getDomainConfig()
+  {
+    return $this->domainConfig;
   }
   /**
    * @param string

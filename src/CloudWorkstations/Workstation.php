@@ -48,6 +48,10 @@ class Workstation extends \Google\Model
    */
   public $host;
   /**
+   * @var string
+   */
+  public $kmsKey;
+  /**
    * @var string[]
    */
   public $labels;
@@ -173,6 +177,20 @@ class Workstation extends \Google\Model
   public function getHost()
   {
     return $this->host;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKey($kmsKey)
+  {
+    $this->kmsKey = $kmsKey;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKey()
+  {
+    return $this->kmsKey;
   }
   /**
    * @param string[]
