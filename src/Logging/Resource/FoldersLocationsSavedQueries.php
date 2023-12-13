@@ -49,7 +49,7 @@ class FoldersLocationsSavedQueries extends \Google\Service\Resource
    * the saved_query_id is not provided, the system will generate an alphanumeric
    * ID.The saved_query_id is limited to 100 characters and can include only the
    * following characters: upper and lower-case alphanumeric characters,
-   * underscores, hyphens, and periods. First character has to be alphanumeric.
+   * underscores, hyphens, periods.First character has to be alphanumeric.
    * @return SavedQuery
    */
   public function create($parent, SavedQuery $postBody, $optParams = [])

@@ -109,11 +109,11 @@ class BillingAccountsLocationsBucketsViews extends \Google\Service\Resource
     return $this->call('list', [$params], ListViewsResponse::class);
   }
   /**
-   * Updates a view on a log bucket. This method replaces the following fields in
-   * the existing view with values from the new view: filter. If an UNAVAILABLE
-   * error is returned, this indicates that system is not in a state where it can
-   * update the view. If this occurs, please try again in a few minutes.
-   * (views.patch)
+   * Updates a view on a log bucket. This method replaces the value of the filter
+   * field from the existing view with the corresponding value from the new view.
+   * If an UNAVAILABLE error is returned, this indicates that system is not in a
+   * state where it can update the view. If this occurs, please try again in a few
+   * minutes. (views.patch)
    *
    * @param string $name Required. The full resource name of the view to update "p
    * rojects/[PROJECT_ID]/locations/[LOCATION_ID]/buckets/[BUCKET_ID]/views/[VIEW_

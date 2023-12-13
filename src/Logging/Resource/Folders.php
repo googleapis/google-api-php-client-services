@@ -80,13 +80,14 @@ class Folders extends \Google\Service\Resource
   }
   /**
    * Updates the settings for the given resource. This method applies to all
-   * feature configurations for organization and folders.UpdateSettings will fail
-   * if 1) kms_key_name is invalid, 2) the associated service account does not
-   * have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role assigned
-   * for the key, 3) access to the key is disabled, 4) storage_location is not
-   * supported by Logging, 5) storage_location violates the location OrgPolicy, or
-   * 6) default_sink_config is set but has an unspecified filter write mode.See
-   * Configure default settings for organizations and folders
+   * feature configurations for organization and folders.UpdateSettings fails when
+   * any of the following are true: The value of storage_location either isn't
+   * supported by Logging or violates the location OrgPolicy. The
+   * default_sink_config field is set, but it has an unspecified filter write
+   * mode. The value of kms_key_name is invalid. The associated service account
+   * doesn't have the required roles/cloudkms.cryptoKeyEncrypterDecrypter role
+   * assigned for the key. Access to the key is disabled.See Configure default
+   * settings for organizations and folders
    * (https://cloud.google.com/logging/docs/default-settings) for more
    * information. (folders.updateSettings)
    *

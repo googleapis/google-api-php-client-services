@@ -130,10 +130,10 @@ class Sinks extends \Google\Service\Resource
     return $this->call('list', [$params], ListSinksResponse::class);
   }
   /**
-   * Updates a sink. This method replaces the following fields in the existing
-   * sink with values from the new sink: destination, and filter.The updated sink
-   * might also have a new writer_identity; see the unique_writer_identity field.
-   * (sinks.update)
+   * Updates a sink. This method replaces the values of the destination and filter
+   * fields of the existing sink with the corresponding values from the new
+   * sink.The updated sink might also have a new writer_identity; see the
+   * unique_writer_identity field. (sinks.update)
    *
    * @param string $sinkName Required. The full resource name of the sink to
    * update, including the parent resource and the sink identifier:
