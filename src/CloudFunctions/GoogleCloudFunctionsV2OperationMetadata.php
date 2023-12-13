@@ -37,6 +37,10 @@ class GoogleCloudFunctionsV2OperationMetadata extends \Google\Collection
    */
   public $endTime;
   /**
+   * @var string
+   */
+  public $operationType;
+  /**
    * @var array[]
    */
   public $requestResource;
@@ -118,6 +122,20 @@ class GoogleCloudFunctionsV2OperationMetadata extends \Google\Collection
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * @param string
+   */
+  public function setOperationType($operationType)
+  {
+    $this->operationType = $operationType;
+  }
+  /**
+   * @return string
+   */
+  public function getOperationType()
+  {
+    return $this->operationType;
   }
   /**
    * @param array[]
