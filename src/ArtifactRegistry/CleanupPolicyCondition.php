@@ -41,10 +41,6 @@ class CleanupPolicyCondition extends \Google\Collection
    */
   public $tagState;
   /**
-   * @var string
-   */
-  public $versionAge;
-  /**
    * @var string[]
    */
   public $versionNamePrefixes;
@@ -118,20 +114,6 @@ class CleanupPolicyCondition extends \Google\Collection
   public function getTagState()
   {
     return $this->tagState;
-  }
-  /**
-   * @param string
-   */
-  public function setVersionAge($versionAge)
-  {
-    $this->versionAge = $versionAge;
-  }
-  /**
-   * @return string
-   */
-  public function getVersionAge()
-  {
-    return $this->versionAge;
   }
   /**
    * @param string[]
