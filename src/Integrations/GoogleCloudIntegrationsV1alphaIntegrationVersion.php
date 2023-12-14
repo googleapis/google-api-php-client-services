@@ -39,11 +39,21 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
    */
   public $description;
   /**
+   * @var bool
+   */
+  public $enableVariableMasking;
+  /**
    * @var GoogleCloudIntegrationsV1alphaErrorCatcherConfig[]
    */
   public $errorCatcherConfigs;
   protected $errorCatcherConfigsType = GoogleCloudIntegrationsV1alphaErrorCatcherConfig::class;
   protected $errorCatcherConfigsDataType = 'array';
+  /**
+   * @var GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
+   */
+  public $integrationConfigParameters;
+  protected $integrationConfigParametersType = GoogleCloudIntegrationsV1alphaIntegrationConfigParameter::class;
+  protected $integrationConfigParametersDataType = 'array';
   /**
    * @var GoogleCloudIntegrationsV1alphaIntegrationParameter[]
    */
@@ -188,6 +198,20 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
     return $this->description;
   }
   /**
+   * @param bool
+   */
+  public function setEnableVariableMasking($enableVariableMasking)
+  {
+    $this->enableVariableMasking = $enableVariableMasking;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableVariableMasking()
+  {
+    return $this->enableVariableMasking;
+  }
+  /**
    * @param GoogleCloudIntegrationsV1alphaErrorCatcherConfig[]
    */
   public function setErrorCatcherConfigs($errorCatcherConfigs)
@@ -200,6 +224,20 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
   public function getErrorCatcherConfigs()
   {
     return $this->errorCatcherConfigs;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
+   */
+  public function setIntegrationConfigParameters($integrationConfigParameters)
+  {
+    $this->integrationConfigParameters = $integrationConfigParameters;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
+   */
+  public function getIntegrationConfigParameters()
+  {
+    return $this->integrationConfigParameters;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaIntegrationParameter[]

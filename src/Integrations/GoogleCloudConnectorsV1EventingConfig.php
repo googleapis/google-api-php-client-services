@@ -33,12 +33,6 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   protected $authConfigType = GoogleCloudConnectorsV1AuthConfig::class;
   protected $authConfigDataType = '';
   /**
-   * @var GoogleCloudConnectorsV1ConfigVariable
-   */
-  public $encryptionKey;
-  protected $encryptionKeyType = GoogleCloudConnectorsV1ConfigVariable::class;
-  protected $encryptionKeyDataType = '';
-  /**
    * @var bool
    */
   public $enrichmentEnabled;
@@ -46,6 +40,12 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
    * @var string
    */
   public $eventsListenerIngressEndpoint;
+  /**
+   * @var GoogleCloudConnectorsV1AuthConfig
+   */
+  public $listenerAuthConfig;
+  protected $listenerAuthConfigType = GoogleCloudConnectorsV1AuthConfig::class;
+  protected $listenerAuthConfigDataType = '';
   /**
    * @var bool
    */
@@ -86,20 +86,6 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
     return $this->authConfig;
   }
   /**
-   * @param GoogleCloudConnectorsV1ConfigVariable
-   */
-  public function setEncryptionKey(GoogleCloudConnectorsV1ConfigVariable $encryptionKey)
-  {
-    $this->encryptionKey = $encryptionKey;
-  }
-  /**
-   * @return GoogleCloudConnectorsV1ConfigVariable
-   */
-  public function getEncryptionKey()
-  {
-    return $this->encryptionKey;
-  }
-  /**
    * @param bool
    */
   public function setEnrichmentEnabled($enrichmentEnabled)
@@ -126,6 +112,20 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public function getEventsListenerIngressEndpoint()
   {
     return $this->eventsListenerIngressEndpoint;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1AuthConfig
+   */
+  public function setListenerAuthConfig(GoogleCloudConnectorsV1AuthConfig $listenerAuthConfig)
+  {
+    $this->listenerAuthConfig = $listenerAuthConfig;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1AuthConfig
+   */
+  public function getListenerAuthConfig()
+  {
+    return $this->listenerAuthConfig;
   }
   /**
    * @param bool

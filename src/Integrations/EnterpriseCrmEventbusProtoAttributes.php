@@ -47,6 +47,10 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
   /**
    * @var bool
    */
+  public $masked;
+  /**
+   * @var bool
+   */
   public $readOnly;
   /**
    * @var string
@@ -126,6 +130,20 @@ class EnterpriseCrmEventbusProtoAttributes extends \Google\Collection
   public function getLogSettings()
   {
     return $this->logSettings;
+  }
+  /**
+   * @param bool
+   */
+  public function setMasked($masked)
+  {
+    $this->masked = $masked;
+  }
+  /**
+   * @return bool
+   */
+  public function getMasked()
+  {
+    return $this->masked;
   }
   /**
    * @param bool

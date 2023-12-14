@@ -87,6 +87,10 @@ class GoogleCloudIntegrationsV1alphaExecution extends \Google\Collection
   /**
    * @var string
    */
+  public $snapshotNumber;
+  /**
+   * @var string
+   */
   public $triggerId;
   /**
    * @var string
@@ -260,6 +264,20 @@ class GoogleCloudIntegrationsV1alphaExecution extends \Google\Collection
   public function getResponseParams()
   {
     return $this->responseParams;
+  }
+  /**
+   * @param string
+   */
+  public function setSnapshotNumber($snapshotNumber)
+  {
+    $this->snapshotNumber = $snapshotNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getSnapshotNumber()
+  {
+    return $this->snapshotNumber;
   }
   /**
    * @param string

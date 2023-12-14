@@ -17,19 +17,16 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \Google\Collection
+class GoogleCloudIntegrationsV1alphaSerializedFile extends \Google\Model
 {
-  protected $collection_key = 'files';
   /**
    * @var string
    */
   public $content;
   /**
-   * @var GoogleCloudIntegrationsV1alphaSerializedFile[]
+   * @var string
    */
-  public $files;
-  protected $filesType = GoogleCloudIntegrationsV1alphaSerializedFile::class;
-  protected $filesDataType = 'array';
+  public $file;
 
   /**
    * @param string
@@ -46,20 +43,20 @@ class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \
     return $this->content;
   }
   /**
-   * @param GoogleCloudIntegrationsV1alphaSerializedFile[]
+   * @param string
    */
-  public function setFiles($files)
+  public function setFile($file)
   {
-    $this->files = $files;
+    $this->file = $file;
   }
   /**
-   * @return GoogleCloudIntegrationsV1alphaSerializedFile[]
+   * @return string
    */
-  public function getFiles()
+  public function getFile()
   {
-    return $this->files;
+    return $this->file;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse');
+class_alias(GoogleCloudIntegrationsV1alphaSerializedFile::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaSerializedFile');

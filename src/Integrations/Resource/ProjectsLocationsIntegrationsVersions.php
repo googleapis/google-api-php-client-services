@@ -95,6 +95,8 @@ class ProjectsLocationsIntegrationsVersions extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string fileFormat File format for download request.
+   * @opt_param string files Optional. Integration related file to download like
+   * Integration Json, Config variable, testcase etc.
    * @return GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse
    */
   public function download($name, $optParams = [])

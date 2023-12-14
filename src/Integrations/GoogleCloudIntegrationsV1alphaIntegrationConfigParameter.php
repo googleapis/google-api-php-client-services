@@ -17,16 +17,14 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaEventParameter extends \Google\Model
+class GoogleCloudIntegrationsV1alphaIntegrationConfigParameter extends \Google\Model
 {
   /**
-   * @var string
+   * @var GoogleCloudIntegrationsV1alphaIntegrationParameter
    */
-  public $key;
-  /**
-   * @var bool
-   */
-  public $masked;
+  public $parameter;
+  protected $parameterType = GoogleCloudIntegrationsV1alphaIntegrationParameter::class;
+  protected $parameterDataType = '';
   /**
    * @var GoogleCloudIntegrationsV1alphaValueType
    */
@@ -35,32 +33,18 @@ class GoogleCloudIntegrationsV1alphaEventParameter extends \Google\Model
   protected $valueDataType = '';
 
   /**
-   * @param string
+   * @param GoogleCloudIntegrationsV1alphaIntegrationParameter
    */
-  public function setKey($key)
+  public function setParameter(GoogleCloudIntegrationsV1alphaIntegrationParameter $parameter)
   {
-    $this->key = $key;
+    $this->parameter = $parameter;
   }
   /**
-   * @return string
+   * @return GoogleCloudIntegrationsV1alphaIntegrationParameter
    */
-  public function getKey()
+  public function getParameter()
   {
-    return $this->key;
-  }
-  /**
-   * @param bool
-   */
-  public function setMasked($masked)
-  {
-    $this->masked = $masked;
-  }
-  /**
-   * @return bool
-   */
-  public function getMasked()
-  {
-    return $this->masked;
+    return $this->parameter;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaValueType
@@ -79,4 +63,4 @@ class GoogleCloudIntegrationsV1alphaEventParameter extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaEventParameter::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaEventParameter');
+class_alias(GoogleCloudIntegrationsV1alphaIntegrationConfigParameter::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaIntegrationConfigParameter');

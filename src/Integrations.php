@@ -674,6 +674,11 @@ class Integrations extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'files' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],'get' => [
               'path' => 'v1alpha/{+name}',
@@ -1345,6 +1350,11 @@ class Integrations extends \Google\Service
                 'fileFormat' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'files' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],'get' => [
