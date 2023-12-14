@@ -22,15 +22,11 @@ class LoadBalancerBackendInfo extends \Google\Model
   /**
    * @var string
    */
-  public $backendDisplayName;
-  /**
-   * @var string
-   */
   public $backendServiceUri;
   /**
    * @var string
    */
-  public $healthCheckConfigState;
+  public $healthCheckFirewallsConfigState;
   /**
    * @var string
    */
@@ -46,22 +42,12 @@ class LoadBalancerBackendInfo extends \Google\Model
   /**
    * @var string
    */
+  public $name;
+  /**
+   * @var string
+   */
   public $networkEndpointGroupUri;
 
-  /**
-   * @param string
-   */
-  public function setBackendDisplayName($backendDisplayName)
-  {
-    $this->backendDisplayName = $backendDisplayName;
-  }
-  /**
-   * @return string
-   */
-  public function getBackendDisplayName()
-  {
-    return $this->backendDisplayName;
-  }
   /**
    * @param string
    */
@@ -79,16 +65,16 @@ class LoadBalancerBackendInfo extends \Google\Model
   /**
    * @param string
    */
-  public function setHealthCheckConfigState($healthCheckConfigState)
+  public function setHealthCheckFirewallsConfigState($healthCheckFirewallsConfigState)
   {
-    $this->healthCheckConfigState = $healthCheckConfigState;
+    $this->healthCheckFirewallsConfigState = $healthCheckFirewallsConfigState;
   }
   /**
    * @return string
    */
-  public function getHealthCheckConfigState()
+  public function getHealthCheckFirewallsConfigState()
   {
-    return $this->healthCheckConfigState;
+    return $this->healthCheckFirewallsConfigState;
   }
   /**
    * @param string
@@ -131,6 +117,20 @@ class LoadBalancerBackendInfo extends \Google\Model
   public function getInstanceUri()
   {
     return $this->instanceUri;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param string
