@@ -45,6 +45,7 @@ class AccessContextManager extends \Google\Service
   public $accessPolicies_servicePerimeters;
   public $operations;
   public $organizations_gcpUserAccessBindings;
+  public $services;
 
   /**
    * Constructs the internal representation of the AccessContextManager service.
@@ -557,6 +558,39 @@ class AccessContextManager extends \Google\Service
                   'required' => true,
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->services = new AccessContextManager\Resource\Services(
+        $this,
+        $this->serviceName,
+        'services',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/services/{name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/services',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
