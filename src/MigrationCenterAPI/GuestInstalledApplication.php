@@ -17,8 +17,9 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class GuestInstalledApplication extends \Google\Model
+class GuestInstalledApplication extends \Google\Collection
 {
+  protected $collection_key = 'licenses';
   /**
    * @var string
    */
@@ -27,6 +28,10 @@ class GuestInstalledApplication extends \Google\Model
    * @var string
    */
   public $installTime;
+  /**
+   * @var string[]
+   */
+  public $licenses;
   /**
    * @var string
    */
@@ -67,6 +72,20 @@ class GuestInstalledApplication extends \Google\Model
   public function getInstallTime()
   {
     return $this->installTime;
+  }
+  /**
+   * @param string[]
+   */
+  public function setLicenses($licenses)
+  {
+    $this->licenses = $licenses;
+  }
+  /**
+   * @return string[]
+   */
+  public function getLicenses()
+  {
+    return $this->licenses;
   }
   /**
    * @param string
