@@ -17,64 +17,47 @@
 
 namespace Google\Service\WorkloadManager;
 
-class SapValidationValidationDetail extends \Google\Model
+class SapDiscoveryResourceInstanceProperties extends \Google\Collection
 {
+  protected $collection_key = 'clusterInstances';
   /**
    * @var string[]
    */
-  public $details;
-  /**
-   * @var bool
-   */
-  public $isPresent;
+  public $clusterInstances;
   /**
    * @var string
    */
-  public $sapValidationType;
+  public $virtualHostname;
 
   /**
    * @param string[]
    */
-  public function setDetails($details)
+  public function setClusterInstances($clusterInstances)
   {
-    $this->details = $details;
+    $this->clusterInstances = $clusterInstances;
   }
   /**
    * @return string[]
    */
-  public function getDetails()
+  public function getClusterInstances()
   {
-    return $this->details;
-  }
-  /**
-   * @param bool
-   */
-  public function setIsPresent($isPresent)
-  {
-    $this->isPresent = $isPresent;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsPresent()
-  {
-    return $this->isPresent;
+    return $this->clusterInstances;
   }
   /**
    * @param string
    */
-  public function setSapValidationType($sapValidationType)
+  public function setVirtualHostname($virtualHostname)
   {
-    $this->sapValidationType = $sapValidationType;
+    $this->virtualHostname = $virtualHostname;
   }
   /**
    * @return string
    */
-  public function getSapValidationType()
+  public function getVirtualHostname()
   {
-    return $this->sapValidationType;
+    return $this->virtualHostname;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SapValidationValidationDetail::class, 'Google_Service_WorkloadManager_SapValidationValidationDetail');
+class_alias(SapDiscoveryResourceInstanceProperties::class, 'Google_Service_WorkloadManager_SapDiscoveryResourceInstanceProperties');

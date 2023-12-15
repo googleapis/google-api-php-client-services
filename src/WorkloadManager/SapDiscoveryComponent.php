@@ -33,6 +33,10 @@ class SapDiscoveryComponent extends \Google\Collection
   protected $databasePropertiesType = SapDiscoveryComponentDatabaseProperties::class;
   protected $databasePropertiesDataType = '';
   /**
+   * @var string[]
+   */
+  public $haHosts;
+  /**
    * @var string
    */
   public $hostProject;
@@ -46,6 +50,10 @@ class SapDiscoveryComponent extends \Google\Collection
    * @var string
    */
   public $sid;
+  /**
+   * @var string
+   */
+  public $topologyType;
 
   /**
    * @param SapDiscoveryComponentApplicationProperties
@@ -74,6 +82,20 @@ class SapDiscoveryComponent extends \Google\Collection
   public function getDatabaseProperties()
   {
     return $this->databaseProperties;
+  }
+  /**
+   * @param string[]
+   */
+  public function setHaHosts($haHosts)
+  {
+    $this->haHosts = $haHosts;
+  }
+  /**
+   * @return string[]
+   */
+  public function getHaHosts()
+  {
+    return $this->haHosts;
   }
   /**
    * @param string
@@ -116,6 +138,20 @@ class SapDiscoveryComponent extends \Google\Collection
   public function getSid()
   {
     return $this->sid;
+  }
+  /**
+   * @param string
+   */
+  public function setTopologyType($topologyType)
+  {
+    $this->topologyType = $topologyType;
+  }
+  /**
+   * @return string
+   */
+  public function getTopologyType()
+  {
+    return $this->topologyType;
   }
 }
 

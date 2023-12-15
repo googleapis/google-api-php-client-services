@@ -21,6 +21,12 @@ class SapDiscoveryResource extends \Google\Collection
 {
   protected $collection_key = 'relatedResources';
   /**
+   * @var SapDiscoveryResourceInstanceProperties
+   */
+  public $instanceProperties;
+  protected $instancePropertiesType = SapDiscoveryResourceInstanceProperties::class;
+  protected $instancePropertiesDataType = '';
+  /**
    * @var string[]
    */
   public $relatedResources;
@@ -41,6 +47,20 @@ class SapDiscoveryResource extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param SapDiscoveryResourceInstanceProperties
+   */
+  public function setInstanceProperties(SapDiscoveryResourceInstanceProperties $instanceProperties)
+  {
+    $this->instanceProperties = $instanceProperties;
+  }
+  /**
+   * @return SapDiscoveryResourceInstanceProperties
+   */
+  public function getInstanceProperties()
+  {
+    return $this->instanceProperties;
+  }
   /**
    * @param string[]
    */

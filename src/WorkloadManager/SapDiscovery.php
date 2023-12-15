@@ -40,6 +40,10 @@ class SapDiscovery extends \Google\Model
   /**
    * @var string
    */
+  public $projectNumber;
+  /**
+   * @var string
+   */
   public $systemId;
   /**
    * @var string
@@ -87,6 +91,20 @@ class SapDiscovery extends \Google\Model
   public function getMetadata()
   {
     return $this->metadata;
+  }
+  /**
+   * @param string
+   */
+  public function setProjectNumber($projectNumber)
+  {
+    $this->projectNumber = $projectNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getProjectNumber()
+  {
+    return $this->projectNumber;
   }
   /**
    * @param string

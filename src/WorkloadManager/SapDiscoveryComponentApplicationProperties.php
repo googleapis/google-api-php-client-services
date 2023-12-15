@@ -20,6 +20,10 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryComponentApplicationProperties extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $abap;
+  /**
    * @var string
    */
   public $applicationType;
@@ -30,8 +34,26 @@ class SapDiscoveryComponentApplicationProperties extends \Google\Model
   /**
    * @var string
    */
+  public $kernelVersion;
+  /**
+   * @var string
+   */
   public $nfsUri;
 
+  /**
+   * @param bool
+   */
+  public function setAbap($abap)
+  {
+    $this->abap = $abap;
+  }
+  /**
+   * @return bool
+   */
+  public function getAbap()
+  {
+    return $this->abap;
+  }
   /**
    * @param string
    */
@@ -59,6 +81,20 @@ class SapDiscoveryComponentApplicationProperties extends \Google\Model
   public function getAscsUri()
   {
     return $this->ascsUri;
+  }
+  /**
+   * @param string
+   */
+  public function setKernelVersion($kernelVersion)
+  {
+    $this->kernelVersion = $kernelVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getKernelVersion()
+  {
+    return $this->kernelVersion;
   }
   /**
    * @param string

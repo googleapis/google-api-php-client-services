@@ -26,6 +26,10 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
   /**
    * @var string
    */
+  public $databaseVersion;
+  /**
+   * @var string
+   */
   public $primaryInstanceUri;
   /**
    * @var string
@@ -45,6 +49,20 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
   public function getDatabaseType()
   {
     return $this->databaseType;
+  }
+  /**
+   * @param string
+   */
+  public function setDatabaseVersion($databaseVersion)
+  {
+    $this->databaseVersion = $databaseVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getDatabaseVersion()
+  {
+    return $this->databaseVersion;
   }
   /**
    * @param string
