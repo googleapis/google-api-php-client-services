@@ -18,6 +18,7 @@
 namespace Google\Service\CloudProfiler\Resource;
 
 use Google\Service\CloudProfiler\CreateProfileRequest;
+use Google\Service\CloudProfiler\ListProfilesResponse;
 use Google\Service\CloudProfiler\Profile;
 
 /**
@@ -68,6 +69,27 @@ class ProjectsProfiles extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('createOffline', [$params], Profile::class);
+  }
+  /**
+   * Lists profiles which have been collected so far and for which the caller has
+   * permission to view. (profiles.listProjectsProfiles)
+   *
+   * @param string $parent Required. The parent, which owns this collection of
+   * profiles. Format: projects/{user_project_id}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize The maximum number of items to return. Default
+   * page_size is 1000. Max limit is 10000.
+   * @opt_param string pageToken The token to continue pagination and get profiles
+   * from a particular page. When paginating, all other parameters provided to
+   * `ListProfiles` must match the call that provided the page token.
+   * @return ListProfilesResponse
+   */
+  public function listProjectsProfiles($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListProfilesResponse::class);
   }
   /**
    * UpdateProfile updates the profile bytes and labels on the profile resource
