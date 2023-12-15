@@ -22,8 +22,26 @@ class GoogleChecksReportV1alphaAnalyzeUploadRequest extends \Google\Model
   /**
    * @var string
    */
+  public $appBinaryFileType;
+  /**
+   * @var string
+   */
   public $codeReferenceId;
 
+  /**
+   * @param string
+   */
+  public function setAppBinaryFileType($appBinaryFileType)
+  {
+    $this->appBinaryFileType = $appBinaryFileType;
+  }
+  /**
+   * @return string
+   */
+  public function getAppBinaryFileType()
+  {
+    return $this->appBinaryFileType;
+  }
   /**
    * @param string
    */
