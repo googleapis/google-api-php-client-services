@@ -152,20 +152,14 @@ class Spaces extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. A query filter. Requires [user
-   * authentication](https://developers.google.com/chat/api/guides/auth/users).
-   * You can filter spaces by the space type ([`space_type`](https://developers.go
-   * ogle.com/chat/api/reference/rest/v1/spaces#spacetype)). To filter by space
-   * type, you must specify valid enum value, such as `SPACE` or `GROUP_CHAT` (the
-   * `space_type` can't be `SPACE_TYPE_UNSPECIFIED`). To query for multiple space
-   * types, use the `OR` operator. For example, the following queries are valid:
-   * ``` space_type = "SPACE" spaceType = "GROUP_CHAT" OR spaceType =
-   * "DIRECT_MESSAGE" ``` Invalid queries are rejected by the server with an
-   * `INVALID_ARGUMENT` error. With [app
-   * authentication](https://developers.google.com/chat/api/guides/auth/service-
-   * accounts), this field is ignored and the query always returns all spaces. But
-   * the Chat API still validates the query syntax, so invalid queries are still
-   * rejected.
+   * @opt_param string filter Optional. A query filter. You can filter spaces by
+   * the space type ([`space_type`](https://developers.google.com/chat/api/referen
+   * ce/rest/v1/spaces#spacetype)). To filter by space type, you must specify
+   * valid enum value, such as `SPACE` or `GROUP_CHAT` (the `space_type` can't be
+   * `SPACE_TYPE_UNSPECIFIED`). To query for multiple space types, use the `OR`
+   * operator. For example, the following queries are valid: ``` space_type =
+   * "SPACE" spaceType = "GROUP_CHAT" OR spaceType = "DIRECT_MESSAGE" ``` Invalid
+   * queries are rejected by the server with an `INVALID_ARGUMENT` error.
    * @opt_param int pageSize Optional. The maximum number of spaces to return. The
    * service might return fewer than this value. If unspecified, at most 100
    * spaces are returned. The maximum value is 1,000. If you use a value more than
