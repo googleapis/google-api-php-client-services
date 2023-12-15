@@ -39,6 +39,10 @@ class Gateway extends \Google\Collection
   /**
    * @var string
    */
+  public $envoyHeaders;
+  /**
+   * @var string
+   */
   public $gatewaySecurityPolicy;
   /**
    * @var string
@@ -140,6 +144,20 @@ class Gateway extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setEnvoyHeaders($envoyHeaders)
+  {
+    $this->envoyHeaders = $envoyHeaders;
+  }
+  /**
+   * @return string
+   */
+  public function getEnvoyHeaders()
+  {
+    return $this->envoyHeaders;
   }
   /**
    * @param string

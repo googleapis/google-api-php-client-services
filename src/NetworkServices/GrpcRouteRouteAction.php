@@ -33,6 +33,10 @@ class GrpcRouteRouteAction extends \Google\Collection
   protected $faultInjectionPolicyType = GrpcRouteFaultInjectionPolicy::class;
   protected $faultInjectionPolicyDataType = '';
   /**
+   * @var string
+   */
+  public $idleTimeout;
+  /**
    * @var GrpcRouteRetryPolicy
    */
   public $retryPolicy;
@@ -76,6 +80,20 @@ class GrpcRouteRouteAction extends \Google\Collection
   public function getFaultInjectionPolicy()
   {
     return $this->faultInjectionPolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setIdleTimeout($idleTimeout)
+  {
+    $this->idleTimeout = $idleTimeout;
+  }
+  /**
+   * @return string
+   */
+  public function getIdleTimeout()
+  {
+    return $this->idleTimeout;
   }
   /**
    * @param GrpcRouteRetryPolicy

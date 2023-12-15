@@ -17,49 +17,64 @@
 
 namespace Google\Service\NetworkServices;
 
-class TlsRouteRouteAction extends \Google\Collection
+class HttpRouteHttpDirectResponse extends \Google\Model
 {
-  protected $collection_key = 'destinations';
-  /**
-   * @var TlsRouteRouteDestination[]
-   */
-  public $destinations;
-  protected $destinationsType = TlsRouteRouteDestination::class;
-  protected $destinationsDataType = 'array';
   /**
    * @var string
    */
-  public $idleTimeout;
+  public $bytesBody;
+  /**
+   * @var int
+   */
+  public $status;
+  /**
+   * @var string
+   */
+  public $stringBody;
 
-  /**
-   * @param TlsRouteRouteDestination[]
-   */
-  public function setDestinations($destinations)
-  {
-    $this->destinations = $destinations;
-  }
-  /**
-   * @return TlsRouteRouteDestination[]
-   */
-  public function getDestinations()
-  {
-    return $this->destinations;
-  }
   /**
    * @param string
    */
-  public function setIdleTimeout($idleTimeout)
+  public function setBytesBody($bytesBody)
   {
-    $this->idleTimeout = $idleTimeout;
+    $this->bytesBody = $bytesBody;
   }
   /**
    * @return string
    */
-  public function getIdleTimeout()
+  public function getBytesBody()
   {
-    return $this->idleTimeout;
+    return $this->bytesBody;
+  }
+  /**
+   * @param int
+   */
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return int
+   */
+  public function getStatus()
+  {
+    return $this->status;
+  }
+  /**
+   * @param string
+   */
+  public function setStringBody($stringBody)
+  {
+    $this->stringBody = $stringBody;
+  }
+  /**
+   * @return string
+   */
+  public function getStringBody()
+  {
+    return $this->stringBody;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TlsRouteRouteAction::class, 'Google_Service_NetworkServices_TlsRouteRouteAction');
+class_alias(HttpRouteHttpDirectResponse::class, 'Google_Service_NetworkServices_HttpRouteHttpDirectResponse');

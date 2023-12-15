@@ -20,6 +20,18 @@ namespace Google\Service\NetworkServices;
 class HttpRouteDestination extends \Google\Model
 {
   /**
+   * @var HttpRouteHeaderModifier
+   */
+  public $requestHeaderModifier;
+  protected $requestHeaderModifierType = HttpRouteHeaderModifier::class;
+  protected $requestHeaderModifierDataType = '';
+  /**
+   * @var HttpRouteHeaderModifier
+   */
+  public $responseHeaderModifier;
+  protected $responseHeaderModifierType = HttpRouteHeaderModifier::class;
+  protected $responseHeaderModifierDataType = '';
+  /**
    * @var string
    */
   public $serviceName;
@@ -28,6 +40,34 @@ class HttpRouteDestination extends \Google\Model
    */
   public $weight;
 
+  /**
+   * @param HttpRouteHeaderModifier
+   */
+  public function setRequestHeaderModifier(HttpRouteHeaderModifier $requestHeaderModifier)
+  {
+    $this->requestHeaderModifier = $requestHeaderModifier;
+  }
+  /**
+   * @return HttpRouteHeaderModifier
+   */
+  public function getRequestHeaderModifier()
+  {
+    return $this->requestHeaderModifier;
+  }
+  /**
+   * @param HttpRouteHeaderModifier
+   */
+  public function setResponseHeaderModifier(HttpRouteHeaderModifier $responseHeaderModifier)
+  {
+    $this->responseHeaderModifier = $responseHeaderModifier;
+  }
+  /**
+   * @return HttpRouteHeaderModifier
+   */
+  public function getResponseHeaderModifier()
+  {
+    return $this->responseHeaderModifier;
+  }
   /**
    * @param string
    */
