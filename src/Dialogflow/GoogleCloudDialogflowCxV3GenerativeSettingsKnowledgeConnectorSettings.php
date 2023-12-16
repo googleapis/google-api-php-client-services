@@ -39,6 +39,10 @@ class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings exte
    * @var string
    */
   public $businessDescription;
+  /**
+   * @var bool
+   */
+  public $disableDataStoreFallback;
 
   /**
    * @param string
@@ -109,6 +113,20 @@ class GoogleCloudDialogflowCxV3GenerativeSettingsKnowledgeConnectorSettings exte
   public function getBusinessDescription()
   {
     return $this->businessDescription;
+  }
+  /**
+   * @param bool
+   */
+  public function setDisableDataStoreFallback($disableDataStoreFallback)
+  {
+    $this->disableDataStoreFallback = $disableDataStoreFallback;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableDataStoreFallback()
+  {
+    return $this->disableDataStoreFallback;
   }
 }
 
