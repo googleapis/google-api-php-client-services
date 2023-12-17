@@ -18,6 +18,7 @@
 {% if method.response and method.responseType.className %}
  * @return {{ method.responseType.className }}{% if method.responseType.className|lower == resource.className|lower or method.responseType.className in api.resourceNames %}Model{% endif %}
 {% endif %}
+ * @throws \Google\Service\Exception
  */
 {% endfilter %}
 public function {{ method.name }}({% call_template _func_params method=method %})
