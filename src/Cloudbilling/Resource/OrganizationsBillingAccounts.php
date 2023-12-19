@@ -94,7 +94,7 @@ class OrganizationsBillingAccounts extends \Google\Service\Resource
    * (billingAccounts.move)
    *
    * @param string $destinationParent Required. The resource name of the
-   * Organization to reparent the billing account under. Must be of the form
+   * Organization to move the billing account under. Must be of the form
    * `organizations/{organization_id}`.
    * @param string $name Required. The resource name of the billing account to
    * move. Must be of the form `billingAccounts/{billing_account_id}`. The
