@@ -107,6 +107,12 @@ class Message extends \Google\Collection
    */
   public $name;
   /**
+   * @var User
+   */
+  public $privateMessageViewer;
+  protected $privateMessageViewerType = User::class;
+  protected $privateMessageViewerDataType = '';
+  /**
    * @var QuotedMessageMetadata
    */
   public $quotedMessageMetadata;
@@ -382,6 +388,20 @@ class Message extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param User
+   */
+  public function setPrivateMessageViewer(User $privateMessageViewer)
+  {
+    $this->privateMessageViewer = $privateMessageViewer;
+  }
+  /**
+   * @return User
+   */
+  public function getPrivateMessageViewer()
+  {
+    return $this->privateMessageViewer;
   }
   /**
    * @param QuotedMessageMetadata
