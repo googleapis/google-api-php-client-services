@@ -33,16 +33,16 @@ use Google\Service\Directory\ChromeOsMoveDevicesToOu;
 class Chromeosdevices extends \Google\Service\Resource
 {
   /**
-   * Takes an action that affects a Chrome OS Device. This includes
-   * deprovisioning, disabling, and re-enabling devices. *Warning:* *
-   * Deprovisioning a device will stop device policy syncing and remove device-
-   * level printers. After a device is deprovisioned, it must be wiped before it
-   * can be re-enrolled. * Lost or stolen devices should use the disable action. *
-   * Re-enabling a disabled device will consume a device license. If you do not
-   * have sufficient licenses available when completing the re-enable action, you
-   * will receive an error. For more information about deprovisioning and
-   * disabling devices, visit the [help
-   * center](https://support.google.com/chrome/a/answer/3523633).
+   * DEPRECATED: Use BatchChangeChromeOsDeviceStatus instead. Takes an action that
+   * affects a Chrome OS Device. This includes deprovisioning, disabling, and re-
+   * enabling devices. *Warning:* * Deprovisioning a device will stop device
+   * policy syncing and remove device-level printers. After a device is
+   * deprovisioned, it must be wiped before it can be re-enrolled. * Lost or
+   * stolen devices should use the disable action. * Re-enabling a disabled device
+   * will consume a device license. If you do not have sufficient licenses
+   * available when completing the re-enable action, you will receive an error.
+   * For more information about deprovisioning and disabling devices, visit the
+   * [help center](https://support.google.com/chrome/a/answer/3523633).
    * (chromeosdevices.action)
    *
    * @param string $customerId The unique ID for the customer's Google Workspace
