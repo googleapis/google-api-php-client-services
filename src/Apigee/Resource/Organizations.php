@@ -23,6 +23,7 @@ use Google\Service\Apigee\GoogleCloudApigeeV1ListOrganizationsResponse;
 use Google\Service\Apigee\GoogleCloudApigeeV1Organization;
 use Google\Service\Apigee\GoogleCloudApigeeV1OrganizationProjectMapping;
 use Google\Service\Apigee\GoogleCloudApigeeV1RuntimeConfig;
+use Google\Service\Apigee\GoogleCloudApigeeV1SecuritySettings;
 use Google\Service\Apigee\GoogleCloudApigeeV1SetAddonsRequest;
 use Google\Service\Apigee\GoogleCloudApigeeV1SyncAuthorization;
 use Google\Service\Apigee\GoogleLongrunningOperation;
@@ -147,6 +148,21 @@ class Organizations extends \Google\Service\Resource
     return $this->call('getRuntimeConfig', [$params], GoogleCloudApigeeV1RuntimeConfig::class);
   }
   /**
+   * GetSecuritySettings gets the security settings for API Security.
+   * (organizations.getSecuritySettings)
+   *
+   * @param string $name Required. The name of the SecuritySettings to retrieve.
+   * This will always be: 'organizations/{org}/securitySettings'.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1SecuritySettings
+   */
+  public function getSecuritySettings($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getSecuritySettings', [$params], GoogleCloudApigeeV1SecuritySettings::class);
+  }
+  /**
    * Lists the service accounts with the permissions required to allow the
    * Synchronizer to download environment data from the control plane. An ETag is
    * returned in the response to `getSyncAuthorization`. Pass that ETag when
@@ -243,6 +259,25 @@ class Organizations extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('update', [$params], GoogleCloudApigeeV1Organization::class);
+  }
+  /**
+   * UpdateSecuritySettings updates the current security settings for API
+   * Security. (organizations.updateSecuritySettings)
+   *
+   * @param string $name Identifier. Full resource name is always
+   * `organizations/{org}/securitySettings`.
+   * @param GoogleCloudApigeeV1SecuritySettings $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to update. Allowed
+   * fields are: - ml_retraining_feedback_enabled
+   * @return GoogleCloudApigeeV1SecuritySettings
+   */
+  public function updateSecuritySettings($name, GoogleCloudApigeeV1SecuritySettings $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateSecuritySettings', [$params], GoogleCloudApigeeV1SecuritySettings::class);
   }
 }
 

@@ -233,6 +233,16 @@ class Apigee extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getSecuritySettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getSyncAuthorization' => [
               'path' => 'v1/{+name}:getSyncAuthorization',
               'httpMethod' => 'POST',
@@ -281,6 +291,20 @@ class Apigee extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'updateSecuritySettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
