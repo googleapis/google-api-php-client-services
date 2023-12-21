@@ -34,7 +34,7 @@ class AnywhereCache extends \Google\Service\Resource
   /**
    * Disables an Anywhere Cache instance. (anywhereCache.disable)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCacheModel
@@ -48,7 +48,7 @@ class AnywhereCache extends \Google\Service\Resource
   /**
    * Returns the metadata of an Anywhere Cache instance. (anywhereCache.get)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCacheModel
@@ -62,7 +62,7 @@ class AnywhereCache extends \Google\Service\Resource
   /**
    * Creates an Anywhere Cache instance. (anywhereCache.insert)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param AnywhereCacheModel $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
@@ -77,7 +77,7 @@ class AnywhereCache extends \Google\Service\Resource
    * Returns a list of Anywhere Cache instances of the bucket matching the
    * criteria. (anywhereCache.listAnywhereCache)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of items return in a single page of
@@ -95,7 +95,7 @@ class AnywhereCache extends \Google\Service\Resource
   /**
    * Pauses an Anywhere Cache instance. (anywhereCache.pause)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCacheModel
@@ -109,7 +109,7 @@ class AnywhereCache extends \Google\Service\Resource
   /**
    * Resumes a paused or disabled Anywhere Cache instance. (anywhereCache.resume)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCacheModel
@@ -124,7 +124,7 @@ class AnywhereCache extends \Google\Service\Resource
    * Updates the config(ttl and admissionPolicy) of an Anywhere Cache instance.
    * (anywhereCache.update)
    *
-   * @param string $bucket Name of the partent bucket
+   * @param string $bucket Name of the parent bucket.
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param AnywhereCacheModel $postBody
    * @param array $optParams Optional parameters.
