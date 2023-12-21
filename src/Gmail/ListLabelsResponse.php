@@ -26,10 +26,6 @@ class ListLabelsResponse extends \Google\Collection
   public $labels;
   protected $labelsType = Label::class;
   protected $labelsDataType = 'array';
-  /**
-   * @var int
-   */
-  public $productId;
 
   /**
    * @param Label[]
@@ -44,20 +40,6 @@ class ListLabelsResponse extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
-  }
-  /**
-   * @param int
-   */
-  public function setProductId($productId)
-  {
-    $this->productId = $productId;
-  }
-  /**
-   * @return int
-   */
-  public function getProductId()
-  {
-    return $this->productId;
   }
 }
 
