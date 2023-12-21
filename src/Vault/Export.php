@@ -48,6 +48,10 @@ class Export extends \Google\Model
    */
   public $name;
   /**
+   * @var string
+   */
+  public $parentExportId;
+  /**
    * @var Query
    */
   public $query;
@@ -153,6 +157,20 @@ class Export extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setParentExportId($parentExportId)
+  {
+    $this->parentExportId = $parentExportId;
+  }
+  /**
+   * @return string
+   */
+  public function getParentExportId()
+  {
+    return $this->parentExportId;
   }
   /**
    * @param Query
