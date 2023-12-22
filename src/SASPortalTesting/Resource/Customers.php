@@ -20,6 +20,7 @@ namespace Google\Service\SASPortalTesting\Resource;
 use Google\Service\SASPortalTesting\SasPortalCheckHasProvisionedDeploymentResponse;
 use Google\Service\SASPortalTesting\SasPortalCustomer;
 use Google\Service\SASPortalTesting\SasPortalListCustomersResponse;
+use Google\Service\SASPortalTesting\SasPortalListLegacyOrganizationsResponse;
 use Google\Service\SASPortalTesting\SasPortalMigrateOrganizationRequest;
 use Google\Service\SASPortalTesting\SasPortalOperation;
 use Google\Service\SASPortalTesting\SasPortalProvisionDeploymentRequest;
@@ -78,6 +79,18 @@ class Customers extends \Google\Service\Resource
     $params = [];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], SasPortalListCustomersResponse::class);
+  }
+  /**
+   * Checks whether account is legacy. (customers.listLegacyOrganizations)
+   *
+   * @param array $optParams Optional parameters.
+   * @return SasPortalListLegacyOrganizationsResponse
+   */
+  public function listLegacyOrganizations($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->call('listLegacyOrganizations', [$params], SasPortalListLegacyOrganizationsResponse::class);
   }
   /**
    * Migrates a SAS organization to the cloud. This will create GCP projects for

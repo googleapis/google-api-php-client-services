@@ -111,6 +111,10 @@ class SASPortalTesting extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'listLegacyOrganizations' => [
+              'path' => 'v1alpha1/customers:listLegacyOrganizations',
+              'httpMethod' => 'GET',
+              'parameters' => [],
             ],'migrateOrganization' => [
               'path' => 'v1alpha1/customers:migrateOrganization',
               'httpMethod' => 'POST',
