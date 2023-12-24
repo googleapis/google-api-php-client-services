@@ -17,8 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
+class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Collection
 {
+  protected $collection_key = 'networkTags';
   /**
    * @var string
    */
@@ -40,6 +41,10 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
    */
   public $healthState;
   /**
+   * @var bool
+   */
+  public $isUpgradable;
+  /**
    * @var string[]
    */
   public $labels;
@@ -47,6 +52,10 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string[]
+   */
+  public $networkTags;
   /**
    * @var GoogleCloudAiplatformV1NotebookRuntimeTemplateRef
    */
@@ -61,6 +70,12 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
    * @var string
    */
   public $proxyUri;
+  /**
+   * @var GoogleCloudAiplatformV1NotebookReservationAffinity
+   */
+  public $reservationAffinity;
+  protected $reservationAffinityType = GoogleCloudAiplatformV1NotebookReservationAffinity::class;
+  protected $reservationAffinityDataType = '';
   /**
    * @var string
    */
@@ -153,6 +168,20 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
     return $this->healthState;
   }
   /**
+   * @param bool
+   */
+  public function setIsUpgradable($isUpgradable)
+  {
+    $this->isUpgradable = $isUpgradable;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsUpgradable()
+  {
+    return $this->isUpgradable;
+  }
+  /**
    * @param string[]
    */
   public function setLabels($labels)
@@ -179,6 +208,20 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string[]
+   */
+  public function setNetworkTags($networkTags)
+  {
+    $this->networkTags = $networkTags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getNetworkTags()
+  {
+    return $this->networkTags;
   }
   /**
    * @param GoogleCloudAiplatformV1NotebookRuntimeTemplateRef
@@ -221,6 +264,20 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Model
   public function getProxyUri()
   {
     return $this->proxyUri;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1NotebookReservationAffinity
+   */
+  public function setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity $reservationAffinity)
+  {
+    $this->reservationAffinity = $reservationAffinity;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1NotebookReservationAffinity
+   */
+  public function getReservationAffinity()
+  {
+    return $this->reservationAffinity;
   }
   /**
    * @param string

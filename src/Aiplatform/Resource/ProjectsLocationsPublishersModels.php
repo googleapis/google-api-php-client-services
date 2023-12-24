@@ -22,6 +22,8 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PredictRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PredictResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RawPredictRequest;
@@ -121,6 +123,23 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
     $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('serverStreamingPredict', [$params], GoogleCloudAiplatformV1StreamingPredictResponse::class);
+  }
+  /**
+   * Generate content with multimodal inputs with streaming support.
+   * (models.streamGenerateContent)
+   *
+   * @param string $model Required. The name of the publisher model requested to
+   * serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @param GoogleCloudAiplatformV1GenerateContentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateContentResponse
+   */
+  public function streamGenerateContent($model, GoogleCloudAiplatformV1GenerateContentRequest $postBody, $optParams = [])
+  {
+    $params = ['model' => $model, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('streamGenerateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
   }
 }
 

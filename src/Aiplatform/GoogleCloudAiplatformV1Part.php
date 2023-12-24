@@ -26,6 +26,18 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
   protected $fileDataType = GoogleCloudAiplatformV1FileData::class;
   protected $fileDataDataType = '';
   /**
+   * @var GoogleCloudAiplatformV1FunctionCall
+   */
+  public $functionCall;
+  protected $functionCallType = GoogleCloudAiplatformV1FunctionCall::class;
+  protected $functionCallDataType = '';
+  /**
+   * @var GoogleCloudAiplatformV1FunctionResponse
+   */
+  public $functionResponse;
+  protected $functionResponseType = GoogleCloudAiplatformV1FunctionResponse::class;
+  protected $functionResponseDataType = '';
+  /**
    * @var GoogleCloudAiplatformV1Blob
    */
   public $inlineData;
@@ -55,6 +67,34 @@ class GoogleCloudAiplatformV1Part extends \Google\Model
   public function getFileData()
   {
     return $this->fileData;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1FunctionCall
+   */
+  public function setFunctionCall(GoogleCloudAiplatformV1FunctionCall $functionCall)
+  {
+    $this->functionCall = $functionCall;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FunctionCall
+   */
+  public function getFunctionCall()
+  {
+    return $this->functionCall;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1FunctionResponse
+   */
+  public function setFunctionResponse(GoogleCloudAiplatformV1FunctionResponse $functionResponse)
+  {
+    $this->functionResponse = $functionResponse;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FunctionResponse
+   */
+  public function getFunctionResponse()
+  {
+    return $this->functionResponse;
   }
   /**
    * @param GoogleCloudAiplatformV1Blob

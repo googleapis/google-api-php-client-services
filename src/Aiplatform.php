@@ -1693,6 +1693,16 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'streamGenerateContent' => [
+              'path' => 'v1/{+model}:streamGenerateContent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'model' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'undeployModel' => [
               'path' => 'v1/{+endpoint}:undeployModel',
               'httpMethod' => 'POST',
@@ -5526,6 +5536,16 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'streamGenerateContent' => [
+              'path' => 'v1/{+model}:streamGenerateContent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'model' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -6206,7 +6226,22 @@ class Aiplatform extends \Google\Service
         'tensorboards',
         [
           'methods' => [
-            'create' => [
+            'batchRead' => [
+              'path' => 'v1/{+tensorboard}:batchRead',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'tensorboard' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'timeSeries' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/tensorboards',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -6310,7 +6345,17 @@ class Aiplatform extends \Google\Service
         'experiments',
         [
           'methods' => [
-            'create' => [
+            'batchCreate' => [
+              'path' => 'v1/{+parent}:batchCreate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/experiments',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -6668,47 +6713,7 @@ class Aiplatform extends \Google\Service
         'timeSeries',
         [
           'methods' => [
-            'batchCreate' => [
-              'path' => 'v1/{+parent}/runs/{runsId}/timeSeries:batchCreate',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'runsId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'batchRead' => [
-              'path' => 'v1/{+tensorboard}/experiments/{experimentsId}/runs/{runsId}/timeSeries:batchRead',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'tensorboard' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'experimentsId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'runsId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'timeSeries' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-              ],
-            ],'create' => [
+            'create' => [
               'path' => 'v1/{+parent}/timeSeries',
               'httpMethod' => 'POST',
               'parameters' => [

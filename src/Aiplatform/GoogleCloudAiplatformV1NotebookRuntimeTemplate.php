@@ -17,8 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
+class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Collection
 {
+  protected $collection_key = 'networkTags';
   /**
    * @var string
    */
@@ -78,13 +79,29 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
   protected $networkSpecType = GoogleCloudAiplatformV1NetworkSpec::class;
   protected $networkSpecDataType = '';
   /**
+   * @var string[]
+   */
+  public $networkTags;
+  /**
    * @var string
    */
   public $notebookRuntimeType;
   /**
+   * @var GoogleCloudAiplatformV1NotebookReservationAffinity
+   */
+  public $reservationAffinity;
+  protected $reservationAffinityType = GoogleCloudAiplatformV1NotebookReservationAffinity::class;
+  protected $reservationAffinityDataType = '';
+  /**
    * @var string
    */
   public $serviceAccount;
+  /**
+   * @var GoogleCloudAiplatformV1ShieldedVmConfig
+   */
+  public $shieldedVmConfig;
+  protected $shieldedVmConfigType = GoogleCloudAiplatformV1ShieldedVmConfig::class;
+  protected $shieldedVmConfigDataType = '';
   /**
    * @var string
    */
@@ -259,6 +276,20 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
     return $this->networkSpec;
   }
   /**
+   * @param string[]
+   */
+  public function setNetworkTags($networkTags)
+  {
+    $this->networkTags = $networkTags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getNetworkTags()
+  {
+    return $this->networkTags;
+  }
+  /**
    * @param string
    */
   public function setNotebookRuntimeType($notebookRuntimeType)
@@ -273,6 +304,20 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
     return $this->notebookRuntimeType;
   }
   /**
+   * @param GoogleCloudAiplatformV1NotebookReservationAffinity
+   */
+  public function setReservationAffinity(GoogleCloudAiplatformV1NotebookReservationAffinity $reservationAffinity)
+  {
+    $this->reservationAffinity = $reservationAffinity;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1NotebookReservationAffinity
+   */
+  public function getReservationAffinity()
+  {
+    return $this->reservationAffinity;
+  }
+  /**
    * @param string
    */
   public function setServiceAccount($serviceAccount)
@@ -285,6 +330,20 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Model
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ShieldedVmConfig
+   */
+  public function setShieldedVmConfig(GoogleCloudAiplatformV1ShieldedVmConfig $shieldedVmConfig)
+  {
+    $this->shieldedVmConfig = $shieldedVmConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ShieldedVmConfig
+   */
+  public function getShieldedVmConfig()
+  {
+    return $this->shieldedVmConfig;
   }
   /**
    * @param string

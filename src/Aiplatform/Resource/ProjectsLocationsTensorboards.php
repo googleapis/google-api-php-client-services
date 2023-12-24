@@ -17,6 +17,7 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListTensorboardsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ReadTensorboardSizeResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ReadTensorboardUsageResponse;
@@ -33,6 +34,32 @@ use Google\Service\Aiplatform\GoogleLongrunningOperation;
  */
 class ProjectsLocationsTensorboards extends \Google\Service\Resource
 {
+  /**
+   * Reads multiple TensorboardTimeSeries' data. The data point number limit is
+   * 1000 for scalars, 100 for tensors and blob references. If the number of data
+   * points stored is less than the limit, all data is returned. Otherwise, the
+   * number limit of data points is randomly selected from this time series and
+   * returned. (tensorboards.batchRead)
+   *
+   * @param string $tensorboard Required. The resource name of the Tensorboard
+   * containing TensorboardTimeSeries to read data from. Format:
+   * `projects/{project}/locations/{location}/tensorboards/{tensorboard}`. The
+   * TensorboardTimeSeries referenced by time_series must be sub resources of this
+   * Tensorboard.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string timeSeries Required. The resource names of the
+   * TensorboardTimeSeries to read data from. Format: `projects/{project}/location
+   * s/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/t
+   * imeSeries/{time_series}`
+   * @return GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse
+   */
+  public function batchRead($tensorboard, $optParams = [])
+  {
+    $params = ['tensorboard' => $tensorboard];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchRead', [$params], GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse::class);
+  }
   /**
    * Creates a Tensorboard. (tensorboards.create)
    *

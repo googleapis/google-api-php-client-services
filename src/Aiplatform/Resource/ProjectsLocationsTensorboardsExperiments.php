@@ -17,6 +17,8 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListTensorboardExperimentsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1TensorboardExperiment;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1WriteTensorboardExperimentDataRequest;
@@ -33,6 +35,26 @@ use Google\Service\Aiplatform\GoogleLongrunningOperation;
  */
 class ProjectsLocationsTensorboardsExperiments extends \Google\Service\Resource
 {
+  /**
+   * Batch create TensorboardTimeSeries that belong to a TensorboardExperiment.
+   * (experiments.batchCreate)
+   *
+   * @param string $parent Required. The resource name of the
+   * TensorboardExperiment to create the TensorboardTimeSeries in. Format: `projec
+   * ts/{project}/locations/{location}/tensorboards/{tensorboard}/experiments/{exp
+   * eriment}` The TensorboardRuns referenced by the parent fields in the
+   * CreateTensorboardTimeSeriesRequest messages must be sub resources of this
+   * TensorboardExperiment.
+   * @param GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse
+   */
+  public function batchCreate($parent, GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('batchCreate', [$params], GoogleCloudAiplatformV1BatchCreateTensorboardTimeSeriesResponse::class);
+  }
   /**
    * Creates a TensorboardExperiment. (experiments.create)
    *
