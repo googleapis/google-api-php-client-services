@@ -20,6 +20,7 @@ namespace Google\Service\Sasportal\Resource;
 use Google\Service\Sasportal\SasPortalCheckHasProvisionedDeploymentResponse;
 use Google\Service\Sasportal\SasPortalCustomer;
 use Google\Service\Sasportal\SasPortalListCustomersResponse;
+use Google\Service\Sasportal\SasPortalListLegacyOrganizationsResponse;
 use Google\Service\Sasportal\SasPortalMigrateOrganizationRequest;
 use Google\Service\Sasportal\SasPortalOperation;
 use Google\Service\Sasportal\SasPortalProvisionDeploymentRequest;
@@ -78,6 +79,18 @@ class Customers extends \Google\Service\Resource
     $params = [];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], SasPortalListCustomersResponse::class);
+  }
+  /**
+   * Checks whether account is legacy. (customers.listLegacyOrganizations)
+   *
+   * @param array $optParams Optional parameters.
+   * @return SasPortalListLegacyOrganizationsResponse
+   */
+  public function listLegacyOrganizations($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->call('listLegacyOrganizations', [$params], SasPortalListLegacyOrganizationsResponse::class);
   }
   /**
    * Migrates a SAS organization to the cloud. This will create GCP projects for
