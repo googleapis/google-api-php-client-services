@@ -274,7 +274,7 @@ class BackendBuckets extends \Google\Service\Resource
    * (backendBuckets.setEdgeSecurityPolicy)
    *
    * @param string $project Project ID for this request.
-   * @param string $backendBucket Name of the BackendService resource to which the
+   * @param string $backendBucket Name of the BackendBucket resource to which the
    * security policy should be set. The name should conform to RFC1035.
    * @param SecurityPolicyReference $postBody
    * @param array $optParams Optional parameters.

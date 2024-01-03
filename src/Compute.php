@@ -5392,6 +5392,30 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'performMaintenance' => [
+              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/performMaintenance',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'removeResourcePolicies' => [
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/removeResourcePolicies',
               'httpMethod' => 'POST',
@@ -5852,6 +5876,10 @@ class Compute extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'withExtendedNotifications' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'start' => [

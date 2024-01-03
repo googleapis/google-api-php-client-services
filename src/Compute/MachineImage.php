@@ -59,6 +59,10 @@ class MachineImage extends \Google\Collection
   /**
    * @var bool
    */
+  public $satisfiesPzi;
+  /**
+   * @var bool
+   */
   public $satisfiesPzs;
   /**
    * @var SavedDisk[]
@@ -210,6 +214,20 @@ class MachineImage extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
   }
   /**
    * @param bool

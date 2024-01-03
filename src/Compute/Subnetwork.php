@@ -101,6 +101,10 @@ class Subnetwork extends \Google\Collection
   /**
    * @var string
    */
+  public $reservedInternalRange;
+  /**
+   * @var string
+   */
   public $role;
   /**
    * @var SubnetworkSecondaryRange[]
@@ -386,6 +390,20 @@ class Subnetwork extends \Google\Collection
   public function getRegion()
   {
     return $this->region;
+  }
+  /**
+   * @param string
+   */
+  public function setReservedInternalRange($reservedInternalRange)
+  {
+    $this->reservedInternalRange = $reservedInternalRange;
+  }
+  /**
+   * @return string
+   */
+  public function getReservedInternalRange()
+  {
+    return $this->reservedInternalRange;
   }
   /**
    * @param string
