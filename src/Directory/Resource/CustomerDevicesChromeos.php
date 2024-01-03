@@ -33,10 +33,13 @@ use Google\Service\Directory\DirectoryChromeosdevicesIssueCommandResponse;
 class CustomerDevicesChromeos extends \Google\Service\Resource
 {
   /**
-   * Changes the status of a batch of ChromeOS devices.
+   * Changes the status of a batch of ChromeOS devices. For more information about
+   * changing a ChromeOS device state [Repair, repurpose, or retire ChromeOS
+   * devices](https://support.google.com/chrome/a/answer/3523633).
    * (chromeos.batchChangeStatus)
    *
-   * @param string $customerId Required. Immutable ID of the G Suite account.
+   * @param string $customerId Required. Immutable ID of the Google Workspace
+   * account.
    * @param BatchChangeChromeOsDeviceStatusRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchChangeChromeOsDeviceStatusResponse
