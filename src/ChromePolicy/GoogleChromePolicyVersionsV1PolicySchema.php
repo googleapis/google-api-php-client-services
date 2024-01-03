@@ -77,6 +77,10 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   /**
    * @var string[]
    */
+  public $supportedPlatforms;
+  /**
+   * @var string[]
+   */
   public $validTargetResources;
 
   /**
@@ -232,6 +236,20 @@ class GoogleChromePolicyVersionsV1PolicySchema extends \Google\Collection
   public function getSupportUri()
   {
     return $this->supportUri;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSupportedPlatforms($supportedPlatforms)
+  {
+    $this->supportedPlatforms = $supportedPlatforms;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSupportedPlatforms()
+  {
+    return $this->supportedPlatforms;
   }
   /**
    * @param string[]
