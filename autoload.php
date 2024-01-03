@@ -1,10 +1,23 @@
 <?php
 
-// For older (pre-2.7.2) verions of google/apiclient
 if (
+    class_exists('Google\\Client')
+    || (
+        class_exists('Composer\\InstalledVersions')
+        && version_compare(\Composer\InstalledVersions::getVersion('google/apiclient'), '2.7.2', '>')
+    )
+) {
+    return;
+} elseif (
+    // For older (pre-2.7.2) verions of google/apiclient
     file_exists(__DIR__ . '/../apiclient/src/Google/Client.php')
     && !class_exists('Google_Client', false)
 ) {
+    load_legacy_namespace();
+}
+
+function load_legacy_namespace()
+{
     require_once(__DIR__ . '/../apiclient/src/Google/Client.php');
     if (
         defined('Google_Client::LIBVER')
@@ -21,16 +34,17 @@ if (
             class_alias($class, $alias);
         }
     }
-}
-spl_autoload_register(function ($class) {
-    if (0 === strpos($class, 'Google_Service_')) {
-        // Autoload the new class, which will also create an alias for the
-        // old class by changing underscores to namespaces:
-        //     Google_Service_Speech_Resource_Operations
-        //      => Google\Service\Speech\Resource\Operations
-        $classExists = class_exists($newClass = str_replace('_', '\\', $class));
-        if ($classExists) {
-            return true;
+
+    spl_autoload_register(function ($class) {
+        if (0 === strpos($class, 'Google_Service_')) {
+            // Autoload the new class, which will also create an alias for the
+            // old class by changing underscores to namespaces:
+            //     Google_Service_Speech_Resource_Operations
+            //      => Google\Service\Speech\Resource\Operations
+            $classExists = class_exists($newClass = str_replace('_', '\\', $class));
+            if ($classExists) {
+                return true;
+            }
         }
-    }
-}, true, true);
+    }, true, true);
+}
