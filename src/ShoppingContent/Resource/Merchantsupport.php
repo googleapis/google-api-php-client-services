@@ -44,8 +44,7 @@ class Merchantsupport extends \Google\Service\Resource
    *
    * @opt_param string languageCode Optional. The [IETF
    * BCP-47](https://tools.ietf.org/html/bcp47) language code used to localize
-   * support content. If not set, the result will be in default language ('en-
-   * US').
+   * support content. If not set, the result will be in default language `en-US`.
    * @opt_param string timeZone Optional. The [IANA](https://www.iana.org/time-
    * zones) timezone used to localize times in support content. For example
    * 'America/Los_Angeles'. If not set, results will use as a default UTC.
@@ -73,8 +72,7 @@ class Merchantsupport extends \Google\Service\Resource
    *
    * @opt_param string languageCode Optional. The [IETF
    * BCP-47](https://tools.ietf.org/html/bcp47) language code used to localize
-   * support content. If not set, the result will be in default language ('en-
-   * US').
+   * support content. If not set, the result will be in default language `en-US`.
    * @opt_param string timeZone Optional. The [IANA](https://www.iana.org/time-
    * zones) timezone used to localize times in support content. For example
    * 'America/Los_Angeles'. If not set, results will use as a default UTC.
