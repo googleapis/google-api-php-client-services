@@ -19,7 +19,7 @@ namespace Google\Service\Batch;
 
 class AllocationPolicy extends \Google\Collection
 {
-  protected $collection_key = 'instances';
+  protected $collection_key = 'tags';
   /**
    * @var InstancePolicyOrTemplate[]
    */
@@ -54,6 +54,10 @@ class AllocationPolicy extends \Google\Collection
   public $serviceAccount;
   protected $serviceAccountType = ServiceAccount::class;
   protected $serviceAccountDataType = '';
+  /**
+   * @var string[]
+   */
+  public $tags;
 
   /**
    * @param InstancePolicyOrTemplate[]
@@ -138,6 +142,20 @@ class AllocationPolicy extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
 }
 
