@@ -32,8 +32,10 @@ use Google\Service\DisplayVideo\ListCreativesResponse;
 class AdvertisersCreatives extends \Google\Service\Resource
 {
   /**
-   * Creates a new creative. Returns the newly created creative if successful.
-   * (creatives.create)
+   * Creates a new creative. Returns the newly created creative if successful. A
+   * ["Standard" user role](//support.google.com/displayvideo/answer/2723011) or
+   * greater for the parent advertiser or partner is required to make this
+   * request. (creatives.create)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * creative belongs to.
@@ -50,7 +52,10 @@ class AdvertisersCreatives extends \Google\Service\Resource
   /**
    * Deletes a creative. Returns error code `NOT_FOUND` if the creative does not
    * exist. The creative should be archived first, i.e. set entity_status to
-   * `ENTITY_STATUS_ARCHIVED`, before it can be deleted. (creatives.delete)
+   * `ENTITY_STATUS_ARCHIVED`, before it can be deleted. A ["Standard" user
+   * role](//support.google.com/displayvideo/answer/2723011) or greater for the
+   * parent advertiser or partner is required to make this request.
+   * (creatives.delete)
    *
    * @param string $advertiserId The ID of the advertiser this creative belongs
    * to.
@@ -144,8 +149,10 @@ class AdvertisersCreatives extends \Google\Service\Resource
     return $this->call('list', [$params], ListCreativesResponse::class);
   }
   /**
-   * Updates an existing creative. Returns the updated creative if successful.
-   * (creatives.patch)
+   * Updates an existing creative. Returns the updated creative if successful. A
+   * ["Standard" user role](//support.google.com/displayvideo/answer/2723011) or
+   * greater for the parent advertiser or partner is required to make this
+   * request. (creatives.patch)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * creative belongs to.

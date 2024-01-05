@@ -47,7 +47,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * BulkEditAssignedTargetingOptionsRequest.create_requests. Requests to this
    * endpoint cannot be made concurrently with the following requests updating the
    * same line item: * lineItems.bulkUpdate * lineItems.patch *
-   * assignedTargetingOptions.create * assignedTargetingOptions.delete
+   * assignedTargetingOptions.create * assignedTargetingOptions.delete YouTube &
+   * Partners line items cannot be created or updated using the API.
    * (lineItems.bulkEditAssignedTargetingOptions)
    *
    * @param string $advertiserId Required. The ID of the advertiser the line items
@@ -111,7 +112,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * Updates multiple line items. Requests to this endpoint cannot be made
    * concurrently with the following requests updating the same line item: *
    * BulkEditAssignedTargetingOptions * UpdateLineItem *
-   * assignedTargetingOptions.create * assignedTargetingOptions.delete
+   * assignedTargetingOptions.create * assignedTargetingOptions.delete YouTube &
+   * Partners line items cannot be created or updated using the API.
    * (lineItems.bulkUpdate)
    *
    * @param string $advertiserId Required. The ID of the advertiser this line item
@@ -128,6 +130,7 @@ class AdvertisersLineItems extends \Google\Service\Resource
   }
   /**
    * Creates a new line item. Returns the newly created line item if successful.
+   * YouTube & Partners line items cannot be created or updated using the API.
    * (lineItems.create)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
@@ -145,7 +148,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
   /**
    * Deletes a line item. Returns error code `NOT_FOUND` if the line item does not
    * exist. The line item should be archived first, i.e. set entity_status to
-   * `ENTITY_STATUS_ARCHIVED`, to be able to delete it. (lineItems.delete)
+   * `ENTITY_STATUS_ARCHIVED`, to be able to delete it. YouTube & Partners line
+   * items cannot be created or updated using the API. (lineItems.delete)
    *
    * @param string $advertiserId The ID of the advertiser this line item belongs
    * to.
@@ -161,7 +165,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
   }
   /**
    * Duplicates a line item. Returns the ID of the created line item if
-   * successful. (lineItems.duplicate)
+   * successful. YouTube & Partners line items cannot be created or updated using
+   * the API. (lineItems.duplicate)
    *
    * @param string $advertiserId Required. The ID of the advertiser this line item
    * belongs to.
@@ -181,8 +186,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * the insertion order and an `ENTITY_STATUS_DRAFT` entity_status. Returns the
    * newly created line item if successful. There are default values based on the
    * three fields: * The insertion order's insertion_order_type * The insertion
-   * order's automation_type * The given line_item_type
-   * (lineItems.generateDefault)
+   * order's automation_type * The given line_item_type YouTube & Partners line
+   * items cannot be created or updated using the API. (lineItems.generateDefault)
    *
    * @param string $advertiserId Required. The ID of the advertiser this line item
    * belongs to.
@@ -266,7 +271,8 @@ class AdvertisersLineItems extends \Google\Service\Resource
    * Requests to this endpoint cannot be made concurrently with the following
    * requests updating the same line item: * BulkEditAssignedTargetingOptions *
    * BulkUpdateLineItems * assignedTargetingOptions.create *
-   * assignedTargetingOptions.delete (lineItems.patch)
+   * assignedTargetingOptions.delete YouTube & Partners line items cannot be
+   * created or updated using the API. (lineItems.patch)
    *
    * @param string $advertiserId Output only. The unique ID of the advertiser the
    * line item belongs to.
