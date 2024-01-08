@@ -838,10 +838,6 @@ use Google\Service\KitchSink\Geometry
 class GeometryCollection extends Geometry
 {
   protected $collection_key = 'geometries';
-  /**
-   * @var Geometry[]
-   */
-  public $geometries;
   protected $geometriesType = Geometry::class;
   protected $geometriesDataType = 'array';
   protected function gapiInit()
@@ -1128,16 +1124,8 @@ namespace Google\Service\KitchSink;
 
 class Profile extends \Google\Model
 {
-  /**
-   * @var ProfileAttribution
-   */
-  public $attribution;
   protected $attributionType = ProfileAttribution::class;
   protected $attributionDataType = '';
-  /**
-   * @var ProfileId
-   */
-  public $id;
   protected $idType = ProfileId::class;
   protected $idDataType = '';
   /**
@@ -1222,10 +1210,6 @@ class ProfileAttribution extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var LatLong
-   */
-  public $geo;
   protected $geoType = LatLong::class;
   protected $geoDataType = '';
   /**
@@ -2486,10 +2470,6 @@ namespace Google\Service\KitchSink;
 
 class Rule extends \Google\Model
 {
-  /**
-   * @var RuleSubmissions
-   */
-  public $submissions;
   protected $submissionsType = RuleSubmissions::class;
   protected $submissionsDataType = '';
 
@@ -2602,20 +2582,12 @@ class Series extends \Google\Model
    * @var bool
    */
   public $anonymousSubmissionAllowed;
-  /**
-   * @var SeriesCounters
-   */
-  public $counters;
   protected $countersType = SeriesCounters::class;
   protected $countersDataType = '';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var SeriesId
-   */
-  public $id;
   protected $idType = SeriesId::class;
   protected $idDataType = '';
   /**
@@ -2783,10 +2755,6 @@ class SeriesCounters extends \Google\Model
    * @var int
    */
   public $anonymousSubmissions;
-  /**
-   * @var SeriesCountersCounters
-   */
-  public $counters;
   protected $countersType = SeriesCountersCounters::class;
   protected $countersDataType = '';
   /**
@@ -3049,10 +3017,6 @@ namespace Google\Service\KitchSink;
 class SeriesList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Series[]
-   */
-  public $items;
   protected $itemsType = Series::class;
   protected $itemsDataType = 'array';
   /**
@@ -3123,62 +3087,34 @@ class Submission extends \Google\Collection
    * @var string
    */
   public $attachmentUrl;
-  /**
-   * @var SubmissionAttribution
-   */
-  public $attribution;
   protected $attributionType = SubmissionAttribution::class;
   protected $attributionDataType = '';
   /**
    * @var string
    */
   public $author;
-  /**
-   * @var SubmissionCounters
-   */
-  public $counters;
   protected $countersType = SubmissionCounters::class;
   protected $countersDataType = '';
   /**
    * @var int
    */
   public $created;
-  /**
-   * @var LatLong[]
-   */
-  public $geo;
   protected $geoType = LatLong::class;
   protected $geoDataType = 'array';
-  /**
-   * @var SubmissionId
-   */
-  public $id;
   protected $idType = SubmissionId::class;
   protected $idDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var SubmissionParentSubmissionId
-   */
-  public $parentSubmissionId;
   protected $parentSubmissionIdType = SubmissionParentSubmissionId::class;
   protected $parentSubmissionIdDataType = '';
   /**
    * @var string
    */
   public $text;
-  /**
-   * @var ModeratorTopicsResourcePartial[]
-   */
-  public $topics;
   protected $topicsType = ModeratorTopicsResourcePartial::class;
   protected $topicsDataType = 'array';
-  /**
-   * @var Translation[]
-   */
-  public $translations;
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'map';
 
@@ -3615,10 +3551,6 @@ namespace Google\Service\KitchSink;
 class SubmissionList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Submission[]
-   */
-  public $items;
   protected $itemsType = Submission::class;
   protected $itemsDataType = 'array';
   /**
@@ -3745,16 +3677,8 @@ namespace Google\Service\KitchSink;
 
 class Tag extends \Google\Model
 {
-  /**
-   * @var Geometry
-   */
-  public $geometry;
   protected $geometryType = Geometry::class;
   protected $geometryDataType = '';
-  /**
-   * @var TagId
-   */
-  public $id;
   protected $idType = TagId::class;
   protected $idDataType = '';
   /**
@@ -3931,20 +3855,12 @@ namespace Google\Service\KitchSink;
 
 class Topic extends \Google\Model
 {
-  /**
-   * @var TopicCounters
-   */
-  public $counters;
   protected $countersType = TopicCounters::class;
   protected $countersDataType = '';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var TopicId
-   */
-  public $id;
   protected $idType = TopicId::class;
   protected $idDataType = '';
   /**
@@ -3959,10 +3875,6 @@ class Topic extends \Google\Model
    * @var string
    */
   public $presenter;
-  /**
-   * @var TopicRules
-   */
-  public $rules;
   protected $rulesType = TopicRules::class;
   protected $rulesDataType = '';
 
@@ -4092,26 +4004,14 @@ namespace Google\Service\KitchSink;
 class Topic2 extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var Topic2Counters
-   */
-  public $counters;
   protected $countersType = Topic2Counters::class;
   protected $countersDataType = '';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var Submission
-   */
-  public $featuredSubmission;
   protected $featuredSubmissionType = Submission::class;
   protected $featuredSubmissionDataType = '';
-  /**
-   * @var Topic2Id
-   */
-  public $id;
   protected $idType = Topic2Id::class;
   protected $idDataType = '';
   /**
@@ -4126,10 +4026,6 @@ class Topic2 extends \Google\Collection
    * @var string
    */
   public $presenter;
-  /**
-   * @var Rule[]
-   */
-  public $rules;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
 
@@ -4683,10 +4579,6 @@ namespace Google\Service\KitchSink;
 class TopicList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Topic[]
-   */
-  public $items;
   protected $itemsType = Topic::class;
   protected $itemsDataType = 'array';
   /**
@@ -4749,16 +4641,8 @@ namespace Google\Service\KitchSink;
 
 class TopicRules extends \Google\Model
 {
-  /**
-   * @var TopicRulesSubmissions
-   */
-  public $submissions;
   protected $submissionsType = TopicRulesSubmissions::class;
   protected $submissionsDataType = '';
-  /**
-   * @var TopicRulesVotes
-   */
-  public $votes;
   protected $votesType = TopicRulesVotes::class;
   protected $votesDataType = '';
 
@@ -5013,10 +4897,6 @@ class Vote extends \Google\Model
    * @var string
    */
   public $flag;
-  /**
-   * @var VoteId
-   */
-  public $id;
   protected $idType = VoteId::class;
   protected $idDataType = '';
   /**
@@ -5139,10 +5019,6 @@ namespace Google\Service\KitchSink;
 class VoteList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Vote[]
-   */
-  public $items;
   protected $itemsType = Vote::class;
   protected $itemsDataType = 'array';
   /**

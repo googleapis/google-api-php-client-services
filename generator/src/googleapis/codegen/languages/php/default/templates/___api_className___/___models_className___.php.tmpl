@@ -19,18 +19,19 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
     {% endfor %}
   ];
 {% endif %}{% for property in model.properties %}
- {% if property.annotationType %}
-  /**
-   * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
-   */
- {% endif %}
-  public ${{ property.memberName }};
  {% if property.typeHint %}
   {% if property.memberName|add:"Type" not in model.propNames %}
   protected ${{ property.memberName }}Type = {{ property.typeHint }}::class;
   {% endif %}{% if property.memberName|add:"DataType" not in model.propNames %}
   protected ${{ property.memberName }}DataType = '{{ property.dataType }}';
   {% endif %}
+ {% else %}
+ {% if property.annotationType %}
+  /**
+   * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
+   */
+ {% endif %}
+  public ${{ property.memberName }};
  {% endif %}
 {% endfor %}
 {% endfilter %}
