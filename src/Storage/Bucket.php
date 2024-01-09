@@ -71,6 +71,12 @@ class Bucket extends \Google\Collection
    */
   public $etag;
   /**
+   * @var BucketHierarchicalNamespace
+   */
+  public $hierarchicalNamespace;
+  protected $hierarchicalNamespaceType = BucketHierarchicalNamespace::class;
+  protected $hierarchicalNamespaceDataType = '';
+  /**
    * @var BucketIamConfiguration
    */
   public $iamConfiguration;
@@ -306,6 +312,20 @@ class Bucket extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param BucketHierarchicalNamespace
+   */
+  public function setHierarchicalNamespace(BucketHierarchicalNamespace $hierarchicalNamespace)
+  {
+    $this->hierarchicalNamespace = $hierarchicalNamespace;
+  }
+  /**
+   * @return BucketHierarchicalNamespace
+   */
+  public function getHierarchicalNamespace()
+  {
+    return $this->hierarchicalNamespace;
   }
   /**
    * @param BucketIamConfiguration
