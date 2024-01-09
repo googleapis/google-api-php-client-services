@@ -184,7 +184,7 @@ class Accounts extends \Google\Service\Resource
    * specified set of filters. (accounts.searchChangeHistoryEvents)
    *
    * @param string $account Required. The account resource for which to return
-   * change history resources.
+   * change history resources. Format: accounts/{account} Example: "accounts/100"
    * @param GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsResponse
