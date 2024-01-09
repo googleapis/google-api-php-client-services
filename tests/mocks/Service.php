@@ -2,7 +2,6 @@
 
 namespace Google;
 
-#[AllowDynamicProperties]
 class Service
 {
 }
