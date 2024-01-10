@@ -18,6 +18,8 @@
 namespace Google\Service\HangoutsChat\Resource;
 
 use Google\Service\HangoutsChat\ChatEmpty;
+use Google\Service\HangoutsChat\CompleteImportSpaceRequest;
+use Google\Service\HangoutsChat\CompleteImportSpaceResponse;
 use Google\Service\HangoutsChat\ListSpacesResponse;
 use Google\Service\HangoutsChat\SetUpSpaceRequest;
 use Google\Service\HangoutsChat\Space;
@@ -32,6 +34,26 @@ use Google\Service\HangoutsChat\Space;
  */
 class Spaces extends \Google\Service\Resource
 {
+  /**
+   * Completes the [import
+   * process](https://developers.google.com/chat/api/guides/import-data) for the
+   * specified space and makes it visible to users. Requires app authentication
+   * and domain-wide delegation. For more information, see [Authorize Google Chat
+   * apps to import data](https://developers.google.com/chat/api/guides/authorize-
+   * import). (spaces.completeImport)
+   *
+   * @param string $name Required. Resource name of the import mode space. Format:
+   * `spaces/{space}`
+   * @param CompleteImportSpaceRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CompleteImportSpaceResponse
+   */
+  public function completeImport($name, CompleteImportSpaceRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('completeImport', [$params], CompleteImportSpaceResponse::class);
+  }
   /**
    * Creates a named space. Spaces grouped by topics aren't supported. For an
    * example, see [Create a

@@ -24,6 +24,10 @@ class Membership extends \Google\Model
    */
   public $createTime;
   /**
+   * @var string
+   */
+  public $deleteTime;
+  /**
    * @var Group
    */
   public $groupMember;
@@ -61,6 +65,20 @@ class Membership extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDeleteTime($deleteTime)
+  {
+    $this->deleteTime = $deleteTime;
+  }
+  /**
+   * @return string
+   */
+  public function getDeleteTime()
+  {
+    return $this->deleteTime;
   }
   /**
    * @param Group
