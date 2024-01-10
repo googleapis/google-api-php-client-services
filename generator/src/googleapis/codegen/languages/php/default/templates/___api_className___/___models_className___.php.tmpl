@@ -24,7 +24,7 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
    */
  {% endif %}
-  public ${{ property.memberName }};
+  protected ${{ property.memberName }};
  {% if property.typeHint %}
   {% if property.memberName|add:"Type" not in model.propNames %}
   protected ${{ property.memberName }}Type = {{ property.typeHint }}::class;
