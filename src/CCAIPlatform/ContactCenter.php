@@ -17,8 +17,9 @@
 
 namespace Google\Service\CCAIPlatform;
 
-class ContactCenter extends \Google\Model
+class ContactCenter extends \Google\Collection
 {
+  protected $collection_key = 'privateComponents';
   /**
    * @var AdminUser
    */
@@ -59,6 +60,10 @@ class ContactCenter extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string[]
+   */
+  public $privateComponents;
   /**
    * @var SAMLParams
    */
@@ -209,6 +214,20 @@ class ContactCenter extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPrivateComponents($privateComponents)
+  {
+    $this->privateComponents = $privateComponents;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPrivateComponents()
+  {
+    return $this->privateComponents;
   }
   /**
    * @param SAMLParams
