@@ -30,6 +30,10 @@ class RolloutUpdateEvent extends \Google\Model
   /**
    * @var string
    */
+  public $release;
+  /**
+   * @var string
+   */
   public $releaseUid;
   /**
    * @var string
@@ -75,6 +79,20 @@ class RolloutUpdateEvent extends \Google\Model
   public function getPipelineUid()
   {
     return $this->pipelineUid;
+  }
+  /**
+   * @param string
+   */
+  public function setRelease($release)
+  {
+    $this->release = $release;
+  }
+  /**
+   * @return string
+   */
+  public function getRelease()
+  {
+    return $this->release;
   }
   /**
    * @param string

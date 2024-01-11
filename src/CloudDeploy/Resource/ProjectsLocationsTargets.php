@@ -46,9 +46,9 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    *
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
-   * server will guarantee that for at least 60 minutes since the first request.
-   * For example, consider a situation where you make an initial request and the
+   * server knows to ignore the request if it has already been completed. The
+   * server guarantees that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
    * request times out. If you make the request again with the same request ID,
    * the server can check if original operation with the same request ID was
    * received, and if so, will ignore the second request. This prevents clients
@@ -82,9 +82,9 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * requests to ensure the client has an up-to-date value before proceeding.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
-   * server will guarantee that for at least 60 minutes after the first request.
-   * For example, consider a situation where you make an initial request and the
+   * server knows to ignore the request if it has already been completed. The
+   * server guarantees that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
    * request times out. If you make the request again with the same request ID,
    * the server can check if original operation with the same request ID was
    * received, and if so, will ignore the second request. This prevents clients
@@ -185,9 +185,9 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * that does not exist will result in the creation of a new `Target`.
    * @opt_param string requestId Optional. A request ID to identify requests.
    * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. The
-   * server will guarantee that for at least 60 minutes since the first request.
-   * For example, consider a situation where you make an initial request and the
+   * server knows to ignore the request if it has already been completed. The
+   * server guarantees that for at least 60 minutes after the first request. For
+   * example, consider a situation where you make an initial request and the
    * request times out. If you make the request again with the same request ID,
    * the server can check if original operation with the same request ID was
    * received, and if so, will ignore the second request. This prevents clients
@@ -197,8 +197,8 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * @opt_param string updateMask Required. Field mask is used to specify the
    * fields to be overwritten in the Target resource by the update. The fields
    * specified in the update_mask are relative to the resource, not the full
-   * request. A field will be overwritten if it is in the mask. If the user does
-   * not provide a mask then all fields will be overwritten.
+   * request. A field will be overwritten if it's in the mask. If the user doesn't
+   * provide a mask then all fields are overwritten.
    * @opt_param bool validateOnly Optional. If set to true, the request is
    * validated and the user is provided with an expected result, but no actual
    * change is made.

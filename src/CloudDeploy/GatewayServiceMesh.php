@@ -35,6 +35,10 @@ class GatewayServiceMesh extends \Google\Model
    * @var string
    */
   public $service;
+  /**
+   * @var string
+   */
+  public $stableCutbackDuration;
 
   /**
    * @param string
@@ -91,6 +95,20 @@ class GatewayServiceMesh extends \Google\Model
   public function getService()
   {
     return $this->service;
+  }
+  /**
+   * @param string
+   */
+  public function setStableCutbackDuration($stableCutbackDuration)
+  {
+    $this->stableCutbackDuration = $stableCutbackDuration;
+  }
+  /**
+   * @return string
+   */
+  public function getStableCutbackDuration()
+  {
+    return $this->stableCutbackDuration;
   }
 }
 
