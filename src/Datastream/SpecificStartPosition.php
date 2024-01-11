@@ -25,6 +25,12 @@ class SpecificStartPosition extends \Google\Model
   public $mysqlLogPosition;
   protected $mysqlLogPositionType = MysqlLogPosition::class;
   protected $mysqlLogPositionDataType = '';
+  /**
+   * @var OracleScnPosition
+   */
+  public $oracleScnPosition;
+  protected $oracleScnPositionType = OracleScnPosition::class;
+  protected $oracleScnPositionDataType = '';
 
   /**
    * @param MysqlLogPosition
@@ -39,6 +45,20 @@ class SpecificStartPosition extends \Google\Model
   public function getMysqlLogPosition()
   {
     return $this->mysqlLogPosition;
+  }
+  /**
+   * @param OracleScnPosition
+   */
+  public function setOracleScnPosition(OracleScnPosition $oracleScnPosition)
+  {
+    $this->oracleScnPosition = $oracleScnPosition;
+  }
+  /**
+   * @return OracleScnPosition
+   */
+  public function getOracleScnPosition()
+  {
+    return $this->oracleScnPosition;
   }
 }
 
