@@ -46,9 +46,11 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    */
   public $currentState;
   /**
-   * @var array[]
+   * @var StorageDatabasecenterPartnerapiV1mainCustomMetadataData
    */
   public $customMetadata;
+  protected $customMetadataType = StorageDatabasecenterPartnerapiV1mainCustomMetadataData::class;
+  protected $customMetadataDataType = '';
   /**
    * @var string
    */
@@ -167,14 +169,14 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
     return $this->currentState;
   }
   /**
-   * @param array[]
+   * @param StorageDatabasecenterPartnerapiV1mainCustomMetadataData
    */
-  public function setCustomMetadata($customMetadata)
+  public function setCustomMetadata(StorageDatabasecenterPartnerapiV1mainCustomMetadataData $customMetadata)
   {
     $this->customMetadata = $customMetadata;
   }
   /**
-   * @return array[]
+   * @return StorageDatabasecenterPartnerapiV1mainCustomMetadataData
    */
   public function getCustomMetadata()
   {
