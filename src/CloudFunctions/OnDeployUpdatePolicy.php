@@ -17,46 +17,28 @@
 
 namespace Google\Service\CloudFunctions;
 
-class GenerateUploadUrlRequest extends \Google\Model
+class OnDeployUpdatePolicy extends \Google\Model
 {
   /**
    * @var string
    */
-  public $environment;
-  /**
-   * @var string
-   */
-  public $kmsKeyName;
+  public $runtimeVersion;
 
   /**
    * @param string
    */
-  public function setEnvironment($environment)
+  public function setRuntimeVersion($runtimeVersion)
   {
-    $this->environment = $environment;
+    $this->runtimeVersion = $runtimeVersion;
   }
   /**
    * @return string
    */
-  public function getEnvironment()
+  public function getRuntimeVersion()
   {
-    return $this->environment;
-  }
-  /**
-   * @param string
-   */
-  public function setKmsKeyName($kmsKeyName)
-  {
-    $this->kmsKeyName = $kmsKeyName;
-  }
-  /**
-   * @return string
-   */
-  public function getKmsKeyName()
-  {
-    return $this->kmsKeyName;
+    return $this->runtimeVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GenerateUploadUrlRequest::class, 'Google_Service_CloudFunctions_GenerateUploadUrlRequest');
+class_alias(OnDeployUpdatePolicy::class, 'Google_Service_CloudFunctions_OnDeployUpdatePolicy');
