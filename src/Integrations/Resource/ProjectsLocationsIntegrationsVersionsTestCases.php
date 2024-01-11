@@ -36,7 +36,9 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
   /**
    * Creates a new test case (testCases.create)
    *
-   * @param string $parent Required.
+   * @param string $parent Required. The parent resource where this test case will
+   * be created. Format: projects/{project}/locations/{location}/integrations/{int
+   * egration}/versions/{integration_version}
    * @param GoogleCloudIntegrationsV1alphaTestCase $postBody
    * @param array $optParams Optional parameters.
    *

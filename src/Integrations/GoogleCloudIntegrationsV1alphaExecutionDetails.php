@@ -27,6 +27,10 @@ class GoogleCloudIntegrationsV1alphaExecutionDetails extends \Google\Collection
   protected $attemptStatsType = GoogleCloudIntegrationsV1alphaAttemptStats::class;
   protected $attemptStatsDataType = 'array';
   /**
+   * @var string
+   */
+  public $eventExecutionSnapshotsSize;
+  /**
    * @var GoogleCloudIntegrationsV1alphaExecutionSnapshot[]
    */
   public $executionSnapshots;
@@ -50,6 +54,20 @@ class GoogleCloudIntegrationsV1alphaExecutionDetails extends \Google\Collection
   public function getAttemptStats()
   {
     return $this->attemptStats;
+  }
+  /**
+   * @param string
+   */
+  public function setEventExecutionSnapshotsSize($eventExecutionSnapshotsSize)
+  {
+    $this->eventExecutionSnapshotsSize = $eventExecutionSnapshotsSize;
+  }
+  /**
+   * @return string
+   */
+  public function getEventExecutionSnapshotsSize()
+  {
+    return $this->eventExecutionSnapshotsSize;
   }
   /**
    * @param GoogleCloudIntegrationsV1alphaExecutionSnapshot[]

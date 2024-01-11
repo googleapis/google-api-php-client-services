@@ -35,6 +35,10 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails extends \Google\C
   /**
    * @var string
    */
+  public $eventExecutionSnapshotsSize;
+  /**
+   * @var string
+   */
   public $eventExecutionState;
   /**
    * @var int
@@ -84,6 +88,20 @@ class EnterpriseCrmFrontendsEventbusProtoEventExecutionDetails extends \Google\C
   public function getEventExecutionSnapshot()
   {
     return $this->eventExecutionSnapshot;
+  }
+  /**
+   * @param string
+   */
+  public function setEventExecutionSnapshotsSize($eventExecutionSnapshotsSize)
+  {
+    $this->eventExecutionSnapshotsSize = $eventExecutionSnapshotsSize;
+  }
+  /**
+   * @return string
+   */
+  public function getEventExecutionSnapshotsSize()
+  {
+    return $this->eventExecutionSnapshotsSize;
   }
   /**
    * @param string

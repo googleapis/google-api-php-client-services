@@ -78,6 +78,9 @@ class ProjectsLocationsIntegrationsExecutions extends \Google\Service\Resource
    * recent acl information to list event execution infos and renew the acl cache.
    * Note that fetching the most recent acl is synchronous, so it will increase
    * RPC call latency.
+   * @opt_param bool snapshotMetadataWithoutParams Optional. If true, the service
+   * will provide execution info with snapshot metadata only i.e. without event
+   * parameters.
    * @opt_param bool truncateParams Optional. If true, the service will truncate
    * the params to only keep the first 1000 characters of string params and empty
    * the executions in order to make response smaller. Only works for UI and when
