@@ -30,6 +30,12 @@ class WorkerMessage extends \Google\Model
    */
   public $labels;
   /**
+   * @var PerWorkerMetrics
+   */
+  public $perWorkerMetrics;
+  protected $perWorkerMetricsType = PerWorkerMetrics::class;
+  protected $perWorkerMetricsDataType = '';
+  /**
    * @var StreamingScalingReport
    */
   public $streamingScalingReport;
@@ -103,6 +109,20 @@ class WorkerMessage extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param PerWorkerMetrics
+   */
+  public function setPerWorkerMetrics(PerWorkerMetrics $perWorkerMetrics)
+  {
+    $this->perWorkerMetrics = $perWorkerMetrics;
+  }
+  /**
+   * @return PerWorkerMetrics
+   */
+  public function getPerWorkerMetrics()
+  {
+    return $this->perWorkerMetrics;
   }
   /**
    * @param StreamingScalingReport
