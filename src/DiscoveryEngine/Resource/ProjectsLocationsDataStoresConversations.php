@@ -140,7 +140,7 @@ class ProjectsLocationsDataStoresConversations extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Indicates which fields in the provided
-   * Conversation to update. The following are NOT supported: * conversation.name
+   * Conversation to update. The following are NOT supported: * Conversation.name
    * If not set or empty, all supported fields are updated.
    * @return GoogleCloudDiscoveryengineV1betaConversation
    */

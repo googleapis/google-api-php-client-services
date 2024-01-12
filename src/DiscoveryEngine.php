@@ -50,6 +50,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_dataStores_servingConfigs;
   public $projects_locations_collections_dataStores_siteSearchEngine_operations;
   public $projects_locations_collections_dataStores_siteSearchEngine_targetSites_operations;
+  public $projects_locations_collections_dataStores_suggestionDenyListEntries;
   public $projects_locations_collections_dataStores_userEvents;
   public $projects_locations_collections_engines_conversations;
   public $projects_locations_collections_engines_operations;
@@ -63,6 +64,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_operations;
   public $projects_locations_dataStores_schemas;
   public $projects_locations_dataStores_servingConfigs;
+  public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_operations;
   public $projects_operations;
@@ -699,6 +701,36 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataStores_suggestionDenyListEntries = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresSuggestionDenyListEntries(
+        $this,
+        $this->serviceName,
+        'suggestionDenyListEntries',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -1406,6 +1438,36 @@ class DiscoveryEngine extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataStores_suggestionDenyListEntries = new DiscoveryEngine\Resource\ProjectsLocationsDataStoresSuggestionDenyListEntries(
+        $this,
+        $this->serviceName,
+        'suggestionDenyListEntries',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

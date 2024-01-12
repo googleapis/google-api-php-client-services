@@ -44,7 +44,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubsRouteTablesRoutes extends \G
     return $this->call('get', [$params], Route::class);
   }
   /**
-   * Lists routes in a given project.
+   * Lists routes in a given route table.
    * (routes.listProjectsLocationsNetworkconnectivityGlobalHubsRouteTablesRoutes)
    *
    * @param string $parent Required. The parent resource's name.

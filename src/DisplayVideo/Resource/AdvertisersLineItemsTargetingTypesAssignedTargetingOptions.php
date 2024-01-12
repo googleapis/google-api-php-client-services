@@ -36,7 +36,8 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * option if successful. Requests to this endpoint cannot be made concurrently
    * with the following requests updating the same line item: *
    * lineItems.bulkEditAssignedTargetingOptions * lineItems.bulkUpdate *
-   * lineItems.patch * DeleteLineItemAssignedTargetingOption
+   * lineItems.patch * DeleteLineItemAssignedTargetingOption YouTube & Partners
+   * line items cannot be created or updated using the API.
    * (assignedTargetingOptions.create)
    *
    * @param string $advertiserId Required. The ID of the advertiser the line item
@@ -86,7 +87,8 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * endpoint cannot be made concurrently with the following requests updating the
    * same line item: * lineItems.bulkEditAssignedTargetingOptions *
    * lineItems.bulkUpdate * lineItems.patch *
-   * CreateLineItemAssignedTargetingOption (assignedTargetingOptions.delete)
+   * CreateLineItemAssignedTargetingOption YouTube & Partners line items cannot be
+   * created or updated using the API. (assignedTargetingOptions.delete)
    *
    * @param string $advertiserId Required. The ID of the advertiser the line item
    * belongs to.

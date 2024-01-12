@@ -113,7 +113,7 @@ class ManagedFolders extends \Google\Service\Resource
    * @param string $bucket Name of the bucket containing the managed folder.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int pageSize Maximum number of items return in a single page of
+   * @opt_param int pageSize Maximum number of items to return in a single page of
    * responses.
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.

@@ -27,6 +27,12 @@ class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends \Google\Collect
   protected $candidatesType = CloudAiNlLlmProtoServiceCandidate::class;
   protected $candidatesDataType = 'array';
   /**
+   * @var CloudAiNlLlmProtoServiceMessageMetadata
+   */
+  public $debugMetadata;
+  protected $debugMetadataType = CloudAiNlLlmProtoServiceMessageMetadata::class;
+  protected $debugMetadataDataType = '';
+  /**
    * @var CloudAiNlLlmProtoServicePromptFeedback
    */
   public $promptFeedback;
@@ -58,6 +64,20 @@ class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends \Google\Collect
   public function getCandidates()
   {
     return $this->candidates;
+  }
+  /**
+   * @param CloudAiNlLlmProtoServiceMessageMetadata
+   */
+  public function setDebugMetadata(CloudAiNlLlmProtoServiceMessageMetadata $debugMetadata)
+  {
+    $this->debugMetadata = $debugMetadata;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServiceMessageMetadata
+   */
+  public function getDebugMetadata()
+  {
+    return $this->debugMetadata;
   }
   /**
    * @param CloudAiNlLlmProtoServicePromptFeedback

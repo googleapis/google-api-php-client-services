@@ -138,8 +138,7 @@ class Cse extends \Google\Service\Resource
    * document, where each document in the search results must contain at least one
    * of the additional search terms.
    * @opt_param string q Query
-   * @opt_param string relatedSite Specifies that all search results should be
-   * pages that are related to the specified URL.
+   * @opt_param string relatedSite Deprecated.
    * @opt_param string rights Filters based on licensing. Supported values
    * include: `cc_publicdomain`, `cc_attribute`, `cc_sharealike`,
    * `cc_noncommercial`, `cc_nonderived` and combinations of these. See [typical

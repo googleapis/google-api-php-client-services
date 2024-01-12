@@ -27,10 +27,6 @@ class Content extends \Google\Collection
   protected $filesType = ScriptFile::class;
   protected $filesDataType = 'array';
   /**
-   * @var bool
-   */
-  public $revertFlumeInvoked;
-  /**
    * @var string
    */
   public $scriptId;
@@ -48,20 +44,6 @@ class Content extends \Google\Collection
   public function getFiles()
   {
     return $this->files;
-  }
-  /**
-   * @param bool
-   */
-  public function setRevertFlumeInvoked($revertFlumeInvoked)
-  {
-    $this->revertFlumeInvoked = $revertFlumeInvoked;
-  }
-  /**
-   * @return bool
-   */
-  public function getRevertFlumeInvoked()
-  {
-    return $this->revertFlumeInvoked;
   }
   /**
    * @param string

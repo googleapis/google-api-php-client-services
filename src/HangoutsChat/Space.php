@@ -26,11 +26,19 @@ class Space extends \Google\Model
   /**
    * @var string
    */
+  public $createTime;
+  /**
+   * @var string
+   */
   public $displayName;
   /**
    * @var bool
    */
   public $externalUserAllowed;
+  /**
+   * @var bool
+   */
+  public $importMode;
   /**
    * @var string
    */
@@ -83,6 +91,20 @@ class Space extends \Google\Model
   /**
    * @param string
    */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
+  /**
+   * @param string
+   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
@@ -107,6 +129,20 @@ class Space extends \Google\Model
   public function getExternalUserAllowed()
   {
     return $this->externalUserAllowed;
+  }
+  /**
+   * @param bool
+   */
+  public function setImportMode($importMode)
+  {
+    $this->importMode = $importMode;
+  }
+  /**
+   * @return bool
+   */
+  public function getImportMode()
+  {
+    return $this->importMode;
   }
   /**
    * @param string

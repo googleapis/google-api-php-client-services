@@ -18,7 +18,6 @@
 namespace Google\Service\BigtableAdmin\Resource;
 
 use Google\Service\BigtableAdmin\ListLocationsResponse;
-use Google\Service\BigtableAdmin\Location;
 
 /**
  * The "locations" collection of methods.
@@ -30,19 +29,6 @@ use Google\Service\BigtableAdmin\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
-  /**
-   * Gets information about a location. (locations.get)
-   *
-   * @param string $name Resource name for the location.
-   * @param array $optParams Optional parameters.
-   * @return Location
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Location::class);
-  }
   /**
    * Lists information about the supported locations for this service.
    * (locations.listProjectsLocations)

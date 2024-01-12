@@ -45,7 +45,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubsRouteTables extends \Google\
     return $this->call('get', [$params], RouteTable::class);
   }
   /**
-   * Lists route tables in a given project.
+   * Lists route tables in a given hub.
    * (routeTables.listProjectsLocationsNetworkconnectivityGlobalHubsRouteTables)
    *
    * @param string $parent Required. The parent resource's name.

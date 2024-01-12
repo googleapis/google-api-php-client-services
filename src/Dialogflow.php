@@ -708,6 +708,16 @@ class Dialogflow extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'serverStreamingDetectIntent' => [
+              'path' => 'v3/{+session}:serverStreamingDetectIntent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'session' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -1438,6 +1448,16 @@ class Dialogflow extends \Google\Service
               ],
             ],'matchIntent' => [
               'path' => 'v3/{+session}:matchIntent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'session' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'serverStreamingDetectIntent' => [
+              'path' => 'v3/{+session}:serverStreamingDetectIntent',
               'httpMethod' => 'POST',
               'parameters' => [
                 'session' => [

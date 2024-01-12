@@ -41,6 +41,7 @@ class AndroidPublisher extends \Google\Service
       "https://www.googleapis.com/auth/androidpublisher";
 
   public $applications_deviceTierConfigs;
+  public $apprecovery;
   public $edits;
   public $edits_apks;
   public $edits_bundles;
@@ -137,6 +138,85 @@ class AndroidPublisher extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->apprecovery = new AndroidPublisher\Resource\Apprecovery(
+        $this,
+        $this->serviceName,
+        'apprecovery',
+        [
+          'methods' => [
+            'addTargeting' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/appRecoveries/{appRecoveryId}:addTargeting',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'appRecoveryId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'appRecoveries' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/appRecoveries',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'versionCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'cancel' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/appRecoveries/{appRecoveryId}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'appRecoveryId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/appRecoveries',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'deploy' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/appRecoveries/{appRecoveryId}:deploy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'appRecoveryId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -2089,6 +2169,21 @@ class AndroidPublisher extends \Google\Service
             'get' => [
               'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}',
               'httpMethod' => 'GET',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'token' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'revoke' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:revoke',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'packageName' => [
                   'location' => 'path',

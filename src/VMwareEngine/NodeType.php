@@ -19,7 +19,7 @@ namespace Google\Service\VMwareEngine;
 
 class NodeType extends \Google\Collection
 {
-  protected $collection_key = 'capabilities';
+  protected $collection_key = 'families';
   /**
    * @var int[]
    */
@@ -36,6 +36,14 @@ class NodeType extends \Google\Collection
    * @var string
    */
   public $displayName;
+  /**
+   * @var string[]
+   */
+  public $families;
+  /**
+   * @var string
+   */
+  public $kind;
   /**
    * @var int
    */
@@ -112,6 +120,34 @@ class NodeType extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param string[]
+   */
+  public function setFamilies($families)
+  {
+    $this->families = $families;
+  }
+  /**
+   * @return string[]
+   */
+  public function getFamilies()
+  {
+    return $this->families;
+  }
+  /**
+   * @param string
+   */
+  public function setKind($kind)
+  {
+    $this->kind = $kind;
+  }
+  /**
+   * @return string
+   */
+  public function getKind()
+  {
+    return $this->kind;
   }
   /**
    * @param int

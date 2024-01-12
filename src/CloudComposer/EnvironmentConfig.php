@@ -32,6 +32,12 @@ class EnvironmentConfig extends \Google\Model
    */
   public $dagGcsPrefix;
   /**
+   * @var DataRetentionConfig
+   */
+  public $dataRetentionConfig;
+  protected $dataRetentionConfigType = DataRetentionConfig::class;
+  protected $dataRetentionConfigDataType = '';
+  /**
    * @var DatabaseConfig
    */
   public $databaseConfig;
@@ -155,6 +161,20 @@ class EnvironmentConfig extends \Google\Model
   public function getDagGcsPrefix()
   {
     return $this->dagGcsPrefix;
+  }
+  /**
+   * @param DataRetentionConfig
+   */
+  public function setDataRetentionConfig(DataRetentionConfig $dataRetentionConfig)
+  {
+    $this->dataRetentionConfig = $dataRetentionConfig;
+  }
+  /**
+   * @return DataRetentionConfig
+   */
+  public function getDataRetentionConfig()
+  {
+    return $this->dataRetentionConfig;
   }
   /**
    * @param DatabaseConfig

@@ -19,6 +19,25 @@ namespace Google\Service\Batch;
 
 class CloudLoggingOption extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $useGenericTaskMonitoredResource;
+
+  /**
+   * @param bool
+   */
+  public function setUseGenericTaskMonitoredResource($useGenericTaskMonitoredResource)
+  {
+    $this->useGenericTaskMonitoredResource = $useGenericTaskMonitoredResource;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseGenericTaskMonitoredResource()
+  {
+    return $this->useGenericTaskMonitoredResource;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

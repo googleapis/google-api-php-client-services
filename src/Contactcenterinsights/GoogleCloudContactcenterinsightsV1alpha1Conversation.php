@@ -87,6 +87,12 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
    */
   public $obfuscatedUserId;
   /**
+   * @var GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata
+   */
+  public $qualityMetadata;
+  protected $qualityMetadataType = GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata::class;
+  protected $qualityMetadataDataType = '';
+  /**
    * @var GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation[]
    */
   public $runtimeAnnotations;
@@ -310,6 +316,20 @@ class GoogleCloudContactcenterinsightsV1alpha1Conversation extends \Google\Colle
   public function getObfuscatedUserId()
   {
     return $this->obfuscatedUserId;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata
+   */
+  public function setQualityMetadata(GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata $qualityMetadata)
+  {
+    $this->qualityMetadata = $qualityMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata
+   */
+  public function getQualityMetadata()
+  {
+    return $this->qualityMetadata;
   }
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1RuntimeAnnotation[]

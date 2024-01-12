@@ -21,6 +21,12 @@ class Evaluation extends \Google\Collection
 {
   protected $collection_key = 'ruleVersions';
   /**
+   * @var BigQueryDestination
+   */
+  public $bigQueryDestination;
+  protected $bigQueryDestinationType = BigQueryDestination::class;
+  protected $bigQueryDestinationDataType = '';
+  /**
    * @var string
    */
   public $createTime;
@@ -69,6 +75,20 @@ class Evaluation extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param BigQueryDestination
+   */
+  public function setBigQueryDestination(BigQueryDestination $bigQueryDestination)
+  {
+    $this->bigQueryDestination = $bigQueryDestination;
+  }
+  /**
+   * @return BigQueryDestination
+   */
+  public function getBigQueryDestination()
+  {
+    return $this->bigQueryDestination;
+  }
   /**
    * @param string
    */

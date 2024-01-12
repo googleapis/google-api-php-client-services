@@ -30,6 +30,10 @@ class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig
   /**
    * @var string
    */
+  public $location;
+  /**
+   * @var string
+   */
   public $timeZone;
 
   /**
@@ -59,6 +63,20 @@ class GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfigAgentCreationConfig
   public function getDefaultLanguageCode()
   {
     return $this->defaultLanguageCode;
+  }
+  /**
+   * @param string
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * @param string

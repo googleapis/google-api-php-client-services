@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1GenerateContentRequest extends \Google\Collection
   protected $contentsType = GoogleCloudAiplatformV1Content::class;
   protected $contentsDataType = 'array';
   /**
-   * @var string
-   */
-  public $endpoint;
-  /**
    * @var GoogleCloudAiplatformV1GenerationConfig
    */
   public $generationConfig;
@@ -62,20 +58,6 @@ class GoogleCloudAiplatformV1GenerateContentRequest extends \Google\Collection
   public function getContents()
   {
     return $this->contents;
-  }
-  /**
-   * @param string
-   */
-  public function setEndpoint($endpoint)
-  {
-    $this->endpoint = $endpoint;
-  }
-  /**
-   * @return string
-   */
-  public function getEndpoint()
-  {
-    return $this->endpoint;
   }
   /**
    * @param GoogleCloudAiplatformV1GenerationConfig

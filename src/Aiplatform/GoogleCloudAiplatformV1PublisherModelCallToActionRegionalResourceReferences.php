@@ -28,6 +28,18 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
   /**
    * @var string
    */
+  public $resourceDescription;
+  /**
+   * @var string
+   */
+  public $resourceTitle;
+  /**
+   * @var string
+   */
+  public $resourceUseCase;
+  /**
+   * @var string
+   */
   public $title;
 
   /**
@@ -43,6 +55,48 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
   public function getReferences()
   {
     return $this->references;
+  }
+  /**
+   * @param string
+   */
+  public function setResourceDescription($resourceDescription)
+  {
+    $this->resourceDescription = $resourceDescription;
+  }
+  /**
+   * @return string
+   */
+  public function getResourceDescription()
+  {
+    return $this->resourceDescription;
+  }
+  /**
+   * @param string
+   */
+  public function setResourceTitle($resourceTitle)
+  {
+    $this->resourceTitle = $resourceTitle;
+  }
+  /**
+   * @return string
+   */
+  public function getResourceTitle()
+  {
+    return $this->resourceTitle;
+  }
+  /**
+   * @param string
+   */
+  public function setResourceUseCase($resourceUseCase)
+  {
+    $this->resourceUseCase = $resourceUseCase;
+  }
+  /**
+   * @return string
+   */
+  public function getResourceUseCase()
+  {
+    return $this->resourceUseCase;
   }
   /**
    * @param string

@@ -113,6 +113,34 @@ class ProjectsLocationsAgentsSessions extends \Google\Service\Resource
     return $this->call('matchIntent', [$params], GoogleCloudDialogflowCxV3MatchIntentResponse::class);
   }
   /**
+   * Processes a natural language query and returns structured, actionable data as
+   * a result through server-side streaming. Server-side streaming allows
+   * Dialogflow to send [partial responses](https://cloud.google.com/dialogflow/cx
+   * /docs/concept/fulfillment#partial-response) earlier in a single request.
+   * (sessions.serverStreamingDetectIntent)
+   *
+   * @param string $session Required. The name of the session this query is sent
+   * to. Format: `projects//locations//agents//sessions/` or
+   * `projects//locations//agents//environments//sessions/`. If `Environment ID`
+   * is not specified, we assume default 'draft' environment. It's up to the API
+   * caller to choose an appropriate `Session ID`. It can be a random number or
+   * some type of session identifiers (preferably hashed). The length of the
+   * `Session ID` must not exceed 36 characters. For more information, see the
+   * [sessions
+   * guide](https://cloud.google.com/dialogflow/cx/docs/concept/session). Note:
+   * Always use agent versions for production traffic. See [Versions and
+   * environments](https://cloud.google.com/dialogflow/cx/docs/concept/version).
+   * @param GoogleCloudDialogflowCxV3DetectIntentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDialogflowCxV3DetectIntentResponse
+   */
+  public function serverStreamingDetectIntent($session, GoogleCloudDialogflowCxV3DetectIntentRequest $postBody, $optParams = [])
+  {
+    $params = ['session' => $session, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('serverStreamingDetectIntent', [$params], GoogleCloudDialogflowCxV3DetectIntentResponse::class);
+  }
+  /**
    * Updates the feedback received from the user for a single turn of the bot
    * response. (sessions.submitAnswerFeedback)
    *

@@ -30,6 +30,10 @@ class DeviceRadioState extends \Google\Model
   /**
    * @var string
    */
+  public $minimumWifiSecurityLevel;
+  /**
+   * @var string
+   */
   public $ultraWidebandState;
   /**
    * @var string
@@ -63,6 +67,20 @@ class DeviceRadioState extends \Google\Model
   public function getCellularTwoGState()
   {
     return $this->cellularTwoGState;
+  }
+  /**
+   * @param string
+   */
+  public function setMinimumWifiSecurityLevel($minimumWifiSecurityLevel)
+  {
+    $this->minimumWifiSecurityLevel = $minimumWifiSecurityLevel;
+  }
+  /**
+   * @return string
+   */
+  public function getMinimumWifiSecurityLevel()
+  {
+    return $this->minimumWifiSecurityLevel;
   }
   /**
    * @param string

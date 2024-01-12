@@ -31,6 +31,12 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   protected $generatedAssetPackSlicesType = GeneratedAssetPackSlice::class;
   protected $generatedAssetPackSlicesDataType = 'array';
   /**
+   * @var GeneratedRecoveryApk[]
+   */
+  public $generatedRecoveryModules;
+  protected $generatedRecoveryModulesType = GeneratedRecoveryApk::class;
+  protected $generatedRecoveryModulesDataType = 'array';
+  /**
    * @var GeneratedSplitApk[]
    */
   public $generatedSplitApks;
@@ -82,6 +88,20 @@ class GeneratedApksPerSigningKey extends \Google\Collection
   public function getGeneratedAssetPackSlices()
   {
     return $this->generatedAssetPackSlices;
+  }
+  /**
+   * @param GeneratedRecoveryApk[]
+   */
+  public function setGeneratedRecoveryModules($generatedRecoveryModules)
+  {
+    $this->generatedRecoveryModules = $generatedRecoveryModules;
+  }
+  /**
+   * @return GeneratedRecoveryApk[]
+   */
+  public function getGeneratedRecoveryModules()
+  {
+    return $this->generatedRecoveryModules;
   }
   /**
    * @param GeneratedSplitApk[]

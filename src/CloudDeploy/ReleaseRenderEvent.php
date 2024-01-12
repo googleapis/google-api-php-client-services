@@ -26,11 +26,19 @@ class ReleaseRenderEvent extends \Google\Model
   /**
    * @var string
    */
+  public $pipelineUid;
+  /**
+   * @var string
+   */
   public $release;
   /**
    * @var string
    */
   public $releaseRenderState;
+  /**
+   * @var string
+   */
+  public $type;
 
   /**
    * @param string
@@ -45,6 +53,20 @@ class ReleaseRenderEvent extends \Google\Model
   public function getMessage()
   {
     return $this->message;
+  }
+  /**
+   * @param string
+   */
+  public function setPipelineUid($pipelineUid)
+  {
+    $this->pipelineUid = $pipelineUid;
+  }
+  /**
+   * @return string
+   */
+  public function getPipelineUid()
+  {
+    return $this->pipelineUid;
   }
   /**
    * @param string
@@ -73,6 +95,20 @@ class ReleaseRenderEvent extends \Google\Model
   public function getReleaseRenderState()
   {
     return $this->releaseRenderState;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 

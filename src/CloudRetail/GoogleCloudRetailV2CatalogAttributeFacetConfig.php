@@ -38,6 +38,12 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
   public $mergedFacetValues;
   protected $mergedFacetValuesType = GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue::class;
   protected $mergedFacetValuesDataType = 'array';
+  /**
+   * @var GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig
+   */
+  public $rerankConfig;
+  protected $rerankConfigType = GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig::class;
+  protected $rerankConfigDataType = '';
 
   /**
    * @param GoogleCloudRetailV2Interval[]
@@ -80,6 +86,20 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
   public function getMergedFacetValues()
   {
     return $this->mergedFacetValues;
+  }
+  /**
+   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig
+   */
+  public function setRerankConfig(GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig $rerankConfig)
+  {
+    $this->rerankConfig = $rerankConfig;
+  }
+  /**
+   * @return GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig
+   */
+  public function getRerankConfig()
+  {
+    return $this->rerankConfig;
   }
 }
 
