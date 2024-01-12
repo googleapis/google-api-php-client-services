@@ -93,9 +93,9 @@ class ProjectsLocationsMigrationJobs extends \Google\Service\Resource
   }
   /**
    * Demotes the destination database to become a read replica of the source. This
-   * is applicable for the following migrations: 1. MySQL to Cloud SQL (for MySQL)
-   * 2. PostgreSQL to Cloud SQL (for PostgreSQL) 3. PostgreSQL to AlloyDB.
-   * (migrationJobs.demoteDestination)
+   * is applicable for the following migrations: 1. MySQL to Cloud SQL for MySQL
+   * 2. PostgreSQL to Cloud SQL for PostgreSQL 3. PostgreSQL to AlloyDB for
+   * PostgreSQL. (migrationJobs.demoteDestination)
    *
    * @param string $name Name of the migration job resource to demote its
    * destination.
