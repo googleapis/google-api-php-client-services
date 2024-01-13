@@ -37,6 +37,12 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   protected $dataRiskLevelType = GooglePrivacyDlpV2DataRiskLevel::class;
   protected $dataRiskLevelDataType = '';
   /**
+   * @var GooglePrivacyDlpV2DataSourceType
+   */
+  public $dataSourceType;
+  protected $dataSourceTypeType = GooglePrivacyDlpV2DataSourceType::class;
+  protected $dataSourceTypeDataType = '';
+  /**
    * @var string
    */
   public $datasetId;
@@ -174,6 +180,20 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   public function getDataRiskLevel()
   {
     return $this->dataRiskLevel;
+  }
+  /**
+   * @param GooglePrivacyDlpV2DataSourceType
+   */
+  public function setDataSourceType(GooglePrivacyDlpV2DataSourceType $dataSourceType)
+  {
+    $this->dataSourceType = $dataSourceType;
+  }
+  /**
+   * @return GooglePrivacyDlpV2DataSourceType
+   */
+  public function getDataSourceType()
+  {
+    return $this->dataSourceType;
   }
   /**
    * @param string
