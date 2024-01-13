@@ -903,6 +903,10 @@ class Dataform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'revision' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'removeDirectory' => [
               'path' => 'v1beta1/{+workspace}:removeDirectory',

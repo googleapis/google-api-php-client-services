@@ -343,6 +343,8 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    *
    * @opt_param string path Required. The file's full path including filename,
    * relative to the workspace root.
+   * @opt_param string revision Optional. The Git revision of the file to return.
+   * If left empty, the current contents of `path` will be returned.
    * @return ReadFileResponse
    */
   public function readFile($workspace, $optParams = [])
