@@ -17,31 +17,46 @@
 
 namespace Google\Service\SASPortalTesting;
 
-class SasPortalListLegacyOrganizationsResponse extends \Google\Collection
+class SasPortalOrganization extends \Google\Model
 {
-  protected $collection_key = 'organizations';
   /**
-   * @var SasPortalOrganization[]
+   * @var string
    */
-  public $organizations;
-  protected $organizationsType = SasPortalOrganization::class;
-  protected $organizationsDataType = 'array';
+  public $displayName;
+  /**
+   * @var string
+   */
+  public $id;
 
   /**
-   * @param SasPortalOrganization[]
+   * @param string
    */
-  public function setOrganizations($organizations)
+  public function setDisplayName($displayName)
   {
-    $this->organizations = $organizations;
+    $this->displayName = $displayName;
   }
   /**
-   * @return SasPortalOrganization[]
+   * @return string
    */
-  public function getOrganizations()
+  public function getDisplayName()
   {
-    return $this->organizations;
+    return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SasPortalListLegacyOrganizationsResponse::class, 'Google_Service_SASPortalTesting_SasPortalListLegacyOrganizationsResponse');
+class_alias(SasPortalOrganization::class, 'Google_Service_SASPortalTesting_SasPortalOrganization');
