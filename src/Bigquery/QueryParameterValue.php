@@ -27,6 +27,12 @@ class QueryParameterValue extends \Google\Collection
   protected $arrayValuesType = QueryParameterValue::class;
   protected $arrayValuesDataType = 'array';
   /**
+   * @var QueryParameterValueRangeValue
+   */
+  public $rangeValue;
+  protected $rangeValueType = QueryParameterValueRangeValue::class;
+  protected $rangeValueDataType = '';
+  /**
    * @var QueryParameterValue[]
    */
   public $structValues;
@@ -50,6 +56,20 @@ class QueryParameterValue extends \Google\Collection
   public function getArrayValues()
   {
     return $this->arrayValues;
+  }
+  /**
+   * @param QueryParameterValueRangeValue
+   */
+  public function setRangeValue(QueryParameterValueRangeValue $rangeValue)
+  {
+    $this->rangeValue = $rangeValue;
+  }
+  /**
+   * @return QueryParameterValueRangeValue
+   */
+  public function getRangeValue()
+  {
+    return $this->rangeValue;
   }
   /**
    * @param QueryParameterValue[]
