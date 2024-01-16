@@ -34,11 +34,11 @@ use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchTextResponse;
 class Places extends \Google\Service\Resource
 {
   /**
-   * Get place details with a place id (in a name) string. (places.get)
+   * Get the details of a place based on its resource name, which is a string in
+   * the `places/{place_id}` format. (places.get)
    *
-   * @param string $name Required. A place ID returned in a Place (with "places/"
-   * prefix), or equivalently the name in the same Place. Format:
-   * `places/{place_id}`.
+   * @param string $name Required. The resource name of a place, in the
+   * `places/{place_id}` format.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string languageCode Optional. Place details will be displayed with
