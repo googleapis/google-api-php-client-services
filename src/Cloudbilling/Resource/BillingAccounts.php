@@ -53,9 +53,8 @@ class BillingAccounts extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string parent Optional. The parent to create a billing account
-   * from. Format: - `organizations/{organization_id}`, for example,
-   * `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
-   * example, `billingAccounts/012345-567890-ABCDEF`
+   * from. Format: - `billingAccounts/{billing_account_id}`, for example,
+   * `billingAccounts/012345-567890-ABCDEF`
    * @return BillingAccount
    */
   public function create(BillingAccount $postBody, $optParams = [])

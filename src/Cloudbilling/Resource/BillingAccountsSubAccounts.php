@@ -45,9 +45,8 @@ class BillingAccountsSubAccounts extends \Google\Service\Resource
    * provisioned for subaccounts. (subAccounts.create)
    *
    * @param string $parent Optional. The parent to create a billing account from.
-   * Format: - `organizations/{organization_id}`, for example,
-   * `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
-   * example, `billingAccounts/012345-567890-ABCDEF`
+   * Format: - `billingAccounts/{billing_account_id}`, for example,
+   * `billingAccounts/012345-567890-ABCDEF`
    * @param BillingAccount $postBody
    * @param array $optParams Optional parameters.
    * @return BillingAccount
