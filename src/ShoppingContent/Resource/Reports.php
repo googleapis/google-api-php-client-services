@@ -31,7 +31,7 @@ use Google\Service\ShoppingContent\SearchResponse;
 class Reports extends \Google\Service\Resource
 {
   /**
-   * Retrieves merchant performance mertrics matching the search query and
+   * Retrieves merchant performance metrics matching the search query and
    * optionally segmented by selected dimensions. (reports.search)
    *
    * @param string $merchantId Required. Id of the merchant making the call. Must
