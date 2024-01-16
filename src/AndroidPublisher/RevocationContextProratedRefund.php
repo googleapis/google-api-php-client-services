@@ -17,30 +17,9 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class RevocationContext extends \Google\Model
+class RevocationContextProratedRefund extends \Google\Model
 {
-  /**
-   * @var RevocationContextProratedRefund
-   */
-  public $proratedRefund;
-  protected $proratedRefundType = RevocationContextProratedRefund::class;
-  protected $proratedRefundDataType = '';
-
-  /**
-   * @param RevocationContextProratedRefund
-   */
-  public function setProratedRefund(RevocationContextProratedRefund $proratedRefund)
-  {
-    $this->proratedRefund = $proratedRefund;
-  }
-  /**
-   * @return RevocationContextProratedRefund
-   */
-  public function getProratedRefund()
-  {
-    return $this->proratedRefund;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RevocationContext::class, 'Google_Service_AndroidPublisher_RevocationContext');
+class_alias(RevocationContextProratedRefund::class, 'Google_Service_AndroidPublisher_RevocationContextProratedRefund');
