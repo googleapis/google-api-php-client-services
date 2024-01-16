@@ -100,7 +100,10 @@ class ProjectsInstancesTables extends \Google\Service\Resource
   /**
    * Permanently drop/delete a row range from a specified table. The request can
    * specify whether to delete all rows in a table, or only those that match a
-   * particular prefix. (tables.dropRowRange)
+   * particular prefix. Note that row key prefixes used here are treated as
+   * service data. For more information about how service data is handled, see the
+   * [Google Cloud Privacy Notice](https://cloud.google.com/terms/cloud-privacy-
+   * notice). (tables.dropRowRange)
    *
    * @param string $name Required. The unique name of the table on which to drop a
    * range of rows. Values are of the form
