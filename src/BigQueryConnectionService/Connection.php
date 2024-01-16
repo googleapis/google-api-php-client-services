@@ -20,6 +20,30 @@ namespace Google\Service\BigQueryConnectionService;
 class Connection extends \Google\Model
 {
   /**
+   * @var AwsProperties
+   */
+  public $aws;
+  protected $awsType = AwsProperties::class;
+  protected $awsDataType = '';
+  /**
+   * @var AzureProperties
+   */
+  public $azure;
+  protected $azureType = AzureProperties::class;
+  protected $azureDataType = '';
+  /**
+   * @var CloudResourceProperties
+   */
+  public $cloudResource;
+  protected $cloudResourceType = CloudResourceProperties::class;
+  protected $cloudResourceDataType = '';
+  /**
+   * @var CloudSpannerProperties
+   */
+  public $cloudSpanner;
+  protected $cloudSpannerType = CloudSpannerProperties::class;
+  protected $cloudSpannerDataType = '';
+  /**
    * @var CloudSqlProperties
    */
   public $cloudSql;
@@ -44,12 +68,84 @@ class Connection extends \Google\Model
   /**
    * @var string
    */
+  public $kmsKeyName;
+  /**
+   * @var string
+   */
   public $lastModifiedTime;
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var SalesforceDataCloudProperties
+   */
+  public $salesforceDataCloud;
+  protected $salesforceDataCloudType = SalesforceDataCloudProperties::class;
+  protected $salesforceDataCloudDataType = '';
+  /**
+   * @var SparkProperties
+   */
+  public $spark;
+  protected $sparkType = SparkProperties::class;
+  protected $sparkDataType = '';
 
+  /**
+   * @param AwsProperties
+   */
+  public function setAws(AwsProperties $aws)
+  {
+    $this->aws = $aws;
+  }
+  /**
+   * @return AwsProperties
+   */
+  public function getAws()
+  {
+    return $this->aws;
+  }
+  /**
+   * @param AzureProperties
+   */
+  public function setAzure(AzureProperties $azure)
+  {
+    $this->azure = $azure;
+  }
+  /**
+   * @return AzureProperties
+   */
+  public function getAzure()
+  {
+    return $this->azure;
+  }
+  /**
+   * @param CloudResourceProperties
+   */
+  public function setCloudResource(CloudResourceProperties $cloudResource)
+  {
+    $this->cloudResource = $cloudResource;
+  }
+  /**
+   * @return CloudResourceProperties
+   */
+  public function getCloudResource()
+  {
+    return $this->cloudResource;
+  }
+  /**
+   * @param CloudSpannerProperties
+   */
+  public function setCloudSpanner(CloudSpannerProperties $cloudSpanner)
+  {
+    $this->cloudSpanner = $cloudSpanner;
+  }
+  /**
+   * @return CloudSpannerProperties
+   */
+  public function getCloudSpanner()
+  {
+    return $this->cloudSpanner;
+  }
   /**
    * @param CloudSqlProperties
    */
@@ -123,6 +219,20 @@ class Connection extends \Google\Model
   /**
    * @param string
    */
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
+  }
+  /**
+   * @param string
+   */
   public function setLastModifiedTime($lastModifiedTime)
   {
     $this->lastModifiedTime = $lastModifiedTime;
@@ -147,6 +257,34 @@ class Connection extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param SalesforceDataCloudProperties
+   */
+  public function setSalesforceDataCloud(SalesforceDataCloudProperties $salesforceDataCloud)
+  {
+    $this->salesforceDataCloud = $salesforceDataCloud;
+  }
+  /**
+   * @return SalesforceDataCloudProperties
+   */
+  public function getSalesforceDataCloud()
+  {
+    return $this->salesforceDataCloud;
+  }
+  /**
+   * @param SparkProperties
+   */
+  public function setSpark(SparkProperties $spark)
+  {
+    $this->spark = $spark;
+  }
+  /**
+   * @return SparkProperties
+   */
+  public function getSpark()
+  {
+    return $this->spark;
   }
 }
 

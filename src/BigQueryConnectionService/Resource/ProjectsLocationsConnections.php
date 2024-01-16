@@ -19,7 +19,6 @@ namespace Google\Service\BigQueryConnectionService\Resource;
 
 use Google\Service\BigQueryConnectionService\BigqueryconnectionEmpty;
 use Google\Service\BigQueryConnectionService\Connection;
-use Google\Service\BigQueryConnectionService\ConnectionCredential;
 use Google\Service\BigQueryConnectionService\GetIamPolicyRequest;
 use Google\Service\BigQueryConnectionService\ListConnectionsResponse;
 use Google\Service\BigQueryConnectionService\Policy;
@@ -109,7 +108,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string maxResults Required. Maximum number of results per page.
+   * @opt_param int pageSize Required. Page size.
    * @opt_param string pageToken Page token.
    * @return ListConnectionsResponse
    */
@@ -179,22 +178,6 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
-  }
-  /**
-   * Sets the credential for the specified connection.
-   * (connections.updateCredential)
-   *
-   * @param string $name Required. Name of the connection, for example: `projects/
-   * {project_id}/locations/{location_id}/connections/{connection_id}/credential`
-   * @param ConnectionCredential $postBody
-   * @param array $optParams Optional parameters.
-   * @return BigqueryconnectionEmpty
-   */
-  public function updateCredential($name, ConnectionCredential $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('updateCredential', [$params], BigqueryconnectionEmpty::class);
   }
 }
 
