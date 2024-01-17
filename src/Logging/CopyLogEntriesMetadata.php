@@ -26,6 +26,10 @@ class CopyLogEntriesMetadata extends \Google\Model
   /**
    * @var string
    */
+  public $destination;
+  /**
+   * @var string
+   */
   public $endTime;
   /**
    * @var int
@@ -40,11 +44,19 @@ class CopyLogEntriesMetadata extends \Google\Model
   /**
    * @var string
    */
+  public $source;
+  /**
+   * @var string
+   */
   public $startTime;
   /**
    * @var string
    */
   public $state;
+  /**
+   * @var string
+   */
+  public $verb;
   /**
    * @var string
    */
@@ -63,6 +75,20 @@ class CopyLogEntriesMetadata extends \Google\Model
   public function getCancellationRequested()
   {
     return $this->cancellationRequested;
+  }
+  /**
+   * @param string
+   */
+  public function setDestination($destination)
+  {
+    $this->destination = $destination;
+  }
+  /**
+   * @return string
+   */
+  public function getDestination()
+  {
+    return $this->destination;
   }
   /**
    * @param string
@@ -109,6 +135,20 @@ class CopyLogEntriesMetadata extends \Google\Model
   /**
    * @param string
    */
+  public function setSource($source)
+  {
+    $this->source = $source;
+  }
+  /**
+   * @return string
+   */
+  public function getSource()
+  {
+    return $this->source;
+  }
+  /**
+   * @param string
+   */
   public function setStartTime($startTime)
   {
     $this->startTime = $startTime;
@@ -133,6 +173,20 @@ class CopyLogEntriesMetadata extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setVerb($verb)
+  {
+    $this->verb = $verb;
+  }
+  /**
+   * @return string
+   */
+  public function getVerb()
+  {
+    return $this->verb;
   }
   /**
    * @param string
