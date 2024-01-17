@@ -19,6 +19,8 @@ namespace Google\Service\RecaptchaEnterprise\Resource;
 
 use Google\Service\RecaptchaEnterprise\GoogleCloudRecaptchaenterpriseV1FirewallPolicy;
 use Google\Service\RecaptchaEnterprise\GoogleCloudRecaptchaenterpriseV1ListFirewallPoliciesResponse;
+use Google\Service\RecaptchaEnterprise\GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest;
+use Google\Service\RecaptchaEnterprise\GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse;
 use Google\Service\RecaptchaEnterprise\GoogleProtobufEmpty;
 
 /**
@@ -114,6 +116,21 @@ class ProjectsFirewallpolicies extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudRecaptchaenterpriseV1FirewallPolicy::class);
+  }
+  /**
+   * Reorders all firewall policies. (firewallpolicies.reorder)
+   *
+   * @param string $parent Required. The name of the project to list the policies
+   * for, in the format `projects/{project}`.
+   * @param GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse
+   */
+  public function reorder($parent, GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reorder', [$params], GoogleCloudRecaptchaenterpriseV1ReorderFirewallPoliciesResponse::class);
   }
 }
 
