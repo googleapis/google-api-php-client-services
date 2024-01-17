@@ -193,14 +193,10 @@ class Events extends \Google\Service\Resource
    * the currently logged in user, use the "primary" keyword.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool alwaysIncludeEmail Deprecated and ignored. A value will
-   * always be returned in the email field for the organizer, creator and
-   * attendees, even if no real email address is available (i.e. a generated, non-
-   * working value will be provided).
-   * @opt_param string eventTypes Event types to return. Optional. Possible values
-   * are: - "default"  - "focusTime"  - "outOfOffice"  - "workingLocation"This
-   * parameter can be repeated multiple times to return events of different types.
-   * The default is ["default", "focusTime", "outOfOffice"].
+   * @opt_param bool alwaysIncludeEmail Deprecated and ignored.
+   * @opt_param string eventTypes Event types to return. Optional. This parameter
+   * can be repeated multiple times to return events of different types. The
+   * default is ["default", "focusTime", "outOfOffice"].
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
@@ -225,7 +221,8 @@ class Events extends \Google\Service\Resource
    * terms in the following fields:
    *
    * - summary  - description  - location  - attendee's displayName  - attendee's
-   * email  - workingLocationProperties.officeLocation.buildingId  -
+   * email  - organizer's displayName  - organizer's email  -
+   * workingLocationProperties.officeLocation.buildingId  -
    * workingLocationProperties.officeLocation.deskId  -
    * workingLocationProperties.officeLocation.label  -
    * workingLocationProperties.customLocation.label  These search terms also match
@@ -427,14 +424,10 @@ class Events extends \Google\Service\Resource
    * @param Channel $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool alwaysIncludeEmail Deprecated and ignored. A value will
-   * always be returned in the email field for the organizer, creator and
-   * attendees, even if no real email address is available (i.e. a generated, non-
-   * working value will be provided).
-   * @opt_param string eventTypes Event types to return. Optional. Possible values
-   * are: - "default"  - "focusTime"  - "outOfOffice"  - "workingLocation"This
-   * parameter can be repeated multiple times to return events of different types.
-   * The default is ["default", "focusTime", "outOfOffice"].
+   * @opt_param bool alwaysIncludeEmail Deprecated and ignored.
+   * @opt_param string eventTypes Event types to return. Optional. This parameter
+   * can be repeated multiple times to return events of different types. The
+   * default is ["default", "focusTime", "outOfOffice"].
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
@@ -459,7 +452,8 @@ class Events extends \Google\Service\Resource
    * terms in the following fields:
    *
    * - summary  - description  - location  - attendee's displayName  - attendee's
-   * email  - workingLocationProperties.officeLocation.buildingId  -
+   * email  - organizer's displayName  - organizer's email  -
+   * workingLocationProperties.officeLocation.buildingId  -
    * workingLocationProperties.officeLocation.deskId  -
    * workingLocationProperties.officeLocation.label  -
    * workingLocationProperties.customLocation.label  These search terms also match
