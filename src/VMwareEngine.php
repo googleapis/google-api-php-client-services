@@ -40,10 +40,9 @@ class VMwareEngine extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations;
-  public $projects_locations_global;
-  public $projects_locations_global_dnsBindPermission;
-  public $projects_locations_global_networkPeerings;
-  public $projects_locations_global_networkPeerings_peeringRoutes;
+  public $projects_locations_dnsBindPermission;
+  public $projects_locations_networkPeerings;
+  public $projects_locations_networkPeerings_peeringRoutes;
   public $projects_locations_networkPolicies;
   public $projects_locations_networkPolicies_externalAccessRules;
   public $projects_locations_nodeTypes;
@@ -92,6 +91,16 @@ class VMwareEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getDnsBindPermission' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
@@ -118,27 +127,7 @@ class VMwareEngine extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_global = new VMwareEngine\Resource\ProjectsLocationsVmwareengineGlobal(
-        $this,
-        $this->serviceName,
-        'global',
-        [
-          'methods' => [
-            'getDnsBindPermission' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_global_dnsBindPermission = new VMwareEngine\Resource\ProjectsLocationsVmwareengineGlobalDnsBindPermission(
+    $this->projects_locations_dnsBindPermission = new VMwareEngine\Resource\ProjectsLocationsDnsBindPermission(
         $this,
         $this->serviceName,
         'dnsBindPermission',
@@ -168,7 +157,7 @@ class VMwareEngine extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_global_networkPeerings = new VMwareEngine\Resource\ProjectsLocationsVmwareengineGlobalNetworkPeerings(
+    $this->projects_locations_networkPeerings = new VMwareEngine\Resource\ProjectsLocationsNetworkPeerings(
         $this,
         $this->serviceName,
         'networkPeerings',
@@ -264,7 +253,7 @@ class VMwareEngine extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_global_networkPeerings_peeringRoutes = new VMwareEngine\Resource\ProjectsLocationsVmwareengineGlobalNetworkPeeringsPeeringRoutes(
+    $this->projects_locations_networkPeerings_peeringRoutes = new VMwareEngine\Resource\ProjectsLocationsNetworkPeeringsPeeringRoutes(
         $this,
         $this->serviceName,
         'peeringRoutes',
