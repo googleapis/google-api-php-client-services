@@ -233,7 +233,12 @@ class Spaces extends \Google\Service\Resource
    * space](https://support.google.com/chat/answer/7664687) if [the organization
    * allows users to change their history
    * setting](https://support.google.com/a/answer/7664184). Warning: mutually
-   * exclusive with all other field paths.)
+   * exclusive with all other field paths.) - Developer Preview:
+   * `access_settings.audience` (Supports changing the [access
+   * setting](https://support.google.com/chat/answer/11971020) of a space. If no
+   * audience is specified in the access setting, the space's access setting is
+   * updated to restricted. Warning: mutually exclusive with all other field
+   * paths.)
    * @return Space
    */
   public function patch($name, Space $postBody, $optParams = [])

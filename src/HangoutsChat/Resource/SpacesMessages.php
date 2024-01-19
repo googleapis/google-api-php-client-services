@@ -46,19 +46,16 @@ class SpacesMessages extends \Google\Service\Resource
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string messageId Optional. A custom name for a Chat message
-   * assigned at creation. Must start with `client-` and contain only lowercase
-   * letters, numbers, and hyphens up to 63 characters in length. Specify this
-   * field to get, update, or delete the message with the specified value.
-   * Assigning a custom name lets a a Chat app recall the message without saving
-   * the message `name` from the [response
-   * body](/chat/api/reference/rest/v1/spaces.messages/get#response-body) returned
-   * when creating the message. Assigning a custom name doesn't replace the
-   * generated `name` field, the message's resource name. Instead, it sets the
-   * custom name as the `clientAssignedMessageId` field, which you can reference
-   * while processing later operations, like updating or deleting the message. For
-   * example usage, see [Name a created message](https://developers.google.com/cha
-   * t/api/guides/v1/messages/create#name_a_created_message).
+   * @opt_param string messageId Optional. A custom ID for a message. Lets Chat
+   * apps get, update, or delete a message without needing to store the system-
+   * assigned ID in the message's resource name (represented in the message `name`
+   * field). The value for this field must meet the following requirements: *
+   * Begins with `client-`. For example, `client-custom-name` is a valid custom
+   * ID, but `custom-name` is not. * Contains up to 63 characters and only
+   * lowercase letters, numbers, and hyphens. * Is unique within a space. A Chat
+   * app can't use the same custom ID for different messages. For details, see
+   * [Name a message](https://developers.google.com/chat/api/guides/v1/messages/cr
+   * eate#name_a_created_message).
    * @opt_param string messageReplyOption Optional. Specifies whether a message
    * starts a thread or replies to one. Only supported in named spaces.
    * @opt_param string requestId Optional. A unique request ID for this message.
@@ -89,9 +86,11 @@ class SpacesMessages extends \Google\Service\Resource
    * When using app authentication, requests can only delete messages created by
    * the calling Chat app. (messages.delete)
    *
-   * @param string $name Required. Resource name of the message that you want to
-   * delete, in the form `spaces/messages` Example:
-   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+   * @param string $name Required. Resource name of the message. Format:
+   * `spaces/{space}/messages/{message}` If you've set a custom ID for your
+   * message, you can use the value from the `clientAssignedMessageId` field for
+   * `{message}`. For details, see [Name a message] (https://developers.google.com
+   * /chat/api/guides/v1/messages/create#name_a_created_message).
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool force When `true`, deleting a message also deletes its
@@ -119,13 +118,11 @@ class SpacesMessages extends \Google\Service\Resource
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * Note: Might return a message from a blocked member or space. (messages.get)
    *
-   * @param string $name Required. Resource name of the message to retrieve.
-   * Format: `spaces/{space}/messages/{message}` If the message begins with
-   * `client-`, then it has a custom name assigned by a Chat app that created it
-   * with the Chat REST API. That Chat app (but not others) can pass the custom
-   * name to get, update, or delete the message. To learn more, see [create and
-   * name a message] (https://developers.google.com/chat/api/guides/v1/messages/cr
-   * eate#name_a_created_message).
+   * @param string $name Required. Resource name of the message. Format:
+   * `spaces/{space}/messages/{message}` If you've set a custom ID for your
+   * message, you can use the value from the `clientAssignedMessageId` field for
+   * `{message}`. For details, see [Name a message] (https://developers.google.com
+   * /chat/api/guides/v1/messages/create#name_a_created_message).
    * @param array $optParams Optional parameters.
    * @return Message
    */
@@ -206,8 +203,16 @@ class SpacesMessages extends \Google\Service\Resource
    * When using app authentication, requests can only update messages created by
    * the calling Chat app. (messages.patch)
    *
-   * @param string $name Resource name in the form `spaces/messages`. Example:
-   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+   * @param string $name Resource name of the message. Format:
+   * `spaces/{space}/messages/{message}` Where `{space}` is the ID of the space
+   * where the message is posted and `{message}` is a system-assigned ID for the
+   * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
+   * If you set a custom ID when you create a message, you can use this ID to
+   * specify the message in a request by replacing `{message}` with the value from
+   * the `clientAssignedMessageId` field. For example,
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a me
+   * ssage](https://developers.google.com/chat/api/guides/v1/messages/create#name_
+   * a_created_message).
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
@@ -216,10 +221,12 @@ class SpacesMessages extends \Google\Service\Resource
    * ID must be [client-assigned](https://developers.google.com/chat/api/guides/v1
    * /messages/create#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
-   * multiple values with commas. Currently supported field paths: - `text` -
-   * `attachment` - `cards` (Requires [app
+   * multiple values with commas or use `*` to update all field paths. Currently
+   * supported field paths: - `text` - `attachment` - `cards` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
-   * (Requires [app authentication](/chat/api/guides/auth/service-accounts).)
+   * (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+   * Developer Preview: `accessory_widgets` (Requires [app
+   * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    */
   public function patch($name, Message $postBody, $optParams = [])
@@ -243,8 +250,16 @@ class SpacesMessages extends \Google\Service\Resource
    * When using app authentication, requests can only update messages created by
    * the calling Chat app. (messages.update)
    *
-   * @param string $name Resource name in the form `spaces/messages`. Example:
-   * `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`
+   * @param string $name Resource name of the message. Format:
+   * `spaces/{space}/messages/{message}` Where `{space}` is the ID of the space
+   * where the message is posted and `{message}` is a system-assigned ID for the
+   * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
+   * If you set a custom ID when you create a message, you can use this ID to
+   * specify the message in a request by replacing `{message}` with the value from
+   * the `clientAssignedMessageId` field. For example,
+   * `spaces/AAAAAAAAAAA/messages/client-custom-name`. For details, see [Name a me
+   * ssage](https://developers.google.com/chat/api/guides/v1/messages/create#name_
+   * a_created_message).
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
@@ -253,10 +268,12 @@ class SpacesMessages extends \Google\Service\Resource
    * ID must be [client-assigned](https://developers.google.com/chat/api/guides/v1
    * /messages/create#name_a_created_message) or the request fails.
    * @opt_param string updateMask Required. The field paths to update. Separate
-   * multiple values with commas. Currently supported field paths: - `text` -
-   * `attachment` - `cards` (Requires [app
+   * multiple values with commas or use `*` to update all field paths. Currently
+   * supported field paths: - `text` - `attachment` - `cards` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
-   * (Requires [app authentication](/chat/api/guides/auth/service-accounts).)
+   * (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
+   * Developer Preview: `accessory_widgets` (Requires [app
+   * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    */
   public function update($name, Message $postBody, $optParams = [])
