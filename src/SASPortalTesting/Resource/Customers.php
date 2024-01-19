@@ -20,6 +20,7 @@ namespace Google\Service\SASPortalTesting\Resource;
 use Google\Service\SASPortalTesting\SasPortalCheckHasProvisionedDeploymentResponse;
 use Google\Service\SASPortalTesting\SasPortalCustomer;
 use Google\Service\SASPortalTesting\SasPortalListCustomersResponse;
+use Google\Service\SASPortalTesting\SasPortalListGcpProjectDeploymentsResponse;
 use Google\Service\SASPortalTesting\SasPortalListLegacyOrganizationsResponse;
 use Google\Service\SASPortalTesting\SasPortalMigrateOrganizationRequest;
 use Google\Service\SASPortalTesting\SasPortalOperation;
@@ -81,7 +82,21 @@ class Customers extends \Google\Service\Resource
     return $this->call('list', [$params], SasPortalListCustomersResponse::class);
   }
   /**
-   * Checks whether account is legacy. (customers.listLegacyOrganizations)
+   * Returns a list of SAS deployments associated with current GCP project.
+   * Includes whether SAS analytics has been enabled or not.
+   * (customers.listGcpProjectDeployments)
+   *
+   * @param array $optParams Optional parameters.
+   * @return SasPortalListGcpProjectDeploymentsResponse
+   */
+  public function listGcpProjectDeployments($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->call('listGcpProjectDeployments', [$params], SasPortalListGcpProjectDeploymentsResponse::class);
+  }
+  /**
+   * Returns a list of legacy organizations. (customers.listLegacyOrganizations)
    *
    * @param array $optParams Optional parameters.
    * @return SasPortalListLegacyOrganizationsResponse
