@@ -32,6 +32,12 @@ class CommonFeatureSpec extends \Google\Model
   protected $clusterupgradeType = ClusterUpgradeFleetSpec::class;
   protected $clusterupgradeDataType = '';
   /**
+   * @var DataplaneV2FeatureSpec
+   */
+  public $dataplanev2;
+  protected $dataplanev2Type = DataplaneV2FeatureSpec::class;
+  protected $dataplanev2DataType = '';
+  /**
    * @var FleetObservabilityFeatureSpec
    */
   public $fleetobservability;
@@ -71,6 +77,20 @@ class CommonFeatureSpec extends \Google\Model
   public function getClusterupgrade()
   {
     return $this->clusterupgrade;
+  }
+  /**
+   * @param DataplaneV2FeatureSpec
+   */
+  public function setDataplanev2(DataplaneV2FeatureSpec $dataplanev2)
+  {
+    $this->dataplanev2 = $dataplanev2;
+  }
+  /**
+   * @return DataplaneV2FeatureSpec
+   */
+  public function getDataplanev2()
+  {
+    return $this->dataplanev2;
   }
   /**
    * @param FleetObservabilityFeatureSpec

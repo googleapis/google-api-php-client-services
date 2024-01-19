@@ -33,6 +33,14 @@ class ConfigManagementConfigSyncState extends \Google\Collection
   protected $errorsType = ConfigManagementConfigSyncError::class;
   protected $errorsDataType = 'array';
   /**
+   * @var string
+   */
+  public $reposyncCrd;
+  /**
+   * @var string
+   */
+  public $rootsyncCrd;
+  /**
    * @var ConfigManagementSyncState
    */
   public $syncState;
@@ -72,6 +80,34 @@ class ConfigManagementConfigSyncState extends \Google\Collection
   public function getErrors()
   {
     return $this->errors;
+  }
+  /**
+   * @param string
+   */
+  public function setReposyncCrd($reposyncCrd)
+  {
+    $this->reposyncCrd = $reposyncCrd;
+  }
+  /**
+   * @return string
+   */
+  public function getReposyncCrd()
+  {
+    return $this->reposyncCrd;
+  }
+  /**
+   * @param string
+   */
+  public function setRootsyncCrd($rootsyncCrd)
+  {
+    $this->rootsyncCrd = $rootsyncCrd;
+  }
+  /**
+   * @return string
+   */
+  public function getRootsyncCrd()
+  {
+    return $this->rootsyncCrd;
   }
   /**
    * @param ConfigManagementSyncState
