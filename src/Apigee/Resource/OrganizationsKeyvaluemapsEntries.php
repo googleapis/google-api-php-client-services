@@ -118,6 +118,26 @@ class OrganizationsKeyvaluemapsEntries extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudApigeeV1ListKeyValueEntriesResponse::class);
   }
+  /**
+   * Update key value entry scoped to an organization, environment, or API proxy
+   * for an existing key. (entries.update)
+   *
+   * @param string $name Required. Scope as indicated by the URI in which to
+   * create the key value map entry. Use **one** of the following structures in
+   * your request: *
+   * `organizations/{organization}/apis/{api}/keyvaluemaps/{keyvaluemap}`. * `orga
+   * nizations/{organization}/environments/{environment}/keyvaluemaps/{keyvaluemap
+   * }` * `organizations/{organization}/keyvaluemaps/{keyvaluemap}`.
+   * @param GoogleCloudApigeeV1KeyValueEntry $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApigeeV1KeyValueEntry
+   */
+  public function update($name, GoogleCloudApigeeV1KeyValueEntry $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('update', [$params], GoogleCloudApigeeV1KeyValueEntry::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

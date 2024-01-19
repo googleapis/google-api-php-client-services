@@ -40,8 +40,8 @@ class OrganizationsEnvgroups extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1EnvironmentGroup $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string name ID of the environment group. Overrides any ID in the
-   * environment_group resource.
+   * @opt_param string name Optional. ID of the environment group. Overrides any
+   * ID in the environment_group resource.
    * @return GoogleLongrunningOperation
    */
   public function create($parent, GoogleCloudApigeeV1EnvironmentGroup $postBody, $optParams = [])
@@ -125,7 +125,7 @@ class OrganizationsEnvgroups extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1EnvironmentGroup $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask List of fields to be updated.
+   * @opt_param string updateMask Optional. List of fields to be updated.
    * @return GoogleLongrunningOperation
    */
   public function patch($name, GoogleCloudApigeeV1EnvironmentGroup $postBody, $optParams = [])

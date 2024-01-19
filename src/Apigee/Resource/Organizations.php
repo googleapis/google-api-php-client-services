@@ -59,10 +59,15 @@ class Organizations extends \Google\Service\Resource
   }
   /**
    * Delete an Apigee organization. For organizations with BillingType EVALUATION,
-   * an immediate deletion is performed. For paid organizations, a soft-deletion
-   * is performed. The organization can be restored within the soft-deletion
-   * period which can be controlled using the retention field in the request.
-   * (organizations.delete)
+   * an immediate deletion is performed. For paid organizations (Subscription or
+   * Pay-as-you-go), a soft-deletion is performed. The organization can be
+   * restored within the soft-deletion period, which is specified using the
+   * `retention` field in the request or by filing a support ticket with Apigee.
+   * During the data retention period specified in the request, the Apigee
+   * organization cannot be recreated in the same Google Cloud project.
+   * **IMPORTANT: The default data retention setting for this operation is 7 days.
+   * To permanently delete the organization in 24 hours, set the retention
+   * parameter to `MINIMUM`.** (organizations.delete)
    *
    * @param string $name Required. Name of the organization. Use the following
    * structure in your request: `organizations/{org}`
@@ -73,7 +78,9 @@ class Organizations extends \Google\Service\Resource
    * controls how long Organization data will be retained after the initial delete
    * operation completes. During this period, the Organization may be restored to
    * its last known state. After this period, the Organization will no longer be
-   * able to be restored.
+   * able to be restored. **Note: During the data retention period specified using
+   * this field, the Apigee organization cannot be recreated in the same GCP
+   * project.**
    * @return GoogleLongrunningOperation
    */
   public function delete($name, $optParams = [])

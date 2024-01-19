@@ -46,7 +46,7 @@ class OrganizationsDevelopersAppsKeys extends \Google\Service\Resource
    *
    * @param string $parent Parent of the developer app key. Use the following
    * structure in your request:
-   * `organizations/{org}/developers/{developer_email}/apps`
+   * 'organizations/{org}/developers/{developerEmail}/apps/{appName}'
    * @param GoogleCloudApigeeV1DeveloperAppKey $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DeveloperAppKey
