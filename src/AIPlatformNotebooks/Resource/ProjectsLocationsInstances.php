@@ -26,6 +26,7 @@ use Google\Service\AIPlatformNotebooks\Operation;
 use Google\Service\AIPlatformNotebooks\Policy;
 use Google\Service\AIPlatformNotebooks\ReportInstanceInfoSystemRequest;
 use Google\Service\AIPlatformNotebooks\ResetInstanceRequest;
+use Google\Service\AIPlatformNotebooks\ResizeDiskRequest;
 use Google\Service\AIPlatformNotebooks\RollbackInstanceRequest;
 use Google\Service\AIPlatformNotebooks\SetIamPolicyRequest;
 use Google\Service\AIPlatformNotebooks\StartInstanceRequest;
@@ -245,6 +246,21 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('reset', [$params], Operation::class);
+  }
+  /**
+   * Resize a notebook instance disk to a higher capacity. (instances.resizeDisk)
+   *
+   * @param string $notebookInstance Required. Format:
+   * `projects/{project_id}/locations/{location}/instances/{instance_id}`
+   * @param ResizeDiskRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   */
+  public function resizeDisk($notebookInstance, ResizeDiskRequest $postBody, $optParams = [])
+  {
+    $params = ['notebookInstance' => $notebookInstance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('resizeDisk', [$params], Operation::class);
   }
   /**
    * Rollbacks a notebook instance to the previous version. (instances.rollback)

@@ -256,6 +256,16 @@ class AIPlatformNotebooks extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'resizeDisk' => [
+              'path' => 'v2/{+notebookInstance}:resizeDisk',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'notebookInstance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'rollback' => [
               'path' => 'v2/{+name}:rollback',
               'httpMethod' => 'POST',
