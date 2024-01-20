@@ -103,8 +103,7 @@ class ProjectsLocationsDlpJobs extends \Google\Service\Resource
    * Finish a running hybrid DlpJob. Triggers the finalization steps and running
    * of any enabled actions that have not yet run. (dlpJobs.finish)
    *
-   * @param string $name Required. The name of the DlpJob resource to be
-   * cancelled.
+   * @param string $name Required. The name of the DlpJob resource to be finished.
    * @param GooglePrivacyDlpV2FinishDlpJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
