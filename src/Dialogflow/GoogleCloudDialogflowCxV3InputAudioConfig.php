@@ -43,6 +43,10 @@ class GoogleCloudDialogflowCxV3InputAudioConfig extends \Google\Collection
    */
   public $modelVariant;
   /**
+   * @var bool
+   */
+  public $optOutConformerModelMigration;
+  /**
    * @var string[]
    */
   public $phraseHints;
@@ -124,6 +128,20 @@ class GoogleCloudDialogflowCxV3InputAudioConfig extends \Google\Collection
   public function getModelVariant()
   {
     return $this->modelVariant;
+  }
+  /**
+   * @param bool
+   */
+  public function setOptOutConformerModelMigration($optOutConformerModelMigration)
+  {
+    $this->optOutConformerModelMigration = $optOutConformerModelMigration;
+  }
+  /**
+   * @return bool
+   */
+  public function getOptOutConformerModelMigration()
+  {
+    return $this->optOutConformerModelMigration;
   }
   /**
    * @param string[]
