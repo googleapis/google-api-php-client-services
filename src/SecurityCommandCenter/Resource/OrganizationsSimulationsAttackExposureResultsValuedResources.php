@@ -43,6 +43,13 @@ class OrganizationsSimulationsAttackExposureResultsValuedResources extends \Goog
    * @opt_param string filter The filter expression that filters the valued
    * resources in the response. Supported fields: * `resource_value` supports = *
    * `resource_type` supports =
+   * @opt_param string orderBy Optional. The fields by which to order the valued
+   * resources response. Supported fields: * `exposed_score` * `resource_value` *
+   * `resource_type` * `resource` * `display_name` Values should be a comma
+   * separated list of fields. For example: `exposed_score,resource_value`. The
+   * default sorting order is descending. To specify ascending or descending order
+   * for a field, append a " ASC" or a " DESC" suffix, respectively; for example:
+   * `exposed_score DESC`.
    * @opt_param int pageSize The maximum number of results to return in a single
    * response. Default is 10, minimum is 1, maximum is 1000.
    * @opt_param string pageToken The value returned by the last
