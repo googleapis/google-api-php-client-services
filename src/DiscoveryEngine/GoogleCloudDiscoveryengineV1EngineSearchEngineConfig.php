@@ -17,28 +17,47 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
+class GoogleCloudDiscoveryengineV1EngineSearchEngineConfig extends \Google\Collection
 {
+  protected $collection_key = 'searchAddOns';
+  /**
+   * @var string[]
+   */
+  public $searchAddOns;
   /**
    * @var string
    */
-  public $totalRequiredQuota;
+  public $searchTier;
 
+  /**
+   * @param string[]
+   */
+  public function setSearchAddOns($searchAddOns)
+  {
+    $this->searchAddOns = $searchAddOns;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSearchAddOns()
+  {
+    return $this->searchAddOns;
+  }
   /**
    * @param string
    */
-  public function setTotalRequiredQuota($totalRequiredQuota)
+  public function setSearchTier($searchTier)
   {
-    $this->totalRequiredQuota = $totalRequiredQuota;
+    $this->searchTier = $searchTier;
   }
   /**
    * @return string
    */
-  public function getTotalRequiredQuota()
+  public function getSearchTier()
   {
-    return $this->totalRequiredQuota;
+    return $this->searchTier;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure');
+class_alias(GoogleCloudDiscoveryengineV1EngineSearchEngineConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1EngineSearchEngineConfig');

@@ -17,28 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
+class GoogleCloudDiscoveryengineV1EngineCommonConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $totalRequiredQuota;
+  public $companyName;
 
   /**
    * @param string
    */
-  public function setTotalRequiredQuota($totalRequiredQuota)
+  public function setCompanyName($companyName)
   {
-    $this->totalRequiredQuota = $totalRequiredQuota;
+    $this->companyName = $companyName;
   }
   /**
    * @return string
    */
-  public function getTotalRequiredQuota()
+  public function getCompanyName()
   {
-    return $this->totalRequiredQuota;
+    return $this->companyName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure');
+class_alias(GoogleCloudDiscoveryengineV1EngineCommonConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1EngineCommonConfig');

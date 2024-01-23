@@ -17,28 +17,31 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
+class GoogleCloudDiscoveryengineV1BatchCreateTargetSitesResponse extends \Google\Collection
 {
+  protected $collection_key = 'targetSites';
   /**
-   * @var string
+   * @var GoogleCloudDiscoveryengineV1TargetSite[]
    */
-  public $totalRequiredQuota;
+  public $targetSites;
+  protected $targetSitesType = GoogleCloudDiscoveryengineV1TargetSite::class;
+  protected $targetSitesDataType = 'array';
 
   /**
-   * @param string
+   * @param GoogleCloudDiscoveryengineV1TargetSite[]
    */
-  public function setTotalRequiredQuota($totalRequiredQuota)
+  public function setTargetSites($targetSites)
   {
-    $this->totalRequiredQuota = $totalRequiredQuota;
+    $this->targetSites = $targetSites;
   }
   /**
-   * @return string
+   * @return GoogleCloudDiscoveryengineV1TargetSite[]
    */
-  public function getTotalRequiredQuota()
+  public function getTargetSites()
   {
-    return $this->totalRequiredQuota;
+    return $this->targetSites;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure');
+class_alias(GoogleCloudDiscoveryengineV1BatchCreateTargetSitesResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1BatchCreateTargetSitesResponse');

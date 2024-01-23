@@ -17,28 +17,29 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest extends \Google\Collection
 {
+  protected $collection_key = 'uris';
   /**
-   * @var string
+   * @var string[]
    */
-  public $totalRequiredQuota;
+  public $uris;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setTotalRequiredQuota($totalRequiredQuota)
+  public function setUris($uris)
   {
-    $this->totalRequiredQuota = $totalRequiredQuota;
+    $this->uris = $uris;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getTotalRequiredQuota()
+  public function getUris()
   {
-    return $this->totalRequiredQuota;
+    return $this->uris;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure');
+class_alias(GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest');

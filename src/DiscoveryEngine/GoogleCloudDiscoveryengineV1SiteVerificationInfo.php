@@ -17,28 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
+class GoogleCloudDiscoveryengineV1SiteVerificationInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $totalRequiredQuota;
+  public $siteVerificationState;
+  /**
+   * @var string
+   */
+  public $verifyTime;
 
   /**
    * @param string
    */
-  public function setTotalRequiredQuota($totalRequiredQuota)
+  public function setSiteVerificationState($siteVerificationState)
   {
-    $this->totalRequiredQuota = $totalRequiredQuota;
+    $this->siteVerificationState = $siteVerificationState;
   }
   /**
    * @return string
    */
-  public function getTotalRequiredQuota()
+  public function getSiteVerificationState()
   {
-    return $this->totalRequiredQuota;
+    return $this->siteVerificationState;
+  }
+  /**
+   * @param string
+   */
+  public function setVerifyTime($verifyTime)
+  {
+    $this->verifyTime = $verifyTime;
+  }
+  /**
+   * @return string
+   */
+  public function getVerifyTime()
+  {
+    return $this->verifyTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure');
+class_alias(GoogleCloudDiscoveryengineV1SiteVerificationInfo::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1SiteVerificationInfo');

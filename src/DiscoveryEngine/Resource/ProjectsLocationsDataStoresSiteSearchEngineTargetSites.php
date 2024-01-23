@@ -27,10 +27,10 @@ use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $targetSites = $discoveryengineService->projects_locations_collections_dataStores_siteSearchEngine_targetSites;
+ *   $targetSites = $discoveryengineService->projects_locations_dataStores_siteSearchEngine_targetSites;
  *  </code>
  */
-class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends \Google\Service\Resource
+class ProjectsLocationsDataStoresSiteSearchEngineTargetSites extends \Google\Service\Resource
 {
   /**
    * Creates TargetSite in a batch. (targetSites.batchCreate)
@@ -102,8 +102,8 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
     return $this->call('get', [$params], GoogleCloudDiscoveryengineV1betaTargetSite::class);
   }
   /**
-   * Gets a list of TargetSites. (targetSites.listProjectsLocationsCollectionsData
-   * StoresSiteSearchEngineTargetSites)
+   * Gets a list of TargetSites.
+   * (targetSites.listProjectsLocationsDataStoresSiteSearchEngineTargetSites)
    *
    * @param string $parent Required. The parent site search engine resource name,
    * such as `projects/{project}/locations/{location}/collections/{collection}/dat
@@ -122,7 +122,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * call that provided the page token.
    * @return GoogleCloudDiscoveryengineV1betaListTargetSitesResponse
    */
-  public function listProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites($parent, $optParams = [])
+  public function listProjectsLocationsDataStoresSiteSearchEngineTargetSites($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -148,4 +148,4 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites');
+class_alias(ProjectsLocationsDataStoresSiteSearchEngineTargetSites::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsDataStoresSiteSearchEngineTargetSites');

@@ -17,28 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaCreateTargetSiteMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $totalRequiredQuota;
+  public $createTime;
+  /**
+   * @var string
+   */
+  public $updateTime;
 
   /**
    * @param string
    */
-  public function setTotalRequiredQuota($totalRequiredQuota)
+  public function setCreateTime($createTime)
   {
-    $this->totalRequiredQuota = $totalRequiredQuota;
+    $this->createTime = $createTime;
   }
   /**
    * @return string
    */
-  public function getTotalRequiredQuota()
+  public function getCreateTime()
   {
-    return $this->totalRequiredQuota;
+    return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaTargetSiteFailureReasonQuotaFailure');
+class_alias(GoogleCloudDiscoveryengineV1betaCreateTargetSiteMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaCreateTargetSiteMetadata');
