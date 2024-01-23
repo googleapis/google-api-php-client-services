@@ -60,6 +60,10 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   /**
    * @var string
    */
+  public $modelType;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -177,6 +181,20 @@ class GoogleCloudDocumentaiV1ProcessorVersion extends \Google\Model
   public function getLatestEvaluation()
   {
     return $this->latestEvaluation;
+  }
+  /**
+   * @param string
+   */
+  public function setModelType($modelType)
+  {
+    $this->modelType = $modelType;
+  }
+  /**
+   * @return string
+   */
+  public function getModelType()
+  {
+    return $this->modelType;
   }
   /**
    * @param string
