@@ -49,7 +49,7 @@ class ProjectsDatabasesCollectionGroupsFields extends \Google\Service\Resource
    * Lists the field configuration and metadata for this database. Currently,
    * FirestoreAdmin.ListFields only supports listing fields that have been
    * explicitly overridden. To issue this query, call FirestoreAdmin.ListFields
-   * with the filter set to `indexConfig.usesAncestorConfig:false or
+   * with the filter set to `indexConfig.usesAncestorConfig:false` or
    * `ttlConfig:*`. (fields.listProjectsDatabasesCollectionGroupsFields)
    *
    * @param string $parent Required. A parent name of the form `projects/{project_
