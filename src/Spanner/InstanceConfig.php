@@ -72,6 +72,10 @@ class InstanceConfig extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var string
+   */
+  public $storageLimitPerProcessingUnit;
 
   /**
    * @param string
@@ -240,6 +244,20 @@ class InstanceConfig extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setStorageLimitPerProcessingUnit($storageLimitPerProcessingUnit)
+  {
+    $this->storageLimitPerProcessingUnit = $storageLimitPerProcessingUnit;
+  }
+  /**
+   * @return string
+   */
+  public function getStorageLimitPerProcessingUnit()
+  {
+    return $this->storageLimitPerProcessingUnit;
   }
 }
 
