@@ -73,6 +73,12 @@ class Device extends \Google\Collection
   protected $displaysType = Display::class;
   protected $displaysDataType = 'array';
   /**
+   * @var DpcMigrationInfo
+   */
+  public $dpcMigrationInfo;
+  protected $dpcMigrationInfoType = DpcMigrationInfo::class;
+  protected $dpcMigrationInfoDataType = '';
+  /**
    * @var string
    */
   public $enrollmentTime;
@@ -332,6 +338,20 @@ class Device extends \Google\Collection
   public function getDisplays()
   {
     return $this->displays;
+  }
+  /**
+   * @param DpcMigrationInfo
+   */
+  public function setDpcMigrationInfo(DpcMigrationInfo $dpcMigrationInfo)
+  {
+    $this->dpcMigrationInfo = $dpcMigrationInfo;
+  }
+  /**
+   * @return DpcMigrationInfo
+   */
+  public function getDpcMigrationInfo()
+  {
+    return $this->dpcMigrationInfo;
   }
   /**
    * @param string
