@@ -84,11 +84,7 @@ class SASPortalTesting extends \Google\Service
         'customers',
         [
           'methods' => [
-            'checkHasProvisionedDeployment' => [
-              'path' => 'v1alpha1/customers:checkHasProvisionedDeployment',
-              'httpMethod' => 'GET',
-              'parameters' => [],
-            ],'get' => [
+            'get' => [
               'path' => 'v1alpha1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [

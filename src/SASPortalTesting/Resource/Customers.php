@@ -17,7 +17,6 @@
 
 namespace Google\Service\SASPortalTesting\Resource;
 
-use Google\Service\SASPortalTesting\SasPortalCheckHasProvisionedDeploymentResponse;
 use Google\Service\SASPortalTesting\SasPortalCustomer;
 use Google\Service\SASPortalTesting\SasPortalListCustomersResponse;
 use Google\Service\SASPortalTesting\SasPortalListGcpProjectDeploymentsResponse;
@@ -38,19 +37,6 @@ use Google\Service\SASPortalTesting\SasPortalSetupSasAnalyticsRequest;
  */
 class Customers extends \Google\Service\Resource
 {
-  /**
-   * Checks whether a SAS deployment for the authentication context exists.
-   * (customers.checkHasProvisionedDeployment)
-   *
-   * @param array $optParams Optional parameters.
-   * @return SasPortalCheckHasProvisionedDeploymentResponse
-   */
-  public function checkHasProvisionedDeployment($optParams = [])
-  {
-    $params = [];
-    $params = array_merge($params, $optParams);
-    return $this->call('checkHasProvisionedDeployment', [$params], SasPortalCheckHasProvisionedDeploymentResponse::class);
-  }
   /**
    * Returns a requested customer. (customers.get)
    *
