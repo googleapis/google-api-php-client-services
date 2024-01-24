@@ -1707,6 +1707,16 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'streamRawPredict' => [
+              'path' => 'v1/{+endpoint}:streamRawPredict',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'undeployModel' => [
               'path' => 'v1/{+endpoint}:undeployModel',
               'httpMethod' => 'POST',
@@ -5849,6 +5859,16 @@ class Aiplatform extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'model' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'streamRawPredict' => [
+              'path' => 'v1/{+endpoint}:streamRawPredict',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

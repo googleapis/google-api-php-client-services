@@ -27,6 +27,7 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PredictRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PredictResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RawPredictRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1StreamRawPredictRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1StreamingPredictRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1StreamingPredictResponse;
 
@@ -140,6 +141,22 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
     $params = ['model' => $model, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('streamGenerateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
+  }
+  /**
+   * (models.streamRawPredict)
+   *
+   * @param string $endpoint Required. The name of the Endpoint requested to serve
+   * the prediction. Format:
+   * `projects/{project}/locations/{location}/endpoints/{endpoint}`
+   * @param GoogleCloudAiplatformV1StreamRawPredictRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleApiHttpBody
+   */
+  public function streamRawPredict($endpoint, GoogleCloudAiplatformV1StreamRawPredictRequest $postBody, $optParams = [])
+  {
+    $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('streamRawPredict', [$params], GoogleApiHttpBody::class);
   }
 }
 

@@ -36,7 +36,7 @@ class ProjectsLocationsFeatureOnlineStores extends \Google\Service\Resource
    * (featureOnlineStores.create)
    *
    * @param string $parent Required. The resource name of the Location to create
-   * FeatureOnlineStores. Format: `projects/{project}/locations/{location}'`
+   * FeatureOnlineStores. Format: `projects/{project}/locations/{location}`
    * @param GoogleCloudAiplatformV1FeatureOnlineStore $postBody
    * @param array $optParams Optional parameters.
    *

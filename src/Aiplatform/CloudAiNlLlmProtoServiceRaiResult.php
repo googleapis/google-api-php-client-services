@@ -39,10 +39,10 @@ class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
    */
   public $filtered;
   /**
-   * @var LearningServingLlmLanguageFilterResult
+   * @var LearningGenaiRootLanguageFilterResult
    */
   public $languageFilterResult;
-  protected $languageFilterResultType = LearningServingLlmLanguageFilterResult::class;
+  protected $languageFilterResultType = LearningGenaiRootLanguageFilterResult::class;
   protected $languageFilterResultDataType = '';
   /**
    * @var CloudAiNlLlmProtoServiceRaiSignal[]
@@ -120,14 +120,14 @@ class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
     return $this->filtered;
   }
   /**
-   * @param LearningServingLlmLanguageFilterResult
+   * @param LearningGenaiRootLanguageFilterResult
    */
-  public function setLanguageFilterResult(LearningServingLlmLanguageFilterResult $languageFilterResult)
+  public function setLanguageFilterResult(LearningGenaiRootLanguageFilterResult $languageFilterResult)
   {
     $this->languageFilterResult = $languageFilterResult;
   }
   /**
-   * @return LearningServingLlmLanguageFilterResult
+   * @return LearningGenaiRootLanguageFilterResult
    */
   public function getLanguageFilterResult()
   {
