@@ -32,9 +32,9 @@ class ProjectsLocationsDatasetsDicomStoresDicomWebStudies extends \Google\Servic
   /**
    * GetStudyMetrics returns metrics for a study. (studies.getStudyMetrics)
    *
-   * @param string $study The study resource path. For example, `projects/{project
-   * _id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store_i
-   * d}/dicomWeb/studies/{study_uid}`.
+   * @param string $study Required. The study resource path. For example, `project
+   * s/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dic
+   * om_store_id}/dicomWeb/studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return StudyMetrics
    */

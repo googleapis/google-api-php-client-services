@@ -58,32 +58,33 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resources#getting_all_patient_compartment_resources).
    * (fhir.PatientEverything)
    *
-   * @param string $name Name of the `Patient` resource for which the information
-   * is required.
+   * @param string $name Required. Name of the `Patient` resource for which the
+   * information is required.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param int _count Maximum number of resources in a page. If not
+   * @opt_param int _count Optional. Maximum number of resources in a page. If not
    * specified, 100 is used. May not be larger than 1000.
    * @opt_param string _page_token Used to retrieve the next or previous page of
    * results when using pagination. Set `_page_token` to the value of _page_token
    * set in next or previous page links' url. Next and previous page are returned
    * in the response bundle's links field, where `link.relation` is "previous" or
    * "next". Omit `_page_token` if no previous request has been made.
-   * @opt_param string _since If provided, only resources updated after this time
-   * are returned. The time uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For
-   * example, `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The time
-   * must be specified to the second and include a time zone.
-   * @opt_param string _type String of comma-delimited FHIR resource types. If
-   * provided, only resources of the specified resource type(s) are returned.
-   * Specifying multiple `_type` parameters isn't supported. For example, the
-   * result of `_type=Observation&_type=Encounter` is undefined. Use
+   * @opt_param string _since Optional. If provided, only resources updated after
+   * this time are returned. The time uses the format YYYY-MM-
+   * DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or
+   * `2017-01-01T00:00:00Z`. The time must be specified to the second and include
+   * a time zone.
+   * @opt_param string _type Optional. String of comma-delimited FHIR resource
+   * types. If provided, only resources of the specified resource type(s) are
+   * returned. Specifying multiple `_type` parameters isn't supported. For
+   * example, the result of `_type=Observation&_type=Encounter` is undefined. Use
    * `_type=Observation,Encounter` instead.
-   * @opt_param string end The response includes records prior to the end date.
-   * The date uses the format YYYY-MM-DD. If no end date is provided, all records
-   * subsequent to the start date are in scope.
-   * @opt_param string start The response includes records subsequent to the start
-   * date. The date uses the format YYYY-MM-DD. If no start date is provided, all
-   * records prior to the end date are in scope.
+   * @opt_param string end Optional. The response includes records prior to the
+   * end date. The date uses the format YYYY-MM-DD. If no end date is provided,
+   * all records subsequent to the start date are in scope.
+   * @opt_param string start Optional. The response includes records subsequent to
+   * the start date. The date uses the format YYYY-MM-DD. If no start date is
+   * provided, all records prior to the end date are in scope.
    * @return HttpBody
    */
   public function PatientEverything($name, $optParams = [])
@@ -102,7 +103,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resources#deleting_historical_versions_of_a_fhir_resource).
    * (fhir.ResourcePurge)
    *
-   * @param string $name The name of the resource to purge.
+   * @param string $name Required. The name of the resource to purge.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
    */
@@ -130,10 +131,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * the request cannot be mapped to a valid API method on a FHIR store, a generic
    * GCP error might be returned instead. (fhir.ResourceValidate)
    *
-   * @param string $parent The name of the FHIR store that holds the profiles
-   * being used for validation.
-   * @param string $type The FHIR resource type of the resource being validated.
-   * For a complete list, see the FHIR Resource Index
+   * @param string $parent Required. The name of the FHIR store that holds the
+   * profiles being used for validation.
+   * @param string $type Required. The FHIR resource type of the resource being
+   * validated. For a complete list, see the FHIR Resource Index
    * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html), or
    * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must
@@ -141,9 +142,9 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string profile The canonical URL of a profile that this resource
-   * should be validated against. For example, to validate a Patient resource
-   * against the US Core Patient profile this parameter would be
+   * @opt_param string profile Required. The canonical URL of a profile that this
+   * resource should be validated against. For example, to validate a Patient
+   * resource against the US Core Patient profile this parameter would be
    * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
    * StructureDefinition with this canonical URL must exist in the FHIR store.
    * @return HttpBody
@@ -170,7 +171,8 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * contains a JSON-encoded representation of a `CapabilityStatement` resource.
    * (fhir.capabilities)
    *
-   * @param string $name Name of the FHIR store to retrieve the capabilities for.
+   * @param string $name Required. Name of the FHIR store to retrieve the
+   * capabilities for.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -195,9 +197,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#conditionally_deleting_a_fhir_resource). (fhir.conditionalDelete)
    *
-   * @param string $parent The name of the FHIR store this resource belongs to.
-   * @param string $type The FHIR resource type to delete, such as Patient or
-   * Observation. For a complete list, see the FHIR Resource Index
+   * @param string $parent Required. The name of the FHIR store this resource
+   * belongs to.
+   * @param string $type Required. The FHIR resource type to delete, such as
+   * Patient or Observation. For a complete list, see the FHIR Resource Index
    * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -232,9 +235,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#conditionally_patching_a_fhir_resource). (fhir.conditionalPatch)
    *
-   * @param string $parent The name of the FHIR store this resource belongs to.
-   * @param string $type The FHIR resource type to update, such as Patient or
-   * Observation. For a complete list, see the FHIR Resource Index
+   * @param string $parent Required. The name of the FHIR store this resource
+   * belongs to.
+   * @param string $type Required. The FHIR resource type to update, such as
+   * Patient or Observation. For a complete list, see the FHIR Resource Index
    * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -276,9 +280,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#conditionally_updating_a_fhir_resource). (fhir.conditionalUpdate)
    *
-   * @param string $parent The name of the FHIR store this resource belongs to.
-   * @param string $type The FHIR resource type to update, such as Patient or
-   * Observation. For a complete list, see the FHIR Resource Index
+   * @param string $parent Required. The name of the FHIR store this resource
+   * belongs to.
+   * @param string $type Required. The FHIR resource type to update, such as
+   * Patient or Observation. For a complete list, see the FHIR Resource Index
    * ([DSTU2](https://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](https://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must
@@ -320,9 +325,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#creating_a_fhir_resource). (fhir.create)
    *
-   * @param string $parent The name of the FHIR store this resource belongs to.
-   * @param string $type The FHIR resource type to create, such as Patient or
-   * Observation. For a complete list, see the FHIR Resource Index
+   * @param string $parent Required. The name of the FHIR store this resource
+   * belongs to.
+   * @param string $type Required. The FHIR resource type to create, such as
+   * Patient or Observation. For a complete list, see the FHIR Resource Index
    * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)). Must
@@ -350,7 +356,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#deleting_a_fhir_resource). (fhir.delete)
    *
-   * @param string $name The name of the resource to delete.
+   * @param string $name Required. The name of the resource to delete.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -398,8 +404,8 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resources using FHIR bundles](https://cloud.google.com/healthcare/docs/how-
    * tos/fhir-bundles). (fhir.executeBundle)
    *
-   * @param string $parent Name of the FHIR store in which this bundle will be
-   * executed.
+   * @param string $parent Required. Name of the FHIR store in which this bundle
+   * will be executed.
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
@@ -427,7 +433,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * versions](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#listing_fhir_resource_versions). (fhir.history)
    *
-   * @param string $name The name of the resource to retrieve.
+   * @param string $name Required. The name of the resource to retrieve.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string _at Only include resource versions that were current at
@@ -475,7 +481,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#patching_a_fhir_resource). (fhir.patch)
    *
-   * @param string $name The name of the resource to update.
+   * @param string $name Required. The name of the resource to update.
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
@@ -506,7 +512,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#getting_a_fhir_resource). (fhir.read)
    *
-   * @param string $name The name of the resource to retrieve.
+   * @param string $name Required. The name of the resource to retrieve.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -585,7 +591,8 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-
    * search). (fhir.search)
    *
-   * @param string $parent Name of the FHIR store to retrieve resources from.
+   * @param string $parent Required. Name of the FHIR store to retrieve resources
+   * from.
    * @param SearchResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
@@ -665,9 +672,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-
    * search). (fhir.searchType)
    *
-   * @param string $parent Name of the FHIR store to retrieve resources from.
-   * @param string $resourceType The FHIR resource type to search, such as Patient
-   * or Observation. For a complete list, see the FHIR Resource Index
+   * @param string $parent Required. Name of the FHIR store to retrieve resources
+   * from.
+   * @param string $resourceType Required. The FHIR resource type to search, such
+   * as Patient or Observation. For a complete list, see the FHIR Resource Index
    * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
    * [R4](http://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
@@ -705,7 +713,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * see [Updating a FHIR resource](https://cloud.google.com/healthcare/docs/how-
    * tos/fhir-resources#updating_a_fhir_resource). (fhir.update)
    *
-   * @param string $name The name of the resource to update.
+   * @param string $name Required. The name of the resource to update.
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
@@ -731,7 +739,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * version](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#retrieving_a_fhir_resource_version). (fhir.vread)
    *
-   * @param string $name The name of the resource version to retrieve.
+   * @param string $name Required. The name of the resource version to retrieve.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */

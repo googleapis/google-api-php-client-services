@@ -69,7 +69,8 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
    * tos/logging). (datasets.deidentify)
    *
-   * @param string $sourceDataset Source dataset resource name. For example,
+   * @param string $sourceDataset Required. Source dataset resource name. For
+   * example,
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * @param DeidentifyDatasetRequest $postBody
    * @param array $optParams Optional parameters.

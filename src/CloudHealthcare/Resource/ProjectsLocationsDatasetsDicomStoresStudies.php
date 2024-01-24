@@ -41,8 +41,8 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * dicom). (studies.delete)
    *
    * @param string $parent
-   * @param string $dicomWebPath The path of the DeleteStudy request. For example,
-   * `studies/{study_uid}`.
+   * @param string $dicomWebPath Required. The path of the DeleteStudy request.
+   * For example, `studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return Operation
    */
@@ -63,11 +63,11 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
    * metadata). (studies.retrieveMetadata)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveStudyMetadata DICOMweb
-   * request. For example, `studies/{study_uid}/metadata`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the RetrieveStudyMetadata
+   * DICOMweb request. For example, `studies/{study_uid}/metadata`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -87,11 +87,11 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * DICOM data](https://cloud.google.com/healthcare/docs/how-
    * tos/dicomweb#retrieve-dicom). (studies.retrieveStudy)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveStudy DICOMweb request.
-   * For example, `studies/{study_uid}`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the RetrieveStudy DICOMweb
+   * request. For example, `studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -111,12 +111,12 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
    * dicom). (studies.searchForInstances)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the SearchForInstancesRequest
-   * DICOMweb request. For example, `instances`, `series/{series_uid}/instances`,
-   * or `studies/{study_uid}/instances`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the
+   * SearchForInstancesRequest DICOMweb request. For example, `instances`,
+   * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -136,11 +136,11 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
    * dicom). (studies.searchForSeries)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the SearchForSeries DICOMweb request.
-   * For example, `series` or `studies/{study_uid}/series`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the SearchForSeries
+   * DICOMweb request. For example, `series` or `studies/{study_uid}/series`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -160,11 +160,12 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * [Store DICOM data](https://cloud.google.com/healthcare/docs/how-
    * tos/dicomweb#store-dicom). (studies.storeInstances)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the StoreInstances DICOMweb request.
-   * For example, `studies/[{study_uid}]`. Note that the `study_uid` is optional.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the StoreInstances DICOMweb
+   * request. For example, `studies/[{study_uid}]`. Note that the `study_uid` is
+   * optional.
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody

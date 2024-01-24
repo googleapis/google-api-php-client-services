@@ -39,11 +39,12 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * a study, series, or instance](https://cloud.google.com/healthcare/docs/how-
    * tos/dicomweb#delete-dicom). (instances.delete)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the DeleteInstance request. For
-   * example, `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the DeleteInstance request.
+   * For example,
+   * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
    */
@@ -66,11 +67,11 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * instance](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
    * instance). (instances.retrieveInstance)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveInstance DICOMweb
-   * request. For example,
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the RetrieveInstance
+   * DICOMweb request. For example,
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
@@ -93,11 +94,11 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * metadata](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
    * metadata). (instances.retrieveMetadata)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveInstanceMetadata DICOMweb
-   * request. For example,
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the
+   * RetrieveInstanceMetadata DICOMweb request. For example,
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
@@ -120,11 +121,11 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
    * consumer). (instances.retrieveRendered)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveRenderedInstance DICOMweb
-   * request. For example,
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the
+   * RetrieveRenderedInstance DICOMweb request. For example,
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
    * @param array $optParams Optional parameters.
    * @return HttpBody

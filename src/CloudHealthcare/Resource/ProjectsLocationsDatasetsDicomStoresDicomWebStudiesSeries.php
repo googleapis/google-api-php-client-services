@@ -32,9 +32,9 @@ class ProjectsLocationsDatasetsDicomStoresDicomWebStudiesSeries extends \Google\
   /**
    * GetSeriesMetrics returns metrics for a series. (series.getSeriesMetrics)
    *
-   * @param string $series The series resource path. For example, `projects/{proje
-   * ct_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{dicom_store
-   * _id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
+   * @param string $series Required. The series resource path. For example, `proje
+   * cts/{project_id}/locations/{location_id}/datasets/{dataset_id}/dicomStores/{d
+   * icom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
    * @param array $optParams Optional parameters.
    * @return SeriesMetrics
    */

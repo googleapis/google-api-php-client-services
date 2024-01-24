@@ -40,12 +40,12 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames extends \
    * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
    * dicom). (frames.retrieveFrames)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveFrames DICOMweb request.
-   * For example, `studies/{study_uid}/series/{series_uid}/instances/{instance_uid
-   * }/frames/{frame_list}`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the RetrieveFrames DICOMweb
+   * request. For example, `studies/{study_uid}/series/{series_uid}/instances/{ins
+   * tance_uid}/frames/{frame_list}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */
@@ -67,12 +67,12 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames extends \
    * formats](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#retrieve-
    * consumer). (frames.retrieveRendered)
    *
-   * @param string $parent The name of the DICOM store that is being accessed. For
-   * example, `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
-   * /dicomStores/{dicom_store_id}`.
-   * @param string $dicomWebPath The path of the RetrieveRenderedFrames DICOMweb
-   * request. For example, `studies/{study_uid}/series/{series_uid}/instances/{ins
-   * tance_uid}/frames/{frame_list}/rendered`.
+   * @param string $parent Required. The name of the DICOM store that is being
+   * accessed. For example, `projects/{project_id}/locations/{location_id}/dataset
+   * s/{dataset_id}/dicomStores/{dicom_store_id}`.
+   * @param string $dicomWebPath Required. The path of the RetrieveRenderedFrames
+   * DICOMweb request. For example, `studies/{study_uid}/series/{series_uid}/insta
+   * nces/{instance_uid}/frames/{frame_list}/rendered`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    */

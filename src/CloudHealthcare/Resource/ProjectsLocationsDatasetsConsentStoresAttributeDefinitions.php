@@ -112,10 +112,10 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
   /**
    * Updates the specified Attribute definition. (attributeDefinitions.patch)
    *
-   * @param string $name Resource name of the Attribute definition, of the form `p
-   * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentSto
-   * res/{consent_store_id}/attributeDefinitions/{attribute_definition_id}`.
-   * Cannot be changed after creation.
+   * @param string $name Identifier. Resource name of the Attribute definition, of
+   * the form `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}
+   * /consentStores/{consent_store_id}/attributeDefinitions/{attribute_definition_
+   * id}`. Cannot be changed after creation.
    * @param AttributeDefinition $postBody
    * @param array $optParams Optional parameters.
    *
