@@ -48,6 +48,10 @@ class BlockchainNode extends \Google\Model
    */
   public $name;
   /**
+   * @var bool
+   */
+  public $privateServiceConnectEnabled;
+  /**
    * @var string
    */
   public $state;
@@ -139,6 +143,20 @@ class BlockchainNode extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setPrivateServiceConnectEnabled($privateServiceConnectEnabled)
+  {
+    $this->privateServiceConnectEnabled = $privateServiceConnectEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getPrivateServiceConnectEnabled()
+  {
+    return $this->privateServiceConnectEnabled;
   }
   /**
    * @param string
