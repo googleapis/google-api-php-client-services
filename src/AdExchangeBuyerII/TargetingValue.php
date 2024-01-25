@@ -19,16 +19,8 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class TargetingValue extends \Google\Model
 {
-  /**
-   * @var CreativeSize
-   */
-  public $creativeSizeValue;
   protected $creativeSizeValueType = CreativeSize::class;
   protected $creativeSizeValueDataType = '';
-  /**
-   * @var DayPartTargeting
-   */
-  public $dayPartTargetingValue;
   protected $dayPartTargetingValueType = DayPartTargeting::class;
   protected $dayPartTargetingValueDataType = '';
   /**

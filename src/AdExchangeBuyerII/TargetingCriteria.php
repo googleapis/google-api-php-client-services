@@ -20,16 +20,8 @@ namespace Google\Service\AdExchangeBuyerII;
 class TargetingCriteria extends \Google\Collection
 {
   protected $collection_key = 'inclusions';
-  /**
-   * @var TargetingValue[]
-   */
-  public $exclusions;
   protected $exclusionsType = TargetingValue::class;
   protected $exclusionsDataType = 'array';
-  /**
-   * @var TargetingValue[]
-   */
-  public $inclusions;
   protected $inclusionsType = TargetingValue::class;
   protected $inclusionsDataType = 'array';
   /**
