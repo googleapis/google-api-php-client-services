@@ -19,10 +19,6 @@ namespace Google\Service\Iam;
 
 class GoogleIamV1LoggingAuditData extends \Google\Model
 {
-  /**
-   * @var GoogleIamV1PolicyDelta
-   */
-  public $policyDelta;
   protected $policyDeltaType = GoogleIamV1PolicyDelta::class;
   protected $policyDeltaDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Iam;
 
 class GoogleIamV2PolicyRule extends \Google\Model
 {
-  /**
-   * @var GoogleIamV2DenyRule
-   */
-  public $denyRule;
   protected $denyRuleType = GoogleIamV2DenyRule::class;
   protected $denyRuleDataType = '';
   /**

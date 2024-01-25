@@ -20,10 +20,6 @@ namespace Google\Service\Iam;
 class GoogleIamV1PolicyDelta extends \Google\Collection
 {
   protected $collection_key = 'bindingDeltas';
-  /**
-   * @var GoogleIamV1BindingDelta[]
-   */
-  public $bindingDeltas;
   protected $bindingDeltasType = GoogleIamV1BindingDelta::class;
   protected $bindingDeltasDataType = 'array';
 

@@ -48,10 +48,6 @@ class GoogleIamV2Policy extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleIamV2PolicyRule[]
-   */
-  public $rules;
   protected $rulesType = GoogleIamV2PolicyRule::class;
   protected $rulesDataType = 'array';
   /**
