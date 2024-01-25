@@ -42,6 +42,7 @@ class PublishersModels extends \Google\Service\Resource
    * @opt_param string view Optional. PublisherModel view specifying which fields
    * to read.
    * @return GoogleCloudAiplatformV1PublisherModel
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {

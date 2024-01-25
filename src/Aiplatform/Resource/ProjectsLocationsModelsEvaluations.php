@@ -39,6 +39,7 @@ class ProjectsLocationsModelsEvaluations extends \Google\Service\Resource
    * evaluation}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ModelEvaluation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -54,6 +55,7 @@ class ProjectsLocationsModelsEvaluations extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ImportModelEvaluationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ModelEvaluation
+   * @throws \Google\Service\Exception
    */
   public function import($parent, GoogleCloudAiplatformV1ImportModelEvaluationRequest $postBody, $optParams = [])
   {
@@ -77,6 +79,7 @@ class ProjectsLocationsModelsEvaluations extends \Google\Service\Resource
    * ModelService.ListModelEvaluations call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListModelEvaluationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsModelsEvaluations($parent, $optParams = [])
   {

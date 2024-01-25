@@ -53,6 +53,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * s/{location}/tensorboards/{tensorboard}/experiments/{experiment}/runs/{run}/t
    * imeSeries/{time_series}`
    * @return GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse
+   * @throws \Google\Service\Exception
    */
   public function batchRead($tensorboard, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1Tensorboard $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1Tensorboard $postBody, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Tensorboard
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -125,6 +129,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListTensorboardsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsTensorboards($parent, $optParams = [])
   {
@@ -147,6 +152,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * not provide a mask then all fields are overwritten if new values are
    * specified.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1Tensorboard $postBody, $optParams = [])
   {
@@ -162,6 +168,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ReadTensorboardSizeResponse
+   * @throws \Google\Service\Exception
    */
   public function readSize($tensorboard, $optParams = [])
   {
@@ -177,6 +184,7 @@ class ProjectsLocationsTensorboards extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/tensorboards/{tensorboard}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ReadTensorboardUsageResponse
+   * @throws \Google\Service\Exception
    */
   public function readUsage($tensorboard, $optParams = [])
   {

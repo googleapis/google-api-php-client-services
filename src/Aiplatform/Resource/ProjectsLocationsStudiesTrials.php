@@ -50,6 +50,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1AddTrialMeasurementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Trial
+   * @throws \Google\Service\Exception
    */
   public function addTrialMeasurement($trialName, GoogleCloudAiplatformV1AddTrialMeasurementRequest $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CheckTrialEarlyStoppingStateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function checkTrialEarlyStoppingState($trialName, GoogleCloudAiplatformV1CheckTrialEarlyStoppingStateRequest $postBody, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CompleteTrialRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Trial
+   * @throws \Google\Service\Exception
    */
   public function complete($name, GoogleCloudAiplatformV1CompleteTrialRequest $postBody, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1Trial $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Trial
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1Trial $postBody, $optParams = [])
   {
@@ -111,6 +115,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/studies/{study}/trials/{trial}`
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -125,6 +130,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/studies/{study}/trials/{trial}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Trial
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -145,6 +151,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A page token to request the next page
    * of results. If unspecified, there are no subsequent pages.
    * @return GoogleCloudAiplatformV1ListTrialsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsStudiesTrials($parent, $optParams = [])
   {
@@ -163,6 +170,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ListOptimalTrialsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ListOptimalTrialsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOptimalTrials($parent, GoogleCloudAiplatformV1ListOptimalTrialsRequest $postBody, $optParams = [])
   {
@@ -178,6 +186,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1StopTrialRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Trial
+   * @throws \Google\Service\Exception
    */
   public function stop($name, GoogleCloudAiplatformV1StopTrialRequest $postBody, $optParams = [])
   {
@@ -196,6 +205,7 @@ class ProjectsLocationsStudiesTrials extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1SuggestTrialsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function suggest($parent, GoogleCloudAiplatformV1SuggestTrialsRequest $postBody, $optParams = [])
   {

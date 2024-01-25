@@ -47,6 +47,7 @@ class ProjectsLocationsNasJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CancelNasJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudAiplatformV1CancelNasJobRequest $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class ProjectsLocationsNasJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1NasJob $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1NasJob
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1NasJob $postBody, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsLocationsNasJobs extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/nasJobs/{nas_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -90,6 +93,7 @@ class ProjectsLocationsNasJobs extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/nasJobs/{nas_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1NasJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -120,6 +124,7 @@ class ProjectsLocationsNasJobs extends \Google\Service\Resource
    * JobService.ListNasJobs call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListNasJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNasJobs($parent, $optParams = [])
   {

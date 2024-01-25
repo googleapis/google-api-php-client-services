@@ -46,6 +46,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * @opt_param string notebookRuntimeTemplateId Optional. User specified ID for
    * the notebook runtime template.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1NotebookRuntimeTemplate $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * bookRuntimeTemplates/{notebook_runtime_template}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * plates/{notebook_runtime_template}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1NotebookRuntimeTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -107,6 +110,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -145,6 +149,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * previous NotebookService.ListNotebookRuntimeTemplates call.
    * @opt_param string readMask Optional. Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListNotebookRuntimeTemplatesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNotebookRuntimeTemplates($parent, $optParams = [])
   {
@@ -164,6 +169,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * @param GoogleIamV1SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, GoogleIamV1SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -190,6 +196,7 @@ class ProjectsLocationsNotebookRuntimeTemplates extends \Google\Service\Resource
    * allowed. For more information see [IAM
    * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @return GoogleIamV1TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, $optParams = [])
   {

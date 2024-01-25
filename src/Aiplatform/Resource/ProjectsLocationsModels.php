@@ -49,6 +49,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CopyModelRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function copy($parent, GoogleCloudAiplatformV1CopyModelRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/models/{model}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -83,6 +85,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/models/{model}@1234`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function deleteVersion($name, $optParams = [])
   {
@@ -101,6 +104,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ExportModelRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function export($name, GoogleCloudAiplatformV1ExportModelRequest $postBody, $optParams = [])
   {
@@ -122,6 +126,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * version.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Model
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -154,6 +159,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * ModelService.ListModels call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListModelsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsModels($parent, $optParams = [])
   {
@@ -182,6 +188,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * via next_page_token of the previous ListModelVersions call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListModelVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listVersions($name, $optParams = [])
   {
@@ -198,6 +205,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1MergeVersionAliasesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Model
+   * @throws \Google\Service\Exception
    */
   public function mergeVersionAliases($name, GoogleCloudAiplatformV1MergeVersionAliasesRequest $postBody, $optParams = [])
   {
@@ -215,6 +223,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * @opt_param string updateMask Required. The update mask applies to the
    * resource. For the `FieldMask` definition, see google.protobuf.FieldMask.
    * @return GoogleCloudAiplatformV1Model
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1Model $postBody, $optParams = [])
   {
@@ -231,6 +240,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1UpdateExplanationDatasetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function updateExplanationDataset($model, GoogleCloudAiplatformV1UpdateExplanationDatasetRequest $postBody, $optParams = [])
   {
@@ -246,6 +256,7 @@ class ProjectsLocationsModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1UploadModelRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function upload($parent, GoogleCloudAiplatformV1UploadModelRequest $postBody, $optParams = [])
   {

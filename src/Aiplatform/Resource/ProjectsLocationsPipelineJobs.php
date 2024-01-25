@@ -48,6 +48,7 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CancelPipelineJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudAiplatformV1CancelPipelineJobRequest $postBody, $optParams = [])
   {
@@ -69,6 +70,7 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * will be automatically generated. This value should be less than 128
    * characters, and valid characters are `/a-z-/`.
    * @return GoogleCloudAiplatformV1PipelineJob
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1PipelineJob $postBody, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/pipelineJobs/{pipeline_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1PipelineJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -148,6 +152,7 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * PipelineService.ListPipelineJobs call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListPipelineJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPipelineJobs($parent, $optParams = [])
   {

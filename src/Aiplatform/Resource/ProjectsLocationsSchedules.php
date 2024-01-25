@@ -42,6 +42,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1Schedule $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Schedule
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1Schedule $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/schedules/{schedule}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -71,6 +73,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/schedules/{schedule}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Schedule
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -118,6 +121,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * via ListSchedulesResponse.next_page_token of the previous
    * ScheduleService.ListSchedules call.
    * @return GoogleCloudAiplatformV1ListSchedulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSchedules($parent, $optParams = [])
   {
@@ -139,6 +143,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * @opt_param string updateMask Required. The update mask applies to the
    * resource. See google.protobuf.FieldMask.
    * @return GoogleCloudAiplatformV1Schedule
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1Schedule $postBody, $optParams = [])
   {
@@ -156,6 +161,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1PauseScheduleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function pause($name, GoogleCloudAiplatformV1PauseScheduleRequest $postBody, $optParams = [])
   {
@@ -177,6 +183,7 @@ class ProjectsLocationsSchedules extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ResumeScheduleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function resume($name, GoogleCloudAiplatformV1ResumeScheduleRequest $postBody, $optParams = [])
   {

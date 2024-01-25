@@ -39,6 +39,7 @@ class ProjectsLocationsSpecialistPools extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1SpecialistPool $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1SpecialistPool $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsLocationsSpecialistPools extends \Google\Service\Resource
    * SpecialistPool will also be deleted. (Otherwise, the request will only work
    * if the SpecialistPool has no specialist managers.)
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsLocationsSpecialistPools extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/specialistPools/{specialist_pool}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1SpecialistPool
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsSpecialistPools extends \Google\Service\Resource
    * @opt_param string readMask Mask specifying which fields to read. FieldMask
    * represents a set of
    * @return GoogleCloudAiplatformV1ListSpecialistPoolsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSpecialistPools($parent, $optParams = [])
   {
@@ -113,6 +117,7 @@ class ProjectsLocationsSpecialistPools extends \Google\Service\Resource
    * @opt_param string updateMask Required. The update mask applies to the
    * resource.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1SpecialistPool $postBody, $optParams = [])
   {

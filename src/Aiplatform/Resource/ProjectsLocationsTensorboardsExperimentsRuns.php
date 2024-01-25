@@ -46,6 +46,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * @param GoogleCloudAiplatformV1BatchCreateTensorboardRunsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1BatchCreateTensorboardRunsResponse
+   * @throws \Google\Service\Exception
    */
   public function batchCreate($parent, GoogleCloudAiplatformV1BatchCreateTensorboardRunsRequest $postBody, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * resource name. This value should be 1-128 characters, and valid characters
    * are `/a-z-/`.
    * @return GoogleCloudAiplatformV1TensorboardRun
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1TensorboardRun $postBody, $optParams = [])
   {
@@ -83,6 +85,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * xperiments/{experiment}/runs/{run}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * xperiments/{experiment}/runs/{run}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1TensorboardRun
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -128,6 +132,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListTensorboardRunsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsTensorboardsExperimentsRuns($parent, $optParams = [])
   {
@@ -151,6 +156,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * not provide a mask then all fields are overwritten if new values are
    * specified.
    * @return GoogleCloudAiplatformV1TensorboardRun
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1TensorboardRun $postBody, $optParams = [])
   {
@@ -169,6 +175,7 @@ class ProjectsLocationsTensorboardsExperimentsRuns extends \Google\Service\Resou
    * @param GoogleCloudAiplatformV1WriteTensorboardRunDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1WriteTensorboardRunDataResponse
+   * @throws \Google\Service\Exception
    */
   public function write($tensorboardRun, GoogleCloudAiplatformV1WriteTensorboardRunDataRequest $postBody, $optParams = [])
   {

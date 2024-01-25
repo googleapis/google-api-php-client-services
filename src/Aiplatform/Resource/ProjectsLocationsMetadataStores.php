@@ -50,6 +50,7 @@ class ProjectsLocationsMetadataStores extends \Google\Service\Resource
    * request will fail with ALREADY_EXISTS, or PERMISSION_DENIED if the caller
    * can't view the preexisting MetadataStore.)
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1MetadataStore $postBody, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsMetadataStores extends \Google\Service\Resource
    *
    * @opt_param bool force Deprecated: Field is no longer supported.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -83,6 +85,7 @@ class ProjectsLocationsMetadataStores extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/metadataStores/{metadatastore}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1MetadataStore
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -107,6 +110,7 @@ class ProjectsLocationsMetadataStores extends \Google\Service\Resource
    * the call that provided the page token. (Otherwise the request will fail with
    * INVALID_ARGUMENT error.)
    * @return GoogleCloudAiplatformV1ListMetadataStoresResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsMetadataStores($parent, $optParams = [])
   {

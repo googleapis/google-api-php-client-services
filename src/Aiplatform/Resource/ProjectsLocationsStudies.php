@@ -41,6 +41,7 @@ class ProjectsLocationsStudies extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1Study $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Study
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1Study $postBody, $optParams = [])
   {
@@ -55,6 +56,7 @@ class ProjectsLocationsStudies extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/studies/{study}`
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -69,6 +71,7 @@ class ProjectsLocationsStudies extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/studies/{study}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Study
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -89,6 +92,7 @@ class ProjectsLocationsStudies extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A page token to request the next page
    * of results. If unspecified, there are no subsequent pages.
    * @return GoogleCloudAiplatformV1ListStudiesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsStudies($parent, $optParams = [])
   {
@@ -105,6 +109,7 @@ class ProjectsLocationsStudies extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1LookupStudyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Study
+   * @throws \Google\Service\Exception
    */
   public function lookup($parent, GoogleCloudAiplatformV1LookupStudyRequest $postBody, $optParams = [])
   {

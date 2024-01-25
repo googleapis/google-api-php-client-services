@@ -49,6 +49,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * the TensorboardTimeSeries's resource name. This value should match "a-z0-9{0,
    * 127}"
    * @return GoogleCloudAiplatformV1TensorboardTimeSeries
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1TensorboardTimeSeries $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * rboard}/experiments/{experiment}/runs/{run}/timeSeries/{time_series}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * @param GoogleCloudAiplatformV1ExportTensorboardTimeSeriesDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ExportTensorboardTimeSeriesDataResponse
+   * @throws \Google\Service\Exception
    */
   public function exportTensorboardTimeSeries($tensorboardTimeSeries, GoogleCloudAiplatformV1ExportTensorboardTimeSeriesDataRequest $postBody, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * xperiments/{experiment}/runs/{run}/timeSeries/{time_series}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1TensorboardTimeSeries
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -127,6 +131,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * provided the page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListTensorboardTimeSeriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsTensorboardsExperimentsRunsTimeSeries($parent, $optParams = [])
   {
@@ -148,6 +153,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * not provide a mask then all fields are overwritten if new values are
    * specified.
    * @return GoogleCloudAiplatformV1TensorboardTimeSeries
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1TensorboardTimeSeries $postBody, $optParams = [])
   {
@@ -174,6 +180,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    * data to return. This value should be a positive integer. This value can be
    * set to -1 to return all data.
    * @return GoogleCloudAiplatformV1ReadTensorboardTimeSeriesDataResponse
+   * @throws \Google\Service\Exception
    */
   public function read($tensorboardTimeSeries, $optParams = [])
   {
@@ -194,6 +201,7 @@ class ProjectsLocationsTensorboardsExperimentsRunsTimeSeries extends \Google\Ser
    *
    * @opt_param string blobIds IDs of the blobs to read.
    * @return GoogleCloudAiplatformV1ReadTensorboardBlobDataResponse
+   * @throws \Google\Service\Exception
    */
   public function readBlobData($timeSeries, $optParams = [])
   {

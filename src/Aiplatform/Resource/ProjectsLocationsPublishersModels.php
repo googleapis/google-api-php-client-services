@@ -49,6 +49,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ComputeTokensRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ComputeTokensResponse
+   * @throws \Google\Service\Exception
    */
   public function computeTokens($endpoint, GoogleCloudAiplatformV1ComputeTokensRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CountTokensRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1CountTokensResponse
+   * @throws \Google\Service\Exception
    */
   public function countTokens($endpoint, GoogleCloudAiplatformV1CountTokensRequest $postBody, $optParams = [])
   {
@@ -81,6 +83,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1PredictRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1PredictResponse
+   * @throws \Google\Service\Exception
    */
   public function predict($endpoint, GoogleCloudAiplatformV1PredictRequest $postBody, $optParams = [])
   {
@@ -101,6 +104,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1RawPredictRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleApiHttpBody
+   * @throws \Google\Service\Exception
    */
   public function rawPredict($endpoint, GoogleCloudAiplatformV1RawPredictRequest $postBody, $optParams = [])
   {
@@ -118,6 +122,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1StreamingPredictRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1StreamingPredictResponse
+   * @throws \Google\Service\Exception
    */
   public function serverStreamingPredict($endpoint, GoogleCloudAiplatformV1StreamingPredictRequest $postBody, $optParams = [])
   {
@@ -135,6 +140,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1GenerateContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1GenerateContentResponse
+   * @throws \Google\Service\Exception
    */
   public function streamGenerateContent($model, GoogleCloudAiplatformV1GenerateContentRequest $postBody, $optParams = [])
   {
@@ -151,6 +157,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1StreamRawPredictRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleApiHttpBody
+   * @throws \Google\Service\Exception
    */
   public function streamRawPredict($endpoint, GoogleCloudAiplatformV1StreamRawPredictRequest $postBody, $optParams = [])
   {

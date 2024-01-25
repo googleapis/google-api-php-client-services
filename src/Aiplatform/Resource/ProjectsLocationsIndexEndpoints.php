@@ -46,6 +46,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1IndexEndpoint $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1IndexEndpoint $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -78,6 +80,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1DeployIndexRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function deployIndex($indexEndpoint, GoogleCloudAiplatformV1DeployIndexRequest $postBody, $optParams = [])
   {
@@ -95,6 +98,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1FindNeighborsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1FindNeighborsResponse
+   * @throws \Google\Service\Exception
    */
   public function findNeighbors($indexEndpoint, GoogleCloudAiplatformV1FindNeighborsRequest $postBody, $optParams = [])
   {
@@ -109,6 +113,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1IndexEndpoint
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -141,6 +146,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * IndexEndpointService.ListIndexEndpoints call.
    * @opt_param string readMask Optional. Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListIndexEndpointsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsIndexEndpoints($parent, $optParams = [])
   {
@@ -158,6 +164,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1DeployedIndex $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function mutateDeployedIndex($indexEndpoint, GoogleCloudAiplatformV1DeployedIndex $postBody, $optParams = [])
   {
@@ -175,6 +182,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @opt_param string updateMask Required. The update mask applies to the
    * resource. See google.protobuf.FieldMask.
    * @return GoogleCloudAiplatformV1IndexEndpoint
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1IndexEndpoint $postBody, $optParams = [])
   {
@@ -192,6 +200,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ReadIndexDatapointsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ReadIndexDatapointsResponse
+   * @throws \Google\Service\Exception
    */
   public function readIndexDatapoints($indexEndpoint, GoogleCloudAiplatformV1ReadIndexDatapointsRequest $postBody, $optParams = [])
   {
@@ -209,6 +218,7 @@ class ProjectsLocationsIndexEndpoints extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1UndeployIndexRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function undeployIndex($indexEndpoint, GoogleCloudAiplatformV1UndeployIndexRequest $postBody, $optParams = [])
   {

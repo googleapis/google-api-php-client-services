@@ -43,6 +43,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1Index $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1Index $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/indexes/{index}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -72,6 +74,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/indexes/{index}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Index
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -93,6 +96,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * IndexService.ListIndexes call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListIndexesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsIndexes($parent, $optParams = [])
   {
@@ -110,6 +114,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * @opt_param string updateMask The update mask applies to the resource. For the
    * `FieldMask` definition, see google.protobuf.FieldMask.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1Index $postBody, $optParams = [])
   {
@@ -125,6 +130,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1RemoveDatapointsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1RemoveDatapointsResponse
+   * @throws \Google\Service\Exception
    */
   public function removeDatapoints($index, GoogleCloudAiplatformV1RemoveDatapointsRequest $postBody, $optParams = [])
   {
@@ -140,6 +146,7 @@ class ProjectsLocationsIndexes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1UpsertDatapointsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1UpsertDatapointsResponse
+   * @throws \Google\Service\Exception
    */
   public function upsertDatapoints($index, GoogleCloudAiplatformV1UpsertDatapointsRequest $postBody, $optParams = [])
   {

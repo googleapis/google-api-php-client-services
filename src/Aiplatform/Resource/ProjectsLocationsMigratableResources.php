@@ -41,6 +41,7 @@ class ProjectsLocationsMigratableResources extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1BatchMigrateResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function batchMigrate($parent, GoogleCloudAiplatformV1BatchMigrateResourcesRequest $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class ProjectsLocationsMigratableResources extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1SearchMigratableResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1SearchMigratableResourcesResponse
+   * @throws \Google\Service\Exception
    */
   public function search($parent, GoogleCloudAiplatformV1SearchMigratableResourcesRequest $postBody, $optParams = [])
   {
