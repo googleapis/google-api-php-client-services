@@ -24,10 +24,6 @@ class ListClientUsersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ClientUser[]
-   */
-  public $users;
   protected $usersType = ClientUser::class;
   protected $usersDataType = 'array';
 

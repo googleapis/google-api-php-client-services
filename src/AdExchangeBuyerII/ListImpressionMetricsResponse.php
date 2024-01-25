@@ -20,10 +20,6 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListImpressionMetricsResponse extends \Google\Collection
 {
   protected $collection_key = 'impressionMetricsRows';
-  /**
-   * @var ImpressionMetricsRow[]
-   */
-  public $impressionMetricsRows;
   protected $impressionMetricsRowsType = ImpressionMetricsRow::class;
   protected $impressionMetricsRowsDataType = 'array';
   /**

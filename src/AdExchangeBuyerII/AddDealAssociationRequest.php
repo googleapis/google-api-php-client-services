@@ -19,10 +19,6 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class AddDealAssociationRequest extends \Google\Model
 {
-  /**
-   * @var CreativeDealAssociation
-   */
-  public $association;
   protected $associationType = CreativeDealAssociation::class;
   protected $associationDataType = '';
 

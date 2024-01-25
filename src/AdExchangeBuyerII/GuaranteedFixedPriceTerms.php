@@ -20,10 +20,6 @@ namespace Google\Service\AdExchangeBuyerII;
 class GuaranteedFixedPriceTerms extends \Google\Collection
 {
   protected $collection_key = 'fixedPrices';
-  /**
-   * @var PricePerBuyer[]
-   */
-  public $fixedPrices;
   protected $fixedPricesType = PricePerBuyer::class;
   protected $fixedPricesDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\AdExchangeBuyerII;
 class Correction extends \Google\Collection
 {
   protected $collection_key = 'details';
-  /**
-   * @var ServingContext[]
-   */
-  public $contexts;
   protected $contextsType = ServingContext::class;
   protected $contextsDataType = 'array';
   /**

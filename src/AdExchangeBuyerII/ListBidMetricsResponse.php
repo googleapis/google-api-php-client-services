@@ -20,10 +20,6 @@ namespace Google\Service\AdExchangeBuyerII;
 class ListBidMetricsResponse extends \Google\Collection
 {
   protected $collection_key = 'bidMetricsRows';
-  /**
-   * @var BidMetricsRow[]
-   */
-  public $bidMetricsRows;
   protected $bidMetricsRowsType = BidMetricsRow::class;
   protected $bidMetricsRowsDataType = 'array';
   /**

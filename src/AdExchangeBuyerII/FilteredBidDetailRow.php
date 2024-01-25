@@ -19,10 +19,6 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class FilteredBidDetailRow extends \Google\Model
 {
-  /**
-   * @var MetricValue
-   */
-  public $bidCount;
   protected $bidCountType = MetricValue::class;
   protected $bidCountDataType = '';
   /**
@@ -33,10 +29,6 @@ class FilteredBidDetailRow extends \Google\Model
    * @var int
    */
   public $detailId;
-  /**
-   * @var RowDimensions
-   */
-  public $rowDimensions;
   protected $rowDimensionsType = RowDimensions::class;
   protected $rowDimensionsDataType = '';
 

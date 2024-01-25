@@ -23,10 +23,6 @@ class RowDimensions extends \Google\Model
    * @var string
    */
   public $publisherIdentifier;
-  /**
-   * @var TimeInterval
-   */
-  public $timeInterval;
   protected $timeIntervalType = TimeInterval::class;
   protected $timeIntervalDataType = '';
 

@@ -24,10 +24,6 @@ class CreativeSize extends \Google\Collection
    * @var string[]
    */
   public $allowedFormats;
-  /**
-   * @var Size[]
-   */
-  public $companionSizes;
   protected $companionSizesType = Size::class;
   protected $companionSizesDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class CreativeSize extends \Google\Collection
    * @var string
    */
   public $nativeTemplate;
-  /**
-   * @var Size
-   */
-  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\AdExchangeBuyerII;
 class FilterSet extends \Google\Collection
 {
   protected $collection_key = 'sellerNetworkIds';
-  /**
-   * @var AbsoluteDateRange
-   */
-  public $absoluteDateRange;
   protected $absoluteDateRangeType = AbsoluteDateRange::class;
   protected $absoluteDateRangeDataType = '';
   /**
@@ -62,16 +58,8 @@ class FilterSet extends \Google\Collection
    * @var string[]
    */
   public $publisherIdentifiers;
-  /**
-   * @var RealtimeTimeRange
-   */
-  public $realtimeTimeRange;
   protected $realtimeTimeRangeType = RealtimeTimeRange::class;
   protected $realtimeTimeRangeDataType = '';
-  /**
-   * @var RelativeDateRange
-   */
-  public $relativeDateRange;
   protected $relativeDateRangeType = RelativeDateRange::class;
   protected $relativeDateRangeDataType = '';
   /**

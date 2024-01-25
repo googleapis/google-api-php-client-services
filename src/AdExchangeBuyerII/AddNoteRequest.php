@@ -19,10 +19,6 @@ namespace Google\Service\AdExchangeBuyerII;
 
 class AddNoteRequest extends \Google\Model
 {
-  /**
-   * @var Note
-   */
-  public $note;
   protected $noteType = Note::class;
   protected $noteDataType = '';
 

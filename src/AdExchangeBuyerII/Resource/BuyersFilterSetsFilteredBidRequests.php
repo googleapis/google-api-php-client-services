@@ -51,6 +51,7 @@ class BuyersFilterSetsFilteredBidRequests extends \Google\Service\Resource
    * ListFilteredBidRequestsResponse.nextPageToken returned from the previous call
    * to the filteredBidRequests.list method.
    * @return ListFilteredBidRequestsResponse
+   * @throws \Google\Service\Exception
    */
   public function listBuyersFilterSetsFilteredBidRequests($filterSetName, $optParams = [])
   {
