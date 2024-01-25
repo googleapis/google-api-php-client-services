@@ -24,10 +24,6 @@ class FleetObservabilityFleetObservabilityBaseFeatureState extends \Google\Colle
    * @var string
    */
   public $code;
-  /**
-   * @var FleetObservabilityFeatureError[]
-   */
-  public $errors;
   protected $errorsType = FleetObservabilityFeatureError::class;
   protected $errorsDataType = 'array';
 

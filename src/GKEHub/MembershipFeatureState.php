@@ -19,52 +19,20 @@ namespace Google\Service\GKEHub;
 
 class MembershipFeatureState extends \Google\Model
 {
-  /**
-   * @var AppDevExperienceFeatureState
-   */
-  public $appdevexperience;
   protected $appdevexperienceType = AppDevExperienceFeatureState::class;
   protected $appdevexperienceDataType = '';
-  /**
-   * @var ClusterUpgradeMembershipState
-   */
-  public $clusterupgrade;
   protected $clusterupgradeType = ClusterUpgradeMembershipState::class;
   protected $clusterupgradeDataType = '';
-  /**
-   * @var ConfigManagementMembershipState
-   */
-  public $configmanagement;
   protected $configmanagementType = ConfigManagementMembershipState::class;
   protected $configmanagementDataType = '';
-  /**
-   * @var FleetObservabilityMembershipState
-   */
-  public $fleetobservability;
   protected $fleetobservabilityType = FleetObservabilityMembershipState::class;
   protected $fleetobservabilityDataType = '';
-  /**
-   * @var IdentityServiceMembershipState
-   */
-  public $identityservice;
   protected $identityserviceType = IdentityServiceMembershipState::class;
   protected $identityserviceDataType = '';
-  /**
-   * @var PolicyControllerMembershipState
-   */
-  public $policycontroller;
   protected $policycontrollerType = PolicyControllerMembershipState::class;
   protected $policycontrollerDataType = '';
-  /**
-   * @var ServiceMeshMembershipState
-   */
-  public $servicemesh;
   protected $servicemeshType = ServiceMeshMembershipState::class;
   protected $servicemeshDataType = '';
-  /**
-   * @var FeatureState
-   */
-  public $state;
   protected $stateType = FeatureState::class;
   protected $stateDataType = '';
 

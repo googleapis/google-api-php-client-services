@@ -20,16 +20,8 @@ namespace Google\Service\GKEHub;
 class ClusterUpgradeFleetSpec extends \Google\Collection
 {
   protected $collection_key = 'upstreamFleets';
-  /**
-   * @var ClusterUpgradeGKEUpgradeOverride[]
-   */
-  public $gkeUpgradeOverrides;
   protected $gkeUpgradeOverridesType = ClusterUpgradeGKEUpgradeOverride::class;
   protected $gkeUpgradeOverridesDataType = 'array';
-  /**
-   * @var ClusterUpgradePostConditions
-   */
-  public $postConditions;
   protected $postConditionsType = ClusterUpgradePostConditions::class;
   protected $postConditionsDataType = '';
   /**

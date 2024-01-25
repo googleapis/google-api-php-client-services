@@ -24,10 +24,6 @@ class BinaryAuthorizationConfig extends \Google\Collection
    * @var string
    */
   public $evaluationMode;
-  /**
-   * @var PolicyBinding[]
-   */
-  public $policyBindings;
   protected $policyBindingsType = PolicyBinding::class;
   protected $policyBindingsDataType = 'array';
 

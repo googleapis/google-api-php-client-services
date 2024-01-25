@@ -39,10 +39,6 @@ class MembershipBinding extends \Google\Model
    * @var string
    */
   public $scope;
-  /**
-   * @var MembershipBindingLifecycleState
-   */
-  public $state;
   protected $stateType = MembershipBindingLifecycleState::class;
   protected $stateDataType = '';
   /**

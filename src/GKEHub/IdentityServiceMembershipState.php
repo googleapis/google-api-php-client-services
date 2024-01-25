@@ -27,10 +27,6 @@ class IdentityServiceMembershipState extends \Google\Model
    * @var string
    */
   public $installedVersion;
-  /**
-   * @var IdentityServiceMembershipSpec
-   */
-  public $memberConfig;
   protected $memberConfigType = IdentityServiceMembershipSpec::class;
   protected $memberConfigDataType = '';
   /**

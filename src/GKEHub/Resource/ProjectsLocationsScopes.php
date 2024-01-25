@@ -46,6 +46,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * @opt_param string scopeId Required. Client chosen ID for the Scope.
    * `scope_id` must be a ????
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Scope $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * `projects/locations/scopes`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * `projects/locations/scopes`.
    * @param array $optParams Optional parameters.
    * @return Scope
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -104,6 +107,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -125,6 +129,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * `ListScopes` which specifies the position in the list from where to continue
    * listing the resources.
    * @return ListScopesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsScopes($parent, $optParams = [])
   {
@@ -142,6 +147,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    *
    * @opt_param string updateMask Required. The fields to be updated.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Scope $postBody, $optParams = [])
   {
@@ -161,6 +167,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -182,6 +189,7 @@ class ProjectsLocationsScopes extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

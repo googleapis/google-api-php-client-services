@@ -19,16 +19,8 @@ namespace Google\Service\GKEHub;
 
 class ConfigManagementHierarchyControllerState extends \Google\Model
 {
-  /**
-   * @var ConfigManagementHierarchyControllerDeploymentState
-   */
-  public $state;
   protected $stateType = ConfigManagementHierarchyControllerDeploymentState::class;
   protected $stateDataType = '';
-  /**
-   * @var ConfigManagementHierarchyControllerVersion
-   */
-  public $version;
   protected $versionType = ConfigManagementHierarchyControllerVersion::class;
   protected $versionDataType = '';
 

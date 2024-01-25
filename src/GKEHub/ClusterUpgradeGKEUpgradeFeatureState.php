@@ -20,16 +20,8 @@ namespace Google\Service\GKEHub;
 class ClusterUpgradeGKEUpgradeFeatureState extends \Google\Collection
 {
   protected $collection_key = 'upgradeState';
-  /**
-   * @var ClusterUpgradeGKEUpgradeFeatureCondition[]
-   */
-  public $conditions;
   protected $conditionsType = ClusterUpgradeGKEUpgradeFeatureCondition::class;
   protected $conditionsDataType = 'array';
-  /**
-   * @var ClusterUpgradeGKEUpgradeState[]
-   */
-  public $upgradeState;
   protected $upgradeStateType = ClusterUpgradeGKEUpgradeState::class;
   protected $upgradeStateDataType = 'array';
 

@@ -23,16 +23,8 @@ class ClusterUpgradeGKEUpgradeState extends \Google\Model
    * @var string[]
    */
   public $stats;
-  /**
-   * @var ClusterUpgradeUpgradeStatus
-   */
-  public $status;
   protected $statusType = ClusterUpgradeUpgradeStatus::class;
   protected $statusDataType = '';
-  /**
-   * @var ClusterUpgradeGKEUpgrade
-   */
-  public $upgrade;
   protected $upgradeType = ClusterUpgradeGKEUpgrade::class;
   protected $upgradeDataType = '';
 

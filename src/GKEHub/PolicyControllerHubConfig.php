@@ -28,10 +28,6 @@ class PolicyControllerHubConfig extends \Google\Collection
    * @var string
    */
   public $constraintViolationLimit;
-  /**
-   * @var PolicyControllerPolicyControllerDeploymentConfig[]
-   */
-  public $deploymentConfigs;
   protected $deploymentConfigsType = PolicyControllerPolicyControllerDeploymentConfig::class;
   protected $deploymentConfigsDataType = 'map';
   /**
@@ -46,20 +42,12 @@ class PolicyControllerHubConfig extends \Google\Collection
    * @var bool
    */
   public $logDeniesEnabled;
-  /**
-   * @var PolicyControllerMonitoringConfig
-   */
-  public $monitoring;
   protected $monitoringType = PolicyControllerMonitoringConfig::class;
   protected $monitoringDataType = '';
   /**
    * @var bool
    */
   public $mutationEnabled;
-  /**
-   * @var PolicyControllerPolicyContentSpec
-   */
-  public $policyContent;
   protected $policyContentType = PolicyControllerPolicyContentSpec::class;
   protected $policyContentDataType = '';
   /**

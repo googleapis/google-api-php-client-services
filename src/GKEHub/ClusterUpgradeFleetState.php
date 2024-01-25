@@ -24,16 +24,8 @@ class ClusterUpgradeFleetState extends \Google\Collection
    * @var string[]
    */
   public $downstreamFleets;
-  /**
-   * @var ClusterUpgradeGKEUpgradeFeatureState
-   */
-  public $gkeState;
   protected $gkeStateType = ClusterUpgradeGKEUpgradeFeatureState::class;
   protected $gkeStateDataType = '';
-  /**
-   * @var ClusterUpgradeIgnoredMembership[]
-   */
-  public $ignored;
   protected $ignoredType = ClusterUpgradeIgnoredMembership::class;
   protected $ignoredDataType = 'map';
 

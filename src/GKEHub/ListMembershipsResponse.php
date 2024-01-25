@@ -24,10 +24,6 @@ class ListMembershipsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Membership[]
-   */
-  public $resources;
   protected $resourcesType = Membership::class;
   protected $resourcesDataType = 'array';
   /**

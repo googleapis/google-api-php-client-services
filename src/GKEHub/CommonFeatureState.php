@@ -19,28 +19,12 @@ namespace Google\Service\GKEHub;
 
 class CommonFeatureState extends \Google\Model
 {
-  /**
-   * @var AppDevExperienceFeatureState
-   */
-  public $appdevexperience;
   protected $appdevexperienceType = AppDevExperienceFeatureState::class;
   protected $appdevexperienceDataType = '';
-  /**
-   * @var ClusterUpgradeFleetState
-   */
-  public $clusterupgrade;
   protected $clusterupgradeType = ClusterUpgradeFleetState::class;
   protected $clusterupgradeDataType = '';
-  /**
-   * @var FleetObservabilityFeatureState
-   */
-  public $fleetobservability;
   protected $fleetobservabilityType = FleetObservabilityFeatureState::class;
   protected $fleetobservabilityDataType = '';
-  /**
-   * @var FeatureState
-   */
-  public $state;
   protected $stateType = FeatureState::class;
   protected $stateDataType = '';
 

@@ -24,10 +24,6 @@ class ListScopesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Scope[]
-   */
-  public $scopes;
   protected $scopesType = Scope::class;
   protected $scopesDataType = 'array';
 

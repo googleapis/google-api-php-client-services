@@ -19,16 +19,8 @@ namespace Google\Service\GKEHub;
 
 class FleetObservabilityFleetObservabilityLoggingState extends \Google\Model
 {
-  /**
-   * @var FleetObservabilityFleetObservabilityBaseFeatureState
-   */
-  public $defaultLog;
   protected $defaultLogType = FleetObservabilityFleetObservabilityBaseFeatureState::class;
   protected $defaultLogDataType = '';
-  /**
-   * @var FleetObservabilityFleetObservabilityBaseFeatureState
-   */
-  public $scopeLog;
   protected $scopeLogType = FleetObservabilityFleetObservabilityBaseFeatureState::class;
   protected $scopeLogDataType = '';
 

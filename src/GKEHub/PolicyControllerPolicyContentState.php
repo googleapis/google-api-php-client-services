@@ -19,22 +19,10 @@ namespace Google\Service\GKEHub;
 
 class PolicyControllerPolicyContentState extends \Google\Model
 {
-  /**
-   * @var PolicyControllerOnClusterState[]
-   */
-  public $bundleStates;
   protected $bundleStatesType = PolicyControllerOnClusterState::class;
   protected $bundleStatesDataType = 'map';
-  /**
-   * @var PolicyControllerOnClusterState
-   */
-  public $referentialSyncConfigState;
   protected $referentialSyncConfigStateType = PolicyControllerOnClusterState::class;
   protected $referentialSyncConfigStateDataType = '';
-  /**
-   * @var PolicyControllerOnClusterState
-   */
-  public $templateLibraryState;
   protected $templateLibraryStateType = PolicyControllerOnClusterState::class;
   protected $templateLibraryStateDataType = '';
 

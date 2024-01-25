@@ -20,10 +20,6 @@ namespace Google\Service\GKEHub;
 class ListFleetsResponse extends \Google\Collection
 {
   protected $collection_key = 'fleets';
-  /**
-   * @var Fleet[]
-   */
-  public $fleets;
   protected $fleetsType = Fleet::class;
   protected $fleetsDataType = 'array';
   /**

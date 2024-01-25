@@ -19,28 +19,12 @@ namespace Google\Service\GKEHub;
 
 class CommonFleetDefaultMemberConfigSpec extends \Google\Model
 {
-  /**
-   * @var ConfigManagementMembershipSpec
-   */
-  public $configmanagement;
   protected $configmanagementType = ConfigManagementMembershipSpec::class;
   protected $configmanagementDataType = '';
-  /**
-   * @var IdentityServiceMembershipSpec
-   */
-  public $identityservice;
   protected $identityserviceType = IdentityServiceMembershipSpec::class;
   protected $identityserviceDataType = '';
-  /**
-   * @var ServiceMeshMembershipSpec
-   */
-  public $mesh;
   protected $meshType = ServiceMeshMembershipSpec::class;
   protected $meshDataType = '';
-  /**
-   * @var PolicyControllerMembershipSpec
-   */
-  public $policycontroller;
   protected $policycontrollerType = PolicyControllerMembershipSpec::class;
   protected $policycontrollerDataType = '';
 

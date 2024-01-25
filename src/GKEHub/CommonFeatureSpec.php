@@ -19,34 +19,14 @@ namespace Google\Service\GKEHub;
 
 class CommonFeatureSpec extends \Google\Model
 {
-  /**
-   * @var AppDevExperienceFeatureSpec
-   */
-  public $appdevexperience;
   protected $appdevexperienceType = AppDevExperienceFeatureSpec::class;
   protected $appdevexperienceDataType = '';
-  /**
-   * @var ClusterUpgradeFleetSpec
-   */
-  public $clusterupgrade;
   protected $clusterupgradeType = ClusterUpgradeFleetSpec::class;
   protected $clusterupgradeDataType = '';
-  /**
-   * @var DataplaneV2FeatureSpec
-   */
-  public $dataplanev2;
   protected $dataplanev2Type = DataplaneV2FeatureSpec::class;
   protected $dataplanev2DataType = '';
-  /**
-   * @var FleetObservabilityFeatureSpec
-   */
-  public $fleetobservability;
   protected $fleetobservabilityType = FleetObservabilityFeatureSpec::class;
   protected $fleetobservabilityDataType = '';
-  /**
-   * @var MultiClusterIngressFeatureSpec
-   */
-  public $multiclusteringress;
   protected $multiclusteringressType = MultiClusterIngressFeatureSpec::class;
   protected $multiclusteringressDataType = '';
 

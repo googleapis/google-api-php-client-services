@@ -19,16 +19,8 @@ namespace Google\Service\GKEHub;
 
 class ServiceMeshMembershipState extends \Google\Model
 {
-  /**
-   * @var ServiceMeshControlPlaneManagement
-   */
-  public $controlPlaneManagement;
   protected $controlPlaneManagementType = ServiceMeshControlPlaneManagement::class;
   protected $controlPlaneManagementDataType = '';
-  /**
-   * @var ServiceMeshDataPlaneManagement
-   */
-  public $dataPlaneManagement;
   protected $dataPlaneManagementType = ServiceMeshDataPlaneManagement::class;
   protected $dataPlaneManagementDataType = '';
 

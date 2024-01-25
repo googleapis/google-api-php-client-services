@@ -27,20 +27,12 @@ class ConfigManagementConfigSync extends \Google\Model
    * @var bool
    */
   public $enabled;
-  /**
-   * @var ConfigManagementGitConfig
-   */
-  public $git;
   protected $gitType = ConfigManagementGitConfig::class;
   protected $gitDataType = '';
   /**
    * @var string
    */
   public $metricsGcpServiceAccountEmail;
-  /**
-   * @var ConfigManagementOciConfig
-   */
-  public $oci;
   protected $ociType = ConfigManagementOciConfig::class;
   protected $ociDataType = '';
   /**

@@ -24,10 +24,6 @@ class ListScopeRBACRoleBindingsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var RBACRoleBinding[]
-   */
-  public $rbacrolebindings;
   protected $rbacrolebindingsType = RBACRoleBinding::class;
   protected $rbacrolebindingsDataType = 'array';
 

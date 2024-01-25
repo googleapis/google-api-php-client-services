@@ -19,10 +19,6 @@ namespace Google\Service\GKEHub;
 
 class ScopeFeatureState extends \Google\Model
 {
-  /**
-   * @var FeatureState
-   */
-  public $state;
   protected $stateType = FeatureState::class;
   protected $stateDataType = '';
 

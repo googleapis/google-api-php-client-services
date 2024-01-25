@@ -19,10 +19,6 @@ namespace Google\Service\GKEHub;
 
 class Membership extends \Google\Model
 {
-  /**
-   * @var Authority
-   */
-  public $authority;
   protected $authorityType = Authority::class;
   protected $authorityDataType = '';
   /**
@@ -37,10 +33,6 @@ class Membership extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var MembershipEndpoint
-   */
-  public $endpoint;
   protected $endpointType = MembershipEndpoint::class;
   protected $endpointDataType = '';
   /**
@@ -55,20 +47,12 @@ class Membership extends \Google\Model
    * @var string
    */
   public $lastConnectionTime;
-  /**
-   * @var MonitoringConfig
-   */
-  public $monitoringConfig;
   protected $monitoringConfigType = MonitoringConfig::class;
   protected $monitoringConfigDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var MembershipState
-   */
-  public $state;
   protected $stateType = MembershipState::class;
   protected $stateDataType = '';
   /**

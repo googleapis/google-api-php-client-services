@@ -19,26 +19,14 @@ namespace Google\Service\GKEHub;
 
 class IdentityServiceAuthMethod extends \Google\Model
 {
-  /**
-   * @var IdentityServiceAzureADConfig
-   */
-  public $azureadConfig;
   protected $azureadConfigType = IdentityServiceAzureADConfig::class;
   protected $azureadConfigDataType = '';
-  /**
-   * @var IdentityServiceGoogleConfig
-   */
-  public $googleConfig;
   protected $googleConfigType = IdentityServiceGoogleConfig::class;
   protected $googleConfigDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var IdentityServiceOidcConfig
-   */
-  public $oidcConfig;
   protected $oidcConfigType = IdentityServiceOidcConfig::class;
   protected $oidcConfigDataType = '';
   /**
