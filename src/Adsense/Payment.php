@@ -23,10 +23,6 @@ class Payment extends \Google\Model
    * @var string
    */
   public $amount;
-  /**
-   * @var Date
-   */
-  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**

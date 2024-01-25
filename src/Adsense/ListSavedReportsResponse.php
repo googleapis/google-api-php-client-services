@@ -24,10 +24,6 @@ class ListSavedReportsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SavedReport[]
-   */
-  public $savedReports;
   protected $savedReportsType = SavedReport::class;
   protected $savedReportsDataType = 'array';
 

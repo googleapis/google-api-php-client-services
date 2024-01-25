@@ -24,10 +24,6 @@ class ListUrlChannelsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var UrlChannel[]
-   */
-  public $urlChannels;
   protected $urlChannelsType = UrlChannel::class;
   protected $urlChannelsDataType = 'array';
 

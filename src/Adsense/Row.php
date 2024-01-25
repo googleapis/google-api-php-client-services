@@ -20,10 +20,6 @@ namespace Google\Service\Adsense;
 class Row extends \Google\Collection
 {
   protected $collection_key = 'cells';
-  /**
-   * @var Cell[]
-   */
-  public $cells;
   protected $cellsType = Cell::class;
   protected $cellsDataType = 'array';
 

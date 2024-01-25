@@ -20,10 +20,6 @@ namespace Google\Service\Adsense;
 class ListPaymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'payments';
-  /**
-   * @var Payment[]
-   */
-  public $payments;
   protected $paymentsType = Payment::class;
   protected $paymentsDataType = 'array';
 

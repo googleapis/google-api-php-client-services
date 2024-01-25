@@ -20,10 +20,6 @@ namespace Google\Service\Adsense;
 class ListCustomChannelsResponse extends \Google\Collection
 {
   protected $collection_key = 'customChannels';
-  /**
-   * @var CustomChannel[]
-   */
-  public $customChannels;
   protected $customChannelsType = CustomChannel::class;
   protected $customChannelsDataType = 'array';
   /**
