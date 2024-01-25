@@ -44,6 +44,7 @@ class ProjectsLocationsProductsIntegrationsExecutionsSuspensions extends \Google
    * @param GoogleCloudIntegrationsV1alphaLiftSuspensionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaLiftSuspensionResponse
+   * @throws \Google\Service\Exception
    */
   public function lift($name, GoogleCloudIntegrationsV1alphaLiftSuspensionRequest $postBody, $optParams = [])
   {
@@ -66,6 +67,7 @@ class ProjectsLocationsProductsIntegrationsExecutionsSuspensions extends \Google
    * @opt_param int pageSize Maximum number of entries in the response.
    * @opt_param string pageToken Token to retrieve a specific page.
    * @return GoogleCloudIntegrationsV1alphaListSuspensionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsProductsIntegrationsExecutionsSuspensions($parent, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsLocationsProductsIntegrationsExecutionsSuspensions extends \Google
    * @param GoogleCloudIntegrationsV1alphaResolveSuspensionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaResolveSuspensionResponse
+   * @throws \Google\Service\Exception
    */
   public function resolve($name, GoogleCloudIntegrationsV1alphaResolveSuspensionRequest $postBody, $optParams = [])
   {

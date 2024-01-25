@@ -42,6 +42,7 @@ class ProjectsLocationsIntegrations extends \Google\Service\Resource
    * @param string $name Required. The location resource of the request.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -62,6 +63,7 @@ class ProjectsLocationsIntegrations extends \Google\Service\Resource
    * @param GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaExecuteIntegrationsResponse
+   * @throws \Google\Service\Exception
    */
   public function execute($name, GoogleCloudIntegrationsV1alphaExecuteIntegrationsRequest $postBody, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsLocationsIntegrations extends \Google\Service\Resource
    * _project_id}/location/{location}/connections/{connection_name}/subscriptions/
    * {subscription_name}`.
    * @return GoogleCloudIntegrationsV1alphaExecuteEventResponse
+   * @throws \Google\Service\Exception
    */
   public function executeEvent($name, ExecuteEventRequestContent $postBody, $optParams = [])
   {
@@ -113,6 +116,7 @@ class ProjectsLocationsIntegrations extends \Google\Service\Resource
    * @opt_param int pageSize The page size for the resquest.
    * @opt_param string pageToken The page token for the resquest.
    * @return GoogleCloudIntegrationsV1alphaListIntegrationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsIntegrations($parent, $optParams = [])
   {
@@ -128,6 +132,7 @@ class ProjectsLocationsIntegrations extends \Google\Service\Resource
    * @param GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaScheduleIntegrationsResponse
+   * @throws \Google\Service\Exception
    */
   public function schedule($name, GoogleCloudIntegrationsV1alphaScheduleIntegrationsRequest $postBody, $optParams = [])
   {

@@ -19,16 +19,8 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
 {
-  /**
-   * @var GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig
-   */
-  public $approvalConfig;
   protected $approvalConfigType = GoogleCloudIntegrationsV1alphaSuspensionApprovalConfig::class;
   protected $approvalConfigDataType = '';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaSuspensionAudit
-   */
-  public $audit;
   protected $auditType = GoogleCloudIntegrationsV1alphaSuspensionAudit::class;
   protected $auditDataType = '';
   /**
@@ -55,10 +47,6 @@ class GoogleCloudIntegrationsV1alphaSuspension extends \Google\Model
    * @var string
    */
   public $state;
-  /**
-   * @var EnterpriseCrmEventbusProtoSuspensionConfig
-   */
-  public $suspensionConfig;
   protected $suspensionConfigType = EnterpriseCrmEventbusProtoSuspensionConfig::class;
   protected $suspensionConfigDataType = '';
   /**

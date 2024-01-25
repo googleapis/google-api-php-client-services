@@ -19,10 +19,6 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaResolveSuspensionRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudIntegrationsV1alphaSuspension
-   */
-  public $suspension;
   protected $suspensionType = GoogleCloudIntegrationsV1alphaSuspension::class;
   protected $suspensionDataType = '';
 

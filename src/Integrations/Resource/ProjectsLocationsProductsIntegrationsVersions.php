@@ -57,6 +57,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * is set to `false` and no existing integration is found, a new draft
    * integration will still be created.
    * @return GoogleCloudIntegrationsV1alphaIntegrationVersion
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudIntegrationsV1alphaIntegrationVersion $postBody, $optParams = [])
   {
@@ -79,6 +80,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * t}/locations/{location}/integrations/{integration}/versions/{version}
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -98,6 +100,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * @opt_param string files Optional. Integration related file to download like
    * Integration Json, Config variable, testcase etc.
    * @return GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse
+   * @throws \Google\Service\Exception
    */
   public function download($name, $optParams = [])
   {
@@ -112,6 +115,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * ect}/locations/{location}/integrations/{integration}/versions/{version}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaIntegrationVersion
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -155,6 +159,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * When paginating, all other parameters provided to `ListIntegrationVersions`
    * must match the call that provided the page token.
    * @return GoogleCloudIntegrationsV1alphaListIntegrationVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsProductsIntegrationsVersions($parent, $optParams = [])
   {
@@ -173,6 +178,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * @opt_param string updateMask Field mask specifying the fields in the above
    * integration that have been modified and need to be updated.
    * @return GoogleCloudIntegrationsV1alphaIntegrationVersion
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudIntegrationsV1alphaIntegrationVersion $postBody, $optParams = [])
   {
@@ -193,6 +199,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * @param GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaPublishIntegrationVersionResponse
+   * @throws \Google\Service\Exception
    */
   public function publish($name, GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest $postBody, $optParams = [])
   {
@@ -220,6 +227,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * @param GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse
+   * @throws \Google\Service\Exception
    */
   public function takeoverEditLock($integrationVersion, GoogleCloudIntegrationsV1alphaTakeoverEditLockRequest $postBody, $optParams = [])
   {
@@ -239,6 +247,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * @param GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function unpublish($name, GoogleCloudIntegrationsV1alphaUnpublishIntegrationVersionRequest $postBody, $optParams = [])
   {
@@ -257,6 +266,7 @@ class ProjectsLocationsProductsIntegrationsVersions extends \Google\Service\Reso
    * @param GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaUploadIntegrationVersionResponse
+   * @throws \Google\Service\Exception
    */
   public function upload($parent, GoogleCloudIntegrationsV1alphaUploadIntegrationVersionRequest $postBody, $optParams = [])
   {

@@ -24,10 +24,6 @@ class GoogleCloudIntegrationsV1alphaListSfdcInstancesResponse extends \Google\Co
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaSfdcInstance[]
-   */
-  public $sfdcInstances;
   protected $sfdcInstancesType = GoogleCloudIntegrationsV1alphaSfdcInstance::class;
   protected $sfdcInstancesDataType = 'array';
 

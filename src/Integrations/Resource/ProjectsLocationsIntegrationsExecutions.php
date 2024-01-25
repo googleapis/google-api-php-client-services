@@ -86,6 +86,7 @@ class ProjectsLocationsIntegrationsExecutions extends \Google\Service\Resource
    * the executions in order to make response smaller. Only works for UI and when
    * the params fields are not filtered out.
    * @return GoogleCloudIntegrationsV1alphaListExecutionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsIntegrationsExecutions($parent, $optParams = [])
   {

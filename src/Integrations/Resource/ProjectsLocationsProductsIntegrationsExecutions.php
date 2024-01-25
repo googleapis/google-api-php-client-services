@@ -41,6 +41,7 @@ class ProjectsLocationsProductsIntegrationsExecutions extends \Google\Service\Re
    * @param GoogleCloudIntegrationsV1alphaCancelExecutionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaCancelExecutionResponse
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudIntegrationsV1alphaCancelExecutionRequest $postBody, $optParams = [])
   {
@@ -56,6 +57,7 @@ class ProjectsLocationsProductsIntegrationsExecutions extends \Google\Service\Re
    * tion_id}/executions/{execution_id}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaExecution
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -121,6 +123,7 @@ class ProjectsLocationsProductsIntegrationsExecutions extends \Google\Service\Re
    * the executions in order to make response smaller. Only works for UI and when
    * the params fields are not filtered out.
    * @return GoogleCloudIntegrationsV1alphaListExecutionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsProductsIntegrationsExecutions($parent, $optParams = [])
   {

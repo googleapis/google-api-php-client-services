@@ -19,10 +19,6 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaTakeoverEditLockResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudIntegrationsV1alphaIntegrationVersion
-   */
-  public $integrationVersion;
   protected $integrationVersionType = GoogleCloudIntegrationsV1alphaIntegrationVersion::class;
   protected $integrationVersionDataType = '';
 

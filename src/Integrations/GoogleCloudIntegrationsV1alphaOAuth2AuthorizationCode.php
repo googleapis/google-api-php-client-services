@@ -19,10 +19,6 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Model
 {
-  /**
-   * @var GoogleCloudIntegrationsV1alphaAccessToken
-   */
-  public $accessToken;
   protected $accessTokenType = GoogleCloudIntegrationsV1alphaAccessToken::class;
   protected $accessTokenDataType = '';
   /**
@@ -37,10 +33,6 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
    * @var string
    */
   public $authEndpoint;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaParameterMap
-   */
-  public $authParams;
   protected $authParamsType = GoogleCloudIntegrationsV1alphaParameterMap::class;
   protected $authParamsDataType = '';
   /**
@@ -63,10 +55,6 @@ class GoogleCloudIntegrationsV1alphaOAuth2AuthorizationCode extends \Google\Mode
    * @var string
    */
   public $tokenEndpoint;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaParameterMap
-   */
-  public $tokenParams;
   protected $tokenParamsType = GoogleCloudIntegrationsV1alphaParameterMap::class;
   protected $tokenParamsDataType = '';
 

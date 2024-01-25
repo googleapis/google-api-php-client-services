@@ -24,10 +24,6 @@ class GoogleCloudIntegrationsV1alphaListSfdcChannelsResponse extends \Google\Col
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaSfdcChannel[]
-   */
-  public $sfdcChannels;
   protected $sfdcChannelsType = GoogleCloudIntegrationsV1alphaSfdcChannel::class;
   protected $sfdcChannelsDataType = 'array';
 

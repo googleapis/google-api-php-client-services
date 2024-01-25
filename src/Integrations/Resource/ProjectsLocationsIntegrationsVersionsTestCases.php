@@ -44,6 +44,7 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
    *
    * @opt_param string testCaseId Required. Required
    * @return GoogleCloudIntegrationsV1alphaTestCase
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudIntegrationsV1alphaTestCase $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
    * @param string $name Required. ID for the test case to be deleted
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -71,6 +73,7 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
    * @param GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse
+   * @throws \Google\Service\Exception
    */
   public function executeTest($testCaseName, GoogleCloudIntegrationsV1alphaExecuteTestCaseRequest $postBody, $optParams = [])
   {
@@ -84,6 +87,7 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
    * @param string $name Required. The ID of the test case to retrieve
    * @param array $optParams Optional parameters.
    * @return GoogleCloudIntegrationsV1alphaTestCase
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -124,6 +128,7 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
    * the executions in order to make response smaller. Only works for UI and when
    * the params fields are not filtered out.
    * @return GoogleCloudIntegrationsV1alphaListTestCaseExecutionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listExecutions($parent, $optParams = [])
   {
@@ -141,6 +146,7 @@ class ProjectsLocationsIntegrationsVersionsTestCases extends \Google\Service\Res
    * @opt_param string updateMask Optional. Field mask specifying the fields in
    * the above integration that have been modified and need to be updated.
    * @return GoogleCloudIntegrationsV1alphaTestCase
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudIntegrationsV1alphaTestCase $postBody, $optParams = [])
   {
