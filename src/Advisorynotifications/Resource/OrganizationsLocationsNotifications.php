@@ -44,6 +44,7 @@ class OrganizationsLocationsNotifications extends \Google\Service\Resource
    * "Not applicable" LocalizationState. If the ISO code is invalid (i.e. not a
    * real language), this RPC will throw an error.
    * @return GoogleCloudAdvisorynotificationsV1Notification
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -76,6 +77,7 @@ class OrganizationsLocationsNotifications extends \Google\Service\Resource
    * @opt_param string view Specifies which parts of the notification resource
    * should be returned in the response.
    * @return GoogleCloudAdvisorynotificationsV1ListNotificationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsLocationsNotifications($parent, $optParams = [])
   {

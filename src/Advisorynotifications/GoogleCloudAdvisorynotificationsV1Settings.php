@@ -27,10 +27,6 @@ class GoogleCloudAdvisorynotificationsV1Settings extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAdvisorynotificationsV1NotificationSettings[]
-   */
-  public $notificationSettings;
   protected $notificationSettingsType = GoogleCloudAdvisorynotificationsV1NotificationSettings::class;
   protected $notificationSettingsDataType = 'map';
 

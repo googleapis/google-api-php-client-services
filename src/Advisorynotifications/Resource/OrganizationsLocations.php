@@ -36,6 +36,7 @@ class OrganizationsLocations extends \Google\Service\Resource
    * Format: organizations/{organization}/locations/{location}/settings.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAdvisorynotificationsV1Settings
+   * @throws \Google\Service\Exception
    */
   public function getSettings($name, $optParams = [])
   {
@@ -51,6 +52,7 @@ class OrganizationsLocations extends \Google\Service\Resource
    * @param GoogleCloudAdvisorynotificationsV1Settings $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAdvisorynotificationsV1Settings
+   * @throws \Google\Service\Exception
    */
   public function updateSettings($name, GoogleCloudAdvisorynotificationsV1Settings $postBody, $optParams = [])
   {
