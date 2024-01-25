@@ -51,6 +51,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * @opt_param string datasetId The ID of the dataset that is being created. The
    * string must match the following regex: `[\p{L}\p{N}_\-\.]{1,256}`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Dataset $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * @param DeidentifyDatasetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deidentify($sourceDataset, DeidentifyDatasetRequest $postBody, $optParams = [])
   {
@@ -91,6 +93,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -105,6 +108,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}`.
    * @param array $optParams Optional parameters.
    * @return Dataset
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -135,6 +139,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -155,6 +160,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @return ListDatasetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasets($parent, $optParams = [])
   {
@@ -174,6 +180,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * `FieldMask` definition, see https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask
    * @return Dataset
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Dataset $postBody, $optParams = [])
   {
@@ -193,6 +200,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -214,6 +222,7 @@ class ProjectsLocationsDatasets extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

@@ -53,6 +53,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * being created. The string must match the following regex:
    * `[\p{L}\p{N}_\-\.]{1,256}`.
    * @return FhirStore
+   * @throws \Google\Service\Exception
    */
   public function create($parent, FhirStore $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param DeidentifyFhirStoreRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deidentify($sourceStore, DeidentifyFhirStoreRequest $postBody, $optParams = [])
   {
@@ -89,6 +91,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param string $name Required. The resource name of the FHIR store to delete.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -112,6 +115,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param ExportResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function export($name, ExportResourcesRequest $postBody, $optParams = [])
   {
@@ -125,6 +129,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param string $name Required. The resource name of the FHIR store to get.
    * @param array $optParams Optional parameters.
    * @return FhirStore
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -139,6 +144,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * metrics for.
    * @param array $optParams Optional parameters.
    * @return FhirStoreMetrics
+   * @throws \Google\Service\Exception
    */
   public function getFHIRStoreMetrics($name, $optParams = [])
   {
@@ -169,6 +175,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -238,6 +245,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param ImportResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function import($name, ImportResourcesRequest $postBody, $optParams = [])
   {
@@ -280,6 +288,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
    * @return ListFhirStoresResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsFhirStores($parent, $optParams = [])
   {
@@ -301,6 +310,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask
    * @return FhirStore
+   * @throws \Google\Service\Exception
    */
   public function patch($name, FhirStore $postBody, $optParams = [])
   {
@@ -325,6 +335,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param RollbackFhirResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function rollback($name, RollbackFhirResourcesRequest $postBody, $optParams = [])
   {
@@ -344,6 +355,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -366,6 +378,7 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

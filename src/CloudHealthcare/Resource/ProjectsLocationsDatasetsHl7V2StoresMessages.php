@@ -45,6 +45,7 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * @param CreateMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Message
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CreateMessageRequest $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * @param string $name The resource name of the HL7v2 message to delete.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * @opt_param string view Specifies which parts of the Message resource to
    * return in the response. When unspecified, equivalent to FULL.
    * @return Message
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * @param IngestMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return IngestMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function ingest($parent, IngestMessageRequest $postBody, $optParams = [])
   {
@@ -163,6 +167,7 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * other than BASIC with a `page_size` larger than the default can generate a
    * large response, which impacts the performance of this method.
    * @return ListMessagesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsHl7V2StoresMessages($parent, $optParams = [])
   {
@@ -187,6 +192,7 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * `FieldMask` definition, see https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask
    * @return Message
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Message $postBody, $optParams = [])
   {

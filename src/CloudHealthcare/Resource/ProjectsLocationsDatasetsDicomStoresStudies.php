@@ -45,6 +45,7 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * For example, `studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($parent, $dicomWebPath, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * DICOMweb request. For example, `studies/{study_uid}/metadata`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveMetadata($parent, $dicomWebPath, $optParams = [])
   {
@@ -94,6 +96,7 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * request. For example, `studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveStudy($parent, $dicomWebPath, $optParams = [])
   {
@@ -119,6 +122,7 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchForInstances($parent, $dicomWebPath, $optParams = [])
   {
@@ -143,6 +147,7 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * DICOMweb request. For example, `series` or `studies/{study_uid}/series`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchForSeries($parent, $dicomWebPath, $optParams = [])
   {
@@ -169,6 +174,7 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function storeInstances($parent, $dicomWebPath, HttpBody $postBody, $optParams = [])
   {

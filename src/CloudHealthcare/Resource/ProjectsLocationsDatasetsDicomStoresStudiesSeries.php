@@ -47,6 +47,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeries extends \Google\Service\
    * For example, `studies/{study_uid}/series/{series_uid}`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($parent, $dicomWebPath, $optParams = [])
   {
@@ -74,6 +75,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeries extends \Google\Service\
    * `studies/{study_uid}/series/{series_uid}/metadata`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveMetadata($parent, $dicomWebPath, $optParams = [])
   {
@@ -98,6 +100,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeries extends \Google\Service\
    * request. For example, `studies/{study_uid}/series/{series_uid}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveSeries($parent, $dicomWebPath, $optParams = [])
   {
@@ -123,6 +126,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeries extends \Google\Service\
    * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchForInstances($parent, $dicomWebPath, $optParams = [])
   {

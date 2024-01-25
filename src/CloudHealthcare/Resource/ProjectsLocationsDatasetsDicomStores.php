@@ -52,6 +52,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @opt_param string dicomStoreId Required. The ID of the DICOM store that is
    * being created. Any string value up to 256 characters in length.
    * @return DicomStore
+   * @throws \Google\Service\Exception
    */
   public function create($parent, DicomStore $postBody, $optParams = [])
   {
@@ -77,6 +78,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param DeidentifyDicomStoreRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deidentify($sourceStore, DeidentifyDicomStoreRequest $postBody, $optParams = [])
   {
@@ -91,6 +93,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param string $name Required. The resource name of the DICOM store to delete.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -111,6 +114,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param ExportDicomDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function export($name, ExportDicomDataRequest $postBody, $optParams = [])
   {
@@ -124,6 +128,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param string $name Required. The resource name of the DICOM store to get.
    * @param array $optParams Optional parameters.
    * @return DicomStore
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -139,6 +144,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * metrics for.
    * @param array $optParams Optional parameters.
    * @return DicomStoreMetrics
+   * @throws \Google\Service\Exception
    */
   public function getDICOMStoreMetrics($name, $optParams = [])
   {
@@ -169,6 +175,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -189,6 +196,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param ImportDicomDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function import($name, ImportDicomDataRequest $postBody, $optParams = [])
   {
@@ -231,6 +239,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from the
    * previous List request, if any.
    * @return ListDicomStoresResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsDicomStores($parent, $optParams = [])
   {
@@ -252,6 +261,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask
    * @return DicomStore
+   * @throws \Google\Service\Exception
    */
   public function patch($name, DicomStore $postBody, $optParams = [])
   {
@@ -277,6 +287,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchForInstances($parent, $dicomWebPath, $optParams = [])
   {
@@ -301,6 +312,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * DICOMweb request. For example, `series` or `studies/{study_uid}/series`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchForSeries($parent, $dicomWebPath, $optParams = [])
   {
@@ -325,6 +337,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * DICOMweb request. For example, `studies`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchForStudies($parent, $dicomWebPath, $optParams = [])
   {
@@ -344,6 +357,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -370,6 +384,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function storeInstances($parent, $dicomWebPath, HttpBody $postBody, $optParams = [])
   {
@@ -392,6 +407,7 @@ class ProjectsLocationsDatasetsDicomStores extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

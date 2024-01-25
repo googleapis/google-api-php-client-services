@@ -19,10 +19,6 @@ namespace Google\Service\CloudHealthcare;
 
 class CheckDataAccessResponse extends \Google\Model
 {
-  /**
-   * @var ConsentEvaluation[]
-   */
-  public $consentDetails;
   protected $consentDetailsType = ConsentEvaluation::class;
   protected $consentDetailsDataType = 'map';
   /**

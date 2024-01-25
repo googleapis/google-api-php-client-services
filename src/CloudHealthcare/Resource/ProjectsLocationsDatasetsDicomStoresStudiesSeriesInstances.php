@@ -47,6 +47,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($parent, $dicomWebPath, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveInstance($parent, $dicomWebPath, $optParams = [])
   {
@@ -102,6 +104,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/metadata`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveMetadata($parent, $dicomWebPath, $optParams = [])
   {
@@ -129,6 +132,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
    * `studies/{study_uid}/series/{series_uid}/instances/{instance_uid}/rendered`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveRendered($parent, $dicomWebPath, $optParams = [])
   {

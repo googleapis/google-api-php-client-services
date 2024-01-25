@@ -49,6 +49,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @param ActivateConsentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Consent
+   * @throws \Google\Service\Exception
    */
   public function activate($name, ActivateConsentRequest $postBody, $optParams = [])
   {
@@ -63,6 +64,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @param Consent $postBody
    * @param array $optParams Optional parameters.
    * @return Consent
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Consent $postBody, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * error occurs if `revision_id` is specified in the name.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -100,6 +103,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * the name.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function deleteRevision($name, $optParams = [])
   {
@@ -119,6 +123,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * res/{consent_store_id}/consents/{consent_id}@{revision_id}`
    * @param array $optParams Optional parameters.
    * @return Consent
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -166,6 +171,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * the previous List request, if any.
    * @return ListConsentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsConsentStoresConsents($parent, $optParams = [])
   {
@@ -213,6 +219,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @opt_param string pageToken Optional. Token to retrieve the next page of
    * results or empty if there are no more results in the list.
    * @return ListConsentRevisionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listRevisions($name, $optParams = [])
   {
@@ -238,6 +245,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * buffers/docs/reference/google.protobuf#fieldmask. Only the `user_id`,
    * `policies`, `consent_artifact`, and `metadata` fields can be updated.
    * @return Consent
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Consent $postBody, $optParams = [])
   {
@@ -259,6 +267,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @param RejectConsentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Consent
+   * @throws \Google\Service\Exception
    */
   public function reject($name, RejectConsentRequest $postBody, $optParams = [])
   {
@@ -280,6 +289,7 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * @param RevokeConsentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Consent
+   * @throws \Google\Service\Exception
    */
   public function revoke($name, RevokeConsentRequest $postBody, $optParams = [])
   {

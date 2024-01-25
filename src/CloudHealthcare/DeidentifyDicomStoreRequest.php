@@ -19,20 +19,12 @@ namespace Google\Service\CloudHealthcare;
 
 class DeidentifyDicomStoreRequest extends \Google\Model
 {
-  /**
-   * @var DeidentifyConfig
-   */
-  public $config;
   protected $configType = DeidentifyConfig::class;
   protected $configDataType = '';
   /**
    * @var string
    */
   public $destinationStore;
-  /**
-   * @var DicomFilterConfig
-   */
-  public $filterConfig;
   protected $filterConfigType = DicomFilterConfig::class;
   protected $filterConfigDataType = '';
   /**

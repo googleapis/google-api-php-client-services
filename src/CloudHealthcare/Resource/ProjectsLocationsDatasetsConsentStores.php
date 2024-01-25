@@ -52,6 +52,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @param CheckDataAccessRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CheckDataAccessResponse
+   * @throws \Google\Service\Exception
    */
   public function checkDataAccess($consentStore, CheckDataAccessRequest $postBody, $optParams = [])
   {
@@ -73,6 +74,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * create. The string must match the following regex:
    * `[\p{L}\p{N}_\-\.]{1,256}`. Cannot be changed after creation.
    * @return ConsentStore
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ConsentStore $postBody, $optParams = [])
   {
@@ -88,6 +90,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * delete.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -106,6 +109,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @param EvaluateUserConsentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return EvaluateUserConsentsResponse
+   * @throws \Google\Service\Exception
    */
   public function evaluateUserConsents($consentStore, EvaluateUserConsentsRequest $postBody, $optParams = [])
   {
@@ -119,6 +123,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @param string $name Required. The resource name of the consent store to get.
    * @param array $optParams Optional parameters.
    * @return ConsentStore
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -149,6 +154,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -172,6 +178,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @opt_param string pageToken Optional. Token to retrieve the next page of
    * results, or empty to get the first page.
    * @return ListConsentStoresResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsConsentStores($parent, $optParams = [])
   {
@@ -195,6 +202,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * `default_consent_ttl`, and `enable_consent_create_on_update` fields are
    * allowed to be updated.
    * @return ConsentStore
+   * @throws \Google\Service\Exception
    */
   public function patch($name, ConsentStore $postBody, $optParams = [])
   {
@@ -232,6 +240,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @param QueryAccessibleDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function queryAccessibleData($consentStore, QueryAccessibleDataRequest $postBody, $optParams = [])
   {
@@ -251,6 +260,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -273,6 +283,7 @@ class ProjectsLocationsDatasetsConsentStores extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

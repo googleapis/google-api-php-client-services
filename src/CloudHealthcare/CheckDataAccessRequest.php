@@ -19,10 +19,6 @@ namespace Google\Service\CloudHealthcare;
 
 class CheckDataAccessRequest extends \Google\Model
 {
-  /**
-   * @var ConsentList
-   */
-  public $consentList;
   protected $consentListType = ConsentList::class;
   protected $consentListDataType = '';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\CloudHealthcare;
 
 class GroupOrSegment extends \Google\Model
 {
-  /**
-   * @var SchemaGroup
-   */
-  public $group;
   protected $groupType = SchemaGroup::class;
   protected $groupDataType = '';
-  /**
-   * @var SchemaSegment
-   */
-  public $segment;
   protected $segmentType = SchemaSegment::class;
   protected $segmentDataType = '';
 

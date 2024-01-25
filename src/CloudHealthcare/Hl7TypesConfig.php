@@ -20,16 +20,8 @@ namespace Google\Service\CloudHealthcare;
 class Hl7TypesConfig extends \Google\Collection
 {
   protected $collection_key = 'version';
-  /**
-   * @var Type[]
-   */
-  public $type;
   protected $typeType = Type::class;
   protected $typeDataType = 'array';
-  /**
-   * @var VersionSource[]
-   */
-  public $version;
   protected $versionType = VersionSource::class;
   protected $versionDataType = 'array';
 

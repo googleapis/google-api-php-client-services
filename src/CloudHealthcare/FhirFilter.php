@@ -19,10 +19,6 @@ namespace Google\Service\CloudHealthcare;
 
 class FhirFilter extends \Google\Model
 {
-  /**
-   * @var Resources
-   */
-  public $resources;
   protected $resourcesType = Resources::class;
   protected $resourcesDataType = '';
 

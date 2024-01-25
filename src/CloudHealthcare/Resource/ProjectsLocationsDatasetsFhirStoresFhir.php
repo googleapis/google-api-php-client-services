@@ -86,6 +86,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * the start date. The date uses the format YYYY-MM-DD. If no start date is
    * provided, all records prior to the end date are in scope.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function PatientEverything($name, $optParams = [])
   {
@@ -106,6 +107,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param string $name Required. The name of the resource to purge.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function ResourcePurge($name, $optParams = [])
   {
@@ -148,6 +150,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
    * StructureDefinition with this canonical URL must exist in the FHIR store.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function ResourceValidate($parent, $type, HttpBody $postBody, $optParams = [])
   {
@@ -175,6 +178,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * capabilities for.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function capabilities($name, $optParams = [])
   {
@@ -206,6 +210,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * [R4](https://hl7.org/implement/standards/fhir/R4/resourcelist.html)).
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function conditionalDelete($parent, $type, $optParams = [])
   {
@@ -245,6 +250,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function conditionalPatch($parent, $type, HttpBody $postBody, $optParams = [])
   {
@@ -291,6 +297,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function conditionalUpdate($parent, $type, HttpBody $postBody, $optParams = [])
   {
@@ -336,6 +343,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function create($parent, $type, HttpBody $postBody, $optParams = [])
   {
@@ -359,6 +367,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param string $name Required. The name of the resource to delete.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -409,6 +418,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function executeBundle($parent, HttpBody $postBody, $optParams = [])
   {
@@ -456,6 +466,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * 2017-01-01T00:00:00Z). The time must be specified to the second and include a
    * time zone.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function history($name, $optParams = [])
   {
@@ -485,6 +496,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function patch($name, HttpBody $postBody, $optParams = [])
   {
@@ -515,6 +527,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param string $name Required. The name of the resource to retrieve.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function read($name, $optParams = [])
   {
@@ -596,6 +609,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param SearchResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function search($parent, SearchResourcesRequest $postBody, $optParams = [])
   {
@@ -682,6 +696,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param SearchResourcesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function searchType($parent, $resourceType, SearchResourcesRequest $postBody, $optParams = [])
   {
@@ -717,6 +732,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function update($name, HttpBody $postBody, $optParams = [])
   {
@@ -742,6 +758,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param string $name Required. The name of the resource version to retrieve.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function vread($name, $optParams = [])
   {

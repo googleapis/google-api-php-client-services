@@ -19,10 +19,6 @@ namespace Google\Service\CloudHealthcare;
 
 class Signature extends \Google\Model
 {
-  /**
-   * @var Image
-   */
-  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
   /**

@@ -48,6 +48,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames extends \
    * tance_uid}/frames/{frame_list}`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveFrames($parent, $dicomWebPath, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesFrames extends \
    * nces/{instance_uid}/frames/{frame_list}/rendered`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
+   * @throws \Google\Service\Exception
    */
   public function retrieveRendered($parent, $dicomWebPath, $optParams = [])
   {

@@ -46,6 +46,7 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
    * Language as listed on https://github.com/google/cel-
    * spec/blob/master/doc/langdef.md.
    * @return AttributeDefinition
+   * @throws \Google\Service\Exception
    */
   public function create($parent, AttributeDefinition $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
    * be deleted.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -78,6 +80,7 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
    * to get.
    * @param array $optParams Optional parameters.
    * @return AttributeDefinition
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -102,6 +105,7 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
    * @opt_param string pageToken Optional. Token to retrieve the next page of
    * results or empty to get the first page.
    * @return ListAttributeDefinitionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsConsentStoresAttributeDefinitions($parent, $optParams = [])
   {
@@ -127,6 +131,7 @@ class ProjectsLocationsDatasetsConsentStoresAttributeDefinitions extends \Google
    * fields can be updated. The updated `allowed_values` must contain all values
    * from the previous `allowed_values`.
    * @return AttributeDefinition
+   * @throws \Google\Service\Exception
    */
   public function patch($name, AttributeDefinition $postBody, $optParams = [])
   {

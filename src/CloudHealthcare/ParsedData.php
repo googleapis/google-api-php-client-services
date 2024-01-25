@@ -20,10 +20,6 @@ namespace Google\Service\CloudHealthcare;
 class ParsedData extends \Google\Collection
 {
   protected $collection_key = 'segments';
-  /**
-   * @var Segment[]
-   */
-  public $segments;
   protected $segmentsType = Segment::class;
   protected $segmentsDataType = 'array';
 

@@ -37,6 +37,7 @@ class ProjectsLocationsDatasetsDicomStoresDicomWebStudies extends \Google\Servic
    * om_store_id}/dicomWeb/studies/{study_uid}`.
    * @param array $optParams Optional parameters.
    * @return StudyMetrics
+   * @throws \Google\Service\Exception
    */
   public function getStudyMetrics($study, $optParams = [])
   {

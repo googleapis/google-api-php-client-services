@@ -37,6 +37,7 @@ class ProjectsLocationsDatasetsDicomStoresDicomWebStudiesSeries extends \Google\
    * icom_store_id}/dicomWeb/studies/{study_uid}/series/{series_uid}`.
    * @param array $optParams Optional parameters.
    * @return SeriesMetrics
+   * @throws \Google\Service\Exception
    */
   public function getSeriesMetrics($series, $optParams = [])
   {

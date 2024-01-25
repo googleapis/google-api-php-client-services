@@ -27,10 +27,6 @@ class GoogleCloudHealthcareV1FhirBigQueryDestination extends \Google\Model
    * @var bool
    */
   public $force;
-  /**
-   * @var SchemaConfig
-   */
-  public $schemaConfig;
   protected $schemaConfigType = SchemaConfig::class;
   protected $schemaConfigDataType = '';
   /**

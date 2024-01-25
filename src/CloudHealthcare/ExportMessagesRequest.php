@@ -27,16 +27,8 @@ class ExportMessagesRequest extends \Google\Model
    * @var string
    */
   public $filter;
-  /**
-   * @var GcsDestination
-   */
-  public $gcsDestination;
   protected $gcsDestinationType = GcsDestination::class;
   protected $gcsDestinationDataType = '';
-  /**
-   * @var PubsubDestination
-   */
-  public $pubsubDestination;
   protected $pubsubDestinationType = PubsubDestination::class;
   protected $pubsubDestinationDataType = '';
   /**

@@ -20,38 +20,18 @@ namespace Google\Service\CloudHealthcare;
 class InfoTypeTransformation extends \Google\Collection
 {
   protected $collection_key = 'infoTypes';
-  /**
-   * @var CharacterMaskConfig
-   */
-  public $characterMaskConfig;
   protected $characterMaskConfigType = CharacterMaskConfig::class;
   protected $characterMaskConfigDataType = '';
-  /**
-   * @var CryptoHashConfig
-   */
-  public $cryptoHashConfig;
   protected $cryptoHashConfigType = CryptoHashConfig::class;
   protected $cryptoHashConfigDataType = '';
-  /**
-   * @var DateShiftConfig
-   */
-  public $dateShiftConfig;
   protected $dateShiftConfigType = DateShiftConfig::class;
   protected $dateShiftConfigDataType = '';
   /**
    * @var string[]
    */
   public $infoTypes;
-  /**
-   * @var RedactConfig
-   */
-  public $redactConfig;
   protected $redactConfigType = RedactConfig::class;
   protected $redactConfigDataType = '';
-  /**
-   * @var ReplaceWithInfoTypeConfig
-   */
-  public $replaceWithInfoTypeConfig;
   protected $replaceWithInfoTypeConfigType = ReplaceWithInfoTypeConfig::class;
   protected $replaceWithInfoTypeConfigDataType = '';
 

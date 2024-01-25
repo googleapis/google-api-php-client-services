@@ -19,10 +19,6 @@ namespace Google\Service\CloudHealthcare;
 
 class GoogleCloudHealthcareV1DicomStreamConfig extends \Google\Model
 {
-  /**
-   * @var GoogleCloudHealthcareV1DicomBigQueryDestination
-   */
-  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudHealthcareV1DicomBigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
 

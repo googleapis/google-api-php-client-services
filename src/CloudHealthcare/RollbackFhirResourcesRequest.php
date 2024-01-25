@@ -28,10 +28,6 @@ class RollbackFhirResourcesRequest extends \Google\Collection
    * @var bool
    */
   public $excludeRollbacks;
-  /**
-   * @var RollbackFhirResourceFilteringFields
-   */
-  public $filteringFields;
   protected $filteringFieldsType = RollbackFhirResourceFilteringFields::class;
   protected $filteringFieldsDataType = '';
   /**
