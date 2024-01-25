@@ -20,10 +20,6 @@ namespace Google\Service\Gmail;
 class ListDelegatesResponse extends \Google\Collection
 {
   protected $collection_key = 'delegates';
-  /**
-   * @var Delegate[]
-   */
-  public $delegates;
   protected $delegatesType = Delegate::class;
   protected $delegatesDataType = 'array';
 

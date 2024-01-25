@@ -20,10 +20,6 @@ namespace Google\Service\Gmail;
 class ListSmimeInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'smimeInfo';
-  /**
-   * @var SmimeInfo[]
-   */
-  public $smimeInfo;
   protected $smimeInfoType = SmimeInfo::class;
   protected $smimeInfoDataType = 'array';
 

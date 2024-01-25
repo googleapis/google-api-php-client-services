@@ -20,10 +20,6 @@ namespace Google\Service\Gmail;
 class ListForwardingAddressesResponse extends \Google\Collection
 {
   protected $collection_key = 'forwardingAddresses';
-  /**
-   * @var ForwardingAddress[]
-   */
-  public $forwardingAddresses;
   protected $forwardingAddressesType = ForwardingAddress::class;
   protected $forwardingAddressesDataType = 'array';
 

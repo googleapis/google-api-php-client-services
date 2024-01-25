@@ -40,10 +40,6 @@ class CseKeyPair extends \Google\Collection
    * @var string
    */
   public $pkcs7;
-  /**
-   * @var CsePrivateKeyMetadata[]
-   */
-  public $privateKeyMetadata;
   protected $privateKeyMetadataType = CsePrivateKeyMetadata::class;
   protected $privateKeyMetadataDataType = 'array';
   /**

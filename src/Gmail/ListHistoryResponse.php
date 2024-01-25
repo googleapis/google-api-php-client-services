@@ -20,10 +20,6 @@ namespace Google\Service\Gmail;
 class ListHistoryResponse extends \Google\Collection
 {
   protected $collection_key = 'history';
-  /**
-   * @var History[]
-   */
-  public $history;
   protected $historyType = History::class;
   protected $historyDataType = 'array';
   /**

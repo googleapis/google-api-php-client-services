@@ -24,10 +24,6 @@ class HistoryLabelAdded extends \Google\Collection
    * @var string[]
    */
   public $labelIds;
-  /**
-   * @var Message
-   */
-  public $message;
   protected $messageType = Message::class;
   protected $messageDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Gmail;
 
 class Filter extends \Google\Model
 {
-  /**
-   * @var FilterAction
-   */
-  public $action;
   protected $actionType = FilterAction::class;
   protected $actionDataType = '';
-  /**
-   * @var FilterCriteria
-   */
-  public $criteria;
   protected $criteriaType = FilterCriteria::class;
   protected $criteriaDataType = '';
   /**

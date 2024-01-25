@@ -36,10 +36,6 @@ class Message extends \Google\Collection
    * @var string[]
    */
   public $labelIds;
-  /**
-   * @var MessagePart
-   */
-  public $payload;
   protected $payloadType = MessagePart::class;
   protected $payloadDataType = '';
   /**

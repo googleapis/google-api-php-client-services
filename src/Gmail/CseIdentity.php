@@ -27,10 +27,6 @@ class CseIdentity extends \Google\Model
    * @var string
    */
   public $primaryKeyPairId;
-  /**
-   * @var SignAndEncryptKeyPairs
-   */
-  public $signAndEncryptKeyPairs;
   protected $signAndEncryptKeyPairsType = SignAndEncryptKeyPairs::class;
   protected $signAndEncryptKeyPairsDataType = '';
 

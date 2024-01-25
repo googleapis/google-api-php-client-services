@@ -20,10 +20,6 @@ namespace Google\Service\Gmail;
 class ListDraftsResponse extends \Google\Collection
 {
   protected $collection_key = 'drafts';
-  /**
-   * @var Draft[]
-   */
-  public $drafts;
   protected $draftsType = Draft::class;
   protected $draftsDataType = 'array';
   /**
