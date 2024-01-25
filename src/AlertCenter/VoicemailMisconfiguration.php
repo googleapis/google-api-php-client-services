@@ -20,10 +20,6 @@ namespace Google\Service\AlertCenter;
 class VoicemailMisconfiguration extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var VoicemailRecipientError[]
-   */
-  public $errors;
   protected $errorsType = VoicemailRecipientError::class;
   protected $errorsDataType = 'array';
 

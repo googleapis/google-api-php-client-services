@@ -19,16 +19,8 @@ namespace Google\Service\AlertCenter;
 
 class MatchInfo extends \Google\Model
 {
-  /**
-   * @var PredefinedDetectorInfo
-   */
-  public $predefinedDetector;
   protected $predefinedDetectorType = PredefinedDetectorInfo::class;
   protected $predefinedDetectorDataType = '';
-  /**
-   * @var UserDefinedDetectorInfo
-   */
-  public $userDefinedDetector;
   protected $userDefinedDetectorType = UserDefinedDetectorInfo::class;
   protected $userDefinedDetectorDataType = '';
 

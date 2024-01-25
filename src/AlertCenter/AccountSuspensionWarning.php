@@ -28,10 +28,6 @@ class AccountSuspensionWarning extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var AccountSuspensionDetails[]
-   */
-  public $suspensionDetails;
   protected $suspensionDetailsType = AccountSuspensionDetails::class;
   protected $suspensionDetailsDataType = 'array';
 

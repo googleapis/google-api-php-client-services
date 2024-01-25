@@ -20,10 +20,6 @@ namespace Google\Service\AlertCenter;
 class TransferMisconfiguration extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var TransferError[]
-   */
-  public $errors;
   protected $errorsType = TransferError::class;
   protected $errorsDataType = 'array';
 

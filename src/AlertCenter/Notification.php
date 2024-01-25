@@ -19,10 +19,6 @@ namespace Google\Service\AlertCenter;
 
 class Notification extends \Google\Model
 {
-  /**
-   * @var CloudPubsubTopic
-   */
-  public $cloudPubsubTopic;
   protected $cloudPubsubTopicType = CloudPubsubTopic::class;
   protected $cloudPubsubTopicDataType = '';
 

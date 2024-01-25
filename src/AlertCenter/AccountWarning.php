@@ -23,10 +23,6 @@ class AccountWarning extends \Google\Model
    * @var string
    */
   public $email;
-  /**
-   * @var LoginDetails
-   */
-  public $loginDetails;
   protected $loginDetailsType = LoginDetails::class;
   protected $loginDetailsDataType = '';
 

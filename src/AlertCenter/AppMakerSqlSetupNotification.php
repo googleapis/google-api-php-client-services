@@ -20,10 +20,6 @@ namespace Google\Service\AlertCenter;
 class AppMakerSqlSetupNotification extends \Google\Collection
 {
   protected $collection_key = 'requestInfo';
-  /**
-   * @var RequestInfo[]
-   */
-  public $requestInfo;
   protected $requestInfoType = RequestInfo::class;
   protected $requestInfoDataType = 'array';
 
