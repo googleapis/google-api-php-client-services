@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig extends \Google\
    * @var bool
    */
   public $disableAttribution;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry[]
-   */
-  public $sources;
   protected $sourcesType = GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry::class;
   protected $sourcesDataType = 'array';
 

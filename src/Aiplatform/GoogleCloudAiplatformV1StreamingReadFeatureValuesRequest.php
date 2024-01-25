@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1StreamingReadFeatureValuesRequest extends \Google\C
    * @var string[]
    */
   public $entityIds;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureSelector
-   */
-  public $featureSelector;
   protected $featureSelectorType = GoogleCloudAiplatformV1FeatureSelector::class;
   protected $featureSelectorDataType = '';
 

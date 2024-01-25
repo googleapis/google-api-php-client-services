@@ -28,10 +28,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputs exten
    * @var bool
    */
   public $disableEarlyStopping;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig
-   */
-  public $exportEvaluatedDataItemsConfig;
   protected $exportEvaluatedDataItemsConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig::class;
   protected $exportEvaluatedDataItemsConfigDataType = '';
   /**
@@ -58,10 +54,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputs exten
    * @var string
    */
   public $trainBudgetMilliNodeHours;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformation[]
-   */
-  public $transformations;
   protected $transformationsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTablesInputsTransformation::class;
   protected $transformationsDataType = 'array';
   /**

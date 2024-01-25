@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationMaskAnnotation extends \Google\Collection
 {
   protected $collection_key = 'annotationSpecColors';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaAnnotationSpecColor[]
-   */
-  public $annotationSpecColors;
   protected $annotationSpecColorsType = GoogleCloudAiplatformV1SchemaAnnotationSpecColor::class;
   protected $annotationSpecColorsDataType = 'array';
   /**

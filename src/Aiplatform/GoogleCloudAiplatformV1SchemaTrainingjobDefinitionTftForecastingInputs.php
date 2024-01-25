@@ -32,26 +32,14 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputs ext
    * @var string
    */
   public $contextWindow;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsGranularity
-   */
-  public $dataGranularity;
   protected $dataGranularityType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsGranularity::class;
   protected $dataGranularityDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig
-   */
-  public $exportEvaluatedDataItemsConfig;
   protected $exportEvaluatedDataItemsConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig::class;
   protected $exportEvaluatedDataItemsConfigDataType = '';
   /**
    * @var string
    */
   public $forecastHorizon;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig
-   */
-  public $hierarchyConfig;
   protected $hierarchyConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig::class;
   protected $hierarchyConfigDataType = '';
   /**
@@ -83,10 +71,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputs ext
    * @var string
    */
   public $trainBudgetMilliNodeHours;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformation[]
-   */
-  public $transformations;
   protected $transformationsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputsTransformation::class;
   protected $transformationsDataType = 'array';
   /**
@@ -101,10 +85,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputs ext
    * @var string
    */
   public $weightColumn;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionWindowConfig
-   */
-  public $windowConfig;
   protected $windowConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionWindowConfig::class;
   protected $windowConfigDataType = '';
 

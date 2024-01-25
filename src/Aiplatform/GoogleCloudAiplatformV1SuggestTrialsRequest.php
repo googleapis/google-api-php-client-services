@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1SuggestTrialsRequest extends \Google\Collection
    * @var string
    */
   public $clientId;
-  /**
-   * @var GoogleCloudAiplatformV1TrialContext[]
-   */
-  public $contexts;
   protected $contextsType = GoogleCloudAiplatformV1TrialContext::class;
   protected $contextsDataType = 'array';
   /**

@@ -28,10 +28,6 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolylineAnnotation
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaVertex[]
-   */
-  public $vertexes;
   protected $vertexesType = GoogleCloudAiplatformV1SchemaVertex::class;
   protected $vertexesDataType = 'array';
 

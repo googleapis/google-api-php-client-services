@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentiment extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentimentInputs
-   */
-  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlTextSentimentInputs::class;
   protected $inputsDataType = '';
 

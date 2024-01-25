@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ReadTensorboardUsageResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerMonthUsageData[]
-   */
-  public $monthlyUsageData;
   protected $monthlyUsageDataType = GoogleCloudAiplatformV1ReadTensorboardUsageResponsePerMonthUsageData::class;
   protected $monthlyUsageDataDataType = 'map';
 

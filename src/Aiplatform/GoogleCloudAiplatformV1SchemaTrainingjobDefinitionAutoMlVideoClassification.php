@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlVideoClassification extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlVideoClassificationInputs
-   */
-  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlVideoClassificationInputs::class;
   protected $inputsDataType = '';
 

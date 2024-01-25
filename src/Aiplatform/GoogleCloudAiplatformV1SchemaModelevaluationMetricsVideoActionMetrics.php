@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics extends \Google\Collection
 {
   protected $collection_key = 'confidenceMetrics';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfidenceMetrics[]
-   */
-  public $confidenceMetrics;
   protected $confidenceMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfidenceMetrics::class;
   protected $confidenceMetricsDataType = 'array';
   /**

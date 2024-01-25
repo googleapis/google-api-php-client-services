@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1SchemaVideoActionRecognitionAnnotation extends \Goo
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTimeSegment
-   */
-  public $timeSegment;
   protected $timeSegmentType = GoogleCloudAiplatformV1SchemaTimeSegment::class;
   protected $timeSegmentDataType = '';
 

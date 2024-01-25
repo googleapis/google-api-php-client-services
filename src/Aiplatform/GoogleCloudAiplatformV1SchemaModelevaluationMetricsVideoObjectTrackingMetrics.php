@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
    * @var float
    */
   public $boundingBoxMeanAveragePrecision;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics[]
-   */
-  public $boundingBoxMetrics;
   protected $boundingBoxMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics::class;
   protected $boundingBoxMetricsDataType = 'array';
   /**
@@ -54,10 +50,6 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
    * @var float
    */
   public $trackMeanMismatchRate;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsTrackMetrics[]
-   */
-  public $trackMetrics;
   protected $trackMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsTrackMetrics::class;
   protected $trackMetricsDataType = 'array';
 

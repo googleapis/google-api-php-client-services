@@ -35,10 +35,6 @@ class GoogleCloudAiplatformV1TensorboardTimeSeries extends \Google\Model
    * @var string
    */
   public $etag;
-  /**
-   * @var GoogleCloudAiplatformV1TensorboardTimeSeriesMetadata
-   */
-  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1TensorboardTimeSeriesMetadata::class;
   protected $metadataDataType = '';
   /**

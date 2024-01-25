@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageObjectDetectionEva
    * @var float
    */
   public $boundingBoxMeanAveragePrecision;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics[]
-   */
-  public $boundingBoxMetrics;
   protected $boundingBoxMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics::class;
   protected $boundingBoxMetricsDataType = 'array';
   /**

@@ -32,10 +32,6 @@ class GoogleCloudAiplatformV1Trial extends \Google\Collection
    * @var string
    */
   public $endTime;
-  /**
-   * @var GoogleCloudAiplatformV1Measurement
-   */
-  public $finalMeasurement;
   protected $finalMeasurementType = GoogleCloudAiplatformV1Measurement::class;
   protected $finalMeasurementDataType = '';
   /**
@@ -46,20 +42,12 @@ class GoogleCloudAiplatformV1Trial extends \Google\Collection
    * @var string
    */
   public $infeasibleReason;
-  /**
-   * @var GoogleCloudAiplatformV1Measurement[]
-   */
-  public $measurements;
   protected $measurementsType = GoogleCloudAiplatformV1Measurement::class;
   protected $measurementsDataType = 'array';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAiplatformV1TrialParameter[]
-   */
-  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1TrialParameter::class;
   protected $parametersDataType = 'array';
   /**

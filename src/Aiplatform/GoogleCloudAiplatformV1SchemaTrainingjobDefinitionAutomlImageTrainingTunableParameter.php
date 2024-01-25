@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutomlImageTrainingTunab
    * @var string[]
    */
   public $datasetConfig;
-  /**
-   * @var GoogleCloudAiplatformV1StudySpec
-   */
-  public $studySpec;
   protected $studySpecType = GoogleCloudAiplatformV1StudySpec::class;
   protected $studySpecDataType = '';
   /**

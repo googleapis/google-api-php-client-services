@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaPredictionResult extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1SchemaPredictionResultError
-   */
-  public $error;
   protected $errorType = GoogleCloudAiplatformV1SchemaPredictionResultError::class;
   protected $errorDataType = '';
   /**

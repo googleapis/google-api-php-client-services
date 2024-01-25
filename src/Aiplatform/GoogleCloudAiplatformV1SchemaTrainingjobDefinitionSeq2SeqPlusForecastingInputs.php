@@ -32,26 +32,14 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingIn
    * @var string
    */
   public $contextWindow;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingInputsGranularity
-   */
-  public $dataGranularity;
   protected $dataGranularityType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingInputsGranularity::class;
   protected $dataGranularityDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig
-   */
-  public $exportEvaluatedDataItemsConfig;
   protected $exportEvaluatedDataItemsConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionExportEvaluatedDataItemsConfig::class;
   protected $exportEvaluatedDataItemsConfigDataType = '';
   /**
    * @var string
    */
   public $forecastHorizon;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig
-   */
-  public $hierarchyConfig;
   protected $hierarchyConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionHierarchyConfig::class;
   protected $hierarchyConfigDataType = '';
   /**
@@ -83,10 +71,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingIn
    * @var string
    */
   public $trainBudgetMilliNodeHours;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingInputsTransformation[]
-   */
-  public $transformations;
   protected $transformationsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingInputsTransformation::class;
   protected $transformationsDataType = 'array';
   /**
@@ -101,10 +85,6 @@ class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionSeq2SeqPlusForecastingIn
    * @var string
    */
   public $weightColumn;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionWindowConfig
-   */
-  public $windowConfig;
   protected $windowConfigType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionWindowConfig::class;
   protected $windowConfigDataType = '';
 

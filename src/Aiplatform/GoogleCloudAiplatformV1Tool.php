@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Tool extends \Google\Collection
 {
   protected $collection_key = 'functionDeclarations';
-  /**
-   * @var GoogleCloudAiplatformV1FunctionDeclaration[]
-   */
-  public $functionDeclarations;
   protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
   protected $functionDeclarationsDataType = 'array';
 

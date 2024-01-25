@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SearchMigratableResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'migratableResources';
-  /**
-   * @var GoogleCloudAiplatformV1MigratableResource[]
-   */
-  public $migratableResources;
   protected $migratableResourcesType = GoogleCloudAiplatformV1MigratableResource::class;
   protected $migratableResourcesDataType = 'array';
   /**

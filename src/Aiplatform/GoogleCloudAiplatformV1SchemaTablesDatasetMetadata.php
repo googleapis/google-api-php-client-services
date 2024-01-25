@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTablesDatasetMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTablesDatasetMetadataInputConfig
-   */
-  public $inputConfig;
   protected $inputConfigType = GoogleCloudAiplatformV1SchemaTablesDatasetMetadataInputConfig::class;
   protected $inputConfigDataType = '';
 

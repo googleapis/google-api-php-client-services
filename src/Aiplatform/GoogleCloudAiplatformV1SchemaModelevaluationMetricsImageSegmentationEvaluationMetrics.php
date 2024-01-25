@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageSegmentationEvaluationMetrics extends \Google\Collection
 {
   protected $collection_key = 'confidenceMetricsEntries';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageSegmentationEvaluationMetricsConfidenceMetricsEntry[]
-   */
-  public $confidenceMetricsEntries;
   protected $confidenceMetricsEntriesType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageSegmentationEvaluationMetricsConfidenceMetricsEntry::class;
   protected $confidenceMetricsEntriesDataType = 'array';
 

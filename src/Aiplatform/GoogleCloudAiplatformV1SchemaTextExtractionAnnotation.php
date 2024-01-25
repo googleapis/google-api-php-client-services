@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1SchemaTextExtractionAnnotation extends \Google\Mode
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTextSegment
-   */
-  public $textSegment;
   protected $textSegmentType = GoogleCloudAiplatformV1SchemaTextSegment::class;
   protected $textSegmentDataType = '';
 

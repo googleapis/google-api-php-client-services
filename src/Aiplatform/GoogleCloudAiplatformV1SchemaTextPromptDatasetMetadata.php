@@ -28,10 +28,6 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
    * @var string
    */
   public $gcsUri;
-  /**
-   * @var GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig
-   */
-  public $groundingConfig;
   protected $groundingConfigType = GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig::class;
   protected $groundingConfigDataType = '';
   /**

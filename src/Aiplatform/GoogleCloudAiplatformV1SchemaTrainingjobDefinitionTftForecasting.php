@@ -19,16 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecasting extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputs
-   */
-  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingInputs::class;
   protected $inputsDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingMetadata
-   */
-  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionTftForecastingMetadata::class;
   protected $metadataDataType = '';
 

@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
    * @var bool
    */
   public $catchUp;
-  /**
-   * @var GoogleCloudAiplatformV1CreatePipelineJobRequest
-   */
-  public $createPipelineJobRequest;
   protected $createPipelineJobRequestType = GoogleCloudAiplatformV1CreatePipelineJobRequest::class;
   protected $createPipelineJobRequestDataType = '';
   /**
@@ -57,10 +53,6 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
    * @var string
    */
   public $lastResumeTime;
-  /**
-   * @var GoogleCloudAiplatformV1ScheduleRunResponse
-   */
-  public $lastScheduledRunResponse;
   protected $lastScheduledRunResponseType = GoogleCloudAiplatformV1ScheduleRunResponse::class;
   protected $lastScheduledRunResponseDataType = '';
   /**

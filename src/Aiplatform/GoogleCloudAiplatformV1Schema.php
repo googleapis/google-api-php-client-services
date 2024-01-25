@@ -36,20 +36,12 @@ class GoogleCloudAiplatformV1Schema extends \Google\Collection
    * @var string
    */
   public $format;
-  /**
-   * @var GoogleCloudAiplatformV1Schema
-   */
-  public $items;
   protected $itemsType = GoogleCloudAiplatformV1Schema::class;
   protected $itemsDataType = '';
   /**
    * @var bool
    */
   public $nullable;
-  /**
-   * @var GoogleCloudAiplatformV1Schema[]
-   */
-  public $properties;
   protected $propertiesType = GoogleCloudAiplatformV1Schema::class;
   protected $propertiesDataType = 'map';
   /**

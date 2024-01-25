@@ -19,16 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetection extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionInputs
-   */
-  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionInputs::class;
   protected $inputsDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionMetadata
-   */
-  public $metadata;
   protected $metadataType = GoogleCloudAiplatformV1SchemaTrainingjobDefinitionAutoMlImageObjectDetectionMetadata::class;
   protected $metadataDataType = '';
 

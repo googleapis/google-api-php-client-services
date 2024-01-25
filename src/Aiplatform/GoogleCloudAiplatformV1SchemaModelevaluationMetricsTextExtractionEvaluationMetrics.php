@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluationMetrics extends \Google\Collection
 {
   protected $collection_key = 'confidenceMetrics';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluationMetricsConfidenceMetrics[]
-   */
-  public $confidenceMetrics;
   protected $confidenceMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluationMetricsConfidenceMetrics::class;
   protected $confidenceMetricsDataType = 'array';
-  /**
-   * @var GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix
-   */
-  public $confusionMatrix;
   protected $confusionMatrixType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
 
