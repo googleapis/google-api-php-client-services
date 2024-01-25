@@ -23,22 +23,10 @@ class LearningGenaiRootTakedownResult extends \Google\Model
    * @var bool
    */
   public $allowed;
-  /**
-   * @var LearningGenaiRootRegexTakedownResult
-   */
-  public $regexTakedownResult;
   protected $regexTakedownResultType = LearningGenaiRootRegexTakedownResult::class;
   protected $regexTakedownResultDataType = '';
-  /**
-   * @var LearningGenaiRootRequestResponseTakedownResult
-   */
-  public $requestResponseTakedownResult;
   protected $requestResponseTakedownResultType = LearningGenaiRootRequestResponseTakedownResult::class;
   protected $requestResponseTakedownResultDataType = '';
-  /**
-   * @var LearningGenaiRootSimilarityTakedownResult
-   */
-  public $similarityTakedownResult;
   protected $similarityTakedownResultType = LearningGenaiRootSimilarityTakedownResult::class;
   protected $similarityTakedownResultDataType = '';
 

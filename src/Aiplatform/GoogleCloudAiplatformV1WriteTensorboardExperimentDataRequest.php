@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1WriteTensorboardExperimentDataRequest extends \Google\Collection
 {
   protected $collection_key = 'writeRunDataRequests';
-  /**
-   * @var GoogleCloudAiplatformV1WriteTensorboardRunDataRequest[]
-   */
-  public $writeRunDataRequests;
   protected $writeRunDataRequestsType = GoogleCloudAiplatformV1WriteTensorboardRunDataRequest::class;
   protected $writeRunDataRequestsDataType = 'array';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class LearningGenaiRootScoreBasedRoutingConfigRule extends \Google\Model
 {
-  /**
-   * @var LearningGenaiRootScore
-   */
-  public $equalOrGreaterThan;
   protected $equalOrGreaterThanType = LearningGenaiRootScore::class;
   protected $equalOrGreaterThanDataType = '';
-  /**
-   * @var LearningGenaiRootScore
-   */
-  public $lessThan;
   protected $lessThanType = LearningGenaiRootScore::class;
   protected $lessThanDataType = '';
   /**

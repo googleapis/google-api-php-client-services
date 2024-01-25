@@ -45,6 +45,7 @@ class ProjectsLocationsDatasetsDataItems extends \Google\Service\Resource
    * @opt_param string pageToken The standard list page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListDataItemsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsDataItems($parent, $optParams = [])
   {

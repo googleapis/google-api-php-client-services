@@ -28,10 +28,6 @@ class LearningGenaiRootMetricOutput extends \Google\Model
    */
   public $name;
   public $numericValue;
-  /**
-   * @var UtilStatusProto
-   */
-  public $status;
   protected $statusType = UtilStatusProto::class;
   protected $statusDataType = '';
   /**

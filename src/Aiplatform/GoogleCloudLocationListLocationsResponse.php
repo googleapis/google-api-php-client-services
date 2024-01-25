@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudLocationListLocationsResponse extends \Google\Collection
 {
   protected $collection_key = 'locations';
-  /**
-   * @var GoogleCloudLocationLocation[]
-   */
-  public $locations;
   protected $locationsType = GoogleCloudLocationLocation::class;
   protected $locationsDataType = 'array';
   /**

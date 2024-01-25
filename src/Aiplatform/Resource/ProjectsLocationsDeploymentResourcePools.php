@@ -42,6 +42,7 @@ class ProjectsLocationsDeploymentResourcePools extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CreateDeploymentResourcePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1CreateDeploymentResourcePoolRequest $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsLocationsDeploymentResourcePools extends \Google\Service\Resource
    * ols/{deployment_resource_pool}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -72,6 +74,7 @@ class ProjectsLocationsDeploymentResourcePools extends \Google\Service\Resource
    * Pools/{deployment_resource_pool}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1DeploymentResourcePool
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsDeploymentResourcePools extends \Google\Service\Resource
    * `ListDeploymentResourcePools` must match the call that provided the page
    * token.
    * @return GoogleCloudAiplatformV1ListDeploymentResourcePoolsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDeploymentResourcePools($parent, $optParams = [])
   {
@@ -119,6 +123,7 @@ class ProjectsLocationsDeploymentResourcePools extends \Google\Service\Resource
    * When paginating, all other parameters provided to `QueryDeployedModels` must
    * match the call that provided the page token.
    * @return GoogleCloudAiplatformV1QueryDeployedModelsResponse
+   * @throws \Google\Service\Exception
    */
   public function queryDeployedModels($deploymentResourcePool, $optParams = [])
   {

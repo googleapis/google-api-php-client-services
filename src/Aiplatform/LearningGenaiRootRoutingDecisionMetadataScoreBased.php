@@ -19,16 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class LearningGenaiRootRoutingDecisionMetadataScoreBased extends \Google\Model
 {
-  /**
-   * @var LearningGenaiRootScoreBasedRoutingConfigRule
-   */
-  public $matchedRule;
   protected $matchedRuleType = LearningGenaiRootScoreBasedRoutingConfigRule::class;
   protected $matchedRuleDataType = '';
-  /**
-   * @var LearningGenaiRootScore
-   */
-  public $score;
   protected $scoreType = LearningGenaiRootScore::class;
   protected $scoreDataType = '';
   /**

@@ -27,10 +27,6 @@ class LearningGenaiRecitationSegmentResult extends \Google\Model
    * @var string
    */
   public $displayAttributionMessage;
-  /**
-   * @var LearningGenaiRecitationDocAttribution
-   */
-  public $docAttribution;
   protected $docAttributionType = LearningGenaiRecitationDocAttribution::class;
   protected $docAttributionDataType = '';
   /**

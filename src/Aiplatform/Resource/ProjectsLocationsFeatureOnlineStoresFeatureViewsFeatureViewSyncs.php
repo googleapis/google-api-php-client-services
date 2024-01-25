@@ -39,6 +39,7 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViewsFeatureViewSyncs extends \
    * c}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1FeatureViewSync
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -73,6 +74,7 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViewsFeatureViewSyncs extends \
    * to FeatureOnlineStoreAdminService.ListFeatureViewSyncs must match the call
    * that provided the page token.
    * @return GoogleCloudAiplatformV1ListFeatureViewSyncsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsFeatureOnlineStoresFeatureViewsFeatureViewSyncs($parent, $optParams = [])
   {

@@ -24,10 +24,6 @@ class LearningGenaiRootSimilarityTakedownResult extends \Google\Collection
    * @var bool
    */
   public $allowed;
-  /**
-   * @var LearningGenaiRootScoredSimilarityTakedownPhrase[]
-   */
-  public $scoredPhrases;
   protected $scoredPhrasesType = LearningGenaiRootScoredSimilarityTakedownPhrase::class;
   protected $scoredPhrasesDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootGroundingMetadata extends \Google\Collection
 {
   protected $collection_key = 'searchQueries';
-  /**
-   * @var LearningGenaiRootGroundingMetadataCitation[]
-   */
-  public $citations;
   protected $citationsType = LearningGenaiRootGroundingMetadataCitation::class;
   protected $citationsDataType = 'array';
   /**

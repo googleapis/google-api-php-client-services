@@ -27,10 +27,6 @@ class NlpSaftLanguageSpan extends \Google\Model
    * @var string
    */
   public $languageCode;
-  /**
-   * @var NlpSaftLangIdLocalesResult
-   */
-  public $locales;
   protected $localesType = NlpSaftLangIdLocalesResult::class;
   protected $localesDataType = '';
   /**

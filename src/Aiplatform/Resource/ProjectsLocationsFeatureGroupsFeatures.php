@@ -48,6 +48,7 @@ class ProjectsLocationsFeatureGroupsFeatures extends \Google\Service\Resource
    * character cannot be a number. The value must be unique within an
    * EntityType/FeatureGroup.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1Feature $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsLocationsFeatureGroupsFeatures extends \Google\Service\Resource
    * n}/featureGroups/{feature_group}/features/{feature}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -81,6 +83,7 @@ class ProjectsLocationsFeatureGroupsFeatures extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/featureGroups/{feature_group}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1Feature
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -132,6 +135,7 @@ class ProjectsLocationsFeatureGroupsFeatures extends \Google\Service\Resource
    * page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListFeaturesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsFeatureGroupsFeatures($parent, $optParams = [])
   {
@@ -161,6 +165,7 @@ class ProjectsLocationsFeatureGroupsFeatures extends \Google\Service\Resource
    * `description` * `labels` * `disable_monitoring` (Not supported for
    * FeatureRegistry Feature)
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1Feature $postBody, $optParams = [])
   {

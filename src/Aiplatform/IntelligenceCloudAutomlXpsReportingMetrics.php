@@ -24,10 +24,6 @@ class IntelligenceCloudAutomlXpsReportingMetrics extends \Google\Collection
    * @var string
    */
   public $effectiveTrainingDuration;
-  /**
-   * @var IntelligenceCloudAutomlXpsMetricEntry[]
-   */
-  public $metricEntries;
   protected $metricEntriesType = IntelligenceCloudAutomlXpsMetricEntry::class;
   protected $metricEntriesDataType = 'array';
 

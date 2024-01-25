@@ -51,6 +51,7 @@ class ProjectsLocationsHyperparameterTuningJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CancelHyperparameterTuningJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudAiplatformV1CancelHyperparameterTuningJobRequest $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ProjectsLocationsHyperparameterTuningJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1HyperparameterTuningJob $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1HyperparameterTuningJob
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1HyperparameterTuningJob $postBody, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsHyperparameterTuningJobs extends \Google\Service\Resource
    * rparameterTuningJobs/{hyperparameter_tuning_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsLocationsHyperparameterTuningJobs extends \Google\Service\Resource
    * ngJobs/{hyperparameter_tuning_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1HyperparameterTuningJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -129,6 +133,7 @@ class ProjectsLocationsHyperparameterTuningJobs extends \Google\Service\Resource
    * JobService.ListHyperparameterTuningJobs call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListHyperparameterTuningJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsHyperparameterTuningJobs($parent, $optParams = [])
   {

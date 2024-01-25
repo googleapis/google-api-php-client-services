@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1UpdateExplanationDatasetRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1Examples
-   */
-  public $examples;
   protected $examplesType = GoogleCloudAiplatformV1Examples::class;
   protected $examplesDataType = '';
 

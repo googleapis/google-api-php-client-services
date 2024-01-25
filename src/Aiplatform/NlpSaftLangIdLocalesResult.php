@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class NlpSaftLangIdLocalesResult extends \Google\Collection
 {
   protected $collection_key = 'predictions';
-  /**
-   * @var NlpSaftLangIdLocalesResultLocale[]
-   */
-  public $predictions;
   protected $predictionsType = NlpSaftLangIdLocalesResultLocale::class;
   protected $predictionsDataType = 'array';
 

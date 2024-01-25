@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootClassifierState extends \Google\Collection
 {
   protected $collection_key = 'metricOutput';
-  /**
-   * @var LearningGenaiRootDataProviderOutput[]
-   */
-  public $dataProviderOutput;
   protected $dataProviderOutputType = LearningGenaiRootDataProviderOutput::class;
   protected $dataProviderOutputDataType = 'array';
-  /**
-   * @var LearningGenaiRootMetricOutput[]
-   */
-  public $metricOutput;
   protected $metricOutputType = LearningGenaiRootMetricOutput::class;
   protected $metricOutputDataType = 'array';
 

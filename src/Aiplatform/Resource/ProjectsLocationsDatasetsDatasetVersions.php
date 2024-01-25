@@ -39,6 +39,7 @@ class ProjectsLocationsDatasetsDatasetVersions extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1DatasetVersion $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1DatasetVersion $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class ProjectsLocationsDatasetsDatasetVersions extends \Google\Service\Resource
    * atasetVersions/{dataset_version}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -71,6 +73,7 @@ class ProjectsLocationsDatasetsDatasetVersions extends \Google\Service\Resource
    *
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1DatasetVersion
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -94,6 +97,7 @@ class ProjectsLocationsDatasetsDatasetVersions extends \Google\Service\Resource
    * @opt_param string pageToken Optional. The standard list page token.
    * @opt_param string readMask Optional. Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListDatasetVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsDatasetVersions($parent, $optParams = [])
   {
@@ -109,6 +113,7 @@ class ProjectsLocationsDatasetsDatasetVersions extends \Google\Service\Resource
    * rsions/{dataset_version}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function restore($name, $optParams = [])
   {

@@ -20,20 +20,12 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRecitationRecitationResult extends \Google\Collection
 {
   protected $collection_key = 'trainingSegmentResults';
-  /**
-   * @var LearningGenaiRecitationSegmentResult[]
-   */
-  public $dynamicSegmentResults;
   protected $dynamicSegmentResultsType = LearningGenaiRecitationSegmentResult::class;
   protected $dynamicSegmentResultsDataType = 'array';
   /**
    * @var string
    */
   public $recitationAction;
-  /**
-   * @var LearningGenaiRecitationSegmentResult[]
-   */
-  public $trainingSegmentResults;
   protected $trainingSegmentResultsType = LearningGenaiRecitationSegmentResult::class;
   protected $trainingSegmentResultsDataType = 'array';
 

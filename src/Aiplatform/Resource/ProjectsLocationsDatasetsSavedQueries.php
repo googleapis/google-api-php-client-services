@@ -38,6 +38,7 @@ class ProjectsLocationsDatasetsSavedQueries extends \Google\Service\Resource
    * ies/{saved_query}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsDatasetsSavedQueries extends \Google\Service\Resource
    * @opt_param string pageToken The standard list page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListSavedQueriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDatasetsSavedQueries($parent, $optParams = [])
   {

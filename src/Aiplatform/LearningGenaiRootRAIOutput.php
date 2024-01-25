@@ -23,10 +23,6 @@ class LearningGenaiRootRAIOutput extends \Google\Model
    * @var bool
    */
   public $allowed;
-  /**
-   * @var LearningGenaiRootHarm
-   */
-  public $harm;
   protected $harmType = LearningGenaiRootHarm::class;
   protected $harmDataType = '';
   /**

@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootRoutingDecisionMetadataTokenLengthBased extends \Google\Collection
 {
   protected $collection_key = 'modelMaxTokenMetadata';
-  /**
-   * @var LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMetadata[]
-   */
-  public $modelInputTokenMetadata;
   protected $modelInputTokenMetadataType = LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMetadata::class;
   protected $modelInputTokenMetadataDataType = 'array';
-  /**
-   * @var LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelMaxTokenMetadata[]
-   */
-  public $modelMaxTokenMetadata;
   protected $modelMaxTokenMetadataType = LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelMaxTokenMetadata::class;
   protected $modelMaxTokenMetadataDataType = 'array';
 

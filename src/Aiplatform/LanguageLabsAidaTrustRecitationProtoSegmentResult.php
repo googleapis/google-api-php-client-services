@@ -27,10 +27,6 @@ class LanguageLabsAidaTrustRecitationProtoSegmentResult extends \Google\Model
    * @var string
    */
   public $displayAttributionMessage;
-  /**
-   * @var LanguageLabsAidaTrustRecitationProtoDocAttribution
-   */
-  public $docAttribution;
   protected $docAttributionType = LanguageLabsAidaTrustRecitationProtoDocAttribution::class;
   protected $docAttributionDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootToxicityResult extends \Google\Collection
 {
   protected $collection_key = 'signals';
-  /**
-   * @var LearningGenaiRootToxicitySignal[]
-   */
-  public $signals;
   protected $signalsType = LearningGenaiRootToxicitySignal::class;
   protected $signalsDataType = 'array';
 

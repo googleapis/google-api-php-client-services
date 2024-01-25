@@ -23,10 +23,6 @@ class LearningGenaiRootFilterMetadata extends \Google\Model
    * @var string
    */
   public $confidence;
-  /**
-   * @var LearningGenaiRootFilterMetadataFilterDebugInfo
-   */
-  public $debugInfo;
   protected $debugInfoType = LearningGenaiRootFilterMetadataFilterDebugInfo::class;
   protected $debugInfoDataType = '';
   /**

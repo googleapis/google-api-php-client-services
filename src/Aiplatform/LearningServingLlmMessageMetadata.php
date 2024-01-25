@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class LearningServingLlmMessageMetadata extends \Google\Collection
 {
   protected $collection_key = 'translatedUserPrompts';
-  /**
-   * @var LearningGenaiRootClassifierOutputSummary
-   */
-  public $classifierSummary;
   protected $classifierSummaryType = LearningGenaiRootClassifierOutputSummary::class;
   protected $classifierSummaryDataType = '';
   /**
@@ -34,36 +30,20 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
    * @var bool
    */
   public $deleted;
-  /**
-   * @var LearningGenaiRootFilterMetadata[]
-   */
-  public $filterMeta;
   protected $filterMetaType = LearningGenaiRootFilterMetadata::class;
   protected $filterMetaDataType = 'array';
-  /**
-   * @var LearningGenaiRootScore
-   */
-  public $finalMessageScore;
   protected $finalMessageScoreType = LearningGenaiRootScore::class;
   protected $finalMessageScoreDataType = '';
   /**
    * @var string
    */
   public $finishReason;
-  /**
-   * @var LearningGenaiRootGroundingMetadata
-   */
-  public $groundingMetadata;
   protected $groundingMetadataType = LearningGenaiRootGroundingMetadata::class;
   protected $groundingMetadataDataType = '';
   /**
    * @var bool
    */
   public $isFallback;
-  /**
-   * @var NlpSaftLangIdResult
-   */
-  public $langidResult;
   protected $langidResultType = NlpSaftLangIdResult::class;
   protected $langidResultDataType = '';
   /**
@@ -82,26 +62,14 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
    * @var int
    */
   public $perStreamDecodedTokenCount;
-  /**
-   * @var LearningGenaiRootRAIOutput[]
-   */
-  public $raiOutputs;
   protected $raiOutputsType = LearningGenaiRootRAIOutput::class;
   protected $raiOutputsDataType = 'array';
-  /**
-   * @var LearningGenaiRecitationRecitationResult
-   */
-  public $recitationResult;
   protected $recitationResultType = LearningGenaiRecitationRecitationResult::class;
   protected $recitationResultDataType = '';
   /**
    * @var int
    */
   public $returnTokenCount;
-  /**
-   * @var LearningGenaiRootScore[]
-   */
-  public $scores;
   protected $scoresType = LearningGenaiRootScore::class;
   protected $scoresDataType = 'array';
   /**
@@ -116,10 +84,6 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
    * @var string[]
    */
   public $translatedUserPrompts;
-  /**
-   * @var CloudAiNlLlmProtoServiceRaiResult
-   */
-  public $vertexRaiResult;
   protected $vertexRaiResultType = CloudAiNlLlmProtoServiceRaiResult::class;
   protected $vertexRaiResultDataType = '';
 

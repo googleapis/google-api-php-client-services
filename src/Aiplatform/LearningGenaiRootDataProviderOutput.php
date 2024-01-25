@@ -23,10 +23,6 @@ class LearningGenaiRootDataProviderOutput extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var UtilStatusProto
-   */
-  public $status;
   protected $statusType = UtilStatusProto::class;
   protected $statusDataType = '';
 

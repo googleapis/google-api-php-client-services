@@ -24,16 +24,8 @@ class NlpSaftLangIdResult extends \Google\Collection
    * @var string
    */
   public $modelVersion;
-  /**
-   * @var NlpSaftLanguageSpan[]
-   */
-  public $predictions;
   protected $predictionsType = NlpSaftLanguageSpan::class;
   protected $predictionsDataType = 'array';
-  /**
-   * @var NlpSaftLanguageSpanSequence[]
-   */
-  public $spanPredictions;
   protected $spanPredictionsType = NlpSaftLanguageSpanSequence::class;
   protected $spanPredictionsDataType = 'array';
 

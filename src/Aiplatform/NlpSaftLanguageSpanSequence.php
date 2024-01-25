@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class NlpSaftLanguageSpanSequence extends \Google\Collection
 {
   protected $collection_key = 'languageSpans';
-  /**
-   * @var NlpSaftLanguageSpan[]
-   */
-  public $languageSpans;
   protected $languageSpansType = NlpSaftLanguageSpan::class;
   protected $languageSpansDataType = 'array';
   /**

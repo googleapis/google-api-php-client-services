@@ -107,10 +107,6 @@ class LanguageLabsAidaTrustRecitationProtoDocAttribution extends \Google\Model
    * @var string
    */
   public $podcastUtteranceId;
-  /**
-   * @var GoogleTypeDate
-   */
-  public $publicationDate;
   protected $publicationDateType = GoogleTypeDate::class;
   protected $publicationDateDataType = '';
   public $qualityScoreExperimentOnly;

@@ -20,22 +20,10 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootClassifierOutput extends \Google\Collection
 {
   protected $collection_key = 'ruleOutputs';
-  /**
-   * @var LearningGenaiRootRuleOutput
-   */
-  public $ruleOutput;
   protected $ruleOutputType = LearningGenaiRootRuleOutput::class;
   protected $ruleOutputDataType = '';
-  /**
-   * @var LearningGenaiRootRuleOutput[]
-   */
-  public $ruleOutputs;
   protected $ruleOutputsType = LearningGenaiRootRuleOutput::class;
   protected $ruleOutputsDataType = 'array';
-  /**
-   * @var LearningGenaiRootClassifierState
-   */
-  public $state;
   protected $stateType = LearningGenaiRootClassifierState::class;
   protected $stateDataType = '';
 

@@ -48,6 +48,7 @@ class ProjectsLocationsCustomJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CancelCustomJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudAiplatformV1CancelCustomJobRequest $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsLocationsCustomJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CustomJob $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1CustomJob
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1CustomJob $postBody, $optParams = [])
   {
@@ -79,6 +81,7 @@ class ProjectsLocationsCustomJobs extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/customJobs/{custom_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -93,6 +96,7 @@ class ProjectsLocationsCustomJobs extends \Google\Service\Resource
    * `projects/{project}/locations/{location}/customJobs/{custom_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1CustomJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -123,6 +127,7 @@ class ProjectsLocationsCustomJobs extends \Google\Service\Resource
    * JobService.ListCustomJobs call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListCustomJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCustomJobs($parent, $optParams = [])
   {

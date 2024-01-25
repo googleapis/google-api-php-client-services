@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootInternalMetadata extends \Google\Collection
 {
   protected $collection_key = 'scoredTokens';
-  /**
-   * @var LearningGenaiRootScoredToken[]
-   */
-  public $scoredTokens;
   protected $scoredTokensType = LearningGenaiRootScoredToken::class;
   protected $scoredTokensDataType = 'array';
 

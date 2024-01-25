@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class LearningGenaiRootTokensAndLogProbPerDecodingStep extends \Google\Collection
 {
   protected $collection_key = 'topCandidates';
-  /**
-   * @var LearningGenaiRootTokensAndLogProbPerDecodingStepCandidate[]
-   */
-  public $chosenCandidates;
   protected $chosenCandidatesType = LearningGenaiRootTokensAndLogProbPerDecodingStepCandidate::class;
   protected $chosenCandidatesDataType = 'array';
-  /**
-   * @var LearningGenaiRootTokensAndLogProbPerDecodingStepTopCandidates[]
-   */
-  public $topCandidates;
   protected $topCandidatesType = LearningGenaiRootTokensAndLogProbPerDecodingStepTopCandidates::class;
   protected $topCandidatesDataType = 'array';
 

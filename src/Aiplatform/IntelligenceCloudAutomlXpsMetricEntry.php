@@ -33,10 +33,6 @@ class IntelligenceCloudAutomlXpsMetricEntry extends \Google\Collection
    * @var string
    */
   public $metricName;
-  /**
-   * @var IntelligenceCloudAutomlXpsMetricEntryLabel[]
-   */
-  public $systemLabels;
   protected $systemLabelsType = IntelligenceCloudAutomlXpsMetricEntryLabel::class;
   protected $systemLabelsDataType = 'array';
 

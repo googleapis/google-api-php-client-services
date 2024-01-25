@@ -19,28 +19,12 @@ namespace Google\Service\Aiplatform;
 
 class LearningGenaiRootScore extends \Google\Model
 {
-  /**
-   * @var LearningGenaiRootCalculationType
-   */
-  public $calculationType;
   protected $calculationTypeType = LearningGenaiRootCalculationType::class;
   protected $calculationTypeDataType = '';
-  /**
-   * @var LearningGenaiRootInternalMetadata
-   */
-  public $internalMetadata;
   protected $internalMetadataType = LearningGenaiRootInternalMetadata::class;
   protected $internalMetadataDataType = '';
-  /**
-   * @var LearningGenaiRootThresholdType
-   */
-  public $thresholdType;
   protected $thresholdTypeType = LearningGenaiRootThresholdType::class;
   protected $thresholdTypeDataType = '';
-  /**
-   * @var LearningGenaiRootTokensAndLogProbPerDecodingStep
-   */
-  public $tokensAndLogprobPerDecodingStep;
   protected $tokensAndLogprobPerDecodingStepType = LearningGenaiRootTokensAndLogProbPerDecodingStep::class;
   protected $tokensAndLogprobPerDecodingStepDataType = '';
   public $value;

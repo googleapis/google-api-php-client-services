@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1WriteFeatureValuesPayload extends \Google\Model
    * @var string
    */
   public $entityId;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureValue[]
-   */
-  public $featureValues;
   protected $featureValuesType = GoogleCloudAiplatformV1FeatureValue::class;
   protected $featureValuesDataType = 'map';
 

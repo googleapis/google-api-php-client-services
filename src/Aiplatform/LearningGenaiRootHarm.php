@@ -31,16 +31,8 @@ class LearningGenaiRootHarm extends \Google\Model
    * @var bool
    */
   public $fringe;
-  /**
-   * @var LearningGenaiRootHarmGrailImageHarmType
-   */
-  public $grailImageHarmType;
   protected $grailImageHarmTypeType = LearningGenaiRootHarmGrailImageHarmType::class;
   protected $grailImageHarmTypeDataType = '';
-  /**
-   * @var LearningGenaiRootHarmGrailTextHarmType
-   */
-  public $grailTextHarmType;
   protected $grailTextHarmTypeType = LearningGenaiRootHarmGrailTextHarmType::class;
   protected $grailTextHarmTypeDataType = '';
   /**
@@ -63,16 +55,8 @@ class LearningGenaiRootHarm extends \Google\Model
    * @var bool
    */
   public $pqc;
-  /**
-   * @var LearningGenaiRootHarmSafetyCatCategories
-   */
-  public $safetycat;
   protected $safetycatType = LearningGenaiRootHarmSafetyCatCategories::class;
   protected $safetycatDataType = '';
-  /**
-   * @var LearningGenaiRootHarmSpiiFilter
-   */
-  public $spii;
   protected $spiiType = LearningGenaiRootHarmSpiiFilter::class;
   protected $spiiDataType = '';
   public $threshold;

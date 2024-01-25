@@ -20,20 +20,12 @@ namespace Google\Service\Aiplatform;
 class LanguageLabsAidaTrustRecitationProtoRecitationResult extends \Google\Collection
 {
   protected $collection_key = 'trainingSegmentResults';
-  /**
-   * @var LanguageLabsAidaTrustRecitationProtoSegmentResult[]
-   */
-  public $dynamicSegmentResults;
   protected $dynamicSegmentResultsType = LanguageLabsAidaTrustRecitationProtoSegmentResult::class;
   protected $dynamicSegmentResultsDataType = 'array';
   /**
    * @var string
    */
   public $recitationAction;
-  /**
-   * @var LanguageLabsAidaTrustRecitationProtoSegmentResult[]
-   */
-  public $trainingSegmentResults;
   protected $trainingSegmentResultsType = LanguageLabsAidaTrustRecitationProtoSegmentResult::class;
   protected $trainingSegmentResultsDataType = 'array';
 

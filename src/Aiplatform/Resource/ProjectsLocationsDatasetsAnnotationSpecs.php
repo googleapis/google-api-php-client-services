@@ -39,6 +39,7 @@ class ProjectsLocationsDatasetsAnnotationSpecs extends \Google\Service\Resource
    *
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1AnnotationSpec
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {

@@ -57,6 +57,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * first character cannot be a number. The value must be unique within a
    * featurestore.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1EntityType $postBody, $optParams = [])
   {
@@ -77,6 +78,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * also be deleted. (Otherwise, the request will only work if the EntityType has
    * no Features.)
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -101,6 +103,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1DeleteFeatureValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function deleteFeatureValues($entityType, GoogleCloudAiplatformV1DeleteFeatureValuesRequest $postBody, $optParams = [])
   {
@@ -118,6 +121,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ExportFeatureValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function exportFeatureValues($entityType, GoogleCloudAiplatformV1ExportFeatureValuesRequest $postBody, $optParams = [])
   {
@@ -133,6 +137,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * es/{entity_type}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1EntityType
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -163,6 +168,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -193,6 +199,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ImportFeatureValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function importFeatureValues($entityType, GoogleCloudAiplatformV1ImportFeatureValuesRequest $postBody, $optParams = [])
   {
@@ -234,6 +241,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * page token.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListEntityTypesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsFeaturestoresEntityTypes($parent, $optParams = [])
   {
@@ -268,6 +276,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * `monitoring_config.categorical_threshold_config.value` *
    * `offline_storage_ttl_days`
    * @return GoogleCloudAiplatformV1EntityType
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudAiplatformV1EntityType $postBody, $optParams = [])
   {
@@ -288,6 +297,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1ReadFeatureValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ReadFeatureValuesResponse
+   * @throws \Google\Service\Exception
    */
   public function readFeatureValues($entityType, GoogleCloudAiplatformV1ReadFeatureValuesRequest $postBody, $optParams = [])
   {
@@ -307,6 +317,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleIamV1SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, GoogleIamV1SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -326,6 +337,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1StreamingReadFeatureValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1ReadFeatureValuesResponse
+   * @throws \Google\Service\Exception
    */
   public function streamingReadFeatureValues($entityType, GoogleCloudAiplatformV1StreamingReadFeatureValuesRequest $postBody, $optParams = [])
   {
@@ -352,6 +364,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * allowed. For more information see [IAM
    * Overview](https://cloud.google.com/iam/docs/overview#permissions).
    * @return GoogleIamV1TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, $optParams = [])
   {
@@ -373,6 +386,7 @@ class ProjectsLocationsFeaturestoresEntityTypes extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1WriteFeatureValuesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1WriteFeatureValuesResponse
+   * @throws \Google\Service\Exception
    */
   public function writeFeatureValues($entityType, GoogleCloudAiplatformV1WriteFeatureValuesRequest $postBody, $optParams = [])
   {

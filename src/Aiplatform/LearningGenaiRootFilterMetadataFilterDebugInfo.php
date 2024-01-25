@@ -19,56 +19,24 @@ namespace Google\Service\Aiplatform;
 
 class LearningGenaiRootFilterMetadataFilterDebugInfo extends \Google\Model
 {
-  /**
-   * @var LearningGenaiRootClassifierOutput
-   */
-  public $classifierOutput;
   protected $classifierOutputType = LearningGenaiRootClassifierOutput::class;
   protected $classifierOutputDataType = '';
   /**
    * @var string
    */
   public $defaultMetadata;
-  /**
-   * @var LearningGenaiRootLanguageFilterResult
-   */
-  public $languageFilterResult;
   protected $languageFilterResultType = LearningGenaiRootLanguageFilterResult::class;
   protected $languageFilterResultDataType = '';
-  /**
-   * @var LearningGenaiRootRAIOutput
-   */
-  public $raiOutput;
   protected $raiOutputType = LearningGenaiRootRAIOutput::class;
   protected $raiOutputDataType = '';
-  /**
-   * @var CloudAiNlLlmProtoServiceRaiResult
-   */
-  public $raiResult;
   protected $raiResultType = CloudAiNlLlmProtoServiceRaiResult::class;
   protected $raiResultDataType = '';
-  /**
-   * @var CloudAiNlLlmProtoServiceRaiSignal
-   */
-  public $raiSignal;
   protected $raiSignalType = CloudAiNlLlmProtoServiceRaiSignal::class;
   protected $raiSignalDataType = '';
-  /**
-   * @var LanguageLabsAidaTrustRecitationProtoStreamRecitationResult
-   */
-  public $streamRecitationResult;
   protected $streamRecitationResultType = LanguageLabsAidaTrustRecitationProtoStreamRecitationResult::class;
   protected $streamRecitationResultDataType = '';
-  /**
-   * @var LearningGenaiRootTakedownResult
-   */
-  public $takedownResult;
   protected $takedownResultType = LearningGenaiRootTakedownResult::class;
   protected $takedownResultDataType = '';
-  /**
-   * @var LearningGenaiRootToxicityResult
-   */
-  public $toxicityResult;
   protected $toxicityResultType = LearningGenaiRootToxicityResult::class;
   protected $toxicityResultDataType = '';
 

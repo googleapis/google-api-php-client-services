@@ -49,6 +49,7 @@ class ProjectsLocationsBatchPredictionJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1CancelBatchPredictionJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudAiplatformV1CancelBatchPredictionJobRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsBatchPredictionJobs extends \Google\Service\Resource
    * @param GoogleCloudAiplatformV1BatchPredictionJob $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1BatchPredictionJob
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudAiplatformV1BatchPredictionJob $postBody, $optParams = [])
   {
@@ -81,6 +83,7 @@ class ProjectsLocationsBatchPredictionJobs extends \Google\Service\Resource
    * obs/{batch_prediction_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsBatchPredictionJobs extends \Google\Service\Resource
    * rediction_job}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudAiplatformV1BatchPredictionJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -128,6 +132,7 @@ class ProjectsLocationsBatchPredictionJobs extends \Google\Service\Resource
    * JobService.ListBatchPredictionJobs call.
    * @opt_param string readMask Mask specifying which fields to read.
    * @return GoogleCloudAiplatformV1ListBatchPredictionJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsBatchPredictionJobs($parent, $optParams = [])
   {

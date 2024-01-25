@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class LearningGenaiRootScoredSimilarityTakedownPhrase extends \Google\Model
 {
-  /**
-   * @var LearningGenaiRootSimilarityTakedownPhrase
-   */
-  public $phrase;
   protected $phraseType = LearningGenaiRootSimilarityTakedownPhrase::class;
   protected $phraseDataType = '';
   /**
