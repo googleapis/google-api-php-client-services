@@ -19,10 +19,6 @@ namespace Google\Service\HomeGraphService;
 
 class QueryRequestInput extends \Google\Model
 {
-  /**
-   * @var QueryRequestPayload
-   */
-  public $payload;
   protected $payloadType = QueryRequestPayload::class;
   protected $payloadDataType = '';
 
