@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureNoiseSigma extends \Google\Collection
 {
   protected $collection_key = 'noiseSigma';
-  /**
-   * @var GoogleCloudAiplatformV1FeatureNoiseSigmaNoiseSigmaForFeature[]
-   */
-  public $noiseSigma;
   protected $noiseSigmaType = GoogleCloudAiplatformV1FeatureNoiseSigmaNoiseSigmaForFeature::class;
   protected $noiseSigmaDataType = 'array';
 

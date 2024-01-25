@@ -31,22 +31,10 @@ class GoogleCloudAiplatformV1ExportDataConfig extends \Google\Model
    * @var string
    */
   public $exportUse;
-  /**
-   * @var GoogleCloudAiplatformV1ExportFilterSplit
-   */
-  public $filterSplit;
   protected $filterSplitType = GoogleCloudAiplatformV1ExportFilterSplit::class;
   protected $filterSplitDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1ExportFractionSplit
-   */
-  public $fractionSplit;
   protected $fractionSplitType = GoogleCloudAiplatformV1ExportFractionSplit::class;
   protected $fractionSplitDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1GcsDestination
-   */
-  public $gcsDestination;
   protected $gcsDestinationType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureSelector extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1IdMatcher
-   */
-  public $idMatcher;
   protected $idMatcherType = GoogleCloudAiplatformV1IdMatcher::class;
   protected $idMatcherDataType = '';
 

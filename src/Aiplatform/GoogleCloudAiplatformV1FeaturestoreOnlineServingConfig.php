@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1FeaturestoreOnlineServingConfig extends \Google\Mod
    * @var int
    */
   public $fixedNodeCount;
-  /**
-   * @var GoogleCloudAiplatformV1FeaturestoreOnlineServingConfigScaling
-   */
-  public $scaling;
   protected $scalingType = GoogleCloudAiplatformV1FeaturestoreOnlineServingConfigScaling::class;
   protected $scalingDataType = '';
 

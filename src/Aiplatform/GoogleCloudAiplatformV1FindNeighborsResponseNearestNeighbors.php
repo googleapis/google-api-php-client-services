@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1FindNeighborsResponseNearestNeighbors extends \Goog
    * @var string
    */
   public $id;
-  /**
-   * @var GoogleCloudAiplatformV1FindNeighborsResponseNeighbor[]
-   */
-  public $neighbors;
   protected $neighborsType = GoogleCloudAiplatformV1FindNeighborsResponseNeighbor::class;
   protected $neighborsDataType = 'array';
 

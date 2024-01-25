@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1ExportDataOperationMetadata extends \Google\Model
    * @var string
    */
   public $gcsOutputDirectory;
-  /**
-   * @var GoogleCloudAiplatformV1GenericOperationMetadata
-   */
-  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
 

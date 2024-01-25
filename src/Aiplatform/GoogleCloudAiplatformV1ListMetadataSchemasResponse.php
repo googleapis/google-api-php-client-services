@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListMetadataSchemasResponse extends \Google\Collection
 {
   protected $collection_key = 'metadataSchemas';
-  /**
-   * @var GoogleCloudAiplatformV1MetadataSchema[]
-   */
-  public $metadataSchemas;
   protected $metadataSchemasType = GoogleCloudAiplatformV1MetadataSchema::class;
   protected $metadataSchemasDataType = 'array';
   /**

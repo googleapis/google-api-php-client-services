@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExportModelRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ExportModelRequestOutputConfig
-   */
-  public $outputConfig;
   protected $outputConfigType = GoogleCloudAiplatformV1ExportModelRequestOutputConfig::class;
   protected $outputConfigDataType = '';
 

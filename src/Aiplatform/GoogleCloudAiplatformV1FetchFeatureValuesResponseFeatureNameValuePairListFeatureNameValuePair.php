@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1FetchFeatureValuesResponseFeatureNameValuePairListF
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureValue
-   */
-  public $value;
   protected $valueType = GoogleCloudAiplatformV1FeatureValue::class;
   protected $valueDataType = '';
 

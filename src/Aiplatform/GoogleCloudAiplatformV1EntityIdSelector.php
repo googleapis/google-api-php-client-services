@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EntityIdSelector extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1CsvSource
-   */
-  public $csvSource;
   protected $csvSourceType = GoogleCloudAiplatformV1CsvSource::class;
   protected $csvSourceDataType = '';
   /**

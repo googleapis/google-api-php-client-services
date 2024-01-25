@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureView extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1FeatureViewBigQuerySource
-   */
-  public $bigQuerySource;
   protected $bigQuerySourceType = GoogleCloudAiplatformV1FeatureViewBigQuerySource::class;
   protected $bigQuerySourceDataType = '';
   /**
@@ -33,10 +29,6 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
    * @var string
    */
   public $etag;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource
-   */
-  public $featureRegistrySource;
   protected $featureRegistrySourceType = GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource::class;
   protected $featureRegistrySourceDataType = '';
   /**
@@ -47,10 +39,6 @@ class GoogleCloudAiplatformV1FeatureView extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureViewSyncConfig
-   */
-  public $syncConfig;
   protected $syncConfigType = GoogleCloudAiplatformV1FeatureViewSyncConfig::class;
   protected $syncConfigDataType = '';
   /**

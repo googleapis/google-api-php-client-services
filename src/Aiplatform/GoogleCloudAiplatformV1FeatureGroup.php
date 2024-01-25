@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureGroup extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1FeatureGroupBigQuery
-   */
-  public $bigQuery;
   protected $bigQueryType = GoogleCloudAiplatformV1FeatureGroupBigQuery::class;
   protected $bigQueryDataType = '';
   /**

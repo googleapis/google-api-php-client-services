@@ -40,10 +40,6 @@ class GoogleCloudAiplatformV1Feature extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureMonitoringStatsAnomaly[]
-   */
-  public $monitoringStatsAnomalies;
   protected $monitoringStatsAnomaliesType = GoogleCloudAiplatformV1FeatureMonitoringStatsAnomaly::class;
   protected $monitoringStatsAnomaliesDataType = 'array';
   /**

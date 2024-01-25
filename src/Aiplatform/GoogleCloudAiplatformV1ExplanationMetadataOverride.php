@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ExplanationMetadataOverride extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ExplanationMetadataOverrideInputMetadataOverride[]
-   */
-  public $inputs;
   protected $inputsType = GoogleCloudAiplatformV1ExplanationMetadataOverrideInputMetadataOverride::class;
   protected $inputsDataType = 'map';
 

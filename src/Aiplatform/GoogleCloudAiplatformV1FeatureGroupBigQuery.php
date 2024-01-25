@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureGroupBigQuery extends \Google\Collection
 {
   protected $collection_key = 'entityIdColumns';
-  /**
-   * @var GoogleCloudAiplatformV1BigQuerySource
-   */
-  public $bigQuerySource;
   protected $bigQuerySourceType = GoogleCloudAiplatformV1BigQuerySource::class;
   protected $bigQuerySourceDataType = '';
   /**

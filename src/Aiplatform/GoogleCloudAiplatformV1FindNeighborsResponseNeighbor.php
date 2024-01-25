@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FindNeighborsResponseNeighbor extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1IndexDatapoint
-   */
-  public $datapoint;
   protected $datapointType = GoogleCloudAiplatformV1IndexDatapoint::class;
   protected $datapointDataType = '';
   public $distance;

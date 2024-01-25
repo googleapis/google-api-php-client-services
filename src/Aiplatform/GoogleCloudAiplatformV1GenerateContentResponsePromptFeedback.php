@@ -28,10 +28,6 @@ class GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback extends \Goog
    * @var string
    */
   public $blockReasonMessage;
-  /**
-   * @var GoogleCloudAiplatformV1SafetyRating[]
-   */
-  public $safetyRatings;
   protected $safetyRatingsType = GoogleCloudAiplatformV1SafetyRating::class;
   protected $safetyRatingsDataType = 'array';
 

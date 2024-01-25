@@ -20,22 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GenerateContentResponse extends \Google\Collection
 {
   protected $collection_key = 'candidates';
-  /**
-   * @var GoogleCloudAiplatformV1Candidate[]
-   */
-  public $candidates;
   protected $candidatesType = GoogleCloudAiplatformV1Candidate::class;
   protected $candidatesDataType = 'array';
-  /**
-   * @var GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback
-   */
-  public $promptFeedback;
   protected $promptFeedbackType = GoogleCloudAiplatformV1GenerateContentResponsePromptFeedback::class;
   protected $promptFeedbackDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata
-   */
-  public $usageMetadata;
   protected $usageMetadataType = GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata::class;
   protected $usageMetadataDataType = '';
 

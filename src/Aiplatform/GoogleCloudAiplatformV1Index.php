@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1Index extends \Google\Collection
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudAiplatformV1DeployedIndexRef[]
-   */
-  public $deployedIndexes;
   protected $deployedIndexesType = GoogleCloudAiplatformV1DeployedIndexRef::class;
   protected $deployedIndexesDataType = 'array';
   /**
@@ -38,20 +34,12 @@ class GoogleCloudAiplatformV1Index extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudAiplatformV1EncryptionSpec
-   */
-  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
    * @var string
    */
   public $etag;
-  /**
-   * @var GoogleCloudAiplatformV1IndexStats
-   */
-  public $indexStats;
   protected $indexStatsType = GoogleCloudAiplatformV1IndexStats::class;
   protected $indexStatsDataType = '';
   /**

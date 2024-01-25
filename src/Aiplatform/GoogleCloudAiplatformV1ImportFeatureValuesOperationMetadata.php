@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ImportFeatureValuesOperationMetadata extends \Googl
    * @var string[]
    */
   public $blockingOperationIds;
-  /**
-   * @var GoogleCloudAiplatformV1GenericOperationMetadata
-   */
-  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Examples extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ExamplesExampleGcsSource
-   */
-  public $exampleGcsSource;
   protected $exampleGcsSourceType = GoogleCloudAiplatformV1ExamplesExampleGcsSource::class;
   protected $exampleGcsSourceDataType = '';
   /**
@@ -33,10 +29,6 @@ class GoogleCloudAiplatformV1Examples extends \Google\Model
    * @var int
    */
   public $neighborCount;
-  /**
-   * @var GoogleCloudAiplatformV1Presets
-   */
-  public $presets;
   protected $presetsType = GoogleCloudAiplatformV1Presets::class;
   protected $presetsDataType = '';
 

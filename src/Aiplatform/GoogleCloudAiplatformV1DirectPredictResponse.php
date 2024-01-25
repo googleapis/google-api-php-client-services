@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1DirectPredictResponse extends \Google\Collection
 {
   protected $collection_key = 'outputs';
-  /**
-   * @var GoogleCloudAiplatformV1Tensor[]
-   */
-  public $outputs;
   protected $outputsType = GoogleCloudAiplatformV1Tensor::class;
   protected $outputsDataType = 'array';
-  /**
-   * @var GoogleCloudAiplatformV1Tensor
-   */
-  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1Tensor::class;
   protected $parametersDataType = '';
 

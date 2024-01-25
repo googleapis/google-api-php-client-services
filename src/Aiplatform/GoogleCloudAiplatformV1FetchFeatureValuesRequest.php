@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1FetchFeatureValuesRequest extends \Google\Model
    * @var string
    */
   public $dataFormat;
-  /**
-   * @var GoogleCloudAiplatformV1FeatureViewDataKey
-   */
-  public $dataKey;
   protected $dataKeyType = GoogleCloudAiplatformV1FeatureViewDataKey::class;
   protected $dataKeyDataType = '';
 

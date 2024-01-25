@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1ExamplesExampleGcsSource extends \Google\Model
    * @var string
    */
   public $dataFormat;
-  /**
-   * @var GoogleCloudAiplatformV1GcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1GcsSource::class;
   protected $gcsSourceDataType = '';
 

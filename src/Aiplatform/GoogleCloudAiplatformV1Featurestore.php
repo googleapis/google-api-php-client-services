@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1Featurestore extends \Google\Model
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudAiplatformV1EncryptionSpec
-   */
-  public $encryptionSpec;
   protected $encryptionSpecType = GoogleCloudAiplatformV1EncryptionSpec::class;
   protected $encryptionSpecDataType = '';
   /**
@@ -41,10 +37,6 @@ class GoogleCloudAiplatformV1Featurestore extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAiplatformV1FeaturestoreOnlineServingConfig
-   */
-  public $onlineServingConfig;
   protected $onlineServingConfigType = GoogleCloudAiplatformV1FeaturestoreOnlineServingConfig::class;
   protected $onlineServingConfigDataType = '';
   /**

@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1FunctionDeclaration extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAiplatformV1Schema
-   */
-  public $parameters;
   protected $parametersType = GoogleCloudAiplatformV1Schema::class;
   protected $parametersDataType = '';
 

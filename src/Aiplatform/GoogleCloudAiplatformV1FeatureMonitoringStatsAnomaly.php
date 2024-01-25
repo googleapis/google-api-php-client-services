@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureMonitoringStatsAnomaly extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1FeatureStatsAnomaly
-   */
-  public $featureStatsAnomaly;
   protected $featureStatsAnomalyType = GoogleCloudAiplatformV1FeatureStatsAnomaly::class;
   protected $featureStatsAnomalyDataType = '';
   /**

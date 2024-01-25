@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource extends \Google\Collection
 {
   protected $collection_key = 'featureGroups';
-  /**
-   * @var GoogleCloudAiplatformV1FeatureViewFeatureRegistrySourceFeatureGroup[]
-   */
-  public $featureGroups;
   protected $featureGroupsType = GoogleCloudAiplatformV1FeatureViewFeatureRegistrySourceFeatureGroup::class;
   protected $featureGroupsDataType = 'array';
 

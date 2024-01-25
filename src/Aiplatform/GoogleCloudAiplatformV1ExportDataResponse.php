@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ExportDataResponse extends \Google\Collection
 {
   protected $collection_key = 'exportedFiles';
-  /**
-   * @var GoogleCloudAiplatformV1ModelDataStats
-   */
-  public $dataStats;
   protected $dataStatsType = GoogleCloudAiplatformV1ModelDataStats::class;
   protected $dataStatsDataType = '';
   /**

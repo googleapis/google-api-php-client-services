@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ExplainResponse extends \Google\Collection
    * @var string
    */
   public $deployedModelId;
-  /**
-   * @var GoogleCloudAiplatformV1Explanation[]
-   */
-  public $explanations;
   protected $explanationsType = GoogleCloudAiplatformV1Explanation::class;
   protected $explanationsDataType = 'array';
   /**

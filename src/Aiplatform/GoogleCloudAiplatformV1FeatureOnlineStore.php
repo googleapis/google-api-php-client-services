@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureOnlineStore extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1FeatureOnlineStoreBigtable
-   */
-  public $bigtable;
   protected $bigtableType = GoogleCloudAiplatformV1FeatureOnlineStoreBigtable::class;
   protected $bigtableDataType = '';
   /**
