@@ -20,16 +20,8 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalMetalLbConfig extends \Google\Collection
 {
   protected $collection_key = 'addressPools';
-  /**
-   * @var BareMetalLoadBalancerAddressPool[]
-   */
-  public $addressPools;
   protected $addressPoolsType = BareMetalLoadBalancerAddressPool::class;
   protected $addressPoolsDataType = 'array';
-  /**
-   * @var BareMetalLoadBalancerNodePoolConfig
-   */
-  public $loadBalancerNodePoolConfig;
   protected $loadBalancerNodePoolConfigType = BareMetalLoadBalancerNodePoolConfig::class;
   protected $loadBalancerNodePoolConfigDataType = '';
 

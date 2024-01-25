@@ -28,10 +28,6 @@ class VmwareVsphereConfig extends \Google\Collection
    * @var string[]
    */
   public $hostGroups;
-  /**
-   * @var VmwareVsphereTag[]
-   */
-  public $tags;
   protected $tagsType = VmwareVsphereTag::class;
   protected $tagsDataType = 'array';
 

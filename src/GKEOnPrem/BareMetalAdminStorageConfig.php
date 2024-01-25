@@ -19,16 +19,8 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalAdminStorageConfig extends \Google\Model
 {
-  /**
-   * @var BareMetalLvpConfig
-   */
-  public $lvpNodeMountsConfig;
   protected $lvpNodeMountsConfigType = BareMetalLvpConfig::class;
   protected $lvpNodeMountsConfigDataType = '';
-  /**
-   * @var BareMetalLvpShareConfig
-   */
-  public $lvpShareConfig;
   protected $lvpShareConfigType = BareMetalLvpShareConfig::class;
   protected $lvpShareConfigDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\GKEOnPrem;
 class Authorization extends \Google\Collection
 {
   protected $collection_key = 'adminUsers';
-  /**
-   * @var ClusterUser[]
-   */
-  public $adminUsers;
   protected $adminUsersType = ClusterUser::class;
   protected $adminUsersDataType = 'array';
 

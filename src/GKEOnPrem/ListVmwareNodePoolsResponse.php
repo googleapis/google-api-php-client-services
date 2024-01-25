@@ -28,10 +28,6 @@ class ListVmwareNodePoolsResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var VmwareNodePool[]
-   */
-  public $vmwareNodePools;
   protected $vmwareNodePoolsType = VmwareNodePool::class;
   protected $vmwareNodePoolsDataType = 'array';
 

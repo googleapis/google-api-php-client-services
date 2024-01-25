@@ -20,16 +20,8 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalMachineDrainStatus extends \Google\Collection
 {
   protected $collection_key = 'drainingMachines';
-  /**
-   * @var BareMetalDrainedMachine[]
-   */
-  public $drainedMachines;
   protected $drainedMachinesType = BareMetalDrainedMachine::class;
   protected $drainedMachinesDataType = 'array';
-  /**
-   * @var BareMetalDrainingMachine[]
-   */
-  public $drainingMachines;
   protected $drainingMachinesType = BareMetalDrainingMachine::class;
   protected $drainingMachinesDataType = 'array';
 

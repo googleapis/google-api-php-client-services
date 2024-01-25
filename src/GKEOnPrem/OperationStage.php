@@ -24,10 +24,6 @@ class OperationStage extends \Google\Collection
    * @var string
    */
   public $endTime;
-  /**
-   * @var Metric[]
-   */
-  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
   /**

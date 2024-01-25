@@ -28,10 +28,6 @@ class ListVmwareClustersResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var VmwareCluster[]
-   */
-  public $vmwareClusters;
   protected $vmwareClustersType = VmwareCluster::class;
   protected $vmwareClustersDataType = 'array';
 

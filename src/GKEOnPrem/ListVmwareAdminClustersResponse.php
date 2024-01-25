@@ -28,10 +28,6 @@ class ListVmwareAdminClustersResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var VmwareAdminCluster[]
-   */
-  public $vmwareAdminClusters;
   protected $vmwareAdminClustersType = VmwareAdminCluster::class;
   protected $vmwareAdminClustersDataType = 'array';
 

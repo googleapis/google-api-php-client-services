@@ -20,22 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class VmwareNetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'serviceAddressCidrBlocks';
-  /**
-   * @var VmwareControlPlaneV2Config
-   */
-  public $controlPlaneV2Config;
   protected $controlPlaneV2ConfigType = VmwareControlPlaneV2Config::class;
   protected $controlPlaneV2ConfigDataType = '';
-  /**
-   * @var VmwareDhcpIpConfig
-   */
-  public $dhcpIpConfig;
   protected $dhcpIpConfigType = VmwareDhcpIpConfig::class;
   protected $dhcpIpConfigDataType = '';
-  /**
-   * @var VmwareHostConfig
-   */
-  public $hostConfig;
   protected $hostConfigType = VmwareHostConfig::class;
   protected $hostConfigDataType = '';
   /**
@@ -46,10 +34,6 @@ class VmwareNetworkConfig extends \Google\Collection
    * @var string[]
    */
   public $serviceAddressCidrBlocks;
-  /**
-   * @var VmwareStaticIpConfig
-   */
-  public $staticIpConfig;
   protected $staticIpConfigType = VmwareStaticIpConfig::class;
   protected $staticIpConfigDataType = '';
   /**

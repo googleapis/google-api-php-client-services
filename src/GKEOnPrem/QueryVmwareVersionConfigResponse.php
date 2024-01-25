@@ -20,10 +20,6 @@ namespace Google\Service\GKEOnPrem;
 class QueryVmwareVersionConfigResponse extends \Google\Collection
 {
   protected $collection_key = 'versions';
-  /**
-   * @var VmwareVersionInfo[]
-   */
-  public $versions;
   protected $versionsType = VmwareVersionInfo::class;
   protected $versionsDataType = 'array';
 

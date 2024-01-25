@@ -19,10 +19,6 @@ namespace Google\Service\GKEOnPrem;
 
 class BareMetalSecurityConfig extends \Google\Model
 {
-  /**
-   * @var Authorization
-   */
-  public $authorization;
   protected $authorizationType = Authorization::class;
   protected $authorizationDataType = '';
 

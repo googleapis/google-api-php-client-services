@@ -19,10 +19,6 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareControlPlaneNodeConfig extends \Google\Model
 {
-  /**
-   * @var VmwareAutoResizeConfig
-   */
-  public $autoResizeConfig;
   protected $autoResizeConfigType = VmwareAutoResizeConfig::class;
   protected $autoResizeConfigDataType = '';
   /**
@@ -37,10 +33,6 @@ class VmwareControlPlaneNodeConfig extends \Google\Model
    * @var string
    */
   public $replicas;
-  /**
-   * @var VmwareControlPlaneVsphereConfig
-   */
-  public $vsphereConfig;
   protected $vsphereConfigType = VmwareControlPlaneVsphereConfig::class;
   protected $vsphereConfigDataType = '';
 

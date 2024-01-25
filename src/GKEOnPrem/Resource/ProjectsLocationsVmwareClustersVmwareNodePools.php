@@ -54,6 +54,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * to be a UUID (or UUID-like: anything matching
    * /^[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}$/i).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, VmwareNodePool $postBody, $optParams = [])
   {
@@ -84,6 +85,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * @opt_param bool validateOnly If set, only validate the request, but do not
    * actually delete the node pool.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -99,6 +101,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * @param EnrollVmwareNodePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function enroll($parent, EnrollVmwareNodePoolRequest $postBody, $optParams = [])
   {
@@ -119,6 +122,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * `NODE_POOL_VIEW_UNSPECIFIED` is the same as `FULL', which returns the
    * complete node pool configuration details.
    * @return VmwareNodePool
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -150,6 +154,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -179,6 +184,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * `NODE_POOL_VIEW_UNSPECIFIED` is the same as `FULL', which returns the
    * complete node pool configuration details.
    * @return ListVmwareNodePoolsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsVmwareClustersVmwareNodePools($parent, $optParams = [])
   {
@@ -203,6 +209,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * @opt_param bool validateOnly Validate the request without actually doing any
    * updates.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, VmwareNodePool $postBody, $optParams = [])
   {
@@ -222,6 +229,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -244,6 +252,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -268,6 +277,7 @@ class ProjectsLocationsVmwareClustersVmwareNodePools extends \Google\Service\Res
    * @opt_param bool validateOnly If set, only validate the request, but do not
    * actually unenroll the node pool.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function unenroll($name, $optParams = [])
   {

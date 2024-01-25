@@ -19,10 +19,6 @@ namespace Google\Service\GKEOnPrem;
 
 class VmwareBundleConfig extends \Google\Model
 {
-  /**
-   * @var ResourceStatus
-   */
-  public $status;
   protected $statusType = ResourceStatus::class;
   protected $statusDataType = '';
   /**

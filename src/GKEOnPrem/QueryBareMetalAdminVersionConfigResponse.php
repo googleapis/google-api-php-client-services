@@ -20,10 +20,6 @@ namespace Google\Service\GKEOnPrem;
 class QueryBareMetalAdminVersionConfigResponse extends \Google\Collection
 {
   protected $collection_key = 'versions';
-  /**
-   * @var BareMetalVersionInfo[]
-   */
-  public $versions;
   protected $versionsType = BareMetalVersionInfo::class;
   protected $versionsDataType = 'array';
 

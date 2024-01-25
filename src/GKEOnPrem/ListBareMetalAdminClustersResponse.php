@@ -20,10 +20,6 @@ namespace Google\Service\GKEOnPrem;
 class ListBareMetalAdminClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var BareMetalAdminCluster[]
-   */
-  public $bareMetalAdminClusters;
   protected $bareMetalAdminClustersType = BareMetalAdminCluster::class;
   protected $bareMetalAdminClustersDataType = 'array';
   /**

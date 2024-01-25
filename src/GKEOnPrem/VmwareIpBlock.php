@@ -24,10 +24,6 @@ class VmwareIpBlock extends \Google\Collection
    * @var string
    */
   public $gateway;
-  /**
-   * @var VmwareHostIp[]
-   */
-  public $ips;
   protected $ipsType = VmwareHostIp::class;
   protected $ipsDataType = 'array';
   /**

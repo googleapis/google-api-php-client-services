@@ -20,10 +20,6 @@ namespace Google\Service\GKEOnPrem;
 class ListBareMetalNodePoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var BareMetalNodePool[]
-   */
-  public $bareMetalNodePools;
   protected $bareMetalNodePoolsType = BareMetalNodePool::class;
   protected $bareMetalNodePoolsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\GKEOnPrem;
 class OperationProgress extends \Google\Collection
 {
   protected $collection_key = 'stages';
-  /**
-   * @var OperationStage[]
-   */
-  public $stages;
   protected $stagesType = OperationStage::class;
   protected $stagesDataType = 'array';
 
