@@ -24,10 +24,6 @@ class Groups extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var Group[]
-   */
-  public $groups;
   protected $groupsType = Group::class;
   protected $groupsDataType = 'array';
   /**

@@ -20,26 +20,14 @@ namespace Google\Service\Reports;
 class Activity extends \Google\Collection
 {
   protected $collection_key = 'events';
-  /**
-   * @var ActivityActor
-   */
-  public $actor;
   protected $actorType = ActivityActor::class;
   protected $actorDataType = '';
   /**
    * @var string
    */
   public $etag;
-  /**
-   * @var ActivityEvents[]
-   */
-  public $events;
   protected $eventsType = ActivityEvents::class;
   protected $eventsDataType = 'array';
-  /**
-   * @var ActivityId
-   */
-  public $id;
   protected $idType = ActivityId::class;
   protected $idDataType = '';
   /**

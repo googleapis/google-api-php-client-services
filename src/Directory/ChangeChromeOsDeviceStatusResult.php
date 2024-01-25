@@ -23,16 +23,8 @@ class ChangeChromeOsDeviceStatusResult extends \Google\Model
    * @var string
    */
   public $deviceId;
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
-  /**
-   * @var ChangeChromeOsDeviceStatusSucceeded
-   */
-  public $response;
   protected $responseType = ChangeChromeOsDeviceStatusSucceeded::class;
   protected $responseDataType = '';
 

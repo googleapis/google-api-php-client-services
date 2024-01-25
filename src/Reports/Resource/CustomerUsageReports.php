@@ -62,6 +62,7 @@ class CustomerUsageReports extends \Google\Service\Resource
    * An example of an invalid request parameter is one that does not belong to the
    * application. If no parameters are requested, all parameters are returned.
    * @return UsageReports
+   * @throws \Google\Service\Exception
    */
   public function get($date, $optParams = [])
   {

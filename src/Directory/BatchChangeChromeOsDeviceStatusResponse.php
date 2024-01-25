@@ -20,10 +20,6 @@ namespace Google\Service\Directory;
 class BatchChangeChromeOsDeviceStatusResponse extends \Google\Collection
 {
   protected $collection_key = 'changeChromeOsDeviceStatusResults';
-  /**
-   * @var ChangeChromeOsDeviceStatusResult[]
-   */
-  public $changeChromeOsDeviceStatusResults;
   protected $changeChromeOsDeviceStatusResultsType = ChangeChromeOsDeviceStatusResult::class;
   protected $changeChromeOsDeviceStatusResultsDataType = 'array';
 

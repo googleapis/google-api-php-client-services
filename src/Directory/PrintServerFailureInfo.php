@@ -27,10 +27,6 @@ class PrintServerFailureInfo extends \Google\Model
    * @var string
    */
   public $errorMessage;
-  /**
-   * @var PrintServer
-   */
-  public $printServer;
   protected $printServerType = PrintServer::class;
   protected $printServerDataType = '';
   /**

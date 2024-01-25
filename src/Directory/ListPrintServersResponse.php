@@ -24,10 +24,6 @@ class ListPrintServersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PrintServer[]
-   */
-  public $printServers;
   protected $printServersType = PrintServer::class;
   protected $printServersDataType = 'array';
 

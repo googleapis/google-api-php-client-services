@@ -39,10 +39,6 @@ class Users extends \Google\Collection
    * @var string
    */
   public $triggerEvent;
-  /**
-   * @var User[]
-   */
-  public $users;
   protected $usersType = User::class;
   protected $usersDataType = 'array';
 

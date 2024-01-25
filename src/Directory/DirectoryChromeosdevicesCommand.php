@@ -27,10 +27,6 @@ class DirectoryChromeosdevicesCommand extends \Google\Model
    * @var string
    */
   public $commandId;
-  /**
-   * @var DirectoryChromeosdevicesCommandResult
-   */
-  public $commandResult;
   protected $commandResultType = DirectoryChromeosdevicesCommandResult::class;
   protected $commandResultDataType = '';
   /**

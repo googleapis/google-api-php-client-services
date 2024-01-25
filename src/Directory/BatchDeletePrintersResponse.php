@@ -20,10 +20,6 @@ namespace Google\Service\Directory;
 class BatchDeletePrintersResponse extends \Google\Collection
 {
   protected $collection_key = 'printerIds';
-  /**
-   * @var FailureInfo[]
-   */
-  public $failedPrinters;
   protected $failedPrintersType = FailureInfo::class;
   protected $failedPrintersDataType = 'array';
   /**

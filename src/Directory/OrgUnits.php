@@ -28,10 +28,6 @@ class OrgUnits extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var OrgUnit[]
-   */
-  public $organizationUnits;
   protected $organizationUnitsType = OrgUnit::class;
   protected $organizationUnitsDataType = 'array';
 

@@ -24,10 +24,6 @@ class ListPrintersResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Printer[]
-   */
-  public $printers;
   protected $printersType = Printer::class;
   protected $printersDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceCpuStatusReports extends \Google\Collection
 {
   protected $collection_key = 'cpuUtilizationPercentageInfo';
-  /**
-   * @var ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo[]
-   */
-  public $cpuTemperatureInfo;
   protected $cpuTemperatureInfoType = ChromeOsDeviceCpuStatusReportsCpuTemperatureInfo::class;
   protected $cpuTemperatureInfoDataType = 'array';
   /**

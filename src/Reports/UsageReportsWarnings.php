@@ -24,10 +24,6 @@ class UsageReportsWarnings extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var UsageReportsWarningsData[]
-   */
-  public $data;
   protected $dataType = UsageReportsWarningsData::class;
   protected $dataDataType = 'array';
   /**

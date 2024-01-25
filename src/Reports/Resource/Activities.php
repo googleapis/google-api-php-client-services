@@ -133,6 +133,7 @@ class Activities extends \Google\Service\Resource
    * until `endTime`. The `startTime` must be before the `endTime` (if specified)
    * and the current time when the request is made, or the API returns an error.
    * @return ActivitiesModel
+   * @throws \Google\Service\Exception
    */
   public function listActivities($userKey, $applicationName, $optParams = [])
   {
@@ -240,6 +241,7 @@ class Activities extends \Google\Service\Resource
    * until `endTime`. The `startTime` must be before the `endTime` (if specified)
    * and the current time when the request is made, or the API returns an error.
    * @return Channel
+   * @throws \Google\Service\Exception
    */
   public function watch($userKey, $applicationName, Channel $postBody, $optParams = [])
   {

@@ -20,10 +20,6 @@ namespace Google\Service\Directory;
 class ChromeOsDevices extends \Google\Collection
 {
   protected $collection_key = 'chromeosdevices';
-  /**
-   * @var ChromeOsDevice[]
-   */
-  public $chromeosdevices;
   protected $chromeosdevicesType = ChromeOsDevice::class;
   protected $chromeosdevicesDataType = 'array';
   /**

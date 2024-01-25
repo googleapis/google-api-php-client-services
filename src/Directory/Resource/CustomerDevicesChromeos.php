@@ -43,6 +43,7 @@ class CustomerDevicesChromeos extends \Google\Service\Resource
    * @param BatchChangeChromeOsDeviceStatusRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchChangeChromeOsDeviceStatusResponse
+   * @throws \Google\Service\Exception
    */
   public function batchChangeStatus($customerId, BatchChangeChromeOsDeviceStatusRequest $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class CustomerDevicesChromeos extends \Google\Service\Resource
    * @param DirectoryChromeosdevicesIssueCommandRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DirectoryChromeosdevicesIssueCommandResponse
+   * @throws \Google\Service\Exception
    */
   public function issueCommand($customerId, $deviceId, DirectoryChromeosdevicesIssueCommandRequest $postBody, $optParams = [])
   {

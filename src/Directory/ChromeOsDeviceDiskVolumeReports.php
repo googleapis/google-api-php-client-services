@@ -20,10 +20,6 @@ namespace Google\Service\Directory;
 class ChromeOsDeviceDiskVolumeReports extends \Google\Collection
 {
   protected $collection_key = 'volumeInfo';
-  /**
-   * @var ChromeOsDeviceDiskVolumeReportsVolumeInfo[]
-   */
-  public $volumeInfo;
   protected $volumeInfoType = ChromeOsDeviceDiskVolumeReportsVolumeInfo::class;
   protected $volumeInfoDataType = 'array';
 

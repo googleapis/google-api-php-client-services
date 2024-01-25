@@ -24,10 +24,6 @@ class Privileges extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var Privilege[]
-   */
-  public $items;
   protected $itemsType = Privilege::class;
   protected $itemsDataType = 'array';
   /**

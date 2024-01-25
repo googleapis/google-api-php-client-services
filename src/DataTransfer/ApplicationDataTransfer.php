@@ -24,10 +24,6 @@ class ApplicationDataTransfer extends \Google\Collection
    * @var string
    */
   public $applicationId;
-  /**
-   * @var ApplicationTransferParam[]
-   */
-  public $applicationTransferParams;
   protected $applicationTransferParamsType = ApplicationTransferParam::class;
   protected $applicationTransferParamsDataType = 'array';
   /**

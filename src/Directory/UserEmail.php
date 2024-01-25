@@ -34,10 +34,6 @@ class UserEmail extends \Google\Model
    * @var bool
    */
   public $primary;
-  /**
-   * @var UserEmailPublicKeyEncryptionCertificates
-   */
-  public $publicKeyEncryptionCertificates;
   protected $publicKeyEncryptionCertificatesType = UserEmailPublicKeyEncryptionCertificates::class;
   protected $publicKeyEncryptionCertificatesDataType = '';
   /**

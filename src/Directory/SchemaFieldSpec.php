@@ -51,10 +51,6 @@ class SchemaFieldSpec extends \Google\Model
    * @var bool
    */
   public $multiValued;
-  /**
-   * @var SchemaFieldSpecNumericIndexingSpec
-   */
-  public $numericIndexingSpec;
   protected $numericIndexingSpecType = SchemaFieldSpecNumericIndexingSpec::class;
   protected $numericIndexingSpecDataType = '';
   /**
