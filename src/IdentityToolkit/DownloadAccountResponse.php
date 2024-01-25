@@ -28,10 +28,6 @@ class DownloadAccountResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var UserInfo[]
-   */
-  public $users;
   protected $usersType = UserInfo::class;
   protected $usersDataType = 'array';
 

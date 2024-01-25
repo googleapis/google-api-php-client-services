@@ -69,10 +69,6 @@ class UserInfo extends \Google\Collection
    * @var string
    */
   public $photoUrl;
-  /**
-   * @var UserInfoProviderUserInfo[]
-   */
-  public $providerUserInfo;
   protected $providerUserInfoType = UserInfoProviderUserInfo::class;
   protected $providerUserInfoDataType = 'array';
   /**
