@@ -19,22 +19,10 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoParamSpecEntryValidationRule extends \Google\Model
 {
-  /**
-   * @var EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleDoubleRange
-   */
-  public $doubleRange;
   protected $doubleRangeType = EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleDoubleRange::class;
   protected $doubleRangeDataType = '';
-  /**
-   * @var EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange
-   */
-  public $intRange;
   protected $intRangeType = EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleIntRange::class;
   protected $intRangeDataType = '';
-  /**
-   * @var EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex
-   */
-  public $stringRegex;
   protected $stringRegexType = EnterpriseCrmEventbusProtoParamSpecEntryValidationRuleStringRegex::class;
   protected $stringRegexDataType = '';
 

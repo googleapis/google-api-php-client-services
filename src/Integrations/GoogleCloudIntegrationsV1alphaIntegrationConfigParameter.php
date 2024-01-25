@@ -19,16 +19,8 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaIntegrationConfigParameter extends \Google\Model
 {
-  /**
-   * @var GoogleCloudIntegrationsV1alphaIntegrationParameter
-   */
-  public $parameter;
   protected $parameterType = GoogleCloudIntegrationsV1alphaIntegrationParameter::class;
   protected $parameterDataType = '';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaValueType
-   */
-  public $value;
   protected $valueType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $valueDataType = '';
 

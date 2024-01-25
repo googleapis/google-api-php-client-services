@@ -28,10 +28,6 @@ class EnterpriseCrmEventbusProtoAddress extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var EnterpriseCrmEventbusProtoToken[]
-   */
-  public $tokens;
   protected $tokensType = EnterpriseCrmEventbusProtoToken::class;
   protected $tokensDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmFrontendsEventbusProtoRollbackStrategy extends \Google\Collection
 {
   protected $collection_key = 'taskNumbersToRollback';
-  /**
-   * @var EnterpriseCrmFrontendsEventbusProtoEventParameters
-   */
-  public $parameters;
   protected $parametersType = EnterpriseCrmFrontendsEventbusProtoEventParameters::class;
   protected $parametersDataType = '';
   /**

@@ -27,10 +27,6 @@ class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
    * @var string
    */
   public $deploymentModel;
-  /**
-   * @var GoogleCloudConnectorsV1HPAConfig
-   */
-  public $hpaConfig;
   protected $hpaConfigType = GoogleCloudConnectorsV1HPAConfig::class;
   protected $hpaConfigDataType = '';
   /**
@@ -41,16 +37,8 @@ class GoogleCloudConnectorsV1ConnectorVersionInfraConfig extends \Google\Model
    * @var string
    */
   public $ratelimitThreshold;
-  /**
-   * @var GoogleCloudConnectorsV1ResourceLimits
-   */
-  public $resourceLimits;
   protected $resourceLimitsType = GoogleCloudConnectorsV1ResourceLimits::class;
   protected $resourceLimitsDataType = '';
-  /**
-   * @var GoogleCloudConnectorsV1ResourceRequests
-   */
-  public $resourceRequests;
   protected $resourceRequestsType = GoogleCloudConnectorsV1ResourceRequests::class;
   protected $resourceRequestsDataType = '';
   /**

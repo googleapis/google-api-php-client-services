@@ -20,20 +20,12 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaExecutionDetails extends \Google\Collection
 {
   protected $collection_key = 'executionSnapshots';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaAttemptStats[]
-   */
-  public $attemptStats;
   protected $attemptStatsType = GoogleCloudIntegrationsV1alphaAttemptStats::class;
   protected $attemptStatsDataType = 'array';
   /**
    * @var string
    */
   public $eventExecutionSnapshotsSize;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaExecutionSnapshot[]
-   */
-  public $executionSnapshots;
   protected $executionSnapshotsType = GoogleCloudIntegrationsV1alphaExecutionSnapshot::class;
   protected $executionSnapshotsDataType = 'array';
   /**

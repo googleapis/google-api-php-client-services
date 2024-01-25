@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoTeardown extends \Google\Collection
 {
   protected $collection_key = 'teardownTaskConfigs';
-  /**
-   * @var EnterpriseCrmEventbusProtoTeardownTaskConfig[]
-   */
-  public $teardownTaskConfigs;
   protected $teardownTaskConfigsType = EnterpriseCrmEventbusProtoTeardownTaskConfig::class;
   protected $teardownTaskConfigsDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoCombinedCondition extends \Google\Collection
 {
   protected $collection_key = 'conditions';
-  /**
-   * @var EnterpriseCrmEventbusProtoCondition[]
-   */
-  public $conditions;
   protected $conditionsType = EnterpriseCrmEventbusProtoCondition::class;
   protected $conditionsDataType = 'array';
 

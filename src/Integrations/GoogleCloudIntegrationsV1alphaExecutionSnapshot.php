@@ -24,22 +24,10 @@ class GoogleCloudIntegrationsV1alphaExecutionSnapshot extends \Google\Collection
    * @var string
    */
   public $checkpointTaskNumber;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata
-   */
-  public $executionSnapshotMetadata;
   protected $executionSnapshotMetadataType = GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata::class;
   protected $executionSnapshotMetadataDataType = '';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaValueType[]
-   */
-  public $params;
   protected $paramsType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $paramsDataType = 'map';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaTaskExecutionDetails[]
-   */
-  public $taskExecutionDetails;
   protected $taskExecutionDetailsType = GoogleCloudIntegrationsV1alphaTaskExecutionDetails::class;
   protected $taskExecutionDetailsDataType = 'array';
 

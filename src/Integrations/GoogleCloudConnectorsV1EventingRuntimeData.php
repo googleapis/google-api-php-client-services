@@ -27,10 +27,6 @@ class GoogleCloudConnectorsV1EventingRuntimeData extends \Google\Model
    * @var string
    */
   public $eventsListenerPscSa;
-  /**
-   * @var GoogleCloudConnectorsV1EventingStatus
-   */
-  public $status;
   protected $statusType = GoogleCloudConnectorsV1EventingStatus::class;
   protected $statusDataType = '';
 

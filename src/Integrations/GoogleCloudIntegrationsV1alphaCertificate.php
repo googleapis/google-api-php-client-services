@@ -39,10 +39,6 @@ class GoogleCloudIntegrationsV1alphaCertificate extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaClientCertificate
-   */
-  public $rawCertificate;
   protected $rawCertificateType = GoogleCloudIntegrationsV1alphaClientCertificate::class;
   protected $rawCertificateDataType = '';
   /**

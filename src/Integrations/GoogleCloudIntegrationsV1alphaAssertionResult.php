@@ -19,10 +19,6 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudIntegrationsV1alphaAssertionResult extends \Google\Model
 {
-  /**
-   * @var GoogleCloudIntegrationsV1alphaAssertion
-   */
-  public $assertion;
   protected $assertionType = GoogleCloudIntegrationsV1alphaAssertion::class;
   protected $assertionDataType = '';
   /**

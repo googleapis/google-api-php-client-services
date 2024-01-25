@@ -24,10 +24,6 @@ class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse extends \
    * @var string
    */
   public $content;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaSerializedFile[]
-   */
-  public $files;
   protected $filesType = GoogleCloudIntegrationsV1alphaSerializedFile::class;
   protected $filesDataType = 'array';
 

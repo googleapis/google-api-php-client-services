@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoTaskUiConfig extends \Google\Collection
 {
   protected $collection_key = 'taskUiModuleConfigs';
-  /**
-   * @var EnterpriseCrmEventbusProtoTaskUiModuleConfig[]
-   */
-  public $taskUiModuleConfigs;
   protected $taskUiModuleConfigsType = EnterpriseCrmEventbusProtoTaskUiModuleConfig::class;
   protected $taskUiModuleConfigsDataType = 'array';
 

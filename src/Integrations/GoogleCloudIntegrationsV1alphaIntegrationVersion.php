@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collection
 {
   protected $collection_key = 'triggerConfigsInternal';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaCloudLoggingDetails
-   */
-  public $cloudLoggingDetails;
   protected $cloudLoggingDetailsType = GoogleCloudIntegrationsV1alphaCloudLoggingDetails::class;
   protected $cloudLoggingDetailsDataType = '';
   /**
@@ -42,28 +38,12 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
    * @var bool
    */
   public $enableVariableMasking;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaErrorCatcherConfig[]
-   */
-  public $errorCatcherConfigs;
   protected $errorCatcherConfigsType = GoogleCloudIntegrationsV1alphaErrorCatcherConfig::class;
   protected $errorCatcherConfigsDataType = 'array';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
-   */
-  public $integrationConfigParameters;
   protected $integrationConfigParametersType = GoogleCloudIntegrationsV1alphaIntegrationConfigParameter::class;
   protected $integrationConfigParametersDataType = 'array';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaIntegrationParameter[]
-   */
-  public $integrationParameters;
   protected $integrationParametersType = GoogleCloudIntegrationsV1alphaIntegrationParameter::class;
   protected $integrationParametersDataType = 'array';
-  /**
-   * @var EnterpriseCrmFrontendsEventbusProtoWorkflowParameters
-   */
-  public $integrationParametersInternal;
   protected $integrationParametersInternalType = EnterpriseCrmFrontendsEventbusProtoWorkflowParameters::class;
   protected $integrationParametersInternalDataType = '';
   /**
@@ -102,34 +82,14 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersion extends \Google\Collectio
    * @var string
    */
   public $status;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaTaskConfig[]
-   */
-  public $taskConfigs;
   protected $taskConfigsType = GoogleCloudIntegrationsV1alphaTaskConfig::class;
   protected $taskConfigsDataType = 'array';
-  /**
-   * @var EnterpriseCrmFrontendsEventbusProtoTaskConfig[]
-   */
-  public $taskConfigsInternal;
   protected $taskConfigsInternalType = EnterpriseCrmFrontendsEventbusProtoTaskConfig::class;
   protected $taskConfigsInternalDataType = 'array';
-  /**
-   * @var EnterpriseCrmEventbusProtoTeardown
-   */
-  public $teardown;
   protected $teardownType = EnterpriseCrmEventbusProtoTeardown::class;
   protected $teardownDataType = '';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaTriggerConfig[]
-   */
-  public $triggerConfigs;
   protected $triggerConfigsType = GoogleCloudIntegrationsV1alphaTriggerConfig::class;
   protected $triggerConfigsDataType = 'array';
-  /**
-   * @var EnterpriseCrmFrontendsEventbusProtoTriggerConfig[]
-   */
-  public $triggerConfigsInternal;
   protected $triggerConfigsInternalType = EnterpriseCrmFrontendsEventbusProtoTriggerConfig::class;
   protected $triggerConfigsInternalDataType = 'array';
   /**

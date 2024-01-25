@@ -19,10 +19,6 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoConnectorsGenericConnectorTaskConfig extends \Google\Model
 {
-  /**
-   * @var EnterpriseCrmEventbusProtoConnectorsConnection
-   */
-  public $connection;
   protected $connectionType = EnterpriseCrmEventbusProtoConnectorsConnection::class;
   protected $connectionDataType = '';
   /**

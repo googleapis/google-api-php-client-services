@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class GoogleCloudIntegrationsV1alphaExecuteTestCaseResponse extends \Google\Collection
 {
   protected $collection_key = 'assertionResults';
-  /**
-   * @var GoogleCloudIntegrationsV1alphaAssertionResult[]
-   */
-  public $assertionResults;
   protected $assertionResultsType = GoogleCloudIntegrationsV1alphaAssertionResult::class;
   protected $assertionResultsDataType = 'array';
   /**

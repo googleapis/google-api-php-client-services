@@ -19,20 +19,12 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends \Google\Model
 {
-  /**
-   * @var EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit
-   */
-  public $audit;
   protected $auditType = EnterpriseCrmEventbusProtoSuspensionResolutionInfoAudit::class;
   protected $auditDataType = '';
   /**
    * @var string
    */
   public $clientId;
-  /**
-   * @var EnterpriseCrmEventbusProtoCloudKmsConfig
-   */
-  public $cloudKmsConfig;
   protected $cloudKmsConfigType = EnterpriseCrmEventbusProtoCloudKmsConfig::class;
   protected $cloudKmsConfigDataType = '';
   /**
@@ -47,10 +39,6 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends \Google\Model
    * @var string
    */
   public $eventExecutionInfoId;
-  /**
-   * @var EnterpriseCrmEventbusProtoExternalTraffic
-   */
-  public $externalTraffic;
   protected $externalTrafficType = EnterpriseCrmEventbusProtoExternalTraffic::class;
   protected $externalTrafficDataType = '';
   /**
@@ -65,10 +53,6 @@ class EnterpriseCrmEventbusProtoSuspensionResolutionInfo extends \Google\Model
    * @var string
    */
   public $status;
-  /**
-   * @var EnterpriseCrmEventbusProtoSuspensionConfig
-   */
-  public $suspensionConfig;
   protected $suspensionConfigType = EnterpriseCrmEventbusProtoSuspensionConfig::class;
   protected $suspensionConfigDataType = '';
   /**

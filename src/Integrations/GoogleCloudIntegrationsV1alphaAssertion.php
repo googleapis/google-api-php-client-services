@@ -27,10 +27,6 @@ class GoogleCloudIntegrationsV1alphaAssertion extends \Google\Model
    * @var string
    */
   public $condition;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaEventParameter
-   */
-  public $parameter;
   protected $parameterType = GoogleCloudIntegrationsV1alphaEventParameter::class;
   protected $parameterDataType = '';
   /**

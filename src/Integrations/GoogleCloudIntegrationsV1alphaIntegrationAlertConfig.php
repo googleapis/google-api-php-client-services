@@ -51,10 +51,6 @@ class GoogleCloudIntegrationsV1alphaIntegrationAlertConfig extends \Google\Model
    * @var string
    */
   public $thresholdType;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue
-   */
-  public $thresholdValue;
   protected $thresholdValueType = GoogleCloudIntegrationsV1alphaIntegrationAlertConfigThresholdValue::class;
   protected $thresholdValueDataType = '';
 

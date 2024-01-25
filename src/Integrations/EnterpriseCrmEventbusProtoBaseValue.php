@@ -19,16 +19,8 @@ namespace Google\Service\Integrations;
 
 class EnterpriseCrmEventbusProtoBaseValue extends \Google\Model
 {
-  /**
-   * @var EnterpriseCrmEventbusProtoFunction
-   */
-  public $baseFunction;
   protected $baseFunctionType = EnterpriseCrmEventbusProtoFunction::class;
   protected $baseFunctionDataType = '';
-  /**
-   * @var EnterpriseCrmEventbusProtoParameterValueType
-   */
-  public $literalValue;
   protected $literalValueType = EnterpriseCrmEventbusProtoParameterValueType::class;
   protected $literalValueDataType = '';
   /**

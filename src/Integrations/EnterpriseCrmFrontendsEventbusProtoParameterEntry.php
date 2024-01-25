@@ -31,10 +31,6 @@ class EnterpriseCrmFrontendsEventbusProtoParameterEntry extends \Google\Model
    * @var bool
    */
   public $masked;
-  /**
-   * @var EnterpriseCrmFrontendsEventbusProtoParameterValueType
-   */
-  public $value;
   protected $valueType = EnterpriseCrmFrontendsEventbusProtoParameterValueType::class;
   protected $valueDataType = '';
 

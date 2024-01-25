@@ -20,10 +20,6 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoFieldMappingConfig extends \Google\Collection
 {
   protected $collection_key = 'mappedFields';
-  /**
-   * @var EnterpriseCrmEventbusProtoMappedField[]
-   */
-  public $mappedFields;
   protected $mappedFieldsType = EnterpriseCrmEventbusProtoMappedField::class;
   protected $mappedFieldsDataType = 'array';
 

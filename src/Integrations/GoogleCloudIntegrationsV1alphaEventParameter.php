@@ -27,10 +27,6 @@ class GoogleCloudIntegrationsV1alphaEventParameter extends \Google\Model
    * @var bool
    */
   public $masked;
-  /**
-   * @var GoogleCloudIntegrationsV1alphaValueType
-   */
-  public $value;
   protected $valueType = GoogleCloudIntegrationsV1alphaValueType::class;
   protected $valueDataType = '';
 

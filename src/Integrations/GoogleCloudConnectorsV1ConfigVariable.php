@@ -23,10 +23,6 @@ class GoogleCloudConnectorsV1ConfigVariable extends \Google\Model
    * @var bool
    */
   public $boolValue;
-  /**
-   * @var GoogleCloudConnectorsV1EncryptionKey
-   */
-  public $encryptionKeyValue;
   protected $encryptionKeyValueType = GoogleCloudConnectorsV1EncryptionKey::class;
   protected $encryptionKeyValueDataType = '';
   /**
@@ -37,10 +33,6 @@ class GoogleCloudConnectorsV1ConfigVariable extends \Google\Model
    * @var string
    */
   public $key;
-  /**
-   * @var GoogleCloudConnectorsV1Secret
-   */
-  public $secretValue;
   protected $secretValueType = GoogleCloudConnectorsV1Secret::class;
   protected $secretValueDataType = '';
   /**
