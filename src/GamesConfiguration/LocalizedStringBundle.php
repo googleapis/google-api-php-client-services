@@ -24,10 +24,6 @@ class LocalizedStringBundle extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LocalizedString[]
-   */
-  public $translations;
   protected $translationsType = LocalizedString::class;
   protected $translationsDataType = 'array';
 

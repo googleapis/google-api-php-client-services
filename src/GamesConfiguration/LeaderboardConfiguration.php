@@ -19,10 +19,6 @@ namespace Google\Service\GamesConfiguration;
 
 class LeaderboardConfiguration extends \Google\Model
 {
-  /**
-   * @var LeaderboardConfigurationDetail
-   */
-  public $draft;
   protected $draftType = LeaderboardConfigurationDetail::class;
   protected $draftDataType = '';
   /**
@@ -33,10 +29,6 @@ class LeaderboardConfiguration extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var LeaderboardConfigurationDetail
-   */
-  public $published;
   protected $publishedType = LeaderboardConfigurationDetail::class;
   protected $publishedDataType = '';
   /**
