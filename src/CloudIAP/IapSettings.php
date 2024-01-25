@@ -19,16 +19,8 @@ namespace Google\Service\CloudIAP;
 
 class IapSettings extends \Google\Model
 {
-  /**
-   * @var AccessSettings
-   */
-  public $accessSettings;
   protected $accessSettingsType = AccessSettings::class;
   protected $accessSettingsDataType = '';
-  /**
-   * @var ApplicationSettings
-   */
-  public $applicationSettings;
   protected $applicationSettingsType = ApplicationSettings::class;
   protected $applicationSettingsDataType = '';
   /**

@@ -48,6 +48,7 @@ class V1 extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class V1 extends \Google\Service\Resource
    * associated resource.
    * @param array $optParams Optional parameters.
    * @return IapSettings
+   * @throws \Google\Service\Exception
    */
   public function getIapSettings($name, $optParams = [])
   {
@@ -84,6 +86,7 @@ class V1 extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -104,6 +107,7 @@ class V1 extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -127,6 +131,7 @@ class V1 extends \Google\Service\Resource
    * settings must always be set together, using the field mask:
    * `iapSettings.accessSettings.reauthSettings`.
    * @return IapSettings
+   * @throws \Google\Service\Exception
    */
   public function updateIapSettings($name, IapSettings $postBody, $optParams = [])
   {
@@ -146,6 +151,7 @@ class V1 extends \Google\Service\Resource
    * be of the form 'attributes.saml_attributes.filter(attribute, attribute.name
    * in ['{attribute_name}', '{attribute_name}'])'
    * @return ValidateIapAttributeExpressionResponse
+   * @throws \Google\Service\Exception
    */
   public function validateAttributeExpression($name, $optParams = [])
   {
