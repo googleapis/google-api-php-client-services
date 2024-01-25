@@ -20,10 +20,6 @@ namespace Google\Service\AccessApproval;
 class ListApprovalRequestsResponse extends \Google\Collection
 {
   protected $collection_key = 'approvalRequests';
-  /**
-   * @var ApprovalRequest[]
-   */
-  public $approvalRequests;
   protected $approvalRequestsType = ApprovalRequest::class;
   protected $approvalRequestsDataType = 'array';
   /**

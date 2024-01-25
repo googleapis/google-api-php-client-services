@@ -32,10 +32,6 @@ class AccessApprovalSettings extends \Google\Collection
    * @var bool
    */
   public $enrolledAncestor;
-  /**
-   * @var EnrolledService[]
-   */
-  public $enrolledServices;
   protected $enrolledServicesType = EnrolledService::class;
   protected $enrolledServicesDataType = 'array';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\AccessApproval;
 
 class ApprovalRequest extends \Google\Model
 {
-  /**
-   * @var ApproveDecision
-   */
-  public $approve;
   protected $approveType = ApproveDecision::class;
   protected $approveDataType = '';
-  /**
-   * @var DismissDecision
-   */
-  public $dismiss;
   protected $dismissType = DismissDecision::class;
   protected $dismissDataType = '';
   /**
@@ -47,26 +39,14 @@ class ApprovalRequest extends \Google\Model
    * @var string
    */
   public $requestedExpiration;
-  /**
-   * @var AccessLocations
-   */
-  public $requestedLocations;
   protected $requestedLocationsType = AccessLocations::class;
   protected $requestedLocationsDataType = '';
-  /**
-   * @var AccessReason
-   */
-  public $requestedReason;
   protected $requestedReasonType = AccessReason::class;
   protected $requestedReasonDataType = '';
   /**
    * @var string
    */
   public $requestedResourceName;
-  /**
-   * @var ResourceProperties
-   */
-  public $requestedResourceProperties;
   protected $requestedResourcePropertiesType = ResourceProperties::class;
   protected $requestedResourcePropertiesDataType = '';
 
