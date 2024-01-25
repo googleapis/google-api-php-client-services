@@ -43,10 +43,6 @@ class VolumeRestore extends \Google\Model
    * @var string
    */
   public $stateMessage;
-  /**
-   * @var NamespacedName
-   */
-  public $targetPvc;
   protected $targetPvcType = NamespacedName::class;
   protected $targetPvcDataType = '';
   /**

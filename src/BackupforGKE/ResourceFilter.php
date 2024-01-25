@@ -20,10 +20,6 @@ namespace Google\Service\BackupforGKE;
 class ResourceFilter extends \Google\Collection
 {
   protected $collection_key = 'namespaces';
-  /**
-   * @var GroupKind[]
-   */
-  public $groupKinds;
   protected $groupKindsType = GroupKind::class;
   protected $groupKindsDataType = 'array';
   /**

@@ -28,10 +28,6 @@ class SubstitutionRule extends \Google\Collection
    * @var string
    */
   public $originalValuePattern;
-  /**
-   * @var GroupKind[]
-   */
-  public $targetGroupKinds;
   protected $targetGroupKindsType = GroupKind::class;
   protected $targetGroupKindsDataType = 'array';
   /**

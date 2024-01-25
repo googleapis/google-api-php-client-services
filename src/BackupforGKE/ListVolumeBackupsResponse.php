@@ -24,10 +24,6 @@ class ListVolumeBackupsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var VolumeBackup[]
-   */
-  public $volumeBackups;
   protected $volumeBackupsType = VolumeBackup::class;
   protected $volumeBackupsDataType = 'array';
 

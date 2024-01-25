@@ -19,16 +19,8 @@ namespace Google\Service\BackupforGKE;
 
 class BackupPlan extends \Google\Model
 {
-  /**
-   * @var BackupConfig
-   */
-  public $backupConfig;
   protected $backupConfigType = BackupConfig::class;
   protected $backupConfigDataType = '';
-  /**
-   * @var Schedule
-   */
-  public $backupSchedule;
   protected $backupScheduleType = Schedule::class;
   protected $backupScheduleDataType = '';
   /**
@@ -63,10 +55,6 @@ class BackupPlan extends \Google\Model
    * @var int
    */
   public $protectedPodCount;
-  /**
-   * @var RetentionPolicy
-   */
-  public $retentionPolicy;
   protected $retentionPolicyType = RetentionPolicy::class;
   protected $retentionPolicyDataType = '';
   /**

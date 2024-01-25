@@ -47,10 +47,6 @@ class RestorePlan extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var RestoreConfig
-   */
-  public $restoreConfig;
   protected $restoreConfigType = RestoreConfig::class;
   protected $restoreConfigDataType = '';
   /**

@@ -28,16 +28,8 @@ class RestoreConfig extends \Google\Collection
    * @var string
    */
   public $clusterResourceConflictPolicy;
-  /**
-   * @var ClusterResourceRestoreScope
-   */
-  public $clusterResourceRestoreScope;
   protected $clusterResourceRestoreScopeType = ClusterResourceRestoreScope::class;
   protected $clusterResourceRestoreScopeDataType = '';
-  /**
-   * @var Namespaces
-   */
-  public $excludedNamespaces;
   protected $excludedNamespacesType = Namespaces::class;
   protected $excludedNamespacesDataType = '';
   /**
@@ -48,28 +40,12 @@ class RestoreConfig extends \Google\Collection
    * @var bool
    */
   public $noNamespaces;
-  /**
-   * @var NamespacedNames
-   */
-  public $selectedApplications;
   protected $selectedApplicationsType = NamespacedNames::class;
   protected $selectedApplicationsDataType = '';
-  /**
-   * @var Namespaces
-   */
-  public $selectedNamespaces;
   protected $selectedNamespacesType = Namespaces::class;
   protected $selectedNamespacesDataType = '';
-  /**
-   * @var SubstitutionRule[]
-   */
-  public $substitutionRules;
   protected $substitutionRulesType = SubstitutionRule::class;
   protected $substitutionRulesDataType = 'array';
-  /**
-   * @var TransformationRule[]
-   */
-  public $transformationRules;
   protected $transformationRulesType = TransformationRule::class;
   protected $transformationRulesDataType = 'array';
   /**

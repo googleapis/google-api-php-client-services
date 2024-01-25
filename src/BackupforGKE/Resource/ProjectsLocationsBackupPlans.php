@@ -49,6 +49,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * dashes - start with a lower-case letter - end with a lower-case letter or
    * number - be unique within the set of BackupPlans in this location
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, BackupPlan $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * current value of the target BackupPlan's etag field or the request is
    * rejected.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -81,6 +83,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * `projects/locations/backupPlans`
    * @param array $optParams Optional parameters.
    * @return BackupPlan
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -111,6 +114,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -140,6 +144,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * parameters provided to `ListBackupPlans` must match the call that provided
    * the page token.
    * @return ListBackupPlansResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsBackupPlans($parent, $optParams = [])
   {
@@ -164,6 +169,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * BackupPlan resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
    * `backup_plan` are ignored and are not used to update the target BackupPlan.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, BackupPlan $postBody, $optParams = [])
   {
@@ -183,6 +189,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -205,6 +212,7 @@ class ProjectsLocationsBackupPlans extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

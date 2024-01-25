@@ -49,6 +49,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * start with a lower-case letter - end with a lower-case letter or number - be
    * unique within the set of Restores in this RestorePlan.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Restore $postBody, $optParams = [])
   {
@@ -69,6 +70,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * restore will also be deleted. Otherwise, the request will only succeed if the
    * restore has no VolumeRestores.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -83,6 +85,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * `projects/locations/restorePlans/restores`
    * @param array $optParams Optional parameters.
    * @return Restore
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -113,6 +116,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -141,6 +145,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * page in a multi-page list of results. When paginating, all other parameters
    * provided to `ListRestores` must match the call that provided the page token.
    * @return ListRestoresResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsRestorePlansRestores($parent, $optParams = [])
   {
@@ -164,6 +169,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * target Restore resource. Note that OUTPUT_ONLY and IMMUTABLE fields in
    * `restore` are ignored and are not used to update the target Restore.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Restore $postBody, $optParams = [])
   {
@@ -183,6 +189,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -204,6 +211,7 @@ class ProjectsLocationsRestorePlansRestores extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

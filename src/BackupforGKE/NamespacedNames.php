@@ -20,10 +20,6 @@ namespace Google\Service\BackupforGKE;
 class NamespacedNames extends \Google\Collection
 {
   protected $collection_key = 'namespacedNames';
-  /**
-   * @var NamespacedName[]
-   */
-  public $namespacedNames;
   protected $namespacedNamesType = NamespacedName::class;
   protected $namespacedNamesDataType = 'array';
 
