@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class CustomDataSources extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var CustomDataSource[]
-   */
-  public $items;
   protected $itemsType = CustomDataSource::class;
   protected $itemsDataType = 'array';
   /**

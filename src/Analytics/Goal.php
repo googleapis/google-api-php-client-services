@@ -31,10 +31,6 @@ class Goal extends \Google\Model
    * @var string
    */
   public $created;
-  /**
-   * @var GoalEventDetails
-   */
-  public $eventDetails;
   protected $eventDetailsType = GoalEventDetails::class;
   protected $eventDetailsDataType = '';
   /**
@@ -53,10 +49,6 @@ class Goal extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoalParentLink
-   */
-  public $parentLink;
   protected $parentLinkType = GoalParentLink::class;
   protected $parentLinkDataType = '';
   /**
@@ -75,26 +67,14 @@ class Goal extends \Google\Model
    * @var string
    */
   public $updated;
-  /**
-   * @var GoalUrlDestinationDetails
-   */
-  public $urlDestinationDetails;
   protected $urlDestinationDetailsType = GoalUrlDestinationDetails::class;
   protected $urlDestinationDetailsDataType = '';
   /**
    * @var float
    */
   public $value;
-  /**
-   * @var GoalVisitNumPagesDetails
-   */
-  public $visitNumPagesDetails;
   protected $visitNumPagesDetailsType = GoalVisitNumPagesDetails::class;
   protected $visitNumPagesDetailsDataType = '';
-  /**
-   * @var GoalVisitTimeOnSiteDetails
-   */
-  public $visitTimeOnSiteDetails;
   protected $visitTimeOnSiteDetailsType = GoalVisitTimeOnSiteDetails::class;
   protected $visitTimeOnSiteDetailsDataType = '';
   /**

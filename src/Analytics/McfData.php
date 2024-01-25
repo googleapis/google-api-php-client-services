@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class McfData extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * @var McfDataColumnHeaders[]
-   */
-  public $columnHeaders;
   protected $columnHeadersType = McfDataColumnHeaders::class;
   protected $columnHeadersDataType = 'array';
   /**
@@ -50,22 +46,10 @@ class McfData extends \Google\Collection
    * @var string
    */
   public $previousLink;
-  /**
-   * @var McfDataProfileInfo
-   */
-  public $profileInfo;
   protected $profileInfoType = McfDataProfileInfo::class;
   protected $profileInfoDataType = '';
-  /**
-   * @var McfDataQuery
-   */
-  public $query;
   protected $queryType = McfDataQuery::class;
   protected $queryDataType = '';
-  /**
-   * @var McfDataRows[]
-   */
-  public $rows;
   protected $rowsType = McfDataRows::class;
   protected $rowsDataType = 'array';
   /**

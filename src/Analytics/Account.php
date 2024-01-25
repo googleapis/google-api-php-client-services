@@ -19,10 +19,6 @@ namespace Google\Service\Analytics;
 
 class Account extends \Google\Model
 {
-  /**
-   * @var AccountChildLink
-   */
-  public $childLink;
   protected $childLinkType = AccountChildLink::class;
   protected $childLinkDataType = '';
   /**
@@ -41,10 +37,6 @@ class Account extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var AccountPermissions
-   */
-  public $permissions;
   protected $permissionsType = AccountPermissions::class;
   protected $permissionsDataType = '';
   /**

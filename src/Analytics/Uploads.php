@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class Uploads extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Upload[]
-   */
-  public $items;
   protected $itemsType = Upload::class;
   protected $itemsDataType = 'array';
   /**

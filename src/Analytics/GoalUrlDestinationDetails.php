@@ -32,10 +32,6 @@ class GoalUrlDestinationDetails extends \Google\Collection
    * @var string
    */
   public $matchType;
-  /**
-   * @var GoalUrlDestinationDetailsSteps[]
-   */
-  public $steps;
   protected $stepsType = GoalUrlDestinationDetailsSteps::class;
   protected $stepsDataType = 'array';
   /**

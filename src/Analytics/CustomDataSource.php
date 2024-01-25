@@ -24,10 +24,6 @@ class CustomDataSource extends \Google\Collection
    * @var string
    */
   public $accountId;
-  /**
-   * @var CustomDataSourceChildLink
-   */
-  public $childLink;
   protected $childLinkType = CustomDataSourceChildLink::class;
   protected $childLinkDataType = '';
   /**
@@ -54,10 +50,6 @@ class CustomDataSource extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var CustomDataSourceParentLink
-   */
-  public $parentLink;
   protected $parentLinkType = CustomDataSourceParentLink::class;
   protected $parentLinkDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class UnsampledReports extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var UnsampledReport[]
-   */
-  public $items;
   protected $itemsType = UnsampledReport::class;
   protected $itemsDataType = 'array';
   /**

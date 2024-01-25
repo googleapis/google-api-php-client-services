@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class GoalEventDetails extends \Google\Collection
 {
   protected $collection_key = 'eventConditions';
-  /**
-   * @var GoalEventDetailsEventConditions[]
-   */
-  public $eventConditions;
   protected $eventConditionsType = GoalEventDetailsEventConditions::class;
   protected $eventConditionsDataType = 'array';
   /**

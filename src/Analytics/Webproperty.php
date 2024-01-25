@@ -23,10 +23,6 @@ class Webproperty extends \Google\Model
    * @var string
    */
   public $accountId;
-  /**
-   * @var WebpropertyChildLink
-   */
-  public $childLink;
   protected $childLinkType = WebpropertyChildLink::class;
   protected $childLinkDataType = '';
   /**
@@ -69,16 +65,8 @@ class Webproperty extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var WebpropertyParentLink
-   */
-  public $parentLink;
   protected $parentLinkType = WebpropertyParentLink::class;
   protected $parentLinkDataType = '';
-  /**
-   * @var WebpropertyPermissions
-   */
-  public $permissions;
   protected $permissionsType = WebpropertyPermissions::class;
   protected $permissionsDataType = '';
   /**

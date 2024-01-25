@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class Filters extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Filter[]
-   */
-  public $items;
   protected $itemsType = Filter::class;
   protected $itemsDataType = 'array';
   /**

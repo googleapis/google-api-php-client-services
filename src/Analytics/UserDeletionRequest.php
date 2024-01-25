@@ -27,10 +27,6 @@ class UserDeletionRequest extends \Google\Model
    * @var string
    */
   public $firebaseProjectId;
-  /**
-   * @var UserDeletionRequestId
-   */
-  public $id;
   protected $idType = UserDeletionRequestId::class;
   protected $idDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class Segments extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Segment[]
-   */
-  public $items;
   protected $itemsType = Segment::class;
   protected $itemsDataType = 'array';
   /**

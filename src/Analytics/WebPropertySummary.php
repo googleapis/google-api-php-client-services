@@ -40,10 +40,6 @@ class WebPropertySummary extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ProfileSummary[]
-   */
-  public $profiles;
   protected $profilesType = ProfileSummary::class;
   protected $profilesDataType = 'array';
   /**

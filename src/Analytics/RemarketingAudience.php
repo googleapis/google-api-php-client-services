@@ -24,10 +24,6 @@ class RemarketingAudience extends \Google\Collection
    * @var string
    */
   public $accountId;
-  /**
-   * @var RemarketingAudienceAudienceDefinition
-   */
-  public $audienceDefinition;
   protected $audienceDefinitionType = RemarketingAudienceAudienceDefinition::class;
   protected $audienceDefinitionDataType = '';
   /**
@@ -54,10 +50,6 @@ class RemarketingAudience extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LinkedForeignAccount[]
-   */
-  public $linkedAdAccounts;
   protected $linkedAdAccountsType = LinkedForeignAccount::class;
   protected $linkedAdAccountsDataType = 'array';
   /**
@@ -68,10 +60,6 @@ class RemarketingAudience extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var RemarketingAudienceStateBasedAudienceDefinition
-   */
-  public $stateBasedAudienceDefinition;
   protected $stateBasedAudienceDefinitionType = RemarketingAudienceStateBasedAudienceDefinition::class;
   protected $stateBasedAudienceDefinitionDataType = '';
   /**

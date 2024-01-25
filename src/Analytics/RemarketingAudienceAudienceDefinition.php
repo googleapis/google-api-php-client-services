@@ -19,10 +19,6 @@ namespace Google\Service\Analytics;
 
 class RemarketingAudienceAudienceDefinition extends \Google\Model
 {
-  /**
-   * @var IncludeConditions
-   */
-  public $includeConditions;
   protected $includeConditionsType = IncludeConditions::class;
   protected $includeConditionsDataType = '';
 

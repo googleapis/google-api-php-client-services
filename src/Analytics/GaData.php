@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class GaData extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * @var GaDataColumnHeaders[]
-   */
-  public $columnHeaders;
   protected $columnHeadersType = GaDataColumnHeaders::class;
   protected $columnHeadersDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class GaData extends \Google\Collection
    * @var string
    */
   public $dataLastRefreshed;
-  /**
-   * @var GaDataDataTable
-   */
-  public $dataTable;
   protected $dataTableType = GaDataDataTable::class;
   protected $dataTableDataType = '';
   /**
@@ -60,16 +52,8 @@ class GaData extends \Google\Collection
    * @var string
    */
   public $previousLink;
-  /**
-   * @var GaDataProfileInfo
-   */
-  public $profileInfo;
   protected $profileInfoType = GaDataProfileInfo::class;
   protected $profileInfoDataType = '';
-  /**
-   * @var GaDataQuery
-   */
-  public $query;
   protected $queryType = GaDataQuery::class;
   protected $queryDataType = '';
   /**

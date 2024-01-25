@@ -20,10 +20,6 @@ namespace Google\Service\Analytics;
 class AccountSummaries extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var AccountSummary[]
-   */
-  public $items;
   protected $itemsType = AccountSummary::class;
   protected $itemsDataType = 'array';
   /**
