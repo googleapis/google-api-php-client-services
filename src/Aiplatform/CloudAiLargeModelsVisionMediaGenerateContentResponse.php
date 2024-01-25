@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiLargeModelsVisionMediaGenerateContentResponse extends \Google\Model
 {
-  /**
-   * @var CloudAiNlLlmProtoServiceGenerateMultiModalResponse
-   */
-  public $response;
   protected $responseType = CloudAiNlLlmProtoServiceGenerateMultiModalResponse::class;
   protected $responseDataType = '';
 

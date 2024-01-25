@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchCreateTensorboardRunsResponse extends \Google\Collection
 {
   protected $collection_key = 'tensorboardRuns';
-  /**
-   * @var GoogleCloudAiplatformV1TensorboardRun[]
-   */
-  public $tensorboardRuns;
   protected $tensorboardRunsType = GoogleCloudAiplatformV1TensorboardRun::class;
   protected $tensorboardRunsDataType = 'array';
 

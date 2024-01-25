@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
 {
   protected $collection_key = 'raiMediaFilteredReasons';
-  /**
-   * @var CloudAiLargeModelsVisionMedia[]
-   */
-  public $generatedSamples;
   protected $generatedSamplesType = CloudAiLargeModelsVisionMedia::class;
   protected $generatedSamplesDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
    * @var string[]
    */
   public $raiMediaFilteredReasons;
-  /**
-   * @var CloudAiLargeModelsVisionFilteredText
-   */
-  public $raiTextFilteredReason;
   protected $raiTextFilteredReasonType = CloudAiLargeModelsVisionFilteredText::class;
   protected $raiTextFilteredReasonDataType = '';
 

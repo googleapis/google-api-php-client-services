@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1CitationMetadata extends \Google\Collection
 {
   protected $collection_key = 'citations';
-  /**
-   * @var GoogleCloudAiplatformV1Citation[]
-   */
-  public $citations;
   protected $citationsType = GoogleCloudAiplatformV1Citation::class;
   protected $citationsDataType = 'array';
 

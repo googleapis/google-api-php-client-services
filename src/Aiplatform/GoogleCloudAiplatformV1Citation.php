@@ -27,10 +27,6 @@ class GoogleCloudAiplatformV1Citation extends \Google\Model
    * @var string
    */
   public $license;
-  /**
-   * @var GoogleTypeDate
-   */
-  public $publicationDate;
   protected $publicationDateType = GoogleTypeDate::class;
   protected $publicationDateDataType = '';
   /**

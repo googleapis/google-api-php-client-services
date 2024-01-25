@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class CloudAiLargeModelsVisionSemanticFilterResponse extends \Google\Collection
 {
   protected $collection_key = 'namedBoundingBoxes';
-  /**
-   * @var CloudAiLargeModelsVisionNamedBoundingBox[]
-   */
-  public $namedBoundingBoxes;
   protected $namedBoundingBoxesType = CloudAiLargeModelsVisionNamedBoundingBox::class;
   protected $namedBoundingBoxesDataType = 'array';
   /**

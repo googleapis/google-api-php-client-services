@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchMigrateResourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'migrateResourceResponses';
-  /**
-   * @var GoogleCloudAiplatformV1MigrateResourceResponse[]
-   */
-  public $migrateResourceResponses;
   protected $migrateResourceResponsesType = GoogleCloudAiplatformV1MigrateResourceResponse::class;
   protected $migrateResourceResponsesDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1CreateDeploymentResourcePoolRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1DeploymentResourcePool
-   */
-  public $deploymentResourcePool;
   protected $deploymentResourcePoolType = GoogleCloudAiplatformV1DeploymentResourcePool::class;
   protected $deploymentResourcePoolDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1DeleteFeatureValuesRequestSelectEntity extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1EntityIdSelector
-   */
-  public $entityIdSelector;
   protected $entityIdSelectorType = GoogleCloudAiplatformV1EntityIdSelector::class;
   protected $entityIdSelectorDataType = '';
 

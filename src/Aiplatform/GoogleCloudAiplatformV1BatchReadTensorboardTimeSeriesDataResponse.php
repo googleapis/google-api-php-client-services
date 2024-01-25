@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchReadTensorboardTimeSeriesDataResponse extends \Google\Collection
 {
   protected $collection_key = 'timeSeriesData';
-  /**
-   * @var GoogleCloudAiplatformV1TimeSeriesData[]
-   */
-  public $timeSeriesData;
   protected $timeSeriesDataType = GoogleCloudAiplatformV1TimeSeriesData::class;
   protected $timeSeriesDataDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceCitationMetadata extends \Google\Collection
 {
   protected $collection_key = 'citations';
-  /**
-   * @var CloudAiNlLlmProtoServiceCitation[]
-   */
-  public $citations;
   protected $citationsType = CloudAiNlLlmProtoServiceCitation::class;
   protected $citationsDataType = 'array';
 

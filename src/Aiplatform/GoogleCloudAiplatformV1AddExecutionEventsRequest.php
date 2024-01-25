@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1AddExecutionEventsRequest extends \Google\Collection
 {
   protected $collection_key = 'events';
-  /**
-   * @var GoogleCloudAiplatformV1Event[]
-   */
-  public $events;
   protected $eventsType = GoogleCloudAiplatformV1Event::class;
   protected $eventsDataType = 'array';
 

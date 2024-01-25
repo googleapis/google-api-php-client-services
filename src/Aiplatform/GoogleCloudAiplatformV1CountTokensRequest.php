@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1CountTokensRequest extends \Google\Collection
 {
   protected $collection_key = 'instances';
-  /**
-   * @var GoogleCloudAiplatformV1Content[]
-   */
-  public $contents;
   protected $contentsType = GoogleCloudAiplatformV1Content::class;
   protected $contentsDataType = 'array';
   /**

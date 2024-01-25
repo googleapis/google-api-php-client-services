@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceCandidate extends \Google\Collection
 {
   protected $collection_key = 'safetyRatings';
-  /**
-   * @var CloudAiNlLlmProtoServiceCitationMetadata
-   */
-  public $citationMetadata;
   protected $citationMetadataType = CloudAiNlLlmProtoServiceCitationMetadata::class;
   protected $citationMetadataDataType = '';
-  /**
-   * @var CloudAiNlLlmProtoServiceContent
-   */
-  public $content;
   protected $contentType = CloudAiNlLlmProtoServiceContent::class;
   protected $contentDataType = '';
   /**
@@ -44,10 +36,6 @@ class CloudAiNlLlmProtoServiceCandidate extends \Google\Collection
    * @var int
    */
   public $index;
-  /**
-   * @var CloudAiNlLlmProtoServiceSafetyRating[]
-   */
-  public $safetyRatings;
   protected $safetyRatingsType = CloudAiNlLlmProtoServiceSafetyRating::class;
   protected $safetyRatingsDataType = 'array';
 

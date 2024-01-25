@@ -23,20 +23,12 @@ class GoogleCloudAiplatformV1BatchMigrateResourcesOperationMetadataPartialResult
    * @var string
    */
   public $dataset;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
    * @var string
    */
   public $model;
-  /**
-   * @var GoogleCloudAiplatformV1MigrateResourceRequest
-   */
-  public $request;
   protected $requestType = GoogleCloudAiplatformV1MigrateResourceRequest::class;
   protected $requestDataType = '';
 

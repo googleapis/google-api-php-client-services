@@ -20,22 +20,10 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceMessageMetadata extends \Google\Collection
 {
   protected $collection_key = 'outputFilterInfo';
-  /**
-   * @var LearningServingLlmMessageMetadata
-   */
-  public $inputFilterInfo;
   protected $inputFilterInfoType = LearningServingLlmMessageMetadata::class;
   protected $inputFilterInfoDataType = '';
-  /**
-   * @var LearningGenaiRootRoutingDecision
-   */
-  public $modelRoutingDecision;
   protected $modelRoutingDecisionType = LearningGenaiRootRoutingDecision::class;
   protected $modelRoutingDecisionDataType = '';
-  /**
-   * @var LearningServingLlmMessageMetadata[]
-   */
-  public $outputFilterInfo;
   protected $outputFilterInfoType = LearningServingLlmMessageMetadata::class;
   protected $outputFilterInfoDataType = 'array';
 

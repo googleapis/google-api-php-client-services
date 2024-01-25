@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Candidate extends \Google\Collection
 {
   protected $collection_key = 'safetyRatings';
-  /**
-   * @var GoogleCloudAiplatformV1CitationMetadata
-   */
-  public $citationMetadata;
   protected $citationMetadataType = GoogleCloudAiplatformV1CitationMetadata::class;
   protected $citationMetadataDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1Content
-   */
-  public $content;
   protected $contentType = GoogleCloudAiplatformV1Content::class;
   protected $contentDataType = '';
   /**
@@ -44,10 +36,6 @@ class GoogleCloudAiplatformV1Candidate extends \Google\Collection
    * @var int
    */
   public $index;
-  /**
-   * @var GoogleCloudAiplatformV1SafetyRating[]
-   */
-  public $safetyRatings;
   protected $safetyRatingsType = GoogleCloudAiplatformV1SafetyRating::class;
   protected $safetyRatingsDataType = 'array';
 

@@ -27,10 +27,6 @@ class CloudAiNlLlmProtoServicePartBlob extends \Google\Model
    * @var string
    */
   public $mimeType;
-  /**
-   * @var CloudAiNlLlmProtoServicePartFileData
-   */
-  public $originalFileData;
   protected $originalFileDataType = CloudAiNlLlmProtoServicePartFileData::class;
   protected $originalFileDataDataType = '';
 

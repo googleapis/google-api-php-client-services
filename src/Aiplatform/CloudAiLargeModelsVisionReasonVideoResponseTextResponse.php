@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiLargeModelsVisionReasonVideoResponseTextResponse extends \Google\Model
 {
-  /**
-   * @var CloudAiLargeModelsVisionRelativeTemporalPartition
-   */
-  public $relativeTemporalPartition;
   protected $relativeTemporalPartitionType = CloudAiLargeModelsVisionRelativeTemporalPartition::class;
   protected $relativeTemporalPartitionDataType = '';
   /**

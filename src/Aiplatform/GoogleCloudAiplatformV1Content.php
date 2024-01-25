@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Content extends \Google\Collection
 {
   protected $collection_key = 'parts';
-  /**
-   * @var GoogleCloudAiplatformV1Part[]
-   */
-  public $parts;
   protected $partsType = GoogleCloudAiplatformV1Part::class;
   protected $partsDataType = 'array';
   /**

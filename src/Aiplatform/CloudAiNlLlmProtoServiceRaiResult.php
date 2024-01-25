@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
 {
   protected $collection_key = 'raiSignals';
-  /**
-   * @var LanguageLabsAidaTrustRecitationProtoRecitationResult
-   */
-  public $aidaRecitationResult;
   protected $aidaRecitationResultType = LanguageLabsAidaTrustRecitationProtoRecitationResult::class;
   protected $aidaRecitationResultDataType = '';
   /**
@@ -38,16 +34,8 @@ class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
    * @var bool
    */
   public $filtered;
-  /**
-   * @var LearningGenaiRootLanguageFilterResult
-   */
-  public $languageFilterResult;
   protected $languageFilterResultType = LearningGenaiRootLanguageFilterResult::class;
   protected $languageFilterResultDataType = '';
-  /**
-   * @var CloudAiNlLlmProtoServiceRaiSignal[]
-   */
-  public $raiSignals;
   protected $raiSignalsType = CloudAiNlLlmProtoServiceRaiSignal::class;
   protected $raiSignalsDataType = 'array';
   /**

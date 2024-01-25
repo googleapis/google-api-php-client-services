@@ -27,22 +27,10 @@ class CloudAiLargeModelsVisionImage extends \Google\Model
    * @var string
    */
   public $image;
-  /**
-   * @var CloudAiLargeModelsVisionImageRAIScores
-   */
-  public $imageRaiScores;
   protected $imageRaiScoresType = CloudAiLargeModelsVisionImageRAIScores::class;
   protected $imageRaiScoresDataType = '';
-  /**
-   * @var CloudAiLargeModelsVisionRaiInfo
-   */
-  public $raiInfo;
   protected $raiInfoType = CloudAiLargeModelsVisionRaiInfo::class;
   protected $raiInfoDataType = '';
-  /**
-   * @var CloudAiLargeModelsVisionSemanticFilterResponse
-   */
-  public $semanticFilterResponse;
   protected $semanticFilterResponseType = CloudAiLargeModelsVisionSemanticFilterResponse::class;
   protected $semanticFilterResponseDataType = '';
   /**

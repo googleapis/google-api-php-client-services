@@ -20,34 +20,14 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends \Google\Collection
 {
   protected $collection_key = 'candidates';
-  /**
-   * @var CloudAiNlLlmProtoServiceCandidate[]
-   */
-  public $candidates;
   protected $candidatesType = CloudAiNlLlmProtoServiceCandidate::class;
   protected $candidatesDataType = 'array';
-  /**
-   * @var CloudAiNlLlmProtoServiceMessageMetadata
-   */
-  public $debugMetadata;
   protected $debugMetadataType = CloudAiNlLlmProtoServiceMessageMetadata::class;
   protected $debugMetadataDataType = '';
-  /**
-   * @var CloudAiNlLlmProtoServicePromptFeedback
-   */
-  public $promptFeedback;
   protected $promptFeedbackType = CloudAiNlLlmProtoServicePromptFeedback::class;
   protected $promptFeedbackDataType = '';
-  /**
-   * @var IntelligenceCloudAutomlXpsReportingMetrics
-   */
-  public $reportingMetrics;
   protected $reportingMetricsType = IntelligenceCloudAutomlXpsReportingMetrics::class;
   protected $reportingMetricsDataType = '';
-  /**
-   * @var CloudAiNlLlmProtoServiceUsageMetadata
-   */
-  public $usageMetadata;
   protected $usageMetadataType = CloudAiNlLlmProtoServiceUsageMetadata::class;
   protected $usageMetadataDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1BatchCreateFeaturesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var GoogleCloudAiplatformV1CreateFeatureRequest[]
-   */
-  public $requests;
   protected $requestsType = GoogleCloudAiplatformV1CreateFeatureRequest::class;
   protected $requestsDataType = 'array';
 

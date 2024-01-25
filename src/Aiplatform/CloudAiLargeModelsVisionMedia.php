@@ -19,16 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiLargeModelsVisionMedia extends \Google\Model
 {
-  /**
-   * @var CloudAiLargeModelsVisionImage
-   */
-  public $image;
   protected $imageType = CloudAiLargeModelsVisionImage::class;
   protected $imageDataType = '';
-  /**
-   * @var CloudAiLargeModelsVisionVideo
-   */
-  public $video;
   protected $videoType = CloudAiLargeModelsVisionVideo::class;
   protected $videoDataType = '';
 

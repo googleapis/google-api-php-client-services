@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1CreatePipelineJobRequest extends \Google\Model
    * @var string
    */
   public $parent;
-  /**
-   * @var GoogleCloudAiplatformV1PipelineJob
-   */
-  public $pipelineJob;
   protected $pipelineJobType = GoogleCloudAiplatformV1PipelineJob::class;
   protected $pipelineJobDataType = '';
   /**

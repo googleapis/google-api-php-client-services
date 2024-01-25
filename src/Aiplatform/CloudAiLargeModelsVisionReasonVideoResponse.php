@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class CloudAiLargeModelsVisionReasonVideoResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
-  /**
-   * @var CloudAiLargeModelsVisionReasonVideoResponseTextResponse[]
-   */
-  public $responses;
   protected $responsesType = CloudAiLargeModelsVisionReasonVideoResponseTextResponse::class;
   protected $responsesDataType = 'array';
 

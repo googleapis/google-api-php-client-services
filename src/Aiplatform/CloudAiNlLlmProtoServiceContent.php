@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceContent extends \Google\Collection
 {
   protected $collection_key = 'parts';
-  /**
-   * @var CloudAiNlLlmProtoServicePart[]
-   */
-  public $parts;
   protected $partsType = CloudAiNlLlmProtoServicePart::class;
   protected $partsDataType = 'array';
   /**

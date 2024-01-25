@@ -28,10 +28,6 @@ class CloudAiNlLlmProtoServicePromptFeedback extends \Google\Collection
    * @var string
    */
   public $blockReasonMessage;
-  /**
-   * @var CloudAiNlLlmProtoServiceSafetyRating[]
-   */
-  public $safetyRatings;
   protected $safetyRatingsType = CloudAiNlLlmProtoServiceSafetyRating::class;
   protected $safetyRatingsDataType = 'array';
 
