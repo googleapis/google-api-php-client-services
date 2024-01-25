@@ -20,10 +20,6 @@ namespace Google\Service\GamesManagement;
 class HiddenPlayerList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var HiddenPlayer[]
-   */
-  public $items;
   protected $itemsType = HiddenPlayer::class;
   protected $itemsDataType = 'array';
   /**
