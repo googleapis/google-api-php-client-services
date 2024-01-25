@@ -24,10 +24,6 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
    * @var array[]
    */
   public $additionalMetadata;
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainCompliance[]
-   */
-  public $compliance;
   protected $complianceType = StorageDatabasecenterPartnerapiV1mainCompliance::class;
   protected $complianceDataType = 'array';
   /**

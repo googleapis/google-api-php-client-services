@@ -23,10 +23,6 @@ class StorageDatabasecenterPartnerapiV1mainBackupConfiguration extends \Google\M
    * @var bool
    */
   public $automatedBackupEnabled;
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainRetentionSettings
-   */
-  public $backupRetentionSettings;
   protected $backupRetentionSettingsType = StorageDatabasecenterPartnerapiV1mainRetentionSettings::class;
   protected $backupRetentionSettingsDataType = '';
   /**

@@ -59,6 +59,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the create request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Instance $postBody, $optParams = [])
   {
@@ -91,6 +92,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the create request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function createsecondary($parent, Instance $postBody, $optParams = [])
   {
@@ -123,6 +125,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the delete.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -139,6 +142,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * @param FailoverInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function failover($name, FailoverInstanceRequest $postBody, $optParams = [])
   {
@@ -155,6 +159,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    *
    * @opt_param string view The view of the instance to return.
    * @return Instance
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -182,6 +187,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return ConnectionInfo
+   * @throws \Google\Service\Exception
    */
   public function getConnectionInfo($parent, $optParams = [])
   {
@@ -197,6 +203,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * @param InjectFaultRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function injectFault($name, InjectFaultRequest $postBody, $optParams = [])
   {
@@ -223,6 +230,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying a page of results the server
    * should return.
    * @return ListInstancesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsClustersInstances($parent, $optParams = [])
   {
@@ -267,6 +275,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the update request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Instance $postBody, $optParams = [])
   {
@@ -282,6 +291,7 @@ class ProjectsLocationsClustersInstances extends \Google\Service\Resource
    * @param RestartInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function restart($name, RestartInstanceRequest $postBody, $optParams = [])
   {

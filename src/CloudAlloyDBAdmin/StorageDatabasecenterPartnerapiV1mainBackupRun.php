@@ -23,10 +23,6 @@ class StorageDatabasecenterPartnerapiV1mainBackupRun extends \Google\Model
    * @var string
    */
   public $endTime;
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainOperationError
-   */
-  public $error;
   protected $errorType = StorageDatabasecenterPartnerapiV1mainOperationError::class;
   protected $errorDataType = '';
   /**

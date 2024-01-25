@@ -53,6 +53,7 @@ class ProjectsLocationsClustersUsers extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, the backend validates the
    * request, but doesn't actually execute it.
    * @return User
+   * @throws \Google\Service\Exception
    */
   public function create($parent, User $postBody, $optParams = [])
   {
@@ -81,6 +82,7 @@ class ProjectsLocationsClustersUsers extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, the backend validates the
    * request, but doesn't actually execute it.
    * @return AlloydbEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -95,6 +97,7 @@ class ProjectsLocationsClustersUsers extends \Google\Service\Resource
    * format, see the comment on the User.name field.
    * @param array $optParams Optional parameters.
    * @return User
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -117,6 +120,7 @@ class ProjectsLocationsClustersUsers extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListUsersResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsClustersUsers($parent, $optParams = [])
   {
@@ -153,6 +157,7 @@ class ProjectsLocationsClustersUsers extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, the backend validates the
    * request, but doesn't actually execute it.
    * @return User
+   * @throws \Google\Service\Exception
    */
   public function patch($name, User $postBody, $optParams = [])
   {

@@ -23,32 +23,16 @@ class Cluster extends \Google\Model
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var AutomatedBackupPolicy
-   */
-  public $automatedBackupPolicy;
   protected $automatedBackupPolicyType = AutomatedBackupPolicy::class;
   protected $automatedBackupPolicyDataType = '';
-  /**
-   * @var BackupSource
-   */
-  public $backupSource;
   protected $backupSourceType = BackupSource::class;
   protected $backupSourceDataType = '';
   /**
    * @var string
    */
   public $clusterType;
-  /**
-   * @var ContinuousBackupConfig
-   */
-  public $continuousBackupConfig;
   protected $continuousBackupConfigType = ContinuousBackupConfig::class;
   protected $continuousBackupConfigDataType = '';
-  /**
-   * @var ContinuousBackupInfo
-   */
-  public $continuousBackupInfo;
   protected $continuousBackupInfoType = ContinuousBackupInfo::class;
   protected $continuousBackupInfoDataType = '';
   /**
@@ -67,36 +51,20 @@ class Cluster extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var EncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
-  /**
-   * @var EncryptionInfo
-   */
-  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   /**
    * @var string
    */
   public $etag;
-  /**
-   * @var UserPassword
-   */
-  public $initialUser;
   protected $initialUserType = UserPassword::class;
   protected $initialUserDataType = '';
   /**
    * @var string[]
    */
   public $labels;
-  /**
-   * @var MigrationSource
-   */
-  public $migrationSource;
   protected $migrationSourceType = MigrationSource::class;
   protected $migrationSourceDataType = '';
   /**
@@ -107,16 +75,8 @@ class Cluster extends \Google\Model
    * @var string
    */
   public $network;
-  /**
-   * @var NetworkConfig
-   */
-  public $networkConfig;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
-  /**
-   * @var PrimaryConfig
-   */
-  public $primaryConfig;
   protected $primaryConfigType = PrimaryConfig::class;
   protected $primaryConfigDataType = '';
   /**
@@ -127,16 +87,8 @@ class Cluster extends \Google\Model
    * @var bool
    */
   public $satisfiesPzs;
-  /**
-   * @var SecondaryConfig
-   */
-  public $secondaryConfig;
   protected $secondaryConfigType = SecondaryConfig::class;
   protected $secondaryConfigDataType = '';
-  /**
-   * @var SslConfig
-   */
-  public $sslConfig;
   protected $sslConfigType = SslConfig::class;
   protected $sslConfigDataType = '';
   /**

@@ -23,10 +23,6 @@ class Operation extends \Google\Model
    * @var bool
    */
   public $done;
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**

@@ -51,26 +51,14 @@ class Backup extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var EncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
-  /**
-   * @var EncryptionInfo
-   */
-  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   /**
    * @var string
    */
   public $etag;
-  /**
-   * @var QuantityBasedExpiry
-   */
-  public $expiryQuantity;
   protected $expiryQuantityType = QuantityBasedExpiry::class;
   protected $expiryQuantityDataType = '';
   /**

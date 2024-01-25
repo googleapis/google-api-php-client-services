@@ -20,10 +20,6 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class ListClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Cluster[]
-   */
-  public $clusters;
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'array';
   /**

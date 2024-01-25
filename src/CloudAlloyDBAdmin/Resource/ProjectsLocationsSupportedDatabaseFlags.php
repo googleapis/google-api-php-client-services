@@ -45,6 +45,7 @@ class ProjectsLocationsSupportedDatabaseFlags extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying a page of results the server
    * should return.
    * @return ListSupportedDatabaseFlagsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSupportedDatabaseFlags($parent, $optParams = [])
   {

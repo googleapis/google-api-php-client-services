@@ -20,10 +20,6 @@ namespace Google\Service\CloudAlloyDBAdmin;
 class StorageDatabasecenterPartnerapiV1mainCustomMetadataData extends \Google\Collection
 {
   protected $collection_key = 'databaseMetadata';
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainDatabaseMetadata[]
-   */
-  public $databaseMetadata;
   protected $databaseMetadataType = StorageDatabasecenterPartnerapiV1mainDatabaseMetadata::class;
   protected $databaseMetadataDataType = 'array';
 

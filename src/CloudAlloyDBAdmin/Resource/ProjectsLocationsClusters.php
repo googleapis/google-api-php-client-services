@@ -59,6 +59,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the create request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Cluster $postBody, $optParams = [])
   {
@@ -92,6 +93,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the create request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function createsecondary($parent, Cluster $postBody, $optParams = [])
   {
@@ -126,6 +128,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the delete.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -145,6 +148,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @param GenerateClientCertificateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GenerateClientCertificateResponse
+   * @throws \Google\Service\Exception
    */
   public function generateClientCertificate($parent, GenerateClientCertificateRequest $postBody, $optParams = [])
   {
@@ -162,6 +166,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @opt_param string view Optional. The view of the cluster to return. Returns
    * all default fields if not set.
    * @return Cluster
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -187,6 +192,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying a page of results the server
    * should return.
    * @return ListClustersResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsClusters($parent, $optParams = [])
   {
@@ -229,6 +235,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * (e.g. permission checks and any other type of validation), but do not
    * actually execute the update request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Cluster $postBody, $optParams = [])
   {
@@ -246,6 +253,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @param PromoteClusterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function promote($name, PromoteClusterRequest $postBody, $optParams = [])
   {
@@ -263,6 +271,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @param RestoreClusterRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function restore($parent, RestoreClusterRequest $postBody, $optParams = [])
   {

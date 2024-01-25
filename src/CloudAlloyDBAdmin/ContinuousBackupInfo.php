@@ -28,10 +28,6 @@ class ContinuousBackupInfo extends \Google\Collection
    * @var string
    */
   public $enabledTime;
-  /**
-   * @var EncryptionInfo
-   */
-  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   /**

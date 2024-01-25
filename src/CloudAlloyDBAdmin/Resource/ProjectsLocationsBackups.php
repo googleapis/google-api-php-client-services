@@ -53,6 +53,7 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, the backend validates the
    * request, but doesn't actually execute it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Backup $postBody, $optParams = [])
   {
@@ -84,6 +85,7 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, the backend validates the
    * request, but doesn't actually execute it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -97,6 +99,7 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
    * @return Backup
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -118,6 +121,7 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying a page of results the server
    * should return.
    * @return ListBackupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsBackups($parent, $optParams = [])
   {
@@ -161,6 +165,7 @@ class ProjectsLocationsBackups extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, the backend validates the
    * request, but doesn't actually execute it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Backup $postBody, $optParams = [])
   {

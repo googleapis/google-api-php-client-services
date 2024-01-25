@@ -27,10 +27,6 @@ class AutomatedBackupPolicy extends \Google\Model
    * @var bool
    */
   public $enabled;
-  /**
-   * @var EncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**
@@ -41,22 +37,10 @@ class AutomatedBackupPolicy extends \Google\Model
    * @var string
    */
   public $location;
-  /**
-   * @var QuantityBasedRetention
-   */
-  public $quantityBasedRetention;
   protected $quantityBasedRetentionType = QuantityBasedRetention::class;
   protected $quantityBasedRetentionDataType = '';
-  /**
-   * @var TimeBasedRetention
-   */
-  public $timeBasedRetention;
   protected $timeBasedRetentionType = TimeBasedRetention::class;
   protected $timeBasedRetentionDataType = '';
-  /**
-   * @var WeeklySchedule
-   */
-  public $weeklySchedule;
   protected $weeklyScheduleType = WeeklySchedule::class;
   protected $weeklyScheduleDataType = '';
 

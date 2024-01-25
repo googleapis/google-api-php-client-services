@@ -24,10 +24,6 @@ class ListSupportedDatabaseFlagsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SupportedDatabaseFlag[]
-   */
-  public $supportedDatabaseFlags;
   protected $supportedDatabaseFlagsType = SupportedDatabaseFlag::class;
   protected $supportedDatabaseFlagsDataType = 'array';
 

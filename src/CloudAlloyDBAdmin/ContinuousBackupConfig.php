@@ -23,10 +23,6 @@ class ContinuousBackupConfig extends \Google\Model
    * @var bool
    */
   public $enabled;
-  /**
-   * @var EncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**

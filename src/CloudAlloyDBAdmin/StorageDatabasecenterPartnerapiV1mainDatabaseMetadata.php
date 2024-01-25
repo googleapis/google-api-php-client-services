@@ -19,28 +19,12 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseMetadata extends \Google\Model
 {
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainBackupConfiguration
-   */
-  public $backupConfiguration;
   protected $backupConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupConfiguration::class;
   protected $backupConfigurationDataType = '';
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainBackupRun
-   */
-  public $backupRun;
   protected $backupRunType = StorageDatabasecenterPartnerapiV1mainBackupRun::class;
   protected $backupRunDataType = '';
-  /**
-   * @var StorageDatabasecenterProtoCommonProduct
-   */
-  public $product;
   protected $productType = StorageDatabasecenterProtoCommonProduct::class;
   protected $productDataType = '';
-  /**
-   * @var StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
-   */
-  public $resourceId;
   protected $resourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $resourceIdDataType = '';
   /**

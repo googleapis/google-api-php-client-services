@@ -28,10 +28,6 @@ class ListUsersResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var User[]
-   */
-  public $users;
   protected $usersType = User::class;
   protected $usersDataType = 'array';
 
