@@ -24,10 +24,6 @@ class ListTrafficStatsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var TrafficStats[]
-   */
-  public $trafficStats;
   protected $trafficStatsType = TrafficStats::class;
   protected $trafficStatsDataType = 'array';
 
