@@ -20,10 +20,6 @@ namespace Google\Service\IDS;
 class ListEndpointsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Endpoint[]
-   */
-  public $endpoints;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
   /**
