@@ -19,38 +19,18 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Part extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1FileData
-   */
-  public $fileData;
   protected $fileDataType = GoogleCloudAiplatformV1FileData::class;
   protected $fileDataDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1FunctionCall
-   */
-  public $functionCall;
   protected $functionCallType = GoogleCloudAiplatformV1FunctionCall::class;
   protected $functionCallDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1FunctionResponse
-   */
-  public $functionResponse;
   protected $functionResponseType = GoogleCloudAiplatformV1FunctionResponse::class;
   protected $functionResponseDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1Blob
-   */
-  public $inlineData;
   protected $inlineDataType = GoogleCloudAiplatformV1Blob::class;
   protected $inlineDataDataType = '';
   /**
    * @var string
    */
   public $text;
-  /**
-   * @var GoogleCloudAiplatformV1VideoMetadata
-   */
-  public $videoMetadata;
   protected $videoMetadataType = GoogleCloudAiplatformV1VideoMetadata::class;
   protected $videoMetadataDataType = '';
 

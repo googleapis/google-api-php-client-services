@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1MutateDeployedModelOperationMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1GenericOperationMetadata
-   */
-  public $genericMetadata;
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
 

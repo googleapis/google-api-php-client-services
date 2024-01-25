@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1ModelDeploymentMonitoringJobLatestMonitoringPipelin
    * @var string
    */
   public $runTime;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

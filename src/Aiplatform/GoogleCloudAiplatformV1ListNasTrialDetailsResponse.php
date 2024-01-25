@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListNasTrialDetailsResponse extends \Google\Collection
 {
   protected $collection_key = 'nasTrialDetails';
-  /**
-   * @var GoogleCloudAiplatformV1NasTrialDetail[]
-   */
-  public $nasTrialDetails;
   protected $nasTrialDetailsType = GoogleCloudAiplatformV1NasTrialDetail::class;
   protected $nasTrialDetailsDataType = 'array';
   /**

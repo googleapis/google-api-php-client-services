@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListPipelineJobsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1PipelineJob[]
-   */
-  public $pipelineJobs;
   protected $pipelineJobsType = GoogleCloudAiplatformV1PipelineJob::class;
   protected $pipelineJobsDataType = 'array';
 

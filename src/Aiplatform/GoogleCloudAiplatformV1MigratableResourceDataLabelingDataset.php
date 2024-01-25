@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1MigratableResourceDataLabelingDataset extends \Google\Collection
 {
   protected $collection_key = 'dataLabelingAnnotatedDatasets';
-  /**
-   * @var GoogleCloudAiplatformV1MigratableResourceDataLabelingDatasetDataLabelingAnnotatedDataset[]
-   */
-  public $dataLabelingAnnotatedDatasets;
   protected $dataLabelingAnnotatedDatasetsType = GoogleCloudAiplatformV1MigratableResourceDataLabelingDatasetDataLabelingAnnotatedDataset::class;
   protected $dataLabelingAnnotatedDatasetsDataType = 'array';
   /**

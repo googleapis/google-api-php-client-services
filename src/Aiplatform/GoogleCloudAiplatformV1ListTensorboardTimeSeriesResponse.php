@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListTensorboardTimeSeriesResponse extends \Google\C
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1TensorboardTimeSeries[]
-   */
-  public $tensorboardTimeSeries;
   protected $tensorboardTimeSeriesType = GoogleCloudAiplatformV1TensorboardTimeSeries::class;
   protected $tensorboardTimeSeriesDataType = 'array';
 

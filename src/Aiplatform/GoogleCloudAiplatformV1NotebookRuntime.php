@@ -56,10 +56,6 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Collection
    * @var string[]
    */
   public $networkTags;
-  /**
-   * @var GoogleCloudAiplatformV1NotebookRuntimeTemplateRef
-   */
-  public $notebookRuntimeTemplateRef;
   protected $notebookRuntimeTemplateRefType = GoogleCloudAiplatformV1NotebookRuntimeTemplateRef::class;
   protected $notebookRuntimeTemplateRefDataType = '';
   /**
@@ -70,10 +66,6 @@ class GoogleCloudAiplatformV1NotebookRuntime extends \Google\Collection
    * @var string
    */
   public $proxyUri;
-  /**
-   * @var GoogleCloudAiplatformV1NotebookReservationAffinity
-   */
-  public $reservationAffinity;
   protected $reservationAffinityType = GoogleCloudAiplatformV1NotebookReservationAffinity::class;
   protected $reservationAffinityDataType = '';
   /**

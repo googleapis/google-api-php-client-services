@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1NasJobSpec extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec
-   */
-  public $multiTrialAlgorithmSpec;
   protected $multiTrialAlgorithmSpecType = GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpec::class;
   protected $multiTrialAlgorithmSpecDataType = '';
   /**

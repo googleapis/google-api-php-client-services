@@ -27,16 +27,8 @@ class GoogleCloudAiplatformV1NasTrialDetail extends \Google\Model
    * @var string
    */
   public $parameters;
-  /**
-   * @var GoogleCloudAiplatformV1NasTrial
-   */
-  public $searchTrial;
   protected $searchTrialType = GoogleCloudAiplatformV1NasTrial::class;
   protected $searchTrialDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1NasTrial
-   */
-  public $trainTrial;
   protected $trainTrialType = GoogleCloudAiplatformV1NasTrial::class;
   protected $trainTrialDataType = '';
 

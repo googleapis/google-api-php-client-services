@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1QueryDeployedModelsResponse extends \Google\Collection
 {
   protected $collection_key = 'deployedModels';
-  /**
-   * @var GoogleCloudAiplatformV1DeployedModelRef[]
-   */
-  public $deployedModelRefs;
   protected $deployedModelRefsType = GoogleCloudAiplatformV1DeployedModelRef::class;
   protected $deployedModelRefsDataType = 'array';
-  /**
-   * @var GoogleCloudAiplatformV1DeployedModel[]
-   */
-  public $deployedModels;
   protected $deployedModelsType = GoogleCloudAiplatformV1DeployedModel::class;
   protected $deployedModelsDataType = 'array';
   /**

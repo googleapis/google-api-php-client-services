@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpec extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig[]
-   */
-  public $configs;
   protected $configsType = GoogleCloudAiplatformV1ModelEvaluationSliceSliceSliceSpecSliceConfig::class;
   protected $configsDataType = 'map';
 

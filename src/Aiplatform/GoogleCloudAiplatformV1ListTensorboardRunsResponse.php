@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListTensorboardRunsResponse extends \Google\Collect
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1TensorboardRun[]
-   */
-  public $tensorboardRuns;
   protected $tensorboardRunsType = GoogleCloudAiplatformV1TensorboardRun::class;
   protected $tensorboardRunsDataType = 'array';
 

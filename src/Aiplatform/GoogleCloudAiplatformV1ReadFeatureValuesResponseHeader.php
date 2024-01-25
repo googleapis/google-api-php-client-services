@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ReadFeatureValuesResponseHeader extends \Google\Col
    * @var string
    */
   public $entityType;
-  /**
-   * @var GoogleCloudAiplatformV1ReadFeatureValuesResponseFeatureDescriptor[]
-   */
-  public $featureDescriptors;
   protected $featureDescriptorsType = GoogleCloudAiplatformV1ReadFeatureValuesResponseFeatureDescriptor::class;
   protected $featureDescriptorsDataType = 'array';
 

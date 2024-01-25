@@ -31,10 +31,6 @@ class GoogleCloudAiplatformV1NasJobSpecMultiTrialAlgorithmSpecSearchTrialSpec ex
    * @var int
    */
   public $maxTrialCount;
-  /**
-   * @var GoogleCloudAiplatformV1CustomJobSpec
-   */
-  public $searchTrialJobSpec;
   protected $searchTrialJobSpecType = GoogleCloudAiplatformV1CustomJobSpec::class;
   protected $searchTrialJobSpecDataType = '';
 

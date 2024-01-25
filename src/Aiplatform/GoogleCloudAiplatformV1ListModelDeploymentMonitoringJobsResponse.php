@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListModelDeploymentMonitoringJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'modelDeploymentMonitoringJobs';
-  /**
-   * @var GoogleCloudAiplatformV1ModelDeploymentMonitoringJob[]
-   */
-  public $modelDeploymentMonitoringJobs;
   protected $modelDeploymentMonitoringJobsType = GoogleCloudAiplatformV1ModelDeploymentMonitoringJob::class;
   protected $modelDeploymentMonitoringJobsDataType = 'array';
   /**

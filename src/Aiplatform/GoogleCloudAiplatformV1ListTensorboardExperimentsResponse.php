@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListTensorboardExperimentsResponse extends \Google\
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1TensorboardExperiment[]
-   */
-  public $tensorboardExperiments;
   protected $tensorboardExperimentsType = GoogleCloudAiplatformV1TensorboardExperiment::class;
   protected $tensorboardExperimentsDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PublisherModelCallToActionOpenFineTuningPipelines extends \Google\Collection
 {
   protected $collection_key = 'fineTuningPipelines';
-  /**
-   * @var GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences[]
-   */
-  public $fineTuningPipelines;
   protected $fineTuningPipelinesType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
   protected $fineTuningPipelinesDataType = 'array';
 

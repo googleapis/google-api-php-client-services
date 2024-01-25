@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfig ext
    * @var bool
    */
   public $enableFeatureAttributes;
-  /**
-   * @var GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfigExplanationBaseline
-   */
-  public $explanationBaseline;
   protected $explanationBaselineType = GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigExplanationConfigExplanationBaseline::class;
   protected $explanationBaselineDataType = '';
 

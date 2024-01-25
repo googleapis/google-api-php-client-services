@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListSpecialistPoolsResponse extends \Google\Collect
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1SpecialistPool[]
-   */
-  public $specialistPools;
   protected $specialistPoolsType = GoogleCloudAiplatformV1SpecialistPool::class;
   protected $specialistPoolsDataType = 'array';
 

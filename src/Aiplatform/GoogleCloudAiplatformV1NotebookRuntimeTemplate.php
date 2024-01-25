@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Collection
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudAiplatformV1PersistentDiskSpec
-   */
-  public $dataPersistentDiskSpec;
   protected $dataPersistentDiskSpecType = GoogleCloudAiplatformV1PersistentDiskSpec::class;
   protected $dataPersistentDiskSpecDataType = '';
   /**
@@ -42,16 +38,8 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var GoogleCloudAiplatformV1NotebookEucConfig
-   */
-  public $eucConfig;
   protected $eucConfigType = GoogleCloudAiplatformV1NotebookEucConfig::class;
   protected $eucConfigDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1NotebookIdleShutdownConfig
-   */
-  public $idleShutdownConfig;
   protected $idleShutdownConfigType = GoogleCloudAiplatformV1NotebookIdleShutdownConfig::class;
   protected $idleShutdownConfigDataType = '';
   /**
@@ -62,20 +50,12 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  /**
-   * @var GoogleCloudAiplatformV1MachineSpec
-   */
-  public $machineSpec;
   protected $machineSpecType = GoogleCloudAiplatformV1MachineSpec::class;
   protected $machineSpecDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudAiplatformV1NetworkSpec
-   */
-  public $networkSpec;
   protected $networkSpecType = GoogleCloudAiplatformV1NetworkSpec::class;
   protected $networkSpecDataType = '';
   /**
@@ -86,20 +66,12 @@ class GoogleCloudAiplatformV1NotebookRuntimeTemplate extends \Google\Collection
    * @var string
    */
   public $notebookRuntimeType;
-  /**
-   * @var GoogleCloudAiplatformV1NotebookReservationAffinity
-   */
-  public $reservationAffinity;
   protected $reservationAffinityType = GoogleCloudAiplatformV1NotebookReservationAffinity::class;
   protected $reservationAffinityDataType = '';
   /**
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var GoogleCloudAiplatformV1ShieldedVmConfig
-   */
-  public $shieldedVmConfig;
   protected $shieldedVmConfigType = GoogleCloudAiplatformV1ShieldedVmConfig::class;
   protected $shieldedVmConfigDataType = '';
   /**

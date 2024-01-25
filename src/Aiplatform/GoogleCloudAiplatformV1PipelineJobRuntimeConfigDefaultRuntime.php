@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PipelineJobRuntimeConfigDefaultRuntime extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1PipelineJobRuntimeConfigPersistentResourceRuntimeDetail
-   */
-  public $persistentResourceRuntimeDetail;
   protected $persistentResourceRuntimeDetailType = GoogleCloudAiplatformV1PipelineJobRuntimeConfigPersistentResourceRuntimeDetail::class;
   protected $persistentResourceRuntimeDetailDataType = '';
 

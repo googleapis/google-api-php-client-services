@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1MutateDeployedModelRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1DeployedModel
-   */
-  public $deployedModel;
   protected $deployedModelType = GoogleCloudAiplatformV1DeployedModel::class;
   protected $deployedModelDataType = '';
   /**

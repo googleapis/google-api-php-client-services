@@ -23,10 +23,6 @@ class GoogleCloudAiplatformV1MigrateResourceResponse extends \Google\Model
    * @var string
    */
   public $dataset;
-  /**
-   * @var GoogleCloudAiplatformV1MigratableResource
-   */
-  public $migratableResource;
   protected $migratableResourceType = GoogleCloudAiplatformV1MigratableResource::class;
   protected $migratableResourceDataType = '';
   /**

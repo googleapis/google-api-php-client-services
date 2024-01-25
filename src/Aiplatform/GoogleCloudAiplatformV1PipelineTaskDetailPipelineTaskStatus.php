@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PipelineTaskDetailPipelineTaskStatus extends \Google\Model
 {
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $error;
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**

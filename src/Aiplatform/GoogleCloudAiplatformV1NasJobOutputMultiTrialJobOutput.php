@@ -20,16 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1NasJobOutputMultiTrialJobOutput extends \Google\Collection
 {
   protected $collection_key = 'trainTrials';
-  /**
-   * @var GoogleCloudAiplatformV1NasTrial[]
-   */
-  public $searchTrials;
   protected $searchTrialsType = GoogleCloudAiplatformV1NasTrial::class;
   protected $searchTrialsDataType = 'array';
-  /**
-   * @var GoogleCloudAiplatformV1NasTrial[]
-   */
-  public $trainTrials;
   protected $trainTrialsType = GoogleCloudAiplatformV1NasTrial::class;
   protected $trainTrialsDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1MutateDeployedIndexResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1DeployedIndex
-   */
-  public $deployedIndex;
   protected $deployedIndexType = GoogleCloudAiplatformV1DeployedIndex::class;
   protected $deployedIndexDataType = '';
 

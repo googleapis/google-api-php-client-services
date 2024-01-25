@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1BigQuerySource
-   */
-  public $bigquerySource;
   protected $bigquerySourceType = GoogleCloudAiplatformV1BigQuerySource::class;
   protected $bigquerySourceDataType = '';
   /**
@@ -33,16 +29,8 @@ class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigTrainingDataset exten
    * @var string
    */
   public $dataset;
-  /**
-   * @var GoogleCloudAiplatformV1GcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = GoogleCloudAiplatformV1GcsSource::class;
   protected $gcsSourceDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1SamplingStrategy
-   */
-  public $loggingSamplingStrategy;
   protected $loggingSamplingStrategyType = GoogleCloudAiplatformV1SamplingStrategy::class;
   protected $loggingSamplingStrategyDataType = '';
   /**

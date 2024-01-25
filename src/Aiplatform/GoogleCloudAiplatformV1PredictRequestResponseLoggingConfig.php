@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1BigQueryDestination
-   */
-  public $bigqueryDestination;
   protected $bigqueryDestinationType = GoogleCloudAiplatformV1BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PublisherModelCallToActionOpenNotebooks extends \Google\Collection
 {
   protected $collection_key = 'notebooks';
-  /**
-   * @var GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences[]
-   */
-  public $notebooks;
   protected $notebooksType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
   protected $notebooksDataType = 'array';
 

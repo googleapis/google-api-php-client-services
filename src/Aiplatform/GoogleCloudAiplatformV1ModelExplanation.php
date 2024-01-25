@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelExplanation extends \Google\Collection
 {
   protected $collection_key = 'meanAttributions';
-  /**
-   * @var GoogleCloudAiplatformV1Attribution[]
-   */
-  public $meanAttributions;
   protected $meanAttributionsType = GoogleCloudAiplatformV1Attribution::class;
   protected $meanAttributionsDataType = 'array';
 

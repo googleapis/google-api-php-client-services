@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ListMetadataStoresResponse extends \Google\Collection
 {
   protected $collection_key = 'metadataStores';
-  /**
-   * @var GoogleCloudAiplatformV1MetadataStore[]
-   */
-  public $metadataStores;
   protected $metadataStoresType = GoogleCloudAiplatformV1MetadataStore::class;
   protected $metadataStoresDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListSchedulesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1Schedule[]
-   */
-  public $schedules;
   protected $schedulesType = GoogleCloudAiplatformV1Schedule::class;
   protected $schedulesDataType = 'array';
 

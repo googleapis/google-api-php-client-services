@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Probe extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ProbeExecAction
-   */
-  public $exec;
   protected $execType = GoogleCloudAiplatformV1ProbeExecAction::class;
   protected $execDataType = '';
   /**

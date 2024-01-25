@@ -24,10 +24,6 @@ class GoogleCloudAiplatformV1ListTrialsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAiplatformV1Trial[]
-   */
-  public $trials;
   protected $trialsType = GoogleCloudAiplatformV1Trial::class;
   protected $trialsDataType = 'array';
 

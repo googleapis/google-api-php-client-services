@@ -20,10 +20,6 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ModelMonitoringAlertConfig extends \Google\Collection
 {
   protected $collection_key = 'notificationChannels';
-  /**
-   * @var GoogleCloudAiplatformV1ModelMonitoringAlertConfigEmailAlertConfig
-   */
-  public $emailAlertConfig;
   protected $emailAlertConfigType = GoogleCloudAiplatformV1ModelMonitoringAlertConfigEmailAlertConfig::class;
   protected $emailAlertConfigDataType = '';
   /**

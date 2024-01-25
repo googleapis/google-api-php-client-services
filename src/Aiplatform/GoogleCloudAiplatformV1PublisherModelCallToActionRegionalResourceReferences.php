@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1PublisherModelResourceReference[]
-   */
-  public $references;
   protected $referencesType = GoogleCloudAiplatformV1PublisherModelResourceReference::class;
   protected $referencesDataType = 'map';
   /**

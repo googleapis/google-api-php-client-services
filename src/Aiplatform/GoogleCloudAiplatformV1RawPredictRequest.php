@@ -19,10 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1RawPredictRequest extends \Google\Model
 {
-  /**
-   * @var GoogleApiHttpBody
-   */
-  public $httpBody;
   protected $httpBodyType = GoogleApiHttpBody::class;
   protected $httpBodyDataType = '';
 

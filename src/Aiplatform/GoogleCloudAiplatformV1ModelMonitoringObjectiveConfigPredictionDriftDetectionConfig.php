@@ -19,22 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ModelMonitoringObjectiveConfigPredictionDriftDetectionConfig extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAiplatformV1ThresholdConfig[]
-   */
-  public $attributionScoreDriftThresholds;
   protected $attributionScoreDriftThresholdsType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $attributionScoreDriftThresholdsDataType = 'map';
-  /**
-   * @var GoogleCloudAiplatformV1ThresholdConfig
-   */
-  public $defaultDriftThreshold;
   protected $defaultDriftThresholdType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $defaultDriftThresholdDataType = '';
-  /**
-   * @var GoogleCloudAiplatformV1ThresholdConfig[]
-   */
-  public $driftThresholds;
   protected $driftThresholdsType = GoogleCloudAiplatformV1ThresholdConfig::class;
   protected $driftThresholdsDataType = 'map';
 
