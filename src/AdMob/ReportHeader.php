@@ -19,16 +19,8 @@ namespace Google\Service\AdMob;
 
 class ReportHeader extends \Google\Model
 {
-  /**
-   * @var DateRange
-   */
-  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
-  /**
-   * @var LocalizationSettings
-   */
-  public $localizationSettings;
   protected $localizationSettingsType = LocalizationSettings::class;
   protected $localizationSettingsDataType = '';
   /**

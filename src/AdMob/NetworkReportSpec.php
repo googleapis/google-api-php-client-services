@@ -20,26 +20,14 @@ namespace Google\Service\AdMob;
 class NetworkReportSpec extends \Google\Collection
 {
   protected $collection_key = 'sortConditions';
-  /**
-   * @var DateRange
-   */
-  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
-  /**
-   * @var NetworkReportSpecDimensionFilter[]
-   */
-  public $dimensionFilters;
   protected $dimensionFiltersType = NetworkReportSpecDimensionFilter::class;
   protected $dimensionFiltersDataType = 'array';
   /**
    * @var string[]
    */
   public $dimensions;
-  /**
-   * @var LocalizationSettings
-   */
-  public $localizationSettings;
   protected $localizationSettingsType = LocalizationSettings::class;
   protected $localizationSettingsDataType = '';
   /**
@@ -50,10 +38,6 @@ class NetworkReportSpec extends \Google\Collection
    * @var string[]
    */
   public $metrics;
-  /**
-   * @var NetworkReportSpecSortCondition[]
-   */
-  public $sortConditions;
   protected $sortConditionsType = NetworkReportSpecSortCondition::class;
   protected $sortConditionsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\AdMob;
 
 class GenerateNetworkReportRequest extends \Google\Model
 {
-  /**
-   * @var NetworkReportSpec
-   */
-  public $reportSpec;
   protected $reportSpecType = NetworkReportSpec::class;
   protected $reportSpecDataType = '';
 

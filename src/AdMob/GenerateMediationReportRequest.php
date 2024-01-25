@@ -19,10 +19,6 @@ namespace Google\Service\AdMob;
 
 class GenerateMediationReportRequest extends \Google\Model
 {
-  /**
-   * @var MediationReportSpec
-   */
-  public $reportSpec;
   protected $reportSpecType = MediationReportSpec::class;
   protected $reportSpecDataType = '';
 

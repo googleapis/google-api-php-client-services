@@ -23,10 +23,6 @@ class NetworkReportSpecDimensionFilter extends \Google\Model
    * @var string
    */
   public $dimension;
-  /**
-   * @var StringList
-   */
-  public $matchesAny;
   protected $matchesAnyType = StringList::class;
   protected $matchesAnyDataType = '';
 
