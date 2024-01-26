@@ -41,6 +41,7 @@ class OrganizationsAppgroupsAppsKeysApiproducts extends \Google\Service\Resource
    * p_name}/apps/{app}/keys/{key}/apiproducts/{apiproduct}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupAppKey
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -65,6 +66,7 @@ class OrganizationsAppgroupsAppsKeysApiproducts extends \Google\Service\Resource
    * value to `approve` or `revoke` respectively. The `Content-Type` header, if
    * set, must be set to `application/octet-stream`, with empty body.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function updateAppGroupAppKeyApiProduct($name, $optParams = [])
   {

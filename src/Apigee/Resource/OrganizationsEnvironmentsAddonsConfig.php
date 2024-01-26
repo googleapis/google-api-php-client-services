@@ -39,6 +39,7 @@ class OrganizationsEnvironmentsAddonsConfig extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1SetAddonEnablementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function setAddonEnablement($name, GoogleCloudApigeeV1SetAddonEnablementRequest $postBody, $optParams = [])
   {

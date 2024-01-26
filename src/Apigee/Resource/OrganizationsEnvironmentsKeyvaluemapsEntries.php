@@ -44,6 +44,7 @@ class OrganizationsEnvironmentsKeyvaluemapsEntries extends \Google\Service\Resou
    * @param GoogleCloudApigeeV1KeyValueEntry $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1KeyValueEntry
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1KeyValueEntry $postBody, $optParams = [])
   {
@@ -66,6 +67,7 @@ class OrganizationsEnvironmentsKeyvaluemapsEntries extends \Google\Service\Resou
    * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1KeyValueEntry
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -86,6 +88,7 @@ class OrganizationsEnvironmentsKeyvaluemapsEntries extends \Google\Service\Resou
    * `organizations/{organization}/keyvaluemaps/{keyvaluemap}/entries/{entry}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1KeyValueEntry
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -111,6 +114,7 @@ class OrganizationsEnvironmentsKeyvaluemapsEntries extends \Google\Service\Resou
    * valid key value entry returned from a previous call that can be used to
    * retrieve the next page.
    * @return GoogleCloudApigeeV1ListKeyValueEntriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsEnvironmentsKeyvaluemapsEntries($parent, $optParams = [])
   {
@@ -131,6 +135,7 @@ class OrganizationsEnvironmentsKeyvaluemapsEntries extends \Google\Service\Resou
    * @param GoogleCloudApigeeV1KeyValueEntry $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1KeyValueEntry
+   * @throws \Google\Service\Exception
    */
   public function update($name, GoogleCloudApigeeV1KeyValueEntry $postBody, $optParams = [])
   {

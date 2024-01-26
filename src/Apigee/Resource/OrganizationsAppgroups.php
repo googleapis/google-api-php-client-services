@@ -41,6 +41,7 @@ class OrganizationsAppgroups extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1AppGroup $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroup
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1AppGroup $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class OrganizationsAppgroups extends \Google\Service\Resource
    * structure in your request: `organizations/{org}/appgroups/{app_group_name}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroup
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -75,6 +77,7 @@ class OrganizationsAppgroups extends \Google\Service\Resource
    * structure in your request: `organizations/{org}/appgroups/{app_group_name}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroup
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -101,6 +104,7 @@ class OrganizationsAppgroups extends \Google\Service\Resource
    * @opt_param string pageToken The starting index record for listing the
    * AppGroups.
    * @return GoogleCloudApigeeV1ListAppGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsAppgroups($parent, $optParams = [])
   {
@@ -124,6 +128,7 @@ class OrganizationsAppgroups extends \Google\Service\Resource
    * action as `active` or `inactive`. The `Content-Type` header must be set to
    * `application/octet-stream`, with empty body.
    * @return GoogleCloudApigeeV1AppGroup
+   * @throws \Google\Service\Exception
    */
   public function update($name, GoogleCloudApigeeV1AppGroup $postBody, $optParams = [])
   {

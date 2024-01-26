@@ -41,6 +41,7 @@ class OrganizationsAppgroupsApps extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1AppGroupApp $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupApp
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1AppGroupApp $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class OrganizationsAppgroupsApps extends \Google\Service\Resource
    * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupApp
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class OrganizationsAppgroupsApps extends \Google\Service\Resource
    * `organizations/{org}/appgroups/{app_group_name}/apps/{app}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupApp
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class OrganizationsAppgroupsApps extends \Google\Service\Resource
    * valid AppGroup app returned from a previous call that can be used to retrieve
    * the next page.
    * @return GoogleCloudApigeeV1ListAppGroupAppsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsAppgroupsApps($parent, $optParams = [])
   {
@@ -126,6 +130,7 @@ class OrganizationsAppgroupsApps extends \Google\Service\Resource
    * value to `approve` or `revoke`. The `Content-Type` header must be set to
    * `application/octet-stream`, with empty body.
    * @return GoogleCloudApigeeV1AppGroupApp
+   * @throws \Google\Service\Exception
    */
   public function update($name, GoogleCloudApigeeV1AppGroupApp $postBody, $optParams = [])
   {

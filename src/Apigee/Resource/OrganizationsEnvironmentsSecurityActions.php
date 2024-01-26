@@ -45,6 +45,7 @@ class OrganizationsEnvironmentsSecurityActions extends \Google\Service\Resource
    * resource name. This value should be 0-61 characters, and valid format is
    * (^[a-z]([a-z0-9-]{​0,61}[a-z0-9])?$).
    * @return GoogleCloudApigeeV1SecurityAction
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1SecurityAction $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class OrganizationsEnvironmentsSecurityActions extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1DisableSecurityActionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecurityAction
+   * @throws \Google\Service\Exception
    */
   public function disable($name, GoogleCloudApigeeV1DisableSecurityActionRequest $postBody, $optParams = [])
   {
@@ -83,6 +85,7 @@ class OrganizationsEnvironmentsSecurityActions extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1EnableSecurityActionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecurityAction
+   * @throws \Google\Service\Exception
    */
   public function enable($name, GoogleCloudApigeeV1EnableSecurityActionRequest $postBody, $optParams = [])
   {
@@ -98,6 +101,7 @@ class OrganizationsEnvironmentsSecurityActions extends \Google\Service\Resource
    * organizations/{org}/environments/{env}/securityActions/{security_action}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecurityAction
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -125,6 +129,7 @@ class OrganizationsEnvironmentsSecurityActions extends \Google\Service\Resource
    * When paginating, all other parameters provided to `ListSecurityActions` must
    * match the call that provided the page token.
    * @return GoogleCloudApigeeV1ListSecurityActionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsEnvironmentsSecurityActions($parent, $optParams = [])
   {

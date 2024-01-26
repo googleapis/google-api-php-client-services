@@ -19,10 +19,6 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SetAddonsRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudApigeeV1AddonsConfig
-   */
-  public $addonsConfig;
   protected $addonsConfigType = GoogleCloudApigeeV1AddonsConfig::class;
   protected $addonsConfigDataType = '';
 

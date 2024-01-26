@@ -51,6 +51,7 @@ class OrganizationsDevelopersAppsKeysCreate extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1DeveloperAppKey $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DeveloperAppKey
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1DeveloperAppKey $postBody, $optParams = [])
   {

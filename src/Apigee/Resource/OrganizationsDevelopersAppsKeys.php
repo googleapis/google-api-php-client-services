@@ -50,6 +50,7 @@ class OrganizationsDevelopersAppsKeys extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1DeveloperAppKey $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DeveloperAppKey
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1DeveloperAppKey $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class OrganizationsDevelopersAppsKeys extends \Google\Service\Resource
    * `organizations/{org}/developers/{developer_email}/apps/{app}/keys/{key}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DeveloperAppKey
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -87,6 +89,7 @@ class OrganizationsDevelopersAppsKeys extends \Google\Service\Resource
    * `organizations/{org}/developers/{developer_email}/apps/{app}/keys/{key}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DeveloperAppKey
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -108,6 +111,7 @@ class OrganizationsDevelopersAppsKeys extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1DeveloperAppKey $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DeveloperAppKey
+   * @throws \Google\Service\Exception
    */
   public function replaceDeveloperAppKey($name, GoogleCloudApigeeV1DeveloperAppKey $postBody, $optParams = [])
   {
@@ -134,6 +138,7 @@ class OrganizationsDevelopersAppsKeys extends \Google\Service\Resource
    * value to `approve` or `revoke`, respectively. The `Content-Type` header must
    * be set to `application/octet-stream`.
    * @return GoogleCloudApigeeV1DeveloperAppKey
+   * @throws \Google\Service\Exception
    */
   public function updateDeveloperAppKey($name, GoogleCloudApigeeV1DeveloperAppKey $postBody, $optParams = [])
   {

@@ -39,10 +39,6 @@ class GoogleCloudApigeeV1TargetServerConfig extends \Google\Model
    * @var string
    */
   public $protocol;
-  /**
-   * @var GoogleCloudApigeeV1TlsInfoConfig
-   */
-  public $tlsInfo;
   protected $tlsInfoType = GoogleCloudApigeeV1TlsInfoConfig::class;
   protected $tlsInfoDataType = '';
 

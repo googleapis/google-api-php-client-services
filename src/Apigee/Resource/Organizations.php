@@ -50,6 +50,7 @@ class Organizations extends \Google\Service\Resource
    * to associate the Apigee organization. Pass the information as a query
    * parameter using the following structure in your request: `projects/`
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create(GoogleCloudApigeeV1Organization $postBody, $optParams = [])
   {
@@ -82,6 +83,7 @@ class Organizations extends \Google\Service\Resource
    * this field, the Apigee organization cannot be recreated in the same GCP
    * project.**
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -98,6 +100,7 @@ class Organizations extends \Google\Service\Resource
    * format: `organizations/{org}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Organization
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -118,6 +121,7 @@ class Organizations extends \Google\Service\Resource
    * specific deployments receiving traffic will be included in the IngressConfig
    * response's RoutingRules.
    * @return GoogleCloudApigeeV1IngressConfig
+   * @throws \Google\Service\Exception
    */
   public function getDeployedIngressConfig($name, $optParams = [])
   {
@@ -133,6 +137,7 @@ class Organizations extends \Google\Service\Resource
    * format: `organizations/{org}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1OrganizationProjectMapping
+   * @throws \Google\Service\Exception
    */
   public function getProjectMapping($name, $optParams = [])
   {
@@ -147,6 +152,7 @@ class Organizations extends \Google\Service\Resource
    * in the following format: 'organizations/{org}/runtimeConfig'.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1RuntimeConfig
+   * @throws \Google\Service\Exception
    */
   public function getRuntimeConfig($name, $optParams = [])
   {
@@ -162,6 +168,7 @@ class Organizations extends \Google\Service\Resource
    * This will always be: 'organizations/{org}/securitySettings'.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecuritySettings
+   * @throws \Google\Service\Exception
    */
   public function getSecuritySettings($name, $optParams = [])
   {
@@ -186,6 +193,7 @@ class Organizations extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1GetSyncAuthorizationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SyncAuthorization
+   * @throws \Google\Service\Exception
    */
   public function getSyncAuthorization($name, GoogleCloudApigeeV1GetSyncAuthorizationRequest $postBody, $optParams = [])
   {
@@ -204,6 +212,7 @@ class Organizations extends \Google\Service\Resource
    * `organizations`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1ListOrganizationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizations($parent, $optParams = [])
   {
@@ -220,6 +229,7 @@ class Organizations extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1SetAddonsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function setAddons($org, GoogleCloudApigeeV1SetAddonsRequest $postBody, $optParams = [])
   {
@@ -244,6 +254,7 @@ class Organizations extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1SyncAuthorization $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SyncAuthorization
+   * @throws \Google\Service\Exception
    */
   public function setSyncAuthorization($name, GoogleCloudApigeeV1SyncAuthorization $postBody, $optParams = [])
   {
@@ -260,6 +271,7 @@ class Organizations extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1Organization $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Organization
+   * @throws \Google\Service\Exception
    */
   public function update($name, GoogleCloudApigeeV1Organization $postBody, $optParams = [])
   {
@@ -279,6 +291,7 @@ class Organizations extends \Google\Service\Resource
    * @opt_param string updateMask Optional. The list of fields to update. Allowed
    * fields are: - ml_retraining_feedback_enabled
    * @return GoogleCloudApigeeV1SecuritySettings
+   * @throws \Google\Service\Exception
    */
   public function updateSecuritySettings($name, GoogleCloudApigeeV1SecuritySettings $postBody, $optParams = [])
   {

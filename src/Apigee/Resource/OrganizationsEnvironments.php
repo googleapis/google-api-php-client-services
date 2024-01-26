@@ -53,6 +53,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    *
    * @opt_param string name Optional. Name of the environment.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1Environment $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * structure in your request: `organizations/{org}/environments/{env}`
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -85,6 +87,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * structure in your request: `organizations/{org}/environments/{env}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Environment
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -99,6 +102,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * format of `/organizations/{org}/environments/{env}/addonsConfig`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AddonsConfig
+   * @throws \Google\Service\Exception
    */
   public function getAddonsConfig($name, $optParams = [])
   {
@@ -116,6 +120,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * `organizations/{org}/environments/{env}/apiSecurityRuntimeConfig`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1ApiSecurityRuntimeConfig
+   * @throws \Google\Service\Exception
    */
   public function getApiSecurityRuntimeConfig($name, $optParams = [])
   {
@@ -132,6 +137,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * `organizations/{org}/environments/{env}/debugmask`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1DebugMask
+   * @throws \Google\Service\Exception
    */
   public function getDebugmask($name, $optParams = [])
   {
@@ -148,6 +154,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * `organizations/{org}/environments/{env}/deployedConfig`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1EnvironmentConfig
+   * @throws \Google\Service\Exception
    */
   public function getDeployedConfig($name, $optParams = [])
   {
@@ -182,6 +189,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -198,6 +206,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * `organizations/{org}/environments/{env}/security_actions_config`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecurityActionsConfig
+   * @throws \Google\Service\Exception
    */
   public function getSecurityActionsConfig($name, $optParams = [])
   {
@@ -214,6 +223,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * "organizations/environments/traceConfig".
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1TraceConfig
+   * @throws \Google\Service\Exception
    */
   public function getTraceConfig($name, $optParams = [])
   {
@@ -234,6 +244,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @opt_param string updateMask List of fields to be updated. Fields that can be
    * updated: node_config.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function modifyEnvironment($name, GoogleCloudApigeeV1Environment $postBody, $optParams = [])
   {
@@ -256,6 +267,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @param GoogleIamV1SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, GoogleIamV1SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -272,6 +284,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * structure in your request: `organizations/{org}/environments/{env}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Subscription
+   * @throws \Google\Service\Exception
    */
   public function subscribe($parent, $optParams = [])
   {
@@ -292,6 +305,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @param GoogleIamV1TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIamV1TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, GoogleIamV1TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -308,6 +322,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function unsubscribe($parent, GoogleCloudApigeeV1Subscription $postBody, $optParams = [])
   {
@@ -328,6 +343,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1Environment $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Environment
+   * @throws \Google\Service\Exception
    */
   public function update($name, GoogleCloudApigeeV1Environment $postBody, $optParams = [])
   {
@@ -349,6 +365,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * (false).
    * @opt_param string updateMask Field debug mask to support partial updates.
    * @return GoogleCloudApigeeV1DebugMask
+   * @throws \Google\Service\Exception
    */
   public function updateDebugmask($name, GoogleCloudApigeeV1DebugMask $postBody, $optParams = [])
   {
@@ -369,6 +386,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1Environment $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Environment
+   * @throws \Google\Service\Exception
    */
   public function updateEnvironment($name, GoogleCloudApigeeV1Environment $postBody, $optParams = [])
   {
@@ -389,6 +407,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    *
    * @opt_param string updateMask The list of fields to update.
    * @return GoogleCloudApigeeV1SecurityActionsConfig
+   * @throws \Google\Service\Exception
    */
   public function updateSecurityActionsConfig($name, GoogleCloudApigeeV1SecurityActionsConfig $postBody, $optParams = [])
   {
@@ -410,6 +429,7 @@ class OrganizationsEnvironments extends \Google\Service\Resource
    *
    * @opt_param string updateMask List of fields to be updated.
    * @return GoogleCloudApigeeV1TraceConfig
+   * @throws \Google\Service\Exception
    */
   public function updateTraceConfig($name, GoogleCloudApigeeV1TraceConfig $postBody, $optParams = [])
   {

@@ -37,6 +37,7 @@ class OrganizationsApps extends \Google\Service\Resource
    * `organizations/{org}/apps/{app}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1App
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -82,6 +83,7 @@ class OrganizationsApps extends \Google\Service\Resource
    * @opt_param string status Optional. Filter by the status of the app. Valid
    * values are `approved` or `revoked`. Defaults to `approved`.
    * @return GoogleCloudApigeeV1ListAppsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsApps($parent, $optParams = [])
   {

@@ -24,10 +24,6 @@ class GoogleCloudApigeeV1ResourceStatus extends \Google\Collection
    * @var string
    */
   public $resource;
-  /**
-   * @var GoogleCloudApigeeV1RevisionStatus[]
-   */
-  public $revisions;
   protected $revisionsType = GoogleCloudApigeeV1RevisionStatus::class;
   protected $revisionsDataType = 'array';
   /**

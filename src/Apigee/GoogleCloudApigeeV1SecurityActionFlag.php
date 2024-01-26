@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1SecurityActionFlag extends \Google\Collection
 {
   protected $collection_key = 'headers';
-  /**
-   * @var GoogleCloudApigeeV1SecurityActionHttpHeader[]
-   */
-  public $headers;
   protected $headersType = GoogleCloudApigeeV1SecurityActionHttpHeader::class;
   protected $headersDataType = 'array';
 

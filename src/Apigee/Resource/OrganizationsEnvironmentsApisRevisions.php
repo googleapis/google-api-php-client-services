@@ -70,6 +70,7 @@ class OrganizationsEnvironmentsApisRevisions extends \Google\Service\Resource
    * what permissions it has. The format must be
    * `{ACCOUNT_ID}@{PROJECT}.iam.gserviceaccount.com`.
    * @return GoogleCloudApigeeV1Deployment
+   * @throws \Google\Service\Exception
    */
   public function deploy($name, $optParams = [])
   {
@@ -86,6 +87,7 @@ class OrganizationsEnvironmentsApisRevisions extends \Google\Service\Resource
    * `organizations/{org}/environments/{env}/apis/{api}/revisions/{rev}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1Deployment
+   * @throws \Google\Service\Exception
    */
   public function getDeployments($name, $optParams = [])
   {
@@ -117,6 +119,7 @@ class OrganizationsEnvironmentsApisRevisions extends \Google\Service\Resource
    * response will indicate if a sequenced rollout is recommended for the
    * undeployment.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function undeploy($name, $optParams = [])
   {

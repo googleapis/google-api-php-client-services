@@ -49,6 +49,7 @@ class OrganizationsAppgroupsAppsKeys extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1AppGroupAppKey $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupAppKey
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1AppGroupAppKey $postBody, $optParams = [])
   {
@@ -66,6 +67,7 @@ class OrganizationsAppgroupsAppsKeys extends \Google\Service\Resource
    * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupAppKey
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -82,6 +84,7 @@ class OrganizationsAppgroupsAppsKeys extends \Google\Service\Resource
    * `organizations/{org}/appgroups/{app_group_name}/apps/{app}/keys/{key}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupAppKey
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -104,6 +107,7 @@ class OrganizationsAppgroupsAppsKeys extends \Google\Service\Resource
    * @param GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1AppGroupAppKey
+   * @throws \Google\Service\Exception
    */
   public function updateAppGroupAppKey($name, GoogleCloudApigeeV1UpdateAppGroupAppKeyRequest $postBody, $optParams = [])
   {

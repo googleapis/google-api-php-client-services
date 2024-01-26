@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1RevisionStatus extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var GoogleCloudApigeeV1UpdateError[]
-   */
-  public $errors;
   protected $errorsType = GoogleCloudApigeeV1UpdateError::class;
   protected $errorsDataType = 'array';
   /**

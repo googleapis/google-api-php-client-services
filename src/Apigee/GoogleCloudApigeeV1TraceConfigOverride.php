@@ -27,10 +27,6 @@ class GoogleCloudApigeeV1TraceConfigOverride extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudApigeeV1TraceSamplingConfig
-   */
-  public $samplingConfig;
   protected $samplingConfigType = GoogleCloudApigeeV1TraceSamplingConfig::class;
   protected $samplingConfigDataType = '';
 

@@ -28,10 +28,6 @@ class GoogleCloudApigeeV1SecurityProfile extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudApigeeV1SecurityProfileEnvironment[]
-   */
-  public $environments;
   protected $environmentsType = GoogleCloudApigeeV1SecurityProfileEnvironment::class;
   protected $environmentsDataType = 'array';
   /**
@@ -46,10 +42,6 @@ class GoogleCloudApigeeV1SecurityProfile extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudApigeeV1ProfileConfig
-   */
-  public $profileConfig;
   protected $profileConfigType = GoogleCloudApigeeV1ProfileConfig::class;
   protected $profileConfigDataType = '';
   /**
@@ -68,10 +60,6 @@ class GoogleCloudApigeeV1SecurityProfile extends \Google\Collection
    * @var string
    */
   public $revisionUpdateTime;
-  /**
-   * @var GoogleCloudApigeeV1SecurityProfileScoringConfig[]
-   */
-  public $scoringConfigs;
   protected $scoringConfigsType = GoogleCloudApigeeV1SecurityProfileScoringConfig::class;
   protected $scoringConfigsDataType = 'array';
 

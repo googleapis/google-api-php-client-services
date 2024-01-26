@@ -48,10 +48,6 @@ class GoogleCloudApigeeV1SecurityReportQuery extends \Google\Collection
    * @var int
    */
   public $limit;
-  /**
-   * @var GoogleCloudApigeeV1SecurityReportQueryMetric[]
-   */
-  public $metrics;
   protected $metricsType = GoogleCloudApigeeV1SecurityReportQueryMetric::class;
   protected $metricsDataType = 'array';
   /**
