@@ -24,16 +24,8 @@ class ListItem extends \Google\Collection
    * @var bool
    */
   public $checked;
-  /**
-   * @var ListItem[]
-   */
-  public $childListItems;
   protected $childListItemsType = ListItem::class;
   protected $childListItemsDataType = 'array';
-  /**
-   * @var TextContent
-   */
-  public $text;
   protected $textType = TextContent::class;
   protected $textDataType = '';
 

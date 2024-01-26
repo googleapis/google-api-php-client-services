@@ -20,10 +20,6 @@ namespace Google\Service\Keep;
 class BatchCreatePermissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'permissions';
-  /**
-   * @var Permission[]
-   */
-  public $permissions;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
 

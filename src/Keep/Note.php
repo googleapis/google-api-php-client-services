@@ -20,16 +20,8 @@ namespace Google\Service\Keep;
 class Note extends \Google\Collection
 {
   protected $collection_key = 'permissions';
-  /**
-   * @var Attachment[]
-   */
-  public $attachments;
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
-  /**
-   * @var Section
-   */
-  public $body;
   protected $bodyType = Section::class;
   protected $bodyDataType = '';
   /**
@@ -40,10 +32,6 @@ class Note extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Permission[]
-   */
-  public $permissions;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
   /**

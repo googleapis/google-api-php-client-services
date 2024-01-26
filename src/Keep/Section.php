@@ -19,16 +19,8 @@ namespace Google\Service\Keep;
 
 class Section extends \Google\Model
 {
-  /**
-   * @var ListContent
-   */
-  public $list;
   protected $listType = ListContent::class;
   protected $listDataType = '';
-  /**
-   * @var TextContent
-   */
-  public $text;
   protected $textType = TextContent::class;
   protected $textDataType = '';
 
