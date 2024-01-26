@@ -24,10 +24,6 @@ class ReplaceServicePerimetersRequest extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var ServicePerimeter[]
-   */
-  public $servicePerimeters;
   protected $servicePerimetersType = ServicePerimeter::class;
   protected $servicePerimetersDataType = 'array';
 

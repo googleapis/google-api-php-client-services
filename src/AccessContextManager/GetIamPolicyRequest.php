@@ -19,10 +19,6 @@ namespace Google\Service\AccessContextManager;
 
 class GetIamPolicyRequest extends \Google\Model
 {
-  /**
-   * @var GetPolicyOptions
-   */
-  public $options;
   protected $optionsType = GetPolicyOptions::class;
   protected $optionsDataType = '';
 

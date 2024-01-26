@@ -38,6 +38,7 @@ class Services extends \Google\Service\Resource
    * example, `storage.googleapis.com`.
    * @param array $optParams Optional parameters.
    * @return SupportedService
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -55,6 +56,7 @@ class Services extends \Google\Service\Resource
    * @opt_param string pageToken Token to start on a later page. Default is the
    * first page.
    * @return ListSupportedServicesResponse
+   * @throws \Google\Service\Exception
    */
   public function listServices($optParams = [])
   {

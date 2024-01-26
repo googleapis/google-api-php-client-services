@@ -32,10 +32,6 @@ class EgressFrom extends \Google\Collection
    * @var string
    */
   public $sourceRestriction;
-  /**
-   * @var EgressSource[]
-   */
-  public $sources;
   protected $sourcesType = EgressSource::class;
   protected $sourcesDataType = 'array';
 

@@ -36,10 +36,6 @@ class SupportedService extends \Google\Collection
    * @var string
    */
   public $supportStage;
-  /**
-   * @var MethodSelector[]
-   */
-  public $supportedMethods;
   protected $supportedMethodsType = MethodSelector::class;
   protected $supportedMethodsDataType = 'array';
   /**

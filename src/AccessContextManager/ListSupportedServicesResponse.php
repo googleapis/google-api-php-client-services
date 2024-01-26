@@ -24,10 +24,6 @@ class ListSupportedServicesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SupportedService[]
-   */
-  public $supportedServices;
   protected $supportedServicesType = SupportedService::class;
   protected $supportedServicesDataType = 'array';
 

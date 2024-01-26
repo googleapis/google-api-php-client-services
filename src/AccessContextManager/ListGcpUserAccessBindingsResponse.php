@@ -20,10 +20,6 @@ namespace Google\Service\AccessContextManager;
 class ListGcpUserAccessBindingsResponse extends \Google\Collection
 {
   protected $collection_key = 'gcpUserAccessBindings';
-  /**
-   * @var GcpUserAccessBinding[]
-   */
-  public $gcpUserAccessBindings;
   protected $gcpUserAccessBindingsType = GcpUserAccessBinding::class;
   protected $gcpUserAccessBindingsDataType = 'array';
   /**

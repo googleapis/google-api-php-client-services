@@ -20,10 +20,6 @@ namespace Google\Service\AccessContextManager;
 class ReplaceAccessLevelsRequest extends \Google\Collection
 {
   protected $collection_key = 'accessLevels';
-  /**
-   * @var AccessLevel[]
-   */
-  public $accessLevels;
   protected $accessLevelsType = AccessLevel::class;
   protected $accessLevelsDataType = 'array';
   /**
