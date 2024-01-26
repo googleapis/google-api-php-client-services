@@ -20,10 +20,6 @@ namespace Google\Service\Apigateway;
 class ApigatewayListLocationsResponse extends \Google\Collection
 {
   protected $collection_key = 'locations';
-  /**
-   * @var ApigatewayLocation[]
-   */
-  public $locations;
   protected $locationsType = ApigatewayLocation::class;
   protected $locationsDataType = 'array';
   /**

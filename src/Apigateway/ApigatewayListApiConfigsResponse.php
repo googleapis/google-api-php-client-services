@@ -20,10 +20,6 @@ namespace Google\Service\Apigateway;
 class ApigatewayListApiConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
-  /**
-   * @var ApigatewayApiConfig[]
-   */
-  public $apiConfigs;
   protected $apiConfigsType = ApigatewayApiConfig::class;
   protected $apiConfigsDataType = 'array';
   /**
