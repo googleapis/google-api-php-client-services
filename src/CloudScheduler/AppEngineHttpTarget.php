@@ -19,10 +19,6 @@ namespace Google\Service\CloudScheduler;
 
 class AppEngineHttpTarget extends \Google\Model
 {
-  /**
-   * @var AppEngineRouting
-   */
-  public $appEngineRouting;
   protected $appEngineRoutingType = AppEngineRouting::class;
   protected $appEngineRoutingDataType = '';
   /**
