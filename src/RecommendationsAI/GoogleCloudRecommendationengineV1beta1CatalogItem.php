@@ -20,10 +20,6 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1CatalogItem extends \Google\Collection
 {
   protected $collection_key = 'tags';
-  /**
-   * @var GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy[]
-   */
-  public $categoryHierarchies;
   protected $categoryHierarchiesType = GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchy::class;
   protected $categoryHierarchiesDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudRecommendationengineV1beta1CatalogItem extends \Google\Collecti
    * @var string
    */
   public $id;
-  /**
-   * @var GoogleCloudRecommendationengineV1beta1FeatureMap
-   */
-  public $itemAttributes;
   protected $itemAttributesType = GoogleCloudRecommendationengineV1beta1FeatureMap::class;
   protected $itemAttributesDataType = '';
   /**
@@ -48,10 +40,6 @@ class GoogleCloudRecommendationengineV1beta1CatalogItem extends \Google\Collecti
    * @var string
    */
   public $languageCode;
-  /**
-   * @var GoogleCloudRecommendationengineV1beta1ProductCatalogItem
-   */
-  public $productMetadata;
   protected $productMetadataType = GoogleCloudRecommendationengineV1beta1ProductCatalogItem::class;
   protected $productMetadataDataType = '';
   /**

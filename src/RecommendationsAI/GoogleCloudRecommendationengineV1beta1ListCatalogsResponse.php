@@ -20,10 +20,6 @@ namespace Google\Service\RecommendationsAI;
 class GoogleCloudRecommendationengineV1beta1ListCatalogsResponse extends \Google\Collection
 {
   protected $collection_key = 'catalogs';
-  /**
-   * @var GoogleCloudRecommendationengineV1beta1Catalog[]
-   */
-  public $catalogs;
   protected $catalogsType = GoogleCloudRecommendationengineV1beta1Catalog::class;
   protected $catalogsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\RecommendationsAI;
 
 class GoogleCloudRecommendationengineV1beta1Catalog extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig
-   */
-  public $catalogItemLevelConfig;
   protected $catalogItemLevelConfigType = GoogleCloudRecommendationengineV1beta1CatalogItemLevelConfig::class;
   protected $catalogItemLevelConfigDataType = '';
   /**
