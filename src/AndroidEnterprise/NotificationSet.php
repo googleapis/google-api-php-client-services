@@ -20,10 +20,6 @@ namespace Google\Service\AndroidEnterprise;
 class NotificationSet extends \Google\Collection
 {
   protected $collection_key = 'notification';
-  /**
-   * @var Notification[]
-   */
-  public $notification;
   protected $notificationType = Notification::class;
   protected $notificationDataType = 'array';
   /**

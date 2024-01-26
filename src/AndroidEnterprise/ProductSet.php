@@ -28,10 +28,6 @@ class ProductSet extends \Google\Collection
    * @var string
    */
   public $productSetBehavior;
-  /**
-   * @var ProductVisibility[]
-   */
-  public $productVisibility;
   protected $productVisibilityType = ProductVisibility::class;
   protected $productVisibilityDataType = 'array';
 

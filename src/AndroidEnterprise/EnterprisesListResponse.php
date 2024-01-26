@@ -20,10 +20,6 @@ namespace Google\Service\AndroidEnterprise;
 class EnterprisesListResponse extends \Google\Collection
 {
   protected $collection_key = 'enterprise';
-  /**
-   * @var Enterprise[]
-   */
-  public $enterprise;
   protected $enterpriseType = Enterprise::class;
   protected $enterpriseDataType = 'array';
 

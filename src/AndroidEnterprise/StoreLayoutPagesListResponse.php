@@ -20,10 +20,6 @@ namespace Google\Service\AndroidEnterprise;
 class StoreLayoutPagesListResponse extends \Google\Collection
 {
   protected $collection_key = 'page';
-  /**
-   * @var StorePage[]
-   */
-  public $page;
   protected $pageType = StorePage::class;
   protected $pageDataType = 'array';
 

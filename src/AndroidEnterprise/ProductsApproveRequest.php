@@ -19,10 +19,6 @@ namespace Google\Service\AndroidEnterprise;
 
 class ProductsApproveRequest extends \Google\Model
 {
-  /**
-   * @var ApprovalUrlInfo
-   */
-  public $approvalUrlInfo;
   protected $approvalUrlInfoType = ApprovalUrlInfo::class;
   protected $approvalUrlInfoDataType = '';
   /**

@@ -23,10 +23,6 @@ class DeviceReportUpdateEvent extends \Google\Model
    * @var string
    */
   public $deviceId;
-  /**
-   * @var DeviceReport
-   */
-  public $report;
   protected $reportType = DeviceReport::class;
   protected $reportDataType = '';
   /**

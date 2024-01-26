@@ -20,10 +20,6 @@ namespace Google\Service\AndroidEnterprise;
 class AppRestrictionsSchemaRestriction extends \Google\Collection
 {
   protected $collection_key = 'nestedRestriction';
-  /**
-   * @var AppRestrictionsSchemaRestrictionRestrictionValue
-   */
-  public $defaultValue;
   protected $defaultValueType = AppRestrictionsSchemaRestrictionRestrictionValue::class;
   protected $defaultValueDataType = '';
   /**
@@ -42,10 +38,6 @@ class AppRestrictionsSchemaRestriction extends \Google\Collection
    * @var string
    */
   public $key;
-  /**
-   * @var AppRestrictionsSchemaRestriction[]
-   */
-  public $nestedRestriction;
   protected $nestedRestrictionType = AppRestrictionsSchemaRestriction::class;
   protected $nestedRestrictionDataType = 'array';
   /**

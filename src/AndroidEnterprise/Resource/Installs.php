@@ -44,6 +44,7 @@ class Installs extends \Google\Service\Resource
    * @param string $installId The ID of the product represented by the install,
    * e.g. "app:com.google.android.gm".
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($enterpriseId, $userId, $deviceId, $installId, $optParams = [])
   {
@@ -61,6 +62,7 @@ class Installs extends \Google\Service\Resource
    * e.g. "app:com.google.android.gm".
    * @param array $optParams Optional parameters.
    * @return Install
+   * @throws \Google\Service\Exception
    */
   public function get($enterpriseId, $userId, $deviceId, $installId, $optParams = [])
   {
@@ -77,6 +79,7 @@ class Installs extends \Google\Service\Resource
    * @param string $deviceId The Android ID of the device.
    * @param array $optParams Optional parameters.
    * @return InstallsListResponse
+   * @throws \Google\Service\Exception
    */
   public function listInstalls($enterpriseId, $userId, $deviceId, $optParams = [])
   {
@@ -97,6 +100,7 @@ class Installs extends \Google\Service\Resource
    * @param Install $postBody
    * @param array $optParams Optional parameters.
    * @return Install
+   * @throws \Google\Service\Exception
    */
   public function update($enterpriseId, $userId, $deviceId, $installId, Install $postBody, $optParams = [])
   {

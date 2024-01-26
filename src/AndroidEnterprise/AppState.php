@@ -20,10 +20,6 @@ namespace Google\Service\AndroidEnterprise;
 class AppState extends \Google\Collection
 {
   protected $collection_key = 'keyedAppState';
-  /**
-   * @var KeyedAppState[]
-   */
-  public $keyedAppState;
   protected $keyedAppStateType = KeyedAppState::class;
   protected $keyedAppStateDataType = 'array';
   /**

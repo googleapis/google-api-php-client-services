@@ -20,10 +20,6 @@ namespace Google\Service\AndroidEnterprise;
 class DeviceReport extends \Google\Collection
 {
   protected $collection_key = 'appState';
-  /**
-   * @var AppState[]
-   */
-  public $appState;
   protected $appStateType = AppState::class;
   protected $appStateDataType = 'array';
   /**
