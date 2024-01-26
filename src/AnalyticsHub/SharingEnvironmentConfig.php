@@ -19,16 +19,8 @@ namespace Google\Service\AnalyticsHub;
 
 class SharingEnvironmentConfig extends \Google\Model
 {
-  /**
-   * @var DcrExchangeConfig
-   */
-  public $dcrExchangeConfig;
   protected $dcrExchangeConfigType = DcrExchangeConfig::class;
   protected $dcrExchangeConfigDataType = '';
-  /**
-   * @var DefaultExchangeConfig
-   */
-  public $defaultExchangeConfig;
   protected $defaultExchangeConfigType = DefaultExchangeConfig::class;
   protected $defaultExchangeConfigDataType = '';
 

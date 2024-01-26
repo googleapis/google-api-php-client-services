@@ -24,10 +24,6 @@ class ListSharedResourceSubscriptionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Subscription[]
-   */
-  public $sharedResourceSubscriptions;
   protected $sharedResourceSubscriptionsType = Subscription::class;
   protected $sharedResourceSubscriptionsDataType = 'array';
 

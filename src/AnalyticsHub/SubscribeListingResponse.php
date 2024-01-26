@@ -19,10 +19,6 @@ namespace Google\Service\AnalyticsHub;
 
 class SubscribeListingResponse extends \Google\Model
 {
-  /**
-   * @var Subscription
-   */
-  public $subscription;
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
 

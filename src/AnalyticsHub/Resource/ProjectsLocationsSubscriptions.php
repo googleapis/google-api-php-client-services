@@ -44,6 +44,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * e.g. projects/123/locations/US/subscriptions/456
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * projects/123/locations/US/subscriptions/456
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -75,6 +77,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * response page.
    * @opt_param string pageToken Page token, returned by a previous call.
    * @return ListSubscriptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSubscriptions($parent, $optParams = [])
   {
@@ -113,6 +117,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * @param RefreshSubscriptionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function refresh($name, RefreshSubscriptionRequest $postBody, $optParams = [])
   {
@@ -128,6 +133,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * @param RevokeSubscriptionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return RevokeSubscriptionResponse
+   * @throws \Google\Service\Exception
    */
   public function revoke($name, RevokeSubscriptionRequest $postBody, $optParams = [])
   {
@@ -145,6 +151,7 @@ class ProjectsLocationsSubscriptions extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {

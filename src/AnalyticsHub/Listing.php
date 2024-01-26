@@ -20,20 +20,12 @@ namespace Google\Service\AnalyticsHub;
 class Listing extends \Google\Collection
 {
   protected $collection_key = 'categories';
-  /**
-   * @var BigQueryDatasetSource
-   */
-  public $bigqueryDataset;
   protected $bigqueryDatasetType = BigQueryDatasetSource::class;
   protected $bigqueryDatasetDataType = '';
   /**
    * @var string[]
    */
   public $categories;
-  /**
-   * @var DataProvider
-   */
-  public $dataProvider;
   protected $dataProviderType = DataProvider::class;
   protected $dataProviderDataType = '';
   /**
@@ -60,20 +52,12 @@ class Listing extends \Google\Collection
    * @var string
    */
   public $primaryContact;
-  /**
-   * @var Publisher
-   */
-  public $publisher;
   protected $publisherType = Publisher::class;
   protected $publisherDataType = '';
   /**
    * @var string
    */
   public $requestAccess;
-  /**
-   * @var RestrictedExportConfig
-   */
-  public $restrictedExportConfig;
   protected $restrictedExportConfigType = RestrictedExportConfig::class;
   protected $restrictedExportConfigDataType = '';
   /**

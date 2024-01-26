@@ -19,10 +19,6 @@ namespace Google\Service\AnalyticsHub;
 
 class SubscribeListingRequest extends \Google\Model
 {
-  /**
-   * @var DestinationDataset
-   */
-  public $destinationDataset;
   protected $destinationDatasetType = DestinationDataset::class;
   protected $destinationDatasetDataType = '';
 
