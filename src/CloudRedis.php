@@ -150,7 +150,7 @@ class CloudRedis extends \Google\Service
                 ],
               ],
             ],'getCertificateAuthority' => [
-              'path' => 'v1/{+name}/certificateAuthority',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [

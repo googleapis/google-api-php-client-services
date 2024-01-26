@@ -28,26 +28,14 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $createTime;
-  /**
-   * @var DiscoveryEndpoint[]
-   */
-  public $discoveryEndpoints;
   protected $discoveryEndpointsType = DiscoveryEndpoint::class;
   protected $discoveryEndpointsDataType = 'array';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var PscConfig[]
-   */
-  public $pscConfigs;
   protected $pscConfigsType = PscConfig::class;
   protected $pscConfigsDataType = 'array';
-  /**
-   * @var PscConnection[]
-   */
-  public $pscConnections;
   protected $pscConnectionsType = PscConnection::class;
   protected $pscConnectionsDataType = 'array';
   /**
@@ -66,10 +54,6 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var StateInfo
-   */
-  public $stateInfo;
   protected $stateInfoType = StateInfo::class;
   protected $stateInfoDataType = '';
   /**

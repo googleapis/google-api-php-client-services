@@ -19,10 +19,6 @@ namespace Google\Service\CloudRedis;
 
 class StateInfo extends \Google\Model
 {
-  /**
-   * @var UpdateInfo
-   */
-  public $updateInfo;
   protected $updateInfoType = UpdateInfo::class;
   protected $updateInfoDataType = '';
 

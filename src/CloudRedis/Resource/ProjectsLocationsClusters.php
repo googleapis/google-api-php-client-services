@@ -54,6 +54,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * unique within the customer project / location
    * @opt_param string requestId Idempotent request UUID.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Cluster $postBody, $optParams = [])
   {
@@ -72,6 +73,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    *
    * @opt_param string requestId Idempotent request UUID.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -87,6 +89,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * `location_id` refers to a GCP region.
    * @param array $optParams Optional parameters.
    * @return Cluster
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -104,6 +107,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * region.
    * @param array $optParams Optional parameters.
    * @return CertificateAuthority
+   * @throws \Google\Service\Exception
    */
   public function getCertificateAuthority($name, $optParams = [])
   {
@@ -131,6 +135,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @opt_param string pageToken The `next_page_token` value returned from a
    * previous ListClusters request, if any.
    * @return ListClustersResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsClusters($parent, $optParams = [])
   {
@@ -155,6 +160,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * path must be supplied in this field. The elements of the repeated paths field
    * may only include these fields from Cluster: * `size_gb` * `replica_count`
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Cluster $postBody, $optParams = [])
   {

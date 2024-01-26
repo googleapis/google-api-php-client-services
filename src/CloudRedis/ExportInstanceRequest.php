@@ -19,10 +19,6 @@ namespace Google\Service\CloudRedis;
 
 class ExportInstanceRequest extends \Google\Model
 {
-  /**
-   * @var OutputConfig
-   */
-  public $outputConfig;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\CloudRedis;
 class ListInstancesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Instance[]
-   */
-  public $instances;
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**
