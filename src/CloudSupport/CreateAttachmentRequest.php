@@ -19,10 +19,6 @@ namespace Google\Service\CloudSupport;
 
 class CreateAttachmentRequest extends \Google\Model
 {
-  /**
-   * @var Attachment
-   */
-  public $attachment;
   protected $attachmentType = Attachment::class;
   protected $attachmentDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\CloudSupport;
 
 class EscalateCaseRequest extends \Google\Model
 {
-  /**
-   * @var Escalation
-   */
-  public $escalation;
   protected $escalationType = Escalation::class;
   protected $escalationDataType = '';
 

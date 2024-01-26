@@ -20,10 +20,6 @@ namespace Google\Service\CloudSupport;
 class ListAttachmentsResponse extends \Google\Collection
 {
   protected $collection_key = 'attachments';
-  /**
-   * @var Attachment[]
-   */
-  public $attachments;
   protected $attachmentsType = Attachment::class;
   protected $attachmentsDataType = 'array';
   /**

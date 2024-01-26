@@ -20,10 +20,6 @@ namespace Google\Service\CloudSupport;
 class ListCommentsResponse extends \Google\Collection
 {
   protected $collection_key = 'comments';
-  /**
-   * @var Comment[]
-   */
-  public $comments;
   protected $commentsType = Comment::class;
   protected $commentsDataType = 'array';
   /**

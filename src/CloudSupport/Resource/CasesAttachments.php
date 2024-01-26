@@ -52,6 +52,7 @@ class CasesAttachments extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying the page of results to
    * return. If unspecified, the first page is retrieved.
    * @return ListAttachmentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listCasesAttachments($parent, $optParams = [])
   {

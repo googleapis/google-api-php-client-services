@@ -49,6 +49,7 @@ class Media extends \Google\Service\Resource
    * @param string $name The name of the file attachment to download.
    * @param array $optParams Optional parameters.
    * @return MediaModel
+   * @throws \Google\Service\Exception
    */
   public function download($name, $optParams = [])
   {
@@ -81,6 +82,7 @@ class Media extends \Google\Service\Resource
    * @param CreateAttachmentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Attachment
+   * @throws \Google\Service\Exception
    */
   public function upload($parent, CreateAttachmentRequest $postBody, $optParams = [])
   {

@@ -57,6 +57,7 @@ class CaseClassifications extends \Google\Service\Resource
    * it's an empty string, then no filtering happens. Otherwise, case
    * classifications will be returned that match the filter.
    * @return SearchCaseClassificationsResponse
+   * @throws \Google\Service\Exception
    */
   public function search($optParams = [])
   {

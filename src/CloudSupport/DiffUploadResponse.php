@@ -23,10 +23,6 @@ class DiffUploadResponse extends \Google\Model
    * @var string
    */
   public $objectVersion;
-  /**
-   * @var CompositeMedia
-   */
-  public $originalObject;
   protected $originalObjectType = CompositeMedia::class;
   protected $originalObjectDataType = '';
 

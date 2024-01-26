@@ -49,6 +49,7 @@ class Cases extends \Google\Service\Resource
    * @param CloseCaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CloudsupportCase
+   * @throws \Google\Service\Exception
    */
   public function close($name, CloseCaseRequest $postBody, $optParams = [])
   {
@@ -85,6 +86,7 @@ class Cases extends \Google\Service\Resource
    * @param CloudsupportCase $postBody
    * @param array $optParams Optional parameters.
    * @return CloudsupportCase
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CloudsupportCase $postBody, $optParams = [])
   {
@@ -115,6 +117,7 @@ class Cases extends \Google\Service\Resource
    * @param EscalateCaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CloudsupportCase
+   * @throws \Google\Service\Exception
    */
   public function escalate($name, EscalateCaseRequest $postBody, $optParams = [])
   {
@@ -136,6 +139,7 @@ class Cases extends \Google\Service\Resource
    * @param string $name Required. The full name of a case to be retrieved.
    * @param array $optParams Optional parameters.
    * @return CloudsupportCase
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -175,6 +179,7 @@ class Cases extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying the page of results to
    * return. If unspecified, the first page is retrieved.
    * @return ListCasesResponse
+   * @throws \Google\Service\Exception
    */
   public function listCases($parent, $optParams = [])
   {
@@ -208,6 +213,7 @@ class Cases extends \Google\Service\Resource
    * mask empty and do not provide a value for `subscriber_email_addresses`, then
    * `subscriber_email_addresses` is updated to empty.
    * @return CloudsupportCase
+   * @throws \Google\Service\Exception
    */
   public function patch($name, CloudsupportCase $postBody, $optParams = [])
   {
@@ -255,6 +261,7 @@ class Cases extends \Google\Service\Resource
    * creator.email="tester@example.com"` - `project="projects/my-project-id" AND
    * (priority=P0 OR priority=P1)`
    * @return SearchCasesResponse
+   * @throws \Google\Service\Exception
    */
   public function search($parent, $optParams = [])
   {

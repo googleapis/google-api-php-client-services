@@ -50,6 +50,7 @@ class CasesComments extends \Google\Service\Resource
    * @param Comment $postBody
    * @param array $optParams Optional parameters.
    * @return Comment
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Comment $postBody, $optParams = [])
   {
@@ -79,6 +80,7 @@ class CasesComments extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying the page of results to
    * return. If unspecified, the first page is returned.
    * @return ListCommentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listCasesComments($parent, $optParams = [])
   {
