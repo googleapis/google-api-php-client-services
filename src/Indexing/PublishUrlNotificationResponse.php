@@ -19,10 +19,6 @@ namespace Google\Service\Indexing;
 
 class PublishUrlNotificationResponse extends \Google\Model
 {
-  /**
-   * @var UrlNotificationMetadata
-   */
-  public $urlNotificationMetadata;
   protected $urlNotificationMetadataType = UrlNotificationMetadata::class;
   protected $urlNotificationMetadataDataType = '';
 
