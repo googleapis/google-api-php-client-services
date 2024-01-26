@@ -48,6 +48,7 @@ class Entities extends \Google\Service\Resource
    * Person (as defined in http://schema.org/Person). If multiple types are
    * specified, returned entities will contain one or more of these types.
    * @return SearchResponse
+   * @throws \Google\Service\Exception
    */
   public function search($optParams = [])
   {
