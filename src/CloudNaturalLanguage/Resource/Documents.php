@@ -46,6 +46,7 @@ class Documents extends \Google\Service\Resource
    * @param AnalyzeEntitiesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AnalyzeEntitiesResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeEntities(AnalyzeEntitiesRequest $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class Documents extends \Google\Service\Resource
    * @param AnalyzeSentimentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AnalyzeSentimentResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeSentiment(AnalyzeSentimentRequest $postBody, $optParams = [])
   {
@@ -73,6 +75,7 @@ class Documents extends \Google\Service\Resource
    * @param AnnotateTextRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AnnotateTextResponse
+   * @throws \Google\Service\Exception
    */
   public function annotateText(AnnotateTextRequest $postBody, $optParams = [])
   {
@@ -86,6 +89,7 @@ class Documents extends \Google\Service\Resource
    * @param ClassifyTextRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ClassifyTextResponse
+   * @throws \Google\Service\Exception
    */
   public function classifyText(ClassifyTextRequest $postBody, $optParams = [])
   {
@@ -100,6 +104,7 @@ class Documents extends \Google\Service\Resource
    * @param ModerateTextRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ModerateTextResponse
+   * @throws \Google\Service\Exception
    */
   public function moderateText(ModerateTextRequest $postBody, $optParams = [])
   {

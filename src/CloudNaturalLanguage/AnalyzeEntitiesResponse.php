@@ -20,10 +20,6 @@ namespace Google\Service\CloudNaturalLanguage;
 class AnalyzeEntitiesResponse extends \Google\Collection
 {
   protected $collection_key = 'entities';
-  /**
-   * @var Entity[]
-   */
-  public $entities;
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**

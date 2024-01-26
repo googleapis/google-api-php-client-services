@@ -19,10 +19,6 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class ClassifyTextRequest extends \Google\Model
 {
-  /**
-   * @var Document
-   */
-  public $document;
   protected $documentType = Document::class;
   protected $documentDataType = '';
 

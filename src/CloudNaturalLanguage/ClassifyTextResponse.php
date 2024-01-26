@@ -20,10 +20,6 @@ namespace Google\Service\CloudNaturalLanguage;
 class ClassifyTextResponse extends \Google\Collection
 {
   protected $collection_key = 'categories';
-  /**
-   * @var ClassificationCategory[]
-   */
-  public $categories;
   protected $categoriesType = ClassificationCategory::class;
   protected $categoriesDataType = 'array';
   /**

@@ -20,22 +20,10 @@ namespace Google\Service\CloudNaturalLanguage;
 class AnnotateTextResponse extends \Google\Collection
 {
   protected $collection_key = 'sentences';
-  /**
-   * @var ClassificationCategory[]
-   */
-  public $categories;
   protected $categoriesType = ClassificationCategory::class;
   protected $categoriesDataType = 'array';
-  /**
-   * @var Sentiment
-   */
-  public $documentSentiment;
   protected $documentSentimentType = Sentiment::class;
   protected $documentSentimentDataType = '';
-  /**
-   * @var Entity[]
-   */
-  public $entities;
   protected $entitiesType = Entity::class;
   protected $entitiesDataType = 'array';
   /**
@@ -46,16 +34,8 @@ class AnnotateTextResponse extends \Google\Collection
    * @var bool
    */
   public $languageSupported;
-  /**
-   * @var ClassificationCategory[]
-   */
-  public $moderationCategories;
   protected $moderationCategoriesType = ClassificationCategory::class;
   protected $moderationCategoriesDataType = 'array';
-  /**
-   * @var Sentence[]
-   */
-  public $sentences;
   protected $sentencesType = Sentence::class;
   protected $sentencesDataType = 'array';
 

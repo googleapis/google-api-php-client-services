@@ -19,10 +19,6 @@ namespace Google\Service\CloudNaturalLanguage;
 
 class ModerateTextRequest extends \Google\Model
 {
-  /**
-   * @var Document
-   */
-  public $document;
   protected $documentType = Document::class;
   protected $documentDataType = '';
 

@@ -28,10 +28,6 @@ class ModerateTextResponse extends \Google\Collection
    * @var bool
    */
   public $languageSupported;
-  /**
-   * @var ClassificationCategory[]
-   */
-  public $moderationCategories;
   protected $moderationCategoriesType = ClassificationCategory::class;
   protected $moderationCategoriesDataType = 'array';
 
