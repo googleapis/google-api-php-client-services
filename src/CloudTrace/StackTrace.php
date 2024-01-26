@@ -19,10 +19,6 @@ namespace Google\Service\CloudTrace;
 
 class StackTrace extends \Google\Model
 {
-  /**
-   * @var StackFrames
-   */
-  public $stackFrames;
   protected $stackFramesType = StackFrames::class;
   protected $stackFramesDataType = '';
   /**

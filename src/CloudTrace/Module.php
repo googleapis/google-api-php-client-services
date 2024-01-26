@@ -19,16 +19,8 @@ namespace Google\Service\CloudTrace;
 
 class Module extends \Google\Model
 {
-  /**
-   * @var TruncatableString
-   */
-  public $buildId;
   protected $buildIdType = TruncatableString::class;
   protected $buildIdDataType = '';
-  /**
-   * @var TruncatableString
-   */
-  public $module;
   protected $moduleType = TruncatableString::class;
   protected $moduleDataType = '';
 

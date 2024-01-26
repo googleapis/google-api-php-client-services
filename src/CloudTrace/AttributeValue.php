@@ -27,10 +27,6 @@ class AttributeValue extends \Google\Model
    * @var string
    */
   public $intValue;
-  /**
-   * @var TruncatableString
-   */
-  public $stringValue;
   protected $stringValueType = TruncatableString::class;
   protected $stringValueDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\CloudTrace;
 
 class Link extends \Google\Model
 {
-  /**
-   * @var Attributes
-   */
-  public $attributes;
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
