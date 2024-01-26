@@ -39,6 +39,7 @@ class OrganizationsSharedflowsRevisions extends \Google\Service\Resource
    * w_id}/revisions/{revision_id}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SharedFlowRevision
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -63,6 +64,7 @@ class OrganizationsSharedflowsRevisions extends \Google\Service\Resource
    * @opt_param string format Specify `bundle` to export the contents of the
    * shared flow bundle. Otherwise, the bundle metadata is returned.
    * @return GoogleApiHttpBody
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -87,6 +89,7 @@ class OrganizationsSharedflowsRevisions extends \Google\Service\Resource
    * value of this field. It is kept for compatibility with existing APIs. Must be
    * `true` or `false` if provided.
    * @return GoogleCloudApigeeV1SharedFlowRevision
+   * @throws \Google\Service\Exception
    */
   public function updateSharedFlowRevision($name, GoogleApiHttpBody $postBody, $optParams = [])
   {

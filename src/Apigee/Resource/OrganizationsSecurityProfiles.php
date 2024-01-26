@@ -46,6 +46,7 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    * resource name. This value should be 1-63 characters and validated by
    * "(^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$)".
    * @return GoogleCloudApigeeV1SecurityProfile
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudApigeeV1SecurityProfile $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    * organizations/{org}/securityProfiles/{profile}
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -80,6 +82,7 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    * organizations/testOrg/securityProfiles/testProfile@5
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecurityProfile
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -102,6 +105,7 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    * @opt_param string pageToken A page token, received from a previous
    * `ListSecurityProfiles` call. Provide this to retrieve the subsequent page.
    * @return GoogleCloudApigeeV1ListSecurityProfilesResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsSecurityProfiles($parent, $optParams = [])
   {
@@ -124,6 +128,7 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    * `ListSecurityProfileRevisions` call. Provide this to retrieve the subsequent
    * page.
    * @return GoogleCloudApigeeV1ListSecurityProfileRevisionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listRevisions($name, $optParams = [])
   {
@@ -142,6 +147,7 @@ class OrganizationsSecurityProfiles extends \Google\Service\Resource
    *
    * @opt_param string updateMask Required. The list of fields to update.
    * @return GoogleCloudApigeeV1SecurityProfile
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudApigeeV1SecurityProfile $postBody, $optParams = [])
   {
