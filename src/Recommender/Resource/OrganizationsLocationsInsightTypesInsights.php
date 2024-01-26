@@ -38,6 +38,7 @@ class OrganizationsLocationsInsightTypesInsights extends \Google\Service\Resourc
    * @param string $name Required. Name of the insight.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecommenderV1Insight
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -82,6 +83,7 @@ class OrganizationsLocationsInsightTypesInsights extends \Google\Service\Resourc
    * value of `next_page_token` from the previous response. The values of other
    * method parameters must be identical to those in the previous call.
    * @return GoogleCloudRecommenderV1ListInsightsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsLocationsInsightTypesInsights($parent, $optParams = [])
   {
@@ -100,6 +102,7 @@ class OrganizationsLocationsInsightTypesInsights extends \Google\Service\Resourc
    * @param GoogleCloudRecommenderV1MarkInsightAcceptedRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecommenderV1Insight
+   * @throws \Google\Service\Exception
    */
   public function markAccepted($name, GoogleCloudRecommenderV1MarkInsightAcceptedRequest $postBody, $optParams = [])
   {
