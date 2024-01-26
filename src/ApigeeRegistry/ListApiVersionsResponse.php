@@ -20,10 +20,6 @@ namespace Google\Service\ApigeeRegistry;
 class ListApiVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'apiVersions';
-  /**
-   * @var ApiVersion[]
-   */
-  public $apiVersions;
   protected $apiVersionsType = ApiVersion::class;
   protected $apiVersionsDataType = 'array';
   /**
