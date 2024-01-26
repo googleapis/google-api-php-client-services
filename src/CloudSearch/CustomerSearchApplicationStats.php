@@ -23,10 +23,6 @@ class CustomerSearchApplicationStats extends \Google\Model
    * @var string
    */
   public $count;
-  /**
-   * @var Date
-   */
-  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
 

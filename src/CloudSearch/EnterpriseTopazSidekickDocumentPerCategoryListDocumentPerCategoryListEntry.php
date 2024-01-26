@@ -23,10 +23,6 @@ class EnterpriseTopazSidekickDocumentPerCategoryListDocumentPerCategoryListEntry
    * @var string
    */
   public $category;
-  /**
-   * @var EnterpriseTopazSidekickCommonDocument
-   */
-  public $document;
   protected $documentType = EnterpriseTopazSidekickCommonDocument::class;
   protected $documentDataType = '';
   /**

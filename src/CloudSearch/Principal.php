@@ -23,10 +23,6 @@ class Principal extends \Google\Model
    * @var string
    */
   public $groupResourceName;
-  /**
-   * @var GSuitePrincipal
-   */
-  public $gsuitePrincipal;
   protected $gsuitePrincipalType = GSuitePrincipal::class;
   protected $gsuitePrincipalDataType = '';
   /**

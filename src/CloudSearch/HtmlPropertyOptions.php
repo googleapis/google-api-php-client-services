@@ -19,16 +19,8 @@ namespace Google\Service\CloudSearch;
 
 class HtmlPropertyOptions extends \Google\Model
 {
-  /**
-   * @var HtmlOperatorOptions
-   */
-  public $operatorOptions;
   protected $operatorOptionsType = HtmlOperatorOptions::class;
   protected $operatorOptionsDataType = '';
-  /**
-   * @var RetrievalImportance
-   */
-  public $retrievalImportance;
   protected $retrievalImportanceType = RetrievalImportance::class;
   protected $retrievalImportanceDataType = '';
 

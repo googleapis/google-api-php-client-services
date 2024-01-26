@@ -23,10 +23,6 @@ class EnterpriseTopazSidekickMeetingNotesCardError extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var EnterpriseTopazSidekickAgendaEntry
-   */
-  public $event;
   protected $eventType = EnterpriseTopazSidekickAgendaEntry::class;
   protected $eventDataType = '';
   /**

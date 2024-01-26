@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class GetSearchApplicationQueryStatsResponse extends \Google\Collection
 {
   protected $collection_key = 'stats';
-  /**
-   * @var SearchApplicationQueryStats[]
-   */
-  public $stats;
   protected $statsType = SearchApplicationQueryStats::class;
   protected $statsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\CloudSearch;
 
 class DatePropertyOptions extends \Google\Model
 {
-  /**
-   * @var DateOperatorOptions
-   */
-  public $operatorOptions;
   protected $operatorOptionsType = DateOperatorOptions::class;
   protected $operatorOptionsDataType = '';
 

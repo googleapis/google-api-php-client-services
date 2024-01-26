@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class EnterpriseTopazSidekickRecentDocumentsCardProto extends \Google\Collection
 {
   protected $collection_key = 'document';
-  /**
-   * @var EnterpriseTopazSidekickCommonDocument[]
-   */
-  public $document;
   protected $documentType = EnterpriseTopazSidekickCommonDocument::class;
   protected $documentDataType = 'array';
 

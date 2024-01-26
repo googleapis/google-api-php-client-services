@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class FacetResult extends \Google\Collection
 {
   protected $collection_key = 'buckets';
-  /**
-   * @var FacetBucket[]
-   */
-  public $buckets;
   protected $bucketsType = FacetBucket::class;
   protected $bucketsDataType = 'array';
   /**

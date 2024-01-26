@@ -28,10 +28,6 @@ class EnterpriseTopazSidekickAgendaEntry extends \Google\Collection
    * @var string
    */
   public $chronology;
-  /**
-   * @var EnterpriseTopazSidekickPerson
-   */
-  public $creator;
   protected $creatorType = EnterpriseTopazSidekickPerson::class;
   protected $creatorDataType = '';
   /**
@@ -42,10 +38,6 @@ class EnterpriseTopazSidekickAgendaEntry extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var EnterpriseTopazSidekickCommonDocument[]
-   */
-  public $document;
   protected $documentType = EnterpriseTopazSidekickCommonDocument::class;
   protected $documentDataType = 'array';
   /**
@@ -84,10 +76,6 @@ class EnterpriseTopazSidekickAgendaEntry extends \Google\Collection
    * @var string
    */
   public $hangoutUrl;
-  /**
-   * @var EnterpriseTopazSidekickPerson[]
-   */
-  public $invitee;
   protected $inviteeType = EnterpriseTopazSidekickPerson::class;
   protected $inviteeDataType = 'array';
   /**

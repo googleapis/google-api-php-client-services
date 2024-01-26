@@ -28,10 +28,6 @@ class ItemMetadata extends \Google\Collection
    * @var string
    */
   public $contentLanguage;
-  /**
-   * @var ContextAttribute[]
-   */
-  public $contextAttributes;
   protected $contextAttributesType = ContextAttribute::class;
   protected $contextAttributesDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class ItemMetadata extends \Google\Collection
    * @var string
    */
   public $hash;
-  /**
-   * @var Interaction[]
-   */
-  public $interactions;
   protected $interactionsType = Interaction::class;
   protected $interactionsDataType = 'array';
   /**
@@ -60,10 +52,6 @@ class ItemMetadata extends \Google\Collection
    * @var string
    */
   public $objectType;
-  /**
-   * @var SearchQualityMetadata
-   */
-  public $searchQualityMetadata;
   protected $searchQualityMetadataType = SearchQualityMetadata::class;
   protected $searchQualityMetadataDataType = '';
   /**

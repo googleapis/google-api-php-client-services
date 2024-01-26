@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class Metaline extends \Google\Collection
 {
   protected $collection_key = 'properties';
-  /**
-   * @var DisplayedProperty[]
-   */
-  public $properties;
   protected $propertiesType = DisplayedProperty::class;
   protected $propertiesDataType = 'array';
 

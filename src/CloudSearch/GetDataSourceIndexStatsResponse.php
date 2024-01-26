@@ -24,10 +24,6 @@ class GetDataSourceIndexStatsResponse extends \Google\Collection
    * @var string
    */
   public $averageIndexedItemCount;
-  /**
-   * @var DataSourceIndexStats[]
-   */
-  public $stats;
   protected $statsType = DataSourceIndexStats::class;
   protected $statsDataType = 'array';
 

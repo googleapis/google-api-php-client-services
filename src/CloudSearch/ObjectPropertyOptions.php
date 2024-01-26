@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class ObjectPropertyOptions extends \Google\Collection
 {
   protected $collection_key = 'subobjectProperties';
-  /**
-   * @var PropertyDefinition[]
-   */
-  public $subobjectProperties;
   protected $subobjectPropertiesType = PropertyDefinition::class;
   protected $subobjectPropertiesDataType = 'array';
 

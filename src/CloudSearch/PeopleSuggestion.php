@@ -19,10 +19,6 @@ namespace Google\Service\CloudSearch;
 
 class PeopleSuggestion extends \Google\Model
 {
-  /**
-   * @var Person
-   */
-  public $person;
   protected $personType = Person::class;
   protected $personDataType = '';
 

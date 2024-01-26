@@ -21,17 +21,9 @@ class MapInfo extends \Google\Collection
 {
   protected $collection_key = 'mapTile';
   public $lat;
-  /**
-   * @var SafeUrlProto
-   */
-  public $locationUrl;
   protected $locationUrlType = SafeUrlProto::class;
   protected $locationUrlDataType = '';
   public $long;
-  /**
-   * @var MapTile[]
-   */
-  public $mapTile;
   protected $mapTileType = MapTile::class;
   protected $mapTileDataType = 'array';
   /**

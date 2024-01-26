@@ -19,10 +19,6 @@ namespace Google\Service\CloudSearch;
 
 class FilterOptions extends \Google\Model
 {
-  /**
-   * @var Filter
-   */
-  public $filter;
   protected $filterType = Filter::class;
   protected $filterDataType = '';
   /**

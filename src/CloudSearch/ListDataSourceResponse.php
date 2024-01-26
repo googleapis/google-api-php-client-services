@@ -24,10 +24,6 @@ class ListDataSourceResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var DataSource[]
-   */
-  public $sources;
   protected $sourcesType = DataSource::class;
   protected $sourcesDataType = 'array';
 

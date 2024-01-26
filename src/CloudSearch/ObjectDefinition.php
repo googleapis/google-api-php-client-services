@@ -24,16 +24,8 @@ class ObjectDefinition extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ObjectOptions
-   */
-  public $options;
   protected $optionsType = ObjectOptions::class;
   protected $optionsDataType = '';
-  /**
-   * @var PropertyDefinition[]
-   */
-  public $propertyDefinitions;
   protected $propertyDefinitionsType = PropertyDefinition::class;
   protected $propertyDefinitionsDataType = 'array';
 

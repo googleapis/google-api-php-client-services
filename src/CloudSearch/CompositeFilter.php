@@ -24,10 +24,6 @@ class CompositeFilter extends \Google\Collection
    * @var string
    */
   public $logicOperator;
-  /**
-   * @var Filter[]
-   */
-  public $subFilters;
   protected $subFiltersType = Filter::class;
   protected $subFiltersDataType = 'array';
 

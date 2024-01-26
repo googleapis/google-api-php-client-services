@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class PeoplePromotionCard extends \Google\Collection
 {
   protected $collection_key = 'people';
-  /**
-   * @var PersonCore[]
-   */
-  public $people;
   protected $peopleType = PersonCore::class;
   protected $peopleDataType = 'array';
 
