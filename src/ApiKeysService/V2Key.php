@@ -47,10 +47,6 @@ class V2Key extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var V2Restrictions
-   */
-  public $restrictions;
   protected $restrictionsType = V2Restrictions::class;
   protected $restrictionsDataType = '';
   /**

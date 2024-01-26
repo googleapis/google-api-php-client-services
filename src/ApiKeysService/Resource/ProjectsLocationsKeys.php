@@ -48,6 +48,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * word, the id must match the regular expression:
    * `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`. The id must NOT be a UUID-like string.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, V2Key $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * @opt_param string etag Optional. The etag known to the client for the
    * expected state of the key. This is to be used for optimistic concurrency.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * @param string $name Required. The resource name of the API key to get.
    * @param array $optParams Optional parameters.
    * @return V2Key
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * retrieved.
    * @param array $optParams Optional parameters.
    * @return V2GetKeyStringResponse
+   * @throws \Google\Service\Exception
    */
   public function getKeyString($name, $optParams = [])
   {
@@ -119,6 +123,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * @opt_param bool showDeleted Optional. Indicate that keys deleted in the past
    * 30 days should also be returned.
    * @return V2ListKeysResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsKeys($parent, $optParams = [])
   {
@@ -146,6 +151,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * value "*", the service treats it equivalent to replace all allowed mutable
    * fields.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, V2Key $postBody, $optParams = [])
   {
@@ -163,6 +169,7 @@ class ProjectsLocationsKeys extends \Google\Service\Resource
    * @param V2UndeleteKeyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function undelete($name, V2UndeleteKeyRequest $postBody, $optParams = [])
   {
