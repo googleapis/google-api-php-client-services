@@ -20,10 +20,6 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class EnableMigrationRequest extends \Google\Collection
 {
   protected $collection_key = 'migratingDomains';
-  /**
-   * @var OnPremDomainDetails[]
-   */
-  public $migratingDomains;
   protected $migratingDomainsType = OnPremDomainDetails::class;
   protected $migratingDomainsDataType = 'array';
 

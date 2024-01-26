@@ -19,10 +19,6 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 
 class DetachTrustRequest extends \Google\Model
 {
-  /**
-   * @var Trust
-   */
-  public $trust;
   protected $trustType = Trust::class;
   protected $trustDataType = '';
 

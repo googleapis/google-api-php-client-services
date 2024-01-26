@@ -20,10 +20,6 @@ namespace Google\Service\ManagedServiceforMicrosoftActiveDirectoryConsumerAPI;
 class ListDomainsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Domain[]
-   */
-  public $domains;
   protected $domainsType = Domain::class;
   protected $domainsDataType = 'array';
   /**
