@@ -20,10 +20,6 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaSearchChangeHistoryEventsResponse extends \Google\Collection
 {
   protected $collection_key = 'changeHistoryEvents';
-  /**
-   * @var GoogleAnalyticsAdminV1betaChangeHistoryEvent[]
-   */
-  public $changeHistoryEvents;
   protected $changeHistoryEventsType = GoogleAnalyticsAdminV1betaChangeHistoryEvent::class;
   protected $changeHistoryEventsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaListAccountSummariesResponse extends \Google\Collection
 {
   protected $collection_key = 'accountSummaries';
-  /**
-   * @var GoogleAnalyticsAdminV1betaAccountSummary[]
-   */
-  public $accountSummaries;
   protected $accountSummariesType = GoogleAnalyticsAdminV1betaAccountSummary::class;
   protected $accountSummariesDataType = 'array';
   /**

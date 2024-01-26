@@ -40,6 +40,7 @@ class PropertiesConversionEvents extends \Google\Service\Resource
    * @param GoogleAnalyticsAdminV1betaConversionEvent $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleAnalyticsAdminV1betaConversionEvent
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleAnalyticsAdminV1betaConversionEvent $postBody, $optParams = [])
   {
@@ -55,6 +56,7 @@ class PropertiesConversionEvents extends \Google\Service\Resource
    * Example: "properties/123/conversionEvents/456"
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -70,6 +72,7 @@ class PropertiesConversionEvents extends \Google\Service\Resource
    * Example: "properties/123/conversionEvents/456"
    * @param array $optParams Optional parameters.
    * @return GoogleAnalyticsAdminV1betaConversionEvent
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -94,6 +97,7 @@ class PropertiesConversionEvents extends \Google\Service\Resource
    * When paginating, all other parameters provided to `ListConversionEvents` must
    * match the call that provided the page token.
    * @return GoogleAnalyticsAdminV1betaListConversionEventsResponse
+   * @throws \Google\Service\Exception
    */
   public function listPropertiesConversionEvents($parent, $optParams = [])
   {
@@ -115,6 +119,7 @@ class PropertiesConversionEvents extends \Google\Service\Resource
    * will not be updated. To replace the entire entity, use one path with the
    * string "*" to match all fields.
    * @return GoogleAnalyticsAdminV1betaConversionEvent
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleAnalyticsAdminV1betaConversionEvent $postBody, $optParams = [])
   {

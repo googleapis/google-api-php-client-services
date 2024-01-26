@@ -20,10 +20,6 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 class GoogleAnalyticsAdminV1betaListMeasurementProtocolSecretsResponse extends \Google\Collection
 {
   protected $collection_key = 'measurementProtocolSecrets';
-  /**
-   * @var GoogleAnalyticsAdminV1betaMeasurementProtocolSecret[]
-   */
-  public $measurementProtocolSecrets;
   protected $measurementProtocolSecretsType = GoogleAnalyticsAdminV1betaMeasurementProtocolSecret::class;
   protected $measurementProtocolSecretsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\GoogleAnalyticsAdmin;
 
 class GoogleAnalyticsAdminV1betaDataStream extends \Google\Model
 {
-  /**
-   * @var GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamData
-   */
-  public $androidAppStreamData;
   protected $androidAppStreamDataType = GoogleAnalyticsAdminV1betaDataStreamAndroidAppStreamData::class;
   protected $androidAppStreamDataDataType = '';
   /**
@@ -33,10 +29,6 @@ class GoogleAnalyticsAdminV1betaDataStream extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData
-   */
-  public $iosAppStreamData;
   protected $iosAppStreamDataType = GoogleAnalyticsAdminV1betaDataStreamIosAppStreamData::class;
   protected $iosAppStreamDataDataType = '';
   /**
@@ -51,10 +43,6 @@ class GoogleAnalyticsAdminV1betaDataStream extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var GoogleAnalyticsAdminV1betaDataStreamWebStreamData
-   */
-  public $webStreamData;
   protected $webStreamDataType = GoogleAnalyticsAdminV1betaDataStreamWebStreamData::class;
   protected $webStreamDataDataType = '';
 
