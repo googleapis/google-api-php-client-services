@@ -24,10 +24,6 @@ class LicenseAssignmentList extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var LicenseAssignment[]
-   */
-  public $items;
   protected $itemsType = LicenseAssignment::class;
   protected $itemsDataType = 'array';
   /**
