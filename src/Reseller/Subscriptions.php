@@ -28,10 +28,6 @@ class Subscriptions extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Subscription[]
-   */
-  public $subscriptions;
   protected $subscriptionsType = Subscription::class;
   protected $subscriptionsDataType = 'array';
 

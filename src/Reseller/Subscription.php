@@ -44,30 +44,18 @@ class Subscription extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var SubscriptionPlan
-   */
-  public $plan;
   protected $planType = SubscriptionPlan::class;
   protected $planDataType = '';
   /**
    * @var string
    */
   public $purchaseOrderId;
-  /**
-   * @var RenewalSettings
-   */
-  public $renewalSettings;
   protected $renewalSettingsType = RenewalSettings::class;
   protected $renewalSettingsDataType = '';
   /**
    * @var string
    */
   public $resourceUiUrl;
-  /**
-   * @var Seats
-   */
-  public $seats;
   protected $seatsType = Seats::class;
   protected $seatsDataType = '';
   /**
@@ -90,16 +78,8 @@ class Subscription extends \Google\Collection
    * @var string[]
    */
   public $suspensionReasons;
-  /**
-   * @var SubscriptionTransferInfo
-   */
-  public $transferInfo;
   protected $transferInfoType = SubscriptionTransferInfo::class;
   protected $transferInfoDataType = '';
-  /**
-   * @var SubscriptionTrialSettings
-   */
-  public $trialSettings;
   protected $trialSettingsType = SubscriptionTrialSettings::class;
   protected $trialSettingsDataType = '';
 
