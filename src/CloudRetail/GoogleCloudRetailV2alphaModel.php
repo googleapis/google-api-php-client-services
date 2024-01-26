@@ -40,10 +40,6 @@ class GoogleCloudRetailV2alphaModel extends \Google\Collection
    * @var string
    */
   public $lastTuneTime;
-  /**
-   * @var GoogleCloudRetailV2alphaModelModelFeaturesConfig
-   */
-  public $modelFeaturesConfig;
   protected $modelFeaturesConfigType = GoogleCloudRetailV2alphaModelModelFeaturesConfig::class;
   protected $modelFeaturesConfigDataType = '';
   /**
@@ -54,20 +50,12 @@ class GoogleCloudRetailV2alphaModel extends \Google\Collection
    * @var string
    */
   public $optimizationObjective;
-  /**
-   * @var GoogleCloudRetailV2alphaModelPageOptimizationConfig
-   */
-  public $pageOptimizationConfig;
   protected $pageOptimizationConfigType = GoogleCloudRetailV2alphaModelPageOptimizationConfig::class;
   protected $pageOptimizationConfigDataType = '';
   /**
    * @var string
    */
   public $periodicTuningState;
-  /**
-   * @var GoogleCloudRetailV2alphaModelServingConfigList[]
-   */
-  public $servingConfigLists;
   protected $servingConfigListsType = GoogleCloudRetailV2alphaModelServingConfigList::class;
   protected $servingConfigListsDataType = 'array';
   /**

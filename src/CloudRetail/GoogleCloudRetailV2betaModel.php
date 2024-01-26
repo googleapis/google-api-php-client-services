@@ -40,10 +40,6 @@ class GoogleCloudRetailV2betaModel extends \Google\Collection
    * @var string
    */
   public $lastTuneTime;
-  /**
-   * @var GoogleCloudRetailV2betaModelModelFeaturesConfig
-   */
-  public $modelFeaturesConfig;
   protected $modelFeaturesConfigType = GoogleCloudRetailV2betaModelModelFeaturesConfig::class;
   protected $modelFeaturesConfigDataType = '';
   /**
@@ -58,10 +54,6 @@ class GoogleCloudRetailV2betaModel extends \Google\Collection
    * @var string
    */
   public $periodicTuningState;
-  /**
-   * @var GoogleCloudRetailV2betaModelServingConfigList[]
-   */
-  public $servingConfigLists;
   protected $servingConfigListsType = GoogleCloudRetailV2betaModelServingConfigList::class;
   protected $servingConfigListsDataType = 'array';
   /**

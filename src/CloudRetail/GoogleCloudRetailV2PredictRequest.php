@@ -39,10 +39,6 @@ class GoogleCloudRetailV2PredictRequest extends \Google\Model
    * @var array[]
    */
   public $params;
-  /**
-   * @var GoogleCloudRetailV2UserEvent
-   */
-  public $userEvent;
   protected $userEventType = GoogleCloudRetailV2UserEvent::class;
   protected $userEventDataType = '';
   /**

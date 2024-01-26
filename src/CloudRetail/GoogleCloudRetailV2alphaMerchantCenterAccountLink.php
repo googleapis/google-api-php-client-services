@@ -24,10 +24,6 @@ class GoogleCloudRetailV2alphaMerchantCenterAccountLink extends \Google\Collecti
    * @var string
    */
   public $branchId;
-  /**
-   * @var GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter[]
-   */
-  public $feedFilters;
   protected $feedFiltersType = GoogleCloudRetailV2alphaMerchantCenterAccountLinkMerchantCenterFeedFilter::class;
   protected $feedFiltersDataType = 'array';
   /**

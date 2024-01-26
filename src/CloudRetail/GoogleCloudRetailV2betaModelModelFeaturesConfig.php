@@ -19,10 +19,6 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2betaModelModelFeaturesConfig extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRetailV2betaModelFrequentlyBoughtTogetherFeaturesConfig
-   */
-  public $frequentlyBoughtTogetherConfig;
   protected $frequentlyBoughtTogetherConfigType = GoogleCloudRetailV2betaModelFrequentlyBoughtTogetherFeaturesConfig::class;
   protected $frequentlyBoughtTogetherConfigDataType = '';
 

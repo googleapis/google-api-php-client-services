@@ -85,6 +85,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * The field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return GoogleCloudRetailV2CompleteQueryResponse
+   * @throws \Google\Service\Exception
    */
   public function completeQuery($catalog, $optParams = [])
   {
@@ -100,6 +101,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * utesConfig`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRetailV2AttributesConfig
+   * @throws \Google\Service\Exception
    */
   public function getAttributesConfig($name, $optParams = [])
   {
@@ -115,6 +117,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * tionConfig`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRetailV2CompletionConfig
+   * @throws \Google\Service\Exception
    */
   public function getCompletionConfig($name, $optParams = [])
   {
@@ -131,6 +134,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * `projects/locations/global/catalogs/default_catalog`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRetailV2GetDefaultBranchResponse
+   * @throws \Google\Service\Exception
    */
   public function getDefaultBranch($catalog, $optParams = [])
   {
@@ -158,6 +162,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * CatalogService.ListCatalogs must match the call that provided the page token.
    * Otherwise, an INVALID_ARGUMENT error is returned.
    * @return GoogleCloudRetailV2ListCatalogsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCatalogs($parent, $optParams = [])
   {
@@ -177,6 +182,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * to update. If an unsupported or unknown field is provided, an
    * INVALID_ARGUMENT error is returned.
    * @return GoogleCloudRetailV2Catalog
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudRetailV2Catalog $postBody, $optParams = [])
   {
@@ -210,6 +216,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * @param GoogleCloudRetailV2SetDefaultBranchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function setDefaultBranch($catalog, GoogleCloudRetailV2SetDefaultBranchRequest $postBody, $optParams = [])
   {
@@ -236,6 +243,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * AttributesConfig.catalog_attributes If not set, all supported fields are
    * updated.
    * @return GoogleCloudRetailV2AttributesConfig
+   * @throws \Google\Service\Exception
    */
   public function updateAttributesConfig($name, GoogleCloudRetailV2AttributesConfig $postBody, $optParams = [])
   {
@@ -257,6 +265,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * CompletionConfig.min_prefix_length * CompletionConfig.auto_learning If not
    * set, all supported fields are updated.
    * @return GoogleCloudRetailV2CompletionConfig
+   * @throws \Google\Service\Exception
    */
   public function updateCompletionConfig($name, GoogleCloudRetailV2CompletionConfig $postBody, $optParams = [])
   {

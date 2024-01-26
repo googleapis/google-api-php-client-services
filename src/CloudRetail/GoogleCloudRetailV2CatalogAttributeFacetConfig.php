@@ -20,28 +20,12 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
 {
   protected $collection_key = 'mergedFacetValues';
-  /**
-   * @var GoogleCloudRetailV2Interval[]
-   */
-  public $facetIntervals;
   protected $facetIntervalsType = GoogleCloudRetailV2Interval::class;
   protected $facetIntervalsDataType = 'array';
-  /**
-   * @var GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues[]
-   */
-  public $ignoredFacetValues;
   protected $ignoredFacetValuesType = GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues::class;
   protected $ignoredFacetValuesDataType = 'array';
-  /**
-   * @var GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue[]
-   */
-  public $mergedFacetValues;
   protected $mergedFacetValuesType = GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue::class;
   protected $mergedFacetValuesDataType = 'array';
-  /**
-   * @var GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig
-   */
-  public $rerankConfig;
   protected $rerankConfigType = GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig::class;
   protected $rerankConfigDataType = '';
 

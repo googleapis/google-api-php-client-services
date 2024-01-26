@@ -20,16 +20,8 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2betaOutputResult extends \Google\Collection
 {
   protected $collection_key = 'gcsResult';
-  /**
-   * @var GoogleCloudRetailV2betaBigQueryOutputResult[]
-   */
-  public $bigqueryResult;
   protected $bigqueryResultType = GoogleCloudRetailV2betaBigQueryOutputResult::class;
   protected $bigqueryResultDataType = 'array';
-  /**
-   * @var GoogleCloudRetailV2betaGcsOutputResult[]
-   */
-  public $gcsResult;
   protected $gcsResultType = GoogleCloudRetailV2betaGcsOutputResult::class;
   protected $gcsResultDataType = 'array';
 

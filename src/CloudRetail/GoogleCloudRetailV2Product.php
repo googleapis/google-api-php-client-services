@@ -20,16 +20,8 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2Product extends \Google\Collection
 {
   protected $collection_key = 'variants';
-  /**
-   * @var GoogleCloudRetailV2CustomAttribute[]
-   */
-  public $attributes;
   protected $attributesType = GoogleCloudRetailV2CustomAttribute::class;
   protected $attributesDataType = 'map';
-  /**
-   * @var GoogleCloudRetailV2Audience
-   */
-  public $audience;
   protected $audienceType = GoogleCloudRetailV2Audience::class;
   protected $audienceDataType = '';
   /**
@@ -56,10 +48,6 @@ class GoogleCloudRetailV2Product extends \Google\Collection
    * @var string[]
    */
   public $collectionMemberIds;
-  /**
-   * @var GoogleCloudRetailV2ColorInfo
-   */
-  public $colorInfo;
   protected $colorInfoType = GoogleCloudRetailV2ColorInfo::class;
   protected $colorInfoDataType = '';
   /**
@@ -74,10 +62,6 @@ class GoogleCloudRetailV2Product extends \Google\Collection
    * @var string
    */
   public $expireTime;
-  /**
-   * @var GoogleCloudRetailV2FulfillmentInfo[]
-   */
-  public $fulfillmentInfo;
   protected $fulfillmentInfoType = GoogleCloudRetailV2FulfillmentInfo::class;
   protected $fulfillmentInfoDataType = 'array';
   /**
@@ -88,20 +72,12 @@ class GoogleCloudRetailV2Product extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var GoogleCloudRetailV2Image[]
-   */
-  public $images;
   protected $imagesType = GoogleCloudRetailV2Image::class;
   protected $imagesDataType = 'array';
   /**
    * @var string
    */
   public $languageCode;
-  /**
-   * @var GoogleCloudRetailV2LocalInventory[]
-   */
-  public $localInventories;
   protected $localInventoriesType = GoogleCloudRetailV2LocalInventory::class;
   protected $localInventoriesDataType = 'array';
   /**
@@ -116,30 +92,18 @@ class GoogleCloudRetailV2Product extends \Google\Collection
    * @var string[]
    */
   public $patterns;
-  /**
-   * @var GoogleCloudRetailV2PriceInfo
-   */
-  public $priceInfo;
   protected $priceInfoType = GoogleCloudRetailV2PriceInfo::class;
   protected $priceInfoDataType = '';
   /**
    * @var string
    */
   public $primaryProductId;
-  /**
-   * @var GoogleCloudRetailV2Promotion[]
-   */
-  public $promotions;
   protected $promotionsType = GoogleCloudRetailV2Promotion::class;
   protected $promotionsDataType = 'array';
   /**
    * @var string
    */
   public $publishTime;
-  /**
-   * @var GoogleCloudRetailV2Rating
-   */
-  public $rating;
   protected $ratingType = GoogleCloudRetailV2Rating::class;
   protected $ratingDataType = '';
   /**
@@ -170,10 +134,6 @@ class GoogleCloudRetailV2Product extends \Google\Collection
    * @var string
    */
   public $uri;
-  /**
-   * @var GoogleCloudRetailV2Product[]
-   */
-  public $variants;
   protected $variantsType = GoogleCloudRetailV2Product::class;
   protected $variantsDataType = 'array';
 

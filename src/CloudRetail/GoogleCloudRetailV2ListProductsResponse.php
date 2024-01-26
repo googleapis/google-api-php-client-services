@@ -24,10 +24,6 @@ class GoogleCloudRetailV2ListProductsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudRetailV2Product[]
-   */
-  public $products;
   protected $productsType = GoogleCloudRetailV2Product::class;
   protected $productsDataType = 'array';
 

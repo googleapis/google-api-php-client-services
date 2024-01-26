@@ -20,10 +20,6 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2UserEvent extends \Google\Collection
 {
   protected $collection_key = 'productDetails';
-  /**
-   * @var GoogleCloudRetailV2CustomAttribute[]
-   */
-  public $attributes;
   protected $attributesType = GoogleCloudRetailV2CustomAttribute::class;
   protected $attributesDataType = 'map';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
    * @var string
    */
   public $cartId;
-  /**
-   * @var GoogleCloudRetailV2CompletionDetail
-   */
-  public $completionDetail;
   protected $completionDetailType = GoogleCloudRetailV2CompletionDetail::class;
   protected $completionDetailDataType = '';
   /**
@@ -76,16 +68,8 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
    * @var string
    */
   public $pageViewId;
-  /**
-   * @var GoogleCloudRetailV2ProductDetail[]
-   */
-  public $productDetails;
   protected $productDetailsType = GoogleCloudRetailV2ProductDetail::class;
   protected $productDetailsDataType = 'array';
-  /**
-   * @var GoogleCloudRetailV2PurchaseTransaction
-   */
-  public $purchaseTransaction;
   protected $purchaseTransactionType = GoogleCloudRetailV2PurchaseTransaction::class;
   protected $purchaseTransactionDataType = '';
   /**
@@ -104,10 +88,6 @@ class GoogleCloudRetailV2UserEvent extends \Google\Collection
    * @var string
    */
   public $uri;
-  /**
-   * @var GoogleCloudRetailV2UserInfo
-   */
-  public $userInfo;
   protected $userInfoType = GoogleCloudRetailV2UserInfo::class;
   protected $userInfoDataType = '';
   /**

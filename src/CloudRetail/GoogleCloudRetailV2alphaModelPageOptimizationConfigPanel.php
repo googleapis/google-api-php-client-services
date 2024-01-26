@@ -20,16 +20,8 @@ namespace Google\Service\CloudRetail;
 class GoogleCloudRetailV2alphaModelPageOptimizationConfigPanel extends \Google\Collection
 {
   protected $collection_key = 'candidates';
-  /**
-   * @var GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate[]
-   */
-  public $candidates;
   protected $candidatesType = GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate::class;
   protected $candidatesDataType = 'array';
-  /**
-   * @var GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate
-   */
-  public $defaultCandidate;
   protected $defaultCandidateType = GoogleCloudRetailV2alphaModelPageOptimizationConfigCandidate::class;
   protected $defaultCandidateDataType = '';
   /**

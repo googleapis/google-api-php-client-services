@@ -19,16 +19,8 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailLoggingErrorContext extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRetailLoggingHttpRequestContext
-   */
-  public $httpRequest;
   protected $httpRequestType = GoogleCloudRetailLoggingHttpRequestContext::class;
   protected $httpRequestDataType = '';
-  /**
-   * @var GoogleCloudRetailLoggingSourceLocation
-   */
-  public $reportLocation;
   protected $reportLocationType = GoogleCloudRetailLoggingSourceLocation::class;
   protected $reportLocationDataType = '';
 

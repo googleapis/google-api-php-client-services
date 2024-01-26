@@ -19,10 +19,6 @@ namespace Google\Service\CloudRetail;
 
 class GoogleCloudRetailV2ProductDetail extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRetailV2Product
-   */
-  public $product;
   protected $productType = GoogleCloudRetailV2Product::class;
   protected $productDataType = '';
   /**
