@@ -19,16 +19,8 @@ namespace Google\Service\CloudSearch;
 
 class UpdateSchemaRequest extends \Google\Model
 {
-  /**
-   * @var DebugOptions
-   */
-  public $debugOptions;
   protected $debugOptionsType = DebugOptions::class;
   protected $debugOptionsDataType = '';
-  /**
-   * @var Schema
-   */
-  public $schema;
   protected $schemaType = Schema::class;
   protected $schemaDataType = '';
   /**

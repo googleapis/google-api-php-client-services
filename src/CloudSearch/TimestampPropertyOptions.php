@@ -19,10 +19,6 @@ namespace Google\Service\CloudSearch;
 
 class TimestampPropertyOptions extends \Google\Model
 {
-  /**
-   * @var TimestampOperatorOptions
-   */
-  public $operatorOptions;
   protected $operatorOptionsType = TimestampOperatorOptions::class;
   protected $operatorOptionsDataType = '';
 

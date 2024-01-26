@@ -19,16 +19,8 @@ namespace Google\Service\CloudSearch;
 
 class RemoveActivityRequest extends \Google\Model
 {
-  /**
-   * @var RequestOptions
-   */
-  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
-  /**
-   * @var UserActivity
-   */
-  public $userActivity;
   protected $userActivityType = UserActivity::class;
   protected $userActivityDataType = '';
 

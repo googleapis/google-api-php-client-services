@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class ResultCounts extends \Google\Collection
 {
   protected $collection_key = 'sourceResultCounts';
-  /**
-   * @var SourceResultCount[]
-   */
-  public $sourceResultCounts;
   protected $sourceResultCountsType = SourceResultCount::class;
   protected $sourceResultCountsDataType = 'array';
 

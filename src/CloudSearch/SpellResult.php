@@ -23,10 +23,6 @@ class SpellResult extends \Google\Model
    * @var string
    */
   public $suggestedQuery;
-  /**
-   * @var SafeHtmlProto
-   */
-  public $suggestedQueryHtml;
   protected $suggestedQueryHtmlType = SafeHtmlProto::class;
   protected $suggestedQueryHtmlDataType = '';
   /**

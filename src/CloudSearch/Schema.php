@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class Schema extends \Google\Collection
 {
   protected $collection_key = 'operationIds';
-  /**
-   * @var ObjectDefinition[]
-   */
-  public $objectDefinitions;
   protected $objectDefinitionsType = ObjectDefinition::class;
   protected $objectDefinitionsDataType = 'array';
   /**

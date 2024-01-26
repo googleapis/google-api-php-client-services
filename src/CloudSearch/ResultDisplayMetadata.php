@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class ResultDisplayMetadata extends \Google\Collection
 {
   protected $collection_key = 'metalines';
-  /**
-   * @var ResultDisplayLine[]
-   */
-  public $metalines;
   protected $metalinesType = ResultDisplayLine::class;
   protected $metalinesDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\CloudSearch;
 class SuggestResponse extends \Google\Collection
 {
   protected $collection_key = 'suggestResults';
-  /**
-   * @var SuggestResult[]
-   */
-  public $suggestResults;
   protected $suggestResultsType = SuggestResult::class;
   protected $suggestResultsDataType = 'array';
 

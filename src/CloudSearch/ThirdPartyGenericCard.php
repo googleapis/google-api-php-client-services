@@ -27,16 +27,8 @@ class ThirdPartyGenericCard extends \Google\Model
    * @var string
    */
   public $category;
-  /**
-   * @var Content
-   */
-  public $content;
   protected $contentType = Content::class;
   protected $contentDataType = '';
-  /**
-   * @var Context
-   */
-  public $context;
   protected $contextType = Context::class;
   protected $contextDataType = '';
   /**

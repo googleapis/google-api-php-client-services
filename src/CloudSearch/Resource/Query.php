@@ -46,6 +46,7 @@ class Query extends \Google\Service\Resource
    * @param RemoveActivityRequest $postBody
    * @param array $optParams Optional parameters.
    * @return RemoveActivityResponse
+   * @throws \Google\Service\Exception
    */
   public function removeActivity(RemoveActivityRequest $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class Query extends \Google\Service\Resource
    * @param SearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SearchResponse
+   * @throws \Google\Service\Exception
    */
   public function search(SearchRequest $postBody, $optParams = [])
   {
@@ -85,6 +87,7 @@ class Query extends \Google\Service\Resource
    * @param SuggestRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SuggestResponse
+   * @throws \Google\Service\Exception
    */
   public function suggest(SuggestRequest $postBody, $optParams = [])
   {

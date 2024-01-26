@@ -19,10 +19,6 @@ namespace Google\Service\CloudSearch;
 
 class UserActivity extends \Google\Model
 {
-  /**
-   * @var QueryActivity
-   */
-  public $queryActivity;
   protected $queryActivityType = QueryActivity::class;
   protected $queryActivityDataType = '';
 

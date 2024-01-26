@@ -27,10 +27,6 @@ class ResultDisplayField extends \Google\Model
    * @var string
    */
   public $operatorName;
-  /**
-   * @var NamedProperty
-   */
-  public $property;
   protected $propertyType = NamedProperty::class;
   protected $propertyDataType = '';
 
