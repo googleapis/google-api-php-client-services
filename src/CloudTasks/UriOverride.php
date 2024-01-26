@@ -23,20 +23,12 @@ class UriOverride extends \Google\Model
    * @var string
    */
   public $host;
-  /**
-   * @var PathOverride
-   */
-  public $pathOverride;
   protected $pathOverrideType = PathOverride::class;
   protected $pathOverrideDataType = '';
   /**
    * @var string
    */
   public $port;
-  /**
-   * @var QueryOverride
-   */
-  public $queryOverride;
   protected $queryOverrideType = QueryOverride::class;
   protected $queryOverrideDataType = '';
   /**

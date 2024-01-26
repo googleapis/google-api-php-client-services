@@ -19,16 +19,8 @@ namespace Google\Service\CloudTasks;
 
 class Queue extends \Google\Model
 {
-  /**
-   * @var AppEngineRouting
-   */
-  public $appEngineRoutingOverride;
   protected $appEngineRoutingOverrideType = AppEngineRouting::class;
   protected $appEngineRoutingOverrideDataType = '';
-  /**
-   * @var HttpTarget
-   */
-  public $httpTarget;
   protected $httpTargetType = HttpTarget::class;
   protected $httpTargetDataType = '';
   /**
@@ -39,22 +31,10 @@ class Queue extends \Google\Model
    * @var string
    */
   public $purgeTime;
-  /**
-   * @var RateLimits
-   */
-  public $rateLimits;
   protected $rateLimitsType = RateLimits::class;
   protected $rateLimitsDataType = '';
-  /**
-   * @var RetryConfig
-   */
-  public $retryConfig;
   protected $retryConfigType = RetryConfig::class;
   protected $retryConfigDataType = '';
-  /**
-   * @var StackdriverLoggingConfig
-   */
-  public $stackdriverLoggingConfig;
   protected $stackdriverLoggingConfigType = StackdriverLoggingConfig::class;
   protected $stackdriverLoggingConfigDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\CloudTasks;
 
 class Task extends \Google\Model
 {
-  /**
-   * @var AppEngineHttpRequest
-   */
-  public $appEngineHttpRequest;
   protected $appEngineHttpRequestType = AppEngineHttpRequest::class;
   protected $appEngineHttpRequestDataType = '';
   /**
@@ -37,22 +33,10 @@ class Task extends \Google\Model
    * @var string
    */
   public $dispatchDeadline;
-  /**
-   * @var Attempt
-   */
-  public $firstAttempt;
   protected $firstAttemptType = Attempt::class;
   protected $firstAttemptDataType = '';
-  /**
-   * @var HttpRequest
-   */
-  public $httpRequest;
   protected $httpRequestType = HttpRequest::class;
   protected $httpRequestDataType = '';
-  /**
-   * @var Attempt
-   */
-  public $lastAttempt;
   protected $lastAttemptType = Attempt::class;
   protected $lastAttemptDataType = '';
   /**

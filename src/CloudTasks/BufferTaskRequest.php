@@ -19,10 +19,6 @@ namespace Google\Service\CloudTasks;
 
 class BufferTaskRequest extends \Google\Model
 {
-  /**
-   * @var HttpBody
-   */
-  public $body;
   protected $bodyType = HttpBody::class;
   protected $bodyDataType = '';
 

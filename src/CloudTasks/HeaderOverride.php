@@ -19,10 +19,6 @@ namespace Google\Service\CloudTasks;
 
 class HeaderOverride extends \Google\Model
 {
-  /**
-   * @var Header
-   */
-  public $header;
   protected $headerType = Header::class;
   protected $headerDataType = '';
 

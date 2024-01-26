@@ -52,6 +52,7 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
    * @param BufferTaskRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BufferTaskResponse
+   * @throws \Google\Service\Exception
    */
   public function buffer($queue, $taskId, BufferTaskRequest $postBody, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
    * @param CreateTaskRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Task
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CreateTaskRequest $postBody, $optParams = [])
   {
@@ -86,6 +88,7 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
    * `projects/PROJECT_ID/locations/LOCATION_ID/queues/QUEUE_ID/tasks/TASK_ID`
    * @param array $optParams Optional parameters.
    * @return CloudtasksEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -108,6 +111,7 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
    * requires `cloudtasks.tasks.fullView` [Google
    * IAM](https://cloud.google.com/iam/) permission on the Task resource.
    * @return Task
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -142,6 +146,7 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
    * requires `cloudtasks.tasks.fullView` [Google
    * IAM](https://cloud.google.com/iam/) permission on the Task resource.
    * @return ListTasksResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsQueuesTasks($parent, $optParams = [])
   {
@@ -168,6 +173,7 @@ class ProjectsLocationsQueuesTasks extends \Google\Service\Resource
    * @param RunTaskRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Task
+   * @throws \Google\Service\Exception
    */
   public function run($name, RunTaskRequest $postBody, $optParams = [])
   {
