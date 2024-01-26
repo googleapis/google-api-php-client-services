@@ -19,22 +19,10 @@ namespace Google\Service\CloudLifeSciences;
 
 class Volume extends \Google\Model
 {
-  /**
-   * @var ExistingDisk
-   */
-  public $existingDisk;
   protected $existingDiskType = ExistingDisk::class;
   protected $existingDiskDataType = '';
-  /**
-   * @var NFSMount
-   */
-  public $nfsMount;
   protected $nfsMountType = NFSMount::class;
   protected $nfsMountDataType = '';
-  /**
-   * @var PersistentDisk
-   */
-  public $persistentDisk;
   protected $persistentDiskType = PersistentDisk::class;
   protected $persistentDiskDataType = '';
   /**
