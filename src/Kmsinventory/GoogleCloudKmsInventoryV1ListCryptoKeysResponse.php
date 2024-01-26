@@ -20,10 +20,6 @@ namespace Google\Service\Kmsinventory;
 class GoogleCloudKmsInventoryV1ListCryptoKeysResponse extends \Google\Collection
 {
   protected $collection_key = 'cryptoKeys';
-  /**
-   * @var GoogleCloudKmsV1CryptoKey[]
-   */
-  public $cryptoKeys;
   protected $cryptoKeysType = GoogleCloudKmsV1CryptoKey::class;
   protected $cryptoKeysDataType = 'array';
   /**

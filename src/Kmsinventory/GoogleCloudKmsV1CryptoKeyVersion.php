@@ -23,10 +23,6 @@ class GoogleCloudKmsV1CryptoKeyVersion extends \Google\Model
    * @var string
    */
   public $algorithm;
-  /**
-   * @var GoogleCloudKmsV1KeyOperationAttestation
-   */
-  public $attestation;
   protected $attestationType = GoogleCloudKmsV1KeyOperationAttestation::class;
   protected $attestationDataType = '';
   /**
@@ -45,10 +41,6 @@ class GoogleCloudKmsV1CryptoKeyVersion extends \Google\Model
    * @var string
    */
   public $externalDestructionFailureReason;
-  /**
-   * @var GoogleCloudKmsV1ExternalProtectionLevelOptions
-   */
-  public $externalProtectionLevelOptions;
   protected $externalProtectionLevelOptionsType = GoogleCloudKmsV1ExternalProtectionLevelOptions::class;
   protected $externalProtectionLevelOptionsDataType = '';
   /**

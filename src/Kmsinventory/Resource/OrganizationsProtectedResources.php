@@ -58,6 +58,7 @@ class OrganizationsProtectedResources extends \Google\Service\Resource
    * regular expression syntax. If the regular expression does not match any
    * supported resource type, an INVALID_ARGUMENT error will be returned.
    * @return GoogleCloudKmsInventoryV1SearchProtectedResourcesResponse
+   * @throws \Google\Service\Exception
    */
   public function search($scope, $optParams = [])
   {
