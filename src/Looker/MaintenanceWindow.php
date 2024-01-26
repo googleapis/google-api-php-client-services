@@ -23,10 +23,6 @@ class MaintenanceWindow extends \Google\Model
    * @var string
    */
   public $dayOfWeek;
-  /**
-   * @var TimeOfDay
-   */
-  public $startTime;
   protected $startTimeType = TimeOfDay::class;
   protected $startTimeDataType = '';
 

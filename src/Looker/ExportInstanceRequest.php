@@ -19,10 +19,6 @@ namespace Google\Service\Looker;
 
 class ExportInstanceRequest extends \Google\Model
 {
-  /**
-   * @var ExportEncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = ExportEncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**
