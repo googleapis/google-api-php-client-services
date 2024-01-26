@@ -19,10 +19,6 @@ namespace Google\Service\CloudTalentSolution;
 
 class MendelDebugInput extends \Google\Model
 {
-  /**
-   * @var NamespacedDebugInput[]
-   */
-  public $namespacedDebugInput;
   protected $namespacedDebugInputType = NamespacedDebugInput::class;
   protected $namespacedDebugInputDataType = 'map';
 

@@ -19,10 +19,6 @@ namespace Google\Service\CloudTalentSolution;
 
 class CompanyDerivedInfo extends \Google\Model
 {
-  /**
-   * @var Location
-   */
-  public $headquartersLocation;
   protected $headquartersLocationType = Location::class;
   protected $headquartersLocationDataType = '';
 

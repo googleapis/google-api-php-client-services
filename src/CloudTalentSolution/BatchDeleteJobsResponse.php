@@ -20,10 +20,6 @@ namespace Google\Service\CloudTalentSolution;
 class BatchDeleteJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobResults';
-  /**
-   * @var JobResult[]
-   */
-  public $jobResults;
   protected $jobResultsType = JobResult::class;
   protected $jobResultsDataType = 'array';
 

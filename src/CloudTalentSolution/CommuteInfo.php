@@ -19,10 +19,6 @@ namespace Google\Service\CloudTalentSolution;
 
 class CommuteInfo extends \Google\Model
 {
-  /**
-   * @var Location
-   */
-  public $jobLocation;
   protected $jobLocationType = Location::class;
   protected $jobLocationDataType = '';
   /**

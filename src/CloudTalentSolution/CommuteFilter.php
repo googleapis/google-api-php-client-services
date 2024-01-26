@@ -27,20 +27,12 @@ class CommuteFilter extends \Google\Model
    * @var string
    */
   public $commuteMethod;
-  /**
-   * @var TimeOfDay
-   */
-  public $departureTime;
   protected $departureTimeType = TimeOfDay::class;
   protected $departureTimeDataType = '';
   /**
    * @var string
    */
   public $roadTraffic;
-  /**
-   * @var LatLng
-   */
-  public $startCoordinates;
   protected $startCoordinatesType = LatLng::class;
   protected $startCoordinatesDataType = '';
   /**

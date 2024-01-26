@@ -20,10 +20,6 @@ namespace Google\Service\CloudTalentSolution;
 class JobQuery extends \Google\Collection
 {
   protected $collection_key = 'locationFilters';
-  /**
-   * @var CommuteFilter
-   */
-  public $commuteFilter;
   protected $commuteFilterType = CommuteFilter::class;
   protected $commuteFilterDataType = '';
   /**
@@ -34,10 +30,6 @@ class JobQuery extends \Google\Collection
    * @var string[]
    */
   public $companyDisplayNames;
-  /**
-   * @var CompensationFilter
-   */
-  public $compensationFilter;
   protected $compensationFilterType = CompensationFilter::class;
   protected $compensationFilterDataType = '';
   /**
@@ -64,16 +56,8 @@ class JobQuery extends \Google\Collection
    * @var string[]
    */
   public $languageCodes;
-  /**
-   * @var LocationFilter[]
-   */
-  public $locationFilters;
   protected $locationFiltersType = LocationFilter::class;
   protected $locationFiltersDataType = 'array';
-  /**
-   * @var TimestampRange
-   */
-  public $publishTimeRange;
   protected $publishTimeRangeType = TimestampRange::class;
   protected $publishTimeRangeDataType = '';
   /**

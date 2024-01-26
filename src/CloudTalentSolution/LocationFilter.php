@@ -24,10 +24,6 @@ class LocationFilter extends \Google\Model
    */
   public $address;
   public $distanceInMiles;
-  /**
-   * @var LatLng
-   */
-  public $latLng;
   protected $latLngType = LatLng::class;
   protected $latLngDataType = '';
   /**

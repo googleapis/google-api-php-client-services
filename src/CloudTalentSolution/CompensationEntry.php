@@ -19,10 +19,6 @@ namespace Google\Service\CloudTalentSolution;
 
 class CompensationEntry extends \Google\Model
 {
-  /**
-   * @var Money
-   */
-  public $amount;
   protected $amountType = Money::class;
   protected $amountDataType = '';
   /**
@@ -30,10 +26,6 @@ class CompensationEntry extends \Google\Model
    */
   public $description;
   public $expectedUnitsPerYear;
-  /**
-   * @var CompensationRange
-   */
-  public $range;
   protected $rangeType = CompensationRange::class;
   protected $rangeDataType = '';
   /**
