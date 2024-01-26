@@ -20,10 +20,6 @@ namespace Google\Service\AndroidProvisioningPartner;
 class FindDevicesByDeviceIdentifierResponse extends \Google\Collection
 {
   protected $collection_key = 'devices';
-  /**
-   * @var Device[]
-   */
-  public $devices;
   protected $devicesType = Device::class;
   protected $devicesDataType = 'array';
   /**

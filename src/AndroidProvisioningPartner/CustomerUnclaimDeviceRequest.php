@@ -19,10 +19,6 @@ namespace Google\Service\AndroidProvisioningPartner;
 
 class CustomerUnclaimDeviceRequest extends \Google\Model
 {
-  /**
-   * @var DeviceReference
-   */
-  public $device;
   protected $deviceType = DeviceReference::class;
   protected $deviceDataType = '';
 

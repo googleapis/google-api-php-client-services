@@ -19,10 +19,6 @@ namespace Google\Service\AndroidProvisioningPartner;
 
 class UpdateDeviceMetadataRequest extends \Google\Model
 {
-  /**
-   * @var DeviceMetadata
-   */
-  public $deviceMetadata;
   protected $deviceMetadataType = DeviceMetadata::class;
   protected $deviceMetadataDataType = '';
 

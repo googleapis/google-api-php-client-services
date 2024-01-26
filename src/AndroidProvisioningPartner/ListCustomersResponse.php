@@ -20,10 +20,6 @@ namespace Google\Service\AndroidProvisioningPartner;
 class ListCustomersResponse extends \Google\Collection
 {
   protected $collection_key = 'customers';
-  /**
-   * @var Company[]
-   */
-  public $customers;
   protected $customersType = Company::class;
   protected $customersDataType = 'array';
   /**

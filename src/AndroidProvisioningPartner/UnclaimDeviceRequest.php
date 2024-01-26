@@ -23,10 +23,6 @@ class UnclaimDeviceRequest extends \Google\Model
    * @var string
    */
   public $deviceId;
-  /**
-   * @var DeviceIdentifier
-   */
-  public $deviceIdentifier;
   protected $deviceIdentifierType = DeviceIdentifier::class;
   protected $deviceIdentifierDataType = '';
   /**
