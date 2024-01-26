@@ -24,10 +24,6 @@ class GoogleCloudApigeeV1ListSecurityActionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudApigeeV1SecurityAction[]
-   */
-  public $securityActions;
   protected $securityActionsType = GoogleCloudApigeeV1SecurityAction::class;
   protected $securityActionsDataType = 'array';
 

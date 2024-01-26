@@ -32,10 +32,6 @@ class GoogleCloudApigeeV1AppGroupApp extends \Google\Collection
    * @var string
    */
   public $appId;
-  /**
-   * @var GoogleCloudApigeeV1Attribute[]
-   */
-  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
@@ -46,10 +42,6 @@ class GoogleCloudApigeeV1AppGroupApp extends \Google\Collection
    * @var string
    */
   public $createdAt;
-  /**
-   * @var GoogleCloudApigeeV1Credential[]
-   */
-  public $credentials;
   protected $credentialsType = GoogleCloudApigeeV1Credential::class;
   protected $credentialsDataType = 'array';
   /**

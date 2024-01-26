@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1EnvironmentGroupConfig extends \Google\Collection
 {
   protected $collection_key = 'routingRules';
-  /**
-   * @var GoogleCloudApigeeV1EndpointChainingRule[]
-   */
-  public $endpointChainingRules;
   protected $endpointChainingRulesType = GoogleCloudApigeeV1EndpointChainingRule::class;
   protected $endpointChainingRulesDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class GoogleCloudApigeeV1EnvironmentGroupConfig extends \Google\Collection
    * @var string
    */
   public $revisionId;
-  /**
-   * @var GoogleCloudApigeeV1RoutingRule[]
-   */
-  public $routingRules;
   protected $routingRulesType = GoogleCloudApigeeV1RoutingRule::class;
   protected $routingRulesDataType = 'array';
   /**

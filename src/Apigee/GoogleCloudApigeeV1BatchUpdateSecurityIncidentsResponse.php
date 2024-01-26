@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1BatchUpdateSecurityIncidentsResponse extends \Google\Collection
 {
   protected $collection_key = 'securityIncidents';
-  /**
-   * @var GoogleCloudApigeeV1SecurityIncident[]
-   */
-  public $securityIncidents;
   protected $securityIncidentsType = GoogleCloudApigeeV1SecurityIncident::class;
   protected $securityIncidentsDataType = 'array';
 

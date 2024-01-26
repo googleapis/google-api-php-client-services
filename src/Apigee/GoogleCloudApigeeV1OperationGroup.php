@@ -24,10 +24,6 @@ class GoogleCloudApigeeV1OperationGroup extends \Google\Collection
    * @var string
    */
   public $operationConfigType;
-  /**
-   * @var GoogleCloudApigeeV1OperationConfig[]
-   */
-  public $operationConfigs;
   protected $operationConfigsType = GoogleCloudApigeeV1OperationConfig::class;
   protected $operationConfigsDataType = 'array';
 

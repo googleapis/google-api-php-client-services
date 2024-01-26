@@ -24,10 +24,6 @@ class GoogleCloudApigeeV1Point extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var GoogleCloudApigeeV1Result[]
-   */
-  public $results;
   protected $resultsType = GoogleCloudApigeeV1Result::class;
   protected $resultsDataType = 'array';
 

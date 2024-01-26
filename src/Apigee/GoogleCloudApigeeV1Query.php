@@ -44,10 +44,6 @@ class GoogleCloudApigeeV1Query extends \Google\Collection
    * @var int
    */
   public $limit;
-  /**
-   * @var GoogleCloudApigeeV1QueryMetric[]
-   */
-  public $metrics;
   protected $metricsType = GoogleCloudApigeeV1QueryMetric::class;
   protected $metricsDataType = 'array';
   /**

@@ -55,16 +55,8 @@ class GoogleCloudApigeeV1Environment extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudApigeeV1NodeConfig
-   */
-  public $nodeConfig;
   protected $nodeConfigType = GoogleCloudApigeeV1NodeConfig::class;
   protected $nodeConfigDataType = '';
-  /**
-   * @var GoogleCloudApigeeV1Properties
-   */
-  public $properties;
   protected $propertiesType = GoogleCloudApigeeV1Properties::class;
   protected $propertiesDataType = '';
   /**

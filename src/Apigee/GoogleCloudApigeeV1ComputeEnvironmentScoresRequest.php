@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ComputeEnvironmentScoresRequest extends \Google\Collection
 {
   protected $collection_key = 'filters';
-  /**
-   * @var GoogleCloudApigeeV1ComputeEnvironmentScoresRequestFilter[]
-   */
-  public $filters;
   protected $filtersType = GoogleCloudApigeeV1ComputeEnvironmentScoresRequestFilter::class;
   protected $filtersDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudApigeeV1ComputeEnvironmentScoresRequest extends \Google\Collect
    * @var string
    */
   public $pageToken;
-  /**
-   * @var GoogleTypeInterval
-   */
-  public $timeRange;
   protected $timeRangeType = GoogleTypeInterval::class;
   protected $timeRangeDataType = '';
 

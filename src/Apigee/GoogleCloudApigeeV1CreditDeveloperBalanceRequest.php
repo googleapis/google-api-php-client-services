@@ -19,10 +19,6 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1CreditDeveloperBalanceRequest extends \Google\Model
 {
-  /**
-   * @var GoogleTypeMoney
-   */
-  public $transactionAmount;
   protected $transactionAmountType = GoogleTypeMoney::class;
   protected $transactionAmountDataType = '';
   /**

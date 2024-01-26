@@ -28,10 +28,6 @@ class GoogleCloudApigeeV1ApiProduct extends \Google\Collection
    * @var string
    */
   public $approvalType;
-  /**
-   * @var GoogleCloudApigeeV1Attribute[]
-   */
-  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**
@@ -50,16 +46,8 @@ class GoogleCloudApigeeV1ApiProduct extends \Google\Collection
    * @var string[]
    */
   public $environments;
-  /**
-   * @var GoogleCloudApigeeV1GraphQLOperationGroup
-   */
-  public $graphqlOperationGroup;
   protected $graphqlOperationGroupType = GoogleCloudApigeeV1GraphQLOperationGroup::class;
   protected $graphqlOperationGroupDataType = '';
-  /**
-   * @var GoogleCloudApigeeV1GrpcOperationGroup
-   */
-  public $grpcOperationGroup;
   protected $grpcOperationGroupType = GoogleCloudApigeeV1GrpcOperationGroup::class;
   protected $grpcOperationGroupDataType = '';
   /**
@@ -70,10 +58,6 @@ class GoogleCloudApigeeV1ApiProduct extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudApigeeV1OperationGroup
-   */
-  public $operationGroup;
   protected $operationGroupType = GoogleCloudApigeeV1OperationGroup::class;
   protected $operationGroupDataType = '';
   /**

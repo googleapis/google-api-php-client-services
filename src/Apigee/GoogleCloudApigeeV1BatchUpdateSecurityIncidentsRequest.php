@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1BatchUpdateSecurityIncidentsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var GoogleCloudApigeeV1UpdateSecurityIncidentRequest[]
-   */
-  public $requests;
   protected $requestsType = GoogleCloudApigeeV1UpdateSecurityIncidentRequest::class;
   protected $requestsDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1ApiCategoryResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudApigeeV1ApiCategory
-   */
-  public $data;
   protected $dataType = GoogleCloudApigeeV1ApiCategory::class;
   protected $dataDataType = '';
   /**

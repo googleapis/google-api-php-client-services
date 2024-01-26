@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListArchiveDeploymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'archiveDeployments';
-  /**
-   * @var GoogleCloudApigeeV1ArchiveDeployment[]
-   */
-  public $archiveDeployments;
   protected $archiveDeploymentsType = GoogleCloudApigeeV1ArchiveDeployment::class;
   protected $archiveDeploymentsDataType = 'array';
   /**

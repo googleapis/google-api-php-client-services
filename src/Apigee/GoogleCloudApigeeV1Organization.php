@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Organization extends \Google\Collection
 {
   protected $collection_key = 'environments';
-  /**
-   * @var GoogleCloudApigeeV1AddonsConfig
-   */
-  public $addonsConfig;
   protected $addonsConfigType = GoogleCloudApigeeV1AddonsConfig::class;
   protected $addonsConfigDataType = '';
   /**
@@ -106,10 +102,6 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
    * @var string
    */
   public $projectId;
-  /**
-   * @var GoogleCloudApigeeV1Properties
-   */
-  public $properties;
   protected $propertiesType = GoogleCloudApigeeV1Properties::class;
   protected $propertiesDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1Certificate extends \Google\Collection
 {
   protected $collection_key = 'certInfo';
-  /**
-   * @var GoogleCloudApigeeV1CertInfo[]
-   */
-  public $certInfo;
   protected $certInfoType = GoogleCloudApigeeV1CertInfo::class;
   protected $certInfoDataType = 'array';
 

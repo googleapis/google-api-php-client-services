@@ -24,10 +24,6 @@ class GoogleCloudApigeeV1AppGroup extends \Google\Collection
    * @var string
    */
   public $appGroupId;
-  /**
-   * @var GoogleCloudApigeeV1Attribute[]
-   */
-  public $attributes;
   protected $attributesType = GoogleCloudApigeeV1Attribute::class;
   protected $attributesDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListExportsResponse extends \Google\Collection
 {
   protected $collection_key = 'exports';
-  /**
-   * @var GoogleCloudApigeeV1Export[]
-   */
-  public $exports;
   protected $exportsType = GoogleCloudApigeeV1Export::class;
   protected $exportsDataType = 'array';
 

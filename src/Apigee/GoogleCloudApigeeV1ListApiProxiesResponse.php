@@ -20,10 +20,6 @@ namespace Google\Service\Apigee;
 class GoogleCloudApigeeV1ListApiProxiesResponse extends \Google\Collection
 {
   protected $collection_key = 'proxies';
-  /**
-   * @var GoogleCloudApigeeV1ApiProxy[]
-   */
-  public $proxies;
   protected $proxiesType = GoogleCloudApigeeV1ApiProxy::class;
   protected $proxiesDataType = 'array';
 

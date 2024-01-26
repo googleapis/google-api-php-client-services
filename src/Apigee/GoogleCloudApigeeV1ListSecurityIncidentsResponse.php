@@ -24,10 +24,6 @@ class GoogleCloudApigeeV1ListSecurityIncidentsResponse extends \Google\Collectio
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudApigeeV1SecurityIncident[]
-   */
-  public $securityIncidents;
   protected $securityIncidentsType = GoogleCloudApigeeV1SecurityIncident::class;
   protected $securityIncidentsDataType = 'array';
 

@@ -23,10 +23,6 @@ class GoogleCloudApigeeV1Alias extends \Google\Model
    * @var string
    */
   public $alias;
-  /**
-   * @var GoogleCloudApigeeV1Certificate
-   */
-  public $certsInfo;
   protected $certsInfoType = GoogleCloudApigeeV1Certificate::class;
   protected $certsInfoDataType = '';
   /**
