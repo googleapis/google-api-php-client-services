@@ -40,6 +40,7 @@ class AppsServicesVersions extends \Google\Service\Resource
    * @param Version $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($appsId, $servicesId, Version $postBody, $optParams = [])
   {
@@ -56,6 +57,7 @@ class AppsServicesVersions extends \Google\Service\Resource
    * @param string $versionsId Part of `name`. See documentation of `appsId`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($appsId, $servicesId, $versionsId, $optParams = [])
   {
@@ -77,6 +79,7 @@ class AppsServicesVersions extends \Google\Service\Resource
    * @opt_param string view Controls the set of fields returned in the Get
    * response.
    * @return Version
+   * @throws \Google\Service\Exception
    */
   public function get($appsId, $servicesId, $versionsId, $optParams = [])
   {
@@ -98,6 +101,7 @@ class AppsServicesVersions extends \Google\Service\Resource
    * @opt_param string view Controls the set of fields returned in the List
    * response.
    * @return ListVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAppsServicesVersions($appsId, $servicesId, $optParams = [])
   {
@@ -163,6 +167,7 @@ class AppsServicesVersions extends \Google\Service\Resource
    * @opt_param string updateMask Standard field mask for the set of fields to be
    * updated.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($appsId, $servicesId, $versionsId, Version $postBody, $optParams = [])
   {

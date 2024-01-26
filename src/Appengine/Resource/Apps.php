@@ -44,6 +44,7 @@ class Apps extends \Google\Service\Resource
    * @param Application $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create(Application $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class Apps extends \Google\Service\Resource
    *
    * @opt_param string includeExtraData Options to include extra data
    * @return Application
+   * @throws \Google\Service\Exception
    */
   public function get($appsId, $optParams = [])
   {
@@ -76,6 +78,7 @@ class Apps extends \Google\Service\Resource
    *
    * @opt_param string environment Optional. The environment of the Application.
    * @return ListRuntimesResponse
+   * @throws \Google\Service\Exception
    */
   public function listRuntimes($appsId, $optParams = [])
   {
@@ -98,6 +101,7 @@ class Apps extends \Google\Service\Resource
    * @opt_param string updateMask Required. Standard field mask for the set of
    * fields to be updated.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($appsId, Application $postBody, $optParams = [])
   {
@@ -123,6 +127,7 @@ class Apps extends \Google\Service\Resource
    * @param RepairApplicationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function repair($appsId, RepairApplicationRequest $postBody, $optParams = [])
   {

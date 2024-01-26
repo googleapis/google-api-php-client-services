@@ -20,10 +20,6 @@ namespace Google\Service\Appengine;
 class ListAuthorizedCertificatesResponse extends \Google\Collection
 {
   protected $collection_key = 'certificates';
-  /**
-   * @var AuthorizedCertificate[]
-   */
-  public $certificates;
   protected $certificatesType = AuthorizedCertificate::class;
   protected $certificatesDataType = 'array';
   /**

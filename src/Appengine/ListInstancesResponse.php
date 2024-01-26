@@ -20,10 +20,6 @@ namespace Google\Service\Appengine;
 class ListInstancesResponse extends \Google\Collection
 {
   protected $collection_key = 'instances';
-  /**
-   * @var Instance[]
-   */
-  public $instances;
   protected $instancesType = Instance::class;
   protected $instancesDataType = 'array';
   /**

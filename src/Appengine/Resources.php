@@ -27,10 +27,6 @@ class Resources extends \Google\Collection
    */
   public $kmsKeyReference;
   public $memoryGb;
-  /**
-   * @var Volume[]
-   */
-  public $volumes;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
 

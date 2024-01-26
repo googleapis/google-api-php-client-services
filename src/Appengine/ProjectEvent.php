@@ -27,16 +27,8 @@ class ProjectEvent extends \Google\Model
    * @var string
    */
   public $phase;
-  /**
-   * @var ProjectsMetadata
-   */
-  public $projectMetadata;
   protected $projectMetadataType = ProjectsMetadata::class;
   protected $projectMetadataDataType = '';
-  /**
-   * @var ContainerState
-   */
-  public $state;
   protected $stateType = ContainerState::class;
   protected $stateDataType = '';
 

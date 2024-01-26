@@ -20,10 +20,6 @@ namespace Google\Service\Appengine;
 class OperationMetadataV1 extends \Google\Collection
 {
   protected $collection_key = 'warning';
-  /**
-   * @var CreateVersionMetadataV1
-   */
-  public $createVersionMetadata;
   protected $createVersionMetadataType = CreateVersionMetadataV1::class;
   protected $createVersionMetadataDataType = '';
   /**

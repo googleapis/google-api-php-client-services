@@ -44,16 +44,8 @@ class Application extends \Google\Collection
    * @var string
    */
   public $defaultHostname;
-  /**
-   * @var UrlDispatchRule[]
-   */
-  public $dispatchRules;
   protected $dispatchRulesType = UrlDispatchRule::class;
   protected $dispatchRulesDataType = 'array';
-  /**
-   * @var FeatureSettings
-   */
-  public $featureSettings;
   protected $featureSettingsType = FeatureSettings::class;
   protected $featureSettingsDataType = '';
   /**
@@ -64,10 +56,6 @@ class Application extends \Google\Collection
    * @var array[]
    */
   public $generatedCustomerMetadata;
-  /**
-   * @var IdentityAwareProxy
-   */
-  public $iap;
   protected $iapType = IdentityAwareProxy::class;
   protected $iapDataType = '';
   /**
