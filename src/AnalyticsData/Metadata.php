@@ -20,16 +20,8 @@ namespace Google\Service\AnalyticsData;
 class Metadata extends \Google\Collection
 {
   protected $collection_key = 'metrics';
-  /**
-   * @var DimensionMetadata[]
-   */
-  public $dimensions;
   protected $dimensionsType = DimensionMetadata::class;
   protected $dimensionsDataType = 'array';
-  /**
-   * @var MetricMetadata[]
-   */
-  public $metrics;
   protected $metricsType = MetricMetadata::class;
   protected $metricsDataType = 'array';
   /**

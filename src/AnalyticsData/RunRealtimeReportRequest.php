@@ -20,16 +20,8 @@ namespace Google\Service\AnalyticsData;
 class RunRealtimeReportRequest extends \Google\Collection
 {
   protected $collection_key = 'orderBys';
-  /**
-   * @var FilterExpression
-   */
-  public $dimensionFilter;
   protected $dimensionFilterType = FilterExpression::class;
   protected $dimensionFilterDataType = '';
-  /**
-   * @var Dimension[]
-   */
-  public $dimensions;
   protected $dimensionsType = Dimension::class;
   protected $dimensionsDataType = 'array';
   /**
@@ -40,28 +32,12 @@ class RunRealtimeReportRequest extends \Google\Collection
    * @var string[]
    */
   public $metricAggregations;
-  /**
-   * @var FilterExpression
-   */
-  public $metricFilter;
   protected $metricFilterType = FilterExpression::class;
   protected $metricFilterDataType = '';
-  /**
-   * @var Metric[]
-   */
-  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  /**
-   * @var MinuteRange[]
-   */
-  public $minuteRanges;
   protected $minuteRangesType = MinuteRange::class;
   protected $minuteRangesDataType = 'array';
-  /**
-   * @var OrderBy[]
-   */
-  public $orderBys;
   protected $orderBysType = OrderBy::class;
   protected $orderBysDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\AnalyticsData;
 
 class Cohort extends \Google\Model
 {
-  /**
-   * @var DateRange
-   */
-  public $dateRange;
   protected $dateRangeType = DateRange::class;
   protected $dateRangeDataType = '';
   /**

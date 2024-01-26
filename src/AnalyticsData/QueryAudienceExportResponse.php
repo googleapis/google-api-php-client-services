@@ -20,16 +20,8 @@ namespace Google\Service\AnalyticsData;
 class QueryAudienceExportResponse extends \Google\Collection
 {
   protected $collection_key = 'audienceRows';
-  /**
-   * @var AudienceExport
-   */
-  public $audienceExport;
   protected $audienceExportType = AudienceExport::class;
   protected $audienceExportDataType = '';
-  /**
-   * @var V1betaAudienceRow[]
-   */
-  public $audienceRows;
   protected $audienceRowsType = V1betaAudienceRow::class;
   protected $audienceRowsDataType = 'array';
   /**

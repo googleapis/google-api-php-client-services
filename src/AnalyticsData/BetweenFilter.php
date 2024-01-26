@@ -19,16 +19,8 @@ namespace Google\Service\AnalyticsData;
 
 class BetweenFilter extends \Google\Model
 {
-  /**
-   * @var NumericValue
-   */
-  public $fromValue;
   protected $fromValueType = NumericValue::class;
   protected $fromValueDataType = '';
-  /**
-   * @var NumericValue
-   */
-  public $toValue;
   protected $toValueType = NumericValue::class;
   protected $toValueDataType = '';
 

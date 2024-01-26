@@ -24,10 +24,6 @@ class BatchRunReportsResponse extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var RunReportResponse[]
-   */
-  public $reports;
   protected $reportsType = RunReportResponse::class;
   protected $reportsDataType = 'array';
 
