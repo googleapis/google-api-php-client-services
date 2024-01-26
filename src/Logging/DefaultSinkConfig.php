@@ -20,10 +20,6 @@ namespace Google\Service\Logging;
 class DefaultSinkConfig extends \Google\Collection
 {
   protected $collection_key = 'exclusions';
-  /**
-   * @var LogExclusion[]
-   */
-  public $exclusions;
   protected $exclusionsType = LogExclusion::class;
   protected $exclusionsDataType = 'array';
   /**

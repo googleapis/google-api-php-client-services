@@ -49,6 +49,7 @@ class Folders extends \Google\Service\Resource
    * folders in the Google Cloud organization.
    * @param array $optParams Optional parameters.
    * @return CmekSettings
+   * @throws \Google\Service\Exception
    */
   public function getCmekSettings($name, $optParams = [])
   {
@@ -71,6 +72,7 @@ class Folders extends \Google\Service\Resource
    * Google Cloud projects, folders, organizations, and billing accounts.
    * @param array $optParams Optional parameters.
    * @return Settings
+   * @throws \Google\Service\Exception
    */
   public function getSettings($name, $optParams = [])
   {
@@ -102,6 +104,7 @@ class Folders extends \Google\Service\Resource
    * it is in the update mask. Output only fields cannot be updated.See FieldMask
    * for more information.For example: "updateMask=kmsKeyName"
    * @return Settings
+   * @throws \Google\Service\Exception
    */
   public function updateSettings($name, Settings $postBody, $optParams = [])
   {

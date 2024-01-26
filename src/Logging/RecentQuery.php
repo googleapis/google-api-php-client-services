@@ -23,20 +23,12 @@ class RecentQuery extends \Google\Model
    * @var string
    */
   public $lastRunTime;
-  /**
-   * @var LoggingQuery
-   */
-  public $loggingQuery;
   protected $loggingQueryType = LoggingQuery::class;
   protected $loggingQueryDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var OpsAnalyticsQuery
-   */
-  public $opsAnalyticsQuery;
   protected $opsAnalyticsQueryType = OpsAnalyticsQuery::class;
   protected $opsAnalyticsQueryDataType = '';
 

@@ -32,10 +32,6 @@ class LoggingQuery extends \Google\Collection
    * @var int
    */
   public $summaryFieldStart;
-  /**
-   * @var SummaryField[]
-   */
-  public $summaryFields;
   protected $summaryFieldsType = SummaryField::class;
   protected $summaryFieldsDataType = 'array';
 

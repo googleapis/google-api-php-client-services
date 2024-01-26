@@ -20,10 +20,6 @@ namespace Google\Service\Logging;
 class ListBucketsResponse extends \Google\Collection
 {
   protected $collection_key = 'buckets';
-  /**
-   * @var LogBucket[]
-   */
-  public $buckets;
   protected $bucketsType = LogBucket::class;
   protected $bucketsDataType = 'array';
   /**

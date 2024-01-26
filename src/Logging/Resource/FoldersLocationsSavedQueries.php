@@ -51,6 +51,7 @@ class FoldersLocationsSavedQueries extends \Google\Service\Resource
    * following characters: upper and lower-case alphanumeric characters,
    * underscores, hyphens, periods.First character has to be alphanumeric.
    * @return SavedQuery
+   * @throws \Google\Service\Exception
    */
   public function create($parent, SavedQuery $postBody, $optParams = [])
   {
@@ -72,6 +73,7 @@ class FoldersLocationsSavedQueries extends \Google\Service\Resource
    * example: "projects/my-project/locations/global/savedQueries/my-saved-query"
    * @param array $optParams Optional parameters.
    * @return LoggingEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -101,6 +103,7 @@ class FoldersLocationsSavedQueries extends \Google\Service\Resource
    * the value of nextPageToken from the previous response. The values of other
    * method parameters should be identical to those in the previous call.
    * @return ListSavedQueriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listFoldersLocationsSavedQueries($parent, $optParams = [])
   {

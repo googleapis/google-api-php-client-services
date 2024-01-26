@@ -20,10 +20,6 @@ namespace Google\Service\Logging;
 class ListLinksResponse extends \Google\Collection
 {
   protected $collection_key = 'links';
-  /**
-   * @var Link[]
-   */
-  public $links;
   protected $linksType = Link::class;
   protected $linksDataType = 'array';
   /**

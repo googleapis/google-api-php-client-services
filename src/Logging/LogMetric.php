@@ -23,10 +23,6 @@ class LogMetric extends \Google\Model
    * @var string
    */
   public $bucketName;
-  /**
-   * @var BucketOptions
-   */
-  public $bucketOptions;
   protected $bucketOptionsType = BucketOptions::class;
   protected $bucketOptionsDataType = '';
   /**
@@ -49,10 +45,6 @@ class LogMetric extends \Google\Model
    * @var string[]
    */
   public $labelExtractors;
-  /**
-   * @var MetricDescriptor
-   */
-  public $metricDescriptor;
   protected $metricDescriptorType = MetricDescriptor::class;
   protected $metricDescriptorDataType = '';
   /**

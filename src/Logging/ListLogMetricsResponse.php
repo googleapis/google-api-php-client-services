@@ -20,10 +20,6 @@ namespace Google\Service\Logging;
 class ListLogMetricsResponse extends \Google\Collection
 {
   protected $collection_key = 'metrics';
-  /**
-   * @var LogMetric[]
-   */
-  public $metrics;
   protected $metricsType = LogMetric::class;
   protected $metricsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Logging;
 
 class BucketMetadata extends \Google\Model
 {
-  /**
-   * @var CreateBucketRequest
-   */
-  public $createBucketRequest;
   protected $createBucketRequestType = CreateBucketRequest::class;
   protected $createBucketRequestDataType = '';
   /**
@@ -37,10 +33,6 @@ class BucketMetadata extends \Google\Model
    * @var string
    */
   public $state;
-  /**
-   * @var UpdateBucketRequest
-   */
-  public $updateBucketRequest;
   protected $updateBucketRequestType = UpdateBucketRequest::class;
   protected $updateBucketRequestDataType = '';
 

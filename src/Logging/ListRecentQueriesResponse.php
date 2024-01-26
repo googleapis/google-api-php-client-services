@@ -24,10 +24,6 @@ class ListRecentQueriesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var RecentQuery[]
-   */
-  public $recentQueries;
   protected $recentQueriesType = RecentQuery::class;
   protected $recentQueriesDataType = 'array';
   /**

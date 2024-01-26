@@ -19,16 +19,8 @@ namespace Google\Service\Logging;
 
 class LinkMetadata extends \Google\Model
 {
-  /**
-   * @var CreateLinkRequest
-   */
-  public $createLinkRequest;
   protected $createLinkRequestType = CreateLinkRequest::class;
   protected $createLinkRequestDataType = '';
-  /**
-   * @var DeleteLinkRequest
-   */
-  public $deleteLinkRequest;
   protected $deleteLinkRequestType = DeleteLinkRequest::class;
   protected $deleteLinkRequestDataType = '';
   /**

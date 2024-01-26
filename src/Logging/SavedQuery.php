@@ -31,20 +31,12 @@ class SavedQuery extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var LoggingQuery
-   */
-  public $loggingQuery;
   protected $loggingQueryType = LoggingQuery::class;
   protected $loggingQueryDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var OpsAnalyticsQuery
-   */
-  public $opsAnalyticsQuery;
   protected $opsAnalyticsQueryType = OpsAnalyticsQuery::class;
   protected $opsAnalyticsQueryDataType = '';
   /**

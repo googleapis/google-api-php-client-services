@@ -20,10 +20,6 @@ namespace Google\Service\Logging;
 class LogSink extends \Google\Collection
 {
   protected $collection_key = 'exclusions';
-  /**
-   * @var BigQueryOptions
-   */
-  public $bigqueryOptions;
   protected $bigqueryOptionsType = BigQueryOptions::class;
   protected $bigqueryOptionsDataType = '';
   /**
@@ -42,10 +38,6 @@ class LogSink extends \Google\Collection
    * @var bool
    */
   public $disabled;
-  /**
-   * @var LogExclusion[]
-   */
-  public $exclusions;
   protected $exclusionsType = LogExclusion::class;
   protected $exclusionsDataType = 'array';
   /**

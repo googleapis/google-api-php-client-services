@@ -61,6 +61,7 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * by the sinks with the same parent. For more information, see writer_identity
    * in LogSink.
    * @return LogSink
+   * @throws \Google\Service\Exception
    */
   public function create($parent, LogSink $postBody, $optParams = [])
   {
@@ -81,6 +82,7 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * project/sinks/my-sink"
    * @param array $optParams Optional parameters.
    * @return LoggingEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($sinkName, $optParams = [])
   {
@@ -99,6 +101,7 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * project/sinks/my-sink"
    * @param array $optParams Optional parameters.
    * @return LogSink
+   * @throws \Google\Service\Exception
    */
   public function get($sinkName, $optParams = [])
   {
@@ -122,6 +125,7 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * the value of nextPageToken from the previous response. The values of other
    * method parameters should be identical to those in the previous call.
    * @return ListSinksResponse
+   * @throws \Google\Service\Exception
    */
   public function listBillingAccountsSinks($parent, $optParams = [])
   {
@@ -171,6 +175,7 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
    * updateMask=filter
    * @return LogSink
+   * @throws \Google\Service\Exception
    */
   public function patch($sinkName, LogSink $postBody, $optParams = [])
   {
@@ -220,6 +225,7 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
    * updateMask=filter
    * @return LogSink
+   * @throws \Google\Service\Exception
    */
   public function update($sinkName, LogSink $postBody, $optParams = [])
   {

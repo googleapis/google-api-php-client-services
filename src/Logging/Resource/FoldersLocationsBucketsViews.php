@@ -45,6 +45,7 @@ class FoldersLocationsBucketsViews extends \Google\Service\Resource
    * view". Identifiers are limited to 100 characters and can include only
    * letters, digits, underscores, hyphens, and periods.
    * @return LogView
+   * @throws \Google\Service\Exception
    */
   public function create($parent, LogView $postBody, $optParams = [])
   {
@@ -63,6 +64,7 @@ class FoldersLocationsBucketsViews extends \Google\Service\Resource
    * bucket/views/my-view"
    * @param array $optParams Optional parameters.
    * @return LoggingEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -79,6 +81,7 @@ class FoldersLocationsBucketsViews extends \Google\Service\Resource
    * view"
    * @param array $optParams Optional parameters.
    * @return LogView
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -101,6 +104,7 @@ class FoldersLocationsBucketsViews extends \Google\Service\Resource
    * the value of nextPageToken from the previous response. The values of other
    * method parameters should be identical to those in the previous call.
    * @return ListViewsResponse
+   * @throws \Google\Service\Exception
    */
   public function listFoldersLocationsBucketsViews($parent, $optParams = [])
   {
@@ -129,6 +133,7 @@ class FoldersLocationsBucketsViews extends \Google\Service\Resource
    * buffers/docs/reference/google.protobuf#google.protobuf.FieldMaskFor example:
    * updateMask=filter
    * @return LogView
+   * @throws \Google\Service\Exception
    */
   public function patch($name, LogView $postBody, $optParams = [])
   {

@@ -65,10 +65,6 @@ class RequestLog extends \Google\Collection
    * @var string
    */
   public $latency;
-  /**
-   * @var LogLine[]
-   */
-  public $line;
   protected $lineType = LogLine::class;
   protected $lineDataType = 'array';
   /**
@@ -107,10 +103,6 @@ class RequestLog extends \Google\Collection
    * @var string
    */
   public $responseSize;
-  /**
-   * @var SourceReference[]
-   */
-  public $sourceReference;
   protected $sourceReferenceType = SourceReference::class;
   protected $sourceReferenceDataType = 'array';
   /**
