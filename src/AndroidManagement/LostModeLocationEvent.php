@@ -23,10 +23,6 @@ class LostModeLocationEvent extends \Google\Model
    * @var int
    */
   public $batteryLevel;
-  /**
-   * @var Location
-   */
-  public $location;
   protected $locationType = Location::class;
   protected $locationDataType = '';
 

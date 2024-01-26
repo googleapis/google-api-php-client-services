@@ -43,10 +43,6 @@ class NonComplianceDetail extends \Google\Model
    * @var string
    */
   public $settingName;
-  /**
-   * @var SpecificNonComplianceContext
-   */
-  public $specificNonComplianceContext;
   protected $specificNonComplianceContextType = SpecificNonComplianceContext::class;
   protected $specificNonComplianceContextDataType = '';
   /**

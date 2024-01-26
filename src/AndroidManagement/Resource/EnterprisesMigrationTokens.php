@@ -40,6 +40,7 @@ class EnterprisesMigrationTokens extends \Google\Service\Resource
    * @param MigrationToken $postBody
    * @param array $optParams Optional parameters.
    * @return MigrationToken
+   * @throws \Google\Service\Exception
    */
   public function create($parent, MigrationToken $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class EnterprisesMigrationTokens extends \Google\Service\Resource
    * Format: enterprises/{enterprise}/migrationTokens/{migration_token}
    * @param array $optParams Optional parameters.
    * @return MigrationToken
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -77,6 +79,7 @@ class EnterprisesMigrationTokens extends \Google\Service\Resource
    * paginating, all other parameters provided to ListMigrationTokens must match
    * the call that provided the page token.
    * @return ListMigrationTokensResponse
+   * @throws \Google\Service\Exception
    */
   public function listEnterprisesMigrationTokens($parent, $optParams = [])
   {

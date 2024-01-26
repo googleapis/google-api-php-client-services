@@ -20,10 +20,6 @@ namespace Google\Service\AndroidManagement;
 class ListMigrationTokensResponse extends \Google\Collection
 {
   protected $collection_key = 'migrationTokens';
-  /**
-   * @var MigrationToken[]
-   */
-  public $migrationTokens;
   protected $migrationTokensType = MigrationToken::class;
   protected $migrationTokensDataType = 'array';
   /**

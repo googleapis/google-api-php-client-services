@@ -19,10 +19,6 @@ namespace Google\Service\AndroidManagement;
 
 class ClearAppsDataStatus extends \Google\Model
 {
-  /**
-   * @var PerAppResult[]
-   */
-  public $results;
   protected $resultsType = PerAppResult::class;
   protected $resultsDataType = 'map';
 

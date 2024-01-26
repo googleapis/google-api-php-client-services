@@ -32,16 +32,8 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $adjustVolumeDisabled;
-  /**
-   * @var AdvancedSecurityOverrides
-   */
-  public $advancedSecurityOverrides;
   protected $advancedSecurityOverridesType = AdvancedSecurityOverrides::class;
   protected $advancedSecurityOverridesDataType = '';
-  /**
-   * @var AlwaysOnVpnPackage
-   */
-  public $alwaysOnVpnPackage;
   protected $alwaysOnVpnPackageType = AlwaysOnVpnPackage::class;
   protected $alwaysOnVpnPackageDataType = '';
   /**
@@ -52,10 +44,6 @@ class Policy extends \Google\Collection
    * @var string
    */
   public $appAutoUpdatePolicy;
-  /**
-   * @var ApplicationPolicy[]
-   */
-  public $applications;
   protected $applicationsType = ApplicationPolicy::class;
   protected $applicationsDataType = 'array';
   /**
@@ -94,16 +82,8 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $cellBroadcastsConfigDisabled;
-  /**
-   * @var ChoosePrivateKeyRule[]
-   */
-  public $choosePrivateKeyRules;
   protected $choosePrivateKeyRulesType = ChoosePrivateKeyRule::class;
   protected $choosePrivateKeyRulesDataType = 'array';
-  /**
-   * @var ComplianceRule[]
-   */
-  public $complianceRules;
   protected $complianceRulesType = ComplianceRule::class;
   protected $complianceRulesDataType = 'array';
   /**
@@ -114,10 +94,6 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $credentialsConfigDisabled;
-  /**
-   * @var CrossProfilePolicies
-   */
-  public $crossProfilePolicies;
   protected $crossProfilePoliciesType = CrossProfilePolicies::class;
   protected $crossProfilePoliciesDataType = '';
   /**
@@ -132,22 +108,10 @@ class Policy extends \Google\Collection
    * @var string
    */
   public $defaultPermissionPolicy;
-  /**
-   * @var DeviceConnectivityManagement
-   */
-  public $deviceConnectivityManagement;
   protected $deviceConnectivityManagementType = DeviceConnectivityManagement::class;
   protected $deviceConnectivityManagementDataType = '';
-  /**
-   * @var UserFacingMessage
-   */
-  public $deviceOwnerLockScreenInfo;
   protected $deviceOwnerLockScreenInfoType = UserFacingMessage::class;
   protected $deviceOwnerLockScreenInfoDataType = '';
-  /**
-   * @var DeviceRadioState
-   */
-  public $deviceRadioState;
   protected $deviceRadioStateType = DeviceRadioState::class;
   protected $deviceRadioStateDataType = '';
   /**
@@ -190,20 +154,12 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $kioskCustomLauncherEnabled;
-  /**
-   * @var KioskCustomization
-   */
-  public $kioskCustomization;
   protected $kioskCustomizationType = KioskCustomization::class;
   protected $kioskCustomizationDataType = '';
   /**
    * @var string
    */
   public $locationMode;
-  /**
-   * @var UserFacingMessage
-   */
-  public $longSupportMessage;
   protected $longSupportMessageType = UserFacingMessage::class;
   protected $longSupportMessageDataType = '';
   /**
@@ -242,10 +198,6 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $networkResetDisabled;
-  /**
-   * @var OncCertificateProvider[]
-   */
-  public $oncCertificateProviders;
   protected $oncCertificateProvidersType = OncCertificateProvider::class;
   protected $oncCertificateProvidersDataType = 'array';
   /**
@@ -260,56 +212,24 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $outgoingCallsDisabled;
-  /**
-   * @var PasswordRequirements[]
-   */
-  public $passwordPolicies;
   protected $passwordPoliciesType = PasswordRequirements::class;
   protected $passwordPoliciesDataType = 'array';
-  /**
-   * @var PasswordRequirements
-   */
-  public $passwordRequirements;
   protected $passwordRequirementsType = PasswordRequirements::class;
   protected $passwordRequirementsDataType = '';
-  /**
-   * @var PermissionGrant[]
-   */
-  public $permissionGrants;
   protected $permissionGrantsType = PermissionGrant::class;
   protected $permissionGrantsDataType = 'array';
-  /**
-   * @var PackageNameList
-   */
-  public $permittedAccessibilityServices;
   protected $permittedAccessibilityServicesType = PackageNameList::class;
   protected $permittedAccessibilityServicesDataType = '';
-  /**
-   * @var PackageNameList
-   */
-  public $permittedInputMethods;
   protected $permittedInputMethodsType = PackageNameList::class;
   protected $permittedInputMethodsDataType = '';
-  /**
-   * @var PersistentPreferredActivity[]
-   */
-  public $persistentPreferredActivities;
   protected $persistentPreferredActivitiesType = PersistentPreferredActivity::class;
   protected $persistentPreferredActivitiesDataType = 'array';
-  /**
-   * @var PersonalUsagePolicies
-   */
-  public $personalUsagePolicies;
   protected $personalUsagePoliciesType = PersonalUsagePolicies::class;
   protected $personalUsagePoliciesDataType = '';
   /**
    * @var string
    */
   public $playStoreMode;
-  /**
-   * @var PolicyEnforcementRule[]
-   */
-  public $policyEnforcementRules;
   protected $policyEnforcementRulesType = PolicyEnforcementRule::class;
   protected $policyEnforcementRulesDataType = 'array';
   /**
@@ -320,10 +240,6 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $privateKeySelectionEnabled;
-  /**
-   * @var ProxyInfo
-   */
-  public $recommendedGlobalProxy;
   protected $recommendedGlobalProxyType = ProxyInfo::class;
   protected $recommendedGlobalProxyDataType = '';
   /**
@@ -346,20 +262,12 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $setWallpaperDisabled;
-  /**
-   * @var SetupAction[]
-   */
-  public $setupActions;
   protected $setupActionsType = SetupAction::class;
   protected $setupActionsDataType = 'array';
   /**
    * @var bool
    */
   public $shareLocationDisabled;
-  /**
-   * @var UserFacingMessage
-   */
-  public $shortSupportMessage;
   protected $shortSupportMessageType = UserFacingMessage::class;
   protected $shortSupportMessageDataType = '';
   /**
@@ -374,20 +282,12 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $statusBarDisabled;
-  /**
-   * @var StatusReportingSettings
-   */
-  public $statusReportingSettings;
   protected $statusReportingSettingsType = StatusReportingSettings::class;
   protected $statusReportingSettingsDataType = '';
   /**
    * @var string[]
    */
   public $stayOnPluggedModes;
-  /**
-   * @var SystemUpdate
-   */
-  public $systemUpdate;
   protected $systemUpdateType = SystemUpdate::class;
   protected $systemUpdateDataType = '';
   /**
@@ -402,10 +302,6 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $unmuteMicrophoneDisabled;
-  /**
-   * @var UsageLog
-   */
-  public $usageLog;
   protected $usageLogType = UsageLog::class;
   protected $usageLogDataType = '';
   /**

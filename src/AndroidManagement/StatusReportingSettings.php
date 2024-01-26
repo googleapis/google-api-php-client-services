@@ -19,10 +19,6 @@ namespace Google\Service\AndroidManagement;
 
 class StatusReportingSettings extends \Google\Model
 {
-  /**
-   * @var ApplicationReportingSettings
-   */
-  public $applicationReportingSettings;
   protected $applicationReportingSettingsType = ApplicationReportingSettings::class;
   protected $applicationReportingSettingsDataType = '';
   /**

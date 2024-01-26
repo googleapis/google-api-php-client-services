@@ -48,10 +48,6 @@ class ApplicationPolicy extends \Google\Collection
    * @var bool
    */
   public $disabled;
-  /**
-   * @var ExtensionConfig
-   */
-  public $extensionConfig;
   protected $extensionConfigType = ExtensionConfig::class;
   protected $extensionConfigDataType = '';
   /**
@@ -66,10 +62,6 @@ class ApplicationPolicy extends \Google\Collection
    * @var array[]
    */
   public $managedConfiguration;
-  /**
-   * @var ManagedConfigurationTemplate
-   */
-  public $managedConfigurationTemplate;
   protected $managedConfigurationTemplateType = ManagedConfigurationTemplate::class;
   protected $managedConfigurationTemplateDataType = '';
   /**
@@ -80,10 +72,6 @@ class ApplicationPolicy extends \Google\Collection
    * @var string
    */
   public $packageName;
-  /**
-   * @var PermissionGrant[]
-   */
-  public $permissionGrants;
   protected $permissionGrantsType = PermissionGrant::class;
   protected $permissionGrantsDataType = 'array';
   /**

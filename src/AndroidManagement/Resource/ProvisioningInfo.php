@@ -38,6 +38,7 @@ class ProvisioningInfo extends \Google\Service\Resource
    * provisioningInfo/{provisioning_info}.
    * @param array $optParams Optional parameters.
    * @return ProvisioningInfoModel
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {

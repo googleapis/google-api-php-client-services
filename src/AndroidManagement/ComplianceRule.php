@@ -20,20 +20,12 @@ namespace Google\Service\AndroidManagement;
 class ComplianceRule extends \Google\Collection
 {
   protected $collection_key = 'packageNamesToDisable';
-  /**
-   * @var ApiLevelCondition
-   */
-  public $apiLevelCondition;
   protected $apiLevelConditionType = ApiLevelCondition::class;
   protected $apiLevelConditionDataType = '';
   /**
    * @var bool
    */
   public $disableApps;
-  /**
-   * @var NonComplianceDetailCondition
-   */
-  public $nonComplianceDetailCondition;
   protected $nonComplianceDetailConditionType = NonComplianceDetailCondition::class;
   protected $nonComplianceDetailConditionDataType = '';
   /**

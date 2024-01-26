@@ -32,10 +32,6 @@ class PersonalUsagePolicies extends \Google\Collection
    * @var int
    */
   public $maxDaysWithWorkOff;
-  /**
-   * @var PersonalApplicationPolicy[]
-   */
-  public $personalApplications;
   protected $personalApplicationsType = PersonalApplicationPolicy::class;
   protected $personalApplicationsDataType = 'array';
   /**
