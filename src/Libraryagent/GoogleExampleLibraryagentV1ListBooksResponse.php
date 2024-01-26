@@ -20,10 +20,6 @@ namespace Google\Service\Libraryagent;
 class GoogleExampleLibraryagentV1ListBooksResponse extends \Google\Collection
 {
   protected $collection_key = 'books';
-  /**
-   * @var GoogleExampleLibraryagentV1Book[]
-   */
-  public $books;
   protected $booksType = GoogleExampleLibraryagentV1Book::class;
   protected $booksDataType = 'array';
   /**
