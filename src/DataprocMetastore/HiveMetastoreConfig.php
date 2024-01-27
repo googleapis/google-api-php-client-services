@@ -19,10 +19,6 @@ namespace Google\Service\DataprocMetastore;
 
 class HiveMetastoreConfig extends \Google\Model
 {
-  /**
-   * @var AuxiliaryVersionConfig[]
-   */
-  public $auxiliaryVersions;
   protected $auxiliaryVersionsType = AuxiliaryVersionConfig::class;
   protected $auxiliaryVersionsDataType = 'map';
   /**
@@ -33,10 +29,6 @@ class HiveMetastoreConfig extends \Google\Model
    * @var string
    */
   public $endpointProtocol;
-  /**
-   * @var KerberosConfig
-   */
-  public $kerberosConfig;
   protected $kerberosConfigType = KerberosConfig::class;
   protected $kerberosConfigDataType = '';
   /**

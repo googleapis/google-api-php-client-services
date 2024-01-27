@@ -20,10 +20,6 @@ namespace Google\Service\DataprocMetastore;
 class ListMetadataImportsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var MetadataImport[]
-   */
-  public $metadataImports;
   protected $metadataImportsType = MetadataImport::class;
   protected $metadataImportsDataType = 'array';
   /**

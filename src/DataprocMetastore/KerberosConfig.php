@@ -19,10 +19,6 @@ namespace Google\Service\DataprocMetastore;
 
 class KerberosConfig extends \Google\Model
 {
-  /**
-   * @var Secret
-   */
-  public $keytab;
   protected $keytabType = Secret::class;
   protected $keytabDataType = '';
   /**

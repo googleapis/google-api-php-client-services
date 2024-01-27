@@ -53,6 +53,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param AlterMetadataResourceLocationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function alterLocation($service, AlterMetadataResourceLocationRequest $postBody, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param AlterTablePropertiesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function alterTableProperties($service, AlterTablePropertiesRequest $postBody, $optParams = [])
   {
@@ -101,6 +103,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * with a letter or number, and consist of alpha-numeric ASCII characters or
    * hyphens.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Service $postBody, $optParams = [])
   {
@@ -126,6 +129,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier#Format) A zero
    * UUID (00000000-0000-0000-0000-000000000000) is not supported.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -142,6 +146,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param ExportMetadataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function exportMetadata($service, ExportMetadataRequest $postBody, $optParams = [])
   {
@@ -157,6 +162,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * form:projects/{project_number}/locations/{location_id}/services/{service_id}.
    * @param array $optParams Optional parameters.
    * @return Service
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -186,6 +192,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * IAM policies, see the IAM documentation
    * (https://cloud.google.com/iam/help/conditions/resource-policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -217,6 +224,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * paginating, other parameters provided to DataprocMetastore.ListServices must
    * match the call that provided the page token.
    * @return ListServicesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsServices($parent, $optParams = [])
   {
@@ -233,6 +241,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param MoveTableToDatabaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function moveTableToDatabase($service, MoveTableToDatabaseRequest $postBody, $optParams = [])
   {
@@ -263,6 +272,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * Fields specified in the update_mask are relative to the resource (not to the
    * full request). A field is overwritten if it is in the mask.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Service $postBody, $optParams = [])
   {
@@ -279,6 +289,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param QueryMetadataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function queryMetadata($service, QueryMetadataRequest $postBody, $optParams = [])
   {
@@ -295,6 +306,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param RestoreServiceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function restore($service, RestoreServiceRequest $postBody, $optParams = [])
   {
@@ -314,6 +326,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -335,6 +348,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

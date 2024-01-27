@@ -40,10 +40,6 @@ class Backup extends \Google\Collection
    * @var string[]
    */
   public $restoringServices;
-  /**
-   * @var Service
-   */
-  public $serviceRevision;
   protected $serviceRevisionType = Service::class;
   protected $serviceRevisionDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\DataprocMetastore;
 class NetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'consumers';
-  /**
-   * @var Consumer[]
-   */
-  public $consumers;
   protected $consumersType = Consumer::class;
   protected $consumersDataType = 'array';
 

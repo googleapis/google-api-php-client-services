@@ -20,10 +20,6 @@ namespace Google\Service\DataprocMetastore;
 class ListFederationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Federation[]
-   */
-  public $federations;
   protected $federationsType = Federation::class;
   protected $federationsDataType = 'array';
   /**
