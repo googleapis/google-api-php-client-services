@@ -24,10 +24,6 @@ class ListSnoozesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Snooze[]
-   */
-  public $snoozes;
   protected $snoozesType = Snooze::class;
   protected $snoozesDataType = 'array';
 

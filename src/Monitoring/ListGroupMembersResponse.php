@@ -20,10 +20,6 @@ namespace Google\Service\Monitoring;
 class ListGroupMembersResponse extends \Google\Collection
 {
   protected $collection_key = 'members';
-  /**
-   * @var MonitoredResource[]
-   */
-  public $members;
   protected $membersType = MonitoredResource::class;
   protected $membersDataType = 'array';
   /**

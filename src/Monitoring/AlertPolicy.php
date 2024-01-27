@@ -20,46 +20,26 @@ namespace Google\Service\Monitoring;
 class AlertPolicy extends \Google\Collection
 {
   protected $collection_key = 'notificationChannels';
-  /**
-   * @var AlertStrategy
-   */
-  public $alertStrategy;
   protected $alertStrategyType = AlertStrategy::class;
   protected $alertStrategyDataType = '';
   /**
    * @var string
    */
   public $combiner;
-  /**
-   * @var Condition[]
-   */
-  public $conditions;
   protected $conditionsType = Condition::class;
   protected $conditionsDataType = 'array';
-  /**
-   * @var MutationRecord
-   */
-  public $creationRecord;
   protected $creationRecordType = MutationRecord::class;
   protected $creationRecordDataType = '';
   /**
    * @var string
    */
   public $displayName;
-  /**
-   * @var Documentation
-   */
-  public $documentation;
   protected $documentationType = Documentation::class;
   protected $documentationDataType = '';
   /**
    * @var bool
    */
   public $enabled;
-  /**
-   * @var MutationRecord
-   */
-  public $mutationRecord;
   protected $mutationRecordType = MutationRecord::class;
   protected $mutationRecordDataType = '';
   /**
@@ -78,10 +58,6 @@ class AlertPolicy extends \Google\Collection
    * @var string[]
    */
   public $userLabels;
-  /**
-   * @var Status
-   */
-  public $validity;
   protected $validityType = Status::class;
   protected $validityDataType = '';
 

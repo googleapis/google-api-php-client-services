@@ -20,10 +20,6 @@ namespace Google\Service\Monitoring;
 class NotificationChannel extends \Google\Collection
 {
   protected $collection_key = 'mutationRecords';
-  /**
-   * @var MutationRecord
-   */
-  public $creationRecord;
   protected $creationRecordType = MutationRecord::class;
   protected $creationRecordDataType = '';
   /**
@@ -42,10 +38,6 @@ class NotificationChannel extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  /**
-   * @var MutationRecord[]
-   */
-  public $mutationRecords;
   protected $mutationRecordsType = MutationRecord::class;
   protected $mutationRecordsDataType = 'array';
   /**

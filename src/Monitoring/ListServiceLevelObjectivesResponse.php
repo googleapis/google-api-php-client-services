@@ -24,10 +24,6 @@ class ListServiceLevelObjectivesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ServiceLevelObjective[]
-   */
-  public $serviceLevelObjectives;
   protected $serviceLevelObjectivesType = ServiceLevelObjective::class;
   protected $serviceLevelObjectivesDataType = 'array';
 

@@ -20,20 +20,12 @@ namespace Google\Service\Monitoring;
 class CreateCollectdTimeSeriesRequest extends \Google\Collection
 {
   protected $collection_key = 'collectdPayloads';
-  /**
-   * @var CollectdPayload[]
-   */
-  public $collectdPayloads;
   protected $collectdPayloadsType = CollectdPayload::class;
   protected $collectdPayloadsDataType = 'array';
   /**
    * @var string
    */
   public $collectdVersion;
-  /**
-   * @var MonitoredResource
-   */
-  public $resource;
   protected $resourceType = MonitoredResource::class;
   protected $resourceDataType = '';
 

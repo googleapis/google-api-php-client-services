@@ -24,22 +24,10 @@ class QueryTimeSeriesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Status[]
-   */
-  public $partialErrors;
   protected $partialErrorsType = Status::class;
   protected $partialErrorsDataType = 'array';
-  /**
-   * @var TimeSeriesData[]
-   */
-  public $timeSeriesData;
   protected $timeSeriesDataType = TimeSeriesData::class;
   protected $timeSeriesDataDataType = 'array';
-  /**
-   * @var TimeSeriesDescriptor
-   */
-  public $timeSeriesDescriptor;
   protected $timeSeriesDescriptorType = TimeSeriesDescriptor::class;
   protected $timeSeriesDescriptorDataType = '';
 

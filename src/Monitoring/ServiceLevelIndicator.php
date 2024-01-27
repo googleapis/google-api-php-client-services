@@ -19,22 +19,10 @@ namespace Google\Service\Monitoring;
 
 class ServiceLevelIndicator extends \Google\Model
 {
-  /**
-   * @var BasicSli
-   */
-  public $basicSli;
   protected $basicSliType = BasicSli::class;
   protected $basicSliDataType = '';
-  /**
-   * @var RequestBasedSli
-   */
-  public $requestBased;
   protected $requestBasedType = RequestBasedSli::class;
   protected $requestBasedDataType = '';
-  /**
-   * @var WindowsBasedSli
-   */
-  public $windowsBased;
   protected $windowsBasedType = WindowsBasedSli::class;
   protected $windowsBasedDataType = '';
 

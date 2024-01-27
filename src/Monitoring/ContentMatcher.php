@@ -23,10 +23,6 @@ class ContentMatcher extends \Google\Model
    * @var string
    */
   public $content;
-  /**
-   * @var JsonPathMatcher
-   */
-  public $jsonPathMatcher;
   protected $jsonPathMatcherType = JsonPathMatcher::class;
   protected $jsonPathMatcherDataType = '';
   /**

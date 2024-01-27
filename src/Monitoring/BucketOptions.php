@@ -19,22 +19,10 @@ namespace Google\Service\Monitoring;
 
 class BucketOptions extends \Google\Model
 {
-  /**
-   * @var Explicit
-   */
-  public $explicitBuckets;
   protected $explicitBucketsType = Explicit::class;
   protected $explicitBucketsDataType = '';
-  /**
-   * @var Exponential
-   */
-  public $exponentialBuckets;
   protected $exponentialBucketsType = Exponential::class;
   protected $exponentialBucketsDataType = '';
-  /**
-   * @var Linear
-   */
-  public $linearBuckets;
   protected $linearBucketsType = Linear::class;
   protected $linearBucketsDataType = '';
 

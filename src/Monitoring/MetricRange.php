@@ -19,10 +19,6 @@ namespace Google\Service\Monitoring;
 
 class MetricRange extends \Google\Model
 {
-  /**
-   * @var GoogleMonitoringV3Range
-   */
-  public $range;
   protected $rangeType = GoogleMonitoringV3Range::class;
   protected $rangeDataType = '';
   /**

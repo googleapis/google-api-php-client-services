@@ -19,10 +19,6 @@ namespace Google\Service\Monitoring;
 
 class CloudFunctionV2Target extends \Google\Model
 {
-  /**
-   * @var MonitoredResource
-   */
-  public $cloudRunRevision;
   protected $cloudRunRevisionType = MonitoredResource::class;
   protected $cloudRunRevisionDataType = '';
   /**

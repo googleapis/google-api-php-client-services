@@ -24,10 +24,6 @@ class ListMonitoredResourceDescriptorsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var MonitoredResourceDescriptor[]
-   */
-  public $resourceDescriptors;
   protected $resourceDescriptorsType = MonitoredResourceDescriptor::class;
   protected $resourceDescriptorsDataType = 'array';
 

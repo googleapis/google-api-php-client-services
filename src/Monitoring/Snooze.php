@@ -19,20 +19,12 @@ namespace Google\Service\Monitoring;
 
 class Snooze extends \Google\Model
 {
-  /**
-   * @var Criteria
-   */
-  public $criteria;
   protected $criteriaType = Criteria::class;
   protected $criteriaDataType = '';
   /**
    * @var string
    */
   public $displayName;
-  /**
-   * @var TimeInterval
-   */
-  public $interval;
   protected $intervalType = TimeInterval::class;
   protected $intervalDataType = '';
   /**

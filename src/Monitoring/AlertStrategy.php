@@ -24,16 +24,8 @@ class AlertStrategy extends \Google\Collection
    * @var string
    */
   public $autoClose;
-  /**
-   * @var NotificationChannelStrategy[]
-   */
-  public $notificationChannelStrategy;
   protected $notificationChannelStrategyType = NotificationChannelStrategy::class;
   protected $notificationChannelStrategyDataType = 'array';
-  /**
-   * @var NotificationRateLimit
-   */
-  public $notificationRateLimit;
   protected $notificationRateLimitType = NotificationRateLimit::class;
   protected $notificationRateLimitDataType = '';
 

@@ -48,6 +48,7 @@ class ProjectsTimeSeries extends \Google\Service\Resource
    * @param CreateTimeSeriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return MonitoringEmpty
+   * @throws \Google\Service\Exception
    */
   public function create($name, CreateTimeSeriesRequest $postBody, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsTimeSeries extends \Google\Service\Resource
    * @param CreateTimeSeriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return MonitoringEmpty
+   * @throws \Google\Service\Exception
    */
   public function createService($name, CreateTimeSeriesRequest $postBody, $optParams = [])
   {
@@ -201,6 +203,7 @@ class ProjectsTimeSeries extends \Google\Service\Resource
    * @opt_param string view Required. Specifies which information is returned
    * about the time series.
    * @return ListTimeSeriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsTimeSeries($name, $optParams = [])
   {
@@ -217,6 +220,7 @@ class ProjectsTimeSeries extends \Google\Service\Resource
    * @param QueryTimeSeriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return QueryTimeSeriesResponse
+   * @throws \Google\Service\Exception
    */
   public function query($name, QueryTimeSeriesRequest $postBody, $optParams = [])
   {
