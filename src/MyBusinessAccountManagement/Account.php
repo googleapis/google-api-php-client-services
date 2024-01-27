@@ -31,10 +31,6 @@ class Account extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var OrganizationInfo
-   */
-  public $organizationInfo;
   protected $organizationInfoType = OrganizationInfo::class;
   protected $organizationInfoDataType = '';
   /**
