@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class Track extends \Google\Collection
 {
   protected $collection_key = 'releases';
-  /**
-   * @var TrackRelease[]
-   */
-  public $releases;
   protected $releasesType = TrackRelease::class;
   protected $releasesDataType = 'array';
   /**

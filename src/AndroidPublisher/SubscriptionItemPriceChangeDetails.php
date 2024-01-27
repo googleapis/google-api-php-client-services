@@ -23,10 +23,6 @@ class SubscriptionItemPriceChangeDetails extends \Google\Model
    * @var string
    */
   public $expectedNewPriceChargeTime;
-  /**
-   * @var Money
-   */
-  public $newPrice;
   protected $newPriceType = Money::class;
   protected $newPriceDataType = '';
   /**

@@ -42,6 +42,7 @@ class Orders extends \Google\Service\Resource
    * the item is a recurring subscription, all future payments will also be
    * terminated. Consumed in-app items need to be handled by developer's app.
    * (optional).
+   * @throws \Google\Service\Exception
    */
   public function refund($packageName, $orderId, $optParams = [])
   {

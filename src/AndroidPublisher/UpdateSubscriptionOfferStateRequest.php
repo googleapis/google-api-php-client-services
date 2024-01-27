@@ -19,16 +19,8 @@ namespace Google\Service\AndroidPublisher;
 
 class UpdateSubscriptionOfferStateRequest extends \Google\Model
 {
-  /**
-   * @var ActivateSubscriptionOfferRequest
-   */
-  public $activateSubscriptionOfferRequest;
   protected $activateSubscriptionOfferRequestType = ActivateSubscriptionOfferRequest::class;
   protected $activateSubscriptionOfferRequestDataType = '';
-  /**
-   * @var DeactivateSubscriptionOfferRequest
-   */
-  public $deactivateSubscriptionOfferRequest;
   protected $deactivateSubscriptionOfferRequestType = DeactivateSubscriptionOfferRequest::class;
   protected $deactivateSubscriptionOfferRequestDataType = '';
 

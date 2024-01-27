@@ -35,16 +35,8 @@ class UserComment extends \Google\Model
    * @var string
    */
   public $device;
-  /**
-   * @var DeviceMetadata
-   */
-  public $deviceMetadata;
   protected $deviceMetadataType = DeviceMetadata::class;
   protected $deviceMetadataDataType = '';
-  /**
-   * @var Timestamp
-   */
-  public $lastModified;
   protected $lastModifiedType = Timestamp::class;
   protected $lastModifiedDataType = '';
   /**

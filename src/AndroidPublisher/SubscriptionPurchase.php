@@ -35,10 +35,6 @@ class SubscriptionPurchase extends \Google\Model
    * @var int
    */
   public $cancelReason;
-  /**
-   * @var SubscriptionCancelSurveyResult
-   */
-  public $cancelSurveyResult;
   protected $cancelSurveyResultType = SubscriptionCancelSurveyResult::class;
   protected $cancelSurveyResultDataType = '';
   /**
@@ -69,10 +65,6 @@ class SubscriptionPurchase extends \Google\Model
    * @var string
    */
   public $givenName;
-  /**
-   * @var IntroductoryPriceInfo
-   */
-  public $introductoryPriceInfo;
   protected $introductoryPriceInfoType = IntroductoryPriceInfo::class;
   protected $introductoryPriceInfoDataType = '';
   /**
@@ -103,10 +95,6 @@ class SubscriptionPurchase extends \Google\Model
    * @var string
    */
   public $priceAmountMicros;
-  /**
-   * @var SubscriptionPriceChange
-   */
-  public $priceChange;
   protected $priceChangeType = SubscriptionPriceChange::class;
   protected $priceChangeDataType = '';
   /**

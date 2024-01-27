@@ -20,16 +20,8 @@ namespace Google\Service\AndroidPublisher;
 class ScreenDensityTargeting extends \Google\Collection
 {
   protected $collection_key = 'value';
-  /**
-   * @var ScreenDensity[]
-   */
-  public $alternatives;
   protected $alternativesType = ScreenDensity::class;
   protected $alternativesDataType = 'array';
-  /**
-   * @var ScreenDensity[]
-   */
-  public $value;
   protected $valueType = ScreenDensity::class;
   protected $valueDataType = 'array';
 

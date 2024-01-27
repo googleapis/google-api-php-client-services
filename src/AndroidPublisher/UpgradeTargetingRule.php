@@ -27,10 +27,6 @@ class UpgradeTargetingRule extends \Google\Model
    * @var bool
    */
   public $oncePerUser;
-  /**
-   * @var TargetingRuleScope
-   */
-  public $scope;
   protected $scopeType = TargetingRuleScope::class;
   protected $scopeDataType = '';
 

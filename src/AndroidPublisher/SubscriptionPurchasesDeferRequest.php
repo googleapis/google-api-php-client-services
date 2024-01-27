@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class SubscriptionPurchasesDeferRequest extends \Google\Model
 {
-  /**
-   * @var SubscriptionDeferralInfo
-   */
-  public $deferralInfo;
   protected $deferralInfoType = SubscriptionDeferralInfo::class;
   protected $deferralInfoDataType = '';
 

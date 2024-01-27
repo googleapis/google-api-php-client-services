@@ -19,16 +19,8 @@ namespace Google\Service\AndroidPublisher;
 
 class UpdateBasePlanStateRequest extends \Google\Model
 {
-  /**
-   * @var ActivateBasePlanRequest
-   */
-  public $activateBasePlanRequest;
   protected $activateBasePlanRequestType = ActivateBasePlanRequest::class;
   protected $activateBasePlanRequestDataType = '';
-  /**
-   * @var DeactivateBasePlanRequest
-   */
-  public $deactivateBasePlanRequest;
   protected $deactivateBasePlanRequestType = DeactivateBasePlanRequest::class;
   protected $deactivateBasePlanRequestDataType = '';
 

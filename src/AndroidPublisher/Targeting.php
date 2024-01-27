@@ -19,34 +19,14 @@ namespace Google\Service\AndroidPublisher;
 
 class Targeting extends \Google\Model
 {
-  /**
-   * @var AllUsers
-   */
-  public $allUsers;
   protected $allUsersType = AllUsers::class;
   protected $allUsersDataType = '';
-  /**
-   * @var AndroidSdks
-   */
-  public $androidSdks;
   protected $androidSdksType = AndroidSdks::class;
   protected $androidSdksDataType = '';
-  /**
-   * @var Regions
-   */
-  public $regions;
   protected $regionsType = Regions::class;
   protected $regionsDataType = '';
-  /**
-   * @var AppVersionList
-   */
-  public $versionList;
   protected $versionListType = AppVersionList::class;
   protected $versionListDataType = '';
-  /**
-   * @var AppVersionRange
-   */
-  public $versionRange;
   protected $versionRangeType = AppVersionRange::class;
   protected $versionRangeDataType = '';
 

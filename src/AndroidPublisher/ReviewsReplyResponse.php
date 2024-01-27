@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class ReviewsReplyResponse extends \Google\Model
 {
-  /**
-   * @var ReviewReplyResult
-   */
-  public $result;
   protected $resultType = ReviewReplyResult::class;
   protected $resultDataType = '';
 

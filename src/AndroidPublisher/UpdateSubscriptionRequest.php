@@ -27,16 +27,8 @@ class UpdateSubscriptionRequest extends \Google\Model
    * @var string
    */
   public $latencyTolerance;
-  /**
-   * @var RegionsVersion
-   */
-  public $regionsVersion;
   protected $regionsVersionType = RegionsVersion::class;
   protected $regionsVersionDataType = '';
-  /**
-   * @var Subscription
-   */
-  public $subscription;
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
   /**

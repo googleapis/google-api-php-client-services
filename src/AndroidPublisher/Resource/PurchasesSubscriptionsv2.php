@@ -40,6 +40,7 @@ class PurchasesSubscriptionsv2 extends \Google\Service\Resource
    * the subscription was purchased.
    * @param array $optParams Optional parameters.
    * @return SubscriptionPurchaseV2
+   * @throws \Google\Service\Exception
    */
   public function get($packageName, $token, $optParams = [])
   {
@@ -57,6 +58,7 @@ class PurchasesSubscriptionsv2 extends \Google\Service\Resource
    * @param RevokeSubscriptionPurchaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return RevokeSubscriptionPurchaseResponse
+   * @throws \Google\Service\Exception
    */
   public function revoke($packageName, $token, RevokeSubscriptionPurchaseRequest $postBody, $optParams = [])
   {

@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class TrackCountryAvailability extends \Google\Collection
 {
   protected $collection_key = 'countries';
-  /**
-   * @var TrackTargetedCountry[]
-   */
-  public $countries;
   protected $countriesType = TrackTargetedCountry::class;
   protected $countriesDataType = 'array';
   /**

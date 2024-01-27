@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class RevocationContext extends \Google\Model
 {
-  /**
-   * @var RevocationContextProratedRefund
-   */
-  public $proratedRefund;
   protected $proratedRefundType = RevocationContextProratedRefund::class;
   protected $proratedRefundDataType = '';
 

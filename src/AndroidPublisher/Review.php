@@ -24,10 +24,6 @@ class Review extends \Google\Collection
    * @var string
    */
   public $authorName;
-  /**
-   * @var Comment[]
-   */
-  public $comments;
   protected $commentsType = Comment::class;
   protected $commentsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class RevokeSubscriptionPurchaseRequest extends \Google\Model
 {
-  /**
-   * @var RevocationContext
-   */
-  public $revocationContext;
   protected $revocationContextType = RevocationContext::class;
   protected $revocationContextDataType = '';
 
