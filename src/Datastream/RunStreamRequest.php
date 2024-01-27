@@ -19,10 +19,6 @@ namespace Google\Service\Datastream;
 
 class RunStreamRequest extends \Google\Model
 {
-  /**
-   * @var CdcStrategy
-   */
-  public $cdcStrategy;
   protected $cdcStrategyType = CdcStrategy::class;
   protected $cdcStrategyDataType = '';
 

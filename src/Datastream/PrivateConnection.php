@@ -27,10 +27,6 @@ class PrivateConnection extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var Error
-   */
-  public $error;
   protected $errorType = Error::class;
   protected $errorDataType = '';
   /**
@@ -49,10 +45,6 @@ class PrivateConnection extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var VpcPeeringConfig
-   */
-  public $vpcPeeringConfig;
   protected $vpcPeeringConfigType = VpcPeeringConfig::class;
   protected $vpcPeeringConfigDataType = '';
 

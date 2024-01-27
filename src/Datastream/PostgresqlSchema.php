@@ -20,10 +20,6 @@ namespace Google\Service\Datastream;
 class PostgresqlSchema extends \Google\Collection
 {
   protected $collection_key = 'postgresqlTables';
-  /**
-   * @var PostgresqlTable[]
-   */
-  public $postgresqlTables;
   protected $postgresqlTablesType = PostgresqlTable::class;
   protected $postgresqlTablesDataType = 'array';
   /**

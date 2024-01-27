@@ -20,10 +20,6 @@ namespace Google\Service\Datastream;
 class BackfillJob extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var Error[]
-   */
-  public $errors;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**

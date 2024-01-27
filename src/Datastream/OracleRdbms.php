@@ -20,10 +20,6 @@ namespace Google\Service\Datastream;
 class OracleRdbms extends \Google\Collection
 {
   protected $collection_key = 'oracleSchemas';
-  /**
-   * @var OracleSchema[]
-   */
-  public $oracleSchemas;
   protected $oracleSchemasType = OracleSchema::class;
   protected $oracleSchemasDataType = 'array';
 

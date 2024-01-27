@@ -24,10 +24,6 @@ class ListStreamsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Stream[]
-   */
-  public $streams;
   protected $streamsType = Stream::class;
   protected $streamsDataType = 'array';
   /**

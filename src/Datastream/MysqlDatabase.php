@@ -24,10 +24,6 @@ class MysqlDatabase extends \Google\Collection
    * @var string
    */
   public $database;
-  /**
-   * @var MysqlTable[]
-   */
-  public $mysqlTables;
   protected $mysqlTablesType = MysqlTable::class;
   protected $mysqlTablesDataType = 'array';
 

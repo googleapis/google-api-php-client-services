@@ -24,10 +24,6 @@ class ListPrivateConnectionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PrivateConnection[]
-   */
-  public $privateConnections;
   protected $privateConnectionsType = PrivateConnection::class;
   protected $privateConnectionsDataType = 'array';
   /**

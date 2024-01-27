@@ -19,22 +19,10 @@ namespace Google\Service\Datastream;
 
 class OracleSourceConfig extends \Google\Model
 {
-  /**
-   * @var DropLargeObjects
-   */
-  public $dropLargeObjects;
   protected $dropLargeObjectsType = DropLargeObjects::class;
   protected $dropLargeObjectsDataType = '';
-  /**
-   * @var OracleRdbms
-   */
-  public $excludeObjects;
   protected $excludeObjectsType = OracleRdbms::class;
   protected $excludeObjectsDataType = '';
-  /**
-   * @var OracleRdbms
-   */
-  public $includeObjects;
   protected $includeObjectsType = OracleRdbms::class;
   protected $includeObjectsDataType = '';
   /**
@@ -45,10 +33,6 @@ class OracleSourceConfig extends \Google\Model
    * @var int
    */
   public $maxConcurrentCdcTasks;
-  /**
-   * @var StreamLargeObjects
-   */
-  public $streamLargeObjects;
   protected $streamLargeObjectsType = StreamLargeObjects::class;
   protected $streamLargeObjectsDataType = '';
 

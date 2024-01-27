@@ -20,10 +20,6 @@ namespace Google\Service\Datastream;
 class PostgresqlTable extends \Google\Collection
 {
   protected $collection_key = 'postgresqlColumns';
-  /**
-   * @var PostgresqlColumn[]
-   */
-  public $postgresqlColumns;
   protected $postgresqlColumnsType = PostgresqlColumn::class;
   protected $postgresqlColumnsDataType = 'array';
   /**

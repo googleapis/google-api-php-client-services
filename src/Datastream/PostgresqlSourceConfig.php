@@ -19,16 +19,8 @@ namespace Google\Service\Datastream;
 
 class PostgresqlSourceConfig extends \Google\Model
 {
-  /**
-   * @var PostgresqlRdbms
-   */
-  public $excludeObjects;
   protected $excludeObjectsType = PostgresqlRdbms::class;
   protected $excludeObjectsDataType = '';
-  /**
-   * @var PostgresqlRdbms
-   */
-  public $includeObjects;
   protected $includeObjectsType = PostgresqlRdbms::class;
   protected $includeObjectsDataType = '';
   /**

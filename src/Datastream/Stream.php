@@ -20,16 +20,8 @@ namespace Google\Service\Datastream;
 class Stream extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var BackfillAllStrategy
-   */
-  public $backfillAll;
   protected $backfillAllType = BackfillAllStrategy::class;
   protected $backfillAllDataType = '';
-  /**
-   * @var BackfillNoneStrategy
-   */
-  public $backfillNone;
   protected $backfillNoneType = BackfillNoneStrategy::class;
   protected $backfillNoneDataType = '';
   /**
@@ -40,20 +32,12 @@ class Stream extends \Google\Collection
    * @var string
    */
   public $customerManagedEncryptionKey;
-  /**
-   * @var DestinationConfig
-   */
-  public $destinationConfig;
   protected $destinationConfigType = DestinationConfig::class;
   protected $destinationConfigDataType = '';
   /**
    * @var string
    */
   public $displayName;
-  /**
-   * @var Error[]
-   */
-  public $errors;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**
@@ -68,10 +52,6 @@ class Stream extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var SourceConfig
-   */
-  public $sourceConfig;
   protected $sourceConfigType = SourceConfig::class;
   protected $sourceConfigDataType = '';
   /**

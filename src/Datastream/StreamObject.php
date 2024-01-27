@@ -20,10 +20,6 @@ namespace Google\Service\Datastream;
 class StreamObject extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var BackfillJob
-   */
-  public $backfillJob;
   protected $backfillJobType = BackfillJob::class;
   protected $backfillJobDataType = '';
   /**
@@ -34,20 +30,12 @@ class StreamObject extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var Error[]
-   */
-  public $errors;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var SourceObjectIdentifier
-   */
-  public $sourceObject;
   protected $sourceObjectType = SourceObjectIdentifier::class;
   protected $sourceObjectDataType = '';
   /**
