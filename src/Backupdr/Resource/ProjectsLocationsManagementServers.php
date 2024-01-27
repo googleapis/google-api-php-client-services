@@ -60,6 +60,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ManagementServer $postBody, $optParams = [])
   {
@@ -85,6 +86,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -100,6 +102,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * ource_name}`
    * @param array $optParams Optional parameters.
    * @return ManagementServer
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -131,6 +134,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -157,6 +161,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListManagementServersResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsManagementServers($parent, $optParams = [])
   {
@@ -176,6 +181,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -198,6 +204,7 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
