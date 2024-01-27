@@ -36,6 +36,7 @@ class ProjectsLocationsOsImages extends \Google\Service\Resource
    * @param string $name Required. Name of the OS image.
    * @param array $optParams Optional parameters.
    * @return OSImage
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsLocationsOsImages extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying a page of results from the
    * server.
    * @return ListOSImagesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsOsImages($parent, $optParams = [])
   {

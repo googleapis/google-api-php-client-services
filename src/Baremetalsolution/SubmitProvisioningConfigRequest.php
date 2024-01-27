@@ -23,10 +23,6 @@ class SubmitProvisioningConfigRequest extends \Google\Model
    * @var string
    */
   public $email;
-  /**
-   * @var ProvisioningConfig
-   */
-  public $provisioningConfig;
   protected $provisioningConfigType = ProvisioningConfig::class;
   protected $provisioningConfigDataType = '';
 

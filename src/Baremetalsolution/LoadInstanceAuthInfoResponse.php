@@ -20,16 +20,8 @@ namespace Google\Service\Baremetalsolution;
 class LoadInstanceAuthInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'sshKeys';
-  /**
-   * @var SSHKey[]
-   */
-  public $sshKeys;
   protected $sshKeysType = SSHKey::class;
   protected $sshKeysDataType = 'array';
-  /**
-   * @var UserAccount[]
-   */
-  public $userAccounts;
   protected $userAccountsType = UserAccount::class;
   protected $userAccountsDataType = 'map';
 

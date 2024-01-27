@@ -24,10 +24,6 @@ class ListSSHKeysResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SSHKey[]
-   */
-  public $sshKeys;
   protected $sshKeysType = SSHKey::class;
   protected $sshKeysDataType = 'array';
 

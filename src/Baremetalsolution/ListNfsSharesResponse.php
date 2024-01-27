@@ -24,10 +24,6 @@ class ListNfsSharesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var NfsShare[]
-   */
-  public $nfsShares;
   protected $nfsSharesType = NfsShare::class;
   protected $nfsSharesDataType = 'array';
   /**

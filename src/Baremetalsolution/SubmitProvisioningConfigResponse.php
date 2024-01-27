@@ -19,10 +19,6 @@ namespace Google\Service\Baremetalsolution;
 
 class SubmitProvisioningConfigResponse extends \Google\Model
 {
-  /**
-   * @var ProvisioningConfig
-   */
-  public $provisioningConfig;
   protected $provisioningConfigType = ProvisioningConfig::class;
   protected $provisioningConfigDataType = '';
 

@@ -24,10 +24,6 @@ class GoogleCloudBaremetalsolutionV2LogicalInterface extends \Google\Collection
    * @var int
    */
   public $interfaceIndex;
-  /**
-   * @var LogicalNetworkInterface[]
-   */
-  public $logicalNetworkInterfaces;
   protected $logicalNetworkInterfacesType = LogicalNetworkInterface::class;
   protected $logicalNetworkInterfacesDataType = 'array';
   /**

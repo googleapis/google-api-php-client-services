@@ -46,6 +46,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param DetachLunRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function detachLun($instance, DetachLunRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param DisableInteractiveSerialConsoleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function disableInteractiveSerialConsole($name, DisableInteractiveSerialConsoleRequest $postBody, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param EnableInteractiveSerialConsoleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function enableInteractiveSerialConsole($name, EnableInteractiveSerialConsoleRequest $postBody, $optParams = [])
   {
@@ -89,6 +92,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return Instance
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -109,6 +113,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @opt_param string pageToken A token identifying a page of results from the
    * server.
    * @return ListInstancesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsInstances($parent, $optParams = [])
   {
@@ -122,6 +127,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param string $name Required. Name of the server.
    * @param array $optParams Optional parameters.
    * @return LoadInstanceAuthInfoResponse
+   * @throws \Google\Service\Exception
    */
   public function loadAuthInfo($name, $optParams = [])
   {
@@ -143,6 +149,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * supported fields are: `labels` `hyperthreading_enabled` `os_image` `ssh_keys`
    * `kms_key_version`
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Instance $postBody, $optParams = [])
   {
@@ -160,6 +167,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param RenameInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Instance
+   * @throws \Google\Service\Exception
    */
   public function rename($name, RenameInstanceRequest $postBody, $optParams = [])
   {
@@ -175,6 +183,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param ResetInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function reset($name, ResetInstanceRequest $postBody, $optParams = [])
   {
@@ -189,6 +198,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param StartInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function start($name, StartInstanceRequest $postBody, $optParams = [])
   {
@@ -203,6 +213,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param StopInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function stop($name, StopInstanceRequest $postBody, $optParams = [])
   {

@@ -24,10 +24,6 @@ class ListProvisioningQuotasResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ProvisioningQuota[]
-   */
-  public $provisioningQuotas;
   protected $provisioningQuotasType = ProvisioningQuota::class;
   protected $provisioningQuotasDataType = 'array';
 
