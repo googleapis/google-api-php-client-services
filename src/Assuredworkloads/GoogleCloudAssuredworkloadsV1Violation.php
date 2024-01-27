@@ -52,10 +52,6 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Collection
    * @var string
    */
   public $exceptionAuditLogLink;
-  /**
-   * @var GoogleCloudAssuredworkloadsV1ViolationExceptionContext[]
-   */
-  public $exceptionContexts;
   protected $exceptionContextsType = GoogleCloudAssuredworkloadsV1ViolationExceptionContext::class;
   protected $exceptionContextsDataType = 'array';
   /**
@@ -74,10 +70,6 @@ class GoogleCloudAssuredworkloadsV1Violation extends \Google\Collection
    * @var string
    */
   public $parentProjectNumber;
-  /**
-   * @var GoogleCloudAssuredworkloadsV1ViolationRemediation
-   */
-  public $remediation;
   protected $remediationType = GoogleCloudAssuredworkloadsV1ViolationRemediation::class;
   protected $remediationDataType = '';
   /**

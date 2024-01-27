@@ -24,10 +24,6 @@ class GoogleCloudAssuredworkloadsV1ListViolationsResponse extends \Google\Collec
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudAssuredworkloadsV1Violation[]
-   */
-  public $violations;
   protected $violationsType = GoogleCloudAssuredworkloadsV1Violation::class;
   protected $violationsDataType = 'array';
 

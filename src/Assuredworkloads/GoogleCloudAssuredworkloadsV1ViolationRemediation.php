@@ -24,10 +24,6 @@ class GoogleCloudAssuredworkloadsV1ViolationRemediation extends \Google\Collecti
    * @var string[]
    */
   public $compliantValues;
-  /**
-   * @var GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
-   */
-  public $instructions;
   protected $instructionsType = GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions::class;
   protected $instructionsDataType = '';
   /**
