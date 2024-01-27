@@ -19,10 +19,6 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataQualityResultPostScanActionsResult extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDataplexV1DataQualityResultPostScanActionsResultBigQueryExportResult
-   */
-  public $bigqueryExportResult;
   protected $bigqueryExportResultType = GoogleCloudDataplexV1DataQualityResultPostScanActionsResultBigQueryExportResult::class;
   protected $bigqueryExportResultDataType = '';
 

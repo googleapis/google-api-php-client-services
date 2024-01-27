@@ -23,34 +23,14 @@ class GoogleCloudDataplexV1DataScan extends \Google\Model
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudDataplexV1DataSource
-   */
-  public $data;
   protected $dataType = GoogleCloudDataplexV1DataSource::class;
   protected $dataDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1DataProfileResult
-   */
-  public $dataProfileResult;
   protected $dataProfileResultType = GoogleCloudDataplexV1DataProfileResult::class;
   protected $dataProfileResultDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1DataProfileSpec
-   */
-  public $dataProfileSpec;
   protected $dataProfileSpecType = GoogleCloudDataplexV1DataProfileSpec::class;
   protected $dataProfileSpecDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1DataQualityResult
-   */
-  public $dataQualityResult;
   protected $dataQualityResultType = GoogleCloudDataplexV1DataQualityResult::class;
   protected $dataQualityResultDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1DataQualitySpec
-   */
-  public $dataQualitySpec;
   protected $dataQualitySpecType = GoogleCloudDataplexV1DataQualitySpec::class;
   protected $dataQualitySpecDataType = '';
   /**
@@ -61,16 +41,8 @@ class GoogleCloudDataplexV1DataScan extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudDataplexV1DataScanExecutionSpec
-   */
-  public $executionSpec;
   protected $executionSpecType = GoogleCloudDataplexV1DataScanExecutionSpec::class;
   protected $executionSpecDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1DataScanExecutionStatus
-   */
-  public $executionStatus;
   protected $executionStatusType = GoogleCloudDataplexV1DataScanExecutionStatus::class;
   protected $executionStatusDataType = '';
   /**

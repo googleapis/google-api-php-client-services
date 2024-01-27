@@ -20,20 +20,12 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1DataQualitySpec extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var GoogleCloudDataplexV1DataQualitySpecPostScanActions
-   */
-  public $postScanActions;
   protected $postScanActionsType = GoogleCloudDataplexV1DataQualitySpecPostScanActions::class;
   protected $postScanActionsDataType = '';
   /**
    * @var string
    */
   public $rowFilter;
-  /**
-   * @var GoogleCloudDataplexV1DataQualityRule[]
-   */
-  public $rules;
   protected $rulesType = GoogleCloudDataplexV1DataQualityRule::class;
   protected $rulesDataType = 'array';
   /**

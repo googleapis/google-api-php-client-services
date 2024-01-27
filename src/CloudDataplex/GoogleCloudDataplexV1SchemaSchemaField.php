@@ -24,10 +24,6 @@ class GoogleCloudDataplexV1SchemaSchemaField extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var GoogleCloudDataplexV1SchemaSchemaField[]
-   */
-  public $fields;
   protected $fieldsType = GoogleCloudDataplexV1SchemaSchemaField::class;
   protected $fieldsDataType = 'array';
   /**

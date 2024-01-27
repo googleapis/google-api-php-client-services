@@ -20,16 +20,8 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1Schema extends \Google\Collection
 {
   protected $collection_key = 'partitionFields';
-  /**
-   * @var GoogleCloudDataplexV1SchemaSchemaField[]
-   */
-  public $fields;
   protected $fieldsType = GoogleCloudDataplexV1SchemaSchemaField::class;
   protected $fieldsDataType = 'array';
-  /**
-   * @var GoogleCloudDataplexV1SchemaPartitionField[]
-   */
-  public $partitionFields;
   protected $partitionFieldsType = GoogleCloudDataplexV1SchemaPartitionField::class;
   protected $partitionFieldsDataType = 'array';
   /**

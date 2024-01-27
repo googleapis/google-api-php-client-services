@@ -42,6 +42,7 @@ class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
    * @opt_param string view Optional. Select the DataScanJob view to return.
    * Defaults to BASIC.
    * @return GoogleCloudDataplexV1DataScanJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -76,6 +77,7 @@ class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
    * paginating, all other parameters provided to ListDataScanJobs must match the
    * call that provided the page token.
    * @return GoogleCloudDataplexV1ListDataScanJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDataScansJobs($parent, $optParams = [])
   {

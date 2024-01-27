@@ -23,10 +23,6 @@ class GoogleCloudDataplexV1Job extends \Google\Model
    * @var string
    */
   public $endTime;
-  /**
-   * @var GoogleCloudDataplexV1TaskExecutionSpec
-   */
-  public $executionSpec;
   protected $executionSpecType = GoogleCloudDataplexV1TaskExecutionSpec::class;
   protected $executionSpecDataType = '';
   /**

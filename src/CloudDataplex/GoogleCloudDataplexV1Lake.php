@@ -19,10 +19,6 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1Lake extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDataplexV1AssetStatus
-   */
-  public $assetStatus;
   protected $assetStatusType = GoogleCloudDataplexV1AssetStatus::class;
   protected $assetStatusDataType = '';
   /**
@@ -41,16 +37,8 @@ class GoogleCloudDataplexV1Lake extends \Google\Model
    * @var string[]
    */
   public $labels;
-  /**
-   * @var GoogleCloudDataplexV1LakeMetastore
-   */
-  public $metastore;
   protected $metastoreType = GoogleCloudDataplexV1LakeMetastore::class;
   protected $metastoreDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1LakeMetastoreStatus
-   */
-  public $metastoreStatus;
   protected $metastoreStatusType = GoogleCloudDataplexV1LakeMetastoreStatus::class;
   protected $metastoreStatusDataType = '';
   /**

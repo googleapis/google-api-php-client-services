@@ -20,10 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListDataAttributeBindingsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
-  /**
-   * @var GoogleCloudDataplexV1DataAttributeBinding[]
-   */
-  public $dataAttributeBindings;
   protected $dataAttributeBindingsType = GoogleCloudDataplexV1DataAttributeBinding::class;
   protected $dataAttributeBindingsDataType = 'array';
   /**

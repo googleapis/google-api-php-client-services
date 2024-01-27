@@ -40,10 +40,6 @@ class GoogleCloudDataplexV1DataQualityRuleResult extends \Google\Model
    * @var string
    */
   public $passedCount;
-  /**
-   * @var GoogleCloudDataplexV1DataQualityRule
-   */
-  public $rule;
   protected $ruleType = GoogleCloudDataplexV1DataQualityRule::class;
   protected $ruleDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListContentResponse extends \Google\Collection
 {
   protected $collection_key = 'content';
-  /**
-   * @var GoogleCloudDataplexV1Content[]
-   */
-  public $content;
   protected $contentType = GoogleCloudDataplexV1Content::class;
   protected $contentDataType = 'array';
   /**

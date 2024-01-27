@@ -23,10 +23,6 @@ class GoogleCloudDataplexV1DataScanExecutionSpec extends \Google\Model
    * @var string
    */
   public $field;
-  /**
-   * @var GoogleCloudDataplexV1Trigger
-   */
-  public $trigger;
   protected $triggerType = GoogleCloudDataplexV1Trigger::class;
   protected $triggerDataType = '';
 

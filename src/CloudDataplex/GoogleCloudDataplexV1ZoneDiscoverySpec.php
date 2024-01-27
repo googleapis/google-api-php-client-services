@@ -20,10 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ZoneDiscoverySpec extends \Google\Collection
 {
   protected $collection_key = 'includePatterns';
-  /**
-   * @var GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions
-   */
-  public $csvOptions;
   protected $csvOptionsType = GoogleCloudDataplexV1ZoneDiscoverySpecCsvOptions::class;
   protected $csvOptionsDataType = '';
   /**
@@ -38,10 +34,6 @@ class GoogleCloudDataplexV1ZoneDiscoverySpec extends \Google\Collection
    * @var string[]
    */
   public $includePatterns;
-  /**
-   * @var GoogleCloudDataplexV1ZoneDiscoverySpecJsonOptions
-   */
-  public $jsonOptions;
   protected $jsonOptionsType = GoogleCloudDataplexV1ZoneDiscoverySpecJsonOptions::class;
   protected $jsonOptionsDataType = '';
   /**

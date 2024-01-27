@@ -20,10 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListLakesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachableLocations';
-  /**
-   * @var GoogleCloudDataplexV1Lake[]
-   */
-  public $lakes;
   protected $lakesType = GoogleCloudDataplexV1Lake::class;
   protected $lakesDataType = 'array';
   /**

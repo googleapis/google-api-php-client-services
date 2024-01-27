@@ -20,10 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListDataScansResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var GoogleCloudDataplexV1DataScan[]
-   */
-  public $dataScans;
   protected $dataScansType = GoogleCloudDataplexV1DataScan::class;
   protected $dataScansDataType = 'array';
   /**

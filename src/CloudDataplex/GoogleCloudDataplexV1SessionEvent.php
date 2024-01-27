@@ -31,10 +31,6 @@ class GoogleCloudDataplexV1SessionEvent extends \Google\Model
    * @var string
    */
   public $message;
-  /**
-   * @var GoogleCloudDataplexV1SessionEventQueryDetail
-   */
-  public $query;
   protected $queryType = GoogleCloudDataplexV1SessionEventQueryDetail::class;
   protected $queryDataType = '';
   /**

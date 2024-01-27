@@ -19,16 +19,8 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1EnvironmentInfrastructureSpec extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources
-   */
-  public $compute;
   protected $computeType = GoogleCloudDataplexV1EnvironmentInfrastructureSpecComputeResources::class;
   protected $computeDataType = '';
-  /**
-   * @var GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime
-   */
-  public $osImage;
   protected $osImageType = GoogleCloudDataplexV1EnvironmentInfrastructureSpecOsImageRuntime::class;
   protected $osImageDataType = '';
 

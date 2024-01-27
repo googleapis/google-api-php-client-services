@@ -20,10 +20,6 @@ namespace Google\Service\CloudDataplex;
 class GoogleCloudDataplexV1ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
-  /**
-   * @var GoogleCloudDataplexV1Job[]
-   */
-  public $jobs;
   protected $jobsType = GoogleCloudDataplexV1Job::class;
   protected $jobsDataType = 'array';
   /**
