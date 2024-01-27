@@ -20,10 +20,6 @@ namespace Google\Service\DatabaseMigrationService;
 class ListConversionWorkspacesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var ConversionWorkspace[]
-   */
-  public $conversionWorkspaces;
   protected $conversionWorkspacesType = ConversionWorkspace::class;
   protected $conversionWorkspacesDataType = 'array';
   /**

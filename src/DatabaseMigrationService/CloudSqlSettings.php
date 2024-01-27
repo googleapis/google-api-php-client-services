@@ -39,10 +39,6 @@ class CloudSqlSettings extends \Google\Model
    * @var string
    */
   public $collation;
-  /**
-   * @var DataCacheConfig
-   */
-  public $dataCacheConfig;
   protected $dataCacheConfigType = DataCacheConfig::class;
   protected $dataCacheConfigDataType = '';
   /**
@@ -65,10 +61,6 @@ class CloudSqlSettings extends \Google\Model
    * @var string
    */
   public $edition;
-  /**
-   * @var SqlIpConfig
-   */
-  public $ipConfig;
   protected $ipConfigType = SqlIpConfig::class;
   protected $ipConfigDataType = '';
   /**

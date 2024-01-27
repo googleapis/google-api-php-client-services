@@ -20,10 +20,6 @@ namespace Google\Service\DatabaseMigrationService;
 class SearchBackgroundJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
-  /**
-   * @var BackgroundJobLogEntry[]
-   */
-  public $jobs;
   protected $jobsType = BackgroundJobLogEntry::class;
   protected $jobsDataType = 'array';
 

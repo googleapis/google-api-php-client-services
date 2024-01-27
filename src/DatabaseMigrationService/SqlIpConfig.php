@@ -24,10 +24,6 @@ class SqlIpConfig extends \Google\Collection
    * @var string
    */
   public $allocatedIpRange;
-  /**
-   * @var SqlAclEntry[]
-   */
-  public $authorizedNetworks;
   protected $authorizedNetworksType = SqlAclEntry::class;
   protected $authorizedNetworksDataType = 'array';
   /**

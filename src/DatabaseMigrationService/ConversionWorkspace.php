@@ -23,10 +23,6 @@ class ConversionWorkspace extends \Google\Model
    * @var string
    */
   public $createTime;
-  /**
-   * @var DatabaseEngineInfo
-   */
-  public $destination;
   protected $destinationType = DatabaseEngineInfo::class;
   protected $destinationDataType = '';
   /**
@@ -53,10 +49,6 @@ class ConversionWorkspace extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var DatabaseEngineInfo
-   */
-  public $source;
   protected $sourceType = DatabaseEngineInfo::class;
   protected $sourceDataType = '';
   /**

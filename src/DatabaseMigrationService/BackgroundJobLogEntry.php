@@ -19,10 +19,6 @@ namespace Google\Service\DatabaseMigrationService;
 
 class BackgroundJobLogEntry extends \Google\Model
 {
-  /**
-   * @var ApplyJobDetails
-   */
-  public $applyJobDetails;
   protected $applyJobDetailsType = ApplyJobDetails::class;
   protected $applyJobDetailsDataType = '';
   /**
@@ -33,10 +29,6 @@ class BackgroundJobLogEntry extends \Google\Model
    * @var string
    */
   public $completionState;
-  /**
-   * @var ConvertJobDetails
-   */
-  public $convertJobDetails;
   protected $convertJobDetailsType = ConvertJobDetails::class;
   protected $convertJobDetailsDataType = '';
   /**
@@ -47,10 +39,6 @@ class BackgroundJobLogEntry extends \Google\Model
    * @var string
    */
   public $id;
-  /**
-   * @var ImportRulesJobDetails
-   */
-  public $importRulesJobDetails;
   protected $importRulesJobDetailsType = ImportRulesJobDetails::class;
   protected $importRulesJobDetailsDataType = '';
   /**
@@ -61,10 +49,6 @@ class BackgroundJobLogEntry extends \Google\Model
    * @var bool
    */
   public $requestAutocommit;
-  /**
-   * @var SeedJobDetails
-   */
-  public $seedJobDetails;
   protected $seedJobDetailsType = SeedJobDetails::class;
   protected $seedJobDetailsDataType = '';
   /**

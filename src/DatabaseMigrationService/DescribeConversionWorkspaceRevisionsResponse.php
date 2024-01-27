@@ -20,10 +20,6 @@ namespace Google\Service\DatabaseMigrationService;
 class DescribeConversionWorkspaceRevisionsResponse extends \Google\Collection
 {
   protected $collection_key = 'revisions';
-  /**
-   * @var ConversionWorkspace[]
-   */
-  public $revisions;
   protected $revisionsType = ConversionWorkspace::class;
   protected $revisionsDataType = 'array';
 

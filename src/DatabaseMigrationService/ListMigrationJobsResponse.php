@@ -20,10 +20,6 @@ namespace Google\Service\DatabaseMigrationService;
 class ListMigrationJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var MigrationJob[]
-   */
-  public $migrationJobs;
   protected $migrationJobsType = MigrationJob::class;
   protected $migrationJobsDataType = 'array';
   /**

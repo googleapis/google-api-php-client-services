@@ -23,22 +23,10 @@ class ConditionalColumnSetValue extends \Google\Model
    * @var array[]
    */
   public $customFeatures;
-  /**
-   * @var SourceNumericFilter
-   */
-  public $sourceNumericFilter;
   protected $sourceNumericFilterType = SourceNumericFilter::class;
   protected $sourceNumericFilterDataType = '';
-  /**
-   * @var SourceTextFilter
-   */
-  public $sourceTextFilter;
   protected $sourceTextFilterType = SourceTextFilter::class;
   protected $sourceTextFilterDataType = '';
-  /**
-   * @var ValueTransformation
-   */
-  public $valueTransformation;
   protected $valueTransformationType = ValueTransformation::class;
   protected $valueTransformationDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\DatabaseMigrationService;
 class ListMappingRulesResponse extends \Google\Collection
 {
   protected $collection_key = 'mappingRules';
-  /**
-   * @var MappingRule[]
-   */
-  public $mappingRules;
   protected $mappingRulesType = MappingRule::class;
   protected $mappingRulesDataType = 'array';
   /**

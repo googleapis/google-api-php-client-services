@@ -20,10 +20,6 @@ namespace Google\Service\DatabaseMigrationService;
 class DumpFlags extends \Google\Collection
 {
   protected $collection_key = 'dumpFlags';
-  /**
-   * @var DumpFlag[]
-   */
-  public $dumpFlags;
   protected $dumpFlagsType = DumpFlag::class;
   protected $dumpFlagsDataType = 'array';
 

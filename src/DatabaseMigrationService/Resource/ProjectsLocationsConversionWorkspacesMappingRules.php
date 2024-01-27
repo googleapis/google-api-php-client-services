@@ -49,6 +49,7 @@ class ProjectsLocationsConversionWorkspacesMappingRules extends \Google\Service\
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @return MappingRule
+   * @throws \Google\Service\Exception
    */
   public function create($parent, MappingRule $postBody, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsConversionWorkspacesMappingRules extends \Google\Service\
    * UUID. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores
    * (_), and hyphens (-). The maximum length is 40 characters.
    * @return DatamigrationEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsLocationsConversionWorkspacesMappingRules extends \Google\Service\
    * conversionWorkspace/123/mappingRules/rule123@c7cfa2a8c7cfa2a8c7cfa2a8c7cfa2a8
    * @param array $optParams Optional parameters.
    * @return MappingRule
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -101,6 +104,7 @@ class ProjectsLocationsConversionWorkspacesMappingRules extends \Google\Service\
    * @param ImportMappingRulesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function import($parent, ImportMappingRulesRequest $postBody, $optParams = [])
   {
@@ -125,6 +129,7 @@ class ProjectsLocationsConversionWorkspacesMappingRules extends \Google\Service\
    * paginating, all other parameters provided to mappingRules.list must match the
    * call that provided the page token.
    * @return ListMappingRulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsConversionWorkspacesMappingRules($parent, $optParams = [])
   {

@@ -19,10 +19,6 @@ namespace Google\Service\DatabaseMigrationService;
 
 class ApplyHash extends \Google\Model
 {
-  /**
-   * @var DatamigrationEmpty
-   */
-  public $uuidFromBytes;
   protected $uuidFromBytesType = DatamigrationEmpty::class;
   protected $uuidFromBytesDataType = '';
 
