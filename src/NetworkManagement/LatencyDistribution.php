@@ -20,10 +20,6 @@ namespace Google\Service\NetworkManagement;
 class LatencyDistribution extends \Google\Collection
 {
   protected $collection_key = 'latencyPercentiles';
-  /**
-   * @var LatencyPercentile[]
-   */
-  public $latencyPercentiles;
   protected $latencyPercentilesType = LatencyPercentile::class;
   protected $latencyPercentilesDataType = 'array';
 

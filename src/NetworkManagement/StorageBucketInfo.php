@@ -17,43 +17,28 @@
 
 namespace Google\Service\NetworkManagement;
 
-class Trace extends \Google\Collection
+class StorageBucketInfo extends \Google\Model
 {
-  protected $collection_key = 'steps';
-  protected $endpointInfoType = EndpointInfo::class;
-  protected $endpointInfoDataType = '';
-  protected $stepsType = Step::class;
-  protected $stepsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $bucket;
 
   /**
-   * @param EndpointInfo
+   * @param string
    */
-  public function setEndpointInfo(EndpointInfo $endpointInfo)
+  public function setBucket($bucket)
   {
-    $this->endpointInfo = $endpointInfo;
+    $this->bucket = $bucket;
   }
   /**
-   * @return EndpointInfo
+   * @return string
    */
-  public function getEndpointInfo()
+  public function getBucket()
   {
-    return $this->endpointInfo;
-  }
-  /**
-   * @param Step[]
-   */
-  public function setSteps($steps)
-  {
-    $this->steps = $steps;
-  }
-  /**
-   * @return Step[]
-   */
-  public function getSteps()
-  {
-    return $this->steps;
+    return $this->bucket;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Trace::class, 'Google_Service_NetworkManagement_Trace');
+class_alias(StorageBucketInfo::class, 'Google_Service_NetworkManagement_StorageBucketInfo');
