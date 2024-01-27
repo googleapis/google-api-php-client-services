@@ -19,10 +19,6 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1GetConfigResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudMlV1Config
-   */
-  public $config;
   protected $configType = GoogleCloudMlV1Config::class;
   protected $configDataType = '';
   /**

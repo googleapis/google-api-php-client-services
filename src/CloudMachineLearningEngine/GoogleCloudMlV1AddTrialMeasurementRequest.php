@@ -19,10 +19,6 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1AddTrialMeasurementRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudMlV1Measurement
-   */
-  public $measurement;
   protected $measurementType = GoogleCloudMlV1Measurement::class;
   protected $measurementDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1ReplicaConfig extends \Google\Collection
 {
   protected $collection_key = 'containerCommand';
-  /**
-   * @var GoogleCloudMlV1AcceleratorConfig
-   */
-  public $acceleratorConfig;
   protected $acceleratorConfigType = GoogleCloudMlV1AcceleratorConfig::class;
   protected $acceleratorConfigDataType = '';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudMlV1ReplicaConfig extends \Google\Collection
    * @var string[]
    */
   public $containerCommand;
-  /**
-   * @var GoogleCloudMlV1DiskConfig
-   */
-  public $diskConfig;
   protected $diskConfigType = GoogleCloudMlV1DiskConfig::class;
   protected $diskConfigDataType = '';
   /**

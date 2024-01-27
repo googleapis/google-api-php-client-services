@@ -20,10 +20,6 @@ namespace Google\Service\CloudMachineLearningEngine;
 class GoogleCloudMlV1TrainingOutput extends \Google\Collection
 {
   protected $collection_key = 'trials';
-  /**
-   * @var GoogleCloudMlV1BuiltInAlgorithmOutput
-   */
-  public $builtInAlgorithmOutput;
   protected $builtInAlgorithmOutputType = GoogleCloudMlV1BuiltInAlgorithmOutput::class;
   protected $builtInAlgorithmOutputDataType = '';
   /**
@@ -43,10 +39,6 @@ class GoogleCloudMlV1TrainingOutput extends \Google\Collection
    * @var bool
    */
   public $isHyperparameterTuningJob;
-  /**
-   * @var GoogleCloudMlV1HyperparameterOutput[]
-   */
-  public $trials;
   protected $trialsType = GoogleCloudMlV1HyperparameterOutput::class;
   protected $trialsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\CloudMachineLearningEngine;
 
 class GoogleCloudMlV1PredictRequest extends \Google\Model
 {
-  /**
-   * @var GoogleApiHttpBody
-   */
-  public $httpBody;
   protected $httpBodyType = GoogleApiHttpBody::class;
   protected $httpBodyDataType = '';
 
