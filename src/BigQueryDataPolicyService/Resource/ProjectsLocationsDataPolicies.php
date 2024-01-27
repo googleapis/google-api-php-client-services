@@ -47,6 +47,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @param DataPolicy $postBody
    * @param array $optParams Optional parameters.
    * @return DataPolicy
+   * @throws \Google\Service\Exception
    */
   public function create($parent, DataPolicy $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * ta_policy_id}`.
    * @param array $optParams Optional parameters.
    * @return BigquerydatapolicyEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -77,6 +79,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * ta_policy_id}`.
    * @param array $optParams Optional parameters.
    * @return DataPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -95,6 +98,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -122,6 +126,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @opt_param string pageToken The `nextPageToken` value returned from a
    * previous list request, if any. If not set, defaults to an empty string.
    * @return ListDataPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDataPolicies($parent, $optParams = [])
   {
@@ -145,6 +150,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * of the fields that are allowed to update. Updates to the `name` and
    * `dataPolicyId` fields are not allowed.
    * @return DataPolicy
+   * @throws \Google\Service\Exception
    */
   public function patch($name, DataPolicy $postBody, $optParams = [])
   {
@@ -162,6 +168,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @param RenameDataPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataPolicy
+   * @throws \Google\Service\Exception
    */
   public function rename($name, RenameDataPolicyRequest $postBody, $optParams = [])
   {
@@ -180,6 +187,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -198,6 +206,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

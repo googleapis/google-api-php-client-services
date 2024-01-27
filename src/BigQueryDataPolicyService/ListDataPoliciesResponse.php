@@ -20,10 +20,6 @@ namespace Google\Service\BigQueryDataPolicyService;
 class ListDataPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'dataPolicies';
-  /**
-   * @var DataPolicy[]
-   */
-  public $dataPolicies;
   protected $dataPoliciesType = DataPolicy::class;
   protected $dataPoliciesDataType = 'array';
   /**
