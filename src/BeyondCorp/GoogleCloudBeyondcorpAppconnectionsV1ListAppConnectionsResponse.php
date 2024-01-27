@@ -20,10 +20,6 @@ namespace Google\Service\BeyondCorp;
 class GoogleCloudBeyondcorpAppconnectionsV1ListAppConnectionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var GoogleCloudBeyondcorpAppconnectionsV1AppConnection[]
-   */
-  public $appConnections;
   protected $appConnectionsType = GoogleCloudBeyondcorpAppconnectionsV1AppConnection::class;
   protected $appConnectionsDataType = 'array';
   /**

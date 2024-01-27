@@ -23,10 +23,6 @@ class GoogleCloudBeyondcorpAppconnectorsV1ReportStatusRequest extends \Google\Mo
    * @var string
    */
   public $requestId;
-  /**
-   * @var GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo
-   */
-  public $resourceInfo;
   protected $resourceInfoType = GoogleCloudBeyondcorpAppconnectorsV1ResourceInfo::class;
   protected $resourceInfoDataType = '';
   /**

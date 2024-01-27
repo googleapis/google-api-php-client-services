@@ -19,10 +19,6 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfo extends \Google\Model
 {
-  /**
-   * @var GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount
-   */
-  public $serviceAccount;
   protected $serviceAccountType = GoogleCloudBeyondcorpAppconnectorsV1AppConnectorPrincipalInfoServiceAccount::class;
   protected $serviceAccountDataType = '';
 

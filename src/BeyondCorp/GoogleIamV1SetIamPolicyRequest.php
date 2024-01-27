@@ -19,10 +19,6 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleIamV1SetIamPolicyRequest extends \Google\Model
 {
-  /**
-   * @var GoogleIamV1Policy
-   */
-  public $policy;
   protected $policyType = GoogleIamV1Policy::class;
   protected $policyDataType = '';
   /**

@@ -28,10 +28,6 @@ class CloudSecurityZerotrustApplinkAppConnectorProtoConnectionConfig extends \Go
    * @var string
    */
   public $applicationName;
-  /**
-   * @var CloudSecurityZerotrustApplinkAppConnectorProtoGateway[]
-   */
-  public $gateway;
   protected $gatewayType = CloudSecurityZerotrustApplinkAppConnectorProtoGateway::class;
   protected $gatewayDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\BeyondCorp;
 class ListAppGatewaysResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var AppGateway[]
-   */
-  public $appGateways;
   protected $appGatewaysType = AppGateway::class;
   protected $appGatewaysDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\BeyondCorp;
 
 class GoogleCloudBeyondcorpAppconnectorsV1ResolveInstanceConfigResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig
-   */
-  public $instanceConfig;
   protected $instanceConfigType = GoogleCloudBeyondcorpAppconnectorsV1AppConnectorInstanceConfig::class;
   protected $instanceConfigDataType = '';
 
