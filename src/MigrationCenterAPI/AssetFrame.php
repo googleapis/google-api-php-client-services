@@ -28,16 +28,8 @@ class AssetFrame extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  /**
-   * @var MachineDetails
-   */
-  public $machineDetails;
   protected $machineDetailsType = MachineDetails::class;
   protected $machineDetailsDataType = '';
-  /**
-   * @var PerformanceSample[]
-   */
-  public $performanceSamples;
   protected $performanceSamplesType = PerformanceSample::class;
   protected $performanceSamplesDataType = 'array';
   /**

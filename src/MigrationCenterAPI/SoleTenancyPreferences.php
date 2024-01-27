@@ -29,10 +29,6 @@ class SoleTenancyPreferences extends \Google\Collection
    * @var string
    */
   public $hostMaintenancePolicy;
-  /**
-   * @var SoleTenantNodeType[]
-   */
-  public $nodeTypes;
   protected $nodeTypesType = SoleTenantNodeType::class;
   protected $nodeTypesDataType = 'array';
 

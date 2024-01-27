@@ -31,10 +31,6 @@ class BiosDetails extends \Google\Model
    * @var string
    */
   public $manufacturer;
-  /**
-   * @var Date
-   */
-  public $releaseDate;
   protected $releaseDateType = Date::class;
   protected $releaseDateDataType = '';
   /**

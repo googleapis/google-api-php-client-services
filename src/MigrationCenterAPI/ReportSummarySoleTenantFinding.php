@@ -28,10 +28,6 @@ class ReportSummarySoleTenantFinding extends \Google\Collection
    * @var string[]
    */
   public $allocatedRegions;
-  /**
-   * @var ReportSummarySoleTenantNodeAllocation[]
-   */
-  public $nodeAllocations;
   protected $nodeAllocationsType = ReportSummarySoleTenantNodeAllocation::class;
   protected $nodeAllocationsDataType = 'array';
 

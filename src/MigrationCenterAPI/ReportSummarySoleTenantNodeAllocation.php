@@ -23,10 +23,6 @@ class ReportSummarySoleTenantNodeAllocation extends \Google\Model
    * @var string
    */
   public $allocatedAssetCount;
-  /**
-   * @var SoleTenantNodeType
-   */
-  public $node;
   protected $nodeType = SoleTenantNodeType::class;
   protected $nodeDataType = '';
   /**

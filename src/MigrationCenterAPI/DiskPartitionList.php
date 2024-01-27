@@ -20,10 +20,6 @@ namespace Google\Service\MigrationCenterAPI;
 class DiskPartitionList extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var DiskPartition[]
-   */
-  public $entries;
   protected $entriesType = DiskPartition::class;
   protected $entriesDataType = 'array';
 

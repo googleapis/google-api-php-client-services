@@ -19,10 +19,6 @@ namespace Google\Service\MigrationCenterAPI;
 
 class MachineDiskDetails extends \Google\Model
 {
-  /**
-   * @var DiskEntryList
-   */
-  public $disks;
   protected $disksType = DiskEntryList::class;
   protected $disksDataType = '';
   /**

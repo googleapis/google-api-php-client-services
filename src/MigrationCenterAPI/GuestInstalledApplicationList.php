@@ -20,10 +20,6 @@ namespace Google\Service\MigrationCenterAPI;
 class GuestInstalledApplicationList extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var GuestInstalledApplication[]
-   */
-  public $entries;
   protected $entriesType = GuestInstalledApplication::class;
   protected $entriesDataType = 'array';
 

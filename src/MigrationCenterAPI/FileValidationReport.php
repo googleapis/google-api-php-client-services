@@ -20,10 +20,6 @@ namespace Google\Service\MigrationCenterAPI;
 class FileValidationReport extends \Google\Collection
 {
   protected $collection_key = 'rowErrors';
-  /**
-   * @var ImportError[]
-   */
-  public $fileErrors;
   protected $fileErrorsType = ImportError::class;
   protected $fileErrorsDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class FileValidationReport extends \Google\Collection
    * @var bool
    */
   public $partialReport;
-  /**
-   * @var ImportRowError[]
-   */
-  public $rowErrors;
   protected $rowErrorsType = ImportRowError::class;
   protected $rowErrorsDataType = 'array';
 

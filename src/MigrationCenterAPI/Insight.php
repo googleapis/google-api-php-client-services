@@ -19,16 +19,8 @@ namespace Google\Service\MigrationCenterAPI;
 
 class Insight extends \Google\Model
 {
-  /**
-   * @var GenericInsight
-   */
-  public $genericInsight;
   protected $genericInsightType = GenericInsight::class;
   protected $genericInsightDataType = '';
-  /**
-   * @var MigrationInsight
-   */
-  public $migrationInsight;
   protected $migrationInsightType = MigrationInsight::class;
   protected $migrationInsightDataType = '';
 

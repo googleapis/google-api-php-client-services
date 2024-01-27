@@ -20,10 +20,6 @@ namespace Google\Service\MigrationCenterAPI;
 class ReportSummaryHistogramChartData extends \Google\Collection
 {
   protected $collection_key = 'buckets';
-  /**
-   * @var ReportSummaryHistogramChartDataBucket[]
-   */
-  public $buckets;
   protected $bucketsType = ReportSummaryHistogramChartDataBucket::class;
   protected $bucketsDataType = 'array';
 

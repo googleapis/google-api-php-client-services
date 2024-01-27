@@ -39,10 +39,6 @@ class ImportDataFile extends \Google\Model
    * @var string
    */
   public $state;
-  /**
-   * @var UploadFileInfo
-   */
-  public $uploadFileInfo;
   protected $uploadFileInfoType = UploadFileInfo::class;
   protected $uploadFileInfoDataType = '';
 

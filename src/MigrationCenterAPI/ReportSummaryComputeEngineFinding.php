@@ -32,10 +32,6 @@ class ReportSummaryComputeEngineFinding extends \Google\Collection
    * @var string[]
    */
   public $allocatedRegions;
-  /**
-   * @var ReportSummaryMachineSeriesAllocation[]
-   */
-  public $machineSeriesAllocations;
   protected $machineSeriesAllocationsType = ReportSummaryMachineSeriesAllocation::class;
   protected $machineSeriesAllocationsDataType = 'array';
 

@@ -24,10 +24,6 @@ class ListReportConfigsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ReportConfig[]
-   */
-  public $reportConfigs;
   protected $reportConfigsType = ReportConfig::class;
   protected $reportConfigsDataType = 'array';
   /**

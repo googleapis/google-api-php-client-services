@@ -19,10 +19,6 @@ namespace Google\Service\MigrationCenterAPI;
 
 class MachineArchitectureDetails extends \Google\Model
 {
-  /**
-   * @var BiosDetails
-   */
-  public $bios;
   protected $biosType = BiosDetails::class;
   protected $biosDataType = '';
   /**

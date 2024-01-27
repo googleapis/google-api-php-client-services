@@ -32,10 +32,6 @@ class ReportConfig extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var ReportConfigGroupPreferenceSetAssignment[]
-   */
-  public $groupPreferencesetAssignments;
   protected $groupPreferencesetAssignmentsType = ReportConfigGroupPreferenceSetAssignment::class;
   protected $groupPreferencesetAssignmentsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\MigrationCenterAPI;
 class ListErrorFramesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var ErrorFrame[]
-   */
-  public $errorFrames;
   protected $errorFramesType = ErrorFrame::class;
   protected $errorFramesDataType = 'array';
   /**

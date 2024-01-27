@@ -20,10 +20,6 @@ namespace Google\Service\MigrationCenterAPI;
 class DiskEntryList extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var DiskEntry[]
-   */
-  public $entries;
   protected $entriesType = DiskEntry::class;
   protected $entriesDataType = 'array';
 

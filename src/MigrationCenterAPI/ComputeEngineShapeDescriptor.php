@@ -40,10 +40,6 @@ class ComputeEngineShapeDescriptor extends \Google\Collection
    * @var string
    */
   public $series;
-  /**
-   * @var ComputeStorageDescriptor[]
-   */
-  public $storage;
   protected $storageType = ComputeStorageDescriptor::class;
   protected $storageDataType = 'array';
 

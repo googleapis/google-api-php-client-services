@@ -39,10 +39,6 @@ class Report extends \Google\Model
    * @var string
    */
   public $state;
-  /**
-   * @var ReportSummary
-   */
-  public $summary;
   protected $summaryType = ReportSummary::class;
   protected $summaryDataType = '';
   /**
