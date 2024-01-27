@@ -20,10 +20,6 @@ namespace Google\Service\ArtifactRegistry;
 class ListMavenArtifactsResponse extends \Google\Collection
 {
   protected $collection_key = 'mavenArtifacts';
-  /**
-   * @var MavenArtifact[]
-   */
-  public $mavenArtifacts;
   protected $mavenArtifactsType = MavenArtifact::class;
   protected $mavenArtifactsDataType = 'array';
   /**

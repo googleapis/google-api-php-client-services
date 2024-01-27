@@ -19,10 +19,6 @@ namespace Google\Service\ArtifactRegistry;
 
 class UpstreamCredentials extends \Google\Model
 {
-  /**
-   * @var UsernamePasswordCredentials
-   */
-  public $usernamePasswordCredentials;
   protected $usernamePasswordCredentialsType = UsernamePasswordCredentials::class;
   protected $usernamePasswordCredentialsDataType = '';
 

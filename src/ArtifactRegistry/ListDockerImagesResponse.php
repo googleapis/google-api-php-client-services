@@ -20,10 +20,6 @@ namespace Google\Service\ArtifactRegistry;
 class ListDockerImagesResponse extends \Google\Collection
 {
   protected $collection_key = 'dockerImages';
-  /**
-   * @var DockerImage[]
-   */
-  public $dockerImages;
   protected $dockerImagesType = DockerImage::class;
   protected $dockerImagesDataType = 'array';
   /**

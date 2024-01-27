@@ -41,6 +41,7 @@ class ProjectsLocationsRepositoriesPackagesVersions extends \Google\Service\Reso
    * @param BatchDeleteVersionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function batchDelete($parent, BatchDeleteVersionsRequest $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsLocationsRepositoriesPackagesVersions extends \Google\Service\Reso
    * deleted. If force=true, the version and any tags pointing to the version are
    * deleted.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsLocationsRepositoriesPackagesVersions extends \Google\Service\Reso
    *
    * @opt_param string view The view that should be returned in the response.
    * @return Version
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -95,6 +98,7 @@ class ProjectsLocationsRepositoriesPackagesVersions extends \Google\Service\Reso
    * previous list request, if any.
    * @opt_param string view The view that should be returned in the response.
    * @return ListVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsRepositoriesPackagesVersions($parent, $optParams = [])
   {

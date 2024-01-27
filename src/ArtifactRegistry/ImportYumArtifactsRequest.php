@@ -19,10 +19,6 @@ namespace Google\Service\ArtifactRegistry;
 
 class ImportYumArtifactsRequest extends \Google\Model
 {
-  /**
-   * @var ImportYumArtifactsGcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = ImportYumArtifactsGcsSource::class;
   protected $gcsSourceDataType = '';
 

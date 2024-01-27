@@ -24,10 +24,6 @@ class ListNpmPackagesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var NpmPackage[]
-   */
-  public $npmPackages;
   protected $npmPackagesType = NpmPackage::class;
   protected $npmPackagesDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\ArtifactRegistry;
 
 class UploadYumArtifactMediaResponse extends \Google\Model
 {
-  /**
-   * @var Operation
-   */
-  public $operation;
   protected $operationType = Operation::class;
   protected $operationDataType = '';
 

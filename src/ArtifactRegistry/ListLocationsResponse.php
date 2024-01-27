@@ -20,10 +20,6 @@ namespace Google\Service\ArtifactRegistry;
 class ListLocationsResponse extends \Google\Collection
 {
   protected $collection_key = 'locations';
-  /**
-   * @var Location[]
-   */
-  public $locations;
   protected $locationsType = Location::class;
   protected $locationsDataType = 'array';
   /**

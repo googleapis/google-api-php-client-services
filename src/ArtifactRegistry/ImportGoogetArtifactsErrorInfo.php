@@ -19,16 +19,8 @@ namespace Google\Service\ArtifactRegistry;
 
 class ImportGoogetArtifactsErrorInfo extends \Google\Model
 {
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
-  /**
-   * @var ImportGoogetArtifactsGcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = ImportGoogetArtifactsGcsSource::class;
   protected $gcsSourceDataType = '';
 

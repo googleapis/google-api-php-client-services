@@ -19,10 +19,6 @@ namespace Google\Service\ArtifactRegistry;
 
 class YumRepository extends \Google\Model
 {
-  /**
-   * @var GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository
-   */
-  public $publicRepository;
   protected $publicRepositoryType = GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryPublicRepository::class;
   protected $publicRepositoryDataType = '';
 

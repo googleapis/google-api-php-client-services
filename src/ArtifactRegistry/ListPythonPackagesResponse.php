@@ -24,10 +24,6 @@ class ListPythonPackagesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PythonPackage[]
-   */
-  public $pythonPackages;
   protected $pythonPackagesType = PythonPackage::class;
   protected $pythonPackagesDataType = 'array';
 

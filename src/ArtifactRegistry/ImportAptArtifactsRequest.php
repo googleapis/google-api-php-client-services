@@ -19,10 +19,6 @@ namespace Google\Service\ArtifactRegistry;
 
 class ImportAptArtifactsRequest extends \Google\Model
 {
-  /**
-   * @var ImportAptArtifactsGcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = ImportAptArtifactsGcsSource::class;
   protected $gcsSourceDataType = '';
 

@@ -41,6 +41,7 @@ class ProjectsLocationsRepositoriesPackagesTags extends \Google\Service\Resource
    *
    * @opt_param string tagId The tag id to use for this repository.
    * @return Tag
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Tag $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class ProjectsLocationsRepositoriesPackagesTags extends \Google\Service\Resource
    * @param string $name The name of the tag to delete.
    * @param array $optParams Optional parameters.
    * @return ArtifactregistryEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -67,6 +69,7 @@ class ProjectsLocationsRepositoriesPackagesTags extends \Google\Service\Resource
    * @param string $name The name of the tag to retrieve.
    * @param array $optParams Optional parameters.
    * @return Tag
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -93,6 +96,7 @@ class ProjectsLocationsRepositoriesPackagesTags extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request, if any.
    * @return ListTagsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsRepositoriesPackagesTags($parent, $optParams = [])
   {
@@ -115,6 +119,7 @@ class ProjectsLocationsRepositoriesPackagesTags extends \Google\Service\Resource
    * `FieldMask` definition, see https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask
    * @return Tag
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Tag $postBody, $optParams = [])
   {

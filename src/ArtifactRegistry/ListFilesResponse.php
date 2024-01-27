@@ -20,10 +20,6 @@ namespace Google\Service\ArtifactRegistry;
 class ListFilesResponse extends \Google\Collection
 {
   protected $collection_key = 'files';
-  /**
-   * @var GoogleDevtoolsArtifactregistryV1File[]
-   */
-  public $files;
   protected $filesType = GoogleDevtoolsArtifactregistryV1File::class;
   protected $filesDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\ArtifactRegistry;
 
 class AptRepository extends \Google\Model
 {
-  /**
-   * @var GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepositoryPublicRepository
-   */
-  public $publicRepository;
   protected $publicRepositoryType = GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepositoryPublicRepository::class;
   protected $publicRepositoryDataType = '';
 

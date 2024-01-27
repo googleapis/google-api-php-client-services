@@ -20,10 +20,6 @@ namespace Google\Service\ArtifactRegistry;
 class UploadGoogetArtifactResponse extends \Google\Collection
 {
   protected $collection_key = 'googetArtifacts';
-  /**
-   * @var GoogetArtifact[]
-   */
-  public $googetArtifacts;
   protected $googetArtifactsType = GoogetArtifact::class;
   protected $googetArtifactsDataType = 'array';
 
