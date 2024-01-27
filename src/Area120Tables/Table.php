@@ -20,10 +20,6 @@ namespace Google\Service\Area120Tables;
 class Table extends \Google\Collection
 {
   protected $collection_key = 'savedViews';
-  /**
-   * @var ColumnDescription[]
-   */
-  public $columns;
   protected $columnsType = ColumnDescription::class;
   protected $columnsDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class Table extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var SavedView[]
-   */
-  public $savedViews;
   protected $savedViewsType = SavedView::class;
   protected $savedViewsDataType = 'array';
   /**

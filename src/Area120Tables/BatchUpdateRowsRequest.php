@@ -20,10 +20,6 @@ namespace Google\Service\Area120Tables;
 class BatchUpdateRowsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var UpdateRowRequest[]
-   */
-  public $requests;
   protected $requestsType = UpdateRowRequest::class;
   protected $requestsDataType = 'array';
 

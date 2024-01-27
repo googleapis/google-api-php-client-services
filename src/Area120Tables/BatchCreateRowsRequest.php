@@ -20,10 +20,6 @@ namespace Google\Service\Area120Tables;
 class BatchCreateRowsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var CreateRowRequest[]
-   */
-  public $requests;
   protected $requestsType = CreateRowRequest::class;
   protected $requestsDataType = 'array';
 

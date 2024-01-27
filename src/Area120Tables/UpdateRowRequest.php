@@ -19,10 +19,6 @@ namespace Google\Service\Area120Tables;
 
 class UpdateRowRequest extends \Google\Model
 {
-  /**
-   * @var Row
-   */
-  public $row;
   protected $rowType = Row::class;
   protected $rowDataType = '';
   /**
