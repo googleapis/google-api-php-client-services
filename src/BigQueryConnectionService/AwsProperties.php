@@ -19,10 +19,6 @@ namespace Google\Service\BigQueryConnectionService;
 
 class AwsProperties extends \Google\Model
 {
-  /**
-   * @var AwsAccessRole
-   */
-  public $accessRole;
   protected $accessRoleType = AwsAccessRole::class;
   protected $accessRoleDataType = '';
 

@@ -19,20 +19,12 @@ namespace Google\Service\BigQueryConnectionService;
 
 class SparkProperties extends \Google\Model
 {
-  /**
-   * @var MetastoreServiceConfig
-   */
-  public $metastoreServiceConfig;
   protected $metastoreServiceConfigType = MetastoreServiceConfig::class;
   protected $metastoreServiceConfigDataType = '';
   /**
    * @var string
    */
   public $serviceAccountId;
-  /**
-   * @var SparkHistoryServerConfig
-   */
-  public $sparkHistoryServerConfig;
   protected $sparkHistoryServerConfigType = SparkHistoryServerConfig::class;
   protected $sparkHistoryServerConfigDataType = '';
 

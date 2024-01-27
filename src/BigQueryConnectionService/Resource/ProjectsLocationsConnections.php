@@ -47,6 +47,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @opt_param string connectionId Optional. Connection id that should be
    * assigned to the created connection.
    * @return Connection
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Connection $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
    * @param array $optParams Optional parameters.
    * @return BigqueryconnectionEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -75,6 +77,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}/connections/{connection_id}`
    * @param array $optParams Optional parameters.
    * @return Connection
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -93,6 +96,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -111,6 +115,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @opt_param int pageSize Required. Page size.
    * @opt_param string pageToken Page token.
    * @return ListConnectionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsConnections($parent, $optParams = [])
   {
@@ -131,6 +136,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @opt_param string updateMask Required. Update mask for the connection fields
    * to be updated.
    * @return Connection
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Connection $postBody, $optParams = [])
   {
@@ -150,6 +156,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -172,6 +179,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
