@@ -19,16 +19,8 @@ namespace Google\Service\Spanner;
 
 class DirectedReadOptions extends \Google\Model
 {
-  /**
-   * @var ExcludeReplicas
-   */
-  public $excludeReplicas;
   protected $excludeReplicasType = ExcludeReplicas::class;
   protected $excludeReplicasDataType = '';
-  /**
-   * @var IncludeReplicas
-   */
-  public $includeReplicas;
   protected $includeReplicasType = IncludeReplicas::class;
   protected $includeReplicasDataType = '';
 

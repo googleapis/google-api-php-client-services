@@ -19,10 +19,6 @@ namespace Google\Service\Spanner;
 
 class UpdateDatabaseRequest extends \Google\Model
 {
-  /**
-   * @var Database
-   */
-  public $database;
   protected $databaseType = Database::class;
   protected $databaseDataType = '';
   /**

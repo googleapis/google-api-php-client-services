@@ -24,20 +24,12 @@ class PartialResultSet extends \Google\Collection
    * @var bool
    */
   public $chunkedValue;
-  /**
-   * @var ResultSetMetadata
-   */
-  public $metadata;
   protected $metadataType = ResultSetMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var string
    */
   public $resumeToken;
-  /**
-   * @var ResultSetStats
-   */
-  public $stats;
   protected $statsType = ResultSetStats::class;
   protected $statsDataType = '';
   /**

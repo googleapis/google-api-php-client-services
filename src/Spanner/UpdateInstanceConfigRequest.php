@@ -19,10 +19,6 @@ namespace Google\Service\Spanner;
 
 class UpdateInstanceConfigRequest extends \Google\Model
 {
-  /**
-   * @var InstanceConfig
-   */
-  public $instanceConfig;
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**

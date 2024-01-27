@@ -19,16 +19,8 @@ namespace Google\Service\Spanner;
 
 class DiagnosticMessage extends \Google\Model
 {
-  /**
-   * @var LocalizedString
-   */
-  public $info;
   protected $infoType = LocalizedString::class;
   protected $infoDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $metric;
   protected $metricType = LocalizedString::class;
   protected $metricDataType = '';
   /**
@@ -39,10 +31,6 @@ class DiagnosticMessage extends \Google\Model
    * @var string
    */
   public $severity;
-  /**
-   * @var LocalizedString
-   */
-  public $shortMessage;
   protected $shortMessageType = LocalizedString::class;
   protected $shortMessageDataType = '';
 

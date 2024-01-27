@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class MetricMatrix extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * @var MetricMatrixRow[]
-   */
-  public $rows;
   protected $rowsType = MetricMatrixRow::class;
   protected $rowsDataType = 'array';
 

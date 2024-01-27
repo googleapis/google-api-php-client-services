@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class PlanNode extends \Google\Collection
 {
   protected $collection_key = 'childLinks';
-  /**
-   * @var ChildLink[]
-   */
-  public $childLinks;
   protected $childLinksType = ChildLink::class;
   protected $childLinksDataType = 'array';
   /**
@@ -46,10 +42,6 @@ class PlanNode extends \Google\Collection
    * @var array[]
    */
   public $metadata;
-  /**
-   * @var ShortRepresentation
-   */
-  public $shortRepresentation;
   protected $shortRepresentationType = ShortRepresentation::class;
   protected $shortRepresentationDataType = '';
 

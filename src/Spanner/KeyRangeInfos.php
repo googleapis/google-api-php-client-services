@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class KeyRangeInfos extends \Google\Collection
 {
   protected $collection_key = 'infos';
-  /**
-   * @var KeyRangeInfo[]
-   */
-  public $infos;
   protected $infosType = KeyRangeInfo::class;
   protected $infosDataType = 'array';
   /**

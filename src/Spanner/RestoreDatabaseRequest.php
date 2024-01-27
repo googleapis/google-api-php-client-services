@@ -27,10 +27,6 @@ class RestoreDatabaseRequest extends \Google\Model
    * @var string
    */
   public $databaseId;
-  /**
-   * @var RestoreDatabaseEncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = RestoreDatabaseEncryptionConfig::class;
   protected $encryptionConfigDataType = '';
 

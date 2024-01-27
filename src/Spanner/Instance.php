@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class Instance extends \Google\Collection
 {
   protected $collection_key = 'endpointUris';
-  /**
-   * @var AutoscalingConfig
-   */
-  public $autoscalingConfig;
   protected $autoscalingConfigType = AutoscalingConfig::class;
   protected $autoscalingConfigDataType = '';
   /**
@@ -42,10 +38,6 @@ class Instance extends \Google\Collection
    * @var string[]
    */
   public $endpointUris;
-  /**
-   * @var FreeInstanceMetadata
-   */
-  public $freeInstanceMetadata;
   protected $freeInstanceMetadataType = FreeInstanceMetadata::class;
   protected $freeInstanceMetadataDataType = '';
   /**

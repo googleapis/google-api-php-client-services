@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class ListDatabaseRolesResponse extends \Google\Collection
 {
   protected $collection_key = 'databaseRoles';
-  /**
-   * @var DatabaseRole[]
-   */
-  public $databaseRoles;
   protected $databaseRolesType = DatabaseRole::class;
   protected $databaseRolesDataType = 'array';
   /**

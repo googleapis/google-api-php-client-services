@@ -19,10 +19,6 @@ namespace Google\Service\Spanner;
 
 class Delete extends \Google\Model
 {
-  /**
-   * @var KeySet
-   */
-  public $keySet;
   protected $keySetType = KeySet::class;
   protected $keySetDataType = '';
   /**

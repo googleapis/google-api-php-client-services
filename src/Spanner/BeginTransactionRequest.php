@@ -19,16 +19,8 @@ namespace Google\Service\Spanner;
 
 class BeginTransactionRequest extends \Google\Model
 {
-  /**
-   * @var TransactionOptions
-   */
-  public $options;
   protected $optionsType = TransactionOptions::class;
   protected $optionsDataType = '';
-  /**
-   * @var RequestOptions
-   */
-  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
 

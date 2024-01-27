@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class BatchCreateSessionsResponse extends \Google\Collection
 {
   protected $collection_key = 'session';
-  /**
-   * @var Session[]
-   */
-  public $session;
   protected $sessionType = Session::class;
   protected $sessionDataType = 'array';
 

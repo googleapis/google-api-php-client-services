@@ -20,16 +20,8 @@ namespace Google\Service\Spanner;
 class ExecuteBatchDmlResponse extends \Google\Collection
 {
   protected $collection_key = 'resultSets';
-  /**
-   * @var ResultSet[]
-   */
-  public $resultSets;
   protected $resultSetsType = ResultSet::class;
   protected $resultSetsDataType = 'array';
-  /**
-   * @var Status
-   */
-  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = '';
 

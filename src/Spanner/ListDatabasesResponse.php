@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class ListDatabasesResponse extends \Google\Collection
 {
   protected $collection_key = 'databases';
-  /**
-   * @var Database[]
-   */
-  public $databases;
   protected $databasesType = Database::class;
   protected $databasesDataType = 'array';
   /**

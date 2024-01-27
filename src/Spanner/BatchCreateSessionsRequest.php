@@ -23,10 +23,6 @@ class BatchCreateSessionsRequest extends \Google\Model
    * @var int
    */
   public $sessionCount;
-  /**
-   * @var Session
-   */
-  public $sessionTemplate;
   protected $sessionTemplateType = Session::class;
   protected $sessionTemplateDataType = '';
 

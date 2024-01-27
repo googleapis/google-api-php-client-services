@@ -23,10 +23,6 @@ class Field extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var Type
-   */
-  public $type;
   protected $typeType = Type::class;
   protected $typeDataType = '';
 

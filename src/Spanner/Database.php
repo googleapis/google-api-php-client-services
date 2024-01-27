@@ -40,16 +40,8 @@ class Database extends \Google\Collection
    * @var bool
    */
   public $enableDropProtection;
-  /**
-   * @var EncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
-  /**
-   * @var EncryptionInfo[]
-   */
-  public $encryptionInfo;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = 'array';
   /**
@@ -60,10 +52,6 @@ class Database extends \Google\Collection
    * @var bool
    */
   public $reconciling;
-  /**
-   * @var RestoreInfo
-   */
-  public $restoreInfo;
   protected $restoreInfoType = RestoreInfo::class;
   protected $restoreInfoDataType = '';
   /**

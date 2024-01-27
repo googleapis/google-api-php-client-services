@@ -19,10 +19,6 @@ namespace Google\Service\Spanner;
 
 class Type extends \Google\Model
 {
-  /**
-   * @var Type
-   */
-  public $arrayElementType;
   protected $arrayElementTypeType = Type::class;
   protected $arrayElementTypeDataType = '';
   /**
@@ -33,10 +29,6 @@ class Type extends \Google\Model
    * @var string
    */
   public $protoTypeFqn;
-  /**
-   * @var StructType
-   */
-  public $structType;
   protected $structTypeType = StructType::class;
   protected $structTypeDataType = '';
   /**

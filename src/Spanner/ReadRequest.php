@@ -28,20 +28,12 @@ class ReadRequest extends \Google\Collection
    * @var bool
    */
   public $dataBoostEnabled;
-  /**
-   * @var DirectedReadOptions
-   */
-  public $directedReadOptions;
   protected $directedReadOptionsType = DirectedReadOptions::class;
   protected $directedReadOptionsDataType = '';
   /**
    * @var string
    */
   public $index;
-  /**
-   * @var KeySet
-   */
-  public $keySet;
   protected $keySetType = KeySet::class;
   protected $keySetDataType = '';
   /**
@@ -52,10 +44,6 @@ class ReadRequest extends \Google\Collection
    * @var string
    */
   public $partitionToken;
-  /**
-   * @var RequestOptions
-   */
-  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
   /**
@@ -66,10 +54,6 @@ class ReadRequest extends \Google\Collection
    * @var string
    */
   public $table;
-  /**
-   * @var TransactionSelector
-   */
-  public $transaction;
   protected $transactionType = TransactionSelector::class;
   protected $transactionDataType = '';
 

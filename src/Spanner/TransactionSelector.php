@@ -19,20 +19,12 @@ namespace Google\Service\Spanner;
 
 class TransactionSelector extends \Google\Model
 {
-  /**
-   * @var TransactionOptions
-   */
-  public $begin;
   protected $beginType = TransactionOptions::class;
   protected $beginDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var TransactionOptions
-   */
-  public $singleUse;
   protected $singleUseType = TransactionOptions::class;
   protected $singleUseDataType = '';
 

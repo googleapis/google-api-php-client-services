@@ -20,20 +20,12 @@ namespace Google\Service\Spanner;
 class ResultSet extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * @var ResultSetMetadata
-   */
-  public $metadata;
   protected $metadataType = ResultSetMetadata::class;
   protected $metadataDataType = '';
   /**
    * @var array[]
    */
   public $rows;
-  /**
-   * @var ResultSetStats
-   */
-  public $stats;
   protected $statsType = ResultSetStats::class;
   protected $statsDataType = '';
 

@@ -28,10 +28,6 @@ class KeySet extends \Google\Collection
    * @var array[]
    */
   public $keys;
-  /**
-   * @var KeyRange[]
-   */
-  public $ranges;
   protected $rangesType = KeyRange::class;
   protected $rangesDataType = 'array';
 

@@ -20,16 +20,8 @@ namespace Google\Service\Spanner;
 class BatchWriteRequest extends \Google\Collection
 {
   protected $collection_key = 'mutationGroups';
-  /**
-   * @var MutationGroup[]
-   */
-  public $mutationGroups;
   protected $mutationGroupsType = MutationGroup::class;
   protected $mutationGroupsDataType = 'array';
-  /**
-   * @var RequestOptions
-   */
-  public $requestOptions;
   protected $requestOptionsType = RequestOptions::class;
   protected $requestOptionsDataType = '';
 

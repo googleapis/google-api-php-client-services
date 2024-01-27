@@ -20,10 +20,6 @@ namespace Google\Service\Spanner;
 class UpdateDatabaseDdlMetadata extends \Google\Collection
 {
   protected $collection_key = 'statements';
-  /**
-   * @var DdlStatementActionInfo[]
-   */
-  public $actions;
   protected $actionsType = DdlStatementActionInfo::class;
   protected $actionsDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class UpdateDatabaseDdlMetadata extends \Google\Collection
    * @var string
    */
   public $database;
-  /**
-   * @var OperationProgress[]
-   */
-  public $progress;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = 'array';
   /**
