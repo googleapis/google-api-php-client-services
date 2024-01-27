@@ -37,6 +37,7 @@ class BuyersPublisherProfiles extends \Google\Service\Resource
    * `buyers/{buyerId}/publisherProfiles/{publisherProfileId}`
    * @param array $optParams Optional parameters.
    * @return PublisherProfile
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -64,6 +65,7 @@ class BuyersPublisherProfiles extends \Google\Service\Resource
    * @opt_param string pageToken The page token as returned from a previous
    * ListPublisherProfilesResponse.
    * @return ListPublisherProfilesResponse
+   * @throws \Google\Service\Exception
    */
   public function listBuyersPublisherProfiles($parent, $optParams = [])
   {

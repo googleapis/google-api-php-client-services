@@ -20,10 +20,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class ListDealsResponse extends \Google\Collection
 {
   protected $collection_key = 'deals';
-  /**
-   * @var Deal[]
-   */
-  public $deals;
   protected $dealsType = Deal::class;
   protected $dealsDataType = 'array';
   /**

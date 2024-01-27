@@ -24,10 +24,6 @@ class ListPublisherProfilesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PublisherProfile[]
-   */
-  public $publisherProfiles;
   protected $publisherProfilesType = PublisherProfile::class;
   protected $publisherProfilesDataType = 'array';
 

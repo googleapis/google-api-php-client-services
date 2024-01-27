@@ -20,10 +20,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class ListAuctionPackagesResponse extends \Google\Collection
 {
   protected $collection_key = 'auctionPackages';
-  /**
-   * @var AuctionPackage[]
-   */
-  public $auctionPackages;
   protected $auctionPackagesType = AuctionPackage::class;
   protected $auctionPackagesDataType = 'array';
   /**

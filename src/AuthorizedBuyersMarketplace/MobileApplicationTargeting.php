@@ -19,10 +19,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class MobileApplicationTargeting extends \Google\Model
 {
-  /**
-   * @var FirstPartyMobileApplicationTargeting
-   */
-  public $firstPartyTargeting;
   protected $firstPartyTargetingType = FirstPartyMobileApplicationTargeting::class;
   protected $firstPartyTargetingDataType = '';
 

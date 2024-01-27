@@ -19,10 +19,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class UpdateDealRequest extends \Google\Model
 {
-  /**
-   * @var Deal
-   */
-  public $deal;
   protected $dealType = Deal::class;
   protected $dealDataType = '';
   /**

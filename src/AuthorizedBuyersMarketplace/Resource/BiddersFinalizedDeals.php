@@ -64,6 +64,7 @@ class BiddersFinalizedDeals extends \Google\Service\Resource
    * @opt_param string pageToken The page token as returned from
    * ListFinalizedDealsResponse.
    * @return ListFinalizedDealsResponse
+   * @throws \Google\Service\Exception
    */
   public function listBiddersFinalizedDeals($parent, $optParams = [])
   {

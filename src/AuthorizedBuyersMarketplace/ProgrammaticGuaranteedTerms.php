@@ -19,10 +19,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class ProgrammaticGuaranteedTerms extends \Google\Model
 {
-  /**
-   * @var Price
-   */
-  public $fixedPrice;
   protected $fixedPriceType = Price::class;
   protected $fixedPriceDataType = '';
   /**

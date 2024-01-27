@@ -28,16 +28,8 @@ class Proposal extends \Google\Collection
    * @var string
    */
   public $buyer;
-  /**
-   * @var Contact[]
-   */
-  public $buyerContacts;
   protected $buyerContactsType = Contact::class;
   protected $buyerContactsDataType = 'array';
-  /**
-   * @var PrivateData
-   */
-  public $buyerPrivateData;
   protected $buyerPrivateDataType = PrivateData::class;
   protected $buyerPrivateDataDataType = '';
   /**
@@ -64,10 +56,6 @@ class Proposal extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Note[]
-   */
-  public $notes;
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
   /**
@@ -86,10 +74,6 @@ class Proposal extends \Google\Collection
    * @var string
    */
   public $publisherProfile;
-  /**
-   * @var Contact[]
-   */
-  public $sellerContacts;
   protected $sellerContactsType = Contact::class;
   protected $sellerContactsDataType = 'array';
   /**

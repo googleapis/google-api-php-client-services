@@ -19,10 +19,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 
 class PrivateAuctionTerms extends \Google\Model
 {
-  /**
-   * @var Price
-   */
-  public $floorPrice;
   protected $floorPriceType = Price::class;
   protected $floorPriceDataType = '';
   /**

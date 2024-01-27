@@ -35,20 +35,12 @@ class Deal extends \Google\Model
    * @var string
    */
   public $createTime;
-  /**
-   * @var CreativeRequirements
-   */
-  public $creativeRequirements;
   protected $creativeRequirementsType = CreativeRequirements::class;
   protected $creativeRequirementsDataType = '';
   /**
    * @var string
    */
   public $dealType;
-  /**
-   * @var DeliveryControl
-   */
-  public $deliveryControl;
   protected $deliveryControlType = DeliveryControl::class;
   protected $deliveryControlDataType = '';
   /**
@@ -59,10 +51,6 @@ class Deal extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var Money
-   */
-  public $estimatedGrossSpend;
   protected $estimatedGrossSpendType = Money::class;
   protected $estimatedGrossSpendDataType = '';
   /**
@@ -77,22 +65,10 @@ class Deal extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var PreferredDealTerms
-   */
-  public $preferredDealTerms;
   protected $preferredDealTermsType = PreferredDealTerms::class;
   protected $preferredDealTermsDataType = '';
-  /**
-   * @var PrivateAuctionTerms
-   */
-  public $privateAuctionTerms;
   protected $privateAuctionTermsType = PrivateAuctionTerms::class;
   protected $privateAuctionTermsDataType = '';
-  /**
-   * @var ProgrammaticGuaranteedTerms
-   */
-  public $programmaticGuaranteedTerms;
   protected $programmaticGuaranteedTermsType = ProgrammaticGuaranteedTerms::class;
   protected $programmaticGuaranteedTermsDataType = '';
   /**
@@ -103,16 +79,8 @@ class Deal extends \Google\Model
    * @var string
    */
   public $publisherProfile;
-  /**
-   * @var TimeZone
-   */
-  public $sellerTimeZone;
   protected $sellerTimeZoneType = TimeZone::class;
   protected $sellerTimeZoneDataType = '';
-  /**
-   * @var MarketplaceTargeting
-   */
-  public $targeting;
   protected $targetingType = MarketplaceTargeting::class;
   protected $targetingDataType = '';
   /**

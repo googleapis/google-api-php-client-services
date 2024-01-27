@@ -20,10 +20,6 @@ namespace Google\Service\AuthorizedBuyersMarketplace;
 class BatchUpdateDealsRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var UpdateDealRequest[]
-   */
-  public $requests;
   protected $requestsType = UpdateDealRequest::class;
   protected $requestsDataType = 'array';
 
