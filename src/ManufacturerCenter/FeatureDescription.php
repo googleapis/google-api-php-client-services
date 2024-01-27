@@ -23,10 +23,6 @@ class FeatureDescription extends \Google\Model
    * @var string
    */
   public $headline;
-  /**
-   * @var Image
-   */
-  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
   /**

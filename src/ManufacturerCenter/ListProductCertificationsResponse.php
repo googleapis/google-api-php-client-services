@@ -24,10 +24,6 @@ class ListProductCertificationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ProductCertification[]
-   */
-  public $productCertifications;
   protected $productCertificationsType = ProductCertification::class;
   protected $productCertificationsDataType = 'array';
 
