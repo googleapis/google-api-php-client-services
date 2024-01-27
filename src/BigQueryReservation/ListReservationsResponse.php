@@ -24,10 +24,6 @@ class ListReservationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Reservation[]
-   */
-  public $reservations;
   protected $reservationsType = Reservation::class;
   protected $reservationsDataType = 'array';
 

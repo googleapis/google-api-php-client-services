@@ -19,10 +19,6 @@ namespace Google\Service\BigQueryReservation;
 
 class Reservation extends \Google\Model
 {
-  /**
-   * @var Autoscale
-   */
-  public $autoscale;
   protected $autoscaleType = Autoscale::class;
   protected $autoscaleDataType = '';
   /**
