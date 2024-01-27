@@ -28,10 +28,6 @@ class VisualizationData extends \Google\Collection
    * @var string
    */
   public $dataSourceSeparatorToken;
-  /**
-   * @var DiagnosticMessage[]
-   */
-  public $diagnosticMessages;
   protected $diagnosticMessagesType = DiagnosticMessage::class;
   protected $diagnosticMessagesDataType = 'array';
   /**
@@ -54,16 +50,8 @@ class VisualizationData extends \Google\Collection
    * @var string
    */
   public $keyUnit;
-  /**
-   * @var Metric[]
-   */
-  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
-  /**
-   * @var PrefixNode[]
-   */
-  public $prefixNodes;
   protected $prefixNodesType = PrefixNode::class;
   protected $prefixNodesDataType = 'array';
 
