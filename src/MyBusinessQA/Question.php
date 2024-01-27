@@ -20,10 +20,6 @@ namespace Google\Service\MyBusinessQA;
 class Question extends \Google\Collection
 {
   protected $collection_key = 'topAnswers';
-  /**
-   * @var Author
-   */
-  public $author;
   protected $authorType = Author::class;
   protected $authorDataType = '';
   /**
@@ -38,10 +34,6 @@ class Question extends \Google\Collection
    * @var string
    */
   public $text;
-  /**
-   * @var Answer[]
-   */
-  public $topAnswers;
   protected $topAnswersType = Answer::class;
   protected $topAnswersDataType = 'array';
   /**

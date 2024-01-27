@@ -19,10 +19,6 @@ namespace Google\Service\MyBusinessQA;
 
 class UpsertAnswerRequest extends \Google\Model
 {
-  /**
-   * @var Answer
-   */
-  public $answer;
   protected $answerType = Answer::class;
   protected $answerDataType = '';
 
