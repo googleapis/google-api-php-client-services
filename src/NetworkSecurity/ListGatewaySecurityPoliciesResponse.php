@@ -20,10 +20,6 @@ namespace Google\Service\NetworkSecurity;
 class ListGatewaySecurityPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var GatewaySecurityPolicy[]
-   */
-  public $gatewaySecurityPolicies;
   protected $gatewaySecurityPoliciesType = GatewaySecurityPolicy::class;
   protected $gatewaySecurityPoliciesDataType = 'array';
   /**

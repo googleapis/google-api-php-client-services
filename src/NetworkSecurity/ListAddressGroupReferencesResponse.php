@@ -20,10 +20,6 @@ namespace Google\Service\NetworkSecurity;
 class ListAddressGroupReferencesResponse extends \Google\Collection
 {
   protected $collection_key = 'addressGroupReferences';
-  /**
-   * @var ListAddressGroupReferencesResponseAddressGroupReference[]
-   */
-  public $addressGroupReferences;
   protected $addressGroupReferencesType = ListAddressGroupReferencesResponseAddressGroupReference::class;
   protected $addressGroupReferencesDataType = 'array';
   /**

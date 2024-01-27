@@ -20,10 +20,6 @@ namespace Google\Service\NetworkSecurity;
 class ListClientTlsPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'clientTlsPolicies';
-  /**
-   * @var ClientTlsPolicy[]
-   */
-  public $clientTlsPolicies;
   protected $clientTlsPoliciesType = ClientTlsPolicy::class;
   protected $clientTlsPoliciesDataType = 'array';
   /**

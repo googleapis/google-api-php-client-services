@@ -19,16 +19,8 @@ namespace Google\Service\NetworkSecurity;
 
 class GoogleCloudNetworksecurityV1CertificateProvider extends \Google\Model
 {
-  /**
-   * @var CertificateProviderInstance
-   */
-  public $certificateProviderInstance;
   protected $certificateProviderInstanceType = CertificateProviderInstance::class;
   protected $certificateProviderInstanceDataType = '';
-  /**
-   * @var GoogleCloudNetworksecurityV1GrpcEndpoint
-   */
-  public $grpcEndpoint;
   protected $grpcEndpointType = GoogleCloudNetworksecurityV1GrpcEndpoint::class;
   protected $grpcEndpointDataType = '';
 

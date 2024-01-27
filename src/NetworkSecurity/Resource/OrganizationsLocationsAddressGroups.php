@@ -44,6 +44,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * @param AddAddressGroupItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addItems($addressGroup, AddAddressGroupItemsRequest $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * @param CloneAddressGroupItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function cloneItems($addressGroup, CloneAddressGroupItemsRequest $postBody, $optParams = [])
   {
@@ -92,6 +94,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, AddressGroup $postBody, $optParams = [])
   {
@@ -118,6 +121,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -132,6 +136,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * the format `projects/locations/{location}/addressGroups`.
    * @param array $optParams Optional parameters.
    * @return AddressGroup
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -154,6 +159,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * `ListAddressGroups` call, and that the system should return the next page of
    * data.
    * @return ListAddressGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsLocationsAddressGroups($parent, $optParams = [])
   {
@@ -176,6 +182,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @return ListAddressGroupReferencesResponse
+   * @throws \Google\Service\Exception
    */
   public function listReferences($addressGroup, $optParams = [])
   {
@@ -208,6 +215,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * full request. A field will be overwritten if it is in the mask. If the user
    * does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, AddressGroup $postBody, $optParams = [])
   {
@@ -224,6 +232,7 @@ class OrganizationsLocationsAddressGroups extends \Google\Service\Resource
    * @param RemoveAddressGroupItemsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function removeItems($addressGroup, RemoveAddressGroupItemsRequest $postBody, $optParams = [])
   {

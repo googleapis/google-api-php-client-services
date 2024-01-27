@@ -28,10 +28,6 @@ class ListUrlListsResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var UrlList[]
-   */
-  public $urlLists;
   protected $urlListsType = UrlList::class;
   protected $urlListsDataType = 'array';
 
