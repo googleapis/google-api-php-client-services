@@ -27,10 +27,6 @@ class TransformColumn extends \Google\Model
    * @var string
    */
   public $transformSql;
-  /**
-   * @var StandardSqlDataType
-   */
-  public $type;
   protected $typeType = StandardSqlDataType::class;
   protected $typeDataType = '';
 

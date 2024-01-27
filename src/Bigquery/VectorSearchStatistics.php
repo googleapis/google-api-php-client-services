@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class VectorSearchStatistics extends \Google\Collection
 {
   protected $collection_key = 'indexUnusedReasons';
-  /**
-   * @var IndexUnusedReason[]
-   */
-  public $indexUnusedReasons;
   protected $indexUnusedReasonsType = IndexUnusedReason::class;
   protected $indexUnusedReasonsDataType = 'array';
   /**
