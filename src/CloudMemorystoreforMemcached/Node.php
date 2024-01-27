@@ -35,10 +35,6 @@ class Node extends \Google\Model
    * @var string
    */
   public $nodeId;
-  /**
-   * @var MemcacheParameters
-   */
-  public $parameters;
   protected $parametersType = MemcacheParameters::class;
   protected $parametersDataType = '';
   /**

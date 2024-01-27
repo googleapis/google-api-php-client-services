@@ -45,6 +45,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param ApplyParametersRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function applyParameters($name, ApplyParametersRequest $postBody, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * be unique within the user project / location. If any of the above are not
    * met, the API raises an invalid argument error.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Instance $postBody, $optParams = [])
   {
@@ -83,6 +85,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * `location_id` refers to a GCP region
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * `location_id` refers to a GCP region
    * @param array $optParams Optional parameters.
    * @return Instance
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -126,6 +130,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @opt_param string pageToken The `next_page_token` value returned from a
    * previous List request, if any.
    * @return ListInstancesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsInstances($parent, $optParams = [])
   {
@@ -150,6 +155,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @opt_param string updateMask Required. Mask of fields to update. *
    * `displayName`
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Instance $postBody, $optParams = [])
   {
@@ -166,6 +172,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param RescheduleMaintenanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function rescheduleMaintenance($instance, RescheduleMaintenanceRequest $postBody, $optParams = [])
   {
@@ -184,6 +191,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param UpdateParametersRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function updateParameters($name, UpdateParametersRequest $postBody, $optParams = [])
   {
@@ -201,6 +209,7 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * @param GoogleCloudMemcacheV1UpgradeInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function upgrade($name, GoogleCloudMemcacheV1UpgradeInstanceRequest $postBody, $optParams = [])
   {

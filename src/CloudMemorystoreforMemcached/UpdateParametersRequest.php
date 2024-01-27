@@ -19,10 +19,6 @@ namespace Google\Service\CloudMemorystoreforMemcached;
 
 class UpdateParametersRequest extends \Google\Model
 {
-  /**
-   * @var MemcacheParameters
-   */
-  public $parameters;
   protected $parametersType = MemcacheParameters::class;
   protected $parametersDataType = '';
   /**
