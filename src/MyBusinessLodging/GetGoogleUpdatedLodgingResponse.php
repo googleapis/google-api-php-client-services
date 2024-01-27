@@ -23,10 +23,6 @@ class GetGoogleUpdatedLodgingResponse extends \Google\Model
    * @var string
    */
   public $diffMask;
-  /**
-   * @var Lodging
-   */
-  public $lodging;
   protected $lodgingType = Lodging::class;
   protected $lodgingDataType = '';
 

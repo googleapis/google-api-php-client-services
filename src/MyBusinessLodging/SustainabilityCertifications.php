@@ -28,10 +28,6 @@ class SustainabilityCertifications extends \Google\Collection
    * @var string
    */
   public $breeamCertificationException;
-  /**
-   * @var EcoCertification[]
-   */
-  public $ecoCertifications;
   protected $ecoCertificationsType = EcoCertification::class;
   protected $ecoCertificationsDataType = 'array';
   /**
