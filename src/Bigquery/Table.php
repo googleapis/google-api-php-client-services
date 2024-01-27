@@ -19,22 +19,10 @@ namespace Google\Service\Bigquery;
 
 class Table extends \Google\Model
 {
-  /**
-   * @var BigLakeConfiguration
-   */
-  public $biglakeConfiguration;
   protected $biglakeConfigurationType = BigLakeConfiguration::class;
   protected $biglakeConfigurationDataType = '';
-  /**
-   * @var CloneDefinition
-   */
-  public $cloneDefinition;
   protected $cloneDefinitionType = CloneDefinition::class;
   protected $cloneDefinitionDataType = '';
-  /**
-   * @var Clustering
-   */
-  public $clustering;
   protected $clusteringType = Clustering::class;
   protected $clusteringDataType = '';
   /**
@@ -53,10 +41,6 @@ class Table extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var EncryptionConfiguration
-   */
-  public $encryptionConfiguration;
   protected $encryptionConfigurationType = EncryptionConfiguration::class;
   protected $encryptionConfigurationDataType = '';
   /**
@@ -67,10 +51,6 @@ class Table extends \Google\Model
    * @var string
    */
   public $expirationTime;
-  /**
-   * @var ExternalDataConfiguration
-   */
-  public $externalDataConfiguration;
   protected $externalDataConfigurationType = ExternalDataConfiguration::class;
   protected $externalDataConfigurationDataType = '';
   /**
@@ -97,20 +77,12 @@ class Table extends \Google\Model
    * @var string
    */
   public $location;
-  /**
-   * @var MaterializedViewDefinition
-   */
-  public $materializedView;
   protected $materializedViewType = MaterializedViewDefinition::class;
   protected $materializedViewDataType = '';
   /**
    * @var string
    */
   public $maxStaleness;
-  /**
-   * @var ModelDefinition
-   */
-  public $model;
   protected $modelType = ModelDefinition::class;
   protected $modelDataType = '';
   /**
@@ -161,10 +133,6 @@ class Table extends \Google\Model
    * @var string
    */
   public $numTotalPhysicalBytes;
-  /**
-   * @var RangePartitioning
-   */
-  public $rangePartitioning;
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
   /**
@@ -175,54 +143,26 @@ class Table extends \Google\Model
    * @var string[]
    */
   public $resourceTags;
-  /**
-   * @var TableSchema
-   */
-  public $schema;
   protected $schemaType = TableSchema::class;
   protected $schemaDataType = '';
   /**
    * @var string
    */
   public $selfLink;
-  /**
-   * @var SnapshotDefinition
-   */
-  public $snapshotDefinition;
   protected $snapshotDefinitionType = SnapshotDefinition::class;
   protected $snapshotDefinitionDataType = '';
-  /**
-   * @var Streamingbuffer
-   */
-  public $streamingBuffer;
   protected $streamingBufferType = Streamingbuffer::class;
   protected $streamingBufferDataType = '';
-  /**
-   * @var TableConstraints
-   */
-  public $tableConstraints;
   protected $tableConstraintsType = TableConstraints::class;
   protected $tableConstraintsDataType = '';
-  /**
-   * @var TableReference
-   */
-  public $tableReference;
   protected $tableReferenceType = TableReference::class;
   protected $tableReferenceDataType = '';
-  /**
-   * @var TimePartitioning
-   */
-  public $timePartitioning;
   protected $timePartitioningType = TimePartitioning::class;
   protected $timePartitioningDataType = '';
   /**
    * @var string
    */
   public $type;
-  /**
-   * @var ViewDefinition
-   */
-  public $view;
   protected $viewType = ViewDefinition::class;
   protected $viewDataType = '';
 

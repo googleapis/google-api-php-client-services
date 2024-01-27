@@ -19,10 +19,6 @@ namespace Google\Service\Bigquery;
 
 class PrivacyPolicy extends \Google\Model
 {
-  /**
-   * @var AggregationThresholdPolicy
-   */
-  public $aggregationThresholdPolicy;
   protected $aggregationThresholdPolicyType = AggregationThresholdPolicy::class;
   protected $aggregationThresholdPolicyDataType = '';
 

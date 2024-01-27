@@ -19,10 +19,6 @@ namespace Google\Service\Bigquery;
 
 class FeatureValue extends \Google\Model
 {
-  /**
-   * @var CategoricalValue
-   */
-  public $categoricalValue;
   protected $categoricalValueType = CategoricalValue::class;
   protected $categoricalValueDataType = '';
   /**

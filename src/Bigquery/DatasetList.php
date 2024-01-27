@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class DatasetList extends \Google\Collection
 {
   protected $collection_key = 'datasets';
-  /**
-   * @var DatasetListDatasets[]
-   */
-  public $datasets;
   protected $datasetsType = DatasetListDatasets::class;
   protected $datasetsDataType = 'array';
   /**

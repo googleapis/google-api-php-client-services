@@ -41,6 +41,7 @@ class Tabledata extends \Google\Service\Resource
    * @param TableDataInsertAllRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TableDataInsertAllResponse
+   * @throws \Google\Service\Exception
    */
   public function insertAll($projectId, $datasetId, $tableId, TableDataInsertAllRequest $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class Tabledata extends \Google\Service\Resource
    * If unspecified, all fields are returned
    * @opt_param string startIndex Zero-based index of the starting row to read
    * @return TableDataList
+   * @throws \Google\Service\Exception
    */
   public function listTabledata($projectId, $datasetId, $tableId, $optParams = [])
   {

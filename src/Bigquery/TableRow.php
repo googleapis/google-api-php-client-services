@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class TableRow extends \Google\Collection
 {
   protected $collection_key = 'f';
-  /**
-   * @var TableCell[]
-   */
-  public $f;
   protected $fType = TableCell::class;
   protected $fDataType = 'array';
 

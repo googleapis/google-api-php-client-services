@@ -22,10 +22,6 @@ class Job extends \Google\Model
   protected $internal_gapi_mappings = [
         "userEmail" => "user_email",
   ];
-  /**
-   * @var JobConfiguration
-   */
-  public $configuration;
   protected $configurationType = JobConfiguration::class;
   protected $configurationDataType = '';
   /**
@@ -40,10 +36,6 @@ class Job extends \Google\Model
    * @var array
    */
   public $jobCreationReason;
-  /**
-   * @var JobReference
-   */
-  public $jobReference;
   protected $jobReferenceType = JobReference::class;
   protected $jobReferenceDataType = '';
   /**
@@ -54,16 +46,8 @@ class Job extends \Google\Model
    * @var string
    */
   public $selfLink;
-  /**
-   * @var JobStatistics
-   */
-  public $statistics;
   protected $statisticsType = JobStatistics::class;
   protected $statisticsDataType = '';
-  /**
-   * @var JobStatus
-   */
-  public $status;
   protected $statusType = JobStatus::class;
   protected $statusDataType = '';
   /**

@@ -38,6 +38,7 @@ class Routines extends \Google\Service\Resource
    * @param string $datasetId Required. Dataset ID of the routine to delete
    * @param string $routineId Required. Routine ID of the routine to delete
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($projectId, $datasetId, $routineId, $optParams = [])
   {
@@ -56,6 +57,7 @@ class Routines extends \Google\Service\Resource
    * @opt_param string readMask If set, only the Routine fields in the field mask
    * are returned in the response. If unset, all Routine fields are returned.
    * @return Routine
+   * @throws \Google\Service\Exception
    */
   public function get($projectId, $datasetId, $routineId, $optParams = [])
   {
@@ -71,6 +73,7 @@ class Routines extends \Google\Service\Resource
    * @param Routine $postBody
    * @param array $optParams Optional parameters.
    * @return Routine
+   * @throws \Google\Service\Exception
    */
   public function insert($projectId, $datasetId, Routine $postBody, $optParams = [])
   {
@@ -101,6 +104,7 @@ class Routines extends \Google\Service\Resource
    * project_id, dataset_id, routine_id, routine_type, creation_time,
    * last_modified_time, and language.
    * @return ListRoutinesResponse
+   * @throws \Google\Service\Exception
    */
   public function listRoutines($projectId, $datasetId, $optParams = [])
   {
@@ -118,6 +122,7 @@ class Routines extends \Google\Service\Resource
    * @param Routine $postBody
    * @param array $optParams Optional parameters.
    * @return Routine
+   * @throws \Google\Service\Exception
    */
   public function update($projectId, $datasetId, $routineId, Routine $postBody, $optParams = [])
   {

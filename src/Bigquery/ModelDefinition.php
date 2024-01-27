@@ -20,16 +20,8 @@ namespace Google\Service\Bigquery;
 class ModelDefinition extends \Google\Collection
 {
   protected $collection_key = 'trainingRuns';
-  /**
-   * @var ModelDefinitionModelOptions
-   */
-  public $modelOptions;
   protected $modelOptionsType = ModelDefinitionModelOptions::class;
   protected $modelOptionsDataType = '';
-  /**
-   * @var BqmlTrainingRun[]
-   */
-  public $trainingRuns;
   protected $trainingRunsType = BqmlTrainingRun::class;
   protected $trainingRunsDataType = 'array';
 

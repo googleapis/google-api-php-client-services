@@ -19,10 +19,6 @@ namespace Google\Service\Bigquery;
 
 class CloneDefinition extends \Google\Model
 {
-  /**
-   * @var TableReference
-   */
-  public $baseTableReference;
   protected $baseTableReferenceType = TableReference::class;
   protected $baseTableReferenceDataType = '';
   /**

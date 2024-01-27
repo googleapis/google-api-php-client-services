@@ -21,10 +21,6 @@ class ConfusionMatrix extends \Google\Collection
 {
   protected $collection_key = 'rows';
   public $confidenceThreshold;
-  /**
-   * @var Row[]
-   */
-  public $rows;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
 

@@ -19,22 +19,10 @@ namespace Google\Service\Bigquery;
 
 class DataSplitResult extends \Google\Model
 {
-  /**
-   * @var TableReference
-   */
-  public $evaluationTable;
   protected $evaluationTableType = TableReference::class;
   protected $evaluationTableDataType = '';
-  /**
-   * @var TableReference
-   */
-  public $testTable;
   protected $testTableType = TableReference::class;
   protected $testTableDataType = '';
-  /**
-   * @var TableReference
-   */
-  public $trainingTable;
   protected $trainingTableType = TableReference::class;
   protected $trainingTableDataType = '';
 

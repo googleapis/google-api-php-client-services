@@ -45,6 +45,7 @@ class RowAccessPolicies extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -69,6 +70,7 @@ class RowAccessPolicies extends \Google\Service\Resource
    * @opt_param string pageToken Page token, returned by a previous call, to
    * request the next page of results.
    * @return ListRowAccessPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function listRowAccessPolicies($projectId, $datasetId, $tableId, $optParams = [])
   {
@@ -91,6 +93,7 @@ class RowAccessPolicies extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

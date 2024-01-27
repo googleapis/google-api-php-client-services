@@ -28,10 +28,6 @@ class TableDataInsertAllRequest extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var TableDataInsertAllRequestRows[]
-   */
-  public $rows;
   protected $rowsType = TableDataInsertAllRequestRows::class;
   protected $rowsDataType = 'array';
   /**

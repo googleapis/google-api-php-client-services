@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class DatasetAccessEntry extends \Google\Collection
 {
   protected $collection_key = 'targetTypes';
-  /**
-   * @var DatasetReference
-   */
-  public $dataset;
   protected $datasetType = DatasetReference::class;
   protected $datasetDataType = '';
   /**

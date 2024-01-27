@@ -20,22 +20,10 @@ namespace Google\Service\Bigquery;
 class QueryParameterValue extends \Google\Collection
 {
   protected $collection_key = 'arrayValues';
-  /**
-   * @var QueryParameterValue[]
-   */
-  public $arrayValues;
   protected $arrayValuesType = QueryParameterValue::class;
   protected $arrayValuesDataType = 'array';
-  /**
-   * @var QueryParameterValueRangeValue
-   */
-  public $rangeValue;
   protected $rangeValueType = QueryParameterValueRangeValue::class;
   protected $rangeValueDataType = '';
-  /**
-   * @var QueryParameterValue[]
-   */
-  public $structValues;
   protected $structValuesType = QueryParameterValue::class;
   protected $structValuesDataType = 'map';
   /**

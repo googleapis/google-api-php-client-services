@@ -35,10 +35,6 @@ class ProjectListProjects extends \Google\Model
    * @var string
    */
   public $numericId;
-  /**
-   * @var ProjectReference
-   */
-  public $projectReference;
   protected $projectReferenceType = ProjectReference::class;
   protected $projectReferenceDataType = '';
 

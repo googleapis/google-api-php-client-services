@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class ArimaResult extends \Google\Collection
 {
   protected $collection_key = 'seasonalPeriods';
-  /**
-   * @var ArimaModelInfo[]
-   */
-  public $arimaModelInfo;
   protected $arimaModelInfoType = ArimaModelInfo::class;
   protected $arimaModelInfoDataType = 'array';
   /**

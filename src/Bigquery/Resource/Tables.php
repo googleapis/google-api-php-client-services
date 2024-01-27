@@ -43,6 +43,7 @@ class Tables extends \Google\Service\Resource
    * @param string $datasetId Dataset ID of the table to delete
    * @param string $tableId Table ID of the table to delete
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($projectId, $datasetId, $tableId, $optParams = [])
   {
@@ -66,6 +67,7 @@ class Tables extends \Google\Service\Resource
    * information is returned. By default, basic table information and storage
    * statistics (STORAGE_STATS) are returned.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function get($projectId, $datasetId, $tableId, $optParams = [])
   {
@@ -84,6 +86,7 @@ class Tables extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -99,6 +102,7 @@ class Tables extends \Google\Service\Resource
    * @param Table $postBody
    * @param array $optParams Optional parameters.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function insert($projectId, $datasetId, Table $postBody, $optParams = [])
   {
@@ -118,6 +122,7 @@ class Tables extends \Google\Service\Resource
    * @opt_param string pageToken Page token, returned by a previous call, to
    * request the next page of results
    * @return TableList
+   * @throws \Google\Service\Exception
    */
   public function listTables($projectId, $datasetId, $optParams = [])
   {
@@ -140,6 +145,7 @@ class Tables extends \Google\Service\Resource
    * @opt_param bool autodetect_schema When true will autodetect schema, else will
    * keep original schema
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function patch($projectId, $datasetId, $tableId, Table $postBody, $optParams = [])
   {
@@ -159,6 +165,7 @@ class Tables extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -180,6 +187,7 @@ class Tables extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -201,6 +209,7 @@ class Tables extends \Google\Service\Resource
    * @opt_param bool autodetect_schema When true will autodetect schema, else will
    * keep original schema
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function update($projectId, $datasetId, $tableId, Table $postBody, $optParams = [])
   {

@@ -36,10 +36,6 @@ class Model extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var EncryptionConfiguration
-   */
-  public $encryptionConfiguration;
   protected $encryptionConfigurationType = EncryptionConfiguration::class;
   protected $encryptionConfigurationDataType = '';
   /**
@@ -50,32 +46,16 @@ class Model extends \Google\Collection
    * @var string
    */
   public $expirationTime;
-  /**
-   * @var StandardSqlField[]
-   */
-  public $featureColumns;
   protected $featureColumnsType = StandardSqlField::class;
   protected $featureColumnsDataType = 'array';
   /**
    * @var string
    */
   public $friendlyName;
-  /**
-   * @var HparamSearchSpaces
-   */
-  public $hparamSearchSpaces;
   protected $hparamSearchSpacesType = HparamSearchSpaces::class;
   protected $hparamSearchSpacesDataType = '';
-  /**
-   * @var HparamTuningTrial[]
-   */
-  public $hparamTrials;
   protected $hparamTrialsType = HparamTuningTrial::class;
   protected $hparamTrialsDataType = 'array';
-  /**
-   * @var StandardSqlField[]
-   */
-  public $labelColumns;
   protected $labelColumnsType = StandardSqlField::class;
   protected $labelColumnsDataType = 'array';
   /**
@@ -90,10 +70,6 @@ class Model extends \Google\Collection
    * @var string
    */
   public $location;
-  /**
-   * @var ModelReference
-   */
-  public $modelReference;
   protected $modelReferenceType = ModelReference::class;
   protected $modelReferenceDataType = '';
   /**
@@ -104,22 +80,10 @@ class Model extends \Google\Collection
    * @var string[]
    */
   public $optimalTrialIds;
-  /**
-   * @var RemoteModelInfo
-   */
-  public $remoteModelInfo;
   protected $remoteModelInfoType = RemoteModelInfo::class;
   protected $remoteModelInfoDataType = '';
-  /**
-   * @var TrainingRun[]
-   */
-  public $trainingRuns;
   protected $trainingRunsType = TrainingRun::class;
   protected $trainingRunsDataType = 'array';
-  /**
-   * @var TransformColumn[]
-   */
-  public $transformColumns;
   protected $transformColumnsType = TransformColumn::class;
   protected $transformColumnsDataType = 'array';
 

@@ -24,10 +24,6 @@ class ListRoutinesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Routine[]
-   */
-  public $routines;
   protected $routinesType = Routine::class;
   protected $routinesDataType = 'array';
 

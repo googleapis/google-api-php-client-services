@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class TableSchema extends \Google\Collection
 {
   protected $collection_key = 'fields';
-  /**
-   * @var TableFieldSchema[]
-   */
-  public $fields;
   protected $fieldsType = TableFieldSchema::class;
   protected $fieldsDataType = 'array';
 

@@ -32,10 +32,6 @@ class ProjectList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ProjectListProjects[]
-   */
-  public $projects;
   protected $projectsType = ProjectListProjects::class;
   protected $projectsDataType = 'array';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\Bigquery;
 
 class RangeValue extends \Google\Model
 {
-  /**
-   * @var QueryParameterValue
-   */
-  public $end;
   protected $endType = QueryParameterValue::class;
   protected $endDataType = '';
-  /**
-   * @var QueryParameterValue
-   */
-  public $start;
   protected $startType = QueryParameterValue::class;
   protected $startDataType = '';
 

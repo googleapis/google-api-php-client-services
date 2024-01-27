@@ -47,6 +47,7 @@ class Jobs extends \Google\Service\Resource
    * except for US and EU. See details at
    * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * @return JobCancelResponse
+   * @throws \Google\Service\Exception
    */
   public function cancel($projectId, $jobId, $optParams = [])
   {
@@ -69,6 +70,7 @@ class Jobs extends \Google\Service\Resource
    * @opt_param string location The geographic location of the job. Required. See
    * details at:
    * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
+   * @throws \Google\Service\Exception
    */
   public function delete($projectId, $jobId, $optParams = [])
   {
@@ -89,6 +91,7 @@ class Jobs extends \Google\Service\Resource
    * except for US and EU. See details at
    * https://cloud.google.com/bigquery/docs/locations#specifying_your_location.
    * @return Job
+   * @throws \Google\Service\Exception
    */
   public function get($projectId, $jobId, $optParams = [])
   {
@@ -115,6 +118,7 @@ class Jobs extends \Google\Service\Resource
    * before the job completes, the 'jobComplete' field in the response will be
    * false
    * @return GetQueryResultsResponse
+   * @throws \Google\Service\Exception
    */
   public function getQueryResults($projectId, $jobId, $optParams = [])
   {
@@ -131,6 +135,7 @@ class Jobs extends \Google\Service\Resource
    * @param Job $postBody
    * @param array $optParams Optional parameters.
    * @return Job
+   * @throws \Google\Service\Exception
    */
   public function insert($projectId, Job $postBody, $optParams = [])
   {
@@ -165,6 +170,7 @@ class Jobs extends \Google\Service\Resource
    * selected fields
    * @opt_param string stateFilter Filter for job state
    * @return JobList
+   * @throws \Google\Service\Exception
    */
   public function listJobs($projectId, $optParams = [])
   {
@@ -180,6 +186,7 @@ class Jobs extends \Google\Service\Resource
    * @param QueryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return QueryResponse
+   * @throws \Google\Service\Exception
    */
   public function query($projectId, QueryRequest $postBody, $optParams = [])
   {

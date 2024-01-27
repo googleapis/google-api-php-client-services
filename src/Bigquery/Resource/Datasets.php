@@ -43,6 +43,7 @@ class Datasets extends \Google\Service\Resource
    * @opt_param bool deleteContents If True, delete all the tables in the dataset.
    * If False and the dataset contains tables, the request will fail. Default is
    * False
+   * @throws \Google\Service\Exception
    */
   public function delete($projectId, $datasetId, $optParams = [])
   {
@@ -61,6 +62,7 @@ class Datasets extends \Google\Service\Resource
    * dataset information is returned. By default, metadata and ACL information are
    * returned. Allowed values: METADATA, ACL, FULL.
    * @return Dataset
+   * @throws \Google\Service\Exception
    */
   public function get($projectId, $datasetId, $optParams = [])
   {
@@ -75,6 +77,7 @@ class Datasets extends \Google\Service\Resource
    * @param Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Dataset
+   * @throws \Google\Service\Exception
    */
   public function insert($projectId, Dataset $postBody, $optParams = [])
   {
@@ -98,6 +101,7 @@ class Datasets extends \Google\Service\Resource
    * @opt_param string pageToken Page token, returned by a previous call, to
    * request the next page of results
    * @return DatasetList
+   * @throws \Google\Service\Exception
    */
   public function listDatasets($projectId, $optParams = [])
   {
@@ -116,6 +120,7 @@ class Datasets extends \Google\Service\Resource
    * @param Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Dataset
+   * @throws \Google\Service\Exception
    */
   public function patch($projectId, $datasetId, Dataset $postBody, $optParams = [])
   {
@@ -133,6 +138,7 @@ class Datasets extends \Google\Service\Resource
    * @param Dataset $postBody
    * @param array $optParams Optional parameters.
    * @return Dataset
+   * @throws \Google\Service\Exception
    */
   public function update($projectId, $datasetId, Dataset $postBody, $optParams = [])
   {

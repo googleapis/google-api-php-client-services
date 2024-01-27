@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class BigtableOptions extends \Google\Collection
 {
   protected $collection_key = 'columnFamilies';
-  /**
-   * @var BigtableColumnFamily[]
-   */
-  public $columnFamilies;
   protected $columnFamiliesType = BigtableColumnFamily::class;
   protected $columnFamiliesDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Bigquery;
 
 class DatasetListDatasets extends \Google\Model
 {
-  /**
-   * @var DatasetReference
-   */
-  public $datasetReference;
   protected $datasetReferenceType = DatasetReference::class;
   protected $datasetReferenceDataType = '';
   /**

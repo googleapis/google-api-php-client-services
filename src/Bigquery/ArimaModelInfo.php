@@ -20,16 +20,8 @@ namespace Google\Service\Bigquery;
 class ArimaModelInfo extends \Google\Collection
 {
   protected $collection_key = 'timeSeriesIds';
-  /**
-   * @var ArimaCoefficients
-   */
-  public $arimaCoefficients;
   protected $arimaCoefficientsType = ArimaCoefficients::class;
   protected $arimaCoefficientsDataType = '';
-  /**
-   * @var ArimaFittingMetrics
-   */
-  public $arimaFittingMetrics;
   protected $arimaFittingMetricsType = ArimaFittingMetrics::class;
   protected $arimaFittingMetricsDataType = '';
   /**
@@ -48,10 +40,6 @@ class ArimaModelInfo extends \Google\Collection
    * @var bool
    */
   public $hasStepChanges;
-  /**
-   * @var ArimaOrder
-   */
-  public $nonSeasonalOrder;
   protected $nonSeasonalOrderType = ArimaOrder::class;
   protected $nonSeasonalOrderDataType = '';
   /**

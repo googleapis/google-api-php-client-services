@@ -20,10 +20,6 @@ namespace Google\Service\Bigquery;
 class ListModelsResponse extends \Google\Collection
 {
   protected $collection_key = 'models';
-  /**
-   * @var Model[]
-   */
-  public $models;
   protected $modelsType = Model::class;
   protected $modelsDataType = 'array';
   /**

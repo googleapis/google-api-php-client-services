@@ -38,6 +38,7 @@ class Projects extends \Google\Service\Resource
    * requested.
    * @param array $optParams Optional parameters.
    * @return GetServiceAccountResponse
+   * @throws \Google\Service\Exception
    */
   public function getServiceAccount($projectId, $optParams = [])
   {
@@ -55,6 +56,7 @@ class Projects extends \Google\Service\Resource
    * @opt_param string pageToken Page token, returned by a previous call, to
    * request the next page of results
    * @return ProjectList
+   * @throws \Google\Service\Exception
    */
   public function listProjects($optParams = [])
   {

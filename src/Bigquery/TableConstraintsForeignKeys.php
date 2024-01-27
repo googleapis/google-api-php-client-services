@@ -20,20 +20,12 @@ namespace Google\Service\Bigquery;
 class TableConstraintsForeignKeys extends \Google\Collection
 {
   protected $collection_key = 'columnReferences';
-  /**
-   * @var TableConstraintsForeignKeysColumnReferences[]
-   */
-  public $columnReferences;
   protected $columnReferencesType = TableConstraintsForeignKeysColumnReferences::class;
   protected $columnReferencesDataType = 'array';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var TableConstraintsForeignKeysReferencedTable
-   */
-  public $referencedTable;
   protected $referencedTableType = TableConstraintsForeignKeysReferencedTable::class;
   protected $referencedTableDataType = '';
 

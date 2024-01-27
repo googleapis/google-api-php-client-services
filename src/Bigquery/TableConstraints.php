@@ -20,16 +20,8 @@ namespace Google\Service\Bigquery;
 class TableConstraints extends \Google\Collection
 {
   protected $collection_key = 'foreignKeys';
-  /**
-   * @var TableConstraintsForeignKeys[]
-   */
-  public $foreignKeys;
   protected $foreignKeysType = TableConstraintsForeignKeys::class;
   protected $foreignKeysDataType = 'array';
-  /**
-   * @var TableConstraintsPrimaryKey
-   */
-  public $primaryKey;
   protected $primaryKeyType = TableConstraintsPrimaryKey::class;
   protected $primaryKeyDataType = '';
 
