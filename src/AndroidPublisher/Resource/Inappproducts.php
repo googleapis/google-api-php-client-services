@@ -46,6 +46,7 @@ class Inappproducts extends \Google\Service\Resource
    * @param string $packageName Package name of the app.
    * @param InappproductsBatchDeleteRequest $postBody
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function batchDelete($packageName, InappproductsBatchDeleteRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class Inappproducts extends \Google\Service\Resource
    *
    * @opt_param string sku Unique identifier for the in-app products.
    * @return InappproductsBatchGetResponse
+   * @throws \Google\Service\Exception
    */
   public function batchGet($packageName, $optParams = [])
   {
@@ -85,6 +87,7 @@ class Inappproducts extends \Google\Service\Resource
    * @param InappproductsBatchUpdateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return InappproductsBatchUpdateResponse
+   * @throws \Google\Service\Exception
    */
   public function batchUpdate($packageName, InappproductsBatchUpdateRequest $postBody, $optParams = [])
   {
@@ -105,6 +108,7 @@ class Inappproducts extends \Google\Service\Resource
    *
    * @opt_param string latencyTolerance Optional. The latency tolerance for the
    * propagation of this product update. Defaults to latency-sensitive.
+   * @throws \Google\Service\Exception
    */
   public function delete($packageName, $sku, $optParams = [])
   {
@@ -122,6 +126,7 @@ class Inappproducts extends \Google\Service\Resource
    * @param string $sku Unique identifier for the in-app product.
    * @param array $optParams Optional parameters.
    * @return InAppProduct
+   * @throws \Google\Service\Exception
    */
   public function get($packageName, $sku, $optParams = [])
   {
@@ -145,6 +150,7 @@ class Inappproducts extends \Google\Service\Resource
    * product will be auto converted to the target currency based on the default
    * price. Defaults to false.
    * @return InAppProduct
+   * @throws \Google\Service\Exception
    */
   public function insert($packageName, InAppProduct $postBody, $optParams = [])
   {
@@ -172,6 +178,7 @@ class Inappproducts extends \Google\Service\Resource
    * @opt_param string token Pagination token. If empty, list starts at the first
    * product.
    * @return InappproductsListResponse
+   * @throws \Google\Service\Exception
    */
   public function listInappproducts($packageName, $optParams = [])
   {
@@ -198,6 +205,7 @@ class Inappproducts extends \Google\Service\Resource
    * @opt_param string latencyTolerance Optional. The latency tolerance for the
    * propagation of this product update. Defaults to latency-sensitive.
    * @return InAppProduct
+   * @throws \Google\Service\Exception
    */
   public function patch($packageName, $sku, InAppProduct $postBody, $optParams = [])
   {
@@ -226,6 +234,7 @@ class Inappproducts extends \Google\Service\Resource
    * @opt_param string latencyTolerance Optional. The latency tolerance for the
    * propagation of this product update. Defaults to latency-sensitive.
    * @return InAppProduct
+   * @throws \Google\Service\Exception
    */
   public function update($packageName, $sku, InAppProduct $postBody, $optParams = [])
   {

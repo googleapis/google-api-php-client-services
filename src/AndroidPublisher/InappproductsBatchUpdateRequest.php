@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class InappproductsBatchUpdateRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var InappproductsUpdateRequest[]
-   */
-  public $requests;
   protected $requestsType = InappproductsUpdateRequest::class;
   protected $requestsDataType = 'array';
 

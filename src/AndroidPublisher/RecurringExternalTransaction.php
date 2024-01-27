@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class RecurringExternalTransaction extends \Google\Model
 {
-  /**
-   * @var ExternalSubscription
-   */
-  public $externalSubscription;
   protected $externalSubscriptionType = ExternalSubscription::class;
   protected $externalSubscriptionDataType = '';
   /**

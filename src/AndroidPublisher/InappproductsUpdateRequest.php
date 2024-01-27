@@ -27,10 +27,6 @@ class InappproductsUpdateRequest extends \Google\Model
    * @var bool
    */
   public $autoConvertMissingPrices;
-  /**
-   * @var InAppProduct
-   */
-  public $inappproduct;
   protected $inappproductType = InAppProduct::class;
   protected $inappproductDataType = '';
   /**

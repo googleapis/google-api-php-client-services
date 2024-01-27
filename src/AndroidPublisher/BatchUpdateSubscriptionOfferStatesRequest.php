@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class BatchUpdateSubscriptionOfferStatesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var UpdateSubscriptionOfferStateRequest[]
-   */
-  public $requests;
   protected $requestsType = UpdateSubscriptionOfferStateRequest::class;
   protected $requestsDataType = 'array';
 

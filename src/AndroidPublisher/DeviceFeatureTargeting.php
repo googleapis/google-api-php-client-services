@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class DeviceFeatureTargeting extends \Google\Model
 {
-  /**
-   * @var DeviceFeature
-   */
-  public $requiredFeature;
   protected $requiredFeatureType = DeviceFeature::class;
   protected $requiredFeatureDataType = '';
 

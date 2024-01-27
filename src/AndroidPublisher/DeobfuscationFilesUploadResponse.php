@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class DeobfuscationFilesUploadResponse extends \Google\Model
 {
-  /**
-   * @var DeobfuscationFile
-   */
-  public $deobfuscationFile;
   protected $deobfuscationFileType = DeobfuscationFile::class;
   protected $deobfuscationFileDataType = '';
 

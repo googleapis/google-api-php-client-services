@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class InappproductsBatchDeleteRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var InappproductsDeleteRequest[]
-   */
-  public $requests;
   protected $requestsType = InappproductsDeleteRequest::class;
   protected $requestsDataType = 'array';
 

@@ -36,16 +36,8 @@ class MigrateBasePlanPricesRequest extends \Google\Collection
    * @var string
    */
   public $productId;
-  /**
-   * @var RegionalPriceMigrationConfig[]
-   */
-  public $regionalPriceMigrations;
   protected $regionalPriceMigrationsType = RegionalPriceMigrationConfig::class;
   protected $regionalPriceMigrationsDataType = 'array';
-  /**
-   * @var RegionsVersion
-   */
-  public $regionsVersion;
   protected $regionsVersionType = RegionsVersion::class;
   protected $regionsVersionDataType = '';
 

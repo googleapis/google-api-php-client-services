@@ -23,10 +23,6 @@ class AutoRenewingPlan extends \Google\Model
    * @var bool
    */
   public $autoRenewEnabled;
-  /**
-   * @var SubscriptionItemPriceChangeDetails
-   */
-  public $priceChangeDetails;
   protected $priceChangeDetailsType = SubscriptionItemPriceChangeDetails::class;
   protected $priceChangeDetailsDataType = '';
 

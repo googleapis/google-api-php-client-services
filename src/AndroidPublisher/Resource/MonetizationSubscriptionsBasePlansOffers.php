@@ -53,6 +53,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * @param ActivateSubscriptionOfferRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SubscriptionOffer
+   * @throws \Google\Service\Exception
    */
   public function activate($packageName, $productId, $basePlanId, $offerId, ActivateSubscriptionOfferRequest $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * @param BatchGetSubscriptionOffersRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchGetSubscriptionOffersResponse
+   * @throws \Google\Service\Exception
    */
   public function batchGet($packageName, $productId, $basePlanId, BatchGetSubscriptionOffersRequest $postBody, $optParams = [])
   {
@@ -99,6 +101,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * @param BatchUpdateSubscriptionOffersRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchUpdateSubscriptionOffersResponse
+   * @throws \Google\Service\Exception
    */
   public function batchUpdate($packageName, $productId, $basePlanId, BatchUpdateSubscriptionOffersRequest $postBody, $optParams = [])
   {
@@ -123,6 +126,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * @param BatchUpdateSubscriptionOfferStatesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchUpdateSubscriptionOfferStatesResponse
+   * @throws \Google\Service\Exception
    */
   public function batchUpdateStates($packageName, $productId, $basePlanId, BatchUpdateSubscriptionOfferStatesRequest $postBody, $optParams = [])
   {
@@ -160,6 +164,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * regional prices and currencies will succeed even though a new version is
    * available. The latest version is 2022/02.
    * @return SubscriptionOffer
+   * @throws \Google\Service\Exception
    */
   public function create($packageName, $productId, $basePlanId, SubscriptionOffer $postBody, $optParams = [])
   {
@@ -183,6 +188,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * @param DeactivateSubscriptionOfferRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SubscriptionOffer
+   * @throws \Google\Service\Exception
    */
   public function deactivate($packageName, $productId, $basePlanId, $offerId, DeactivateSubscriptionOfferRequest $postBody, $optParams = [])
   {
@@ -202,6 +208,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * delete.
    * @param string $offerId Required. The unique offer ID of the offer to delete.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($packageName, $productId, $basePlanId, $offerId, $optParams = [])
   {
@@ -221,6 +228,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * @param string $offerId Required. The unique offer ID of the offer to get.
    * @param array $optParams Optional parameters.
    * @return SubscriptionOffer
+   * @throws \Google\Service\Exception
    */
   public function get($packageName, $productId, $basePlanId, $offerId, $optParams = [])
   {
@@ -252,6 +260,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * When paginating, all other parameters provided to `ListSubscriptionOffers`
    * must match the call that provided the page token.
    * @return ListSubscriptionOffersResponse
+   * @throws \Google\Service\Exception
    */
   public function listMonetizationSubscriptionsBasePlansOffers($packageName, $productId, $basePlanId, $optParams = [])
   {
@@ -290,6 +299,7 @@ class MonetizationSubscriptionsBasePlansOffers extends \Google\Service\Resource
    * available. The latest version is 2022/02.
    * @opt_param string updateMask Required. The list of fields to be updated.
    * @return SubscriptionOffer
+   * @throws \Google\Service\Exception
    */
   public function patch($packageName, $productId, $basePlanId, $offerId, SubscriptionOffer $postBody, $optParams = [])
   {

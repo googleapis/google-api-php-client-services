@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class ImagesListResponse extends \Google\Collection
 {
   protected $collection_key = 'images';
-  /**
-   * @var Image[]
-   */
-  public $images;
   protected $imagesType = Image::class;
   protected $imagesDataType = 'array';
 

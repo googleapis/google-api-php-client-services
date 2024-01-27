@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class MultiAbi extends \Google\Collection
 {
   protected $collection_key = 'abi';
-  /**
-   * @var Abi[]
-   */
-  public $abi;
   protected $abiType = Abi::class;
   protected $abiDataType = 'array';
 

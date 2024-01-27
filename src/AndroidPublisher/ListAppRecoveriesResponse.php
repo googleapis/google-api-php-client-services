@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class ListAppRecoveriesResponse extends \Google\Collection
 {
   protected $collection_key = 'recoveryActions';
-  /**
-   * @var AppRecoveryAction[]
-   */
-  public $recoveryActions;
   protected $recoveryActionsType = AppRecoveryAction::class;
   protected $recoveryActionsDataType = 'array';
 

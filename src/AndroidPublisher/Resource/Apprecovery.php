@@ -49,6 +49,7 @@ class Apprecovery extends \Google\Service\Resource
    * @param AddTargetingRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AddTargetingResponse
+   * @throws \Google\Service\Exception
    */
   public function addTargeting($packageName, $appRecoveryId, AddTargetingRequest $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class Apprecovery extends \Google\Service\Resource
    * @opt_param string versionCode Required. Version code targeted by the list of
    * recovery actions.
    * @return ListAppRecoveriesResponse
+   * @throws \Google\Service\Exception
    */
   public function appRecoveries($packageName, $optParams = [])
   {
@@ -85,6 +87,7 @@ class Apprecovery extends \Google\Service\Resource
    * @param CancelAppRecoveryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CancelAppRecoveryResponse
+   * @throws \Google\Service\Exception
    */
   public function cancel($packageName, $appRecoveryId, CancelAppRecoveryRequest $postBody, $optParams = [])
   {
@@ -101,6 +104,7 @@ class Apprecovery extends \Google\Service\Resource
    * @param CreateDraftAppRecoveryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AppRecoveryAction
+   * @throws \Google\Service\Exception
    */
   public function create($packageName, CreateDraftAppRecoveryRequest $postBody, $optParams = [])
   {
@@ -120,6 +124,7 @@ class Apprecovery extends \Google\Service\Resource
    * @param DeployAppRecoveryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DeployAppRecoveryResponse
+   * @throws \Google\Service\Exception
    */
   public function deploy($packageName, $appRecoveryId, DeployAppRecoveryRequest $postBody, $optParams = [])
   {

@@ -19,16 +19,8 @@ namespace Google\Service\AndroidPublisher;
 
 class RefundExternalTransactionRequest extends \Google\Model
 {
-  /**
-   * @var FullRefund
-   */
-  public $fullRefund;
   protected $fullRefundType = FullRefund::class;
   protected $fullRefundDataType = '';
-  /**
-   * @var PartialRefund
-   */
-  public $partialRefund;
   protected $partialRefundType = PartialRefund::class;
   protected $partialRefundDataType = '';
   /**

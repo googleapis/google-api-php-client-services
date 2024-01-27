@@ -19,16 +19,8 @@ namespace Google\Service\AndroidPublisher;
 
 class Comment extends \Google\Model
 {
-  /**
-   * @var DeveloperComment
-   */
-  public $developerComment;
   protected $developerCommentType = DeveloperComment::class;
   protected $developerCommentDataType = '';
-  /**
-   * @var UserComment
-   */
-  public $userComment;
   protected $userCommentType = UserComment::class;
   protected $userCommentDataType = '';
 

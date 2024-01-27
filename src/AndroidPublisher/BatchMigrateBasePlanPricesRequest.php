@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class BatchMigrateBasePlanPricesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var MigrateBasePlanPricesRequest[]
-   */
-  public $requests;
   protected $requestsType = MigrateBasePlanPricesRequest::class;
   protected $requestsDataType = 'array';
 

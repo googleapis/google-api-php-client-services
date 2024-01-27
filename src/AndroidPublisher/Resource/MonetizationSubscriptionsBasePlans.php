@@ -50,6 +50,7 @@ class MonetizationSubscriptionsBasePlans extends \Google\Service\Resource
    * @param ActivateBasePlanRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function activate($packageName, $productId, $basePlanId, ActivateBasePlanRequest $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class MonetizationSubscriptionsBasePlans extends \Google\Service\Resource
    * @param BatchMigrateBasePlanPricesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchMigrateBasePlanPricesResponse
+   * @throws \Google\Service\Exception
    */
   public function batchMigratePrices($packageName, $productId, BatchMigrateBasePlanPricesRequest $postBody, $optParams = [])
   {
@@ -92,6 +94,7 @@ class MonetizationSubscriptionsBasePlans extends \Google\Service\Resource
    * @param BatchUpdateBasePlanStatesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchUpdateBasePlanStatesResponse
+   * @throws \Google\Service\Exception
    */
   public function batchUpdateStates($packageName, $productId, BatchUpdateBasePlanStatesRequest $postBody, $optParams = [])
   {
@@ -113,6 +116,7 @@ class MonetizationSubscriptionsBasePlans extends \Google\Service\Resource
    * @param DeactivateBasePlanRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function deactivate($packageName, $productId, $basePlanId, DeactivateBasePlanRequest $postBody, $optParams = [])
   {
@@ -131,6 +135,7 @@ class MonetizationSubscriptionsBasePlans extends \Google\Service\Resource
    * @param string $basePlanId Required. The unique offer ID of the base plan to
    * delete.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($packageName, $productId, $basePlanId, $optParams = [])
   {
@@ -155,6 +160,7 @@ class MonetizationSubscriptionsBasePlans extends \Google\Service\Resource
    * @param MigrateBasePlanPricesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return MigrateBasePlanPricesResponse
+   * @throws \Google\Service\Exception
    */
   public function migratePrices($packageName, $productId, $basePlanId, MigrateBasePlanPricesRequest $postBody, $optParams = [])
   {

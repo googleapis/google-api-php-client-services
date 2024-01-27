@@ -19,16 +19,8 @@ namespace Google\Service\AndroidPublisher;
 
 class ConvertRegionPricesResponse extends \Google\Model
 {
-  /**
-   * @var ConvertedOtherRegionsPrice
-   */
-  public $convertedOtherRegionsPrice;
   protected $convertedOtherRegionsPriceType = ConvertedOtherRegionsPrice::class;
   protected $convertedOtherRegionsPriceDataType = '';
-  /**
-   * @var ConvertedRegionPrice[]
-   */
-  public $convertedRegionPrices;
   protected $convertedRegionPricesType = ConvertedRegionPrice::class;
   protected $convertedRegionPricesDataType = 'map';
 

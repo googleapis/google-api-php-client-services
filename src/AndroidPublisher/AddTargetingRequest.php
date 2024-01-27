@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class AddTargetingRequest extends \Google\Model
 {
-  /**
-   * @var TargetingUpdate
-   */
-  public $targetingUpdate;
   protected $targetingUpdateType = TargetingUpdate::class;
   protected $targetingUpdateDataType = '';
 

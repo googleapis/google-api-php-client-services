@@ -39,20 +39,12 @@ class AppRecoveryAction extends \Google\Model
    * @var string
    */
   public $lastUpdateTime;
-  /**
-   * @var RemoteInAppUpdateData
-   */
-  public $remoteInAppUpdateData;
   protected $remoteInAppUpdateDataType = RemoteInAppUpdateData::class;
   protected $remoteInAppUpdateDataDataType = '';
   /**
    * @var string
    */
   public $status;
-  /**
-   * @var Targeting
-   */
-  public $targeting;
   protected $targetingType = Targeting::class;
   protected $targetingDataType = '';
 

@@ -23,10 +23,6 @@ class RegionalBasePlanConfig extends \Google\Model
    * @var bool
    */
   public $newSubscriberAvailability;
-  /**
-   * @var Money
-   */
-  public $price;
   protected $priceType = Money::class;
   protected $priceDataType = '';
   /**

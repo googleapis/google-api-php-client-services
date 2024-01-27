@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class RemoteInAppUpdateData extends \Google\Collection
 {
   protected $collection_key = 'remoteAppUpdateDataPerBundle';
-  /**
-   * @var RemoteInAppUpdateDataPerBundle[]
-   */
-  public $remoteAppUpdateDataPerBundle;
   protected $remoteAppUpdateDataPerBundleType = RemoteInAppUpdateDataPerBundle::class;
   protected $remoteAppUpdateDataPerBundleDataType = 'array';
 

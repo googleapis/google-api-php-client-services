@@ -47,6 +47,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @param ArchiveSubscriptionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function archive($packageName, $productId, ArchiveSubscriptionRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @opt_param string productIds Required. A list of up to 100 subscription
    * product IDs to retrieve. All the IDs must be different.
    * @return BatchGetSubscriptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function batchGet($packageName, $optParams = [])
   {
@@ -83,6 +85,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @param BatchUpdateSubscriptionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchUpdateSubscriptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function batchUpdate($packageName, BatchUpdateSubscriptionsRequest $postBody, $optParams = [])
   {
@@ -113,6 +116,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * regional prices and currencies will succeed even though a new version is
    * available. The latest version is 2022/02.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function create($packageName, Subscription $postBody, $optParams = [])
   {
@@ -129,6 +133,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @param string $productId Required. The unique product ID of the subscription
    * to delete.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($packageName, $productId, $optParams = [])
   {
@@ -145,6 +150,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * to get.
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function get($packageName, $productId, $optParams = [])
   {
@@ -171,6 +177,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * @opt_param bool showArchived Whether archived subscriptions should be
    * included in the response. Defaults to false.
    * @return ListSubscriptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listMonetizationSubscriptions($packageName, $optParams = [])
   {
@@ -206,6 +213,7 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * available. The latest version is 2022/02.
    * @opt_param string updateMask Required. The list of fields to be updated.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function patch($packageName, $productId, Subscription $postBody, $optParams = [])
   {

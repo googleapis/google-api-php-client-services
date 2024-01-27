@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class DeviceTierSet extends \Google\Collection
 {
   protected $collection_key = 'deviceTiers';
-  /**
-   * @var DeviceTier[]
-   */
-  public $deviceTiers;
   protected $deviceTiersType = DeviceTier::class;
   protected $deviceTiersDataType = 'array';
 

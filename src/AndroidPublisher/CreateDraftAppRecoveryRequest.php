@@ -19,16 +19,8 @@ namespace Google\Service\AndroidPublisher;
 
 class CreateDraftAppRecoveryRequest extends \Google\Model
 {
-  /**
-   * @var RemoteInAppUpdate
-   */
-  public $remoteInAppUpdate;
   protected $remoteInAppUpdateType = RemoteInAppUpdate::class;
   protected $remoteInAppUpdateDataType = '';
-  /**
-   * @var Targeting
-   */
-  public $targeting;
   protected $targetingType = Targeting::class;
   protected $targetingDataType = '';
 

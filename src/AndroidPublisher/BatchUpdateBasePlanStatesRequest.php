@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class BatchUpdateBasePlanStatesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var UpdateBasePlanStateRequest[]
-   */
-  public $requests;
   protected $requestsType = UpdateBasePlanStateRequest::class;
   protected $requestsDataType = 'array';
 

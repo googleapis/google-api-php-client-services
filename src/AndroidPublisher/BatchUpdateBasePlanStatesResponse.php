@@ -20,10 +20,6 @@ namespace Google\Service\AndroidPublisher;
 class BatchUpdateBasePlanStatesResponse extends \Google\Collection
 {
   protected $collection_key = 'subscriptions';
-  /**
-   * @var Subscription[]
-   */
-  public $subscriptions;
   protected $subscriptionsType = Subscription::class;
   protected $subscriptionsDataType = 'array';
 

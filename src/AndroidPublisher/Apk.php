@@ -19,10 +19,6 @@ namespace Google\Service\AndroidPublisher;
 
 class Apk extends \Google\Model
 {
-  /**
-   * @var ApkBinary
-   */
-  public $binary;
   protected $binaryType = ApkBinary::class;
   protected $binaryDataType = '';
   /**
