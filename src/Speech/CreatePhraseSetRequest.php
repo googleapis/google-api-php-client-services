@@ -19,10 +19,6 @@ namespace Google\Service\Speech;
 
 class CreatePhraseSetRequest extends \Google\Model
 {
-  /**
-   * @var PhraseSet
-   */
-  public $phraseSet;
   protected $phraseSetType = PhraseSet::class;
   protected $phraseSetDataType = '';
   /**

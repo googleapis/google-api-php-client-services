@@ -28,10 +28,6 @@ class SpeechRecognitionAlternative extends \Google\Collection
    * @var string
    */
   public $transcript;
-  /**
-   * @var WordInfo[]
-   */
-  public $words;
   protected $wordsType = WordInfo::class;
   protected $wordsDataType = 'array';
 
