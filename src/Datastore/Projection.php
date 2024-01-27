@@ -19,10 +19,6 @@ namespace Google\Service\Datastore;
 
 class Projection extends \Google\Model
 {
-  /**
-   * @var PropertyReference
-   */
-  public $property;
   protected $propertyType = PropertyReference::class;
   protected $propertyDataType = '';
 

@@ -28,16 +28,8 @@ class CommitRequest extends \Google\Collection
    * @var string
    */
   public $mode;
-  /**
-   * @var Mutation[]
-   */
-  public $mutations;
   protected $mutationsType = Mutation::class;
   protected $mutationsDataType = 'array';
-  /**
-   * @var TransactionOptions
-   */
-  public $singleUseTransaction;
   protected $singleUseTransactionType = TransactionOptions::class;
   protected $singleUseTransactionDataType = '';
   /**

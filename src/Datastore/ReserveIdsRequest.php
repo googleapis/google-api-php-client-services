@@ -24,10 +24,6 @@ class ReserveIdsRequest extends \Google\Collection
    * @var string
    */
   public $databaseId;
-  /**
-   * @var Key[]
-   */
-  public $keys;
   protected $keysType = Key::class;
   protected $keysDataType = 'array';
 

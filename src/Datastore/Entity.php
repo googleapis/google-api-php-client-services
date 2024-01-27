@@ -19,16 +19,8 @@ namespace Google\Service\Datastore;
 
 class Entity extends \Google\Model
 {
-  /**
-   * @var Key
-   */
-  public $key;
   protected $keyType = Key::class;
   protected $keyDataType = '';
-  /**
-   * @var Value[]
-   */
-  public $properties;
   protected $propertiesType = Value::class;
   protected $propertiesDataType = 'map';
 

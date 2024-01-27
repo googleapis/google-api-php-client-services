@@ -19,22 +19,10 @@ namespace Google\Service\Datastore;
 
 class RunQueryResponse extends \Google\Model
 {
-  /**
-   * @var QueryResultBatch
-   */
-  public $batch;
   protected $batchType = QueryResultBatch::class;
   protected $batchDataType = '';
-  /**
-   * @var Query
-   */
-  public $query;
   protected $queryType = Query::class;
   protected $queryDataType = '';
-  /**
-   * @var ResultSetStats
-   */
-  public $stats;
   protected $statsType = ResultSetStats::class;
   protected $statsDataType = '';
   /**

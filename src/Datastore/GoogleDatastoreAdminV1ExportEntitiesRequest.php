@@ -19,10 +19,6 @@ namespace Google\Service\Datastore;
 
 class GoogleDatastoreAdminV1ExportEntitiesRequest extends \Google\Model
 {
-  /**
-   * @var GoogleDatastoreAdminV1EntityFilter
-   */
-  public $entityFilter;
   protected $entityFilterType = GoogleDatastoreAdminV1EntityFilter::class;
   protected $entityFilterDataType = '';
   /**

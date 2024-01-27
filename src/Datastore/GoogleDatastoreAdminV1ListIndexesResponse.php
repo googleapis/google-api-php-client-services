@@ -20,10 +20,6 @@ namespace Google\Service\Datastore;
 class GoogleDatastoreAdminV1ListIndexesResponse extends \Google\Collection
 {
   protected $collection_key = 'indexes';
-  /**
-   * @var GoogleDatastoreAdminV1Index[]
-   */
-  public $indexes;
   protected $indexesType = GoogleDatastoreAdminV1Index::class;
   protected $indexesDataType = 'array';
   /**

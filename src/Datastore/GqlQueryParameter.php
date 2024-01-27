@@ -23,10 +23,6 @@ class GqlQueryParameter extends \Google\Model
    * @var string
    */
   public $cursor;
-  /**
-   * @var Value
-   */
-  public $value;
   protected $valueType = Value::class;
   protected $valueDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Datastore;
 
 class Filter extends \Google\Model
 {
-  /**
-   * @var CompositeFilter
-   */
-  public $compositeFilter;
   protected $compositeFilterType = CompositeFilter::class;
   protected $compositeFilterDataType = '';
-  /**
-   * @var PropertyFilter
-   */
-  public $propertyFilter;
   protected $propertyFilterType = PropertyFilter::class;
   protected $propertyFilterDataType = '';
 

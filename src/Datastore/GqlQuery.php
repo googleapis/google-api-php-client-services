@@ -24,16 +24,8 @@ class GqlQuery extends \Google\Collection
    * @var bool
    */
   public $allowLiterals;
-  /**
-   * @var GqlQueryParameter[]
-   */
-  public $namedBindings;
   protected $namedBindingsType = GqlQueryParameter::class;
   protected $namedBindingsDataType = 'map';
-  /**
-   * @var GqlQueryParameter[]
-   */
-  public $positionalBindings;
   protected $positionalBindingsType = GqlQueryParameter::class;
   protected $positionalBindingsDataType = 'array';
   /**
