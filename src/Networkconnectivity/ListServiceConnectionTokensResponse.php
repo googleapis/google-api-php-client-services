@@ -24,10 +24,6 @@ class ListServiceConnectionTokensResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ServiceConnectionToken[]
-   */
-  public $serviceConnectionTokens;
   protected $serviceConnectionTokensType = ServiceConnectionToken::class;
   protected $serviceConnectionTokensDataType = 'array';
   /**

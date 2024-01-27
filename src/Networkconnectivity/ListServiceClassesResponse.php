@@ -24,10 +24,6 @@ class ListServiceClassesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ServiceClass[]
-   */
-  public $serviceClasses;
   protected $serviceClassesType = ServiceClass::class;
   protected $serviceClassesDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Networkconnectivity;
 
 class RejectHubSpokeResponse extends \Google\Model
 {
-  /**
-   * @var Spoke
-   */
-  public $spoke;
   protected $spokeType = Spoke::class;
   protected $spokeDataType = '';
 

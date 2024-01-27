@@ -19,15 +19,7 @@ namespace Google\Service\Networkconnectivity;
 
 class ConsumerPscConnection extends \Google\Model
 {
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $error;
   protected $errorDataType = '';
-  /**
-   * @var GoogleRpcErrorInfo
-   */
-  public $errorInfo;
   protected $errorInfoType = GoogleRpcErrorInfo::class;
   protected $errorInfoDataType = '';
   /**

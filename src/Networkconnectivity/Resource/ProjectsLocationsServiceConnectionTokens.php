@@ -56,6 +56,7 @@ class ProjectsLocationsServiceConnectionTokens extends \Google\Service\Resource
    * https://google.aip.dev/122#resource-id-segments Unique per location. If one
    * is not provided, one will be generated.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ServiceConnectionToken $postBody, $optParams = [])
   {
@@ -85,6 +86,7 @@ class ProjectsLocationsServiceConnectionTokens extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -99,6 +101,7 @@ class ProjectsLocationsServiceConnectionTokens extends \Google\Service\Resource
    * @param string $name Required. Name of the ServiceConnectionToken to get.
    * @param array $optParams Optional parameters.
    * @return ServiceConnectionToken
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -121,6 +124,7 @@ class ProjectsLocationsServiceConnectionTokens extends \Google\Service\Resource
    * returned.
    * @opt_param string pageToken The page token.
    * @return ListServiceConnectionTokensResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsServiceConnectionTokens($parent, $optParams = [])
   {

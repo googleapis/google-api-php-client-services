@@ -47,6 +47,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param AcceptHubSpokeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function acceptSpoke($name, AcceptHubSpokeRequest $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * commitments. The request ID must be a valid UUID, with the exception that
    * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Hub $postBody, $optParams = [])
   {
@@ -100,6 +102,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * commitments. The request ID must be a valid UUID, with the exception that
    * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -113,6 +116,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param string $name Required. The name of the hub resource to get.
    * @param array $optParams Optional parameters.
    * @return Hub
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -143,6 +147,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -162,6 +167,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @opt_param int pageSize The maximum number of results per page to return.
    * @opt_param string pageToken The page token.
    * @return ListHubsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkconnectivityGlobalHubs($parent, $optParams = [])
   {
@@ -190,6 +196,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @opt_param string view The view of the spoke to return. The view that you use
    * determines which spoke fields are included in the response.
    * @return ListHubSpokesResponse
+   * @throws \Google\Service\Exception
    */
   public function listSpokes($name, $optParams = [])
   {
@@ -224,6 +231,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * full request. A field is overwritten if it is in the mask. If the user does
    * not provide a mask, then all fields are overwritten.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Hub $postBody, $optParams = [])
   {
@@ -242,6 +250,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param RejectHubSpokeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function rejectSpoke($name, RejectHubSpokeRequest $postBody, $optParams = [])
   {
@@ -261,6 +270,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -282,6 +292,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubs extends \Google\Service\Res
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

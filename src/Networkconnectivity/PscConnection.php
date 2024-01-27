@@ -31,15 +31,7 @@ class PscConnection extends \Google\Model
    * @var string
    */
   public $consumerTargetProject;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $error;
   protected $errorDataType = '';
-  /**
-   * @var GoogleRpcErrorInfo
-   */
-  public $errorInfo;
   protected $errorInfoType = GoogleRpcErrorInfo::class;
   protected $errorInfoDataType = '';
   /**

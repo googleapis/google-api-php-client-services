@@ -37,6 +37,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubsRouteTables extends \Google\
    * @param string $name Required. The name of the route table resource.
    * @param array $optParams Optional parameters.
    * @return RouteTable
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -56,6 +57,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubsRouteTables extends \Google\
    * @opt_param int pageSize The maximum number of results to return per page.
    * @opt_param string pageToken The page token.
    * @return ListRouteTablesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkconnectivityGlobalHubsRouteTables($parent, $optParams = [])
   {

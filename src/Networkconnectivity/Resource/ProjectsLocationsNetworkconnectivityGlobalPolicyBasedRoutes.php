@@ -58,6 +58,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, PolicyBasedRoute $postBody, $optParams = [])
   {
@@ -84,6 +85,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -97,6 +99,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * @param string $name Required. Name of the PolicyBasedRoute resource to get.
    * @param array $optParams Optional parameters.
    * @return PolicyBasedRoute
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -128,6 +131,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -149,6 +153,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * returned.
    * @opt_param string pageToken The page token.
    * @return ListPolicyBasedRoutesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes($parent, $optParams = [])
   {
@@ -168,6 +173,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -190,6 +196,7 @@ class ProjectsLocationsNetworkconnectivityGlobalPolicyBasedRoutes extends \Googl
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

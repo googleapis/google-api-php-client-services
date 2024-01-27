@@ -24,10 +24,6 @@ class ListRouteTablesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var RouteTable[]
-   */
-  public $routeTables;
   protected $routeTablesType = RouteTable::class;
   protected $routeTablesDataType = 'array';
   /**

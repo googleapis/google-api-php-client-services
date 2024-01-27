@@ -20,10 +20,6 @@ namespace Google\Service\Networkconnectivity;
 class ListHubsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Hub[]
-   */
-  public $hubs;
   protected $hubsType = Hub::class;
   protected $hubsDataType = 'array';
   /**

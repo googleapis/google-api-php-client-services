@@ -55,6 +55,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @opt_param string spokeId Required. Unique id for the spoke to create.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Spoke $postBody, $optParams = [])
   {
@@ -80,6 +81,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID, with the exception that
    * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -93,6 +95,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @param string $name Required. The name of the spoke resource.
    * @param array $optParams Optional parameters.
    * @return Spoke
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -123,6 +126,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -142,6 +146,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @opt_param int pageSize The maximum number of results to return per page.
    * @opt_param string pageToken The page token.
    * @return ListSpokesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSpokes($parent, $optParams = [])
   {
@@ -175,6 +180,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * full request. A field is overwritten if it is in the mask. If the user does
    * not provide a mask, then all fields are overwritten.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Spoke $postBody, $optParams = [])
   {
@@ -194,6 +200,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -215,6 +222,7 @@ class ProjectsLocationsSpokes extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

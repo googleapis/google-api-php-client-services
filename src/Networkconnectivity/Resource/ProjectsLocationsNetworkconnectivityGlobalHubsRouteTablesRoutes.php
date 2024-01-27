@@ -36,6 +36,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubsRouteTablesRoutes extends \G
    * @param string $name Required. The name of the route resource.
    * @param array $optParams Optional parameters.
    * @return Route
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -55,6 +56,7 @@ class ProjectsLocationsNetworkconnectivityGlobalHubsRouteTablesRoutes extends \G
    * @opt_param int pageSize The maximum number of results to return per page.
    * @opt_param string pageToken The page token.
    * @return ListRoutesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkconnectivityGlobalHubsRouteTablesRoutes($parent, $optParams = [])
   {

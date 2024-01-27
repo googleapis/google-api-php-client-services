@@ -59,6 +59,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * in '[...]/projects/p/locations/l/serviceConnectionPolicies/foo') See
    * https://google.aip.dev/122#resource-id-segments Unique per location.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ServiceConnectionPolicy $postBody, $optParams = [])
   {
@@ -88,6 +89,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -102,6 +104,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * @param string $name Required. Name of the ServiceConnectionPolicy to get.
    * @param array $optParams Optional parameters.
    * @return ServiceConnectionPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -133,6 +136,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -155,6 +159,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * returned.
    * @opt_param string pageToken The page token.
    * @return ListServiceConnectionPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsServiceConnectionPolicies($parent, $optParams = [])
   {
@@ -190,6 +195,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * not the full request. A field will be overwritten if it is in the mask. If
    * the user does not provide a mask then all fields will be overwritten.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, ServiceConnectionPolicy $postBody, $optParams = [])
   {
@@ -209,6 +215,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -231,6 +238,7 @@ class ProjectsLocationsServiceConnectionPolicies extends \Google\Service\Resourc
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

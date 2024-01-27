@@ -24,10 +24,6 @@ class ListSpokesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Spoke[]
-   */
-  public $spokes;
   protected $spokesType = Spoke::class;
   protected $spokesDataType = 'array';
   /**
