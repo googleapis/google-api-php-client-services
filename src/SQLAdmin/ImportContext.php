@@ -19,16 +19,8 @@ namespace Google\Service\SQLAdmin;
 
 class ImportContext extends \Google\Model
 {
-  /**
-   * @var ImportContextBakImportOptions
-   */
-  public $bakImportOptions;
   protected $bakImportOptionsType = ImportContextBakImportOptions::class;
   protected $bakImportOptionsDataType = '';
-  /**
-   * @var ImportContextCsvImportOptions
-   */
-  public $csvImportOptions;
   protected $csvImportOptionsType = ImportContextCsvImportOptions::class;
   protected $csvImportOptionsDataType = '';
   /**

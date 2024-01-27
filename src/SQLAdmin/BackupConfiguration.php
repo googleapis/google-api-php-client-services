@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class BackupConfiguration extends \Google\Model
 {
-  /**
-   * @var BackupRetentionSettings
-   */
-  public $backupRetentionSettings;
   protected $backupRetentionSettingsType = BackupRetentionSettings::class;
   protected $backupRetentionSettingsDataType = '';
   /**

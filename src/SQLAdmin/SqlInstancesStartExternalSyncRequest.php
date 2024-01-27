@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class SqlInstancesStartExternalSyncRequest extends \Google\Model
 {
-  /**
-   * @var MySqlSyncConfig
-   */
-  public $mysqlSyncConfig;
   protected $mysqlSyncConfigType = MySqlSyncConfig::class;
   protected $mysqlSyncConfigDataType = '';
   /**

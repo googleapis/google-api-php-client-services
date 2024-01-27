@@ -47,20 +47,12 @@ class User extends \Google\Model
    * @var string
    */
   public $password;
-  /**
-   * @var UserPasswordValidationPolicy
-   */
-  public $passwordPolicy;
   protected $passwordPolicyType = UserPasswordValidationPolicy::class;
   protected $passwordPolicyDataType = '';
   /**
    * @var string
    */
   public $project;
-  /**
-   * @var SqlServerUserDetails
-   */
-  public $sqlserverUserDetails;
   protected $sqlserverUserDetailsType = SqlServerUserDetails::class;
   protected $sqlserverUserDetailsDataType = '';
   /**

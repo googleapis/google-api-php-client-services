@@ -20,10 +20,6 @@ namespace Google\Service\SQLAdmin;
 class OperationErrors extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var OperationError[]
-   */
-  public $errors;
   protected $errorsType = OperationError::class;
   protected $errorsDataType = 'array';
   /**

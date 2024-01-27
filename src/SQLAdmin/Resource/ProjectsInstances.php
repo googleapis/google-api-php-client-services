@@ -45,6 +45,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * project ID.
    * @param array $optParams Optional parameters.
    * @return SqlInstancesGetDiskShrinkConfigResponse
+   * @throws \Google\Service\Exception
    */
   public function getDiskShrinkConfig($project, $instance, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * project ID.
    * @param array $optParams Optional parameters.
    * @return SqlInstancesGetLatestRecoveryTimeResponse
+   * @throws \Google\Service\Exception
    */
   public function getLatestRecoveryTime($project, $instance, $optParams = [])
   {
@@ -77,6 +79,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param PerformDiskShrinkContext $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function performDiskShrink($project, $instance, PerformDiskShrinkContext $postBody, $optParams = [])
   {
@@ -94,6 +97,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param SqlInstancesRescheduleMaintenanceRequestBody $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function rescheduleMaintenance($project, $instance, SqlInstancesRescheduleMaintenanceRequestBody $postBody, $optParams = [])
   {
@@ -110,6 +114,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param SqlInstancesResetReplicaSizeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function resetReplicaSize($project, $instance, SqlInstancesResetReplicaSizeRequest $postBody, $optParams = [])
   {
@@ -126,6 +131,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param SqlInstancesStartExternalSyncRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function startExternalSync($project, $instance, SqlInstancesStartExternalSyncRequest $postBody, $optParams = [])
   {
@@ -143,6 +149,7 @@ class ProjectsInstances extends \Google\Service\Resource
    * @param SqlInstancesVerifyExternalSyncSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SqlInstancesVerifyExternalSyncSettingsResponse
+   * @throws \Google\Service\Exception
    */
   public function verifyExternalSyncSettings($project, $instance, SqlInstancesVerifyExternalSyncSettingsRequest $postBody, $optParams = [])
   {

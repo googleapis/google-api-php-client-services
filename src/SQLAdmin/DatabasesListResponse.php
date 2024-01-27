@@ -20,10 +20,6 @@ namespace Google\Service\SQLAdmin;
 class DatabasesListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Database[]
-   */
-  public $items;
   protected $itemsType = Database::class;
   protected $itemsDataType = 'array';
   /**

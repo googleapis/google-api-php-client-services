@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesFailoverRequest extends \Google\Model
 {
-  /**
-   * @var FailoverContext
-   */
-  public $failoverContext;
   protected $failoverContextType = FailoverContext::class;
   protected $failoverContextDataType = '';
 

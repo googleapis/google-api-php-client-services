@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesReencryptRequest extends \Google\Model
 {
-  /**
-   * @var BackupReencryptionConfig
-   */
-  public $backupReencryptionConfig;
   protected $backupReencryptionConfigType = BackupReencryptionConfig::class;
   protected $backupReencryptionConfigDataType = '';
 

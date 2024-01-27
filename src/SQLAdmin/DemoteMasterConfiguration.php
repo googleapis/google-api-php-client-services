@@ -23,10 +23,6 @@ class DemoteMasterConfiguration extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var DemoteMasterMySqlReplicaConfiguration
-   */
-  public $mysqlReplicaConfiguration;
   protected $mysqlReplicaConfigurationType = DemoteMasterMySqlReplicaConfiguration::class;
   protected $mysqlReplicaConfigurationDataType = '';
 

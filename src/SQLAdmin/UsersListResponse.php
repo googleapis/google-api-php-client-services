@@ -20,10 +20,6 @@ namespace Google\Service\SQLAdmin;
 class UsersListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var User[]
-   */
-  public $items;
   protected $itemsType = User::class;
   protected $itemsDataType = 'array';
   /**

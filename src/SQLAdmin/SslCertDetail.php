@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class SslCertDetail extends \Google\Model
 {
-  /**
-   * @var SslCert
-   */
-  public $certInfo;
   protected $certInfoType = SslCert::class;
   protected $certInfoDataType = '';
   /**

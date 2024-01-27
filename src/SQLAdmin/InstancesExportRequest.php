@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class InstancesExportRequest extends \Google\Model
 {
-  /**
-   * @var ExportContext
-   */
-  public $exportContext;
   protected $exportContextType = ExportContext::class;
   protected $exportContextDataType = '';
 

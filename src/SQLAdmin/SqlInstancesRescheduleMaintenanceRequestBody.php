@@ -19,10 +19,6 @@ namespace Google\Service\SQLAdmin;
 
 class SqlInstancesRescheduleMaintenanceRequestBody extends \Google\Model
 {
-  /**
-   * @var Reschedule
-   */
-  public $reschedule;
   protected $rescheduleType = Reschedule::class;
   protected $rescheduleDataType = '';
 
