@@ -27,10 +27,6 @@ class StatusEvent extends \Google\Model
    * @var string
    */
   public $eventTime;
-  /**
-   * @var TaskExecution
-   */
-  public $taskExecution;
   protected $taskExecutionType = TaskExecution::class;
   protected $taskExecutionDataType = '';
   /**

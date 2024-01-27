@@ -20,22 +20,10 @@ namespace Google\Service\Batch;
 class InstancePolicy extends \Google\Collection
 {
   protected $collection_key = 'disks';
-  /**
-   * @var Accelerator[]
-   */
-  public $accelerators;
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
-  /**
-   * @var Disk
-   */
-  public $bootDisk;
   protected $bootDiskType = Disk::class;
   protected $bootDiskDataType = '';
-  /**
-   * @var AttachedDisk[]
-   */
-  public $disks;
   protected $disksType = AttachedDisk::class;
   protected $disksDataType = 'array';
   /**

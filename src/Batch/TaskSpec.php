@@ -20,26 +20,14 @@ namespace Google\Service\Batch;
 class TaskSpec extends \Google\Collection
 {
   protected $collection_key = 'volumes';
-  /**
-   * @var ComputeResource
-   */
-  public $computeResource;
   protected $computeResourceType = ComputeResource::class;
   protected $computeResourceDataType = '';
-  /**
-   * @var Environment
-   */
-  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
   /**
    * @var string[]
    */
   public $environments;
-  /**
-   * @var LifecyclePolicy[]
-   */
-  public $lifecyclePolicies;
   protected $lifecyclePoliciesType = LifecyclePolicy::class;
   protected $lifecyclePoliciesDataType = 'array';
   /**
@@ -50,16 +38,8 @@ class TaskSpec extends \Google\Collection
    * @var string
    */
   public $maxRunDuration;
-  /**
-   * @var Runnable[]
-   */
-  public $runnables;
   protected $runnablesType = Runnable::class;
   protected $runnablesDataType = 'array';
-  /**
-   * @var Volume[]
-   */
-  public $volumes;
   protected $volumesType = Volume::class;
   protected $volumesDataType = 'array';
 

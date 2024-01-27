@@ -24,10 +24,6 @@ class TaskGroupStatus extends \Google\Collection
    * @var string[]
    */
   public $counts;
-  /**
-   * @var InstanceStatus[]
-   */
-  public $instances;
   protected $instancesType = InstanceStatus::class;
   protected $instancesDataType = 'array';
 

@@ -24,10 +24,6 @@ class ListTasksResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Task[]
-   */
-  public $tasks;
   protected $tasksType = Task::class;
   protected $tasksDataType = 'array';
   /**

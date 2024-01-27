@@ -19,10 +19,6 @@ namespace Google\Service\Batch;
 
 class Environment extends \Google\Model
 {
-  /**
-   * @var KMSEnvMap
-   */
-  public $encryptedVariables;
   protected $encryptedVariablesType = KMSEnvMap::class;
   protected $encryptedVariablesDataType = '';
   /**

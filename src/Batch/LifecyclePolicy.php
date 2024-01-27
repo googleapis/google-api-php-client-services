@@ -23,10 +23,6 @@ class LifecyclePolicy extends \Google\Model
    * @var string
    */
   public $action;
-  /**
-   * @var ActionCondition
-   */
-  public $actionCondition;
   protected $actionConditionType = ActionCondition::class;
   protected $actionConditionDataType = '';
 
