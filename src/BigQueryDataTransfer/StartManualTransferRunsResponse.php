@@ -20,10 +20,6 @@ namespace Google\Service\BigQueryDataTransfer;
 class StartManualTransferRunsResponse extends \Google\Collection
 {
   protected $collection_key = 'runs';
-  /**
-   * @var TransferRun[]
-   */
-  public $runs;
   protected $runsType = TransferRun::class;
   protected $runsDataType = 'array';
 

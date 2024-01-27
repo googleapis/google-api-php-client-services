@@ -76,6 +76,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * method. Note that this should not be set when `service_account_name` is used
    * to create the transfer config.
    * @return TransferConfig
+   * @throws \Google\Service\Exception
    */
   public function create($parent, TransferConfig $postBody, $optParams = [])
   {
@@ -93,6 +94,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
    * @param array $optParams Optional parameters.
    * @return BigquerydatatransferEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -109,6 +111,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_id}/transferConfigs/{config_id}`
    * @param array $optParams Optional parameters.
    * @return TransferConfig
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -134,6 +137,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * results, `ListTransfersResponse` outputs a `next_page` token, which can be
    * used as the `page_token` value to request the next page of list results.
    * @return ListTransferConfigsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsTransferConfigs($parent, $optParams = [])
   {
@@ -186,6 +190,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * method. Note that this should not be set when `service_account_name` is used
    * to update the transfer config.
    * @return TransferConfig
+   * @throws \Google\Service\Exception
    */
   public function patch($name, TransferConfig $postBody, $optParams = [])
   {
@@ -206,6 +211,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * @param ScheduleTransferRunsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ScheduleTransferRunsResponse
+   * @throws \Google\Service\Exception
    */
   public function scheduleRuns($parent, ScheduleTransferRunsRequest $postBody, $optParams = [])
   {
@@ -225,6 +231,7 @@ class ProjectsTransferConfigs extends \Google\Service\Resource
    * @param StartManualTransferRunsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return StartManualTransferRunsResponse
+   * @throws \Google\Service\Exception
    */
   public function startManualRuns($parent, StartManualTransferRunsRequest $postBody, $optParams = [])
   {

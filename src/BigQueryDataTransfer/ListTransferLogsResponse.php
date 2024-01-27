@@ -24,10 +24,6 @@ class ListTransferLogsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var TransferMessage[]
-   */
-  public $transferMessages;
   protected $transferMessagesType = TransferMessage::class;
   protected $transferMessagesDataType = 'array';
 

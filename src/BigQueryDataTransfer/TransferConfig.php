@@ -43,16 +43,8 @@ class TransferConfig extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var EmailPreferences
-   */
-  public $emailPreferences;
   protected $emailPreferencesType = EmailPreferences::class;
   protected $emailPreferencesDataType = '';
-  /**
-   * @var EncryptionConfiguration
-   */
-  public $encryptionConfiguration;
   protected $encryptionConfigurationType = EncryptionConfiguration::class;
   protected $encryptionConfigurationDataType = '';
   /**
@@ -67,10 +59,6 @@ class TransferConfig extends \Google\Model
    * @var string
    */
   public $notificationPubsubTopic;
-  /**
-   * @var UserInfo
-   */
-  public $ownerInfo;
   protected $ownerInfoType = UserInfo::class;
   protected $ownerInfoDataType = '';
   /**
@@ -81,10 +69,6 @@ class TransferConfig extends \Google\Model
    * @var string
    */
   public $schedule;
-  /**
-   * @var ScheduleOptions
-   */
-  public $scheduleOptions;
   protected $scheduleOptionsType = ScheduleOptions::class;
   protected $scheduleOptionsDataType = '';
   /**
