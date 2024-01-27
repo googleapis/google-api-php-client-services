@@ -20,10 +20,6 @@ namespace Google\Service\DeploymentManager;
 class DeploymentmanagerResource extends \Google\Collection
 {
   protected $collection_key = 'warnings';
-  /**
-   * @var ResourceAccessControl
-   */
-  public $accessControl;
   protected $accessControlType = ResourceAccessControl::class;
   protected $accessControlDataType = '';
   /**
@@ -54,10 +50,6 @@ class DeploymentmanagerResource extends \Google\Collection
    * @var string
    */
   public $type;
-  /**
-   * @var ResourceUpdate
-   */
-  public $update;
   protected $updateType = ResourceUpdate::class;
   protected $updateDataType = '';
   /**
@@ -68,10 +60,6 @@ class DeploymentmanagerResource extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var DeploymentmanagerResourceWarnings[]
-   */
-  public $warnings;
   protected $warningsType = DeploymentmanagerResourceWarnings::class;
   protected $warningsDataType = 'array';
 

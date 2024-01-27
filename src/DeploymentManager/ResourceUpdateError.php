@@ -20,10 +20,6 @@ namespace Google\Service\DeploymentManager;
 class ResourceUpdateError extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var ResourceUpdateErrorErrors[]
-   */
-  public $errors;
   protected $errorsType = ResourceUpdateErrorErrors::class;
   protected $errorsDataType = 'array';
 

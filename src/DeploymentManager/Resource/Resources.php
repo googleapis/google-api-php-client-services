@@ -38,6 +38,7 @@ class Resources extends \Google\Service\Resource
    * @param string $resource The name of the resource for this request.
    * @param array $optParams Optional parameters.
    * @return DeploymentmanagerResource
+   * @throws \Google\Service\Exception
    */
   public function get($project, $deployment, $resource, $optParams = [])
   {
@@ -101,6 +102,7 @@ class Resources extends \Google\Service\Resource
    * the `nextPageToken` returned by a previous list request to get the next page
    * of results.
    * @return ResourcesListResponse
+   * @throws \Google\Service\Exception
    */
   public function listResources($project, $deployment, $optParams = [])
   {

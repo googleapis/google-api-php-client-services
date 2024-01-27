@@ -24,10 +24,6 @@ class TypesListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Type[]
-   */
-  public $types;
   protected $typesType = Type::class;
   protected $typesDataType = 'array';
 
