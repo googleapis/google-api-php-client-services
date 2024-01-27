@@ -20,20 +20,12 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class RelationshipData extends \Google\Collection
 {
   protected $collection_key = 'childrenLocations';
-  /**
-   * @var RelevantLocation[]
-   */
-  public $childrenLocations;
   protected $childrenLocationsType = RelevantLocation::class;
   protected $childrenLocationsDataType = 'array';
   /**
    * @var string
    */
   public $parentChain;
-  /**
-   * @var RelevantLocation
-   */
-  public $parentLocation;
   protected $parentLocationType = RelevantLocation::class;
   protected $parentLocationDataType = '';
 

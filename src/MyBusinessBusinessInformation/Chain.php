@@ -20,10 +20,6 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class Chain extends \Google\Collection
 {
   protected $collection_key = 'websites';
-  /**
-   * @var ChainName[]
-   */
-  public $chainNames;
   protected $chainNamesType = ChainName::class;
   protected $chainNamesDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class Chain extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ChainUri[]
-   */
-  public $websites;
   protected $websitesType = ChainUri::class;
   protected $websitesDataType = 'array';
 

@@ -37,6 +37,7 @@ class LocationsAttributes extends \Google\Service\Resource
    * of `locations/{location_id}/attributes`.
    * @param array $optParams Optional parameters.
    * @return AttributesModel
+   * @throws \Google\Service\Exception
    */
   public function getGoogleUpdated($name, $optParams = [])
   {

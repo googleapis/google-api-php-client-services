@@ -19,10 +19,6 @@ namespace Google\Service\MyBusinessBusinessInformation;
 
 class GoogleLocation extends \Google\Model
 {
-  /**
-   * @var Location
-   */
-  public $location;
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**

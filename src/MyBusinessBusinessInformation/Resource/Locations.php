@@ -41,6 +41,7 @@ class Locations extends \Google\Service\Resource
    * @param string $name Required. The name of the location to delete.
    * @param array $optParams Optional parameters.
    * @return MybusinessbusinessinformationEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -57,6 +58,7 @@ class Locations extends \Google\Service\Resource
    * @opt_param string readMask Required. Read mask to specify what fields will be
    * returned in the response.
    * @return Location
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -72,6 +74,7 @@ class Locations extends \Google\Service\Resource
    * of `locations/{location_id}/attributes`.
    * @param array $optParams Optional parameters.
    * @return AttributesModel
+   * @throws \Google\Service\Exception
    */
   public function getAttributes($name, $optParams = [])
   {
@@ -89,6 +92,7 @@ class Locations extends \Google\Service\Resource
    * @opt_param string readMask Required. Read mask to specify what fields will be
    * returned in the response.
    * @return GoogleUpdatedLocation
+   * @throws \Google\Service\Exception
    */
   public function getGoogleUpdated($name, $optParams = [])
   {
@@ -110,6 +114,7 @@ class Locations extends \Google\Service\Resource
    * return validation errors if there were any. The response will be empty if no
    * errors were found.
    * @return Location
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Location $postBody, $optParams = [])
   {
@@ -136,6 +141,7 @@ class Locations extends \Google\Service\Resource
    * location and then add them to the `attribute_mask` with an empty attributes
    * field.
    * @return AttributesModel
+   * @throws \Google\Service\Exception
    */
   public function updateAttributes($name, AttributesModel $postBody, $optParams = [])
   {

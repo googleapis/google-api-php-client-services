@@ -20,10 +20,6 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class BatchGetCategoriesResponse extends \Google\Collection
 {
   protected $collection_key = 'categories';
-  /**
-   * @var Category[]
-   */
-  public $categories;
   protected $categoriesType = Category::class;
   protected $categoriesDataType = 'array';
 

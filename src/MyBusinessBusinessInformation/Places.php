@@ -20,10 +20,6 @@ namespace Google\Service\MyBusinessBusinessInformation;
 class Places extends \Google\Collection
 {
   protected $collection_key = 'placeInfos';
-  /**
-   * @var PlaceInfo[]
-   */
-  public $placeInfos;
   protected $placeInfosType = PlaceInfo::class;
   protected $placeInfosDataType = 'array';
 

@@ -23,10 +23,6 @@ class FreeFormServiceItem extends \Google\Model
    * @var string
    */
   public $category;
-  /**
-   * @var Label
-   */
-  public $label;
   protected $labelType = Label::class;
   protected $labelDataType = '';
 

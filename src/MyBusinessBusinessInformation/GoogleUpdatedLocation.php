@@ -23,10 +23,6 @@ class GoogleUpdatedLocation extends \Google\Model
    * @var string
    */
   public $diffMask;
-  /**
-   * @var Location
-   */
-  public $location;
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**
