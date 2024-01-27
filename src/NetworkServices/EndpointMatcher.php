@@ -19,10 +19,6 @@ namespace Google\Service\NetworkServices;
 
 class EndpointMatcher extends \Google\Model
 {
-  /**
-   * @var EndpointMatcherMetadataLabelMatcher
-   */
-  public $metadataLabelMatcher;
   protected $metadataLabelMatcherType = EndpointMatcherMetadataLabelMatcher::class;
   protected $metadataLabelMatcherDataType = '';
 

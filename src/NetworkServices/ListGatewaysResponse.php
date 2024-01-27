@@ -20,10 +20,6 @@ namespace Google\Service\NetworkServices;
 class ListGatewaysResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Gateway[]
-   */
-  public $gateways;
   protected $gatewaysType = Gateway::class;
   protected $gatewaysDataType = 'array';
   /**

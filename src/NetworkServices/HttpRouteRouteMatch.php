@@ -24,10 +24,6 @@ class HttpRouteRouteMatch extends \Google\Collection
    * @var string
    */
   public $fullPathMatch;
-  /**
-   * @var HttpRouteHeaderMatch[]
-   */
-  public $headers;
   protected $headersType = HttpRouteHeaderMatch::class;
   protected $headersDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class HttpRouteRouteMatch extends \Google\Collection
    * @var string
    */
   public $prefixMatch;
-  /**
-   * @var HttpRouteQueryParameterMatch[]
-   */
-  public $queryParameters;
   protected $queryParametersType = HttpRouteQueryParameterMatch::class;
   protected $queryParametersDataType = 'array';
   /**

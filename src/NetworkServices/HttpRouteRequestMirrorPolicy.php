@@ -19,10 +19,6 @@ namespace Google\Service\NetworkServices;
 
 class HttpRouteRequestMirrorPolicy extends \Google\Model
 {
-  /**
-   * @var HttpRouteDestination
-   */
-  public $destination;
   protected $destinationType = HttpRouteDestination::class;
   protected $destinationDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\NetworkServices;
 class TcpRouteRouteAction extends \Google\Collection
 {
   protected $collection_key = 'destinations';
-  /**
-   * @var TcpRouteRouteDestination[]
-   */
-  public $destinations;
   protected $destinationsType = TcpRouteRouteDestination::class;
   protected $destinationsDataType = 'array';
   /**

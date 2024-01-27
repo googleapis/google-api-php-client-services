@@ -20,10 +20,6 @@ namespace Google\Service\NetworkServices;
 class ListHttpRoutesResponse extends \Google\Collection
 {
   protected $collection_key = 'httpRoutes';
-  /**
-   * @var HttpRoute[]
-   */
-  public $httpRoutes;
   protected $httpRoutesType = HttpRoute::class;
   protected $httpRoutesDataType = 'array';
   /**

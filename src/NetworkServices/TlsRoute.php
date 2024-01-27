@@ -44,10 +44,6 @@ class TlsRoute extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var TlsRouteRouteRule[]
-   */
-  public $rules;
   protected $rulesType = TlsRouteRouteRule::class;
   protected $rulesDataType = 'array';
   /**

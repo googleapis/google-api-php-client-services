@@ -19,16 +19,8 @@ namespace Google\Service\NetworkServices;
 
 class HttpRouteDestination extends \Google\Model
 {
-  /**
-   * @var HttpRouteHeaderModifier
-   */
-  public $requestHeaderModifier;
   protected $requestHeaderModifierType = HttpRouteHeaderModifier::class;
   protected $requestHeaderModifierDataType = '';
-  /**
-   * @var HttpRouteHeaderModifier
-   */
-  public $responseHeaderModifier;
   protected $responseHeaderModifierType = HttpRouteHeaderModifier::class;
   protected $responseHeaderModifierDataType = '';
   /**

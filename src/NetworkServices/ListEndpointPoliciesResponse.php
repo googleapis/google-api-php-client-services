@@ -20,10 +20,6 @@ namespace Google\Service\NetworkServices;
 class ListEndpointPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'endpointPolicies';
-  /**
-   * @var EndpointPolicy[]
-   */
-  public $endpointPolicies;
   protected $endpointPoliciesType = EndpointPolicy::class;
   protected $endpointPoliciesDataType = 'array';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\NetworkServices;
 
 class GrpcRouteFaultInjectionPolicy extends \Google\Model
 {
-  /**
-   * @var GrpcRouteFaultInjectionPolicyAbort
-   */
-  public $abort;
   protected $abortType = GrpcRouteFaultInjectionPolicyAbort::class;
   protected $abortDataType = '';
-  /**
-   * @var GrpcRouteFaultInjectionPolicyDelay
-   */
-  public $delay;
   protected $delayType = GrpcRouteFaultInjectionPolicyDelay::class;
   protected $delayDataType = '';
 
