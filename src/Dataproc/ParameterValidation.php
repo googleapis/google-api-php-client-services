@@ -19,16 +19,8 @@ namespace Google\Service\Dataproc;
 
 class ParameterValidation extends \Google\Model
 {
-  /**
-   * @var RegexValidation
-   */
-  public $regex;
   protected $regexType = RegexValidation::class;
   protected $regexDataType = '';
-  /**
-   * @var ValueValidation
-   */
-  public $values;
   protected $valuesType = ValueValidation::class;
   protected $valuesDataType = '';
 

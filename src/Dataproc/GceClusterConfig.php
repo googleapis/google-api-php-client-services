@@ -20,10 +20,6 @@ namespace Google\Service\Dataproc;
 class GceClusterConfig extends \Google\Collection
 {
   protected $collection_key = 'tags';
-  /**
-   * @var ConfidentialInstanceConfig
-   */
-  public $confidentialInstanceConfig;
   protected $confidentialInstanceConfigType = ConfidentialInstanceConfig::class;
   protected $confidentialInstanceConfigDataType = '';
   /**
@@ -38,20 +34,12 @@ class GceClusterConfig extends \Google\Collection
    * @var string
    */
   public $networkUri;
-  /**
-   * @var NodeGroupAffinity
-   */
-  public $nodeGroupAffinity;
   protected $nodeGroupAffinityType = NodeGroupAffinity::class;
   protected $nodeGroupAffinityDataType = '';
   /**
    * @var string
    */
   public $privateIpv6GoogleAccess;
-  /**
-   * @var ReservationAffinity
-   */
-  public $reservationAffinity;
   protected $reservationAffinityType = ReservationAffinity::class;
   protected $reservationAffinityDataType = '';
   /**
@@ -62,10 +50,6 @@ class GceClusterConfig extends \Google\Collection
    * @var string[]
    */
   public $serviceAccountScopes;
-  /**
-   * @var ShieldedInstanceConfig
-   */
-  public $shieldedInstanceConfig;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
   /**

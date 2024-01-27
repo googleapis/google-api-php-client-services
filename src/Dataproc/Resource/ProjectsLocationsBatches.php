@@ -53,6 +53,7 @@ class ProjectsLocationsBatches extends \Google\Service\Resource
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Batch $postBody, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsLocationsBatches extends \Google\Service\Resource
    * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
    * @param array $optParams Optional parameters.
    * @return DataprocEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -85,6 +87,7 @@ class ProjectsLocationsBatches extends \Google\Service\Resource
    * "projects/PROJECT_ID/locations/DATAPROC_REGION/batches/BATCH_ID"
    * @param array $optParams Optional parameters.
    * @return Batch
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -118,6 +121,7 @@ class ProjectsLocationsBatches extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A page token received from a previous
    * ListBatches call. Provide this token to retrieve the subsequent page.
    * @return ListBatchesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsBatches($parent, $optParams = [])
   {

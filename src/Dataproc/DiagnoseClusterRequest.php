@@ -20,10 +20,6 @@ namespace Google\Service\Dataproc;
 class DiagnoseClusterRequest extends \Google\Collection
 {
   protected $collection_key = 'yarnApplicationIds';
-  /**
-   * @var Interval
-   */
-  public $diagnosisInterval;
   protected $diagnosisIntervalType = Interval::class;
   protected $diagnosisIntervalDataType = '';
   /**

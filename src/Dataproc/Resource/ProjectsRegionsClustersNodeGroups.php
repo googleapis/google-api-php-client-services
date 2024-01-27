@@ -58,6 +58,7 @@ class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, NodeGroup $postBody, $optParams = [])
   {
@@ -73,6 +74,7 @@ class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource
    * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
    * @param array $optParams Optional parameters.
    * @return NodeGroup
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -90,6 +92,7 @@ class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource
    * @param ResizeNodeGroupRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function resize($name, ResizeNodeGroupRequest $postBody, $optParams = [])
   {

@@ -20,10 +20,6 @@ namespace Google\Service\Dataproc;
 class ListBatchesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Batch[]
-   */
-  public $batches;
   protected $batchesType = Batch::class;
   protected $batchesDataType = 'array';
   /**

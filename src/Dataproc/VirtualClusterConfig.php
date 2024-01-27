@@ -19,16 +19,8 @@ namespace Google\Service\Dataproc;
 
 class VirtualClusterConfig extends \Google\Model
 {
-  /**
-   * @var AuxiliaryServicesConfig
-   */
-  public $auxiliaryServicesConfig;
   protected $auxiliaryServicesConfigType = AuxiliaryServicesConfig::class;
   protected $auxiliaryServicesConfigDataType = '';
-  /**
-   * @var KubernetesClusterConfig
-   */
-  public $kubernetesClusterConfig;
   protected $kubernetesClusterConfigType = KubernetesClusterConfig::class;
   protected $kubernetesClusterConfigDataType = '';
   /**

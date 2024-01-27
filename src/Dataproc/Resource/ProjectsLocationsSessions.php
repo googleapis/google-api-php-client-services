@@ -53,6 +53,7 @@ class ProjectsLocationsSessions extends \Google\Service\Resource
    * becomes the final component of the session's resource name.This value must be
    * 4-63 characters. Valid characters are /a-z-/.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Session $postBody, $optParams = [])
   {
@@ -76,6 +77,7 @@ class ProjectsLocationsSessions extends \Google\Service\Resource
    * contain only letters (a-z, A-Z), numbers (0-9), underscores (_), and hyphens
    * (-). The maximum length is 40 characters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -89,6 +91,7 @@ class ProjectsLocationsSessions extends \Google\Service\Resource
    * @param string $name Required. The name of the session to retrieve.
    * @param array $optParams Optional parameters.
    * @return Session
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -117,6 +120,7 @@ class ProjectsLocationsSessions extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A page token received from a previous
    * ListSessions call. Provide this token to retrieve the subsequent page.
    * @return ListSessionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSessions($parent, $optParams = [])
   {
@@ -131,6 +135,7 @@ class ProjectsLocationsSessions extends \Google\Service\Resource
    * @param TerminateSessionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function terminate($name, TerminateSessionRequest $postBody, $optParams = [])
   {

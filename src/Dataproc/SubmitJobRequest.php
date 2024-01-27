@@ -19,10 +19,6 @@ namespace Google\Service\Dataproc;
 
 class SubmitJobRequest extends \Google\Model
 {
-  /**
-   * @var Job
-   */
-  public $job;
   protected $jobType = Job::class;
   protected $jobDataType = '';
   /**

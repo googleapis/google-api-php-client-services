@@ -19,16 +19,8 @@ namespace Google\Service\Dataproc;
 
 class EnvironmentConfig extends \Google\Model
 {
-  /**
-   * @var ExecutionConfig
-   */
-  public $executionConfig;
   protected $executionConfigType = ExecutionConfig::class;
   protected $executionConfigDataType = '';
-  /**
-   * @var PeripheralsConfig
-   */
-  public $peripheralsConfig;
   protected $peripheralsConfigType = PeripheralsConfig::class;
   protected $peripheralsConfigDataType = '';
 

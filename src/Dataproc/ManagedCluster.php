@@ -23,10 +23,6 @@ class ManagedCluster extends \Google\Model
    * @var string
    */
   public $clusterName;
-  /**
-   * @var ClusterConfig
-   */
-  public $config;
   protected $configType = ClusterConfig::class;
   protected $configDataType = '';
   /**

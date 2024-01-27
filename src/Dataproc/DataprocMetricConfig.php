@@ -20,10 +20,6 @@ namespace Google\Service\Dataproc;
 class DataprocMetricConfig extends \Google\Collection
 {
   protected $collection_key = 'metrics';
-  /**
-   * @var Metric[]
-   */
-  public $metrics;
   protected $metricsType = Metric::class;
   protected $metricsDataType = 'array';
 

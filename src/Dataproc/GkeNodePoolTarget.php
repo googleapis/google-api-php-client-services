@@ -24,10 +24,6 @@ class GkeNodePoolTarget extends \Google\Collection
    * @var string
    */
   public $nodePool;
-  /**
-   * @var GkeNodePoolConfig
-   */
-  public $nodePoolConfig;
   protected $nodePoolConfigType = GkeNodePoolConfig::class;
   protected $nodePoolConfigDataType = '';
   /**

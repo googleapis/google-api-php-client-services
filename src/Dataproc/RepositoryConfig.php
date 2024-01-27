@@ -19,10 +19,6 @@ namespace Google\Service\Dataproc;
 
 class RepositoryConfig extends \Google\Model
 {
-  /**
-   * @var PyPiRepositoryConfig
-   */
-  public $pypiRepositoryConfig;
   protected $pypiRepositoryConfigType = PyPiRepositoryConfig::class;
   protected $pypiRepositoryConfigDataType = '';
 

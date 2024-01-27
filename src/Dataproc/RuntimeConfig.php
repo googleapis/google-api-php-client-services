@@ -27,10 +27,6 @@ class RuntimeConfig extends \Google\Model
    * @var string[]
    */
   public $properties;
-  /**
-   * @var RepositoryConfig
-   */
-  public $repositoryConfig;
   protected $repositoryConfigType = RepositoryConfig::class;
   protected $repositoryConfigDataType = '';
   /**
