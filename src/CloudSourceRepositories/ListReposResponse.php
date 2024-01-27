@@ -24,10 +24,6 @@ class ListReposResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Repo[]
-   */
-  public $repos;
   protected $reposType = Repo::class;
   protected $reposDataType = 'array';
 

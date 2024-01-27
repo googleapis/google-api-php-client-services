@@ -19,10 +19,6 @@ namespace Google\Service\CloudSourceRepositories;
 
 class UpdateRepoRequest extends \Google\Model
 {
-  /**
-   * @var Repo
-   */
-  public $repo;
   protected $repoType = Repo::class;
   protected $repoDataType = '';
   /**

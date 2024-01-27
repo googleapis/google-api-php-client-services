@@ -48,6 +48,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * @param Repo $postBody
    * @param array $optParams Optional parameters.
    * @return Repo
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Repo $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * `projects//repos/`.
    * @param array $optParams Optional parameters.
    * @return SourcerepoEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * form `projects//repos/`.
    * @param array $optParams Optional parameters.
    * @return Repo
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -106,6 +109,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -128,6 +132,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * ListReposResponse left off. This is an opaque token that must be obtained
    * from a recent, prior ListReposResponse's next_page_token field.
    * @return ListReposResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsRepos($name, $optParams = [])
   {
@@ -143,6 +148,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * @param UpdateRepoRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Repo
+   * @throws \Google\Service\Exception
    */
   public function patch($name, UpdateRepoRequest $postBody, $optParams = [])
   {
@@ -161,6 +167,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -177,6 +184,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * @param SyncRepoRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function sync($name, SyncRepoRequest $postBody, $optParams = [])
   {
@@ -196,6 +204,7 @@ class ProjectsRepos extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
