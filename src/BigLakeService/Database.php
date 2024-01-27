@@ -31,10 +31,6 @@ class Database extends \Google\Model
    * @var string
    */
   public $expireTime;
-  /**
-   * @var HiveDatabaseOptions
-   */
-  public $hiveOptions;
   protected $hiveOptionsType = HiveDatabaseOptions::class;
   protected $hiveOptionsDataType = '';
   /**

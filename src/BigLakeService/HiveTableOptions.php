@@ -23,10 +23,6 @@ class HiveTableOptions extends \Google\Model
    * @var string[]
    */
   public $parameters;
-  /**
-   * @var StorageDescriptor
-   */
-  public $storageDescriptor;
   protected $storageDescriptorType = StorageDescriptor::class;
   protected $storageDescriptorDataType = '';
   /**

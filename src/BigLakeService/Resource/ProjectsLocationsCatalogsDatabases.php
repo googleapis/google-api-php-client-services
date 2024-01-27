@@ -42,6 +42,7 @@ class ProjectsLocationsCatalogsDatabases extends \Google\Service\Resource
    * @opt_param string databaseId Required. The ID to use for the database, which
    * will become the final component of the database's resource name.
    * @return Database
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Database $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsLocationsCatalogsDatabases extends \Google\Service\Resource
    * tabases/{database_id}
    * @param array $optParams Optional parameters.
    * @return Database
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -72,6 +74,7 @@ class ProjectsLocationsCatalogsDatabases extends \Google\Service\Resource
    * databases/{database_id}
    * @param array $optParams Optional parameters.
    * @return Database
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsLocationsCatalogsDatabases extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListDatabases` must match the
    * call that provided the page token.
    * @return ListDatabasesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCatalogsDatabases($parent, $optParams = [])
   {
@@ -118,6 +122,7 @@ class ProjectsLocationsCatalogsDatabases extends \Google\Service\Resource
    * buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all
    * of the fields that are allowed to update.
    * @return Database
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Database $postBody, $optParams = [])
   {

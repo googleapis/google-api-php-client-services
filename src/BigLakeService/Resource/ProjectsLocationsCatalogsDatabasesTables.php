@@ -43,6 +43,7 @@ class ProjectsLocationsCatalogsDatabasesTables extends \Google\Service\Resource
    * @opt_param string tableId Required. The ID to use for the table, which will
    * become the final component of the table's resource name.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Table $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsCatalogsDatabasesTables extends \Google\Service\Resource
    * ases/{database_id}/tables/{table_id}
    * @param array $optParams Optional parameters.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -73,6 +75,7 @@ class ProjectsLocationsCatalogsDatabasesTables extends \Google\Service\Resource
    * abases/{database_id}/tables/{table_id}
    * @param array $optParams Optional parameters.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -99,6 +102,7 @@ class ProjectsLocationsCatalogsDatabasesTables extends \Google\Service\Resource
    * that provided the page token.
    * @opt_param string view The view for the returned tables.
    * @return ListTablesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCatalogsDatabasesTables($parent, $optParams = [])
   {
@@ -120,6 +124,7 @@ class ProjectsLocationsCatalogsDatabasesTables extends \Google\Service\Resource
    * buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all
    * of the fields that are allowed to update.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Table $postBody, $optParams = [])
   {
@@ -136,6 +141,7 @@ class ProjectsLocationsCatalogsDatabasesTables extends \Google\Service\Resource
    * @param RenameTableRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function rename($name, RenameTableRequest $postBody, $optParams = [])
   {

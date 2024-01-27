@@ -41,6 +41,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * @opt_param string catalogId Required. The ID to use for the catalog, which
    * will become the final component of the catalog's resource name.
    * @return Catalog
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Catalog $postBody, $optParams = [])
   {
@@ -55,6 +56,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}
    * @param array $optParams Optional parameters.
    * @return Catalog
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -69,6 +71,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * projects/{project_id_or_number}/locations/{location_id}/catalogs/{catalog_id}
    * @param array $optParams Optional parameters.
    * @return Catalog
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -93,6 +96,7 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListCatalogs` must match the
    * call that provided the page token.
    * @return ListCatalogsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCatalogs($parent, $optParams = [])
   {
