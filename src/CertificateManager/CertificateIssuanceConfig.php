@@ -19,10 +19,6 @@ namespace Google\Service\CertificateManager;
 
 class CertificateIssuanceConfig extends \Google\Model
 {
-  /**
-   * @var CertificateAuthorityConfig
-   */
-  public $certificateAuthorityConfig;
   protected $certificateAuthorityConfigType = CertificateAuthorityConfig::class;
   protected $certificateAuthorityConfigDataType = '';
   /**

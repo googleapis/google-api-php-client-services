@@ -43,6 +43,7 @@ class ProjectsLocationsTrustConfigs extends \Google\Service\Resource
    * @opt_param string trustConfigId Required. A user-provided name of the
    * TrustConfig. Must match the regexp `[a-z0-9-]{1,63}`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, TrustConfig $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsTrustConfigs extends \Google\Service\Resource
    * provided and does not match the current etag of the resource, deletion will
    * be blocked and an ABORTED error will be returned.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -75,6 +77,7 @@ class ProjectsLocationsTrustConfigs extends \Google\Service\Resource
    * in the format `projects/locations/trustConfigs`.
    * @param array $optParams Optional parameters.
    * @return TrustConfig
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -101,6 +104,7 @@ class ProjectsLocationsTrustConfigs extends \Google\Service\Resource
    * `ListTrustConfigs` call, and that the system should return the next page of
    * data.
    * @return ListTrustConfigsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsTrustConfigs($parent, $optParams = [])
   {
@@ -122,6 +126,7 @@ class ProjectsLocationsTrustConfigs extends \Google\Service\Resource
    * https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, TrustConfig $postBody, $optParams = [])
   {

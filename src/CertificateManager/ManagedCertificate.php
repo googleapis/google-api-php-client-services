@@ -20,10 +20,6 @@ namespace Google\Service\CertificateManager;
 class ManagedCertificate extends \Google\Collection
 {
   protected $collection_key = 'domains';
-  /**
-   * @var AuthorizationAttemptInfo[]
-   */
-  public $authorizationAttemptInfo;
   protected $authorizationAttemptInfoType = AuthorizationAttemptInfo::class;
   protected $authorizationAttemptInfoDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class ManagedCertificate extends \Google\Collection
    * @var string
    */
   public $issuanceConfig;
-  /**
-   * @var ProvisioningIssue
-   */
-  public $provisioningIssue;
   protected $provisioningIssueType = ProvisioningIssue::class;
   protected $provisioningIssueDataType = '';
   /**

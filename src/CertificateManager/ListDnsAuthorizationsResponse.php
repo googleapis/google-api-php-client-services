@@ -20,10 +20,6 @@ namespace Google\Service\CertificateManager;
 class ListDnsAuthorizationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var DnsAuthorization[]
-   */
-  public $dnsAuthorizations;
   protected $dnsAuthorizationsType = DnsAuthorization::class;
   protected $dnsAuthorizationsDataType = 'array';
   /**

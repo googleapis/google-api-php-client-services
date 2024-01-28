@@ -43,6 +43,7 @@ class ProjectsLocationsCertificateMapsCertificateMapEntries extends \Google\Serv
    * @opt_param string certificateMapEntryId Required. A user-provided name of the
    * certificate map entry.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CertificateMapEntry $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsCertificateMapsCertificateMapEntries extends \Google\Serv
    * `projects/locations/certificateMaps/certificateMapEntries`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -73,6 +75,7 @@ class ProjectsLocationsCertificateMapsCertificateMapEntries extends \Google\Serv
    * `projects/locations/certificateMaps/certificateMapEntries`.
    * @param array $optParams Optional parameters.
    * @return CertificateMapEntry
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -103,6 +106,7 @@ class ProjectsLocationsCertificateMapsCertificateMapEntries extends \Google\Serv
    * a prior `ListCertificateMapEntries` call, and that the system should return
    * the next page of data.
    * @return ListCertificateMapEntriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCertificateMapsCertificateMapEntries($parent, $optParams = [])
   {
@@ -124,6 +128,7 @@ class ProjectsLocationsCertificateMapsCertificateMapEntries extends \Google\Serv
    * https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, CertificateMapEntry $postBody, $optParams = [])
   {

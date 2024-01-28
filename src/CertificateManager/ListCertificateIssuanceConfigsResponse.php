@@ -20,10 +20,6 @@ namespace Google\Service\CertificateManager;
 class ListCertificateIssuanceConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var CertificateIssuanceConfig[]
-   */
-  public $certificateIssuanceConfigs;
   protected $certificateIssuanceConfigsType = CertificateIssuanceConfig::class;
   protected $certificateIssuanceConfigsDataType = 'array';
   /**
