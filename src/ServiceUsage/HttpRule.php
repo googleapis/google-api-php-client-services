@@ -20,20 +20,12 @@ namespace Google\Service\ServiceUsage;
 class HttpRule extends \Google\Collection
 {
   protected $collection_key = 'additionalBindings';
-  /**
-   * @var HttpRule[]
-   */
-  public $additionalBindings;
   protected $additionalBindingsType = HttpRule::class;
   protected $additionalBindingsDataType = 'array';
   /**
    * @var string
    */
   public $body;
-  /**
-   * @var CustomHttpPattern
-   */
-  public $custom;
   protected $customType = CustomHttpPattern::class;
   protected $customDataType = '';
   /**

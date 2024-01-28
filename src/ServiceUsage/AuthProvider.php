@@ -40,10 +40,6 @@ class AuthProvider extends \Google\Collection
    * @var string
    */
   public $jwksUri;
-  /**
-   * @var JwtLocation[]
-   */
-  public $jwtLocations;
   protected $jwtLocationsType = JwtLocation::class;
   protected $jwtLocationsDataType = 'array';
 

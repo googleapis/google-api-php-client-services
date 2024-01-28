@@ -24,10 +24,6 @@ class ConsumerPolicy extends \Google\Collection
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var EnableRule[]
-   */
-  public $enableRules;
   protected $enableRulesType = EnableRule::class;
   protected $enableRulesDataType = 'array';
   /**

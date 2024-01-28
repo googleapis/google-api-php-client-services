@@ -19,10 +19,6 @@ namespace Google\Service\ServiceUsage;
 
 class DisableServiceResponse extends \Google\Model
 {
-  /**
-   * @var GoogleApiServiceusageV1Service
-   */
-  public $service;
   protected $serviceType = GoogleApiServiceusageV1Service::class;
   protected $serviceDataType = '';
 

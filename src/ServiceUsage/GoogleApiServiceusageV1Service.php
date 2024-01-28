@@ -19,10 +19,6 @@ namespace Google\Service\ServiceUsage;
 
 class GoogleApiServiceusageV1Service extends \Google\Model
 {
-  /**
-   * @var GoogleApiServiceusageV1ServiceConfig
-   */
-  public $config;
   protected $configType = GoogleApiServiceusageV1ServiceConfig::class;
   protected $configDataType = '';
   /**

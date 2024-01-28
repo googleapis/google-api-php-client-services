@@ -20,10 +20,6 @@ namespace Google\Service\ServiceUsage;
 class ImportConsumerOverridesResponse extends \Google\Collection
 {
   protected $collection_key = 'overrides';
-  /**
-   * @var QuotaOverride[]
-   */
-  public $overrides;
   protected $overridesType = QuotaOverride::class;
   protected $overridesDataType = 'array';
 

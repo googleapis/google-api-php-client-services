@@ -20,10 +20,6 @@ namespace Google\Service\ServiceUsage;
 class MethodPolicy extends \Google\Collection
 {
   protected $collection_key = 'requestPolicies';
-  /**
-   * @var FieldPolicy[]
-   */
-  public $requestPolicies;
   protected $requestPoliciesType = FieldPolicy::class;
   protected $requestPoliciesDataType = 'array';
   /**

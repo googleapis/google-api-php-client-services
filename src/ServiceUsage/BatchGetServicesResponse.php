@@ -20,10 +20,6 @@ namespace Google\Service\ServiceUsage;
 class BatchGetServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'services';
-  /**
-   * @var GoogleApiServiceusageV1Service[]
-   */
-  public $services;
   protected $servicesType = GoogleApiServiceusageV1Service::class;
   protected $servicesDataType = 'array';
 

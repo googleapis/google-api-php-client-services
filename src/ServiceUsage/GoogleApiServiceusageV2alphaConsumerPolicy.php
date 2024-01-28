@@ -28,10 +28,6 @@ class GoogleApiServiceusageV2alphaConsumerPolicy extends \Google\Collection
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleApiServiceusageV2alphaEnableRule[]
-   */
-  public $enableRules;
   protected $enableRulesType = GoogleApiServiceusageV2alphaEnableRule::class;
   protected $enableRulesDataType = 'array';
   /**

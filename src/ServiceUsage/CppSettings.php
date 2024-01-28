@@ -19,10 +19,6 @@ namespace Google\Service\ServiceUsage;
 
 class CppSettings extends \Google\Model
 {
-  /**
-   * @var CommonLanguageSettings
-   */
-  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
 

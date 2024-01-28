@@ -19,10 +19,6 @@ namespace Google\Service\ServiceUsage;
 
 class GoogleApiServiceusageV1beta1GetServiceIdentityResponse extends \Google\Model
 {
-  /**
-   * @var GoogleApiServiceusageV1beta1ServiceIdentity
-   */
-  public $identity;
   protected $identityType = GoogleApiServiceusageV1beta1ServiceIdentity::class;
   protected $identityDataType = '';
   /**
