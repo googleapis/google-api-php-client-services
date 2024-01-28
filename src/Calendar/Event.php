@@ -24,16 +24,8 @@ class Event extends \Google\Collection
    * @var bool
    */
   public $anyoneCanAddSelf;
-  /**
-   * @var EventAttachment[]
-   */
-  public $attachments;
   protected $attachmentsType = EventAttachment::class;
   protected $attachmentsDataType = 'array';
-  /**
-   * @var EventAttendee[]
-   */
-  public $attendees;
   protected $attendeesType = EventAttendee::class;
   protected $attendeesDataType = 'array';
   /**
@@ -44,30 +36,18 @@ class Event extends \Google\Collection
    * @var string
    */
   public $colorId;
-  /**
-   * @var ConferenceData
-   */
-  public $conferenceData;
   protected $conferenceDataType = ConferenceData::class;
   protected $conferenceDataDataType = '';
   /**
    * @var string
    */
   public $created;
-  /**
-   * @var EventCreator
-   */
-  public $creator;
   protected $creatorType = EventCreator::class;
   protected $creatorDataType = '';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var EventDateTime
-   */
-  public $end;
   protected $endType = EventDateTime::class;
   protected $endDataType = '';
   /**
@@ -82,22 +62,10 @@ class Event extends \Google\Collection
    * @var string
    */
   public $eventType;
-  /**
-   * @var EventExtendedProperties
-   */
-  public $extendedProperties;
   protected $extendedPropertiesType = EventExtendedProperties::class;
   protected $extendedPropertiesDataType = '';
-  /**
-   * @var EventFocusTimeProperties
-   */
-  public $focusTimeProperties;
   protected $focusTimePropertiesType = EventFocusTimeProperties::class;
   protected $focusTimePropertiesDataType = '';
-  /**
-   * @var EventGadget
-   */
-  public $gadget;
   protected $gadgetType = EventGadget::class;
   protected $gadgetDataType = '';
   /**
@@ -140,22 +108,10 @@ class Event extends \Google\Collection
    * @var bool
    */
   public $locked;
-  /**
-   * @var EventOrganizer
-   */
-  public $organizer;
   protected $organizerType = EventOrganizer::class;
   protected $organizerDataType = '';
-  /**
-   * @var EventDateTime
-   */
-  public $originalStartTime;
   protected $originalStartTimeType = EventDateTime::class;
   protected $originalStartTimeDataType = '';
-  /**
-   * @var EventOutOfOfficeProperties
-   */
-  public $outOfOfficeProperties;
   protected $outOfOfficePropertiesType = EventOutOfOfficeProperties::class;
   protected $outOfOfficePropertiesDataType = '';
   /**
@@ -170,26 +126,14 @@ class Event extends \Google\Collection
    * @var string
    */
   public $recurringEventId;
-  /**
-   * @var EventReminders
-   */
-  public $reminders;
   protected $remindersType = EventReminders::class;
   protected $remindersDataType = '';
   /**
    * @var int
    */
   public $sequence;
-  /**
-   * @var EventSource
-   */
-  public $source;
   protected $sourceType = EventSource::class;
   protected $sourceDataType = '';
-  /**
-   * @var EventDateTime
-   */
-  public $start;
   protected $startType = EventDateTime::class;
   protected $startDataType = '';
   /**
@@ -212,10 +156,6 @@ class Event extends \Google\Collection
    * @var string
    */
   public $visibility;
-  /**
-   * @var EventWorkingLocationProperties
-   */
-  public $workingLocationProperties;
   protected $workingLocationPropertiesType = EventWorkingLocationProperties::class;
   protected $workingLocationPropertiesDataType = '';
 

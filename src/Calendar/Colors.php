@@ -19,16 +19,8 @@ namespace Google\Service\Calendar;
 
 class Colors extends \Google\Model
 {
-  /**
-   * @var ColorDefinition[]
-   */
-  public $calendar;
   protected $calendarType = ColorDefinition::class;
   protected $calendarDataType = 'map';
-  /**
-   * @var ColorDefinition[]
-   */
-  public $event;
   protected $eventType = ColorDefinition::class;
   protected $eventDataType = 'map';
   /**

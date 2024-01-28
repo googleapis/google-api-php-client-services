@@ -20,10 +20,6 @@ namespace Google\Service\Calendar;
 class CalendarListEntryNotificationSettings extends \Google\Collection
 {
   protected $collection_key = 'notifications';
-  /**
-   * @var CalendarNotification[]
-   */
-  public $notifications;
   protected $notificationsType = CalendarNotification::class;
   protected $notificationsDataType = 'array';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Calendar;
 
 class FreeBusyResponse extends \Google\Model
 {
-  /**
-   * @var FreeBusyCalendar[]
-   */
-  public $calendars;
   protected $calendarsType = FreeBusyCalendar::class;
   protected $calendarsDataType = 'map';
-  /**
-   * @var FreeBusyGroup[]
-   */
-  public $groups;
   protected $groupsType = FreeBusyGroup::class;
   protected $groupsDataType = 'map';
   /**
