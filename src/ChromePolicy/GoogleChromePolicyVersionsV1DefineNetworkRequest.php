@@ -24,10 +24,6 @@ class GoogleChromePolicyVersionsV1DefineNetworkRequest extends \Google\Collectio
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleChromePolicyVersionsV1NetworkSetting[]
-   */
-  public $settings;
   protected $settingsType = GoogleChromePolicyVersionsV1NetworkSetting::class;
   protected $settingsDataType = 'array';
   /**

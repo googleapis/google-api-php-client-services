@@ -23,10 +23,6 @@ class GoogleChromePolicyVersionsV1DeleteGroupPolicyRequest extends \Google\Model
    * @var string
    */
   public $policySchema;
-  /**
-   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
-   */
-  public $policyTargetKey;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
 

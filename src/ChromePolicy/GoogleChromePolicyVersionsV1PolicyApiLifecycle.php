@@ -28,10 +28,6 @@ class GoogleChromePolicyVersionsV1PolicyApiLifecycle extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var GoogleTypeDate
-   */
-  public $endSupport;
   protected $endSupportType = GoogleTypeDate::class;
   protected $endSupportDataType = '';
   /**

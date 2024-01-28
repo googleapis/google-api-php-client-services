@@ -20,10 +20,6 @@ namespace Google\Service\ChromePolicy;
 class GoogleChromePolicyVersionsV1BatchModifyGroupPoliciesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var GoogleChromePolicyVersionsV1ModifyGroupPolicyRequest[]
-   */
-  public $requests;
   protected $requestsType = GoogleChromePolicyVersionsV1ModifyGroupPolicyRequest::class;
   protected $requestsDataType = 'array';
 

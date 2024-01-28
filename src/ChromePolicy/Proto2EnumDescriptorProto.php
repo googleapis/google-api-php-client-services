@@ -24,10 +24,6 @@ class Proto2EnumDescriptorProto extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Proto2EnumValueDescriptorProto[]
-   */
-  public $value;
   protected $valueType = Proto2EnumValueDescriptorProto::class;
   protected $valueDataType = 'array';
 

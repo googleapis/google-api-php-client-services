@@ -23,10 +23,6 @@ class GoogleChromePolicyVersionsV1InheritOrgUnitPolicyRequest extends \Google\Mo
    * @var string
    */
   public $policySchema;
-  /**
-   * @var GoogleChromePolicyVersionsV1PolicyTargetKey
-   */
-  public $policyTargetKey;
   protected $policyTargetKeyType = GoogleChromePolicyVersionsV1PolicyTargetKey::class;
   protected $policyTargetKeyDataType = '';
 

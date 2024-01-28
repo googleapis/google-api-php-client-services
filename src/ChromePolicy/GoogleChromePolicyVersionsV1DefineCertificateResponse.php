@@ -24,10 +24,6 @@ class GoogleChromePolicyVersionsV1DefineCertificateResponse extends \Google\Coll
    * @var string
    */
   public $networkId;
-  /**
-   * @var GoogleChromePolicyVersionsV1NetworkSetting[]
-   */
-  public $settings;
   protected $settingsType = GoogleChromePolicyVersionsV1NetworkSetting::class;
   protected $settingsDataType = 'array';
   /**
