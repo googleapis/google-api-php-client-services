@@ -56,6 +56,7 @@ class LocationsSearchkeywordsImpressionsMonthly extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A token indicating the next paginated
    * result to be returned.
    * @return ListSearchKeywordImpressionsMonthlyResponse
+   * @throws \Google\Service\Exception
    */
   public function listLocationsSearchkeywordsImpressionsMonthly($parent, $optParams = [])
   {

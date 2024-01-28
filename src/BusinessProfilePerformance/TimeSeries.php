@@ -20,10 +20,6 @@ namespace Google\Service\BusinessProfilePerformance;
 class TimeSeries extends \Google\Collection
 {
   protected $collection_key = 'datedValues';
-  /**
-   * @var DatedValue[]
-   */
-  public $datedValues;
   protected $datedValuesType = DatedValue::class;
   protected $datedValuesDataType = 'array';
 

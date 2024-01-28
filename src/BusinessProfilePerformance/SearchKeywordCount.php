@@ -19,10 +19,6 @@ namespace Google\Service\BusinessProfilePerformance;
 
 class SearchKeywordCount extends \Google\Model
 {
-  /**
-   * @var InsightsValue
-   */
-  public $insightsValue;
   protected $insightsValueType = InsightsValue::class;
   protected $insightsValueDataType = '';
   /**

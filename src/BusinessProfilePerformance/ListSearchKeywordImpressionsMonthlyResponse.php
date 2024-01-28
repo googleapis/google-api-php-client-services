@@ -24,10 +24,6 @@ class ListSearchKeywordImpressionsMonthlyResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SearchKeywordCount[]
-   */
-  public $searchKeywordsCounts;
   protected $searchKeywordsCountsType = SearchKeywordCount::class;
   protected $searchKeywordsCountsDataType = 'array';
 

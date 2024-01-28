@@ -55,6 +55,7 @@ class Locations extends \Google\Service\Resource
    * @opt_param int dailyRange.startDate.year Year of the date. Must be from 1 to
    * 9999, or 0 to specify a date without a year.
    * @return FetchMultiDailyMetricsTimeSeriesResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchMultiDailyMetricsTimeSeries($location, $optParams = [])
   {
@@ -98,6 +99,7 @@ class Locations extends \Google\Service\Resource
    * time. Must normally be from 0 to 59. An API may allow the value 60 if it
    * allows leap-seconds.
    * @return GetDailyMetricsTimeSeriesResponse
+   * @throws \Google\Service\Exception
    */
   public function getDailyMetricsTimeSeries($name, $optParams = [])
   {

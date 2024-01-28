@@ -19,10 +19,6 @@ namespace Google\Service\BusinessProfilePerformance;
 
 class DatedValue extends \Google\Model
 {
-  /**
-   * @var Date
-   */
-  public $date;
   protected $dateType = Date::class;
   protected $dateDataType = '';
   /**
