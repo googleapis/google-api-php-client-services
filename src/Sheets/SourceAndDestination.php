@@ -27,10 +27,6 @@ class SourceAndDestination extends \Google\Model
    * @var int
    */
   public $fillLength;
-  /**
-   * @var GridRange
-   */
-  public $source;
   protected $sourceType = GridRange::class;
   protected $sourceDataType = '';
 

@@ -20,54 +20,26 @@ namespace Google\Service\Sheets;
 class PivotTable extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var PivotGroup[]
-   */
-  public $columns;
   protected $columnsType = PivotGroup::class;
   protected $columnsDataType = 'array';
-  /**
-   * @var PivotFilterCriteria[]
-   */
-  public $criteria;
   protected $criteriaType = PivotFilterCriteria::class;
   protected $criteriaDataType = 'map';
-  /**
-   * @var DataExecutionStatus
-   */
-  public $dataExecutionStatus;
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   /**
    * @var string
    */
   public $dataSourceId;
-  /**
-   * @var PivotFilterSpec[]
-   */
-  public $filterSpecs;
   protected $filterSpecsType = PivotFilterSpec::class;
   protected $filterSpecsDataType = 'array';
-  /**
-   * @var PivotGroup[]
-   */
-  public $rows;
   protected $rowsType = PivotGroup::class;
   protected $rowsDataType = 'array';
-  /**
-   * @var GridRange
-   */
-  public $source;
   protected $sourceType = GridRange::class;
   protected $sourceDataType = '';
   /**
    * @var string
    */
   public $valueLayout;
-  /**
-   * @var PivotValue[]
-   */
-  public $values;
   protected $valuesType = PivotValue::class;
   protected $valuesDataType = 'array';
 

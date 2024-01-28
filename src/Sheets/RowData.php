@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class RowData extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var CellData[]
-   */
-  public $values;
   protected $valuesType = CellData::class;
   protected $valuesDataType = 'array';
 

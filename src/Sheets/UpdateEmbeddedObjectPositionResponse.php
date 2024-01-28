@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class UpdateEmbeddedObjectPositionResponse extends \Google\Model
 {
-  /**
-   * @var EmbeddedObjectPosition
-   */
-  public $position;
   protected $positionType = EmbeddedObjectPosition::class;
   protected $positionDataType = '';
 

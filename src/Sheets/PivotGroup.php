@@ -20,22 +20,10 @@ namespace Google\Service\Sheets;
 class PivotGroup extends \Google\Collection
 {
   protected $collection_key = 'valueMetadata';
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $dataSourceColumnReference;
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
-  /**
-   * @var PivotGroupLimit
-   */
-  public $groupLimit;
   protected $groupLimitType = PivotGroupLimit::class;
   protected $groupLimitDataType = '';
-  /**
-   * @var PivotGroupRule
-   */
-  public $groupRule;
   protected $groupRuleType = PivotGroupRule::class;
   protected $groupRuleDataType = '';
   /**
@@ -58,16 +46,8 @@ class PivotGroup extends \Google\Collection
    * @var int
    */
   public $sourceColumnOffset;
-  /**
-   * @var PivotGroupSortValueBucket
-   */
-  public $valueBucket;
   protected $valueBucketType = PivotGroupSortValueBucket::class;
   protected $valueBucketDataType = '';
-  /**
-   * @var PivotGroupValueMetadata[]
-   */
-  public $valueMetadata;
   protected $valueMetadataType = PivotGroupValueMetadata::class;
   protected $valueMetadataDataType = 'array';
 

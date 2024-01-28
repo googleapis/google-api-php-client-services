@@ -19,46 +19,18 @@ namespace Google\Service\Sheets;
 
 class UpdateBordersRequest extends \Google\Model
 {
-  /**
-   * @var Border
-   */
-  public $bottom;
   protected $bottomType = Border::class;
   protected $bottomDataType = '';
-  /**
-   * @var Border
-   */
-  public $innerHorizontal;
   protected $innerHorizontalType = Border::class;
   protected $innerHorizontalDataType = '';
-  /**
-   * @var Border
-   */
-  public $innerVertical;
   protected $innerVerticalType = Border::class;
   protected $innerVerticalDataType = '';
-  /**
-   * @var Border
-   */
-  public $left;
   protected $leftType = Border::class;
   protected $leftDataType = '';
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
-  /**
-   * @var Border
-   */
-  public $right;
   protected $rightType = Border::class;
   protected $rightDataType = '';
-  /**
-   * @var Border
-   */
-  public $top;
   protected $topType = Border::class;
   protected $topDataType = '';
 

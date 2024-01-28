@@ -20,44 +20,20 @@ namespace Google\Service\Sheets;
 class WaterfallChartSeries extends \Google\Collection
 {
   protected $collection_key = 'customSubtotals';
-  /**
-   * @var WaterfallChartCustomSubtotal[]
-   */
-  public $customSubtotals;
   protected $customSubtotalsType = WaterfallChartCustomSubtotal::class;
   protected $customSubtotalsDataType = 'array';
-  /**
-   * @var ChartData
-   */
-  public $data;
   protected $dataType = ChartData::class;
   protected $dataDataType = '';
-  /**
-   * @var DataLabel
-   */
-  public $dataLabel;
   protected $dataLabelType = DataLabel::class;
   protected $dataLabelDataType = '';
   /**
    * @var bool
    */
   public $hideTrailingSubtotal;
-  /**
-   * @var WaterfallChartColumnStyle
-   */
-  public $negativeColumnsStyle;
   protected $negativeColumnsStyleType = WaterfallChartColumnStyle::class;
   protected $negativeColumnsStyleDataType = '';
-  /**
-   * @var WaterfallChartColumnStyle
-   */
-  public $positiveColumnsStyle;
   protected $positiveColumnsStyleType = WaterfallChartColumnStyle::class;
   protected $positiveColumnsStyleDataType = '';
-  /**
-   * @var WaterfallChartColumnStyle
-   */
-  public $subtotalColumnsStyle;
   protected $subtotalColumnsStyleType = WaterfallChartColumnStyle::class;
   protected $subtotalColumnsStyleDataType = '';
 

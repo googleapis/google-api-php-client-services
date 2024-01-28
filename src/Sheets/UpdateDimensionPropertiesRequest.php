@@ -19,26 +19,14 @@ namespace Google\Service\Sheets;
 
 class UpdateDimensionPropertiesRequest extends \Google\Model
 {
-  /**
-   * @var DataSourceSheetDimensionRange
-   */
-  public $dataSourceSheetRange;
   protected $dataSourceSheetRangeType = DataSourceSheetDimensionRange::class;
   protected $dataSourceSheetRangeDataType = '';
   /**
    * @var string
    */
   public $fields;
-  /**
-   * @var DimensionProperties
-   */
-  public $properties;
   protected $propertiesType = DimensionProperties::class;
   protected $propertiesDataType = '';
-  /**
-   * @var DimensionRange
-   */
-  public $range;
   protected $rangeType = DimensionRange::class;
   protected $rangeDataType = '';
 

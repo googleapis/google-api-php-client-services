@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class TextFormatRun extends \Google\Model
 {
-  /**
-   * @var TextFormat
-   */
-  public $format;
   protected $formatType = TextFormat::class;
   protected $formatDataType = '';
   /**

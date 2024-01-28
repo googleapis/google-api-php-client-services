@@ -20,40 +20,16 @@ namespace Google\Service\Sheets;
 class Spreadsheet extends \Google\Collection
 {
   protected $collection_key = 'sheets';
-  /**
-   * @var DataSourceRefreshSchedule[]
-   */
-  public $dataSourceSchedules;
   protected $dataSourceSchedulesType = DataSourceRefreshSchedule::class;
   protected $dataSourceSchedulesDataType = 'array';
-  /**
-   * @var DataSource[]
-   */
-  public $dataSources;
   protected $dataSourcesType = DataSource::class;
   protected $dataSourcesDataType = 'array';
-  /**
-   * @var DeveloperMetadata[]
-   */
-  public $developerMetadata;
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = 'array';
-  /**
-   * @var NamedRange[]
-   */
-  public $namedRanges;
   protected $namedRangesType = NamedRange::class;
   protected $namedRangesDataType = 'array';
-  /**
-   * @var SpreadsheetProperties
-   */
-  public $properties;
   protected $propertiesType = SpreadsheetProperties::class;
   protected $propertiesDataType = '';
-  /**
-   * @var Sheet[]
-   */
-  public $sheets;
   protected $sheetsType = Sheet::class;
   protected $sheetsDataType = 'array';
   /**

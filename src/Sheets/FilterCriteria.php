@@ -20,38 +20,18 @@ namespace Google\Service\Sheets;
 class FilterCriteria extends \Google\Collection
 {
   protected $collection_key = 'hiddenValues';
-  /**
-   * @var BooleanCondition
-   */
-  public $condition;
   protected $conditionType = BooleanCondition::class;
   protected $conditionDataType = '';
   /**
    * @var string[]
    */
   public $hiddenValues;
-  /**
-   * @var Color
-   */
-  public $visibleBackgroundColor;
   protected $visibleBackgroundColorType = Color::class;
   protected $visibleBackgroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $visibleBackgroundColorStyle;
   protected $visibleBackgroundColorStyleType = ColorStyle::class;
   protected $visibleBackgroundColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $visibleForegroundColor;
   protected $visibleForegroundColorType = Color::class;
   protected $visibleForegroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $visibleForegroundColorStyle;
   protected $visibleForegroundColorStyleType = ColorStyle::class;
   protected $visibleForegroundColorStyleDataType = '';
 

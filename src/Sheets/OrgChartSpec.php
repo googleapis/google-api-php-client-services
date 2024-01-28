@@ -19,50 +19,22 @@ namespace Google\Service\Sheets;
 
 class OrgChartSpec extends \Google\Model
 {
-  /**
-   * @var ChartData
-   */
-  public $labels;
   protected $labelsType = ChartData::class;
   protected $labelsDataType = '';
-  /**
-   * @var Color
-   */
-  public $nodeColor;
   protected $nodeColorType = Color::class;
   protected $nodeColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $nodeColorStyle;
   protected $nodeColorStyleType = ColorStyle::class;
   protected $nodeColorStyleDataType = '';
   /**
    * @var string
    */
   public $nodeSize;
-  /**
-   * @var ChartData
-   */
-  public $parentLabels;
   protected $parentLabelsType = ChartData::class;
   protected $parentLabelsDataType = '';
-  /**
-   * @var Color
-   */
-  public $selectedNodeColor;
   protected $selectedNodeColorType = Color::class;
   protected $selectedNodeColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $selectedNodeColorStyle;
   protected $selectedNodeColorStyleType = ColorStyle::class;
   protected $selectedNodeColorStyleDataType = '';
-  /**
-   * @var ChartData
-   */
-  public $tooltips;
   protected $tooltipsType = ChartData::class;
   protected $tooltipsDataType = '';
 

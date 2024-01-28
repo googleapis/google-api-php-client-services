@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class WaterfallChartSpec extends \Google\Collection
 {
   protected $collection_key = 'series';
-  /**
-   * @var LineStyle
-   */
-  public $connectorLineStyle;
   protected $connectorLineStyleType = LineStyle::class;
   protected $connectorLineStyleDataType = '';
-  /**
-   * @var WaterfallChartDomain
-   */
-  public $domain;
   protected $domainType = WaterfallChartDomain::class;
   protected $domainDataType = '';
   /**
@@ -40,20 +32,12 @@ class WaterfallChartSpec extends \Google\Collection
    * @var bool
    */
   public $hideConnectorLines;
-  /**
-   * @var WaterfallChartSeries[]
-   */
-  public $series;
   protected $seriesType = WaterfallChartSeries::class;
   protected $seriesDataType = 'array';
   /**
    * @var string
    */
   public $stackedType;
-  /**
-   * @var DataLabel
-   */
-  public $totalDataLabel;
   protected $totalDataLabelType = DataLabel::class;
   protected $totalDataLabelDataType = '';
 

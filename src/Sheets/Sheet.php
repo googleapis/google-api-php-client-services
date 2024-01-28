@@ -20,82 +20,30 @@ namespace Google\Service\Sheets;
 class Sheet extends \Google\Collection
 {
   protected $collection_key = 'slicers';
-  /**
-   * @var BandedRange[]
-   */
-  public $bandedRanges;
   protected $bandedRangesType = BandedRange::class;
   protected $bandedRangesDataType = 'array';
-  /**
-   * @var BasicFilter
-   */
-  public $basicFilter;
   protected $basicFilterType = BasicFilter::class;
   protected $basicFilterDataType = '';
-  /**
-   * @var EmbeddedChart[]
-   */
-  public $charts;
   protected $chartsType = EmbeddedChart::class;
   protected $chartsDataType = 'array';
-  /**
-   * @var DimensionGroup[]
-   */
-  public $columnGroups;
   protected $columnGroupsType = DimensionGroup::class;
   protected $columnGroupsDataType = 'array';
-  /**
-   * @var ConditionalFormatRule[]
-   */
-  public $conditionalFormats;
   protected $conditionalFormatsType = ConditionalFormatRule::class;
   protected $conditionalFormatsDataType = 'array';
-  /**
-   * @var GridData[]
-   */
-  public $data;
   protected $dataType = GridData::class;
   protected $dataDataType = 'array';
-  /**
-   * @var DeveloperMetadata[]
-   */
-  public $developerMetadata;
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = 'array';
-  /**
-   * @var FilterView[]
-   */
-  public $filterViews;
   protected $filterViewsType = FilterView::class;
   protected $filterViewsDataType = 'array';
-  /**
-   * @var GridRange[]
-   */
-  public $merges;
   protected $mergesType = GridRange::class;
   protected $mergesDataType = 'array';
-  /**
-   * @var SheetProperties
-   */
-  public $properties;
   protected $propertiesType = SheetProperties::class;
   protected $propertiesDataType = '';
-  /**
-   * @var ProtectedRange[]
-   */
-  public $protectedRanges;
   protected $protectedRangesType = ProtectedRange::class;
   protected $protectedRangesDataType = 'array';
-  /**
-   * @var DimensionGroup[]
-   */
-  public $rowGroups;
   protected $rowGroupsType = DimensionGroup::class;
   protected $rowGroupsDataType = 'array';
-  /**
-   * @var Slicer[]
-   */
-  public $slicers;
   protected $slicersType = Slicer::class;
   protected $slicersDataType = 'array';
 

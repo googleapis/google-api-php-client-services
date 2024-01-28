@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class GetSpreadsheetByDataFilterRequest extends \Google\Collection
 {
   protected $collection_key = 'dataFilters';
-  /**
-   * @var DataFilter[]
-   */
-  public $dataFilters;
   protected $dataFiltersType = DataFilter::class;
   protected $dataFiltersDataType = 'array';
   /**

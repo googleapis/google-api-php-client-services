@@ -19,20 +19,12 @@ namespace Google\Service\Sheets;
 
 class RepeatCellRequest extends \Google\Model
 {
-  /**
-   * @var CellData
-   */
-  public $cell;
   protected $cellType = CellData::class;
   protected $cellDataType = '';
   /**
    * @var string
    */
   public $fields;
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
 

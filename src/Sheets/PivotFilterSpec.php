@@ -23,16 +23,8 @@ class PivotFilterSpec extends \Google\Model
    * @var int
    */
   public $columnOffsetIndex;
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $dataSourceColumnReference;
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
-  /**
-   * @var PivotFilterCriteria
-   */
-  public $filterCriteria;
   protected $filterCriteriaType = PivotFilterCriteria::class;
   protected $filterCriteriaDataType = '';
 

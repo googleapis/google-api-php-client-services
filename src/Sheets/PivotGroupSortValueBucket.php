@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class PivotGroupSortValueBucket extends \Google\Collection
 {
   protected $collection_key = 'buckets';
-  /**
-   * @var ExtendedValue[]
-   */
-  public $buckets;
   protected $bucketsType = ExtendedValue::class;
   protected $bucketsDataType = 'array';
   /**

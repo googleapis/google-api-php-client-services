@@ -20,22 +20,10 @@ namespace Google\Service\Sheets;
 class GridData extends \Google\Collection
 {
   protected $collection_key = 'rowMetadata';
-  /**
-   * @var DimensionProperties[]
-   */
-  public $columnMetadata;
   protected $columnMetadataType = DimensionProperties::class;
   protected $columnMetadataDataType = 'array';
-  /**
-   * @var RowData[]
-   */
-  public $rowData;
   protected $rowDataType = RowData::class;
   protected $rowDataDataType = 'array';
-  /**
-   * @var DimensionProperties[]
-   */
-  public $rowMetadata;
   protected $rowMetadataType = DimensionProperties::class;
   protected $rowMetadataDataType = 'array';
   /**

@@ -31,26 +31,14 @@ class TextFormat extends \Google\Model
    * @var int
    */
   public $fontSize;
-  /**
-   * @var Color
-   */
-  public $foregroundColor;
   protected $foregroundColorType = Color::class;
   protected $foregroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $foregroundColorStyle;
   protected $foregroundColorStyleType = ColorStyle::class;
   protected $foregroundColorStyleDataType = '';
   /**
    * @var bool
    */
   public $italic;
-  /**
-   * @var Link
-   */
-  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**

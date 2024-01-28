@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class SetBasicFilterRequest extends \Google\Model
 {
-  /**
-   * @var BasicFilter
-   */
-  public $filter;
   protected $filterType = BasicFilter::class;
   protected $filterDataType = '';
 

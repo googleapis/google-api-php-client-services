@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class RefreshDataSourceResponse extends \Google\Collection
 {
   protected $collection_key = 'statuses';
-  /**
-   * @var RefreshDataSourceObjectExecutionStatus[]
-   */
-  public $statuses;
   protected $statusesType = RefreshDataSourceObjectExecutionStatus::class;
   protected $statusesDataType = 'array';
 

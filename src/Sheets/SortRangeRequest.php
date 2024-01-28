@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class SortRangeRequest extends \Google\Collection
 {
   protected $collection_key = 'sortSpecs';
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
-  /**
-   * @var SortSpec[]
-   */
-  public $sortSpecs;
   protected $sortSpecsType = SortSpec::class;
   protected $sortSpecsDataType = 'array';
 

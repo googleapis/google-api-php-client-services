@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class FilterView extends \Google\Collection
 {
   protected $collection_key = 'sortSpecs';
-  /**
-   * @var FilterCriteria[]
-   */
-  public $criteria;
   protected $criteriaType = FilterCriteria::class;
   protected $criteriaDataType = 'map';
-  /**
-   * @var FilterSpec[]
-   */
-  public $filterSpecs;
   protected $filterSpecsType = FilterSpec::class;
   protected $filterSpecsDataType = 'array';
   /**
@@ -40,16 +32,8 @@ class FilterView extends \Google\Collection
    * @var string
    */
   public $namedRangeId;
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
-  /**
-   * @var SortSpec[]
-   */
-  public $sortSpecs;
   protected $sortSpecsType = SortSpec::class;
   protected $sortSpecsDataType = 'array';
   /**

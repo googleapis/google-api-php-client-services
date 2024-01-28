@@ -19,16 +19,8 @@ namespace Google\Service\Sheets;
 
 class SetDataValidationRequest extends \Google\Model
 {
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
-  /**
-   * @var DataValidationRule
-   */
-  public $rule;
   protected $ruleType = DataValidationRule::class;
   protected $ruleDataType = '';
 

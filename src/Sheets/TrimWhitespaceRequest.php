@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class TrimWhitespaceRequest extends \Google\Model
 {
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
 

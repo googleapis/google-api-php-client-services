@@ -19,394 +19,134 @@ namespace Google\Service\Sheets;
 
 class Request extends \Google\Model
 {
-  /**
-   * @var AddBandingRequest
-   */
-  public $addBanding;
   protected $addBandingType = AddBandingRequest::class;
   protected $addBandingDataType = '';
-  /**
-   * @var AddChartRequest
-   */
-  public $addChart;
   protected $addChartType = AddChartRequest::class;
   protected $addChartDataType = '';
-  /**
-   * @var AddConditionalFormatRuleRequest
-   */
-  public $addConditionalFormatRule;
   protected $addConditionalFormatRuleType = AddConditionalFormatRuleRequest::class;
   protected $addConditionalFormatRuleDataType = '';
-  /**
-   * @var AddDataSourceRequest
-   */
-  public $addDataSource;
   protected $addDataSourceType = AddDataSourceRequest::class;
   protected $addDataSourceDataType = '';
-  /**
-   * @var AddDimensionGroupRequest
-   */
-  public $addDimensionGroup;
   protected $addDimensionGroupType = AddDimensionGroupRequest::class;
   protected $addDimensionGroupDataType = '';
-  /**
-   * @var AddFilterViewRequest
-   */
-  public $addFilterView;
   protected $addFilterViewType = AddFilterViewRequest::class;
   protected $addFilterViewDataType = '';
-  /**
-   * @var AddNamedRangeRequest
-   */
-  public $addNamedRange;
   protected $addNamedRangeType = AddNamedRangeRequest::class;
   protected $addNamedRangeDataType = '';
-  /**
-   * @var AddProtectedRangeRequest
-   */
-  public $addProtectedRange;
   protected $addProtectedRangeType = AddProtectedRangeRequest::class;
   protected $addProtectedRangeDataType = '';
-  /**
-   * @var AddSheetRequest
-   */
-  public $addSheet;
   protected $addSheetType = AddSheetRequest::class;
   protected $addSheetDataType = '';
-  /**
-   * @var AddSlicerRequest
-   */
-  public $addSlicer;
   protected $addSlicerType = AddSlicerRequest::class;
   protected $addSlicerDataType = '';
-  /**
-   * @var AppendCellsRequest
-   */
-  public $appendCells;
   protected $appendCellsType = AppendCellsRequest::class;
   protected $appendCellsDataType = '';
-  /**
-   * @var AppendDimensionRequest
-   */
-  public $appendDimension;
   protected $appendDimensionType = AppendDimensionRequest::class;
   protected $appendDimensionDataType = '';
-  /**
-   * @var AutoFillRequest
-   */
-  public $autoFill;
   protected $autoFillType = AutoFillRequest::class;
   protected $autoFillDataType = '';
-  /**
-   * @var AutoResizeDimensionsRequest
-   */
-  public $autoResizeDimensions;
   protected $autoResizeDimensionsType = AutoResizeDimensionsRequest::class;
   protected $autoResizeDimensionsDataType = '';
-  /**
-   * @var ClearBasicFilterRequest
-   */
-  public $clearBasicFilter;
   protected $clearBasicFilterType = ClearBasicFilterRequest::class;
   protected $clearBasicFilterDataType = '';
-  /**
-   * @var CopyPasteRequest
-   */
-  public $copyPaste;
   protected $copyPasteType = CopyPasteRequest::class;
   protected $copyPasteDataType = '';
-  /**
-   * @var CreateDeveloperMetadataRequest
-   */
-  public $createDeveloperMetadata;
   protected $createDeveloperMetadataType = CreateDeveloperMetadataRequest::class;
   protected $createDeveloperMetadataDataType = '';
-  /**
-   * @var CutPasteRequest
-   */
-  public $cutPaste;
   protected $cutPasteType = CutPasteRequest::class;
   protected $cutPasteDataType = '';
-  /**
-   * @var DeleteBandingRequest
-   */
-  public $deleteBanding;
   protected $deleteBandingType = DeleteBandingRequest::class;
   protected $deleteBandingDataType = '';
-  /**
-   * @var DeleteConditionalFormatRuleRequest
-   */
-  public $deleteConditionalFormatRule;
   protected $deleteConditionalFormatRuleType = DeleteConditionalFormatRuleRequest::class;
   protected $deleteConditionalFormatRuleDataType = '';
-  /**
-   * @var DeleteDataSourceRequest
-   */
-  public $deleteDataSource;
   protected $deleteDataSourceType = DeleteDataSourceRequest::class;
   protected $deleteDataSourceDataType = '';
-  /**
-   * @var DeleteDeveloperMetadataRequest
-   */
-  public $deleteDeveloperMetadata;
   protected $deleteDeveloperMetadataType = DeleteDeveloperMetadataRequest::class;
   protected $deleteDeveloperMetadataDataType = '';
-  /**
-   * @var DeleteDimensionRequest
-   */
-  public $deleteDimension;
   protected $deleteDimensionType = DeleteDimensionRequest::class;
   protected $deleteDimensionDataType = '';
-  /**
-   * @var DeleteDimensionGroupRequest
-   */
-  public $deleteDimensionGroup;
   protected $deleteDimensionGroupType = DeleteDimensionGroupRequest::class;
   protected $deleteDimensionGroupDataType = '';
-  /**
-   * @var DeleteDuplicatesRequest
-   */
-  public $deleteDuplicates;
   protected $deleteDuplicatesType = DeleteDuplicatesRequest::class;
   protected $deleteDuplicatesDataType = '';
-  /**
-   * @var DeleteEmbeddedObjectRequest
-   */
-  public $deleteEmbeddedObject;
   protected $deleteEmbeddedObjectType = DeleteEmbeddedObjectRequest::class;
   protected $deleteEmbeddedObjectDataType = '';
-  /**
-   * @var DeleteFilterViewRequest
-   */
-  public $deleteFilterView;
   protected $deleteFilterViewType = DeleteFilterViewRequest::class;
   protected $deleteFilterViewDataType = '';
-  /**
-   * @var DeleteNamedRangeRequest
-   */
-  public $deleteNamedRange;
   protected $deleteNamedRangeType = DeleteNamedRangeRequest::class;
   protected $deleteNamedRangeDataType = '';
-  /**
-   * @var DeleteProtectedRangeRequest
-   */
-  public $deleteProtectedRange;
   protected $deleteProtectedRangeType = DeleteProtectedRangeRequest::class;
   protected $deleteProtectedRangeDataType = '';
-  /**
-   * @var DeleteRangeRequest
-   */
-  public $deleteRange;
   protected $deleteRangeType = DeleteRangeRequest::class;
   protected $deleteRangeDataType = '';
-  /**
-   * @var DeleteSheetRequest
-   */
-  public $deleteSheet;
   protected $deleteSheetType = DeleteSheetRequest::class;
   protected $deleteSheetDataType = '';
-  /**
-   * @var DuplicateFilterViewRequest
-   */
-  public $duplicateFilterView;
   protected $duplicateFilterViewType = DuplicateFilterViewRequest::class;
   protected $duplicateFilterViewDataType = '';
-  /**
-   * @var DuplicateSheetRequest
-   */
-  public $duplicateSheet;
   protected $duplicateSheetType = DuplicateSheetRequest::class;
   protected $duplicateSheetDataType = '';
-  /**
-   * @var FindReplaceRequest
-   */
-  public $findReplace;
   protected $findReplaceType = FindReplaceRequest::class;
   protected $findReplaceDataType = '';
-  /**
-   * @var InsertDimensionRequest
-   */
-  public $insertDimension;
   protected $insertDimensionType = InsertDimensionRequest::class;
   protected $insertDimensionDataType = '';
-  /**
-   * @var InsertRangeRequest
-   */
-  public $insertRange;
   protected $insertRangeType = InsertRangeRequest::class;
   protected $insertRangeDataType = '';
-  /**
-   * @var MergeCellsRequest
-   */
-  public $mergeCells;
   protected $mergeCellsType = MergeCellsRequest::class;
   protected $mergeCellsDataType = '';
-  /**
-   * @var MoveDimensionRequest
-   */
-  public $moveDimension;
   protected $moveDimensionType = MoveDimensionRequest::class;
   protected $moveDimensionDataType = '';
-  /**
-   * @var PasteDataRequest
-   */
-  public $pasteData;
   protected $pasteDataType = PasteDataRequest::class;
   protected $pasteDataDataType = '';
-  /**
-   * @var RandomizeRangeRequest
-   */
-  public $randomizeRange;
   protected $randomizeRangeType = RandomizeRangeRequest::class;
   protected $randomizeRangeDataType = '';
-  /**
-   * @var RefreshDataSourceRequest
-   */
-  public $refreshDataSource;
   protected $refreshDataSourceType = RefreshDataSourceRequest::class;
   protected $refreshDataSourceDataType = '';
-  /**
-   * @var RepeatCellRequest
-   */
-  public $repeatCell;
   protected $repeatCellType = RepeatCellRequest::class;
   protected $repeatCellDataType = '';
-  /**
-   * @var SetBasicFilterRequest
-   */
-  public $setBasicFilter;
   protected $setBasicFilterType = SetBasicFilterRequest::class;
   protected $setBasicFilterDataType = '';
-  /**
-   * @var SetDataValidationRequest
-   */
-  public $setDataValidation;
   protected $setDataValidationType = SetDataValidationRequest::class;
   protected $setDataValidationDataType = '';
-  /**
-   * @var SortRangeRequest
-   */
-  public $sortRange;
   protected $sortRangeType = SortRangeRequest::class;
   protected $sortRangeDataType = '';
-  /**
-   * @var TextToColumnsRequest
-   */
-  public $textToColumns;
   protected $textToColumnsType = TextToColumnsRequest::class;
   protected $textToColumnsDataType = '';
-  /**
-   * @var TrimWhitespaceRequest
-   */
-  public $trimWhitespace;
   protected $trimWhitespaceType = TrimWhitespaceRequest::class;
   protected $trimWhitespaceDataType = '';
-  /**
-   * @var UnmergeCellsRequest
-   */
-  public $unmergeCells;
   protected $unmergeCellsType = UnmergeCellsRequest::class;
   protected $unmergeCellsDataType = '';
-  /**
-   * @var UpdateBandingRequest
-   */
-  public $updateBanding;
   protected $updateBandingType = UpdateBandingRequest::class;
   protected $updateBandingDataType = '';
-  /**
-   * @var UpdateBordersRequest
-   */
-  public $updateBorders;
   protected $updateBordersType = UpdateBordersRequest::class;
   protected $updateBordersDataType = '';
-  /**
-   * @var UpdateCellsRequest
-   */
-  public $updateCells;
   protected $updateCellsType = UpdateCellsRequest::class;
   protected $updateCellsDataType = '';
-  /**
-   * @var UpdateChartSpecRequest
-   */
-  public $updateChartSpec;
   protected $updateChartSpecType = UpdateChartSpecRequest::class;
   protected $updateChartSpecDataType = '';
-  /**
-   * @var UpdateConditionalFormatRuleRequest
-   */
-  public $updateConditionalFormatRule;
   protected $updateConditionalFormatRuleType = UpdateConditionalFormatRuleRequest::class;
   protected $updateConditionalFormatRuleDataType = '';
-  /**
-   * @var UpdateDataSourceRequest
-   */
-  public $updateDataSource;
   protected $updateDataSourceType = UpdateDataSourceRequest::class;
   protected $updateDataSourceDataType = '';
-  /**
-   * @var UpdateDeveloperMetadataRequest
-   */
-  public $updateDeveloperMetadata;
   protected $updateDeveloperMetadataType = UpdateDeveloperMetadataRequest::class;
   protected $updateDeveloperMetadataDataType = '';
-  /**
-   * @var UpdateDimensionGroupRequest
-   */
-  public $updateDimensionGroup;
   protected $updateDimensionGroupType = UpdateDimensionGroupRequest::class;
   protected $updateDimensionGroupDataType = '';
-  /**
-   * @var UpdateDimensionPropertiesRequest
-   */
-  public $updateDimensionProperties;
   protected $updateDimensionPropertiesType = UpdateDimensionPropertiesRequest::class;
   protected $updateDimensionPropertiesDataType = '';
-  /**
-   * @var UpdateEmbeddedObjectBorderRequest
-   */
-  public $updateEmbeddedObjectBorder;
   protected $updateEmbeddedObjectBorderType = UpdateEmbeddedObjectBorderRequest::class;
   protected $updateEmbeddedObjectBorderDataType = '';
-  /**
-   * @var UpdateEmbeddedObjectPositionRequest
-   */
-  public $updateEmbeddedObjectPosition;
   protected $updateEmbeddedObjectPositionType = UpdateEmbeddedObjectPositionRequest::class;
   protected $updateEmbeddedObjectPositionDataType = '';
-  /**
-   * @var UpdateFilterViewRequest
-   */
-  public $updateFilterView;
   protected $updateFilterViewType = UpdateFilterViewRequest::class;
   protected $updateFilterViewDataType = '';
-  /**
-   * @var UpdateNamedRangeRequest
-   */
-  public $updateNamedRange;
   protected $updateNamedRangeType = UpdateNamedRangeRequest::class;
   protected $updateNamedRangeDataType = '';
-  /**
-   * @var UpdateProtectedRangeRequest
-   */
-  public $updateProtectedRange;
   protected $updateProtectedRangeType = UpdateProtectedRangeRequest::class;
   protected $updateProtectedRangeDataType = '';
-  /**
-   * @var UpdateSheetPropertiesRequest
-   */
-  public $updateSheetProperties;
   protected $updateSheetPropertiesType = UpdateSheetPropertiesRequest::class;
   protected $updateSheetPropertiesDataType = '';
-  /**
-   * @var UpdateSlicerSpecRequest
-   */
-  public $updateSlicerSpec;
   protected $updateSlicerSpecType = UpdateSlicerSpecRequest::class;
   protected $updateSlicerSpecDataType = '';
-  /**
-   * @var UpdateSpreadsheetPropertiesRequest
-   */
-  public $updateSpreadsheetProperties;
   protected $updateSpreadsheetPropertiesType = UpdateSpreadsheetPropertiesRequest::class;
   protected $updateSpreadsheetPropertiesDataType = '';
 

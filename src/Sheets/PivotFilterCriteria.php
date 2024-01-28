@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class PivotFilterCriteria extends \Google\Collection
 {
   protected $collection_key = 'visibleValues';
-  /**
-   * @var BooleanCondition
-   */
-  public $condition;
   protected $conditionType = BooleanCondition::class;
   protected $conditionDataType = '';
   /**

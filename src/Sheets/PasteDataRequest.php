@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class PasteDataRequest extends \Google\Model
 {
-  /**
-   * @var GridCoordinate
-   */
-  public $coordinate;
   protected $coordinateType = GridCoordinate::class;
   protected $coordinateDataType = '';
   /**

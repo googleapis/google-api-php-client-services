@@ -23,10 +23,6 @@ class PivotValue extends \Google\Model
    * @var string
    */
   public $calculatedDisplayType;
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $dataSourceColumnReference;
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
   /**

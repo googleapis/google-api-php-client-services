@@ -27,10 +27,6 @@ class UpdateConditionalFormatRuleRequest extends \Google\Model
    * @var int
    */
   public $newIndex;
-  /**
-   * @var ConditionalFormatRule
-   */
-  public $rule;
   protected $ruleType = ConditionalFormatRule::class;
   protected $ruleDataType = '';
   /**

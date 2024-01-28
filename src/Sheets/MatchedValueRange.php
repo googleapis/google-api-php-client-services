@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class MatchedValueRange extends \Google\Collection
 {
   protected $collection_key = 'dataFilters';
-  /**
-   * @var DataFilter[]
-   */
-  public $dataFilters;
   protected $dataFiltersType = DataFilter::class;
   protected $dataFiltersDataType = 'array';
-  /**
-   * @var ValueRange
-   */
-  public $valueRange;
   protected $valueRangeType = ValueRange::class;
   protected $valueRangeDataType = '';
 

@@ -19,142 +19,50 @@ namespace Google\Service\Sheets;
 
 class Response extends \Google\Model
 {
-  /**
-   * @var AddBandingResponse
-   */
-  public $addBanding;
   protected $addBandingType = AddBandingResponse::class;
   protected $addBandingDataType = '';
-  /**
-   * @var AddChartResponse
-   */
-  public $addChart;
   protected $addChartType = AddChartResponse::class;
   protected $addChartDataType = '';
-  /**
-   * @var AddDataSourceResponse
-   */
-  public $addDataSource;
   protected $addDataSourceType = AddDataSourceResponse::class;
   protected $addDataSourceDataType = '';
-  /**
-   * @var AddDimensionGroupResponse
-   */
-  public $addDimensionGroup;
   protected $addDimensionGroupType = AddDimensionGroupResponse::class;
   protected $addDimensionGroupDataType = '';
-  /**
-   * @var AddFilterViewResponse
-   */
-  public $addFilterView;
   protected $addFilterViewType = AddFilterViewResponse::class;
   protected $addFilterViewDataType = '';
-  /**
-   * @var AddNamedRangeResponse
-   */
-  public $addNamedRange;
   protected $addNamedRangeType = AddNamedRangeResponse::class;
   protected $addNamedRangeDataType = '';
-  /**
-   * @var AddProtectedRangeResponse
-   */
-  public $addProtectedRange;
   protected $addProtectedRangeType = AddProtectedRangeResponse::class;
   protected $addProtectedRangeDataType = '';
-  /**
-   * @var AddSheetResponse
-   */
-  public $addSheet;
   protected $addSheetType = AddSheetResponse::class;
   protected $addSheetDataType = '';
-  /**
-   * @var AddSlicerResponse
-   */
-  public $addSlicer;
   protected $addSlicerType = AddSlicerResponse::class;
   protected $addSlicerDataType = '';
-  /**
-   * @var CreateDeveloperMetadataResponse
-   */
-  public $createDeveloperMetadata;
   protected $createDeveloperMetadataType = CreateDeveloperMetadataResponse::class;
   protected $createDeveloperMetadataDataType = '';
-  /**
-   * @var DeleteConditionalFormatRuleResponse
-   */
-  public $deleteConditionalFormatRule;
   protected $deleteConditionalFormatRuleType = DeleteConditionalFormatRuleResponse::class;
   protected $deleteConditionalFormatRuleDataType = '';
-  /**
-   * @var DeleteDeveloperMetadataResponse
-   */
-  public $deleteDeveloperMetadata;
   protected $deleteDeveloperMetadataType = DeleteDeveloperMetadataResponse::class;
   protected $deleteDeveloperMetadataDataType = '';
-  /**
-   * @var DeleteDimensionGroupResponse
-   */
-  public $deleteDimensionGroup;
   protected $deleteDimensionGroupType = DeleteDimensionGroupResponse::class;
   protected $deleteDimensionGroupDataType = '';
-  /**
-   * @var DeleteDuplicatesResponse
-   */
-  public $deleteDuplicates;
   protected $deleteDuplicatesType = DeleteDuplicatesResponse::class;
   protected $deleteDuplicatesDataType = '';
-  /**
-   * @var DuplicateFilterViewResponse
-   */
-  public $duplicateFilterView;
   protected $duplicateFilterViewType = DuplicateFilterViewResponse::class;
   protected $duplicateFilterViewDataType = '';
-  /**
-   * @var DuplicateSheetResponse
-   */
-  public $duplicateSheet;
   protected $duplicateSheetType = DuplicateSheetResponse::class;
   protected $duplicateSheetDataType = '';
-  /**
-   * @var FindReplaceResponse
-   */
-  public $findReplace;
   protected $findReplaceType = FindReplaceResponse::class;
   protected $findReplaceDataType = '';
-  /**
-   * @var RefreshDataSourceResponse
-   */
-  public $refreshDataSource;
   protected $refreshDataSourceType = RefreshDataSourceResponse::class;
   protected $refreshDataSourceDataType = '';
-  /**
-   * @var TrimWhitespaceResponse
-   */
-  public $trimWhitespace;
   protected $trimWhitespaceType = TrimWhitespaceResponse::class;
   protected $trimWhitespaceDataType = '';
-  /**
-   * @var UpdateConditionalFormatRuleResponse
-   */
-  public $updateConditionalFormatRule;
   protected $updateConditionalFormatRuleType = UpdateConditionalFormatRuleResponse::class;
   protected $updateConditionalFormatRuleDataType = '';
-  /**
-   * @var UpdateDataSourceResponse
-   */
-  public $updateDataSource;
   protected $updateDataSourceType = UpdateDataSourceResponse::class;
   protected $updateDataSourceDataType = '';
-  /**
-   * @var UpdateDeveloperMetadataResponse
-   */
-  public $updateDeveloperMetadata;
   protected $updateDeveloperMetadataType = UpdateDeveloperMetadataResponse::class;
   protected $updateDeveloperMetadataDataType = '';
-  /**
-   * @var UpdateEmbeddedObjectPositionResponse
-   */
-  public $updateEmbeddedObjectPosition;
   protected $updateEmbeddedObjectPositionType = UpdateEmbeddedObjectPositionResponse::class;
   protected $updateEmbeddedObjectPositionDataType = '';
 

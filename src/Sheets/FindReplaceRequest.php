@@ -39,10 +39,6 @@ class FindReplaceRequest extends \Google\Model
    * @var bool
    */
   public $matchEntireCell;
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
   /**

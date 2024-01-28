@@ -23,10 +23,6 @@ class UpdateProtectedRangeRequest extends \Google\Model
    * @var string
    */
   public $fields;
-  /**
-   * @var ProtectedRange
-   */
-  public $protectedRange;
   protected $protectedRangeType = ProtectedRange::class;
   protected $protectedRangeDataType = '';
 

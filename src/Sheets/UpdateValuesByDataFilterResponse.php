@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class UpdateValuesByDataFilterResponse extends \Google\Model
 {
-  /**
-   * @var DataFilter
-   */
-  public $dataFilter;
   protected $dataFilterType = DataFilter::class;
   protected $dataFilterDataType = '';
   /**
@@ -33,10 +29,6 @@ class UpdateValuesByDataFilterResponse extends \Google\Model
    * @var int
    */
   public $updatedColumns;
-  /**
-   * @var ValueRange
-   */
-  public $updatedData;
   protected $updatedDataType = ValueRange::class;
   protected $updatedDataDataType = '';
   /**

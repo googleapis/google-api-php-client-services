@@ -31,10 +31,6 @@ class RefreshDataSourceRequest extends \Google\Model
    * @var bool
    */
   public $isAll;
-  /**
-   * @var DataSourceObjectReferences
-   */
-  public $references;
   protected $referencesType = DataSourceObjectReferences::class;
   protected $referencesDataType = '';
 

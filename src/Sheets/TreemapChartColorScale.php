@@ -19,52 +19,20 @@ namespace Google\Service\Sheets;
 
 class TreemapChartColorScale extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $maxValueColor;
   protected $maxValueColorType = Color::class;
   protected $maxValueColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $maxValueColorStyle;
   protected $maxValueColorStyleType = ColorStyle::class;
   protected $maxValueColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $midValueColor;
   protected $midValueColorType = Color::class;
   protected $midValueColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $midValueColorStyle;
   protected $midValueColorStyleType = ColorStyle::class;
   protected $midValueColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $minValueColor;
   protected $minValueColorType = Color::class;
   protected $minValueColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $minValueColorStyle;
   protected $minValueColorStyleType = ColorStyle::class;
   protected $minValueColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $noDataColor;
   protected $noDataColorType = Color::class;
   protected $noDataColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $noDataColorStyle;
   protected $noDataColorStyleType = ColorStyle::class;
   protected $noDataColorStyleDataType = '';
 

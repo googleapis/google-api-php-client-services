@@ -26,10 +26,6 @@ class HistogramChartSpec extends \Google\Collection
    */
   public $legendPosition;
   public $outlierPercentile;
-  /**
-   * @var HistogramSeries[]
-   */
-  public $series;
   protected $seriesType = HistogramSeries::class;
   protected $seriesDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class WaterfallChartDomain extends \Google\Model
 {
-  /**
-   * @var ChartData
-   */
-  public $data;
   protected $dataType = ChartData::class;
   protected $dataDataType = '';
   /**

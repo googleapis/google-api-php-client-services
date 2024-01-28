@@ -19,20 +19,12 @@ namespace Google\Service\Sheets;
 
 class Slicer extends \Google\Model
 {
-  /**
-   * @var EmbeddedObjectPosition
-   */
-  public $position;
   protected $positionType = EmbeddedObjectPosition::class;
   protected $positionDataType = '';
   /**
    * @var int
    */
   public $slicerId;
-  /**
-   * @var SlicerSpec
-   */
-  public $spec;
   protected $specType = SlicerSpec::class;
   protected $specDataType = '';
 

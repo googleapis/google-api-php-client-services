@@ -23,10 +23,6 @@ class UpdateFilterViewRequest extends \Google\Model
    * @var string
    */
   public $fields;
-  /**
-   * @var FilterView
-   */
-  public $filter;
   protected $filterType = FilterView::class;
   protected $filterDataType = '';
 

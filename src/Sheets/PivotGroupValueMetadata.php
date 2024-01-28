@@ -23,10 +23,6 @@ class PivotGroupValueMetadata extends \Google\Model
    * @var bool
    */
   public $collapsed;
-  /**
-   * @var ExtendedValue
-   */
-  public $value;
   protected $valueType = ExtendedValue::class;
   protected $valueDataType = '';
 

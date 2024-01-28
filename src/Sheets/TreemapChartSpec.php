@@ -19,28 +19,12 @@ namespace Google\Service\Sheets;
 
 class TreemapChartSpec extends \Google\Model
 {
-  /**
-   * @var ChartData
-   */
-  public $colorData;
   protected $colorDataType = ChartData::class;
   protected $colorDataDataType = '';
-  /**
-   * @var TreemapChartColorScale
-   */
-  public $colorScale;
   protected $colorScaleType = TreemapChartColorScale::class;
   protected $colorScaleDataType = '';
-  /**
-   * @var Color
-   */
-  public $headerColor;
   protected $headerColorType = Color::class;
   protected $headerColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $headerColorStyle;
   protected $headerColorStyleType = ColorStyle::class;
   protected $headerColorStyleDataType = '';
   /**
@@ -51,10 +35,6 @@ class TreemapChartSpec extends \Google\Model
    * @var int
    */
   public $hintedLevels;
-  /**
-   * @var ChartData
-   */
-  public $labels;
   protected $labelsType = ChartData::class;
   protected $labelsDataType = '';
   /**
@@ -63,22 +43,10 @@ class TreemapChartSpec extends \Google\Model
   public $levels;
   public $maxValue;
   public $minValue;
-  /**
-   * @var ChartData
-   */
-  public $parentLabels;
   protected $parentLabelsType = ChartData::class;
   protected $parentLabelsDataType = '';
-  /**
-   * @var ChartData
-   */
-  public $sizeData;
   protected $sizeDataType = ChartData::class;
   protected $sizeDataDataType = '';
-  /**
-   * @var TextFormat
-   */
-  public $textFormat;
   protected $textFormatType = TextFormat::class;
   protected $textFormatDataType = '';
 

@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class UpdateDeveloperMetadataRequest extends \Google\Collection
 {
   protected $collection_key = 'dataFilters';
-  /**
-   * @var DataFilter[]
-   */
-  public $dataFilters;
   protected $dataFiltersType = DataFilter::class;
   protected $dataFiltersDataType = 'array';
-  /**
-   * @var DeveloperMetadata
-   */
-  public $developerMetadata;
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = '';
   /**

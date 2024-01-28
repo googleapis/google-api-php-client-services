@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class ThemeColorPair extends \Google\Model
 {
-  /**
-   * @var ColorStyle
-   */
-  public $color;
   protected $colorDataType = '';
   /**
    * @var string

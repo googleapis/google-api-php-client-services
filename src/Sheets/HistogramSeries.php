@@ -19,22 +19,10 @@ namespace Google\Service\Sheets;
 
 class HistogramSeries extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $barColor;
   protected $barColorType = Color::class;
   protected $barColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $barColorStyle;
   protected $barColorStyleType = ColorStyle::class;
   protected $barColorStyleDataType = '';
-  /**
-   * @var ChartData
-   */
-  public $data;
   protected $dataType = ChartData::class;
   protected $dataDataType = '';
 

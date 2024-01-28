@@ -19,38 +19,18 @@ namespace Google\Service\Sheets;
 
 class SortSpec extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $backgroundColor;
   protected $backgroundColorType = Color::class;
   protected $backgroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $backgroundColorStyle;
   protected $backgroundColorStyleType = ColorStyle::class;
   protected $backgroundColorStyleDataType = '';
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $dataSourceColumnReference;
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
   /**
    * @var int
    */
   public $dimensionIndex;
-  /**
-   * @var Color
-   */
-  public $foregroundColor;
   protected $foregroundColorType = Color::class;
   protected $foregroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $foregroundColorStyle;
   protected $foregroundColorStyleType = ColorStyle::class;
   protected $foregroundColorStyleDataType = '';
   /**

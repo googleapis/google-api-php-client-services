@@ -23,10 +23,6 @@ class UpdateNamedRangeRequest extends \Google\Model
    * @var string
    */
   public $fields;
-  /**
-   * @var NamedRange
-   */
-  public $namedRange;
   protected $namedRangeType = NamedRange::class;
   protected $namedRangeDataType = '';
 

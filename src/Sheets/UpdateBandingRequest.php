@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class UpdateBandingRequest extends \Google\Model
 {
-  /**
-   * @var BandedRange
-   */
-  public $bandedRange;
   protected $bandedRangeType = BandedRange::class;
   protected $bandedRangeDataType = '';
   /**
