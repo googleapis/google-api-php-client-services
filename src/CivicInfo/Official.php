@@ -20,16 +20,8 @@ namespace Google\Service\CivicInfo;
 class Official extends \Google\Collection
 {
   protected $collection_key = 'urls';
-  /**
-   * @var SimpleAddressType[]
-   */
-  public $address;
   protected $addressType = SimpleAddressType::class;
   protected $addressDataType = 'array';
-  /**
-   * @var Channel[]
-   */
-  public $channels;
   protected $channelsType = Channel::class;
   protected $channelsDataType = 'array';
   /**

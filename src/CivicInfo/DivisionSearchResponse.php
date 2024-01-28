@@ -24,10 +24,6 @@ class DivisionSearchResponse extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var DivisionSearchResult[]
-   */
-  public $results;
   protected $resultsType = DivisionSearchResult::class;
   protected $resultsDataType = 'array';
 

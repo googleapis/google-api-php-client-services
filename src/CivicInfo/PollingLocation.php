@@ -20,10 +20,6 @@ namespace Google\Service\CivicInfo;
 class PollingLocation extends \Google\Collection
 {
   protected $collection_key = 'sources';
-  /**
-   * @var SimpleAddressType
-   */
-  public $address;
   protected $addressType = SimpleAddressType::class;
   protected $addressDataType = '';
   /**
@@ -44,10 +40,6 @@ class PollingLocation extends \Google\Collection
    * @var string
    */
   public $pollingHours;
-  /**
-   * @var Source[]
-   */
-  public $sources;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
   /**

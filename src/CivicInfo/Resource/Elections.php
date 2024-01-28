@@ -38,6 +38,7 @@ class Elections extends \Google\Service\Resource
    * @opt_param bool productionDataOnly Whether to include data that has not been
    * allowlisted yet
    * @return ElectionsQueryResponse
+   * @throws \Google\Service\Exception
    */
   public function electionQuery($optParams = [])
   {
@@ -69,6 +70,7 @@ class Elections extends \Google\Service\Resource
    * determine a matching address or unable to determine the election for
    * electionId=0 queries.
    * @return VoterInfoResponse
+   * @throws \Google\Service\Exception
    */
   public function voterInfoQuery($address, $optParams = [])
   {

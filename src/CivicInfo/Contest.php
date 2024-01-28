@@ -28,16 +28,8 @@ class Contest extends \Google\Collection
    * @var string
    */
   public $ballotTitle;
-  /**
-   * @var Candidate[]
-   */
-  public $candidates;
   protected $candidatesType = Candidate::class;
   protected $candidatesDataType = 'array';
-  /**
-   * @var ElectoralDistrict
-   */
-  public $district;
   protected $districtType = ElectoralDistrict::class;
   protected $districtDataType = '';
   /**
@@ -108,10 +100,6 @@ class Contest extends \Google\Collection
    * @var string[]
    */
   public $roles;
-  /**
-   * @var Source[]
-   */
-  public $sources;
   protected $sourcesType = Source::class;
   protected $sourcesDataType = 'array';
   /**
