@@ -44,6 +44,7 @@ class Users extends \Google\Service\Resource
    * @opt_param string systemId A system ID for filtering the results of the
    * request.
    * @return LoginProfile
+   * @throws \Google\Service\Exception
    */
   public function getLoginProfile($name, $optParams = [])
   {
@@ -67,6 +68,7 @@ class Users extends \Google\Service\Resource
    * key was written. If unspecified, defaults to all regions. Regions are listed
    * at https://cloud.google.com/about/locations#region.
    * @return ImportSshPublicKeyResponse
+   * @throws \Google\Service\Exception
    */
   public function importSshPublicKey($parent, SshPublicKey $postBody, $optParams = [])
   {

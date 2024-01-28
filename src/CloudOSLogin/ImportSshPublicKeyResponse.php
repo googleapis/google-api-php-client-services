@@ -23,10 +23,6 @@ class ImportSshPublicKeyResponse extends \Google\Model
    * @var string
    */
   public $details;
-  /**
-   * @var LoginProfile
-   */
-  public $loginProfile;
   protected $loginProfileType = LoginProfile::class;
   protected $loginProfileDataType = '';
 
