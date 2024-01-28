@@ -20,10 +20,6 @@ namespace Google\Service\Datalineage;
 class GoogleCloudDatacatalogLineageV1ListLineageEventsResponse extends \Google\Collection
 {
   protected $collection_key = 'lineageEvents';
-  /**
-   * @var GoogleCloudDatacatalogLineageV1LineageEvent[]
-   */
-  public $lineageEvents;
   protected $lineageEventsType = GoogleCloudDatacatalogLineageV1LineageEvent::class;
   protected $lineageEventsDataType = 'array';
   /**

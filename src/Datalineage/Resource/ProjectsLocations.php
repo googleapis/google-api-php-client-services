@@ -50,6 +50,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * @param GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesResponse
+   * @throws \Google\Service\Exception
    */
   public function batchSearchLinkProcesses($parent, GoogleCloudDatacatalogLineageV1BatchSearchLinkProcessesRequest $postBody, $optParams = [])
   {
@@ -73,6 +74,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * to 36 ASCII characters. A random UUID is recommended. This request is
    * idempotent only if a `request_id` is provided.
    * @return GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse
+   * @throws \Google\Service\Exception
    */
   public function processOpenLineageRunEvent($parent, ProcessOpenLineageRunEventRequestContent $postBody, $optParams = [])
   {
@@ -92,6 +94,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * @param GoogleCloudDatacatalogLineageV1SearchLinksRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDatacatalogLineageV1SearchLinksResponse
+   * @throws \Google\Service\Exception
    */
   public function searchLinks($parent, GoogleCloudDatacatalogLineageV1SearchLinksRequest $postBody, $optParams = [])
   {
