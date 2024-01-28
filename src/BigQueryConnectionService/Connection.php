@@ -29,6 +29,8 @@ class Connection extends \Google\Model
   protected $cloudSpannerDataType = '';
   protected $cloudSqlType = CloudSqlProperties::class;
   protected $cloudSqlDataType = '';
+  protected $configurationType = ConnectorConfiguration::class;
+  protected $configurationDataType = '';
   /**
    * @var string
    */
@@ -131,6 +133,20 @@ class Connection extends \Google\Model
   public function getCloudSql()
   {
     return $this->cloudSql;
+  }
+  /**
+   * @param ConnectorConfiguration
+   */
+  public function setConfiguration(ConnectorConfiguration $configuration)
+  {
+    $this->configuration = $configuration;
+  }
+  /**
+   * @return ConnectorConfiguration
+   */
+  public function getConfiguration()
+  {
+    return $this->configuration;
   }
   /**
    * @param string
