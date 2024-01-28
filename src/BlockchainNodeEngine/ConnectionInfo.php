@@ -19,10 +19,6 @@ namespace Google\Service\BlockchainNodeEngine;
 
 class ConnectionInfo extends \Google\Model
 {
-  /**
-   * @var EndpointInfo
-   */
-  public $endpointInfo;
   protected $endpointInfoType = EndpointInfo::class;
   protected $endpointInfoDataType = '';
   /**

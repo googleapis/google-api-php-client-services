@@ -20,10 +20,6 @@ namespace Google\Service\BlockchainNodeEngine;
 class ListBlockchainNodesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var BlockchainNode[]
-   */
-  public $blockchainNodes;
   protected $blockchainNodesType = BlockchainNode::class;
   protected $blockchainNodesDataType = 'array';
   /**
