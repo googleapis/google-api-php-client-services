@@ -20,10 +20,6 @@ namespace Google\Service\PeopleService;
 class ListConnectionsResponse extends \Google\Collection
 {
   protected $collection_key = 'connections';
-  /**
-   * @var Person[]
-   */
-  public $connections;
   protected $connectionsType = Person::class;
   protected $connectionsDataType = 'array';
   /**

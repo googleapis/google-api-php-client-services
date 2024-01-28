@@ -19,10 +19,6 @@ namespace Google\Service\PeopleService;
 
 class FileAs extends \Google\Model
 {
-  /**
-   * @var FieldMetadata
-   */
-  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

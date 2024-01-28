@@ -23,10 +23,6 @@ class FieldMetadata extends \Google\Model
    * @var bool
    */
   public $primary;
-  /**
-   * @var Source
-   */
-  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
   /**

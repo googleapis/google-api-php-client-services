@@ -35,10 +35,6 @@ class Organization extends \Google\Model
    * @var string
    */
   public $domain;
-  /**
-   * @var Date
-   */
-  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
   /**
@@ -57,10 +53,6 @@ class Organization extends \Google\Model
    * @var string
    */
   public $location;
-  /**
-   * @var FieldMetadata
-   */
-  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -71,10 +63,6 @@ class Organization extends \Google\Model
    * @var string
    */
   public $phoneticName;
-  /**
-   * @var Date
-   */
-  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   /**

@@ -23,10 +23,6 @@ class ClientData extends \Google\Model
    * @var string
    */
   public $key;
-  /**
-   * @var FieldMetadata
-   */
-  public $metadata;
   protected $metadataType = FieldMetadata::class;
   protected $metadataDataType = '';
   /**

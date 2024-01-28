@@ -20,10 +20,6 @@ namespace Google\Service\PeopleService;
 class BatchUpdateContactsRequest extends \Google\Collection
 {
   protected $collection_key = 'sources';
-  /**
-   * @var Person[]
-   */
-  public $contacts;
   protected $contactsType = Person::class;
   protected $contactsDataType = 'map';
   /**

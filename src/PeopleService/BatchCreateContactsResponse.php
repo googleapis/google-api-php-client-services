@@ -20,10 +20,6 @@ namespace Google\Service\PeopleService;
 class BatchCreateContactsResponse extends \Google\Collection
 {
   protected $collection_key = 'createdPeople';
-  /**
-   * @var PersonResponse[]
-   */
-  public $createdPeople;
   protected $createdPeopleType = PersonResponse::class;
   protected $createdPeopleDataType = 'array';
 

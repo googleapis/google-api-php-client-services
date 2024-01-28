@@ -19,10 +19,6 @@ namespace Google\Service\PeopleService;
 
 class UpdateContactGroupRequest extends \Google\Model
 {
-  /**
-   * @var ContactGroup
-   */
-  public $contactGroup;
   protected $contactGroupType = ContactGroup::class;
   protected $contactGroupDataType = '';
   /**
