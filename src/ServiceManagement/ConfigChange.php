@@ -20,10 +20,6 @@ namespace Google\Service\ServiceManagement;
 class ConfigChange extends \Google\Collection
 {
   protected $collection_key = 'advices';
-  /**
-   * @var Advice[]
-   */
-  public $advices;
   protected $advicesType = Advice::class;
   protected $advicesDataType = 'array';
   /**

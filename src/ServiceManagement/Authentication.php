@@ -20,16 +20,8 @@ namespace Google\Service\ServiceManagement;
 class Authentication extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var AuthProvider[]
-   */
-  public $providers;
   protected $providersType = AuthProvider::class;
   protected $providersDataType = 'array';
-  /**
-   * @var AuthenticationRule[]
-   */
-  public $rules;
   protected $rulesType = AuthenticationRule::class;
   protected $rulesDataType = 'array';
 

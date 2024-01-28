@@ -20,10 +20,6 @@ namespace Google\Service\ServiceManagement;
 class Context extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var ContextRule[]
-   */
-  public $rules;
   protected $rulesType = ContextRule::class;
   protected $rulesDataType = 'array';
 

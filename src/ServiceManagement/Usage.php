@@ -28,10 +28,6 @@ class Usage extends \Google\Collection
    * @var string[]
    */
   public $requirements;
-  /**
-   * @var UsageRule[]
-   */
-  public $rules;
   protected $rulesType = UsageRule::class;
   protected $rulesDataType = 'array';
 

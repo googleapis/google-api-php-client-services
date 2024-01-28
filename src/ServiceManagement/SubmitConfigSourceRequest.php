@@ -19,10 +19,6 @@ namespace Google\Service\ServiceManagement;
 
 class SubmitConfigSourceRequest extends \Google\Model
 {
-  /**
-   * @var ConfigSource
-   */
-  public $configSource;
   protected $configSourceType = ConfigSource::class;
   protected $configSourceDataType = '';
   /**

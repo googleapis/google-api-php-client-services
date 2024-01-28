@@ -20,10 +20,6 @@ namespace Google\Service\ServiceManagement;
 class ConfigSource extends \Google\Collection
 {
   protected $collection_key = 'files';
-  /**
-   * @var ConfigFile[]
-   */
-  public $files;
   protected $filesType = ConfigFile::class;
   protected $filesDataType = 'array';
   /**

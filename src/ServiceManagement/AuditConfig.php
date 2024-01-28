@@ -20,10 +20,6 @@ namespace Google\Service\ServiceManagement;
 class AuditConfig extends \Google\Collection
 {
   protected $collection_key = 'auditLogConfigs';
-  /**
-   * @var AuditLogConfig[]
-   */
-  public $auditLogConfigs;
   protected $auditLogConfigsType = AuditLogConfig::class;
   protected $auditLogConfigsDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class ListServiceRolloutsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Rollout[]
-   */
-  public $rollouts;
   protected $rolloutsType = Rollout::class;
   protected $rolloutsDataType = 'array';
 

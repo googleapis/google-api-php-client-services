@@ -19,10 +19,6 @@ namespace Google\Service\ServiceManagement;
 
 class SubmitConfigSourceResponse extends \Google\Model
 {
-  /**
-   * @var Service
-   */
-  public $serviceConfig;
   protected $serviceConfigType = Service::class;
   protected $serviceConfigDataType = '';
 
