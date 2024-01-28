@@ -19,10 +19,6 @@ namespace Google\Service\Books;
 
 class DictlayerdataDictWordsSensesSynonyms extends \Google\Model
 {
-  /**
-   * @var DictlayerdataDictWordsSensesSynonymsSource
-   */
-  public $source;
   protected $sourceType = DictlayerdataDictWordsSensesSynonymsSource::class;
   protected $sourceDataType = '';
   /**

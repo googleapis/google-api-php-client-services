@@ -24,10 +24,6 @@ class Seriesmembership extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var Volume[]
-   */
-  public $member;
   protected $memberType = Volume::class;
   protected $memberDataType = 'array';
   /**

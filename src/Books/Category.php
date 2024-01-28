@@ -20,10 +20,6 @@ namespace Google\Service\Books;
 class Category extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var CategoryItems[]
-   */
-  public $items;
   protected $itemsType = CategoryItems::class;
   protected $itemsDataType = 'array';
   /**

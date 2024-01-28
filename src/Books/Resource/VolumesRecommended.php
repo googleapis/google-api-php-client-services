@@ -43,6 +43,7 @@ class VolumesRecommended extends \Google\Service\Resource
    * filtered out.
    * @opt_param string source String to identify the originator of this request.
    * @return VolumesModel
+   * @throws \Google\Service\Exception
    */
   public function listVolumesRecommended($optParams = [])
   {
@@ -61,6 +62,7 @@ class VolumesRecommended extends \Google\Service\Resource
    * 'en_US'. Used for generating recommendations.
    * @opt_param string source String to identify the originator of this request.
    * @return BooksVolumesRecommendedRateResponse
+   * @throws \Google\Service\Exception
    */
   public function rate($rating, $volumeId, $optParams = [])
   {

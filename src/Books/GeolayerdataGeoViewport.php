@@ -19,16 +19,8 @@ namespace Google\Service\Books;
 
 class GeolayerdataGeoViewport extends \Google\Model
 {
-  /**
-   * @var GeolayerdataGeoViewportHi
-   */
-  public $hi;
   protected $hiType = GeolayerdataGeoViewportHi::class;
   protected $hiDataType = '';
-  /**
-   * @var GeolayerdataGeoViewportLo
-   */
-  public $lo;
   protected $loType = GeolayerdataGeoViewportLo::class;
   protected $loDataType = '';
 

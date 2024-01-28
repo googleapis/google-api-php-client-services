@@ -43,6 +43,7 @@ class VolumesAssociated extends \Google\Service\Resource
    * filtered out.
    * @opt_param string source String to identify the originator of this request.
    * @return VolumesModel
+   * @throws \Google\Service\Exception
    */
   public function listVolumesAssociated($volumeId, $optParams = [])
   {

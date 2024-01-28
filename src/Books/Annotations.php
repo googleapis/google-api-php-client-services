@@ -20,10 +20,6 @@ namespace Google\Service\Books;
 class Annotations extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Annotation[]
-   */
-  public $items;
   protected $itemsType = Annotation::class;
   protected $itemsDataType = 'array';
   /**

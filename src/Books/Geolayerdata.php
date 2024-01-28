@@ -19,16 +19,8 @@ namespace Google\Service\Books;
 
 class Geolayerdata extends \Google\Model
 {
-  /**
-   * @var GeolayerdataCommon
-   */
-  public $common;
   protected $commonType = GeolayerdataCommon::class;
   protected $commonDataType = '';
-  /**
-   * @var GeolayerdataGeo
-   */
-  public $geo;
   protected $geoType = GeolayerdataGeo::class;
   protected $geoDataType = '';
   /**

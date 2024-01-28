@@ -49,22 +49,10 @@ class VolumeVolumeInfo extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var VolumeVolumeInfoDimensions
-   */
-  public $dimensions;
   protected $dimensionsType = VolumeVolumeInfoDimensions::class;
   protected $dimensionsDataType = '';
-  /**
-   * @var VolumeVolumeInfoImageLinks
-   */
-  public $imageLinks;
   protected $imageLinksType = VolumeVolumeInfoImageLinks::class;
   protected $imageLinksDataType = '';
-  /**
-   * @var VolumeVolumeInfoIndustryIdentifiers[]
-   */
-  public $industryIdentifiers;
   protected $industryIdentifiersType = VolumeVolumeInfoIndustryIdentifiers::class;
   protected $industryIdentifiersDataType = 'array';
   /**
@@ -87,10 +75,6 @@ class VolumeVolumeInfo extends \Google\Collection
    * @var int
    */
   public $pageCount;
-  /**
-   * @var VolumeVolumeInfoPanelizationSummary
-   */
-  public $panelizationSummary;
   protected $panelizationSummaryType = VolumeVolumeInfoPanelizationSummary::class;
   protected $panelizationSummaryDataType = '';
   /**
@@ -117,20 +101,12 @@ class VolumeVolumeInfo extends \Google\Collection
    * @var int
    */
   public $ratingsCount;
-  /**
-   * @var VolumeVolumeInfoReadingModes
-   */
-  public $readingModes;
   protected $readingModesType = VolumeVolumeInfoReadingModes::class;
   protected $readingModesDataType = '';
   /**
    * @var int
    */
   public $samplePageCount;
-  /**
-   * @var Volumeseriesinfo
-   */
-  public $seriesInfo;
   protected $seriesInfoType = Volumeseriesinfo::class;
   protected $seriesInfoDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Books;
 
 class Review extends \Google\Model
 {
-  /**
-   * @var ReviewAuthor
-   */
-  public $author;
   protected $authorType = ReviewAuthor::class;
   protected $authorDataType = '';
   /**
@@ -45,10 +41,6 @@ class Review extends \Google\Model
    * @var string
    */
   public $rating;
-  /**
-   * @var ReviewSource
-   */
-  public $source;
   protected $sourceType = ReviewSource::class;
   protected $sourceDataType = '';
   /**

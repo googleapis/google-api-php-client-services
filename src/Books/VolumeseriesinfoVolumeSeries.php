@@ -20,10 +20,6 @@ namespace Google\Service\Books;
 class VolumeseriesinfoVolumeSeries extends \Google\Collection
 {
   protected $collection_key = 'issue';
-  /**
-   * @var VolumeseriesinfoVolumeSeriesIssue[]
-   */
-  public $issue;
   protected $issueType = VolumeseriesinfoVolumeSeriesIssue::class;
   protected $issueDataType = 'array';
   /**

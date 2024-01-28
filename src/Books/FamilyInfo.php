@@ -23,10 +23,6 @@ class FamilyInfo extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var FamilyInfoMembership
-   */
-  public $membership;
   protected $membershipType = FamilyInfoMembership::class;
   protected $membershipDataType = '';
 

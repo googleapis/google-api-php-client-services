@@ -24,10 +24,6 @@ class Series extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var SeriesSeries[]
-   */
-  public $series;
   protected $seriesType = SeriesSeries::class;
   protected $seriesDataType = 'array';
 

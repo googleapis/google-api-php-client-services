@@ -20,10 +20,6 @@ namespace Google\Service\Books;
 class Metadata extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var MetadataItems[]
-   */
-  public $items;
   protected $itemsType = MetadataItems::class;
   protected $itemsDataType = 'array';
   /**
