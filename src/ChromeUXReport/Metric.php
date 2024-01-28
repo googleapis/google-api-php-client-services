@@ -21,16 +21,8 @@ class Metric extends \Google\Collection
 {
   protected $collection_key = 'histogram';
   public $fractions;
-  /**
-   * @var Bin[]
-   */
-  public $histogram;
   protected $histogramType = Bin::class;
   protected $histogramDataType = 'array';
-  /**
-   * @var Percentiles
-   */
-  public $percentiles;
   protected $percentilesType = Percentiles::class;
   protected $percentilesDataType = '';
 

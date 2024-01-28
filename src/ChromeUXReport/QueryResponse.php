@@ -19,16 +19,8 @@ namespace Google\Service\ChromeUXReport;
 
 class QueryResponse extends \Google\Model
 {
-  /**
-   * @var Record
-   */
-  public $record;
   protected $recordType = Record::class;
   protected $recordDataType = '';
-  /**
-   * @var UrlNormalization
-   */
-  public $urlNormalizationDetails;
   protected $urlNormalizationDetailsType = UrlNormalization::class;
   protected $urlNormalizationDetailsDataType = '';
 
