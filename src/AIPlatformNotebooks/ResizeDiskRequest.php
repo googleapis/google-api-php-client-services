@@ -19,16 +19,8 @@ namespace Google\Service\AIPlatformNotebooks;
 
 class ResizeDiskRequest extends \Google\Model
 {
-  /**
-   * @var BootDisk
-   */
-  public $bootDisk;
   protected $bootDiskType = BootDisk::class;
   protected $bootDiskDataType = '';
-  /**
-   * @var DataDisk
-   */
-  public $dataDisk;
   protected $dataDiskType = DataDisk::class;
   protected $dataDiskDataType = '';
 

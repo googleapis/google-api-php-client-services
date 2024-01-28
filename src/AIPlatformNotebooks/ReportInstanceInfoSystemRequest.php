@@ -19,10 +19,6 @@ namespace Google\Service\AIPlatformNotebooks;
 
 class ReportInstanceInfoSystemRequest extends \Google\Model
 {
-  /**
-   * @var Event
-   */
-  public $event;
   protected $eventType = Event::class;
   protected $eventDataType = '';
   /**

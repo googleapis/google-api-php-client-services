@@ -19,10 +19,6 @@ namespace Google\Service\AIPlatformNotebooks;
 
 class DiagnoseInstanceRequest extends \Google\Model
 {
-  /**
-   * @var DiagnosticConfig
-   */
-  public $diagnosticConfig;
   protected $diagnosticConfigType = DiagnosticConfig::class;
   protected $diagnosticConfigDataType = '';
   /**
