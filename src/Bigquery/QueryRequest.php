@@ -36,6 +36,8 @@ class QueryRequest extends \Google\Collection
    * @var bool
    */
   public $dryRun;
+  protected $formatOptionsType = DataFormatOptions::class;
+  protected $formatOptionsDataType = '';
   /**
    * @var string
    */
@@ -160,6 +162,20 @@ class QueryRequest extends \Google\Collection
   public function getDryRun()
   {
     return $this->dryRun;
+  }
+  /**
+   * @param DataFormatOptions
+   */
+  public function setFormatOptions(DataFormatOptions $formatOptions)
+  {
+    $this->formatOptions = $formatOptions;
+  }
+  /**
+   * @return DataFormatOptions
+   */
+  public function getFormatOptions()
+  {
+    return $this->formatOptions;
   }
   /**
    * @param string

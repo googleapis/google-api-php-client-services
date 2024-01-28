@@ -17,44 +17,46 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class ExportDataStatistics extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
   /**
-   * @var bool
+   * @var string
    */
-  public $useLegacySql;
+  public $fileCount;
+  /**
+   * @var string
+   */
+  public $rowCount;
 
   /**
-   * @param PrivacyPolicy
+   * @param string
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setFileCount($fileCount)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->fileCount = $fileCount;
   }
   /**
-   * @return PrivacyPolicy
+   * @return string
    */
-  public function getPrivacyPolicy()
+  public function getFileCount()
   {
-    return $this->privacyPolicy;
+    return $this->fileCount;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setUseLegacySql($useLegacySql)
+  public function setRowCount($rowCount)
   {
-    $this->useLegacySql = $useLegacySql;
+    $this->rowCount = $rowCount;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getUseLegacySql()
+  public function getRowCount()
   {
-    return $this->useLegacySql;
+    return $this->rowCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(ExportDataStatistics::class, 'Google_Service_Bigquery_ExportDataStatistics');

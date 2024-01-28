@@ -17,44 +17,26 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class LinkedDatasetSource extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
-  /**
-   * @var bool
-   */
-  public $useLegacySql;
+  protected $sourceDatasetType = DatasetReference::class;
+  protected $sourceDatasetDataType = '';
 
   /**
-   * @param PrivacyPolicy
+   * @param DatasetReference
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setSourceDataset(DatasetReference $sourceDataset)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->sourceDataset = $sourceDataset;
   }
   /**
-   * @return PrivacyPolicy
+   * @return DatasetReference
    */
-  public function getPrivacyPolicy()
+  public function getSourceDataset()
   {
-    return $this->privacyPolicy;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
+    return $this->sourceDataset;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(LinkedDatasetSource::class, 'Google_Service_Bigquery_LinkedDatasetSource');

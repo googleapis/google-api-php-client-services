@@ -20,6 +20,7 @@ namespace Google\Service\Bigquery;
 class Job extends \Google\Model
 {
   protected $internal_gapi_mappings = [
+        "principalSubject" => "principal_subject",
         "userEmail" => "user_email",
   ];
   protected $configurationType = JobConfiguration::class;
@@ -32,16 +33,18 @@ class Job extends \Google\Model
    * @var string
    */
   public $id;
-  /**
-   * @var array
-   */
-  public $jobCreationReason;
+  protected $jobCreationReasonType = JobCreationReason::class;
+  protected $jobCreationReasonDataType = '';
   protected $jobReferenceType = JobReference::class;
   protected $jobReferenceDataType = '';
   /**
    * @var string
    */
   public $kind;
+  /**
+   * @var string
+   */
+  public $principalSubject;
   /**
    * @var string
    */
@@ -98,14 +101,14 @@ class Job extends \Google\Model
     return $this->id;
   }
   /**
-   * @param array
+   * @param JobCreationReason
    */
-  public function setJobCreationReason($jobCreationReason)
+  public function setJobCreationReason(JobCreationReason $jobCreationReason)
   {
     $this->jobCreationReason = $jobCreationReason;
   }
   /**
-   * @return array
+   * @return JobCreationReason
    */
   public function getJobCreationReason()
   {
@@ -138,6 +141,20 @@ class Job extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string
+   */
+  public function setPrincipalSubject($principalSubject)
+  {
+    $this->principalSubject = $principalSubject;
+  }
+  /**
+   * @return string
+   */
+  public function getPrincipalSubject()
+  {
+    return $this->principalSubject;
   }
   /**
    * @param string

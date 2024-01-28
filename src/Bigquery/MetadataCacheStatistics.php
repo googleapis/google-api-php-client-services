@@ -17,44 +17,27 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class MetadataCacheStatistics extends \Google\Collection
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
-  /**
-   * @var bool
-   */
-  public $useLegacySql;
+  protected $collection_key = 'tableMetadataCacheUsage';
+  protected $tableMetadataCacheUsageType = TableMetadataCacheUsage::class;
+  protected $tableMetadataCacheUsageDataType = 'array';
 
   /**
-   * @param PrivacyPolicy
+   * @param TableMetadataCacheUsage[]
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setTableMetadataCacheUsage($tableMetadataCacheUsage)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->tableMetadataCacheUsage = $tableMetadataCacheUsage;
   }
   /**
-   * @return PrivacyPolicy
+   * @return TableMetadataCacheUsage[]
    */
-  public function getPrivacyPolicy()
+  public function getTableMetadataCacheUsage()
   {
-    return $this->privacyPolicy;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
+    return $this->tableMetadataCacheUsage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(MetadataCacheStatistics::class, 'Google_Service_Bigquery_MetadataCacheStatistics');

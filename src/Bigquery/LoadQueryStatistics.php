@@ -17,13 +17,16 @@
 
 namespace Google\Service\Bigquery;
 
-class JobStatistics3 extends \Google\Collection
+class LoadQueryStatistics extends \Google\Model
 {
-  protected $collection_key = 'timeline';
   /**
    * @var string
    */
   public $badRecords;
+  /**
+   * @var string
+   */
+  public $bytesTransferred;
   /**
    * @var string
    */
@@ -40,8 +43,6 @@ class JobStatistics3 extends \Google\Collection
    * @var string
    */
   public $outputRows;
-  protected $timelineType = QueryTimelineSample::class;
-  protected $timelineDataType = 'array';
 
   /**
    * @param string
@@ -56,6 +57,20 @@ class JobStatistics3 extends \Google\Collection
   public function getBadRecords()
   {
     return $this->badRecords;
+  }
+  /**
+   * @param string
+   */
+  public function setBytesTransferred($bytesTransferred)
+  {
+    $this->bytesTransferred = $bytesTransferred;
+  }
+  /**
+   * @return string
+   */
+  public function getBytesTransferred()
+  {
+    return $this->bytesTransferred;
   }
   /**
    * @param string
@@ -113,21 +128,7 @@ class JobStatistics3 extends \Google\Collection
   {
     return $this->outputRows;
   }
-  /**
-   * @param QueryTimelineSample[]
-   */
-  public function setTimeline($timeline)
-  {
-    $this->timeline = $timeline;
-  }
-  /**
-   * @return QueryTimelineSample[]
-   */
-  public function getTimeline()
-  {
-    return $this->timeline;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(JobStatistics3::class, 'Google_Service_Bigquery_JobStatistics3');
+class_alias(LoadQueryStatistics::class, 'Google_Service_Bigquery_LoadQueryStatistics');

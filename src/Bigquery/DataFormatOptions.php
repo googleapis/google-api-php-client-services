@@ -17,44 +17,28 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class DataFormatOptions extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
   /**
    * @var bool
    */
-  public $useLegacySql;
+  public $useInt64Timestamp;
 
-  /**
-   * @param PrivacyPolicy
-   */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
-  {
-    $this->privacyPolicy = $privacyPolicy;
-  }
-  /**
-   * @return PrivacyPolicy
-   */
-  public function getPrivacyPolicy()
-  {
-    return $this->privacyPolicy;
-  }
   /**
    * @param bool
    */
-  public function setUseLegacySql($useLegacySql)
+  public function setUseInt64Timestamp($useInt64Timestamp)
   {
-    $this->useLegacySql = $useLegacySql;
+    $this->useInt64Timestamp = $useInt64Timestamp;
   }
   /**
    * @return bool
    */
-  public function getUseLegacySql()
+  public function getUseInt64Timestamp()
   {
-    return $this->useLegacySql;
+    return $this->useInt64Timestamp;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(DataFormatOptions::class, 'Google_Service_Bigquery_DataFormatOptions');

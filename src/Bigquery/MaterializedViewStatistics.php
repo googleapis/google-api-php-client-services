@@ -17,44 +17,27 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class MaterializedViewStatistics extends \Google\Collection
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
-  /**
-   * @var bool
-   */
-  public $useLegacySql;
+  protected $collection_key = 'materializedView';
+  protected $materializedViewType = MaterializedView::class;
+  protected $materializedViewDataType = 'array';
 
   /**
-   * @param PrivacyPolicy
+   * @param MaterializedView[]
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setMaterializedView($materializedView)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->materializedView = $materializedView;
   }
   /**
-   * @return PrivacyPolicy
+   * @return MaterializedView[]
    */
-  public function getPrivacyPolicy()
+  public function getMaterializedView()
   {
-    return $this->privacyPolicy;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
+    return $this->materializedView;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(MaterializedViewStatistics::class, 'Google_Service_Bigquery_MaterializedViewStatistics');

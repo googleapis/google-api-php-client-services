@@ -17,44 +17,28 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class UndeleteDatasetRequest extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
   /**
-   * @var bool
+   * @var string
    */
-  public $useLegacySql;
+  public $deletionTime;
 
   /**
-   * @param PrivacyPolicy
+   * @param string
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setDeletionTime($deletionTime)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->deletionTime = $deletionTime;
   }
   /**
-   * @return PrivacyPolicy
+   * @return string
    */
-  public function getPrivacyPolicy()
+  public function getDeletionTime()
   {
-    return $this->privacyPolicy;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
+    return $this->deletionTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(UndeleteDatasetRequest::class, 'Google_Service_Bigquery_UndeleteDatasetRequest');

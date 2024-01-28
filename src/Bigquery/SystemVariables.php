@@ -17,44 +17,44 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class SystemVariables extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
+  protected $typesType = StandardSqlDataType::class;
+  protected $typesDataType = 'map';
   /**
-   * @var bool
+   * @var array[]
    */
-  public $useLegacySql;
+  public $values;
 
   /**
-   * @param PrivacyPolicy
+   * @param StandardSqlDataType[]
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setTypes($types)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->types = $types;
   }
   /**
-   * @return PrivacyPolicy
+   * @return StandardSqlDataType[]
    */
-  public function getPrivacyPolicy()
+  public function getTypes()
   {
-    return $this->privacyPolicy;
+    return $this->types;
   }
   /**
-   * @param bool
+   * @param array[]
    */
-  public function setUseLegacySql($useLegacySql)
+  public function setValues($values)
   {
-    $this->useLegacySql = $useLegacySql;
+    $this->values = $values;
   }
   /**
-   * @return bool
+   * @return array[]
    */
-  public function getUseLegacySql()
+  public function getValues()
   {
-    return $this->useLegacySql;
+    return $this->values;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(SystemVariables::class, 'Google_Service_Bigquery_SystemVariables');

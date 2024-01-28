@@ -17,44 +17,28 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class QueryInfo extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
   /**
-   * @var bool
+   * @var array[]
    */
-  public $useLegacySql;
+  public $optimizationDetails;
 
   /**
-   * @param PrivacyPolicy
+   * @param array[]
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setOptimizationDetails($optimizationDetails)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->optimizationDetails = $optimizationDetails;
   }
   /**
-   * @return PrivacyPolicy
+   * @return array[]
    */
-  public function getPrivacyPolicy()
+  public function getOptimizationDetails()
   {
-    return $this->privacyPolicy;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
+    return $this->optimizationDetails;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(QueryInfo::class, 'Google_Service_Bigquery_QueryInfo');

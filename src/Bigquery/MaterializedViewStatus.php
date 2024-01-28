@@ -17,44 +17,44 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class MaterializedViewStatus extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
+  protected $lastRefreshStatusType = ErrorProto::class;
+  protected $lastRefreshStatusDataType = '';
   /**
-   * @var bool
+   * @var string
    */
-  public $useLegacySql;
+  public $refreshWatermark;
 
   /**
-   * @param PrivacyPolicy
+   * @param ErrorProto
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setLastRefreshStatus(ErrorProto $lastRefreshStatus)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->lastRefreshStatus = $lastRefreshStatus;
   }
   /**
-   * @return PrivacyPolicy
+   * @return ErrorProto
    */
-  public function getPrivacyPolicy()
+  public function getLastRefreshStatus()
   {
-    return $this->privacyPolicy;
+    return $this->lastRefreshStatus;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setUseLegacySql($useLegacySql)
+  public function setRefreshWatermark($refreshWatermark)
   {
-    $this->useLegacySql = $useLegacySql;
+    $this->refreshWatermark = $refreshWatermark;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getUseLegacySql()
+  public function getRefreshWatermark()
   {
-    return $this->useLegacySql;
+    return $this->refreshWatermark;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(MaterializedViewStatus::class, 'Google_Service_Bigquery_MaterializedViewStatus');

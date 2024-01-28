@@ -17,44 +17,28 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class InputDataChange extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
   /**
-   * @var bool
+   * @var float
    */
-  public $useLegacySql;
+  public $recordsReadDiffPercentage;
 
   /**
-   * @param PrivacyPolicy
+   * @param float
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setRecordsReadDiffPercentage($recordsReadDiffPercentage)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->recordsReadDiffPercentage = $recordsReadDiffPercentage;
   }
   /**
-   * @return PrivacyPolicy
+   * @return float
    */
-  public function getPrivacyPolicy()
+  public function getRecordsReadDiffPercentage()
   {
-    return $this->privacyPolicy;
-  }
-  /**
-   * @param bool
-   */
-  public function setUseLegacySql($useLegacySql)
-  {
-    $this->useLegacySql = $useLegacySql;
-  }
-  /**
-   * @return bool
-   */
-  public function getUseLegacySql()
-  {
-    return $this->useLegacySql;
+    return $this->recordsReadDiffPercentage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(InputDataChange::class, 'Google_Service_Bigquery_InputDataChange');

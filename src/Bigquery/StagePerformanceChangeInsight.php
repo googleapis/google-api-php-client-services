@@ -17,44 +17,44 @@
 
 namespace Google\Service\Bigquery;
 
-class TableListTablesView extends \Google\Model
+class StagePerformanceChangeInsight extends \Google\Model
 {
-  protected $privacyPolicyType = PrivacyPolicy::class;
-  protected $privacyPolicyDataType = '';
+  protected $inputDataChangeType = InputDataChange::class;
+  protected $inputDataChangeDataType = '';
   /**
-   * @var bool
+   * @var string
    */
-  public $useLegacySql;
+  public $stageId;
 
   /**
-   * @param PrivacyPolicy
+   * @param InputDataChange
    */
-  public function setPrivacyPolicy(PrivacyPolicy $privacyPolicy)
+  public function setInputDataChange(InputDataChange $inputDataChange)
   {
-    $this->privacyPolicy = $privacyPolicy;
+    $this->inputDataChange = $inputDataChange;
   }
   /**
-   * @return PrivacyPolicy
+   * @return InputDataChange
    */
-  public function getPrivacyPolicy()
+  public function getInputDataChange()
   {
-    return $this->privacyPolicy;
+    return $this->inputDataChange;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setUseLegacySql($useLegacySql)
+  public function setStageId($stageId)
   {
-    $this->useLegacySql = $useLegacySql;
+    $this->stageId = $stageId;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getUseLegacySql()
+  public function getStageId()
   {
-    return $this->useLegacySql;
+    return $this->stageId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TableListTablesView::class, 'Google_Service_Bigquery_TableListTablesView');
+class_alias(StagePerformanceChangeInsight::class, 'Google_Service_Bigquery_StagePerformanceChangeInsight');
