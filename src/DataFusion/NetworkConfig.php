@@ -31,10 +31,6 @@ class NetworkConfig extends \Google\Model
    * @var string
    */
   public $network;
-  /**
-   * @var PrivateServiceConnectConfig
-   */
-  public $privateServiceConnectConfig;
   protected $privateServiceConnectConfigType = PrivateServiceConnectConfig::class;
   protected $privateServiceConnectConfigDataType = '';
 

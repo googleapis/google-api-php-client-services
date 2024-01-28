@@ -28,10 +28,6 @@ class DataResidencyAugmentedView extends \Google\Collection
    * @var string[]
    */
   public $crGopoPrefixes;
-  /**
-   * @var ServiceData
-   */
-  public $serviceData;
   protected $serviceDataType = ServiceData::class;
   protected $serviceDataDataType = '';
   /**

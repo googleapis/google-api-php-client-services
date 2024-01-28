@@ -20,10 +20,6 @@ namespace Google\Service\DataFusion;
 class ListDnsPeeringsResponse extends \Google\Collection
 {
   protected $collection_key = 'dnsPeerings';
-  /**
-   * @var DnsPeering[]
-   */
-  public $dnsPeerings;
   protected $dnsPeeringsType = DnsPeering::class;
   protected $dnsPeeringsDataType = 'array';
   /**

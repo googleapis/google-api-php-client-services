@@ -19,10 +19,6 @@ namespace Google\Service\DataFusion;
 
 class ServiceData extends \Google\Model
 {
-  /**
-   * @var PersistentDiskData
-   */
-  public $pd;
   protected $pdType = PersistentDiskData::class;
   protected $pdDataType = '';
 

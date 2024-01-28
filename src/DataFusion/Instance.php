@@ -20,30 +20,18 @@ namespace Google\Service\DataFusion;
 class Instance extends \Google\Collection
 {
   protected $collection_key = 'disabledReason';
-  /**
-   * @var Accelerator[]
-   */
-  public $accelerators;
   protected $acceleratorsType = Accelerator::class;
   protected $acceleratorsDataType = 'array';
   /**
    * @var string
    */
   public $apiEndpoint;
-  /**
-   * @var Version[]
-   */
-  public $availableVersion;
   protected $availableVersionType = Version::class;
   protected $availableVersionDataType = 'array';
   /**
    * @var string
    */
   public $createTime;
-  /**
-   * @var CryptoKeyConfig
-   */
-  public $cryptoKeyConfig;
   protected $cryptoKeyConfigType = CryptoKeyConfig::class;
   protected $cryptoKeyConfigDataType = '';
   /**
@@ -82,10 +70,6 @@ class Instance extends \Google\Collection
    * @var bool
    */
   public $enableZoneSeparation;
-  /**
-   * @var EventPublishConfig
-   */
-  public $eventPublishConfig;
   protected $eventPublishConfigType = EventPublishConfig::class;
   protected $eventPublishConfigDataType = '';
   /**
@@ -100,10 +84,6 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var NetworkConfig
-   */
-  public $networkConfig;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
   /**
