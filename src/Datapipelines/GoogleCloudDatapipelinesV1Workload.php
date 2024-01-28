@@ -19,16 +19,8 @@ namespace Google\Service\Datapipelines;
 
 class GoogleCloudDatapipelinesV1Workload extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest
-   */
-  public $dataflowFlexTemplateRequest;
   protected $dataflowFlexTemplateRequestType = GoogleCloudDatapipelinesV1LaunchFlexTemplateRequest::class;
   protected $dataflowFlexTemplateRequestDataType = '';
-  /**
-   * @var GoogleCloudDatapipelinesV1LaunchTemplateRequest
-   */
-  public $dataflowLaunchTemplateRequest;
   protected $dataflowLaunchTemplateRequestType = GoogleCloudDatapipelinesV1LaunchTemplateRequest::class;
   protected $dataflowLaunchTemplateRequestDataType = '';
 

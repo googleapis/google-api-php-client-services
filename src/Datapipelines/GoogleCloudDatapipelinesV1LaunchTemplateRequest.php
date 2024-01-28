@@ -23,10 +23,6 @@ class GoogleCloudDatapipelinesV1LaunchTemplateRequest extends \Google\Model
    * @var string
    */
   public $gcsPath;
-  /**
-   * @var GoogleCloudDatapipelinesV1LaunchTemplateParameters
-   */
-  public $launchParameters;
   protected $launchParametersType = GoogleCloudDatapipelinesV1LaunchTemplateParameters::class;
   protected $launchParametersDataType = '';
   /**

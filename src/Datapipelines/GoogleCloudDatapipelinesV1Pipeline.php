@@ -43,10 +43,6 @@ class GoogleCloudDatapipelinesV1Pipeline extends \Google\Model
    * @var string[]
    */
   public $pipelineSources;
-  /**
-   * @var GoogleCloudDatapipelinesV1ScheduleSpec
-   */
-  public $scheduleInfo;
   protected $scheduleInfoType = GoogleCloudDatapipelinesV1ScheduleSpec::class;
   protected $scheduleInfoDataType = '';
   /**
@@ -61,10 +57,6 @@ class GoogleCloudDatapipelinesV1Pipeline extends \Google\Model
    * @var string
    */
   public $type;
-  /**
-   * @var GoogleCloudDatapipelinesV1Workload
-   */
-  public $workload;
   protected $workloadType = GoogleCloudDatapipelinesV1Workload::class;
   protected $workloadDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Datapipelines;
 
 class GoogleCloudDatapipelinesV1LaunchTemplateParameters extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatapipelinesV1RuntimeEnvironment
-   */
-  public $environment;
   protected $environmentType = GoogleCloudDatapipelinesV1RuntimeEnvironment::class;
   protected $environmentDataType = '';
   /**
