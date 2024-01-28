@@ -28,10 +28,6 @@ class SiteVerificationWebResourceResource extends \Google\Collection
    * @var string[]
    */
   public $owners;
-  /**
-   * @var SiteVerificationWebResourceResourceSite
-   */
-  public $site;
   protected $siteType = SiteVerificationWebResourceResourceSite::class;
   protected $siteDataType = '';
 
