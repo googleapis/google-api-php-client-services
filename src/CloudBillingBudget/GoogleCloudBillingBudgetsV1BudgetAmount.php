@@ -19,16 +19,8 @@ namespace Google\Service\CloudBillingBudget;
 
 class GoogleCloudBillingBudgetsV1BudgetAmount extends \Google\Model
 {
-  /**
-   * @var GoogleCloudBillingBudgetsV1LastPeriodAmount
-   */
-  public $lastPeriodAmount;
   protected $lastPeriodAmountType = GoogleCloudBillingBudgetsV1LastPeriodAmount::class;
   protected $lastPeriodAmountDataType = '';
-  /**
-   * @var GoogleTypeMoney
-   */
-  public $specifiedAmount;
   protected $specifiedAmountType = GoogleTypeMoney::class;
   protected $specifiedAmountDataType = '';
 
