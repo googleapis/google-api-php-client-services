@@ -23,10 +23,6 @@ class UpdateInstanceMetadata extends \Google\Model
    * @var string
    */
   public $finishTime;
-  /**
-   * @var PartialUpdateInstanceRequest
-   */
-  public $originalRequest;
   protected $originalRequestType = PartialUpdateInstanceRequest::class;
   protected $originalRequestDataType = '';
   /**

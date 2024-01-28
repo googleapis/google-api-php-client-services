@@ -20,10 +20,6 @@ namespace Google\Service\BigtableAdmin;
 class ListBackupsResponse extends \Google\Collection
 {
   protected $collection_key = 'backups';
-  /**
-   * @var Backup[]
-   */
-  public $backups;
   protected $backupsType = Backup::class;
   protected $backupsDataType = 'array';
   /**

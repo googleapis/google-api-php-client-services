@@ -23,20 +23,12 @@ class CreateClusterMetadata extends \Google\Model
    * @var string
    */
   public $finishTime;
-  /**
-   * @var CreateClusterRequest
-   */
-  public $originalRequest;
   protected $originalRequestType = CreateClusterRequest::class;
   protected $originalRequestDataType = '';
   /**
    * @var string
    */
   public $requestTime;
-  /**
-   * @var TableProgress[]
-   */
-  public $tables;
   protected $tablesType = TableProgress::class;
   protected $tablesDataType = 'map';
 

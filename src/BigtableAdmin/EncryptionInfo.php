@@ -19,10 +19,6 @@ namespace Google\Service\BigtableAdmin;
 
 class EncryptionInfo extends \Google\Model
 {
-  /**
-   * @var Status
-   */
-  public $encryptionStatus;
   protected $encryptionStatusType = Status::class;
   protected $encryptionStatusDataType = '';
   /**

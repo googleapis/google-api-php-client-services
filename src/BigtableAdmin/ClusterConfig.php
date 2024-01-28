@@ -19,10 +19,6 @@ namespace Google\Service\BigtableAdmin;
 
 class ClusterConfig extends \Google\Model
 {
-  /**
-   * @var ClusterAutoscalingConfig
-   */
-  public $clusterAutoscalingConfig;
   protected $clusterAutoscalingConfigType = ClusterAutoscalingConfig::class;
   protected $clusterAutoscalingConfigDataType = '';
 

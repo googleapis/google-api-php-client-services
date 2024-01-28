@@ -19,10 +19,6 @@ namespace Google\Service\BigtableAdmin;
 
 class GcRule extends \Google\Model
 {
-  /**
-   * @var Intersection
-   */
-  public $intersection;
   protected $intersectionType = Intersection::class;
   protected $intersectionDataType = '';
   /**
@@ -33,10 +29,6 @@ class GcRule extends \Google\Model
    * @var int
    */
   public $maxNumVersions;
-  /**
-   * @var Union
-   */
-  public $union;
   protected $unionType = Union::class;
   protected $unionDataType = '';
 

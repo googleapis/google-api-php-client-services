@@ -19,10 +19,6 @@ namespace Google\Service\BigtableAdmin;
 
 class PartialUpdateClusterRequest extends \Google\Model
 {
-  /**
-   * @var Cluster
-   */
-  public $cluster;
   protected $clusterType = Cluster::class;
   protected $clusterDataType = '';
   /**

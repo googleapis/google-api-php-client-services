@@ -57,6 +57,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param CheckConsistencyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CheckConsistencyResponse
+   * @throws \Google\Service\Exception
    */
   public function checkConsistency($name, CheckConsistencyRequest $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param CreateTableRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CreateTableRequest $postBody, $optParams = [])
   {
@@ -90,6 +92,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * `projects/{project}/instances/{instance}/tables/{table}`.
    * @param array $optParams Optional parameters.
    * @return BigtableadminEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -111,6 +114,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param DropRowRangeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BigtableadminEmpty
+   * @throws \Google\Service\Exception
    */
   public function dropRowRange($name, DropRowRangeRequest $postBody, $optParams = [])
   {
@@ -130,6 +134,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param GenerateConsistencyTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GenerateConsistencyTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function generateConsistencyToken($name, GenerateConsistencyTokenRequest $postBody, $optParams = [])
   {
@@ -147,6 +152,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @opt_param string view The view to be applied to the returned table's fields.
    * Defaults to `SCHEMA_VIEW` if unspecified.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -166,6 +172,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -194,6 +201,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * Only NAME_ONLY view (default), REPLICATION_VIEW and ENCRYPTION_VIEW are
    * supported.
    * @return ListTablesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsInstancesTables($parent, $optParams = [])
   {
@@ -213,6 +221,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param ModifyColumnFamiliesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Table
+   * @throws \Google\Service\Exception
    */
   public function modifyColumnFamilies($name, ModifyColumnFamiliesRequest $postBody, $optParams = [])
   {
@@ -238,6 +247,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * `deletion_protection` If `column_families` is set in `update_mask`, it will
    * return an UNIMPLEMENTED error.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Table $postBody, $optParams = [])
   {
@@ -256,6 +266,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param RestoreTableRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function restore($parent, RestoreTableRequest $postBody, $optParams = [])
   {
@@ -274,6 +285,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -292,6 +304,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -308,6 +321,7 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * @param UndeleteTableRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function undelete($name, UndeleteTableRequest $postBody, $optParams = [])
   {

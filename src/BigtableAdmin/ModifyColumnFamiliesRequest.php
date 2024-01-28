@@ -24,10 +24,6 @@ class ModifyColumnFamiliesRequest extends \Google\Collection
    * @var bool
    */
   public $ignoreWarnings;
-  /**
-   * @var Modification[]
-   */
-  public $modifications;
   protected $modificationsType = Modification::class;
   protected $modificationsDataType = 'array';
 

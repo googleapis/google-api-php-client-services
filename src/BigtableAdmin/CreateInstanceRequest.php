@@ -19,16 +19,8 @@ namespace Google\Service\BigtableAdmin;
 
 class CreateInstanceRequest extends \Google\Model
 {
-  /**
-   * @var Cluster[]
-   */
-  public $clusters;
   protected $clustersType = Cluster::class;
   protected $clustersDataType = 'map';
-  /**
-   * @var Instance
-   */
-  public $instance;
   protected $instanceType = Instance::class;
   protected $instanceDataType = '';
   /**
