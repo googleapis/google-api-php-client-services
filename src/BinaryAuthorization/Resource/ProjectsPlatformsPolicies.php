@@ -44,6 +44,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
    *
    * @opt_param string policyId Required. The platform policy ID.
    * @return PlatformPolicy
+   * @throws \Google\Service\Exception
    */
   public function create($parent, PlatformPolicy $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
    * the format `projects/platforms/policies`.
    * @param array $optParams Optional parameters.
    * @return BinaryauthorizationEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
    * the format `projects/platforms/policies`.
    * @param array $optParams Optional parameters.
    * @return PlatformPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
    * ListPlatformPoliciesResponse.next_page_token returned from the previous call
    * to the `ListPlatformPolicies` method.
    * @return ListPlatformPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsPlatformsPolicies($parent, $optParams = [])
   {
@@ -114,6 +118,7 @@ class ProjectsPlatformsPolicies extends \Google\Service\Resource
    * @param PlatformPolicy $postBody
    * @param array $optParams Optional parameters.
    * @return PlatformPolicy
+   * @throws \Google\Service\Exception
    */
   public function replacePlatformPolicy($name, PlatformPolicy $postBody, $optParams = [])
   {

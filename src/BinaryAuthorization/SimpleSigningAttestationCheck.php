@@ -20,10 +20,6 @@ namespace Google\Service\BinaryAuthorization;
 class SimpleSigningAttestationCheck extends \Google\Collection
 {
   protected $collection_key = 'containerAnalysisAttestationProjects';
-  /**
-   * @var AttestationAuthenticator[]
-   */
-  public $attestationAuthenticators;
   protected $attestationAuthenticatorsType = AttestationAuthenticator::class;
   protected $attestationAuthenticatorsDataType = 'array';
   /**

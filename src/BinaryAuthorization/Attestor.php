@@ -35,10 +35,6 @@ class Attestor extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var UserOwnedGrafeasNote
-   */
-  public $userOwnedGrafeasNote;
   protected $userOwnedGrafeasNoteType = UserOwnedGrafeasNote::class;
   protected $userOwnedGrafeasNoteDataType = '';
 

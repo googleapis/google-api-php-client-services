@@ -20,10 +20,6 @@ namespace Google\Service\BinaryAuthorization;
 class VerificationRule extends \Google\Collection
 {
   protected $collection_key = 'trustedSourceRepoPatterns';
-  /**
-   * @var AttestationSource
-   */
-  public $attestationSource;
   protected $attestationSourceType = AttestationSource::class;
   protected $attestationSourceDataType = '';
   /**

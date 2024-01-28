@@ -20,10 +20,6 @@ namespace Google\Service\BinaryAuthorization;
 class ListAttestorsResponse extends \Google\Collection
 {
   protected $collection_key = 'attestors';
-  /**
-   * @var Attestor[]
-   */
-  public $attestors;
   protected $attestorsType = Attestor::class;
   protected $attestorsDataType = 'array';
   /**

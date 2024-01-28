@@ -23,10 +23,6 @@ class AttestationAuthenticator extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var PkixPublicKeySet
-   */
-  public $pkixPublicKeySet;
   protected $pkixPublicKeySetType = PkixPublicKeySet::class;
   protected $pkixPublicKeySetDataType = '';
 

@@ -40,6 +40,7 @@ class Projects extends \Google\Service\Resource
    * the format `projects/policy`.
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getPolicy($name, $optParams = [])
   {
@@ -59,6 +60,7 @@ class Projects extends \Google\Service\Resource
    * @param Policy $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function updatePolicy($name, Policy $postBody, $optParams = [])
   {
