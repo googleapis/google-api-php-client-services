@@ -24,10 +24,6 @@ class Http extends \Google\Collection
    * @var bool
    */
   public $fullyDecodeReservedExpansion;
-  /**
-   * @var HttpRule[]
-   */
-  public $rules;
   protected $rulesType = HttpRule::class;
   protected $rulesDataType = 'array';
 

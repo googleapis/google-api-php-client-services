@@ -24,10 +24,6 @@ class MethodSettings extends \Google\Collection
    * @var string[]
    */
   public $autoPopulatedFields;
-  /**
-   * @var LongRunning
-   */
-  public $longRunning;
   protected $longRunningType = LongRunning::class;
   protected $longRunningDataType = '';
   /**

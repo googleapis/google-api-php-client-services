@@ -45,6 +45,7 @@ class ServicesDnsRecordSets extends \Google\Service\Resource
    * @param AddDnsRecordSetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function add($parent, AddDnsRecordSetRequest $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class ServicesDnsRecordSets extends \Google\Service\Resource
    * @opt_param string zone Required. The name of the zone containing the record
    * set.
    * @return DnsRecordSet
+   * @throws \Google\Service\Exception
    */
   public function get($parent, $optParams = [])
   {
@@ -96,6 +98,7 @@ class ServicesDnsRecordSets extends \Google\Service\Resource
    * @opt_param string zone Required. The name of the private DNS zone in the
    * shared producer host project from which the record set will be removed.
    * @return ListDnsRecordSetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listServicesDnsRecordSets($parent, $optParams = [])
   {
@@ -114,6 +117,7 @@ class ServicesDnsRecordSets extends \Google\Service\Resource
    * @param RemoveDnsRecordSetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function remove($parent, RemoveDnsRecordSetRequest $postBody, $optParams = [])
   {
@@ -132,6 +136,7 @@ class ServicesDnsRecordSets extends \Google\Service\Resource
    * @param UpdateDnsRecordSetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($parent, UpdateDnsRecordSetRequest $postBody, $optParams = [])
   {

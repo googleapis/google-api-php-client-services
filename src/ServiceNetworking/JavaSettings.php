@@ -19,10 +19,6 @@ namespace Google\Service\ServiceNetworking;
 
 class JavaSettings extends \Google\Model
 {
-  /**
-   * @var CommonLanguageSettings
-   */
-  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
   /**

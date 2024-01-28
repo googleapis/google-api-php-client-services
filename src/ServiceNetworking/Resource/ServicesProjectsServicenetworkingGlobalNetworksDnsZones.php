@@ -44,6 +44,7 @@ class ServicesProjectsServicenetworkingGlobalNetworksDnsZones extends \Google\Se
    * zone name
    * @param array $optParams Optional parameters.
    * @return GetDnsZoneResponse
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ServicesProjectsServicenetworkingGlobalNetworksDnsZones extends \Google\Se
    * from the tenant project.
    * @param array $optParams Optional parameters.
    * @return ListDnsZonesResponse
+   * @throws \Google\Service\Exception
    */
   public function listServicesProjectsServicenetworkingGlobalNetworksDnsZones($parent, $optParams = [])
   {
