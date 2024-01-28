@@ -20,10 +20,6 @@ namespace Google\Service\Blogger;
 class PostUserInfosList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var PostUserInfo[]
-   */
-  public $items;
   protected $itemsType = PostUserInfo::class;
   protected $itemsDataType = 'array';
   /**

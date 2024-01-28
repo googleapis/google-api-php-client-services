@@ -23,10 +23,6 @@ class User extends \Google\Model
    * @var string
    */
   public $about;
-  /**
-   * @var UserBlogs
-   */
-  public $blogs;
   protected $blogsType = UserBlogs::class;
   protected $blogsDataType = '';
   /**
@@ -45,10 +41,6 @@ class User extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var UserLocale
-   */
-  public $locale;
   protected $localeType = UserLocale::class;
   protected $localeDataType = '';
   /**

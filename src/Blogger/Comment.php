@@ -19,16 +19,8 @@ namespace Google\Service\Blogger;
 
 class Comment extends \Google\Model
 {
-  /**
-   * @var CommentAuthor
-   */
-  public $author;
   protected $authorType = CommentAuthor::class;
   protected $authorDataType = '';
-  /**
-   * @var CommentBlog
-   */
-  public $blog;
   protected $blogType = CommentBlog::class;
   protected $blogDataType = '';
   /**
@@ -39,20 +31,12 @@ class Comment extends \Google\Model
    * @var string
    */
   public $id;
-  /**
-   * @var CommentInReplyTo
-   */
-  public $inReplyTo;
   protected $inReplyToType = CommentInReplyTo::class;
   protected $inReplyToDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var CommentPost
-   */
-  public $post;
   protected $postType = CommentPost::class;
   protected $postDataType = '';
   /**

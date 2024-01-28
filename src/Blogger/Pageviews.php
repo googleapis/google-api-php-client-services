@@ -24,10 +24,6 @@ class Pageviews extends \Google\Collection
    * @var string
    */
   public $blogId;
-  /**
-   * @var PageviewsCounts[]
-   */
-  public $counts;
   protected $countsType = PageviewsCounts::class;
   protected $countsDataType = 'array';
   /**

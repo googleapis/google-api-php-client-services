@@ -20,16 +20,8 @@ namespace Google\Service\Blogger;
 class Post extends \Google\Collection
 {
   protected $collection_key = 'labels';
-  /**
-   * @var PostAuthor
-   */
-  public $author;
   protected $authorType = PostAuthor::class;
   protected $authorDataType = '';
-  /**
-   * @var PostBlog
-   */
-  public $blog;
   protected $blogType = PostBlog::class;
   protected $blogDataType = '';
   /**
@@ -48,10 +40,6 @@ class Post extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var PostImages[]
-   */
-  public $images;
   protected $imagesType = PostImages::class;
   protected $imagesDataType = 'array';
   /**
@@ -62,10 +50,6 @@ class Post extends \Google\Collection
    * @var string[]
    */
   public $labels;
-  /**
-   * @var PostLocation
-   */
-  public $location;
   protected $locationType = PostLocation::class;
   protected $locationDataType = '';
   /**
@@ -76,10 +60,6 @@ class Post extends \Google\Collection
    * @var string
    */
   public $readerComments;
-  /**
-   * @var PostReplies
-   */
-  public $replies;
   protected $repliesType = PostReplies::class;
   protected $repliesDataType = '';
   /**

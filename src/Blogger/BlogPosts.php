@@ -20,10 +20,6 @@ namespace Google\Service\Blogger;
 class BlogPosts extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Post[]
-   */
-  public $items;
   protected $itemsType = Post::class;
   protected $itemsDataType = 'array';
   /**
