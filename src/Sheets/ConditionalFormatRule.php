@@ -20,22 +20,10 @@ namespace Google\Service\Sheets;
 class ConditionalFormatRule extends \Google\Collection
 {
   protected $collection_key = 'ranges';
-  /**
-   * @var BooleanRule
-   */
-  public $booleanRule;
   protected $booleanRuleType = BooleanRule::class;
   protected $booleanRuleDataType = '';
-  /**
-   * @var GradientRule
-   */
-  public $gradientRule;
   protected $gradientRuleType = GradientRule::class;
   protected $gradientRuleDataType = '';
-  /**
-   * @var GridRange[]
-   */
-  public $ranges;
   protected $rangesType = GridRange::class;
   protected $rangesDataType = 'array';
 

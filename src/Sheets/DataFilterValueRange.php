@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class DataFilterValueRange extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var DataFilter
-   */
-  public $dataFilter;
   protected $dataFilterType = DataFilter::class;
   protected $dataFilterDataType = '';
   /**

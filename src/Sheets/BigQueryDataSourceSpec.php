@@ -23,16 +23,8 @@ class BigQueryDataSourceSpec extends \Google\Model
    * @var string
    */
   public $projectId;
-  /**
-   * @var BigQueryQuerySpec
-   */
-  public $querySpec;
   protected $querySpecType = BigQueryQuerySpec::class;
   protected $querySpecDataType = '';
-  /**
-   * @var BigQueryTableSpec
-   */
-  public $tableSpec;
   protected $tableSpecType = BigQueryTableSpec::class;
   protected $tableSpecDataType = '';
 

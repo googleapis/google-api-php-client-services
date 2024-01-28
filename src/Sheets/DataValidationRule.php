@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DataValidationRule extends \Google\Model
 {
-  /**
-   * @var BooleanCondition
-   */
-  public $condition;
   protected $conditionType = BooleanCondition::class;
   protected $conditionDataType = '';
   /**

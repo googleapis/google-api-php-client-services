@@ -19,16 +19,8 @@ namespace Google\Service\Sheets;
 
 class ChartGroupRule extends \Google\Model
 {
-  /**
-   * @var ChartDateTimeRule
-   */
-  public $dateTimeRule;
   protected $dateTimeRuleType = ChartDateTimeRule::class;
   protected $dateTimeRuleDataType = '';
-  /**
-   * @var ChartHistogramRule
-   */
-  public $histogramRule;
   protected $histogramRuleType = ChartHistogramRule::class;
   protected $histogramRuleDataType = '';
 

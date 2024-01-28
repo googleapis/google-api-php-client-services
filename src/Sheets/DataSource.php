@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class DataSource extends \Google\Collection
 {
   protected $collection_key = 'calculatedColumns';
-  /**
-   * @var DataSourceColumn[]
-   */
-  public $calculatedColumns;
   protected $calculatedColumnsType = DataSourceColumn::class;
   protected $calculatedColumnsDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class DataSource extends \Google\Collection
    * @var int
    */
   public $sheetId;
-  /**
-   * @var DataSourceSpec
-   */
-  public $spec;
   protected $specType = DataSourceSpec::class;
   protected $specDataType = '';
 

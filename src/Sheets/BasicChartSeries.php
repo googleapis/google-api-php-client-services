@@ -20,46 +20,18 @@ namespace Google\Service\Sheets;
 class BasicChartSeries extends \Google\Collection
 {
   protected $collection_key = 'styleOverrides';
-  /**
-   * @var Color
-   */
-  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $colorStyle;
   protected $colorStyleType = ColorStyle::class;
   protected $colorStyleDataType = '';
-  /**
-   * @var DataLabel
-   */
-  public $dataLabel;
   protected $dataLabelType = DataLabel::class;
   protected $dataLabelDataType = '';
-  /**
-   * @var LineStyle
-   */
-  public $lineStyle;
   protected $lineStyleType = LineStyle::class;
   protected $lineStyleDataType = '';
-  /**
-   * @var PointStyle
-   */
-  public $pointStyle;
   protected $pointStyleType = PointStyle::class;
   protected $pointStyleDataType = '';
-  /**
-   * @var ChartData
-   */
-  public $series;
   protected $seriesType = ChartData::class;
   protected $seriesDataType = '';
-  /**
-   * @var BasicSeriesDataPointStyleOverride[]
-   */
-  public $styleOverrides;
   protected $styleOverridesType = BasicSeriesDataPointStyleOverride::class;
   protected $styleOverridesDataType = 'array';
   /**

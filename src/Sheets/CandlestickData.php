@@ -19,28 +19,12 @@ namespace Google\Service\Sheets;
 
 class CandlestickData extends \Google\Model
 {
-  /**
-   * @var CandlestickSeries
-   */
-  public $closeSeries;
   protected $closeSeriesType = CandlestickSeries::class;
   protected $closeSeriesDataType = '';
-  /**
-   * @var CandlestickSeries
-   */
-  public $highSeries;
   protected $highSeriesType = CandlestickSeries::class;
   protected $highSeriesDataType = '';
-  /**
-   * @var CandlestickSeries
-   */
-  public $lowSeries;
   protected $lowSeriesType = CandlestickSeries::class;
   protected $lowSeriesDataType = '';
-  /**
-   * @var CandlestickSeries
-   */
-  public $openSeries;
   protected $openSeriesType = CandlestickSeries::class;
   protected $openSeriesDataType = '';
 

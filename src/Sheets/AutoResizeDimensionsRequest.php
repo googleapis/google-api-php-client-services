@@ -19,16 +19,8 @@ namespace Google\Service\Sheets;
 
 class AutoResizeDimensionsRequest extends \Google\Model
 {
-  /**
-   * @var DataSourceSheetDimensionRange
-   */
-  public $dataSourceSheetDimensions;
   protected $dataSourceSheetDimensionsType = DataSourceSheetDimensionRange::class;
   protected $dataSourceSheetDimensionsDataType = '';
-  /**
-   * @var DimensionRange
-   */
-  public $dimensions;
   protected $dimensionsType = DimensionRange::class;
   protected $dimensionsDataType = '';
 

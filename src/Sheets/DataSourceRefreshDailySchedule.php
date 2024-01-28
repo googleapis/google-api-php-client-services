@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DataSourceRefreshDailySchedule extends \Google\Model
 {
-  /**
-   * @var TimeOfDay
-   */
-  public $startTime;
   protected $startTimeType = TimeOfDay::class;
   protected $startTimeDataType = '';
 

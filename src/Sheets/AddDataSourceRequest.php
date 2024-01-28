@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class AddDataSourceRequest extends \Google\Model
 {
-  /**
-   * @var DataSource
-   */
-  public $dataSource;
   protected $dataSourceType = DataSource::class;
   protected $dataSourceDataType = '';
 

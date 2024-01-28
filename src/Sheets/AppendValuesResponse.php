@@ -27,10 +27,6 @@ class AppendValuesResponse extends \Google\Model
    * @var string
    */
   public $tableRange;
-  /**
-   * @var UpdateValuesResponse
-   */
-  public $updates;
   protected $updatesType = UpdateValuesResponse::class;
   protected $updatesDataType = '';
 

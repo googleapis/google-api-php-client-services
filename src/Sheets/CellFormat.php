@@ -19,22 +19,10 @@ namespace Google\Service\Sheets;
 
 class CellFormat extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $backgroundColor;
   protected $backgroundColorType = Color::class;
   protected $backgroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $backgroundColorStyle;
   protected $backgroundColorStyleType = ColorStyle::class;
   protected $backgroundColorStyleDataType = '';
-  /**
-   * @var Borders
-   */
-  public $borders;
   protected $bordersType = Borders::class;
   protected $bordersDataType = '';
   /**
@@ -45,32 +33,16 @@ class CellFormat extends \Google\Model
    * @var string
    */
   public $hyperlinkDisplayType;
-  /**
-   * @var NumberFormat
-   */
-  public $numberFormat;
   protected $numberFormatType = NumberFormat::class;
   protected $numberFormatDataType = '';
-  /**
-   * @var Padding
-   */
-  public $padding;
   protected $paddingType = Padding::class;
   protected $paddingDataType = '';
   /**
    * @var string
    */
   public $textDirection;
-  /**
-   * @var TextFormat
-   */
-  public $textFormat;
   protected $textFormatType = TextFormat::class;
   protected $textFormatDataType = '';
-  /**
-   * @var TextRotation
-   */
-  public $textRotation;
   protected $textRotationType = TextRotation::class;
   protected $textRotationDataType = '';
   /**

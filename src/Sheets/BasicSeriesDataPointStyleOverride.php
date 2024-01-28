@@ -19,26 +19,14 @@ namespace Google\Service\Sheets;
 
 class BasicSeriesDataPointStyleOverride extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $colorStyle;
   protected $colorStyleType = ColorStyle::class;
   protected $colorStyleDataType = '';
   /**
    * @var int
    */
   public $index;
-  /**
-   * @var PointStyle
-   */
-  public $pointStyle;
   protected $pointStyleType = PointStyle::class;
   protected $pointStyleDataType = '';
 

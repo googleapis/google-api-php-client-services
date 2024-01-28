@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class DeleteDeveloperMetadataResponse extends \Google\Collection
 {
   protected $collection_key = 'deletedDeveloperMetadata';
-  /**
-   * @var DeveloperMetadata[]
-   */
-  public $deletedDeveloperMetadata;
   protected $deletedDeveloperMetadataType = DeveloperMetadata::class;
   protected $deletedDeveloperMetadataDataType = 'array';
 

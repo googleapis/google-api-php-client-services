@@ -19,52 +19,20 @@ namespace Google\Service\Sheets;
 
 class BandingProperties extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $firstBandColor;
   protected $firstBandColorType = Color::class;
   protected $firstBandColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $firstBandColorStyle;
   protected $firstBandColorStyleType = ColorStyle::class;
   protected $firstBandColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $footerColor;
   protected $footerColorType = Color::class;
   protected $footerColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $footerColorStyle;
   protected $footerColorStyleType = ColorStyle::class;
   protected $footerColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $headerColor;
   protected $headerColorType = Color::class;
   protected $headerColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $headerColorStyle;
   protected $headerColorStyleType = ColorStyle::class;
   protected $headerColorStyleDataType = '';
-  /**
-   * @var Color
-   */
-  public $secondBandColor;
   protected $secondBandColorType = Color::class;
   protected $secondBandColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $secondBandColorStyle;
   protected $secondBandColorStyleType = ColorStyle::class;
   protected $secondBandColorStyleDataType = '';
 

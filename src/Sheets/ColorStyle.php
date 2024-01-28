@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class ColorStyle extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $rgbColor;
   protected $rgbColorType = Color::class;
   protected $rgbColorDataType = '';
   /**

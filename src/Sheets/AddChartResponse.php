@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class AddChartResponse extends \Google\Model
 {
-  /**
-   * @var EmbeddedChart
-   */
-  public $chart;
   protected $chartType = EmbeddedChart::class;
   protected $chartDataType = '';
 

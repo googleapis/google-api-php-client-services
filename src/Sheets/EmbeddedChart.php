@@ -19,26 +19,14 @@ namespace Google\Service\Sheets;
 
 class EmbeddedChart extends \Google\Model
 {
-  /**
-   * @var EmbeddedObjectBorder
-   */
-  public $border;
   protected $borderType = EmbeddedObjectBorder::class;
   protected $borderDataType = '';
   /**
    * @var int
    */
   public $chartId;
-  /**
-   * @var EmbeddedObjectPosition
-   */
-  public $position;
   protected $positionType = EmbeddedObjectPosition::class;
   protected $positionDataType = '';
-  /**
-   * @var ChartSpec
-   */
-  public $spec;
   protected $specType = ChartSpec::class;
   protected $specDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DataSourceFormula extends \Google\Model
 {
-  /**
-   * @var DataExecutionStatus
-   */
-  public $dataExecutionStatus;
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   /**

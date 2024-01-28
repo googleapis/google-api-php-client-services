@@ -23,10 +23,6 @@ class DataSourceColumn extends \Google\Model
    * @var string
    */
   public $formula;
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $reference;
   protected $referenceType = DataSourceColumnReference::class;
   protected $referenceDataType = '';
 

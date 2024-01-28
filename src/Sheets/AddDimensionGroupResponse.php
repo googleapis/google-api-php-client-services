@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class AddDimensionGroupResponse extends \Google\Collection
 {
   protected $collection_key = 'dimensionGroups';
-  /**
-   * @var DimensionGroup[]
-   */
-  public $dimensionGroups;
   protected $dimensionGroupsType = DimensionGroup::class;
   protected $dimensionGroupsDataType = 'array';
 

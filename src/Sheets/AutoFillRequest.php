@@ -19,16 +19,8 @@ namespace Google\Service\Sheets;
 
 class AutoFillRequest extends \Google\Model
 {
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
-  /**
-   * @var SourceAndDestination
-   */
-  public $sourceAndDestination;
   protected $sourceAndDestinationType = SourceAndDestination::class;
   protected $sourceAndDestinationDataType = '';
   /**

@@ -20,20 +20,12 @@ namespace Google\Service\Sheets;
 class BatchUpdateSpreadsheetResponse extends \Google\Collection
 {
   protected $collection_key = 'replies';
-  /**
-   * @var Response[]
-   */
-  public $replies;
   protected $repliesType = Response::class;
   protected $repliesDataType = 'array';
   /**
    * @var string
    */
   public $spreadsheetId;
-  /**
-   * @var Spreadsheet
-   */
-  public $updatedSpreadsheet;
   protected $updatedSpreadsheetType = Spreadsheet::class;
   protected $updatedSpreadsheetDataType = '';
 

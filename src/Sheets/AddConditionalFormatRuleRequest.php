@@ -23,10 +23,6 @@ class AddConditionalFormatRuleRequest extends \Google\Model
    * @var int
    */
   public $index;
-  /**
-   * @var ConditionalFormatRule
-   */
-  public $rule;
   protected $ruleType = ConditionalFormatRule::class;
   protected $ruleDataType = '';
 

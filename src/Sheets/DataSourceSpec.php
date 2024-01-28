@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class DataSourceSpec extends \Google\Collection
 {
   protected $collection_key = 'parameters';
-  /**
-   * @var BigQueryDataSourceSpec
-   */
-  public $bigQuery;
   protected $bigQueryType = BigQueryDataSourceSpec::class;
   protected $bigQueryDataType = '';
-  /**
-   * @var DataSourceParameter[]
-   */
-  public $parameters;
   protected $parametersType = DataSourceParameter::class;
   protected $parametersDataType = 'array';
 

@@ -19,36 +19,20 @@ namespace Google\Service\Sheets;
 
 class DataSourceRefreshSchedule extends \Google\Model
 {
-  /**
-   * @var DataSourceRefreshDailySchedule
-   */
-  public $dailySchedule;
   protected $dailyScheduleType = DataSourceRefreshDailySchedule::class;
   protected $dailyScheduleDataType = '';
   /**
    * @var bool
    */
   public $enabled;
-  /**
-   * @var DataSourceRefreshMonthlySchedule
-   */
-  public $monthlySchedule;
   protected $monthlyScheduleType = DataSourceRefreshMonthlySchedule::class;
   protected $monthlyScheduleDataType = '';
-  /**
-   * @var Interval
-   */
-  public $nextRun;
   protected $nextRunType = Interval::class;
   protected $nextRunDataType = '';
   /**
    * @var string
    */
   public $refreshScope;
-  /**
-   * @var DataSourceRefreshWeeklySchedule
-   */
-  public $weeklySchedule;
   protected $weeklyScheduleType = DataSourceRefreshWeeklySchedule::class;
   protected $weeklyScheduleDataType = '';
 

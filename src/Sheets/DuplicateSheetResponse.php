@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DuplicateSheetResponse extends \Google\Model
 {
-  /**
-   * @var SheetProperties
-   */
-  public $properties;
   protected $propertiesType = SheetProperties::class;
   protected $propertiesDataType = '';
 

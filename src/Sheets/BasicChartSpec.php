@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class BasicChartSpec extends \Google\Collection
 {
   protected $collection_key = 'series';
-  /**
-   * @var BasicChartAxis[]
-   */
-  public $axis;
   protected $axisType = BasicChartAxis::class;
   protected $axisDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class BasicChartSpec extends \Google\Collection
    * @var string
    */
   public $compareMode;
-  /**
-   * @var BasicChartDomain[]
-   */
-  public $domains;
   protected $domainsType = BasicChartDomain::class;
   protected $domainsDataType = 'array';
   /**
@@ -56,10 +48,6 @@ class BasicChartSpec extends \Google\Collection
    * @var bool
    */
   public $lineSmoothing;
-  /**
-   * @var BasicChartSeries[]
-   */
-  public $series;
   protected $seriesType = BasicChartSeries::class;
   protected $seriesDataType = 'array';
   /**
@@ -70,10 +58,6 @@ class BasicChartSpec extends \Google\Collection
    * @var bool
    */
   public $threeDimensional;
-  /**
-   * @var DataLabel
-   */
-  public $totalDataLabel;
   protected $totalDataLabelType = DataLabel::class;
   protected $totalDataLabelDataType = '';
 

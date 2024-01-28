@@ -19,28 +19,12 @@ namespace Google\Service\Sheets;
 
 class Borders extends \Google\Model
 {
-  /**
-   * @var Border
-   */
-  public $bottom;
   protected $bottomType = Border::class;
   protected $bottomDataType = '';
-  /**
-   * @var Border
-   */
-  public $left;
   protected $leftType = Border::class;
   protected $leftDataType = '';
-  /**
-   * @var Border
-   */
-  public $right;
   protected $rightType = Border::class;
   protected $rightDataType = '';
-  /**
-   * @var Border
-   */
-  public $top;
   protected $topType = Border::class;
   protected $topDataType = '';
 

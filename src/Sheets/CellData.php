@@ -20,34 +20,14 @@ namespace Google\Service\Sheets;
 class CellData extends \Google\Collection
 {
   protected $collection_key = 'textFormatRuns';
-  /**
-   * @var DataSourceFormula
-   */
-  public $dataSourceFormula;
   protected $dataSourceFormulaType = DataSourceFormula::class;
   protected $dataSourceFormulaDataType = '';
-  /**
-   * @var DataSourceTable
-   */
-  public $dataSourceTable;
   protected $dataSourceTableType = DataSourceTable::class;
   protected $dataSourceTableDataType = '';
-  /**
-   * @var DataValidationRule
-   */
-  public $dataValidation;
   protected $dataValidationType = DataValidationRule::class;
   protected $dataValidationDataType = '';
-  /**
-   * @var CellFormat
-   */
-  public $effectiveFormat;
   protected $effectiveFormatType = CellFormat::class;
   protected $effectiveFormatDataType = '';
-  /**
-   * @var ExtendedValue
-   */
-  public $effectiveValue;
   protected $effectiveValueType = ExtendedValue::class;
   protected $effectiveValueDataType = '';
   /**
@@ -62,28 +42,12 @@ class CellData extends \Google\Collection
    * @var string
    */
   public $note;
-  /**
-   * @var PivotTable
-   */
-  public $pivotTable;
   protected $pivotTableType = PivotTable::class;
   protected $pivotTableDataType = '';
-  /**
-   * @var TextFormatRun[]
-   */
-  public $textFormatRuns;
   protected $textFormatRunsType = TextFormatRun::class;
   protected $textFormatRunsDataType = 'array';
-  /**
-   * @var CellFormat
-   */
-  public $userEnteredFormat;
   protected $userEnteredFormatType = CellFormat::class;
   protected $userEnteredFormatDataType = '';
-  /**
-   * @var ExtendedValue
-   */
-  public $userEnteredValue;
   protected $userEnteredValueType = ExtendedValue::class;
   protected $userEnteredValueDataType = '';
 

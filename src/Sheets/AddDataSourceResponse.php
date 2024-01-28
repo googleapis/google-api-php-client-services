@@ -19,16 +19,8 @@ namespace Google\Service\Sheets;
 
 class AddDataSourceResponse extends \Google\Model
 {
-  /**
-   * @var DataExecutionStatus
-   */
-  public $dataExecutionStatus;
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
-  /**
-   * @var DataSource
-   */
-  public $dataSource;
   protected $dataSourceType = DataSource::class;
   protected $dataSourceDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DeveloperMetadataLocation extends \Google\Model
 {
-  /**
-   * @var DimensionRange
-   */
-  public $dimensionRange;
   protected $dimensionRangeType = DimensionRange::class;
   protected $dimensionRangeDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DeveloperMetadata extends \Google\Model
 {
-  /**
-   * @var DeveloperMetadataLocation
-   */
-  public $location;
   protected $locationType = DeveloperMetadataLocation::class;
   protected $locationDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class CopyPasteRequest extends \Google\Model
 {
-  /**
-   * @var GridRange
-   */
-  public $destination;
   protected $destinationType = GridRange::class;
   protected $destinationDataType = '';
   /**
@@ -33,10 +29,6 @@ class CopyPasteRequest extends \Google\Model
    * @var string
    */
   public $pasteType;
-  /**
-   * @var GridRange
-   */
-  public $source;
   protected $sourceType = GridRange::class;
   protected $sourceDataType = '';
 

@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class CandlestickChartSpec extends \Google\Collection
 {
   protected $collection_key = 'data';
-  /**
-   * @var CandlestickData[]
-   */
-  public $data;
   protected $dataType = CandlestickData::class;
   protected $dataDataType = 'array';
-  /**
-   * @var CandlestickDomain
-   */
-  public $domain;
   protected $domainType = CandlestickDomain::class;
   protected $domainDataType = '';
 

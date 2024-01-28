@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class DeleteDuplicatesRequest extends \Google\Collection
 {
   protected $collection_key = 'comparisonColumns';
-  /**
-   * @var DimensionRange[]
-   */
-  public $comparisonColumns;
   protected $comparisonColumnsType = DimensionRange::class;
   protected $comparisonColumnsDataType = 'array';
-  /**
-   * @var GridRange
-   */
-  public $range;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
 

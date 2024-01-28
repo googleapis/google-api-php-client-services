@@ -19,20 +19,12 @@ namespace Google\Service\Sheets;
 
 class CutPasteRequest extends \Google\Model
 {
-  /**
-   * @var GridCoordinate
-   */
-  public $destination;
   protected $destinationType = GridCoordinate::class;
   protected $destinationDataType = '';
   /**
    * @var string
    */
   public $pasteType;
-  /**
-   * @var GridRange
-   */
-  public $source;
   protected $sourceType = GridRange::class;
   protected $sourceDataType = '';
 

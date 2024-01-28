@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class AddSlicerRequest extends \Google\Model
 {
-  /**
-   * @var Slicer
-   */
-  public $slicer;
   protected $slicerType = Slicer::class;
   protected $slicerDataType = '';
 

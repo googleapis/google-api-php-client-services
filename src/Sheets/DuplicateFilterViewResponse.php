@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DuplicateFilterViewResponse extends \Google\Model
 {
-  /**
-   * @var FilterView
-   */
-  public $filter;
   protected $filterType = FilterView::class;
   protected $filterDataType = '';
 

@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class DataSourceSheetProperties extends \Google\Collection
 {
   protected $collection_key = 'columns';
-  /**
-   * @var DataSourceColumn[]
-   */
-  public $columns;
   protected $columnsType = DataSourceColumn::class;
   protected $columnsDataType = 'array';
-  /**
-   * @var DataExecutionStatus
-   */
-  public $dataExecutionStatus;
   protected $dataExecutionStatusType = DataExecutionStatus::class;
   protected $dataExecutionStatusDataType = '';
   /**

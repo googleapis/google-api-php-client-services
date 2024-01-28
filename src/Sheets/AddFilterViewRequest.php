@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class AddFilterViewRequest extends \Google\Model
 {
-  /**
-   * @var FilterView
-   */
-  public $filter;
   protected $filterType = FilterView::class;
   protected $filterDataType = '';
 

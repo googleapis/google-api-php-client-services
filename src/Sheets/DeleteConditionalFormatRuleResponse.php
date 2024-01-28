@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class DeleteConditionalFormatRuleResponse extends \Google\Model
 {
-  /**
-   * @var ConditionalFormatRule
-   */
-  public $rule;
   protected $ruleType = ConditionalFormatRule::class;
   protected $ruleDataType = '';
 

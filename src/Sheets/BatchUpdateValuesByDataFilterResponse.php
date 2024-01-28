@@ -20,10 +20,6 @@ namespace Google\Service\Sheets;
 class BatchUpdateValuesByDataFilterResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
-  /**
-   * @var UpdateValuesByDataFilterResponse[]
-   */
-  public $responses;
   protected $responsesType = UpdateValuesByDataFilterResponse::class;
   protected $responsesDataType = 'array';
   /**

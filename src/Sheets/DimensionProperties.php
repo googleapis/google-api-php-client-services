@@ -20,16 +20,8 @@ namespace Google\Service\Sheets;
 class DimensionProperties extends \Google\Collection
 {
   protected $collection_key = 'developerMetadata';
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $dataSourceColumnReference;
   protected $dataSourceColumnReferenceType = DataSourceColumnReference::class;
   protected $dataSourceColumnReferenceDataType = '';
-  /**
-   * @var DeveloperMetadata[]
-   */
-  public $developerMetadata;
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = 'array';
   /**

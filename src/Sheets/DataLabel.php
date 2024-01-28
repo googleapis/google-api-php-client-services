@@ -19,20 +19,12 @@ namespace Google\Service\Sheets;
 
 class DataLabel extends \Google\Model
 {
-  /**
-   * @var ChartData
-   */
-  public $customLabelData;
   protected $customLabelDataType = ChartData::class;
   protected $customLabelDataDataType = '';
   /**
    * @var string
    */
   public $placement;
-  /**
-   * @var TextFormat
-   */
-  public $textFormat;
   protected $textFormatType = TextFormat::class;
   protected $textFormatDataType = '';
   /**

@@ -24,46 +24,18 @@ class ChartSpec extends \Google\Collection
    * @var string
    */
   public $altText;
-  /**
-   * @var Color
-   */
-  public $backgroundColor;
   protected $backgroundColorType = Color::class;
   protected $backgroundColorDataType = '';
-  /**
-   * @var ColorStyle
-   */
-  public $backgroundColorStyle;
   protected $backgroundColorStyleType = ColorStyle::class;
   protected $backgroundColorStyleDataType = '';
-  /**
-   * @var BasicChartSpec
-   */
-  public $basicChart;
   protected $basicChartType = BasicChartSpec::class;
   protected $basicChartDataType = '';
-  /**
-   * @var BubbleChartSpec
-   */
-  public $bubbleChart;
   protected $bubbleChartType = BubbleChartSpec::class;
   protected $bubbleChartDataType = '';
-  /**
-   * @var CandlestickChartSpec
-   */
-  public $candlestickChart;
   protected $candlestickChartType = CandlestickChartSpec::class;
   protected $candlestickChartDataType = '';
-  /**
-   * @var DataSourceChartProperties
-   */
-  public $dataSourceChartProperties;
   protected $dataSourceChartPropertiesType = DataSourceChartProperties::class;
   protected $dataSourceChartPropertiesDataType = '';
-  /**
-   * @var FilterSpec[]
-   */
-  public $filterSpecs;
   protected $filterSpecsType = FilterSpec::class;
   protected $filterSpecsDataType = 'array';
   /**
@@ -74,82 +46,38 @@ class ChartSpec extends \Google\Collection
    * @var string
    */
   public $hiddenDimensionStrategy;
-  /**
-   * @var HistogramChartSpec
-   */
-  public $histogramChart;
   protected $histogramChartType = HistogramChartSpec::class;
   protected $histogramChartDataType = '';
   /**
    * @var bool
    */
   public $maximized;
-  /**
-   * @var OrgChartSpec
-   */
-  public $orgChart;
   protected $orgChartType = OrgChartSpec::class;
   protected $orgChartDataType = '';
-  /**
-   * @var PieChartSpec
-   */
-  public $pieChart;
   protected $pieChartType = PieChartSpec::class;
   protected $pieChartDataType = '';
-  /**
-   * @var ScorecardChartSpec
-   */
-  public $scorecardChart;
   protected $scorecardChartType = ScorecardChartSpec::class;
   protected $scorecardChartDataType = '';
-  /**
-   * @var SortSpec[]
-   */
-  public $sortSpecs;
   protected $sortSpecsType = SortSpec::class;
   protected $sortSpecsDataType = 'array';
   /**
    * @var string
    */
   public $subtitle;
-  /**
-   * @var TextFormat
-   */
-  public $subtitleTextFormat;
   protected $subtitleTextFormatType = TextFormat::class;
   protected $subtitleTextFormatDataType = '';
-  /**
-   * @var TextPosition
-   */
-  public $subtitleTextPosition;
   protected $subtitleTextPositionType = TextPosition::class;
   protected $subtitleTextPositionDataType = '';
   /**
    * @var string
    */
   public $title;
-  /**
-   * @var TextFormat
-   */
-  public $titleTextFormat;
   protected $titleTextFormatType = TextFormat::class;
   protected $titleTextFormatDataType = '';
-  /**
-   * @var TextPosition
-   */
-  public $titleTextPosition;
   protected $titleTextPositionType = TextPosition::class;
   protected $titleTextPositionDataType = '';
-  /**
-   * @var TreemapChartSpec
-   */
-  public $treemapChart;
   protected $treemapChartType = TreemapChartSpec::class;
   protected $treemapChartDataType = '';
-  /**
-   * @var WaterfallChartSpec
-   */
-  public $waterfallChart;
   protected $waterfallChartType = WaterfallChartSpec::class;
   protected $waterfallChartDataType = '';
 

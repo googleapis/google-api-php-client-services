@@ -23,22 +23,10 @@ class ChartData extends \Google\Model
    * @var string
    */
   public $aggregateType;
-  /**
-   * @var DataSourceColumnReference
-   */
-  public $columnReference;
   protected $columnReferenceType = DataSourceColumnReference::class;
   protected $columnReferenceDataType = '';
-  /**
-   * @var ChartGroupRule
-   */
-  public $groupRule;
   protected $groupRuleType = ChartGroupRule::class;
   protected $groupRuleDataType = '';
-  /**
-   * @var ChartSourceRange
-   */
-  public $sourceRange;
   protected $sourceRangeType = ChartSourceRange::class;
   protected $sourceRangeDataType = '';
 

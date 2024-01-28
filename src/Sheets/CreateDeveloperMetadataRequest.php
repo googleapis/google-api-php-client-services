@@ -19,10 +19,6 @@ namespace Google\Service\Sheets;
 
 class CreateDeveloperMetadataRequest extends \Google\Model
 {
-  /**
-   * @var DeveloperMetadata
-   */
-  public $developerMetadata;
   protected $developerMetadataType = DeveloperMetadata::class;
   protected $developerMetadataDataType = '';
 

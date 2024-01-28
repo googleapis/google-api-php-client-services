@@ -23,22 +23,10 @@ class DataSourceObjectReference extends \Google\Model
    * @var int
    */
   public $chartId;
-  /**
-   * @var GridCoordinate
-   */
-  public $dataSourceFormulaCell;
   protected $dataSourceFormulaCellType = GridCoordinate::class;
   protected $dataSourceFormulaCellDataType = '';
-  /**
-   * @var GridCoordinate
-   */
-  public $dataSourcePivotTableAnchorCell;
   protected $dataSourcePivotTableAnchorCellType = GridCoordinate::class;
   protected $dataSourcePivotTableAnchorCellDataType = '';
-  /**
-   * @var GridCoordinate
-   */
-  public $dataSourceTableAnchorCell;
   protected $dataSourceTableAnchorCellType = GridCoordinate::class;
   protected $dataSourceTableAnchorCellDataType = '';
   /**
