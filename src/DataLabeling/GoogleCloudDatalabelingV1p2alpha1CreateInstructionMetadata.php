@@ -28,10 +28,6 @@ class GoogleCloudDatalabelingV1p2alpha1CreateInstructionMetadata extends \Google
    * @var string
    */
   public $instruction;
-  /**
-   * @var GoogleRpcStatus[]
-   */
-  public $partialFailures;
   protected $partialFailuresType = GoogleRpcStatus::class;
   protected $partialFailuresDataType = 'array';
 

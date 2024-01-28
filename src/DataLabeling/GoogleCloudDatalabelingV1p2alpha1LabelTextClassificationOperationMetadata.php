@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1p2alpha1LabelTextClassificationOperationMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1p2alpha1HumanAnnotationConfig
-   */
-  public $basicConfig;
   protected $basicConfigType = GoogleCloudDatalabelingV1p2alpha1HumanAnnotationConfig::class;
   protected $basicConfigDataType = '';
 
