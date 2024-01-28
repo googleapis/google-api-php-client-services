@@ -44,6 +44,7 @@ class ProjectsPolicies extends \Google\Service\Resource
    * @param GoogleCloudOrgpolicyV2Policy $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudOrgpolicyV2Policy
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudOrgpolicyV2Policy $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsPolicies extends \Google\Service\Resource
    * provided and does not match the current etag of the policy, deletion will be
    * blocked and an ABORTED error will be returned.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -80,6 +82,7 @@ class ProjectsPolicies extends \Google\Service\Resource
    * naming requirements.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudOrgpolicyV2Policy
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -99,6 +102,7 @@ class ProjectsPolicies extends \Google\Service\Resource
    * naming requirements.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudOrgpolicyV2Policy
+   * @throws \Google\Service\Exception
    */
   public function getEffectivePolicy($name, $optParams = [])
   {
@@ -124,6 +128,7 @@ class ProjectsPolicies extends \Google\Service\Resource
    * is currently unsupported and will be ignored. The server may at any point
    * start using this field.
    * @return GoogleCloudOrgpolicyV2ListPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsPolicies($parent, $optParams = [])
   {
@@ -156,6 +161,7 @@ class ProjectsPolicies extends \Google\Service\Resource
    * overwritten in the policy by the set. The fields specified in the update_mask
    * are relative to the policy, not the full request.
    * @return GoogleCloudOrgpolicyV2Policy
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudOrgpolicyV2Policy $postBody, $optParams = [])
   {

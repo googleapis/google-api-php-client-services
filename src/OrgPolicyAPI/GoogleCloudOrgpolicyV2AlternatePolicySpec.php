@@ -23,10 +23,6 @@ class GoogleCloudOrgpolicyV2AlternatePolicySpec extends \Google\Model
    * @var string
    */
   public $launch;
-  /**
-   * @var GoogleCloudOrgpolicyV2PolicySpec
-   */
-  public $spec;
   protected $specType = GoogleCloudOrgpolicyV2PolicySpec::class;
   protected $specDataType = '';
 
