@@ -20,10 +20,6 @@ namespace Google\Service\OnDemandScanning;
 class ProvenanceBuilder extends \Google\Collection
 {
   protected $collection_key = 'builderDependencies';
-  /**
-   * @var ResourceDescriptor[]
-   */
-  public $builderDependencies;
   protected $builderDependenciesType = ResourceDescriptor::class;
   protected $builderDependenciesDataType = 'array';
   /**

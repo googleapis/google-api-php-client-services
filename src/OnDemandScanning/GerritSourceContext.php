@@ -19,10 +19,6 @@ namespace Google\Service\OnDemandScanning;
 
 class GerritSourceContext extends \Google\Model
 {
-  /**
-   * @var AliasContext
-   */
-  public $aliasContext;
   protected $aliasContextType = AliasContext::class;
   protected $aliasContextDataType = '';
   /**

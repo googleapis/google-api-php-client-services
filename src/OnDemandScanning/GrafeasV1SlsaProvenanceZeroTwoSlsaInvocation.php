@@ -19,10 +19,6 @@ namespace Google\Service\OnDemandScanning;
 
 class GrafeasV1SlsaProvenanceZeroTwoSlsaInvocation extends \Google\Model
 {
-  /**
-   * @var GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource
-   */
-  public $configSource;
   protected $configSourceType = GrafeasV1SlsaProvenanceZeroTwoSlsaConfigSource::class;
   protected $configSourceDataType = '';
   /**

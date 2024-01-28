@@ -27,10 +27,6 @@ class Location extends \Google\Model
    * @var string
    */
   public $path;
-  /**
-   * @var Version
-   */
-  public $version;
   protected $versionType = Version::class;
   protected $versionDataType = '';
 

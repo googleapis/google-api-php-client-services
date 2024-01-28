@@ -19,10 +19,6 @@ namespace Google\Service\OnDemandScanning;
 
 class RepoId extends \Google\Model
 {
-  /**
-   * @var ProjectRepoId
-   */
-  public $projectRepoId;
   protected $projectRepoIdType = ProjectRepoId::class;
   protected $projectRepoIdDataType = '';
   /**

@@ -24,32 +24,16 @@ class PackageData extends \Google\Collection
    * @var string
    */
   public $architecture;
-  /**
-   * @var BinarySourceInfo[]
-   */
-  public $binarySourceInfo;
   protected $binarySourceInfoType = BinarySourceInfo::class;
   protected $binarySourceInfoDataType = 'array';
-  /**
-   * @var PackageVersion
-   */
-  public $binaryVersion;
   protected $binaryVersionType = PackageVersion::class;
   protected $binaryVersionDataType = '';
   /**
    * @var string
    */
   public $cpeUri;
-  /**
-   * @var LanguagePackageDependency[]
-   */
-  public $dependencyChain;
   protected $dependencyChainType = LanguagePackageDependency::class;
   protected $dependencyChainDataType = 'array';
-  /**
-   * @var FileLocation[]
-   */
-  public $fileLocation;
   protected $fileLocationType = FileLocation::class;
   protected $fileLocationDataType = 'array';
   /**
@@ -60,10 +44,6 @@ class PackageData extends \Google\Collection
    * @var string[]
    */
   public $licenses;
-  /**
-   * @var Maintainer
-   */
-  public $maintainer;
   protected $maintainerType = Maintainer::class;
   protected $maintainerDataType = '';
   /**
@@ -86,10 +66,6 @@ class PackageData extends \Google\Collection
    * @var string[]
    */
   public $patchedCve;
-  /**
-   * @var PackageVersion
-   */
-  public $sourceVersion;
   protected $sourceVersionType = PackageVersion::class;
   protected $sourceVersionDataType = '';
   /**
