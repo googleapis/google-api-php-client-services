@@ -20,10 +20,6 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ConfusionMatrix extends \Google\Collection
 {
   protected $collection_key = 'row';
-  /**
-   * @var GoogleCloudDatalabelingV1beta1Row[]
-   */
-  public $row;
   protected $rowType = GoogleCloudDatalabelingV1beta1Row::class;
   protected $rowDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListAnnotationSpecSetsResponse extends \Google\Collection
 {
   protected $collection_key = 'annotationSpecSets';
-  /**
-   * @var GoogleCloudDatalabelingV1beta1AnnotationSpecSet[]
-   */
-  public $annotationSpecSets;
   protected $annotationSpecSetsType = GoogleCloudDatalabelingV1beta1AnnotationSpecSet::class;
   protected $annotationSpecSetsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1VideoClassificationConfig extends \Google\Collection
 {
   protected $collection_key = 'annotationSpecSetConfigs';
-  /**
-   * @var GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig[]
-   */
-  public $annotationSpecSetConfigs;
   protected $annotationSpecSetConfigsType = GoogleCloudDatalabelingV1beta1AnnotationSpecSetConfig::class;
   protected $annotationSpecSetConfigsDataType = 'array';
   /**

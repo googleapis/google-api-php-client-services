@@ -20,10 +20,6 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1ListInstructionsResponse extends \Google\Collection
 {
   protected $collection_key = 'instructions';
-  /**
-   * @var GoogleCloudDatalabelingV1beta1Instruction[]
-   */
-  public $instructions;
   protected $instructionsType = GoogleCloudDatalabelingV1beta1Instruction::class;
   protected $instructionsDataType = 'array';
   /**

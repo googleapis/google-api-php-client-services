@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1ObjectDetectionMetrics extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1PrCurve
-   */
-  public $prCurve;
   protected $prCurveType = GoogleCloudDatalabelingV1beta1PrCurve::class;
   protected $prCurveDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1LabelVideoObjectDetectionOperationMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1HumanAnnotationConfig
-   */
-  public $basicConfig;
   protected $basicConfigType = GoogleCloudDatalabelingV1beta1HumanAnnotationConfig::class;
   protected $basicConfigDataType = '';
 

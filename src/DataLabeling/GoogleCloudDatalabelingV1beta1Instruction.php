@@ -28,10 +28,6 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudDatalabelingV1beta1CsvInstruction
-   */
-  public $csvInstruction;
   protected $csvInstructionType = GoogleCloudDatalabelingV1beta1CsvInstruction::class;
   protected $csvInstructionDataType = '';
   /**
@@ -50,10 +46,6 @@ class GoogleCloudDatalabelingV1beta1Instruction extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudDatalabelingV1beta1PdfInstruction
-   */
-  public $pdfInstruction;
   protected $pdfInstructionType = GoogleCloudDatalabelingV1beta1PdfInstruction::class;
   protected $pdfInstructionDataType = '';
   /**

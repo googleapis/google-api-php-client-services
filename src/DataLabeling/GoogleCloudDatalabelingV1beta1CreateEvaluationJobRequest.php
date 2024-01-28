@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1CreateEvaluationJobRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1EvaluationJob
-   */
-  public $job;
   protected $jobType = GoogleCloudDatalabelingV1beta1EvaluationJob::class;
   protected $jobDataType = '';
 

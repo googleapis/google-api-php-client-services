@@ -19,16 +19,8 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1ObjectTrackingFrame extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1BoundingPoly
-   */
-  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudDatalabelingV1beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
-  /**
-   * @var GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly
-   */
-  public $normalizedBoundingPoly;
   protected $normalizedBoundingPolyType = GoogleCloudDatalabelingV1beta1NormalizedBoundingPoly::class;
   protected $normalizedBoundingPolyDataType = '';
   /**

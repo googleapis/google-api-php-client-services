@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1CreateDatasetRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1Dataset
-   */
-  public $dataset;
   protected $datasetType = GoogleCloudDatalabelingV1beta1Dataset::class;
   protected $datasetDataType = '';
 

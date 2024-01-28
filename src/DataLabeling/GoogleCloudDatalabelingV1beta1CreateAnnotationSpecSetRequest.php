@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1CreateAnnotationSpecSetRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1AnnotationSpecSet
-   */
-  public $annotationSpecSet;
   protected $annotationSpecSetType = GoogleCloudDatalabelingV1beta1AnnotationSpecSet::class;
   protected $annotationSpecSetDataType = '';
 

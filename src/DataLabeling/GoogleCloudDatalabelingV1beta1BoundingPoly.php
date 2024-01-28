@@ -20,10 +20,6 @@ namespace Google\Service\DataLabeling;
 class GoogleCloudDatalabelingV1beta1BoundingPoly extends \Google\Collection
 {
   protected $collection_key = 'vertices';
-  /**
-   * @var GoogleCloudDatalabelingV1beta1Vertex[]
-   */
-  public $vertices;
   protected $verticesType = GoogleCloudDatalabelingV1beta1Vertex::class;
   protected $verticesDataType = 'array';
 

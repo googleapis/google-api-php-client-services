@@ -40,10 +40,6 @@ class GoogleCloudDatalabelingV1beta1Dataset extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudDatalabelingV1beta1InputConfig[]
-   */
-  public $inputConfigs;
   protected $inputConfigsType = GoogleCloudDatalabelingV1beta1InputConfig::class;
   protected $inputConfigsDataType = 'array';
   /**

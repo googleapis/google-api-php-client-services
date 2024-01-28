@@ -19,10 +19,6 @@ namespace Google\Service\DataLabeling;
 
 class GoogleCloudDatalabelingV1beta1TextClassificationAnnotation extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatalabelingV1beta1AnnotationSpec
-   */
-  public $annotationSpec;
   protected $annotationSpecType = GoogleCloudDatalabelingV1beta1AnnotationSpec::class;
   protected $annotationSpecDataType = '';
 
