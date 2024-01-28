@@ -27,10 +27,6 @@ class GoogleChromeManagementV1BatteryInfo extends \Google\Model
    * @var int
    */
   public $designMinVoltage;
-  /**
-   * @var GoogleTypeDate
-   */
-  public $manufactureDate;
   protected $manufactureDateType = GoogleTypeDate::class;
   protected $manufactureDateDataType = '';
   /**

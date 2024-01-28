@@ -19,20 +19,12 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1AppDetails extends \Google\Model
 {
-  /**
-   * @var GoogleChromeManagementV1AndroidAppInfo
-   */
-  public $androidAppInfo;
   protected $androidAppInfoType = GoogleChromeManagementV1AndroidAppInfo::class;
   protected $androidAppInfoDataType = '';
   /**
    * @var string
    */
   public $appId;
-  /**
-   * @var GoogleChromeManagementV1ChromeAppInfo
-   */
-  public $chromeAppInfo;
   protected $chromeAppInfoType = GoogleChromeManagementV1ChromeAppInfo::class;
   protected $chromeAppInfoDataType = '';
   /**
@@ -91,10 +83,6 @@ class GoogleChromeManagementV1AppDetails extends \Google\Model
    * @var string
    */
   public $revisionId;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $serviceError;
   protected $serviceErrorType = GoogleRpcStatus::class;
   protected $serviceErrorDataType = '';
   /**

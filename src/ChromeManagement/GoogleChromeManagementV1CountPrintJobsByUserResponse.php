@@ -28,10 +28,6 @@ class GoogleChromeManagementV1CountPrintJobsByUserResponse extends \Google\Colle
    * @var string
    */
   public $totalSize;
-  /**
-   * @var GoogleChromeManagementV1UserPrintReport[]
-   */
-  public $userPrintReports;
   protected $userPrintReportsType = GoogleChromeManagementV1UserPrintReport::class;
   protected $userPrintReportsDataType = 'array';
 

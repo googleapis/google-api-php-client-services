@@ -20,10 +20,6 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1AndroidAppInfo extends \Google\Collection
 {
   protected $collection_key = 'permissions';
-  /**
-   * @var GoogleChromeManagementV1AndroidAppPermission[]
-   */
-  public $permissions;
   protected $permissionsType = GoogleChromeManagementV1AndroidAppPermission::class;
   protected $permissionsDataType = 'array';
 

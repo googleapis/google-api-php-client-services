@@ -52,6 +52,7 @@ class CustomersTelemetryEvents extends \Google\Service\Resource
    * return. Although currently required, this field will become optional, while
    * the filter parameter with an event type will be come required.
    * @return GoogleChromeManagementV1ListTelemetryEventsResponse
+   * @throws \Google\Service\Exception
    */
   public function listCustomersTelemetryEvents($parent, $optParams = [])
   {

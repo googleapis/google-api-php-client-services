@@ -50,6 +50,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string orgUnitId Optional. The ID of the organizational unit. If
    * omitted, all data will be returned.
    * @return GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse
+   * @throws \Google\Service\Exception
    */
   public function countChromeBrowsersNeedingAttention($customer, $optParams = [])
   {
@@ -79,6 +80,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string orgUnitId Optional. The organizational unit ID, if omitted,
    * will return data for all organizational units.
    * @return GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse
+   * @throws \Google\Service\Exception
    */
   public function countChromeDevicesReachingAutoExpirationDate($customer, $optParams = [])
   {
@@ -102,6 +104,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string readMask Required. Mask of the fields that should be
    * populated in the returned report.
    * @return GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse
+   * @throws \Google\Service\Exception
    */
   public function countChromeDevicesThatNeedAttention($customer, $optParams = [])
   {
@@ -123,6 +126,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string readMask Required. Mask of the fields that should be
    * populated in the returned report.
    * @return GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse
+   * @throws \Google\Service\Exception
    */
   public function countChromeHardwareFleetDevices($customer, $optParams = [])
   {
@@ -146,6 +150,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string pageToken Token to specify the page of the request to be
    * returned.
    * @return GoogleChromeManagementV1CountChromeVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function countChromeVersions($customer, $optParams = [])
   {
@@ -174,6 +179,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string pageToken Token to specify the page of the request to be
    * returned.
    * @return GoogleChromeManagementV1CountInstalledAppsResponse
+   * @throws \Google\Service\Exception
    */
   public function countInstalledApps($customer, $optParams = [])
   {
@@ -206,6 +212,7 @@ class CustomersReports extends \Google\Service\Resource
    * organizational unit will be returned. If omitted, data for printers from all
    * organizational units will be returned.
    * @return GoogleChromeManagementV1CountPrintJobsByPrinterResponse
+   * @throws \Google\Service\Exception
    */
   public function countPrintJobsByPrinter($customer, $optParams = [])
   {
@@ -237,6 +244,7 @@ class CustomersReports extends \Google\Service\Resource
    * specified organizational unit will be counted. If omitted, all print jobs
    * will be counted.
    * @return GoogleChromeManagementV1CountPrintJobsByUserResponse
+   * @throws \Google\Service\Exception
    */
   public function countPrintJobsByUser($customer, $optParams = [])
   {
@@ -272,6 +280,7 @@ class CustomersReports extends \Google\Service\Resource
    * printers. If specified, only print jobs submitted to printers from the
    * specified organizational unit will be returned.
    * @return GoogleChromeManagementV1EnumeratePrintJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function enumeratePrintJobs($customer, $optParams = [])
   {
@@ -302,6 +311,7 @@ class CustomersReports extends \Google\Service\Resource
    * @opt_param string pageToken Token to specify the page of the request to be
    * returned.
    * @return GoogleChromeManagementV1FindInstalledAppDevicesResponse
+   * @throws \Google\Service\Exception
    */
   public function findInstalledAppDevices($customer, $optParams = [])
   {

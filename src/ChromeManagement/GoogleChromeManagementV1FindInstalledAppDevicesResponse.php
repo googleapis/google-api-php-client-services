@@ -20,10 +20,6 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1FindInstalledAppDevicesResponse extends \Google\Collection
 {
   protected $collection_key = 'devices';
-  /**
-   * @var GoogleChromeManagementV1Device[]
-   */
-  public $devices;
   protected $devicesType = GoogleChromeManagementV1Device::class;
   protected $devicesDataType = 'array';
   /**

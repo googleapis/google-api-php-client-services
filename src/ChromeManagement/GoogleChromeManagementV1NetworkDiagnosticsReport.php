@@ -19,10 +19,6 @@ namespace Google\Service\ChromeManagement;
 
 class GoogleChromeManagementV1NetworkDiagnosticsReport extends \Google\Model
 {
-  /**
-   * @var GoogleChromeManagementV1HttpsLatencyRoutineData
-   */
-  public $httpsLatencyData;
   protected $httpsLatencyDataType = GoogleChromeManagementV1HttpsLatencyRoutineData::class;
   protected $httpsLatencyDataDataType = '';
   /**

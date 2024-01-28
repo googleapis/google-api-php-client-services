@@ -20,10 +20,6 @@ namespace Google\Service\ChromeManagement;
 class GoogleChromeManagementV1ListTelemetryDevicesResponse extends \Google\Collection
 {
   protected $collection_key = 'devices';
-  /**
-   * @var GoogleChromeManagementV1TelemetryDevice[]
-   */
-  public $devices;
   protected $devicesType = GoogleChromeManagementV1TelemetryDevice::class;
   protected $devicesDataType = 'array';
   /**

@@ -23,10 +23,6 @@ class GoogleChromeManagementV1TelemetryNotificationConfig extends \Google\Model
    * @var string
    */
   public $customer;
-  /**
-   * @var GoogleChromeManagementV1TelemetryNotificationFilter
-   */
-  public $filter;
   protected $filterType = GoogleChromeManagementV1TelemetryNotificationFilter::class;
   protected $filterDataType = '';
   /**

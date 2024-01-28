@@ -39,6 +39,7 @@ class CustomersTelemetryNotificationConfigs extends \Google\Service\Resource
    * @param GoogleChromeManagementV1TelemetryNotificationConfig $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleChromeManagementV1TelemetryNotificationConfig
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleChromeManagementV1TelemetryNotificationConfig $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class CustomersTelemetryNotificationConfigs extends \Google\Service\Resource
    * `customers/{customer}/telemetry/notificationConfigs/{notification_config}`
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -79,6 +81,7 @@ class CustomersTelemetryNotificationConfigs extends \Google\Service\Resource
    * `ListTelemetryNotificationConfigs` must match the call that provided the page
    * token.
    * @return GoogleChromeManagementV1ListTelemetryNotificationConfigsResponse
+   * @throws \Google\Service\Exception
    */
   public function listCustomersTelemetryNotificationConfigs($parent, $optParams = [])
   {
