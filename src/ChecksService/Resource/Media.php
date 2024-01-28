@@ -52,6 +52,7 @@ class Media extends \Google\Service\Resource
    * @param GoogleChecksReportV1alphaAnalyzeUploadRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function upload($parent, GoogleChecksReportV1alphaAnalyzeUploadRequest $postBody, $optParams = [])
   {

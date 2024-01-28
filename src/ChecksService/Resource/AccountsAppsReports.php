@@ -45,6 +45,7 @@ class AccountsAppsReports extends \Google\Service\Resource
    * the report. Only checks that match the filter string are included in the
    * response. Example: `state = FAILED`
    * @return GoogleChecksReportV1alphaReport
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -78,6 +79,7 @@ class AccountsAppsReports extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListReports` must match the
    * call that provided the page token.
    * @return GoogleChecksReportV1alphaListReportsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsAppsReports($parent, $optParams = [])
   {

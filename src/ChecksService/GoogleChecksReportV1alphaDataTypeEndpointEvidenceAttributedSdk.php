@@ -19,10 +19,6 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaDataTypeEndpointEvidenceAttributedSdk extends \Google\Model
 {
-  /**
-   * @var GoogleChecksReportV1alphaSdk
-   */
-  public $sdk;
   protected $sdkType = GoogleChecksReportV1alphaSdk::class;
   protected $sdkDataType = '';
 

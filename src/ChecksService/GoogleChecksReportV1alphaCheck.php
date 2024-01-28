@@ -20,16 +20,8 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaCheck extends \Google\Collection
 {
   protected $collection_key = 'regionCodes';
-  /**
-   * @var GoogleChecksReportV1alphaCheckCitation[]
-   */
-  public $citations;
   protected $citationsType = GoogleChecksReportV1alphaCheckCitation::class;
   protected $citationsDataType = 'array';
-  /**
-   * @var GoogleChecksReportV1alphaCheckEvidence
-   */
-  public $evidence;
   protected $evidenceType = GoogleChecksReportV1alphaCheckEvidence::class;
   protected $evidenceDataType = '';
   /**
@@ -44,10 +36,6 @@ class GoogleChecksReportV1alphaCheck extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var GoogleChecksReportV1alphaCheckStateMetadata
-   */
-  public $stateMetadata;
   protected $stateMetadataType = GoogleChecksReportV1alphaCheckStateMetadata::class;
   protected $stateMetadataDataType = '';
   /**

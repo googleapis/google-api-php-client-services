@@ -19,10 +19,6 @@ namespace Google\Service\ChecksService;
 
 class GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails extends \Google\Model
 {
-  /**
-   * @var GoogleChecksReportV1alphaPermission
-   */
-  public $permission;
   protected $permissionType = GoogleChecksReportV1alphaPermission::class;
   protected $permissionDataType = '';
 

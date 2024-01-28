@@ -20,10 +20,6 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidence extends \Google\Collection
 {
   protected $collection_key = 'permissionDetails';
-  /**
-   * @var GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails[]
-   */
-  public $permissionDetails;
   protected $permissionDetailsType = GoogleChecksReportV1alphaCheckPermissionRestrictionViolationEvidencePermissionDetails::class;
   protected $permissionDetailsDataType = 'array';
 

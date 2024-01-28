@@ -37,6 +37,7 @@ class AccountsApps extends \Google\Service\Resource
    * `accounts/123/apps/456`
    * @param array $optParams Optional parameters.
    * @return GoogleChecksAccountV1alphaApp
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -57,6 +58,7 @@ class AccountsApps extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A page token received from a previous
    * `ListApps` call. Provide this to retrieve the subsequent page.
    * @return GoogleChecksAccountV1alphaListAppsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsApps($parent, $optParams = [])
   {

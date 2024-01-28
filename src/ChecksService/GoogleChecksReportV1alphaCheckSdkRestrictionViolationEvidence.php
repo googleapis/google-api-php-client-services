@@ -20,10 +20,6 @@ namespace Google\Service\ChecksService;
 class GoogleChecksReportV1alphaCheckSdkRestrictionViolationEvidence extends \Google\Collection
 {
   protected $collection_key = 'sdkDetails';
-  /**
-   * @var GoogleChecksReportV1alphaCheckSdkRestrictionViolationEvidenceSdkDetails[]
-   */
-  public $sdkDetails;
   protected $sdkDetailsType = GoogleChecksReportV1alphaCheckSdkRestrictionViolationEvidenceSdkDetails::class;
   protected $sdkDetailsDataType = 'array';
 
