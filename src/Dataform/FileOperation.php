@@ -19,16 +19,8 @@ namespace Google\Service\Dataform;
 
 class FileOperation extends \Google\Model
 {
-  /**
-   * @var DeleteFile
-   */
-  public $deleteFile;
   protected $deleteFileType = DeleteFile::class;
   protected $deleteFileDataType = '';
-  /**
-   * @var WriteFile
-   */
-  public $writeFile;
   protected $writeFileType = WriteFile::class;
   protected $writeFileDataType = '';
 

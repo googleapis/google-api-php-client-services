@@ -19,16 +19,8 @@ namespace Google\Service\Dataform;
 
 class SearchResult extends \Google\Model
 {
-  /**
-   * @var DirectorySearchResult
-   */
-  public $directory;
   protected $directoryType = DirectorySearchResult::class;
   protected $directoryDataType = '';
-  /**
-   * @var FileSearchResult
-   */
-  public $file;
   protected $fileType = FileSearchResult::class;
   protected $fileDataType = '';
 

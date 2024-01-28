@@ -65,6 +65,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param CommitWorkspaceChangesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function commit($name, CommitWorkspaceChangesRequest $postBody, $optParams = [])
   {
@@ -83,6 +84,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @opt_param string workspaceId Required. The ID to use for the workspace,
    * which will become the final component of the workspace's resource name.
    * @return Workspace
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Workspace $postBody, $optParams = [])
   {
@@ -96,6 +98,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param string $name Required. The workspace resource's name.
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -113,6 +116,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @opt_param string path Required. The file's full path including filename,
    * relative to the workspace root.
    * @return FetchFileDiffResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchFileDiff($workspace, $optParams = [])
   {
@@ -127,6 +131,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param string $name Required. The workspace's name.
    * @param array $optParams Optional parameters.
    * @return FetchFileGitStatusesResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchFileGitStatuses($name, $optParams = [])
   {
@@ -145,6 +150,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * remote against which this workspace should be compared. If left unset, the
    * repository's default branch name will be used.
    * @return FetchGitAheadBehindResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchGitAheadBehind($name, $optParams = [])
   {
@@ -158,6 +164,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param string $name Required. The workspace's name.
    * @param array $optParams Optional parameters.
    * @return Workspace
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -188,6 +195,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -203,6 +211,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param InstallNpmPackagesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return InstallNpmPackagesResponse
+   * @throws \Google\Service\Exception
    */
   public function installNpmPackages($workspace, InstallNpmPackagesRequest $postBody, $optParams = [])
   {
@@ -230,6 +239,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListWorkspaces` must match the
    * call that provided the page token.
    * @return ListWorkspacesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsRepositoriesWorkspaces($parent, $optParams = [])
   {
@@ -244,6 +254,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param MakeDirectoryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return MakeDirectoryResponse
+   * @throws \Google\Service\Exception
    */
   public function makeDirectory($workspace, MakeDirectoryRequest $postBody, $optParams = [])
   {
@@ -259,6 +270,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param MoveDirectoryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return MoveDirectoryResponse
+   * @throws \Google\Service\Exception
    */
   public function moveDirectory($workspace, MoveDirectoryRequest $postBody, $optParams = [])
   {
@@ -273,6 +285,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param MoveFileRequest $postBody
    * @param array $optParams Optional parameters.
    * @return MoveFileResponse
+   * @throws \Google\Service\Exception
    */
   public function moveFile($workspace, MoveFileRequest $postBody, $optParams = [])
   {
@@ -288,6 +301,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param PullGitCommitsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function pull($name, PullGitCommitsRequest $postBody, $optParams = [])
   {
@@ -303,6 +317,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param PushGitCommitsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function push($name, PushGitCommitsRequest $postBody, $optParams = [])
   {
@@ -328,6 +343,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * directory name, relative to the workspace root. If left unset, the workspace
    * root is used.
    * @return QueryDirectoryContentsResponse
+   * @throws \Google\Service\Exception
    */
   public function queryDirectoryContents($workspace, $optParams = [])
   {
@@ -346,6 +362,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @opt_param string revision Optional. The Git revision of the file to return.
    * If left empty, the current contents of `path` will be returned.
    * @return ReadFileResponse
+   * @throws \Google\Service\Exception
    */
   public function readFile($workspace, $optParams = [])
   {
@@ -361,6 +378,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param RemoveDirectoryRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function removeDirectory($workspace, RemoveDirectoryRequest $postBody, $optParams = [])
   {
@@ -375,6 +393,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param RemoveFileRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function removeFile($workspace, RemoveFileRequest $postBody, $optParams = [])
   {
@@ -389,6 +408,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param ResetWorkspaceChangesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataformEmpty
+   * @throws \Google\Service\Exception
    */
   public function reset($name, ResetWorkspaceChangesRequest $postBody, $optParams = [])
   {
@@ -414,6 +434,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * paginating, all other parameters provided to `SearchFilesRequest` must match
    * the call that provided the page token.
    * @return SearchFilesResponse
+   * @throws \Google\Service\Exception
    */
   public function searchFiles($workspace, $optParams = [])
   {
@@ -433,6 +454,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -455,6 +477,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -469,6 +492,7 @@ class ProjectsLocationsRepositoriesWorkspaces extends \Google\Service\Resource
    * @param WriteFileRequest $postBody
    * @param array $optParams Optional parameters.
    * @return WriteFileResponse
+   * @throws \Google\Service\Exception
    */
   public function writeFile($workspace, WriteFileRequest $postBody, $optParams = [])
   {

@@ -20,10 +20,6 @@ namespace Google\Service\Dataform;
 class CommitWorkspaceChangesRequest extends \Google\Collection
 {
   protected $collection_key = 'paths';
-  /**
-   * @var CommitAuthor
-   */
-  public $author;
   protected $authorType = CommitAuthor::class;
   protected $authorDataType = '';
   /**

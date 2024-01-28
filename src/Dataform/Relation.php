@@ -28,20 +28,12 @@ class Relation extends \Google\Collection
    * @var string[]
    */
   public $clusterExpressions;
-  /**
-   * @var Target[]
-   */
-  public $dependencyTargets;
   protected $dependencyTargetsType = Target::class;
   protected $dependencyTargetsDataType = 'array';
   /**
    * @var bool
    */
   public $disabled;
-  /**
-   * @var IncrementalTableConfig
-   */
-  public $incrementalTableConfig;
   protected $incrementalTableConfigType = IncrementalTableConfig::class;
   protected $incrementalTableConfigDataType = '';
   /**
@@ -60,10 +52,6 @@ class Relation extends \Google\Collection
    * @var string[]
    */
   public $preOperations;
-  /**
-   * @var RelationDescriptor
-   */
-  public $relationDescriptor;
   protected $relationDescriptorType = RelationDescriptor::class;
   protected $relationDescriptorDataType = '';
   /**

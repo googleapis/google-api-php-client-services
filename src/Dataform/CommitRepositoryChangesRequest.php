@@ -19,16 +19,8 @@ namespace Google\Service\Dataform;
 
 class CommitRepositoryChangesRequest extends \Google\Model
 {
-  /**
-   * @var CommitMetadata
-   */
-  public $commitMetadata;
   protected $commitMetadataType = CommitMetadata::class;
   protected $commitMetadataDataType = '';
-  /**
-   * @var FileOperation[]
-   */
-  public $fileOperations;
   protected $fileOperationsType = FileOperation::class;
   protected $fileOperationsDataType = 'map';
   /**

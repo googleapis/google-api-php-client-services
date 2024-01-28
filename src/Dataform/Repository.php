@@ -23,10 +23,6 @@ class Repository extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var GitRemoteSettings
-   */
-  public $gitRemoteSettings;
   protected $gitRemoteSettingsType = GitRemoteSettings::class;
   protected $gitRemoteSettingsDataType = '';
   /**
@@ -49,10 +45,6 @@ class Repository extends \Google\Model
    * @var bool
    */
   public $setAuthenticatedUserAdmin;
-  /**
-   * @var WorkspaceCompilationOverrides
-   */
-  public $workspaceCompilationOverrides;
   protected $workspaceCompilationOverridesType = WorkspaceCompilationOverrides::class;
   protected $workspaceCompilationOverridesDataType = '';
 

@@ -24,10 +24,6 @@ class SearchFilesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SearchResult[]
-   */
-  public $searchResults;
   protected $searchResultsType = SearchResult::class;
   protected $searchResultsDataType = 'array';
 
