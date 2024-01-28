@@ -19,10 +19,6 @@ namespace Google\Service\MyBusinessVerifications;
 
 class ServiceBusinessContext extends \Google\Model
 {
-  /**
-   * @var PostalAddress
-   */
-  public $address;
   protected $addressType = PostalAddress::class;
   protected $addressDataType = '';
 

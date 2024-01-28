@@ -19,10 +19,6 @@ namespace Google\Service\MyBusinessVerifications;
 
 class FetchVerificationOptionsRequest extends \Google\Model
 {
-  /**
-   * @var ServiceBusinessContext
-   */
-  public $context;
   protected $contextType = ServiceBusinessContext::class;
   protected $contextDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\MyBusinessVerifications;
 class FetchVerificationOptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'options';
-  /**
-   * @var VerificationOption[]
-   */
-  public $options;
   protected $optionsType = VerificationOption::class;
   protected $optionsDataType = 'array';
 
