@@ -19,10 +19,6 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class GoogleCloudPaymentsResellerSubscriptionV1CancelSubscriptionResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1Subscription
-   */
-  public $subscription;
   protected $subscriptionType = GoogleCloudPaymentsResellerSubscriptionV1Subscription::class;
   protected $subscriptionDataType = '';
 

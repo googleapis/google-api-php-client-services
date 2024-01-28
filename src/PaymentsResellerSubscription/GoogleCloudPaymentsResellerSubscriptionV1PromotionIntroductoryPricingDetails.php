@@ -20,10 +20,6 @@ namespace Google\Service\PaymentsResellerSubscription;
 class GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetails extends \Google\Collection
 {
   protected $collection_key = 'introductoryPricingSpecs';
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec[]
-   */
-  public $introductoryPricingSpecs;
   protected $introductoryPricingSpecsType = GoogleCloudPaymentsResellerSubscriptionV1PromotionIntroductoryPricingDetailsIntroductoryPricingSpec::class;
   protected $introductoryPricingSpecsDataType = 'array';
 

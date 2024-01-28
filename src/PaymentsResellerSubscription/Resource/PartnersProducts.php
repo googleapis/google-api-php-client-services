@@ -56,6 +56,7 @@ class PartnersProducts extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListProducts` must match the
    * call that provided the page token.
    * @return GoogleCloudPaymentsResellerSubscriptionV1ListProductsResponse
+   * @throws \Google\Service\Exception
    */
   public function listPartnersProducts($parent, $optParams = [])
   {

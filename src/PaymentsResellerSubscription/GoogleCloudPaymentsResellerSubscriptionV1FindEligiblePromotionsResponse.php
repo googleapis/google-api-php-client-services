@@ -24,10 +24,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse ex
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1Promotion[]
-   */
-  public $promotions;
   protected $promotionsType = GoogleCloudPaymentsResellerSubscriptionV1Promotion::class;
   protected $promotionsDataType = 'array';
 

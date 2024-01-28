@@ -41,6 +41,7 @@ class PartnersPromotions extends \Google\Service\Resource
    * @param GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsResponse
+   * @throws \Google\Service\Exception
    */
   public function findEligible($parent, GoogleCloudPaymentsResellerSubscriptionV1FindEligiblePromotionsRequest $postBody, $optParams = [])
   {
@@ -77,6 +78,7 @@ class PartnersPromotions extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListPromotions` must match the
    * call that provided the page token.
    * @return GoogleCloudPaymentsResellerSubscriptionV1ListPromotionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listPartnersPromotions($parent, $optParams = [])
   {

@@ -20,10 +20,6 @@ namespace Google\Service\PaymentsResellerSubscription;
 class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Collection
 {
   protected $collection_key = 'promotions';
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails
-   */
-  public $cancellationDetails;
   protected $cancellationDetailsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionCancellationDetails::class;
   protected $cancellationDetailsDataType = '';
   /**
@@ -42,10 +38,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
    * @var string
    */
   public $freeTrialEndTime;
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem[]
-   */
-  public $lineItems;
   protected $lineItemsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionLineItem::class;
   protected $lineItemsDataType = 'array';
   /**
@@ -64,10 +56,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
    * @var string[]
    */
   public $products;
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec[]
-   */
-  public $promotionSpecs;
   protected $promotionSpecsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionPromotionSpec::class;
   protected $promotionSpecsDataType = 'array';
   /**
@@ -82,10 +70,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
    * @var string
    */
   public $renewalTime;
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1Location
-   */
-  public $serviceLocation;
   protected $serviceLocationType = GoogleCloudPaymentsResellerSubscriptionV1Location::class;
   protected $serviceLocationDataType = '';
   /**
@@ -96,10 +80,6 @@ class GoogleCloudPaymentsResellerSubscriptionV1Subscription extends \Google\Coll
    * @var string
    */
   public $updateTime;
-  /**
-   * @var GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails
-   */
-  public $upgradeDowngradeDetails;
   protected $upgradeDowngradeDetailsType = GoogleCloudPaymentsResellerSubscriptionV1SubscriptionUpgradeDowngradeDetails::class;
   protected $upgradeDowngradeDetailsDataType = '';
 
