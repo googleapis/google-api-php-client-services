@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class OptionalColor extends \Google\Model
 {
-  /**
-   * @var OpaqueColor
-   */
-  public $opaqueColor;
   protected $opaqueColorType = OpaqueColor::class;
   protected $opaqueColorDataType = '';
 

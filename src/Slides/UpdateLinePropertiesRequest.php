@@ -23,10 +23,6 @@ class UpdateLinePropertiesRequest extends \Google\Model
    * @var string
    */
   public $fields;
-  /**
-   * @var LineProperties
-   */
-  public $lineProperties;
   protected $linePropertiesType = LineProperties::class;
   protected $linePropertiesDataType = '';
   /**

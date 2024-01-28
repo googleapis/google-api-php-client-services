@@ -23,16 +23,8 @@ class Image extends \Google\Model
    * @var string
    */
   public $contentUrl;
-  /**
-   * @var ImageProperties
-   */
-  public $imageProperties;
   protected $imagePropertiesType = ImageProperties::class;
   protected $imagePropertiesDataType = '';
-  /**
-   * @var Placeholder
-   */
-  public $placeholder;
   protected $placeholderType = Placeholder::class;
   protected $placeholderDataType = '';
   /**

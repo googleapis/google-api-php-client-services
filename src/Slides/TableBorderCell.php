@@ -19,16 +19,8 @@ namespace Google\Service\Slides;
 
 class TableBorderCell extends \Google\Model
 {
-  /**
-   * @var TableCellLocation
-   */
-  public $location;
   protected $locationType = TableCellLocation::class;
   protected $locationDataType = '';
-  /**
-   * @var TableBorderProperties
-   */
-  public $tableBorderProperties;
   protected $tableBorderPropertiesType = TableBorderProperties::class;
   protected $tableBorderPropertiesDataType = '';
 

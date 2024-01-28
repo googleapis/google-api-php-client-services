@@ -32,10 +32,6 @@ class UpdateTableRowPropertiesRequest extends \Google\Collection
    * @var int[]
    */
   public $rowIndices;
-  /**
-   * @var TableRowProperties
-   */
-  public $tableRowProperties;
   protected $tableRowPropertiesType = TableRowProperties::class;
   protected $tableRowPropertiesDataType = '';
 

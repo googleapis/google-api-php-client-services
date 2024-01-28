@@ -23,10 +23,6 @@ class TableCellProperties extends \Google\Model
    * @var string
    */
   public $contentAlignment;
-  /**
-   * @var TableCellBackgroundFill
-   */
-  public $tableCellBackgroundFill;
   protected $tableCellBackgroundFillType = TableCellBackgroundFill::class;
   protected $tableCellBackgroundFillDataType = '';
 

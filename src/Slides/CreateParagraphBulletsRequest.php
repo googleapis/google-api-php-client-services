@@ -23,20 +23,12 @@ class CreateParagraphBulletsRequest extends \Google\Model
    * @var string
    */
   public $bulletPreset;
-  /**
-   * @var TableCellLocation
-   */
-  public $cellLocation;
   protected $cellLocationType = TableCellLocation::class;
   protected $cellLocationDataType = '';
   /**
    * @var string
    */
   public $objectId;
-  /**
-   * @var Range
-   */
-  public $textRange;
   protected $textRangeType = Range::class;
   protected $textRangeDataType = '';
 

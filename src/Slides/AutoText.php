@@ -23,10 +23,6 @@ class AutoText extends \Google\Model
    * @var string
    */
   public $content;
-  /**
-   * @var TextStyle
-   */
-  public $style;
   protected $styleType = TextStyle::class;
   protected $styleDataType = '';
   /**

@@ -28,16 +28,8 @@ class CreateSlideRequest extends \Google\Collection
    * @var string
    */
   public $objectId;
-  /**
-   * @var LayoutPlaceholderIdMapping[]
-   */
-  public $placeholderIdMappings;
   protected $placeholderIdMappingsType = LayoutPlaceholderIdMapping::class;
   protected $placeholderIdMappingsDataType = 'array';
-  /**
-   * @var LayoutReference
-   */
-  public $slideLayoutReference;
   protected $slideLayoutReferenceType = LayoutReference::class;
   protected $slideLayoutReferenceDataType = '';
 

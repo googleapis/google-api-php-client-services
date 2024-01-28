@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class TableColumnProperties extends \Google\Model
 {
-  /**
-   * @var Dimension
-   */
-  public $columnWidth;
   protected $columnWidthType = Dimension::class;
   protected $columnWidthDataType = '';
 

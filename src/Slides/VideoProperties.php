@@ -31,10 +31,6 @@ class VideoProperties extends \Google\Model
    * @var bool
    */
   public $mute;
-  /**
-   * @var Outline
-   */
-  public $outline;
   protected $outlineType = Outline::class;
   protected $outlineDataType = '';
   /**

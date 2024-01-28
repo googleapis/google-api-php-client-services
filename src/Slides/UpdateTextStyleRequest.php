@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class UpdateTextStyleRequest extends \Google\Model
 {
-  /**
-   * @var TableCellLocation
-   */
-  public $cellLocation;
   protected $cellLocationType = TableCellLocation::class;
   protected $cellLocationDataType = '';
   /**
@@ -33,16 +29,8 @@ class UpdateTextStyleRequest extends \Google\Model
    * @var string
    */
   public $objectId;
-  /**
-   * @var TextStyle
-   */
-  public $style;
   protected $styleType = TextStyle::class;
   protected $styleDataType = '';
-  /**
-   * @var Range
-   */
-  public $textRange;
   protected $textRangeType = Range::class;
   protected $textRangeDataType = '';
 

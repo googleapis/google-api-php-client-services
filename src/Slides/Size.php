@@ -19,16 +19,8 @@ namespace Google\Service\Slides;
 
 class Size extends \Google\Model
 {
-  /**
-   * @var Dimension
-   */
-  public $height;
   protected $heightType = Dimension::class;
   protected $heightDataType = '';
-  /**
-   * @var Dimension
-   */
-  public $width;
   protected $widthType = Dimension::class;
   protected $widthDataType = '';
 

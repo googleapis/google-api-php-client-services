@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class OutlineFill extends \Google\Model
 {
-  /**
-   * @var SolidFill
-   */
-  public $solidFill;
   protected $solidFillType = SolidFill::class;
   protected $solidFillDataType = '';
 

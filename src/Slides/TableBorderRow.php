@@ -20,10 +20,6 @@ namespace Google\Service\Slides;
 class TableBorderRow extends \Google\Collection
 {
   protected $collection_key = 'tableBorderCells';
-  /**
-   * @var TableBorderCell[]
-   */
-  public $tableBorderCells;
   protected $tableBorderCellsType = TableBorderCell::class;
   protected $tableBorderCellsDataType = 'array';
 

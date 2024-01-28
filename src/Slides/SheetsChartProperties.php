@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class SheetsChartProperties extends \Google\Model
 {
-  /**
-   * @var ImageProperties
-   */
-  public $chartImageProperties;
   protected $chartImagePropertiesType = ImageProperties::class;
   protected $chartImagePropertiesDataType = '';
 

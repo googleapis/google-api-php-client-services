@@ -23,10 +23,6 @@ class TableRange extends \Google\Model
    * @var int
    */
   public $columnSpan;
-  /**
-   * @var TableCellLocation
-   */
-  public $location;
   protected $locationType = TableCellLocation::class;
   protected $locationDataType = '';
   /**

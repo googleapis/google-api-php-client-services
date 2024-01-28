@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class InsertTableRowsRequest extends \Google\Model
 {
-  /**
-   * @var TableCellLocation
-   */
-  public $cellLocation;
   protected $cellLocationType = TableCellLocation::class;
   protected $cellLocationDataType = '';
   /**

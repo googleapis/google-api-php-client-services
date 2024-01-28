@@ -19,10 +19,6 @@ namespace Google\Service\Slides;
 
 class CreateShapeRequest extends \Google\Model
 {
-  /**
-   * @var PageElementProperties
-   */
-  public $elementProperties;
   protected $elementPropertiesType = PageElementProperties::class;
   protected $elementPropertiesDataType = '';
   /**
