@@ -19,10 +19,6 @@ namespace Google\Service\OSConfig;
 
 class PatchRollout extends \Google\Model
 {
-  /**
-   * @var FixedOrPercent
-   */
-  public $disruptionBudget;
   protected $disruptionBudgetType = FixedOrPercent::class;
   protected $disruptionBudgetDataType = '';
   /**

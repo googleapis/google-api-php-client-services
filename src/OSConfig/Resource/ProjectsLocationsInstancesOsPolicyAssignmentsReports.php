@@ -42,6 +42,7 @@ class ProjectsLocationsInstancesOsPolicyAssignmentsReports extends \Google\Servi
    * `{assignment_id}`, the OSPolicyAssignment id must be provided.
    * @param array $optParams Optional parameters.
    * @return OSPolicyAssignmentReport
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -80,6 +81,7 @@ class ProjectsLocationsInstancesOsPolicyAssignmentsReports extends \Google\Servi
    * to the `ListOSPolicyAssignmentReports` method that indicates where this
    * listing should continue from.
    * @return ListOSPolicyAssignmentReportsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsInstancesOsPolicyAssignmentsReports($parent, $optParams = [])
   {

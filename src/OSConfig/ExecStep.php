@@ -19,16 +19,8 @@ namespace Google\Service\OSConfig;
 
 class ExecStep extends \Google\Model
 {
-  /**
-   * @var ExecStepConfig
-   */
-  public $linuxExecStepConfig;
   protected $linuxExecStepConfigType = ExecStepConfig::class;
   protected $linuxExecStepConfigDataType = '';
-  /**
-   * @var ExecStepConfig
-   */
-  public $windowsExecStepConfig;
   protected $windowsExecStepConfigType = ExecStepConfig::class;
   protected $windowsExecStepConfigDataType = '';
 

@@ -24,10 +24,6 @@ class ExecStepConfig extends \Google\Collection
    * @var int[]
    */
   public $allowedSuccessCodes;
-  /**
-   * @var GcsObject
-   */
-  public $gcsObject;
   protected $gcsObjectType = GcsObject::class;
   protected $gcsObjectDataType = '';
   /**

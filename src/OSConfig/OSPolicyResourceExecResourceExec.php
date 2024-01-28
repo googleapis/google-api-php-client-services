@@ -24,10 +24,6 @@ class OSPolicyResourceExecResourceExec extends \Google\Collection
    * @var string[]
    */
   public $args;
-  /**
-   * @var OSPolicyResourceFile
-   */
-  public $file;
   protected $fileType = OSPolicyResourceFile::class;
   protected $fileDataType = '';
   /**

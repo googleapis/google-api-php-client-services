@@ -20,10 +20,6 @@ namespace Google\Service\OSConfig;
 class ListInventoriesResponse extends \Google\Collection
 {
   protected $collection_key = 'inventories';
-  /**
-   * @var Inventory[]
-   */
-  public $inventories;
   protected $inventoriesType = Inventory::class;
   protected $inventoriesDataType = 'array';
   /**
