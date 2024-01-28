@@ -19,16 +19,8 @@ namespace Google\Service\Playdeveloperreporting;
 
 class GooglePlayDeveloperReportingV1beta1MetricValue extends \Google\Model
 {
-  /**
-   * @var GoogleTypeDecimal
-   */
-  public $decimalValue;
   protected $decimalValueType = GoogleTypeDecimal::class;
   protected $decimalValueDataType = '';
-  /**
-   * @var GooglePlayDeveloperReportingV1beta1DecimalConfidenceInterval
-   */
-  public $decimalValueConfidenceInterval;
   protected $decimalValueConfidenceIntervalType = GooglePlayDeveloperReportingV1beta1DecimalConfidenceInterval::class;
   protected $decimalValueConfidenceIntervalDataType = '';
   /**

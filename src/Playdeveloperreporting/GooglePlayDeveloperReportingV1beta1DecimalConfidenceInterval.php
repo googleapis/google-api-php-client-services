@@ -19,16 +19,8 @@ namespace Google\Service\Playdeveloperreporting;
 
 class GooglePlayDeveloperReportingV1beta1DecimalConfidenceInterval extends \Google\Model
 {
-  /**
-   * @var GoogleTypeDecimal
-   */
-  public $lowerBound;
   protected $lowerBoundType = GoogleTypeDecimal::class;
   protected $lowerBoundDataType = '';
-  /**
-   * @var GoogleTypeDecimal
-   */
-  public $upperBound;
   protected $upperBoundType = GoogleTypeDecimal::class;
   protected $upperBoundDataType = '';
 

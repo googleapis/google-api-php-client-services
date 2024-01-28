@@ -133,6 +133,7 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * parameters provided to the request must match the call that provided the page
    * token.
    * @return GooglePlayDeveloperReportingV1beta1SearchErrorIssuesResponse
+   * @throws \Google\Service\Exception
    */
   public function search($parent, $optParams = [])
   {

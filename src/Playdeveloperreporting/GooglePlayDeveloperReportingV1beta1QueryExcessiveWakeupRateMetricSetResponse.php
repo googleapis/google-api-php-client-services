@@ -24,10 +24,6 @@ class GooglePlayDeveloperReportingV1beta1QueryExcessiveWakeupRateMetricSetRespon
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GooglePlayDeveloperReportingV1beta1MetricsRow[]
-   */
-  public $rows;
   protected $rowsType = GooglePlayDeveloperReportingV1beta1MetricsRow::class;
   protected $rowsDataType = 'array';
 

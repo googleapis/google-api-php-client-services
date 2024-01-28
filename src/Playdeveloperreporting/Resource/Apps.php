@@ -37,6 +37,7 @@ class Apps extends \Google\Service\Resource
    * options are for. Format: apps/{app}
    * @param array $optParams Optional parameters.
    * @return GooglePlayDeveloperReportingV1beta1ReleaseFilterOptions
+   * @throws \Google\Service\Exception
    */
   public function fetchReleaseFilterOptions($name, $optParams = [])
   {
@@ -58,6 +59,7 @@ class Apps extends \Google\Service\Resource
    * When paginating, all other parameters provided to `SearchAccessibleApps` must
    * match the call that provided the page token.
    * @return GooglePlayDeveloperReportingV1beta1SearchAccessibleAppsResponse
+   * @throws \Google\Service\Exception
    */
   public function search($optParams = [])
   {

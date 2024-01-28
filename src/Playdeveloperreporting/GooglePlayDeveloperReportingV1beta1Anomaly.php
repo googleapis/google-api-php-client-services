@@ -20,16 +20,8 @@ namespace Google\Service\Playdeveloperreporting;
 class GooglePlayDeveloperReportingV1beta1Anomaly extends \Google\Collection
 {
   protected $collection_key = 'dimensions';
-  /**
-   * @var GooglePlayDeveloperReportingV1beta1DimensionValue[]
-   */
-  public $dimensions;
   protected $dimensionsType = GooglePlayDeveloperReportingV1beta1DimensionValue::class;
   protected $dimensionsDataType = 'array';
-  /**
-   * @var GooglePlayDeveloperReportingV1beta1MetricValue
-   */
-  public $metric;
   protected $metricType = GooglePlayDeveloperReportingV1beta1MetricValue::class;
   protected $metricDataType = '';
   /**
@@ -40,10 +32,6 @@ class GooglePlayDeveloperReportingV1beta1Anomaly extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GooglePlayDeveloperReportingV1beta1TimelineSpec
-   */
-  public $timelineSpec;
   protected $timelineSpecType = GooglePlayDeveloperReportingV1beta1TimelineSpec::class;
   protected $timelineSpecDataType = '';
 

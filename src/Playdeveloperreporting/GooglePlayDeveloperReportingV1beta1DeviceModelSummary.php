@@ -19,10 +19,6 @@ namespace Google\Service\Playdeveloperreporting;
 
 class GooglePlayDeveloperReportingV1beta1DeviceModelSummary extends \Google\Model
 {
-  /**
-   * @var GooglePlayDeveloperReportingV1beta1DeviceId
-   */
-  public $deviceId;
   protected $deviceIdType = GooglePlayDeveloperReportingV1beta1DeviceId::class;
   protected $deviceIdDataType = '';
   /**

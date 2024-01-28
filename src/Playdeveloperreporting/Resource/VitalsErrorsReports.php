@@ -127,6 +127,7 @@ class VitalsErrorsReports extends \Google\Service\Resource
    * paginating, all other parameters provided to `SearchErrorReports` must match
    * the call that provided the page token.
    * @return GooglePlayDeveloperReportingV1beta1SearchErrorReportsResponse
+   * @throws \Google\Service\Exception
    */
   public function search($parent, $optParams = [])
   {
