@@ -20,10 +20,6 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalListLegacyOrganizationsResponse extends \Google\Collection
 {
   protected $collection_key = 'organizations';
-  /**
-   * @var SasPortalOrganization[]
-   */
-  public $organizations;
   protected $organizationsType = SasPortalOrganization::class;
   protected $organizationsDataType = 'array';
 

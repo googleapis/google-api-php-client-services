@@ -35,10 +35,6 @@ class SasPortalDeviceMetadata extends \Google\Model
    * @var bool
    */
   public $nrqzValidated;
-  /**
-   * @var SasPortalNrqzValidation
-   */
-  public $nrqzValidation;
   protected $nrqzValidationType = SasPortalNrqzValidation::class;
   protected $nrqzValidationDataType = '';
 

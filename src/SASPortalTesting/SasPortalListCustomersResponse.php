@@ -20,10 +20,6 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalListCustomersResponse extends \Google\Collection
 {
   protected $collection_key = 'customers';
-  /**
-   * @var SasPortalCustomer[]
-   */
-  public $customers;
   protected $customersType = SasPortalCustomer::class;
   protected $customersDataType = 'array';
   /**

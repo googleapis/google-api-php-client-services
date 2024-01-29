@@ -19,10 +19,6 @@ namespace Google\Service\SASPortalTesting;
 
 class SasPortalGcpProjectDeployment extends \Google\Model
 {
-  /**
-   * @var SasPortalDeployment
-   */
-  public $deployment;
   protected $deploymentType = SasPortalDeployment::class;
   protected $deploymentDataType = '';
   /**

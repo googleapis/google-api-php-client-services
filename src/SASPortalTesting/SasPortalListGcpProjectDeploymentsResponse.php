@@ -20,10 +20,6 @@ namespace Google\Service\SASPortalTesting;
 class SasPortalListGcpProjectDeploymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'deployments';
-  /**
-   * @var SasPortalGcpProjectDeployment[]
-   */
-  public $deployments;
   protected $deploymentsType = SasPortalGcpProjectDeployment::class;
   protected $deploymentsDataType = 'array';
 

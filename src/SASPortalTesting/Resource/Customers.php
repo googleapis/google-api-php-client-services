@@ -43,6 +43,7 @@ class Customers extends \Google\Service\Resource
    * @param string $name Required. The name of the customer.
    * @param array $optParams Optional parameters.
    * @return SasPortalCustomer
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -60,6 +61,7 @@ class Customers extends \Google\Service\Resource
    * @opt_param string pageToken A pagination token returned from a previous call
    * to ListCustomers that indicates where this listing should continue from.
    * @return SasPortalListCustomersResponse
+   * @throws \Google\Service\Exception
    */
   public function listCustomers($optParams = [])
   {
@@ -74,6 +76,7 @@ class Customers extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return SasPortalListGcpProjectDeploymentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listGcpProjectDeployments($optParams = [])
   {
@@ -86,6 +89,7 @@ class Customers extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return SasPortalListLegacyOrganizationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listLegacyOrganizations($optParams = [])
   {
@@ -102,6 +106,7 @@ class Customers extends \Google\Service\Resource
    * @param SasPortalMigrateOrganizationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SasPortalOperation
+   * @throws \Google\Service\Exception
    */
   public function migrateOrganization(SasPortalMigrateOrganizationRequest $postBody, $optParams = [])
   {
@@ -118,6 +123,7 @@ class Customers extends \Google\Service\Resource
    *
    * @opt_param string updateMask Fields to be updated.
    * @return SasPortalCustomer
+   * @throws \Google\Service\Exception
    */
   public function patch($name, SasPortalCustomer $postBody, $optParams = [])
   {
@@ -133,6 +139,7 @@ class Customers extends \Google\Service\Resource
    * @param SasPortalProvisionDeploymentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SasPortalProvisionDeploymentResponse
+   * @throws \Google\Service\Exception
    */
   public function provisionDeployment(SasPortalProvisionDeploymentRequest $postBody, $optParams = [])
   {
@@ -149,6 +156,7 @@ class Customers extends \Google\Service\Resource
    * @param SasPortalSetupSasAnalyticsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SasPortalOperation
+   * @throws \Google\Service\Exception
    */
   public function setupSasAnalytics(SasPortalSetupSasAnalyticsRequest $postBody, $optParams = [])
   {
