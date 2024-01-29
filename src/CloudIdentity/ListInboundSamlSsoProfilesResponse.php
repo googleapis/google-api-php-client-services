@@ -20,10 +20,6 @@ namespace Google\Service\CloudIdentity;
 class ListInboundSamlSsoProfilesResponse extends \Google\Collection
 {
   protected $collection_key = 'inboundSamlSsoProfiles';
-  /**
-   * @var InboundSamlSsoProfile[]
-   */
-  public $inboundSamlSsoProfiles;
   protected $inboundSamlSsoProfilesType = InboundSamlSsoProfile::class;
   protected $inboundSamlSsoProfilesDataType = 'array';
   /**

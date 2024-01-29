@@ -19,10 +19,6 @@ namespace Google\Service\CloudIdentity;
 
 class ModifyMembershipRolesResponse extends \Google\Model
 {
-  /**
-   * @var Membership
-   */
-  public $membership;
   protected $membershipType = Membership::class;
   protected $membershipDataType = '';
 

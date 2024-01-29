@@ -20,20 +20,12 @@ namespace Google\Service\CloudIdentity;
 class ModifyMembershipRolesRequest extends \Google\Collection
 {
   protected $collection_key = 'updateRolesParams';
-  /**
-   * @var MembershipRole[]
-   */
-  public $addRoles;
   protected $addRolesType = MembershipRole::class;
   protected $addRolesDataType = 'array';
   /**
    * @var string[]
    */
   public $removeRoles;
-  /**
-   * @var UpdateMembershipRolesParams[]
-   */
-  public $updateRolesParams;
   protected $updateRolesParamsType = UpdateMembershipRolesParams::class;
   protected $updateRolesParamsDataType = 'array';
 

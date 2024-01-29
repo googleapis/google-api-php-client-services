@@ -43,6 +43,7 @@ class Groups extends \Google\Service\Resource
    * @opt_param string initialGroupConfig Optional. The initial configuration
    * option for the `Group`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create(Group $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class Groups extends \Google\Service\Resource
    * retrieve. Must be of the form `groups/{group}`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -73,6 +75,7 @@ class Groups extends \Google\Service\Resource
    * retrieve. Must be of the form `groups/{group}`.
    * @param array $optParams Optional parameters.
    * @return Group
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -91,6 +94,7 @@ class Groups extends \Google\Service\Resource
    * "*" returns all fields. If not specified, all fields will be returned. May
    * only contain the following field: `member_restriction`.
    * @return SecuritySettings
+   * @throws \Google\Service\Exception
    */
   public function getSecuritySettings($name, $optParams = [])
   {
@@ -122,6 +126,7 @@ class Groups extends \Google\Service\Resource
    * @opt_param string view The level of detail to be returned. If unspecified,
    * defaults to `View.BASIC`.
    * @return ListGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listGroups($optParams = [])
   {
@@ -149,6 +154,7 @@ class Groups extends \Google\Service\Resource
    * to an identity source created in Admin Console and must be in the form of
    * `identitysources/{identity_source}`.
    * @return LookupGroupNameResponse
+   * @throws \Google\Service\Exception
    */
   public function lookup($optParams = [])
   {
@@ -169,6 +175,7 @@ class Groups extends \Google\Service\Resource
    * only contain the following field names: `display_name`, `description`,
    * `labels`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Group $postBody, $optParams = [])
   {
@@ -208,6 +215,7 @@ class Groups extends \Google\Service\Resource
    * @opt_param string view The level of detail to be returned. If unspecified,
    * defaults to `View.BASIC`.
    * @return SearchGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function search($optParams = [])
   {
@@ -226,6 +234,7 @@ class Groups extends \Google\Service\Resource
    * @opt_param string updateMask Required. The fully-qualified names of fields to
    * update. May only contain the following field: `member_restriction.query`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function updateSecuritySettings($name, SecuritySettings $postBody, $optParams = [])
   {

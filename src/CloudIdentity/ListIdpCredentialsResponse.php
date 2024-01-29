@@ -20,10 +20,6 @@ namespace Google\Service\CloudIdentity;
 class ListIdpCredentialsResponse extends \Google\Collection
 {
   protected $collection_key = 'idpCredentials';
-  /**
-   * @var IdpCredential[]
-   */
-  public $idpCredentials;
   protected $idpCredentialsType = IdpCredential::class;
   protected $idpCredentialsDataType = 'array';
   /**

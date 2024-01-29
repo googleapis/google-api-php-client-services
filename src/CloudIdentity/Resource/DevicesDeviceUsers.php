@@ -47,6 +47,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * @param GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function approve($name, GoogleAppsCloudidentityDevicesV1ApproveDeviceUserRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * @param GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function block($name, GoogleAppsCloudidentityDevicesV1BlockDeviceUserRequest $postBody, $optParams = [])
   {
@@ -85,6 +87,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * @param GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function cancelWipe($name, GoogleAppsCloudidentityDevicesV1CancelWipeDeviceUserRequest $postBody, $optParams = [])
   {
@@ -110,6 +113,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * organization, use `customers/{customer}`, where customer is the customer to
    * whom the device belongs.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -134,6 +138,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * organization, use `customers/{customer}`, where customer is the customer to
    * whom the device belongs.
    * @return GoogleAppsCloudidentityDevicesV1DeviceUser
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -169,6 +174,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListBooks` must match the call
    * that provided the page token.
    * @return GoogleAppsCloudidentityDevicesV1ListDeviceUsersResponse
+   * @throws \Google\Service\Exception
    */
   public function listDevicesDeviceUsers($parent, $optParams = [])
   {
@@ -214,6 +220,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * fetched. Must be set to 'me' to fetch the DeviceUser's resource name for the
    * calling user.
    * @return GoogleAppsCloudidentityDevicesV1LookupSelfDeviceUsersResponse
+   * @throws \Google\Service\Exception
    */
   public function lookup($parent, $optParams = [])
   {
@@ -238,6 +245,7 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * @param GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function wipe($name, GoogleAppsCloudidentityDevicesV1WipeDeviceUserRequest $postBody, $optParams = [])
   {

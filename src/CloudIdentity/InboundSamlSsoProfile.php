@@ -27,20 +27,12 @@ class InboundSamlSsoProfile extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var SamlIdpConfig
-   */
-  public $idpConfig;
   protected $idpConfigType = SamlIdpConfig::class;
   protected $idpConfigDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var SamlSpConfig
-   */
-  public $spConfig;
   protected $spConfigType = SamlSpConfig::class;
   protected $spConfigDataType = '';
 

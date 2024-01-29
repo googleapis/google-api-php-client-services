@@ -44,10 +44,6 @@ class GoogleAppsCloudidentityDevicesV1ClientState extends \Google\Collection
    * @var string
    */
   public $healthScore;
-  /**
-   * @var GoogleAppsCloudidentityDevicesV1CustomAttributeValue[]
-   */
-  public $keyValuePairs;
   protected $keyValuePairsType = GoogleAppsCloudidentityDevicesV1CustomAttributeValue::class;
   protected $keyValuePairsDataType = 'map';
   /**

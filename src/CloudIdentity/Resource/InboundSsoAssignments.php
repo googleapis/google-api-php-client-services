@@ -38,6 +38,7 @@ class InboundSsoAssignments extends \Google\Service\Resource
    * @param InboundSsoAssignment $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create(InboundSsoAssignment $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class InboundSsoAssignments extends \Google\Service\Resource
    * InboundSsoAssignment to delete. Format: `inboundSsoAssignments/{assignment}`
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -69,6 +71,7 @@ class InboundSsoAssignments extends \Google\Service\Resource
    * InboundSsoAssignment to fetch. Format: `inboundSsoAssignments/{assignment}`
    * @param array $optParams Optional parameters.
    * @return InboundSsoAssignment
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class InboundSsoAssignments extends \Google\Service\Resource
    * page. When paginating, all other parameters provided to
    * `ListInboundSsoAssignments` must match the call that provided the page token.
    * @return ListInboundSsoAssignmentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listInboundSsoAssignments($optParams = [])
   {
@@ -122,6 +126,7 @@ class InboundSsoAssignments extends \Google\Service\Resource
    *
    * @opt_param string updateMask Required. The list of fields to be updated.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, InboundSsoAssignment $postBody, $optParams = [])
   {

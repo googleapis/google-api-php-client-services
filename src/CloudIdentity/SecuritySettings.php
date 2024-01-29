@@ -19,10 +19,6 @@ namespace Google\Service\CloudIdentity;
 
 class SecuritySettings extends \Google\Model
 {
-  /**
-   * @var MemberRestriction
-   */
-  public $memberRestriction;
   protected $memberRestrictionType = MemberRestriction::class;
   protected $memberRestrictionDataType = '';
   /**

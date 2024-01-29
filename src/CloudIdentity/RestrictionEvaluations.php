@@ -19,10 +19,6 @@ namespace Google\Service\CloudIdentity;
 
 class RestrictionEvaluations extends \Google\Model
 {
-  /**
-   * @var MembershipRoleRestrictionEvaluation
-   */
-  public $memberRestrictionEvaluation;
   protected $memberRestrictionEvaluationType = MembershipRoleRestrictionEvaluation::class;
   protected $memberRestrictionEvaluationDataType = '';
 

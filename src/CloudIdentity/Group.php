@@ -20,10 +20,6 @@ namespace Google\Service\CloudIdentity;
 class Group extends \Google\Collection
 {
   protected $collection_key = 'additionalGroupKeys';
-  /**
-   * @var EntityKey[]
-   */
-  public $additionalGroupKeys;
   protected $additionalGroupKeysType = EntityKey::class;
   protected $additionalGroupKeysDataType = 'array';
   /**
@@ -38,16 +34,8 @@ class Group extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var DynamicGroupMetadata
-   */
-  public $dynamicGroupMetadata;
   protected $dynamicGroupMetadataType = DynamicGroupMetadata::class;
   protected $dynamicGroupMetadataDataType = '';
-  /**
-   * @var EntityKey
-   */
-  public $groupKey;
   protected $groupKeyType = EntityKey::class;
   protected $groupKeyDataType = '';
   /**

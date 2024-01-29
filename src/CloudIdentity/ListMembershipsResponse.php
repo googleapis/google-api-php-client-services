@@ -20,10 +20,6 @@ namespace Google\Service\CloudIdentity;
 class ListMembershipsResponse extends \Google\Collection
 {
   protected $collection_key = 'memberships';
-  /**
-   * @var Membership[]
-   */
-  public $memberships;
   protected $membershipsType = Membership::class;
   protected $membershipsDataType = 'array';
   /**

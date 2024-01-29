@@ -19,10 +19,6 @@ namespace Google\Service\CloudIdentity;
 
 class GoogleAppsCloudidentityDevicesV1WipeDeviceUserResponse extends \Google\Model
 {
-  /**
-   * @var GoogleAppsCloudidentityDevicesV1DeviceUser
-   */
-  public $deviceUser;
   protected $deviceUserType = GoogleAppsCloudidentityDevicesV1DeviceUser::class;
   protected $deviceUserDataType = '';
 
