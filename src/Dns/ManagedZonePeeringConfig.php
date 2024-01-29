@@ -23,10 +23,6 @@ class ManagedZonePeeringConfig extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var ManagedZonePeeringConfigTargetNetwork
-   */
-  public $targetNetwork;
   protected $targetNetworkType = ManagedZonePeeringConfigTargetNetwork::class;
   protected $targetNetworkDataType = '';
 

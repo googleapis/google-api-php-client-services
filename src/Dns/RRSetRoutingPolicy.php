@@ -19,10 +19,6 @@ namespace Google\Service\Dns;
 
 class RRSetRoutingPolicy extends \Google\Model
 {
-  /**
-   * @var RRSetRoutingPolicyGeoPolicy
-   */
-  public $geo;
   protected $geoType = RRSetRoutingPolicyGeoPolicy::class;
   protected $geoDataType = '';
   /**
@@ -33,16 +29,8 @@ class RRSetRoutingPolicy extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var RRSetRoutingPolicyPrimaryBackupPolicy
-   */
-  public $primaryBackup;
   protected $primaryBackupType = RRSetRoutingPolicyPrimaryBackupPolicy::class;
   protected $primaryBackupDataType = '';
-  /**
-   * @var RRSetRoutingPolicyWrrPolicy
-   */
-  public $wrr;
   protected $wrrType = RRSetRoutingPolicyWrrPolicy::class;
   protected $wrrDataType = '';
 

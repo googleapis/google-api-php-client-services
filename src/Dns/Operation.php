@@ -19,10 +19,6 @@ namespace Google\Service\Dns;
 
 class Operation extends \Google\Model
 {
-  /**
-   * @var OperationDnsKeyContext
-   */
-  public $dnsKeyContext;
   protected $dnsKeyContextType = OperationDnsKeyContext::class;
   protected $dnsKeyContextDataType = '';
   /**
@@ -49,10 +45,6 @@ class Operation extends \Google\Model
    * @var string
    */
   public $user;
-  /**
-   * @var OperationManagedZoneContext
-   */
-  public $zoneContext;
   protected $zoneContextType = OperationManagedZoneContext::class;
   protected $zoneContextDataType = '';
 

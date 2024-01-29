@@ -24,10 +24,6 @@ class RRSetRoutingPolicyHealthCheckTargets extends \Google\Collection
    * @var string[]
    */
   public $externalEndpoints;
-  /**
-   * @var RRSetRoutingPolicyLoadBalancerTarget[]
-   */
-  public $internalLoadBalancers;
   protected $internalLoadBalancersType = RRSetRoutingPolicyLoadBalancerTarget::class;
   protected $internalLoadBalancersDataType = 'array';
 

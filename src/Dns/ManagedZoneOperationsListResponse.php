@@ -20,10 +20,6 @@ namespace Google\Service\Dns;
 class ManagedZoneOperationsListResponse extends \Google\Collection
 {
   protected $collection_key = 'operations';
-  /**
-   * @var ResponseHeader
-   */
-  public $header;
   protected $headerType = ResponseHeader::class;
   protected $headerDataType = '';
   /**
@@ -34,10 +30,6 @@ class ManagedZoneOperationsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Operation[]
-   */
-  public $operations;
   protected $operationsType = Operation::class;
   protected $operationsDataType = 'array';
 

@@ -112,10 +112,6 @@ class Quota extends \Google\Collection
    * @var int
    */
   public $totalRrdataSizePerChange;
-  /**
-   * @var DnsKeySpec[]
-   */
-  public $whitelistedKeySpecs;
   protected $whitelistedKeySpecsType = DnsKeySpec::class;
   protected $whitelistedKeySpecsDataType = 'array';
 

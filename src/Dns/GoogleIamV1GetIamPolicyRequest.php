@@ -19,10 +19,6 @@ namespace Google\Service\Dns;
 
 class GoogleIamV1GetIamPolicyRequest extends \Google\Model
 {
-  /**
-   * @var GoogleIamV1GetPolicyOptions
-   */
-  public $options;
   protected $optionsType = GoogleIamV1GetPolicyOptions::class;
   protected $optionsDataType = '';
 

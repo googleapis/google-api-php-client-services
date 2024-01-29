@@ -31,10 +31,6 @@ class ResponsePolicyRule extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var ResponsePolicyRuleLocalData
-   */
-  public $localData;
   protected $localDataType = ResponsePolicyRuleLocalData::class;
   protected $localDataDataType = '';
   /**
