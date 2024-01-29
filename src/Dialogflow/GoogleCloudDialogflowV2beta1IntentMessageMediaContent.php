@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageMediaContent extends \Google\Collection
 {
   protected $collection_key = 'mediaObjects';
-  /**
-   * @var GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject[]
-   */
-  public $mediaObjects;
   protected $mediaObjectsType = GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObject::class;
   protected $mediaObjectsDataType = 'array';
   /**

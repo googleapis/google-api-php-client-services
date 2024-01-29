@@ -37,6 +37,7 @@ class ProjectsLocationsAgentsTestCasesResults extends \Google\Service\Resource
    * `projects//locations//agents//testCases//results/`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDialogflowCxV3TestCaseResult
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -71,6 +72,7 @@ class ProjectsLocationsAgentsTestCasesResults extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request.
    * @return GoogleCloudDialogflowCxV3ListTestCaseResultsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAgentsTestCasesResults($parent, $optParams = [])
   {

@@ -19,10 +19,6 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCard extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent
-   */
-  public $cardContent;
   protected $cardContentType = GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent::class;
   protected $cardContentDataType = '';
   /**

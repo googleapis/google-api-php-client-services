@@ -24,10 +24,6 @@ class GoogleCloudDialogflowV2beta1SuggestDialogflowAssistsResponse extends \Goog
    * @var int
    */
   public $contextSize;
-  /**
-   * @var GoogleCloudDialogflowV2beta1DialogflowAssistAnswer[]
-   */
-  public $dialogflowAssistAnswers;
   protected $dialogflowAssistAnswersType = GoogleCloudDialogflowV2beta1DialogflowAssistAnswer::class;
   protected $dialogflowAssistAnswersDataType = 'array';
   /**

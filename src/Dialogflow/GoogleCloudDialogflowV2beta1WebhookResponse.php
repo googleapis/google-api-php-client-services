@@ -24,16 +24,8 @@ class GoogleCloudDialogflowV2beta1WebhookResponse extends \Google\Collection
    * @var bool
    */
   public $endInteraction;
-  /**
-   * @var GoogleCloudDialogflowV2beta1EventInput
-   */
-  public $followupEventInput;
   protected $followupEventInputType = GoogleCloudDialogflowV2beta1EventInput::class;
   protected $followupEventInputDataType = '';
-  /**
-   * @var GoogleCloudDialogflowV2beta1IntentMessage[]
-   */
-  public $fulfillmentMessages;
   protected $fulfillmentMessagesType = GoogleCloudDialogflowV2beta1IntentMessage::class;
   protected $fulfillmentMessagesDataType = 'array';
   /**
@@ -44,20 +36,12 @@ class GoogleCloudDialogflowV2beta1WebhookResponse extends \Google\Collection
    * @var bool
    */
   public $liveAgentHandoff;
-  /**
-   * @var GoogleCloudDialogflowV2beta1Context[]
-   */
-  public $outputContexts;
   protected $outputContextsType = GoogleCloudDialogflowV2beta1Context::class;
   protected $outputContextsDataType = 'array';
   /**
    * @var array[]
    */
   public $payload;
-  /**
-   * @var GoogleCloudDialogflowV2beta1SessionEntityType[]
-   */
-  public $sessionEntityTypes;
   protected $sessionEntityTypesType = GoogleCloudDialogflowV2beta1SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
   /**

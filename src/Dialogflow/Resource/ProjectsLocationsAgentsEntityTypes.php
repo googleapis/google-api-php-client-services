@@ -50,6 +50,7 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
    * are supported. Note: languages must be enabled in the agent before they can
    * be used.
    * @return GoogleCloudDialogflowCxV3EntityType
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDialogflowCxV3EntityType $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
    * the entity type will be changed to '@sys.any' and intent parameter of the
    * entity type will be removed).
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -97,6 +99,7 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
    * are supported. Note: languages must be enabled in the agent before they can
    * be used.
    * @return GoogleCloudDialogflowCxV3EntityType
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -124,6 +127,7 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request.
    * @return GoogleCloudDialogflowCxV3ListEntityTypesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAgentsEntityTypes($parent, $optParams = [])
   {
@@ -152,6 +156,7 @@ class ProjectsLocationsAgentsEntityTypes extends \Google\Service\Resource
    * be used.
    * @opt_param string updateMask The mask to control which fields get updated.
    * @return GoogleCloudDialogflowCxV3EntityType
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDialogflowCxV3EntityType $postBody, $optParams = [])
   {

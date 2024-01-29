@@ -56,6 +56,7 @@ class ProjectsLocationsAgentsEnvironmentsSessions extends \Google\Service\Resour
    * @param GoogleCloudDialogflowCxV3DetectIntentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDialogflowCxV3DetectIntentResponse
+   * @throws \Google\Service\Exception
    */
   public function detectIntent($session, GoogleCloudDialogflowCxV3DetectIntentRequest $postBody, $optParams = [])
   {
@@ -80,6 +81,7 @@ class ProjectsLocationsAgentsEnvironmentsSessions extends \Google\Service\Resour
    * @param GoogleCloudDialogflowCxV3FulfillIntentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDialogflowCxV3FulfillIntentResponse
+   * @throws \Google\Service\Exception
    */
   public function fulfillIntent($session, GoogleCloudDialogflowCxV3FulfillIntentRequest $postBody, $optParams = [])
   {
@@ -103,6 +105,7 @@ class ProjectsLocationsAgentsEnvironmentsSessions extends \Google\Service\Resour
    * @param GoogleCloudDialogflowCxV3MatchIntentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDialogflowCxV3MatchIntentResponse
+   * @throws \Google\Service\Exception
    */
   public function matchIntent($session, GoogleCloudDialogflowCxV3MatchIntentRequest $postBody, $optParams = [])
   {
@@ -131,6 +134,7 @@ class ProjectsLocationsAgentsEnvironmentsSessions extends \Google\Service\Resour
    * @param GoogleCloudDialogflowCxV3DetectIntentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDialogflowCxV3DetectIntentResponse
+   * @throws \Google\Service\Exception
    */
   public function serverStreamingDetectIntent($session, GoogleCloudDialogflowCxV3DetectIntentRequest $postBody, $optParams = [])
   {

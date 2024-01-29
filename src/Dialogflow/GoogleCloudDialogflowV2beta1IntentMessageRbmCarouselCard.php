@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCard extends \Google\Collection
 {
   protected $collection_key = 'cardContents';
-  /**
-   * @var GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent[]
-   */
-  public $cardContents;
   protected $cardContentsType = GoogleCloudDialogflowV2beta1IntentMessageRbmCardContent::class;
   protected $cardContentsDataType = 'array';
   /**

@@ -49,6 +49,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudDialogflowCxV3Environment $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDialogflowCxV3Environment $postBody, $optParams = [])
   {
@@ -63,6 +64,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * `projects//locations//agents//environments/`.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudDialogflowCxV3DeployFlowRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function deployFlow($environment, GoogleCloudDialogflowCxV3DeployFlowRequest $postBody, $optParams = [])
   {
@@ -96,6 +99,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * `projects//locations//agents//environments/`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDialogflowCxV3Environment
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -116,6 +120,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request.
    * @return GoogleCloudDialogflowCxV3ListEnvironmentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAgentsEnvironments($parent, $optParams = [])
   {
@@ -136,6 +141,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request.
    * @return GoogleCloudDialogflowCxV3LookupEnvironmentHistoryResponse
+   * @throws \Google\Service\Exception
    */
   public function lookupEnvironmentHistory($name, $optParams = [])
   {
@@ -160,6 +166,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * @opt_param string updateMask Required. The mask to control which fields get
    * updated.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDialogflowCxV3Environment $postBody, $optParams = [])
   {
@@ -180,6 +187,7 @@ class ProjectsLocationsAgentsEnvironments extends \Google\Service\Resource
    * @param GoogleCloudDialogflowCxV3RunContinuousTestRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function runContinuousTest($environment, GoogleCloudDialogflowCxV3RunContinuousTestRequest $postBody, $optParams = [])
   {

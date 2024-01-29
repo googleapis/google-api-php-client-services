@@ -43,6 +43,7 @@ class ProjectsLocationsAgentsGenerators extends \Google\Service\Resource
    * following fields: * `Generator.prompt_text.text` If not specified, the
    * agent's default language is used.
    * @return GoogleCloudDialogflowCxV3Generator
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDialogflowCxV3Generator $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsLocationsAgentsGenerators extends \Google\Service\Resource
    * the generator, as well as any references to the generator (i.e. Generator) in
    * fulfillments.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -80,6 +82,7 @@ class ProjectsLocationsAgentsGenerators extends \Google\Service\Resource
    *
    * @opt_param string languageCode The language to list generators for.
    * @return GoogleCloudDialogflowCxV3Generator
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -101,6 +104,7 @@ class ProjectsLocationsAgentsGenerators extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request.
    * @return GoogleCloudDialogflowCxV3ListGeneratorsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAgentsGenerators($parent, $optParams = [])
   {
@@ -121,6 +125,7 @@ class ProjectsLocationsAgentsGenerators extends \Google\Service\Resource
    * @opt_param string updateMask The mask to control which fields get updated. If
    * the mask is not present, all fields will be updated.
    * @return GoogleCloudDialogflowCxV3Generator
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDialogflowCxV3Generator $postBody, $optParams = [])
   {

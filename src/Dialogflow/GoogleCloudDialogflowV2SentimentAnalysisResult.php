@@ -19,10 +19,6 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2SentimentAnalysisResult extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowV2Sentiment
-   */
-  public $queryTextSentiment;
   protected $queryTextSentimentType = GoogleCloudDialogflowV2Sentiment::class;
   protected $queryTextSentimentDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowV2KnowledgeOperationMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowV2ExportOperationMetadata
-   */
-  public $exportOperationMetadata;
   protected $exportOperationMetadataType = GoogleCloudDialogflowV2ExportOperationMetadata::class;
   protected $exportOperationMetadataDataType = '';
   /**

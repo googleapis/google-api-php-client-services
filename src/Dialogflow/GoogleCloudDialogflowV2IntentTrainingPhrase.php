@@ -24,10 +24,6 @@ class GoogleCloudDialogflowV2IntentTrainingPhrase extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudDialogflowV2IntentTrainingPhrasePart[]
-   */
-  public $parts;
   protected $partsType = GoogleCloudDialogflowV2IntentTrainingPhrasePart::class;
   protected $partsDataType = 'array';
   /**

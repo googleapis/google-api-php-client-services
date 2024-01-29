@@ -52,6 +52,7 @@ class ProjectsLocationsAgentsTransitionRouteGroups extends \Google\Service\Resou
    * are supported. Note: languages must be enabled in the agent before they can
    * be used.
    * @return GoogleCloudDialogflowCxV3TransitionRouteGroup
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDialogflowCxV3TransitionRouteGroup $postBody, $optParams = [])
   {
@@ -77,6 +78,7 @@ class ProjectsLocationsAgentsTransitionRouteGroups extends \Google\Service\Resou
    * set to true, Dialogflow will remove the transition route group, as well as
    * any reference to it.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -101,6 +103,7 @@ class ProjectsLocationsAgentsTransitionRouteGroups extends \Google\Service\Resou
    * are supported. Note: languages must be enabled in the agent before they can
    * be used.
    * @return GoogleCloudDialogflowCxV3TransitionRouteGroup
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -130,6 +133,7 @@ class ProjectsLocationsAgentsTransitionRouteGroups extends \Google\Service\Resou
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request.
    * @return GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAgentsTransitionRouteGroups($parent, $optParams = [])
   {
@@ -160,6 +164,7 @@ class ProjectsLocationsAgentsTransitionRouteGroups extends \Google\Service\Resou
    * be used.
    * @opt_param string updateMask The mask to control which fields get updated.
    * @return GoogleCloudDialogflowCxV3TransitionRouteGroup
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDialogflowCxV3TransitionRouteGroup $postBody, $optParams = [])
   {
