@@ -20,10 +20,6 @@ namespace Google\Service\CloudKMS;
 class ListEkmConnectionsResponse extends \Google\Collection
 {
   protected $collection_key = 'ekmConnections';
-  /**
-   * @var EkmConnection[]
-   */
-  public $ekmConnections;
   protected $ekmConnectionsType = EkmConnection::class;
   protected $ekmConnectionsDataType = 'array';
   /**

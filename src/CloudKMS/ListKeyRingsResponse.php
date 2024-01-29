@@ -20,10 +20,6 @@ namespace Google\Service\CloudKMS;
 class ListKeyRingsResponse extends \Google\Collection
 {
   protected $collection_key = 'keyRings';
-  /**
-   * @var KeyRing[]
-   */
-  public $keyRings;
   protected $keyRingsType = KeyRing::class;
   protected $keyRingsDataType = 'array';
   /**
