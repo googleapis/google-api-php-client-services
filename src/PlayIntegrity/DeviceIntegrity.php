@@ -24,10 +24,6 @@ class DeviceIntegrity extends \Google\Collection
    * @var string[]
    */
   public $deviceRecognitionVerdict;
-  /**
-   * @var RecentDeviceActivity
-   */
-  public $recentDeviceActivity;
   protected $recentDeviceActivityType = RecentDeviceActivity::class;
   protected $recentDeviceActivityDataType = '';
 
