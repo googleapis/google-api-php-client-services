@@ -19,10 +19,6 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3beta1ExportIntentsResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowCxV3beta1InlineDestination
-   */
-  public $intentsContent;
   protected $intentsContentType = GoogleCloudDialogflowCxV3beta1InlineDestination::class;
   protected $intentsContentDataType = '';
   /**

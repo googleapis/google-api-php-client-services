@@ -20,20 +20,12 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
 {
   protected $collection_key = 'datasets';
-  /**
-   * @var GoogleCloudDialogflowV2ArticleSuggestionModelMetadata
-   */
-  public $articleSuggestionModelMetadata;
   protected $articleSuggestionModelMetadataType = GoogleCloudDialogflowV2ArticleSuggestionModelMetadata::class;
   protected $articleSuggestionModelMetadataDataType = '';
   /**
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudDialogflowV2InputDataset[]
-   */
-  public $datasets;
   protected $datasetsType = GoogleCloudDialogflowV2InputDataset::class;
   protected $datasetsDataType = 'array';
   /**
@@ -48,10 +40,6 @@ class GoogleCloudDialogflowV2ConversationModel extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudDialogflowV2SmartReplyModelMetadata
-   */
-  public $smartReplyModelMetadata;
   protected $smartReplyModelMetadataType = GoogleCloudDialogflowV2SmartReplyModelMetadata::class;
   protected $smartReplyModelMetadataDataType = '';
   /**

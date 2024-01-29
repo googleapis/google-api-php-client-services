@@ -23,10 +23,6 @@ class GoogleCloudDialogflowCxV3VariantsHistory extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var GoogleCloudDialogflowCxV3VersionVariants
-   */
-  public $versionVariants;
   protected $versionVariantsType = GoogleCloudDialogflowCxV3VersionVariants::class;
   protected $versionVariantsDataType = '';
 
