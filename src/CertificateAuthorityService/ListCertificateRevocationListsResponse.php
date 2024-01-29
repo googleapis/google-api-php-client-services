@@ -20,10 +20,6 @@ namespace Google\Service\CertificateAuthorityService;
 class ListCertificateRevocationListsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var CertificateRevocationList[]
-   */
-  public $certificateRevocationLists;
   protected $certificateRevocationListsType = CertificateRevocationList::class;
   protected $certificateRevocationListsDataType = 'array';
   /**

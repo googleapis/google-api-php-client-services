@@ -23,10 +23,6 @@ class SubordinateConfig extends \Google\Model
    * @var string
    */
   public $certificateAuthority;
-  /**
-   * @var SubordinateConfigChain
-   */
-  public $pemIssuerChain;
   protected $pemIssuerChainType = SubordinateConfigChain::class;
   protected $pemIssuerChainDataType = '';
 

@@ -27,10 +27,6 @@ class CertificateTemplate extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var CertificateIdentityConstraints
-   */
-  public $identityConstraints;
   protected $identityConstraintsType = CertificateIdentityConstraints::class;
   protected $identityConstraintsDataType = '';
   /**
@@ -45,16 +41,8 @@ class CertificateTemplate extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var CertificateExtensionConstraints
-   */
-  public $passthroughExtensions;
   protected $passthroughExtensionsType = CertificateExtensionConstraints::class;
   protected $passthroughExtensionsDataType = '';
-  /**
-   * @var X509Parameters
-   */
-  public $predefinedValues;
   protected $predefinedValuesType = X509Parameters::class;
   protected $predefinedValuesDataType = '';
   /**

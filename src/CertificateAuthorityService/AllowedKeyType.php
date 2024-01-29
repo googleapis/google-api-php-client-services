@@ -19,16 +19,8 @@ namespace Google\Service\CertificateAuthorityService;
 
 class AllowedKeyType extends \Google\Model
 {
-  /**
-   * @var EcKeyType
-   */
-  public $ellipticCurve;
   protected $ellipticCurveType = EcKeyType::class;
   protected $ellipticCurveDataType = '';
-  /**
-   * @var RsaKeyType
-   */
-  public $rsa;
   protected $rsaType = RsaKeyType::class;
   protected $rsaDataType = '';
 

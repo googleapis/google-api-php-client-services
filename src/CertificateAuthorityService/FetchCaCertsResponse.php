@@ -20,10 +20,6 @@ namespace Google\Service\CertificateAuthorityService;
 class FetchCaCertsResponse extends \Google\Collection
 {
   protected $collection_key = 'caCerts';
-  /**
-   * @var CertChain[]
-   */
-  public $caCerts;
   protected $caCertsType = CertChain::class;
   protected $caCertsDataType = 'array';
 

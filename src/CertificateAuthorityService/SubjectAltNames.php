@@ -20,10 +20,6 @@ namespace Google\Service\CertificateAuthorityService;
 class SubjectAltNames extends \Google\Collection
 {
   protected $collection_key = 'uris';
-  /**
-   * @var X509Extension[]
-   */
-  public $customSans;
   protected $customSansType = X509Extension::class;
   protected $customSansDataType = 'array';
   /**
