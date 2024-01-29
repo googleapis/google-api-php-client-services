@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class DocumentStyleSuggestionState extends \Google\Model
 {
-  /**
-   * @var BackgroundSuggestionState
-   */
-  public $backgroundSuggestionState;
   protected $backgroundSuggestionStateType = BackgroundSuggestionState::class;
   protected $backgroundSuggestionStateDataType = '';
   /**
@@ -81,10 +77,6 @@ class DocumentStyleSuggestionState extends \Google\Model
    * @var bool
    */
   public $pageNumberStartSuggested;
-  /**
-   * @var SizeSuggestionState
-   */
-  public $pageSizeSuggestionState;
   protected $pageSizeSuggestionStateType = SizeSuggestionState::class;
   protected $pageSizeSuggestionStateDataType = '';
   /**

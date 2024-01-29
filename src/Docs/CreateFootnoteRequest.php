@@ -19,16 +19,8 @@ namespace Google\Service\Docs;
 
 class CreateFootnoteRequest extends \Google\Model
 {
-  /**
-   * @var EndOfSegmentLocation
-   */
-  public $endOfSegmentLocation;
   protected $endOfSegmentLocationType = EndOfSegmentLocation::class;
   protected $endOfSegmentLocationDataType = '';
-  /**
-   * @var Location
-   */
-  public $location;
   protected $locationType = Location::class;
   protected $locationDataType = '';
 

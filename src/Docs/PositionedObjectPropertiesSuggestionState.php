@@ -19,16 +19,8 @@ namespace Google\Service\Docs;
 
 class PositionedObjectPropertiesSuggestionState extends \Google\Model
 {
-  /**
-   * @var EmbeddedObjectSuggestionState
-   */
-  public $embeddedObjectSuggestionState;
   protected $embeddedObjectSuggestionStateType = EmbeddedObjectSuggestionState::class;
   protected $embeddedObjectSuggestionStateDataType = '';
-  /**
-   * @var PositionedObjectPositioningSuggestionState
-   */
-  public $positioningSuggestionState;
   protected $positioningSuggestionStateType = PositionedObjectPositioningSuggestionState::class;
   protected $positioningSuggestionStateDataType = '';
 

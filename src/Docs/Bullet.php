@@ -27,10 +27,6 @@ class Bullet extends \Google\Model
    * @var int
    */
   public $nestingLevel;
-  /**
-   * @var TextStyle
-   */
-  public $textStyle;
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
 

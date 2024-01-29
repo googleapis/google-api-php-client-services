@@ -23,16 +23,8 @@ class NamedStyleSuggestionState extends \Google\Model
    * @var string
    */
   public $namedStyleType;
-  /**
-   * @var ParagraphStyleSuggestionState
-   */
-  public $paragraphStyleSuggestionState;
   protected $paragraphStyleSuggestionStateType = ParagraphStyleSuggestionState::class;
   protected $paragraphStyleSuggestionStateDataType = '';
-  /**
-   * @var TextStyleSuggestionState
-   */
-  public $textStyleSuggestionState;
   protected $textStyleSuggestionStateType = TextStyleSuggestionState::class;
   protected $textStyleSuggestionStateDataType = '';
 

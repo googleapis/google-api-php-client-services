@@ -20,10 +20,6 @@ namespace Google\Service\Docs;
 class TableOfContents extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
-  /**
-   * @var StructuralElement[]
-   */
-  public $content;
   protected $contentType = StructuralElement::class;
   protected $contentDataType = 'array';
   /**

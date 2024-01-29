@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class TableColumnProperties extends \Google\Model
 {
-  /**
-   * @var Dimension
-   */
-  public $width;
   protected $widthDataType = '';
   /**
    * @var string

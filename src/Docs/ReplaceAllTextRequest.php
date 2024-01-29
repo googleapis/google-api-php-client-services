@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class ReplaceAllTextRequest extends \Google\Model
 {
-  /**
-   * @var SubstringMatchCriteria
-   */
-  public $containsText;
   protected $containsTextType = SubstringMatchCriteria::class;
   protected $containsTextDataType = '';
   /**

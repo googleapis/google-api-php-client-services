@@ -20,10 +20,6 @@ namespace Google\Service\Docs;
 class NamedStyles extends \Google\Collection
 {
   protected $collection_key = 'styles';
-  /**
-   * @var NamedStyle[]
-   */
-  public $styles;
   protected $stylesType = NamedStyle::class;
   protected $stylesDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Docs;
 class ListPropertiesSuggestionState extends \Google\Collection
 {
   protected $collection_key = 'nestingLevelsSuggestionStates';
-  /**
-   * @var NestingLevelSuggestionState[]
-   */
-  public $nestingLevelsSuggestionStates;
   protected $nestingLevelsSuggestionStatesType = NestingLevelSuggestionState::class;
   protected $nestingLevelsSuggestionStatesDataType = 'array';
 

@@ -23,10 +23,6 @@ class InsertTableColumnRequest extends \Google\Model
    * @var bool
    */
   public $insertRight;
-  /**
-   * @var TableCellLocation
-   */
-  public $tableCellLocation;
   protected $tableCellLocationType = TableCellLocation::class;
   protected $tableCellLocationDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Docs;
 
 class SuggestedTableRowStyle extends \Google\Model
 {
-  /**
-   * @var TableRowStyle
-   */
-  public $tableRowStyle;
   protected $tableRowStyleType = TableRowStyle::class;
   protected $tableRowStyleDataType = '';
-  /**
-   * @var TableRowStyleSuggestionState
-   */
-  public $tableRowStyleSuggestionState;
   protected $tableRowStyleSuggestionStateType = TableRowStyleSuggestionState::class;
   protected $tableRowStyleSuggestionStateDataType = '';
 

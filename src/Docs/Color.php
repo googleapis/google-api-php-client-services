@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class Color extends \Google\Model
 {
-  /**
-   * @var RgbColor
-   */
-  public $rgbColor;
   protected $rgbColorType = RgbColor::class;
   protected $rgbColorDataType = '';
 

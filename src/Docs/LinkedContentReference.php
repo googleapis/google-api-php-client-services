@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class LinkedContentReference extends \Google\Model
 {
-  /**
-   * @var SheetsChartReference
-   */
-  public $sheetsChartReference;
   protected $sheetsChartReferenceType = SheetsChartReference::class;
   protected $sheetsChartReferenceDataType = '';
 

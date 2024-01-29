@@ -23,10 +23,6 @@ class CreateParagraphBulletsRequest extends \Google\Model
    * @var string
    */
   public $bulletPreset;
-  /**
-   * @var Range
-   */
-  public $range;
   protected $rangeType = Range::class;
   protected $rangeDataType = '';
 

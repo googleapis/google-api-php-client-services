@@ -19,16 +19,8 @@ namespace Google\Service\Docs;
 
 class SuggestedInlineObjectProperties extends \Google\Model
 {
-  /**
-   * @var InlineObjectProperties
-   */
-  public $inlineObjectProperties;
   protected $inlineObjectPropertiesType = InlineObjectProperties::class;
   protected $inlineObjectPropertiesDataType = '';
-  /**
-   * @var InlineObjectPropertiesSuggestionState
-   */
-  public $inlineObjectPropertiesSuggestionState;
   protected $inlineObjectPropertiesSuggestionStateType = InlineObjectPropertiesSuggestionState::class;
   protected $inlineObjectPropertiesSuggestionStateDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class EmbeddedObjectBorder extends \Google\Model
 {
-  /**
-   * @var OptionalColor
-   */
-  public $color;
   protected $colorType = OptionalColor::class;
   protected $colorDataType = '';
   /**
@@ -33,10 +29,6 @@ class EmbeddedObjectBorder extends \Google\Model
    * @var string
    */
   public $propertyState;
-  /**
-   * @var Dimension
-   */
-  public $width;
   protected $widthType = Dimension::class;
   protected $widthDataType = '';
 

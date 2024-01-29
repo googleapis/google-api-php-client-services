@@ -20,10 +20,6 @@ namespace Google\Service\Docs;
 class SectionBreak extends \Google\Collection
 {
   protected $collection_key = 'suggestedInsertionIds';
-  /**
-   * @var SectionStyle
-   */
-  public $sectionStyle;
   protected $sectionStyleType = SectionStyle::class;
   protected $sectionStyleDataType = '';
   /**

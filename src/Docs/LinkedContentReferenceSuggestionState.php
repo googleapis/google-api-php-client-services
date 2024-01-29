@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class LinkedContentReferenceSuggestionState extends \Google\Model
 {
-  /**
-   * @var SheetsChartReferenceSuggestionState
-   */
-  public $sheetsChartReferenceSuggestionState;
   protected $sheetsChartReferenceSuggestionStateType = SheetsChartReferenceSuggestionState::class;
   protected $sheetsChartReferenceSuggestionStateDataType = '';
 

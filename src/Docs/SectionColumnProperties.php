@@ -19,16 +19,8 @@ namespace Google\Service\Docs;
 
 class SectionColumnProperties extends \Google\Model
 {
-  /**
-   * @var Dimension
-   */
-  public $paddingEnd;
   protected $paddingEndType = Dimension::class;
   protected $paddingEndDataType = '';
-  /**
-   * @var Dimension
-   */
-  public $width;
   protected $widthType = Dimension::class;
   protected $widthDataType = '';
 

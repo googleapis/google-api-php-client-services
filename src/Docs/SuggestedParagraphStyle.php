@@ -19,16 +19,8 @@ namespace Google\Service\Docs;
 
 class SuggestedParagraphStyle extends \Google\Model
 {
-  /**
-   * @var ParagraphStyle
-   */
-  public $paragraphStyle;
   protected $paragraphStyleType = ParagraphStyle::class;
   protected $paragraphStyleDataType = '';
-  /**
-   * @var ParagraphStyleSuggestionState
-   */
-  public $paragraphStyleSuggestionState;
   protected $paragraphStyleSuggestionStateType = ParagraphStyleSuggestionState::class;
   protected $paragraphStyleSuggestionStateDataType = '';
 

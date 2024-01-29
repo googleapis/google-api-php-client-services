@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class CreateHeaderRequest extends \Google\Model
 {
-  /**
-   * @var Location
-   */
-  public $sectionBreakLocation;
   protected $sectionBreakLocationType = Location::class;
   protected $sectionBreakLocationDataType = '';
   /**
