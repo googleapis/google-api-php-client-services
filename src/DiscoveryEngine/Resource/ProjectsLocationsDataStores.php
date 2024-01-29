@@ -68,6 +68,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * The field must be a UTF-8 encoded string with a length limit of 128
    * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return GoogleCloudDiscoveryengineV1betaCompleteQueryResponse
+   * @throws \Google\Service\Exception
    */
   public function completeQuery($dataStore, $optParams = [])
   {
@@ -95,6 +96,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * standard with a length limit of 63 characters. Otherwise, an INVALID_ARGUMENT
    * error is returned.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDiscoveryengineV1betaDataStore $postBody, $optParams = [])
   {
@@ -113,6 +115,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * returned.
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -131,6 +134,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * returned.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaDataStore
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -148,6 +152,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * PERMISSION_DENIED error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaSiteSearchEngine
+   * @throws \Google\Service\Exception
    */
   public function getSiteSearchEngine($name, $optParams = [])
   {
@@ -179,6 +184,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * DataStoreService.ListDataStores must match the call that provided the page
    * token. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return GoogleCloudDiscoveryengineV1betaListDataStoresResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDataStores($parent, $optParams = [])
   {
@@ -200,6 +206,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * to update. If an unsupported or unknown field is provided, an
    * INVALID_ARGUMENT error is returned.
    * @return GoogleCloudDiscoveryengineV1betaDataStore
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDiscoveryengineV1betaDataStore $postBody, $optParams = [])
   {

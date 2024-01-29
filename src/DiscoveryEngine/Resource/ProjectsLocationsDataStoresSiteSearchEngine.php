@@ -42,6 +42,7 @@ class ProjectsLocationsDataStoresSiteSearchEngine extends \Google\Service\Resour
    * @param GoogleCloudDiscoveryengineV1betaDisableAdvancedSiteSearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function disableAdvancedSiteSearch($siteSearchEngine, GoogleCloudDiscoveryengineV1betaDisableAdvancedSiteSearchRequest $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsLocationsDataStoresSiteSearchEngine extends \Google\Service\Resour
    * @param GoogleCloudDiscoveryengineV1betaEnableAdvancedSiteSearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function enableAdvancedSiteSearch($siteSearchEngine, GoogleCloudDiscoveryengineV1betaEnableAdvancedSiteSearchRequest $postBody, $optParams = [])
   {
@@ -75,6 +77,7 @@ class ProjectsLocationsDataStoresSiteSearchEngine extends \Google\Service\Resour
    * @param GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function recrawlUris($siteSearchEngine, GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest $postBody, $optParams = [])
   {
