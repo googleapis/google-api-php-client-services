@@ -44,10 +44,6 @@ class UserRole extends \Google\Collection
    * @var string
    */
   public $parentUserRoleId;
-  /**
-   * @var UserRolePermission[]
-   */
-  public $permissions;
   protected $permissionsType = UserRolePermission::class;
   protected $permissionsDataType = 'array';
   /**

@@ -28,10 +28,6 @@ class TargetingTemplatesListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var TargetingTemplate[]
-   */
-  public $targetingTemplates;
   protected $targetingTemplatesType = TargetingTemplate::class;
   protected $targetingTemplatesDataType = 'array';
 

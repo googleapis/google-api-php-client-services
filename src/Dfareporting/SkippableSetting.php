@@ -23,16 +23,8 @@ class SkippableSetting extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var VideoOffset
-   */
-  public $progressOffset;
   protected $progressOffsetType = VideoOffset::class;
   protected $progressOffsetDataType = '';
-  /**
-   * @var VideoOffset
-   */
-  public $skipOffset;
   protected $skipOffsetType = VideoOffset::class;
   protected $skipOffsetDataType = '';
   /**

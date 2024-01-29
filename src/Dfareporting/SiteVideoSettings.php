@@ -19,10 +19,6 @@ namespace Google\Service\Dfareporting;
 
 class SiteVideoSettings extends \Google\Model
 {
-  /**
-   * @var SiteCompanionSetting
-   */
-  public $companionSettings;
   protected $companionSettingsType = SiteCompanionSetting::class;
   protected $companionSettingsDataType = '';
   /**
@@ -33,10 +29,6 @@ class SiteVideoSettings extends \Google\Model
    * @var bool
    */
   public $obaEnabled;
-  /**
-   * @var ObaIcon
-   */
-  public $obaSettings;
   protected $obaSettingsType = ObaIcon::class;
   protected $obaSettingsDataType = '';
   /**
@@ -47,16 +39,8 @@ class SiteVideoSettings extends \Google\Model
    * @var string
    */
   public $publisherSpecificationId;
-  /**
-   * @var SiteSkippableSetting
-   */
-  public $skippableSettings;
   protected $skippableSettingsType = SiteSkippableSetting::class;
   protected $skippableSettingsDataType = '';
-  /**
-   * @var SiteTranscodeSetting
-   */
-  public $transcodeSettings;
   protected $transcodeSettingsType = SiteTranscodeSetting::class;
   protected $transcodeSettingsDataType = '';
 
