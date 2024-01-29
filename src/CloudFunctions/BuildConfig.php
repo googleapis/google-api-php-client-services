@@ -19,10 +19,6 @@ namespace Google\Service\CloudFunctions;
 
 class BuildConfig extends \Google\Model
 {
-  /**
-   * @var AutomaticUpdatePolicy
-   */
-  public $automaticUpdatePolicy;
   protected $automaticUpdatePolicyType = AutomaticUpdatePolicy::class;
   protected $automaticUpdatePolicyDataType = '';
   /**
@@ -45,10 +41,6 @@ class BuildConfig extends \Google\Model
    * @var string[]
    */
   public $environmentVariables;
-  /**
-   * @var OnDeployUpdatePolicy
-   */
-  public $onDeployUpdatePolicy;
   protected $onDeployUpdatePolicyType = OnDeployUpdatePolicy::class;
   protected $onDeployUpdatePolicyDataType = '';
   /**
@@ -59,16 +51,8 @@ class BuildConfig extends \Google\Model
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var Source
-   */
-  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
-  /**
-   * @var SourceProvenance
-   */
-  public $sourceProvenance;
   protected $sourceProvenanceType = SourceProvenance::class;
   protected $sourceProvenanceDataType = '';
   /**

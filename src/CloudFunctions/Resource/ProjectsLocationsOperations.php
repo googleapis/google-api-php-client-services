@@ -38,6 +38,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * @param string $name The name of the operation resource.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * which is returned by a previous list call. Pagination is only supported when
    * querying for a specific function.
    * @return ListOperationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsOperations($name, $optParams = [])
   {

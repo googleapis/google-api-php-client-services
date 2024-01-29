@@ -20,10 +20,6 @@ namespace Google\Service\CloudFunctions;
 class ListRuntimesResponse extends \Google\Collection
 {
   protected $collection_key = 'runtimes';
-  /**
-   * @var Runtime[]
-   */
-  public $runtimes;
   protected $runtimesType = Runtime::class;
   protected $runtimesDataType = 'array';
 

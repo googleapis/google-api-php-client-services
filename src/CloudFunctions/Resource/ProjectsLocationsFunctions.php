@@ -53,6 +53,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * become the final component of the function's resource name. This value should
    * be 4-63 characters, and valid characters are /a-z-/.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CloudfunctionsFunction $postBody, $optParams = [])
   {
@@ -69,6 +70,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * deleted.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -88,6 +90,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @param GenerateDownloadUrlRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GenerateDownloadUrlResponse
+   * @throws \Google\Service\Exception
    */
   public function generateDownloadUrl($name, GenerateDownloadUrlRequest $postBody, $optParams = [])
   {
@@ -116,6 +119,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @param GenerateUploadUrlRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GenerateUploadUrlResponse
+   * @throws \Google\Service\Exception
    */
   public function generateUploadUrl($parent, GenerateUploadUrlRequest $postBody, $optParams = [])
   {
@@ -131,6 +135,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * be obtained.
    * @param array $optParams Optional parameters.
    * @return CloudfunctionsFunction
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -161,6 +166,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -194,6 +200,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * `ListFunctions` call, and that the system should return the next page of
    * data.
    * @return ListFunctionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsFunctions($parent, $optParams = [])
   {
@@ -212,6 +219,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @opt_param string updateMask The list of fields to be updated. If no field
    * mask is provided, all provided fields in the request will be updated.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, CloudfunctionsFunction $postBody, $optParams = [])
   {
@@ -231,6 +239,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -253,6 +262,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

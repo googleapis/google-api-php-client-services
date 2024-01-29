@@ -19,10 +19,6 @@ namespace Google\Service\CloudFunctions;
 
 class GenerateUploadUrlResponse extends \Google\Model
 {
-  /**
-   * @var StorageSource
-   */
-  public $storageSource;
   protected $storageSourceType = StorageSource::class;
   protected $storageSourceDataType = '';
   /**

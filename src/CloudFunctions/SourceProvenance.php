@@ -23,16 +23,8 @@ class SourceProvenance extends \Google\Model
    * @var string
    */
   public $gitUri;
-  /**
-   * @var RepoSource
-   */
-  public $resolvedRepoSource;
   protected $resolvedRepoSourceType = RepoSource::class;
   protected $resolvedRepoSourceDataType = '';
-  /**
-   * @var StorageSource
-   */
-  public $resolvedStorageSource;
   protected $resolvedStorageSourceType = StorageSource::class;
   protected $resolvedStorageSourceDataType = '';
 

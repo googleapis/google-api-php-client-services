@@ -23,16 +23,8 @@ class Source extends \Google\Model
    * @var string
    */
   public $gitUri;
-  /**
-   * @var RepoSource
-   */
-  public $repoSource;
   protected $repoSourceType = RepoSource::class;
   protected $repoSourceDataType = '';
-  /**
-   * @var StorageSource
-   */
-  public $storageSource;
   protected $storageSourceType = StorageSource::class;
   protected $storageSourceDataType = '';
 
