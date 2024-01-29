@@ -19,10 +19,6 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2QuoteInfo extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2DateTime
-   */
-  public $dateTime;
   protected $dateTimeType = GooglePrivacyDlpV2DateTime::class;
   protected $dateTimeDataType = '';
 

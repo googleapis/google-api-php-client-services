@@ -19,22 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2LargeCustomDictionaryConfig extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2BigQueryField
-   */
-  public $bigQueryField;
   protected $bigQueryFieldType = GooglePrivacyDlpV2BigQueryField::class;
   protected $bigQueryFieldDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2CloudStorageFileSet
-   */
-  public $cloudStorageFileSet;
   protected $cloudStorageFileSetType = GooglePrivacyDlpV2CloudStorageFileSet::class;
   protected $cloudStorageFileSetDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2CloudStoragePath
-   */
-  public $outputPath;
   protected $outputPathType = GooglePrivacyDlpV2CloudStoragePath::class;
   protected $outputPathDataType = '';
 

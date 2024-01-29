@@ -54,6 +54,7 @@ class OrganizationsInspectTemplates extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CreateInspectTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2InspectTemplate
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GooglePrivacyDlpV2CreateInspectTemplateRequest $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class OrganizationsInspectTemplates extends \Google\Service\Resource
    * id/inspectTemplates/432452342.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -88,6 +90,7 @@ class OrganizationsInspectTemplates extends \Google\Service\Resource
    * id/inspectTemplates/432452342.
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2InspectTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -127,6 +130,7 @@ class OrganizationsInspectTemplates extends \Google\Service\Resource
    * @opt_param string pageToken Page token to continue retrieval. Comes from the
    * previous call to `ListInspectTemplates`.
    * @return GooglePrivacyDlpV2ListInspectTemplatesResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsInspectTemplates($parent, $optParams = [])
   {
@@ -145,6 +149,7 @@ class OrganizationsInspectTemplates extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2UpdateInspectTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2InspectTemplate
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GooglePrivacyDlpV2UpdateInspectTemplateRequest $postBody, $optParams = [])
   {

@@ -54,6 +54,7 @@ class OrganizationsDeidentifyTemplates extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CreateDeidentifyTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DeidentifyTemplate
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GooglePrivacyDlpV2CreateDeidentifyTemplateRequest $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class OrganizationsDeidentifyTemplates extends \Google\Service\Resource
    * id/deidentifyTemplates/432452342.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -88,6 +90,7 @@ class OrganizationsDeidentifyTemplates extends \Google\Service\Resource
    * id/deidentifyTemplates/432452342.
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DeidentifyTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -128,6 +131,7 @@ class OrganizationsDeidentifyTemplates extends \Google\Service\Resource
    * @opt_param string pageToken Page token to continue retrieval. Comes from the
    * previous call to `ListDeidentifyTemplates`.
    * @return GooglePrivacyDlpV2ListDeidentifyTemplatesResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsDeidentifyTemplates($parent, $optParams = [])
   {
@@ -147,6 +151,7 @@ class OrganizationsDeidentifyTemplates extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DeidentifyTemplate
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GooglePrivacyDlpV2UpdateDeidentifyTemplateRequest $postBody, $optParams = [])
   {

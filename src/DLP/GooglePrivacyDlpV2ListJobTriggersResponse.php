@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ListJobTriggersResponse extends \Google\Collection
 {
   protected $collection_key = 'jobTriggers';
-  /**
-   * @var GooglePrivacyDlpV2JobTrigger[]
-   */
-  public $jobTriggers;
   protected $jobTriggersType = GooglePrivacyDlpV2JobTrigger::class;
   protected $jobTriggersDataType = 'array';
   /**

@@ -45,6 +45,7 @@ class InfoTypes extends \Google\Service\Resource
    * @opt_param string parent The parent resource name. The format of this value
    * is as follows: locations/ LOCATION_ID
    * @return GooglePrivacyDlpV2ListInfoTypesResponse
+   * @throws \Google\Service\Exception
    */
   public function listInfoTypes($optParams = [])
   {

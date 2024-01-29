@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2TableOptions extends \Google\Collection
 {
   protected $collection_key = 'identifyingFields';
-  /**
-   * @var GooglePrivacyDlpV2FieldId[]
-   */
-  public $identifyingFields;
   protected $identifyingFieldsType = GooglePrivacyDlpV2FieldId::class;
   protected $identifyingFieldsDataType = 'array';
 

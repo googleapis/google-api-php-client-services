@@ -24,10 +24,6 @@ class GooglePrivacyDlpV2KMapEstimationQuasiIdValues extends \Google\Collection
    * @var string
    */
   public $estimatedAnonymity;
-  /**
-   * @var GooglePrivacyDlpV2Value[]
-   */
-  public $quasiIdsValues;
   protected $quasiIdsValuesType = GooglePrivacyDlpV2Value::class;
   protected $quasiIdsValuesDataType = 'array';
 

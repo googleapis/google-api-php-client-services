@@ -20,20 +20,12 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2StoredInfoType extends \Google\Collection
 {
   protected $collection_key = 'pendingVersions';
-  /**
-   * @var GooglePrivacyDlpV2StoredInfoTypeVersion
-   */
-  public $currentVersion;
   protected $currentVersionType = GooglePrivacyDlpV2StoredInfoTypeVersion::class;
   protected $currentVersionDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var GooglePrivacyDlpV2StoredInfoTypeVersion[]
-   */
-  public $pendingVersions;
   protected $pendingVersionsType = GooglePrivacyDlpV2StoredInfoTypeVersion::class;
   protected $pendingVersionsDataType = 'array';
 

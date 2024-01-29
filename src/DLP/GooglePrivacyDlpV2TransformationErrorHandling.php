@@ -19,16 +19,8 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2TransformationErrorHandling extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2LeaveUntransformed
-   */
-  public $leaveUntransformed;
   protected $leaveUntransformedType = GooglePrivacyDlpV2LeaveUntransformed::class;
   protected $leaveUntransformedDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2ThrowError
-   */
-  public $throwError;
   protected $throwErrorType = GooglePrivacyDlpV2ThrowError::class;
   protected $throwErrorDataType = '';
 

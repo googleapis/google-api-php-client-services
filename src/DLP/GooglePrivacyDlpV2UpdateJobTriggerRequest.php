@@ -19,10 +19,6 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2UpdateJobTriggerRequest extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2JobTrigger
-   */
-  public $jobTrigger;
   protected $jobTriggerType = GooglePrivacyDlpV2JobTrigger::class;
   protected $jobTriggerDataType = '';
   /**

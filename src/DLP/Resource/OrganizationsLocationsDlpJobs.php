@@ -75,6 +75,7 @@ class OrganizationsLocationsDlpJobs extends \Google\Service\Resource
    * @opt_param string pageToken The standard list page token.
    * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
    * @return GooglePrivacyDlpV2ListDlpJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsLocationsDlpJobs($parent, $optParams = [])
   {

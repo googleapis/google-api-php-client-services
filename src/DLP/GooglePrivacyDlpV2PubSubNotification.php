@@ -27,10 +27,6 @@ class GooglePrivacyDlpV2PubSubNotification extends \Google\Model
    * @var string
    */
   public $event;
-  /**
-   * @var GooglePrivacyDlpV2DataProfilePubSubCondition
-   */
-  public $pubsubCondition;
   protected $pubsubConditionType = GooglePrivacyDlpV2DataProfilePubSubCondition::class;
   protected $pubsubConditionDataType = '';
   /**

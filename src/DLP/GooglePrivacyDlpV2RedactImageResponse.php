@@ -23,10 +23,6 @@ class GooglePrivacyDlpV2RedactImageResponse extends \Google\Model
    * @var string
    */
   public $extractedText;
-  /**
-   * @var GooglePrivacyDlpV2InspectResult
-   */
-  public $inspectResult;
   protected $inspectResultType = GooglePrivacyDlpV2InspectResult::class;
   protected $inspectResultDataType = '';
   /**

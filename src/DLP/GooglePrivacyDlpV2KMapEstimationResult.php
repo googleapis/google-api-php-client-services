@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2KMapEstimationResult extends \Google\Collection
 {
   protected $collection_key = 'kMapEstimationHistogram';
-  /**
-   * @var GooglePrivacyDlpV2KMapEstimationHistogramBucket[]
-   */
-  public $kMapEstimationHistogram;
   protected $kMapEstimationHistogramType = GooglePrivacyDlpV2KMapEstimationHistogramBucket::class;
   protected $kMapEstimationHistogramDataType = 'array';
 

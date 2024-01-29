@@ -45,6 +45,7 @@ class ProjectsDlpJobs extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CancelDlpJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GooglePrivacyDlpV2CancelDlpJobRequest $postBody, $optParams = [])
   {
@@ -72,6 +73,7 @@ class ProjectsDlpJobs extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CreateDlpJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DlpJob
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GooglePrivacyDlpV2CreateDlpJobRequest $postBody, $optParams = [])
   {
@@ -89,6 +91,7 @@ class ProjectsDlpJobs extends \Google\Service\Resource
    * @param string $name Required. The name of the DlpJob resource to be deleted.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -105,6 +108,7 @@ class ProjectsDlpJobs extends \Google\Service\Resource
    * @param string $name Required. The name of the DlpJob resource.
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DlpJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -158,6 +162,7 @@ class ProjectsDlpJobs extends \Google\Service\Resource
    * @opt_param string pageToken The standard list page token.
    * @opt_param string type The type of job. Defaults to `DlpJobType.INSPECT`
    * @return GooglePrivacyDlpV2ListDlpJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsDlpJobs($parent, $optParams = [])
   {

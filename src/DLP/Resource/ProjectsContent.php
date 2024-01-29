@@ -55,6 +55,7 @@ class ProjectsContent extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2DeidentifyContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DeidentifyContentResponse
+   * @throws \Google\Service\Exception
    */
   public function deidentify($parent, GooglePrivacyDlpV2DeidentifyContentRequest $postBody, $optParams = [])
   {
@@ -83,6 +84,7 @@ class ProjectsContent extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2InspectContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2InspectContentResponse
+   * @throws \Google\Service\Exception
    */
   public function inspect($parent, GooglePrivacyDlpV2InspectContentRequest $postBody, $optParams = [])
   {
@@ -107,6 +109,7 @@ class ProjectsContent extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2ReidentifyContentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2ReidentifyContentResponse
+   * @throws \Google\Service\Exception
    */
   public function reidentify($parent, GooglePrivacyDlpV2ReidentifyContentRequest $postBody, $optParams = [])
   {

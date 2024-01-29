@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ListDeidentifyTemplatesResponse extends \Google\Collection
 {
   protected $collection_key = 'deidentifyTemplates';
-  /**
-   * @var GooglePrivacyDlpV2DeidentifyTemplate[]
-   */
-  public $deidentifyTemplates;
   protected $deidentifyTemplatesType = GooglePrivacyDlpV2DeidentifyTemplate::class;
   protected $deidentifyTemplatesDataType = 'array';
   /**

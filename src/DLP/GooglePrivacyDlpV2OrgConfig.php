@@ -19,10 +19,6 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2OrgConfig extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2DiscoveryStartingLocation
-   */
-  public $location;
   protected $locationType = GooglePrivacyDlpV2DiscoveryStartingLocation::class;
   protected $locationDataType = '';
   /**
