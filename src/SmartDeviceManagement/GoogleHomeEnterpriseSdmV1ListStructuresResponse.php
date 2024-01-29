@@ -20,10 +20,6 @@ namespace Google\Service\SmartDeviceManagement;
 class GoogleHomeEnterpriseSdmV1ListStructuresResponse extends \Google\Collection
 {
   protected $collection_key = 'structures';
-  /**
-   * @var GoogleHomeEnterpriseSdmV1Structure[]
-   */
-  public $structures;
   protected $structuresType = GoogleHomeEnterpriseSdmV1Structure::class;
   protected $structuresDataType = 'array';
 

@@ -37,6 +37,7 @@ class EnterprisesStructures extends \Google\Service\Resource
    * "enterprises/XYZ/structures/ABC".
    * @param array $optParams Optional parameters.
    * @return GoogleHomeEnterpriseSdmV1Structure
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -54,6 +55,7 @@ class EnterprisesStructures extends \Google\Service\Resource
    *
    * @opt_param string filter Optional filter to list structures.
    * @return GoogleHomeEnterpriseSdmV1ListStructuresResponse
+   * @throws \Google\Service\Exception
    */
   public function listEnterprisesStructures($parent, $optParams = [])
   {

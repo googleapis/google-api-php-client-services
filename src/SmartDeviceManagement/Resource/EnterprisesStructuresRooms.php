@@ -37,6 +37,7 @@ class EnterprisesStructuresRooms extends \Google\Service\Resource
    * "enterprises/XYZ/structures/ABC/rooms/123".
    * @param array $optParams Optional parameters.
    * @return GoogleHomeEnterpriseSdmV1Room
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -51,6 +52,7 @@ class EnterprisesStructuresRooms extends \Google\Service\Resource
    * example: "enterprises/XYZ/structures/ABC".
    * @param array $optParams Optional parameters.
    * @return GoogleHomeEnterpriseSdmV1ListRoomsResponse
+   * @throws \Google\Service\Exception
    */
   public function listEnterprisesStructuresRooms($parent, $optParams = [])
   {

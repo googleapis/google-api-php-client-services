@@ -20,10 +20,6 @@ namespace Google\Service\SmartDeviceManagement;
 class GoogleHomeEnterpriseSdmV1ListRoomsResponse extends \Google\Collection
 {
   protected $collection_key = 'rooms';
-  /**
-   * @var GoogleHomeEnterpriseSdmV1Room[]
-   */
-  public $rooms;
   protected $roomsType = GoogleHomeEnterpriseSdmV1Room::class;
   protected $roomsDataType = 'array';
 
