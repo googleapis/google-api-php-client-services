@@ -55,6 +55,7 @@ class SpacesMembers extends \Google\Service\Resource
    * @param Membership $postBody
    * @param array $optParams Optional parameters.
    * @return Membership
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Membership $postBody, $optParams = [])
   {
@@ -80,6 +81,7 @@ class SpacesMembers extends \Google\Service\Resource
    * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
    * @param array $optParams Optional parameters.
    * @return Membership
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -108,6 +110,7 @@ class SpacesMembers extends \Google\Service\Resource
    * email of the Google Chat user.
    * @param array $optParams Optional parameters.
    * @return Membership
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -169,6 +172,7 @@ class SpacesMembers extends \Google\Service\Resource
    * aren't returned. Currently requires [user
    * authentication](https://developers.google.com/chat/api/guides/auth/users).
    * @return ListMembershipsResponse
+   * @throws \Google\Service\Exception
    */
   public function listSpacesMembers($parent, $optParams = [])
   {

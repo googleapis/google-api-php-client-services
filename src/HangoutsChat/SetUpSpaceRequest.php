@@ -20,20 +20,12 @@ namespace Google\Service\HangoutsChat;
 class SetUpSpaceRequest extends \Google\Collection
 {
   protected $collection_key = 'memberships';
-  /**
-   * @var Membership[]
-   */
-  public $memberships;
   protected $membershipsType = Membership::class;
   protected $membershipsDataType = 'array';
   /**
    * @var string
    */
   public $requestId;
-  /**
-   * @var Space
-   */
-  public $space;
   protected $spaceType = Space::class;
   protected $spaceDataType = '';
 

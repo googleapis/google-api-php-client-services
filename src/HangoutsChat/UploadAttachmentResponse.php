@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class UploadAttachmentResponse extends \Google\Model
 {
-  /**
-   * @var AttachmentDataRef
-   */
-  public $attachmentDataRef;
   protected $attachmentDataRefType = AttachmentDataRef::class;
   protected $attachmentDataRefDataType = '';
 

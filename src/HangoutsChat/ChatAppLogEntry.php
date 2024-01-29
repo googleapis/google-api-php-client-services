@@ -27,10 +27,6 @@ class ChatAppLogEntry extends \Google\Model
    * @var string
    */
   public $deploymentFunction;
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
 

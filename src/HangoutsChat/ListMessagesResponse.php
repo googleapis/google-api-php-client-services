@@ -20,10 +20,6 @@ namespace Google\Service\HangoutsChat;
 class ListMessagesResponse extends \Google\Collection
 {
   protected $collection_key = 'messages';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Suggestions extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var GoogleAppsCardV1SuggestionItem[]
-   */
-  public $items;
   protected $itemsType = GoogleAppsCardV1SuggestionItem::class;
   protected $itemsDataType = 'array';
 

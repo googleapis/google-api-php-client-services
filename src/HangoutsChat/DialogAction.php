@@ -19,16 +19,8 @@ namespace Google\Service\HangoutsChat;
 
 class DialogAction extends \Google\Model
 {
-  /**
-   * @var ActionStatus
-   */
-  public $actionStatus;
   protected $actionStatusType = ActionStatus::class;
   protected $actionStatusDataType = '';
-  /**
-   * @var Dialog
-   */
-  public $dialog;
   protected $dialogType = Dialog::class;
   protected $dialogDataType = '';
 

@@ -20,16 +20,8 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1SelectionInput extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var GoogleAppsCardV1Action
-   */
-  public $externalDataSource;
   protected $externalDataSourceType = GoogleAppsCardV1Action::class;
   protected $externalDataSourceDataType = '';
-  /**
-   * @var GoogleAppsCardV1SelectionItem[]
-   */
-  public $items;
   protected $itemsType = GoogleAppsCardV1SelectionItem::class;
   protected $itemsDataType = 'array';
   /**
@@ -48,16 +40,8 @@ class GoogleAppsCardV1SelectionInput extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleAppsCardV1Action
-   */
-  public $onChangeAction;
   protected $onChangeActionType = GoogleAppsCardV1Action::class;
   protected $onChangeActionDataType = '';
-  /**
-   * @var GoogleAppsCardV1PlatformDataSource
-   */
-  public $platformDataSource;
   protected $platformDataSourceType = GoogleAppsCardV1PlatformDataSource::class;
   protected $platformDataSourceDataType = '';
   /**

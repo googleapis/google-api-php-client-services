@@ -43,6 +43,7 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * @param Reaction $postBody
    * @param array $optParams Optional parameters.
    * @return Reaction
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Reaction $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * `spaces/{space}/messages/{message}/reactions/{reaction}`
    * @param array $optParams Optional parameters.
    * @return ChatEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -110,6 +112,7 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * the call that provided the page token. Passing a different value might lead
    * to unexpected results.
    * @return ListReactionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listSpacesMessagesReactions($parent, $optParams = [])
   {

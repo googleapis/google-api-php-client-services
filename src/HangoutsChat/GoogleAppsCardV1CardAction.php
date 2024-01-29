@@ -23,10 +23,6 @@ class GoogleAppsCardV1CardAction extends \Google\Model
    * @var string
    */
   public $actionLabel;
-  /**
-   * @var GoogleAppsCardV1OnClick
-   */
-  public $onClick;
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
 

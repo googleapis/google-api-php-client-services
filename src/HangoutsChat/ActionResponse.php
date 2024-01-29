@@ -19,20 +19,12 @@ namespace Google\Service\HangoutsChat;
 
 class ActionResponse extends \Google\Model
 {
-  /**
-   * @var DialogAction
-   */
-  public $dialogAction;
   protected $dialogActionType = DialogAction::class;
   protected $dialogActionDataType = '';
   /**
    * @var string
    */
   public $type;
-  /**
-   * @var UpdatedWidget
-   */
-  public $updatedWidget;
   protected $updatedWidgetType = UpdatedWidget::class;
   protected $updatedWidgetDataType = '';
   /**

@@ -31,10 +31,6 @@ class ImageButton extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var OnClick
-   */
-  public $onClick;
   protected $onClickType = OnClick::class;
   protected $onClickDataType = '';
 

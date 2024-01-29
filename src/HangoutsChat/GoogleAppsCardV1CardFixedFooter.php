@@ -19,16 +19,8 @@ namespace Google\Service\HangoutsChat;
 
 class GoogleAppsCardV1CardFixedFooter extends \Google\Model
 {
-  /**
-   * @var GoogleAppsCardV1Button
-   */
-  public $primaryButton;
   protected $primaryButtonType = GoogleAppsCardV1Button::class;
   protected $primaryButtonDataType = '';
-  /**
-   * @var GoogleAppsCardV1Button
-   */
-  public $secondaryButton;
   protected $secondaryButtonType = GoogleAppsCardV1Button::class;
   protected $secondaryButtonDataType = '';
 

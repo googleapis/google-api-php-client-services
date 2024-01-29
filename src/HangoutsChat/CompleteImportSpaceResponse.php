@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class CompleteImportSpaceResponse extends \Google\Model
 {
-  /**
-   * @var Space
-   */
-  public $space;
   protected $spaceType = Space::class;
   protected $spaceDataType = '';
 

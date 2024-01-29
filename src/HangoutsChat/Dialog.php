@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class Dialog extends \Google\Model
 {
-  /**
-   * @var GoogleAppsCardV1Card
-   */
-  public $body;
   protected $bodyType = GoogleAppsCardV1Card::class;
   protected $bodyDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class CommonEventObject extends \Google\Model
 {
-  /**
-   * @var Inputs[]
-   */
-  public $formInputs;
   protected $formInputsType = Inputs::class;
   protected $formInputsDataType = 'map';
   /**
@@ -41,10 +37,6 @@ class CommonEventObject extends \Google\Model
    * @var string
    */
   public $platform;
-  /**
-   * @var TimeZone
-   */
-  public $timeZone;
   protected $timeZoneType = TimeZone::class;
   protected $timeZoneDataType = '';
   /**

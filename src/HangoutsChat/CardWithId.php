@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class CardWithId extends \Google\Model
 {
-  /**
-   * @var GoogleAppsCardV1Card
-   */
-  public $card;
   protected $cardType = GoogleAppsCardV1Card::class;
   protected $cardDataType = '';
   /**

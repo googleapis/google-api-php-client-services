@@ -20,10 +20,6 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1Columns extends \Google\Collection
 {
   protected $collection_key = 'columnItems';
-  /**
-   * @var GoogleAppsCardV1Column[]
-   */
-  public $columnItems;
   protected $columnItemsType = GoogleAppsCardV1Column::class;
   protected $columnItemsDataType = 'array';
 

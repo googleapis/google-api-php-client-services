@@ -23,10 +23,6 @@ class UserMentionMetadata extends \Google\Model
    * @var string
    */
   public $type;
-  /**
-   * @var User
-   */
-  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

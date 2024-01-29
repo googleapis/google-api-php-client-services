@@ -42,6 +42,7 @@ class SpacesMessagesAttachments extends \Google\Service\Resource
    * `spaces/messages/attachments`.
    * @param array $optParams Optional parameters.
    * @return Attachment
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {

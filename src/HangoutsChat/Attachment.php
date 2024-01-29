@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class Attachment extends \Google\Model
 {
-  /**
-   * @var AttachmentDataRef
-   */
-  public $attachmentDataRef;
   protected $attachmentDataRefType = AttachmentDataRef::class;
   protected $attachmentDataRefDataType = '';
   /**
@@ -37,10 +33,6 @@ class Attachment extends \Google\Model
    * @var string
    */
   public $downloadUri;
-  /**
-   * @var DriveDataRef
-   */
-  public $driveDataRef;
   protected $driveDataRefType = DriveDataRef::class;
   protected $driveDataRefDataType = '';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\HangoutsChat;
 
 class Button extends \Google\Model
 {
-  /**
-   * @var ImageButton
-   */
-  public $imageButton;
   protected $imageButtonType = ImageButton::class;
   protected $imageButtonDataType = '';
-  /**
-   * @var TextButton
-   */
-  public $textButton;
   protected $textButtonType = TextButton::class;
   protected $textButtonDataType = '';
 

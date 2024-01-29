@@ -20,10 +20,6 @@ namespace Google\Service\HangoutsChat;
 class SelectionItems extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var GoogleAppsCardV1SelectionItem[]
-   */
-  public $items;
   protected $itemsType = GoogleAppsCardV1SelectionItem::class;
   protected $itemsDataType = 'array';
 

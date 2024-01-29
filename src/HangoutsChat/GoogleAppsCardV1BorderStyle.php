@@ -23,10 +23,6 @@ class GoogleAppsCardV1BorderStyle extends \Google\Model
    * @var int
    */
   public $cornerRadius;
-  /**
-   * @var Color
-   */
-  public $strokeColor;
   protected $strokeColorType = Color::class;
   protected $strokeColorDataType = '';
   /**

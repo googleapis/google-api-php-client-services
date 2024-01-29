@@ -19,16 +19,8 @@ namespace Google\Service\HangoutsChat;
 
 class DeprecatedEvent extends \Google\Model
 {
-  /**
-   * @var FormAction
-   */
-  public $action;
   protected $actionType = FormAction::class;
   protected $actionDataType = '';
-  /**
-   * @var CommonEventObject
-   */
-  public $common;
   protected $commonType = CommonEventObject::class;
   protected $commonDataType = '';
   /**
@@ -47,16 +39,8 @@ class DeprecatedEvent extends \Google\Model
    * @var bool
    */
   public $isDialogEvent;
-  /**
-   * @var Message
-   */
-  public $message;
   protected $messageType = Message::class;
   protected $messageDataType = '';
-  /**
-   * @var Space
-   */
-  public $space;
   protected $spaceType = Space::class;
   protected $spaceDataType = '';
   /**
@@ -71,10 +55,6 @@ class DeprecatedEvent extends \Google\Model
    * @var string
    */
   public $type;
-  /**
-   * @var User
-   */
-  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

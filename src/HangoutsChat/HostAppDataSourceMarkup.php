@@ -19,10 +19,6 @@ namespace Google\Service\HangoutsChat;
 
 class HostAppDataSourceMarkup extends \Google\Model
 {
-  /**
-   * @var ChatClientDataSourceMarkup
-   */
-  public $chatDataSource;
   protected $chatDataSourceType = ChatClientDataSourceMarkup::class;
   protected $chatDataSourceDataType = '';
 

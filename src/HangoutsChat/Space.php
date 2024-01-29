@@ -47,10 +47,6 @@ class Space extends \Google\Model
    * @var bool
    */
   public $singleUserBotDm;
-  /**
-   * @var SpaceDetails
-   */
-  public $spaceDetails;
   protected $spaceDetailsType = SpaceDetails::class;
   protected $spaceDetailsDataType = '';
   /**

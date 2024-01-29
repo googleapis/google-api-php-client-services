@@ -27,16 +27,8 @@ class Membership extends \Google\Model
    * @var string
    */
   public $deleteTime;
-  /**
-   * @var Group
-   */
-  public $groupMember;
   protected $groupMemberType = Group::class;
   protected $groupMemberDataType = '';
-  /**
-   * @var User
-   */
-  public $member;
   protected $memberType = User::class;
   protected $memberDataType = '';
   /**

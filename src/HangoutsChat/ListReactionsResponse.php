@@ -24,10 +24,6 @@ class ListReactionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Reaction[]
-   */
-  public $reactions;
   protected $reactionsType = Reaction::class;
   protected $reactionsDataType = 'array';
 

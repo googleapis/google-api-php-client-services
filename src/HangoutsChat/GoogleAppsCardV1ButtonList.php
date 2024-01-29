@@ -20,10 +20,6 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1ButtonList extends \Google\Collection
 {
   protected $collection_key = 'buttons';
-  /**
-   * @var GoogleAppsCardV1Button[]
-   */
-  public $buttons;
   protected $buttonsType = GoogleAppsCardV1Button::class;
   protected $buttonsDataType = 'array';
 
