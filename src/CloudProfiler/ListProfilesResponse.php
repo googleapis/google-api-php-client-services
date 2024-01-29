@@ -24,10 +24,6 @@ class ListProfilesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Profile[]
-   */
-  public $profiles;
   protected $profilesType = Profile::class;
   protected $profilesDataType = 'array';
   /**
