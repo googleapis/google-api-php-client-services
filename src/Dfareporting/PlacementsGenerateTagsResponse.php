@@ -24,10 +24,6 @@ class PlacementsGenerateTagsResponse extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var PlacementTag[]
-   */
-  public $placementTags;
   protected $placementTagsType = PlacementTag::class;
   protected $placementTagsDataType = 'array';
 

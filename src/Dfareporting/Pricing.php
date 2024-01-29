@@ -28,10 +28,6 @@ class Pricing extends \Google\Collection
    * @var string
    */
   public $endDate;
-  /**
-   * @var Flight[]
-   */
-  public $flights;
   protected $flightsType = Flight::class;
   protected $flightsDataType = 'array';
   /**

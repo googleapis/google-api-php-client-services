@@ -37,6 +37,7 @@ class TargetingTemplates extends \Google\Service\Resource
    * @param string $id Targeting template ID.
    * @param array $optParams Optional parameters.
    * @return TargetingTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($profileId, $id, $optParams = [])
   {
@@ -51,6 +52,7 @@ class TargetingTemplates extends \Google\Service\Resource
    * @param TargetingTemplate $postBody
    * @param array $optParams Optional parameters.
    * @return TargetingTemplate
+   * @throws \Google\Service\Exception
    */
   public function insert($profileId, TargetingTemplate $postBody, $optParams = [])
   {
@@ -81,6 +83,7 @@ class TargetingTemplates extends \Google\Service\Resource
    * @opt_param string sortField Field by which to sort the list.
    * @opt_param string sortOrder Order of sorted results.
    * @return TargetingTemplatesListResponse
+   * @throws \Google\Service\Exception
    */
   public function listTargetingTemplates($profileId, $optParams = [])
   {
@@ -97,6 +100,7 @@ class TargetingTemplates extends \Google\Service\Resource
    * @param TargetingTemplate $postBody
    * @param array $optParams Optional parameters.
    * @return TargetingTemplate
+   * @throws \Google\Service\Exception
    */
   public function patch($profileId, $id, TargetingTemplate $postBody, $optParams = [])
   {
@@ -111,6 +115,7 @@ class TargetingTemplates extends \Google\Service\Resource
    * @param TargetingTemplate $postBody
    * @param array $optParams Optional parameters.
    * @return TargetingTemplate
+   * @throws \Google\Service\Exception
    */
   public function update($profileId, TargetingTemplate $postBody, $optParams = [])
   {

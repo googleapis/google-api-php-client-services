@@ -42,6 +42,7 @@ class DynamicTargetingKeys extends \Google\Service\Resource
    * @param string $objectType Required. Type of the object of this dynamic
    * targeting key. This is a required field.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($profileId, $objectId, $name, $objectType, $optParams = [])
   {
@@ -60,6 +61,7 @@ class DynamicTargetingKeys extends \Google\Service\Resource
    * @param DynamicTargetingKey $postBody
    * @param array $optParams Optional parameters.
    * @return DynamicTargetingKey
+   * @throws \Google\Service\Exception
    */
   public function insert($profileId, DynamicTargetingKey $postBody, $optParams = [])
   {
@@ -83,6 +85,7 @@ class DynamicTargetingKeys extends \Google\Service\Resource
    * @opt_param string objectType Select only dynamic targeting keys with this
    * object type.
    * @return DynamicTargetingKeysListResponse
+   * @throws \Google\Service\Exception
    */
   public function listDynamicTargetingKeys($profileId, $optParams = [])
   {

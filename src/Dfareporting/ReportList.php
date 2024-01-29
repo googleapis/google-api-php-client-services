@@ -24,10 +24,6 @@ class ReportList extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var Report[]
-   */
-  public $items;
   protected $itemsType = Report::class;
   protected $itemsDataType = 'array';
   /**

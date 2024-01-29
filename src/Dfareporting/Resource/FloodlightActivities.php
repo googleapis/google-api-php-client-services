@@ -37,6 +37,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @param string $profileId User profile ID associated with this request.
    * @param string $id Floodlight activity ID.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($profileId, $id, $optParams = [])
   {
@@ -53,6 +54,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @opt_param string floodlightActivityId Floodlight activity ID for which we
    * want to generate a tag.
    * @return FloodlightActivitiesGenerateTagResponse
+   * @throws \Google\Service\Exception
    */
   public function generatetag($profileId, $optParams = [])
   {
@@ -67,6 +69,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @param string $id Floodlight activity ID.
    * @param array $optParams Optional parameters.
    * @return FloodlightActivity
+   * @throws \Google\Service\Exception
    */
   public function get($profileId, $id, $optParams = [])
   {
@@ -81,6 +84,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @param FloodlightActivity $postBody
    * @param array $optParams Optional parameters.
    * @return FloodlightActivity
+   * @throws \Google\Service\Exception
    */
   public function insert($profileId, FloodlightActivity $postBody, $optParams = [])
   {
@@ -128,6 +132,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @opt_param string tagString Select only floodlight activities with the
    * specified tag string.
    * @return FloodlightActivitiesListResponse
+   * @throws \Google\Service\Exception
    */
   public function listFloodlightActivities($profileId, $optParams = [])
   {
@@ -144,6 +149,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @param FloodlightActivity $postBody
    * @param array $optParams Optional parameters.
    * @return FloodlightActivity
+   * @throws \Google\Service\Exception
    */
   public function patch($profileId, $id, FloodlightActivity $postBody, $optParams = [])
   {
@@ -158,6 +164,7 @@ class FloodlightActivities extends \Google\Service\Resource
    * @param FloodlightActivity $postBody
    * @param array $optParams Optional parameters.
    * @return FloodlightActivity
+   * @throws \Google\Service\Exception
    */
   public function update($profileId, FloodlightActivity $postBody, $optParams = [])
   {

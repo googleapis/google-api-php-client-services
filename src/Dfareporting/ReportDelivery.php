@@ -32,10 +32,6 @@ class ReportDelivery extends \Google\Collection
    * @var string
    */
   public $message;
-  /**
-   * @var Recipient[]
-   */
-  public $recipients;
   protected $recipientsType = Recipient::class;
   protected $recipientsDataType = 'array';
 

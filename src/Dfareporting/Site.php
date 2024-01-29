@@ -32,20 +32,12 @@ class Site extends \Google\Collection
    * @var string
    */
   public $directorySiteId;
-  /**
-   * @var DimensionValue
-   */
-  public $directorySiteIdDimensionValue;
   protected $directorySiteIdDimensionValueType = DimensionValue::class;
   protected $directorySiteIdDimensionValueDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var DimensionValue
-   */
-  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
@@ -60,26 +52,14 @@ class Site extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var SiteContact[]
-   */
-  public $siteContacts;
   protected $siteContactsType = SiteContact::class;
   protected $siteContactsDataType = 'array';
-  /**
-   * @var SiteSettings
-   */
-  public $siteSettings;
   protected $siteSettingsType = SiteSettings::class;
   protected $siteSettingsDataType = '';
   /**
    * @var string
    */
   public $subaccountId;
-  /**
-   * @var SiteVideoSettings
-   */
-  public $videoSettings;
   protected $videoSettingsType = SiteVideoSettings::class;
   protected $videoSettingsDataType = '';
 

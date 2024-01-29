@@ -19,16 +19,8 @@ namespace Google\Service\Dfareporting;
 
 class PopupWindowProperties extends \Google\Model
 {
-  /**
-   * @var Size
-   */
-  public $dimension;
   protected $dimensionType = Size::class;
   protected $dimensionDataType = '';
-  /**
-   * @var OffsetPosition
-   */
-  public $offset;
   protected $offsetType = OffsetPosition::class;
   protected $offsetDataType = '';
   /**

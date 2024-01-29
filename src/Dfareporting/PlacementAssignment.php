@@ -27,10 +27,6 @@ class PlacementAssignment extends \Google\Model
    * @var string
    */
   public $placementId;
-  /**
-   * @var DimensionValue
-   */
-  public $placementIdDimensionValue;
   protected $placementIdDimensionValueType = DimensionValue::class;
   protected $placementIdDimensionValueDataType = '';
   /**
