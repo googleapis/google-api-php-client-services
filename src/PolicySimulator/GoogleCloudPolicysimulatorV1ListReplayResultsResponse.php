@@ -24,10 +24,6 @@ class GoogleCloudPolicysimulatorV1ListReplayResultsResponse extends \Google\Coll
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudPolicysimulatorV1ReplayResult[]
-   */
-  public $replayResults;
   protected $replayResultsType = GoogleCloudPolicysimulatorV1ReplayResult::class;
   protected $replayResultsDataType = 'array';
 

@@ -23,16 +23,8 @@ class GoogleCloudPolicysimulatorV1AccessStateDiff extends \Google\Model
    * @var string
    */
   public $accessChange;
-  /**
-   * @var GoogleCloudPolicysimulatorV1ExplainedAccess
-   */
-  public $baseline;
   protected $baselineType = GoogleCloudPolicysimulatorV1ExplainedAccess::class;
   protected $baselineDataType = '';
-  /**
-   * @var GoogleCloudPolicysimulatorV1ExplainedAccess
-   */
-  public $simulated;
   protected $simulatedType = GoogleCloudPolicysimulatorV1ExplainedAccess::class;
   protected $simulatedDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\PolicySimulator;
 
 class GoogleCloudOrgpolicyV2Policy extends \Google\Model
 {
-  /**
-   * @var GoogleCloudOrgpolicyV2AlternatePolicySpec
-   */
-  public $alternate;
   protected $alternateType = GoogleCloudOrgpolicyV2AlternatePolicySpec::class;
   protected $alternateDataType = '';
-  /**
-   * @var GoogleCloudOrgpolicyV2PolicySpec
-   */
-  public $dryRunSpec;
   protected $dryRunSpecType = GoogleCloudOrgpolicyV2PolicySpec::class;
   protected $dryRunSpecDataType = '';
   /**
@@ -39,10 +31,6 @@ class GoogleCloudOrgpolicyV2Policy extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudOrgpolicyV2PolicySpec
-   */
-  public $spec;
   protected $specType = GoogleCloudOrgpolicyV2PolicySpec::class;
   protected $specDataType = '';
 

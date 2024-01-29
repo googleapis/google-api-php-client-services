@@ -32,16 +32,8 @@ class GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreview extends \Googl
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay
-   */
-  public $overlay;
   protected $overlayType = GoogleCloudPolicysimulatorV1alphaOrgPolicyOverlay::class;
   protected $overlayDataType = '';
-  /**
-   * @var GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreviewResourceCounts
-   */
-  public $resourceCounts;
   protected $resourceCountsType = GoogleCloudPolicysimulatorV1alphaOrgPolicyViolationsPreviewResourceCounts::class;
   protected $resourceCountsDataType = '';
   /**
