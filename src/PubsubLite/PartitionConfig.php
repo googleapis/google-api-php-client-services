@@ -19,10 +19,6 @@ namespace Google\Service\PubsubLite;
 
 class PartitionConfig extends \Google\Model
 {
-  /**
-   * @var Capacity
-   */
-  public $capacity;
   protected $capacityType = Capacity::class;
   protected $capacityDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\PubsubLite;
 
 class ComputeHeadCursorResponse extends \Google\Model
 {
-  /**
-   * @var Cursor
-   */
-  public $headCursor;
   protected $headCursorType = Cursor::class;
   protected $headCursorDataType = '';
 

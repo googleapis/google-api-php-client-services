@@ -23,10 +23,6 @@ class SeekSubscriptionRequest extends \Google\Model
    * @var string
    */
   public $namedTarget;
-  /**
-   * @var TimeTarget
-   */
-  public $timeTarget;
   protected $timeTargetType = TimeTarget::class;
   protected $timeTargetDataType = '';
 
