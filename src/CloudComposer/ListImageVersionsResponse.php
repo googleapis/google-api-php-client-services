@@ -20,10 +20,6 @@ namespace Google\Service\CloudComposer;
 class ListImageVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'imageVersions';
-  /**
-   * @var ImageVersion[]
-   */
-  public $imageVersions;
   protected $imageVersionsType = ImageVersion::class;
   protected $imageVersionsDataType = 'array';
   /**

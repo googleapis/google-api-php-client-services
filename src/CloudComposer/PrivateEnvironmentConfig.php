@@ -43,16 +43,8 @@ class PrivateEnvironmentConfig extends \Google\Model
    * @var bool
    */
   public $enablePrivatelyUsedPublicIps;
-  /**
-   * @var NetworkingConfig
-   */
-  public $networkingConfig;
   protected $networkingConfigType = NetworkingConfig::class;
   protected $networkingConfigDataType = '';
-  /**
-   * @var PrivateClusterConfig
-   */
-  public $privateClusterConfig;
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
   /**

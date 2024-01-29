@@ -49,6 +49,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param Environment $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Environment $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param DatabaseFailoverRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function databaseFailover($environment, DatabaseFailoverRequest $postBody, $optParams = [])
   {
@@ -79,6 +81,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -94,6 +97,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param ExecuteAirflowCommandRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ExecuteAirflowCommandResponse
+   * @throws \Google\Service\Exception
    */
   public function executeAirflowCommand($environment, ExecuteAirflowCommandRequest $postBody, $optParams = [])
   {
@@ -109,6 +113,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
    * @param array $optParams Optional parameters.
    * @return FetchDatabasePropertiesResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchDatabaseProperties($environment, $optParams = [])
   {
@@ -123,6 +128,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
    * @param array $optParams Optional parameters.
    * @return Environment
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -141,6 +147,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @opt_param string pageToken The next_page_token value returned from a
    * previous List request, if any.
    * @return ListEnvironmentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsEnvironments($parent, $optParams = [])
   {
@@ -159,6 +166,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param LoadSnapshotRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function loadSnapshot($environment, LoadSnapshotRequest $postBody, $optParams = [])
   {
@@ -250,6 +258,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * Supported for Cloud Composer environments in versions
    * composer-1.*.*-airflow-*.*.*.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Environment $postBody, $optParams = [])
   {
@@ -266,6 +275,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param PollAirflowCommandRequest $postBody
    * @param array $optParams Optional parameters.
    * @return PollAirflowCommandResponse
+   * @throws \Google\Service\Exception
    */
   public function pollAirflowCommand($environment, PollAirflowCommandRequest $postBody, $optParams = [])
   {
@@ -284,6 +294,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param SaveSnapshotRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function saveSnapshot($environment, SaveSnapshotRequest $postBody, $optParams = [])
   {
@@ -299,6 +310,7 @@ class ProjectsLocationsEnvironments extends \Google\Service\Resource
    * @param StopAirflowCommandRequest $postBody
    * @param array $optParams Optional parameters.
    * @return StopAirflowCommandResponse
+   * @throws \Google\Service\Exception
    */
   public function stopAirflowCommand($environment, StopAirflowCommandRequest $postBody, $optParams = [])
   {

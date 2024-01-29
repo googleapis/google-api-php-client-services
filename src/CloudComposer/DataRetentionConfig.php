@@ -19,10 +19,6 @@ namespace Google\Service\CloudComposer;
 
 class DataRetentionConfig extends \Google\Model
 {
-  /**
-   * @var TaskLogsRetentionConfig
-   */
-  public $taskLogsRetentionConfig;
   protected $taskLogsRetentionConfigType = TaskLogsRetentionConfig::class;
   protected $taskLogsRetentionConfigDataType = '';
 

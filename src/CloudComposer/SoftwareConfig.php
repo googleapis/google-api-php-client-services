@@ -23,10 +23,6 @@ class SoftwareConfig extends \Google\Model
    * @var string[]
    */
   public $airflowConfigOverrides;
-  /**
-   * @var CloudDataLineageIntegration
-   */
-  public $cloudDataLineageIntegration;
   protected $cloudDataLineageIntegrationType = CloudDataLineageIntegration::class;
   protected $cloudDataLineageIntegrationDataType = '';
   /**

@@ -31,22 +31,10 @@ class EnvironmentConfig extends \Google\Model
    * @var string
    */
   public $dagGcsPrefix;
-  /**
-   * @var DataRetentionConfig
-   */
-  public $dataRetentionConfig;
   protected $dataRetentionConfigType = DataRetentionConfig::class;
   protected $dataRetentionConfigDataType = '';
-  /**
-   * @var DatabaseConfig
-   */
-  public $databaseConfig;
   protected $databaseConfigType = DatabaseConfig::class;
   protected $databaseConfigDataType = '';
-  /**
-   * @var EncryptionConfig
-   */
-  public $encryptionConfig;
   protected $encryptionConfigType = EncryptionConfig::class;
   protected $encryptionConfigDataType = '';
   /**
@@ -57,66 +45,30 @@ class EnvironmentConfig extends \Google\Model
    * @var string
    */
   public $gkeCluster;
-  /**
-   * @var MaintenanceWindow
-   */
-  public $maintenanceWindow;
   protected $maintenanceWindowType = MaintenanceWindow::class;
   protected $maintenanceWindowDataType = '';
-  /**
-   * @var MasterAuthorizedNetworksConfig
-   */
-  public $masterAuthorizedNetworksConfig;
   protected $masterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $masterAuthorizedNetworksConfigDataType = '';
-  /**
-   * @var NodeConfig
-   */
-  public $nodeConfig;
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
   /**
    * @var int
    */
   public $nodeCount;
-  /**
-   * @var PrivateEnvironmentConfig
-   */
-  public $privateEnvironmentConfig;
   protected $privateEnvironmentConfigType = PrivateEnvironmentConfig::class;
   protected $privateEnvironmentConfigDataType = '';
-  /**
-   * @var RecoveryConfig
-   */
-  public $recoveryConfig;
   protected $recoveryConfigType = RecoveryConfig::class;
   protected $recoveryConfigDataType = '';
   /**
    * @var string
    */
   public $resilienceMode;
-  /**
-   * @var SoftwareConfig
-   */
-  public $softwareConfig;
   protected $softwareConfigType = SoftwareConfig::class;
   protected $softwareConfigDataType = '';
-  /**
-   * @var WebServerConfig
-   */
-  public $webServerConfig;
   protected $webServerConfigType = WebServerConfig::class;
   protected $webServerConfigDataType = '';
-  /**
-   * @var WebServerNetworkAccessControl
-   */
-  public $webServerNetworkAccessControl;
   protected $webServerNetworkAccessControlType = WebServerNetworkAccessControl::class;
   protected $webServerNetworkAccessControlDataType = '';
-  /**
-   * @var WorkloadsConfig
-   */
-  public $workloadsConfig;
   protected $workloadsConfigType = WorkloadsConfig::class;
   protected $workloadsConfigDataType = '';
 
