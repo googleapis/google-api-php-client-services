@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaListEnginesResponse extends \Google\Collection
 {
   protected $collection_key = 'engines';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaEngine[]
-   */
-  public $engines;
   protected $enginesType = GoogleCloudDiscoveryengineV1betaEngine::class;
   protected $enginesDataType = 'array';
   /**

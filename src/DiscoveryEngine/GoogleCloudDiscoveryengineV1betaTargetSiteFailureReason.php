@@ -19,10 +19,6 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaTargetSiteFailureReason extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaTargetSiteFailureReasonQuotaFailure
-   */
-  public $quotaFailure;
   protected $quotaFailureType = GoogleCloudDiscoveryengineV1betaTargetSiteFailureReasonQuotaFailure::class;
   protected $quotaFailureDataType = '';
 

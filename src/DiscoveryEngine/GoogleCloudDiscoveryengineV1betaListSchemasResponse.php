@@ -24,10 +24,6 @@ class GoogleCloudDiscoveryengineV1betaListSchemasResponse extends \Google\Collec
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSchema[]
-   */
-  public $schemas;
   protected $schemasType = GoogleCloudDiscoveryengineV1betaSchema::class;
   protected $schemasDataType = 'array';
 

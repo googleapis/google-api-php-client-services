@@ -19,10 +19,6 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaTextInput extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaConversationContext
-   */
-  public $context;
   protected $contextType = GoogleCloudDiscoveryengineV1betaConversationContext::class;
   protected $contextDataType = '';
   /**

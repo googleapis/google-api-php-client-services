@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec extends \Google\Collection
 {
   protected $collection_key = 'conditionBoostSpecs';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec[]
-   */
-  public $conditionBoostSpecs;
   protected $conditionBoostSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpecConditionBoostSpec::class;
   protected $conditionBoostSpecsDataType = 'array';
 

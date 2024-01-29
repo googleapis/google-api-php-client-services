@@ -28,10 +28,6 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseFacet extends \Google\Collec
    * @var string
    */
   public $key;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchResponseFacetFacetValue[]
-   */
-  public $values;
   protected $valuesType = GoogleCloudDiscoveryengineV1betaSearchResponseFacetFacetValue::class;
   protected $valuesDataType = 'array';
 

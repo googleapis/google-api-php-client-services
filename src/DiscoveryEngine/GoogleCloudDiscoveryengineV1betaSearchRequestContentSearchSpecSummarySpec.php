@@ -35,16 +35,8 @@ class GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpec 
    * @var string
    */
   public $languageCode;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec
-   */
-  public $modelPromptSpec;
   protected $modelPromptSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelPromptSpec::class;
   protected $modelPromptSpecDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec
-   */
-  public $modelSpec;
   protected $modelSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpecSummarySpecModelSpec::class;
   protected $modelSpecDataType = '';
   /**

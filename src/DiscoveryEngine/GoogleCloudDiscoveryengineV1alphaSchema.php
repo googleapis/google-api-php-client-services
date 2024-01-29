@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaSchema extends \Google\Collection
 {
   protected $collection_key = 'fieldConfigs';
-  /**
-   * @var GoogleCloudDiscoveryengineV1alphaFieldConfig[]
-   */
-  public $fieldConfigs;
   protected $fieldConfigsType = GoogleCloudDiscoveryengineV1alphaFieldConfig::class;
   protected $fieldConfigsDataType = 'array';
   /**

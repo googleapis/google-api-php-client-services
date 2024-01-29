@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
-  /**
-   * @var GoogleRpcStatus[]
-   */
-  public $errorSamples;
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
   /**

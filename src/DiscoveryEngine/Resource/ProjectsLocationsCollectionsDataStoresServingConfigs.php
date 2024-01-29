@@ -48,6 +48,7 @@ class ProjectsLocationsCollectionsDataStoresServingConfigs extends \Google\Servi
    * @param GoogleCloudDiscoveryengineV1betaRecommendRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaRecommendResponse
+   * @throws \Google\Service\Exception
    */
   public function recommend($servingConfig, GoogleCloudDiscoveryengineV1betaRecommendRequest $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ProjectsLocationsCollectionsDataStoresServingConfigs extends \Google\Servi
    * @param GoogleCloudDiscoveryengineV1betaSearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaSearchResponse
+   * @throws \Google\Service\Exception
    */
   public function search($servingConfig, GoogleCloudDiscoveryengineV1betaSearchRequest $postBody, $optParams = [])
   {

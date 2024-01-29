@@ -20,22 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
 {
   protected $collection_key = 'dataStoreIds';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig
-   */
-  public $chatEngineConfig;
   protected $chatEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineChatEngineConfig::class;
   protected $chatEngineConfigDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaEngineChatEngineMetadata
-   */
-  public $chatEngineMetadata;
   protected $chatEngineMetadataType = GoogleCloudDiscoveryengineV1betaEngineChatEngineMetadata::class;
   protected $chatEngineMetadataDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaEngineCommonConfig
-   */
-  public $commonConfig;
   protected $commonConfigType = GoogleCloudDiscoveryengineV1betaEngineCommonConfig::class;
   protected $commonConfigDataType = '';
   /**
@@ -58,10 +46,6 @@ class GoogleCloudDiscoveryengineV1betaEngine extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig
-   */
-  public $searchEngineConfig;
   protected $searchEngineConfigType = GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig::class;
   protected $searchEngineConfigDataType = '';
   /**

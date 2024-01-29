@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
 {
   protected $collection_key = 'facetSpecs';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec
-   */
-  public $boostSpec;
   protected $boostSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec::class;
   protected $boostSpecDataType = '';
   /**
@@ -34,32 +30,16 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $canonicalFilter;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec
-   */
-  public $contentSearchSpec;
   protected $contentSearchSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec::class;
   protected $contentSearchSpecDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec
-   */
-  public $embeddingSpec;
   protected $embeddingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec::class;
   protected $embeddingSpecDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec[]
-   */
-  public $facetSpecs;
   protected $facetSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec::class;
   protected $facetSpecsDataType = 'array';
   /**
    * @var string
    */
   public $filter;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery
-   */
-  public $imageQuery;
   protected $imageQueryType = GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery::class;
   protected $imageQueryDataType = '';
   /**
@@ -86,10 +66,6 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $query;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec
-   */
-  public $queryExpansionSpec;
   protected $queryExpansionSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec::class;
   protected $queryExpansionSpecDataType = '';
   /**
@@ -100,16 +76,8 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var bool
    */
   public $safeSearch;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchRequestSpellCorrectionSpec
-   */
-  public $spellCorrectionSpec;
   protected $spellCorrectionSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestSpellCorrectionSpec::class;
   protected $spellCorrectionSpecDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaUserInfo
-   */
-  public $userInfo;
   protected $userInfoType = GoogleCloudDiscoveryengineV1betaUserInfo::class;
   protected $userInfoDataType = '';
   /**

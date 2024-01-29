@@ -24,10 +24,6 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseSummaryCitation extends \Goo
    * @var string
    */
   public $endIndex;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummaryCitationSource[]
-   */
-  public $sources;
   protected $sourcesType = GoogleCloudDiscoveryengineV1betaSearchResponseSummaryCitationSource::class;
   protected $sourcesDataType = 'array';
   /**

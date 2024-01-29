@@ -45,6 +45,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngine extends \Google\Ser
    * @param GoogleCloudDiscoveryengineV1betaBatchVerifyTargetSitesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function batchVerifyTargetSites($parent, GoogleCloudDiscoveryengineV1betaBatchVerifyTargetSitesRequest $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngine extends \Google\Ser
    * @param GoogleCloudDiscoveryengineV1betaDisableAdvancedSiteSearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function disableAdvancedSiteSearch($siteSearchEngine, GoogleCloudDiscoveryengineV1betaDisableAdvancedSiteSearchRequest $postBody, $optParams = [])
   {
@@ -79,6 +81,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngine extends \Google\Ser
    * @param GoogleCloudDiscoveryengineV1betaEnableAdvancedSiteSearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function enableAdvancedSiteSearch($siteSearchEngine, GoogleCloudDiscoveryengineV1betaEnableAdvancedSiteSearchRequest $postBody, $optParams = [])
   {
@@ -107,6 +110,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngine extends \Google\Ser
    * `FetchDomainVerificationStatus` must match the call that provided the page
    * token.
    * @return GoogleCloudDiscoveryengineV1betaFetchDomainVerificationStatusResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchDomainVerificationStatus($siteSearchEngine, $optParams = [])
   {
@@ -123,6 +127,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngine extends \Google\Ser
    * @param GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function recrawlUris($siteSearchEngine, GoogleCloudDiscoveryengineV1betaRecrawlUrisRequest $postBody, $optParams = [])
   {

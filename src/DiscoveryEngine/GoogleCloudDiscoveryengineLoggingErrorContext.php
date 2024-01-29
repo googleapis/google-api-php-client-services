@@ -19,16 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineLoggingErrorContext extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDiscoveryengineLoggingHttpRequestContext
-   */
-  public $httpRequest;
   protected $httpRequestType = GoogleCloudDiscoveryengineLoggingHttpRequestContext::class;
   protected $httpRequestDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineLoggingSourceLocation
-   */
-  public $reportLocation;
   protected $reportLocationType = GoogleCloudDiscoveryengineLoggingSourceLocation::class;
   protected $reportLocationDataType = '';
 

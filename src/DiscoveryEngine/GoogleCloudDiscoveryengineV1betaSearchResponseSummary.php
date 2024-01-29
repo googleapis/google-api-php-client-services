@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Collection
 {
   protected $collection_key = 'summarySkippedReasons';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes
-   */
-  public $safetyAttributes;
   protected $safetyAttributesType = GoogleCloudDiscoveryengineV1betaSearchResponseSummarySafetyAttributes::class;
   protected $safetyAttributesDataType = '';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudDiscoveryengineV1betaSearchResponseSummary extends \Google\Coll
    * @var string
    */
   public $summaryText;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata
-   */
-  public $summaryWithMetadata;
   protected $summaryWithMetadataType = GoogleCloudDiscoveryengineV1betaSearchResponseSummarySummaryWithMetadata::class;
   protected $summaryWithMetadataDataType = '';
 

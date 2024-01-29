@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaBatchCreateTargetSitesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaCreateTargetSiteRequest[]
-   */
-  public $requests;
   protected $requestsType = GoogleCloudDiscoveryengineV1betaCreateTargetSiteRequest::class;
   protected $requestsDataType = 'array';
 

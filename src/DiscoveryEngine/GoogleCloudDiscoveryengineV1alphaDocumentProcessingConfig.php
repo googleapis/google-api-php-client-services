@@ -23,10 +23,6 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig extends \Google\
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudDiscoveryengineV1alphaOcrConfig
-   */
-  public $ocrConfig;
   protected $ocrConfigType = GoogleCloudDiscoveryengineV1alphaOcrConfig::class;
   protected $ocrConfigDataType = '';
 

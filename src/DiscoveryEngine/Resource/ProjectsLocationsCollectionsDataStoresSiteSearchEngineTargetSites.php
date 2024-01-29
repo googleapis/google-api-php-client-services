@@ -42,6 +42,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * @param GoogleCloudDiscoveryengineV1betaBatchCreateTargetSitesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function batchCreate($parent, GoogleCloudDiscoveryengineV1betaBatchCreateTargetSitesRequest $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * @param GoogleCloudDiscoveryengineV1betaTargetSite $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDiscoveryengineV1betaTargetSite $postBody, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * does not exist, a NOT_FOUND error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -94,6 +97,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * does not exist, a NOT_FOUND error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaTargetSite
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -121,6 +125,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * paginating, all other parameters provided to `ListTargetSites` must match the
    * call that provided the page token.
    * @return GoogleCloudDiscoveryengineV1betaListTargetSitesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites($parent, $optParams = [])
   {
@@ -138,6 +143,7 @@ class ProjectsLocationsCollectionsDataStoresSiteSearchEngineTargetSites extends 
    * @param GoogleCloudDiscoveryengineV1betaTargetSite $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDiscoveryengineV1betaTargetSite $postBody, $optParams = [])
   {

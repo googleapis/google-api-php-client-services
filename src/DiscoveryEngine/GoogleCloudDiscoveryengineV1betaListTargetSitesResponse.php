@@ -24,10 +24,6 @@ class GoogleCloudDiscoveryengineV1betaListTargetSitesResponse extends \Google\Co
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaTargetSite[]
-   */
-  public $targetSites;
   protected $targetSitesType = GoogleCloudDiscoveryengineV1betaTargetSite::class;
   protected $targetSitesDataType = 'array';
   /**

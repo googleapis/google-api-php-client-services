@@ -53,6 +53,7 @@ class ProjectsLocationsCollectionsDataStoresUserEvents extends \Google\Service\R
    * @opt_param string userEvent Required. URL encoded UserEvent proto with a
    * length limit of 2,000,000 characters.
    * @return GoogleApiHttpBody
+   * @throws \Google\Service\Exception
    */
   public function collect($parent, $optParams = [])
   {
@@ -73,6 +74,7 @@ class ProjectsLocationsCollectionsDataStoresUserEvents extends \Google\Service\R
    * @param GoogleCloudDiscoveryengineV1betaImportUserEventsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function import($parent, GoogleCloudDiscoveryengineV1betaImportUserEventsRequest $postBody, $optParams = [])
   {
@@ -89,6 +91,7 @@ class ProjectsLocationsCollectionsDataStoresUserEvents extends \Google\Service\R
    * @param GoogleCloudDiscoveryengineV1betaUserEvent $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaUserEvent
+   * @throws \Google\Service\Exception
    */
   public function write($parent, GoogleCloudDiscoveryengineV1betaUserEvent $postBody, $optParams = [])
   {

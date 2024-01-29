@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesRequestInlineSource extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSuggestionDenyListEntry[]
-   */
-  public $entries;
   protected $entriesType = GoogleCloudDiscoveryengineV1betaSuggestionDenyListEntry::class;
   protected $entriesDataType = 'array';
 

@@ -23,10 +23,6 @@ class GoogleCloudDiscoveryengineV1betaCreateTargetSiteRequest extends \Google\Mo
    * @var string
    */
   public $parent;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaTargetSite
-   */
-  public $targetSite;
   protected $targetSiteType = GoogleCloudDiscoveryengineV1betaTargetSite::class;
   protected $targetSiteDataType = '';
 

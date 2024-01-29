@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaSearchResponseSummaryCitationMetadata extends \Google\Collection
 {
   protected $collection_key = 'citations';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaSearchResponseSummaryCitation[]
-   */
-  public $citations;
   protected $citationsType = GoogleCloudDiscoveryengineV1betaSearchResponseSummaryCitation::class;
   protected $citationsDataType = 'array';
 

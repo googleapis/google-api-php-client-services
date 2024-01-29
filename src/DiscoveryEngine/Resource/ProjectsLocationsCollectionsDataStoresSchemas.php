@@ -45,6 +45,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
    * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
    * of 63 characters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDiscoveryengineV1betaSchema $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
    * ataStores/{data_store}/schemas/{schema}`.
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -75,6 +77,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
    * ataStores/{data_store}/schemas/{schema}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaSchema
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -100,6 +103,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
    * When paginating, all other parameters provided to SchemaService.ListSchemas
    * must match the call that provided the page token.
    * @return GoogleCloudDiscoveryengineV1betaListSchemasResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCollectionsDataStoresSchemas($parent, $optParams = [])
   {
@@ -120,6 +124,7 @@ class ProjectsLocationsCollectionsDataStoresSchemas extends \Google\Service\Reso
    * @opt_param bool allowMissing If set to true, and the Schema is not found, a
    * new Schema will be created. In this situation, `update_mask` is ignored.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDiscoveryengineV1betaSchema $postBody, $optParams = [])
   {

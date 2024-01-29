@@ -24,10 +24,6 @@ class GoogleCloudDiscoveryengineV1betaConversation extends \Google\Collection
    * @var string
    */
   public $endTime;
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaConversationMessage[]
-   */
-  public $messages;
   protected $messagesType = GoogleCloudDiscoveryengineV1betaConversationMessage::class;
   protected $messagesDataType = 'array';
   /**

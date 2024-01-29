@@ -41,6 +41,7 @@ class ProjectsLocationsCollectionsDataStoresSuggestionDenyListEntries extends \G
    * @param GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function import($parent, GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesRequest $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class ProjectsLocationsCollectionsDataStoresSuggestionDenyListEntries extends \G
    * @param GoogleCloudDiscoveryengineV1betaPurgeSuggestionDenyListEntriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function purge($parent, GoogleCloudDiscoveryengineV1betaPurgeSuggestionDenyListEntriesRequest $postBody, $optParams = [])
   {

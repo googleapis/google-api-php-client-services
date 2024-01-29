@@ -45,6 +45,7 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
    * length limit of 63 characters. Otherwise, an INVALID_ARGUMENT error is
    * returned.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDiscoveryengineV1betaEngine $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
    * Engine to delete does not exist, a NOT_FOUND error is returned.
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -77,6 +79,7 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
    * d}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaEngine
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
    * @opt_param int pageSize Optional. Not supported.
    * @opt_param string pageToken Optional. Not supported.
    * @return GoogleCloudDiscoveryengineV1betaListEnginesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCollectionsEngines($parent, $optParams = [])
   {
@@ -119,6 +123,7 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
    * update. If an unsupported or unknown field is provided, an INVALID_ARGUMENT
    * error is returned.
    * @return GoogleCloudDiscoveryengineV1betaEngine
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDiscoveryengineV1betaEngine $postBody, $optParams = [])
   {

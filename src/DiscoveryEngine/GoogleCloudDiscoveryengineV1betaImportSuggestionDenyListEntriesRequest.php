@@ -19,16 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaGcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = GoogleCloudDiscoveryengineV1betaGcsSource::class;
   protected $gcsSourceDataType = '';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesRequestInlineSource
-   */
-  public $inlineSource;
   protected $inlineSourceType = GoogleCloudDiscoveryengineV1betaImportSuggestionDenyListEntriesRequestInlineSource::class;
   protected $inlineSourceDataType = '';
 

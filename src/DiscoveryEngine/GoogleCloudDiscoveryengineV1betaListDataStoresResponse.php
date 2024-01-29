@@ -20,10 +20,6 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaListDataStoresResponse extends \Google\Collection
 {
   protected $collection_key = 'dataStores';
-  /**
-   * @var GoogleCloudDiscoveryengineV1betaDataStore[]
-   */
-  public $dataStores;
   protected $dataStoresType = GoogleCloudDiscoveryengineV1betaDataStore::class;
   protected $dataStoresDataType = 'array';
   /**
