@@ -23,22 +23,10 @@ class UpdateTableCellStyleRequest extends \Google\Model
    * @var string
    */
   public $fields;
-  /**
-   * @var TableCellStyle
-   */
-  public $tableCellStyle;
   protected $tableCellStyleType = TableCellStyle::class;
   protected $tableCellStyleDataType = '';
-  /**
-   * @var TableRange
-   */
-  public $tableRange;
   protected $tableRangeType = TableRange::class;
   protected $tableRangeDataType = '';
-  /**
-   * @var Location
-   */
-  public $tableStartLocation;
   protected $tableStartLocationType = Location::class;
   protected $tableStartLocationDataType = '';
 

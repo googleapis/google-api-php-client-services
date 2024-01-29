@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class UnmergeTableCellsRequest extends \Google\Model
 {
-  /**
-   * @var TableRange
-   */
-  public $tableRange;
   protected $tableRangeType = TableRange::class;
   protected $tableRangeDataType = '';
 

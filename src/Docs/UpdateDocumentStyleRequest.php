@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class UpdateDocumentStyleRequest extends \Google\Model
 {
-  /**
-   * @var DocumentStyle
-   */
-  public $documentStyle;
   protected $documentStyleType = DocumentStyle::class;
   protected $documentStyleDataType = '';
   /**

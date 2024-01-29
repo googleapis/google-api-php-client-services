@@ -23,16 +23,8 @@ class UpdateTextStyleRequest extends \Google\Model
    * @var string
    */
   public $fields;
-  /**
-   * @var Range
-   */
-  public $range;
   protected $rangeType = Range::class;
   protected $rangeDataType = '';
-  /**
-   * @var TextStyle
-   */
-  public $textStyle;
   protected $textStyleType = TextStyle::class;
   protected $textStyleDataType = '';
 

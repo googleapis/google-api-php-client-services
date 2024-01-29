@@ -19,10 +19,6 @@ namespace Google\Service\Docs;
 
 class TextStyle extends \Google\Model
 {
-  /**
-   * @var OptionalColor
-   */
-  public $backgroundColor;
   protected $backgroundColorType = OptionalColor::class;
   protected $backgroundColorDataType = '';
   /**
@@ -33,26 +29,14 @@ class TextStyle extends \Google\Model
    * @var bool
    */
   public $bold;
-  /**
-   * @var Dimension
-   */
-  public $fontSize;
   protected $fontSizeType = Dimension::class;
   protected $fontSizeDataType = '';
-  /**
-   * @var OptionalColor
-   */
-  public $foregroundColor;
   protected $foregroundColorType = OptionalColor::class;
   protected $foregroundColorDataType = '';
   /**
    * @var bool
    */
   public $italic;
-  /**
-   * @var Link
-   */
-  public $link;
   protected $linkType = Link::class;
   protected $linkDataType = '';
   /**
@@ -67,10 +51,6 @@ class TextStyle extends \Google\Model
    * @var bool
    */
   public $underline;
-  /**
-   * @var WeightedFontFamily
-   */
-  public $weightedFontFamily;
   protected $weightedFontFamilyType = WeightedFontFamily::class;
   protected $weightedFontFamilyDataType = '';
 
