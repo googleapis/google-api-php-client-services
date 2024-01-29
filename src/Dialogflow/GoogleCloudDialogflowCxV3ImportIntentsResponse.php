@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ImportIntentsResponse extends \Google\Collection
 {
   protected $collection_key = 'intents';
-  /**
-   * @var GoogleCloudDialogflowCxV3ImportIntentsResponseConflictingResources
-   */
-  public $conflictingResources;
   protected $conflictingResourcesType = GoogleCloudDialogflowCxV3ImportIntentsResponseConflictingResources::class;
   protected $conflictingResourcesDataType = '';
   /**

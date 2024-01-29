@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListFlowsResponse extends \Google\Collection
 {
   protected $collection_key = 'flows';
-  /**
-   * @var GoogleCloudDialogflowCxV3Flow[]
-   */
-  public $flows;
   protected $flowsType = GoogleCloudDialogflowCxV3Flow::class;
   protected $flowsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3KnowledgeConnectorSettings extends \Google\Collection
 {
   protected $collection_key = 'dataStoreConnections';
-  /**
-   * @var GoogleCloudDialogflowCxV3DataStoreConnection[]
-   */
-  public $dataStoreConnections;
   protected $dataStoreConnectionsType = GoogleCloudDialogflowCxV3DataStoreConnection::class;
   protected $dataStoreConnectionsDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class GoogleCloudDialogflowCxV3KnowledgeConnectorSettings extends \Google\Collec
    * @var string
    */
   public $targetPage;
-  /**
-   * @var GoogleCloudDialogflowCxV3Fulfillment
-   */
-  public $triggerFulfillment;
   protected $triggerFulfillmentType = GoogleCloudDialogflowCxV3Fulfillment::class;
   protected $triggerFulfillmentDataType = '';
 

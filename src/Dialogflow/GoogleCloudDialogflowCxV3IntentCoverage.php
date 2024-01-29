@@ -24,10 +24,6 @@ class GoogleCloudDialogflowCxV3IntentCoverage extends \Google\Collection
    * @var float
    */
   public $coverageScore;
-  /**
-   * @var GoogleCloudDialogflowCxV3IntentCoverageIntent[]
-   */
-  public $intents;
   protected $intentsType = GoogleCloudDialogflowCxV3IntentCoverageIntent::class;
   protected $intentsDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3SecuritySettings extends \Google\Collection
 {
   protected $collection_key = 'purgeDataTypes';
-  /**
-   * @var GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings
-   */
-  public $audioExportSettings;
   protected $audioExportSettingsType = GoogleCloudDialogflowCxV3SecuritySettingsAudioExportSettings::class;
   protected $audioExportSettingsDataType = '';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudDialogflowCxV3SecuritySettings extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings
-   */
-  public $insightsExportSettings;
   protected $insightsExportSettingsType = GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettings::class;
   protected $insightsExportSettingsDataType = '';
   /**

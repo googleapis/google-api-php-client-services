@@ -19,10 +19,6 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3RunContinuousTestResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowCxV3ContinuousTestResult
-   */
-  public $continuousTestResult;
   protected $continuousTestResultType = GoogleCloudDialogflowCxV3ContinuousTestResult::class;
   protected $continuousTestResultDataType = '';
 

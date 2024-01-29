@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListExperimentsResponse extends \Google\Collection
 {
   protected $collection_key = 'experiments';
-  /**
-   * @var GoogleCloudDialogflowCxV3Experiment[]
-   */
-  public $experiments;
   protected $experimentsType = GoogleCloudDialogflowCxV3Experiment::class;
   protected $experimentsDataType = 'array';
   /**

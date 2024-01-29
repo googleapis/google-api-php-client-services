@@ -28,10 +28,6 @@ class GoogleCloudDialogflowCxV3RolloutConfig extends \Google\Collection
    * @var string
    */
   public $rolloutCondition;
-  /**
-   * @var GoogleCloudDialogflowCxV3RolloutConfigRolloutStep[]
-   */
-  public $rolloutSteps;
   protected $rolloutStepsType = GoogleCloudDialogflowCxV3RolloutConfigRolloutStep::class;
   protected $rolloutStepsDataType = 'array';
 

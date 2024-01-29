@@ -19,16 +19,8 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3ConversationTurn extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowCxV3ConversationTurnUserInput
-   */
-  public $userInput;
   protected $userInputType = GoogleCloudDialogflowCxV3ConversationTurnUserInput::class;
   protected $userInputDataType = '';
-  /**
-   * @var GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutput
-   */
-  public $virtualAgentOutput;
   protected $virtualAgentOutputType = GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutput::class;
   protected $virtualAgentOutputDataType = '';
 

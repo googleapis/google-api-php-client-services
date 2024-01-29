@@ -24,10 +24,6 @@ class GoogleCloudDialogflowCxV3ListSessionEntityTypesResponse extends \Google\Co
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDialogflowCxV3SessionEntityType[]
-   */
-  public $sessionEntityTypes;
   protected $sessionEntityTypesType = GoogleCloudDialogflowCxV3SessionEntityType::class;
   protected $sessionEntityTypesDataType = 'array';
 

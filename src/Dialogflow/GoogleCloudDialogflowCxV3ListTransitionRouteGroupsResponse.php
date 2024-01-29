@@ -24,10 +24,6 @@ class GoogleCloudDialogflowCxV3ListTransitionRouteGroupsResponse extends \Google
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDialogflowCxV3TransitionRouteGroup[]
-   */
-  public $transitionRouteGroups;
   protected $transitionRouteGroupsType = GoogleCloudDialogflowCxV3TransitionRouteGroup::class;
   protected $transitionRouteGroupsDataType = 'array';
 

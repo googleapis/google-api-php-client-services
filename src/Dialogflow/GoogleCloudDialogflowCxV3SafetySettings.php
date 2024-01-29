@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3SafetySettings extends \Google\Collection
 {
   protected $collection_key = 'bannedPhrases';
-  /**
-   * @var GoogleCloudDialogflowCxV3SafetySettingsPhrase[]
-   */
-  public $bannedPhrases;
   protected $bannedPhrasesType = GoogleCloudDialogflowCxV3SafetySettingsPhrase::class;
   protected $bannedPhrasesDataType = 'array';
 

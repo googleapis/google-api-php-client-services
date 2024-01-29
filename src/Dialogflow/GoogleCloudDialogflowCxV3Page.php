@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3Page extends \Google\Collection
 {
   protected $collection_key = 'transitionRoutes';
-  /**
-   * @var GoogleCloudDialogflowCxV3AdvancedSettings
-   */
-  public $advancedSettings;
   protected $advancedSettingsType = GoogleCloudDialogflowCxV3AdvancedSettings::class;
   protected $advancedSettingsDataType = '';
   /**
@@ -34,28 +30,12 @@ class GoogleCloudDialogflowCxV3Page extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudDialogflowCxV3Fulfillment
-   */
-  public $entryFulfillment;
   protected $entryFulfillmentType = GoogleCloudDialogflowCxV3Fulfillment::class;
   protected $entryFulfillmentDataType = '';
-  /**
-   * @var GoogleCloudDialogflowCxV3EventHandler[]
-   */
-  public $eventHandlers;
   protected $eventHandlersType = GoogleCloudDialogflowCxV3EventHandler::class;
   protected $eventHandlersDataType = 'array';
-  /**
-   * @var GoogleCloudDialogflowCxV3Form
-   */
-  public $form;
   protected $formType = GoogleCloudDialogflowCxV3Form::class;
   protected $formDataType = '';
-  /**
-   * @var GoogleCloudDialogflowCxV3KnowledgeConnectorSettings
-   */
-  public $knowledgeConnectorSettings;
   protected $knowledgeConnectorSettingsType = GoogleCloudDialogflowCxV3KnowledgeConnectorSettings::class;
   protected $knowledgeConnectorSettingsDataType = '';
   /**
@@ -66,10 +46,6 @@ class GoogleCloudDialogflowCxV3Page extends \Google\Collection
    * @var string[]
    */
   public $transitionRouteGroups;
-  /**
-   * @var GoogleCloudDialogflowCxV3TransitionRoute[]
-   */
-  public $transitionRoutes;
   protected $transitionRoutesType = GoogleCloudDialogflowCxV3TransitionRoute::class;
   protected $transitionRoutesDataType = 'array';
 

@@ -27,10 +27,6 @@ class GoogleCloudDialogflowCxV3Match extends \Google\Model
    * @var string
    */
   public $event;
-  /**
-   * @var GoogleCloudDialogflowCxV3Intent
-   */
-  public $intent;
   protected $intentType = GoogleCloudDialogflowCxV3Intent::class;
   protected $intentDataType = '';
   /**

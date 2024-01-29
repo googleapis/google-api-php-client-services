@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListContinuousTestResultsResponse extends \Google\Collection
 {
   protected $collection_key = 'continuousTestResults';
-  /**
-   * @var GoogleCloudDialogflowCxV3ContinuousTestResult[]
-   */
-  public $continuousTestResults;
   protected $continuousTestResultsType = GoogleCloudDialogflowCxV3ContinuousTestResult::class;
   protected $continuousTestResultsDataType = 'array';
   /**

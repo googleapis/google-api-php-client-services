@@ -24,10 +24,6 @@ class GoogleCloudDialogflowCxV3ListVersionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDialogflowCxV3Version[]
-   */
-  public $versions;
   protected $versionsType = GoogleCloudDialogflowCxV3Version::class;
   protected $versionsDataType = 'array';
 

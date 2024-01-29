@@ -20,16 +20,8 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3SearchConfig extends \Google\Collection
 {
   protected $collection_key = 'filterSpecs';
-  /**
-   * @var GoogleCloudDialogflowCxV3BoostSpecs[]
-   */
-  public $boostSpecs;
   protected $boostSpecsType = GoogleCloudDialogflowCxV3BoostSpecs::class;
   protected $boostSpecsDataType = 'array';
-  /**
-   * @var GoogleCloudDialogflowCxV3FilterSpecs[]
-   */
-  public $filterSpecs;
   protected $filterSpecsType = GoogleCloudDialogflowCxV3FilterSpecs::class;
   protected $filterSpecsDataType = 'array';
 

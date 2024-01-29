@@ -28,16 +28,8 @@ class GoogleCloudDialogflowCxV3Generator extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudDialogflowCxV3GeneratorPlaceholder[]
-   */
-  public $placeholders;
   protected $placeholdersType = GoogleCloudDialogflowCxV3GeneratorPlaceholder::class;
   protected $placeholdersDataType = 'array';
-  /**
-   * @var GoogleCloudDialogflowCxV3Phrase
-   */
-  public $promptText;
   protected $promptTextType = GoogleCloudDialogflowCxV3Phrase::class;
   protected $promptTextDataType = '';
 

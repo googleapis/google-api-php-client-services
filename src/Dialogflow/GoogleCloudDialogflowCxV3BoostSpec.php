@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3BoostSpec extends \Google\Collection
 {
   protected $collection_key = 'conditionBoostSpecs';
-  /**
-   * @var GoogleCloudDialogflowCxV3BoostSpecConditionBoostSpec[]
-   */
-  public $conditionBoostSpecs;
   protected $conditionBoostSpecsType = GoogleCloudDialogflowCxV3BoostSpecConditionBoostSpec::class;
   protected $conditionBoostSpecsDataType = 'array';
 

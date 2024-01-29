@@ -31,10 +31,6 @@ class GoogleCloudDialogflowCxV3ExportAgentRequest extends \Google\Model
    * @var string
    */
   public $environment;
-  /**
-   * @var GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination
-   */
-  public $gitDestination;
   protected $gitDestinationType = GoogleCloudDialogflowCxV3ExportAgentRequestGitDestination::class;
   protected $gitDestinationDataType = '';
   /**

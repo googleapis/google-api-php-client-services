@@ -19,16 +19,8 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3FulfillmentConditionalCasesCaseCaseContent extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDialogflowCxV3FulfillmentConditionalCases
-   */
-  public $additionalCases;
   protected $additionalCasesType = GoogleCloudDialogflowCxV3FulfillmentConditionalCases::class;
   protected $additionalCasesDataType = '';
-  /**
-   * @var GoogleCloudDialogflowCxV3ResponseMessage
-   */
-  public $message;
   protected $messageType = GoogleCloudDialogflowCxV3ResponseMessage::class;
   protected $messageDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3AgentValidationResult extends \Google\Collection
 {
   protected $collection_key = 'flowValidationResults';
-  /**
-   * @var GoogleCloudDialogflowCxV3FlowValidationResult[]
-   */
-  public $flowValidationResults;
   protected $flowValidationResultsType = GoogleCloudDialogflowCxV3FlowValidationResult::class;
   protected $flowValidationResultsDataType = 'array';
   /**

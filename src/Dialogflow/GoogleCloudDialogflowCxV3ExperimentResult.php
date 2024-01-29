@@ -24,10 +24,6 @@ class GoogleCloudDialogflowCxV3ExperimentResult extends \Google\Collection
    * @var string
    */
   public $lastUpdateTime;
-  /**
-   * @var GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics[]
-   */
-  public $versionMetrics;
   protected $versionMetricsType = GoogleCloudDialogflowCxV3ExperimentResultVersionMetrics::class;
   protected $versionMetricsDataType = 'array';
 

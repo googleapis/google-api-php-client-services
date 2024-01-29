@@ -20,10 +20,6 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3ListGeneratorsResponse extends \Google\Collection
 {
   protected $collection_key = 'generators';
-  /**
-   * @var GoogleCloudDialogflowCxV3Generator[]
-   */
-  public $generators;
   protected $generatorsType = GoogleCloudDialogflowCxV3Generator::class;
   protected $generatorsDataType = 'array';
   /**
