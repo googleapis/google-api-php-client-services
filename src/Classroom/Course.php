@@ -32,10 +32,6 @@ class Course extends \Google\Collection
    * @var string
    */
   public $courseGroupEmail;
-  /**
-   * @var CourseMaterialSet[]
-   */
-  public $courseMaterialSets;
   protected $courseMaterialSetsType = CourseMaterialSet::class;
   protected $courseMaterialSetsDataType = 'array';
   /**
@@ -58,10 +54,6 @@ class Course extends \Google\Collection
    * @var string
    */
   public $enrollmentCode;
-  /**
-   * @var GradebookSettings
-   */
-  public $gradebookSettings;
   protected $gradebookSettingsType = GradebookSettings::class;
   protected $gradebookSettingsDataType = '';
   /**
@@ -88,10 +80,6 @@ class Course extends \Google\Collection
    * @var string
    */
   public $section;
-  /**
-   * @var DriveFolder
-   */
-  public $teacherFolder;
   protected $teacherFolderType = DriveFolder::class;
   protected $teacherFolderDataType = '';
   /**

@@ -19,20 +19,12 @@ namespace Google\Service\Classroom;
 
 class Registration extends \Google\Model
 {
-  /**
-   * @var CloudPubsubTopic
-   */
-  public $cloudPubsubTopic;
   protected $cloudPubsubTopicType = CloudPubsubTopic::class;
   protected $cloudPubsubTopicDataType = '';
   /**
    * @var string
    */
   public $expiryTime;
-  /**
-   * @var Feed
-   */
-  public $feed;
   protected $feedType = Feed::class;
   protected $feedDataType = '';
   /**

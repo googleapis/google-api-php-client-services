@@ -20,10 +20,6 @@ namespace Google\Service\Classroom;
 class ListCourseAliasesResponse extends \Google\Collection
 {
   protected $collection_key = 'aliases';
-  /**
-   * @var CourseAlias[]
-   */
-  public $aliases;
   protected $aliasesType = CourseAlias::class;
   protected $aliasesDataType = 'array';
   /**

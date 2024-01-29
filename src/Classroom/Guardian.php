@@ -23,10 +23,6 @@ class Guardian extends \Google\Model
    * @var string
    */
   public $guardianId;
-  /**
-   * @var UserProfile
-   */
-  public $guardianProfile;
   protected $guardianProfileType = UserProfile::class;
   protected $guardianProfileDataType = '';
   /**

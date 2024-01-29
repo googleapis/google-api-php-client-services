@@ -19,16 +19,8 @@ namespace Google\Service\Classroom;
 
 class SubmissionHistory extends \Google\Model
 {
-  /**
-   * @var GradeHistory
-   */
-  public $gradeHistory;
   protected $gradeHistoryType = GradeHistory::class;
   protected $gradeHistoryDataType = '';
-  /**
-   * @var StateHistory
-   */
-  public $stateHistory;
   protected $stateHistoryType = StateHistory::class;
   protected $stateHistoryDataType = '';
 

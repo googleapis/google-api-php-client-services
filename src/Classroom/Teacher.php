@@ -23,10 +23,6 @@ class Teacher extends \Google\Model
    * @var string
    */
   public $courseId;
-  /**
-   * @var UserProfile
-   */
-  public $profile;
   protected $profileType = UserProfile::class;
   protected $profileDataType = '';
   /**

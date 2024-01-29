@@ -20,10 +20,6 @@ namespace Google\Service\Classroom;
 class ListGuardiansResponse extends \Google\Collection
 {
   protected $collection_key = 'guardians';
-  /**
-   * @var Guardian[]
-   */
-  public $guardians;
   protected $guardiansType = Guardian::class;
   protected $guardiansDataType = 'array';
   /**
