@@ -19,16 +19,8 @@ namespace Google\Service\Digitalassetlinks;
 
 class Asset extends \Google\Model
 {
-  /**
-   * @var AndroidAppAsset
-   */
-  public $androidApp;
   protected $androidAppType = AndroidAppAsset::class;
   protected $androidAppDataType = '';
-  /**
-   * @var WebAsset
-   */
-  public $web;
   protected $webType = WebAsset::class;
   protected $webDataType = '';
 

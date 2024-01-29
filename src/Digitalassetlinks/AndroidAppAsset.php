@@ -19,10 +19,6 @@ namespace Google\Service\Digitalassetlinks;
 
 class AndroidAppAsset extends \Google\Model
 {
-  /**
-   * @var CertificateInfo
-   */
-  public $certificate;
   protected $certificateType = CertificateInfo::class;
   protected $certificateDataType = '';
   /**

@@ -23,16 +23,8 @@ class Statement extends \Google\Model
    * @var string
    */
   public $relation;
-  /**
-   * @var Asset
-   */
-  public $source;
   protected $sourceType = Asset::class;
   protected $sourceDataType = '';
-  /**
-   * @var Asset
-   */
-  public $target;
   protected $targetType = Asset::class;
   protected $targetDataType = '';
 
