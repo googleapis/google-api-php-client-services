@@ -71,6 +71,7 @@ class ProjectsGroupStats extends \Google\Service\Resource
    * @opt_param string timedCountDuration Optional. The preferred duration for a
    * single returned TimedCount. If not set, no timed counts are returned.
    * @return ListGroupStatsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsGroupStats($projectName, $optParams = [])
   {

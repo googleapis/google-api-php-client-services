@@ -42,6 +42,7 @@ class ProjectsGroups extends \Google\Service\Resource
    * Notice](https://cloud.google.com/terms/cloud-privacy-notice).
    * @param array $optParams Optional parameters.
    * @return ErrorGroup
+   * @throws \Google\Service\Exception
    */
   public function get($groupName, $optParams = [])
   {
@@ -63,6 +64,7 @@ class ProjectsGroups extends \Google\Service\Resource
    * @param ErrorGroup $postBody
    * @param array $optParams Optional parameters.
    * @return ErrorGroup
+   * @throws \Google\Service\Exception
    */
   public function update($name, ErrorGroup $postBody, $optParams = [])
   {

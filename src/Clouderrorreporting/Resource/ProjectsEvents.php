@@ -63,6 +63,7 @@ class ProjectsEvents extends \Google\Service\Resource
    * @opt_param string timeRange.period Restricts the query to the specified time
    * range.
    * @return ListEventsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsEvents($projectName, $optParams = [])
   {
@@ -89,6 +90,7 @@ class ProjectsEvents extends \Google\Service\Resource
    * @param ReportedErrorEvent $postBody
    * @param array $optParams Optional parameters.
    * @return ReportErrorEventResponse
+   * @throws \Google\Service\Exception
    */
   public function report($projectName, ReportedErrorEvent $postBody, $optParams = [])
   {

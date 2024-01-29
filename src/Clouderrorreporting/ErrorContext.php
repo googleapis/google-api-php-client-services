@@ -20,22 +20,10 @@ namespace Google\Service\Clouderrorreporting;
 class ErrorContext extends \Google\Collection
 {
   protected $collection_key = 'sourceReferences';
-  /**
-   * @var HttpRequestContext
-   */
-  public $httpRequest;
   protected $httpRequestType = HttpRequestContext::class;
   protected $httpRequestDataType = '';
-  /**
-   * @var SourceLocation
-   */
-  public $reportLocation;
   protected $reportLocationType = SourceLocation::class;
   protected $reportLocationDataType = '';
-  /**
-   * @var SourceReference[]
-   */
-  public $sourceReferences;
   protected $sourceReferencesType = SourceReference::class;
   protected $sourceReferencesDataType = 'array';
   /**

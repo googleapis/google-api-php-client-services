@@ -20,10 +20,6 @@ namespace Google\Service\Clouderrorreporting;
 class ListEventsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorEvents';
-  /**
-   * @var ErrorEvent[]
-   */
-  public $errorEvents;
   protected $errorEventsType = ErrorEvent::class;
   protected $errorEventsDataType = 'array';
   /**
