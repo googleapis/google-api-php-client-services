@@ -20,10 +20,6 @@ namespace Google\Service\Storage;
 class ObjectAccessControls extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var ObjectAccessControl[]
-   */
-  public $items;
   protected $itemsType = ObjectAccessControl::class;
   protected $itemsDataType = 'array';
   /**

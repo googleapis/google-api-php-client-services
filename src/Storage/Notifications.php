@@ -20,10 +20,6 @@ namespace Google\Service\Storage;
 class Notifications extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Notification[]
-   */
-  public $items;
   protected $itemsType = Notification::class;
   protected $itemsDataType = 'array';
   /**

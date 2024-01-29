@@ -43,6 +43,7 @@ class Folders extends \Google\Service\Resource
    * its metageneration matches this value.
    * @opt_param string ifMetagenerationNotMatch If set, only deletes the folder if
    * its metageneration does not match this value.
+   * @throws \Google\Service\Exception
    */
   public function delete($bucket, $folder, $optParams = [])
   {
@@ -65,6 +66,7 @@ class Folders extends \Google\Service\Resource
    * metadata conditional on whether the folder's current metageneration does not
    * match the given value.
    * @return Folder
+   * @throws \Google\Service\Exception
    */
   public function get($bucket, $folder, $optParams = [])
   {
@@ -83,6 +85,7 @@ class Folders extends \Google\Service\Resource
    * @opt_param bool recursive If true, any parent folder which doesn’t exist will
    * be created automatically.
    * @return Folder
+   * @throws \Google\Service\Exception
    */
   public function insert($bucket, Folder $postBody, $optParams = [])
   {
@@ -116,6 +119,7 @@ class Folders extends \Google\Service\Resource
    * the folders listed will have names between startOffset (inclusive) and
    * endOffset (exclusive).
    * @return FoldersModel
+   * @throws \Google\Service\Exception
    */
   public function listFolders($bucket, $optParams = [])
   {
@@ -139,6 +143,7 @@ class Folders extends \Google\Service\Resource
    * conditional on whether the source object's current metageneration does not
    * match the given value.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function rename($bucket, $sourceFolder, $destinationFolder, $optParams = [])
   {

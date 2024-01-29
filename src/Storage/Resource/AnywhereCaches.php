@@ -38,6 +38,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCache
+   * @throws \Google\Service\Exception
    */
   public function disable($bucket, $anywhereCacheId, $optParams = [])
   {
@@ -52,6 +53,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCache
+   * @throws \Google\Service\Exception
    */
   public function get($bucket, $anywhereCacheId, $optParams = [])
   {
@@ -66,6 +68,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @param AnywhereCache $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function insert($bucket, AnywhereCache $postBody, $optParams = [])
   {
@@ -85,6 +88,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
    * @return AnywhereCachesModel
+   * @throws \Google\Service\Exception
    */
   public function listAnywhereCaches($bucket, $optParams = [])
   {
@@ -99,6 +103,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCache
+   * @throws \Google\Service\Exception
    */
   public function pause($bucket, $anywhereCacheId, $optParams = [])
   {
@@ -113,6 +118,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @param string $anywhereCacheId The ID of requested Anywhere Cache instance.
    * @param array $optParams Optional parameters.
    * @return AnywhereCache
+   * @throws \Google\Service\Exception
    */
   public function resume($bucket, $anywhereCacheId, $optParams = [])
   {
@@ -129,6 +135,7 @@ class AnywhereCaches extends \Google\Service\Resource
    * @param AnywhereCache $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function update($bucket, $anywhereCacheId, AnywhereCache $postBody, $optParams = [])
   {

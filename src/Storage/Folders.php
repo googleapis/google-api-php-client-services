@@ -20,10 +20,6 @@ namespace Google\Service\Storage;
 class Folders extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Folder[]
-   */
-  public $items;
   protected $itemsType = Folder::class;
   protected $itemsDataType = 'array';
   /**

@@ -38,6 +38,7 @@ class Operations extends \Google\Service\Resource
    * @param string $bucket The parent bucket of the operation resource.
    * @param string $operationId The ID of the operation resource.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function cancel($bucket, $operationId, $optParams = [])
   {
@@ -52,6 +53,7 @@ class Operations extends \Google\Service\Resource
    * @param string $operationId The ID of the operation resource.
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function get($bucket, $operationId, $optParams = [])
   {
@@ -75,6 +77,7 @@ class Operations extends \Google\Service\Resource
    * @opt_param string pageToken A previously-returned page token representing
    * part of the larger set of results to view.
    * @return GoogleLongrunningListOperationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOperations($bucket, $optParams = [])
   {

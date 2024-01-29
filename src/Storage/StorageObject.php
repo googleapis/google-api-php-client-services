@@ -20,10 +20,6 @@ namespace Google\Service\Storage;
 class StorageObject extends \Google\Collection
 {
   protected $collection_key = 'acl';
-  /**
-   * @var ObjectAccessControl[]
-   */
-  public $acl;
   protected $aclType = ObjectAccessControl::class;
   protected $aclDataType = 'array';
   /**
@@ -62,10 +58,6 @@ class StorageObject extends \Google\Collection
    * @var string
    */
   public $customTime;
-  /**
-   * @var StorageObjectCustomerEncryption
-   */
-  public $customerEncryption;
   protected $customerEncryptionType = StorageObjectCustomerEncryption::class;
   protected $customerEncryptionDataType = '';
   /**
@@ -116,16 +108,8 @@ class StorageObject extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var StorageObjectOwner
-   */
-  public $owner;
   protected $ownerType = StorageObjectOwner::class;
   protected $ownerDataType = '';
-  /**
-   * @var StorageObjectRetention
-   */
-  public $retention;
   protected $retentionType = StorageObjectRetention::class;
   protected $retentionDataType = '';
   /**

@@ -43,10 +43,6 @@ class Folder extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var FolderPendingRenameInfo
-   */
-  public $pendingRenameInfo;
   protected $pendingRenameInfoType = FolderPendingRenameInfo::class;
   protected $pendingRenameInfoDataType = '';
   /**
