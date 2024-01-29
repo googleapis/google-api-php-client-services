@@ -20,10 +20,6 @@ namespace Google\Service\ServiceDirectory;
 class Policy extends \Google\Collection
 {
   protected $collection_key = 'bindings';
-  /**
-   * @var Binding[]
-   */
-  public $bindings;
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
   /**

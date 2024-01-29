@@ -20,10 +20,6 @@ namespace Google\Service\ServiceDirectory;
 class ListEndpointsResponse extends \Google\Collection
 {
   protected $collection_key = 'endpoints';
-  /**
-   * @var Endpoint[]
-   */
-  public $endpoints;
   protected $endpointsType = Endpoint::class;
   protected $endpointsDataType = 'array';
   /**
