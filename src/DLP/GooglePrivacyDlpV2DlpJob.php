@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DlpJob extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var GooglePrivacyDlpV2ActionDetails[]
-   */
-  public $actionDetails;
   protected $actionDetailsType = GooglePrivacyDlpV2ActionDetails::class;
   protected $actionDetailsDataType = 'array';
   /**
@@ -34,16 +30,8 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
    * @var string
    */
   public $endTime;
-  /**
-   * @var GooglePrivacyDlpV2Error[]
-   */
-  public $errors;
   protected $errorsType = GooglePrivacyDlpV2Error::class;
   protected $errorsDataType = 'array';
-  /**
-   * @var GooglePrivacyDlpV2InspectDataSourceDetails
-   */
-  public $inspectDetails;
   protected $inspectDetailsType = GooglePrivacyDlpV2InspectDataSourceDetails::class;
   protected $inspectDetailsDataType = '';
   /**
@@ -58,10 +46,6 @@ class GooglePrivacyDlpV2DlpJob extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails
-   */
-  public $riskDetails;
   protected $riskDetailsType = GooglePrivacyDlpV2AnalyzeDataSourceRiskDetails::class;
   protected $riskDetailsDataType = '';
   /**

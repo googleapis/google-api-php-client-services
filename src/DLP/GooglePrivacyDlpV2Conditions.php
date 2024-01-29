@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2Conditions extends \Google\Collection
 {
   protected $collection_key = 'conditions';
-  /**
-   * @var GooglePrivacyDlpV2Condition[]
-   */
-  public $conditions;
   protected $conditionsType = GooglePrivacyDlpV2Condition::class;
   protected $conditionsDataType = 'array';
 

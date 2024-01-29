@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2FindingLimits extends \Google\Collection
 {
   protected $collection_key = 'maxFindingsPerInfoType';
-  /**
-   * @var GooglePrivacyDlpV2InfoTypeLimit[]
-   */
-  public $maxFindingsPerInfoType;
   protected $maxFindingsPerInfoTypeType = GooglePrivacyDlpV2InfoTypeLimit::class;
   protected $maxFindingsPerInfoTypeDataType = 'array';
   /**

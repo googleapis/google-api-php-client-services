@@ -20,16 +20,8 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2FixedSizeBucketingConfig extends \Google\Model
 {
   public $bucketSize;
-  /**
-   * @var GooglePrivacyDlpV2Value
-   */
-  public $lowerBound;
   protected $lowerBoundType = GooglePrivacyDlpV2Value::class;
   protected $lowerBoundDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2Value
-   */
-  public $upperBound;
   protected $upperBoundType = GooglePrivacyDlpV2Value::class;
   protected $upperBoundDataType = '';
 

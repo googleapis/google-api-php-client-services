@@ -19,16 +19,8 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DataProfileAction extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2Export
-   */
-  public $exportData;
   protected $exportDataType = GooglePrivacyDlpV2Export::class;
   protected $exportDataDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2PubSubNotification
-   */
-  public $pubSubNotification;
   protected $pubSubNotificationType = GooglePrivacyDlpV2PubSubNotification::class;
   protected $pubSubNotificationDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DatastoreOptions extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2KindExpression
-   */
-  public $kind;
   protected $kindType = GooglePrivacyDlpV2KindExpression::class;
   protected $kindDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2PartitionId
-   */
-  public $partitionId;
   protected $partitionIdType = GooglePrivacyDlpV2PartitionId::class;
   protected $partitionIdDataType = '';
 

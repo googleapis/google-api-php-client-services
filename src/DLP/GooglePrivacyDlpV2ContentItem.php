@@ -19,16 +19,8 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ContentItem extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2ByteContentItem
-   */
-  public $byteItem;
   protected $byteItemType = GooglePrivacyDlpV2ByteContentItem::class;
   protected $byteItemDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2Table
-   */
-  public $table;
   protected $tableType = GooglePrivacyDlpV2Table::class;
   protected $tableDataType = '';
   /**

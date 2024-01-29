@@ -19,16 +19,8 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2ExcludeByHotword extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2Regex
-   */
-  public $hotwordRegex;
   protected $hotwordRegexType = GooglePrivacyDlpV2Regex::class;
   protected $hotwordRegexDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2Proximity
-   */
-  public $proximity;
   protected $proximityType = GooglePrivacyDlpV2Proximity::class;
   protected $proximityDataType = '';
 

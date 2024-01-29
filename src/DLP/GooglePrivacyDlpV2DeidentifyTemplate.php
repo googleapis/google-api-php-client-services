@@ -23,10 +23,6 @@ class GooglePrivacyDlpV2DeidentifyTemplate extends \Google\Model
    * @var string
    */
   public $createTime;
-  /**
-   * @var GooglePrivacyDlpV2DeidentifyConfig
-   */
-  public $deidentifyConfig;
   protected $deidentifyConfigType = GooglePrivacyDlpV2DeidentifyConfig::class;
   protected $deidentifyConfigDataType = '';
   /**

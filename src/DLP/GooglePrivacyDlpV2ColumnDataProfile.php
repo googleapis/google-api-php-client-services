@@ -24,20 +24,12 @@ class GooglePrivacyDlpV2ColumnDataProfile extends \Google\Collection
    * @var string
    */
   public $column;
-  /**
-   * @var GooglePrivacyDlpV2InfoTypeSummary
-   */
-  public $columnInfoType;
   protected $columnInfoTypeType = GooglePrivacyDlpV2InfoTypeSummary::class;
   protected $columnInfoTypeDataType = '';
   /**
    * @var string
    */
   public $columnType;
-  /**
-   * @var GooglePrivacyDlpV2DataRiskLevel
-   */
-  public $dataRiskLevel;
   protected $dataRiskLevelType = GooglePrivacyDlpV2DataRiskLevel::class;
   protected $dataRiskLevelDataType = '';
   /**
@@ -65,10 +57,6 @@ class GooglePrivacyDlpV2ColumnDataProfile extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GooglePrivacyDlpV2OtherInfoTypeSummary[]
-   */
-  public $otherMatches;
   protected $otherMatchesType = GooglePrivacyDlpV2OtherInfoTypeSummary::class;
   protected $otherMatchesDataType = 'array';
   /**
@@ -79,16 +67,8 @@ class GooglePrivacyDlpV2ColumnDataProfile extends \Google\Collection
    * @var string
    */
   public $profileLastGenerated;
-  /**
-   * @var GooglePrivacyDlpV2ProfileStatus
-   */
-  public $profileStatus;
   protected $profileStatusType = GooglePrivacyDlpV2ProfileStatus::class;
   protected $profileStatusDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2SensitivityScore
-   */
-  public $sensitivityScore;
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**

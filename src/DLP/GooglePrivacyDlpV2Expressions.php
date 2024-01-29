@@ -19,10 +19,6 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2Expressions extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2Conditions
-   */
-  public $conditions;
   protected $conditionsType = GooglePrivacyDlpV2Conditions::class;
   protected $conditionsDataType = '';
   /**

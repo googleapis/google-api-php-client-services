@@ -27,10 +27,6 @@ class GooglePrivacyDlpV2Finding extends \Google\Model
    * @var string
    */
   public $findingId;
-  /**
-   * @var GooglePrivacyDlpV2InfoType
-   */
-  public $infoType;
   protected $infoTypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypeDataType = '';
   /**
@@ -49,10 +45,6 @@ class GooglePrivacyDlpV2Finding extends \Google\Model
    * @var string
    */
   public $likelihood;
-  /**
-   * @var GooglePrivacyDlpV2Location
-   */
-  public $location;
   protected $locationType = GooglePrivacyDlpV2Location::class;
   protected $locationDataType = '';
   /**
@@ -63,10 +55,6 @@ class GooglePrivacyDlpV2Finding extends \Google\Model
    * @var string
    */
   public $quote;
-  /**
-   * @var GooglePrivacyDlpV2QuoteInfo
-   */
-  public $quoteInfo;
   protected $quoteInfoType = GooglePrivacyDlpV2QuoteInfo::class;
   protected $quoteInfoDataType = '';
   /**

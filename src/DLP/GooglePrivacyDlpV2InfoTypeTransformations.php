@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2InfoTypeTransformations extends \Google\Collection
 {
   protected $collection_key = 'transformations';
-  /**
-   * @var GooglePrivacyDlpV2InfoTypeTransformation[]
-   */
-  public $transformations;
   protected $transformationsType = GooglePrivacyDlpV2InfoTypeTransformation::class;
   protected $transformationsDataType = 'array';
 

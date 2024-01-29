@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2DeltaPresenceEstimationResult extends \Google\Collection
 {
   protected $collection_key = 'deltaPresenceEstimationHistogram';
-  /**
-   * @var GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket[]
-   */
-  public $deltaPresenceEstimationHistogram;
   protected $deltaPresenceEstimationHistogramType = GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucket::class;
   protected $deltaPresenceEstimationHistogramDataType = 'array';
 

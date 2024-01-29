@@ -19,10 +19,6 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2BigQueryTableCollection extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2BigQueryRegexes
-   */
-  public $includeRegexes;
   protected $includeRegexesType = GooglePrivacyDlpV2BigQueryRegexes::class;
   protected $includeRegexesDataType = '';
 

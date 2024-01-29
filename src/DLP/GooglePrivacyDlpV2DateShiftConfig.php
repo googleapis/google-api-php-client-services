@@ -19,16 +19,8 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2DateShiftConfig extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2FieldId
-   */
-  public $context;
   protected $contextType = GooglePrivacyDlpV2FieldId::class;
   protected $contextDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2CryptoKey
-   */
-  public $cryptoKey;
   protected $cryptoKeyType = GooglePrivacyDlpV2CryptoKey::class;
   protected $cryptoKeyDataType = '';
   /**

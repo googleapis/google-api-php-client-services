@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ImageLocation extends \Google\Collection
 {
   protected $collection_key = 'boundingBoxes';
-  /**
-   * @var GooglePrivacyDlpV2BoundingBox[]
-   */
-  public $boundingBoxes;
   protected $boundingBoxesType = GooglePrivacyDlpV2BoundingBox::class;
   protected $boundingBoxesDataType = 'array';
 

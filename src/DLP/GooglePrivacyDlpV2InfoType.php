@@ -23,10 +23,6 @@ class GooglePrivacyDlpV2InfoType extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GooglePrivacyDlpV2SensitivityScore
-   */
-  public $sensitivityScore;
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**

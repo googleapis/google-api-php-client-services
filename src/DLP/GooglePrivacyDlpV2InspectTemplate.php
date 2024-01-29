@@ -31,10 +31,6 @@ class GooglePrivacyDlpV2InspectTemplate extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var GooglePrivacyDlpV2InspectConfig
-   */
-  public $inspectConfig;
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
   /**

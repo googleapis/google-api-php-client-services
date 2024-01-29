@@ -19,22 +19,10 @@ namespace Google\Service\DLP;
 
 class GooglePrivacyDlpV2HotwordRule extends \Google\Model
 {
-  /**
-   * @var GooglePrivacyDlpV2Regex
-   */
-  public $hotwordRegex;
   protected $hotwordRegexType = GooglePrivacyDlpV2Regex::class;
   protected $hotwordRegexDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2LikelihoodAdjustment
-   */
-  public $likelihoodAdjustment;
   protected $likelihoodAdjustmentType = GooglePrivacyDlpV2LikelihoodAdjustment::class;
   protected $likelihoodAdjustmentDataType = '';
-  /**
-   * @var GooglePrivacyDlpV2Proximity
-   */
-  public $proximity;
   protected $proximityType = GooglePrivacyDlpV2Proximity::class;
   protected $proximityDataType = '';
 

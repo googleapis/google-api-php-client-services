@@ -20,10 +20,6 @@ namespace Google\Service\DLP;
 class GooglePrivacyDlpV2ExcludeInfoTypes extends \Google\Collection
 {
   protected $collection_key = 'infoTypes';
-  /**
-   * @var GooglePrivacyDlpV2InfoType[]
-   */
-  public $infoTypes;
   protected $infoTypesType = GooglePrivacyDlpV2InfoType::class;
   protected $infoTypesDataType = 'array';
 
