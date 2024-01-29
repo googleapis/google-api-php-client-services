@@ -23,6 +23,8 @@ class CloudAiNlLlmProtoServicePartVideoMetadata extends \Google\Model
    * @var string
    */
   public $endOffset;
+  protected $modelLevelMetaDataType = CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata::class;
+  protected $modelLevelMetaDataDataType = '';
   /**
    * @var string
    */
@@ -41,6 +43,20 @@ class CloudAiNlLlmProtoServicePartVideoMetadata extends \Google\Model
   public function getEndOffset()
   {
     return $this->endOffset;
+  }
+  /**
+   * @param CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata
+   */
+  public function setModelLevelMetaData(CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata $modelLevelMetaData)
+  {
+    $this->modelLevelMetaData = $modelLevelMetaData;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServicePartVideoMetadataModelLevelMetadata
+   */
+  public function getModelLevelMetaData()
+  {
+    return $this->modelLevelMetaData;
   }
   /**
    * @param string

@@ -29,6 +29,10 @@ class GoogleCloudAiplatformV1CreatePipelineJobRequest extends \Google\Model
    * @var string
    */
   public $pipelineJobId;
+  /**
+   * @var bool
+   */
+  public $preflightValidations;
 
   /**
    * @param string
@@ -71,6 +75,20 @@ class GoogleCloudAiplatformV1CreatePipelineJobRequest extends \Google\Model
   public function getPipelineJobId()
   {
     return $this->pipelineJobId;
+  }
+  /**
+   * @param bool
+   */
+  public function setPreflightValidations($preflightValidations)
+  {
+    $this->preflightValidations = $preflightValidations;
+  }
+  /**
+   * @return bool
+   */
+  public function getPreflightValidations()
+  {
+    return $this->preflightValidations;
   }
 }
 

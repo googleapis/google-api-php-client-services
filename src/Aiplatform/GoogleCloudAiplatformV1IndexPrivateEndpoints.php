@@ -17,12 +17,15 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1IndexPrivateEndpoints extends \Google\Model
+class GoogleCloudAiplatformV1IndexPrivateEndpoints extends \Google\Collection
 {
+  protected $collection_key = 'pscAutomatedEndpoints';
   /**
    * @var string
    */
   public $matchGrpcAddress;
+  protected $pscAutomatedEndpointsType = GoogleCloudAiplatformV1PscAutomatedEndpoints::class;
+  protected $pscAutomatedEndpointsDataType = 'array';
   /**
    * @var string
    */
@@ -41,6 +44,20 @@ class GoogleCloudAiplatformV1IndexPrivateEndpoints extends \Google\Model
   public function getMatchGrpcAddress()
   {
     return $this->matchGrpcAddress;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PscAutomatedEndpoints[]
+   */
+  public function setPscAutomatedEndpoints($pscAutomatedEndpoints)
+  {
+    $this->pscAutomatedEndpoints = $pscAutomatedEndpoints;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PscAutomatedEndpoints[]
+   */
+  public function getPscAutomatedEndpoints()
+  {
+    return $this->pscAutomatedEndpoints;
   }
   /**
    * @param string

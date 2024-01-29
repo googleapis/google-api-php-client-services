@@ -32,6 +32,8 @@ class CloudAiNlLlmProtoServiceCandidate extends \Google\Collection
    * @var string
    */
   public $finishReason;
+  protected $groundingMetadataType = LearningGenaiRootGroundingMetadata::class;
+  protected $groundingMetadataDataType = '';
   /**
    * @var int
    */
@@ -94,6 +96,20 @@ class CloudAiNlLlmProtoServiceCandidate extends \Google\Collection
   public function getFinishReason()
   {
     return $this->finishReason;
+  }
+  /**
+   * @param LearningGenaiRootGroundingMetadata
+   */
+  public function setGroundingMetadata(LearningGenaiRootGroundingMetadata $groundingMetadata)
+  {
+    $this->groundingMetadata = $groundingMetadata;
+  }
+  /**
+   * @return LearningGenaiRootGroundingMetadata
+   */
+  public function getGroundingMetadata()
+  {
+    return $this->groundingMetadata;
   }
   /**
    * @param int

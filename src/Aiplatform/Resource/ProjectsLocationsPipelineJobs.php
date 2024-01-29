@@ -69,6 +69,9 @@ class ProjectsLocationsPipelineJobs extends \Google\Service\Resource
    * become the final component of the PipelineJob name. If not provided, an ID
    * will be automatically generated. This value should be less than 128
    * characters, and valid characters are `/a-z-/`.
+   * @opt_param bool preflightValidations Optional. Whether to do component level
+   * validations before job creation. Currently we only support Google First Party
+   * Component/Pipelines.
    * @return GoogleCloudAiplatformV1PipelineJob
    * @throws \Google\Service\Exception
    */

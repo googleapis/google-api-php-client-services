@@ -19,11 +19,13 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends \Google\Collection
 {
-  protected $collection_key = 'candidates';
+  protected $collection_key = 'facts';
   protected $candidatesType = CloudAiNlLlmProtoServiceCandidate::class;
   protected $candidatesDataType = 'array';
   protected $debugMetadataType = CloudAiNlLlmProtoServiceMessageMetadata::class;
   protected $debugMetadataDataType = '';
+  protected $factsType = CloudAiNlLlmProtoServiceFact::class;
+  protected $factsDataType = 'array';
   protected $promptFeedbackType = CloudAiNlLlmProtoServicePromptFeedback::class;
   protected $promptFeedbackDataType = '';
   protected $reportingMetricsType = IntelligenceCloudAutomlXpsReportingMetrics::class;
@@ -58,6 +60,20 @@ class CloudAiNlLlmProtoServiceGenerateMultiModalResponse extends \Google\Collect
   public function getDebugMetadata()
   {
     return $this->debugMetadata;
+  }
+  /**
+   * @param CloudAiNlLlmProtoServiceFact[]
+   */
+  public function setFacts($facts)
+  {
+    $this->facts = $facts;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServiceFact[]
+   */
+  public function getFacts()
+  {
+    return $this->facts;
   }
   /**
    * @param CloudAiNlLlmProtoServicePromptFeedback
