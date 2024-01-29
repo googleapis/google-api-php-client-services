@@ -19,16 +19,8 @@ namespace Google\Service\CloudDeploy;
 
 class RepairPhase extends \Google\Model
 {
-  /**
-   * @var RetryPhase
-   */
-  public $retry;
   protected $retryType = RetryPhase::class;
   protected $retryDataType = '';
-  /**
-   * @var RollbackAttempt
-   */
-  public $rollback;
   protected $rollbackType = RollbackAttempt::class;
   protected $rollbackDataType = '';
 

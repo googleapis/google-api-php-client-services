@@ -24,10 +24,6 @@ class CustomTargetSkaffoldActions extends \Google\Collection
    * @var string
    */
   public $deployAction;
-  /**
-   * @var SkaffoldModules[]
-   */
-  public $includeSkaffoldModules;
   protected $includeSkaffoldModulesType = SkaffoldModules::class;
   protected $includeSkaffoldModulesDataType = 'array';
   /**

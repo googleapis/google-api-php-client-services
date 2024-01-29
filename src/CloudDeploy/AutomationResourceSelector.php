@@ -20,10 +20,6 @@ namespace Google\Service\CloudDeploy;
 class AutomationResourceSelector extends \Google\Collection
 {
   protected $collection_key = 'targets';
-  /**
-   * @var TargetAttribute[]
-   */
-  public $targets;
   protected $targetsType = TargetAttribute::class;
   protected $targetsDataType = 'array';
 

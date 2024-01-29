@@ -44,6 +44,7 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
    * @param CancelAutomationRunRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CancelAutomationRunResponse
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, CancelAutomationRunRequest $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
    * utomationRuns/{automation_run}`.
    * @param array $optParams Optional parameters.
    * @return AutomationRun
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -87,6 +89,7 @@ class ProjectsLocationsDeliveryPipelinesAutomationRuns extends \Google\Service\R
    * paginating, all other provided parameters match the call that provided the
    * page token.
    * @return ListAutomationRunsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDeliveryPipelinesAutomationRuns($parent, $optParams = [])
   {

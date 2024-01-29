@@ -24,16 +24,8 @@ class SkaffoldModules extends \Google\Collection
    * @var string[]
    */
   public $configs;
-  /**
-   * @var SkaffoldGitSource
-   */
-  public $git;
   protected $gitType = SkaffoldGitSource::class;
   protected $gitDataType = '';
-  /**
-   * @var SkaffoldGCSSource
-   */
-  public $googleCloudStorage;
   protected $googleCloudStorageType = SkaffoldGCSSource::class;
   protected $googleCloudStorageDataType = '';
 

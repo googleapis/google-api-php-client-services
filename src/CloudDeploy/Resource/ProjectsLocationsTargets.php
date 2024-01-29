@@ -60,6 +60,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * validated and the user is provided with an expected result, but no actual
    * change is made.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Target $postBody, $optParams = [])
   {
@@ -94,6 +95,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. If set, validate the request and
    * preview the review, but do not actually post it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -108,6 +110,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * `projects/{project_id}/locations/{location_name}/targets/{target_name}`.
    * @param array $optParams Optional parameters.
    * @return Target
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -138,6 +141,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -166,6 +170,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * paginating, all other provided parameters match the call that provided the
    * page token.
    * @return ListTargetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsTargets($parent, $optParams = [])
   {
@@ -203,6 +208,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * validated and the user is provided with an expected result, but no actual
    * change is made.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Target $postBody, $optParams = [])
   {
@@ -222,6 +228,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -243,6 +250,7 @@ class ProjectsLocationsTargets extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

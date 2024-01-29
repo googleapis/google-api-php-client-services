@@ -50,6 +50,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * @param AdvanceRolloutRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AdvanceRolloutResponse
+   * @throws \Google\Service\Exception
    */
   public function advance($name, AdvanceRolloutRequest $postBody, $optParams = [])
   {
@@ -66,6 +67,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * @param ApproveRolloutRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ApproveRolloutResponse
+   * @throws \Google\Service\Exception
    */
   public function approve($name, ApproveRolloutRequest $postBody, $optParams = [])
   {
@@ -82,6 +84,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * @param CancelRolloutRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CancelRolloutResponse
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, CancelRolloutRequest $postBody, $optParams = [])
   {
@@ -116,6 +119,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * validated and the user is provided with an expected result, but no actual
    * change is made.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Rollout $postBody, $optParams = [])
   {
@@ -131,6 +135,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * eases/{release_name}/rollouts/{rollout_name}`.
    * @param array $optParams Optional parameters.
    * @return Rollout
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -147,6 +152,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * @param IgnoreJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return IgnoreJobResponse
+   * @throws \Google\Service\Exception
    */
   public function ignoreJob($rollout, IgnoreJobRequest $postBody, $optParams = [])
   {
@@ -175,6 +181,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * paginating, all other provided parameters match the call that provided the
    * page token.
    * @return ListRolloutsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDeliveryPipelinesReleasesRollouts($parent, $optParams = [])
   {
@@ -191,6 +198,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRollouts extends \Google\Service
    * @param RetryJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return RetryJobResponse
+   * @throws \Google\Service\Exception
    */
   public function retryJob($rollout, RetryJobRequest $postBody, $optParams = [])
   {

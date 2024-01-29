@@ -19,10 +19,6 @@ namespace Google\Service\CloudDeploy;
 
 class PromoteReleaseRule extends \Google\Model
 {
-  /**
-   * @var AutomationRuleCondition
-   */
-  public $condition;
   protected $conditionType = AutomationRuleCondition::class;
   protected $conditionDataType = '';
   /**

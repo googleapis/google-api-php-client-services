@@ -40,6 +40,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRuns extends \Google\
    * ases/{release_name}/rollouts/{rollout_name}/jobRuns/{job_run_name}`.
    * @param array $optParams Optional parameters.
    * @return JobRun
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRuns extends \Google\
    * paginating, all other provided parameters match the call that provided the
    * page token.
    * @return ListJobRunsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRuns($parent, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsLocationsDeliveryPipelinesReleasesRolloutsJobRuns extends \Google\
    * @param TerminateJobRunRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TerminateJobRunResponse
+   * @throws \Google\Service\Exception
    */
   public function terminate($name, TerminateJobRunRequest $postBody, $optParams = [])
   {

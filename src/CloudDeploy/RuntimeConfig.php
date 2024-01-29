@@ -19,16 +19,8 @@ namespace Google\Service\CloudDeploy;
 
 class RuntimeConfig extends \Google\Model
 {
-  /**
-   * @var CloudRunConfig
-   */
-  public $cloudRun;
   protected $cloudRunType = CloudRunConfig::class;
   protected $cloudRunDataType = '';
-  /**
-   * @var KubernetesConfig
-   */
-  public $kubernetes;
   protected $kubernetesType = KubernetesConfig::class;
   protected $kubernetesDataType = '';
 

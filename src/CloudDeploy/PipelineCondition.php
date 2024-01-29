@@ -19,22 +19,10 @@ namespace Google\Service\CloudDeploy;
 
 class PipelineCondition extends \Google\Model
 {
-  /**
-   * @var PipelineReadyCondition
-   */
-  public $pipelineReadyCondition;
   protected $pipelineReadyConditionType = PipelineReadyCondition::class;
   protected $pipelineReadyConditionDataType = '';
-  /**
-   * @var TargetsPresentCondition
-   */
-  public $targetsPresentCondition;
   protected $targetsPresentConditionType = TargetsPresentCondition::class;
   protected $targetsPresentConditionDataType = '';
-  /**
-   * @var TargetsTypeCondition
-   */
-  public $targetsTypeCondition;
   protected $targetsTypeConditionType = TargetsTypeCondition::class;
   protected $targetsTypeConditionDataType = '';
 

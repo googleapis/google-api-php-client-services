@@ -28,32 +28,16 @@ class Release extends \Google\Collection
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var BuildArtifact[]
-   */
-  public $buildArtifacts;
   protected $buildArtifactsType = BuildArtifact::class;
   protected $buildArtifactsDataType = 'array';
-  /**
-   * @var ReleaseCondition
-   */
-  public $condition;
   protected $conditionType = ReleaseCondition::class;
   protected $conditionDataType = '';
   /**
    * @var string
    */
   public $createTime;
-  /**
-   * @var CustomTargetType[]
-   */
-  public $customTargetTypeSnapshots;
   protected $customTargetTypeSnapshotsType = CustomTargetType::class;
   protected $customTargetTypeSnapshotsDataType = 'array';
-  /**
-   * @var DeliveryPipeline
-   */
-  public $deliveryPipelineSnapshot;
   protected $deliveryPipelineSnapshotType = DeliveryPipeline::class;
   protected $deliveryPipelineSnapshotDataType = '';
   /**
@@ -100,22 +84,10 @@ class Release extends \Google\Collection
    * @var string
    */
   public $skaffoldVersion;
-  /**
-   * @var TargetArtifact[]
-   */
-  public $targetArtifacts;
   protected $targetArtifactsType = TargetArtifact::class;
   protected $targetArtifactsDataType = 'map';
-  /**
-   * @var TargetRender[]
-   */
-  public $targetRenders;
   protected $targetRendersType = TargetRender::class;
   protected $targetRendersDataType = 'map';
-  /**
-   * @var Target[]
-   */
-  public $targetSnapshots;
   protected $targetSnapshotsType = Target::class;
   protected $targetSnapshotsDataType = 'array';
   /**

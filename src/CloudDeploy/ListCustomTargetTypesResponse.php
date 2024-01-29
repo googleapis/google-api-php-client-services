@@ -20,10 +20,6 @@ namespace Google\Service\CloudDeploy;
 class ListCustomTargetTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var CustomTargetType[]
-   */
-  public $customTargetTypes;
   protected $customTargetTypesType = CustomTargetType::class;
   protected $customTargetTypesDataType = 'array';
   /**

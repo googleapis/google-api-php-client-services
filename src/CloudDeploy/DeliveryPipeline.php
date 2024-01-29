@@ -23,10 +23,6 @@ class DeliveryPipeline extends \Google\Model
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var PipelineCondition
-   */
-  public $condition;
   protected $conditionType = PipelineCondition::class;
   protected $conditionDataType = '';
   /**
@@ -49,10 +45,6 @@ class DeliveryPipeline extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var SerialPipeline
-   */
-  public $serialPipeline;
   protected $serialPipelineType = SerialPipeline::class;
   protected $serialPipelineDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\CloudDeploy;
 
 class RollbackTargetConfig extends \Google\Model
 {
-  /**
-   * @var Rollout
-   */
-  public $rollout;
   protected $rolloutType = Rollout::class;
   protected $rolloutDataType = '';
   /**

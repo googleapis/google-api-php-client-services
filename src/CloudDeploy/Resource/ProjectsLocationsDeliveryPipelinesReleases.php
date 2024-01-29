@@ -42,6 +42,7 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
    * @param AbandonReleaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AbandonReleaseResponse
+   * @throws \Google\Service\Exception
    */
   public function abandon($name, AbandonReleaseRequest $postBody, $optParams = [])
   {
@@ -74,6 +75,7 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
    * validated and the user is provided with an expected result, but no actual
    * change is made.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Release $postBody, $optParams = [])
   {
@@ -89,6 +91,7 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
    * eases/{release_name}`.
    * @param array $optParams Optional parameters.
    * @return Release
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -117,6 +120,7 @@ class ProjectsLocationsDeliveryPipelinesReleases extends \Google\Service\Resourc
    * paginating, all other provided parameters match the call that provided the
    * page token.
    * @return ListReleasesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDeliveryPipelinesReleases($parent, $optParams = [])
   {

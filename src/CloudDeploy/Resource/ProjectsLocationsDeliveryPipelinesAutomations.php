@@ -57,6 +57,7 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * validated and the user is provided with an expected result, but no actual
    * change is made.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Automation $postBody, $optParams = [])
   {
@@ -92,6 +93,7 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * @opt_param bool validateOnly Optional. If set, validate the request and
    * verify whether the resource exists, but do not actually post it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -107,6 +109,7 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * automations/{automation_name}`.
    * @param array $optParams Optional parameters.
    * @return Automation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -135,6 +138,7 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * paginating, all other provided parameters match the call that provided the
    * page token.
    * @return ListAutomationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDeliveryPipelinesAutomations($parent, $optParams = [])
   {
@@ -174,6 +178,7 @@ class ProjectsLocationsDeliveryPipelinesAutomations extends \Google\Service\Reso
    * validated and the user is provided with an expected result, but no actual
    * change is made.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Automation $postBody, $optParams = [])
   {

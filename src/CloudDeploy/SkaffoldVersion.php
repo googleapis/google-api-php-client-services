@@ -23,10 +23,6 @@ class SkaffoldVersion extends \Google\Model
    * @var string
    */
   public $maintenanceModeTime;
-  /**
-   * @var Date
-   */
-  public $supportEndDate;
   protected $supportEndDateType = Date::class;
   protected $supportEndDateDataType = '';
   /**

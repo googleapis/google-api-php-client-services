@@ -24,10 +24,6 @@ class ListTargetsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Target[]
-   */
-  public $targets;
   protected $targetsType = Target::class;
   protected $targetsDataType = 'array';
   /**

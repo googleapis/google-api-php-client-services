@@ -20,20 +20,12 @@ namespace Google\Service\CloudDeploy;
 class Stage extends \Google\Collection
 {
   protected $collection_key = 'profiles';
-  /**
-   * @var DeployParameters[]
-   */
-  public $deployParameters;
   protected $deployParametersType = DeployParameters::class;
   protected $deployParametersDataType = 'array';
   /**
    * @var string[]
    */
   public $profiles;
-  /**
-   * @var Strategy
-   */
-  public $strategy;
   protected $strategyType = Strategy::class;
   protected $strategyDataType = '';
   /**

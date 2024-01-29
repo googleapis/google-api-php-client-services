@@ -24,16 +24,8 @@ class CanaryDeployment extends \Google\Collection
    * @var int[]
    */
   public $percentages;
-  /**
-   * @var Postdeploy
-   */
-  public $postdeploy;
   protected $postdeployType = Postdeploy::class;
   protected $postdeployDataType = '';
-  /**
-   * @var Predeploy
-   */
-  public $predeploy;
   protected $predeployType = Predeploy::class;
   protected $predeployDataType = '';
   /**

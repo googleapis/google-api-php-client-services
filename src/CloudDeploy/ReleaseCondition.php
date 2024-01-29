@@ -19,16 +19,8 @@ namespace Google\Service\CloudDeploy;
 
 class ReleaseCondition extends \Google\Model
 {
-  /**
-   * @var ReleaseReadyCondition
-   */
-  public $releaseReadyCondition;
   protected $releaseReadyConditionType = ReleaseReadyCondition::class;
   protected $releaseReadyConditionDataType = '';
-  /**
-   * @var SkaffoldSupportedCondition
-   */
-  public $skaffoldSupportedCondition;
   protected $skaffoldSupportedConditionType = SkaffoldSupportedCondition::class;
   protected $skaffoldSupportedConditionDataType = '';
 

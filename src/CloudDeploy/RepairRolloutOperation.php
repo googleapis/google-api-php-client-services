@@ -32,10 +32,6 @@ class RepairRolloutOperation extends \Google\Collection
    * @var string
    */
   public $phaseId;
-  /**
-   * @var RepairPhase[]
-   */
-  public $repairPhases;
   protected $repairPhasesType = RepairPhase::class;
   protected $repairPhasesDataType = 'array';
   /**

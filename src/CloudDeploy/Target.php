@@ -24,20 +24,12 @@ class Target extends \Google\Collection
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var AnthosCluster
-   */
-  public $anthosCluster;
   protected $anthosClusterType = AnthosCluster::class;
   protected $anthosClusterDataType = '';
   /**
    * @var string
    */
   public $createTime;
-  /**
-   * @var CustomTarget
-   */
-  public $customTarget;
   protected $customTargetType = CustomTarget::class;
   protected $customTargetDataType = '';
   /**
@@ -52,26 +44,14 @@ class Target extends \Google\Collection
    * @var string
    */
   public $etag;
-  /**
-   * @var ExecutionConfig[]
-   */
-  public $executionConfigs;
   protected $executionConfigsType = ExecutionConfig::class;
   protected $executionConfigsDataType = 'array';
-  /**
-   * @var GkeCluster
-   */
-  public $gke;
   protected $gkeType = GkeCluster::class;
   protected $gkeDataType = '';
   /**
    * @var string[]
    */
   public $labels;
-  /**
-   * @var MultiTarget
-   */
-  public $multiTarget;
   protected $multiTargetType = MultiTarget::class;
   protected $multiTargetDataType = '';
   /**
@@ -82,10 +62,6 @@ class Target extends \Google\Collection
    * @var bool
    */
   public $requireApproval;
-  /**
-   * @var CloudRunLocation
-   */
-  public $run;
   protected $runType = CloudRunLocation::class;
   protected $runDataType = '';
   /**
