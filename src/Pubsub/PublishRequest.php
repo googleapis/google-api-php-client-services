@@ -20,10 +20,6 @@ namespace Google\Service\Pubsub;
 class PublishRequest extends \Google\Collection
 {
   protected $collection_key = 'messages';
-  /**
-   * @var PubsubMessage[]
-   */
-  public $messages;
   protected $messagesType = PubsubMessage::class;
   protected $messagesDataType = 'array';
 

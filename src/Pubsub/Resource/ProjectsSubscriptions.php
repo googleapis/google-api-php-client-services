@@ -57,6 +57,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param AcknowledgeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return PubsubEmpty
+   * @throws \Google\Service\Exception
    */
   public function acknowledge($subscription, AcknowledgeRequest $postBody, $optParams = [])
   {
@@ -85,6 +86,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param Subscription $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function create($name, Subscription $postBody, $optParams = [])
   {
@@ -103,6 +105,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * `projects/{project}/subscriptions/{sub}`.
    * @param array $optParams Optional parameters.
    * @return PubsubEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($subscription, $optParams = [])
   {
@@ -120,6 +123,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * `projects/{project}/subscriptions/{subscription}`.
    * @param array $optParams Optional parameters.
    * @return DetachSubscriptionResponse
+   * @throws \Google\Service\Exception
    */
   public function detach($subscription, $optParams = [])
   {
@@ -134,6 +138,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * Format is `projects/{project}/subscriptions/{sub}`.
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function get($subscription, $optParams = [])
   {
@@ -164,6 +169,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -184,6 +190,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * `ListSubscriptions` call, and that the system should return the next page of
    * data.
    * @return ListSubscriptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsSubscriptions($project, $optParams = [])
   {
@@ -204,6 +211,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param ModifyAckDeadlineRequest $postBody
    * @param array $optParams Optional parameters.
    * @return PubsubEmpty
+   * @throws \Google\Service\Exception
    */
   public function modifyAckDeadline($subscription, ModifyAckDeadlineRequest $postBody, $optParams = [])
   {
@@ -224,6 +232,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param ModifyPushConfigRequest $postBody
    * @param array $optParams Optional parameters.
    * @return PubsubEmpty
+   * @throws \Google\Service\Exception
    */
   public function modifyPushConfig($subscription, ModifyPushConfigRequest $postBody, $optParams = [])
   {
@@ -244,6 +253,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param UpdateSubscriptionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Subscription
+   * @throws \Google\Service\Exception
    */
   public function patch($name, UpdateSubscriptionRequest $postBody, $optParams = [])
   {
@@ -259,6 +269,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param PullRequest $postBody
    * @param array $optParams Optional parameters.
    * @return PullResponse
+   * @throws \Google\Service\Exception
    */
   public function pull($subscription, PullRequest $postBody, $optParams = [])
   {
@@ -279,6 +290,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param SeekRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SeekResponse
+   * @throws \Google\Service\Exception
    */
   public function seek($subscription, SeekRequest $postBody, $optParams = [])
   {
@@ -298,6 +310,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -320,6 +333,7 @@ class ProjectsSubscriptions extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

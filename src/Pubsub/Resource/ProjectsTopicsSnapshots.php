@@ -46,6 +46,7 @@ class ProjectsTopicsSnapshots extends \Google\Service\Resource
    * prior `ListTopicSnapshots` call, and that the system should return the next
    * page of data.
    * @return ListTopicSnapshotsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsTopicsSnapshots($topic, $optParams = [])
   {

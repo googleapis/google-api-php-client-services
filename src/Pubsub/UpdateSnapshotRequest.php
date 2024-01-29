@@ -19,10 +19,6 @@ namespace Google\Service\Pubsub;
 
 class UpdateSnapshotRequest extends \Google\Model
 {
-  /**
-   * @var Snapshot
-   */
-  public $snapshot;
   protected $snapshotType = Snapshot::class;
   protected $snapshotDataType = '';
   /**

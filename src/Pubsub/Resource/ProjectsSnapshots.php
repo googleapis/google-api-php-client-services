@@ -63,6 +63,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * @param CreateSnapshotRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Snapshot
+   * @throws \Google\Service\Exception
    */
   public function create($name, CreateSnapshotRequest $postBody, $optParams = [])
   {
@@ -85,6 +86,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * is `projects/{project}/snapshots/{snap}`.
    * @param array $optParams Optional parameters.
    * @return PubsubEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($snapshot, $optParams = [])
   {
@@ -103,6 +105,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * `projects/{project}/snapshots/{snap}`.
    * @param array $optParams Optional parameters.
    * @return Snapshot
+   * @throws \Google\Service\Exception
    */
   public function get($snapshot, $optParams = [])
   {
@@ -133,6 +136,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -157,6 +161,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * `ListSnapshots` call, and that the system should return the next page of
    * data.
    * @return ListSnapshotsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsSnapshots($project, $optParams = [])
   {
@@ -175,6 +180,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * @param UpdateSnapshotRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Snapshot
+   * @throws \Google\Service\Exception
    */
   public function patch($name, UpdateSnapshotRequest $postBody, $optParams = [])
   {
@@ -194,6 +200,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -216,6 +223,7 @@ class ProjectsSnapshots extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

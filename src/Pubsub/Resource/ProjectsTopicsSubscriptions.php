@@ -44,6 +44,7 @@ class ProjectsTopicsSubscriptions extends \Google\Service\Resource
    * prior `ListTopicSubscriptions` call, and that the system should return the
    * next page of data.
    * @return ListTopicSubscriptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsTopicsSubscriptions($topic, $optParams = [])
   {

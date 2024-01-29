@@ -24,10 +24,6 @@ class ListSchemasResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Schema[]
-   */
-  public $schemas;
   protected $schemasType = Schema::class;
   protected $schemasDataType = 'array';
 

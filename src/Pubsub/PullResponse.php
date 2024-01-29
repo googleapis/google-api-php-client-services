@@ -20,10 +20,6 @@ namespace Google\Service\Pubsub;
 class PullResponse extends \Google\Collection
 {
   protected $collection_key = 'receivedMessages';
-  /**
-   * @var ReceivedMessage[]
-   */
-  public $receivedMessages;
   protected $receivedMessagesType = ReceivedMessage::class;
   protected $receivedMessagesDataType = 'array';
 

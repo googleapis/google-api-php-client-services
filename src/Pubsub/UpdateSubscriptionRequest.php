@@ -19,10 +19,6 @@ namespace Google\Service\Pubsub;
 
 class UpdateSubscriptionRequest extends \Google\Model
 {
-  /**
-   * @var Subscription
-   */
-  public $subscription;
   protected $subscriptionType = Subscription::class;
   protected $subscriptionDataType = '';
   /**

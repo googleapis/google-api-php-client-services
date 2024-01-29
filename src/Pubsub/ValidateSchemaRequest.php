@@ -19,10 +19,6 @@ namespace Google\Service\Pubsub;
 
 class ValidateSchemaRequest extends \Google\Model
 {
-  /**
-   * @var Schema
-   */
-  public $schema;
   protected $schemaType = Schema::class;
   protected $schemaDataType = '';
 

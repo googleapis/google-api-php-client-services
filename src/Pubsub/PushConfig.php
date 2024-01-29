@@ -23,22 +23,10 @@ class PushConfig extends \Google\Model
    * @var string[]
    */
   public $attributes;
-  /**
-   * @var NoWrapper
-   */
-  public $noWrapper;
   protected $noWrapperType = NoWrapper::class;
   protected $noWrapperDataType = '';
-  /**
-   * @var OidcToken
-   */
-  public $oidcToken;
   protected $oidcTokenType = OidcToken::class;
   protected $oidcTokenDataType = '';
-  /**
-   * @var PubsubWrapper
-   */
-  public $pubsubWrapper;
   protected $pubsubWrapperType = PubsubWrapper::class;
   protected $pubsubWrapperDataType = '';
   /**
