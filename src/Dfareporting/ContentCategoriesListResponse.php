@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class ContentCategoriesListResponse extends \Google\Collection
 {
   protected $collection_key = 'contentCategories';
-  /**
-   * @var ContentCategory[]
-   */
-  public $contentCategories;
   protected $contentCategoriesType = ContentCategory::class;
   protected $contentCategoriesDataType = 'array';
   /**

@@ -20,42 +20,22 @@ namespace Google\Service\Dfareporting;
 class CreativeAssetMetadata extends \Google\Collection
 {
   protected $collection_key = 'warnedValidationRules';
-  /**
-   * @var CreativeAssetId
-   */
-  public $assetIdentifier;
   protected $assetIdentifierType = CreativeAssetId::class;
   protected $assetIdentifierDataType = '';
-  /**
-   * @var ClickTag[]
-   */
-  public $clickTags;
   protected $clickTagsType = ClickTag::class;
   protected $clickTagsDataType = 'array';
-  /**
-   * @var CreativeCustomEvent[]
-   */
-  public $counterCustomEvents;
   protected $counterCustomEventsType = CreativeCustomEvent::class;
   protected $counterCustomEventsDataType = 'array';
   /**
    * @var string[]
    */
   public $detectedFeatures;
-  /**
-   * @var CreativeCustomEvent[]
-   */
-  public $exitCustomEvents;
   protected $exitCustomEventsType = CreativeCustomEvent::class;
   protected $exitCustomEventsDataType = 'array';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var DimensionValue
-   */
-  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
@@ -66,10 +46,6 @@ class CreativeAssetMetadata extends \Google\Collection
    * @var bool
    */
   public $richMedia;
-  /**
-   * @var CreativeCustomEvent[]
-   */
-  public $timerCustomEvents;
   protected $timerCustomEventsType = CreativeCustomEvent::class;
   protected $timerCustomEventsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Dfareporting;
 
 class CustomViewabilityMetric extends \Google\Model
 {
-  /**
-   * @var CustomViewabilityMetricConfiguration
-   */
-  public $configuration;
   protected $configurationType = CustomViewabilityMetricConfiguration::class;
   protected $configurationDataType = '';
   /**

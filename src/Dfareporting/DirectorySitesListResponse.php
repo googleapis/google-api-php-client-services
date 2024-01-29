@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class DirectorySitesListResponse extends \Google\Collection
 {
   protected $collection_key = 'directorySites';
-  /**
-   * @var DirectorySite[]
-   */
-  public $directorySites;
   protected $directorySitesType = DirectorySite::class;
   protected $directorySitesDataType = 'array';
   /**

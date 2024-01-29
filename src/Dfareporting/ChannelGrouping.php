@@ -32,10 +32,6 @@ class ChannelGrouping extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ChannelGroupingRule[]
-   */
-  public $rules;
   protected $rulesType = ChannelGroupingRule::class;
   protected $rulesDataType = 'array';
 

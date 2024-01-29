@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class AdvertiserInvoicesListResponse extends \Google\Collection
 {
   protected $collection_key = 'invoices';
-  /**
-   * @var Invoice[]
-   */
-  public $invoices;
   protected $invoicesType = Invoice::class;
   protected $invoicesDataType = 'array';
   /**

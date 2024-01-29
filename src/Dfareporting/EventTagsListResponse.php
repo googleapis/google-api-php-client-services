@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class EventTagsListResponse extends \Google\Collection
 {
   protected $collection_key = 'eventTags';
-  /**
-   * @var EventTag[]
-   */
-  public $eventTags;
   protected $eventTagsType = EventTag::class;
   protected $eventTagsDataType = 'array';
   /**

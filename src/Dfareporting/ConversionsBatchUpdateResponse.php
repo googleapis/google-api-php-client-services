@@ -28,10 +28,6 @@ class ConversionsBatchUpdateResponse extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var ConversionStatus[]
-   */
-  public $status;
   protected $statusType = ConversionStatus::class;
   protected $statusDataType = 'array';
 

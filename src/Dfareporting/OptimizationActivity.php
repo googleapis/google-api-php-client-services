@@ -23,10 +23,6 @@ class OptimizationActivity extends \Google\Model
    * @var string
    */
   public $floodlightActivityId;
-  /**
-   * @var DimensionValue
-   */
-  public $floodlightActivityIdDimensionValue;
   protected $floodlightActivityIdDimensionValueType = DimensionValue::class;
   protected $floodlightActivityIdDimensionValueDataType = '';
   /**

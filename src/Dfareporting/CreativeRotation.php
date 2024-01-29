@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class CreativeRotation extends \Google\Collection
 {
   protected $collection_key = 'creativeAssignments';
-  /**
-   * @var CreativeAssignment[]
-   */
-  public $creativeAssignments;
   protected $creativeAssignmentsType = CreativeAssignment::class;
   protected $creativeAssignmentsDataType = 'array';
   /**

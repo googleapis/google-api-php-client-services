@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class DisjunctiveMatchStatement extends \Google\Collection
 {
   protected $collection_key = 'eventFilters';
-  /**
-   * @var EventFilter[]
-   */
-  public $eventFilters;
   protected $eventFiltersType = EventFilter::class;
   protected $eventFiltersDataType = 'array';
   /**

@@ -28,10 +28,6 @@ class ListPopulationRule extends \Google\Collection
    * @var string
    */
   public $floodlightActivityName;
-  /**
-   * @var ListPopulationClause[]
-   */
-  public $listPopulationClauses;
   protected $listPopulationClausesType = ListPopulationClause::class;
   protected $listPopulationClausesDataType = 'array';
 

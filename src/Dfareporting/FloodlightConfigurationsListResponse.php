@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class FloodlightConfigurationsListResponse extends \Google\Collection
 {
   protected $collection_key = 'floodlightConfigurations';
-  /**
-   * @var FloodlightConfiguration[]
-   */
-  public $floodlightConfigurations;
   protected $floodlightConfigurationsType = FloodlightConfiguration::class;
   protected $floodlightConfigurationsDataType = 'array';
   /**

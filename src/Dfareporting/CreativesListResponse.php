@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class CreativesListResponse extends \Google\Collection
 {
   protected $collection_key = 'creatives';
-  /**
-   * @var Creative[]
-   */
-  public $creatives;
   protected $creativesType = Creative::class;
   protected $creativesDataType = 'array';
   /**

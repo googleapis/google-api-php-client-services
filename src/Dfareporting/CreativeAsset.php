@@ -28,10 +28,6 @@ class CreativeAsset extends \Google\Collection
    * @var bool
    */
   public $active;
-  /**
-   * @var Size[]
-   */
-  public $additionalSizes;
   protected $additionalSizesType = Size::class;
   protected $additionalSizesDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class CreativeAsset extends \Google\Collection
    * @var string
    */
   public $artworkType;
-  /**
-   * @var CreativeAssetId
-   */
-  public $assetIdentifier;
   protected $assetIdentifierType = CreativeAssetId::class;
   protected $assetIdentifierDataType = '';
   /**
@@ -56,10 +48,6 @@ class CreativeAsset extends \Google\Collection
    * @var int
    */
   public $audioSampleRate;
-  /**
-   * @var CreativeCustomEvent
-   */
-  public $backupImageExit;
   protected $backupImageExitType = CreativeCustomEvent::class;
   protected $backupImageExitDataType = '';
   /**
@@ -70,10 +58,6 @@ class CreativeAsset extends \Google\Collection
    * @var string
    */
   public $childAssetType;
-  /**
-   * @var Size
-   */
-  public $collapsedSize;
   protected $collapsedSizeType = Size::class;
   protected $collapsedSizeDataType = '';
   /**
@@ -100,10 +84,6 @@ class CreativeAsset extends \Google\Collection
    * @var string
    */
   public $durationType;
-  /**
-   * @var Size
-   */
-  public $expandedDimension;
   protected $expandedDimensionType = Size::class;
   protected $expandedDimensionDataType = '';
   /**
@@ -134,10 +114,6 @@ class CreativeAsset extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var DimensionValue
-   */
-  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
@@ -148,10 +124,6 @@ class CreativeAsset extends \Google\Collection
    * @var string
    */
   public $mimeType;
-  /**
-   * @var OffsetPosition
-   */
-  public $offset;
   protected $offsetType = OffsetPosition::class;
   protected $offsetDataType = '';
   /**
@@ -166,10 +138,6 @@ class CreativeAsset extends \Google\Collection
    * @var bool
    */
   public $politeLoad;
-  /**
-   * @var OffsetPosition
-   */
-  public $position;
   protected $positionType = OffsetPosition::class;
   protected $positionDataType = '';
   /**
@@ -196,10 +164,6 @@ class CreativeAsset extends \Google\Collection
    * @var string
    */
   public $role;
-  /**
-   * @var Size
-   */
-  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
   /**

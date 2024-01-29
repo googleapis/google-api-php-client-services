@@ -24,10 +24,6 @@ class DirectorySite extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var DimensionValue
-   */
-  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
@@ -46,10 +42,6 @@ class DirectorySite extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var DirectorySiteSettings
-   */
-  public $settings;
   protected $settingsType = DirectorySiteSettings::class;
   protected $settingsDataType = '';
   /**

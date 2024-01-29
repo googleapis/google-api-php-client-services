@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class CampaignCreativeAssociationsListResponse extends \Google\Collection
 {
   protected $collection_key = 'campaignCreativeAssociations';
-  /**
-   * @var CampaignCreativeAssociation[]
-   */
-  public $campaignCreativeAssociations;
   protected $campaignCreativeAssociationsType = CampaignCreativeAssociation::class;
   protected $campaignCreativeAssociationsDataType = 'array';
   /**

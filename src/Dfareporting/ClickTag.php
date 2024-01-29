@@ -19,10 +19,6 @@ namespace Google\Service\Dfareporting;
 
 class ClickTag extends \Google\Model
 {
-  /**
-   * @var CreativeClickThroughUrl
-   */
-  public $clickThroughUrl;
   protected $clickThroughUrlType = CreativeClickThroughUrl::class;
   protected $clickThroughUrlDataType = '';
   /**

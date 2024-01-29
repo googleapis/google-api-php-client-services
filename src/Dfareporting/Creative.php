@@ -36,10 +36,6 @@ class Creative extends \Google\Collection
    * @var string[]
    */
   public $adTagKeys;
-  /**
-   * @var Size[]
-   */
-  public $additionalSizes;
   protected $additionalSizesType = Size::class;
   protected $additionalSizesDataType = 'array';
   /**
@@ -74,10 +70,6 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $backgroundColor;
-  /**
-   * @var CreativeClickThroughUrl
-   */
-  public $backupImageClickThroughUrl;
   protected $backupImageClickThroughUrlType = CreativeClickThroughUrl::class;
   protected $backupImageClickThroughUrlDataType = '';
   /**
@@ -88,16 +80,8 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $backupImageReportingLabel;
-  /**
-   * @var TargetWindow
-   */
-  public $backupImageTargetWindow;
   protected $backupImageTargetWindowType = TargetWindow::class;
   protected $backupImageTargetWindowDataType = '';
-  /**
-   * @var ClickTag[]
-   */
-  public $clickTags;
   protected $clickTagsType = ClickTag::class;
   protected $clickTagsDataType = 'array';
   /**
@@ -116,28 +100,12 @@ class Creative extends \Google\Collection
    * @var bool
    */
   public $convertFlashToHtml5;
-  /**
-   * @var CreativeCustomEvent[]
-   */
-  public $counterCustomEvents;
   protected $counterCustomEventsType = CreativeCustomEvent::class;
   protected $counterCustomEventsDataType = 'array';
-  /**
-   * @var CreativeAssetSelection
-   */
-  public $creativeAssetSelection;
   protected $creativeAssetSelectionType = CreativeAssetSelection::class;
   protected $creativeAssetSelectionDataType = '';
-  /**
-   * @var CreativeAsset[]
-   */
-  public $creativeAssets;
   protected $creativeAssetsType = CreativeAsset::class;
   protected $creativeAssetsDataType = 'array';
-  /**
-   * @var CreativeFieldAssignment[]
-   */
-  public $creativeFieldAssignments;
   protected $creativeFieldAssignmentsType = CreativeFieldAssignment::class;
   protected $creativeFieldAssignmentsDataType = 'array';
   /**
@@ -148,16 +116,8 @@ class Creative extends \Google\Collection
    * @var bool
    */
   public $dynamicAssetSelection;
-  /**
-   * @var CreativeCustomEvent[]
-   */
-  public $exitCustomEvents;
   protected $exitCustomEventsType = CreativeCustomEvent::class;
   protected $exitCustomEventsDataType = 'array';
-  /**
-   * @var FsCommand
-   */
-  public $fsCommand;
   protected $fsCommandType = FsCommand::class;
   protected $fsCommandDataType = '';
   /**
@@ -172,20 +132,12 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var DimensionValue
-   */
-  public $idDimensionValue;
   protected $idDimensionValueType = DimensionValue::class;
   protected $idDimensionValueDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var LastModifiedInfo
-   */
-  public $lastModifiedInfo;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**
@@ -204,20 +156,12 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ObaIcon
-   */
-  public $obaIcon;
   protected $obaIconType = ObaIcon::class;
   protected $obaIconDataType = '';
   /**
    * @var string
    */
   public $overrideCss;
-  /**
-   * @var VideoOffset
-   */
-  public $progressOffset;
   protected $progressOffsetType = VideoOffset::class;
   protected $progressOffsetDataType = '';
   /**
@@ -228,10 +172,6 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $renderingId;
-  /**
-   * @var DimensionValue
-   */
-  public $renderingIdDimensionValue;
   protected $renderingIdDimensionValueType = DimensionValue::class;
   protected $renderingIdDimensionValueDataType = '';
   /**
@@ -242,16 +182,8 @@ class Creative extends \Google\Collection
    * @var int
    */
   public $requiredFlashVersion;
-  /**
-   * @var Size
-   */
-  public $size;
   protected $sizeType = Size::class;
   protected $sizeDataType = '';
-  /**
-   * @var VideoOffset
-   */
-  public $skipOffset;
   protected $skipOffsetType = VideoOffset::class;
   protected $skipOffsetDataType = '';
   /**
@@ -290,16 +222,8 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $thirdPartyRichMediaImpressionsUrl;
-  /**
-   * @var ThirdPartyTrackingUrl[]
-   */
-  public $thirdPartyUrls;
   protected $thirdPartyUrlsType = ThirdPartyTrackingUrl::class;
   protected $thirdPartyUrlsDataType = 'array';
-  /**
-   * @var CreativeCustomEvent[]
-   */
-  public $timerCustomEvents;
   protected $timerCustomEventsType = CreativeCustomEvent::class;
   protected $timerCustomEventsDataType = 'array';
   /**
@@ -310,10 +234,6 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $type;
-  /**
-   * @var UniversalAdId
-   */
-  public $universalAdId;
   protected $universalAdIdType = UniversalAdId::class;
   protected $universalAdIdDataType = '';
   /**

@@ -44,10 +44,6 @@ class Order extends \Google\Collection
    * @var string
    */
   public $comments;
-  /**
-   * @var OrderContact[]
-   */
-  public $contacts;
   protected $contactsType = OrderContact::class;
   protected $contactsDataType = 'array';
   /**
@@ -58,10 +54,6 @@ class Order extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LastModifiedInfo
-   */
-  public $lastModifiedInfo;
   protected $lastModifiedInfoType = LastModifiedInfo::class;
   protected $lastModifiedInfoDataType = '';
   /**

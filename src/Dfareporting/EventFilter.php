@@ -19,20 +19,12 @@ namespace Google\Service\Dfareporting;
 
 class EventFilter extends \Google\Model
 {
-  /**
-   * @var PathReportDimensionValue
-   */
-  public $dimensionFilter;
   protected $dimensionFilterType = PathReportDimensionValue::class;
   protected $dimensionFilterDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var UvarFilter
-   */
-  public $uvarFilter;
   protected $uvarFilterType = UvarFilter::class;
   protected $uvarFilterDataType = '';
 

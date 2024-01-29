@@ -28,10 +28,6 @@ class DimensionValueRequest extends \Google\Collection
    * @var string
    */
   public $endDate;
-  /**
-   * @var DimensionFilter[]
-   */
-  public $filters;
   protected $filtersType = DimensionFilter::class;
   protected $filtersDataType = 'array';
   /**

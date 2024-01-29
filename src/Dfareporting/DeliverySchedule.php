@@ -19,10 +19,6 @@ namespace Google\Service\Dfareporting;
 
 class DeliverySchedule extends \Google\Model
 {
-  /**
-   * @var FrequencyCap
-   */
-  public $frequencyCap;
   protected $frequencyCapType = FrequencyCap::class;
   protected $frequencyCapDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class ConnectionTypesListResponse extends \Google\Collection
 {
   protected $collection_key = 'connectionTypes';
-  /**
-   * @var ConnectionType[]
-   */
-  public $connectionTypes;
   protected $connectionTypesType = ConnectionType::class;
   protected $connectionTypesDataType = 'array';
   /**

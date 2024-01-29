@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class ListPopulationClause extends \Google\Collection
 {
   protected $collection_key = 'terms';
-  /**
-   * @var ListPopulationTerm[]
-   */
-  public $terms;
   protected $termsType = ListPopulationTerm::class;
   protected $termsDataType = 'array';
 

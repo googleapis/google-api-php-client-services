@@ -27,20 +27,12 @@ class FloodlightActivityPublisherDynamicTag extends \Google\Model
    * @var string
    */
   public $directorySiteId;
-  /**
-   * @var FloodlightActivityDynamicTag
-   */
-  public $dynamicTag;
   protected $dynamicTagType = FloodlightActivityDynamicTag::class;
   protected $dynamicTagDataType = '';
   /**
    * @var string
    */
   public $siteId;
-  /**
-   * @var DimensionValue
-   */
-  public $siteIdDimensionValue;
   protected $siteIdDimensionValueType = DimensionValue::class;
   protected $siteIdDimensionValueDataType = '';
   /**

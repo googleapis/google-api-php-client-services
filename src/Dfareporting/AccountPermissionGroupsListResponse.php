@@ -20,10 +20,6 @@ namespace Google\Service\Dfareporting;
 class AccountPermissionGroupsListResponse extends \Google\Collection
 {
   protected $collection_key = 'accountPermissionGroups';
-  /**
-   * @var AccountPermissionGroup[]
-   */
-  public $accountPermissionGroups;
   protected $accountPermissionGroupsType = AccountPermissionGroup::class;
   protected $accountPermissionGroupsDataType = 'array';
   /**
