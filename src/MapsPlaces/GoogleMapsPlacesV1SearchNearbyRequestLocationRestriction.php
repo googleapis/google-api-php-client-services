@@ -19,10 +19,6 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleMapsPlacesV1SearchNearbyRequestLocationRestriction extends \Google\Model
 {
-  /**
-   * @var GoogleMapsPlacesV1Circle
-   */
-  public $circle;
   protected $circleType = GoogleMapsPlacesV1Circle::class;
   protected $circleDataType = '';
 

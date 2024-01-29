@@ -20,10 +20,6 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1FuelOptions extends \Google\Collection
 {
   protected $collection_key = 'fuelPrices';
-  /**
-   * @var GoogleMapsPlacesV1FuelOptionsFuelPrice[]
-   */
-  public $fuelPrices;
   protected $fuelPricesType = GoogleMapsPlacesV1FuelOptionsFuelPrice::class;
   protected $fuelPricesDataType = 'array';
 

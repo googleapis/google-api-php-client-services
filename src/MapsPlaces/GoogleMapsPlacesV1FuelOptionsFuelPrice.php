@@ -19,10 +19,6 @@ namespace Google\Service\MapsPlaces;
 
 class GoogleMapsPlacesV1FuelOptionsFuelPrice extends \Google\Model
 {
-  /**
-   * @var GoogleTypeMoney
-   */
-  public $price;
   protected $priceType = GoogleTypeMoney::class;
   protected $priceDataType = '';
   /**

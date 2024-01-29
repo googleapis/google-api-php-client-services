@@ -20,16 +20,8 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1Place extends \Google\Collection
 {
   protected $collection_key = 'types';
-  /**
-   * @var GoogleMapsPlacesV1PlaceAccessibilityOptions
-   */
-  public $accessibilityOptions;
   protected $accessibilityOptionsType = GoogleMapsPlacesV1PlaceAccessibilityOptions::class;
   protected $accessibilityOptionsDataType = '';
-  /**
-   * @var GoogleMapsPlacesV1PlaceAddressComponent[]
-   */
-  public $addressComponents;
   protected $addressComponentsType = GoogleMapsPlacesV1PlaceAddressComponent::class;
   protected $addressComponentsDataType = 'array';
   /**
@@ -40,10 +32,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $allowsDogs;
-  /**
-   * @var GoogleMapsPlacesV1PlaceAttribution[]
-   */
-  public $attributions;
   protected $attributionsType = GoogleMapsPlacesV1PlaceAttribution::class;
   protected $attributionsDataType = 'array';
   /**
@@ -54,16 +42,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $curbsidePickup;
-  /**
-   * @var GoogleMapsPlacesV1PlaceOpeningHours
-   */
-  public $currentOpeningHours;
   protected $currentOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
   protected $currentOpeningHoursDataType = '';
-  /**
-   * @var GoogleMapsPlacesV1PlaceOpeningHours[]
-   */
-  public $currentSecondaryOpeningHours;
   protected $currentSecondaryOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
   protected $currentSecondaryOpeningHoursDataType = 'array';
   /**
@@ -74,32 +54,16 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $dineIn;
-  /**
-   * @var GoogleTypeLocalizedText
-   */
-  public $displayName;
   protected $displayNameType = GoogleTypeLocalizedText::class;
   protected $displayNameDataType = '';
-  /**
-   * @var GoogleTypeLocalizedText
-   */
-  public $editorialSummary;
   protected $editorialSummaryType = GoogleTypeLocalizedText::class;
   protected $editorialSummaryDataType = '';
-  /**
-   * @var GoogleMapsPlacesV1EVChargeOptions
-   */
-  public $evChargeOptions;
   protected $evChargeOptionsType = GoogleMapsPlacesV1EVChargeOptions::class;
   protected $evChargeOptionsDataType = '';
   /**
    * @var string
    */
   public $formattedAddress;
-  /**
-   * @var GoogleMapsPlacesV1FuelOptions
-   */
-  public $fuelOptions;
   protected $fuelOptionsType = GoogleMapsPlacesV1FuelOptions::class;
   protected $fuelOptionsDataType = '';
   /**
@@ -138,10 +102,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $liveMusic;
-  /**
-   * @var GoogleTypeLatLng
-   */
-  public $location;
   protected $locationType = GoogleTypeLatLng::class;
   protected $locationDataType = '';
   /**
@@ -160,28 +120,12 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $outdoorSeating;
-  /**
-   * @var GoogleMapsPlacesV1PlaceParkingOptions
-   */
-  public $parkingOptions;
   protected $parkingOptionsType = GoogleMapsPlacesV1PlaceParkingOptions::class;
   protected $parkingOptionsDataType = '';
-  /**
-   * @var GoogleMapsPlacesV1PlacePaymentOptions
-   */
-  public $paymentOptions;
   protected $paymentOptionsType = GoogleMapsPlacesV1PlacePaymentOptions::class;
   protected $paymentOptionsDataType = '';
-  /**
-   * @var GoogleMapsPlacesV1Photo[]
-   */
-  public $photos;
   protected $photosType = GoogleMapsPlacesV1Photo::class;
   protected $photosDataType = 'array';
-  /**
-   * @var GoogleMapsPlacesV1PlacePlusCode
-   */
-  public $plusCode;
   protected $plusCodeType = GoogleMapsPlacesV1PlacePlusCode::class;
   protected $plusCodeDataType = '';
   /**
@@ -192,23 +136,11 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var string
    */
   public $primaryType;
-  /**
-   * @var GoogleTypeLocalizedText
-   */
-  public $primaryTypeDisplayName;
   protected $primaryTypeDisplayNameType = GoogleTypeLocalizedText::class;
   protected $primaryTypeDisplayNameDataType = '';
   public $rating;
-  /**
-   * @var GoogleMapsPlacesV1PlaceOpeningHours
-   */
-  public $regularOpeningHours;
   protected $regularOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
   protected $regularOpeningHoursDataType = '';
-  /**
-   * @var GoogleMapsPlacesV1PlaceOpeningHours[]
-   */
-  public $regularSecondaryOpeningHours;
   protected $regularSecondaryOpeningHoursType = GoogleMapsPlacesV1PlaceOpeningHours::class;
   protected $regularSecondaryOpeningHoursDataType = 'array';
   /**
@@ -219,10 +151,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $restroom;
-  /**
-   * @var GoogleMapsPlacesV1Review[]
-   */
-  public $reviews;
   protected $reviewsType = GoogleMapsPlacesV1Review::class;
   protected $reviewsDataType = 'array';
   /**
@@ -269,10 +197,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var string
    */
   public $shortFormattedAddress;
-  /**
-   * @var GoogleMapsPlacesV1PlaceSubDestination[]
-   */
-  public $subDestinations;
   protected $subDestinationsType = GoogleMapsPlacesV1PlaceSubDestination::class;
   protected $subDestinationsDataType = 'array';
   /**
@@ -291,10 +215,6 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var int
    */
   public $utcOffsetMinutes;
-  /**
-   * @var GoogleGeoTypeViewport
-   */
-  public $viewport;
   protected $viewportType = GoogleGeoTypeViewport::class;
   protected $viewportDataType = '';
   /**

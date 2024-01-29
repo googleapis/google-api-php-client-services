@@ -20,10 +20,6 @@ namespace Google\Service\MapsPlaces;
 class GoogleMapsPlacesV1EVChargeOptions extends \Google\Collection
 {
   protected $collection_key = 'connectorAggregation';
-  /**
-   * @var GoogleMapsPlacesV1EVChargeOptionsConnectorAggregation[]
-   */
-  public $connectorAggregation;
   protected $connectorAggregationType = GoogleMapsPlacesV1EVChargeOptionsConnectorAggregation::class;
   protected $connectorAggregationDataType = 'array';
   /**

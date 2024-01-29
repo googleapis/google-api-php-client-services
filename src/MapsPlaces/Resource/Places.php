@@ -52,6 +52,7 @@ class Places extends \Google\Service\Resource
    * e_information.html. Note that 3-digit region codes are not currently
    * supported.
    * @return GoogleMapsPlacesV1Place
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -65,6 +66,7 @@ class Places extends \Google\Service\Resource
    * @param GoogleMapsPlacesV1SearchNearbyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleMapsPlacesV1SearchNearbyResponse
+   * @throws \Google\Service\Exception
    */
   public function searchNearby(GoogleMapsPlacesV1SearchNearbyRequest $postBody, $optParams = [])
   {
@@ -78,6 +80,7 @@ class Places extends \Google\Service\Resource
    * @param GoogleMapsPlacesV1SearchTextRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleMapsPlacesV1SearchTextResponse
+   * @throws \Google\Service\Exception
    */
   public function searchText(GoogleMapsPlacesV1SearchTextRequest $postBody, $optParams = [])
   {
