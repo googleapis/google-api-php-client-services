@@ -19,16 +19,8 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1FraudSignals extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1FraudSignalsCardSignals
-   */
-  public $cardSignals;
   protected $cardSignalsType = GoogleCloudRecaptchaenterpriseV1FraudSignalsCardSignals::class;
   protected $cardSignalsDataType = '';
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1FraudSignalsUserSignals
-   */
-  public $userSignals;
   protected $userSignalsType = GoogleCloudRecaptchaenterpriseV1FraudSignalsUserSignals::class;
   protected $userSignalsDataType = '';
 

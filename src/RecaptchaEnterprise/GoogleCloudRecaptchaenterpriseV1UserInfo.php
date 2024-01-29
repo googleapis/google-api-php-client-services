@@ -28,10 +28,6 @@ class GoogleCloudRecaptchaenterpriseV1UserInfo extends \Google\Collection
    * @var string
    */
   public $createAccountTime;
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1UserId[]
-   */
-  public $userIds;
   protected $userIdsType = GoogleCloudRecaptchaenterpriseV1UserId::class;
   protected $userIdsDataType = 'array';
 

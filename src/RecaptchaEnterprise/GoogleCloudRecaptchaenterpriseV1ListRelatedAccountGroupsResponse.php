@@ -24,10 +24,6 @@ class GoogleCloudRecaptchaenterpriseV1ListRelatedAccountGroupsResponse extends \
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup[]
-   */
-  public $relatedAccountGroups;
   protected $relatedAccountGroupsType = GoogleCloudRecaptchaenterpriseV1RelatedAccountGroup::class;
   protected $relatedAccountGroupsDataType = 'array';
 

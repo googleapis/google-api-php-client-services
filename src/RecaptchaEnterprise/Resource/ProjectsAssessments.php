@@ -41,6 +41,7 @@ class ProjectsAssessments extends \Google\Service\Resource
    * @param GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentResponse
+   * @throws \Google\Service\Exception
    */
   public function annotate($name, GoogleCloudRecaptchaenterpriseV1AnnotateAssessmentRequest $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsAssessments extends \Google\Service\Resource
    * @param GoogleCloudRecaptchaenterpriseV1Assessment $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1Assessment
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudRecaptchaenterpriseV1Assessment $postBody, $optParams = [])
   {

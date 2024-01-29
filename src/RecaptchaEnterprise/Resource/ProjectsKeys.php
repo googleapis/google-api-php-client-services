@@ -42,6 +42,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * @param GoogleCloudRecaptchaenterpriseV1Key $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1Key
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudRecaptchaenterpriseV1Key $postBody, $optParams = [])
   {
@@ -56,6 +57,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * format `projects/{project}/keys/{key}`.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -70,6 +72,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * `projects/{project}/keys/{key}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1Key
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -85,6 +88,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * format `projects/{project}/keys/{key}/metrics`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1Metrics
+   * @throws \Google\Service\Exception
    */
   public function getMetrics($name, $optParams = [])
   {
@@ -105,6 +109,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * @opt_param string pageToken Optional. The next_page_token value returned from
    * a previous. ListKeysRequest, if any.
    * @return GoogleCloudRecaptchaenterpriseV1ListKeysResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsKeys($parent, $optParams = [])
   {
@@ -124,6 +129,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * @param GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1Key
+   * @throws \Google\Service\Exception
    */
   public function migrate($name, GoogleCloudRecaptchaenterpriseV1MigrateKeyRequest $postBody, $optParams = [])
   {
@@ -142,6 +148,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * @opt_param string updateMask Optional. The mask to control which fields of
    * the key get updated. If the mask is not present, all fields will be updated.
    * @return GoogleCloudRecaptchaenterpriseV1Key
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudRecaptchaenterpriseV1Key $postBody, $optParams = [])
   {
@@ -158,6 +165,7 @@ class ProjectsKeys extends \Google\Service\Resource
    * secret key in the format `projects/{project}/keys/{key}`.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRecaptchaenterpriseV1RetrieveLegacySecretKeyResponse
+   * @throws \Google\Service\Exception
    */
   public function retrieveLegacySecretKey($key, $optParams = [])
   {

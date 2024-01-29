@@ -20,10 +20,6 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1ListKeysResponse extends \Google\Collection
 {
   protected $collection_key = 'keys';
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1Key[]
-   */
-  public $keys;
   protected $keysType = GoogleCloudRecaptchaenterpriseV1Key::class;
   protected $keysDataType = 'array';
   /**

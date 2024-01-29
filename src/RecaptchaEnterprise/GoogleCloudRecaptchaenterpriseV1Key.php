@@ -19,10 +19,6 @@ namespace Google\Service\RecaptchaEnterprise;
 
 class GoogleCloudRecaptchaenterpriseV1Key extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1AndroidKeySettings
-   */
-  public $androidSettings;
   protected $androidSettingsType = GoogleCloudRecaptchaenterpriseV1AndroidKeySettings::class;
   protected $androidSettingsDataType = '';
   /**
@@ -33,10 +29,6 @@ class GoogleCloudRecaptchaenterpriseV1Key extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1IOSKeySettings
-   */
-  public $iosSettings;
   protected $iosSettingsType = GoogleCloudRecaptchaenterpriseV1IOSKeySettings::class;
   protected $iosSettingsDataType = '';
   /**
@@ -47,22 +39,10 @@ class GoogleCloudRecaptchaenterpriseV1Key extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1TestingOptions
-   */
-  public $testingOptions;
   protected $testingOptionsType = GoogleCloudRecaptchaenterpriseV1TestingOptions::class;
   protected $testingOptionsDataType = '';
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1WafSettings
-   */
-  public $wafSettings;
   protected $wafSettingsType = GoogleCloudRecaptchaenterpriseV1WafSettings::class;
   protected $wafSettingsDataType = '';
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1WebKeySettings
-   */
-  public $webSettings;
   protected $webSettingsType = GoogleCloudRecaptchaenterpriseV1WebKeySettings::class;
   protected $webSettingsDataType = '';
 

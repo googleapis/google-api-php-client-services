@@ -20,10 +20,6 @@ namespace Google\Service\RecaptchaEnterprise;
 class GoogleCloudRecaptchaenterpriseV1AccountVerificationInfo extends \Google\Collection
 {
   protected $collection_key = 'endpoints';
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo[]
-   */
-  public $endpoints;
   protected $endpointsType = GoogleCloudRecaptchaenterpriseV1EndpointVerificationInfo::class;
   protected $endpointsDataType = 'array';
   /**

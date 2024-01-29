@@ -28,10 +28,6 @@ class GoogleCloudRecaptchaenterpriseV1IOSKeySettings extends \Google\Collection
    * @var string[]
    */
   public $allowedBundleIds;
-  /**
-   * @var GoogleCloudRecaptchaenterpriseV1AppleDeveloperId
-   */
-  public $appleDeveloperId;
   protected $appleDeveloperIdType = GoogleCloudRecaptchaenterpriseV1AppleDeveloperId::class;
   protected $appleDeveloperIdDataType = '';
 
