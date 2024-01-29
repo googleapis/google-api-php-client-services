@@ -32,16 +32,8 @@ class GoogleCloudChannelV1PricePhase extends \Google\Collection
    * @var string
    */
   public $periodType;
-  /**
-   * @var GoogleCloudChannelV1Price
-   */
-  public $price;
   protected $priceType = GoogleCloudChannelV1Price::class;
   protected $priceDataType = '';
-  /**
-   * @var GoogleCloudChannelV1PriceTier[]
-   */
-  public $priceTiers;
   protected $priceTiersType = GoogleCloudChannelV1PriceTier::class;
   protected $priceTiersDataType = 'array';
 

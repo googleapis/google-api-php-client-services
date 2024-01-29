@@ -65,6 +65,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1ActivateEntitlementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function activate($name, GoogleCloudChannelV1ActivateEntitlementRequest $postBody, $optParams = [])
   {
@@ -96,6 +97,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1CancelEntitlementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudChannelV1CancelEntitlementRequest $postBody, $optParams = [])
   {
@@ -123,6 +125,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1ChangeOfferRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function changeOffer($name, GoogleCloudChannelV1ChangeOfferRequest $postBody, $optParams = [])
   {
@@ -151,6 +154,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1ChangeParametersRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function changeParameters($name, GoogleCloudChannelV1ChangeParametersRequest $postBody, $optParams = [])
   {
@@ -180,6 +184,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1ChangeRenewalSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function changeRenewalSettings($name, GoogleCloudChannelV1ChangeRenewalSettingsRequest $postBody, $optParams = [])
   {
@@ -218,6 +223,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1CreateEntitlementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudChannelV1CreateEntitlementRequest $postBody, $optParams = [])
   {
@@ -237,6 +243,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudChannelV1Entitlement
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -263,6 +270,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * than the first page. Obtained using ListEntitlementsResponse.next_page_token
    * of the previous CloudChannelService.ListEntitlements call.
    * @return GoogleCloudChannelV1ListEntitlementsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsCustomersEntitlements($parent, $optParams = [])
   {
@@ -299,6 +307,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * CloudChannelService.ListEntitlementChanges must match the call that provided
    * the page token.
    * @return GoogleCloudChannelV1ListEntitlementChangesResponse
+   * @throws \Google\Service\Exception
    */
   public function listEntitlementChanges($parent, $optParams = [])
   {
@@ -318,6 +327,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * accounts/{account_id}/customers/{customer_id}/entitlements/{entitlement_id}
    * @param array $optParams Optional parameters.
    * @return GoogleCloudChannelV1Offer
+   * @throws \Google\Service\Exception
    */
   public function lookupOffer($entitlement, $optParams = [])
   {
@@ -347,6 +357,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1StartPaidServiceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function startPaidService($name, GoogleCloudChannelV1StartPaidServiceRequest $postBody, $optParams = [])
   {
@@ -373,6 +384,7 @@ class AccountsCustomersEntitlements extends \Google\Service\Resource
    * @param GoogleCloudChannelV1SuspendEntitlementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function suspend($name, GoogleCloudChannelV1SuspendEntitlementRequest $postBody, $optParams = [])
   {

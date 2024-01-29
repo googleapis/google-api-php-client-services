@@ -24,10 +24,6 @@ class GoogleCloudChannelV1ListProductsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudChannelV1Product[]
-   */
-  public $products;
   protected $productsType = GoogleCloudChannelV1Product::class;
   protected $productsDataType = 'array';
 

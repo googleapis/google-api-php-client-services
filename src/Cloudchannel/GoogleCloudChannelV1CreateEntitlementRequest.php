@@ -19,10 +19,6 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1CreateEntitlementRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudChannelV1Entitlement
-   */
-  public $entitlement;
   protected $entitlementType = GoogleCloudChannelV1Entitlement::class;
   protected $entitlementDataType = '';
   /**

@@ -31,10 +31,6 @@ class GoogleCloudChannelV1CloudIdentityInfo extends \Google\Model
    * @var string
    */
   public $customerType;
-  /**
-   * @var GoogleCloudChannelV1EduData
-   */
-  public $eduData;
   protected $eduDataType = GoogleCloudChannelV1EduData::class;
   protected $eduDataDataType = '';
   /**

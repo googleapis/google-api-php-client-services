@@ -20,10 +20,6 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1ChangeParametersRequest extends \Google\Collection
 {
   protected $collection_key = 'parameters';
-  /**
-   * @var GoogleCloudChannelV1Parameter[]
-   */
-  public $parameters;
   protected $parametersType = GoogleCloudChannelV1Parameter::class;
   protected $parametersDataType = 'array';
   /**

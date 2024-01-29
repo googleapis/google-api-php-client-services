@@ -53,6 +53,7 @@ class AccountsSkuGroups extends \Google\Service\Resource
    * beyond the first page. Obtained through ListSkuGroups.next_page_token of the
    * previous CloudChannelService.ListSkuGroups call.
    * @return GoogleCloudChannelV1ListSkuGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsSkuGroups($parent, $optParams = [])
   {

@@ -28,10 +28,6 @@ class GoogleCloudChannelV1ChangeOfferRequest extends \Google\Collection
    * @var string
    */
   public $offer;
-  /**
-   * @var GoogleCloudChannelV1Parameter[]
-   */
-  public $parameters;
   protected $parametersType = GoogleCloudChannelV1Parameter::class;
   protected $parametersDataType = 'array';
   /**

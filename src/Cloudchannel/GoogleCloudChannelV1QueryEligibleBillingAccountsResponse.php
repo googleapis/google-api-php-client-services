@@ -20,10 +20,6 @@ namespace Google\Service\Cloudchannel;
 class GoogleCloudChannelV1QueryEligibleBillingAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'skuPurchaseGroups';
-  /**
-   * @var GoogleCloudChannelV1SkuPurchaseGroup[]
-   */
-  public $skuPurchaseGroups;
   protected $skuPurchaseGroupsType = GoogleCloudChannelV1SkuPurchaseGroup::class;
   protected $skuPurchaseGroupsDataType = 'array';
 

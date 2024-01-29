@@ -24,10 +24,6 @@ class GoogleCloudChannelV1Row extends \Google\Collection
    * @var string
    */
   public $partitionKey;
-  /**
-   * @var GoogleCloudChannelV1ReportValue[]
-   */
-  public $values;
   protected $valuesType = GoogleCloudChannelV1ReportValue::class;
   protected $valuesDataType = 'array';
 

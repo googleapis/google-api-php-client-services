@@ -42,6 +42,7 @@ class AccountsReportJobs extends \Google\Service\Resource
    * @param GoogleCloudChannelV1FetchReportResultsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudChannelV1FetchReportResultsResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchReportResults($reportJob, GoogleCloudChannelV1FetchReportResultsRequest $postBody, $optParams = [])
   {

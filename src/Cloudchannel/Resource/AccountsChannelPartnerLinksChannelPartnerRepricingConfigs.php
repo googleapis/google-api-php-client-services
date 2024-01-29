@@ -63,6 +63,7 @@ class AccountsChannelPartnerLinksChannelPartnerRepricingConfigs extends \Google\
    * @param GoogleCloudChannelV1ChannelPartnerRepricingConfig $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudChannelV1ChannelPartnerRepricingConfig
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudChannelV1ChannelPartnerRepricingConfig $postBody, $optParams = [])
   {
@@ -84,6 +85,7 @@ class AccountsChannelPartnerLinksChannelPartnerRepricingConfigs extends \Google\
    * repricing config rule to delete.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -106,6 +108,7 @@ class AccountsChannelPartnerLinksChannelPartnerRepricingConfigs extends \Google\
    * ks/{channel_partner_id}/channelPartnerRepricingConfigs/{id}.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudChannelV1ChannelPartnerRepricingConfig
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -150,6 +153,7 @@ class AccountsChannelPartnerLinksChannelPartnerRepricingConfigs extends \Google\
    * ListChannelPartnerRepricingConfigsResponse.next_page_token of the previous
    * CloudChannelService.ListChannelPartnerRepricingConfigs call.
    * @return GoogleCloudChannelV1ListChannelPartnerRepricingConfigsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsChannelPartnerLinksChannelPartnerRepricingConfigs($parent, $optParams = [])
   {
@@ -182,6 +186,7 @@ class AccountsChannelPartnerLinksChannelPartnerRepricingConfigs extends \Google\
    * @param GoogleCloudChannelV1ChannelPartnerRepricingConfig $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudChannelV1ChannelPartnerRepricingConfig
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudChannelV1ChannelPartnerRepricingConfig $postBody, $optParams = [])
   {

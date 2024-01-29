@@ -53,6 +53,7 @@ class AccountsReports extends \Google\Service\Resource
    * ListReportsResponse.next_page_token of the previous
    * CloudChannelReportsService.ListReports call.
    * @return GoogleCloudChannelV1ListReportsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsReports($parent, $optParams = [])
   {
@@ -85,6 +86,7 @@ class AccountsReports extends \Google\Service\Resource
    * @param GoogleCloudChannelV1RunReportJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function run($name, GoogleCloudChannelV1RunReportJobRequest $postBody, $optParams = [])
   {

@@ -27,10 +27,6 @@ class GoogleCloudChannelV1PriceTier extends \Google\Model
    * @var int
    */
   public $lastResource;
-  /**
-   * @var GoogleCloudChannelV1Price
-   */
-  public $price;
   protected $priceType = GoogleCloudChannelV1Price::class;
   protected $priceDataType = '';
 

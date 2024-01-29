@@ -19,10 +19,6 @@ namespace Google\Service\Cloudchannel;
 
 class GoogleCloudChannelV1PurchasableOffer extends \Google\Model
 {
-  /**
-   * @var GoogleCloudChannelV1Offer
-   */
-  public $offer;
   protected $offerType = GoogleCloudChannelV1Offer::class;
   protected $offerDataType = '';
 

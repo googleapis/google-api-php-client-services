@@ -24,10 +24,6 @@ class GoogleCloudChannelV1ListPurchasableOffersResponse extends \Google\Collecti
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudChannelV1PurchasableOffer[]
-   */
-  public $purchasableOffers;
   protected $purchasableOffersType = GoogleCloudChannelV1PurchasableOffer::class;
   protected $purchasableOffersDataType = 'array';
 

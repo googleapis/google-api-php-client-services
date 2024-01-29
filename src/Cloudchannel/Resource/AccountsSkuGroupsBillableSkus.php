@@ -54,6 +54,7 @@ class AccountsSkuGroupsBillableSkus extends \Google\Service\Resource
    * ListSkuGroupBillableSkus.next_page_token of the previous
    * CloudChannelService.ListSkuGroupBillableSkus call.
    * @return GoogleCloudChannelV1ListSkuGroupBillableSkusResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsSkuGroupsBillableSkus($parent, $optParams = [])
   {
