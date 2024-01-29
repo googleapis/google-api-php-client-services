@@ -24,10 +24,6 @@ class ListProjectBillingInfoResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ProjectBillingInfo[]
-   */
-  public $projectBillingInfo;
   protected $projectBillingInfoType = ProjectBillingInfo::class;
   protected $projectBillingInfoDataType = 'array';
 

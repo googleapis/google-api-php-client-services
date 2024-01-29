@@ -19,10 +19,6 @@ namespace Google\Service\Cloudbilling;
 
 class PricingInfo extends \Google\Model
 {
-  /**
-   * @var AggregationInfo
-   */
-  public $aggregationInfo;
   protected $aggregationInfoType = AggregationInfo::class;
   protected $aggregationInfoDataType = '';
   public $currencyConversionRate;
@@ -30,10 +26,6 @@ class PricingInfo extends \Google\Model
    * @var string
    */
   public $effectiveTime;
-  /**
-   * @var PricingExpression
-   */
-  public $pricingExpression;
   protected $pricingExpressionType = PricingExpression::class;
   protected $pricingExpressionDataType = '';
   /**

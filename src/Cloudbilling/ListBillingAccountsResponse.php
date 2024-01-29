@@ -20,10 +20,6 @@ namespace Google\Service\Cloudbilling;
 class ListBillingAccountsResponse extends \Google\Collection
 {
   protected $collection_key = 'billingAccounts';
-  /**
-   * @var BillingAccount[]
-   */
-  public $billingAccounts;
   protected $billingAccountsType = BillingAccount::class;
   protected $billingAccountsDataType = 'array';
   /**

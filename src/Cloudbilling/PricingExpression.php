@@ -30,10 +30,6 @@ class PricingExpression extends \Google\Collection
    */
   public $baseUnitDescription;
   public $displayQuantity;
-  /**
-   * @var TierRate[]
-   */
-  public $tieredRates;
   protected $tieredRatesType = TierRate::class;
   protected $tieredRatesDataType = 'array';
   /**

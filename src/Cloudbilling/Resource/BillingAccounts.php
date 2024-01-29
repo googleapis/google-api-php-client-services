@@ -56,6 +56,7 @@ class BillingAccounts extends \Google\Service\Resource
    * from. Format: - `billingAccounts/{billing_account_id}`, for example,
    * `billingAccounts/012345-567890-ABCDEF`
    * @return BillingAccount
+   * @throws \Google\Service\Exception
    */
   public function create(BillingAccount $postBody, $optParams = [])
   {
@@ -73,6 +74,7 @@ class BillingAccounts extends \Google\Service\Resource
    * retrieve. For example, `billingAccounts/012345-567890-ABCDEF`.
    * @param array $optParams Optional parameters.
    * @return BillingAccount
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -105,6 +107,7 @@ class BillingAccounts extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -136,6 +139,7 @@ class BillingAccounts extends \Google\Service\Resource
    * `organizations/12345678` - `billingAccounts/{billing_account_id}`, for
    * example, `billingAccounts/012345-567890-ABCDEF`
    * @return ListBillingAccountsResponse
+   * @throws \Google\Service\Exception
    */
   public function listBillingAccounts($optParams = [])
   {
@@ -154,6 +158,7 @@ class BillingAccounts extends \Google\Service\Resource
    * @param MoveBillingAccountRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BillingAccount
+   * @throws \Google\Service\Exception
    */
   public function move($name, MoveBillingAccountRequest $postBody, $optParams = [])
   {
@@ -176,6 +181,7 @@ class BillingAccounts extends \Google\Service\Resource
    * @opt_param string updateMask The update mask applied to the resource. Only
    * "display_name" is currently supported.
    * @return BillingAccount
+   * @throws \Google\Service\Exception
    */
   public function patch($name, BillingAccount $postBody, $optParams = [])
   {
@@ -197,6 +203,7 @@ class BillingAccounts extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -217,6 +224,7 @@ class BillingAccounts extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

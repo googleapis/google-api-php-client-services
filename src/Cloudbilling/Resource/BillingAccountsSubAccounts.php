@@ -50,6 +50,7 @@ class BillingAccountsSubAccounts extends \Google\Service\Resource
    * @param BillingAccount $postBody
    * @param array $optParams Optional parameters.
    * @return BillingAccount
+   * @throws \Google\Service\Exception
    */
   public function create($parent, BillingAccount $postBody, $optParams = [])
   {
@@ -81,6 +82,7 @@ class BillingAccountsSubAccounts extends \Google\Service\Resource
    * `ListBillingAccounts` call. If unspecified, the first page of results is
    * returned.
    * @return ListBillingAccountsResponse
+   * @throws \Google\Service\Exception
    */
   public function listBillingAccountsSubAccounts($parent, $optParams = [])
   {
