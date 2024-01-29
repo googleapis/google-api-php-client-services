@@ -40,6 +40,7 @@ class ProjectsLocationsAnnotations extends \Google\Service\Resource
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Annotation $postBody, $optParams = [])
   {
@@ -53,6 +54,7 @@ class ProjectsLocationsAnnotations extends \Google\Service\Resource
    * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return Annotation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
