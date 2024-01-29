@@ -44,6 +44,7 @@ class ProjectsJobTriggers extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2ActivateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DlpJob
+   * @throws \Google\Service\Exception
    */
   public function activate($name, GooglePrivacyDlpV2ActivateJobTriggerRequest $postBody, $optParams = [])
   {
@@ -69,6 +70,7 @@ class ProjectsJobTriggers extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CreateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2JobTrigger
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GooglePrivacyDlpV2CreateJobTriggerRequest $postBody, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsJobTriggers extends \Google\Service\Resource
    * triggeredJob, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -99,6 +102,7 @@ class ProjectsJobTriggers extends \Google\Service\Resource
    * triggeredJob, for example `projects/dlp-test-project/jobTriggers/53234423`.
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2JobTrigger
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -155,6 +159,7 @@ class ProjectsJobTriggers extends \Google\Service\Resource
    * @opt_param string type The type of jobs. Will use `DlpJobType.INSPECT` if not
    * set.
    * @return GooglePrivacyDlpV2ListJobTriggersResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsJobTriggers($parent, $optParams = [])
   {
@@ -171,6 +176,7 @@ class ProjectsJobTriggers extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2UpdateJobTriggerRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2JobTrigger
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GooglePrivacyDlpV2UpdateJobTriggerRequest $postBody, $optParams = [])
   {

@@ -53,6 +53,7 @@ class ProjectsStoredInfoTypes extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2StoredInfoType
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GooglePrivacyDlpV2CreateStoredInfoTypeRequest $postBody, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsStoredInfoTypes extends \Google\Service\Resource
    * id/storedInfoTypes/432452342.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -87,6 +89,7 @@ class ProjectsStoredInfoTypes extends \Google\Service\Resource
    * id/storedInfoTypes/432452342.
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2StoredInfoType
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -124,6 +127,7 @@ class ProjectsStoredInfoTypes extends \Google\Service\Resource
    * @opt_param string pageToken Page token to continue retrieval. Comes from the
    * previous call to `ListStoredInfoTypes`.
    * @return GooglePrivacyDlpV2ListStoredInfoTypesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsStoredInfoTypes($parent, $optParams = [])
   {
@@ -144,6 +148,7 @@ class ProjectsStoredInfoTypes extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2UpdateStoredInfoTypeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2StoredInfoType
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GooglePrivacyDlpV2UpdateStoredInfoTypeRequest $postBody, $optParams = [])
   {

@@ -51,6 +51,7 @@ class ProjectsLocationsImage extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2RedactImageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2RedactImageResponse
+   * @throws \Google\Service\Exception
    */
   public function redact($parent, GooglePrivacyDlpV2RedactImageRequest $postBody, $optParams = [])
   {

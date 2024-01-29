@@ -45,6 +45,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2CreateDiscoveryConfigRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DiscoveryConfig
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GooglePrivacyDlpV2CreateDiscoveryConfigRequest $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
    * for example `projects/dlp-test-project/discoveryConfigs/53234423`.
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
    * project/discoveryConfigs/53234423`.
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DiscoveryConfig
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -105,6 +108,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
    * previous call to ListDiscoveryConfigs. `order_by` field must not change for
    * subsequent calls.
    * @return GooglePrivacyDlpV2ListDiscoveryConfigsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDiscoveryConfigs($parent, $optParams = [])
   {
@@ -121,6 +125,7 @@ class ProjectsLocationsDiscoveryConfigs extends \Google\Service\Resource
    * @param GooglePrivacyDlpV2UpdateDiscoveryConfigRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DiscoveryConfig
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GooglePrivacyDlpV2UpdateDiscoveryConfigRequest $postBody, $optParams = [])
   {
