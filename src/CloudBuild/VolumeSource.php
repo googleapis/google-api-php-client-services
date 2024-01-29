@@ -19,10 +19,6 @@ namespace Google\Service\CloudBuild;
 
 class VolumeSource extends \Google\Model
 {
-  /**
-   * @var EmptyDirVolumeSource
-   */
-  public $emptyDir;
   protected $emptyDirType = EmptyDirVolumeSource::class;
   protected $emptyDirDataType = '';
   /**

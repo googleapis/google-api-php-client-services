@@ -24,20 +24,12 @@ class PipelineRun extends \Google\Collection
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var ChildStatusReference[]
-   */
-  public $childReferences;
   protected $childReferencesType = ChildStatusReference::class;
   protected $childReferencesDataType = 'array';
   /**
    * @var string
    */
   public $completionTime;
-  /**
-   * @var GoogleDevtoolsCloudbuildV2Condition[]
-   */
-  public $conditions;
   protected $conditionsType = GoogleDevtoolsCloudbuildV2Condition::class;
   protected $conditionsDataType = 'array';
   /**
@@ -56,52 +48,28 @@ class PipelineRun extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Param[]
-   */
-  public $params;
   protected $paramsType = Param::class;
   protected $paramsDataType = 'array';
-  /**
-   * @var PipelineRef
-   */
-  public $pipelineRef;
   protected $pipelineRefType = PipelineRef::class;
   protected $pipelineRefDataType = '';
   /**
    * @var string
    */
   public $pipelineRunStatus;
-  /**
-   * @var PipelineSpec
-   */
-  public $pipelineSpec;
   protected $pipelineSpecType = PipelineSpec::class;
   protected $pipelineSpecDataType = '';
-  /**
-   * @var PipelineSpec
-   */
-  public $resolvedPipelineSpec;
   protected $resolvedPipelineSpecType = PipelineSpec::class;
   protected $resolvedPipelineSpecDataType = '';
   /**
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var SkippedTask[]
-   */
-  public $skippedTasks;
   protected $skippedTasksType = SkippedTask::class;
   protected $skippedTasksDataType = 'array';
   /**
    * @var string
    */
   public $startTime;
-  /**
-   * @var TimeoutFields
-   */
-  public $timeouts;
   protected $timeoutsType = TimeoutFields::class;
   protected $timeoutsDataType = '';
   /**
@@ -120,10 +88,6 @@ class PipelineRun extends \Google\Collection
    * @var string
    */
   public $workflow;
-  /**
-   * @var WorkspaceBinding[]
-   */
-  public $workspaces;
   protected $workspacesType = WorkspaceBinding::class;
   protected $workspacesDataType = 'array';
 

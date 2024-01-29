@@ -24,10 +24,6 @@ class PipelineTask extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Param[]
-   */
-  public $params;
   protected $paramsType = Param::class;
   protected $paramsDataType = 'array';
   /**
@@ -38,32 +34,16 @@ class PipelineTask extends \Google\Collection
    * @var string[]
    */
   public $runAfter;
-  /**
-   * @var TaskRef
-   */
-  public $taskRef;
   protected $taskRefType = TaskRef::class;
   protected $taskRefDataType = '';
-  /**
-   * @var EmbeddedTask
-   */
-  public $taskSpec;
   protected $taskSpecType = EmbeddedTask::class;
   protected $taskSpecDataType = '';
   /**
    * @var string
    */
   public $timeout;
-  /**
-   * @var WhenExpression[]
-   */
-  public $whenExpressions;
   protected $whenExpressionsType = WhenExpression::class;
   protected $whenExpressionsDataType = 'array';
-  /**
-   * @var WorkspacePipelineTaskBinding[]
-   */
-  public $workspaces;
   protected $workspacesType = WorkspacePipelineTaskBinding::class;
   protected $workspacesDataType = 'array';
 

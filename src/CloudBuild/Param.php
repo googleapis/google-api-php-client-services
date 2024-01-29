@@ -23,10 +23,6 @@ class Param extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var ParamValue
-   */
-  public $value;
   protected $valueType = ParamValue::class;
   protected $valueDataType = '';
 

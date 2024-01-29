@@ -19,10 +19,6 @@ namespace Google\Service\CloudBuild;
 
 class Probe extends \Google\Model
 {
-  /**
-   * @var ExecAction
-   */
-  public $exec;
   protected $execType = ExecAction::class;
   protected $execDataType = '';
   /**

@@ -45,6 +45,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * @param FetchReadTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FetchReadTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function accessReadToken($repository, FetchReadTokenRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * @param FetchReadWriteTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FetchReadWriteTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function accessReadWriteToken($repository, FetchReadWriteTokenRequest $postBody, $optParams = [])
   {
@@ -78,6 +80,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * @param BatchCreateRepositoriesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function batchCreate($parent, BatchCreateRepositoriesRequest $postBody, $optParams = [])
   {
@@ -99,6 +102,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * ID should be unique in the connection. Allows alphanumeric characters and any
    * of -._~%!$&'()*+,;=@.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Repository $postBody, $optParams = [])
   {
@@ -119,6 +123,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * @opt_param bool validateOnly If set, validate the request, but do not
    * actually post it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -139,6 +144,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * @opt_param string pageToken Optional. Page start.
    * @opt_param string refType Type of refs to fetch
    * @return FetchGitRefsResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchGitRefs($repository, $optParams = [])
   {
@@ -153,6 +159,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * `projects/locations/connections/repositories`.
    * @param array $optParams Optional parameters.
    * @return Repository
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -175,6 +182,7 @@ class ProjectsLocationsConnectionsRepositories extends \Google\Service\Resource
    * @opt_param int pageSize Number of results to return in the list.
    * @opt_param string pageToken Page start.
    * @return ListRepositoriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsConnectionsRepositories($parent, $optParams = [])
   {

@@ -51,6 +51,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * Names must be unique per-project per-location. Allows alphanumeric characters
    * and any of -._~%!$&'()*+,;=@.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Connection $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @opt_param bool validateOnly If set, validate the request, but do not
    * actually post it.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -90,6 +92,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * 20.
    * @opt_param string pageToken Page start.
    * @return FetchLinkableRepositoriesResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchLinkableRepositories($connection, $optParams = [])
   {
@@ -104,6 +107,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * `projects/locations/connections`.
    * @param array $optParams Optional parameters.
    * @return Connection
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -134,6 +138,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -152,6 +157,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @opt_param int pageSize Number of results to return in the list.
    * @opt_param string pageToken Page start.
    * @return ListConnectionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsConnections($parent, $optParams = [])
   {
@@ -177,6 +183,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * be blocked and an ABORTED error will be returned.
    * @opt_param string updateMask The list of fields to be updated.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Connection $postBody, $optParams = [])
   {
@@ -196,6 +203,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @opt_param string webhookKey Arbitrary additional key to find the maching
    * repository for a webhook event if needed.
    * @return CloudbuildEmpty
+   * @throws \Google\Service\Exception
    */
   public function processWebhook($parent, HttpBody $postBody, $optParams = [])
   {
@@ -215,6 +223,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -237,6 +246,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

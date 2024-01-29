@@ -19,10 +19,6 @@ namespace Google\Service\CloudBuild;
 
 class ParamSpec extends \Google\Model
 {
-  /**
-   * @var ParamValue
-   */
-  public $default;
   protected $defaultType = ParamValue::class;
   protected $defaultDataType = '';
   /**

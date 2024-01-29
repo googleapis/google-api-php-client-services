@@ -23,20 +23,12 @@ class WorkspaceBinding extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var SecretVolumeSource
-   */
-  public $secret;
   protected $secretType = SecretVolumeSource::class;
   protected $secretDataType = '';
   /**
    * @var string
    */
   public $subPath;
-  /**
-   * @var VolumeClaim
-   */
-  public $volumeClaim;
   protected $volumeClaimType = VolumeClaim::class;
   protected $volumeClaimDataType = '';
 

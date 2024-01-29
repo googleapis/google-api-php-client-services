@@ -23,10 +23,6 @@ class CreateRepositoryRequest extends \Google\Model
    * @var string
    */
   public $parent;
-  /**
-   * @var Repository
-   */
-  public $repository;
   protected $repositoryType = Repository::class;
   protected $repositoryDataType = '';
   /**

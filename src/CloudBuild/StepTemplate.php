@@ -20,16 +20,8 @@ namespace Google\Service\CloudBuild;
 class StepTemplate extends \Google\Collection
 {
   protected $collection_key = 'volumeMounts';
-  /**
-   * @var EnvVar[]
-   */
-  public $env;
   protected $envType = EnvVar::class;
   protected $envDataType = 'array';
-  /**
-   * @var VolumeMount[]
-   */
-  public $volumeMounts;
   protected $volumeMountsType = VolumeMount::class;
   protected $volumeMountsDataType = 'array';
 

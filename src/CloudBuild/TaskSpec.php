@@ -28,46 +28,18 @@ class TaskSpec extends \Google\Collection
    * @var string[]
    */
   public $managedSidecars;
-  /**
-   * @var ParamSpec[]
-   */
-  public $params;
   protected $paramsType = ParamSpec::class;
   protected $paramsDataType = 'array';
-  /**
-   * @var TaskResult[]
-   */
-  public $results;
   protected $resultsType = TaskResult::class;
   protected $resultsDataType = 'array';
-  /**
-   * @var Sidecar[]
-   */
-  public $sidecars;
   protected $sidecarsType = Sidecar::class;
   protected $sidecarsDataType = 'array';
-  /**
-   * @var StepTemplate
-   */
-  public $stepTemplate;
   protected $stepTemplateType = StepTemplate::class;
   protected $stepTemplateDataType = '';
-  /**
-   * @var Step[]
-   */
-  public $steps;
   protected $stepsType = Step::class;
   protected $stepsDataType = 'array';
-  /**
-   * @var VolumeSource[]
-   */
-  public $volumes;
   protected $volumesType = VolumeSource::class;
   protected $volumesDataType = 'array';
-  /**
-   * @var WorkspaceDeclaration[]
-   */
-  public $workspaces;
   protected $workspacesType = WorkspaceDeclaration::class;
   protected $workspacesDataType = 'array';
 

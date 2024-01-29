@@ -24,10 +24,6 @@ class TaskRef extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Param[]
-   */
-  public $params;
   protected $paramsType = Param::class;
   protected $paramsDataType = 'array';
   /**

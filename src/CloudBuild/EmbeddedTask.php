@@ -23,10 +23,6 @@ class EmbeddedTask extends \Google\Model
    * @var string[]
    */
   public $annotations;
-  /**
-   * @var TaskSpec
-   */
-  public $taskSpec;
   protected $taskSpecType = TaskSpec::class;
   protected $taskSpecDataType = '';
 

@@ -47,10 +47,6 @@ class GoogleDevtoolsCloudbuildV2GitHubEnterpriseConfig extends \Google\Model
    * @var string
    */
   public $serverVersion;
-  /**
-   * @var GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig
-   */
-  public $serviceDirectoryConfig;
   protected $serviceDirectoryConfigType = GoogleDevtoolsCloudbuildV2ServiceDirectoryConfig::class;
   protected $serviceDirectoryConfigDataType = '';
   /**

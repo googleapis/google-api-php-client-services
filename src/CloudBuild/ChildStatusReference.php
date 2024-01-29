@@ -32,10 +32,6 @@ class ChildStatusReference extends \Google\Collection
    * @var string
    */
   public $type;
-  /**
-   * @var WhenExpression[]
-   */
-  public $whenExpressions;
   protected $whenExpressionsType = WhenExpression::class;
   protected $whenExpressionsDataType = 'array';
 
