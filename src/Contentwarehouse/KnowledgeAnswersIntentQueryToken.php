@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryToken extends \Google\Collection
 {
   protected $collection_key = 'synonyms';
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -50,10 +46,6 @@ class KnowledgeAnswersIntentQueryToken extends \Google\Collection
    * @var string
    */
   public $provenanceLanguage;
-  /**
-   * @var KnowledgeAnswersIntentQueryTokenSynonym[]
-   */
-  public $synonyms;
   protected $synonymsType = KnowledgeAnswersIntentQueryTokenSynonym::class;
   protected $synonymsDataType = 'array';
 

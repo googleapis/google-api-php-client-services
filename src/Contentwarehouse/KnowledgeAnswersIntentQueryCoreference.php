@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersIntentQueryCoreference extends \Google\Model
 {
-  /**
-   * @var KnowledgeAnswersIntentQueryArgPath
-   */
-  public $argPath;
   protected $argPathType = KnowledgeAnswersIntentQueryArgPath::class;
   protected $argPathDataType = '';
 

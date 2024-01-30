@@ -32,10 +32,6 @@ class KnowledgeAnswersIntentQueryCollectionMembership extends \Google\Collection
    * @var float
    */
   public $collectionScore;
-  /**
-   * @var KnowledgeAnswersIntentQueryCollectionScore[]
-   */
-  public $score;
   protected $scoreType = KnowledgeAnswersIntentQueryCollectionScore::class;
   protected $scoreDataType = 'array';
 

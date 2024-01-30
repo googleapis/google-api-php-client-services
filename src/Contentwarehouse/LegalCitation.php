@@ -41,16 +41,8 @@ class LegalCitation extends \Google\Model
    * @var int
    */
   public $type;
-  /**
-   * @var LegalCitationCourtDocument
-   */
-  public $courtdocument;
   protected $courtdocumentType = LegalCitationCourtDocument::class;
   protected $courtdocumentDataType = '';
-  /**
-   * @var LegalCitationLaw
-   */
-  public $law;
   protected $lawType = LegalCitationLaw::class;
   protected $lawDataType = '';
 

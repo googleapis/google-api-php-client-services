@@ -20,33 +20,17 @@ namespace Google\Service\Contentwarehouse;
 class LocalWWWInfo extends \Google\Collection
 {
   protected $collection_key = 'wrapptorItem';
-  /**
-   * @var LocalWWWInfoAddress[]
-   */
-  public $address;
   protected $addressType = LocalWWWInfoAddress::class;
   protected $addressDataType = 'array';
   public $brickAndMortarStrength;
-  /**
-   * @var LocalWWWInfoCluster[]
-   */
-  public $cluster;
   protected $clusterType = LocalWWWInfoCluster::class;
   protected $clusterDataType = 'array';
   /**
    * @var string
    */
   public $docid;
-  /**
-   * @var RepositoryAnnotationsGeoTopicality
-   */
-  public $geotopicality;
   protected $geotopicalityType = RepositoryAnnotationsGeoTopicality::class;
   protected $geotopicalityDataType = '';
-  /**
-   * @var LocalWWWInfoOpeningHours[]
-   */
-  public $hours;
   protected $hoursType = LocalWWWInfoOpeningHours::class;
   protected $hoursDataType = 'array';
   /**
@@ -57,10 +41,6 @@ class LocalWWWInfo extends \Google\Collection
    * @var bool
    */
   public $isLargeLocalwwwinfo;
-  /**
-   * @var LocalWWWInfoPhone[]
-   */
-  public $phone;
   protected $phoneType = LocalWWWInfoPhone::class;
   protected $phoneDataType = 'array';
   /**
@@ -71,10 +51,6 @@ class LocalWWWInfo extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var LocalWWWInfoWrapptorItem[]
-   */
-  public $wrapptorItem;
   protected $wrapptorItemType = LocalWWWInfoWrapptorItem::class;
   protected $wrapptorItemDataType = 'array';
 

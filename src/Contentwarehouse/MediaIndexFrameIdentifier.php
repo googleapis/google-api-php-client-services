@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class MediaIndexFrameIdentifier extends \Google\Model
 {
-  /**
-   * @var MediaIndexFrameIdentifierPreviewFrameZeroVariant
-   */
-  public $previewFrameZeroVariant;
   protected $previewFrameZeroVariantType = MediaIndexFrameIdentifierPreviewFrameZeroVariant::class;
   protected $previewFrameZeroVariantDataType = '';
   /**

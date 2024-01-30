@@ -23,10 +23,6 @@ class KnowledgeAnswersIntentQueryImpliedEntity extends \Google\Model
    * @var string
    */
   public $annotatedSpan;
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -41,10 +37,6 @@ class KnowledgeAnswersIntentQueryImpliedEntity extends \Google\Model
    * @var float
    */
   public $qrefConfidenceScore;
-  /**
-   * @var KnowledgeAnswersIntentQueryShoppingIds
-   */
-  public $shoppingIds;
   protected $shoppingIdsType = KnowledgeAnswersIntentQueryShoppingIds::class;
   protected $shoppingIdsDataType = '';
 

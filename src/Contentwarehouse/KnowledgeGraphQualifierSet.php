@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeGraphQualifierSet extends \Google\Collection
 {
   protected $collection_key = 'qualifiers';
-  /**
-   * @var KnowledgeGraphQualifier[]
-   */
-  public $qualifiers;
   protected $qualifiersType = KnowledgeGraphQualifier::class;
   protected $qualifiersDataType = 'array';
 

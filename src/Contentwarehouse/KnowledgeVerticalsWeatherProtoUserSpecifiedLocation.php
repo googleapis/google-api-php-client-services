@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeVerticalsWeatherProtoUserSpecifiedLocation extends \Google\Model
 {
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $featureId;
   protected $featureIdType = GeostoreFeatureIdProto::class;
   protected $featureIdDataType = '';
-  /**
-   * @var GoogleTypeLatLng
-   */
-  public $latLng;
   protected $latLngType = GoogleTypeLatLng::class;
   protected $latLngDataType = '';
   /**

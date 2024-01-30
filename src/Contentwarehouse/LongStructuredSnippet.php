@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class LongStructuredSnippet extends \Google\Collection
 {
   protected $collection_key = 'entry';
-  /**
-   * @var LongStructuredSnippetEntry[]
-   */
-  public $entry;
   protected $entryType = LongStructuredSnippetEntry::class;
   protected $entryDataType = 'array';
 

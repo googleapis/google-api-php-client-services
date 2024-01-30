@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersMarkerOpenQuestion extends \Google\Collection
 {
   protected $collection_key = 'slotName';
-  /**
-   * @var KnowledgeAnswersMeaningSchemaSlotKey
-   */
-  public $slotKey;
   protected $slotKeyType = KnowledgeAnswersMeaningSchemaSlotKey::class;
   protected $slotKeyDataType = '';
   /**

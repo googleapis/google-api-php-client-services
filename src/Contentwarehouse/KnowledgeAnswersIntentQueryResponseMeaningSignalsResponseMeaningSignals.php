@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersIntentQueryResponseMeaningSignalsResponseMeaningSignals extends \Google\Collection
 {
   protected $collection_key = 'propertyValue';
-  /**
-   * @var KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals
-   */
-  public $answersHeaderSignals;
   protected $answersHeaderSignalsType = KnowledgeAnswersIntentQueryResponseMeaningSignalsAnswersHeaderSignals::class;
   protected $answersHeaderSignalsDataType = '';
-  /**
-   * @var FreebasePropertyValue[]
-   */
-  public $propertyValue;
   protected $propertyValueType = FreebasePropertyValue::class;
   protected $propertyValueDataType = 'array';
   /**

@@ -23,10 +23,6 @@ class LocalWWWInfoAddress extends \Google\Model
    * @var string
    */
   public $addrFprint;
-  /**
-   * @var GeostoreAddressProto
-   */
-  public $address;
   protected $addressType = GeostoreAddressProto::class;
   protected $addressDataType = '';
   /**

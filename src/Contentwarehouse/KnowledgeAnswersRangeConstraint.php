@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersRangeConstraint extends \Google\Model
 {
-  /**
-   * @var KnowledgeAnswersRangeConstraintRangeEndpoint
-   */
-  public $max;
   protected $maxType = KnowledgeAnswersRangeConstraintRangeEndpoint::class;
   protected $maxDataType = '';
-  /**
-   * @var KnowledgeAnswersRangeConstraintRangeEndpoint
-   */
-  public $min;
   protected $minType = KnowledgeAnswersRangeConstraintRangeEndpoint::class;
   protected $minDataType = '';
 

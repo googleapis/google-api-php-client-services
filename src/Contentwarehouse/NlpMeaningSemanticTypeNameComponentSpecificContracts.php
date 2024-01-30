@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpMeaningSemanticTypeNameComponentSpecificContracts extends \Google\Model
 {
-  /**
-   * @var NlpMeaningComponentSpecificContracts
-   */
-  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
   /**

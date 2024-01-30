@@ -23,10 +23,6 @@ class KnowledgeGraphTripleObj extends \Google\Model
    * @var bool
    */
   public $boolValue;
-  /**
-   * @var KnowledgeGraphDateTimeProto
-   */
-  public $datetimeValue;
   protected $datetimeValueType = KnowledgeGraphDateTimeProto::class;
   protected $datetimeValueDataType = '';
   public $doubleValue;
@@ -46,16 +42,8 @@ class KnowledgeGraphTripleObj extends \Google\Model
    * @var string
    */
   public $locale;
-  /**
-   * @var KnowledgeGraphNestedStruct
-   */
-  public $nestedStructValue;
   protected $nestedStructValueType = KnowledgeGraphNestedStruct::class;
   protected $nestedStructValueDataType = '';
-  /**
-   * @var KnowledgeGraphTripleObjProto
-   */
-  public $protoValue;
   protected $protoValueType = KnowledgeGraphTripleObjProto::class;
   protected $protoValueDataType = '';
   /**

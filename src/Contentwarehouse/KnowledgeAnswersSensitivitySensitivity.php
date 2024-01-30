@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class KnowledgeAnswersSensitivitySensitivity extends \Google\Collection
 {
   protected $collection_key = 'source';
-  /**
-   * @var QualityQrewriteAccountProvenance[]
-   */
-  public $accountProvenance;
   protected $accountProvenanceType = QualityQrewriteAccountProvenance::class;
   protected $accountProvenanceDataType = 'array';
-  /**
-   * @var KnowledgeAnswersSensitivityInstruction
-   */
-  public $instruction;
   protected $instructionType = KnowledgeAnswersSensitivityInstruction::class;
   protected $instructionDataType = '';
   /**

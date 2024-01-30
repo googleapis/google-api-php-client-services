@@ -32,10 +32,6 @@ class KnowledgeAnswersIntentQueryShoppingIds extends \Google\Collection
    * @var int[]
    */
   public $bxCategoryIds;
-  /**
-   * @var KnowledgeAnswersIntentQueryShoppingIdsMeasureValue[]
-   */
-  public $measures;
   protected $measuresType = KnowledgeAnswersIntentQueryShoppingIdsMeasureValue::class;
   protected $measuresDataType = 'array';
   /**

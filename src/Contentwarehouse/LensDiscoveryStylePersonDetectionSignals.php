@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class LensDiscoveryStylePersonDetectionSignals extends \Google\Collection
 {
   protected $collection_key = 'detectedPersons';
-  /**
-   * @var LensDiscoveryStylePersonDetectionSignalsDetectedPerson[]
-   */
-  public $detectedPersons;
   protected $detectedPersonsType = LensDiscoveryStylePersonDetectionSignalsDetectedPerson::class;
   protected $detectedPersonsDataType = 'array';
   /**
