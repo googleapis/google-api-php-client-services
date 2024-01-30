@@ -20,10 +20,6 @@ namespace Google\Service\CloudDomains;
 class SearchDomainsResponse extends \Google\Collection
 {
   protected $collection_key = 'registerParameters';
-  /**
-   * @var RegisterParameters[]
-   */
-  public $registerParameters;
   protected $registerParametersType = RegisterParameters::class;
   protected $registerParametersDataType = 'array';
 

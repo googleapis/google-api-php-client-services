@@ -59,6 +59,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param ConfigureContactSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function configureContactSettings($registration, ConfigureContactSettingsRequest $postBody, $optParams = [])
   {
@@ -75,6 +76,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param ConfigureDnsSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function configureDnsSettings($registration, ConfigureDnsSettingsRequest $postBody, $optParams = [])
   {
@@ -92,6 +94,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param ConfigureManagementSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function configureManagementSettings($registration, ConfigureManagementSettingsRequest $postBody, $optParams = [])
   {
@@ -118,6 +121,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * the format `projects/locations/registrations`.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -141,6 +145,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param ExportRegistrationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function export($name, ExportRegistrationRequest $postBody, $optParams = [])
   {
@@ -155,6 +160,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * format `projects/locations/registrations`.
    * @param array $optParams Optional parameters.
    * @return Registration
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -185,6 +191,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * documentation](https://cloud.google.com/iam/help/conditions/resource-
    * policies).
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, $optParams = [])
   {
@@ -206,6 +213,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param ImportDomainRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function import($parent, ImportDomainRequest $postBody, $optParams = [])
   {
@@ -237,6 +245,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @opt_param string pageToken When set to the `next_page_token` from a prior
    * response, provides the next page of results.
    * @return ListRegistrationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsRegistrations($parent, $optParams = [])
   {
@@ -260,6 +269,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * to update as a comma-separated list. For example, if only the labels are
    * being updated, the `update_mask` is `"labels"`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Registration $postBody, $optParams = [])
   {
@@ -283,6 +293,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param RegisterDomainRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function register($parent, RegisterDomainRequest $postBody, $optParams = [])
   {
@@ -301,6 +312,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param ResetAuthorizationCodeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return AuthorizationCode
+   * @throws \Google\Service\Exception
    */
   public function resetAuthorizationCode($registration, ResetAuthorizationCodeRequest $postBody, $optParams = [])
   {
@@ -319,6 +331,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * `projects/locations/registrations`.
    * @param array $optParams Optional parameters.
    * @return AuthorizationCode
+   * @throws \Google\Service\Exception
    */
   public function retrieveAuthorizationCode($registration, $optParams = [])
   {
@@ -344,6 +357,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @opt_param string pageToken When set to the `next_page_token` from a prior
    * response, provides the next page of results.
    * @return RetrieveImportableDomainsResponse
+   * @throws \Google\Service\Exception
    */
   public function retrieveImportableDomains($location, $optParams = [])
   {
@@ -363,6 +377,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @opt_param string domainName Required. The domain name. Unicode domain names
    * must be expressed in Punycode format.
    * @return RetrieveRegisterParametersResponse
+   * @throws \Google\Service\Exception
    */
   public function retrieveRegisterParameters($location, $optParams = [])
   {
@@ -386,6 +401,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @opt_param string domainName Required. The domain name. Unicode domain names
    * must be expressed in Punycode format.
    * @return RetrieveTransferParametersResponse
+   * @throws \Google\Service\Exception
    */
   public function retrieveTransferParameters($location, $optParams = [])
   {
@@ -406,6 +422,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @opt_param string query Required. String used to search for available domain
    * names.
    * @return SearchDomainsResponse
+   * @throws \Google\Service\Exception
    */
   public function searchDomains($location, $optParams = [])
   {
@@ -425,6 +442,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -447,6 +465,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {
@@ -479,6 +498,7 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
    * @param TransferDomainRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function transfer($parent, TransferDomainRequest $postBody, $optParams = [])
   {

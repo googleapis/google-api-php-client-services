@@ -19,10 +19,6 @@ namespace Google\Service\CloudDomains;
 
 class ConfigureManagementSettingsRequest extends \Google\Model
 {
-  /**
-   * @var ManagementSettings
-   */
-  public $managementSettings;
   protected $managementSettingsType = ManagementSettings::class;
   protected $managementSettingsDataType = '';
   /**

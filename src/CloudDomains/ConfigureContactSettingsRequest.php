@@ -24,10 +24,6 @@ class ConfigureContactSettingsRequest extends \Google\Collection
    * @var string[]
    */
   public $contactNotices;
-  /**
-   * @var ContactSettings
-   */
-  public $contactSettings;
   protected $contactSettingsType = ContactSettings::class;
   protected $contactSettingsDataType = '';
   /**

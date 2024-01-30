@@ -24,10 +24,6 @@ class ListRegistrationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Registration[]
-   */
-  public $registrations;
   protected $registrationsType = Registration::class;
   protected $registrationsDataType = 'array';
 

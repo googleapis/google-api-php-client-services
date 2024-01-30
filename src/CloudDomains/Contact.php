@@ -31,10 +31,6 @@ class Contact extends \Google\Model
    * @var string
    */
   public $phoneNumber;
-  /**
-   * @var PostalAddress
-   */
-  public $postalAddress;
   protected $postalAddressType = PostalAddress::class;
   protected $postalAddressDataType = '';
 

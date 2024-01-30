@@ -19,26 +19,14 @@ namespace Google\Service\CloudDomains;
 
 class ContactSettings extends \Google\Model
 {
-  /**
-   * @var Contact
-   */
-  public $adminContact;
   protected $adminContactType = Contact::class;
   protected $adminContactDataType = '';
   /**
    * @var string
    */
   public $privacy;
-  /**
-   * @var Contact
-   */
-  public $registrantContact;
   protected $registrantContactType = Contact::class;
   protected $registrantContactDataType = '';
-  /**
-   * @var Contact
-   */
-  public $technicalContact;
   protected $technicalContactType = Contact::class;
   protected $technicalContactDataType = '';
 
