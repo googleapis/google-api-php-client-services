@@ -19,16 +19,8 @@ namespace Google\Service\ContainerAnalysis;
 
 class CloudRepoSourceContext extends \Google\Model
 {
-  /**
-   * @var AliasContext
-   */
-  public $aliasContext;
   protected $aliasContextType = AliasContext::class;
   protected $aliasContextDataType = '';
-  /**
-   * @var RepoId
-   */
-  public $repoId;
   protected $repoIdType = RepoId::class;
   protected $repoIdDataType = '';
   /**

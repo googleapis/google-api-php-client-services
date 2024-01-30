@@ -20,20 +20,12 @@ namespace Google\Service\ContainerAnalysis;
 class WindowsUpdate extends \Google\Collection
 {
   protected $collection_key = 'kbArticleIds';
-  /**
-   * @var Category[]
-   */
-  public $categories;
   protected $categoriesType = Category::class;
   protected $categoriesDataType = 'array';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var Identity
-   */
-  public $identity;
   protected $identityType = Identity::class;
   protected $identityDataType = '';
   /**

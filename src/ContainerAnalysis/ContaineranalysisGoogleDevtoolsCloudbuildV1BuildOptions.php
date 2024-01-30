@@ -52,10 +52,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    * @var string
    */
   public $machineType;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption
-   */
-  public $pool;
   protected $poolType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption::class;
   protected $poolDataType = '';
   /**
@@ -74,10 +70,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    * @var string
    */
   public $substitutionOption;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Volume[]
-   */
-  public $volumes;
   protected $volumesType = ContaineranalysisGoogleDevtoolsCloudbuildV1Volume::class;
   protected $volumesDataType = 'array';
   /**

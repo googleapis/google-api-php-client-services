@@ -20,10 +20,6 @@ namespace Google\Service\ContainerAnalysis;
 class BatchCreateNotesResponse extends \Google\Collection
 {
   protected $collection_key = 'notes';
-  /**
-   * @var Note[]
-   */
-  public $notes;
   protected $notesType = Note::class;
   protected $notesDataType = 'array';
 

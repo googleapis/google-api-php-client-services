@@ -28,10 +28,6 @@ class WindowsDetail extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var KnowledgeBase[]
-   */
-  public $fixingKbs;
   protected $fixingKbsType = KnowledgeBase::class;
   protected $fixingKbsDataType = 'array';
   /**

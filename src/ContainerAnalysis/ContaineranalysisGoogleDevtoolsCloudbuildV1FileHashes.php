@@ -20,10 +20,6 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes extends \Google\Collection
 {
   protected $collection_key = 'fileHash';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Hash[]
-   */
-  public $fileHash;
   protected $fileHashType = ContaineranalysisGoogleDevtoolsCloudbuildV1Hash::class;
   protected $fileHashDataType = 'array';
 

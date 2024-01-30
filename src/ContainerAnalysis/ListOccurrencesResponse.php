@@ -24,10 +24,6 @@ class ListOccurrencesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Occurrence[]
-   */
-  public $occurrences;
   protected $occurrencesType = Occurrence::class;
   protected $occurrencesDataType = 'array';
 

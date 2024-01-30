@@ -32,22 +32,10 @@ class PackageNote extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var Digest[]
-   */
-  public $digest;
   protected $digestType = Digest::class;
   protected $digestDataType = 'array';
-  /**
-   * @var Distribution[]
-   */
-  public $distribution;
   protected $distributionType = Distribution::class;
   protected $distributionDataType = 'array';
-  /**
-   * @var License
-   */
-  public $license;
   protected $licenseType = License::class;
   protected $licenseDataType = '';
   /**
@@ -66,10 +54,6 @@ class PackageNote extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var Version
-   */
-  public $version;
   protected $versionType = Version::class;
   protected $versionDataType = '';
 

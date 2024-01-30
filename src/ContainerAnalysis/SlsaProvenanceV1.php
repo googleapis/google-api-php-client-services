@@ -19,16 +19,8 @@ namespace Google\Service\ContainerAnalysis;
 
 class SlsaProvenanceV1 extends \Google\Model
 {
-  /**
-   * @var BuildDefinition
-   */
-  public $buildDefinition;
   protected $buildDefinitionType = BuildDefinition::class;
   protected $buildDefinitionDataType = '';
-  /**
-   * @var RunDetails
-   */
-  public $runDetails;
   protected $runDetailsType = RunDetails::class;
   protected $runDetailsDataType = '';
 

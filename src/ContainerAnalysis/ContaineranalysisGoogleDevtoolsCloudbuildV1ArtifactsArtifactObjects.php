@@ -28,10 +28,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1ArtifactsArtifactObjects extend
    * @var string[]
    */
   public $paths;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan
-   */
-  public $timing;
   protected $timingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $timingDataType = '';
 

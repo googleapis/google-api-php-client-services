@@ -20,22 +20,10 @@ namespace Google\Service\ContainerAnalysis;
 class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collection
 {
   protected $collection_key = 'warnings';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuildApproval
-   */
-  public $approval;
   protected $approvalType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildApproval::class;
   protected $approvalDataType = '';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts
-   */
-  public $artifacts;
   protected $artifactsType = ContaineranalysisGoogleDevtoolsCloudbuildV1Artifacts::class;
   protected $artifactsDataType = '';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Secrets
-   */
-  public $availableSecrets;
   protected $availableSecretsType = ContaineranalysisGoogleDevtoolsCloudbuildV1Secrets::class;
   protected $availableSecretsDataType = '';
   /**
@@ -46,10 +34,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
    * @var string
    */
   public $createTime;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuildFailureInfo
-   */
-  public $failureInfo;
   protected $failureInfoType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildFailureInfo::class;
   protected $failureInfoDataType = '';
   /**
@@ -76,10 +60,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
    * @var string
    */
   public $name;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions
-   */
-  public $options;
   protected $optionsType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions::class;
   protected $optionsDataType = '';
   /**
@@ -90,32 +70,16 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
    * @var string
    */
   public $queueTtl;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Results
-   */
-  public $results;
   protected $resultsType = ContaineranalysisGoogleDevtoolsCloudbuildV1Results::class;
   protected $resultsDataType = '';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Secret[]
-   */
-  public $secrets;
   protected $secretsType = ContaineranalysisGoogleDevtoolsCloudbuildV1Secret::class;
   protected $secretsDataType = 'array';
   /**
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Source
-   */
-  public $source;
   protected $sourceType = ContaineranalysisGoogleDevtoolsCloudbuildV1Source::class;
   protected $sourceDataType = '';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1SourceProvenance
-   */
-  public $sourceProvenance;
   protected $sourceProvenanceType = ContaineranalysisGoogleDevtoolsCloudbuildV1SourceProvenance::class;
   protected $sourceProvenanceDataType = '';
   /**
@@ -130,10 +94,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
    * @var string
    */
   public $statusDetail;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep[]
-   */
-  public $steps;
   protected $stepsType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep::class;
   protected $stepsDataType = 'array';
   /**
@@ -148,16 +108,8 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1Build extends \Google\Collectio
    * @var string
    */
   public $timeout;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan[]
-   */
-  public $timing;
   protected $timingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $timingDataType = 'map';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1BuildWarning[]
-   */
-  public $warnings;
   protected $warningsType = ContaineranalysisGoogleDevtoolsCloudbuildV1BuildWarning::class;
   protected $warningsDataType = 'array';
 

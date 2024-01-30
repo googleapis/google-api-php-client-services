@@ -60,10 +60,6 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
    * @var string
    */
   public $name;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan
-   */
-  public $pullTiming;
   protected $pullTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pullTimingDataType = '';
   /**
@@ -82,16 +78,8 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildStep extends \Google\Colle
    * @var string
    */
   public $timeout;
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan
-   */
-  public $timing;
   protected $timingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $timingDataType = '';
-  /**
-   * @var ContaineranalysisGoogleDevtoolsCloudbuildV1Volume[]
-   */
-  public $volumes;
   protected $volumesType = ContaineranalysisGoogleDevtoolsCloudbuildV1Volume::class;
   protected $volumesDataType = 'array';
   /**

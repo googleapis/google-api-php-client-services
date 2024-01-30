@@ -20,10 +20,6 @@ namespace Google\Service\ContainerAnalysis;
 class BatchCreateOccurrencesResponse extends \Google\Collection
 {
   protected $collection_key = 'occurrences';
-  /**
-   * @var Occurrence[]
-   */
-  public $occurrences;
   protected $occurrencesType = Occurrence::class;
   protected $occurrencesDataType = 'array';
 
