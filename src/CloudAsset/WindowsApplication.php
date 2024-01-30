@@ -31,10 +31,6 @@ class WindowsApplication extends \Google\Model
    * @var string
    */
   public $helpLink;
-  /**
-   * @var Date
-   */
-  public $installDate;
   protected $installDateType = Date::class;
   protected $installDateDataType = '';
   /**

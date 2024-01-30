@@ -20,10 +20,6 @@ namespace Google\Service\CloudAsset;
 class GoogleIdentityAccesscontextmanagerV1ApiOperation extends \Google\Collection
 {
   protected $collection_key = 'methodSelectors';
-  /**
-   * @var GoogleIdentityAccesscontextmanagerV1MethodSelector[]
-   */
-  public $methodSelectors;
   protected $methodSelectorsType = GoogleIdentityAccesscontextmanagerV1MethodSelector::class;
   protected $methodSelectorsDataType = 'array';
   /**

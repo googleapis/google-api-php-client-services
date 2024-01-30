@@ -19,10 +19,6 @@ namespace Google\Service\CloudAsset;
 
 class GoogleIdentityAccesscontextmanagerV1VpcNetworkSource extends \Google\Model
 {
-  /**
-   * @var GoogleIdentityAccesscontextmanagerV1VpcSubNetwork
-   */
-  public $vpcSubnetwork;
   protected $vpcSubnetworkType = GoogleIdentityAccesscontextmanagerV1VpcSubNetwork::class;
   protected $vpcSubnetworkDataType = '';
 

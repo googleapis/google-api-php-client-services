@@ -158,6 +158,7 @@ class V1 extends \Google\Service\Resource
    * as 0 or empty string, etc., because we use proto3, which doesn't support
    * field presence yet.
    * @return AnalyzeIamPolicyResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeIamPolicy($scope, $optParams = [])
   {
@@ -188,6 +189,7 @@ class V1 extends \Google\Service\Resource
    * @param AnalyzeIamPolicyLongrunningRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function analyzeIamPolicyLongrunning($scope, AnalyzeIamPolicyLongrunningRequest $postBody, $optParams = [])
   {
@@ -216,6 +218,7 @@ class V1 extends \Google\Service\Resource
    * @opt_param string view Analysis view indicating what information should be
    * included in the analysis response. If unspecified, the default view is FULL.
    * @return AnalyzeMoveResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeMove($resource, $optParams = [])
   {
@@ -247,6 +250,7 @@ class V1 extends \Google\Service\Resource
    * items with a maximum of 200.
    * @opt_param string pageToken The pagination token to retrieve the next page.
    * @return AnalyzeOrgPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeOrgPolicies($scope, $optParams = [])
   {
@@ -301,6 +305,7 @@ class V1 extends \Google\Service\Resource
    * contain 100 items with a maximum of 200.
    * @opt_param string pageToken The pagination token to retrieve the next page.
    * @return AnalyzeOrgPolicyGovernedAssetsResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeOrgPolicyGovernedAssets($scope, $optParams = [])
   {
@@ -334,6 +339,7 @@ class V1 extends \Google\Service\Resource
    * will contain 100 items with a maximum of 200.
    * @opt_param string pageToken The pagination token to retrieve the next page.
    * @return AnalyzeOrgPolicyGovernedContainersResponse
+   * @throws \Google\Service\Exception
    */
   public function analyzeOrgPolicyGovernedContainers($scope, $optParams = [])
   {
@@ -378,6 +384,7 @@ class V1 extends \Google\Service\Resource
    * inventory/docs/overview) for all supported asset types and relationship
    * types.
    * @return BatchGetAssetsHistoryResponse
+   * @throws \Google\Service\Exception
    */
   public function batchGetAssetsHistory($parent, $optParams = [])
   {
@@ -404,6 +411,7 @@ class V1 extends \Google\Service\Resource
    * @param ExportAssetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function exportAssets($parent, ExportAssetsRequest $postBody, $optParams = [])
   {
@@ -431,6 +439,7 @@ class V1 extends \Google\Service\Resource
    * @param QueryAssetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return QueryAssetsResponse
+   * @throws \Google\Service\Exception
    */
   public function queryAssets($parent, QueryAssetsRequest $postBody, $optParams = [])
   {
@@ -516,6 +525,7 @@ class V1 extends \Google\Service\Resource
    * the Compute Admin role. * `memberTypes:user` to find IAM policy bindings that
    * contain the principal type "user".
    * @return SearchAllIamPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function searchAllIamPolicies($scope, $optParams = [])
   {
@@ -647,6 +657,7 @@ class V1 extends \Google\Service\Resource
    * `"name,location"`, `"name,versionedResources"`, `"*"`. Any invalid field path
    * will trigger INVALID_ARGUMENT error.
    * @return SearchAllResourcesResponse
+   * @throws \Google\Service\Exception
    */
   public function searchAllResources($scope, $optParams = [])
   {

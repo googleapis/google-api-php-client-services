@@ -19,10 +19,6 @@ namespace Google\Service\CloudAsset;
 
 class QueryContent extends \Google\Model
 {
-  /**
-   * @var IamPolicyAnalysisQuery
-   */
-  public $iamPolicyAnalysisQuery;
   protected $iamPolicyAnalysisQueryType = IamPolicyAnalysisQuery::class;
   protected $iamPolicyAnalysisQueryDataType = '';
 

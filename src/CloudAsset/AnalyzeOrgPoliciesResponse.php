@@ -20,20 +20,12 @@ namespace Google\Service\CloudAsset;
 class AnalyzeOrgPoliciesResponse extends \Google\Collection
 {
   protected $collection_key = 'orgPolicyResults';
-  /**
-   * @var AnalyzerOrgPolicyConstraint
-   */
-  public $constraint;
   protected $constraintType = AnalyzerOrgPolicyConstraint::class;
   protected $constraintDataType = '';
   /**
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var OrgPolicyResult[]
-   */
-  public $orgPolicyResults;
   protected $orgPolicyResultsType = OrgPolicyResult::class;
   protected $orgPolicyResultsDataType = 'array';
 

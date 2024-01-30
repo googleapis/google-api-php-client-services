@@ -20,10 +20,6 @@ namespace Google\Service\CloudAsset;
 class ListFeedsResponse extends \Google\Collection
 {
   protected $collection_key = 'feeds';
-  /**
-   * @var Feed[]
-   */
-  public $feeds;
   protected $feedsType = Feed::class;
   protected $feedsDataType = 'array';
 

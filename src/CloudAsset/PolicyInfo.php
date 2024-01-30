@@ -23,10 +23,6 @@ class PolicyInfo extends \Google\Model
    * @var string
    */
   public $attachedResource;
-  /**
-   * @var Policy
-   */
-  public $policy;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
 

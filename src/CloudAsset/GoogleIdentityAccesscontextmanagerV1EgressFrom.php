@@ -32,10 +32,6 @@ class GoogleIdentityAccesscontextmanagerV1EgressFrom extends \Google\Collection
    * @var string
    */
   public $sourceRestriction;
-  /**
-   * @var GoogleIdentityAccesscontextmanagerV1EgressSource[]
-   */
-  public $sources;
   protected $sourcesType = GoogleIdentityAccesscontextmanagerV1EgressSource::class;
   protected $sourcesDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\CloudAsset;
 
 class UpdateFeedRequest extends \Google\Model
 {
-  /**
-   * @var Feed
-   */
-  public $feed;
   protected $feedType = Feed::class;
   protected $feedDataType = '';
   /**

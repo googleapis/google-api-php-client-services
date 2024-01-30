@@ -24,10 +24,6 @@ class EffectiveIamPolicy extends \Google\Collection
    * @var string
    */
   public $fullResourceName;
-  /**
-   * @var PolicyInfo[]
-   */
-  public $policies;
   protected $policiesType = PolicyInfo::class;
   protected $policiesDataType = 'array';
 

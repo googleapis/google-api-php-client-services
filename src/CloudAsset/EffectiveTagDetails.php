@@ -24,10 +24,6 @@ class EffectiveTagDetails extends \Google\Collection
    * @var string
    */
   public $attachedResource;
-  /**
-   * @var Tag[]
-   */
-  public $effectiveTags;
   protected $effectiveTagsType = Tag::class;
   protected $effectiveTagsDataType = 'array';
 

@@ -31,16 +31,8 @@ class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends \Google\Model
    * @var string
    */
   public $perimeterType;
-  /**
-   * @var GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig
-   */
-  public $spec;
   protected $specType = GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig::class;
   protected $specDataType = '';
-  /**
-   * @var GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig
-   */
-  public $status;
   protected $statusType = GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig::class;
   protected $statusDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\CloudAsset;
 
 class GoogleCloudOrgpolicyV1Policy extends \Google\Model
 {
-  /**
-   * @var GoogleCloudOrgpolicyV1BooleanPolicy
-   */
-  public $booleanPolicy;
   protected $booleanPolicyType = GoogleCloudOrgpolicyV1BooleanPolicy::class;
   protected $booleanPolicyDataType = '';
   /**
@@ -33,16 +29,8 @@ class GoogleCloudOrgpolicyV1Policy extends \Google\Model
    * @var string
    */
   public $etag;
-  /**
-   * @var GoogleCloudOrgpolicyV1ListPolicy
-   */
-  public $listPolicy;
   protected $listPolicyType = GoogleCloudOrgpolicyV1ListPolicy::class;
   protected $listPolicyDataType = '';
-  /**
-   * @var GoogleCloudOrgpolicyV1RestoreDefault
-   */
-  public $restoreDefault;
   protected $restoreDefaultType = GoogleCloudOrgpolicyV1RestoreDefault::class;
   protected $restoreDefaultDataType = '';
   /**

@@ -24,10 +24,6 @@ class IamPolicySearchResult extends \Google\Collection
    * @var string
    */
   public $assetType;
-  /**
-   * @var Explanation
-   */
-  public $explanation;
   protected $explanationType = Explanation::class;
   protected $explanationDataType = '';
   /**
@@ -38,10 +34,6 @@ class IamPolicySearchResult extends \Google\Collection
    * @var string
    */
   public $organization;
-  /**
-   * @var Policy
-   */
-  public $policy;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
   /**

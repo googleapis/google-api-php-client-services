@@ -24,10 +24,6 @@ class SearchAllIamPoliciesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var IamPolicySearchResult[]
-   */
-  public $results;
   protected $resultsType = IamPolicySearchResult::class;
   protected $resultsDataType = 'array';
 

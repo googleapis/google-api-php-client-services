@@ -28,10 +28,6 @@ class ExportAssetsRequest extends \Google\Collection
    * @var string
    */
   public $contentType;
-  /**
-   * @var OutputConfig
-   */
-  public $outputConfig;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
   /**

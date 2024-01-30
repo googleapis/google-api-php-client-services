@@ -19,16 +19,8 @@ namespace Google\Service\CloudAsset;
 
 class OutputConfig extends \Google\Model
 {
-  /**
-   * @var BigQueryDestination
-   */
-  public $bigqueryDestination;
   protected $bigqueryDestinationType = BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
-  /**
-   * @var GcsDestination
-   */
-  public $gcsDestination;
   protected $gcsDestinationType = GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

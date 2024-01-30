@@ -32,10 +32,6 @@ class GoogleCloudAssetV1AnalyzeOrgPolicyGovernedAssetsResponseGovernedIamPolicy 
    * @var string
    */
   public $organization;
-  /**
-   * @var Policy
-   */
-  public $policy;
   protected $policyType = Policy::class;
   protected $policyDataType = '';
   /**

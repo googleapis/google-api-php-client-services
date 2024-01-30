@@ -51,6 +51,7 @@ class EffectiveIamPolicies extends \Google\Service\Resource
    * APIs](https://cloud.google.com/asset-inventory/docs/supported-asset-types). A
    * maximum of 20 resources' effective policies can be retrieved in a batch.
    * @return BatchGetEffectiveIamPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function batchGet($scope, $optParams = [])
   {

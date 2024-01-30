@@ -20,10 +20,6 @@ namespace Google\Service\CloudAsset;
 class AnalyzeMoveResponse extends \Google\Collection
 {
   protected $collection_key = 'moveAnalysis';
-  /**
-   * @var MoveAnalysis[]
-   */
-  public $moveAnalysis;
   protected $moveAnalysisType = MoveAnalysis::class;
   protected $moveAnalysisDataType = 'array';
 

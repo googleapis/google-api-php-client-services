@@ -19,10 +19,6 @@ namespace Google\Service\CloudAsset;
 
 class GoogleCloudAssetV1Constraint extends \Google\Model
 {
-  /**
-   * @var GoogleCloudAssetV1BooleanConstraint
-   */
-  public $booleanConstraint;
   protected $booleanConstraintType = GoogleCloudAssetV1BooleanConstraint::class;
   protected $booleanConstraintDataType = '';
   /**
@@ -37,10 +33,6 @@ class GoogleCloudAssetV1Constraint extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudAssetV1ListConstraint
-   */
-  public $listConstraint;
   protected $listConstraintType = GoogleCloudAssetV1ListConstraint::class;
   protected $listConstraintDataType = '';
   /**
