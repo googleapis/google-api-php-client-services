@@ -21,10 +21,28 @@ class ValidatorConfig extends \Google\Collection
 {
   protected $collection_key = 'mevRelayUrls';
   /**
+   * @var bool
+   */
+  public $managedValidatorClient;
+  /**
    * @var string[]
    */
   public $mevRelayUrls;
 
+  /**
+   * @param bool
+   */
+  public function setManagedValidatorClient($managedValidatorClient)
+  {
+    $this->managedValidatorClient = $managedValidatorClient;
+  }
+  /**
+   * @return bool
+   */
+  public function getManagedValidatorClient()
+  {
+    return $this->managedValidatorClient;
+  }
   /**
    * @param string[]
    */
