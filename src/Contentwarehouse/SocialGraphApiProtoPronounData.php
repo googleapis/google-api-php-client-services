@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class SocialGraphApiProtoPronounData extends \Google\Collection
 {
   protected $collection_key = 'pronounEntry';
-  /**
-   * @var SocialGraphApiProtoPronounEntry[]
-   */
-  public $pronounEntry;
   protected $pronounEntryType = SocialGraphApiProtoPronounEntry::class;
   protected $pronounEntryDataType = 'array';
 

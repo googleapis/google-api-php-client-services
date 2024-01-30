@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class SnapshotTextNode extends \Google\Model
 {
-  /**
-   * @var SnapshotBox
-   */
-  public $boundingBox;
   protected $boundingBoxType = SnapshotBox::class;
   protected $boundingBoxDataType = '';
   /**

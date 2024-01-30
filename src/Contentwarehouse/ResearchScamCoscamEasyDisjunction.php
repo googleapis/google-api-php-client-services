@@ -24,10 +24,6 @@ class ResearchScamCoscamEasyDisjunction extends \Google\Collection
    * @var bool
    */
   public $isPositive;
-  /**
-   * @var ResearchScamCoscamTokenGroup[]
-   */
-  public $tokenGroups;
   protected $tokenGroupsType = ResearchScamCoscamTokenGroup::class;
   protected $tokenGroupsDataType = 'array';
 

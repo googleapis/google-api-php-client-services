@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class SnapshotImageNode extends \Google\Model
 {
-  /**
-   * @var SnapshotBox
-   */
-  public $boundingBox;
   protected $boundingBoxType = SnapshotBox::class;
   protected $boundingBoxDataType = '';
   /**

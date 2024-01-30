@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class SnippetsLeadingtextLeadingTextAnnotation extends \Google\Collection
 {
   protected $collection_key = 'piece';
-  /**
-   * @var SnippetsLeadingtextLeadingTextAnnotationPiece[]
-   */
-  public $piece;
   protected $pieceDataType = 'array';
   /**
    * @var string

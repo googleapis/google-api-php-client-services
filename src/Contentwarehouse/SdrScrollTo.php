@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class SdrScrollTo extends \Google\Model
 {
-  /**
-   * @var SdrScrollToOnPageMatches
-   */
-  public $onpageMatches;
   protected $onpageMatchesType = SdrScrollToOnPageMatches::class;
   protected $onpageMatchesDataType = '';
   /**

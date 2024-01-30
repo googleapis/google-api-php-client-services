@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class SafesearchVideoContentSignals extends \Google\Model
 {
-  /**
-   * @var SafesearchVideoContentSignalsMultiLabelClassificationInfo
-   */
-  public $internalMultiLabelClassification;
   protected $internalMultiLabelClassificationType = SafesearchVideoContentSignalsMultiLabelClassificationInfo::class;
   protected $internalMultiLabelClassificationDataType = '';
   /**
@@ -37,10 +33,6 @@ class SafesearchVideoContentSignals extends \Google\Model
    * @var string
    */
   public $versionTag;
-  /**
-   * @var SafesearchVideoClassifierOutput
-   */
-  public $videoClassifierOutput;
   protected $videoClassifierOutputType = SafesearchVideoClassifierOutput::class;
   protected $videoClassifierOutputDataType = '';
 

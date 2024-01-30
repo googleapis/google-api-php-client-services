@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoMonthlyRecurrence extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoMonthlyDayRecurrence
-   */
-  public $monthlyDayRecurrence;
   protected $monthlyDayRecurrenceType = SocialGraphApiProtoMonthlyDayRecurrence::class;
   protected $monthlyDayRecurrenceDataType = '';
-  /**
-   * @var SocialGraphApiProtoMonthlyWeekdayRecurrence
-   */
-  public $monthlyWeekdayRecurrence;
   protected $monthlyWeekdayRecurrenceType = SocialGraphApiProtoMonthlyWeekdayRecurrence::class;
   protected $monthlyWeekdayRecurrenceDataType = '';
 

@@ -31,10 +31,6 @@ class RichsnippetsDataObjectAttribute extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $subobject;
   protected $subobjectType = Proto2BridgeMessageSet::class;
   protected $subobjectDataType = '';
   /**

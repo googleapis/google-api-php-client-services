@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefWikipediaGeocode extends \Google\Model
 {
-  /**
-   * @var GeostorePointProto
-   */
-  public $location;
   protected $locationType = GeostorePointProto::class;
   protected $locationDataType = '';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoPhotoOverlay extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoRelativePosition
-   */
-  public $relativePosition;
   protected $relativePositionType = SocialGraphApiProtoRelativePosition::class;
   protected $relativePositionDataType = '';
-  /**
-   * @var SocialGraphApiProtoRelativeScale
-   */
-  public $relativeScale;
   protected $relativeScaleType = SocialGraphApiProtoRelativeScale::class;
   protected $relativeScaleDataType = '';
 

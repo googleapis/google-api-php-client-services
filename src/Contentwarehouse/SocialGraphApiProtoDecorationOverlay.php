@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoDecorationOverlay extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoPhotoOverlay
-   */
-  public $overlay;
   protected $overlayType = SocialGraphApiProtoPhotoOverlay::class;
   protected $overlayDataType = '';
   /**

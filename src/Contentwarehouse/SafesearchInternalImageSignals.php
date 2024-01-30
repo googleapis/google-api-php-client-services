@@ -23,10 +23,6 @@ class SafesearchInternalImageSignals extends \Google\Model
    * @var float
    */
   public $imageEntitiesViolenceScore;
-  /**
-   * @var SafesearchImageOffensiveAnnotation
-   */
-  public $offensiveAnnotation;
   protected $offensiveAnnotationType = SafesearchImageOffensiveAnnotation::class;
   protected $offensiveAnnotationDataType = '';
   /**

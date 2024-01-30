@@ -195,10 +195,6 @@ class ScienceCitationDownloadURL extends \Google\Model
    * @var bool
    */
   public $noSnippet;
-  /**
-   * @var ScienceOceanView
-   */
-  public $oceanView;
   protected $oceanViewType = ScienceOceanView::class;
   protected $oceanViewDataType = '';
   /**

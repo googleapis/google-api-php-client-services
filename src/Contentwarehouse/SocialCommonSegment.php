@@ -19,28 +19,12 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialCommonSegment extends \Google\Model
 {
-  /**
-   * @var SocialCommonFormatting
-   */
-  public $formatting;
   protected $formattingType = SocialCommonFormatting::class;
   protected $formattingDataType = '';
-  /**
-   * @var SocialCommonHashtagData
-   */
-  public $hashtagData;
   protected $hashtagDataType = SocialCommonHashtagData::class;
   protected $hashtagDataDataType = '';
-  /**
-   * @var SocialCommonLinkData
-   */
-  public $linkData;
   protected $linkDataType = SocialCommonLinkData::class;
   protected $linkDataDataType = '';
-  /**
-   * @var SocialCommonSearchLinkData
-   */
-  public $searchLinkData;
   protected $searchLinkDataType = SocialCommonSearchLinkData::class;
   protected $searchLinkDataDataType = '';
   /**
@@ -51,10 +35,6 @@ class SocialCommonSegment extends \Google\Model
    * @var string
    */
   public $type;
-  /**
-   * @var SocialCommonUserMentionData
-   */
-  public $userMentionData;
   protected $userMentionDataType = SocialCommonUserMentionData::class;
   protected $userMentionDataDataType = '';
 

@@ -27,10 +27,6 @@ class SnippetExtraInfoSnippetScoringInfo extends \Google\Model
    * @var float
    */
   public $brainScore;
-  /**
-   * @var QualityPreviewRanklabSnippet
-   */
-  public $features;
   protected $featuresType = QualityPreviewRanklabSnippet::class;
   protected $featuresDataType = '';
   /**

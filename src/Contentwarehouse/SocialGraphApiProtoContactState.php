@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoContactState extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoContactDeletionContext
-   */
-  public $deletionContext;
   protected $deletionContextType = SocialGraphApiProtoContactDeletionContext::class;
   protected $deletionContextDataType = '';
   /**

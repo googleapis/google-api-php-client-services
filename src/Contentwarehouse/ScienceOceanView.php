@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class ScienceOceanView extends \Google\Collection
 {
   protected $collection_key = 'countryview';
-  /**
-   * @var ScienceOceanViewCountryView[]
-   */
-  public $countryview;
   protected $countryviewType = ScienceOceanViewCountryView::class;
   protected $countryviewDataType = 'array';
 

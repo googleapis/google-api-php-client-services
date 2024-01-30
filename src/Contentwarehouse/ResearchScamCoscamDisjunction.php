@@ -24,10 +24,6 @@ class ResearchScamCoscamDisjunction extends \Google\Collection
    * @var string
    */
   public $key;
-  /**
-   * @var ResearchScamCoscamTokenGroup[]
-   */
-  public $tokenGroups;
   protected $tokenGroupsType = ResearchScamCoscamTokenGroup::class;
   protected $tokenGroupsDataType = 'array';
 

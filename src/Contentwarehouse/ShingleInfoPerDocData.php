@@ -24,10 +24,6 @@ class ShingleInfoPerDocData extends \Google\Collection
    * @var int
    */
   public $numShingles;
-  /**
-   * @var ShingleSource[]
-   */
-  public $source;
   protected $sourceType = ShingleSource::class;
   protected $sourceDataType = 'array';
 

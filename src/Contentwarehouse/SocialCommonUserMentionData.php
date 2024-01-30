@@ -23,10 +23,6 @@ class SocialCommonUserMentionData extends \Google\Model
    * @var string
    */
   public $email;
-  /**
-   * @var SecurityCredentialsPrincipalProto
-   */
-  public $user;
   protected $userType = SecurityCredentialsPrincipalProto::class;
   protected $userDataType = '';
   /**

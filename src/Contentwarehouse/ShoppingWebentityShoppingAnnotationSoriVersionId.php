@@ -23,10 +23,6 @@ class ShoppingWebentityShoppingAnnotationSoriVersionId extends \Google\Model
    * @var string
    */
   public $f1CommitTimestampMicros;
-  /**
-   * @var AdsShoppingReportingOffersSerializedSoriId
-   */
-  public $opaqueSoriId;
   protected $opaqueSoriIdType = AdsShoppingReportingOffersSerializedSoriId::class;
   protected $opaqueSoriIdDataType = '';
 

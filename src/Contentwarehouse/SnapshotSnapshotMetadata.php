@@ -27,10 +27,6 @@ class SnapshotSnapshotMetadata extends \Google\Model
    * @var string
    */
   public $crawlTimestamp;
-  /**
-   * @var SnapshotSnapshotDocument
-   */
-  public $snapshotDocument;
   protected $snapshotDocumentType = SnapshotSnapshotDocument::class;
   protected $snapshotDocumentDataType = '';
   /**

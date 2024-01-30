@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class ResearchScamCoscamRestrictDefinition extends \Google\Collection
 {
   protected $collection_key = 'disjunctions';
-  /**
-   * @var ResearchScamCoscamConjunction[]
-   */
-  public $conjunctions;
   protected $conjunctionsType = ResearchScamCoscamConjunction::class;
   protected $conjunctionsDataType = 'array';
-  /**
-   * @var ResearchScamCoscamDisjunction[]
-   */
-  public $disjunctions;
   protected $disjunctionsType = ResearchScamCoscamDisjunction::class;
   protected $disjunctionsDataType = 'array';
   /**

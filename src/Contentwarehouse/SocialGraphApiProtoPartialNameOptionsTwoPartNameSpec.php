@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoPartialNameOptionsTwoPartNameSpec extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoPartialNameOptionsNamePartSpec
-   */
-  public $familyNameSpec;
   protected $familyNameSpecType = SocialGraphApiProtoPartialNameOptionsNamePartSpec::class;
   protected $familyNameSpecDataType = '';
-  /**
-   * @var SocialGraphApiProtoPartialNameOptionsNamePartSpec
-   */
-  public $givenNameSpec;
   protected $givenNameSpecType = SocialGraphApiProtoPartialNameOptionsNamePartSpec::class;
   protected $givenNameSpecDataType = '';
 
