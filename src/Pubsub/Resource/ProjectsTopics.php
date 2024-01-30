@@ -146,8 +146,9 @@ class ProjectsTopics extends \Google\Service\Resource
     return $this->call('list', [$params], ListTopicsResponse::class);
   }
   /**
-   * Updates an existing topic. Note that certain properties of a topic are not
-   * modifiable. (topics.patch)
+   * Updates an existing topic by updating the fields specified in the update
+   * mask. Note that certain properties of a topic are not modifiable.
+   * (topics.patch)
    *
    * @param string $name Required. The name of the topic. It must have the format
    * `"projects/{project}/topics/{topic}"`. `{topic}` must start with a letter,

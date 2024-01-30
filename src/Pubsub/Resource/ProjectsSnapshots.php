@@ -170,7 +170,8 @@ class ProjectsSnapshots extends \Google\Service\Resource
     return $this->call('list', [$params], ListSnapshotsResponse::class);
   }
   /**
-   * Updates an existing snapshot. Snapshots are used in
+   * Updates an existing snapshot by updating the fields specified in the update
+   * mask. Snapshots are used in
    * [Seek](https://cloud.google.com/pubsub/docs/replay-overview) operations,
    * which allow you to manage message acknowledgments in bulk. That is, you can
    * set the acknowledgment state of messages in an existing subscription to the

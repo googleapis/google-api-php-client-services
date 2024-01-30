@@ -241,8 +241,9 @@ class ProjectsSubscriptions extends \Google\Service\Resource
     return $this->call('modifyPushConfig', [$params], PubsubEmpty::class);
   }
   /**
-   * Updates an existing subscription. Note that certain properties of a
-   * subscription, such as its topic, are not modifiable. (subscriptions.patch)
+   * Updates an existing subscription by updating the fields specified in the
+   * update mask. Note that certain properties of a subscription, such as its
+   * topic, are not modifiable. (subscriptions.patch)
    *
    * @param string $name Required. The name of the subscription. It must have the
    * format `"projects/{project}/subscriptions/{subscription}"`. `{subscription}`
