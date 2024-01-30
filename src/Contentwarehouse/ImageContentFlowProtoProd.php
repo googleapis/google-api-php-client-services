@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class ImageContentFlowProtoProd extends \Google\Collection
 {
   protected $collection_key = 'starburst';
-  /**
-   * @var ImageContentStarburstVersionGroup[]
-   */
-  public $starburst;
   protected $starburstType = ImageContentStarburstVersionGroup::class;
   protected $starburstDataType = 'array';
 

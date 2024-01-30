@@ -44,28 +44,12 @@ class IndexingEmbeddedContentLinkInfo extends \Google\Collection
    * @var string[]
    */
   public $deprecatedRedirect;
-  /**
-   * @var WirelessTranscoderFetchFetchSourceInfo[]
-   */
-  public $fetchSourceInfo;
   protected $fetchSourceInfoType = WirelessTranscoderFetchFetchSourceInfo::class;
   protected $fetchSourceInfoDataType = 'array';
-  /**
-   * @var TrawlerFetchStatus
-   */
-  public $fetchStatus;
   protected $fetchStatusType = TrawlerFetchStatus::class;
   protected $fetchStatusDataType = '';
-  /**
-   * @var IndexingEmbeddedContentFetchUrlResponseMetadata
-   */
-  public $fetchUrlResponseMetadata;
   protected $fetchUrlResponseMetadataType = IndexingEmbeddedContentFetchUrlResponseMetadata::class;
   protected $fetchUrlResponseMetadataDataType = '';
-  /**
-   * @var TrawlerFetchReplyData
-   */
-  public $frd;
   protected $frdType = TrawlerFetchReplyData::class;
   protected $frdDataType = '';
   /**
@@ -88,10 +72,6 @@ class IndexingEmbeddedContentLinkInfo extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoWebKitFetchMetadata
-   */
-  public $webkitFetchMetadata;
   protected $webkitFetchMetadataType = HtmlrenderWebkitHeadlessProtoWebKitFetchMetadata::class;
   protected $webkitFetchMetadataDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageSearchUnindexedImageLink extends \Google\Model
 {
-  /**
-   * @var ImageRepositoryAmarnaStatus
-   */
-  public $amarnaStatus;
   protected $amarnaStatusType = ImageRepositoryAmarnaStatus::class;
   protected $amarnaStatusDataType = '';
-  /**
-   * @var ImageRepositoryCrawlStatusInfo
-   */
-  public $crawlStatusInfo;
   protected $crawlStatusInfoType = ImageRepositoryCrawlStatusInfo::class;
   protected $crawlStatusInfoDataType = '';
   /**

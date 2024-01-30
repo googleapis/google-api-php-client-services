@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class IndexingUrlPatternUrlTreeUrlFeatures extends \Google\Collection
 {
   protected $collection_key = 'feature';
-  /**
-   * @var IndexingUrlPatternUrlTreeUrlFeature[]
-   */
-  public $feature;
   protected $featureType = IndexingUrlPatternUrlTreeUrlFeature::class;
   protected $featureDataType = 'array';
 

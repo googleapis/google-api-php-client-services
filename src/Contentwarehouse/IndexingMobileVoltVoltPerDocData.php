@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingMobileVoltVoltPerDocData extends \Google\Model
 {
-  /**
-   * @var IndexingMobileVoltCoreWebVitals
-   */
-  public $desktopCwv;
   protected $desktopCwvType = IndexingMobileVoltCoreWebVitals::class;
   protected $desktopCwvDataType = '';
   /**
@@ -33,10 +29,6 @@ class IndexingMobileVoltVoltPerDocData extends \Google\Model
    * @var bool
    */
   public $displayUrlIsHttps;
-  /**
-   * @var IndexingMobileVoltCoreWebVitals
-   */
-  public $mobileCwv;
   protected $mobileCwvType = IndexingMobileVoltCoreWebVitals::class;
   protected $mobileCwvDataType = '';
 

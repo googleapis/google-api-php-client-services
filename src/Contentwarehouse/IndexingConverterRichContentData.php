@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class IndexingConverterRichContentData extends \Google\Collection
 {
   protected $collection_key = 'range';
-  /**
-   * @var IndexingConverterRichContentDataRange[]
-   */
-  public $range;
   protected $rangeType = IndexingConverterRichContentDataRange::class;
   protected $rangeDataType = 'array';
 

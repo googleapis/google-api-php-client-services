@@ -23,22 +23,10 @@ class ImageBaseThumbnailMetadata extends \Google\Model
    * @var int
    */
   public $byteSize;
-  /**
-   * @var ContentAwareCropsIndexing
-   */
-  public $crops;
   protected $cropsType = ContentAwareCropsIndexing::class;
   protected $cropsDataType = '';
-  /**
-   * @var DeepCropIndexing
-   */
-  public $deepCrop;
   protected $deepCropType = DeepCropIndexing::class;
   protected $deepCropDataType = '';
-  /**
-   * @var DeepCropPixels
-   */
-  public $deepCropPixels;
   protected $deepCropPixelsType = DeepCropPixels::class;
   protected $deepCropPixelsDataType = '';
   /**

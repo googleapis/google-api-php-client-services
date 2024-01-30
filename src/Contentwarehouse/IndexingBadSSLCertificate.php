@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingBadSSLCertificate extends \Google\Model
 {
-  /**
-   * @var TrawlerSSLCertificateInfo
-   */
-  public $badSslCertificate;
   protected $badSslCertificateType = TrawlerSSLCertificateInfo::class;
   protected $badSslCertificateDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingSignalAggregatorUrlPatternSignalsPriorSignal extends \Google\Model
 {
-  /**
-   * @var IndexingSignalAggregatorAggregatedScore
-   */
-  public $aggregatedScore;
   protected $aggregatedScoreType = IndexingSignalAggregatorAggregatedScore::class;
   protected $aggregatedScoreDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageRepositoryVideoLinkIndexingInfo extends \Google\Model
 {
-  /**
-   * @var ImageRepositoryCrawlStatusInfo
-   */
-  public $crawlStatusInfo;
   protected $crawlStatusInfoType = ImageRepositoryCrawlStatusInfo::class;
   protected $crawlStatusInfoDataType = '';
   /**

@@ -24,16 +24,8 @@ class ImageRepositoryVideoProperties extends \Google\Collection
    * @var bool
    */
   public $audioOnly;
-  /**
-   * @var ImageRepositoryContentBasedVideoMetadata
-   */
-  public $contentBasedMetadata;
   protected $contentBasedMetadataType = ImageRepositoryContentBasedVideoMetadata::class;
   protected $contentBasedMetadataDataType = '';
-  /**
-   * @var ImageMoosedogCrawlState
-   */
-  public $crawlState;
   protected $crawlStateType = ImageMoosedogCrawlState::class;
   protected $crawlStateDataType = '';
   /**
@@ -44,16 +36,8 @@ class ImageRepositoryVideoProperties extends \Google\Collection
    * @var string
    */
   public $firstProcessingTimestampSec;
-  /**
-   * @var ImageRepositoryVideoPropertiesVerticalIndexingInfoVideo[]
-   */
-  public $indexedVerticals;
   protected $indexedVerticalsType = ImageRepositoryVideoPropertiesVerticalIndexingInfoVideo::class;
   protected $indexedVerticalsDataType = 'array';
-  /**
-   * @var VideoCrawlVideoInlinePlaybackMetadata
-   */
-  public $inlinePlayback;
   protected $inlinePlaybackType = VideoCrawlVideoInlinePlaybackMetadata::class;
   protected $inlinePlaybackDataType = '';
   /**

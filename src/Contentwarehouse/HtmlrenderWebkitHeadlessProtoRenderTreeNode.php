@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class HtmlrenderWebkitHeadlessProtoRenderTreeNode extends \Google\Collection
 {
   protected $collection_key = 'inlineTextBox';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoBox
-   */
-  public $box;
   protected $boxType = HtmlrenderWebkitHeadlessProtoBox::class;
   protected $boxDataType = '';
   /**
@@ -34,10 +30,6 @@ class HtmlrenderWebkitHeadlessProtoRenderTreeNode extends \Google\Collection
    * @var int
    */
   public $domTreeNodeIndex;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoRenderTreeNodeInlineTextBox[]
-   */
-  public $inlineTextBox;
   protected $inlineTextBoxType = HtmlrenderWebkitHeadlessProtoRenderTreeNodeInlineTextBox::class;
   protected $inlineTextBoxDataType = 'array';
   /**

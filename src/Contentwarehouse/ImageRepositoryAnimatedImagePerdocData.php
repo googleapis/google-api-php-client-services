@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageRepositoryAnimatedImagePerdocData extends \Google\Model
 {
-  /**
-   * @var ImageSafesearchContentBrainPornAnnotation
-   */
-  public $aggregatedPornScores;
   protected $aggregatedPornScoresType = ImageSafesearchContentBrainPornAnnotation::class;
   protected $aggregatedPornScoresDataType = '';
   /**

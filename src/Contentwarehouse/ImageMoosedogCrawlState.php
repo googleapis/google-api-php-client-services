@@ -27,10 +27,6 @@ class ImageMoosedogCrawlState extends \Google\Model
    * @var int
    */
   public $detailedReason;
-  /**
-   * @var UtilStatusProto
-   */
-  public $internalStatus;
   protected $internalStatusType = UtilStatusProto::class;
   protected $internalStatusDataType = '';
   /**

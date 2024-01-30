@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageUnderstandingIndexingImageRegion extends \Google\Model
 {
-  /**
-   * @var PhotosVisionGroundtruthdbNormalizedBoundingBox
-   */
-  public $box;
   protected $boxType = PhotosVisionGroundtruthdbNormalizedBoundingBox::class;
   protected $boxDataType = '';
   /**

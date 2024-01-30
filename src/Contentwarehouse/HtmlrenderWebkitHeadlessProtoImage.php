@@ -31,10 +31,6 @@ class HtmlrenderWebkitHeadlessProtoImage extends \Google\Model
    * @var int
    */
   public $pageNumber;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoBox
-   */
-  public $viewport;
   protected $viewportType = HtmlrenderWebkitHeadlessProtoBox::class;
   protected $viewportDataType = '';
   /**

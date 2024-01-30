@@ -40,10 +40,6 @@ class HtmlrenderWebkitHeadlessProtoDocument extends \Google\Collection
    * @var int
    */
   public $contentWidth;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoDOMTreeNode[]
-   */
-  public $domTreeNode;
   protected $domTreeNodeType = HtmlrenderWebkitHeadlessProtoDOMTreeNode::class;
   protected $domTreeNodeDataType = 'array';
   /**
@@ -55,41 +51,17 @@ class HtmlrenderWebkitHeadlessProtoDocument extends \Google\Collection
    */
   public $frameName;
   public $javascriptTimeOfDay;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoRedirectHop[]
-   */
-  public $redirectHop;
   protected $redirectHopType = HtmlrenderWebkitHeadlessProtoRedirectHop::class;
   protected $redirectHopDataType = 'array';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoReferencedResource[]
-   */
-  public $referencedResource;
   protected $referencedResourceType = HtmlrenderWebkitHeadlessProtoReferencedResource::class;
   protected $referencedResourceDataType = 'array';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoRenderEvent[]
-   */
-  public $renderEvent;
   protected $renderEventType = HtmlrenderWebkitHeadlessProtoRenderEvent::class;
   protected $renderEventDataType = 'array';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoStyle[]
-   */
-  public $renderStyle;
   protected $renderStyleType = HtmlrenderWebkitHeadlessProtoStyle::class;
   protected $renderStyleDataType = 'array';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoRenderTreeNode[]
-   */
-  public $renderTreeNode;
   protected $renderTreeNodeType = HtmlrenderWebkitHeadlessProtoRenderTreeNode::class;
   protected $renderTreeNodeDataType = 'array';
   public $renderTreeQualityScore;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoBox
-   */
-  public $renderedContentArea;
   protected $renderedContentAreaType = HtmlrenderWebkitHeadlessProtoBox::class;
   protected $renderedContentAreaDataType = '';
   /**
@@ -109,10 +81,6 @@ class HtmlrenderWebkitHeadlessProtoDocument extends \Google\Collection
    * @var string
    */
   public $uri;
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoBox
-   */
-  public $viewport;
   protected $viewportType = HtmlrenderWebkitHeadlessProtoBox::class;
   protected $viewportDataType = '';
 

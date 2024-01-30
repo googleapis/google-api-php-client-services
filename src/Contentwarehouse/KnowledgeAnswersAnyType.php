@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class KnowledgeAnswersAnyType extends \Google\Model
 {
-  /**
-   * @var NlpMeaningComponentSpecificContracts
-   */
-  public $componentSpecificContracts;
   protected $componentSpecificContractsType = NlpMeaningComponentSpecificContracts::class;
   protected $componentSpecificContractsDataType = '';
-  /**
-   * @var NlpMeaningMeaningRemodelings
-   */
-  public $remodelings;
   protected $remodelingsType = NlpMeaningMeaningRemodelings::class;
   protected $remodelingsDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class ImageRepositoryVenomStatus extends \Google\Collection
 {
   protected $collection_key = 'settings';
-  /**
-   * @var VideoAssetsVenomACL
-   */
-  public $acl;
   protected $aclType = VideoAssetsVenomACL::class;
   protected $aclDataType = '';
   /**
@@ -50,26 +46,14 @@ class ImageRepositoryVenomStatus extends \Google\Collection
    * @var string
    */
   public $reason;
-  /**
-   * @var VideoAssetsVenomSettings[]
-   */
-  public $settings;
   protected $settingsType = VideoAssetsVenomSettings::class;
   protected $settingsDataType = 'array';
   /**
    * @var string
    */
   public $state;
-  /**
-   * @var VideoAssetsVenomTransition
-   */
-  public $transition;
   protected $transitionType = VideoAssetsVenomTransition::class;
   protected $transitionDataType = '';
-  /**
-   * @var VideoAssetsVenomVideoId
-   */
-  public $venomId;
   protected $venomIdType = VideoAssetsVenomVideoId::class;
   protected $venomIdDataType = '';
   /**

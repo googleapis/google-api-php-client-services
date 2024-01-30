@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class IndexingDocjoinerServingTimeClusterIds extends \Google\Collection
 {
   protected $collection_key = 'clusterId';
-  /**
-   * @var IndexingDocjoinerServingTimeClusterId[]
-   */
-  public $clusterId;
   protected $clusterIdType = IndexingDocjoinerServingTimeClusterId::class;
   protected $clusterIdDataType = 'array';
 

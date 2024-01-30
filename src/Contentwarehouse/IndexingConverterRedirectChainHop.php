@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingConverterRedirectChainHop extends \Google\Model
 {
-  /**
-   * @var IndexingConverterRedirectParams
-   */
-  public $params;
   protected $paramsType = IndexingConverterRedirectParams::class;
   protected $paramsDataType = '';
   /**

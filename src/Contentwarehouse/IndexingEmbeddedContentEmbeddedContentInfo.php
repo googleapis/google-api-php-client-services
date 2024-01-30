@@ -28,16 +28,8 @@ class IndexingEmbeddedContentEmbeddedContentInfo extends \Google\Collection
    * @var string
    */
   public $convertedContents;
-  /**
-   * @var IndexingEmbeddedContentEmbeddedLinksInfo
-   */
-  public $embeddedLinksInfo;
   protected $embeddedLinksInfoType = IndexingEmbeddedContentEmbeddedLinksInfo::class;
   protected $embeddedLinksInfoDataType = '';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoRenderResponse
-   */
-  public $headlessResponse;
   protected $headlessResponseType = HtmlrenderWebkitHeadlessProtoRenderResponse::class;
   protected $headlessResponseDataType = '';
   /**
@@ -48,45 +40,21 @@ class IndexingEmbeddedContentEmbeddedContentInfo extends \Google\Collection
    * @var int
    */
   public $originalEncoding;
-  /**
-   * @var IndexingConverterRawRedirectInfo
-   */
-  public $rawRedirectInfo;
   protected $rawRedirectInfoType = IndexingConverterRawRedirectInfo::class;
   protected $rawRedirectInfoDataType = '';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoReferencedResource[]
-   */
-  public $referencedResource;
   protected $referencedResourceType = HtmlrenderWebkitHeadlessProtoReferencedResource::class;
   protected $referencedResourceDataType = 'array';
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoImage
-   */
-  public $renderedSnapshot;
   protected $renderedSnapshotType = HtmlrenderWebkitHeadlessProtoImage::class;
   protected $renderedSnapshotDataType = '';
   /**
    * @var string
    */
   public $renderedSnapshotImage;
-  /**
-   * @var SnapshotSnapshotMetadata
-   */
-  public $renderedSnapshotMetadata;
   protected $renderedSnapshotMetadataType = SnapshotSnapshotMetadata::class;
   protected $renderedSnapshotMetadataDataType = '';
   public $renderedSnapshotQualityScore;
-  /**
-   * @var IndexingEmbeddedContentRenderingOutputMetadata
-   */
-  public $renderingOutputMetadata;
   protected $renderingOutputMetadataType = IndexingEmbeddedContentRenderingOutputMetadata::class;
   protected $renderingOutputMetadataDataType = '';
-  /**
-   * @var IndexingConverterRichContentData
-   */
-  public $richcontentData;
   protected $richcontentDataType = IndexingConverterRichContentData::class;
   protected $richcontentDataDataType = '';
 

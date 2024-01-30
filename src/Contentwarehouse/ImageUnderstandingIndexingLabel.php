@@ -28,10 +28,6 @@ class ImageUnderstandingIndexingLabel extends \Google\Collection
    * @var string
    */
   public $entityId;
-  /**
-   * @var ImageUnderstandingIndexingMetaData[]
-   */
-  public $metaData;
   protected $metaDataType = ImageUnderstandingIndexingMetaData::class;
   protected $metaDataDataType = 'array';
   /**

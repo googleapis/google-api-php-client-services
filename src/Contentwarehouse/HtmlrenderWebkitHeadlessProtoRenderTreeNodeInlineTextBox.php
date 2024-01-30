@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class HtmlrenderWebkitHeadlessProtoRenderTreeNodeInlineTextBox extends \Google\Model
 {
-  /**
-   * @var HtmlrenderWebkitHeadlessProtoBox
-   */
-  public $box;
   protected $boxType = HtmlrenderWebkitHeadlessProtoBox::class;
   protected $boxDataType = '';
   /**

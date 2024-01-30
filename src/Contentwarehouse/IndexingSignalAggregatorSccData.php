@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class IndexingSignalAggregatorSccData extends \Google\Model
 {
-  /**
-   * @var IndexingSignalAggregatorSccSignal
-   */
-  public $parentPattern;
   protected $parentPatternType = IndexingSignalAggregatorSccSignal::class;
   protected $parentPatternDataType = '';
-  /**
-   * @var IndexingSignalAggregatorSccSignal
-   */
-  public $pattern;
   protected $patternType = IndexingSignalAggregatorSccSignal::class;
   protected $patternDataType = '';
 
