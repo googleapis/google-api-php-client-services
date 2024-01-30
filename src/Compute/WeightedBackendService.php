@@ -23,10 +23,6 @@ class WeightedBackendService extends \Google\Model
    * @var string
    */
   public $backendService;
-  /**
-   * @var HttpHeaderAction
-   */
-  public $headerAction;
   protected $headerActionType = HttpHeaderAction::class;
   protected $headerActionDataType = '';
   /**

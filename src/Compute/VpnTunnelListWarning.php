@@ -24,10 +24,6 @@ class VpnTunnelListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var VpnTunnelListWarningData[]
-   */
-  public $data;
   protected $dataType = VpnTunnelListWarningData::class;
   protected $dataDataType = 'array';
   /**

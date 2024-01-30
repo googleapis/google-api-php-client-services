@@ -24,10 +24,6 @@ class VmEndpointNatMappingsListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var VmEndpointNatMappingsListWarningData[]
-   */
-  public $data;
   protected $dataType = VmEndpointNatMappingsListWarningData::class;
   protected $dataDataType = 'array';
   /**

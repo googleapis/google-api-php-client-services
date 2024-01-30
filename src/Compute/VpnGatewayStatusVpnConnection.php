@@ -28,16 +28,8 @@ class VpnGatewayStatusVpnConnection extends \Google\Collection
    * @var string
    */
   public $peerGcpGateway;
-  /**
-   * @var VpnGatewayStatusHighAvailabilityRequirementState
-   */
-  public $state;
   protected $stateType = VpnGatewayStatusHighAvailabilityRequirementState::class;
   protected $stateDataType = '';
-  /**
-   * @var VpnGatewayStatusTunnel[]
-   */
-  public $tunnels;
   protected $tunnelsType = VpnGatewayStatusTunnel::class;
   protected $tunnelsDataType = 'array';
 

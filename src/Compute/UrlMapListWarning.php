@@ -24,10 +24,6 @@ class UrlMapListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var UrlMapListWarningData[]
-   */
-  public $data;
   protected $dataType = UrlMapListWarningData::class;
   protected $dataDataType = 'array';
   /**

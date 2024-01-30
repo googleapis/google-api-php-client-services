@@ -64,10 +64,6 @@ class VpnGateway extends \Google\Collection
    * @var string
    */
   public $stackType;
-  /**
-   * @var VpnGatewayVpnGatewayInterface[]
-   */
-  public $vpnInterfaces;
   protected $vpnInterfacesType = VpnGatewayVpnGatewayInterface::class;
   protected $vpnInterfacesDataType = 'array';
 

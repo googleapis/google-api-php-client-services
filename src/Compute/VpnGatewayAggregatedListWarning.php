@@ -24,10 +24,6 @@ class VpnGatewayAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var VpnGatewayAggregatedListWarningData[]
-   */
-  public $data;
   protected $dataType = VpnGatewayAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

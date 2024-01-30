@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class VpnGatewayStatus extends \Google\Collection
 {
   protected $collection_key = 'vpnConnections';
-  /**
-   * @var VpnGatewayStatusVpnConnection[]
-   */
-  public $vpnConnections;
   protected $vpnConnectionsType = VpnGatewayStatusVpnConnection::class;
   protected $vpnConnectionsDataType = 'array';
 

@@ -36,10 +36,6 @@ class VmEndpointNatMappingsInterfaceNatMappings extends \Google\Collection
    * @var int
    */
   public $numTotalNatPorts;
-  /**
-   * @var VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings[]
-   */
-  public $ruleMappings;
   protected $ruleMappingsType = VmEndpointNatMappingsInterfaceNatMappingsNatRuleMappings::class;
   protected $ruleMappingsDataType = 'array';
   /**
