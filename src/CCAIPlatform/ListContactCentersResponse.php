@@ -20,10 +20,6 @@ namespace Google\Service\CCAIPlatform;
 class ListContactCentersResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var ContactCenter[]
-   */
-  public $contactCenters;
   protected $contactCentersType = ContactCenter::class;
   protected $contactCentersDataType = 'array';
   /**

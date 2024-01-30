@@ -28,10 +28,6 @@ class ContactCenterQuota extends \Google\Collection
    * @var int
    */
   public $contactCenterCountSum;
-  /**
-   * @var Quota[]
-   */
-  public $quotas;
   protected $quotasType = Quota::class;
   protected $quotasDataType = 'array';
 
