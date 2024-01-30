@@ -20,22 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class DrishtiFeatureSetDataSequence extends \Google\Collection
 {
   protected $collection_key = 'timestamp';
-  /**
-   * @var DrishtiFeatureSetData[]
-   */
-  public $element;
   protected $elementType = DrishtiFeatureSetData::class;
   protected $elementDataType = 'array';
-  /**
-   * @var DrishtiFeatureExtra[]
-   */
-  public $extra;
   protected $extraType = DrishtiFeatureExtra::class;
   protected $extraDataType = 'array';
-  /**
-   * @var DrishtiLabelSetElement[]
-   */
-  public $label;
   protected $labelType = DrishtiLabelSetElement::class;
   protected $labelDataType = 'array';
   /**

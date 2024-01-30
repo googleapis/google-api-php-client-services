@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class CountryLocationInfo extends \Google\Model
 {
-  /**
-   * @var GeostorePointProto
-   */
-  public $center;
   protected $centerType = GeostorePointProto::class;
   protected $centerDataType = '';
   /**
@@ -37,16 +33,8 @@ class CountryLocationInfo extends \Google\Model
    * @var string
    */
   public $county;
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $enclosingStateFeatureId;
   protected $enclosingStateFeatureIdType = GeostoreFeatureIdProto::class;
   protected $enclosingStateFeatureIdDataType = '';
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $featureId;
   protected $featureIdType = GeostoreFeatureIdProto::class;
   protected $featureIdDataType = '';
   /**

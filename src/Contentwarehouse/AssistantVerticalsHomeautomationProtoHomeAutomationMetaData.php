@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Google\Collection
 {
   protected $collection_key = 'traitRoutingHints';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoActionProjectConfig[]
-   */
-  public $actionProjectConfigs;
   protected $actionProjectConfigsType = AssistantVerticalsHomeautomationProtoActionProjectConfig::class;
   protected $actionProjectConfigsDataType = 'array';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoAgentInformation
-   */
-  public $agentInformation;
   protected $agentInformationType = AssistantVerticalsHomeautomationProtoAgentInformation::class;
   protected $agentInformationDataType = '';
   /**
@@ -68,10 +60,6 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var bool
    */
   public $lanscanOptedIn;
-  /**
-   * @var AssistantVerticalsHomeautomationProtoMatterUniqueId
-   */
-  public $matterUniqueId;
   protected $matterUniqueIdType = AssistantVerticalsHomeautomationProtoMatterUniqueId::class;
   protected $matterUniqueIdDataType = '';
   /**
@@ -94,10 +82,6 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var string
    */
   public $operationalNodeId;
-  /**
-   * @var AssistantVerticalsHomeautomationProtoAgentDeviceId[]
-   */
-  public $otherDeviceIds;
   protected $otherDeviceIdsType = AssistantVerticalsHomeautomationProtoAgentDeviceId::class;
   protected $otherDeviceIdsDataType = 'array';
   /**
@@ -116,10 +100,6 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var string[]
    */
   public $personalizedNicknames;
-  /**
-   * @var AssistantVerticalsHomeautomationProtoPhysicalLocation
-   */
-  public $physicalLocation;
   protected $physicalLocationType = AssistantVerticalsHomeautomationProtoPhysicalLocation::class;
   protected $physicalLocationDataType = '';
   /**
@@ -134,44 +114,20 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var string
    */
   public $reportStateStatus;
-  /**
-   * @var AssistantVerticalsHomeautomationProtoRoleInformation
-   */
-  public $roleInformation;
   protected $roleInformationType = AssistantVerticalsHomeautomationProtoRoleInformation::class;
   protected $roleInformationDataType = '';
   /**
    * @var bool
    */
   public $routableViaGcm;
-  /**
-   * @var NlpSaftDocument
-   */
-  public $saftDocument;
   protected $saftDocumentType = NlpSaftDocument::class;
   protected $saftDocumentDataType = '';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoSmartDeviceManagementData
-   */
-  public $smartDeviceManagementData;
   protected $smartDeviceManagementDataType = AssistantVerticalsHomeautomationProtoSmartDeviceManagementData::class;
   protected $smartDeviceManagementDataDataType = '';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoSmartHomeFeatures
-   */
-  public $smartHomeFeatures;
   protected $smartHomeFeaturesType = AssistantVerticalsHomeautomationProtoSmartHomeFeatures::class;
   protected $smartHomeFeaturesDataType = '';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoSupportedStructureFeatures
-   */
-  public $supportedStructureFeatures;
   protected $supportedStructureFeaturesType = AssistantVerticalsHomeautomationProtoSupportedStructureFeatures::class;
   protected $supportedStructureFeaturesDataType = '';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoHomeAutomationMetaDataSupportedTraits[]
-   */
-  public $supportedTraitsByAgent;
   protected $supportedTraitsByAgentType = AssistantVerticalsHomeautomationProtoHomeAutomationMetaDataSupportedTraits::class;
   protected $supportedTraitsByAgentDataType = 'map';
   /**
@@ -186,22 +142,10 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var string
    */
   public $tdssUpdateTimestamp;
-  /**
-   * @var HomeGraphCommonTraitRoutingHints[]
-   */
-  public $traitRoutingHints;
   protected $traitRoutingHintsType = HomeGraphCommonTraitRoutingHints::class;
   protected $traitRoutingHintsDataType = 'array';
-  /**
-   * @var HomeGraphCommonRoutingTable[]
-   */
-  public $traitRoutingTable;
   protected $traitRoutingTableType = HomeGraphCommonRoutingTable::class;
   protected $traitRoutingTableDataType = 'map';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoAttributes[]
-   */
-  public $traitToAttributeProtos;
   protected $traitToAttributeProtosType = AssistantVerticalsHomeautomationProtoAttributes::class;
   protected $traitToAttributeProtosDataType = 'map';
   /**
@@ -220,10 +164,6 @@ class AssistantVerticalsHomeautomationProtoHomeAutomationMetaData extends \Googl
    * @var bool
    */
   public $willReportState;
-  /**
-   * @var NlpSaftDocument
-   */
-  public $zoneNameSaftDocument;
   protected $zoneNameSaftDocumentType = NlpSaftDocument::class;
   protected $zoneNameSaftDocumentDataType = '';
 

@@ -48,10 +48,6 @@ class CrawlerChangerateUrlVersion extends \Google\Collection
    * @var int
    */
   public $onDomainLinksCount;
-  /**
-   * @var IndexingConverterShingleFingerprint
-   */
-  public $shingleSimhash;
   protected $shingleSimhashType = IndexingConverterShingleFingerprint::class;
   protected $shingleSimhashDataType = '';
   /**

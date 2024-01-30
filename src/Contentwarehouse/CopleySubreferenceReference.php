@@ -28,10 +28,6 @@ class CopleySubreferenceReference extends \Google\Collection
    * @var float
    */
   public $referenceScore;
-  /**
-   * @var CopleyLexicalMetadata
-   */
-  public $relationshipLexicalInfo;
   protected $relationshipLexicalInfoType = CopleyLexicalMetadata::class;
   protected $relationshipLexicalInfoDataType = '';
 

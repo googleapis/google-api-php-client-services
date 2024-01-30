@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class CompositeDocIndexingInfo extends \Google\Collection
 {
   protected $collection_key = 'verticals';
-  /**
-   * @var IndexingDocjoinerCDocBuildInfo
-   */
-  public $cdocBuildInfo;
   protected $cdocBuildInfoType = IndexingDocjoinerCDocBuildInfo::class;
   protected $cdocBuildInfoDataType = '';
   /**
@@ -58,10 +54,6 @@ class CompositeDocIndexingInfo extends \Google\Collection
    * @var string
    */
   public $ieIdentifier;
-  /**
-   * @var ImageSearchImageIndexingInfo
-   */
-  public $imageIndexingInfo;
   protected $imageIndexingInfoType = ImageSearchImageIndexingInfo::class;
   protected $imageIndexingInfoDataType = '';
   /**
@@ -96,32 +88,16 @@ class CompositeDocIndexingInfo extends \Google\Collection
    * @var string[]
    */
   public $tracingId;
-  /**
-   * @var CrawlerChangerateUrlChangerate
-   */
-  public $urlChangerate;
   protected $urlChangerateType = CrawlerChangerateUrlChangerate::class;
   protected $urlChangerateDataType = '';
-  /**
-   * @var CrawlerChangerateUrlHistory
-   */
-  public $urlHistory;
   protected $urlHistoryType = CrawlerChangerateUrlHistory::class;
   protected $urlHistoryDataType = '';
-  /**
-   * @var IndexingSignalAggregatorUrlPatternSignals
-   */
-  public $urlPatternSignals;
   protected $urlPatternSignalsType = IndexingSignalAggregatorUrlPatternSignals::class;
   protected $urlPatternSignalsDataType = '';
   /**
    * @var string[]
    */
   public $verticals;
-  /**
-   * @var ImageRepositoryVideoIndexingInfo
-   */
-  public $videoIndexingInfo;
   protected $videoIndexingInfoType = ImageRepositoryVideoIndexingInfo::class;
   protected $videoIndexingInfoDataType = '';
 

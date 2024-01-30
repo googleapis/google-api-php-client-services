@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class CompositeDocRobotsInfoList extends \Google\Model
 {
-  /**
-   * @var IndexingConverterRobotsInfo
-   */
-  public $newsRobotsInfo;
   protected $newsRobotsInfoType = IndexingConverterRobotsInfo::class;
   protected $newsRobotsInfoDataType = '';
 

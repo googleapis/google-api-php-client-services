@@ -23,10 +23,6 @@ class CompositeDocLiveExperimentInfoPerLiveExperimentInfo extends \Google\Model
    * @var string
    */
   public $experimentId;
-  /**
-   * @var CompositeDoc
-   */
-  public $partialCdoc;
   protected $partialCdocType = CompositeDoc::class;
   protected $partialCdocDataType = '';
 

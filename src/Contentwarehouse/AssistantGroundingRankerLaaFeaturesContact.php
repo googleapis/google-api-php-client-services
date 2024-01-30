@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantGroundingRankerLaaFeaturesContact extends \Google\Model
 {
-  /**
-   * @var AssistantGroundingRankerAssistantInteractionFeatures
-   */
-  public $assistantInteractionFeatures;
   protected $assistantInteractionFeaturesType = AssistantGroundingRankerAssistantInteractionFeatures::class;
   protected $assistantInteractionFeaturesDataType = '';
-  /**
-   * @var AssistantGroundingRankerDeviceContactAffinityFeatures
-   */
-  public $deviceContactAffinityFeatures;
   protected $deviceContactAffinityFeaturesType = AssistantGroundingRankerDeviceContactAffinityFeatures::class;
   protected $deviceContactAffinityFeaturesDataType = '';
 

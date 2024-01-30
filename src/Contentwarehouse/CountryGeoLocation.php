@@ -35,10 +35,6 @@ class CountryGeoLocation extends \Google\Model
    * @var int
    */
   public $internalId;
-  /**
-   * @var CountryLocationInfo
-   */
-  public $locationInfo;
   protected $locationInfoType = CountryLocationInfo::class;
   protected $locationInfoDataType = '';
   /**

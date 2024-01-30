@@ -24,22 +24,10 @@ class AssistantLogsMediaFocusesLog extends \Google\Collection
    * @var bool
    */
   public $dialogTriggered;
-  /**
-   * @var AssistantLogsMediaFocusInfoLog
-   */
-  public $localMediaFocus;
   protected $localMediaFocusType = AssistantLogsMediaFocusInfoLog::class;
   protected $localMediaFocusDataType = '';
-  /**
-   * @var AssistantLogsMediaFocusInfoLog[]
-   */
-  public $mediaFocuses;
   protected $mediaFocusesType = AssistantLogsMediaFocusInfoLog::class;
   protected $mediaFocusesDataType = 'array';
-  /**
-   * @var AssistantLogsMediaFocusInfoLog[]
-   */
-  public $nearbyMediaFocuses;
   protected $nearbyMediaFocusesType = AssistantLogsMediaFocusInfoLog::class;
   protected $nearbyMediaFocusesDataType = 'array';
 

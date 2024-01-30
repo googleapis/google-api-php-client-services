@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantVerticalsHomeautomationProtoCommonStructureBasedRoutineTrigger extends \Google\Model
 {
-  /**
-   * @var AssistantVerticalsHomeautomationProtoCommonEventTrigger
-   */
-  public $eventTrigger;
   protected $eventTriggerType = AssistantVerticalsHomeautomationProtoCommonEventTrigger::class;
   protected $eventTriggerDataType = '';
-  /**
-   * @var AssistantVerticalsHomeautomationProtoCommonVoiceTrigger
-   */
-  public $voiceTrigger;
   protected $voiceTriggerType = AssistantVerticalsHomeautomationProtoCommonVoiceTrigger::class;
   protected $voiceTriggerDataType = '';
 

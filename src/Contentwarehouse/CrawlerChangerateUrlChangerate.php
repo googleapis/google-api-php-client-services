@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class CrawlerChangerateUrlChangerate extends \Google\Model
 {
-  /**
-   * @var CrawlerChangerateMultipleComponentDistribution
-   */
-  public $approximatedPosterior;
   protected $approximatedPosteriorType = CrawlerChangerateMultipleComponentDistribution::class;
   protected $approximatedPosteriorDataType = '';
   public $averageChangeSignificance;

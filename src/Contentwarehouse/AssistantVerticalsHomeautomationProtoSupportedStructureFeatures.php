@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantVerticalsHomeautomationProtoSupportedStructureFeatures extends \Google\Model
 {
-  /**
-   * @var AssistantVerticalsHomeautomationProtoConciergeFeatures
-   */
-  public $conciergeFeatures;
   protected $conciergeFeaturesType = AssistantVerticalsHomeautomationProtoConciergeFeatures::class;
   protected $conciergeFeaturesDataType = '';
 

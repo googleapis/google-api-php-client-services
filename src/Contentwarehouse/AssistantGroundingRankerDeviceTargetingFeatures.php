@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantGroundingRankerDeviceTargetingFeatures extends \Google\Model
 {
-  /**
-   * @var AssistantGroundingRankerDeviceTargetingFeaturesProperties
-   */
-  public $properties;
   protected $propertiesType = AssistantGroundingRankerDeviceTargetingFeaturesProperties::class;
   protected $propertiesDataType = '';
-  /**
-   * @var AssistantGroundingRankerDeviceTargetingFeaturesStates
-   */
-  public $states;
   protected $statesType = AssistantGroundingRankerDeviceTargetingFeaturesStates::class;
   protected $statesDataType = '';
 

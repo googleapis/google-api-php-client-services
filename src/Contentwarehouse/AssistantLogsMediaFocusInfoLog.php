@@ -27,10 +27,6 @@ class AssistantLogsMediaFocusInfoLog extends \Google\Model
    * @var bool
    */
   public $dialogTriggered;
-  /**
-   * @var AssistantLogsDeviceInfoLog
-   */
-  public $focusDevice;
   protected $focusDeviceType = AssistantLogsDeviceInfoLog::class;
   protected $focusDeviceDataType = '';
   /**

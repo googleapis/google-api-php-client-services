@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantDevicesPlatformProtoTimerCapability extends \Google\Model
 {
-  /**
-   * @var AssistantApiDuration
-   */
-  public $maxSupportedExtendedTimerDuration;
   protected $maxSupportedExtendedTimerDurationType = AssistantApiDuration::class;
   protected $maxSupportedExtendedTimerDurationDataType = '';
-  /**
-   * @var AssistantApiDuration
-   */
-  public $maxSupportedTimerDuration;
   protected $maxSupportedTimerDurationType = AssistantApiDuration::class;
   protected $maxSupportedTimerDurationDataType = '';
   /**

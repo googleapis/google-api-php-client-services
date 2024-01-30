@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class CommerceDatastoreImageDeepTags extends \Google\Collection
 {
   protected $collection_key = 'modelOutputs';
-  /**
-   * @var CommerceDatastoreImageDeepTagsModelOutput[]
-   */
-  public $modelOutputs;
   protected $modelOutputsType = CommerceDatastoreImageDeepTagsModelOutput::class;
   protected $modelOutputsDataType = 'array';
 

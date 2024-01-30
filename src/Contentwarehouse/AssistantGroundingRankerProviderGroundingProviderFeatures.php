@@ -24,16 +24,8 @@ class AssistantGroundingRankerProviderGroundingProviderFeatures extends \Google\
    * @var string[]
    */
   public $providerClusterIds;
-  /**
-   * @var AssistantContextProviderId
-   */
-  public $providerId;
   protected $providerIdType = AssistantContextProviderId::class;
   protected $providerIdDataType = '';
-  /**
-   * @var AssistantGroundingProviderProviderSignalResult
-   */
-  public $providerSignalResult;
   protected $providerSignalResultType = AssistantGroundingProviderProviderSignalResult::class;
   protected $providerSignalResultDataType = '';
   /**

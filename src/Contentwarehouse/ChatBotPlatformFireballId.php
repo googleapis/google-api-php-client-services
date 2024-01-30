@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class ChatBotPlatformFireballId extends \Google\Model
 {
-  /**
-   * @var GoogleInternalCommunicationsInstantmessagingV1Id
-   */
-  public $id;
   protected $idType = GoogleInternalCommunicationsInstantmessagingV1Id::class;
   protected $idDataType = '';
 

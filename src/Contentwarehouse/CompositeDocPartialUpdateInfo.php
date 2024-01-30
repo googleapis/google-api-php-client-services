@@ -28,10 +28,6 @@ class CompositeDocPartialUpdateInfo extends \Google\Collection
    * @var string[]
    */
   public $imagesSignalNames;
-  /**
-   * @var CompositeDocPartialUpdateInfoLastFullIndexingInfo[]
-   */
-  public $lastFullIndexingInfo;
   protected $lastFullIndexingInfoType = CompositeDocPartialUpdateInfoLastFullIndexingInfo::class;
   protected $lastFullIndexingInfoDataType = 'array';
   /**

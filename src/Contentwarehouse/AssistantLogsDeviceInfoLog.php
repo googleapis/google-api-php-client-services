@@ -32,10 +32,6 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
    * @var string
    */
   public $deviceId;
-  /**
-   * @var AssistantLogsSettingsDeviceIdLog
-   */
-  public $deviceIdLog;
   protected $deviceIdLogType = AssistantLogsSettingsDeviceIdLog::class;
   protected $deviceIdLogDataType = '';
   /**
@@ -66,10 +62,6 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
    * @var bool
    */
   public $isTethered;
-  /**
-   * @var AssistantLogsMediaCapabilities
-   */
-  public $mediaCapabilities;
   protected $mediaCapabilitiesType = AssistantLogsMediaCapabilities::class;
   protected $mediaCapabilitiesDataType = '';
   /**
@@ -80,10 +72,6 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var AssistantLogsDeviceMediaSessionLog[]
-   */
-  public $sessions;
   protected $sessionsType = AssistantLogsDeviceMediaSessionLog::class;
   protected $sessionsDataType = 'array';
   /**

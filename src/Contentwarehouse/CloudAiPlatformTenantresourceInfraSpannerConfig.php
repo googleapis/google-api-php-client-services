@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class CloudAiPlatformTenantresourceInfraSpannerConfig extends \Google\Model
 {
-  /**
-   * @var CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions
-   */
-  public $createDatabaseOptions;
   protected $createDatabaseOptionsType = CloudAiPlatformTenantresourceInfraSpannerConfigCreateDatabaseOptions::class;
   protected $createDatabaseOptionsDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class BiasingPerDocData2 extends \Google\Collection
 {
   protected $collection_key = 'biasingField';
-  /**
-   * @var BiasingPerDocData2BiasingField[]
-   */
-  public $biasingField;
   protected $biasingFieldType = BiasingPerDocData2BiasingField::class;
   protected $biasingFieldDataType = 'array';
 

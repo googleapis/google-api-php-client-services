@@ -21,10 +21,6 @@ class CountryClickDistribution extends \Google\Collection
 {
   protected $collection_key = 'item';
   public $confidence;
-  /**
-   * @var CountryClickDistributionItem[]
-   */
-  public $item;
   protected $itemType = CountryClickDistributionItem::class;
   protected $itemDataType = 'array';
   public $total;

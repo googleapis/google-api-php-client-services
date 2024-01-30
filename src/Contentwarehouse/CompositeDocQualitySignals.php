@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class CompositeDocQualitySignals extends \Google\Model
 {
-  /**
-   * @var QualityTimebasedLastSignificantUpdate
-   */
-  public $lastSignificantUpdate;
   protected $lastSignificantUpdateType = QualityTimebasedLastSignificantUpdate::class;
   protected $lastSignificantUpdateDataType = '';
-  /**
-   * @var QualityTimebasedPageType
-   */
-  public $pagetype;
   protected $pagetypeType = QualityTimebasedPageType::class;
   protected $pagetypeDataType = '';
 
