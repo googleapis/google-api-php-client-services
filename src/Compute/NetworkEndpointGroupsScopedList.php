@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class NetworkEndpointGroupsScopedList extends \Google\Collection
 {
   protected $collection_key = 'networkEndpointGroups';
-  /**
-   * @var NetworkEndpointGroup[]
-   */
-  public $networkEndpointGroups;
   protected $networkEndpointGroupsType = NetworkEndpointGroup::class;
   protected $networkEndpointGroupsDataType = 'array';
-  /**
-   * @var NetworkEndpointGroupsScopedListWarning
-   */
-  public $warning;
   protected $warningType = NetworkEndpointGroupsScopedListWarning::class;
   protected $warningDataType = '';
 

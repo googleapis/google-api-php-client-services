@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class InterconnectsGetDiagnosticsResponse extends \Google\Model
 {
-  /**
-   * @var InterconnectDiagnostics
-   */
-  public $result;
   protected $resultType = InterconnectDiagnostics::class;
   protected $resultDataType = '';
 

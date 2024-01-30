@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class ManagedInstanceLastAttemptErrors extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var ManagedInstanceLastAttemptErrorsErrors[]
-   */
-  public $errors;
   protected $errorsType = ManagedInstanceLastAttemptErrorsErrors::class;
   protected $errorsDataType = 'array';
 

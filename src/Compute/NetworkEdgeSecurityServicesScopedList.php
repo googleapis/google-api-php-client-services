@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class NetworkEdgeSecurityServicesScopedList extends \Google\Collection
 {
   protected $collection_key = 'networkEdgeSecurityServices';
-  /**
-   * @var NetworkEdgeSecurityService[]
-   */
-  public $networkEdgeSecurityServices;
   protected $networkEdgeSecurityServicesType = NetworkEdgeSecurityService::class;
   protected $networkEdgeSecurityServicesDataType = 'array';
-  /**
-   * @var NetworkEdgeSecurityServicesScopedListWarning
-   */
-  public $warning;
   protected $warningType = NetworkEdgeSecurityServicesScopedListWarning::class;
   protected $warningDataType = '';
 

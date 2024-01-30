@@ -76,10 +76,6 @@ class InterconnectLocation extends \Google\Collection
    * @var string
    */
   public $peeringdbFacilityId;
-  /**
-   * @var InterconnectLocationRegionInfo[]
-   */
-  public $regionInfos;
   protected $regionInfosType = InterconnectLocationRegionInfo::class;
   protected $regionInfosDataType = 'array';
   /**

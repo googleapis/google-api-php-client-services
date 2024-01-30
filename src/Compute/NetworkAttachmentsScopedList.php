@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class NetworkAttachmentsScopedList extends \Google\Collection
 {
   protected $collection_key = 'networkAttachments';
-  /**
-   * @var NetworkAttachment[]
-   */
-  public $networkAttachments;
   protected $networkAttachmentsType = NetworkAttachment::class;
   protected $networkAttachmentsDataType = 'array';
-  /**
-   * @var NetworkAttachmentsScopedListWarning
-   */
-  public $warning;
   protected $warningType = NetworkAttachmentsScopedListWarning::class;
   protected $warningDataType = '';
 

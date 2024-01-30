@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class NodeTemplatesScopedList extends \Google\Collection
 {
   protected $collection_key = 'nodeTemplates';
-  /**
-   * @var NodeTemplate[]
-   */
-  public $nodeTemplates;
   protected $nodeTemplatesType = NodeTemplate::class;
   protected $nodeTemplatesDataType = 'array';
-  /**
-   * @var NodeTemplatesScopedListWarning
-   */
-  public $warning;
   protected $warningType = NodeTemplatesScopedListWarning::class;
   protected $warningDataType = '';
 

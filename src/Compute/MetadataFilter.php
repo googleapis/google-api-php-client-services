@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class MetadataFilter extends \Google\Collection
 {
   protected $collection_key = 'filterLabels';
-  /**
-   * @var MetadataFilterLabelMatch[]
-   */
-  public $filterLabels;
   protected $filterLabelsType = MetadataFilterLabelMatch::class;
   protected $filterLabelsDataType = 'array';
   /**

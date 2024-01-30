@@ -28,10 +28,6 @@ class NetworksGetEffectiveFirewallsResponseEffectiveFirewallPolicy extends \Goog
    * @var string
    */
   public $name;
-  /**
-   * @var FirewallPolicyRule[]
-   */
-  public $rules;
   protected $rulesType = FirewallPolicyRule::class;
   protected $rulesDataType = 'array';
   /**

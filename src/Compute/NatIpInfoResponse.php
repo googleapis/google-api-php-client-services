@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class NatIpInfoResponse extends \Google\Collection
 {
   protected $collection_key = 'result';
-  /**
-   * @var NatIpInfo[]
-   */
-  public $result;
   protected $resultType = NatIpInfo::class;
   protected $resultDataType = 'array';
 

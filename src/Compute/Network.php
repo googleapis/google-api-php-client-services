@@ -75,16 +75,8 @@ class Network extends \Google\Collection
    * @var string
    */
   public $networkFirewallPolicyEnforcementOrder;
-  /**
-   * @var NetworkPeering[]
-   */
-  public $peerings;
   protected $peeringsType = NetworkPeering::class;
   protected $peeringsDataType = 'array';
-  /**
-   * @var NetworkRoutingConfig
-   */
-  public $routingConfig;
   protected $routingConfigType = NetworkRoutingConfig::class;
   protected $routingConfigDataType = '';
   /**

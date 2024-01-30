@@ -24,10 +24,6 @@ class NodeGroupAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var NodeGroupsScopedList[]
-   */
-  public $items;
   protected $itemsType = NodeGroupsScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class NodeGroupAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var NodeGroupAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = NodeGroupAggregatedListWarning::class;
   protected $warningDataType = '';
 

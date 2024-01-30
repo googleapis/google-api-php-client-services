@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class NetworkAttachment extends \Google\Collection
 {
   protected $collection_key = 'subnetworks';
-  /**
-   * @var NetworkAttachmentConnectedEndpoint[]
-   */
-  public $connectionEndpoints;
   protected $connectionEndpointsType = NetworkAttachmentConnectedEndpoint::class;
   protected $connectionEndpointsDataType = 'array';
   /**

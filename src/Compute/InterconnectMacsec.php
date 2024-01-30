@@ -24,10 +24,6 @@ class InterconnectMacsec extends \Google\Collection
    * @var bool
    */
   public $failOpen;
-  /**
-   * @var InterconnectMacsecPreSharedKey[]
-   */
-  public $preSharedKeys;
   protected $preSharedKeysType = InterconnectMacsecPreSharedKey::class;
   protected $preSharedKeysDataType = 'array';
 

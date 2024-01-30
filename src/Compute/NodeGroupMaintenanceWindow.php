@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class NodeGroupMaintenanceWindow extends \Google\Model
 {
-  /**
-   * @var Duration
-   */
-  public $maintenanceDuration;
   protected $maintenanceDurationType = Duration::class;
   protected $maintenanceDurationDataType = '';
   /**

@@ -24,10 +24,6 @@ class NetworkEdgeSecurityServiceAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var NetworkEdgeSecurityServiceAggregatedListWarningData[]
-   */
-  public $data;
   protected $dataType = NetworkEdgeSecurityServiceAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

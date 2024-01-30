@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class LocationPolicy extends \Google\Model
 {
-  /**
-   * @var LocationPolicyLocation[]
-   */
-  public $locations;
   protected $locationsType = LocationPolicyLocation::class;
   protected $locationsDataType = 'map';
   /**

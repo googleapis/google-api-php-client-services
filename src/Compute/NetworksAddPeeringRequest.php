@@ -27,10 +27,6 @@ class NetworksAddPeeringRequest extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var NetworkPeering
-   */
-  public $networkPeering;
   protected $networkPeeringType = NetworkPeering::class;
   protected $networkPeeringDataType = '';
   /**

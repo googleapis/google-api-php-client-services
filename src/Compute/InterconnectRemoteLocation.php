@@ -24,20 +24,12 @@ class InterconnectRemoteLocation extends \Google\Collection
    * @var string
    */
   public $address;
-  /**
-   * @var InterconnectAttachmentConfigurationConstraints
-   */
-  public $attachmentConfigurationConstraints;
   protected $attachmentConfigurationConstraintsType = InterconnectAttachmentConfigurationConstraints::class;
   protected $attachmentConfigurationConstraintsDataType = '';
   /**
    * @var string
    */
   public $city;
-  /**
-   * @var InterconnectRemoteLocationConstraints
-   */
-  public $constraints;
   protected $constraintsType = InterconnectRemoteLocationConstraints::class;
   protected $constraintsDataType = '';
   /**
@@ -88,10 +80,6 @@ class InterconnectRemoteLocation extends \Google\Collection
    * @var string
    */
   public $peeringdbFacilityId;
-  /**
-   * @var InterconnectRemoteLocationPermittedConnections[]
-   */
-  public $permittedConnections;
   protected $permittedConnectionsType = InterconnectRemoteLocationPermittedConnections::class;
   protected $permittedConnectionsDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class NetworkAttachmentAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var NetworkAttachmentAggregatedListWarningData[]
-   */
-  public $data;
   protected $dataType = NetworkAttachmentAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

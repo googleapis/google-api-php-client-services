@@ -24,10 +24,6 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var NetworkEndpointGroupsScopedList[]
-   */
-  public $items;
   protected $itemsType = NetworkEndpointGroupsScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class NetworkEndpointGroupAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var NetworkEndpointGroupAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = NetworkEndpointGroupAggregatedListWarning::class;
   protected $warningDataType = '';
 

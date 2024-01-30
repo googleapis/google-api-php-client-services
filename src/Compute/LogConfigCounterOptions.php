@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class LogConfigCounterOptions extends \Google\Collection
 {
   protected $collection_key = 'customFields';
-  /**
-   * @var LogConfigCounterOptionsCustomField[]
-   */
-  public $customFields;
   protected $customFieldsType = LogConfigCounterOptionsCustomField::class;
   protected $customFieldsDataType = 'array';
   /**

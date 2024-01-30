@@ -27,10 +27,6 @@ class NodeType extends \Google\Model
    * @var string
    */
   public $creationTimestamp;
-  /**
-   * @var DeprecationStatus
-   */
-  public $deprecated;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**

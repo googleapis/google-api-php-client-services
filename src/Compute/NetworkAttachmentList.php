@@ -24,10 +24,6 @@ class NetworkAttachmentList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var NetworkAttachment[]
-   */
-  public $items;
   protected $itemsType = NetworkAttachment::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class NetworkAttachmentList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var NetworkAttachmentListWarning
-   */
-  public $warning;
   protected $warningType = NetworkAttachmentListWarning::class;
   protected $warningDataType = '';
 

@@ -24,10 +24,6 @@ class MachineTypeAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var MachineTypeAggregatedListWarningData[]
-   */
-  public $data;
   protected $dataType = MachineTypeAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

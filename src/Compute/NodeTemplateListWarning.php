@@ -24,10 +24,6 @@ class NodeTemplateListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var NodeTemplateListWarningData[]
-   */
-  public $data;
   protected $dataType = NodeTemplateListWarningData::class;
   protected $dataDataType = 'array';
   /**

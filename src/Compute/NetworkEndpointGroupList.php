@@ -24,10 +24,6 @@ class NetworkEndpointGroupList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var NetworkEndpointGroup[]
-   */
-  public $items;
   protected $itemsType = NetworkEndpointGroup::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class NetworkEndpointGroupList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var NetworkEndpointGroupListWarning
-   */
-  public $warning;
   protected $warningType = NetworkEndpointGroupListWarning::class;
   protected $warningDataType = '';
 

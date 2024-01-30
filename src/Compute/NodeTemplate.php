@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class NodeTemplate extends \Google\Collection
 {
   protected $collection_key = 'disks';
-  /**
-   * @var AcceleratorConfig[]
-   */
-  public $accelerators;
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class NodeTemplate extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var LocalDisk[]
-   */
-  public $disks;
   protected $disksType = LocalDisk::class;
   protected $disksDataType = 'array';
   /**
@@ -64,10 +56,6 @@ class NodeTemplate extends \Google\Collection
    * @var string
    */
   public $nodeType;
-  /**
-   * @var NodeTemplateNodeTypeFlexibility
-   */
-  public $nodeTypeFlexibility;
   protected $nodeTypeFlexibilityType = NodeTemplateNodeTypeFlexibility::class;
   protected $nodeTypeFlexibilityDataType = '';
   /**
@@ -78,10 +66,6 @@ class NodeTemplate extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var ServerBinding
-   */
-  public $serverBinding;
   protected $serverBindingType = ServerBinding::class;
   protected $serverBindingDataType = '';
   /**
