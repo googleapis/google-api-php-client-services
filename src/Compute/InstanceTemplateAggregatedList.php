@@ -23,10 +23,6 @@ class InstanceTemplateAggregatedList extends \Google\Model
    * @var string
    */
   public $id;
-  /**
-   * @var InstanceTemplatesScopedList[]
-   */
-  public $items;
   protected $itemsType = InstanceTemplatesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -41,10 +37,6 @@ class InstanceTemplateAggregatedList extends \Google\Model
    * @var string
    */
   public $selfLink;
-  /**
-   * @var InstanceTemplateAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = InstanceTemplateAggregatedListWarning::class;
   protected $warningDataType = '';
 

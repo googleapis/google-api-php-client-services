@@ -39,10 +39,6 @@ class HttpHeaderMatch extends \Google\Model
    * @var bool
    */
   public $presentMatch;
-  /**
-   * @var Int64RangeMatch
-   */
-  public $rangeMatch;
   protected $rangeMatchType = Int64RangeMatch::class;
   protected $rangeMatchDataType = '';
   /**

@@ -24,10 +24,6 @@ class InstanceAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var InstancesScopedList[]
-   */
-  public $items;
   protected $itemsType = InstancesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class InstanceAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var InstanceAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = InstanceAggregatedListWarning::class;
   protected $warningDataType = '';
 

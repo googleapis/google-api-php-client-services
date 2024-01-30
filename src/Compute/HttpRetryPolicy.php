@@ -24,10 +24,6 @@ class HttpRetryPolicy extends \Google\Collection
    * @var string
    */
   public $numRetries;
-  /**
-   * @var Duration
-   */
-  public $perTryTimeout;
   protected $perTryTimeoutType = Duration::class;
   protected $perTryTimeoutDataType = '';
   /**

@@ -39,10 +39,6 @@ class InstanceTemplate extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var InstanceProperties
-   */
-  public $properties;
   protected $propertiesType = InstanceProperties::class;
   protected $propertiesDataType = '';
   /**
@@ -57,10 +53,6 @@ class InstanceTemplate extends \Google\Model
    * @var string
    */
   public $sourceInstance;
-  /**
-   * @var SourceInstanceParams
-   */
-  public $sourceInstanceParams;
   protected $sourceInstanceParamsType = SourceInstanceParams::class;
   protected $sourceInstanceParamsDataType = '';
 

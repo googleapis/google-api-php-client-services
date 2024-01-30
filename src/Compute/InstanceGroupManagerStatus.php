@@ -27,16 +27,8 @@ class InstanceGroupManagerStatus extends \Google\Model
    * @var bool
    */
   public $isStable;
-  /**
-   * @var InstanceGroupManagerStatusStateful
-   */
-  public $stateful;
   protected $statefulType = InstanceGroupManagerStatusStateful::class;
   protected $statefulDataType = '';
-  /**
-   * @var InstanceGroupManagerStatusVersionTarget
-   */
-  public $versionTarget;
   protected $versionTargetType = InstanceGroupManagerStatusVersionTarget::class;
   protected $versionTargetDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Compute;
 
 class HttpFaultInjection extends \Google\Model
 {
-  /**
-   * @var HttpFaultAbort
-   */
-  public $abort;
   protected $abortType = HttpFaultAbort::class;
   protected $abortDataType = '';
-  /**
-   * @var HttpFaultDelay
-   */
-  public $delay;
   protected $delayType = HttpFaultDelay::class;
   protected $delayDataType = '';
 

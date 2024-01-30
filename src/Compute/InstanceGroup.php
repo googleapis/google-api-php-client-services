@@ -44,10 +44,6 @@ class InstanceGroup extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var NamedPort[]
-   */
-  public $namedPorts;
   protected $namedPortsType = NamedPort::class;
   protected $namedPortsDataType = 'array';
   /**

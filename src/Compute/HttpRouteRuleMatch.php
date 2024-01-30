@@ -24,20 +24,12 @@ class HttpRouteRuleMatch extends \Google\Collection
    * @var string
    */
   public $fullPathMatch;
-  /**
-   * @var HttpHeaderMatch[]
-   */
-  public $headerMatches;
   protected $headerMatchesType = HttpHeaderMatch::class;
   protected $headerMatchesDataType = 'array';
   /**
    * @var bool
    */
   public $ignoreCase;
-  /**
-   * @var MetadataFilter[]
-   */
-  public $metadataFilters;
   protected $metadataFiltersType = MetadataFilter::class;
   protected $metadataFiltersDataType = 'array';
   /**
@@ -48,10 +40,6 @@ class HttpRouteRuleMatch extends \Google\Collection
    * @var string
    */
   public $prefixMatch;
-  /**
-   * @var HttpQueryParameterMatch[]
-   */
-  public $queryParameterMatches;
   protected $queryParameterMatchesType = HttpQueryParameterMatch::class;
   protected $queryParameterMatchesDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class ImageList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Image[]
-   */
-  public $items;
   protected $itemsType = Image::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class ImageList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var ImageListWarning
-   */
-  public $warning;
   protected $warningType = ImageListWarning::class;
   protected $warningDataType = '';
 

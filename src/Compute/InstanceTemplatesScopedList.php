@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class InstanceTemplatesScopedList extends \Google\Collection
 {
   protected $collection_key = 'instanceTemplates';
-  /**
-   * @var InstanceTemplate[]
-   */
-  public $instanceTemplates;
   protected $instanceTemplatesType = InstanceTemplate::class;
   protected $instanceTemplatesDataType = 'array';
-  /**
-   * @var InstanceTemplatesScopedListWarning
-   */
-  public $warning;
   protected $warningType = InstanceTemplatesScopedListWarning::class;
   protected $warningDataType = '';
 

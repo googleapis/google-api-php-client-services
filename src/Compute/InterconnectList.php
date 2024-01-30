@@ -24,10 +24,6 @@ class InterconnectList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Interconnect[]
-   */
-  public $items;
   protected $itemsType = Interconnect::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class InterconnectList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var InterconnectListWarning
-   */
-  public $warning;
   protected $warningType = InterconnectListWarning::class;
   protected $warningDataType = '';
 

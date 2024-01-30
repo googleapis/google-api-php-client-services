@@ -24,10 +24,6 @@ class InstanceTemplateList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var InstanceTemplate[]
-   */
-  public $items;
   protected $itemsType = InstanceTemplate::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class InstanceTemplateList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var InstanceTemplateListWarning
-   */
-  public $warning;
   protected $warningType = InstanceTemplateListWarning::class;
   protected $warningDataType = '';
 

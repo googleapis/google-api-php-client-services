@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class InstancesBulkInsertOperationMetadata extends \Google\Model
 {
-  /**
-   * @var BulkInsertOperationStatus[]
-   */
-  public $perLocationStatus;
   protected $perLocationStatusType = BulkInsertOperationStatus::class;
   protected $perLocationStatusDataType = 'map';
 

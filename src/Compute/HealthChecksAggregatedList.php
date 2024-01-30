@@ -24,10 +24,6 @@ class HealthChecksAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var HealthChecksScopedList[]
-   */
-  public $items;
   protected $itemsType = HealthChecksScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class HealthChecksAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var HealthChecksAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = HealthChecksAggregatedListWarning::class;
   protected $warningDataType = '';
 

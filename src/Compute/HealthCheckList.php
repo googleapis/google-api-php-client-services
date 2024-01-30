@@ -24,10 +24,6 @@ class HealthCheckList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var HealthCheck[]
-   */
-  public $items;
   protected $itemsType = HealthCheck::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class HealthCheckList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var HealthCheckListWarning
-   */
-  public $warning;
   protected $warningType = HealthCheckListWarning::class;
   protected $warningDataType = '';
 

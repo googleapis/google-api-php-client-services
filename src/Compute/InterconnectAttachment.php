@@ -48,10 +48,6 @@ class InterconnectAttachment extends \Google\Collection
    * @var string
    */
   public $cloudRouterIpv6InterfaceId;
-  /**
-   * @var InterconnectAttachmentConfigurationConstraints
-   */
-  public $configurationConstraints;
   protected $configurationConstraintsType = InterconnectAttachmentConfigurationConstraints::class;
   protected $configurationConstraintsDataType = '';
   /**
@@ -134,16 +130,8 @@ class InterconnectAttachment extends \Google\Collection
    * @var string
    */
   public $partnerAsn;
-  /**
-   * @var InterconnectAttachmentPartnerMetadata
-   */
-  public $partnerMetadata;
   protected $partnerMetadataType = InterconnectAttachmentPartnerMetadata::class;
   protected $partnerMetadataDataType = '';
-  /**
-   * @var InterconnectAttachmentPrivateInfo
-   */
-  public $privateInterconnectInfo;
   protected $privateInterconnectInfoType = InterconnectAttachmentPrivateInfo::class;
   protected $privateInterconnectInfoDataType = '';
   /**

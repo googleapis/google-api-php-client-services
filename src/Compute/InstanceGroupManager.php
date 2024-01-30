@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class InstanceGroupManager extends \Google\Collection
 {
   protected $collection_key = 'versions';
-  /**
-   * @var InstanceGroupManagerAutoHealingPolicy[]
-   */
-  public $autoHealingPolicies;
   protected $autoHealingPoliciesType = InstanceGroupManagerAutoHealingPolicy::class;
   protected $autoHealingPoliciesDataType = 'array';
   /**
@@ -34,20 +30,12 @@ class InstanceGroupManager extends \Google\Collection
    * @var string
    */
   public $creationTimestamp;
-  /**
-   * @var InstanceGroupManagerActionsSummary
-   */
-  public $currentActions;
   protected $currentActionsType = InstanceGroupManagerActionsSummary::class;
   protected $currentActionsDataType = '';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var DistributionPolicy
-   */
-  public $distributionPolicy;
   protected $distributionPolicyType = DistributionPolicy::class;
   protected $distributionPolicyDataType = '';
   /**
@@ -62,10 +50,6 @@ class InstanceGroupManager extends \Google\Collection
    * @var string
    */
   public $instanceGroup;
-  /**
-   * @var InstanceGroupManagerInstanceLifecyclePolicy
-   */
-  public $instanceLifecyclePolicy;
   protected $instanceLifecyclePolicyType = InstanceGroupManagerInstanceLifecyclePolicy::class;
   protected $instanceLifecyclePolicyDataType = '';
   /**
@@ -84,10 +68,6 @@ class InstanceGroupManager extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var NamedPort[]
-   */
-  public $namedPorts;
   protected $namedPortsType = NamedPort::class;
   protected $namedPortsDataType = 'array';
   /**
@@ -98,16 +78,8 @@ class InstanceGroupManager extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var StatefulPolicy
-   */
-  public $statefulPolicy;
   protected $statefulPolicyType = StatefulPolicy::class;
   protected $statefulPolicyDataType = '';
-  /**
-   * @var InstanceGroupManagerStatus
-   */
-  public $status;
   protected $statusType = InstanceGroupManagerStatus::class;
   protected $statusDataType = '';
   /**
@@ -118,16 +90,8 @@ class InstanceGroupManager extends \Google\Collection
    * @var int
    */
   public $targetSize;
-  /**
-   * @var InstanceGroupManagerUpdatePolicy
-   */
-  public $updatePolicy;
   protected $updatePolicyType = InstanceGroupManagerUpdatePolicy::class;
   protected $updatePolicyDataType = '';
-  /**
-   * @var InstanceGroupManagerVersion[]
-   */
-  public $versions;
   protected $versionsType = InstanceGroupManagerVersion::class;
   protected $versionsDataType = 'array';
   /**

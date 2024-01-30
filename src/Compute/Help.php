@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class Help extends \Google\Collection
 {
   protected $collection_key = 'links';
-  /**
-   * @var HelpLink[]
-   */
-  public $links;
   protected $linksType = HelpLink::class;
   protected $linksDataType = 'array';
 

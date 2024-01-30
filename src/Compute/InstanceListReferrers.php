@@ -24,10 +24,6 @@ class InstanceListReferrers extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Reference[]
-   */
-  public $items;
   protected $itemsType = Reference::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class InstanceListReferrers extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var InstanceListReferrersWarning
-   */
-  public $warning;
   protected $warningType = InstanceListReferrersWarning::class;
   protected $warningDataType = '';
 

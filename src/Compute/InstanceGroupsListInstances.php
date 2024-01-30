@@ -24,10 +24,6 @@ class InstanceGroupsListInstances extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var InstanceWithNamedPorts[]
-   */
-  public $items;
   protected $itemsType = InstanceWithNamedPorts::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class InstanceGroupsListInstances extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var InstanceGroupsListInstancesWarning
-   */
-  public $warning;
   protected $warningType = InstanceGroupsListInstancesWarning::class;
   protected $warningDataType = '';
 

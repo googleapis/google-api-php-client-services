@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class InterconnectDiagnostics extends \Google\Collection
 {
   protected $collection_key = 'links';
-  /**
-   * @var InterconnectDiagnosticsARPEntry[]
-   */
-  public $arpCaches;
   protected $arpCachesType = InterconnectDiagnosticsARPEntry::class;
   protected $arpCachesDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class InterconnectDiagnostics extends \Google\Collection
    * @var string
    */
   public $bundleOperationalStatus;
-  /**
-   * @var InterconnectDiagnosticsLinkStatus[]
-   */
-  public $links;
   protected $linksType = InterconnectDiagnosticsLinkStatus::class;
   protected $linksDataType = 'array';
   /**

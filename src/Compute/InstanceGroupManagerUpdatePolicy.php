@@ -23,16 +23,8 @@ class InstanceGroupManagerUpdatePolicy extends \Google\Model
    * @var string
    */
   public $instanceRedistributionType;
-  /**
-   * @var FixedOrPercent
-   */
-  public $maxSurge;
   protected $maxSurgeType = FixedOrPercent::class;
   protected $maxSurgeDataType = '';
-  /**
-   * @var FixedOrPercent
-   */
-  public $maxUnavailable;
   protected $maxUnavailableType = FixedOrPercent::class;
   protected $maxUnavailableDataType = '';
   /**
