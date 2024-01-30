@@ -49,6 +49,7 @@ class Merchantsupport extends \Google\Service\Resource
    * zones) timezone used to localize times in support content. For example
    * 'America/Los_Angeles'. If not set, results will use as a default UTC.
    * @return RenderAccountIssuesResponse
+   * @throws \Google\Service\Exception
    */
   public function renderaccountissues($merchantId, RenderAccountIssuesRequestPayload $postBody, $optParams = [])
   {
@@ -77,6 +78,7 @@ class Merchantsupport extends \Google\Service\Resource
    * zones) timezone used to localize times in support content. For example
    * 'America/Los_Angeles'. If not set, results will use as a default UTC.
    * @return RenderProductIssuesResponse
+   * @throws \Google\Service\Exception
    */
   public function renderproductissues($merchantId, $productId, RenderProductIssuesRequestPayload $postBody, $optParams = [])
   {

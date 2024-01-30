@@ -28,10 +28,6 @@ class SettlementtransactionsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SettlementTransaction[]
-   */
-  public $resources;
   protected $resourcesType = SettlementTransaction::class;
   protected $resourcesDataType = 'array';
 

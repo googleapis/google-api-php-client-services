@@ -39,6 +39,7 @@ class Reports extends \Google\Service\Resource
    * @param SearchRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SearchResponse
+   * @throws \Google\Service\Exception
    */
   public function search($merchantId, SearchRequest $postBody, $optParams = [])
   {

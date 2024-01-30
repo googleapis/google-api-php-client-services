@@ -36,6 +36,7 @@ class FreelistingsprogramCheckoutsettings extends \Google\Service\Resource
    *
    * @param string $merchantId Required. The ID of the account.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($merchantId, $optParams = [])
   {
@@ -50,6 +51,7 @@ class FreelistingsprogramCheckoutsettings extends \Google\Service\Resource
    * @param string $merchantId Required. The ID of the account.
    * @param array $optParams Optional parameters.
    * @return CheckoutSettings
+   * @throws \Google\Service\Exception
    */
   public function get($merchantId, $optParams = [])
   {
@@ -64,6 +66,7 @@ class FreelistingsprogramCheckoutsettings extends \Google\Service\Resource
    * @param InsertCheckoutSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CheckoutSettings
+   * @throws \Google\Service\Exception
    */
   public function insert($merchantId, InsertCheckoutSettingsRequest $postBody, $optParams = [])
   {

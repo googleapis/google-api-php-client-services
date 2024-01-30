@@ -27,10 +27,6 @@ class ReturnPolicySeasonalOverride extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var ReturnPolicyPolicy
-   */
-  public $policy;
   protected $policyType = ReturnPolicyPolicy::class;
   protected $policyDataType = '';
   /**

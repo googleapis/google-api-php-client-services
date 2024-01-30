@@ -19,16 +19,8 @@ namespace Google\Service\ShoppingContent;
 
 class Warehouse extends \Google\Model
 {
-  /**
-   * @var BusinessDayConfig
-   */
-  public $businessDayConfig;
   protected $businessDayConfigType = BusinessDayConfig::class;
   protected $businessDayConfigDataType = '';
-  /**
-   * @var WarehouseCutoffTime
-   */
-  public $cutoffTime;
   protected $cutoffTimeType = WarehouseCutoffTime::class;
   protected $cutoffTimeDataType = '';
   /**
@@ -39,10 +31,6 @@ class Warehouse extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var Address
-   */
-  public $shippingAddress;
   protected $shippingAddressType = Address::class;
   protected $shippingAddressDataType = '';
 

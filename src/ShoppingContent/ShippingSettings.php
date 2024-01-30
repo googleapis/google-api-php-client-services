@@ -24,22 +24,10 @@ class ShippingSettings extends \Google\Collection
    * @var string
    */
   public $accountId;
-  /**
-   * @var PostalCodeGroup[]
-   */
-  public $postalCodeGroups;
   protected $postalCodeGroupsType = PostalCodeGroup::class;
   protected $postalCodeGroupsDataType = 'array';
-  /**
-   * @var Service[]
-   */
-  public $services;
   protected $servicesType = Service::class;
   protected $servicesDataType = 'array';
-  /**
-   * @var Warehouse[]
-   */
-  public $warehouses;
   protected $warehousesType = Warehouse::class;
   protected $warehousesDataType = 'array';
 

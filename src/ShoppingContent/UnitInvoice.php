@@ -20,22 +20,10 @@ namespace Google\Service\ShoppingContent;
 class UnitInvoice extends \Google\Collection
 {
   protected $collection_key = 'unitPriceTaxes';
-  /**
-   * @var UnitInvoiceAdditionalCharge[]
-   */
-  public $additionalCharges;
   protected $additionalChargesType = UnitInvoiceAdditionalCharge::class;
   protected $additionalChargesDataType = 'array';
-  /**
-   * @var Price
-   */
-  public $unitPrice;
   protected $unitPriceType = Price::class;
   protected $unitPriceDataType = '';
-  /**
-   * @var UnitInvoiceTaxLine[]
-   */
-  public $unitPriceTaxes;
   protected $unitPriceTaxesType = UnitInvoiceTaxLine::class;
   protected $unitPriceTaxesDataType = 'array';
 

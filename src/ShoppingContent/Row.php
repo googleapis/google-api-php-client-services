@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class Row extends \Google\Collection
 {
   protected $collection_key = 'cells';
-  /**
-   * @var Value[]
-   */
-  public $cells;
   protected $cellsType = Value::class;
   protected $cellsDataType = 'array';
 

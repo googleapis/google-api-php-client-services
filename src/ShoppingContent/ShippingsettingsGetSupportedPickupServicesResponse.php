@@ -24,10 +24,6 @@ class ShippingsettingsGetSupportedPickupServicesResponse extends \Google\Collect
    * @var string
    */
   public $kind;
-  /**
-   * @var PickupServicesPickupService[]
-   */
-  public $pickupServices;
   protected $pickupServicesType = PickupServicesPickupService::class;
   protected $pickupServicesDataType = 'array';
 

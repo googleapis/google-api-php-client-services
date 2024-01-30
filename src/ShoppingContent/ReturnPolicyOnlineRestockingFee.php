@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class ReturnPolicyOnlineRestockingFee extends \Google\Model
 {
-  /**
-   * @var PriceAmount
-   */
-  public $fixedFee;
   protected $fixedFeeType = PriceAmount::class;
   protected $fixedFeeDataType = '';
   /**

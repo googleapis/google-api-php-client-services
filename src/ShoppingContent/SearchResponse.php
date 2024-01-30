@@ -24,10 +24,6 @@ class SearchResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ReportRow[]
-   */
-  public $results;
   protected $resultsType = ReportRow::class;
   protected $resultsDataType = 'array';
 

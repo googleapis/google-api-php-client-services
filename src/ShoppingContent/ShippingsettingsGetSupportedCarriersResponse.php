@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class ShippingsettingsGetSupportedCarriersResponse extends \Google\Collection
 {
   protected $collection_key = 'carriers';
-  /**
-   * @var CarriersCarrier[]
-   */
-  public $carriers;
   protected $carriersType = CarriersCarrier::class;
   protected $carriersDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class ReturnpolicyCustomBatchResponse extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var ReturnpolicyCustomBatchResponseEntry[]
-   */
-  public $entries;
   protected $entriesType = ReturnpolicyCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**

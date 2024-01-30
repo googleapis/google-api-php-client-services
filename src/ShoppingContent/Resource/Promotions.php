@@ -42,6 +42,7 @@ class Promotions extends \Google\Service\Resource
    * @param Promotion $postBody
    * @param array $optParams Optional parameters.
    * @return Promotion
+   * @throws \Google\Service\Exception
    */
   public function create($merchantId, Promotion $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class Promotions extends \Google\Service\Resource
    * @param string $id Required. REST ID of the promotion to retrieve.
    * @param array $optParams Optional parameters.
    * @return Promotion
+   * @throws \Google\Service\Exception
    */
   public function get($merchantId, $id, $optParams = [])
   {
@@ -86,6 +88,7 @@ class Promotions extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListPromotion` must match the
    * call that provided the page token.
    * @return ListPromotionResponse
+   * @throws \Google\Service\Exception
    */
   public function listPromotions($merchantId, $optParams = [])
   {
