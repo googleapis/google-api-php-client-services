@@ -84,10 +84,6 @@ class QualityShoppingShoppingAttachment extends \Google\Collection
    * @var int
    */
   public $multiProductScore;
-  /**
-   * @var QualityShoppingShoppingAttachmentProduct[]
-   */
-  public $product;
   protected $productType = QualityShoppingShoppingAttachmentProduct::class;
   protected $productDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefAnnotationRatings extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefDocLevelRelevanceRatings
-   */
-  public $docLevelRelevanceRatings;
   protected $docLevelRelevanceRatingsType = RepositoryWebrefDocLevelRelevanceRatings::class;
   protected $docLevelRelevanceRatingsDataType = '';
 

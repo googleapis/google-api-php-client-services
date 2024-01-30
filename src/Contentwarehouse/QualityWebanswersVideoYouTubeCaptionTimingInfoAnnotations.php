@@ -24,10 +24,6 @@ class QualityWebanswersVideoYouTubeCaptionTimingInfoAnnotations extends \Google\
    * @var int
    */
   public $durationMs;
-  /**
-   * @var QualityWebanswersVideoYouTubeCaptionTimingInfoAnnotationsInstance[]
-   */
-  public $instances;
   protected $instancesType = QualityWebanswersVideoYouTubeCaptionTimingInfoAnnotationsInstance::class;
   protected $instancesDataType = 'array';
   /**

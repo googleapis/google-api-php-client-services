@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryAnnotationsRdfaBreadcrumbs extends \Google\Collection
 {
   protected $collection_key = 'crumb';
-  /**
-   * @var RepositoryAnnotationsRdfaCrumb[]
-   */
-  public $crumb;
   protected $crumbType = RepositoryAnnotationsRdfaCrumb::class;
   protected $crumbDataType = 'array';
   /**

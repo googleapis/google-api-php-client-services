@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityTimebasedDateUnreliability extends \Google\Collection
 {
   protected $collection_key = 'petacatScores';
-  /**
-   * @var QualityTimebasedPetacatDateUnreliability[]
-   */
-  public $petacatScores;
   protected $petacatScoresType = QualityTimebasedPetacatDateUnreliability::class;
   protected $petacatScoresDataType = 'array';
   /**

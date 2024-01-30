@@ -20,32 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefEntityNameScore extends \Google\Collection
 {
   protected $collection_key = 'rangeMetadata';
-  /**
-   * @var RepositoryWebrefBootstrappingScore
-   */
-  public $bootstrappingPreviousIteration;
   protected $bootstrappingPreviousIterationType = RepositoryWebrefBootstrappingScore::class;
   protected $bootstrappingPreviousIterationDataType = '';
   /**
    * @var float
    */
   public $confidence;
-  /**
-   * @var RepositoryWebrefEntityDebugInfo[]
-   */
-  public $debugInfo;
   protected $debugInfoType = RepositoryWebrefEntityDebugInfo::class;
   protected $debugInfoDataType = 'array';
-  /**
-   * @var RepositoryWebrefPreprocessingNameVariantSignals[]
-   */
-  public $debugVariantSignals;
   protected $debugVariantSignalsType = RepositoryWebrefPreprocessingNameVariantSignals::class;
   protected $debugVariantSignalsDataType = 'array';
-  /**
-   * @var RepositoryWebrefExtendedEntityNameScore[]
-   */
-  public $extendedScoreRatio;
   protected $extendedScoreRatioType = RepositoryWebrefExtendedEntityNameScore::class;
   protected $extendedScoreRatioDataType = 'array';
   /**
@@ -80,16 +64,8 @@ class RepositoryWebrefEntityNameScore extends \Google\Collection
    * @var string
    */
   public $mid;
-  /**
-   * @var RepositoryWebrefPreprocessingNameEntityMetadata
-   */
-  public $nameMetadata;
   protected $nameMetadataType = RepositoryWebrefPreprocessingNameEntityMetadata::class;
   protected $nameMetadataDataType = '';
-  /**
-   * @var RepositoryWebrefRangeMetadata[]
-   */
-  public $rangeMetadata;
   protected $rangeMetadataType = RepositoryWebrefRangeMetadata::class;
   protected $rangeMetadataDataType = 'array';
   /**

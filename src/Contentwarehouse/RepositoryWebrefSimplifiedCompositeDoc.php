@@ -20,40 +20,16 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
 {
   protected $collection_key = 'forwardingDups';
-  /**
-   * @var RepositoryWebrefSimplifiedAnchors
-   */
-  public $anchors;
   protected $anchorsType = RepositoryWebrefSimplifiedAnchors::class;
   protected $anchorsDataType = '';
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $cdocContainer;
   protected $cdocContainerType = Proto2BridgeMessageSet::class;
   protected $cdocContainerDataType = '';
-  /**
-   * @var RepositoryWebrefRefconDocumentMentionSpans
-   */
-  public $documentMentionSpans;
   protected $documentMentionSpansType = RepositoryWebrefRefconDocumentMentionSpans::class;
   protected $documentMentionSpansDataType = '';
-  /**
-   * @var RepositoryWebrefSimplifiedForwardingDup[]
-   */
-  public $forwardingDups;
   protected $forwardingDupsType = RepositoryWebrefSimplifiedForwardingDup::class;
   protected $forwardingDupsDataType = 'array';
-  /**
-   * @var RepositoryWebrefPreprocessingUrlMatchingMetadata
-   */
-  public $matchingMetadata;
   protected $matchingMetadataType = RepositoryWebrefPreprocessingUrlMatchingMetadata::class;
   protected $matchingMetadataDataType = '';
-  /**
-   * @var RepositoryWebrefRefconRefconDocumentMetadata
-   */
-  public $refconDocumentMetadata;
   protected $refconDocumentMetadataType = RepositoryWebrefRefconRefconDocumentMetadata::class;
   protected $refconDocumentMetadataDataType = '';
   /**
@@ -64,10 +40,6 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var RepositoryWebrefWebrefOutlinkInfos
-   */
-  public $webrefOutlinkInfos;
   protected $webrefOutlinkInfosType = RepositoryWebrefWebrefOutlinkInfos::class;
   protected $webrefOutlinkInfosDataType = '';
 

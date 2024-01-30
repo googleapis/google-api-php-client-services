@@ -35,10 +35,6 @@ class RepositoryWebrefAnnotatorProfile extends \Google\Model
    * @var int
    */
   public $numTokens;
-  /**
-   * @var RepositoryWebrefProcessorTiming
-   */
-  public $processorTimingsRoot;
   protected $processorTimingsRootType = RepositoryWebrefProcessorTiming::class;
   protected $processorTimingsRootDataType = '';
 

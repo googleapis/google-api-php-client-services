@@ -36,10 +36,6 @@ class QualityViewsExtractionClusterInfo extends \Google\Collection
    * @var float
    */
   public $score;
-  /**
-   * @var QualityViewsExtractionClusterInfo[]
-   */
-  public $subCluster;
   protected $subClusterType = QualityViewsExtractionClusterInfo::class;
   protected $subClusterDataType = 'array';
 

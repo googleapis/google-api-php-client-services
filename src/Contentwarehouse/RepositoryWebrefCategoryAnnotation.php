@@ -19,30 +19,18 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefCategoryAnnotation extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefCategoryAnnotationBrowsyTopic
-   */
-  public $browsyTopic;
   protected $browsyTopicType = RepositoryWebrefCategoryAnnotationBrowsyTopic::class;
   protected $browsyTopicDataType = '';
   /**
    * @var string
    */
   public $debugString;
-  /**
-   * @var RepositoryWebrefCategoryAnnotationHitCatSource
-   */
-  public $hitcat;
   protected $hitcatType = RepositoryWebrefCategoryAnnotationHitCatSource::class;
   protected $hitcatDataType = '';
   /**
    * @var string
    */
   public $mid;
-  /**
-   * @var RepositoryWebrefCategoryAnnotationShoppingSignals
-   */
-  public $shopping;
   protected $shoppingType = RepositoryWebrefCategoryAnnotationShoppingSignals::class;
   protected $shoppingDataType = '';
 

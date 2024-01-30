@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefEntityLinkMetadata extends \Google\Collection
 {
   protected $collection_key = 'kindInfo';
-  /**
-   * @var RepositoryWebrefLinkKindFlags
-   */
-  public $aggregateFlags;
   protected $aggregateFlagsType = RepositoryWebrefLinkKindFlags::class;
   protected $aggregateFlagsDataType = '';
-  /**
-   * @var RepositoryWebrefLinkKindInfo[]
-   */
-  public $kindInfo;
   protected $kindInfoType = RepositoryWebrefLinkKindInfo::class;
   protected $kindInfoDataType = 'array';
 

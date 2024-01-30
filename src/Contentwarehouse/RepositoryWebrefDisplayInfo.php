@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefDisplayInfo extends \Google\Collection
 {
   protected $collection_key = 'displayName';
-  /**
-   * @var RepositoryWebrefDisplayName[]
-   */
-  public $displayName;
   protected $displayNameType = RepositoryWebrefDisplayName::class;
   protected $displayNameDataType = 'array';
 

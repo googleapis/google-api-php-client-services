@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefDomainSpecificRepresentation extends \Google\Model
 {
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $entityData;
   protected $entityDataType = Proto2BridgeMessageSet::class;
   protected $entityDataDataType = '';
 

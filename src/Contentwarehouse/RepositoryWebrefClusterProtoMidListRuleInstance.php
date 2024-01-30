@@ -23,10 +23,6 @@ class RepositoryWebrefClusterProtoMidListRuleInstance extends \Google\Model
    * @var string
    */
   public $role;
-  /**
-   * @var RepositoryWebrefClusterProtoMidListRule
-   */
-  public $rule;
   protected $ruleType = RepositoryWebrefClusterProtoMidListRule::class;
   protected $ruleDataType = '';
 

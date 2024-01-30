@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefLightweightTokensPerNameLightweightToken extends \Google\Collection
 {
   protected $collection_key = 'matchedLightweightToken';
-  /**
-   * @var RepositoryWebrefLightweightTokensMatchedLightweightToken[]
-   */
-  public $matchedLightweightToken;
   protected $matchedLightweightTokenType = RepositoryWebrefLightweightTokensMatchedLightweightToken::class;
   protected $matchedLightweightTokenDataType = 'array';
 

@@ -31,10 +31,6 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
    * @var string
    */
   public $docId;
-  /**
-   * @var RepositoryWebrefForwardingUrls
-   */
-  public $forwardingUrls;
   protected $forwardingUrlsType = RepositoryWebrefForwardingUrls::class;
   protected $forwardingUrlsDataType = '';
   /**
@@ -49,10 +45,6 @@ class RepositoryWebrefDocumentMetadata extends \Google\Model
    * @var float
    */
   public $numIncomingAnchors;
-  /**
-   * @var QualitySalientTermsSalientTermSet
-   */
-  public $salientTerms;
   protected $salientTermsType = QualitySalientTermsSalientTermSet::class;
   protected $salientTermsDataType = '';
   /**

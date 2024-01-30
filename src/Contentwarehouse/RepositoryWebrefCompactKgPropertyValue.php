@@ -28,10 +28,6 @@ class RepositoryWebrefCompactKgPropertyValue extends \Google\Collection
    * @var string
    */
   public $hrid;
-  /**
-   * @var RepositoryWebrefCompactKgValue[]
-   */
-  public $value;
   protected $valueType = RepositoryWebrefCompactKgValue::class;
   protected $valueDataType = 'array';
   /**

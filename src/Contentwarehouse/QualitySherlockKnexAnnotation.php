@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualitySherlockKnexAnnotation extends \Google\Collection
 {
   protected $collection_key = 'item';
-  /**
-   * @var QualitySherlockKnexAnnotationItem[]
-   */
-  public $item;
   protected $itemType = QualitySherlockKnexAnnotationItem::class;
   protected $itemDataType = 'array';
 

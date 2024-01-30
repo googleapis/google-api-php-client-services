@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefEntityNameSource extends \Google\Collection
 {
   protected $collection_key = 'entityScore';
-  /**
-   * @var RepositoryWebrefEntityNameScore[]
-   */
-  public $entityScore;
   protected $entityScoreType = RepositoryWebrefEntityNameScore::class;
   protected $entityScoreDataType = 'array';
   /**

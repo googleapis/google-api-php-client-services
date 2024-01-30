@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefHumanRatings extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefAnnotationRatings
-   */
-  public $annotationRatings;
   protected $annotationRatingsType = RepositoryWebrefAnnotationRatings::class;
   protected $annotationRatingsDataType = '';
 

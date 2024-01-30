@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefExplainedRangeInfoExplainedRange extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefSegmentMention
-   */
-  public $mention;
   protected $mentionType = RepositoryWebrefSegmentMention::class;
   protected $mentionDataType = '';
 

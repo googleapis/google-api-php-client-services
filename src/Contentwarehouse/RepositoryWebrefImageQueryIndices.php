@@ -31,10 +31,6 @@ class RepositoryWebrefImageQueryIndices extends \Google\Model
    * @var int
    */
   public $imageIndex;
-  /**
-   * @var RepositoryWebrefQueryIndices
-   */
-  public $queryIndex;
   protected $queryIndexType = RepositoryWebrefQueryIndices::class;
   protected $queryIndexDataType = '';
 

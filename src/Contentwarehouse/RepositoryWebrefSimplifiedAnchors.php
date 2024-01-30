@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefSimplifiedAnchors extends \Google\Collection
 {
   protected $collection_key = 'anchor';
-  /**
-   * @var RepositoryWebrefSimplifiedAnchor[]
-   */
-  public $anchor;
   protected $anchorType = RepositoryWebrefSimplifiedAnchor::class;
   protected $anchorDataType = 'array';
 

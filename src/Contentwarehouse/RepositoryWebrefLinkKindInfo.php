@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefLinkKindInfo extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefLinkKindFlags
-   */
-  public $flags;
   protected $flagsType = RepositoryWebrefLinkKindFlags::class;
   protected $flagsDataType = '';
   /**

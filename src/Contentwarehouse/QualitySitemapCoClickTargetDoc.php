@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualitySitemapCoClickTargetDoc extends \Google\Collection
 {
   protected $collection_key = 'coClickByLocale';
-  /**
-   * @var QualitySitemapCoClickTargetDocCoClickByLocale[]
-   */
-  public $coClickByLocale;
   protected $coClickByLocaleType = QualitySitemapCoClickTargetDocCoClickByLocale::class;
   protected $coClickByLocaleDataType = 'array';
   /**

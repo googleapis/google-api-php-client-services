@@ -23,10 +23,6 @@ class RepositoryWebrefLocalizedString extends \Google\Model
    * @var string
    */
   public $domain;
-  /**
-   * @var RepositoryWebrefFprintModifierProto
-   */
-  public $fprintModifier;
   protected $fprintModifierType = RepositoryWebrefFprintModifierProto::class;
   protected $fprintModifierDataType = '';
   /**

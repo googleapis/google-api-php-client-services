@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefSegmentMention extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefMention
-   */
-  public $mention;
   protected $mentionType = RepositoryWebrefMention::class;
   protected $mentionDataType = '';
   /**

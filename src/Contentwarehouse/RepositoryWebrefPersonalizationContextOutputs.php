@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefPersonalizationContextOutputs extends \Google\Collection
 {
   protected $collection_key = 'outputs';
-  /**
-   * @var RepositoryWebrefPersonalizationContextOutput[]
-   */
-  public $outputs;
   protected $outputsType = RepositoryWebrefPersonalizationContextOutput::class;
   protected $outputsDataType = 'array';
 

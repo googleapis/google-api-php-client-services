@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryAnnotationsGeoTopicality extends \Google\Collection
 {
   protected $collection_key = 'geotopics';
-  /**
-   * @var RepositoryAnnotationsGeoTopic[]
-   */
-  public $geotopics;
   protected $geotopicsType = RepositoryAnnotationsGeoTopic::class;
   protected $geotopicsDataType = 'array';
 

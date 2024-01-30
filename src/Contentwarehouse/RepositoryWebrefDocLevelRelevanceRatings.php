@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefDocLevelRelevanceRatings extends \Google\Collection
 {
   protected $collection_key = 'perDocRelevanceRatings';
-  /**
-   * @var RepositoryWebrefPerDocRelevanceRatings[]
-   */
-  public $perDocRelevanceRatings;
   protected $perDocRelevanceRatingsType = RepositoryWebrefPerDocRelevanceRatings::class;
   protected $perDocRelevanceRatingsDataType = 'array';
 

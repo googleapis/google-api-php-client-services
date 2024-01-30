@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class QualitySitemapTwoLevelTarget extends \Google\Collection
 {
   protected $collection_key = 'secondLevelTarget';
-  /**
-   * @var QualitySitemapTarget
-   */
-  public $firstLevelTarget;
   protected $firstLevelTargetType = QualitySitemapTarget::class;
   protected $firstLevelTargetDataType = '';
-  /**
-   * @var QualitySitemapTarget[]
-   */
-  public $secondLevelTarget;
   protected $secondLevelTargetType = QualitySitemapTarget::class;
   protected $secondLevelTargetDataType = 'array';
 

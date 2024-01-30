@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class RepositoryWebrefPreprocessingUrlMatchingMetadata extends \Google\Collection
 {
   protected $collection_key = 'source';
-  /**
-   * @var RepositoryWebrefPreprocessingUrlSourceInfo[]
-   */
-  public $source;
   protected $sourceType = RepositoryWebrefPreprocessingUrlSourceInfo::class;
   protected $sourceDataType = 'array';
 

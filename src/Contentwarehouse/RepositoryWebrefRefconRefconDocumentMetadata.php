@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefRefconRefconDocumentMetadata extends \Google\Model
 {
-  /**
-   * @var RepositoryWebrefRefconQueryStats
-   */
-  public $queryStats;
   protected $queryStatsType = RepositoryWebrefRefconQueryStats::class;
   protected $queryStatsDataType = '';
 

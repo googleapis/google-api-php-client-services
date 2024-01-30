@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
 {
   protected $collection_key = 'relevanceEmbedding';
-  /**
-   * @var ShoppingWebentityShoppingAnnotationProductRating
-   */
-  public $aggregateRating;
   protected $aggregateRatingType = ShoppingWebentityShoppingAnnotationProductRating::class;
   protected $aggregateRatingDataType = '';
   /**
@@ -38,22 +34,10 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
    * @var string
    */
   public $globalProductClusterId;
-  /**
-   * @var ShoppingWebentityShoppingAnnotationProductImage[]
-   */
-  public $images;
   protected $imagesType = ShoppingWebentityShoppingAnnotationProductImage::class;
   protected $imagesDataType = 'array';
-  /**
-   * @var QualityShoppingShoppingAttachmentLocale
-   */
-  public $locale;
   protected $localeType = QualityShoppingShoppingAttachmentLocale::class;
   protected $localeDataType = '';
-  /**
-   * @var QualityShoppingShoppingAttachmentMokaFacetValue[]
-   */
-  public $mokaFacet;
   protected $mokaFacetType = QualityShoppingShoppingAttachmentMokaFacetValue::class;
   protected $mokaFacetDataType = 'array';
   /**
@@ -64,20 +48,12 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
    * @var string
    */
   public $nonDisplayableTitle;
-  /**
-   * @var QualityShoppingShoppingAttachmentOffer
-   */
-  public $offer;
   protected $offerType = QualityShoppingShoppingAttachmentOffer::class;
   protected $offerDataType = '';
   /**
    * @var string
    */
   public $outlinkDomainRelationship;
-  /**
-   * @var QualityShoppingShoppingAttachmentPBlock
-   */
-  public $pblock;
   protected $pblockType = QualityShoppingShoppingAttachmentPBlock::class;
   protected $pblockDataType = '';
   /**
@@ -88,10 +64,6 @@ class QualityShoppingShoppingAttachmentProduct extends \Google\Collection
    * @var string
    */
   public $productClusterMid;
-  /**
-   * @var QualityRankembedMustangMustangRankEmbedInfo[]
-   */
-  public $relevanceEmbedding;
   protected $relevanceEmbeddingType = QualityRankembedMustangMustangRankEmbedInfo::class;
   protected $relevanceEmbeddingDataType = 'array';
   /**
