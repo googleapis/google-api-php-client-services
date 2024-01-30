@@ -44,6 +44,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * alias to the most recently created SecretVersion.
    * @param array $optParams Optional parameters.
    * @return AccessSecretVersionResponse
+   * @throws \Google\Service\Exception
    */
   public function access($name, $optParams = [])
   {
@@ -60,6 +61,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * @param DestroySecretVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SecretVersion
+   * @throws \Google\Service\Exception
    */
   public function destroy($name, DestroySecretVersionRequest $postBody, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * @param DisableSecretVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SecretVersion
+   * @throws \Google\Service\Exception
    */
   public function disable($name, DisableSecretVersionRequest $postBody, $optParams = [])
   {
@@ -92,6 +95,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * @param EnableSecretVersionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SecretVersion
+   * @throws \Google\Service\Exception
    */
   public function enable($name, EnableSecretVersionRequest $postBody, $optParams = [])
   {
@@ -108,6 +112,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * alias to the most recently created SecretVersion.
    * @param array $optParams Optional parameters.
    * @return SecretVersion
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -134,6 +139,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * @opt_param string pageToken Optional. Pagination token, returned earlier via
    * ListSecretVersionsResponse.next_page_token][].
    * @return ListSecretVersionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsSecretsVersions($parent, $optParams = [])
   {

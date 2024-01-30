@@ -19,16 +19,8 @@ namespace Google\Service\SecretManager;
 
 class Replication extends \Google\Model
 {
-  /**
-   * @var Automatic
-   */
-  public $automatic;
   protected $automaticType = Automatic::class;
   protected $automaticDataType = '';
-  /**
-   * @var UserManaged
-   */
-  public $userManaged;
   protected $userManagedType = UserManaged::class;
   protected $userManagedDataType = '';
 

@@ -23,10 +23,6 @@ class AccessSecretVersionResponse extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var SecretPayload
-   */
-  public $payload;
   protected $payloadType = SecretPayload::class;
   protected $payloadDataType = '';
 
