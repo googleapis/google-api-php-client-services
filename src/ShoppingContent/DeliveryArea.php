@@ -23,10 +23,6 @@ class DeliveryArea extends \Google\Model
    * @var string
    */
   public $countryCode;
-  /**
-   * @var DeliveryAreaPostalCodeRange
-   */
-  public $postalCodeRange;
   protected $postalCodeRangeType = DeliveryAreaPostalCodeRange::class;
   protected $postalCodeRangeDataType = '';
   /**

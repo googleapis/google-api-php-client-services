@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class ListCssesResponse extends \Google\Collection
 {
   protected $collection_key = 'csses';
-  /**
-   * @var Css[]
-   */
-  public $csses;
   protected $cssesType = Css::class;
   protected $cssesDataType = 'array';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\ShoppingContent;
 
 class AccountBusinessInformation extends \Google\Model
 {
-  /**
-   * @var AccountAddress
-   */
-  public $address;
   protected $addressType = AccountAddress::class;
   protected $addressDataType = '';
-  /**
-   * @var AccountCustomerService
-   */
-  public $customerService;
   protected $customerServiceType = AccountCustomerService::class;
   protected $customerServiceDataType = '';
   /**

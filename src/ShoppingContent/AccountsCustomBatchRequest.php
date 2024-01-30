@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class AccountsCustomBatchRequest extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var AccountsCustomBatchRequestEntry[]
-   */
-  public $entries;
   protected $entriesType = AccountsCustomBatchRequestEntry::class;
   protected $entriesDataType = 'array';
 

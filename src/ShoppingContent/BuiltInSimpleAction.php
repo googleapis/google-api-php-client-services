@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class BuiltInSimpleAction extends \Google\Model
 {
-  /**
-   * @var BuiltInSimpleActionAdditionalContent
-   */
-  public $additionalContent;
   protected $additionalContentType = BuiltInSimpleActionAdditionalContent::class;
   protected $additionalContentDataType = '';
   /**

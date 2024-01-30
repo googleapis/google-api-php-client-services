@@ -32,16 +32,8 @@ class AccountStatusProducts extends \Google\Collection
    * @var string
    */
   public $destination;
-  /**
-   * @var AccountStatusItemLevelIssue[]
-   */
-  public $itemLevelIssues;
   protected $itemLevelIssuesType = AccountStatusItemLevelIssue::class;
   protected $itemLevelIssuesDataType = 'array';
-  /**
-   * @var AccountStatusStatistics
-   */
-  public $statistics;
   protected $statisticsType = AccountStatusStatistics::class;
   protected $statisticsDataType = '';
 

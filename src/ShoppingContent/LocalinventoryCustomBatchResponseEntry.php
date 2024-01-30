@@ -23,10 +23,6 @@ class LocalinventoryCustomBatchResponseEntry extends \Google\Model
    * @var string
    */
   public $batchId;
-  /**
-   * @var Errors
-   */
-  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**

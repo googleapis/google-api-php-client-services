@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class ListAccountReturnCarrierResponse extends \Google\Collection
 {
   protected $collection_key = 'accountReturnCarriers';
-  /**
-   * @var AccountReturnCarrier[]
-   */
-  public $accountReturnCarriers;
   protected $accountReturnCarriersType = AccountReturnCarrier::class;
   protected $accountReturnCarriersDataType = 'array';
 

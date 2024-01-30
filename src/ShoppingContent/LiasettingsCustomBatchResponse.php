@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class LiasettingsCustomBatchResponse extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var LiasettingsCustomBatchResponseEntry[]
-   */
-  public $entries;
   protected $entriesType = LiasettingsCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**

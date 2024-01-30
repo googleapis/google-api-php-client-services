@@ -27,10 +27,6 @@ class CarrierRate extends \Google\Model
    * @var string
    */
   public $carrierService;
-  /**
-   * @var Price
-   */
-  public $flatAdjustment;
   protected $flatAdjustmentType = Price::class;
   protected $flatAdjustmentDataType = '';
   /**

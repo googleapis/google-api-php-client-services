@@ -27,10 +27,6 @@ class CheckoutSettings extends \Google\Model
    * @var string
    */
   public $effectiveReviewState;
-  /**
-   * @var UrlSettings
-   */
-  public $effectiveUriSettings;
   protected $effectiveUriSettingsType = UrlSettings::class;
   protected $effectiveUriSettingsDataType = '';
   /**
@@ -45,10 +41,6 @@ class CheckoutSettings extends \Google\Model
    * @var string
    */
   public $reviewState;
-  /**
-   * @var UrlSettings
-   */
-  public $uriSettings;
   protected $uriSettingsType = UrlSettings::class;
   protected $uriSettingsDataType = '';
 

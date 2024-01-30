@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class AccounttaxCustomBatchResponse extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var AccounttaxCustomBatchResponseEntry[]
-   */
-  public $entries;
   protected $entriesType = AccounttaxCustomBatchResponseEntry::class;
   protected $entriesDataType = 'array';
   /**

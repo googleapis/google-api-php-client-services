@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class LocalinventoryCustomBatchRequest extends \Google\Collection
 {
   protected $collection_key = 'entries';
-  /**
-   * @var LocalinventoryCustomBatchRequestEntry[]
-   */
-  public $entries;
   protected $entriesType = LocalinventoryCustomBatchRequestEntry::class;
   protected $entriesDataType = 'array';
 

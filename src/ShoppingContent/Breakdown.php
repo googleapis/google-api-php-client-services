@@ -24,10 +24,6 @@ class Breakdown extends \Google\Collection
    * @var string[]
    */
   public $details;
-  /**
-   * @var BreakdownRegion[]
-   */
-  public $regions;
   protected $regionsType = BreakdownRegion::class;
   protected $regionsDataType = 'array';
 

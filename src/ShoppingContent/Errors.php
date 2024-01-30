@@ -24,10 +24,6 @@ class Errors extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var Error[]
-   */
-  public $errors;
   protected $errorsType = Error::class;
   protected $errorsDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class LiasettingsGetAccessibleGmbAccountsResponse extends \Google\Collection
    * @var string
    */
   public $accountId;
-  /**
-   * @var GmbAccountsGmbAccount[]
-   */
-  public $gmbAccounts;
   protected $gmbAccountsType = GmbAccountsGmbAccount::class;
   protected $gmbAccountsDataType = 'array';
   /**

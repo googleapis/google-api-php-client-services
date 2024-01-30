@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class ActionReason extends \Google\Model
 {
-  /**
-   * @var Action
-   */
-  public $action;
   protected $actionType = Action::class;
   protected $actionDataType = '';
   /**

@@ -28,10 +28,6 @@ class AccountTax extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var AccountTaxTaxRule[]
-   */
-  public $rules;
   protected $rulesType = AccountTaxTaxRule::class;
   protected $rulesDataType = 'array';
 

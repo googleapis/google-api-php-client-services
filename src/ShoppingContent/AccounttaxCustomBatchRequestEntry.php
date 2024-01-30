@@ -23,10 +23,6 @@ class AccounttaxCustomBatchRequestEntry extends \Google\Model
    * @var string
    */
   public $accountId;
-  /**
-   * @var AccountTax
-   */
-  public $accountTax;
   protected $accountTaxType = AccountTax::class;
   protected $accountTaxDataType = '';
   /**

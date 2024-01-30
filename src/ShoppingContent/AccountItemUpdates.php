@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class AccountItemUpdates extends \Google\Model
 {
-  /**
-   * @var AccountItemUpdatesSettings
-   */
-  public $accountItemUpdatesSettings;
   protected $accountItemUpdatesSettingsType = AccountItemUpdatesSettings::class;
   protected $accountItemUpdatesSettingsDataType = '';
   /**

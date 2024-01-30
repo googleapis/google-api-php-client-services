@@ -40,10 +40,6 @@ class Collection extends \Google\Collection
    * @var string
    */
   public $customLabel4;
-  /**
-   * @var CollectionFeaturedProduct[]
-   */
-  public $featuredProduct;
   protected $featuredProductType = CollectionFeaturedProduct::class;
   protected $featuredProductDataType = 'array';
   /**

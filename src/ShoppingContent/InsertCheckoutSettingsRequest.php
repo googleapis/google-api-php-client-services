@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class InsertCheckoutSettingsRequest extends \Google\Model
 {
-  /**
-   * @var UrlSettings
-   */
-  public $uriSettings;
   protected $uriSettingsType = UrlSettings::class;
   protected $uriSettingsDataType = '';
 

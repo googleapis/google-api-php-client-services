@@ -24,10 +24,6 @@ class LinkedAccount extends \Google\Collection
    * @var string
    */
   public $linkedAccountId;
-  /**
-   * @var LinkService[]
-   */
-  public $services;
   protected $servicesType = LinkService::class;
   protected $servicesDataType = 'array';
 

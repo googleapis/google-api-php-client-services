@@ -28,10 +28,6 @@ class LiasettingsListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var LiaSettings[]
-   */
-  public $resources;
   protected $resourcesType = LiaSettings::class;
   protected $resourcesDataType = 'array';
 

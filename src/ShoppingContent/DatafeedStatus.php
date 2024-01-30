@@ -28,10 +28,6 @@ class DatafeedStatus extends \Google\Collection
    * @var string
    */
   public $datafeedId;
-  /**
-   * @var DatafeedStatusError[]
-   */
-  public $errors;
   protected $errorsType = DatafeedStatusError::class;
   protected $errorsDataType = 'array';
   /**
@@ -62,10 +58,6 @@ class DatafeedStatus extends \Google\Collection
    * @var string
    */
   public $processingStatus;
-  /**
-   * @var DatafeedStatusError[]
-   */
-  public $warnings;
   protected $warningsType = DatafeedStatusError::class;
   protected $warningsDataType = 'array';
 

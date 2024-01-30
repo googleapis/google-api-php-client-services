@@ -28,20 +28,12 @@ class Datafeed extends \Google\Collection
    * @var string
    */
   public $contentType;
-  /**
-   * @var DatafeedFetchSchedule
-   */
-  public $fetchSchedule;
   protected $fetchScheduleType = DatafeedFetchSchedule::class;
   protected $fetchScheduleDataType = '';
   /**
    * @var string
    */
   public $fileName;
-  /**
-   * @var DatafeedFormat
-   */
-  public $format;
   protected $formatType = DatafeedFormat::class;
   protected $formatDataType = '';
   /**
@@ -56,10 +48,6 @@ class Datafeed extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var DatafeedTarget[]
-   */
-  public $targets;
   protected $targetsType = DatafeedTarget::class;
   protected $targetsDataType = 'array';
 

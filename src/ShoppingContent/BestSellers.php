@@ -47,10 +47,6 @@ class BestSellers extends \Google\Model
    * @var string
    */
   public $relativeDemandChange;
-  /**
-   * @var Date
-   */
-  public $reportDate;
   protected $reportDateType = Date::class;
   protected $reportDateDataType = '';
   /**

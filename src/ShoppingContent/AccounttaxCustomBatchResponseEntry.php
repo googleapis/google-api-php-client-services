@@ -19,20 +19,12 @@ namespace Google\Service\ShoppingContent;
 
 class AccounttaxCustomBatchResponseEntry extends \Google\Model
 {
-  /**
-   * @var AccountTax
-   */
-  public $accountTax;
   protected $accountTaxType = AccountTax::class;
   protected $accountTaxDataType = '';
   /**
    * @var string
    */
   public $batchId;
-  /**
-   * @var Errors
-   */
-  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**

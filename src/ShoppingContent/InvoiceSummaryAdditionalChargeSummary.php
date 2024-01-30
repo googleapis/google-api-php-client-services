@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class InvoiceSummaryAdditionalChargeSummary extends \Google\Model
 {
-  /**
-   * @var Amount
-   */
-  public $totalAmount;
   protected $totalAmountType = Amount::class;
   protected $totalAmountDataType = '';
   /**
