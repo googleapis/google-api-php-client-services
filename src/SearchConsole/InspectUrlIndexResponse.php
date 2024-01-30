@@ -19,10 +19,6 @@ namespace Google\Service\SearchConsole;
 
 class InspectUrlIndexResponse extends \Google\Model
 {
-  /**
-   * @var UrlInspectionResult
-   */
-  public $inspectionResult;
   protected $inspectionResultType = UrlInspectionResult::class;
   protected $inspectionResultDataType = '';
 

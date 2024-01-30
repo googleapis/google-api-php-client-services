@@ -20,10 +20,6 @@ namespace Google\Service\SearchConsole;
 class ApiDimensionFilterGroup extends \Google\Collection
 {
   protected $collection_key = 'filters';
-  /**
-   * @var ApiDimensionFilter[]
-   */
-  public $filters;
   protected $filtersType = ApiDimensionFilter::class;
   protected $filtersDataType = 'array';
   /**

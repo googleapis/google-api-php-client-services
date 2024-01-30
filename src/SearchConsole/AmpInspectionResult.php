@@ -32,10 +32,6 @@ class AmpInspectionResult extends \Google\Collection
    * @var string
    */
   public $indexingState;
-  /**
-   * @var AmpIssue[]
-   */
-  public $issues;
   protected $issuesType = AmpIssue::class;
   protected $issuesDataType = 'array';
   /**

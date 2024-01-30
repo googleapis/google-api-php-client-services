@@ -20,10 +20,6 @@ namespace Google\Service\SearchConsole;
 class MobileUsabilityInspectionResult extends \Google\Collection
 {
   protected $collection_key = 'issues';
-  /**
-   * @var MobileUsabilityIssue[]
-   */
-  public $issues;
   protected $issuesType = MobileUsabilityIssue::class;
   protected $issuesDataType = 'array';
   /**

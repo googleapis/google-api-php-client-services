@@ -20,10 +20,6 @@ namespace Google\Service\SearchConsole;
 class SitemapsListResponse extends \Google\Collection
 {
   protected $collection_key = 'sitemap';
-  /**
-   * @var WmxSitemap[]
-   */
-  public $sitemap;
   protected $sitemapType = WmxSitemap::class;
   protected $sitemapDataType = 'array';
 

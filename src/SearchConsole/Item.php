@@ -20,10 +20,6 @@ namespace Google\Service\SearchConsole;
 class Item extends \Google\Collection
 {
   protected $collection_key = 'issues';
-  /**
-   * @var RichResultsIssue[]
-   */
-  public $issues;
   protected $issuesType = RichResultsIssue::class;
   protected $issuesDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\SearchConsole;
 class DetectedItems extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Item[]
-   */
-  public $items;
   protected $itemsType = Item::class;
   protected $itemsDataType = 'array';
   /**

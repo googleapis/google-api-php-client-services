@@ -19,10 +19,6 @@ namespace Google\Service\SearchConsole;
 
 class ResourceIssue extends \Google\Model
 {
-  /**
-   * @var BlockedResource
-   */
-  public $blockedResource;
   protected $blockedResourceType = BlockedResource::class;
   protected $blockedResourceDataType = '';
 
