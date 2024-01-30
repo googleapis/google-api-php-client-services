@@ -19,10 +19,6 @@ namespace Google\Service\Connectors;
 
 class RefreshAccessTokenResponse extends \Google\Model
 {
-  /**
-   * @var AccessCredentials
-   */
-  public $accessCredentials;
   protected $accessCredentialsType = AccessCredentials::class;
   protected $accessCredentialsDataType = '';
 

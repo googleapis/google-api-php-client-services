@@ -20,10 +20,6 @@ namespace Google\Service\Connectors;
 class ListActionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unsupportedActionNames';
-  /**
-   * @var Action[]
-   */
-  public $actions;
   protected $actionsType = Action::class;
   protected $actionsDataType = 'array';
   /**

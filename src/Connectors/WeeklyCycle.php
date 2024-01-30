@@ -20,10 +20,6 @@ namespace Google\Service\Connectors;
 class WeeklyCycle extends \Google\Collection
 {
   protected $collection_key = 'schedule';
-  /**
-   * @var Schedule[]
-   */
-  public $schedule;
   protected $scheduleType = Schedule::class;
   protected $scheduleDataType = 'array';
 

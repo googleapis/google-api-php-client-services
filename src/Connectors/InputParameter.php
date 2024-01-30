@@ -35,10 +35,6 @@ class InputParameter extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var JsonSchema
-   */
-  public $jsonSchema;
   protected $jsonSchemaType = JsonSchema::class;
   protected $jsonSchemaDataType = '';
   /**

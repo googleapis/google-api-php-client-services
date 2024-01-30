@@ -19,10 +19,6 @@ namespace Google\Service\Connectors;
 
 class PerSliSloEligibility extends \Google\Model
 {
-  /**
-   * @var SloEligibility[]
-   */
-  public $eligibilities;
   protected $eligibilitiesType = SloEligibility::class;
   protected $eligibilitiesDataType = 'map';
 

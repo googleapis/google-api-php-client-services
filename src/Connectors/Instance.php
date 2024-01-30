@@ -40,46 +40,26 @@ class Instance extends \Google\Collection
    * @var string[]
    */
   public $maintenancePolicyNames;
-  /**
-   * @var MaintenanceSchedule[]
-   */
-  public $maintenanceSchedules;
   protected $maintenanceSchedulesType = MaintenanceSchedule::class;
   protected $maintenanceSchedulesDataType = 'map';
-  /**
-   * @var MaintenanceSettings
-   */
-  public $maintenanceSettings;
   protected $maintenanceSettingsType = MaintenanceSettings::class;
   protected $maintenanceSettingsDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var NotificationParameter[]
-   */
-  public $notificationParameters;
   protected $notificationParametersType = NotificationParameter::class;
   protected $notificationParametersDataType = 'map';
   /**
    * @var string[]
    */
   public $producerMetadata;
-  /**
-   * @var ProvisionedResource[]
-   */
-  public $provisionedResources;
   protected $provisionedResourcesType = ProvisionedResource::class;
   protected $provisionedResourcesDataType = 'array';
   /**
    * @var string
    */
   public $slmInstanceTemplate;
-  /**
-   * @var SloMetadata
-   */
-  public $sloMetadata;
   protected $sloMetadataType = SloMetadata::class;
   protected $sloMetadataDataType = '';
   /**

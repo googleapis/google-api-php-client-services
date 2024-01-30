@@ -27,10 +27,6 @@ class NodeSloMetadata extends \Google\Model
    * @var string
    */
   public $nodeId;
-  /**
-   * @var PerSliSloEligibility
-   */
-  public $perSliEligibility;
   protected $perSliEligibilityType = PerSliSloEligibility::class;
   protected $perSliEligibilityDataType = '';
 

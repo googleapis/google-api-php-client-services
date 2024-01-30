@@ -23,10 +23,6 @@ class DailyCycle extends \Google\Model
    * @var string
    */
   public $duration;
-  /**
-   * @var TimeOfDay
-   */
-  public $startTime;
   protected $startTimeType = TimeOfDay::class;
   protected $startTimeDataType = '';
 

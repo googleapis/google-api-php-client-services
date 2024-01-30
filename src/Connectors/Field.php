@@ -35,10 +35,6 @@ class Field extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var JsonSchema
-   */
-  public $jsonSchema;
   protected $jsonSchemaType = JsonSchema::class;
   protected $jsonSchemaDataType = '';
   /**
@@ -53,10 +49,6 @@ class Field extends \Google\Model
    * @var bool
    */
   public $nullable;
-  /**
-   * @var Reference
-   */
-  public $reference;
   protected $referenceType = Reference::class;
   protected $referenceDataType = '';
 

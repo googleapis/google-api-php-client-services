@@ -27,10 +27,6 @@ class MaintenanceSettings extends \Google\Model
    * @var bool
    */
   public $isRollback;
-  /**
-   * @var MaintenancePolicy[]
-   */
-  public $maintenancePolicies;
   protected $maintenancePoliciesType = MaintenancePolicy::class;
   protected $maintenancePoliciesDataType = 'map';
 

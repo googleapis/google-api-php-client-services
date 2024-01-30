@@ -20,16 +20,8 @@ namespace Google\Service\Connectors;
 class SloMetadata extends \Google\Collection
 {
   protected $collection_key = 'nodes';
-  /**
-   * @var NodeSloMetadata[]
-   */
-  public $nodes;
   protected $nodesType = NodeSloMetadata::class;
   protected $nodesDataType = 'array';
-  /**
-   * @var PerSliSloEligibility
-   */
-  public $perSliEligibility;
   protected $perSliEligibilityType = PerSliSloEligibility::class;
   protected $perSliEligibilityDataType = '';
   /**
