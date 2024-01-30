@@ -31,10 +31,6 @@ class Value extends \Google\Model
    * @var string
    */
   public $dateValue;
-  /**
-   * @var ListValue
-   */
-  public $listValue;
   protected $listValueType = ListValue::class;
   protected $listValueDataType = '';
   /**
@@ -50,10 +46,6 @@ class Value extends \Google\Model
    * @var string
    */
   public $stringValue;
-  /**
-   * @var Struct
-   */
-  public $structValue;
   protected $structValueType = Struct::class;
   protected $structValueDataType = '';
 

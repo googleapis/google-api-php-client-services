@@ -20,10 +20,6 @@ namespace Google\Service\Script;
 class ListValue extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var Value[]
-   */
-  public $values;
   protected $valuesType = Value::class;
   protected $valuesDataType = 'array';
 

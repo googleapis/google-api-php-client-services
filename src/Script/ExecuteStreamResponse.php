@@ -19,10 +19,6 @@ namespace Google\Service\Script;
 
 class ExecuteStreamResponse extends \Google\Model
 {
-  /**
-   * @var ScriptExecutionResult
-   */
-  public $result;
   protected $resultType = ScriptExecutionResult::class;
   protected $resultDataType = '';
 

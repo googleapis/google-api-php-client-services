@@ -20,22 +20,10 @@ namespace Google\Service\Script;
 class Metrics extends \Google\Collection
 {
   protected $collection_key = 'totalExecutions';
-  /**
-   * @var MetricsValue[]
-   */
-  public $activeUsers;
   protected $activeUsersType = MetricsValue::class;
   protected $activeUsersDataType = 'array';
-  /**
-   * @var MetricsValue[]
-   */
-  public $failedExecutions;
   protected $failedExecutionsType = MetricsValue::class;
   protected $failedExecutionsDataType = 'array';
-  /**
-   * @var MetricsValue[]
-   */
-  public $totalExecutions;
   protected $totalExecutionsType = MetricsValue::class;
   protected $totalExecutionsDataType = 'array';
 

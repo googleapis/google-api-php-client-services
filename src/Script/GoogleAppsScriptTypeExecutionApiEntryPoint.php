@@ -19,10 +19,6 @@ namespace Google\Service\Script;
 
 class GoogleAppsScriptTypeExecutionApiEntryPoint extends \Google\Model
 {
-  /**
-   * @var GoogleAppsScriptTypeExecutionApiConfig
-   */
-  public $entryPointConfig;
   protected $entryPointConfigType = GoogleAppsScriptTypeExecutionApiConfig::class;
   protected $entryPointConfigDataType = '';
 

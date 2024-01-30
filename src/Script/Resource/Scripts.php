@@ -51,6 +51,7 @@ class Scripts extends \Google\Service\Resource
    * @param ExecutionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function run($scriptId, ExecutionRequest $postBody, $optParams = [])
   {

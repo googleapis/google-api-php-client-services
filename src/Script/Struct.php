@@ -19,10 +19,6 @@ namespace Google\Service\Script;
 
 class Struct extends \Google\Model
 {
-  /**
-   * @var Value[]
-   */
-  public $fields;
   protected $fieldsType = Value::class;
   protected $fieldsDataType = 'map';
 

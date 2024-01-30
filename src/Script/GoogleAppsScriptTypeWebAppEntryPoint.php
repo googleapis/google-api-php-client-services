@@ -19,10 +19,6 @@ namespace Google\Service\Script;
 
 class GoogleAppsScriptTypeWebAppEntryPoint extends \Google\Model
 {
-  /**
-   * @var GoogleAppsScriptTypeWebAppConfig
-   */
-  public $entryPointConfig;
   protected $entryPointConfigType = GoogleAppsScriptTypeWebAppConfig::class;
   protected $entryPointConfigDataType = '';
   /**

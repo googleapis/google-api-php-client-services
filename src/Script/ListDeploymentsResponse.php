@@ -20,10 +20,6 @@ namespace Google\Service\Script;
 class ListDeploymentsResponse extends \Google\Collection
 {
   protected $collection_key = 'deployments';
-  /**
-   * @var Deployment[]
-   */
-  public $deployments;
   protected $deploymentsType = Deployment::class;
   protected $deploymentsDataType = 'array';
   /**
