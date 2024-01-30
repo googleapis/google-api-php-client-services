@@ -19,10 +19,6 @@ namespace Google\Service\Texttospeech;
 
 class VoiceSelectionParams extends \Google\Model
 {
-  /**
-   * @var CustomVoiceParams
-   */
-  public $customVoice;
   protected $customVoiceType = CustomVoiceParams::class;
   protected $customVoiceDataType = '';
   /**

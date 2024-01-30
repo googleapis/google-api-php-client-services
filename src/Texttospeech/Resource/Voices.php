@@ -42,6 +42,7 @@ class Voices extends \Google\Service\Resource
    * will be returned. If you specify `"no"`, both `"no-"` (Norwegian) and `"nb-"`
    * (Norwegian Bokmal) voices will be returned.
    * @return ListVoicesResponse
+   * @throws \Google\Service\Exception
    */
   public function listVoices($optParams = [])
   {
