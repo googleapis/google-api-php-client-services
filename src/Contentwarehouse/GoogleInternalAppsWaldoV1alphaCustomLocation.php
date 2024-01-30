@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaCustomLocation extends \Google\Model
 {
-  /**
-   * @var GoogleTypeLatLng
-   */
-  public $geoCoordinates;
   protected $geoCoordinatesType = GoogleTypeLatLng::class;
   protected $geoCoordinatesDataType = '';
   /**

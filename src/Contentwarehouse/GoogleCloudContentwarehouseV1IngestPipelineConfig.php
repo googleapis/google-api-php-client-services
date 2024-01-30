@@ -23,10 +23,6 @@ class GoogleCloudContentwarehouseV1IngestPipelineConfig extends \Google\Model
    * @var string
    */
   public $cloudFunction;
-  /**
-   * @var GoogleIamV1Policy
-   */
-  public $documentAclPolicy;
   protected $documentAclPolicyType = GoogleIamV1Policy::class;
   protected $documentAclPolicyDataType = '';
   /**

@@ -23,10 +23,6 @@ class GoogleCloudContentwarehouseV1RunPipelineMetadataIndividualDocumentStatus e
    * @var string
    */
   public $documentId;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

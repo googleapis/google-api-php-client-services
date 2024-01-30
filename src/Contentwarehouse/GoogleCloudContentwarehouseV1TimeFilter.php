@@ -23,10 +23,6 @@ class GoogleCloudContentwarehouseV1TimeFilter extends \Google\Model
    * @var string
    */
   public $timeField;
-  /**
-   * @var GoogleTypeInterval
-   */
-  public $timeRange;
   protected $timeRangeType = GoogleTypeInterval::class;
   protected $timeRangeDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1ListLinkedTargetsResponse extends \Google\Collection
 {
   protected $collection_key = 'documentLinks';
-  /**
-   * @var GoogleCloudContentwarehouseV1DocumentLink[]
-   */
-  public $documentLinks;
   protected $documentLinksType = GoogleCloudContentwarehouseV1DocumentLink::class;
   protected $documentLinksDataType = 'array';
   /**

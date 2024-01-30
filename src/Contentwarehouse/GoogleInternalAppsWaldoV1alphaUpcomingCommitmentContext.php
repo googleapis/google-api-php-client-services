@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaUpcomingCommitmentContext extends \Google\Model
 {
-  /**
-   * @var GoogleInternalAppsWaldoV1alphaUserStatus
-   */
-  public $nextCommitmentStatus;
   protected $nextCommitmentStatusType = GoogleInternalAppsWaldoV1alphaUserStatus::class;
   protected $nextCommitmentStatusDataType = '';
   /**

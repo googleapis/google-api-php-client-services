@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1UpdateOptions extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContentwarehouseV1MergeFieldsOptions
-   */
-  public $mergeFieldsOptions;
   protected $mergeFieldsOptionsType = GoogleCloudContentwarehouseV1MergeFieldsOptions::class;
   protected $mergeFieldsOptionsDataType = '';
   /**

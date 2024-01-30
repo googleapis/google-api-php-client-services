@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleInternalAppsWaldoV1alphaUpcomingOooContext extends \Google\Model
 {
-  /**
-   * @var GoogleInternalAppsWaldoV1alphaTimeRange
-   */
-  public $timeRange;
   protected $timeRangeType = GoogleInternalAppsWaldoV1alphaTimeRange::class;
   protected $timeRangeDataType = '';
 

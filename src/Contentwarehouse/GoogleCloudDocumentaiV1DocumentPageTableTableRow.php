@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudDocumentaiV1DocumentPageTableTableRow extends \Google\Collection
 {
   protected $collection_key = 'cells';
-  /**
-   * @var GoogleCloudDocumentaiV1DocumentPageTableTableCell[]
-   */
-  public $cells;
   protected $cellsType = GoogleCloudDocumentaiV1DocumentPageTableTableCell::class;
   protected $cellsDataType = 'array';
 

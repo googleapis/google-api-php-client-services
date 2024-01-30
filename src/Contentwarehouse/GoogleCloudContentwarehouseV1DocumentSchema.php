@@ -40,10 +40,6 @@ class GoogleCloudContentwarehouseV1DocumentSchema extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var GoogleCloudContentwarehouseV1PropertyDefinition[]
-   */
-  public $propertyDefinitions;
   protected $propertyDefinitionsType = GoogleCloudContentwarehouseV1PropertyDefinition::class;
   protected $propertyDefinitionsDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class GoogleCloudContentwarehouseV1QAResult extends \Google\Collection
    * @var float
    */
   public $confidenceScore;
-  /**
-   * @var GoogleCloudContentwarehouseV1QAResultHighlight[]
-   */
-  public $highlights;
   protected $highlightsType = GoogleCloudContentwarehouseV1QAResultHighlight::class;
   protected $highlightsDataType = 'array';
 

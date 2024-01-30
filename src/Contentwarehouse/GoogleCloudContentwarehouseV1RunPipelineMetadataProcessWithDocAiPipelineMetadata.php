@@ -24,10 +24,6 @@ class GoogleCloudContentwarehouseV1RunPipelineMetadataProcessWithDocAiPipelineMe
    * @var string[]
    */
   public $documents;
-  /**
-   * @var GoogleCloudContentwarehouseV1ProcessorInfo
-   */
-  public $processorInfo;
   protected $processorInfoType = GoogleCloudContentwarehouseV1ProcessorInfo::class;
   protected $processorInfoDataType = '';
 

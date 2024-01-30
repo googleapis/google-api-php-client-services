@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GoogleCloudContentwarehouseV1Document extends \Google\Collection
 {
   protected $collection_key = 'properties';
-  /**
-   * @var GoogleCloudDocumentaiV1Document
-   */
-  public $cloudAiDocument;
   protected $cloudAiDocumentType = GoogleCloudDocumentaiV1Document::class;
   protected $cloudAiDocumentDataType = '';
   /**
@@ -70,10 +66,6 @@ class GoogleCloudContentwarehouseV1Document extends \Google\Collection
    * @var string
    */
   public $plainText;
-  /**
-   * @var GoogleCloudContentwarehouseV1Property[]
-   */
-  public $properties;
   protected $propertiesType = GoogleCloudContentwarehouseV1Property::class;
   protected $propertiesDataType = 'array';
   /**

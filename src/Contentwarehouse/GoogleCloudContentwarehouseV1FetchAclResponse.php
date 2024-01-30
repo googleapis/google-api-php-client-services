@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleCloudContentwarehouseV1FetchAclResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContentwarehouseV1ResponseMetadata
-   */
-  public $metadata;
   protected $metadataType = GoogleCloudContentwarehouseV1ResponseMetadata::class;
   protected $metadataDataType = '';
-  /**
-   * @var GoogleIamV1Policy
-   */
-  public $policy;
   protected $policyType = GoogleIamV1Policy::class;
   protected $policyDataType = '';
 

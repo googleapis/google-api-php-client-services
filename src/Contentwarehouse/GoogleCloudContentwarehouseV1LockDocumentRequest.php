@@ -23,10 +23,6 @@ class GoogleCloudContentwarehouseV1LockDocumentRequest extends \Google\Model
    * @var string
    */
   public $collectionId;
-  /**
-   * @var GoogleCloudContentwarehouseV1UserInfo
-   */
-  public $lockingUser;
   protected $lockingUserType = GoogleCloudContentwarehouseV1UserInfo::class;
   protected $lockingUserDataType = '';
 
