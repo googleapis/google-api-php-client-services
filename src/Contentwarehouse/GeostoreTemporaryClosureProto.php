@@ -19,28 +19,12 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreTemporaryClosureProto extends \Google\Model
 {
-  /**
-   * @var GeostoreDateTimeProto
-   */
-  public $endAsOfDate;
   protected $endAsOfDateType = GeostoreDateTimeProto::class;
   protected $endAsOfDateDataType = '';
-  /**
-   * @var GeostoreDateTimeProto
-   */
-  public $endDate;
   protected $endDateType = GeostoreDateTimeProto::class;
   protected $endDateDataType = '';
-  /**
-   * @var GeostoreDateTimeProto
-   */
-  public $startAsOfDate;
   protected $startAsOfDateType = GeostoreDateTimeProto::class;
   protected $startAsOfDateDataType = '';
-  /**
-   * @var GeostoreDateTimeProto
-   */
-  public $startDate;
   protected $startDateType = GeostoreDateTimeProto::class;
   protected $startDateDataType = '';
 

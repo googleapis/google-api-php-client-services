@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GoogleAssistantAccessoryV1DeviceStateInstalledAppsState extends \Google\Collection
 {
   protected $collection_key = 'apps';
-  /**
-   * @var AssistantApiCoreTypesProvider[]
-   */
-  public $apps;
   protected $appsType = AssistantApiCoreTypesProvider::class;
   protected $appsDataType = 'array';
 

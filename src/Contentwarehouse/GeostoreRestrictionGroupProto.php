@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRestrictionGroupProto extends \Google\Collection
 {
   protected $collection_key = 'segment';
-  /**
-   * @var GeostoreFieldMetadataProto
-   */
-  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
-  /**
-   * @var GeostoreFeatureIdProto[]
-   */
-  public $segment;
   protected $segmentType = GeostoreFeatureIdProto::class;
   protected $segmentDataType = 'array';
 

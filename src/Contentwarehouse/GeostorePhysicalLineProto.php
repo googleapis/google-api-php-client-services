@@ -24,10 +24,6 @@ class GeostorePhysicalLineProto extends \Google\Collection
    * @var float
    */
   public $dashLengthMeters;
-  /**
-   * @var GeostorePaintedElementLogicalColorProto
-   */
-  public $gapColor;
   protected $gapColorType = GeostorePaintedElementLogicalColorProto::class;
   protected $gapColorDataType = '';
   /**
@@ -38,10 +34,6 @@ class GeostorePhysicalLineProto extends \Google\Collection
    * @var string[]
    */
   public $material;
-  /**
-   * @var GeostorePaintedElementLogicalColorProto
-   */
-  public $paintColor;
   protected $paintColorType = GeostorePaintedElementLogicalColorProto::class;
   protected $paintColorDataType = '';
   /**

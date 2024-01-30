@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GoogleAssistantAccessoryV1ScreenOutConfig extends \Google\Model
 {
-  /**
-   * @var GoogleAssistantAccessoryV1ScreenOutConfigDimensions
-   */
-  public $dimensions;
   protected $dimensionsType = GoogleAssistantAccessoryV1ScreenOutConfigDimensions::class;
   protected $dimensionsDataType = '';
   /**

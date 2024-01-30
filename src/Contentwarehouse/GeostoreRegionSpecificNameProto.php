@@ -23,10 +23,6 @@ class GeostoreRegionSpecificNameProto extends \Google\Model
    * @var bool
    */
   public $displayableAsAlternativeName;
-  /**
-   * @var GeostoreNameProto
-   */
-  public $name;
   protected $nameType = GeostoreNameProto::class;
   protected $nameDataType = '';
   /**

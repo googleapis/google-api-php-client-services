@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreRoadSignComponentProto extends \Google\Model
 {
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $featureId;
   protected $featureIdType = GeostoreFeatureIdProto::class;
   protected $featureIdDataType = '';
   /**
@@ -45,10 +41,6 @@ class GeostoreRoadSignComponentProto extends \Google\Model
    * @var string
    */
   public $semanticType;
-  /**
-   * @var GeostoreNameProto
-   */
-  public $text;
   protected $textType = GeostoreNameProto::class;
   protected $textDataType = '';
   /**

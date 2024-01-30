@@ -24,10 +24,6 @@ class GoogleAssistantEmbeddedV1Timers extends \Google\Collection
    * @var string
    */
   public $stateFetchError;
-  /**
-   * @var GoogleAssistantEmbeddedV1Timer[]
-   */
-  public $timers;
   protected $timersType = GoogleAssistantEmbeddedV1Timer::class;
   protected $timersDataType = 'array';
 

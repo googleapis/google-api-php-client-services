@@ -35,20 +35,12 @@ class GoodocParagraph extends \Google\Collection
         "textConfidence" => "TextConfidence",
         "width" => "Width",
   ];
-  /**
-   * @var GoodocBoundingBox
-   */
-  public $box;
   protected $boxType = GoodocBoundingBox::class;
   protected $boxDataType = '';
   /**
    * @var int
    */
   public $firstLineIndent;
-  /**
-   * @var GoodocLabel
-   */
-  public $label;
   protected $labelType = GoodocLabel::class;
   protected $labelDataType = '';
   /**
@@ -59,20 +51,12 @@ class GoodocParagraph extends \Google\Collection
    * @var int
    */
   public $lineSpacing;
-  /**
-   * @var GoodocOrientationLabel
-   */
-  public $orientationLabel;
   protected $orientationLabelType = GoodocOrientationLabel::class;
   protected $orientationLabelDataType = '';
   /**
    * @var int
    */
   public $rightIndent;
-  /**
-   * @var GoodocRotatedBoundingBox
-   */
-  public $rotatedBox;
   protected $rotatedBoxType = GoodocRotatedBoundingBox::class;
   protected $rotatedBoxDataType = '';
   /**
@@ -83,10 +67,6 @@ class GoodocParagraph extends \Google\Collection
    * @var int
    */
   public $spaceBefore;
-  /**
-   * @var GoodocParagraph[]
-   */
-  public $subsumedParagraphProperties;
   protected $subsumedParagraphPropertiesType = GoodocParagraph::class;
   protected $subsumedParagraphPropertiesDataType = 'array';
   /**
@@ -101,16 +81,8 @@ class GoodocParagraph extends \Google\Collection
    * @var int
    */
   public $alignment;
-  /**
-   * @var GoodocParagraphDroppedCap
-   */
-  public $droppedcap;
   protected $droppedcapType = GoodocParagraphDroppedCap::class;
   protected $droppedcapDataType = '';
-  /**
-   * @var GoodocParagraphRoute[]
-   */
-  public $route;
   protected $routeType = GoodocParagraphRoute::class;
   protected $routeDataType = 'array';
 

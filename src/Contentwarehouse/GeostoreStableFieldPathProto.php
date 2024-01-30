@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreStableFieldPathProto extends \Google\Collection
 {
   protected $collection_key = 'fieldPath';
-  /**
-   * @var GeostoreStableFieldPathProtoStableFieldSelector[]
-   */
-  public $fieldPath;
   protected $fieldPathType = GeostoreStableFieldPathProtoStableFieldSelector::class;
   protected $fieldPathDataType = 'array';
 

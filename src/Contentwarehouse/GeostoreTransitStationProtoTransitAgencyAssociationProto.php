@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreTransitStationProtoTransitAgencyAssociationProto extends \Google\Model
 {
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $agency;
   protected $agencyType = GeostoreFeatureIdProto::class;
   protected $agencyDataType = '';
   /**

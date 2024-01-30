@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreUrlListProto extends \Google\Collection
 {
   protected $collection_key = 'url';
-  /**
-   * @var GeostoreUrlProto[]
-   */
-  public $url;
   protected $urlType = GeostoreUrlProto::class;
   protected $urlDataType = 'array';
 

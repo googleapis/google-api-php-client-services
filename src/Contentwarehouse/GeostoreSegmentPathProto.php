@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreSegmentPathProto extends \Google\Collection
 {
   protected $collection_key = 'subpath';
-  /**
-   * @var GeostoreFeatureIdProto[]
-   */
-  public $subpath;
   protected $subpathType = GeostoreFeatureIdProto::class;
   protected $subpathDataType = 'array';
 

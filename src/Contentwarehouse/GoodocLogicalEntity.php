@@ -27,10 +27,6 @@ class GoodocLogicalEntity extends \Google\Collection
    * @var string
    */
   public $metadata;
-  /**
-   * @var GoodocLogicalEntityLink[]
-   */
-  public $link;
   protected $linkType = GoodocLogicalEntityLink::class;
   protected $linkDataType = 'array';
 

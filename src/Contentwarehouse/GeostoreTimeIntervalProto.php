@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreTimeIntervalProto extends \Google\Model
 {
-  /**
-   * @var GeostoreTimeEndpointProto
-   */
-  public $begin;
   protected $beginType = GeostoreTimeEndpointProto::class;
   protected $beginDataType = '';
-  /**
-   * @var GeostoreTimeEndpointProto
-   */
-  public $end;
   protected $endType = GeostoreTimeEndpointProto::class;
   protected $endDataType = '';
   /**

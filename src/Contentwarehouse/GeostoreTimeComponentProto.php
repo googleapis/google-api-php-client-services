@@ -24,10 +24,6 @@ class GeostoreTimeComponentProto extends \Google\Collection
    * @var string
    */
   public $componentType;
-  /**
-   * @var GeostoreTimeIntervalProto[]
-   */
-  public $interval;
   protected $intervalType = GeostoreTimeIntervalProto::class;
   protected $intervalDataType = 'array';
 

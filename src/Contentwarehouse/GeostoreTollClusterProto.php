@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTollClusterProto extends \Google\Collection
 {
   protected $collection_key = 'intersection';
-  /**
-   * @var GeostoreFeatureIdProto[]
-   */
-  public $intersection;
   protected $intersectionType = GeostoreFeatureIdProto::class;
   protected $intersectionDataType = 'array';
 

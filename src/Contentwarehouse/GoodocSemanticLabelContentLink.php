@@ -26,16 +26,8 @@ class GoodocSemanticLabelContentLink extends \Google\Model
    * @var string
    */
   public $urlTarget;
-  /**
-   * @var GoodocSemanticLabelContentLinkCitationTarget
-   */
-  public $citationtarget;
   protected $citationtargetType = GoodocSemanticLabelContentLinkCitationTarget::class;
   protected $citationtargetDataType = '';
-  /**
-   * @var GoodocSemanticLabelContentLinkInVolumeTarget
-   */
-  public $involumetarget;
   protected $involumetargetType = GoodocSemanticLabelContentLinkInVolumeTarget::class;
   protected $involumetargetDataType = '';
 

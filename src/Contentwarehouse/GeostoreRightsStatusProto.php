@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRightsStatusProto extends \Google\Collection
 {
   protected $collection_key = 'fieldWithRights';
-  /**
-   * @var GeostoreFieldWithRightsProto[]
-   */
-  public $fieldWithRights;
   protected $fieldWithRightsType = GeostoreFieldWithRightsProto::class;
   protected $fieldWithRightsDataType = 'array';
 

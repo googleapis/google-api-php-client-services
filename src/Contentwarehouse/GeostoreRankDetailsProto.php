@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRankDetailsProto extends \Google\Collection
 {
   protected $collection_key = 'signal';
-  /**
-   * @var GeostoreRankSignalProto[]
-   */
-  public $signal;
   protected $signalType = GeostoreRankSignalProto::class;
   protected $signalDataType = 'array';
   /**

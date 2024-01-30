@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreTransitLineVariantProto extends \Google\Collection
 {
   protected $collection_key = 'stops';
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $lineConcept;
   protected $lineConceptType = GeostoreFeatureIdProto::class;
   protected $lineConceptDataType = '';
-  /**
-   * @var GeostoreServicedStopProto[]
-   */
-  public $stops;
   protected $stopsType = GeostoreServicedStopProto::class;
   protected $stopsDataType = 'array';
 

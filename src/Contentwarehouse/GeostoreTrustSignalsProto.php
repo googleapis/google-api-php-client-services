@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreTrustSignalsProto extends \Google\Model
 {
-  /**
-   * @var GeostoreSourceTrustProto
-   */
-  public $sourceTrust;
   protected $sourceTrustType = GeostoreSourceTrustProto::class;
   protected $sourceTrustDataType = '';
 

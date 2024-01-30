@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreRectProto extends \Google\Model
 {
-  /**
-   * @var GeostorePointProto
-   */
-  public $hi;
   protected $hiType = GeostorePointProto::class;
   protected $hiDataType = '';
-  /**
-   * @var GeostorePointProto
-   */
-  public $lo;
   protected $loType = GeostorePointProto::class;
   protected $loDataType = '';
 

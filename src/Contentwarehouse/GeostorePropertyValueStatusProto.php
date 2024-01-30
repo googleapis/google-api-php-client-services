@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostorePropertyValueStatusProto extends \Google\Model
 {
-  /**
-   * @var GeostoreFeaturePropertyIdProto
-   */
-  public $propertyId;
   protected $propertyIdType = GeostoreFeaturePropertyIdProto::class;
   protected $propertyIdDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreRoadSignProto extends \Google\Collection
 {
   protected $collection_key = 'component';
-  /**
-   * @var GeostoreRoadSignComponentProto[]
-   */
-  public $component;
   protected $componentType = GeostoreRoadSignComponentProto::class;
   protected $componentDataType = 'array';
 

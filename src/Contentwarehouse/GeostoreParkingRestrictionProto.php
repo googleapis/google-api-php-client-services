@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreParkingRestrictionProto extends \Google\Collection
 {
   protected $collection_key = 'vehicleType';
-  /**
-   * @var GeostoreTimeScheduleProto
-   */
-  public $restrictedHours;
   protected $restrictedHoursType = GeostoreTimeScheduleProto::class;
   protected $restrictedHoursDataType = '';
   /**
