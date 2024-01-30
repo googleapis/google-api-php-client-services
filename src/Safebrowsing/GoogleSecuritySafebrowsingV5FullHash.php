@@ -24,10 +24,6 @@ class GoogleSecuritySafebrowsingV5FullHash extends \Google\Collection
    * @var string
    */
   public $fullHash;
-  /**
-   * @var GoogleSecuritySafebrowsingV5FullHashFullHashDetail[]
-   */
-  public $fullHashDetails;
   protected $fullHashDetailsType = GoogleSecuritySafebrowsingV5FullHashFullHashDetail::class;
   protected $fullHashDetailsDataType = 'array';
 

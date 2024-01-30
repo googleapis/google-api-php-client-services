@@ -37,6 +37,7 @@ class Hashes extends \Google\Service\Resource
    *
    * @opt_param string hashPrefixes Required. The hash prefixes to be looked up.
    * @return GoogleSecuritySafebrowsingV5SearchHashesResponse
+   * @throws \Google\Service\Exception
    */
   public function search($optParams = [])
   {
