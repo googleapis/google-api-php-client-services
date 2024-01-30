@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class YoutubeDiscoveryLegosLegosAnnotations extends \Google\Collection
 {
   protected $collection_key = 'annotations';
-  /**
-   * @var YoutubeDiscoveryLegosLegosAnnotation[]
-   */
-  public $annotations;
   protected $annotationsType = YoutubeDiscoveryLegosLegosAnnotation::class;
   protected $annotationsDataType = 'array';
 

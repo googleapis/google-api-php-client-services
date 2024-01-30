@@ -28,10 +28,6 @@ class YoutubeCommentsSentimentSentimentEntitySentimentAnnotation extends \Google
    * @var float
    */
   public $magnitude;
-  /**
-   * @var YoutubeCommentsSentimentSentimentEntitySentimentAnnotationMentionSentimentAnnotation[]
-   */
-  public $mentionSentiment;
   protected $mentionSentimentType = YoutubeCommentsSentimentSentimentEntitySentimentAnnotationMentionSentimentAnnotation::class;
   protected $mentionSentimentDataType = 'array';
   /**

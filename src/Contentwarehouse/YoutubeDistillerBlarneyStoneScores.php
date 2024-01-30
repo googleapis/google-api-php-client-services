@@ -32,10 +32,6 @@ class YoutubeDistillerBlarneyStoneScores extends \Google\Collection
    * @var float
    */
   public $mildHateHarassV2Score;
-  /**
-   * @var YoutubeDistillerModelScore[]
-   */
-  public $modelScores;
   protected $modelScoresType = YoutubeDistillerModelScore::class;
   protected $modelScoresDataType = 'array';
   /**

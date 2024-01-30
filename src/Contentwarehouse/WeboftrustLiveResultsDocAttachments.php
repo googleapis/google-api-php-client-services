@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class WeboftrustLiveResultsDocAttachments extends \Google\Collection
 {
   protected $collection_key = 'providerAttachment';
-  /**
-   * @var WeboftrustLiveResultDocBoostData[]
-   */
-  public $docBoost;
   protected $docBoostType = WeboftrustLiveResultDocBoostData::class;
   protected $docBoostDataType = 'array';
-  /**
-   * @var WeboftrustLiveResultProviderDocAttachment[]
-   */
-  public $providerAttachment;
   protected $providerAttachmentType = WeboftrustLiveResultProviderDocAttachment::class;
   protected $providerAttachmentDataType = 'array';
 

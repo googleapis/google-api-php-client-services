@@ -23,10 +23,6 @@ class WeboftrustLiveResultDocBoostData extends \Google\Model
    * @var float
    */
   public $boostLevel;
-  /**
-   * @var WeboftrustTimeRange
-   */
-  public $hotTimes;
   protected $hotTimesType = WeboftrustTimeRange::class;
   protected $hotTimesDataType = '';
 

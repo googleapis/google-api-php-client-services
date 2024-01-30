@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class WatchpageLanguageWatchPageLanguageModelPredictions extends \Google\Collection
 {
   protected $collection_key = 'languageScore';
-  /**
-   * @var WatchpageLanguageWatchPageLanguageModelPredictionsLanguageScore[]
-   */
-  public $languageScore;
   protected $languageScoreType = WatchpageLanguageWatchPageLanguageModelPredictionsLanguageScore::class;
   protected $languageScoreDataType = 'array';
   /**
