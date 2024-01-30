@@ -20,10 +20,6 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1ConversationTranscript extends \Google\Collection
 {
   protected $collection_key = 'transcriptSegments';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegment[]
-   */
-  public $transcriptSegments;
   protected $transcriptSegmentsType = GoogleCloudContactcenterinsightsV1alpha1ConversationTranscriptTranscriptSegment::class;
   protected $transcriptSegmentsDataType = 'array';
 

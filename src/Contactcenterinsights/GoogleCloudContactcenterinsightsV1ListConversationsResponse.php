@@ -20,10 +20,6 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ListConversationsResponse extends \Google\Collection
 {
   protected $collection_key = 'conversations';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1Conversation[]
-   */
-  public $conversations;
   protected $conversationsType = GoogleCloudContactcenterinsightsV1Conversation::class;
   protected $conversationsDataType = 'array';
   /**

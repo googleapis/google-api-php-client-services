@@ -20,10 +20,6 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadata extends \Google\Collection
 {
   protected $collection_key = 'agentInfo';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo[]
-   */
-  public $agentInfo;
   protected $agentInfoType = GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo::class;
   protected $agentInfoDataType = 'array';
   /**

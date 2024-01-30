@@ -28,10 +28,6 @@ class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment 
    * @var float
    */
   public $confidence;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata
-   */
-  public $dialogflowSegmentMetadata;
   protected $dialogflowSegmentMetadataType = GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadata::class;
   protected $dialogflowSegmentMetadataDataType = '';
   /**
@@ -42,26 +38,14 @@ class GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegment 
    * @var string
    */
   public $messageTime;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1ConversationParticipant
-   */
-  public $segmentParticipant;
   protected $segmentParticipantType = GoogleCloudContactcenterinsightsV1ConversationParticipant::class;
   protected $segmentParticipantDataType = '';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1SentimentData
-   */
-  public $sentiment;
   protected $sentimentType = GoogleCloudContactcenterinsightsV1SentimentData::class;
   protected $sentimentDataType = '';
   /**
    * @var string
    */
   public $text;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo[]
-   */
-  public $words;
   protected $wordsType = GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentWordInfo::class;
   protected $wordsDataType = 'array';
 

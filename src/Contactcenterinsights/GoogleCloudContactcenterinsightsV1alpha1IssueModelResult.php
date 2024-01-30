@@ -24,10 +24,6 @@ class GoogleCloudContactcenterinsightsV1alpha1IssueModelResult extends \Google\C
    * @var string
    */
   public $issueModel;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1alpha1IssueAssignment[]
-   */
-  public $issues;
   protected $issuesType = GoogleCloudContactcenterinsightsV1alpha1IssueAssignment::class;
   protected $issuesDataType = 'array';
 

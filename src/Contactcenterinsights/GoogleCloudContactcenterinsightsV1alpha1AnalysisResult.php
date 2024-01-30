@@ -19,10 +19,6 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1alpha1AnalysisResult extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata
-   */
-  public $callAnalysisMetadata;
   protected $callAnalysisMetadataType = GoogleCloudContactcenterinsightsV1alpha1AnalysisResultCallAnalysisMetadata::class;
   protected $callAnalysisMetadataDataType = '';
   /**

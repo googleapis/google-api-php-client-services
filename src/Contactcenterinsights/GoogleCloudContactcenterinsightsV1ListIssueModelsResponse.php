@@ -20,10 +20,6 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1ListIssueModelsResponse extends \Google\Collection
 {
   protected $collection_key = 'issueModels';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1IssueModel[]
-   */
-  public $issueModels;
   protected $issueModelsType = GoogleCloudContactcenterinsightsV1IssueModel::class;
   protected $issueModelsDataType = 'array';
 

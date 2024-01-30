@@ -19,10 +19,6 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1CreateAnalysisOperationMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContactcenterinsightsV1AnnotatorSelector
-   */
-  public $annotatorSelector;
   protected $annotatorSelectorType = GoogleCloudContactcenterinsightsV1AnnotatorSelector::class;
   protected $annotatorSelectorDataType = '';
   /**

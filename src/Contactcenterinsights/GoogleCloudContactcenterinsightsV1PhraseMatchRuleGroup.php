@@ -20,10 +20,6 @@ namespace Google\Service\Contactcenterinsights;
 class GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroup extends \Google\Collection
 {
   protected $collection_key = 'phraseMatchRules';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1PhraseMatchRule[]
-   */
-  public $phraseMatchRules;
   protected $phraseMatchRulesType = GoogleCloudContactcenterinsightsV1PhraseMatchRule::class;
   protected $phraseMatchRulesDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class GoogleCloudContactcenterinsightsV1ListPhraseMatchersResponse extends \Goog
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1PhraseMatcher[]
-   */
-  public $phraseMatchers;
   protected $phraseMatchersType = GoogleCloudContactcenterinsightsV1PhraseMatcher::class;
   protected $phraseMatchersDataType = 'array';
 

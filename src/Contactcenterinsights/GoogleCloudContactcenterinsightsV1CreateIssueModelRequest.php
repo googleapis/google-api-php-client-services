@@ -19,10 +19,6 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1CreateIssueModelRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContactcenterinsightsV1IssueModel
-   */
-  public $issueModel;
   protected $issueModelType = GoogleCloudContactcenterinsightsV1IssueModel::class;
   protected $issueModelDataType = '';
   /**

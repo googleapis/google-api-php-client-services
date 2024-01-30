@@ -19,10 +19,6 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContactcenterinsightsV1IssueModelLabelStats
-   */
-  public $currentStats;
   protected $currentStatsType = GoogleCloudContactcenterinsightsV1IssueModelLabelStats::class;
   protected $currentStatsDataType = '';
 

@@ -23,10 +23,6 @@ class GoogleCloudContactcenterinsightsV1alpha1ConversationLevelSentiment extends
    * @var int
    */
   public $channelTag;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1alpha1SentimentData
-   */
-  public $sentimentData;
   protected $sentimentDataType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataDataType = '';
 

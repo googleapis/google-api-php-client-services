@@ -31,10 +31,6 @@ class GoogleCloudContactcenterinsightsV1alpha1Entity extends \Google\Model
    * @var float
    */
   public $salience;
-  /**
-   * @var GoogleCloudContactcenterinsightsV1alpha1SentimentData
-   */
-  public $sentiment;
   protected $sentimentType = GoogleCloudContactcenterinsightsV1alpha1SentimentData::class;
   protected $sentimentDataType = '';
   /**

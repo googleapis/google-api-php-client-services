@@ -19,16 +19,8 @@ namespace Google\Service\Contactcenterinsights;
 
 class GoogleCloudContactcenterinsightsV1ConversationDataSource extends \Google\Model
 {
-  /**
-   * @var GoogleCloudContactcenterinsightsV1DialogflowSource
-   */
-  public $dialogflowSource;
   protected $dialogflowSourceType = GoogleCloudContactcenterinsightsV1DialogflowSource::class;
   protected $dialogflowSourceDataType = '';
-  /**
-   * @var GoogleCloudContactcenterinsightsV1GcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = GoogleCloudContactcenterinsightsV1GcsSource::class;
   protected $gcsSourceDataType = '';
 

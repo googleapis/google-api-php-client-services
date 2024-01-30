@@ -45,6 +45,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @param GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function bulkAnalyze($parent, GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @param GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function bulkDelete($parent, GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest $postBody, $optParams = [])
   {
@@ -78,6 +80,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * This field is useful for getting statistics about conversations with specific
    * properties.
    * @return GoogleCloudContactcenterinsightsV1CalculateStatsResponse
+   * @throws \Google\Service\Exception
    */
   public function calculateStats($location, $optParams = [])
   {
@@ -98,6 +101,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * 4-64 characters and must match the regular expression `^[a-z0-9-]{4,64}$`.
    * Valid characters are `a-z-`
    * @return GoogleCloudContactcenterinsightsV1Conversation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudContactcenterinsightsV1Conversation $postBody, $optParams = [])
   {
@@ -115,6 +119,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * will also be deleted. Otherwise, the request will only succeed if the
    * conversation has no analyses.
    * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -131,6 +136,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @opt_param string view The level of details of the conversation. Default is
    * `FULL`.
    * @return GoogleCloudContactcenterinsightsV1Conversation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -146,6 +152,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @param GoogleCloudContactcenterinsightsV1IngestConversationsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function ingest($parent, GoogleCloudContactcenterinsightsV1IngestConversationsRequest $postBody, $optParams = [])
   {
@@ -172,6 +179,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @opt_param string view The level of details of the conversation. Default is
    * `BASIC`.
    * @return GoogleCloudContactcenterinsightsV1ListConversationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsConversations($parent, $optParams = [])
   {
@@ -189,6 +197,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    *
    * @opt_param string updateMask The list of fields to be updated.
    * @return GoogleCloudContactcenterinsightsV1Conversation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudContactcenterinsightsV1Conversation $postBody, $optParams = [])
   {
@@ -205,6 +214,7 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @param GoogleCloudContactcenterinsightsV1UploadConversationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function upload($parent, GoogleCloudContactcenterinsightsV1UploadConversationRequest $postBody, $optParams = [])
   {
