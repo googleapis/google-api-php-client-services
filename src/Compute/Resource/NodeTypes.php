@@ -97,6 +97,7 @@ class NodeTypes extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return NodeTypeAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -112,6 +113,7 @@ class NodeTypes extends \Google\Service\Resource
    * @param string $nodeType Name of the node type to return.
    * @param array $optParams Optional parameters.
    * @return NodeType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $nodeType, $optParams = [])
   {
@@ -179,6 +181,7 @@ class NodeTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NodeTypeList
+   * @throws \Google\Service\Exception
    */
   public function listNodeTypes($project, $zone, $optParams = [])
   {

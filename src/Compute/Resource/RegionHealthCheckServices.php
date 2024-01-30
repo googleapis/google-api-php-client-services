@@ -52,6 +52,7 @@ class RegionHealthCheckServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $healthCheckService, $optParams = [])
   {
@@ -69,6 +70,7 @@ class RegionHealthCheckServices extends \Google\Service\Resource
    * The name must be 1-63 characters long, and comply with RFC1035.
    * @param array $optParams Optional parameters.
    * @return HealthCheckService
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $healthCheckService, $optParams = [])
   {
@@ -97,6 +99,7 @@ class RegionHealthCheckServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, HealthCheckService $postBody, $optParams = [])
   {
@@ -165,6 +168,7 @@ class RegionHealthCheckServices extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return HealthCheckServicesList
+   * @throws \Google\Service\Exception
    */
   public function listRegionHealthCheckServices($project, $region, $optParams = [])
   {
@@ -196,6 +200,7 @@ class RegionHealthCheckServices extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $healthCheckService, HealthCheckService $postBody, $optParams = [])
   {

@@ -51,6 +51,7 @@ class TargetGrpcProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $targetGrpcProxy, $optParams = [])
   {
@@ -67,6 +68,7 @@ class TargetGrpcProxies extends \Google\Service\Resource
    * return.
    * @param array $optParams Optional parameters.
    * @return TargetGrpcProxy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $targetGrpcProxy, $optParams = [])
   {
@@ -93,6 +95,7 @@ class TargetGrpcProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, TargetGrpcProxy $postBody, $optParams = [])
   {
@@ -159,6 +162,7 @@ class TargetGrpcProxies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return TargetGrpcProxyList
+   * @throws \Google\Service\Exception
    */
   public function listTargetGrpcProxies($project, $optParams = [])
   {
@@ -187,6 +191,7 @@ class TargetGrpcProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $targetGrpcProxy, TargetGrpcProxy $postBody, $optParams = [])
   {

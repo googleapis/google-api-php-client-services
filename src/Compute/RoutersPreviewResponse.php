@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class RoutersPreviewResponse extends \Google\Model
 {
-  /**
-   * @var Router
-   */
-  public $resource;
   protected $resourceType = Router::class;
   protected $resourceDataType = '';
 

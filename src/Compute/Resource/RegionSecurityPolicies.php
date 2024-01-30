@@ -43,6 +43,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    *
    * @opt_param bool validateOnly If true, the request will not be committed.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addRule($project, $region, $securityPolicy, SecurityPolicyRule $postBody, $optParams = [])
   {
@@ -69,6 +70,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $securityPolicy, $optParams = [])
   {
@@ -85,6 +87,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * @param string $securityPolicy Name of the security policy to get.
    * @param array $optParams Optional parameters.
    * @return SecurityPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $securityPolicy, $optParams = [])
   {
@@ -104,6 +107,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * @opt_param int priority The priority of the rule to get from the security
    * policy.
    * @return SecurityPolicyRule
+   * @throws \Google\Service\Exception
    */
   public function getRule($project, $region, $securityPolicy, $optParams = [])
   {
@@ -132,6 +136,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * 00000000-0000-0000-0000-000000000000).
    * @opt_param bool validateOnly If true, the request will not be committed.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, SecurityPolicy $postBody, $optParams = [])
   {
@@ -199,6 +204,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return SecurityPolicyList
+   * @throws \Google\Service\Exception
    */
   public function listRegionSecurityPolicies($project, $region, $optParams = [])
   {
@@ -232,6 +238,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * @opt_param string updateMask Indicates fields to be cleared as part of this
    * request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $securityPolicy, SecurityPolicy $postBody, $optParams = [])
   {
@@ -255,6 +262,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * request.
    * @opt_param bool validateOnly If true, the request will not be committed.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patchRule($project, $region, $securityPolicy, SecurityPolicyRule $postBody, $optParams = [])
   {
@@ -273,6 +281,7 @@ class RegionSecurityPolicies extends \Google\Service\Resource
    * @opt_param int priority The priority of the rule to remove from the security
    * policy.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function removeRule($project, $region, $securityPolicy, $optParams = [])
   {

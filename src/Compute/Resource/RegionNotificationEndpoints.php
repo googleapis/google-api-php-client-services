@@ -52,6 +52,7 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $notificationEndpoint, $optParams = [])
   {
@@ -69,6 +70,7 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * to return.
    * @param array $optParams Optional parameters.
    * @return NotificationEndpoint
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $notificationEndpoint, $optParams = [])
   {
@@ -97,6 +99,7 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, NotificationEndpoint $postBody, $optParams = [])
   {
@@ -164,6 +167,7 @@ class RegionNotificationEndpoints extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NotificationEndpointList
+   * @throws \Google\Service\Exception
    */
   public function listRegionNotificationEndpoints($project, $region, $optParams = [])
   {

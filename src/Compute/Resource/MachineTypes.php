@@ -97,6 +97,7 @@ class MachineTypes extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return MachineTypeAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -112,6 +113,7 @@ class MachineTypes extends \Google\Service\Resource
    * @param string $machineType Name of the machine type to return.
    * @param array $optParams Optional parameters.
    * @return MachineType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $machineType, $optParams = [])
   {
@@ -179,6 +181,7 @@ class MachineTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return MachineTypeList
+   * @throws \Google\Service\Exception
    */
   public function listMachineTypes($project, $zone, $optParams = [])
   {

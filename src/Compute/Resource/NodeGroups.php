@@ -61,6 +61,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addNodes($project, $zone, $nodeGroup, NodeGroupsAddNodesRequest $postBody, $optParams = [])
   {
@@ -135,6 +136,7 @@ class NodeGroups extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return NodeGroupAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -161,6 +163,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $zone, $nodeGroup, $optParams = [])
   {
@@ -189,6 +192,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deleteNodes($project, $zone, $nodeGroup, NodeGroupsDeleteNodesRequest $postBody, $optParams = [])
   {
@@ -206,6 +210,7 @@ class NodeGroups extends \Google\Service\Resource
    * @param string $nodeGroup Name of the node group to return.
    * @param array $optParams Optional parameters.
    * @return NodeGroup
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $nodeGroup, $optParams = [])
   {
@@ -224,6 +229,7 @@ class NodeGroups extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $zone, $resource, $optParams = [])
   {
@@ -252,6 +258,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $zone, $initialNodeCount, NodeGroup $postBody, $optParams = [])
   {
@@ -320,6 +327,7 @@ class NodeGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NodeGroupList
+   * @throws \Google\Service\Exception
    */
   public function listNodeGroups($project, $zone, $optParams = [])
   {
@@ -388,6 +396,7 @@ class NodeGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NodeGroupsListNodes
+   * @throws \Google\Service\Exception
    */
   public function listNodes($project, $zone, $nodeGroup, $optParams = [])
   {
@@ -415,6 +424,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $zone, $nodeGroup, NodeGroup $postBody, $optParams = [])
   {
@@ -432,6 +442,7 @@ class NodeGroups extends \Google\Service\Resource
    * @param ZoneSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $zone, $resource, ZoneSetPolicyRequest $postBody, $optParams = [])
   {
@@ -459,6 +470,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setNodeTemplate($project, $zone, $nodeGroup, NodeGroupsSetNodeTemplateRequest $postBody, $optParams = [])
   {
@@ -488,6 +500,7 @@ class NodeGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function simulateMaintenanceEvent($project, $zone, $nodeGroup, NodeGroupsSimulateMaintenanceEventRequest $postBody, $optParams = [])
   {
@@ -505,6 +518,7 @@ class NodeGroups extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $zone, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

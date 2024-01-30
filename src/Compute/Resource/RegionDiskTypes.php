@@ -38,6 +38,7 @@ class RegionDiskTypes extends \Google\Service\Resource
    * @param string $diskType Name of the disk type to return.
    * @param array $optParams Optional parameters.
    * @return DiskType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $diskType, $optParams = [])
   {
@@ -105,6 +106,7 @@ class RegionDiskTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RegionDiskTypeList
+   * @throws \Google\Service\Exception
    */
   public function listRegionDiskTypes($project, $region, $optParams = [])
   {

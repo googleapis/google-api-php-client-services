@@ -31,16 +31,8 @@ class ResourcePolicyInstanceSchedulePolicy extends \Google\Model
    * @var string
    */
   public $timeZone;
-  /**
-   * @var ResourcePolicyInstanceSchedulePolicySchedule
-   */
-  public $vmStartSchedule;
   protected $vmStartScheduleType = ResourcePolicyInstanceSchedulePolicySchedule::class;
   protected $vmStartScheduleDataType = '';
-  /**
-   * @var ResourcePolicyInstanceSchedulePolicySchedule
-   */
-  public $vmStopSchedule;
   protected $vmStopScheduleType = ResourcePolicyInstanceSchedulePolicySchedule::class;
   protected $vmStopScheduleDataType = '';
 

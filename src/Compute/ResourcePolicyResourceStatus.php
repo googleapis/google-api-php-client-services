@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class ResourcePolicyResourceStatus extends \Google\Model
 {
-  /**
-   * @var ResourcePolicyResourceStatusInstanceSchedulePolicyStatus
-   */
-  public $instanceSchedulePolicy;
   protected $instanceSchedulePolicyType = ResourcePolicyResourceStatusInstanceSchedulePolicyStatus::class;
   protected $instanceSchedulePolicyDataType = '';
 

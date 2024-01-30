@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class Route extends \Google\Collection
 {
   protected $collection_key = 'warnings';
-  /**
-   * @var RouteAsPath[]
-   */
-  public $asPaths;
   protected $asPathsType = RouteAsPath::class;
   protected $asPathsDataType = 'array';
   /**
@@ -106,10 +102,6 @@ class Route extends \Google\Collection
    * @var string[]
    */
   public $tags;
-  /**
-   * @var RouteWarnings[]
-   */
-  public $warnings;
   protected $warningsType = RouteWarnings::class;
   protected $warningsDataType = 'array';
 

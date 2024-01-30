@@ -49,6 +49,7 @@ class Routes extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $route, $optParams = [])
   {
@@ -63,6 +64,7 @@ class Routes extends \Google\Service\Resource
    * @param string $route Name of the Route resource to return.
    * @param array $optParams Optional parameters.
    * @return Route
+   * @throws \Google\Service\Exception
    */
   public function get($project, $route, $optParams = [])
   {
@@ -89,6 +91,7 @@ class Routes extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, Route $postBody, $optParams = [])
   {
@@ -155,6 +158,7 @@ class Routes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RouteList
+   * @throws \Google\Service\Exception
    */
   public function listRoutes($project, $optParams = [])
   {

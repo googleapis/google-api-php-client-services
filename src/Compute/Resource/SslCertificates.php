@@ -99,6 +99,7 @@ class SslCertificates extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return SslCertificateAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -124,6 +125,7 @@ class SslCertificates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $sslCertificate, $optParams = [])
   {
@@ -138,6 +140,7 @@ class SslCertificates extends \Google\Service\Resource
    * @param string $sslCertificate Name of the SslCertificate resource to return.
    * @param array $optParams Optional parameters.
    * @return SslCertificate
+   * @throws \Google\Service\Exception
    */
   public function get($project, $sslCertificate, $optParams = [])
   {
@@ -164,6 +167,7 @@ class SslCertificates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, SslCertificate $postBody, $optParams = [])
   {
@@ -230,6 +234,7 @@ class SslCertificates extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return SslCertificateList
+   * @throws \Google\Service\Exception
    */
   public function listSslCertificates($project, $optParams = [])
   {

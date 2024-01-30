@@ -57,6 +57,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function attachNetworkEndpoints($project, $region, $networkEndpointGroup, RegionNetworkEndpointGroupsAttachEndpointsRequest $postBody, $optParams = [])
   {
@@ -87,6 +88,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $networkEndpointGroup, $optParams = [])
   {
@@ -118,6 +120,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * 00000000-0000-0000-0000-000000000000). end_interface:
    * MixerMutationRequestBuilder
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function detachNetworkEndpoints($project, $region, $networkEndpointGroup, RegionNetworkEndpointGroupsDetachEndpointsRequest $postBody, $optParams = [])
   {
@@ -136,6 +139,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * It should comply with RFC1035.
    * @param array $optParams Optional parameters.
    * @return NetworkEndpointGroup
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $networkEndpointGroup, $optParams = [])
   {
@@ -165,6 +169,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, NetworkEndpointGroup $postBody, $optParams = [])
   {
@@ -234,6 +239,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkEndpointGroupList
+   * @throws \Google\Service\Exception
    */
   public function listRegionNetworkEndpointGroups($project, $region, $optParams = [])
   {
@@ -305,6 +311,7 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkEndpointGroupsListNetworkEndpoints
+   * @throws \Google\Service\Exception
    */
   public function listNetworkEndpoints($project, $region, $networkEndpointGroup, $optParams = [])
   {

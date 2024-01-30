@@ -23,10 +23,6 @@ class ResourceStatus extends \Google\Model
    * @var string
    */
   public $physicalHost;
-  /**
-   * @var UpcomingMaintenance
-   */
-  public $upcomingMaintenance;
   protected $upcomingMaintenanceType = UpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
 

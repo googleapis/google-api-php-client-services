@@ -102,6 +102,7 @@ class Routers extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return RouterAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -128,6 +129,7 @@ class Routers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $router, $optParams = [])
   {
@@ -143,6 +145,7 @@ class Routers extends \Google\Service\Resource
    * @param string $router Name of the Router resource to return.
    * @param array $optParams Optional parameters.
    * @return Router
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $router, $optParams = [])
   {
@@ -163,6 +166,7 @@ class Routers extends \Google\Service\Resource
    * information. If it is omitted, all nats for this router will be returned.
    * Name should conform to RFC1035.
    * @return NatIpInfoResponse
+   * @throws \Google\Service\Exception
    */
   public function getNatIpInfo($project, $region, $router, $optParams = [])
   {
@@ -235,6 +239,7 @@ class Routers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return VmEndpointNatMappingsList
+   * @throws \Google\Service\Exception
    */
   public function getNatMappingInfo($project, $region, $router, $optParams = [])
   {
@@ -251,6 +256,7 @@ class Routers extends \Google\Service\Resource
    * @param string $router Name of the Router resource to query.
    * @param array $optParams Optional parameters.
    * @return RouterStatusResponse
+   * @throws \Google\Service\Exception
    */
   public function getRouterStatus($project, $region, $router, $optParams = [])
   {
@@ -278,6 +284,7 @@ class Routers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, Router $postBody, $optParams = [])
   {
@@ -345,6 +352,7 @@ class Routers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RouterList
+   * @throws \Google\Service\Exception
    */
   public function listRouters($project, $region, $optParams = [])
   {
@@ -374,6 +382,7 @@ class Routers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $router, Router $postBody, $optParams = [])
   {
@@ -391,6 +400,7 @@ class Routers extends \Google\Service\Resource
    * @param Router $postBody
    * @param array $optParams Optional parameters.
    * @return RoutersPreviewResponse
+   * @throws \Google\Service\Exception
    */
   public function preview($project, $region, $router, Router $postBody, $optParams = [])
   {
@@ -421,6 +431,7 @@ class Routers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $region, $router, Router $postBody, $optParams = [])
   {

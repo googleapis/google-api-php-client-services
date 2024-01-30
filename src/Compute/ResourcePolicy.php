@@ -27,26 +27,14 @@ class ResourcePolicy extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var ResourcePolicyDiskConsistencyGroupPolicy
-   */
-  public $diskConsistencyGroupPolicy;
   protected $diskConsistencyGroupPolicyType = ResourcePolicyDiskConsistencyGroupPolicy::class;
   protected $diskConsistencyGroupPolicyDataType = '';
-  /**
-   * @var ResourcePolicyGroupPlacementPolicy
-   */
-  public $groupPlacementPolicy;
   protected $groupPlacementPolicyType = ResourcePolicyGroupPlacementPolicy::class;
   protected $groupPlacementPolicyDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var ResourcePolicyInstanceSchedulePolicy
-   */
-  public $instanceSchedulePolicy;
   protected $instanceSchedulePolicyType = ResourcePolicyInstanceSchedulePolicy::class;
   protected $instanceSchedulePolicyDataType = '';
   /**
@@ -61,20 +49,12 @@ class ResourcePolicy extends \Google\Model
    * @var string
    */
   public $region;
-  /**
-   * @var ResourcePolicyResourceStatus
-   */
-  public $resourceStatus;
   protected $resourceStatusType = ResourcePolicyResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**
    * @var string
    */
   public $selfLink;
-  /**
-   * @var ResourcePolicySnapshotSchedulePolicy
-   */
-  public $snapshotSchedulePolicy;
   protected $snapshotSchedulePolicyType = ResourcePolicySnapshotSchedulePolicy::class;
   protected $snapshotSchedulePolicyDataType = '';
   /**

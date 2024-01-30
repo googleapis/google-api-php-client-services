@@ -100,6 +100,7 @@ class SslPolicies extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return SslPoliciesAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -128,6 +129,7 @@ class SslPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $sslPolicy, $optParams = [])
   {
@@ -144,6 +146,7 @@ class SslPolicies extends \Google\Service\Resource
    * 1-63 characters long, and comply with RFC1035.
    * @param array $optParams Optional parameters.
    * @return SslPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $sslPolicy, $optParams = [])
   {
@@ -169,6 +172,7 @@ class SslPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, SslPolicy $postBody, $optParams = [])
   {
@@ -235,6 +239,7 @@ class SslPolicies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return SslPoliciesList
+   * @throws \Google\Service\Exception
    */
   public function listSslPolicies($project, $optParams = [])
   {
@@ -301,6 +306,7 @@ class SslPolicies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return SslPoliciesListAvailableFeaturesResponse
+   * @throws \Google\Service\Exception
    */
   public function listAvailableFeatures($project, $optParams = [])
   {
@@ -329,6 +335,7 @@ class SslPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $sslPolicy, SslPolicy $postBody, $optParams = [])
   {

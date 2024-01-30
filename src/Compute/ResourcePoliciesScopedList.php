@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class ResourcePoliciesScopedList extends \Google\Collection
 {
   protected $collection_key = 'resourcePolicies';
-  /**
-   * @var ResourcePolicy[]
-   */
-  public $resourcePolicies;
   protected $resourcePoliciesType = ResourcePolicy::class;
   protected $resourcePoliciesDataType = 'array';
-  /**
-   * @var ResourcePoliciesScopedListWarning
-   */
-  public $warning;
   protected $warningType = ResourcePoliciesScopedListWarning::class;
   protected $warningDataType = '';
 

@@ -102,6 +102,7 @@ class UrlMaps extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return UrlMapsAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -127,6 +128,7 @@ class UrlMaps extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $urlMap, $optParams = [])
   {
@@ -141,6 +143,7 @@ class UrlMaps extends \Google\Service\Resource
    * @param string $urlMap Name of the UrlMap resource to return.
    * @param array $optParams Optional parameters.
    * @return UrlMap
+   * @throws \Google\Service\Exception
    */
   public function get($project, $urlMap, $optParams = [])
   {
@@ -167,6 +170,7 @@ class UrlMaps extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, UrlMap $postBody, $optParams = [])
   {
@@ -196,6 +200,7 @@ class UrlMaps extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function invalidateCache($project, $urlMap, CacheInvalidationRule $postBody, $optParams = [])
   {
@@ -262,6 +267,7 @@ class UrlMaps extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return UrlMapList
+   * @throws \Google\Service\Exception
    */
   public function listUrlMaps($project, $optParams = [])
   {
@@ -290,6 +296,7 @@ class UrlMaps extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $urlMap, UrlMap $postBody, $optParams = [])
   {
@@ -317,6 +324,7 @@ class UrlMaps extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $urlMap, UrlMap $postBody, $optParams = [])
   {
@@ -334,6 +342,7 @@ class UrlMaps extends \Google\Service\Resource
    * @param UrlMapsValidateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return UrlMapsValidateResponse
+   * @throws \Google\Service\Exception
    */
   public function validate($project, $urlMap, UrlMapsValidateRequest $postBody, $optParams = [])
   {

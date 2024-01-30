@@ -54,6 +54,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $targetHttpsProxy, $optParams = [])
   {
@@ -71,6 +72,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * return.
    * @param array $optParams Optional parameters.
    * @return TargetHttpsProxy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $targetHttpsProxy, $optParams = [])
   {
@@ -98,6 +100,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, TargetHttpsProxy $postBody, $optParams = [])
   {
@@ -166,6 +169,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return TargetHttpsProxyList
+   * @throws \Google\Service\Exception
    */
   public function listRegionTargetHttpsProxies($project, $region, $optParams = [])
   {
@@ -196,6 +200,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $targetHttpsProxy, TargetHttpsProxy $postBody, $optParams = [])
   {
@@ -225,6 +230,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setSslCertificates($project, $region, $targetHttpsProxy, RegionTargetHttpsProxiesSetSslCertificatesRequest $postBody, $optParams = [])
   {
@@ -254,6 +260,7 @@ class RegionTargetHttpsProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setUrlMap($project, $region, $targetHttpsProxy, UrlMapReference $postBody, $optParams = [])
   {

@@ -38,6 +38,7 @@ class RegionOperations extends \Google\Service\Resource
    * @param string $region Name of the region for this request.
    * @param string $operation Name of the Operations resource to delete.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $operation, $optParams = [])
   {
@@ -54,6 +55,7 @@ class RegionOperations extends \Google\Service\Resource
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $operation, $optParams = [])
   {
@@ -121,6 +123,7 @@ class RegionOperations extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return OperationList
+   * @throws \Google\Service\Exception
    */
   public function listRegionOperations($project, $region, $optParams = [])
   {
@@ -146,6 +149,7 @@ class RegionOperations extends \Google\Service\Resource
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function wait($project, $region, $operation, $optParams = [])
   {

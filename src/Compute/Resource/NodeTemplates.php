@@ -103,6 +103,7 @@ class NodeTemplates extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return NodeTemplateAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -129,6 +130,7 @@ class NodeTemplates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $nodeTemplate, $optParams = [])
   {
@@ -144,6 +146,7 @@ class NodeTemplates extends \Google\Service\Resource
    * @param string $nodeTemplate Name of the node template to return.
    * @param array $optParams Optional parameters.
    * @return NodeTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $nodeTemplate, $optParams = [])
   {
@@ -162,6 +165,7 @@ class NodeTemplates extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $region, $resource, $optParams = [])
   {
@@ -189,6 +193,7 @@ class NodeTemplates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, NodeTemplate $postBody, $optParams = [])
   {
@@ -256,6 +261,7 @@ class NodeTemplates extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NodeTemplateList
+   * @throws \Google\Service\Exception
    */
   public function listNodeTemplates($project, $region, $optParams = [])
   {
@@ -273,6 +279,7 @@ class NodeTemplates extends \Google\Service\Resource
    * @param RegionSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $region, $resource, RegionSetPolicyRequest $postBody, $optParams = [])
   {
@@ -290,6 +297,7 @@ class NodeTemplates extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

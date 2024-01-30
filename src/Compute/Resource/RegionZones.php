@@ -89,6 +89,7 @@ class RegionZones extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return ZoneList
+   * @throws \Google\Service\Exception
    */
   public function listRegionZones($project, $region, $optParams = [])
   {

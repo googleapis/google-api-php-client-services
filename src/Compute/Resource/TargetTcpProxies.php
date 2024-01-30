@@ -101,6 +101,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return TargetTcpProxyAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -126,6 +127,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $targetTcpProxy, $optParams = [])
   {
@@ -140,6 +142,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * @param string $targetTcpProxy Name of the TargetTcpProxy resource to return.
    * @param array $optParams Optional parameters.
    * @return TargetTcpProxy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $targetTcpProxy, $optParams = [])
   {
@@ -166,6 +169,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, TargetTcpProxy $postBody, $optParams = [])
   {
@@ -232,6 +236,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return TargetTcpProxyList
+   * @throws \Google\Service\Exception
    */
   public function listTargetTcpProxies($project, $optParams = [])
   {
@@ -260,6 +265,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setBackendService($project, $targetTcpProxy, TargetTcpProxiesSetBackendServiceRequest $postBody, $optParams = [])
   {
@@ -288,6 +294,7 @@ class TargetTcpProxies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setProxyHeader($project, $targetTcpProxy, TargetTcpProxiesSetProxyHeaderRequest $postBody, $optParams = [])
   {

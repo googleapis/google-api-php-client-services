@@ -37,6 +37,7 @@ class Zones extends \Google\Service\Resource
    * @param string $zone Name of the zone resource to return.
    * @param array $optParams Optional parameters.
    * @return Zone
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $optParams = [])
   {
@@ -103,6 +104,7 @@ class Zones extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return ZoneList
+   * @throws \Google\Service\Exception
    */
   public function listZones($project, $optParams = [])
   {

@@ -75,6 +75,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function abandonInstances($project, $region, $instanceGroupManager, RegionInstanceGroupManagersAbandonInstancesRequest $postBody, $optParams = [])
   {
@@ -94,6 +95,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * @param RegionInstanceGroupManagersApplyUpdatesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function applyUpdatesToInstances($project, $region, $instanceGroupManager, RegionInstanceGroupManagersApplyUpdatesRequest $postBody, $optParams = [])
   {
@@ -127,6 +129,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function createInstances($project, $region, $instanceGroupManager, RegionInstanceGroupManagersCreateInstancesRequest $postBody, $optParams = [])
   {
@@ -155,6 +158,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $instanceGroupManager, $optParams = [])
   {
@@ -193,6 +197,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deleteInstances($project, $region, $instanceGroupManager, RegionInstanceGroupManagersDeleteInstancesRequest $postBody, $optParams = [])
   {
@@ -212,6 +217,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * @param RegionInstanceGroupManagerDeleteInstanceConfigReq $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deletePerInstanceConfigs($project, $region, $instanceGroupManager, RegionInstanceGroupManagerDeleteInstanceConfigReq $postBody, $optParams = [])
   {
@@ -229,6 +235,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * return.
    * @param array $optParams Optional parameters.
    * @return InstanceGroupManager
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $instanceGroupManager, $optParams = [])
   {
@@ -261,6 +268,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, InstanceGroupManager $postBody, $optParams = [])
   {
@@ -329,6 +337,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RegionInstanceGroupManagerList
+   * @throws \Google\Service\Exception
    */
   public function listRegionInstanceGroupManagers($project, $region, $optParams = [])
   {
@@ -402,6 +411,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RegionInstanceGroupManagersListErrorsResponse
+   * @throws \Google\Service\Exception
    */
   public function listErrors($project, $region, $instanceGroupManager, $optParams = [])
   {
@@ -474,6 +484,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RegionInstanceGroupManagersListInstancesResponse
+   * @throws \Google\Service\Exception
    */
   public function listManagedInstances($project, $region, $instanceGroupManager, $optParams = [])
   {
@@ -545,6 +556,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return RegionInstanceGroupManagersListInstanceConfigsResp
+   * @throws \Google\Service\Exception
    */
   public function listPerInstanceConfigs($project, $region, $instanceGroupManager, $optParams = [])
   {
@@ -582,6 +594,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $region, $instanceGroupManager, InstanceGroupManager $postBody, $optParams = [])
   {
@@ -614,6 +627,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patchPerInstanceConfigs($project, $region, $instanceGroupManager, RegionInstanceGroupManagerPatchInstanceConfigReq $postBody, $optParams = [])
   {
@@ -651,6 +665,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function recreateInstances($project, $region, $instanceGroupManager, RegionInstanceGroupManagersRecreateRequest $postBody, $optParams = [])
   {
@@ -688,6 +703,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function resize($project, $region, $instanceGroupManager, $size, $optParams = [])
   {
@@ -717,6 +733,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setInstanceTemplate($project, $region, $instanceGroupManager, RegionInstanceGroupManagersSetTemplateRequest $postBody, $optParams = [])
   {
@@ -746,6 +763,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setTargetPools($project, $region, $instanceGroupManager, RegionInstanceGroupManagersSetTargetPoolsRequest $postBody, $optParams = [])
   {
@@ -778,6 +796,7 @@ class RegionInstanceGroupManagers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function updatePerInstanceConfigs($project, $region, $instanceGroupManager, RegionInstanceGroupManagerUpdateInstanceConfigReq $postBody, $optParams = [])
   {

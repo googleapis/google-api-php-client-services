@@ -54,6 +54,7 @@ class MachineImages extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $machineImage, $optParams = [])
   {
@@ -68,6 +69,7 @@ class MachineImages extends \Google\Service\Resource
    * @param string $machineImage The name of the machine image.
    * @param array $optParams Optional parameters.
    * @return MachineImage
+   * @throws \Google\Service\Exception
    */
   public function get($project, $machineImage, $optParams = [])
   {
@@ -85,6 +87,7 @@ class MachineImages extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $resource, $optParams = [])
   {
@@ -116,6 +119,7 @@ class MachineImages extends \Google\Service\Resource
    * @opt_param string sourceInstance Required. Source instance that is used to
    * create the machine image from.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, MachineImage $postBody, $optParams = [])
   {
@@ -182,6 +186,7 @@ class MachineImages extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return MachineImageList
+   * @throws \Google\Service\Exception
    */
   public function listMachineImages($project, $optParams = [])
   {
@@ -198,6 +203,7 @@ class MachineImages extends \Google\Service\Resource
    * @param GlobalSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
   {
@@ -214,6 +220,7 @@ class MachineImages extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

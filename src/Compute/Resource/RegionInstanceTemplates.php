@@ -51,6 +51,7 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $instanceTemplate, $optParams = [])
   {
@@ -66,6 +67,7 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * @param string $instanceTemplate The name of the instance template.
    * @param array $optParams Optional parameters.
    * @return InstanceTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $instanceTemplate, $optParams = [])
   {
@@ -94,6 +96,7 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, InstanceTemplate $postBody, $optParams = [])
   {
@@ -162,6 +165,7 @@ class RegionInstanceTemplates extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InstanceTemplateList
+   * @throws \Google\Service\Exception
    */
   public function listRegionInstanceTemplates($project, $region, $optParams = [])
   {

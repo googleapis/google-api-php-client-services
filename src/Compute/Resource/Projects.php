@@ -57,6 +57,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function disableXpnHost($project, $optParams = [])
   {
@@ -83,6 +84,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function disableXpnResource($project, ProjectsDisableXpnResourceRequest $postBody, $optParams = [])
   {
@@ -107,6 +109,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function enableXpnHost($project, $optParams = [])
   {
@@ -134,6 +137,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function enableXpnResource($project, ProjectsEnableXpnResourceRequest $postBody, $optParams = [])
   {
@@ -153,6 +157,7 @@ class Projects extends \Google\Service\Resource
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
    * @return Project
+   * @throws \Google\Service\Exception
    */
   public function get($project, $optParams = [])
   {
@@ -167,6 +172,7 @@ class Projects extends \Google\Service\Resource
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
    * @return Project
+   * @throws \Google\Service\Exception
    */
   public function getXpnHost($project, $optParams = [])
   {
@@ -233,6 +239,7 @@ class Projects extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return ProjectsGetXpnResources
+   * @throws \Google\Service\Exception
    */
   public function getXpnResources($project, $optParams = [])
   {
@@ -300,6 +307,7 @@ class Projects extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return XpnHostList
+   * @throws \Google\Service\Exception
    */
   public function listXpnHosts($project, ProjectsListXpnHostsRequest $postBody, $optParams = [])
   {
@@ -325,6 +333,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function moveDisk($project, DiskMoveRequest $postBody, $optParams = [])
   {
@@ -357,6 +366,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function moveInstance($project, InstanceMoveRequest $postBody, $optParams = [])
   {
@@ -383,6 +393,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setCommonInstanceMetadata($project, Metadata $postBody, $optParams = [])
   {
@@ -410,6 +421,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setDefaultNetworkTier($project, ProjectsSetDefaultNetworkTierRequest $postBody, $optParams = [])
   {
@@ -437,6 +449,7 @@ class Projects extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setUsageExportBucket($project, UsageExportLocation $postBody, $optParams = [])
   {

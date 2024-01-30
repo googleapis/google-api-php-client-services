@@ -61,6 +61,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addAssociation($project, $firewallPolicy, FirewallPolicyAssociation $postBody, $optParams = [])
   {
@@ -93,6 +94,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addRule($project, $firewallPolicy, FirewallPolicyRule $postBody, $optParams = [])
   {
@@ -121,6 +123,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * @opt_param string sourceFirewallPolicy The firewall policy from which to copy
    * rules.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function cloneRules($project, $firewallPolicy, $optParams = [])
   {
@@ -146,6 +149,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $firewallPolicy, $optParams = [])
   {
@@ -160,6 +164,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * @param string $firewallPolicy Name of the firewall policy to get.
    * @param array $optParams Optional parameters.
    * @return FirewallPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($project, $firewallPolicy, $optParams = [])
   {
@@ -179,6 +184,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * @opt_param string name The name of the association to get from the firewall
    * policy.
    * @return FirewallPolicyAssociation
+   * @throws \Google\Service\Exception
    */
   public function getAssociation($project, $firewallPolicy, $optParams = [])
   {
@@ -196,6 +202,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $resource, $optParams = [])
   {
@@ -214,6 +221,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * @opt_param int priority The priority of the rule to get from the firewall
    * policy.
    * @return FirewallPolicyRule
+   * @throws \Google\Service\Exception
    */
   public function getRule($project, $firewallPolicy, $optParams = [])
   {
@@ -240,6 +248,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, FirewallPolicy $postBody, $optParams = [])
   {
@@ -306,6 +315,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return FirewallPolicyList
+   * @throws \Google\Service\Exception
    */
   public function listNetworkFirewallPolicies($project, $optParams = [])
   {
@@ -333,6 +343,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $firewallPolicy, FirewallPolicy $postBody, $optParams = [])
   {
@@ -360,6 +371,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patchRule($project, $firewallPolicy, FirewallPolicyRule $postBody, $optParams = [])
   {
@@ -387,6 +399,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function removeAssociation($project, $firewallPolicy, $optParams = [])
   {
@@ -415,6 +428,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function removeRule($project, $firewallPolicy, $optParams = [])
   {
@@ -431,6 +445,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * @param GlobalSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
   {
@@ -447,6 +462,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

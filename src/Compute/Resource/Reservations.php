@@ -103,6 +103,7 @@ class Reservations extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return ReservationAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -129,6 +130,7 @@ class Reservations extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $zone, $reservation, $optParams = [])
   {
@@ -144,6 +146,7 @@ class Reservations extends \Google\Service\Resource
    * @param string $reservation Name of the reservation to retrieve.
    * @param array $optParams Optional parameters.
    * @return Reservation
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $reservation, $optParams = [])
   {
@@ -162,6 +165,7 @@ class Reservations extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $zone, $resource, $optParams = [])
   {
@@ -189,6 +193,7 @@ class Reservations extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $zone, Reservation $postBody, $optParams = [])
   {
@@ -256,6 +261,7 @@ class Reservations extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return ReservationList
+   * @throws \Google\Service\Exception
    */
   public function listReservations($project, $zone, $optParams = [])
   {
@@ -284,6 +290,7 @@ class Reservations extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function resize($project, $zone, $reservation, ReservationsResizeRequest $postBody, $optParams = [])
   {
@@ -301,6 +308,7 @@ class Reservations extends \Google\Service\Resource
    * @param ZoneSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $zone, $resource, ZoneSetPolicyRequest $postBody, $optParams = [])
   {
@@ -318,6 +326,7 @@ class Reservations extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $zone, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {
@@ -348,6 +357,7 @@ class Reservations extends \Google\Service\Resource
    * @opt_param string updateMask Update_mask indicates fields to be updated as
    * part of this request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $zone, $reservation, Reservation $postBody, $optParams = [])
   {

@@ -40,6 +40,7 @@ class InterconnectLocations extends \Google\Service\Resource
    * return.
    * @param array $optParams Optional parameters.
    * @return InterconnectLocation
+   * @throws \Google\Service\Exception
    */
   public function get($project, $interconnectLocation, $optParams = [])
   {
@@ -106,6 +107,7 @@ class InterconnectLocations extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return InterconnectLocationList
+   * @throws \Google\Service\Exception
    */
   public function listInterconnectLocations($project, $optParams = [])
   {

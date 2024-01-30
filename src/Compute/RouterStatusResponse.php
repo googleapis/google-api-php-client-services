@@ -23,10 +23,6 @@ class RouterStatusResponse extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var RouterStatus
-   */
-  public $result;
   protected $resultType = RouterStatus::class;
   protected $resultDataType = '';
 
