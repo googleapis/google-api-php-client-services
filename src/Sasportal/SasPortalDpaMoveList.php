@@ -23,10 +23,6 @@ class SasPortalDpaMoveList extends \Google\Model
    * @var string
    */
   public $dpaId;
-  /**
-   * @var SasPortalFrequencyRange
-   */
-  public $frequencyRange;
   protected $frequencyRangeType = SasPortalFrequencyRange::class;
   protected $frequencyRangeDataType = '';
 

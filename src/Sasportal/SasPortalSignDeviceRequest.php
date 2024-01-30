@@ -19,10 +19,6 @@ namespace Google\Service\Sasportal;
 
 class SasPortalSignDeviceRequest extends \Google\Model
 {
-  /**
-   * @var SasPortalDevice
-   */
-  public $device;
   protected $deviceType = SasPortalDevice::class;
   protected $deviceDataType = '';
 
