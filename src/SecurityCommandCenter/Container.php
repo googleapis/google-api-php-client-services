@@ -28,10 +28,6 @@ class Container extends \Google\Collection
    * @var string
    */
   public $imageId;
-  /**
-   * @var Label[]
-   */
-  public $labels;
   protected $labelsType = Label::class;
   protected $labelsDataType = 'array';
   /**

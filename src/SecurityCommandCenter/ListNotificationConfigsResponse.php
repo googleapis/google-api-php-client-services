@@ -24,10 +24,6 @@ class ListNotificationConfigsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var NotificationConfig[]
-   */
-  public $notificationConfigs;
   protected $notificationConfigsType = NotificationConfig::class;
   protected $notificationConfigsDataType = 'array';
 

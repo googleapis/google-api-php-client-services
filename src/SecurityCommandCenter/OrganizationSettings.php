@@ -19,10 +19,6 @@ namespace Google\Service\SecurityCommandCenter;
 
 class OrganizationSettings extends \Google\Model
 {
-  /**
-   * @var AssetDiscoveryConfig
-   */
-  public $assetDiscoveryConfig;
   protected $assetDiscoveryConfigType = AssetDiscoveryConfig::class;
   protected $assetDiscoveryConfigDataType = '';
   /**

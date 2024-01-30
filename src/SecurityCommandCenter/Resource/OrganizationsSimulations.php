@@ -39,6 +39,7 @@ class OrganizationsSimulations extends \Google\Service\Resource
    * "organizations/{organization}/simulations/{simulation}"
    * @param array $optParams Optional parameters.
    * @return Simulation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {

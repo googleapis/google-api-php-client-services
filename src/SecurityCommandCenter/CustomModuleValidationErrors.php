@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class CustomModuleValidationErrors extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var CustomModuleValidationError[]
-   */
-  public $errors;
   protected $errorsType = CustomModuleValidationError::class;
   protected $errorsDataType = 'array';
 

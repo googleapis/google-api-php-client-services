@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListBigQueryExportsResponse extends \Google\Collection
 {
   protected $collection_key = 'bigQueryExports';
-  /**
-   * @var GoogleCloudSecuritycenterV1BigQueryExport[]
-   */
-  public $bigQueryExports;
   protected $bigQueryExportsType = GoogleCloudSecuritycenterV1BigQueryExport::class;
   protected $bigQueryExportsDataType = 'array';
   /**

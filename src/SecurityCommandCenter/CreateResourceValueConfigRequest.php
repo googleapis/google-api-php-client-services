@@ -23,10 +23,6 @@ class CreateResourceValueConfigRequest extends \Google\Model
    * @var string
    */
   public $parent;
-  /**
-   * @var GoogleCloudSecuritycenterV1ResourceValueConfig
-   */
-  public $resourceValueConfig;
   protected $resourceValueConfigType = GoogleCloudSecuritycenterV1ResourceValueConfig::class;
   protected $resourceValueConfigDataType = '';
 

@@ -23,10 +23,6 @@ class GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule extends \Go
    * @var string
    */
   public $ancestorModule;
-  /**
-   * @var GoogleCloudSecuritycenterV1CustomConfig
-   */
-  public $customConfig;
   protected $customConfigType = GoogleCloudSecuritycenterV1CustomConfig::class;
   protected $customConfigDataType = '';
   /**

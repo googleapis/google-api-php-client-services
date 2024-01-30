@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ContactDetails extends \Google\Collection
 {
   protected $collection_key = 'contacts';
-  /**
-   * @var Contact[]
-   */
-  public $contacts;
   protected $contactsType = Contact::class;
   protected $contactsDataType = 'array';
 

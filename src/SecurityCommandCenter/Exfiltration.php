@@ -20,16 +20,8 @@ namespace Google\Service\SecurityCommandCenter;
 class Exfiltration extends \Google\Collection
 {
   protected $collection_key = 'targets';
-  /**
-   * @var ExfilResource[]
-   */
-  public $sources;
   protected $sourcesType = ExfilResource::class;
   protected $sourcesDataType = 'array';
-  /**
-   * @var ExfilResource[]
-   */
-  public $targets;
   protected $targetsType = ExfilResource::class;
   protected $targetsDataType = 'array';
   /**

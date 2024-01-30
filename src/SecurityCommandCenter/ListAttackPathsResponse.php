@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListAttackPathsResponse extends \Google\Collection
 {
   protected $collection_key = 'attackPaths';
-  /**
-   * @var AttackPath[]
-   */
-  public $attackPaths;
   protected $attackPathsType = AttackPath::class;
   protected $attackPathsDataType = 'array';
   /**

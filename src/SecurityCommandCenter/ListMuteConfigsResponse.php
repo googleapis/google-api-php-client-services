@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListMuteConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'muteConfigs';
-  /**
-   * @var GoogleCloudSecuritycenterV1MuteConfig[]
-   */
-  public $muteConfigs;
   protected $muteConfigsType = GoogleCloudSecuritycenterV1MuteConfig::class;
   protected $muteConfigsDataType = 'array';
   /**

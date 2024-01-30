@@ -52,10 +52,6 @@ class GoogleCloudSecuritycenterV1ExternalSystem extends \Google\Collection
    * @var string
    */
   public $status;
-  /**
-   * @var TicketInfo
-   */
-  public $ticketInfo;
   protected $ticketInfoType = TicketInfo::class;
   protected $ticketInfoDataType = '';
 

@@ -28,26 +28,14 @@ class Process extends \Google\Collection
    * @var bool
    */
   public $argumentsTruncated;
-  /**
-   * @var SecuritycenterFile
-   */
-  public $binary;
   protected $binaryType = SecuritycenterFile::class;
   protected $binaryDataType = '';
-  /**
-   * @var EnvironmentVariable[]
-   */
-  public $envVariables;
   protected $envVariablesType = EnvironmentVariable::class;
   protected $envVariablesDataType = 'array';
   /**
    * @var bool
    */
   public $envVariablesTruncated;
-  /**
-   * @var SecuritycenterFile[]
-   */
-  public $libraries;
   protected $librariesType = SecuritycenterFile::class;
   protected $librariesDataType = 'array';
   /**
@@ -62,10 +50,6 @@ class Process extends \Google\Collection
    * @var string
    */
   public $pid;
-  /**
-   * @var SecuritycenterFile
-   */
-  public $script;
   protected $scriptType = SecuritycenterFile::class;
   protected $scriptDataType = '';
 

@@ -24,10 +24,6 @@ class ListSecurityHealthAnalyticsCustomModulesResponse extends \Google\Collectio
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule[]
-   */
-  public $securityHealthAnalyticsCustomModules;
   protected $securityHealthAnalyticsCustomModulesType = GoogleCloudSecuritycenterV1SecurityHealthAnalyticsCustomModule::class;
   protected $securityHealthAnalyticsCustomModulesDataType = 'array';
 

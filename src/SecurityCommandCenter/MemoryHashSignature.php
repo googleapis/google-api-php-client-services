@@ -24,10 +24,6 @@ class MemoryHashSignature extends \Google\Collection
    * @var string
    */
   public $binaryFamily;
-  /**
-   * @var Detection[]
-   */
-  public $detections;
   protected $detectionsType = Detection::class;
   protected $detectionsDataType = 'array';
 

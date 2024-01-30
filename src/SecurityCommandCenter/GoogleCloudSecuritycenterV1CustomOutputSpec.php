@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV1CustomOutputSpec extends \Google\Collection
 {
   protected $collection_key = 'properties';
-  /**
-   * @var GoogleCloudSecuritycenterV1Property[]
-   */
-  public $properties;
   protected $propertiesType = GoogleCloudSecuritycenterV1Property::class;
   protected $propertiesDataType = 'array';
 

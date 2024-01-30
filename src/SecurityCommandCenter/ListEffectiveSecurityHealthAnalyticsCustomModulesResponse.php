@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListEffectiveSecurityHealthAnalyticsCustomModulesResponse extends \Google\Collection
 {
   protected $collection_key = 'effectiveSecurityHealthAnalyticsCustomModules';
-  /**
-   * @var GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule[]
-   */
-  public $effectiveSecurityHealthAnalyticsCustomModules;
   protected $effectiveSecurityHealthAnalyticsCustomModulesType = GoogleCloudSecuritycenterV1EffectiveSecurityHealthAnalyticsCustomModule::class;
   protected $effectiveSecurityHealthAnalyticsCustomModulesDataType = 'array';
   /**

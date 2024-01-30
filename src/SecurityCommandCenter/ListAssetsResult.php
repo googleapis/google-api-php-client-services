@@ -19,10 +19,6 @@ namespace Google\Service\SecurityCommandCenter;
 
 class ListAssetsResult extends \Google\Model
 {
-  /**
-   * @var Asset
-   */
-  public $asset;
   protected $assetType = Asset::class;
   protected $assetDataType = '';
   /**

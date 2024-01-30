@@ -35,10 +35,6 @@ class NotificationConfig extends \Google\Model
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var StreamingConfig
-   */
-  public $streamingConfig;
   protected $streamingConfigType = StreamingConfig::class;
   protected $streamingConfigDataType = '';
 

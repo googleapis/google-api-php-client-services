@@ -28,10 +28,6 @@ class ListValuedResourcesResponse extends \Google\Collection
    * @var int
    */
   public $totalSize;
-  /**
-   * @var ValuedResource[]
-   */
-  public $valuedResources;
   protected $valuedResourcesType = ValuedResource::class;
   protected $valuedResourcesDataType = 'array';
 

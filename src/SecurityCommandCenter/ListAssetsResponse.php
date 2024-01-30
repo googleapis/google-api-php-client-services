@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListAssetsResponse extends \Google\Collection
 {
   protected $collection_key = 'listAssetsResults';
-  /**
-   * @var ListAssetsResult[]
-   */
-  public $listAssetsResults;
   protected $listAssetsResultsType = ListAssetsResult::class;
   protected $listAssetsResultsDataType = 'array';
   /**

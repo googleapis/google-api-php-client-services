@@ -38,6 +38,7 @@ class OrganizationsSimulationsValuedResources extends \Google\Service\Resource
    * d_resource}"
    * @param array $optParams Optional parameters.
    * @return ValuedResource
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -73,6 +74,7 @@ class OrganizationsSimulationsValuedResources extends \Google\Service\Resource
    * prior `ListValuedResources` call, and that the system should return the next
    * page of data.
    * @return ListValuedResourcesResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsSimulationsValuedResources($parent, $optParams = [])
   {

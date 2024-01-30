@@ -41,6 +41,7 @@ class OrganizationsEventThreatDetectionSettingsEffectiveCustomModules extends \G
    * project}/eventThreatDetectionSettings/effectiveCustomModules/{module}".
    * @param array $optParams Optional parameters.
    * @return EffectiveEventThreatDetectionCustomModule
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -71,6 +72,7 @@ class OrganizationsEventThreatDetectionSettingsEffectiveCustomModules extends \G
    * to `ListEffectiveEventThreatDetectionCustomModules` must match the call that
    * provided the page token.
    * @return ListEffectiveEventThreatDetectionCustomModulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsEventThreatDetectionSettingsEffectiveCustomModules($parent, $optParams = [])
   {

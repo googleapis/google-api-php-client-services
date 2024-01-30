@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListEffectiveEventThreatDetectionCustomModulesResponse extends \Google\Collection
 {
   protected $collection_key = 'effectiveEventThreatDetectionCustomModules';
-  /**
-   * @var EffectiveEventThreatDetectionCustomModule[]
-   */
-  public $effectiveEventThreatDetectionCustomModules;
   protected $effectiveEventThreatDetectionCustomModulesType = EffectiveEventThreatDetectionCustomModule::class;
   protected $effectiveEventThreatDetectionCustomModulesDataType = 'array';
   /**

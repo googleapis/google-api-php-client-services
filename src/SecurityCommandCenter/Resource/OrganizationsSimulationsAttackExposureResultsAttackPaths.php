@@ -51,6 +51,7 @@ class OrganizationsSimulationsAttackExposureResultsAttackPaths extends \Google\S
    * `ListAttackPaths` call, and that the system should return the next page of
    * data.
    * @return ListAttackPathsResponse
+   * @throws \Google\Service\Exception
    */
   public function listOrganizationsSimulationsAttackExposureResultsAttackPaths($parent, $optParams = [])
   {

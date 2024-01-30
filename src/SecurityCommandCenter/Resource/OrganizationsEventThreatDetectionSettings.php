@@ -42,6 +42,7 @@ class OrganizationsEventThreatDetectionSettings extends \Google\Service\Resource
    * @param ValidateEventThreatDetectionCustomModuleRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ValidateEventThreatDetectionCustomModuleResponse
+   * @throws \Google\Service\Exception
    */
   public function validateCustomModule($parent, ValidateEventThreatDetectionCustomModuleRequest $postBody, $optParams = [])
   {

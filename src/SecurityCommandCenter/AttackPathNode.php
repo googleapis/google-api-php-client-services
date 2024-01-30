@@ -20,16 +20,8 @@ namespace Google\Service\SecurityCommandCenter;
 class AttackPathNode extends \Google\Collection
 {
   protected $collection_key = 'attackSteps';
-  /**
-   * @var PathNodeAssociatedFinding[]
-   */
-  public $associatedFindings;
   protected $associatedFindingsType = PathNodeAssociatedFinding::class;
   protected $associatedFindingsDataType = 'array';
-  /**
-   * @var AttackStepNode[]
-   */
-  public $attackSteps;
   protected $attackStepsType = AttackStepNode::class;
   protected $attackStepsDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class ListResourceValueConfigsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudSecuritycenterV1ResourceValueConfig[]
-   */
-  public $resourceValueConfigs;
   protected $resourceValueConfigsType = GoogleCloudSecuritycenterV1ResourceValueConfig::class;
   protected $resourceValueConfigsDataType = 'array';
 

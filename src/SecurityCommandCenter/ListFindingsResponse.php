@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class ListFindingsResponse extends \Google\Collection
 {
   protected $collection_key = 'listFindingsResults';
-  /**
-   * @var ListFindingsResult[]
-   */
-  public $listFindingsResults;
   protected $listFindingsResultsType = ListFindingsResult::class;
   protected $listFindingsResultsDataType = 'array';
   /**
