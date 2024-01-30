@@ -43,10 +43,6 @@ class AssistantApiCoreTypesDeviceId extends \Google\Model
    * @var string
    */
   public $connectedDockId;
-  /**
-   * @var AssistantApiCoreTypesDeviceConfig
-   */
-  public $deviceConfig;
   protected $deviceConfigType = AssistantApiCoreTypesDeviceConfig::class;
   protected $deviceConfigDataType = '';
   /**

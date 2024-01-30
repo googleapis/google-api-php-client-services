@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiLiveTvChannelCapabilities extends \Google\Collection
 {
   protected $collection_key = 'channelsByProvider';
-  /**
-   * @var AssistantApiLiveTvChannelCapabilitiesChannelsByProvider[]
-   */
-  public $channelsByProvider;
   protected $channelsByProviderType = AssistantApiLiveTvChannelCapabilitiesChannelsByProvider::class;
   protected $channelsByProviderDataType = 'array';
 

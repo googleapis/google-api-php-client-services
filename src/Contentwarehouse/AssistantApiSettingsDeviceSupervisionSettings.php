@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsDeviceSupervisionSettings extends \Google\Model
 {
-  /**
-   * @var AssistantApiSettingsDeviceDowntimeSettings
-   */
-  public $downtimeSettings;
   protected $downtimeSettingsType = AssistantApiSettingsDeviceDowntimeSettings::class;
   protected $downtimeSettingsDataType = '';
-  /**
-   * @var AssistantApiSettingsDeviceFeatureFilters
-   */
-  public $featureFilters;
   protected $featureFiltersType = AssistantApiSettingsDeviceFeatureFilters::class;
   protected $featureFiltersDataType = '';
 

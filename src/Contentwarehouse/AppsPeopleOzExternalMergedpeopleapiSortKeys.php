@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiSortKeys extends \Google\Collection
 {
   protected $collection_key = 'affinity';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiAffinity[]
-   */
-  public $affinity;
   protected $affinityType = AppsPeopleOzExternalMergedpeopleapiAffinity::class;
   protected $affinityDataType = 'array';
   /**

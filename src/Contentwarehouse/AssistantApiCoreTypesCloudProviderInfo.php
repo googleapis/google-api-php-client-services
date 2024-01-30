@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesCloudProviderInfo extends \Google\Model
 {
-  /**
-   * @var AssistantApiCoreTypesCloudProviderInfoAgentStyle
-   */
-  public $agentStyle;
   protected $agentStyleType = AssistantApiCoreTypesCloudProviderInfoAgentStyle::class;
   protected $agentStyleDataType = '';
   /**

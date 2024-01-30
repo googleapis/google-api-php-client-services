@@ -23,20 +23,12 @@ class AssistantApiSettingsDowntimePeriod extends \Google\Model
    * @var bool
    */
   public $enabled;
-  /**
-   * @var GoogleTypeTimeOfDay
-   */
-  public $endTime;
   protected $endTimeType = GoogleTypeTimeOfDay::class;
   protected $endTimeDataType = '';
   /**
    * @var string
    */
   public $startDay;
-  /**
-   * @var GoogleTypeTimeOfDay
-   */
-  public $startTime;
   protected $startTimeType = GoogleTypeTimeOfDay::class;
   protected $startTimeDataType = '';
 

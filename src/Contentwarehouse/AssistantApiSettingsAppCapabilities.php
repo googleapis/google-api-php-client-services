@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsAppCapabilities extends \Google\Model
 {
-  /**
-   * @var AssistantApiCarSettingsCapabilities
-   */
-  public $carSettingsCapabilities;
   protected $carSettingsCapabilitiesType = AssistantApiCarSettingsCapabilities::class;
   protected $carSettingsCapabilitiesDataType = '';
   /**

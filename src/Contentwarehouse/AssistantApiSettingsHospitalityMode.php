@@ -28,22 +28,10 @@ class AssistantApiSettingsHospitalityMode extends \Google\Collection
    * @var string
    */
   public $aogInvocationPhrase;
-  /**
-   * @var AssistantApiSettingsHospitalityModeBranding
-   */
-  public $branding;
   protected $brandingType = AssistantApiSettingsHospitalityModeBranding::class;
   protected $brandingDataType = '';
-  /**
-   * @var AssistantApiSettingsHospitalityCardSettings
-   */
-  public $cardSettings;
   protected $cardSettingsType = AssistantApiSettingsHospitalityCardSettings::class;
   protected $cardSettingsDataType = '';
-  /**
-   * @var AssistantApiTimestamp
-   */
-  public $deviceClearRequest;
   protected $deviceClearRequestType = AssistantApiTimestamp::class;
   protected $deviceClearRequestDataType = '';
   /**
@@ -58,22 +46,10 @@ class AssistantApiSettingsHospitalityMode extends \Google\Collection
    * @var bool
    */
   public $hospitalityModeEnabled;
-  /**
-   * @var AssistantApiTimestamp
-   */
-  public $lastDeviceClear;
   protected $lastDeviceClearType = AssistantApiTimestamp::class;
   protected $lastDeviceClearDataType = '';
-  /**
-   * @var AssistantApiTimestamp
-   */
-  public $lastModifiedTimestamp;
   protected $lastModifiedTimestampType = AssistantApiTimestamp::class;
   protected $lastModifiedTimestampDataType = '';
-  /**
-   * @var AssistantApiTimestamp
-   */
-  public $lastWelcomed;
   protected $lastWelcomedType = AssistantApiTimestamp::class;
   protected $lastWelcomedDataType = '';
   /**
@@ -92,10 +68,6 @@ class AssistantApiSettingsHospitalityMode extends \Google\Collection
    * @var bool
    */
   public $verbalResetSupported;
-  /**
-   * @var AssistantApiTimestamp
-   */
-  public $welcomeRequest;
   protected $welcomeRequestType = AssistantApiTimestamp::class;
   protected $welcomeRequestDataType = '';
 

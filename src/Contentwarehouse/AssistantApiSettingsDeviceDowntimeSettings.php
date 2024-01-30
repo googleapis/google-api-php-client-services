@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiSettingsDeviceDowntimeSettings extends \Google\Collection
 {
   protected $collection_key = 'targets';
-  /**
-   * @var AssistantApiSettingsLabeledDowntimeSchedule[]
-   */
-  public $schedules;
   protected $schedulesType = AssistantApiSettingsLabeledDowntimeSchedule::class;
   protected $schedulesDataType = 'array';
   /**

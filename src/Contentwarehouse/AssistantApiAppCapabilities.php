@@ -23,20 +23,12 @@ class AssistantApiAppCapabilities extends \Google\Model
    * @var bool
    */
   public $allowlistedForMediaFulfillment;
-  /**
-   * @var AssistantApiAppIntegrationsSettings
-   */
-  public $appIntegrationsSettings;
   protected $appIntegrationsSettingsType = AssistantApiAppIntegrationsSettings::class;
   protected $appIntegrationsSettingsDataType = '';
   /**
    * @var bool
    */
   public $disabledSystemApp;
-  /**
-   * @var AssistantApiCoreTypesProvider
-   */
-  public $provider;
   protected $providerType = AssistantApiCoreTypesProvider::class;
   protected $providerDataType = '';
   /**

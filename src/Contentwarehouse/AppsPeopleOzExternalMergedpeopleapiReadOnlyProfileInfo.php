@@ -20,26 +20,14 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extends \Google\Collection
 {
   protected $collection_key = 'unjoinedEmailCertificates';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiAccountEmail
-   */
-  public $accountEmail;
   protected $accountEmailType = AppsPeopleOzExternalMergedpeopleapiAccountEmail::class;
   protected $accountEmailDataType = '';
   /**
    * @var string[]
    */
   public $blockType;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiCustomerInfo
-   */
-  public $customerInfo;
   protected $customerInfoType = AppsPeopleOzExternalMergedpeopleapiCustomerInfo::class;
   protected $customerInfoDataType = '';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfoDomainInfo
-   */
-  public $domainInfo;
   protected $domainInfoType = AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfoDomainInfo::class;
   protected $domainInfoDataType = '';
   /**
@@ -50,10 +38,6 @@ class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extends \Google\Col
    * @var string[]
    */
   public $incomingBlockType;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -72,16 +56,8 @@ class AppsPeopleOzExternalMergedpeopleapiReadOnlyProfileInfo extends \Google\Col
    * @var string
    */
   public $plusPageType;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiProfileOwnerStats
-   */
-  public $profileOwnerStats;
   protected $profileOwnerStatsType = AppsPeopleOzExternalMergedpeopleapiProfileOwnerStats::class;
   protected $profileOwnerStatsDataType = '';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiEmail[]
-   */
-  public $unjoinedEmailCertificates;
   protected $unjoinedEmailCertificatesType = AppsPeopleOzExternalMergedpeopleapiEmail::class;
   protected $unjoinedEmailCertificatesDataType = 'array';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsNotificationProfileAlloNotificationProfile extends \Google\Model
 {
-  /**
-   * @var ChatBotPlatformBotSendToken
-   */
-  public $botSendToken;
   protected $botSendTokenType = ChatBotPlatformBotSendToken::class;
   protected $botSendTokenDataType = '';
-  /**
-   * @var ChatBotPlatformFireballId
-   */
-  public $id;
   protected $idType = ChatBotPlatformFireballId::class;
   protected $idDataType = '';
 

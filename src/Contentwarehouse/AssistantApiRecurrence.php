@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiRecurrence extends \Google\Collection
 {
   protected $collection_key = 'weekOfMonth';
-  /**
-   * @var AssistantApiDate
-   */
-  public $begin;
   protected $beginType = AssistantApiDate::class;
   protected $beginDataType = '';
-  /**
-   * @var AssistantApiDateTimeRange[]
-   */
-  public $blacklistedRanges;
   protected $blacklistedRangesType = AssistantApiDateTimeRange::class;
   protected $blacklistedRangesDataType = 'array';
   /**
@@ -40,10 +32,6 @@ class AssistantApiRecurrence extends \Google\Collection
    * @var int[]
    */
   public $dayOfWeek;
-  /**
-   * @var AssistantApiDate
-   */
-  public $end;
   protected $endType = AssistantApiDate::class;
   protected $endDataType = '';
   /**

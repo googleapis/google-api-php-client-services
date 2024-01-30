@@ -19,20 +19,12 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantContextProviderId extends \Google\Model
 {
-  /**
-   * @var AssistantContextAppProviderId
-   */
-  public $appProviderId;
   protected $appProviderIdType = AssistantContextAppProviderId::class;
   protected $appProviderIdDataType = '';
   /**
    * @var string
    */
   public $ecosystemType;
-  /**
-   * @var AssistantContextMediaProviderId
-   */
-  public $mediaProviderId;
   protected $mediaProviderIdType = AssistantContextMediaProviderId::class;
   protected $mediaProviderIdDataType = '';
   /**
@@ -43,10 +35,6 @@ class AssistantContextProviderId extends \Google\Model
    * @var string
    */
   public $providerCorpusId;
-  /**
-   * @var AssistantContextProviderVariant
-   */
-  public $providerVariant;
   protected $providerVariantType = AssistantContextProviderVariant::class;
   protected $providerVariantDataType = '';
 

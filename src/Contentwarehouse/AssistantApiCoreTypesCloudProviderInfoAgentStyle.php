@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends \Google\Model
 {
-  /**
-   * @var AssistantApiCoreTypesGovernedColor
-   */
-  public $backgroundColor;
   protected $backgroundColorType = AssistantApiCoreTypesGovernedColor::class;
   protected $backgroundColorDataType = '';
   /**
@@ -37,20 +33,12 @@ class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends \Google\Model
    * @var string
    */
   public $logoUrl;
-  /**
-   * @var AssistantApiCoreTypesGovernedColor
-   */
-  public $maskColor;
   protected $maskColorType = AssistantApiCoreTypesGovernedColor::class;
   protected $maskColorDataType = '';
   /**
    * @var string
    */
   public $portraitBackgroundImageUrl;
-  /**
-   * @var AssistantApiCoreTypesGovernedColor
-   */
-  public $primaryColor;
   protected $primaryColorType = AssistantApiCoreTypesGovernedColor::class;
   protected $primaryColorDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiGacsCapabilities extends \Google\Model
 {
-  /**
-   * @var AssistantApiCoreTypesDeviceId
-   */
-  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
-  /**
-   * @var GoogleAssistantAccessoryV1ResponseConfig
-   */
-  public $responseConfig;
   protected $responseConfigType = GoogleAssistantAccessoryV1ResponseConfig::class;
   protected $responseConfigDataType = '';
   /**

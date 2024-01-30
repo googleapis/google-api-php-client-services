@@ -39,10 +39,6 @@ class AssistantApiCoreTypesMessageNotificationNotificationEntry extends \Google\
    * @var string
    */
   public $postTime;
-  /**
-   * @var AssistantApiCoreTypesMessageNotificationPerson
-   */
-  public $sender;
   protected $senderType = AssistantApiCoreTypesMessageNotificationPerson::class;
   protected $senderDataType = '';
   /**

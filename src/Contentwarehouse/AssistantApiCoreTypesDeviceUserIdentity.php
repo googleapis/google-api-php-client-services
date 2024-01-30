@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesDeviceUserIdentity extends \Google\Model
 {
-  /**
-   * @var AssistantApiCoreTypesDeviceId
-   */
-  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**

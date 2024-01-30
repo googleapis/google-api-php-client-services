@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AssistantApiSettingsHospitalityCardSettings extends \Google\Collection
 {
   protected $collection_key = 'youtubeCardConfig';
-  /**
-   * @var AssistantApiSettingsHospitalityCardSettingsCardConfig[]
-   */
-  public $cardConfig;
   protected $cardConfigType = AssistantApiSettingsHospitalityCardSettingsCardConfig::class;
   protected $cardConfigDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class AssistantApiSettingsHospitalityCardSettings extends \Google\Collection
    * @var bool
    */
   public $showPhotoSwipeGestureTutorial;
-  /**
-   * @var AssistantApiSettingsHospitalityCardSettingsYouTubeCardConfig[]
-   */
-  public $youtubeCardConfig;
   protected $youtubeCardConfigType = AssistantApiSettingsHospitalityCardSettingsYouTubeCardConfig::class;
   protected $youtubeCardConfigDataType = 'array';
 

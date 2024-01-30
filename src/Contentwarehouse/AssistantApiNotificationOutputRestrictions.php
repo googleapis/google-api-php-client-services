@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiNotificationOutputRestrictions extends \Google\Model
 {
-  /**
-   * @var AssistantApiNotificationOutputRestrictionsOptOutState
-   */
-  public $optOutState;
   protected $optOutStateType = AssistantApiNotificationOutputRestrictionsOptOutState::class;
   protected $optOutStateDataType = '';
 

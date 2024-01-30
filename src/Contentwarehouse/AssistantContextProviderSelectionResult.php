@@ -28,10 +28,6 @@ class AssistantContextProviderSelectionResult extends \Google\Collection
    * @var float
    */
   public $finalScore;
-  /**
-   * @var AssistantContextProviderSelectionPolicy[]
-   */
-  public $policyApplied;
   protected $policyAppliedType = AssistantContextProviderSelectionPolicy::class;
   protected $policyAppliedDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantDevicesPlatformProtoDeviceModifySettingCapability extends \Google\Model
 {
-  /**
-   * @var AssistantApiClientOpPropertiesDeviceModifySettingClientOpProperty
-   */
-  public $clientOpProperty;
   protected $clientOpPropertyType = AssistantApiClientOpPropertiesDeviceModifySettingClientOpProperty::class;
   protected $clientOpPropertyDataType = '';
 

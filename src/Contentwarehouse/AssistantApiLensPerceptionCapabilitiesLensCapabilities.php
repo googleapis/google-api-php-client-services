@@ -19,40 +19,16 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiLensPerceptionCapabilitiesLensCapabilities extends \Google\Model
 {
-  /**
-   * @var AssistantApiLensPerceptionCapabilitiesLensCapabilitiesDining
-   */
-  public $dining;
   protected $diningType = AssistantApiLensPerceptionCapabilitiesLensCapabilitiesDining::class;
   protected $diningDataType = '';
-  /**
-   * @var AssistantApiLensPerceptionCapabilitiesLensCapabilitiesEducation
-   */
-  public $education;
   protected $educationType = AssistantApiLensPerceptionCapabilitiesLensCapabilitiesEducation::class;
   protected $educationDataType = '';
-  /**
-   * @var AssistantApiLensPerceptionCapabilitiesLensCapabilitiesOutdoor
-   */
-  public $outdoor;
   protected $outdoorType = AssistantApiLensPerceptionCapabilitiesLensCapabilitiesOutdoor::class;
   protected $outdoorDataType = '';
-  /**
-   * @var AssistantApiLensPerceptionCapabilitiesLensCapabilitiesShopping
-   */
-  public $shopping;
   protected $shoppingType = AssistantApiLensPerceptionCapabilitiesLensCapabilitiesShopping::class;
   protected $shoppingDataType = '';
-  /**
-   * @var AssistantApiLensPerceptionCapabilitiesLensCapabilitiesText
-   */
-  public $text;
   protected $textType = AssistantApiLensPerceptionCapabilitiesLensCapabilitiesText::class;
   protected $textDataType = '';
-  /**
-   * @var AssistantApiLensPerceptionCapabilitiesLensCapabilitiesTranslate
-   */
-  public $translate;
   protected $translateType = AssistantApiLensPerceptionCapabilitiesLensCapabilitiesTranslate::class;
   protected $translateDataType = '';
 

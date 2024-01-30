@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiSettingsNotificationProfile extends \Google\Model
 {
-  /**
-   * @var AssistantApiSettingsNotificationProfileAlloNotificationProfile
-   */
-  public $alloNotificationProfile;
   protected $alloNotificationProfileType = AssistantApiSettingsNotificationProfileAlloNotificationProfile::class;
   protected $alloNotificationProfileDataType = '';
 

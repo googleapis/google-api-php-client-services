@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiOemCapabilities extends \Google\Model
 {
-  /**
-   * @var AssistantDevicesPlatformProtoCloudCapability
-   */
-  public $cloudCapability;
   protected $cloudCapabilityType = AssistantDevicesPlatformProtoCloudCapability::class;
   protected $cloudCapabilityDataType = '';
   /**
@@ -41,16 +37,8 @@ class AssistantApiOemCapabilities extends \Google\Model
    * @var string
    */
   public $deviceSpecificData;
-  /**
-   * @var AssistantDevicesPlatformProtoInternalCapability
-   */
-  public $internalCapability;
   protected $internalCapabilityType = AssistantDevicesPlatformProtoInternalCapability::class;
   protected $internalCapabilityDataType = '';
-  /**
-   * @var AssistantApiThirdPartyActionConfig
-   */
-  public $thirdPartyActionConfig;
   protected $thirdPartyActionConfigType = AssistantApiThirdPartyActionConfig::class;
   protected $thirdPartyActionConfigDataType = '';
 

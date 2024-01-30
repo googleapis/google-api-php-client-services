@@ -31,10 +31,6 @@ class AppsPeopleOzExternalMergedpeopleapiSshPublicKey extends \Google\Model
    * @var string
    */
   public $key;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

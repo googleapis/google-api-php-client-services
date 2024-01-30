@@ -23,10 +23,6 @@ class AssistantApiCoreTypesCalendarEventRoom extends \Google\Model
    * @var string
    */
   public $email;
-  /**
-   * @var AssistantApiCoreTypesCalendarEventRoomRoomLocationDetails
-   */
-  public $locationDetails;
   protected $locationDetailsType = AssistantApiCoreTypesCalendarEventRoomRoomLocationDetails::class;
   protected $locationDetailsDataType = '';
   /**

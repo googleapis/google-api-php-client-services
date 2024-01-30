@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesSurfaceIdentity extends \Google\Model
 {
-  /**
-   * @var AssistantApiCoreTypesDeviceId
-   */
-  public $deviceId;
   protected $deviceIdType = AssistantApiCoreTypesDeviceId::class;
   protected $deviceIdDataType = '';
   /**
@@ -37,10 +33,6 @@ class AssistantApiCoreTypesSurfaceIdentity extends \Google\Model
    * @var string
    */
   public $surfaceTypeString;
-  /**
-   * @var AssistantApiCoreTypesSurfaceVersion
-   */
-  public $surfaceVersion;
   protected $surfaceVersionType = AssistantApiCoreTypesSurfaceVersion::class;
   protected $surfaceVersionDataType = '';
 

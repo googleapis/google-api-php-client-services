@@ -23,10 +23,6 @@ class AssistantApiCoreTypesAndroidAppInfo extends \Google\Model
    * @var string
    */
   public $accountType;
-  /**
-   * @var AssistantApiCoreTypesAndroidAppInfoActivityInfo
-   */
-  public $activityInfo;
   protected $activityInfoType = AssistantApiCoreTypesAndroidAppInfoActivityInfo::class;
   protected $activityInfoDataType = '';
   /**

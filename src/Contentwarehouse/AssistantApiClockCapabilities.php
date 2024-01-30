@@ -23,26 +23,14 @@ class AssistantApiClockCapabilities extends \Google\Model
    * @var int
    */
   public $maxSupportedAlarms;
-  /**
-   * @var AssistantApiDuration
-   */
-  public $maxSupportedExtendedTimerDuration;
   protected $maxSupportedExtendedTimerDurationType = AssistantApiDuration::class;
   protected $maxSupportedExtendedTimerDurationDataType = '';
-  /**
-   * @var AssistantApiDuration
-   */
-  public $maxSupportedTimerDuration;
   protected $maxSupportedTimerDurationType = AssistantApiDuration::class;
   protected $maxSupportedTimerDurationDataType = '';
   /**
    * @var int
    */
   public $maxSupportedTimers;
-  /**
-   * @var AssistantApiCoreTypesProvider
-   */
-  public $preferredStopwatchProvider;
   protected $preferredStopwatchProviderType = AssistantApiCoreTypesProvider::class;
   protected $preferredStopwatchProviderDataType = '';
   /**
