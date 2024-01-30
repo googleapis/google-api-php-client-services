@@ -49,16 +49,8 @@ class PerDocData extends \Google\Collection
         "toolBarData" => "ToolBarData",
         "whirlpoolDiscount" => "WhirlpoolDiscount",
   ];
-  /**
-   * @var BlogPerDocData
-   */
-  public $blogData;
   protected $blogDataType = BlogPerDocData::class;
   protected $blogDataDataType = '';
-  /**
-   * @var BookCitationPerDocData
-   */
-  public $bookCitationData;
   protected $bookCitationDataType = BookCitationPerDocData::class;
   protected $bookCitationDataDataType = '';
   /**
@@ -73,20 +65,12 @@ class PerDocData extends \Google\Collection
    * @var int
    */
   public $docLevelSpamScore;
-  /**
-   * @var PerDocDebugEvent[]
-   */
-  public $event;
   protected $eventType = PerDocDebugEvent::class;
   protected $eventDataType = 'array';
   /**
    * @var int
    */
   public $gibberishScore;
-  /**
-   * @var GroupsPerDocData
-   */
-  public $groupsData;
   protected $groupsDataType = GroupsPerDocData::class;
   protected $groupsDataDataType = '';
   /**
@@ -97,20 +81,12 @@ class PerDocData extends \Google\Collection
    * @var int
    */
   public $keywordStuffingScore;
-  /**
-   * @var MobilePerDocData
-   */
-  public $mobileData;
   protected $mobileDataType = MobilePerDocData::class;
   protected $mobileDataDataType = '';
   /**
    * @var int
    */
   public $originalContentScore;
-  /**
-   * @var PremiumPerDocData
-   */
-  public $premiumData;
   protected $premiumDataType = PremiumPerDocData::class;
   protected $premiumDataDataType = '';
   /**
@@ -161,42 +137,22 @@ class PerDocData extends \Google\Collection
    * @var int
    */
   public $tagPageScore;
-  /**
-   * @var ToolBarPerDocData
-   */
-  public $toolBarData;
   protected $toolBarDataType = ToolBarPerDocData::class;
   protected $toolBarDataDataType = '';
   /**
    * @var float
    */
   public $whirlpoolDiscount;
-  /**
-   * @var QualityCalypsoAppsLink
-   */
-  public $appsLink;
   protected $appsLinkType = QualityCalypsoAppsLink::class;
   protected $appsLinkDataType = '';
-  /**
-   * @var QualityOrbitAsteroidBeltDocumentIntentScores
-   */
-  public $asteroidBeltIntents;
   protected $asteroidBeltIntentsType = QualityOrbitAsteroidBeltDocumentIntentScores::class;
   protected $asteroidBeltIntentsDataType = '';
   /**
    * @var string[]
    */
   public $authorObfuscatedGaiaStr;
-  /**
-   * @var BiasingPerDocData
-   */
-  public $biasingdata;
   protected $biasingdataType = BiasingPerDocData::class;
   protected $biasingdataDataType = '';
-  /**
-   * @var BiasingPerDocData2
-   */
-  public $biasingdata2;
   protected $biasingdata2Type = BiasingPerDocData2::class;
   protected $biasingdata2DataType = '';
   /**
@@ -207,62 +163,34 @@ class PerDocData extends \Google\Collection
    * @var float
    */
   public $bodyWordsToTokensRatioTotal;
-  /**
-   * @var QualityGeoBrainlocBrainlocAttachment
-   */
-  public $brainloc;
   protected $brainlocType = QualityGeoBrainlocBrainlocAttachment::class;
   protected $brainlocDataType = '';
   /**
    * @var float
    */
   public $commercialScore;
-  /**
-   * @var CompressedQualitySignals
-   */
-  public $compressedQualitySignals;
   protected $compressedQualitySignalsType = CompressedQualitySignals::class;
   protected $compressedQualitySignalsDataType = '';
   /**
    * @var string
    */
   public $compressedUrl;
-  /**
-   * @var ContentAttributions
-   */
-  public $contentAttributions;
   protected $contentAttributionsType = ContentAttributions::class;
   protected $contentAttributionsDataType = '';
-  /**
-   * @var CountryCountryAttachment
-   */
-  public $countryInfo;
   protected $countryInfoType = CountryCountryAttachment::class;
   protected $countryInfoDataType = '';
   /**
    * @var int
    */
   public $crawlPagerank;
-  /**
-   * @var LogsProtoIndexingCrawlerIdCrawlerIdProto
-   */
-  public $crawlerIdProto;
   protected $crawlerIdProtoType = LogsProtoIndexingCrawlerIdCrawlerIdProto::class;
   protected $crawlerIdProtoDataType = '';
-  /**
-   * @var CrowdingPerDocData
-   */
-  public $crowdingdata;
   protected $crowdingdataType = CrowdingPerDocData::class;
   protected $crowdingdataDataType = '';
   /**
    * @var string
    */
   public $datesInfo;
-  /**
-   * @var IndexingMobileInterstitialsProtoDesktopInterstitials
-   */
-  public $desktopInterstitials;
   protected $desktopInterstitialsType = IndexingMobileInterstitialsProtoDesktopInterstitials::class;
   protected $desktopInterstitialsDataType = '';
   /**
@@ -273,16 +201,8 @@ class PerDocData extends \Google\Collection
    * @var string[]
    */
   public $eventsDate;
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $extraData;
   protected $extraDataType = Proto2BridgeMessageSet::class;
   protected $extraDataDataType = '';
-  /**
-   * @var QualityCopiaFireflySiteSignal
-   */
-  public $fireflySiteSignal;
   protected $fireflySiteSignalType = QualityCopiaFireflySiteSignal::class;
   protected $fireflySiteSignalDataType = '';
   /**
@@ -293,10 +213,6 @@ class PerDocData extends \Google\Collection
    * @var string
    */
   public $freshnessEncodedSignals;
-  /**
-   * @var QualityFringeFringeQueryPriorPerDocData
-   */
-  public $fringeQueryPrior;
   protected $fringeQueryPriorType = QualityFringeFringeQueryPriorPerDocData::class;
   protected $fringeQueryPriorDataType = '';
   /**
@@ -319,10 +235,6 @@ class PerDocData extends \Google\Collection
    * @var string
    */
   public $hostNsr;
-  /**
-   * @var ImagePerDocData
-   */
-  public $imagedata;
   protected $imagedataType = ImagePerDocData::class;
   protected $imagedataDataType = '';
   /**
@@ -333,16 +245,8 @@ class PerDocData extends \Google\Collection
    * @var bool
    */
   public $isHotdoc;
-  /**
-   * @var KaltixPerDocData
-   */
-  public $kaltixdata;
   protected $kaltixdataType = KaltixPerDocData::class;
   protected $kaltixdataDataType = '';
-  /**
-   * @var SocialPersonalizationKnexAnnotation
-   */
-  public $knexAnnotation;
   protected $knexAnnotationType = SocialPersonalizationKnexAnnotation::class;
   protected $knexAnnotationDataType = '';
   /**
@@ -357,38 +261,18 @@ class PerDocData extends \Google\Collection
    * @var string
    */
   public $lastSignificantUpdateInfo;
-  /**
-   * @var QualityRichsnippetsAppsProtosLaunchAppInfoPerDocData
-   */
-  public $launchAppInfo;
   protected $launchAppInfoType = QualityRichsnippetsAppsProtosLaunchAppInfoPerDocData::class;
   protected $launchAppInfoDataType = '';
-  /**
-   * @var WeboftrustLiveResultsDocAttachments
-   */
-  public $liveResultsData;
   protected $liveResultsDataType = WeboftrustLiveResultsDocAttachments::class;
   protected $liveResultsDataDataType = '';
-  /**
-   * @var IndexingDupsLocalizedLocalizedCluster
-   */
-  public $localizedCluster;
   protected $localizedClusterType = IndexingDupsLocalizedLocalizedCluster::class;
   protected $localizedClusterDataType = '';
-  /**
-   * @var ImageQualitySensitiveMediaOrPeopleEntities
-   */
-  public $mediaOrPeopleEntities;
   protected $mediaOrPeopleEntitiesType = ImageQualitySensitiveMediaOrPeopleEntities::class;
   protected $mediaOrPeopleEntitiesDataType = '';
   /**
    * @var int
    */
   public $noimageframeoverlayreason;
-  /**
-   * @var QualityNsrNsrData
-   */
-  public $nsrDataProto;
   protected $nsrDataProtoType = QualityNsrNsrData::class;
   protected $nsrDataProtoDataType = '';
   /**
@@ -411,10 +295,6 @@ class PerDocData extends \Google\Collection
    * @var int
    */
   public $numUrls;
-  /**
-   * @var OceanPerDocData
-   */
-  public $oceandata;
   protected $oceandataType = OceanPerDocData::class;
   protected $oceandataDataType = '';
   /**
@@ -453,38 +333,18 @@ class PerDocData extends \Google\Collection
    * @var string
    */
   public $pageregions;
-  /**
-   * @var PhilPerDocData
-   */
-  public $phildata;
   protected $phildataType = PhilPerDocData::class;
   protected $phildataDataType = '';
-  /**
-   * @var QualityProductProductSiteData
-   */
-  public $productSitesInfo;
   protected $productSitesInfoType = QualityProductProductSiteData::class;
   protected $productSitesInfoDataType = '';
-  /**
-   * @var OfficialPagesQuerySet
-   */
-  public $queriesForWhichOfficial;
   protected $queriesForWhichOfficialType = OfficialPagesQuerySet::class;
   protected $queriesForWhichOfficialDataType = '';
   /**
    * @var string[]
    */
   public $rosettaLanguages;
-  /**
-   * @var RepositoryAnnotationsRdfaRdfaRichSnippetsApplication
-   */
-  public $rsApplication;
   protected $rsApplicationType = RepositoryAnnotationsRdfaRdfaRichSnippetsApplication::class;
   protected $rsApplicationDataType = '';
-  /**
-   * @var S3AudioLanguageS3AudioLanguage
-   */
-  public $s3AudioLanguage;
   protected $s3AudioLanguageType = S3AudioLanguageS3AudioLanguage::class;
   protected $s3AudioLanguageDataType = '';
   /**
@@ -515,22 +375,10 @@ class PerDocData extends \Google\Collection
    * @var int
    */
   public $semanticDateInfo;
-  /**
-   * @var IndexingDocjoinerServingTimeClusterIds
-   */
-  public $servingTimeClusterIds;
   protected $servingTimeClusterIdsType = IndexingDocjoinerServingTimeClusterIds::class;
   protected $servingTimeClusterIdsDataType = '';
-  /**
-   * @var ShingleInfoPerDocData
-   */
-  public $shingleInfo;
   protected $shingleInfoType = ShingleInfoPerDocData::class;
   protected $shingleInfoDataType = '';
-  /**
-   * @var SmartphonePerDocData
-   */
-  public $smartphoneData;
   protected $smartphoneDataType = SmartphonePerDocData::class;
   protected $smartphoneDataDataType = '';
   /**
@@ -541,22 +389,10 @@ class PerDocData extends \Google\Collection
    * @var string
    */
   public $socialgraphNodeNameFp;
-  /**
-   * @var SpamCookbookAction
-   */
-  public $spamCookbookAction;
   protected $spamCookbookActionType = SpamCookbookAction::class;
   protected $spamCookbookActionDataType = '';
-  /**
-   * @var SpamMuppetjoinsMuppetSignals
-   */
-  public $spamMuppetSignals;
   protected $spamMuppetSignalsType = SpamMuppetjoinsMuppetSignals::class;
   protected $spamMuppetSignalsDataType = '';
-  /**
-   * @var SpamBrainData
-   */
-  public $spambrainData;
   protected $spambrainDataType = SpamBrainData::class;
   protected $spambrainDataDataType = '';
   /**
@@ -591,10 +427,6 @@ class PerDocData extends \Google\Collection
    * @var float
    */
   public $topPetacatWeight;
-  /**
-   * @var QualityTravelGoodSitesData
-   */
-  public $travelGoodSitesInfo;
   protected $travelGoodSitesInfoType = QualityTravelGoodSitesData::class;
   protected $travelGoodSitesInfoDataType = '';
   /**
@@ -613,54 +445,26 @@ class PerDocData extends \Google\Collection
    * @var string
    */
   public $urlAfterRedirectsFp;
-  /**
-   * @var UrlPoisoningData
-   */
-  public $urlPoisoningData;
   protected $urlPoisoningDataType = UrlPoisoningData::class;
   protected $urlPoisoningDataDataType = '';
-  /**
-   * @var QualitySherlockKnexAnnotation
-   */
-  public $v2KnexAnnotation;
   protected $v2KnexAnnotationType = QualitySherlockKnexAnnotation::class;
   protected $v2KnexAnnotationDataType = '';
   /**
    * @var string
    */
   public $videoCorpusDocid;
-  /**
-   * @var QualityVidyaVideoLanguageVideoLanguage
-   */
-  public $videoLanguage;
   protected $videoLanguageType = QualityVidyaVideoLanguageVideoLanguage::class;
   protected $videoLanguageDataType = '';
-  /**
-   * @var VideoPerDocData
-   */
-  public $videodata;
   protected $videodataType = VideoPerDocData::class;
   protected $videodataDataType = '';
-  /**
-   * @var IndexingMobileVoltVoltPerDocData
-   */
-  public $voltData;
   protected $voltDataType = IndexingMobileVoltVoltPerDocData::class;
   protected $voltDataDataType = '';
-  /**
-   * @var WatchpageLanguageWatchPageLanguageResult
-   */
-  public $watchpageLanguageResult;
   protected $watchpageLanguageResultType = WatchpageLanguageWatchPageLanguageResult::class;
   protected $watchpageLanguageResultDataType = '';
   /**
    * @var string
    */
   public $webmirrorEcnFp;
-  /**
-   * @var RepositoryWebrefWebrefMustangAttachment
-   */
-  public $webrefEntities;
   protected $webrefEntitiesType = RepositoryWebrefWebrefMustangAttachment::class;
   protected $webrefEntitiesDataType = '';
   /**

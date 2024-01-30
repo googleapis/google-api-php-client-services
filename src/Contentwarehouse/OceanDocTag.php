@@ -59,36 +59,20 @@ class OceanDocTag extends \Google\Collection
    * @var bool
    */
   public $blockSnippet;
-  /**
-   * @var OceanDocTagBookSpecific
-   */
-  public $bookspecific;
   protected $bookspecificType = OceanDocTagBookSpecific::class;
   protected $bookspecificDataType = '';
-  /**
-   * @var OceanDocTagCatalogSpecific
-   */
-  public $catalogspecific;
   protected $catalogspecificType = OceanDocTagCatalogSpecific::class;
   protected $catalogspecificDataType = '';
   /**
    * @var int
    */
   public $contentType;
-  /**
-   * @var OceanDocTagContributor[]
-   */
-  public $contributor;
   protected $contributorType = OceanDocTagContributor::class;
   protected $contributorDataType = 'array';
   /**
    * @var string
    */
   public $coverPage;
-  /**
-   * @var OceanImageSize
-   */
-  public $coverPageSize;
   protected $coverPageSizeType = OceanImageSize::class;
   protected $coverPageSizeDataType = '';
   /**
@@ -123,26 +107,14 @@ class OceanDocTag extends \Google\Collection
    * @var bool
    */
   public $isLandingPage;
-  /**
-   * @var OceanDocTagMagazineSpecific
-   */
-  public $magazinespecific;
   protected $magazinespecificType = OceanDocTagMagazineSpecific::class;
   protected $magazinespecificDataType = '';
   /**
    * @var bool
    */
   public $metadataCoverExists;
-  /**
-   * @var OceanImageSize
-   */
-  public $metadataCoverSize;
   protected $metadataCoverSizeType = OceanImageSize::class;
   protected $metadataCoverSizeDataType = '';
-  /**
-   * @var OceanDocTagNewspaperSpecific
-   */
-  public $newspaperspecific;
   protected $newspaperspecificType = OceanDocTagNewspaperSpecific::class;
   protected $newspaperspecificDataType = '';
   /**
@@ -162,16 +134,8 @@ class OceanDocTag extends \Google\Collection
    */
   public $pageid;
   public $pagerank;
-  /**
-   * @var OceanDocTagPatentSpecific
-   */
-  public $patentspecific;
   protected $patentspecificType = OceanDocTagPatentSpecific::class;
   protected $patentspecificDataType = '';
-  /**
-   * @var OceanGEPrice
-   */
-  public $price;
   protected $priceType = OceanGEPrice::class;
   protected $priceDataType = '';
   /**
@@ -222,10 +186,6 @@ class OceanDocTag extends \Google\Collection
    * @var bool
    */
   public $usingActualCover;
-  /**
-   * @var OceanVolumeViewability
-   */
-  public $viewability;
   protected $viewabilityType = OceanVolumeViewability::class;
   protected $viewabilityDataType = '';
   /**
@@ -236,10 +196,6 @@ class OceanDocTag extends \Google\Collection
    * @var string
    */
   public $volumeVersion;
-  /**
-   * @var OceanDocTagWorkCluster
-   */
-  public $workcluster;
   protected $workclusterType = OceanDocTagWorkCluster::class;
   protected $workclusterDataType = '';
 

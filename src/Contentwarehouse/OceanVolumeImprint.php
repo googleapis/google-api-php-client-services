@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class OceanVolumeImprint extends \Google\Model
 {
-  /**
-   * @var OceanVolumeAccessRights
-   */
-  public $accessRights;
   protected $accessRightsType = OceanVolumeAccessRights::class;
   protected $accessRightsDataType = '';
   /**
@@ -77,10 +73,6 @@ class OceanVolumeImprint extends \Google\Model
    * @var bool
    */
   public $disableOtherBuyTheBookLinks;
-  /**
-   * @var OceanVolumeDisplayDetails
-   */
-  public $displayDetails;
   protected $displayDetailsType = OceanVolumeDisplayDetails::class;
   protected $displayDetailsDataType = '';
   /**

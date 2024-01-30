@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityActionsNewsProviderAnnotationData extends \Google\Collection
 {
   protected $collection_key = 'providers';
-  /**
-   * @var QualityActionsNewsProviderAnnotationDataProvider[]
-   */
-  public $providers;
   protected $providersType = QualityActionsNewsProviderAnnotationDataProvider::class;
   protected $providersDataType = 'array';
 

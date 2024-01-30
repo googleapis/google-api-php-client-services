@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityActionsRingtone extends \Google\Collection
 {
   protected $collection_key = 'soundUrl';
-  /**
-   * @var AssistantApiDuration
-   */
-  public $pauseDuration;
   protected $pauseDurationType = AssistantApiDuration::class;
   protected $pauseDurationDataType = '';
   /**

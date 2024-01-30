@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityGenieComplexQueriesComplexQueriesOutputRewrite extends \Google\Collection
 {
   protected $collection_key = 'entities';
-  /**
-   * @var QualityGenieComplexQueriesComplexQueriesOutputRewriteEntity[]
-   */
-  public $entities;
   protected $entitiesType = QualityGenieComplexQueriesComplexQueriesOutputRewriteEntity::class;
   protected $entitiesDataType = 'array';
   /**

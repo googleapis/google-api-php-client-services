@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class PhotosVisionObjectrecLocalDescriptor extends \Google\Model
 {
-  /**
-   * @var PhotosVisionObjectrecMatrix2D
-   */
-  public $affineMatrix;
   protected $affineMatrixType = PhotosVisionObjectrecMatrix2D::class;
   protected $affineMatrixDataType = '';
   /**
@@ -33,10 +29,6 @@ class PhotosVisionObjectrecLocalDescriptor extends \Google\Model
    * @var float
    */
   public $dataFactor;
-  /**
-   * @var PhotosVisionObjectrecFeatureVector
-   */
-  public $featureVector;
   protected $featureVectorType = PhotosVisionObjectrecFeatureVector::class;
   protected $featureVectorDataType = '';
   /**

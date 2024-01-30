@@ -40,10 +40,6 @@ class QualityLabelsGoogleLabelDataLabel extends \Google\Collection
    * @var string
    */
   public $labelName;
-  /**
-   * @var QualityLabelsGoogleLabelDataLabelProvider[]
-   */
-  public $provider;
   protected $providerType = QualityLabelsGoogleLabelDataLabelProvider::class;
   protected $providerDataType = 'array';
   /**

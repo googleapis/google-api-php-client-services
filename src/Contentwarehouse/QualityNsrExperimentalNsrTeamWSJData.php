@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityNsrExperimentalNsrTeamWSJData extends \Google\Model
 {
-  /**
-   * @var QualityNsrExperimentalNsrTeamData
-   */
-  public $experimentalNsrTeamData;
   protected $experimentalNsrTeamDataType = QualityNsrExperimentalNsrTeamData::class;
   protected $experimentalNsrTeamDataDataType = '';
   /**

@@ -28,10 +28,6 @@ class QualityOrbitAsteroidBeltDocumentIntentScores extends \Google\Collection
    * @var int[]
    */
   public $belowThresholdScores;
-  /**
-   * @var QualityOrbitAsteroidBeltImageIntentScores[]
-   */
-  public $imageIntentScores;
   protected $imageIntentScoresType = QualityOrbitAsteroidBeltImageIntentScores::class;
   protected $imageIntentScoresDataType = 'map';
   /**

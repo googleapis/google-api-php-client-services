@@ -19,22 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class NlxDataSchemaMention extends \Google\Model
 {
-  /**
-   * @var MultiscalePointerSpan
-   */
-  public $bytes;
   protected $bytesType = MultiscalePointerSpan::class;
   protected $bytesDataType = '';
-  /**
-   * @var MultiscalePointerIndex
-   */
-  public $document;
   protected $documentType = MultiscalePointerIndex::class;
   protected $documentDataType = '';
-  /**
-   * @var MultiscalePointerIndex
-   */
-  public $entity;
   protected $entityType = MultiscalePointerIndex::class;
   protected $entityDataType = '';
   /**
@@ -45,10 +33,6 @@ class NlxDataSchemaMention extends \Google\Model
    * @var string
    */
   public $text;
-  /**
-   * @var MultiscalePointerSpan
-   */
-  public $tokens;
   protected $tokensType = MultiscalePointerSpan::class;
   protected $tokensDataType = '';
   /**

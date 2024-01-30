@@ -44,20 +44,12 @@ class QualityNsrNsrData extends \Google\Collection
    * @var int
    */
   public $clusterId;
-  /**
-   * @var QualityNsrNsrDataClusterUplift
-   */
-  public $clusterUplift;
   protected $clusterUpliftType = QualityNsrNsrDataClusterUplift::class;
   protected $clusterUpliftDataType = '';
   /**
    * @var float
    */
   public $clutterScore;
-  /**
-   * @var QualityNsrVersionedFloatSignal[]
-   */
-  public $clutterScores;
   protected $clutterScoresType = QualityNsrVersionedFloatSignal::class;
   protected $clutterScoresDataType = 'array';
   /**
@@ -104,10 +96,6 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $localityScore;
-  /**
-   * @var QualityNsrNsrDataMetadata
-   */
-  public $metadata;
   protected $metadataType = QualityNsrNsrDataMetadata::class;
   protected $metadataDataType = '';
   /**
@@ -142,10 +130,6 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $pnavClicks;
-  /**
-   * @var QualityNsrVersionedFloatSignal[]
-   */
-  public $priorAdjustedNsr;
   protected $priorAdjustedNsrType = QualityNsrVersionedFloatSignal::class;
   protected $priorAdjustedNsrDataType = 'array';
   /**
@@ -184,10 +168,6 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $siteQualityStddev;
-  /**
-   * @var QualityNsrVersionedFloatSignal[]
-   */
-  public $siteQualityStddevs;
   protected $siteQualityStddevsType = QualityNsrVersionedFloatSignal::class;
   protected $siteQualityStddevsDataType = 'array';
   /**
@@ -198,10 +178,6 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $spambrainLavcScore;
-  /**
-   * @var QualityNsrVersionedFloatSignal[]
-   */
-  public $spambrainLavcScores;
   protected $spambrainLavcScoresType = QualityNsrVersionedFloatSignal::class;
   protected $spambrainLavcScoresDataType = 'array';
   /**
@@ -216,10 +192,6 @@ class QualityNsrNsrData extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var QualityNsrNSRVersionedData[]
-   */
-  public $versionedData;
   protected $versionedDataType = QualityNsrNSRVersionedData::class;
   protected $versionedDataDataType = 'array';
   /**

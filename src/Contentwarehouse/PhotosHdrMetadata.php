@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class PhotosHdrMetadata extends \Google\Model
 {
-  /**
-   * @var PhotosHdrMetadataGainmap
-   */
-  public $gainmap;
   protected $gainmapType = PhotosHdrMetadataGainmap::class;
   protected $gainmapDataType = '';
 

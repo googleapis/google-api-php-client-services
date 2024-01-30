@@ -44,10 +44,6 @@ class QualityNsrPQData extends \Google\Collection
    * @var float
    */
   public $deltaSubchunkAdjustment;
-  /**
-   * @var QualityNsrVersionedFloatSignal[]
-   */
-  public $keto;
   protected $ketoType = QualityNsrVersionedFloatSignal::class;
   protected $ketoDataType = 'array';
   /**
@@ -66,10 +62,6 @@ class QualityNsrPQData extends \Google\Collection
    * @var float
    */
   public $page2vecLq;
-  /**
-   * @var QualityNsrPQDataSubchunkData[]
-   */
-  public $subchunkData;
   protected $subchunkDataType = QualityNsrPQDataSubchunkData::class;
   protected $subchunkDataDataType = 'array';
   /**

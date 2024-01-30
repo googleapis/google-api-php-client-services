@@ -23,10 +23,6 @@ class NlpSemanticParsingProtoActionsOnGoogleTypedValue extends \Google\Model
    * @var bool
    */
   public $boolValue;
-  /**
-   * @var NlpSemanticParsingProtoActionsOnGoogleDateTime
-   */
-  public $dateTimeValue;
   protected $dateTimeValueType = NlpSemanticParsingProtoActionsOnGoogleDateTime::class;
   protected $dateTimeValueDataType = '';
   public $numberValue;

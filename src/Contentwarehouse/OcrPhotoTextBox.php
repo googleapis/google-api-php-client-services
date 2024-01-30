@@ -24,10 +24,6 @@ class OcrPhotoTextBox extends \Google\Collection
    * @var int
    */
   public $blockId;
-  /**
-   * @var OcrPhotoBoundingBox
-   */
-  public $box;
   protected $boxType = OcrPhotoBoundingBox::class;
   protected $boxDataType = '';
   /**

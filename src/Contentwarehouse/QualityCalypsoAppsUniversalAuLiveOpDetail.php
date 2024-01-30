@@ -19,22 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityCalypsoAppsUniversalAuLiveOpDetail extends \Google\Model
 {
-  /**
-   * @var QualityCalypsoAppsUniversalAuLiveOpEvent[]
-   */
-  public $countryLevelScheduleInformation;
   protected $countryLevelScheduleInformationType = QualityCalypsoAppsUniversalAuLiveOpEvent::class;
   protected $countryLevelScheduleInformationDataType = 'map';
-  /**
-   * @var QualityCalypsoAppsUniversalAuLiveOpFormat
-   */
-  public $defaultFormatInformation;
   protected $defaultFormatInformationType = QualityCalypsoAppsUniversalAuLiveOpFormat::class;
   protected $defaultFormatInformationDataType = '';
-  /**
-   * @var QualityCalypsoAppsUniversalAuLiveOpEvent
-   */
-  public $defaultScheduleInformation;
   protected $defaultScheduleInformationType = QualityCalypsoAppsUniversalAuLiveOpEvent::class;
   protected $defaultScheduleInformationDataType = '';
   /**
@@ -49,10 +37,6 @@ class QualityCalypsoAppsUniversalAuLiveOpDetail extends \Google\Model
    * @var string
    */
   public $eventUrl;
-  /**
-   * @var QualityCalypsoAppsUniversalAuLiveOpFormat[]
-   */
-  public $localeLevelFormatInformation;
   protected $localeLevelFormatInformationType = QualityCalypsoAppsUniversalAuLiveOpFormat::class;
   protected $localeLevelFormatInformationDataType = 'map';
   /**

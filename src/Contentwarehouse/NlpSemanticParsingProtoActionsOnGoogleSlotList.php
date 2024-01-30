@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingProtoActionsOnGoogleSlotList extends \Google\Collection
 {
   protected $collection_key = 'slots';
-  /**
-   * @var NlpSemanticParsingProtoActionsOnGoogleAogSlot[]
-   */
-  public $slots;
   protected $slotsType = NlpSemanticParsingProtoActionsOnGoogleAogSlot::class;
   protected $slotsDataType = 'array';
 

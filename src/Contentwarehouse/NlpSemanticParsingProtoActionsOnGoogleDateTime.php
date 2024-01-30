@@ -19,28 +19,12 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingProtoActionsOnGoogleDateTime extends \Google\Model
 {
-  /**
-   * @var GoogleTypeDate
-   */
-  public $date;
   protected $dateType = GoogleTypeDate::class;
   protected $dateDataType = '';
-  /**
-   * @var NlpSemanticParsingProtoActionsOnGoogleDateTimeProperty
-   */
-  public $property;
   protected $propertyType = NlpSemanticParsingProtoActionsOnGoogleDateTimeProperty::class;
   protected $propertyDataType = '';
-  /**
-   * @var GoogleTypeTimeOfDay
-   */
-  public $time;
   protected $timeType = GoogleTypeTimeOfDay::class;
   protected $timeDataType = '';
-  /**
-   * @var GoogleTypeTimeZone
-   */
-  public $timeZone;
   protected $timeZoneType = GoogleTypeTimeZone::class;
   protected $timeZoneDataType = '';
 

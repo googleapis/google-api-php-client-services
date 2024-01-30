@@ -24,16 +24,8 @@ class QualityDialogManagerLocalResult extends \Google\Collection
    * @var string
    */
   public $adminArea1;
-  /**
-   * @var QualityDialogManagerLocalIntentOptions
-   */
-  public $availableIntents;
   protected $availableIntentsType = QualityDialogManagerLocalIntentOptions::class;
   protected $availableIntentsDataType = '';
-  /**
-   * @var NlpSemanticParsingLocalBusinessType
-   */
-  public $businessType;
   protected $businessTypeType = NlpSemanticParsingLocalBusinessType::class;
   protected $businessTypeDataType = '';
   /**
@@ -52,10 +44,6 @@ class QualityDialogManagerLocalResult extends \Google\Collection
    * @var string
    */
   public $distanceUnits;
-  /**
-   * @var QualityDialogManagerExternalIds
-   */
-  public $externalIds;
   protected $externalIdsType = QualityDialogManagerExternalIds::class;
   protected $externalIdsDataType = '';
   /**
@@ -74,10 +62,6 @@ class QualityDialogManagerLocalResult extends \Google\Collection
    * @var bool
    */
   public $inUserLocality;
-  /**
-   * @var LocalsearchProtoInternalFoodOrderingActionMetadata
-   */
-  public $internalFoodOrderingMetadata;
   protected $internalFoodOrderingMetadataType = LocalsearchProtoInternalFoodOrderingActionMetadata::class;
   protected $internalFoodOrderingMetadataDataType = '';
   /**
@@ -96,10 +80,6 @@ class QualityDialogManagerLocalResult extends \Google\Collection
    * @var string
    */
   public $neighborhood;
-  /**
-   * @var NlpSemanticParsingLocalLocalResultId
-   */
-  public $resultId;
   protected $resultIdType = NlpSemanticParsingLocalLocalResultId::class;
   protected $resultIdDataType = '';
   /**

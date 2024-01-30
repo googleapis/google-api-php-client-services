@@ -23,10 +23,6 @@ class NlpSemanticParsingModelsShoppingAssistantStore extends \Google\Model
    * @var string
    */
   public $id;
-  /**
-   * @var NlpSemanticParsingLocalLocation
-   */
-  public $location;
   protected $locationType = NlpSemanticParsingLocalLocation::class;
   protected $locationDataType = '';
   /**

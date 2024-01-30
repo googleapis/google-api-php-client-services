@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class PhotosVisionObjectrecImageTemplateSubSet extends \Google\Collection
 {
   protected $collection_key = 'descriptor';
-  /**
-   * @var PhotosVisionObjectrecLocalDescriptor[]
-   */
-  public $descriptor;
   protected $descriptorDataType = 'array';
   /**
    * @var int

@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class PornFlagData extends \Google\Collection
 {
   protected $collection_key = 'debugInfo';
-  /**
-   * @var ImagePornDebugInfo[]
-   */
-  public $debugInfo;
   protected $debugInfoType = ImagePornDebugInfo::class;
   protected $debugInfoDataType = 'array';
   /**
@@ -38,30 +34,18 @@ class PornFlagData extends \Google\Collection
    * @var string
    */
   public $finalViolenceScoreVersion;
-  /**
-   * @var SafesearchInternalImageSignals
-   */
-  public $internalSignals;
   protected $internalSignalsType = SafesearchInternalImageSignals::class;
   protected $internalSignalsDataType = '';
   /**
    * @var int
    */
   public $numberFaces;
-  /**
-   * @var ImageSafesearchContentOCRAnnotation
-   */
-  public $ocrAnnotation;
   protected $ocrAnnotationType = ImageSafesearchContentOCRAnnotation::class;
   protected $ocrAnnotationDataType = '';
   /**
    * @var float
    */
   public $ocrVulgarScore;
-  /**
-   * @var ImageSafesearchContentOffensiveSymbolDetection
-   */
-  public $offensiveSymbolDetection;
   protected $offensiveSymbolDetectionType = ImageSafesearchContentOffensiveSymbolDetection::class;
   protected $offensiveSymbolDetectionDataType = '';
   /**
@@ -80,10 +64,6 @@ class PornFlagData extends \Google\Collection
    * @var float
    */
   public $qbstSpoofScore;
-  /**
-   * @var ClassifierPornQueryStats
-   */
-  public $queryStats;
   protected $queryStatsType = ClassifierPornQueryStats::class;
   protected $queryStatsDataType = '';
   /**
@@ -94,10 +74,6 @@ class PornFlagData extends \Google\Collection
    * @var string
    */
   public $referer;
-  /**
-   * @var ClassifierPornReferrerCounts
-   */
-  public $referrerCounts;
   protected $referrerCountsType = ClassifierPornReferrerCounts::class;
   protected $referrerCountsDataType = '';
   /**

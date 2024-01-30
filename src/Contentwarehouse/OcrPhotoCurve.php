@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class OcrPhotoCurve extends \Google\Collection
 {
   protected $collection_key = 'points';
-  /**
-   * @var OcrPhotoCurvePoint[]
-   */
-  public $points;
   protected $pointsType = OcrPhotoCurvePoint::class;
   protected $pointsDataType = 'array';
 

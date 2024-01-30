@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityNsrExperimentalNsrTeamData extends \Google\Collection
 {
   protected $collection_key = 'versionedSignals';
-  /**
-   * @var QualityNsrExperimentalNsrTeamScoringSignal[]
-   */
-  public $versionedSignals;
   protected $versionedSignalsType = QualityNsrExperimentalNsrTeamScoringSignal::class;
   protected $versionedSignalsDataType = 'array';
 

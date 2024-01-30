@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class OceanDocInfo extends \Google\Model
 {
-  /**
-   * @var OceanDocTag
-   */
-  public $docTag;
   protected $docTagType = OceanDocTag::class;
   protected $docTagDataType = '';
 

@@ -19,20 +19,12 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityDialogManagerExternalIds extends \Google\Model
 {
-  /**
-   * @var BlueGingerClientVisibleProtoBlueGingerSupportedServices
-   */
-  public $blueGingerSupportedServices;
   protected $blueGingerSupportedServicesType = BlueGingerClientVisibleProtoBlueGingerSupportedServices::class;
   protected $blueGingerSupportedServicesDataType = '';
   /**
    * @var string
    */
   public $knowledgeGraphMid;
-  /**
-   * @var GeoOndemandAssistantSupportedActions
-   */
-  public $maddenSupportedActions;
   protected $maddenSupportedActionsType = GeoOndemandAssistantSupportedActions::class;
   protected $maddenSupportedActionsDataType = '';
   /**

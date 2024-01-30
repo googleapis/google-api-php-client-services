@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class QualityOrbitOrbitImageIntents extends \Google\Collection
 {
   protected $collection_key = 'intents';
-  /**
-   * @var QualityOrbitOrbitImageIntent[]
-   */
-  public $intents;
   protected $intentsType = QualityOrbitOrbitImageIntent::class;
   protected $intentsDataType = 'array';
   /**

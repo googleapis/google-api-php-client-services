@@ -23,10 +23,6 @@ class OcrPhotoBoundingBox extends \Google\Model
    * @var float
    */
   public $angle;
-  /**
-   * @var OcrPhotoCurvedBoundingBox
-   */
-  public $curvedBox;
   protected $curvedBoxType = OcrPhotoCurvedBoundingBox::class;
   protected $curvedBoxDataType = '';
   /**

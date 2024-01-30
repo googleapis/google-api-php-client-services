@@ -24,10 +24,6 @@ class QualityRankembedMustangMustangRankEmbedInfo extends \Google\Collection
    * @var string[]
    */
   public $additionalFixedPointEncodings;
-  /**
-   * @var QualityRankembedMustangMustangRankEmbedInfoCompressedEmbedding
-   */
-  public $compressedDocumentEmbedding;
   protected $compressedDocumentEmbeddingType = QualityRankembedMustangMustangRankEmbedInfoCompressedEmbedding::class;
   protected $compressedDocumentEmbeddingDataType = '';
   /**

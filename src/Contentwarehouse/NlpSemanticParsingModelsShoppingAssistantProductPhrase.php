@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsShoppingAssistantProductPhrase extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingModelsShoppingAssistantProduct
-   */
-  public $metadata;
   protected $metadataType = NlpSemanticParsingModelsShoppingAssistantProduct::class;
   protected $metadataDataType = '';
   /**

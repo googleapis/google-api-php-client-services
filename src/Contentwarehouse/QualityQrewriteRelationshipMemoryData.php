@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityQrewriteRelationshipMemoryData extends \Google\Model
 {
-  /**
-   * @var FocusBackendContactPointer
-   */
-  public $contactPointer;
   protected $contactPointerType = FocusBackendContactPointer::class;
   protected $contactPointerDataType = '';
   /**
