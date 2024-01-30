@@ -32,20 +32,12 @@ class AuthenticationInfo extends \Google\Collection
    * @var string
    */
   public $principalSubject;
-  /**
-   * @var ServiceAccountDelegationInfo[]
-   */
-  public $serviceAccountDelegationInfo;
   protected $serviceAccountDelegationInfoType = ServiceAccountDelegationInfo::class;
   protected $serviceAccountDelegationInfoDataType = 'array';
   /**
    * @var string
    */
   public $serviceAccountKeyName;
-  /**
-   * @var ServiceDelegationHistory
-   */
-  public $serviceDelegationHistory;
   protected $serviceDelegationHistoryType = ServiceDelegationHistory::class;
   protected $serviceDelegationHistoryDataType = '';
   /**

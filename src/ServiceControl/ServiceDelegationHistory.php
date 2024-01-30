@@ -24,10 +24,6 @@ class ServiceDelegationHistory extends \Google\Collection
    * @var string
    */
   public $originalPrincipal;
-  /**
-   * @var ServiceMetadata[]
-   */
-  public $serviceMetadata;
   protected $serviceMetadataType = ServiceMetadata::class;
   protected $serviceMetadataDataType = 'array';
 

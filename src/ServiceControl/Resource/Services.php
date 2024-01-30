@@ -58,6 +58,7 @@ class Services extends \Google\Service\Resource
    * @param CheckRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CheckResponse
+   * @throws \Google\Service\Exception
    */
   public function check($serviceName, CheckRequest $postBody, $optParams = [])
   {
@@ -88,6 +89,7 @@ class Services extends \Google\Service\Resource
    * @param ReportRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ReportResponse
+   * @throws \Google\Service\Exception
    */
   public function report($serviceName, ReportRequest $postBody, $optParams = [])
   {

@@ -19,10 +19,6 @@ namespace Google\Service\ServiceControl;
 
 class V2LogEntry extends \Google\Model
 {
-  /**
-   * @var V2HttpRequest
-   */
-  public $httpRequest;
   protected $httpRequestType = V2HttpRequest::class;
   protected $httpRequestDataType = '';
   /**
@@ -41,10 +37,6 @@ class V2LogEntry extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var V2LogEntryOperation
-   */
-  public $operation;
   protected $operationType = V2LogEntryOperation::class;
   protected $operationDataType = '';
   /**
@@ -55,10 +47,6 @@ class V2LogEntry extends \Google\Model
    * @var string
    */
   public $severity;
-  /**
-   * @var V2LogEntrySourceLocation
-   */
-  public $sourceLocation;
   protected $sourceLocationType = V2LogEntrySourceLocation::class;
   protected $sourceLocationDataType = '';
   /**
