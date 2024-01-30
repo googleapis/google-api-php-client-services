@@ -20,10 +20,6 @@ namespace Google\Service\Container;
 class SoleTenantConfig extends \Google\Collection
 {
   protected $collection_key = 'nodeAffinities';
-  /**
-   * @var NodeAffinity[]
-   */
-  public $nodeAffinities;
   protected $nodeAffinitiesType = NodeAffinity::class;
   protected $nodeAffinitiesDataType = 'array';
 

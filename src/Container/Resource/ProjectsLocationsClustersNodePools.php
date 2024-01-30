@@ -49,6 +49,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param CompleteNodePoolUpgradeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ContainerEmpty
+   * @throws \Google\Service\Exception
    */
   public function completeUpgrade($name, CompleteNodePoolUpgradeRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param CreateNodePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CreateNodePoolRequest $postBody, $optParams = [])
   {
@@ -93,6 +95,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * cluster resides. This field has been deprecated and replaced by the name
    * field.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -121,6 +124,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * cluster resides. This field has been deprecated and replaced by the name
    * field.
    * @return NodePool
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -148,6 +152,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * cluster resides. This field has been deprecated and replaced by the parent
    * field.
    * @return ListNodePoolsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsClustersNodePools($parent, $optParams = [])
   {
@@ -165,6 +170,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param RollbackNodePoolUpgradeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function rollback($name, RollbackNodePoolUpgradeRequest $postBody, $optParams = [])
   {
@@ -182,6 +188,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param SetNodePoolAutoscalingRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setAutoscaling($name, SetNodePoolAutoscalingRequest $postBody, $optParams = [])
   {
@@ -198,6 +205,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param SetNodePoolManagementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setManagement($name, SetNodePoolManagementRequest $postBody, $optParams = [])
   {
@@ -216,6 +224,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param SetNodePoolSizeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setSize($name, SetNodePoolSizeRequest $postBody, $optParams = [])
   {
@@ -233,6 +242,7 @@ class ProjectsLocationsClustersNodePools extends \Google\Service\Resource
    * @param UpdateNodePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($name, UpdateNodePoolRequest $postBody, $optParams = [])
   {

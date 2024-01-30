@@ -46,6 +46,7 @@ class ProjectsZones extends \Google\Service\Resource
    * @opt_param string name The name (project and location) of the server config
    * to get, specified in the format `projects/locations`.
    * @return ServerConfig
+   * @throws \Google\Service\Exception
    */
   public function getServerconfig($projectId, $zone, $optParams = [])
   {

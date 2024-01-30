@@ -20,10 +20,6 @@ namespace Google\Service\Container;
 class Operation extends \Google\Collection
 {
   protected $collection_key = 'nodepoolConditions';
-  /**
-   * @var StatusCondition[]
-   */
-  public $clusterConditions;
   protected $clusterConditionsType = StatusCondition::class;
   protected $clusterConditionsDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $endTime;
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
@@ -48,20 +40,12 @@ class Operation extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var StatusCondition[]
-   */
-  public $nodepoolConditions;
   protected $nodepoolConditionsType = StatusCondition::class;
   protected $nodepoolConditionsDataType = 'array';
   /**
    * @var string
    */
   public $operationType;
-  /**
-   * @var OperationProgress
-   */
-  public $progress;
   protected $progressType = OperationProgress::class;
   protected $progressDataType = '';
   /**

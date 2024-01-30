@@ -20,10 +20,6 @@ namespace Google\Service\Container;
 class ServerConfig extends \Google\Collection
 {
   protected $collection_key = 'validNodeVersions';
-  /**
-   * @var ReleaseChannelConfig[]
-   */
-  public $channels;
   protected $channelsType = ReleaseChannelConfig::class;
   protected $channelsDataType = 'array';
   /**

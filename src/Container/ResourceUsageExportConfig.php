@@ -19,16 +19,8 @@ namespace Google\Service\Container;
 
 class ResourceUsageExportConfig extends \Google\Model
 {
-  /**
-   * @var BigQueryDestination
-   */
-  public $bigqueryDestination;
   protected $bigqueryDestinationType = BigQueryDestination::class;
   protected $bigqueryDestinationDataType = '';
-  /**
-   * @var ConsumptionMeteringConfig
-   */
-  public $consumptionMeteringConfig;
   protected $consumptionMeteringConfigType = ConsumptionMeteringConfig::class;
   protected $consumptionMeteringConfigDataType = '';
   /**

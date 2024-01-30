@@ -20,10 +20,6 @@ namespace Google\Service\Container;
 class CheckAutopilotCompatibilityResponse extends \Google\Collection
 {
   protected $collection_key = 'issues';
-  /**
-   * @var AutopilotCompatibilityIssue[]
-   */
-  public $issues;
   protected $issuesType = AutopilotCompatibilityIssue::class;
   protected $issuesDataType = 'array';
   /**

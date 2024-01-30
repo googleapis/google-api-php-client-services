@@ -40,10 +40,6 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
    * @var bool
    */
   public $insecureKubeletReadonlyPortEnabled;
-  /**
-   * @var NodeManagement
-   */
-  public $management;
   protected $managementType = NodeManagement::class;
   protected $managementDataType = '';
   /**
@@ -58,16 +54,8 @@ class AutoprovisioningNodePoolDefaults extends \Google\Collection
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var ShieldedInstanceConfig
-   */
-  public $shieldedInstanceConfig;
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
   protected $shieldedInstanceConfigDataType = '';
-  /**
-   * @var UpgradeSettings
-   */
-  public $upgradeSettings;
   protected $upgradeSettingsType = UpgradeSettings::class;
   protected $upgradeSettingsDataType = '';
 

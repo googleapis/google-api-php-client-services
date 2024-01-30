@@ -19,10 +19,6 @@ namespace Google\Service\Container;
 
 class UpgradeSettings extends \Google\Model
 {
-  /**
-   * @var BlueGreenSettings
-   */
-  public $blueGreenSettings;
   protected $blueGreenSettingsType = BlueGreenSettings::class;
   protected $blueGreenSettingsDataType = '';
   /**

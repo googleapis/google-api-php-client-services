@@ -23,16 +23,8 @@ class NetworkConfig extends \Google\Model
    * @var string
    */
   public $datapathProvider;
-  /**
-   * @var DefaultSnatStatus
-   */
-  public $defaultSnatStatus;
   protected $defaultSnatStatusType = DefaultSnatStatus::class;
   protected $defaultSnatStatusDataType = '';
-  /**
-   * @var DNSConfig
-   */
-  public $dnsConfig;
   protected $dnsConfigType = DNSConfig::class;
   protected $dnsConfigDataType = '';
   /**
@@ -51,30 +43,22 @@ class NetworkConfig extends \Google\Model
    * @var bool
    */
   public $enableMultiNetworking;
-  /**
-   * @var GatewayAPIConfig
-   */
-  public $gatewayApiConfig;
   protected $gatewayApiConfigType = GatewayAPIConfig::class;
   protected $gatewayApiConfigDataType = '';
   /**
    * @var string
    */
-  public $network;
+  public $inTransitEncryptionConfig;
   /**
-   * @var ClusterNetworkPerformanceConfig
+   * @var string
    */
-  public $networkPerformanceConfig;
+  public $network;
   protected $networkPerformanceConfigType = ClusterNetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
   /**
    * @var string
    */
   public $privateIpv6GoogleAccess;
-  /**
-   * @var ServiceExternalIPsConfig
-   */
-  public $serviceExternalIpsConfig;
   protected $serviceExternalIpsConfigType = ServiceExternalIPsConfig::class;
   protected $serviceExternalIpsConfigDataType = '';
   /**
@@ -193,6 +177,20 @@ class NetworkConfig extends \Google\Model
   public function getGatewayApiConfig()
   {
     return $this->gatewayApiConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setInTransitEncryptionConfig($inTransitEncryptionConfig)
+  {
+    $this->inTransitEncryptionConfig = $inTransitEncryptionConfig;
+  }
+  /**
+   * @return string
+   */
+  public function getInTransitEncryptionConfig()
+  {
+    return $this->inTransitEncryptionConfig;
   }
   /**
    * @param string

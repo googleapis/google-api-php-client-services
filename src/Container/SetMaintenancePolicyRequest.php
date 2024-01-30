@@ -23,10 +23,6 @@ class SetMaintenancePolicyRequest extends \Google\Model
    * @var string
    */
   public $clusterId;
-  /**
-   * @var MaintenancePolicy
-   */
-  public $maintenancePolicy;
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
   /**

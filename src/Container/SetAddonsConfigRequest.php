@@ -19,10 +19,6 @@ namespace Google\Service\Container;
 
 class SetAddonsConfigRequest extends \Google\Model
 {
-  /**
-   * @var AddonsConfig
-   */
-  public $addonsConfig;
   protected $addonsConfigType = AddonsConfig::class;
   protected $addonsConfigDataType = '';
   /**

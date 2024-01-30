@@ -23,10 +23,6 @@ class CreateNodePoolRequest extends \Google\Model
    * @var string
    */
   public $clusterId;
-  /**
-   * @var NodePool
-   */
-  public $nodePool;
   protected $nodePoolType = NodePool::class;
   protected $nodePoolDataType = '';
   /**

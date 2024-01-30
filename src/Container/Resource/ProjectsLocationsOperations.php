@@ -40,6 +40,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * @param CancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ContainerEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, CancelOperationRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * cluster resides. This field has been deprecated and replaced by the name
    * field.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -90,6 +92,7 @@ class ProjectsLocationsOperations extends \Google\Service\Resource
    * operations for, or `-` for all zones. This field has been deprecated and
    * replaced by the parent field.
    * @return ListOperationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsOperations($parent, $optParams = [])
   {

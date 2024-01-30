@@ -19,10 +19,6 @@ namespace Google\Service\Container;
 
 class SetNodePoolAutoscalingRequest extends \Google\Model
 {
-  /**
-   * @var NodePoolAutoscaling
-   */
-  public $autoscaling;
   protected $autoscalingType = NodePoolAutoscaling::class;
   protected $autoscalingDataType = '';
   /**

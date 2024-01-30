@@ -17,26 +17,28 @@
 
 namespace Google\Service\Container;
 
-class NodePoolDefaults extends \Google\Model
+class StatefulHAConfig extends \Google\Model
 {
-  protected $nodeConfigDefaultsType = NodeConfigDefaults::class;
-  protected $nodeConfigDefaultsDataType = '';
+  /**
+   * @var bool
+   */
+  public $enabled;
 
   /**
-   * @param NodeConfigDefaults
+   * @param bool
    */
-  public function setNodeConfigDefaults(NodeConfigDefaults $nodeConfigDefaults)
+  public function setEnabled($enabled)
   {
-    $this->nodeConfigDefaults = $nodeConfigDefaults;
+    $this->enabled = $enabled;
   }
   /**
-   * @return NodeConfigDefaults
+   * @return bool
    */
-  public function getNodeConfigDefaults()
+  public function getEnabled()
   {
-    return $this->nodeConfigDefaults;
+    return $this->enabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NodePoolDefaults::class, 'Google_Service_Container_NodePoolDefaults');
+class_alias(StatefulHAConfig::class, 'Google_Service_Container_StatefulHAConfig');

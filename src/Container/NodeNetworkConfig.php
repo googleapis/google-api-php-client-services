@@ -20,16 +20,8 @@ namespace Google\Service\Container;
 class NodeNetworkConfig extends \Google\Collection
 {
   protected $collection_key = 'additionalPodNetworkConfigs';
-  /**
-   * @var AdditionalNodeNetworkConfig[]
-   */
-  public $additionalNodeNetworkConfigs;
   protected $additionalNodeNetworkConfigsType = AdditionalNodeNetworkConfig::class;
   protected $additionalNodeNetworkConfigsDataType = 'array';
-  /**
-   * @var AdditionalPodNetworkConfig[]
-   */
-  public $additionalPodNetworkConfigs;
   protected $additionalPodNetworkConfigsType = AdditionalPodNetworkConfig::class;
   protected $additionalPodNetworkConfigsDataType = 'array';
   /**
@@ -40,16 +32,8 @@ class NodeNetworkConfig extends \Google\Collection
    * @var bool
    */
   public $enablePrivateNodes;
-  /**
-   * @var NetworkPerformanceConfig
-   */
-  public $networkPerformanceConfig;
   protected $networkPerformanceConfigType = NetworkPerformanceConfig::class;
   protected $networkPerformanceConfigDataType = '';
-  /**
-   * @var PodCIDROverprovisionConfig
-   */
-  public $podCidrOverprovisionConfig;
   protected $podCidrOverprovisionConfigType = PodCIDROverprovisionConfig::class;
   protected $podCidrOverprovisionConfigDataType = '';
   /**

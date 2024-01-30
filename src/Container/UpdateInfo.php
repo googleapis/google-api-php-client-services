@@ -19,10 +19,6 @@ namespace Google\Service\Container;
 
 class UpdateInfo extends \Google\Model
 {
-  /**
-   * @var BlueGreenInfo
-   */
-  public $blueGreenInfo;
   protected $blueGreenInfoType = BlueGreenInfo::class;
   protected $blueGreenInfoDataType = '';
 

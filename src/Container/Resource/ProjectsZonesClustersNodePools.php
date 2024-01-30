@@ -56,6 +56,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * @param SetNodePoolAutoscalingRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function autoscaling($projectId, $zone, $clusterId, $nodePoolId, SetNodePoolAutoscalingRequest $postBody, $optParams = [])
   {
@@ -79,6 +80,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * @param CreateNodePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($projectId, $zone, $clusterId, CreateNodePoolRequest $postBody, $optParams = [])
   {
@@ -107,6 +109,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * the node pool to delete. Specified in the format
    * `projects/locations/clusters/nodePools`.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($projectId, $zone, $clusterId, $nodePoolId, $optParams = [])
   {
@@ -135,6 +138,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * the node pool to get. Specified in the format
    * `projects/locations/clusters/nodePools`.
    * @return NodePool
+   * @throws \Google\Service\Exception
    */
   public function get($projectId, $zone, $clusterId, $nodePoolId, $optParams = [])
   {
@@ -162,6 +166,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * the node pools will be listed. Specified in the format
    * `projects/locations/clusters`.
    * @return ListNodePoolsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsZonesClustersNodePools($projectId, $zone, $clusterId, $optParams = [])
   {
@@ -188,6 +193,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * @param RollbackNodePoolUpgradeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function rollback($projectId, $zone, $clusterId, $nodePoolId, RollbackNodePoolUpgradeRequest $postBody, $optParams = [])
   {
@@ -213,6 +219,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * @param SetNodePoolManagementRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setManagement($projectId, $zone, $clusterId, $nodePoolId, SetNodePoolManagementRequest $postBody, $optParams = [])
   {
@@ -240,6 +247,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * @param SetNodePoolSizeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setSize($projectId, $zone, $clusterId, $nodePoolId, SetNodePoolSizeRequest $postBody, $optParams = [])
   {
@@ -266,6 +274,7 @@ class ProjectsZonesClustersNodePools extends \Google\Service\Resource
    * @param UpdateNodePoolRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($projectId, $zone, $clusterId, $nodePoolId, UpdateNodePoolRequest $postBody, $optParams = [])
   {

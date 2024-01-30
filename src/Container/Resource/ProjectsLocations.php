@@ -46,6 +46,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * operations for. This field has been deprecated and replaced by the name
    * field.
    * @return ServerConfig
+   * @throws \Google\Service\Exception
    */
   public function getServerConfig($name, $optParams = [])
   {

@@ -27,10 +27,6 @@ class SetNetworkPolicyRequest extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var NetworkPolicy
-   */
-  public $networkPolicy;
   protected $networkPolicyType = NetworkPolicy::class;
   protected $networkPolicyDataType = '';
   /**

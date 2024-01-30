@@ -20,56 +20,24 @@ namespace Google\Service\Container;
 class Cluster extends \Google\Collection
 {
   protected $collection_key = 'nodePools';
-  /**
-   * @var AddonsConfig
-   */
-  public $addonsConfig;
   protected $addonsConfigType = AddonsConfig::class;
   protected $addonsConfigDataType = '';
-  /**
-   * @var AuthenticatorGroupsConfig
-   */
-  public $authenticatorGroupsConfig;
   protected $authenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $authenticatorGroupsConfigDataType = '';
-  /**
-   * @var Autopilot
-   */
-  public $autopilot;
   protected $autopilotType = Autopilot::class;
   protected $autopilotDataType = '';
-  /**
-   * @var ClusterAutoscaling
-   */
-  public $autoscaling;
   protected $autoscalingType = ClusterAutoscaling::class;
   protected $autoscalingDataType = '';
-  /**
-   * @var BinaryAuthorization
-   */
-  public $binaryAuthorization;
   protected $binaryAuthorizationType = BinaryAuthorization::class;
   protected $binaryAuthorizationDataType = '';
   /**
    * @var string
    */
   public $clusterIpv4Cidr;
-  /**
-   * @var StatusCondition[]
-   */
-  public $conditions;
   protected $conditionsType = StatusCondition::class;
   protected $conditionsDataType = 'array';
-  /**
-   * @var ConfidentialNodes
-   */
-  public $confidentialNodes;
   protected $confidentialNodesType = ConfidentialNodes::class;
   protected $confidentialNodesDataType = '';
-  /**
-   * @var CostManagementConfig
-   */
-  public $costManagementConfig;
   protected $costManagementConfigType = CostManagementConfig::class;
   protected $costManagementConfigDataType = '';
   /**
@@ -88,26 +56,14 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $currentNodeVersion;
-  /**
-   * @var DatabaseEncryption
-   */
-  public $databaseEncryption;
   protected $databaseEncryptionType = DatabaseEncryption::class;
   protected $databaseEncryptionDataType = '';
-  /**
-   * @var MaxPodsConstraint
-   */
-  public $defaultMaxPodsConstraint;
   protected $defaultMaxPodsConstraintType = MaxPodsConstraint::class;
   protected $defaultMaxPodsConstraintDataType = '';
   /**
    * @var string
    */
   public $description;
-  /**
-   * @var K8sBetaAPIConfig
-   */
-  public $enableK8sBetaApis;
   protected $enableK8sBetaApisType = K8sBetaAPIConfig::class;
   protected $enableK8sBetaApisDataType = '';
   /**
@@ -122,10 +78,6 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $endpoint;
-  /**
-   * @var EnterpriseConfig
-   */
-  public $enterpriseConfig;
   protected $enterpriseConfigType = EnterpriseConfig::class;
   protected $enterpriseConfigDataType = '';
   /**
@@ -136,20 +88,12 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $expireTime;
-  /**
-   * @var Fleet
-   */
-  public $fleet;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var IdentityServiceConfig
-   */
-  public $identityServiceConfig;
   protected $identityServiceConfigType = IdentityServiceConfig::class;
   protected $identityServiceConfigDataType = '';
   /**
@@ -164,20 +108,12 @@ class Cluster extends \Google\Collection
    * @var string[]
    */
   public $instanceGroupUrls;
-  /**
-   * @var IPAllocationPolicy
-   */
-  public $ipAllocationPolicy;
   protected $ipAllocationPolicyType = IPAllocationPolicy::class;
   protected $ipAllocationPolicyDataType = '';
   /**
    * @var string
    */
   public $labelFingerprint;
-  /**
-   * @var LegacyAbac
-   */
-  public $legacyAbac;
   protected $legacyAbacType = LegacyAbac::class;
   protected $legacyAbacDataType = '';
   /**
@@ -188,44 +124,20 @@ class Cluster extends \Google\Collection
    * @var string[]
    */
   public $locations;
-  /**
-   * @var LoggingConfig
-   */
-  public $loggingConfig;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
    * @var string
    */
   public $loggingService;
-  /**
-   * @var MaintenancePolicy
-   */
-  public $maintenancePolicy;
   protected $maintenancePolicyType = MaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
-  /**
-   * @var MasterAuth
-   */
-  public $masterAuth;
   protected $masterAuthType = MasterAuth::class;
   protected $masterAuthDataType = '';
-  /**
-   * @var MasterAuthorizedNetworksConfig
-   */
-  public $masterAuthorizedNetworksConfig;
   protected $masterAuthorizedNetworksConfigType = MasterAuthorizedNetworksConfig::class;
   protected $masterAuthorizedNetworksConfigDataType = '';
-  /**
-   * @var MeshCertificates
-   */
-  public $meshCertificates;
   protected $meshCertificatesType = MeshCertificates::class;
   protected $meshCertificatesDataType = '';
-  /**
-   * @var MonitoringConfig
-   */
-  public $monitoringConfig;
   protected $monitoringConfigType = MonitoringConfig::class;
   protected $monitoringConfigDataType = '';
   /**
@@ -240,84 +152,36 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $network;
-  /**
-   * @var NetworkConfig
-   */
-  public $networkConfig;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
-  /**
-   * @var NetworkPolicy
-   */
-  public $networkPolicy;
   protected $networkPolicyType = NetworkPolicy::class;
   protected $networkPolicyDataType = '';
-  /**
-   * @var NodeConfig
-   */
-  public $nodeConfig;
   protected $nodeConfigType = NodeConfig::class;
   protected $nodeConfigDataType = '';
   /**
    * @var int
    */
   public $nodeIpv4CidrSize;
-  /**
-   * @var NodePoolAutoConfig
-   */
-  public $nodePoolAutoConfig;
   protected $nodePoolAutoConfigType = NodePoolAutoConfig::class;
   protected $nodePoolAutoConfigDataType = '';
-  /**
-   * @var NodePoolDefaults
-   */
-  public $nodePoolDefaults;
   protected $nodePoolDefaultsType = NodePoolDefaults::class;
   protected $nodePoolDefaultsDataType = '';
-  /**
-   * @var NodePool[]
-   */
-  public $nodePools;
   protected $nodePoolsType = NodePool::class;
   protected $nodePoolsDataType = 'array';
-  /**
-   * @var NotificationConfig
-   */
-  public $notificationConfig;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
-  /**
-   * @var ParentProductConfig
-   */
-  public $parentProductConfig;
   protected $parentProductConfigType = ParentProductConfig::class;
   protected $parentProductConfigDataType = '';
-  /**
-   * @var PrivateClusterConfig
-   */
-  public $privateClusterConfig;
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
-  /**
-   * @var ReleaseChannel
-   */
-  public $releaseChannel;
   protected $releaseChannelType = ReleaseChannel::class;
   protected $releaseChannelDataType = '';
   /**
    * @var string[]
    */
   public $resourceLabels;
-  /**
-   * @var ResourceUsageExportConfig
-   */
-  public $resourceUsageExportConfig;
   protected $resourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $resourceUsageExportConfigDataType = '';
-  /**
-   * @var SecurityPostureConfig
-   */
-  public $securityPostureConfig;
   protected $securityPostureConfigType = SecurityPostureConfig::class;
   protected $securityPostureConfigDataType = '';
   /**
@@ -328,10 +192,6 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $servicesIpv4Cidr;
-  /**
-   * @var ShieldedNodes
-   */
-  public $shieldedNodes;
   protected $shieldedNodesType = ShieldedNodes::class;
   protected $shieldedNodesDataType = '';
   /**
@@ -350,16 +210,8 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $tpuIpv4CidrBlock;
-  /**
-   * @var VerticalPodAutoscaling
-   */
-  public $verticalPodAutoscaling;
   protected $verticalPodAutoscalingType = VerticalPodAutoscaling::class;
   protected $verticalPodAutoscalingDataType = '';
-  /**
-   * @var WorkloadIdentityConfig
-   */
-  public $workloadIdentityConfig;
   protected $workloadIdentityConfigType = WorkloadIdentityConfig::class;
   protected $workloadIdentityConfigDataType = '';
   /**
