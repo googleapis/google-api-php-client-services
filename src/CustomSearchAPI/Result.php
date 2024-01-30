@@ -48,20 +48,12 @@ class Result extends \Google\Collection
    * @var string
    */
   public $htmlTitle;
-  /**
-   * @var ResultImage
-   */
-  public $image;
   protected $imageType = ResultImage::class;
   protected $imageDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var ResultLabels[]
-   */
-  public $labels;
   protected $labelsType = ResultLabels::class;
   protected $labelsDataType = 'array';
   /**

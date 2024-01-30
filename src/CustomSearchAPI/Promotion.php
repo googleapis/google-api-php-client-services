@@ -20,10 +20,6 @@ namespace Google\Service\CustomSearchAPI;
 class Promotion extends \Google\Collection
 {
   protected $collection_key = 'bodyLines';
-  /**
-   * @var PromotionBodyLines[]
-   */
-  public $bodyLines;
   protected $bodyLinesType = PromotionBodyLines::class;
   protected $bodyLinesDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class Promotion extends \Google\Collection
    * @var string
    */
   public $htmlTitle;
-  /**
-   * @var PromotionImage
-   */
-  public $image;
   protected $imageType = PromotionImage::class;
   protected $imageDataType = '';
   /**

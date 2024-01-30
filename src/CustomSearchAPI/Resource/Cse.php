@@ -166,6 +166,7 @@ class Cse extends \Google\Service\Resource
    * the sum of `start + num` to a number greater than 100 will produce an error.
    * Also note that the maximum value for `num` is 10.
    * @return Search
+   * @throws \Google\Service\Exception
    */
   public function listCse($optParams = [])
   {
