@@ -19,22 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class StorageGraphBfgSpiiCertification extends \Google\Model
 {
-  /**
-   * @var StorageGraphBfgAuthorityFeedbackMetadata
-   */
-  public $authorityFeedback;
   protected $authorityFeedbackType = StorageGraphBfgAuthorityFeedbackMetadata::class;
   protected $authorityFeedbackDataType = '';
-  /**
-   * @var StorageGraphBfgLegalRequestMetadata
-   */
-  public $legalRequest;
   protected $legalRequestType = StorageGraphBfgLegalRequestMetadata::class;
   protected $legalRequestDataType = '';
-  /**
-   * @var StorageGraphBfgPublicInformationMetadata
-   */
-  public $publicInformation;
   protected $publicInformationType = StorageGraphBfgPublicInformationMetadata::class;
   protected $publicInformationDataType = '';
 

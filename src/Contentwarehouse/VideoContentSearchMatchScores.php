@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchMatchScores extends \Google\Collection
 {
   protected $collection_key = 'matchInfo';
-  /**
-   * @var VideoContentSearchTextMatchInfo[]
-   */
-  public $matchInfo;
   protected $matchInfoType = VideoContentSearchTextMatchInfo::class;
   protected $matchInfoDataType = 'array';
   /**

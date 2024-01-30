@@ -28,10 +28,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
    * @var string
    */
   public $asrLanguage;
-  /**
-   * @var QualityNavboostCrapsCrapsData
-   */
-  public $crapsData;
   protected $crapsDataType = QualityNavboostCrapsCrapsData::class;
   protected $crapsDataDataType = '';
   /**
@@ -74,26 +70,14 @@ class VideoContentSearchVideoInfo extends \Google\Collection
    * @var string
    */
   public $numViews;
-  /**
-   * @var PseudoVideoData
-   */
-  public $pseudoVideoData;
   protected $pseudoVideoDataType = PseudoVideoData::class;
   protected $pseudoVideoDataDataType = '';
-  /**
-   * @var NlpSaftDocument
-   */
-  public $saftDoc;
   protected $saftDocType = NlpSaftDocument::class;
   protected $saftDocDataType = '';
   /**
    * @var string
    */
   public $saftTranscript;
-  /**
-   * @var QualitySalientTermsSalientTermSet
-   */
-  public $salientTermSet;
   protected $salientTermSetType = QualitySalientTermsSalientTermSet::class;
   protected $salientTermSetDataType = '';
   /**
@@ -108,10 +92,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
    * @var string
    */
   public $titleLanguage;
-  /**
-   * @var QualityWebanswersTranscriptAnnotations
-   */
-  public $transcriptAnnotations;
   protected $transcriptAnnotationsType = QualityWebanswersTranscriptAnnotations::class;
   protected $transcriptAnnotationsDataType = '';
   /**
@@ -122,10 +102,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
    * @var string
    */
   public $url;
-  /**
-   * @var IndexingMlVerticalVerticalItem[]
-   */
-  public $verticalItem;
   protected $verticalItemType = IndexingMlVerticalVerticalItem::class;
   protected $verticalItemDataType = 'array';
   /**
@@ -140,10 +116,6 @@ class VideoContentSearchVideoInfo extends \Google\Collection
    * @var string
    */
   public $videoUrl;
-  /**
-   * @var RepositoryWebrefWebrefEntities
-   */
-  public $webrefEntities;
   protected $webrefEntitiesType = RepositoryWebrefWebrefEntities::class;
   protected $webrefEntitiesDataType = '';
 

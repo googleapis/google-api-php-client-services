@@ -20,20 +20,12 @@ namespace Google\Service\Contentwarehouse;
 class VendingConsumerProtoTrustedGenomeAnnotation extends \Google\Collection
 {
   protected $collection_key = 'trustedGenomeHierarchy';
-  /**
-   * @var VendingConsumerProtoTrustedGenomePolicy
-   */
-  public $policy;
   protected $policyType = VendingConsumerProtoTrustedGenomePolicy::class;
   protected $policyDataType = '';
   /**
    * @var string[]
    */
   public $testCode;
-  /**
-   * @var VendingConsumerProtoTrustedGenomeHierarchy[]
-   */
-  public $trustedGenomeHierarchy;
   protected $trustedGenomeHierarchyType = VendingConsumerProtoTrustedGenomeHierarchy::class;
   protected $trustedGenomeHierarchyDataType = 'array';
 

@@ -72,32 +72,16 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
    * @var string
    */
   public $mid;
-  /**
-   * @var VideoContentSearchNamedEntity[]
-   */
-  public $namedEntity;
   protected $namedEntityType = VideoContentSearchNamedEntity::class;
   protected $namedEntityDataType = 'array';
   /**
    * @var float
    */
   public $precisionScore;
-  /**
-   * @var VideoContentSearchVideoAnchorScoreInfo
-   */
-  public $scoreInfo;
   protected $scoreInfoType = VideoContentSearchVideoAnchorScoreInfo::class;
   protected $scoreInfoDataType = '';
-  /**
-   * @var VideoContentSearchVisualFeatures
-   */
-  public $starburstFeatures;
   protected $starburstFeaturesType = VideoContentSearchVisualFeatures::class;
   protected $starburstFeaturesDataType = '';
-  /**
-   * @var VideoContentSearchAnchorThumbnail
-   */
-  public $thumbnail;
   protected $thumbnailType = VideoContentSearchAnchorThumbnail::class;
   protected $thumbnailDataType = '';
   /**
@@ -108,10 +92,6 @@ class VideoContentSearchVideoAnchor extends \Google\Collection
    * @var string
    */
   public $time;
-  /**
-   * @var VideoContentSearchTokenTimingInfo[]
-   */
-  public $tokenTimingInfo;
   protected $tokenTimingInfoType = VideoContentSearchTokenTimingInfo::class;
   protected $tokenTimingInfoDataType = 'array';
 

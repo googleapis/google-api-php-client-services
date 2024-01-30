@@ -24,10 +24,6 @@ class VideoContentSearchVideoAnchors extends \Google\Collection
    * @var string
    */
   public $anchorType;
-  /**
-   * @var VideoContentSearchEntityGroupInfo
-   */
-  public $entityGroupInfo;
   protected $entityGroupInfoType = VideoContentSearchEntityGroupInfo::class;
   protected $entityGroupInfoDataType = '';
   /**
@@ -54,10 +50,6 @@ class VideoContentSearchVideoAnchors extends \Google\Collection
    * @var float
    */
   public $score;
-  /**
-   * @var VideoContentSearchVideoAnchorsScoreInfo
-   */
-  public $scoreInfo;
   protected $scoreInfoType = VideoContentSearchVideoAnchorsScoreInfo::class;
   protected $scoreInfoDataType = '';
   /**
@@ -68,22 +60,10 @@ class VideoContentSearchVideoAnchors extends \Google\Collection
    * @var bool
    */
   public $thumbnailForced;
-  /**
-   * @var VideoContentSearchAnchorsThumbnailInfo
-   */
-  public $thumbnailSetInfo;
   protected $thumbnailSetInfoType = VideoContentSearchAnchorsThumbnailInfo::class;
   protected $thumbnailSetInfoDataType = '';
-  /**
-   * @var VideoContentSearchVideoAnchor[]
-   */
-  public $videoAnchor;
   protected $videoAnchorType = VideoContentSearchVideoAnchor::class;
   protected $videoAnchorDataType = 'array';
-  /**
-   * @var VideoContentSearchVideoIntroduction
-   */
-  public $videoIntroduction;
   protected $videoIntroductionType = VideoContentSearchVideoIntroduction::class;
   protected $videoIntroductionDataType = '';
 

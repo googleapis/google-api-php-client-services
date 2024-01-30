@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoContentSearchOCRText extends \Google\Model
 {
-  /**
-   * @var VideoContentSearchOnScreenTextFeature
-   */
-  public $ocrFeature;
   protected $ocrFeatureType = VideoContentSearchOnScreenTextFeature::class;
   protected $ocrFeatureDataType = '';
   /**

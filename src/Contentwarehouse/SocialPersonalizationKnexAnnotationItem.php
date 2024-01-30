@@ -40,10 +40,6 @@ class SocialPersonalizationKnexAnnotationItem extends \Google\Collection
    * @var string
    */
   public $mid;
-  /**
-   * @var SocialPersonalizationKnexAnnotationItemTopic[]
-   */
-  public $relatedEntity;
   protected $relatedEntityType = SocialPersonalizationKnexAnnotationItemTopic::class;
   protected $relatedEntityDataType = 'array';
   /**

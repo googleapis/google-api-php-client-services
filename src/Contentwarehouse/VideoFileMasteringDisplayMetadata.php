@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoFileMasteringDisplayMetadata extends \Google\Model
 {
-  /**
-   * @var VideoFileMasteringDisplayMetadataCIE1931Coordinate
-   */
-  public $blue;
   protected $blueType = VideoFileMasteringDisplayMetadataCIE1931Coordinate::class;
   protected $blueDataType = '';
-  /**
-   * @var VideoFileMasteringDisplayMetadataCIE1931Coordinate
-   */
-  public $green;
   protected $greenType = VideoFileMasteringDisplayMetadataCIE1931Coordinate::class;
   protected $greenDataType = '';
   /**
@@ -39,16 +31,8 @@ class VideoFileMasteringDisplayMetadata extends \Google\Model
    * @var float
    */
   public $minLuminance;
-  /**
-   * @var VideoFileMasteringDisplayMetadataCIE1931Coordinate
-   */
-  public $red;
   protected $redType = VideoFileMasteringDisplayMetadataCIE1931Coordinate::class;
   protected $redDataType = '';
-  /**
-   * @var VideoFileMasteringDisplayMetadataCIE1931Coordinate
-   */
-  public $whitePoint;
   protected $whitePointType = VideoFileMasteringDisplayMetadataCIE1931Coordinate::class;
   protected $whitePointDataType = '';
 

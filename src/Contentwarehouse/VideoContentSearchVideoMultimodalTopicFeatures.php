@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchVideoMultimodalTopicFeatures extends \Google\Collection
 {
   protected $collection_key = 'frameStarburstData';
-  /**
-   * @var VideoContentSearchFrameStarburstData[]
-   */
-  public $frameStarburstData;
   protected $frameStarburstDataType = VideoContentSearchFrameStarburstData::class;
   protected $frameStarburstDataDataType = 'array';
 

@@ -32,10 +32,6 @@ class SocialGraphApiProtoSearchProfileMetadata extends \Google\Collection
    * @var string
    */
   public $aresId;
-  /**
-   * @var SocialGraphApiProtoSearchProfileState[]
-   */
-  public $state;
   protected $stateType = SocialGraphApiProtoSearchProfileState::class;
   protected $stateDataType = 'array';
 

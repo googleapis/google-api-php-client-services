@@ -31,10 +31,6 @@ class VideoContentSearchQnaAnchorSetFeatures extends \Google\Model
    * @var float
    */
   public $descartesScoreThreshold;
-  /**
-   * @var VideoContentSearchDolphinScoringConfig
-   */
-  public $dolphinConfig;
   protected $dolphinConfigType = VideoContentSearchDolphinScoringConfig::class;
   protected $dolphinConfigDataType = '';
   /**

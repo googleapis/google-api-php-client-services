@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class TrawlerClientServiceInfoClientLabels extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var TrawlerClientServiceInfoClientLabelsClientLabelValues[]
-   */
-  public $labelsDeprecated;
   protected $labelsDeprecatedType = TrawlerClientServiceInfoClientLabelsClientLabelValues::class;
   protected $labelsDeprecatedDataType = 'map';
   /**

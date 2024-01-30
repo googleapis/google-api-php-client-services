@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class TrawlerFetchReplyDataDeliveryReport extends \Google\Collection
 {
   protected $collection_key = 'events';
-  /**
-   * @var TrawlerEvent[]
-   */
-  public $events;
   protected $eventsType = TrawlerEvent::class;
   protected $eventsDataType = 'array';
   /**

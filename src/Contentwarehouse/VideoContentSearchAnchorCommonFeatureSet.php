@@ -32,10 +32,6 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
    * @var float
    */
   public $asrMaximumBabelSimilarityScore;
-  /**
-   * @var VideoContentSearchBleurtFeatures
-   */
-  public $bleurtFeatures;
   protected $bleurtFeaturesType = VideoContentSearchBleurtFeatures::class;
   protected $bleurtFeaturesDataType = '';
   /**
@@ -58,16 +54,8 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
    * @var float
    */
   public $dolphinDescriptivenessScore;
-  /**
-   * @var VideoContentSearchDolphinEnsembleScore[]
-   */
-  public $dolphinEnsembleScore;
   protected $dolphinEnsembleScoreType = VideoContentSearchDolphinEnsembleScore::class;
   protected $dolphinEnsembleScoreDataType = 'array';
-  /**
-   * @var VideoContentSearchDolphinFeatures
-   */
-  public $dolphinFeatures;
   protected $dolphinFeaturesType = VideoContentSearchDolphinFeatures::class;
   protected $dolphinFeaturesDataType = '';
   /**
@@ -94,22 +82,10 @@ class VideoContentSearchAnchorCommonFeatureSet extends \Google\Collection
    * @var float
    */
   public $retentionScore;
-  /**
-   * @var NlpSaftDocument
-   */
-  public $saftDocument;
   protected $saftDocumentType = NlpSaftDocument::class;
   protected $saftDocumentDataType = '';
-  /**
-   * @var VideoContentSearchCaptionLabelFeatures[]
-   */
-  public $timedLabelFeatures;
   protected $timedLabelFeaturesType = VideoContentSearchCaptionLabelFeatures::class;
   protected $timedLabelFeaturesDataType = 'array';
-  /**
-   * @var VideoContentSearchAnchorCommonFeatureSetLabelSpanTimestamp[]
-   */
-  public $timestamp;
   protected $timestampType = VideoContentSearchAnchorCommonFeatureSetLabelSpanTimestamp::class;
   protected $timestampDataType = 'array';
   /**

@@ -24,10 +24,6 @@ class VideoMediaOverview extends \Google\Collection
    * @var string
    */
   public $aspectRatio;
-  /**
-   * @var VideoMediaOverviewAudioOverview[]
-   */
-  public $audioOverview;
   protected $audioOverviewType = VideoMediaOverviewAudioOverview::class;
   protected $audioOverviewDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class VideoMediaOverview extends \Google\Collection
    * @var string
    */
   public $creationTimeStampUsec;
-  /**
-   * @var VideoMediaOverviewDataOverview[]
-   */
-  public $dataOverview;
   protected $dataOverviewType = VideoMediaOverviewDataOverview::class;
   protected $dataOverviewDataType = 'array';
   /**
@@ -56,10 +48,6 @@ class VideoMediaOverview extends \Google\Collection
    * @var bool
    */
   public $hasChapters;
-  /**
-   * @var VideoMediaOverviewMediaClipInfoOverview
-   */
-  public $mediaClipInfoOverview;
   protected $mediaClipInfoOverviewType = VideoMediaOverviewMediaClipInfoOverview::class;
   protected $mediaClipInfoOverviewDataType = '';
   /**
@@ -86,16 +74,8 @@ class VideoMediaOverview extends \Google\Collection
    * @var string
    */
   public $stereoMode;
-  /**
-   * @var VideoMediaOverviewTimedTextOverview[]
-   */
-  public $timedtextOverview;
   protected $timedtextOverviewType = VideoMediaOverviewTimedTextOverview::class;
   protected $timedtextOverviewDataType = 'array';
-  /**
-   * @var VideoMediaOverviewVideoOverview[]
-   */
-  public $videoOverview;
   protected $videoOverviewType = VideoMediaOverviewVideoOverview::class;
   protected $videoOverviewDataType = 'array';
   /**

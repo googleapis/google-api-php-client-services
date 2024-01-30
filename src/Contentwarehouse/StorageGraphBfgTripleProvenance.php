@@ -56,26 +56,14 @@ class StorageGraphBfgTripleProvenance extends \Google\Collection
    * @var bool
    */
   public $isSupportingData;
-  /**
-   * @var StorageGraphBfgLivegraphProvenanceMetadata
-   */
-  public $lgMetadata;
   protected $lgMetadataType = StorageGraphBfgLivegraphProvenanceMetadata::class;
   protected $lgMetadataDataType = '';
-  /**
-   * @var StorageGraphBfgPolicyMetadata
-   */
-  public $policyMetadata;
   protected $policyMetadataType = StorageGraphBfgPolicyMetadata::class;
   protected $policyMetadataDataType = '';
   /**
    * @var string
    */
   public $process;
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $provenanceExtension;
   protected $provenanceExtensionType = Proto2BridgeMessageSet::class;
   protected $provenanceExtensionDataType = '';
   /**
@@ -102,10 +90,6 @@ class StorageGraphBfgTripleProvenance extends \Google\Collection
    * @var string[]
    */
   public $sourceDocId;
-  /**
-   * @var StorageGraphBfgSpiiCertification
-   */
-  public $spiiCertification;
   protected $spiiCertificationType = StorageGraphBfgSpiiCertification::class;
   protected $spiiCertificationDataType = '';
 

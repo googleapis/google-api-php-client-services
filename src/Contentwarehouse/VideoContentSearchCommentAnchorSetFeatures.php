@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchCommentAnchorSetFeatures extends \Google\Collection
 {
   protected $collection_key = 'replies';
-  /**
-   * @var VideoContentSearchCommentAnchorSetFeaturesComment[]
-   */
-  public $replies;
   protected $repliesType = VideoContentSearchCommentAnchorSetFeaturesComment::class;
   protected $repliesDataType = 'array';
-  /**
-   * @var VideoContentSearchCommentAnchorSetFeaturesComment
-   */
-  public $rootComment;
   protected $rootCommentType = VideoContentSearchCommentAnchorSetFeaturesComment::class;
   protected $rootCommentDataType = '';
 

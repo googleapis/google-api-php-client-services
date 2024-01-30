@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoFileSphericalMetadataMeshProjection extends \Google\Model
 {
-  /**
-   * @var VideoFileSphericalMetadataFOVBounds
-   */
-  public $bounds;
   protected $boundsType = VideoFileSphericalMetadataFOVBounds::class;
   protected $boundsDataType = '';
   /**

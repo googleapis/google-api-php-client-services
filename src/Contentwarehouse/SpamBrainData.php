@@ -24,10 +24,6 @@ class SpamBrainData extends \Google\Collection
    * @var string
    */
   public $site;
-  /**
-   * @var SpamBrainScore[]
-   */
-  public $versionedData;
   protected $versionedDataType = SpamBrainScore::class;
   protected $versionedDataDataType = 'array';
 

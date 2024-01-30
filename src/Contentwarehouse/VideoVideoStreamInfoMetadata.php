@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class VideoVideoStreamInfoMetadata extends \Google\Model
 {
-  /**
-   * @var VideoVideoStreamInfoMetadataLutAttachments
-   */
-  public $luts;
   protected $lutsType = VideoVideoStreamInfoMetadataLutAttachments::class;
   protected $lutsDataType = '';
-  /**
-   * @var VideoFileFramePackingArrangement
-   */
-  public $videoFpa;
   protected $videoFpaType = VideoFileFramePackingArrangement::class;
   protected $videoFpaDataType = '';
 

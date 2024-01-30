@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchSpanDolphinScores extends \Google\Collection
 {
   protected $collection_key = 'spanToken';
-  /**
-   * @var VideoContentSearchSpanDolphinScoresSpanCandidate[]
-   */
-  public $spanCandidate;
   protected $spanCandidateType = VideoContentSearchSpanDolphinScoresSpanCandidate::class;
   protected $spanCandidateDataType = 'array';
-  /**
-   * @var VideoContentSearchSpanDolphinScoresSpanToken[]
-   */
-  public $spanToken;
   protected $spanTokenType = VideoContentSearchSpanDolphinScoresSpanToken::class;
   protected $spanTokenDataType = 'array';
 

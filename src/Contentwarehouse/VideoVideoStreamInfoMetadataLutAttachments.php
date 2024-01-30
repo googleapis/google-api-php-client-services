@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class VideoVideoStreamInfoMetadataLutAttachments extends \Google\Collection
 {
   protected $collection_key = 'lut';
-  /**
-   * @var VideoVideoStreamInfoMetadataLutAttachmentsLut3D[]
-   */
-  public $lut;
   protected $lutType = VideoVideoStreamInfoMetadataLutAttachmentsLut3D::class;
   protected $lutDataType = 'array';
 

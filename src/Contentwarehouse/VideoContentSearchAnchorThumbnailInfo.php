@@ -23,20 +23,12 @@ class VideoContentSearchAnchorThumbnailInfo extends \Google\Model
    * @var float
    */
   public $colorEntropy;
-  /**
-   * @var ImageData
-   */
-  public $imageData;
   protected $imageDataType = ImageData::class;
   protected $imageDataDataType = '';
   /**
    * @var bool
    */
   public $isUnsafe;
-  /**
-   * @var DrishtiDenseFeatureData
-   */
-  public $starburstV4Embedding;
   protected $starburstV4EmbeddingType = DrishtiDenseFeatureData::class;
   protected $starburstV4EmbeddingDataType = '';
   /**

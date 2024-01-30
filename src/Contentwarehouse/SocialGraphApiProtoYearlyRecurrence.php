@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class SocialGraphApiProtoYearlyRecurrence extends \Google\Collection
 {
   protected $collection_key = 'months';
-  /**
-   * @var SocialGraphApiProtoMonthlyRecurrence
-   */
-  public $monthlyPattern;
   protected $monthlyPatternType = SocialGraphApiProtoMonthlyRecurrence::class;
   protected $monthlyPatternDataType = '';
   /**

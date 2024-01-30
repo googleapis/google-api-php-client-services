@@ -19,22 +19,10 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphApiProtoSearchProfileWorkplace extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoSearchProfileEntity
-   */
-  public $company;
   protected $companyType = SocialGraphApiProtoSearchProfileEntity::class;
   protected $companyDataType = '';
-  /**
-   * @var GoogleTypeDate
-   */
-  public $endTime;
   protected $endTimeType = GoogleTypeDate::class;
   protected $endTimeDataType = '';
-  /**
-   * @var GoogleTypeDate
-   */
-  public $startTime;
   protected $startTimeType = GoogleTypeDate::class;
   protected $startTimeDataType = '';
 

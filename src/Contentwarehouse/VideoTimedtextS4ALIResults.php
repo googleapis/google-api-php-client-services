@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class VideoTimedtextS4ALIResults extends \Google\Collection
 {
   protected $collection_key = 'langResults';
-  /**
-   * @var VideoTimedtextS4LangScore[]
-   */
-  public $langResults;
   protected $langResultsType = VideoTimedtextS4LangScore::class;
   protected $langResultsDataType = 'array';
   /**

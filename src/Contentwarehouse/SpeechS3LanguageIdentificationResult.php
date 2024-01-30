@@ -24,10 +24,6 @@ class SpeechS3LanguageIdentificationResult extends \Google\Collection
    * @var string
    */
   public $endTimeUsec;
-  /**
-   * @var SpeechS3Locale[]
-   */
-  public $rankedTopSupportedLanguages;
   protected $rankedTopSupportedLanguagesType = SpeechS3Locale::class;
   protected $rankedTopSupportedLanguagesDataType = 'array';
   /**

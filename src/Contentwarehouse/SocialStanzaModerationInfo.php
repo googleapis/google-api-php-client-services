@@ -23,10 +23,6 @@ class SocialStanzaModerationInfo extends \Google\Model
    * @var string
    */
   public $moderationReason;
-  /**
-   * @var SecurityCredentialsPrincipalProto
-   */
-  public $moderator;
   protected $moderatorDataType = '';
   /**
    * @var string

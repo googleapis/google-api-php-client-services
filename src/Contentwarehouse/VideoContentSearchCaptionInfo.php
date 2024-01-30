@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class VideoContentSearchCaptionInfo extends \Google\Collection
 {
   protected $collection_key = 'asrCaption';
-  /**
-   * @var VideoContentSearchAsrCaption[]
-   */
-  public $asrCaption;
   protected $asrCaptionType = VideoContentSearchAsrCaption::class;
   protected $asrCaptionDataType = 'array';
-  /**
-   * @var NlpSaftDocument
-   */
-  public $saftDocument;
   protected $saftDocumentType = NlpSaftDocument::class;
   protected $saftDocumentDataType = '';
 

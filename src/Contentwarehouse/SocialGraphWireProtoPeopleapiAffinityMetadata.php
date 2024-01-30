@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class SocialGraphWireProtoPeopleapiAffinityMetadata extends \Google\Model
 {
-  /**
-   * @var SocialGraphWireProtoPeopleapiAffinityMetadataClientInteractionInfo
-   */
-  public $clientInteractionInfo;
   protected $clientInteractionInfoType = SocialGraphWireProtoPeopleapiAffinityMetadataClientInteractionInfo::class;
   protected $clientInteractionInfoDataType = '';
-  /**
-   * @var SocialGraphWireProtoPeopleapiAffinityMetadataCloudDeviceDataInfo
-   */
-  public $cloudDeviceDataInfo;
   protected $cloudDeviceDataInfoType = SocialGraphWireProtoPeopleapiAffinityMetadataCloudDeviceDataInfo::class;
   protected $cloudDeviceDataInfoDataType = '';
   public $cloudScore;

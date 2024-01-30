@@ -23,10 +23,6 @@ class TeragoogleDocumentInfoAttachment extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var TeragoogleRepositoryAttachmentOptions
-   */
-  public $options;
   protected $optionsType = TeragoogleRepositoryAttachmentOptions::class;
   protected $optionsDataType = '';
   /**

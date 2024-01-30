@@ -43,10 +43,6 @@ class VideoContentSearchShoppingOpinionsAnchorFeatures extends \Google\Model
    * @var int
    */
   public $anchorOrAspectWordsMentions;
-  /**
-   * @var VideoContentSearchAspect
-   */
-  public $aspect;
   protected $aspectType = VideoContentSearchAspect::class;
   protected $aspectDataType = '';
   /**
