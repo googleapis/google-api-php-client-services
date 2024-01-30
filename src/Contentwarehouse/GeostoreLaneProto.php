@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreLaneProto extends \Google\Collection
 {
   protected $collection_key = 'stopLine';
-  /**
-   * @var GeostoreBoundingMarkerProto[]
-   */
-  public $boundingMarker;
   protected $boundingMarkerType = GeostoreBoundingMarkerProto::class;
   protected $boundingMarkerDataType = 'array';
   /**
@@ -34,16 +30,8 @@ class GeostoreLaneProto extends \Google\Collection
    * @var float
    */
   public $distanceToNextLane;
-  /**
-   * @var GeostoreFlowLineProto
-   */
-  public $flow;
   protected $flowType = GeostoreFlowLineProto::class;
   protected $flowDataType = '';
-  /**
-   * @var GeostoreLaneProtoLaneConnection[]
-   */
-  public $laneConnection;
   protected $laneConnectionType = GeostoreLaneProtoLaneConnection::class;
   protected $laneConnectionDataType = 'array';
   /**
@@ -66,26 +54,14 @@ class GeostoreLaneProto extends \Google\Collection
    * @var string
    */
   public $laneToken;
-  /**
-   * @var GeostoreFieldMetadataProto
-   */
-  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
-  /**
-   * @var GeostoreRestrictionProto[]
-   */
-  public $restriction;
   protected $restrictionType = GeostoreRestrictionProto::class;
   protected $restrictionDataType = 'array';
   /**
    * @var bool
    */
   public $shared;
-  /**
-   * @var GeostoreFeatureIdProto[]
-   */
-  public $stopLine;
   protected $stopLineType = GeostoreFeatureIdProto::class;
   protected $stopLineDataType = 'array';
   /**

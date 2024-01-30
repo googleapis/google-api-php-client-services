@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreFeatureFieldMetadataProto extends \Google\Collection
 {
   protected $collection_key = 'fieldProvenance';
-  /**
-   * @var GeostoreFeatureFieldMetadataProtoFieldProvenance[]
-   */
-  public $fieldProvenance;
   protected $fieldProvenanceType = GeostoreFeatureFieldMetadataProtoFieldProvenance::class;
   protected $fieldProvenanceDataType = 'array';
 

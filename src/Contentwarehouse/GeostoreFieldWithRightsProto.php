@@ -23,10 +23,6 @@ class GeostoreFieldWithRightsProto extends \Google\Model
    * @var string
    */
   public $attributeId;
-  /**
-   * @var GeostoreFeaturePropertyIdProto
-   */
-  public $featurePropertyId;
   protected $featurePropertyIdType = GeostoreFeaturePropertyIdProto::class;
   protected $featurePropertyIdDataType = '';
   /**

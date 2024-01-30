@@ -24,10 +24,6 @@ class GeostoreLandmarkReferenceProto extends \Google\Collection
    * @var int
    */
   public $featureType;
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $landmark;
   protected $landmarkType = GeostoreFeatureIdProto::class;
   protected $landmarkDataType = '';
   /**

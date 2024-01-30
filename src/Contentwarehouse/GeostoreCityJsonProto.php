@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCityJsonProto extends \Google\Collection
 {
   protected $collection_key = 'vertexXyz';
-  /**
-   * @var GeostoreCityJsonProtoCityObject[]
-   */
-  public $cityObjects;
   protected $cityObjectsType = GeostoreCityJsonProtoCityObject::class;
   protected $cityObjectsDataType = 'array';
-  /**
-   * @var GeostoreCityJsonProtoTransform
-   */
-  public $transform;
   protected $transformType = GeostoreCityJsonProtoTransform::class;
   protected $transformDataType = '';
   /**

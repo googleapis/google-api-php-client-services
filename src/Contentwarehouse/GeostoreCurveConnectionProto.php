@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreCurveConnectionProto extends \Google\Model
 {
-  /**
-   * @var GeostoreCurveConnectionProtoBezierParams
-   */
-  public $bezierParams;
   protected $bezierParamsType = GeostoreCurveConnectionProtoBezierParams::class;
   protected $bezierParamsDataType = '';
-  /**
-   * @var GeostoreCurveConnectionProtoCircleParams
-   */
-  public $circleParams;
   protected $circleParamsType = GeostoreCurveConnectionProtoCircleParams::class;
   protected $circleParamsDataType = '';
   /**

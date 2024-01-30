@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreFieldMetadataProto extends \Google\Model
 {
-  /**
-   * @var GeostoreInternalFieldMetadataProto
-   */
-  public $internal;
   protected $internalType = GeostoreInternalFieldMetadataProto::class;
   protected $internalDataType = '';
 

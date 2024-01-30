@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreHtmlTextProto extends \Google\Collection
 {
   protected $collection_key = 'text';
-  /**
-   * @var GeostoreLanguageTaggedTextProto[]
-   */
-  public $text;
   protected $textType = GeostoreLanguageTaggedTextProto::class;
   protected $textDataType = 'array';
   /**

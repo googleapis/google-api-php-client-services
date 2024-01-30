@@ -23,10 +23,6 @@ class GeostoreGeometryStoreReferenceProto extends \Google\Model
    * @var string
    */
   public $footprint;
-  /**
-   * @var GeostoreCityJsonProto
-   */
-  public $geometry;
   protected $geometryType = GeostoreCityJsonProto::class;
   protected $geometryDataType = '';
   /**

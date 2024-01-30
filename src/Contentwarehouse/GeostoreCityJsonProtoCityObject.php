@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCityJsonProtoCityObject extends \Google\Collection
 {
   protected $collection_key = 'geometries';
-  /**
-   * @var GeostoreCityJsonProtoCityObjectGeometry[]
-   */
-  public $geometries;
   protected $geometriesType = GeostoreCityJsonProtoCityObjectGeometry::class;
   protected $geometriesDataType = 'array';
   /**

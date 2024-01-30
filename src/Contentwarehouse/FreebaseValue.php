@@ -24,22 +24,10 @@ class FreebaseValue extends \Google\Collection
    * @var bool
    */
   public $boolValue;
-  /**
-   * @var FreebaseCitation
-   */
-  public $citation;
   protected $citationType = FreebaseCitation::class;
   protected $citationDataType = '';
-  /**
-   * @var FreebaseTopic
-   */
-  public $compoundValue;
   protected $compoundValueType = FreebaseTopic::class;
   protected $compoundValueDataType = '';
-  /**
-   * @var StorageGraphBfgTripleProvenance[]
-   */
-  public $deletionProvenance;
   protected $deletionProvenanceType = StorageGraphBfgTripleProvenance::class;
   protected $deletionProvenanceDataType = 'array';
   /**
@@ -55,10 +43,6 @@ class FreebaseValue extends \Google\Collection
    */
   public $expectedProto;
   public $floatValue;
-  /**
-   * @var FreebaseId
-   */
-  public $idValue;
   protected $idValueType = FreebaseId::class;
   protected $idValueDataType = '';
   /**
@@ -73,28 +57,12 @@ class FreebaseValue extends \Google\Collection
    * @var string
    */
   public $lang;
-  /**
-   * @var FreebaseLatLong
-   */
-  public $latLongValue;
   protected $latLongValueType = FreebaseLatLong::class;
   protected $latLongValueDataType = '';
-  /**
-   * @var FreebaseMeasurement
-   */
-  public $measurementValue;
   protected $measurementValueType = FreebaseMeasurement::class;
   protected $measurementValueDataType = '';
-  /**
-   * @var FreebaseNestedStruct
-   */
-  public $nestedStruct;
   protected $nestedStructType = FreebaseNestedStruct::class;
   protected $nestedStructDataType = '';
-  /**
-   * @var StorageGraphBfgTripleProvenance[]
-   */
-  public $provenance;
   protected $provenanceType = StorageGraphBfgTripleProvenance::class;
   protected $provenanceDataType = 'array';
   /**

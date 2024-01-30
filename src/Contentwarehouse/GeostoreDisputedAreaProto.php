@@ -24,10 +24,6 @@ class GeostoreDisputedAreaProto extends \Google\Collection
    * @var string
    */
   public $administeredBy;
-  /**
-   * @var GeostoreFeatureIdProto[]
-   */
-  public $claimant;
   protected $claimantType = GeostoreFeatureIdProto::class;
   protected $claimantDataType = 'array';
 

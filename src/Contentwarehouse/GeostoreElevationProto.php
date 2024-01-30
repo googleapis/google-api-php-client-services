@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreElevationProto extends \Google\Model
 {
   public $averageElevationMeters;
-  /**
-   * @var GeostorePeakProto
-   */
-  public $peak;
   protected $peakType = GeostorePeakProto::class;
   protected $peakDataType = '';
 

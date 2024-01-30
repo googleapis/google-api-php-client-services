@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCityJsonProtoTransform extends \Google\Model
 {
   public $scale;
-  /**
-   * @var GeostoreCityJsonProtoTransformTranslate
-   */
-  public $translate;
   protected $translateType = GeostoreCityJsonProtoTransformTranslate::class;
   protected $translateDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class FatcatCompactTaxonomicClassification extends \Google\Collection
 {
   protected $collection_key = 'category';
-  /**
-   * @var FatcatCompactTaxonomicClassificationCategory[]
-   */
-  public $category;
   protected $categoryType = FatcatCompactTaxonomicClassificationCategory::class;
   protected $categoryDataType = 'array';
   /**

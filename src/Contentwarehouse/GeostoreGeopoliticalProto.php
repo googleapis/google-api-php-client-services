@@ -24,10 +24,6 @@ class GeostoreGeopoliticalProto extends \Google\Collection
    * @var string
    */
   public $conveysAttributionTo;
-  /**
-   * @var GeostoreRegionSpecificNameProto[]
-   */
-  public $regionSpecificName;
   protected $regionSpecificNameType = GeostoreRegionSpecificNameProto::class;
   protected $regionSpecificNameDataType = 'array';
 

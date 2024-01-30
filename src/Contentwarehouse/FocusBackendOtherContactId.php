@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class FocusBackendOtherContactId extends \Google\Collection
 {
   protected $collection_key = 'deviceContactId';
-  /**
-   * @var FocusBackendDeviceContactId[]
-   */
-  public $deviceContactId;
   protected $deviceContactIdType = FocusBackendDeviceContactId::class;
   protected $deviceContactIdDataType = 'array';
 

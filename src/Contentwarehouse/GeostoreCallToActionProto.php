@@ -23,10 +23,6 @@ class GeostoreCallToActionProto extends \Google\Model
    * @var string
    */
   public $ctaType;
-  /**
-   * @var GeostoreUrlProto
-   */
-  public $url;
   protected $urlType = GeostoreUrlProto::class;
   protected $urlDataType = '';
 

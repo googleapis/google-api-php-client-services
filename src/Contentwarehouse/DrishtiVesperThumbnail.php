@@ -32,10 +32,6 @@ class DrishtiVesperThumbnail extends \Google\Collection
    * @var string
    */
   public $encodedImageStringSmall;
-  /**
-   * @var DrishtiVesperEncodedThumbnail[]
-   */
-  public $encodedThumbnails;
   protected $encodedThumbnailsType = DrishtiVesperEncodedThumbnail::class;
   protected $encodedThumbnailsDataType = 'array';
   /**
@@ -46,10 +42,6 @@ class DrishtiVesperThumbnail extends \Google\Collection
    * @var string
    */
   public $ocrText;
-  /**
-   * @var DrishtiVesperThumbnailQualityScore[]
-   */
-  public $qualityScores;
   protected $qualityScoresType = DrishtiVesperThumbnailQualityScore::class;
   protected $qualityScoresDataType = 'array';
   /**
@@ -68,16 +60,8 @@ class DrishtiVesperThumbnail extends \Google\Collection
    * @var string
    */
   public $type;
-  /**
-   * @var DrishtiVesperUserReportUserReportedThumbnail
-   */
-  public $userReportedThumbnail;
   protected $userReportedThumbnailType = DrishtiVesperUserReportUserReportedThumbnail::class;
   protected $userReportedThumbnailDataType = '';
-  /**
-   * @var DrishtiVesperUserReportUserReportedThumbnail[]
-   */
-  public $userReportedThumbnails;
   protected $userReportedThumbnailsType = DrishtiVesperUserReportUserReportedThumbnail::class;
   protected $userReportedThumbnailsDataType = 'array';
   /**

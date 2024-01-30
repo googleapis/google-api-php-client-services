@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class DrishtiLabelSetElement extends \Google\Model
 {
-  /**
-   * @var DrishtiLabelSetData
-   */
-  public $label;
   protected $labelType = DrishtiLabelSetData::class;
   protected $labelDataType = '';
   /**

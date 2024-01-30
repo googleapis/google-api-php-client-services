@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreBusinessHoursProto extends \Google\Model
 {
-  /**
-   * @var BusinessHours
-   */
-  public $data;
   protected $dataType = BusinessHours::class;
   protected $dataDataType = '';
-  /**
-   * @var GeostoreFieldMetadataProto
-   */
-  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
 

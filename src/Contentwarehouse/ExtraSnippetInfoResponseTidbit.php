@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class ExtraSnippetInfoResponseTidbit extends \Google\Model
 {
-  /**
-   * @var ExtraSnippetInfoResponseTidbitAnchorInfo
-   */
-  public $anchorinfo;
   protected $anchorinfoType = ExtraSnippetInfoResponseTidbitAnchorInfo::class;
   protected $anchorinfoDataType = '';
   /**

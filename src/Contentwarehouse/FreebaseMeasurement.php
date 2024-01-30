@@ -24,10 +24,6 @@ class FreebaseMeasurement extends \Google\Collection
    * @var float
    */
   public $magnitude;
-  /**
-   * @var FreebaseMeasurementUnit[]
-   */
-  public $unit;
   protected $unitType = FreebaseMeasurementUnit::class;
   protected $unitDataType = 'array';
 

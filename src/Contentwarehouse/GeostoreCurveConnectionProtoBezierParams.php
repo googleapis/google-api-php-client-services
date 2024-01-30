@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class GeostoreCurveConnectionProtoBezierParams extends \Google\Collection
 {
   protected $collection_key = 'controlPoint';
-  /**
-   * @var GeostoreCurveConnectionProtoBezierParamsControlPoint[]
-   */
-  public $controlPoint;
   protected $controlPointType = GeostoreCurveConnectionProtoBezierParamsControlPoint::class;
   protected $controlPointDataType = 'array';
 

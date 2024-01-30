@@ -27,20 +27,12 @@ class GeostoreInternalFeatureProto extends \Google\Model
    * @var string
    */
   public $restOfWorldPolygonShapeId;
-  /**
-   * @var GeostoreRightsStatusProto
-   */
-  public $rightsStatus;
   protected $rightsStatusType = GeostoreRightsStatusProto::class;
   protected $rightsStatusDataType = '';
   /**
    * @var string
    */
   public $selfPolygonShapeId;
-  /**
-   * @var GeostoreTrustSignalsProto
-   */
-  public $trust;
   protected $trustType = GeostoreTrustSignalsProto::class;
   protected $trustDataType = '';
   /**

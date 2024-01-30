@@ -23,10 +23,6 @@ class GeostoreGConceptInstanceProto extends \Google\Model
    * @var string
    */
   public $gconceptId;
-  /**
-   * @var GeostoreFieldMetadataProto
-   */
-  public $metadata;
   protected $metadataType = GeostoreFieldMetadataProto::class;
   protected $metadataDataType = '';
   /**
