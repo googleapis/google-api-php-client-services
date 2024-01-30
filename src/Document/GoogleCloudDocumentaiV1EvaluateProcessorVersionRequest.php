@@ -19,10 +19,6 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1EvaluateProcessorVersionRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDocumentaiV1BatchDocumentsInputConfig
-   */
-  public $evaluationDocuments;
   protected $evaluationDocumentsType = GoogleCloudDocumentaiV1BatchDocumentsInputConfig::class;
   protected $evaluationDocumentsDataType = '';
 

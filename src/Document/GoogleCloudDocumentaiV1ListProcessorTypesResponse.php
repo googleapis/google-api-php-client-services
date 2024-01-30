@@ -24,10 +24,6 @@ class GoogleCloudDocumentaiV1ListProcessorTypesResponse extends \Google\Collecti
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDocumentaiV1ProcessorType[]
-   */
-  public $processorTypes;
   protected $processorTypesType = GoogleCloudDocumentaiV1ProcessorType::class;
   protected $processorTypesDataType = 'array';
 

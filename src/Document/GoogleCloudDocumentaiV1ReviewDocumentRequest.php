@@ -19,20 +19,12 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1ReviewDocumentRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDocumentaiV1DocumentSchema
-   */
-  public $documentSchema;
   protected $documentSchemaType = GoogleCloudDocumentaiV1DocumentSchema::class;
   protected $documentSchemaDataType = '';
   /**
    * @var bool
    */
   public $enableSchemaValidation;
-  /**
-   * @var GoogleCloudDocumentaiV1Document
-   */
-  public $inlineDocument;
   protected $inlineDocumentType = GoogleCloudDocumentaiV1Document::class;
   protected $inlineDocumentDataType = '';
   /**

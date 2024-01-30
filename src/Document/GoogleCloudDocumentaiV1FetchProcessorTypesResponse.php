@@ -20,10 +20,6 @@ namespace Google\Service\Document;
 class GoogleCloudDocumentaiV1FetchProcessorTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'processorTypes';
-  /**
-   * @var GoogleCloudDocumentaiV1ProcessorType[]
-   */
-  public $processorTypes;
   protected $processorTypesType = GoogleCloudDocumentaiV1ProcessorType::class;
   protected $processorTypesDataType = 'array';
 

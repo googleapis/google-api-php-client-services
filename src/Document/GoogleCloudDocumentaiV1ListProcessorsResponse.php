@@ -24,10 +24,6 @@ class GoogleCloudDocumentaiV1ListProcessorsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDocumentaiV1Processor[]
-   */
-  public $processors;
   protected $processorsType = GoogleCloudDocumentaiV1Processor::class;
   protected $processorsDataType = 'array';
 

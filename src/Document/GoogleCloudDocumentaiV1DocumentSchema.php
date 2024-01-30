@@ -28,16 +28,8 @@ class GoogleCloudDocumentaiV1DocumentSchema extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudDocumentaiV1DocumentSchemaEntityType[]
-   */
-  public $entityTypes;
   protected $entityTypesType = GoogleCloudDocumentaiV1DocumentSchemaEntityType::class;
   protected $entityTypesDataType = 'array';
-  /**
-   * @var GoogleCloudDocumentaiV1DocumentSchemaMetadata
-   */
-  public $metadata;
   protected $metadataType = GoogleCloudDocumentaiV1DocumentSchemaMetadata::class;
   protected $metadataDataType = '';
 

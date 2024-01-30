@@ -19,10 +19,6 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiUiv1beta3DeleteProcessorMetadata extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata
-   */
-  public $commonMetadata;
   protected $commonMetadataType = GoogleCloudDocumentaiUiv1beta3CommonOperationMetadata::class;
   protected $commonMetadataDataType = '';
 

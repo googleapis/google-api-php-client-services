@@ -19,10 +19,6 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDocumentaiV1HumanReviewStatus
-   */
-  public $humanReviewStatus;
   protected $humanReviewStatusType = GoogleCloudDocumentaiV1HumanReviewStatus::class;
   protected $humanReviewStatusDataType = '';
   /**
@@ -33,10 +29,6 @@ class GoogleCloudDocumentaiV1BatchProcessMetadataIndividualProcessStatus extends
    * @var string
    */
   public $outputGcsDestination;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 
