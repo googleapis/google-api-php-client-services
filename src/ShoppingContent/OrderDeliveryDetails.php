@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class OrderDeliveryDetails extends \Google\Model
 {
-  /**
-   * @var OrderAddress
-   */
-  public $address;
   protected $addressType = OrderAddress::class;
   protected $addressDataType = '';
   /**

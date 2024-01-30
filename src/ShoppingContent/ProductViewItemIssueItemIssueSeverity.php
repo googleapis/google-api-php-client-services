@@ -24,10 +24,6 @@ class ProductViewItemIssueItemIssueSeverity extends \Google\Collection
    * @var string
    */
   public $aggregatedSeverity;
-  /**
-   * @var ProductViewItemIssueIssueSeverityPerDestination[]
-   */
-  public $severityPerDestination;
   protected $severityPerDestinationType = ProductViewItemIssueIssueSeverityPerDestination::class;
   protected $severityPerDestinationDataType = 'array';
 

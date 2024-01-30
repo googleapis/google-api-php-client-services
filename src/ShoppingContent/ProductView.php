@@ -68,10 +68,6 @@ class ProductView extends \Google\Collection
    * @var string
    */
   public $currencyCode;
-  /**
-   * @var Date
-   */
-  public $expirationDate;
   protected $expirationDateType = Date::class;
   protected $expirationDateDataType = '';
   /**
@@ -86,10 +82,6 @@ class ProductView extends \Google\Collection
    * @var string
    */
   public $itemGroupId;
-  /**
-   * @var ProductViewItemIssue[]
-   */
-  public $itemIssues;
   protected $itemIssuesType = ProductViewItemIssue::class;
   protected $itemIssuesDataType = 'array';
   /**

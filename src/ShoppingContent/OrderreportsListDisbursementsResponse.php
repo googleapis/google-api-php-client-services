@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class OrderreportsListDisbursementsResponse extends \Google\Collection
 {
   protected $collection_key = 'disbursements';
-  /**
-   * @var OrderReportDisbursement[]
-   */
-  public $disbursements;
   protected $disbursementsType = OrderReportDisbursement::class;
   protected $disbursementsDataType = 'array';
   /**

@@ -31,10 +31,6 @@ class PosSaleRequest extends \Google\Model
    * @var string
    */
   public $itemId;
-  /**
-   * @var Price
-   */
-  public $price;
   protected $priceType = Price::class;
   protected $priceDataType = '';
   /**

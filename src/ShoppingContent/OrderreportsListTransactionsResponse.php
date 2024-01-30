@@ -28,10 +28,6 @@ class OrderreportsListTransactionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var OrderReportTransaction[]
-   */
-  public $transactions;
   protected $transactionsType = OrderReportTransaction::class;
   protected $transactionsDataType = 'array';
 

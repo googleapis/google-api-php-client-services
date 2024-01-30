@@ -35,10 +35,6 @@ class ProductsCustomBatchRequestEntry extends \Google\Model
    * @var string
    */
   public $method;
-  /**
-   * @var Product
-   */
-  public $product;
   protected $productType = Product::class;
   protected $productDataType = '';
   /**

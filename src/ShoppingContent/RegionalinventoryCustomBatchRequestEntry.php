@@ -35,10 +35,6 @@ class RegionalinventoryCustomBatchRequestEntry extends \Google\Model
    * @var string
    */
   public $productId;
-  /**
-   * @var RegionalInventory
-   */
-  public $regionalInventory;
   protected $regionalInventoryType = RegionalInventory::class;
   protected $regionalInventoryDataType = '';
 

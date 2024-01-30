@@ -19,16 +19,8 @@ namespace Google\Service\ShoppingContent;
 
 class OrderreturnsReturnItem extends \Google\Model
 {
-  /**
-   * @var OrderreturnsRefundOperation
-   */
-  public $refund;
   protected $refundType = OrderreturnsRefundOperation::class;
   protected $refundDataType = '';
-  /**
-   * @var OrderreturnsRejectOperation
-   */
-  public $reject;
   protected $rejectType = OrderreturnsRejectOperation::class;
   protected $rejectDataType = '';
   /**

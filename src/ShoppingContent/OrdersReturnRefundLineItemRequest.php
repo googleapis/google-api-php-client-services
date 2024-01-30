@@ -27,10 +27,6 @@ class OrdersReturnRefundLineItemRequest extends \Google\Model
    * @var string
    */
   public $operationId;
-  /**
-   * @var Price
-   */
-  public $priceAmount;
   protected $priceAmountType = Price::class;
   protected $priceAmountDataType = '';
   /**
@@ -49,10 +45,6 @@ class OrdersReturnRefundLineItemRequest extends \Google\Model
    * @var string
    */
   public $reasonText;
-  /**
-   * @var Price
-   */
-  public $taxAmount;
   protected $taxAmountType = Price::class;
   protected $taxAmountDataType = '';
 

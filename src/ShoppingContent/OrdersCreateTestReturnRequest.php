@@ -20,10 +20,6 @@ namespace Google\Service\ShoppingContent;
 class OrdersCreateTestReturnRequest extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var OrdersCustomBatchRequestEntryCreateTestReturnReturnItem[]
-   */
-  public $items;
   protected $itemsType = OrdersCustomBatchRequestEntryCreateTestReturnReturnItem::class;
   protected $itemsDataType = 'array';
 

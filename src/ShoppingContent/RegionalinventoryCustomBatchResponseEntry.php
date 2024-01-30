@@ -23,20 +23,12 @@ class RegionalinventoryCustomBatchResponseEntry extends \Google\Model
    * @var string
    */
   public $batchId;
-  /**
-   * @var Errors
-   */
-  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var RegionalInventory
-   */
-  public $regionalInventory;
   protected $regionalInventoryType = RegionalInventory::class;
   protected $regionalInventoryDataType = '';
 

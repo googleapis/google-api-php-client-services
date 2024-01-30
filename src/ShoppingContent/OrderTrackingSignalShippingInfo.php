@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class OrderTrackingSignalShippingInfo extends \Google\Model
 {
-  /**
-   * @var DateTime
-   */
-  public $actualDeliveryTime;
   protected $actualDeliveryTimeType = DateTime::class;
   protected $actualDeliveryTimeDataType = '';
   /**
@@ -33,16 +29,8 @@ class OrderTrackingSignalShippingInfo extends \Google\Model
    * @var string
    */
   public $carrierServiceName;
-  /**
-   * @var DateTime
-   */
-  public $earliestDeliveryPromiseTime;
   protected $earliestDeliveryPromiseTimeType = DateTime::class;
   protected $earliestDeliveryPromiseTimeDataType = '';
-  /**
-   * @var DateTime
-   */
-  public $latestDeliveryPromiseTime;
   protected $latestDeliveryPromiseTimeType = DateTime::class;
   protected $latestDeliveryPromiseTimeDataType = '';
   /**
@@ -57,10 +45,6 @@ class OrderTrackingSignalShippingInfo extends \Google\Model
    * @var string
    */
   public $shipmentId;
-  /**
-   * @var DateTime
-   */
-  public $shippedTime;
   protected $shippedTimeType = DateTime::class;
   protected $shippedTimeDataType = '';
   /**

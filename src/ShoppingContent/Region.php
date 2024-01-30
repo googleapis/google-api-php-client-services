@@ -23,20 +23,12 @@ class Region extends \Google\Model
    * @var string
    */
   public $displayName;
-  /**
-   * @var RegionGeoTargetArea
-   */
-  public $geotargetArea;
   protected $geotargetAreaType = RegionGeoTargetArea::class;
   protected $geotargetAreaDataType = '';
   /**
    * @var string
    */
   public $merchantId;
-  /**
-   * @var RegionPostalCodeArea
-   */
-  public $postalCodeArea;
   protected $postalCodeAreaType = RegionPostalCodeArea::class;
   protected $postalCodeAreaDataType = '';
   /**

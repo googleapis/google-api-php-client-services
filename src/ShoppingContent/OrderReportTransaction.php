@@ -19,10 +19,6 @@ namespace Google\Service\ShoppingContent;
 
 class OrderReportTransaction extends \Google\Model
 {
-  /**
-   * @var Price
-   */
-  public $disbursementAmount;
   protected $disbursementAmountType = Price::class;
   protected $disbursementAmountDataType = '';
   /**
@@ -49,10 +45,6 @@ class OrderReportTransaction extends \Google\Model
    * @var string
    */
   public $orderId;
-  /**
-   * @var ProductAmount
-   */
-  public $productAmount;
   protected $productAmountType = ProductAmount::class;
   protected $productAmountDataType = '';
   /**

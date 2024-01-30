@@ -28,10 +28,6 @@ class ProductstatusesListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ProductStatus[]
-   */
-  public $resources;
   protected $resourcesType = ProductStatus::class;
   protected $resourcesDataType = 'array';
 

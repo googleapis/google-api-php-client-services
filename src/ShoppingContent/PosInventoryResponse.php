@@ -43,10 +43,6 @@ class PosInventoryResponse extends \Google\Model
    * @var string
    */
   public $pickupSla;
-  /**
-   * @var Price
-   */
-  public $price;
   protected $priceType = Price::class;
   protected $priceDataType = '';
   /**
