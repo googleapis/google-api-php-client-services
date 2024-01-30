@@ -40,6 +40,7 @@ class AndroidPublisher extends \Google\Service
   const ANDROIDPUBLISHER =
       "https://www.googleapis.com/auth/androidpublisher";
 
+  public $applications;
   public $applications_deviceTierConfigs;
   public $apprecovery;
   public $edits;
@@ -87,6 +88,26 @@ class AndroidPublisher extends \Google\Service
     $this->version = 'v3';
     $this->serviceName = 'androidpublisher';
 
+    $this->applications = new AndroidPublisher\Resource\Applications(
+        $this,
+        $this->serviceName,
+        'applications',
+        [
+          'methods' => [
+            'dataSafety' => [
+              'path' => 'androidpublisher/v3/applications/{packageName}/dataSafety',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'packageName' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->applications_deviceTierConfigs = new AndroidPublisher\Resource\ApplicationsDeviceTierConfigs(
         $this,
         $this->serviceName,
