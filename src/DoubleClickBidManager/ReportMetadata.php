@@ -23,22 +23,10 @@ class ReportMetadata extends \Google\Model
    * @var string
    */
   public $googleCloudStoragePath;
-  /**
-   * @var Date
-   */
-  public $reportDataEndDate;
   protected $reportDataEndDateType = Date::class;
   protected $reportDataEndDateDataType = '';
-  /**
-   * @var Date
-   */
-  public $reportDataStartDate;
   protected $reportDataStartDateType = Date::class;
   protected $reportDataStartDateDataType = '';
-  /**
-   * @var ReportStatus
-   */
-  public $status;
   protected $statusType = ReportStatus::class;
   protected $statusDataType = '';
 

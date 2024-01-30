@@ -24,10 +24,6 @@ class ListQueriesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Query[]
-   */
-  public $queries;
   protected $queriesType = Query::class;
   protected $queriesDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\DoubleClickBidManager;
 class DisjunctiveMatchStatement extends \Google\Collection
 {
   protected $collection_key = 'eventFilters';
-  /**
-   * @var EventFilter[]
-   */
-  public $eventFilters;
   protected $eventFiltersType = EventFilter::class;
   protected $eventFiltersDataType = 'array';
 

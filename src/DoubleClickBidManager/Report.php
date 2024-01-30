@@ -19,22 +19,10 @@ namespace Google\Service\DoubleClickBidManager;
 
 class Report extends \Google\Model
 {
-  /**
-   * @var ReportKey
-   */
-  public $key;
   protected $keyType = ReportKey::class;
   protected $keyDataType = '';
-  /**
-   * @var ReportMetadata
-   */
-  public $metadata;
   protected $metadataType = ReportMetadata::class;
   protected $metadataDataType = '';
-  /**
-   * @var Parameters
-   */
-  public $params;
   protected $paramsType = Parameters::class;
   protected $paramsDataType = '';
 

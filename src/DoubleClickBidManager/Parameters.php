@@ -20,10 +20,6 @@ namespace Google\Service\DoubleClickBidManager;
 class Parameters extends \Google\Collection
 {
   protected $collection_key = 'metrics';
-  /**
-   * @var FilterPair[]
-   */
-  public $filters;
   protected $filtersType = FilterPair::class;
   protected $filtersDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class Parameters extends \Google\Collection
    * @var string[]
    */
   public $metrics;
-  /**
-   * @var Options
-   */
-  public $options;
   protected $optionsType = Options::class;
   protected $optionsDataType = '';
   /**

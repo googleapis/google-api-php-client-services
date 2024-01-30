@@ -20,10 +20,6 @@ namespace Google\Service\DoubleClickBidManager;
 class Rule extends \Google\Collection
 {
   protected $collection_key = 'disjunctiveMatchStatements';
-  /**
-   * @var DisjunctiveMatchStatement[]
-   */
-  public $disjunctiveMatchStatements;
   protected $disjunctiveMatchStatementsType = DisjunctiveMatchStatement::class;
   protected $disjunctiveMatchStatementsDataType = 'array';
   /**
