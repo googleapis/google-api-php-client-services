@@ -20,10 +20,6 @@ namespace Google\Service\PolicyAnalyzer;
 class GoogleCloudPolicyanalyzerV1QueryActivityResponse extends \Google\Collection
 {
   protected $collection_key = 'activities';
-  /**
-   * @var GoogleCloudPolicyanalyzerV1Activity[]
-   */
-  public $activities;
   protected $activitiesType = GoogleCloudPolicyanalyzerV1Activity::class;
   protected $activitiesDataType = 'array';
   /**
