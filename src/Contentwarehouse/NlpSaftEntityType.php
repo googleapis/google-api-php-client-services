@@ -27,10 +27,6 @@ class NlpSaftEntityType extends \Google\Model
    * @var string
    */
   public $domain;
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**

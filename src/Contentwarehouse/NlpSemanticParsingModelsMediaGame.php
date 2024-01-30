@@ -19,20 +19,12 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaGame extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var bool
    */
   public $isAnnotatedFromText;
-  /**
-   * @var NlpSemanticParsingQRefAnnotation
-   */
-  public $qref;
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   /**

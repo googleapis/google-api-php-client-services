@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSaftSemanticNode extends \Google\Collection
 {
   protected $collection_key = 'arc';
-  /**
-   * @var NlpSaftSemanticNodeArc[]
-   */
-  public $arc;
   protected $arcType = NlpSaftSemanticNodeArc::class;
   protected $arcDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class NlpSaftSemanticNode extends \Google\Collection
    * @var bool
    */
   public $implicit;
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**
@@ -60,10 +52,6 @@ class NlpSaftSemanticNode extends \Google\Collection
    * @var int
    */
   public $mention;
-  /**
-   * @var NlpSaftPhrase
-   */
-  public $phrase;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
   /**

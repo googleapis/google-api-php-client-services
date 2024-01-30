@@ -20,22 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class NlpSaftEntityProfile extends \Google\Collection
 {
   protected $collection_key = 'related';
-  /**
-   * @var NlpSaftEntityProfileAlternate[]
-   */
-  public $alternate;
   protected $alternateType = NlpSaftEntityProfileAlternate::class;
   protected $alternateDataType = 'array';
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $annotations;
   protected $annotationsType = Proto2BridgeMessageSet::class;
   protected $annotationsDataType = '';
-  /**
-   * @var NlpSaftEntityProfileAttribute[]
-   */
-  public $attribute;
   protected $attributeType = NlpSaftEntityProfileAttribute::class;
   protected $attributeDataType = 'array';
   /**
@@ -66,16 +54,8 @@ class NlpSaftEntityProfile extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var NlpSaftIdentifier[]
-   */
-  public $identifier;
   protected $identifierType = NlpSaftIdentifier::class;
   protected $identifierDataType = 'array';
-  /**
-   * @var NlpSaftEntityProfileKeyword[]
-   */
-  public $keyword;
   protected $keywordType = NlpSaftEntityProfileKeyword::class;
   protected $keywordDataType = 'array';
   /**
@@ -94,16 +74,8 @@ class NlpSaftEntityProfile extends \Google\Collection
    * @var string
    */
   public $nature;
-  /**
-   * @var NlpSaftEntityProfileReference[]
-   */
-  public $reference;
   protected $referenceType = NlpSaftEntityProfileReference::class;
   protected $referenceDataType = 'array';
-  /**
-   * @var NlpSaftEntityProfileRelated[]
-   */
-  public $related;
   protected $relatedType = NlpSaftEntityProfileRelated::class;
   protected $relatedDataType = 'array';
   /**

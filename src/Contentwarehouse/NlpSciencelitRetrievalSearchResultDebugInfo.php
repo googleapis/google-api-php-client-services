@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSciencelitRetrievalSearchResultDebugInfo extends \Google\Collection
 {
   protected $collection_key = 'goldSnippets';
-  /**
-   * @var NlpSciencelitArticleData
-   */
-  public $articleData;
   protected $articleDataType = NlpSciencelitArticleData::class;
   protected $articleDataDataType = '';
   /**

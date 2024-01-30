@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class NlpSciencelitCitationData extends \Google\Collection
 {
   protected $collection_key = 'author';
-  /**
-   * @var NlpSciencelitArticleId[]
-   */
-  public $articleId;
   protected $articleIdType = NlpSciencelitArticleId::class;
   protected $articleIdDataType = 'array';
-  /**
-   * @var NlpSciencelitAuthor[]
-   */
-  public $author;
   protected $authorType = NlpSciencelitAuthor::class;
   protected $authorDataType = 'array';
   /**
@@ -44,10 +36,6 @@ class NlpSciencelitCitationData extends \Google\Collection
    * @var string
    */
   public $reference;
-  /**
-   * @var ScienceCitation
-   */
-  public $scholarCitation;
   protected $scholarCitationType = ScienceCitation::class;
   protected $scholarCitationDataType = '';
   /**

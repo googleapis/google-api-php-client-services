@@ -19,26 +19,14 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaRadio extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingModelsMediaMediaAnnotationList
-   */
-  public $annotationList;
   protected $annotationListType = NlpSemanticParsingModelsMediaMediaAnnotationList::class;
   protected $annotationListDataType = '';
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
    * @var bool
    */
   public $favorite;
-  /**
-   * @var NlpSemanticParsingModelsMediaFrequency
-   */
-  public $frequency;
   protected $frequencyType = NlpSemanticParsingModelsMediaFrequency::class;
   protected $frequencyDataType = '';
   /**
@@ -49,10 +37,6 @@ class NlpSemanticParsingModelsMediaRadio extends \Google\Model
    * @var bool
    */
   public $isFromFastPath;
-  /**
-   * @var NlpSemanticParsingQRefAnnotation
-   */
-  public $qref;
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   /**

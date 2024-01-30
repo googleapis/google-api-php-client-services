@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsRecurrenceDailyPattern extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingDateTimeAnnotation
-   */
-  public $dayPeriod;
   protected $dayPeriodType = NlpSemanticParsingDateTimeAnnotation::class;
   protected $dayPeriodDataType = '';
-  /**
-   * @var NlpSemanticParsingDateTimeAnnotation
-   */
-  public $timeOfDay;
   protected $timeOfDayType = NlpSemanticParsingDateTimeAnnotation::class;
   protected $timeOfDayDataType = '';
 

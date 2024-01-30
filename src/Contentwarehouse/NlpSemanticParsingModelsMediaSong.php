@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsMediaSong extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingModelsMediaMediaAnnotationList
-   */
-  public $annotationList;
   protected $annotationListType = NlpSemanticParsingModelsMediaMediaAnnotationList::class;
   protected $annotationListDataType = '';
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**
@@ -51,10 +43,6 @@ class NlpSemanticParsingModelsMediaSong extends \Google\Model
    * @var bool
    */
   public $latest;
-  /**
-   * @var NlpSemanticParsingQRefAnnotation
-   */
-  public $qref;
   protected $qrefType = NlpSemanticParsingQRefAnnotation::class;
   protected $qrefDataType = '';
   /**

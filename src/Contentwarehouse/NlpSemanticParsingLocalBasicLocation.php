@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingLocalBasicLocation extends \Google\Collection
 {
   protected $collection_key = 'element';
-  /**
-   * @var NlpSemanticParsingLocalLocationElement[]
-   */
-  public $element;
   protected $elementType = NlpSemanticParsingLocalLocationElement::class;
   protected $elementDataType = 'array';
 

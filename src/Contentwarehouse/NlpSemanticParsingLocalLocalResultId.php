@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingLocalLocalResultId extends \Google\Model
 {
-  /**
-   * @var GeostoreFeatureIdProto
-   */
-  public $featureId;
   protected $featureIdType = GeostoreFeatureIdProto::class;
   protected $featureIdDataType = '';
   /**
@@ -33,16 +29,8 @@ class NlpSemanticParsingLocalLocalResultId extends \Google\Model
    * @var string
    */
   public $kgMid;
-  /**
-   * @var GeostorePointProto
-   */
-  public $position;
   protected $positionType = GeostorePointProto::class;
   protected $positionDataType = '';
-  /**
-   * @var GeostoreRectProto
-   */
-  public $rect;
   protected $rectType = GeostoreRectProto::class;
   protected $rectDataType = '';
 

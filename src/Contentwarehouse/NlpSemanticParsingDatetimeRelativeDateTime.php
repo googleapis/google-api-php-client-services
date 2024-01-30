@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingDatetimeRelativeDateTime extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingDatetimeFetchedRelativeDateTime
-   */
-  public $fetched;
   protected $fetchedType = NlpSemanticParsingDatetimeFetchedRelativeDateTime::class;
   protected $fetchedDataType = '';
   /**
@@ -33,10 +29,6 @@ class NlpSemanticParsingDatetimeRelativeDateTime extends \Google\Model
    * @var string
    */
   public $modifier;
-  /**
-   * @var NlpSemanticParsingDatetimeShiftedRelativeDateTime
-   */
-  public $shifted;
   protected $shiftedType = NlpSemanticParsingDatetimeShiftedRelativeDateTime::class;
   protected $shiftedDataType = '';
 

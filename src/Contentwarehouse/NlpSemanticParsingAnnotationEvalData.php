@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingAnnotationEvalData extends \Google\Collection
 {
   protected $collection_key = 'additionalSpans';
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData[]
-   */
-  public $additionalSpans;
   protected $additionalSpansType = NlpSemanticParsingAnnotationEvalData::class;
   protected $additionalSpansDataType = 'array';
   /**

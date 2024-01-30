@@ -31,10 +31,6 @@ class NlpSemanticParsingLocalQualityConstraint extends \Google\Model
    * @var string
    */
   public $starType;
-  /**
-   * @var NlpSemanticParsingLocalStarRatings
-   */
-  public $stars;
   protected $starsType = NlpSemanticParsingLocalStarRatings::class;
   protected $starsDataType = '';
   /**

@@ -31,10 +31,6 @@ class NlpSemanticParsingModelsMediaPodcastInfo extends \Google\Model
    * @var string
    */
   public $feedUrl;
-  /**
-   * @var SuperrootPodcastsRecommendationsPodcastRecsFeatures
-   */
-  public $podcastRecsFeatures;
   protected $podcastRecsFeaturesType = SuperrootPodcastsRecommendationsPodcastRecsFeatures::class;
   protected $podcastRecsFeaturesDataType = '';
   /**

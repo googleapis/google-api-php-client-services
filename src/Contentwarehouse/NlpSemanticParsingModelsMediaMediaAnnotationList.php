@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSemanticParsingModelsMediaMediaAnnotationList extends \Google\Collection
 {
   protected $collection_key = 'annotation';
-  /**
-   * @var NlpSemanticParsingModelsMediaMediaAnnotation[]
-   */
-  public $annotation;
   protected $annotationType = NlpSemanticParsingModelsMediaMediaAnnotation::class;
   protected $annotationDataType = 'array';
 

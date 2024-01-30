@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class NlpSemanticParsingModelsCommunicationPhoneType extends \Google\Model
 {
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**

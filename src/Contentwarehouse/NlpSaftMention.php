@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class NlpSaftMention extends \Google\Model
 {
   public $confidence;
-  /**
-   * @var Proto2BridgeMessageSet
-   */
-  public $info;
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**
@@ -34,16 +30,8 @@ class NlpSaftMention extends \Google\Model
    * @var string
    */
   public $nestingRelation;
-  /**
-   * @var NlpSaftPhrase
-   */
-  public $phrase;
   protected $phraseType = NlpSaftPhrase::class;
   protected $phraseDataType = '';
-  /**
-   * @var NlpSaftMentionResolution
-   */
-  public $resolution;
   protected $resolutionType = NlpSaftMentionResolution::class;
   protected $resolutionDataType = '';
   /**

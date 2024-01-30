@@ -23,10 +23,6 @@ class NlpSemanticParsingModelsMediaSeasonConstraint extends \Google\Model
    * @var int
    */
   public $absoluteIndex;
-  /**
-   * @var NlpSemanticParsingAnnotationEvalData
-   */
-  public $evalData;
   protected $evalDataType = NlpSemanticParsingAnnotationEvalData::class;
   protected $evalDataDataType = '';
   /**

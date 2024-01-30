@@ -20,28 +20,12 @@ namespace Google\Service\Contentwarehouse;
 class NlpSciencelitArticleMetadata extends \Google\Collection
 {
   protected $collection_key = 'url';
-  /**
-   * @var NlpSciencelitTokenizedText
-   */
-  public $abstract;
   protected $abstractType = NlpSciencelitTokenizedText::class;
   protected $abstractDataType = '';
-  /**
-   * @var NlpSciencelitArticleId[]
-   */
-  public $articleId;
   protected $articleIdType = NlpSciencelitArticleId::class;
   protected $articleIdDataType = 'array';
-  /**
-   * @var NlpSciencelitAuthor[]
-   */
-  public $author;
   protected $authorType = NlpSciencelitAuthor::class;
   protected $authorDataType = 'array';
-  /**
-   * @var NlpSciencelitDataset[]
-   */
-  public $dataset;
   protected $datasetType = NlpSciencelitDataset::class;
   protected $datasetDataType = 'array';
   /**
@@ -52,10 +36,6 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
    * @var bool
    */
   public $deleted;
-  /**
-   * @var NlpSciencelitMeshHeading[]
-   */
-  public $heading;
   protected $headingType = NlpSciencelitMeshHeading::class;
   protected $headingDataType = 'array';
   /**
@@ -86,16 +66,8 @@ class NlpSciencelitArticleMetadata extends \Google\Collection
    * @var string
    */
   public $pmid;
-  /**
-   * @var NlpSciencelitPublicationType[]
-   */
-  public $publicationType;
   protected $publicationTypeType = NlpSciencelitPublicationType::class;
   protected $publicationTypeDataType = 'array';
-  /**
-   * @var ResearchScamV3Restrict
-   */
-  public $scamRestrictTokens;
   protected $scamRestrictTokensType = ResearchScamV3Restrict::class;
   protected $scamRestrictTokensDataType = '';
   /**
