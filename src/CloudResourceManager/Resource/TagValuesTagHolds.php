@@ -43,6 +43,7 @@ class TagValuesTagHolds extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. Set to true to perform the validations
    * necessary for creating the resource, but not actually perform the action.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, TagHold $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class TagValuesTagHolds extends \Google\Service\Resource
    * @opt_param bool validateOnly Optional. Set to true to perform the validations
    * necessary for deleting the resource, but not actually perform the action.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -90,6 +92,7 @@ class TagValuesTagHolds extends \Google\Service\Resource
    * previous call to `ListTagHolds` that indicates where this listing should
    * continue from.
    * @return ListTagHoldsResponse
+   * @throws \Google\Service\Exception
    */
   public function listTagValuesTagHolds($parent, $optParams = [])
   {

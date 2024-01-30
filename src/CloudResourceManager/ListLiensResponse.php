@@ -20,10 +20,6 @@ namespace Google\Service\CloudResourceManager;
 class ListLiensResponse extends \Google\Collection
 {
   protected $collection_key = 'liens';
-  /**
-   * @var Lien[]
-   */
-  public $liens;
   protected $liensType = Lien::class;
   protected $liensDataType = 'array';
   /**

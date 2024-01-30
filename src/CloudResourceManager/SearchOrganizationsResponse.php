@@ -24,10 +24,6 @@ class SearchOrganizationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Organization[]
-   */
-  public $organizations;
   protected $organizationsType = Organization::class;
   protected $organizationsDataType = 'array';
 
