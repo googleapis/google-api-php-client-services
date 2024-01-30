@@ -44,10 +44,6 @@ class AudioStream extends \Google\Collection
    * @var string
    */
   public $languageCode;
-  /**
-   * @var AudioMapping[]
-   */
-  public $mapping;
   protected $mappingType = AudioMapping::class;
   protected $mappingDataType = 'array';
   /**

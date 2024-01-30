@@ -23,10 +23,6 @@ class Input extends \Google\Model
    * @var string
    */
   public $key;
-  /**
-   * @var PreprocessingConfig
-   */
-  public $preprocessingConfig;
   protected $preprocessingConfigType = PreprocessingConfig::class;
   protected $preprocessingConfigDataType = '';
   /**

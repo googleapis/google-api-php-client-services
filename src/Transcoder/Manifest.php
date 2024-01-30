@@ -20,10 +20,6 @@ namespace Google\Service\Transcoder;
 class Manifest extends \Google\Collection
 {
   protected $collection_key = 'muxStreams';
-  /**
-   * @var DashConfig
-   */
-  public $dash;
   protected $dashType = DashConfig::class;
   protected $dashDataType = '';
   /**

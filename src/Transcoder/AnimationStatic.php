@@ -23,10 +23,6 @@ class AnimationStatic extends \Google\Model
    * @var string
    */
   public $startTimeOffset;
-  /**
-   * @var NormalizedCoordinate
-   */
-  public $xy;
   protected $xyType = NormalizedCoordinate::class;
   protected $xyDataType = '';
 

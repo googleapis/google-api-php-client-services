@@ -23,10 +23,6 @@ class Job extends \Google\Model
    * @var int
    */
   public $batchModePriority;
-  /**
-   * @var JobConfig
-   */
-  public $config;
   protected $configType = JobConfig::class;
   protected $configDataType = '';
   /**
@@ -37,10 +33,6 @@ class Job extends \Google\Model
    * @var string
    */
   public $endTime;
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
