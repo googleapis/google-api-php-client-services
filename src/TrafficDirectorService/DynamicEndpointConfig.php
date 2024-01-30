@@ -27,10 +27,6 @@ class DynamicEndpointConfig extends \Google\Model
    * @var array[]
    */
   public $endpointConfig;
-  /**
-   * @var UpdateFailureState
-   */
-  public $errorState;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
   /**

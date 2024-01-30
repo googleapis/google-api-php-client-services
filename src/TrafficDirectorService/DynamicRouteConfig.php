@@ -23,10 +23,6 @@ class DynamicRouteConfig extends \Google\Model
    * @var string
    */
   public $clientStatus;
-  /**
-   * @var UpdateFailureState
-   */
-  public $errorState;
   protected $errorStateType = UpdateFailureState::class;
   protected $errorStateDataType = '';
   /**

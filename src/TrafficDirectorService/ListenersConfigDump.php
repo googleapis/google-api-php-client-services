@@ -20,16 +20,8 @@ namespace Google\Service\TrafficDirectorService;
 class ListenersConfigDump extends \Google\Collection
 {
   protected $collection_key = 'staticListeners';
-  /**
-   * @var DynamicListener[]
-   */
-  public $dynamicListeners;
   protected $dynamicListenersType = DynamicListener::class;
   protected $dynamicListenersDataType = 'array';
-  /**
-   * @var StaticListener[]
-   */
-  public $staticListeners;
   protected $staticListenersType = StaticListener::class;
   protected $staticListenersDataType = 'array';
   /**

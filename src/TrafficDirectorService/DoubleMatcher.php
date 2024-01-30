@@ -20,10 +20,6 @@ namespace Google\Service\TrafficDirectorService;
 class DoubleMatcher extends \Google\Model
 {
   public $exact;
-  /**
-   * @var DoubleRange
-   */
-  public $range;
   protected $rangeType = DoubleRange::class;
   protected $rangeDataType = '';
 

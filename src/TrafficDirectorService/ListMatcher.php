@@ -19,10 +19,6 @@ namespace Google\Service\TrafficDirectorService;
 
 class ListMatcher extends \Google\Model
 {
-  /**
-   * @var ValueMatcher
-   */
-  public $oneOf;
   protected $oneOfType = ValueMatcher::class;
   protected $oneOfDataType = '';
 
