@@ -43,6 +43,7 @@ class AppsTokens extends \Google\Service\Resource
    * @param VerifyTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return VerifyTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function verify($appPackage, $token, VerifyTokenRequest $postBody, $optParams = [])
   {
