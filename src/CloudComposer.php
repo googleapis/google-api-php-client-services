@@ -39,6 +39,7 @@ class CloudComposer extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations_environments;
+  public $projects_locations_environments_workloads;
   public $projects_locations_imageVersions;
   public $projects_locations_operations;
 
@@ -194,6 +195,38 @@ class CloudComposer extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_environments_workloads = new CloudComposer\Resource\ProjectsLocationsEnvironmentsWorkloads(
+        $this,
+        $this->serviceName,
+        'workloads',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/workloads',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
