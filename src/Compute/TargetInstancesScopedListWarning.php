@@ -24,10 +24,6 @@ class TargetInstancesScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var TargetInstancesScopedListWarningData[]
-   */
-  public $data;
   protected $dataType = TargetInstancesScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

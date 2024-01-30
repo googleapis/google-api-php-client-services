@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class TargetPoolsRemoveHealthCheckRequest extends \Google\Collection
 {
   protected $collection_key = 'healthChecks';
-  /**
-   * @var HealthCheckReference[]
-   */
-  public $healthChecks;
   protected $healthChecksType = HealthCheckReference::class;
   protected $healthChecksDataType = 'array';
 

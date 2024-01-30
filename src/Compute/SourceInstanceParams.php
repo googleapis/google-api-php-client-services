@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class SourceInstanceParams extends \Google\Collection
 {
   protected $collection_key = 'diskConfigs';
-  /**
-   * @var DiskInstantiationConfig[]
-   */
-  public $diskConfigs;
   protected $diskConfigsType = DiskInstantiationConfig::class;
   protected $diskConfigsDataType = 'array';
 

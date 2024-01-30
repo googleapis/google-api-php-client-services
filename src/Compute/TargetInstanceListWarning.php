@@ -24,10 +24,6 @@ class TargetInstanceListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var TargetInstanceListWarningData[]
-   */
-  public $data;
   protected $dataType = TargetInstanceListWarningData::class;
   protected $dataDataType = 'array';
   /**

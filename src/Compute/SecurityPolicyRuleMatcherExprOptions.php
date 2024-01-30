@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class SecurityPolicyRuleMatcherExprOptions extends \Google\Model
 {
-  /**
-   * @var SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions
-   */
-  public $recaptchaOptions;
   protected $recaptchaOptionsType = SecurityPolicyRuleMatcherExprOptionsRecaptchaOptions::class;
   protected $recaptchaOptionsDataType = '';
 

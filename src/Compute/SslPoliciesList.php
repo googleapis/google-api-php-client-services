@@ -24,10 +24,6 @@ class SslPoliciesList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var SslPolicy[]
-   */
-  public $items;
   protected $itemsType = SslPolicy::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class SslPoliciesList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var SslPoliciesListWarning
-   */
-  public $warning;
   protected $warningType = SslPoliciesListWarning::class;
   protected $warningDataType = '';
 

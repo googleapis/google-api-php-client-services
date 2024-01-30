@@ -44,10 +44,6 @@ class SslCertificate extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var SslCertificateManagedSslCertificate
-   */
-  public $managed;
   protected $managedType = SslCertificateManagedSslCertificate::class;
   protected $managedDataType = '';
   /**
@@ -66,10 +62,6 @@ class SslCertificate extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var SslCertificateSelfManagedSslCertificate
-   */
-  public $selfManaged;
   protected $selfManagedType = SslCertificateSelfManagedSslCertificate::class;
   protected $selfManagedDataType = '';
   /**

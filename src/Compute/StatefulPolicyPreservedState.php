@@ -19,22 +19,10 @@ namespace Google\Service\Compute;
 
 class StatefulPolicyPreservedState extends \Google\Model
 {
-  /**
-   * @var StatefulPolicyPreservedStateDiskDevice[]
-   */
-  public $disks;
   protected $disksType = StatefulPolicyPreservedStateDiskDevice::class;
   protected $disksDataType = 'map';
-  /**
-   * @var StatefulPolicyPreservedStateNetworkIp[]
-   */
-  public $externalIPs;
   protected $externalIPsType = StatefulPolicyPreservedStateNetworkIp::class;
   protected $externalIPsDataType = 'map';
-  /**
-   * @var StatefulPolicyPreservedStateNetworkIp[]
-   */
-  public $internalIPs;
   protected $internalIPsType = StatefulPolicyPreservedStateNetworkIp::class;
   protected $internalIPsDataType = 'map';
 

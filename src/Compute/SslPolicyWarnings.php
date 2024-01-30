@@ -24,10 +24,6 @@ class SslPolicyWarnings extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var SslPolicyWarningsData[]
-   */
-  public $data;
   protected $dataType = SslPolicyWarningsData::class;
   protected $dataDataType = 'array';
   /**

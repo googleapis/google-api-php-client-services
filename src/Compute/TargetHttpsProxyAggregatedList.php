@@ -24,10 +24,6 @@ class TargetHttpsProxyAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var TargetHttpsProxiesScopedList[]
-   */
-  public $items;
   protected $itemsType = TargetHttpsProxiesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class TargetHttpsProxyAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var TargetHttpsProxyAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = TargetHttpsProxyAggregatedListWarning::class;
   protected $warningDataType = '';
 

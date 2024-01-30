@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class SecurityPoliciesWafConfig extends \Google\Model
 {
-  /**
-   * @var PreconfiguredWafSet
-   */
-  public $wafRules;
   protected $wafRulesType = PreconfiguredWafSet::class;
   protected $wafRulesDataType = '';
 

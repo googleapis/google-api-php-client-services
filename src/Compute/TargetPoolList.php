@@ -24,10 +24,6 @@ class TargetPoolList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var TargetPool[]
-   */
-  public $items;
   protected $itemsType = TargetPool::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class TargetPoolList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var TargetPoolListWarning
-   */
-  public $warning;
   protected $warningType = TargetPoolListWarning::class;
   protected $warningDataType = '';
 

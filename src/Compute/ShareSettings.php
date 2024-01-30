@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class ShareSettings extends \Google\Model
 {
-  /**
-   * @var ShareSettingsProjectConfig[]
-   */
-  public $projectMap;
   protected $projectMapType = ShareSettingsProjectConfig::class;
   protected $projectMapDataType = 'map';
   /**

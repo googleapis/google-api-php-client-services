@@ -24,10 +24,6 @@ class SslPoliciesAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var SslPoliciesAggregatedListWarningData[]
-   */
-  public $data;
   protected $dataType = SslPoliciesAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

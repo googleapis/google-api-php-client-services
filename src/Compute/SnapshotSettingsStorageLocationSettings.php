@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class SnapshotSettingsStorageLocationSettings extends \Google\Model
 {
-  /**
-   * @var SnapshotSettingsStorageLocationSettingsStorageLocationPreference[]
-   */
-  public $locations;
   protected $locationsType = SnapshotSettingsStorageLocationSettingsStorageLocationPreference::class;
   protected $locationsDataType = 'map';
   /**

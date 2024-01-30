@@ -27,32 +27,16 @@ class SecurityPolicyRule extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var SecurityPolicyRuleHttpHeaderAction
-   */
-  public $headerAction;
   protected $headerActionType = SecurityPolicyRuleHttpHeaderAction::class;
   protected $headerActionDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var SecurityPolicyRuleMatcher
-   */
-  public $match;
   protected $matchType = SecurityPolicyRuleMatcher::class;
   protected $matchDataType = '';
-  /**
-   * @var SecurityPolicyRuleNetworkMatcher
-   */
-  public $networkMatch;
   protected $networkMatchType = SecurityPolicyRuleNetworkMatcher::class;
   protected $networkMatchDataType = '';
-  /**
-   * @var SecurityPolicyRulePreconfiguredWafConfig
-   */
-  public $preconfiguredWafConfig;
   protected $preconfiguredWafConfigType = SecurityPolicyRulePreconfiguredWafConfig::class;
   protected $preconfiguredWafConfigDataType = '';
   /**
@@ -63,16 +47,8 @@ class SecurityPolicyRule extends \Google\Model
    * @var int
    */
   public $priority;
-  /**
-   * @var SecurityPolicyRuleRateLimitOptions
-   */
-  public $rateLimitOptions;
   protected $rateLimitOptionsType = SecurityPolicyRuleRateLimitOptions::class;
   protected $rateLimitOptionsDataType = '';
-  /**
-   * @var SecurityPolicyRuleRedirectOptions
-   */
-  public $redirectOptions;
   protected $redirectOptionsType = SecurityPolicyRuleRedirectOptions::class;
   protected $redirectOptionsDataType = '';
 

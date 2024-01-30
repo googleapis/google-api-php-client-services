@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class SecurityPolicyRuleHttpHeaderAction extends \Google\Collection
 {
   protected $collection_key = 'requestHeadersToAdds';
-  /**
-   * @var SecurityPolicyRuleHttpHeaderActionHttpHeaderOption[]
-   */
-  public $requestHeadersToAdds;
   protected $requestHeadersToAddsType = SecurityPolicyRuleHttpHeaderActionHttpHeaderOption::class;
   protected $requestHeadersToAddsDataType = 'array';
 

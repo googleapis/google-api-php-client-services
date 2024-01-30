@@ -24,10 +24,6 @@ class SubnetworksScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var SubnetworksScopedListWarningData[]
-   */
-  public $data;
   protected $dataType = SubnetworksScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

@@ -56,10 +56,6 @@ class Snapshot extends \Google\Collection
    * @var bool
    */
   public $enableConfidentialCompute;
-  /**
-   * @var GuestOsFeature[]
-   */
-  public $guestOsFeatures;
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
@@ -106,10 +102,6 @@ class Snapshot extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $snapshotEncryptionKey;
   protected $snapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $snapshotEncryptionKeyDataType = '';
   /**
@@ -120,10 +112,6 @@ class Snapshot extends \Google\Collection
    * @var string
    */
   public $sourceDisk;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $sourceDiskEncryptionKey;
   protected $sourceDiskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceDiskEncryptionKeyDataType = '';
   /**

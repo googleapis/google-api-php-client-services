@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class SecurityPoliciesListPreconfiguredExpressionSetsResponse extends \Google\Model
 {
-  /**
-   * @var SecurityPoliciesWafConfig
-   */
-  public $preconfiguredExpressionSets;
   protected $preconfiguredExpressionSetsType = SecurityPoliciesWafConfig::class;
   protected $preconfiguredExpressionSetsDataType = '';
 

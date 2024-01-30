@@ -24,10 +24,6 @@ class SubnetworkListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var SubnetworkListWarningData[]
-   */
-  public $data;
   protected $dataType = SubnetworkListWarningData::class;
   protected $dataDataType = 'array';
   /**

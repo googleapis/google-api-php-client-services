@@ -20,20 +20,12 @@ namespace Google\Service\Compute;
 class ServiceAttachment extends \Google\Collection
 {
   protected $collection_key = 'natSubnets';
-  /**
-   * @var ServiceAttachmentConnectedEndpoint[]
-   */
-  public $connectedEndpoints;
   protected $connectedEndpointsType = ServiceAttachmentConnectedEndpoint::class;
   protected $connectedEndpointsDataType = 'array';
   /**
    * @var string
    */
   public $connectionPreference;
-  /**
-   * @var ServiceAttachmentConsumerProjectLimit[]
-   */
-  public $consumerAcceptLists;
   protected $consumerAcceptListsType = ServiceAttachmentConsumerProjectLimit::class;
   protected $consumerAcceptListsDataType = 'array';
   /**
@@ -80,10 +72,6 @@ class ServiceAttachment extends \Google\Collection
    * @var string
    */
   public $producerForwardingRule;
-  /**
-   * @var Uint128
-   */
-  public $pscServiceAttachmentId;
   protected $pscServiceAttachmentIdType = Uint128::class;
   protected $pscServiceAttachmentIdDataType = '';
   /**

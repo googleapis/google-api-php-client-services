@@ -24,10 +24,6 @@ class TargetHttpsProxyListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var TargetHttpsProxyListWarningData[]
-   */
-  public $data;
   protected $dataType = TargetHttpsProxyListWarningData::class;
   protected $dataDataType = 'array';
   /**

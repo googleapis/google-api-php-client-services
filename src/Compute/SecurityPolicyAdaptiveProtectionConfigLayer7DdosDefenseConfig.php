@@ -28,10 +28,6 @@ class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig extends \Goo
    * @var string
    */
   public $ruleVisibility;
-  /**
-   * @var SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig[]
-   */
-  public $thresholdConfigs;
   protected $thresholdConfigsType = SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigThresholdConfig::class;
   protected $thresholdConfigsDataType = 'array';
 

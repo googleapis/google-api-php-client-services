@@ -24,10 +24,6 @@ class TargetPoolListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var TargetPoolListWarningData[]
-   */
-  public $data;
   protected $dataType = TargetPoolListWarningData::class;
   protected $dataDataType = 'array';
   /**

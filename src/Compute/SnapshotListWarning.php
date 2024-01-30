@@ -24,10 +24,6 @@ class SnapshotListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var SnapshotListWarningData[]
-   */
-  public $data;
   protected $dataType = SnapshotListWarningData::class;
   protected $dataDataType = 'array';
   /**
