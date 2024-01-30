@@ -39,10 +39,6 @@ class UserList extends \Google\Model
    * @var string
    */
   public $status;
-  /**
-   * @var UrlRestriction
-   */
-  public $urlRestriction;
   protected $urlRestrictionType = UrlRestriction::class;
   protected $urlRestrictionDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\RealTimeBidding;
 class DownloadSizeEvidence extends \Google\Collection
 {
   protected $collection_key = 'topUrlDownloadSizeBreakdowns';
-  /**
-   * @var UrlDownloadSize[]
-   */
-  public $topUrlDownloadSizeBreakdowns;
   protected $topUrlDownloadSizeBreakdownsType = UrlDownloadSize::class;
   protected $topUrlDownloadSizeBreakdownsDataType = 'array';
   /**

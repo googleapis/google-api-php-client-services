@@ -20,10 +20,6 @@ namespace Google\Service\RealTimeBidding;
 class ListBuyersResponse extends \Google\Collection
 {
   protected $collection_key = 'buyers';
-  /**
-   * @var Buyer[]
-   */
-  public $buyers;
   protected $buyersType = Buyer::class;
   protected $buyersDataType = 'array';
   /**

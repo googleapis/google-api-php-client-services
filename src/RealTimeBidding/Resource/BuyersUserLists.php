@@ -42,6 +42,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * @param CloseUserListRequest $postBody
    * @param array $optParams Optional parameters.
    * @return UserList
+   * @throws \Google\Service\Exception
    */
   public function close($name, CloseUserListRequest $postBody, $optParams = [])
   {
@@ -60,6 +61,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * @param UserList $postBody
    * @param array $optParams Optional parameters.
    * @return UserList
+   * @throws \Google\Service\Exception
    */
   public function create($parent, UserList $postBody, $optParams = [])
   {
@@ -74,6 +76,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * UserList.name.
    * @param array $optParams Optional parameters.
    * @return UserList
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -99,6 +102,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * `buyers/{accountId}/userLists/{userListId}`. See UserList.name.
    * @param array $optParams Optional parameters.
    * @return GetRemarketingTagResponse
+   * @throws \Google\Service\Exception
    */
   public function getRemarketingTag($name, $optParams = [])
   {
@@ -121,6 +125,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * @opt_param string pageToken Continuation page token as received from a
    * previous response.
    * @return ListUserListsResponse
+   * @throws \Google\Service\Exception
    */
   public function listBuyersUserLists($parent, $optParams = [])
   {
@@ -137,6 +142,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * @param OpenUserListRequest $postBody
    * @param array $optParams Optional parameters.
    * @return UserList
+   * @throws \Google\Service\Exception
    */
   public function open($name, OpenUserListRequest $postBody, $optParams = [])
   {
@@ -157,6 +163,7 @@ class BuyersUserLists extends \Google\Service\Resource
    * @param UserList $postBody
    * @param array $optParams Optional parameters.
    * @return UserList
+   * @throws \Google\Service\Exception
    */
   public function update($name, UserList $postBody, $optParams = [])
   {

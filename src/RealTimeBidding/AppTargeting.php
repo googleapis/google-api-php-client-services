@@ -19,16 +19,8 @@ namespace Google\Service\RealTimeBidding;
 
 class AppTargeting extends \Google\Model
 {
-  /**
-   * @var NumericTargetingDimension
-   */
-  public $mobileAppCategoryTargeting;
   protected $mobileAppCategoryTargetingType = NumericTargetingDimension::class;
   protected $mobileAppCategoryTargetingDataType = '';
-  /**
-   * @var StringTargetingDimension
-   */
-  public $mobileAppTargeting;
   protected $mobileAppTargetingType = StringTargetingDimension::class;
   protected $mobileAppTargetingDataType = '';
 

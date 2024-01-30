@@ -20,10 +20,6 @@ namespace Google\Service\RealTimeBidding;
 class DomainCallEvidence extends \Google\Collection
 {
   protected $collection_key = 'topHttpCallDomains';
-  /**
-   * @var DomainCalls[]
-   */
-  public $topHttpCallDomains;
   protected $topHttpCallDomainsType = DomainCalls::class;
   protected $topHttpCallDomainsDataType = 'array';
   /**

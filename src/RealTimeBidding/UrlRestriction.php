@@ -19,20 +19,12 @@ namespace Google\Service\RealTimeBidding;
 
 class UrlRestriction extends \Google\Model
 {
-  /**
-   * @var Date
-   */
-  public $endDate;
   protected $endDateType = Date::class;
   protected $endDateDataType = '';
   /**
    * @var string
    */
   public $restrictionType;
-  /**
-   * @var Date
-   */
-  public $startDate;
   protected $startDateType = Date::class;
   protected $startDateDataType = '';
   /**

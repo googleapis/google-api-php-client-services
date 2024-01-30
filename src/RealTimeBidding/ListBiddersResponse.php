@@ -20,10 +20,6 @@ namespace Google\Service\RealTimeBidding;
 class ListBiddersResponse extends \Google\Collection
 {
   protected $collection_key = 'bidders';
-  /**
-   * @var Bidder[]
-   */
-  public $bidders;
   protected $biddersType = Bidder::class;
   protected $biddersDataType = 'array';
   /**
