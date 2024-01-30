@@ -20,10 +20,6 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAssetGroupTopCombinationView extends \Google\Collection
 {
   protected $collection_key = 'assetGroupTopCombinations';
-  /**
-   * @var GoogleAdsSearchads360V0ResourcesAssetGroupAssetCombinationData[]
-   */
-  public $assetGroupTopCombinations;
   protected $assetGroupTopCombinationsType = GoogleAdsSearchads360V0ResourcesAssetGroupAssetCombinationData::class;
   protected $assetGroupTopCombinationsDataType = 'array';
   /**

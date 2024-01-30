@@ -20,10 +20,6 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ErrorsErrorLocation extends \Google\Collection
 {
   protected $collection_key = 'fieldPathElements';
-  /**
-   * @var GoogleAdsSearchads360V0ErrorsErrorLocationFieldPathElement[]
-   */
-  public $fieldPathElements;
   protected $fieldPathElementsType = GoogleAdsSearchads360V0ErrorsErrorLocationFieldPathElement::class;
   protected $fieldPathElementsDataType = 'array';
 

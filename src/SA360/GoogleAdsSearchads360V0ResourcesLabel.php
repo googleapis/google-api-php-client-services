@@ -35,10 +35,6 @@ class GoogleAdsSearchads360V0ResourcesLabel extends \Google\Model
    * @var string
    */
   public $status;
-  /**
-   * @var GoogleAdsSearchads360V0CommonTextLabel
-   */
-  public $textLabel;
   protected $textLabelType = GoogleAdsSearchads360V0CommonTextLabel::class;
   protected $textLabelDataType = '';
 

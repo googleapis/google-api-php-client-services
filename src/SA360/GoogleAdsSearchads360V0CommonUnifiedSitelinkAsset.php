@@ -20,10 +20,6 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0CommonUnifiedSitelinkAsset extends \Google\Collection
 {
   protected $collection_key = 'adScheduleTargets';
-  /**
-   * @var GoogleAdsSearchads360V0CommonAdScheduleInfo[]
-   */
-  public $adScheduleTargets;
   protected $adScheduleTargetsType = GoogleAdsSearchads360V0CommonAdScheduleInfo::class;
   protected $adScheduleTargetsDataType = 'array';
   /**

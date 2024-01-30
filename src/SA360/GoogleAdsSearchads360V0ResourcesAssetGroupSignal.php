@@ -23,10 +23,6 @@ class GoogleAdsSearchads360V0ResourcesAssetGroupSignal extends \Google\Model
    * @var string
    */
   public $assetGroup;
-  /**
-   * @var GoogleAdsSearchads360V0CommonAudienceInfo
-   */
-  public $audience;
   protected $audienceType = GoogleAdsSearchads360V0CommonAudienceInfo::class;
   protected $audienceDataType = '';
   /**

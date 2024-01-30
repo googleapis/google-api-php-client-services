@@ -20,10 +20,6 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAssetGroupAssetCombinationData extends \Google\Collection
 {
   protected $collection_key = 'assetCombinationServedAssets';
-  /**
-   * @var GoogleAdsSearchads360V0CommonAssetUsage[]
-   */
-  public $assetCombinationServedAssets;
   protected $assetCombinationServedAssetsType = GoogleAdsSearchads360V0CommonAssetUsage::class;
   protected $assetCombinationServedAssetsDataType = 'array';
 

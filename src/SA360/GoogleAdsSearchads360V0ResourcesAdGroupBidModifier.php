@@ -20,10 +20,6 @@ namespace Google\Service\SA360;
 class GoogleAdsSearchads360V0ResourcesAdGroupBidModifier extends \Google\Model
 {
   public $bidModifier;
-  /**
-   * @var GoogleAdsSearchads360V0CommonDeviceInfo
-   */
-  public $device;
   protected $deviceType = GoogleAdsSearchads360V0CommonDeviceInfo::class;
   protected $deviceDataType = '';
   /**

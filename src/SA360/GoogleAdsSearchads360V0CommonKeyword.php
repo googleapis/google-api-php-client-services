@@ -23,10 +23,6 @@ class GoogleAdsSearchads360V0CommonKeyword extends \Google\Model
    * @var string
    */
   public $adGroupCriterion;
-  /**
-   * @var GoogleAdsSearchads360V0CommonKeywordInfo
-   */
-  public $info;
   protected $infoType = GoogleAdsSearchads360V0CommonKeywordInfo::class;
   protected $infoDataType = '';
 

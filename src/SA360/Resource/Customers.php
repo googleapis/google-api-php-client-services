@@ -37,6 +37,7 @@ class Customers extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    * @return GoogleAdsSearchads360V0ServicesListAccessibleCustomersResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccessibleCustomers($optParams = [])
   {
