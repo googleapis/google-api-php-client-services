@@ -24,6 +24,8 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
   protected $facetIntervalsDataType = 'array';
   protected $ignoredFacetValuesType = GoogleCloudRetailV2CatalogAttributeFacetConfigIgnoredFacetValues::class;
   protected $ignoredFacetValuesDataType = 'array';
+  protected $mergedFacetType = GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet::class;
+  protected $mergedFacetDataType = '';
   protected $mergedFacetValuesType = GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue::class;
   protected $mergedFacetValuesDataType = 'array';
   protected $rerankConfigType = GoogleCloudRetailV2CatalogAttributeFacetConfigRerankConfig::class;
@@ -56,6 +58,20 @@ class GoogleCloudRetailV2CatalogAttributeFacetConfig extends \Google\Collection
   public function getIgnoredFacetValues()
   {
     return $this->ignoredFacetValues;
+  }
+  /**
+   * @param GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet
+   */
+  public function setMergedFacet(GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet $mergedFacet)
+  {
+    $this->mergedFacet = $mergedFacet;
+  }
+  /**
+   * @return GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacet
+   */
+  public function getMergedFacet()
+  {
+    return $this->mergedFacet;
   }
   /**
    * @param GoogleCloudRetailV2CatalogAttributeFacetConfigMergedFacetValue[]
