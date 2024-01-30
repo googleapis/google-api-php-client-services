@@ -24,10 +24,6 @@ class DiskList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Disk[]
-   */
-  public $items;
   protected $itemsType = Disk::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class DiskList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var DiskListWarning
-   */
-  public $warning;
   protected $warningType = DiskListWarning::class;
   protected $warningDataType = '';
 

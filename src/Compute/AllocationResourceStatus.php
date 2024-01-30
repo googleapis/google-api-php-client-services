@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class AllocationResourceStatus extends \Google\Model
 {
-  /**
-   * @var AllocationResourceStatusSpecificSKUAllocation
-   */
-  public $specificSkuAllocation;
   protected $specificSkuAllocationType = AllocationResourceStatusSpecificSKUAllocation::class;
   protected $specificSkuAllocationDataType = '';
 

@@ -52,10 +52,6 @@ class Commitment extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LicenseResourceCommitment
-   */
-  public $licenseResource;
   protected $licenseResourceType = LicenseResourceCommitment::class;
   protected $licenseResourceDataType = '';
   /**
@@ -74,16 +70,8 @@ class Commitment extends \Google\Collection
    * @var string
    */
   public $region;
-  /**
-   * @var Reservation[]
-   */
-  public $reservations;
   protected $reservationsType = Reservation::class;
   protected $reservationsDataType = 'array';
-  /**
-   * @var ResourceCommitment[]
-   */
-  public $resources;
   protected $resourcesType = ResourceCommitment::class;
   protected $resourcesDataType = 'array';
   /**

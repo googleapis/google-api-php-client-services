@@ -24,10 +24,6 @@ class CommitmentList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Commitment[]
-   */
-  public $items;
   protected $itemsType = Commitment::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class CommitmentList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var CommitmentListWarning
-   */
-  public $warning;
   protected $warningType = CommitmentListWarning::class;
   protected $warningDataType = '';
 

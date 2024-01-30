@@ -24,10 +24,6 @@ class DiskAggregatedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var DiskAggregatedListWarningData[]
-   */
-  public $data;
   protected $dataType = DiskAggregatedListWarningData::class;
   protected $dataDataType = 'array';
   /**

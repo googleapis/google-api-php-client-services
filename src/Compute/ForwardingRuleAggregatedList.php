@@ -24,10 +24,6 @@ class ForwardingRuleAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ForwardingRulesScopedList[]
-   */
-  public $items;
   protected $itemsType = ForwardingRulesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class ForwardingRuleAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var ForwardingRuleAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = ForwardingRuleAggregatedListWarning::class;
   protected $warningDataType = '';
 

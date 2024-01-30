@@ -24,10 +24,6 @@ class BackendServiceList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var BackendService[]
-   */
-  public $items;
   protected $itemsType = BackendService::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class BackendServiceList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var BackendServiceListWarning
-   */
-  public $warning;
   protected $warningType = BackendServiceListWarning::class;
   protected $warningDataType = '';
 

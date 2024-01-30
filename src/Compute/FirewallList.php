@@ -24,10 +24,6 @@ class FirewallList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Firewall[]
-   */
-  public $items;
   protected $itemsType = Firewall::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class FirewallList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var FirewallListWarning
-   */
-  public $warning;
   protected $warningType = FirewallListWarning::class;
   protected $warningDataType = '';
 

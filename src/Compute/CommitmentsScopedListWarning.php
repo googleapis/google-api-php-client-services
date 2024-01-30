@@ -24,10 +24,6 @@ class CommitmentsScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var CommitmentsScopedListWarningData[]
-   */
-  public $data;
   protected $dataType = CommitmentsScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

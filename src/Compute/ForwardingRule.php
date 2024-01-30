@@ -92,10 +92,6 @@ class ForwardingRule extends \Google\Collection
    * @var string
    */
   public $loadBalancingScheme;
-  /**
-   * @var MetadataFilter[]
-   */
-  public $metadataFilters;
   protected $metadataFiltersType = MetadataFilter::class;
   protected $metadataFiltersDataType = 'array';
   /**
@@ -138,10 +134,6 @@ class ForwardingRule extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var ForwardingRuleServiceDirectoryRegistration[]
-   */
-  public $serviceDirectoryRegistrations;
   protected $serviceDirectoryRegistrationsType = ForwardingRuleServiceDirectoryRegistration::class;
   protected $serviceDirectoryRegistrationsDataType = 'array';
   /**

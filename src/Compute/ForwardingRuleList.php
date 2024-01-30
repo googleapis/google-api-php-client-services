@@ -24,10 +24,6 @@ class ForwardingRuleList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ForwardingRule[]
-   */
-  public $items;
   protected $itemsType = ForwardingRule::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class ForwardingRuleList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var ForwardingRuleListWarning
-   */
-  public $warning;
   protected $warningType = ForwardingRuleListWarning::class;
   protected $warningDataType = '';
 

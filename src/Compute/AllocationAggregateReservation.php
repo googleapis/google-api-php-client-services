@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class AllocationAggregateReservation extends \Google\Collection
 {
   protected $collection_key = 'reservedResources';
-  /**
-   * @var AllocationAggregateReservationReservedResourceInfo[]
-   */
-  public $inUseResources;
   protected $inUseResourcesType = AllocationAggregateReservationReservedResourceInfo::class;
   protected $inUseResourcesDataType = 'array';
-  /**
-   * @var AllocationAggregateReservationReservedResourceInfo[]
-   */
-  public $reservedResources;
   protected $reservedResourcesType = AllocationAggregateReservationReservedResourceInfo::class;
   protected $reservedResourcesDataType = 'array';
   /**

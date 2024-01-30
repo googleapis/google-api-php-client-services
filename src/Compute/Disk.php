@@ -24,16 +24,8 @@ class Disk extends \Google\Collection
    * @var string
    */
   public $architecture;
-  /**
-   * @var DiskAsyncReplication
-   */
-  public $asyncPrimaryDisk;
   protected $asyncPrimaryDiskType = DiskAsyncReplication::class;
   protected $asyncPrimaryDiskDataType = '';
-  /**
-   * @var DiskAsyncReplicationList[]
-   */
-  public $asyncSecondaryDisks;
   protected $asyncSecondaryDisksType = DiskAsyncReplicationList::class;
   protected $asyncSecondaryDisksDataType = 'map';
   /**
@@ -44,20 +36,12 @@ class Disk extends \Google\Collection
    * @var string
    */
   public $description;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $diskEncryptionKey;
   protected $diskEncryptionKeyType = CustomerEncryptionKey::class;
   protected $diskEncryptionKeyDataType = '';
   /**
    * @var bool
    */
   public $enableConfidentialCompute;
-  /**
-   * @var GuestOsFeature[]
-   */
-  public $guestOsFeatures;
   protected $guestOsFeaturesType = GuestOsFeature::class;
   protected $guestOsFeaturesDataType = 'array';
   /**
@@ -104,10 +88,6 @@ class Disk extends \Google\Collection
    * @var string
    */
   public $options;
-  /**
-   * @var DiskParams
-   */
-  public $params;
   protected $paramsType = DiskParams::class;
   protected $paramsDataType = '';
   /**
@@ -134,10 +114,6 @@ class Disk extends \Google\Collection
    * @var string[]
    */
   public $resourcePolicies;
-  /**
-   * @var DiskResourceStatus
-   */
-  public $resourceStatus;
   protected $resourceStatusType = DiskResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**
@@ -176,10 +152,6 @@ class Disk extends \Google\Collection
    * @var string
    */
   public $sourceImage;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $sourceImageEncryptionKey;
   protected $sourceImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceImageEncryptionKeyDataType = '';
   /**
@@ -190,10 +162,6 @@ class Disk extends \Google\Collection
    * @var string
    */
   public $sourceSnapshot;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $sourceSnapshotEncryptionKey;
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
   /**

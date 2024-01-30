@@ -28,16 +28,8 @@ class BfdStatus extends \Google\Collection
    * @var string
    */
   public $configUpdateTimestampMicros;
-  /**
-   * @var BfdStatusPacketCounts
-   */
-  public $controlPacketCounts;
   protected $controlPacketCountsType = BfdStatusPacketCounts::class;
   protected $controlPacketCountsDataType = '';
-  /**
-   * @var PacketIntervals[]
-   */
-  public $controlPacketIntervals;
   protected $controlPacketIntervalsType = PacketIntervals::class;
   protected $controlPacketIntervalsDataType = 'array';
   /**
@@ -52,16 +44,8 @@ class BfdStatus extends \Google\Collection
    * @var string
    */
   public $negotiatedLocalControlTxIntervalMs;
-  /**
-   * @var BfdPacket
-   */
-  public $rxPacket;
   protected $rxPacketType = BfdPacket::class;
   protected $rxPacketDataType = '';
-  /**
-   * @var BfdPacket
-   */
-  public $txPacket;
   protected $txPacketType = BfdPacket::class;
   protected $txPacketDataType = '';
   /**

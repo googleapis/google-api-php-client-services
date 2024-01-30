@@ -24,10 +24,6 @@ class AcceleratorTypeAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var AcceleratorTypesScopedList[]
-   */
-  public $items;
   protected $itemsType = AcceleratorTypesScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class AcceleratorTypeAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var AcceleratorTypeAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = AcceleratorTypeAggregatedListWarning::class;
   protected $warningDataType = '';
 

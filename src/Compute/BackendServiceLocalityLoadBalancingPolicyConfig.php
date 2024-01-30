@@ -19,16 +19,8 @@ namespace Google\Service\Compute;
 
 class BackendServiceLocalityLoadBalancingPolicyConfig extends \Google\Model
 {
-  /**
-   * @var BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy
-   */
-  public $customPolicy;
   protected $customPolicyType = BackendServiceLocalityLoadBalancingPolicyConfigCustomPolicy::class;
   protected $customPolicyDataType = '';
-  /**
-   * @var BackendServiceLocalityLoadBalancingPolicyConfigPolicy
-   */
-  public $policy;
   protected $policyType = BackendServiceLocalityLoadBalancingPolicyConfigPolicy::class;
   protected $policyDataType = '';
 

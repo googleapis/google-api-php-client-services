@@ -27,10 +27,6 @@ class ConsistentHashLoadBalancerSettingsHttpCookie extends \Google\Model
    * @var string
    */
   public $path;
-  /**
-   * @var Duration
-   */
-  public $ttl;
   protected $ttlType = Duration::class;
   protected $ttlDataType = '';
 

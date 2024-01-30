@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class Autoscaler extends \Google\Collection
 {
   protected $collection_key = 'statusDetails';
-  /**
-   * @var AutoscalingPolicy
-   */
-  public $autoscalingPolicy;
   protected $autoscalingPolicyType = AutoscalingPolicy::class;
   protected $autoscalingPolicyDataType = '';
   /**
@@ -54,10 +50,6 @@ class Autoscaler extends \Google\Collection
    * @var string
    */
   public $region;
-  /**
-   * @var ScalingScheduleStatus[]
-   */
-  public $scalingScheduleStatus;
   protected $scalingScheduleStatusType = ScalingScheduleStatus::class;
   protected $scalingScheduleStatusDataType = 'map';
   /**
@@ -68,10 +60,6 @@ class Autoscaler extends \Google\Collection
    * @var string
    */
   public $status;
-  /**
-   * @var AutoscalerStatusDetails[]
-   */
-  public $statusDetails;
   protected $statusDetailsType = AutoscalerStatusDetails::class;
   protected $statusDetailsDataType = 'array';
   /**

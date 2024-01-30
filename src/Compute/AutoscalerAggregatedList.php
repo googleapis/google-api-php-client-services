@@ -24,10 +24,6 @@ class AutoscalerAggregatedList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var AutoscalersScopedList[]
-   */
-  public $items;
   protected $itemsType = AutoscalersScopedList::class;
   protected $itemsDataType = 'map';
   /**
@@ -46,10 +42,6 @@ class AutoscalerAggregatedList extends \Google\Collection
    * @var string[]
    */
   public $unreachables;
-  /**
-   * @var AutoscalerAggregatedListWarning
-   */
-  public $warning;
   protected $warningType = AutoscalerAggregatedListWarning::class;
   protected $warningDataType = '';
 

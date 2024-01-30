@@ -80,20 +80,12 @@ class AttachedDiskInitializeParams extends \Google\Collection
    * @var string
    */
   public $sourceImage;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $sourceImageEncryptionKey;
   protected $sourceImageEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceImageEncryptionKeyDataType = '';
   /**
    * @var string
    */
   public $sourceSnapshot;
-  /**
-   * @var CustomerEncryptionKey
-   */
-  public $sourceSnapshotEncryptionKey;
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
 

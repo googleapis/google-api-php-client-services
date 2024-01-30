@@ -20,16 +20,8 @@ namespace Google\Service\Compute;
 class AcceleratorTypesScopedList extends \Google\Collection
 {
   protected $collection_key = 'acceleratorTypes';
-  /**
-   * @var AcceleratorType[]
-   */
-  public $acceleratorTypes;
   protected $acceleratorTypesType = AcceleratorType::class;
   protected $acceleratorTypesDataType = 'array';
-  /**
-   * @var AcceleratorTypesScopedListWarning
-   */
-  public $warning;
   protected $warningType = AcceleratorTypesScopedListWarning::class;
   protected $warningDataType = '';
 

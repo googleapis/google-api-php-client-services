@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class FirewallPolicy extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var FirewallPolicyAssociation[]
-   */
-  public $associations;
   protected $associationsType = FirewallPolicyAssociation::class;
   protected $associationsDataType = 'array';
   /**
@@ -66,10 +62,6 @@ class FirewallPolicy extends \Google\Collection
    * @var int
    */
   public $ruleTupleCount;
-  /**
-   * @var FirewallPolicyRule[]
-   */
-  public $rules;
   protected $rulesType = FirewallPolicyRule::class;
   protected $rulesDataType = 'array';
   /**
