@@ -19,16 +19,8 @@ namespace Google\Service\Document;
 
 class GoogleCloudDocumentaiV1beta3BatchDeleteDocumentsMetadataIndividualBatchDeleteStatus extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDocumentaiV1beta3DocumentId
-   */
-  public $documentId;
   protected $documentIdType = GoogleCloudDocumentaiV1beta3DocumentId::class;
   protected $documentIdDataType = '';
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

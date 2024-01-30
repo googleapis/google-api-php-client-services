@@ -28,10 +28,6 @@ class GoogleCloudDocumentaiV1beta2DocumentRevision extends \Google\Collection
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleCloudDocumentaiV1beta2DocumentRevisionHumanReview
-   */
-  public $humanReview;
   protected $humanReviewType = GoogleCloudDocumentaiV1beta2DocumentRevisionHumanReview::class;
   protected $humanReviewDataType = '';
   /**
