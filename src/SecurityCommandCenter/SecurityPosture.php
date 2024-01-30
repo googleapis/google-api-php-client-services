@@ -32,10 +32,6 @@ class SecurityPosture extends \Google\Collection
    * @var string
    */
   public $policy;
-  /**
-   * @var PolicyDriftDetails[]
-   */
-  public $policyDriftDetails;
   protected $policyDriftDetailsType = PolicyDriftDetails::class;
   protected $policyDriftDetailsDataType = 'array';
   /**

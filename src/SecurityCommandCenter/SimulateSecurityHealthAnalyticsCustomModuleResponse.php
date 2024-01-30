@@ -19,10 +19,6 @@ namespace Google\Service\SecurityCommandCenter;
 
 class SimulateSecurityHealthAnalyticsCustomModuleResponse extends \Google\Model
 {
-  /**
-   * @var SimulatedResult
-   */
-  public $result;
   protected $resultType = SimulatedResult::class;
   protected $resultDataType = '';
 

@@ -23,10 +23,6 @@ class SecuritycenterFile extends \Google\Model
    * @var string
    */
   public $contents;
-  /**
-   * @var DiskPath
-   */
-  public $diskPath;
   protected $diskPathType = DiskPath::class;
   protected $diskPathDataType = '';
   /**

@@ -42,6 +42,7 @@ class ProjectsLocationsMuteConfigs extends \Google\Service\Resource
    * projects/{project}/locations/global/muteConfigs/{config_id}.
    * @param array $optParams Optional parameters.
    * @return SecuritycenterEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsMuteConfigs extends \Google\Service\Resource
    * projects/{project}/locations/global/muteConfigs/{config_id}.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudSecuritycenterV1MuteConfig
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -84,6 +86,7 @@ class ProjectsLocationsMuteConfigs extends \Google\Service\Resource
    * @opt_param string updateMask The list of fields to be updated. If empty all
    * mutable fields will be updated.
    * @return GoogleCloudSecuritycenterV1MuteConfig
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudSecuritycenterV1MuteConfig $postBody, $optParams = [])
   {

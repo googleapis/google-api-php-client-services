@@ -41,10 +41,6 @@ class ValuedResource extends \Google\Collection
    * @var string
    */
   public $resourceValue;
-  /**
-   * @var ResourceValueConfigMetadata[]
-   */
-  public $resourceValueConfigsUsed;
   protected $resourceValueConfigsUsedType = ResourceValueConfigMetadata::class;
   protected $resourceValueConfigsUsedDataType = 'array';
 

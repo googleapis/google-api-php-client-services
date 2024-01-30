@@ -45,6 +45,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
    * @param EventThreatDetectionCustomModule $postBody
    * @param array $optParams Optional parameters.
    * @return EventThreatDetectionCustomModule
+   * @throws \Google\Service\Exception
    */
   public function create($parent, EventThreatDetectionCustomModule $postBody, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
    * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
    * @param array $optParams Optional parameters.
    * @return SecuritycenterEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -81,6 +83,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
    * "projects/{project}/eventThreatDetectionSettings/customModules/{module}".
    * @param array $optParams Optional parameters.
    * @return EventThreatDetectionCustomModule
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -111,6 +114,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
    * `ListEventThreatDetectionCustomModules` must match the call that provided the
    * page token.
    * @return ListEventThreatDetectionCustomModulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsEventThreatDetectionSettingsCustomModules($parent, $optParams = [])
   {
@@ -139,6 +143,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
    * to `ListDescendantEventThreatDetectionCustomModules` must match the call that
    * provided the page token.
    * @return ListDescendantEventThreatDetectionCustomModulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listDescendant($parent, $optParams = [])
   {
@@ -165,6 +170,7 @@ class ProjectsEventThreatDetectionSettingsCustomModules extends \Google\Service\
    * @opt_param string updateMask The list of fields to be updated. If empty all
    * mutable fields will be updated.
    * @return EventThreatDetectionCustomModule
+   * @throws \Google\Service\Exception
    */
   public function patch($name, EventThreatDetectionCustomModule $postBody, $optParams = [])
   {

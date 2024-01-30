@@ -19,16 +19,8 @@ namespace Google\Service\SecurityCommandCenter;
 
 class SimulateSecurityHealthAnalyticsCustomModuleRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudSecuritycenterV1CustomConfig
-   */
-  public $customConfig;
   protected $customConfigType = GoogleCloudSecuritycenterV1CustomConfig::class;
   protected $customConfigDataType = '';
-  /**
-   * @var SimulatedResource
-   */
-  public $resource;
   protected $resourceType = SimulatedResource::class;
   protected $resourceDataType = '';
 

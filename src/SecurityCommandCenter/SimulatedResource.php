@@ -19,10 +19,6 @@ namespace Google\Service\SecurityCommandCenter;
 
 class SimulatedResource extends \Google\Model
 {
-  /**
-   * @var Policy
-   */
-  public $iamPolicyData;
   protected $iamPolicyDataType = Policy::class;
   protected $iamPolicyDataDataType = '';
   /**

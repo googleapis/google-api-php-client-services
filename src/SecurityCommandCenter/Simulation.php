@@ -28,10 +28,6 @@ class Simulation extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ResourceValueConfigMetadata[]
-   */
-  public $resourceValueConfigsMetadata;
   protected $resourceValueConfigsMetadataType = ResourceValueConfigMetadata::class;
   protected $resourceValueConfigsMetadataDataType = 'array';
 

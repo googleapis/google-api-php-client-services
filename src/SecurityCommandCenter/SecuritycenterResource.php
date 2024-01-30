@@ -24,10 +24,6 @@ class SecuritycenterResource extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var Folder[]
-   */
-  public $folders;
   protected $foldersType = Folder::class;
   protected $foldersDataType = 'array';
   /**
