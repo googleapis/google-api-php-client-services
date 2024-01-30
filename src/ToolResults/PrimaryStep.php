@@ -20,10 +20,6 @@ namespace Google\Service\ToolResults;
 class PrimaryStep extends \Google\Collection
 {
   protected $collection_key = 'individualOutcome';
-  /**
-   * @var IndividualOutcome[]
-   */
-  public $individualOutcome;
   protected $individualOutcomeType = IndividualOutcome::class;
   protected $individualOutcomeDataType = 'array';
   /**

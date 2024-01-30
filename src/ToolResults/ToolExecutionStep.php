@@ -19,10 +19,6 @@ namespace Google\Service\ToolResults;
 
 class ToolExecutionStep extends \Google\Model
 {
-  /**
-   * @var ToolExecution
-   */
-  public $toolExecution;
   protected $toolExecutionType = ToolExecution::class;
   protected $toolExecutionDataType = '';
 

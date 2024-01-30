@@ -20,22 +20,10 @@ namespace Google\Service\ToolResults;
 class Environment extends \Google\Collection
 {
   protected $collection_key = 'shardSummaries';
-  /**
-   * @var Timestamp
-   */
-  public $completionTime;
   protected $completionTimeType = Timestamp::class;
   protected $completionTimeDataType = '';
-  /**
-   * @var Timestamp
-   */
-  public $creationTime;
   protected $creationTimeType = Timestamp::class;
   protected $creationTimeDataType = '';
-  /**
-   * @var EnvironmentDimensionValueEntry[]
-   */
-  public $dimensionValue;
   protected $dimensionValueType = EnvironmentDimensionValueEntry::class;
   protected $dimensionValueDataType = 'array';
   /**
@@ -46,10 +34,6 @@ class Environment extends \Google\Collection
    * @var string
    */
   public $environmentId;
-  /**
-   * @var MergedResult
-   */
-  public $environmentResult;
   protected $environmentResultType = MergedResult::class;
   protected $environmentResultDataType = '';
   /**
@@ -64,16 +48,8 @@ class Environment extends \Google\Collection
    * @var string
    */
   public $projectId;
-  /**
-   * @var ResultsStorage
-   */
-  public $resultsStorage;
   protected $resultsStorageType = ResultsStorage::class;
   protected $resultsStorageDataType = '';
-  /**
-   * @var ShardSummary[]
-   */
-  public $shardSummaries;
   protected $shardSummariesType = ShardSummary::class;
   protected $shardSummariesDataType = 'array';
 

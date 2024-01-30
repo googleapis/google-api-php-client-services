@@ -20,10 +20,6 @@ namespace Google\Service\ToolResults;
 class ListStepAccessibilityClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'clusters';
-  /**
-   * @var SuggestionClusterProto[]
-   */
-  public $clusters;
   protected $clustersType = SuggestionClusterProto::class;
   protected $clustersDataType = 'array';
   /**

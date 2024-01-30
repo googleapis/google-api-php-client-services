@@ -24,10 +24,6 @@ class SuggestionClusterProto extends \Google\Collection
    * @var string
    */
   public $category;
-  /**
-   * @var SuggestionProto[]
-   */
-  public $suggestions;
   protected $suggestionsType = SuggestionProto::class;
   protected $suggestionsDataType = 'array';
 

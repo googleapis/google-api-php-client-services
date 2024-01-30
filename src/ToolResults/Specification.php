@@ -19,16 +19,8 @@ namespace Google\Service\ToolResults;
 
 class Specification extends \Google\Model
 {
-  /**
-   * @var AndroidTest
-   */
-  public $androidTest;
   protected $androidTestType = AndroidTest::class;
   protected $androidTestDataType = '';
-  /**
-   * @var IosTest
-   */
-  public $iosTest;
   protected $iosTestType = IosTest::class;
   protected $iosTestDataType = '';
 

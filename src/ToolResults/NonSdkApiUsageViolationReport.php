@@ -20,10 +20,6 @@ namespace Google\Service\ToolResults;
 class NonSdkApiUsageViolationReport extends \Google\Collection
 {
   protected $collection_key = 'exampleApis';
-  /**
-   * @var NonSdkApi[]
-   */
-  public $exampleApis;
   protected $exampleApisType = NonSdkApi::class;
   protected $exampleApisDataType = 'array';
   /**

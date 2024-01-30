@@ -31,20 +31,12 @@ class TestIssue extends \Google\Model
    * @var string
    */
   public $severity;
-  /**
-   * @var StackTrace
-   */
-  public $stackTrace;
   protected $stackTraceType = StackTrace::class;
   protected $stackTraceDataType = '';
   /**
    * @var string
    */
   public $type;
-  /**
-   * @var Any
-   */
-  public $warning;
   protected $warningType = Any::class;
   protected $warningDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\ToolResults;
 
 class PerfSampleSeries extends \Google\Model
 {
-  /**
-   * @var BasicPerfSampleSeries
-   */
-  public $basicPerfSampleSeries;
   protected $basicPerfSampleSeriesType = BasicPerfSampleSeries::class;
   protected $basicPerfSampleSeriesDataType = '';
   /**

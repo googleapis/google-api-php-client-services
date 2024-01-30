@@ -19,10 +19,6 @@ namespace Google\Service\ToolResults;
 
 class TestTiming extends \Google\Model
 {
-  /**
-   * @var Duration
-   */
-  public $testProcessDuration;
   protected $testProcessDurationType = Duration::class;
   protected $testProcessDurationDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\ToolResults;
 
 class NativeCrash extends \Google\Model
 {
-  /**
-   * @var StackTrace
-   */
-  public $stackTrace;
   protected $stackTraceType = StackTrace::class;
   protected $stackTraceDataType = '';
 

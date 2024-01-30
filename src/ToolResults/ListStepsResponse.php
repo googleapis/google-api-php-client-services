@@ -24,10 +24,6 @@ class ListStepsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Step[]
-   */
-  public $steps;
   protected $stepsType = Step::class;
   protected $stepsDataType = 'array';
 

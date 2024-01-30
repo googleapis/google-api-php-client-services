@@ -24,10 +24,6 @@ class ListPerfSamplesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PerfSample[]
-   */
-  public $perfSamples;
   protected $perfSamplesType = PerfSample::class;
   protected $perfSamplesDataType = 'array';
 

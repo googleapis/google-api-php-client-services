@@ -19,10 +19,6 @@ namespace Google\Service\ToolResults;
 
 class IosAppCrashed extends \Google\Model
 {
-  /**
-   * @var StackTrace
-   */
-  public $stackTrace;
   protected $stackTraceType = StackTrace::class;
   protected $stackTraceDataType = '';
 
