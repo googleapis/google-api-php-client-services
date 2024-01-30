@@ -20,10 +20,6 @@ namespace Google\Service\TPU;
 class GetGuestAttributesResponse extends \Google\Collection
 {
   protected $collection_key = 'guestAttributes';
-  /**
-   * @var GuestAttributes[]
-   */
-  public $guestAttributes;
   protected $guestAttributesType = GuestAttributes::class;
   protected $guestAttributesDataType = 'array';
 

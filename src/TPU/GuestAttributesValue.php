@@ -20,10 +20,6 @@ namespace Google\Service\TPU;
 class GuestAttributesValue extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var GuestAttributesEntry[]
-   */
-  public $items;
   protected $itemsType = GuestAttributesEntry::class;
   protected $itemsDataType = 'array';
 

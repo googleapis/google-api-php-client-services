@@ -20,10 +20,6 @@ namespace Google\Service\TPU;
 class ListAcceleratorTypesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var AcceleratorType[]
-   */
-  public $acceleratorTypes;
   protected $acceleratorTypesType = AcceleratorType::class;
   protected $acceleratorTypesDataType = 'array';
   /**

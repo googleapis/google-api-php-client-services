@@ -20,10 +20,6 @@ namespace Google\Service\TPU;
 class AcceleratorType extends \Google\Collection
 {
   protected $collection_key = 'acceleratorConfigs';
-  /**
-   * @var AcceleratorConfig[]
-   */
-  public $acceleratorConfigs;
   protected $acceleratorConfigsType = AcceleratorConfig::class;
   protected $acceleratorConfigsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\TPU;
 
 class GenerateServiceIdentityResponse extends \Google\Model
 {
-  /**
-   * @var ServiceIdentity
-   */
-  public $identity;
   protected $identityType = ServiceIdentity::class;
   protected $identityDataType = '';
 

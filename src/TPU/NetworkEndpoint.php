@@ -19,10 +19,6 @@ namespace Google\Service\TPU;
 
 class NetworkEndpoint extends \Google\Model
 {
-  /**
-   * @var AccessConfig
-   */
-  public $accessConfig;
   protected $accessConfigType = AccessConfig::class;
   protected $accessConfigDataType = '';
   /**
