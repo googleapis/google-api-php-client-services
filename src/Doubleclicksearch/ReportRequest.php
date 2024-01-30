@@ -20,20 +20,12 @@ namespace Google\Service\Doubleclicksearch;
 class ReportRequest extends \Google\Collection
 {
   protected $collection_key = 'orderBy';
-  /**
-   * @var ReportApiColumnSpec[]
-   */
-  public $columns;
   protected $columnsType = ReportApiColumnSpec::class;
   protected $columnsDataType = 'array';
   /**
    * @var string
    */
   public $downloadFormat;
-  /**
-   * @var ReportRequestFilters[]
-   */
-  public $filters;
   protected $filtersType = ReportRequestFilters::class;
   protected $filtersDataType = 'array';
   /**
@@ -48,16 +40,8 @@ class ReportRequest extends \Google\Collection
    * @var int
    */
   public $maxRowsPerFile;
-  /**
-   * @var ReportRequestOrderBy[]
-   */
-  public $orderBy;
   protected $orderByType = ReportRequestOrderBy::class;
   protected $orderByDataType = 'array';
-  /**
-   * @var ReportRequestReportScope
-   */
-  public $reportScope;
   protected $reportScopeType = ReportRequestReportScope::class;
   protected $reportScopeDataType = '';
   /**
@@ -76,10 +60,6 @@ class ReportRequest extends \Google\Collection
    * @var string
    */
   public $statisticsCurrency;
-  /**
-   * @var ReportRequestTimeRange
-   */
-  public $timeRange;
   protected $timeRangeType = ReportRequestTimeRange::class;
   protected $timeRangeDataType = '';
   /**

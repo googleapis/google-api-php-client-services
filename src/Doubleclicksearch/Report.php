@@ -20,10 +20,6 @@ namespace Google\Service\Doubleclicksearch;
 class Report extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * @var ReportFiles[]
-   */
-  public $files;
   protected $filesType = ReportFiles::class;
   protected $filesDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class Report extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var ReportRequest
-   */
-  public $request;
   protected $requestType = ReportRequest::class;
   protected $requestDataType = '';
   /**

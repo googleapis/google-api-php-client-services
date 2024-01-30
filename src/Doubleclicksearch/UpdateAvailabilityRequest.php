@@ -20,10 +20,6 @@ namespace Google\Service\Doubleclicksearch;
 class UpdateAvailabilityRequest extends \Google\Collection
 {
   protected $collection_key = 'availabilities';
-  /**
-   * @var Availability[]
-   */
-  public $availabilities;
   protected $availabilitiesType = Availability::class;
   protected $availabilitiesDataType = 'array';
 
