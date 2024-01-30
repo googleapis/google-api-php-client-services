@@ -24,10 +24,6 @@ class OperationErrorErrors extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var OperationErrorErrorsErrorDetails[]
-   */
-  public $errorDetails;
   protected $errorDetailsType = OperationErrorErrorsErrorDetails::class;
   protected $errorDetailsDataType = 'array';
   /**

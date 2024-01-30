@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class PacketMirroring extends \Google\Model
 {
-  /**
-   * @var PacketMirroringForwardingRuleInfo
-   */
-  public $collectorIlb;
   protected $collectorIlbType = PacketMirroringForwardingRuleInfo::class;
   protected $collectorIlbDataType = '';
   /**
@@ -37,10 +33,6 @@ class PacketMirroring extends \Google\Model
    * @var string
    */
   public $enable;
-  /**
-   * @var PacketMirroringFilter
-   */
-  public $filter;
   protected $filterType = PacketMirroringFilter::class;
   protected $filterDataType = '';
   /**
@@ -51,20 +43,12 @@ class PacketMirroring extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var PacketMirroringMirroredResourceInfo
-   */
-  public $mirroredResources;
   protected $mirroredResourcesType = PacketMirroringMirroredResourceInfo::class;
   protected $mirroredResourcesDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var PacketMirroringNetworkInfo
-   */
-  public $network;
   protected $networkType = PacketMirroringNetworkInfo::class;
   protected $networkDataType = '';
   /**

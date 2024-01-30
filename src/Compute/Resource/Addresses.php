@@ -100,6 +100,7 @@ class Addresses extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return AddressAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -126,6 +127,7 @@ class Addresses extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $region, $address, $optParams = [])
   {
@@ -141,6 +143,7 @@ class Addresses extends \Google\Service\Resource
    * @param string $address Name of the address resource to return.
    * @param array $optParams Optional parameters.
    * @return Address
+   * @throws \Google\Service\Exception
    */
   public function get($project, $region, $address, $optParams = [])
   {
@@ -168,6 +171,7 @@ class Addresses extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $region, Address $postBody, $optParams = [])
   {
@@ -235,6 +239,7 @@ class Addresses extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return AddressList
+   * @throws \Google\Service\Exception
    */
   public function listAddresses($project, $region, $optParams = [])
   {
@@ -262,6 +267,7 @@ class Addresses extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function move($project, $region, $address, RegionAddressesMoveRequest $postBody, $optParams = [])
   {
@@ -290,6 +296,7 @@ class Addresses extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setLabels($project, $region, $resource, RegionSetLabelsRequest $postBody, $optParams = [])
   {

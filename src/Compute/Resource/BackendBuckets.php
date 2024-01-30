@@ -58,6 +58,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function addSignedUrlKey($project, $backendBucket, SignedUrlKey $postBody, $optParams = [])
   {
@@ -83,6 +84,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $backendBucket, $optParams = [])
   {
@@ -111,6 +113,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function deleteSignedUrlKey($project, $backendBucket, $keyName, $optParams = [])
   {
@@ -125,6 +128,7 @@ class BackendBuckets extends \Google\Service\Resource
    * @param string $backendBucket Name of the BackendBucket resource to return.
    * @param array $optParams Optional parameters.
    * @return BackendBucket
+   * @throws \Google\Service\Exception
    */
   public function get($project, $backendBucket, $optParams = [])
   {
@@ -142,6 +146,7 @@ class BackendBuckets extends \Google\Service\Resource
    *
    * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($project, $resource, $optParams = [])
   {
@@ -168,6 +173,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, BackendBucket $postBody, $optParams = [])
   {
@@ -234,6 +240,7 @@ class BackendBuckets extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return BackendBucketList
+   * @throws \Google\Service\Exception
    */
   public function listBackendBuckets($project, $optParams = [])
   {
@@ -262,6 +269,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $backendBucket, BackendBucket $postBody, $optParams = [])
   {
@@ -290,6 +298,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setEdgeSecurityPolicy($project, $backendBucket, SecurityPolicyReference $postBody, $optParams = [])
   {
@@ -306,6 +315,7 @@ class BackendBuckets extends \Google\Service\Resource
    * @param GlobalSetPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
   {
@@ -322,6 +332,7 @@ class BackendBuckets extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {
@@ -349,6 +360,7 @@ class BackendBuckets extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $backendBucket, BackendBucket $postBody, $optParams = [])
   {

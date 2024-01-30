@@ -98,6 +98,7 @@ class AcceleratorTypes extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return AcceleratorTypeAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -113,6 +114,7 @@ class AcceleratorTypes extends \Google\Service\Resource
    * @param string $acceleratorType Name of the accelerator type to return.
    * @param array $optParams Optional parameters.
    * @return AcceleratorType
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $acceleratorType, $optParams = [])
   {
@@ -180,6 +182,7 @@ class AcceleratorTypes extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return AcceleratorTypeList
+   * @throws \Google\Service\Exception
    */
   public function listAcceleratorTypes($project, $zone, $optParams = [])
   {

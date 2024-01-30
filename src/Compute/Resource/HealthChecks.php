@@ -99,6 +99,7 @@ class HealthChecks extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return HealthChecksAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -124,6 +125,7 @@ class HealthChecks extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $healthCheck, $optParams = [])
   {
@@ -138,6 +140,7 @@ class HealthChecks extends \Google\Service\Resource
    * @param string $healthCheck Name of the HealthCheck resource to return.
    * @param array $optParams Optional parameters.
    * @return HealthCheck
+   * @throws \Google\Service\Exception
    */
   public function get($project, $healthCheck, $optParams = [])
   {
@@ -164,6 +167,7 @@ class HealthChecks extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, HealthCheck $postBody, $optParams = [])
   {
@@ -230,6 +234,7 @@ class HealthChecks extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return HealthCheckList
+   * @throws \Google\Service\Exception
    */
   public function listHealthChecks($project, $optParams = [])
   {
@@ -258,6 +263,7 @@ class HealthChecks extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $healthCheck, HealthCheck $postBody, $optParams = [])
   {
@@ -285,6 +291,7 @@ class HealthChecks extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $healthCheck, HealthCheck $postBody, $optParams = [])
   {

@@ -38,6 +38,7 @@ class GlobalOrganizationOperations extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string parentId Parent ID for this request.
+   * @throws \Google\Service\Exception
    */
   public function delete($operation, $optParams = [])
   {
@@ -54,6 +55,7 @@ class GlobalOrganizationOperations extends \Google\Service\Resource
    *
    * @opt_param string parentId Parent ID for this request.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($operation, $optParams = [])
   {
@@ -120,6 +122,7 @@ class GlobalOrganizationOperations extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return OperationList
+   * @throws \Google\Service\Exception
    */
   public function listGlobalOrganizationOperations($optParams = [])
   {

@@ -24,10 +24,6 @@ class PublicDelegatedPrefixesScopedListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var PublicDelegatedPrefixesScopedListWarningData[]
-   */
-  public $data;
   protected $dataType = PublicDelegatedPrefixesScopedListWarningData::class;
   protected $dataDataType = 'array';
   /**

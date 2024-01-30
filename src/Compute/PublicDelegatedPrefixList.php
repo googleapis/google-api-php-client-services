@@ -24,10 +24,6 @@ class PublicDelegatedPrefixList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var PublicDelegatedPrefix[]
-   */
-  public $items;
   protected $itemsType = PublicDelegatedPrefix::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class PublicDelegatedPrefixList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var PublicDelegatedPrefixListWarning
-   */
-  public $warning;
   protected $warningType = PublicDelegatedPrefixListWarning::class;
   protected $warningDataType = '';
 

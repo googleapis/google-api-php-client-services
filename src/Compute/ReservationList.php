@@ -24,10 +24,6 @@ class ReservationList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Reservation[]
-   */
-  public $items;
   protected $itemsType = Reservation::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class ReservationList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var ReservationListWarning
-   */
-  public $warning;
   protected $warningType = ReservationListWarning::class;
   protected $warningDataType = '';
 

@@ -60,10 +60,6 @@ class PublicAdvertisedPrefix extends \Google\Collection
    * @var string
    */
   public $pdpScope;
-  /**
-   * @var PublicAdvertisedPrefixPublicDelegatedPrefix[]
-   */
-  public $publicDelegatedPrefixs;
   protected $publicDelegatedPrefixsType = PublicAdvertisedPrefixPublicDelegatedPrefix::class;
   protected $publicDelegatedPrefixsDataType = 'array';
   /**

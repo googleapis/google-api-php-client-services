@@ -24,10 +24,6 @@ class PacketMirroringListWarning extends \Google\Collection
    * @var string
    */
   public $code;
-  /**
-   * @var PacketMirroringListWarningData[]
-   */
-  public $data;
   protected $dataType = PacketMirroringListWarningData::class;
   protected $dataDataType = 'array';
   /**

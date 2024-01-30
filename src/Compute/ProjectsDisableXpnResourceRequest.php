@@ -19,10 +19,6 @@ namespace Google\Service\Compute;
 
 class ProjectsDisableXpnResourceRequest extends \Google\Model
 {
-  /**
-   * @var XpnResourceId
-   */
-  public $xpnResource;
   protected $xpnResourceType = XpnResourceId::class;
   protected $xpnResourceDataType = '';
 

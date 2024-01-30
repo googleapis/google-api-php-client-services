@@ -24,10 +24,6 @@ class RegionList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var Region[]
-   */
-  public $items;
   protected $itemsType = Region::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class RegionList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var RegionListWarning
-   */
-  public $warning;
   protected $warningType = RegionListWarning::class;
   protected $warningDataType = '';
 

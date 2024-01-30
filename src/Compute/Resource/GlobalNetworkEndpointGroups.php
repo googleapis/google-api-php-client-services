@@ -55,6 +55,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function attachNetworkEndpoints($project, $networkEndpointGroup, GlobalNetworkEndpointGroupsAttachEndpointsRequest $postBody, $optParams = [])
   {
@@ -83,6 +84,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $networkEndpointGroup, $optParams = [])
   {
@@ -111,6 +113,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function detachNetworkEndpoints($project, $networkEndpointGroup, GlobalNetworkEndpointGroupsDetachEndpointsRequest $postBody, $optParams = [])
   {
@@ -127,6 +130,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * It should comply with RFC1035.
    * @param array $optParams Optional parameters.
    * @return NetworkEndpointGroup
+   * @throws \Google\Service\Exception
    */
   public function get($project, $networkEndpointGroup, $optParams = [])
   {
@@ -154,6 +158,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, NetworkEndpointGroup $postBody, $optParams = [])
   {
@@ -221,6 +226,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkEndpointGroupList
+   * @throws \Google\Service\Exception
    */
   public function listGlobalNetworkEndpointGroups($project, $optParams = [])
   {
@@ -290,6 +296,7 @@ class GlobalNetworkEndpointGroups extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return NetworkEndpointGroupsListNetworkEndpoints
+   * @throws \Google\Service\Exception
    */
   public function listNetworkEndpoints($project, $networkEndpointGroup, $optParams = [])
   {

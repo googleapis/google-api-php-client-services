@@ -52,6 +52,7 @@ class ExternalVpnGateways extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $externalVpnGateway, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ExternalVpnGateways extends \Google\Service\Resource
    * @param string $externalVpnGateway Name of the externalVpnGateway to return.
    * @param array $optParams Optional parameters.
    * @return ExternalVpnGateway
+   * @throws \Google\Service\Exception
    */
   public function get($project, $externalVpnGateway, $optParams = [])
   {
@@ -93,6 +95,7 @@ class ExternalVpnGateways extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, ExternalVpnGateway $postBody, $optParams = [])
   {
@@ -159,6 +162,7 @@ class ExternalVpnGateways extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return ExternalVpnGatewayList
+   * @throws \Google\Service\Exception
    */
   public function listExternalVpnGateways($project, $optParams = [])
   {
@@ -175,6 +179,7 @@ class ExternalVpnGateways extends \Google\Service\Resource
    * @param GlobalSetLabelsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function setLabels($project, $resource, GlobalSetLabelsRequest $postBody, $optParams = [])
   {
@@ -191,6 +196,7 @@ class ExternalVpnGateways extends \Google\Service\Resource
    * @param TestPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
   {

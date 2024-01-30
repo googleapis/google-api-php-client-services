@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class PreconfiguredWafSet extends \Google\Collection
 {
   protected $collection_key = 'expressionSets';
-  /**
-   * @var WafExpressionSet[]
-   */
-  public $expressionSets;
   protected $expressionSetsType = WafExpressionSet::class;
   protected $expressionSetsDataType = 'array';
 

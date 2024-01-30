@@ -98,6 +98,7 @@ class GlobalOperations extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return OperationAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -111,6 +112,7 @@ class GlobalOperations extends \Google\Service\Resource
    * @param string $project Project ID for this request.
    * @param string $operation Name of the Operations resource to delete.
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $operation, $optParams = [])
   {
@@ -125,6 +127,7 @@ class GlobalOperations extends \Google\Service\Resource
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($project, $operation, $optParams = [])
   {
@@ -191,6 +194,7 @@ class GlobalOperations extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return OperationList
+   * @throws \Google\Service\Exception
    */
   public function listGlobalOperations($project, $optParams = [])
   {
@@ -215,6 +219,7 @@ class GlobalOperations extends \Google\Service\Resource
    * @param string $operation Name of the Operations resource to return.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function wait($project, $operation, $optParams = [])
   {

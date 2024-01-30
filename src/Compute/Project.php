@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class Project extends \Google\Collection
 {
   protected $collection_key = 'quotas';
-  /**
-   * @var Metadata
-   */
-  public $commonInstanceMetadata;
   protected $commonInstanceMetadataType = Metadata::class;
   protected $commonInstanceMetadataDataType = '';
   /**
@@ -58,20 +54,12 @@ class Project extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Quota[]
-   */
-  public $quotas;
   protected $quotasType = Quota::class;
   protected $quotasDataType = 'array';
   /**
    * @var string
    */
   public $selfLink;
-  /**
-   * @var UsageExportLocation
-   */
-  public $usageExportLocation;
   protected $usageExportLocationType = UsageExportLocation::class;
   protected $usageExportLocationDataType = '';
   /**

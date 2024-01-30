@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class RegionInstanceGroupManagersListInstancesResponse extends \Google\Collection
 {
   protected $collection_key = 'managedInstances';
-  /**
-   * @var ManagedInstance[]
-   */
-  public $managedInstances;
   protected $managedInstancesType = ManagedInstance::class;
   protected $managedInstancesDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Compute;
 class RegionInstanceGroupManagersCreateInstancesRequest extends \Google\Collection
 {
   protected $collection_key = 'instances';
-  /**
-   * @var PerInstanceConfig[]
-   */
-  public $instances;
   protected $instancesType = PerInstanceConfig::class;
   protected $instancesDataType = 'array';
 

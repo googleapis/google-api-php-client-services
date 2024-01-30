@@ -24,10 +24,6 @@ class RegionInstanceGroupManagerList extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var InstanceGroupManager[]
-   */
-  public $items;
   protected $itemsType = InstanceGroupManager::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class RegionInstanceGroupManagerList extends \Google\Collection
    * @var string
    */
   public $selfLink;
-  /**
-   * @var RegionInstanceGroupManagerListWarning
-   */
-  public $warning;
   protected $warningType = RegionInstanceGroupManagerListWarning::class;
   protected $warningDataType = '';
 

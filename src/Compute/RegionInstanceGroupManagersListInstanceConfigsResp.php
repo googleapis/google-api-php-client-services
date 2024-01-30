@@ -20,20 +20,12 @@ namespace Google\Service\Compute;
 class RegionInstanceGroupManagersListInstanceConfigsResp extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var PerInstanceConfig[]
-   */
-  public $items;
   protected $itemsType = PerInstanceConfig::class;
   protected $itemsDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var RegionInstanceGroupManagersListInstanceConfigsRespWarning
-   */
-  public $warning;
   protected $warningType = RegionInstanceGroupManagersListInstanceConfigsRespWarning::class;
   protected $warningDataType = '';
 

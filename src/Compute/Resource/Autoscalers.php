@@ -98,6 +98,7 @@ class Autoscalers extends \Google\Service\Resource
    * false.
    * @opt_param string serviceProjectNumber
    * @return AutoscalerAggregatedList
+   * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
@@ -124,6 +125,7 @@ class Autoscalers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($project, $zone, $autoscaler, $optParams = [])
   {
@@ -139,6 +141,7 @@ class Autoscalers extends \Google\Service\Resource
    * @param string $autoscaler Name of the autoscaler to return.
    * @param array $optParams Optional parameters.
    * @return Autoscaler
+   * @throws \Google\Service\Exception
    */
   public function get($project, $zone, $autoscaler, $optParams = [])
   {
@@ -166,6 +169,7 @@ class Autoscalers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function insert($project, $zone, Autoscaler $postBody, $optParams = [])
   {
@@ -233,6 +237,7 @@ class Autoscalers extends \Google\Service\Resource
    * which provides partial results in case of failure. The default value is
    * false.
    * @return AutoscalerList
+   * @throws \Google\Service\Exception
    */
   public function listAutoscalers($project, $zone, $optParams = [])
   {
@@ -262,6 +267,7 @@ class Autoscalers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($project, $zone, Autoscaler $postBody, $optParams = [])
   {
@@ -290,6 +296,7 @@ class Autoscalers extends \Google\Service\Resource
    * valid UUID with the exception that zero UUID is not supported (
    * 00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function update($project, $zone, Autoscaler $postBody, $optParams = [])
   {
