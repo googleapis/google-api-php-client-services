@@ -20,16 +20,8 @@ namespace Google\Service\Testing;
 class AndroidTestLoop extends \Google\Collection
 {
   protected $collection_key = 'scenarios';
-  /**
-   * @var FileReference
-   */
-  public $appApk;
   protected $appApkType = FileReference::class;
   protected $appApkDataType = '';
-  /**
-   * @var AppBundle
-   */
-  public $appBundle;
   protected $appBundleType = AppBundle::class;
   protected $appBundleDataType = '';
   /**

@@ -19,22 +19,10 @@ namespace Google\Service\Testing;
 
 class RoboStartingIntent extends \Google\Model
 {
-  /**
-   * @var LauncherActivityIntent
-   */
-  public $launcherActivity;
   protected $launcherActivityType = LauncherActivityIntent::class;
   protected $launcherActivityDataType = '';
-  /**
-   * @var NoActivityIntent
-   */
-  public $noActivity;
   protected $noActivityType = NoActivityIntent::class;
   protected $noActivityDataType = '';
-  /**
-   * @var StartActivityIntent
-   */
-  public $startActivity;
   protected $startActivityType = StartActivityIntent::class;
   protected $startActivityDataType = '';
   /**

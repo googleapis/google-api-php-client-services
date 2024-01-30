@@ -20,10 +20,6 @@ namespace Google\Service\Testing;
 class Service extends \Google\Collection
 {
   protected $collection_key = 'intentFilter';
-  /**
-   * @var IntentFilter[]
-   */
-  public $intentFilter;
   protected $intentFilterType = IntentFilter::class;
   protected $intentFilterDataType = 'array';
   /**

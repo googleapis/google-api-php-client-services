@@ -19,16 +19,8 @@ namespace Google\Service\Testing;
 
 class DeviceFile extends \Google\Model
 {
-  /**
-   * @var ObbFile
-   */
-  public $obbFile;
   protected $obbFileType = ObbFile::class;
   protected $obbFileDataType = '';
-  /**
-   * @var RegularFile
-   */
-  public $regularFile;
   protected $regularFileType = RegularFile::class;
   protected $regularFileDataType = '';
 

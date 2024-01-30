@@ -19,16 +19,8 @@ namespace Google\Service\Testing;
 
 class Environment extends \Google\Model
 {
-  /**
-   * @var AndroidDevice
-   */
-  public $androidDevice;
   protected $androidDeviceType = AndroidDevice::class;
   protected $androidDeviceDataType = '';
-  /**
-   * @var IosDevice
-   */
-  public $iosDevice;
   protected $iosDeviceType = IosDevice::class;
   protected $iosDeviceDataType = '';
 

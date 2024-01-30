@@ -23,10 +23,6 @@ class PerAndroidVersionInfo extends \Google\Model
    * @var string
    */
   public $deviceCapacity;
-  /**
-   * @var DirectAccessVersionInfo
-   */
-  public $directAccessVersionInfo;
   protected $directAccessVersionInfoType = DirectAccessVersionInfo::class;
   protected $directAccessVersionInfoDataType = '';
   /**

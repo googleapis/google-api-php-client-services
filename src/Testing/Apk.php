@@ -19,10 +19,6 @@ namespace Google\Service\Testing;
 
 class Apk extends \Google\Model
 {
-  /**
-   * @var FileReference
-   */
-  public $location;
   protected $locationType = FileReference::class;
   protected $locationDataType = '';
   /**

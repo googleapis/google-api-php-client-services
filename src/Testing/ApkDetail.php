@@ -19,10 +19,6 @@ namespace Google\Service\Testing;
 
 class ApkDetail extends \Google\Model
 {
-  /**
-   * @var ApkManifest
-   */
-  public $apkManifest;
   protected $apkManifestType = ApkManifest::class;
   protected $apkManifestDataType = '';
 

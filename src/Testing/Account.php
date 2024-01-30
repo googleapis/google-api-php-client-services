@@ -19,10 +19,6 @@ namespace Google\Service\Testing;
 
 class Account extends \Google\Model
 {
-  /**
-   * @var GoogleAuto
-   */
-  public $googleAuto;
   protected $googleAutoType = GoogleAuto::class;
   protected $googleAutoDataType = '';
 

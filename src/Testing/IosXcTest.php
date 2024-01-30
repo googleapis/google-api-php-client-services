@@ -27,20 +27,12 @@ class IosXcTest extends \Google\Model
    * @var bool
    */
   public $testSpecialEntitlements;
-  /**
-   * @var FileReference
-   */
-  public $testsZip;
   protected $testsZipType = FileReference::class;
   protected $testsZipDataType = '';
   /**
    * @var string
    */
   public $xcodeVersion;
-  /**
-   * @var FileReference
-   */
-  public $xctestrun;
   protected $xctestrunType = FileReference::class;
   protected $xctestrunDataType = '';
 

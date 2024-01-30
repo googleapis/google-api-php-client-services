@@ -20,16 +20,8 @@ namespace Google\Service\Testing;
 class AndroidRuntimeConfiguration extends \Google\Collection
 {
   protected $collection_key = 'orientations';
-  /**
-   * @var Locale[]
-   */
-  public $locales;
   protected $localesType = Locale::class;
   protected $localesDataType = 'array';
-  /**
-   * @var Orientation[]
-   */
-  public $orientations;
   protected $orientationsType = Orientation::class;
   protected $orientationsDataType = 'array';
 

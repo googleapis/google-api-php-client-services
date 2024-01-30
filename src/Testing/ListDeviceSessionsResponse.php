@@ -20,10 +20,6 @@ namespace Google\Service\Testing;
 class ListDeviceSessionsResponse extends \Google\Collection
 {
   protected $collection_key = 'deviceSessions';
-  /**
-   * @var DeviceSession[]
-   */
-  public $deviceSessions;
   protected $deviceSessionsType = DeviceSession::class;
   protected $deviceSessionsDataType = 'array';
   /**

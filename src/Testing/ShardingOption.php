@@ -19,22 +19,10 @@ namespace Google\Service\Testing;
 
 class ShardingOption extends \Google\Model
 {
-  /**
-   * @var ManualSharding
-   */
-  public $manualSharding;
   protected $manualShardingType = ManualSharding::class;
   protected $manualShardingDataType = '';
-  /**
-   * @var SmartSharding
-   */
-  public $smartSharding;
   protected $smartShardingType = SmartSharding::class;
   protected $smartShardingDataType = '';
-  /**
-   * @var UniformSharding
-   */
-  public $uniformSharding;
   protected $uniformShardingType = UniformSharding::class;
   protected $uniformShardingDataType = '';
 

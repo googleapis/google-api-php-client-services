@@ -20,10 +20,6 @@ namespace Google\Service\Testing;
 class ManualSharding extends \Google\Collection
 {
   protected $collection_key = 'testTargetsForShard';
-  /**
-   * @var TestTargetsForShard[]
-   */
-  public $testTargetsForShard;
   protected $testTargetsForShardType = TestTargetsForShard::class;
   protected $testTargetsForShardDataType = 'array';
 

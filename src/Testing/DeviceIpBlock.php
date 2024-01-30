@@ -19,10 +19,6 @@ namespace Google\Service\Testing;
 
 class DeviceIpBlock extends \Google\Model
 {
-  /**
-   * @var Date
-   */
-  public $addedDate;
   protected $addedDateType = Date::class;
   protected $addedDateDataType = '';
   /**

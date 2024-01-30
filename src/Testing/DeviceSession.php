@@ -24,10 +24,6 @@ class DeviceSession extends \Google\Collection
    * @var string
    */
   public $activeStartTime;
-  /**
-   * @var AndroidDevice
-   */
-  public $androidDevice;
   protected $androidDeviceType = AndroidDevice::class;
   protected $androidDeviceDataType = '';
   /**
@@ -54,10 +50,6 @@ class DeviceSession extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var SessionStateEvent[]
-   */
-  public $stateHistories;
   protected $stateHistoriesType = SessionStateEvent::class;
   protected $stateHistoriesDataType = 'array';
   /**

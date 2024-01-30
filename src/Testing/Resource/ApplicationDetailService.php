@@ -37,6 +37,7 @@ class ApplicationDetailService extends \Google\Service\Resource
    * @param FileReference $postBody
    * @param array $optParams Optional parameters.
    * @return GetApkDetailsResponse
+   * @throws \Google\Service\Exception
    */
   public function getApkDetails(FileReference $postBody, $optParams = [])
   {

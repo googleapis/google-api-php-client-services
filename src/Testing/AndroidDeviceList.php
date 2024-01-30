@@ -20,10 +20,6 @@ namespace Google\Service\Testing;
 class AndroidDeviceList extends \Google\Collection
 {
   protected $collection_key = 'androidDevices';
-  /**
-   * @var AndroidDevice[]
-   */
-  public $androidDevices;
   protected $androidDevicesType = AndroidDevice::class;
   protected $androidDevicesDataType = 'array';
 
