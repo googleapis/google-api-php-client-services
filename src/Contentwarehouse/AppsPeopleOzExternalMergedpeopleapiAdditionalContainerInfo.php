@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiAdditionalContainerInfo extends \Google\Collection
 {
   protected $collection_key = 'rawDeviceContactInfo';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo[]
-   */
-  public $rawDeviceContactInfo;
   protected $rawDeviceContactInfoType = AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo::class;
   protected $rawDeviceContactInfoDataType = 'array';
 

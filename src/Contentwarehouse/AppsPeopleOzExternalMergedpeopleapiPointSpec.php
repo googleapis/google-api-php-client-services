@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiPointSpec extends \Google\Model
 {
-  /**
-   * @var GeostoreRectProto
-   */
-  public $bounds;
   protected $boundsType = GeostoreRectProto::class;
   protected $boundsDataType = '';
-  /**
-   * @var GeostorePointProto
-   */
-  public $point;
   protected $pointType = GeostorePointProto::class;
   protected $pointDataType = '';
   /**

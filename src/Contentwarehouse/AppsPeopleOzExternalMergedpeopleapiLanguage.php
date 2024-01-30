@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiLanguage extends \Google\Model
 {
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

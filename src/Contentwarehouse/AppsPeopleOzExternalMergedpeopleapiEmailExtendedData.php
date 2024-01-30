@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiEmailExtendedData extends \Google\Model
 {
-  /**
-   * @var PeoplestackFlexorgsProtoInternalExternal
-   */
-  public $internalExternal;
   protected $internalExternalType = PeoplestackFlexorgsProtoInternalExternal::class;
   protected $internalExternalDataType = '';
   /**

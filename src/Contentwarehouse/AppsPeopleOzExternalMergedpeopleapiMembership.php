@@ -27,10 +27,6 @@ class AppsPeopleOzExternalMergedpeopleapiMembership extends \Google\Model
    * @var string
    */
   public $contactGroupId;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

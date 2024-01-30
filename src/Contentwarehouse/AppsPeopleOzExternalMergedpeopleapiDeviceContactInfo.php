@@ -20,20 +20,12 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiDeviceContactInfo extends \Google\Collection
 {
   protected $collection_key = 'rawContactInfo';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiDeviceContactExtraMetadata
-   */
-  public $deviceContactMetadata;
   protected $deviceContactMetadataType = AppsPeopleOzExternalMergedpeopleapiDeviceContactExtraMetadata::class;
   protected $deviceContactMetadataDataType = '';
   /**
    * @var bool
    */
   public $hasCrossDeviceData;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiDeviceContactId
-   */
-  public $id;
   protected $idType = AppsPeopleOzExternalMergedpeopleapiDeviceContactId::class;
   protected $idDataType = '';
   /**
@@ -44,10 +36,6 @@ class AppsPeopleOzExternalMergedpeopleapiDeviceContactInfo extends \Google\Colle
    * @var string
    */
   public $lookupKey;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo[]
-   */
-  public $rawContactInfo;
   protected $rawContactInfoType = AppsPeopleOzExternalMergedpeopleapiRawDeviceContactInfo::class;
   protected $rawContactInfoDataType = 'array';
 

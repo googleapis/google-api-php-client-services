@@ -43,10 +43,6 @@ class AppsPeopleOzExternalMergedpeopleapiCoverPhoto extends \Google\Model
    * @var bool
    */
   public $isDefault;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

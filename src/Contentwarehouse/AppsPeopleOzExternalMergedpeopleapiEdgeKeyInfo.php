@@ -27,10 +27,6 @@ class AppsPeopleOzExternalMergedpeopleapiEdgeKeyInfo extends \Google\Model
    * @var string
    */
   public $containerType;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiEdgeKeyInfoExtensionData
-   */
-  public $extendedData;
   protected $extendedDataType = AppsPeopleOzExternalMergedpeopleapiEdgeKeyInfoExtensionData::class;
   protected $extendedDataDataType = '';
   /**

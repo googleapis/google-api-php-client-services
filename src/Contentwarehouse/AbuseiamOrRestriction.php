@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AbuseiamOrRestriction extends \Google\Collection
 {
   protected $collection_key = 'child';
-  /**
-   * @var AbuseiamUserRestriction[]
-   */
-  public $child;
   protected $childType = AbuseiamUserRestriction::class;
   protected $childDataType = 'array';
 

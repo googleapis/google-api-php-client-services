@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AppsDynamiteSharedSegmentedMembershipCounts extends \Google\Collection
 {
   protected $collection_key = 'value';
-  /**
-   * @var AppsDynamiteSharedSegmentedMembershipCount[]
-   */
-  public $value;
   protected $valueType = AppsDynamiteSharedSegmentedMembershipCount::class;
   protected $valueDataType = 'array';
 

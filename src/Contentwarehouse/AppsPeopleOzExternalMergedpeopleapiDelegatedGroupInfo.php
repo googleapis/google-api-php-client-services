@@ -19,10 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiDelegatedGroupInfo extends \Google\Model
 {
-  /**
-   * @var SocialGraphApiProtoDelegatedGroupId
-   */
-  public $delegatedGroupId;
   protected $delegatedGroupIdType = SocialGraphApiProtoDelegatedGroupId::class;
   protected $delegatedGroupIdDataType = '';
 

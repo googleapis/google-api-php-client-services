@@ -27,10 +27,6 @@ class AppsPeopleOzExternalMergedpeopleapiPlusPageInfo extends \Google\Model
    * @var string
    */
   public $entityType;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

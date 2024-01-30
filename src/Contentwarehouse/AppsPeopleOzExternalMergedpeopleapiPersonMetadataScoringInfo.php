@@ -21,10 +21,6 @@ class AppsPeopleOzExternalMergedpeopleapiPersonMetadataScoringInfo extends \Goog
 {
   protected $collection_key = 'stExpressionResults';
   public $rawMatchQualityScore;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonMetadataScoringInfoStExpressionResult[]
-   */
-  public $stExpressionResults;
   protected $stExpressionResultsType = AppsPeopleOzExternalMergedpeopleapiPersonMetadataScoringInfoStExpressionResult::class;
   protected $stExpressionResultsDataType = 'array';
 

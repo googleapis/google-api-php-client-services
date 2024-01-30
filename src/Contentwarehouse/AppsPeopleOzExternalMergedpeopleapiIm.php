@@ -27,10 +27,6 @@ class AppsPeopleOzExternalMergedpeopleapiIm extends \Google\Model
    * @var string
    */
   public $formattedType;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
   /**

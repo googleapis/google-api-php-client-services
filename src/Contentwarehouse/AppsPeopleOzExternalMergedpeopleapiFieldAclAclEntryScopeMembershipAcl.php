@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAcl extends \Google\Model
 {
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAclCircleAcl
-   */
-  public $circle;
   protected $circleType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAclCircleAcl::class;
   protected $circleDataType = '';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAclContactGroupAcl
-   */
-  public $contactGroup;
   protected $contactGroupType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAclContactGroupAcl::class;
   protected $contactGroupDataType = '';
 

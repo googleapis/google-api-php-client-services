@@ -19,16 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class AppsPeopleOzExternalMergedpeopleapiPronoun extends \Google\Model
 {
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
-  /**
-   * @var SocialGraphApiProtoPronounData
-   */
-  public $pronounData;
   protected $pronounDataType = SocialGraphApiProtoPronounData::class;
   protected $pronounDataDataType = '';
 

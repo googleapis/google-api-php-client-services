@@ -31,10 +31,6 @@ class AppsPeopleOzExternalMergedpeopleapiAgeRangeType extends \Google\Model
    * @var string
    */
   public $ageRange;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

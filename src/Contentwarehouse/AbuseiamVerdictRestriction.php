@@ -20,16 +20,8 @@ namespace Google\Service\Contentwarehouse;
 class AbuseiamVerdictRestriction extends \Google\Collection
 {
   protected $collection_key = 'context';
-  /**
-   * @var AbuseiamVerdictRestrictionContext[]
-   */
-  public $context;
   protected $contextType = AbuseiamVerdictRestrictionContext::class;
   protected $contextDataType = 'array';
-  /**
-   * @var AbuseiamUserRestriction
-   */
-  public $userRestriction;
   protected $userRestrictionType = AbuseiamUserRestriction::class;
   protected $userRestrictionDataType = '';
 

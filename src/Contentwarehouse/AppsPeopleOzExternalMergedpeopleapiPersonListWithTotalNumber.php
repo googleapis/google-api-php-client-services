@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPersonListWithTotalNumber extends \Google\Collection
 {
   protected $collection_key = 'people';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPerson[]
-   */
-  public $people;
   protected $peopleType = AppsPeopleOzExternalMergedpeopleapiPerson::class;
   protected $peopleDataType = 'array';
   /**

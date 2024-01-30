@@ -20,20 +20,12 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiPersonMetadata extends \Google\Collection
 {
   protected $collection_key = 'previousPersonId';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiAffinity[]
-   */
-  public $affinity;
   protected $affinityType = AppsPeopleOzExternalMergedpeopleapiAffinity::class;
   protected $affinityDataType = 'array';
   /**
    * @var string[]
    */
   public $attribution;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiBestDisplayName
-   */
-  public $bestDisplayName;
   protected $bestDisplayNameType = AppsPeopleOzExternalMergedpeopleapiBestDisplayName::class;
   protected $bestDisplayNameDataType = '';
   /**
@@ -72,16 +64,8 @@ class AppsPeopleOzExternalMergedpeopleapiPersonMetadata extends \Google\Collecti
    * @var string[]
    */
   public $deprecatedMembershipContactGroupId;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiDeviceContactInfo[]
-   */
-  public $deviceContactInfo;
   protected $deviceContactInfoType = AppsPeopleOzExternalMergedpeopleapiDeviceContactInfo::class;
   protected $deviceContactInfoDataType = 'array';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiIdentityInfo
-   */
-  public $identityInfo;
   protected $identityInfoType = AppsPeopleOzExternalMergedpeopleapiIdentityInfo::class;
   protected $identityInfoDataType = '';
   /**
@@ -120,22 +104,10 @@ class AppsPeopleOzExternalMergedpeopleapiPersonMetadata extends \Google\Collecti
    * @var string[]
    */
   public $previousPersonId;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiProfileOwnerStats
-   */
-  public $profileOwnerStats;
   protected $profileOwnerStatsType = AppsPeopleOzExternalMergedpeopleapiProfileOwnerStats::class;
   protected $profileOwnerStatsDataType = '';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonMetadataScoringInfo
-   */
-  public $scoringInfo;
   protected $scoringInfoType = AppsPeopleOzExternalMergedpeopleapiPersonMetadataScoringInfo::class;
   protected $scoringInfoDataType = '';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiUserVisibleStats
-   */
-  public $userVisibleStats;
   protected $userVisibleStatsType = AppsPeopleOzExternalMergedpeopleapiUserVisibleStats::class;
   protected $userVisibleStatsDataType = '';
 

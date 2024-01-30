@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class AppsPeopleOzExternalMergedpeopleapiMatchInfo extends \Google\Collection
 {
   protected $collection_key = 'match';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiMatchInfoLookupTokenMatch[]
-   */
-  public $match;
   protected $matchType = AppsPeopleOzExternalMergedpeopleapiMatchInfoLookupTokenMatch::class;
   protected $matchDataType = 'array';
   /**

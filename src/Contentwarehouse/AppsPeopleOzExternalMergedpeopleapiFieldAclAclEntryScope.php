@@ -27,16 +27,8 @@ class AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScope extends \Google\M
    * @var bool
    */
   public $domainUsers;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAcl
-   */
-  public $membership;
   protected $membershipType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopeMembershipAcl::class;
   protected $membershipDataType = '';
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopePersonAcl
-   */
-  public $person;
   protected $personType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScopePersonAcl::class;
   protected $personDataType = '';
 

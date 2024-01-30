@@ -23,10 +23,6 @@ class AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntry extends \Google\Model
    * @var string
    */
   public $role;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScope
-   */
-  public $scope;
   protected $scopeType = AppsPeopleOzExternalMergedpeopleapiFieldAclAclEntryScope::class;
   protected $scopeDataType = '';
 

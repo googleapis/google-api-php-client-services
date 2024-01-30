@@ -20,10 +20,6 @@ namespace Google\Service\Contentwarehouse;
 class Anchors extends \Google\Collection
 {
   protected $collection_key = 'redundantanchorinfo';
-  /**
-   * @var AnchorsAnchor[]
-   */
-  public $anchor;
   protected $anchorType = AnchorsAnchor::class;
   protected $anchorDataType = 'array';
   /**
@@ -46,10 +42,6 @@ class Anchors extends \Google\Collection
    * @var string
    */
   public $redundantAnchorsDropped;
-  /**
-   * @var AnchorsRedundantAnchorInfo[]
-   */
-  public $redundantanchorinfo;
   protected $redundantanchorinfoType = AnchorsRedundantAnchorInfo::class;
   protected $redundantanchorinfoDataType = 'array';
   /**

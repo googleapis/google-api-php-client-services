@@ -27,10 +27,6 @@ class AppsPeopleOzExternalMergedpeopleapiInteractionSettings extends \Google\Mod
    * @var string
    */
   public $interaction;
-  /**
-   * @var AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata
-   */
-  public $metadata;
   protected $metadataType = AppsPeopleOzExternalMergedpeopleapiPersonFieldMetadata::class;
   protected $metadataDataType = '';
 

@@ -31,10 +31,6 @@ class AppsPeopleOzExternalMergedpeopleapiRawDeviceContactAnalyticalInfo extends 
    * @var bool
    */
   public $sourceIdExist;
-  /**
-   * @var SocialGraphApiProtoSyncInfo
-   */
-  public $syncInfo;
   protected $syncInfoType = SocialGraphApiProtoSyncInfo::class;
   protected $syncInfoDataType = '';
 
