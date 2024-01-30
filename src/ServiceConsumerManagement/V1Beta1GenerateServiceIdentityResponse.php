@@ -19,10 +19,6 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class V1Beta1GenerateServiceIdentityResponse extends \Google\Model
 {
-  /**
-   * @var V1Beta1ServiceIdentity
-   */
-  public $identity;
   protected $identityType = V1Beta1ServiceIdentity::class;
   protected $identityDataType = '';
 

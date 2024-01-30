@@ -36,10 +36,6 @@ class TenancyUnit extends \Google\Collection
    * @var string
    */
   public $service;
-  /**
-   * @var TenantResource[]
-   */
-  public $tenantResources;
   protected $tenantResourcesType = TenantResource::class;
   protected $tenantResourcesDataType = 'array';
 

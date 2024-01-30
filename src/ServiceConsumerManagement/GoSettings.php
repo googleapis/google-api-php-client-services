@@ -19,10 +19,6 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class GoSettings extends \Google\Model
 {
-  /**
-   * @var CommonLanguageSettings
-   */
-  public $common;
   protected $commonType = CommonLanguageSettings::class;
   protected $commonDataType = '';
 

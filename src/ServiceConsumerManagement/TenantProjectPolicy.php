@@ -20,10 +20,6 @@ namespace Google\Service\ServiceConsumerManagement;
 class TenantProjectPolicy extends \Google\Collection
 {
   protected $collection_key = 'policyBindings';
-  /**
-   * @var PolicyBinding[]
-   */
-  public $policyBindings;
   protected $policyBindingsType = PolicyBinding::class;
   protected $policyBindingsDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\ServiceConsumerManagement;
 
 class AddTenantProjectRequest extends \Google\Model
 {
-  /**
-   * @var TenantProjectConfig
-   */
-  public $projectConfig;
   protected $projectConfigType = TenantProjectConfig::class;
   protected $projectConfigDataType = '';
   /**

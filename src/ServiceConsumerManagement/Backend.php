@@ -20,10 +20,6 @@ namespace Google\Service\ServiceConsumerManagement;
 class Backend extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var BackendRule[]
-   */
-  public $rules;
   protected $rulesType = BackendRule::class;
   protected $rulesDataType = 'array';
 

@@ -24,10 +24,6 @@ class SearchTenancyUnitsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var TenancyUnit[]
-   */
-  public $tenancyUnits;
   protected $tenancyUnitsType = TenancyUnit::class;
   protected $tenancyUnitsDataType = 'array';
 
