@@ -42,6 +42,7 @@ class V1 extends \Google\Service\Resource
    * @param GoogleIdentityStsV1IntrospectTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIdentityStsV1IntrospectTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function introspect(GoogleIdentityStsV1IntrospectTokenRequest $postBody, $optParams = [])
   {
@@ -65,6 +66,7 @@ class V1 extends \Google\Service\Resource
    * @param GoogleIdentityStsV1ExchangeOauthTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIdentityStsV1ExchangeOauthTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function oauthtoken(GoogleIdentityStsV1ExchangeOauthTokenRequest $postBody, $optParams = [])
   {
@@ -84,6 +86,7 @@ class V1 extends \Google\Service\Resource
    * @param GoogleIdentityStsV1ExchangeTokenRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleIdentityStsV1ExchangeTokenResponse
+   * @throws \Google\Service\Exception
    */
   public function token(GoogleIdentityStsV1ExchangeTokenRequest $postBody, $optParams = [])
   {
