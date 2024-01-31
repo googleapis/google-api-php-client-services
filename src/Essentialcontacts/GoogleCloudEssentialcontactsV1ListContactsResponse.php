@@ -20,10 +20,6 @@ namespace Google\Service\Essentialcontacts;
 class GoogleCloudEssentialcontactsV1ListContactsResponse extends \Google\Collection
 {
   protected $collection_key = 'contacts';
-  /**
-   * @var GoogleCloudEssentialcontactsV1Contact[]
-   */
-  public $contacts;
   protected $contactsType = GoogleCloudEssentialcontactsV1Contact::class;
   protected $contactsDataType = 'array';
   /**
