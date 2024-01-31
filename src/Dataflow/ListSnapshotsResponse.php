@@ -20,10 +20,6 @@ namespace Google\Service\Dataflow;
 class ListSnapshotsResponse extends \Google\Collection
 {
   protected $collection_key = 'snapshots';
-  /**
-   * @var Snapshot[]
-   */
-  public $snapshots;
   protected $snapshotsType = Snapshot::class;
   protected $snapshotsDataType = 'array';
 

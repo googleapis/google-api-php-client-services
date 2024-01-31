@@ -23,10 +23,6 @@ class SourceSplitShard extends \Google\Model
    * @var string
    */
   public $derivationMode;
-  /**
-   * @var Source
-   */
-  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
 

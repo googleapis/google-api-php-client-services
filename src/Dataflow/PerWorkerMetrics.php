@@ -20,10 +20,6 @@ namespace Google\Service\Dataflow;
 class PerWorkerMetrics extends \Google\Collection
 {
   protected $collection_key = 'perStepNamespaceMetrics';
-  /**
-   * @var PerStepNamespaceMetrics[]
-   */
-  public $perStepNamespaceMetrics;
   protected $perStepNamespaceMetricsType = PerStepNamespaceMetrics::class;
   protected $perStepNamespaceMetricsDataType = 'array';
 

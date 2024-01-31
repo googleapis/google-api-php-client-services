@@ -20,10 +20,6 @@ namespace Google\Service\Dataflow;
 class PartialGroupByKeyInstruction extends \Google\Collection
 {
   protected $collection_key = 'sideInputs';
-  /**
-   * @var InstructionInput
-   */
-  public $input;
   protected $inputType = InstructionInput::class;
   protected $inputDataType = '';
   /**
@@ -38,10 +34,6 @@ class PartialGroupByKeyInstruction extends \Google\Collection
    * @var string
    */
   public $originalCombineValuesStepName;
-  /**
-   * @var SideInputInfo[]
-   */
-  public $sideInputs;
   protected $sideInputsType = SideInputInfo::class;
   protected $sideInputsDataType = 'array';
   /**

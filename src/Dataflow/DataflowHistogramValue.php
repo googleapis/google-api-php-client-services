@@ -24,20 +24,12 @@ class DataflowHistogramValue extends \Google\Collection
    * @var string[]
    */
   public $bucketCounts;
-  /**
-   * @var BucketOptions
-   */
-  public $bucketOptions;
   protected $bucketOptionsType = BucketOptions::class;
   protected $bucketOptionsDataType = '';
   /**
    * @var string
    */
   public $count;
-  /**
-   * @var OutlierStats
-   */
-  public $outlierStats;
   protected $outlierStatsType = OutlierStats::class;
   protected $outlierStatsDataType = '';
 

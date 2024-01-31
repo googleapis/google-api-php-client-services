@@ -53,6 +53,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * @opt_param string view Deprecated. ListJobs always returns summaries now. Use
    * GetJob for other JobViews.
    * @return ListJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function aggregated($projectId, $optParams = [])
   {
@@ -80,6 +81,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * message.
    * @opt_param string view The level of information requested in response.
    * @return Job
+   * @throws \Google\Service\Exception
    */
   public function create($projectId, Job $postBody, $optParams = [])
   {
@@ -104,6 +106,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * contains this job.
    * @opt_param string view The level of information requested in response.
    * @return Job
+   * @throws \Google\Service\Exception
    */
   public function get($projectId, $jobId, $optParams = [])
   {
@@ -129,6 +132,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * this time. Default is to return all information about all metrics for the
    * job.
    * @return JobMetrics
+   * @throws \Google\Service\Exception
    */
   public function getMetrics($projectId, $jobId, $optParams = [])
   {
@@ -162,6 +166,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * @opt_param string view Deprecated. ListJobs always returns summaries now. Use
    * GetJob for other JobViews.
    * @return ListJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsJobs($projectId, $optParams = [])
   {
@@ -177,6 +182,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * @param SnapshotJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Snapshot
+   * @throws \Google\Service\Exception
    */
   public function snapshot($projectId, $jobId, SnapshotJobRequest $postBody, $optParams = [])
   {
@@ -208,6 +214,7 @@ class ProjectsJobs extends \Google\Service\Resource
    * RequestedJobState and update_mask are specified, an error will be returned as
    * we cannot update both state and mask.
    * @return Job
+   * @throws \Google\Service\Exception
    */
   public function update($projectId, $jobId, Job $postBody, $optParams = [])
   {

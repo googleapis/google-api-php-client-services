@@ -19,16 +19,8 @@ namespace Google\Service\Dataflow;
 
 class SourceSplitRequest extends \Google\Model
 {
-  /**
-   * @var SourceSplitOptions
-   */
-  public $options;
   protected $optionsType = SourceSplitOptions::class;
   protected $optionsDataType = '';
-  /**
-   * @var Source
-   */
-  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
 

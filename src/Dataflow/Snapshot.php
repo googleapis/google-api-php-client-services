@@ -40,10 +40,6 @@ class Snapshot extends \Google\Collection
    * @var string
    */
   public $projectId;
-  /**
-   * @var PubsubSnapshotMetadata[]
-   */
-  public $pubsubMetadata;
   protected $pubsubMetadataType = PubsubSnapshotMetadata::class;
   protected $pubsubMetadataDataType = 'array';
   /**

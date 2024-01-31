@@ -23,10 +23,6 @@ class AutoscalingEvent extends \Google\Model
    * @var string
    */
   public $currentNumWorkers;
-  /**
-   * @var StructuredMessage
-   */
-  public $description;
   protected $descriptionType = StructuredMessage::class;
   protected $descriptionDataType = '';
   /**

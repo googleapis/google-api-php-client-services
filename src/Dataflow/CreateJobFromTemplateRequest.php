@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class CreateJobFromTemplateRequest extends \Google\Model
 {
-  /**
-   * @var RuntimeEnvironment
-   */
-  public $environment;
   protected $environmentType = RuntimeEnvironment::class;
   protected $environmentDataType = '';
   /**

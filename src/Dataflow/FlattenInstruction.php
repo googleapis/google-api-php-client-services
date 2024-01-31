@@ -20,10 +20,6 @@ namespace Google\Service\Dataflow;
 class FlattenInstruction extends \Google\Collection
 {
   protected $collection_key = 'inputs';
-  /**
-   * @var InstructionInput[]
-   */
-  public $inputs;
   protected $inputsType = InstructionInput::class;
   protected $inputsDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class SourceGetMetadataResponse extends \Google\Model
 {
-  /**
-   * @var SourceMetadata
-   */
-  public $metadata;
   protected $metadataType = SourceMetadata::class;
   protected $metadataDataType = '';
 

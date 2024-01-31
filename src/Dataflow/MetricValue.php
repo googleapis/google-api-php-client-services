@@ -27,10 +27,6 @@ class MetricValue extends \Google\Model
    * @var string[]
    */
   public $metricLabels;
-  /**
-   * @var DataflowHistogramValue
-   */
-  public $valueHistogram;
   protected $valueHistogramType = DataflowHistogramValue::class;
   protected $valueHistogramDataType = '';
   /**

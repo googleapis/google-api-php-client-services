@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class SourceOperationRequest extends \Google\Model
 {
-  /**
-   * @var SourceGetMetadataRequest
-   */
-  public $getMetadata;
   protected $getMetadataType = SourceGetMetadataRequest::class;
   protected $getMetadataDataType = '';
   /**
@@ -33,10 +29,6 @@ class SourceOperationRequest extends \Google\Model
    * @var string
    */
   public $originalName;
-  /**
-   * @var SourceSplitRequest
-   */
-  public $split;
   protected $splitType = SourceSplitRequest::class;
   protected $splitDataType = '';
   /**

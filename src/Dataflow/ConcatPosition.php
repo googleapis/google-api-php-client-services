@@ -23,10 +23,6 @@ class ConcatPosition extends \Google\Model
    * @var int
    */
   public $index;
-  /**
-   * @var Position
-   */
-  public $position;
   protected $positionType = Position::class;
   protected $positionDataType = '';
 

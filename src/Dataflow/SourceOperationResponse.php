@@ -19,16 +19,8 @@ namespace Google\Service\Dataflow;
 
 class SourceOperationResponse extends \Google\Model
 {
-  /**
-   * @var SourceGetMetadataResponse
-   */
-  public $getMetadata;
   protected $getMetadataType = SourceGetMetadataResponse::class;
   protected $getMetadataDataType = '';
-  /**
-   * @var SourceSplitResponse
-   */
-  public $split;
   protected $splitType = SourceSplitResponse::class;
   protected $splitDataType = '';
 

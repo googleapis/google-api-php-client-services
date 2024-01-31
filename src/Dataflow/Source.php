@@ -32,10 +32,6 @@ class Source extends \Google\Collection
    * @var bool
    */
   public $doesNotNeedSplitting;
-  /**
-   * @var SourceMetadata
-   */
-  public $metadata;
   protected $metadataType = SourceMetadata::class;
   protected $metadataDataType = '';
   /**

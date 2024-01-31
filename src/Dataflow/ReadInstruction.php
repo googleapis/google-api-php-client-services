@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class ReadInstruction extends \Google\Model
 {
-  /**
-   * @var Source
-   */
-  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
 

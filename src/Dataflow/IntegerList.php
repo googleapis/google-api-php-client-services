@@ -20,10 +20,6 @@ namespace Google\Service\Dataflow;
 class IntegerList extends \Google\Collection
 {
   protected $collection_key = 'elements';
-  /**
-   * @var SplitInt64[]
-   */
-  public $elements;
   protected $elementsType = SplitInt64::class;
   protected $elementsDataType = 'array';
 

@@ -24,10 +24,6 @@ class SendWorkerMessagesRequest extends \Google\Collection
    * @var string
    */
   public $location;
-  /**
-   * @var WorkerMessage[]
-   */
-  public $workerMessages;
   protected $workerMessagesType = WorkerMessage::class;
   protected $workerMessagesDataType = 'array';
 

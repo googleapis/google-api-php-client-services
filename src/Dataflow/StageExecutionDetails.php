@@ -24,10 +24,6 @@ class StageExecutionDetails extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var WorkerDetails[]
-   */
-  public $workers;
   protected $workersType = WorkerDetails::class;
   protected $workersDataType = 'array';
 

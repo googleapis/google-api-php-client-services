@@ -20,10 +20,6 @@ namespace Google\Service\Dataflow;
 class PerStepNamespaceMetrics extends \Google\Collection
 {
   protected $collection_key = 'metricValues';
-  /**
-   * @var MetricValue[]
-   */
-  public $metricValues;
   protected $metricValuesType = MetricValue::class;
   protected $metricValuesDataType = 'array';
   /**

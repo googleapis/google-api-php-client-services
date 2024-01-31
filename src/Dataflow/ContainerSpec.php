@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class ContainerSpec extends \Google\Model
 {
-  /**
-   * @var FlexTemplateRuntimeEnvironment
-   */
-  public $defaultEnvironment;
   protected $defaultEnvironmentType = FlexTemplateRuntimeEnvironment::class;
   protected $defaultEnvironmentDataType = '';
   /**
@@ -41,16 +37,8 @@ class ContainerSpec extends \Google\Model
    * @var string
    */
   public $imageRepositoryUsernameSecretId;
-  /**
-   * @var TemplateMetadata
-   */
-  public $metadata;
   protected $metadataType = TemplateMetadata::class;
   protected $metadataDataType = '';
-  /**
-   * @var SDKInfo
-   */
-  public $sdkInfo;
   protected $sdkInfoType = SDKInfo::class;
   protected $sdkInfoDataType = '';
 

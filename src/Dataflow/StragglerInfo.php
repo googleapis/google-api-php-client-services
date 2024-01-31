@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class StragglerInfo extends \Google\Model
 {
-  /**
-   * @var StragglerDebuggingInfo[]
-   */
-  public $causes;
   protected $causesType = StragglerDebuggingInfo::class;
   protected $causesDataType = 'map';
   /**

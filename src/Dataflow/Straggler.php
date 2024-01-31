@@ -19,16 +19,8 @@ namespace Google\Service\Dataflow;
 
 class Straggler extends \Google\Model
 {
-  /**
-   * @var StragglerInfo
-   */
-  public $batchStraggler;
   protected $batchStragglerType = StragglerInfo::class;
   protected $batchStragglerDataType = '';
-  /**
-   * @var StreamingStragglerInfo
-   */
-  public $streamingStraggler;
   protected $streamingStragglerType = StreamingStragglerInfo::class;
   protected $streamingStragglerDataType = '';
 

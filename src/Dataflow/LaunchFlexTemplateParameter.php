@@ -19,20 +19,12 @@ namespace Google\Service\Dataflow;
 
 class LaunchFlexTemplateParameter extends \Google\Model
 {
-  /**
-   * @var ContainerSpec
-   */
-  public $containerSpec;
   protected $containerSpecType = ContainerSpec::class;
   protected $containerSpecDataType = '';
   /**
    * @var string
    */
   public $containerSpecGcsPath;
-  /**
-   * @var FlexTemplateRuntimeEnvironment
-   */
-  public $environment;
   protected $environmentType = FlexTemplateRuntimeEnvironment::class;
   protected $environmentDataType = '';
   /**

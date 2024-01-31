@@ -19,10 +19,6 @@ namespace Google\Service\Dataflow;
 
 class FloatingPointMean extends \Google\Model
 {
-  /**
-   * @var SplitInt64
-   */
-  public $count;
   protected $countType = SplitInt64::class;
   protected $countDataType = '';
   public $sum;

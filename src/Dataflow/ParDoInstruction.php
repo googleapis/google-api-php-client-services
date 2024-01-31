@@ -20,26 +20,14 @@ namespace Google\Service\Dataflow;
 class ParDoInstruction extends \Google\Collection
 {
   protected $collection_key = 'sideInputs';
-  /**
-   * @var InstructionInput
-   */
-  public $input;
   protected $inputType = InstructionInput::class;
   protected $inputDataType = '';
-  /**
-   * @var MultiOutputInfo[]
-   */
-  public $multiOutputInfos;
   protected $multiOutputInfosType = MultiOutputInfo::class;
   protected $multiOutputInfosDataType = 'array';
   /**
    * @var int
    */
   public $numOutputs;
-  /**
-   * @var SideInputInfo[]
-   */
-  public $sideInputs;
   protected $sideInputsType = SideInputInfo::class;
   protected $sideInputsDataType = 'array';
   /**

@@ -19,16 +19,8 @@ namespace Google\Service\Dataflow;
 
 class BucketOptions extends \Google\Model
 {
-  /**
-   * @var Base2Exponent
-   */
-  public $exponential;
   protected $exponentialType = Base2Exponent::class;
   protected $exponentialDataType = '';
-  /**
-   * @var Linear
-   */
-  public $linear;
   protected $linearType = Linear::class;
   protected $linearDataType = '';
 

@@ -20,20 +20,12 @@ namespace Google\Service\Dataflow;
 class SourceSplitResponse extends \Google\Collection
 {
   protected $collection_key = 'shards';
-  /**
-   * @var DerivedSource[]
-   */
-  public $bundles;
   protected $bundlesType = DerivedSource::class;
   protected $bundlesDataType = 'array';
   /**
    * @var string
    */
   public $outcome;
-  /**
-   * @var SourceSplitShard[]
-   */
-  public $shards;
   protected $shardsType = SourceSplitShard::class;
   protected $shardsDataType = 'array';
 
