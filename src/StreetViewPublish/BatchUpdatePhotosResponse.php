@@ -20,10 +20,6 @@ namespace Google\Service\StreetViewPublish;
 class BatchUpdatePhotosResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
-  /**
-   * @var PhotoResponse[]
-   */
-  public $results;
   protected $resultsType = PhotoResponse::class;
   protected $resultsDataType = 'array';
 

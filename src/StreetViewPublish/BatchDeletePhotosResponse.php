@@ -20,10 +20,6 @@ namespace Google\Service\StreetViewPublish;
 class BatchDeletePhotosResponse extends \Google\Collection
 {
   protected $collection_key = 'status';
-  /**
-   * @var Status[]
-   */
-  public $status;
   protected $statusType = Status::class;
   protected $statusDataType = 'array';
 

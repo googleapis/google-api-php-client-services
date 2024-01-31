@@ -19,10 +19,6 @@ namespace Google\Service\StreetViewPublish;
 
 class UpdatePhotoRequest extends \Google\Model
 {
-  /**
-   * @var Photo
-   */
-  public $photo;
   protected $photoType = Photo::class;
   protected $photoDataType = '';
   /**

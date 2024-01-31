@@ -45,6 +45,7 @@ class Photos extends \Google\Service\Resource
    * @param BatchDeletePhotosRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchDeletePhotosResponse
+   * @throws \Google\Service\Exception
    */
   public function batchDelete(BatchDeletePhotosRequest $postBody, $optParams = [])
   {
@@ -71,6 +72,7 @@ class Photos extends \Google\Service\Resource
    * @opt_param string view Required. Specifies if a download URL for the photo
    * bytes should be returned in the Photo response.
    * @return BatchGetPhotosResponse
+   * @throws \Google\Service\Exception
    */
   public function batchGet($optParams = [])
   {
@@ -95,6 +97,7 @@ class Photos extends \Google\Service\Resource
    * @param BatchUpdatePhotosRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BatchUpdatePhotosResponse
+   * @throws \Google\Service\Exception
    */
   public function batchUpdate(BatchUpdatePhotosRequest $postBody, $optParams = [])
   {
@@ -128,6 +131,7 @@ class Photos extends \Google\Service\Resource
    * @opt_param string view Required. Specifies if a download URL for the photos
    * bytes should be returned in the Photos response.
    * @return ListPhotosResponse
+   * @throws \Google\Service\Exception
    */
   public function listPhotos($optParams = [])
   {
