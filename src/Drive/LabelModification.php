@@ -20,10 +20,6 @@ namespace Google\Service\Drive;
 class LabelModification extends \Google\Collection
 {
   protected $collection_key = 'fieldModifications';
-  /**
-   * @var LabelFieldModification[]
-   */
-  public $fieldModifications;
   protected $fieldModificationsType = LabelFieldModification::class;
   protected $fieldModificationsDataType = 'array';
   /**

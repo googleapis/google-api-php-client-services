@@ -41,6 +41,7 @@ class Teamdrives extends \Google\Service\Resource
    * @param TeamDrive $postBody
    * @param array $optParams Optional parameters.
    * @return TeamDrive
+   * @throws \Google\Service\Exception
    */
   public function create($requestId, TeamDrive $postBody, $optParams = [])
   {
@@ -53,6 +54,7 @@ class Teamdrives extends \Google\Service\Resource
    *
    * @param string $teamDriveId The ID of the Team Drive
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($teamDriveId, $optParams = [])
   {
@@ -70,6 +72,7 @@ class Teamdrives extends \Google\Service\Resource
    * administrator; if set to true, then the requester will be granted access if
    * they are an administrator of the domain to which the Team Drive belongs.
    * @return TeamDrive
+   * @throws \Google\Service\Exception
    */
   public function get($teamDriveId, $optParams = [])
   {
@@ -89,6 +92,7 @@ class Teamdrives extends \Google\Service\Resource
    * administrator; if set to true, then all Team Drives of the domain in which
    * the requester is an administrator are returned.
    * @return TeamDriveList
+   * @throws \Google\Service\Exception
    */
   public function listTeamdrives($optParams = [])
   {
@@ -107,6 +111,7 @@ class Teamdrives extends \Google\Service\Resource
    * administrator; if set to true, then the requester will be granted access if
    * they are an administrator of the domain to which the Team Drive belongs.
    * @return TeamDrive
+   * @throws \Google\Service\Exception
    */
   public function update($teamDriveId, TeamDrive $postBody, $optParams = [])
   {

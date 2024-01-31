@@ -45,6 +45,7 @@ class Changes extends \Google\Service\Resource
    * instead.
    * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
    * @return StartPageToken
+   * @throws \Google\Service\Exception
    */
   public function getStartPageToken($optParams = [])
   {
@@ -91,6 +92,7 @@ class Changes extends \Google\Service\Resource
    * instead.
    * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
    * @return ChangeList
+   * @throws \Google\Service\Exception
    */
   public function listChanges($pageToken, $optParams = [])
   {
@@ -138,6 +140,7 @@ class Changes extends \Google\Service\Resource
    * instead.
    * @opt_param string teamDriveId Deprecated: Use `driveId` instead.
    * @return Channel
+   * @throws \Google\Service\Exception
    */
   public function watch($pageToken, Channel $postBody, $optParams = [])
   {

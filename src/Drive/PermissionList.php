@@ -28,10 +28,6 @@ class PermissionList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Permission[]
-   */
-  public $permissions;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
 

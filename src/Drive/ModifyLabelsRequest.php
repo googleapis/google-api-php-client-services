@@ -24,10 +24,6 @@ class ModifyLabelsRequest extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LabelModification[]
-   */
-  public $labelModifications;
   protected $labelModificationsType = LabelModification::class;
   protected $labelModificationsDataType = 'array';
 

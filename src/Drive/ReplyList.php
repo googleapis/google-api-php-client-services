@@ -28,10 +28,6 @@ class ReplyList extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Reply[]
-   */
-  public $replies;
   protected $repliesType = Reply::class;
   protected $repliesDataType = 'array';
 

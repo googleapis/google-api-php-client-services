@@ -20,10 +20,6 @@ namespace Google\Service\Drive;
 class CommentList extends \Google\Collection
 {
   protected $collection_key = 'comments';
-  /**
-   * @var Comment[]
-   */
-  public $comments;
   protected $commentsType = Comment::class;
   protected $commentsDataType = 'array';
   /**

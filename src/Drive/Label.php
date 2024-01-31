@@ -19,10 +19,6 @@ namespace Google\Service\Drive;
 
 class Label extends \Google\Model
 {
-  /**
-   * @var LabelField[]
-   */
-  public $fields;
   protected $fieldsType = LabelField::class;
   protected $fieldsDataType = 'map';
   /**

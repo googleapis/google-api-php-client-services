@@ -64,6 +64,7 @@ class Permissions extends \Google\Service\Resource
    * the file ID parameter refers to a shared drive and the requester is an
    * administrator of the domain to which the shared drive belongs.
    * @return Permission
+   * @throws \Google\Service\Exception
    */
   public function create($fileId, Permission $postBody, $optParams = [])
   {
@@ -88,6 +89,7 @@ class Permissions extends \Google\Service\Resource
    * administrator; if set to true, then the requester will be granted access if
    * the file ID parameter refers to a shared drive and the requester is an
    * administrator of the domain to which the shared drive belongs.
+   * @throws \Google\Service\Exception
    */
   public function delete($fileId, $permissionId, $optParams = [])
   {
@@ -111,6 +113,7 @@ class Permissions extends \Google\Service\Resource
    * the file ID parameter refers to a shared drive and the requester is an
    * administrator of the domain to which the shared drive belongs.
    * @return Permission
+   * @throws \Google\Service\Exception
    */
   public function get($fileId, $permissionId, $optParams = [])
   {
@@ -142,6 +145,7 @@ class Permissions extends \Google\Service\Resource
    * the file ID parameter refers to a shared drive and the requester is an
    * administrator of the domain to which the shared drive belongs.
    * @return PermissionList
+   * @throws \Google\Service\Exception
    */
   public function listPermissions($fileId, $optParams = [])
   {
@@ -172,6 +176,7 @@ class Permissions extends \Google\Service\Resource
    * the file ID parameter refers to a shared drive and the requester is an
    * administrator of the domain to which the shared drive belongs.
    * @return Permission
+   * @throws \Google\Service\Exception
    */
   public function update($fileId, $permissionId, Permission $postBody, $optParams = [])
   {

@@ -23,10 +23,6 @@ class DriveFileContentHints extends \Google\Model
    * @var string
    */
   public $indexableText;
-  /**
-   * @var DriveFileContentHintsThumbnail
-   */
-  public $thumbnail;
   protected $thumbnailType = DriveFileContentHintsThumbnail::class;
   protected $thumbnailDataType = '';
 

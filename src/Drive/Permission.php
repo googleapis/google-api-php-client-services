@@ -56,10 +56,6 @@ class Permission extends \Google\Collection
    * @var bool
    */
   public $pendingOwner;
-  /**
-   * @var PermissionPermissionDetails[]
-   */
-  public $permissionDetails;
   protected $permissionDetailsType = PermissionPermissionDetails::class;
   protected $permissionDetailsDataType = 'array';
   /**
@@ -70,10 +66,6 @@ class Permission extends \Google\Collection
    * @var string
    */
   public $role;
-  /**
-   * @var PermissionTeamDrivePermissionDetails[]
-   */
-  public $teamDrivePermissionDetails;
   protected $teamDrivePermissionDetailsType = PermissionTeamDrivePermissionDetails::class;
   protected $teamDrivePermissionDetailsDataType = 'array';
   /**

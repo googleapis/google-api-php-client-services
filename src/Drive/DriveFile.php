@@ -24,22 +24,10 @@ class DriveFile extends \Google\Collection
    * @var string[]
    */
   public $appProperties;
-  /**
-   * @var DriveFileCapabilities
-   */
-  public $capabilities;
   protected $capabilitiesType = DriveFileCapabilities::class;
   protected $capabilitiesDataType = '';
-  /**
-   * @var DriveFileContentHints
-   */
-  public $contentHints;
   protected $contentHintsType = DriveFileContentHints::class;
   protected $contentHintsDataType = '';
-  /**
-   * @var ContentRestriction[]
-   */
-  public $contentRestrictions;
   protected $contentRestrictionsType = ContentRestriction::class;
   protected $contentRestrictionsDataType = 'array';
   /**
@@ -98,10 +86,6 @@ class DriveFile extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var DriveFileImageMediaMetadata
-   */
-  public $imageMediaMetadata;
   protected $imageMediaMetadataType = DriveFileImageMediaMetadata::class;
   protected $imageMediaMetadataDataType = '';
   /**
@@ -112,22 +96,10 @@ class DriveFile extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var DriveFileLabelInfo
-   */
-  public $labelInfo;
   protected $labelInfoType = DriveFileLabelInfo::class;
   protected $labelInfoDataType = '';
-  /**
-   * @var User
-   */
-  public $lastModifyingUser;
   protected $lastModifyingUserType = User::class;
   protected $lastModifyingUserDataType = '';
-  /**
-   * @var DriveFileLinkShareMetadata
-   */
-  public $linkShareMetadata;
   protected $linkShareMetadataType = DriveFileLinkShareMetadata::class;
   protected $linkShareMetadataDataType = '';
   /**
@@ -162,10 +134,6 @@ class DriveFile extends \Google\Collection
    * @var bool
    */
   public $ownedByMe;
-  /**
-   * @var User[]
-   */
-  public $owners;
   protected $ownersType = User::class;
   protected $ownersDataType = 'array';
   /**
@@ -176,10 +144,6 @@ class DriveFile extends \Google\Collection
    * @var string[]
    */
   public $permissionIds;
-  /**
-   * @var Permission[]
-   */
-  public $permissions;
   protected $permissionsType = Permission::class;
   protected $permissionsDataType = 'array';
   /**
@@ -210,16 +174,8 @@ class DriveFile extends \Google\Collection
    * @var string
    */
   public $sharedWithMeTime;
-  /**
-   * @var User
-   */
-  public $sharingUser;
   protected $sharingUserType = User::class;
   protected $sharingUserDataType = '';
-  /**
-   * @var DriveFileShortcutDetails
-   */
-  public $shortcutDetails;
   protected $shortcutDetailsType = DriveFileShortcutDetails::class;
   protected $shortcutDetailsDataType = '';
   /**
@@ -254,20 +210,12 @@ class DriveFile extends \Google\Collection
    * @var string
    */
   public $trashedTime;
-  /**
-   * @var User
-   */
-  public $trashingUser;
   protected $trashingUserType = User::class;
   protected $trashingUserDataType = '';
   /**
    * @var string
    */
   public $version;
-  /**
-   * @var DriveFileVideoMediaMetadata
-   */
-  public $videoMediaMetadata;
   protected $videoMediaMetadataType = DriveFileVideoMediaMetadata::class;
   protected $videoMediaMetadataDataType = '';
   /**

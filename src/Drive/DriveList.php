@@ -20,10 +20,6 @@ namespace Google\Service\Drive;
 class DriveList extends \Google\Collection
 {
   protected $collection_key = 'drives';
-  /**
-   * @var Drive[]
-   */
-  public $drives;
   protected $drivesType = Drive::class;
   protected $drivesDataType = 'array';
   /**

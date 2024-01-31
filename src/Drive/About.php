@@ -32,10 +32,6 @@ class About extends \Google\Collection
    * @var bool
    */
   public $canCreateTeamDrives;
-  /**
-   * @var AboutDriveThemes[]
-   */
-  public $driveThemes;
   protected $driveThemesType = AboutDriveThemes::class;
   protected $driveThemesDataType = 'array';
   /**
@@ -62,22 +58,10 @@ class About extends \Google\Collection
    * @var string
    */
   public $maxUploadSize;
-  /**
-   * @var AboutStorageQuota
-   */
-  public $storageQuota;
   protected $storageQuotaType = AboutStorageQuota::class;
   protected $storageQuotaDataType = '';
-  /**
-   * @var AboutTeamDriveThemes[]
-   */
-  public $teamDriveThemes;
   protected $teamDriveThemesType = AboutTeamDriveThemes::class;
   protected $teamDriveThemesDataType = 'array';
-  /**
-   * @var User
-   */
-  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 

@@ -67,10 +67,6 @@ class DriveFileImageMediaMetadata extends \Google\Model
    * @var string
    */
   public $lens;
-  /**
-   * @var DriveFileImageMediaMetadataLocation
-   */
-  public $location;
   protected $locationType = DriveFileImageMediaMetadataLocation::class;
   protected $locationDataType = '';
   /**

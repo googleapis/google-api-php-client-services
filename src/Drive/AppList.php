@@ -17,16 +17,52 @@
 
 namespace Google\Service\Drive;
 
-class ModifyLabelsResponse extends \Google\Collection
+class AppList extends \Google\Collection
 {
-  protected $collection_key = 'modifiedLabels';
+  protected $collection_key = 'items';
+  /**
+   * @var string[]
+   */
+  public $defaultAppIds;
+  protected $itemsType = App::class;
+  protected $itemsDataType = 'array';
   /**
    * @var string
    */
   public $kind;
-  protected $modifiedLabelsType = Label::class;
-  protected $modifiedLabelsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $selfLink;
 
+  /**
+   * @param string[]
+   */
+  public function setDefaultAppIds($defaultAppIds)
+  {
+    $this->defaultAppIds = $defaultAppIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDefaultAppIds()
+  {
+    return $this->defaultAppIds;
+  }
+  /**
+   * @param App[]
+   */
+  public function setItems($items)
+  {
+    $this->items = $items;
+  }
+  /**
+   * @return App[]
+   */
+  public function getItems()
+  {
+    return $this->items;
+  }
   /**
    * @param string
    */
@@ -42,20 +78,20 @@ class ModifyLabelsResponse extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param Label[]
+   * @param string
    */
-  public function setModifiedLabels($modifiedLabels)
+  public function setSelfLink($selfLink)
   {
-    $this->modifiedLabels = $modifiedLabels;
+    $this->selfLink = $selfLink;
   }
   /**
-   * @return Label[]
+   * @return string
    */
-  public function getModifiedLabels()
+  public function getSelfLink()
   {
-    return $this->modifiedLabels;
+    return $this->selfLink;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ModifyLabelsResponse::class, 'Google_Service_Drive_ModifyLabelsResponse');
+class_alias(AppList::class, 'Google_Service_Drive_AppList');

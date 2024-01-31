@@ -17,45 +17,64 @@
 
 namespace Google\Service\Drive;
 
-class ModifyLabelsResponse extends \Google\Collection
+class AppIcons extends \Google\Model
 {
-  protected $collection_key = 'modifiedLabels';
   /**
    * @var string
    */
-  public $kind;
-  protected $modifiedLabelsType = Label::class;
-  protected $modifiedLabelsDataType = 'array';
+  public $category;
+  /**
+   * @var string
+   */
+  public $iconUrl;
+  /**
+   * @var int
+   */
+  public $size;
 
   /**
    * @param string
    */
-  public function setKind($kind)
+  public function setCategory($category)
   {
-    $this->kind = $kind;
+    $this->category = $category;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getCategory()
   {
-    return $this->kind;
+    return $this->category;
   }
   /**
-   * @param Label[]
+   * @param string
    */
-  public function setModifiedLabels($modifiedLabels)
+  public function setIconUrl($iconUrl)
   {
-    $this->modifiedLabels = $modifiedLabels;
+    $this->iconUrl = $iconUrl;
   }
   /**
-   * @return Label[]
+   * @return string
    */
-  public function getModifiedLabels()
+  public function getIconUrl()
   {
-    return $this->modifiedLabels;
+    return $this->iconUrl;
+  }
+  /**
+   * @param int
+   */
+  public function setSize($size)
+  {
+    $this->size = $size;
+  }
+  /**
+   * @return int
+   */
+  public function getSize()
+  {
+    return $this->size;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ModifyLabelsResponse::class, 'Google_Service_Drive_ModifyLabelsResponse');
+class_alias(AppIcons::class, 'Google_Service_Drive_AppIcons');
