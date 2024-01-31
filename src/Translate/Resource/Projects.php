@@ -48,6 +48,7 @@ class Projects extends \Google\Service\Resource
    * @param DetectLanguageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DetectLanguageResponse
+   * @throws \Google\Service\Exception
    */
   public function detectLanguage($parent, DetectLanguageRequest $postBody, $optParams = [])
   {
@@ -79,6 +80,7 @@ class Projects extends \Google\Service\Resource
    * by the specified model. If missing, we get supported languages of Google
    * general NMT model.
    * @return SupportedLanguages
+   * @throws \Google\Service\Exception
    */
   public function getSupportedLanguages($parent, $optParams = [])
   {
@@ -98,6 +100,7 @@ class Projects extends \Google\Service\Resource
    * @param RomanizeTextRequest $postBody
    * @param array $optParams Optional parameters.
    * @return RomanizeTextResponse
+   * @throws \Google\Service\Exception
    */
   public function romanizeText($parent, RomanizeTextRequest $postBody, $optParams = [])
   {
@@ -119,6 +122,7 @@ class Projects extends \Google\Service\Resource
    * @param TranslateTextRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TranslateTextResponse
+   * @throws \Google\Service\Exception
    */
   public function translateText($parent, TranslateTextRequest $postBody, $optParams = [])
   {

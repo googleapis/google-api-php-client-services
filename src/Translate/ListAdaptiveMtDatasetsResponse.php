@@ -20,10 +20,6 @@ namespace Google\Service\Translate;
 class ListAdaptiveMtDatasetsResponse extends \Google\Collection
 {
   protected $collection_key = 'adaptiveMtDatasets';
-  /**
-   * @var AdaptiveMtDataset[]
-   */
-  public $adaptiveMtDatasets;
   protected $adaptiveMtDatasetsType = AdaptiveMtDataset::class;
   protected $adaptiveMtDatasetsDataType = 'array';
   /**

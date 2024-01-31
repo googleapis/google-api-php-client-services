@@ -20,10 +20,6 @@ namespace Google\Service\Translate;
 class ListExamplesResponse extends \Google\Collection
 {
   protected $collection_key = 'examples';
-  /**
-   * @var Example[]
-   */
-  public $examples;
   protected $examplesType = Example::class;
   protected $examplesDataType = 'array';
   /**

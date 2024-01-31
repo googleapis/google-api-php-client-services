@@ -31,22 +31,10 @@ class Glossary extends \Google\Model
    * @var int
    */
   public $entryCount;
-  /**
-   * @var GlossaryInputConfig
-   */
-  public $inputConfig;
   protected $inputConfigType = GlossaryInputConfig::class;
   protected $inputConfigDataType = '';
-  /**
-   * @var LanguageCodesSet
-   */
-  public $languageCodesSet;
   protected $languageCodesSetType = LanguageCodesSet::class;
   protected $languageCodesSetDataType = '';
-  /**
-   * @var LanguageCodePair
-   */
-  public $languagePair;
   protected $languagePairType = LanguageCodePair::class;
   protected $languagePairDataType = '';
   /**

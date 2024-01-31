@@ -27,16 +27,8 @@ class GlossaryEntry extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var GlossaryTermsPair
-   */
-  public $termsPair;
   protected $termsPairType = GlossaryTermsPair::class;
   protected $termsPairDataType = '';
-  /**
-   * @var GlossaryTermsSet
-   */
-  public $termsSet;
   protected $termsSetType = GlossaryTermsSet::class;
   protected $termsSetDataType = '';
 

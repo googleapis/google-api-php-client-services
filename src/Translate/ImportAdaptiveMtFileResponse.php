@@ -19,10 +19,6 @@ namespace Google\Service\Translate;
 
 class ImportAdaptiveMtFileResponse extends \Google\Model
 {
-  /**
-   * @var AdaptiveMtFile
-   */
-  public $adaptiveMtFile;
   protected $adaptiveMtFileType = AdaptiveMtFile::class;
   protected $adaptiveMtFileDataType = '';
 

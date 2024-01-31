@@ -39,6 +39,7 @@ class ProjectsLocationsGlossaries extends \Google\Service\Resource
    * @param Glossary $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Glossary $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class ProjectsLocationsGlossaries extends \Google\Service\Resource
    * @param string $name Required. The name of the glossary to delete.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -68,6 +70,7 @@ class ProjectsLocationsGlossaries extends \Google\Service\Resource
    * @param string $name Required. The name of the glossary to retrieve.
    * @param array $optParams Optional parameters.
    * @return Glossary
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -107,6 +110,7 @@ class ProjectsLocationsGlossaries extends \Google\Service\Resource
    * `ListGlossaries` method. The first page is returned if `page_token`is empty
    * or missing.
    * @return ListGlossariesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsGlossaries($parent, $optParams = [])
   {
@@ -127,6 +131,7 @@ class ProjectsLocationsGlossaries extends \Google\Service\Resource
    * @opt_param string updateMask The list of fields to be updated. Currently only
    * `display_name` and 'input_config'
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Glossary $postBody, $optParams = [])
   {

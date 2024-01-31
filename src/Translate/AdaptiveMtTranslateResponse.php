@@ -24,10 +24,6 @@ class AdaptiveMtTranslateResponse extends \Google\Collection
    * @var string
    */
   public $languageCode;
-  /**
-   * @var AdaptiveMtTranslation[]
-   */
-  public $translations;
   protected $translationsType = AdaptiveMtTranslation::class;
   protected $translationsDataType = 'array';
 

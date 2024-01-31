@@ -19,10 +19,6 @@ namespace Google\Service\Translate;
 
 class ExportDataRequest extends \Google\Model
 {
-  /**
-   * @var DatasetOutputConfig
-   */
-  public $outputConfig;
   protected $outputConfigType = DatasetOutputConfig::class;
   protected $outputConfigDataType = '';
 

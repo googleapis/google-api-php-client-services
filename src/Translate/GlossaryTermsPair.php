@@ -19,16 +19,8 @@ namespace Google\Service\Translate;
 
 class GlossaryTermsPair extends \Google\Model
 {
-  /**
-   * @var GlossaryTerm
-   */
-  public $sourceTerm;
   protected $sourceTermType = GlossaryTerm::class;
   protected $sourceTermDataType = '';
-  /**
-   * @var GlossaryTerm
-   */
-  public $targetTerm;
   protected $targetTermType = GlossaryTerm::class;
   protected $targetTermDataType = '';
 

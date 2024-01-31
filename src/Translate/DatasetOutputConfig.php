@@ -19,10 +19,6 @@ namespace Google\Service\Translate;
 
 class DatasetOutputConfig extends \Google\Model
 {
-  /**
-   * @var GcsOutputDestination
-   */
-  public $gcsDestination;
   protected $gcsDestinationType = GcsOutputDestination::class;
   protected $gcsDestinationDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Translate;
 
 class DocumentOutputConfig extends \Google\Model
 {
-  /**
-   * @var GcsDestination
-   */
-  public $gcsDestination;
   protected $gcsDestinationType = GcsDestination::class;
   protected $gcsDestinationDataType = '';
   /**

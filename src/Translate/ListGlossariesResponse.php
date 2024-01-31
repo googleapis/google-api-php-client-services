@@ -20,10 +20,6 @@ namespace Google\Service\Translate;
 class ListGlossariesResponse extends \Google\Collection
 {
   protected $collection_key = 'glossaries';
-  /**
-   * @var Glossary[]
-   */
-  public $glossaries;
   protected $glossariesType = Glossary::class;
   protected $glossariesDataType = 'array';
   /**

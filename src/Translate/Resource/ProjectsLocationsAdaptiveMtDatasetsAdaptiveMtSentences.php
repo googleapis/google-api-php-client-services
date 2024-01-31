@@ -48,6 +48,7 @@ class ProjectsLocationsAdaptiveMtDatasetsAdaptiveMtSentences extends \Google\Ser
    * call to `ListTranslationMemories` method. The first page is returned if
    * `page_token` is empty or missing.
    * @return ListAdaptiveMtSentencesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAdaptiveMtDatasetsAdaptiveMtSentences($parent, $optParams = [])
   {

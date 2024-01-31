@@ -19,10 +19,6 @@ namespace Google\Service\Translate;
 
 class GlossaryInputConfig extends \Google\Model
 {
-  /**
-   * @var GcsSource
-   */
-  public $gcsSource;
   protected $gcsSourceType = GcsSource::class;
   protected $gcsSourceDataType = '';
 

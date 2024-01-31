@@ -19,10 +19,6 @@ namespace Google\Service\Translate;
 
 class BatchDocumentOutputConfig extends \Google\Model
 {
-  /**
-   * @var GcsDestination
-   */
-  public $gcsDestination;
   protected $gcsDestinationType = GcsDestination::class;
   protected $gcsDestinationDataType = '';
 

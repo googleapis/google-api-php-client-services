@@ -41,6 +41,7 @@ class ProjectsLocationsAdaptiveMtDatasets extends \Google\Service\Resource
    * @param AdaptiveMtDataset $postBody
    * @param array $optParams Optional parameters.
    * @return AdaptiveMtDataset
+   * @throws \Google\Service\Exception
    */
   public function create($parent, AdaptiveMtDataset $postBody, $optParams = [])
   {
@@ -57,6 +58,7 @@ class ProjectsLocationsAdaptiveMtDatasets extends \Google\Service\Resource
    * id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
    * @param array $optParams Optional parameters.
    * @return TranslateEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -72,6 +74,7 @@ class ProjectsLocationsAdaptiveMtDatasets extends \Google\Service\Resource
    * id}/adaptiveMtDatasets/{adaptive-mt-dataset-id}`
    * @param array $optParams Optional parameters.
    * @return AdaptiveMtDataset
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -89,6 +92,7 @@ class ProjectsLocationsAdaptiveMtDatasets extends \Google\Service\Resource
    * @param ImportAdaptiveMtFileRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ImportAdaptiveMtFileResponse
+   * @throws \Google\Service\Exception
    */
   public function importAdaptiveMtFile($parent, ImportAdaptiveMtFileRequest $postBody, $optParams = [])
   {
@@ -116,6 +120,7 @@ class ProjectsLocationsAdaptiveMtDatasets extends \Google\Service\Resource
    * call to `ListAdaptiveMtDatasets` method. The first page is returned if
    * `page_token`is empty or missing.
    * @return ListAdaptiveMtDatasetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsAdaptiveMtDatasets($parent, $optParams = [])
   {
