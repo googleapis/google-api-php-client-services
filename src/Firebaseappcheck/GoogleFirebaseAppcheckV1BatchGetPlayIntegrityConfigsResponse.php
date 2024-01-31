@@ -20,10 +20,6 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchGetPlayIntegrityConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'configs';
-  /**
-   * @var GoogleFirebaseAppcheckV1PlayIntegrityConfig[]
-   */
-  public $configs;
   protected $configsType = GoogleFirebaseAppcheckV1PlayIntegrityConfig::class;
   protected $configsDataType = 'array';
 

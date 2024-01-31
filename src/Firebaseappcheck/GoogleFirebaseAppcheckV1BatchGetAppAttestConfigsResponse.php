@@ -20,10 +20,6 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchGetAppAttestConfigsResponse extends \Google\Collection
 {
   protected $collection_key = 'configs';
-  /**
-   * @var GoogleFirebaseAppcheckV1AppAttestConfig[]
-   */
-  public $configs;
   protected $configsType = GoogleFirebaseAppcheckV1AppAttestConfig::class;
   protected $configsDataType = 'array';
 

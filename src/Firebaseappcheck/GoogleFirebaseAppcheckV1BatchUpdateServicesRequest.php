@@ -20,10 +20,6 @@ namespace Google\Service\Firebaseappcheck;
 class GoogleFirebaseAppcheckV1BatchUpdateServicesRequest extends \Google\Collection
 {
   protected $collection_key = 'requests';
-  /**
-   * @var GoogleFirebaseAppcheckV1UpdateServiceRequest[]
-   */
-  public $requests;
   protected $requestsType = GoogleFirebaseAppcheckV1UpdateServiceRequest::class;
   protected $requestsDataType = 'array';
   /**

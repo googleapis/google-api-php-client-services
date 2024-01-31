@@ -24,10 +24,6 @@ class GoogleFirebaseAppcheckV1ListServicesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleFirebaseAppcheckV1Service[]
-   */
-  public $services;
   protected $servicesType = GoogleFirebaseAppcheckV1Service::class;
   protected $servicesDataType = 'array';
 
