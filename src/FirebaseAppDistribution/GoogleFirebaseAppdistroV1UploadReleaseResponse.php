@@ -19,10 +19,6 @@ namespace Google\Service\FirebaseAppDistribution;
 
 class GoogleFirebaseAppdistroV1UploadReleaseResponse extends \Google\Model
 {
-  /**
-   * @var GoogleFirebaseAppdistroV1Release
-   */
-  public $release;
   protected $releaseType = GoogleFirebaseAppdistroV1Release::class;
   protected $releaseDataType = '';
   /**

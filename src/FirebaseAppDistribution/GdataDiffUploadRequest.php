@@ -19,16 +19,8 @@ namespace Google\Service\FirebaseAppDistribution;
 
 class GdataDiffUploadRequest extends \Google\Model
 {
-  /**
-   * @var GdataCompositeMedia
-   */
-  public $checksumsInfo;
   protected $checksumsInfoType = GdataCompositeMedia::class;
   protected $checksumsInfoDataType = '';
-  /**
-   * @var GdataCompositeMedia
-   */
-  public $objectInfo;
   protected $objectInfoType = GdataCompositeMedia::class;
   protected $objectInfoDataType = '';
   /**
