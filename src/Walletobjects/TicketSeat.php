@@ -23,10 +23,6 @@ class TicketSeat extends \Google\Model
    * @var string
    */
   public $coach;
-  /**
-   * @var LocalizedString
-   */
-  public $customFareClass;
   protected $customFareClassType = LocalizedString::class;
   protected $customFareClassDataType = '';
   /**
@@ -37,10 +33,6 @@ class TicketSeat extends \Google\Model
    * @var string
    */
   public $seat;
-  /**
-   * @var LocalizedString
-   */
-  public $seatAssignment;
   protected $seatAssignmentType = LocalizedString::class;
   protected $seatAssignmentDataType = '';
 

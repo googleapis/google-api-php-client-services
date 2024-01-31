@@ -20,144 +20,56 @@ namespace Google\Service\Walletobjects;
 class TransitClass extends \Google\Collection
 {
   protected $collection_key = 'textModulesData';
-  /**
-   * @var ActivationOptions
-   */
-  public $activationOptions;
   protected $activationOptionsType = ActivationOptions::class;
   protected $activationOptionsDataType = '';
   /**
    * @var bool
    */
   public $allowMultipleUsersPerObject;
-  /**
-   * @var CallbackOptions
-   */
-  public $callbackOptions;
   protected $callbackOptionsType = CallbackOptions::class;
   protected $callbackOptionsDataType = '';
-  /**
-   * @var ClassTemplateInfo
-   */
-  public $classTemplateInfo;
   protected $classTemplateInfoType = ClassTemplateInfo::class;
   protected $classTemplateInfoDataType = '';
   /**
    * @var string
    */
   public $countryCode;
-  /**
-   * @var LocalizedString
-   */
-  public $customCarriageLabel;
   protected $customCarriageLabelType = LocalizedString::class;
   protected $customCarriageLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customCoachLabel;
   protected $customCoachLabelType = LocalizedString::class;
   protected $customCoachLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customConcessionCategoryLabel;
   protected $customConcessionCategoryLabelType = LocalizedString::class;
   protected $customConcessionCategoryLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customConfirmationCodeLabel;
   protected $customConfirmationCodeLabelType = LocalizedString::class;
   protected $customConfirmationCodeLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customDiscountMessageLabel;
   protected $customDiscountMessageLabelType = LocalizedString::class;
   protected $customDiscountMessageLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customFareClassLabel;
   protected $customFareClassLabelType = LocalizedString::class;
   protected $customFareClassLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customFareNameLabel;
   protected $customFareNameLabelType = LocalizedString::class;
   protected $customFareNameLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customOtherRestrictionsLabel;
   protected $customOtherRestrictionsLabelType = LocalizedString::class;
   protected $customOtherRestrictionsLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customPlatformLabel;
   protected $customPlatformLabelType = LocalizedString::class;
   protected $customPlatformLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customPurchaseFaceValueLabel;
   protected $customPurchaseFaceValueLabelType = LocalizedString::class;
   protected $customPurchaseFaceValueLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customPurchasePriceLabel;
   protected $customPurchasePriceLabelType = LocalizedString::class;
   protected $customPurchasePriceLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customPurchaseReceiptNumberLabel;
   protected $customPurchaseReceiptNumberLabelType = LocalizedString::class;
   protected $customPurchaseReceiptNumberLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customRouteRestrictionsDetailsLabel;
   protected $customRouteRestrictionsDetailsLabelType = LocalizedString::class;
   protected $customRouteRestrictionsDetailsLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customRouteRestrictionsLabel;
   protected $customRouteRestrictionsLabelType = LocalizedString::class;
   protected $customRouteRestrictionsLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customSeatLabel;
   protected $customSeatLabelType = LocalizedString::class;
   protected $customSeatLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customTicketNumberLabel;
   protected $customTicketNumberLabelType = LocalizedString::class;
   protected $customTicketNumberLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customTimeRestrictionsLabel;
   protected $customTimeRestrictionsLabelType = LocalizedString::class;
   protected $customTimeRestrictionsLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customTransitTerminusNameLabel;
   protected $customTransitTerminusNameLabelType = LocalizedString::class;
   protected $customTransitTerminusNameLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customZoneLabel;
   protected $customZoneLabelType = LocalizedString::class;
   protected $customZoneLabelDataType = '';
   /**
@@ -168,36 +80,20 @@ class TransitClass extends \Google\Collection
    * @var bool
    */
   public $enableSmartTap;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
    * @var string
    */
   public $hexBackgroundColor;
-  /**
-   * @var Uri
-   */
-  public $homepageUri;
   protected $homepageUriType = Uri::class;
   protected $homepageUriDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
@@ -208,34 +104,14 @@ class TransitClass extends \Google\Collection
    * @var string
    */
   public $languageOverride;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedIssuerName;
   protected $localizedIssuerNameType = LocalizedString::class;
   protected $localizedIssuerNameDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Image
-   */
-  public $logo;
   protected $logoType = Image::class;
   protected $logoDataType = '';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**
@@ -246,32 +122,16 @@ class TransitClass extends \Google\Collection
    * @var string[]
    */
   public $redemptionIssuers;
-  /**
-   * @var Review
-   */
-  public $review;
   protected $reviewType = Review::class;
   protected $reviewDataType = '';
   /**
    * @var string
    */
   public $reviewStatus;
-  /**
-   * @var SecurityAnimation
-   */
-  public $securityAnimation;
   protected $securityAnimationType = SecurityAnimation::class;
   protected $securityAnimationDataType = '';
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
-  /**
-   * @var LocalizedString
-   */
-  public $transitOperatorName;
   protected $transitOperatorNameType = LocalizedString::class;
   protected $transitOperatorNameDataType = '';
   /**
@@ -286,22 +146,10 @@ class TransitClass extends \Google\Collection
    * @var string
    */
   public $viewUnlockRequirement;
-  /**
-   * @var Image
-   */
-  public $watermark;
   protected $watermarkType = Image::class;
   protected $watermarkDataType = '';
-  /**
-   * @var Image
-   */
-  public $wideLogo;
   protected $wideLogoType = Image::class;
   protected $wideLogoDataType = '';
-  /**
-   * @var Image
-   */
-  public $wordMark;
   protected $wordMarkType = Image::class;
   protected $wordMarkDataType = '';
 

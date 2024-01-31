@@ -36,6 +36,7 @@ class Jwt extends \Google\Service\Resource
    * @param JwtResource $postBody
    * @param array $optParams Optional parameters.
    * @return JwtInsertResponse
+   * @throws \Google\Service\Exception
    */
   public function insert(JwtResource $postBody, $optParams = [])
   {

@@ -19,28 +19,12 @@ namespace Google\Service\Walletobjects;
 
 class TicketRestrictions extends \Google\Model
 {
-  /**
-   * @var LocalizedString
-   */
-  public $otherRestrictions;
   protected $otherRestrictionsType = LocalizedString::class;
   protected $otherRestrictionsDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $routeRestrictions;
   protected $routeRestrictionsType = LocalizedString::class;
   protected $routeRestrictionsDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $routeRestrictionsDetails;
   protected $routeRestrictionsDetailsType = LocalizedString::class;
   protected $routeRestrictionsDetailsDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $timeRestrictions;
   protected $timeRestrictionsType = LocalizedString::class;
   protected $timeRestrictionsDataType = '';
 

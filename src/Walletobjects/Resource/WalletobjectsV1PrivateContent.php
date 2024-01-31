@@ -40,6 +40,7 @@ class WalletobjectsV1PrivateContent extends \Google\Service\Resource
    * @param SetPassUpdateNoticeRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SetPassUpdateNoticeResponse
+   * @throws \Google\Service\Exception
    */
   public function setPassUpdateNotice(SetPassUpdateNoticeRequest $postBody, $optParams = [])
   {
@@ -54,6 +55,7 @@ class WalletobjectsV1PrivateContent extends \Google\Service\Resource
    * @param UploadPrivateDataRequest $postBody
    * @param array $optParams Optional parameters.
    * @return UploadPrivateDataResponse
+   * @throws \Google\Service\Exception
    */
   public function uploadPrivateData(UploadPrivateDataRequest $postBody, $optParams = [])
   {

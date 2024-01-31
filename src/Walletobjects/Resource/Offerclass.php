@@ -44,6 +44,7 @@ class Offerclass extends \Google\Service\Resource
    * @param AddMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return OfferClassAddMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class Offerclass extends \Google\Service\Resource
    * characters, '.', '_', or '-'.
    * @param array $optParams Optional parameters.
    * @return OfferClassModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -74,6 +76,7 @@ class Offerclass extends \Google\Service\Resource
    * @param OfferClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return OfferClassModel
+   * @throws \Google\Service\Exception
    */
   public function insert(OfferClassModel $postBody, $optParams = [])
   {
@@ -97,6 +100,7 @@ class Offerclass extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * classes.
    * @return OfferClassListResponse
+   * @throws \Google\Service\Exception
    */
   public function listOfferclass($optParams = [])
   {
@@ -116,6 +120,7 @@ class Offerclass extends \Google\Service\Resource
    * @param OfferClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return OfferClassModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, OfferClassModel $postBody, $optParams = [])
   {
@@ -134,6 +139,7 @@ class Offerclass extends \Google\Service\Resource
    * @param OfferClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return OfferClassModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, OfferClassModel $postBody, $optParams = [])
   {

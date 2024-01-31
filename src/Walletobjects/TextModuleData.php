@@ -31,16 +31,8 @@ class TextModuleData extends \Google\Model
    * @var string
    */
   public $id;
-  /**
-   * @var LocalizedString
-   */
-  public $localizedBody;
   protected $localizedBodyType = LocalizedString::class;
   protected $localizedBodyDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedHeader;
   protected $localizedHeaderType = LocalizedString::class;
   protected $localizedHeaderDataType = '';
 

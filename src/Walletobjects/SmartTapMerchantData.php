@@ -20,10 +20,6 @@ namespace Google\Service\Walletobjects;
 class SmartTapMerchantData extends \Google\Collection
 {
   protected $collection_key = 'authenticationKeys';
-  /**
-   * @var AuthenticationKey[]
-   */
-  public $authenticationKeys;
   protected $authenticationKeysType = AuthenticationKey::class;
   protected $authenticationKeysDataType = 'array';
   /**

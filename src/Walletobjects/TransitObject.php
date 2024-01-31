@@ -20,64 +20,32 @@ namespace Google\Service\Walletobjects;
 class TransitObject extends \Google\Collection
 {
   protected $collection_key = 'ticketLegs';
-  /**
-   * @var ActivationStatus
-   */
-  public $activationStatus;
   protected $activationStatusType = ActivationStatus::class;
   protected $activationStatusDataType = '';
-  /**
-   * @var AppLinkData
-   */
-  public $appLinkData;
   protected $appLinkDataType = AppLinkData::class;
   protected $appLinkDataDataType = '';
-  /**
-   * @var Barcode
-   */
-  public $barcode;
   protected $barcodeType = Barcode::class;
   protected $barcodeDataType = '';
   /**
    * @var string
    */
   public $classId;
-  /**
-   * @var TransitClass
-   */
-  public $classReference;
   protected $classReferenceType = TransitClass::class;
   protected $classReferenceDataType = '';
   /**
    * @var string
    */
   public $concessionCategory;
-  /**
-   * @var LocalizedString
-   */
-  public $customConcessionCategory;
   protected $customConcessionCategoryType = LocalizedString::class;
   protected $customConcessionCategoryDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $customTicketStatus;
   protected $customTicketStatusType = LocalizedString::class;
   protected $customTicketStatusDataType = '';
-  /**
-   * @var DeviceContext
-   */
-  public $deviceContext;
   protected $deviceContextType = DeviceContext::class;
   protected $deviceContextDataType = '';
   /**
    * @var bool
    */
   public $disableExpirationNotification;
-  /**
-   * @var GroupingInfo
-   */
-  public $groupingInfo;
   protected $groupingInfoType = GroupingInfo::class;
   protected $groupingInfoDataType = '';
   /**
@@ -88,10 +56,6 @@ class TransitObject extends \Google\Collection
    * @var bool
    */
   public $hasUsers;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
@@ -102,40 +66,16 @@ class TransitObject extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  /**
-   * @var PassConstraints
-   */
-  public $passConstraints;
   protected $passConstraintsType = PassConstraints::class;
   protected $passConstraintsDataType = '';
   /**
@@ -146,16 +86,8 @@ class TransitObject extends \Google\Collection
    * @var string
    */
   public $passengerType;
-  /**
-   * @var PurchaseDetails
-   */
-  public $purchaseDetails;
   protected $purchaseDetailsType = PurchaseDetails::class;
   protected $purchaseDetailsDataType = '';
-  /**
-   * @var RotatingBarcode
-   */
-  public $rotatingBarcode;
   protected $rotatingBarcodeType = RotatingBarcode::class;
   protected $rotatingBarcodeDataType = '';
   /**
@@ -166,32 +98,16 @@ class TransitObject extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
-  /**
-   * @var TicketLeg
-   */
-  public $ticketLeg;
   protected $ticketLegType = TicketLeg::class;
   protected $ticketLegDataType = '';
-  /**
-   * @var TicketLeg[]
-   */
-  public $ticketLegs;
   protected $ticketLegsType = TicketLeg::class;
   protected $ticketLegsDataType = 'array';
   /**
    * @var string
    */
   public $ticketNumber;
-  /**
-   * @var TicketRestrictions
-   */
-  public $ticketRestrictions;
   protected $ticketRestrictionsType = TicketRestrictions::class;
   protected $ticketRestrictionsDataType = '';
   /**
@@ -206,10 +122,6 @@ class TransitObject extends \Google\Collection
    * @var string
    */
   public $tripType;
-  /**
-   * @var TimeInterval
-   */
-  public $validTimeInterval;
   protected $validTimeIntervalType = TimeInterval::class;
   protected $validTimeIntervalDataType = '';
   /**

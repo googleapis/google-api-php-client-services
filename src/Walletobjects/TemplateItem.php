@@ -19,20 +19,12 @@ namespace Google\Service\Walletobjects;
 
 class TemplateItem extends \Google\Model
 {
-  /**
-   * @var FieldSelector
-   */
-  public $firstValue;
   protected $firstValueType = FieldSelector::class;
   protected $firstValueDataType = '';
   /**
    * @var string
    */
   public $predefinedItem;
-  /**
-   * @var FieldSelector
-   */
-  public $secondValue;
   protected $secondValueType = FieldSelector::class;
   protected $secondValueDataType = '';
 

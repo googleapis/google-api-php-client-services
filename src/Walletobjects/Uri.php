@@ -31,10 +31,6 @@ class Uri extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var LocalizedString
-   */
-  public $localizedDescription;
   protected $localizedDescriptionType = LocalizedString::class;
   protected $localizedDescriptionDataType = '';
   /**

@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class TransitClassListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var Pagination
-   */
-  public $pagination;
   protected $paginationType = Pagination::class;
   protected $paginationDataType = '';
-  /**
-   * @var TransitClass[]
-   */
-  public $resources;
   protected $resourcesType = TransitClass::class;
   protected $resourcesDataType = 'array';
 

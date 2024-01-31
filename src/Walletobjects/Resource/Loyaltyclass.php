@@ -44,6 +44,7 @@ class Loyaltyclass extends \Google\Service\Resource
    * @param AddMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return LoyaltyClassAddMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class Loyaltyclass extends \Google\Service\Resource
    * characters, '.', '_', or '-'.
    * @param array $optParams Optional parameters.
    * @return LoyaltyClassModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -75,6 +77,7 @@ class Loyaltyclass extends \Google\Service\Resource
    * @param LoyaltyClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return LoyaltyClassModel
+   * @throws \Google\Service\Exception
    */
   public function insert(LoyaltyClassModel $postBody, $optParams = [])
   {
@@ -98,6 +101,7 @@ class Loyaltyclass extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * classes.
    * @return LoyaltyClassListResponse
+   * @throws \Google\Service\Exception
    */
   public function listLoyaltyclass($optParams = [])
   {
@@ -117,6 +121,7 @@ class Loyaltyclass extends \Google\Service\Resource
    * @param LoyaltyClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return LoyaltyClassModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, LoyaltyClassModel $postBody, $optParams = [])
   {
@@ -136,6 +141,7 @@ class Loyaltyclass extends \Google\Service\Resource
    * @param LoyaltyClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return LoyaltyClassModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, LoyaltyClassModel $postBody, $optParams = [])
   {

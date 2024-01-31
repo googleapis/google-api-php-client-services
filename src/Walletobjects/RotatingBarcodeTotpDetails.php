@@ -24,10 +24,6 @@ class RotatingBarcodeTotpDetails extends \Google\Collection
    * @var string
    */
   public $algorithm;
-  /**
-   * @var RotatingBarcodeTotpDetailsTotpParameters[]
-   */
-  public $parameters;
   protected $parametersType = RotatingBarcodeTotpDetailsTotpParameters::class;
   protected $parametersDataType = 'array';
   /**

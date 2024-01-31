@@ -19,22 +19,10 @@ namespace Google\Service\Walletobjects;
 
 class TicketCost extends \Google\Model
 {
-  /**
-   * @var LocalizedString
-   */
-  public $discountMessage;
   protected $discountMessageType = LocalizedString::class;
   protected $discountMessageDataType = '';
-  /**
-   * @var Money
-   */
-  public $faceValue;
   protected $faceValueType = Money::class;
   protected $faceValueDataType = '';
-  /**
-   * @var Money
-   */
-  public $purchasePrice;
   protected $purchasePriceType = Money::class;
   protected $purchasePriceDataType = '';
 

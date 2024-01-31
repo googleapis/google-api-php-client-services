@@ -20,76 +20,28 @@ namespace Google\Service\Walletobjects;
 class Resources extends \Google\Collection
 {
   protected $collection_key = 'transitObjects';
-  /**
-   * @var EventTicketClass[]
-   */
-  public $eventTicketClasses;
   protected $eventTicketClassesType = EventTicketClass::class;
   protected $eventTicketClassesDataType = 'array';
-  /**
-   * @var EventTicketObject[]
-   */
-  public $eventTicketObjects;
   protected $eventTicketObjectsType = EventTicketObject::class;
   protected $eventTicketObjectsDataType = 'array';
-  /**
-   * @var FlightClass[]
-   */
-  public $flightClasses;
   protected $flightClassesType = FlightClass::class;
   protected $flightClassesDataType = 'array';
-  /**
-   * @var FlightObject[]
-   */
-  public $flightObjects;
   protected $flightObjectsType = FlightObject::class;
   protected $flightObjectsDataType = 'array';
-  /**
-   * @var GiftCardClass[]
-   */
-  public $giftCardClasses;
   protected $giftCardClassesType = GiftCardClass::class;
   protected $giftCardClassesDataType = 'array';
-  /**
-   * @var GiftCardObject[]
-   */
-  public $giftCardObjects;
   protected $giftCardObjectsType = GiftCardObject::class;
   protected $giftCardObjectsDataType = 'array';
-  /**
-   * @var LoyaltyClass[]
-   */
-  public $loyaltyClasses;
   protected $loyaltyClassesType = LoyaltyClass::class;
   protected $loyaltyClassesDataType = 'array';
-  /**
-   * @var LoyaltyObject[]
-   */
-  public $loyaltyObjects;
   protected $loyaltyObjectsType = LoyaltyObject::class;
   protected $loyaltyObjectsDataType = 'array';
-  /**
-   * @var OfferClass[]
-   */
-  public $offerClasses;
   protected $offerClassesType = OfferClass::class;
   protected $offerClassesDataType = 'array';
-  /**
-   * @var OfferObject[]
-   */
-  public $offerObjects;
   protected $offerObjectsType = OfferObject::class;
   protected $offerObjectsDataType = 'array';
-  /**
-   * @var TransitClass[]
-   */
-  public $transitClasses;
   protected $transitClassesType = TransitClass::class;
   protected $transitClassesDataType = 'array';
-  /**
-   * @var TransitObject[]
-   */
-  public $transitObjects;
   protected $transitObjectsType = TransitObject::class;
   protected $transitObjectsDataType = 'array';
 

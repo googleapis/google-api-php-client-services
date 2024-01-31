@@ -23,26 +23,14 @@ class RotatingBarcode extends \Google\Model
    * @var string
    */
   public $alternateText;
-  /**
-   * @var RotatingBarcodeValues
-   */
-  public $initialRotatingBarcodeValues;
   protected $initialRotatingBarcodeValuesType = RotatingBarcodeValues::class;
   protected $initialRotatingBarcodeValuesDataType = '';
   /**
    * @var string
    */
   public $renderEncoding;
-  /**
-   * @var LocalizedString
-   */
-  public $showCodeText;
   protected $showCodeTextType = LocalizedString::class;
   protected $showCodeTextDataType = '';
-  /**
-   * @var RotatingBarcodeTotpDetails
-   */
-  public $totpDetails;
   protected $totpDetailsType = RotatingBarcodeTotpDetails::class;
   protected $totpDetailsDataType = '';
   /**

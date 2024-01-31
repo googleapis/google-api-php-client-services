@@ -36,6 +36,7 @@ class Permissions extends \Google\Service\Resource
    * be unique across all issuers.
    * @param array $optParams Optional parameters.
    * @return PermissionsModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -51,6 +52,7 @@ class Permissions extends \Google\Service\Resource
    * @param PermissionsModel $postBody
    * @param array $optParams Optional parameters.
    * @return PermissionsModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, PermissionsModel $postBody, $optParams = [])
   {

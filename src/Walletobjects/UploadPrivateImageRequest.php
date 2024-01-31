@@ -19,16 +19,8 @@ namespace Google\Service\Walletobjects;
 
 class UploadPrivateImageRequest extends \Google\Model
 {
-  /**
-   * @var Media
-   */
-  public $blob;
   protected $blobType = Media::class;
   protected $blobDataType = '';
-  /**
-   * @var MediaRequestInfo
-   */
-  public $mediaRequestInfo;
   protected $mediaRequestInfoType = MediaRequestInfo::class;
   protected $mediaRequestInfoDataType = '';
 

@@ -23,16 +23,8 @@ class UploadPrivateDataRequest extends \Google\Model
    * @var string
    */
   public $issuerId;
-  /**
-   * @var PrivateText
-   */
-  public $text;
   protected $textType = PrivateText::class;
   protected $textDataType = '';
-  /**
-   * @var PrivateUri
-   */
-  public $uri;
   protected $uriType = PrivateUri::class;
   protected $uriDataType = '';
 
