@@ -24,10 +24,6 @@ class GoogleFactcheckingFactchecktoolsV1alpha1Claim extends \Google\Collection
    * @var string
    */
   public $claimDate;
-  /**
-   * @var GoogleFactcheckingFactchecktoolsV1alpha1ClaimReview[]
-   */
-  public $claimReview;
   protected $claimReviewType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimReview::class;
   protected $claimReviewDataType = 'array';
   /**

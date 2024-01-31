@@ -24,10 +24,6 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
    * @var string[]
    */
   public $claimAppearances;
-  /**
-   * @var GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor
-   */
-  public $claimAuthor;
   protected $claimAuthorType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimAuthor::class;
   protected $claimAuthorDataType = '';
   /**
@@ -46,10 +42,6 @@ class GoogleFactcheckingFactchecktoolsV1alpha1ClaimReviewMarkup extends \Google\
    * @var string
    */
   public $claimReviewed;
-  /**
-   * @var GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating
-   */
-  public $rating;
   protected $ratingType = GoogleFactcheckingFactchecktoolsV1alpha1ClaimRating::class;
   protected $ratingDataType = '';
   /**
