@@ -19,22 +19,10 @@ namespace Google\Service\Walletobjects;
 
 class CardBarcodeSectionDetails extends \Google\Model
 {
-  /**
-   * @var BarcodeSectionDetail
-   */
-  public $firstBottomDetail;
   protected $firstBottomDetailType = BarcodeSectionDetail::class;
   protected $firstBottomDetailDataType = '';
-  /**
-   * @var BarcodeSectionDetail
-   */
-  public $firstTopDetail;
   protected $firstTopDetailType = BarcodeSectionDetail::class;
   protected $firstTopDetailDataType = '';
-  /**
-   * @var BarcodeSectionDetail
-   */
-  public $secondTopDetail;
   protected $secondTopDetailType = BarcodeSectionDetail::class;
   protected $secondTopDetailDataType = '';
 

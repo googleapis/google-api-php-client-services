@@ -20,10 +20,6 @@ namespace Google\Service\Walletobjects;
 class DetailsTemplateOverride extends \Google\Collection
 {
   protected $collection_key = 'detailsItemInfos';
-  /**
-   * @var DetailsItemInfo[]
-   */
-  public $detailsItemInfos;
   protected $detailsItemInfosType = DetailsItemInfo::class;
   protected $detailsItemInfosDataType = 'array';
 

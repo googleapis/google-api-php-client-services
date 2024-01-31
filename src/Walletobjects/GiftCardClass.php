@@ -28,20 +28,12 @@ class GiftCardClass extends \Google\Collection
    * @var bool
    */
   public $allowMultipleUsersPerObject;
-  /**
-   * @var CallbackOptions
-   */
-  public $callbackOptions;
   protected $callbackOptionsType = CallbackOptions::class;
   protected $callbackOptionsDataType = '';
   /**
    * @var string
    */
   public $cardNumberLabel;
-  /**
-   * @var ClassTemplateInfo
-   */
-  public $classTemplateInfo;
   protected $classTemplateInfoType = ClassTemplateInfo::class;
   protected $classTemplateInfoDataType = '';
   /**
@@ -56,36 +48,20 @@ class GiftCardClass extends \Google\Collection
    * @var string
    */
   public $eventNumberLabel;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
    * @var string
    */
   public $hexBackgroundColor;
-  /**
-   * @var Uri
-   */
-  public $homepageUri;
   protected $homepageUriType = Uri::class;
   protected $homepageUriDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
@@ -96,56 +72,24 @@ class GiftCardClass extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedCardNumberLabel;
   protected $localizedCardNumberLabelType = LocalizedString::class;
   protected $localizedCardNumberLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedEventNumberLabel;
   protected $localizedEventNumberLabelType = LocalizedString::class;
   protected $localizedEventNumberLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedIssuerName;
   protected $localizedIssuerNameType = LocalizedString::class;
   protected $localizedIssuerNameDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedMerchantName;
   protected $localizedMerchantNameType = LocalizedString::class;
   protected $localizedMerchantNameDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedPinLabel;
   protected $localizedPinLabelType = LocalizedString::class;
   protected $localizedPinLabelDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
   /**
    * @var string
    */
   public $merchantName;
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**
@@ -156,36 +100,20 @@ class GiftCardClass extends \Google\Collection
    * @var string
    */
   public $pinLabel;
-  /**
-   * @var Image
-   */
-  public $programLogo;
   protected $programLogoType = Image::class;
   protected $programLogoDataType = '';
   /**
    * @var string[]
    */
   public $redemptionIssuers;
-  /**
-   * @var Review
-   */
-  public $review;
   protected $reviewType = Review::class;
   protected $reviewDataType = '';
   /**
    * @var string
    */
   public $reviewStatus;
-  /**
-   * @var SecurityAnimation
-   */
-  public $securityAnimation;
   protected $securityAnimationType = SecurityAnimation::class;
   protected $securityAnimationDataType = '';
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
   /**
@@ -196,16 +124,8 @@ class GiftCardClass extends \Google\Collection
    * @var string
    */
   public $viewUnlockRequirement;
-  /**
-   * @var Image
-   */
-  public $wideProgramLogo;
   protected $wideProgramLogoType = Image::class;
   protected $wideProgramLogoDataType = '';
-  /**
-   * @var Image
-   */
-  public $wordMark;
   protected $wordMarkType = Image::class;
   protected $wordMarkDataType = '';
 

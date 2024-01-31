@@ -19,22 +19,10 @@ namespace Google\Service\Walletobjects;
 
 class CardRowTemplateInfo extends \Google\Model
 {
-  /**
-   * @var CardRowOneItem
-   */
-  public $oneItem;
   protected $oneItemType = CardRowOneItem::class;
   protected $oneItemDataType = '';
-  /**
-   * @var CardRowThreeItems
-   */
-  public $threeItems;
   protected $threeItemsType = CardRowThreeItems::class;
   protected $threeItemsDataType = '';
-  /**
-   * @var CardRowTwoItems
-   */
-  public $twoItems;
   protected $twoItemsType = CardRowTwoItems::class;
   protected $twoItemsDataType = '';
 

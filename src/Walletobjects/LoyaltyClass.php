@@ -32,62 +32,34 @@ class LoyaltyClass extends \Google\Collection
    * @var bool
    */
   public $allowMultipleUsersPerObject;
-  /**
-   * @var CallbackOptions
-   */
-  public $callbackOptions;
   protected $callbackOptionsType = CallbackOptions::class;
   protected $callbackOptionsDataType = '';
-  /**
-   * @var ClassTemplateInfo
-   */
-  public $classTemplateInfo;
   protected $classTemplateInfoType = ClassTemplateInfo::class;
   protected $classTemplateInfoDataType = '';
   /**
    * @var string
    */
   public $countryCode;
-  /**
-   * @var DiscoverableProgram
-   */
-  public $discoverableProgram;
   protected $discoverableProgramType = DiscoverableProgram::class;
   protected $discoverableProgramDataType = '';
   /**
    * @var bool
    */
   public $enableSmartTap;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
    * @var string
    */
   public $hexBackgroundColor;
-  /**
-   * @var Uri
-   */
-  public $homepageUri;
   protected $homepageUriType = Uri::class;
   protected $homepageUriDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
@@ -98,80 +70,32 @@ class LoyaltyClass extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedAccountIdLabel;
   protected $localizedAccountIdLabelType = LocalizedString::class;
   protected $localizedAccountIdLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedAccountNameLabel;
   protected $localizedAccountNameLabelType = LocalizedString::class;
   protected $localizedAccountNameLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedIssuerName;
   protected $localizedIssuerNameType = LocalizedString::class;
   protected $localizedIssuerNameDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedProgramName;
   protected $localizedProgramNameType = LocalizedString::class;
   protected $localizedProgramNameDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedRewardsTier;
   protected $localizedRewardsTierType = LocalizedString::class;
   protected $localizedRewardsTierDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedRewardsTierLabel;
   protected $localizedRewardsTierLabelType = LocalizedString::class;
   protected $localizedRewardsTierLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedSecondaryRewardsTier;
   protected $localizedSecondaryRewardsTierType = LocalizedString::class;
   protected $localizedSecondaryRewardsTierDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedSecondaryRewardsTierLabel;
   protected $localizedSecondaryRewardsTierLabelType = LocalizedString::class;
   protected $localizedSecondaryRewardsTierLabelDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**
    * @var string
    */
   public $multipleDevicesAndHoldersAllowedStatus;
-  /**
-   * @var Image
-   */
-  public $programLogo;
   protected $programLogoType = Image::class;
   protected $programLogoDataType = '';
   /**
@@ -182,10 +106,6 @@ class LoyaltyClass extends \Google\Collection
    * @var string[]
    */
   public $redemptionIssuers;
-  /**
-   * @var Review
-   */
-  public $review;
   protected $reviewType = Review::class;
   protected $reviewDataType = '';
   /**
@@ -208,16 +128,8 @@ class LoyaltyClass extends \Google\Collection
    * @var string
    */
   public $secondaryRewardsTierLabel;
-  /**
-   * @var SecurityAnimation
-   */
-  public $securityAnimation;
   protected $securityAnimationType = SecurityAnimation::class;
   protected $securityAnimationDataType = '';
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
   /**
@@ -228,16 +140,8 @@ class LoyaltyClass extends \Google\Collection
    * @var string
    */
   public $viewUnlockRequirement;
-  /**
-   * @var Image
-   */
-  public $wideProgramLogo;
   protected $wideProgramLogoType = Image::class;
   protected $wideProgramLogoDataType = '';
-  /**
-   * @var Image
-   */
-  public $wordMark;
   protected $wordMarkType = Image::class;
   protected $wordMarkDataType = '';
 

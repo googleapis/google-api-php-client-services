@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class FlightObjectAddMessageResponse extends \Google\Model
 {
-  /**
-   * @var FlightObject
-   */
-  public $resource;
   protected $resourceType = FlightObject::class;
   protected $resourceDataType = '';
 

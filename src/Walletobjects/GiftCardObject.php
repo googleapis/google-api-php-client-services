@@ -20,28 +20,12 @@ namespace Google\Service\Walletobjects;
 class GiftCardObject extends \Google\Collection
 {
   protected $collection_key = 'textModulesData';
-  /**
-   * @var AppLinkData
-   */
-  public $appLinkData;
   protected $appLinkDataType = AppLinkData::class;
   protected $appLinkDataDataType = '';
-  /**
-   * @var Money
-   */
-  public $balance;
   protected $balanceType = Money::class;
   protected $balanceDataType = '';
-  /**
-   * @var DateTime
-   */
-  public $balanceUpdateTime;
   protected $balanceUpdateTimeType = DateTime::class;
   protected $balanceUpdateTimeDataType = '';
-  /**
-   * @var Barcode
-   */
-  public $barcode;
   protected $barcodeType = Barcode::class;
   protected $barcodeDataType = '';
   /**
@@ -52,10 +36,6 @@ class GiftCardObject extends \Google\Collection
    * @var string
    */
   public $classId;
-  /**
-   * @var GiftCardClass
-   */
-  public $classReference;
   protected $classReferenceType = GiftCardClass::class;
   protected $classReferenceDataType = '';
   /**
@@ -66,10 +46,6 @@ class GiftCardObject extends \Google\Collection
    * @var string
    */
   public $eventNumber;
-  /**
-   * @var GroupingInfo
-   */
-  public $groupingInfo;
   protected $groupingInfoType = GroupingInfo::class;
   protected $groupingInfoDataType = '';
   /**
@@ -80,64 +56,32 @@ class GiftCardObject extends \Google\Collection
    * @var bool
    */
   public $hasUsers;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  /**
-   * @var PassConstraints
-   */
-  public $passConstraints;
   protected $passConstraintsType = PassConstraints::class;
   protected $passConstraintsDataType = '';
   /**
    * @var string
    */
   public $pin;
-  /**
-   * @var RotatingBarcode
-   */
-  public $rotatingBarcode;
   protected $rotatingBarcodeType = RotatingBarcode::class;
   protected $rotatingBarcodeDataType = '';
   /**
@@ -148,16 +92,8 @@ class GiftCardObject extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
-  /**
-   * @var TimeInterval
-   */
-  public $validTimeInterval;
   protected $validTimeIntervalType = TimeInterval::class;
   protected $validTimeIntervalDataType = '';
   /**

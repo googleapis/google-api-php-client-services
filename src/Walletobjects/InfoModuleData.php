@@ -20,10 +20,6 @@ namespace Google\Service\Walletobjects;
 class InfoModuleData extends \Google\Collection
 {
   protected $collection_key = 'labelValueRows';
-  /**
-   * @var LabelValueRow[]
-   */
-  public $labelValueRows;
   protected $labelValueRowsType = LabelValueRow::class;
   protected $labelValueRowsDataType = 'array';
   /**

@@ -19,28 +19,12 @@ namespace Google\Service\Walletobjects;
 
 class ClassTemplateInfo extends \Google\Model
 {
-  /**
-   * @var CardBarcodeSectionDetails
-   */
-  public $cardBarcodeSectionDetails;
   protected $cardBarcodeSectionDetailsType = CardBarcodeSectionDetails::class;
   protected $cardBarcodeSectionDetailsDataType = '';
-  /**
-   * @var CardTemplateOverride
-   */
-  public $cardTemplateOverride;
   protected $cardTemplateOverrideType = CardTemplateOverride::class;
   protected $cardTemplateOverrideDataType = '';
-  /**
-   * @var DetailsTemplateOverride
-   */
-  public $detailsTemplateOverride;
   protected $detailsTemplateOverrideType = DetailsTemplateOverride::class;
   protected $detailsTemplateOverrideDataType = '';
-  /**
-   * @var ListTemplateOverride
-   */
-  public $listTemplateOverride;
   protected $listTemplateOverrideType = ListTemplateOverride::class;
   protected $listTemplateOverrideDataType = '';
 

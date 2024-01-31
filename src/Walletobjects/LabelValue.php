@@ -23,16 +23,8 @@ class LabelValue extends \Google\Model
    * @var string
    */
   public $label;
-  /**
-   * @var LocalizedString
-   */
-  public $localizedLabel;
   protected $localizedLabelType = LocalizedString::class;
   protected $localizedLabelDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedValue;
   protected $localizedValueType = LocalizedString::class;
   protected $localizedValueDataType = '';
   /**

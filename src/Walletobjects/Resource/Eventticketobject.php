@@ -45,6 +45,7 @@ class Eventticketobject extends \Google\Service\Resource
    * @param AddMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketObjectAddMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
   {
@@ -63,6 +64,7 @@ class Eventticketobject extends \Google\Service\Resource
    * characters, '.', '_', or '-'.
    * @param array $optParams Optional parameters.
    * @return EventTicketObjectModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -77,6 +79,7 @@ class Eventticketobject extends \Google\Service\Resource
    * @param EventTicketObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketObjectModel
+   * @throws \Google\Service\Exception
    */
   public function insert(EventTicketObjectModel $postBody, $optParams = [])
   {
@@ -100,6 +103,7 @@ class Eventticketobject extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * objects.
    * @return EventTicketObjectListResponse
+   * @throws \Google\Service\Exception
    */
   public function listEventticketobject($optParams = [])
   {
@@ -119,6 +123,7 @@ class Eventticketobject extends \Google\Service\Resource
    * @param ModifyLinkedOfferObjectsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketObjectModel
+   * @throws \Google\Service\Exception
    */
   public function modifylinkedofferobjects($resourceId, ModifyLinkedOfferObjectsRequest $postBody, $optParams = [])
   {
@@ -138,6 +143,7 @@ class Eventticketobject extends \Google\Service\Resource
    * @param EventTicketObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketObjectModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, EventTicketObjectModel $postBody, $optParams = [])
   {
@@ -157,6 +163,7 @@ class Eventticketobject extends \Google\Service\Resource
    * @param EventTicketObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketObjectModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, EventTicketObjectModel $postBody, $optParams = [])
   {

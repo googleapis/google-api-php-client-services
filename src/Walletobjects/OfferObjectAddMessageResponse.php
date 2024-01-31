@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class OfferObjectAddMessageResponse extends \Google\Model
 {
-  /**
-   * @var OfferObject
-   */
-  public $resource;
   protected $resourceType = OfferObject::class;
   protected $resourceDataType = '';
 

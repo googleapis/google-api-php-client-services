@@ -20,10 +20,6 @@ namespace Google\Service\Walletobjects;
 class CardTemplateOverride extends \Google\Collection
 {
   protected $collection_key = 'cardRowTemplateInfos';
-  /**
-   * @var CardRowTemplateInfo[]
-   */
-  public $cardRowTemplateInfos;
   protected $cardRowTemplateInfosType = CardRowTemplateInfo::class;
   protected $cardRowTemplateInfosDataType = 'array';
 

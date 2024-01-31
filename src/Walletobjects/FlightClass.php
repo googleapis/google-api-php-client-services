@@ -24,78 +24,42 @@ class FlightClass extends \Google\Collection
    * @var bool
    */
   public $allowMultipleUsersPerObject;
-  /**
-   * @var BoardingAndSeatingPolicy
-   */
-  public $boardingAndSeatingPolicy;
   protected $boardingAndSeatingPolicyType = BoardingAndSeatingPolicy::class;
   protected $boardingAndSeatingPolicyDataType = '';
-  /**
-   * @var CallbackOptions
-   */
-  public $callbackOptions;
   protected $callbackOptionsType = CallbackOptions::class;
   protected $callbackOptionsDataType = '';
-  /**
-   * @var ClassTemplateInfo
-   */
-  public $classTemplateInfo;
   protected $classTemplateInfoType = ClassTemplateInfo::class;
   protected $classTemplateInfoDataType = '';
   /**
    * @var string
    */
   public $countryCode;
-  /**
-   * @var AirportInfo
-   */
-  public $destination;
   protected $destinationType = AirportInfo::class;
   protected $destinationDataType = '';
   /**
    * @var bool
    */
   public $enableSmartTap;
-  /**
-   * @var FlightHeader
-   */
-  public $flightHeader;
   protected $flightHeaderType = FlightHeader::class;
   protected $flightHeaderDataType = '';
   /**
    * @var string
    */
   public $flightStatus;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
    * @var string
    */
   public $hexBackgroundColor;
-  /**
-   * @var Uri
-   */
-  public $homepageUri;
   protected $homepageUriType = Uri::class;
   protected $homepageUriDataType = '';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
@@ -110,10 +74,6 @@ class FlightClass extends \Google\Collection
    * @var string
    */
   public $languageOverride;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
   /**
@@ -140,58 +100,30 @@ class FlightClass extends \Google\Collection
    * @var string
    */
   public $localScheduledDepartureDateTime;
-  /**
-   * @var LocalizedString
-   */
-  public $localizedIssuerName;
   protected $localizedIssuerNameType = LocalizedString::class;
   protected $localizedIssuerNameDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
   /**
    * @var string
    */
   public $multipleDevicesAndHoldersAllowedStatus;
-  /**
-   * @var AirportInfo
-   */
-  public $origin;
   protected $originType = AirportInfo::class;
   protected $originDataType = '';
   /**
    * @var string[]
    */
   public $redemptionIssuers;
-  /**
-   * @var Review
-   */
-  public $review;
   protected $reviewType = Review::class;
   protected $reviewDataType = '';
   /**
    * @var string
    */
   public $reviewStatus;
-  /**
-   * @var SecurityAnimation
-   */
-  public $securityAnimation;
   protected $securityAnimationType = SecurityAnimation::class;
   protected $securityAnimationDataType = '';
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
   /**
@@ -202,10 +134,6 @@ class FlightClass extends \Google\Collection
    * @var string
    */
   public $viewUnlockRequirement;
-  /**
-   * @var Image
-   */
-  public $wordMark;
   protected $wordMarkType = Image::class;
   protected $wordMarkDataType = '';
 

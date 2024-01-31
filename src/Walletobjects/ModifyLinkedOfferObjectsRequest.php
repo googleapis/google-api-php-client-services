@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class ModifyLinkedOfferObjectsRequest extends \Google\Model
 {
-  /**
-   * @var ModifyLinkedOfferObjects
-   */
-  public $linkedOfferObjectIds;
   protected $linkedOfferObjectIdsType = ModifyLinkedOfferObjects::class;
   protected $linkedOfferObjectIdsDataType = '';
 

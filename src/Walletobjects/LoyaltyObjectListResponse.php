@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class LoyaltyObjectListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var Pagination
-   */
-  public $pagination;
   protected $paginationType = Pagination::class;
   protected $paginationDataType = '';
-  /**
-   * @var LoyaltyObject[]
-   */
-  public $resources;
   protected $resourcesType = LoyaltyObject::class;
   protected $resourcesDataType = 'array';
 

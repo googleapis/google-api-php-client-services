@@ -19,16 +19,8 @@ namespace Google\Service\Walletobjects;
 
 class CardRowTwoItems extends \Google\Model
 {
-  /**
-   * @var TemplateItem
-   */
-  public $endItem;
   protected $endItemType = TemplateItem::class;
   protected $endItemDataType = '';
-  /**
-   * @var TemplateItem
-   */
-  public $startItem;
   protected $startItemType = TemplateItem::class;
   protected $startItemDataType = '';
 

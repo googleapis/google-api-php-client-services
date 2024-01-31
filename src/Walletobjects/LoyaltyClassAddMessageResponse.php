@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class LoyaltyClassAddMessageResponse extends \Google\Model
 {
-  /**
-   * @var LoyaltyClass
-   */
-  public $resource;
   protected $resourceType = LoyaltyClass::class;
   protected $resourceDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class PrivateUri extends \Google\Model
 {
-  /**
-   * @var LocalizedString
-   */
-  public $description;
   protected $descriptionType = LocalizedString::class;
   protected $descriptionDataType = '';
   /**

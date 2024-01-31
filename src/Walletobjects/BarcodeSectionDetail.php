@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class BarcodeSectionDetail extends \Google\Model
 {
-  /**
-   * @var FieldSelector
-   */
-  public $fieldSelector;
   protected $fieldSelectorType = FieldSelector::class;
   protected $fieldSelectorDataType = '';
 

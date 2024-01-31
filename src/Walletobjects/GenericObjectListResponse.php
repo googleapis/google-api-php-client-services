@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class GenericObjectListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var Pagination
-   */
-  public $pagination;
   protected $paginationType = Pagination::class;
   protected $paginationDataType = '';
-  /**
-   * @var GenericObject[]
-   */
-  public $resources;
   protected $resourcesType = GenericObject::class;
   protected $resourcesDataType = 'array';
 

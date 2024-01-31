@@ -20,42 +20,22 @@ namespace Google\Service\Walletobjects;
 class EventTicketObject extends \Google\Collection
 {
   protected $collection_key = 'textModulesData';
-  /**
-   * @var AppLinkData
-   */
-  public $appLinkData;
   protected $appLinkDataType = AppLinkData::class;
   protected $appLinkDataDataType = '';
-  /**
-   * @var Barcode
-   */
-  public $barcode;
   protected $barcodeType = Barcode::class;
   protected $barcodeDataType = '';
   /**
    * @var string
    */
   public $classId;
-  /**
-   * @var EventTicketClass
-   */
-  public $classReference;
   protected $classReferenceType = EventTicketClass::class;
   protected $classReferenceDataType = '';
   /**
    * @var bool
    */
   public $disableExpirationNotification;
-  /**
-   * @var Money
-   */
-  public $faceValue;
   protected $faceValueType = Money::class;
   protected $faceValueDataType = '';
-  /**
-   * @var GroupingInfo
-   */
-  public $groupingInfo;
   protected $groupingInfoType = GroupingInfo::class;
   protected $groupingInfoDataType = '';
   /**
@@ -66,10 +46,6 @@ class EventTicketObject extends \Google\Collection
    * @var bool
    */
   public $hasUsers;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
@@ -80,16 +56,8 @@ class EventTicketObject extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
@@ -100,46 +68,18 @@ class EventTicketObject extends \Google\Collection
    * @var string[]
    */
   public $linkedOfferIds;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  /**
-   * @var PassConstraints
-   */
-  public $passConstraints;
   protected $passConstraintsType = PassConstraints::class;
   protected $passConstraintsDataType = '';
-  /**
-   * @var EventReservationInfo
-   */
-  public $reservationInfo;
   protected $reservationInfoType = EventReservationInfo::class;
   protected $reservationInfoDataType = '';
-  /**
-   * @var RotatingBarcode
-   */
-  public $rotatingBarcode;
   protected $rotatingBarcodeType = RotatingBarcode::class;
   protected $rotatingBarcodeDataType = '';
-  /**
-   * @var EventSeat
-   */
-  public $seatInfo;
   protected $seatInfoType = EventSeat::class;
   protected $seatInfoDataType = '';
   /**
@@ -150,10 +90,6 @@ class EventTicketObject extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
   /**
@@ -164,16 +100,8 @@ class EventTicketObject extends \Google\Collection
    * @var string
    */
   public $ticketNumber;
-  /**
-   * @var LocalizedString
-   */
-  public $ticketType;
   protected $ticketTypeType = LocalizedString::class;
   protected $ticketTypeDataType = '';
-  /**
-   * @var TimeInterval
-   */
-  public $validTimeInterval;
   protected $validTimeIntervalType = TimeInterval::class;
   protected $validTimeIntervalDataType = '';
   /**

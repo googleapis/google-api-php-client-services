@@ -19,16 +19,8 @@ namespace Google\Service\Walletobjects;
 
 class Notifications extends \Google\Model
 {
-  /**
-   * @var ExpiryNotification
-   */
-  public $expiryNotification;
   protected $expiryNotificationType = ExpiryNotification::class;
   protected $expiryNotificationDataType = '';
-  /**
-   * @var UpcomingNotification
-   */
-  public $upcomingNotification;
   protected $upcomingNotificationType = UpcomingNotification::class;
   protected $upcomingNotificationDataType = '';
 

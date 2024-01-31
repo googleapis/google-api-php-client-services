@@ -24,10 +24,6 @@ class DiscoverableProgramMerchantSignupInfo extends \Google\Collection
    * @var string[]
    */
   public $signupSharedDatas;
-  /**
-   * @var Uri
-   */
-  public $signupWebsite;
   protected $signupWebsiteType = Uri::class;
   protected $signupWebsiteDataType = '';
 

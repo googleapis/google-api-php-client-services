@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class FlightClassListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var Pagination
-   */
-  public $pagination;
   protected $paginationType = Pagination::class;
   protected $paginationDataType = '';
-  /**
-   * @var FlightClass[]
-   */
-  public $resources;
   protected $resourcesType = FlightClass::class;
   protected $resourcesDataType = 'array';
 

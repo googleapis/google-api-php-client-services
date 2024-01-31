@@ -19,16 +19,8 @@ namespace Google\Service\Walletobjects;
 
 class DiffUploadRequest extends \Google\Model
 {
-  /**
-   * @var CompositeMedia
-   */
-  public $checksumsInfo;
   protected $checksumsInfoType = CompositeMedia::class;
   protected $checksumsInfoDataType = '';
-  /**
-   * @var CompositeMedia
-   */
-  public $objectInfo;
   protected $objectInfoType = CompositeMedia::class;
   protected $objectInfoDataType = '';
   /**

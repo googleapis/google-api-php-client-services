@@ -20,22 +20,10 @@ namespace Google\Service\Walletobjects;
 class GenericObject extends \Google\Collection
 {
   protected $collection_key = 'textModulesData';
-  /**
-   * @var AppLinkData
-   */
-  public $appLinkData;
   protected $appLinkDataType = AppLinkData::class;
   protected $appLinkDataDataType = '';
-  /**
-   * @var Barcode
-   */
-  public $barcode;
   protected $barcodeType = Barcode::class;
   protected $barcodeDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $cardTitle;
   protected $cardTitleType = LocalizedString::class;
   protected $cardTitleDataType = '';
   /**
@@ -46,26 +34,14 @@ class GenericObject extends \Google\Collection
    * @var string
    */
   public $genericType;
-  /**
-   * @var GroupingInfo
-   */
-  public $groupingInfo;
   protected $groupingInfoType = GroupingInfo::class;
   protected $groupingInfoDataType = '';
   /**
    * @var bool
    */
   public $hasUsers;
-  /**
-   * @var LocalizedString
-   */
-  public $header;
   protected $headerType = LocalizedString::class;
   protected $headerDataType = '';
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
@@ -76,40 +52,16 @@ class GenericObject extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var Image
-   */
-  public $logo;
   protected $logoType = Image::class;
   protected $logoDataType = '';
-  /**
-   * @var Notifications
-   */
-  public $notifications;
   protected $notificationsType = Notifications::class;
   protected $notificationsDataType = '';
-  /**
-   * @var PassConstraints
-   */
-  public $passConstraints;
   protected $passConstraintsType = PassConstraints::class;
   protected $passConstraintsDataType = '';
-  /**
-   * @var RotatingBarcode
-   */
-  public $rotatingBarcode;
   protected $rotatingBarcodeType = RotatingBarcode::class;
   protected $rotatingBarcodeDataType = '';
   /**
@@ -120,28 +72,12 @@ class GenericObject extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var LocalizedString
-   */
-  public $subheader;
   protected $subheaderType = LocalizedString::class;
   protected $subheaderDataType = '';
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
-  /**
-   * @var TimeInterval
-   */
-  public $validTimeInterval;
   protected $validTimeIntervalType = TimeInterval::class;
   protected $validTimeIntervalDataType = '';
-  /**
-   * @var Image
-   */
-  public $wideLogo;
   protected $wideLogoType = Image::class;
   protected $wideLogoDataType = '';
 

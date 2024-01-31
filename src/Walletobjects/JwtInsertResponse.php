@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class JwtInsertResponse extends \Google\Model
 {
-  /**
-   * @var Resources
-   */
-  public $resources;
   protected $resourcesType = Resources::class;
   protected $resourcesDataType = '';
   /**

@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class GenericClass extends \Google\Collection
 {
   protected $collection_key = 'textModulesData';
-  /**
-   * @var CallbackOptions
-   */
-  public $callbackOptions;
   protected $callbackOptionsType = CallbackOptions::class;
   protected $callbackOptionsDataType = '';
-  /**
-   * @var ClassTemplateInfo
-   */
-  public $classTemplateInfo;
   protected $classTemplateInfoType = ClassTemplateInfo::class;
   protected $classTemplateInfoDataType = '';
   /**
@@ -40,16 +32,8 @@ class GenericClass extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
   /**
@@ -60,16 +44,8 @@ class GenericClass extends \Google\Collection
    * @var string[]
    */
   public $redemptionIssuers;
-  /**
-   * @var SecurityAnimation
-   */
-  public $securityAnimation;
   protected $securityAnimationType = SecurityAnimation::class;
   protected $securityAnimationDataType = '';
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
   /**

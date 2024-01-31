@@ -19,28 +19,12 @@ namespace Google\Service\Walletobjects;
 
 class AppLinkDataAppLinkInfo extends \Google\Model
 {
-  /**
-   * @var Image
-   */
-  public $appLogoImage;
   protected $appLogoImageType = Image::class;
   protected $appLogoImageDataType = '';
-  /**
-   * @var AppLinkDataAppLinkInfoAppTarget
-   */
-  public $appTarget;
   protected $appTargetType = AppLinkDataAppLinkInfoAppTarget::class;
   protected $appTargetDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $description;
   protected $descriptionType = LocalizedString::class;
   protected $descriptionDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $title;
   protected $titleType = LocalizedString::class;
   protected $titleDataType = '';
 

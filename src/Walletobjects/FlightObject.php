@@ -20,42 +20,22 @@ namespace Google\Service\Walletobjects;
 class FlightObject extends \Google\Collection
 {
   protected $collection_key = 'textModulesData';
-  /**
-   * @var AppLinkData
-   */
-  public $appLinkData;
   protected $appLinkDataType = AppLinkData::class;
   protected $appLinkDataDataType = '';
-  /**
-   * @var Barcode
-   */
-  public $barcode;
   protected $barcodeType = Barcode::class;
   protected $barcodeDataType = '';
-  /**
-   * @var BoardingAndSeatingInfo
-   */
-  public $boardingAndSeatingInfo;
   protected $boardingAndSeatingInfoType = BoardingAndSeatingInfo::class;
   protected $boardingAndSeatingInfoDataType = '';
   /**
    * @var string
    */
   public $classId;
-  /**
-   * @var FlightClass
-   */
-  public $classReference;
   protected $classReferenceType = FlightClass::class;
   protected $classReferenceDataType = '';
   /**
    * @var bool
    */
   public $disableExpirationNotification;
-  /**
-   * @var GroupingInfo
-   */
-  public $groupingInfo;
   protected $groupingInfoType = GroupingInfo::class;
   protected $groupingInfoDataType = '';
   /**
@@ -66,10 +46,6 @@ class FlightObject extends \Google\Collection
    * @var bool
    */
   public $hasUsers;
-  /**
-   * @var Image
-   */
-  public $heroImage;
   protected $heroImageType = Image::class;
   protected $heroImageDataType = '';
   /**
@@ -80,66 +56,30 @@ class FlightObject extends \Google\Collection
    * @var string
    */
   public $id;
-  /**
-   * @var ImageModuleData[]
-   */
-  public $imageModulesData;
   protected $imageModulesDataType = ImageModuleData::class;
   protected $imageModulesDataDataType = 'array';
-  /**
-   * @var InfoModuleData
-   */
-  public $infoModuleData;
   protected $infoModuleDataType = InfoModuleData::class;
   protected $infoModuleDataDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var LinksModuleData
-   */
-  public $linksModuleData;
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
-  /**
-   * @var LatLongPoint[]
-   */
-  public $locations;
   protected $locationsType = LatLongPoint::class;
   protected $locationsDataType = 'array';
-  /**
-   * @var Message[]
-   */
-  public $messages;
   protected $messagesType = Message::class;
   protected $messagesDataType = 'array';
-  /**
-   * @var PassConstraints
-   */
-  public $passConstraints;
   protected $passConstraintsType = PassConstraints::class;
   protected $passConstraintsDataType = '';
   /**
    * @var string
    */
   public $passengerName;
-  /**
-   * @var ReservationInfo
-   */
-  public $reservationInfo;
   protected $reservationInfoType = ReservationInfo::class;
   protected $reservationInfoDataType = '';
-  /**
-   * @var RotatingBarcode
-   */
-  public $rotatingBarcode;
   protected $rotatingBarcodeType = RotatingBarcode::class;
   protected $rotatingBarcodeDataType = '';
-  /**
-   * @var Image
-   */
-  public $securityProgramLogo;
   protected $securityProgramLogoType = Image::class;
   protected $securityProgramLogoDataType = '';
   /**
@@ -150,16 +90,8 @@ class FlightObject extends \Google\Collection
    * @var string
    */
   public $state;
-  /**
-   * @var TextModuleData[]
-   */
-  public $textModulesData;
   protected $textModulesDataType = TextModuleData::class;
   protected $textModulesDataDataType = 'array';
-  /**
-   * @var TimeInterval
-   */
-  public $validTimeInterval;
   protected $validTimeIntervalType = TimeInterval::class;
   protected $validTimeIntervalDataType = '';
   /**

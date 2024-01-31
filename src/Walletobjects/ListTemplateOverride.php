@@ -19,22 +19,10 @@ namespace Google\Service\Walletobjects;
 
 class ListTemplateOverride extends \Google\Model
 {
-  /**
-   * @var FirstRowOption
-   */
-  public $firstRowOption;
   protected $firstRowOptionType = FirstRowOption::class;
   protected $firstRowOptionDataType = '';
-  /**
-   * @var FieldSelector
-   */
-  public $secondRowOption;
   protected $secondRowOptionType = FieldSelector::class;
   protected $secondRowOptionDataType = '';
-  /**
-   * @var FieldSelector
-   */
-  public $thirdRowOption;
   protected $thirdRowOptionType = FieldSelector::class;
   protected $thirdRowOptionDataType = '';
 

@@ -19,16 +19,8 @@ namespace Google\Service\Walletobjects;
 
 class DiscoverableProgram extends \Google\Model
 {
-  /**
-   * @var DiscoverableProgramMerchantSigninInfo
-   */
-  public $merchantSigninInfo;
   protected $merchantSigninInfoType = DiscoverableProgramMerchantSigninInfo::class;
   protected $merchantSigninInfoDataType = '';
-  /**
-   * @var DiscoverableProgramMerchantSignupInfo
-   */
-  public $merchantSignupInfo;
   protected $merchantSignupInfoType = DiscoverableProgramMerchantSignupInfo::class;
   protected $merchantSignupInfoDataType = '';
   /**

@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class OfferObjectListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var Pagination
-   */
-  public $pagination;
   protected $paginationType = Pagination::class;
   protected $paginationDataType = '';
-  /**
-   * @var OfferObject[]
-   */
-  public $resources;
   protected $resourcesType = OfferObject::class;
   protected $resourcesDataType = 'array';
 

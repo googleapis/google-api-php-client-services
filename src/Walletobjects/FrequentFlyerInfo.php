@@ -23,10 +23,6 @@ class FrequentFlyerInfo extends \Google\Model
    * @var string
    */
   public $frequentFlyerNumber;
-  /**
-   * @var LocalizedString
-   */
-  public $frequentFlyerProgramName;
   protected $frequentFlyerProgramNameType = LocalizedString::class;
   protected $frequentFlyerProgramNameDataType = '';
   /**

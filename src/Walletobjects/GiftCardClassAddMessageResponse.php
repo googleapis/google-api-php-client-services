@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class GiftCardClassAddMessageResponse extends \Google\Model
 {
-  /**
-   * @var GiftCardClass
-   */
-  public $resource;
   protected $resourceType = GiftCardClass::class;
   protected $resourceDataType = '';
 

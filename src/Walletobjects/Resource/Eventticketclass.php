@@ -44,6 +44,7 @@ class Eventticketclass extends \Google\Service\Resource
    * @param AddMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketClassAddMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class Eventticketclass extends \Google\Service\Resource
    * characters, '.', '_', or '-'.
    * @param array $optParams Optional parameters.
    * @return EventTicketClassModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -76,6 +78,7 @@ class Eventticketclass extends \Google\Service\Resource
    * @param EventTicketClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketClassModel
+   * @throws \Google\Service\Exception
    */
   public function insert(EventTicketClassModel $postBody, $optParams = [])
   {
@@ -99,6 +102,7 @@ class Eventticketclass extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * classes.
    * @return EventTicketClassListResponse
+   * @throws \Google\Service\Exception
    */
   public function listEventticketclass($optParams = [])
   {
@@ -118,6 +122,7 @@ class Eventticketclass extends \Google\Service\Resource
    * @param EventTicketClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketClassModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, EventTicketClassModel $postBody, $optParams = [])
   {
@@ -137,6 +142,7 @@ class Eventticketclass extends \Google\Service\Resource
    * @param EventTicketClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return EventTicketClassModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, EventTicketClassModel $postBody, $optParams = [])
   {

@@ -19,22 +19,10 @@ namespace Google\Service\Walletobjects;
 
 class AppLinkData extends \Google\Model
 {
-  /**
-   * @var AppLinkDataAppLinkInfo
-   */
-  public $androidAppLinkInfo;
   protected $androidAppLinkInfoType = AppLinkDataAppLinkInfo::class;
   protected $androidAppLinkInfoDataType = '';
-  /**
-   * @var AppLinkDataAppLinkInfo
-   */
-  public $iosAppLinkInfo;
   protected $iosAppLinkInfoType = AppLinkDataAppLinkInfo::class;
   protected $iosAppLinkInfoDataType = '';
-  /**
-   * @var AppLinkDataAppLinkInfo
-   */
-  public $webAppLinkInfo;
   protected $webAppLinkInfoType = AppLinkDataAppLinkInfo::class;
   protected $webAppLinkInfoDataType = '';
 

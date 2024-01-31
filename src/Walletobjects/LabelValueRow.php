@@ -20,10 +20,6 @@ namespace Google\Service\Walletobjects;
 class LabelValueRow extends \Google\Collection
 {
   protected $collection_key = 'columns';
-  /**
-   * @var LabelValue[]
-   */
-  public $columns;
   protected $columnsType = LabelValue::class;
   protected $columnsDataType = 'array';
 

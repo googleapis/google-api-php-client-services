@@ -35,10 +35,6 @@ class PurchaseDetails extends \Google\Model
    * @var string
    */
   public $purchaseReceiptNumber;
-  /**
-   * @var TicketCost
-   */
-  public $ticketCost;
   protected $ticketCostType = TicketCost::class;
   protected $ticketCostDataType = '';
 

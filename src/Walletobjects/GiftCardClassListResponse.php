@@ -20,16 +20,8 @@ namespace Google\Service\Walletobjects;
 class GiftCardClassListResponse extends \Google\Collection
 {
   protected $collection_key = 'resources';
-  /**
-   * @var Pagination
-   */
-  public $pagination;
   protected $paginationType = Pagination::class;
   protected $paginationDataType = '';
-  /**
-   * @var GiftCardClass[]
-   */
-  public $resources;
   protected $resourcesType = GiftCardClass::class;
   protected $resourcesDataType = 'array';
 

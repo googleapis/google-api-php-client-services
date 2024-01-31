@@ -23,10 +23,6 @@ class IssuerToUserInfo extends \Google\Model
    * @var string
    */
   public $action;
-  /**
-   * @var SignUpInfo
-   */
-  public $signUpInfo;
   protected $signUpInfoType = SignUpInfo::class;
   protected $signUpInfoDataType = '';
   /**

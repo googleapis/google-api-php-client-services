@@ -19,10 +19,6 @@ namespace Google\Service\Walletobjects;
 
 class AppLinkDataAppLinkInfoAppTarget extends \Google\Model
 {
-  /**
-   * @var Uri
-   */
-  public $targetUri;
   protected $targetUriType = Uri::class;
   protected $targetUriDataType = '';
 

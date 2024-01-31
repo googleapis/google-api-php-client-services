@@ -44,6 +44,7 @@ class Flightclass extends \Google\Service\Resource
    * @param AddMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FlightClassAddMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class Flightclass extends \Google\Service\Resource
    * characters, '.', '_', or '-'.
    * @param array $optParams Optional parameters.
    * @return FlightClassModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -75,6 +77,7 @@ class Flightclass extends \Google\Service\Resource
    * @param FlightClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return FlightClassModel
+   * @throws \Google\Service\Exception
    */
   public function insert(FlightClassModel $postBody, $optParams = [])
   {
@@ -98,6 +101,7 @@ class Flightclass extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * classes.
    * @return FlightClassListResponse
+   * @throws \Google\Service\Exception
    */
   public function listFlightclass($optParams = [])
   {
@@ -117,6 +121,7 @@ class Flightclass extends \Google\Service\Resource
    * @param FlightClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return FlightClassModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, FlightClassModel $postBody, $optParams = [])
   {
@@ -136,6 +141,7 @@ class Flightclass extends \Google\Service\Resource
    * @param FlightClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return FlightClassModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, FlightClassModel $postBody, $optParams = [])
   {

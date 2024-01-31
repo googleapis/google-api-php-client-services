@@ -23,10 +23,6 @@ class Message extends \Google\Model
    * @var string
    */
   public $body;
-  /**
-   * @var TimeInterval
-   */
-  public $displayInterval;
   protected $displayIntervalType = TimeInterval::class;
   protected $displayIntervalDataType = '';
   /**
@@ -41,16 +37,8 @@ class Message extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var LocalizedString
-   */
-  public $localizedBody;
   protected $localizedBodyType = LocalizedString::class;
   protected $localizedBodyDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $localizedHeader;
   protected $localizedHeaderType = LocalizedString::class;
   protected $localizedHeaderDataType = '';
   /**

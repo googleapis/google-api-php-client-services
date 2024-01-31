@@ -19,32 +19,16 @@ namespace Google\Service\Walletobjects;
 
 class EventSeat extends \Google\Model
 {
-  /**
-   * @var LocalizedString
-   */
-  public $gate;
   protected $gateType = LocalizedString::class;
   protected $gateDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var LocalizedString
-   */
-  public $row;
   protected $rowType = LocalizedString::class;
   protected $rowDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $seat;
   protected $seatType = LocalizedString::class;
   protected $seatDataType = '';
-  /**
-   * @var LocalizedString
-   */
-  public $section;
   protected $sectionType = LocalizedString::class;
   protected $sectionDataType = '';
 

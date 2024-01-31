@@ -19,20 +19,12 @@ namespace Google\Service\Walletobjects;
 
 class Image extends \Google\Model
 {
-  /**
-   * @var LocalizedString
-   */
-  public $contentDescription;
   protected $contentDescriptionType = LocalizedString::class;
   protected $contentDescriptionDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var ImageUri
-   */
-  public $sourceUri;
   protected $sourceUriType = ImageUri::class;
   protected $sourceUriDataType = '';
 

@@ -40,6 +40,7 @@ class Genericclass extends \Google\Service\Resource
    * alphanumeric characters, `.`, `_`, or `-`.
    * @param array $optParams Optional parameters.
    * @return GenericClassModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -54,6 +55,7 @@ class Genericclass extends \Google\Service\Resource
    * @param GenericClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return GenericClassModel
+   * @throws \Google\Service\Exception
    */
   public function insert(GenericClassModel $postBody, $optParams = [])
   {
@@ -77,6 +79,7 @@ class Genericclass extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * classes.
    * @return GenericClassListResponse
+   * @throws \Google\Service\Exception
    */
   public function listGenericclass($optParams = [])
   {
@@ -96,6 +99,7 @@ class Genericclass extends \Google\Service\Resource
    * @param GenericClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return GenericClassModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, GenericClassModel $postBody, $optParams = [])
   {
@@ -115,6 +119,7 @@ class Genericclass extends \Google\Service\Resource
    * @param GenericClassModel $postBody
    * @param array $optParams Optional parameters.
    * @return GenericClassModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, GenericClassModel $postBody, $optParams = [])
   {

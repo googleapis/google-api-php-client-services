@@ -40,6 +40,7 @@ class Genericobject extends \Google\Service\Resource
    * alphanumeric characters, `.`, `_`, or `-`.
    * @param array $optParams Optional parameters.
    * @return GenericObjectModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -54,6 +55,7 @@ class Genericobject extends \Google\Service\Resource
    * @param GenericObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return GenericObjectModel
+   * @throws \Google\Service\Exception
    */
   public function insert(GenericObjectModel $postBody, $optParams = [])
   {
@@ -77,6 +79,7 @@ class Genericobject extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * objects.
    * @return GenericObjectListResponse
+   * @throws \Google\Service\Exception
    */
   public function listGenericobject($optParams = [])
   {
@@ -96,6 +99,7 @@ class Genericobject extends \Google\Service\Resource
    * @param GenericObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return GenericObjectModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, GenericObjectModel $postBody, $optParams = [])
   {
@@ -115,6 +119,7 @@ class Genericobject extends \Google\Service\Resource
    * @param GenericObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return GenericObjectModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, GenericObjectModel $postBody, $optParams = [])
   {

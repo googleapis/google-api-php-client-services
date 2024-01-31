@@ -19,22 +19,10 @@ namespace Google\Service\Walletobjects;
 
 class CardRowThreeItems extends \Google\Model
 {
-  /**
-   * @var TemplateItem
-   */
-  public $endItem;
   protected $endItemType = TemplateItem::class;
   protected $endItemDataType = '';
-  /**
-   * @var TemplateItem
-   */
-  public $middleItem;
   protected $middleItemType = TemplateItem::class;
   protected $middleItemDataType = '';
-  /**
-   * @var TemplateItem
-   */
-  public $startItem;
   protected $startItemType = TemplateItem::class;
   protected $startItemDataType = '';
 

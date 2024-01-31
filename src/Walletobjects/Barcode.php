@@ -31,10 +31,6 @@ class Barcode extends \Google\Model
    * @var string
    */
   public $renderEncoding;
-  /**
-   * @var LocalizedString
-   */
-  public $showCodeText;
   protected $showCodeTextType = LocalizedString::class;
   protected $showCodeTextDataType = '';
   /**

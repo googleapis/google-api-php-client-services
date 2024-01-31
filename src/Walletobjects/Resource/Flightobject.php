@@ -44,6 +44,7 @@ class Flightobject extends \Google\Service\Resource
    * @param AddMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return FlightObjectAddMessageResponse
+   * @throws \Google\Service\Exception
    */
   public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class Flightobject extends \Google\Service\Resource
    * characters, '.', '_', or '-'.
    * @param array $optParams Optional parameters.
    * @return FlightObjectModel
+   * @throws \Google\Service\Exception
    */
   public function get($resourceId, $optParams = [])
   {
@@ -75,6 +77,7 @@ class Flightobject extends \Google\Service\Resource
    * @param FlightObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return FlightObjectModel
+   * @throws \Google\Service\Exception
    */
   public function insert(FlightObjectModel $postBody, $optParams = [])
   {
@@ -98,6 +101,7 @@ class Flightobject extends \Google\Service\Resource
    * Call list again with `maxResults` set to 20 and the token to get the next 20
    * objects.
    * @return FlightObjectListResponse
+   * @throws \Google\Service\Exception
    */
   public function listFlightobject($optParams = [])
   {
@@ -117,6 +121,7 @@ class Flightobject extends \Google\Service\Resource
    * @param FlightObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return FlightObjectModel
+   * @throws \Google\Service\Exception
    */
   public function patch($resourceId, FlightObjectModel $postBody, $optParams = [])
   {
@@ -136,6 +141,7 @@ class Flightobject extends \Google\Service\Resource
    * @param FlightObjectModel $postBody
    * @param array $optParams Optional parameters.
    * @return FlightObjectModel
+   * @throws \Google\Service\Exception
    */
   public function update($resourceId, FlightObjectModel $postBody, $optParams = [])
   {

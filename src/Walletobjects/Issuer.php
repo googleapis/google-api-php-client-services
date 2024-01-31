@@ -19,16 +19,8 @@ namespace Google\Service\Walletobjects;
 
 class Issuer extends \Google\Model
 {
-  /**
-   * @var CallbackOptions
-   */
-  public $callbackOptions;
   protected $callbackOptionsType = CallbackOptions::class;
   protected $callbackOptionsDataType = '';
-  /**
-   * @var IssuerContactInfo
-   */
-  public $contactInfo;
   protected $contactInfoType = IssuerContactInfo::class;
   protected $contactInfoDataType = '';
   /**
@@ -43,10 +35,6 @@ class Issuer extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var SmartTapMerchantData
-   */
-  public $smartTapMerchantData;
   protected $smartTapMerchantDataType = SmartTapMerchantData::class;
   protected $smartTapMerchantDataDataType = '';
 
