@@ -20,10 +20,6 @@ namespace Google\Service\FirebaseManagement;
 class ListIosAppsResponse extends \Google\Collection
 {
   protected $collection_key = 'apps';
-  /**
-   * @var IosApp[]
-   */
-  public $apps;
   protected $appsType = IosApp::class;
   protected $appsDataType = 'array';
   /**

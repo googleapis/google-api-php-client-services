@@ -70,6 +70,7 @@ class ProjectsDefaultLocation extends \Google\Service\Resource
    * @param FinalizeDefaultLocationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function finalize($parent, FinalizeDefaultLocationRequest $postBody, $optParams = [])
   {

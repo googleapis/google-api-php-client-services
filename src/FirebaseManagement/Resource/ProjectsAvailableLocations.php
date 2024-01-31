@@ -67,6 +67,7 @@ class ProjectsAvailableLocations extends \Google\Service\Resource
    * `ListAvailableLocations` indicating where in the list of locations to resume
    * listing.
    * @return ListAvailableLocationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsAvailableLocations($parent, $optParams = [])
   {

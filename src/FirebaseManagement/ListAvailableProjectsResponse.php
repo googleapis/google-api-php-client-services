@@ -24,10 +24,6 @@ class ListAvailableProjectsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ProjectInfo[]
-   */
-  public $projectInfo;
   protected $projectInfoType = ProjectInfo::class;
   protected $projectInfoDataType = 'array';
 

@@ -49,6 +49,7 @@ class AvailableProjects extends \Google\Service\Resource
    * `ListAvailableProjects` indicating where in the set of Projects to resume
    * listing.
    * @return ListAvailableProjectsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAvailableProjects($optParams = [])
   {

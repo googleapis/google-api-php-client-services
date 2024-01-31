@@ -20,10 +20,6 @@ namespace Google\Service\FirebaseManagement;
 class ListShaCertificatesResponse extends \Google\Collection
 {
   protected $collection_key = 'certificates';
-  /**
-   * @var ShaCertificate[]
-   */
-  public $certificates;
   protected $certificatesType = ShaCertificate::class;
   protected $certificatesDataType = 'array';
 

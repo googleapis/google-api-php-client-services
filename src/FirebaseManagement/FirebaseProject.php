@@ -43,10 +43,6 @@ class FirebaseProject extends \Google\Model
    * @var string
    */
   public $projectNumber;
-  /**
-   * @var DefaultResources
-   */
-  public $resources;
   protected $resourcesType = DefaultResources::class;
   protected $resourcesDataType = '';
   /**
