@@ -24,10 +24,6 @@ class ListNodeTypesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var NodeType[]
-   */
-  public $nodeTypes;
   protected $nodeTypesType = NodeType::class;
   protected $nodeTypesDataType = 'array';
   /**

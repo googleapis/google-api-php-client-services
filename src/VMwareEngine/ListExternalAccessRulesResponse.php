@@ -20,10 +20,6 @@ namespace Google\Service\VMwareEngine;
 class ListExternalAccessRulesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var ExternalAccessRule[]
-   */
-  public $externalAccessRules;
   protected $externalAccessRulesType = ExternalAccessRule::class;
   protected $externalAccessRulesDataType = 'array';
   /**

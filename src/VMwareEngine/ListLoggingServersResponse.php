@@ -20,10 +20,6 @@ namespace Google\Service\VMwareEngine;
 class ListLoggingServersResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var LoggingServer[]
-   */
-  public $loggingServers;
   protected $loggingServersType = LoggingServer::class;
   protected $loggingServersDataType = 'array';
   /**

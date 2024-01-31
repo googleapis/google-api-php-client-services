@@ -65,6 +65,7 @@ class ProjectsLocationsPrivateCloudsExternalAddresses extends \Google\Service\Re
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ExternalAddress $postBody, $optParams = [])
   {
@@ -96,6 +97,7 @@ class ProjectsLocationsPrivateCloudsExternalAddresses extends \Google\Service\Re
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -113,6 +115,7 @@ class ProjectsLocationsPrivateCloudsExternalAddresses extends \Google\Service\Re
    * cloud/externalAddresses/my-ip`
    * @param array $optParams Optional parameters.
    * @return ExternalAddress
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -156,6 +159,7 @@ class ProjectsLocationsPrivateCloudsExternalAddresses extends \Google\Service\Re
    * When paginating, all other parameters provided to `ListExternalAddresses`
    * must match the call that provided the page token.
    * @return ListExternalAddressesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateCloudsExternalAddresses($parent, $optParams = [])
   {
@@ -195,6 +199,7 @@ class ProjectsLocationsPrivateCloudsExternalAddresses extends \Google\Service\Re
    * full request. A field will be overwritten if it is in the mask. If the user
    * does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, ExternalAddress $postBody, $optParams = [])
   {

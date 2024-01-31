@@ -65,6 +65,7 @@ class ProjectsLocationsNetworkPolicies extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, NetworkPolicy $postBody, $optParams = [])
   {
@@ -95,6 +96,7 @@ class ProjectsLocationsNetworkPolicies extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -122,6 +124,7 @@ class ProjectsLocationsNetworkPolicies extends \Google\Service\Resource
    * `FetchNetworkPolicyExternalAddresses`, except for `page_size` and
    * `page_token`, must match the call that provided the page token.
    * @return FetchNetworkPolicyExternalAddressesResponse
+   * @throws \Google\Service\Exception
    */
   public function fetchExternalAddresses($networkPolicy, $optParams = [])
   {
@@ -139,6 +142,7 @@ class ProjectsLocationsNetworkPolicies extends \Google\Service\Resource
    * `projects/my-project/locations/us-central1/networkPolicies/my-network-policy`
    * @param array $optParams Optional parameters.
    * @return NetworkPolicy
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -180,6 +184,7 @@ class ProjectsLocationsNetworkPolicies extends \Google\Service\Resource
    * When paginating, all other parameters provided to `ListNetworkPolicies` must
    * match the call that provided the page token.
    * @return ListNetworkPoliciesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkPolicies($parent, $optParams = [])
   {
@@ -223,6 +228,7 @@ class ProjectsLocationsNetworkPolicies extends \Google\Service\Resource
    * full request. A field will be overwritten if it is in the mask. If the user
    * does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, NetworkPolicy $postBody, $optParams = [])
   {

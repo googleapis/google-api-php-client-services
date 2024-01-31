@@ -63,6 +63,7 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, PrivateConnection $postBody, $optParams = [])
   {
@@ -93,6 +94,7 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -111,6 +113,7 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * `projects/my-project/locations/us-central1/privateConnections/my-connection`
    * @param array $optParams Optional parameters.
    * @return PrivateConnection
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -153,6 +156,7 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * When paginating, all other parameters provided to `ListPrivateConnections`
    * must match the call that provided the page token.
    * @return ListPrivateConnectionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateConnections($parent, $optParams = [])
   {
@@ -189,6 +193,7 @@ class ProjectsLocationsPrivateConnections extends \Google\Service\Resource
    * the full request. A field will be overwritten if it is in the mask. If the
    * user does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, PrivateConnection $postBody, $optParams = [])
   {

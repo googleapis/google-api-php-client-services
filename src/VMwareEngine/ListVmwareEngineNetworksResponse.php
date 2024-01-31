@@ -28,10 +28,6 @@ class ListVmwareEngineNetworksResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var VmwareEngineNetwork[]
-   */
-  public $vmwareEngineNetworks;
   protected $vmwareEngineNetworksType = VmwareEngineNetwork::class;
   protected $vmwareEngineNetworksDataType = 'array';
 

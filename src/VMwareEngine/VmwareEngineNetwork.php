@@ -52,10 +52,6 @@ class VmwareEngineNetwork extends \Google\Collection
    * @var string
    */
   public $updateTime;
-  /**
-   * @var VpcNetwork[]
-   */
-  public $vpcNetworks;
   protected $vpcNetworksType = VpcNetwork::class;
   protected $vpcNetworksDataType = 'array';
 

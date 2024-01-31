@@ -38,6 +38,7 @@ class ProjectsLocationsPrivateCloudsClustersNodes extends \Google\Service\Resour
    * d}/clusters/{cluster}/nodes/{node}`
    * @param array $optParams Optional parameters.
    * @return Node
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsLocationsPrivateCloudsClustersNodes extends \Google\Service\Resour
    * paginating, all other parameters provided to `ListNodes` must match the call
    * that provided the page token.
    * @return ListNodesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateCloudsClustersNodes($parent, $optParams = [])
   {

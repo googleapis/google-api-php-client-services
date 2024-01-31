@@ -46,6 +46,7 @@ class ProjectsLocationsDnsBindPermission extends \Google\Service\Resource
    * @param GrantDnsBindPermissionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function grant($name, GrantDnsBindPermissionRequest $postBody, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsDnsBindPermission extends \Google\Service\Resource
    * @param RevokeDnsBindPermissionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function revoke($name, RevokeDnsBindPermissionRequest $postBody, $optParams = [])
   {

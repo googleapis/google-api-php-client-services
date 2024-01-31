@@ -24,10 +24,6 @@ class DnsBindPermission extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var Principal[]
-   */
-  public $principals;
   protected $principalsType = Principal::class;
   protected $principalsDataType = 'array';
 

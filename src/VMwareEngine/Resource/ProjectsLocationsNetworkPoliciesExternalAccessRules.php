@@ -63,6 +63,7 @@ class ProjectsLocationsNetworkPoliciesExternalAccessRules extends \Google\Servic
    * request ID must be a valid UUID with the exception that zero UUID is not
    * supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ExternalAccessRule $postBody, $optParams = [])
   {
@@ -92,6 +93,7 @@ class ProjectsLocationsNetworkPoliciesExternalAccessRules extends \Google\Servic
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -109,6 +111,7 @@ class ProjectsLocationsNetworkPoliciesExternalAccessRules extends \Google\Servic
    * policy/externalAccessRules/my-rule`
    * @param array $optParams Optional parameters.
    * @return ExternalAccessRule
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -152,6 +155,7 @@ class ProjectsLocationsNetworkPoliciesExternalAccessRules extends \Google\Servic
    * `ListExternalAccessRulesRequest` must match the call that provided the page
    * token.
    * @return ListExternalAccessRulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkPoliciesExternalAccessRules($parent, $optParams = [])
   {
@@ -188,6 +192,7 @@ class ProjectsLocationsNetworkPoliciesExternalAccessRules extends \Google\Servic
    * the full request. A field will be overwritten if it is in the mask. If the
    * user does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, ExternalAccessRule $postBody, $optParams = [])
   {

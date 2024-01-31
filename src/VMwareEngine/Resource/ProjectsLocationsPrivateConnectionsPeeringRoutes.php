@@ -49,6 +49,7 @@ class ProjectsLocationsPrivateConnectionsPeeringRoutes extends \Google\Service\R
    * `ListPrivateConnectionPeeringRoutes` must match the call that provided the
    * page token.
    * @return ListPrivateConnectionPeeringRoutesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateConnectionsPeeringRoutes($parent, $optParams = [])
   {

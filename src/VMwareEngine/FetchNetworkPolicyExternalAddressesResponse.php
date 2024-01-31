@@ -20,10 +20,6 @@ namespace Google\Service\VMwareEngine;
 class FetchNetworkPolicyExternalAddressesResponse extends \Google\Collection
 {
   protected $collection_key = 'externalAddresses';
-  /**
-   * @var ExternalAddress[]
-   */
-  public $externalAddresses;
   protected $externalAddressesType = ExternalAddress::class;
   protected $externalAddressesDataType = 'array';
   /**

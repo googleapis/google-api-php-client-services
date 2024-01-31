@@ -54,6 +54,7 @@ class ProjectsLocationsNetworkPeeringsPeeringRoutes extends \Google\Service\Reso
    * paginating, all other parameters provided to `ListPeeringRoutes` must match
    * the call that provided the page token.
    * @return ListPeeringRoutesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkPeeringsPeeringRoutes($parent, $optParams = [])
   {

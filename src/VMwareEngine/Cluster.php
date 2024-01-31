@@ -31,20 +31,12 @@ class Cluster extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var NodeTypeConfig[]
-   */
-  public $nodeTypeConfigs;
   protected $nodeTypeConfigsType = NodeTypeConfig::class;
   protected $nodeTypeConfigsDataType = 'map';
   /**
    * @var string
    */
   public $state;
-  /**
-   * @var StretchedClusterConfig
-   */
-  public $stretchedClusterConfig;
   protected $stretchedClusterConfigType = StretchedClusterConfig::class;
   protected $stretchedClusterConfigDataType = '';
   /**

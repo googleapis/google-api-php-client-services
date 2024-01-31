@@ -63,6 +63,7 @@ class ProjectsLocationsPrivateCloudsLoggingServers extends \Google\Service\Resou
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, LoggingServer $postBody, $optParams = [])
   {
@@ -92,6 +93,7 @@ class ProjectsLocationsPrivateCloudsLoggingServers extends \Google\Service\Resou
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -109,6 +111,7 @@ class ProjectsLocationsPrivateCloudsLoggingServers extends \Google\Service\Resou
    * cloud/loggingServers/my-logging-server`
    * @param array $optParams Optional parameters.
    * @return LoggingServer
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -150,6 +153,7 @@ class ProjectsLocationsPrivateCloudsLoggingServers extends \Google\Service\Resou
    * page. When paginating, all other parameters provided to
    * `ListLoggingServersRequest` must match the call that provided the page token.
    * @return ListLoggingServersResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateCloudsLoggingServers($parent, $optParams = [])
   {
@@ -186,6 +190,7 @@ class ProjectsLocationsPrivateCloudsLoggingServers extends \Google\Service\Resou
    * full request. A field will be overwritten if it is in the mask. If the user
    * does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, LoggingServer $postBody, $optParams = [])
   {

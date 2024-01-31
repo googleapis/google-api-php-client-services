@@ -20,10 +20,6 @@ namespace Google\Service\VMwareEngine;
 class ListHcxActivationKeysResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var HcxActivationKey[]
-   */
-  public $hcxActivationKeys;
   protected $hcxActivationKeysType = HcxActivationKey::class;
   protected $hcxActivationKeysDataType = 'array';
   /**

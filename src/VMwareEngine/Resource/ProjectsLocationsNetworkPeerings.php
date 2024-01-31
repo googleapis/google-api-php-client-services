@@ -65,6 +65,7 @@ class ProjectsLocationsNetworkPeerings extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, NetworkPeering $postBody, $optParams = [])
   {
@@ -96,6 +97,7 @@ class ProjectsLocationsNetworkPeerings extends \Google\Service\Resource
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -115,6 +117,7 @@ class ProjectsLocationsNetworkPeerings extends \Google\Service\Resource
    * `projects/my-project/locations/global/networkPeerings/my-peering`
    * @param array $optParams Optional parameters.
    * @return NetworkPeering
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -157,6 +160,7 @@ class ProjectsLocationsNetworkPeerings extends \Google\Service\Resource
    * When paginating, all other parameters provided to `ListNetworkPeerings` must
    * match the call that provided the page token.
    * @return ListNetworkPeeringsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsNetworkPeerings($parent, $optParams = [])
   {
@@ -194,6 +198,7 @@ class ProjectsLocationsNetworkPeerings extends \Google\Service\Resource
    * full request. A field will be overwritten if it is in the mask. If the user
    * does not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, NetworkPeering $postBody, $optParams = [])
   {

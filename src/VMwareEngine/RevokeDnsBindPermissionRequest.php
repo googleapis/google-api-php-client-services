@@ -19,10 +19,6 @@ namespace Google\Service\VMwareEngine;
 
 class RevokeDnsBindPermissionRequest extends \Google\Model
 {
-  /**
-   * @var Principal
-   */
-  public $principal;
   protected $principalType = Principal::class;
   protected $principalDataType = '';
   /**

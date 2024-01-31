@@ -35,32 +35,16 @@ class PrivateCloud extends \Google\Model
    * @var string
    */
   public $expireTime;
-  /**
-   * @var Hcx
-   */
-  public $hcx;
   protected $hcxType = Hcx::class;
   protected $hcxDataType = '';
-  /**
-   * @var ManagementCluster
-   */
-  public $managementCluster;
   protected $managementClusterType = ManagementCluster::class;
   protected $managementClusterDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var NetworkConfig
-   */
-  public $networkConfig;
   protected $networkConfigType = NetworkConfig::class;
   protected $networkConfigDataType = '';
-  /**
-   * @var Nsx
-   */
-  public $nsx;
   protected $nsxType = Nsx::class;
   protected $nsxDataType = '';
   /**
@@ -79,10 +63,6 @@ class PrivateCloud extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var Vcenter
-   */
-  public $vcenter;
   protected $vcenterType = Vcenter::class;
   protected $vcenterDataType = '';
 

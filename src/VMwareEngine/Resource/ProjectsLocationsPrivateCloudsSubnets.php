@@ -41,6 +41,7 @@ class ProjectsLocationsPrivateCloudsSubnets extends \Google\Service\Resource
    * cloud/subnets/my-subnet`
    * @param array $optParams Optional parameters.
    * @return Subnet
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -66,6 +67,7 @@ class ProjectsLocationsPrivateCloudsSubnets extends \Google\Service\Resource
    * paginating, all other parameters provided to `ListSubnetsRequest` must match
    * the call that provided the page token.
    * @return ListSubnetsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateCloudsSubnets($parent, $optParams = [])
   {
@@ -93,6 +95,7 @@ class ProjectsLocationsPrivateCloudsSubnets extends \Google\Service\Resource
    * request. A field will be overwritten if it is in the mask. If the user does
    * not provide a mask then all fields will be overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Subnet $postBody, $optParams = [])
   {

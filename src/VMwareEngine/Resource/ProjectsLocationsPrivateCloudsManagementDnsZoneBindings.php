@@ -69,6 +69,7 @@ class ProjectsLocationsPrivateCloudsManagementDnsZoneBindings extends \Google\Se
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ManagementDnsZoneBinding $postBody, $optParams = [])
   {
@@ -100,6 +101,7 @@ class ProjectsLocationsPrivateCloudsManagementDnsZoneBindings extends \Google\Se
    * commitments. The request ID must be a valid UUID with the exception that zero
    * UUID is not supported (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -118,6 +120,7 @@ class ProjectsLocationsPrivateCloudsManagementDnsZoneBindings extends \Google\Se
    * cloud/managementDnsZoneBindings/my-management-dns-zone-binding`
    * @param array $optParams Optional parameters.
    * @return ManagementDnsZoneBinding
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -164,6 +167,7 @@ class ProjectsLocationsPrivateCloudsManagementDnsZoneBindings extends \Google\Se
    * `ListManagementDnsZoneBindings` must match the call that provided the page
    * token.
    * @return ListManagementDnsZoneBindingsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsPrivateCloudsManagementDnsZoneBindings($parent, $optParams = [])
   {
@@ -201,6 +205,7 @@ class ProjectsLocationsPrivateCloudsManagementDnsZoneBindings extends \Google\Se
    * mask. If the user does not provide a mask then all fields will be
    * overwritten.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, ManagementDnsZoneBinding $postBody, $optParams = [])
   {
@@ -220,6 +225,7 @@ class ProjectsLocationsPrivateCloudsManagementDnsZoneBindings extends \Google\Se
    * @param RepairManagementDnsZoneBindingRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function repair($name, RepairManagementDnsZoneBindingRequest $postBody, $optParams = [])
   {
