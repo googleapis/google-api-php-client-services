@@ -20,10 +20,6 @@ namespace Google\Service\VersionHistory;
 class ListChannelsResponse extends \Google\Collection
 {
   protected $collection_key = 'channels';
-  /**
-   * @var Channel[]
-   */
-  public $channels;
   protected $channelsType = Channel::class;
   protected $channelsDataType = 'array';
   /**
