@@ -20,10 +20,6 @@ namespace Google\Service\FirebaseRealtimeDatabase;
 class ListDatabaseInstancesResponse extends \Google\Collection
 {
   protected $collection_key = 'instances';
-  /**
-   * @var DatabaseInstance[]
-   */
-  public $instances;
   protected $instancesType = DatabaseInstance::class;
   protected $instancesDataType = 'array';
   /**
