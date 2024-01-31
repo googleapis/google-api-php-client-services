@@ -24,10 +24,6 @@ class GoogleCloudRunV2ListRevisionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudRunV2Revision[]
-   */
-  public $revisions;
   protected $revisionsType = GoogleCloudRunV2Revision::class;
   protected $revisionsDataType = 'array';
 

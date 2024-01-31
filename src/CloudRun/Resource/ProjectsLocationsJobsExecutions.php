@@ -41,6 +41,7 @@ class ProjectsLocationsJobsExecutions extends \Google\Service\Resource
    * @param GoogleCloudRunV2CancelExecutionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, GoogleCloudRunV2CancelExecutionRequest $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsLocationsJobsExecutions extends \Google\Service\Resource
    * @opt_param bool validateOnly Indicates that the request should be validated
    * without actually deleting any resources.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -76,6 +78,7 @@ class ProjectsLocationsJobsExecutions extends \Google\Service\Resource
    * where `{project}` can be project id or number.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRunV2Execution
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -98,6 +101,7 @@ class ProjectsLocationsJobsExecutions extends \Google\Service\Resource
    * @opt_param bool showDeleted If true, returns deleted (but unexpired)
    * resources along with active ones.
    * @return GoogleCloudRunV2ListExecutionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsJobsExecutions($parent, $optParams = [])
   {

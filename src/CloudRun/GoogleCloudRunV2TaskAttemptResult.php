@@ -23,10 +23,6 @@ class GoogleCloudRunV2TaskAttemptResult extends \Google\Model
    * @var int
    */
   public $exitCode;
-  /**
-   * @var GoogleRpcStatus
-   */
-  public $status;
   protected $statusType = GoogleRpcStatus::class;
   protected $statusDataType = '';
 

@@ -32,10 +32,6 @@ class GoogleCloudRunV2Execution extends \Google\Collection
    * @var string
    */
   public $completionTime;
-  /**
-   * @var GoogleCloudRunV2Condition[]
-   */
-  public $conditions;
   protected $conditionsType = GoogleCloudRunV2Condition::class;
   protected $conditionsDataType = 'array';
   /**
@@ -118,10 +114,6 @@ class GoogleCloudRunV2Execution extends \Google\Collection
    * @var int
    */
   public $taskCount;
-  /**
-   * @var GoogleCloudRunV2TaskTemplate
-   */
-  public $template;
   protected $templateType = GoogleCloudRunV2TaskTemplate::class;
   protected $templateDataType = '';
   /**

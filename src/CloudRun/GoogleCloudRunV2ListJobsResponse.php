@@ -20,10 +20,6 @@ namespace Google\Service\CloudRun;
 class GoogleCloudRunV2ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
-  /**
-   * @var GoogleCloudRunV2Job[]
-   */
-  public $jobs;
   protected $jobsType = GoogleCloudRunV2Job::class;
   protected $jobsDataType = 'array';
   /**

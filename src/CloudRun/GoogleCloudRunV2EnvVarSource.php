@@ -19,10 +19,6 @@ namespace Google\Service\CloudRun;
 
 class GoogleCloudRunV2EnvVarSource extends \Google\Model
 {
-  /**
-   * @var GoogleCloudRunV2SecretKeySelector
-   */
-  public $secretKeyRef;
   protected $secretKeyRefType = GoogleCloudRunV2SecretKeySelector::class;
   protected $secretKeyRefDataType = '';
 

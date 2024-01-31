@@ -24,10 +24,6 @@ class GoogleCloudRunV2ListTasksResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudRunV2Task[]
-   */
-  public $tasks;
   protected $tasksType = GoogleCloudRunV2Task::class;
   protected $tasksDataType = 'array';
 
