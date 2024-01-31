@@ -20,10 +20,6 @@ namespace Google\Service\Fcmdata;
 class GoogleFirebaseFcmDataV1beta1ListAndroidDeliveryDataResponse extends \Google\Collection
 {
   protected $collection_key = 'androidDeliveryData';
-  /**
-   * @var GoogleFirebaseFcmDataV1beta1AndroidDeliveryData[]
-   */
-  public $androidDeliveryData;
   protected $androidDeliveryDataType = GoogleFirebaseFcmDataV1beta1AndroidDeliveryData::class;
   protected $androidDeliveryDataDataType = 'array';
   /**
