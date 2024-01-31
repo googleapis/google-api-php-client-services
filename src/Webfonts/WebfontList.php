@@ -20,10 +20,6 @@ namespace Google\Service\Webfonts;
 class WebfontList extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Webfont[]
-   */
-  public $items;
   protected $itemsType = Webfont::class;
   protected $itemsDataType = 'array';
   /**
