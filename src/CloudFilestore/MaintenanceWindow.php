@@ -19,16 +19,8 @@ namespace Google\Service\CloudFilestore;
 
 class MaintenanceWindow extends \Google\Model
 {
-  /**
-   * @var DailyCycle
-   */
-  public $dailyCycle;
   protected $dailyCycleType = DailyCycle::class;
   protected $dailyCycleDataType = '';
-  /**
-   * @var WeeklyCycle
-   */
-  public $weeklyCycle;
   protected $weeklyCycleType = WeeklyCycle::class;
   protected $weeklyCycleDataType = '';
 

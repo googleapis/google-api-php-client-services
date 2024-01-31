@@ -27,10 +27,6 @@ class GoogleCloudSaasacceleratorManagementProvidersV1NodeSloMetadata extends \Go
    * @var string
    */
   public $nodeId;
-  /**
-   * @var GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility
-   */
-  public $perSliEligibility;
   protected $perSliEligibilityType = GoogleCloudSaasacceleratorManagementProvidersV1PerSliSloEligibility::class;
   protected $perSliEligibilityDataType = '';
 
