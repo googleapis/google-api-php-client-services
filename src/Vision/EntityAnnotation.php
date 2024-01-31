@@ -20,10 +20,6 @@ namespace Google\Service\Vision;
 class EntityAnnotation extends \Google\Collection
 {
   protected $collection_key = 'properties';
-  /**
-   * @var BoundingPoly
-   */
-  public $boundingPoly;
   protected $boundingPolyType = BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
@@ -38,20 +34,12 @@ class EntityAnnotation extends \Google\Collection
    * @var string
    */
   public $locale;
-  /**
-   * @var LocationInfo[]
-   */
-  public $locations;
   protected $locationsType = LocationInfo::class;
   protected $locationsDataType = 'array';
   /**
    * @var string
    */
   public $mid;
-  /**
-   * @var Property[]
-   */
-  public $properties;
   protected $propertiesType = Property::class;
   protected $propertiesDataType = 'array';
   /**

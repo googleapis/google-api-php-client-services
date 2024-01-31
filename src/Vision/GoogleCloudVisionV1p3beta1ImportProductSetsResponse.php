@@ -20,16 +20,8 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1ImportProductSetsResponse extends \Google\Collection
 {
   protected $collection_key = 'statuses';
-  /**
-   * @var GoogleCloudVisionV1p3beta1ReferenceImage[]
-   */
-  public $referenceImages;
   protected $referenceImagesType = GoogleCloudVisionV1p3beta1ReferenceImage::class;
   protected $referenceImagesDataType = 'array';
-  /**
-   * @var Status[]
-   */
-  public $statuses;
   protected $statusesType = Status::class;
   protected $statusesDataType = 'array';
 

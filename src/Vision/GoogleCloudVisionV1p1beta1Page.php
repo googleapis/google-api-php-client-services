@@ -20,10 +20,6 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p1beta1Page extends \Google\Collection
 {
   protected $collection_key = 'blocks';
-  /**
-   * @var GoogleCloudVisionV1p1beta1Block[]
-   */
-  public $blocks;
   protected $blocksType = GoogleCloudVisionV1p1beta1Block::class;
   protected $blocksDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class GoogleCloudVisionV1p1beta1Page extends \Google\Collection
    * @var int
    */
   public $height;
-  /**
-   * @var GoogleCloudVisionV1p1beta1TextAnnotationTextProperty
-   */
-  public $property;
   protected $propertyType = GoogleCloudVisionV1p1beta1TextAnnotationTextProperty::class;
   protected $propertyDataType = '';
   /**

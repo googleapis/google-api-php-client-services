@@ -20,10 +20,6 @@ namespace Google\Service\Vision;
 class DominantColorsAnnotation extends \Google\Collection
 {
   protected $collection_key = 'colors';
-  /**
-   * @var ColorInfo[]
-   */
-  public $colors;
   protected $colorsType = ColorInfo::class;
   protected $colorsDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\Vision;
 class BatchAnnotateFilesResponse extends \Google\Collection
 {
   protected $collection_key = 'responses';
-  /**
-   * @var AnnotateFileResponse[]
-   */
-  public $responses;
   protected $responsesType = AnnotateFileResponse::class;
   protected $responsesDataType = 'array';
 

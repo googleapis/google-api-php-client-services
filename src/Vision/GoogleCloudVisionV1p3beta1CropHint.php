@@ -19,10 +19,6 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p3beta1CropHint extends \Google\Model
 {
-  /**
-   * @var GoogleCloudVisionV1p3beta1BoundingPoly
-   */
-  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudVisionV1p3beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p2beta1LocalizedObjectAnnotation extends \Google\Model
 {
-  /**
-   * @var GoogleCloudVisionV1p2beta1BoundingPoly
-   */
-  public $boundingPoly;
   protected $boundingPolyType = GoogleCloudVisionV1p2beta1BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**

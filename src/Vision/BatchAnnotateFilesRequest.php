@@ -28,10 +28,6 @@ class BatchAnnotateFilesRequest extends \Google\Collection
    * @var string
    */
   public $parent;
-  /**
-   * @var AnnotateFileRequest[]
-   */
-  public $requests;
   protected $requestsType = AnnotateFileRequest::class;
   protected $requestsDataType = 'array';
 

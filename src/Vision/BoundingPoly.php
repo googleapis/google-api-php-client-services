@@ -20,16 +20,8 @@ namespace Google\Service\Vision;
 class BoundingPoly extends \Google\Collection
 {
   protected $collection_key = 'vertices';
-  /**
-   * @var NormalizedVertex[]
-   */
-  public $normalizedVertices;
   protected $normalizedVerticesType = NormalizedVertex::class;
   protected $normalizedVerticesDataType = 'array';
-  /**
-   * @var Vertex[]
-   */
-  public $vertices;
   protected $verticesType = Vertex::class;
   protected $verticesDataType = 'array';
 

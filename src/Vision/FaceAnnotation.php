@@ -28,20 +28,12 @@ class FaceAnnotation extends \Google\Collection
    * @var string
    */
   public $blurredLikelihood;
-  /**
-   * @var BoundingPoly
-   */
-  public $boundingPoly;
   protected $boundingPolyType = BoundingPoly::class;
   protected $boundingPolyDataType = '';
   /**
    * @var float
    */
   public $detectionConfidence;
-  /**
-   * @var BoundingPoly
-   */
-  public $fdBoundingPoly;
   protected $fdBoundingPolyType = BoundingPoly::class;
   protected $fdBoundingPolyDataType = '';
   /**
@@ -56,10 +48,6 @@ class FaceAnnotation extends \Google\Collection
    * @var float
    */
   public $landmarkingConfidence;
-  /**
-   * @var Landmark[]
-   */
-  public $landmarks;
   protected $landmarksType = Landmark::class;
   protected $landmarksDataType = 'array';
   /**

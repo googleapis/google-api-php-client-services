@@ -20,28 +20,12 @@ namespace Google\Service\Vision;
 class AsyncAnnotateFileRequest extends \Google\Collection
 {
   protected $collection_key = 'features';
-  /**
-   * @var Feature[]
-   */
-  public $features;
   protected $featuresType = Feature::class;
   protected $featuresDataType = 'array';
-  /**
-   * @var ImageContext
-   */
-  public $imageContext;
   protected $imageContextType = ImageContext::class;
   protected $imageContextDataType = '';
-  /**
-   * @var InputConfig
-   */
-  public $inputConfig;
   protected $inputConfigType = InputConfig::class;
   protected $inputConfigDataType = '';
-  /**
-   * @var OutputConfig
-   */
-  public $outputConfig;
   protected $outputConfigType = OutputConfig::class;
   protected $outputConfigDataType = '';
 
