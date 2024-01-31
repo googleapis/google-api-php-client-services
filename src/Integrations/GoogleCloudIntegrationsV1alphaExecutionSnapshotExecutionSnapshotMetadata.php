@@ -35,6 +35,10 @@ class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata e
   /**
    * @var string
    */
+  public $integrationName;
+  /**
+   * @var string
+   */
   public $task;
   /**
    * @var int
@@ -90,6 +94,20 @@ class GoogleCloudIntegrationsV1alphaExecutionSnapshotExecutionSnapshotMetadata e
   public function getExecutionAttempt()
   {
     return $this->executionAttempt;
+  }
+  /**
+   * @param string
+   */
+  public function setIntegrationName($integrationName)
+  {
+    $this->integrationName = $integrationName;
+  }
+  /**
+   * @return string
+   */
+  public function getIntegrationName()
+  {
+    return $this->integrationName;
   }
   /**
    * @param string

@@ -33,6 +33,10 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
    */
   public $eventAttemptNum;
   /**
+   * @var string
+   */
+  public $integrationName;
+  /**
    * @var int
    */
   public $taskAttemptNum;
@@ -90,6 +94,20 @@ class EnterpriseCrmEventbusProtoEventExecutionSnapshotEventExecutionSnapshotMeta
   public function getEventAttemptNum()
   {
     return $this->eventAttemptNum;
+  }
+  /**
+   * @param string
+   */
+  public function setIntegrationName($integrationName)
+  {
+    $this->integrationName = $integrationName;
+  }
+  /**
+   * @return string
+   */
+  public function getIntegrationName()
+  {
+    return $this->integrationName;
   }
   /**
    * @param int

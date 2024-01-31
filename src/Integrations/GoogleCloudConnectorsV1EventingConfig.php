@@ -40,6 +40,8 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
    * @var bool
    */
   public $privateConnectivityEnabled;
+  protected $proxyDestinationConfigType = GoogleCloudConnectorsV1DestinationConfig::class;
+  protected $proxyDestinationConfigDataType = '';
   protected $registrationDestinationConfigType = GoogleCloudConnectorsV1DestinationConfig::class;
   protected $registrationDestinationConfigDataType = '';
 
@@ -140,6 +142,20 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public function getPrivateConnectivityEnabled()
   {
     return $this->privateConnectivityEnabled;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1DestinationConfig
+   */
+  public function setProxyDestinationConfig(GoogleCloudConnectorsV1DestinationConfig $proxyDestinationConfig)
+  {
+    $this->proxyDestinationConfig = $proxyDestinationConfig;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1DestinationConfig
+   */
+  public function getProxyDestinationConfig()
+  {
+    return $this->proxyDestinationConfig;
   }
   /**
    * @param GoogleCloudConnectorsV1DestinationConfig
