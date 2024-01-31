@@ -20,10 +20,6 @@ namespace Google\Service\Vault;
 class ListExportsResponse extends \Google\Collection
 {
   protected $collection_key = 'exports';
-  /**
-   * @var Export[]
-   */
-  public $exports;
   protected $exportsType = Export::class;
   protected $exportsDataType = 'array';
   /**

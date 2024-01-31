@@ -19,10 +19,6 @@ namespace Google\Service\Vault;
 
 class AccountCount extends \Google\Model
 {
-  /**
-   * @var UserInfo
-   */
-  public $account;
   protected $accountType = UserInfo::class;
   protected $accountDataType = '';
   /**

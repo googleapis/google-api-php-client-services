@@ -19,16 +19,8 @@ namespace Google\Service\Vault;
 
 class Query extends \Google\Model
 {
-  /**
-   * @var AccountInfo
-   */
-  public $accountInfo;
   protected $accountInfoType = AccountInfo::class;
   protected $accountInfoDataType = '';
-  /**
-   * @var CalendarOptions
-   */
-  public $calendarOptions;
   protected $calendarOptionsType = CalendarOptions::class;
   protected $calendarOptionsDataType = '';
   /**
@@ -39,68 +31,36 @@ class Query extends \Google\Model
    * @var string
    */
   public $dataScope;
-  /**
-   * @var DriveOptions
-   */
-  public $driveOptions;
   protected $driveOptionsType = DriveOptions::class;
   protected $driveOptionsDataType = '';
   /**
    * @var string
    */
   public $endTime;
-  /**
-   * @var HangoutsChatInfo
-   */
-  public $hangoutsChatInfo;
   protected $hangoutsChatInfoType = HangoutsChatInfo::class;
   protected $hangoutsChatInfoDataType = '';
-  /**
-   * @var HangoutsChatOptions
-   */
-  public $hangoutsChatOptions;
   protected $hangoutsChatOptionsType = HangoutsChatOptions::class;
   protected $hangoutsChatOptionsDataType = '';
-  /**
-   * @var MailOptions
-   */
-  public $mailOptions;
   protected $mailOptionsType = MailOptions::class;
   protected $mailOptionsDataType = '';
   /**
    * @var string
    */
   public $method;
-  /**
-   * @var OrgUnitInfo
-   */
-  public $orgUnitInfo;
   protected $orgUnitInfoType = OrgUnitInfo::class;
   protected $orgUnitInfoDataType = '';
   /**
    * @var string
    */
   public $searchMethod;
-  /**
-   * @var SharedDriveInfo
-   */
-  public $sharedDriveInfo;
   protected $sharedDriveInfoType = SharedDriveInfo::class;
   protected $sharedDriveInfoDataType = '';
-  /**
-   * @var SitesUrlInfo
-   */
-  public $sitesUrlInfo;
   protected $sitesUrlInfoType = SitesUrlInfo::class;
   protected $sitesUrlInfoDataType = '';
   /**
    * @var string
    */
   public $startTime;
-  /**
-   * @var TeamDriveInfo
-   */
-  public $teamDriveInfo;
   protected $teamDriveInfoType = TeamDriveInfo::class;
   protected $teamDriveInfoDataType = '';
   /**
@@ -111,10 +71,6 @@ class Query extends \Google\Model
    * @var string
    */
   public $timeZone;
-  /**
-   * @var VoiceOptions
-   */
-  public $voiceOptions;
   protected $voiceOptionsType = VoiceOptions::class;
   protected $voiceOptionsDataType = '';
 

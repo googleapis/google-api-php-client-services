@@ -27,10 +27,6 @@ class CountArtifactsMetadata extends \Google\Model
    * @var string
    */
   public $matterId;
-  /**
-   * @var Query
-   */
-  public $query;
   protected $queryType = Query::class;
   protected $queryDataType = '';
   /**

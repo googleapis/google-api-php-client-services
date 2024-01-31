@@ -24,10 +24,6 @@ class ListSavedQueriesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var SavedQuery[]
-   */
-  public $savedQueries;
   protected $savedQueriesType = SavedQuery::class;
   protected $savedQueriesDataType = 'array';
 

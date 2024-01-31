@@ -19,16 +19,8 @@ namespace Google\Service\Vault;
 
 class CountArtifactsResponse extends \Google\Model
 {
-  /**
-   * @var GroupsCountResult
-   */
-  public $groupsCountResult;
   protected $groupsCountResultType = GroupsCountResult::class;
   protected $groupsCountResultDataType = '';
-  /**
-   * @var MailCountResult
-   */
-  public $mailCountResult;
   protected $mailCountResultType = MailCountResult::class;
   protected $mailCountResultDataType = '';
   /**

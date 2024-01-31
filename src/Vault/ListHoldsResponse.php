@@ -20,10 +20,6 @@ namespace Google\Service\Vault;
 class ListHoldsResponse extends \Google\Collection
 {
   protected $collection_key = 'holds';
-  /**
-   * @var Hold[]
-   */
-  public $holds;
   protected $holdsType = Hold::class;
   protected $holdsDataType = 'array';
   /**
