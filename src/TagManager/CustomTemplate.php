@@ -31,10 +31,6 @@ class CustomTemplate extends \Google\Model
    * @var string
    */
   public $fingerprint;
-  /**
-   * @var GalleryReference
-   */
-  public $galleryReference;
   protected $galleryReferenceType = GalleryReference::class;
   protected $galleryReferenceDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\TagManager;
 class ListContainerVersionsResponse extends \Google\Collection
 {
   protected $collection_key = 'containerVersionHeader';
-  /**
-   * @var ContainerVersionHeader[]
-   */
-  public $containerVersionHeader;
   protected $containerVersionHeaderType = ContainerVersionHeader::class;
   protected $containerVersionHeaderDataType = 'array';
   /**

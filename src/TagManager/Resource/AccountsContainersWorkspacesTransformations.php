@@ -39,6 +39,7 @@ class AccountsContainersWorkspacesTransformations extends \Google\Service\Resour
    * @param Transformation $postBody
    * @param array $optParams Optional parameters.
    * @return Transformation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Transformation $postBody, $optParams = [])
   {
@@ -53,6 +54,7 @@ class AccountsContainersWorkspacesTransformations extends \Google\Service\Resour
    * /{account_id}/containers/{container_id}/workspaces/{workspace_id}/transformat
    * ions/{transformation_id}
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($path, $optParams = [])
   {
@@ -68,6 +70,7 @@ class AccountsContainersWorkspacesTransformations extends \Google\Service\Resour
    * ions/{transformation_id}
    * @param array $optParams Optional parameters.
    * @return Transformation
+   * @throws \Google\Service\Exception
    */
   public function get($path, $optParams = [])
   {
@@ -86,6 +89,7 @@ class AccountsContainersWorkspacesTransformations extends \Google\Service\Resour
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
    * @return ListTransformationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsContainersWorkspacesTransformations($parent, $optParams = [])
   {
@@ -105,6 +109,7 @@ class AccountsContainersWorkspacesTransformations extends \Google\Service\Resour
    * @opt_param string fingerprint When provided, this fingerprint must match the
    * fingerprint of the transformation in storage.
    * @return RevertTransformationResponse
+   * @throws \Google\Service\Exception
    */
   public function revert($path, $optParams = [])
   {
@@ -124,6 +129,7 @@ class AccountsContainersWorkspacesTransformations extends \Google\Service\Resour
    * @opt_param string fingerprint When provided, this fingerprint must match the
    * fingerprint of the transformation in storage.
    * @return Transformation
+   * @throws \Google\Service\Exception
    */
   public function update($path, Transformation $postBody, $optParams = [])
   {

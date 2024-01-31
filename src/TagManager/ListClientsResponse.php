@@ -20,10 +20,6 @@ namespace Google\Service\TagManager;
 class ListClientsResponse extends \Google\Collection
 {
   protected $collection_key = 'client';
-  /**
-   * @var Client[]
-   */
-  public $client;
   protected $clientType = Client::class;
   protected $clientDataType = 'array';
   /**

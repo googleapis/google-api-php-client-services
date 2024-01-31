@@ -36,10 +36,6 @@ class GtagConfig extends \Google\Collection
    * @var string
    */
   public $gtagConfigId;
-  /**
-   * @var Parameter[]
-   */
-  public $parameter;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
   /**

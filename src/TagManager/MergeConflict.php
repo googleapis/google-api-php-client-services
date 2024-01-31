@@ -19,16 +19,8 @@ namespace Google\Service\TagManager;
 
 class MergeConflict extends \Google\Model
 {
-  /**
-   * @var Entity
-   */
-  public $entityInBaseVersion;
   protected $entityInBaseVersionType = Entity::class;
   protected $entityInBaseVersionDataType = '';
-  /**
-   * @var Entity
-   */
-  public $entityInWorkspace;
   protected $entityInWorkspaceType = Entity::class;
   protected $entityInWorkspaceDataType = '';
 

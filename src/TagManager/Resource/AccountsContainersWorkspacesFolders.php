@@ -40,6 +40,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @param Folder $postBody
    * @param array $optParams Optional parameters.
    * @return Folder
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Folder $postBody, $optParams = [])
   {
@@ -53,6 +54,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @param string $path GTM Folder's API relative path. Example: accounts/{accoun
    * t_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
    * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
    */
   public function delete($path, $optParams = [])
   {
@@ -70,6 +72,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
    * @return FolderEntities
+   * @throws \Google\Service\Exception
    */
   public function entities($path, $optParams = [])
   {
@@ -84,6 +87,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * t_id}/containers/{container_id}/workspaces/{workspace_id}/folders/{folder_id}
    * @param array $optParams Optional parameters.
    * @return Folder
+   * @throws \Google\Service\Exception
    */
   public function get($path, $optParams = [])
   {
@@ -102,6 +106,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @opt_param string pageToken Continuation token for fetching the next page of
    * results.
    * @return ListFoldersResponse
+   * @throws \Google\Service\Exception
    */
   public function listAccountsContainersWorkspacesFolders($parent, $optParams = [])
   {
@@ -122,6 +127,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @opt_param string tagId The tags to be moved to the folder.
    * @opt_param string triggerId The triggers to be moved to the folder.
    * @opt_param string variableId The variables to be moved to the folder.
+   * @throws \Google\Service\Exception
    */
   public function move_entities_to_folder($path, Folder $postBody, $optParams = [])
   {
@@ -139,6 +145,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @opt_param string fingerprint When provided, this fingerprint must match the
    * fingerprint of the tag in storage.
    * @return RevertFolderResponse
+   * @throws \Google\Service\Exception
    */
   public function revert($path, $optParams = [])
   {
@@ -157,6 +164,7 @@ class AccountsContainersWorkspacesFolders extends \Google\Service\Resource
    * @opt_param string fingerprint When provided, this fingerprint must match the
    * fingerprint of the folder in storage.
    * @return Folder
+   * @throws \Google\Service\Exception
    */
   public function update($path, Folder $postBody, $optParams = [])
   {

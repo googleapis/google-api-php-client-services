@@ -19,10 +19,6 @@ namespace Google\Service\TagManager;
 
 class RevertTemplateResponse extends \Google\Model
 {
-  /**
-   * @var CustomTemplate
-   */
-  public $template;
   protected $templateType = CustomTemplate::class;
   protected $templateDataType = '';
 

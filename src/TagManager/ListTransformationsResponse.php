@@ -24,10 +24,6 @@ class ListTransformationsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Transformation[]
-   */
-  public $transformation;
   protected $transformationType = Transformation::class;
   protected $transformationDataType = 'array';
 

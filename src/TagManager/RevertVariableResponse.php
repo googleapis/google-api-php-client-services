@@ -19,10 +19,6 @@ namespace Google\Service\TagManager;
 
 class RevertVariableResponse extends \Google\Model
 {
-  /**
-   * @var Variable
-   */
-  public $variable;
   protected $variableType = Variable::class;
   protected $variableDataType = '';
 

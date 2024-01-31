@@ -20,16 +20,8 @@ namespace Google\Service\TagManager;
 class SyncWorkspaceResponse extends \Google\Collection
 {
   protected $collection_key = 'mergeConflict';
-  /**
-   * @var MergeConflict[]
-   */
-  public $mergeConflict;
   protected $mergeConflictType = MergeConflict::class;
   protected $mergeConflictDataType = 'array';
-  /**
-   * @var SyncStatus
-   */
-  public $syncStatus;
   protected $syncStatusType = SyncStatus::class;
   protected $syncStatusDataType = '';
 

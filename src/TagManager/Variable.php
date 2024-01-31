@@ -40,10 +40,6 @@ class Variable extends \Google\Collection
    * @var string
    */
   public $fingerprint;
-  /**
-   * @var VariableFormatValue
-   */
-  public $formatValue;
   protected $formatValueType = VariableFormatValue::class;
   protected $formatValueDataType = '';
   /**
@@ -54,10 +50,6 @@ class Variable extends \Google\Collection
    * @var string
    */
   public $notes;
-  /**
-   * @var Parameter[]
-   */
-  public $parameter;
   protected $parameterType = Parameter::class;
   protected $parameterDataType = 'array';
   /**

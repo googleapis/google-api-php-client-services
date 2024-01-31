@@ -20,10 +20,6 @@ namespace Google\Service\TagManager;
 class ZoneBoundary extends \Google\Collection
 {
   protected $collection_key = 'customEvaluationTriggerId';
-  /**
-   * @var Condition[]
-   */
-  public $condition;
   protected $conditionType = Condition::class;
   protected $conditionDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\TagManager;
 class CreateBuiltInVariableResponse extends \Google\Collection
 {
   protected $collection_key = 'builtInVariable';
-  /**
-   * @var BuiltInVariable[]
-   */
-  public $builtInVariable;
   protected $builtInVariableType = BuiltInVariable::class;
   protected $builtInVariableDataType = 'array';
 

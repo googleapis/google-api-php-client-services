@@ -20,10 +20,6 @@ namespace Google\Service\TagManager;
 class ListFoldersResponse extends \Google\Collection
 {
   protected $collection_key = 'folder';
-  /**
-   * @var Folder[]
-   */
-  public $folder;
   protected $folderType = Folder::class;
   protected $folderDataType = 'array';
   /**
