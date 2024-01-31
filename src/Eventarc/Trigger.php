@@ -24,20 +24,12 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $channel;
-  /**
-   * @var StateCondition[]
-   */
-  public $conditions;
   protected $conditionsType = StateCondition::class;
   protected $conditionsDataType = 'map';
   /**
    * @var string
    */
   public $createTime;
-  /**
-   * @var Destination
-   */
-  public $destination;
   protected $destinationType = Destination::class;
   protected $destinationDataType = '';
   /**
@@ -48,10 +40,6 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $eventDataContentType;
-  /**
-   * @var EventFilter[]
-   */
-  public $eventFilters;
   protected $eventFiltersType = EventFilter::class;
   protected $eventFiltersDataType = 'array';
   /**
@@ -66,10 +54,6 @@ class Trigger extends \Google\Collection
    * @var string
    */
   public $serviceAccount;
-  /**
-   * @var Transport
-   */
-  public $transport;
   protected $transportType = Transport::class;
   protected $transportDataType = '';
   /**
