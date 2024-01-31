@@ -31,10 +31,6 @@ class FileComment extends \Google\Model
    * @var string
    */
   public $linkToDiscussion;
-  /**
-   * @var DriveItem
-   */
-  public $parent;
   protected $parentType = DriveItem::class;
   protected $parentDataType = '';
 

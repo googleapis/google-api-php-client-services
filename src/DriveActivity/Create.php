@@ -19,22 +19,10 @@ namespace Google\Service\DriveActivity;
 
 class Create extends \Google\Model
 {
-  /**
-   * @var Copy
-   */
-  public $copy;
   protected $copyType = Copy::class;
   protected $copyDataType = '';
-  /**
-   * @var DriveactivityNew
-   */
-  public $new;
   protected $newType = DriveactivityNew::class;
   protected $newDataType = '';
-  /**
-   * @var Upload
-   */
-  public $upload;
   protected $uploadType = Upload::class;
   protected $uploadDataType = '';
 

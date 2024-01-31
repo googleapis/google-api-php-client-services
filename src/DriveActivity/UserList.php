@@ -20,10 +20,6 @@ namespace Google\Service\DriveActivity;
 class UserList extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var SingleUser[]
-   */
-  public $values;
   protected $valuesType = SingleUser::class;
   protected $valuesDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\DriveActivity;
 
 class Impersonation extends \Google\Model
 {
-  /**
-   * @var User
-   */
-  public $impersonatedUser;
   protected $impersonatedUserType = User::class;
   protected $impersonatedUserDataType = '';
 

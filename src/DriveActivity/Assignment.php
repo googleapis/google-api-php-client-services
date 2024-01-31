@@ -19,10 +19,6 @@ namespace Google\Service\DriveActivity;
 
 class Assignment extends \Google\Model
 {
-  /**
-   * @var User
-   */
-  public $assignedUser;
   protected $assignedUserType = User::class;
   protected $assignedUserDataType = '';
   /**

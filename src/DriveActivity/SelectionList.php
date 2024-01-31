@@ -20,10 +20,6 @@ namespace Google\Service\DriveActivity;
 class SelectionList extends \Google\Collection
 {
   protected $collection_key = 'values';
-  /**
-   * @var Selection[]
-   */
-  public $values;
   protected $valuesType = Selection::class;
   protected $valuesDataType = 'array';
 

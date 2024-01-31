@@ -20,10 +20,6 @@ namespace Google\Service\DriveActivity;
 class QueryDriveActivityResponse extends \Google\Collection
 {
   protected $collection_key = 'activities';
-  /**
-   * @var DriveActivity[]
-   */
-  public $activities;
   protected $activitiesType = DriveActivity::class;
   protected $activitiesDataType = 'array';
   /**

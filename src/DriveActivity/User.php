@@ -19,22 +19,10 @@ namespace Google\Service\DriveActivity;
 
 class User extends \Google\Model
 {
-  /**
-   * @var DeletedUser
-   */
-  public $deletedUser;
   protected $deletedUserType = DeletedUser::class;
   protected $deletedUserDataType = '';
-  /**
-   * @var KnownUser
-   */
-  public $knownUser;
   protected $knownUserType = KnownUser::class;
   protected $knownUserDataType = '';
-  /**
-   * @var UnknownUser
-   */
-  public $unknownUser;
   protected $unknownUserType = UnknownUser::class;
   protected $unknownUserDataType = '';
 

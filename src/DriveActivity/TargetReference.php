@@ -19,22 +19,10 @@ namespace Google\Service\DriveActivity;
 
 class TargetReference extends \Google\Model
 {
-  /**
-   * @var DriveReference
-   */
-  public $drive;
   protected $driveType = DriveReference::class;
   protected $driveDataType = '';
-  /**
-   * @var DriveItemReference
-   */
-  public $driveItem;
   protected $driveItemType = DriveItemReference::class;
   protected $driveItemDataType = '';
-  /**
-   * @var TeamDriveReference
-   */
-  public $teamDrive;
   protected $teamDriveType = TeamDriveReference::class;
   protected $teamDriveDataType = '';
 

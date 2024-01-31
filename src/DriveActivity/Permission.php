@@ -23,32 +23,16 @@ class Permission extends \Google\Model
    * @var bool
    */
   public $allowDiscovery;
-  /**
-   * @var Anyone
-   */
-  public $anyone;
   protected $anyoneType = Anyone::class;
   protected $anyoneDataType = '';
-  /**
-   * @var Domain
-   */
-  public $domain;
   protected $domainType = Domain::class;
   protected $domainDataType = '';
-  /**
-   * @var Group
-   */
-  public $group;
   protected $groupType = Group::class;
   protected $groupDataType = '';
   /**
    * @var string
    */
   public $role;
-  /**
-   * @var User
-   */
-  public $user;
   protected $userType = User::class;
   protected $userDataType = '';
 
