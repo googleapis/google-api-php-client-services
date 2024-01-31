@@ -19,10 +19,6 @@ namespace Google\Service\Storagetransfer;
 
 class AzureBlobStorageData extends \Google\Model
 {
-  /**
-   * @var AzureCredentials
-   */
-  public $azureCredentials;
   protected $azureCredentialsType = AzureCredentials::class;
   protected $azureCredentialsDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Storagetransfer;
 class ListAgentPoolsResponse extends \Google\Collection
 {
   protected $collection_key = 'agentPools';
-  /**
-   * @var AgentPool[]
-   */
-  public $agentPools;
   protected $agentPoolsType = AgentPool::class;
   protected $agentPoolsDataType = 'array';
   /**

@@ -48,6 +48,7 @@ class ProjectsAgentPools extends \Google\Service\Resource
    * As expressed by the regular expression:
    * `^(?!goog)[a-z]([a-z0-9-._~]*[a-z0-9])?$`.
    * @return AgentPool
+   * @throws \Google\Service\Exception
    */
   public function create($projectId, AgentPool $postBody, $optParams = [])
   {
@@ -61,6 +62,7 @@ class ProjectsAgentPools extends \Google\Service\Resource
    * @param string $name Required. The name of the agent pool to delete.
    * @param array $optParams Optional parameters.
    * @return StoragetransferEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -74,6 +76,7 @@ class ProjectsAgentPools extends \Google\Service\Resource
    * @param string $name Required. The name of the agent pool to get.
    * @param array $optParams Optional parameters.
    * @return AgentPool
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -97,6 +100,7 @@ class ProjectsAgentPools extends \Google\Service\Resource
    * @opt_param int pageSize The list page size. The max allowed value is `256`.
    * @opt_param string pageToken The list page token.
    * @return ListAgentPoolsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsAgentPools($projectId, $optParams = [])
   {
@@ -118,6 +122,7 @@ class ProjectsAgentPools extends \Google\Service\Resource
    * update in this request. The following `agentPool` fields can be updated: *
    * display_name * bandwidth_limit
    * @return AgentPool
+   * @throws \Google\Service\Exception
    */
   public function patch($name, AgentPool $postBody, $optParams = [])
   {

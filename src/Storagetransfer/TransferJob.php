@@ -31,10 +31,6 @@ class TransferJob extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var EventStream
-   */
-  public $eventStream;
   protected $eventStreamType = EventStream::class;
   protected $eventStreamDataType = '';
   /**
@@ -45,40 +41,24 @@ class TransferJob extends \Google\Model
    * @var string
    */
   public $latestOperationName;
-  /**
-   * @var LoggingConfig
-   */
-  public $loggingConfig;
   protected $loggingConfigType = LoggingConfig::class;
   protected $loggingConfigDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var NotificationConfig
-   */
-  public $notificationConfig;
   protected $notificationConfigType = NotificationConfig::class;
   protected $notificationConfigDataType = '';
   /**
    * @var string
    */
   public $projectId;
-  /**
-   * @var Schedule
-   */
-  public $schedule;
   protected $scheduleType = Schedule::class;
   protected $scheduleDataType = '';
   /**
    * @var string
    */
   public $status;
-  /**
-   * @var TransferSpec
-   */
-  public $transferSpec;
   protected $transferSpecType = TransferSpec::class;
   protected $transferSpecDataType = '';
 

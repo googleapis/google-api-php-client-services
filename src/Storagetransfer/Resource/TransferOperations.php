@@ -57,6 +57,7 @@ class TransferOperations extends \Google\Service\Resource
    * @param CancelOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return StoragetransferEmpty
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, CancelOperationRequest $postBody, $optParams = [])
   {
@@ -72,6 +73,7 @@ class TransferOperations extends \Google\Service\Resource
    * @param string $name The name of the operation resource.
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -99,6 +101,7 @@ class TransferOperations extends \Google\Service\Resource
    * @opt_param int pageSize The list page size. The max allowed value is 256.
    * @opt_param string pageToken The list page token.
    * @return ListOperationsResponse
+   * @throws \Google\Service\Exception
    */
   public function listTransferOperations($name, $filter, $optParams = [])
   {
@@ -113,6 +116,7 @@ class TransferOperations extends \Google\Service\Resource
    * @param PauseTransferOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return StoragetransferEmpty
+   * @throws \Google\Service\Exception
    */
   public function pause($name, PauseTransferOperationRequest $postBody, $optParams = [])
   {
@@ -127,6 +131,7 @@ class TransferOperations extends \Google\Service\Resource
    * @param ResumeTransferOperationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return StoragetransferEmpty
+   * @throws \Google\Service\Exception
    */
   public function resume($name, ResumeTransferOperationRequest $postBody, $optParams = [])
   {
