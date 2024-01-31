@@ -40,26 +40,14 @@ class AzureVmDetails extends \Google\Collection
    * @var int
    */
   public $diskCount;
-  /**
-   * @var Disk[]
-   */
-  public $disks;
   protected $disksType = Disk::class;
   protected $disksDataType = 'array';
   /**
    * @var int
    */
   public $memoryMb;
-  /**
-   * @var OSDescription
-   */
-  public $osDescription;
   protected $osDescriptionType = OSDescription::class;
   protected $osDescriptionDataType = '';
-  /**
-   * @var OSDisk
-   */
-  public $osDisk;
   protected $osDiskType = OSDisk::class;
   protected $osDiskDataType = '';
   /**

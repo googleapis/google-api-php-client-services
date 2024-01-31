@@ -24,22 +24,10 @@ class DisksMigrationVmTargetDefaults extends \Google\Collection
    * @var string[]
    */
   public $additionalLicenses;
-  /**
-   * @var BootDiskDefaults
-   */
-  public $bootDiskDefaults;
   protected $bootDiskDefaultsType = BootDiskDefaults::class;
   protected $bootDiskDefaultsDataType = '';
-  /**
-   * @var ComputeScheduling
-   */
-  public $computeScheduling;
   protected $computeSchedulingType = ComputeScheduling::class;
   protected $computeSchedulingDataType = '';
-  /**
-   * @var Encryption
-   */
-  public $encryption;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
   /**
@@ -62,10 +50,6 @@ class DisksMigrationVmTargetDefaults extends \Google\Collection
    * @var string[]
    */
   public $metadata;
-  /**
-   * @var NetworkInterface[]
-   */
-  public $networkInterfaces;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
   /**

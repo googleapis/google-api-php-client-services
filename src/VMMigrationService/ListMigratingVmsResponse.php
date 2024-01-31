@@ -20,10 +20,6 @@ namespace Google\Service\VMMigrationService;
 class ListMigratingVmsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var MigratingVm[]
-   */
-  public $migratingVms;
   protected $migratingVmsType = MigratingVm::class;
   protected $migratingVmsDataType = 'array';
   /**

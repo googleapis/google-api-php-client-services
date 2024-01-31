@@ -39,6 +39,7 @@ class ProjectsLocationsSourcesMigratingVmsCutoverJobs extends \Google\Service\Re
    * @param CancelCutoverJobRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, CancelCutoverJobRequest $postBody, $optParams = [])
   {
@@ -68,6 +69,7 @@ class ProjectsLocationsSourcesMigratingVmsCutoverJobs extends \Google\Service\Re
    * exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, CutoverJob $postBody, $optParams = [])
   {
@@ -81,6 +83,7 @@ class ProjectsLocationsSourcesMigratingVmsCutoverJobs extends \Google\Service\Re
    * @param string $name Required. The name of the CutoverJob.
    * @param array $optParams Optional parameters.
    * @return CutoverJob
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -107,6 +110,7 @@ class ProjectsLocationsSourcesMigratingVmsCutoverJobs extends \Google\Service\Re
    * paginating, all other parameters provided to `ListCutoverJobs` must match the
    * call that provided the page token.
    * @return ListCutoverJobsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsSourcesMigratingVmsCutoverJobs($parent, $optParams = [])
   {

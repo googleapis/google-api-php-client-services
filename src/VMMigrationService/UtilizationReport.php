@@ -28,10 +28,6 @@ class UtilizationReport extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
@@ -58,10 +54,6 @@ class UtilizationReport extends \Google\Collection
    * @var int
    */
   public $vmCount;
-  /**
-   * @var VmUtilizationInfo[]
-   */
-  public $vms;
   protected $vmsType = VmUtilizationInfo::class;
   protected $vmsDataType = 'array';
 

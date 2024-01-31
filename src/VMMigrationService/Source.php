@@ -19,16 +19,8 @@ namespace Google\Service\VMMigrationService;
 
 class Source extends \Google\Model
 {
-  /**
-   * @var AwsSourceDetails
-   */
-  public $aws;
   protected $awsType = AwsSourceDetails::class;
   protected $awsDataType = '';
-  /**
-   * @var AzureSourceDetails
-   */
-  public $azure;
   protected $azureType = AzureSourceDetails::class;
   protected $azureDataType = '';
   /**
@@ -39,10 +31,6 @@ class Source extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var Encryption
-   */
-  public $encryption;
   protected $encryptionType = Encryption::class;
   protected $encryptionDataType = '';
   /**
@@ -57,10 +45,6 @@ class Source extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var VmwareSourceDetails
-   */
-  public $vmware;
   protected $vmwareType = VmwareSourceDetails::class;
   protected $vmwareDataType = '';
 

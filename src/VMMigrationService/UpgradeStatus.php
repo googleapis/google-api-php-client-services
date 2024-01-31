@@ -19,10 +19,6 @@ namespace Google\Service\VMMigrationService;
 
 class UpgradeStatus extends \Google\Model
 {
-  /**
-   * @var Status
-   */
-  public $error;
   protected $errorType = Status::class;
   protected $errorDataType = '';
   /**
