@@ -20,10 +20,6 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1AnnotateVideoResponse extends \Google\Collection
 {
   protected $collection_key = 'annotationResults';
-  /**
-   * @var GoogleCloudVideointelligenceV1VideoAnnotationResults[]
-   */
-  public $annotationResults;
   protected $annotationResultsType = GoogleCloudVideointelligenceV1VideoAnnotationResults::class;
   protected $annotationResultsDataType = 'array';
 

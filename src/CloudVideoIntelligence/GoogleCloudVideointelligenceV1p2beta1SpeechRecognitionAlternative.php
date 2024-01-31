@@ -28,10 +28,6 @@ class GoogleCloudVideointelligenceV1p2beta1SpeechRecognitionAlternative extends 
    * @var string
    */
   public $transcript;
-  /**
-   * @var GoogleCloudVideointelligenceV1p2beta1WordInfo[]
-   */
-  public $words;
   protected $wordsType = GoogleCloudVideointelligenceV1p2beta1WordInfo::class;
   protected $wordsDataType = 'array';
 

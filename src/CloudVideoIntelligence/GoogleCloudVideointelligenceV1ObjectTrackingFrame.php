@@ -19,10 +19,6 @@ namespace Google\Service\CloudVideoIntelligence;
 
 class GoogleCloudVideointelligenceV1ObjectTrackingFrame extends \Google\Model
 {
-  /**
-   * @var GoogleCloudVideointelligenceV1NormalizedBoundingBox
-   */
-  public $normalizedBoundingBox;
   protected $normalizedBoundingBoxType = GoogleCloudVideointelligenceV1NormalizedBoundingBox::class;
   protected $normalizedBoundingBoxDataType = '';
   /**

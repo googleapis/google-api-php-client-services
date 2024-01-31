@@ -52,10 +52,6 @@ class GoogleCloudVideointelligenceV1SpeechTranscriptionConfig extends \Google\Co
    * @var int
    */
   public $maxAlternatives;
-  /**
-   * @var GoogleCloudVideointelligenceV1SpeechContext[]
-   */
-  public $speechContexts;
   protected $speechContextsType = GoogleCloudVideointelligenceV1SpeechContext::class;
   protected $speechContextsDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1PersonDetectionAnnotation extends \Google\Collection
 {
   protected $collection_key = 'tracks';
-  /**
-   * @var GoogleCloudVideointelligenceV1Track[]
-   */
-  public $tracks;
   protected $tracksType = GoogleCloudVideointelligenceV1Track::class;
   protected $tracksDataType = 'array';
   /**
