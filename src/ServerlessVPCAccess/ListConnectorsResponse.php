@@ -20,10 +20,6 @@ namespace Google\Service\ServerlessVPCAccess;
 class ListConnectorsResponse extends \Google\Collection
 {
   protected $collection_key = 'connectors';
-  /**
-   * @var Connector[]
-   */
-  public $connectors;
   protected $connectorsType = Connector::class;
   protected $connectorsDataType = 'array';
   /**
