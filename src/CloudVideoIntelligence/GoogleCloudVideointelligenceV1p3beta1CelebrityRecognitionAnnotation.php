@@ -20,10 +20,6 @@ namespace Google\Service\CloudVideoIntelligence;
 class GoogleCloudVideointelligenceV1p3beta1CelebrityRecognitionAnnotation extends \Google\Collection
 {
   protected $collection_key = 'celebrityTracks';
-  /**
-   * @var GoogleCloudVideointelligenceV1p3beta1CelebrityTrack[]
-   */
-  public $celebrityTracks;
   protected $celebrityTracksType = GoogleCloudVideointelligenceV1p3beta1CelebrityTrack::class;
   protected $celebrityTracksDataType = 'array';
   /**
