@@ -19,16 +19,8 @@ namespace Google\Service\Vision;
 
 class LatLongRect extends \Google\Model
 {
-  /**
-   * @var LatLng
-   */
-  public $maxLatLng;
   protected $maxLatLngType = LatLng::class;
   protected $maxLatLngDataType = '';
-  /**
-   * @var LatLng
-   */
-  public $minLatLng;
   protected $minLatLngType = LatLng::class;
   protected $minLatLngDataType = '';
 

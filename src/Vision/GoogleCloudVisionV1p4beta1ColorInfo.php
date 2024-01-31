@@ -19,10 +19,6 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p4beta1ColorInfo extends \Google\Model
 {
-  /**
-   * @var Color
-   */
-  public $color;
   protected $colorType = Color::class;
   protected $colorDataType = '';
   /**

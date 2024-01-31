@@ -19,10 +19,6 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p4beta1FaceRecognitionResult extends \Google\Model
 {
-  /**
-   * @var GoogleCloudVisionV1p4beta1Celebrity
-   */
-  public $celebrity;
   protected $celebrityType = GoogleCloudVisionV1p4beta1Celebrity::class;
   protected $celebrityDataType = '';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\Vision;
 class Page extends \Google\Collection
 {
   protected $collection_key = 'blocks';
-  /**
-   * @var Block[]
-   */
-  public $blocks;
   protected $blocksType = Block::class;
   protected $blocksDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class Page extends \Google\Collection
    * @var int
    */
   public $height;
-  /**
-   * @var TextProperty
-   */
-  public $property;
   protected $propertyType = TextProperty::class;
   protected $propertyDataType = '';
   /**

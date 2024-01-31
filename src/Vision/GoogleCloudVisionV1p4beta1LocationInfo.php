@@ -19,10 +19,6 @@ namespace Google\Service\Vision;
 
 class GoogleCloudVisionV1p4beta1LocationInfo extends \Google\Model
 {
-  /**
-   * @var LatLng
-   */
-  public $latLng;
   protected $latLngType = LatLng::class;
   protected $latLngDataType = '';
 

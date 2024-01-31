@@ -20,10 +20,6 @@ namespace Google\Service\Vision;
 class GoogleCloudVisionV1p3beta1TextAnnotation extends \Google\Collection
 {
   protected $collection_key = 'pages';
-  /**
-   * @var GoogleCloudVisionV1p3beta1Page[]
-   */
-  public $pages;
   protected $pagesType = GoogleCloudVisionV1p3beta1Page::class;
   protected $pagesDataType = 'array';
   /**

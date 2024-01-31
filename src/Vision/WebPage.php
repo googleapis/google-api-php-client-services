@@ -20,20 +20,12 @@ namespace Google\Service\Vision;
 class WebPage extends \Google\Collection
 {
   protected $collection_key = 'partialMatchingImages';
-  /**
-   * @var WebImage[]
-   */
-  public $fullMatchingImages;
   protected $fullMatchingImagesType = WebImage::class;
   protected $fullMatchingImagesDataType = 'array';
   /**
    * @var string
    */
   public $pageTitle;
-  /**
-   * @var WebImage[]
-   */
-  public $partialMatchingImages;
   protected $partialMatchingImagesType = WebImage::class;
   protected $partialMatchingImagesDataType = 'array';
   /**

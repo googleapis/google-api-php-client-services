@@ -19,10 +19,6 @@ namespace Google\Service\Vision;
 
 class LocationInfo extends \Google\Model
 {
-  /**
-   * @var LatLng
-   */
-  public $latLng;
   protected $latLngType = LatLng::class;
   protected $latLngDataType = '';
 
