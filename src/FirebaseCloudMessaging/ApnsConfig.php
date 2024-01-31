@@ -19,10 +19,6 @@ namespace Google\Service\FirebaseCloudMessaging;
 
 class ApnsConfig extends \Google\Model
 {
-  /**
-   * @var ApnsFcmOptions
-   */
-  public $fcmOptions;
   protected $fcmOptionsType = ApnsFcmOptions::class;
   protected $fcmOptionsDataType = '';
   /**
