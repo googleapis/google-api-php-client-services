@@ -19,16 +19,8 @@ namespace Google\Service\Dataflow;
 
 class WriteInstruction extends \Google\Model
 {
-  /**
-   * @var InstructionInput
-   */
-  public $input;
   protected $inputType = InstructionInput::class;
   protected $inputDataType = '';
-  /**
-   * @var Sink
-   */
-  public $sink;
   protected $sinkType = Sink::class;
   protected $sinkDataType = '';
 
