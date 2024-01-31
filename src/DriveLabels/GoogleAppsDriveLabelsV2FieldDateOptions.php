@@ -27,16 +27,8 @@ class GoogleAppsDriveLabelsV2FieldDateOptions extends \Google\Model
    * @var string
    */
   public $dateFormatType;
-  /**
-   * @var GoogleTypeDate
-   */
-  public $maxValue;
   protected $maxValueType = GoogleTypeDate::class;
   protected $maxValueDataType = '';
-  /**
-   * @var GoogleTypeDate
-   */
-  public $minValue;
   protected $minValueType = GoogleTypeDate::class;
   protected $minValueDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2DeltaUpdateLabelRequestUpdateLabelPropertiesRequest extends \Google\Model
 {
-  /**
-   * @var GoogleAppsDriveLabelsV2LabelProperties
-   */
-  public $properties;
   protected $propertiesType = GoogleAppsDriveLabelsV2LabelProperties::class;
   protected $propertiesDataType = '';
   /**

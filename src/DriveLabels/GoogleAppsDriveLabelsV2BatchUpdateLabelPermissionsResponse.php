@@ -20,10 +20,6 @@ namespace Google\Service\DriveLabels;
 class GoogleAppsDriveLabelsV2BatchUpdateLabelPermissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'permissions';
-  /**
-   * @var GoogleAppsDriveLabelsV2LabelPermission[]
-   */
-  public $permissions;
   protected $permissionsType = GoogleAppsDriveLabelsV2LabelPermission::class;
   protected $permissionsDataType = 'array';
 

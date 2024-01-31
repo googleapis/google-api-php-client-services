@@ -19,10 +19,6 @@ namespace Google\Service\DriveLabels;
 
 class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
 {
-  /**
-   * @var GoogleAppsDriveLabelsV2LabelLockCapabilities
-   */
-  public $capabilities;
   protected $capabilitiesType = GoogleAppsDriveLabelsV2LabelLockCapabilities::class;
   protected $capabilitiesDataType = '';
   /**
@@ -33,10 +29,6 @@ class GoogleAppsDriveLabelsV2LabelLock extends \Google\Model
    * @var string
    */
   public $createTime;
-  /**
-   * @var GoogleAppsDriveLabelsV2UserInfo
-   */
-  public $creator;
   protected $creatorType = GoogleAppsDriveLabelsV2UserInfo::class;
   protected $creatorDataType = '';
   /**
