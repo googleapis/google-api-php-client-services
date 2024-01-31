@@ -20,16 +20,8 @@ namespace Google\Service\TravelImpactModel;
 class ComputeFlightEmissionsResponse extends \Google\Collection
 {
   protected $collection_key = 'flightEmissions';
-  /**
-   * @var FlightWithEmissions[]
-   */
-  public $flightEmissions;
   protected $flightEmissionsType = FlightWithEmissions::class;
   protected $flightEmissionsDataType = 'array';
-  /**
-   * @var ModelVersion
-   */
-  public $modelVersion;
   protected $modelVersionType = ModelVersion::class;
   protected $modelVersionDataType = '';
 
