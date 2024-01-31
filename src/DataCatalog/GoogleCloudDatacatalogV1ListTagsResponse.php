@@ -24,10 +24,6 @@ class GoogleCloudDatacatalogV1ListTagsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDatacatalogV1Tag[]
-   */
-  public $tags;
   protected $tagsType = GoogleCloudDatacatalogV1Tag::class;
   protected $tagsDataType = 'array';
 

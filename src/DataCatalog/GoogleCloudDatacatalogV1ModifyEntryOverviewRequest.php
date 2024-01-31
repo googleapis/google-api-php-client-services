@@ -19,10 +19,6 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1ModifyEntryOverviewRequest extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatacatalogV1EntryOverview
-   */
-  public $entryOverview;
   protected $entryOverviewType = GoogleCloudDatacatalogV1EntryOverview::class;
   protected $entryOverviewDataType = '';
 

@@ -50,6 +50,7 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
    * character long and at most 128 characters long. Field IDs must also be unique
    * within their template.
    * @return GoogleCloudDatacatalogV1TagTemplateField
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDatacatalogV1TagTemplateField $postBody, $optParams = [])
   {
@@ -70,6 +71,7 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
    * @opt_param bool force Required. If true, deletes this field from any tags
    * that use it. Currently, `true` is the only supported value.
    * @return DatacatalogEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -98,6 +100,7 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
    * added, existing enum values cannot be deleted or renamed. Additionally,
    * updating a template field from optional to required is *not* allowed.
    * @return GoogleCloudDatacatalogV1TagTemplateField
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDatacatalogV1TagTemplateField $postBody, $optParams = [])
   {
@@ -115,6 +118,7 @@ class ProjectsLocationsTagTemplatesFields extends \Google\Service\Resource
    * @param GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDatacatalogV1TagTemplateField
+   * @throws \Google\Service\Exception
    */
   public function rename($name, GoogleCloudDatacatalogV1RenameTagTemplateFieldRequest $postBody, $optParams = [])
   {

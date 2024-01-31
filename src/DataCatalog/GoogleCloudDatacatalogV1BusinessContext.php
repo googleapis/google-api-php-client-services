@@ -19,16 +19,8 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1BusinessContext extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatacatalogV1Contacts
-   */
-  public $contacts;
   protected $contactsType = GoogleCloudDatacatalogV1Contacts::class;
   protected $contactsDataType = '';
-  /**
-   * @var GoogleCloudDatacatalogV1EntryOverview
-   */
-  public $entryOverview;
   protected $entryOverviewType = GoogleCloudDatacatalogV1EntryOverview::class;
   protected $entryOverviewDataType = '';
 

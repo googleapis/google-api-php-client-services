@@ -20,10 +20,6 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
 {
   protected $collection_key = 'routineArguments';
-  /**
-   * @var GoogleCloudDatacatalogV1BigQueryRoutineSpec
-   */
-  public $bigqueryRoutineSpec;
   protected $bigqueryRoutineSpecType = GoogleCloudDatacatalogV1BigQueryRoutineSpec::class;
   protected $bigqueryRoutineSpecDataType = '';
   /**
@@ -38,10 +34,6 @@ class GoogleCloudDatacatalogV1RoutineSpec extends \Google\Collection
    * @var string
    */
   public $returnType;
-  /**
-   * @var GoogleCloudDatacatalogV1RoutineSpecArgument[]
-   */
-  public $routineArguments;
   protected $routineArgumentsType = GoogleCloudDatacatalogV1RoutineSpecArgument::class;
   protected $routineArgumentsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1ImportEntriesMetadata extends \Google\Collection
 {
   protected $collection_key = 'errors';
-  /**
-   * @var Status[]
-   */
-  public $errors;
   protected $errorsType = Status::class;
   protected $errorsDataType = 'array';
   /**

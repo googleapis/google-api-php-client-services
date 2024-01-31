@@ -32,10 +32,6 @@ class GoogleCloudDatacatalogV1SerializedTaxonomy extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var GoogleCloudDatacatalogV1SerializedPolicyTag[]
-   */
-  public $policyTags;
   protected $policyTagsType = GoogleCloudDatacatalogV1SerializedPolicyTag::class;
   protected $policyTagsDataType = 'array';
 

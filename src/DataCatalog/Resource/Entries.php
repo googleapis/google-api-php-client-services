@@ -65,6 +65,7 @@ class Entries extends \Google\Service\Resource
    * Identifiers (`*_ID`) should comply with the [Lexical structure in Standard
    * SQL] (https://cloud.google.com/bigquery/docs/reference/standard-sql/lexical).
    * @return GoogleCloudDatacatalogV1Entry
+   * @throws \Google\Service\Exception
    */
   public function lookup($optParams = [])
   {

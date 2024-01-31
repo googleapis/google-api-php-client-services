@@ -24,10 +24,6 @@ class GoogleCloudDatacatalogV1ListTaxonomiesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var GoogleCloudDatacatalogV1Taxonomy[]
-   */
-  public $taxonomies;
   protected $taxonomiesType = GoogleCloudDatacatalogV1Taxonomy::class;
   protected $taxonomiesDataType = 'array';
 

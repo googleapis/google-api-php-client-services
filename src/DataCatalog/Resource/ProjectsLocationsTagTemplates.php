@@ -52,6 +52,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * underscores (_), and must start with a letter or underscore. The maximum size
    * is 64 bytes when encoded in UTF-8.
    * @return GoogleCloudDatacatalogV1TagTemplate
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleCloudDatacatalogV1TagTemplate $postBody, $optParams = [])
   {
@@ -72,6 +73,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * @opt_param bool force Required. If true, deletes all tags that use this
    * template. Currently, `true` is the only supported value.
    * @return DatacatalogEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -85,6 +87,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * @param string $name Required. The name of the tag template to get.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDatacatalogV1TagTemplate
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -110,6 +113,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * @param GetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -138,6 +142,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * body, their values are emptied. Note: Updating the `is_publicly_readable`
    * field may require up to 12 hours to take effect in search results.
    * @return GoogleCloudDatacatalogV1TagTemplate
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleCloudDatacatalogV1TagTemplate $postBody, $optParams = [])
   {
@@ -163,6 +168,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * @param SetIamPolicyRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Policy
+   * @throws \Google\Service\Exception
    */
   public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
   {
@@ -186,6 +192,7 @@ class ProjectsLocationsTagTemplates extends \Google\Service\Resource
    * @param TestIamPermissionsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
    */
   public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
   {

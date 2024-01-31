@@ -19,10 +19,6 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1FilesetSpec extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatacatalogV1DataplexFilesetSpec
-   */
-  public $dataplexFileset;
   protected $dataplexFilesetType = GoogleCloudDatacatalogV1DataplexFilesetSpec::class;
   protected $dataplexFilesetDataType = '';
 

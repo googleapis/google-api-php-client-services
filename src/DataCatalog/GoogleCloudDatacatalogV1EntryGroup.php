@@ -19,10 +19,6 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1EntryGroup extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatacatalogV1SystemTimestamps
-   */
-  public $dataCatalogTimestamps;
   protected $dataCatalogTimestampsType = GoogleCloudDatacatalogV1SystemTimestamps::class;
   protected $dataCatalogTimestampsDataType = '';
   /**

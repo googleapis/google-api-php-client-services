@@ -19,10 +19,6 @@ namespace Google\Service\DataCatalog;
 
 class GoogleCloudDatacatalogV1ModelSpec extends \Google\Model
 {
-  /**
-   * @var GoogleCloudDatacatalogV1VertexModelSpec
-   */
-  public $vertexModelSpec;
   protected $vertexModelSpecType = GoogleCloudDatacatalogV1VertexModelSpec::class;
   protected $vertexModelSpecDataType = '';
 

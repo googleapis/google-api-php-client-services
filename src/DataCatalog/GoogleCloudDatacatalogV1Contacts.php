@@ -20,10 +20,6 @@ namespace Google\Service\DataCatalog;
 class GoogleCloudDatacatalogV1Contacts extends \Google\Collection
 {
   protected $collection_key = 'people';
-  /**
-   * @var GoogleCloudDatacatalogV1ContactsPerson[]
-   */
-  public $people;
   protected $peopleType = GoogleCloudDatacatalogV1ContactsPerson::class;
   protected $peopleDataType = 'array';
 
