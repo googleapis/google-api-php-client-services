@@ -19,10 +19,6 @@ namespace Google\Service\YouTubeAnalytics;
 
 class EmptyResponse extends \Google\Model
 {
-  /**
-   * @var Errors
-   */
-  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
 

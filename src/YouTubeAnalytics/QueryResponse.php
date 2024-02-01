@@ -20,16 +20,8 @@ namespace Google\Service\YouTubeAnalytics;
 class QueryResponse extends \Google\Collection
 {
   protected $collection_key = 'rows';
-  /**
-   * @var ResultTableColumnHeader[]
-   */
-  public $columnHeaders;
   protected $columnHeadersType = ResultTableColumnHeader::class;
   protected $columnHeadersDataType = 'array';
-  /**
-   * @var Errors
-   */
-  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**

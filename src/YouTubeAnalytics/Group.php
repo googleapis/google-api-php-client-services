@@ -19,16 +19,8 @@ namespace Google\Service\YouTubeAnalytics;
 
 class Group extends \Google\Model
 {
-  /**
-   * @var GroupContentDetails
-   */
-  public $contentDetails;
   protected $contentDetailsType = GroupContentDetails::class;
   protected $contentDetailsDataType = '';
-  /**
-   * @var Errors
-   */
-  public $errors;
   protected $errorsType = Errors::class;
   protected $errorsDataType = '';
   /**
@@ -43,10 +35,6 @@ class Group extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var GroupSnippet
-   */
-  public $snippet;
   protected $snippetType = GroupSnippet::class;
   protected $snippetDataType = '';
 
