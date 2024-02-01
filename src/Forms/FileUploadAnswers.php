@@ -20,10 +20,6 @@ namespace Google\Service\Forms;
 class FileUploadAnswers extends \Google\Collection
 {
   protected $collection_key = 'answers';
-  /**
-   * @var FileUploadAnswer[]
-   */
-  public $answers;
   protected $answersType = FileUploadAnswer::class;
   protected $answersDataType = 'array';
 

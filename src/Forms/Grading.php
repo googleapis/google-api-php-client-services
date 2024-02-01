@@ -19,32 +19,16 @@ namespace Google\Service\Forms;
 
 class Grading extends \Google\Model
 {
-  /**
-   * @var CorrectAnswers
-   */
-  public $correctAnswers;
   protected $correctAnswersType = CorrectAnswers::class;
   protected $correctAnswersDataType = '';
-  /**
-   * @var Feedback
-   */
-  public $generalFeedback;
   protected $generalFeedbackType = Feedback::class;
   protected $generalFeedbackDataType = '';
   /**
    * @var int
    */
   public $pointValue;
-  /**
-   * @var Feedback
-   */
-  public $whenRight;
   protected $whenRightType = Feedback::class;
   protected $whenRightDataType = '';
-  /**
-   * @var Feedback
-   */
-  public $whenWrong;
   protected $whenWrongType = Feedback::class;
   protected $whenWrongDataType = '';
 

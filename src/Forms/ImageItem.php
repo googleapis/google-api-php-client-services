@@ -19,10 +19,6 @@ namespace Google\Service\Forms;
 
 class ImageItem extends \Google\Model
 {
-  /**
-   * @var Image
-   */
-  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
 

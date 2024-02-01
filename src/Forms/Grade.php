@@ -23,10 +23,6 @@ class Grade extends \Google\Model
    * @var bool
    */
   public $correct;
-  /**
-   * @var Feedback
-   */
-  public $feedback;
   protected $feedbackType = Feedback::class;
   protected $feedbackDataType = '';
   public $score;

@@ -20,10 +20,6 @@ namespace Google\Service\Forms;
 class ListWatchesResponse extends \Google\Collection
 {
   protected $collection_key = 'watches';
-  /**
-   * @var Watch[]
-   */
-  public $watches;
   protected $watchesType = Watch::class;
   protected $watchesDataType = 'array';
 

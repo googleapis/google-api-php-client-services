@@ -20,10 +20,6 @@ namespace Google\Service\Forms;
 class CorrectAnswers extends \Google\Collection
 {
   protected $collection_key = 'answers';
-  /**
-   * @var CorrectAnswer[]
-   */
-  public $answers;
   protected $answersType = CorrectAnswer::class;
   protected $answersDataType = 'array';
 

@@ -19,10 +19,6 @@ namespace Google\Service\Forms;
 
 class WatchTarget extends \Google\Model
 {
-  /**
-   * @var CloudPubsubTopic
-   */
-  public $topic;
   protected $topicType = CloudPubsubTopic::class;
   protected $topicDataType = '';
 

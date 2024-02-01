@@ -19,10 +19,6 @@ namespace Google\Service\Forms;
 
 class FormResponse extends \Google\Model
 {
-  /**
-   * @var Answer[]
-   */
-  public $answers;
   protected $answersType = Answer::class;
   protected $answersDataType = 'map';
   /**

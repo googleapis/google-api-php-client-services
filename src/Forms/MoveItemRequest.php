@@ -19,16 +19,8 @@ namespace Google\Service\Forms;
 
 class MoveItemRequest extends \Google\Model
 {
-  /**
-   * @var Location
-   */
-  public $newLocation;
   protected $newLocationType = Location::class;
   protected $newLocationDataType = '';
-  /**
-   * @var Location
-   */
-  public $originalLocation;
   protected $originalLocationType = Location::class;
   protected $originalLocationDataType = '';
 

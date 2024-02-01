@@ -27,10 +27,6 @@ class Option extends \Google\Model
    * @var string
    */
   public $goToSectionId;
-  /**
-   * @var Image
-   */
-  public $image;
   protected $imageType = Image::class;
   protected $imageDataType = '';
   /**

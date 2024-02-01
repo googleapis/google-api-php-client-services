@@ -19,16 +19,8 @@ namespace Google\Service\Forms;
 
 class UpdateItemRequest extends \Google\Model
 {
-  /**
-   * @var Item
-   */
-  public $item;
   protected $itemType = Item::class;
   protected $itemDataType = '';
-  /**
-   * @var Location
-   */
-  public $location;
   protected $locationType = Location::class;
   protected $locationDataType = '';
   /**
