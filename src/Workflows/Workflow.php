@@ -63,10 +63,6 @@ class Workflow extends \Google\Model
    * @var string
    */
   public $state;
-  /**
-   * @var StateError
-   */
-  public $stateError;
   protected $stateErrorType = StateError::class;
   protected $stateErrorDataType = '';
   /**

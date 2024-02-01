@@ -28,10 +28,6 @@ class ListWorkflowsResponse extends \Google\Collection
    * @var string[]
    */
   public $unreachable;
-  /**
-   * @var Workflow[]
-   */
-  public $workflows;
   protected $workflowsType = Workflow::class;
   protected $workflowsDataType = 'array';
 
