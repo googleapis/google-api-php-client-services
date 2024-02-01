@@ -48,6 +48,8 @@ class GoogleCloudSecuritycenterV1ResourceValueConfig extends \Google\Collection
    * @var string
    */
   public $scope;
+  protected $sensitiveDataProtectionMappingType = GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping::class;
+  protected $sensitiveDataProtectionMappingDataType = '';
   /**
    * @var string[]
    */
@@ -154,6 +156,20 @@ class GoogleCloudSecuritycenterV1ResourceValueConfig extends \Google\Collection
   public function getScope()
   {
     return $this->scope;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping
+   */
+  public function setSensitiveDataProtectionMapping(GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping $sensitiveDataProtectionMapping)
+  {
+    $this->sensitiveDataProtectionMapping = $sensitiveDataProtectionMapping;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV1SensitiveDataProtectionMapping
+   */
+  public function getSensitiveDataProtectionMapping()
+  {
+    return $this->sensitiveDataProtectionMapping;
   }
   /**
    * @param string[]
