@@ -20,10 +20,6 @@ namespace Google\Service\Games;
 class PlayerLeaderboardScoreListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var PlayerLeaderboardScore[]
-   */
-  public $items;
   protected $itemsType = PlayerLeaderboardScore::class;
   protected $itemsDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class PlayerLeaderboardScoreListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var Player
-   */
-  public $player;
   protected $playerType = Player::class;
   protected $playerDataType = '';
 

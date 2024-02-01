@@ -40,10 +40,6 @@ class PlayerScoreResponse extends \Google\Collection
    * @var string
    */
   public $scoreTag;
-  /**
-   * @var PlayerScore[]
-   */
-  public $unbeatenScores;
   protected $unbeatenScoresType = PlayerScore::class;
   protected $unbeatenScoresDataType = 'array';
 

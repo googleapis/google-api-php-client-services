@@ -19,10 +19,6 @@ namespace Google\Service\Games;
 
 class Snapshot extends \Google\Model
 {
-  /**
-   * @var SnapshotImage
-   */
-  public $coverImage;
   protected $coverImageType = SnapshotImage::class;
   protected $coverImageDataType = '';
   /**

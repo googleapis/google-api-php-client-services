@@ -20,10 +20,6 @@ namespace Google\Service\Games;
 class LeaderboardScores extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var LeaderboardEntry[]
-   */
-  public $items;
   protected $itemsType = LeaderboardEntry::class;
   protected $itemsDataType = 'array';
   /**
@@ -38,10 +34,6 @@ class LeaderboardScores extends \Google\Collection
    * @var string
    */
   public $numScores;
-  /**
-   * @var LeaderboardEntry
-   */
-  public $playerScore;
   protected $playerScoreType = LeaderboardEntry::class;
   protected $playerScoreDataType = '';
   /**

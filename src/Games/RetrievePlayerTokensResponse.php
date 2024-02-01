@@ -20,10 +20,6 @@ namespace Google\Service\Games;
 class RetrievePlayerTokensResponse extends \Google\Collection
 {
   protected $collection_key = 'tokens';
-  /**
-   * @var RecallToken[]
-   */
-  public $tokens;
   protected $tokensType = RecallToken::class;
   protected $tokensDataType = 'array';
 

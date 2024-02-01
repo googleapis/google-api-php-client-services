@@ -23,20 +23,12 @@ class AchievementUpdateRequest extends \Google\Model
    * @var string
    */
   public $achievementId;
-  /**
-   * @var GamesAchievementIncrement
-   */
-  public $incrementPayload;
   protected $incrementPayloadType = GamesAchievementIncrement::class;
   protected $incrementPayloadDataType = '';
   /**
    * @var string
    */
   public $kind;
-  /**
-   * @var GamesAchievementSetStepsAtLeast
-   */
-  public $setStepsAtLeastPayload;
   protected $setStepsAtLeastPayloadType = GamesAchievementSetStepsAtLeast::class;
   protected $setStepsAtLeastPayloadDataType = '';
   /**

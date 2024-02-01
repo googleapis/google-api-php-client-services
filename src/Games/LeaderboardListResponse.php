@@ -20,10 +20,6 @@ namespace Google\Service\Games;
 class LeaderboardListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var Leaderboard[]
-   */
-  public $items;
   protected $itemsType = Leaderboard::class;
   protected $itemsDataType = 'array';
   /**

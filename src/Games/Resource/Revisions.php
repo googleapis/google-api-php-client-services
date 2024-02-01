@@ -39,6 +39,7 @@ class Revisions extends \Google\Service\Resource
    * as a Web App.
    * @param array $optParams Optional parameters.
    * @return RevisionCheckResponse
+   * @throws \Google\Service\Exception
    */
   public function check($clientRevision, $optParams = [])
   {

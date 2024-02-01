@@ -42,6 +42,7 @@ class Recall extends \Google\Service\Resource
    * @param LinkPersonaRequest $postBody
    * @param array $optParams Optional parameters.
    * @return LinkPersonaResponse
+   * @throws \Google\Service\Exception
    */
   public function linkPersona(LinkPersonaRequest $postBody, $optParams = [])
   {
@@ -56,6 +57,7 @@ class Recall extends \Google\Service\Resource
    * @param ResetPersonaRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ResetPersonaResponse
+   * @throws \Google\Service\Exception
    */
   public function resetPersona(ResetPersonaRequest $postBody, $optParams = [])
   {
@@ -73,6 +75,7 @@ class Recall extends \Google\Service\Resource
    * user and application.
    * @param array $optParams Optional parameters.
    * @return RetrievePlayerTokensResponse
+   * @throws \Google\Service\Exception
    */
   public function retrieveTokens($sessionId, $optParams = [])
   {
@@ -88,6 +91,7 @@ class Recall extends \Google\Service\Resource
    * @param UnlinkPersonaRequest $postBody
    * @param array $optParams Optional parameters.
    * @return UnlinkPersonaResponse
+   * @throws \Google\Service\Exception
    */
   public function unlinkPersona(UnlinkPersonaRequest $postBody, $optParams = [])
   {

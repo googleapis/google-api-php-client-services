@@ -24,10 +24,6 @@ class PlayerScoreListResponse extends \Google\Collection
    * @var string
    */
   public $kind;
-  /**
-   * @var PlayerScoreResponse[]
-   */
-  public $submittedScores;
   protected $submittedScoresType = PlayerScoreResponse::class;
   protected $submittedScoresDataType = 'array';
 

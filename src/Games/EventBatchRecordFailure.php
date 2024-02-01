@@ -27,10 +27,6 @@ class EventBatchRecordFailure extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var EventPeriodRange
-   */
-  public $range;
   protected $rangeType = EventPeriodRange::class;
   protected $rangeDataType = '';
 
