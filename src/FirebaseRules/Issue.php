@@ -27,10 +27,6 @@ class Issue extends \Google\Model
    * @var string
    */
   public $severity;
-  /**
-   * @var SourcePosition
-   */
-  public $sourcePosition;
   protected $sourcePositionType = SourcePosition::class;
   protected $sourcePositionDataType = '';
 

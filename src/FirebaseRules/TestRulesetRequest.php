@@ -19,16 +19,8 @@ namespace Google\Service\FirebaseRules;
 
 class TestRulesetRequest extends \Google\Model
 {
-  /**
-   * @var Source
-   */
-  public $source;
   protected $sourceType = Source::class;
   protected $sourceDataType = '';
-  /**
-   * @var TestSuite
-   */
-  public $testSuite;
   protected $testSuiteType = TestSuite::class;
   protected $testSuiteDataType = '';
 
