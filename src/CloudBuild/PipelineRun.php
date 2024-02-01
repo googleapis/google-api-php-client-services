@@ -45,6 +45,10 @@ class PipelineRun extends \Google\Collection
    */
   public $finallyStartTime;
   /**
+   * @var string[]
+   */
+  public $gcbParams;
+  /**
    * @var string
    */
   public $name;
@@ -58,8 +62,12 @@ class PipelineRun extends \Google\Collection
   public $pipelineRunStatus;
   protected $pipelineSpecType = PipelineSpec::class;
   protected $pipelineSpecDataType = '';
+  protected $provenanceType = Provenance::class;
+  protected $provenanceDataType = '';
   protected $resolvedPipelineSpecType = PipelineSpec::class;
   protected $resolvedPipelineSpecDataType = '';
+  protected $securityType = Security::class;
+  protected $securityDataType = '';
   /**
    * @var string
    */
@@ -80,6 +88,8 @@ class PipelineRun extends \Google\Collection
    * @var string
    */
   public $updateTime;
+  protected $workerType = Worker::class;
+  protected $workerDataType = '';
   /**
    * @var string
    */
@@ -190,6 +200,20 @@ class PipelineRun extends \Google\Collection
     return $this->finallyStartTime;
   }
   /**
+   * @param string[]
+   */
+  public function setGcbParams($gcbParams)
+  {
+    $this->gcbParams = $gcbParams;
+  }
+  /**
+   * @return string[]
+   */
+  public function getGcbParams()
+  {
+    return $this->gcbParams;
+  }
+  /**
    * @param string
    */
   public function setName($name)
@@ -260,6 +284,20 @@ class PipelineRun extends \Google\Collection
     return $this->pipelineSpec;
   }
   /**
+   * @param Provenance
+   */
+  public function setProvenance(Provenance $provenance)
+  {
+    $this->provenance = $provenance;
+  }
+  /**
+   * @return Provenance
+   */
+  public function getProvenance()
+  {
+    return $this->provenance;
+  }
+  /**
    * @param PipelineSpec
    */
   public function setResolvedPipelineSpec(PipelineSpec $resolvedPipelineSpec)
@@ -272,6 +310,20 @@ class PipelineRun extends \Google\Collection
   public function getResolvedPipelineSpec()
   {
     return $this->resolvedPipelineSpec;
+  }
+  /**
+   * @param Security
+   */
+  public function setSecurity(Security $security)
+  {
+    $this->security = $security;
+  }
+  /**
+   * @return Security
+   */
+  public function getSecurity()
+  {
+    return $this->security;
   }
   /**
    * @param string
@@ -356,6 +408,20 @@ class PipelineRun extends \Google\Collection
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param Worker
+   */
+  public function setWorker(Worker $worker)
+  {
+    $this->worker = $worker;
+  }
+  /**
+   * @return Worker
+   */
+  public function getWorker()
+  {
+    return $this->worker;
   }
   /**
    * @param string
