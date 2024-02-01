@@ -22,6 +22,10 @@ class LoadBalancerBackendInfo extends \Google\Model
   /**
    * @var string
    */
+  public $backendBucketUri;
+  /**
+   * @var string
+   */
   public $backendServiceUri;
   /**
    * @var string
@@ -47,7 +51,29 @@ class LoadBalancerBackendInfo extends \Google\Model
    * @var string
    */
   public $networkEndpointGroupUri;
+  /**
+   * @var string
+   */
+  public $pscGoogleApiTarget;
+  /**
+   * @var string
+   */
+  public $pscServiceAttachmentUri;
 
+  /**
+   * @param string
+   */
+  public function setBackendBucketUri($backendBucketUri)
+  {
+    $this->backendBucketUri = $backendBucketUri;
+  }
+  /**
+   * @return string
+   */
+  public function getBackendBucketUri()
+  {
+    return $this->backendBucketUri;
+  }
   /**
    * @param string
    */
@@ -145,6 +171,34 @@ class LoadBalancerBackendInfo extends \Google\Model
   public function getNetworkEndpointGroupUri()
   {
     return $this->networkEndpointGroupUri;
+  }
+  /**
+   * @param string
+   */
+  public function setPscGoogleApiTarget($pscGoogleApiTarget)
+  {
+    $this->pscGoogleApiTarget = $pscGoogleApiTarget;
+  }
+  /**
+   * @return string
+   */
+  public function getPscGoogleApiTarget()
+  {
+    return $this->pscGoogleApiTarget;
+  }
+  /**
+   * @param string
+   */
+  public function setPscServiceAttachmentUri($pscServiceAttachmentUri)
+  {
+    $this->pscServiceAttachmentUri = $pscServiceAttachmentUri;
+  }
+  /**
+   * @return string
+   */
+  public function getPscServiceAttachmentUri()
+  {
+    return $this->pscServiceAttachmentUri;
   }
 }
 
