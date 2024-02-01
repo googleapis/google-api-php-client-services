@@ -20,10 +20,6 @@ namespace Google\Service\YouTubeReporting;
 class ListJobsResponse extends \Google\Collection
 {
   protected $collection_key = 'jobs';
-  /**
-   * @var Job[]
-   */
-  public $jobs;
   protected $jobsType = Job::class;
   protected $jobsDataType = 'array';
   /**

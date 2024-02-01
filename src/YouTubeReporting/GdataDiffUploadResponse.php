@@ -23,10 +23,6 @@ class GdataDiffUploadResponse extends \Google\Model
    * @var string
    */
   public $objectVersion;
-  /**
-   * @var GdataCompositeMedia
-   */
-  public $originalObject;
   protected $originalObjectType = GdataCompositeMedia::class;
   protected $originalObjectDataType = '';
 
