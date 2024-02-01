@@ -36,10 +36,6 @@ class DeviceSignals extends \Google\Collection
    * @var bool
    */
   public $chromeRemoteDesktopAppBlocked;
-  /**
-   * @var CrowdStrikeAgent
-   */
-  public $crowdStrikeAgent;
   protected $crowdStrikeAgentType = CrowdStrikeAgent::class;
   protected $crowdStrikeAgentDataType = '';
   /**
