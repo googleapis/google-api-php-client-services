@@ -20,10 +20,6 @@ namespace Google\Service\WorkloadManager;
 class Evaluation extends \Google\Collection
 {
   protected $collection_key = 'ruleVersions';
-  /**
-   * @var BigQueryDestination
-   */
-  public $bigQueryDestination;
   protected $bigQueryDestinationType = BigQueryDestination::class;
   protected $bigQueryDestinationDataType = '';
   /**
@@ -46,16 +42,8 @@ class Evaluation extends \Google\Collection
    * @var string
    */
   public $name;
-  /**
-   * @var ResourceFilter
-   */
-  public $resourceFilter;
   protected $resourceFilterType = ResourceFilter::class;
   protected $resourceFilterDataType = '';
-  /**
-   * @var ResourceStatus
-   */
-  public $resourceStatus;
   protected $resourceStatusType = ResourceStatus::class;
   protected $resourceStatusDataType = '';
   /**

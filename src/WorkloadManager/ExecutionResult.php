@@ -23,10 +23,6 @@ class ExecutionResult extends \Google\Model
    * @var string
    */
   public $documentationUrl;
-  /**
-   * @var WorkloadmanagerResource
-   */
-  public $resource;
   protected $resourceType = WorkloadmanagerResource::class;
   protected $resourceDataType = '';
   /**
@@ -37,10 +33,6 @@ class ExecutionResult extends \Google\Model
    * @var string
    */
   public $severity;
-  /**
-   * @var ViolationDetails
-   */
-  public $violationDetails;
   protected $violationDetailsType = ViolationDetails::class;
   protected $violationDetailsDataType = '';
   /**

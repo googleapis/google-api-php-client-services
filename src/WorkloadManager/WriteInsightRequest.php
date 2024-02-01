@@ -19,10 +19,6 @@ namespace Google\Service\WorkloadManager;
 
 class WriteInsightRequest extends \Google\Model
 {
-  /**
-   * @var Insight
-   */
-  public $insight;
   protected $insightType = Insight::class;
   protected $insightDataType = '';
   /**

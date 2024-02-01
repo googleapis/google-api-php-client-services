@@ -20,10 +20,6 @@ namespace Google\Service\WorkloadManager;
 class SapDiscoveryResource extends \Google\Collection
 {
   protected $collection_key = 'relatedResources';
-  /**
-   * @var SapDiscoveryResourceInstanceProperties
-   */
-  public $instanceProperties;
   protected $instancePropertiesType = SapDiscoveryResourceInstanceProperties::class;
   protected $instancePropertiesDataType = '';
   /**

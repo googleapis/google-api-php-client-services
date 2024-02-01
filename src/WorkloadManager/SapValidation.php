@@ -24,10 +24,6 @@ class SapValidation extends \Google\Collection
    * @var string
    */
   public $projectId;
-  /**
-   * @var SapValidationValidationDetail[]
-   */
-  public $validationDetails;
   protected $validationDetailsType = SapValidationValidationDetail::class;
   protected $validationDetailsDataType = 'array';
   /**

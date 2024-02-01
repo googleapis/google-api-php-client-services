@@ -19,10 +19,6 @@ namespace Google\Service\WorkloadManager;
 
 class RunEvaluationRequest extends \Google\Model
 {
-  /**
-   * @var Execution
-   */
-  public $execution;
   protected $executionType = Execution::class;
   protected $executionDataType = '';
   /**

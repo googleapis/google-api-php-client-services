@@ -24,10 +24,6 @@ class ListScannedResourcesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ScannedResource[]
-   */
-  public $scannedResources;
   protected $scannedResourcesType = ScannedResource::class;
   protected $scannedResourcesDataType = 'array';
 
