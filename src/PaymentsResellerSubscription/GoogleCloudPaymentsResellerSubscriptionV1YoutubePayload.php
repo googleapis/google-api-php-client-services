@@ -28,6 +28,10 @@ class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload extends \Google\Co
    * @var string[]
    */
   public $partnerEligibilityIds;
+  /**
+   * @var string
+   */
+  public $partnerPlanType;
 
   /**
    * @param string
@@ -56,6 +60,20 @@ class GoogleCloudPaymentsResellerSubscriptionV1YoutubePayload extends \Google\Co
   public function getPartnerEligibilityIds()
   {
     return $this->partnerEligibilityIds;
+  }
+  /**
+   * @param string
+   */
+  public function setPartnerPlanType($partnerPlanType)
+  {
+    $this->partnerPlanType = $partnerPlanType;
+  }
+  /**
+   * @return string
+   */
+  public function getPartnerPlanType()
+  {
+    return $this->partnerPlanType;
   }
 }
 
