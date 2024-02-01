@@ -28,10 +28,6 @@ class ChannelSectionListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var ChannelSection[]
-   */
-  public $items;
   protected $itemsType = ChannelSection::class;
   protected $itemsDataType = 'array';
   /**

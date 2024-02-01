@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class ImageSettings extends \Google\Model
 {
-  /**
-   * @var LocalizedProperty
-   */
-  public $backgroundImageUrl;
   protected $backgroundImageUrlType = LocalizedProperty::class;
   protected $backgroundImageUrlDataType = '';
   /**
@@ -85,28 +81,12 @@ class ImageSettings extends \Google\Model
    * @var string
    */
   public $bannerTvMediumImageUrl;
-  /**
-   * @var LocalizedProperty
-   */
-  public $largeBrandedBannerImageImapScript;
   protected $largeBrandedBannerImageImapScriptType = LocalizedProperty::class;
   protected $largeBrandedBannerImageImapScriptDataType = '';
-  /**
-   * @var LocalizedProperty
-   */
-  public $largeBrandedBannerImageUrl;
   protected $largeBrandedBannerImageUrlType = LocalizedProperty::class;
   protected $largeBrandedBannerImageUrlDataType = '';
-  /**
-   * @var LocalizedProperty
-   */
-  public $smallBrandedBannerImageImapScript;
   protected $smallBrandedBannerImageImapScriptType = LocalizedProperty::class;
   protected $smallBrandedBannerImageImapScriptDataType = '';
-  /**
-   * @var LocalizedProperty
-   */
-  public $smallBrandedBannerImageUrl;
   protected $smallBrandedBannerImageUrlType = LocalizedProperty::class;
   protected $smallBrandedBannerImageUrlDataType = '';
   /**

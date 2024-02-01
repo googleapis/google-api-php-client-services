@@ -20,10 +20,6 @@ namespace Google\Service\YouTube;
 class PlaylistImageListResponse extends \Google\Collection
 {
   protected $collection_key = 'items';
-  /**
-   * @var PlaylistImage[]
-   */
-  public $items;
   protected $itemsType = PlaylistImage::class;
   protected $itemsDataType = 'array';
   /**
@@ -34,10 +30,6 @@ class PlaylistImageListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PageInfo
-   */
-  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**

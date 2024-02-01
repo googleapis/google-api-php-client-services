@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class ActivityContentDetailsChannelItem extends \Google\Model
 {
-  /**
-   * @var ResourceId
-   */
-  public $resourceId;
   protected $resourceIdType = ResourceId::class;
   protected $resourceIdDataType = '';
 

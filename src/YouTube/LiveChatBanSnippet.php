@@ -23,10 +23,6 @@ class LiveChatBanSnippet extends \Google\Model
    * @var string
    */
   public $banDurationSeconds;
-  /**
-   * @var ChannelProfileDetails
-   */
-  public $bannedUserDetails;
   protected $bannedUserDetailsType = ChannelProfileDetails::class;
   protected $bannedUserDetailsDataType = '';
   /**

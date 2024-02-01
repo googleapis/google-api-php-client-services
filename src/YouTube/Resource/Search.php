@@ -90,6 +90,7 @@ class Search extends \Google\Service\Resource
    * @opt_param string videoSyndicated Filter on syndicated videos.
    * @opt_param string videoType Filter on videos of a specific type.
    * @return SearchListResponse
+   * @throws \Google\Service\Exception
    */
   public function listSearch($part, $optParams = [])
   {

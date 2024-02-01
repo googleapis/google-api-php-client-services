@@ -28,10 +28,6 @@ class CommentThreadListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var CommentThread[]
-   */
-  public $items;
   protected $itemsType = CommentThread::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,16 +38,8 @@ class CommentThreadListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PageInfo
-   */
-  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
-  /**
-   * @var TokenPagination
-   */
-  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**

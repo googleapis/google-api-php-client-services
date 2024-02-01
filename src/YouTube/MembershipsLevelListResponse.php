@@ -28,10 +28,6 @@ class MembershipsLevelListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var MembershipsLevel[]
-   */
-  public $items;
   protected $itemsType = MembershipsLevel::class;
   protected $itemsDataType = 'array';
   /**

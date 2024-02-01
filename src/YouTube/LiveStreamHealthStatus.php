@@ -20,10 +20,6 @@ namespace Google\Service\YouTube;
 class LiveStreamHealthStatus extends \Google\Collection
 {
   protected $collection_key = 'configurationIssues';
-  /**
-   * @var LiveStreamConfigurationIssue[]
-   */
-  public $configurationIssues;
   protected $configurationIssuesType = LiveStreamConfigurationIssue::class;
   protected $configurationIssuesDataType = 'array';
   /**

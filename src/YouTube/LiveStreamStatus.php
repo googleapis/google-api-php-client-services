@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class LiveStreamStatus extends \Google\Model
 {
-  /**
-   * @var LiveStreamHealthStatus
-   */
-  public $healthStatus;
   protected $healthStatusType = LiveStreamHealthStatus::class;
   protected $healthStatusDataType = '';
   /**

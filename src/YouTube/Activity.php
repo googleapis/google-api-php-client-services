@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class Activity extends \Google\Model
 {
-  /**
-   * @var ActivityContentDetails
-   */
-  public $contentDetails;
   protected $contentDetailsType = ActivityContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
@@ -37,10 +33,6 @@ class Activity extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var ActivitySnippet
-   */
-  public $snippet;
   protected $snippetType = ActivitySnippet::class;
   protected $snippetDataType = '';
 

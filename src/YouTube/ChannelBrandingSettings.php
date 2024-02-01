@@ -20,28 +20,12 @@ namespace Google\Service\YouTube;
 class ChannelBrandingSettings extends \Google\Collection
 {
   protected $collection_key = 'hints';
-  /**
-   * @var ChannelSettings
-   */
-  public $channel;
   protected $channelType = ChannelSettings::class;
   protected $channelDataType = '';
-  /**
-   * @var PropertyValue[]
-   */
-  public $hints;
   protected $hintsType = PropertyValue::class;
   protected $hintsDataType = 'array';
-  /**
-   * @var ImageSettings
-   */
-  public $image;
   protected $imageType = ImageSettings::class;
   protected $imageDataType = '';
-  /**
-   * @var WatchSettings
-   */
-  public $watch;
   protected $watchType = WatchSettings::class;
   protected $watchDataType = '';
 

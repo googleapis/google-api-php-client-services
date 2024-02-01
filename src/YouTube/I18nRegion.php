@@ -31,10 +31,6 @@ class I18nRegion extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var I18nRegionSnippet
-   */
-  public $snippet;
   protected $snippetType = I18nRegionSnippet::class;
   protected $snippetDataType = '';
 

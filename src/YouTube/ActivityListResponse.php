@@ -28,10 +28,6 @@ class ActivityListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var Activity[]
-   */
-  public $items;
   protected $itemsType = Activity::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,20 +38,12 @@ class ActivityListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PageInfo
-   */
-  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
    * @var string
    */
   public $prevPageToken;
-  /**
-   * @var TokenPagination
-   */
-  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**

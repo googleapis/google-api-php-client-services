@@ -31,16 +31,8 @@ class CommentThread extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var CommentThreadReplies
-   */
-  public $replies;
   protected $repliesType = CommentThreadReplies::class;
   protected $repliesDataType = '';
-  /**
-   * @var CommentThreadSnippet
-   */
-  public $snippet;
   protected $snippetType = CommentThreadSnippet::class;
   protected $snippetDataType = '';
 

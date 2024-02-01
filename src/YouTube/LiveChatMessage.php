@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class LiveChatMessage extends \Google\Model
 {
-  /**
-   * @var LiveChatMessageAuthorDetails
-   */
-  public $authorDetails;
   protected $authorDetailsType = LiveChatMessageAuthorDetails::class;
   protected $authorDetailsDataType = '';
   /**
@@ -37,10 +33,6 @@ class LiveChatMessage extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var LiveChatMessageSnippet
-   */
-  public $snippet;
   protected $snippetType = LiveChatMessageSnippet::class;
   protected $snippetDataType = '';
 

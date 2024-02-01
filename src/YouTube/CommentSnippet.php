@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class CommentSnippet extends \Google\Model
 {
-  /**
-   * @var CommentSnippetAuthorChannelId
-   */
-  public $authorChannelId;
   protected $authorChannelIdType = CommentSnippetAuthorChannelId::class;
   protected $authorChannelIdDataType = '';
   /**

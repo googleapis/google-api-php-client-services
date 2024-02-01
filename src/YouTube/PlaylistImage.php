@@ -27,10 +27,6 @@ class PlaylistImage extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var PlaylistImageSnippet
-   */
-  public $snippet;
   protected $snippetType = PlaylistImageSnippet::class;
   protected $snippetDataType = '';
 

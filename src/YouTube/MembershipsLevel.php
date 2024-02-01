@@ -31,10 +31,6 @@ class MembershipsLevel extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var MembershipsLevelSnippet
-   */
-  public $snippet;
   protected $snippetType = MembershipsLevelSnippet::class;
   protected $snippetDataType = '';
 

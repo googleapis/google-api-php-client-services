@@ -47,6 +47,7 @@ class PlaylistImages extends \Google\Service\Resource
    * without having to provide authentication credentials for each individual
    * channel. The CMS account that the user authenticates with must be linked to
    * the specified YouTube content owner.
+   * @throws \Google\Service\Exception
    */
   public function delete($optParams = [])
   {
@@ -89,6 +90,7 @@ class PlaylistImages extends \Google\Service\Resource
    * @opt_param string part The *part* parameter specifies the properties that the
    * API response will include.
    * @return PlaylistImage
+   * @throws \Google\Service\Exception
    */
   public function insert(PlaylistImage $postBody, $optParams = [])
   {
@@ -140,6 +142,7 @@ class PlaylistImages extends \Google\Service\Resource
    * include. If the parameter identifies a property that contains child
    * properties, the child properties will be included in the response.
    * @return PlaylistImageListResponse
+   * @throws \Google\Service\Exception
    */
   public function listPlaylistImages($optParams = [])
   {
@@ -166,6 +169,7 @@ class PlaylistImages extends \Google\Service\Resource
    * @opt_param string part The *part* parameter specifies the properties that the
    * API response will include.
    * @return PlaylistImage
+   * @throws \Google\Service\Exception
    */
   public function update(PlaylistImage $postBody, $optParams = [])
   {

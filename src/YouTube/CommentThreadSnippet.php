@@ -31,10 +31,6 @@ class CommentThreadSnippet extends \Google\Model
    * @var bool
    */
   public $isPublic;
-  /**
-   * @var Comment
-   */
-  public $topLevelComment;
   protected $topLevelCommentType = Comment::class;
   protected $topLevelCommentDataType = '';
   /**
