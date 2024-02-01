@@ -19,10 +19,6 @@ namespace Google\Service\FirebaseDynamicLinks;
 
 class CreateManagedShortLinkRequest extends \Google\Model
 {
-  /**
-   * @var DynamicLinkInfo
-   */
-  public $dynamicLinkInfo;
   protected $dynamicLinkInfoType = DynamicLinkInfo::class;
   protected $dynamicLinkInfoDataType = '';
   /**
@@ -37,10 +33,6 @@ class CreateManagedShortLinkRequest extends \Google\Model
    * @var string
    */
   public $sdkVersion;
-  /**
-   * @var Suffix
-   */
-  public $suffix;
   protected $suffixType = Suffix::class;
   protected $suffixDataType = '';
 

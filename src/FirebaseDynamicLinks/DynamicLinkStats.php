@@ -20,10 +20,6 @@ namespace Google\Service\FirebaseDynamicLinks;
 class DynamicLinkStats extends \Google\Collection
 {
   protected $collection_key = 'linkEventStats';
-  /**
-   * @var DynamicLinkEventStat[]
-   */
-  public $linkEventStats;
   protected $linkEventStatsType = DynamicLinkEventStat::class;
   protected $linkEventStatsDataType = 'array';
 

@@ -19,22 +19,10 @@ namespace Google\Service\FirebaseDynamicLinks;
 
 class DynamicLinkInfo extends \Google\Model
 {
-  /**
-   * @var AnalyticsInfo
-   */
-  public $analyticsInfo;
   protected $analyticsInfoType = AnalyticsInfo::class;
   protected $analyticsInfoDataType = '';
-  /**
-   * @var AndroidInfo
-   */
-  public $androidInfo;
   protected $androidInfoType = AndroidInfo::class;
   protected $androidInfoDataType = '';
-  /**
-   * @var DesktopInfo
-   */
-  public $desktopInfo;
   protected $desktopInfoType = DesktopInfo::class;
   protected $desktopInfoDataType = '';
   /**
@@ -45,26 +33,14 @@ class DynamicLinkInfo extends \Google\Model
    * @var string
    */
   public $dynamicLinkDomain;
-  /**
-   * @var IosInfo
-   */
-  public $iosInfo;
   protected $iosInfoType = IosInfo::class;
   protected $iosInfoDataType = '';
   /**
    * @var string
    */
   public $link;
-  /**
-   * @var NavigationInfo
-   */
-  public $navigationInfo;
   protected $navigationInfoType = NavigationInfo::class;
   protected $navigationInfoDataType = '';
-  /**
-   * @var SocialMetaTagInfo
-   */
-  public $socialMetaTagInfo;
   protected $socialMetaTagInfoType = SocialMetaTagInfo::class;
   protected $socialMetaTagInfoDataType = '';
 

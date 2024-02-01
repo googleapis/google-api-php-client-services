@@ -28,10 +28,6 @@ class CreateShortDynamicLinkResponse extends \Google\Collection
    * @var string
    */
   public $shortLink;
-  /**
-   * @var DynamicLinkWarning[]
-   */
-  public $warning;
   protected $warningType = DynamicLinkWarning::class;
   protected $warningDataType = 'array';
 
