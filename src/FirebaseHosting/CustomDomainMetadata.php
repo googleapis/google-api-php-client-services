@@ -28,26 +28,14 @@ class CustomDomainMetadata extends \Google\Collection
    * @var string
    */
   public $hostState;
-  /**
-   * @var Status[]
-   */
-  public $issues;
   protected $issuesType = Status::class;
   protected $issuesDataType = 'array';
-  /**
-   * @var LiveMigrationStep[]
-   */
-  public $liveMigrationSteps;
   protected $liveMigrationStepsType = LiveMigrationStep::class;
   protected $liveMigrationStepsDataType = 'array';
   /**
    * @var string
    */
   public $ownershipState;
-  /**
-   * @var DnsUpdates
-   */
-  public $quickSetupUpdates;
   protected $quickSetupUpdatesType = DnsUpdates::class;
   protected $quickSetupUpdatesDataType = '';
 

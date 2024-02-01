@@ -19,10 +19,6 @@ namespace Google\Service\FirebaseHosting;
 
 class HttpUpdate extends \Google\Model
 {
-  /**
-   * @var Status
-   */
-  public $checkError;
   protected $checkErrorType = Status::class;
   protected $checkErrorDataType = '';
   /**
