@@ -20,10 +20,6 @@ namespace Google\Service\Fitness;
 class DataType extends \Google\Collection
 {
   protected $collection_key = 'field';
-  /**
-   * @var DataTypeField[]
-   */
-  public $field;
   protected $fieldType = DataTypeField::class;
   protected $fieldDataType = 'array';
   /**

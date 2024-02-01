@@ -20,10 +20,6 @@ namespace Google\Service\Fitness;
 class ListDataSourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'dataSource';
-  /**
-   * @var DataSource[]
-   */
-  public $dataSource;
   protected $dataSourceType = DataSource::class;
   protected $dataSourceDataType = 'array';
 

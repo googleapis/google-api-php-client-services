@@ -20,10 +20,6 @@ namespace Google\Service\Fitness;
 class DataSource extends \Google\Collection
 {
   protected $collection_key = 'dataQualityStandard';
-  /**
-   * @var Application
-   */
-  public $application;
   protected $applicationType = Application::class;
   protected $applicationDataType = '';
   /**
@@ -38,16 +34,8 @@ class DataSource extends \Google\Collection
    * @var string
    */
   public $dataStreamName;
-  /**
-   * @var DataType
-   */
-  public $dataType;
   protected $dataTypeType = DataType::class;
   protected $dataTypeDataType = '';
-  /**
-   * @var Device
-   */
-  public $device;
   protected $deviceType = Device::class;
   protected $deviceDataType = '';
   /**
