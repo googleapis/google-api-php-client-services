@@ -27,10 +27,6 @@ class ExistenceFilter extends \Google\Model
    * @var int
    */
   public $targetId;
-  /**
-   * @var BloomFilter
-   */
-  public $unchangedNames;
   protected $unchangedNamesType = BloomFilter::class;
   protected $unchangedNamesDataType = '';
 

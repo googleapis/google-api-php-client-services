@@ -24,10 +24,6 @@ class CommitRequest extends \Google\Collection
    * @var string
    */
   public $transaction;
-  /**
-   * @var Write[]
-   */
-  public $writes;
   protected $writesType = Write::class;
   protected $writesDataType = 'array';
 

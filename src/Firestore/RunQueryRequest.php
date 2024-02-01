@@ -23,20 +23,12 @@ class RunQueryRequest extends \Google\Model
    * @var string
    */
   public $mode;
-  /**
-   * @var TransactionOptions
-   */
-  public $newTransaction;
   protected $newTransactionType = TransactionOptions::class;
   protected $newTransactionDataType = '';
   /**
    * @var string
    */
   public $readTime;
-  /**
-   * @var StructuredQuery
-   */
-  public $structuredQuery;
   protected $structuredQueryType = StructuredQuery::class;
   protected $structuredQueryDataType = '';
   /**

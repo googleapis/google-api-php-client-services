@@ -49,6 +49,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/. "(default)" database id is also
    * valid.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, GoogleFirestoreAdminV1Database $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * provided and does not match the current etag of the database, deletion will
    * be blocked and a FAILED_PRECONDITION error will be returned.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -91,6 +93,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * @param GoogleFirestoreAdminV1ExportDocumentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function exportDocuments($name, GoogleFirestoreAdminV1ExportDocumentsRequest $postBody, $optParams = [])
   {
@@ -105,6 +108,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * `projects/{project_id}/databases/{database_id}`
    * @param array $optParams Optional parameters.
    * @return GoogleFirestoreAdminV1Database
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -125,6 +129,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * @param GoogleFirestoreAdminV1ImportDocumentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function importDocuments($name, GoogleFirestoreAdminV1ImportDocumentsRequest $postBody, $optParams = [])
   {
@@ -139,6 +144,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * `projects/{project_id}`
    * @param array $optParams Optional parameters.
    * @return GoogleFirestoreAdminV1ListDatabasesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsDatabases($parent, $optParams = [])
   {
@@ -156,6 +162,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    *
    * @opt_param string updateMask The list of fields to be updated.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleFirestoreAdminV1Database $postBody, $optParams = [])
   {
@@ -179,6 +186,7 @@ class ProjectsDatabases extends \Google\Service\Resource
    * @param GoogleFirestoreAdminV1RestoreDatabaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function restore($parent, GoogleFirestoreAdminV1RestoreDatabaseRequest $postBody, $optParams = [])
   {

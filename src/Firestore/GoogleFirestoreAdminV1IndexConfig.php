@@ -24,10 +24,6 @@ class GoogleFirestoreAdminV1IndexConfig extends \Google\Collection
    * @var string
    */
   public $ancestorField;
-  /**
-   * @var GoogleFirestoreAdminV1Index[]
-   */
-  public $indexes;
   protected $indexesType = GoogleFirestoreAdminV1Index::class;
   protected $indexesDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\Firestore;
 
 class ResultSetStats extends \Google\Model
 {
-  /**
-   * @var QueryPlan
-   */
-  public $queryPlan;
   protected $queryPlanType = QueryPlan::class;
   protected $queryPlanDataType = '';
   /**

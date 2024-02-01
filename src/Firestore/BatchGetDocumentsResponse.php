@@ -19,10 +19,6 @@ namespace Google\Service\Firestore;
 
 class BatchGetDocumentsResponse extends \Google\Model
 {
-  /**
-   * @var Document
-   */
-  public $found;
   protected $foundType = Document::class;
   protected $foundDataType = '';
   /**

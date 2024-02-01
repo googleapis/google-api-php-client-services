@@ -19,10 +19,6 @@ namespace Google\Service\Firestore;
 
 class BeginTransactionRequest extends \Google\Model
 {
-  /**
-   * @var TransactionOptions
-   */
-  public $options;
   protected $optionsType = TransactionOptions::class;
   protected $optionsDataType = '';
 

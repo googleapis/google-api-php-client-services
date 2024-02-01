@@ -20,10 +20,6 @@ namespace Google\Service\Firestore;
 class GoogleFirestoreAdminV1ListBackupSchedulesResponse extends \Google\Collection
 {
   protected $collection_key = 'backupSchedules';
-  /**
-   * @var GoogleFirestoreAdminV1BackupSchedule[]
-   */
-  public $backupSchedules;
   protected $backupSchedulesType = GoogleFirestoreAdminV1BackupSchedule::class;
   protected $backupSchedulesDataType = 'array';
 

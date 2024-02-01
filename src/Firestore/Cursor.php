@@ -24,10 +24,6 @@ class Cursor extends \Google\Collection
    * @var bool
    */
   public $before;
-  /**
-   * @var Value[]
-   */
-  public $values;
   protected $valuesType = Value::class;
   protected $valuesDataType = 'array';
 

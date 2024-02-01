@@ -19,10 +19,6 @@ namespace Google\Service\Firestore;
 
 class UnaryFilter extends \Google\Model
 {
-  /**
-   * @var FieldReference
-   */
-  public $field;
   protected $fieldType = FieldReference::class;
   protected $fieldDataType = '';
   /**

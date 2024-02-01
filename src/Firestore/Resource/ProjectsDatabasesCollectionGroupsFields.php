@@ -38,6 +38,7 @@ class ProjectsDatabasesCollectionGroupsFields extends \Google\Service\Resource
    * ases/{database_id}/collectionGroups/{collection_id}/fields/{field_id}`
    * @param array $optParams Optional parameters.
    * @return GoogleFirestoreAdminV1Field
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -64,6 +65,7 @@ class ProjectsDatabasesCollectionGroupsFields extends \Google\Service\Resource
    * @opt_param string pageToken A page token, returned from a previous call to
    * FirestoreAdmin.ListFields, that may be used to get the next page of results.
    * @return GoogleFirestoreAdminV1ListFieldsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsDatabasesCollectionGroupsFields($parent, $optParams = [])
   {
@@ -106,6 +108,7 @@ class ProjectsDatabasesCollectionGroupsFields extends \Google\Service\Resource
    * @opt_param string updateMask A mask, relative to the field. If specified,
    * only configuration specified by this field_mask will be updated in the field.
    * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, GoogleFirestoreAdminV1Field $postBody, $optParams = [])
   {

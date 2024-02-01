@@ -20,10 +20,6 @@ namespace Google\Service\Firestore;
 class WriteResult extends \Google\Collection
 {
   protected $collection_key = 'transformResults';
-  /**
-   * @var Value[]
-   */
-  public $transformResults;
   protected $transformResultsType = Value::class;
   protected $transformResultsDataType = 'array';
   /**

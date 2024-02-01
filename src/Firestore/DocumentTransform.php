@@ -24,10 +24,6 @@ class DocumentTransform extends \Google\Collection
    * @var string
    */
   public $document;
-  /**
-   * @var FieldTransform[]
-   */
-  public $fieldTransforms;
   protected $fieldTransformsType = FieldTransform::class;
   protected $fieldTransformsDataType = 'array';
 

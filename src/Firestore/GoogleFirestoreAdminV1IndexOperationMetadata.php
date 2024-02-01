@@ -27,16 +27,8 @@ class GoogleFirestoreAdminV1IndexOperationMetadata extends \Google\Model
    * @var string
    */
   public $index;
-  /**
-   * @var GoogleFirestoreAdminV1Progress
-   */
-  public $progressBytes;
   protected $progressBytesType = GoogleFirestoreAdminV1Progress::class;
   protected $progressBytesDataType = '';
-  /**
-   * @var GoogleFirestoreAdminV1Progress
-   */
-  public $progressDocuments;
   protected $progressDocumentsType = GoogleFirestoreAdminV1Progress::class;
   protected $progressDocumentsDataType = '';
   /**

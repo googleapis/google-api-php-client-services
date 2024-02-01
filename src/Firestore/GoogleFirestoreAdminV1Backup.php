@@ -43,10 +43,6 @@ class GoogleFirestoreAdminV1Backup extends \Google\Model
    * @var string
    */
   public $state;
-  /**
-   * @var GoogleFirestoreAdminV1Stats
-   */
-  public $stats;
   protected $statsType = GoogleFirestoreAdminV1Stats::class;
   protected $statsDataType = '';
 

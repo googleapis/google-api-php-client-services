@@ -20,10 +20,6 @@ namespace Google\Service\Firestore;
 class CompositeFilter extends \Google\Collection
 {
   protected $collection_key = 'filters';
-  /**
-   * @var Filter[]
-   */
-  public $filters;
   protected $filtersType = Filter::class;
   protected $filtersDataType = 'array';
   /**

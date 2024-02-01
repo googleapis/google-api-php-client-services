@@ -19,10 +19,6 @@ namespace Google\Service\Firestore;
 
 class Target extends \Google\Model
 {
-  /**
-   * @var DocumentsTarget
-   */
-  public $documents;
   protected $documentsType = DocumentsTarget::class;
   protected $documentsDataType = '';
   /**
@@ -33,10 +29,6 @@ class Target extends \Google\Model
    * @var bool
    */
   public $once;
-  /**
-   * @var QueryTarget
-   */
-  public $query;
   protected $queryType = QueryTarget::class;
   protected $queryDataType = '';
   /**

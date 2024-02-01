@@ -20,10 +20,6 @@ namespace Google\Service\Firestore;
 class DocumentChange extends \Google\Collection
 {
   protected $collection_key = 'targetIds';
-  /**
-   * @var Document
-   */
-  public $document;
   protected $documentType = Document::class;
   protected $documentDataType = '';
   /**

@@ -23,10 +23,6 @@ class Order extends \Google\Model
    * @var string
    */
   public $direction;
-  /**
-   * @var FieldReference
-   */
-  public $field;
   protected $fieldType = FieldReference::class;
   protected $fieldDataType = '';
 

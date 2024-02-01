@@ -23,10 +23,6 @@ class GoogleFirestoreAdminV1IndexConfigDelta extends \Google\Model
    * @var string
    */
   public $changeType;
-  /**
-   * @var GoogleFirestoreAdminV1Index
-   */
-  public $index;
   protected $indexType = GoogleFirestoreAdminV1Index::class;
   protected $indexDataType = '';
 

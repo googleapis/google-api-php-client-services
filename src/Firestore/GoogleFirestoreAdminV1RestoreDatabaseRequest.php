@@ -27,10 +27,6 @@ class GoogleFirestoreAdminV1RestoreDatabaseRequest extends \Google\Model
    * @var string
    */
   public $databaseId;
-  /**
-   * @var GoogleFirestoreAdminV1DatabaseSnapshot
-   */
-  public $databaseSnapshot;
   protected $databaseSnapshotType = GoogleFirestoreAdminV1DatabaseSnapshot::class;
   protected $databaseSnapshotDataType = '';
 
