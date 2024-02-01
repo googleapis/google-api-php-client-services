@@ -29,10 +29,10 @@ use Google\Service\SecretManager\SecretVersion;
  * Typical usage is:
  *  <code>
  *   $secretmanagerService = new Google\Service\SecretManager(...);
- *   $versions = $secretmanagerService->projects_secrets_versions;
+ *   $versions = $secretmanagerService->projects_locations_secrets_versions;
  *  </code>
  */
-class ProjectsSecretsVersions extends \Google\Service\Resource
+class ProjectsLocationsSecretsVersions extends \Google\Service\Resource
 {
   /**
    * Accesses a SecretVersion. This call returns the secret data.
@@ -129,7 +129,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
   }
   /**
    * Lists SecretVersions. This call does not return secret data.
-   * (versions.listProjectsSecretsVersions)
+   * (versions.listProjectsLocationsSecretsVersions)
    *
    * @param string $parent Required. The resource name of the Secret associated
    * with the SecretVersions to list, in the format `projects/secrets` or
@@ -149,7 +149,7 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
    * @return ListSecretVersionsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsSecretsVersions($parent, $optParams = [])
+  public function listProjectsLocationsSecretsVersions($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -158,4 +158,4 @@ class ProjectsSecretsVersions extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsSecretsVersions::class, 'Google_Service_SecretManager_Resource_ProjectsSecretsVersions');
+class_alias(ProjectsLocationsSecretsVersions::class, 'Google_Service_SecretManager_Resource_ProjectsLocationsSecretsVersions');

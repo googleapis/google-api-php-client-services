@@ -32,10 +32,10 @@ use Google\Service\SecretManager\TestIamPermissionsResponse;
  * Typical usage is:
  *  <code>
  *   $secretmanagerService = new Google\Service\SecretManager(...);
- *   $secrets = $secretmanagerService->projects_secrets;
+ *   $secrets = $secretmanagerService->projects_locations_secrets;
  *  </code>
  */
-class ProjectsSecrets extends \Google\Service\Resource
+class ProjectsLocationsSecrets extends \Google\Service\Resource
 {
   /**
    * Creates a new SecretVersion containing secret data and attaches it to an
@@ -142,7 +142,7 @@ class ProjectsSecrets extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Lists Secrets. (secrets.listProjectsSecrets)
+   * Lists Secrets. (secrets.listProjectsLocationsSecrets)
    *
    * @param string $parent Required. The resource name of the project associated
    * with the Secrets, in the format `projects` or `projects/locations`
@@ -161,7 +161,7 @@ class ProjectsSecrets extends \Google\Service\Resource
    * @return ListSecretsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsSecrets($parent, $optParams = [])
+  public function listProjectsLocationsSecrets($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -230,4 +230,4 @@ class ProjectsSecrets extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsSecrets::class, 'Google_Service_SecretManager_Resource_ProjectsSecrets');
+class_alias(ProjectsLocationsSecrets::class, 'Google_Service_SecretManager_Resource_ProjectsLocationsSecrets');
