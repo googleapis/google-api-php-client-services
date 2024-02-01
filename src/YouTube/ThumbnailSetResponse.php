@@ -28,10 +28,6 @@ class ThumbnailSetResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var ThumbnailDetails[]
-   */
-  public $items;
   protected $itemsType = ThumbnailDetails::class;
   protected $itemsDataType = 'array';
   /**

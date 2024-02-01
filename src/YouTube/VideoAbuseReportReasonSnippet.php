@@ -24,10 +24,6 @@ class VideoAbuseReportReasonSnippet extends \Google\Collection
    * @var string
    */
   public $label;
-  /**
-   * @var VideoAbuseReportSecondaryReason[]
-   */
-  public $secondaryReasons;
   protected $secondaryReasonsType = VideoAbuseReportSecondaryReason::class;
   protected $secondaryReasonsDataType = 'array';
 

@@ -35,16 +35,8 @@ class SubscriptionSnippet extends \Google\Model
    * @var string
    */
   public $publishedAt;
-  /**
-   * @var ResourceId
-   */
-  public $resourceId;
   protected $resourceIdType = ResourceId::class;
   protected $resourceIdDataType = '';
-  /**
-   * @var ThumbnailDetails
-   */
-  public $thumbnails;
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   /**

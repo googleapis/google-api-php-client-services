@@ -36,10 +36,6 @@ class VideoSuggestions extends \Google\Collection
    * @var string[]
    */
   public $processingWarnings;
-  /**
-   * @var VideoSuggestionsTagSuggestion[]
-   */
-  public $tagSuggestions;
   protected $tagSuggestionsType = VideoSuggestionsTagSuggestion::class;
   protected $tagSuggestionsDataType = 'array';
 

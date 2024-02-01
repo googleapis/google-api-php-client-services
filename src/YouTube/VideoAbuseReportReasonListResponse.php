@@ -28,10 +28,6 @@ class VideoAbuseReportReasonListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var VideoAbuseReportReason[]
-   */
-  public $items;
   protected $itemsType = VideoAbuseReportReason::class;
   protected $itemsDataType = 'array';
   /**

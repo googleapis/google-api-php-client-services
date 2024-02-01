@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class ThirdPartyLinkSnippet extends \Google\Model
 {
-  /**
-   * @var ChannelToStoreLinkDetails
-   */
-  public $channelToStoreLink;
   protected $channelToStoreLinkType = ChannelToStoreLinkDetails::class;
   protected $channelToStoreLinkDataType = '';
   /**

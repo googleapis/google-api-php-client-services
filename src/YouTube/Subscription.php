@@ -19,10 +19,6 @@ namespace Google\Service\YouTube;
 
 class Subscription extends \Google\Model
 {
-  /**
-   * @var SubscriptionContentDetails
-   */
-  public $contentDetails;
   protected $contentDetailsType = SubscriptionContentDetails::class;
   protected $contentDetailsDataType = '';
   /**
@@ -37,16 +33,8 @@ class Subscription extends \Google\Model
    * @var string
    */
   public $kind;
-  /**
-   * @var SubscriptionSnippet
-   */
-  public $snippet;
   protected $snippetType = SubscriptionSnippet::class;
   protected $snippetDataType = '';
-  /**
-   * @var SubscriptionSubscriberSnippet
-   */
-  public $subscriberSnippet;
   protected $subscriberSnippetType = SubscriptionSubscriberSnippet::class;
   protected $subscriberSnippetDataType = '';
 

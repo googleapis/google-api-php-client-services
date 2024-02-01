@@ -27,10 +27,6 @@ class SubscriptionSubscriberSnippet extends \Google\Model
    * @var string
    */
   public $description;
-  /**
-   * @var ThumbnailDetails
-   */
-  public $thumbnails;
   protected $thumbnailsType = ThumbnailDetails::class;
   protected $thumbnailsDataType = '';
   /**

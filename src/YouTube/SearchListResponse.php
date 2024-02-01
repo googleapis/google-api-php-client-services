@@ -28,10 +28,6 @@ class SearchListResponse extends \Google\Collection
    * @var string
    */
   public $eventId;
-  /**
-   * @var SearchResult[]
-   */
-  public $items;
   protected $itemsType = SearchResult::class;
   protected $itemsDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class SearchListResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var PageInfo
-   */
-  public $pageInfo;
   protected $pageInfoType = PageInfo::class;
   protected $pageInfoDataType = '';
   /**
@@ -56,10 +48,6 @@ class SearchListResponse extends \Google\Collection
    * @var string
    */
   public $regionCode;
-  /**
-   * @var TokenPagination
-   */
-  public $tokenPagination;
   protected $tokenPaginationType = TokenPagination::class;
   protected $tokenPaginationDataType = '';
   /**
