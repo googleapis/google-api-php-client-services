@@ -40,6 +40,8 @@ class Vp9CodecSettings extends \Google\Model
    * @var int
    */
   public $heightPixels;
+  protected $hlgType = Vp9ColorFormatHLG::class;
+  protected $hlgDataType = '';
   /**
    * @var string
    */
@@ -52,6 +54,8 @@ class Vp9CodecSettings extends \Google\Model
    * @var string
    */
   public $rateControlMode;
+  protected $sdrType = Vp9ColorFormatSDR::class;
+  protected $sdrDataType = '';
   /**
    * @var int
    */
@@ -136,6 +140,20 @@ class Vp9CodecSettings extends \Google\Model
     return $this->heightPixels;
   }
   /**
+   * @param Vp9ColorFormatHLG
+   */
+  public function setHlg(Vp9ColorFormatHLG $hlg)
+  {
+    $this->hlg = $hlg;
+  }
+  /**
+   * @return Vp9ColorFormatHLG
+   */
+  public function getHlg()
+  {
+    return $this->hlg;
+  }
+  /**
    * @param string
    */
   public function setPixelFormat($pixelFormat)
@@ -176,6 +194,20 @@ class Vp9CodecSettings extends \Google\Model
   public function getRateControlMode()
   {
     return $this->rateControlMode;
+  }
+  /**
+   * @param Vp9ColorFormatSDR
+   */
+  public function setSdr(Vp9ColorFormatSDR $sdr)
+  {
+    $this->sdr = $sdr;
+  }
+  /**
+   * @return Vp9ColorFormatSDR
+   */
+  public function getSdr()
+  {
+    return $this->sdr;
   }
   /**
    * @param int

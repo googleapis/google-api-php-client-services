@@ -53,10 +53,14 @@ class H265CodecSettings extends \Google\Model
    * @var int
    */
   public $gopFrameCount;
+  protected $hdr10Type = H265ColorFormatHDR10::class;
+  protected $hdr10DataType = '';
   /**
    * @var int
    */
   public $heightPixels;
+  protected $hlgType = H265ColorFormatHLG::class;
+  protected $hlgDataType = '';
   /**
    * @var string
    */
@@ -73,6 +77,8 @@ class H265CodecSettings extends \Google\Model
    * @var string
    */
   public $rateControlMode;
+  protected $sdrType = H265ColorFormatSDR::class;
+  protected $sdrDataType = '';
   /**
    * @var string
    */
@@ -219,6 +225,20 @@ class H265CodecSettings extends \Google\Model
     return $this->gopFrameCount;
   }
   /**
+   * @param H265ColorFormatHDR10
+   */
+  public function setHdr10(H265ColorFormatHDR10 $hdr10)
+  {
+    $this->hdr10 = $hdr10;
+  }
+  /**
+   * @return H265ColorFormatHDR10
+   */
+  public function getHdr10()
+  {
+    return $this->hdr10;
+  }
+  /**
    * @param int
    */
   public function setHeightPixels($heightPixels)
@@ -231,6 +251,20 @@ class H265CodecSettings extends \Google\Model
   public function getHeightPixels()
   {
     return $this->heightPixels;
+  }
+  /**
+   * @param H265ColorFormatHLG
+   */
+  public function setHlg(H265ColorFormatHLG $hlg)
+  {
+    $this->hlg = $hlg;
+  }
+  /**
+   * @return H265ColorFormatHLG
+   */
+  public function getHlg()
+  {
+    return $this->hlg;
   }
   /**
    * @param string
@@ -287,6 +321,20 @@ class H265CodecSettings extends \Google\Model
   public function getRateControlMode()
   {
     return $this->rateControlMode;
+  }
+  /**
+   * @param H265ColorFormatSDR
+   */
+  public function setSdr(H265ColorFormatSDR $sdr)
+  {
+    $this->sdr = $sdr;
+  }
+  /**
+   * @return H265ColorFormatSDR
+   */
+  public function getSdr()
+  {
+    return $this->sdr;
   }
   /**
    * @param string
