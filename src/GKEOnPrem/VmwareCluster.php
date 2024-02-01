@@ -37,6 +37,8 @@ class VmwareCluster extends \Google\Model
   protected $authorizationDataType = '';
   protected $autoRepairConfigType = VmwareAutoRepairConfig::class;
   protected $autoRepairConfigDataType = '';
+  protected $binaryAuthorizationType = BinaryAuthorization::class;
+  protected $binaryAuthorizationDataType = '';
   protected $controlPlaneNodeType = VmwareControlPlaneNodeConfig::class;
   protected $controlPlaneNodeDataType = '';
   /**
@@ -201,6 +203,20 @@ class VmwareCluster extends \Google\Model
   public function getAutoRepairConfig()
   {
     return $this->autoRepairConfig;
+  }
+  /**
+   * @param BinaryAuthorization
+   */
+  public function setBinaryAuthorization(BinaryAuthorization $binaryAuthorization)
+  {
+    $this->binaryAuthorization = $binaryAuthorization;
+  }
+  /**
+   * @return BinaryAuthorization
+   */
+  public function getBinaryAuthorization()
+  {
+    return $this->binaryAuthorization;
   }
   /**
    * @param VmwareControlPlaneNodeConfig
