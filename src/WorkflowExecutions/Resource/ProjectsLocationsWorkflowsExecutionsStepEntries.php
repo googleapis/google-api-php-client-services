@@ -38,6 +38,7 @@ class ProjectsLocationsWorkflowsExecutionsStepEntries extends \Google\Service\Re
    * ution}/stepEntries/{step_entry}
    * @param array $optParams Optional parameters.
    * @return StepEntry
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -76,6 +77,7 @@ class ProjectsLocationsWorkflowsExecutionsStepEntries extends \Google\Service\Re
    * used with or without a pageToken. If used with a pageToken, then it indicates
    * the number of step entries to skip starting from the requested page.
    * @return ListStepEntriesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsWorkflowsExecutionsStepEntries($parent, $optParams = [])
   {

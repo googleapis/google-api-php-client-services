@@ -24,10 +24,6 @@ class ListStepEntriesResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var StepEntry[]
-   */
-  public $stepEntries;
   protected $stepEntriesType = StepEntry::class;
   protected $stepEntriesDataType = 'array';
   /**

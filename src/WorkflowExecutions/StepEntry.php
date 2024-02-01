@@ -27,20 +27,12 @@ class StepEntry extends \Google\Model
    * @var string
    */
   public $entryId;
-  /**
-   * @var Exception
-   */
-  public $exception;
   protected $exceptionType = Exception::class;
   protected $exceptionDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var NavigationInfo
-   */
-  public $navigationInfo;
   protected $navigationInfoType = NavigationInfo::class;
   protected $navigationInfoDataType = '';
   /**
@@ -55,10 +47,6 @@ class StepEntry extends \Google\Model
    * @var string
    */
   public $step;
-  /**
-   * @var StepEntryMetadata
-   */
-  public $stepEntryMetadata;
   protected $stepEntryMetadataType = StepEntryMetadata::class;
   protected $stepEntryMetadataDataType = '';
   /**

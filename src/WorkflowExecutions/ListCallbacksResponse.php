@@ -20,10 +20,6 @@ namespace Google\Service\WorkflowExecutions;
 class ListCallbacksResponse extends \Google\Collection
 {
   protected $collection_key = 'callbacks';
-  /**
-   * @var Callback[]
-   */
-  public $callbacks;
   protected $callbacksType = Callback::class;
   protected $callbacksDataType = 'array';
   /**

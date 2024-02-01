@@ -20,10 +20,6 @@ namespace Google\Service\WorkflowExecutions;
 class StackTrace extends \Google\Collection
 {
   protected $collection_key = 'elements';
-  /**
-   * @var StackTraceElement[]
-   */
-  public $elements;
   protected $elementsType = StackTraceElement::class;
   protected $elementsDataType = 'array';
 

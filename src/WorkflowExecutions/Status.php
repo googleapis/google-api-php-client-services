@@ -20,10 +20,6 @@ namespace Google\Service\WorkflowExecutions;
 class Status extends \Google\Collection
 {
   protected $collection_key = 'currentSteps';
-  /**
-   * @var Step[]
-   */
-  public $currentSteps;
   protected $currentStepsType = Step::class;
   protected $currentStepsDataType = 'array';
 

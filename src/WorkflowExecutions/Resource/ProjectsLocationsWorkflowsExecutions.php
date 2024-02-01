@@ -41,6 +41,7 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
    * @param CancelExecutionRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Execution
+   * @throws \Google\Service\Exception
    */
   public function cancel($name, CancelExecutionRequest $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
    * @param Execution $postBody
    * @param array $optParams Optional parameters.
    * @return Execution
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Execution $postBody, $optParams = [])
   {
@@ -75,6 +77,7 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
    * }/executions/{execution}
    * @param array $optParams Optional parameters.
    * @return ExportDataResponse
+   * @throws \Google\Service\Exception
    */
   public function exportData($name, $optParams = [])
   {
@@ -93,6 +96,7 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
    * @opt_param string view Optional. A view defining which fields should be
    * filled in the returned execution. The API will default to the FULL view.
    * @return Execution
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -135,6 +139,7 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
    * @opt_param string view Optional. A view defining which fields should be
    * filled in the returned executions. The API will default to the BASIC view.
    * @return ListExecutionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsWorkflowsExecutions($parent, $optParams = [])
   {

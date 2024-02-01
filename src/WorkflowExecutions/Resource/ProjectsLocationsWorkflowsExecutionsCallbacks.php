@@ -46,6 +46,7 @@ class ProjectsLocationsWorkflowsExecutionsCallbacks extends \Google\Service\Reso
    * pagination is applied to dynamic data. The list of callbacks returned can
    * change between page requests if callbacks are created or deleted.
    * @return ListCallbacksResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsWorkflowsExecutionsCallbacks($parent, $optParams = [])
   {
