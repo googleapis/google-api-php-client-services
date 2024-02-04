@@ -32,10 +32,6 @@ class Folder extends \Google\Model
    */
   public $kind;
   /**
-   * @var string[]
-   */
-  public $metadata;
-  /**
    * @var string
    */
   public $metageneration;
@@ -99,20 +95,6 @@ class Folder extends \Google\Model
   public function getKind()
   {
     return $this->kind;
-  }
-  /**
-   * @param string[]
-   */
-  public function setMetadata($metadata)
-  {
-    $this->metadata = $metadata;
-  }
-  /**
-   * @return string[]
-   */
-  public function getMetadata()
-  {
-    return $this->metadata;
   }
   /**
    * @param string
