@@ -117,15 +117,16 @@ class ProjectsLocationsWorkflowsExecutions extends \Google\Service\Resource
    *
    * @opt_param string filter Optional. Filters applied to the
    * `[Executions.ListExecutions]` results. The following fields are supported for
-   * filtering: `executionId`, `state`, `startTime`, `endTime`, `duration`,
-   * `workflowRevisionId`, `stepName`, and `label`. For details, see AIP-160. For
-   * example, if you are using the Google APIs Explorer: `state="SUCCEEDED"` or
-   * `startTime>"2023-08-01" AND state="FAILED"`
+   * filtering: `executionId`, `state`, `createTime`, `startTime`, `endTime`,
+   * `duration`, `workflowRevisionId`, `stepName`, and `label`. For details, see
+   * AIP-160. For example, if you are using the Google APIs Explorer:
+   * `state="SUCCEEDED"` or `startTime>"2023-08-01" AND state="FAILED"`
    * @opt_param string orderBy Optional. Comma-separated list of fields that
    * specify the ordering applied to the `[Executions.ListExecutions]` results. By
-   * default the ordering is based on descending `startTime`. The following fields
-   * are supported for ordering: `executionId`, `state`, `startTime`, `endTime`,
-   * `duration`, and `workflowRevisionId`. For details, see AIP-132.
+   * default the ordering is based on descending `createTime`. The following
+   * fields are supported for ordering: `executionId`, `state`, `createTime`,
+   * `startTime`, `endTime`, `duration`, and `workflowRevisionId`. For details,
+   * see AIP-132.
    * @opt_param int pageSize Maximum number of executions to return per call. Max
    * supported value depends on the selected Execution view: it's 1000 for BASIC
    * and 100 for FULL. The default value used if the field is not specified is
