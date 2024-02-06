@@ -19,10 +19,6 @@ namespace Google\Service\Firestore;
 
 class RunAggregationQueryRequest extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $mode;
   protected $newTransactionType = TransactionOptions::class;
   protected $newTransactionDataType = '';
   /**
@@ -36,20 +32,6 @@ class RunAggregationQueryRequest extends \Google\Model
    */
   public $transaction;
 
-  /**
-   * @param string
-   */
-  public function setMode($mode)
-  {
-    $this->mode = $mode;
-  }
-  /**
-   * @return string
-   */
-  public function getMode()
-  {
-    return $this->mode;
-  }
   /**
    * @param TransactionOptions
    */

@@ -25,8 +25,6 @@ class RunAggregationQueryResponse extends \Google\Model
   public $readTime;
   protected $resultType = AggregationResult::class;
   protected $resultDataType = '';
-  protected $statsType = ResultSetStats::class;
-  protected $statsDataType = '';
   /**
    * @var string
    */
@@ -59,20 +57,6 @@ class RunAggregationQueryResponse extends \Google\Model
   public function getResult()
   {
     return $this->result;
-  }
-  /**
-   * @param ResultSetStats
-   */
-  public function setStats(ResultSetStats $stats)
-  {
-    $this->stats = $stats;
-  }
-  /**
-   * @return ResultSetStats
-   */
-  public function getStats()
-  {
-    return $this->stats;
   }
   /**
    * @param string

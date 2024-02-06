@@ -33,8 +33,6 @@ class RunQueryResponse extends \Google\Model
    * @var int
    */
   public $skippedResults;
-  protected $statsType = ResultSetStats::class;
-  protected $statsDataType = '';
   /**
    * @var string
    */
@@ -95,20 +93,6 @@ class RunQueryResponse extends \Google\Model
   public function getSkippedResults()
   {
     return $this->skippedResults;
-  }
-  /**
-   * @param ResultSetStats
-   */
-  public function setStats(ResultSetStats $stats)
-  {
-    $this->stats = $stats;
-  }
-  /**
-   * @return ResultSetStats
-   */
-  public function getStats()
-  {
-    return $this->stats;
   }
   /**
    * @param string
