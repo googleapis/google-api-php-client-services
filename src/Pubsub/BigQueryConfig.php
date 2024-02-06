@@ -26,6 +26,10 @@ class BigQueryConfig extends \Google\Model
   /**
    * @var string
    */
+  public $serviceAccountEmail;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string
@@ -57,6 +61,20 @@ class BigQueryConfig extends \Google\Model
   public function getDropUnknownFields()
   {
     return $this->dropUnknownFields;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceAccountEmail($serviceAccountEmail)
+  {
+    $this->serviceAccountEmail = $serviceAccountEmail;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccountEmail()
+  {
+    return $this->serviceAccountEmail;
   }
   /**
    * @param string
