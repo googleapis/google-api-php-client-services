@@ -1211,11 +1211,7 @@ class Walletobjects extends \Google\Service
         'privateContent',
         [
           'methods' => [
-            'setPassUpdateNotice' => [
-              'path' => 'walletobjects/v1/privateContent/setPassUpdateNotice',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'uploadPrivateData' => [
+            'uploadPrivateData' => [
               'path' => 'walletobjects/v1/privateContent/uploadPrivateData',
               'httpMethod' => 'POST',
               'parameters' => [],

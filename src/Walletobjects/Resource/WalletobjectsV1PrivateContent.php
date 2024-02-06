@@ -17,8 +17,6 @@
 
 namespace Google\Service\Walletobjects\Resource;
 
-use Google\Service\Walletobjects\SetPassUpdateNoticeRequest;
-use Google\Service\Walletobjects\SetPassUpdateNoticeResponse;
 use Google\Service\Walletobjects\UploadPrivateDataRequest;
 use Google\Service\Walletobjects\UploadPrivateDataResponse;
 
@@ -32,22 +30,6 @@ use Google\Service\Walletobjects\UploadPrivateDataResponse;
  */
 class WalletobjectsV1PrivateContent extends \Google\Service\Resource
 {
-  /**
-   * Provide Google with information about awaiting private pass update. This will
-   * allow Google to provide the update notification to the device that currently
-   * holds this pass. (privateContent.setPassUpdateNotice)
-   *
-   * @param SetPassUpdateNoticeRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return SetPassUpdateNoticeResponse
-   * @throws \Google\Service\Exception
-   */
-  public function setPassUpdateNotice(SetPassUpdateNoticeRequest $postBody, $optParams = [])
-  {
-    $params = ['postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('setPassUpdateNotice', [$params], SetPassUpdateNoticeResponse::class);
-  }
   /**
    * Upload private data (text or URI) and returns an Id to be used in its place.
    * (privateContent.uploadPrivateData)
