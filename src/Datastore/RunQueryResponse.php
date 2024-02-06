@@ -23,8 +23,6 @@ class RunQueryResponse extends \Google\Model
   protected $batchDataType = '';
   protected $queryType = Query::class;
   protected $queryDataType = '';
-  protected $statsType = ResultSetStats::class;
-  protected $statsDataType = '';
   /**
    * @var string
    */
@@ -57,20 +55,6 @@ class RunQueryResponse extends \Google\Model
   public function getQuery()
   {
     return $this->query;
-  }
-  /**
-   * @param ResultSetStats
-   */
-  public function setStats(ResultSetStats $stats)
-  {
-    $this->stats = $stats;
-  }
-  /**
-   * @return ResultSetStats
-   */
-  public function getStats()
-  {
-    return $this->stats;
   }
   /**
    * @param string
