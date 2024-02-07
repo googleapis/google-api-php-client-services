@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class InstanceGroupManager extends \Google\Collection
 {
   protected $collection_key = 'versions';
+  protected $allInstancesConfigType = InstanceGroupManagerAllInstancesConfig::class;
+  protected $allInstancesConfigDataType = '';
   protected $autoHealingPoliciesType = InstanceGroupManagerAutoHealingPolicy::class;
   protected $autoHealingPoliciesDataType = 'array';
   /**
@@ -99,6 +101,20 @@ class InstanceGroupManager extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * @param InstanceGroupManagerAllInstancesConfig
+   */
+  public function setAllInstancesConfig(InstanceGroupManagerAllInstancesConfig $allInstancesConfig)
+  {
+    $this->allInstancesConfig = $allInstancesConfig;
+  }
+  /**
+   * @return InstanceGroupManagerAllInstancesConfig
+   */
+  public function getAllInstancesConfig()
+  {
+    return $this->allInstancesConfig;
+  }
   /**
    * @param InstanceGroupManagerAutoHealingPolicy[]
    */
