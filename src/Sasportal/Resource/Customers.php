@@ -17,9 +17,9 @@
 
 namespace Google\Service\Sasportal\Resource;
 
-use Google\Service\Sasportal\SasPortalCheckHasProvisionedDeploymentResponse;
 use Google\Service\Sasportal\SasPortalCustomer;
 use Google\Service\Sasportal\SasPortalListCustomersResponse;
+use Google\Service\Sasportal\SasPortalListGcpProjectDeploymentsResponse;
 use Google\Service\Sasportal\SasPortalListLegacyOrganizationsResponse;
 use Google\Service\Sasportal\SasPortalMigrateOrganizationRequest;
 use Google\Service\Sasportal\SasPortalOperation;
@@ -37,20 +37,6 @@ use Google\Service\Sasportal\SasPortalSetupSasAnalyticsRequest;
  */
 class Customers extends \Google\Service\Resource
 {
-  /**
-   * Checks whether a SAS deployment for the authentication context exists.
-   * (customers.checkHasProvisionedDeployment)
-   *
-   * @param array $optParams Optional parameters.
-   * @return SasPortalCheckHasProvisionedDeploymentResponse
-   * @throws \Google\Service\Exception
-   */
-  public function checkHasProvisionedDeployment($optParams = [])
-  {
-    $params = [];
-    $params = array_merge($params, $optParams);
-    return $this->call('checkHasProvisionedDeployment', [$params], SasPortalCheckHasProvisionedDeploymentResponse::class);
-  }
   /**
    * Returns a requested customer. (customers.get)
    *
@@ -84,7 +70,22 @@ class Customers extends \Google\Service\Resource
     return $this->call('list', [$params], SasPortalListCustomersResponse::class);
   }
   /**
-   * Checks whether account is legacy. (customers.listLegacyOrganizations)
+   * Returns a list of SAS deployments associated with current GCP project.
+   * Includes whether SAS analytics has been enabled or not.
+   * (customers.listGcpProjectDeployments)
+   *
+   * @param array $optParams Optional parameters.
+   * @return SasPortalListGcpProjectDeploymentsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listGcpProjectDeployments($optParams = [])
+  {
+    $params = [];
+    $params = array_merge($params, $optParams);
+    return $this->call('listGcpProjectDeployments', [$params], SasPortalListGcpProjectDeploymentsResponse::class);
+  }
+  /**
+   * Returns a list of legacy organizations. (customers.listLegacyOrganizations)
    *
    * @param array $optParams Optional parameters.
    * @return SasPortalListLegacyOrganizationsResponse

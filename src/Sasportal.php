@@ -84,11 +84,7 @@ class Sasportal extends \Google\Service
         'customers',
         [
           'methods' => [
-            'checkHasProvisionedDeployment' => [
-              'path' => 'v1alpha1/customers:checkHasProvisionedDeployment',
-              'httpMethod' => 'GET',
-              'parameters' => [],
-            ],'get' => [
+            'get' => [
               'path' => 'v1alpha1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -111,6 +107,10 @@ class Sasportal extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'listGcpProjectDeployments' => [
+              'path' => 'v1alpha1/customers:listGcpProjectDeployments',
+              'httpMethod' => 'GET',
+              'parameters' => [],
             ],'listLegacyOrganizations' => [
               'path' => 'v1alpha1/customers:listLegacyOrganizations',
               'httpMethod' => 'GET',
