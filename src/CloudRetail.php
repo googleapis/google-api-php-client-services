@@ -115,6 +115,16 @@ class CloudRetail extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'exportAnalyticsMetrics' => [
+              'path' => 'v2/{+catalog}:exportAnalyticsMetrics',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'catalog' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getAttributesConfig' => [
               'path' => 'v2/{+name}',
               'httpMethod' => 'GET',

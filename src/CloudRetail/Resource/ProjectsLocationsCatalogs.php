@@ -21,9 +21,11 @@ use Google\Service\CloudRetail\GoogleCloudRetailV2AttributesConfig;
 use Google\Service\CloudRetail\GoogleCloudRetailV2Catalog;
 use Google\Service\CloudRetail\GoogleCloudRetailV2CompleteQueryResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2CompletionConfig;
+use Google\Service\CloudRetail\GoogleCloudRetailV2ExportAnalyticsMetricsRequest;
 use Google\Service\CloudRetail\GoogleCloudRetailV2GetDefaultBranchResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2ListCatalogsResponse;
 use Google\Service\CloudRetail\GoogleCloudRetailV2SetDefaultBranchRequest;
+use Google\Service\CloudRetail\GoogleLongrunningOperation;
 use Google\Service\CloudRetail\GoogleProtobufEmpty;
 
 /**
@@ -92,6 +94,24 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
     $params = ['catalog' => $catalog];
     $params = array_merge($params, $optParams);
     return $this->call('completeQuery', [$params], GoogleCloudRetailV2CompleteQueryResponse::class);
+  }
+  /**
+   * Exports analytics metrics. `Operation.response` is of type
+   * `ExportAnalyticsMetricsResponse`. `Operation.metadata` is of type
+   * `ExportMetadata`. (catalogs.exportAnalyticsMetrics)
+   *
+   * @param string $catalog Required. Full resource name of the parent catalog.
+   * Expected format: `projects/locations/catalogs`
+   * @param GoogleCloudRetailV2ExportAnalyticsMetricsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function exportAnalyticsMetrics($catalog, GoogleCloudRetailV2ExportAnalyticsMetricsRequest $postBody, $optParams = [])
+  {
+    $params = ['catalog' => $catalog, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('exportAnalyticsMetrics', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Gets an AttributesConfig. (catalogs.getAttributesConfig)
