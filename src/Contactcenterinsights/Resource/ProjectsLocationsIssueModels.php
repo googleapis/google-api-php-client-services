@@ -19,6 +19,8 @@ namespace Google\Service\Contactcenterinsights\Resource;
 
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateIssueModelStatsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1DeployIssueModelRequest;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ExportIssueModelRequest;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ImportIssueModelRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1IssueModel;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListIssueModelsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1UndeployIssueModelRequest;
@@ -96,6 +98,21 @@ class ProjectsLocationsIssueModels extends \Google\Service\Resource
     return $this->call('deploy', [$params], GoogleLongrunningOperation::class);
   }
   /**
+   * Exports an issue model to the provided destination. (issueModels.export)
+   *
+   * @param string $name Required. The issue model to export
+   * @param GoogleCloudContactcenterinsightsV1ExportIssueModelRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function export($name, GoogleCloudContactcenterinsightsV1ExportIssueModelRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('export', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Gets an issue model. (issueModels.get)
    *
    * @param string $name Required. The name of the issue model to get.
@@ -108,6 +125,21 @@ class ProjectsLocationsIssueModels extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleCloudContactcenterinsightsV1IssueModel::class);
+  }
+  /**
+   * Imports an issue model from a Cloud Storage bucket. (issueModels.import)
+   *
+   * @param string $parent Required. The parent resource of the issue model.
+   * @param GoogleCloudContactcenterinsightsV1ImportIssueModelRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function import($parent, GoogleCloudContactcenterinsightsV1ImportIssueModelRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('import', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Lists issue models. (issueModels.listProjectsLocationsIssueModels)
