@@ -22,6 +22,10 @@ class Repository extends \Google\Model
   /**
    * @var string
    */
+  public $createTime;
+  /**
+   * @var string
+   */
   public $displayName;
   protected $gitRemoteSettingsType = GitRemoteSettings::class;
   protected $gitRemoteSettingsDataType = '';
@@ -48,6 +52,20 @@ class Repository extends \Google\Model
   protected $workspaceCompilationOverridesType = WorkspaceCompilationOverrides::class;
   protected $workspaceCompilationOverridesDataType = '';
 
+  /**
+   * @param string
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
+  }
   /**
    * @param string
    */
