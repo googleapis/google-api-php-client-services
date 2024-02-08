@@ -233,9 +233,10 @@ class ProjectsLocationsDatasetsConsentStoresConsents extends \Google\Service\Res
    * revision of the specified Consent is in the `REJECTED` or `REVOKED` state.
    * (consents.patch)
    *
-   * @param string $name Resource name of the Consent, of the form `projects/{proj
-   * ect_id}/locations/{location_id}/datasets/{dataset_id}/consentStores/{consent_
-   * store_id}/consents/{consent_id}`. Cannot be changed after creation.
+   * @param string $name Identifier. Resource name of the Consent, of the form `pr
+   * ojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/consentStor
+   * es/{consent_store_id}/consents/{consent_id}`. Cannot be changed after
+   * creation.
    * @param Consent $postBody
    * @param array $optParams Optional parameters.
    *

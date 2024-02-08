@@ -41,7 +41,8 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * an MLLP adapter is configured to listen to a Pub/Sub topic, the adapter
    * transmits the message when a notification is received. (messages.create)
    *
-   * @param string $parent The name of the HL7v2 store this message belongs to.
+   * @param string $parent Required. The name of the HL7v2 store this message
+   * belongs to.
    * @param CreateMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Message
@@ -56,7 +57,8 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
   /**
    * Deletes an HL7v2 message. (messages.delete)
    *
-   * @param string $name The resource name of the HL7v2 message to delete.
+   * @param string $name Required. The resource name of the HL7v2 message to
+   * delete.
    * @param array $optParams Optional parameters.
    * @return HealthcareEmpty
    * @throws \Google\Service\Exception
@@ -70,7 +72,8 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
   /**
    * Gets an HL7v2 message. (messages.get)
    *
-   * @param string $name The resource name of the HL7v2 message to retrieve.
+   * @param string $name Required. The resource name of the HL7v2 message to
+   * retrieve.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view Specifies which parts of the Message resource to
@@ -95,7 +98,8 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * acknowledgment (`NACK`) message. This behavior is suitable for replying to
    * HL7v2 interface systems that expect these acknowledgments. (messages.ingest)
    *
-   * @param string $parent The name of the HL7v2 store this message belongs to.
+   * @param string $parent Required. The name of the HL7v2 store this message
+   * belongs to.
    * @param IngestMessageRequest $postBody
    * @param array $optParams Optional parameters.
    * @return IngestMessageResponse
@@ -113,7 +117,8 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * delay between the time a message is created and when it can be found through
    * a filter. (messages.listProjectsLocationsDatasetsHl7V2StoresMessages)
    *
-   * @param string $parent Name of the HL7v2 store to retrieve messages from.
+   * @param string $parent Required. Name of the HL7v2 store to retrieve messages
+   * from.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Restricts messages returned to those matching a
@@ -182,14 +187,15 @@ class ProjectsLocationsDatasetsHl7V2StoresMessages extends \Google\Service\Resou
    * request are merged with the existing set of labels. Existing labels with the
    * same keys are updated. (messages.patch)
    *
-   * @param string $name Resource name of the Message, of the form `projects/{proj
-   * ect_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Stores/{hl7_v2_sto
-   * re_id}/messages/{message_id}`. Assigned by the server.
+   * @param string $name Output only. Resource name of the Message, of the form `p
+   * rojects/{project_id}/locations/{location_id}/datasets/{dataset_id}/hl7V2Store
+   * s/{hl7_v2_store_id}/messages/{message_id}`. Assigned by the server.
    * @param Message $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The update mask applies to the resource. For the
-   * `FieldMask` definition, see https://developers.google.com/protocol-
+   * @opt_param string updateMask Required. The update mask applies to the
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask
    * @return Message
    * @throws \Google\Service\Exception
