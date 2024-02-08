@@ -72,7 +72,12 @@ class Testing extends \Google\Service
             'getApkDetails' => [
               'path' => 'v1/applicationDetailService/getApkDetails',
               'httpMethod' => 'POST',
-              'parameters' => [],
+              'parameters' => [
+                'bundleLocation.gcsPath' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]
