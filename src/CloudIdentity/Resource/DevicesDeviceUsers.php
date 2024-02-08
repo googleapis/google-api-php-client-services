@@ -213,8 +213,9 @@ class DevicesDeviceUsers extends \Google\Service\Resource
    * @opt_param string rawResourceId Raw Resource Id used by Google Endpoint
    * Verification. If the user is enrolled into Google Endpoint Verification, this
    * id will be saved as the 'device_resource_id' field in the following platform
-   * dependent files. Mac: ~/.secureConnect/context_aware_config.json Windows:
-   * C:\Users\%USERPROFILE%\.secureConnect\context_aware_config.json Linux:
+   * dependent files. * macOS: ~/.secureConnect/context_aware_config.json *
+   * Windows: %USERPROFILE%\AppData\Local\Google\Endpoint
+   * Verification\accounts.json * Linux:
    * ~/.secureConnect/context_aware_config.json
    * @opt_param string userId The user whose DeviceUser's resource name will be
    * fetched. Must be set to 'me' to fetch the DeviceUser's resource name for the
