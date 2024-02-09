@@ -23,9 +23,8 @@ use Google\Client;
  * Service definition for DLP (v2).
  *
  * <p>
- * Provides methods for detection, risk analysis, and de-identification of
- * privacy-sensitive fragments in text, images, and Google Cloud Platform
- * storage repositories.</p>
+ * Discover and protect your sensitive data. A fully managed service designed to
+ * help you discover, classify, and protect your valuable data assets with ease.</p>
  *
  * <p>
  * For more information about this service, see the API
