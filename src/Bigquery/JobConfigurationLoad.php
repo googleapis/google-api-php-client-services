@@ -37,6 +37,10 @@ class JobConfigurationLoad extends \Google\Collection
   protected $connectionPropertiesType = ConnectionProperty::class;
   protected $connectionPropertiesDataType = 'array';
   /**
+   * @var bool
+   */
+  public $copyFilesOnly;
+  /**
    * @var string
    */
   public $createDisposition;
@@ -210,6 +214,20 @@ class JobConfigurationLoad extends \Google\Collection
   public function getConnectionProperties()
   {
     return $this->connectionProperties;
+  }
+  /**
+   * @param bool
+   */
+  public function setCopyFilesOnly($copyFilesOnly)
+  {
+    $this->copyFilesOnly = $copyFilesOnly;
+  }
+  /**
+   * @return bool
+   */
+  public function getCopyFilesOnly()
+  {
+    return $this->copyFilesOnly;
   }
   /**
    * @param string
