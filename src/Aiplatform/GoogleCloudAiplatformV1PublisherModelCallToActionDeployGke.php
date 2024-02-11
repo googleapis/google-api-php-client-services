@@ -17,46 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiNlLlmProtoServicePartVideoMetadata extends \Google\Model
+class GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke extends \Google\Collection
 {
+  protected $collection_key = 'gkeYamlConfigs';
   /**
-   * @var string
+   * @var string[]
    */
-  public $endOffset;
-  /**
-   * @var string
-   */
-  public $startOffset;
+  public $gkeYamlConfigs;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setEndOffset($endOffset)
+  public function setGkeYamlConfigs($gkeYamlConfigs)
   {
-    $this->endOffset = $endOffset;
+    $this->gkeYamlConfigs = $gkeYamlConfigs;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getEndOffset()
+  public function getGkeYamlConfigs()
   {
-    return $this->endOffset;
-  }
-  /**
-   * @param string
-   */
-  public function setStartOffset($startOffset)
-  {
-    $this->startOffset = $startOffset;
-  }
-  /**
-   * @return string
-   */
-  public function getStartOffset()
-  {
-    return $this->startOffset;
+    return $this->gkeYamlConfigs;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiNlLlmProtoServicePartVideoMetadata::class, 'Google_Service_Aiplatform_CloudAiNlLlmProtoServicePartVideoMetadata');
+class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke');

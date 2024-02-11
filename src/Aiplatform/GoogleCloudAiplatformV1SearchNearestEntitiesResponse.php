@@ -17,46 +17,26 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiNlLlmProtoServicePartVideoMetadata extends \Google\Model
+class GoogleCloudAiplatformV1SearchNearestEntitiesResponse extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $endOffset;
-  /**
-   * @var string
-   */
-  public $startOffset;
+  protected $nearestNeighborsType = GoogleCloudAiplatformV1NearestNeighbors::class;
+  protected $nearestNeighborsDataType = '';
 
   /**
-   * @param string
+   * @param GoogleCloudAiplatformV1NearestNeighbors
    */
-  public function setEndOffset($endOffset)
+  public function setNearestNeighbors(GoogleCloudAiplatformV1NearestNeighbors $nearestNeighbors)
   {
-    $this->endOffset = $endOffset;
+    $this->nearestNeighbors = $nearestNeighbors;
   }
   /**
-   * @return string
+   * @return GoogleCloudAiplatformV1NearestNeighbors
    */
-  public function getEndOffset()
+  public function getNearestNeighbors()
   {
-    return $this->endOffset;
-  }
-  /**
-   * @param string
-   */
-  public function setStartOffset($startOffset)
-  {
-    $this->startOffset = $startOffset;
-  }
-  /**
-   * @return string
-   */
-  public function getStartOffset()
-  {
-    return $this->startOffset;
+    return $this->nearestNeighbors;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiNlLlmProtoServicePartVideoMetadata::class, 'Google_Service_Aiplatform_CloudAiNlLlmProtoServicePartVideoMetadata');
+class_alias(GoogleCloudAiplatformV1SearchNearestEntitiesResponse::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SearchNearestEntitiesResponse');

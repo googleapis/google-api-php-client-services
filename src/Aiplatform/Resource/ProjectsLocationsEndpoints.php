@@ -148,8 +148,8 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
     return $this->call('deployModel', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Perform an unary online prediction request for Vertex first-party products
-   * and frameworks. (endpoints.directPredict)
+   * Perform an unary online prediction request to a gRPC model server for Vertex
+   * first-party products and frameworks. (endpoints.directPredict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
    * the prediction. Format:
@@ -166,8 +166,8 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
     return $this->call('directPredict', [$params], GoogleCloudAiplatformV1DirectPredictResponse::class);
   }
   /**
-   * Perform an online prediction request through gRPC.
-   * (endpoints.directRawPredict)
+   * Perform an unary online prediction request to a gRPC model server for custom
+   * containers. (endpoints.directRawPredict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
    * the prediction. Format:
@@ -202,6 +202,23 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
     $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('explain', [$params], GoogleCloudAiplatformV1ExplainResponse::class);
+  }
+  /**
+   * Generate content with multimodal inputs. (endpoints.generateContent)
+   *
+   * @param string $model Required. The name of the publisher model requested to
+   * serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @param GoogleCloudAiplatformV1GenerateContentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateContentResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateContent($model, GoogleCloudAiplatformV1GenerateContentRequest $postBody, $optParams = [])
+  {
+    $params = ['model' => $model, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
   }
   /**
    * Gets an Endpoint. (endpoints.get)
@@ -365,6 +382,7 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
     return $this->call('streamGenerateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
   }
   /**
+   * Perform a streaming online prediction with an arbitrary HTTP payload.
    * (endpoints.streamRawPredict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve

@@ -17,46 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiNlLlmProtoServicePartVideoMetadata extends \Google\Model
+class GoogleCloudAiplatformV1NearestNeighborQueryEmbedding extends \Google\Collection
 {
+  protected $collection_key = 'value';
   /**
-   * @var string
+   * @var float[]
    */
-  public $endOffset;
-  /**
-   * @var string
-   */
-  public $startOffset;
+  public $value;
 
   /**
-   * @param string
+   * @param float[]
    */
-  public function setEndOffset($endOffset)
+  public function setValue($value)
   {
-    $this->endOffset = $endOffset;
+    $this->value = $value;
   }
   /**
-   * @return string
+   * @return float[]
    */
-  public function getEndOffset()
+  public function getValue()
   {
-    return $this->endOffset;
-  }
-  /**
-   * @param string
-   */
-  public function setStartOffset($startOffset)
-  {
-    $this->startOffset = $startOffset;
-  }
-  /**
-   * @return string
-   */
-  public function getStartOffset()
-  {
-    return $this->startOffset;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiNlLlmProtoServicePartVideoMetadata::class, 'Google_Service_Aiplatform_CloudAiNlLlmProtoServicePartVideoMetadata');
+class_alias(GoogleCloudAiplatformV1NearestNeighborQueryEmbedding::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1NearestNeighborQueryEmbedding');

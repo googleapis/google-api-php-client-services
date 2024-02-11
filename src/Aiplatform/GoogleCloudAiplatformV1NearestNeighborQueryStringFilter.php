@@ -17,64 +17,65 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Scheduling extends \Google\Model
+class GoogleCloudAiplatformV1NearestNeighborQueryStringFilter extends \Google\Collection
 {
+  protected $collection_key = 'denyTokens';
   /**
-   * @var bool
+   * @var string[]
    */
-  public $disableRetries;
+  public $allowTokens;
   /**
-   * @var bool
+   * @var string[]
    */
-  public $restartJobOnWorkerRestart;
+  public $denyTokens;
   /**
    * @var string
    */
-  public $timeout;
+  public $name;
 
   /**
-   * @param bool
+   * @param string[]
    */
-  public function setDisableRetries($disableRetries)
+  public function setAllowTokens($allowTokens)
   {
-    $this->disableRetries = $disableRetries;
+    $this->allowTokens = $allowTokens;
   }
   /**
-   * @return bool
+   * @return string[]
    */
-  public function getDisableRetries()
+  public function getAllowTokens()
   {
-    return $this->disableRetries;
+    return $this->allowTokens;
   }
   /**
-   * @param bool
+   * @param string[]
    */
-  public function setRestartJobOnWorkerRestart($restartJobOnWorkerRestart)
+  public function setDenyTokens($denyTokens)
   {
-    $this->restartJobOnWorkerRestart = $restartJobOnWorkerRestart;
+    $this->denyTokens = $denyTokens;
   }
   /**
-   * @return bool
+   * @return string[]
    */
-  public function getRestartJobOnWorkerRestart()
+  public function getDenyTokens()
   {
-    return $this->restartJobOnWorkerRestart;
+    return $this->denyTokens;
   }
   /**
    * @param string
    */
-  public function setTimeout($timeout)
+  public function setName($name)
   {
-    $this->timeout = $timeout;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getTimeout()
+  public function getName()
   {
-    return $this->timeout;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Scheduling::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Scheduling');
+class_alias(GoogleCloudAiplatformV1NearestNeighborQueryStringFilter::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1NearestNeighborQueryStringFilter');

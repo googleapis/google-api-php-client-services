@@ -75,6 +75,23 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
     return $this->call('countTokens', [$params], GoogleCloudAiplatformV1CountTokensResponse::class);
   }
   /**
+   * Generate content with multimodal inputs. (models.generateContent)
+   *
+   * @param string $model Required. The name of the publisher model requested to
+   * serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @param GoogleCloudAiplatformV1GenerateContentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateContentResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateContent($model, GoogleCloudAiplatformV1GenerateContentRequest $postBody, $optParams = [])
+  {
+    $params = ['model' => $model, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
+  }
+  /**
    * Perform an online prediction. (models.predict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
@@ -149,6 +166,7 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
     return $this->call('streamGenerateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
   }
   /**
+   * Perform a streaming online prediction with an arbitrary HTTP payload.
    * (models.streamRawPredict)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to serve
