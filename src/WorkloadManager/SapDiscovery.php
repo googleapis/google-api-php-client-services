@@ -37,6 +37,8 @@ class SapDiscovery extends \Google\Model
    * @var string
    */
   public $updateTime;
+  protected $workloadPropertiesType = SapDiscoveryWorkloadProperties::class;
+  protected $workloadPropertiesDataType = '';
 
   /**
    * @param SapDiscoveryComponent
@@ -121,6 +123,20 @@ class SapDiscovery extends \Google\Model
   public function getUpdateTime()
   {
     return $this->updateTime;
+  }
+  /**
+   * @param SapDiscoveryWorkloadProperties
+   */
+  public function setWorkloadProperties(SapDiscoveryWorkloadProperties $workloadProperties)
+  {
+    $this->workloadProperties = $workloadProperties;
+  }
+  /**
+   * @return SapDiscoveryWorkloadProperties
+   */
+  public function getWorkloadProperties()
+  {
+    return $this->workloadProperties;
   }
 }
 
