@@ -852,10 +852,6 @@ class Storage extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'allowNonEmpty' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'ifMetagenerationMatch' => [
                   'location' => 'query',
                   'type' => 'string',

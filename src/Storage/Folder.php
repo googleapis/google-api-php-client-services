@@ -26,6 +26,10 @@ class Folder extends \Google\Model
   /**
    * @var string
    */
+  public $createTime;
+  /**
+   * @var string
+   */
   public $id;
   /**
    * @var string
@@ -48,11 +52,7 @@ class Folder extends \Google\Model
   /**
    * @var string
    */
-  public $timeCreated;
-  /**
-   * @var string
-   */
-  public $updated;
+  public $updateTime;
 
   /**
    * @param string
@@ -67,6 +67,20 @@ class Folder extends \Google\Model
   public function getBucket()
   {
     return $this->bucket;
+  }
+  /**
+   * @param string
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
   }
   /**
    * @param string
@@ -155,30 +169,16 @@ class Folder extends \Google\Model
   /**
    * @param string
    */
-  public function setTimeCreated($timeCreated)
+  public function setUpdateTime($updateTime)
   {
-    $this->timeCreated = $timeCreated;
+    $this->updateTime = $updateTime;
   }
   /**
    * @return string
    */
-  public function getTimeCreated()
+  public function getUpdateTime()
   {
-    return $this->timeCreated;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdated($updated)
-  {
-    $this->updated = $updated;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdated()
-  {
-    return $this->updated;
+    return $this->updateTime;
   }
 }
 
