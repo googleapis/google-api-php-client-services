@@ -64,6 +64,10 @@ class PipelineRun extends \Google\Collection
   protected $pipelineSpecDataType = '';
   protected $provenanceType = Provenance::class;
   protected $provenanceDataType = '';
+  /**
+   * @var string
+   */
+  public $record;
   protected $resolvedPipelineSpecType = PipelineSpec::class;
   protected $resolvedPipelineSpecDataType = '';
   protected $securityType = Security::class;
@@ -296,6 +300,20 @@ class PipelineRun extends \Google\Collection
   public function getProvenance()
   {
     return $this->provenance;
+  }
+  /**
+   * @param string
+   */
+  public function setRecord($record)
+  {
+    $this->record = $record;
+  }
+  /**
+   * @return string
+   */
+  public function getRecord()
+  {
+    return $this->record;
   }
   /**
    * @param PipelineSpec
