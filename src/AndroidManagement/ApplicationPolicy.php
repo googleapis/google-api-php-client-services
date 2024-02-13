@@ -39,6 +39,10 @@ class ApplicationPolicy extends \Google\Collection
   /**
    * @var string
    */
+  public $credentialProviderPolicy;
+  /**
+   * @var string
+   */
   public $defaultPermissionPolicy;
   /**
    * @var string[]
@@ -140,6 +144,20 @@ class ApplicationPolicy extends \Google\Collection
   public function getConnectedWorkAndPersonalApp()
   {
     return $this->connectedWorkAndPersonalApp;
+  }
+  /**
+   * @param string
+   */
+  public function setCredentialProviderPolicy($credentialProviderPolicy)
+  {
+    $this->credentialProviderPolicy = $credentialProviderPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getCredentialProviderPolicy()
+  {
+    return $this->credentialProviderPolicy;
   }
   /**
    * @param string
