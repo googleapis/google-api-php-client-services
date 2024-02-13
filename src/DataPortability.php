@@ -37,7 +37,7 @@ use Google\Client;
  */
 class DataPortability extends \Google\Service
 {
-  /** Move a copy of messages between you and the businesses you have conversations with.. */
+  /** Move a copy of messages between you and the businesses you have conversations with across Google services.. */
   const DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS =
       "https://www.googleapis.com/auth/dataportability.businessmessaging.conversations";
   /** Move a copy of your pinned trips on Maps.. */
@@ -64,7 +64,7 @@ class DataPortability extends \Google\Service
   /** Move a copy of your Maps activity.. */
   const DATAPORTABILITY_MYACTIVITY_MAPS =
       "https://www.googleapis.com/auth/dataportability.myactivity.maps";
-  /** Move a copy of your search activity.. */
+  /** Move a copy of your Google Search activity.. */
   const DATAPORTABILITY_MYACTIVITY_SEARCH =
       "https://www.googleapis.com/auth/dataportability.myactivity.search";
   /** Move a copy of your Shopping activity.. */
@@ -73,10 +73,10 @@ class DataPortability extends \Google\Service
   /** Move a copy of your YouTube activity.. */
   const DATAPORTABILITY_MYACTIVITY_YOUTUBE =
       "https://www.googleapis.com/auth/dataportability.myactivity.youtube";
-  /** Move a copy of your shipping information.. */
+  /** Move a copy of your shipping information on Shopping.. */
   const DATAPORTABILITY_SHOPPING_ADDRESSES =
       "https://www.googleapis.com/auth/dataportability.shopping.addresses";
-  /** Move a copy of reviews you wrote about products or online stores.. */
+  /** Move a copy of reviews you wrote about products or online stores on Google Search.. */
   const DATAPORTABILITY_SHOPPING_REVIEWS =
       "https://www.googleapis.com/auth/dataportability.shopping.reviews";
   /** Move a copy of information about your YouTube channel.. */
