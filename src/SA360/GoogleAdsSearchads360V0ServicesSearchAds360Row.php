@@ -82,6 +82,8 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
   protected $conversionDataType = '';
   protected $conversionActionType = GoogleAdsSearchads360V0ResourcesConversionAction::class;
   protected $conversionActionDataType = '';
+  protected $conversionCustomVariableType = GoogleAdsSearchads360V0ResourcesConversionCustomVariable::class;
+  protected $conversionCustomVariableDataType = '';
   protected $customColumnsType = GoogleAdsSearchads360V0CommonValue::class;
   protected $customColumnsDataType = 'array';
   protected $customerType = GoogleAdsSearchads360V0ResourcesCustomer::class;
@@ -558,6 +560,20 @@ class GoogleAdsSearchads360V0ServicesSearchAds360Row extends \Google\Collection
   public function getConversionAction()
   {
     return $this->conversionAction;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0ResourcesConversionCustomVariable
+   */
+  public function setConversionCustomVariable(GoogleAdsSearchads360V0ResourcesConversionCustomVariable $conversionCustomVariable)
+  {
+    $this->conversionCustomVariable = $conversionCustomVariable;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0ResourcesConversionCustomVariable
+   */
+  public function getConversionCustomVariable()
+  {
+    return $this->conversionCustomVariable;
   }
   /**
    * @param GoogleAdsSearchads360V0CommonValue[]

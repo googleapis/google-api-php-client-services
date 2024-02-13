@@ -19,7 +19,7 @@ namespace Google\Service\SA360;
 
 class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
 {
-  protected $collection_key = 'interactionEventTypes';
+  protected $collection_key = 'rawEventConversionMetrics';
   public $absoluteTopImpressionPercentage;
   public $allConversions;
   public $allConversionsByConversionDate;
@@ -77,6 +77,8 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public $contentBudgetLostImpressionShare;
   public $contentImpressionShare;
   public $contentRankLostImpressionShare;
+  protected $conversionCustomMetricsType = GoogleAdsSearchads360V0CommonValue::class;
+  protected $conversionCustomMetricsDataType = 'array';
   public $conversions;
   public $conversionsByConversionDate;
   public $conversionsFromInteractionsRate;
@@ -155,6 +157,8 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public $leadRevenueMicros;
   public $leadUnitsSold;
   public $mobileFriendlyClicksPercentage;
+  protected $rawEventConversionMetricsType = GoogleAdsSearchads360V0CommonValue::class;
+  protected $rawEventConversionMetricsDataType = 'array';
   public $searchAbsoluteTopImpressionShare;
   public $searchBudgetLostAbsoluteTopImpressionShare;
   public $searchBudgetLostImpressionShare;
@@ -484,6 +488,20 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public function getContentRankLostImpressionShare()
   {
     return $this->contentRankLostImpressionShare;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonValue[]
+   */
+  public function setConversionCustomMetrics($conversionCustomMetrics)
+  {
+    $this->conversionCustomMetrics = $conversionCustomMetrics;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonValue[]
+   */
+  public function getConversionCustomMetrics()
+  {
+    return $this->conversionCustomMetrics;
   }
   public function setConversions($conversions)
   {
@@ -838,6 +856,20 @@ class GoogleAdsSearchads360V0CommonMetrics extends \Google\Collection
   public function getMobileFriendlyClicksPercentage()
   {
     return $this->mobileFriendlyClicksPercentage;
+  }
+  /**
+   * @param GoogleAdsSearchads360V0CommonValue[]
+   */
+  public function setRawEventConversionMetrics($rawEventConversionMetrics)
+  {
+    $this->rawEventConversionMetrics = $rawEventConversionMetrics;
+  }
+  /**
+   * @return GoogleAdsSearchads360V0CommonValue[]
+   */
+  public function getRawEventConversionMetrics()
+  {
+    return $this->rawEventConversionMetrics;
   }
   public function setSearchAbsoluteTopImpressionShare($searchAbsoluteTopImpressionShare)
   {
