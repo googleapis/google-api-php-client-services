@@ -31,6 +31,8 @@ class Check extends \Google\Model
   protected $imageAllowlistDataType = '';
   protected $imageFreshnessCheckType = ImageFreshnessCheck::class;
   protected $imageFreshnessCheckDataType = '';
+  protected $sigstoreSignatureCheckType = SigstoreSignatureCheck::class;
+  protected $sigstoreSignatureCheckDataType = '';
   protected $simpleSigningAttestationCheckType = SimpleSigningAttestationCheck::class;
   protected $simpleSigningAttestationCheckDataType = '';
   protected $slsaCheckType = SlsaCheck::class;
@@ -95,6 +97,20 @@ class Check extends \Google\Model
   public function getImageFreshnessCheck()
   {
     return $this->imageFreshnessCheck;
+  }
+  /**
+   * @param SigstoreSignatureCheck
+   */
+  public function setSigstoreSignatureCheck(SigstoreSignatureCheck $sigstoreSignatureCheck)
+  {
+    $this->sigstoreSignatureCheck = $sigstoreSignatureCheck;
+  }
+  /**
+   * @return SigstoreSignatureCheck
+   */
+  public function getSigstoreSignatureCheck()
+  {
+    return $this->sigstoreSignatureCheck;
   }
   /**
    * @param SimpleSigningAttestationCheck
