@@ -23,6 +23,8 @@ class RunQueryRequest extends \Google\Model
    * @var string
    */
   public $databaseId;
+  protected $explainOptionsType = ExplainOptions::class;
+  protected $explainOptionsDataType = '';
   protected $gqlQueryType = GqlQuery::class;
   protected $gqlQueryDataType = '';
   protected $partitionIdType = PartitionId::class;
@@ -45,6 +47,20 @@ class RunQueryRequest extends \Google\Model
   public function getDatabaseId()
   {
     return $this->databaseId;
+  }
+  /**
+   * @param ExplainOptions
+   */
+  public function setExplainOptions(ExplainOptions $explainOptions)
+  {
+    $this->explainOptions = $explainOptions;
+  }
+  /**
+   * @return ExplainOptions
+   */
+  public function getExplainOptions()
+  {
+    return $this->explainOptions;
   }
   /**
    * @param GqlQuery
