@@ -41,6 +41,10 @@ class Runtime extends \Google\Collection
   /**
    * @var string[]
    */
+  public $supportedOperatingSystems;
+  /**
+   * @var string[]
+   */
   public $warnings;
 
   /**
@@ -126,6 +130,20 @@ class Runtime extends \Google\Collection
   public function getStage()
   {
     return $this->stage;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSupportedOperatingSystems($supportedOperatingSystems)
+  {
+    $this->supportedOperatingSystems = $supportedOperatingSystems;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSupportedOperatingSystems()
+  {
+    return $this->supportedOperatingSystems;
   }
   /**
    * @param string[]
