@@ -997,6 +997,16 @@ class Dataproc extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'repair' => [
+              'path' => 'v1/{+name}:repair',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'resize' => [
               'path' => 'v1/{+name}:resize',
               'httpMethod' => 'POST',

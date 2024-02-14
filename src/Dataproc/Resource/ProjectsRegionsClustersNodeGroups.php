@@ -19,6 +19,7 @@ namespace Google\Service\Dataproc\Resource;
 
 use Google\Service\Dataproc\NodeGroup;
 use Google\Service\Dataproc\Operation;
+use Google\Service\Dataproc\RepairNodeGroupRequest;
 use Google\Service\Dataproc\ResizeNodeGroupRequest;
 
 /**
@@ -51,7 +52,7 @@ class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource
    * @opt_param string requestId Optional. A unique ID used to identify the
    * request. If the server receives two CreateNodeGroupRequest (https://cloud.goo
    * gle.com/dataproc/docs/reference/rpc/google.cloud.dataproc.v1#google.cloud.dat
-   * aproc.v1.CreateNodeGroupRequests) with the same ID, the second request is
+   * aproc.v1.CreateNodeGroupRequest) with the same ID, the second request is
    * ignored and the first google.longrunning.Operation created and stored in the
    * backend is returned.Recommendation: Set this value to a UUID
    * (https://en.wikipedia.org/wiki/Universally_unique_identifier).The ID must
@@ -81,6 +82,22 @@ class ProjectsRegionsClustersNodeGroups extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], NodeGroup::class);
+  }
+  /**
+   * Repair nodes in a node group. (nodeGroups.repair)
+   *
+   * @param string $name Required. The name of the node group to resize. Format:
+   * projects/{project}/regions/{region}/clusters/{cluster}/nodeGroups/{nodeGroup}
+   * @param RepairNodeGroupRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function repair($name, RepairNodeGroupRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('repair', [$params], Operation::class);
   }
   /**
    * Resizes a node group in a cluster. The returned Operation.metadata is
