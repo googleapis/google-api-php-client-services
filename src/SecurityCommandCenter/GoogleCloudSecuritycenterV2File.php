@@ -23,6 +23,8 @@ class GoogleCloudSecuritycenterV2File extends \Google\Model
    * @var string
    */
   public $contents;
+  protected $diskPathType = GoogleCloudSecuritycenterV2DiskPath::class;
+  protected $diskPathDataType = '';
   /**
    * @var string
    */
@@ -57,6 +59,20 @@ class GoogleCloudSecuritycenterV2File extends \Google\Model
   public function getContents()
   {
     return $this->contents;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2DiskPath
+   */
+  public function setDiskPath(GoogleCloudSecuritycenterV2DiskPath $diskPath)
+  {
+    $this->diskPath = $diskPath;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2DiskPath
+   */
+  public function getDiskPath()
+  {
+    return $this->diskPath;
   }
   /**
    * @param string

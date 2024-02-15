@@ -17,23 +17,28 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV2Container extends \Google\Collection
+class GoogleCloudSecuritycenterV2TicketInfo extends \Google\Model
 {
-  protected $collection_key = 'labels';
   /**
    * @var string
    */
-  public $createTime;
+  public $assignee;
   /**
    * @var string
    */
-  public $imageId;
-  protected $labelsType = GoogleCloudSecuritycenterV2Label::class;
-  protected $labelsDataType = 'array';
+  public $description;
   /**
    * @var string
    */
-  public $name;
+  public $id;
+  /**
+   * @var string
+   */
+  public $status;
+  /**
+   * @var string
+   */
+  public $updateTime;
   /**
    * @var string
    */
@@ -42,58 +47,72 @@ class GoogleCloudSecuritycenterV2Container extends \Google\Collection
   /**
    * @param string
    */
-  public function setCreateTime($createTime)
+  public function setAssignee($assignee)
   {
-    $this->createTime = $createTime;
+    $this->assignee = $assignee;
   }
   /**
    * @return string
    */
-  public function getCreateTime()
+  public function getAssignee()
   {
-    return $this->createTime;
+    return $this->assignee;
   }
   /**
    * @param string
    */
-  public function setImageId($imageId)
+  public function setDescription($description)
   {
-    $this->imageId = $imageId;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getImageId()
+  public function getDescription()
   {
-    return $this->imageId;
-  }
-  /**
-   * @param GoogleCloudSecuritycenterV2Label[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return GoogleCloudSecuritycenterV2Label[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setId($id)
   {
-    $this->name = $name;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getId()
   {
-    return $this->name;
+    return $this->id;
+  }
+  /**
+   * @param string
+   */
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return string
+   */
+  public function getStatus()
+  {
+    return $this->status;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
   /**
    * @param string
@@ -112,4 +131,4 @@ class GoogleCloudSecuritycenterV2Container extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudSecuritycenterV2Container::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2Container');
+class_alias(GoogleCloudSecuritycenterV2TicketInfo::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2TicketInfo');

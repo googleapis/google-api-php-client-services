@@ -20,10 +20,6 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2ContactDetails extends \Google\Collection
 {
   protected $collection_key = 'contacts';
-  /**
-   * @var GoogleCloudSecuritycenterV2Contact[]
-   */
-  public $contacts;
   protected $contactsType = GoogleCloudSecuritycenterV2Contact::class;
   protected $contactsDataType = 'array';
 

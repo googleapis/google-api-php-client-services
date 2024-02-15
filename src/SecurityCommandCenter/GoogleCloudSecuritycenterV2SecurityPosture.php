@@ -17,8 +17,9 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Model
+class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Collection
 {
+  protected $collection_key = 'policyDriftDetails';
   /**
    * @var string
    */
@@ -27,6 +28,16 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $policy;
+  protected $policyDriftDetailsType = GoogleCloudSecuritycenterV2PolicyDriftDetails::class;
+  protected $policyDriftDetailsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $policySet;
   /**
    * @var string
    */
@@ -67,6 +78,48 @@ class GoogleCloudSecuritycenterV2SecurityPosture extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setPolicy($policy)
+  {
+    $this->policy = $policy;
+  }
+  /**
+   * @return string
+   */
+  public function getPolicy()
+  {
+    return $this->policy;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2PolicyDriftDetails[]
+   */
+  public function setPolicyDriftDetails($policyDriftDetails)
+  {
+    $this->policyDriftDetails = $policyDriftDetails;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2PolicyDriftDetails[]
+   */
+  public function getPolicyDriftDetails()
+  {
+    return $this->policyDriftDetails;
+  }
+  /**
+   * @param string
+   */
+  public function setPolicySet($policySet)
+  {
+    $this->policySet = $policySet;
+  }
+  /**
+   * @return string
+   */
+  public function getPolicySet()
+  {
+    return $this->policySet;
   }
   /**
    * @param string

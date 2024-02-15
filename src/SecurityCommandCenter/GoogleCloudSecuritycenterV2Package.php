@@ -17,99 +17,82 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV2Object extends \Google\Collection
+class GoogleCloudSecuritycenterV2Package extends \Google\Model
 {
-  protected $collection_key = 'containers';
-  protected $containersType = GoogleCloudSecuritycenterV2Container::class;
-  protected $containersDataType = 'array';
   /**
    * @var string
    */
-  public $group;
+  public $cpeUri;
   /**
    * @var string
    */
-  public $kind;
+  public $packageName;
   /**
    * @var string
    */
-  public $name;
+  public $packageType;
   /**
    * @var string
    */
-  public $ns;
+  public $packageVersion;
 
   /**
-   * @param GoogleCloudSecuritycenterV2Container[]
-   */
-  public function setContainers($containers)
-  {
-    $this->containers = $containers;
-  }
-  /**
-   * @return GoogleCloudSecuritycenterV2Container[]
-   */
-  public function getContainers()
-  {
-    return $this->containers;
-  }
-  /**
    * @param string
    */
-  public function setGroup($group)
+  public function setCpeUri($cpeUri)
   {
-    $this->group = $group;
+    $this->cpeUri = $cpeUri;
   }
   /**
    * @return string
    */
-  public function getGroup()
+  public function getCpeUri()
   {
-    return $this->group;
+    return $this->cpeUri;
   }
   /**
    * @param string
    */
-  public function setKind($kind)
+  public function setPackageName($packageName)
   {
-    $this->kind = $kind;
+    $this->packageName = $packageName;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getPackageName()
   {
-    return $this->kind;
+    return $this->packageName;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setPackageType($packageType)
   {
-    $this->name = $name;
+    $this->packageType = $packageType;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getPackageType()
   {
-    return $this->name;
+    return $this->packageType;
   }
   /**
    * @param string
    */
-  public function setNs($ns)
+  public function setPackageVersion($packageVersion)
   {
-    $this->ns = $ns;
+    $this->packageVersion = $packageVersion;
   }
   /**
    * @return string
    */
-  public function getNs()
+  public function getPackageVersion()
   {
-    return $this->ns;
+    return $this->packageVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudSecuritycenterV2Object::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2Object');
+class_alias(GoogleCloudSecuritycenterV2Package::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2Package');

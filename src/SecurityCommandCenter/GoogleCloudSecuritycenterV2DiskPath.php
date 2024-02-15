@@ -17,45 +17,46 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV2NodePool extends \Google\Collection
+class GoogleCloudSecuritycenterV2DiskPath extends \Google\Model
 {
-  protected $collection_key = 'nodes';
   /**
    * @var string
    */
-  public $name;
-  protected $nodesType = GoogleCloudSecuritycenterV2Node::class;
-  protected $nodesDataType = 'array';
+  public $partitionUuid;
+  /**
+   * @var string
+   */
+  public $relativePath;
 
   /**
    * @param string
    */
-  public function setName($name)
+  public function setPartitionUuid($partitionUuid)
   {
-    $this->name = $name;
+    $this->partitionUuid = $partitionUuid;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getPartitionUuid()
   {
-    return $this->name;
+    return $this->partitionUuid;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2Node[]
+   * @param string
    */
-  public function setNodes($nodes)
+  public function setRelativePath($relativePath)
   {
-    $this->nodes = $nodes;
+    $this->relativePath = $relativePath;
   }
   /**
-   * @return GoogleCloudSecuritycenterV2Node[]
+   * @return string
    */
-  public function getNodes()
+  public function getRelativePath()
   {
-    return $this->nodes;
+    return $this->relativePath;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudSecuritycenterV2NodePool::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2NodePool');
+class_alias(GoogleCloudSecuritycenterV2DiskPath::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2DiskPath');

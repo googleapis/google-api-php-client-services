@@ -17,45 +17,46 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV2NodePool extends \Google\Collection
+class GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping extends \Google\Model
 {
-  protected $collection_key = 'nodes';
   /**
    * @var string
    */
-  public $name;
-  protected $nodesType = GoogleCloudSecuritycenterV2Node::class;
-  protected $nodesDataType = 'array';
+  public $highSensitivityMapping;
+  /**
+   * @var string
+   */
+  public $mediumSensitivityMapping;
 
   /**
    * @param string
    */
-  public function setName($name)
+  public function setHighSensitivityMapping($highSensitivityMapping)
   {
-    $this->name = $name;
+    $this->highSensitivityMapping = $highSensitivityMapping;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getHighSensitivityMapping()
   {
-    return $this->name;
+    return $this->highSensitivityMapping;
   }
   /**
-   * @param GoogleCloudSecuritycenterV2Node[]
+   * @param string
    */
-  public function setNodes($nodes)
+  public function setMediumSensitivityMapping($mediumSensitivityMapping)
   {
-    $this->nodes = $nodes;
+    $this->mediumSensitivityMapping = $mediumSensitivityMapping;
   }
   /**
-   * @return GoogleCloudSecuritycenterV2Node[]
+   * @return string
    */
-  public function getNodes()
+  public function getMediumSensitivityMapping()
   {
-    return $this->nodes;
+    return $this->mediumSensitivityMapping;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudSecuritycenterV2NodePool::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2NodePool');
+class_alias(GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2SensitiveDataProtectionMapping');

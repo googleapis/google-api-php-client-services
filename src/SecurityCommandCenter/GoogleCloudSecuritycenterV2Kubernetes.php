@@ -20,46 +20,18 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Kubernetes extends \Google\Collection
 {
   protected $collection_key = 'roles';
-  /**
-   * @var GoogleCloudSecuritycenterV2AccessReview[]
-   */
-  public $accessReviews;
   protected $accessReviewsType = GoogleCloudSecuritycenterV2AccessReview::class;
   protected $accessReviewsDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2Binding[]
-   */
-  public $bindings;
   protected $bindingsType = GoogleCloudSecuritycenterV2Binding::class;
   protected $bindingsDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2NodePool[]
-   */
-  public $nodePools;
   protected $nodePoolsType = GoogleCloudSecuritycenterV2NodePool::class;
   protected $nodePoolsDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2Node[]
-   */
-  public $nodes;
   protected $nodesType = GoogleCloudSecuritycenterV2Node::class;
   protected $nodesDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2Object[]
-   */
-  public $objects;
   protected $objectsType = GoogleCloudSecuritycenterV2Object::class;
   protected $objectsDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2Pod[]
-   */
-  public $pods;
   protected $podsType = GoogleCloudSecuritycenterV2Pod::class;
   protected $podsDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2Role[]
-   */
-  public $roles;
   protected $rolesType = GoogleCloudSecuritycenterV2Role::class;
   protected $rolesDataType = 'array';
 

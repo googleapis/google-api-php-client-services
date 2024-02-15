@@ -28,26 +28,14 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
    * @var bool
    */
   public $argumentsTruncated;
-  /**
-   * @var GoogleCloudSecuritycenterV2File
-   */
-  public $binary;
   protected $binaryType = GoogleCloudSecuritycenterV2File::class;
   protected $binaryDataType = '';
-  /**
-   * @var GoogleCloudSecuritycenterV2EnvironmentVariable[]
-   */
-  public $envVariables;
   protected $envVariablesType = GoogleCloudSecuritycenterV2EnvironmentVariable::class;
   protected $envVariablesDataType = 'array';
   /**
    * @var bool
    */
   public $envVariablesTruncated;
-  /**
-   * @var GoogleCloudSecuritycenterV2File[]
-   */
-  public $libraries;
   protected $librariesType = GoogleCloudSecuritycenterV2File::class;
   protected $librariesDataType = 'array';
   /**
@@ -62,10 +50,6 @@ class GoogleCloudSecuritycenterV2Process extends \Google\Collection
    * @var string
    */
   public $pid;
-  /**
-   * @var GoogleCloudSecuritycenterV2File
-   */
-  public $script;
   protected $scriptType = GoogleCloudSecuritycenterV2File::class;
   protected $scriptDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\SecurityCommandCenter;
 
 class GoogleCloudSecuritycenterV2LogEntry extends \Google\Model
 {
-  /**
-   * @var GoogleCloudSecuritycenterV2CloudLoggingEntry
-   */
-  public $cloudLoggingEntry;
   protected $cloudLoggingEntryType = GoogleCloudSecuritycenterV2CloudLoggingEntry::class;
   protected $cloudLoggingEntryDataType = '';
 

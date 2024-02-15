@@ -28,16 +28,8 @@ class GoogleCloudSecuritycenterV2Binding extends \Google\Collection
    * @var string
    */
   public $ns;
-  /**
-   * @var GoogleCloudSecuritycenterV2Role
-   */
-  public $role;
   protected $roleType = GoogleCloudSecuritycenterV2Role::class;
   protected $roleDataType = '';
-  /**
-   * @var GoogleCloudSecuritycenterV2Subject[]
-   */
-  public $subjects;
   protected $subjectsType = GoogleCloudSecuritycenterV2Subject::class;
   protected $subjectsDataType = 'array';
 

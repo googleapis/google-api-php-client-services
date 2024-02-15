@@ -20,16 +20,8 @@ namespace Google\Service\SecurityCommandCenter;
 class GoogleCloudSecuritycenterV2Pod extends \Google\Collection
 {
   protected $collection_key = 'labels';
-  /**
-   * @var GoogleCloudSecuritycenterV2Container[]
-   */
-  public $containers;
   protected $containersType = GoogleCloudSecuritycenterV2Container::class;
   protected $containersDataType = 'array';
-  /**
-   * @var GoogleCloudSecuritycenterV2Label[]
-   */
-  public $labels;
   protected $labelsType = GoogleCloudSecuritycenterV2Label::class;
   protected $labelsDataType = 'array';
   /**
