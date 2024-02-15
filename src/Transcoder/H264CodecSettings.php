@@ -52,6 +52,10 @@ class H264CodecSettings extends \Google\Model
   /**
    * @var string
    */
+  public $frameRateConversionStrategy;
+  /**
+   * @var string
+   */
   public $gopDuration;
   /**
    * @var int
@@ -211,6 +215,20 @@ class H264CodecSettings extends \Google\Model
   public function getFrameRate()
   {
     return $this->frameRate;
+  }
+  /**
+   * @param string
+   */
+  public function setFrameRateConversionStrategy($frameRateConversionStrategy)
+  {
+    $this->frameRateConversionStrategy = $frameRateConversionStrategy;
+  }
+  /**
+   * @return string
+   */
+  public function getFrameRateConversionStrategy()
+  {
+    return $this->frameRateConversionStrategy;
   }
   /**
    * @param string
