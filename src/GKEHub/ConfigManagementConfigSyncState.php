@@ -32,6 +32,10 @@ class ConfigManagementConfigSyncState extends \Google\Collection
    * @var string
    */
   public $rootsyncCrd;
+  /**
+   * @var string
+   */
+  public $state;
   protected $syncStateType = ConfigManagementSyncState::class;
   protected $syncStateDataType = '';
   protected $versionType = ConfigManagementConfigSyncVersion::class;
@@ -92,6 +96,20 @@ class ConfigManagementConfigSyncState extends \Google\Collection
   public function getRootsyncCrd()
   {
     return $this->rootsyncCrd;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * @param ConfigManagementSyncState
