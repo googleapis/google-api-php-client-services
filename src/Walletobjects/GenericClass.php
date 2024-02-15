@@ -36,6 +36,8 @@ class GenericClass extends \Google\Collection
   protected $imageModulesDataDataType = 'array';
   protected $linksModuleDataType = LinksModuleData::class;
   protected $linksModuleDataDataType = '';
+  protected $messagesType = Message::class;
+  protected $messagesDataType = 'array';
   /**
    * @var string
    */
@@ -136,6 +138,20 @@ class GenericClass extends \Google\Collection
   public function getLinksModuleData()
   {
     return $this->linksModuleData;
+  }
+  /**
+   * @param Message[]
+   */
+  public function setMessages($messages)
+  {
+    $this->messages = $messages;
+  }
+  /**
+   * @return Message[]
+   */
+  public function getMessages()
+  {
+    return $this->messages;
   }
   /**
    * @param string

@@ -57,7 +57,6 @@ class Walletobjects extends \Google\Service
   public $smarttap;
   public $transitclass;
   public $transitobject;
-  public $walletobjects_v1_privateContent;
 
   /**
    * Constructs the internal representation of the Walletobjects service.
@@ -1201,20 +1200,6 @@ class Walletobjects extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->walletobjects_v1_privateContent = new Walletobjects\Resource\WalletobjectsV1PrivateContent(
-        $this,
-        $this->serviceName,
-        'privateContent',
-        [
-          'methods' => [
-            'uploadPrivateData' => [
-              'path' => 'walletobjects/v1/privateContent/uploadPrivateData',
-              'httpMethod' => 'POST',
-              'parameters' => [],
             ],
           ]
         ]
