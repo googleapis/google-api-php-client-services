@@ -104,6 +104,9 @@ class MylibraryAnnotations extends \Google\Service\Resource
    * @param string|array $layerIds Array of layer IDs to get the summary for.
    * @param string $volumeId Volume id to get the summary for.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string source Optional. String to identify the originator of this
+   * request.
    * @return AnnotationsSummary
    * @throws \Google\Service\Exception
    */
