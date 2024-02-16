@@ -75,6 +75,7 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * @param AssignedTargetingOption $postBody
    * @param array $optParams Optional parameters.
    * @return AssignedTargetingOption
+   * @throws \Google\Service\Exception
    */
   public function create($advertiserId, $lineItemId, $targetingType, AssignedTargetingOption $postBody, $optParams = [])
   {
@@ -126,6 +127,7 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * targeting option to delete.
    * @param array $optParams Optional parameters.
    * @return DisplayvideoEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($advertiserId, $lineItemId, $targetingType, $assignedTargetingOptionId, $optParams = [])
   {
@@ -177,6 +179,7 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * option being requested.
    * @param array $optParams Optional parameters.
    * @return AssignedTargetingOption
+   * @throws \Google\Service\Exception
    */
   public function get($advertiserId, $lineItemId, $targetingType, $assignedTargetingOptionId, $optParams = [])
   {
@@ -250,6 +253,7 @@ class AdvertisersLineItemsTargetingTypesAssignedTargetingOptions extends \Google
    * the previous call to `ListLineItemAssignedTargetingOptions` method. If not
    * specified, the first page of results will be returned.
    * @return ListLineItemAssignedTargetingOptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAdvertisersLineItemsTargetingTypesAssignedTargetingOptions($advertiserId, $lineItemId, $targetingType, $optParams = [])
   {

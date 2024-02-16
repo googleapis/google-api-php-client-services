@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class ProductMatchDimension extends \Google\Model
 {
-  /**
-   * @var CustomLabel
-   */
-  public $customLabel;
   protected $customLabelType = CustomLabel::class;
   protected $customLabelDataType = '';
   /**

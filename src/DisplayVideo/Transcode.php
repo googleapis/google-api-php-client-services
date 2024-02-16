@@ -31,10 +31,6 @@ class Transcode extends \Google\Model
    * @var string
    */
   public $bitRateKbps;
-  /**
-   * @var Dimensions
-   */
-  public $dimensions;
   protected $dimensionsType = Dimensions::class;
   protected $dimensionsDataType = '';
   /**

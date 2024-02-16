@@ -20,28 +20,12 @@ namespace Google\Service\DisplayVideo;
 class ThirdPartyMeasurementConfigs extends \Google\Collection
 {
   protected $collection_key = 'viewabilityVendorConfigs';
-  /**
-   * @var ThirdPartyVendorConfig[]
-   */
-  public $brandLiftVendorConfigs;
   protected $brandLiftVendorConfigsType = ThirdPartyVendorConfig::class;
   protected $brandLiftVendorConfigsDataType = 'array';
-  /**
-   * @var ThirdPartyVendorConfig[]
-   */
-  public $brandSafetyVendorConfigs;
   protected $brandSafetyVendorConfigsType = ThirdPartyVendorConfig::class;
   protected $brandSafetyVendorConfigsDataType = 'array';
-  /**
-   * @var ThirdPartyVendorConfig[]
-   */
-  public $reachVendorConfigs;
   protected $reachVendorConfigsType = ThirdPartyVendorConfig::class;
   protected $reachVendorConfigsDataType = 'array';
-  /**
-   * @var ThirdPartyVendorConfig[]
-   */
-  public $viewabilityVendorConfigs;
   protected $viewabilityVendorConfigsType = ThirdPartyVendorConfig::class;
   protected $viewabilityVendorConfigsDataType = 'array';
 

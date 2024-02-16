@@ -28,10 +28,6 @@ class YoutubeAndPartnersSettings extends \Google\Collection
    * @var string
    */
   public $effectiveContentCategory;
-  /**
-   * @var YoutubeAndPartnersInventorySourceConfig
-   */
-  public $inventorySourceSettings;
   protected $inventorySourceSettingsType = YoutubeAndPartnersInventorySourceConfig::class;
   protected $inventorySourceSettingsDataType = '';
   /**
@@ -46,28 +42,12 @@ class YoutubeAndPartnersSettings extends \Google\Collection
    * @var string[]
    */
   public $relatedVideoIds;
-  /**
-   * @var TargetFrequency
-   */
-  public $targetFrequency;
   protected $targetFrequencyType = TargetFrequency::class;
   protected $targetFrequencyDataType = '';
-  /**
-   * @var ThirdPartyMeasurementConfigs
-   */
-  public $thirdPartyMeasurementConfigs;
   protected $thirdPartyMeasurementConfigsType = ThirdPartyMeasurementConfigs::class;
   protected $thirdPartyMeasurementConfigsDataType = '';
-  /**
-   * @var VideoAdSequenceSettings
-   */
-  public $videoAdSequenceSettings;
   protected $videoAdSequenceSettingsType = VideoAdSequenceSettings::class;
   protected $videoAdSequenceSettingsDataType = '';
-  /**
-   * @var FrequencyCap
-   */
-  public $viewFrequencyCap;
   protected $viewFrequencyCapType = FrequencyCap::class;
   protected $viewFrequencyCapDataType = '';
 

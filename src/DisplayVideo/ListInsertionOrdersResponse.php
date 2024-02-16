@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListInsertionOrdersResponse extends \Google\Collection
 {
   protected $collection_key = 'insertionOrders';
-  /**
-   * @var InsertionOrder[]
-   */
-  public $insertionOrders;
   protected $insertionOrdersType = InsertionOrder::class;
   protected $insertionOrdersDataType = 'array';
   /**

@@ -23,10 +23,6 @@ class ObaIcon extends \Google\Model
    * @var string
    */
   public $clickTrackingUrl;
-  /**
-   * @var Dimensions
-   */
-  public $dimensions;
   protected $dimensionsType = Dimensions::class;
   protected $dimensionsDataType = '';
   /**

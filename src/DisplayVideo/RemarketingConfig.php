@@ -17,62 +17,46 @@
 
 namespace Google\Service\DisplayVideo;
 
-class PrismaConfig extends \Google\Model
+class RemarketingConfig extends \Google\Model
 {
-  protected $prismaCpeCodeType = PrismaCpeCode::class;
-  protected $prismaCpeCodeDataType = '';
   /**
    * @var string
    */
-  public $prismaType;
+  public $advertiserId;
   /**
-   * @var string
+   * @var bool
    */
-  public $supplier;
+  public $remarketingEnabled;
 
   /**
-   * @param PrismaCpeCode
-   */
-  public function setPrismaCpeCode(PrismaCpeCode $prismaCpeCode)
-  {
-    $this->prismaCpeCode = $prismaCpeCode;
-  }
-  /**
-   * @return PrismaCpeCode
-   */
-  public function getPrismaCpeCode()
-  {
-    return $this->prismaCpeCode;
-  }
-  /**
    * @param string
    */
-  public function setPrismaType($prismaType)
+  public function setAdvertiserId($advertiserId)
   {
-    $this->prismaType = $prismaType;
+    $this->advertiserId = $advertiserId;
   }
   /**
    * @return string
    */
-  public function getPrismaType()
+  public function getAdvertiserId()
   {
-    return $this->prismaType;
+    return $this->advertiserId;
   }
   /**
-   * @param string
+   * @param bool
    */
-  public function setSupplier($supplier)
+  public function setRemarketingEnabled($remarketingEnabled)
   {
-    $this->supplier = $supplier;
+    $this->remarketingEnabled = $remarketingEnabled;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getSupplier()
+  public function getRemarketingEnabled()
   {
-    return $this->supplier;
+    return $this->remarketingEnabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PrismaConfig::class, 'Google_Service_DisplayVideo_PrismaConfig');
+class_alias(RemarketingConfig::class, 'Google_Service_DisplayVideo_RemarketingConfig');

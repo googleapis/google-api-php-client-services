@@ -35,10 +35,6 @@ class VideoDiscoveryAd extends \Google\Model
    * @var string
    */
   public $thumbnail;
-  /**
-   * @var YoutubeVideoDetails
-   */
-  public $video;
   protected $videoType = YoutubeVideoDetails::class;
   protected $videoDataType = '';
 

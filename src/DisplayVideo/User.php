@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class User extends \Google\Collection
 {
   protected $collection_key = 'assignedUserRoles';
-  /**
-   * @var AssignedUserRole[]
-   */
-  public $assignedUserRoles;
   protected $assignedUserRolesType = AssignedUserRole::class;
   protected $assignedUserRolesDataType = 'array';
   /**

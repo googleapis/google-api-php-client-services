@@ -52,6 +52,7 @@ class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\
    * option being requested.
    * @param array $optParams Optional parameters.
    * @return AssignedTargetingOption
+   * @throws \Google\Service\Exception
    */
   public function get($advertiserId, $adGroupId, $targetingType, $assignedTargetingOptionId, $optParams = [])
   {
@@ -102,6 +103,7 @@ class AdvertisersAdGroupsTargetingTypesAssignedTargetingOptions extends \Google\
    * returned from the previous call to `ListAdGroupAssignedTargetingOptions`
    * method. If not specified, the first page of results will be returned.
    * @return ListAdGroupAssignedTargetingOptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAdvertisersAdGroupsTargetingTypesAssignedTargetingOptions($advertiserId, $adGroupId, $targetingType, $optParams = [])
   {

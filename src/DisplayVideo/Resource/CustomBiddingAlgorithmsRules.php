@@ -45,6 +45,7 @@ class CustomBiddingAlgorithmsRules extends \Google\Service\Resource
    * bidding algorithm. Only this partner will have write access to this rules
    * resource.
    * @return CustomBiddingAlgorithmRules
+   * @throws \Google\Service\Exception
    */
   public function create($customBiddingAlgorithmId, CustomBiddingAlgorithmRules $postBody, $optParams = [])
   {
@@ -66,6 +67,7 @@ class CustomBiddingAlgorithmsRules extends \Google\Service\Resource
    * @opt_param string partnerId The ID of the partner that owns the parent custom
    * bidding algorithm.
    * @return CustomBiddingAlgorithmRules
+   * @throws \Google\Service\Exception
    */
   public function get($customBiddingAlgorithmId, $customBiddingAlgorithmRulesId, $optParams = [])
   {
@@ -97,6 +99,7 @@ class CustomBiddingAlgorithmsRules extends \Google\Service\Resource
    * @opt_param string partnerId The ID of the partner that owns the parent custom
    * bidding algorithm.
    * @return ListCustomBiddingAlgorithmRulesResponse
+   * @throws \Google\Service\Exception
    */
   public function listCustomBiddingAlgorithmsRules($customBiddingAlgorithmId, $optParams = [])
   {

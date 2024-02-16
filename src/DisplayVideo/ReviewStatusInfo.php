@@ -32,16 +32,8 @@ class ReviewStatusInfo extends \Google\Collection
    * @var string
    */
   public $creativeAndLandingPageReviewStatus;
-  /**
-   * @var ExchangeReviewStatus[]
-   */
-  public $exchangeReviewStatuses;
   protected $exchangeReviewStatusesType = ExchangeReviewStatus::class;
   protected $exchangeReviewStatusesDataType = 'array';
-  /**
-   * @var PublisherReviewStatus[]
-   */
-  public $publisherReviewStatuses;
   protected $publisherReviewStatusesType = PublisherReviewStatus::class;
   protected $publisherReviewStatusesDataType = 'array';
 

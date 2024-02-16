@@ -44,6 +44,7 @@ class AdvertisersAssets extends \Google\Service\Resource
    * @param CreateAssetRequest $postBody
    * @param array $optParams Optional parameters.
    * @return CreateAssetResponse
+   * @throws \Google\Service\Exception
    */
   public function upload($advertiserId, CreateAssetRequest $postBody, $optParams = [])
   {

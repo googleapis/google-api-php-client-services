@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListCustomListsResponse extends \Google\Collection
 {
   protected $collection_key = 'customLists';
-  /**
-   * @var CustomList[]
-   */
-  public $customLists;
   protected $customListsType = CustomList::class;
   protected $customListsDataType = 'array';
   /**

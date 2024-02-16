@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListInventorySourceGroupsResponse extends \Google\Collection
 {
   protected $collection_key = 'inventorySourceGroups';
-  /**
-   * @var InventorySourceGroup[]
-   */
-  public $inventorySourceGroups;
   protected $inventorySourceGroupsType = InventorySourceGroup::class;
   protected $inventorySourceGroupsDataType = 'array';
   /**

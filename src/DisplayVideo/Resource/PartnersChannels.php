@@ -41,6 +41,7 @@ class PartnersChannels extends \Google\Service\Resource
    * @opt_param string advertiserId The ID of the advertiser that owns the created
    * channel.
    * @return Channel
+   * @throws \Google\Service\Exception
    */
   public function create($partnerId, Channel $postBody, $optParams = [])
   {
@@ -58,6 +59,7 @@ class PartnersChannels extends \Google\Service\Resource
    * @opt_param string advertiserId The ID of the advertiser that owns the fetched
    * channel.
    * @return Channel
+   * @throws \Google\Service\Exception
    */
   public function get($partnerId, $channelId, $optParams = [])
   {
@@ -93,6 +95,7 @@ class PartnersChannels extends \Google\Service\Resource
    * the previous call to `ListChannels` method. If not specified, the first page
    * of results will be returned.
    * @return ListChannelsResponse
+   * @throws \Google\Service\Exception
    */
   public function listPartnersChannels($partnerId, $optParams = [])
   {
@@ -115,6 +118,7 @@ class PartnersChannels extends \Google\Service\Resource
    * @opt_param string updateMask Required. The mask to control which fields to
    * update.
    * @return Channel
+   * @throws \Google\Service\Exception
    */
   public function patch($partnerId, $channelId, Channel $postBody, $optParams = [])
   {

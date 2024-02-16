@@ -38,6 +38,7 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
    * @param string $adGroupAdId Required. The ID of the ad group ad to fetch.
    * @param array $optParams Optional parameters.
    * @return AdGroupAd
+   * @throws \Google\Service\Exception
    */
   public function get($advertiserId, $adGroupAdId, $optParams = [])
   {
@@ -77,6 +78,7 @@ class AdvertisersAdGroupAds extends \Google\Service\Resource
    * returned from the previous call to `ListAdGroupAds` method. If not specified,
    * the first page of results will be returned.
    * @return ListAdGroupAdsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAdvertisersAdGroupAds($advertiserId, $optParams = [])
   {

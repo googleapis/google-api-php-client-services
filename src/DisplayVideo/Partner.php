@@ -19,22 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class Partner extends \Google\Model
 {
-  /**
-   * @var PartnerAdServerConfig
-   */
-  public $adServerConfig;
   protected $adServerConfigType = PartnerAdServerConfig::class;
   protected $adServerConfigDataType = '';
-  /**
-   * @var PartnerBillingConfig
-   */
-  public $billingConfig;
   protected $billingConfigType = PartnerBillingConfig::class;
   protected $billingConfigDataType = '';
-  /**
-   * @var PartnerDataAccessConfig
-   */
-  public $dataAccessConfig;
   protected $dataAccessConfigType = PartnerDataAccessConfig::class;
   protected $dataAccessConfigDataType = '';
   /**
@@ -45,16 +33,8 @@ class Partner extends \Google\Model
    * @var string
    */
   public $entityStatus;
-  /**
-   * @var ExchangeConfig
-   */
-  public $exchangeConfig;
   protected $exchangeConfigType = ExchangeConfig::class;
   protected $exchangeConfigDataType = '';
-  /**
-   * @var PartnerGeneralConfig
-   */
-  public $generalConfig;
   protected $generalConfigType = PartnerGeneralConfig::class;
   protected $generalConfigDataType = '';
   /**

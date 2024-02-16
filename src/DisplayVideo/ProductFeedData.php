@@ -24,10 +24,6 @@ class ProductFeedData extends \Google\Collection
    * @var bool
    */
   public $isFeedDisabled;
-  /**
-   * @var ProductMatchDimension[]
-   */
-  public $productMatchDimensions;
   protected $productMatchDimensionsType = ProductMatchDimension::class;
   protected $productMatchDimensionsDataType = 'array';
   /**

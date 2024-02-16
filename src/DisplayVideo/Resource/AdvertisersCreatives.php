@@ -42,6 +42,7 @@ class AdvertisersCreatives extends \Google\Service\Resource
    * @param Creative $postBody
    * @param array $optParams Optional parameters.
    * @return Creative
+   * @throws \Google\Service\Exception
    */
   public function create($advertiserId, Creative $postBody, $optParams = [])
   {
@@ -62,6 +63,7 @@ class AdvertisersCreatives extends \Google\Service\Resource
    * @param string $creativeId The ID of the creative to be deleted.
    * @param array $optParams Optional parameters.
    * @return DisplayvideoEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($advertiserId, $creativeId, $optParams = [])
   {
@@ -77,6 +79,7 @@ class AdvertisersCreatives extends \Google\Service\Resource
    * @param string $creativeId Required. The ID of the creative to fetch.
    * @param array $optParams Optional parameters.
    * @return Creative
+   * @throws \Google\Service\Exception
    */
   public function get($advertiserId, $creativeId, $optParams = [])
   {
@@ -141,6 +144,7 @@ class AdvertisersCreatives extends \Google\Service\Resource
    * the previous call to `ListCreatives` method. If not specified, the first page
    * of results will be returned.
    * @return ListCreativesResponse
+   * @throws \Google\Service\Exception
    */
   public function listAdvertisersCreatives($advertiserId, $optParams = [])
   {
@@ -164,6 +168,7 @@ class AdvertisersCreatives extends \Google\Service\Resource
    * @opt_param string updateMask Required. The mask to control which fields to
    * update.
    * @return Creative
+   * @throws \Google\Service\Exception
    */
   public function patch($advertiserId, $creativeId, Creative $postBody, $optParams = [])
   {

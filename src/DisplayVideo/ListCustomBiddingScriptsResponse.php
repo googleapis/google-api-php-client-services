@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListCustomBiddingScriptsResponse extends \Google\Collection
 {
   protected $collection_key = 'customBiddingScripts';
-  /**
-   * @var CustomBiddingScript[]
-   */
-  public $customBiddingScripts;
   protected $customBiddingScriptsType = CustomBiddingScript::class;
   protected $customBiddingScriptsDataType = 'array';
   /**

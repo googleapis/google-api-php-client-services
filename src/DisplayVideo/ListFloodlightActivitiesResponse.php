@@ -17,29 +17,29 @@
 
 namespace Google\Service\DisplayVideo;
 
-class ListNegativeKeywordListsResponse extends \Google\Collection
+class ListFloodlightActivitiesResponse extends \Google\Collection
 {
-  protected $collection_key = 'negativeKeywordLists';
-  protected $negativeKeywordListsType = NegativeKeywordList::class;
-  protected $negativeKeywordListsDataType = 'array';
+  protected $collection_key = 'floodlightActivities';
+  protected $floodlightActivitiesType = FloodlightActivity::class;
+  protected $floodlightActivitiesDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param NegativeKeywordList[]
+   * @param FloodlightActivity[]
    */
-  public function setNegativeKeywordLists($negativeKeywordLists)
+  public function setFloodlightActivities($floodlightActivities)
   {
-    $this->negativeKeywordLists = $negativeKeywordLists;
+    $this->floodlightActivities = $floodlightActivities;
   }
   /**
-   * @return NegativeKeywordList[]
+   * @return FloodlightActivity[]
    */
-  public function getNegativeKeywordLists()
+  public function getFloodlightActivities()
   {
-    return $this->negativeKeywordLists;
+    return $this->floodlightActivities;
   }
   /**
    * @param string
@@ -58,4 +58,4 @@ class ListNegativeKeywordListsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListNegativeKeywordListsResponse::class, 'Google_Service_DisplayVideo_ListNegativeKeywordListsResponse');
+class_alias(ListFloodlightActivitiesResponse::class, 'Google_Service_DisplayVideo_ListFloodlightActivitiesResponse');

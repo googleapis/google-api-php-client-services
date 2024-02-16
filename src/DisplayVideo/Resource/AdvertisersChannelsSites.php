@@ -47,6 +47,7 @@ class AdvertisersChannelsSites extends \Google\Service\Resource
    * @param BulkEditSitesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BulkEditSitesResponse
+   * @throws \Google\Service\Exception
    */
   public function bulkEdit($advertiserId, $channelId, BulkEditSitesRequest $postBody, $optParams = [])
   {
@@ -67,6 +68,7 @@ class AdvertisersChannelsSites extends \Google\Service\Resource
    * @opt_param string partnerId The ID of the partner that owns the parent
    * channel.
    * @return Site
+   * @throws \Google\Service\Exception
    */
   public function create($advertiserId, $channelId, Site $postBody, $optParams = [])
   {
@@ -87,6 +89,7 @@ class AdvertisersChannelsSites extends \Google\Service\Resource
    * @opt_param string partnerId The ID of the partner that owns the parent
    * channel.
    * @return DisplayvideoEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($advertiserId, $channelId, $urlOrAppId, $optParams = [])
   {
@@ -125,6 +128,7 @@ class AdvertisersChannelsSites extends \Google\Service\Resource
    * @opt_param string partnerId The ID of the partner that owns the parent
    * channel.
    * @return ListSitesResponse
+   * @throws \Google\Service\Exception
    */
   public function listAdvertisersChannelsSites($advertiserId, $channelId, $optParams = [])
   {
@@ -135,7 +139,10 @@ class AdvertisersChannelsSites extends \Google\Service\Resource
   /**
    * Replaces all of the sites under a single channel. The operation will replace
    * the sites under a channel with the sites provided in
-   * ReplaceSitesRequest.new_sites. (sites.replace)
+   * ReplaceSitesRequest.new_sites. **This method regularly experiences high
+   * latency.** We recommend [increasing your default timeout](/display-
+   * video/api/guides/best-practices/timeouts#client_library_timeout) to avoid
+   * errors. (sites.replace)
    *
    * @param string $advertiserId The ID of the advertiser that owns the parent
    * channel.
@@ -144,6 +151,7 @@ class AdvertisersChannelsSites extends \Google\Service\Resource
    * @param ReplaceSitesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return ReplaceSitesResponse
+   * @throws \Google\Service\Exception
    */
   public function replace($advertiserId, $channelId, ReplaceSitesRequest $postBody, $optParams = [])
   {

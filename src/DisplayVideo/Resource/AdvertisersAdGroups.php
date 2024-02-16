@@ -68,6 +68,7 @@ class AdvertisersAdGroups extends \Google\Service\Resource
    * `BulkListAdGroupAssignedTargetingOptions` method. If not specified, the first
    * page of results will be returned.
    * @return BulkListAdGroupAssignedTargetingOptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function bulkListAdGroupAssignedTargetingOptions($advertiserId, $optParams = [])
   {
@@ -83,6 +84,7 @@ class AdvertisersAdGroups extends \Google\Service\Resource
    * @param string $adGroupId Required. The ID of the ad group to fetch.
    * @param array $optParams Optional parameters.
    * @return AdGroup
+   * @throws \Google\Service\Exception
    */
   public function get($advertiserId, $adGroupId, $optParams = [])
   {
@@ -123,6 +125,7 @@ class AdvertisersAdGroups extends \Google\Service\Resource
    * returned from the previous call to `ListAdGroups` method. If not specified,
    * the first page of results will be returned.
    * @return ListAdGroupsResponse
+   * @throws \Google\Service\Exception
    */
   public function listAdvertisersAdGroups($advertiserId, $optParams = [])
   {

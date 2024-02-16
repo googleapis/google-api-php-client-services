@@ -19,22 +19,10 @@ namespace Google\Service\DisplayVideo;
 
 class ThirdPartyVerifierAssignedTargetingOptionDetails extends \Google\Model
 {
-  /**
-   * @var Adloox
-   */
-  public $adloox;
   protected $adlooxType = Adloox::class;
   protected $adlooxDataType = '';
-  /**
-   * @var DoubleVerify
-   */
-  public $doubleVerify;
   protected $doubleVerifyType = DoubleVerify::class;
   protected $doubleVerifyDataType = '';
-  /**
-   * @var IntegralAdScience
-   */
-  public $integralAdScience;
   protected $integralAdScienceType = IntegralAdScience::class;
   protected $integralAdScienceDataType = '';
 

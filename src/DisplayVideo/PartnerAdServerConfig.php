@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class PartnerAdServerConfig extends \Google\Model
 {
-  /**
-   * @var MeasurementConfig
-   */
-  public $measurementConfig;
   protected $measurementConfigType = MeasurementConfig::class;
   protected $measurementConfigDataType = '';
 

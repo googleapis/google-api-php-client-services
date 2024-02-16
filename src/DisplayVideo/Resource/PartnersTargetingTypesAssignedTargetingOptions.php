@@ -41,6 +41,7 @@ class PartnersTargetingTypesAssignedTargetingOptions extends \Google\Service\Res
    * @param AssignedTargetingOption $postBody
    * @param array $optParams Optional parameters.
    * @return AssignedTargetingOption
+   * @throws \Google\Service\Exception
    */
   public function create($partnerId, $targetingType, AssignedTargetingOption $postBody, $optParams = [])
   {
@@ -59,6 +60,7 @@ class PartnersTargetingTypesAssignedTargetingOptions extends \Google\Service\Res
    * targeting option to delete.
    * @param array $optParams Optional parameters.
    * @return DisplayvideoEmpty
+   * @throws \Google\Service\Exception
    */
   public function delete($partnerId, $targetingType, $assignedTargetingOptionId, $optParams = [])
   {
@@ -78,6 +80,7 @@ class PartnersTargetingTypesAssignedTargetingOptions extends \Google\Service\Res
    * option being requested.
    * @param array $optParams Optional parameters.
    * @return AssignedTargetingOption
+   * @throws \Google\Service\Exception
    */
   public function get($partnerId, $targetingType, $assignedTargetingOptionId, $optParams = [])
   {
@@ -117,6 +120,7 @@ class PartnersTargetingTypesAssignedTargetingOptions extends \Google\Service\Res
    * the previous call to `ListPartnerAssignedTargetingOptions` method. If not
    * specified, the first page of results will be returned.
    * @return ListPartnerAssignedTargetingOptionsResponse
+   * @throws \Google\Service\Exception
    */
   public function listPartnersTargetingTypesAssignedTargetingOptions($partnerId, $targetingType, $optParams = [])
   {

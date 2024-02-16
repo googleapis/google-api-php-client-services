@@ -39,6 +39,7 @@ class CustomLists extends \Google\Service\Resource
    * @opt_param string advertiserId The ID of the DV360 advertiser that has access
    * to the fetched custom lists.
    * @return CustomList
+   * @throws \Google\Service\Exception
    */
   public function get($customListId, $optParams = [])
   {
@@ -74,6 +75,7 @@ class CustomLists extends \Google\Service\Resource
    * the previous call to `ListCustomLists` method. If not specified, the first
    * page of results will be returned.
    * @return ListCustomListsResponse
+   * @throws \Google\Service\Exception
    */
   public function listCustomLists($optParams = [])
   {

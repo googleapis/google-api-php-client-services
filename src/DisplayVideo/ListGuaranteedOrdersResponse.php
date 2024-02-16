@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListGuaranteedOrdersResponse extends \Google\Collection
 {
   protected $collection_key = 'guaranteedOrders';
-  /**
-   * @var GuaranteedOrder[]
-   */
-  public $guaranteedOrders;
   protected $guaranteedOrdersType = GuaranteedOrder::class;
   protected $guaranteedOrdersDataType = 'array';
   /**
