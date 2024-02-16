@@ -35,20 +35,12 @@ class CustomBiddingAlgorithmRules extends \Google\Model
    * @var string
    */
   public $customBiddingAlgorithmRulesId;
-  /**
-   * @var CustomBiddingAlgorithmRulesError
-   */
-  public $error;
   protected $errorType = CustomBiddingAlgorithmRulesError::class;
   protected $errorDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var CustomBiddingAlgorithmRulesRef
-   */
-  public $rules;
   protected $rulesType = CustomBiddingAlgorithmRulesRef::class;
   protected $rulesDataType = '';
   /**

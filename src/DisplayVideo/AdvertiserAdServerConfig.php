@@ -19,16 +19,8 @@ namespace Google\Service\DisplayVideo;
 
 class AdvertiserAdServerConfig extends \Google\Model
 {
-  /**
-   * @var CmHybridConfig
-   */
-  public $cmHybridConfig;
   protected $cmHybridConfigType = CmHybridConfig::class;
   protected $cmHybridConfigDataType = '';
-  /**
-   * @var ThirdPartyOnlyConfig
-   */
-  public $thirdPartyOnlyConfig;
   protected $thirdPartyOnlyConfigType = ThirdPartyOnlyConfig::class;
   protected $thirdPartyOnlyConfigDataType = '';
 

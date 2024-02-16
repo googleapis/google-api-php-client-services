@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class EditInventorySourceReadWriteAccessorsRequest extends \Google\Model
 {
-  /**
-   * @var EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate
-   */
-  public $advertisersUpdate;
   protected $advertisersUpdateType = EditInventorySourceReadWriteAccessorsRequestAdvertisersUpdate::class;
   protected $advertisersUpdateDataType = '';
   /**

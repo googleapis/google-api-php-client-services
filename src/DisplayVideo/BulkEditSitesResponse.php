@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class BulkEditSitesResponse extends \Google\Collection
 {
   protected $collection_key = 'sites';
-  /**
-   * @var Site[]
-   */
-  public $sites;
   protected $sitesType = Site::class;
   protected $sitesDataType = 'array';
 

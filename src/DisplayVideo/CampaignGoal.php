@@ -23,10 +23,6 @@ class CampaignGoal extends \Google\Model
    * @var string
    */
   public $campaignGoalType;
-  /**
-   * @var PerformanceGoal
-   */
-  public $performanceGoal;
   protected $performanceGoalType = PerformanceGoal::class;
   protected $performanceGoalDataType = '';
 

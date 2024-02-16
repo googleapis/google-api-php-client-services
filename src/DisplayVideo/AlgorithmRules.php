@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class AlgorithmRules extends \Google\Model
 {
-  /**
-   * @var AlgorithmRulesRuleset
-   */
-  public $impressionSignalRuleset;
   protected $impressionSignalRulesetType = AlgorithmRulesRuleset::class;
   protected $impressionSignalRulesetDataType = '';
 

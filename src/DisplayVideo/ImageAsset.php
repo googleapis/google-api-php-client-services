@@ -23,10 +23,6 @@ class ImageAsset extends \Google\Model
    * @var string
    */
   public $fileSize;
-  /**
-   * @var Dimensions
-   */
-  public $fullSize;
   protected $fullSizeType = Dimensions::class;
   protected $fullSizeDataType = '';
   /**

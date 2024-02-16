@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListCombinedAudiencesResponse extends \Google\Collection
 {
   protected $collection_key = 'combinedAudiences';
-  /**
-   * @var CombinedAudience[]
-   */
-  public $combinedAudiences;
   protected $combinedAudiencesType = CombinedAudience::class;
   protected $combinedAudiencesDataType = 'array';
   /**

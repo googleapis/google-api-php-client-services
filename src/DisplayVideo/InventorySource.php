@@ -24,10 +24,6 @@ class InventorySource extends \Google\Collection
    * @var string
    */
   public $commitment;
-  /**
-   * @var CreativeConfig[]
-   */
-  public $creativeConfigs;
   protected $creativeConfigsType = CreativeConfig::class;
   protected $creativeConfigsDataType = 'array';
   /**
@@ -70,10 +66,6 @@ class InventorySource extends \Google\Collection
    * @var string
    */
   public $publisherName;
-  /**
-   * @var RateDetails
-   */
-  public $rateDetails;
   protected $rateDetailsType = RateDetails::class;
   protected $rateDetailsDataType = '';
   /**
@@ -84,22 +76,10 @@ class InventorySource extends \Google\Collection
    * @var string[]
    */
   public $readPartnerIds;
-  /**
-   * @var InventorySourceAccessors
-   */
-  public $readWriteAccessors;
   protected $readWriteAccessorsType = InventorySourceAccessors::class;
   protected $readWriteAccessorsDataType = '';
-  /**
-   * @var InventorySourceStatus
-   */
-  public $status;
   protected $statusType = InventorySourceStatus::class;
   protected $statusDataType = '';
-  /**
-   * @var TimeRange
-   */
-  public $timeRange;
   protected $timeRangeType = TimeRange::class;
   protected $timeRangeDataType = '';
   /**

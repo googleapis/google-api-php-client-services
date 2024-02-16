@@ -25,10 +25,6 @@ class AlgorithmRulesRuleset extends \Google\Collection
    */
   public $aggregationType;
   public $maxValue;
-  /**
-   * @var AlgorithmRulesRule[]
-   */
-  public $rules;
   protected $rulesType = AlgorithmRulesRule::class;
   protected $rulesDataType = 'array';
 

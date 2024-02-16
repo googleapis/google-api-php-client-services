@@ -20,16 +20,8 @@ namespace Google\Service\DisplayVideo;
 class ContactInfoList extends \Google\Collection
 {
   protected $collection_key = 'contactInfos';
-  /**
-   * @var Consent
-   */
-  public $consent;
   protected $consentType = Consent::class;
   protected $consentDataType = '';
-  /**
-   * @var ContactInfo[]
-   */
-  public $contactInfos;
   protected $contactInfosType = ContactInfo::class;
   protected $contactInfosDataType = 'array';
 

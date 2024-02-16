@@ -20,40 +20,16 @@ namespace Google\Service\DisplayVideo;
 class AudienceGroupAssignedTargetingOptionDetails extends \Google\Collection
 {
   protected $collection_key = 'includedFirstAndThirdPartyAudienceGroups';
-  /**
-   * @var FirstAndThirdPartyAudienceGroup
-   */
-  public $excludedFirstAndThirdPartyAudienceGroup;
   protected $excludedFirstAndThirdPartyAudienceGroupType = FirstAndThirdPartyAudienceGroup::class;
   protected $excludedFirstAndThirdPartyAudienceGroupDataType = '';
-  /**
-   * @var GoogleAudienceGroup
-   */
-  public $excludedGoogleAudienceGroup;
   protected $excludedGoogleAudienceGroupType = GoogleAudienceGroup::class;
   protected $excludedGoogleAudienceGroupDataType = '';
-  /**
-   * @var CombinedAudienceGroup
-   */
-  public $includedCombinedAudienceGroup;
   protected $includedCombinedAudienceGroupType = CombinedAudienceGroup::class;
   protected $includedCombinedAudienceGroupDataType = '';
-  /**
-   * @var CustomListGroup
-   */
-  public $includedCustomListGroup;
   protected $includedCustomListGroupType = CustomListGroup::class;
   protected $includedCustomListGroupDataType = '';
-  /**
-   * @var FirstAndThirdPartyAudienceGroup[]
-   */
-  public $includedFirstAndThirdPartyAudienceGroups;
   protected $includedFirstAndThirdPartyAudienceGroupsType = FirstAndThirdPartyAudienceGroup::class;
   protected $includedFirstAndThirdPartyAudienceGroupsDataType = 'array';
-  /**
-   * @var GoogleAudienceGroup
-   */
-  public $includedGoogleAudienceGroup;
   protected $includedGoogleAudienceGroupType = GoogleAudienceGroup::class;
   protected $includedGoogleAudienceGroupDataType = '';
 

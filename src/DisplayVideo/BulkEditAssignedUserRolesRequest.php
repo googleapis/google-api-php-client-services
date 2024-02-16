@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class BulkEditAssignedUserRolesRequest extends \Google\Collection
 {
   protected $collection_key = 'deletedAssignedUserRoles';
-  /**
-   * @var AssignedUserRole[]
-   */
-  public $createdAssignedUserRoles;
   protected $createdAssignedUserRolesType = AssignedUserRole::class;
   protected $createdAssignedUserRolesDataType = 'array';
   /**

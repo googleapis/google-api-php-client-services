@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class LineItemAssignedTargetingOption extends \Google\Model
 {
-  /**
-   * @var AssignedTargetingOption
-   */
-  public $assignedTargetingOption;
   protected $assignedTargetingOptionType = AssignedTargetingOption::class;
   protected $assignedTargetingOptionDataType = '';
   /**

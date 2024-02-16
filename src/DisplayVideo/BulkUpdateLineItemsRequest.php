@@ -24,10 +24,6 @@ class BulkUpdateLineItemsRequest extends \Google\Collection
    * @var string[]
    */
   public $lineItemIds;
-  /**
-   * @var LineItem
-   */
-  public $targetLineItem;
   protected $targetLineItemType = LineItem::class;
   protected $targetLineItemDataType = '';
   /**

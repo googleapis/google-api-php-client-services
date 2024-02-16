@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListAssignedLocationsResponse extends \Google\Collection
 {
   protected $collection_key = 'assignedLocations';
-  /**
-   * @var AssignedLocation[]
-   */
-  public $assignedLocations;
   protected $assignedLocationsType = AssignedLocation::class;
   protected $assignedLocationsDataType = 'array';
   /**

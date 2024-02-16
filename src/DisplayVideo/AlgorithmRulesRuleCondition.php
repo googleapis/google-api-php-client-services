@@ -20,16 +20,8 @@ namespace Google\Service\DisplayVideo;
 class AlgorithmRulesRuleCondition extends \Google\Collection
 {
   protected $collection_key = 'signalComparisons';
-  /**
-   * @var AlgorithmRulesSignalValue
-   */
-  public $returnValue;
   protected $returnValueType = AlgorithmRulesSignalValue::class;
   protected $returnValueDataType = '';
-  /**
-   * @var AlgorithmRulesSignalComparison[]
-   */
-  public $signalComparisons;
   protected $signalComparisonsType = AlgorithmRulesSignalComparison::class;
   protected $signalComparisonsDataType = 'array';
 

@@ -24,10 +24,6 @@ class Invoice extends \Google\Collection
    * @var string
    */
   public $budgetInvoiceGroupingId;
-  /**
-   * @var BudgetSummary[]
-   */
-  public $budgetSummaries;
   protected $budgetSummariesType = BudgetSummary::class;
   protected $budgetSummariesDataType = 'array';
   /**
@@ -42,10 +38,6 @@ class Invoice extends \Google\Collection
    * @var string
    */
   public $displayName;
-  /**
-   * @var Date
-   */
-  public $dueDate;
   protected $dueDateType = Date::class;
   protected $dueDateDataType = '';
   /**
@@ -56,10 +48,6 @@ class Invoice extends \Google\Collection
    * @var string
    */
   public $invoiceType;
-  /**
-   * @var Date
-   */
-  public $issueDate;
   protected $issueDateType = Date::class;
   protected $issueDateDataType = '';
   /**
@@ -90,10 +78,6 @@ class Invoice extends \Google\Collection
    * @var string[]
    */
   public $replacedInvoiceIds;
-  /**
-   * @var DateRange
-   */
-  public $serviceDateRange;
   protected $serviceDateRangeType = DateRange::class;
   protected $serviceDateRangeDataType = '';
   /**

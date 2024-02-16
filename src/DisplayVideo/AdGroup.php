@@ -31,10 +31,6 @@ class AdGroup extends \Google\Model
    * @var string
    */
   public $advertiserId;
-  /**
-   * @var BiddingStrategy
-   */
-  public $bidStrategy;
   protected $bidStrategyType = BiddingStrategy::class;
   protected $bidStrategyDataType = '';
   /**
@@ -53,16 +49,8 @@ class AdGroup extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var ProductFeedData
-   */
-  public $productFeedData;
   protected $productFeedDataType = ProductFeedData::class;
   protected $productFeedDataDataType = '';
-  /**
-   * @var TargetingExpansionConfig
-   */
-  public $targetingExpansion;
   protected $targetingExpansionType = TargetingExpansionConfig::class;
   protected $targetingExpansionDataType = '';
 

@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ExchangeConfig extends \Google\Collection
 {
   protected $collection_key = 'enabledExchanges';
-  /**
-   * @var ExchangeConfigEnabledExchange[]
-   */
-  public $enabledExchanges;
   protected $enabledExchangesType = ExchangeConfigEnabledExchange::class;
   protected $enabledExchangesDataType = 'array';
 

@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListAdGroupAdsResponse extends \Google\Collection
 {
   protected $collection_key = 'adGroupAds';
-  /**
-   * @var AdGroupAd[]
-   */
-  public $adGroupAds;
   protected $adGroupAdsType = AdGroupAd::class;
   protected $adGroupAdsDataType = 'array';
   /**

@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class BulkEditAssignedLocationsRequest extends \Google\Collection
 {
   protected $collection_key = 'deletedAssignedLocations';
-  /**
-   * @var AssignedLocation[]
-   */
-  public $createdAssignedLocations;
   protected $createdAssignedLocationsType = AssignedLocation::class;
   protected $createdAssignedLocationsDataType = 'array';
   /**

@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class InventorySourceDisplayCreativeConfig extends \Google\Model
 {
-  /**
-   * @var Dimensions
-   */
-  public $creativeSize;
   protected $creativeSizeType = Dimensions::class;
   protected $creativeSizeDataType = '';
 

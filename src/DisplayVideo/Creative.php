@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class Creative extends \Google\Collection
 {
   protected $collection_key = 'transcodes';
-  /**
-   * @var Dimensions[]
-   */
-  public $additionalDimensions;
   protected $additionalDimensionsType = Dimensions::class;
   protected $additionalDimensionsDataType = 'array';
   /**
@@ -34,30 +30,18 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $appendedTag;
-  /**
-   * @var AssetAssociation[]
-   */
-  public $assets;
   protected $assetsType = AssetAssociation::class;
   protected $assetsDataType = 'array';
   /**
    * @var string
    */
   public $cmPlacementId;
-  /**
-   * @var CmTrackingAd
-   */
-  public $cmTrackingAd;
   protected $cmTrackingAdType = CmTrackingAd::class;
   protected $cmTrackingAdDataType = '';
   /**
    * @var string[]
    */
   public $companionCreativeIds;
-  /**
-   * @var CounterEvent[]
-   */
-  public $counterEvents;
   protected $counterEventsType = CounterEvent::class;
   protected $counterEventsDataType = 'array';
   /**
@@ -76,10 +60,6 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $creativeType;
-  /**
-   * @var Dimensions
-   */
-  public $dimensions;
   protected $dimensionsType = Dimensions::class;
   protected $dimensionsDataType = '';
   /**
@@ -94,10 +74,6 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $entityStatus;
-  /**
-   * @var ExitEvent[]
-   */
-  public $exitEvents;
   protected $exitEventsType = ExitEvent::class;
   protected $exitEventsDataType = 'array';
   /**
@@ -148,20 +124,12 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $notes;
-  /**
-   * @var ObaIcon
-   */
-  public $obaIcon;
   protected $obaIconType = ObaIcon::class;
   protected $obaIconDataType = '';
   /**
    * @var bool
    */
   public $oggAudio;
-  /**
-   * @var AudioVideoOffset
-   */
-  public $progressOffset;
   protected $progressOffsetType = AudioVideoOffset::class;
   protected $progressOffsetDataType = '';
   /**
@@ -176,16 +144,8 @@ class Creative extends \Google\Collection
    * @var bool
    */
   public $requirePingForAttribution;
-  /**
-   * @var ReviewStatusInfo
-   */
-  public $reviewStatus;
   protected $reviewStatusType = ReviewStatusInfo::class;
   protected $reviewStatusDataType = '';
-  /**
-   * @var AudioVideoOffset
-   */
-  public $skipOffset;
   protected $skipOffsetType = AudioVideoOffset::class;
   protected $skipOffsetDataType = '';
   /**
@@ -196,32 +156,16 @@ class Creative extends \Google\Collection
    * @var string
    */
   public $thirdPartyTag;
-  /**
-   * @var ThirdPartyUrl[]
-   */
-  public $thirdPartyUrls;
   protected $thirdPartyUrlsType = ThirdPartyUrl::class;
   protected $thirdPartyUrlsDataType = 'array';
-  /**
-   * @var TimerEvent[]
-   */
-  public $timerEvents;
   protected $timerEventsType = TimerEvent::class;
   protected $timerEventsDataType = 'array';
   /**
    * @var string[]
    */
   public $trackerUrls;
-  /**
-   * @var Transcode[]
-   */
-  public $transcodes;
   protected $transcodesType = Transcode::class;
   protected $transcodesDataType = 'array';
-  /**
-   * @var UniversalAdId
-   */
-  public $universalAdId;
   protected $universalAdIdType = UniversalAdId::class;
   protected $universalAdIdDataType = '';
   /**

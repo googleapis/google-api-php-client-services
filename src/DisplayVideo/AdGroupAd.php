@@ -28,74 +28,38 @@ class AdGroupAd extends \Google\Collection
    * @var string
    */
   public $adGroupId;
-  /**
-   * @var AdUrl[]
-   */
-  public $adUrls;
   protected $adUrlsType = AdUrl::class;
   protected $adUrlsDataType = 'array';
   /**
    * @var string
    */
   public $advertiserId;
-  /**
-   * @var AudioAd
-   */
-  public $audioAd;
   protected $audioAdType = AudioAd::class;
   protected $audioAdDataType = '';
-  /**
-   * @var BumperAd
-   */
-  public $bumperAd;
   protected $bumperAdType = BumperAd::class;
   protected $bumperAdDataType = '';
   /**
    * @var string
    */
   public $displayName;
-  /**
-   * @var DisplayVideoSourceAd
-   */
-  public $displayVideoSourceAd;
   protected $displayVideoSourceAdType = DisplayVideoSourceAd::class;
   protected $displayVideoSourceAdDataType = '';
   /**
    * @var string
    */
   public $entityStatus;
-  /**
-   * @var InStreamAd
-   */
-  public $inStreamAd;
   protected $inStreamAdType = InStreamAd::class;
   protected $inStreamAdDataType = '';
-  /**
-   * @var MastheadAd
-   */
-  public $mastheadAd;
   protected $mastheadAdType = MastheadAd::class;
   protected $mastheadAdDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var NonSkippableAd
-   */
-  public $nonSkippableAd;
   protected $nonSkippableAdType = NonSkippableAd::class;
   protected $nonSkippableAdDataType = '';
-  /**
-   * @var VideoDiscoveryAd
-   */
-  public $videoDiscoverAd;
   protected $videoDiscoverAdType = VideoDiscoveryAd::class;
   protected $videoDiscoverAdDataType = '';
-  /**
-   * @var VideoPerformanceAd
-   */
-  public $videoPerformanceAd;
   protected $videoPerformanceAdType = VideoPerformanceAd::class;
   protected $videoPerformanceAdDataType = '';
 

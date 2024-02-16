@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ConversionCountingConfig extends \Google\Collection
 {
   protected $collection_key = 'floodlightActivityConfigs';
-  /**
-   * @var TrackingFloodlightActivityConfig[]
-   */
-  public $floodlightActivityConfigs;
   protected $floodlightActivityConfigsType = TrackingFloodlightActivityConfig::class;
   protected $floodlightActivityConfigsDataType = 'array';
   /**

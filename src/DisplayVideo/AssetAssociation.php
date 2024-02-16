@@ -19,10 +19,6 @@ namespace Google\Service\DisplayVideo;
 
 class AssetAssociation extends \Google\Model
 {
-  /**
-   * @var Asset
-   */
-  public $asset;
   protected $assetType = Asset::class;
   protected $assetDataType = '';
   /**

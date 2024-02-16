@@ -19,28 +19,12 @@ namespace Google\Service\DisplayVideo;
 
 class BiddingStrategy extends \Google\Model
 {
-  /**
-   * @var FixedBidStrategy
-   */
-  public $fixedBid;
   protected $fixedBidType = FixedBidStrategy::class;
   protected $fixedBidDataType = '';
-  /**
-   * @var MaximizeSpendBidStrategy
-   */
-  public $maximizeSpendAutoBid;
   protected $maximizeSpendAutoBidType = MaximizeSpendBidStrategy::class;
   protected $maximizeSpendAutoBidDataType = '';
-  /**
-   * @var PerformanceGoalBidStrategy
-   */
-  public $performanceGoalAutoBid;
   protected $performanceGoalAutoBidType = PerformanceGoalBidStrategy::class;
   protected $performanceGoalAutoBidDataType = '';
-  /**
-   * @var YoutubeAndPartnersBiddingStrategy
-   */
-  public $youtubeAndPartnersBid;
   protected $youtubeAndPartnersBidType = YoutubeAndPartnersBiddingStrategy::class;
   protected $youtubeAndPartnersBidDataType = '';
 

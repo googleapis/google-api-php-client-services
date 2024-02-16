@@ -20,16 +20,8 @@ namespace Google\Service\DisplayVideo;
 class AlgorithmRulesRule extends \Google\Collection
 {
   protected $collection_key = 'conditions';
-  /**
-   * @var AlgorithmRulesRuleCondition[]
-   */
-  public $conditions;
   protected $conditionsType = AlgorithmRulesRuleCondition::class;
   protected $conditionsDataType = 'array';
-  /**
-   * @var AlgorithmRulesSignalValue
-   */
-  public $defaultReturnValue;
   protected $defaultReturnValueType = AlgorithmRulesSignalValue::class;
   protected $defaultReturnValueDataType = '';
 

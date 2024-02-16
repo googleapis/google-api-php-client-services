@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class FirstAndThirdPartyAudienceGroup extends \Google\Collection
 {
   protected $collection_key = 'settings';
-  /**
-   * @var FirstAndThirdPartyAudienceTargetingSetting[]
-   */
-  public $settings;
   protected $settingsType = FirstAndThirdPartyAudienceTargetingSetting::class;
   protected $settingsDataType = 'array';
 

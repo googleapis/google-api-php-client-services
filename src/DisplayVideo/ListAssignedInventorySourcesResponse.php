@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class ListAssignedInventorySourcesResponse extends \Google\Collection
 {
   protected $collection_key = 'assignedInventorySources';
-  /**
-   * @var AssignedInventorySource[]
-   */
-  public $assignedInventorySources;
   protected $assignedInventorySourcesType = AssignedInventorySource::class;
   protected $assignedInventorySourcesDataType = 'array';
   /**

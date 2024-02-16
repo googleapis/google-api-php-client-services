@@ -19,16 +19,8 @@ namespace Google\Service\DisplayVideo;
 
 class InventorySourceAccessors extends \Google\Model
 {
-  /**
-   * @var InventorySourceAccessorsAdvertiserAccessors
-   */
-  public $advertisers;
   protected $advertisersType = InventorySourceAccessorsAdvertiserAccessors::class;
   protected $advertisersDataType = '';
-  /**
-   * @var InventorySourceAccessorsPartnerAccessor
-   */
-  public $partner;
   protected $partnerType = InventorySourceAccessorsPartnerAccessor::class;
   protected $partnerDataType = '';
 

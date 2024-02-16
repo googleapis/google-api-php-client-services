@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class CustomListGroup extends \Google\Collection
 {
   protected $collection_key = 'settings';
-  /**
-   * @var CustomListTargetingSetting[]
-   */
-  public $settings;
   protected $settingsType = CustomListTargetingSetting::class;
   protected $settingsDataType = 'array';
 

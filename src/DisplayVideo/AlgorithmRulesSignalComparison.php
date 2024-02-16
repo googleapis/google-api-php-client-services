@@ -23,16 +23,8 @@ class AlgorithmRulesSignalComparison extends \Google\Model
    * @var string
    */
   public $comparisonOperator;
-  /**
-   * @var AlgorithmRulesComparisonValue
-   */
-  public $comparisonValue;
   protected $comparisonValueType = AlgorithmRulesComparisonValue::class;
   protected $comparisonValueDataType = '';
-  /**
-   * @var AlgorithmRulesSignal
-   */
-  public $signal;
   protected $signalType = AlgorithmRulesSignal::class;
   protected $signalDataType = '';
 

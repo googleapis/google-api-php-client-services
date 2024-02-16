@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class BulkEditNegativeKeywordsRequest extends \Google\Collection
 {
   protected $collection_key = 'deletedNegativeKeywords';
-  /**
-   * @var NegativeKeyword[]
-   */
-  public $createdNegativeKeywords;
   protected $createdNegativeKeywordsType = NegativeKeyword::class;
   protected $createdNegativeKeywordsDataType = 'array';
   /**

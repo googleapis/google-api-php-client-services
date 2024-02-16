@@ -19,16 +19,8 @@ namespace Google\Service\DisplayVideo;
 
 class EditCustomerMatchMembersRequest extends \Google\Model
 {
-  /**
-   * @var ContactInfoList
-   */
-  public $addedContactInfoList;
   protected $addedContactInfoListType = ContactInfoList::class;
   protected $addedContactInfoListDataType = '';
-  /**
-   * @var MobileDeviceIdList
-   */
-  public $addedMobileDeviceIdList;
   protected $addedMobileDeviceIdListType = MobileDeviceIdList::class;
   protected $addedMobileDeviceIdListDataType = '';
   /**

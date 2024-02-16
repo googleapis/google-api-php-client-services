@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class BulkListAdGroupAssignedTargetingOptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'adGroupAssignedTargetingOptions';
-  /**
-   * @var AdGroupAssignedTargetingOption[]
-   */
-  public $adGroupAssignedTargetingOptions;
   protected $adGroupAssignedTargetingOptionsType = AdGroupAssignedTargetingOption::class;
   protected $adGroupAssignedTargetingOptionsDataType = 'array';
   /**

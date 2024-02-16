@@ -20,42 +20,22 @@ namespace Google\Service\DisplayVideo;
 class DoubleVerify extends \Google\Collection
 {
   protected $collection_key = 'avoidedAgeRatings';
-  /**
-   * @var DoubleVerifyAppStarRating
-   */
-  public $appStarRating;
   protected $appStarRatingType = DoubleVerifyAppStarRating::class;
   protected $appStarRatingDataType = '';
   /**
    * @var string[]
    */
   public $avoidedAgeRatings;
-  /**
-   * @var DoubleVerifyBrandSafetyCategories
-   */
-  public $brandSafetyCategories;
   protected $brandSafetyCategoriesType = DoubleVerifyBrandSafetyCategories::class;
   protected $brandSafetyCategoriesDataType = '';
   /**
    * @var string
    */
   public $customSegmentId;
-  /**
-   * @var DoubleVerifyDisplayViewability
-   */
-  public $displayViewability;
   protected $displayViewabilityType = DoubleVerifyDisplayViewability::class;
   protected $displayViewabilityDataType = '';
-  /**
-   * @var DoubleVerifyFraudInvalidTraffic
-   */
-  public $fraudInvalidTraffic;
   protected $fraudInvalidTrafficType = DoubleVerifyFraudInvalidTraffic::class;
   protected $fraudInvalidTrafficDataType = '';
-  /**
-   * @var DoubleVerifyVideoViewability
-   */
-  public $videoViewability;
   protected $videoViewabilityType = DoubleVerifyVideoViewability::class;
   protected $videoViewabilityDataType = '';
 

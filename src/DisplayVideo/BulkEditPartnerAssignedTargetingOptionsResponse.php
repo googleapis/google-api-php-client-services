@@ -20,10 +20,6 @@ namespace Google\Service\DisplayVideo;
 class BulkEditPartnerAssignedTargetingOptionsResponse extends \Google\Collection
 {
   protected $collection_key = 'createdAssignedTargetingOptions';
-  /**
-   * @var AssignedTargetingOption[]
-   */
-  public $createdAssignedTargetingOptions;
   protected $createdAssignedTargetingOptionsType = AssignedTargetingOption::class;
   protected $createdAssignedTargetingOptionsDataType = 'array';
 
