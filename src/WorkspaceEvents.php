@@ -35,9 +35,36 @@ use Google\Client;
  */
 class WorkspaceEvents extends \Google\Service
 {
+  /** Private Service: https://www.googleapis.com/auth/chat.bot. */
+  const CHAT_BOT =
+      "https://www.googleapis.com/auth/chat.bot";
+  /** View, add, and remove members from conversations in Google Chat. */
+  const CHAT_MEMBERSHIPS =
+      "https://www.googleapis.com/auth/chat.memberships";
+  /** View members in Google Chat conversations.. */
+  const CHAT_MEMBERSHIPS_READONLY =
+      "https://www.googleapis.com/auth/chat.memberships.readonly";
+  /** View, compose, send, update, and delete messages, and add, view, and delete reactions to messages.. */
+  const CHAT_MESSAGES =
+      "https://www.googleapis.com/auth/chat.messages";
+  /** View, add, and delete reactions to messages in Google Chat. */
+  const CHAT_MESSAGES_REACTIONS =
+      "https://www.googleapis.com/auth/chat.messages.reactions";
+  /** View reactions to messages in Google Chat. */
+  const CHAT_MESSAGES_REACTIONS_READONLY =
+      "https://www.googleapis.com/auth/chat.messages.reactions.readonly";
+  /** View messages and reactions in Google Chat. */
+  const CHAT_MESSAGES_READONLY =
+      "https://www.googleapis.com/auth/chat.messages.readonly";
+  /** Create conversations and spaces and see or edit metadata (including history settings and access settings) in Google Chat. */
+  const CHAT_SPACES =
+      "https://www.googleapis.com/auth/chat.spaces";
+  /** View chat and spaces in Google Chat. */
+  const CHAT_SPACES_READONLY =
+      "https://www.googleapis.com/auth/chat.spaces.readonly";
 
-
-
+  public $operations;
+  public $subscriptions;
 
   /**
    * Constructs the internal representation of the WorkspaceEvents service.
@@ -55,6 +82,122 @@ class WorkspaceEvents extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'workspaceevents';
 
+    $this->operations = new WorkspaceEvents\Resource\Operations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->subscriptions = new WorkspaceEvents\Resource\Subscriptions(
+        $this,
+        $this->serviceName,
+        'subscriptions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/subscriptions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'validateOnly' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'allowMissing' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'validateOnly' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/subscriptions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'validateOnly' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'reactivate' => [
+              'path' => 'v1/{+name}:reactivate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
   }
 }
 
