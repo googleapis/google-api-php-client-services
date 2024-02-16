@@ -17,7 +17,9 @@
 
 namespace Google\Service\Walletobjects\Resource;
 
+use Google\Service\Walletobjects\AddMessageRequest;
 use Google\Service\Walletobjects\GenericClass as GenericClassModel;
+use Google\Service\Walletobjects\GenericClassAddMessageResponse;
 use Google\Service\Walletobjects\GenericClassListResponse;
 
 /**
@@ -30,6 +32,26 @@ use Google\Service\Walletobjects\GenericClassListResponse;
  */
 class Genericclass extends \Google\Service\Resource
 {
+  /**
+   * Adds a message to the generic class referenced by the given class ID.
+   * (genericclass.addmessage)
+   *
+   * @param string $resourceId The unique identifier for a class. This ID must be
+   * unique across all classes from an issuer. This value should follow the format
+   * issuer ID. identifier where the former is issued by Google and latter is
+   * chosen by you. Your unique identifier should only include alphanumeric
+   * characters, '.', '_', or '-'.
+   * @param AddMessageRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GenericClassAddMessageResponse
+   * @throws \Google\Service\Exception
+   */
+  public function addmessage($resourceId, AddMessageRequest $postBody, $optParams = [])
+  {
+    $params = ['resourceId' => $resourceId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addmessage', [$params], GenericClassAddMessageResponse::class);
+  }
   /**
    * Returns the generic class with the given class ID. (genericclass.get)
    *

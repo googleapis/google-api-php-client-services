@@ -17,44 +17,26 @@
 
 namespace Google\Service\Walletobjects;
 
-class AppLinkDataAppLinkInfoAppTarget extends \Google\Model
+class GenericClassAddMessageResponse extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $packageName;
-  protected $targetUriType = Uri::class;
-  protected $targetUriDataType = '';
+  protected $resourceType = GenericClass::class;
+  protected $resourceDataType = '';
 
   /**
-   * @param string
+   * @param GenericClass
    */
-  public function setPackageName($packageName)
+  public function setResource(GenericClass $resource)
   {
-    $this->packageName = $packageName;
+    $this->resource = $resource;
   }
   /**
-   * @return string
+   * @return GenericClass
    */
-  public function getPackageName()
+  public function getResource()
   {
-    return $this->packageName;
-  }
-  /**
-   * @param Uri
-   */
-  public function setTargetUri(Uri $targetUri)
-  {
-    $this->targetUri = $targetUri;
-  }
-  /**
-   * @return Uri
-   */
-  public function getTargetUri()
-  {
-    return $this->targetUri;
+    return $this->resource;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppLinkDataAppLinkInfoAppTarget::class, 'Google_Service_Walletobjects_AppLinkDataAppLinkInfoAppTarget');
+class_alias(GenericClassAddMessageResponse::class, 'Google_Service_Walletobjects_GenericClassAddMessageResponse');

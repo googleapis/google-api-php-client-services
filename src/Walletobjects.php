@@ -374,7 +374,17 @@ class Walletobjects extends \Google\Service
         'genericclass',
         [
           'methods' => [
-            'get' => [
+            'addmessage' => [
+              'path' => 'walletobjects/v1/genericClass/{resourceId}/addMessage',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resourceId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'walletobjects/v1/genericClass/{resourceId}',
               'httpMethod' => 'GET',
               'parameters' => [
