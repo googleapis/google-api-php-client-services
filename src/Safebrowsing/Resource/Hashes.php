@@ -31,11 +31,18 @@ class Hashes extends \Google\Service\Resource
 {
   /**
    * Search for full hashes matching the specified prefixes. This is a custom
-   * method as described by guidance at https://google.aip.dev/136 (hashes.search)
+   * method as defined by https://google.aip.dev/136 (the custom method refers to
+   * this method having a custom name within Google's general API development
+   * nomenclature; it does not refer to using a custom HTTP method).
+   * (hashes.search)
    *
    * @param array $optParams Optional parameters.
    *
    * @opt_param string hashPrefixes Required. The hash prefixes to be looked up.
+   * Clients MUST NOT send more than 1000 hash prefixes. However, following the
+   * URL processing procedure, clients SHOULD NOT need to send more than 30 hash
+   * prefixes. Currently each hash prefix is required to be exactly 4 bytes long.
+   * This MAY be relaxed in the future.
    * @return GoogleSecuritySafebrowsingV5SearchHashesResponse
    * @throws \Google\Service\Exception
    */
