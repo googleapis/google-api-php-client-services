@@ -82,6 +82,8 @@ class UpdateNodePoolRequest extends \Google\Collection
    * @var string
    */
   public $projectId;
+  protected $queuedProvisioningType = QueuedProvisioning::class;
+  protected $queuedProvisioningDataType = '';
   protected $resourceLabelsType = ResourceLabels::class;
   protected $resourceLabelsDataType = '';
   protected $resourceManagerTagsType = ResourceManagerTags::class;
@@ -380,6 +382,20 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getProjectId()
   {
     return $this->projectId;
+  }
+  /**
+   * @param QueuedProvisioning
+   */
+  public function setQueuedProvisioning(QueuedProvisioning $queuedProvisioning)
+  {
+    $this->queuedProvisioning = $queuedProvisioning;
+  }
+  /**
+   * @return QueuedProvisioning
+   */
+  public function getQueuedProvisioning()
+  {
+    return $this->queuedProvisioning;
   }
   /**
    * @param ResourceLabels

@@ -38,6 +38,10 @@ class NodeConfig extends \Google\Collection
    * @var string
    */
   public $diskType;
+  /**
+   * @var bool
+   */
+  public $enableConfidentialStorage;
   protected $ephemeralStorageLocalSsdConfigType = EphemeralStorageLocalSsdConfig::class;
   protected $ephemeralStorageLocalSsdConfigDataType = '';
   protected $fastSocketType = FastSocket::class;
@@ -206,6 +210,20 @@ class NodeConfig extends \Google\Collection
   public function getDiskType()
   {
     return $this->diskType;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableConfidentialStorage($enableConfidentialStorage)
+  {
+    $this->enableConfidentialStorage = $enableConfidentialStorage;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableConfidentialStorage()
+  {
+    return $this->enableConfidentialStorage;
   }
   /**
    * @param EphemeralStorageLocalSsdConfig
