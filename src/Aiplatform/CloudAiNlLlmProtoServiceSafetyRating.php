@@ -17,8 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiNlLlmProtoServiceSafetyRating extends \Google\Model
+class CloudAiNlLlmProtoServiceSafetyRating extends \Google\Collection
 {
+  protected $collection_key = 'influentialTerms';
   /**
    * @var bool
    */
@@ -27,10 +28,24 @@ class CloudAiNlLlmProtoServiceSafetyRating extends \Google\Model
    * @var string
    */
   public $category;
+  protected $influentialTermsType = CloudAiNlLlmProtoServiceSafetyRatingInfluentialTerm::class;
+  protected $influentialTermsDataType = 'array';
   /**
    * @var string
    */
   public $probability;
+  /**
+   * @var float
+   */
+  public $probabilityScore;
+  /**
+   * @var string
+   */
+  public $severity;
+  /**
+   * @var float
+   */
+  public $severityScore;
 
   /**
    * @param bool
@@ -61,6 +76,20 @@ class CloudAiNlLlmProtoServiceSafetyRating extends \Google\Model
     return $this->category;
   }
   /**
+   * @param CloudAiNlLlmProtoServiceSafetyRatingInfluentialTerm[]
+   */
+  public function setInfluentialTerms($influentialTerms)
+  {
+    $this->influentialTerms = $influentialTerms;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServiceSafetyRatingInfluentialTerm[]
+   */
+  public function getInfluentialTerms()
+  {
+    return $this->influentialTerms;
+  }
+  /**
    * @param string
    */
   public function setProbability($probability)
@@ -73,6 +102,48 @@ class CloudAiNlLlmProtoServiceSafetyRating extends \Google\Model
   public function getProbability()
   {
     return $this->probability;
+  }
+  /**
+   * @param float
+   */
+  public function setProbabilityScore($probabilityScore)
+  {
+    $this->probabilityScore = $probabilityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getProbabilityScore()
+  {
+    return $this->probabilityScore;
+  }
+  /**
+   * @param string
+   */
+  public function setSeverity($severity)
+  {
+    $this->severity = $severity;
+  }
+  /**
+   * @return string
+   */
+  public function getSeverity()
+  {
+    return $this->severity;
+  }
+  /**
+   * @param float
+   */
+  public function setSeverityScore($severityScore)
+  {
+    $this->severityScore = $severityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getSeverityScore()
+  {
+    return $this->severityScore;
   }
 }
 

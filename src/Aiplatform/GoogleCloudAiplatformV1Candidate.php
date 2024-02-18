@@ -32,6 +32,8 @@ class GoogleCloudAiplatformV1Candidate extends \Google\Collection
    * @var string
    */
   public $finishReason;
+  protected $groundingMetadataType = GoogleCloudAiplatformV1GroundingMetadata::class;
+  protected $groundingMetadataDataType = '';
   /**
    * @var int
    */
@@ -94,6 +96,20 @@ class GoogleCloudAiplatformV1Candidate extends \Google\Collection
   public function getFinishReason()
   {
     return $this->finishReason;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1GroundingMetadata
+   */
+  public function setGroundingMetadata(GoogleCloudAiplatformV1GroundingMetadata $groundingMetadata)
+  {
+    $this->groundingMetadata = $groundingMetadata;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GroundingMetadata
+   */
+  public function getGroundingMetadata()
+  {
+    return $this->groundingMetadata;
   }
   /**
    * @param int

@@ -22,6 +22,10 @@ class GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource extends \Google\Co
   protected $collection_key = 'featureGroups';
   protected $featureGroupsType = GoogleCloudAiplatformV1FeatureViewFeatureRegistrySourceFeatureGroup::class;
   protected $featureGroupsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $projectNumber;
 
   /**
    * @param GoogleCloudAiplatformV1FeatureViewFeatureRegistrySourceFeatureGroup[]
@@ -36,6 +40,20 @@ class GoogleCloudAiplatformV1FeatureViewFeatureRegistrySource extends \Google\Co
   public function getFeatureGroups()
   {
     return $this->featureGroups;
+  }
+  /**
+   * @param string
+   */
+  public function setProjectNumber($projectNumber)
+  {
+    $this->projectNumber = $projectNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getProjectNumber()
+  {
+    return $this->projectNumber;
   }
 }
 

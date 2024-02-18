@@ -43,6 +43,10 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
   /**
    * @var bool
    */
+  public $isCode;
+  /**
+   * @var bool
+   */
   public $isFallback;
   protected $langidResultType = NlpSaftLangIdResult::class;
   protected $langidResultDataType = '';
@@ -184,6 +188,20 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
   public function getGroundingMetadata()
   {
     return $this->groundingMetadata;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsCode($isCode)
+  {
+    $this->isCode = $isCode;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsCode()
+  {
+    return $this->isCode;
   }
   /**
    * @param bool
