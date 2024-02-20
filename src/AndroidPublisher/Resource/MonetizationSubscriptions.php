@@ -35,10 +35,7 @@ use Google\Service\AndroidPublisher\Subscription;
 class MonetizationSubscriptions extends \Google\Service\Resource
 {
   /**
-   * Archives a subscription. Can only be done if at least one base plan was
-   * active in the past, and no base plan is available for new or existing
-   * subscribers currently. This action is irreversible, and the subscription ID
-   * will remain reserved. (subscriptions.archive)
+   * Deprecated: subscription archiving is not supported. (subscriptions.archive)
    *
    * @param string $packageName Required. The parent app (package name) of the app
    * of the subscription to delete.
@@ -174,8 +171,8 @@ class MonetizationSubscriptions extends \Google\Service\Resource
    * `ListSubscriptions` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListSubscriptions` must match
    * the call that provided the page token.
-   * @opt_param bool showArchived Whether archived subscriptions should be
-   * included in the response. Defaults to false.
+   * @opt_param bool showArchived Deprecated: subscription archiving is not
+   * supported.
    * @return ListSubscriptionsResponse
    * @throws \Google\Service\Exception
    */
