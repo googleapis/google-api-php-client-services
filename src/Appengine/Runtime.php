@@ -24,6 +24,10 @@ class Runtime extends \Google\Collection
   protected $decommissionedDateDataType = '';
   protected $deprecationDateType = Date::class;
   protected $deprecationDateDataType = '';
+  /**
+   * @var string
+   */
+  public $displayName;
   protected $endOfSupportDateType = Date::class;
   protected $endOfSupportDateDataType = '';
   /**
@@ -74,6 +78,20 @@ class Runtime extends \Google\Collection
   public function getDeprecationDate()
   {
     return $this->deprecationDate;
+  }
+  /**
+   * @param string
+   */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
   }
   /**
    * @param Date
