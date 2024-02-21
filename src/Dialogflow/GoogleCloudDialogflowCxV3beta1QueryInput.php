@@ -33,8 +33,6 @@ class GoogleCloudDialogflowCxV3beta1QueryInput extends \Google\Model
   public $languageCode;
   protected $textType = GoogleCloudDialogflowCxV3beta1TextInput::class;
   protected $textDataType = '';
-  protected $toolCallResultType = GoogleCloudDialogflowCxV3beta1ToolCallResult::class;
-  protected $toolCallResultDataType = '';
 
   /**
    * @param GoogleCloudDialogflowCxV3beta1AudioInput
@@ -119,20 +117,6 @@ class GoogleCloudDialogflowCxV3beta1QueryInput extends \Google\Model
   public function getText()
   {
     return $this->text;
-  }
-  /**
-   * @param GoogleCloudDialogflowCxV3beta1ToolCallResult
-   */
-  public function setToolCallResult(GoogleCloudDialogflowCxV3beta1ToolCallResult $toolCallResult)
-  {
-    $this->toolCallResult = $toolCallResult;
-  }
-  /**
-   * @return GoogleCloudDialogflowCxV3beta1ToolCallResult
-   */
-  public function getToolCallResult()
-  {
-    return $this->toolCallResult;
   }
 }
 

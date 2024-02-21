@@ -19,15 +19,13 @@ namespace Google\Service\Dialogflow;
 
 class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
 {
-  protected $collection_key = 'webhookTags';
+  protected $collection_key = 'webhookStatuses';
   protected $advancedSettingsType = GoogleCloudDialogflowCxV3AdvancedSettings::class;
   protected $advancedSettingsDataType = '';
   /**
    * @var bool
    */
   public $allowAnswerFeedback;
-  protected $currentFlowType = GoogleCloudDialogflowCxV3Flow::class;
-  protected $currentFlowDataType = '';
   protected $currentPageType = GoogleCloudDialogflowCxV3Page::class;
   protected $currentPageDataType = '';
   /**
@@ -73,27 +71,11 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
    */
   public $triggerIntent;
   /**
-   * @var string[]
-   */
-  public $webhookDisplayNames;
-  /**
-   * @var string[]
-   */
-  public $webhookIds;
-  /**
-   * @var string[]
-   */
-  public $webhookLatencies;
-  /**
    * @var array[]
    */
   public $webhookPayloads;
   protected $webhookStatusesType = GoogleRpcStatus::class;
   protected $webhookStatusesDataType = 'array';
-  /**
-   * @var string[]
-   */
-  public $webhookTags;
 
   /**
    * @param GoogleCloudDialogflowCxV3AdvancedSettings
@@ -122,20 +104,6 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
   public function getAllowAnswerFeedback()
   {
     return $this->allowAnswerFeedback;
-  }
-  /**
-   * @param GoogleCloudDialogflowCxV3Flow
-   */
-  public function setCurrentFlow(GoogleCloudDialogflowCxV3Flow $currentFlow)
-  {
-    $this->currentFlow = $currentFlow;
-  }
-  /**
-   * @return GoogleCloudDialogflowCxV3Flow
-   */
-  public function getCurrentFlow()
-  {
-    return $this->currentFlow;
   }
   /**
    * @param GoogleCloudDialogflowCxV3Page
@@ -334,48 +302,6 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
     return $this->triggerIntent;
   }
   /**
-   * @param string[]
-   */
-  public function setWebhookDisplayNames($webhookDisplayNames)
-  {
-    $this->webhookDisplayNames = $webhookDisplayNames;
-  }
-  /**
-   * @return string[]
-   */
-  public function getWebhookDisplayNames()
-  {
-    return $this->webhookDisplayNames;
-  }
-  /**
-   * @param string[]
-   */
-  public function setWebhookIds($webhookIds)
-  {
-    $this->webhookIds = $webhookIds;
-  }
-  /**
-   * @return string[]
-   */
-  public function getWebhookIds()
-  {
-    return $this->webhookIds;
-  }
-  /**
-   * @param string[]
-   */
-  public function setWebhookLatencies($webhookLatencies)
-  {
-    $this->webhookLatencies = $webhookLatencies;
-  }
-  /**
-   * @return string[]
-   */
-  public function getWebhookLatencies()
-  {
-    return $this->webhookLatencies;
-  }
-  /**
    * @param array[]
    */
   public function setWebhookPayloads($webhookPayloads)
@@ -402,20 +328,6 @@ class GoogleCloudDialogflowCxV3QueryResult extends \Google\Collection
   public function getWebhookStatuses()
   {
     return $this->webhookStatuses;
-  }
-  /**
-   * @param string[]
-   */
-  public function setWebhookTags($webhookTags)
-  {
-    $this->webhookTags = $webhookTags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getWebhookTags()
-  {
-    return $this->webhookTags;
   }
 }
 
