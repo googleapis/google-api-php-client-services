@@ -22,21 +22,21 @@ class Environment extends \Google\Model
   /**
    * @var string
    */
-  public $environment;
+  public $type;
 
   /**
    * @param string
    */
-  public function setEnvironment($environment)
+  public function setType($type)
   {
-    $this->environment = $environment;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getEnvironment()
+  public function getType()
   {
-    return $this->environment;
+    return $this->type;
   }
 }
 

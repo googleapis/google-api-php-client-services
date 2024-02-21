@@ -18,7 +18,6 @@
 namespace Google\Service\AppHub\Resource;
 
 use Google\Service\AppHub\DiscoveredWorkload;
-use Google\Service\AppHub\FindUnregisteredWorkloadsResponse;
 use Google\Service\AppHub\ListDiscoveredWorkloadsResponse;
 
 /**
@@ -32,34 +31,13 @@ use Google\Service\AppHub\ListDiscoveredWorkloadsResponse;
 class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
 {
   /**
-   * Finds unregistered workloads in a host project and location.
-   * (discoveredWorkloads.findUnregistered)
-   *
-   * @param string $parent Required. Value for parent.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
-   * @opt_param int pageSize Optional. Requested page size. Server may return
-   * fewer items than requested. If unspecified, server will pick an appropriate
-   * default.
-   * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
-   * @return FindUnregisteredWorkloadsResponse
-   */
-  public function findUnregistered($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('findUnregistered', [$params], FindUnregisteredWorkloadsResponse::class);
-  }
-  /**
    * Gets a discovered workload in a host project and location.
    * (discoveredWorkloads.get)
    *
    * @param string $name Required. Value for name.
    * @param array $optParams Optional parameters.
    * @return DiscoveredWorkload
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -68,7 +46,8 @@ class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
     return $this->call('get', [$params], DiscoveredWorkload::class);
   }
   /**
-   * Lists discovered workloads in a host project and location.
+   * Lists discovered workloads that can be added to an application in a host
+   * project and location.
    * (discoveredWorkloads.listProjectsLocationsDiscoveredWorkloads)
    *
    * @param string $parent Required. Value for parent.
@@ -82,6 +61,7 @@ class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListDiscoveredWorkloadsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDiscoveredWorkloads($parent, $optParams = [])
   {

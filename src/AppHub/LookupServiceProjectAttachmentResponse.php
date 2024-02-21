@@ -19,10 +19,6 @@ namespace Google\Service\AppHub;
 
 class LookupServiceProjectAttachmentResponse extends \Google\Model
 {
-  /**
-   * @var ServiceProjectAttachment
-   */
-  public $serviceProjectAttachment;
   protected $serviceProjectAttachmentType = ServiceProjectAttachment::class;
   protected $serviceProjectAttachmentDataType = '';
 

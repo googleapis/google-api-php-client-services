@@ -55,6 +55,7 @@ class ProjectsLocationsServiceProjectAttachments extends \Google\Service\Resourc
    * specified in the service_project_attachment.service_project field. Hint:
    * "projects/{project_id}"
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, ServiceProjectAttachment $postBody, $optParams = [])
   {
@@ -81,6 +82,7 @@ class ProjectsLocationsServiceProjectAttachments extends \Google\Service\Resourc
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -95,6 +97,7 @@ class ProjectsLocationsServiceProjectAttachments extends \Google\Service\Resourc
    * @param string $name Required. Value for name.
    * @param array $optParams Optional parameters.
    * @return ServiceProjectAttachment
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -117,6 +120,7 @@ class ProjectsLocationsServiceProjectAttachments extends \Google\Service\Resourc
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListServiceProjectAttachmentsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsServiceProjectAttachments($parent, $optParams = [])
   {

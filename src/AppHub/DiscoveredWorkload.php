@@ -23,16 +23,8 @@ class DiscoveredWorkload extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var WorkloadProperties
-   */
-  public $workloadProperties;
   protected $workloadPropertiesType = WorkloadProperties::class;
   protected $workloadPropertiesDataType = '';
-  /**
-   * @var WorkloadReference
-   */
-  public $workloadReference;
   protected $workloadReferenceType = WorkloadReference::class;
   protected $workloadReferenceDataType = '';
 

@@ -19,10 +19,6 @@ namespace Google\Service\AppHub;
 
 class Workload extends \Google\Model
 {
-  /**
-   * @var Attributes
-   */
-  public $attributes;
   protected $attributesType = Attributes::class;
   protected $attributesDataType = '';
   /**
@@ -57,16 +53,8 @@ class Workload extends \Google\Model
    * @var string
    */
   public $updateTime;
-  /**
-   * @var WorkloadProperties
-   */
-  public $workloadProperties;
   protected $workloadPropertiesType = WorkloadProperties::class;
   protected $workloadPropertiesDataType = '';
-  /**
-   * @var WorkloadReference
-   */
-  public $workloadReference;
   protected $workloadReferenceType = WorkloadReference::class;
   protected $workloadReferenceDataType = '';
 

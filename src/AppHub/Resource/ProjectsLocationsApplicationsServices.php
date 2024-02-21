@@ -49,8 +49,11 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
    * clients from accidentally creating duplicate commitments. The request ID must
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string serviceId Required. The Service identifier.
+   * @opt_param string serviceId Required. The Service identifier. Must contain
+   * only lowercase letters, numbers or hyphens, with the first character a
+   * letter, the last a letter or a number, and a 63 character maximum.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Service $postBody, $optParams = [])
   {
@@ -76,6 +79,7 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -89,6 +93,7 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
    * @param string $name Required. Value for name.
    * @param array $optParams Optional parameters.
    * @return Service
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -111,6 +116,7 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListServicesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsApplicationsServices($parent, $optParams = [])
   {
@@ -147,6 +153,7 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
    * message, but adding the field to the mask. This clears whatever value the
    * field previously had.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Service $postBody, $optParams = [])
   {
