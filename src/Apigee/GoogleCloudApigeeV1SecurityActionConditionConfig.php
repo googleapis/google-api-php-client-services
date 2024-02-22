@@ -19,7 +19,19 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collection
 {
-  protected $collection_key = 'ipAddressRanges';
+  protected $collection_key = 'userAgents';
+  /**
+   * @var string[]
+   */
+  public $accessTokens;
+  /**
+   * @var string[]
+   */
+  public $apiKeys;
+  /**
+   * @var string[]
+   */
+  public $apiProducts;
   /**
    * @var string[]
    */
@@ -27,8 +39,62 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   /**
    * @var string[]
    */
+  public $developerApps;
+  /**
+   * @var string[]
+   */
+  public $developers;
+  /**
+   * @var string[]
+   */
   public $ipAddressRanges;
+  /**
+   * @var string[]
+   */
+  public $userAgents;
 
+  /**
+   * @param string[]
+   */
+  public function setAccessTokens($accessTokens)
+  {
+    $this->accessTokens = $accessTokens;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAccessTokens()
+  {
+    return $this->accessTokens;
+  }
+  /**
+   * @param string[]
+   */
+  public function setApiKeys($apiKeys)
+  {
+    $this->apiKeys = $apiKeys;
+  }
+  /**
+   * @return string[]
+   */
+  public function getApiKeys()
+  {
+    return $this->apiKeys;
+  }
+  /**
+   * @param string[]
+   */
+  public function setApiProducts($apiProducts)
+  {
+    $this->apiProducts = $apiProducts;
+  }
+  /**
+   * @return string[]
+   */
+  public function getApiProducts()
+  {
+    return $this->apiProducts;
+  }
   /**
    * @param string[]
    */
@@ -46,6 +112,34 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   /**
    * @param string[]
    */
+  public function setDeveloperApps($developerApps)
+  {
+    $this->developerApps = $developerApps;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDeveloperApps()
+  {
+    return $this->developerApps;
+  }
+  /**
+   * @param string[]
+   */
+  public function setDevelopers($developers)
+  {
+    $this->developers = $developers;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDevelopers()
+  {
+    return $this->developers;
+  }
+  /**
+   * @param string[]
+   */
   public function setIpAddressRanges($ipAddressRanges)
   {
     $this->ipAddressRanges = $ipAddressRanges;
@@ -56,6 +150,20 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   public function getIpAddressRanges()
   {
     return $this->ipAddressRanges;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUserAgents($userAgents)
+  {
+    $this->userAgents = $userAgents;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUserAgents()
+  {
+    return $this->userAgents;
   }
 }
 
