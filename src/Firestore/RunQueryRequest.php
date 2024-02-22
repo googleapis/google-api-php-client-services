@@ -19,8 +19,6 @@ namespace Google\Service\Firestore;
 
 class RunQueryRequest extends \Google\Model
 {
-  protected $explainOptionsType = ExplainOptions::class;
-  protected $explainOptionsDataType = '';
   protected $newTransactionType = TransactionOptions::class;
   protected $newTransactionDataType = '';
   /**
@@ -34,20 +32,6 @@ class RunQueryRequest extends \Google\Model
    */
   public $transaction;
 
-  /**
-   * @param ExplainOptions
-   */
-  public function setExplainOptions(ExplainOptions $explainOptions)
-  {
-    $this->explainOptions = $explainOptions;
-  }
-  /**
-   * @return ExplainOptions
-   */
-  public function getExplainOptions()
-  {
-    return $this->explainOptions;
-  }
   /**
    * @param TransactionOptions
    */
