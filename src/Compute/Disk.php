@@ -161,6 +161,14 @@ class Disk extends \Google\Collection
   /**
    * @var string
    */
+  public $sourceInstantSnapshot;
+  /**
+   * @var string
+   */
+  public $sourceInstantSnapshotId;
+  /**
+   * @var string
+   */
   public $sourceSnapshot;
   protected $sourceSnapshotEncryptionKeyType = CustomerEncryptionKey::class;
   protected $sourceSnapshotEncryptionKeyDataType = '';
@@ -720,6 +728,34 @@ class Disk extends \Google\Collection
   public function getSourceImageId()
   {
     return $this->sourceImageId;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceInstantSnapshot($sourceInstantSnapshot)
+  {
+    $this->sourceInstantSnapshot = $sourceInstantSnapshot;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceInstantSnapshot()
+  {
+    return $this->sourceInstantSnapshot;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceInstantSnapshotId($sourceInstantSnapshotId)
+  {
+    $this->sourceInstantSnapshotId = $sourceInstantSnapshotId;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceInstantSnapshotId()
+  {
+    return $this->sourceInstantSnapshotId;
   }
   /**
    * @param string

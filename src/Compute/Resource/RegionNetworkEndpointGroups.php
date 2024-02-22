@@ -237,7 +237,9 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @return NetworkEndpointGroupList
    * @throws \Google\Service\Exception
    */
@@ -309,7 +311,9 @@ class RegionNetworkEndpointGroups extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @return NetworkEndpointGroupsListNetworkEndpoints
    * @throws \Google\Service\Exception
    */
