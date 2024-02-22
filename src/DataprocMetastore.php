@@ -45,6 +45,7 @@ class DataprocMetastore extends \Google\Service
   public $projects_locations_services;
   public $projects_locations_services_backups;
   public $projects_locations_services_metadataImports;
+  public $projects_locations_services_migrationExecutions;
 
   /**
    * Constructs the internal representation of the DataprocMetastore service.
@@ -662,6 +663,30 @@ class DataprocMetastore extends \Google\Service
                   'type' => 'string',
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_services_migrationExecutions = new DataprocMetastore\Resource\ProjectsLocationsServicesMigrationExecutions(
+        $this,
+        $this->serviceName,
+        'migrationExecutions',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
