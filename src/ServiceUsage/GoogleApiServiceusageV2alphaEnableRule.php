@@ -23,44 +23,8 @@ class GoogleApiServiceusageV2alphaEnableRule extends \Google\Collection
   /**
    * @var string[]
    */
-  public $categories;
-  /**
-   * @var string[]
-   */
-  public $groups;
-  /**
-   * @var string[]
-   */
   public $services;
 
-  /**
-   * @param string[]
-   */
-  public function setCategories($categories)
-  {
-    $this->categories = $categories;
-  }
-  /**
-   * @return string[]
-   */
-  public function getCategories()
-  {
-    return $this->categories;
-  }
-  /**
-   * @param string[]
-   */
-  public function setGroups($groups)
-  {
-    $this->groups = $groups;
-  }
-  /**
-   * @return string[]
-   */
-  public function getGroups()
-  {
-    return $this->groups;
-  }
   /**
    * @param string[]
    */
