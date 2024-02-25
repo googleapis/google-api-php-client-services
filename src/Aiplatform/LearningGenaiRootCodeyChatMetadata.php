@@ -17,27 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Tool extends \Google\Collection
+class LearningGenaiRootCodeyChatMetadata extends \Google\Model
 {
-  protected $collection_key = 'functionDeclarations';
-  protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
-  protected $functionDeclarationsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $codeLanguage;
 
   /**
-   * @param GoogleCloudAiplatformV1FunctionDeclaration[]
+   * @param string
    */
-  public function setFunctionDeclarations($functionDeclarations)
+  public function setCodeLanguage($codeLanguage)
   {
-    $this->functionDeclarations = $functionDeclarations;
+    $this->codeLanguage = $codeLanguage;
   }
   /**
-   * @return GoogleCloudAiplatformV1FunctionDeclaration[]
+   * @return string
    */
-  public function getFunctionDeclarations()
+  public function getCodeLanguage()
   {
-    return $this->functionDeclarations;
+    return $this->codeLanguage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Tool::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Tool');
+class_alias(LearningGenaiRootCodeyChatMetadata::class, 'Google_Service_Aiplatform_LearningGenaiRootCodeyChatMetadata');

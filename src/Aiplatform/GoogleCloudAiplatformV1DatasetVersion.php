@@ -30,7 +30,15 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
   /**
    * @var string
    */
+  public $displayName;
+  /**
+   * @var string
+   */
   public $etag;
+  /**
+   * @var array
+   */
+  public $metadata;
   /**
    * @var string
    */
@@ -71,6 +79,20 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
   /**
    * @param string
    */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
+  /**
+   * @param string
+   */
   public function setEtag($etag)
   {
     $this->etag = $etag;
@@ -81,6 +103,20 @@ class GoogleCloudAiplatformV1DatasetVersion extends \Google\Model
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param array
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

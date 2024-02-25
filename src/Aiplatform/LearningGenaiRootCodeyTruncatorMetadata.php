@@ -17,44 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureViewDataKey extends \Google\Model
+class LearningGenaiRootCodeyTruncatorMetadata extends \Google\Model
 {
-  protected $compositeKeyType = GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey::class;
-  protected $compositeKeyDataType = '';
+  /**
+   * @var int
+   */
+  public $cutoffIndex;
   /**
    * @var string
    */
-  public $key;
+  public $truncatedText;
 
   /**
-   * @param GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey
+   * @param int
    */
-  public function setCompositeKey(GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey $compositeKey)
+  public function setCutoffIndex($cutoffIndex)
   {
-    $this->compositeKey = $compositeKey;
+    $this->cutoffIndex = $cutoffIndex;
   }
   /**
-   * @return GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey
+   * @return int
    */
-  public function getCompositeKey()
+  public function getCutoffIndex()
   {
-    return $this->compositeKey;
+    return $this->cutoffIndex;
   }
   /**
    * @param string
    */
-  public function setKey($key)
+  public function setTruncatedText($truncatedText)
   {
-    $this->key = $key;
+    $this->truncatedText = $truncatedText;
   }
   /**
    * @return string
    */
-  public function getKey()
+  public function getTruncatedText()
   {
-    return $this->key;
+    return $this->truncatedText;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureViewDataKey::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewDataKey');
+class_alias(LearningGenaiRootCodeyTruncatorMetadata::class, 'Google_Service_Aiplatform_LearningGenaiRootCodeyTruncatorMetadata');

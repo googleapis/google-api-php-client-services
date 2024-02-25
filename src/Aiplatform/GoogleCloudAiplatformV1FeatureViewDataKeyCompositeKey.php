@@ -17,27 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Tool extends \Google\Collection
+class GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey extends \Google\Collection
 {
-  protected $collection_key = 'functionDeclarations';
-  protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
-  protected $functionDeclarationsDataType = 'array';
+  protected $collection_key = 'parts';
+  /**
+   * @var string[]
+   */
+  public $parts;
 
   /**
-   * @param GoogleCloudAiplatformV1FunctionDeclaration[]
+   * @param string[]
    */
-  public function setFunctionDeclarations($functionDeclarations)
+  public function setParts($parts)
   {
-    $this->functionDeclarations = $functionDeclarations;
+    $this->parts = $parts;
   }
   /**
-   * @return GoogleCloudAiplatformV1FunctionDeclaration[]
+   * @return string[]
    */
-  public function getFunctionDeclarations()
+  public function getParts()
   {
-    return $this->functionDeclarations;
+    return $this->parts;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Tool::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Tool');
+class_alias(GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey');

@@ -22,6 +22,8 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
   protected $collection_key = 'translatedUserPrompts';
   protected $classifierSummaryType = LearningGenaiRootClassifierOutputSummary::class;
   protected $classifierSummaryDataType = '';
+  protected $codeyOutputType = LearningGenaiRootCodeyOutput::class;
+  protected $codeyOutputDataType = '';
   /**
    * @var string
    */
@@ -104,6 +106,20 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
   public function getClassifierSummary()
   {
     return $this->classifierSummary;
+  }
+  /**
+   * @param LearningGenaiRootCodeyOutput
+   */
+  public function setCodeyOutput(LearningGenaiRootCodeyOutput $codeyOutput)
+  {
+    $this->codeyOutput = $codeyOutput;
+  }
+  /**
+   * @return LearningGenaiRootCodeyOutput
+   */
+  public function getCodeyOutput()
+  {
+    return $this->codeyOutput;
   }
   /**
    * @param string
