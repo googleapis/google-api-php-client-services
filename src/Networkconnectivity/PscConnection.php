@@ -49,6 +49,10 @@ class PscConnection extends \Google\Model
   /**
    * @var string
    */
+  public $selectedSubnetwork;
+  /**
+   * @var string
+   */
   public $state;
 
   /**
@@ -162,6 +166,20 @@ class PscConnection extends \Google\Model
   public function getPscConnectionId()
   {
     return $this->pscConnectionId;
+  }
+  /**
+   * @param string
+   */
+  public function setSelectedSubnetwork($selectedSubnetwork)
+  {
+    $this->selectedSubnetwork = $selectedSubnetwork;
+  }
+  /**
+   * @return string
+   */
+  public function getSelectedSubnetwork()
+  {
+    return $this->selectedSubnetwork;
   }
   /**
    * @param string
