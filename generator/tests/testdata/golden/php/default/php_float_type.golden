@@ -46,6 +46,7 @@ class PhpFloatType extends \Google\Service
       "https://www.googleapis.com/auth/userinfo.email";
 
   public $getwithfloat;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PhpFloatType service.

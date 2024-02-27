@@ -60,6 +60,7 @@ class KitchSink extends \Google\Service
   public $topics;
   public $topics_submissions;
   public $votes;
+  public $rootUrlTemplate;
   private $base_methods;
   /**
    * Constructs the internal representation of the KitchSink service.
