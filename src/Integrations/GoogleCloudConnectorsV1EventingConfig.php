@@ -19,7 +19,7 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
 {
-  protected $collection_key = 'additionalVariables';
+  protected $collection_key = 'triggerConfigVariables';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   protected $authConfigType = GoogleCloudConnectorsV1AuthConfig::class;
@@ -44,6 +44,8 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   protected $proxyDestinationConfigDataType = '';
   protected $registrationDestinationConfigType = GoogleCloudConnectorsV1DestinationConfig::class;
   protected $registrationDestinationConfigDataType = '';
+  protected $triggerConfigVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
+  protected $triggerConfigVariablesDataType = 'array';
 
   /**
    * @param GoogleCloudConnectorsV1ConfigVariable[]
@@ -170,6 +172,20 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public function getRegistrationDestinationConfig()
   {
     return $this->registrationDestinationConfig;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1ConfigVariable[]
+   */
+  public function setTriggerConfigVariables($triggerConfigVariables)
+  {
+    $this->triggerConfigVariables = $triggerConfigVariables;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1ConfigVariable[]
+   */
+  public function getTriggerConfigVariables()
+  {
+    return $this->triggerConfigVariables;
   }
 }
 
