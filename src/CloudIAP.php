@@ -42,6 +42,7 @@ class CloudIAP extends \Google\Service
   public $projects_brands_identityAwareProxyClients;
   public $projects_iap_tunnel_locations_destGroups;
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudIAP service.

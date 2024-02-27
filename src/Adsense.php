@@ -52,6 +52,7 @@ class Adsense extends \Google\Service
   public $accounts_reports;
   public $accounts_reports_saved;
   public $accounts_sites;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Adsense service.

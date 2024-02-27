@@ -45,6 +45,7 @@ class CloudAsset extends \Google\Service
   public $operations;
   public $savedQueries;
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudAsset service.

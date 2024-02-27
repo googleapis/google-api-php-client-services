@@ -41,6 +41,7 @@ class Assuredworkloads extends \Google\Service
   public $organizations_locations_operations;
   public $organizations_locations_workloads;
   public $organizations_locations_workloads_violations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Assuredworkloads service.

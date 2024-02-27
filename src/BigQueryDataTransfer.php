@@ -55,6 +55,7 @@ class BigQueryDataTransfer extends \Google\Service
   public $projects_transferConfigs;
   public $projects_transferConfigs_runs;
   public $projects_transferConfigs_runs_transferLogs;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BigQueryDataTransfer service.

@@ -44,6 +44,7 @@ class CloudComposer extends \Google\Service
   public $projects_locations_environments_workloads;
   public $projects_locations_imageVersions;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudComposer service.

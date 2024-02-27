@@ -46,6 +46,7 @@ class ContainerAnalysis extends \Google\Service
   public $projects_notes_occurrences;
   public $projects_occurrences;
   public $projects_resources;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ContainerAnalysis service.

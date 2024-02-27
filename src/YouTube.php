@@ -88,6 +88,7 @@ class YouTube extends \Google\Service
   public $videos;
   public $watermarks;
   public $youtube_v3;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the YouTube service.

@@ -55,6 +55,7 @@ class DriveLabels extends \Google\Service
   public $labels_revisions_permissions;
   public $limits;
   public $users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DriveLabels service.

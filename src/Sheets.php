@@ -54,6 +54,7 @@ class Sheets extends \Google\Service
   public $spreadsheets_developerMetadata;
   public $spreadsheets_sheets;
   public $spreadsheets_values;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Sheets service.

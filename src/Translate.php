@@ -53,6 +53,7 @@ class Translate extends \Google\Service
   public $projects_locations_glossaries_glossaryEntries;
   public $projects_locations_models;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Translate service.

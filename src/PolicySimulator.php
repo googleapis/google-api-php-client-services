@@ -56,6 +56,7 @@ class PolicySimulator extends \Google\Service
   public $projects_locations_replays;
   public $projects_locations_replays_operations;
   public $projects_locations_replays_results;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PolicySimulator service.

@@ -52,6 +52,7 @@ class ApigeeRegistry extends \Google\Service
   public $projects_locations_instances;
   public $projects_locations_operations;
   public $projects_locations_runtime;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ApigeeRegistry service.

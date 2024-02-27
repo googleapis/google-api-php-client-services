@@ -52,6 +52,7 @@ class Cloudbilling extends \Google\Service
   public $projects;
   public $services;
   public $services_skus;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Cloudbilling service.

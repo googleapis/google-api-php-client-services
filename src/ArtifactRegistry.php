@@ -59,6 +59,7 @@ class ArtifactRegistry extends \Google\Service
   public $projects_locations_repositories_packages_versions;
   public $projects_locations_repositories_pythonPackages;
   public $projects_locations_repositories_yumArtifacts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ArtifactRegistry service.

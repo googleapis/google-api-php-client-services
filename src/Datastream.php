@@ -45,6 +45,7 @@ class Datastream extends \Google\Service
   public $projects_locations_privateConnections_routes;
   public $projects_locations_streams;
   public $projects_locations_streams_objects;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Datastream service.

@@ -54,6 +54,7 @@ class AndroidEnterprise extends \Google\Service
   public $storelayoutpages;
   public $users;
   public $webapps;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AndroidEnterprise service.

@@ -47,6 +47,7 @@ class BackupforGKE extends \Google\Service
   public $projects_locations_restorePlans;
   public $projects_locations_restorePlans_restores;
   public $projects_locations_restorePlans_restores_volumeRestores;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BackupforGKE service.

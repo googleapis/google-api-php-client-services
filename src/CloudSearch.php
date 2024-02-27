@@ -84,6 +84,7 @@ class CloudSearch extends \Google\Service
   public $stats_session_searchapplications;
   public $stats_user_searchapplications;
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudSearch service.

@@ -47,6 +47,7 @@ class OSConfig extends \Google\Service
   public $projects_patchDeployments;
   public $projects_patchJobs;
   public $projects_patchJobs_instanceDetails;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the OSConfig service.

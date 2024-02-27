@@ -42,6 +42,7 @@ class SiteVerification extends \Google\Service
       "https://www.googleapis.com/auth/siteverification.verify_only";
 
   public $webResource;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SiteVerification service.

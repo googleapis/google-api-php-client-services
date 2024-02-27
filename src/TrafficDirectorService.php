@@ -39,6 +39,7 @@ class TrafficDirectorService extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $discovery;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the TrafficDirectorService

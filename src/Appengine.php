@@ -54,6 +54,7 @@ class Appengine extends \Google\Service
   public $apps_services;
   public $apps_services_versions;
   public $apps_services_versions_instances;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Appengine service.

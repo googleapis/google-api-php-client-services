@@ -44,6 +44,7 @@ class CloudSupport extends \Google\Service
   public $cases_attachments;
   public $cases_comments;
   public $media;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudSupport service.

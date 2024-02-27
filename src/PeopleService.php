@@ -76,6 +76,7 @@ class PeopleService extends \Google\Service
   public $otherContacts;
   public $people;
   public $people_connections;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PeopleService service.

@@ -48,6 +48,7 @@ class FirebaseRules extends \Google\Service
   public $projects;
   public $projects_releases;
   public $projects_rulesets;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FirebaseRules service.

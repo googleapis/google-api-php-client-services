@@ -74,6 +74,7 @@ class TagManager extends \Google\Service
   public $accounts_containers_workspaces_variables;
   public $accounts_containers_workspaces_zones;
   public $accounts_user_permissions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the TagManager service.

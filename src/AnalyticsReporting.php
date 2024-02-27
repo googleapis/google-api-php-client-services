@@ -43,6 +43,7 @@ class AnalyticsReporting extends \Google\Service
 
   public $reports;
   public $userActivity;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AnalyticsReporting service.

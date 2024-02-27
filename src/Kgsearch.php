@@ -37,6 +37,7 @@ class Kgsearch extends \Google\Service
 
 
   public $entities;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Kgsearch service.

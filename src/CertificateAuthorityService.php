@@ -47,6 +47,7 @@ class CertificateAuthorityService extends \Google\Service
   public $projects_locations_caPools_certificates;
   public $projects_locations_certificateTemplates;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CertificateAuthorityService

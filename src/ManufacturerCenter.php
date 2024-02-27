@@ -40,6 +40,7 @@ class ManufacturerCenter extends \Google\Service
 
   public $accounts_languages_productCertifications;
   public $accounts_products;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ManufacturerCenter service.

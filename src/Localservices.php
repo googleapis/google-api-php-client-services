@@ -40,6 +40,7 @@ class Localservices extends \Google\Service
 
   public $accountReports;
   public $detailedLeadReports;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Localservices service.

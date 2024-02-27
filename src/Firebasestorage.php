@@ -43,6 +43,7 @@ class Firebasestorage extends \Google\Service
       "https://www.googleapis.com/auth/firebase";
 
   public $projects_buckets;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Firebasestorage service.

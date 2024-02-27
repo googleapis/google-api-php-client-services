@@ -47,6 +47,7 @@ class Contentwarehouse extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_ruleSets;
   public $projects_locations_synonymSets;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Contentwarehouse service.

@@ -50,6 +50,7 @@ class CloudOSLogin extends \Google\Service
   public $users;
   public $users_projects;
   public $users_sshPublicKeys;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudOSLogin service.

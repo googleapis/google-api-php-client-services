@@ -41,6 +41,7 @@ class Datapipelines extends \Google\Service
 
   public $projects_locations_pipelines;
   public $projects_locations_pipelines_jobs;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Datapipelines service.

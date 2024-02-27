@@ -39,6 +39,7 @@ class AdExperienceReport extends \Google\Service
 
   public $sites;
   public $violatingSites;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AdExperienceReport service.

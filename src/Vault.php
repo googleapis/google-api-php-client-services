@@ -53,6 +53,7 @@ class Vault extends \Google\Service
   public $matters_holds_accounts;
   public $matters_savedQueries;
   public $operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Vault service.

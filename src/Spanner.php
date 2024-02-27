@@ -61,6 +61,7 @@ class Spanner extends \Google\Service
   public $projects_instances_instancePartitions_operations;
   public $projects_instances_operations;
   public $scans;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Spanner service.

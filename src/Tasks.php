@@ -43,6 +43,7 @@ class Tasks extends \Google\Service
 
   public $tasklists;
   public $tasks;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Tasks service.

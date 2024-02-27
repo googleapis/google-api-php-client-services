@@ -39,6 +39,7 @@ class MyBusinessNotificationSettings extends \Google\Service
 
 
   public $accounts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the

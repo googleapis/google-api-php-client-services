@@ -42,6 +42,7 @@ class SmartDeviceManagement extends \Google\Service
   public $enterprises_devices;
   public $enterprises_structures;
   public $enterprises_structures_rooms;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SmartDeviceManagement

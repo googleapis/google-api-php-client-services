@@ -90,6 +90,7 @@ class SecurityCommandCenter extends \Google\Service
   public $projects_sources;
   public $projects_sources_findings;
   public $projects_sources_findings_externalSystems;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SecurityCommandCenter

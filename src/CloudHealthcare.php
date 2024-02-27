@@ -61,6 +61,7 @@ class CloudHealthcare extends \Google\Service
   public $projects_locations_datasets_hl7V2Stores_messages;
   public $projects_locations_datasets_operations;
   public $projects_locations_services_nlp;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudHealthcare service.

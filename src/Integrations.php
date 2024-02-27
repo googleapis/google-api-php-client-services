@@ -61,6 +61,7 @@ class Integrations extends \Google\Service
   public $projects_locations_products_sfdcInstances_sfdcChannels;
   public $projects_locations_sfdcInstances;
   public $projects_locations_sfdcInstances_sfdcChannels;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Integrations service.

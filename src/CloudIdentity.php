@@ -62,6 +62,7 @@ class CloudIdentity extends \Google\Service
   public $inboundSamlSsoProfiles;
   public $inboundSamlSsoProfiles_idpCredentials;
   public $inboundSsoAssignments;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudIdentity service.

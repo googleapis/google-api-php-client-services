@@ -51,6 +51,7 @@ class Networkconnectivity extends \Google\Service
   public $projects_locations_serviceConnectionPolicies;
   public $projects_locations_serviceConnectionTokens;
   public $projects_locations_spokes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Networkconnectivity service.

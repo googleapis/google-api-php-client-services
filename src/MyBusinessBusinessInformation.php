@@ -45,6 +45,7 @@ class MyBusinessBusinessInformation extends \Google\Service
   public $googleLocations;
   public $locations;
   public $locations_attributes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MyBusinessBusinessInformation

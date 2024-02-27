@@ -57,6 +57,7 @@ class Vision extends \Google\Service
   public $projects_locations_products;
   public $projects_locations_products_referenceImages;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Vision service.

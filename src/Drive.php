@@ -73,6 +73,7 @@ class Drive extends \Google\Service
   public $replies;
   public $revisions;
   public $teamdrives;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Drive service.

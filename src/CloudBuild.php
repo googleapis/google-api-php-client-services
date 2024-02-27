@@ -42,6 +42,7 @@ class CloudBuild extends \Google\Service
   public $projects_locations_connections;
   public $projects_locations_connections_repositories;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudBuild service.

@@ -39,6 +39,7 @@ class PolicyTroubleshooter extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $iam;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PolicyTroubleshooter service.

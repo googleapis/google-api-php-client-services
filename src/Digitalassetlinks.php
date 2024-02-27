@@ -39,6 +39,7 @@ class Digitalassetlinks extends \Google\Service
 
   public $assetlinks;
   public $statements;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Digitalassetlinks service.

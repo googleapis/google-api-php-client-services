@@ -47,6 +47,7 @@ class AuthorizedBuyersMarketplace extends \Google\Service
   public $buyers_proposals;
   public $buyers_proposals_deals;
   public $buyers_publisherProfiles;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AuthorizedBuyersMarketplace

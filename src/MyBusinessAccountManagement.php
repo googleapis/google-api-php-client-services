@@ -43,6 +43,7 @@ class MyBusinessAccountManagement extends \Google\Service
   public $accounts_invitations;
   public $locations;
   public $locations_admins;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MyBusinessAccountManagement

@@ -63,6 +63,7 @@ class Monitoring extends \Google\Service
   public $services;
   public $services_serviceLevelObjectives;
   public $uptimeCheckIps;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Monitoring service.

@@ -49,6 +49,7 @@ class CloudSourceRepositories extends \Google\Service
 
   public $projects;
   public $projects_repos;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudSourceRepositories

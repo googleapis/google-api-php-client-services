@@ -40,6 +40,7 @@ class CivicInfo extends \Google\Service
   public $divisions;
   public $elections;
   public $representatives;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CivicInfo service.

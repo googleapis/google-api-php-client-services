@@ -39,6 +39,7 @@ class MyBusinessVerifications extends \Google\Service
 
   public $locations;
   public $locations_verifications;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MyBusinessVerifications

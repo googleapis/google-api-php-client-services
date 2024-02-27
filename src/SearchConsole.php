@@ -47,6 +47,7 @@ class SearchConsole extends \Google\Service
   public $sites;
   public $urlInspection_index;
   public $urlTestingTools_mobileFriendlyTest;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SearchConsole service.

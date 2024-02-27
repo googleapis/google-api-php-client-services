@@ -49,6 +49,7 @@ class Container extends \Google\Service
   public $projects_zones_clusters;
   public $projects_zones_clusters_nodePools;
   public $projects_zones_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Container service.

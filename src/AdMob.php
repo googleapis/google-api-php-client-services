@@ -47,6 +47,7 @@ class AdMob extends \Google\Service
   public $accounts_apps;
   public $accounts_mediationReport;
   public $accounts_networkReport;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AdMob service.

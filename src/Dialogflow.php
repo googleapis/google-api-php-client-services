@@ -67,6 +67,7 @@ class Dialogflow extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_securitySettings;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dialogflow service.

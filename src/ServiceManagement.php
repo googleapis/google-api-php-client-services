@@ -54,6 +54,7 @@ class ServiceManagement extends \Google\Service
   public $services_configs;
   public $services_consumers;
   public $services_rollouts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ServiceManagement service.

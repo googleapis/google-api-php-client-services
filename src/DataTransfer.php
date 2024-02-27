@@ -45,6 +45,7 @@ class DataTransfer extends \Google\Service
 
   public $applications;
   public $transfers;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DataTransfer service.

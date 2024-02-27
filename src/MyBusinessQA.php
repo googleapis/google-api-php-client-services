@@ -40,6 +40,7 @@ class MyBusinessQA extends \Google\Service
 
   public $locations_questions;
   public $locations_questions_answers;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MyBusinessQA service.

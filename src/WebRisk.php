@@ -43,6 +43,7 @@ class WebRisk extends \Google\Service
   public $projects_submissions;
   public $threatLists;
   public $uris;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the WebRisk service.

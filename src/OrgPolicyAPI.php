@@ -46,6 +46,7 @@ class OrgPolicyAPI extends \Google\Service
   public $organizations_policies;
   public $projects_constraints;
   public $projects_policies;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the OrgPolicyAPI service.

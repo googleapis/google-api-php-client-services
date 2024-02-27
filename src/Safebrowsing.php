@@ -41,6 +41,7 @@ class Safebrowsing extends \Google\Service
 
 
   public $hashes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Safebrowsing service.

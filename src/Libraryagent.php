@@ -40,6 +40,7 @@ class Libraryagent extends \Google\Service
 
   public $shelves;
   public $shelves_books;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Libraryagent service.

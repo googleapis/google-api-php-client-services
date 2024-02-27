@@ -73,6 +73,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_operations;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DiscoveryEngine service.

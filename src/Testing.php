@@ -46,6 +46,7 @@ class Testing extends \Google\Service
   public $projects_deviceSessions;
   public $projects_testMatrices;
   public $testEnvironmentCatalog;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Testing service.

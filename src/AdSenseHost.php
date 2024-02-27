@@ -48,6 +48,7 @@ class AdSenseHost extends \Google\Service
   public $customchannels;
   public $reports;
   public $urlchannels;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AdSenseHost service.

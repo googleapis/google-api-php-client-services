@@ -38,6 +38,7 @@ class CloudSecurityToken extends \Google\Service
 
 
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudSecurityToken service.

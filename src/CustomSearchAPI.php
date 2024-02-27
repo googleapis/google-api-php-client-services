@@ -38,6 +38,7 @@ class CustomSearchAPI extends \Google\Service
 
   public $cse;
   public $cse_siterestrict;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CustomSearchAPI service.

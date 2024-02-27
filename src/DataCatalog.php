@@ -51,6 +51,7 @@ class DataCatalog extends \Google\Service
   public $projects_locations_tagTemplates_fields_enumValues;
   public $projects_locations_taxonomies;
   public $projects_locations_taxonomies_policyTags;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DataCatalog service.

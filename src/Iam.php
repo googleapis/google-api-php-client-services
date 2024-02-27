@@ -42,6 +42,7 @@ class Iam extends \Google\Service
 
   public $policies;
   public $policies_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Iam service.

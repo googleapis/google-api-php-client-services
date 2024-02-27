@@ -40,6 +40,7 @@ class HomeGraphService extends \Google\Service
 
   public $agentUsers;
   public $devices;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the HomeGraphService service.

@@ -56,6 +56,7 @@ class Dns extends \Google\Service
   public $resourceRecordSets;
   public $responsePolicies;
   public $responsePolicyRules;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dns service.

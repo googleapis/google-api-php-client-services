@@ -40,6 +40,7 @@ class GroupsMigration extends \Google\Service
       "https://www.googleapis.com/auth/apps.groups.migration";
 
   public $archive;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the GroupsMigration service.

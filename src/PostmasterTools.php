@@ -42,6 +42,7 @@ class PostmasterTools extends \Google\Service
 
   public $domains;
   public $domains_trafficStats;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PostmasterTools service.

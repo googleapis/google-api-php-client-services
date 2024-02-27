@@ -51,6 +51,7 @@ class ServiceNetworking extends \Google\Service
   public $services_projects_global_networks_dnsZones;
   public $services_projects_global_networks_peeredDnsDomains;
   public $services_roles;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ServiceNetworking service.

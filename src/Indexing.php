@@ -39,6 +39,7 @@ class Indexing extends \Google\Service
       "https://www.googleapis.com/auth/indexing";
 
   public $urlNotifications;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Indexing service.

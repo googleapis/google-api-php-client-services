@@ -38,6 +38,7 @@ class Acceleratedmobilepageurl extends \Google\Service
 
 
   public $ampUrls;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Acceleratedmobilepageurl

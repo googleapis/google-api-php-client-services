@@ -42,6 +42,7 @@ class PagespeedInsights extends \Google\Service
       "openid";
 
   public $pagespeedapi;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PagespeedInsights service.

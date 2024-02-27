@@ -57,6 +57,7 @@ class Games extends \Google\Service
   public $scores;
   public $snapshots;
   public $stats;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Games service.

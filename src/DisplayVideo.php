@@ -91,6 +91,7 @@ class DisplayVideo extends \Google\Service
   public $sdfdownloadtasks_operations;
   public $targetingTypes_targetingOptions;
   public $users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DisplayVideo service.

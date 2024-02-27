@@ -106,6 +106,7 @@ class Fitness extends \Google\Service
   public $users_dataSources_datasets;
   public $users_dataset;
   public $users_sessions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Fitness service.

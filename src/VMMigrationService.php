@@ -50,6 +50,7 @@ class VMMigrationService extends \Google\Service
   public $projects_locations_sources_migratingVms_replicationCycles;
   public $projects_locations_sources_utilizationReports;
   public $projects_locations_targetProjects;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the VMMigrationService service.

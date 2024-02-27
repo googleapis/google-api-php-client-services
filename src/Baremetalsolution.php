@@ -51,6 +51,7 @@ class Baremetalsolution extends \Google\Service
   public $projects_locations_volumes;
   public $projects_locations_volumes_luns;
   public $projects_locations_volumes_snapshots;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Baremetalsolution service.

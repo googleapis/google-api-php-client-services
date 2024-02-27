@@ -152,6 +152,7 @@ class Directory extends \Google\Service
   public $users_aliases;
   public $users_photos;
   public $verificationCodes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Directory service.

@@ -47,6 +47,7 @@ class Pubsub extends \Google\Service
   public $projects_topics;
   public $projects_topics_snapshots;
   public $projects_topics_subscriptions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Pubsub service.

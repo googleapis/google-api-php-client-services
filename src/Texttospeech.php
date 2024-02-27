@@ -44,6 +44,7 @@ class Texttospeech extends \Google\Service
   public $projects_locations_operations;
   public $text;
   public $voices;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Texttospeech service.

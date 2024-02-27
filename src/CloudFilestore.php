@@ -43,6 +43,7 @@ class CloudFilestore extends \Google\Service
   public $projects_locations_instances;
   public $projects_locations_instances_snapshots;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudFilestore service.

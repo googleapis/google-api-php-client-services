@@ -40,6 +40,7 @@ class FactCheckTools extends \Google\Service
 
   public $claims;
   public $pages;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FactCheckTools service.

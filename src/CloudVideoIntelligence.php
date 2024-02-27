@@ -43,6 +43,7 @@ class CloudVideoIntelligence extends \Google\Service
   public $operations_projects_locations_operations;
   public $projects_locations_operations;
   public $videos;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudVideoIntelligence

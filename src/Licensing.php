@@ -40,6 +40,7 @@ class Licensing extends \Google\Service
       "https://www.googleapis.com/auth/apps.licensing";
 
   public $licenseAssignments;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Licensing service.

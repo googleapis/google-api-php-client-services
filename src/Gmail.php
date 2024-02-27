@@ -93,6 +93,7 @@ class Gmail extends \Google\Service
   public $users_settings_sendAs;
   public $users_settings_sendAs_smimeInfo;
   public $users_threads;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Gmail service.

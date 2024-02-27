@@ -44,6 +44,7 @@ class Clouderrorreporting extends \Google\Service
   public $projects_events;
   public $projects_groupStats;
   public $projects_groups;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Clouderrorreporting service.

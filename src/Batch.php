@@ -43,6 +43,7 @@ class Batch extends \Google\Service
   public $projects_locations_jobs_taskGroups_tasks;
   public $projects_locations_operations;
   public $projects_locations_state;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Batch service.

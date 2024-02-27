@@ -40,6 +40,7 @@ class MyBusinessLodging extends \Google\Service
 
   public $locations;
   public $locations_lodging;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MyBusinessLodging service.

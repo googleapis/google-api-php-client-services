@@ -43,6 +43,7 @@ class DomainsRDAP extends \Google\Service
   public $ip;
   public $nameserver;
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DomainsRDAP service.

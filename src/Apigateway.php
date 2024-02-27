@@ -43,6 +43,7 @@ class Apigateway extends \Google\Service
   public $projects_locations_apis_configs;
   public $projects_locations_gateways;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Apigateway service.

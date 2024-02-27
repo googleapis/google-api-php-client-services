@@ -82,6 +82,7 @@ class Analytics extends \Google\Service
   public $metadata_columns;
   public $provisioning;
   public $userDeletion_userDeletionRequest;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Analytics service.

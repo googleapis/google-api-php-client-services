@@ -52,6 +52,7 @@ class Firebaseappcheck extends \Google\Service
   public $projects_apps_recaptchaV3Config;
   public $projects_apps_safetyNetConfig;
   public $projects_services;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Firebaseappcheck service.

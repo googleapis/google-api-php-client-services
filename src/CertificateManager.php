@@ -46,6 +46,7 @@ class CertificateManager extends \Google\Service
   public $projects_locations_dnsAuthorizations;
   public $projects_locations_operations;
   public $projects_locations_trustConfigs;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CertificateManager service.

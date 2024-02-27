@@ -49,6 +49,7 @@ class DataFusion extends \Google\Service
   public $projects_locations_instances_dnsPeerings;
   public $projects_locations_operations;
   public $projects_locations_versions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DataFusion service.

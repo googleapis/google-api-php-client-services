@@ -54,6 +54,7 @@ class CloudRetail extends \Google\Service
   public $projects_locations_catalogs_userEvents;
   public $projects_locations_operations;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudRetail service.

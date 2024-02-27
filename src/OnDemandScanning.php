@@ -41,6 +41,7 @@ class OnDemandScanning extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_scans;
   public $projects_locations_scans_vulnerabilities;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the OnDemandScanning service.

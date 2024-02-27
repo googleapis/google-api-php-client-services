@@ -52,6 +52,7 @@ class Recommender extends \Google\Service
   public $projects_locations_insightTypes_insights;
   public $projects_locations_recommenders;
   public $projects_locations_recommenders_recommendations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Recommender service.

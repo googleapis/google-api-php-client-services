@@ -40,6 +40,7 @@ class CloudScheduler extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_jobs;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudScheduler service.

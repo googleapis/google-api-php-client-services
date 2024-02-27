@@ -63,6 +63,7 @@ class Storage extends \Google\Service
   public $operations;
   public $projects_hmacKeys;
   public $projects_serviceAccount;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Storage service.

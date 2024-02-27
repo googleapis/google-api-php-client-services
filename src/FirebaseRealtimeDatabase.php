@@ -49,6 +49,7 @@ class FirebaseRealtimeDatabase extends \Google\Service
       "https://www.googleapis.com/auth/firebase.readonly";
 
   public $projects_locations_instances;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FirebaseRealtimeDatabase

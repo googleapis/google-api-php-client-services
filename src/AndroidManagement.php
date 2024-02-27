@@ -50,6 +50,7 @@ class AndroidManagement extends \Google\Service
   public $enterprises_webTokens;
   public $provisioningInfo;
   public $signupUrls;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AndroidManagement service.

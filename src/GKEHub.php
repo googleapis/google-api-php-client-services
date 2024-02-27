@@ -48,6 +48,7 @@ class GKEHub extends \Google\Service
   public $projects_locations_scopes;
   public $projects_locations_scopes_namespaces;
   public $projects_locations_scopes_rbacrolebindings;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the GKEHub service.

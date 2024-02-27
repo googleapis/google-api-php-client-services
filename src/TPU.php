@@ -44,6 +44,7 @@ class TPU extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_queuedResources;
   public $projects_locations_runtimeVersions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the TPU service.

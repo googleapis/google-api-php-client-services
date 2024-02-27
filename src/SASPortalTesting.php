@@ -61,6 +61,7 @@ class SASPortalTesting extends \Google\Service
   public $nodes_nodes_devices;
   public $nodes_nodes_nodes;
   public $policies;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SASPortalTesting service.

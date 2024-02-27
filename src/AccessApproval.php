@@ -44,6 +44,7 @@ class AccessApproval extends \Google\Service
   public $organizations_approvalRequests;
   public $projects;
   public $projects_approvalRequests;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AccessApproval service.

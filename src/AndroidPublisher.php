@@ -71,6 +71,7 @@ class AndroidPublisher extends \Google\Service
   public $reviews;
   public $systemapks_variants;
   public $users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AndroidPublisher service.

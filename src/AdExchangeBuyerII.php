@@ -82,6 +82,7 @@ class AdExchangeBuyerII extends \Google\Service
   public $buyers_filterSets_impressionMetrics;
   public $buyers_filterSets_losingBids;
   public $buyers_filterSets_nonBillableWinningBids;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AdExchangeBuyerII service.

@@ -42,9 +42,11 @@ class BinaryAuthorization extends \Google\Service
 
   public $projects;
   public $projects_attestors;
+  public $projects_platforms_gke_policies;
   public $projects_platforms_policies;
   public $projects_policy;
   public $systempolicy;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BinaryAuthorization service.
@@ -200,6 +202,26 @@ class BinaryAuthorization extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'attestor' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_platforms_gke_policies = new BinaryAuthorization\Resource\ProjectsPlatformsGkePolicies(
+        $this,
+        $this->serviceName,
+        'policies',
+        [
+          'methods' => [
+            'evaluate' => [
+              'path' => 'v1/{+name}:evaluate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

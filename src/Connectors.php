@@ -43,6 +43,7 @@ class Connectors extends \Google\Service
   public $projects_locations_connections_actions;
   public $projects_locations_connections_entityTypes;
   public $projects_locations_connections_entityTypes_entities;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Connectors service.

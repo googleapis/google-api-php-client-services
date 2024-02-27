@@ -42,6 +42,7 @@ class PlayIntegrity extends \Google\Service
       "https://www.googleapis.com/auth/playintegrity";
 
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PlayIntegrity service.

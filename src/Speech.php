@@ -42,6 +42,7 @@ class Speech extends \Google\Service
   public $projects_locations_customClasses;
   public $projects_locations_phraseSets;
   public $speech;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Speech service.

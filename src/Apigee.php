@@ -123,6 +123,7 @@ class Apigee extends \Google\Service
   public $organizations_sharedflows_revisions_deployments;
   public $organizations_sites_apicategories;
   public $projects;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Apigee service.

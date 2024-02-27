@@ -56,6 +56,7 @@ class Area120Tables extends \Google\Service
   public $tables;
   public $tables_rows;
   public $workspaces;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Area120Tables service.

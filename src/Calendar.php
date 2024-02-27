@@ -58,6 +58,7 @@ class Calendar extends \Google\Service
   public $events;
   public $freebusy;
   public $settings;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Calendar service.

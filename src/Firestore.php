@@ -50,6 +50,7 @@ class Firestore extends \Google\Service
   public $projects_databases_operations;
   public $projects_locations;
   public $projects_locations_backups;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Firestore service.

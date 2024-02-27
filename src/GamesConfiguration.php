@@ -41,6 +41,7 @@ class GamesConfiguration extends \Google\Service
 
   public $achievementConfigurations;
   public $leaderboardConfigurations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the GamesConfiguration service.

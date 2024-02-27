@@ -110,6 +110,7 @@ class Dfareporting extends \Google\Service
   public $userRolePermissions;
   public $userRoles;
   public $videoFormats;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dfareporting service.

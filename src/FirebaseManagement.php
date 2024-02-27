@@ -58,6 +58,7 @@ class FirebaseManagement extends \Google\Service
   public $projects_defaultLocation;
   public $projects_iosApps;
   public $projects_webApps;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FirebaseManagement service.

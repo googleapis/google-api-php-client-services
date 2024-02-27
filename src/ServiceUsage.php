@@ -48,6 +48,7 @@ class ServiceUsage extends \Google\Service
 
   public $operations;
   public $services;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ServiceUsage service.

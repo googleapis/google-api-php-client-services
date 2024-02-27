@@ -39,6 +39,7 @@ class FirebaseML extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FirebaseML service.

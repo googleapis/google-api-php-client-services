@@ -47,6 +47,7 @@ class CloudTalentSolution extends \Google\Service
   public $projects_tenants_clientEvents;
   public $projects_tenants_companies;
   public $projects_tenants_jobs;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudTalentSolution service.

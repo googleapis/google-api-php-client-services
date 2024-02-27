@@ -50,6 +50,7 @@ class NetworkSecurity extends \Google\Service
   public $projects_locations_serverTlsPolicies;
   public $projects_locations_tlsInspectionPolicies;
   public $projects_locations_urlLists;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the NetworkSecurity service.

@@ -47,6 +47,7 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_phraseMatchers;
   public $projects_locations_views;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Contactcenterinsights

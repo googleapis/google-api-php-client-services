@@ -44,6 +44,7 @@ class GamesManagement extends \Google\Service
   public $events;
   public $players;
   public $scores;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the GamesManagement service.

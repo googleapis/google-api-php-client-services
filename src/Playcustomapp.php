@@ -39,6 +39,7 @@ class Playcustomapp extends \Google\Service
       "https://www.googleapis.com/auth/androidpublisher";
 
   public $accounts_customApps;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Playcustomapp service.

@@ -51,6 +51,7 @@ class RecommendationsAI extends \Google\Service
   public $projects_locations_catalogs_eventStores_predictionApiKeyRegistrations;
   public $projects_locations_catalogs_eventStores_userEvents;
   public $projects_locations_catalogs_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the RecommendationsAI service.

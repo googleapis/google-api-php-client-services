@@ -42,6 +42,7 @@ class DriveActivity extends \Google\Service
       "https://www.googleapis.com/auth/drive.activity.readonly";
 
   public $activity;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DriveActivity service.

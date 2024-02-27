@@ -42,6 +42,7 @@ class AlertCenter extends \Google\Service
   public $alerts;
   public $alerts_feedback;
   public $v1beta1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AlertCenter service.

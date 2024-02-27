@@ -54,6 +54,7 @@ class DeploymentManager extends \Google\Service
   public $operations;
   public $resources;
   public $types;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DeploymentManager service.

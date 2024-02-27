@@ -41,6 +41,7 @@ class CloudTasks extends \Google\Service
   public $projects_locations;
   public $projects_locations_queues;
   public $projects_locations_queues_tasks;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudTasks service.

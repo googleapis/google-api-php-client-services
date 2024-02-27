@@ -41,6 +41,7 @@ class PaymentsResellerSubscription extends \Google\Service
   public $partners_products;
   public $partners_promotions;
   public $partners_subscriptions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PaymentsResellerSubscription

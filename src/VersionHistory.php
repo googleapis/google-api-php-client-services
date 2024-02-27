@@ -40,6 +40,7 @@ class VersionHistory extends \Google\Service
   public $platforms_channels;
   public $platforms_channels_versions;
   public $platforms_channels_versions_releases;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the VersionHistory service.

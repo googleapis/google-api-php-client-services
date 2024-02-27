@@ -53,6 +53,7 @@ class YouTubeAnalytics extends \Google\Service
   public $groupItems;
   public $groups;
   public $reports;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the YouTubeAnalytics service.

@@ -50,6 +50,7 @@ class Blogger extends \Google\Service
   public $postUserInfos;
   public $posts;
   public $users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Blogger service.

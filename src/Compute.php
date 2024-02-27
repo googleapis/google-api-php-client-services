@@ -149,6 +149,7 @@ class Compute extends \Google\Service
   public $vpnTunnels;
   public $zoneOperations;
   public $zones;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Compute service.

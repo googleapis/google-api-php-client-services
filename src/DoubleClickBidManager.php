@@ -41,6 +41,7 @@ class DoubleClickBidManager extends \Google\Service
 
   public $queries;
   public $queries_reports;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DoubleClickBidManager

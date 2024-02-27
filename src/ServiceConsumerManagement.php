@@ -41,6 +41,7 @@ class ServiceConsumerManagement extends \Google\Service
   public $operations;
   public $services;
   public $services_tenancyUnits;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ServiceConsumerManagement

@@ -43,6 +43,7 @@ class ServiceDirectory extends \Google\Service
   public $projects_locations_namespaces;
   public $projects_locations_namespaces_services;
   public $projects_locations_namespaces_services_endpoints;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ServiceDirectory service.

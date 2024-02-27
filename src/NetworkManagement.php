@@ -42,6 +42,7 @@ class NetworkManagement extends \Google\Service
   public $projects_locations;
   public $projects_locations_global_connectivityTests;
   public $projects_locations_global_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the NetworkManagement service.

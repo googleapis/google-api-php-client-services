@@ -49,6 +49,7 @@ class Playdeveloperreporting extends \Google\Service
   public $vitals_slowrenderingrate;
   public $vitals_slowstartrate;
   public $vitals_stuckbackgroundwakelockrate;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Playdeveloperreporting

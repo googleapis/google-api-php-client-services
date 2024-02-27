@@ -43,6 +43,7 @@ class Storagetransfer extends \Google\Service
   public $projects_agentPools;
   public $transferJobs;
   public $transferOperations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Storagetransfer service.

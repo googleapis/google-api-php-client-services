@@ -44,6 +44,7 @@ class StreetViewPublish extends \Google\Service
   public $photoSequence;
   public $photoSequences;
   public $photos;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the StreetViewPublish service.

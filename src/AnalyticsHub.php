@@ -45,6 +45,7 @@ class AnalyticsHub extends \Google\Service
   public $projects_locations_dataExchanges;
   public $projects_locations_dataExchanges_listings;
   public $projects_locations_subscriptions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AnalyticsHub service.

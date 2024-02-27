@@ -39,6 +39,7 @@ class Groupssettings extends \Google\Service
       "https://www.googleapis.com/auth/apps.groups.settings";
 
   public $groups;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Groupssettings service.

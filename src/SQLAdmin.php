@@ -51,6 +51,7 @@ class SQLAdmin extends \Google\Service
   public $sslCerts;
   public $tiers;
   public $users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SQLAdmin service.

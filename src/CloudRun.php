@@ -47,6 +47,7 @@ class CloudRun extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_services;
   public $projects_locations_services_revisions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudRun service.

@@ -40,6 +40,7 @@ class Verifiedaccess extends \Google\Service
       "https://www.googleapis.com/auth/verifiedaccess";
 
   public $challenge;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Verifiedaccess service.

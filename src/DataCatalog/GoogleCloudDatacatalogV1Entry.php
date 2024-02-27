@@ -43,6 +43,8 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
    * @var string
    */
   public $displayName;
+  protected $featureOnlineStoreSpecType = GoogleCloudDatacatalogV1FeatureOnlineStoreSpec::class;
+  protected $featureOnlineStoreSpecDataType = '';
   protected $filesetSpecType = GoogleCloudDatacatalogV1FilesetSpec::class;
   protected $filesetSpecDataType = '';
   /**
@@ -237,6 +239,20 @@ class GoogleCloudDatacatalogV1Entry extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param GoogleCloudDatacatalogV1FeatureOnlineStoreSpec
+   */
+  public function setFeatureOnlineStoreSpec(GoogleCloudDatacatalogV1FeatureOnlineStoreSpec $featureOnlineStoreSpec)
+  {
+    $this->featureOnlineStoreSpec = $featureOnlineStoreSpec;
+  }
+  /**
+   * @return GoogleCloudDatacatalogV1FeatureOnlineStoreSpec
+   */
+  public function getFeatureOnlineStoreSpec()
+  {
+    return $this->featureOnlineStoreSpec;
   }
   /**
    * @param GoogleCloudDatacatalogV1FilesetSpec

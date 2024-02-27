@@ -46,6 +46,7 @@ class FirebaseHosting extends \Google\Service
 
   public $operations;
   public $projects_sites_customDomains_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FirebaseHosting service.

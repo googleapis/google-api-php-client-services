@@ -49,6 +49,7 @@ class AnalyticsData extends \Google\Service
 
   public $properties;
   public $properties_audienceExports;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AnalyticsData service.

@@ -44,6 +44,7 @@ class CloudNaturalLanguage extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $documents;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudNaturalLanguage service.

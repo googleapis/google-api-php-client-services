@@ -55,6 +55,7 @@ class ChromeManagement extends \Google\Service
   public $customers_telemetry_events;
   public $customers_telemetry_notificationConfigs;
   public $customers_telemetry_users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ChromeManagement service.

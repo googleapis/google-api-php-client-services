@@ -45,6 +45,7 @@ class DatabaseMigrationService extends \Google\Service
   public $projects_locations_migrationJobs;
   public $projects_locations_operations;
   public $projects_locations_privateConnections;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DatabaseMigrationService

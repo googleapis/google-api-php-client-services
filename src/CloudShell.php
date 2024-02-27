@@ -41,6 +41,7 @@ class CloudShell extends \Google\Service
 
   public $operations;
   public $users_environments;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudShell service.

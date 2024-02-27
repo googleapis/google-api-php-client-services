@@ -65,6 +65,7 @@ class DLP extends \Google\Service
   public $projects_locations_jobTriggers;
   public $projects_locations_storedInfoTypes;
   public $projects_storedInfoTypes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DLP service.

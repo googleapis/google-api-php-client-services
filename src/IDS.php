@@ -45,6 +45,7 @@ class IDS extends \Google\Service
   public $projects_locations;
   public $projects_locations_endpoints;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the IDS service.

@@ -42,6 +42,7 @@ class Doubleclicksearch extends \Google\Service
   public $conversion;
   public $reports;
   public $savedColumns;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Doubleclicksearch service.

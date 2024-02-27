@@ -58,6 +58,7 @@ class Cloudchannel extends \Google\Service
   public $operations;
   public $products;
   public $products_skus;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Cloudchannel service.

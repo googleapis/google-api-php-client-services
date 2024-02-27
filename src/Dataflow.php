@@ -43,9 +43,6 @@ class Dataflow extends \Google\Service
   /** View your Google Compute Engine resources. */
   const COMPUTE_READONLY =
       "https://www.googleapis.com/auth/compute.readonly";
-  /** See your primary Google Account email address. */
-  const USERINFO_EMAIL =
-      "https://www.googleapis.com/auth/userinfo.email";
 
   public $projects;
   public $projects_jobs;
@@ -64,6 +61,7 @@ class Dataflow extends \Google\Service
   public $projects_locations_templates;
   public $projects_snapshots;
   public $projects_templates;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dataflow service.

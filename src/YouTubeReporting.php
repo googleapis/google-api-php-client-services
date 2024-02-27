@@ -46,6 +46,7 @@ class YouTubeReporting extends \Google\Service
   public $jobs_reports;
   public $media;
   public $reportTypes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the YouTubeReporting service.

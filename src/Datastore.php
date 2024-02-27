@@ -45,6 +45,7 @@ class Datastore extends \Google\Service
   public $projects;
   public $projects_indexes;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Datastore service.

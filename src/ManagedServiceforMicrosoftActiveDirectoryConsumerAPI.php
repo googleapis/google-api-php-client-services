@@ -45,6 +45,7 @@ class ManagedServiceforMicrosoftActiveDirectoryConsumerAPI extends \Google\Servi
   public $projects_locations_global_domains_sqlIntegrations;
   public $projects_locations_global_operations;
   public $projects_locations_global_peerings;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the

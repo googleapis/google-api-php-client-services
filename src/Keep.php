@@ -45,6 +45,7 @@ class Keep extends \Google\Service
   public $media;
   public $notes;
   public $notes_permissions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Keep service.

@@ -49,6 +49,7 @@ class CloudKMS extends \Google\Service
   public $projects_locations_keyRings_cryptoKeys;
   public $projects_locations_keyRings_cryptoKeys_cryptoKeyVersions;
   public $projects_locations_keyRings_importJobs;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudKMS service.

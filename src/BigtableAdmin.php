@@ -71,6 +71,7 @@ class BigtableAdmin extends \Google\Service
   public $projects_instances_clusters_hotTablets;
   public $projects_instances_tables;
   public $projects_locations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BigtableAdmin service.

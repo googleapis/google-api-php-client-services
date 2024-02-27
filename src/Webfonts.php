@@ -38,6 +38,7 @@ class Webfonts extends \Google\Service
 
 
   public $webfonts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Webfonts service.

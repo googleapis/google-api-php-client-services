@@ -50,6 +50,7 @@ class Dataproc extends \Google\Service
   public $projects_regions_jobs;
   public $projects_regions_operations;
   public $projects_regions_workflowTemplates;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dataproc service.

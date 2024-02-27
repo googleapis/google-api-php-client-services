@@ -43,6 +43,7 @@ class ServiceControl extends \Google\Service
       "https://www.googleapis.com/auth/servicecontrol";
 
   public $services;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ServiceControl service.

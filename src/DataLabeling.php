@@ -55,6 +55,7 @@ class DataLabeling extends \Google\Service
   public $projects_evaluations;
   public $projects_instructions;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DataLabeling service.

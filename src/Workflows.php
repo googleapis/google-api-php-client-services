@@ -42,6 +42,7 @@ class Workflows extends \Google\Service
   public $projects_locations;
   public $projects_locations_operations;
   public $projects_locations_workflows;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Workflows service.

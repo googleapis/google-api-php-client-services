@@ -52,6 +52,7 @@ class CloudResourceManager extends \Google\Service
   public $tagKeys;
   public $tagValues;
   public $tagValues_tagHolds;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudResourceManager service.

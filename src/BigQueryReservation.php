@@ -45,6 +45,7 @@ class BigQueryReservation extends \Google\Service
   public $projects_locations_capacityCommitments;
   public $projects_locations_reservations;
   public $projects_locations_reservations_assignments;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BigQueryReservation service.

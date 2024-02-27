@@ -42,6 +42,7 @@ class WorkflowExecutions extends \Google\Service
   public $projects_locations_workflows_executions;
   public $projects_locations_workflows_executions_callbacks;
   public $projects_locations_workflows_executions_stepEntries;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the WorkflowExecutions service.

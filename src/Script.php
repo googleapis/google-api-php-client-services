@@ -94,6 +94,7 @@ class Script extends \Google\Service
   public $projects_deployments;
   public $projects_versions;
   public $scripts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Script service.

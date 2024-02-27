@@ -41,6 +41,7 @@ class Essentialcontacts extends \Google\Service
   public $folders_contacts;
   public $organizations_contacts;
   public $projects_contacts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Essentialcontacts service.

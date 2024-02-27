@@ -64,6 +64,7 @@ class Bigquery extends \Google\Service
   public $rowAccessPolicies;
   public $tabledata;
   public $tables;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Bigquery service.

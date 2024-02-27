@@ -49,6 +49,7 @@ class ChromePolicy extends \Google\Service
   public $customers_policies_orgunits;
   public $customers_policySchemas;
   public $media;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ChromePolicy service.

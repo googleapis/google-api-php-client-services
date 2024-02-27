@@ -40,6 +40,7 @@ class Fcmdata extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_androidApps_deliveryData;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Fcmdata service.

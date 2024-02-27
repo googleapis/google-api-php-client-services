@@ -110,6 +110,7 @@ class Logging extends \Google\Service
   public $projects_sinks;
   public $sinks;
   public $v2;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Logging service.

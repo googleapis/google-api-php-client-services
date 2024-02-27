@@ -43,6 +43,7 @@ class ResourceSettings extends \Google\Service
   public $folders_settings;
   public $organizations_settings;
   public $projects_settings;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ResourceSettings service.

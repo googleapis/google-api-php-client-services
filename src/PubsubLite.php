@@ -47,6 +47,7 @@ class PubsubLite extends \Google\Service
   public $cursor_projects_locations_subscriptions;
   public $cursor_projects_locations_subscriptions_cursors;
   public $topicStats_projects_locations_topics;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PubsubLite service.

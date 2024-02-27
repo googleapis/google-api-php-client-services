@@ -37,6 +37,7 @@ class TravelImpactModel extends \Google\Service
 
 
   public $flights;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the TravelImpactModel service.

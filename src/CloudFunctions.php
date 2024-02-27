@@ -42,6 +42,7 @@ class CloudFunctions extends \Google\Service
   public $projects_locations_functions;
   public $projects_locations_operations;
   public $projects_locations_runtimes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudFunctions service.

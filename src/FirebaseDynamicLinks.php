@@ -41,6 +41,7 @@ class FirebaseDynamicLinks extends \Google\Service
   public $managedShortLinks;
   public $shortLinks;
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the FirebaseDynamicLinks service.

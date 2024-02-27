@@ -48,6 +48,7 @@ class Reports extends \Google\Service
   public $customerUsageReports;
   public $entityUsageReports;
   public $userUsageReport;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Reports service.

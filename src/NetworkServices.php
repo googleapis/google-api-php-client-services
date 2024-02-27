@@ -54,6 +54,7 @@ class NetworkServices extends \Google\Service
   public $projects_locations_serviceLbPolicies;
   public $projects_locations_tcpRoutes;
   public $projects_locations_tlsRoutes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the NetworkServices service.

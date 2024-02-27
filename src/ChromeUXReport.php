@@ -38,6 +38,7 @@ class ChromeUXReport extends \Google\Service
 
 
   public $records;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ChromeUXReport service.

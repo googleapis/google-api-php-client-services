@@ -49,6 +49,7 @@ class RealTimeBidding extends \Google\Service
   public $buyers;
   public $buyers_creatives;
   public $buyers_userLists;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the RealTimeBidding service.

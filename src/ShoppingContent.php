@@ -80,6 +80,7 @@ class ShoppingContent extends \Google\Service
   public $settlementtransactions;
   public $shippingsettings;
   public $shoppingadsprogram;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ShoppingContent service.

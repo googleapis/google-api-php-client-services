@@ -44,6 +44,7 @@ class SecretManager extends \Google\Service
   public $projects_locations_secrets_versions;
   public $projects_secrets;
   public $projects_secrets_versions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the SecretManager service.

@@ -56,6 +56,7 @@ class Forms extends \Google\Service
   public $forms;
   public $forms_responses;
   public $forms_watches;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Forms service.

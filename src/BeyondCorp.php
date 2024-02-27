@@ -52,6 +52,7 @@ class BeyondCorp extends \Google\Service
   public $projects_locations_clientConnectorServices;
   public $projects_locations_clientGateways;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BeyondCorp service.

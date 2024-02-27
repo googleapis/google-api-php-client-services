@@ -43,6 +43,7 @@ class CloudBillingBudget extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $billingAccounts_budgets;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudBillingBudget service.

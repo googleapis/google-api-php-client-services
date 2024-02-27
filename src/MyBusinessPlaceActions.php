@@ -40,6 +40,7 @@ class MyBusinessPlaceActions extends \Google\Service
 
   public $locations_placeActionLinks;
   public $placeActionTypeMetadata;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MyBusinessPlaceActions

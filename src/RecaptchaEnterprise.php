@@ -45,6 +45,7 @@ class RecaptchaEnterprise extends \Google\Service
   public $projects_relatedaccountgroupmemberships;
   public $projects_relatedaccountgroups;
   public $projects_relatedaccountgroups_memberships;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the RecaptchaEnterprise service.

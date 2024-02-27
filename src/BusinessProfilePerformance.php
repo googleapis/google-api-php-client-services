@@ -40,6 +40,7 @@ class BusinessProfilePerformance extends \Google\Service
 
   public $locations;
   public $locations_searchkeywords_impressions_monthly;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the BusinessProfilePerformance

@@ -58,6 +58,7 @@ class Slides extends \Google\Service
 
   public $presentations;
   public $presentations_pages;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Slides service.

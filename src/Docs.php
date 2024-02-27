@@ -51,6 +51,7 @@ class Docs extends \Google\Service
       "https://www.googleapis.com/auth/drive.readonly";
 
   public $documents;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Docs service.
