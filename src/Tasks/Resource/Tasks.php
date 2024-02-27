@@ -111,7 +111,7 @@ class Tasks extends \Google\Service\Resource
    * timestamp) to filter by. Optional. The default is not to filter by due date.
    * @opt_param string dueMin Lower bound for a task's due date (as a RFC 3339
    * timestamp) to filter by. Optional. The default is not to filter by due date.
-   * @opt_param int maxResults Maximum number of task lists returned on one page.
+   * @opt_param int maxResults Maximum number of tasks returned on one page.
    * Optional. The default is 20 (max allowed: 100).
    * @opt_param string pageToken Token specifying the result page to return.
    * Optional.
