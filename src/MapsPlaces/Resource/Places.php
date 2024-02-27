@@ -17,6 +17,8 @@
 
 namespace Google\Service\MapsPlaces\Resource;
 
+use Google\Service\MapsPlaces\GoogleMapsPlacesV1AutocompletePlacesRequest;
+use Google\Service\MapsPlaces\GoogleMapsPlacesV1AutocompletePlacesResponse;
 use Google\Service\MapsPlaces\GoogleMapsPlacesV1Place;
 use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchNearbyRequest;
 use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchNearbyResponse;
@@ -33,6 +35,20 @@ use Google\Service\MapsPlaces\GoogleMapsPlacesV1SearchTextResponse;
  */
 class Places extends \Google\Service\Resource
 {
+  /**
+   * Returns predictions for the given input. (places.autocomplete)
+   *
+   * @param GoogleMapsPlacesV1AutocompletePlacesRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleMapsPlacesV1AutocompletePlacesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function autocomplete(GoogleMapsPlacesV1AutocompletePlacesRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('autocomplete', [$params], GoogleMapsPlacesV1AutocompletePlacesResponse::class);
+  }
   /**
    * Get the details of a place based on its resource name, which is a string in
    * the `places/{place_id}` format. (places.get)
@@ -51,6 +67,25 @@ class Places extends \Google\Service\Resource
    * see https://www.unicode.org/cldr/charts/latest/supplemental/territory_languag
    * e_information.html. Note that 3-digit region codes are not currently
    * supported.
+   * @opt_param string sessionToken Optional. A string which identifies an
+   * Autocomplete session for billing purposes. Must be a URL and filename safe
+   * base64 string with at most 36 ASCII characters in length. Otherwise an
+   * INVALID_ARGUMENT error is returned. The session begins when the user starts
+   * typing a query, and concludes when they select a place and a call to Place
+   * Details or Address Validation is made. Each session can have multiple
+   * queries, followed by one Place Details or Address Validation request. The
+   * credentials used for each request within a session must belong to the same
+   * Google Cloud Console project. Once a session has concluded, the token is no
+   * longer valid; your app must generate a fresh token for each session. If the
+   * `session_token` parameter is omitted, or if you reuse a session token, the
+   * session is charged as if no session token was provided (each request is
+   * billed separately). We recommend the following guidelines: * Use session
+   * tokens for all Place Autocomplete calls. * Generate a fresh token for each
+   * session. Using a version 4 UUID is recommended. * Ensure that the credentials
+   * used for all Place Autocomplete, Place Details, and Address Validation
+   * requests within a session belong to the same Cloud Console project. * Be sure
+   * to pass a unique session token for each new session. Using the same token for
+   * more than one session will result in each request being billed individually.
    * @return GoogleMapsPlacesV1Place
    * @throws \Google\Service\Exception
    */

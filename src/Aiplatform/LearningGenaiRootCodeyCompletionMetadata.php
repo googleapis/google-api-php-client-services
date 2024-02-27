@@ -15,30 +15,29 @@
  * the License.
  */
 
-namespace Google\Service\AppHub;
+namespace Google\Service\Aiplatform;
 
-class Environment extends \Google\Model
+class LearningGenaiRootCodeyCompletionMetadata extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $type;
+  protected $collection_key = 'checkpoints';
+  protected $checkpointsType = LearningGenaiRootCodeyCheckpoint::class;
+  protected $checkpointsDataType = 'array';
 
   /**
-   * @param string
+   * @param LearningGenaiRootCodeyCheckpoint[]
    */
-  public function setType($type)
+  public function setCheckpoints($checkpoints)
   {
-    $this->type = $type;
+    $this->checkpoints = $checkpoints;
   }
   /**
-   * @return string
+   * @return LearningGenaiRootCodeyCheckpoint[]
    */
-  public function getType()
+  public function getCheckpoints()
   {
-    return $this->type;
+    return $this->checkpoints;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Environment::class, 'Google_Service_AppHub_Environment');
+class_alias(LearningGenaiRootCodeyCompletionMetadata::class, 'Google_Service_Aiplatform_LearningGenaiRootCodeyCompletionMetadata');

@@ -15,15 +15,33 @@
  * the License.
  */
 
-namespace Google\Service\AppHub;
+namespace Google\Service\CloudAlloyDBAdmin;
 
-class Environment extends \Google\Model
+class StorageDatabasecenterPartnerapiV1mainEntitlement extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $entitlementState;
   /**
    * @var string
    */
   public $type;
 
+  /**
+   * @param string
+   */
+  public function setEntitlementState($entitlementState)
+  {
+    $this->entitlementState = $entitlementState;
+  }
+  /**
+   * @return string
+   */
+  public function getEntitlementState()
+  {
+    return $this->entitlementState;
+  }
   /**
    * @param string
    */
@@ -41,4 +59,4 @@ class Environment extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Environment::class, 'Google_Service_AppHub_Environment');
+class_alias(StorageDatabasecenterPartnerapiV1mainEntitlement::class, 'Google_Service_CloudAlloyDBAdmin_StorageDatabasecenterPartnerapiV1mainEntitlement');

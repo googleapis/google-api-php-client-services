@@ -18,7 +18,6 @@
 namespace Google\Service\AppHub\Resource;
 
 use Google\Service\AppHub\DiscoveredService;
-use Google\Service\AppHub\FindUnregisteredServicesResponse;
 use Google\Service\AppHub\ListDiscoveredServicesResponse;
 
 /**
@@ -32,34 +31,13 @@ use Google\Service\AppHub\ListDiscoveredServicesResponse;
 class ProjectsLocationsDiscoveredServices extends \Google\Service\Resource
 {
   /**
-   * Finds unregistered services in a host project and location.
-   * (discoveredServices.findUnregistered)
-   *
-   * @param string $parent Required. Value for parent.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
-   * @opt_param int pageSize Optional. Requested page size. Server may return
-   * fewer items than requested. If unspecified, server will pick an appropriate
-   * default.
-   * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
-   * @return FindUnregisteredServicesResponse
-   */
-  public function findUnregistered($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('findUnregistered', [$params], FindUnregisteredServicesResponse::class);
-  }
-  /**
    * Gets a discovered service in a host project and location.
    * (discoveredServices.get)
    *
    * @param string $name Required. Value for name.
    * @param array $optParams Optional parameters.
    * @return DiscoveredService
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -68,7 +46,8 @@ class ProjectsLocationsDiscoveredServices extends \Google\Service\Resource
     return $this->call('get', [$params], DiscoveredService::class);
   }
   /**
-   * Lists discovered services in a host project and location.
+   * Lists discovered services that can be added to an application in a host
+   * project and location.
    * (discoveredServices.listProjectsLocationsDiscoveredServices)
    *
    * @param string $parent Required. Value for parent.
@@ -82,6 +61,7 @@ class ProjectsLocationsDiscoveredServices extends \Google\Service\Resource
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListDiscoveredServicesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDiscoveredServices($parent, $optParams = [])
   {

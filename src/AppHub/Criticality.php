@@ -22,39 +22,21 @@ class Criticality extends \Google\Model
   /**
    * @var string
    */
-  public $level;
-  /**
-   * @var bool
-   */
-  public $missionCritical;
+  public $type;
 
   /**
    * @param string
    */
-  public function setLevel($level)
+  public function setType($type)
   {
-    $this->level = $level;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getLevel()
+  public function getType()
   {
-    return $this->level;
-  }
-  /**
-   * @param bool
-   */
-  public function setMissionCritical($missionCritical)
-  {
-    $this->missionCritical = $missionCritical;
-  }
-  /**
-   * @return bool
-   */
-  public function getMissionCritical()
-  {
-    return $this->missionCritical;
+    return $this->type;
   }
 }
 

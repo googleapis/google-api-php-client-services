@@ -15,30 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\AppHub;
+namespace Google\Service\Aiplatform;
 
-class Environment extends \Google\Model
+class LearningGenaiRootCodeyChatMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $type;
+  public $codeLanguage;
 
   /**
    * @param string
    */
-  public function setType($type)
+  public function setCodeLanguage($codeLanguage)
   {
-    $this->type = $type;
+    $this->codeLanguage = $codeLanguage;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getCodeLanguage()
   {
-    return $this->type;
+    return $this->codeLanguage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Environment::class, 'Google_Service_AppHub_Environment');
+class_alias(LearningGenaiRootCodeyChatMetadata::class, 'Google_Service_Aiplatform_LearningGenaiRootCodeyChatMetadata');

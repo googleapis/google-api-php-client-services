@@ -31,7 +31,7 @@ use Google\Service\DataPortability\InitiatePortabilityArchiveResponse;
 class PortabilityArchive extends \Google\Service\Resource
 {
   /**
-   * Initiates a new Takeout Archive job for the Portability API.
+   * Initiates a new Archive job for the Portability API.
    * (portabilityArchive.initiate)
    *
    * @param InitiatePortabilityArchiveRequest $postBody

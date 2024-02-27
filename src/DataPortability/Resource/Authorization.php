@@ -32,10 +32,10 @@ class Authorization extends \Google\Service\Resource
 {
   /**
    * Revokes OAuth tokens and resets exhausted scopes for a user/project pair.
-   * This method allows you to initiate a Takeout request after a new consent is
-   * granted. This method also indicates that previous archives can be garbage
-   * collected. You should call this method when all jobs are complete and all
-   * archives are downloaded. Do not call it only when you start a new job.
+   * This method allows you to initiate a request after a new consent is granted.
+   * This method also indicates that previous archives can be garbage collected.
+   * You should call this method when all jobs are complete and all archives are
+   * downloaded. Do not call it only when you start a new job.
    * (authorization.reset)
    *
    * @param ResetAuthorizationRequest $postBody

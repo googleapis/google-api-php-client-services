@@ -15,48 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\AppHub;
+namespace Google\Service\MapsPlaces;
 
-class ContactInfo extends \Google\Model
+class GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStringRange extends \Google\Model
 {
   /**
-   * @var string
+   * @var int
    */
-  public $displayName;
+  public $endOffset;
   /**
-   * @var string
+   * @var int
    */
-  public $email;
+  public $startOffset;
 
   /**
-   * @param string
+   * @param int
    */
-  public function setDisplayName($displayName)
+  public function setEndOffset($endOffset)
   {
-    $this->displayName = $displayName;
+    $this->endOffset = $endOffset;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getDisplayName()
+  public function getEndOffset()
   {
-    return $this->displayName;
+    return $this->endOffset;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setEmail($email)
+  public function setStartOffset($startOffset)
   {
-    $this->email = $email;
+    $this->startOffset = $startOffset;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getEmail()
+  public function getStartOffset()
   {
-    return $this->email;
+    return $this->startOffset;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ContactInfo::class, 'Google_Service_AppHub_ContactInfo');
+class_alias(GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStringRange::class, 'Google_Service_MapsPlaces_GoogleMapsPlacesV1AutocompletePlacesResponseSuggestionStringRange');

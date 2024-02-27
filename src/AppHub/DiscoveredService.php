@@ -23,16 +23,8 @@ class DiscoveredService extends \Google\Model
    * @var string
    */
   public $name;
-  /**
-   * @var ServiceProperties
-   */
-  public $serviceProperties;
   protected $servicePropertiesType = ServiceProperties::class;
   protected $servicePropertiesDataType = '';
-  /**
-   * @var ServiceReference
-   */
-  public $serviceReference;
   protected $serviceReferenceType = ServiceReference::class;
   protected $serviceReferenceDataType = '';
 

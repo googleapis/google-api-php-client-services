@@ -15,30 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\AppHub;
+namespace Google\Service\Aiplatform;
 
-class Environment extends \Google\Model
+class LearningGenaiRootCodeyTruncatorMetadata extends \Google\Model
 {
+  /**
+   * @var int
+   */
+  public $cutoffIndex;
   /**
    * @var string
    */
-  public $type;
+  public $truncatedText;
 
+  /**
+   * @param int
+   */
+  public function setCutoffIndex($cutoffIndex)
+  {
+    $this->cutoffIndex = $cutoffIndex;
+  }
+  /**
+   * @return int
+   */
+  public function getCutoffIndex()
+  {
+    return $this->cutoffIndex;
+  }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setTruncatedText($truncatedText)
   {
-    $this->type = $type;
+    $this->truncatedText = $truncatedText;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getTruncatedText()
   {
-    return $this->type;
+    return $this->truncatedText;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Environment::class, 'Google_Service_AppHub_Environment');
+class_alias(LearningGenaiRootCodeyTruncatorMetadata::class, 'Google_Service_Aiplatform_LearningGenaiRootCodeyTruncatorMetadata');

@@ -22,26 +22,8 @@ class ServiceReference extends \Google\Model
   /**
    * @var string
    */
-  public $path;
-  /**
-   * @var string
-   */
   public $uri;
 
-  /**
-   * @param string
-   */
-  public function setPath($path)
-  {
-    $this->path = $path;
-  }
-  /**
-   * @return string
-   */
-  public function getPath()
-  {
-    return $this->path;
-  }
   /**
    * @param string
    */

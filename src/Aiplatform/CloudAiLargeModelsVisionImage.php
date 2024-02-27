@@ -36,6 +36,10 @@ class CloudAiLargeModelsVisionImage extends \Google\Model
   /**
    * @var string
    */
+  public $text;
+  /**
+   * @var string
+   */
   public $uri;
 
   /**
@@ -107,6 +111,20 @@ class CloudAiLargeModelsVisionImage extends \Google\Model
   public function getSemanticFilterResponse()
   {
     return $this->semanticFilterResponse;
+  }
+  /**
+   * @param string
+   */
+  public function setText($text)
+  {
+    $this->text = $text;
+  }
+  /**
+   * @return string
+   */
+  public function getText()
+  {
+    return $this->text;
   }
   /**
    * @param string

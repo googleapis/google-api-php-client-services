@@ -32,11 +32,11 @@ use Google\Service\DataPortability\RetryPortabilityArchiveResponse;
 class ArchiveJobs extends \Google\Service\Resource
 {
   /**
-   * Retrieves the state of a Takeout Archive job for the Portability API.
+   * Retrieves the state of an Archive job for the Portability API.
    * (archiveJobs.getPortabilityArchiveState)
    *
    * @param string $name Required. The archive job ID that is returned when you
-   * request the state of the job from Takeout. The format is:
+   * request the state of the job. The format is:
    * archiveJobs/{archive_job}/portabilityArchiveState. archive_job is the job ID
    * returned by the InitiatePortabilityArchiveResponse.
    * @param array $optParams Optional parameters.
@@ -52,8 +52,8 @@ class ArchiveJobs extends \Google\Service\Resource
   /**
    * Retries a failed Portability Archive job. (archiveJobs.retry)
    *
-   * @param string $name Required. The archive job ID returned by the
-   * InitiatePortabilityArchiveResponse to be retried. Retrying is only executed
+   * @param string $name Required. The Archive job ID you're retrying. This is
+   * returned by the InitiatePortabilityArchiveResponse. Retrying is only executed
    * if the initial job failed.
    * @param RetryPortabilityArchiveRequest $postBody
    * @param array $optParams Optional parameters.

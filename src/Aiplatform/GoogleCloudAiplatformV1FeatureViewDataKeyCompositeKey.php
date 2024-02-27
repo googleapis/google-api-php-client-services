@@ -15,30 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\AppHub;
+namespace Google\Service\Aiplatform;
 
-class Environment extends \Google\Model
+class GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey extends \Google\Collection
 {
+  protected $collection_key = 'parts';
   /**
-   * @var string
+   * @var string[]
    */
-  public $type;
+  public $parts;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setType($type)
+  public function setParts($parts)
   {
-    $this->type = $type;
+    $this->parts = $parts;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getType()
+  public function getParts()
   {
-    return $this->type;
+    return $this->parts;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Environment::class, 'Google_Service_AppHub_Environment');
+class_alias(GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey');

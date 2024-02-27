@@ -60,11 +60,11 @@ class PartnersPromotions extends \Google\Service\Resource
    *
    * @opt_param string filter Optional. Specifies the filters for the promotion
    * results. The syntax is defined in https://google.aip.dev/160 with the
-   * following caveats: - Only the following features are supported: - Logical
+   * following caveats: 1. Only the following features are supported: - Logical
    * operator `AND` - Comparison operator `=` (no wildcards `*`) - Traversal
-   * operator `.` - Has operator `:` (no wildcards `*`) - Only the following
+   * operator `.` - Has operator `:` (no wildcards `*`) 2. Only the following
    * fields are supported: - `applicableProducts` - `regionCodes` -
-   * `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` - Unless
+   * `youtubePayload.partnerEligibilityId` - `youtubePayload.postalCode` 3. Unless
    * explicitly mentioned above, other features are not supported. Example:
    * `applicableProducts:partners/partner1/products/product1 AND regionCodes:US
    * AND youtubePayload.postalCode=94043 AND
