@@ -15,19 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\Appengine\Resource;
+namespace Google\Service\Container;
 
-/**
- * The "applications" collection of methods.
- * Typical usage is:
- *  <code>
- *   $appengineService = new Google\Service\Appengine(...);
- *   $applications = $appengineService->projects_locations_applications;
- *  </code>
- */
-class ProjectsLocationsApplications extends \Google\Service\Resource
+class SecondaryBootDisk extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $diskImage;
+  /**
+   * @var string
+   */
+  public $mode;
+
+  /**
+   * @param string
+   */
+  public function setDiskImage($diskImage)
+  {
+    $this->diskImage = $diskImage;
+  }
+  /**
+   * @return string
+   */
+  public function getDiskImage()
+  {
+    return $this->diskImage;
+  }
+  /**
+   * @param string
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return string
+   */
+  public function getMode()
+  {
+    return $this->mode;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsApplications::class, 'Google_Service_Appengine_Resource_ProjectsLocationsApplications');
+class_alias(SecondaryBootDisk::class, 'Google_Service_Container_SecondaryBootDisk');

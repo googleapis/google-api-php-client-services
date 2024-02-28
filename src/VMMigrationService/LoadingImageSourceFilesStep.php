@@ -15,19 +15,11 @@
  * the License.
  */
 
-namespace Google\Service\Appengine\Resource;
+namespace Google\Service\VMMigrationService;
 
-/**
- * The "applications" collection of methods.
- * Typical usage is:
- *  <code>
- *   $appengineService = new Google\Service\Appengine(...);
- *   $applications = $appengineService->projects_locations_applications;
- *  </code>
- */
-class ProjectsLocationsApplications extends \Google\Service\Resource
+class LoadingImageSourceFilesStep extends \Google\Model
 {
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsApplications::class, 'Google_Service_Appengine_Resource_ProjectsLocationsApplications');
+class_alias(LoadingImageSourceFilesStep::class, 'Google_Service_VMMigrationService_LoadingImageSourceFilesStep');

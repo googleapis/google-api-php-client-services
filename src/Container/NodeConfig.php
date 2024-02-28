@@ -104,6 +104,8 @@ class NodeConfig extends \Google\Collection
   protected $resourceManagerTagsDataType = '';
   protected $sandboxConfigType = SandboxConfig::class;
   protected $sandboxConfigDataType = '';
+  protected $secondaryBootDisksType = SecondaryBootDisk::class;
+  protected $secondaryBootDisksDataType = 'array';
   /**
    * @var string
    */
@@ -518,6 +520,20 @@ class NodeConfig extends \Google\Collection
   public function getSandboxConfig()
   {
     return $this->sandboxConfig;
+  }
+  /**
+   * @param SecondaryBootDisk[]
+   */
+  public function setSecondaryBootDisks($secondaryBootDisks)
+  {
+    $this->secondaryBootDisks = $secondaryBootDisks;
+  }
+  /**
+   * @return SecondaryBootDisk[]
+   */
+  public function getSecondaryBootDisks()
+  {
+    return $this->secondaryBootDisks;
   }
   /**
    * @param string

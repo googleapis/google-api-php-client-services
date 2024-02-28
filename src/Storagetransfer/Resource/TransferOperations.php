@@ -89,11 +89,18 @@ class TransferOperations extends \Google\Service\Resource
    * `transferOperations`.
    * @param string $filter Required. A list of query parameters specified as JSON
    * text in the form of: `{"projectId":"my_project_id",
-   * "jobNames":["jobid1","jobid2",...], "operationNames":["opid1","opid2",...],
+   * "jobNames":["jobid1","jobid2",...], "jobNamePattern": "job_name_pattern",
+   * "operationNames":["opid1","opid2",...], "operationNamePattern":
+   * "operation_name_pattern", "minCreationTime": "min_creation_time",
+   * "maxCreationTime": "max_creation_time",
    * "transferStatuses":["status1","status2",...]}` Since `jobNames`,
    * `operationNames`, and `transferStatuses` support multiple values, they must
-   * be specified with array notation. `projectId` is required. `jobNames`,
-   * `operationNames`, and `transferStatuses` are optional. The valid values for
+   * be specified with array notation. `projectId` is the only argument that is
+   * required. If specified, `jobNamePattern` and `operationNamePattern` must
+   * match the full job or operation name respectively. '*' is a wildcard matching
+   * 0 or more characters. `minCreationTime` and `maxCreationTime` should be
+   * timestamps encoded as a string in the [RFC
+   * 3339](https://www.ietf.org/rfc/rfc3339.txt) format. The valid values for
    * `transferStatuses` are case-insensitive: IN_PROGRESS, PAUSED, SUCCESS,
    * FAILED, and ABORTED.
    * @param array $optParams Optional parameters.

@@ -55,6 +55,7 @@ class Appengine extends \Google\Service
   public $apps_services_versions;
   public $apps_services_versions_instances;
   public $rootUrlTemplate;
+  public $projects_locations_applications_authorizedDomains;
 
   /**
    * Constructs the internal representation of the Appengine service.
@@ -845,6 +846,44 @@ class Appengine extends \Google\Service
                   'required' => true,
                 ],
                 'versionsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_applications_authorizedDomains = new Appengine\Resource\ProjectsLocationsApplicationsAuthorizedDomains(
+        $this,
+        $this->serviceName,
+        'authorizedDomains',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/authorizedDomains',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
