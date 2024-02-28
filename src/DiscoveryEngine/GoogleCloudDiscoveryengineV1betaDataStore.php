@@ -36,6 +36,8 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
    * @var string
    */
   public $displayName;
+  protected $documentProcessingConfigType = GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig::class;
+  protected $documentProcessingConfigDataType = '';
   /**
    * @var string
    */
@@ -48,6 +50,8 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
    * @var string[]
    */
   public $solutionTypes;
+  protected $startingSchemaType = GoogleCloudDiscoveryengineV1betaSchema::class;
+  protected $startingSchemaDataType = '';
 
   /**
    * @param string
@@ -106,6 +110,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
     return $this->displayName;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig
+   */
+  public function setDocumentProcessingConfig(GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig $documentProcessingConfig)
+  {
+    $this->documentProcessingConfig = $documentProcessingConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig
+   */
+  public function getDocumentProcessingConfig()
+  {
+    return $this->documentProcessingConfig;
+  }
+  /**
    * @param string
    */
   public function setIndustryVertical($industryVertical)
@@ -146,6 +164,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getSolutionTypes()
   {
     return $this->solutionTypes;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSchema
+   */
+  public function setStartingSchema(GoogleCloudDiscoveryengineV1betaSchema $startingSchema)
+  {
+    $this->startingSchema = $startingSchema;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSchema
+   */
+  public function getStartingSchema()
+  {
+    return $this->startingSchema;
   }
 }
 

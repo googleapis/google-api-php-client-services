@@ -30,6 +30,10 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
   /**
    * @var string
    */
+  public $ignoredCount;
+  /**
+   * @var string
+   */
   public $successCount;
   /**
    * @var string
@@ -63,6 +67,20 @@ class GoogleCloudDiscoveryengineV1PurgeDocumentsMetadata extends \Google\Model
   public function getFailureCount()
   {
     return $this->failureCount;
+  }
+  /**
+   * @param string
+   */
+  public function setIgnoredCount($ignoredCount)
+  {
+    $this->ignoredCount = $ignoredCount;
+  }
+  /**
+   * @return string
+   */
+  public function getIgnoredCount()
+  {
+    return $this->ignoredCount;
   }
   /**
    * @param string
