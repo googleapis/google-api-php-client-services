@@ -48,6 +48,7 @@ class CloudHealthcare extends \Google\Service
   public $projects_locations_datasets_consentStores_consentArtifacts;
   public $projects_locations_datasets_consentStores_consents;
   public $projects_locations_datasets_consentStores_userDataMappings;
+  public $projects_locations_datasets_dataMapperWorkspaces;
   public $projects_locations_datasets_dicomStores;
   public $projects_locations_datasets_dicomStores_dicomWeb_studies;
   public $projects_locations_datasets_dicomStores_dicomWeb_studies_series;
@@ -744,6 +745,50 @@ class CloudHealthcare extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_datasets_dataMapperWorkspaces = new CloudHealthcare\Resource\ProjectsLocationsDatasetsDataMapperWorkspaces(
+        $this,
+        $this->serviceName,
+        'dataMapperWorkspaces',
+        [
+          'methods' => [
+            'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
