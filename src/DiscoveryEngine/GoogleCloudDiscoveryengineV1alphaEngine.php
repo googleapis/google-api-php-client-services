@@ -20,6 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
 {
   protected $collection_key = 'dataStoreIds';
+  /**
+   * @var bool
+   */
+  public $allowMultipleDataStoresSearchEngine;
   protected $chatEngineConfigType = GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig::class;
   protected $chatEngineConfigDataType = '';
   protected $chatEngineMetadataType = GoogleCloudDiscoveryengineV1alphaEngineChatEngineMetadata::class;
@@ -63,6 +67,20 @@ class GoogleCloudDiscoveryengineV1alphaEngine extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param bool
+   */
+  public function setAllowMultipleDataStoresSearchEngine($allowMultipleDataStoresSearchEngine)
+  {
+    $this->allowMultipleDataStoresSearchEngine = $allowMultipleDataStoresSearchEngine;
+  }
+  /**
+   * @return bool
+   */
+  public function getAllowMultipleDataStoresSearchEngine()
+  {
+    return $this->allowMultipleDataStoresSearchEngine;
+  }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaEngineChatEngineConfig
    */

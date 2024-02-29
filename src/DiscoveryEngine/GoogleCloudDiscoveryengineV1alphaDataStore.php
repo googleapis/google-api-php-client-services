@@ -21,6 +21,10 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
 {
   protected $collection_key = 'solutionTypes';
   /**
+   * @var bool
+   */
+  public $aclEnabled;
+  /**
    * @var string
    */
   public $contentConfig;
@@ -38,6 +42,8 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   public $displayName;
   protected $documentProcessingConfigType = GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig::class;
   protected $documentProcessingConfigDataType = '';
+  protected $idpConfigType = GoogleCloudDiscoveryengineV1alphaIdpConfig::class;
+  protected $idpConfigDataType = '';
   /**
    * @var string
    */
@@ -53,6 +59,20 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   protected $startingSchemaType = GoogleCloudDiscoveryengineV1alphaSchema::class;
   protected $startingSchemaDataType = '';
 
+  /**
+   * @param bool
+   */
+  public function setAclEnabled($aclEnabled)
+  {
+    $this->aclEnabled = $aclEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAclEnabled()
+  {
+    return $this->aclEnabled;
+  }
   /**
    * @param string
    */
@@ -122,6 +142,20 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   public function getDocumentProcessingConfig()
   {
     return $this->documentProcessingConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaIdpConfig
+   */
+  public function setIdpConfig(GoogleCloudDiscoveryengineV1alphaIdpConfig $idpConfig)
+  {
+    $this->idpConfig = $idpConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaIdpConfig
+   */
+  public function getIdpConfig()
+  {
+    return $this->idpConfig;
   }
   /**
    * @param string
