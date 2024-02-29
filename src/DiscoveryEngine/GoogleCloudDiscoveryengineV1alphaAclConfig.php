@@ -15,66 +15,46 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\DiscoveryEngine;
 
-class DeliverInfo extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaAclConfig extends \Google\Model
 {
+  protected $idpConfigType = GoogleCloudDiscoveryengineV1alphaIdpConfig::class;
+  protected $idpConfigDataType = '';
   /**
    * @var string
    */
-  public $ipAddress;
-  /**
-   * @var string
-   */
-  public $resourceUri;
-  /**
-   * @var string
-   */
-  public $target;
+  public $name;
 
   /**
-   * @param string
+   * @param GoogleCloudDiscoveryengineV1alphaIdpConfig
    */
-  public function setIpAddress($ipAddress)
+  public function setIdpConfig(GoogleCloudDiscoveryengineV1alphaIdpConfig $idpConfig)
   {
-    $this->ipAddress = $ipAddress;
+    $this->idpConfig = $idpConfig;
   }
   /**
-   * @return string
+   * @return GoogleCloudDiscoveryengineV1alphaIdpConfig
    */
-  public function getIpAddress()
+  public function getIdpConfig()
   {
-    return $this->ipAddress;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceUri($resourceUri)
-  {
-    $this->resourceUri = $resourceUri;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceUri()
-  {
-    return $this->resourceUri;
+    return $this->idpConfig;
   }
   /**
    * @param string
    */
-  public function setTarget($target)
+  public function setName($name)
   {
-    $this->target = $target;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getTarget()
+  public function getName()
   {
-    return $this->target;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(GoogleCloudDiscoveryengineV1alphaAclConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaAclConfig');

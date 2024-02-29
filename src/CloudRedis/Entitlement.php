@@ -15,66 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class Entitlement extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $entitlementState;
   /**
    * @var string
    */
-  public $resourceUri;
-  /**
-   * @var string
-   */
-  public $target;
+  public $type;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setEntitlementState($entitlementState)
   {
-    $this->ipAddress = $ipAddress;
+    $this->entitlementState = $entitlementState;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getEntitlementState()
   {
-    return $this->ipAddress;
+    return $this->entitlementState;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setType($type)
   {
-    $this->resourceUri = $resourceUri;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getType()
   {
-    return $this->resourceUri;
-  }
-  /**
-   * @param string
-   */
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  /**
-   * @return string
-   */
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(Entitlement::class, 'Google_Service_CloudRedis_Entitlement');

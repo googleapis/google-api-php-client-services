@@ -15,66 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class Compliance extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $standard;
   /**
    * @var string
    */
-  public $resourceUri;
-  /**
-   * @var string
-   */
-  public $target;
+  public $version;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setStandard($standard)
   {
-    $this->ipAddress = $ipAddress;
+    $this->standard = $standard;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getStandard()
   {
-    return $this->ipAddress;
+    return $this->standard;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setVersion($version)
   {
-    $this->resourceUri = $resourceUri;
+    $this->version = $version;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getVersion()
   {
-    return $this->resourceUri;
-  }
-  /**
-   * @param string
-   */
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  /**
-   * @return string
-   */
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(Compliance::class, 'Google_Service_CloudRedis_Compliance');

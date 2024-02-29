@@ -15,66 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\Apigee;
 
-class DeliverInfo extends \Google\Model
+class GoogleCloudApigeeV1DocumentationFile extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $contents;
   /**
    * @var string
    */
-  public $resourceUri;
-  /**
-   * @var string
-   */
-  public $target;
+  public $displayName;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setContents($contents)
   {
-    $this->ipAddress = $ipAddress;
+    $this->contents = $contents;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getContents()
   {
-    return $this->ipAddress;
+    return $this->contents;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setDisplayName($displayName)
   {
-    $this->resourceUri = $resourceUri;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getDisplayName()
   {
-    return $this->resourceUri;
-  }
-  /**
-   * @param string
-   */
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  /**
-   * @return string
-   */
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->displayName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(GoogleCloudApigeeV1DocumentationFile::class, 'Google_Service_Apigee_GoogleCloudApigeeV1DocumentationFile');

@@ -15,66 +15,66 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class OperationError extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $code;
   /**
    * @var string
    */
-  public $resourceUri;
+  public $errorType;
   /**
    * @var string
    */
-  public $target;
+  public $message;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setCode($code)
   {
-    $this->ipAddress = $ipAddress;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getCode()
   {
-    return $this->ipAddress;
+    return $this->code;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setErrorType($errorType)
   {
-    $this->resourceUri = $resourceUri;
+    $this->errorType = $errorType;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getErrorType()
   {
-    return $this->resourceUri;
+    return $this->errorType;
   }
   /**
    * @param string
    */
-  public function setTarget($target)
+  public function setMessage($message)
   {
-    $this->target = $target;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getTarget()
+  public function getMessage()
   {
-    return $this->target;
+    return $this->message;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(OperationError::class, 'Google_Service_CloudRedis_OperationError');

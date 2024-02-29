@@ -15,66 +15,84 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class DatabaseResourceId extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $provider;
   /**
    * @var string
    */
-  public $resourceUri;
+  public $providerDescription;
   /**
    * @var string
    */
-  public $target;
+  public $resourceType;
+  /**
+   * @var string
+   */
+  public $uniqueId;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setProvider($provider)
   {
-    $this->ipAddress = $ipAddress;
+    $this->provider = $provider;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getProvider()
   {
-    return $this->ipAddress;
+    return $this->provider;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setProviderDescription($providerDescription)
   {
-    $this->resourceUri = $resourceUri;
+    $this->providerDescription = $providerDescription;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getProviderDescription()
   {
-    return $this->resourceUri;
+    return $this->providerDescription;
   }
   /**
    * @param string
    */
-  public function setTarget($target)
+  public function setResourceType($resourceType)
   {
-    $this->target = $target;
+    $this->resourceType = $resourceType;
   }
   /**
    * @return string
    */
-  public function getTarget()
+  public function getResourceType()
   {
-    return $this->target;
+    return $this->resourceType;
+  }
+  /**
+   * @param string
+   */
+  public function setUniqueId($uniqueId)
+  {
+    $this->uniqueId = $uniqueId;
+  }
+  /**
+   * @return string
+   */
+  public function getUniqueId()
+  {
+    return $this->uniqueId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(DatabaseResourceId::class, 'Google_Service_CloudRedis_DatabaseResourceId');

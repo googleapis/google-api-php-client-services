@@ -15,66 +15,82 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class BackupRun extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $endTime;
+  protected $errorType = OperationError::class;
+  protected $errorDataType = '';
   /**
    * @var string
    */
-  public $resourceUri;
+  public $startTime;
   /**
    * @var string
    */
-  public $target;
+  public $status;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setEndTime($endTime)
   {
-    $this->ipAddress = $ipAddress;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getEndTime()
   {
-    return $this->ipAddress;
+    return $this->endTime;
+  }
+  /**
+   * @param OperationError
+   */
+  public function setError(OperationError $error)
+  {
+    $this->error = $error;
+  }
+  /**
+   * @return OperationError
+   */
+  public function getError()
+  {
+    return $this->error;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setStartTime($startTime)
   {
-    $this->resourceUri = $resourceUri;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getStartTime()
   {
-    return $this->resourceUri;
+    return $this->startTime;
   }
   /**
    * @param string
    */
-  public function setTarget($target)
+  public function setStatus($status)
   {
-    $this->target = $target;
+    $this->status = $status;
   }
   /**
    * @return string
    */
-  public function getTarget()
+  public function getStatus()
   {
-    return $this->target;
+    return $this->status;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(BackupRun::class, 'Google_Service_CloudRedis_BackupRun');

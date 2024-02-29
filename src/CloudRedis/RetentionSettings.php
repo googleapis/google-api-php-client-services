@@ -15,66 +15,66 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class RetentionSettings extends \Google\Model
 {
   /**
-   * @var string
+   * @var int
    */
-  public $ipAddress;
+  public $quantityBasedRetention;
   /**
    * @var string
    */
-  public $resourceUri;
+  public $retentionUnit;
   /**
    * @var string
    */
-  public $target;
+  public $timeBasedRetention;
 
   /**
-   * @param string
+   * @param int
    */
-  public function setIpAddress($ipAddress)
+  public function setQuantityBasedRetention($quantityBasedRetention)
   {
-    $this->ipAddress = $ipAddress;
+    $this->quantityBasedRetention = $quantityBasedRetention;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getIpAddress()
+  public function getQuantityBasedRetention()
   {
-    return $this->ipAddress;
-  }
-  /**
-   * @param string
-   */
-  public function setResourceUri($resourceUri)
-  {
-    $this->resourceUri = $resourceUri;
-  }
-  /**
-   * @return string
-   */
-  public function getResourceUri()
-  {
-    return $this->resourceUri;
+    return $this->quantityBasedRetention;
   }
   /**
    * @param string
    */
-  public function setTarget($target)
+  public function setRetentionUnit($retentionUnit)
   {
-    $this->target = $target;
+    $this->retentionUnit = $retentionUnit;
   }
   /**
    * @return string
    */
-  public function getTarget()
+  public function getRetentionUnit()
   {
-    return $this->target;
+    return $this->retentionUnit;
+  }
+  /**
+   * @param string
+   */
+  public function setTimeBasedRetention($timeBasedRetention)
+  {
+    $this->timeBasedRetention = $timeBasedRetention;
+  }
+  /**
+   * @return string
+   */
+  public function getTimeBasedRetention()
+  {
+    return $this->timeBasedRetention;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(RetentionSettings::class, 'Google_Service_CloudRedis_RetentionSettings');

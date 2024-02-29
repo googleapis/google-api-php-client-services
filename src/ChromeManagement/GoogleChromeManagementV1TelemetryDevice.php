@@ -72,6 +72,8 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
   protected $osUpdateStatusDataType = 'array';
   protected $peripheralsReportType = GoogleChromeManagementV1PeripheralsReport::class;
   protected $peripheralsReportDataType = 'array';
+  protected $runtimeCountersReportType = GoogleChromeManagementV1RuntimeCountersReport::class;
+  protected $runtimeCountersReportDataType = 'array';
   /**
    * @var string
    */
@@ -390,6 +392,20 @@ class GoogleChromeManagementV1TelemetryDevice extends \Google\Collection
   public function getPeripheralsReport()
   {
     return $this->peripheralsReport;
+  }
+  /**
+   * @param GoogleChromeManagementV1RuntimeCountersReport[]
+   */
+  public function setRuntimeCountersReport($runtimeCountersReport)
+  {
+    $this->runtimeCountersReport = $runtimeCountersReport;
+  }
+  /**
+   * @return GoogleChromeManagementV1RuntimeCountersReport[]
+   */
+  public function getRuntimeCountersReport()
+  {
+    return $this->runtimeCountersReport;
   }
   /**
    * @param string

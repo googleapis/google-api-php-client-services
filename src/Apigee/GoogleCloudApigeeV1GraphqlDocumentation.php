@@ -15,66 +15,46 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\Apigee;
 
-class DeliverInfo extends \Google\Model
+class GoogleCloudApigeeV1GraphqlDocumentation extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
-  /**
-   * @var string
-   */
-  public $resourceUri;
-  /**
-   * @var string
-   */
-  public $target;
+  public $endpointUri;
+  protected $schemaType = GoogleCloudApigeeV1DocumentationFile::class;
+  protected $schemaDataType = '';
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setEndpointUri($endpointUri)
   {
-    $this->ipAddress = $ipAddress;
+    $this->endpointUri = $endpointUri;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getEndpointUri()
   {
-    return $this->ipAddress;
+    return $this->endpointUri;
   }
   /**
-   * @param string
+   * @param GoogleCloudApigeeV1DocumentationFile
    */
-  public function setResourceUri($resourceUri)
+  public function setSchema(GoogleCloudApigeeV1DocumentationFile $schema)
   {
-    $this->resourceUri = $resourceUri;
+    $this->schema = $schema;
   }
   /**
-   * @return string
+   * @return GoogleCloudApigeeV1DocumentationFile
    */
-  public function getResourceUri()
+  public function getSchema()
   {
-    return $this->resourceUri;
-  }
-  /**
-   * @param string
-   */
-  public function setTarget($target)
-  {
-    $this->target = $target;
-  }
-  /**
-   * @return string
-   */
-  public function getTarget()
-  {
-    return $this->target;
+    return $this->schema;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(GoogleCloudApigeeV1GraphqlDocumentation::class, 'Google_Service_Apigee_GoogleCloudApigeeV1GraphqlDocumentation');

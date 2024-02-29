@@ -27,6 +27,10 @@ class AutomationRolloutMetadata extends \Google\Collection
   /**
    * @var string
    */
+  public $currentRepairAutomationRun;
+  /**
+   * @var string
+   */
   public $promoteAutomationRun;
   /**
    * @var string[]
@@ -46,6 +50,20 @@ class AutomationRolloutMetadata extends \Google\Collection
   public function getAdvanceAutomationRuns()
   {
     return $this->advanceAutomationRuns;
+  }
+  /**
+   * @param string
+   */
+  public function setCurrentRepairAutomationRun($currentRepairAutomationRun)
+  {
+    $this->currentRepairAutomationRun = $currentRepairAutomationRun;
+  }
+  /**
+   * @return string
+   */
+  public function getCurrentRepairAutomationRun()
+  {
+    return $this->currentRepairAutomationRun;
   }
   /**
    * @param string

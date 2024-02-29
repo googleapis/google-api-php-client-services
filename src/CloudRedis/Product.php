@@ -15,66 +15,66 @@
  * the License.
  */
 
-namespace Google\Service\NetworkManagement;
+namespace Google\Service\CloudRedis;
 
-class DeliverInfo extends \Google\Model
+class Product extends \Google\Model
 {
   /**
    * @var string
    */
-  public $ipAddress;
+  public $engine;
   /**
    * @var string
    */
-  public $resourceUri;
+  public $type;
   /**
    * @var string
    */
-  public $target;
+  public $version;
 
   /**
    * @param string
    */
-  public function setIpAddress($ipAddress)
+  public function setEngine($engine)
   {
-    $this->ipAddress = $ipAddress;
+    $this->engine = $engine;
   }
   /**
    * @return string
    */
-  public function getIpAddress()
+  public function getEngine()
   {
-    return $this->ipAddress;
+    return $this->engine;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setType($type)
   {
-    $this->resourceUri = $resourceUri;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getType()
   {
-    return $this->resourceUri;
+    return $this->type;
   }
   /**
    * @param string
    */
-  public function setTarget($target)
+  public function setVersion($version)
   {
-    $this->target = $target;
+    $this->version = $version;
   }
   /**
    * @return string
    */
-  public function getTarget()
+  public function getVersion()
   {
-    return $this->target;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeliverInfo::class, 'Google_Service_NetworkManagement_DeliverInfo');
+class_alias(Product::class, 'Google_Service_CloudRedis_Product');
