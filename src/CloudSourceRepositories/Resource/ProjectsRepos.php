@@ -87,7 +87,7 @@ class ProjectsRepos extends \Google\Service\Resource
     return $this->call('get', [$params], Repo::class);
   }
   /**
-   * Gets the access control policy for a resource. Returns an empty policy if the
+   * Gets the IAM policy policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (repos.getIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
@@ -157,8 +157,8 @@ class ProjectsRepos extends \Google\Service\Resource
     return $this->call('patch', [$params], Repo::class);
   }
   /**
-   * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (repos.setIamPolicy)
+   * Sets the IAM policy on the specified resource. Replaces any existing policy.
+   * (repos.setIamPolicy)
    *
    * @param string $resource REQUIRED: The resource for which the policy is being
    * specified. See [Resource
