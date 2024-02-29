@@ -70,8 +70,10 @@ class Enterprises extends \Google\Service\Resource
     return $this->call('create', [$params], Enterprise::class);
   }
   /**
-   * Deletes an enterprise. Only available for EMM-managed enterprises.
-   * (enterprises.delete)
+   * Permanently deletes an enterprise and all accounts and data associated with
+   * it. Warning: this will result in a cascaded deletion of all AM API devices
+   * associated with the deleted enterprise. Only available for EMM-managed
+   * enterprises. (enterprises.delete)
    *
    * @param string $name The name of the enterprise in the form
    * enterprises/{enterpriseId}.
