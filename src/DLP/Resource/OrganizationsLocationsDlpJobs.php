@@ -31,19 +31,19 @@ class OrganizationsLocationsDlpJobs extends \Google\Service\Resource
 {
   /**
    * Lists DlpJobs that match the specified filter in the request. See
-   * https://cloud.google.com/dlp/docs/inspecting-storage and
-   * https://cloud.google.com/dlp/docs/compute-risk-analysis to learn more.
-   * (dlpJobs.listOrganizationsLocationsDlpJobs)
+   * https://cloud.google.com/sensitive-data-protection/docs/inspecting-storage
+   * and https://cloud.google.com/sensitive-data-protection/docs/compute-risk-
+   * analysis to learn more. (dlpJobs.listOrganizationsLocationsDlpJobs)
    *
    * @param string $parent Required. Parent resource name. The format of this
    * value varies depending on whether you have [specified a processing
-   * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-   * scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-   * Projects scope, no location specified (defaults to global):
-   * `projects/`PROJECT_ID The following example `parent` string specifies a
-   * parent project with the identifier `example-project`, and specifies the
-   * `europe-west3` location for processing data: parent=projects/example-
-   * project/locations/europe-west3
+   * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+   * location): + Projects scope, location specified:
+   * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+   * specified (defaults to global): `projects/`PROJECT_ID The following example
+   * `parent` string specifies a parent project with the identifier `example-
+   * project`, and specifies the `europe-west3` location for processing data:
+   * parent=projects/example-project/locations/europe-west3
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Allows filtering. Supported syntax: * Filter

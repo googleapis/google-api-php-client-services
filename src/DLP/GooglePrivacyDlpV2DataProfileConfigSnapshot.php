@@ -25,6 +25,14 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
   protected $discoveryConfigDataType = '';
   protected $inspectConfigType = GooglePrivacyDlpV2InspectConfig::class;
   protected $inspectConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $inspectTemplateModifiedTime;
+  /**
+   * @var string
+   */
+  public $inspectTemplateName;
 
   /**
    * @param GooglePrivacyDlpV2DataProfileJobConfig
@@ -67,6 +75,34 @@ class GooglePrivacyDlpV2DataProfileConfigSnapshot extends \Google\Model
   public function getInspectConfig()
   {
     return $this->inspectConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setInspectTemplateModifiedTime($inspectTemplateModifiedTime)
+  {
+    $this->inspectTemplateModifiedTime = $inspectTemplateModifiedTime;
+  }
+  /**
+   * @return string
+   */
+  public function getInspectTemplateModifiedTime()
+  {
+    return $this->inspectTemplateModifiedTime;
+  }
+  /**
+   * @param string
+   */
+  public function setInspectTemplateName($inspectTemplateName)
+  {
+    $this->inspectTemplateName = $inspectTemplateName;
+  }
+  /**
+   * @return string
+   */
+  public function getInspectTemplateName()
+  {
+    return $this->inspectTemplateName;
   }
 }
 
