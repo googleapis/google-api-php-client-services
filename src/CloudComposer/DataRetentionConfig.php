@@ -19,9 +19,25 @@ namespace Google\Service\CloudComposer;
 
 class DataRetentionConfig extends \Google\Model
 {
+  protected $airflowMetadataRetentionConfigType = AirflowMetadataRetentionPolicyConfig::class;
+  protected $airflowMetadataRetentionConfigDataType = '';
   protected $taskLogsRetentionConfigType = TaskLogsRetentionConfig::class;
   protected $taskLogsRetentionConfigDataType = '';
 
+  /**
+   * @param AirflowMetadataRetentionPolicyConfig
+   */
+  public function setAirflowMetadataRetentionConfig(AirflowMetadataRetentionPolicyConfig $airflowMetadataRetentionConfig)
+  {
+    $this->airflowMetadataRetentionConfig = $airflowMetadataRetentionConfig;
+  }
+  /**
+   * @return AirflowMetadataRetentionPolicyConfig
+   */
+  public function getAirflowMetadataRetentionConfig()
+  {
+    return $this->airflowMetadataRetentionConfig;
+  }
   /**
    * @param TaskLogsRetentionConfig
    */
