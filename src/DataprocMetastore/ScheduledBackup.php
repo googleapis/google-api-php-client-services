@@ -17,12 +17,8 @@
 
 namespace Google\Service\DataprocMetastore;
 
-class Restore extends \Google\Model
+class ScheduledBackup extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $backup;
   /**
    * @var string
    */
@@ -30,38 +26,22 @@ class Restore extends \Google\Model
   /**
    * @var string
    */
-  public $details;
+  public $cronSchedule;
+  /**
+   * @var bool
+   */
+  public $enabled;
+  protected $latestBackupType = LatestBackup::class;
+  protected $latestBackupDataType = '';
   /**
    * @var string
    */
-  public $endTime;
+  public $nextScheduledTime;
   /**
    * @var string
    */
-  public $startTime;
-  /**
-   * @var string
-   */
-  public $state;
-  /**
-   * @var string
-   */
-  public $type;
+  public $timeZone;
 
-  /**
-   * @param string
-   */
-  public function setBackup($backup)
-  {
-    $this->backup = $backup;
-  }
-  /**
-   * @return string
-   */
-  public function getBackup()
-  {
-    return $this->backup;
-  }
   /**
    * @param string
    */
@@ -79,74 +59,74 @@ class Restore extends \Google\Model
   /**
    * @param string
    */
-  public function setDetails($details)
+  public function setCronSchedule($cronSchedule)
   {
-    $this->details = $details;
+    $this->cronSchedule = $cronSchedule;
   }
   /**
    * @return string
    */
-  public function getDetails()
+  public function getCronSchedule()
   {
-    return $this->details;
+    return $this->cronSchedule;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnabled()
+  {
+    return $this->enabled;
+  }
+  /**
+   * @param LatestBackup
+   */
+  public function setLatestBackup(LatestBackup $latestBackup)
+  {
+    $this->latestBackup = $latestBackup;
+  }
+  /**
+   * @return LatestBackup
+   */
+  public function getLatestBackup()
+  {
+    return $this->latestBackup;
   }
   /**
    * @param string
    */
-  public function setEndTime($endTime)
+  public function setNextScheduledTime($nextScheduledTime)
   {
-    $this->endTime = $endTime;
+    $this->nextScheduledTime = $nextScheduledTime;
   }
   /**
    * @return string
    */
-  public function getEndTime()
+  public function getNextScheduledTime()
   {
-    return $this->endTime;
+    return $this->nextScheduledTime;
   }
   /**
    * @param string
    */
-  public function setStartTime($startTime)
+  public function setTimeZone($timeZone)
   {
-    $this->startTime = $startTime;
+    $this->timeZone = $timeZone;
   }
   /**
    * @return string
    */
-  public function getStartTime()
+  public function getTimeZone()
   {
-    return $this->startTime;
-  }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
-  }
-  /**
-   * @param string
-   */
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  /**
-   * @return string
-   */
-  public function getType()
-  {
-    return $this->type;
+    return $this->timeZone;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Restore::class, 'Google_Service_DataprocMetastore_Restore');
+class_alias(ScheduledBackup::class, 'Google_Service_DataprocMetastore_ScheduledBackup');

@@ -17,82 +17,82 @@
 
 namespace Google\Service\DataprocMetastore;
 
-class RestoreServiceRequest extends \Google\Model
+class LatestBackup extends \Google\Model
 {
   /**
    * @var string
    */
-  public $backup;
+  public $backupId;
   /**
    * @var string
    */
-  public $backupLocation;
+  public $duration;
   /**
    * @var string
    */
-  public $requestId;
+  public $startTime;
   /**
    * @var string
    */
-  public $restoreType;
+  public $state;
 
   /**
    * @param string
    */
-  public function setBackup($backup)
+  public function setBackupId($backupId)
   {
-    $this->backup = $backup;
+    $this->backupId = $backupId;
   }
   /**
    * @return string
    */
-  public function getBackup()
+  public function getBackupId()
   {
-    return $this->backup;
+    return $this->backupId;
   }
   /**
    * @param string
    */
-  public function setBackupLocation($backupLocation)
+  public function setDuration($duration)
   {
-    $this->backupLocation = $backupLocation;
+    $this->duration = $duration;
   }
   /**
    * @return string
    */
-  public function getBackupLocation()
+  public function getDuration()
   {
-    return $this->backupLocation;
+    return $this->duration;
   }
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setStartTime($startTime)
   {
-    $this->requestId = $requestId;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getStartTime()
   {
-    return $this->requestId;
+    return $this->startTime;
   }
   /**
    * @param string
    */
-  public function setRestoreType($restoreType)
+  public function setState($state)
   {
-    $this->restoreType = $restoreType;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getRestoreType()
+  public function getState()
   {
-    return $this->restoreType;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RestoreServiceRequest::class, 'Google_Service_DataprocMetastore_RestoreServiceRequest');
+class_alias(LatestBackup::class, 'Google_Service_DataprocMetastore_LatestBackup');
