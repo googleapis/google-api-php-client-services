@@ -37,7 +37,15 @@ class CustomersTelemetryDevices extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string readMask Required. Read mask to specify which fields to
-   * return.
+   * return. Supported read_mask paths are: - name - org_unit_id - device_id -
+   * serial_number - cpu_info - cpu_status_report - memory_info -
+   * memory_status_report - network_info - network_diagnostics_report -
+   * network_status_report - os_update_status - graphics_info -
+   * graphics_status_report - battery_info - battery_status_report - storage_info
+   * - storage_status_report - thunderbolt_info - audio_status_report -
+   * boot_performance_report - heartbeat_status_report - network_bandwidth_report
+   * - peripherals_report - kiosk_app_status_report - app_report -
+   * runtime_counters_report
    * @return GoogleChromeManagementV1TelemetryDevice
    * @throws \Google\Service\Exception
    */
@@ -65,7 +73,15 @@ class CustomersTelemetryDevices extends \Google\Service\Resource
    * 100. Maximum value is 1000.
    * @opt_param string pageToken Token to specify next page in the list.
    * @opt_param string readMask Required. Read mask to specify which fields to
-   * return.
+   * return. Supported read_mask paths are: - name - org_unit_id - device_id -
+   * serial_number - cpu_info - cpu_status_report - memory_info -
+   * memory_status_report - network_info - network_diagnostics_report -
+   * network_status_report - os_update_status - graphics_info -
+   * graphics_status_report - battery_info - battery_status_report - storage_info
+   * - storage_status_report - thunderbolt_info - audio_status_report -
+   * boot_performance_report - heartbeat_status_report - network_bandwidth_report
+   * - peripherals_report - kiosk_app_status_report - app_report -
+   * runtime_counters_report
    * @return GoogleChromeManagementV1ListTelemetryDevicesResponse
    * @throws \Google\Service\Exception
    */
