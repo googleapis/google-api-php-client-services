@@ -19,6 +19,7 @@ namespace Google\Service\AppHub\Resource;
 
 use Google\Service\AppHub\DiscoveredService;
 use Google\Service\AppHub\ListDiscoveredServicesResponse;
+use Google\Service\AppHub\LookupDiscoveredServiceResponse;
 
 /**
  * The "discoveredServices" collection of methods.
@@ -68,6 +69,24 @@ class ProjectsLocationsDiscoveredServices extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListDiscoveredServicesResponse::class);
+  }
+  /**
+   * Looks up a discovered service in a host project and location and with a given
+   * resource URI. (discoveredServices.lookup)
+   *
+   * @param string $parent Required. Value for parent.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string uri Required. Resource URI to find service for. Accepts
+   * both project number and project id and does translation when needed.
+   * @return LookupDiscoveredServiceResponse
+   * @throws \Google\Service\Exception
+   */
+  public function lookup($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('lookup', [$params], LookupDiscoveredServiceResponse::class);
   }
 }
 

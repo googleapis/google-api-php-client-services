@@ -489,6 +489,20 @@ class AppHub extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'lookup' => [
+              'path' => 'v1/{+parent}/discoveredServices:lookup',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'uri' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]
@@ -531,6 +545,20 @@ class AppHub extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'lookup' => [
+              'path' => 'v1/{+parent}/discoveredWorkloads:lookup',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'uri' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

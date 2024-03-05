@@ -19,6 +19,7 @@ namespace Google\Service\AppHub\Resource;
 
 use Google\Service\AppHub\DiscoveredWorkload;
 use Google\Service\AppHub\ListDiscoveredWorkloadsResponse;
+use Google\Service\AppHub\LookupDiscoveredWorkloadResponse;
 
 /**
  * The "discoveredWorkloads" collection of methods.
@@ -68,6 +69,24 @@ class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListDiscoveredWorkloadsResponse::class);
+  }
+  /**
+   * Looks up a discovered Workload in a host project and location and with a
+   * given resource URI. (discoveredWorkloads.lookup)
+   *
+   * @param string $parent Required. Value for parent.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string uri Required. Resource URI to find workload for. Accepts
+   * both project number and project id and does translation when needed.
+   * @return LookupDiscoveredWorkloadResponse
+   * @throws \Google\Service\Exception
+   */
+  public function lookup($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('lookup', [$params], LookupDiscoveredWorkloadResponse::class);
   }
 }
 
