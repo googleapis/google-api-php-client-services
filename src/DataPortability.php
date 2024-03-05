@@ -40,6 +40,27 @@ class DataPortability extends \Google\Service
   /** Move a copy of messages between you and the businesses you have conversations with across Google services.. */
   const DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS =
       "https://www.googleapis.com/auth/dataportability.businessmessaging.conversations";
+  /** Move a copy of the information you entered into online forms in Chrome.. */
+  const DATAPORTABILITY_CHROME_AUTOFILL =
+      "https://www.googleapis.com/auth/dataportability.chrome.autofill";
+  /** Move a copy of pages you bookmarked in Chrome.. */
+  const DATAPORTABILITY_CHROME_BOOKMARKS =
+      "https://www.googleapis.com/auth/dataportability.chrome.bookmarks";
+  /** Move a copy of words you added to Chrome's dictionary.. */
+  const DATAPORTABILITY_CHROME_DICTIONARY =
+      "https://www.googleapis.com/auth/dataportability.chrome.dictionary";
+  /** Move a copy of extensions you installed from the Chrome Web Store.. */
+  const DATAPORTABILITY_CHROME_EXTENSIONS =
+      "https://www.googleapis.com/auth/dataportability.chrome.extensions";
+  /** Move a copy of sites you visited in Chrome.. */
+  const DATAPORTABILITY_CHROME_HISTORY =
+      "https://www.googleapis.com/auth/dataportability.chrome.history";
+  /** Move a copy of pages you added to your reading list in Chrome.. */
+  const DATAPORTABILITY_CHROME_READING_LIST =
+      "https://www.googleapis.com/auth/dataportability.chrome.reading_list";
+  /** Move a copy of your settings in Chrome.. */
+  const DATAPORTABILITY_CHROME_SETTINGS =
+      "https://www.googleapis.com/auth/dataportability.chrome.settings";
   /** Move a copy of your pinned trips on Maps.. */
   const DATAPORTABILITY_MAPS_COMMUTE_ROUTES =
       "https://www.googleapis.com/auth/dataportability.maps.commute_routes";
@@ -73,6 +94,9 @@ class DataPortability extends \Google\Service
   /** Move a copy of your YouTube activity.. */
   const DATAPORTABILITY_MYACTIVITY_YOUTUBE =
       "https://www.googleapis.com/auth/dataportability.myactivity.youtube";
+  /** Move a copy of your saved links, images, places, and collections from your use of Google services.. */
+  const DATAPORTABILITY_SAVED_COLLECTIONS =
+      "https://www.googleapis.com/auth/dataportability.saved.collections";
   /** Move a copy of your shipping information on Shopping.. */
   const DATAPORTABILITY_SHOPPING_ADDRESSES =
       "https://www.googleapis.com/auth/dataportability.shopping.addresses";
@@ -91,6 +115,12 @@ class DataPortability extends \Google\Service
   /** Move a copy of your uploaded YouTube music tracks and your YouTube music library.. */
   const DATAPORTABILITY_YOUTUBE_MUSIC =
       "https://www.googleapis.com/auth/dataportability.youtube.music";
+  /** Move a copy of your YouTube playables saved game progress files.. */
+  const DATAPORTABILITY_YOUTUBE_PLAYABLE =
+      "https://www.googleapis.com/auth/dataportability.youtube.playable";
+  /** Move a copy of your YouTube posts.. */
+  const DATAPORTABILITY_YOUTUBE_POSTS =
+      "https://www.googleapis.com/auth/dataportability.youtube.posts";
   /** Move a copy of your YouTube private playlists.. */
   const DATAPORTABILITY_YOUTUBE_PRIVATE_PLAYLISTS =
       "https://www.googleapis.com/auth/dataportability.youtube.private_playlists";
