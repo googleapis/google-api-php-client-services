@@ -38,6 +38,8 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $autoUpdateExpiration;
+  protected $backlightInfoType = BacklightInfo::class;
+  protected $backlightInfoDataType = 'array';
   /**
    * @var string
    */
@@ -244,6 +246,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getAutoUpdateExpiration()
   {
     return $this->autoUpdateExpiration;
+  }
+  /**
+   * @param BacklightInfo[]
+   */
+  public function setBacklightInfo($backlightInfo)
+  {
+    $this->backlightInfo = $backlightInfo;
+  }
+  /**
+   * @return BacklightInfo[]
+   */
+  public function getBacklightInfo()
+  {
+    return $this->backlightInfo;
   }
   /**
    * @param string
