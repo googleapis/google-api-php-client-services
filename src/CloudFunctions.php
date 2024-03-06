@@ -170,6 +170,10 @@ class CloudFunctions extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'revision' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v2/{+resource}:getIamPolicy',
