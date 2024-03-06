@@ -24,6 +24,8 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
    * @var string
    */
   public $artifactUri;
+  protected $baseModelSourceType = GoogleCloudAiplatformV1ModelBaseModelSource::class;
+  protected $baseModelSourceDataType = '';
   protected $containerSpecType = GoogleCloudAiplatformV1ModelContainerSpec::class;
   protected $containerSpecDataType = '';
   /**
@@ -136,6 +138,20 @@ class GoogleCloudAiplatformV1Model extends \Google\Collection
   public function getArtifactUri()
   {
     return $this->artifactUri;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ModelBaseModelSource
+   */
+  public function setBaseModelSource(GoogleCloudAiplatformV1ModelBaseModelSource $baseModelSource)
+  {
+    $this->baseModelSource = $baseModelSource;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ModelBaseModelSource
+   */
+  public function getBaseModelSource()
+  {
+    return $this->baseModelSource;
   }
   /**
    * @param GoogleCloudAiplatformV1ModelContainerSpec

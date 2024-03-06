@@ -5703,7 +5703,27 @@ class Aiplatform extends \Google\Service
         'pipelineJobs',
         [
           'methods' => [
-            'cancel' => [
+            'batchCancel' => [
+              'path' => 'v1/{+parent}/pipelineJobs:batchCancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'batchDelete' => [
+              'path' => 'v1/{+parent}/pipelineJobs:batchDelete',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'cancel' => [
               'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
