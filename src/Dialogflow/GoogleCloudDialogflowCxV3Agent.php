@@ -60,6 +60,8 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $personalizationSettingsType = GoogleCloudDialogflowCxV3AgentPersonalizationSettings::class;
+  protected $personalizationSettingsDataType = '';
   /**
    * @var string
    */
@@ -248,6 +250,20 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3AgentPersonalizationSettings
+   */
+  public function setPersonalizationSettings(GoogleCloudDialogflowCxV3AgentPersonalizationSettings $personalizationSettings)
+  {
+    $this->personalizationSettings = $personalizationSettings;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3AgentPersonalizationSettings
+   */
+  public function getPersonalizationSettings()
+  {
+    return $this->personalizationSettings;
   }
   /**
    * @param string
