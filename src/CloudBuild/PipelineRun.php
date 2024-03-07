@@ -70,6 +70,8 @@ class PipelineRun extends \Google\Collection
   public $record;
   protected $resolvedPipelineSpecType = PipelineSpec::class;
   protected $resolvedPipelineSpecDataType = '';
+  protected $resultsType = PipelineRunResult::class;
+  protected $resultsDataType = 'array';
   protected $securityType = Security::class;
   protected $securityDataType = '';
   /**
@@ -328,6 +330,20 @@ class PipelineRun extends \Google\Collection
   public function getResolvedPipelineSpec()
   {
     return $this->resolvedPipelineSpec;
+  }
+  /**
+   * @param PipelineRunResult[]
+   */
+  public function setResults($results)
+  {
+    $this->results = $results;
+  }
+  /**
+   * @return PipelineRunResult[]
+   */
+  public function getResults()
+  {
+    return $this->results;
   }
   /**
    * @param Security
