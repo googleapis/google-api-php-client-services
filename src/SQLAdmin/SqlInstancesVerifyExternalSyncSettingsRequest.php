@@ -26,6 +26,10 @@ class SqlInstancesVerifyExternalSyncSettingsRequest extends \Google\Model
    */
   public $syncMode;
   /**
+   * @var string
+   */
+  public $syncParallelLevel;
+  /**
    * @var bool
    */
   public $verifyConnectionOnly;
@@ -61,6 +65,20 @@ class SqlInstancesVerifyExternalSyncSettingsRequest extends \Google\Model
   public function getSyncMode()
   {
     return $this->syncMode;
+  }
+  /**
+   * @param string
+   */
+  public function setSyncParallelLevel($syncParallelLevel)
+  {
+    $this->syncParallelLevel = $syncParallelLevel;
+  }
+  /**
+   * @return string
+   */
+  public function getSyncParallelLevel()
+  {
+    return $this->syncParallelLevel;
   }
   /**
    * @param bool
