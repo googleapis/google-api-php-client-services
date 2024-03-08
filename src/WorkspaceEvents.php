@@ -62,6 +62,12 @@ class WorkspaceEvents extends \Google\Service
   /** View chat and spaces in Google Chat. */
   const CHAT_SPACES_READONLY =
       "https://www.googleapis.com/auth/chat.spaces.readonly";
+  /** Create, edit, and see information about your Google Meet conferences created by the app.. */
+  const MEETINGS_SPACE_CREATED =
+      "https://www.googleapis.com/auth/meetings.space.created";
+  /** Read information about any of your Google Meet conferences. */
+  const MEETINGS_SPACE_READONLY =
+      "https://www.googleapis.com/auth/meetings.space.readonly";
 
   public $operations;
   public $subscriptions;
