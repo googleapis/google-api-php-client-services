@@ -333,6 +333,10 @@ class Playdeveloperreporting extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'sampleErrorReportLimit' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
               ],
             ],
           ]
