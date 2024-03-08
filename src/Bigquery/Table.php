@@ -136,6 +136,8 @@ class Table extends \Google\Collection
    * @var string
    */
   public $numTotalPhysicalBytes;
+  protected $partitionDefinitionType = PartitioningDefinition::class;
+  protected $partitionDefinitionDataType = '';
   protected $rangePartitioningType = RangePartitioning::class;
   protected $rangePartitioningDataType = '';
   protected $replicasType = TableReference::class;
@@ -634,6 +636,20 @@ class Table extends \Google\Collection
   public function getNumTotalPhysicalBytes()
   {
     return $this->numTotalPhysicalBytes;
+  }
+  /**
+   * @param PartitioningDefinition
+   */
+  public function setPartitionDefinition(PartitioningDefinition $partitionDefinition)
+  {
+    $this->partitionDefinition = $partitionDefinition;
+  }
+  /**
+   * @return PartitioningDefinition
+   */
+  public function getPartitionDefinition()
+  {
+    return $this->partitionDefinition;
   }
   /**
    * @param RangePartitioning

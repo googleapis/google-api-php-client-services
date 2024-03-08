@@ -80,6 +80,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $lastModifiedTime;
+  protected $linkedDatasetMetadataType = LinkedDatasetMetadata::class;
+  protected $linkedDatasetMetadataDataType = '';
   protected $linkedDatasetSourceType = LinkedDatasetSource::class;
   protected $linkedDatasetSourceDataType = '';
   /**
@@ -350,6 +352,20 @@ class Dataset extends \Google\Collection
   public function getLastModifiedTime()
   {
     return $this->lastModifiedTime;
+  }
+  /**
+   * @param LinkedDatasetMetadata
+   */
+  public function setLinkedDatasetMetadata(LinkedDatasetMetadata $linkedDatasetMetadata)
+  {
+    $this->linkedDatasetMetadata = $linkedDatasetMetadata;
+  }
+  /**
+   * @return LinkedDatasetMetadata
+   */
+  public function getLinkedDatasetMetadata()
+  {
+    return $this->linkedDatasetMetadata;
   }
   /**
    * @param LinkedDatasetSource
