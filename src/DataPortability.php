@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for DataPortability (v1beta).
+ * Service definition for DataPortability (v1).
  *
  * <p>
  * The Data Portability API lets you build applications that request
@@ -163,7 +163,7 @@ class DataPortability extends \Google\Service
     $this->rootUrl = $rootUrl ?: 'https://dataportability.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta';
+    $this->version = 'v1';
     $this->serviceName = 'dataportability';
 
     $this->archiveJobs = new DataPortability\Resource\ArchiveJobs(
@@ -173,7 +173,7 @@ class DataPortability extends \Google\Service
         [
           'methods' => [
             'getPortabilityArchiveState' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -183,7 +183,7 @@ class DataPortability extends \Google\Service
                 ],
               ],
             ],'retry' => [
-              'path' => 'v1beta/{+name}:retry',
+              'path' => 'v1/{+name}:retry',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -203,7 +203,7 @@ class DataPortability extends \Google\Service
         [
           'methods' => [
             'reset' => [
-              'path' => 'v1beta/authorization:reset',
+              'path' => 'v1/authorization:reset',
               'httpMethod' => 'POST',
               'parameters' => [],
             ],
@@ -217,7 +217,7 @@ class DataPortability extends \Google\Service
         [
           'methods' => [
             'initiate' => [
-              'path' => 'v1beta/portabilityArchive:initiate',
+              'path' => 'v1/portabilityArchive:initiate',
               'httpMethod' => 'POST',
               'parameters' => [],
             ],
