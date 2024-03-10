@@ -32,10 +32,12 @@ use Google\Service\AppHub\LookupDiscoveredWorkloadResponse;
 class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
 {
   /**
-   * Gets a discovered workload in a host project and location.
+   * Gets a Discovered Workload in a host project and location.
    * (discoveredWorkloads.get)
    *
-   * @param string $name Required. Value for name.
+   * @param string $name Required. Fully qualified name of the Discovered Workload
+   * to fetch. Expected format: `projects/{project}/locations/{location}/discovere
+   * dWorkloads/{discoveredWorkload}`.
    * @param array $optParams Optional parameters.
    * @return DiscoveredWorkload
    * @throws \Google\Service\Exception
@@ -47,15 +49,16 @@ class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
     return $this->call('get', [$params], DiscoveredWorkload::class);
   }
   /**
-   * Lists discovered workloads that can be added to an application in a host
+   * Lists Discovered Workloads that can be added to an Application in a host
    * project and location.
    * (discoveredWorkloads.listProjectsLocationsDiscoveredWorkloads)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. Project and location to list Discovered
+   * Workloads on. Expected format: `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
@@ -71,14 +74,16 @@ class ProjectsLocationsDiscoveredWorkloads extends \Google\Service\Resource
     return $this->call('list', [$params], ListDiscoveredWorkloadsResponse::class);
   }
   /**
-   * Looks up a discovered Workload in a host project and location and with a
-   * given resource URI. (discoveredWorkloads.lookup)
+   * Lists a Discovered Workload in a host project and location, with a given
+   * resource URI. (discoveredWorkloads.lookup)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. Host project ID and location to lookup
+   * Discovered Workload in. Expected format:
+   * `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string uri Required. Resource URI to find workload for. Accepts
-   * both project number and project id and does translation when needed.
+   * @opt_param string uri Required. Resource URI to find Discovered Workload for.
+   * Accepts both project number and project ID and does translation when needed.
    * @return LookupDiscoveredWorkloadResponse
    * @throws \Google\Service\Exception
    */
