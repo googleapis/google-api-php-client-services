@@ -248,9 +248,10 @@ class ProjectsLocationsEndpoints extends \Google\Service\Resource
    * last segment of the Endpoint's resource name. * `display_name` supports =
    * and, != * `labels` supports general map functions that is: *
    * `labels.key=value` - key:value equality * `labels.key:* or labels:key - key
-   * existence * A key including a space must be quoted. `labels."a key"`. Some
-   * examples: * `endpoint=1` * `displayName="myDisplayName"` *
-   * `labels.myKey="myValue"`
+   * existence * A key including a space must be quoted. `labels."a key"`. *
+   * `base_model_name` only supports = Some examples: * `endpoint=1` *
+   * `displayName="myDisplayName"` * `labels.myKey="myValue"` *
+   * `baseModelName="text-bison"`
    * @opt_param string orderBy A comma-separated list of fields to order by,
    * sorted in ascending order. Use "desc" after a field name for descending.
    * Supported fields: * `display_name` * `create_time` * `update_time` Example:

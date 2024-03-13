@@ -128,6 +128,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_tensorboards_operations;
   public $projects_locations_trainingPipelines;
   public $projects_locations_trainingPipelines_operations;
+  public $projects_locations_tuningJobs_operations;
   public $publishers_models;
 
   /**
@@ -7553,6 +7554,36 @@ class Aiplatform extends \Google\Service
                 'timeout' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_tuningJobs_operations = new Aiplatform\Resource\ProjectsLocationsTuningJobsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

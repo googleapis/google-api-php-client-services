@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiNlLlmProtoServicePart extends \Google\Model
 {
+  protected $documentMetadataType = CloudAiNlLlmProtoServicePartDocumentMetadata::class;
+  protected $documentMetadataDataType = '';
   protected $fileDataType = CloudAiNlLlmProtoServicePartFileData::class;
   protected $fileDataDataType = '';
   protected $functionCallType = CloudAiNlLlmProtoServiceFunctionCall::class;
@@ -34,6 +36,20 @@ class CloudAiNlLlmProtoServicePart extends \Google\Model
   protected $videoMetadataType = CloudAiNlLlmProtoServicePartVideoMetadata::class;
   protected $videoMetadataDataType = '';
 
+  /**
+   * @param CloudAiNlLlmProtoServicePartDocumentMetadata
+   */
+  public function setDocumentMetadata(CloudAiNlLlmProtoServicePartDocumentMetadata $documentMetadata)
+  {
+    $this->documentMetadata = $documentMetadata;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServicePartDocumentMetadata
+   */
+  public function getDocumentMetadata()
+  {
+    return $this->documentMetadata;
+  }
   /**
    * @param CloudAiNlLlmProtoServicePartFileData
    */
