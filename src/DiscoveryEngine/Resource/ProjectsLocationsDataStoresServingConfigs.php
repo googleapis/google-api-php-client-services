@@ -40,7 +40,7 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
    *
    * @param string $name Required. The resource name of the ServingConfig to get.
    * Format: `projects/{project_number}/locations/{location}/collections/{collecti
-   * on}/dataStores/{data_store}/servingConfigs/{serving_config_id}`
+   * on}/engines/{engine}/servingConfigs/{serving_config_id}`
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDiscoveryengineV1betaServingConfig
    * @throws \Google\Service\Exception
@@ -55,9 +55,9 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
    * Lists all ServingConfigs linked to this dataStore.
    * (servingConfigs.listProjectsLocationsDataStoresServingConfigs)
    *
-   * @param string $parent Required. The dataStore resource name. Format: `project
-   * s/{project_number}/locations/{location}/collections/{collection}/dataStores/{
-   * data_store}`
+   * @param string $parent Required. Full resource name of the parent resource.
+   * Format: `projects/{project_number}/locations/{location}/collections/{collecti
+   * on}/engines/{engine}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. Maximum number of results to return. If
@@ -79,8 +79,8 @@ class ProjectsLocationsDataStoresServingConfigs extends \Google\Service\Resource
    * not exist. (servingConfigs.patch)
    *
    * @param string $name Immutable. Fully qualified name `projects/{project}/locat
-   * ions/{location}/collections/{collection_id}/dataStores/{data_store_id}/servin
-   * gConfigs/{serving_config_id}`
+   * ions/{location}/collections/{collection_id}/engines/{engine_id}/servingConfig
+   * s/{serving_config_id}`
    * @param GoogleCloudDiscoveryengineV1betaServingConfig $postBody
    * @param array $optParams Optional parameters.
    *

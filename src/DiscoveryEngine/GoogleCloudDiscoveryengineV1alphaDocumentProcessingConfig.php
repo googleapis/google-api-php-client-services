@@ -27,8 +27,6 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig extends \Google\
    * @var string
    */
   public $name;
-  protected $ocrConfigType = GoogleCloudDiscoveryengineV1alphaOcrConfig::class;
-  protected $ocrConfigDataType = '';
   protected $parsingConfigOverridesType = GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig::class;
   protected $parsingConfigOverridesDataType = 'map';
 
@@ -73,20 +71,6 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfig extends \Google\
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param GoogleCloudDiscoveryengineV1alphaOcrConfig
-   */
-  public function setOcrConfig(GoogleCloudDiscoveryengineV1alphaOcrConfig $ocrConfig)
-  {
-    $this->ocrConfig = $ocrConfig;
-  }
-  /**
-   * @return GoogleCloudDiscoveryengineV1alphaOcrConfig
-   */
-  public function getOcrConfig()
-  {
-    return $this->ocrConfig;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfig[]
