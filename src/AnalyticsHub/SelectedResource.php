@@ -17,45 +17,28 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class BigQueryDatasetSource extends \Google\Collection
+class SelectedResource extends \Google\Model
 {
-  protected $collection_key = 'selectedResources';
   /**
    * @var string
    */
-  public $dataset;
-  protected $selectedResourcesType = SelectedResource::class;
-  protected $selectedResourcesDataType = 'array';
+  public $table;
 
   /**
    * @param string
    */
-  public function setDataset($dataset)
+  public function setTable($table)
   {
-    $this->dataset = $dataset;
+    $this->table = $table;
   }
   /**
    * @return string
    */
-  public function getDataset()
+  public function getTable()
   {
-    return $this->dataset;
-  }
-  /**
-   * @param SelectedResource[]
-   */
-  public function setSelectedResources($selectedResources)
-  {
-    $this->selectedResources = $selectedResources;
-  }
-  /**
-   * @return SelectedResource[]
-   */
-  public function getSelectedResources()
-  {
-    return $this->selectedResources;
+    return $this->table;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BigQueryDatasetSource::class, 'Google_Service_AnalyticsHub_BigQueryDatasetSource');
+class_alias(SelectedResource::class, 'Google_Service_AnalyticsHub_SelectedResource');
