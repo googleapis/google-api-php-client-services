@@ -68,6 +68,8 @@ class DatabaseResourceMetadata extends \Google\Collection
    * @var string
    */
   public $updationTime;
+  protected $userLabelSetType = UserLabels::class;
+  protected $userLabelSetDataType = '';
   /**
    * @var string[]
    */
@@ -296,6 +298,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getUpdationTime()
   {
     return $this->updationTime;
+  }
+  /**
+   * @param UserLabels
+   */
+  public function setUserLabelSet(UserLabels $userLabelSet)
+  {
+    $this->userLabelSet = $userLabelSet;
+  }
+  /**
+   * @return UserLabels
+   */
+  public function getUserLabelSet()
+  {
+    return $this->userLabelSet;
   }
   /**
    * @param string[]
