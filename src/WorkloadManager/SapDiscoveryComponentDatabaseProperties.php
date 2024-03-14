@@ -30,6 +30,10 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
   /**
    * @var string
    */
+  public $instanceNumber;
+  /**
+   * @var string
+   */
   public $primaryInstanceUri;
   /**
    * @var string
@@ -63,6 +67,20 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
   public function getDatabaseVersion()
   {
     return $this->databaseVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceNumber($instanceNumber)
+  {
+    $this->instanceNumber = $instanceNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceNumber()
+  {
+    return $this->instanceNumber;
   }
   /**
    * @param string

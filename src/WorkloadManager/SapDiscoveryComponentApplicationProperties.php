@@ -34,6 +34,10 @@ class SapDiscoveryComponentApplicationProperties extends \Google\Model
   /**
    * @var string
    */
+  public $instanceNumber;
+  /**
+   * @var string
+   */
   public $kernelVersion;
   /**
    * @var string
@@ -81,6 +85,20 @@ class SapDiscoveryComponentApplicationProperties extends \Google\Model
   public function getAscsUri()
   {
     return $this->ascsUri;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceNumber($instanceNumber)
+  {
+    $this->instanceNumber = $instanceNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceNumber()
+  {
+    return $this->instanceNumber;
   }
   /**
    * @param string
