@@ -223,7 +223,7 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
   /**
    * Updates a single Repository. (repositories.patch)
    *
-   * @param string $name Output only. The repository's name.
+   * @param string $name Identifier. The repository's name.
    * @param Repository $postBody
    * @param array $optParams Optional parameters.
    *
