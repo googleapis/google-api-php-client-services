@@ -47,7 +47,15 @@ class ClusterUpdate extends \Google\Collection
   /**
    * @var bool
    */
+  public $desiredEnableCiliumClusterwideNetworkPolicy;
+  /**
+   * @var bool
+   */
   public $desiredEnableFqdnNetworkPolicy;
+  /**
+   * @var bool
+   */
+  public $desiredEnableMultiNetworking;
   /**
    * @var bool
    */
@@ -310,6 +318,20 @@ class ClusterUpdate extends \Google\Collection
   /**
    * @param bool
    */
+  public function setDesiredEnableCiliumClusterwideNetworkPolicy($desiredEnableCiliumClusterwideNetworkPolicy)
+  {
+    $this->desiredEnableCiliumClusterwideNetworkPolicy = $desiredEnableCiliumClusterwideNetworkPolicy;
+  }
+  /**
+   * @return bool
+   */
+  public function getDesiredEnableCiliumClusterwideNetworkPolicy()
+  {
+    return $this->desiredEnableCiliumClusterwideNetworkPolicy;
+  }
+  /**
+   * @param bool
+   */
   public function setDesiredEnableFqdnNetworkPolicy($desiredEnableFqdnNetworkPolicy)
   {
     $this->desiredEnableFqdnNetworkPolicy = $desiredEnableFqdnNetworkPolicy;
@@ -320,6 +342,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredEnableFqdnNetworkPolicy()
   {
     return $this->desiredEnableFqdnNetworkPolicy;
+  }
+  /**
+   * @param bool
+   */
+  public function setDesiredEnableMultiNetworking($desiredEnableMultiNetworking)
+  {
+    $this->desiredEnableMultiNetworking = $desiredEnableMultiNetworking;
+  }
+  /**
+   * @return bool
+   */
+  public function getDesiredEnableMultiNetworking()
+  {
+    return $this->desiredEnableMultiNetworking;
   }
   /**
    * @param bool

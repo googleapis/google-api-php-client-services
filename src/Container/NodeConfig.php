@@ -104,6 +104,8 @@ class NodeConfig extends \Google\Collection
   protected $resourceManagerTagsDataType = '';
   protected $sandboxConfigType = SandboxConfig::class;
   protected $sandboxConfigDataType = '';
+  protected $secondaryBootDiskUpdateStrategyType = SecondaryBootDiskUpdateStrategy::class;
+  protected $secondaryBootDiskUpdateStrategyDataType = '';
   protected $secondaryBootDisksType = SecondaryBootDisk::class;
   protected $secondaryBootDisksDataType = 'array';
   /**
@@ -520,6 +522,20 @@ class NodeConfig extends \Google\Collection
   public function getSandboxConfig()
   {
     return $this->sandboxConfig;
+  }
+  /**
+   * @param SecondaryBootDiskUpdateStrategy
+   */
+  public function setSecondaryBootDiskUpdateStrategy(SecondaryBootDiskUpdateStrategy $secondaryBootDiskUpdateStrategy)
+  {
+    $this->secondaryBootDiskUpdateStrategy = $secondaryBootDiskUpdateStrategy;
+  }
+  /**
+   * @return SecondaryBootDiskUpdateStrategy
+   */
+  public function getSecondaryBootDiskUpdateStrategy()
+  {
+    return $this->secondaryBootDiskUpdateStrategy;
   }
   /**
    * @param SecondaryBootDisk[]
