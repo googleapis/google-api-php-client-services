@@ -19,34 +19,34 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig extends \Google\Model
 {
-  protected $digitalParsingConfigType = GoogleCloudDiscoveryengineV1DigitalParsingConfig::class;
+  protected $digitalParsingConfigType = GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig::class;
   protected $digitalParsingConfigDataType = '';
-  protected $ocrParsingConfigType = GoogleCloudDiscoveryengineV1OcrParsingConfig::class;
+  protected $ocrParsingConfigType = GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig::class;
   protected $ocrParsingConfigDataType = '';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1DigitalParsingConfig
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig
    */
-  public function setDigitalParsingConfig(GoogleCloudDiscoveryengineV1DigitalParsingConfig $digitalParsingConfig)
+  public function setDigitalParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig $digitalParsingConfig)
   {
     $this->digitalParsingConfig = $digitalParsingConfig;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1DigitalParsingConfig
+   * @return GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig
    */
   public function getDigitalParsingConfig()
   {
     return $this->digitalParsingConfig;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1OcrParsingConfig
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig
    */
-  public function setOcrParsingConfig(GoogleCloudDiscoveryengineV1OcrParsingConfig $ocrParsingConfig)
+  public function setOcrParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig $ocrParsingConfig)
   {
     $this->ocrParsingConfig = $ocrParsingConfig;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1OcrParsingConfig
+   * @return GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig
    */
   public function getOcrParsingConfig()
   {

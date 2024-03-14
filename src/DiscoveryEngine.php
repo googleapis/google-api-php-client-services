@@ -248,6 +248,16 @@ class DiscoveryEngine extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'trainCustomModel' => [
+              'path' => 'v1beta/{+dataStore}:trainCustomModel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'dataStore' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
