@@ -68,6 +68,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $updationTime;
+  protected $userLabelSetType = StorageDatabasecenterPartnerapiV1mainUserLabels::class;
+  protected $userLabelSetDataType = '';
   /**
    * @var string[]
    */
@@ -296,6 +298,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getUpdationTime()
   {
     return $this->updationTime;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainUserLabels
+   */
+  public function setUserLabelSet(StorageDatabasecenterPartnerapiV1mainUserLabels $userLabelSet)
+  {
+    $this->userLabelSet = $userLabelSet;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainUserLabels
+   */
+  public function getUserLabelSet()
+  {
+    return $this->userLabelSet;
   }
   /**
    * @param string[]
