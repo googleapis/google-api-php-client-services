@@ -19,6 +19,10 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataScanJob extends \Google\Model
 {
+  protected $dataDocumentationResultType = GoogleCloudDataplexV1DataDocumentationResult::class;
+  protected $dataDocumentationResultDataType = '';
+  protected $dataDocumentationSpecType = GoogleCloudDataplexV1DataDocumentationSpec::class;
+  protected $dataDocumentationSpecDataType = '';
   protected $dataProfileResultType = GoogleCloudDataplexV1DataProfileResult::class;
   protected $dataProfileResultDataType = '';
   protected $dataProfileSpecType = GoogleCloudDataplexV1DataProfileSpec::class;
@@ -56,6 +60,34 @@ class GoogleCloudDataplexV1DataScanJob extends \Google\Model
    */
   public $uid;
 
+  /**
+   * @param GoogleCloudDataplexV1DataDocumentationResult
+   */
+  public function setDataDocumentationResult(GoogleCloudDataplexV1DataDocumentationResult $dataDocumentationResult)
+  {
+    $this->dataDocumentationResult = $dataDocumentationResult;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataDocumentationResult
+   */
+  public function getDataDocumentationResult()
+  {
+    return $this->dataDocumentationResult;
+  }
+  /**
+   * @param GoogleCloudDataplexV1DataDocumentationSpec
+   */
+  public function setDataDocumentationSpec(GoogleCloudDataplexV1DataDocumentationSpec $dataDocumentationSpec)
+  {
+    $this->dataDocumentationSpec = $dataDocumentationSpec;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataDocumentationSpec
+   */
+  public function getDataDocumentationSpec()
+  {
+    return $this->dataDocumentationSpec;
+  }
   /**
    * @param GoogleCloudDataplexV1DataProfileResult
    */
