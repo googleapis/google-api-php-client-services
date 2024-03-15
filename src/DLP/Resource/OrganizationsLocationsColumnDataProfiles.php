@@ -46,12 +46,12 @@ class OrganizationsLocationsColumnDataProfiles extends \Google\Service\Resource
     return $this->call('get', [$params], GooglePrivacyDlpV2ColumnDataProfile::class);
   }
   /**
-   * Lists data profiles for an organization.
+   * Lists column data profiles for an organization.
    * (columnDataProfiles.listOrganizationsLocationsColumnDataProfiles)
    *
    * @param string $parent Required. Resource name of the organization or project,
-   * for example `organizations/433245324/locations/europe` or projects/project-
-   * id/locations/asia.
+   * for example `organizations/433245324/locations/europe` or `projects/project-
+   * id/locations/asia`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Allows filtering. Supported syntax: * Filter
