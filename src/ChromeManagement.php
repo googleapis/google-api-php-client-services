@@ -240,6 +240,28 @@ class ChromeManagement extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'countChromeCrashEvents' => [
+              'path' => 'v1/{+customer}/reports:countChromeCrashEvents',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'customer' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orgUnitId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'countChromeDevicesReachingAutoExpirationDate' => [
               'path' => 'v1/{+customer}/reports:countChromeDevicesReachingAutoExpirationDate',
               'httpMethod' => 'GET',
