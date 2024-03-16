@@ -39,6 +39,7 @@ class OSConfig extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $projects_locations_global;
   public $projects_locations_instances_inventories;
   public $projects_locations_instances_osPolicyAssignments_reports;
   public $projects_locations_instances_vulnerabilityReports;
@@ -64,6 +65,40 @@ class OSConfig extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'osconfig';
 
+    $this->projects_locations_global = new OSConfig\Resource\ProjectsLocationsOsconfigGlobal(
+        $this,
+        $this->serviceName,
+        'global',
+        [
+          'methods' => [
+            'getProjectFeatureSettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateProjectFeatureSettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_instances_inventories = new OSConfig\Resource\ProjectsLocationsInstancesInventories(
         $this,
         $this->serviceName,
