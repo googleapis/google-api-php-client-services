@@ -60,6 +60,7 @@ class ArtifactRegistry extends \Google\Service
   public $projects_locations_repositories_packages_versions;
   public $projects_locations_repositories_pythonPackages;
   public $projects_locations_repositories_yumArtifacts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ArtifactRegistry service.
@@ -72,6 +73,7 @@ class ArtifactRegistry extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://artifactregistry.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://artifactregistry.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

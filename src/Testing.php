@@ -46,6 +46,7 @@ class Testing extends \Google\Service
   public $projects_deviceSessions;
   public $projects_testMatrices;
   public $testEnvironmentCatalog;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Testing service.
@@ -58,6 +59,7 @@ class Testing extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://testing.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://testing.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

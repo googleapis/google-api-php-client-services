@@ -55,6 +55,7 @@ class ChromeManagement extends \Google\Service
   public $customers_telemetry_events;
   public $customers_telemetry_notificationConfigs;
   public $customers_telemetry_users;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ChromeManagement service.
@@ -67,6 +68,7 @@ class ChromeManagement extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://chromemanagement.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://chromemanagement.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

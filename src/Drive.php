@@ -73,6 +73,7 @@ class Drive extends \Google\Service
   public $replies;
   public $revisions;
   public $teamdrives;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Drive service.
@@ -85,6 +86,7 @@ class Drive extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://www.UNIVERSE_DOMAIN/';
     $this->servicePath = 'drive/v3/';
     $this->batchPath = 'batch/drive/v3';
     $this->version = 'v3';

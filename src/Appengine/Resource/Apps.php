@@ -117,10 +117,9 @@ class Apps extends \Google\Service\Resource
    * have deleted your App Engine service account, this will not be able to
    * recreate it. Instead, you should attempt to use the IAM undelete API if
    * possible at https://cloud.google.com/iam/reference/rest/v1/projects.serviceAc
-   * counts/undelete?apix_params=%7B"name"%3A"projects%2F-
-   * %2FserviceAccounts%2Funique_id"%2C"resource"%3A%7B%7D%7D . If the deletion
-   * was recent, the numeric ID can be found in the Cloud Console Activity Log.
-   * (apps.repair)
+   * counts/undelete?apix_params=%7B"name"%3A"projects%2F-%2FserviceAccounts%2Funi
+   * que_id"%2C"resource"%3A%7B%7D%7D . If the deletion was recent, the numeric ID
+   * can be found in the Cloud Console Activity Log. (apps.repair)
    *
    * @param string $appsId Part of `name`. Name of the application to repair.
    * Example: apps/myapp

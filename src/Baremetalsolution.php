@@ -51,6 +51,7 @@ class Baremetalsolution extends \Google\Service
   public $projects_locations_volumes;
   public $projects_locations_volumes_luns;
   public $projects_locations_volumes_snapshots;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Baremetalsolution service.
@@ -63,6 +64,7 @@ class Baremetalsolution extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://baremetalsolution.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://baremetalsolution.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v2';

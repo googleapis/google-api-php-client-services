@@ -73,6 +73,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_operations;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DiscoveryEngine service.
@@ -85,6 +86,7 @@ class DiscoveryEngine extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://discoveryengine.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://discoveryengine.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1beta';

@@ -63,6 +63,7 @@ class Spanner extends \Google\Service
   public $projects_instances_instancePartitions_operations;
   public $projects_instances_operations;
   public $scans;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Spanner service.
@@ -75,6 +76,7 @@ class Spanner extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://spanner.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://spanner.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

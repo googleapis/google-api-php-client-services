@@ -50,6 +50,7 @@ class ContainerAnalysis extends \Google\Service
   public $projects_notes_occurrences;
   public $projects_occurrences;
   public $projects_resources;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the ContainerAnalysis service.
@@ -62,6 +63,7 @@ class ContainerAnalysis extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://containeranalysis.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://containeranalysis.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

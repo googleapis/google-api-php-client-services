@@ -66,10 +66,10 @@ class ProjectsLocationsInstancesOsPolicyAssignmentsReports extends \Google\Servi
    * OSPolicyAssignments in the project/location. Either {instance} or
    * {assignment} must be `-`. For example: `projects/{project}/locations/{locatio
    * n}/instances/{instance}/osPolicyAssignments/-/reports` returns all reports
-   * for the instance `projects/{project}/locations/{location}/instances/-
-   * /osPolicyAssignments/{assignment-id}/reports` returns all the reports for the
-   * given assignment across all instances. `projects/{project}/locations/{locatio
-   * n}/instances/-/osPolicyAssignments/-/reports` returns all the reports for all
+   * for the instance `projects/{project}/locations/{location}/instances/-/osPolic
+   * yAssignments/{assignment-id}/reports` returns all the reports for the given
+   * assignment across all instances. `projects/{project}/locations/{location}/ins
+   * tances/-/osPolicyAssignments/-/reports` returns all the reports for all
    * assignments across all instances.
    * @param array $optParams Optional parameters.
    *

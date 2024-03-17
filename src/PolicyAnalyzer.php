@@ -39,6 +39,7 @@ class PolicyAnalyzer extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations_activityTypes_activities;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PolicyAnalyzer service.
@@ -51,6 +52,7 @@ class PolicyAnalyzer extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://policyanalyzer.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://policyanalyzer.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

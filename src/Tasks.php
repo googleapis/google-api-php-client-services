@@ -43,6 +43,7 @@ class Tasks extends \Google\Service
 
   public $tasklists;
   public $tasks;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Tasks service.
@@ -55,6 +56,7 @@ class Tasks extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://tasks.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://tasks.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

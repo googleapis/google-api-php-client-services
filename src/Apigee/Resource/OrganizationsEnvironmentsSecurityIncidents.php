@@ -58,8 +58,8 @@ class OrganizationsEnvironmentsSecurityIncidents extends \Google\Service\Resourc
    *
    * @param string $name Required. Security incident in the following format: `org
    * anizations/{org}/environments/{environment}/securityIncidents/{incident}'.
-   * Example: organizations/testOrg/environments/testEnv/securityIncidents/1234-
-   * 4567-890-111
+   * Example: organizations/testOrg/environments/testEnv/securityIncidents/1234-45
+   * 67-890-111
    * @param array $optParams Optional parameters.
    * @return GoogleCloudApigeeV1SecurityIncident
    * @throws \Google\Service\Exception

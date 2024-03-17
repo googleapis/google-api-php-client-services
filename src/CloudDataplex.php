@@ -64,6 +64,7 @@ class CloudDataplex extends \Google\Service
   public $projects_locations_lakes_zones_entities;
   public $projects_locations_lakes_zones_entities_partitions;
   public $projects_locations_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudDataplex service.
@@ -76,6 +77,7 @@ class CloudDataplex extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://dataplex.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://dataplex.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

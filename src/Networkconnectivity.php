@@ -51,6 +51,7 @@ class Networkconnectivity extends \Google\Service
   public $projects_locations_serviceConnectionPolicies;
   public $projects_locations_serviceConnectionTokens;
   public $projects_locations_spokes;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Networkconnectivity service.
@@ -63,6 +64,7 @@ class Networkconnectivity extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://networkconnectivity.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://networkconnectivity.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
