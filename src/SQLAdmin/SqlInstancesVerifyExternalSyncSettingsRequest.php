@@ -19,6 +19,10 @@ namespace Google\Service\SQLAdmin;
 
 class SqlInstancesVerifyExternalSyncSettingsRequest extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $migrationType;
   protected $mysqlSyncConfigType = MySqlSyncConfig::class;
   protected $mysqlSyncConfigDataType = '';
   /**
@@ -38,6 +42,20 @@ class SqlInstancesVerifyExternalSyncSettingsRequest extends \Google\Model
    */
   public $verifyReplicationOnly;
 
+  /**
+   * @param string
+   */
+  public function setMigrationType($migrationType)
+  {
+    $this->migrationType = $migrationType;
+  }
+  /**
+   * @return string
+   */
+  public function getMigrationType()
+  {
+    return $this->migrationType;
+  }
   /**
    * @param MySqlSyncConfig
    */
