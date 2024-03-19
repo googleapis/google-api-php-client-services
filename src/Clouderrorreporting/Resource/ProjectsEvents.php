@@ -79,8 +79,8 @@ class ProjectsEvents extends \Google\Service\Resource
    * example: `POST https://clouderrorreporting.googleapis.com/v1beta1/{projectNam
    * e}/events:report?key=123ABC456` **Note:** [Error Reporting]
    * (https://cloud.google.com/error-reporting) is a global service built on Cloud
-   * Logging and doesn't analyze logs stored in regional log buckets or logs
-   * routed to other Google Cloud projects. (events.report)
+   * Logging and doesn't analyze logs stored in regional log buckets.
+   * (events.report)
    *
    * @param string $projectName Required. The resource name of the Google Cloud
    * Platform project. Written as `projects/{projectId}`, where `{projectId}` is
