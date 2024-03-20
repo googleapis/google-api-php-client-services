@@ -2240,6 +2240,10 @@ class AndroidPublisher extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'includeQuantityBasedPartialRefund' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'maxResults' => [
                   'location' => 'query',
                   'type' => 'integer',
