@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SafetySetting extends \Google\Model
+class GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec extends \Google\Model
 {
   /**
    * @var string
    */
-  public $category;
+  public $maxReplicaCount;
   /**
    * @var string
    */
-  public $method;
-  /**
-   * @var string
-   */
-  public $threshold;
+  public $minReplicaCount;
 
   /**
    * @param string
    */
-  public function setCategory($category)
+  public function setMaxReplicaCount($maxReplicaCount)
   {
-    $this->category = $category;
+    $this->maxReplicaCount = $maxReplicaCount;
   }
   /**
    * @return string
    */
-  public function getCategory()
+  public function getMaxReplicaCount()
   {
-    return $this->category;
+    return $this->maxReplicaCount;
   }
   /**
    * @param string
    */
-  public function setMethod($method)
+  public function setMinReplicaCount($minReplicaCount)
   {
-    $this->method = $method;
+    $this->minReplicaCount = $minReplicaCount;
   }
   /**
    * @return string
    */
-  public function getMethod()
+  public function getMinReplicaCount()
   {
-    return $this->method;
-  }
-  /**
-   * @param string
-   */
-  public function setThreshold($threshold)
-  {
-    $this->threshold = $threshold;
-  }
-  /**
-   * @return string
-   */
-  public function getThreshold()
-  {
-    return $this->threshold;
+    return $this->minReplicaCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SafetySetting::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SafetySetting');
+class_alias(GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ResourcePoolAutoscalingSpec');

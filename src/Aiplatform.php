@@ -107,6 +107,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_notebookRuntimeTemplates;
   public $projects_locations_notebookRuntimes;
   public $projects_locations_operations;
+  public $projects_locations_persistentResources;
   public $projects_locations_pipelineJobs;
   public $projects_locations_pipelineJobs_operations;
   public $projects_locations_publishers_models;
@@ -5690,6 +5691,82 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
                 'timeout' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_persistentResources = new Aiplatform\Resource\ProjectsLocationsPersistentResources(
+        $this,
+        $this->serviceName,
+        'persistentResources',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/persistentResources',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'persistentResourceId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/persistentResources',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SafetySetting extends \Google\Model
+class GoogleCloudAiplatformV1ServiceAccountSpec extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $category;
+  public $enableCustomServiceAccount;
   /**
    * @var string
    */
-  public $method;
-  /**
-   * @var string
-   */
-  public $threshold;
+  public $serviceAccount;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setCategory($category)
+  public function setEnableCustomServiceAccount($enableCustomServiceAccount)
   {
-    $this->category = $category;
+    $this->enableCustomServiceAccount = $enableCustomServiceAccount;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getCategory()
+  public function getEnableCustomServiceAccount()
   {
-    return $this->category;
-  }
-  /**
-   * @param string
-   */
-  public function setMethod($method)
-  {
-    $this->method = $method;
-  }
-  /**
-   * @return string
-   */
-  public function getMethod()
-  {
-    return $this->method;
+    return $this->enableCustomServiceAccount;
   }
   /**
    * @param string
    */
-  public function setThreshold($threshold)
+  public function setServiceAccount($serviceAccount)
   {
-    $this->threshold = $threshold;
+    $this->serviceAccount = $serviceAccount;
   }
   /**
    * @return string
    */
-  public function getThreshold()
+  public function getServiceAccount()
   {
-    return $this->threshold;
+    return $this->serviceAccount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SafetySetting::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SafetySetting');
+class_alias(GoogleCloudAiplatformV1ServiceAccountSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ServiceAccountSpec');

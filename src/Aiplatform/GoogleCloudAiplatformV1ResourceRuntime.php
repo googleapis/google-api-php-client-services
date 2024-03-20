@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SafetySetting extends \Google\Model
+class GoogleCloudAiplatformV1ResourceRuntime extends \Google\Model
 {
   /**
-   * @var string
+   * @var string[]
    */
-  public $category;
+  public $accessUris;
   /**
    * @var string
    */
-  public $method;
-  /**
-   * @var string
-   */
-  public $threshold;
+  public $notebookRuntimeTemplate;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setCategory($category)
+  public function setAccessUris($accessUris)
   {
-    $this->category = $category;
+    $this->accessUris = $accessUris;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getCategory()
+  public function getAccessUris()
   {
-    return $this->category;
-  }
-  /**
-   * @param string
-   */
-  public function setMethod($method)
-  {
-    $this->method = $method;
-  }
-  /**
-   * @return string
-   */
-  public function getMethod()
-  {
-    return $this->method;
+    return $this->accessUris;
   }
   /**
    * @param string
    */
-  public function setThreshold($threshold)
+  public function setNotebookRuntimeTemplate($notebookRuntimeTemplate)
   {
-    $this->threshold = $threshold;
+    $this->notebookRuntimeTemplate = $notebookRuntimeTemplate;
   }
   /**
    * @return string
    */
-  public function getThreshold()
+  public function getNotebookRuntimeTemplate()
   {
-    return $this->threshold;
+    return $this->notebookRuntimeTemplate;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SafetySetting::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SafetySetting');
+class_alias(GoogleCloudAiplatformV1ResourceRuntime::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ResourceRuntime');

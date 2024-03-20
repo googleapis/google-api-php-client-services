@@ -26,6 +26,8 @@ class GoogleCloudAiplatformV1GenerateContentRequest extends \Google\Collection
   protected $generationConfigDataType = '';
   protected $safetySettingsType = GoogleCloudAiplatformV1SafetySetting::class;
   protected $safetySettingsDataType = 'array';
+  protected $systemInstructionsType = GoogleCloudAiplatformV1Content::class;
+  protected $systemInstructionsDataType = 'array';
   protected $toolsType = GoogleCloudAiplatformV1Tool::class;
   protected $toolsDataType = 'array';
 
@@ -70,6 +72,20 @@ class GoogleCloudAiplatformV1GenerateContentRequest extends \Google\Collection
   public function getSafetySettings()
   {
     return $this->safetySettings;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1Content[]
+   */
+  public function setSystemInstructions($systemInstructions)
+  {
+    $this->systemInstructions = $systemInstructions;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Content[]
+   */
+  public function getSystemInstructions()
+  {
+    return $this->systemInstructions;
   }
   /**
    * @param GoogleCloudAiplatformV1Tool[]
