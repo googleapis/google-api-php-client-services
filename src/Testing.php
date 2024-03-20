@@ -28,7 +28,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://developers.google.com/cloud-test-lab/" target="_blank">Documentation</a>
+ * <a href="https://firebase.google.com/docs/test-lab/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
