@@ -1649,14 +1649,14 @@ class Storage extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'copySourceAcl' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'generation' => [
                   'location' => 'query',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'copySourceAcl' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'ifGenerationMatch' => [
                   'location' => 'query',
