@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for Batch (v1).
  *
  * <p>
- * An API to manage the running of batch resources on Google Cloud Platform.</p>
+ * An API to manage the running of Batch resources on Google Cloud Platform.</p>
  *
  * <p>
  * For more information about this service, see the API
