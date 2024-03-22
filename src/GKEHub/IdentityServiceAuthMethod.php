@@ -23,6 +23,8 @@ class IdentityServiceAuthMethod extends \Google\Model
   protected $azureadConfigDataType = '';
   protected $googleConfigType = IdentityServiceGoogleConfig::class;
   protected $googleConfigDataType = '';
+  protected $ldapConfigType = IdentityServiceLdapConfig::class;
+  protected $ldapConfigDataType = '';
   /**
    * @var string
    */
@@ -63,6 +65,20 @@ class IdentityServiceAuthMethod extends \Google\Model
   public function getGoogleConfig()
   {
     return $this->googleConfig;
+  }
+  /**
+   * @param IdentityServiceLdapConfig
+   */
+  public function setLdapConfig(IdentityServiceLdapConfig $ldapConfig)
+  {
+    $this->ldapConfig = $ldapConfig;
+  }
+  /**
+   * @return IdentityServiceLdapConfig
+   */
+  public function getLdapConfig()
+  {
+    return $this->ldapConfig;
   }
   /**
    * @param string
