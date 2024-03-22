@@ -274,6 +274,16 @@ class BigQueryReservation extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'failoverReservation' => [
+              'path' => 'v1/{+name}:failoverReservation',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
