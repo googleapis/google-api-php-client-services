@@ -19,6 +19,7 @@ namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListPersistentResourcesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1PersistentResource;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1RebootPersistentResourceRequest;
 use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
 /**
@@ -122,6 +123,23 @@ class ProjectsLocationsPersistentResources extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Reboots a PersistentResource. (persistentResources.reboot)
+   *
+   * @param string $name Required. The name of the PersistentResource resource.
+   * Format: `projects/{project_id_or_number}/locations/{location_id}/persistentRe
+   * sources/{persistent_resource_id}`
+   * @param GoogleCloudAiplatformV1RebootPersistentResourceRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function reboot($name, GoogleCloudAiplatformV1RebootPersistentResourceRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('reboot', [$params], GoogleLongrunningOperation::class);
   }
 }
 
