@@ -53,7 +53,7 @@ class ProjectsDatabasesBackupSchedules extends \Google\Service\Resource
   /**
    * Deletes a backup schedule. (backupSchedules.delete)
    *
-   * @param string $name Required. The name of backup schedule. Format
+   * @param string $name Required. The name of the backup schedule. Format
    * `projects/{project}/databases/{database}/backupSchedules/{backup_schedule}`
    * @param array $optParams Optional parameters.
    * @return FirestoreEmpty
