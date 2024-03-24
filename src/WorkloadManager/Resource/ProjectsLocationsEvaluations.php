@@ -67,6 +67,8 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool force Optional. Followed the best practice from
+   * https://aip.dev/135#cascading-delete
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.

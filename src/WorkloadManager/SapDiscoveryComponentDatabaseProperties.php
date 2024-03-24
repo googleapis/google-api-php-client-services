@@ -22,6 +22,10 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
   /**
    * @var string
    */
+  public $databaseSid;
+  /**
+   * @var string
+   */
   public $databaseType;
   /**
    * @var string
@@ -40,6 +44,20 @@ class SapDiscoveryComponentDatabaseProperties extends \Google\Model
    */
   public $sharedNfsUri;
 
+  /**
+   * @param string
+   */
+  public function setDatabaseSid($databaseSid)
+  {
+    $this->databaseSid = $databaseSid;
+  }
+  /**
+   * @return string
+   */
+  public function getDatabaseSid()
+  {
+    return $this->databaseSid;
+  }
   /**
    * @param string
    */
