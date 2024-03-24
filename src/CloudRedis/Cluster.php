@@ -34,10 +34,16 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $persistenceConfigType = ClusterPersistenceConfig::class;
+  protected $persistenceConfigDataType = '';
   protected $pscConfigsType = PscConfig::class;
   protected $pscConfigsDataType = 'array';
   protected $pscConnectionsType = PscConnection::class;
   protected $pscConnectionsDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $redisConfigs;
   /**
    * @var int
    */
@@ -122,6 +128,20 @@ class Cluster extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param ClusterPersistenceConfig
+   */
+  public function setPersistenceConfig(ClusterPersistenceConfig $persistenceConfig)
+  {
+    $this->persistenceConfig = $persistenceConfig;
+  }
+  /**
+   * @return ClusterPersistenceConfig
+   */
+  public function getPersistenceConfig()
+  {
+    return $this->persistenceConfig;
+  }
+  /**
    * @param PscConfig[]
    */
   public function setPscConfigs($pscConfigs)
@@ -148,6 +168,20 @@ class Cluster extends \Google\Collection
   public function getPscConnections()
   {
     return $this->pscConnections;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRedisConfigs($redisConfigs)
+  {
+    $this->redisConfigs = $redisConfigs;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRedisConfigs()
+  {
+    return $this->redisConfigs;
   }
   /**
    * @param int
