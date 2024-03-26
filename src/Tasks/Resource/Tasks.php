@@ -75,7 +75,9 @@ class Tasks extends \Google\Service\Resource
     return $this->call('get', [$params], Task::class);
   }
   /**
-   * Creates a new task on the specified task list. (tasks.insert)
+   * Creates a new task on the specified task list. A user can have up to 20,000
+   * uncompleted tasks per list and up to 100,000 tasks in total at a time.
+   * (tasks.insert)
    *
    * @param string $tasklist Task list identifier.
    * @param Task $postBody
@@ -96,7 +98,9 @@ class Tasks extends \Google\Service\Resource
     return $this->call('insert', [$params], Task::class);
   }
   /**
-   * Returns all tasks in the specified task list. (tasks.listTasks)
+   * Returns all tasks in the specified task list. A user can have up to 20,000
+   * uncompleted tasks per list and up to 100,000 tasks in total at a time.
+   * (tasks.listTasks)
    *
    * @param string $tasklist Task list identifier.
    * @param array $optParams Optional parameters.
@@ -138,7 +142,8 @@ class Tasks extends \Google\Service\Resource
   /**
    * Moves the specified task to another position in the task list. This can
    * include putting it as a child task under a new parent and/or move it to a
-   * different position among its sibling tasks. (tasks.move)
+   * different position among its sibling tasks. A user can have up to 2,000
+   * subtasks per task. (tasks.move)
    *
    * @param string $tasklist Task list identifier.
    * @param string $task Task identifier.
