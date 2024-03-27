@@ -41,6 +41,7 @@ class CloudRun extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $projects_locations;
   public $projects_locations_jobs;
   public $projects_locations_jobs_executions;
   public $projects_locations_jobs_executions_tasks;
@@ -64,6 +65,46 @@ class CloudRun extends \Google\Service
     $this->version = 'v2';
     $this->serviceName = 'run';
 
+    $this->projects_locations = new CloudRun\Resource\ProjectsLocations(
+        $this,
+        $this->serviceName,
+        'locations',
+        [
+          'methods' => [
+            'exportImage' => [
+              'path' => 'v2/{+name}:exportImage',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'exportImageMetadata' => [
+              'path' => 'v2/{+name}:exportImageMetadata',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'exportMetadata' => [
+              'path' => 'v2/{+name}:exportMetadata',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_jobs = new CloudRun\Resource\ProjectsLocationsJobs(
         $this,
         $this->serviceName,
@@ -236,6 +277,21 @@ class CloudRun extends \Google\Service
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'exportStatus' => [
+              'path' => 'v2/{+name}/{+operationId}:exportStatus',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'operationId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'get' => [
@@ -534,6 +590,21 @@ class CloudRun extends \Google\Service
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'exportStatus' => [
+              'path' => 'v2/{+name}/{+operationId}:exportStatus',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'operationId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'get' => [
