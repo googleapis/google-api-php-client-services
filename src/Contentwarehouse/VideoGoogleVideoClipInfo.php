@@ -23,12 +23,38 @@ class VideoGoogleVideoClipInfo extends \Google\Collection
   /**
    * @var string
    */
+  public $aloudLoggingId;
+  /**
+   * @var string
+   */
   public $appVersion;
   /**
    * @var string[]
    */
   public $assetLoggingId;
+  /**
+   * @var string
+   */
+  public $dubbingLoggingId;
+  /**
+   * @var string
+   */
+  public $productType;
 
+  /**
+   * @param string
+   */
+  public function setAloudLoggingId($aloudLoggingId)
+  {
+    $this->aloudLoggingId = $aloudLoggingId;
+  }
+  /**
+   * @return string
+   */
+  public function getAloudLoggingId()
+  {
+    return $this->aloudLoggingId;
+  }
   /**
    * @param string
    */
@@ -56,6 +82,34 @@ class VideoGoogleVideoClipInfo extends \Google\Collection
   public function getAssetLoggingId()
   {
     return $this->assetLoggingId;
+  }
+  /**
+   * @param string
+   */
+  public function setDubbingLoggingId($dubbingLoggingId)
+  {
+    $this->dubbingLoggingId = $dubbingLoggingId;
+  }
+  /**
+   * @return string
+   */
+  public function getDubbingLoggingId()
+  {
+    return $this->dubbingLoggingId;
+  }
+  /**
+   * @param string
+   */
+  public function setProductType($productType)
+  {
+    $this->productType = $productType;
+  }
+  /**
+   * @return string
+   */
+  public function getProductType()
+  {
+    return $this->productType;
   }
 }
 

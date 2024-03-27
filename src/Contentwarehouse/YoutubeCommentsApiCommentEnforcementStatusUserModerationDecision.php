@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SpamBrainScore extends \Google\Model
+class YoutubeCommentsApiCommentEnforcementStatusUserModerationDecision extends \Google\Model
 {
   /**
    * @var string
    */
-  public $modelName;
+  public $moderationStatus;
   /**
-   * @var float
+   * @var string
    */
-  public $sbScore;
-  /**
-   * @var int
-   */
-  public $versionId;
+  public $rejectType;
 
   /**
    * @param string
    */
-  public function setModelName($modelName)
+  public function setModerationStatus($moderationStatus)
   {
-    $this->modelName = $modelName;
+    $this->moderationStatus = $moderationStatus;
   }
   /**
    * @return string
    */
-  public function getModelName()
+  public function getModerationStatus()
   {
-    return $this->modelName;
+    return $this->moderationStatus;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setSbScore($sbScore)
+  public function setRejectType($rejectType)
   {
-    $this->sbScore = $sbScore;
+    $this->rejectType = $rejectType;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getSbScore()
+  public function getRejectType()
   {
-    return $this->sbScore;
-  }
-  /**
-   * @param int
-   */
-  public function setVersionId($versionId)
-  {
-    $this->versionId = $versionId;
-  }
-  /**
-   * @return int
-   */
-  public function getVersionId()
-  {
-    return $this->versionId;
+    return $this->rejectType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpamBrainScore::class, 'Google_Service_Contentwarehouse_SpamBrainScore');
+class_alias(YoutubeCommentsApiCommentEnforcementStatusUserModerationDecision::class, 'Google_Service_Contentwarehouse_YoutubeCommentsApiCommentEnforcementStatusUserModerationDecision');

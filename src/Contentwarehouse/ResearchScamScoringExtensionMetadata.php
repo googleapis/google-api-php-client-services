@@ -17,64 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SpamBrainScore extends \Google\Model
+class ResearchScamScoringExtensionMetadata extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $modelName;
-  /**
-   * @var float
-   */
-  public $sbScore;
   /**
    * @var int
    */
-  public $versionId;
+  public $postScoringExtensionNumNeighbors;
 
-  /**
-   * @param string
-   */
-  public function setModelName($modelName)
-  {
-    $this->modelName = $modelName;
-  }
-  /**
-   * @return string
-   */
-  public function getModelName()
-  {
-    return $this->modelName;
-  }
-  /**
-   * @param float
-   */
-  public function setSbScore($sbScore)
-  {
-    $this->sbScore = $sbScore;
-  }
-  /**
-   * @return float
-   */
-  public function getSbScore()
-  {
-    return $this->sbScore;
-  }
   /**
    * @param int
    */
-  public function setVersionId($versionId)
+  public function setPostScoringExtensionNumNeighbors($postScoringExtensionNumNeighbors)
   {
-    $this->versionId = $versionId;
+    $this->postScoringExtensionNumNeighbors = $postScoringExtensionNumNeighbors;
   }
   /**
    * @return int
    */
-  public function getVersionId()
+  public function getPostScoringExtensionNumNeighbors()
   {
-    return $this->versionId;
+    return $this->postScoringExtensionNumNeighbors;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpamBrainScore::class, 'Google_Service_Contentwarehouse_SpamBrainScore');
+class_alias(ResearchScamScoringExtensionMetadata::class, 'Google_Service_Contentwarehouse_ResearchScamScoringExtensionMetadata');

@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SpamBrainScore extends \Google\Model
+class RepositoryWebrefImageMention extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $modelName;
   /**
    * @var float
    */
-  public $sbScore;
+  public $confidenceScore;
   /**
-   * @var int
+   * @var string
    */
-  public $versionId;
+  public $imageDocid;
 
-  /**
-   * @param string
-   */
-  public function setModelName($modelName)
-  {
-    $this->modelName = $modelName;
-  }
-  /**
-   * @return string
-   */
-  public function getModelName()
-  {
-    return $this->modelName;
-  }
   /**
    * @param float
    */
-  public function setSbScore($sbScore)
+  public function setConfidenceScore($confidenceScore)
   {
-    $this->sbScore = $sbScore;
+    $this->confidenceScore = $confidenceScore;
   }
   /**
    * @return float
    */
-  public function getSbScore()
+  public function getConfidenceScore()
   {
-    return $this->sbScore;
+    return $this->confidenceScore;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setVersionId($versionId)
+  public function setImageDocid($imageDocid)
   {
-    $this->versionId = $versionId;
+    $this->imageDocid = $imageDocid;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getVersionId()
+  public function getImageDocid()
   {
-    return $this->versionId;
+    return $this->imageDocid;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpamBrainScore::class, 'Google_Service_Contentwarehouse_SpamBrainScore');
+class_alias(RepositoryWebrefImageMention::class, 'Google_Service_Contentwarehouse_RepositoryWebrefImageMention');

@@ -17,64 +17,46 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SpamBrainScore extends \Google\Model
+class ResearchScamRestrictEvaluationInfoDirectLookupStats extends \Google\Model
 {
   /**
    * @var string
    */
-  public $modelName;
+  public $directLookupDocidsCount;
   /**
-   * @var float
+   * @var string
    */
-  public $sbScore;
-  /**
-   * @var int
-   */
-  public $versionId;
+  public $directLookupMatches;
 
   /**
    * @param string
    */
-  public function setModelName($modelName)
+  public function setDirectLookupDocidsCount($directLookupDocidsCount)
   {
-    $this->modelName = $modelName;
+    $this->directLookupDocidsCount = $directLookupDocidsCount;
   }
   /**
    * @return string
    */
-  public function getModelName()
+  public function getDirectLookupDocidsCount()
   {
-    return $this->modelName;
+    return $this->directLookupDocidsCount;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setSbScore($sbScore)
+  public function setDirectLookupMatches($directLookupMatches)
   {
-    $this->sbScore = $sbScore;
+    $this->directLookupMatches = $directLookupMatches;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getSbScore()
+  public function getDirectLookupMatches()
   {
-    return $this->sbScore;
-  }
-  /**
-   * @param int
-   */
-  public function setVersionId($versionId)
-  {
-    $this->versionId = $versionId;
-  }
-  /**
-   * @return int
-   */
-  public function getVersionId()
-  {
-    return $this->versionId;
+    return $this->directLookupMatches;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpamBrainScore::class, 'Google_Service_Contentwarehouse_SpamBrainScore');
+class_alias(ResearchScamRestrictEvaluationInfoDirectLookupStats::class, 'Google_Service_Contentwarehouse_ResearchScamRestrictEvaluationInfoDirectLookupStats');

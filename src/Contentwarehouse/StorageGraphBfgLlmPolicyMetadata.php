@@ -17,64 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SpamBrainScore extends \Google\Model
+class StorageGraphBfgLlmPolicyMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $modelName;
-  /**
-   * @var float
-   */
-  public $sbScore;
-  /**
-   * @var int
-   */
-  public $versionId;
+  public $dataAccessRestrictions;
 
   /**
    * @param string
    */
-  public function setModelName($modelName)
+  public function setDataAccessRestrictions($dataAccessRestrictions)
   {
-    $this->modelName = $modelName;
+    $this->dataAccessRestrictions = $dataAccessRestrictions;
   }
   /**
    * @return string
    */
-  public function getModelName()
+  public function getDataAccessRestrictions()
   {
-    return $this->modelName;
-  }
-  /**
-   * @param float
-   */
-  public function setSbScore($sbScore)
-  {
-    $this->sbScore = $sbScore;
-  }
-  /**
-   * @return float
-   */
-  public function getSbScore()
-  {
-    return $this->sbScore;
-  }
-  /**
-   * @param int
-   */
-  public function setVersionId($versionId)
-  {
-    $this->versionId = $versionId;
-  }
-  /**
-   * @return int
-   */
-  public function getVersionId()
-  {
-    return $this->versionId;
+    return $this->dataAccessRestrictions;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpamBrainScore::class, 'Google_Service_Contentwarehouse_SpamBrainScore');
+class_alias(StorageGraphBfgLlmPolicyMetadata::class, 'Google_Service_Contentwarehouse_StorageGraphBfgLlmPolicyMetadata');

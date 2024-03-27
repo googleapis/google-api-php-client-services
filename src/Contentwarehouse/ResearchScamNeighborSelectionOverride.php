@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class ResearchScamNeighborSelectionOverride extends \Google\Model
+class ResearchScamNeighborSelectionOverride extends \Google\Collection
 {
+  protected $collection_key = 'treeXHybridDistances';
   /**
    * @var float
    */
@@ -47,6 +48,16 @@ class ResearchScamNeighborSelectionOverride extends \Google\Model
    * @var int
    */
   public $perCrowdingAttributePreReorderingNumNeighbors;
+  protected $scoringExtensionMetadataType = ResearchScamScoringExtensionMetadata::class;
+  protected $scoringExtensionMetadataDataType = '';
+  /**
+   * @var string[]
+   */
+  public $treeXHybridCentersToSearch;
+  /**
+   * @var float[]
+   */
+  public $treeXHybridDistances;
   /**
    * @var int
    */
@@ -149,6 +160,48 @@ class ResearchScamNeighborSelectionOverride extends \Google\Model
   public function getPerCrowdingAttributePreReorderingNumNeighbors()
   {
     return $this->perCrowdingAttributePreReorderingNumNeighbors;
+  }
+  /**
+   * @param ResearchScamScoringExtensionMetadata
+   */
+  public function setScoringExtensionMetadata(ResearchScamScoringExtensionMetadata $scoringExtensionMetadata)
+  {
+    $this->scoringExtensionMetadata = $scoringExtensionMetadata;
+  }
+  /**
+   * @return ResearchScamScoringExtensionMetadata
+   */
+  public function getScoringExtensionMetadata()
+  {
+    return $this->scoringExtensionMetadata;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTreeXHybridCentersToSearch($treeXHybridCentersToSearch)
+  {
+    $this->treeXHybridCentersToSearch = $treeXHybridCentersToSearch;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTreeXHybridCentersToSearch()
+  {
+    return $this->treeXHybridCentersToSearch;
+  }
+  /**
+   * @param float[]
+   */
+  public function setTreeXHybridDistances($treeXHybridDistances)
+  {
+    $this->treeXHybridDistances = $treeXHybridDistances;
+  }
+  /**
+   * @return float[]
+   */
+  public function getTreeXHybridDistances()
+  {
+    return $this->treeXHybridDistances;
   }
   /**
    * @param int

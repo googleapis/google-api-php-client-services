@@ -117,10 +117,6 @@ class WWWSnippetResponse extends \Google\Collection
    */
   public $sectionHeadingAnchorName;
   /**
-   * @var string
-   */
-  public $sectionHeadingText;
-  /**
    * @var bool
    */
   public $seenNotTerm;
@@ -576,20 +572,6 @@ class WWWSnippetResponse extends \Google\Collection
   public function getSectionHeadingAnchorName()
   {
     return $this->sectionHeadingAnchorName;
-  }
-  /**
-   * @param string
-   */
-  public function setSectionHeadingText($sectionHeadingText)
-  {
-    $this->sectionHeadingText = $sectionHeadingText;
-  }
-  /**
-   * @return string
-   */
-  public function getSectionHeadingText()
-  {
-    return $this->sectionHeadingText;
   }
   /**
    * @param bool

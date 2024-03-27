@@ -17,64 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class SpamBrainScore extends \Google\Model
+class ResearchScamCustomRestrictNamespace extends \Google\Model
 {
   /**
    * @var string
    */
-  public $modelName;
-  /**
-   * @var float
-   */
-  public $sbScore;
-  /**
-   * @var int
-   */
-  public $versionId;
+  public $namespace;
 
   /**
    * @param string
    */
-  public function setModelName($modelName)
+  public function setNamespace($namespace)
   {
-    $this->modelName = $modelName;
+    $this->namespace = $namespace;
   }
   /**
    * @return string
    */
-  public function getModelName()
+  public function getNamespace()
   {
-    return $this->modelName;
-  }
-  /**
-   * @param float
-   */
-  public function setSbScore($sbScore)
-  {
-    $this->sbScore = $sbScore;
-  }
-  /**
-   * @return float
-   */
-  public function getSbScore()
-  {
-    return $this->sbScore;
-  }
-  /**
-   * @param int
-   */
-  public function setVersionId($versionId)
-  {
-    $this->versionId = $versionId;
-  }
-  /**
-   * @return int
-   */
-  public function getVersionId()
-  {
-    return $this->versionId;
+    return $this->namespace;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SpamBrainScore::class, 'Google_Service_Contentwarehouse_SpamBrainScore');
+class_alias(ResearchScamCustomRestrictNamespace::class, 'Google_Service_Contentwarehouse_ResearchScamCustomRestrictNamespace');
