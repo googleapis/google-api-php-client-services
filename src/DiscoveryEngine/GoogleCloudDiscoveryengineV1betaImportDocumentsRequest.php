@@ -27,6 +27,8 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   protected $bigquerySourceDataType = '';
   protected $errorConfigType = GoogleCloudDiscoveryengineV1betaImportErrorConfig::class;
   protected $errorConfigDataType = '';
+  protected $fhirStoreSourceType = GoogleCloudDiscoveryengineV1betaFhirStoreSource::class;
+  protected $fhirStoreSourceDataType = '';
   protected $gcsSourceType = GoogleCloudDiscoveryengineV1betaGcsSource::class;
   protected $gcsSourceDataType = '';
   /**
@@ -81,6 +83,20 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   public function getErrorConfig()
   {
     return $this->errorConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaFhirStoreSource
+   */
+  public function setFhirStoreSource(GoogleCloudDiscoveryengineV1betaFhirStoreSource $fhirStoreSource)
+  {
+    $this->fhirStoreSource = $fhirStoreSource;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaFhirStoreSource
+   */
+  public function getFhirStoreSource()
+  {
+    return $this->fhirStoreSource;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaGcsSource

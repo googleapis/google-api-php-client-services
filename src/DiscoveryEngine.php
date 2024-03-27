@@ -72,6 +72,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_operations;
+  public $projects_locations_rankingConfigs;
   public $projects_operations;
 
   /**
@@ -1152,6 +1153,36 @@ class DiscoveryEngine extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'pause' => [
+              'path' => 'v1beta/{+name}:pause',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'resume' => [
+              'path' => 'v1beta/{+name}:resume',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'tune' => [
+              'path' => 'v1beta/{+name}:tune',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -2218,6 +2249,26 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_rankingConfigs = new DiscoveryEngine\Resource\ProjectsLocationsRankingConfigs(
+        $this,
+        $this->serviceName,
+        'rankingConfigs',
+        [
+          'methods' => [
+            'rank' => [
+              'path' => 'v1beta/{+rankingConfig}:rank',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'rankingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

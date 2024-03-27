@@ -19,6 +19,9 @@ namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaEngine;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaListEnginesResponse;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaPauseEngineRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaResumeEngineRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaTuneEngineRequest;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
 /**
@@ -130,6 +133,60 @@ class ProjectsLocationsCollectionsEngines extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleCloudDiscoveryengineV1betaEngine::class);
+  }
+  /**
+   * Pauses the training of an existing engine. Only applicable if SolutionType is
+   * SOLUTION_TYPE_RECOMMENDATION. (engines.pause)
+   *
+   * @param string $name Required. The name of the engine to pause. Format: `proje
+   * cts/{project_number}/locations/{location_id}/collections/{collection_id}/engi
+   * nes/{engine_id}`
+   * @param GoogleCloudDiscoveryengineV1betaPauseEngineRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1betaEngine
+   * @throws \Google\Service\Exception
+   */
+  public function pause($name, GoogleCloudDiscoveryengineV1betaPauseEngineRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('pause', [$params], GoogleCloudDiscoveryengineV1betaEngine::class);
+  }
+  /**
+   * Resumes the training of an existing engine. Only applicable if SolutionType
+   * is SOLUTION_TYPE_RECOMMENDATION. (engines.resume)
+   *
+   * @param string $name Required. The name of the engine to resume. Format: `proj
+   * ects/{project_number}/locations/{location_id}/collections/{collection_id}/eng
+   * ines/{engine_id}`
+   * @param GoogleCloudDiscoveryengineV1betaResumeEngineRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1betaEngine
+   * @throws \Google\Service\Exception
+   */
+  public function resume($name, GoogleCloudDiscoveryengineV1betaResumeEngineRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('resume', [$params], GoogleCloudDiscoveryengineV1betaEngine::class);
+  }
+  /**
+   * Tunes an existing engine. Only applicable if SolutionType is
+   * SOLUTION_TYPE_RECOMMENDATION. (engines.tune)
+   *
+   * @param string $name Required. The resource name of the engine to tune.
+   * Format: `projects/{project_number}/locations/{location_id}/collections/{colle
+   * ction_id}/engines/{engine_id}`
+   * @param GoogleCloudDiscoveryengineV1betaTuneEngineRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function tune($name, GoogleCloudDiscoveryengineV1betaTuneEngineRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('tune', [$params], GoogleLongrunningOperation::class);
   }
 }
 

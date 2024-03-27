@@ -17,33 +17,20 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse extends \Google\Collection
+class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
-  protected $errorConfigType = GoogleCloudDiscoveryengineV1betaImportErrorConfig::class;
-  protected $errorConfigDataType = '';
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
-  public $metrics;
   /**
    * @var string
    */
-  public $modelStatus;
+  public $failureCount;
+  /**
+   * @var string
+   */
+  public $successCount;
 
-  /**
-   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig
-   */
-  public function setErrorConfig(GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig)
-  {
-    $this->errorConfig = $errorConfig;
-  }
-  /**
-   * @return GoogleCloudDiscoveryengineV1betaImportErrorConfig
-   */
-  public function getErrorConfig()
-  {
-    return $this->errorConfig;
-  }
   /**
    * @param GoogleRpcStatus[]
    */
@@ -58,29 +45,35 @@ class GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse extends \Google\C
   {
     return $this->errorSamples;
   }
-  public function setMetrics($metrics)
-  {
-    $this->metrics = $metrics;
-  }
-  public function getMetrics()
-  {
-    return $this->metrics;
-  }
   /**
    * @param string
    */
-  public function setModelStatus($modelStatus)
+  public function setFailureCount($failureCount)
   {
-    $this->modelStatus = $modelStatus;
+    $this->failureCount = $failureCount;
   }
   /**
    * @return string
    */
-  public function getModelStatus()
+  public function getFailureCount()
   {
-    return $this->modelStatus;
+    return $this->failureCount;
+  }
+  /**
+   * @param string
+   */
+  public function setSuccessCount($successCount)
+  {
+    $this->successCount = $successCount;
+  }
+  /**
+   * @return string
+   */
+  public function getSuccessCount()
+  {
+    return $this->successCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse');
+class_alias(GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse');
