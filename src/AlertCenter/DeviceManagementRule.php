@@ -42,7 +42,15 @@ class DeviceManagementRule extends \Google\Model
   /**
    * @var string
    */
+  public $ownerId;
+  /**
+   * @var string
+   */
   public $resourceId;
+  /**
+   * @var string
+   */
+  public $ruleAction;
   /**
    * @var string
    */
@@ -121,6 +129,20 @@ class DeviceManagementRule extends \Google\Model
   /**
    * @param string
    */
+  public function setOwnerId($ownerId)
+  {
+    $this->ownerId = $ownerId;
+  }
+  /**
+   * @return string
+   */
+  public function getOwnerId()
+  {
+    return $this->ownerId;
+  }
+  /**
+   * @param string
+   */
   public function setResourceId($resourceId)
   {
     $this->resourceId = $resourceId;
@@ -131,6 +153,20 @@ class DeviceManagementRule extends \Google\Model
   public function getResourceId()
   {
     return $this->resourceId;
+  }
+  /**
+   * @param string
+   */
+  public function setRuleAction($ruleAction)
+  {
+    $this->ruleAction = $ruleAction;
+  }
+  /**
+   * @return string
+   */
+  public function getRuleAction()
+  {
+    return $this->ruleAction;
   }
   /**
    * @param string
