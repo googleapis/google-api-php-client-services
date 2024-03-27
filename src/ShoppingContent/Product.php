@@ -48,6 +48,8 @@ class Product extends \Google\Collection
    * @var string
    */
   public $ageGroup;
+  protected $autoPricingMinPriceType = Price::class;
+  protected $autoPricingMinPriceDataType = '';
   /**
    * @var string
    */
@@ -459,6 +461,20 @@ class Product extends \Google\Collection
   public function getAgeGroup()
   {
     return $this->ageGroup;
+  }
+  /**
+   * @param Price
+   */
+  public function setAutoPricingMinPrice(Price $autoPricingMinPrice)
+  {
+    $this->autoPricingMinPrice = $autoPricingMinPrice;
+  }
+  /**
+   * @return Price
+   */
+  public function getAutoPricingMinPrice()
+  {
+    return $this->autoPricingMinPrice;
   }
   /**
    * @param string
