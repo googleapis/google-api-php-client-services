@@ -229,7 +229,7 @@ class SpacesMessages extends \Google\Service\Resource
    * supported field paths: - `text` - `attachment` - `cards` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
    * (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-   * Developer Preview: `accessory_widgets` (Requires [app
+   * `accessory_widgets` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    * @throws \Google\Service\Exception
@@ -277,7 +277,7 @@ class SpacesMessages extends \Google\Service\Resource
    * supported field paths: - `text` - `attachment` - `cards` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).) - `cards_v2`
    * (Requires [app authentication](/chat/api/guides/auth/service-accounts).) -
-   * Developer Preview: `accessory_widgets` (Requires [app
+   * `accessory_widgets` (Requires [app
    * authentication](/chat/api/guides/auth/service-accounts).)
    * @return Message
    * @throws \Google\Service\Exception
