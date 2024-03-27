@@ -23,10 +23,6 @@ class QualityOrbitOrbitImageIntents extends \Google\Collection
   protected $intentsType = QualityOrbitOrbitImageIntent::class;
   protected $intentsDataType = 'array';
   /**
-   * @var bool
-   */
-  public $isPartial;
-  /**
    * @var string
    */
   public $version;
@@ -44,20 +40,6 @@ class QualityOrbitOrbitImageIntents extends \Google\Collection
   public function getIntents()
   {
     return $this->intents;
-  }
-  /**
-   * @param bool
-   */
-  public function setIsPartial($isPartial)
-  {
-    $this->isPartial = $isPartial;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsPartial()
-  {
-    return $this->isPartial;
   }
   /**
    * @param string

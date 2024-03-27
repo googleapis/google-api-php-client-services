@@ -43,14 +43,6 @@ class ImageSafesearchContentOCRAnnotation extends \Google\Model
    * @var float
    */
   public $qbstOffensiveScore;
-  /**
-   * @var bool
-   */
-  public $vulgarI18nBit;
-  /**
-   * @var float
-   */
-  public $vulgarScore;
 
   /**
    * @param string
@@ -135,34 +127,6 @@ class ImageSafesearchContentOCRAnnotation extends \Google\Model
   public function getQbstOffensiveScore()
   {
     return $this->qbstOffensiveScore;
-  }
-  /**
-   * @param bool
-   */
-  public function setVulgarI18nBit($vulgarI18nBit)
-  {
-    $this->vulgarI18nBit = $vulgarI18nBit;
-  }
-  /**
-   * @return bool
-   */
-  public function getVulgarI18nBit()
-  {
-    return $this->vulgarI18nBit;
-  }
-  /**
-   * @param float
-   */
-  public function setVulgarScore($vulgarScore)
-  {
-    $this->vulgarScore = $vulgarScore;
-  }
-  /**
-   * @return float
-   */
-  public function getVulgarScore()
-  {
-    return $this->vulgarScore;
   }
 }
 

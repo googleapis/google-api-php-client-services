@@ -24,6 +24,8 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
    * @var string
    */
   public $arbitrationDeviceId;
+  protected $availableDeviceAndCtfContextDiffType = AssistantLogsAvailableDeviceAndCtfContextDiffLog::class;
+  protected $availableDeviceAndCtfContextDiffDataType = '';
   /**
    * @var string
    */
@@ -92,6 +94,20 @@ class AssistantLogsDeviceInfoLog extends \Google\Collection
   public function getArbitrationDeviceId()
   {
     return $this->arbitrationDeviceId;
+  }
+  /**
+   * @param AssistantLogsAvailableDeviceAndCtfContextDiffLog
+   */
+  public function setAvailableDeviceAndCtfContextDiff(AssistantLogsAvailableDeviceAndCtfContextDiffLog $availableDeviceAndCtfContextDiff)
+  {
+    $this->availableDeviceAndCtfContextDiff = $availableDeviceAndCtfContextDiff;
+  }
+  /**
+   * @return AssistantLogsAvailableDeviceAndCtfContextDiffLog
+   */
+  public function getAvailableDeviceAndCtfContextDiff()
+  {
+    return $this->availableDeviceAndCtfContextDiff;
   }
   /**
    * @param string

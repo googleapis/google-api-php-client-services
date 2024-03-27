@@ -19,6 +19,25 @@ namespace Google\Service\Contentwarehouse;
 
 class PhotosDynamicDepthMetadata extends \Google\Model
 {
+  /**
+   * @var int
+   */
+  public $version;
+
+  /**
+   * @param int
+   */
+  public function setVersion($version)
+  {
+    $this->version = $version;
+  }
+  /**
+   * @return int
+   */
+  public function getVersion()
+  {
+    return $this->version;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

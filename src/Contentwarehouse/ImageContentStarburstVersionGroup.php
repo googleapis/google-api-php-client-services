@@ -19,11 +19,15 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageContentStarburstVersionGroup extends \Google\Collection
 {
-  protected $collection_key = 'starburstTokens';
+  protected $collection_key = 'starburstTokensDistances';
   /**
    * @var float[]
    */
   public $descriptorFloat;
+  /**
+   * @var float[]
+   */
+  public $descriptorFloatBeforeProjection;
   /**
    * @var string
    */
@@ -40,6 +44,10 @@ class ImageContentStarburstVersionGroup extends \Google\Collection
    * @var int[]
    */
   public $starburstTokens;
+  /**
+   * @var float[]
+   */
+  public $starburstTokensDistances;
   /**
    * @var int
    */
@@ -58,6 +66,20 @@ class ImageContentStarburstVersionGroup extends \Google\Collection
   public function getDescriptorFloat()
   {
     return $this->descriptorFloat;
+  }
+  /**
+   * @param float[]
+   */
+  public function setDescriptorFloatBeforeProjection($descriptorFloatBeforeProjection)
+  {
+    $this->descriptorFloatBeforeProjection = $descriptorFloatBeforeProjection;
+  }
+  /**
+   * @return float[]
+   */
+  public function getDescriptorFloatBeforeProjection()
+  {
+    return $this->descriptorFloatBeforeProjection;
   }
   /**
    * @param string
@@ -114,6 +136,20 @@ class ImageContentStarburstVersionGroup extends \Google\Collection
   public function getStarburstTokens()
   {
     return $this->starburstTokens;
+  }
+  /**
+   * @param float[]
+   */
+  public function setStarburstTokensDistances($starburstTokensDistances)
+  {
+    $this->starburstTokensDistances = $starburstTokensDistances;
+  }
+  /**
+   * @return float[]
+   */
+  public function getStarburstTokensDistances()
+  {
+    return $this->starburstTokensDistances;
   }
   /**
    * @param int

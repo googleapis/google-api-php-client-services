@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
 {
-  protected $collection_key = 'sensitiveEntitiesIndices';
+  protected $collection_key = 'sensitiveEntitiesMids';
   /**
    * @var string
    */
@@ -36,6 +36,10 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
    * @var string
    */
   public $encodedChardXlqYmylPrediction;
+  /**
+   * @var string
+   */
+  public $encodedDaftScore;
   /**
    * @var string
    */
@@ -65,9 +69,17 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
    */
   public $encodedProximityScore;
   /**
+   * @var string
+   */
+  public $encodedPseudoraterPxlqScore;
+  /**
    * @var int[]
    */
   public $sensitiveEntitiesIndices;
+  /**
+   * @var string[]
+   */
+  public $sensitiveEntitiesMids;
 
   /**
    * @param string
@@ -124,6 +136,20 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
   public function getEncodedChardXlqYmylPrediction()
   {
     return $this->encodedChardXlqYmylPrediction;
+  }
+  /**
+   * @param string
+   */
+  public function setEncodedDaftScore($encodedDaftScore)
+  {
+    $this->encodedDaftScore = $encodedDaftScore;
+  }
+  /**
+   * @return string
+   */
+  public function getEncodedDaftScore()
+  {
+    return $this->encodedDaftScore;
   }
   /**
    * @param string
@@ -224,6 +250,20 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
     return $this->encodedProximityScore;
   }
   /**
+   * @param string
+   */
+  public function setEncodedPseudoraterPxlqScore($encodedPseudoraterPxlqScore)
+  {
+    $this->encodedPseudoraterPxlqScore = $encodedPseudoraterPxlqScore;
+  }
+  /**
+   * @return string
+   */
+  public function getEncodedPseudoraterPxlqScore()
+  {
+    return $this->encodedPseudoraterPxlqScore;
+  }
+  /**
    * @param int[]
    */
   public function setSensitiveEntitiesIndices($sensitiveEntitiesIndices)
@@ -236,6 +276,20 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
   public function getSensitiveEntitiesIndices()
   {
     return $this->sensitiveEntitiesIndices;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSensitiveEntitiesMids($sensitiveEntitiesMids)
+  {
+    $this->sensitiveEntitiesMids = $sensitiveEntitiesMids;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSensitiveEntitiesMids()
+  {
+    return $this->sensitiveEntitiesMids;
   }
 }
 

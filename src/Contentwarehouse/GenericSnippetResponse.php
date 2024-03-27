@@ -27,6 +27,10 @@ class GenericSnippetResponse extends \Google\Collection
   protected $infoType = Proto2BridgeMessageSet::class;
   protected $infoDataType = '';
   /**
+   * @var string
+   */
+  public $rankingSnippet;
+  /**
    * @var string[]
    */
   public $snippet;
@@ -64,6 +68,20 @@ class GenericSnippetResponse extends \Google\Collection
   public function getInfo()
   {
     return $this->info;
+  }
+  /**
+   * @param string
+   */
+  public function setRankingSnippet($rankingSnippet)
+  {
+    $this->rankingSnippet = $rankingSnippet;
+  }
+  /**
+   * @return string
+   */
+  public function getRankingSnippet()
+  {
+    return $this->rankingSnippet;
   }
   /**
    * @param string[]

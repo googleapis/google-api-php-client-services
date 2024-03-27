@@ -19,6 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class ImageRepositoryFramePerdoc extends \Google\Model
 {
+  protected $errorStatusType = UtilStatusProto::class;
+  protected $errorStatusDataType = '';
   protected $frameIdentifierType = ImageRepositoryFrameIdentifier::class;
   protected $frameIdentifierDataType = '';
   protected $perdocType = ImageData::class;
@@ -28,6 +30,20 @@ class ImageRepositoryFramePerdoc extends \Google\Model
    */
   public $timestampMsec;
 
+  /**
+   * @param UtilStatusProto
+   */
+  public function setErrorStatus(UtilStatusProto $errorStatus)
+  {
+    $this->errorStatus = $errorStatus;
+  }
+  /**
+   * @return UtilStatusProto
+   */
+  public function getErrorStatus()
+  {
+    return $this->errorStatus;
+  }
   /**
    * @param ImageRepositoryFrameIdentifier
    */

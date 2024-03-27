@@ -24,6 +24,8 @@ class AssistantLogsDeviceSelectionLog extends \Google\Collection
   protected $allDefaultDevicesDataType = 'array';
   protected $allMediaStreamLogType = AssistantLogsAllMediaStreamLog::class;
   protected $allMediaStreamLogDataType = '';
+  protected $availableDevicesLogType = AssistantLogsAvailableDevicesLog::class;
+  protected $availableDevicesLogDataType = '';
   protected $counterfactualDeviceSelectionLogType = AssistantLogsDeviceSelectionLog::class;
   protected $counterfactualDeviceSelectionLogDataType = '';
   protected $defaultDevicesType = AssistantLogsDefaultDeviceLog::class;
@@ -82,6 +84,20 @@ class AssistantLogsDeviceSelectionLog extends \Google\Collection
   public function getAllMediaStreamLog()
   {
     return $this->allMediaStreamLog;
+  }
+  /**
+   * @param AssistantLogsAvailableDevicesLog
+   */
+  public function setAvailableDevicesLog(AssistantLogsAvailableDevicesLog $availableDevicesLog)
+  {
+    $this->availableDevicesLog = $availableDevicesLog;
+  }
+  /**
+   * @return AssistantLogsAvailableDevicesLog
+   */
+  public function getAvailableDevicesLog()
+  {
+    return $this->availableDevicesLog;
   }
   /**
    * @param AssistantLogsDeviceSelectionLog

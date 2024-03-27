@@ -76,6 +76,8 @@ class KnowledgeAnswersIntentQueryArgumentValue extends \Google\Collection
   protected $recurrenceDataType = '';
   protected $reminderType = QualityActionsReminder::class;
   protected $reminderDataType = '';
+  protected $scalarValueType = KnowledgeAnswersIntentQueryScalarValue::class;
+  protected $scalarValueDataType = '';
   protected $sensitiveValueType = KnowledgeAnswersIntentQuerySensitiveArgumentValueGuard::class;
   protected $sensitiveValueDataType = '';
   protected $sensitivityType = KnowledgeAnswersSensitivitySensitivity::class;
@@ -488,6 +490,20 @@ class KnowledgeAnswersIntentQueryArgumentValue extends \Google\Collection
   public function getReminder()
   {
     return $this->reminder;
+  }
+  /**
+   * @param KnowledgeAnswersIntentQueryScalarValue
+   */
+  public function setScalarValue(KnowledgeAnswersIntentQueryScalarValue $scalarValue)
+  {
+    $this->scalarValue = $scalarValue;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryScalarValue
+   */
+  public function getScalarValue()
+  {
+    return $this->scalarValue;
   }
   /**
    * @param KnowledgeAnswersIntentQuerySensitiveArgumentValueGuard

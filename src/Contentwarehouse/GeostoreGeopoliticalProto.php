@@ -19,13 +19,17 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreGeopoliticalProto extends \Google\Collection
 {
-  protected $collection_key = 'regionSpecificName';
+  protected $collection_key = 'regionalPolygonComposingClaims';
   /**
    * @var string
    */
   public $conveysAttributionTo;
   protected $regionSpecificNameType = GeostoreRegionSpecificNameProto::class;
   protected $regionSpecificNameDataType = 'array';
+  protected $regionalPolygonAdjustmentType = GeostoreGeopoliticalProtoRegionalPolygonAdjustmentProto::class;
+  protected $regionalPolygonAdjustmentDataType = 'array';
+  protected $regionalPolygonComposingClaimsType = GeostoreGeopoliticalProtoRegionalPolygonComposingClaimsProto::class;
+  protected $regionalPolygonComposingClaimsDataType = 'array';
 
   /**
    * @param string
@@ -54,6 +58,34 @@ class GeostoreGeopoliticalProto extends \Google\Collection
   public function getRegionSpecificName()
   {
     return $this->regionSpecificName;
+  }
+  /**
+   * @param GeostoreGeopoliticalProtoRegionalPolygonAdjustmentProto[]
+   */
+  public function setRegionalPolygonAdjustment($regionalPolygonAdjustment)
+  {
+    $this->regionalPolygonAdjustment = $regionalPolygonAdjustment;
+  }
+  /**
+   * @return GeostoreGeopoliticalProtoRegionalPolygonAdjustmentProto[]
+   */
+  public function getRegionalPolygonAdjustment()
+  {
+    return $this->regionalPolygonAdjustment;
+  }
+  /**
+   * @param GeostoreGeopoliticalProtoRegionalPolygonComposingClaimsProto[]
+   */
+  public function setRegionalPolygonComposingClaims($regionalPolygonComposingClaims)
+  {
+    $this->regionalPolygonComposingClaims = $regionalPolygonComposingClaims;
+  }
+  /**
+   * @return GeostoreGeopoliticalProtoRegionalPolygonComposingClaimsProto[]
+   */
+  public function getRegionalPolygonComposingClaims()
+  {
+    return $this->regionalPolygonComposingClaims;
   }
 }
 

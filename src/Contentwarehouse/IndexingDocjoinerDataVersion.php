@@ -511,6 +511,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $nlxDocAnnotationDataType = '';
   protected $noindexedImageDataListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $noindexedImageDataListDataType = '';
+  protected $nsrFdpDataType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $nsrFdpDataDataType = '';
   protected $numberAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $numberAnnotationsDataType = '';
   protected $oceanLibrarianBookMetadataType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -577,6 +579,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $oceanRightsOptOutRequestDataType = '';
   protected $officialPagesQuerySetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $officialPagesQuerySetDataType = '';
+  protected $orbitIntentsType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $orbitIntentsDataType = '';
   protected $perDocLangidDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $perDocLangidDataDataType = '';
   protected $personalizationGameWebeventsConsolidatedEventsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -945,6 +949,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $richsnippetsPageMapAnnotationsDataType = '';
   protected $richsnippetsSchemaThingType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsSchemaThingDataType = '';
+  protected $robotsPolicyType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $robotsPolicyDataType = '';
   protected $rosettaLanguageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $rosettaLanguageDataType = '';
   protected $safesearchPageClassifierOutputType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -1007,6 +1013,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $spamScamUnauthoritativeSiteDataType = '';
   protected $spamTokensSpamTokensAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamTokensSpamTokensAnnotationDataType = '';
+  protected $spambrainDomainSitechunkDataType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $spambrainDomainSitechunkDataDataType = '';
   protected $tableTalkStrideOfferPagePriceAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $tableTalkStrideOfferPagePriceAnnotationDataType = '';
   protected $tasksTabaTabaDocSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -4533,6 +4541,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setNsrFdpData(IndexingDocjoinerDataVersionVersionInfo $nsrFdpData)
+  {
+    $this->nsrFdpData = $nsrFdpData;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getNsrFdpData()
+  {
+    return $this->nsrFdpData;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setNumberAnnotations(IndexingDocjoinerDataVersionVersionInfo $numberAnnotations)
   {
     $this->numberAnnotations = $numberAnnotations;
@@ -4991,6 +5013,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getOfficialPagesQuerySet()
   {
     return $this->officialPagesQuerySet;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setOrbitIntents(IndexingDocjoinerDataVersionVersionInfo $orbitIntents)
+  {
+    $this->orbitIntents = $orbitIntents;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getOrbitIntents()
+  {
+    return $this->orbitIntents;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -7571,6 +7607,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setRobotsPolicy(IndexingDocjoinerDataVersionVersionInfo $robotsPolicy)
+  {
+    $this->robotsPolicy = $robotsPolicy;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getRobotsPolicy()
+  {
+    return $this->robotsPolicy;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setRosettaLanguage(IndexingDocjoinerDataVersionVersionInfo $rosettaLanguage)
   {
     $this->rosettaLanguage = $rosettaLanguage;
@@ -8001,6 +8051,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getSpamTokensSpamTokensAnnotation()
   {
     return $this->spamTokensSpamTokensAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setSpambrainDomainSitechunkData(IndexingDocjoinerDataVersionVersionInfo $spambrainDomainSitechunkData)
+  {
+    $this->spambrainDomainSitechunkData = $spambrainDomainSitechunkData;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getSpambrainDomainSitechunkData()
+  {
+    return $this->spambrainDomainSitechunkData;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

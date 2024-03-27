@@ -35,6 +35,10 @@ class CompositeDocPartialUpdateInfo extends \Google\Collection
    */
   public $shouldLookupDocjoinsTier;
   /**
+   * @var string
+   */
+  public $shouldLookupDocjoinsVerticalCorpus;
+  /**
    * @var string[]
    */
   public $signalNames;
@@ -94,6 +98,20 @@ class CompositeDocPartialUpdateInfo extends \Google\Collection
   public function getShouldLookupDocjoinsTier()
   {
     return $this->shouldLookupDocjoinsTier;
+  }
+  /**
+   * @param string
+   */
+  public function setShouldLookupDocjoinsVerticalCorpus($shouldLookupDocjoinsVerticalCorpus)
+  {
+    $this->shouldLookupDocjoinsVerticalCorpus = $shouldLookupDocjoinsVerticalCorpus;
+  }
+  /**
+   * @return string
+   */
+  public function getShouldLookupDocjoinsVerticalCorpus()
+  {
+    return $this->shouldLookupDocjoinsVerticalCorpus;
   }
   /**
    * @param string[]

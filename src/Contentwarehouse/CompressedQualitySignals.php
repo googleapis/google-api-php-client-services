@@ -149,6 +149,10 @@ class CompressedQualitySignals extends \Google\Collection
   /**
    * @var string
    */
+  public $ugcDiscussionEffortScore;
+  /**
+   * @var string
+   */
   public $unauthoritativeScore;
   /**
    * @var string
@@ -644,6 +648,20 @@ class CompressedQualitySignals extends \Google\Collection
   public function getTopicEmbeddingsVersionedData()
   {
     return $this->topicEmbeddingsVersionedData;
+  }
+  /**
+   * @param string
+   */
+  public function setUgcDiscussionEffortScore($ugcDiscussionEffortScore)
+  {
+    $this->ugcDiscussionEffortScore = $ugcDiscussionEffortScore;
+  }
+  /**
+   * @return string
+   */
+  public function getUgcDiscussionEffortScore()
+  {
+    return $this->ugcDiscussionEffortScore;
   }
   /**
    * @param string

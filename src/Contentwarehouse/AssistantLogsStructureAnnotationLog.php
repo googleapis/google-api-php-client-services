@@ -17,12 +17,17 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantLogsStructureAnnotationLog extends \Google\Model
+class AssistantLogsStructureAnnotationLog extends \Google\Collection
 {
+  protected $collection_key = 'structureId';
   /**
    * @var string
    */
   public $rawTextFromQuery;
+  /**
+   * @var string[]
+   */
+  public $structureId;
   /**
    * @var string
    */
@@ -45,6 +50,20 @@ class AssistantLogsStructureAnnotationLog extends \Google\Model
   public function getRawTextFromQuery()
   {
     return $this->rawTextFromQuery;
+  }
+  /**
+   * @param string[]
+   */
+  public function setStructureId($structureId)
+  {
+    $this->structureId = $structureId;
+  }
+  /**
+   * @return string[]
+   */
+  public function getStructureId()
+  {
+    return $this->structureId;
   }
   /**
    * @param string

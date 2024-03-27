@@ -26,8 +26,8 @@ class GeostoreIntersectionProto extends \Google\Collection
   protected $outSegmentDataType = 'array';
   protected $segmentType = GeostoreFeatureIdProto::class;
   protected $segmentDataType = 'array';
-  protected $tollClusterIdType = GeostoreFeatureIdProto::class;
-  protected $tollClusterIdDataType = '';
+  protected $tollClusterType = GeostoreFeatureIdProto::class;
+  protected $tollClusterDataType = '';
 
   /**
    * @param GeostoreFeatureIdProto
@@ -74,16 +74,16 @@ class GeostoreIntersectionProto extends \Google\Collection
   /**
    * @param GeostoreFeatureIdProto
    */
-  public function setTollClusterId(GeostoreFeatureIdProto $tollClusterId)
+  public function setTollCluster(GeostoreFeatureIdProto $tollCluster)
   {
-    $this->tollClusterId = $tollClusterId;
+    $this->tollCluster = $tollCluster;
   }
   /**
    * @return GeostoreFeatureIdProto
    */
-  public function getTollClusterId()
+  public function getTollCluster()
   {
-    return $this->tollClusterId;
+    return $this->tollCluster;
   }
 }
 

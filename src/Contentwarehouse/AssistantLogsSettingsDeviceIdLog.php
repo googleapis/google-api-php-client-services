@@ -26,6 +26,10 @@ class AssistantLogsSettingsDeviceIdLog extends \Google\Model
   /**
    * @var string
    */
+  public $alloDeviceId;
+  /**
+   * @var string
+   */
   public $canonicalDeviceId;
   /**
    * @var string
@@ -38,11 +42,19 @@ class AssistantLogsSettingsDeviceIdLog extends \Google\Model
   /**
    * @var string
    */
+  public $deviceConfigId;
+  /**
+   * @var string
+   */
   public $homeGraphDeviceId;
   /**
    * @var string
    */
   public $libassistantDeviceId;
+  /**
+   * @var string
+   */
+  public $opaIosDeviceId;
 
   /**
    * @param string
@@ -57,6 +69,20 @@ class AssistantLogsSettingsDeviceIdLog extends \Google\Model
   public function getAgsaClientInstanceId()
   {
     return $this->agsaClientInstanceId;
+  }
+  /**
+   * @param string
+   */
+  public function setAlloDeviceId($alloDeviceId)
+  {
+    $this->alloDeviceId = $alloDeviceId;
+  }
+  /**
+   * @return string
+   */
+  public function getAlloDeviceId()
+  {
+    return $this->alloDeviceId;
   }
   /**
    * @param string
@@ -103,6 +129,20 @@ class AssistantLogsSettingsDeviceIdLog extends \Google\Model
   /**
    * @param string
    */
+  public function setDeviceConfigId($deviceConfigId)
+  {
+    $this->deviceConfigId = $deviceConfigId;
+  }
+  /**
+   * @return string
+   */
+  public function getDeviceConfigId()
+  {
+    return $this->deviceConfigId;
+  }
+  /**
+   * @param string
+   */
   public function setHomeGraphDeviceId($homeGraphDeviceId)
   {
     $this->homeGraphDeviceId = $homeGraphDeviceId;
@@ -127,6 +167,20 @@ class AssistantLogsSettingsDeviceIdLog extends \Google\Model
   public function getLibassistantDeviceId()
   {
     return $this->libassistantDeviceId;
+  }
+  /**
+   * @param string
+   */
+  public function setOpaIosDeviceId($opaIosDeviceId)
+  {
+    $this->opaIosDeviceId = $opaIosDeviceId;
+  }
+  /**
+   * @return string
+   */
+  public function getOpaIosDeviceId()
+  {
+    return $this->opaIosDeviceId;
   }
 }
 

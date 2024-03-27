@@ -32,6 +32,10 @@ class QualityNsrNsrData extends \Google\Collection
    * @var int
    */
   public $chardEncoded;
+  protected $chardScoreEncodedType = QualityNsrVersionedIntSignal::class;
+  protected $chardScoreEncodedDataType = 'array';
+  protected $chardScoreVarianceType = QualityNsrVersionedFloatSignal::class;
+  protected $chardScoreVarianceDataType = 'array';
   /**
    * @var float
    */
@@ -84,24 +88,18 @@ class QualityNsrNsrData extends \Google\Collection
    * @var bool
    */
   public $isVideoFocusedSite;
+  protected $ketoVersionedDataType = QualityNsrKetoKetoVersionedData::class;
+  protected $ketoVersionedDataDataType = 'array';
   /**
    * @var int
    */
   public $language;
-  /**
-   * @var int
-   */
-  public $largeOrgId;
   /**
    * @var float
    */
   public $localityScore;
   protected $metadataType = QualityNsrNsrDataMetadata::class;
   protected $metadataDataType = '';
-  /**
-   * @var float
-   */
-  public $newNsr;
   /**
    * @var float
    */
@@ -132,6 +130,8 @@ class QualityNsrNsrData extends \Google\Collection
   public $pnavClicks;
   protected $priorAdjustedNsrType = QualityNsrVersionedFloatSignal::class;
   protected $priorAdjustedNsrDataType = 'array';
+  protected $racterScoresType = QualityNsrVersionedFloatSignal::class;
+  protected $racterScoresDataType = 'array';
   /**
    * @var string
    */
@@ -140,6 +140,10 @@ class QualityNsrNsrData extends \Google\Collection
    * @var float
    */
   public $shoppingScore;
+  protected $site2vecEmbeddingType = QualityNsrNsrDataEmbedding::class;
+  protected $site2vecEmbeddingDataType = 'array';
+  protected $site2vecEmbeddingEncodedType = QualityNsrNsrDataEncodedEmbedding::class;
+  protected $site2vecEmbeddingEncodedDataType = 'array';
   /**
    * @var float
    */
@@ -180,6 +184,10 @@ class QualityNsrNsrData extends \Google\Collection
   public $spambrainLavcScore;
   protected $spambrainLavcScoresType = QualityNsrVersionedFloatSignal::class;
   protected $spambrainLavcScoresDataType = 'array';
+  /**
+   * @var float
+   */
+  public $titlematchScore;
   /**
    * @var float
    */
@@ -252,6 +260,34 @@ class QualityNsrNsrData extends \Google\Collection
   public function getChardEncoded()
   {
     return $this->chardEncoded;
+  }
+  /**
+   * @param QualityNsrVersionedIntSignal[]
+   */
+  public function setChardScoreEncoded($chardScoreEncoded)
+  {
+    $this->chardScoreEncoded = $chardScoreEncoded;
+  }
+  /**
+   * @return QualityNsrVersionedIntSignal[]
+   */
+  public function getChardScoreEncoded()
+  {
+    return $this->chardScoreEncoded;
+  }
+  /**
+   * @param QualityNsrVersionedFloatSignal[]
+   */
+  public function setChardScoreVariance($chardScoreVariance)
+  {
+    $this->chardScoreVariance = $chardScoreVariance;
+  }
+  /**
+   * @return QualityNsrVersionedFloatSignal[]
+   */
+  public function getChardScoreVariance()
+  {
+    return $this->chardScoreVariance;
   }
   /**
    * @param float
@@ -450,6 +486,20 @@ class QualityNsrNsrData extends \Google\Collection
     return $this->isVideoFocusedSite;
   }
   /**
+   * @param QualityNsrKetoKetoVersionedData[]
+   */
+  public function setKetoVersionedData($ketoVersionedData)
+  {
+    $this->ketoVersionedData = $ketoVersionedData;
+  }
+  /**
+   * @return QualityNsrKetoKetoVersionedData[]
+   */
+  public function getKetoVersionedData()
+  {
+    return $this->ketoVersionedData;
+  }
+  /**
    * @param int
    */
   public function setLanguage($language)
@@ -462,20 +512,6 @@ class QualityNsrNsrData extends \Google\Collection
   public function getLanguage()
   {
     return $this->language;
-  }
-  /**
-   * @param int
-   */
-  public function setLargeOrgId($largeOrgId)
-  {
-    $this->largeOrgId = $largeOrgId;
-  }
-  /**
-   * @return int
-   */
-  public function getLargeOrgId()
-  {
-    return $this->largeOrgId;
   }
   /**
    * @param float
@@ -504,20 +540,6 @@ class QualityNsrNsrData extends \Google\Collection
   public function getMetadata()
   {
     return $this->metadata;
-  }
-  /**
-   * @param float
-   */
-  public function setNewNsr($newNsr)
-  {
-    $this->newNsr = $newNsr;
-  }
-  /**
-   * @return float
-   */
-  public function getNewNsr()
-  {
-    return $this->newNsr;
   }
   /**
    * @param float
@@ -632,6 +654,20 @@ class QualityNsrNsrData extends \Google\Collection
     return $this->priorAdjustedNsr;
   }
   /**
+   * @param QualityNsrVersionedFloatSignal[]
+   */
+  public function setRacterScores($racterScores)
+  {
+    $this->racterScores = $racterScores;
+  }
+  /**
+   * @return QualityNsrVersionedFloatSignal[]
+   */
+  public function getRacterScores()
+  {
+    return $this->racterScores;
+  }
+  /**
    * @param string
    */
   public function setSecondarySiteChunk($secondarySiteChunk)
@@ -658,6 +694,34 @@ class QualityNsrNsrData extends \Google\Collection
   public function getShoppingScore()
   {
     return $this->shoppingScore;
+  }
+  /**
+   * @param QualityNsrNsrDataEmbedding[]
+   */
+  public function setSite2vecEmbedding($site2vecEmbedding)
+  {
+    $this->site2vecEmbedding = $site2vecEmbedding;
+  }
+  /**
+   * @return QualityNsrNsrDataEmbedding[]
+   */
+  public function getSite2vecEmbedding()
+  {
+    return $this->site2vecEmbedding;
+  }
+  /**
+   * @param QualityNsrNsrDataEncodedEmbedding[]
+   */
+  public function setSite2vecEmbeddingEncoded($site2vecEmbeddingEncoded)
+  {
+    $this->site2vecEmbeddingEncoded = $site2vecEmbeddingEncoded;
+  }
+  /**
+   * @return QualityNsrNsrDataEncodedEmbedding[]
+   */
+  public function getSite2vecEmbeddingEncoded()
+  {
+    return $this->site2vecEmbeddingEncoded;
   }
   /**
    * @param float
@@ -812,6 +876,20 @@ class QualityNsrNsrData extends \Google\Collection
   public function getSpambrainLavcScores()
   {
     return $this->spambrainLavcScores;
+  }
+  /**
+   * @param float
+   */
+  public function setTitlematchScore($titlematchScore)
+  {
+    $this->titlematchScore = $titlematchScore;
+  }
+  /**
+   * @return float
+   */
+  public function getTitlematchScore()
+  {
+    return $this->titlematchScore;
   }
   /**
    * @param float

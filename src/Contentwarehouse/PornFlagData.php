@@ -42,10 +42,6 @@ class PornFlagData extends \Google\Collection
   public $numberFaces;
   protected $ocrAnnotationType = ImageSafesearchContentOCRAnnotation::class;
   protected $ocrAnnotationDataType = '';
-  /**
-   * @var float
-   */
-  public $ocrVulgarScore;
   protected $offensiveSymbolDetectionType = ImageSafesearchContentOffensiveSymbolDetection::class;
   protected $offensiveSymbolDetectionDataType = '';
   /**
@@ -182,20 +178,6 @@ class PornFlagData extends \Google\Collection
   public function getOcrAnnotation()
   {
     return $this->ocrAnnotation;
-  }
-  /**
-   * @param float
-   */
-  public function setOcrVulgarScore($ocrVulgarScore)
-  {
-    $this->ocrVulgarScore = $ocrVulgarScore;
-  }
-  /**
-   * @return float
-   */
-  public function getOcrVulgarScore()
-  {
-    return $this->ocrVulgarScore;
   }
   /**
    * @param ImageSafesearchContentOffensiveSymbolDetection

@@ -19,22 +19,6 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
 {
-  /**
-   * @var float
-   */
-  public $bindingSetAuis;
-  /**
-   * @var string
-   */
-  public $bindingSetInvalidReason;
-  /**
-   * @var float
-   */
-  public $bindingSetPauis;
-  /**
-   * @var string
-   */
-  public $bindingSetValidity;
   public $calibratedParsingScore;
   /**
    * @var bool
@@ -56,9 +40,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var bool
    */
   public $generatedByLegacyAquaDomain;
-  public $groundabilityScore;
-  protected $groundingProviderFeaturesType = AssistantGroundingRankerGroundingProviderFeatures::class;
-  protected $groundingProviderFeaturesDataType = '';
   /**
    * @var bool
    */
@@ -74,21 +55,17 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public $intentNameAuisScore;
   public $intentNameAuisScoreExp;
   /**
-   * @var float
-   */
-  public $intentNamePauis;
-  /**
    * @var string
    */
   public $intentType;
   /**
    * @var bool
    */
-  public $isDummyIntent;
+  public $isAquaMediaIntent;
   /**
    * @var bool
    */
-  public $isFeasible;
+  public $isDummyIntent;
   /**
    * @var bool
    */
@@ -97,6 +74,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var bool
    */
   public $isHighConfidencePodcastIntent;
+  /**
+   * @var bool
+   */
+  public $isIntentFromOrbit;
   /**
    * @var bool
    */
@@ -117,6 +98,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var bool
    */
   public $isPodcastIntent;
+  /**
+   * @var bool
+   */
+  public $isRadioIntent;
   /**
    * @var bool
    */
@@ -146,30 +131,23 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $isVideoIntent;
   /**
+   * @var float
+   */
+  public $kScore;
+  /**
    * @var int
    */
   public $kscorerRank;
-  protected $laaFeaturesType = AssistantGroundingRankerLaaFeatures::class;
-  protected $laaFeaturesDataType = '';
-  /**
-   * @var bool
-   */
-  public $maskCandidateLevelFeatures;
   public $maxHgrScoreAcrossBindingSets;
+  public $nspIntentParseScore;
   /**
    * @var int
    */
   public $nspRank;
-  /**
-   * @var float
-   */
-  public $numAlternativeHypothesis;
   public $numConstraints;
   public $numConstraintsSatisfied;
   public $numGroundableArgs;
   public $numGroundedArgs;
-  public $numVariables;
-  public $numVariablesGrounded;
   /**
    * @var int
    */
@@ -191,10 +169,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var string
    */
-  public $rankerName;
-  /**
-   * @var string
-   */
   public $searchDispatch;
   protected $smarthomeIntentMetadataType = AssistantPfrSmartHomeIntentMetadata::class;
   protected $smarthomeIntentMetadataDataType = '';
@@ -205,74 +179,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   protected $tiebreakingMetadataType = AssistantPfrTiebreakingMetadata::class;
   protected $tiebreakingMetadataDataType = '';
   /**
-   * @var float
-   */
-  public $topHypothesisConfidence;
-  /**
    * @var bool
    */
   public $usesGroundingBox;
-  /**
-   * @var float
-   */
-  public $verticalConfidenceScore;
 
-  /**
-   * @param float
-   */
-  public function setBindingSetAuis($bindingSetAuis)
-  {
-    $this->bindingSetAuis = $bindingSetAuis;
-  }
-  /**
-   * @return float
-   */
-  public function getBindingSetAuis()
-  {
-    return $this->bindingSetAuis;
-  }
-  /**
-   * @param string
-   */
-  public function setBindingSetInvalidReason($bindingSetInvalidReason)
-  {
-    $this->bindingSetInvalidReason = $bindingSetInvalidReason;
-  }
-  /**
-   * @return string
-   */
-  public function getBindingSetInvalidReason()
-  {
-    return $this->bindingSetInvalidReason;
-  }
-  /**
-   * @param float
-   */
-  public function setBindingSetPauis($bindingSetPauis)
-  {
-    $this->bindingSetPauis = $bindingSetPauis;
-  }
-  /**
-   * @return float
-   */
-  public function getBindingSetPauis()
-  {
-    return $this->bindingSetPauis;
-  }
-  /**
-   * @param string
-   */
-  public function setBindingSetValidity($bindingSetValidity)
-  {
-    $this->bindingSetValidity = $bindingSetValidity;
-  }
-  /**
-   * @return string
-   */
-  public function getBindingSetValidity()
-  {
-    return $this->bindingSetValidity;
-  }
   public function setCalibratedParsingScore($calibratedParsingScore)
   {
     $this->calibratedParsingScore = $calibratedParsingScore;
@@ -351,28 +261,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   {
     return $this->generatedByLegacyAquaDomain;
   }
-  public function setGroundabilityScore($groundabilityScore)
-  {
-    $this->groundabilityScore = $groundabilityScore;
-  }
-  public function getGroundabilityScore()
-  {
-    return $this->groundabilityScore;
-  }
-  /**
-   * @param AssistantGroundingRankerGroundingProviderFeatures
-   */
-  public function setGroundingProviderFeatures(AssistantGroundingRankerGroundingProviderFeatures $groundingProviderFeatures)
-  {
-    $this->groundingProviderFeatures = $groundingProviderFeatures;
-  }
-  /**
-   * @return AssistantGroundingRankerGroundingProviderFeatures
-   */
-  public function getGroundingProviderFeatures()
-  {
-    return $this->groundingProviderFeatures;
-  }
   /**
    * @param bool
    */
@@ -432,20 +320,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->intentNameAuisScoreExp;
   }
   /**
-   * @param float
-   */
-  public function setIntentNamePauis($intentNamePauis)
-  {
-    $this->intentNamePauis = $intentNamePauis;
-  }
-  /**
-   * @return float
-   */
-  public function getIntentNamePauis()
-  {
-    return $this->intentNamePauis;
-  }
-  /**
    * @param string
    */
   public function setIntentType($intentType)
@@ -462,6 +336,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param bool
    */
+  public function setIsAquaMediaIntent($isAquaMediaIntent)
+  {
+    $this->isAquaMediaIntent = $isAquaMediaIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsAquaMediaIntent()
+  {
+    return $this->isAquaMediaIntent;
+  }
+  /**
+   * @param bool
+   */
   public function setIsDummyIntent($isDummyIntent)
   {
     $this->isDummyIntent = $isDummyIntent;
@@ -472,20 +360,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsDummyIntent()
   {
     return $this->isDummyIntent;
-  }
-  /**
-   * @param bool
-   */
-  public function setIsFeasible($isFeasible)
-  {
-    $this->isFeasible = $isFeasible;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsFeasible()
-  {
-    return $this->isFeasible;
   }
   /**
    * @param bool
@@ -514,6 +388,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsHighConfidencePodcastIntent()
   {
     return $this->isHighConfidencePodcastIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsIntentFromOrbit($isIntentFromOrbit)
+  {
+    $this->isIntentFromOrbit = $isIntentFromOrbit;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsIntentFromOrbit()
+  {
+    return $this->isIntentFromOrbit;
   }
   /**
    * @param bool
@@ -584,6 +472,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsPodcastIntent()
   {
     return $this->isPodcastIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsRadioIntent($isRadioIntent)
+  {
+    $this->isRadioIntent = $isRadioIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsRadioIntent()
+  {
+    return $this->isRadioIntent;
   }
   /**
    * @param bool
@@ -684,6 +586,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->isVideoIntent;
   }
   /**
+   * @param float
+   */
+  public function setKScore($kScore)
+  {
+    $this->kScore = $kScore;
+  }
+  /**
+   * @return float
+   */
+  public function getKScore()
+  {
+    return $this->kScore;
+  }
+  /**
    * @param int
    */
   public function setKscorerRank($kscorerRank)
@@ -697,34 +613,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   {
     return $this->kscorerRank;
   }
-  /**
-   * @param AssistantGroundingRankerLaaFeatures
-   */
-  public function setLaaFeatures(AssistantGroundingRankerLaaFeatures $laaFeatures)
-  {
-    $this->laaFeatures = $laaFeatures;
-  }
-  /**
-   * @return AssistantGroundingRankerLaaFeatures
-   */
-  public function getLaaFeatures()
-  {
-    return $this->laaFeatures;
-  }
-  /**
-   * @param bool
-   */
-  public function setMaskCandidateLevelFeatures($maskCandidateLevelFeatures)
-  {
-    $this->maskCandidateLevelFeatures = $maskCandidateLevelFeatures;
-  }
-  /**
-   * @return bool
-   */
-  public function getMaskCandidateLevelFeatures()
-  {
-    return $this->maskCandidateLevelFeatures;
-  }
   public function setMaxHgrScoreAcrossBindingSets($maxHgrScoreAcrossBindingSets)
   {
     $this->maxHgrScoreAcrossBindingSets = $maxHgrScoreAcrossBindingSets;
@@ -732,6 +620,14 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getMaxHgrScoreAcrossBindingSets()
   {
     return $this->maxHgrScoreAcrossBindingSets;
+  }
+  public function setNspIntentParseScore($nspIntentParseScore)
+  {
+    $this->nspIntentParseScore = $nspIntentParseScore;
+  }
+  public function getNspIntentParseScore()
+  {
+    return $this->nspIntentParseScore;
   }
   /**
    * @param int
@@ -746,20 +642,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getNspRank()
   {
     return $this->nspRank;
-  }
-  /**
-   * @param float
-   */
-  public function setNumAlternativeHypothesis($numAlternativeHypothesis)
-  {
-    $this->numAlternativeHypothesis = $numAlternativeHypothesis;
-  }
-  /**
-   * @return float
-   */
-  public function getNumAlternativeHypothesis()
-  {
-    return $this->numAlternativeHypothesis;
   }
   public function setNumConstraints($numConstraints)
   {
@@ -792,22 +674,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getNumGroundedArgs()
   {
     return $this->numGroundedArgs;
-  }
-  public function setNumVariables($numVariables)
-  {
-    $this->numVariables = $numVariables;
-  }
-  public function getNumVariables()
-  {
-    return $this->numVariables;
-  }
-  public function setNumVariablesGrounded($numVariablesGrounded)
-  {
-    $this->numVariablesGrounded = $numVariablesGrounded;
-  }
-  public function getNumVariablesGrounded()
-  {
-    return $this->numVariablesGrounded;
   }
   /**
    * @param int
@@ -884,20 +750,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param string
    */
-  public function setRankerName($rankerName)
-  {
-    $this->rankerName = $rankerName;
-  }
-  /**
-   * @return string
-   */
-  public function getRankerName()
-  {
-    return $this->rankerName;
-  }
-  /**
-   * @param string
-   */
   public function setSearchDispatch($searchDispatch)
   {
     $this->searchDispatch = $searchDispatch;
@@ -952,20 +804,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->tiebreakingMetadata;
   }
   /**
-   * @param float
-   */
-  public function setTopHypothesisConfidence($topHypothesisConfidence)
-  {
-    $this->topHypothesisConfidence = $topHypothesisConfidence;
-  }
-  /**
-   * @return float
-   */
-  public function getTopHypothesisConfidence()
-  {
-    return $this->topHypothesisConfidence;
-  }
-  /**
    * @param bool
    */
   public function setUsesGroundingBox($usesGroundingBox)
@@ -978,20 +816,6 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getUsesGroundingBox()
   {
     return $this->usesGroundingBox;
-  }
-  /**
-   * @param float
-   */
-  public function setVerticalConfidenceScore($verticalConfidenceScore)
-  {
-    $this->verticalConfidenceScore = $verticalConfidenceScore;
-  }
-  /**
-   * @return float
-   */
-  public function getVerticalConfidenceScore()
-  {
-    return $this->verticalConfidenceScore;
   }
 }
 
