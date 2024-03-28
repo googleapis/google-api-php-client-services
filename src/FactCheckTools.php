@@ -63,7 +63,32 @@ class FactCheckTools extends \Google\Service
         'claims',
         [
           'methods' => [
-            'search' => [
+            'imageSearch' => [
+              'path' => 'v1alpha1/claims:imageSearch',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'imageUri' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'offset' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'search' => [
               'path' => 'v1alpha1/claims:search',
               'httpMethod' => 'GET',
               'parameters' => [
