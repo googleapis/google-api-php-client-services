@@ -276,6 +276,16 @@ class BackupforGKE extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getBackupIndexDownloadUrl' => [
+              'path' => 'v1/{+backup}:getBackupIndexDownloadUrl',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'backup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getIamPolicy' => [
               'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
