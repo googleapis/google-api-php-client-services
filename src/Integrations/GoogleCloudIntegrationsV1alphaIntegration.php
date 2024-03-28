@@ -26,7 +26,15 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
   /**
    * @var string
    */
+  public $creatorEmail;
+  /**
+   * @var string
+   */
   public $description;
+  /**
+   * @var string
+   */
+  public $lastModifierEmail;
   /**
    * @var string
    */
@@ -53,6 +61,20 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
   /**
    * @param string
    */
+  public function setCreatorEmail($creatorEmail)
+  {
+    $this->creatorEmail = $creatorEmail;
+  }
+  /**
+   * @return string
+   */
+  public function getCreatorEmail()
+  {
+    return $this->creatorEmail;
+  }
+  /**
+   * @param string
+   */
   public function setDescription($description)
   {
     $this->description = $description;
@@ -63,6 +85,20 @@ class GoogleCloudIntegrationsV1alphaIntegration extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setLastModifierEmail($lastModifierEmail)
+  {
+    $this->lastModifierEmail = $lastModifierEmail;
+  }
+  /**
+   * @return string
+   */
+  public function getLastModifierEmail()
+  {
+    return $this->lastModifierEmail;
   }
   /**
    * @param string
