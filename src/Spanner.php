@@ -388,6 +388,16 @@ class Spanner extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'move' => [
+              'path' => 'v1/{+name}:move',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
