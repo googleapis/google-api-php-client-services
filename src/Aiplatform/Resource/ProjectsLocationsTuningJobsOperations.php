@@ -17,6 +17,7 @@
 
 namespace Google\Service\Aiplatform\Resource;
 
+use Google\Service\Aiplatform\GoogleLongrunningListOperationsResponse;
 use Google\Service\Aiplatform\GoogleLongrunningOperation;
 use Google\Service\Aiplatform\GoogleProtobufEmpty;
 
@@ -67,6 +68,26 @@ class ProjectsLocationsTuningJobsOperations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Lists operations that match the specified filter in the request. If the
+   * server doesn't support this method, it returns `UNIMPLEMENTED`.
+   * (operations.listProjectsLocationsTuningJobsOperations)
+   *
+   * @param string $name The name of the operation's parent resource.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter The standard list filter.
+   * @opt_param int pageSize The standard list page size.
+   * @opt_param string pageToken The standard list page token.
+   * @return GoogleLongrunningListOperationsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsTuningJobsOperations($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleLongrunningListOperationsResponse::class);
   }
 }
 

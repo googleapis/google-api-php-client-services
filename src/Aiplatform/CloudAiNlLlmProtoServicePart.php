@@ -29,6 +29,8 @@ class CloudAiNlLlmProtoServicePart extends \Google\Model
   protected $functionResponseDataType = '';
   protected $inlineDataType = CloudAiNlLlmProtoServicePartBlob::class;
   protected $inlineDataDataType = '';
+  protected $lmRootMetadataType = CloudAiNlLlmProtoServicePartLMRootMetadata::class;
+  protected $lmRootMetadataDataType = '';
   /**
    * @var string
    */
@@ -105,6 +107,20 @@ class CloudAiNlLlmProtoServicePart extends \Google\Model
   public function getInlineData()
   {
     return $this->inlineData;
+  }
+  /**
+   * @param CloudAiNlLlmProtoServicePartLMRootMetadata
+   */
+  public function setLmRootMetadata(CloudAiNlLlmProtoServicePartLMRootMetadata $lmRootMetadata)
+  {
+    $this->lmRootMetadata = $lmRootMetadata;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServicePartLMRootMetadata
+   */
+  public function getLmRootMetadata()
+  {
+    return $this->lmRootMetadata;
   }
   /**
    * @param string

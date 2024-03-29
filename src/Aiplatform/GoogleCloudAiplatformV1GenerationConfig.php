@@ -25,9 +25,17 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    */
   public $candidateCount;
   /**
+   * @var float
+   */
+  public $frequencyPenalty;
+  /**
    * @var int
    */
   public $maxOutputTokens;
+  /**
+   * @var float
+   */
+  public $presencePenalty;
   /**
    * @var string[]
    */
@@ -60,6 +68,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
     return $this->candidateCount;
   }
   /**
+   * @param float
+   */
+  public function setFrequencyPenalty($frequencyPenalty)
+  {
+    $this->frequencyPenalty = $frequencyPenalty;
+  }
+  /**
+   * @return float
+   */
+  public function getFrequencyPenalty()
+  {
+    return $this->frequencyPenalty;
+  }
+  /**
    * @param int
    */
   public function setMaxOutputTokens($maxOutputTokens)
@@ -72,6 +94,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getMaxOutputTokens()
   {
     return $this->maxOutputTokens;
+  }
+  /**
+   * @param float
+   */
+  public function setPresencePenalty($presencePenalty)
+  {
+    $this->presencePenalty = $presencePenalty;
+  }
+  /**
+   * @return float
+   */
+  public function getPresencePenalty()
+  {
+    return $this->presencePenalty;
   }
   /**
    * @param string[]

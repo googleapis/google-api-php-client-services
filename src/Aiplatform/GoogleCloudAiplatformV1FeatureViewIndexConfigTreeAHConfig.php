@@ -17,28 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends \Google\Model
+class GoogleCloudAiplatformV1FeatureViewIndexConfigTreeAHConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $publicEndpointDomainName;
+  public $leafNodeEmbeddingCount;
 
   /**
    * @param string
    */
-  public function setPublicEndpointDomainName($publicEndpointDomainName)
+  public function setLeafNodeEmbeddingCount($leafNodeEmbeddingCount)
   {
-    $this->publicEndpointDomainName = $publicEndpointDomainName;
+    $this->leafNodeEmbeddingCount = $leafNodeEmbeddingCount;
   }
   /**
    * @return string
    */
-  public function getPublicEndpointDomainName()
+  public function getLeafNodeEmbeddingCount()
   {
-    return $this->publicEndpointDomainName;
+    return $this->leafNodeEmbeddingCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint');
+class_alias(GoogleCloudAiplatformV1FeatureViewIndexConfigTreeAHConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewIndexConfigTreeAHConfig');

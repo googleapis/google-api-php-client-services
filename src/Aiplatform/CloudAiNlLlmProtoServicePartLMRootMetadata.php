@@ -17,28 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends \Google\Model
+class CloudAiNlLlmProtoServicePartLMRootMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $publicEndpointDomainName;
+  public $chunkId;
 
   /**
    * @param string
    */
-  public function setPublicEndpointDomainName($publicEndpointDomainName)
+  public function setChunkId($chunkId)
   {
-    $this->publicEndpointDomainName = $publicEndpointDomainName;
+    $this->chunkId = $chunkId;
   }
   /**
    * @return string
    */
-  public function getPublicEndpointDomainName()
+  public function getChunkId()
   {
-    return $this->publicEndpointDomainName;
+    return $this->chunkId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint');
+class_alias(CloudAiNlLlmProtoServicePartLMRootMetadata::class, 'Google_Service_Aiplatform_CloudAiNlLlmProtoServicePartLMRootMetadata');
