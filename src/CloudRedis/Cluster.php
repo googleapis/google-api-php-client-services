@@ -34,8 +34,13 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $nodeType;
   protected $persistenceConfigType = ClusterPersistenceConfig::class;
   protected $persistenceConfigDataType = '';
+  public $preciseSizeGb;
   protected $pscConfigsType = PscConfig::class;
   protected $pscConfigsDataType = 'array';
   protected $pscConnectionsType = PscConnection::class;
@@ -128,6 +133,20 @@ class Cluster extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param string
+   */
+  public function setNodeType($nodeType)
+  {
+    $this->nodeType = $nodeType;
+  }
+  /**
+   * @return string
+   */
+  public function getNodeType()
+  {
+    return $this->nodeType;
+  }
+  /**
    * @param ClusterPersistenceConfig
    */
   public function setPersistenceConfig(ClusterPersistenceConfig $persistenceConfig)
@@ -140,6 +159,14 @@ class Cluster extends \Google\Collection
   public function getPersistenceConfig()
   {
     return $this->persistenceConfig;
+  }
+  public function setPreciseSizeGb($preciseSizeGb)
+  {
+    $this->preciseSizeGb = $preciseSizeGb;
+  }
+  public function getPreciseSizeGb()
+  {
+    return $this->preciseSizeGb;
   }
   /**
    * @param PscConfig[]
