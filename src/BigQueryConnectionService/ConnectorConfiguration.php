@@ -27,6 +27,8 @@ class ConnectorConfiguration extends \Google\Model
   public $connectorId;
   protected $endpointType = ConnectorConfigurationEndpoint::class;
   protected $endpointDataType = '';
+  protected $networkType = ConnectorConfigurationNetwork::class;
+  protected $networkDataType = '';
 
   /**
    * @param ConnectorConfigurationAuthentication
@@ -69,6 +71,20 @@ class ConnectorConfiguration extends \Google\Model
   public function getEndpoint()
   {
     return $this->endpoint;
+  }
+  /**
+   * @param ConnectorConfigurationNetwork
+   */
+  public function setNetwork(ConnectorConfigurationNetwork $network)
+  {
+    $this->network = $network;
+  }
+  /**
+   * @return ConnectorConfigurationNetwork
+   */
+  public function getNetwork()
+  {
+    return $this->network;
   }
 }
 
