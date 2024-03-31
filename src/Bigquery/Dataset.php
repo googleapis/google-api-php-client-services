@@ -54,6 +54,8 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $etag;
+  protected $externalCatalogDatasetOptionsType = ExternalCatalogDatasetOptions::class;
+  protected $externalCatalogDatasetOptionsDataType = '';
   protected $externalDatasetReferenceType = ExternalDatasetReference::class;
   protected $externalDatasetReferenceDataType = '';
   /**
@@ -254,6 +256,20 @@ class Dataset extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param ExternalCatalogDatasetOptions
+   */
+  public function setExternalCatalogDatasetOptions(ExternalCatalogDatasetOptions $externalCatalogDatasetOptions)
+  {
+    $this->externalCatalogDatasetOptions = $externalCatalogDatasetOptions;
+  }
+  /**
+   * @return ExternalCatalogDatasetOptions
+   */
+  public function getExternalCatalogDatasetOptions()
+  {
+    return $this->externalCatalogDatasetOptions;
   }
   /**
    * @param ExternalDatasetReference
