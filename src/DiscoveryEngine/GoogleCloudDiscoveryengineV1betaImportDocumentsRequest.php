@@ -25,10 +25,16 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   public $autoGenerateIds;
   protected $bigquerySourceType = GoogleCloudDiscoveryengineV1betaBigQuerySource::class;
   protected $bigquerySourceDataType = '';
+  protected $bigtableSourceType = GoogleCloudDiscoveryengineV1betaBigtableSource::class;
+  protected $bigtableSourceDataType = '';
+  protected $cloudSqlSourceType = GoogleCloudDiscoveryengineV1betaCloudSqlSource::class;
+  protected $cloudSqlSourceDataType = '';
   protected $errorConfigType = GoogleCloudDiscoveryengineV1betaImportErrorConfig::class;
   protected $errorConfigDataType = '';
   protected $fhirStoreSourceType = GoogleCloudDiscoveryengineV1betaFhirStoreSource::class;
   protected $fhirStoreSourceDataType = '';
+  protected $firestoreSourceType = GoogleCloudDiscoveryengineV1betaFirestoreSource::class;
+  protected $firestoreSourceDataType = '';
   protected $gcsSourceType = GoogleCloudDiscoveryengineV1betaGcsSource::class;
   protected $gcsSourceDataType = '';
   /**
@@ -41,6 +47,8 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
    * @var string
    */
   public $reconciliationMode;
+  protected $spannerSourceType = GoogleCloudDiscoveryengineV1betaSpannerSource::class;
+  protected $spannerSourceDataType = '';
 
   /**
    * @param bool
@@ -71,6 +79,34 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
     return $this->bigquerySource;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1betaBigtableSource
+   */
+  public function setBigtableSource(GoogleCloudDiscoveryengineV1betaBigtableSource $bigtableSource)
+  {
+    $this->bigtableSource = $bigtableSource;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaBigtableSource
+   */
+  public function getBigtableSource()
+  {
+    return $this->bigtableSource;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaCloudSqlSource
+   */
+  public function setCloudSqlSource(GoogleCloudDiscoveryengineV1betaCloudSqlSource $cloudSqlSource)
+  {
+    $this->cloudSqlSource = $cloudSqlSource;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaCloudSqlSource
+   */
+  public function getCloudSqlSource()
+  {
+    return $this->cloudSqlSource;
+  }
+  /**
    * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig
    */
   public function setErrorConfig(GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig)
@@ -97,6 +133,20 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   public function getFhirStoreSource()
   {
     return $this->fhirStoreSource;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaFirestoreSource
+   */
+  public function setFirestoreSource(GoogleCloudDiscoveryengineV1betaFirestoreSource $firestoreSource)
+  {
+    $this->firestoreSource = $firestoreSource;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaFirestoreSource
+   */
+  public function getFirestoreSource()
+  {
+    return $this->firestoreSource;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaGcsSource
@@ -153,6 +203,20 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   public function getReconciliationMode()
   {
     return $this->reconciliationMode;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSpannerSource
+   */
+  public function setSpannerSource(GoogleCloudDiscoveryengineV1betaSpannerSource $spannerSource)
+  {
+    $this->spannerSource = $spannerSource;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSpannerSource
+   */
+  public function getSpannerSource()
+  {
+    return $this->spannerSource;
   }
 }
 
