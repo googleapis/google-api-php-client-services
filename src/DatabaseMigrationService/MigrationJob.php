@@ -48,6 +48,10 @@ class MigrationJob extends \Google\Model
   /**
    * @var string
    */
+  public $dumpType;
+  /**
+   * @var string
+   */
   public $duration;
   /**
    * @var string
@@ -211,6 +215,20 @@ class MigrationJob extends \Google\Model
   public function getDumpPath()
   {
     return $this->dumpPath;
+  }
+  /**
+   * @param string
+   */
+  public function setDumpType($dumpType)
+  {
+    $this->dumpType = $dumpType;
+  }
+  /**
+   * @return string
+   */
+  public function getDumpType()
+  {
+    return $this->dumpType;
   }
   /**
    * @param string
