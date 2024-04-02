@@ -43,6 +43,10 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
   /**
    * @var bool
    */
+  public $enableMultiLanguageTraining;
+  /**
+   * @var bool
+   */
   public $enableSpellCorrection;
   /**
    * @var bool
@@ -166,6 +170,20 @@ class GoogleCloudDialogflowCxV3Agent extends \Google\Collection
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableMultiLanguageTraining($enableMultiLanguageTraining)
+  {
+    $this->enableMultiLanguageTraining = $enableMultiLanguageTraining;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableMultiLanguageTraining()
+  {
+    return $this->enableMultiLanguageTraining;
   }
   /**
    * @param bool
