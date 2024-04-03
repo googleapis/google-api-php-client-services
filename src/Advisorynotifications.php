@@ -40,6 +40,7 @@ class Advisorynotifications extends \Google\Service
 
   public $organizations_locations;
   public $organizations_locations_notifications;
+  public $projects_locations;
   public $projects_locations_notifications;
 
   /**
@@ -133,6 +134,36 @@ class Advisorynotifications extends \Google\Service
                 'view' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations = new Advisorynotifications\Resource\ProjectsLocations(
+        $this,
+        $this->serviceName,
+        'locations',
+        [
+          'methods' => [
+            'getSettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateSettings' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
