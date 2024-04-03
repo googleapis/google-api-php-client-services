@@ -17,6 +17,8 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaAnswerQueryRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaAnswerQueryResponse;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaListServingConfigsResponse;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRecommendRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRecommendResponse;
@@ -34,6 +36,26 @@ use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaServingConfig
  */
 class ProjectsLocationsCollectionsDataStoresServingConfigs extends \Google\Service\Resource
 {
+  /**
+   * Answer query method. (servingConfigs.answer)
+   *
+   * @param string $servingConfig Required. The resource name of the Search
+   * serving config, such as `projects/locations/global/collections/default_collec
+   * tion/engines/servingConfigs/default_serving_config`, or `projects/locations/g
+   * lobal/collections/default_collection/dataStores/servingConfigs/default_servin
+   * g_config`. This field is used to identify the serving configuration name, set
+   * of models used to make the search.
+   * @param GoogleCloudDiscoveryengineV1betaAnswerQueryRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1betaAnswerQueryResponse
+   * @throws \Google\Service\Exception
+   */
+  public function answer($servingConfig, GoogleCloudDiscoveryengineV1betaAnswerQueryRequest $postBody, $optParams = [])
+  {
+    $params = ['servingConfig' => $servingConfig, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('answer', [$params], GoogleCloudDiscoveryengineV1betaAnswerQueryResponse::class);
+  }
   /**
    * Gets a ServingConfig. Returns a NotFound error if the ServingConfig does not
    * exist. (servingConfigs.get)

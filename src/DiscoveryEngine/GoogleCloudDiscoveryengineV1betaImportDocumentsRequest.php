@@ -49,6 +49,10 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   public $reconciliationMode;
   protected $spannerSourceType = GoogleCloudDiscoveryengineV1betaSpannerSource::class;
   protected $spannerSourceDataType = '';
+  /**
+   * @var string
+   */
+  public $updateMask;
 
   /**
    * @param bool
@@ -217,6 +221,20 @@ class GoogleCloudDiscoveryengineV1betaImportDocumentsRequest extends \Google\Mod
   public function getSpannerSource()
   {
     return $this->spannerSource;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdateMask($updateMask)
+  {
+    $this->updateMask = $updateMask;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateMask()
+  {
+    return $this->updateMask;
   }
 }
 
