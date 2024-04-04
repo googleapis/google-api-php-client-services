@@ -200,8 +200,8 @@ class Events extends \Google\Service\Resource
    *
    * @opt_param bool alwaysIncludeEmail Deprecated and ignored.
    * @opt_param string eventTypes Event types to return. Optional. This parameter
-   * can be repeated multiple times to return events of different types. The
-   * default is ["default", "focusTime", "outOfOffice"].
+   * can be repeated multiple times to return events of different types. If unset,
+   * returns all event types.
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
@@ -436,8 +436,8 @@ class Events extends \Google\Service\Resource
    *
    * @opt_param bool alwaysIncludeEmail Deprecated and ignored.
    * @opt_param string eventTypes Event types to return. Optional. This parameter
-   * can be repeated multiple times to return events of different types. The
-   * default is ["default", "focusTime", "outOfOffice"].
+   * can be repeated multiple times to return events of different types. If unset,
+   * returns all event types.
    * @opt_param string iCalUID Specifies an event ID in the iCalendar format to be
    * provided in the response. Optional. Use this if you want to search for an
    * event by its iCalendar ID.
