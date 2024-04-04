@@ -19,43 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1ResourceRuntime extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $accessUris;
-  /**
-   * @var string
-   */
-  public $notebookRuntimeTemplate;
-
-  /**
-   * @param string[]
-   */
-  public function setAccessUris($accessUris)
-  {
-    $this->accessUris = $accessUris;
-  }
-  /**
-   * @return string[]
-   */
-  public function getAccessUris()
-  {
-    return $this->accessUris;
-  }
-  /**
-   * @param string
-   */
-  public function setNotebookRuntimeTemplate($notebookRuntimeTemplate)
-  {
-    $this->notebookRuntimeTemplate = $notebookRuntimeTemplate;
-  }
-  /**
-   * @return string
-   */
-  public function getNotebookRuntimeTemplate()
-  {
-    return $this->notebookRuntimeTemplate;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

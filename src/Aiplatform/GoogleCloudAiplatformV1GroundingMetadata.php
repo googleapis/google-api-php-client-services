@@ -25,10 +25,6 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   /**
    * @var string[]
    */
-  public $retrievalQueries;
-  /**
-   * @var string[]
-   */
   public $webSearchQueries;
 
   /**
@@ -44,20 +40,6 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   public function getGroundingAttributions()
   {
     return $this->groundingAttributions;
-  }
-  /**
-   * @param string[]
-   */
-  public function setRetrievalQueries($retrievalQueries)
-  {
-    $this->retrievalQueries = $retrievalQueries;
-  }
-  /**
-   * @return string[]
-   */
-  public function getRetrievalQueries()
-  {
-    return $this->retrievalQueries;
   }
   /**
    * @param string[]

@@ -37,6 +37,10 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    */
   public $presencePenalty;
   /**
+   * @var string
+   */
+  public $responseMimeType;
+  /**
    * @var string[]
    */
   public $stopSequences;
@@ -108,6 +112,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getPresencePenalty()
   {
     return $this->presencePenalty;
+  }
+  /**
+   * @param string
+   */
+  public function setResponseMimeType($responseMimeType)
+  {
+    $this->responseMimeType = $responseMimeType;
+  }
+  /**
+   * @return string
+   */
+  public function getResponseMimeType()
+  {
+    return $this->responseMimeType;
   }
   /**
    * @param string[]

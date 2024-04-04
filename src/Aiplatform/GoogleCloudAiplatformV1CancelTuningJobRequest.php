@@ -17,9 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1RaySpec extends \Google\Model
+class GoogleCloudAiplatformV1CancelTuningJobRequest extends \Google\Model
 {
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1RaySpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RaySpec');
+class_alias(GoogleCloudAiplatformV1CancelTuningJobRequest::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1CancelTuningJobRequest');

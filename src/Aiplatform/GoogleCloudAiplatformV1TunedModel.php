@@ -17,9 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1RaySpec extends \Google\Model
+class GoogleCloudAiplatformV1TunedModel extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $endpoint;
+  /**
+   * @var string
+   */
+  public $model;
+
+  /**
+   * @param string
+   */
+  public function setEndpoint($endpoint)
+  {
+    $this->endpoint = $endpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getEndpoint()
+  {
+    return $this->endpoint;
+  }
+  /**
+   * @param string
+   */
+  public function setModel($model)
+  {
+    $this->model = $model;
+  }
+  /**
+   * @return string
+   */
+  public function getModel()
+  {
+    return $this->model;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1RaySpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RaySpec');
+class_alias(GoogleCloudAiplatformV1TunedModel::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1TunedModel');
