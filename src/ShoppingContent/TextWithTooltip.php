@@ -17,46 +17,64 @@
 
 namespace Google\Service\ShoppingContent;
 
-class RenderProductIssuesRequestPayload extends \Google\Model
+class TextWithTooltip extends \Google\Model
 {
   /**
    * @var string
    */
-  public $contentOption;
+  public $simpleTooltipValue;
   /**
    * @var string
    */
-  public $userInputActionOption;
+  public $simpleValue;
+  /**
+   * @var string
+   */
+  public $tooltipIconStyle;
 
   /**
    * @param string
    */
-  public function setContentOption($contentOption)
+  public function setSimpleTooltipValue($simpleTooltipValue)
   {
-    $this->contentOption = $contentOption;
+    $this->simpleTooltipValue = $simpleTooltipValue;
   }
   /**
    * @return string
    */
-  public function getContentOption()
+  public function getSimpleTooltipValue()
   {
-    return $this->contentOption;
+    return $this->simpleTooltipValue;
   }
   /**
    * @param string
    */
-  public function setUserInputActionOption($userInputActionOption)
+  public function setSimpleValue($simpleValue)
   {
-    $this->userInputActionOption = $userInputActionOption;
+    $this->simpleValue = $simpleValue;
   }
   /**
    * @return string
    */
-  public function getUserInputActionOption()
+  public function getSimpleValue()
   {
-    return $this->userInputActionOption;
+    return $this->simpleValue;
+  }
+  /**
+   * @param string
+   */
+  public function setTooltipIconStyle($tooltipIconStyle)
+  {
+    $this->tooltipIconStyle = $tooltipIconStyle;
+  }
+  /**
+   * @return string
+   */
+  public function getTooltipIconStyle()
+  {
+    return $this->tooltipIconStyle;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderProductIssuesRequestPayload::class, 'Google_Service_ShoppingContent_RenderProductIssuesRequestPayload');
+class_alias(TextWithTooltip::class, 'Google_Service_ShoppingContent_TextWithTooltip');

@@ -17,46 +17,46 @@
 
 namespace Google\Service\ShoppingContent;
 
-class RenderProductIssuesRequestPayload extends \Google\Model
+class ProductStructuredTitle extends \Google\Model
 {
   /**
    * @var string
    */
-  public $contentOption;
+  public $content;
   /**
    * @var string
    */
-  public $userInputActionOption;
+  public $digitalSourceType;
 
   /**
    * @param string
    */
-  public function setContentOption($contentOption)
+  public function setContent($content)
   {
-    $this->contentOption = $contentOption;
+    $this->content = $content;
   }
   /**
    * @return string
    */
-  public function getContentOption()
+  public function getContent()
   {
-    return $this->contentOption;
+    return $this->content;
   }
   /**
    * @param string
    */
-  public function setUserInputActionOption($userInputActionOption)
+  public function setDigitalSourceType($digitalSourceType)
   {
-    $this->userInputActionOption = $userInputActionOption;
+    $this->digitalSourceType = $digitalSourceType;
   }
   /**
    * @return string
    */
-  public function getUserInputActionOption()
+  public function getDigitalSourceType()
   {
-    return $this->userInputActionOption;
+    return $this->digitalSourceType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderProductIssuesRequestPayload::class, 'Google_Service_ShoppingContent_RenderProductIssuesRequestPayload');
+class_alias(ProductStructuredTitle::class, 'Google_Service_ShoppingContent_ProductStructuredTitle');

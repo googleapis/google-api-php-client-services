@@ -17,46 +17,45 @@
 
 namespace Google\Service\ShoppingContent;
 
-class RenderProductIssuesRequestPayload extends \Google\Model
+class ActionInput extends \Google\Collection
 {
+  protected $collection_key = 'inputValues';
   /**
    * @var string
    */
-  public $contentOption;
-  /**
-   * @var string
-   */
-  public $userInputActionOption;
+  public $actionFlowId;
+  protected $inputValuesType = InputValue::class;
+  protected $inputValuesDataType = 'array';
 
   /**
    * @param string
    */
-  public function setContentOption($contentOption)
+  public function setActionFlowId($actionFlowId)
   {
-    $this->contentOption = $contentOption;
+    $this->actionFlowId = $actionFlowId;
   }
   /**
    * @return string
    */
-  public function getContentOption()
+  public function getActionFlowId()
   {
-    return $this->contentOption;
+    return $this->actionFlowId;
   }
   /**
-   * @param string
+   * @param InputValue[]
    */
-  public function setUserInputActionOption($userInputActionOption)
+  public function setInputValues($inputValues)
   {
-    $this->userInputActionOption = $userInputActionOption;
+    $this->inputValues = $inputValues;
   }
   /**
-   * @return string
+   * @return InputValue[]
    */
-  public function getUserInputActionOption()
+  public function getInputValues()
   {
-    return $this->userInputActionOption;
+    return $this->inputValues;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderProductIssuesRequestPayload::class, 'Google_Service_ShoppingContent_RenderProductIssuesRequestPayload');
+class_alias(ActionInput::class, 'Google_Service_ShoppingContent_ActionInput');

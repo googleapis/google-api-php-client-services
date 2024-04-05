@@ -17,46 +17,45 @@
 
 namespace Google\Service\ShoppingContent;
 
-class RenderProductIssuesRequestPayload extends \Google\Model
+class BuiltInUserInputAction extends \Google\Collection
 {
+  protected $collection_key = 'flows';
   /**
    * @var string
    */
-  public $contentOption;
-  /**
-   * @var string
-   */
-  public $userInputActionOption;
+  public $actionContext;
+  protected $flowsType = ActionFlow::class;
+  protected $flowsDataType = 'array';
 
   /**
    * @param string
    */
-  public function setContentOption($contentOption)
+  public function setActionContext($actionContext)
   {
-    $this->contentOption = $contentOption;
+    $this->actionContext = $actionContext;
   }
   /**
    * @return string
    */
-  public function getContentOption()
+  public function getActionContext()
   {
-    return $this->contentOption;
+    return $this->actionContext;
   }
   /**
-   * @param string
+   * @param ActionFlow[]
    */
-  public function setUserInputActionOption($userInputActionOption)
+  public function setFlows($flows)
   {
-    $this->userInputActionOption = $userInputActionOption;
+    $this->flows = $flows;
   }
   /**
-   * @return string
+   * @return ActionFlow[]
    */
-  public function getUserInputActionOption()
+  public function getFlows()
   {
-    return $this->userInputActionOption;
+    return $this->flows;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderProductIssuesRequestPayload::class, 'Google_Service_ShoppingContent_RenderProductIssuesRequestPayload');
+class_alias(BuiltInUserInputAction::class, 'Google_Service_ShoppingContent_BuiltInUserInputAction');

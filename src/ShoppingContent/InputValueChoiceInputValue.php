@@ -17,46 +17,28 @@
 
 namespace Google\Service\ShoppingContent;
 
-class RenderProductIssuesRequestPayload extends \Google\Model
+class InputValueChoiceInputValue extends \Google\Model
 {
   /**
    * @var string
    */
-  public $contentOption;
-  /**
-   * @var string
-   */
-  public $userInputActionOption;
+  public $choiceInputOptionId;
 
   /**
    * @param string
    */
-  public function setContentOption($contentOption)
+  public function setChoiceInputOptionId($choiceInputOptionId)
   {
-    $this->contentOption = $contentOption;
+    $this->choiceInputOptionId = $choiceInputOptionId;
   }
   /**
    * @return string
    */
-  public function getContentOption()
+  public function getChoiceInputOptionId()
   {
-    return $this->contentOption;
-  }
-  /**
-   * @param string
-   */
-  public function setUserInputActionOption($userInputActionOption)
-  {
-    $this->userInputActionOption = $userInputActionOption;
-  }
-  /**
-   * @return string
-   */
-  public function getUserInputActionOption()
-  {
-    return $this->userInputActionOption;
+    return $this->choiceInputOptionId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderProductIssuesRequestPayload::class, 'Google_Service_ShoppingContent_RenderProductIssuesRequestPayload');
+class_alias(InputValueChoiceInputValue::class, 'Google_Service_ShoppingContent_InputValueChoiceInputValue');

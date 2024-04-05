@@ -17,46 +17,44 @@
 
 namespace Google\Service\ShoppingContent;
 
-class RenderProductIssuesRequestPayload extends \Google\Model
+class TriggerActionPayload extends \Google\Model
 {
   /**
    * @var string
    */
-  public $contentOption;
-  /**
-   * @var string
-   */
-  public $userInputActionOption;
+  public $actionContext;
+  protected $actionInputType = ActionInput::class;
+  protected $actionInputDataType = '';
 
   /**
    * @param string
    */
-  public function setContentOption($contentOption)
+  public function setActionContext($actionContext)
   {
-    $this->contentOption = $contentOption;
+    $this->actionContext = $actionContext;
   }
   /**
    * @return string
    */
-  public function getContentOption()
+  public function getActionContext()
   {
-    return $this->contentOption;
+    return $this->actionContext;
   }
   /**
-   * @param string
+   * @param ActionInput
    */
-  public function setUserInputActionOption($userInputActionOption)
+  public function setActionInput(ActionInput $actionInput)
   {
-    $this->userInputActionOption = $userInputActionOption;
+    $this->actionInput = $actionInput;
   }
   /**
-   * @return string
+   * @return ActionInput
    */
-  public function getUserInputActionOption()
+  public function getActionInput()
   {
-    return $this->userInputActionOption;
+    return $this->actionInput;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RenderProductIssuesRequestPayload::class, 'Google_Service_ShoppingContent_RenderProductIssuesRequestPayload');
+class_alias(TriggerActionPayload::class, 'Google_Service_ShoppingContent_TriggerActionPayload');

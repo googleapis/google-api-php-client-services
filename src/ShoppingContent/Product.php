@@ -335,6 +335,10 @@ class Product extends \Google\Collection
    * @var string
    */
   public $source;
+  protected $structuredDescriptionType = ProductStructuredDescription::class;
+  protected $structuredDescriptionDataType = '';
+  protected $structuredTitleType = ProductStructuredTitle::class;
+  protected $structuredTitleDataType = '';
   protected $subscriptionCostType = ProductSubscriptionCost::class;
   protected $subscriptionCostDataType = '';
   /**
@@ -1603,6 +1607,34 @@ class Product extends \Google\Collection
   public function getSource()
   {
     return $this->source;
+  }
+  /**
+   * @param ProductStructuredDescription
+   */
+  public function setStructuredDescription(ProductStructuredDescription $structuredDescription)
+  {
+    $this->structuredDescription = $structuredDescription;
+  }
+  /**
+   * @return ProductStructuredDescription
+   */
+  public function getStructuredDescription()
+  {
+    return $this->structuredDescription;
+  }
+  /**
+   * @param ProductStructuredTitle
+   */
+  public function setStructuredTitle(ProductStructuredTitle $structuredTitle)
+  {
+    $this->structuredTitle = $structuredTitle;
+  }
+  /**
+   * @return ProductStructuredTitle
+   */
+  public function getStructuredTitle()
+  {
+    return $this->structuredTitle;
   }
   /**
    * @param ProductSubscriptionCost

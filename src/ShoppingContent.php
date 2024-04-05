@@ -1479,6 +1479,20 @@ class ShoppingContent extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'triggeraction' => [
+              'path' => '{merchantId}/merchantsupport/triggeraction',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'merchantId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'languageCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]
