@@ -21,6 +21,8 @@ class GooglePrivacyDlpV2DiscoveryTarget extends \Google\Model
 {
   protected $bigQueryTargetType = GooglePrivacyDlpV2BigQueryDiscoveryTarget::class;
   protected $bigQueryTargetDataType = '';
+  protected $cloudSqlTargetType = GooglePrivacyDlpV2CloudSqlDiscoveryTarget::class;
+  protected $cloudSqlTargetDataType = '';
 
   /**
    * @param GooglePrivacyDlpV2BigQueryDiscoveryTarget
@@ -35,6 +37,20 @@ class GooglePrivacyDlpV2DiscoveryTarget extends \Google\Model
   public function getBigQueryTarget()
   {
     return $this->bigQueryTarget;
+  }
+  /**
+   * @param GooglePrivacyDlpV2CloudSqlDiscoveryTarget
+   */
+  public function setCloudSqlTarget(GooglePrivacyDlpV2CloudSqlDiscoveryTarget $cloudSqlTarget)
+  {
+    $this->cloudSqlTarget = $cloudSqlTarget;
+  }
+  /**
+   * @return GooglePrivacyDlpV2CloudSqlDiscoveryTarget
+   */
+  public function getCloudSqlTarget()
+  {
+    return $this->cloudSqlTarget;
   }
 }
 

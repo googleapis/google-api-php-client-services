@@ -19,6 +19,7 @@ namespace Google\Service\DLP\Resource;
 
 use Google\Service\DLP\GooglePrivacyDlpV2ListTableDataProfilesResponse;
 use Google\Service\DLP\GooglePrivacyDlpV2TableDataProfile;
+use Google\Service\DLP\GoogleProtobufEmpty;
 
 /**
  * The "tableDataProfiles" collection of methods.
@@ -30,6 +31,22 @@ use Google\Service\DLP\GooglePrivacyDlpV2TableDataProfile;
  */
 class OrganizationsLocationsTableDataProfiles extends \Google\Service\Resource
 {
+  /**
+   * Delete a TableDataProfile. Will not prevent the profile from being
+   * regenerated if the table is still included in a discovery configuration.
+   * (tableDataProfiles.delete)
+   *
+   * @param string $name Required. Resource name of the table data profile.
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
   /**
    * Gets a table data profile. (tableDataProfiles.get)
    *
