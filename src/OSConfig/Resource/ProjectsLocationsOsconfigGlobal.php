@@ -30,11 +30,12 @@ use Google\Service\OSConfig\ProjectFeatureSettings;
 class ProjectsLocationsOsconfigGlobal extends \Google\Service\Resource
 {
   /**
-   * GetProjectFeatureSettings returns the feature settings for a project
-   * (global.getProjectFeatureSettings)
+   * GetProjectFeatureSettings returns the VM Manager feature settings for a
+   * project. (global.getProjectFeatureSettings)
    *
-   * @param string $name Required. Name of the billing config.
-   * "projects//locations/global/projectFeatureSettings"
+   * @param string $name Required. Name specifies the URL for the
+   * ProjectFeatureSettings resource:
+   * projects/project_id/locations/global/projectFeatureSettings.
    * @param array $optParams Optional parameters.
    * @return ProjectFeatureSettings
    * @throws \Google\Service\Exception
@@ -46,11 +47,12 @@ class ProjectsLocationsOsconfigGlobal extends \Google\Service\Resource
     return $this->call('getProjectFeatureSettings', [$params], ProjectFeatureSettings::class);
   }
   /**
-   * UpdateProjectFeatureSettings sets the feature settings for a project.
+   * UpdateProjectFeatureSettings sets the VM Manager features for a project.
    * (global.updateProjectFeatureSettings)
    *
-   * @param string $name Required. Immutable. Name of the config, e.g.
-   * projects/12345/locations/global/projectFeatureSettings
+   * @param string $name Required. Immutable. Name specifies the URL for the
+   * ProjectFeatureSettings resource:
+   * projects/project_id/locations/global/projectFeatureSettings.
    * @param ProjectFeatureSettings $postBody
    * @param array $optParams Optional parameters.
    *
