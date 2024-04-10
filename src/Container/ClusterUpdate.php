@@ -32,6 +32,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredBinaryAuthorizationDataType = '';
   protected $desiredClusterAutoscalingType = ClusterAutoscaling::class;
   protected $desiredClusterAutoscalingDataType = '';
+  protected $desiredContainerdConfigType = ContainerdConfig::class;
+  protected $desiredContainerdConfigDataType = '';
   protected $desiredCostManagementConfigType = CostManagementConfig::class;
   protected $desiredCostManagementConfigDataType = '';
   protected $desiredDatabaseEncryptionType = DatabaseEncryption::class;
@@ -244,6 +246,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredClusterAutoscaling()
   {
     return $this->desiredClusterAutoscaling;
+  }
+  /**
+   * @param ContainerdConfig
+   */
+  public function setDesiredContainerdConfig(ContainerdConfig $desiredContainerdConfig)
+  {
+    $this->desiredContainerdConfig = $desiredContainerdConfig;
+  }
+  /**
+   * @return ContainerdConfig
+   */
+  public function getDesiredContainerdConfig()
+  {
+    return $this->desiredContainerdConfig;
   }
   /**
    * @param CostManagementConfig
