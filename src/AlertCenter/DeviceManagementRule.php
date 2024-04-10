@@ -38,6 +38,10 @@ class DeviceManagementRule extends \Google\Model
   /**
    * @var string
    */
+  public $id;
+  /**
+   * @var string
+   */
   public $iosVendorId;
   /**
    * @var string
@@ -111,6 +115,20 @@ class DeviceManagementRule extends \Google\Model
   public function getEmail()
   {
     return $this->email;
+  }
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
   }
   /**
    * @param string
