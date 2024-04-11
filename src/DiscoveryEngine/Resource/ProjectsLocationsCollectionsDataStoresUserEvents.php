@@ -18,8 +18,8 @@
 namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleApiHttpBody;
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaImportUserEventsRequest;
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaUserEvent;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ImportUserEventsRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1UserEvent;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
 /**
@@ -71,12 +71,12 @@ class ProjectsLocationsCollectionsDataStoresUserEvents extends \Google\Service\R
    * @param string $parent Required. Parent DataStore resource name, of the form `
    * projects/{project}/locations/{location}/collections/{collection}/dataStores/{
    * data_store}`
-   * @param GoogleCloudDiscoveryengineV1betaImportUserEventsRequest $postBody
+   * @param GoogleCloudDiscoveryengineV1ImportUserEventsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function import($parent, GoogleCloudDiscoveryengineV1betaImportUserEventsRequest $postBody, $optParams = [])
+  public function import($parent, GoogleCloudDiscoveryengineV1ImportUserEventsRequest $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
@@ -88,16 +88,16 @@ class ProjectsLocationsCollectionsDataStoresUserEvents extends \Google\Service\R
    * @param string $parent Required. The parent DataStore resource name, such as `
    * projects/{project}/locations/{location}/collections/{collection}/dataStores/{
    * data_store}`.
-   * @param GoogleCloudDiscoveryengineV1betaUserEvent $postBody
+   * @param GoogleCloudDiscoveryengineV1UserEvent $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDiscoveryengineV1betaUserEvent
+   * @return GoogleCloudDiscoveryengineV1UserEvent
    * @throws \Google\Service\Exception
    */
-  public function write($parent, GoogleCloudDiscoveryengineV1betaUserEvent $postBody, $optParams = [])
+  public function write($parent, GoogleCloudDiscoveryengineV1UserEvent $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('write', [$params], GoogleCloudDiscoveryengineV1betaUserEvent::class);
+    return $this->call('write', [$params], GoogleCloudDiscoveryengineV1UserEvent::class);
   }
 }
 
