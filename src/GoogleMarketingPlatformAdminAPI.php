@@ -45,6 +45,7 @@ class GoogleMarketingPlatformAdminAPI extends \Google\Service
   const MARKETINGPLATFORMADMIN_ANALYTICS_UPDATE =
       "https://www.googleapis.com/auth/marketingplatformadmin.analytics.update";
 
+  public $organizations;
   public $organizations_analyticsAccountLinks;
 
   /**
@@ -64,6 +65,26 @@ class GoogleMarketingPlatformAdminAPI extends \Google\Service
     $this->version = 'v1alpha';
     $this->serviceName = 'marketingplatformadmin';
 
+    $this->organizations = new GoogleMarketingPlatformAdminAPI\Resource\Organizations(
+        $this,
+        $this->serviceName,
+        'organizations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1alpha/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->organizations_analyticsAccountLinks = new GoogleMarketingPlatformAdminAPI\Resource\OrganizationsAnalyticsAccountLinks(
         $this,
         $this->serviceName,
