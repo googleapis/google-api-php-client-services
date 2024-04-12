@@ -37,9 +37,6 @@ use Google\Client;
  */
 class DataPortability extends \Google\Service
 {
-  /** Move a copy of the Google Alerts subscriptions you created.. */
-  const DATAPORTABILITY_ALERTS_SUBSCRIPTIONS =
-      "https://www.googleapis.com/auth/dataportability.alerts.subscriptions";
   /** Move a copy of messages between you and the businesses you have conversations with across Google services.. */
   const DATAPORTABILITY_BUSINESSMESSAGING_CONVERSATIONS =
       "https://www.googleapis.com/auth/dataportability.businessmessaging.conversations";
