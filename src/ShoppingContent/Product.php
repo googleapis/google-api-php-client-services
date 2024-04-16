@@ -209,8 +209,8 @@ class Product extends \Google\Collection
    * @var string
    */
   public $linkTemplate;
-  protected $loyaltyPointsType = LoyaltyPoints::class;
-  protected $loyaltyPointsDataType = '';
+  protected $loyaltyProgramType = LoyaltyProgram::class;
+  protected $loyaltyProgramDataType = '';
   /**
    * @var string
    */
@@ -1077,18 +1077,18 @@ class Product extends \Google\Collection
     return $this->linkTemplate;
   }
   /**
-   * @param LoyaltyPoints
+   * @param LoyaltyProgram
    */
-  public function setLoyaltyPoints(LoyaltyPoints $loyaltyPoints)
+  public function setLoyaltyProgram(LoyaltyProgram $loyaltyProgram)
   {
-    $this->loyaltyPoints = $loyaltyPoints;
+    $this->loyaltyProgram = $loyaltyProgram;
   }
   /**
-   * @return LoyaltyPoints
+   * @return LoyaltyProgram
    */
-  public function getLoyaltyPoints()
+  public function getLoyaltyProgram()
   {
-    return $this->loyaltyPoints;
+    return $this->loyaltyProgram;
   }
   /**
    * @param string
