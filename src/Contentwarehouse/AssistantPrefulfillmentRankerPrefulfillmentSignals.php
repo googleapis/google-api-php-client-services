@@ -45,6 +45,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    */
   public $hasAnswerGroup;
   /**
+   * @var bool
+   */
+  public $hasIntentUpdate;
+  /**
    * @var float
    */
   public $inQueryMaxEffectiveArgSpanLength;
@@ -62,6 +66,10 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
    * @var bool
    */
   public $isAquaMediaIntent;
+  /**
+   * @var bool
+   */
+  public $isCommunicationOpaRawTargetIntent;
   /**
    * @var bool
    */
@@ -85,7 +93,23 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @var bool
    */
+  public $isMediaIntent;
+  /**
+   * @var bool
+   */
+  public $isNspDescopedIntent;
+  /**
+   * @var bool
+   */
+  public $isNspEnabledIntent;
+  /**
+   * @var bool
+   */
   public $isNspIntent;
+  /**
+   * @var bool
+   */
+  public $isNspTargetIntent;
   /**
    * @var bool
    */
@@ -276,6 +300,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
     return $this->hasAnswerGroup;
   }
   /**
+   * @param bool
+   */
+  public function setHasIntentUpdate($hasIntentUpdate)
+  {
+    $this->hasIntentUpdate = $hasIntentUpdate;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasIntentUpdate()
+  {
+    return $this->hasIntentUpdate;
+  }
+  /**
    * @param float
    */
   public function setInQueryMaxEffectiveArgSpanLength($inQueryMaxEffectiveArgSpanLength)
@@ -350,6 +388,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param bool
    */
+  public function setIsCommunicationOpaRawTargetIntent($isCommunicationOpaRawTargetIntent)
+  {
+    $this->isCommunicationOpaRawTargetIntent = $isCommunicationOpaRawTargetIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsCommunicationOpaRawTargetIntent()
+  {
+    return $this->isCommunicationOpaRawTargetIntent;
+  }
+  /**
+   * @param bool
+   */
   public function setIsDummyIntent($isDummyIntent)
   {
     $this->isDummyIntent = $isDummyIntent;
@@ -420,6 +472,48 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   /**
    * @param bool
    */
+  public function setIsMediaIntent($isMediaIntent)
+  {
+    $this->isMediaIntent = $isMediaIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsMediaIntent()
+  {
+    return $this->isMediaIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsNspDescopedIntent($isNspDescopedIntent)
+  {
+    $this->isNspDescopedIntent = $isNspDescopedIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsNspDescopedIntent()
+  {
+    return $this->isNspDescopedIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsNspEnabledIntent($isNspEnabledIntent)
+  {
+    $this->isNspEnabledIntent = $isNspEnabledIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsNspEnabledIntent()
+  {
+    return $this->isNspEnabledIntent;
+  }
+  /**
+   * @param bool
+   */
   public function setIsNspIntent($isNspIntent)
   {
     $this->isNspIntent = $isNspIntent;
@@ -430,6 +524,20 @@ class AssistantPrefulfillmentRankerPrefulfillmentSignals extends \Google\Model
   public function getIsNspIntent()
   {
     return $this->isNspIntent;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsNspTargetIntent($isNspTargetIntent)
+  {
+    $this->isNspTargetIntent = $isNspTargetIntent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsNspTargetIntent()
+  {
+    return $this->isNspTargetIntent;
   }
   /**
    * @param bool

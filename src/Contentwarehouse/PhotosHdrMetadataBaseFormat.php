@@ -17,28 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefUniversalNgramData extends \Google\Model
+class PhotosHdrMetadataBaseFormat extends \Google\Model
 {
   /**
-   * @var float
+   * @var string
    */
-  public $idf;
+  public $hdrColorSpace;
 
   /**
-   * @param float
+   * @param string
    */
-  public function setIdf($idf)
+  public function setHdrColorSpace($hdrColorSpace)
   {
-    $this->idf = $idf;
+    $this->hdrColorSpace = $hdrColorSpace;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getIdf()
+  public function getHdrColorSpace()
   {
-    return $this->idf;
+    return $this->hdrColorSpace;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefUniversalNgramData::class, 'Google_Service_Contentwarehouse_RepositoryWebrefUniversalNgramData');
+class_alias(PhotosHdrMetadataBaseFormat::class, 'Google_Service_Contentwarehouse_PhotosHdrMetadataBaseFormat');

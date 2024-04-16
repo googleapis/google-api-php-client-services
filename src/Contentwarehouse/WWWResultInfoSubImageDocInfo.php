@@ -24,6 +24,8 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
    * @var int[]
    */
   public $additionalSafesearchSignals;
+  protected $aestheticsAdjusterInfoType = WWWResultInfoMinimalAestheticsAdjusterInfo::class;
+  protected $aestheticsAdjusterInfoDataType = '';
   /**
    * @var string
    */
@@ -79,6 +81,10 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
    */
   public $imageUrl;
   /**
+   * @var int
+   */
+  public $ocrTokensCount;
+  /**
    * @var float
    */
   public $pamirNormalizedScore;
@@ -132,6 +138,20 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
   public function getAdditionalSafesearchSignals()
   {
     return $this->additionalSafesearchSignals;
+  }
+  /**
+   * @param WWWResultInfoMinimalAestheticsAdjusterInfo
+   */
+  public function setAestheticsAdjusterInfo(WWWResultInfoMinimalAestheticsAdjusterInfo $aestheticsAdjusterInfo)
+  {
+    $this->aestheticsAdjusterInfo = $aestheticsAdjusterInfo;
+  }
+  /**
+   * @return WWWResultInfoMinimalAestheticsAdjusterInfo
+   */
+  public function getAestheticsAdjusterInfo()
+  {
+    return $this->aestheticsAdjusterInfo;
   }
   /**
    * @param string
@@ -328,6 +348,20 @@ class WWWResultInfoSubImageDocInfo extends \Google\Collection
   public function getImageUrl()
   {
     return $this->imageUrl;
+  }
+  /**
+   * @param int
+   */
+  public function setOcrTokensCount($ocrTokensCount)
+  {
+    $this->ocrTokensCount = $ocrTokensCount;
+  }
+  /**
+   * @return int
+   */
+  public function getOcrTokensCount()
+  {
+    return $this->ocrTokensCount;
   }
   /**
    * @param float

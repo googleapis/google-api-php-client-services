@@ -73,6 +73,10 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
    */
   public $encodedPseudoraterPxlqScore;
   /**
+   * @var bool
+   */
+  public $politicsPageGovSite;
+  /**
    * @var int[]
    */
   public $sensitiveEntitiesIndices;
@@ -262,6 +266,20 @@ class QualityFringeFringeQueryPriorPerDocData extends \Google\Collection
   public function getEncodedPseudoraterPxlqScore()
   {
     return $this->encodedPseudoraterPxlqScore;
+  }
+  /**
+   * @param bool
+   */
+  public function setPoliticsPageGovSite($politicsPageGovSite)
+  {
+    $this->politicsPageGovSite = $politicsPageGovSite;
+  }
+  /**
+   * @return bool
+   */
+  public function getPoliticsPageGovSite()
+  {
+    return $this->politicsPageGovSite;
   }
   /**
    * @param int[]

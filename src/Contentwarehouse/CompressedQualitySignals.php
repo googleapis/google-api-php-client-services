@@ -77,6 +77,10 @@ class CompressedQualitySignals extends \Google\Collection
    */
   public $experimentalQstarSiteSignal;
   /**
+   * @var float
+   */
+  public $experimentalWebHealthSignal;
+  /**
    * @var string
    */
   public $lowQuality;
@@ -368,6 +372,20 @@ class CompressedQualitySignals extends \Google\Collection
   public function getExperimentalQstarSiteSignal()
   {
     return $this->experimentalQstarSiteSignal;
+  }
+  /**
+   * @param float
+   */
+  public function setExperimentalWebHealthSignal($experimentalWebHealthSignal)
+  {
+    $this->experimentalWebHealthSignal = $experimentalWebHealthSignal;
+  }
+  /**
+   * @return float
+   */
+  public function getExperimentalWebHealthSignal()
+  {
+    return $this->experimentalWebHealthSignal;
   }
   /**
    * @param string

@@ -75,10 +75,6 @@ class QualityNsrPQData extends \Google\Collection
   /**
    * @var float
    */
-  public $unversionedRhubarb;
-  /**
-   * @var float
-   */
   public $urlAutopilotScore;
   /**
    * @var float
@@ -308,20 +304,6 @@ class QualityNsrPQData extends \Google\Collection
   public function getTofu()
   {
     return $this->tofu;
-  }
-  /**
-   * @param float
-   */
-  public function setUnversionedRhubarb($unversionedRhubarb)
-  {
-    $this->unversionedRhubarb = $unversionedRhubarb;
-  }
-  /**
-   * @return float
-   */
-  public function getUnversionedRhubarb()
-  {
-    return $this->unversionedRhubarb;
   }
   /**
    * @param float

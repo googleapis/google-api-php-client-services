@@ -52,6 +52,8 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
    * @var string[]
    */
   public $deprecatedSupportingMid;
+  protected $entityCardSignalsType = KnowledgeAnswersIntentQueryEntityCardSignals::class;
+  protected $entityCardSignalsDataType = '';
   /**
    * @var int
    */
@@ -354,6 +356,20 @@ class KnowledgeAnswersIntentQueryArgumentSignals extends \Google\Collection
   public function getDeprecatedSupportingMid()
   {
     return $this->deprecatedSupportingMid;
+  }
+  /**
+   * @param KnowledgeAnswersIntentQueryEntityCardSignals
+   */
+  public function setEntityCardSignals(KnowledgeAnswersIntentQueryEntityCardSignals $entityCardSignals)
+  {
+    $this->entityCardSignals = $entityCardSignals;
+  }
+  /**
+   * @return KnowledgeAnswersIntentQueryEntityCardSignals
+   */
+  public function getEntityCardSignals()
+  {
+    return $this->entityCardSignals;
   }
   /**
    * @param int

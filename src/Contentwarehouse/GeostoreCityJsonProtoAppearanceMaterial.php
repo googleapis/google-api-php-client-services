@@ -24,10 +24,6 @@ class GeostoreCityJsonProtoAppearanceMaterial extends \Google\Model
   /**
    * @var bool
    */
-  public $isNull;
-  /**
-   * @var bool
-   */
   public $isSmooth;
   /**
    * @var string
@@ -55,20 +51,6 @@ class GeostoreCityJsonProtoAppearanceMaterial extends \Google\Model
   public function getDiffuseColor()
   {
     return $this->diffuseColor;
-  }
-  /**
-   * @param bool
-   */
-  public function setIsNull($isNull)
-  {
-    $this->isNull = $isNull;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsNull()
-  {
-    return $this->isNull;
   }
   /**
    * @param bool

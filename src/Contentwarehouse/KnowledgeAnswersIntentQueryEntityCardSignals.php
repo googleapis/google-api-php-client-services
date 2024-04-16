@@ -17,28 +17,28 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class RepositoryWebrefUniversalNgramData extends \Google\Model
+class KnowledgeAnswersIntentQueryEntityCardSignals extends \Google\Model
 {
   /**
-   * @var float
+   * @var string
    */
-  public $idf;
+  public $parentCollectionId;
 
   /**
-   * @param float
+   * @param string
    */
-  public function setIdf($idf)
+  public function setParentCollectionId($parentCollectionId)
   {
-    $this->idf = $idf;
+    $this->parentCollectionId = $parentCollectionId;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getIdf()
+  public function getParentCollectionId()
   {
-    return $this->idf;
+    return $this->parentCollectionId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RepositoryWebrefUniversalNgramData::class, 'Google_Service_Contentwarehouse_RepositoryWebrefUniversalNgramData');
+class_alias(KnowledgeAnswersIntentQueryEntityCardSignals::class, 'Google_Service_Contentwarehouse_KnowledgeAnswersIntentQueryEntityCardSignals');
