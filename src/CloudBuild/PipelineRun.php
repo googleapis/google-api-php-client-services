@@ -62,6 +62,10 @@ class PipelineRun extends \Google\Collection
   public $pipelineRunStatus;
   protected $pipelineSpecType = PipelineSpec::class;
   protected $pipelineSpecDataType = '';
+  /**
+   * @var string
+   */
+  public $pipelineSpecYaml;
   protected $provenanceType = Provenance::class;
   protected $provenanceDataType = '';
   /**
@@ -288,6 +292,20 @@ class PipelineRun extends \Google\Collection
   public function getPipelineSpec()
   {
     return $this->pipelineSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setPipelineSpecYaml($pipelineSpecYaml)
+  {
+    $this->pipelineSpecYaml = $pipelineSpecYaml;
+  }
+  /**
+   * @return string
+   */
+  public function getPipelineSpecYaml()
+  {
+    return $this->pipelineSpecYaml;
   }
   /**
    * @param Provenance
