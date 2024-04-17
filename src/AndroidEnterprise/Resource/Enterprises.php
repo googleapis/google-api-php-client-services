@@ -99,7 +99,7 @@ class Enterprises extends \Google\Service\Resource
   /**
    * Returns a unique token to access an embeddable UI. To generate a web UI, pass
    * the generated token into the managed Google Play javascript API. Each token
-   * may only be used to start one UI session. See the javascript API
+   * may only be used to start one UI session. See the JavaScript API
    * documentation for further information. (enterprises.createWebToken)
    *
    * @param string $enterpriseId The ID of the enterprise.
