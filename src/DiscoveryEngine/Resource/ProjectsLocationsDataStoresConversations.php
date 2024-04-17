@@ -138,9 +138,9 @@ class ProjectsLocationsDataStoresConversations extends \Google\Service\Resource
    * Conversation to update does not exist, a NOT_FOUND error is returned.
    * (conversations.patch)
    *
-   * @param string $name Immutable. Fully qualified name
-   * `project/locations/global/collections/{collection}/dataStore/conversations`
-   * or `project/locations/global/collections/{collection}/engines/conversations`.
+   * @param string $name Immutable. Fully qualified name `projects/{project}/locat
+   * ions/global/collections/{collection}/dataStore/conversations` or `projects/{p
+   * roject}/locations/global/collections/{collection}/engines/conversations`.
    * @param GoogleCloudDiscoveryengineV1Conversation $postBody
    * @param array $optParams Optional parameters.
    *

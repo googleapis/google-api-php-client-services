@@ -17,8 +17,13 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Collection
 {
+  protected $collection_key = 'advancedSiteSearchDataSources';
+  /**
+   * @var string[]
+   */
+  public $advancedSiteSearchDataSources;
   /**
    * @var string
    */
@@ -56,6 +61,20 @@ class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Model
    */
   public $searchableOption;
 
+  /**
+   * @param string[]
+   */
+  public function setAdvancedSiteSearchDataSources($advancedSiteSearchDataSources)
+  {
+    $this->advancedSiteSearchDataSources = $advancedSiteSearchDataSources;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAdvancedSiteSearchDataSources()
+  {
+    return $this->advancedSiteSearchDataSources;
+  }
   /**
    * @param string
    */

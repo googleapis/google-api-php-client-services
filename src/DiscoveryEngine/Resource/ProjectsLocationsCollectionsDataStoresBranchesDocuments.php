@@ -160,6 +160,8 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    *
    * @opt_param bool allowMissing If set to true, and the Document is not found, a
    * new Document will be created.
+   * @opt_param string updateMask Indicates which fields in the provided imported
+   * 'document' to update. If not set, will by default update all fields.
    * @return GoogleCloudDiscoveryengineV1Document
    * @throws \Google\Service\Exception
    */

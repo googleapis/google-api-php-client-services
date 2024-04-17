@@ -72,6 +72,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_operations;
+  public $projects_locations_userEvents;
   public $projects_operations;
 
   /**
@@ -332,6 +333,10 @@ class DiscoveryEngine extends \Google\Service
                 'allowMissing' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'purge' => [
@@ -1509,6 +1514,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'purge' => [
               'path' => 'v1/{+parent}/documents:purge',
@@ -2082,6 +2091,26 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_userEvents = new DiscoveryEngine\Resource\ProjectsLocationsUserEvents(
+        $this,
+        $this->serviceName,
+        'userEvents',
+        [
+          'methods' => [
+            'write' => [
+              'path' => 'v1/{+parent}/userEvents:write',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
