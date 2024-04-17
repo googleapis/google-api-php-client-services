@@ -136,7 +136,7 @@ class SpacesMembers extends \Google\Service\Resource
    * authorize). Supports [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) and [user
-   * authentication](hhttps://developers.google.com/workspace/chat/authenticate-
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user). (members.listSpacesMembers)
    *
    * @param string $parent Required. The resource name of the space for which to

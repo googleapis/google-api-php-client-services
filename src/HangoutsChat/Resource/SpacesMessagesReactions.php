@@ -33,8 +33,8 @@ class SpacesMessagesReactions extends \Google\Service\Resource
 {
   /**
    * Creates a reaction and adds it to a message. Only unicode emojis are
-   * supported.For an example, see [Add a reaction to a
-   * reaction](https://developers.google.com/workspace/chat/create-reactions).
+   * supported. For an example, see [Add a reaction to a
+   * message](https://developers.google.com/workspace/chat/create-reactions).
    * Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user). (reactions.create)
