@@ -155,6 +155,8 @@ class Product extends \Google\Collection
    * @var string
    */
   public $feedLabel;
+  protected $freeShippingThresholdType = FreeShippingThreshold::class;
+  protected $freeShippingThresholdDataType = 'array';
   /**
    * @var string
    */
@@ -879,6 +881,20 @@ class Product extends \Google\Collection
   public function getFeedLabel()
   {
     return $this->feedLabel;
+  }
+  /**
+   * @param FreeShippingThreshold[]
+   */
+  public function setFreeShippingThreshold($freeShippingThreshold)
+  {
+    $this->freeShippingThreshold = $freeShippingThreshold;
+  }
+  /**
+   * @return FreeShippingThreshold[]
+   */
+  public function getFreeShippingThreshold()
+  {
+    return $this->freeShippingThreshold;
   }
   /**
    * @param string
