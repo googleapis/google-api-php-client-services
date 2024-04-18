@@ -24,6 +24,8 @@ class BigQueryDatasetSource extends \Google\Collection
    * @var string
    */
   public $dataset;
+  protected $restrictedExportPolicyType = RestrictedExportPolicy::class;
+  protected $restrictedExportPolicyDataType = '';
   protected $selectedResourcesType = SelectedResource::class;
   protected $selectedResourcesDataType = 'array';
 
@@ -40,6 +42,20 @@ class BigQueryDatasetSource extends \Google\Collection
   public function getDataset()
   {
     return $this->dataset;
+  }
+  /**
+   * @param RestrictedExportPolicy
+   */
+  public function setRestrictedExportPolicy(RestrictedExportPolicy $restrictedExportPolicy)
+  {
+    $this->restrictedExportPolicy = $restrictedExportPolicy;
+  }
+  /**
+   * @return RestrictedExportPolicy
+   */
+  public function getRestrictedExportPolicy()
+  {
+    return $this->restrictedExportPolicy;
   }
   /**
    * @param SelectedResource[]
