@@ -76,6 +76,8 @@ class Instance extends \Google\Collection
   protected $networkConfigDataType = '';
   protected $nodesType = Node::class;
   protected $nodesDataType = 'array';
+  protected $pscInstanceConfigType = PscInstanceConfig::class;
+  protected $pscInstanceConfigDataType = '';
   /**
    * @var string
    */
@@ -330,6 +332,20 @@ class Instance extends \Google\Collection
   public function getNodes()
   {
     return $this->nodes;
+  }
+  /**
+   * @param PscInstanceConfig
+   */
+  public function setPscInstanceConfig(PscInstanceConfig $pscInstanceConfig)
+  {
+    $this->pscInstanceConfig = $pscInstanceConfig;
+  }
+  /**
+   * @return PscInstanceConfig
+   */
+  public function getPscInstanceConfig()
+  {
+    return $this->pscInstanceConfig;
   }
   /**
    * @param string
