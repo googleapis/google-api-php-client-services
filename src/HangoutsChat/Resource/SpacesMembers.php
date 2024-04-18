@@ -104,9 +104,11 @@ class SpacesMembers extends \Google\Service\Resource
    * authorize-chat-user). (members.get)
    *
    * @param string $name Required. Resource name of the membership to retrieve. To
-   * get the app's own membership, you can optionally use
-   * `spaces/{space}/members/app`. Format: `spaces/{space}/members/{member}` or
-   * `spaces/{space}/members/app` When [authenticated as a
+   * get the app's own membership [by using user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user), you can optionally use `spaces/{space}/members/app`.
+   * Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
+   * When [authenticated as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-
    * chat-user), you can use the user's email as an alias for `{member}`. For
    * example, `spaces/{space}/members/example@gmail.com` where `example@gmail.com`
@@ -184,6 +186,28 @@ class SpacesMembers extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListMembershipsResponse::class);
+  }
+  /**
+   * Updates a membership. Requires [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user). (members.patch)
+   *
+   * @param string $name Resource name of the membership, assigned by the server.
+   * Format: `spaces/{space}/members/{member}`
+   * @param Membership $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The field paths to update. Separate
+   * multiple values with commas or use `*` to update all field paths. Currently
+   * supported field paths: - `role`
+   * @return Membership
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, Membership $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Membership::class);
   }
 }
 
