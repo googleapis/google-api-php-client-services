@@ -57,6 +57,11 @@ class BuyersAuctionPackages extends \Google\Service\Resource
    * auction package. Format: `buyers/{accountId}`
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Optional query string using the [Cloud API
+   * list filtering syntax](https://developers.google.com/authorized-
+   * buyers/apis/guides/list-filters) Only supported when parent is bidder.
+   * Supported columns for filtering are: * displayName * createTime * updateTime
+   * * eligibleSeatIds
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. Max allowed page size is 500.
    * @opt_param string pageToken The page token as returned.
