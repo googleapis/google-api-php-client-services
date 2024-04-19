@@ -181,6 +181,10 @@ class CustomSearchAPI extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'snippetLength' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
                 'sort' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -319,6 +323,10 @@ class CustomSearchAPI extends \Google\Service
                 'siteSearchFilter' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'snippetLength' => [
+                  'location' => 'query',
+                  'type' => 'integer',
                 ],
                 'sort' => [
                   'location' => 'query',
