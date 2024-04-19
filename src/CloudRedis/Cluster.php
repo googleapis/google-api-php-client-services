@@ -28,6 +28,10 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var bool
+   */
+  public $deletionProtectionEnabled;
   protected $discoveryEndpointsType = DiscoveryEndpoint::class;
   protected $discoveryEndpointsDataType = 'array';
   /**
@@ -103,6 +107,20 @@ class Cluster extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param bool
+   */
+  public function setDeletionProtectionEnabled($deletionProtectionEnabled)
+  {
+    $this->deletionProtectionEnabled = $deletionProtectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeletionProtectionEnabled()
+  {
+    return $this->deletionProtectionEnabled;
   }
   /**
    * @param DiscoveryEndpoint[]
