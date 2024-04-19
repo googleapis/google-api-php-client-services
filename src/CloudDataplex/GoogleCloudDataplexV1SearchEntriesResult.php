@@ -24,35 +24,7 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
   /**
    * @var string
    */
-  public $description;
-  /**
-   * @var string
-   */
-  public $displayName;
-  /**
-   * @var string
-   */
-  public $entry;
-  /**
-   * @var string
-   */
-  public $entryType;
-  /**
-   * @var string
-   */
-  public $fullyQualifiedName;
-  /**
-   * @var string
-   */
   public $linkedResource;
-  /**
-   * @var string
-   */
-  public $modifyTime;
-  /**
-   * @var string
-   */
-  public $relativeResource;
   protected $snippetsType = GoogleCloudDataplexV1SearchEntriesResultSnippets::class;
   protected $snippetsDataType = '';
 
@@ -73,76 +45,6 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
   /**
    * @param string
    */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  /**
-   * @param string
-   */
-  public function setDisplayName($displayName)
-  {
-    $this->displayName = $displayName;
-  }
-  /**
-   * @return string
-   */
-  public function getDisplayName()
-  {
-    return $this->displayName;
-  }
-  /**
-   * @param string
-   */
-  public function setEntry($entry)
-  {
-    $this->entry = $entry;
-  }
-  /**
-   * @return string
-   */
-  public function getEntry()
-  {
-    return $this->entry;
-  }
-  /**
-   * @param string
-   */
-  public function setEntryType($entryType)
-  {
-    $this->entryType = $entryType;
-  }
-  /**
-   * @return string
-   */
-  public function getEntryType()
-  {
-    return $this->entryType;
-  }
-  /**
-   * @param string
-   */
-  public function setFullyQualifiedName($fullyQualifiedName)
-  {
-    $this->fullyQualifiedName = $fullyQualifiedName;
-  }
-  /**
-   * @return string
-   */
-  public function getFullyQualifiedName()
-  {
-    return $this->fullyQualifiedName;
-  }
-  /**
-   * @param string
-   */
   public function setLinkedResource($linkedResource)
   {
     $this->linkedResource = $linkedResource;
@@ -153,34 +55,6 @@ class GoogleCloudDataplexV1SearchEntriesResult extends \Google\Model
   public function getLinkedResource()
   {
     return $this->linkedResource;
-  }
-  /**
-   * @param string
-   */
-  public function setModifyTime($modifyTime)
-  {
-    $this->modifyTime = $modifyTime;
-  }
-  /**
-   * @return string
-   */
-  public function getModifyTime()
-  {
-    return $this->modifyTime;
-  }
-  /**
-   * @param string
-   */
-  public function setRelativeResource($relativeResource)
-  {
-    $this->relativeResource = $relativeResource;
-  }
-  /**
-   * @return string
-   */
-  public function getRelativeResource()
-  {
-    return $this->relativeResource;
   }
   /**
    * @param GoogleCloudDataplexV1SearchEntriesResultSnippets
