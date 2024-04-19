@@ -39,6 +39,7 @@ class AuthorizedBuyersMarketplace extends \Google\Service
   const AUTHORIZED_BUYERS_MARKETPLACE =
       "https://www.googleapis.com/auth/authorized-buyers-marketplace";
 
+  public $bidders_auctionPackages;
   public $bidders_finalizedDeals;
   public $buyers_auctionPackages;
   public $buyers_clients;
@@ -65,6 +66,38 @@ class AuthorizedBuyersMarketplace extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'authorizedbuyersmarketplace';
 
+    $this->bidders_auctionPackages = new AuthorizedBuyersMarketplace\Resource\BiddersAuctionPackages(
+        $this,
+        $this->serviceName,
+        'auctionPackages',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/auctionPackages',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->bidders_finalizedDeals = new AuthorizedBuyersMarketplace\Resource\BiddersFinalizedDeals(
         $this,
         $this->serviceName,
