@@ -1,0 +1,1811 @@
+{
+ "name": "myservice",
+ "version": "v1",
+ "ownerName": "Google",
+ "ownerDomain": "google.com",
+ "description": "A sample service remarkably similar to Buzz.",
+ "restBasePath": "/buzz/v1/",
+ "rootUrl": "https://www.googleapis.com/",
+ "servicePath" : "buzz/v1/",
+ "rpcPath": "/rpc",
+ "features": [
+  "dataWrapper"
+ ],
+ "parameters": {
+  "alt": {
+   "type": "string",
+   "description": "Data format for the response.",
+   "default": "json",
+   "enum": [
+    "json"
+   ],
+   "enumDescriptions": [
+    "Responses with Content-Type of application/json"
+   ],
+   "location": "query"
+  },
+  "fields": {
+   "type": "string",
+   "description": "Selector specifying which fields to include in a partial response.",
+   "location": "query"
+  },
+  "key": {
+   "type": "string",
+   "description": "API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token.",
+   "location": "query"
+  },
+  "oauth_token": {
+   "type": "string",
+   "description": "OAuth 2.0 token for the current user.",
+   "location": "query"
+  },
+  "prettyPrint": {
+   "type": "boolean",
+   "description": "Returns response with indentations and line breaks.",
+   "default": "true",
+   "location": "query"
+  },
+  "quotaUser": {
+   "type": "string",
+   "description": "Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters. Overrides userIp if both are provided.",
+   "location": "query"
+  },
+  "userIp": {
+   "type": "string",
+   "description": "IP address of the site where the request originates. Use this if you want to enforce per-user limits.",
+   "location": "query"
+  }
+ },
+ "auth": {
+  "oauth2": {
+   "scopes": {
+    "https://www.googleapis.com/auth/buzz": {
+     "description": "Read and write myservice data"
+    },
+    "https://www.googleapis.com/auth/buzz.read-only": {
+     "description": "Read myservice data"
+    }
+   }
+  }
+ },
+ "schemas": {
+  "AllTypes": {
+   "id": "AllTypes",
+   "type": "object",
+   "properties": {
+    "boolean": {
+     "type": "boolean"
+     },
+    "any": {
+     "type": "any"
+     },
+    "int16": {
+     "type": "integer",
+     "format": "int16"
+     },
+    "uint32": {
+     "type": "integer",
+     "format": "uint32"
+     },
+    "int32": {
+     "type": "integer",
+     "format": "int32"
+     },
+    "double": {
+     "type": "number",
+     "format": "double"
+     },
+    "float": {
+     "type": "number",
+     "format": "float"
+     },
+    "object": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string"
+       }
+      }
+     },
+    "string": {
+     "type": "string"
+     },
+    "bytes": {
+     "type": "string",
+     "format": "byte"
+     },
+    "date": {
+     "type": "string",
+     "format": "date"
+     },
+    "datetime": {
+     "type": "string",
+     "format": "date-time"
+     },
+    "int64": {
+     "type": "string",
+     "format": "int64"
+     },
+    "uint64": {
+     "type": "string",
+     "format": "uint64"
+     },
+    "uint64array": {
+     "type": "array",
+     "items": {
+      "type": "string",
+      "format": "uint64"
+      }
+     }
+    }
+   },
+  "Activity": {
+   "id": "Activity",
+   "type": "object",
+   "properties": {
+    "actor": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "any"
+      },
+      "name": {
+       "type": "any"
+      },
+      "profileUrl": {
+       "type": "any"
+      }
+     }
+    },
+    "address": {
+     "type": "any"
+    },
+    "annotation": {
+     "type": "any"
+    },
+    "categories": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "label": {
+        "type": "any"
+       },
+       "schema": {
+        "type": "any"
+       },
+       "term": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "crosspostSource": {
+     "type": "any",
+     "annotations": {
+       "required": [
+         "activities.insert"
+       ]
+     }
+    },
+    "detectedlLang": {
+     "type": "any"
+    },
+    "geocode": {
+     "type": "any"
+    },
+    "geometry": {
+     "$ref": "Geometry"
+    },
+    "id": {
+     "type": "any",
+     "annotations": {
+       "required": [
+         "activities.insert"
+       ]
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#activity"
+    },
+    "links": {
+     "type": "object",
+     "properties": {
+      "liked": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "count": {
+          "type": "integer"
+         },
+         "href": {
+          "type": "any"
+         },
+         "type": {
+          "type": "any"
+         }
+        }
+       }
+      }
+     },
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "height": {
+         "type": "any"
+        },
+        "href": {
+         "type": "any"
+        },
+        "title": {
+         "type": "any"
+        },
+        "type": {
+         "type": "any"
+        },
+        "updated": {
+         "type": "string"
+        },
+        "width": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    },
+    "object": {
+     "type": "object",
+     "properties": {
+      "actor": {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "any"
+        },
+        "name": {
+         "type": "any"
+        },
+        "profileUrl": {
+         "type": "any"
+        }
+       }
+      },
+      "attachments": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "content": {
+          "type": "any"
+         },
+         "id": {
+          "type": "any"
+         },
+         "links": {
+          "type": "object",
+          "additionalProperties": {
+           "type": "array",
+           "items": {
+            "type": "object",
+            "properties": {
+             "count": {
+              "type": "any"
+             },
+             "height": {
+              "type": "any"
+             },
+             "href": {
+              "type": "any"
+             },
+             "title": {
+              "type": "any"
+             },
+             "type": {
+              "type": "any"
+             },
+             "updated": {
+              "type": "string"
+             },
+             "width": {
+              "type": "any"
+             }
+            }
+           }
+          }
+         },
+         "title": {
+          "type": "any"
+         },
+         "type": {
+          "type": "string"
+         }
+        }
+       }
+      },
+      "comments": {
+       "type": "array",
+       "items": {
+        "$ref": "Comment"
+       }
+      },
+      "content": {
+       "type": "any"
+      },
+      "detectedlLang": {
+       "type": "any"
+      },
+      "id": {
+       "type": "any"
+      },
+      "liked": {
+       "type": "array",
+       "items": {
+        "$ref": "Person"
+       }
+      },
+      "links": {
+       "type": "object",
+       "additionalProperties": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "properties": {
+          "href": {
+           "type": "any"
+          },
+          "type": {
+           "$ref": "LinkType"
+          }
+         }
+        }
+       }
+      },
+      "originalContent": {
+       "type": "any"
+      },
+      "shareOriginal": {
+       "$ref": "Activity"
+      },
+      "targetLang": {
+       "type": "any"
+      },
+      "type": {
+       "type": "string"
+      },
+      "untranslatedContent": {
+       "type": "any"
+      }
+     }
+    },
+    "placeName": {
+     "type": "any"
+    },
+    "published": {
+     "type": "string"
+    },
+    "radius": {
+     "type": "any"
+    },
+    "source": {
+     "type": "object",
+     "properties": {
+      "title": {
+       "type": "any"
+      }
+     }
+    },
+    "targetLang": {
+     "type": "any"
+    },
+    "title": {
+     "type": "any"
+    },
+    "untranslatedTitle": {
+     "type": "any"
+    },
+    "updated": {
+     "type": "string"
+    },
+    "verbs": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "visibility": {
+     "type": "object",
+     "properties": {
+      "entries": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "id": {
+          "type": "any"
+         },
+         "title": {
+          "type": "any"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "Geometry": {
+   "id": "Geometry",
+   "type": "object",
+   "variant": {
+    "discriminant": "type",
+    "map": [
+     {
+      "type_value": "Collection",
+      "$ref": "GeometryCollection"
+     },
+     {
+      "type_value": "Polygon",
+      "$ref": "GeometryPolygon"
+     }
+    ]
+   }
+  },
+  "GeometryCollection": {
+   "id": "GeometryCollection",
+   "type": "object",
+   "properties": {
+    "geometries": {
+     "type": "array",
+     "items": {
+      "$ref": "Geometry"
+     }
+    },
+    "type": {
+     "type": "string",
+     "enum": [
+      "Collection"
+     ]
+    }
+   }
+  },
+  "GeometryPolygon": {
+   "id": "GeometryPolygon",
+   "type": "object",
+   "properties": {
+    "coordinates": {
+     "type": "string"
+    },
+    "type": {
+     "type": "string",
+     "enum": [
+      "Polygon"
+     ]
+    }
+   }
+  },
+  "ActivityFeed": {
+   "id": "ActivityFeed",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "any"
+    },
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Activity"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#activityFeed"
+    },
+    "links": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "height": {
+         "type": "any"
+        },
+        "href": {
+         "type": "any"
+        },
+        "title": {
+         "type": "any"
+        },
+        "type": {
+         "$ref": "LinkType"
+        },
+        "updated": {
+         "type": "string"
+        },
+        "width": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    },
+    "title": {
+     "type": "any"
+    },
+    "updated": {
+     "type": "string"
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Album": {
+   "id": "Album",
+   "type": "object",
+   "properties": {
+    "created": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "firstPhotoId": {
+     "type": "integer"
+    },
+    "id": {
+     "type": "integer"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#album"
+    },
+    "lastModified": {
+     "type": "string"
+    },
+    "links": {
+     "type": "object",
+     "properties": {
+      "alternate": {
+       "$ref": "Link"
+      },
+      "enclosure": {
+       "$ref": "Link"
+      }
+     }
+    },
+    "owner": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "name": {
+       "type": "string"
+      },
+      "profileUrl": {
+       "type": "string"
+      }
+     }
+    },
+    "tags": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "title": {
+     "type": "string"
+    },
+    "version": {
+     "type": "integer"
+    }
+   }
+  },
+  "AlbumsFeed": {
+   "id": "AlbumsFeed",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Album"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#albumsFeed"
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "ChiliPhotosResourceJson": {
+   "id": "ChiliPhotosResourceJson",
+   "type": "object",
+   "properties": {
+    "album": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "integer"
+      },
+      "page_link": {
+       "$ref": "Link"
+      }
+     }
+    },
+    "created": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string"
+    },
+    "fileSize": {
+     "type": "integer"
+    },
+    "id": {
+     "type": "integer"
+    },
+    "kind": {
+     "type": "string"
+    },
+    "lastModified": {
+     "type": "string"
+    },
+    "links": {
+     "type": "object",
+     "properties": {
+      "alternate": {
+       "type": "array",
+       "items": {
+        "$ref": "Link"
+       }
+      }
+     },
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "$ref": "Link"
+      }
+     }
+    },
+    "owner": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "string"
+      },
+      "name": {
+       "type": "string"
+      },
+      "profileUrl": {
+       "type": "string"
+      }
+     }
+    },
+    "timestamp": {
+     "type": "number"
+    },
+    "title": {
+     "type": "string"
+    },
+    "version": {
+     "type": "integer"
+    }
+   }
+  },
+  "Comment": {
+   "id": "Comment",
+   "type": "object",
+   "properties": {
+    "actor": {
+     "type": "object",
+     "properties": {
+      "id": {
+       "type": "any"
+      },
+      "name": {
+       "type": "any"
+      },
+      "profileUrl": {
+       "type": "any"
+      }
+     }
+    },
+    "content": {
+     "type": "any"
+    },
+    "detectedLang": {
+     "type": "any"
+    },
+    "id": {
+     "type": "any"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#comment"
+    },
+    "links": {
+     "type": "object",
+     "properties": {
+      "inReplyTo": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "href": {
+          "type": "any"
+         },
+         "ref": {
+          "type": "any"
+         },
+         "source": {
+          "type": "any"
+         }
+        }
+       }
+      }
+     },
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "height": {
+         "type": "any"
+        },
+        "href": {
+         "type": "any"
+        },
+        "title": {
+         "type": "any"
+        },
+        "type": {
+         "type": "any"
+        },
+        "updated": {
+         "type": "string"
+        },
+        "width": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    },
+    "originalContent": {
+     "type": "any"
+    },
+    "published": {
+     "type": "string"
+    },
+    "targetLang": {
+     "type": "any"
+    },
+    "untranslatedContent": {
+     "type": "any"
+    },
+    "updated": {
+     "type": "string"
+    }
+   }
+  },
+  "CommentFeed": {
+   "id": "CommentFeed",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "any"
+    },
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Comment"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#commentFeed"
+    },
+    "links": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "height": {
+         "type": "any"
+        },
+        "href": {
+         "type": "any"
+        },
+        "title": {
+         "type": "any"
+        },
+        "type": {
+         "$ref": "LinkType"
+        },
+        "updated": {
+         "type": "string"
+        },
+        "width": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    },
+    "title": {
+     "type": "any"
+    },
+    "updated": {
+     "type": "string"
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "CountFeed": {
+   "id": "CountFeed",
+   "type": "object",
+   "properties": {
+    "counts": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "timestamp": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#countFeed"
+    }
+   }
+  },
+  "Entity": {
+   "id": "Entity",
+   "type": "object",
+   "properties": {
+    "chipsUiAcl": {
+     "type": "any"
+    },
+    "comment": {
+     "type": "any"
+    },
+    "id": {
+     "type": "any"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#entity"
+    },
+    "starredBy": {
+     "type": "array",
+     "items": {
+      "$ref": "Person"
+     }
+    },
+    "starredByViewer": {
+     "type": "any"
+    },
+    "summary": {
+     "type": "any"
+    },
+    "title": {
+     "type": "any"
+    },
+    "totalNumStars": {
+     "type": "any"
+    },
+    "viewerStarAcl": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "displayName": {
+        "type": "any"
+       },
+       "id": {
+        "type": "any"
+       },
+       "kind": {
+        "type": "any"
+       },
+       "tags": {
+        "type": "array",
+        "items": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "EntityAcl": {
+   "id": "EntityAcl",
+   "type": "object",
+   "properties": {
+    "chipsUiAcl": {
+     "type": "string"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#entityAcl"
+    },
+    "viewerStarAcl": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "displayName": {
+        "type": "string"
+       },
+       "id": {
+        "type": "string"
+       },
+       "kind": {
+        "type": "string"
+       },
+       "tags": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "Group": {
+   "id": "Group",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "any"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#group"
+    },
+    "links": {
+     "type": "object",
+     "properties": {
+      "self": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "properties": {
+         "href": {
+          "type": "any"
+         },
+         "type": {
+          "type": "string",
+          "default": "application/json"
+         }
+        }
+       }
+      }
+     }
+    },
+    "memberCount": {
+     "type": "any"
+    },
+    "title": {
+     "type": "any"
+    }
+   }
+  },
+  "GroupFeed": {
+   "id": "GroupFeed",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "Group"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#groupFeed"
+    },
+    "links": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "height": {
+         "type": "any"
+        },
+        "href": {
+         "type": "any"
+        },
+        "title": {
+         "type": "any"
+        },
+        "type": {
+         "type": "any"
+        },
+        "updated": {
+         "type": "string"
+        },
+        "width": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Link": {
+   "id": "Link",
+   "type": "object",
+   "properties": {
+    "count": {
+     "type": "integer",
+     "format": "uint32"
+    },
+    "href": {
+     "type": "string"
+    },
+    "type": {
+     "$ref": "LinkType"
+    }
+   }
+  },
+  "PeopleFeed": {
+   "id": "PeopleFeed",
+   "type": "object",
+   "properties": {
+    "entry": {
+     "type": "array",
+     "items": {
+      "$ref": "Person"
+     }
+    },
+    "itemsPerPage": {
+     "type": "any"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#peopleFeed"
+    },
+    "startIndex": {
+     "type": "any"
+    },
+    "totalResults": {
+     "type": "any"
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "Person": {
+   "id": "Person",
+   "type": "object",
+   "properties": {
+    "aboutMe": {
+     "type": "any"
+    },
+    "accounts": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "domain": {
+        "type": "any"
+       },
+       "userid": {
+        "type": "any"
+       },
+       "username": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "activities": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "addresses": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "country": {
+        "type": "any"
+       },
+       "formatted": {
+        "type": "any"
+       },
+       "locality": {
+        "type": "any"
+       },
+       "postalCode": {
+        "type": "any"
+       },
+       "primary": {
+        "type": "any"
+       },
+       "region": {
+        "type": "any"
+       },
+       "streetAddress": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "anniversary": {
+     "type": "any"
+    },
+    "birthday": {
+     "type": "any"
+    },
+    "bodyType": {
+     "type": "any"
+    },
+    "books": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "cars": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "children": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "connected": {
+     "type": "any"
+    },
+    "currentLocation": {
+     "type": "any"
+    },
+    "displayName": {
+     "type": "any"
+    },
+    "drinker": {
+     "type": "any"
+    },
+    "emails": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "primary": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       },
+       "value": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "ethnicity": {
+     "type": "any"
+    },
+    "fashion": {
+     "type": "any"
+    },
+    "food": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "gender": {
+     "type": "any"
+    },
+    "happiestWhen": {
+     "type": "any"
+    },
+    "hasApp": {
+     "type": "any"
+    },
+    "heroes": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "humor": {
+     "type": "any"
+    },
+    "id": {
+     "type": "any"
+    },
+    "ims": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "primary": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       },
+       "value": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "interests": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "jobInterests": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#person"
+    },
+    "languages": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "languagesSpoken": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "livingArrangement": {
+     "type": "any"
+    },
+    "lookingFor": {
+     "type": "any"
+    },
+    "movies": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "music": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "name": {
+     "type": "object",
+     "properties": {
+      "familyName": {
+       "type": "any"
+      },
+      "formatted": {
+       "type": "any"
+      },
+      "givenName": {
+       "type": "any"
+      },
+      "honorificPrefix": {
+       "type": "any"
+      },
+      "honorificSuffix": {
+       "type": "any"
+      },
+      "middleName": {
+       "type": "any"
+      }
+     }
+    },
+    "nickname": {
+     "type": "any"
+    },
+    "note": {
+     "type": "any"
+    },
+    "organizations": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "department": {
+        "type": "any"
+       },
+       "description": {
+        "type": "any"
+       },
+       "endDate": {
+        "type": "any"
+       },
+       "location": {
+        "type": "any"
+       },
+       "name": {
+        "type": "any"
+       },
+       "primary": {
+        "type": "any"
+       },
+       "startDate": {
+        "type": "any"
+       },
+       "title": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "pets": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "phoneNumbers": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "primary": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       },
+       "value": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "photos": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "height": {
+        "type": "any"
+       },
+       "primary": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       },
+       "value": {
+        "type": "any"
+       },
+       "width": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "politicalViews": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "preferredUsername": {
+     "type": "any"
+    },
+    "profileSong": {
+     "type": "any"
+    },
+    "profileUrl": {
+     "type": "any"
+    },
+    "profileVideo": {
+     "type": "any"
+    },
+    "published": {
+     "type": "string"
+    },
+    "quotes": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "relationshipStatus": {
+     "type": "any"
+    },
+    "relationships": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "religion": {
+     "type": "any"
+    },
+    "romance": {
+     "type": "any"
+    },
+    "scaredOf": {
+     "type": "any"
+    },
+    "sexualOrientation": {
+     "type": "any"
+    },
+    "smoker": {
+     "type": "any"
+    },
+    "sports": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "status": {
+     "type": "any"
+    },
+    "tags": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "turnOffs": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "turnOns": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "tvShows": {
+     "type": "array",
+     "items": {
+      "type": "any"
+     }
+    },
+    "updated": {
+     "type": "string"
+    },
+    "urls": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "properties": {
+       "primary": {
+        "type": "any"
+       },
+       "type": {
+        "type": "any"
+       },
+       "value": {
+        "type": "any"
+       }
+      }
+     }
+    },
+    "utcOffset": {
+     "type": "any"
+    }
+   }
+  },
+  "PhotosFeed": {
+   "id": "PhotosFeed",
+   "type": "object",
+   "properties": {
+    "items": {
+     "type": "array",
+     "items": {
+      "$ref": "ChiliPhotosResourceJson"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#photosFeed"
+    },
+    "pageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "RelatedFeed": {
+   "id": "RelatedFeed",
+   "type": "object",
+   "properties": {
+    "id": {
+     "type": "any"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#relatedFeed"
+    },
+    "links": {
+     "type": "object",
+     "additionalProperties": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "count": {
+         "type": "any"
+        },
+        "height": {
+         "type": "any"
+        },
+        "href": {
+         "type": "any"
+        },
+        "title": {
+         "type": "any"
+        },
+        "type": {
+         "type": "any"
+        },
+        "updated": {
+         "type": "string"
+        },
+        "width": {
+         "type": "any"
+        }
+       }
+      }
+     }
+    },
+    "title": {
+     "type": "any"
+    },
+    "updated": {
+     "type": "string"
+    },
+    "nextPageToken": {
+     "type": "string"
+    }
+   }
+  },
+  "RelatedFeedResponse": {
+   "$ref": "RelatedFeed"
+  },
+  "StarredEntityFeed": {
+   "id": "StarredEntityFeed",
+   "type": "object",
+   "properties": {
+    "entry": {
+     "type": "array",
+     "items": {
+      "$ref": "Entity"
+     }
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#starredEntityFeed"
+    }
+   }
+  },
+  "StarredEntityFeedForUser": {
+   "id": "StarredEntityFeedForUser",
+   "type": "object",
+   "properties": {
+    "entry": {
+     "type": "array",
+     "items": {
+      "$ref": "Entity"
+     }
+    },
+    "itemsPerPage": {
+     "type": "any"
+    },
+    "kind": {
+     "type": "string",
+     "default": "buzz#starredEntityFeedForUser"
+    },
+    "startIndex": {
+     "type": "any"
+    },
+    "totalResults": {
+     "type": "any"
+    }
+   }
+  },
+  "LinkType": {
+   "id": "LinkType",
+   "type": "string",
+   "enum": [
+    "DOWNLOAD",
+    "THUMBNAIL",
+    "PDF"
+   ],
+   "enumDescriptions": [
+    "",
+    "",
+    ""
+   ]
+  },
+  "PageTokenBody": {
+   "id": "PageTokenBody",
+   "type": "object",
+   "properties": {
+    "pageToken": {
+     "type": "string"
+    }
+   }
+  }
+ },
+ "methods": {
+  "foo": {
+   "id": "myservice.foo",
+   "path": "foo",
+   "rpcMethod": "myservice.foo",
+   "httpMethod": "GET",
+   "description": "Get related links for an activity",
+   "response": {
+    "$ref": "CountFeed"
+   }
+  }
+ },
+ "resources": {
+  "activities": {
+   "methods": {
+    "count": {
+     "path": "activities/count",
+     "rpcMethod": "chili.activities.count",
+     "httpMethod": "GET",
+     "description": "Get a count of link shares",
+     "parameters": {
+      "hl": {
+       "location": "query",
+       "description": "Language code to limit language results.",
+       "type": "string"
+      },
+      "url": {
+       "location": "query",
+       "repeated": true,
+       "description": "URLs for which to get share counts.",
+       "type": "string"
+      }
+     },
+     "response": {
+      "$ref": "CountFeed"
+     },
+     "scopes": [
+      "https://www.googleapis.com/auth/buzz.read-only",
+      "https://www.googleapis.com/auth/buzz"
+     ],
+     "apiVersion": "v1_20240101"
+    },
+    "delete": {
+     "path": "activities/{userId}/{scope}/{postId}",
+     "rpcMethod": "chili.activities.delete",
+     "httpMethod": "DELETE",
+     "description": "Delete an activity",
+     "parameters": {
+      "alt": {
+       "location": "query",
+       "description": "Specifies an alternative representation type.",
+       "type": "string",
+       "enum": [
+        "atom",
+        "json"
+       ],
+       "enumDescriptions": [
+        "Use Atom XML format",
+        "Use JSON format"
+       ],
+       "default": "atom"
+      },
+      "required_parameter": {
+       "location": "query",
+       "description": "A required query parameter",
+       "required": true,
+       "type": "string"
+      },
+      "postId": {
+       "location": "path",
+       "required": true,
+       "description": "ID of the activity to delete.",
+       "type": "string"
+      },
+      "scope": {
+       "location": "path",
+       "required": true,
+       "description": "The collection to which the activity belongs.",
+       "type": "string",
+       "enum": [
+        "@liked",
+        "@muted",
+        "@self"
+       ],
+       "enumDescriptions": [
+        "Activities liked by the user.",
+        "Activities muted by the user.",
+        "Activities posted by the user."
+       ]
+      },
+      "userId": {
+       "location": "path",
+       "required": true,
+       "description": "ID of the user whose post to delete.",
+       "type": "string",
+       "format": "uint64"
+      }
+     },
+     "parameterOrder": [
+      "userId",
+      "scope",
+      "postId",
+      "required_parameter"
+     ],
+     "scopes": [
+      "https://www.googleapis.com/auth/buzz"
+     ],
+     "apiVersion": "v1_20240101"
+    }
+   }
+  }
+ }
+}

@@ -14,7 +14,9 @@ namespace {{ api.ownerName }}\Service\{{ api.className }}\Resource;
  *  </code>
  */
 class {{ resource.className }} extends \Google\Service\Resource
-{{% indent %}{% for method in resource.methods %}
+{{% indent %}{% if resource.apiVersion %}
+protected $apiVersion = '{{ resource.apiVersion }}';
+{% endif %}{% for method in resource.methods %}
 {% call_template _method method=method %}{% endfor %}
 {% endindent %}}
 

@@ -580,6 +580,13 @@ class Resource(template_objects.CodeObject):
     method_dict = self.values.get('methods') or {}
     for name in sorted(method_dict):
       method = Method(api, name, method_dict[name], parent=self)
+      
+      # Support for the new API versioning on the discovery document
+      # the design states that all the methods should have the same version
+      # hence why we take it the first time and set it once
+      if not self.get('apiVersion') and 'apiVersion' in method_dict[name]:
+        self.SetTemplateValue('apiVersion', method_dict[name]['apiVersion'])
+      
       requestType = method.values.get('requestType')
       if requestType and requestType.GetTemplateValue('className') and \
          requestType.GetTemplateValue('className') not in self._method_classes:
