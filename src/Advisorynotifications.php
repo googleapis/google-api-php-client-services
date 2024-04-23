@@ -42,6 +42,7 @@ class Advisorynotifications extends \Google\Service
   public $organizations_locations_notifications;
   public $projects_locations;
   public $projects_locations_notifications;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Advisorynotifications
@@ -55,6 +56,7 @@ class Advisorynotifications extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://advisorynotifications.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://advisorynotifications.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
