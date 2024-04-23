@@ -15,31 +15,28 @@
  * the License.
  */
 
-namespace Google\Service\Aiplatform;
+namespace Google\Service\Games;
 
-class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
+class RetrieveDeveloperGamesLastPlayerTokenResponse extends \Google\Model
 {
-  protected $collection_key = 'webSearchQueries';
-  /**
-   * @var string[]
-   */
-  public $webSearchQueries;
+  protected $tokenType = RecallToken::class;
+  protected $tokenDataType = '';
 
   /**
-   * @param string[]
+   * @param RecallToken
    */
-  public function setWebSearchQueries($webSearchQueries)
+  public function setToken(RecallToken $token)
   {
-    $this->webSearchQueries = $webSearchQueries;
+    $this->token = $token;
   }
   /**
-   * @return string[]
+   * @return RecallToken
    */
-  public function getWebSearchQueries()
+  public function getToken()
   {
-    return $this->webSearchQueries;
+    return $this->token;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingMetadata');
+class_alias(RetrieveDeveloperGamesLastPlayerTokenResponse::class, 'Google_Service_Games_RetrieveDeveloperGamesLastPlayerTokenResponse');

@@ -17,29 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
+class LearningGenaiRootControlDecodingConfigThreshold extends \Google\Model
 {
-  protected $collection_key = 'webSearchQueries';
   /**
-   * @var string[]
+   * @var string
    */
-  public $webSearchQueries;
+  public $policy;
+  /**
+   * @var float
+   */
+  public $scoreMax;
 
   /**
-   * @param string[]
+   * @param string
    */
-  public function setWebSearchQueries($webSearchQueries)
+  public function setPolicy($policy)
   {
-    $this->webSearchQueries = $webSearchQueries;
+    $this->policy = $policy;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getWebSearchQueries()
+  public function getPolicy()
   {
-    return $this->webSearchQueries;
+    return $this->policy;
+  }
+  /**
+   * @param float
+   */
+  public function setScoreMax($scoreMax)
+  {
+    $this->scoreMax = $scoreMax;
+  }
+  /**
+   * @return float
+   */
+  public function getScoreMax()
+  {
+    return $this->scoreMax;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingMetadata');
+class_alias(LearningGenaiRootControlDecodingConfigThreshold::class, 'Google_Service_Aiplatform_LearningGenaiRootControlDecodingConfigThreshold');

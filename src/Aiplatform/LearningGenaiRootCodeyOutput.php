@@ -23,6 +23,8 @@ class LearningGenaiRootCodeyOutput extends \Google\Model
   protected $codeyChatMetadataDataType = '';
   protected $codeyCompletionMetadataType = LearningGenaiRootCodeyCompletionMetadata::class;
   protected $codeyCompletionMetadataDataType = '';
+  protected $codeyGenerationMetadataType = LearningGenaiRootCodeyGenerationMetadata::class;
+  protected $codeyGenerationMetadataDataType = '';
 
   /**
    * @param LearningGenaiRootCodeyChatMetadata
@@ -51,6 +53,20 @@ class LearningGenaiRootCodeyOutput extends \Google\Model
   public function getCodeyCompletionMetadata()
   {
     return $this->codeyCompletionMetadata;
+  }
+  /**
+   * @param LearningGenaiRootCodeyGenerationMetadata
+   */
+  public function setCodeyGenerationMetadata(LearningGenaiRootCodeyGenerationMetadata $codeyGenerationMetadata)
+  {
+    $this->codeyGenerationMetadata = $codeyGenerationMetadata;
+  }
+  /**
+   * @return LearningGenaiRootCodeyGenerationMetadata
+   */
+  public function getCodeyGenerationMetadata()
+  {
+    return $this->codeyGenerationMetadata;
   }
 }
 

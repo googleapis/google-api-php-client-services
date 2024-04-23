@@ -35,6 +35,10 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   /**
    * @var string[]
    */
+  public $asns;
+  /**
+   * @var string[]
+   */
   public $botReasons;
   /**
    * @var string[]
@@ -48,6 +52,10 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
    * @var string[]
    */
   public $ipAddressRanges;
+  /**
+   * @var string[]
+   */
+  public $regionCodes;
   /**
    * @var string[]
    */
@@ -94,6 +102,20 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   public function getApiProducts()
   {
     return $this->apiProducts;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAsns($asns)
+  {
+    $this->asns = $asns;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAsns()
+  {
+    return $this->asns;
   }
   /**
    * @param string[]
@@ -150,6 +172,20 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   public function getIpAddressRanges()
   {
     return $this->ipAddressRanges;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRegionCodes($regionCodes)
+  {
+    $this->regionCodes = $regionCodes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRegionCodes()
+  {
+    return $this->regionCodes;
   }
   /**
    * @param string[]

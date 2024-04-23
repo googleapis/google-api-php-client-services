@@ -33,6 +33,8 @@ class LearningGenaiRootFilterMetadataFilterDebugInfo extends \Google\Model
   protected $raiResultDataType = '';
   protected $raiSignalType = CloudAiNlLlmProtoServiceRaiSignal::class;
   protected $raiSignalDataType = '';
+  protected $recordsType = LearningGenaiRootControlDecodingRecords::class;
+  protected $recordsDataType = '';
   protected $streamRecitationResultType = LanguageLabsAidaTrustRecitationProtoStreamRecitationResult::class;
   protected $streamRecitationResultDataType = '';
   protected $takedownResultType = LearningGenaiRootTakedownResult::class;
@@ -123,6 +125,20 @@ class LearningGenaiRootFilterMetadataFilterDebugInfo extends \Google\Model
   public function getRaiSignal()
   {
     return $this->raiSignal;
+  }
+  /**
+   * @param LearningGenaiRootControlDecodingRecords
+   */
+  public function setRecords(LearningGenaiRootControlDecodingRecords $records)
+  {
+    $this->records = $records;
+  }
+  /**
+   * @return LearningGenaiRootControlDecodingRecords
+   */
+  public function getRecords()
+  {
+    return $this->records;
   }
   /**
    * @param LanguageLabsAidaTrustRecitationProtoStreamRecitationResult

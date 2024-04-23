@@ -457,7 +457,17 @@ class Games extends \Google\Service
         'recall',
         [
           'methods' => [
-            'linkPersona' => [
+            'lastTokenFromAllDeveloperGames' => [
+              'path' => 'games/v1/recall/developerGamesLastPlayerToken/{sessionId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'sessionId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'linkPersona' => [
               'path' => 'games/v1/recall:linkPersona',
               'httpMethod' => 'POST',
               'parameters' => [],
