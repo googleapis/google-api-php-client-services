@@ -45,6 +45,7 @@ class Config extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_previews;
   public $projects_locations_terraformVersions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Config service.
@@ -57,6 +58,7 @@ class Config extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://config.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://config.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
