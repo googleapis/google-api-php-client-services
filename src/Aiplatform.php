@@ -133,6 +133,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_tuningJobs;
   public $projects_locations_tuningJobs_operations;
   public $publishers_models;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Aiplatform service.
@@ -145,6 +146,7 @@ class Aiplatform extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://aiplatform.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://aiplatform.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
