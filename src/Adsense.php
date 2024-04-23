@@ -53,6 +53,7 @@ class Adsense extends \Google\Service
   public $accounts_reports;
   public $accounts_reports_saved;
   public $accounts_sites;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Adsense service.
@@ -65,6 +66,7 @@ class Adsense extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://adsense.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://adsense.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v2';

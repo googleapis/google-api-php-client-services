@@ -115,6 +115,7 @@ class Classroom extends \Google\Service
   public $userProfiles;
   public $userProfiles_guardianInvitations;
   public $userProfiles_guardians;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Classroom service.
@@ -127,6 +128,7 @@ class Classroom extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://classroom.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://classroom.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

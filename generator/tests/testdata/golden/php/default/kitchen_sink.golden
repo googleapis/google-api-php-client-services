@@ -60,6 +60,7 @@ class KitchSink extends \Google\Service
   public $topics;
   public $topics_submissions;
   public $votes;
+  public $rootUrlTemplate;
   private $base_methods;
   /**
    * Constructs the internal representation of the KitchSink service.
@@ -72,6 +73,7 @@ class KitchSink extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://www.UNIVERSE_DOMAIN/';
     $this->servicePath = 'sink/v1/';
     $this->version = 'v1';
     $this->serviceName = 'kitch_sink';

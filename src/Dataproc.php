@@ -50,6 +50,7 @@ class Dataproc extends \Google\Service
   public $projects_regions_jobs;
   public $projects_regions_operations;
   public $projects_regions_workflowTemplates;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dataproc service.
@@ -62,6 +63,7 @@ class Dataproc extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://dataproc.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://dataproc.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

@@ -46,6 +46,7 @@ class PhpArrayScalars extends \Google\Service
       "https://www.googleapis.com/auth/userinfo.email";
 
   public $getwitharrays;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the PhpArrayScalars service.
@@ -58,6 +59,7 @@ class PhpArrayScalars extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://www.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://www.UNIVERSE_DOMAIN/';
     $this->servicePath = 'php_float_type/v1/';
     $this->version = 'v1';
     $this->serviceName = 'php_array_scalars';

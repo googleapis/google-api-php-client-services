@@ -41,6 +41,7 @@ class CloudDomains extends \Google\Service
   public $projects_locations;
   public $projects_locations_operations;
   public $projects_locations_registrations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudDomains service.
@@ -53,6 +54,7 @@ class CloudDomains extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://domains.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://domains.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

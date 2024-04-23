@@ -41,6 +41,7 @@ class IAMCredentials extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_serviceAccounts;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the IAMCredentials service.
@@ -53,6 +54,7 @@ class IAMCredentials extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://iamcredentials.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://iamcredentials.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

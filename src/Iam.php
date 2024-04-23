@@ -44,6 +44,7 @@ class Iam extends \Google\Service
 
   public $policies;
   public $policies_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Iam service.
@@ -56,6 +57,7 @@ class Iam extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://iam.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://iam.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v2';

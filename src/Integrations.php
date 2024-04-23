@@ -65,6 +65,7 @@ class Integrations extends \Google\Service
   public $projects_locations_products_sfdcInstances_sfdcChannels;
   public $projects_locations_sfdcInstances;
   public $projects_locations_sfdcInstances_sfdcChannels;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Integrations service.
@@ -77,6 +78,7 @@ class Integrations extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://integrations.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://integrations.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

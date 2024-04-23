@@ -63,6 +63,7 @@ class Storage extends \Google\Service
   public $operations;
   public $projects_hmacKeys;
   public $projects_serviceAccount;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Storage service.
@@ -75,6 +76,7 @@ class Storage extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://storage.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://storage.UNIVERSE_DOMAIN/';
     $this->servicePath = 'storage/v1/';
     $this->batchPath = 'batch/storage/v1';
     $this->version = 'v1';

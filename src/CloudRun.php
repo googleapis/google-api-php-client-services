@@ -48,6 +48,7 @@ class CloudRun extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_services;
   public $projects_locations_services_revisions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudRun service.
@@ -60,6 +61,7 @@ class CloudRun extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://run.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://run.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v2';
