@@ -47,6 +47,7 @@ class GoogleMarketingPlatformAdminAPI extends \Google\Service
 
   public $organizations;
   public $organizations_analyticsAccountLinks;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the
@@ -60,6 +61,7 @@ class GoogleMarketingPlatformAdminAPI extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://marketingplatformadmin.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://marketingplatformadmin.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1alpha';
