@@ -44,6 +44,7 @@ class CloudControlsPartnerService extends \Google\Service
   public $organizations_locations_customers_workloads;
   public $organizations_locations_customers_workloads_accessApprovalRequests;
   public $organizations_locations_customers_workloads_violations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the CloudControlsPartnerService
@@ -57,6 +58,7 @@ class CloudControlsPartnerService extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://cloudcontrolspartner.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://cloudcontrolspartner.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
