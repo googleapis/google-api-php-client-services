@@ -45,6 +45,7 @@ class AddressValidation extends \Google\Service
       "https://www.googleapis.com/auth/maps-platform.addressvalidation";
 
   public $v1;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the AddressValidation service.
@@ -57,6 +58,7 @@ class AddressValidation extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://addressvalidation.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://addressvalidation.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
