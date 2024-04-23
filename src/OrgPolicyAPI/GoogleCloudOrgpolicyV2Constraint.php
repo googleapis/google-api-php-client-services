@@ -25,8 +25,6 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
    * @var string
    */
   public $constraintDefault;
-  protected $customConstraintType = GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint::class;
-  protected $customConstraintDataType = '';
   /**
    * @var string
    */
@@ -35,6 +33,8 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
    * @var string
    */
   public $displayName;
+  protected $googleManagedConstraintType = GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint::class;
+  protected $googleManagedConstraintDataType = '';
   protected $listConstraintType = GoogleCloudOrgpolicyV2ConstraintListConstraint::class;
   protected $listConstraintDataType = '';
   /**
@@ -75,20 +75,6 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
     return $this->constraintDefault;
   }
   /**
-   * @param GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint
-   */
-  public function setCustomConstraint(GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint $customConstraint)
-  {
-    $this->customConstraint = $customConstraint;
-  }
-  /**
-   * @return GoogleCloudOrgpolicyV2ConstraintGoogleDefinedCustomConstraint
-   */
-  public function getCustomConstraint()
-  {
-    return $this->customConstraint;
-  }
-  /**
    * @param string
    */
   public function setDescription($description)
@@ -115,6 +101,20 @@ class GoogleCloudOrgpolicyV2Constraint extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
+  }
+  /**
+   * @param GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint
+   */
+  public function setGoogleManagedConstraint(GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint $googleManagedConstraint)
+  {
+    $this->googleManagedConstraint = $googleManagedConstraint;
+  }
+  /**
+   * @return GoogleCloudOrgpolicyV2ConstraintGoogleManagedConstraint
+   */
+  public function getGoogleManagedConstraint()
+  {
+    return $this->googleManagedConstraint;
   }
   /**
    * @param GoogleCloudOrgpolicyV2ConstraintListConstraint
