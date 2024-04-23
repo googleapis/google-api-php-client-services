@@ -17,29 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
+class LearningGenaiRootCodeyGenerationMetadata extends \Google\Model
 {
-  protected $collection_key = 'webSearchQueries';
   /**
-   * @var string[]
+   * @var string
    */
-  public $webSearchQueries;
+  public $output;
+  /**
+   * @var string
+   */
+  public $postInferenceStep;
 
   /**
-   * @param string[]
+   * @param string
    */
-  public function setWebSearchQueries($webSearchQueries)
+  public function setOutput($output)
   {
-    $this->webSearchQueries = $webSearchQueries;
+    $this->output = $output;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getWebSearchQueries()
+  public function getOutput()
   {
-    return $this->webSearchQueries;
+    return $this->output;
+  }
+  /**
+   * @param string
+   */
+  public function setPostInferenceStep($postInferenceStep)
+  {
+    $this->postInferenceStep = $postInferenceStep;
+  }
+  /**
+   * @return string
+   */
+  public function getPostInferenceStep()
+  {
+    return $this->postInferenceStep;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingMetadata');
+class_alias(LearningGenaiRootCodeyGenerationMetadata::class, 'Google_Service_Aiplatform_LearningGenaiRootCodeyGenerationMetadata');

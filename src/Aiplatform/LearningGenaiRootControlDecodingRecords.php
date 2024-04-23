@@ -17,29 +17,27 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
+class LearningGenaiRootControlDecodingRecords extends \Google\Collection
 {
-  protected $collection_key = 'webSearchQueries';
-  /**
-   * @var string[]
-   */
-  public $webSearchQueries;
+  protected $collection_key = 'records';
+  protected $recordsType = LearningGenaiRootControlDecodingRecord::class;
+  protected $recordsDataType = 'array';
 
   /**
-   * @param string[]
+   * @param LearningGenaiRootControlDecodingRecord[]
    */
-  public function setWebSearchQueries($webSearchQueries)
+  public function setRecords($records)
   {
-    $this->webSearchQueries = $webSearchQueries;
+    $this->records = $records;
   }
   /**
-   * @return string[]
+   * @return LearningGenaiRootControlDecodingRecord[]
    */
-  public function getWebSearchQueries()
+  public function getRecords()
   {
-    return $this->webSearchQueries;
+    return $this->records;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingMetadata');
+class_alias(LearningGenaiRootControlDecodingRecords::class, 'Google_Service_Aiplatform_LearningGenaiRootControlDecodingRecords');

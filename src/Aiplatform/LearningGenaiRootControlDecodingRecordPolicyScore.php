@@ -17,29 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
+class LearningGenaiRootControlDecodingRecordPolicyScore extends \Google\Model
 {
-  protected $collection_key = 'webSearchQueries';
   /**
-   * @var string[]
+   * @var string
    */
-  public $webSearchQueries;
+  public $policy;
+  /**
+   * @var float
+   */
+  public $score;
 
   /**
-   * @param string[]
+   * @param string
    */
-  public function setWebSearchQueries($webSearchQueries)
+  public function setPolicy($policy)
   {
-    $this->webSearchQueries = $webSearchQueries;
+    $this->policy = $policy;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getWebSearchQueries()
+  public function getPolicy()
   {
-    return $this->webSearchQueries;
+    return $this->policy;
+  }
+  /**
+   * @param float
+   */
+  public function setScore($score)
+  {
+    $this->score = $score;
+  }
+  /**
+   * @return float
+   */
+  public function getScore()
+  {
+    return $this->score;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingMetadata');
+class_alias(LearningGenaiRootControlDecodingRecordPolicyScore::class, 'Google_Service_Aiplatform_LearningGenaiRootControlDecodingRecordPolicyScore');

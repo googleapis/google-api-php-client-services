@@ -62,6 +62,8 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
   public $network;
   protected $predictRequestResponseLoggingConfigType = GoogleCloudAiplatformV1PredictRequestResponseLoggingConfig::class;
   protected $predictRequestResponseLoggingConfigDataType = '';
+  protected $privateServiceConnectConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
+  protected $privateServiceConnectConfigDataType = '';
   /**
    * @var int[]
    */
@@ -238,6 +240,20 @@ class GoogleCloudAiplatformV1Endpoint extends \Google\Collection
   public function getPredictRequestResponseLoggingConfig()
   {
     return $this->predictRequestResponseLoggingConfig;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   */
+  public function setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig)
+  {
+    $this->privateServiceConnectConfig = $privateServiceConnectConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   */
+  public function getPrivateServiceConnectConfig()
+  {
+    return $this->privateServiceConnectConfig;
   }
   /**
    * @param int[]
