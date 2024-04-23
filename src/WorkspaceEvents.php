@@ -71,6 +71,7 @@ class WorkspaceEvents extends \Google\Service
 
   public $operations;
   public $subscriptions;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the WorkspaceEvents service.
@@ -83,6 +84,7 @@ class WorkspaceEvents extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://workspaceevents.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://workspaceevents.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
