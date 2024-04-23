@@ -17,26 +17,27 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaGetClientMetadataResponse extends \Google\Model
+class GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse extends \Google\Collection
 {
-  protected $propertiesType = GoogleCloudIntegrationsV1alphaProjectProperties::class;
-  protected $propertiesDataType = '';
+  protected $collection_key = 'files';
+  protected $filesType = GoogleCloudIntegrationsV1alphaFile::class;
+  protected $filesDataType = 'array';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaProjectProperties
+   * @param GoogleCloudIntegrationsV1alphaFile[]
    */
-  public function setProperties(GoogleCloudIntegrationsV1alphaProjectProperties $properties)
+  public function setFiles($files)
   {
-    $this->properties = $properties;
+    $this->files = $files;
   }
   /**
-   * @return GoogleCloudIntegrationsV1alphaProjectProperties
+   * @return GoogleCloudIntegrationsV1alphaFile[]
    */
-  public function getProperties()
+  public function getFiles()
   {
-    return $this->properties;
+    return $this->files;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaGetClientMetadataResponse::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaGetClientMetadataResponse');
+class_alias(GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaDownloadJsonPackageResponse');

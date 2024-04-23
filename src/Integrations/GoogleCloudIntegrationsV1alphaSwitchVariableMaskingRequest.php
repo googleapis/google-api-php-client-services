@@ -17,26 +17,28 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaGetClientMetadataResponse extends \Google\Model
+class GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest extends \Google\Model
 {
-  protected $propertiesType = GoogleCloudIntegrationsV1alphaProjectProperties::class;
-  protected $propertiesDataType = '';
+  /**
+   * @var bool
+   */
+  public $enableVariableMasking;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaProjectProperties
+   * @param bool
    */
-  public function setProperties(GoogleCloudIntegrationsV1alphaProjectProperties $properties)
+  public function setEnableVariableMasking($enableVariableMasking)
   {
-    $this->properties = $properties;
+    $this->enableVariableMasking = $enableVariableMasking;
   }
   /**
-   * @return GoogleCloudIntegrationsV1alphaProjectProperties
+   * @return bool
    */
-  public function getProperties()
+  public function getEnableVariableMasking()
   {
-    return $this->properties;
+    return $this->enableVariableMasking;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaGetClientMetadataResponse::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaGetClientMetadataResponse');
+class_alias(GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest');

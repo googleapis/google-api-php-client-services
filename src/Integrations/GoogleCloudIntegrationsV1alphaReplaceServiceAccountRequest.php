@@ -17,26 +17,28 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaGetClientMetadataResponse extends \Google\Model
+class GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest extends \Google\Model
 {
-  protected $propertiesType = GoogleCloudIntegrationsV1alphaProjectProperties::class;
-  protected $propertiesDataType = '';
+  /**
+   * @var string
+   */
+  public $runAsServiceAccount;
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaProjectProperties
+   * @param string
    */
-  public function setProperties(GoogleCloudIntegrationsV1alphaProjectProperties $properties)
+  public function setRunAsServiceAccount($runAsServiceAccount)
   {
-    $this->properties = $properties;
+    $this->runAsServiceAccount = $runAsServiceAccount;
   }
   /**
-   * @return GoogleCloudIntegrationsV1alphaProjectProperties
+   * @return string
    */
-  public function getProperties()
+  public function getRunAsServiceAccount()
   {
-    return $this->properties;
+    return $this->runAsServiceAccount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaGetClientMetadataResponse::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaGetClientMetadataResponse');
+class_alias(GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest');

@@ -17,26 +17,26 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaGetClientMetadataResponse extends \Google\Model
+class GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest extends \Google\Model
 {
-  protected $propertiesType = GoogleCloudIntegrationsV1alphaProjectProperties::class;
-  protected $propertiesDataType = '';
+  protected $cloudKmsConfigType = GoogleCloudIntegrationsV1alphaCloudKmsConfig::class;
+  protected $cloudKmsConfigDataType = '';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaProjectProperties
+   * @param GoogleCloudIntegrationsV1alphaCloudKmsConfig
    */
-  public function setProperties(GoogleCloudIntegrationsV1alphaProjectProperties $properties)
+  public function setCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig $cloudKmsConfig)
   {
-    $this->properties = $properties;
+    $this->cloudKmsConfig = $cloudKmsConfig;
   }
   /**
-   * @return GoogleCloudIntegrationsV1alphaProjectProperties
+   * @return GoogleCloudIntegrationsV1alphaCloudKmsConfig
    */
-  public function getProperties()
+  public function getCloudKmsConfig()
   {
-    return $this->properties;
+    return $this->cloudKmsConfig;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaGetClientMetadataResponse::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaGetClientMetadataResponse');
+class_alias(GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest');

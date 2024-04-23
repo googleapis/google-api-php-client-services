@@ -17,6 +17,8 @@
 
 namespace Google\Service\Integrations\Resource;
 
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDownloadExecutionResponse;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaExecution;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListExecutionsResponse;
 
 /**
@@ -29,6 +31,38 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListExecutionsResp
  */
 class ProjectsLocationsIntegrationsExecutions extends \Google\Service\Resource
 {
+  /**
+   * Download the execution. (executions.download)
+   *
+   * @param string $name Required. The execution resource name. Format: projects/{
+   * gcp_project_id}/locations/{location}/products/{product}/integrations/{integra
+   * tion_id}/executions/{execution_id}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudIntegrationsV1alphaDownloadExecutionResponse
+   * @throws \Google\Service\Exception
+   */
+  public function download($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('download', [$params], GoogleCloudIntegrationsV1alphaDownloadExecutionResponse::class);
+  }
+  /**
+   * Get an execution in the specified project. (executions.get)
+   *
+   * @param string $name Required. The execution resource name. Format: projects/{
+   * gcp_project_id}/locations/{location}/products/{product}/integrations/{integra
+   * tion_id}/executions/{execution_id}
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudIntegrationsV1alphaExecution
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GoogleCloudIntegrationsV1alphaExecution::class);
+  }
   /**
    * Lists the results of all the integration executions. The response includes
    * the same information as the [execution
