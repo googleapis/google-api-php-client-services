@@ -41,6 +41,7 @@ class Solar extends \Google\Service
   public $buildingInsights;
   public $dataLayers;
   public $geoTiff;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Solar service.
@@ -53,6 +54,7 @@ class Solar extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://solar.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://solar.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
