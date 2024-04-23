@@ -51,6 +51,7 @@ class MigrationCenterAPI extends \Google\Service
   public $projects_locations_reportConfigs_reports;
   public $projects_locations_sources;
   public $projects_locations_sources_errorFrames;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the MigrationCenterAPI service.
@@ -63,6 +64,7 @@ class MigrationCenterAPI extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://migrationcenter.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://migrationcenter.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
