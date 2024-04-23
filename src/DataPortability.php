@@ -230,6 +230,7 @@ class DataPortability extends \Google\Service
   public $archiveJobs;
   public $authorization;
   public $portabilityArchive;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DataPortability service.
@@ -242,6 +243,7 @@ class DataPortability extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://dataportability.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://dataportability.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
