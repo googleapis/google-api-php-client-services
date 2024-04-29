@@ -20,8 +20,10 @@ namespace Google\Service\Bigquery;
 class DifferentialPrivacyPolicy extends \Google\Model
 {
   public $deltaBudget;
+  public $deltaBudgetRemaining;
   public $deltaPerQuery;
   public $epsilonBudget;
+  public $epsilonBudgetRemaining;
   public $maxEpsilonPerQuery;
   /**
    * @var string
@@ -40,6 +42,14 @@ class DifferentialPrivacyPolicy extends \Google\Model
   {
     return $this->deltaBudget;
   }
+  public function setDeltaBudgetRemaining($deltaBudgetRemaining)
+  {
+    $this->deltaBudgetRemaining = $deltaBudgetRemaining;
+  }
+  public function getDeltaBudgetRemaining()
+  {
+    return $this->deltaBudgetRemaining;
+  }
   public function setDeltaPerQuery($deltaPerQuery)
   {
     $this->deltaPerQuery = $deltaPerQuery;
@@ -55,6 +65,14 @@ class DifferentialPrivacyPolicy extends \Google\Model
   public function getEpsilonBudget()
   {
     return $this->epsilonBudget;
+  }
+  public function setEpsilonBudgetRemaining($epsilonBudgetRemaining)
+  {
+    $this->epsilonBudgetRemaining = $epsilonBudgetRemaining;
+  }
+  public function getEpsilonBudgetRemaining()
+  {
+    return $this->epsilonBudgetRemaining;
   }
   public function setMaxEpsilonPerQuery($maxEpsilonPerQuery)
   {
