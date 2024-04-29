@@ -173,7 +173,7 @@ class ProjectsLocationsNetworkmanagementGlobalConnectivityTests extends \Google\
    * returns a value of `AMBIGUOUS`. See the documentation in `ConnectivityTest`
    * for more details. (connectivityTests.patch)
    *
-   * @param string $name Required. Unique name of the resource using the form:
+   * @param string $name Identifier. Unique name of the resource using the form:
    * `projects/{project_id}/locations/global/connectivityTests/{test_id}`
    * @param ConnectivityTest $postBody
    * @param array $optParams Optional parameters.
