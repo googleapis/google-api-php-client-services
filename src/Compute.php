@@ -8976,6 +8976,30 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'performMaintenance' => [
+              'path' => 'projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/performMaintenance',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'nodeGroup' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'projects/{project}/zones/{zone}/nodeGroups/{resource}/setIamPolicy',
               'httpMethod' => 'POST',
