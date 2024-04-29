@@ -32,7 +32,8 @@ use Google\Service\HangoutsChat\Message;
 class SpacesMessages extends \Google\Service\Resource
 {
   /**
-   * Creates a message in a Google Chat space. For an example, see [Send a
+   * Creates a message in a Google Chat space. The maximum message size, including
+   * text and cards, is 32,000 bytes. For an example, see [Send a
    * message](https://developers.google.com/workspace/chat/create-messages).
    * Calling this method requires
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
