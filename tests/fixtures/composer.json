@@ -10,7 +10,7 @@
     ],
     "require": {
         "google/apiclient": "%s",
-        "google/apiclient-services": "dev-%s as 0.200.0"
+        "google/apiclient-services": "dev-%s as 0.500.0"
     },
     "minimum-stability": "dev"
 }
