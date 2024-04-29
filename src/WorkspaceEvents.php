@@ -38,7 +38,7 @@ class WorkspaceEvents extends \Google\Service
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   const CHAT_BOT =
       "https://www.googleapis.com/auth/chat.bot";
-  /** View, add, update, and remove members from conversations in Google Chat. */
+  /** View, add, and remove members from conversations in Google Chat. */
   const CHAT_MEMBERSHIPS =
       "https://www.googleapis.com/auth/chat.memberships";
   /** View members in Google Chat conversations.. */
