@@ -17,17 +17,31 @@
 
 namespace Google\Service\Dataform;
 
-class BigQueryAction extends \Google\Model
+class NotebookAction extends \Google\Model
 {
   /**
    * @var string
    */
-  public $jobId;
+  public $contents;
   /**
    * @var string
    */
-  public $sqlScript;
+  public $jobId;
 
+  /**
+   * @param string
+   */
+  public function setContents($contents)
+  {
+    $this->contents = $contents;
+  }
+  /**
+   * @return string
+   */
+  public function getContents()
+  {
+    return $this->contents;
+  }
   /**
    * @param string
    */
@@ -42,21 +56,7 @@ class BigQueryAction extends \Google\Model
   {
     return $this->jobId;
   }
-  /**
-   * @param string
-   */
-  public function setSqlScript($sqlScript)
-  {
-    $this->sqlScript = $sqlScript;
-  }
-  /**
-   * @return string
-   */
-  public function getSqlScript()
-  {
-    return $this->sqlScript;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BigQueryAction::class, 'Google_Service_Dataform_BigQueryAction');
+class_alias(NotebookAction::class, 'Google_Service_Dataform_NotebookAction');

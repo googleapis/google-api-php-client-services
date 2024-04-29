@@ -17,46 +17,28 @@
 
 namespace Google\Service\Dataform;
 
-class BigQueryAction extends \Google\Model
+class NotebookRuntimeOptions extends \Google\Model
 {
   /**
    * @var string
    */
-  public $jobId;
-  /**
-   * @var string
-   */
-  public $sqlScript;
+  public $gcsOutputBucket;
 
   /**
    * @param string
    */
-  public function setJobId($jobId)
+  public function setGcsOutputBucket($gcsOutputBucket)
   {
-    $this->jobId = $jobId;
+    $this->gcsOutputBucket = $gcsOutputBucket;
   }
   /**
    * @return string
    */
-  public function getJobId()
+  public function getGcsOutputBucket()
   {
-    return $this->jobId;
-  }
-  /**
-   * @param string
-   */
-  public function setSqlScript($sqlScript)
-  {
-    $this->sqlScript = $sqlScript;
-  }
-  /**
-   * @return string
-   */
-  public function getSqlScript()
-  {
-    return $this->sqlScript;
+    return $this->gcsOutputBucket;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BigQueryAction::class, 'Google_Service_Dataform_BigQueryAction');
+class_alias(NotebookRuntimeOptions::class, 'Google_Service_Dataform_NotebookRuntimeOptions');
