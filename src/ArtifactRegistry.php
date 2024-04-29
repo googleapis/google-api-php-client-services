@@ -50,6 +50,7 @@ class ArtifactRegistry extends \Google\Service
   public $projects_locations_repositories_aptArtifacts;
   public $projects_locations_repositories_dockerImages;
   public $projects_locations_repositories_files;
+  public $projects_locations_repositories_genericArtifacts;
   public $projects_locations_repositories_goModules;
   public $projects_locations_repositories_googetArtifacts;
   public $projects_locations_repositories_kfpArtifacts;
@@ -441,6 +442,26 @@ class ArtifactRegistry extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_repositories_genericArtifacts = new ArtifactRegistry\Resource\ProjectsLocationsRepositoriesGenericArtifacts(
+        $this,
+        $this->serviceName,
+        'genericArtifacts',
+        [
+          'methods' => [
+            'upload' => [
+              'path' => 'v1/{+parent}/genericArtifacts:create',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
