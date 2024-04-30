@@ -319,18 +319,20 @@ class Instances extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
-   * Promotes the read replica instance to be a stand-alone Cloud SQL instance.
-   * Using this operation might cause your instance to restart.
+   * Promotes the read replica instance to be an independent Cloud SQL primary
+   * instance. Using this operation might cause your instance to restart.
    * (instances.promoteReplica)
    *
    * @param string $project ID of the project that contains the read replica.
    * @param string $instance Cloud SQL read replica instance name.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool failover Set to true if the promote operation should attempt
-   * to re-add the original primary as a replica when it comes back online.
-   * Otherwise, if this value is false or not set, the original primary will be a
-   * standalone instance.
+   * @opt_param bool failover Set to true to invoke a replica failover to the
+   * designated DR replica. As part of replica failover, the promote operation
+   * attempts to add the original primary instance as a replica of the promoted DR
+   * replica when the original primary instance comes back online. If set to false
+   * or not specified, then the original primary instance becomes an independent
+   * Cloud SQL primary instance. Only applicable to MySQL.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -478,8 +480,8 @@ class Instances extends \Google\Service\Resource
     return $this->call('stopReplica', [$params], Operation::class);
   }
   /**
-   * Switches over from the primary instance to the replica instance.
-   * (instances.switchover)
+   * Switches over from the primary instance to the designated DR replica
+   * instance. (instances.switchover)
    *
    * @param string $project ID of the project that contains the replica.
    * @param string $instance Cloud SQL read replica instance name.
