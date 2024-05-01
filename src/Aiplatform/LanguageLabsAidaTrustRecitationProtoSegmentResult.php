@@ -46,6 +46,10 @@ class LanguageLabsAidaTrustRecitationProtoSegmentResult extends \Google\Model
    */
   public $segmentRecitationAction;
   /**
+   * @var string
+   */
+  public $sourceCategory;
+  /**
    * @var int
    */
   public $startIndex;
@@ -147,6 +151,20 @@ class LanguageLabsAidaTrustRecitationProtoSegmentResult extends \Google\Model
   public function getSegmentRecitationAction()
   {
     return $this->segmentRecitationAction;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceCategory($sourceCategory)
+  {
+    $this->sourceCategory = $sourceCategory;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceCategory()
+  {
+    return $this->sourceCategory;
   }
   /**
    * @param int

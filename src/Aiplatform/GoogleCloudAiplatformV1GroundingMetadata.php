@@ -20,11 +20,27 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
 {
   protected $collection_key = 'webSearchQueries';
+  protected $searchEntryPointType = GoogleCloudAiplatformV1SearchEntryPoint::class;
+  protected $searchEntryPointDataType = '';
   /**
    * @var string[]
    */
   public $webSearchQueries;
 
+  /**
+   * @param GoogleCloudAiplatformV1SearchEntryPoint
+   */
+  public function setSearchEntryPoint(GoogleCloudAiplatformV1SearchEntryPoint $searchEntryPoint)
+  {
+    $this->searchEntryPoint = $searchEntryPoint;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SearchEntryPoint
+   */
+  public function getSearchEntryPoint()
+  {
+    return $this->searchEntryPoint;
+  }
   /**
    * @param string[]
    */

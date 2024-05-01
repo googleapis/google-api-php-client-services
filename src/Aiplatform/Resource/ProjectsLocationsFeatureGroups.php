@@ -36,7 +36,7 @@ class ProjectsLocationsFeatureGroups extends \Google\Service\Resource
    * (featureGroups.create)
    *
    * @param string $parent Required. The resource name of the Location to create
-   * FeatureGroups. Format: `projects/{project}/locations/{location}'`
+   * FeatureGroups. Format: `projects/{project}/locations/{location}`
    * @param GoogleCloudAiplatformV1FeatureGroup $postBody
    * @param array $optParams Optional parameters.
    *

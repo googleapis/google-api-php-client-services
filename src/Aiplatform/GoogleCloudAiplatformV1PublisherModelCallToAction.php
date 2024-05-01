@@ -25,6 +25,8 @@ class GoogleCloudAiplatformV1PublisherModelCallToAction extends \Google\Model
   protected $deployDataType = '';
   protected $deployGkeType = GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke::class;
   protected $deployGkeDataType = '';
+  protected $fineTuneType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
+  protected $fineTuneDataType = '';
   protected $openEvaluationPipelineType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
   protected $openEvaluationPipelineDataType = '';
   protected $openFineTuningPipelineType = GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences::class;
@@ -87,6 +89,20 @@ class GoogleCloudAiplatformV1PublisherModelCallToAction extends \Google\Model
   public function getDeployGke()
   {
     return $this->deployGke;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences
+   */
+  public function setFineTune(GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences $fineTune)
+  {
+    $this->fineTune = $fineTune;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences
+   */
+  public function getFineTune()
+  {
+    return $this->fineTune;
   }
   /**
    * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences
