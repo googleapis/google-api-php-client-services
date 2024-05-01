@@ -38,6 +38,10 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $autoUpdateExpiration;
+  /**
+   * @var string
+   */
+  public $autoUpdateThrough;
   protected $backlightInfoType = BacklightInfo::class;
   protected $backlightInfoDataType = 'array';
   /**
@@ -80,6 +84,18 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $ethernetMacAddress0;
+  /**
+   * @var bool
+   */
+  public $extendedSupportEligible;
+  /**
+   * @var bool
+   */
+  public $extendedSupportEnabled;
+  /**
+   * @var string
+   */
+  public $extendedSupportStart;
   /**
    * @var string
    */
@@ -246,6 +262,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getAutoUpdateExpiration()
   {
     return $this->autoUpdateExpiration;
+  }
+  /**
+   * @param string
+   */
+  public function setAutoUpdateThrough($autoUpdateThrough)
+  {
+    $this->autoUpdateThrough = $autoUpdateThrough;
+  }
+  /**
+   * @return string
+   */
+  public function getAutoUpdateThrough()
+  {
+    return $this->autoUpdateThrough;
   }
   /**
    * @param BacklightInfo[]
@@ -428,6 +458,48 @@ class ChromeOsDevice extends \Google\Collection
   public function getEthernetMacAddress0()
   {
     return $this->ethernetMacAddress0;
+  }
+  /**
+   * @param bool
+   */
+  public function setExtendedSupportEligible($extendedSupportEligible)
+  {
+    $this->extendedSupportEligible = $extendedSupportEligible;
+  }
+  /**
+   * @return bool
+   */
+  public function getExtendedSupportEligible()
+  {
+    return $this->extendedSupportEligible;
+  }
+  /**
+   * @param bool
+   */
+  public function setExtendedSupportEnabled($extendedSupportEnabled)
+  {
+    $this->extendedSupportEnabled = $extendedSupportEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getExtendedSupportEnabled()
+  {
+    return $this->extendedSupportEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setExtendedSupportStart($extendedSupportStart)
+  {
+    $this->extendedSupportStart = $extendedSupportStart;
+  }
+  /**
+   * @return string
+   */
+  public function getExtendedSupportStart()
+  {
+    return $this->extendedSupportStart;
   }
   /**
    * @param string
