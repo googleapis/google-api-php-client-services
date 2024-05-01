@@ -40,6 +40,8 @@ class GoogleDevtoolsCloudbuildV1Build extends \Google\Collection
    * @var string
    */
   public $finishTime;
+  protected $gitConfigType = GoogleDevtoolsCloudbuildV1GitConfig::class;
+  protected $gitConfigDataType = '';
   /**
    * @var string
    */
@@ -210,6 +212,20 @@ class GoogleDevtoolsCloudbuildV1Build extends \Google\Collection
   public function getFinishTime()
   {
     return $this->finishTime;
+  }
+  /**
+   * @param GoogleDevtoolsCloudbuildV1GitConfig
+   */
+  public function setGitConfig(GoogleDevtoolsCloudbuildV1GitConfig $gitConfig)
+  {
+    $this->gitConfig = $gitConfig;
+  }
+  /**
+   * @return GoogleDevtoolsCloudbuildV1GitConfig
+   */
+  public function getGitConfig()
+  {
+    return $this->gitConfig;
   }
   /**
    * @param string

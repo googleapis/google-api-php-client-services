@@ -21,6 +21,8 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
 {
   protected $connectedRepositoryType = GoogleDevtoolsCloudbuildV1ConnectedRepository::class;
   protected $connectedRepositoryDataType = '';
+  protected $developerConnectConfigType = GoogleDevtoolsCloudbuildV1DeveloperConnectConfig::class;
+  protected $developerConnectConfigDataType = '';
   protected $gitSourceType = GoogleDevtoolsCloudbuildV1GitSource::class;
   protected $gitSourceDataType = '';
   protected $repoSourceType = GoogleDevtoolsCloudbuildV1RepoSource::class;
@@ -43,6 +45,20 @@ class GoogleDevtoolsCloudbuildV1Source extends \Google\Model
   public function getConnectedRepository()
   {
     return $this->connectedRepository;
+  }
+  /**
+   * @param GoogleDevtoolsCloudbuildV1DeveloperConnectConfig
+   */
+  public function setDeveloperConnectConfig(GoogleDevtoolsCloudbuildV1DeveloperConnectConfig $developerConnectConfig)
+  {
+    $this->developerConnectConfig = $developerConnectConfig;
+  }
+  /**
+   * @return GoogleDevtoolsCloudbuildV1DeveloperConnectConfig
+   */
+  public function getDeveloperConnectConfig()
+  {
+    return $this->developerConnectConfig;
   }
   /**
    * @param GoogleDevtoolsCloudbuildV1GitSource
