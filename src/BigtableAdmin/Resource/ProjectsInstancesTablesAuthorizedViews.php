@@ -139,7 +139,7 @@ class ProjectsInstancesTablesAuthorizedViews extends \Google\Service\Resource
    * @opt_param string pageToken Optional. The value of `next_page_token` returned
    * by a previous call.
    * @opt_param string view Optional. The resource_view to be applied to the
-   * returned views' fields. Default to NAME_ONLY.
+   * returned AuthorizedViews' fields. Default to NAME_ONLY.
    * @return ListAuthorizedViewsResponse
    * @throws \Google\Service\Exception
    */
