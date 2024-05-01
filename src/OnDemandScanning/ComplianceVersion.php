@@ -17,55 +17,58 @@
 
 namespace Google\Service\OnDemandScanning;
 
-class ComplianceOccurrence extends \Google\Collection
+class ComplianceVersion extends \Google\Model
 {
-  protected $collection_key = 'nonCompliantFiles';
   /**
    * @var string
    */
-  public $nonComplianceReason;
-  protected $nonCompliantFilesType = NonCompliantFile::class;
-  protected $nonCompliantFilesDataType = 'array';
-  protected $versionType = ComplianceVersion::class;
-  protected $versionDataType = '';
+  public $benchmarkDocument;
+  /**
+   * @var string
+   */
+  public $cpeUri;
+  /**
+   * @var string
+   */
+  public $version;
 
   /**
    * @param string
    */
-  public function setNonComplianceReason($nonComplianceReason)
+  public function setBenchmarkDocument($benchmarkDocument)
   {
-    $this->nonComplianceReason = $nonComplianceReason;
+    $this->benchmarkDocument = $benchmarkDocument;
   }
   /**
    * @return string
    */
-  public function getNonComplianceReason()
+  public function getBenchmarkDocument()
   {
-    return $this->nonComplianceReason;
+    return $this->benchmarkDocument;
   }
   /**
-   * @param NonCompliantFile[]
+   * @param string
    */
-  public function setNonCompliantFiles($nonCompliantFiles)
+  public function setCpeUri($cpeUri)
   {
-    $this->nonCompliantFiles = $nonCompliantFiles;
+    $this->cpeUri = $cpeUri;
   }
   /**
-   * @return NonCompliantFile[]
+   * @return string
    */
-  public function getNonCompliantFiles()
+  public function getCpeUri()
   {
-    return $this->nonCompliantFiles;
+    return $this->cpeUri;
   }
   /**
-   * @param ComplianceVersion
+   * @param string
    */
-  public function setVersion(ComplianceVersion $version)
+  public function setVersion($version)
   {
     $this->version = $version;
   }
   /**
-   * @return ComplianceVersion
+   * @return string
    */
   public function getVersion()
   {
@@ -74,4 +77,4 @@ class ComplianceOccurrence extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ComplianceOccurrence::class, 'Google_Service_OnDemandScanning_ComplianceOccurrence');
+class_alias(ComplianceVersion::class, 'Google_Service_OnDemandScanning_ComplianceVersion');
