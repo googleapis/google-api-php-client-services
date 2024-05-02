@@ -65,6 +65,8 @@ class Cluster extends \Google\Model
    * @var string[]
    */
   public $labels;
+  protected $maintenanceScheduleType = MaintenanceSchedule::class;
+  protected $maintenanceScheduleDataType = '';
   protected $maintenanceUpdatePolicyType = MaintenanceUpdatePolicy::class;
   protected $maintenanceUpdatePolicyDataType = '';
   protected $migrationSourceType = MigrationSource::class;
@@ -317,6 +319,20 @@ class Cluster extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param MaintenanceSchedule
+   */
+  public function setMaintenanceSchedule(MaintenanceSchedule $maintenanceSchedule)
+  {
+    $this->maintenanceSchedule = $maintenanceSchedule;
+  }
+  /**
+   * @return MaintenanceSchedule
+   */
+  public function getMaintenanceSchedule()
+  {
+    return $this->maintenanceSchedule;
   }
   /**
    * @param MaintenanceUpdatePolicy
