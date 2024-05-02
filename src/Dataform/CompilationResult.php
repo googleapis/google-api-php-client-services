@@ -24,6 +24,8 @@ class CompilationResult extends \Google\Collection
   protected $codeCompilationConfigDataType = '';
   protected $compilationErrorsType = CompilationError::class;
   protected $compilationErrorsDataType = 'array';
+  protected $dataEncryptionStateType = DataEncryptionState::class;
+  protected $dataEncryptionStateDataType = '';
   /**
    * @var string
    */
@@ -76,6 +78,20 @@ class CompilationResult extends \Google\Collection
   public function getCompilationErrors()
   {
     return $this->compilationErrors;
+  }
+  /**
+   * @param DataEncryptionState
+   */
+  public function setDataEncryptionState(DataEncryptionState $dataEncryptionState)
+  {
+    $this->dataEncryptionState = $dataEncryptionState;
+  }
+  /**
+   * @return DataEncryptionState
+   */
+  public function getDataEncryptionState()
+  {
+    return $this->dataEncryptionState;
   }
   /**
    * @param string

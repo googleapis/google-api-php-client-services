@@ -17,44 +17,28 @@
 
 namespace Google\Service\Dataform;
 
-class Workspace extends \Google\Model
+class DataEncryptionState extends \Google\Model
 {
-  protected $dataEncryptionStateType = DataEncryptionState::class;
-  protected $dataEncryptionStateDataType = '';
   /**
    * @var string
    */
-  public $name;
+  public $kmsKeyVersionName;
 
-  /**
-   * @param DataEncryptionState
-   */
-  public function setDataEncryptionState(DataEncryptionState $dataEncryptionState)
-  {
-    $this->dataEncryptionState = $dataEncryptionState;
-  }
-  /**
-   * @return DataEncryptionState
-   */
-  public function getDataEncryptionState()
-  {
-    return $this->dataEncryptionState;
-  }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setKmsKeyVersionName($kmsKeyVersionName)
   {
-    $this->name = $name;
+    $this->kmsKeyVersionName = $kmsKeyVersionName;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getKmsKeyVersionName()
   {
-    return $this->name;
+    return $this->kmsKeyVersionName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Workspace::class, 'Google_Service_Dataform_Workspace');
+class_alias(DataEncryptionState::class, 'Google_Service_Dataform_DataEncryptionState');

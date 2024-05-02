@@ -18,6 +18,7 @@
 namespace Google\Service\Dataform\Resource;
 
 use Google\Service\Dataform\CommitRepositoryChangesRequest;
+use Google\Service\Dataform\CommitRepositoryChangesResponse;
 use Google\Service\Dataform\ComputeRepositoryAccessTokenStatusResponse;
 use Google\Service\Dataform\DataformEmpty;
 use Google\Service\Dataform\FetchRemoteBranchesResponse;
@@ -48,14 +49,14 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
    * @param string $name Required. The repository's name.
    * @param CommitRepositoryChangesRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return DataformEmpty
+   * @return CommitRepositoryChangesResponse
    * @throws \Google\Service\Exception
    */
   public function commit($name, CommitRepositoryChangesRequest $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('commit', [$params], DataformEmpty::class);
+    return $this->call('commit', [$params], CommitRepositoryChangesResponse::class);
   }
   /**
    * Computes a Repository's Git access token status.

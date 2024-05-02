@@ -17,44 +17,28 @@
 
 namespace Google\Service\Dataform;
 
-class Workspace extends \Google\Model
+class CommitRepositoryChangesResponse extends \Google\Model
 {
-  protected $dataEncryptionStateType = DataEncryptionState::class;
-  protected $dataEncryptionStateDataType = '';
   /**
    * @var string
    */
-  public $name;
+  public $commitSha;
 
-  /**
-   * @param DataEncryptionState
-   */
-  public function setDataEncryptionState(DataEncryptionState $dataEncryptionState)
-  {
-    $this->dataEncryptionState = $dataEncryptionState;
-  }
-  /**
-   * @return DataEncryptionState
-   */
-  public function getDataEncryptionState()
-  {
-    return $this->dataEncryptionState;
-  }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setCommitSha($commitSha)
   {
-    $this->name = $name;
+    $this->commitSha = $commitSha;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getCommitSha()
   {
-    return $this->name;
+    return $this->commitSha;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Workspace::class, 'Google_Service_Dataform_Workspace');
+class_alias(CommitRepositoryChangesResponse::class, 'Google_Service_Dataform_CommitRepositoryChangesResponse');
