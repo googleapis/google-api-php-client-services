@@ -36,6 +36,13 @@ class DataLayers extends \Google\Service\Resource
    *
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool exactQualityRequired Optional. Whether to require exact
+   * quality of the imagery. If set to false, the `required_quality` field is
+   * interpreted as the minimum required quality, such that HIGH quality imagery
+   * may be returned when `required_quality` is set to MEDIUM. If set to true,
+   * `required_quality` is interpreted as the exact required quality and only
+   * `MEDIUM` quality imagery is returned if `required_quality` is set to
+   * `MEDIUM`.
    * @opt_param double location.latitude The latitude in degrees. It must be in
    * the range [-90.0, +90.0].
    * @opt_param double location.longitude The longitude in degrees. It must be in

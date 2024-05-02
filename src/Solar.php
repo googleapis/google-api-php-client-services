@@ -97,6 +97,10 @@ class Solar extends \Google\Service
               'path' => 'v1/dataLayers:get',
               'httpMethod' => 'GET',
               'parameters' => [
+                'exactQualityRequired' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'location.latitude' => [
                   'location' => 'query',
                   'type' => 'number',
