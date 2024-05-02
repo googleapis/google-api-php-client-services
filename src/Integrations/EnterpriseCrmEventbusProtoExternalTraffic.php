@@ -32,6 +32,10 @@ class EnterpriseCrmEventbusProtoExternalTraffic extends \Google\Model
    */
   public $location;
   /**
+   * @var bool
+   */
+  public $retryRequestForQuota;
+  /**
    * @var string
    */
   public $source;
@@ -77,6 +81,20 @@ class EnterpriseCrmEventbusProtoExternalTraffic extends \Google\Model
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * @param bool
+   */
+  public function setRetryRequestForQuota($retryRequestForQuota)
+  {
+    $this->retryRequestForQuota = $retryRequestForQuota;
+  }
+  /**
+   * @return bool
+   */
+  public function getRetryRequestForQuota()
+  {
+    return $this->retryRequestForQuota;
   }
   /**
    * @param string

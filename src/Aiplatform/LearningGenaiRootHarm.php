@@ -38,6 +38,10 @@ class LearningGenaiRootHarm extends \Google\Model
   /**
    * @var bool
    */
+  public $imageChild;
+  /**
+   * @var bool
+   */
   public $imageCsam;
   /**
    * @var bool
@@ -60,6 +64,10 @@ class LearningGenaiRootHarm extends \Google\Model
   protected $spiiType = LearningGenaiRootHarmSpiiFilter::class;
   protected $spiiDataType = '';
   public $threshold;
+  /**
+   * @var bool
+   */
+  public $videoFrameChild;
   /**
    * @var bool
    */
@@ -146,6 +154,20 @@ class LearningGenaiRootHarm extends \Google\Model
   public function getGrailTextHarmType()
   {
     return $this->grailTextHarmType;
+  }
+  /**
+   * @param bool
+   */
+  public function setImageChild($imageChild)
+  {
+    $this->imageChild = $imageChild;
+  }
+  /**
+   * @return bool
+   */
+  public function getImageChild()
+  {
+    return $this->imageChild;
   }
   /**
    * @param bool
@@ -252,6 +274,20 @@ class LearningGenaiRootHarm extends \Google\Model
   public function getThreshold()
   {
     return $this->threshold;
+  }
+  /**
+   * @param bool
+   */
+  public function setVideoFrameChild($videoFrameChild)
+  {
+    $this->videoFrameChild = $videoFrameChild;
+  }
+  /**
+   * @return bool
+   */
+  public function getVideoFrameChild()
+  {
+    return $this->videoFrameChild;
   }
   /**
    * @param bool

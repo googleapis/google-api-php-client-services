@@ -87,6 +87,10 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   /**
    * @var bool
    */
+  public $isBattlestarTitle;
+  /**
+   * @var bool
+   */
   public $isDefaultLangLocale;
   /**
    * @var string
@@ -464,6 +468,20 @@ class RepositoryAnnotationsRdfaRdfaRichSnippetsApplication extends \Google\Colle
   public function getInAppPurchase()
   {
     return $this->inAppPurchase;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsBattlestarTitle($isBattlestarTitle)
+  {
+    $this->isBattlestarTitle = $isBattlestarTitle;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsBattlestarTitle()
+  {
+    return $this->isBattlestarTitle;
   }
   /**
    * @param bool

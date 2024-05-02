@@ -19,11 +19,27 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureViewDataKey extends \Google\Model
 {
+  protected $compositeKeyType = GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey::class;
+  protected $compositeKeyDataType = '';
   /**
    * @var string
    */
   public $key;
 
+  /**
+   * @param GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey
+   */
+  public function setCompositeKey(GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey $compositeKey)
+  {
+    $this->compositeKey = $compositeKey;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FeatureViewDataKeyCompositeKey
+   */
+  public function getCompositeKey()
+  {
+    return $this->compositeKey;
+  }
   /**
    * @param string
    */

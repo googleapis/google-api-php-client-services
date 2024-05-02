@@ -36,6 +36,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $category;
+  protected $cloudArmorType = GoogleCloudSecuritycenterV2CloudArmor::class;
+  protected $cloudArmorDataType = '';
   protected $cloudDlpDataProfileType = GoogleCloudSecuritycenterV2CloudDlpDataProfile::class;
   protected $cloudDlpDataProfileDataType = '';
   protected $cloudDlpInspectionType = GoogleCloudSecuritycenterV2CloudDlpInspection::class;
@@ -114,6 +116,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $nextSteps;
+  protected $notebookType = GoogleCloudSecuritycenterV2Notebook::class;
+  protected $notebookDataType = '';
   protected $orgPoliciesType = GoogleCloudSecuritycenterV2OrgPolicy::class;
   protected $orgPoliciesDataType = 'array';
   /**
@@ -232,6 +236,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getCategory()
   {
     return $this->category;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2CloudArmor
+   */
+  public function setCloudArmor(GoogleCloudSecuritycenterV2CloudArmor $cloudArmor)
+  {
+    $this->cloudArmor = $cloudArmor;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2CloudArmor
+   */
+  public function getCloudArmor()
+  {
+    return $this->cloudArmor;
   }
   /**
    * @param GoogleCloudSecuritycenterV2CloudDlpDataProfile
@@ -624,6 +642,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getNextSteps()
   {
     return $this->nextSteps;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2Notebook
+   */
+  public function setNotebook(GoogleCloudSecuritycenterV2Notebook $notebook)
+  {
+    $this->notebook = $notebook;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2Notebook
+   */
+  public function getNotebook()
+  {
+    return $this->notebook;
   }
   /**
    * @param GoogleCloudSecuritycenterV2OrgPolicy[]

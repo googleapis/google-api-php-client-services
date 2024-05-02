@@ -65,6 +65,10 @@ class Cluster extends \Google\Model
    * @var string[]
    */
   public $labels;
+  protected $maintenanceScheduleType = MaintenanceSchedule::class;
+  protected $maintenanceScheduleDataType = '';
+  protected $maintenanceUpdatePolicyType = MaintenanceUpdatePolicy::class;
+  protected $maintenanceUpdatePolicyDataType = '';
   protected $migrationSourceType = MigrationSource::class;
   protected $migrationSourceDataType = '';
   /**
@@ -79,6 +83,8 @@ class Cluster extends \Google\Model
   protected $networkConfigDataType = '';
   protected $primaryConfigType = PrimaryConfig::class;
   protected $primaryConfigDataType = '';
+  protected $pscConfigType = PscConfig::class;
+  protected $pscConfigDataType = '';
   /**
    * @var bool
    */
@@ -315,6 +321,34 @@ class Cluster extends \Google\Model
     return $this->labels;
   }
   /**
+   * @param MaintenanceSchedule
+   */
+  public function setMaintenanceSchedule(MaintenanceSchedule $maintenanceSchedule)
+  {
+    $this->maintenanceSchedule = $maintenanceSchedule;
+  }
+  /**
+   * @return MaintenanceSchedule
+   */
+  public function getMaintenanceSchedule()
+  {
+    return $this->maintenanceSchedule;
+  }
+  /**
+   * @param MaintenanceUpdatePolicy
+   */
+  public function setMaintenanceUpdatePolicy(MaintenanceUpdatePolicy $maintenanceUpdatePolicy)
+  {
+    $this->maintenanceUpdatePolicy = $maintenanceUpdatePolicy;
+  }
+  /**
+   * @return MaintenanceUpdatePolicy
+   */
+  public function getMaintenanceUpdatePolicy()
+  {
+    return $this->maintenanceUpdatePolicy;
+  }
+  /**
    * @param MigrationSource
    */
   public function setMigrationSource(MigrationSource $migrationSource)
@@ -383,6 +417,20 @@ class Cluster extends \Google\Model
   public function getPrimaryConfig()
   {
     return $this->primaryConfig;
+  }
+  /**
+   * @param PscConfig
+   */
+  public function setPscConfig(PscConfig $pscConfig)
+  {
+    $this->pscConfig = $pscConfig;
+  }
+  /**
+   * @return PscConfig
+   */
+  public function getPscConfig()
+  {
+    return $this->pscConfig;
   }
   /**
    * @param bool

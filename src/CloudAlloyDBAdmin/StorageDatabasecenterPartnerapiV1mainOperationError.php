@@ -26,6 +26,10 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
   /**
    * @var string
    */
+  public $errorType;
+  /**
+   * @var string
+   */
   public $message;
 
   /**
@@ -41,6 +45,20 @@ class StorageDatabasecenterPartnerapiV1mainOperationError extends \Google\Model
   public function getCode()
   {
     return $this->code;
+  }
+  /**
+   * @param string
+   */
+  public function setErrorType($errorType)
+  {
+    $this->errorType = $errorType;
+  }
+  /**
+   * @return string
+   */
+  public function getErrorType()
+  {
+    return $this->errorType;
   }
   /**
    * @param string

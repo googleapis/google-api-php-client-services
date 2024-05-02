@@ -21,6 +21,14 @@ class ResearchScamTokenNamespace extends \Google\Collection
 {
   protected $collection_key = 'uint64Tokens';
   /**
+   * @var string[]
+   */
+  public $bytesBlocklistTokens;
+  /**
+   * @var string[]
+   */
+  public $bytesTokens;
+  /**
    * @var string
    */
   public $namespace;
@@ -41,6 +49,34 @@ class ResearchScamTokenNamespace extends \Google\Collection
    */
   public $uint64Tokens;
 
+  /**
+   * @param string[]
+   */
+  public function setBytesBlocklistTokens($bytesBlocklistTokens)
+  {
+    $this->bytesBlocklistTokens = $bytesBlocklistTokens;
+  }
+  /**
+   * @return string[]
+   */
+  public function getBytesBlocklistTokens()
+  {
+    return $this->bytesBlocklistTokens;
+  }
+  /**
+   * @param string[]
+   */
+  public function setBytesTokens($bytesTokens)
+  {
+    $this->bytesTokens = $bytesTokens;
+  }
+  /**
+   * @return string[]
+   */
+  public function getBytesTokens()
+  {
+    return $this->bytesTokens;
+  }
   /**
    * @param string
    */

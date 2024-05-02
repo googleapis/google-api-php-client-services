@@ -19,16 +19,32 @@ namespace Google\Service\Contentwarehouse;
 
 class GeostoreCityJsonProto extends \Google\Collection
 {
-  protected $collection_key = 'vertexXyz';
+  protected $collection_key = 'flattenedVertices';
+  protected $appearanceType = GeostoreCityJsonProtoAppearance::class;
+  protected $appearanceDataType = '';
   protected $cityObjectsType = GeostoreCityJsonProtoCityObject::class;
   protected $cityObjectsDataType = 'array';
-  protected $transformType = GeostoreCityJsonProtoTransform::class;
-  protected $transformDataType = '';
   /**
    * @var int[]
    */
-  public $vertexXyz;
+  public $flattenedVertices;
+  protected $transformType = GeostoreCityJsonProtoTransform::class;
+  protected $transformDataType = '';
 
+  /**
+   * @param GeostoreCityJsonProtoAppearance
+   */
+  public function setAppearance(GeostoreCityJsonProtoAppearance $appearance)
+  {
+    $this->appearance = $appearance;
+  }
+  /**
+   * @return GeostoreCityJsonProtoAppearance
+   */
+  public function getAppearance()
+  {
+    return $this->appearance;
+  }
   /**
    * @param GeostoreCityJsonProtoCityObject[]
    */
@@ -44,6 +60,20 @@ class GeostoreCityJsonProto extends \Google\Collection
     return $this->cityObjects;
   }
   /**
+   * @param int[]
+   */
+  public function setFlattenedVertices($flattenedVertices)
+  {
+    $this->flattenedVertices = $flattenedVertices;
+  }
+  /**
+   * @return int[]
+   */
+  public function getFlattenedVertices()
+  {
+    return $this->flattenedVertices;
+  }
+  /**
    * @param GeostoreCityJsonProtoTransform
    */
   public function setTransform(GeostoreCityJsonProtoTransform $transform)
@@ -56,20 +86,6 @@ class GeostoreCityJsonProto extends \Google\Collection
   public function getTransform()
   {
     return $this->transform;
-  }
-  /**
-   * @param int[]
-   */
-  public function setVertexXyz($vertexXyz)
-  {
-    $this->vertexXyz = $vertexXyz;
-  }
-  /**
-   * @return int[]
-   */
-  public function getVertexXyz()
-  {
-    return $this->vertexXyz;
   }
 }
 

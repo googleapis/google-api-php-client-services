@@ -24,7 +24,7 @@ class QualityNsrVersionedFloatSignal extends \Google\Model
    */
   public $value;
   /**
-   * @var int
+   * @var string
    */
   public $versionId;
 
@@ -43,14 +43,14 @@ class QualityNsrVersionedFloatSignal extends \Google\Model
     return $this->value;
   }
   /**
-   * @param int
+   * @param string
    */
   public function setVersionId($versionId)
   {
     $this->versionId = $versionId;
   }
   /**
-   * @return int
+   * @return string
    */
   public function getVersionId()
   {

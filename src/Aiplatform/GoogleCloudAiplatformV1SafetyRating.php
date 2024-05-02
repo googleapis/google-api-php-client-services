@@ -31,6 +31,18 @@ class GoogleCloudAiplatformV1SafetyRating extends \Google\Model
    * @var string
    */
   public $probability;
+  /**
+   * @var float
+   */
+  public $probabilityScore;
+  /**
+   * @var string
+   */
+  public $severity;
+  /**
+   * @var float
+   */
+  public $severityScore;
 
   /**
    * @param bool
@@ -73,6 +85,48 @@ class GoogleCloudAiplatformV1SafetyRating extends \Google\Model
   public function getProbability()
   {
     return $this->probability;
+  }
+  /**
+   * @param float
+   */
+  public function setProbabilityScore($probabilityScore)
+  {
+    $this->probabilityScore = $probabilityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getProbabilityScore()
+  {
+    return $this->probabilityScore;
+  }
+  /**
+   * @param string
+   */
+  public function setSeverity($severity)
+  {
+    $this->severity = $severity;
+  }
+  /**
+   * @return string
+   */
+  public function getSeverity()
+  {
+    return $this->severity;
+  }
+  /**
+   * @param float
+   */
+  public function setSeverityScore($severityScore)
+  {
+    $this->severityScore = $severityScore;
+  }
+  /**
+   * @return float
+   */
+  public function getSeverityScore()
+  {
+    return $this->severityScore;
   }
 }
 

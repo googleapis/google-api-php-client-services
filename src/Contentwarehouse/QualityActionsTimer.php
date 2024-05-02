@@ -55,7 +55,7 @@ class QualityActionsTimer extends \Google\Model
   protected $remainingTimerDurationDataType = '';
   protected $ringtoneType = QualityActionsRingtone::class;
   protected $ringtoneDataType = '';
-  protected $ringtoneTaskMetadataType = AssistantApiCoreTypesGovernedRingtoneTaskMetadata::class;
+  protected $ringtoneTaskMetadataType = AssistantApiCoreTypesRingtoneTaskMetadata::class;
   protected $ringtoneTaskMetadataDataType = '';
   protected $roomType = QualityActionsRoom::class;
   protected $roomDataType = '';
@@ -251,14 +251,14 @@ class QualityActionsTimer extends \Google\Model
     return $this->ringtone;
   }
   /**
-   * @param AssistantApiCoreTypesGovernedRingtoneTaskMetadata
+   * @param AssistantApiCoreTypesRingtoneTaskMetadata
    */
-  public function setRingtoneTaskMetadata(AssistantApiCoreTypesGovernedRingtoneTaskMetadata $ringtoneTaskMetadata)
+  public function setRingtoneTaskMetadata(AssistantApiCoreTypesRingtoneTaskMetadata $ringtoneTaskMetadata)
   {
     $this->ringtoneTaskMetadata = $ringtoneTaskMetadata;
   }
   /**
-   * @return AssistantApiCoreTypesGovernedRingtoneTaskMetadata
+   * @return AssistantApiCoreTypesRingtoneTaskMetadata
    */
   public function getRingtoneTaskMetadata()
   {

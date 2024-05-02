@@ -20,34 +20,14 @@ namespace Google\Service\AppHub;
 class Attributes extends \Google\Collection
 {
   protected $collection_key = 'operatorOwners';
-  /**
-   * @var ContactInfo[]
-   */
-  public $businessOwners;
   protected $businessOwnersType = ContactInfo::class;
   protected $businessOwnersDataType = 'array';
-  /**
-   * @var Criticality
-   */
-  public $criticality;
   protected $criticalityType = Criticality::class;
   protected $criticalityDataType = '';
-  /**
-   * @var ContactInfo[]
-   */
-  public $developerOwners;
   protected $developerOwnersType = ContactInfo::class;
   protected $developerOwnersDataType = 'array';
-  /**
-   * @var Environment
-   */
-  public $environment;
   protected $environmentType = Environment::class;
   protected $environmentDataType = '';
-  /**
-   * @var ContactInfo[]
-   */
-  public $operatorOwners;
   protected $operatorOwnersType = ContactInfo::class;
   protected $operatorOwnersDataType = 'array';
 

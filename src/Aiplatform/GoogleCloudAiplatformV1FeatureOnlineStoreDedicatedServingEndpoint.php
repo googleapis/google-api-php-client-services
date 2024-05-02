@@ -19,31 +19,11 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends \Google\Model
 {
-  protected $privateServiceConnectConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
-  protected $privateServiceConnectConfigDataType = '';
   /**
    * @var string
    */
   public $publicEndpointDomainName;
-  /**
-   * @var string
-   */
-  public $serviceAttachment;
 
-  /**
-   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig
-   */
-  public function setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig)
-  {
-    $this->privateServiceConnectConfig = $privateServiceConnectConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1PrivateServiceConnectConfig
-   */
-  public function getPrivateServiceConnectConfig()
-  {
-    return $this->privateServiceConnectConfig;
-  }
   /**
    * @param string
    */
@@ -57,20 +37,6 @@ class GoogleCloudAiplatformV1FeatureOnlineStoreDedicatedServingEndpoint extends 
   public function getPublicEndpointDomainName()
   {
     return $this->publicEndpointDomainName;
-  }
-  /**
-   * @param string
-   */
-  public function setServiceAttachment($serviceAttachment)
-  {
-    $this->serviceAttachment = $serviceAttachment;
-  }
-  /**
-   * @return string
-   */
-  public function getServiceAttachment()
-  {
-    return $this->serviceAttachment;
   }
 }
 

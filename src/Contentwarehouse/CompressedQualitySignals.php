@@ -77,6 +77,10 @@ class CompressedQualitySignals extends \Google\Collection
    */
   public $experimentalQstarSiteSignal;
   /**
+   * @var float
+   */
+  public $experimentalWebHealthSignal;
+  /**
    * @var string
    */
   public $lowQuality;
@@ -146,6 +150,10 @@ class CompressedQualitySignals extends \Google\Collection
   public $siteAuthority;
   protected $topicEmbeddingsVersionedDataType = QualityAuthorityTopicEmbeddingsVersionedItem::class;
   protected $topicEmbeddingsVersionedDataDataType = 'array';
+  /**
+   * @var string
+   */
+  public $ugcDiscussionEffortScore;
   /**
    * @var string
    */
@@ -364,6 +372,20 @@ class CompressedQualitySignals extends \Google\Collection
   public function getExperimentalQstarSiteSignal()
   {
     return $this->experimentalQstarSiteSignal;
+  }
+  /**
+   * @param float
+   */
+  public function setExperimentalWebHealthSignal($experimentalWebHealthSignal)
+  {
+    $this->experimentalWebHealthSignal = $experimentalWebHealthSignal;
+  }
+  /**
+   * @return float
+   */
+  public function getExperimentalWebHealthSignal()
+  {
+    return $this->experimentalWebHealthSignal;
   }
   /**
    * @param string
@@ -644,6 +666,20 @@ class CompressedQualitySignals extends \Google\Collection
   public function getTopicEmbeddingsVersionedData()
   {
     return $this->topicEmbeddingsVersionedData;
+  }
+  /**
+   * @param string
+   */
+  public function setUgcDiscussionEffortScore($ugcDiscussionEffortScore)
+  {
+    $this->ugcDiscussionEffortScore = $ugcDiscussionEffortScore;
+  }
+  /**
+   * @return string
+   */
+  public function getUgcDiscussionEffortScore()
+  {
+    return $this->ugcDiscussionEffortScore;
   }
   /**
    * @param string

@@ -20,6 +20,8 @@ namespace Google\Service\CloudWorkstations;
 class GceInstance extends \Google\Collection
 {
   protected $collection_key = 'tags';
+  protected $acceleratorsType = Accelerator::class;
+  protected $acceleratorsDataType = 'array';
   /**
    * @var int
    */
@@ -30,6 +32,10 @@ class GceInstance extends \Google\Collection
    * @var bool
    */
   public $disablePublicIpAddresses;
+  /**
+   * @var bool
+   */
+  public $disableSsh;
   /**
    * @var bool
    */
@@ -61,6 +67,20 @@ class GceInstance extends \Google\Collection
    */
   public $tags;
 
+  /**
+   * @param Accelerator[]
+   */
+  public function setAccelerators($accelerators)
+  {
+    $this->accelerators = $accelerators;
+  }
+  /**
+   * @return Accelerator[]
+   */
+  public function getAccelerators()
+  {
+    return $this->accelerators;
+  }
   /**
    * @param int
    */
@@ -102,6 +122,20 @@ class GceInstance extends \Google\Collection
   public function getDisablePublicIpAddresses()
   {
     return $this->disablePublicIpAddresses;
+  }
+  /**
+   * @param bool
+   */
+  public function setDisableSsh($disableSsh)
+  {
+    $this->disableSsh = $disableSsh;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisableSsh()
+  {
+    return $this->disableSsh;
   }
   /**
    * @param bool

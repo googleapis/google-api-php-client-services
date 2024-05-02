@@ -17,8 +17,11 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantLogsDeviceAnnotationLog extends \Google\Model
+class AssistantLogsDeviceAnnotationLog extends \Google\Collection
 {
+  protected $collection_key = 'deviceIdLog';
+  protected $deviceIdLogType = AssistantLogsSettingsDeviceIdLog::class;
+  protected $deviceIdLogDataType = 'array';
   /**
    * @var string
    */
@@ -32,6 +35,20 @@ class AssistantLogsDeviceAnnotationLog extends \Google\Model
    */
   public $userDefinedName;
 
+  /**
+   * @param AssistantLogsSettingsDeviceIdLog[]
+   */
+  public function setDeviceIdLog($deviceIdLog)
+  {
+    $this->deviceIdLog = $deviceIdLog;
+  }
+  /**
+   * @return AssistantLogsSettingsDeviceIdLog[]
+   */
+  public function getDeviceIdLog()
+  {
+    return $this->deviceIdLog;
+  }
   /**
    * @param string
    */

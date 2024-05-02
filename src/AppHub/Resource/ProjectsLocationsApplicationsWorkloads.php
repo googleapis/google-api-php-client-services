@@ -34,7 +34,9 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
   /**
    * Creates a Workload in an Application. (workloads.create)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. Fully qualified name of the Application to
+   * create Workload in. Expected format:
+   * `projects/{project}/locations/{location}/applications/{application}`.
    * @param Workload $postBody
    * @param array $optParams Optional parameters.
    *
@@ -49,8 +51,11 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
    * clients from accidentally creating duplicate commitments. The request ID must
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string workloadId Required. The Workload identifier.
+   * @opt_param string workloadId Required. The Workload identifier. Must contain
+   * only lowercase letters, numbers or hyphens, with the first character a
+   * letter, the last a letter or a number, and a 63 character maximum.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function create($parent, Workload $postBody, $optParams = [])
   {
@@ -59,9 +64,11 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a Workload in an Application. (workloads.delete)
+   * Deletes a Workload from an Application. (workloads.delete)
    *
-   * @param string $name Required. Value for name.
+   * @param string $name Required. Fully qualified name of the Workload to delete
+   * from an Application. Expected format: `projects/{project}/locations/{location
+   * }/applications/{application}/workloads/{workload}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. An optional request ID to identify
@@ -76,6 +83,7 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function delete($name, $optParams = [])
   {
@@ -86,9 +94,12 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
   /**
    * Gets a Workload in an Application. (workloads.get)
    *
-   * @param string $name Required. Value for name.
+   * @param string $name Required. Fully qualified name of the Workload to fetch.
+   * Expected format: `projects/{project}/locations/{location}/applications/{appli
+   * cation}/workloads/{workload}`.
    * @param array $optParams Optional parameters.
    * @return Workload
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -100,17 +111,20 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
    * Lists Workloads in an Application.
    * (workloads.listProjectsLocationsApplicationsWorkloads)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. Fully qualified name of the parent
+   * Application to list Workloads for. Expected format:
+   * `projects/{project}/locations/{location}/applications/{application}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListWorkloadsResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsApplicationsWorkloads($parent, $optParams = [])
   {
@@ -147,6 +161,7 @@ class ProjectsLocationsApplicationsWorkloads extends \Google\Service\Resource
    * message, but adding the field to the mask. This clears whatever value the
    * field previously had.
    * @return Operation
+   * @throws \Google\Service\Exception
    */
   public function patch($name, Workload $postBody, $optParams = [])
   {

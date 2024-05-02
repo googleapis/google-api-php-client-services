@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
 {
-  protected $collection_key = 'forwardingDups';
+  protected $collection_key = 'pageContent';
   protected $anchorsType = RepositoryWebrefSimplifiedAnchors::class;
   protected $anchorsDataType = '';
   protected $cdocContainerType = Proto2BridgeMessageSet::class;
@@ -30,6 +30,10 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
   protected $forwardingDupsDataType = 'array';
   protected $matchingMetadataType = RepositoryWebrefPreprocessingUrlMatchingMetadata::class;
   protected $matchingMetadataDataType = '';
+  /**
+   * @var string[]
+   */
+  public $pageContent;
   protected $refconDocumentMetadataType = RepositoryWebrefRefconRefconDocumentMetadata::class;
   protected $refconDocumentMetadataDataType = '';
   /**
@@ -112,6 +116,20 @@ class RepositoryWebrefSimplifiedCompositeDoc extends \Google\Collection
   public function getMatchingMetadata()
   {
     return $this->matchingMetadata;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPageContent($pageContent)
+  {
+    $this->pageContent = $pageContent;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPageContent()
+  {
+    return $this->pageContent;
   }
   /**
    * @param RepositoryWebrefRefconRefconDocumentMetadata

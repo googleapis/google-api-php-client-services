@@ -30,6 +30,8 @@ class RepositoryWebrefEntityAnnotations extends \Google\Collection
   protected $detailedEntityScoresDataType = '';
   protected $explainedRangeInfoType = RepositoryWebrefExplainedRangeInfo::class;
   protected $explainedRangeInfoDataType = '';
+  protected $imageMentionType = RepositoryWebrefImageMention::class;
+  protected $imageMentionDataType = 'array';
   /**
    * @var bool
    */
@@ -104,6 +106,20 @@ class RepositoryWebrefEntityAnnotations extends \Google\Collection
   public function getExplainedRangeInfo()
   {
     return $this->explainedRangeInfo;
+  }
+  /**
+   * @param RepositoryWebrefImageMention[]
+   */
+  public function setImageMention($imageMention)
+  {
+    $this->imageMention = $imageMention;
+  }
+  /**
+   * @return RepositoryWebrefImageMention[]
+   */
+  public function getImageMention()
+  {
+    return $this->imageMention;
   }
   /**
    * @param bool

@@ -145,6 +145,10 @@ class BackendService extends \Google\Collection
   /**
    * @var string
    */
+  public $serviceLbPolicy;
+  /**
+   * @var string
+   */
   public $sessionAffinity;
   protected $subsettingType = Subsetting::class;
   protected $subsettingDataType = '';
@@ -672,6 +676,20 @@ class BackendService extends \Google\Collection
   public function getServiceBindings()
   {
     return $this->serviceBindings;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceLbPolicy($serviceLbPolicy)
+  {
+    $this->serviceLbPolicy = $serviceLbPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceLbPolicy()
+  {
+    return $this->serviceLbPolicy;
   }
   /**
    * @param string

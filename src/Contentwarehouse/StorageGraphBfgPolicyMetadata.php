@@ -32,6 +32,8 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   protected $legalAllowedRegionsDataType = 'array';
   protected $legalRemovalRegionsType = KeGovernanceTypedRegions::class;
   protected $legalRemovalRegionsDataType = 'array';
+  protected $llmPolicyMetadataType = StorageGraphBfgLlmPolicyMetadata::class;
+  protected $llmPolicyMetadataDataType = '';
   protected $lmsPolicyMetadataType = StorageGraphBfgLmsPolicyMetadata::class;
   protected $lmsPolicyMetadataDataType = '';
   /**
@@ -102,6 +104,20 @@ class StorageGraphBfgPolicyMetadata extends \Google\Collection
   public function getLegalRemovalRegions()
   {
     return $this->legalRemovalRegions;
+  }
+  /**
+   * @param StorageGraphBfgLlmPolicyMetadata
+   */
+  public function setLlmPolicyMetadata(StorageGraphBfgLlmPolicyMetadata $llmPolicyMetadata)
+  {
+    $this->llmPolicyMetadata = $llmPolicyMetadata;
+  }
+  /**
+   * @return StorageGraphBfgLlmPolicyMetadata
+   */
+  public function getLlmPolicyMetadata()
+  {
+    return $this->llmPolicyMetadata;
   }
   /**
    * @param StorageGraphBfgLmsPolicyMetadata

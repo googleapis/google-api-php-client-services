@@ -37,11 +37,19 @@ class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
   /**
    * @var int
    */
+  public $fetchDeadlineMsec;
+  /**
+   * @var int
+   */
   public $imageEncodingTimeMsec;
   /**
    * @var int
    */
   public $imageScalingTimeMsec;
+  /**
+   * @var int
+   */
+  public $javascriptDeadlineMsec;
   /**
    * @var int
    */
@@ -54,6 +62,10 @@ class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
    * @var int
    */
   public $renderCostMgcu;
+  /**
+   * @var int
+   */
+  public $renderDeadlineMsec;
   /**
    * @var string
    */
@@ -148,6 +160,20 @@ class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
   /**
    * @param int
    */
+  public function setFetchDeadlineMsec($fetchDeadlineMsec)
+  {
+    $this->fetchDeadlineMsec = $fetchDeadlineMsec;
+  }
+  /**
+   * @return int
+   */
+  public function getFetchDeadlineMsec()
+  {
+    return $this->fetchDeadlineMsec;
+  }
+  /**
+   * @param int
+   */
   public function setImageEncodingTimeMsec($imageEncodingTimeMsec)
   {
     $this->imageEncodingTimeMsec = $imageEncodingTimeMsec;
@@ -172,6 +198,20 @@ class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
   public function getImageScalingTimeMsec()
   {
     return $this->imageScalingTimeMsec;
+  }
+  /**
+   * @param int
+   */
+  public function setJavascriptDeadlineMsec($javascriptDeadlineMsec)
+  {
+    $this->javascriptDeadlineMsec = $javascriptDeadlineMsec;
+  }
+  /**
+   * @return int
+   */
+  public function getJavascriptDeadlineMsec()
+  {
+    return $this->javascriptDeadlineMsec;
   }
   /**
    * @param int
@@ -214,6 +254,20 @@ class HtmlrenderWebkitHeadlessProtoRenderStats extends \Google\Collection
   public function getRenderCostMgcu()
   {
     return $this->renderCostMgcu;
+  }
+  /**
+   * @param int
+   */
+  public function setRenderDeadlineMsec($renderDeadlineMsec)
+  {
+    $this->renderDeadlineMsec = $renderDeadlineMsec;
+  }
+  /**
+   * @return int
+   */
+  public function getRenderDeadlineMsec()
+  {
+    return $this->renderDeadlineMsec;
   }
   /**
    * @param string

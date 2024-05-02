@@ -26,22 +26,12 @@ class AbuseiamEvaluation extends \Google\Collection
    * @var string
    */
   public $backend;
-  protected $clusterEvaluationContextType = AbuseiamClusterEvaluationContext::class;
-  protected $clusterEvaluationContextDataType = '';
   /**
    * @var string
    */
   public $comment;
-  protected $featureType = AbuseiamFeature::class;
-  protected $featureDataType = 'array';
-  protected $manualReviewInfoType = AbuseiamManualReviewEvaluationInfo::class;
-  protected $manualReviewInfoDataType = '';
   protected $miscDataType = AbuseiamNameValuePair::class;
   protected $miscDataDataType = 'array';
-  /**
-   * @var string
-   */
-  public $processTimeMillisecs;
   /**
    * @var string
    */
@@ -65,8 +55,6 @@ class AbuseiamEvaluation extends \Google\Collection
    * @var string
    */
   public $version;
-  protected $videoReviewDataType = AbuseiamVideoReviewData::class;
-  protected $videoReviewDataDataType = '';
 
   /**
    * @param AbuseiamAbuseType
@@ -97,20 +85,6 @@ class AbuseiamEvaluation extends \Google\Collection
     return $this->backend;
   }
   /**
-   * @param AbuseiamClusterEvaluationContext
-   */
-  public function setClusterEvaluationContext(AbuseiamClusterEvaluationContext $clusterEvaluationContext)
-  {
-    $this->clusterEvaluationContext = $clusterEvaluationContext;
-  }
-  /**
-   * @return AbuseiamClusterEvaluationContext
-   */
-  public function getClusterEvaluationContext()
-  {
-    return $this->clusterEvaluationContext;
-  }
-  /**
    * @param string
    */
   public function setComment($comment)
@@ -125,34 +99,6 @@ class AbuseiamEvaluation extends \Google\Collection
     return $this->comment;
   }
   /**
-   * @param AbuseiamFeature[]
-   */
-  public function setFeature($feature)
-  {
-    $this->feature = $feature;
-  }
-  /**
-   * @return AbuseiamFeature[]
-   */
-  public function getFeature()
-  {
-    return $this->feature;
-  }
-  /**
-   * @param AbuseiamManualReviewEvaluationInfo
-   */
-  public function setManualReviewInfo(AbuseiamManualReviewEvaluationInfo $manualReviewInfo)
-  {
-    $this->manualReviewInfo = $manualReviewInfo;
-  }
-  /**
-   * @return AbuseiamManualReviewEvaluationInfo
-   */
-  public function getManualReviewInfo()
-  {
-    return $this->manualReviewInfo;
-  }
-  /**
    * @param AbuseiamNameValuePair[]
    */
   public function setMiscData($miscData)
@@ -165,20 +111,6 @@ class AbuseiamEvaluation extends \Google\Collection
   public function getMiscData()
   {
     return $this->miscData;
-  }
-  /**
-   * @param string
-   */
-  public function setProcessTimeMillisecs($processTimeMillisecs)
-  {
-    $this->processTimeMillisecs = $processTimeMillisecs;
-  }
-  /**
-   * @return string
-   */
-  public function getProcessTimeMillisecs()
-  {
-    return $this->processTimeMillisecs;
   }
   /**
    * @param string
@@ -285,20 +217,6 @@ class AbuseiamEvaluation extends \Google\Collection
   public function getVersion()
   {
     return $this->version;
-  }
-  /**
-   * @param AbuseiamVideoReviewData
-   */
-  public function setVideoReviewData(AbuseiamVideoReviewData $videoReviewData)
-  {
-    $this->videoReviewData = $videoReviewData;
-  }
-  /**
-   * @return AbuseiamVideoReviewData
-   */
-  public function getVideoReviewData()
-  {
-    return $this->videoReviewData;
   }
 }
 

@@ -281,7 +281,7 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
-   * Query DPMS metadata. (services.queryMetadata)
+   * Query Dataproc Metastore metadata. (services.queryMetadata)
    *
    * @param string $service Required. The relative resource name of the metastore
    * service to query metadata, in the following

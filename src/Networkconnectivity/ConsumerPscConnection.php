@@ -45,11 +45,19 @@ class ConsumerPscConnection extends \Google\Model
   /**
    * @var string
    */
+  public $producerInstanceId;
+  /**
+   * @var string
+   */
   public $project;
   /**
    * @var string
    */
   public $pscConnectionId;
+  /**
+   * @var string
+   */
+  public $selectedSubnetwork;
   /**
    * @var string
    */
@@ -160,6 +168,20 @@ class ConsumerPscConnection extends \Google\Model
   /**
    * @param string
    */
+  public function setProducerInstanceId($producerInstanceId)
+  {
+    $this->producerInstanceId = $producerInstanceId;
+  }
+  /**
+   * @return string
+   */
+  public function getProducerInstanceId()
+  {
+    return $this->producerInstanceId;
+  }
+  /**
+   * @param string
+   */
   public function setProject($project)
   {
     $this->project = $project;
@@ -184,6 +206,20 @@ class ConsumerPscConnection extends \Google\Model
   public function getPscConnectionId()
   {
     return $this->pscConnectionId;
+  }
+  /**
+   * @param string
+   */
+  public function setSelectedSubnetwork($selectedSubnetwork)
+  {
+    $this->selectedSubnetwork = $selectedSubnetwork;
+  }
+  /**
+   * @return string
+   */
+  public function getSelectedSubnetwork()
+  {
+    return $this->selectedSubnetwork;
   }
   /**
    * @param string

@@ -19,6 +19,7 @@ namespace Google\Service\CloudRun\Resource;
 
 use Google\Service\CloudRun\GoogleCloudRunV2CancelExecutionRequest;
 use Google\Service\CloudRun\GoogleCloudRunV2Execution;
+use Google\Service\CloudRun\GoogleCloudRunV2ExportStatusResponse;
 use Google\Service\CloudRun\GoogleCloudRunV2ListExecutionsResponse;
 use Google\Service\CloudRun\GoogleLongrunningOperation;
 
@@ -69,6 +70,26 @@ class ProjectsLocationsJobsExecutions extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Read the status of an image export operation. (executions.exportStatus)
+   *
+   * @param string $name Required. The name of the resource of which image export
+   * operation status has to be fetched. Format: `projects/{project_id_or_number}/
+   * locations/{location}/services/{service}/revisions/{revision}` for Revision `p
+   * rojects/{project_id_or_number}/locations/{location}/jobs/{job}/executions/{ex
+   * ecution}` for Execution
+   * @param string $operationId Required. The operation id returned from
+   * ExportImage.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudRunV2ExportStatusResponse
+   * @throws \Google\Service\Exception
+   */
+  public function exportStatus($name, $operationId, $optParams = [])
+  {
+    $params = ['name' => $name, 'operationId' => $operationId];
+    $params = array_merge($params, $optParams);
+    return $this->call('exportStatus', [$params], GoogleCloudRunV2ExportStatusResponse::class);
   }
   /**
    * Gets information about an Execution. (executions.get)

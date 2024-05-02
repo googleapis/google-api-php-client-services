@@ -51,6 +51,10 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   /**
    * @var bool
    */
+  public $isExactMatch;
+  /**
+   * @var bool
+   */
   public $isShared;
   /**
    * @var bool
@@ -236,6 +240,20 @@ class AssistantLogsCommunicationPersonalContactDataLog extends \Google\Collectio
   public function getIsContactFromSecondaryAccount()
   {
     return $this->isContactFromSecondaryAccount;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsExactMatch($isExactMatch)
+  {
+    $this->isExactMatch = $isExactMatch;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsExactMatch()
+  {
+    return $this->isExactMatch;
   }
   /**
    * @param bool

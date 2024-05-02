@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for DiscoveryEngine (v1beta).
+ * Service definition for DiscoveryEngine (v1).
  *
  * <p>
  * Discovery Engine API.</p>
@@ -72,7 +72,9 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_operations;
+  public $projects_locations_userEvents;
   public $projects_operations;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DiscoveryEngine service.
@@ -85,9 +87,10 @@ class DiscoveryEngine extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://discoveryengine.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://discoveryengine.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta';
+    $this->version = 'v1';
     $this->serviceName = 'discoveryengine';
 
     $this->projects_locations_collections_dataConnector_operations = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataConnectorOperations(
@@ -97,7 +100,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -107,7 +110,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -139,7 +142,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'completeQuery' => [
-              'path' => 'v1beta/{+dataStore}:completeQuery',
+              'path' => 'v1/{+dataStore}:completeQuery',
               'httpMethod' => 'GET',
               'parameters' => [
                 'dataStore' => [
@@ -165,7 +168,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/dataStores',
+              'path' => 'v1/{+parent}/dataStores',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -183,7 +186,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -193,7 +196,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -203,7 +206,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'getSiteSearchEngine' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -213,7 +216,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/dataStores',
+              'path' => 'v1/{+parent}/dataStores',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -235,7 +238,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -259,7 +262,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta/{+parent}/documents',
+              'path' => 'v1/{+parent}/documents',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -273,7 +276,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -283,7 +286,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -293,7 +296,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'import' => [
-              'path' => 'v1beta/{+parent}/documents:import',
+              'path' => 'v1/{+parent}/documents:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -303,7 +306,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/documents',
+              'path' => 'v1/{+parent}/documents',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -321,7 +324,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -333,9 +336,13 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'purge' => [
-              'path' => 'v1beta/{+parent}/documents:purge',
+              'path' => 'v1/{+parent}/documents:purge',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -355,7 +362,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -365,7 +372,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -397,7 +404,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'converse' => [
-              'path' => 'v1beta/{+name}:converse',
+              'path' => 'v1/{+name}:converse',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -407,7 +414,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/conversations',
+              'path' => 'v1/{+parent}/conversations',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -417,7 +424,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -427,7 +434,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -437,7 +444,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/conversations',
+              'path' => 'v1/{+parent}/conversations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -463,7 +470,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -487,7 +494,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -497,7 +504,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -529,7 +536,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -539,7 +546,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -571,7 +578,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta/{+parent}/schemas',
+              'path' => 'v1/{+parent}/schemas',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -585,7 +592,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -595,7 +602,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -605,7 +612,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/schemas',
+              'path' => 'v1/{+parent}/schemas',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -623,7 +630,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -647,7 +654,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -657,7 +664,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -688,50 +695,8 @@ class DiscoveryEngine extends \Google\Service
         'servingConfigs',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1beta/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1beta/{+parent}/servingConfigs',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1beta/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'recommend' => [
-              'path' => 'v1beta/{+servingConfig}:recommend',
+            'recommend' => [
+              'path' => 'v1/{+servingConfig}:recommend',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -741,7 +706,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'search' => [
-              'path' => 'v1beta/{+servingConfig}:search',
+              'path' => 'v1/{+servingConfig}:search',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -761,7 +726,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'batchVerifyTargetSites' => [
-              'path' => 'v1beta/{+parent}:batchVerifyTargetSites',
+              'path' => 'v1/{+parent}:batchVerifyTargetSites',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -771,7 +736,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'disableAdvancedSiteSearch' => [
-              'path' => 'v1beta/{+siteSearchEngine}:disableAdvancedSiteSearch',
+              'path' => 'v1/{+siteSearchEngine}:disableAdvancedSiteSearch',
               'httpMethod' => 'POST',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -781,7 +746,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'enableAdvancedSiteSearch' => [
-              'path' => 'v1beta/{+siteSearchEngine}:enableAdvancedSiteSearch',
+              'path' => 'v1/{+siteSearchEngine}:enableAdvancedSiteSearch',
               'httpMethod' => 'POST',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -791,7 +756,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'fetchDomainVerificationStatus' => [
-              'path' => 'v1beta/{+siteSearchEngine}:fetchDomainVerificationStatus',
+              'path' => 'v1/{+siteSearchEngine}:fetchDomainVerificationStatus',
               'httpMethod' => 'GET',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -809,7 +774,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'recrawlUris' => [
-              'path' => 'v1beta/{+siteSearchEngine}:recrawlUris',
+              'path' => 'v1/{+siteSearchEngine}:recrawlUris',
               'httpMethod' => 'POST',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -829,7 +794,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -839,7 +804,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -871,7 +836,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'batchCreate' => [
-              'path' => 'v1beta/{+parent}/targetSites:batchCreate',
+              'path' => 'v1/{+parent}/targetSites:batchCreate',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -881,7 +846,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/targetSites',
+              'path' => 'v1/{+parent}/targetSites',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -891,7 +856,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -901,7 +866,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -911,7 +876,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/targetSites',
+              'path' => 'v1/{+parent}/targetSites',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -929,7 +894,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -949,7 +914,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -959,7 +924,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -991,7 +956,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'import' => [
-              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:import',
+              'path' => 'v1/{+parent}/suggestionDenyListEntries:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1001,7 +966,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'purge' => [
-              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:purge',
+              'path' => 'v1/{+parent}/suggestionDenyListEntries:purge',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1021,7 +986,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'collect' => [
-              'path' => 'v1beta/{+parent}/userEvents:collect',
+              'path' => 'v1/{+parent}/userEvents:collect',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1043,7 +1008,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'import' => [
-              'path' => 'v1beta/{+parent}/userEvents:import',
+              'path' => 'v1/{+parent}/userEvents:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1053,7 +1018,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'write' => [
-              'path' => 'v1beta/{+parent}/userEvents:write',
+              'path' => 'v1/{+parent}/userEvents:write',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1073,7 +1038,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta/{+parent}/engines',
+              'path' => 'v1/{+parent}/engines',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1087,7 +1052,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -1097,7 +1062,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1107,7 +1072,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/engines',
+              'path' => 'v1/{+parent}/engines',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1129,7 +1094,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -1153,7 +1118,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'converse' => [
-              'path' => 'v1beta/{+name}:converse',
+              'path' => 'v1/{+name}:converse',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -1163,7 +1128,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/conversations',
+              'path' => 'v1/{+parent}/conversations',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1173,7 +1138,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -1183,7 +1148,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1193,7 +1158,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/conversations',
+              'path' => 'v1/{+parent}/conversations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1219,7 +1184,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -1243,7 +1208,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1253,7 +1218,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1284,50 +1249,8 @@ class DiscoveryEngine extends \Google\Service
         'servingConfigs',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1beta/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1beta/{+parent}/servingConfigs',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1beta/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'recommend' => [
-              'path' => 'v1beta/{+servingConfig}:recommend',
+            'recommend' => [
+              'path' => 'v1/{+servingConfig}:recommend',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -1337,7 +1260,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'search' => [
-              'path' => 'v1beta/{+servingConfig}:search',
+              'path' => 'v1/{+servingConfig}:search',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -1357,7 +1280,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1367,7 +1290,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1399,7 +1322,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'completeQuery' => [
-              'path' => 'v1beta/{+dataStore}:completeQuery',
+              'path' => 'v1/{+dataStore}:completeQuery',
               'httpMethod' => 'GET',
               'parameters' => [
                 'dataStore' => [
@@ -1425,7 +1348,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/dataStores',
+              'path' => 'v1/{+parent}/dataStores',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1443,7 +1366,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -1453,7 +1376,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1463,7 +1386,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'getSiteSearchEngine' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1473,7 +1396,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/dataStores',
+              'path' => 'v1/{+parent}/dataStores',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1495,7 +1418,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -1519,7 +1442,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta/{+parent}/documents',
+              'path' => 'v1/{+parent}/documents',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1533,7 +1456,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -1543,7 +1466,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1553,7 +1476,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'import' => [
-              'path' => 'v1beta/{+parent}/documents:import',
+              'path' => 'v1/{+parent}/documents:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1563,7 +1486,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/documents',
+              'path' => 'v1/{+parent}/documents',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1581,7 +1504,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -1593,9 +1516,13 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'purge' => [
-              'path' => 'v1beta/{+parent}/documents:purge',
+              'path' => 'v1/{+parent}/documents:purge',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1615,7 +1542,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1625,7 +1552,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1657,7 +1584,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'converse' => [
-              'path' => 'v1beta/{+name}:converse',
+              'path' => 'v1/{+name}:converse',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -1667,7 +1594,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/conversations',
+              'path' => 'v1/{+parent}/conversations',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1677,7 +1604,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -1687,7 +1614,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1697,7 +1624,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/conversations',
+              'path' => 'v1/{+parent}/conversations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1723,7 +1650,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -1747,7 +1674,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1757,7 +1684,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1789,7 +1716,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1799,7 +1726,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1831,7 +1758,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'create' => [
-              'path' => 'v1beta/{+parent}/schemas',
+              'path' => 'v1/{+parent}/schemas',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -1845,7 +1772,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -1855,7 +1782,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -1865,7 +1792,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/schemas',
+              'path' => 'v1/{+parent}/schemas',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -1883,7 +1810,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -1906,50 +1833,8 @@ class DiscoveryEngine extends \Google\Service
         'servingConfigs',
         [
           'methods' => [
-            'get' => [
-              'path' => 'v1beta/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1beta/{+parent}/servingConfigs',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1beta/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'recommend' => [
-              'path' => 'v1beta/{+servingConfig}:recommend',
+            'recommend' => [
+              'path' => 'v1/{+servingConfig}:recommend',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -1959,7 +1844,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'search' => [
-              'path' => 'v1beta/{+servingConfig}:search',
+              'path' => 'v1/{+servingConfig}:search',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -1979,7 +1864,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'disableAdvancedSiteSearch' => [
-              'path' => 'v1beta/{+siteSearchEngine}:disableAdvancedSiteSearch',
+              'path' => 'v1/{+siteSearchEngine}:disableAdvancedSiteSearch',
               'httpMethod' => 'POST',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -1989,7 +1874,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'enableAdvancedSiteSearch' => [
-              'path' => 'v1beta/{+siteSearchEngine}:enableAdvancedSiteSearch',
+              'path' => 'v1/{+siteSearchEngine}:enableAdvancedSiteSearch',
               'httpMethod' => 'POST',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -1999,7 +1884,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'recrawlUris' => [
-              'path' => 'v1beta/{+siteSearchEngine}:recrawlUris',
+              'path' => 'v1/{+siteSearchEngine}:recrawlUris',
               'httpMethod' => 'POST',
               'parameters' => [
                 'siteSearchEngine' => [
@@ -2019,7 +1904,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'batchCreate' => [
-              'path' => 'v1beta/{+parent}/targetSites:batchCreate',
+              'path' => 'v1/{+parent}/targetSites:batchCreate',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2029,7 +1914,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'create' => [
-              'path' => 'v1beta/{+parent}/targetSites',
+              'path' => 'v1/{+parent}/targetSites',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2039,7 +1924,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -2049,7 +1934,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -2059,7 +1944,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+parent}/targetSites',
+              'path' => 'v1/{+parent}/targetSites',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -2077,7 +1962,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'patch' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
@@ -2097,7 +1982,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'import' => [
-              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:import',
+              'path' => 'v1/{+parent}/suggestionDenyListEntries:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2107,7 +1992,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'purge' => [
-              'path' => 'v1beta/{+parent}/suggestionDenyListEntries:purge',
+              'path' => 'v1/{+parent}/suggestionDenyListEntries:purge',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2127,7 +2012,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'collect' => [
-              'path' => 'v1beta/{+parent}/userEvents:collect',
+              'path' => 'v1/{+parent}/userEvents:collect',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -2149,7 +2034,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'import' => [
-              'path' => 'v1beta/{+parent}/userEvents:import',
+              'path' => 'v1/{+parent}/userEvents:import',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2159,7 +2044,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'write' => [
-              'path' => 'v1beta/{+parent}/userEvents:write',
+              'path' => 'v1/{+parent}/userEvents:write',
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
@@ -2179,7 +2064,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -2189,7 +2074,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -2214,6 +2099,26 @@ class DiscoveryEngine extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_userEvents = new DiscoveryEngine\Resource\ProjectsLocationsUserEvents(
+        $this,
+        $this->serviceName,
+        'userEvents',
+        [
+          'methods' => [
+            'write' => [
+              'path' => 'v1/{+parent}/userEvents:write',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_operations = new DiscoveryEngine\Resource\ProjectsOperations(
         $this,
         $this->serviceName,
@@ -2221,7 +2126,7 @@ class DiscoveryEngine extends \Google\Service
         [
           'methods' => [
             'get' => [
-              'path' => 'v1beta/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -2231,7 +2136,7 @@ class DiscoveryEngine extends \Google\Service
                 ],
               ],
             ],'list' => [
-              'path' => 'v1beta/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [

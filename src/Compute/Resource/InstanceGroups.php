@@ -69,8 +69,9 @@ class InstanceGroups extends \Google\Service\Resource
     return $this->call('addInstances', [$params], Operation::class);
   }
   /**
-   * Retrieves the list of instance groups and sorts them by zone.
-   * (instanceGroups.aggregatedList)
+   * Retrieves the list of instance groups and sorts them by zone. To prevent
+   * failure, Google recommends that you set the `returnPartialSuccess` parameter
+   * to `true`. (instanceGroups.aggregatedList)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
@@ -132,7 +133,9 @@ class InstanceGroups extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @opt_param string serviceProjectNumber The Shared VPC service project id or
    * service project number for which aggregated list request is invoked for
    * subnetworks list-usable api.
@@ -282,7 +285,9 @@ class InstanceGroups extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @return InstanceGroupList
    * @throws \Google\Service\Exception
    */
@@ -355,7 +360,9 @@ class InstanceGroups extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @return InstanceGroupsListInstances
    * @throws \Google\Service\Exception
    */

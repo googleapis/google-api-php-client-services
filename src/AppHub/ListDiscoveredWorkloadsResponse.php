@@ -20,10 +20,6 @@ namespace Google\Service\AppHub;
 class ListDiscoveredWorkloadsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var DiscoveredWorkload[]
-   */
-  public $discoveredWorkloads;
   protected $discoveredWorkloadsType = DiscoveredWorkload::class;
   protected $discoveredWorkloadsDataType = 'array';
   /**

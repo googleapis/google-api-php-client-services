@@ -45,6 +45,7 @@ class DataprocMetastore extends \Google\Service
   public $projects_locations_services;
   public $projects_locations_services_backups;
   public $projects_locations_services_metadataImports;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the DataprocMetastore service.
@@ -57,6 +58,7 @@ class DataprocMetastore extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://metastore.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://metastore.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';

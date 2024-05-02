@@ -27,6 +27,10 @@ class SapDiscoveryResourceInstanceProperties extends \Google\Collection
   /**
    * @var string
    */
+  public $instanceNumber;
+  /**
+   * @var string
+   */
   public $virtualHostname;
 
   /**
@@ -42,6 +46,20 @@ class SapDiscoveryResourceInstanceProperties extends \Google\Collection
   public function getClusterInstances()
   {
     return $this->clusterInstances;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceNumber($instanceNumber)
+  {
+    $this->instanceNumber = $instanceNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceNumber()
+  {
+    return $this->instanceNumber;
   }
   /**
    * @param string

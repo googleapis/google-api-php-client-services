@@ -34,7 +34,15 @@ class ProvisioningInfo extends \Google\Model
   /**
    * @var string
    */
+  public $imei;
+  /**
+   * @var string
+   */
   public $managementMode;
+  /**
+   * @var string
+   */
+  public $meid;
   /**
    * @var string
    */
@@ -47,6 +55,10 @@ class ProvisioningInfo extends \Google\Model
    * @var string
    */
   public $ownership;
+  /**
+   * @var string
+   */
+  public $serialNumber;
 
   /**
    * @param int
@@ -93,6 +105,20 @@ class ProvisioningInfo extends \Google\Model
   /**
    * @param string
    */
+  public function setImei($imei)
+  {
+    $this->imei = $imei;
+  }
+  /**
+   * @return string
+   */
+  public function getImei()
+  {
+    return $this->imei;
+  }
+  /**
+   * @param string
+   */
   public function setManagementMode($managementMode)
   {
     $this->managementMode = $managementMode;
@@ -103,6 +129,20 @@ class ProvisioningInfo extends \Google\Model
   public function getManagementMode()
   {
     return $this->managementMode;
+  }
+  /**
+   * @param string
+   */
+  public function setMeid($meid)
+  {
+    $this->meid = $meid;
+  }
+  /**
+   * @return string
+   */
+  public function getMeid()
+  {
+    return $this->meid;
   }
   /**
    * @param string
@@ -145,6 +185,20 @@ class ProvisioningInfo extends \Google\Model
   public function getOwnership()
   {
     return $this->ownership;
+  }
+  /**
+   * @param string
+   */
+  public function setSerialNumber($serialNumber)
+  {
+    $this->serialNumber = $serialNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getSerialNumber()
+  {
+    return $this->serialNumber;
   }
 }
 

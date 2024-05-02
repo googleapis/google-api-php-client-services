@@ -93,6 +93,7 @@ class Gmail extends \Google\Service
   public $users_settings_sendAs;
   public $users_settings_sendAs_smimeInfo;
   public $users_threads;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Gmail service.
@@ -105,6 +106,7 @@ class Gmail extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://gmail.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://gmail.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
@@ -124,6 +126,10 @@ class Gmail extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'temporaryEeccBypass' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'stop' => [
@@ -450,6 +456,10 @@ class Gmail extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
+                'temporaryEeccBypass' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'import' => [
               'path' => 'gmail/v1/users/{userId}/messages/import',
@@ -524,6 +534,10 @@ class Gmail extends \Google\Service
                 'q' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'temporaryEeccBypass' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'modify' => [
@@ -609,6 +623,10 @@ class Gmail extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'temporaryEeccBypass' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -1335,6 +1353,10 @@ class Gmail extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
+                'temporaryEeccBypass' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'list' => [
               'path' => 'gmail/v1/users/{userId}/threads',
@@ -1365,6 +1387,10 @@ class Gmail extends \Google\Service
                 'q' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'temporaryEeccBypass' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'modify' => [

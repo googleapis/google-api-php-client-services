@@ -50,7 +50,16 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
 {
   /**
    * Updates a `Registration`'s contact settings. Some changes require
-   * confirmation by the domain's registrant contact .
+   * confirmation by the domain's registrant contact . Caution: Please consider
+   * carefully any changes to contact privacy settings when changing from
+   * `REDACTED_CONTACT_DATA` to `PUBLIC_CONTACT_DATA.` There may be a delay in
+   * reflecting updates you make to registrant contact information such that any
+   * changes you make to contact privacy (including from `REDACTED_CONTACT_DATA`
+   * to `PUBLIC_CONTACT_DATA`) will be applied without delay but changes to
+   * registrant contact information may take a limited time to be publicized. This
+   * means that changes to contact privacy from `REDACTED_CONTACT_DATA` to
+   * `PUBLIC_CONTACT_DATA` may make the previous registrant contact data public
+   * until the modified registrant contact details are published.
    * (registrations.configureContactSettings)
    *
    * @param string $registration Required. The name of the `Registration` whose

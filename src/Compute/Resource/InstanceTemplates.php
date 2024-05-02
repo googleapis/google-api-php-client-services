@@ -38,7 +38,9 @@ class InstanceTemplates extends \Google\Service\Resource
 {
   /**
    * Retrieves the list of all InstanceTemplates resources, regional and global,
-   * available to the specified project. (instanceTemplates.aggregatedList)
+   * available to the specified project. To prevent failure, Google recommends
+   * that you set the `returnPartialSuccess` parameter to `true`.
+   * (instanceTemplates.aggregatedList)
    *
    * @param string $project Name of the project scoping this request.
    * @param array $optParams Optional parameters.
@@ -100,7 +102,9 @@ class InstanceTemplates extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @opt_param string serviceProjectNumber The Shared VPC service project id or
    * service project number for which aggregated list request is invoked for
    * subnetworks list-usable api.
@@ -261,7 +265,9 @@ class InstanceTemplates extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @return InstanceTemplateList
    * @throws \Google\Service\Exception
    */

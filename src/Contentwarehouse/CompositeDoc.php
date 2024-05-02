@@ -57,6 +57,10 @@ class CompositeDoc extends \Google\Collection
   protected $docVideosDataType = 'array';
   protected $docinfoPassthroughAttachmentsType = Proto2BridgeMessageSet::class;
   protected $docinfoPassthroughAttachmentsDataType = '';
+  /**
+   * @var string
+   */
+  public $docjoinsOnSpannerCommitTimestampMicros;
   protected $embeddedContentInfoType = IndexingEmbeddedContentEmbeddedContentInfo::class;
   protected $embeddedContentInfoDataType = '';
   protected $extradupType = CompositeDocExtraDup::class;
@@ -335,6 +339,20 @@ class CompositeDoc extends \Google\Collection
   public function getDocinfoPassthroughAttachments()
   {
     return $this->docinfoPassthroughAttachments;
+  }
+  /**
+   * @param string
+   */
+  public function setDocjoinsOnSpannerCommitTimestampMicros($docjoinsOnSpannerCommitTimestampMicros)
+  {
+    $this->docjoinsOnSpannerCommitTimestampMicros = $docjoinsOnSpannerCommitTimestampMicros;
+  }
+  /**
+   * @return string
+   */
+  public function getDocjoinsOnSpannerCommitTimestampMicros()
+  {
+    return $this->docjoinsOnSpannerCommitTimestampMicros;
   }
   /**
    * @param IndexingEmbeddedContentEmbeddedContentInfo

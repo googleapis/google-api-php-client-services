@@ -20,6 +20,10 @@ namespace Google\Service\Contentwarehouse;
 class SpamBrainScore extends \Google\Model
 {
   /**
+   * @var string
+   */
+  public $modelName;
+  /**
    * @var float
    */
   public $sbScore;
@@ -28,6 +32,20 @@ class SpamBrainScore extends \Google\Model
    */
   public $versionId;
 
+  /**
+   * @param string
+   */
+  public function setModelName($modelName)
+  {
+    $this->modelName = $modelName;
+  }
+  /**
+   * @return string
+   */
+  public function getModelName()
+  {
+    return $this->modelName;
+  }
   /**
    * @param float
    */

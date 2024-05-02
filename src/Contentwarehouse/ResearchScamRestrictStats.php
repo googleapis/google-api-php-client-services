@@ -19,6 +19,8 @@ namespace Google\Service\Contentwarehouse;
 
 class ResearchScamRestrictStats extends \Google\Model
 {
+  protected $evaluationInfoType = ResearchScamRestrictEvaluationInfo::class;
+  protected $evaluationInfoDataType = '';
   /**
    * @var string
    */
@@ -28,6 +30,20 @@ class ResearchScamRestrictStats extends \Google\Model
    */
   public $numTotalDatapoints;
 
+  /**
+   * @param ResearchScamRestrictEvaluationInfo
+   */
+  public function setEvaluationInfo(ResearchScamRestrictEvaluationInfo $evaluationInfo)
+  {
+    $this->evaluationInfo = $evaluationInfo;
+  }
+  /**
+   * @return ResearchScamRestrictEvaluationInfo
+   */
+  public function getEvaluationInfo()
+  {
+    return $this->evaluationInfo;
+  }
   /**
    * @param string
    */

@@ -81,6 +81,18 @@ class QualityDniDocPreviewRestrictions extends \Google\Model
    * @var int
    */
   public $maxVideoPreviewSecsPublisherDefault;
+  /**
+   * @var string
+   */
+  public $snippetLengthSource;
+  /**
+   * @var string
+   */
+  public $thumbnailSizeSource;
+  /**
+   * @var string
+   */
+  public $videoPreviewSecsSource;
 
   /**
    * @param string
@@ -305,6 +317,48 @@ class QualityDniDocPreviewRestrictions extends \Google\Model
   public function getMaxVideoPreviewSecsPublisherDefault()
   {
     return $this->maxVideoPreviewSecsPublisherDefault;
+  }
+  /**
+   * @param string
+   */
+  public function setSnippetLengthSource($snippetLengthSource)
+  {
+    $this->snippetLengthSource = $snippetLengthSource;
+  }
+  /**
+   * @return string
+   */
+  public function getSnippetLengthSource()
+  {
+    return $this->snippetLengthSource;
+  }
+  /**
+   * @param string
+   */
+  public function setThumbnailSizeSource($thumbnailSizeSource)
+  {
+    $this->thumbnailSizeSource = $thumbnailSizeSource;
+  }
+  /**
+   * @return string
+   */
+  public function getThumbnailSizeSource()
+  {
+    return $this->thumbnailSizeSource;
+  }
+  /**
+   * @param string
+   */
+  public function setVideoPreviewSecsSource($videoPreviewSecsSource)
+  {
+    $this->videoPreviewSecsSource = $videoPreviewSecsSource;
+  }
+  /**
+   * @return string
+   */
+  public function getVideoPreviewSecsSource()
+  {
+    return $this->videoPreviewSecsSource;
   }
 }
 

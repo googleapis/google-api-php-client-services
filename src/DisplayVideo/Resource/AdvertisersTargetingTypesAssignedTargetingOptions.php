@@ -39,7 +39,7 @@ class AdvertisersTargetingTypesAssignedTargetingOptions extends \Google\Service\
    * @param string $targetingType Required. Identifies the type of this assigned
    * targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` *
    * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * @param AssignedTargetingOption $postBody
    * @param array $optParams Optional parameters.
    * @return AssignedTargetingOption
@@ -59,7 +59,7 @@ class AdvertisersTargetingTypesAssignedTargetingOptions extends \Google\Service\
    * @param string $targetingType Required. Identifies the type of this assigned
    * targeting option. Supported targeting types: * `TARGETING_TYPE_CHANNEL` *
    * `TARGETING_TYPE_DIGITAL_CONTENT_LABEL_EXCLUSION` * `TARGETING_TYPE_OMID` *
-   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION`
+   * `TARGETING_TYPE_SENSITIVE_CATEGORY_EXCLUSION` * `TARGETING_TYPE_KEYWORD`
    * @param string $assignedTargetingOptionId Required. The ID of the assigned
    * targeting option to delete.
    * @param array $optParams Optional parameters.

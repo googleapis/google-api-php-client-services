@@ -20,10 +20,6 @@ namespace Google\Service\AppHub;
 class ListApplicationsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var Application[]
-   */
-  public $applications;
   protected $applicationsType = Application::class;
   protected $applicationsDataType = 'array';
   /**

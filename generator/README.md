@@ -1,7 +1,6 @@
 # Google APIs PHP Client Generator
 
 This directory is used to generate the client library service classes.
-See `synth.py` in the project root for more information.
 
 From the root of this project run:
 

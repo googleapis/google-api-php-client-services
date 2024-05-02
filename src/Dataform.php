@@ -47,6 +47,7 @@ class Dataform extends \Google\Service
   public $projects_locations_repositories_workflowConfigs;
   public $projects_locations_repositories_workflowInvocations;
   public $projects_locations_repositories_workspaces;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Dataform service.
@@ -59,6 +60,7 @@ class Dataform extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://dataform.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://dataform.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1beta1';
@@ -400,6 +402,10 @@ class Dataform extends \Google\Service
                   'required' => true,
                 ],
                 'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

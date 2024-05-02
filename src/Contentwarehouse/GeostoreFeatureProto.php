@@ -50,6 +50,8 @@ class GeostoreFeatureProto extends \Google\Collection
   protected $coveringDataType = '';
   protected $dataSourceType = GeostoreDataSourceProto::class;
   protected $dataSourceDataType = '';
+  protected $detailed3dModelType = GeostoreGeometryStoreReferenceProto::class;
+  protected $detailed3dModelDataType = '';
   protected $displayDataType = GeostoreDisplayDataProto::class;
   protected $displayDataDataType = '';
   protected $disputedAreaType = GeostoreDisputedAreaProto::class;
@@ -191,6 +193,8 @@ class GeostoreFeatureProto extends \Google\Collection
   protected $threeDimModelDataType = '';
   protected $tollClusterType = GeostoreTollClusterProto::class;
   protected $tollClusterDataType = '';
+  protected $tollPathType = GeostoreTollPathProto::class;
+  protected $tollPathDataType = '';
   protected $trackType = GeostoreTrackProto::class;
   protected $trackDataType = 'array';
   protected $transitLineType = GeostoreTransitLineProto::class;
@@ -421,6 +425,20 @@ class GeostoreFeatureProto extends \Google\Collection
   public function getDataSource()
   {
     return $this->dataSource;
+  }
+  /**
+   * @param GeostoreGeometryStoreReferenceProto
+   */
+  public function setDetailed3dModel(GeostoreGeometryStoreReferenceProto $detailed3dModel)
+  {
+    $this->detailed3dModel = $detailed3dModel;
+  }
+  /**
+   * @return GeostoreGeometryStoreReferenceProto
+   */
+  public function getDetailed3dModel()
+  {
+    return $this->detailed3dModel;
   }
   /**
    * @param GeostoreDisplayDataProto
@@ -1381,6 +1399,20 @@ class GeostoreFeatureProto extends \Google\Collection
   public function getTollCluster()
   {
     return $this->tollCluster;
+  }
+  /**
+   * @param GeostoreTollPathProto
+   */
+  public function setTollPath(GeostoreTollPathProto $tollPath)
+  {
+    $this->tollPath = $tollPath;
+  }
+  /**
+   * @return GeostoreTollPathProto
+   */
+  public function getTollPath()
+  {
+    return $this->tollPath;
   }
   /**
    * @param GeostoreTrackProto[]

@@ -69,6 +69,8 @@ class Service extends \Google\Model
   public $releaseChannel;
   protected $scalingConfigType = ScalingConfig::class;
   protected $scalingConfigDataType = '';
+  protected $scheduledBackupType = ScheduledBackup::class;
+  protected $scheduledBackupDataType = '';
   /**
    * @var string
    */
@@ -315,6 +317,20 @@ class Service extends \Google\Model
   public function getScalingConfig()
   {
     return $this->scalingConfig;
+  }
+  /**
+   * @param ScheduledBackup
+   */
+  public function setScheduledBackup(ScheduledBackup $scheduledBackup)
+  {
+    $this->scheduledBackup = $scheduledBackup;
+  }
+  /**
+   * @return ScheduledBackup
+   */
+  public function getScheduledBackup()
+  {
+    return $this->scheduledBackup;
   }
   /**
    * @param string

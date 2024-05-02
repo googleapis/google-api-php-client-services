@@ -528,6 +528,10 @@ class PhotosImageMetadata extends \Google\Collection
    */
   public $gcameradisableautocreation;
   /**
+   * @var bool
+   */
+  public $gcameraisautoenhanced;
+  /**
    * @var int
    */
   public $gcameramicrovideo;
@@ -547,6 +551,10 @@ class PhotosImageMetadata extends \Google\Collection
    * @var int
    */
   public $gcameramotionphoto;
+  /**
+   * @var string
+   */
+  public $gcameramotionphotocreator;
   /**
    * @var int
    */
@@ -3023,6 +3031,20 @@ class PhotosImageMetadata extends \Google\Collection
     return $this->gcameradisableautocreation;
   }
   /**
+   * @param bool
+   */
+  public function setGcameraisautoenhanced($gcameraisautoenhanced)
+  {
+    $this->gcameraisautoenhanced = $gcameraisautoenhanced;
+  }
+  /**
+   * @return bool
+   */
+  public function getGcameraisautoenhanced()
+  {
+    return $this->gcameraisautoenhanced;
+  }
+  /**
    * @param int
    */
   public function setGcameramicrovideo($gcameramicrovideo)
@@ -3091,6 +3113,20 @@ class PhotosImageMetadata extends \Google\Collection
   public function getGcameramotionphoto()
   {
     return $this->gcameramotionphoto;
+  }
+  /**
+   * @param string
+   */
+  public function setGcameramotionphotocreator($gcameramotionphotocreator)
+  {
+    $this->gcameramotionphotocreator = $gcameramotionphotocreator;
+  }
+  /**
+   * @return string
+   */
+  public function getGcameramotionphotocreator()
+  {
+    return $this->gcameramotionphotocreator;
   }
   /**
    * @param int

@@ -37,6 +37,8 @@ class Users extends \Google\Service\Resource
    * @param string $userId The user's email address. The special value `me` can be
    * used to indicate the authenticated user.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool temporaryEeccBypass
    * @return Profile
    * @throws \Google\Service\Exception
    */

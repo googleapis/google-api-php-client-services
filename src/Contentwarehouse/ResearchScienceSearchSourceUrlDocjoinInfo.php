@@ -50,6 +50,10 @@ class ResearchScienceSearchSourceUrlDocjoinInfo extends \Google\Collection
    * @var int
    */
   public $pagerank;
+  /**
+   * @var int
+   */
+  public $pagerankNs;
   protected $petacatInfoType = FatcatCompactDocClassification::class;
   protected $petacatInfoDataType = '';
   protected $salientTermsType = QualitySalientTermsSalientTermSet::class;
@@ -184,6 +188,20 @@ class ResearchScienceSearchSourceUrlDocjoinInfo extends \Google\Collection
   public function getPagerank()
   {
     return $this->pagerank;
+  }
+  /**
+   * @param int
+   */
+  public function setPagerankNs($pagerankNs)
+  {
+    $this->pagerankNs = $pagerankNs;
+  }
+  /**
+   * @return int
+   */
+  public function getPagerankNs()
+  {
+    return $this->pagerankNs;
   }
   /**
    * @param FatcatCompactDocClassification

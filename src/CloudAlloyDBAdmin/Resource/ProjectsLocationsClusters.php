@@ -18,8 +18,6 @@
 namespace Google\Service\CloudAlloyDBAdmin\Resource;
 
 use Google\Service\CloudAlloyDBAdmin\Cluster;
-use Google\Service\CloudAlloyDBAdmin\GenerateClientCertificateRequest;
-use Google\Service\CloudAlloyDBAdmin\GenerateClientCertificateResponse;
 use Google\Service\CloudAlloyDBAdmin\ListClustersResponse;
 use Google\Service\CloudAlloyDBAdmin\Operation;
 use Google\Service\CloudAlloyDBAdmin\PromoteClusterRequest;
@@ -135,26 +133,6 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
-  }
-  /**
-   * Generate a client certificate signed by a Cluster CA. The sole purpose of
-   * this endpoint is to support AlloyDB connectors and the Auth Proxy client. The
-   * endpoint's behavior is subject to change without notice, so do not rely on
-   * its behavior remaining constant. Future changes will not break AlloyDB
-   * connectors or the Auth Proxy client. (clusters.generateClientCertificate)
-   *
-   * @param string $parent Required. The name of the parent resource. The required
-   * format is: * projects/{project}/locations/{location}/clusters/{cluster}
-   * @param GenerateClientCertificateRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GenerateClientCertificateResponse
-   * @throws \Google\Service\Exception
-   */
-  public function generateClientCertificate($parent, GenerateClientCertificateRequest $postBody, $optParams = [])
-  {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('generateClientCertificate', [$params], GenerateClientCertificateResponse::class);
   }
   /**
    * Gets details of a single Cluster. (clusters.get)

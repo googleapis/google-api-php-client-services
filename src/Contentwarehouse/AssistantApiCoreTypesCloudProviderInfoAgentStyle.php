@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends \Google\Model
 {
-  protected $backgroundColorType = AssistantApiCoreTypesGovernedColor::class;
+  protected $backgroundColorType = AssistantApiCoreTypesColor::class;
   protected $backgroundColorDataType = '';
   /**
    * @var string
@@ -33,24 +33,24 @@ class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends \Google\Model
    * @var string
    */
   public $logoUrl;
-  protected $maskColorType = AssistantApiCoreTypesGovernedColor::class;
+  protected $maskColorType = AssistantApiCoreTypesColor::class;
   protected $maskColorDataType = '';
   /**
    * @var string
    */
   public $portraitBackgroundImageUrl;
-  protected $primaryColorType = AssistantApiCoreTypesGovernedColor::class;
+  protected $primaryColorType = AssistantApiCoreTypesColor::class;
   protected $primaryColorDataType = '';
 
   /**
-   * @param AssistantApiCoreTypesGovernedColor
+   * @param AssistantApiCoreTypesColor
    */
-  public function setBackgroundColor(AssistantApiCoreTypesGovernedColor $backgroundColor)
+  public function setBackgroundColor(AssistantApiCoreTypesColor $backgroundColor)
   {
     $this->backgroundColor = $backgroundColor;
   }
   /**
-   * @return AssistantApiCoreTypesGovernedColor
+   * @return AssistantApiCoreTypesColor
    */
   public function getBackgroundColor()
   {
@@ -99,14 +99,14 @@ class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends \Google\Model
     return $this->logoUrl;
   }
   /**
-   * @param AssistantApiCoreTypesGovernedColor
+   * @param AssistantApiCoreTypesColor
    */
-  public function setMaskColor(AssistantApiCoreTypesGovernedColor $maskColor)
+  public function setMaskColor(AssistantApiCoreTypesColor $maskColor)
   {
     $this->maskColor = $maskColor;
   }
   /**
-   * @return AssistantApiCoreTypesGovernedColor
+   * @return AssistantApiCoreTypesColor
    */
   public function getMaskColor()
   {
@@ -127,14 +127,14 @@ class AssistantApiCoreTypesCloudProviderInfoAgentStyle extends \Google\Model
     return $this->portraitBackgroundImageUrl;
   }
   /**
-   * @param AssistantApiCoreTypesGovernedColor
+   * @param AssistantApiCoreTypesColor
    */
-  public function setPrimaryColor(AssistantApiCoreTypesGovernedColor $primaryColor)
+  public function setPrimaryColor(AssistantApiCoreTypesColor $primaryColor)
   {
     $this->primaryColor = $primaryColor;
   }
   /**
-   * @return AssistantApiCoreTypesGovernedColor
+   * @return AssistantApiCoreTypesColor
    */
   public function getPrimaryColor()
   {

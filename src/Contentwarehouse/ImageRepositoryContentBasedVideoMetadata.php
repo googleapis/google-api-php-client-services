@@ -36,6 +36,8 @@ class ImageRepositoryContentBasedVideoMetadata extends \Google\Collection
   protected $cloudSpeechSignalsDataType = '';
   protected $featureSetDataType = DrishtiFeatureSetData::class;
   protected $featureSetDataDataType = '';
+  protected $frameLevelStarburstEmbeddingsType = ImageRepositoryFrameLevelStarburstEmbeddings::class;
+  protected $frameLevelStarburstEmbeddingsDataType = '';
   protected $golden7SoapboxSummaryType = DrishtiFeatureSetData::class;
   protected $golden7SoapboxSummaryDataType = '';
   protected $golden7SoapboxTracksBlobInfoType = ImageRepositoryAmarnaSignalsBlobInfo::class;
@@ -181,6 +183,20 @@ class ImageRepositoryContentBasedVideoMetadata extends \Google\Collection
   public function getFeatureSetData()
   {
     return $this->featureSetData;
+  }
+  /**
+   * @param ImageRepositoryFrameLevelStarburstEmbeddings
+   */
+  public function setFrameLevelStarburstEmbeddings(ImageRepositoryFrameLevelStarburstEmbeddings $frameLevelStarburstEmbeddings)
+  {
+    $this->frameLevelStarburstEmbeddings = $frameLevelStarburstEmbeddings;
+  }
+  /**
+   * @return ImageRepositoryFrameLevelStarburstEmbeddings
+   */
+  public function getFrameLevelStarburstEmbeddings()
+  {
+    return $this->frameLevelStarburstEmbeddings;
   }
   /**
    * @param DrishtiFeatureSetData

@@ -52,6 +52,10 @@ class Instance extends \Google\Model
   /**
    * @var string
    */
+  public $linkedLspProjectNumber;
+  /**
+   * @var string
+   */
   public $lookerUri;
   /**
    * @var string
@@ -233,6 +237,20 @@ class Instance extends \Google\Model
   public function getLastDenyMaintenancePeriod()
   {
     return $this->lastDenyMaintenancePeriod;
+  }
+  /**
+   * @param string
+   */
+  public function setLinkedLspProjectNumber($linkedLspProjectNumber)
+  {
+    $this->linkedLspProjectNumber = $linkedLspProjectNumber;
+  }
+  /**
+   * @return string
+   */
+  public function getLinkedLspProjectNumber()
+  {
+    return $this->linkedLspProjectNumber;
   }
   /**
    * @param string

@@ -20,10 +20,6 @@ namespace Google\Service\AppHub;
 class ListDiscoveredServicesResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
-  /**
-   * @var DiscoveredService[]
-   */
-  public $discoveredServices;
   protected $discoveredServicesType = DiscoveredService::class;
   protected $discoveredServicesDataType = 'array';
   /**

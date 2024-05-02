@@ -395,6 +395,8 @@ class PerDocData extends \Google\Collection
   protected $spamMuppetSignalsDataType = '';
   protected $spambrainDataType = SpamBrainData::class;
   protected $spambrainDataDataType = '';
+  protected $spambrainDomainSitechunkDataType = SpamBrainData::class;
+  protected $spambrainDomainSitechunkDataDataType = '';
   /**
    * @var float
    */
@@ -1973,6 +1975,20 @@ class PerDocData extends \Google\Collection
   public function getSpambrainData()
   {
     return $this->spambrainData;
+  }
+  /**
+   * @param SpamBrainData
+   */
+  public function setSpambrainDomainSitechunkData(SpamBrainData $spambrainDomainSitechunkData)
+  {
+    $this->spambrainDomainSitechunkData = $spambrainDomainSitechunkData;
+  }
+  /**
+   * @return SpamBrainData
+   */
+  public function getSpambrainDomainSitechunkData()
+  {
+    return $this->spambrainDomainSitechunkData;
   }
   /**
    * @param float

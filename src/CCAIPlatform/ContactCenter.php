@@ -38,6 +38,8 @@ class ContactCenter extends \Google\Collection
    * @var string
    */
   public $displayName;
+  protected $earlyType = Early::class;
+  protected $earlyDataType = '';
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**
@@ -52,6 +54,8 @@ class ContactCenter extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $normalType = Normal::class;
+  protected $normalDataType = '';
   /**
    * @var string[]
    */
@@ -144,6 +148,20 @@ class ContactCenter extends \Google\Collection
     return $this->displayName;
   }
   /**
+   * @param Early
+   */
+  public function setEarly(Early $early)
+  {
+    $this->early = $early;
+  }
+  /**
+   * @return Early
+   */
+  public function getEarly()
+  {
+    return $this->early;
+  }
+  /**
    * @param InstanceConfig
    */
   public function setInstanceConfig(InstanceConfig $instanceConfig)
@@ -198,6 +216,20 @@ class ContactCenter extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Normal
+   */
+  public function setNormal(Normal $normal)
+  {
+    $this->normal = $normal;
+  }
+  /**
+   * @return Normal
+   */
+  public function getNormal()
+  {
+    return $this->normal;
   }
   /**
    * @param string[]

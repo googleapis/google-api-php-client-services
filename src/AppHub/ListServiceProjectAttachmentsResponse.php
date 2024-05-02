@@ -24,10 +24,6 @@ class ListServiceProjectAttachmentsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  /**
-   * @var ServiceProjectAttachment[]
-   */
-  public $serviceProjectAttachments;
   protected $serviceProjectAttachmentsType = ServiceProjectAttachment::class;
   protected $serviceProjectAttachmentsDataType = 'array';
   /**

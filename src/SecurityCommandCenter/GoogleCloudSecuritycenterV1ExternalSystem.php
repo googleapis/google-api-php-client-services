@@ -27,6 +27,14 @@ class GoogleCloudSecuritycenterV1ExternalSystem extends \Google\Collection
   /**
    * @var string
    */
+  public $caseCloseTime;
+  /**
+   * @var string
+   */
+  public $caseCreateTime;
+  /**
+   * @var string
+   */
   public $casePriority;
   /**
    * @var string
@@ -68,6 +76,34 @@ class GoogleCloudSecuritycenterV1ExternalSystem extends \Google\Collection
   public function getAssignees()
   {
     return $this->assignees;
+  }
+  /**
+   * @param string
+   */
+  public function setCaseCloseTime($caseCloseTime)
+  {
+    $this->caseCloseTime = $caseCloseTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCaseCloseTime()
+  {
+    return $this->caseCloseTime;
+  }
+  /**
+   * @param string
+   */
+  public function setCaseCreateTime($caseCreateTime)
+  {
+    $this->caseCreateTime = $caseCreateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCaseCreateTime()
+  {
+    return $this->caseCreateTime;
   }
   /**
    * @param string

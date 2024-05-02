@@ -19,10 +19,6 @@ namespace Google\Service\Logging;
 
 class Settings extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $analyticsMode;
   protected $defaultSinkConfigType = DefaultSinkConfig::class;
   protected $defaultSinkConfigDataType = '';
   /**
@@ -50,20 +46,6 @@ class Settings extends \Google\Model
    */
   public $storageLocation;
 
-  /**
-   * @param string
-   */
-  public function setAnalyticsMode($analyticsMode)
-  {
-    $this->analyticsMode = $analyticsMode;
-  }
-  /**
-   * @return string
-   */
-  public function getAnalyticsMode()
-  {
-    return $this->analyticsMode;
-  }
   /**
    * @param DefaultSinkConfig
    */

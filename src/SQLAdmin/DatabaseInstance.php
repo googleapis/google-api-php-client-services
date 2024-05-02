@@ -66,6 +66,8 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $gceZone;
+  protected $geminiConfigType = GeminiInstanceConfig::class;
+  protected $geminiConfigDataType = '';
   /**
    * @var string
    */
@@ -122,6 +124,8 @@ class DatabaseInstance extends \Google\Collection
    * @var string[]
    */
   public $replicaNames;
+  protected $replicationClusterType = ReplicationCluster::class;
+  protected $replicationClusterDataType = '';
   /**
    * @var string
    */
@@ -348,6 +352,20 @@ class DatabaseInstance extends \Google\Collection
     return $this->gceZone;
   }
   /**
+   * @param GeminiInstanceConfig
+   */
+  public function setGeminiConfig(GeminiInstanceConfig $geminiConfig)
+  {
+    $this->geminiConfig = $geminiConfig;
+  }
+  /**
+   * @return GeminiInstanceConfig
+   */
+  public function getGeminiConfig()
+  {
+    return $this->geminiConfig;
+  }
+  /**
    * @param string
    */
   public function setInstanceType($instanceType)
@@ -570,6 +588,20 @@ class DatabaseInstance extends \Google\Collection
   public function getReplicaNames()
   {
     return $this->replicaNames;
+  }
+  /**
+   * @param ReplicationCluster
+   */
+  public function setReplicationCluster(ReplicationCluster $replicationCluster)
+  {
+    $this->replicationCluster = $replicationCluster;
+  }
+  /**
+   * @return ReplicationCluster
+   */
+  public function getReplicationCluster()
+  {
+    return $this->replicationCluster;
   }
   /**
    * @param string

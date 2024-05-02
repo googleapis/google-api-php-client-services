@@ -21,6 +21,10 @@ class ManagementServer extends \Google\Collection
 {
   protected $collection_key = 'networks';
   /**
+   * @var string[]
+   */
+  public $baProxyUri;
+  /**
    * @var string
    */
   public $createTime;
@@ -65,6 +69,20 @@ class ManagementServer extends \Google\Collection
   protected $workforceIdentityBasedOauth2ClientIdType = WorkforceIdentityBasedOAuth2ClientID::class;
   protected $workforceIdentityBasedOauth2ClientIdDataType = '';
 
+  /**
+   * @param string[]
+   */
+  public function setBaProxyUri($baProxyUri)
+  {
+    $this->baProxyUri = $baProxyUri;
+  }
+  /**
+   * @return string[]
+   */
+  public function getBaProxyUri()
+  {
+    return $this->baProxyUri;
+  }
   /**
    * @param string
    */

@@ -331,8 +331,11 @@ class Api(template_objects.CodeObject):
     scheme = url_parts.scheme or 'https'
     service_host = url_parts.netloc or _DEFAULT_SERVICE_HOST
     base_path = url_parts.path
-    if not root_url:
+    if root_url:
+      self._api.SetTemplateValue('rootUrlTemplate', root_url.replace('googleapis.com', 'UNIVERSE_DOMAIN'))
+    else:
       self._api.SetTemplateValue('rootUrl', '%s://%s/' % (scheme, service_host))
+      self._api.SetTemplateValue('rootUrlTemplate', '%s://%s/' % (scheme, service_host.replace('googleapis.com', 'UNIVERSE_DOMAIN')))
     if service_path is None:
       self._api.SetTemplateValue('servicePath', base_path[1:])
 

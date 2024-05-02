@@ -54,6 +54,8 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   public $operatingSystem;
   protected $orderedLiveTvProvidersType = AssistantApiLiveTvProvider::class;
   protected $orderedLiveTvProvidersDataType = 'array';
+  protected $robinCapabilitiesType = AssistantApiRobinCapabilities::class;
+  protected $robinCapabilitiesDataType = '';
   protected $selinaCapabilitiesType = AssistantApiSelinaCapabilites::class;
   protected $selinaCapabilitiesDataType = '';
   protected $settingsAppCapabilitiesType = AssistantApiSettingsAppCapabilities::class;
@@ -292,6 +294,20 @@ class AssistantApiSoftwareCapabilities extends \Google\Collection
   public function getOrderedLiveTvProviders()
   {
     return $this->orderedLiveTvProviders;
+  }
+  /**
+   * @param AssistantApiRobinCapabilities
+   */
+  public function setRobinCapabilities(AssistantApiRobinCapabilities $robinCapabilities)
+  {
+    $this->robinCapabilities = $robinCapabilities;
+  }
+  /**
+   * @return AssistantApiRobinCapabilities
+   */
+  public function getRobinCapabilities()
+  {
+    return $this->robinCapabilities;
   }
   /**
    * @param AssistantApiSelinaCapabilites

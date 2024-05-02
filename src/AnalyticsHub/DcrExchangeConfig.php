@@ -19,6 +19,43 @@ namespace Google\Service\AnalyticsHub;
 
 class DcrExchangeConfig extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $singleLinkedDatasetPerCleanroom;
+  /**
+   * @var bool
+   */
+  public $singleSelectedResourceSharingRestriction;
+
+  /**
+   * @param bool
+   */
+  public function setSingleLinkedDatasetPerCleanroom($singleLinkedDatasetPerCleanroom)
+  {
+    $this->singleLinkedDatasetPerCleanroom = $singleLinkedDatasetPerCleanroom;
+  }
+  /**
+   * @return bool
+   */
+  public function getSingleLinkedDatasetPerCleanroom()
+  {
+    return $this->singleLinkedDatasetPerCleanroom;
+  }
+  /**
+   * @param bool
+   */
+  public function setSingleSelectedResourceSharingRestriction($singleSelectedResourceSharingRestriction)
+  {
+    $this->singleSelectedResourceSharingRestriction = $singleSelectedResourceSharingRestriction;
+  }
+  /**
+   * @return bool
+   */
+  public function getSingleSelectedResourceSharingRestriction()
+  {
+    return $this->singleSelectedResourceSharingRestriction;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

@@ -17,6 +17,9 @@
 
 namespace Google\Service\AppHub\Resource;
 
+use Google\Service\AppHub\Application;
+use Google\Service\AppHub\ListApplicationsResponse;
+use Google\Service\AppHub\Operation;
 use Google\Service\AppHub\Policy;
 use Google\Service\AppHub\SetIamPolicyRequest;
 use Google\Service\AppHub\TestIamPermissionsRequest;
@@ -32,6 +35,81 @@ use Google\Service\AppHub\TestIamPermissionsResponse;
  */
 class ProjectsLocationsApplications extends \Google\Service\Resource
 {
+  /**
+   * Creates an Application in a host project and location. (applications.create)
+   *
+   * @param string $parent Required. Project and location to create Application
+   * in. Expected format: `projects/{project}/locations/{location}`.
+   * @param Application $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string applicationId Required. The Application identifier. Must
+   * contain only lowercase letters, numbers or hyphens, with the first character
+   * a letter, the last a letter or a number, and a 63 character maximum.
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes since the first
+   * request. For example, consider a situation where you make an initial request
+   * and the request times out. If you make the request again with the same
+   * request ID, the server can check if original operation with the same request
+   * ID was received, and if so, will ignore the second request. This prevents
+   * clients from accidentally creating duplicate commitments. The request ID must
+   * be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, Application $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Operation::class);
+  }
+  /**
+   * Deletes an Application in a host project and location. (applications.delete)
+   *
+   * @param string $name Required. Fully qualified name of the Application to
+   * delete. Expected format:
+   * `projects/{project}/locations/{location}/applications/{application}`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes after the first
+   * request. For example, consider a situation where you make an initial request
+   * and the request times out. If you make the request again with the same
+   * request ID, the server can check if original operation with the same request
+   * ID was received, and if so, will ignore the second request. This prevents
+   * clients from accidentally creating duplicate commitments. The request ID must
+   * be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Gets an Application in a host project and location. (applications.get)
+   *
+   * @param string $name Required. Fully qualified name of the Application to
+   * fetch. Expected format:
+   * `projects/{project}/locations/{location}/applications/{application}`.
+   * @param array $optParams Optional parameters.
+   * @return Application
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], Application::class);
+  }
   /**
    * Gets the access control policy for a resource. Returns an empty policy if the
    * resource exists and does not have a policy set. (applications.getIamPolicy)
@@ -62,6 +140,67 @@ class ProjectsLocationsApplications extends \Google\Service\Resource
     $params = ['resource' => $resource];
     $params = array_merge($params, $optParams);
     return $this->call('getIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Lists Applications in a host project and location.
+   * (applications.listProjectsLocationsApplications)
+   *
+   * @param string $parent Required. Project and location to list Applications on.
+   * Expected format: `projects/{project}/locations/{location}`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
+   * @opt_param int pageSize Optional. Requested page size. Server may return
+   * fewer items than requested. If unspecified, server will pick an appropriate
+   * default.
+   * @opt_param string pageToken Optional. A token identifying a page of results
+   * the server should return.
+   * @return ListApplicationsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsApplications($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListApplicationsResponse::class);
+  }
+  /**
+   * Updates an Application in a host project and location. (applications.patch)
+   *
+   * @param string $name Identifier. The resource name of an Application. Format:
+   * "projects/{host-project-id}/locations/{location}/applications/{application-
+   * id}"
+   * @param Application $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId Optional. An optional request ID to identify
+   * requests. Specify a unique request ID so that if you must retry your request,
+   * the server will know to ignore the request if it has already been completed.
+   * The server will guarantee that for at least 60 minutes since the first
+   * request. For example, consider a situation where you make an initial request
+   * and the request times out. If you make the request again with the same
+   * request ID, the server can check if original operation with the same request
+   * ID was received, and if so, will ignore the second request. This prevents
+   * clients from accidentally creating duplicate commitments. The request ID must
+   * be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask Required. Field mask is used to specify the
+   * fields to be overwritten in the Application resource by the update. The
+   * fields specified in the update_mask are relative to the resource, not the
+   * full request. The API changes the values of the fields as specified in the
+   * update_mask. The API ignores the values of all fields not covered by the
+   * update_mask. You can also unset a field by not specifying it in the updated
+   * message, but adding the field to the mask. This clears whatever value the
+   * field previously had.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, Application $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

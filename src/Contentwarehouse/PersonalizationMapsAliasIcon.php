@@ -40,6 +40,10 @@ class PersonalizationMapsAliasIcon extends \Google\Model
    */
   public $formattedAddress;
   /**
+   * @var bool
+   */
+  public $isAdsJoinCompliant;
+  /**
    * @var string
    */
   public $nickname;
@@ -143,6 +147,20 @@ class PersonalizationMapsAliasIcon extends \Google\Model
   public function getFormattedAddress()
   {
     return $this->formattedAddress;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsAdsJoinCompliant($isAdsJoinCompliant)
+  {
+    $this->isAdsJoinCompliant = $isAdsJoinCompliant;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsAdsJoinCompliant()
+  {
+    return $this->isAdsJoinCompliant;
   }
   /**
    * @param string

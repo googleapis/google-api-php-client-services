@@ -19,7 +19,7 @@ namespace Google\Service\Contentwarehouse;
 
 class RepositoryWebrefMdvcMetadataPerVertical extends \Google\Collection
 {
-  protected $collection_key = 'subVerticalFp';
+  protected $collection_key = 'generalizationIds';
   /**
    * @var string[]
    */
@@ -52,10 +52,6 @@ class RepositoryWebrefMdvcMetadataPerVertical extends \Google\Collection
    * @var int
    */
   public $resolutionPriority;
-  /**
-   * @var string[]
-   */
-  public $subVerticalFp;
   /**
    * @var string
    */
@@ -172,20 +168,6 @@ class RepositoryWebrefMdvcMetadataPerVertical extends \Google\Collection
   public function getResolutionPriority()
   {
     return $this->resolutionPriority;
-  }
-  /**
-   * @param string[]
-   */
-  public function setSubVerticalFp($subVerticalFp)
-  {
-    $this->subVerticalFp = $subVerticalFp;
-  }
-  /**
-   * @return string[]
-   */
-  public function getSubVerticalFp()
-  {
-    return $this->subVerticalFp;
   }
   /**
    * @param string

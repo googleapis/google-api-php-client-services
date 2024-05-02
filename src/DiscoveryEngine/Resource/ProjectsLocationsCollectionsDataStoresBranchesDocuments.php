@@ -17,10 +17,10 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaDocument;
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaImportDocumentsRequest;
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaListDocumentsResponse;
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1Document;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ImportDocumentsRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ListDocumentsResponse;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1PurgeDocumentsRequest;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 use Google\Service\DiscoveryEngine\GoogleProtobufEmpty;
 
@@ -40,7 +40,7 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * @param string $parent Required. The parent resource name, such as `projects/{
    * project}/locations/{location}/collections/{collection}/dataStores/{data_store
    * }/branches/{branch}`.
-   * @param GoogleCloudDiscoveryengineV1betaDocument $postBody
+   * @param GoogleCloudDiscoveryengineV1Document $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string documentId Required. The ID to use for the Document, which
@@ -51,14 +51,14 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * error is returned. This field must conform to
    * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
    * of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
-   * @return GoogleCloudDiscoveryengineV1betaDocument
+   * @return GoogleCloudDiscoveryengineV1Document
    * @throws \Google\Service\Exception
    */
-  public function create($parent, GoogleCloudDiscoveryengineV1betaDocument $postBody, $optParams = [])
+  public function create($parent, GoogleCloudDiscoveryengineV1Document $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('create', [$params], GoogleCloudDiscoveryengineV1betaDocument::class);
+    return $this->call('create', [$params], GoogleCloudDiscoveryengineV1Document::class);
   }
   /**
    * Deletes a Document. (documents.delete)
@@ -89,14 +89,14 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * `PERMISSION_DENIED` error is returned. If the requested Document does not
    * exist, a `NOT_FOUND` error is returned.
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDiscoveryengineV1betaDocument
+   * @return GoogleCloudDiscoveryengineV1Document
    * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoogleCloudDiscoveryengineV1betaDocument::class);
+    return $this->call('get', [$params], GoogleCloudDiscoveryengineV1Document::class);
   }
   /**
    * Bulk import of multiple Documents. Request processing may be synchronous.
@@ -106,12 +106,12 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * @param string $parent Required. The parent branch resource name, such as `pro
    * jects/{project}/locations/{location}/collections/{collection}/dataStores/{dat
    * a_store}/branches/{branch}`. Requires create/update permission.
-   * @param GoogleCloudDiscoveryengineV1betaImportDocumentsRequest $postBody
+   * @param GoogleCloudDiscoveryengineV1ImportDocumentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function import($parent, GoogleCloudDiscoveryengineV1betaImportDocumentsRequest $postBody, $optParams = [])
+  public function import($parent, GoogleCloudDiscoveryengineV1ImportDocumentsRequest $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
@@ -139,14 +139,14 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * page. When paginating, all other parameters provided to
    * DocumentService.ListDocuments must match the call that provided the page
    * token. Otherwise, an `INVALID_ARGUMENT` error is returned.
-   * @return GoogleCloudDiscoveryengineV1betaListDocumentsResponse
+   * @return GoogleCloudDiscoveryengineV1ListDocumentsResponse
    * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsCollectionsDataStoresBranchesDocuments($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], GoogleCloudDiscoveryengineV1betaListDocumentsResponse::class);
+    return $this->call('list', [$params], GoogleCloudDiscoveryengineV1ListDocumentsResponse::class);
   }
   /**
    * Updates a Document. (documents.patch)
@@ -155,19 +155,21 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * Format: `projects/{project}/locations/{location}/collections/{collection}/dat
    * aStores/{data_store}/branches/{branch}/documents/{document_id}`. This field
    * must be a UTF-8 encoded string with a length limit of 1024 characters.
-   * @param GoogleCloudDiscoveryengineV1betaDocument $postBody
+   * @param GoogleCloudDiscoveryengineV1Document $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowMissing If set to true, and the Document is not found, a
    * new Document will be created.
-   * @return GoogleCloudDiscoveryengineV1betaDocument
+   * @opt_param string updateMask Indicates which fields in the provided imported
+   * 'document' to update. If not set, will by default update all fields.
+   * @return GoogleCloudDiscoveryengineV1Document
    * @throws \Google\Service\Exception
    */
-  public function patch($name, GoogleCloudDiscoveryengineV1betaDocument $postBody, $optParams = [])
+  public function patch($name, GoogleCloudDiscoveryengineV1Document $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], GoogleCloudDiscoveryengineV1betaDocument::class);
+    return $this->call('patch', [$params], GoogleCloudDiscoveryengineV1Document::class);
   }
   /**
    * Permanently deletes all selected Documents in a branch. This process is
@@ -180,12 +182,12 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * @param string $parent Required. The parent resource name, such as `projects/{
    * project}/locations/{location}/collections/{collection}/dataStores/{data_store
    * }/branches/{branch}`.
-   * @param GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest $postBody
+   * @param GoogleCloudDiscoveryengineV1PurgeDocumentsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function purge($parent, GoogleCloudDiscoveryengineV1betaPurgeDocumentsRequest $postBody, $optParams = [])
+  public function purge($parent, GoogleCloudDiscoveryengineV1PurgeDocumentsRequest $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);

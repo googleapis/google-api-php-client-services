@@ -20,11 +20,27 @@ namespace Google\Service\Contentwarehouse;
 class ResearchScamV3Restrict extends \Google\Collection
 {
   protected $collection_key = 'numericNamespaces';
+  protected $customNamespacesType = ResearchScamCustomRestrictNamespace::class;
+  protected $customNamespacesDataType = 'array';
   protected $namespacesType = ResearchScamTokenNamespace::class;
   protected $namespacesDataType = 'array';
   protected $numericNamespacesType = ResearchScamNumericRestrictNamespace::class;
   protected $numericNamespacesDataType = 'array';
 
+  /**
+   * @param ResearchScamCustomRestrictNamespace[]
+   */
+  public function setCustomNamespaces($customNamespaces)
+  {
+    $this->customNamespaces = $customNamespaces;
+  }
+  /**
+   * @return ResearchScamCustomRestrictNamespace[]
+   */
+  public function getCustomNamespaces()
+  {
+    return $this->customNamespaces;
+  }
   /**
    * @param ResearchScamTokenNamespace[]
    */

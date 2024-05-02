@@ -57,6 +57,8 @@ class QualitySitemapTarget extends \Google\Collection
    * @var bool
    */
   public $sourceAnchor;
+  protected $sporcSignalsType = QualitySitemapSporcSignals::class;
+  protected $sporcSignalsDataType = '';
   /**
    * @var string
    */
@@ -209,6 +211,20 @@ class QualitySitemapTarget extends \Google\Collection
   public function getSourceAnchor()
   {
     return $this->sourceAnchor;
+  }
+  /**
+   * @param QualitySitemapSporcSignals
+   */
+  public function setSporcSignals(QualitySitemapSporcSignals $sporcSignals)
+  {
+    $this->sporcSignals = $sporcSignals;
+  }
+  /**
+   * @return QualitySitemapSporcSignals
+   */
+  public function getSporcSignals()
+  {
+    return $this->sporcSignals;
   }
   /**
    * @param string

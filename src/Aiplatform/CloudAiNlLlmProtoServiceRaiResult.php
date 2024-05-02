@@ -19,7 +19,7 @@ namespace Google\Service\Aiplatform;
 
 class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
 {
-  protected $collection_key = 'raiSignals';
+  protected $collection_key = 'translationRequestInfos';
   protected $aidaRecitationResultType = LanguageLabsAidaTrustRecitationProtoRecitationResult::class;
   protected $aidaRecitationResultDataType = '';
   /**
@@ -38,6 +38,8 @@ class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
   protected $languageFilterResultDataType = '';
   protected $raiSignalsType = CloudAiNlLlmProtoServiceRaiSignal::class;
   protected $raiSignalsDataType = 'array';
+  protected $translationRequestInfosType = LearningGenaiRootTranslationRequestInfo::class;
+  protected $translationRequestInfosDataType = 'array';
   /**
    * @var bool
    */
@@ -134,6 +136,20 @@ class CloudAiNlLlmProtoServiceRaiResult extends \Google\Collection
   public function getRaiSignals()
   {
     return $this->raiSignals;
+  }
+  /**
+   * @param LearningGenaiRootTranslationRequestInfo[]
+   */
+  public function setTranslationRequestInfos($translationRequestInfos)
+  {
+    $this->translationRequestInfos = $translationRequestInfos;
+  }
+  /**
+   * @return LearningGenaiRootTranslationRequestInfo[]
+   */
+  public function getTranslationRequestInfos()
+  {
+    return $this->translationRequestInfos;
   }
   /**
    * @param bool

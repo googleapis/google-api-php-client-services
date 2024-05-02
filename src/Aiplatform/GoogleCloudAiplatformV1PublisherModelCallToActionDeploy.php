@@ -29,6 +29,10 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
   protected $containerSpecDataType = '';
   protected $dedicatedResourcesType = GoogleCloudAiplatformV1DedicatedResources::class;
   protected $dedicatedResourcesDataType = '';
+  /**
+   * @var string
+   */
+  public $deployTaskName;
   protected $largeModelReferenceType = GoogleCloudAiplatformV1LargeModelReference::class;
   protected $largeModelReferenceDataType = '';
   /**
@@ -103,6 +107,20 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
   public function getDedicatedResources()
   {
     return $this->dedicatedResources;
+  }
+  /**
+   * @param string
+   */
+  public function setDeployTaskName($deployTaskName)
+  {
+    $this->deployTaskName = $deployTaskName;
+  }
+  /**
+   * @return string
+   */
+  public function getDeployTaskName()
+  {
+    return $this->deployTaskName;
   }
   /**
    * @param GoogleCloudAiplatformV1LargeModelReference

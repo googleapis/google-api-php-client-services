@@ -17,8 +17,11 @@
 
 namespace Google\Service\AppHub\Resource;
 
+use Google\Service\AppHub\DetachServiceProjectAttachmentRequest;
+use Google\Service\AppHub\DetachServiceProjectAttachmentResponse;
 use Google\Service\AppHub\ListLocationsResponse;
 use Google\Service\AppHub\Location;
+use Google\Service\AppHub\LookupServiceProjectAttachmentResponse;
 
 /**
  * The "locations" collection of methods.
@@ -30,6 +33,25 @@ use Google\Service\AppHub\Location;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Detaches a service project from a host project. You can call this API from
+   * any service project without needing access to the host project that it is
+   * attached to. (locations.detachServiceProjectAttachment)
+   *
+   * @param string $name Required. Service project id and location to detach from
+   * a host project. Only global location is supported. Expected format:
+   * `projects/{project}/locations/{location}`.
+   * @param DetachServiceProjectAttachmentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DetachServiceProjectAttachmentResponse
+   * @throws \Google\Service\Exception
+   */
+  public function detachServiceProjectAttachment($name, DetachServiceProjectAttachmentRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('detachServiceProjectAttachment', [$params], DetachServiceProjectAttachmentResponse::class);
+  }
   /**
    * Gets information about a location. (locations.get)
    *
@@ -67,6 +89,24 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListLocationsResponse::class);
+  }
+  /**
+   * Lists a service project attachment for a given service project. You can call
+   * this API from any project to find if it is attached to a host project.
+   * (locations.lookupServiceProjectAttachment)
+   *
+   * @param string $name Required. Service project ID and location to lookup
+   * service project attachment for. Only global location is supported. Expected
+   * format: `projects/{project}/locations/{location}`.
+   * @param array $optParams Optional parameters.
+   * @return LookupServiceProjectAttachmentResponse
+   * @throws \Google\Service\Exception
+   */
+  public function lookupServiceProjectAttachment($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('lookupServiceProjectAttachment', [$params], LookupServiceProjectAttachmentResponse::class);
   }
 }
 

@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class CloudAiNlLlmProtoServiceMessageMetadata extends \Google\Collection
 {
   protected $collection_key = 'outputFilterInfo';
+  protected $factualityDebugMetadataType = LearningGenaiRootPerRequestProcessorDebugMetadataFactualityDebugMetadata::class;
+  protected $factualityDebugMetadataDataType = '';
   protected $inputFilterInfoType = LearningServingLlmMessageMetadata::class;
   protected $inputFilterInfoDataType = '';
   protected $modelRoutingDecisionType = LearningGenaiRootRoutingDecision::class;
@@ -27,6 +29,20 @@ class CloudAiNlLlmProtoServiceMessageMetadata extends \Google\Collection
   protected $outputFilterInfoType = LearningServingLlmMessageMetadata::class;
   protected $outputFilterInfoDataType = 'array';
 
+  /**
+   * @param LearningGenaiRootPerRequestProcessorDebugMetadataFactualityDebugMetadata
+   */
+  public function setFactualityDebugMetadata(LearningGenaiRootPerRequestProcessorDebugMetadataFactualityDebugMetadata $factualityDebugMetadata)
+  {
+    $this->factualityDebugMetadata = $factualityDebugMetadata;
+  }
+  /**
+   * @return LearningGenaiRootPerRequestProcessorDebugMetadataFactualityDebugMetadata
+   */
+  public function getFactualityDebugMetadata()
+  {
+    return $this->factualityDebugMetadata;
+  }
   /**
    * @param LearningServingLlmMessageMetadata
    */

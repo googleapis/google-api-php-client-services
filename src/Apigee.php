@@ -115,6 +115,7 @@ class Apigee extends \Google\Service
   public $organizations_operations;
   public $organizations_optimizedHostStats;
   public $organizations_reports;
+  public $organizations_securityAssessmentResults;
   public $organizations_securityProfiles;
   public $organizations_securityProfiles_environments;
   public $organizations_sharedflows;
@@ -122,7 +123,9 @@ class Apigee extends \Google\Service
   public $organizations_sharedflows_revisions;
   public $organizations_sharedflows_revisions_deployments;
   public $organizations_sites_apicategories;
+  public $organizations_sites_apidocs;
   public $projects;
+  public $rootUrlTemplate;
 
   /**
    * Constructs the internal representation of the Apigee service.
@@ -135,6 +138,7 @@ class Apigee extends \Google\Service
   {
     parent::__construct($clientOrConfig);
     $this->rootUrl = $rootUrl ?: 'https://apigee.googleapis.com/';
+    $this->rootUrlTemplate = $rootUrl ?: 'https://apigee.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
     $this->version = 'v1';
@@ -4628,6 +4632,26 @@ class Apigee extends \Google\Service
           ]
         ]
     );
+    $this->organizations_securityAssessmentResults = new Apigee\Resource\OrganizationsSecurityAssessmentResults(
+        $this,
+        $this->serviceName,
+        'securityAssessmentResults',
+        [
+          'methods' => [
+            'batchCompute' => [
+              'path' => 'v1/{+name}:batchCompute',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->organizations_securityProfiles = new Apigee\Resource\OrganizationsSecurityProfiles(
         $this,
         $this->serviceName,
@@ -4963,6 +4987,94 @@ class Apigee extends \Google\Service
                 ],
               ],
             ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_sites_apidocs = new Apigee\Resource\OrganizationsSitesApidocs(
+        $this,
+        $this->serviceName,
+        'apidocs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/apidocs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getDocumentation' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/apidocs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'updateDocumentation' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [

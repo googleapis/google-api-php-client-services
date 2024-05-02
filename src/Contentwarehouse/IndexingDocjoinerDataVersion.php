@@ -69,6 +69,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $crawzallSignalDataType = '';
   protected $creatorType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $creatorDataType = '';
+  protected $creatorjoinsEmbeddedUgcAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $creatorjoinsEmbeddedUgcAnnotationDataType = '';
   protected $datacommonsDatacommonsTriplesSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $datacommonsDatacommonsTriplesSignalDataType = '';
   protected $dateAnnotationTagsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -93,6 +95,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $emailAddressAnnotationsDataType = '';
   protected $extractedBookInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $extractedBookInfoDataType = '';
+  protected $fastDataPropagationTestSignalContentType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $fastDataPropagationTestSignalContentDataType = '';
   protected $fatcatCompactDocClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $fatcatCompactDocClassificationDataType = '';
   protected $fatcatSiteVerticalsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -107,6 +111,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $foundationSplinterSignalDataType = '';
   protected $freshboxFreshboxArticleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $freshboxFreshboxArticleAnnotationDataType = '';
+  protected $geoCarsVehicleDetailsPageAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $geoCarsVehicleDetailsPageAnnotationDataType = '';
   protected $geoPointAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $geoPointAnnotationsDataType = '';
   protected $geoPointResolutionType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -233,6 +239,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $indexingCenterpieceCenterPieceAnnotationsDataType = '';
   protected $indexingCenterpieceCenterpieceChecksumsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCenterpieceCenterpieceChecksumsDataType = '';
+  protected $indexingCenterpieceCenterpieceUnifiedAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $indexingCenterpieceCenterpieceUnifiedAnnotationsDataType = '';
   protected $indexingCenterpieceComponentLearningSourceType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingCenterpieceComponentLearningSourceDataType = '';
   protected $indexingCenterpieceSectionTitleAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -263,6 +271,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $indexingDocskeletonRepeatedPatternRepeatedPatternAnnotationDataType = '';
   protected $indexingDupsLocalizedLocalizedClusterType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingDupsLocalizedLocalizedClusterDataType = '';
+  protected $indexingDupsNearDupsResultType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $indexingDupsNearDupsResultDataType = '';
   protected $indexingFreshSchedulerFreshSchedulerDoubleInstantExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingFreshSchedulerFreshSchedulerDoubleInstantExtensionDataType = '';
   protected $indexingFreshSchedulerOutlinkDiscoveryHistoricalHubsSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -337,6 +347,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $indexingSelectionFreshdocsPassthroughExtensionDataType = '';
   protected $indexingSelectionImageImageSelectionAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionImageImageSelectionAttachmentDataType = '';
+  protected $indexingSelectionIndexCompositionExperimentExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $indexingSelectionIndexCompositionExperimentExtensionDataType = '';
   protected $indexingSelectionLanguageExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionLanguageExtensionDataType = '';
   protected $indexingSelectionPriorScorerParameterSetType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -347,6 +359,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $indexingSelectionProtoBasePromotionInfoDataType = '';
   protected $indexingSelectionTensorFlowExtensionType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSelectionTensorFlowExtensionDataType = '';
+  protected $indexingServiceFirsttimesCrawlFirsttimesSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $indexingServiceFirsttimesCrawlFirsttimesSignalsDataType = '';
   protected $indexingSignalAggregatorUrlPatternSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $indexingSignalAggregatorUrlPatternSignalsDataType = '';
   protected $indexingSignalsAccumulatedOnlineSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -419,6 +433,294 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $knowledgeMiningShoppingBrowseonomyDataDataType = '';
   protected $knowledgeMiningShoppingTwdModelVersionsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMiningShoppingTwdModelVersionsDataType = '';
+  protected $knowledgeMumConsumerNewsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumConsumerNewsAnnotationDataType = '';
+  protected $knowledgeMumDcuAccusatoryTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuAccusatoryTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuAmusingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuAmusingAnnotationDataType = '';
+  protected $knowledgeMumDcuBaseCuriosityAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBaseCuriosityAnnotationDataType = '';
+  protected $knowledgeMumDcuBaseCuriosityV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBaseCuriosityV2AnnotationDataType = '';
+  protected $knowledgeMumDcuBaseCuriosityV3AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBaseCuriosityV3AnnotationDataType = '';
+  protected $knowledgeMumDcuBeginnerAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBeginnerAnnotationDataType = '';
+  protected $knowledgeMumDcuBeginnerTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBeginnerTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuBoringAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBoringAnnotationDataType = '';
+  protected $knowledgeMumDcuBoringVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBoringVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuBoringVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBoringVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuBroadTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBroadTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuBroadlyConsumableAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuBroadlyConsumableAnnotationDataType = '';
+  protected $knowledgeMumDcuClickbaitPlusAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuClickbaitPlusAnnotationDataType = '';
+  protected $knowledgeMumDcuClickbaitPlusCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuClickbaitPlusCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuCommercialNewsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCommercialNewsAnnotationDataType = '';
+  protected $knowledgeMumDcuCommercialVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCommercialVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuCommercialVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCommercialVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuCommercialVideoV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCommercialVideoV2AnnotationDataType = '';
+  protected $knowledgeMumDcuCommercialVideoV2CandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCommercialVideoV2CandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuComplexAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuComplexAnnotationDataType = '';
+  protected $knowledgeMumDcuCoolProjectVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCoolProjectVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuCoolProjectVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCoolProjectVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuCoolProjectVideoV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCoolProjectVideoV2AnnotationDataType = '';
+  protected $knowledgeMumDcuCoolProjectVideoV2CandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCoolProjectVideoV2CandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuCreativeVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCreativeVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuCreativeVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCreativeVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuCuteShortVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCuteShortVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuCuteShortVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuCuteShortVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuDepressingTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDepressingTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuDietaryAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDietaryAnnotationDataType = '';
+  protected $knowledgeMumDcuDisasterAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDisasterAnnotationDataType = '';
+  protected $knowledgeMumDcuDisasterV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDisasterV2AnnotationDataType = '';
+  protected $knowledgeMumDcuDiscriminatoryAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDiscriminatoryAnnotationDataType = '';
+  protected $knowledgeMumDcuDisgustingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDisgustingAnnotationDataType = '';
+  protected $knowledgeMumDcuDisgustingV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDisgustingV2AnnotationDataType = '';
+  protected $knowledgeMumDcuDismissRatioUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDismissRatioUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuDistanceSensitiveAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDistanceSensitiveAnnotationDataType = '';
+  protected $knowledgeMumDcuDiyProjectVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDiyProjectVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuDiyProjectVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDiyProjectVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuDqsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDqsAnnotationDataType = '';
+  protected $knowledgeMumDcuDramaticTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDramaticTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuDryFactsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuDryFactsAnnotationDataType = '';
+  protected $knowledgeMumDcuEasyReadAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEasyReadAnnotationDataType = '';
+  protected $knowledgeMumDcuEducationalVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEducationalVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuEducationalVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEducationalVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingVideoV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingVideoV2AnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingVideoV2CandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingVideoV2CandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingVideoV3AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingVideoV3AnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingVideoV3CandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingVideoV3CandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingnessAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingnessAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingnessLeAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingnessLeAnnotationDataType = '';
+  protected $knowledgeMumDcuEngagingnessMmAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEngagingnessMmAnnotationDataType = '';
+  protected $knowledgeMumDcuEnjoyableMutedVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEnjoyableMutedVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuEntertainingVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEntertainingVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuEntertainingVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuEntertainingVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuFactualAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFactualAnnotationDataType = '';
+  protected $knowledgeMumDcuFlavorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFlavorAnnotationDataType = '';
+  protected $knowledgeMumDcuFlavorMmAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFlavorMmAnnotationDataType = '';
+  protected $knowledgeMumDcuFlavorMmCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFlavorMmCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuFlavorMmV2CandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFlavorMmV2CandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuFunFactsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFunFactsAnnotationDataType = '';
+  protected $knowledgeMumDcuFunVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFunVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuFunVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFunVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuFunnyShortVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFunnyShortVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuFunnyShortVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuFunnyShortVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuGameplayVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuGameplayVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuGameplayVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuGameplayVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuGoodCommercialAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuGoodCommercialAnnotationDataType = '';
+  protected $knowledgeMumDcuGossipNewsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuGossipNewsAnnotationDataType = '';
+  protected $knowledgeMumDcuHeartRatioUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuHeartRatioUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuHowToVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuHowToVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuHowToVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuHowToVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuInspiredQueryRateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInspiredQueryRateAnnotationDataType = '';
+  protected $knowledgeMumDcuInspiringAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInspiringAnnotationDataType = '';
+  protected $knowledgeMumDcuInspiringTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInspiringTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuInspiringUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInspiringUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuInspiringV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInspiringV2AnnotationDataType = '';
+  protected $knowledgeMumDcuIntelligentAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuIntelligentAnnotationDataType = '';
+  protected $knowledgeMumDcuInterviewVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInterviewVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuInterviewVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuInterviewVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuLectureVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuLectureVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuLectureVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuLectureVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuLifehackVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuLifehackVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuLifehackVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuLifehackVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuLifestyleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuLifestyleAnnotationDataType = '';
+  protected $knowledgeMumDcuListicleTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuListicleTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuMayhemNewsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuMayhemNewsAnnotationDataType = '';
+  protected $knowledgeMumDcuMediaVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuMediaVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuMediaVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuMediaVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuNegativeToneAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuNegativeToneAnnotationDataType = '';
+  protected $knowledgeMumDcuNewsVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuNewsVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuNewsVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuNewsVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuNewsyTitleAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuNewsyTitleAnnotationDataType = '';
+  protected $knowledgeMumDcuOpinionPiecesAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuOpinionPiecesAnnotationDataType = '';
+  protected $knowledgeMumDcuPersonalNarrativeAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuPersonalNarrativeAnnotationDataType = '';
+  protected $knowledgeMumDcuPracticalAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuPracticalAnnotationDataType = '';
+  protected $knowledgeMumDcuPracticalVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuPracticalVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuPracticalVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuPracticalVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuPredictedTrafficRatioAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuPredictedTrafficRatioAnnotationDataType = '';
+  protected $knowledgeMumDcuProductReviewVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuProductReviewVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuProductReviewVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuProductReviewVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuProfanityAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuProfanityAnnotationDataType = '';
+  protected $knowledgeMumDcuProfanityV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuProfanityV2AnnotationDataType = '';
+  protected $knowledgeMumDcuRacyAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuRacyAnnotationDataType = '';
+  protected $knowledgeMumDcuRacyV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuRacyV2AnnotationDataType = '';
+  protected $knowledgeMumDcuRealLifeTipsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuRealLifeTipsAnnotationDataType = '';
+  protected $knowledgeMumDcuRemoteRelevanceAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuRemoteRelevanceAnnotationDataType = '';
+  protected $knowledgeMumDcuReviewsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuReviewsAnnotationDataType = '';
+  protected $knowledgeMumDcuSensationalClickbaitAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuSensationalClickbaitAnnotationDataType = '';
+  protected $knowledgeMumDcuSensationalClickbaitV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuSensationalClickbaitV2AnnotationDataType = '';
+  protected $knowledgeMumDcuSensationalClickbaitV3AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuSensationalClickbaitV3AnnotationDataType = '';
+  protected $knowledgeMumDcuSexualUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuSexualUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuShareRatioUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuShareRatioUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuStalenessAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuStalenessAnnotationDataType = '';
+  protected $knowledgeMumDcuStoryAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuStoryAnnotationDataType = '';
+  protected $knowledgeMumDcuStorytellingVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuStorytellingVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuStorytellingVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuStorytellingVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuThoughtProvokingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuThoughtProvokingAnnotationDataType = '';
+  protected $knowledgeMumDcuThoughtProvokingV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuThoughtProvokingV2AnnotationDataType = '';
+  protected $knowledgeMumDcuTimeSensitiveAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuTimeSensitiveAnnotationDataType = '';
+  protected $knowledgeMumDcuTimelessAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuTimelessAnnotationDataType = '';
+  protected $knowledgeMumDcuTimelessVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuTimelessVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuTimelessVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuTimelessVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuTrailerVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuTrailerVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuTrailerVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuTrailerVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuUsefulUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuUsefulUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuUsefulVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuUsefulVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuUsefulVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuUsefulVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuVideoFlavorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuVideoFlavorAnnotationDataType = '';
+  protected $knowledgeMumDcuViolenceAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuViolenceAnnotationDataType = '';
+  protected $knowledgeMumDcuViolenceV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuViolenceV2AnnotationDataType = '';
+  protected $knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotationDataType = '';
+  protected $knowledgeMumDcuVisuallyEngagingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuVisuallyEngagingAnnotationDataType = '';
+  protected $knowledgeMumDcuVisuallyEngagingV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuVisuallyEngagingV2AnnotationDataType = '';
+  protected $knowledgeMumDcuVlogVideoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuVlogVideoAnnotationDataType = '';
+  protected $knowledgeMumDcuVlogVideoCandidateAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuVlogVideoCandidateAnnotationDataType = '';
+  protected $knowledgeMumDcuWellWrittenAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuWellWrittenAnnotationDataType = '';
+  protected $knowledgeMumDcuWithholdingInfoAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuWithholdingInfoAnnotationDataType = '';
+  protected $knowledgeMumDcuWithholdingInfoV2AnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuWithholdingInfoV2AnnotationDataType = '';
+  protected $knowledgeMumDcuWorthyHeadlineNewsAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $knowledgeMumDcuWorthyHeadlineNewsAnnotationDataType = '';
   protected $knowledgeMumStoryTeaserAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $knowledgeMumStoryTeaserAnnotationDataType = '';
   protected $knowledgeMumStorytimeStampEngagementAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -449,12 +751,16 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $metawebExtractionDocumentEvidenceDataType = '';
   protected $modernFormatContentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $modernFormatContentDataType = '';
+  protected $multiverseHubSpokesSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $multiverseHubSpokesSignalDataType = '';
   protected $navBoostDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $navBoostDocumentDataType = '';
   protected $navboostType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $navboostDataType = '';
   protected $newsAnnotationsContentAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsAnnotationsContentAnnotationsDataType = '';
+  protected $newsCorpusDifferentiatedContentAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $newsCorpusDifferentiatedContentAnnotationDataType = '';
   protected $newsCorpusHubPageAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $newsCorpusHubPageAnnotationsDataType = '';
   protected $newsCorpusLeafPageAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -511,6 +817,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $nlxDocAnnotationDataType = '';
   protected $noindexedImageDataListType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $noindexedImageDataListDataType = '';
+  protected $nsrFdpDataType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $nsrFdpDataDataType = '';
   protected $numberAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $numberAnnotationsDataType = '';
   protected $oceanLibrarianBookMetadataType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -577,6 +885,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $oceanRightsOptOutRequestDataType = '';
   protected $officialPagesQuerySetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $officialPagesQuerySetDataType = '';
+  protected $orbitIntentsType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $orbitIntentsDataType = '';
   protected $perDocLangidDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $perDocLangidDataDataType = '';
   protected $personalizationGameWebeventsConsolidatedEventsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -611,6 +921,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $qualityChardPredictedQueryFringeScoreDataType = '';
   protected $qualityChardPredictedXlqType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityChardPredictedXlqDataType = '';
+  protected $qualityChardPredictedXlqSevereHoaxType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityChardPredictedXlqSevereHoaxDataType = '';
   protected $qualityContraSelectedAttributionsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityContraSelectedAttributionsDataType = '';
   protected $qualityCopiaFireflySiteInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -635,6 +947,12 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $qualityExploreQueryableFeedHashtagListAnnotationDataType = '';
   protected $qualityExploreQueryableFeedTopicFeedScoringSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityExploreQueryableFeedTopicFeedScoringSignalsDataType = '';
+  protected $qualityFlavorsFlavorSetType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityFlavorsFlavorSetDataType = '';
+  protected $qualityForumrankingUgcPageQualityDocumentAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityForumrankingUgcPageQualityDocumentAnnotationDataType = '';
+  protected $qualityFreshnessAbacusInstantNavBoostDocumentAnonType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityFreshnessAbacusInstantNavBoostDocumentAnonDataType = '';
   protected $qualityFreshnessAbacusInstantNegativeClicksInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityFreshnessAbacusInstantNegativeClicksInfoDataType = '';
   protected $qualityFringeFringeQueryPriorType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -655,6 +973,12 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $qualityImprovImprovAnchorsDataType = '';
   protected $qualityLisztomaniaDocumentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityLisztomaniaDocumentDataType = '';
+  protected $qualityModernProtoUcpDocInfoType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityModernProtoUcpDocInfoDataType = '';
+  protected $qualityModernProtoUcpServingDataType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityModernProtoUcpServingDataDataType = '';
+  protected $qualityNaturalPearlsNaturalPearlsDocumentAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityNaturalPearlsNaturalPearlsDocumentAnnotationDataType = '';
   protected $qualityNavboostCrapsCrapsDataType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityNavboostCrapsCrapsDataDataType = '';
   protected $qualityNavboostCrapsCrapsPatternSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -697,10 +1021,14 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $qualityPanopticVoiceUgcAnnotationDataType = '';
   protected $qualityPeoplesearchNamedetectorNameOccurrenceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPeoplesearchNamedetectorNameOccurrenceAnnotationsDataType = '';
+  protected $qualityPeoplesearchNamedetectorNavboostNameAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityPeoplesearchNamedetectorNavboostNameAnnotationsDataType = '';
   protected $qualityPopfeedsChromeBackgroundAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsChromeBackgroundAnnotationDataType = '';
   protected $qualityPopfeedsHubDataAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsHubDataAnnotationsDataType = '';
+  protected $qualityPopfeedsTopicStatsTopicScoreAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityPopfeedsTopicStatsTopicScoreAnnotationDataType = '';
   protected $qualityPopfeedsUrlPredictionAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityPopfeedsUrlPredictionAnnotationsDataType = '';
   protected $qualityPopfeedsUrlSourceAnnotationsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -747,6 +1075,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $qualitySearchoversiteAnnotatorStructuredResultsAnnotationDataType = '';
   protected $qualitySherlockKnexAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualitySherlockKnexAnnotationDataType = '';
+  protected $qualityShoppingDtcDomainsSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $qualityShoppingDtcDomainsSignalDataType = '';
   protected $qualityShoppingProductReviewType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $qualityShoppingProductReviewDataType = '';
   protected $qualityShoppingProductReviewPageType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -863,6 +1193,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $repositoryProtiumWikiaWikiaInfoDataType = '';
   protected $repositoryUpdaterIndexSelectionAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryUpdaterIndexSelectionAttachmentDataType = '';
+  protected $repositoryWebrefAuthorExtractionAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $repositoryWebrefAuthorExtractionAnnotationDataType = '';
   protected $repositoryWebrefEntityJoinType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefEntityJoinDataType = '';
   protected $repositoryWebrefExperimentalWebrefEntitiesAttachmentType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -875,6 +1207,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $repositoryWebrefPageClassificationAnchorSignalsSetDataType = '';
   protected $repositoryWebrefPageClassificationSignalsSetType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPageClassificationSignalsSetDataType = '';
+  protected $repositoryWebrefPiannoDocumentIntentType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $repositoryWebrefPiannoDocumentIntentDataType = '';
   protected $repositoryWebrefPiannoDocumentIntentsType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $repositoryWebrefPiannoDocumentIntentsDataType = '';
   protected $repositoryWebrefPiannoTvSeasonEpisodeType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -945,6 +1279,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $richsnippetsPageMapAnnotationsDataType = '';
   protected $richsnippetsSchemaThingType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $richsnippetsSchemaThingDataType = '';
+  protected $robotsPolicyType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $robotsPolicyDataType = '';
   protected $rosettaLanguageType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $rosettaLanguageDataType = '';
   protected $safesearchPageClassifierOutputType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -1007,6 +1343,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $spamScamUnauthoritativeSiteDataType = '';
   protected $spamTokensSpamTokensAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $spamTokensSpamTokensAnnotationDataType = '';
+  protected $spambrainDomainSitechunkDataType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $spambrainDomainSitechunkDataDataType = '';
   protected $tableTalkStrideOfferPagePriceAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $tableTalkStrideOfferPagePriceAnnotationDataType = '';
   protected $tasksTabaTabaDocSignalsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -1021,6 +1359,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $timeRangeAnnotationsDataType = '';
   protected $travelAssistantTravelDocClassificationType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $travelAssistantTravelDocClassificationDataType = '';
+  protected $trawlerEffectiveRobotsContentType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $trawlerEffectiveRobotsContentDataType = '';
   protected $ucpSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $ucpSignalDataType = '';
   protected $udrConverterDocumentShoppingDataType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -1063,6 +1403,8 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   protected $videoCrawlYoutubeEmbedSignalDataType = '';
   protected $videoScoringSignalType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoScoringSignalDataType = '';
+  protected $videoShoppingVideoShoppingAnnotationType = IndexingDocjoinerDataVersionVersionInfo::class;
+  protected $videoShoppingVideoShoppingAnnotationDataType = '';
   protected $videoWebGalleryType = IndexingDocjoinerDataVersionVersionInfo::class;
   protected $videoWebGalleryDataType = '';
   protected $videoYoutubeLiveCardioCardioStatsType = IndexingDocjoinerDataVersionVersionInfo::class;
@@ -1439,6 +1781,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setCreatorjoinsEmbeddedUgcAnnotation(IndexingDocjoinerDataVersionVersionInfo $creatorjoinsEmbeddedUgcAnnotation)
+  {
+    $this->creatorjoinsEmbeddedUgcAnnotation = $creatorjoinsEmbeddedUgcAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getCreatorjoinsEmbeddedUgcAnnotation()
+  {
+    return $this->creatorjoinsEmbeddedUgcAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setDatacommonsDatacommonsTriplesSignal(IndexingDocjoinerDataVersionVersionInfo $datacommonsDatacommonsTriplesSignal)
   {
     $this->datacommonsDatacommonsTriplesSignal = $datacommonsDatacommonsTriplesSignal;
@@ -1607,6 +1963,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setFastDataPropagationTestSignalContent(IndexingDocjoinerDataVersionVersionInfo $fastDataPropagationTestSignalContent)
+  {
+    $this->fastDataPropagationTestSignalContent = $fastDataPropagationTestSignalContent;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getFastDataPropagationTestSignalContent()
+  {
+    return $this->fastDataPropagationTestSignalContent;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setFatcatCompactDocClassification(IndexingDocjoinerDataVersionVersionInfo $fatcatCompactDocClassification)
   {
     $this->fatcatCompactDocClassification = $fatcatCompactDocClassification;
@@ -1701,6 +2071,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getFreshboxFreshboxArticleAnnotation()
   {
     return $this->freshboxFreshboxArticleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setGeoCarsVehicleDetailsPageAnnotation(IndexingDocjoinerDataVersionVersionInfo $geoCarsVehicleDetailsPageAnnotation)
+  {
+    $this->geoCarsVehicleDetailsPageAnnotation = $geoCarsVehicleDetailsPageAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getGeoCarsVehicleDetailsPageAnnotation()
+  {
+    return $this->geoCarsVehicleDetailsPageAnnotation;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -2587,6 +2971,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setIndexingCenterpieceCenterpieceUnifiedAnnotations(IndexingDocjoinerDataVersionVersionInfo $indexingCenterpieceCenterpieceUnifiedAnnotations)
+  {
+    $this->indexingCenterpieceCenterpieceUnifiedAnnotations = $indexingCenterpieceCenterpieceUnifiedAnnotations;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getIndexingCenterpieceCenterpieceUnifiedAnnotations()
+  {
+    return $this->indexingCenterpieceCenterpieceUnifiedAnnotations;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setIndexingCenterpieceComponentLearningSource(IndexingDocjoinerDataVersionVersionInfo $indexingCenterpieceComponentLearningSource)
   {
     $this->indexingCenterpieceComponentLearningSource = $indexingCenterpieceComponentLearningSource;
@@ -2793,6 +3191,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getIndexingDupsLocalizedLocalizedCluster()
   {
     return $this->indexingDupsLocalizedLocalizedCluster;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setIndexingDupsNearDupsResult(IndexingDocjoinerDataVersionVersionInfo $indexingDupsNearDupsResult)
+  {
+    $this->indexingDupsNearDupsResult = $indexingDupsNearDupsResult;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getIndexingDupsNearDupsResult()
+  {
+    return $this->indexingDupsNearDupsResult;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -3315,6 +3727,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setIndexingSelectionIndexCompositionExperimentExtension(IndexingDocjoinerDataVersionVersionInfo $indexingSelectionIndexCompositionExperimentExtension)
+  {
+    $this->indexingSelectionIndexCompositionExperimentExtension = $indexingSelectionIndexCompositionExperimentExtension;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getIndexingSelectionIndexCompositionExperimentExtension()
+  {
+    return $this->indexingSelectionIndexCompositionExperimentExtension;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setIndexingSelectionLanguageExtension(IndexingDocjoinerDataVersionVersionInfo $indexingSelectionLanguageExtension)
   {
     $this->indexingSelectionLanguageExtension = $indexingSelectionLanguageExtension;
@@ -3381,6 +3807,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getIndexingSelectionTensorFlowExtension()
   {
     return $this->indexingSelectionTensorFlowExtension;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setIndexingServiceFirsttimesCrawlFirsttimesSignals(IndexingDocjoinerDataVersionVersionInfo $indexingServiceFirsttimesCrawlFirsttimesSignals)
+  {
+    $this->indexingServiceFirsttimesCrawlFirsttimesSignals = $indexingServiceFirsttimesCrawlFirsttimesSignals;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getIndexingServiceFirsttimesCrawlFirsttimesSignals()
+  {
+    return $this->indexingServiceFirsttimesCrawlFirsttimesSignals;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -3889,6 +4329,2022 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setKnowledgeMumConsumerNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumConsumerNewsAnnotation)
+  {
+    $this->knowledgeMumConsumerNewsAnnotation = $knowledgeMumConsumerNewsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumConsumerNewsAnnotation()
+  {
+    return $this->knowledgeMumConsumerNewsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuAccusatoryTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuAccusatoryTitleAnnotation)
+  {
+    $this->knowledgeMumDcuAccusatoryTitleAnnotation = $knowledgeMumDcuAccusatoryTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuAccusatoryTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuAccusatoryTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuAmusingAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuAmusingAnnotation)
+  {
+    $this->knowledgeMumDcuAmusingAnnotation = $knowledgeMumDcuAmusingAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuAmusingAnnotation()
+  {
+    return $this->knowledgeMumDcuAmusingAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBaseCuriosityAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBaseCuriosityAnnotation)
+  {
+    $this->knowledgeMumDcuBaseCuriosityAnnotation = $knowledgeMumDcuBaseCuriosityAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBaseCuriosityAnnotation()
+  {
+    return $this->knowledgeMumDcuBaseCuriosityAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBaseCuriosityV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBaseCuriosityV2Annotation)
+  {
+    $this->knowledgeMumDcuBaseCuriosityV2Annotation = $knowledgeMumDcuBaseCuriosityV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBaseCuriosityV2Annotation()
+  {
+    return $this->knowledgeMumDcuBaseCuriosityV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBaseCuriosityV3Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBaseCuriosityV3Annotation)
+  {
+    $this->knowledgeMumDcuBaseCuriosityV3Annotation = $knowledgeMumDcuBaseCuriosityV3Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBaseCuriosityV3Annotation()
+  {
+    return $this->knowledgeMumDcuBaseCuriosityV3Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBeginnerAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBeginnerAnnotation)
+  {
+    $this->knowledgeMumDcuBeginnerAnnotation = $knowledgeMumDcuBeginnerAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBeginnerAnnotation()
+  {
+    return $this->knowledgeMumDcuBeginnerAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBeginnerTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBeginnerTitleAnnotation)
+  {
+    $this->knowledgeMumDcuBeginnerTitleAnnotation = $knowledgeMumDcuBeginnerTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBeginnerTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuBeginnerTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBoringAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBoringAnnotation)
+  {
+    $this->knowledgeMumDcuBoringAnnotation = $knowledgeMumDcuBoringAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBoringAnnotation()
+  {
+    return $this->knowledgeMumDcuBoringAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBoringVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBoringVideoAnnotation)
+  {
+    $this->knowledgeMumDcuBoringVideoAnnotation = $knowledgeMumDcuBoringVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBoringVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuBoringVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBoringVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBoringVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuBoringVideoCandidateAnnotation = $knowledgeMumDcuBoringVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBoringVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuBoringVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBroadTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBroadTitleAnnotation)
+  {
+    $this->knowledgeMumDcuBroadTitleAnnotation = $knowledgeMumDcuBroadTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBroadTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuBroadTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuBroadlyConsumableAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuBroadlyConsumableAnnotation)
+  {
+    $this->knowledgeMumDcuBroadlyConsumableAnnotation = $knowledgeMumDcuBroadlyConsumableAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuBroadlyConsumableAnnotation()
+  {
+    return $this->knowledgeMumDcuBroadlyConsumableAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuClickbaitPlusAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuClickbaitPlusAnnotation)
+  {
+    $this->knowledgeMumDcuClickbaitPlusAnnotation = $knowledgeMumDcuClickbaitPlusAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuClickbaitPlusAnnotation()
+  {
+    return $this->knowledgeMumDcuClickbaitPlusAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuClickbaitPlusCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuClickbaitPlusCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuClickbaitPlusCandidateAnnotation = $knowledgeMumDcuClickbaitPlusCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuClickbaitPlusCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuClickbaitPlusCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCommercialNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCommercialNewsAnnotation)
+  {
+    $this->knowledgeMumDcuCommercialNewsAnnotation = $knowledgeMumDcuCommercialNewsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCommercialNewsAnnotation()
+  {
+    return $this->knowledgeMumDcuCommercialNewsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCommercialVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCommercialVideoAnnotation)
+  {
+    $this->knowledgeMumDcuCommercialVideoAnnotation = $knowledgeMumDcuCommercialVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCommercialVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuCommercialVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCommercialVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCommercialVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuCommercialVideoCandidateAnnotation = $knowledgeMumDcuCommercialVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCommercialVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuCommercialVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCommercialVideoV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCommercialVideoV2Annotation)
+  {
+    $this->knowledgeMumDcuCommercialVideoV2Annotation = $knowledgeMumDcuCommercialVideoV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCommercialVideoV2Annotation()
+  {
+    return $this->knowledgeMumDcuCommercialVideoV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCommercialVideoV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCommercialVideoV2CandidateAnnotation)
+  {
+    $this->knowledgeMumDcuCommercialVideoV2CandidateAnnotation = $knowledgeMumDcuCommercialVideoV2CandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCommercialVideoV2CandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuCommercialVideoV2CandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuComplexAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuComplexAnnotation)
+  {
+    $this->knowledgeMumDcuComplexAnnotation = $knowledgeMumDcuComplexAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuComplexAnnotation()
+  {
+    return $this->knowledgeMumDcuComplexAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCoolProjectVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCoolProjectVideoAnnotation)
+  {
+    $this->knowledgeMumDcuCoolProjectVideoAnnotation = $knowledgeMumDcuCoolProjectVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCoolProjectVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuCoolProjectVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCoolProjectVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCoolProjectVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuCoolProjectVideoCandidateAnnotation = $knowledgeMumDcuCoolProjectVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCoolProjectVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuCoolProjectVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCoolProjectVideoV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCoolProjectVideoV2Annotation)
+  {
+    $this->knowledgeMumDcuCoolProjectVideoV2Annotation = $knowledgeMumDcuCoolProjectVideoV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCoolProjectVideoV2Annotation()
+  {
+    return $this->knowledgeMumDcuCoolProjectVideoV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCoolProjectVideoV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation)
+  {
+    $this->knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation = $knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCoolProjectVideoV2CandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuCoolProjectVideoV2CandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCreativeVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCreativeVideoAnnotation)
+  {
+    $this->knowledgeMumDcuCreativeVideoAnnotation = $knowledgeMumDcuCreativeVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCreativeVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuCreativeVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCreativeVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCreativeVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuCreativeVideoCandidateAnnotation = $knowledgeMumDcuCreativeVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCreativeVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuCreativeVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCuteShortVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCuteShortVideoAnnotation)
+  {
+    $this->knowledgeMumDcuCuteShortVideoAnnotation = $knowledgeMumDcuCuteShortVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCuteShortVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuCuteShortVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuCuteShortVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuCuteShortVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuCuteShortVideoCandidateAnnotation = $knowledgeMumDcuCuteShortVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuCuteShortVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuCuteShortVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDepressingTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDepressingTitleAnnotation)
+  {
+    $this->knowledgeMumDcuDepressingTitleAnnotation = $knowledgeMumDcuDepressingTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDepressingTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuDepressingTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDietaryAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDietaryAnnotation)
+  {
+    $this->knowledgeMumDcuDietaryAnnotation = $knowledgeMumDcuDietaryAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDietaryAnnotation()
+  {
+    return $this->knowledgeMumDcuDietaryAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDisasterAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDisasterAnnotation)
+  {
+    $this->knowledgeMumDcuDisasterAnnotation = $knowledgeMumDcuDisasterAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDisasterAnnotation()
+  {
+    return $this->knowledgeMumDcuDisasterAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDisasterV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDisasterV2Annotation)
+  {
+    $this->knowledgeMumDcuDisasterV2Annotation = $knowledgeMumDcuDisasterV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDisasterV2Annotation()
+  {
+    return $this->knowledgeMumDcuDisasterV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDiscriminatoryAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDiscriminatoryAnnotation)
+  {
+    $this->knowledgeMumDcuDiscriminatoryAnnotation = $knowledgeMumDcuDiscriminatoryAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDiscriminatoryAnnotation()
+  {
+    return $this->knowledgeMumDcuDiscriminatoryAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDisgustingAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDisgustingAnnotation)
+  {
+    $this->knowledgeMumDcuDisgustingAnnotation = $knowledgeMumDcuDisgustingAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDisgustingAnnotation()
+  {
+    return $this->knowledgeMumDcuDisgustingAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDisgustingV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDisgustingV2Annotation)
+  {
+    $this->knowledgeMumDcuDisgustingV2Annotation = $knowledgeMumDcuDisgustingV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDisgustingV2Annotation()
+  {
+    return $this->knowledgeMumDcuDisgustingV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDismissRatioUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDismissRatioUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuDismissRatioUserBehaviorAnnotation = $knowledgeMumDcuDismissRatioUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDismissRatioUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuDismissRatioUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDistanceSensitiveAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDistanceSensitiveAnnotation)
+  {
+    $this->knowledgeMumDcuDistanceSensitiveAnnotation = $knowledgeMumDcuDistanceSensitiveAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDistanceSensitiveAnnotation()
+  {
+    return $this->knowledgeMumDcuDistanceSensitiveAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDiyProjectVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDiyProjectVideoAnnotation)
+  {
+    $this->knowledgeMumDcuDiyProjectVideoAnnotation = $knowledgeMumDcuDiyProjectVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDiyProjectVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuDiyProjectVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDiyProjectVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDiyProjectVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuDiyProjectVideoCandidateAnnotation = $knowledgeMumDcuDiyProjectVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDiyProjectVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuDiyProjectVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDqsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDqsAnnotation)
+  {
+    $this->knowledgeMumDcuDqsAnnotation = $knowledgeMumDcuDqsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDqsAnnotation()
+  {
+    return $this->knowledgeMumDcuDqsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDramaticTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDramaticTitleAnnotation)
+  {
+    $this->knowledgeMumDcuDramaticTitleAnnotation = $knowledgeMumDcuDramaticTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDramaticTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuDramaticTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuDryFactsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuDryFactsAnnotation)
+  {
+    $this->knowledgeMumDcuDryFactsAnnotation = $knowledgeMumDcuDryFactsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuDryFactsAnnotation()
+  {
+    return $this->knowledgeMumDcuDryFactsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEasyReadAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEasyReadAnnotation)
+  {
+    $this->knowledgeMumDcuEasyReadAnnotation = $knowledgeMumDcuEasyReadAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEasyReadAnnotation()
+  {
+    return $this->knowledgeMumDcuEasyReadAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEducationalVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEducationalVideoAnnotation)
+  {
+    $this->knowledgeMumDcuEducationalVideoAnnotation = $knowledgeMumDcuEducationalVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEducationalVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuEducationalVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEducationalVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEducationalVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuEducationalVideoCandidateAnnotation = $knowledgeMumDcuEducationalVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEducationalVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuEducationalVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingVideoAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingVideoAnnotation = $knowledgeMumDcuEngagingVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingVideoCandidateAnnotation = $knowledgeMumDcuEngagingVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingVideoV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingVideoV2Annotation)
+  {
+    $this->knowledgeMumDcuEngagingVideoV2Annotation = $knowledgeMumDcuEngagingVideoV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingVideoV2Annotation()
+  {
+    return $this->knowledgeMumDcuEngagingVideoV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingVideoV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingVideoV2CandidateAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingVideoV2CandidateAnnotation = $knowledgeMumDcuEngagingVideoV2CandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingVideoV2CandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingVideoV2CandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingVideoV3Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingVideoV3Annotation)
+  {
+    $this->knowledgeMumDcuEngagingVideoV3Annotation = $knowledgeMumDcuEngagingVideoV3Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingVideoV3Annotation()
+  {
+    return $this->knowledgeMumDcuEngagingVideoV3Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingVideoV3CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingVideoV3CandidateAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingVideoV3CandidateAnnotation = $knowledgeMumDcuEngagingVideoV3CandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingVideoV3CandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingVideoV3CandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingnessAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingnessAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingnessAnnotation = $knowledgeMumDcuEngagingnessAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingnessAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingnessAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingnessLeAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingnessLeAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingnessLeAnnotation = $knowledgeMumDcuEngagingnessLeAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingnessLeAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingnessLeAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEngagingnessMmAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEngagingnessMmAnnotation)
+  {
+    $this->knowledgeMumDcuEngagingnessMmAnnotation = $knowledgeMumDcuEngagingnessMmAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEngagingnessMmAnnotation()
+  {
+    return $this->knowledgeMumDcuEngagingnessMmAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEnjoyableMutedVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEnjoyableMutedVideoAnnotation)
+  {
+    $this->knowledgeMumDcuEnjoyableMutedVideoAnnotation = $knowledgeMumDcuEnjoyableMutedVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEnjoyableMutedVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuEnjoyableMutedVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation = $knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuEnjoyableMutedVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEntertainingVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEntertainingVideoAnnotation)
+  {
+    $this->knowledgeMumDcuEntertainingVideoAnnotation = $knowledgeMumDcuEntertainingVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEntertainingVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuEntertainingVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuEntertainingVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuEntertainingVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuEntertainingVideoCandidateAnnotation = $knowledgeMumDcuEntertainingVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuEntertainingVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuEntertainingVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFactualAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFactualAnnotation)
+  {
+    $this->knowledgeMumDcuFactualAnnotation = $knowledgeMumDcuFactualAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFactualAnnotation()
+  {
+    return $this->knowledgeMumDcuFactualAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFlavorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFlavorAnnotation)
+  {
+    $this->knowledgeMumDcuFlavorAnnotation = $knowledgeMumDcuFlavorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFlavorAnnotation()
+  {
+    return $this->knowledgeMumDcuFlavorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFlavorMmAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFlavorMmAnnotation)
+  {
+    $this->knowledgeMumDcuFlavorMmAnnotation = $knowledgeMumDcuFlavorMmAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFlavorMmAnnotation()
+  {
+    return $this->knowledgeMumDcuFlavorMmAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFlavorMmCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFlavorMmCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuFlavorMmCandidateAnnotation = $knowledgeMumDcuFlavorMmCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFlavorMmCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuFlavorMmCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFlavorMmV2CandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFlavorMmV2CandidateAnnotation)
+  {
+    $this->knowledgeMumDcuFlavorMmV2CandidateAnnotation = $knowledgeMumDcuFlavorMmV2CandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFlavorMmV2CandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuFlavorMmV2CandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFunFactsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFunFactsAnnotation)
+  {
+    $this->knowledgeMumDcuFunFactsAnnotation = $knowledgeMumDcuFunFactsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFunFactsAnnotation()
+  {
+    return $this->knowledgeMumDcuFunFactsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFunVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFunVideoAnnotation)
+  {
+    $this->knowledgeMumDcuFunVideoAnnotation = $knowledgeMumDcuFunVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFunVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuFunVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFunVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFunVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuFunVideoCandidateAnnotation = $knowledgeMumDcuFunVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFunVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuFunVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFunnyShortVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFunnyShortVideoAnnotation)
+  {
+    $this->knowledgeMumDcuFunnyShortVideoAnnotation = $knowledgeMumDcuFunnyShortVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFunnyShortVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuFunnyShortVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuFunnyShortVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuFunnyShortVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuFunnyShortVideoCandidateAnnotation = $knowledgeMumDcuFunnyShortVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuFunnyShortVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuFunnyShortVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuGameplayVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuGameplayVideoAnnotation)
+  {
+    $this->knowledgeMumDcuGameplayVideoAnnotation = $knowledgeMumDcuGameplayVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuGameplayVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuGameplayVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuGameplayVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuGameplayVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuGameplayVideoCandidateAnnotation = $knowledgeMumDcuGameplayVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuGameplayVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuGameplayVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuGoodCommercialAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuGoodCommercialAnnotation)
+  {
+    $this->knowledgeMumDcuGoodCommercialAnnotation = $knowledgeMumDcuGoodCommercialAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuGoodCommercialAnnotation()
+  {
+    return $this->knowledgeMumDcuGoodCommercialAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuGossipNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuGossipNewsAnnotation)
+  {
+    $this->knowledgeMumDcuGossipNewsAnnotation = $knowledgeMumDcuGossipNewsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuGossipNewsAnnotation()
+  {
+    return $this->knowledgeMumDcuGossipNewsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuHeartRatioUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuHeartRatioUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuHeartRatioUserBehaviorAnnotation = $knowledgeMumDcuHeartRatioUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuHeartRatioUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuHeartRatioUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuHowToVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuHowToVideoAnnotation)
+  {
+    $this->knowledgeMumDcuHowToVideoAnnotation = $knowledgeMumDcuHowToVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuHowToVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuHowToVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuHowToVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuHowToVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuHowToVideoCandidateAnnotation = $knowledgeMumDcuHowToVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuHowToVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuHowToVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInspiredQueryRateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInspiredQueryRateAnnotation)
+  {
+    $this->knowledgeMumDcuInspiredQueryRateAnnotation = $knowledgeMumDcuInspiredQueryRateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInspiredQueryRateAnnotation()
+  {
+    return $this->knowledgeMumDcuInspiredQueryRateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInspiringAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInspiringAnnotation)
+  {
+    $this->knowledgeMumDcuInspiringAnnotation = $knowledgeMumDcuInspiringAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInspiringAnnotation()
+  {
+    return $this->knowledgeMumDcuInspiringAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInspiringTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInspiringTitleAnnotation)
+  {
+    $this->knowledgeMumDcuInspiringTitleAnnotation = $knowledgeMumDcuInspiringTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInspiringTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuInspiringTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInspiringUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInspiringUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuInspiringUserBehaviorAnnotation = $knowledgeMumDcuInspiringUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInspiringUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuInspiringUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInspiringV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInspiringV2Annotation)
+  {
+    $this->knowledgeMumDcuInspiringV2Annotation = $knowledgeMumDcuInspiringV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInspiringV2Annotation()
+  {
+    return $this->knowledgeMumDcuInspiringV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuIntelligentAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuIntelligentAnnotation)
+  {
+    $this->knowledgeMumDcuIntelligentAnnotation = $knowledgeMumDcuIntelligentAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuIntelligentAnnotation()
+  {
+    return $this->knowledgeMumDcuIntelligentAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInterviewVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInterviewVideoAnnotation)
+  {
+    $this->knowledgeMumDcuInterviewVideoAnnotation = $knowledgeMumDcuInterviewVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInterviewVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuInterviewVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuInterviewVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuInterviewVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuInterviewVideoCandidateAnnotation = $knowledgeMumDcuInterviewVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuInterviewVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuInterviewVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuLectureVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuLectureVideoAnnotation)
+  {
+    $this->knowledgeMumDcuLectureVideoAnnotation = $knowledgeMumDcuLectureVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuLectureVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuLectureVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuLectureVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuLectureVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuLectureVideoCandidateAnnotation = $knowledgeMumDcuLectureVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuLectureVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuLectureVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuLifehackVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuLifehackVideoAnnotation)
+  {
+    $this->knowledgeMumDcuLifehackVideoAnnotation = $knowledgeMumDcuLifehackVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuLifehackVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuLifehackVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuLifehackVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuLifehackVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuLifehackVideoCandidateAnnotation = $knowledgeMumDcuLifehackVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuLifehackVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuLifehackVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuLifestyleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuLifestyleAnnotation)
+  {
+    $this->knowledgeMumDcuLifestyleAnnotation = $knowledgeMumDcuLifestyleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuLifestyleAnnotation()
+  {
+    return $this->knowledgeMumDcuLifestyleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuListicleTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuListicleTitleAnnotation)
+  {
+    $this->knowledgeMumDcuListicleTitleAnnotation = $knowledgeMumDcuListicleTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuListicleTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuListicleTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuMayhemNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuMayhemNewsAnnotation)
+  {
+    $this->knowledgeMumDcuMayhemNewsAnnotation = $knowledgeMumDcuMayhemNewsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuMayhemNewsAnnotation()
+  {
+    return $this->knowledgeMumDcuMayhemNewsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuMediaVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuMediaVideoAnnotation)
+  {
+    $this->knowledgeMumDcuMediaVideoAnnotation = $knowledgeMumDcuMediaVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuMediaVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuMediaVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuMediaVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuMediaVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuMediaVideoCandidateAnnotation = $knowledgeMumDcuMediaVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuMediaVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuMediaVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuNegativeToneAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuNegativeToneAnnotation)
+  {
+    $this->knowledgeMumDcuNegativeToneAnnotation = $knowledgeMumDcuNegativeToneAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuNegativeToneAnnotation()
+  {
+    return $this->knowledgeMumDcuNegativeToneAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuNewsVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuNewsVideoAnnotation)
+  {
+    $this->knowledgeMumDcuNewsVideoAnnotation = $knowledgeMumDcuNewsVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuNewsVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuNewsVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuNewsVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuNewsVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuNewsVideoCandidateAnnotation = $knowledgeMumDcuNewsVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuNewsVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuNewsVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuNewsyTitleAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuNewsyTitleAnnotation)
+  {
+    $this->knowledgeMumDcuNewsyTitleAnnotation = $knowledgeMumDcuNewsyTitleAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuNewsyTitleAnnotation()
+  {
+    return $this->knowledgeMumDcuNewsyTitleAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuOpinionPiecesAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuOpinionPiecesAnnotation)
+  {
+    $this->knowledgeMumDcuOpinionPiecesAnnotation = $knowledgeMumDcuOpinionPiecesAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuOpinionPiecesAnnotation()
+  {
+    return $this->knowledgeMumDcuOpinionPiecesAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuPersonalNarrativeAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuPersonalNarrativeAnnotation)
+  {
+    $this->knowledgeMumDcuPersonalNarrativeAnnotation = $knowledgeMumDcuPersonalNarrativeAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuPersonalNarrativeAnnotation()
+  {
+    return $this->knowledgeMumDcuPersonalNarrativeAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuPracticalAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuPracticalAnnotation)
+  {
+    $this->knowledgeMumDcuPracticalAnnotation = $knowledgeMumDcuPracticalAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuPracticalAnnotation()
+  {
+    return $this->knowledgeMumDcuPracticalAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuPracticalVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuPracticalVideoAnnotation)
+  {
+    $this->knowledgeMumDcuPracticalVideoAnnotation = $knowledgeMumDcuPracticalVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuPracticalVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuPracticalVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuPracticalVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuPracticalVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuPracticalVideoCandidateAnnotation = $knowledgeMumDcuPracticalVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuPracticalVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuPracticalVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuPredictedTrafficRatioAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuPredictedTrafficRatioAnnotation)
+  {
+    $this->knowledgeMumDcuPredictedTrafficRatioAnnotation = $knowledgeMumDcuPredictedTrafficRatioAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuPredictedTrafficRatioAnnotation()
+  {
+    return $this->knowledgeMumDcuPredictedTrafficRatioAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuProductReviewVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuProductReviewVideoAnnotation)
+  {
+    $this->knowledgeMumDcuProductReviewVideoAnnotation = $knowledgeMumDcuProductReviewVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuProductReviewVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuProductReviewVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuProductReviewVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuProductReviewVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuProductReviewVideoCandidateAnnotation = $knowledgeMumDcuProductReviewVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuProductReviewVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuProductReviewVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuProfanityAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuProfanityAnnotation)
+  {
+    $this->knowledgeMumDcuProfanityAnnotation = $knowledgeMumDcuProfanityAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuProfanityAnnotation()
+  {
+    return $this->knowledgeMumDcuProfanityAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuProfanityV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuProfanityV2Annotation)
+  {
+    $this->knowledgeMumDcuProfanityV2Annotation = $knowledgeMumDcuProfanityV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuProfanityV2Annotation()
+  {
+    return $this->knowledgeMumDcuProfanityV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuRacyAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuRacyAnnotation)
+  {
+    $this->knowledgeMumDcuRacyAnnotation = $knowledgeMumDcuRacyAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuRacyAnnotation()
+  {
+    return $this->knowledgeMumDcuRacyAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuRacyV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuRacyV2Annotation)
+  {
+    $this->knowledgeMumDcuRacyV2Annotation = $knowledgeMumDcuRacyV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuRacyV2Annotation()
+  {
+    return $this->knowledgeMumDcuRacyV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuRealLifeTipsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuRealLifeTipsAnnotation)
+  {
+    $this->knowledgeMumDcuRealLifeTipsAnnotation = $knowledgeMumDcuRealLifeTipsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuRealLifeTipsAnnotation()
+  {
+    return $this->knowledgeMumDcuRealLifeTipsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuRemoteRelevanceAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuRemoteRelevanceAnnotation)
+  {
+    $this->knowledgeMumDcuRemoteRelevanceAnnotation = $knowledgeMumDcuRemoteRelevanceAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuRemoteRelevanceAnnotation()
+  {
+    return $this->knowledgeMumDcuRemoteRelevanceAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuReviewsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuReviewsAnnotation)
+  {
+    $this->knowledgeMumDcuReviewsAnnotation = $knowledgeMumDcuReviewsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuReviewsAnnotation()
+  {
+    return $this->knowledgeMumDcuReviewsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuSensationalClickbaitAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuSensationalClickbaitAnnotation)
+  {
+    $this->knowledgeMumDcuSensationalClickbaitAnnotation = $knowledgeMumDcuSensationalClickbaitAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuSensationalClickbaitAnnotation()
+  {
+    return $this->knowledgeMumDcuSensationalClickbaitAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuSensationalClickbaitV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuSensationalClickbaitV2Annotation)
+  {
+    $this->knowledgeMumDcuSensationalClickbaitV2Annotation = $knowledgeMumDcuSensationalClickbaitV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuSensationalClickbaitV2Annotation()
+  {
+    return $this->knowledgeMumDcuSensationalClickbaitV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuSensationalClickbaitV3Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuSensationalClickbaitV3Annotation)
+  {
+    $this->knowledgeMumDcuSensationalClickbaitV3Annotation = $knowledgeMumDcuSensationalClickbaitV3Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuSensationalClickbaitV3Annotation()
+  {
+    return $this->knowledgeMumDcuSensationalClickbaitV3Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuSexualUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuSexualUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuSexualUserBehaviorAnnotation = $knowledgeMumDcuSexualUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuSexualUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuSexualUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuShareRatioUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuShareRatioUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuShareRatioUserBehaviorAnnotation = $knowledgeMumDcuShareRatioUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuShareRatioUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuShareRatioUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuStalenessAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuStalenessAnnotation)
+  {
+    $this->knowledgeMumDcuStalenessAnnotation = $knowledgeMumDcuStalenessAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuStalenessAnnotation()
+  {
+    return $this->knowledgeMumDcuStalenessAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuStoryAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuStoryAnnotation)
+  {
+    $this->knowledgeMumDcuStoryAnnotation = $knowledgeMumDcuStoryAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuStoryAnnotation()
+  {
+    return $this->knowledgeMumDcuStoryAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuStorytellingVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuStorytellingVideoAnnotation)
+  {
+    $this->knowledgeMumDcuStorytellingVideoAnnotation = $knowledgeMumDcuStorytellingVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuStorytellingVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuStorytellingVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuStorytellingVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuStorytellingVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuStorytellingVideoCandidateAnnotation = $knowledgeMumDcuStorytellingVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuStorytellingVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuStorytellingVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuThoughtProvokingAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuThoughtProvokingAnnotation)
+  {
+    $this->knowledgeMumDcuThoughtProvokingAnnotation = $knowledgeMumDcuThoughtProvokingAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuThoughtProvokingAnnotation()
+  {
+    return $this->knowledgeMumDcuThoughtProvokingAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuThoughtProvokingV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuThoughtProvokingV2Annotation)
+  {
+    $this->knowledgeMumDcuThoughtProvokingV2Annotation = $knowledgeMumDcuThoughtProvokingV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuThoughtProvokingV2Annotation()
+  {
+    return $this->knowledgeMumDcuThoughtProvokingV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuTimeSensitiveAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuTimeSensitiveAnnotation)
+  {
+    $this->knowledgeMumDcuTimeSensitiveAnnotation = $knowledgeMumDcuTimeSensitiveAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuTimeSensitiveAnnotation()
+  {
+    return $this->knowledgeMumDcuTimeSensitiveAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuTimelessAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuTimelessAnnotation)
+  {
+    $this->knowledgeMumDcuTimelessAnnotation = $knowledgeMumDcuTimelessAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuTimelessAnnotation()
+  {
+    return $this->knowledgeMumDcuTimelessAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuTimelessVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuTimelessVideoAnnotation)
+  {
+    $this->knowledgeMumDcuTimelessVideoAnnotation = $knowledgeMumDcuTimelessVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuTimelessVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuTimelessVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuTimelessVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuTimelessVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuTimelessVideoCandidateAnnotation = $knowledgeMumDcuTimelessVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuTimelessVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuTimelessVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuTrailerVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuTrailerVideoAnnotation)
+  {
+    $this->knowledgeMumDcuTrailerVideoAnnotation = $knowledgeMumDcuTrailerVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuTrailerVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuTrailerVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuTrailerVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuTrailerVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuTrailerVideoCandidateAnnotation = $knowledgeMumDcuTrailerVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuTrailerVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuTrailerVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuUsefulUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuUsefulUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuUsefulUserBehaviorAnnotation = $knowledgeMumDcuUsefulUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuUsefulUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuUsefulUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuUsefulVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuUsefulVideoAnnotation)
+  {
+    $this->knowledgeMumDcuUsefulVideoAnnotation = $knowledgeMumDcuUsefulVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuUsefulVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuUsefulVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuUsefulVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuUsefulVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuUsefulVideoCandidateAnnotation = $knowledgeMumDcuUsefulVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuUsefulVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuUsefulVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuVideoFlavorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuVideoFlavorAnnotation)
+  {
+    $this->knowledgeMumDcuVideoFlavorAnnotation = $knowledgeMumDcuVideoFlavorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuVideoFlavorAnnotation()
+  {
+    return $this->knowledgeMumDcuVideoFlavorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuViolenceAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuViolenceAnnotation)
+  {
+    $this->knowledgeMumDcuViolenceAnnotation = $knowledgeMumDcuViolenceAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuViolenceAnnotation()
+  {
+    return $this->knowledgeMumDcuViolenceAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuViolenceV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuViolenceV2Annotation)
+  {
+    $this->knowledgeMumDcuViolenceV2Annotation = $knowledgeMumDcuViolenceV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuViolenceV2Annotation()
+  {
+    return $this->knowledgeMumDcuViolenceV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation)
+  {
+    $this->knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation = $knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation()
+  {
+    return $this->knowledgeMumDcuViolentOrDisgustingUserBehaviorAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuVisuallyEngagingAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuVisuallyEngagingAnnotation)
+  {
+    $this->knowledgeMumDcuVisuallyEngagingAnnotation = $knowledgeMumDcuVisuallyEngagingAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuVisuallyEngagingAnnotation()
+  {
+    return $this->knowledgeMumDcuVisuallyEngagingAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuVisuallyEngagingV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuVisuallyEngagingV2Annotation)
+  {
+    $this->knowledgeMumDcuVisuallyEngagingV2Annotation = $knowledgeMumDcuVisuallyEngagingV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuVisuallyEngagingV2Annotation()
+  {
+    return $this->knowledgeMumDcuVisuallyEngagingV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuVlogVideoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuVlogVideoAnnotation)
+  {
+    $this->knowledgeMumDcuVlogVideoAnnotation = $knowledgeMumDcuVlogVideoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuVlogVideoAnnotation()
+  {
+    return $this->knowledgeMumDcuVlogVideoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuVlogVideoCandidateAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuVlogVideoCandidateAnnotation)
+  {
+    $this->knowledgeMumDcuVlogVideoCandidateAnnotation = $knowledgeMumDcuVlogVideoCandidateAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuVlogVideoCandidateAnnotation()
+  {
+    return $this->knowledgeMumDcuVlogVideoCandidateAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuWellWrittenAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuWellWrittenAnnotation)
+  {
+    $this->knowledgeMumDcuWellWrittenAnnotation = $knowledgeMumDcuWellWrittenAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuWellWrittenAnnotation()
+  {
+    return $this->knowledgeMumDcuWellWrittenAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuWithholdingInfoAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuWithholdingInfoAnnotation)
+  {
+    $this->knowledgeMumDcuWithholdingInfoAnnotation = $knowledgeMumDcuWithholdingInfoAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuWithholdingInfoAnnotation()
+  {
+    return $this->knowledgeMumDcuWithholdingInfoAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuWithholdingInfoV2Annotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuWithholdingInfoV2Annotation)
+  {
+    $this->knowledgeMumDcuWithholdingInfoV2Annotation = $knowledgeMumDcuWithholdingInfoV2Annotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuWithholdingInfoV2Annotation()
+  {
+    return $this->knowledgeMumDcuWithholdingInfoV2Annotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setKnowledgeMumDcuWorthyHeadlineNewsAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumDcuWorthyHeadlineNewsAnnotation)
+  {
+    $this->knowledgeMumDcuWorthyHeadlineNewsAnnotation = $knowledgeMumDcuWorthyHeadlineNewsAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getKnowledgeMumDcuWorthyHeadlineNewsAnnotation()
+  {
+    return $this->knowledgeMumDcuWorthyHeadlineNewsAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setKnowledgeMumStoryTeaserAnnotation(IndexingDocjoinerDataVersionVersionInfo $knowledgeMumStoryTeaserAnnotation)
   {
     $this->knowledgeMumStoryTeaserAnnotation = $knowledgeMumStoryTeaserAnnotation;
@@ -4099,6 +6555,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setMultiverseHubSpokesSignal(IndexingDocjoinerDataVersionVersionInfo $multiverseHubSpokesSignal)
+  {
+    $this->multiverseHubSpokesSignal = $multiverseHubSpokesSignal;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getMultiverseHubSpokesSignal()
+  {
+    return $this->multiverseHubSpokesSignal;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setNavBoostDocument(IndexingDocjoinerDataVersionVersionInfo $navBoostDocument)
   {
     $this->navBoostDocument = $navBoostDocument;
@@ -4137,6 +6607,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getNewsAnnotationsContentAnnotations()
   {
     return $this->newsAnnotationsContentAnnotations;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setNewsCorpusDifferentiatedContentAnnotation(IndexingDocjoinerDataVersionVersionInfo $newsCorpusDifferentiatedContentAnnotation)
+  {
+    $this->newsCorpusDifferentiatedContentAnnotation = $newsCorpusDifferentiatedContentAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getNewsCorpusDifferentiatedContentAnnotation()
+  {
+    return $this->newsCorpusDifferentiatedContentAnnotation;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -4529,6 +7013,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getNoindexedImageDataList()
   {
     return $this->noindexedImageDataList;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setNsrFdpData(IndexingDocjoinerDataVersionVersionInfo $nsrFdpData)
+  {
+    $this->nsrFdpData = $nsrFdpData;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getNsrFdpData()
+  {
+    return $this->nsrFdpData;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -4995,6 +7493,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setOrbitIntents(IndexingDocjoinerDataVersionVersionInfo $orbitIntents)
+  {
+    $this->orbitIntents = $orbitIntents;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getOrbitIntents()
+  {
+    return $this->orbitIntents;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setPerDocLangidData(IndexingDocjoinerDataVersionVersionInfo $perDocLangidData)
   {
     $this->perDocLangidData = $perDocLangidData;
@@ -5233,6 +7745,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setQualityChardPredictedXlqSevereHoax(IndexingDocjoinerDataVersionVersionInfo $qualityChardPredictedXlqSevereHoax)
+  {
+    $this->qualityChardPredictedXlqSevereHoax = $qualityChardPredictedXlqSevereHoax;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityChardPredictedXlqSevereHoax()
+  {
+    return $this->qualityChardPredictedXlqSevereHoax;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setQualityContraSelectedAttributions(IndexingDocjoinerDataVersionVersionInfo $qualityContraSelectedAttributions)
   {
     $this->qualityContraSelectedAttributions = $qualityContraSelectedAttributions;
@@ -5401,6 +7927,48 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setQualityFlavorsFlavorSet(IndexingDocjoinerDataVersionVersionInfo $qualityFlavorsFlavorSet)
+  {
+    $this->qualityFlavorsFlavorSet = $qualityFlavorsFlavorSet;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityFlavorsFlavorSet()
+  {
+    return $this->qualityFlavorsFlavorSet;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityForumrankingUgcPageQualityDocumentAnnotation(IndexingDocjoinerDataVersionVersionInfo $qualityForumrankingUgcPageQualityDocumentAnnotation)
+  {
+    $this->qualityForumrankingUgcPageQualityDocumentAnnotation = $qualityForumrankingUgcPageQualityDocumentAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityForumrankingUgcPageQualityDocumentAnnotation()
+  {
+    return $this->qualityForumrankingUgcPageQualityDocumentAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityFreshnessAbacusInstantNavBoostDocumentAnon(IndexingDocjoinerDataVersionVersionInfo $qualityFreshnessAbacusInstantNavBoostDocumentAnon)
+  {
+    $this->qualityFreshnessAbacusInstantNavBoostDocumentAnon = $qualityFreshnessAbacusInstantNavBoostDocumentAnon;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityFreshnessAbacusInstantNavBoostDocumentAnon()
+  {
+    return $this->qualityFreshnessAbacusInstantNavBoostDocumentAnon;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setQualityFreshnessAbacusInstantNegativeClicksInfo(IndexingDocjoinerDataVersionVersionInfo $qualityFreshnessAbacusInstantNegativeClicksInfo)
   {
     $this->qualityFreshnessAbacusInstantNegativeClicksInfo = $qualityFreshnessAbacusInstantNegativeClicksInfo;
@@ -5537,6 +8105,48 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getQualityLisztomaniaDocument()
   {
     return $this->qualityLisztomaniaDocument;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityModernProtoUcpDocInfo(IndexingDocjoinerDataVersionVersionInfo $qualityModernProtoUcpDocInfo)
+  {
+    $this->qualityModernProtoUcpDocInfo = $qualityModernProtoUcpDocInfo;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityModernProtoUcpDocInfo()
+  {
+    return $this->qualityModernProtoUcpDocInfo;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityModernProtoUcpServingData(IndexingDocjoinerDataVersionVersionInfo $qualityModernProtoUcpServingData)
+  {
+    $this->qualityModernProtoUcpServingData = $qualityModernProtoUcpServingData;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityModernProtoUcpServingData()
+  {
+    return $this->qualityModernProtoUcpServingData;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityNaturalPearlsNaturalPearlsDocumentAnnotation(IndexingDocjoinerDataVersionVersionInfo $qualityNaturalPearlsNaturalPearlsDocumentAnnotation)
+  {
+    $this->qualityNaturalPearlsNaturalPearlsDocumentAnnotation = $qualityNaturalPearlsNaturalPearlsDocumentAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityNaturalPearlsNaturalPearlsDocumentAnnotation()
+  {
+    return $this->qualityNaturalPearlsNaturalPearlsDocumentAnnotation;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -5835,6 +8445,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setQualityPeoplesearchNamedetectorNavboostNameAnnotations(IndexingDocjoinerDataVersionVersionInfo $qualityPeoplesearchNamedetectorNavboostNameAnnotations)
+  {
+    $this->qualityPeoplesearchNamedetectorNavboostNameAnnotations = $qualityPeoplesearchNamedetectorNavboostNameAnnotations;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityPeoplesearchNamedetectorNavboostNameAnnotations()
+  {
+    return $this->qualityPeoplesearchNamedetectorNavboostNameAnnotations;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setQualityPopfeedsChromeBackgroundAnnotation(IndexingDocjoinerDataVersionVersionInfo $qualityPopfeedsChromeBackgroundAnnotation)
   {
     $this->qualityPopfeedsChromeBackgroundAnnotation = $qualityPopfeedsChromeBackgroundAnnotation;
@@ -5859,6 +8483,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getQualityPopfeedsHubDataAnnotations()
   {
     return $this->qualityPopfeedsHubDataAnnotations;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityPopfeedsTopicStatsTopicScoreAnnotation(IndexingDocjoinerDataVersionVersionInfo $qualityPopfeedsTopicStatsTopicScoreAnnotation)
+  {
+    $this->qualityPopfeedsTopicStatsTopicScoreAnnotation = $qualityPopfeedsTopicStatsTopicScoreAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityPopfeedsTopicStatsTopicScoreAnnotation()
+  {
+    return $this->qualityPopfeedsTopicStatsTopicScoreAnnotation;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -6181,6 +8819,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getQualitySherlockKnexAnnotation()
   {
     return $this->qualitySherlockKnexAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setQualityShoppingDtcDomainsSignal(IndexingDocjoinerDataVersionVersionInfo $qualityShoppingDtcDomainsSignal)
+  {
+    $this->qualityShoppingDtcDomainsSignal = $qualityShoppingDtcDomainsSignal;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getQualityShoppingDtcDomainsSignal()
+  {
+    return $this->qualityShoppingDtcDomainsSignal;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -6997,6 +9649,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setRepositoryWebrefAuthorExtractionAnnotation(IndexingDocjoinerDataVersionVersionInfo $repositoryWebrefAuthorExtractionAnnotation)
+  {
+    $this->repositoryWebrefAuthorExtractionAnnotation = $repositoryWebrefAuthorExtractionAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getRepositoryWebrefAuthorExtractionAnnotation()
+  {
+    return $this->repositoryWebrefAuthorExtractionAnnotation;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setRepositoryWebrefEntityJoin(IndexingDocjoinerDataVersionVersionInfo $repositoryWebrefEntityJoin)
   {
     $this->repositoryWebrefEntityJoin = $repositoryWebrefEntityJoin;
@@ -7077,6 +9743,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getRepositoryWebrefPageClassificationSignalsSet()
   {
     return $this->repositoryWebrefPageClassificationSignalsSet;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setRepositoryWebrefPiannoDocumentIntent(IndexingDocjoinerDataVersionVersionInfo $repositoryWebrefPiannoDocumentIntent)
+  {
+    $this->repositoryWebrefPiannoDocumentIntent = $repositoryWebrefPiannoDocumentIntent;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getRepositoryWebrefPiannoDocumentIntent()
+  {
+    return $this->repositoryWebrefPiannoDocumentIntent;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -7571,6 +10251,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setRobotsPolicy(IndexingDocjoinerDataVersionVersionInfo $robotsPolicy)
+  {
+    $this->robotsPolicy = $robotsPolicy;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getRobotsPolicy()
+  {
+    return $this->robotsPolicy;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setRosettaLanguage(IndexingDocjoinerDataVersionVersionInfo $rosettaLanguage)
   {
     $this->rosettaLanguage = $rosettaLanguage;
@@ -8005,6 +10699,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
    */
+  public function setSpambrainDomainSitechunkData(IndexingDocjoinerDataVersionVersionInfo $spambrainDomainSitechunkData)
+  {
+    $this->spambrainDomainSitechunkData = $spambrainDomainSitechunkData;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getSpambrainDomainSitechunkData()
+  {
+    return $this->spambrainDomainSitechunkData;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
   public function setTableTalkStrideOfferPagePriceAnnotation(IndexingDocjoinerDataVersionVersionInfo $tableTalkStrideOfferPagePriceAnnotation)
   {
     $this->tableTalkStrideOfferPagePriceAnnotation = $tableTalkStrideOfferPagePriceAnnotation;
@@ -8099,6 +10807,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getTravelAssistantTravelDocClassification()
   {
     return $this->travelAssistantTravelDocClassification;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setTrawlerEffectiveRobotsContent(IndexingDocjoinerDataVersionVersionInfo $trawlerEffectiveRobotsContent)
+  {
+    $this->trawlerEffectiveRobotsContent = $trawlerEffectiveRobotsContent;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getTrawlerEffectiveRobotsContent()
+  {
+    return $this->trawlerEffectiveRobotsContent;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo
@@ -8393,6 +11115,20 @@ class IndexingDocjoinerDataVersion extends \Google\Model
   public function getVideoScoringSignal()
   {
     return $this->videoScoringSignal;
+  }
+  /**
+   * @param IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function setVideoShoppingVideoShoppingAnnotation(IndexingDocjoinerDataVersionVersionInfo $videoShoppingVideoShoppingAnnotation)
+  {
+    $this->videoShoppingVideoShoppingAnnotation = $videoShoppingVideoShoppingAnnotation;
+  }
+  /**
+   * @return IndexingDocjoinerDataVersionVersionInfo
+   */
+  public function getVideoShoppingVideoShoppingAnnotation()
+  {
+    return $this->videoShoppingVideoShoppingAnnotation;
   }
   /**
    * @param IndexingDocjoinerDataVersionVersionInfo

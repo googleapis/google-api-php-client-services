@@ -36,21 +36,22 @@ class ProjectsLocationsDeidentifyTemplates extends \Google\Service\Resource
   /**
    * Creates a DeidentifyTemplate for reusing frequently used configuration for
    * de-identifying content, images, and storage. See
-   * https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
-   * (deidentifyTemplates.create)
+   * https://cloud.google.com/sensitive-data-protection/docs/creating-templates-
+   * deid to learn more. (deidentifyTemplates.create)
    *
    * @param string $parent Required. Parent resource name. The format of this
    * value varies depending on the scope of the request (project or organization)
    * and whether you have [specified a processing
-   * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-   * scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-   * Projects scope, no location specified (defaults to global):
-   * `projects/`PROJECT_ID + Organizations scope, location specified:
-   * `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no
-   * location specified (defaults to global): `organizations/`ORG_ID The following
-   * example `parent` string specifies a parent project with the identifier
-   * `example-project`, and specifies the `europe-west3` location for processing
-   * data: parent=projects/example-project/locations/europe-west3
+   * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+   * location): + Projects scope, location specified:
+   * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+   * specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+   * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+   * Organizations scope, no location specified (defaults to global):
+   * `organizations/`ORG_ID The following example `parent` string specifies a
+   * parent project with the identifier `example-project`, and specifies the
+   * `europe-west3` location for processing data: parent=projects/example-
+   * project/locations/europe-west3
    * @param GooglePrivacyDlpV2CreateDeidentifyTemplateRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GooglePrivacyDlpV2DeidentifyTemplate
@@ -63,8 +64,9 @@ class ProjectsLocationsDeidentifyTemplates extends \Google\Service\Resource
     return $this->call('create', [$params], GooglePrivacyDlpV2DeidentifyTemplate::class);
   }
   /**
-   * Deletes a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-
-   * templates-deid to learn more. (deidentifyTemplates.delete)
+   * Deletes a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-
+   * protection/docs/creating-templates-deid to learn more.
+   * (deidentifyTemplates.delete)
    *
    * @param string $name Required. Resource name of the organization and
    * deidentify template to be deleted, for example
@@ -81,8 +83,9 @@ class ProjectsLocationsDeidentifyTemplates extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleProtobufEmpty::class);
   }
   /**
-   * Gets a DeidentifyTemplate. See https://cloud.google.com/dlp/docs/creating-
-   * templates-deid to learn more. (deidentifyTemplates.get)
+   * Gets a DeidentifyTemplate. See https://cloud.google.com/sensitive-data-
+   * protection/docs/creating-templates-deid to learn more.
+   * (deidentifyTemplates.get)
    *
    * @param string $name Required. Resource name of the organization and
    * deidentify template to be read, for example
@@ -99,22 +102,23 @@ class ProjectsLocationsDeidentifyTemplates extends \Google\Service\Resource
     return $this->call('get', [$params], GooglePrivacyDlpV2DeidentifyTemplate::class);
   }
   /**
-   * Lists DeidentifyTemplates. See https://cloud.google.com/dlp/docs/creating-
-   * templates-deid to learn more.
+   * Lists DeidentifyTemplates. See https://cloud.google.com/sensitive-data-
+   * protection/docs/creating-templates-deid to learn more.
    * (deidentifyTemplates.listProjectsLocationsDeidentifyTemplates)
    *
    * @param string $parent Required. Parent resource name. The format of this
    * value varies depending on the scope of the request (project or organization)
    * and whether you have [specified a processing
-   * location](https://cloud.google.com/dlp/docs/specifying-location): + Projects
-   * scope, location specified: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
-   * Projects scope, no location specified (defaults to global):
-   * `projects/`PROJECT_ID + Organizations scope, location specified:
-   * `organizations/`ORG_ID`/locations/`LOCATION_ID + Organizations scope, no
-   * location specified (defaults to global): `organizations/`ORG_ID The following
-   * example `parent` string specifies a parent project with the identifier
-   * `example-project`, and specifies the `europe-west3` location for processing
-   * data: parent=projects/example-project/locations/europe-west3
+   * location](https://cloud.google.com/sensitive-data-protection/docs/specifying-
+   * location): + Projects scope, location specified:
+   * `projects/`PROJECT_ID`/locations/`LOCATION_ID + Projects scope, no location
+   * specified (defaults to global): `projects/`PROJECT_ID + Organizations scope,
+   * location specified: `organizations/`ORG_ID`/locations/`LOCATION_ID +
+   * Organizations scope, no location specified (defaults to global):
+   * `organizations/`ORG_ID The following example `parent` string specifies a
+   * parent project with the identifier `example-project`, and specifies the
+   * `europe-west3` location for processing data: parent=projects/example-
+   * project/locations/europe-west3
    * @param array $optParams Optional parameters.
    *
    * @opt_param string locationId Deprecated. This field has no effect.
@@ -140,8 +144,8 @@ class ProjectsLocationsDeidentifyTemplates extends \Google\Service\Resource
     return $this->call('list', [$params], GooglePrivacyDlpV2ListDeidentifyTemplatesResponse::class);
   }
   /**
-   * Updates the DeidentifyTemplate. See
-   * https://cloud.google.com/dlp/docs/creating-templates-deid to learn more.
+   * Updates the DeidentifyTemplate. See https://cloud.google.com/sensitive-data-
+   * protection/docs/creating-templates-deid to learn more.
    * (deidentifyTemplates.patch)
    *
    * @param string $name Required. Resource name of organization and deidentify

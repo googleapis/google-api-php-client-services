@@ -94,6 +94,10 @@ class GoogleCloudRunV2Job extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  /**
+   * @var string
+   */
+  public $startExecutionToken;
   protected $templateType = GoogleCloudRunV2ExecutionTemplate::class;
   protected $templateDataType = '';
   protected $terminalConditionType = GoogleCloudRunV2Condition::class;
@@ -386,6 +390,20 @@ class GoogleCloudRunV2Job extends \Google\Collection
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * @param string
+   */
+  public function setStartExecutionToken($startExecutionToken)
+  {
+    $this->startExecutionToken = $startExecutionToken;
+  }
+  /**
+   * @return string
+   */
+  public function getStartExecutionToken()
+  {
+    return $this->startExecutionToken;
   }
   /**
    * @param GoogleCloudRunV2ExecutionTemplate

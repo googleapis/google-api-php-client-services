@@ -18,8 +18,8 @@
 namespace Google\Service\AppHub\Resource;
 
 use Google\Service\AppHub\DiscoveredService;
-use Google\Service\AppHub\FindUnregisteredServicesResponse;
 use Google\Service\AppHub\ListDiscoveredServicesResponse;
+use Google\Service\AppHub\LookupDiscoveredServiceResponse;
 
 /**
  * The "discoveredServices" collection of methods.
@@ -32,34 +32,15 @@ use Google\Service\AppHub\ListDiscoveredServicesResponse;
 class ProjectsLocationsDiscoveredServices extends \Google\Service\Resource
 {
   /**
-   * Finds unregistered services in a host project and location.
-   * (discoveredServices.findUnregistered)
-   *
-   * @param string $parent Required. Value for parent.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
-   * @opt_param int pageSize Optional. Requested page size. Server may return
-   * fewer items than requested. If unspecified, server will pick an appropriate
-   * default.
-   * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
-   * @return FindUnregisteredServicesResponse
-   */
-  public function findUnregistered($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('findUnregistered', [$params], FindUnregisteredServicesResponse::class);
-  }
-  /**
-   * Gets a discovered service in a host project and location.
+   * Gets a Discovered Service in a host project and location.
    * (discoveredServices.get)
    *
-   * @param string $name Required. Value for name.
+   * @param string $name Required. Fully qualified name of the Discovered Service
+   * to fetch. Expected format: `projects/{project}/locations/{location}/discovere
+   * dServices/{discoveredService}`.
    * @param array $optParams Optional parameters.
    * @return DiscoveredService
+   * @throws \Google\Service\Exception
    */
   public function get($name, $optParams = [])
   {
@@ -68,26 +49,49 @@ class ProjectsLocationsDiscoveredServices extends \Google\Service\Resource
     return $this->call('get', [$params], DiscoveredService::class);
   }
   /**
-   * Lists discovered services in a host project and location.
+   * Lists Discovered Services that can be added to an Application in a host
+   * project and location.
    * (discoveredServices.listProjectsLocationsDiscoveredServices)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. Project and location to list Discovered
+   * Services on. Expected format: `projects/{project}/locations/{location}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
    * @return ListDiscoveredServicesResponse
+   * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsDiscoveredServices($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListDiscoveredServicesResponse::class);
+  }
+  /**
+   * Lists a Discovered Service in a host project and location, with a given
+   * resource URI. (discoveredServices.lookup)
+   *
+   * @param string $parent Required. Host project ID and location to lookup
+   * Discovered Service in. Expected format:
+   * `projects/{project}/locations/{location}`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string uri Required. Resource URI to find DiscoveredService for.
+   * Accepts both project number and project ID and does translation when needed.
+   * @return LookupDiscoveredServiceResponse
+   * @throws \Google\Service\Exception
+   */
+  public function lookup($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('lookup', [$params], LookupDiscoveredServiceResponse::class);
   }
 }
 

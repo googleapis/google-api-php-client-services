@@ -37,6 +37,8 @@ class DrishtiFeatureSetDataFeatureSetElement extends \Google\Model
   protected $quantizedByteIndexedDataType = '';
   protected $sparseType = DrishtiSparseFeatureData::class;
   protected $sparseDataType = '';
+  protected $tokenType = DrishtiDenseTokenData::class;
+  protected $tokenDataType = '';
 
   /**
    * @param DrishtiCompressedFeature
@@ -149,6 +151,20 @@ class DrishtiFeatureSetDataFeatureSetElement extends \Google\Model
   public function getSparse()
   {
     return $this->sparse;
+  }
+  /**
+   * @param DrishtiDenseTokenData
+   */
+  public function setToken(DrishtiDenseTokenData $token)
+  {
+    $this->token = $token;
+  }
+  /**
+   * @return DrishtiDenseTokenData
+   */
+  public function getToken()
+  {
+    return $this->token;
   }
 }
 

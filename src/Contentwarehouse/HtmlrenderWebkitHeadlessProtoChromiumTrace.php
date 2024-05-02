@@ -23,6 +23,10 @@ class HtmlrenderWebkitHeadlessProtoChromiumTrace extends \Google\Model
    * @var string
    */
   public $chromiumTrace;
+  /**
+   * @var string
+   */
+  public $chromiumTraceProto;
 
   /**
    * @param string
@@ -37,6 +41,20 @@ class HtmlrenderWebkitHeadlessProtoChromiumTrace extends \Google\Model
   public function getChromiumTrace()
   {
     return $this->chromiumTrace;
+  }
+  /**
+   * @param string
+   */
+  public function setChromiumTraceProto($chromiumTraceProto)
+  {
+    $this->chromiumTraceProto = $chromiumTraceProto;
+  }
+  /**
+   * @return string
+   */
+  public function getChromiumTraceProto()
+  {
+    return $this->chromiumTraceProto;
   }
 }
 

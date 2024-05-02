@@ -27,6 +27,14 @@ class LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMet
    * @var string
    */
   public $modelId;
+  /**
+   * @var bool
+   */
+  public $pickedAsFallback;
+  /**
+   * @var bool
+   */
+  public $selected;
 
   /**
    * @param int
@@ -55,6 +63,34 @@ class LearningGenaiRootRoutingDecisionMetadataTokenLengthBasedModelInputTokenMet
   public function getModelId()
   {
     return $this->modelId;
+  }
+  /**
+   * @param bool
+   */
+  public function setPickedAsFallback($pickedAsFallback)
+  {
+    $this->pickedAsFallback = $pickedAsFallback;
+  }
+  /**
+   * @return bool
+   */
+  public function getPickedAsFallback()
+  {
+    return $this->pickedAsFallback;
+  }
+  /**
+   * @param bool
+   */
+  public function setSelected($selected)
+  {
+    $this->selected = $selected;
+  }
+  /**
+   * @return bool
+   */
+  public function getSelected()
+  {
+    return $this->selected;
   }
 }
 

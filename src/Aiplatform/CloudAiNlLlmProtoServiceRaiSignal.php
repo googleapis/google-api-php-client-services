@@ -17,8 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiNlLlmProtoServiceRaiSignal extends \Google\Model
+class CloudAiNlLlmProtoServiceRaiSignal extends \Google\Collection
 {
+  protected $collection_key = 'influentialTerms';
   /**
    * @var string
    */
@@ -27,6 +28,8 @@ class CloudAiNlLlmProtoServiceRaiSignal extends \Google\Model
    * @var bool
    */
   public $flagged;
+  protected $influentialTermsType = CloudAiNlLlmProtoServiceRaiSignalInfluentialTerm::class;
+  protected $influentialTermsDataType = 'array';
   /**
    * @var string
    */
@@ -63,6 +66,20 @@ class CloudAiNlLlmProtoServiceRaiSignal extends \Google\Model
   public function getFlagged()
   {
     return $this->flagged;
+  }
+  /**
+   * @param CloudAiNlLlmProtoServiceRaiSignalInfluentialTerm[]
+   */
+  public function setInfluentialTerms($influentialTerms)
+  {
+    $this->influentialTerms = $influentialTerms;
+  }
+  /**
+   * @return CloudAiNlLlmProtoServiceRaiSignalInfluentialTerm[]
+   */
+  public function getInfluentialTerms()
+  {
+    return $this->influentialTerms;
   }
   /**
    * @param string

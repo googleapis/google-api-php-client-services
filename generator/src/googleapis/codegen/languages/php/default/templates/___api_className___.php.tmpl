@@ -30,6 +30,7 @@ const {{ authscope.name }} =
 {% endfor %}{% endindent %}{% endfilter %}{% endif %}
 
 {% call_template _resource_var resource=api %}
+  public $rootUrlTemplate;
 {% if api.methods %}  private $base_methods;{% endif %}
   /**{% filter block_comment %}
    * Constructs the internal representation of the {{ api.className }} service.
@@ -45,6 +46,7 @@ const {{ authscope.name }} =
 {% indent 2 %}
 parent::__construct($clientOrConfig);
 $this->rootUrl = $rootUrl ?: {% literal api.rootUrl %};
+$this->rootUrlTemplate = $rootUrl ?: {% literal api.rootUrlTemplate %};
 $this->servicePath = {% literal api.servicePath %};
 {% if api.batchPath %}$this->batchPath = {% literal api.batchPath %};{% endif %}
 $this->version = {% literal api.version %};

@@ -37,10 +37,10 @@ class EffectiveIamPolicies extends \Google\Service\Resource
    * be returned. This can only be an organization number (such as
    * "organizations/123"), a folder number (such as "folders/123"), a project ID
    * (such as "projects/my-project-id"), or a project number (such as
-   * "projects/12345"). To know how to get organization id, visit [here
+   * "projects/12345"). To know how to get organization ID, visit [here
    * ](https://cloud.google.com/resource-manager/docs/creating-managing-
    * organization#retrieving_your_organization_id). To know how to get folder or
-   * project id, visit [here ](https://cloud.google.com/resource-
+   * project ID, visit [here ](https://cloud.google.com/resource-
    * manager/docs/creating-managing-
    * folders#viewing_or_listing_folders_and_projects).
    * @param array $optParams Optional parameters.

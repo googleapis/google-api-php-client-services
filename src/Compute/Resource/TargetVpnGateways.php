@@ -34,8 +34,9 @@ use Google\Service\Compute\TargetVpnGatewayList;
 class TargetVpnGateways extends \Google\Service\Resource
 {
   /**
-   * Retrieves an aggregated list of target VPN gateways.
-   * (targetVpnGateways.aggregatedList)
+   * Retrieves an aggregated list of target VPN gateways. To prevent failure,
+   * Google recommends that you set the `returnPartialSuccess` parameter to
+   * `true`. (targetVpnGateways.aggregatedList)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
@@ -97,7 +98,9 @@ class TargetVpnGateways extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @opt_param string serviceProjectNumber The Shared VPC service project id or
    * service project number for which aggregated list request is invoked for
    * subnetworks list-usable api.
@@ -239,7 +242,9 @@ class TargetVpnGateways extends \Google\Service\Resource
    * of results.
    * @opt_param bool returnPartialSuccess Opt-in for partial success behavior
    * which provides partial results in case of failure. The default value is
-   * false.
+   * false. For example, when partial success behavior is enabled, aggregatedList
+   * for a single zone scope either returns all resources in the zone or no
+   * resources, with an error code.
    * @return TargetVpnGatewayList
    * @throws \Google\Service\Exception
    */

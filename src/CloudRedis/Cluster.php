@@ -28,16 +28,31 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var bool
+   */
+  public $deletionProtectionEnabled;
   protected $discoveryEndpointsType = DiscoveryEndpoint::class;
   protected $discoveryEndpointsDataType = 'array';
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $nodeType;
+  protected $persistenceConfigType = ClusterPersistenceConfig::class;
+  protected $persistenceConfigDataType = '';
+  public $preciseSizeGb;
   protected $pscConfigsType = PscConfig::class;
   protected $pscConfigsDataType = 'array';
   protected $pscConnectionsType = PscConnection::class;
   protected $pscConnectionsDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $redisConfigs;
   /**
    * @var int
    */
@@ -94,6 +109,20 @@ class Cluster extends \Google\Collection
     return $this->createTime;
   }
   /**
+   * @param bool
+   */
+  public function setDeletionProtectionEnabled($deletionProtectionEnabled)
+  {
+    $this->deletionProtectionEnabled = $deletionProtectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeletionProtectionEnabled()
+  {
+    return $this->deletionProtectionEnabled;
+  }
+  /**
    * @param DiscoveryEndpoint[]
    */
   public function setDiscoveryEndpoints($discoveryEndpoints)
@@ -122,6 +151,42 @@ class Cluster extends \Google\Collection
     return $this->name;
   }
   /**
+   * @param string
+   */
+  public function setNodeType($nodeType)
+  {
+    $this->nodeType = $nodeType;
+  }
+  /**
+   * @return string
+   */
+  public function getNodeType()
+  {
+    return $this->nodeType;
+  }
+  /**
+   * @param ClusterPersistenceConfig
+   */
+  public function setPersistenceConfig(ClusterPersistenceConfig $persistenceConfig)
+  {
+    $this->persistenceConfig = $persistenceConfig;
+  }
+  /**
+   * @return ClusterPersistenceConfig
+   */
+  public function getPersistenceConfig()
+  {
+    return $this->persistenceConfig;
+  }
+  public function setPreciseSizeGb($preciseSizeGb)
+  {
+    $this->preciseSizeGb = $preciseSizeGb;
+  }
+  public function getPreciseSizeGb()
+  {
+    return $this->preciseSizeGb;
+  }
+  /**
    * @param PscConfig[]
    */
   public function setPscConfigs($pscConfigs)
@@ -148,6 +213,20 @@ class Cluster extends \Google\Collection
   public function getPscConnections()
   {
     return $this->pscConnections;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRedisConfigs($redisConfigs)
+  {
+    $this->redisConfigs = $redisConfigs;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRedisConfigs()
+  {
+    return $this->redisConfigs;
   }
   /**
    * @param int

@@ -29,6 +29,14 @@ class QualityOrbitOrbitImageIntent extends \Google\Collection
    */
   public $missingInputs;
   /**
+   * @var string
+   */
+  public $reach;
+  /**
+   * @var bool
+   */
+  public $remove;
+  /**
    * @var float
    */
   public $score;
@@ -64,6 +72,34 @@ class QualityOrbitOrbitImageIntent extends \Google\Collection
   public function getMissingInputs()
   {
     return $this->missingInputs;
+  }
+  /**
+   * @param string
+   */
+  public function setReach($reach)
+  {
+    $this->reach = $reach;
+  }
+  /**
+   * @return string
+   */
+  public function getReach()
+  {
+    return $this->reach;
+  }
+  /**
+   * @param bool
+   */
+  public function setRemove($remove)
+  {
+    $this->remove = $remove;
+  }
+  /**
+   * @return bool
+   */
+  public function getRemove()
+  {
+    return $this->remove;
   }
   /**
    * @param float

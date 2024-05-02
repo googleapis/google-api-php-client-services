@@ -150,6 +150,14 @@ class QualityPreviewRanklabTitle extends \Google\Model
   /**
    * @var float
    */
+  public $goldmineSiteNameMarkupFactor;
+  /**
+   * @var float
+   */
+  public $goldmineSiteQueryFactor;
+  /**
+   * @var float
+   */
   public $goldmineSitenameFactor;
   /**
    * @var float
@@ -707,6 +715,34 @@ class QualityPreviewRanklabTitle extends \Google\Model
   public function getGoldmineSalientTermFactor()
   {
     return $this->goldmineSalientTermFactor;
+  }
+  /**
+   * @param float
+   */
+  public function setGoldmineSiteNameMarkupFactor($goldmineSiteNameMarkupFactor)
+  {
+    $this->goldmineSiteNameMarkupFactor = $goldmineSiteNameMarkupFactor;
+  }
+  /**
+   * @return float
+   */
+  public function getGoldmineSiteNameMarkupFactor()
+  {
+    return $this->goldmineSiteNameMarkupFactor;
+  }
+  /**
+   * @param float
+   */
+  public function setGoldmineSiteQueryFactor($goldmineSiteQueryFactor)
+  {
+    $this->goldmineSiteQueryFactor = $goldmineSiteQueryFactor;
+  }
+  /**
+   * @return float
+   */
+  public function getGoldmineSiteQueryFactor()
+  {
+    return $this->goldmineSiteQueryFactor;
   }
   /**
    * @param float

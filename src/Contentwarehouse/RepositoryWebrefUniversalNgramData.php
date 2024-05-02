@@ -23,10 +23,6 @@ class RepositoryWebrefUniversalNgramData extends \Google\Model
    * @var float
    */
   public $idf;
-  /**
-   * @var float
-   */
-  public $pluralProb;
 
   /**
    * @param float
@@ -41,20 +37,6 @@ class RepositoryWebrefUniversalNgramData extends \Google\Model
   public function getIdf()
   {
     return $this->idf;
-  }
-  /**
-   * @param float
-   */
-  public function setPluralProb($pluralProb)
-  {
-    $this->pluralProb = $pluralProb;
-  }
-  /**
-   * @return float
-   */
-  public function getPluralProb()
-  {
-    return $this->pluralProb;
   }
 }
 

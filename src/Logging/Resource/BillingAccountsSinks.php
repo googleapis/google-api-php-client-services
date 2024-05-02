@@ -117,6 +117,13 @@ class BillingAccountsSinks extends \Google\Service\Resource
    * "billingAccounts/[BILLING_ACCOUNT_ID]" "folders/[FOLDER_ID]"
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. A filter expression to constrain the sinks
+   * returned. Today, this only supports the following strings: ''
+   * 'in_scope("ALL")', 'in_scope("ANCESTOR")', 'in_scope("DEFAULT")'.Description
+   * of scopes below. ALL: Includes all of the sinks which can be returned in any
+   * other scope. ANCESTOR: Includes intercepting sinks owned by ancestor
+   * resources. DEFAULT: Includes sinks owned by parent.When the empty string is
+   * provided, then the filter 'in_scope("DEFAULT")' is applied.
    * @opt_param int pageSize Optional. The maximum number of results to return
    * from this request. Non-positive values are ignored. The presence of
    * nextPageToken in the response indicates that more results might be available.

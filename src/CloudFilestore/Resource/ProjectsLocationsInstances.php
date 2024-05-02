@@ -160,9 +160,9 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
    * Revert an existing instance's file system to a specified snapshot.
    * (instances.revert)
    *
-   * @param string $name Required.
-   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`. The
-   * resource name of the instance, in the format
+   * @param string $name Required. The resource name of the instance, in the
+   * format
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
    * @param RevertInstanceRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

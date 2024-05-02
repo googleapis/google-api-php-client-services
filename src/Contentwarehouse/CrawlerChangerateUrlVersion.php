@@ -17,9 +17,8 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class CrawlerChangerateUrlVersion extends \Google\Collection
+class CrawlerChangerateUrlVersion extends \Google\Model
 {
-  protected $collection_key = 'tile';
   /**
    * @var int
    */
@@ -36,18 +35,6 @@ class CrawlerChangerateUrlVersion extends \Google\Collection
    * @var int
    */
   public $lastModified;
-  /**
-   * @var int
-   */
-  public $offDomainLinksChecksum;
-  /**
-   * @var int
-   */
-  public $offDomainLinksCount;
-  /**
-   * @var int
-   */
-  public $onDomainLinksCount;
   protected $shingleSimhashType = IndexingConverterShingleFingerprint::class;
   protected $shingleSimhashDataType = '';
   /**
@@ -66,10 +53,6 @@ class CrawlerChangerateUrlVersion extends \Google\Collection
    * @var bool
    */
   public $simhashV2IsTrusted;
-  /**
-   * @var int[]
-   */
-  public $tile;
   /**
    * @var int
    */
@@ -130,48 +113,6 @@ class CrawlerChangerateUrlVersion extends \Google\Collection
   public function getLastModified()
   {
     return $this->lastModified;
-  }
-  /**
-   * @param int
-   */
-  public function setOffDomainLinksChecksum($offDomainLinksChecksum)
-  {
-    $this->offDomainLinksChecksum = $offDomainLinksChecksum;
-  }
-  /**
-   * @return int
-   */
-  public function getOffDomainLinksChecksum()
-  {
-    return $this->offDomainLinksChecksum;
-  }
-  /**
-   * @param int
-   */
-  public function setOffDomainLinksCount($offDomainLinksCount)
-  {
-    $this->offDomainLinksCount = $offDomainLinksCount;
-  }
-  /**
-   * @return int
-   */
-  public function getOffDomainLinksCount()
-  {
-    return $this->offDomainLinksCount;
-  }
-  /**
-   * @param int
-   */
-  public function setOnDomainLinksCount($onDomainLinksCount)
-  {
-    $this->onDomainLinksCount = $onDomainLinksCount;
-  }
-  /**
-   * @return int
-   */
-  public function getOnDomainLinksCount()
-  {
-    return $this->onDomainLinksCount;
   }
   /**
    * @param IndexingConverterShingleFingerprint
@@ -242,20 +183,6 @@ class CrawlerChangerateUrlVersion extends \Google\Collection
   public function getSimhashV2IsTrusted()
   {
     return $this->simhashV2IsTrusted;
-  }
-  /**
-   * @param int[]
-   */
-  public function setTile($tile)
-  {
-    $this->tile = $tile;
-  }
-  /**
-   * @return int[]
-   */
-  public function getTile()
-  {
-    return $this->tile;
   }
   /**
    * @param int

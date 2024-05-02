@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contentwarehouse;
 
-class AssistantLogsRoomAnnotationLog extends \Google\Model
+class AssistantLogsRoomAnnotationLog extends \Google\Collection
 {
+  protected $collection_key = 'roomId';
   /**
    * @var string
    */
@@ -27,6 +28,10 @@ class AssistantLogsRoomAnnotationLog extends \Google\Model
    * @var int
    */
   public $roomCount;
+  /**
+   * @var string[]
+   */
+  public $roomId;
   /**
    * @var string
    */
@@ -63,6 +68,20 @@ class AssistantLogsRoomAnnotationLog extends \Google\Model
   public function getRoomCount()
   {
     return $this->roomCount;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRoomId($roomId)
+  {
+    $this->roomId = $roomId;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRoomId()
+  {
+    return $this->roomId;
   }
   /**
    * @param string
