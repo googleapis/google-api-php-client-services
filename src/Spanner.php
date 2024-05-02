@@ -503,6 +503,11 @@ class Spanner extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'encryptionConfig.kmsKeyNames' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
