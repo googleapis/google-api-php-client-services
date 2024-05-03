@@ -17,39 +17,20 @@
 
 namespace Google\Service\CloudBuild;
 
-class TaskResult extends \Google\Model
+class StepRef extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $description;
+  protected $collection_key = 'params';
   /**
    * @var string
    */
   public $name;
-  protected $propertiesType = PropertySpec::class;
-  protected $propertiesDataType = 'map';
+  protected $paramsType = Param::class;
+  protected $paramsDataType = 'array';
   /**
    * @var string
    */
-  public $type;
-  protected $valueType = ParamValue::class;
-  protected $valueDataType = '';
+  public $resolver;
 
-  /**
-   * @param string
-   */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
-  }
   /**
    * @param string
    */
@@ -65,48 +46,34 @@ class TaskResult extends \Google\Model
     return $this->name;
   }
   /**
-   * @param PropertySpec[]
+   * @param Param[]
    */
-  public function setProperties($properties)
+  public function setParams($params)
   {
-    $this->properties = $properties;
+    $this->params = $params;
   }
   /**
-   * @return PropertySpec[]
+   * @return Param[]
    */
-  public function getProperties()
+  public function getParams()
   {
-    return $this->properties;
+    return $this->params;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setResolver($resolver)
   {
-    $this->type = $type;
+    $this->resolver = $resolver;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getResolver()
   {
-    return $this->type;
-  }
-  /**
-   * @param ParamValue
-   */
-  public function setValue(ParamValue $value)
-  {
-    $this->value = $value;
-  }
-  /**
-   * @return ParamValue
-   */
-  public function getValue()
-  {
-    return $this->value;
+    return $this->resolver;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TaskResult::class, 'Google_Service_CloudBuild_TaskResult');
+class_alias(StepRef::class, 'Google_Service_CloudBuild_StepRef');
