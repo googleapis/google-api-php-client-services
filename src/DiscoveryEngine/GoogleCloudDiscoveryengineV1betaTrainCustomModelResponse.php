@@ -28,6 +28,10 @@ class GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse extends \Google\C
   /**
    * @var string
    */
+  public $modelName;
+  /**
+   * @var string
+   */
   public $modelStatus;
 
   /**
@@ -65,6 +69,20 @@ class GoogleCloudDiscoveryengineV1betaTrainCustomModelResponse extends \Google\C
   public function getMetrics()
   {
     return $this->metrics;
+  }
+  /**
+   * @param string
+   */
+  public function setModelName($modelName)
+  {
+    $this->modelName = $modelName;
+  }
+  /**
+   * @return string
+   */
+  public function getModelName()
+  {
+    return $this->modelName;
   }
   /**
    * @param string
