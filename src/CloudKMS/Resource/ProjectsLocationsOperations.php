@@ -17,37 +17,35 @@
 
 namespace Google\Service\CloudKMS\Resource;
 
-use Google\Service\CloudKMS\ShowEffectiveAutokeyConfigResponse;
+use Google\Service\CloudKMS\Operation;
 
 /**
- * The "projects" collection of methods.
+ * The "operations" collection of methods.
  * Typical usage is:
  *  <code>
  *   $cloudkmsService = new Google\Service\CloudKMS(...);
- *   $projects = $cloudkmsService->projects;
+ *   $operations = $cloudkmsService->projects_locations_operations;
  *  </code>
  */
-class Projects extends \Google\Service\Resource
+class ProjectsLocationsOperations extends \Google\Service\Resource
 {
   /**
-   * Returns the effective Cloud KMS Autokey configuration for a given project.
-   * (projects.showEffectiveAutokeyConfig)
+   * Gets the latest state of a long-running operation. Clients can use this
+   * method to poll the operation result at intervals as recommended by the API
+   * service. (operations.get)
    *
-   * @param string $parent Required. Name of the resource project to the show
-   * effective Cloud KMS Autokey configuration for. This may be helpful for
-   * interrogating the effect of nested folder configurations on a given resource
-   * project.
+   * @param string $name The name of the operation resource.
    * @param array $optParams Optional parameters.
-   * @return ShowEffectiveAutokeyConfigResponse
+   * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function showEffectiveAutokeyConfig($parent, $optParams = [])
+  public function get($name, $optParams = [])
   {
-    $params = ['parent' => $parent];
+    $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('showEffectiveAutokeyConfig', [$params], ShowEffectiveAutokeyConfigResponse::class);
+    return $this->call('get', [$params], Operation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Projects::class, 'Google_Service_CloudKMS_Resource_Projects');
+class_alias(ProjectsLocationsOperations::class, 'Google_Service_CloudKMS_Resource_ProjectsLocationsOperations');
