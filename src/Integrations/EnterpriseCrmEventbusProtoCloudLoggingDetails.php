@@ -17,46 +17,46 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudConnectorsV1LogConfig extends \Google\Model
+class EnterpriseCrmEventbusProtoCloudLoggingDetails extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $enabled;
   /**
    * @var string
    */
-  public $level;
+  public $cloudLoggingSeverity;
+  /**
+   * @var bool
+   */
+  public $enableCloudLogging;
 
-  /**
-   * @param bool
-   */
-  public function setEnabled($enabled)
-  {
-    $this->enabled = $enabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnabled()
-  {
-    return $this->enabled;
-  }
   /**
    * @param string
    */
-  public function setLevel($level)
+  public function setCloudLoggingSeverity($cloudLoggingSeverity)
   {
-    $this->level = $level;
+    $this->cloudLoggingSeverity = $cloudLoggingSeverity;
   }
   /**
    * @return string
    */
-  public function getLevel()
+  public function getCloudLoggingSeverity()
   {
-    return $this->level;
+    return $this->cloudLoggingSeverity;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableCloudLogging($enableCloudLogging)
+  {
+    $this->enableCloudLogging = $enableCloudLogging;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableCloudLogging()
+  {
+    return $this->enableCloudLogging;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudConnectorsV1LogConfig::class, 'Google_Service_Integrations_GoogleCloudConnectorsV1LogConfig');
+class_alias(EnterpriseCrmEventbusProtoCloudLoggingDetails::class, 'Google_Service_Integrations_EnterpriseCrmEventbusProtoCloudLoggingDetails');
