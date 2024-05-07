@@ -96,6 +96,10 @@ class CloudRetail extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'enableAttributeSuggestions' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'entity' => [
                   'location' => 'query',
                   'type' => 'string',
