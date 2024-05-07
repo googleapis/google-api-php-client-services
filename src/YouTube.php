@@ -88,6 +88,7 @@ class YouTube extends \Google\Service
   public $videos;
   public $watermarks;
   public $youtube_v3;
+  public $youtube_v3_liveChat_messages;
   public $rootUrlTemplate;
 
   /**
@@ -2193,6 +2194,29 @@ class YouTube extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                   'repeated' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->youtube_v3_liveChat_messages = new YouTube\Resource\YoutubeV3LiveChatMessages(
+        $this,
+        $this->serviceName,
+        'messages',
+        [
+          'methods' => [
+            'transition' => [
+              'path' => 'youtube/v3/liveChat/messages/transition',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'id' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'status' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
