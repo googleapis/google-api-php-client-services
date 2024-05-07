@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1IndexStats extends \Google\Model
+class LearningServingLlmAtlasOutputMetadata extends \Google\Model
 {
   /**
-   * @var int
+   * @var string
    */
-  public $shardsCount;
+  public $requestTopic;
   /**
    * @var string
    */
-  public $sparseVectorsCount;
-  /**
-   * @var string
-   */
-  public $vectorsCount;
+  public $source;
 
   /**
-   * @param int
-   */
-  public function setShardsCount($shardsCount)
-  {
-    $this->shardsCount = $shardsCount;
-  }
-  /**
-   * @return int
-   */
-  public function getShardsCount()
-  {
-    return $this->shardsCount;
-  }
-  /**
    * @param string
    */
-  public function setSparseVectorsCount($sparseVectorsCount)
+  public function setRequestTopic($requestTopic)
   {
-    $this->sparseVectorsCount = $sparseVectorsCount;
+    $this->requestTopic = $requestTopic;
   }
   /**
    * @return string
    */
-  public function getSparseVectorsCount()
+  public function getRequestTopic()
   {
-    return $this->sparseVectorsCount;
+    return $this->requestTopic;
   }
   /**
    * @param string
    */
-  public function setVectorsCount($vectorsCount)
+  public function setSource($source)
   {
-    $this->vectorsCount = $vectorsCount;
+    $this->source = $source;
   }
   /**
    * @return string
    */
-  public function getVectorsCount()
+  public function getSource()
   {
-    return $this->vectorsCount;
+    return $this->source;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1IndexStats::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1IndexStats');
+class_alias(LearningServingLlmAtlasOutputMetadata::class, 'Google_Service_Aiplatform_LearningServingLlmAtlasOutputMetadata');

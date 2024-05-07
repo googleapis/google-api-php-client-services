@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class LearningServingLlmMessageMetadata extends \Google\Collection
 {
   protected $collection_key = 'translatedUserPrompts';
+  protected $atlasMetadataType = LearningServingLlmAtlasOutputMetadata::class;
+  protected $atlasMetadataDataType = '';
   protected $classifierSummaryType = LearningGenaiRootClassifierOutputSummary::class;
   protected $classifierSummaryDataType = '';
   protected $codeyOutputType = LearningGenaiRootCodeyOutput::class;
@@ -68,6 +70,10 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
    * @var int
    */
   public $perStreamDecodedTokenCount;
+  /**
+   * @var int
+   */
+  public $perStreamReturnedTokenCount;
   protected $raiOutputsType = LearningGenaiRootRAIOutput::class;
   protected $raiOutputsDataType = 'array';
   protected $recitationResultType = LearningGenaiRecitationRecitationResult::class;
@@ -87,12 +93,30 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
    */
   public $totalDecodedTokenCount;
   /**
+   * @var int
+   */
+  public $totalReturnedTokenCount;
+  /**
    * @var string[]
    */
   public $translatedUserPrompts;
   protected $vertexRaiResultType = CloudAiNlLlmProtoServiceRaiResult::class;
   protected $vertexRaiResultDataType = '';
 
+  /**
+   * @param LearningServingLlmAtlasOutputMetadata
+   */
+  public function setAtlasMetadata(LearningServingLlmAtlasOutputMetadata $atlasMetadata)
+  {
+    $this->atlasMetadata = $atlasMetadata;
+  }
+  /**
+   * @return LearningServingLlmAtlasOutputMetadata
+   */
+  public function getAtlasMetadata()
+  {
+    return $this->atlasMetadata;
+  }
   /**
    * @param LearningGenaiRootClassifierOutputSummary
    */
@@ -304,6 +328,20 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
     return $this->perStreamDecodedTokenCount;
   }
   /**
+   * @param int
+   */
+  public function setPerStreamReturnedTokenCount($perStreamReturnedTokenCount)
+  {
+    $this->perStreamReturnedTokenCount = $perStreamReturnedTokenCount;
+  }
+  /**
+   * @return int
+   */
+  public function getPerStreamReturnedTokenCount()
+  {
+    return $this->perStreamReturnedTokenCount;
+  }
+  /**
    * @param LearningGenaiRootRAIOutput[]
    */
   public function setRaiOutputs($raiOutputs)
@@ -386,6 +424,20 @@ class LearningServingLlmMessageMetadata extends \Google\Collection
   public function getTotalDecodedTokenCount()
   {
     return $this->totalDecodedTokenCount;
+  }
+  /**
+   * @param int
+   */
+  public function setTotalReturnedTokenCount($totalReturnedTokenCount)
+  {
+    $this->totalReturnedTokenCount = $totalReturnedTokenCount;
+  }
+  /**
+   * @return int
+   */
+  public function getTotalReturnedTokenCount()
+  {
+    return $this->totalReturnedTokenCount;
   }
   /**
    * @param string[]
