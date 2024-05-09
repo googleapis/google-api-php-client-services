@@ -96,6 +96,8 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $extendedSupportStart;
+  protected $fanInfoType = FanInfo::class;
+  protected $fanInfoDataType = 'array';
   /**
    * @var string
    */
@@ -500,6 +502,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getExtendedSupportStart()
   {
     return $this->extendedSupportStart;
+  }
+  /**
+   * @param FanInfo[]
+   */
+  public function setFanInfo($fanInfo)
+  {
+    $this->fanInfo = $fanInfo;
+  }
+  /**
+   * @return FanInfo[]
+   */
+  public function getFanInfo()
+  {
+    return $this->fanInfo;
   }
   /**
    * @param string
