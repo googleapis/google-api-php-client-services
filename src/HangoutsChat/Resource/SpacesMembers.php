@@ -188,7 +188,9 @@ class SpacesMembers extends \Google\Service\Resource
     return $this->call('list', [$params], ListMembershipsResponse::class);
   }
   /**
-   * Updates a membership. Requires [user
+   * Updates a membership. For an example, see [Update a user's membership in a
+   * space](https://developers.google.com/workspace/chat/update-members). Requires
+   * [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user). (members.patch)
    *
