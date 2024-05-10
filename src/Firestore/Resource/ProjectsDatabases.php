@@ -143,6 +143,8 @@ class ProjectsDatabases extends \Google\Service\Resource
    * @param string $parent Required. A parent name of the form
    * `projects/{project_id}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool showDeleted If true, also returns deleted resources.
    * @return GoogleFirestoreAdminV1ListDatabasesResponse
    * @throws \Google\Service\Exception
    */
