@@ -48,6 +48,10 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $bootMode;
+  /**
+   * @var string
+   */
+  public $chromeOsType;
   protected $cpuInfoType = ChromeOsDeviceCpuInfo::class;
   protected $cpuInfoDataType = 'array';
   protected $cpuStatusReportsType = ChromeOsDeviceCpuStatusReports::class;
@@ -306,6 +310,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getBootMode()
   {
     return $this->bootMode;
+  }
+  /**
+   * @param string
+   */
+  public function setChromeOsType($chromeOsType)
+  {
+    $this->chromeOsType = $chromeOsType;
+  }
+  /**
+   * @return string
+   */
+  public function getChromeOsType()
+  {
+    return $this->chromeOsType;
   }
   /**
    * @param ChromeOsDeviceCpuInfo[]
