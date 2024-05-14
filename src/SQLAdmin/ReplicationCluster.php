@@ -27,6 +27,10 @@ class ReplicationCluster extends \Google\Model
    * @var string
    */
   public $failoverDrReplicaName;
+  /**
+   * @var string
+   */
+  public $psaWriteEndpoint;
 
   /**
    * @param bool
@@ -55,6 +59,20 @@ class ReplicationCluster extends \Google\Model
   public function getFailoverDrReplicaName()
   {
     return $this->failoverDrReplicaName;
+  }
+  /**
+   * @param string
+   */
+  public function setPsaWriteEndpoint($psaWriteEndpoint)
+  {
+    $this->psaWriteEndpoint = $psaWriteEndpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getPsaWriteEndpoint()
+  {
+    return $this->psaWriteEndpoint;
   }
 }
 
