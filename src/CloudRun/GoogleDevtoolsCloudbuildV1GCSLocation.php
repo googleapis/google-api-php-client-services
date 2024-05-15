@@ -17,44 +17,64 @@
 
 namespace Google\Service\CloudRun;
 
-class GoogleDevtoolsCloudbuildV1HttpConfig extends \Google\Model
+class GoogleDevtoolsCloudbuildV1GCSLocation extends \Google\Model
 {
   /**
    * @var string
    */
-  public $proxySecretVersionName;
-  protected $proxySslCaInfoType = GoogleDevtoolsCloudbuildV1GCSLocation::class;
-  protected $proxySslCaInfoDataType = '';
+  public $bucket;
+  /**
+   * @var string
+   */
+  public $generation;
+  /**
+   * @var string
+   */
+  public $object;
 
   /**
    * @param string
    */
-  public function setProxySecretVersionName($proxySecretVersionName)
+  public function setBucket($bucket)
   {
-    $this->proxySecretVersionName = $proxySecretVersionName;
+    $this->bucket = $bucket;
   }
   /**
    * @return string
    */
-  public function getProxySecretVersionName()
+  public function getBucket()
   {
-    return $this->proxySecretVersionName;
+    return $this->bucket;
   }
   /**
-   * @param GoogleDevtoolsCloudbuildV1GCSLocation
+   * @param string
    */
-  public function setProxySslCaInfo(GoogleDevtoolsCloudbuildV1GCSLocation $proxySslCaInfo)
+  public function setGeneration($generation)
   {
-    $this->proxySslCaInfo = $proxySslCaInfo;
+    $this->generation = $generation;
   }
   /**
-   * @return GoogleDevtoolsCloudbuildV1GCSLocation
+   * @return string
    */
-  public function getProxySslCaInfo()
+  public function getGeneration()
   {
-    return $this->proxySslCaInfo;
+    return $this->generation;
+  }
+  /**
+   * @param string
+   */
+  public function setObject($object)
+  {
+    $this->object = $object;
+  }
+  /**
+   * @return string
+   */
+  public function getObject()
+  {
+    return $this->object;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleDevtoolsCloudbuildV1HttpConfig::class, 'Google_Service_CloudRun_GoogleDevtoolsCloudbuildV1HttpConfig');
+class_alias(GoogleDevtoolsCloudbuildV1GCSLocation::class, 'Google_Service_CloudRun_GoogleDevtoolsCloudbuildV1GCSLocation');
