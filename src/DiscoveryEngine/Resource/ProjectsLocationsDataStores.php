@@ -171,7 +171,7 @@ class ProjectsLocationsDataStores extends \Google\Service\Resource
    * error is returned.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filter by solution type. For example: filter =
+   * @opt_param string filter Filter by solution type . For example: filter =
    * 'solution_type:SOLUTION_TYPE_SEARCH'
    * @opt_param int pageSize Maximum number of DataStores to return. If
    * unspecified, defaults to 10. The maximum allowed value is 50. Values above 50

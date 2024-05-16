@@ -99,8 +99,7 @@ class BuyersFinalizedDeals extends \Google\Service\Resource
    * deal.createTime * deal.updateTime * deal.flightStartTime * deal.flightEndTime
    * * rtbMetrics.bidRequests7Days * rtbMetrics.bids7Days *
    * rtbMetrics.adImpressions7Days * rtbMetrics.bidRate7Days *
-   * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth Example:
-   * 'deal.displayName, deal.updateTime desc'
+   * rtbMetrics.filteredBidRate7Days * rtbMetrics.mustBidRateCurrentMonth
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. If requested more than 500, the server will return
    * 500 results per page. If unspecified, the server will pick a default page

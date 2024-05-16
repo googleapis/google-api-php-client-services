@@ -38,6 +38,10 @@ class Step extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = Param::class;
+  protected $paramsDataType = 'array';
+  protected $refType = StepRef::class;
+  protected $refDataType = '';
   /**
    * @var string
    */
@@ -124,6 +128,34 @@ class Step extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Param[]
+   */
+  public function setParams($params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return Param[]
+   */
+  public function getParams()
+  {
+    return $this->params;
+  }
+  /**
+   * @param StepRef
+   */
+  public function setRef(StepRef $ref)
+  {
+    $this->ref = $ref;
+  }
+  /**
+   * @return StepRef
+   */
+  public function getRef()
+  {
+    return $this->ref;
   }
   /**
    * @param string

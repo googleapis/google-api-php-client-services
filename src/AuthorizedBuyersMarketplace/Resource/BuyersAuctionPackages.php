@@ -68,6 +68,12 @@ class BuyersAuctionPackages extends \Google\Service\Resource
    * list filtering syntax](/authorized-buyers/apis/guides/list-filters). Only
    * supported when parent is bidder. Supported columns for filtering are: *
    * displayName * createTime * updateTime * eligibleSeatIds
+   * @opt_param string orderBy Optional. An optional query string to sort auction
+   * packages using the [Cloud API sorting
+   * syntax](https://cloud.google.com/apis/design/design_patterns#sorting_order).
+   * If no sort order is specified, results will be returned in an arbitrary
+   * order. Only supported when parent is bidder. Supported columns for sorting
+   * are: * displayName * createTime * updateTime
    * @opt_param int pageSize Requested page size. The server may return fewer
    * results than requested. Max allowed page size is 500.
    * @opt_param string pageToken The page token as returned.

@@ -1015,6 +1015,19 @@ class YouTube extends \Google\Service
                   'type' => 'integer',
                 ],
               ],
+            ],'transition' => [
+              'path' => 'youtube/v3/liveChat/messages/transition',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'id' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'status' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],
           ]
         ]

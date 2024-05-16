@@ -25,6 +25,8 @@ class NodeConfigDefaults extends \Google\Model
   protected $gcfsConfigDataType = '';
   protected $loggingConfigType = NodePoolLoggingConfig::class;
   protected $loggingConfigDataType = '';
+  protected $nodeKubeletConfigType = NodeKubeletConfig::class;
+  protected $nodeKubeletConfigDataType = '';
 
   /**
    * @param ContainerdConfig
@@ -67,6 +69,20 @@ class NodeConfigDefaults extends \Google\Model
   public function getLoggingConfig()
   {
     return $this->loggingConfig;
+  }
+  /**
+   * @param NodeKubeletConfig
+   */
+  public function setNodeKubeletConfig(NodeKubeletConfig $nodeKubeletConfig)
+  {
+    $this->nodeKubeletConfig = $nodeKubeletConfig;
+  }
+  /**
+   * @return NodeKubeletConfig
+   */
+  public function getNodeKubeletConfig()
+  {
+    return $this->nodeKubeletConfig;
   }
 }
 

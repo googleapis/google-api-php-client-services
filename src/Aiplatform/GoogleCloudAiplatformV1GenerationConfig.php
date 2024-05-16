@@ -41,6 +41,10 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    */
   public $responseMimeType;
   /**
+   * @var string
+   */
+  public $responseStyle;
+  /**
    * @var string[]
    */
   public $stopSequences;
@@ -126,6 +130,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getResponseMimeType()
   {
     return $this->responseMimeType;
+  }
+  /**
+   * @param string
+   */
+  public function setResponseStyle($responseStyle)
+  {
+    $this->responseStyle = $responseStyle;
+  }
+  /**
+   * @return string
+   */
+  public function getResponseStyle()
+  {
+    return $this->responseStyle;
   }
   /**
    * @param string[]

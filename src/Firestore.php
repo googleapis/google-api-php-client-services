@@ -142,6 +142,10 @@ class Firestore extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'showDeleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'patch' => [
               'path' => 'v1/{+name}',

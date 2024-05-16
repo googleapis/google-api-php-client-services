@@ -51,6 +51,10 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   /**
    * @var string[]
    */
+  public $httpMethods;
+  /**
+   * @var string[]
+   */
   public $ipAddressRanges;
   /**
    * @var string[]
@@ -158,6 +162,20 @@ class GoogleCloudApigeeV1SecurityActionConditionConfig extends \Google\Collectio
   public function getDevelopers()
   {
     return $this->developers;
+  }
+  /**
+   * @param string[]
+   */
+  public function setHttpMethods($httpMethods)
+  {
+    $this->httpMethods = $httpMethods;
+  }
+  /**
+   * @return string[]
+   */
+  public function getHttpMethods()
+  {
+    return $this->httpMethods;
   }
   /**
    * @param string[]

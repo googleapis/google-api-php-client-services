@@ -89,7 +89,9 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
     return $this->call('calculateStats', [$params], GoogleCloudContactcenterinsightsV1CalculateStatsResponse::class);
   }
   /**
-   * Creates a conversation. (conversations.create)
+   * Creates a conversation. DEPRECATED: Use UploadConversation instead.
+   * CreateConversation does not support audio transcription or DLP redaction.
+   * (conversations.create)
    *
    * @param string $parent Required. The parent resource of the conversation.
    * @param GoogleCloudContactcenterinsightsV1Conversation $postBody

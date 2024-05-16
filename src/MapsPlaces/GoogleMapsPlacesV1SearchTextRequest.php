@@ -44,6 +44,14 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
    */
   public $openNow;
   /**
+   * @var int
+   */
+  public $pageSize;
+  /**
+   * @var string
+   */
+  public $pageToken;
+  /**
    * @var string[]
    */
   public $priceLevels;
@@ -169,6 +177,34 @@ class GoogleMapsPlacesV1SearchTextRequest extends \Google\Collection
   public function getOpenNow()
   {
     return $this->openNow;
+  }
+  /**
+   * @param int
+   */
+  public function setPageSize($pageSize)
+  {
+    $this->pageSize = $pageSize;
+  }
+  /**
+   * @return int
+   */
+  public function getPageSize()
+  {
+    return $this->pageSize;
+  }
+  /**
+   * @param string
+   */
+  public function setPageToken($pageToken)
+  {
+    $this->pageToken = $pageToken;
+  }
+  /**
+   * @return string
+   */
+  public function getPageToken()
+  {
+    return $this->pageToken;
   }
   /**
    * @param string[]

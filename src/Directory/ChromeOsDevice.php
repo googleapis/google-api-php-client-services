@@ -48,6 +48,10 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $bootMode;
+  /**
+   * @var string
+   */
+  public $chromeOsType;
   protected $cpuInfoType = ChromeOsDeviceCpuInfo::class;
   protected $cpuInfoDataType = 'array';
   protected $cpuStatusReportsType = ChromeOsDeviceCpuStatusReports::class;
@@ -96,6 +100,8 @@ class ChromeOsDevice extends \Google\Collection
    * @var string
    */
   public $extendedSupportStart;
+  protected $fanInfoType = FanInfo::class;
+  protected $fanInfoDataType = 'array';
   /**
    * @var string
    */
@@ -306,6 +312,20 @@ class ChromeOsDevice extends \Google\Collection
     return $this->bootMode;
   }
   /**
+   * @param string
+   */
+  public function setChromeOsType($chromeOsType)
+  {
+    $this->chromeOsType = $chromeOsType;
+  }
+  /**
+   * @return string
+   */
+  public function getChromeOsType()
+  {
+    return $this->chromeOsType;
+  }
+  /**
    * @param ChromeOsDeviceCpuInfo[]
    */
   public function setCpuInfo($cpuInfo)
@@ -500,6 +520,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getExtendedSupportStart()
   {
     return $this->extendedSupportStart;
+  }
+  /**
+   * @param FanInfo[]
+   */
+  public function setFanInfo($fanInfo)
+  {
+    $this->fanInfo = $fanInfo;
+  }
+  /**
+   * @return FanInfo[]
+   */
+  public function getFanInfo()
+  {
+    return $this->fanInfo;
   }
   /**
    * @param string

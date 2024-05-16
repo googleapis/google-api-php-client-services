@@ -42,7 +42,6 @@ class ArtifactRegistry extends \Google\Service
   const CLOUD_PLATFORM_READ_ONLY =
       "https://www.googleapis.com/auth/cloud-platform.read-only";
 
-  public $media;
   public $projects;
   public $projects_locations;
   public $projects_locations_operations;
@@ -80,26 +79,6 @@ class ArtifactRegistry extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'artifactregistry';
 
-    $this->media = new ArtifactRegistry\Resource\Media(
-        $this,
-        $this->serviceName,
-        'media',
-        [
-          'methods' => [
-            'download' => [
-              'path' => 'v1/{+name}:download',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects = new ArtifactRegistry\Resource\Projects(
         $this,
         $this->serviceName,
@@ -408,7 +387,17 @@ class ArtifactRegistry extends \Google\Service
         'files',
         [
           'methods' => [
-            'get' => [
+            'download' => [
+              'path' => 'v1/{+name}:download',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [

@@ -44,7 +44,7 @@ class HangoutsChat extends \Google\Service
   /** Import spaces, messages, and memberships into Google Chat.. */
   const CHAT_IMPORT =
       "https://www.googleapis.com/auth/chat.import";
-  /** View, add, and remove members from conversations in Google Chat. */
+  /** View, add, update, and remove members from conversations in Google Chat. */
   const CHAT_MEMBERSHIPS =
       "https://www.googleapis.com/auth/chat.memberships";
   /** Add and remove itself from conversations in Google Chat. */

@@ -39,7 +39,6 @@ class Backupdr extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations;
-  public $projects_locations_backupVaults;
   public $projects_locations_managementServers;
   public $projects_locations_operations;
   public $rootUrlTemplate;
@@ -97,26 +96,6 @@ class Backupdr extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_backupVaults = new Backupdr\Resource\ProjectsLocationsBackupVaults(
-        $this,
-        $this->serviceName,
-        'backupVaults',
-        [
-          'methods' => [
-            'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],
