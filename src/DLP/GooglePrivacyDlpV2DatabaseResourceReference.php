@@ -22,12 +22,48 @@ class GooglePrivacyDlpV2DatabaseResourceReference extends \Google\Model
   /**
    * @var string
    */
+  public $database;
+  /**
+   * @var string
+   */
+  public $databaseResource;
+  /**
+   * @var string
+   */
   public $instance;
   /**
    * @var string
    */
   public $projectId;
 
+  /**
+   * @param string
+   */
+  public function setDatabase($database)
+  {
+    $this->database = $database;
+  }
+  /**
+   * @return string
+   */
+  public function getDatabase()
+  {
+    return $this->database;
+  }
+  /**
+   * @param string
+   */
+  public function setDatabaseResource($databaseResource)
+  {
+    $this->databaseResource = $databaseResource;
+  }
+  /**
+   * @return string
+   */
+  public function getDatabaseResource()
+  {
+    return $this->databaseResource;
+  }
   /**
    * @param string
    */
