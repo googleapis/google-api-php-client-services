@@ -31,10 +31,10 @@ use Google\Service\ArtifactRegistry\UploadGenericArtifactRequest;
 class ProjectsLocationsRepositoriesGenericArtifacts extends \Google\Service\Resource
 {
   /**
-   * Directly uploads a Generic artifact. The returned Operation will complete
-   * once the resources are uploaded. Package, Version, and File resources are
+   * Directly uploads a Generic artifact. The returned operation will complete
+   * once the resources are uploaded. Package, version, and file resources are
    * created based on the uploaded artifact. Uploaded artifacts that conflict with
-   * existing resources will raise an ALREADY_EXISTS error.
+   * existing resources will raise an `ALREADY_EXISTS` error.
    * (genericArtifacts.upload)
    *
    * @param string $parent The resource name of the repository where the generic

@@ -26,10 +26,6 @@ class UploadGenericArtifactRequest extends \Google\Model
   /**
    * @var string
    */
-  public $name;
-  /**
-   * @var string
-   */
   public $packageId;
   /**
    * @var string
@@ -49,20 +45,6 @@ class UploadGenericArtifactRequest extends \Google\Model
   public function getFilename()
   {
     return $this->filename;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
   }
   /**
    * @param string

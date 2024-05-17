@@ -74,7 +74,8 @@ class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
    * central1/repositories/repo1/packages/pkg1/versions/1.0"` --> Files owned by
    * the version `1.0` in package `pkg1`.
    * @opt_param string orderBy The field to order the results by.
-   * @opt_param int pageSize The maximum number of files to return.
+   * @opt_param int pageSize The maximum number of files to return. Maximum page
+   * size is 1,000.
    * @opt_param string pageToken The next_page_token value returned from a
    * previous list request, if any.
    * @return ListFilesResponse
