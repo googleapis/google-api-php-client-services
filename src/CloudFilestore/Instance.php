@@ -48,6 +48,8 @@ class Instance extends \Google\Collection
   public $name;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
+  protected $replicationType = Replication::class;
+  protected $replicationDataType = '';
   /**
    * @var bool
    */
@@ -184,6 +186,20 @@ class Instance extends \Google\Collection
   public function getNetworks()
   {
     return $this->networks;
+  }
+  /**
+   * @param Replication
+   */
+  public function setReplication(Replication $replication)
+  {
+    $this->replication = $replication;
+  }
+  /**
+   * @return Replication
+   */
+  public function getReplication()
+  {
+    return $this->replication;
   }
   /**
    * @param bool
