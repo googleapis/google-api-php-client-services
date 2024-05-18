@@ -68,6 +68,10 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   /**
    * @var string
    */
+  public $previousId;
+  /**
+   * @var string
+   */
   public $type;
   /**
    * @var string
@@ -249,6 +253,20 @@ class GoogleFirestoreAdminV1Database extends \Google\Model
   public function getPointInTimeRecoveryEnablement()
   {
     return $this->pointInTimeRecoveryEnablement;
+  }
+  /**
+   * @param string
+   */
+  public function setPreviousId($previousId)
+  {
+    $this->previousId = $previousId;
+  }
+  /**
+   * @return string
+   */
+  public function getPreviousId()
+  {
+    return $this->previousId;
   }
   /**
    * @param string
