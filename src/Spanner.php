@@ -699,7 +699,17 @@ class Spanner extends \Google\Service
         'databases',
         [
           'methods' => [
-            'create' => [
+            'changequorum' => [
+              'path' => 'v1/{+name}:changequorum',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/databases',
               'httpMethod' => 'POST',
               'parameters' => [
