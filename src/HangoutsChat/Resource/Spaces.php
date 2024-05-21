@@ -154,7 +154,7 @@ class Spaces extends \Google\Service\Resource
    * authorize-chat-user). (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form
-   * "spaces". Format: `spaces/{space}`
+   * `spaces/{space}`. Format: `spaces/{space}`
    * @param array $optParams Optional parameters.
    * @return Space
    * @throws \Google\Service\Exception

@@ -39,7 +39,7 @@ class SpacesMessagesAttachments extends \Google\Service\Resource
    * authorize-chat-app). (attachments.get)
    *
    * @param string $name Required. Resource name of the attachment, in the form
-   * `spaces/messages/attachments`.
+   * `spaces/{space}/messages/{message}/attachments/{attachment}`.
    * @param array $optParams Optional parameters.
    * @return Attachment
    * @throws \Google\Service\Exception
