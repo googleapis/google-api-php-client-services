@@ -112,7 +112,7 @@ class OrganizationsResourceValueConfigs extends \Google\Service\Resource
    * Updates an existing ResourceValueConfigs with new rules.
    * (resourceValueConfigs.patch)
    *
-   * @param string $name Name for the resource value config
+   * @param string $name Name for the resource value configuration
    * @param GoogleCloudSecuritycenterV1ResourceValueConfig $postBody
    * @param array $optParams Optional parameters.
    *
