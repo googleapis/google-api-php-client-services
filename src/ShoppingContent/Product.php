@@ -213,6 +213,8 @@ class Product extends \Google\Collection
   public $linkTemplate;
   protected $loyaltyProgramType = LoyaltyProgram::class;
   protected $loyaltyProgramDataType = '';
+  protected $loyaltyProgramsType = LoyaltyProgram::class;
+  protected $loyaltyProgramsDataType = 'array';
   /**
    * @var string
    */
@@ -1105,6 +1107,20 @@ class Product extends \Google\Collection
   public function getLoyaltyProgram()
   {
     return $this->loyaltyProgram;
+  }
+  /**
+   * @param LoyaltyProgram[]
+   */
+  public function setLoyaltyPrograms($loyaltyPrograms)
+  {
+    $this->loyaltyPrograms = $loyaltyPrograms;
+  }
+  /**
+   * @return LoyaltyProgram[]
+   */
+  public function getLoyaltyPrograms()
+  {
+    return $this->loyaltyPrograms;
   }
   /**
    * @param string
