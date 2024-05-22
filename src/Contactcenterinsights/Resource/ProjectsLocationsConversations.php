@@ -204,7 +204,12 @@ class ProjectsLocationsConversations extends \Google\Service\Resource
    * @param GoogleCloudContactcenterinsightsV1Conversation $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of fields to be updated.
+   * @opt_param string updateMask The list of fields to be updated. All possible
+   * fields can be updated by passing `*`, or a subset of the following updateable
+   * fields can be provided: * `agent_id` * `language_code` * `labels` *
+   * `metadata` * `quality_metadata` * `call_metadata` * `start_time` *
+   * `expire_time` or `ttl` * `data_source.gcs_source.audio_uri` or
+   * `data_source.dialogflow_source.audio_uri`
    * @return GoogleCloudContactcenterinsightsV1Conversation
    * @throws \Google\Service\Exception
    */
