@@ -17,8 +17,8 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRankRequest;
-use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1betaRankResponse;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1RankRequest;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1RankResponse;
 
 /**
  * The "rankingConfigs" collection of methods.
@@ -37,16 +37,16 @@ class ProjectsLocationsRankingConfigs extends \Google\Service\Resource
    * @param string $rankingConfig Required. The resource name of the rank service
    * config, such as `projects/{project_num}/locations/{location_id}/rankingConfig
    * s/default_ranking_config`.
-   * @param GoogleCloudDiscoveryengineV1betaRankRequest $postBody
+   * @param GoogleCloudDiscoveryengineV1RankRequest $postBody
    * @param array $optParams Optional parameters.
-   * @return GoogleCloudDiscoveryengineV1betaRankResponse
+   * @return GoogleCloudDiscoveryengineV1RankResponse
    * @throws \Google\Service\Exception
    */
-  public function rank($rankingConfig, GoogleCloudDiscoveryengineV1betaRankRequest $postBody, $optParams = [])
+  public function rank($rankingConfig, GoogleCloudDiscoveryengineV1RankRequest $postBody, $optParams = [])
   {
     $params = ['rankingConfig' => $rankingConfig, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('rank', [$params], GoogleCloudDiscoveryengineV1betaRankResponse::class);
+    return $this->call('rank', [$params], GoogleCloudDiscoveryengineV1RankResponse::class);
   }
 }
 

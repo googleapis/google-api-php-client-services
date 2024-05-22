@@ -40,8 +40,8 @@ class ProjectsLocationsDataStoresSchemas extends \Google\Service\Resource
    * @param GoogleCloudDiscoveryengineV1Schema $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string schemaId Required. The ID to use for the Schema, which will
-   * become the final component of the Schema.name. This field should conform to
+   * @opt_param string schemaId Required. The ID to use for the Schema, which
+   * becomes the final component of the Schema.name. This field should conform to
    * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
    * of 63 characters.
    * @return GoogleLongrunningOperation
@@ -94,9 +94,8 @@ class ProjectsLocationsDataStoresSchemas extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize The maximum number of Schemas to return. The service
-   * may return fewer than this value. If unspecified, at most 100 Schemas will be
-   * returned. The maximum value is 1000; values above 1000 will be coerced to
-   * 1000.
+   * may return fewer than this value. If unspecified, at most 100 Schemas are
+   * returned. The maximum value is 1000; values above 1000 are set to 1000.
    * @opt_param string pageToken A page token, received from a previous
    * SchemaService.ListSchemas call. Provide this to retrieve the subsequent page.
    * When paginating, all other parameters provided to SchemaService.ListSchemas
@@ -121,7 +120,7 @@ class ProjectsLocationsDataStoresSchemas extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool allowMissing If set to true, and the Schema is not found, a
-   * new Schema will be created. In this situation, `update_mask` is ignored.
+   * new Schema is created. In this situation, `update_mask` is ignored.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

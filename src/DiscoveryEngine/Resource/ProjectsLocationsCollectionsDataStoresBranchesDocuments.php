@@ -44,11 +44,11 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * @param array $optParams Optional parameters.
    *
    * @opt_param string documentId Required. The ID to use for the Document, which
-   * will become the final component of the Document.name. If the caller does not
-   * have permission to create the Document, regardless of whether or not it
-   * exists, a `PERMISSION_DENIED` error is returned. This field must be unique
-   * among all Documents with the same parent. Otherwise, an `ALREADY_EXISTS`
-   * error is returned. This field must conform to
+   * becomes the final component of the Document.name. If the caller does not have
+   * permission to create the Document, regardless of whether or not it exists, a
+   * `PERMISSION_DENIED` error is returned. This field must be unique among all
+   * Documents with the same parent. Otherwise, an `ALREADY_EXISTS` error is
+   * returned. This field must conform to
    * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
    * of 63 characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
    * @return GoogleCloudDiscoveryengineV1Document
@@ -100,7 +100,7 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
   }
   /**
    * Bulk import of multiple Documents. Request processing may be synchronous.
-   * Non-existing items will be created. Note: It is possible for a subset of the
+   * Non-existing items are created. Note: It is possible for a subset of the
    * Documents to be successfully updated. (documents.import)
    *
    * @param string $parent Required. The parent branch resource name, such as `pro
@@ -131,8 +131,8 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    *
    * @opt_param int pageSize Maximum number of Documents to return. If
    * unspecified, defaults to 100. The maximum allowed value is 1000. Values above
-   * 1000 will be coerced to 1000. If this field is negative, an
-   * `INVALID_ARGUMENT` error is returned.
+   * 1000 are set to 1000. If this field is negative, an `INVALID_ARGUMENT` error
+   * is returned.
    * @opt_param string pageToken A page token
    * ListDocumentsResponse.next_page_token, received from a previous
    * DocumentService.ListDocuments call. Provide this to retrieve the subsequent
@@ -158,10 +158,10 @@ class ProjectsLocationsCollectionsDataStoresBranchesDocuments extends \Google\Se
    * @param GoogleCloudDiscoveryengineV1Document $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing If set to true, and the Document is not found, a
-   * new Document will be created.
+   * @opt_param bool allowMissing If set to `true` and the Document is not found,
+   * a new Document is be created.
    * @opt_param string updateMask Indicates which fields in the provided imported
-   * 'document' to update. If not set, will by default update all fields.
+   * 'document' to update. If not set, by default updates all fields.
    * @return GoogleCloudDiscoveryengineV1Document
    * @throws \Google\Service\Exception
    */

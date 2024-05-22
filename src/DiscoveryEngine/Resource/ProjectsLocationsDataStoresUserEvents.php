@@ -62,7 +62,7 @@ class ProjectsLocationsDataStoresUserEvents extends \Google\Service\Resource
     return $this->call('collect', [$params], GoogleApiHttpBody::class);
   }
   /**
-   * Bulk import of User events. Request processing might be synchronous. Events
+   * Bulk import of user events. Request processing might be synchronous. Events
    * that already exist are skipped. Use this method for backfilling historical
    * user events. Operation.response is of type ImportResponse. Note that it is
    * possible for a subset of the items to be successfully inserted.
