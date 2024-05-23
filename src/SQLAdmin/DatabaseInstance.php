@@ -19,7 +19,7 @@ namespace Google\Service\SQLAdmin;
 
 class DatabaseInstance extends \Google\Collection
 {
-  protected $collection_key = 'suspensionReason';
+  protected $collection_key = 'upgradableDatabaseVersions';
   /**
    * @var string[]
    */
@@ -164,6 +164,8 @@ class DatabaseInstance extends \Google\Collection
    * @var string[]
    */
   public $suspensionReason;
+  protected $upgradableDatabaseVersionsType = AvailableDatabaseVersion::class;
+  protected $upgradableDatabaseVersionsDataType = 'array';
   /**
    * @var string
    */
@@ -756,6 +758,20 @@ class DatabaseInstance extends \Google\Collection
   public function getSuspensionReason()
   {
     return $this->suspensionReason;
+  }
+  /**
+   * @param AvailableDatabaseVersion[]
+   */
+  public function setUpgradableDatabaseVersions($upgradableDatabaseVersions)
+  {
+    $this->upgradableDatabaseVersions = $upgradableDatabaseVersions;
+  }
+  /**
+   * @return AvailableDatabaseVersion[]
+   */
+  public function getUpgradableDatabaseVersions()
+  {
+    return $this->upgradableDatabaseVersions;
   }
   /**
    * @param string
