@@ -52,6 +52,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $location;
+  protected $machineConfigurationType = StorageDatabasecenterPartnerapiV1mainMachineConfiguration::class;
+  protected $machineConfigurationDataType = '';
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   protected $productType = StorageDatabasecenterProtoCommonProduct::class;
@@ -228,6 +230,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainMachineConfiguration
+   */
+  public function setMachineConfiguration(StorageDatabasecenterPartnerapiV1mainMachineConfiguration $machineConfiguration)
+  {
+    $this->machineConfiguration = $machineConfiguration;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainMachineConfiguration
+   */
+  public function getMachineConfiguration()
+  {
+    return $this->machineConfiguration;
   }
   /**
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId
