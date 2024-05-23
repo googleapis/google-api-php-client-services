@@ -175,7 +175,9 @@ class Spaces extends \Google\Service\Resource
    * authorize-chat-app) and [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user). Lists spaces visible to the caller or authenticated
-   * user. Group chats and DMs aren't listed until the first message is sent.
+   * user. Group chats and DMs aren't listed until the first message is sent. To
+   * list all named spaces by Google Workspace organization, use the
+   * `spaces.search()` method using Workspace administrator privileges instead.
    * (spaces.listSpaces)
    *
    * @param array $optParams Optional parameters.
