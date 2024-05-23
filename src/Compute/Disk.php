@@ -23,6 +23,10 @@ class Disk extends \Google\Collection
   /**
    * @var string
    */
+  public $accessMode;
+  /**
+   * @var string
+   */
   public $architecture;
   protected $asyncPrimaryDiskType = DiskAsyncReplication::class;
   protected $asyncPrimaryDiskDataType = '';
@@ -201,6 +205,20 @@ class Disk extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * @param string
+   */
+  public function setAccessMode($accessMode)
+  {
+    $this->accessMode = $accessMode;
+  }
+  /**
+   * @return string
+   */
+  public function getAccessMode()
+  {
+    return $this->accessMode;
+  }
   /**
    * @param string
    */
