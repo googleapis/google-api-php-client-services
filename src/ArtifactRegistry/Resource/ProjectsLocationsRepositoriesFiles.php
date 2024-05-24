@@ -20,6 +20,7 @@ namespace Google\Service\ArtifactRegistry\Resource;
 use Google\Service\ArtifactRegistry\DownloadFileResponse;
 use Google\Service\ArtifactRegistry\GoogleDevtoolsArtifactregistryV1File;
 use Google\Service\ArtifactRegistry\ListFilesResponse;
+use Google\Service\ArtifactRegistry\Operation;
 
 /**
  * The "files" collection of methods.
@@ -31,6 +32,22 @@ use Google\Service\ArtifactRegistry\ListFilesResponse;
  */
 class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
 {
+  /**
+   * Deletes a file and all of its content. It is only allowed on generic
+   * repositories. The returned operation will complete once the file has been
+   * deleted. (files.delete)
+   *
+   * @param string $name Required. The name of the file to delete.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
   /**
    * Download a file. (files.download)
    *

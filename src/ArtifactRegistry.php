@@ -387,7 +387,17 @@ class ArtifactRegistry extends \Google\Service
         'files',
         [
           'methods' => [
-            'download' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'download' => [
               'path' => 'v1/{+name}:download',
               'httpMethod' => 'GET',
               'parameters' => [
