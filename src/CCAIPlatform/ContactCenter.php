@@ -30,6 +30,8 @@ class ContactCenter extends \Google\Collection
    * @var string
    */
   public $createTime;
+  protected $criticalType = Critical::class;
+  protected $criticalDataType = '';
   /**
    * @var string
    */
@@ -56,6 +58,8 @@ class ContactCenter extends \Google\Collection
   public $name;
   protected $normalType = Normal::class;
   protected $normalDataType = '';
+  protected $privateAccessType = PrivateAccess::class;
+  protected $privateAccessDataType = '';
   /**
    * @var string[]
    */
@@ -118,6 +122,20 @@ class ContactCenter extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param Critical
+   */
+  public function setCritical(Critical $critical)
+  {
+    $this->critical = $critical;
+  }
+  /**
+   * @return Critical
+   */
+  public function getCritical()
+  {
+    return $this->critical;
   }
   /**
    * @param string
@@ -230,6 +248,20 @@ class ContactCenter extends \Google\Collection
   public function getNormal()
   {
     return $this->normal;
+  }
+  /**
+   * @param PrivateAccess
+   */
+  public function setPrivateAccess(PrivateAccess $privateAccess)
+  {
+    $this->privateAccess = $privateAccess;
+  }
+  /**
+   * @return PrivateAccess
+   */
+  public function getPrivateAccess()
+  {
+    return $this->privateAccess;
   }
   /**
    * @param string[]
