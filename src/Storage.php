@@ -381,6 +381,20 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'getStorageLayout' => [
+              'path' => 'b/{bucket}/storageLayout',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'prefix' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'insert' => [
               'path' => 'b',
               'httpMethod' => 'POST',
