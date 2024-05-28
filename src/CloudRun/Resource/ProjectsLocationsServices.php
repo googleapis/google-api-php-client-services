@@ -132,7 +132,8 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
   }
   /**
-   * Lists Services. (services.listProjectsLocationsServices)
+   * Lists Services. Results are sorted by creation time, descending.
+   * (services.listProjectsLocationsServices)
    *
    * @param string $parent Required. The location and project to list resources
    * on. Location must be a valid Google Cloud region, and cannot be the "-"
