@@ -31,6 +31,10 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
   protected $groundingConfigType = GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig::class;
   protected $groundingConfigDataType = '';
   /**
+   * @var bool
+   */
+  public $hasPromptVariable;
+  /**
    * @var string
    */
   public $maxOutputTokens;
@@ -108,6 +112,20 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
   public function getGroundingConfig()
   {
     return $this->groundingConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setHasPromptVariable($hasPromptVariable)
+  {
+    $this->hasPromptVariable = $hasPromptVariable;
+  }
+  /**
+   * @return bool
+   */
+  public function getHasPromptVariable()
+  {
+    return $this->hasPromptVariable;
   }
   /**
    * @param string

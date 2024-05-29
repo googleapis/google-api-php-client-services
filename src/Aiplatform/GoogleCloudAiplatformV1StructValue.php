@@ -17,28 +17,27 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ResourceRuntime extends \Google\Model
+class GoogleCloudAiplatformV1StructValue extends \Google\Collection
 {
-  /**
-   * @var string[]
-   */
-  public $accessUris;
+  protected $collection_key = 'values';
+  protected $valuesType = GoogleCloudAiplatformV1StructFieldValue::class;
+  protected $valuesDataType = 'array';
 
   /**
-   * @param string[]
+   * @param GoogleCloudAiplatformV1StructFieldValue[]
    */
-  public function setAccessUris($accessUris)
+  public function setValues($values)
   {
-    $this->accessUris = $accessUris;
+    $this->values = $values;
   }
   /**
-   * @return string[]
+   * @return GoogleCloudAiplatformV1StructFieldValue[]
    */
-  public function getAccessUris()
+  public function getValues()
   {
-    return $this->accessUris;
+    return $this->values;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ResourceRuntime::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ResourceRuntime');
+class_alias(GoogleCloudAiplatformV1StructValue::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1StructValue');

@@ -17,28 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ResourceRuntime extends \Google\Model
+class GoogleCloudAiplatformV1MetadataStoreDataplexConfig extends \Google\Model
 {
   /**
-   * @var string[]
+   * @var bool
    */
-  public $accessUris;
+  public $enabledPipelinesLineage;
 
   /**
-   * @param string[]
+   * @param bool
    */
-  public function setAccessUris($accessUris)
+  public function setEnabledPipelinesLineage($enabledPipelinesLineage)
   {
-    $this->accessUris = $accessUris;
+    $this->enabledPipelinesLineage = $enabledPipelinesLineage;
   }
   /**
-   * @return string[]
+   * @return bool
    */
-  public function getAccessUris()
+  public function getEnabledPipelinesLineage()
   {
-    return $this->accessUris;
+    return $this->enabledPipelinesLineage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ResourceRuntime::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ResourceRuntime');
+class_alias(GoogleCloudAiplatformV1MetadataStoreDataplexConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1MetadataStoreDataplexConfig');

@@ -17,28 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ResourceRuntime extends \Google\Model
+class GoogleCloudAiplatformV1GoogleSearchRetrieval extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $accessUris;
-
-  /**
-   * @param string[]
-   */
-  public function setAccessUris($accessUris)
-  {
-    $this->accessUris = $accessUris;
-  }
-  /**
-   * @return string[]
-   */
-  public function getAccessUris()
-  {
-    return $this->accessUris;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ResourceRuntime::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ResourceRuntime');
+class_alias(GoogleCloudAiplatformV1GoogleSearchRetrieval::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GoogleSearchRetrieval');

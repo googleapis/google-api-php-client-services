@@ -17,47 +17,49 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiLargeModelsVisionRaiInfo extends \Google\Collection
+class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends \Google\Collection
 {
   protected $collection_key = 'scores';
-  protected $detectedLabelsType = CloudAiLargeModelsVisionRaiInfoDetectedLabels::class;
-  protected $detectedLabelsDataType = 'array';
   /**
    * @var string[]
    */
-  public $raiCategories;
+  public $descriptions;
+  /**
+   * @var string
+   */
+  public $raiCategory;
   /**
    * @var float[]
    */
   public $scores;
 
   /**
-   * @param CloudAiLargeModelsVisionRaiInfoDetectedLabels[]
-   */
-  public function setDetectedLabels($detectedLabels)
-  {
-    $this->detectedLabels = $detectedLabels;
-  }
-  /**
-   * @return CloudAiLargeModelsVisionRaiInfoDetectedLabels[]
-   */
-  public function getDetectedLabels()
-  {
-    return $this->detectedLabels;
-  }
-  /**
    * @param string[]
    */
-  public function setRaiCategories($raiCategories)
+  public function setDescriptions($descriptions)
   {
-    $this->raiCategories = $raiCategories;
+    $this->descriptions = $descriptions;
   }
   /**
    * @return string[]
    */
-  public function getRaiCategories()
+  public function getDescriptions()
   {
-    return $this->raiCategories;
+    return $this->descriptions;
+  }
+  /**
+   * @param string
+   */
+  public function setRaiCategory($raiCategory)
+  {
+    $this->raiCategory = $raiCategory;
+  }
+  /**
+   * @return string
+   */
+  public function getRaiCategory()
+  {
+    return $this->raiCategory;
   }
   /**
    * @param float[]
@@ -76,4 +78,4 @@ class CloudAiLargeModelsVisionRaiInfo extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiLargeModelsVisionRaiInfo::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionRaiInfo');
+class_alias(CloudAiLargeModelsVisionRaiInfoDetectedLabels::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionRaiInfoDetectedLabels');

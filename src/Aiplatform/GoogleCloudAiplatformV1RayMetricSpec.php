@@ -17,28 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ResourceRuntime extends \Google\Model
+class GoogleCloudAiplatformV1RayMetricSpec extends \Google\Model
 {
   /**
-   * @var string[]
+   * @var bool
    */
-  public $accessUris;
+  public $disabled;
 
   /**
-   * @param string[]
+   * @param bool
    */
-  public function setAccessUris($accessUris)
+  public function setDisabled($disabled)
   {
-    $this->accessUris = $accessUris;
+    $this->disabled = $disabled;
   }
   /**
-   * @return string[]
+   * @return bool
    */
-  public function getAccessUris()
+  public function getDisabled()
   {
-    return $this->accessUris;
+    return $this->disabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ResourceRuntime::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ResourceRuntime');
+class_alias(GoogleCloudAiplatformV1RayMetricSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RayMetricSpec');

@@ -19,6 +19,77 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1RaySpec extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $headNodeResourcePoolId;
+  /**
+   * @var string
+   */
+  public $imageUri;
+  protected $rayMetricSpecType = GoogleCloudAiplatformV1RayMetricSpec::class;
+  protected $rayMetricSpecDataType = '';
+  /**
+   * @var string[]
+   */
+  public $resourcePoolImages;
+
+  /**
+   * @param string
+   */
+  public function setHeadNodeResourcePoolId($headNodeResourcePoolId)
+  {
+    $this->headNodeResourcePoolId = $headNodeResourcePoolId;
+  }
+  /**
+   * @return string
+   */
+  public function getHeadNodeResourcePoolId()
+  {
+    return $this->headNodeResourcePoolId;
+  }
+  /**
+   * @param string
+   */
+  public function setImageUri($imageUri)
+  {
+    $this->imageUri = $imageUri;
+  }
+  /**
+   * @return string
+   */
+  public function getImageUri()
+  {
+    return $this->imageUri;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1RayMetricSpec
+   */
+  public function setRayMetricSpec(GoogleCloudAiplatformV1RayMetricSpec $rayMetricSpec)
+  {
+    $this->rayMetricSpec = $rayMetricSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1RayMetricSpec
+   */
+  public function getRayMetricSpec()
+  {
+    return $this->rayMetricSpec;
+  }
+  /**
+   * @param string[]
+   */
+  public function setResourcePoolImages($resourcePoolImages)
+  {
+    $this->resourcePoolImages = $resourcePoolImages;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResourcePoolImages()
+  {
+    return $this->resourcePoolImages;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
