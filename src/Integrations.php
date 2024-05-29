@@ -785,6 +785,16 @@ class Integrations extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'replay' => [
+              'path' => 'v1/{+name}:replay',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
