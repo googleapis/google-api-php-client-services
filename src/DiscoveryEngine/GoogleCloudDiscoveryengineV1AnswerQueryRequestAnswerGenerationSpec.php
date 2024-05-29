@@ -30,6 +30,10 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec extends
   /**
    * @var bool
    */
+  public $ignoreLowRelevantContent;
+  /**
+   * @var bool
+   */
   public $ignoreNonAnswerSeekingQuery;
   /**
    * @var bool
@@ -67,6 +71,20 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestAnswerGenerationSpec extends
   public function getIgnoreAdversarialQuery()
   {
     return $this->ignoreAdversarialQuery;
+  }
+  /**
+   * @param bool
+   */
+  public function setIgnoreLowRelevantContent($ignoreLowRelevantContent)
+  {
+    $this->ignoreLowRelevantContent = $ignoreLowRelevantContent;
+  }
+  /**
+   * @return bool
+   */
+  public function getIgnoreLowRelevantContent()
+  {
+    return $this->ignoreLowRelevantContent;
   }
   /**
    * @param bool

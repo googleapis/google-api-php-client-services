@@ -17,100 +17,100 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfoDocumentMetadata extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaProjectServiceTerms extends \Google\Model
 {
   /**
    * @var string
    */
-  public $document;
+  public $acceptTime;
   /**
    * @var string
    */
-  public $pageIdentifier;
-  /**
-   * @var array[]
-   */
-  public $structData;
+  public $declineTime;
   /**
    * @var string
    */
-  public $title;
+  public $id;
   /**
    * @var string
    */
-  public $uri;
+  public $state;
+  /**
+   * @var string
+   */
+  public $version;
 
   /**
    * @param string
    */
-  public function setDocument($document)
+  public function setAcceptTime($acceptTime)
   {
-    $this->document = $document;
+    $this->acceptTime = $acceptTime;
   }
   /**
    * @return string
    */
-  public function getDocument()
+  public function getAcceptTime()
   {
-    return $this->document;
+    return $this->acceptTime;
   }
   /**
    * @param string
    */
-  public function setPageIdentifier($pageIdentifier)
+  public function setDeclineTime($declineTime)
   {
-    $this->pageIdentifier = $pageIdentifier;
+    $this->declineTime = $declineTime;
   }
   /**
    * @return string
    */
-  public function getPageIdentifier()
+  public function getDeclineTime()
   {
-    return $this->pageIdentifier;
-  }
-  /**
-   * @param array[]
-   */
-  public function setStructData($structData)
-  {
-    $this->structData = $structData;
-  }
-  /**
-   * @return array[]
-   */
-  public function getStructData()
-  {
-    return $this->structData;
+    return $this->declineTime;
   }
   /**
    * @param string
    */
-  public function setTitle($title)
+  public function setId($id)
   {
-    $this->title = $title;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getTitle()
+  public function getId()
   {
-    return $this->title;
+    return $this->id;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setState($state)
   {
-    $this->uri = $uri;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getState()
   {
-    return $this->uri;
+    return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setVersion($version)
+  {
+    $this->version = $version;
+  }
+  /**
+   * @return string
+   */
+  public function getVersion()
+  {
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfoDocumentMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaAnswerReferenceChunkInfoDocumentMetadata');
+class_alias(GoogleCloudDiscoveryengineV1betaProjectServiceTerms::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaProjectServiceTerms');

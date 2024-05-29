@@ -17,46 +17,29 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaControlSynonymsAction extends \Google\Collection
 {
+  protected $collection_key = 'synonyms';
   /**
-   * @var string
+   * @var string[]
    */
-  public $dataStore;
-  /**
-   * @var string
-   */
-  public $filter;
+  public $synonyms;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setDataStore($dataStore)
+  public function setSynonyms($synonyms)
   {
-    $this->dataStore = $dataStore;
+    $this->synonyms = $synonyms;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getDataStore()
+  public function getSynonyms()
   {
-    return $this->dataStore;
-  }
-  /**
-   * @param string
-   */
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return string
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->synonyms;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1alphaControlSynonymsAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlSynonymsAction');

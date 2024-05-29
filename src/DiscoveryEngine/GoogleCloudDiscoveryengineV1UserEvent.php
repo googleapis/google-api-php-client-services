@@ -29,11 +29,19 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
   protected $completionInfoType = GoogleCloudDiscoveryengineV1CompletionInfo::class;
   protected $completionInfoDataType = '';
   /**
+   * @var string
+   */
+  public $dataStore;
+  /**
    * @var bool
    */
   public $directUserRequest;
   protected $documentsType = GoogleCloudDiscoveryengineV1DocumentInfo::class;
   protected $documentsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $engine;
   /**
    * @var string
    */
@@ -118,6 +126,20 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
     return $this->completionInfo;
   }
   /**
+   * @param string
+   */
+  public function setDataStore($dataStore)
+  {
+    $this->dataStore = $dataStore;
+  }
+  /**
+   * @return string
+   */
+  public function getDataStore()
+  {
+    return $this->dataStore;
+  }
+  /**
    * @param bool
    */
   public function setDirectUserRequest($directUserRequest)
@@ -144,6 +166,20 @@ class GoogleCloudDiscoveryengineV1UserEvent extends \Google\Collection
   public function getDocuments()
   {
     return $this->documents;
+  }
+  /**
+   * @param string
+   */
+  public function setEngine($engine)
+  {
+    $this->engine = $engine;
+  }
+  /**
+   * @return string
+   */
+  public function getEngine()
+  {
+    return $this->engine;
   }
   /**
    * @param string

@@ -17,46 +17,45 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1ListControlsResponse extends \Google\Collection
 {
+  protected $collection_key = 'controls';
+  protected $controlsType = GoogleCloudDiscoveryengineV1Control::class;
+  protected $controlsDataType = 'array';
   /**
    * @var string
    */
-  public $dataStore;
-  /**
-   * @var string
-   */
-  public $filter;
+  public $nextPageToken;
 
   /**
+   * @param GoogleCloudDiscoveryengineV1Control[]
+   */
+  public function setControls($controls)
+  {
+    $this->controls = $controls;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1Control[]
+   */
+  public function getControls()
+  {
+    return $this->controls;
+  }
+  /**
    * @param string
    */
-  public function setDataStore($dataStore)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->dataStore = $dataStore;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getDataStore()
+  public function getNextPageToken()
   {
-    return $this->dataStore;
-  }
-  /**
-   * @param string
-   */
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return string
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1ListControlsResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1ListControlsResponse');

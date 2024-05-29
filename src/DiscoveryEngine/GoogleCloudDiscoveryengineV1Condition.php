@@ -17,37 +17,37 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaCondition extends \Google\Collection
+class GoogleCloudDiscoveryengineV1Condition extends \Google\Collection
 {
   protected $collection_key = 'queryTerms';
-  protected $activeTimeRangeType = GoogleCloudDiscoveryengineV1alphaConditionTimeRange::class;
+  protected $activeTimeRangeType = GoogleCloudDiscoveryengineV1ConditionTimeRange::class;
   protected $activeTimeRangeDataType = 'array';
-  protected $queryTermsType = GoogleCloudDiscoveryengineV1alphaConditionQueryTerm::class;
+  protected $queryTermsType = GoogleCloudDiscoveryengineV1ConditionQueryTerm::class;
   protected $queryTermsDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaConditionTimeRange[]
+   * @param GoogleCloudDiscoveryengineV1ConditionTimeRange[]
    */
   public function setActiveTimeRange($activeTimeRange)
   {
     $this->activeTimeRange = $activeTimeRange;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaConditionTimeRange[]
+   * @return GoogleCloudDiscoveryengineV1ConditionTimeRange[]
    */
   public function getActiveTimeRange()
   {
     return $this->activeTimeRange;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaConditionQueryTerm[]
+   * @param GoogleCloudDiscoveryengineV1ConditionQueryTerm[]
    */
   public function setQueryTerms($queryTerms)
   {
     $this->queryTerms = $queryTerms;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaConditionQueryTerm[]
+   * @return GoogleCloudDiscoveryengineV1ConditionQueryTerm[]
    */
   public function getQueryTerms()
   {
@@ -56,4 +56,4 @@ class GoogleCloudDiscoveryengineV1alphaCondition extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaCondition::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaCondition');
+class_alias(GoogleCloudDiscoveryengineV1Condition::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1Condition');

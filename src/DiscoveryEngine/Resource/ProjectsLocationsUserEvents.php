@@ -40,6 +40,10 @@ class ProjectsLocationsUserEvents extends \Google\Service\Resource
    * `projects/{project}/locations/{location}`.
    * @param GoogleCloudDiscoveryengineV1UserEvent $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool writeAsync If set to true, the user event is written
+   * asynchronously after validation, and the API responds without waiting for the
+   * write.
    * @return GoogleCloudDiscoveryengineV1UserEvent
    * @throws \Google\Service\Exception
    */

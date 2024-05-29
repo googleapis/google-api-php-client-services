@@ -17,34 +17,34 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
+class GoogleCloudDiscoveryengineV1Control extends \Google\Collection
 {
   protected $collection_key = 'useCases';
   /**
    * @var string[]
    */
   public $associatedServingConfigIds;
-  protected $boostActionType = GoogleCloudDiscoveryengineV1alphaControlBoostAction::class;
+  protected $boostActionType = GoogleCloudDiscoveryengineV1ControlBoostAction::class;
   protected $boostActionDataType = '';
-  protected $conditionsType = GoogleCloudDiscoveryengineV1alphaCondition::class;
+  protected $conditionsType = GoogleCloudDiscoveryengineV1Condition::class;
   protected $conditionsDataType = 'array';
   /**
    * @var string
    */
   public $displayName;
-  protected $filterActionType = GoogleCloudDiscoveryengineV1alphaControlFilterAction::class;
+  protected $filterActionType = GoogleCloudDiscoveryengineV1ControlFilterAction::class;
   protected $filterActionDataType = '';
   /**
    * @var string
    */
   public $name;
-  protected $redirectActionType = GoogleCloudDiscoveryengineV1alphaControlRedirectAction::class;
+  protected $redirectActionType = GoogleCloudDiscoveryengineV1ControlRedirectAction::class;
   protected $redirectActionDataType = '';
   /**
    * @var string
    */
   public $solutionType;
-  protected $synonymsActionType = GoogleCloudDiscoveryengineV1alphaControlSynonymsAction::class;
+  protected $synonymsActionType = GoogleCloudDiscoveryengineV1ControlSynonymsAction::class;
   protected $synonymsActionDataType = '';
   /**
    * @var string[]
@@ -66,28 +66,28 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
     return $this->associatedServingConfigIds;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaControlBoostAction
+   * @param GoogleCloudDiscoveryengineV1ControlBoostAction
    */
-  public function setBoostAction(GoogleCloudDiscoveryengineV1alphaControlBoostAction $boostAction)
+  public function setBoostAction(GoogleCloudDiscoveryengineV1ControlBoostAction $boostAction)
   {
     $this->boostAction = $boostAction;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaControlBoostAction
+   * @return GoogleCloudDiscoveryengineV1ControlBoostAction
    */
   public function getBoostAction()
   {
     return $this->boostAction;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaCondition[]
+   * @param GoogleCloudDiscoveryengineV1Condition[]
    */
   public function setConditions($conditions)
   {
     $this->conditions = $conditions;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaCondition[]
+   * @return GoogleCloudDiscoveryengineV1Condition[]
    */
   public function getConditions()
   {
@@ -108,14 +108,14 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaControlFilterAction
+   * @param GoogleCloudDiscoveryengineV1ControlFilterAction
    */
-  public function setFilterAction(GoogleCloudDiscoveryengineV1alphaControlFilterAction $filterAction)
+  public function setFilterAction(GoogleCloudDiscoveryengineV1ControlFilterAction $filterAction)
   {
     $this->filterAction = $filterAction;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaControlFilterAction
+   * @return GoogleCloudDiscoveryengineV1ControlFilterAction
    */
   public function getFilterAction()
   {
@@ -136,14 +136,14 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaControlRedirectAction
+   * @param GoogleCloudDiscoveryengineV1ControlRedirectAction
    */
-  public function setRedirectAction(GoogleCloudDiscoveryengineV1alphaControlRedirectAction $redirectAction)
+  public function setRedirectAction(GoogleCloudDiscoveryengineV1ControlRedirectAction $redirectAction)
   {
     $this->redirectAction = $redirectAction;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaControlRedirectAction
+   * @return GoogleCloudDiscoveryengineV1ControlRedirectAction
    */
   public function getRedirectAction()
   {
@@ -164,14 +164,14 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
     return $this->solutionType;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaControlSynonymsAction
+   * @param GoogleCloudDiscoveryengineV1ControlSynonymsAction
    */
-  public function setSynonymsAction(GoogleCloudDiscoveryengineV1alphaControlSynonymsAction $synonymsAction)
+  public function setSynonymsAction(GoogleCloudDiscoveryengineV1ControlSynonymsAction $synonymsAction)
   {
     $this->synonymsAction = $synonymsAction;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaControlSynonymsAction
+   * @return GoogleCloudDiscoveryengineV1ControlSynonymsAction
    */
   public function getSynonymsAction()
   {
@@ -194,4 +194,4 @@ class GoogleCloudDiscoveryengineV1alphaControl extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControl::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControl');
+class_alias(GoogleCloudDiscoveryengineV1Control::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1Control');

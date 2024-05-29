@@ -19,7 +19,7 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Collection
 {
-  protected $collection_key = 'advancedSiteSearchDataSources';
+  protected $collection_key = 'schemaOrgPaths';
   /**
    * @var string[]
    */
@@ -56,6 +56,10 @@ class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Collection
    * @var string
    */
   public $retrievableOption;
+  /**
+   * @var string[]
+   */
+  public $schemaOrgPaths;
   /**
    * @var string
    */
@@ -186,6 +190,20 @@ class GoogleCloudDiscoveryengineV1alphaFieldConfig extends \Google\Collection
   public function getRetrievableOption()
   {
     return $this->retrievableOption;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSchemaOrgPaths($schemaOrgPaths)
+  {
+    $this->schemaOrgPaths = $schemaOrgPaths;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSchemaOrgPaths()
+  {
+    return $this->schemaOrgPaths;
   }
   /**
    * @param string

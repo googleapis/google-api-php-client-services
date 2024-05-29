@@ -17,46 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaControlRedirectAction extends \Google\Model
 {
   /**
    * @var string
    */
-  public $dataStore;
-  /**
-   * @var string
-   */
-  public $filter;
+  public $redirectUri;
 
   /**
    * @param string
    */
-  public function setDataStore($dataStore)
+  public function setRedirectUri($redirectUri)
   {
-    $this->dataStore = $dataStore;
+    $this->redirectUri = $redirectUri;
   }
   /**
    * @return string
    */
-  public function getDataStore()
+  public function getRedirectUri()
   {
-    return $this->dataStore;
-  }
-  /**
-   * @param string
-   */
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return string
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->redirectUri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1alphaControlRedirectAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlRedirectAction');

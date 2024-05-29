@@ -17,7 +17,7 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1ControlFilterAction extends \Google\Model
 {
   /**
    * @var string
@@ -59,4 +59,4 @@ class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1ControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1ControlFilterAction');

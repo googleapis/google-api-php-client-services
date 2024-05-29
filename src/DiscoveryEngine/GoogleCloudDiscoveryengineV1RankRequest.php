@@ -38,6 +38,10 @@ class GoogleCloudDiscoveryengineV1RankRequest extends \Google\Collection
    * @var int
    */
   public $topN;
+  /**
+   * @var string[]
+   */
+  public $userLabels;
 
   /**
    * @param bool
@@ -108,6 +112,20 @@ class GoogleCloudDiscoveryengineV1RankRequest extends \Google\Collection
   public function getTopN()
   {
     return $this->topN;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUserLabels($userLabels)
+  {
+    $this->userLabels = $userLabels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUserLabels()
+  {
+    return $this->userLabels;
   }
 }
 

@@ -17,46 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1ConditionTimeRange extends \Google\Model
 {
   /**
    * @var string
    */
-  public $dataStore;
+  public $endTime;
   /**
    * @var string
    */
-  public $filter;
+  public $startTime;
 
   /**
    * @param string
    */
-  public function setDataStore($dataStore)
+  public function setEndTime($endTime)
   {
-    $this->dataStore = $dataStore;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getDataStore()
+  public function getEndTime()
   {
-    return $this->dataStore;
+    return $this->endTime;
   }
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setStartTime($startTime)
   {
-    $this->filter = $filter;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getStartTime()
   {
-    return $this->filter;
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1ConditionTimeRange::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1ConditionTimeRange');

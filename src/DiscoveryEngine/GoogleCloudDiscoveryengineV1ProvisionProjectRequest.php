@@ -17,46 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $dataStore;
+  public $acceptDataUseTerms;
   /**
    * @var string
    */
-  public $filter;
+  public $dataUseTermsVersion;
 
   /**
+   * @param bool
+   */
+  public function setAcceptDataUseTerms($acceptDataUseTerms)
+  {
+    $this->acceptDataUseTerms = $acceptDataUseTerms;
+  }
+  /**
+   * @return bool
+   */
+  public function getAcceptDataUseTerms()
+  {
+    return $this->acceptDataUseTerms;
+  }
+  /**
    * @param string
    */
-  public function setDataStore($dataStore)
+  public function setDataUseTermsVersion($dataUseTermsVersion)
   {
-    $this->dataStore = $dataStore;
+    $this->dataUseTermsVersion = $dataUseTermsVersion;
   }
   /**
    * @return string
    */
-  public function getDataStore()
+  public function getDataUseTermsVersion()
   {
-    return $this->dataStore;
-  }
-  /**
-   * @param string
-   */
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return string
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->dataUseTermsVersion;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1ProvisionProjectRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1ProvisionProjectRequest');

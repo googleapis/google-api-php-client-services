@@ -17,46 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaControlFilterAction extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaConditionQueryTerm extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $dataStore;
+  public $fullMatch;
   /**
    * @var string
    */
-  public $filter;
+  public $value;
 
   /**
+   * @param bool
+   */
+  public function setFullMatch($fullMatch)
+  {
+    $this->fullMatch = $fullMatch;
+  }
+  /**
+   * @return bool
+   */
+  public function getFullMatch()
+  {
+    return $this->fullMatch;
+  }
+  /**
    * @param string
    */
-  public function setDataStore($dataStore)
+  public function setValue($value)
   {
-    $this->dataStore = $dataStore;
+    $this->value = $value;
   }
   /**
    * @return string
    */
-  public function getDataStore()
+  public function getValue()
   {
-    return $this->dataStore;
-  }
-  /**
-   * @param string
-   */
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return string
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaControlFilterAction::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaControlFilterAction');
+class_alias(GoogleCloudDiscoveryengineV1betaConditionQueryTerm::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaConditionQueryTerm');
