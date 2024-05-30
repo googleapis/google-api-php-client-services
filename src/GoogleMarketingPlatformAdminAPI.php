@@ -26,8 +26,8 @@ use Google\Client;
  * The Google Marketing Platform Admin API allows for programmatic access to the
  * Google Marketing Platform configuration data. You can use the Google
  * Marketing Platform Admin API to manage links between your Google Marketing
- * Platform organization and Google Analytics accounts, set the service level of
- * your GA4 properties.</p>
+ * Platform organization and Google Analytics accounts, and to set the service
+ * level of your GA4 properties.</p>
  *
  * <p>
  * For more information about this service, see the API
