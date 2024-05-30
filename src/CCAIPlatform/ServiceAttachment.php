@@ -17,13 +17,32 @@
 
 namespace Google\Service\CCAIPlatform;
 
-class ServiceAttachment extends \Google\Model
+class ServiceAttachment extends \Google\Collection
 {
+  protected $collection_key = 'allowedProjectIds';
+  /**
+   * @var string[]
+   */
+  public $allowedProjectIds;
   /**
    * @var string
    */
   public $name;
 
+  /**
+   * @param string[]
+   */
+  public function setAllowedProjectIds($allowedProjectIds)
+  {
+    $this->allowedProjectIds = $allowedProjectIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAllowedProjectIds()
+  {
+    return $this->allowedProjectIds;
+  }
   /**
    * @param string
    */
