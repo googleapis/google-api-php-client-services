@@ -26,6 +26,10 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
   public $backupFilePattern;
   protected $databaseBackupsType = SqlServerDatabaseBackup::class;
   protected $databaseBackupsDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $useDiffBackup;
 
   /**
    * @param string
@@ -54,6 +58,20 @@ class SqlServerHomogeneousMigrationJobConfig extends \Google\Collection
   public function getDatabaseBackups()
   {
     return $this->databaseBackups;
+  }
+  /**
+   * @param bool
+   */
+  public function setUseDiffBackup($useDiffBackup)
+  {
+    $this->useDiffBackup = $useDiffBackup;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseDiffBackup()
+  {
+    return $this->useDiffBackup;
   }
 }
 
