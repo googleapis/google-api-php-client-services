@@ -36,6 +36,10 @@ class ConsumerPscConfig extends \Google\Model
    */
   public $project;
   /**
+   * @var string[]
+   */
+  public $serviceAttachmentIpAddressMap;
+  /**
    * @var string
    */
   public $state;
@@ -95,6 +99,20 @@ class ConsumerPscConfig extends \Google\Model
   public function getProject()
   {
     return $this->project;
+  }
+  /**
+   * @param string[]
+   */
+  public function setServiceAttachmentIpAddressMap($serviceAttachmentIpAddressMap)
+  {
+    $this->serviceAttachmentIpAddressMap = $serviceAttachmentIpAddressMap;
+  }
+  /**
+   * @return string[]
+   */
+  public function getServiceAttachmentIpAddressMap()
+  {
+    return $this->serviceAttachmentIpAddressMap;
   }
   /**
    * @param string
