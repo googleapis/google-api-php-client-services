@@ -54,6 +54,7 @@ class GoogleAnalyticsAdmin extends \Google\Service
   public $properties_customDimensions;
   public $properties_customMetrics;
   public $properties_dataStreams;
+  public $properties_dataStreams_eventEditRules;
   public $properties_dataStreams_measurementProtocolSecrets;
   public $properties_firebaseLinks;
   public $properties_googleAdsLinks;
@@ -590,6 +591,26 @@ class GoogleAnalyticsAdmin extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->properties_dataStreams_eventEditRules = new GoogleAnalyticsAdmin\Resource\PropertiesDataStreamsEventEditRules(
+        $this,
+        $this->serviceName,
+        'eventEditRules',
+        [
+          'methods' => [
+            'reorder' => [
+              'path' => 'v1beta/{+parent}/eventEditRules:reorder',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
