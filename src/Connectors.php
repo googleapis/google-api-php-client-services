@@ -43,6 +43,7 @@ class Connectors extends \Google\Service
   public $projects_locations_connections_actions;
   public $projects_locations_connections_entityTypes;
   public $projects_locations_connections_entityTypes_entities;
+  public $projects_locations_connections_entityTypes_entitieswithacls;
   public $rootUrlTemplate;
 
   /**
@@ -315,6 +316,47 @@ class Connectors extends \Google\Service
                 'conditions' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_connections_entityTypes_entitieswithacls = new Connectors\Resource\ProjectsLocationsConnectionsEntityTypesEntitieswithacls(
+        $this,
+        $this->serviceName,
+        'entitieswithacls',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v2/{+parent}/entitieswithacls',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'conditions' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'gsutilUri' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'sortBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],
