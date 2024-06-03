@@ -53,6 +53,10 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
   /**
    * @var string
    */
+  public $systemInstruction;
+  /**
+   * @var string
+   */
   public $systemInstructionGcsUri;
   /**
    * @var float
@@ -182,6 +186,20 @@ class GoogleCloudAiplatformV1SchemaTextPromptDatasetMetadata extends \Google\Col
   public function getStopSequences()
   {
     return $this->stopSequences;
+  }
+  /**
+   * @param string
+   */
+  public function setSystemInstruction($systemInstruction)
+  {
+    $this->systemInstruction = $systemInstruction;
+  }
+  /**
+   * @return string
+   */
+  public function getSystemInstruction()
+  {
+    return $this->systemInstruction;
   }
   /**
    * @param string

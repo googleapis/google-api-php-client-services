@@ -19,9 +19,41 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1TuningDataStats extends \Google\Model
 {
+  protected $distillationDataStatsType = GoogleCloudAiplatformV1DistillationDataStats::class;
+  protected $distillationDataStatsDataType = '';
+  protected $reinforcementLearningDataStatsType = GoogleCloudAiplatformV1ReinforcementLearningDataStats::class;
+  protected $reinforcementLearningDataStatsDataType = '';
   protected $supervisedTuningDataStatsType = GoogleCloudAiplatformV1SupervisedTuningDataStats::class;
   protected $supervisedTuningDataStatsDataType = '';
 
+  /**
+   * @param GoogleCloudAiplatformV1DistillationDataStats
+   */
+  public function setDistillationDataStats(GoogleCloudAiplatformV1DistillationDataStats $distillationDataStats)
+  {
+    $this->distillationDataStats = $distillationDataStats;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1DistillationDataStats
+   */
+  public function getDistillationDataStats()
+  {
+    return $this->distillationDataStats;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ReinforcementLearningDataStats
+   */
+  public function setReinforcementLearningDataStats(GoogleCloudAiplatformV1ReinforcementLearningDataStats $reinforcementLearningDataStats)
+  {
+    $this->reinforcementLearningDataStats = $reinforcementLearningDataStats;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReinforcementLearningDataStats
+   */
+  public function getReinforcementLearningDataStats()
+  {
+    return $this->reinforcementLearningDataStats;
+  }
   /**
    * @param GoogleCloudAiplatformV1SupervisedTuningDataStats
    */

@@ -40,6 +40,8 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var string
    */
   public $responseMimeType;
+  protected $responseSchemaType = GoogleCloudAiplatformV1Schema::class;
+  protected $responseSchemaDataType = '';
   /**
    * @var string[]
    */
@@ -126,6 +128,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getResponseMimeType()
   {
     return $this->responseMimeType;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1Schema
+   */
+  public function setResponseSchema(GoogleCloudAiplatformV1Schema $responseSchema)
+  {
+    $this->responseSchema = $responseSchema;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Schema
+   */
+  public function getResponseSchema()
+  {
+    return $this->responseSchema;
   }
   /**
    * @param string[]

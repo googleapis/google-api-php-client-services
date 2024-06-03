@@ -17,45 +17,47 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends \Google\Collection
+class GoogleCloudAiplatformV1FunctionCallingConfig extends \Google\Collection
 {
-  protected $collection_key = 'entities';
-  protected $entitiesType = CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity::class;
-  protected $entitiesDataType = 'array';
+  protected $collection_key = 'allowedFunctionNames';
+  /**
+   * @var string[]
+   */
+  public $allowedFunctionNames;
   /**
    * @var string
    */
-  public $raiCategory;
+  public $mode;
 
   /**
-   * @param CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity[]
+   * @param string[]
    */
-  public function setEntities($entities)
+  public function setAllowedFunctionNames($allowedFunctionNames)
   {
-    $this->entities = $entities;
+    $this->allowedFunctionNames = $allowedFunctionNames;
   }
   /**
-   * @return CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity[]
+   * @return string[]
    */
-  public function getEntities()
+  public function getAllowedFunctionNames()
   {
-    return $this->entities;
+    return $this->allowedFunctionNames;
   }
   /**
    * @param string
    */
-  public function setRaiCategory($raiCategory)
+  public function setMode($mode)
   {
-    $this->raiCategory = $raiCategory;
+    $this->mode = $mode;
   }
   /**
    * @return string
    */
-  public function getRaiCategory()
+  public function getMode()
   {
-    return $this->raiCategory;
+    return $this->mode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiLargeModelsVisionRaiInfoDetectedLabels::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionRaiInfoDetectedLabels');
+class_alias(GoogleCloudAiplatformV1FunctionCallingConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FunctionCallingConfig');

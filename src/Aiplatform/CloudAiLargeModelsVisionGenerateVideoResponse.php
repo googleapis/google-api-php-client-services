@@ -23,10 +23,6 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
   protected $generatedSamplesType = CloudAiLargeModelsVisionMedia::class;
   protected $generatedSamplesDataType = 'array';
   /**
-   * @var string
-   */
-  public $raiErrorMessage;
-  /**
    * @var int
    */
   public $raiMediaFilteredCount;
@@ -34,8 +30,6 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
    * @var string[]
    */
   public $raiMediaFilteredReasons;
-  protected $raiTextFilteredReasonType = CloudAiLargeModelsVisionFilteredText::class;
-  protected $raiTextFilteredReasonDataType = '';
 
   /**
    * @param CloudAiLargeModelsVisionMedia[]
@@ -50,20 +44,6 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
   public function getGeneratedSamples()
   {
     return $this->generatedSamples;
-  }
-  /**
-   * @param string
-   */
-  public function setRaiErrorMessage($raiErrorMessage)
-  {
-    $this->raiErrorMessage = $raiErrorMessage;
-  }
-  /**
-   * @return string
-   */
-  public function getRaiErrorMessage()
-  {
-    return $this->raiErrorMessage;
   }
   /**
    * @param int
@@ -92,20 +72,6 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
   public function getRaiMediaFilteredReasons()
   {
     return $this->raiMediaFilteredReasons;
-  }
-  /**
-   * @param CloudAiLargeModelsVisionFilteredText
-   */
-  public function setRaiTextFilteredReason(CloudAiLargeModelsVisionFilteredText $raiTextFilteredReason)
-  {
-    $this->raiTextFilteredReason = $raiTextFilteredReason;
-  }
-  /**
-   * @return CloudAiLargeModelsVisionFilteredText
-   */
-  public function getRaiTextFilteredReason()
-  {
-    return $this->raiTextFilteredReason;
   }
 }
 

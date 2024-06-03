@@ -17,45 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiLargeModelsVisionRaiInfoDetectedLabels extends \Google\Collection
+class CloudAiPlatformCommonCreatePipelineJobApiErrorDetail extends \Google\Model
 {
-  protected $collection_key = 'entities';
-  protected $entitiesType = CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity::class;
-  protected $entitiesDataType = 'array';
   /**
    * @var string
    */
-  public $raiCategory;
+  public $errorCause;
+  /**
+   * @var string
+   */
+  public $publicMessage;
 
-  /**
-   * @param CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity[]
-   */
-  public function setEntities($entities)
-  {
-    $this->entities = $entities;
-  }
-  /**
-   * @return CloudAiLargeModelsVisionRaiInfoDetectedLabelsEntity[]
-   */
-  public function getEntities()
-  {
-    return $this->entities;
-  }
   /**
    * @param string
    */
-  public function setRaiCategory($raiCategory)
+  public function setErrorCause($errorCause)
   {
-    $this->raiCategory = $raiCategory;
+    $this->errorCause = $errorCause;
   }
   /**
    * @return string
    */
-  public function getRaiCategory()
+  public function getErrorCause()
   {
-    return $this->raiCategory;
+    return $this->errorCause;
+  }
+  /**
+   * @param string
+   */
+  public function setPublicMessage($publicMessage)
+  {
+    $this->publicMessage = $publicMessage;
+  }
+  /**
+   * @return string
+   */
+  public function getPublicMessage()
+  {
+    return $this->publicMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiLargeModelsVisionRaiInfoDetectedLabels::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionRaiInfoDetectedLabels');
+class_alias(CloudAiPlatformCommonCreatePipelineJobApiErrorDetail::class, 'Google_Service_Aiplatform_CloudAiPlatformCommonCreatePipelineJobApiErrorDetail');
