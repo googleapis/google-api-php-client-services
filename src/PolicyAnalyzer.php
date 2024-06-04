@@ -38,6 +38,8 @@ class PolicyAnalyzer extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
+  public $folders_locations_activityTypes_activities;
+  public $organizations_locations_activityTypes_activities;
   public $projects_locations_activityTypes_activities;
   public $rootUrlTemplate;
 
@@ -58,6 +60,70 @@ class PolicyAnalyzer extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'policyanalyzer';
 
+    $this->folders_locations_activityTypes_activities = new PolicyAnalyzer\Resource\FoldersLocationsActivityTypesActivities(
+        $this,
+        $this->serviceName,
+        'activities',
+        [
+          'methods' => [
+            'query' => [
+              'path' => 'v1/{+parent}/activities:query',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_locations_activityTypes_activities = new PolicyAnalyzer\Resource\OrganizationsLocationsActivityTypesActivities(
+        $this,
+        $this->serviceName,
+        'activities',
+        [
+          'methods' => [
+            'query' => [
+              'path' => 'v1/{+parent}/activities:query',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_activityTypes_activities = new PolicyAnalyzer\Resource\ProjectsLocationsActivityTypesActivities(
         $this,
         $this->serviceName,
