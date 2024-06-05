@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1ImportDocumentsRequest extends \Google\Model
 {
+  protected $alloyDbSourceType = GoogleCloudDiscoveryengineV1AlloyDbSource::class;
+  protected $alloyDbSourceDataType = '';
   /**
    * @var bool
    */
@@ -54,6 +56,20 @@ class GoogleCloudDiscoveryengineV1ImportDocumentsRequest extends \Google\Model
    */
   public $updateMask;
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1AlloyDbSource
+   */
+  public function setAlloyDbSource(GoogleCloudDiscoveryengineV1AlloyDbSource $alloyDbSource)
+  {
+    $this->alloyDbSource = $alloyDbSource;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AlloyDbSource
+   */
+  public function getAlloyDbSource()
+  {
+    return $this->alloyDbSource;
+  }
   /**
    * @param bool
    */

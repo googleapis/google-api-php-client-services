@@ -21,6 +21,8 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig extends 
 {
   protected $digitalParsingConfigType = GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigDigitalParsingConfig::class;
   protected $digitalParsingConfigDataType = '';
+  protected $layoutParsingConfigType = GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig::class;
+  protected $layoutParsingConfigDataType = '';
   protected $ocrParsingConfigType = GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig::class;
   protected $ocrParsingConfigDataType = '';
 
@@ -37,6 +39,20 @@ class GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfig extends 
   public function getDigitalParsingConfig()
   {
     return $this->digitalParsingConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig
+   */
+  public function setLayoutParsingConfig(GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig $layoutParsingConfig)
+  {
+    $this->layoutParsingConfig = $layoutParsingConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigLayoutParsingConfig
+   */
+  public function getLayoutParsingConfig()
+  {
+    return $this->layoutParsingConfig;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1DocumentProcessingConfigParsingConfigOcrParsingConfig

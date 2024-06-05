@@ -38,7 +38,8 @@ class ProjectsLocationsDataStoresControls extends \Google\Service\Resource
    *
    * @param string $parent Required. Full resource name of parent data store.
    * Format: `projects/{project_number}/locations/{location_id}/collections/{colle
-   * ction_id}/dataStores/{data_store_id}`
+   * ction_id}/dataStores/{data_store_id}` or `projects/{project_number}/locations
+   * /{location_id}/collections/{collection_id}/engines/{engine_id}`.
    * @param GoogleCloudDiscoveryengineV1Control $postBody
    * @param array $optParams Optional parameters.
    *
@@ -93,7 +94,8 @@ class ProjectsLocationsDataStoresControls extends \Google\Service\Resource
    *
    * @param string $parent Required. The data store resource name. Format: `projec
    * ts/{project_number}/locations/{location_id}/collections/{collection_id}/dataS
-   * tores/{data_store_id}`
+   * tores/{data_store_id}` or `projects/{project_number}/locations/{location_id}/
+   * collections/{collection_id}/engines/{engine_id}`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. A filter to apply on the list results.

@@ -40,6 +40,10 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
    */
   public $session;
   /**
+   * @var string[]
+   */
+  public $userLabels;
+  /**
    * @var string
    */
   public $userPseudoId;
@@ -155,6 +159,20 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequest extends \Google\Model
   public function getSession()
   {
     return $this->session;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUserLabels($userLabels)
+  {
+    $this->userLabels = $userLabels;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUserLabels()
+  {
+    return $this->userLabels;
   }
   /**
    * @param string
