@@ -105,6 +105,10 @@ class Table extends \Google\Collection
   /**
    * @var string
    */
+  public $numCurrentPhysicalBytes;
+  /**
+   * @var string
+   */
   public $numLongTermBytes;
   /**
    * @var string
@@ -528,6 +532,20 @@ class Table extends \Google\Collection
   public function getNumBytes()
   {
     return $this->numBytes;
+  }
+  /**
+   * @param string
+   */
+  public function setNumCurrentPhysicalBytes($numCurrentPhysicalBytes)
+  {
+    $this->numCurrentPhysicalBytes = $numCurrentPhysicalBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getNumCurrentPhysicalBytes()
+  {
+    return $this->numCurrentPhysicalBytes;
   }
   /**
    * @param string

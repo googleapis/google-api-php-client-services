@@ -94,6 +94,10 @@ class Dataset extends \Google\Collection
    * @var string
    */
   public $maxTimeTravelHours;
+  /**
+   * @var string[]
+   */
+  public $resourceTags;
   protected $restrictionsType = RestrictionConfig::class;
   protected $restrictionsDataType = '';
   /**
@@ -426,6 +430,20 @@ class Dataset extends \Google\Collection
   public function getMaxTimeTravelHours()
   {
     return $this->maxTimeTravelHours;
+  }
+  /**
+   * @param string[]
+   */
+  public function setResourceTags($resourceTags)
+  {
+    $this->resourceTags = $resourceTags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResourceTags()
+  {
+    return $this->resourceTags;
   }
   /**
    * @param RestrictionConfig
