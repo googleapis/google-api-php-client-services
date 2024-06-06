@@ -21,12 +21,30 @@ class Component extends \Google\Collection
 {
   protected $collection_key = 'serviceAttachments';
   /**
+   * @var string[]
+   */
+  public $allowedProjectIds;
+  /**
    * @var string
    */
   public $name;
   protected $serviceAttachmentsType = ServiceAttachment::class;
   protected $serviceAttachmentsDataType = 'array';
 
+  /**
+   * @param string[]
+   */
+  public function setAllowedProjectIds($allowedProjectIds)
+  {
+    $this->allowedProjectIds = $allowedProjectIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAllowedProjectIds()
+  {
+    return $this->allowedProjectIds;
+  }
   /**
    * @param string
    */
