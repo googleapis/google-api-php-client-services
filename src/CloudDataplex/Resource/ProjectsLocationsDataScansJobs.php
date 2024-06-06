@@ -33,12 +33,14 @@ use Google\Service\CloudDataplex\GoogleCloudDataplexV1ListDataScanJobsResponse;
 class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
 {
   /**
-   * Generates recommended DataQualityRule from a data profiling DataScan.
-   * (jobs.generateDataQualityRules)
+   * Generates recommended data quality rules based on the results of a data
+   * profiling scan.Use the recommendations to build rules for a data quality
+   * scan. (jobs.generateDataQualityRules)
    *
-   * @param string $name Required. The name should be either * the name of a
-   * datascan with at least one successful completed data profiling job, or * the
-   * name of a successful completed data profiling datascan job.
+   * @param string $name Required. The name must be one of the following: The name
+   * of a data scan with at least one successful, completed data profiling job The
+   * name of a successful, completed data profiling job (a data scan job where the
+   * job type is data profiling)
    * @param GoogleCloudDataplexV1GenerateDataQualityRulesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleCloudDataplexV1GenerateDataQualityRulesResponse
