@@ -35,6 +35,21 @@ use Google\Client;
  */
 class HangoutsChat extends \Google\Service
 {
+  /** Delete conversations and spaces owned by your organization and remove access to associated files in Google Chat. */
+  const CHAT_ADMIN_DELETE =
+      "https://www.googleapis.com/auth/chat.admin.delete";
+  /** View, add, update and remove members and managers in conversations owned by your organization. */
+  const CHAT_ADMIN_MEMBERSHIPS =
+      "https://www.googleapis.com/auth/chat.admin.memberships";
+  /** View members and managers in conversations owned by your organization. */
+  const CHAT_ADMIN_MEMBERSHIPS_READONLY =
+      "https://www.googleapis.com/auth/chat.admin.memberships.readonly";
+  /** View or edit display name, description, and other metadata for all Google Chat conversations owned by your organization. */
+  const CHAT_ADMIN_SPACES =
+      "https://www.googleapis.com/auth/chat.admin.spaces";
+  /** View display name, description, and other metadata for all Google Chat conversations owned by your organization. */
+  const CHAT_ADMIN_SPACES_READONLY =
+      "https://www.googleapis.com/auth/chat.admin.spaces.readonly";
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   const CHAT_BOT =
       "https://www.googleapis.com/auth/chat.bot";
