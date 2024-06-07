@@ -234,6 +234,16 @@ class CloudDomains extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'initiatePushTransfer' => [
+              'path' => 'v1/{+registration}:initiatePushTransfer',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/registrations',
               'httpMethod' => 'GET',
@@ -280,6 +290,16 @@ class CloudDomains extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'renewDomain' => [
+              'path' => 'v1/{+registration}:renewDomain',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'resetAuthorizationCode' => [
               'path' => 'v1/{+registration}:resetAuthorizationCode',
               'httpMethod' => 'POST',
@@ -292,6 +312,16 @@ class CloudDomains extends \Google\Service
               ],
             ],'retrieveAuthorizationCode' => [
               'path' => 'v1/{+registration}:retrieveAuthorizationCode',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'retrieveGoogleDomainsForwardingConfig' => [
+              'path' => 'v1/{+registration}:retrieveGoogleDomainsForwardingConfig',
               'httpMethod' => 'GET',
               'parameters' => [
                 'registration' => [
