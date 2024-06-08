@@ -19,13 +19,33 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec extends \Google\Model
 {
+  protected $chunkSpecType = GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec::class;
+  protected $chunkSpecDataType = '';
   protected $extractiveContentSpecType = GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecExtractiveContentSpec::class;
   protected $extractiveContentSpecDataType = '';
+  /**
+   * @var string
+   */
+  public $searchResultMode;
   protected $snippetSpecType = GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecSnippetSpec::class;
   protected $snippetSpecDataType = '';
   protected $summarySpecType = GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecSummarySpec::class;
   protected $summarySpecDataType = '';
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec
+   */
+  public function setChunkSpec(GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec $chunkSpec)
+  {
+    $this->chunkSpec = $chunkSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecChunkSpec
+   */
+  public function getChunkSpec()
+  {
+    return $this->chunkSpec;
+  }
   /**
    * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecExtractiveContentSpec
    */
@@ -39,6 +59,20 @@ class GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpec extends \Google
   public function getExtractiveContentSpec()
   {
     return $this->extractiveContentSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setSearchResultMode($searchResultMode)
+  {
+    $this->searchResultMode = $searchResultMode;
+  }
+  /**
+   * @return string
+   */
+  public function getSearchResultMode()
+  {
+    return $this->searchResultMode;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1SearchRequestContentSearchSpecSnippetSpec

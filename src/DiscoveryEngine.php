@@ -2775,7 +2775,29 @@ class DiscoveryEngine extends \Google\Service
         'userEvents',
         [
           'methods' => [
-            'write' => [
+            'collect' => [
+              'path' => 'v1/{+parent}/userEvents:collect',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'ets' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'uri' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'userEvent' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'write' => [
               'path' => 'v1/{+parent}/userEvents:write',
               'httpMethod' => 'POST',
               'parameters' => [

@@ -36,6 +36,10 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchParams exten
    * @var string
    */
   public $orderBy;
+  /**
+   * @var string
+   */
+  public $searchResultMode;
 
   /**
    * @param GoogleCloudDiscoveryengineV1SearchRequestBoostSpec
@@ -106,6 +110,20 @@ class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchParams exten
   public function getOrderBy()
   {
     return $this->orderBy;
+  }
+  /**
+   * @param string
+   */
+  public function setSearchResultMode($searchResultMode)
+  {
+    $this->searchResultMode = $searchResultMode;
+  }
+  /**
+   * @return string
+   */
+  public function getSearchResultMode()
+  {
+    return $this->searchResultMode;
   }
 }
 
