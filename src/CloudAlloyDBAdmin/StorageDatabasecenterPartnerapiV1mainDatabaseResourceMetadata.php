@@ -72,10 +72,6 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public $updationTime;
   protected $userLabelSetType = StorageDatabasecenterPartnerapiV1mainUserLabels::class;
   protected $userLabelSetDataType = '';
-  /**
-   * @var string[]
-   */
-  public $userLabels;
 
   /**
    * @param StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration
@@ -328,20 +324,6 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getUserLabelSet()
   {
     return $this->userLabelSet;
-  }
-  /**
-   * @param string[]
-   */
-  public function setUserLabels($userLabels)
-  {
-    $this->userLabels = $userLabels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getUserLabels()
-  {
-    return $this->userLabels;
   }
 }
 

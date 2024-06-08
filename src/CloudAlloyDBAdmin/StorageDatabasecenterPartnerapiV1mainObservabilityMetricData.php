@@ -22,7 +22,7 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
   /**
    * @var string
    */
-  public $metricTimestamp;
+  public $aggregationType;
   /**
    * @var string
    */
@@ -30,22 +30,27 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
   /**
    * @var string
    */
+  public $observationTime;
+  /**
+   * @var string
+   */
   public $resourceName;
-  public $value;
+  protected $valueType = StorageDatabasecenterProtoCommonTypedValue::class;
+  protected $valueDataType = '';
 
   /**
    * @param string
    */
-  public function setMetricTimestamp($metricTimestamp)
+  public function setAggregationType($aggregationType)
   {
-    $this->metricTimestamp = $metricTimestamp;
+    $this->aggregationType = $aggregationType;
   }
   /**
    * @return string
    */
-  public function getMetricTimestamp()
+  public function getAggregationType()
   {
-    return $this->metricTimestamp;
+    return $this->aggregationType;
   }
   /**
    * @param string
@@ -64,6 +69,20 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
   /**
    * @param string
    */
+  public function setObservationTime($observationTime)
+  {
+    $this->observationTime = $observationTime;
+  }
+  /**
+   * @return string
+   */
+  public function getObservationTime()
+  {
+    return $this->observationTime;
+  }
+  /**
+   * @param string
+   */
   public function setResourceName($resourceName)
   {
     $this->resourceName = $resourceName;
@@ -75,10 +94,16 @@ class StorageDatabasecenterPartnerapiV1mainObservabilityMetricData extends \Goog
   {
     return $this->resourceName;
   }
-  public function setValue($value)
+  /**
+   * @param StorageDatabasecenterProtoCommonTypedValue
+   */
+  public function setValue(StorageDatabasecenterProtoCommonTypedValue $value)
   {
     $this->value = $value;
   }
+  /**
+   * @return StorageDatabasecenterProtoCommonTypedValue
+   */
   public function getValue()
   {
     return $this->value;
