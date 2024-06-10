@@ -17,7 +17,7 @@
 
 namespace Google\Service\Connectors\Resource;
 
-use Google\Service\Connectors\ListEntitiesWithACLsResponse;
+use Google\Service\Connectors\Operation;
 
 /**
  * The "entitieswithacls" collection of methods.
@@ -52,20 +52,14 @@ class ProjectsLocationsConnectionsEntityTypesEntitieswithacls extends \Google\Se
    * using this field. The connector documentation should have information about
    * what format of filters/conditions are supported.
    * @opt_param string gsutilUri Format: gs://object_path
-   * @opt_param int pageSize Number of entity rows to return. Defaults page size =
-   * 25. Max page size = 200.
-   * @opt_param string pageToken Page token value if available from a previous
-   * request.
-   * @opt_param string sortBy List of 'sort_by' columns to use when returning the
-   * results.
-   * @return ListEntitiesWithACLsResponse
+   * @return Operation
    * @throws \Google\Service\Exception
    */
   public function listProjectsLocationsConnectionsEntityTypesEntitieswithacls($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ListEntitiesWithACLsResponse::class);
+    return $this->call('list', [$params], Operation::class);
   }
 }
 
