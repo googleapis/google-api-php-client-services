@@ -24,6 +24,8 @@ class PrivateAccess extends \Google\Collection
   protected $egressSettingsDataType = 'array';
   protected $ingressSettingsType = Component::class;
   protected $ingressSettingsDataType = 'array';
+  protected $pscSettingType = PscSetting::class;
+  protected $pscSettingDataType = '';
 
   /**
    * @param Component[]
@@ -52,6 +54,20 @@ class PrivateAccess extends \Google\Collection
   public function getIngressSettings()
   {
     return $this->ingressSettings;
+  }
+  /**
+   * @param PscSetting
+   */
+  public function setPscSetting(PscSetting $pscSetting)
+  {
+    $this->pscSetting = $pscSetting;
+  }
+  /**
+   * @return PscSetting
+   */
+  public function getPscSetting()
+  {
+    return $this->pscSetting;
   }
 }
 

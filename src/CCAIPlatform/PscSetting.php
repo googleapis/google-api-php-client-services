@@ -17,47 +17,29 @@
 
 namespace Google\Service\CCAIPlatform;
 
-class Component extends \Google\Collection
+class PscSetting extends \Google\Collection
 {
-  protected $collection_key = 'serviceAttachmentNames';
-  /**
-   * @var string
-   */
-  public $name;
+  protected $collection_key = 'allowedConsumerProjectIds';
   /**
    * @var string[]
    */
-  public $serviceAttachmentNames;
+  public $allowedConsumerProjectIds;
 
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
-  }
   /**
    * @param string[]
    */
-  public function setServiceAttachmentNames($serviceAttachmentNames)
+  public function setAllowedConsumerProjectIds($allowedConsumerProjectIds)
   {
-    $this->serviceAttachmentNames = $serviceAttachmentNames;
+    $this->allowedConsumerProjectIds = $allowedConsumerProjectIds;
   }
   /**
    * @return string[]
    */
-  public function getServiceAttachmentNames()
+  public function getAllowedConsumerProjectIds()
   {
-    return $this->serviceAttachmentNames;
+    return $this->allowedConsumerProjectIds;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Component::class, 'Google_Service_CCAIPlatform_Component');
+class_alias(PscSetting::class, 'Google_Service_CCAIPlatform_PscSetting');
