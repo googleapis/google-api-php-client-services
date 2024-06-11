@@ -79,6 +79,10 @@ class Settings extends \Google\Collection
   /**
    * @var bool
    */
+  public $enableDataplexIntegration;
+  /**
+   * @var bool
+   */
   public $enableGoogleMlIntegration;
   protected $insightsConfigType = InsightsConfig::class;
   protected $insightsConfigDataType = '';
@@ -366,6 +370,20 @@ class Settings extends \Google\Collection
   public function getEdition()
   {
     return $this->edition;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableDataplexIntegration($enableDataplexIntegration)
+  {
+    $this->enableDataplexIntegration = $enableDataplexIntegration;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableDataplexIntegration()
+  {
+    return $this->enableDataplexIntegration;
   }
   /**
    * @param bool
