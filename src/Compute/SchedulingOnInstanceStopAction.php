@@ -17,46 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class ConfidentialInstanceConfig extends \Google\Model
+class SchedulingOnInstanceStopAction extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $confidentialInstanceType;
   /**
    * @var bool
    */
-  public $enableConfidentialCompute;
+  public $discardLocalSsd;
 
-  /**
-   * @param string
-   */
-  public function setConfidentialInstanceType($confidentialInstanceType)
-  {
-    $this->confidentialInstanceType = $confidentialInstanceType;
-  }
-  /**
-   * @return string
-   */
-  public function getConfidentialInstanceType()
-  {
-    return $this->confidentialInstanceType;
-  }
   /**
    * @param bool
    */
-  public function setEnableConfidentialCompute($enableConfidentialCompute)
+  public function setDiscardLocalSsd($discardLocalSsd)
   {
-    $this->enableConfidentialCompute = $enableConfidentialCompute;
+    $this->discardLocalSsd = $discardLocalSsd;
   }
   /**
    * @return bool
    */
-  public function getEnableConfidentialCompute()
+  public function getDiscardLocalSsd()
   {
-    return $this->enableConfidentialCompute;
+    return $this->discardLocalSsd;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfidentialInstanceConfig::class, 'Google_Service_Compute_ConfidentialInstanceConfig');
+class_alias(SchedulingOnInstanceStopAction::class, 'Google_Service_Compute_SchedulingOnInstanceStopAction');
