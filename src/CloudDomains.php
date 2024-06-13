@@ -320,6 +320,24 @@ class CloudDomains extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'retrieveGoogleDomainsDnsRecords' => [
+              'path' => 'v1/{+registration}:retrieveGoogleDomainsDnsRecords',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'registration' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'retrieveGoogleDomainsForwardingConfig' => [
               'path' => 'v1/{+registration}:retrieveGoogleDomainsForwardingConfig',
               'httpMethod' => 'GET',

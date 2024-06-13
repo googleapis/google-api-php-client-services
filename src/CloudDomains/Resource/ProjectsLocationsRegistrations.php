@@ -31,6 +31,7 @@ use Google\Service\CloudDomains\RegisterDomainRequest;
 use Google\Service\CloudDomains\Registration;
 use Google\Service\CloudDomains\RenewDomainRequest;
 use Google\Service\CloudDomains\ResetAuthorizationCodeRequest;
+use Google\Service\CloudDomains\RetrieveGoogleDomainsDnsRecordsResponse;
 use Google\Service\CloudDomains\RetrieveGoogleDomainsForwardingConfigResponse;
 use Google\Service\CloudDomains\RetrieveImportableDomainsResponse;
 use Google\Service\CloudDomains\RetrieveRegisterParametersResponse;
@@ -401,6 +402,28 @@ class ProjectsLocationsRegistrations extends \Google\Service\Resource
     $params = ['registration' => $registration];
     $params = array_merge($params, $optParams);
     return $this->call('retrieveAuthorizationCode', [$params], AuthorizationCode::class);
+  }
+  /**
+   * Lists the DNS records from the Google Domains DNS zone for domains that use
+   * the deprecated `google_domains_dns` in the `Registration`'s `dns_settings`.
+   * (registrations.retrieveGoogleDomainsDnsRecords)
+   *
+   * @param string $registration Required. The name of the `Registration` whose
+   * Google Domains DNS records details you are retrieving, in the format
+   * `projects/locations/registrations`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Optional. Maximum number of results to return.
+   * @opt_param string pageToken Optional. When set to the `next_page_token` from
+   * a prior response, provides the next page of results.
+   * @return RetrieveGoogleDomainsDnsRecordsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function retrieveGoogleDomainsDnsRecords($registration, $optParams = [])
+  {
+    $params = ['registration' => $registration];
+    $params = array_merge($params, $optParams);
+    return $this->call('retrieveGoogleDomainsDnsRecords', [$params], RetrieveGoogleDomainsDnsRecordsResponse::class);
   }
   /**
    * Lists the deprecated domain and email forwarding configurations you set up in
