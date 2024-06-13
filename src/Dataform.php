@@ -43,6 +43,7 @@ class Dataform extends \Google\Service
   public $projects_locations_collections;
   public $projects_locations_repositories;
   public $projects_locations_repositories_commentThreads;
+  public $projects_locations_repositories_commentThreads_comments;
   public $projects_locations_repositories_compilationResults;
   public $projects_locations_repositories_releaseConfigs;
   public $projects_locations_repositories_workflowConfigs;
@@ -371,6 +372,40 @@ class Dataform extends \Google\Service
         $this,
         $this->serviceName,
         'commentThreads',
+        [
+          'methods' => [
+            'getIamPolicy' => [
+              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_repositories_commentThreads_comments = new Dataform\Resource\ProjectsLocationsRepositoriesCommentThreadsComments(
+        $this,
+        $this->serviceName,
+        'comments',
         [
           'methods' => [
             'getIamPolicy' => [
