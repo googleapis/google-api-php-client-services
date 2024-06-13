@@ -20,6 +20,7 @@ namespace Google\Service\CloudFilestore\Resource;
 use Google\Service\CloudFilestore\Instance;
 use Google\Service\CloudFilestore\ListInstancesResponse;
 use Google\Service\CloudFilestore\Operation;
+use Google\Service\CloudFilestore\PromoteReplicaRequest;
 use Google\Service\CloudFilestore\RestoreInstanceRequest;
 use Google\Service\CloudFilestore\RevertInstanceRequest;
 
@@ -135,6 +136,23 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Promote an standby instance (replica). (instances.promoteReplica)
+   *
+   * @param string $name Required. The resource name of the instance, in the
+   * format
+   * `projects/{project_id}/locations/{location_id}/instances/{instance_id}`.
+   * @param PromoteReplicaRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function promoteReplica($name, PromoteReplicaRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('promoteReplica', [$params], Operation::class);
   }
   /**
    * Restores an existing instance's file share from a backup. The capacity of the
