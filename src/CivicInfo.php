@@ -100,7 +100,6 @@ class CivicInfo extends \Google\Service
                 'address' => [
                   'location' => 'query',
                   'type' => 'string',
-                  'required' => true,
                 ],
                 'electionId' => [
                   'location' => 'query',
