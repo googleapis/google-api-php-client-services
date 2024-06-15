@@ -17,7 +17,11 @@
 
 namespace Google\Service\DLP\Resource;
 
+use Google\Service\DLP\GooglePrivacyDlpV2Connection;
+use Google\Service\DLP\GooglePrivacyDlpV2CreateConnectionRequest;
 use Google\Service\DLP\GooglePrivacyDlpV2SearchConnectionsResponse;
+use Google\Service\DLP\GooglePrivacyDlpV2UpdateConnectionRequest;
+use Google\Service\DLP\GoogleProtobufEmpty;
 
 /**
  * The "connections" collection of methods.
@@ -29,6 +33,71 @@ use Google\Service\DLP\GooglePrivacyDlpV2SearchConnectionsResponse;
  */
 class OrganizationsLocationsConnections extends \Google\Service\Resource
 {
+  /**
+   * Create a Connection to an external data source. (connections.create)
+   *
+   * @param string $parent Required. Parent resource name. The format of this
+   * value varies depending on the scope of the request (project or organization):
+   * + Projects scope: `projects/`PROJECT_ID`/locations/`LOCATION_ID +
+   * Organizations scope: `organizations/`ORG_ID`/locations/`LOCATION_ID
+   * @param GooglePrivacyDlpV2CreateConnectionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GooglePrivacyDlpV2Connection
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, GooglePrivacyDlpV2CreateConnectionRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], GooglePrivacyDlpV2Connection::class);
+  }
+  /**
+   * Delete a Connection. (connections.delete)
+   *
+   * @param string $name Required. Resource name of the Connection to be deleted,
+   * in the format:
+   * `projects/{project}/locations/{location}/connections/{connection}`.
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Get a Connection by name. (connections.get)
+   *
+   * @param string $name Required. Resource name in the format:
+   * `projects/{project}/locations/{location}/connections/{connection}`.
+   * @param array $optParams Optional parameters.
+   * @return GooglePrivacyDlpV2Connection
+   * @throws \Google\Service\Exception
+   */
+  public function get($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], GooglePrivacyDlpV2Connection::class);
+  }
+  /**
+   * Update a Connection. (connections.patch)
+   *
+   * @param string $name Required. Resource name in the format:
+   * `projects/{project}/locations/{location}/connections/{connection}`.
+   * @param GooglePrivacyDlpV2UpdateConnectionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GooglePrivacyDlpV2Connection
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GooglePrivacyDlpV2UpdateConnectionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GooglePrivacyDlpV2Connection::class);
+  }
   /**
    * Searches for Connections in a parent. (connections.search)
    *
