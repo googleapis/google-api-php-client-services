@@ -43,6 +43,10 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   protected $imageQueryType = GoogleCloudDiscoveryengineV1SearchRequestImageQuery::class;
   protected $imageQueryDataType = '';
   /**
+   * @var string
+   */
+  public $languageCode;
+  /**
    * @var int
    */
   public $offset;
@@ -196,6 +200,20 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public function getImageQuery()
   {
     return $this->imageQuery;
+  }
+  /**
+   * @param string
+   */
+  public function setLanguageCode($languageCode)
+  {
+    $this->languageCode = $languageCode;
+  }
+  /**
+   * @return string
+   */
+  public function getLanguageCode()
+  {
+    return $this->languageCode;
   }
   /**
    * @param int
