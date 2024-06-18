@@ -17,7 +17,7 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsMetadata extends \Google\Model
 {
   /**
    * @var string
@@ -95,4 +95,4 @@ class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata exten
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata');
+class_alias(GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsMetadata');

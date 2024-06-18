@@ -17,23 +17,23 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse extends \Google\Collection
+class GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsResponse extends \Google\Collection
 {
   protected $collection_key = 'errorSamples';
-  protected $errorConfigType = GoogleCloudDiscoveryengineV1alphaImportErrorConfig::class;
+  protected $errorConfigType = GoogleCloudDiscoveryengineV1betaImportErrorConfig::class;
   protected $errorConfigDataType = '';
   protected $errorSamplesType = GoogleRpcStatus::class;
   protected $errorSamplesDataType = 'array';
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaImportErrorConfig
+   * @param GoogleCloudDiscoveryengineV1betaImportErrorConfig
    */
-  public function setErrorConfig(GoogleCloudDiscoveryengineV1alphaImportErrorConfig $errorConfig)
+  public function setErrorConfig(GoogleCloudDiscoveryengineV1betaImportErrorConfig $errorConfig)
   {
     $this->errorConfig = $errorConfig;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaImportErrorConfig
+   * @return GoogleCloudDiscoveryengineV1betaImportErrorConfig
    */
   public function getErrorConfig()
   {
@@ -56,4 +56,4 @@ class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse exten
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsResponse');
+class_alias(GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaImportCompletionSuggestionsResponse');

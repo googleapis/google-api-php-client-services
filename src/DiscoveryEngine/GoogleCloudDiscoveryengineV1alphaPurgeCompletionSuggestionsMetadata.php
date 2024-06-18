@@ -17,20 +17,12 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaPurgeCompletionSuggestionsMetadata extends \Google\Model
 {
   /**
    * @var string
    */
   public $createTime;
-  /**
-   * @var string
-   */
-  public $failureCount;
-  /**
-   * @var string
-   */
-  public $successCount;
   /**
    * @var string
    */
@@ -53,34 +45,6 @@ class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata exten
   /**
    * @param string
    */
-  public function setFailureCount($failureCount)
-  {
-    $this->failureCount = $failureCount;
-  }
-  /**
-   * @return string
-   */
-  public function getFailureCount()
-  {
-    return $this->failureCount;
-  }
-  /**
-   * @param string
-   */
-  public function setSuccessCount($successCount)
-  {
-    $this->successCount = $successCount;
-  }
-  /**
-   * @return string
-   */
-  public function getSuccessCount()
-  {
-    return $this->successCount;
-  }
-  /**
-   * @param string
-   */
   public function setUpdateTime($updateTime)
   {
     $this->updateTime = $updateTime;
@@ -95,4 +59,4 @@ class GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata exten
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaImportCompletionSuggestionsMetadata');
+class_alias(GoogleCloudDiscoveryengineV1alphaPurgeCompletionSuggestionsMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaPurgeCompletionSuggestionsMetadata');

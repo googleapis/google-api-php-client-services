@@ -43,6 +43,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_dataStores;
   public $projects_locations_collections_dataStores_branches_documents;
   public $projects_locations_collections_dataStores_branches_operations;
+  public $projects_locations_collections_dataStores_completionSuggestions;
   public $projects_locations_collections_dataStores_controls;
   public $projects_locations_collections_dataStores_conversations;
   public $projects_locations_collections_dataStores_models_operations;
@@ -69,6 +70,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores;
   public $projects_locations_dataStores_branches_documents;
   public $projects_locations_dataStores_branches_operations;
+  public $projects_locations_dataStores_completionSuggestions;
   public $projects_locations_dataStores_controls;
   public $projects_locations_dataStores_conversations;
   public $projects_locations_dataStores_models_operations;
@@ -433,6 +435,36 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataStores_completionSuggestions = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresCompletionSuggestions(
+        $this,
+        $this->serviceName,
+        'completionSuggestions',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v1/{+parent}/completionSuggestions:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/completionSuggestions:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -2007,6 +2039,36 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataStores_completionSuggestions = new DiscoveryEngine\Resource\ProjectsLocationsDataStoresCompletionSuggestions(
+        $this,
+        $this->serviceName,
+        'completionSuggestions',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v1/{+parent}/completionSuggestions:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/completionSuggestions:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
