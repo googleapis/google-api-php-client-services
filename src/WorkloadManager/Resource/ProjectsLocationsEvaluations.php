@@ -110,7 +110,8 @@ class ProjectsLocationsEvaluations extends \Google\Service\Resource
    * @param string $parent Required. Parent value for ListEvaluationsRequest
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filtering results
+   * @opt_param string filter Filter to be applied when listing the evaluation
+   * results.
    * @opt_param string orderBy Hint for how to order the results
    * @opt_param int pageSize Requested page size. Server may return fewer items
    * than requested. If unspecified, server will pick an appropriate default.

@@ -27,6 +27,8 @@ class LocationData extends \Google\Model
   protected $directLocationDataType = '';
   protected $gcpProjectProxyType = TenantProjectProxy::class;
   protected $gcpProjectProxyDataType = '';
+  protected $placerLocationType = PlacerLocation::class;
+  protected $placerLocationDataType = '';
   protected $spannerLocationType = SpannerLocation::class;
   protected $spannerLocationDataType = '';
 
@@ -85,6 +87,20 @@ class LocationData extends \Google\Model
   public function getGcpProjectProxy()
   {
     return $this->gcpProjectProxy;
+  }
+  /**
+   * @param PlacerLocation
+   */
+  public function setPlacerLocation(PlacerLocation $placerLocation)
+  {
+    $this->placerLocation = $placerLocation;
+  }
+  /**
+   * @return PlacerLocation
+   */
+  public function getPlacerLocation()
+  {
+    return $this->placerLocation;
   }
   /**
    * @param SpannerLocation
