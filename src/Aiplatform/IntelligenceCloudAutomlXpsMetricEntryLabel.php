@@ -17,26 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1TuningDataStats extends \Google\Model
+class IntelligenceCloudAutomlXpsMetricEntryLabel extends \Google\Model
 {
-  protected $supervisedTuningDataStatsType = GoogleCloudAiplatformV1SupervisedTuningDataStats::class;
-  protected $supervisedTuningDataStatsDataType = '';
+  /**
+   * @var string
+   */
+  public $labelName;
+  /**
+   * @var string
+   */
+  public $labelValue;
 
   /**
-   * @param GoogleCloudAiplatformV1SupervisedTuningDataStats
+   * @param string
    */
-  public function setSupervisedTuningDataStats(GoogleCloudAiplatformV1SupervisedTuningDataStats $supervisedTuningDataStats)
+  public function setLabelName($labelName)
   {
-    $this->supervisedTuningDataStats = $supervisedTuningDataStats;
+    $this->labelName = $labelName;
   }
   /**
-   * @return GoogleCloudAiplatformV1SupervisedTuningDataStats
+   * @return string
    */
-  public function getSupervisedTuningDataStats()
+  public function getLabelName()
   {
-    return $this->supervisedTuningDataStats;
+    return $this->labelName;
+  }
+  /**
+   * @param string
+   */
+  public function setLabelValue($labelValue)
+  {
+    $this->labelValue = $labelValue;
+  }
+  /**
+   * @return string
+   */
+  public function getLabelValue()
+  {
+    return $this->labelValue;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1TuningDataStats::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1TuningDataStats');
+class_alias(IntelligenceCloudAutomlXpsMetricEntryLabel::class, 'Google_Service_Aiplatform_IntelligenceCloudAutomlXpsMetricEntryLabel');
