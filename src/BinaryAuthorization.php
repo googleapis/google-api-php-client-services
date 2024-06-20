@@ -260,6 +260,10 @@ class BinaryAuthorization extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'etag' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'get' => [
               'path' => 'v1/{+name}',
