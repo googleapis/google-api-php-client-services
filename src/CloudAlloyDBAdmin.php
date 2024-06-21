@@ -394,6 +394,16 @@ class CloudAlloyDBAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'switchover' => [
+              'path' => 'v1/{+name}:switchover',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
