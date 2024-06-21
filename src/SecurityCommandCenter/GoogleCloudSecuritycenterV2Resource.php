@@ -21,6 +21,8 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
 {
   protected $awsMetadataType = GoogleCloudSecuritycenterV2AwsMetadata::class;
   protected $awsMetadataDataType = '';
+  protected $azureMetadataType = GoogleCloudSecuritycenterV2AzureMetadata::class;
+  protected $azureMetadataDataType = '';
   /**
    * @var string
    */
@@ -67,6 +69,20 @@ class GoogleCloudSecuritycenterV2Resource extends \Google\Model
   public function getAwsMetadata()
   {
     return $this->awsMetadata;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2AzureMetadata
+   */
+  public function setAzureMetadata(GoogleCloudSecuritycenterV2AzureMetadata $azureMetadata)
+  {
+    $this->azureMetadata = $azureMetadata;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2AzureMetadata
+   */
+  public function getAzureMetadata()
+  {
+    return $this->azureMetadata;
   }
   /**
    * @param string

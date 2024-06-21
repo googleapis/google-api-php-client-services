@@ -78,6 +78,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $findingClass;
+  protected $groupMembershipsType = GoogleCloudSecuritycenterV2GroupMembership::class;
+  protected $groupMembershipsDataType = 'array';
   protected $iamBindingsType = GoogleCloudSecuritycenterV2IamBinding::class;
   protected $iamBindingsDataType = 'array';
   protected $indicatorType = GoogleCloudSecuritycenterV2Indicator::class;
@@ -150,6 +152,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $state;
+  protected $toxicCombinationType = GoogleCloudSecuritycenterV2ToxicCombination::class;
+  protected $toxicCombinationDataType = '';
   protected $vulnerabilityType = GoogleCloudSecuritycenterV2Vulnerability::class;
   protected $vulnerabilityDataType = '';
 
@@ -460,6 +464,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getFindingClass()
   {
     return $this->findingClass;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2GroupMembership[]
+   */
+  public function setGroupMemberships($groupMemberships)
+  {
+    $this->groupMemberships = $groupMemberships;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2GroupMembership[]
+   */
+  public function getGroupMemberships()
+  {
+    return $this->groupMemberships;
   }
   /**
    * @param GoogleCloudSecuritycenterV2IamBinding[]
@@ -796,6 +814,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2ToxicCombination
+   */
+  public function setToxicCombination(GoogleCloudSecuritycenterV2ToxicCombination $toxicCombination)
+  {
+    $this->toxicCombination = $toxicCombination;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2ToxicCombination
+   */
+  public function getToxicCombination()
+  {
+    return $this->toxicCombination;
   }
   /**
    * @param GoogleCloudSecuritycenterV2Vulnerability
