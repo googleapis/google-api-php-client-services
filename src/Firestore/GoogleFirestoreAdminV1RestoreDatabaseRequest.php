@@ -27,8 +27,6 @@ class GoogleFirestoreAdminV1RestoreDatabaseRequest extends \Google\Model
    * @var string
    */
   public $databaseId;
-  protected $databaseSnapshotType = GoogleFirestoreAdminV1DatabaseSnapshot::class;
-  protected $databaseSnapshotDataType = '';
   /**
    * @var string
    */
@@ -65,20 +63,6 @@ class GoogleFirestoreAdminV1RestoreDatabaseRequest extends \Google\Model
   public function getDatabaseId()
   {
     return $this->databaseId;
-  }
-  /**
-   * @param GoogleFirestoreAdminV1DatabaseSnapshot
-   */
-  public function setDatabaseSnapshot(GoogleFirestoreAdminV1DatabaseSnapshot $databaseSnapshot)
-  {
-    $this->databaseSnapshot = $databaseSnapshot;
-  }
-  /**
-   * @return GoogleFirestoreAdminV1DatabaseSnapshot
-   */
-  public function getDatabaseSnapshot()
-  {
-    return $this->databaseSnapshot;
   }
   /**
    * @param string
