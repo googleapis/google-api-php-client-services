@@ -97,10 +97,6 @@ class DataFusion extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-                'includeUnrevealedLocations' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
