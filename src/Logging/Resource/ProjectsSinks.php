@@ -44,11 +44,12 @@ class ProjectsSinks extends \Google\Service\Resource
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customWriterIdentity Optional. A service account provided
+   * @opt_param string customWriterIdentity Optional. The service account provided
    * by the caller that will be used to write the log entries. The format must be
-   * serviceAccount:some@email. This field can only be specified if you are
-   * routing logs to a destination outside this sink's project. If not specified,
-   * a Logging service account will automatically be generated.
+   * serviceAccount:some@email. This field can only be specified when you are
+   * routing logs to a log bucket that is in a different project than the sink.
+   * When not specified, a Logging service account will automatically be
+   * generated.
    * @opt_param bool uniqueWriterIdentity Optional. Determines the kind of IAM
    * identity returned as writer_identity in the new sink. If this value is
    * omitted or set to false, and if the sink's parent is a project, then the
@@ -156,11 +157,12 @@ class ProjectsSinks extends \Google\Service\Resource
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customWriterIdentity Optional. A service account provided
+   * @opt_param string customWriterIdentity Optional. The service account provided
    * by the caller that will be used to write the log entries. The format must be
-   * serviceAccount:some@email. This field can only be specified if you are
-   * routing logs to a destination outside this sink's project. If not specified,
-   * a Logging service account will automatically be generated.
+   * serviceAccount:some@email. This field can only be specified when you are
+   * routing logs to a log bucket that is in a different project than the sink.
+   * When not specified, a Logging service account will automatically be
+   * generated.
    * @opt_param bool uniqueWriterIdentity Optional. See sinks.create for a
    * description of this field. When updating a sink, the effect of this field on
    * the value of writer_identity in the updated sink depends on both the old and
@@ -206,11 +208,12 @@ class ProjectsSinks extends \Google\Service\Resource
    * @param LogSink $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string customWriterIdentity Optional. A service account provided
+   * @opt_param string customWriterIdentity Optional. The service account provided
    * by the caller that will be used to write the log entries. The format must be
-   * serviceAccount:some@email. This field can only be specified if you are
-   * routing logs to a destination outside this sink's project. If not specified,
-   * a Logging service account will automatically be generated.
+   * serviceAccount:some@email. This field can only be specified when you are
+   * routing logs to a log bucket that is in a different project than the sink.
+   * When not specified, a Logging service account will automatically be
+   * generated.
    * @opt_param bool uniqueWriterIdentity Optional. See sinks.create for a
    * description of this field. When updating a sink, the effect of this field on
    * the value of writer_identity in the updated sink depends on both the old and
