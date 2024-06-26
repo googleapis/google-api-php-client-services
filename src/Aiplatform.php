@@ -161,7 +161,17 @@ class Aiplatform extends \Google\Service
         'locations',
         [
           'methods' => [
-            'get' => [
+            'evaluateInstances' => [
+              'path' => 'v1/{+location}:evaluateInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
