@@ -17,82 +17,64 @@
 
 namespace Google\Service\WorkloadManager;
 
-class ExternalDataSources extends \Google\Model
+class ShellCommand extends \Google\Model
 {
   /**
    * @var string
    */
-  public $assetType;
+  public $args;
   /**
    * @var string
    */
-  public $name;
+  public $command;
   /**
-   * @var string
+   * @var int
    */
-  public $type;
-  /**
-   * @var string
-   */
-  public $uri;
+  public $timeoutSeconds;
 
   /**
    * @param string
    */
-  public function setAssetType($assetType)
+  public function setArgs($args)
   {
-    $this->assetType = $assetType;
+    $this->args = $args;
   }
   /**
    * @return string
    */
-  public function getAssetType()
+  public function getArgs()
   {
-    return $this->assetType;
+    return $this->args;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setCommand($command)
   {
-    $this->name = $name;
+    $this->command = $command;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getCommand()
   {
-    return $this->name;
+    return $this->command;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setType($type)
+  public function setTimeoutSeconds($timeoutSeconds)
   {
-    $this->type = $type;
+    $this->timeoutSeconds = $timeoutSeconds;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getType()
+  public function getTimeoutSeconds()
   {
-    return $this->type;
-  }
-  /**
-   * @param string
-   */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  /**
-   * @return string
-   */
-  public function getUri()
-  {
-    return $this->uri;
+    return $this->timeoutSeconds;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ExternalDataSources::class, 'Google_Service_WorkloadManager_ExternalDataSources');
+class_alias(ShellCommand::class, 'Google_Service_WorkloadManager_ShellCommand');
