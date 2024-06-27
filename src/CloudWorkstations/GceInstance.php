@@ -66,6 +66,10 @@ class GceInstance extends \Google\Collection
    * @var string[]
    */
   public $tags;
+  /**
+   * @var string[]
+   */
+  public $vmTags;
 
   /**
    * @param Accelerator[]
@@ -248,6 +252,20 @@ class GceInstance extends \Google\Collection
   public function getTags()
   {
     return $this->tags;
+  }
+  /**
+   * @param string[]
+   */
+  public function setVmTags($vmTags)
+  {
+    $this->vmTags = $vmTags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getVmTags()
+  {
+    return $this->vmTags;
   }
 }
 
