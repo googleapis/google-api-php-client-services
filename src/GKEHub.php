@@ -44,6 +44,7 @@ class GKEHub extends \Google\Service
   public $projects_locations_fleets;
   public $projects_locations_memberships;
   public $projects_locations_memberships_bindings;
+  public $projects_locations_memberships_rbacrolebindings;
   public $projects_locations_operations;
   public $projects_locations_scopes;
   public $projects_locations_scopes_namespaces;
@@ -583,6 +584,34 @@ class GKEHub extends \Google\Service
                   'required' => true,
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_memberships_rbacrolebindings = new GKEHub\Resource\ProjectsLocationsMembershipsRbacrolebindings(
+        $this,
+        $this->serviceName,
+        'rbacrolebindings',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/rbacrolebindings',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
