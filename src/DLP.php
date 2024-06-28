@@ -48,6 +48,7 @@ class DLP extends \Google\Service
   public $organizations_locations_deidentifyTemplates;
   public $organizations_locations_discoveryConfigs;
   public $organizations_locations_dlpJobs;
+  public $organizations_locations_fileStoreDataProfiles;
   public $organizations_locations_inspectTemplates;
   public $organizations_locations_jobTriggers;
   public $organizations_locations_projectDataProfiles;
@@ -66,6 +67,7 @@ class DLP extends \Google\Service
   public $projects_locations_deidentifyTemplates;
   public $projects_locations_discoveryConfigs;
   public $projects_locations_dlpJobs;
+  public $projects_locations_fileStoreDataProfiles;
   public $projects_locations_image;
   public $projects_locations_inspectTemplates;
   public $projects_locations_jobTriggers;
@@ -609,6 +611,62 @@ class DLP extends \Google\Service
                   'type' => 'string',
                 ],
                 'type' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_locations_fileStoreDataProfiles = new DLP\Resource\OrganizationsLocationsFileStoreDataProfiles(
+        $this,
+        $this->serviceName,
+        'fileStoreDataProfiles',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/fileStoreDataProfiles',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -1845,6 +1903,62 @@ class DLP extends \Google\Service
                   'type' => 'string',
                 ],
                 'type' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_fileStoreDataProfiles = new DLP\Resource\ProjectsLocationsFileStoreDataProfiles(
+        $this,
+        $this->serviceName,
+        'fileStoreDataProfiles',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/fileStoreDataProfiles',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
