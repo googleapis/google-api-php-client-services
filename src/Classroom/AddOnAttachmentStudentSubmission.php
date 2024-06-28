@@ -24,10 +24,6 @@ class AddOnAttachmentStudentSubmission extends \Google\Model
    * @var string
    */
   public $postSubmissionState;
-  /**
-   * @var string
-   */
-  public $userId;
 
   public function setPointsEarned($pointsEarned)
   {
@@ -50,20 +46,6 @@ class AddOnAttachmentStudentSubmission extends \Google\Model
   public function getPostSubmissionState()
   {
     return $this->postSubmissionState;
-  }
-  /**
-   * @param string
-   */
-  public function setUserId($userId)
-  {
-    $this->userId = $userId;
-  }
-  /**
-   * @return string
-   */
-  public function getUserId()
-  {
-    return $this->userId;
   }
 }
 
