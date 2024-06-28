@@ -17,64 +17,46 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class LinkedResource extends \Google\Model
+class OidcToken extends \Google\Model
 {
   /**
    * @var string
    */
-  public $linkedDataset;
+  public $audience;
   /**
    * @var string
    */
-  public $linkedPubsubSubscription;
-  /**
-   * @var string
-   */
-  public $listing;
+  public $serviceAccountEmail;
 
   /**
    * @param string
    */
-  public function setLinkedDataset($linkedDataset)
+  public function setAudience($audience)
   {
-    $this->linkedDataset = $linkedDataset;
+    $this->audience = $audience;
   }
   /**
    * @return string
    */
-  public function getLinkedDataset()
+  public function getAudience()
   {
-    return $this->linkedDataset;
+    return $this->audience;
   }
   /**
    * @param string
    */
-  public function setLinkedPubsubSubscription($linkedPubsubSubscription)
+  public function setServiceAccountEmail($serviceAccountEmail)
   {
-    $this->linkedPubsubSubscription = $linkedPubsubSubscription;
+    $this->serviceAccountEmail = $serviceAccountEmail;
   }
   /**
    * @return string
    */
-  public function getLinkedPubsubSubscription()
+  public function getServiceAccountEmail()
   {
-    return $this->linkedPubsubSubscription;
-  }
-  /**
-   * @param string
-   */
-  public function setListing($listing)
-  {
-    $this->listing = $listing;
-  }
-  /**
-   * @return string
-   */
-  public function getListing()
-  {
-    return $this->listing;
+    return $this->serviceAccountEmail;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LinkedResource::class, 'Google_Service_AnalyticsHub_LinkedResource');
+class_alias(OidcToken::class, 'Google_Service_AnalyticsHub_OidcToken');

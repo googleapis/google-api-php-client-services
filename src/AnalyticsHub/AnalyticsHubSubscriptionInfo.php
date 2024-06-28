@@ -17,49 +17,17 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class LinkedResource extends \Google\Model
+class AnalyticsHubSubscriptionInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $linkedDataset;
-  /**
-   * @var string
-   */
-  public $linkedPubsubSubscription;
-  /**
-   * @var string
-   */
   public $listing;
+  /**
+   * @var string
+   */
+  public $subscription;
 
-  /**
-   * @param string
-   */
-  public function setLinkedDataset($linkedDataset)
-  {
-    $this->linkedDataset = $linkedDataset;
-  }
-  /**
-   * @return string
-   */
-  public function getLinkedDataset()
-  {
-    return $this->linkedDataset;
-  }
-  /**
-   * @param string
-   */
-  public function setLinkedPubsubSubscription($linkedPubsubSubscription)
-  {
-    $this->linkedPubsubSubscription = $linkedPubsubSubscription;
-  }
-  /**
-   * @return string
-   */
-  public function getLinkedPubsubSubscription()
-  {
-    return $this->linkedPubsubSubscription;
-  }
   /**
    * @param string
    */
@@ -74,7 +42,21 @@ class LinkedResource extends \Google\Model
   {
     return $this->listing;
   }
+  /**
+   * @param string
+   */
+  public function setSubscription($subscription)
+  {
+    $this->subscription = $subscription;
+  }
+  /**
+   * @return string
+   */
+  public function getSubscription()
+  {
+    return $this->subscription;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LinkedResource::class, 'Google_Service_AnalyticsHub_LinkedResource');
+class_alias(AnalyticsHubSubscriptionInfo::class, 'Google_Service_AnalyticsHub_AnalyticsHubSubscriptionInfo');

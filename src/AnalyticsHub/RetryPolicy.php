@@ -17,64 +17,46 @@
 
 namespace Google\Service\AnalyticsHub;
 
-class LinkedResource extends \Google\Model
+class RetryPolicy extends \Google\Model
 {
   /**
    * @var string
    */
-  public $linkedDataset;
+  public $maximumBackoff;
   /**
    * @var string
    */
-  public $linkedPubsubSubscription;
-  /**
-   * @var string
-   */
-  public $listing;
+  public $minimumBackoff;
 
   /**
    * @param string
    */
-  public function setLinkedDataset($linkedDataset)
+  public function setMaximumBackoff($maximumBackoff)
   {
-    $this->linkedDataset = $linkedDataset;
+    $this->maximumBackoff = $maximumBackoff;
   }
   /**
    * @return string
    */
-  public function getLinkedDataset()
+  public function getMaximumBackoff()
   {
-    return $this->linkedDataset;
+    return $this->maximumBackoff;
   }
   /**
    * @param string
    */
-  public function setLinkedPubsubSubscription($linkedPubsubSubscription)
+  public function setMinimumBackoff($minimumBackoff)
   {
-    $this->linkedPubsubSubscription = $linkedPubsubSubscription;
+    $this->minimumBackoff = $minimumBackoff;
   }
   /**
    * @return string
    */
-  public function getLinkedPubsubSubscription()
+  public function getMinimumBackoff()
   {
-    return $this->linkedPubsubSubscription;
-  }
-  /**
-   * @param string
-   */
-  public function setListing($listing)
-  {
-    $this->listing = $listing;
-  }
-  /**
-   * @return string
-   */
-  public function getListing()
-  {
-    return $this->listing;
+    return $this->minimumBackoff;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LinkedResource::class, 'Google_Service_AnalyticsHub_LinkedResource');
+class_alias(RetryPolicy::class, 'Google_Service_AnalyticsHub_RetryPolicy');
