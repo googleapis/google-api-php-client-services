@@ -51,6 +51,7 @@ class ApiTest(absltest.TestCase):
   _TEST_DISCOVERY_DOC = 'sample_discovery.json'
   _TEST_DISCOVERY_RPC_DOC = 'sample_discovery.rpc.json'
   _TEST_SHARED_TYPES_DOC = 'sample_shared.json'
+  _TEST_VERSIONED_DOC = 'versioned_sample_discovery.json'
 
   def ApiFromDiscoveryDoc(self, path):
     """Load a discovery doc from a file and creates a library Api.
@@ -557,6 +558,17 @@ class ApiTest(absltest.TestCase):
         """)
     api2 = Api(discovery_doc2)
     self.assertTrue(api2.values['exponentialBackoffDefault'])
+
+  def testApiVersion(self):
+    """
+    Tests that the API resources contains the api version property
+    and that is set only
+    """
+    api = self.ApiFromDiscoveryDoc(self._TEST_VERSIONED_DOC)
+    expectedApiVersion = "v1_20240101"
+    for resource in api._resources:
+      apiVersion = resource.get('apiVersion')
+      self.assertEqual(expectedApiVersion, apiVersion)
 
 
 class ApiModulesTest(absltest.TestCase):

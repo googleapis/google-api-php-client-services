@@ -1394,6 +1394,8 @@ use Google\Service\KitchSink\SeriesList;
  */
 class FeaturedSeries extends \Google\Service\Resource
 {
+  protected $apiVersion = 'v1_20240101';
+
   /**
    * Lists the featured series. (series.listFeaturedSeries)
    *
