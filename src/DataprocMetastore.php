@@ -47,6 +47,7 @@ class DataprocMetastore extends \Google\Service
   public $projects_locations_services_databases;
   public $projects_locations_services_databases_tables;
   public $projects_locations_services_metadataImports;
+  public $projects_locations_services_migrationExecutions;
   public $rootUrlTemplate;
 
   /**
@@ -326,6 +327,26 @@ class DataprocMetastore extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'cancelMigration' => [
+              'path' => 'v1/{+service}:cancelMigration',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'service' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'completeMigration' => [
+              'path' => 'v1/{+service}:completeMigration',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'service' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'create' => [
               'path' => 'v1/{+parent}/services',
               'httpMethod' => 'POST',
@@ -471,6 +492,16 @@ class DataprocMetastore extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'startMigration' => [
+              'path' => 'v1/{+service}:startMigration',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'service' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
@@ -734,6 +765,66 @@ class DataprocMetastore extends \Google\Service
                   'type' => 'string',
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_services_migrationExecutions = new DataprocMetastore\Resource\ProjectsLocationsServicesMigrationExecutions(
+        $this,
+        $this->serviceName,
+        'migrationExecutions',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/migrationExecutions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
