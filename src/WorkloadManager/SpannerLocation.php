@@ -23,8 +23,26 @@ class SpannerLocation extends \Google\Collection
   /**
    * @var string[]
    */
+  public $backupName;
+  /**
+   * @var string[]
+   */
   public $dbName;
 
+  /**
+   * @param string[]
+   */
+  public function setBackupName($backupName)
+  {
+    $this->backupName = $backupName;
+  }
+  /**
+   * @return string[]
+   */
+  public function getBackupName()
+  {
+    return $this->backupName;
+  }
   /**
    * @param string[]
    */
