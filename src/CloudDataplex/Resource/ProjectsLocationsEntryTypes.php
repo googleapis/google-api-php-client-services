@@ -36,17 +36,17 @@ use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 class ProjectsLocationsEntryTypes extends \Google\Service\Resource
 {
   /**
-   * Creates an EntryType (entryTypes.create)
+   * Creates an EntryType. (entryTypes.create)
    *
    * @param string $parent Required. The resource name of the EntryType, of the
    * form: projects/{project_number}/locations/{location_id} where location_id
-   * refers to a GCP region.
+   * refers to a Google Cloud region.
    * @param GoogleCloudDataplexV1EntryType $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string entryTypeId Required. EntryType identifier.
-   * @opt_param bool validateOnly Optional. Only validate the request, but do not
-   * perform mutations. The default is false.
+   * @opt_param bool validateOnly Optional. The service validates the request
+   * without performing any mutations. The default is false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -57,7 +57,7 @@ class ProjectsLocationsEntryTypes extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a EntryType resource. (entryTypes.delete)
+   * Deletes an EntryType. (entryTypes.delete)
    *
    * @param string $name Required. The resource name of the EntryType:
    * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
@@ -65,7 +65,7 @@ class ProjectsLocationsEntryTypes extends \Google\Service\Resource
    *
    * @opt_param string etag Optional. If the client provided etag value does not
    * match the current etag value, the DeleteEntryTypeRequest method returns an
-   * ABORTED error response
+   * ABORTED error response.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -76,7 +76,7 @@ class ProjectsLocationsEntryTypes extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Retrieves a EntryType resource. (entryTypes.get)
+   * Gets an EntryType. (entryTypes.get)
    *
    * @param string $name Required. The resource name of the EntryType:
    * projects/{project_number}/locations/{location_id}/entryTypes/{entry_type_id}.
@@ -126,23 +126,23 @@ class ProjectsLocationsEntryTypes extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource name of the EntryType location,
    * of the form: projects/{project_number}/locations/{location_id} where
-   * location_id refers to a GCP region.
+   * location_id refers to a Google Cloud region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter request. Filters are case-
-   * sensitive. The following formats are supported:labels.key1 = "value1"
-   * labels:key1 name = "value" These restrictions can be coinjoined with AND, OR
+   * sensitive. The service supports the following formats: labels.key1 = "value1"
+   * labels:key1 name = "value"These restrictions can be conjoined with AND, OR,
    * and NOT conjunctions.
-   * @opt_param string orderBy Optional. Order by fields (name or create_time) for
-   * the result. If not specified, the ordering is undefined.
+   * @opt_param string orderBy Optional. Orders the result by name or create_time
+   * fields. If not specified, the ordering is undefined.
    * @opt_param int pageSize Optional. Maximum number of EntryTypes to return. The
-   * service may return fewer than this value. If unspecified, at most 10
-   * EntryTypes will be returned. The maximum value is 1000; values above 1000
-   * will be coerced to 1000.
+   * service may return fewer than this value. If unspecified, the service returns
+   * at most 10 EntryTypes. The maximum value is 1000; values above 1000 will be
+   * coerced to 1000.
    * @opt_param string pageToken Optional. Page token received from a previous
    * ListEntryTypes call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to ListEntryTypes must match the
-   * call that provided the page token.
+   * paginating, all other parameters you provided to ListEntryTypes must match
+   * the call that provided the page token.
    * @return GoogleCloudDataplexV1ListEntryTypesResponse
    * @throws \Google\Service\Exception
    */
@@ -153,7 +153,7 @@ class ProjectsLocationsEntryTypes extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDataplexV1ListEntryTypesResponse::class);
   }
   /**
-   * Updates a EntryType resource. (entryTypes.patch)
+   * Updates an EntryType. (entryTypes.patch)
    *
    * @param string $name Output only. The relative resource name of the EntryType,
    * of the form:
@@ -162,8 +162,8 @@ class ProjectsLocationsEntryTypes extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. Mask of fields to update.
-   * @opt_param bool validateOnly Optional. Only validate the request, but do not
-   * perform mutations. The default is false.
+   * @opt_param bool validateOnly Optional. The service validates the request
+   * without performing any mutations. The default is false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */

@@ -50,10 +50,6 @@ class GoogleCloudDataplexV1AspectType extends \Google\Model
   /**
    * @var string
    */
-  public $transferStatus;
-  /**
-   * @var string
-   */
   public $uid;
   /**
    * @var string
@@ -171,20 +167,6 @@ class GoogleCloudDataplexV1AspectType extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param string
-   */
-  public function setTransferStatus($transferStatus)
-  {
-    $this->transferStatus = $transferStatus;
-  }
-  /**
-   * @return string
-   */
-  public function getTransferStatus()
-  {
-    return $this->transferStatus;
   }
   /**
    * @param string

@@ -36,7 +36,7 @@ use Google\Service\CloudDataplex\GoogleLongrunningOperation;
 class ProjectsLocationsEntryGroups extends \Google\Service\Resource
 {
   /**
-   * Creates an EntryGroup (entryGroups.create)
+   * Creates an EntryGroup. (entryGroups.create)
    *
    * @param string $parent Required. The resource name of the entryGroup, of the
    * form: projects/{project_number}/locations/{location_id} where location_id
@@ -45,8 +45,8 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string entryGroupId Required. EntryGroup identifier.
-   * @opt_param bool validateOnly Optional. Only validate the request, but do not
-   * perform mutations. The default is false.
+   * @opt_param bool validateOnly Optional. The service validates the request
+   * without performing any mutations. The default is false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -57,7 +57,7 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes a EntryGroup resource. (entryGroups.delete)
+   * Deletes an EntryGroup. (entryGroups.delete)
    *
    * @param string $name Required. The resource name of the EntryGroup: projects/{
    * project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
@@ -65,7 +65,7 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
    *
    * @opt_param string etag Optional. If the client provided etag value does not
    * match the current etag value, the DeleteEntryGroupRequest method returns an
-   * ABORTED error response
+   * ABORTED error response.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -76,7 +76,7 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Retrieves a EntryGroup resource. (entryGroups.get)
+   * Gets an EntryGroup. (entryGroups.get)
    *
    * @param string $name Required. The resource name of the EntryGroup: projects/{
    * project_number}/locations/{location_id}/entryGroups/{entry_group_id}.
@@ -126,19 +126,19 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
    *
    * @param string $parent Required. The resource name of the entryGroup location,
    * of the form: projects/{project_number}/locations/{location_id} where
-   * location_id refers to a GCP region.
+   * location_id refers to a Google Cloud region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. Filter request.
    * @opt_param string orderBy Optional. Order by fields for the result.
    * @opt_param int pageSize Optional. Maximum number of EntryGroups to return.
-   * The service may return fewer than this value. If unspecified, at most 10
-   * EntryGroups will be returned. The maximum value is 1000; values above 1000
+   * The service may return fewer than this value. If unspecified, the service
+   * returns at most 10 EntryGroups. The maximum value is 1000; values above 1000
    * will be coerced to 1000.
    * @opt_param string pageToken Optional. Page token received from a previous
    * ListEntryGroups call. Provide this to retrieve the subsequent page. When
-   * paginating, all other parameters provided to ListEntryGroups must match the
-   * call that provided the page token.
+   * paginating, all other parameters you provide to ListEntryGroups must match
+   * the call that provided the page token.
    * @return GoogleCloudDataplexV1ListEntryGroupsResponse
    * @throws \Google\Service\Exception
    */
@@ -149,7 +149,7 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
     return $this->call('list', [$params], GoogleCloudDataplexV1ListEntryGroupsResponse::class);
   }
   /**
-   * Updates a EntryGroup resource. (entryGroups.patch)
+   * Updates an EntryGroup. (entryGroups.patch)
    *
    * @param string $name Output only. The relative resource name of the
    * EntryGroup, of the form: projects/{project_number}/locations/{location_id}/en
@@ -158,8 +158,8 @@ class ProjectsLocationsEntryGroups extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string updateMask Required. Mask of fields to update.
-   * @opt_param bool validateOnly Optional. Only validate the request, but do not
-   * perform mutations. The default is false.
+   * @opt_param bool validateOnly Optional. The service validates the request,
+   * without performing any mutations. The default is false.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
