@@ -103,6 +103,16 @@ class CloudRun extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exportProjectMetadata' => [
+              'path' => 'v2/{+name}:exportProjectMetadata',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

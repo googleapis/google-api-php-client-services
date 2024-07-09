@@ -23,8 +23,6 @@ class GoogleDevtoolsCloudbuildV1HttpConfig extends \Google\Model
    * @var string
    */
   public $proxySecretVersionName;
-  protected $proxySslCaInfoType = GoogleDevtoolsCloudbuildV1GCSLocation::class;
-  protected $proxySslCaInfoDataType = '';
 
   /**
    * @param string
@@ -39,20 +37,6 @@ class GoogleDevtoolsCloudbuildV1HttpConfig extends \Google\Model
   public function getProxySecretVersionName()
   {
     return $this->proxySecretVersionName;
-  }
-  /**
-   * @param GoogleDevtoolsCloudbuildV1GCSLocation
-   */
-  public function setProxySslCaInfo(GoogleDevtoolsCloudbuildV1GCSLocation $proxySslCaInfo)
-  {
-    $this->proxySslCaInfo = $proxySslCaInfo;
-  }
-  /**
-   * @return GoogleDevtoolsCloudbuildV1GCSLocation
-   */
-  public function getProxySslCaInfo()
-  {
-    return $this->proxySslCaInfo;
   }
 }
 
