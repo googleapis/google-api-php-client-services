@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution extends \Google\Collection
 {
   protected $collection_key = 'buckets';
+  /**
+   * @var string
+   */
+  public $billableSum;
   protected $bucketsType = GoogleCloudAiplatformV1SupervisedTuningDatasetDistributionDatasetBucket::class;
   protected $bucketsDataType = 'array';
   public $max;
@@ -33,6 +37,20 @@ class GoogleCloudAiplatformV1SupervisedTuningDatasetDistribution extends \Google
    */
   public $sum;
 
+  /**
+   * @param string
+   */
+  public function setBillableSum($billableSum)
+  {
+    $this->billableSum = $billableSum;
+  }
+  /**
+   * @return string
+   */
+  public function getBillableSum()
+  {
+    return $this->billableSum;
+  }
   /**
    * @param GoogleCloudAiplatformV1SupervisedTuningDatasetDistributionDatasetBucket[]
    */

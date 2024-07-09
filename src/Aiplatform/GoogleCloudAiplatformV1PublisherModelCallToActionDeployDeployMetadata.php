@@ -17,28 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1BleuSpec extends \Google\Model
+class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string[]
    */
-  public $useEffectiveOrder;
+  public $labels;
 
   /**
-   * @param bool
+   * @param string[]
    */
-  public function setUseEffectiveOrder($useEffectiveOrder)
+  public function setLabels($labels)
   {
-    $this->useEffectiveOrder = $useEffectiveOrder;
+    $this->labels = $labels;
   }
   /**
-   * @return bool
+   * @return string[]
    */
-  public function getUseEffectiveOrder()
+  public function getLabels()
   {
-    return $this->useEffectiveOrder;
+    return $this->labels;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1BleuSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1BleuSpec');
+class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata');
