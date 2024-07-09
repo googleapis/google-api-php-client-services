@@ -104,6 +104,12 @@ class Cluster extends \Google\Model
   /**
    * @var string
    */
+  public $subscriptionType;
+  protected $trialMetadataType = TrialMetadata::class;
+  protected $trialMetadataDataType = '';
+  /**
+   * @var string
+   */
   public $uid;
   /**
    * @var string
@@ -501,6 +507,34 @@ class Cluster extends \Google\Model
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setSubscriptionType($subscriptionType)
+  {
+    $this->subscriptionType = $subscriptionType;
+  }
+  /**
+   * @return string
+   */
+  public function getSubscriptionType()
+  {
+    return $this->subscriptionType;
+  }
+  /**
+   * @param TrialMetadata
+   */
+  public function setTrialMetadata(TrialMetadata $trialMetadata)
+  {
+    $this->trialMetadata = $trialMetadata;
+  }
+  /**
+   * @return TrialMetadata
+   */
+  public function getTrialMetadata()
+  {
+    return $this->trialMetadata;
   }
   /**
    * @param string
