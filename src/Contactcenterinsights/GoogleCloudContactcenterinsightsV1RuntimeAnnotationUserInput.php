@@ -27,6 +27,10 @@ class GoogleCloudContactcenterinsightsV1RuntimeAnnotationUserInput extends \Goog
    * @var string
    */
   public $query;
+  /**
+   * @var string
+   */
+  public $querySource;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class GoogleCloudContactcenterinsightsV1RuntimeAnnotationUserInput extends \Goog
   public function getQuery()
   {
     return $this->query;
+  }
+  /**
+   * @param string
+   */
+  public function setQuerySource($querySource)
+  {
+    $this->querySource = $querySource;
+  }
+  /**
+   * @return string
+   */
+  public function getQuerySource()
+  {
+    return $this->querySource;
   }
 }
 
