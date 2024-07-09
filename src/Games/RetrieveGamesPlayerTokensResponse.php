@@ -19,23 +19,23 @@ namespace Google\Service\Games;
 
 class RetrieveGamesPlayerTokensResponse extends \Google\Collection
 {
-  protected $collection_key = 'applicationRecallTokens';
-  protected $applicationRecallTokensType = GamePlayerToken::class;
-  protected $applicationRecallTokensDataType = 'array';
+  protected $collection_key = 'gamePlayerTokens';
+  protected $gamePlayerTokensType = GamePlayerToken::class;
+  protected $gamePlayerTokensDataType = 'array';
 
   /**
    * @param GamePlayerToken[]
    */
-  public function setApplicationRecallTokens($applicationRecallTokens)
+  public function setGamePlayerTokens($gamePlayerTokens)
   {
-    $this->applicationRecallTokens = $applicationRecallTokens;
+    $this->gamePlayerTokens = $gamePlayerTokens;
   }
   /**
    * @return GamePlayerToken[]
    */
-  public function getApplicationRecallTokens()
+  public function getGamePlayerTokens()
   {
-    return $this->applicationRecallTokens;
+    return $this->gamePlayerTokens;
   }
 }
 

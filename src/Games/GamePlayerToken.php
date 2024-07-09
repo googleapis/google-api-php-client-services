@@ -17,15 +17,14 @@
 
 namespace Google\Service\Games;
 
-class GamePlayerToken extends \Google\Collection
+class GamePlayerToken extends \Google\Model
 {
-  protected $collection_key = 'token';
   /**
    * @var string
    */
   public $applicationId;
-  protected $tokenType = RecallToken::class;
-  protected $tokenDataType = 'array';
+  protected $recallTokenType = RecallToken::class;
+  protected $recallTokenDataType = '';
 
   /**
    * @param string
@@ -42,18 +41,18 @@ class GamePlayerToken extends \Google\Collection
     return $this->applicationId;
   }
   /**
-   * @param RecallToken[]
+   * @param RecallToken
    */
-  public function setToken($token)
+  public function setRecallToken(RecallToken $recallToken)
   {
-    $this->token = $token;
+    $this->recallToken = $recallToken;
   }
   /**
-   * @return RecallToken[]
+   * @return RecallToken
    */
-  public function getToken()
+  public function getRecallToken()
   {
-    return $this->token;
+    return $this->recallToken;
   }
 }
 
