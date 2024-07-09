@@ -23,6 +23,8 @@ class ImportContextSqlImportOptions extends \Google\Model
    * @var bool
    */
   public $parallel;
+  protected $postgresImportOptionsType = ImportContextSqlImportOptionsPostgresImportOptions::class;
+  protected $postgresImportOptionsDataType = '';
   /**
    * @var int
    */
@@ -41,6 +43,20 @@ class ImportContextSqlImportOptions extends \Google\Model
   public function getParallel()
   {
     return $this->parallel;
+  }
+  /**
+   * @param ImportContextSqlImportOptionsPostgresImportOptions
+   */
+  public function setPostgresImportOptions(ImportContextSqlImportOptionsPostgresImportOptions $postgresImportOptions)
+  {
+    $this->postgresImportOptions = $postgresImportOptions;
+  }
+  /**
+   * @return ImportContextSqlImportOptionsPostgresImportOptions
+   */
+  public function getPostgresImportOptions()
+  {
+    return $this->postgresImportOptions;
   }
   /**
    * @param int
