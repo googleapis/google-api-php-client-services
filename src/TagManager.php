@@ -220,6 +220,10 @@ class TagManager extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'tagId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'move_tag_id' => [
               'path' => 'tagmanager/v2/{+path}:move_tag_id',
