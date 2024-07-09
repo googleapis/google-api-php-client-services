@@ -29,6 +29,10 @@ class GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResult e
   protected $snippetInfoType = GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResultSnippetInfo::class;
   protected $snippetInfoDataType = 'array';
   /**
+   * @var array[]
+   */
+  public $structData;
+  /**
    * @var string
    */
   public $title;
@@ -78,6 +82,20 @@ class GoogleCloudDiscoveryengineV1alphaAnswerStepActionObservationSearchResult e
   public function getSnippetInfo()
   {
     return $this->snippetInfo;
+  }
+  /**
+   * @param array[]
+   */
+  public function setStructData($structData)
+  {
+    $this->structData = $structData;
+  }
+  /**
+   * @return array[]
+   */
+  public function getStructData()
+  {
+    return $this->structData;
   }
   /**
    * @param string
