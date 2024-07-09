@@ -17,28 +17,15 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate extends \Google\Collection
+class GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate extends \Google\Model
 {
-  protected $collection_key = 'configParameters';
-  protected $configParametersType = GoogleCloudIntegrationsV1alphaIntegrationConfigParameter::class;
-  protected $configParametersDataType = 'array';
   protected $integrationVersionType = GoogleCloudIntegrationsV1alphaIntegrationVersion::class;
   protected $integrationVersionDataType = '';
+  /**
+   * @var string
+   */
+  public $key;
 
-  /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
-   */
-  public function setConfigParameters($configParameters)
-  {
-    $this->configParameters = $configParameters;
-  }
-  /**
-   * @return GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
-   */
-  public function getConfigParameters()
-  {
-    return $this->configParameters;
-  }
   /**
    * @param GoogleCloudIntegrationsV1alphaIntegrationVersion
    */
@@ -52,6 +39,20 @@ class GoogleCloudIntegrationsV1alphaIntegrationVersionTemplate extends \Google\C
   public function getIntegrationVersion()
   {
     return $this->integrationVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setKey($key)
+  {
+    $this->key = $key;
+  }
+  /**
+   * @return string
+   */
+  public function getKey()
+  {
+    return $this->key;
   }
 }
 

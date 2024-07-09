@@ -17,61 +17,58 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaUseTemplateRequest extends \Google\Collection
+class GoogleCloudIntegrationsV1alphaUseTemplateRequest extends \Google\Model
 {
-  protected $collection_key = 'configParameters';
-  protected $configParametersType = GoogleCloudIntegrationsV1alphaIntegrationConfigParameter::class;
-  protected $configParametersDataType = 'array';
+  protected $integrationDetailsType = GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails::class;
+  protected $integrationDetailsDataType = '';
   /**
    * @var string
    */
-  public $integration;
-  /**
-   * @var string
-   */
-  public $integrationDescription;
+  public $integrationRegion;
+  protected $subIntegrationsType = GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails::class;
+  protected $subIntegrationsDataType = 'map';
 
   /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
+   * @param GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails
    */
-  public function setConfigParameters($configParameters)
+  public function setIntegrationDetails(GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails $integrationDetails)
   {
-    $this->configParameters = $configParameters;
+    $this->integrationDetails = $integrationDetails;
   }
   /**
-   * @return GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
+   * @return GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails
    */
-  public function getConfigParameters()
+  public function getIntegrationDetails()
   {
-    return $this->configParameters;
-  }
-  /**
-   * @param string
-   */
-  public function setIntegration($integration)
-  {
-    $this->integration = $integration;
-  }
-  /**
-   * @return string
-   */
-  public function getIntegration()
-  {
-    return $this->integration;
+    return $this->integrationDetails;
   }
   /**
    * @param string
    */
-  public function setIntegrationDescription($integrationDescription)
+  public function setIntegrationRegion($integrationRegion)
   {
-    $this->integrationDescription = $integrationDescription;
+    $this->integrationRegion = $integrationRegion;
   }
   /**
    * @return string
    */
-  public function getIntegrationDescription()
+  public function getIntegrationRegion()
   {
-    return $this->integrationDescription;
+    return $this->integrationRegion;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails[]
+   */
+  public function setSubIntegrations($subIntegrations)
+  {
+    $this->subIntegrations = $subIntegrations;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails[]
+   */
+  public function getSubIntegrations()
+  {
+    return $this->subIntegrations;
   }
 }
 

@@ -17,6 +17,7 @@
 
 namespace Google\Service\Integrations\Resource;
 
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDownloadTemplateResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaImportTemplateRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaImportTemplateResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaListTemplatesResponse;
@@ -24,6 +25,8 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaSearchTemplatesRes
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaShareTemplateRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaTemplate;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUnshareTemplateRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUploadTemplateRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUploadTemplateResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUseTemplateRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaUseTemplateResponse;
 use Google\Service\Integrations\GoogleProtobufEmpty;
@@ -67,6 +70,24 @@ class ProjectsLocationsTemplates extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Downloads a template. Retrieves the `Template` and returns the response as a
+   * string. (templates.download)
+   *
+   * @param string $name Required. The template to download. Format:
+   * projects/{project}/locations/{location}/template/{template_id}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string fileFormat Required. File format for download request.
+   * @return GoogleCloudIntegrationsV1alphaDownloadTemplateResponse
+   * @throws \Google\Service\Exception
+   */
+  public function download($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('download', [$params], GoogleCloudIntegrationsV1alphaDownloadTemplateResponse::class);
   }
   /**
    * Get a template in the specified project. (templates.get)
@@ -215,6 +236,25 @@ class ProjectsLocationsTemplates extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('unshare', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Uploads a template. The content can be a previously downloaded template.
+   * Performs the same function as CreateTemplate, but accepts input in a string
+   * format, which holds the complete representation of the Template content.
+   * (templates.upload)
+   *
+   * @param string $parent Required. The template to upload. Format:
+   * projects/{project}/locations/{location}
+   * @param GoogleCloudIntegrationsV1alphaUploadTemplateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudIntegrationsV1alphaUploadTemplateResponse
+   * @throws \Google\Service\Exception
+   */
+  public function upload($parent, GoogleCloudIntegrationsV1alphaUploadTemplateRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('upload', [$params], GoogleCloudIntegrationsV1alphaUploadTemplateResponse::class);
   }
   /**
    * Use the template to create integration. This api would keep track of

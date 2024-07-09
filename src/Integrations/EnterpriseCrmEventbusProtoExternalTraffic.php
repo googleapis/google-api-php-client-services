@@ -20,6 +20,10 @@ namespace Google\Service\Integrations;
 class EnterpriseCrmEventbusProtoExternalTraffic extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $enableInternalIp;
+  /**
    * @var string
    */
   public $gcpProjectId;
@@ -40,6 +44,20 @@ class EnterpriseCrmEventbusProtoExternalTraffic extends \Google\Model
    */
   public $source;
 
+  /**
+   * @param bool
+   */
+  public function setEnableInternalIp($enableInternalIp)
+  {
+    $this->enableInternalIp = $enableInternalIp;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableInternalIp()
+  {
+    return $this->enableInternalIp;
+  }
   /**
    * @param string
    */
