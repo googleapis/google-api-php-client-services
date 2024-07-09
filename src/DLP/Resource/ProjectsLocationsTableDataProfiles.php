@@ -85,7 +85,7 @@ class ProjectsLocationsTableDataProfiles extends \Google\Service\Resource
    * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
    * `project_id = 12345 AND resource_visibility = PUBLIC` The length of this
    * field should be no more than 500 characters.
-   * @opt_param string orderBy Comma separated list of fields to order by,
+   * @opt_param string orderBy Comma-separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case insensitive. The
    * default sorting order is ascending. Redundant space characters are
    * insignificant. Only one order field at a time is allowed. Examples: *

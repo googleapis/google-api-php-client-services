@@ -122,7 +122,7 @@ class ProjectsLocationsDeidentifyTemplates extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string locationId Deprecated. This field has no effect.
-   * @opt_param string orderBy Comma separated list of fields to order by,
+   * @opt_param string orderBy Comma-separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case insensitive. The
    * default sorting order is ascending. Redundant space characters are
    * insignificant. Example: `name asc,update_time, create_time desc` Supported

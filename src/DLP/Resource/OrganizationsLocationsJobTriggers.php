@@ -123,7 +123,7 @@ class OrganizationsLocationsJobTriggers extends \Google\Service\Resource
    * \"2017-12-12T00:00:00+00:00\" The length of this field should be no more than
    * 500 characters.
    * @opt_param string locationId Deprecated. This field has no effect.
-   * @opt_param string orderBy Comma separated list of triggeredJob fields to
+   * @opt_param string orderBy Comma-separated list of triggeredJob fields to
    * order by, followed by `asc` or `desc` postfix. This list is case insensitive.
    * The default sorting order is ascending. Redundant space characters are
    * insignificant. Example: `name asc,update_time, create_time desc` Supported

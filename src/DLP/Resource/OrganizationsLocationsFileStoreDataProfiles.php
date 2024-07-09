@@ -83,10 +83,10 @@ class OrganizationsLocationsFileStoreDataProfiles extends \Google\Service\Resour
    * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto *
    * The operator must be `=` or `!=`. Examples: * `project_id = 12345 AND
    * status_code = 1` * `project_id = 12345 AND sensitivity_level = HIGH` *
-   * `project_id = 12345 AND resource_visibility = PUBLIC` . * 'file_store_path =
+   * `project_id = 12345 AND resource_visibility = PUBLIC` * `file_store_path =
    * "gs://mybucket"` The length of this field should be no more than 500
    * characters.
-   * @opt_param string orderBy Optional. Comma separated list of fields to order
+   * @opt_param string orderBy Optional. Comma-separated list of fields to order
    * by, followed by `asc` or `desc` postfix. This list is case insensitive. The
    * default sorting order is ascending. Redundant space characters are
    * insignificant. Only one order field at a time is allowed. Examples: *

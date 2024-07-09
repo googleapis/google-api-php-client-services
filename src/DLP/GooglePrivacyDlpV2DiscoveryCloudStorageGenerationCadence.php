@@ -17,14 +17,14 @@
 
 namespace Google\Service\DLP;
 
-class GooglePrivacyDlpV2DiscoveryGenerationCadence extends \Google\Model
+class GooglePrivacyDlpV2DiscoveryCloudStorageGenerationCadence extends \Google\Model
 {
   protected $inspectTemplateModifiedCadenceType = GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence::class;
   protected $inspectTemplateModifiedCadenceDataType = '';
-  protected $schemaModifiedCadenceType = GooglePrivacyDlpV2DiscoverySchemaModifiedCadence::class;
-  protected $schemaModifiedCadenceDataType = '';
-  protected $tableModifiedCadenceType = GooglePrivacyDlpV2DiscoveryTableModifiedCadence::class;
-  protected $tableModifiedCadenceDataType = '';
+  /**
+   * @var string
+   */
+  public $refreshFrequency;
 
   /**
    * @param GooglePrivacyDlpV2DiscoveryInspectTemplateModifiedCadence
@@ -41,34 +41,20 @@ class GooglePrivacyDlpV2DiscoveryGenerationCadence extends \Google\Model
     return $this->inspectTemplateModifiedCadence;
   }
   /**
-   * @param GooglePrivacyDlpV2DiscoverySchemaModifiedCadence
+   * @param string
    */
-  public function setSchemaModifiedCadence(GooglePrivacyDlpV2DiscoverySchemaModifiedCadence $schemaModifiedCadence)
+  public function setRefreshFrequency($refreshFrequency)
   {
-    $this->schemaModifiedCadence = $schemaModifiedCadence;
+    $this->refreshFrequency = $refreshFrequency;
   }
   /**
-   * @return GooglePrivacyDlpV2DiscoverySchemaModifiedCadence
+   * @return string
    */
-  public function getSchemaModifiedCadence()
+  public function getRefreshFrequency()
   {
-    return $this->schemaModifiedCadence;
-  }
-  /**
-   * @param GooglePrivacyDlpV2DiscoveryTableModifiedCadence
-   */
-  public function setTableModifiedCadence(GooglePrivacyDlpV2DiscoveryTableModifiedCadence $tableModifiedCadence)
-  {
-    $this->tableModifiedCadence = $tableModifiedCadence;
-  }
-  /**
-   * @return GooglePrivacyDlpV2DiscoveryTableModifiedCadence
-   */
-  public function getTableModifiedCadence()
-  {
-    return $this->tableModifiedCadence;
+    return $this->refreshFrequency;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GooglePrivacyDlpV2DiscoveryGenerationCadence::class, 'Google_Service_DLP_GooglePrivacyDlpV2DiscoveryGenerationCadence');
+class_alias(GooglePrivacyDlpV2DiscoveryCloudStorageGenerationCadence::class, 'Google_Service_DLP_GooglePrivacyDlpV2DiscoveryCloudStorageGenerationCadence');
