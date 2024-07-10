@@ -17,46 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $disable;
+  public $datasetId;
   /**
-   * @var int
+   * @var string
    */
-  public $maxRephraseSteps;
+  public $tableId;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setDisable($disable)
+  public function setDatasetId($datasetId)
   {
-    $this->disable = $disable;
+    $this->datasetId = $datasetId;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getDisable()
+  public function getDatasetId()
   {
-    return $this->disable;
+    return $this->datasetId;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setMaxRephraseSteps($maxRephraseSteps)
+  public function setTableId($tableId)
   {
-    $this->maxRephraseSteps = $maxRephraseSteps;
+    $this->tableId = $tableId;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getMaxRephraseSteps()
+  public function getTableId()
   {
-    return $this->maxRephraseSteps;
+    return $this->tableId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec');
+class_alias(GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaOutputResultBigQueryOutputResult');

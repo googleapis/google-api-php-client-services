@@ -17,46 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaExportUserEventsMetadata extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $disable;
+  public $createTime;
   /**
-   * @var int
+   * @var string
    */
-  public $maxRephraseSteps;
+  public $updateTime;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setDisable($disable)
+  public function setCreateTime($createTime)
   {
-    $this->disable = $disable;
+    $this->createTime = $createTime;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getDisable()
+  public function getCreateTime()
   {
-    return $this->disable;
+    return $this->createTime;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setMaxRephraseSteps($maxRephraseSteps)
+  public function setUpdateTime($updateTime)
   {
-    $this->maxRephraseSteps = $maxRephraseSteps;
+    $this->updateTime = $updateTime;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getMaxRephraseSteps()
+  public function getUpdateTime()
   {
-    return $this->maxRephraseSteps;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AnswerQueryRequestQueryUnderstandingSpecQueryRephraserSpec');
+class_alias(GoogleCloudDiscoveryengineV1alphaExportUserEventsMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaExportUserEventsMetadata');
