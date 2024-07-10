@@ -24,10 +24,10 @@ use Google\Service\Clouderrorreporting\ErrorGroup;
  * Typical usage is:
  *  <code>
  *   $clouderrorreportingService = new Google\Service\Clouderrorreporting(...);
- *   $groups = $clouderrorreportingService->projects_groups;
+ *   $groups = $clouderrorreportingService->projects_locations_groups;
  *  </code>
  */
-class ProjectsGroups extends \Google\Service\Resource
+class ProjectsLocationsGroups extends \Google\Service\Resource
 {
   /**
    * Get the specified group. (groups.get)
@@ -85,4 +85,4 @@ class ProjectsGroups extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsGroups::class, 'Google_Service_Clouderrorreporting_Resource_ProjectsGroups');
+class_alias(ProjectsLocationsGroups::class, 'Google_Service_Clouderrorreporting_Resource_ProjectsLocationsGroups');

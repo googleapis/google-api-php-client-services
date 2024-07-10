@@ -20,17 +20,17 @@ namespace Google\Service\Clouderrorreporting\Resource;
 use Google\Service\Clouderrorreporting\DeleteEventsResponse;
 
 /**
- * The "projects" collection of methods.
+ * The "locations" collection of methods.
  * Typical usage is:
  *  <code>
  *   $clouderrorreportingService = new Google\Service\Clouderrorreporting(...);
- *   $projects = $clouderrorreportingService->projects;
+ *   $locations = $clouderrorreportingService->projects_locations;
  *  </code>
  */
-class Projects extends \Google\Service\Resource
+class ProjectsLocations extends \Google\Service\Resource
 {
   /**
-   * Deletes all error events of a given project. (projects.deleteEvents)
+   * Deletes all error events of a given project. (locations.deleteEvents)
    *
    * @param string $projectName Required. The resource name of the Google Cloud
    * Platform project. Written as `projects/{projectID}` or
@@ -54,4 +54,4 @@ class Projects extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Projects::class, 'Google_Service_Clouderrorreporting_Resource_Projects');
+class_alias(ProjectsLocations::class, 'Google_Service_Clouderrorreporting_Resource_ProjectsLocations');

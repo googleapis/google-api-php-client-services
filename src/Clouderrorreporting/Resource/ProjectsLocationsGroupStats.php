@@ -24,13 +24,13 @@ use Google\Service\Clouderrorreporting\ListGroupStatsResponse;
  * Typical usage is:
  *  <code>
  *   $clouderrorreportingService = new Google\Service\Clouderrorreporting(...);
- *   $groupStats = $clouderrorreportingService->projects_groupStats;
+ *   $groupStats = $clouderrorreportingService->projects_locations_groupStats;
  *  </code>
  */
-class ProjectsGroupStats extends \Google\Service\Resource
+class ProjectsLocationsGroupStats extends \Google\Service\Resource
 {
   /**
-   * Lists the specified groups. (groupStats.listProjectsGroupStats)
+   * Lists the specified groups. (groupStats.listProjectsLocationsGroupStats)
    *
    * @param string $projectName Required. The resource name of the Google Cloud
    * Platform project. Written as `projects/{projectID}` or
@@ -79,7 +79,7 @@ class ProjectsGroupStats extends \Google\Service\Resource
    * @return ListGroupStatsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsGroupStats($projectName, $optParams = [])
+  public function listProjectsLocationsGroupStats($projectName, $optParams = [])
   {
     $params = ['projectName' => $projectName];
     $params = array_merge($params, $optParams);
@@ -88,4 +88,4 @@ class ProjectsGroupStats extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsGroupStats::class, 'Google_Service_Clouderrorreporting_Resource_ProjectsGroupStats');
+class_alias(ProjectsLocationsGroupStats::class, 'Google_Service_Clouderrorreporting_Resource_ProjectsLocationsGroupStats');
