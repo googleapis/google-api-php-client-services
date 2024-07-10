@@ -17,30 +17,19 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaImportTemplateRequest extends \Google\Collection
+class GoogleCloudIntegrationsV1alphaImportTemplateRequest extends \Google\Model
 {
-  protected $collection_key = 'configParameters';
-  protected $configParametersType = GoogleCloudIntegrationsV1alphaIntegrationConfigParameter::class;
-  protected $configParametersDataType = 'array';
   /**
    * @var string
    */
   public $integration;
+  /**
+   * @var string
+   */
+  public $integrationRegion;
+  protected $subIntegrationsType = GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails::class;
+  protected $subIntegrationsDataType = 'map';
 
-  /**
-   * @param GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
-   */
-  public function setConfigParameters($configParameters)
-  {
-    $this->configParameters = $configParameters;
-  }
-  /**
-   * @return GoogleCloudIntegrationsV1alphaIntegrationConfigParameter[]
-   */
-  public function getConfigParameters()
-  {
-    return $this->configParameters;
-  }
   /**
    * @param string
    */
@@ -54,6 +43,34 @@ class GoogleCloudIntegrationsV1alphaImportTemplateRequest extends \Google\Collec
   public function getIntegration()
   {
     return $this->integration;
+  }
+  /**
+   * @param string
+   */
+  public function setIntegrationRegion($integrationRegion)
+  {
+    $this->integrationRegion = $integrationRegion;
+  }
+  /**
+   * @return string
+   */
+  public function getIntegrationRegion()
+  {
+    return $this->integrationRegion;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails[]
+   */
+  public function setSubIntegrations($subIntegrations)
+  {
+    $this->subIntegrations = $subIntegrations;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaUseTemplateRequestIntegrationDetails[]
+   */
+  public function getSubIntegrations()
+  {
+    return $this->subIntegrations;
   }
 }
 
