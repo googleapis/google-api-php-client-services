@@ -212,8 +212,7 @@ class CoursesCourseWork extends \Google\Service\Resource
    * the requested modification to the student submission, or for access errors. *
    * `INVALID_ARGUMENT` if the request is malformed. * `FAILED_PRECONDITION` if
    * the requested course work has already been deleted. * `NOT_FOUND` if the
-   * requested course, course work, or student submission does not exist.
-   * (courseWork.patch)
+   * requested course or course work does not exist. (courseWork.patch)
    *
    * @param string $courseId Identifier of the course. This identifier can be
    * either the Classroom-assigned identifier or an alias.
@@ -229,7 +228,9 @@ class CoursesCourseWork extends \Google\Service\Resource
    * update mask and not set in the `CourseWork` object, an `INVALID_ARGUMENT`
    * error is returned. The following fields may be specified by teachers: *
    * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` *
-   * `scheduled_time` * `submission_modification_mode` * `topic_id`
+   * `scheduled_time` * `submission_modification_mode` * `topic_id` *
+   * `grading_period_id` Available in [V1_20240401_PREVIEW](https://developers.goo
+   * gle.com/classroom/reference/preview) and later.
    * @return CourseWork
    * @throws \Google\Service\Exception
    */
