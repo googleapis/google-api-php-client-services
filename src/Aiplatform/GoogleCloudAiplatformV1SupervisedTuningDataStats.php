@@ -27,6 +27,10 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
   /**
    * @var string
    */
+  public $totalBillableTokenCount;
+  /**
+   * @var string
+   */
   public $totalTuningCharacterCount;
   /**
    * @var string
@@ -58,6 +62,20 @@ class GoogleCloudAiplatformV1SupervisedTuningDataStats extends \Google\Collectio
   public function getTotalBillableCharacterCount()
   {
     return $this->totalBillableCharacterCount;
+  }
+  /**
+   * @param string
+   */
+  public function setTotalBillableTokenCount($totalBillableTokenCount)
+  {
+    $this->totalBillableTokenCount = $totalBillableTokenCount;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalBillableTokenCount()
+  {
+    return $this->totalBillableTokenCount;
   }
   /**
    * @param string
