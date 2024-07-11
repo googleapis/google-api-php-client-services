@@ -19,13 +19,33 @@ namespace Google\Service\BigtableAdmin;
 
 class GoogleBigtableAdminV2TypeAggregate extends \Google\Model
 {
+  protected $hllppUniqueCountType = GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount::class;
+  protected $hllppUniqueCountDataType = '';
   protected $inputTypeType = Type::class;
   protected $inputTypeDataType = '';
+  protected $maxType = GoogleBigtableAdminV2TypeAggregateMax::class;
+  protected $maxDataType = '';
+  protected $minType = GoogleBigtableAdminV2TypeAggregateMin::class;
+  protected $minDataType = '';
   protected $stateTypeType = Type::class;
   protected $stateTypeDataType = '';
   protected $sumType = GoogleBigtableAdminV2TypeAggregateSum::class;
   protected $sumDataType = '';
 
+  /**
+   * @param GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount
+   */
+  public function setHllppUniqueCount(GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount $hllppUniqueCount)
+  {
+    $this->hllppUniqueCount = $hllppUniqueCount;
+  }
+  /**
+   * @return GoogleBigtableAdminV2TypeAggregateHyperLogLogPlusPlusUniqueCount
+   */
+  public function getHllppUniqueCount()
+  {
+    return $this->hllppUniqueCount;
+  }
   /**
    * @param Type
    */
@@ -39,6 +59,34 @@ class GoogleBigtableAdminV2TypeAggregate extends \Google\Model
   public function getInputType()
   {
     return $this->inputType;
+  }
+  /**
+   * @param GoogleBigtableAdminV2TypeAggregateMax
+   */
+  public function setMax(GoogleBigtableAdminV2TypeAggregateMax $max)
+  {
+    $this->max = $max;
+  }
+  /**
+   * @return GoogleBigtableAdminV2TypeAggregateMax
+   */
+  public function getMax()
+  {
+    return $this->max;
+  }
+  /**
+   * @param GoogleBigtableAdminV2TypeAggregateMin
+   */
+  public function setMin(GoogleBigtableAdminV2TypeAggregateMin $min)
+  {
+    $this->min = $min;
+  }
+  /**
+   * @return GoogleBigtableAdminV2TypeAggregateMin
+   */
+  public function getMin()
+  {
+    return $this->min;
   }
   /**
    * @param Type

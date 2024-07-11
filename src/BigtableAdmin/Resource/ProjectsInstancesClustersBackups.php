@@ -43,7 +43,7 @@ class ProjectsInstancesClustersBackups extends \Google\Service\Resource
    * located in the destination instance and project. (backups.copy)
    *
    * @param string $parent Required. The name of the destination cluster that will
-   * contain the backup copy. The cluster must already exists. Values are of the
+   * contain the backup copy. The cluster must already exist. Values are of the
    * form: `projects/{project}/instances/{instance}/clusters/{cluster}`.
    * @param CopyBackupRequest $postBody
    * @param array $optParams Optional parameters.
