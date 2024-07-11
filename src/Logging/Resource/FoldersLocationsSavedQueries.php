@@ -115,6 +115,16 @@ class FoldersLocationsSavedQueries extends \Google\Service\Resource
    * can be used for LOCATION_ID, for example: "projects/my-project/locations/-"
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional. Specifies the type ("Logging" or
+   * "OpsAnalytics") and the visibility (PRIVATE or SHARED) of the saved queries
+   * to list. If provided, the filter must contain either the type function or a
+   * visibility token, or both. If both are chosen, they can be placed in any
+   * order, but they must be joined by the AND operator or the empty character.The
+   * two supported type function calls are: type("Logging")
+   * type("OpsAnalytics")The two supported visibility tokens are: visibility =
+   * PRIVATE visibility = SHAREDFor example:type("Logging") AND visibility =
+   * PRIVATE visibility=SHARED type("OpsAnalytics") type("OpsAnalytics)"
+   * visibility = PRIVATE visibility = SHARED
    * @opt_param int pageSize Optional. The maximum number of results to return
    * from this request.Non-positive values are ignored. The presence of
    * nextPageToken in the response indicates that more results might be available.
