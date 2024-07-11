@@ -48,6 +48,10 @@ class CloudStorageConfig extends \Google\Model
   /**
    * @var string
    */
+  public $maxMessages;
+  /**
+   * @var string
+   */
   public $serviceAccountEmail;
   /**
    * @var string
@@ -153,6 +157,20 @@ class CloudStorageConfig extends \Google\Model
   public function getMaxDuration()
   {
     return $this->maxDuration;
+  }
+  /**
+   * @param string
+   */
+  public function setMaxMessages($maxMessages)
+  {
+    $this->maxMessages = $maxMessages;
+  }
+  /**
+   * @return string
+   */
+  public function getMaxMessages()
+  {
+    return $this->maxMessages;
   }
   /**
    * @param string
