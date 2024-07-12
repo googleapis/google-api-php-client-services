@@ -715,7 +715,8 @@
        "description": "Lists the featured series.",
        "response": {
         "$ref": "SeriesList"
-       }
+       },
+       "apiVersion": "v1_20240101"
       }
      }
     }
