@@ -17,24 +17,25 @@
 
 namespace Google\Service\Compute\Resource;
 
+use Google\Service\Compute\FutureReservation;
+use Google\Service\Compute\FutureReservationsAggregatedListResponse;
+use Google\Service\Compute\FutureReservationsListResponse;
 use Google\Service\Compute\Operation;
-use Google\Service\Compute\OperationAggregatedList;
-use Google\Service\Compute\OperationList;
 
 /**
- * The "globalOperations" collection of methods.
+ * The "futureReservations" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $globalOperations = $computeService->globalOperations;
+ *   $futureReservations = $computeService->futureReservations;
  *  </code>
  */
-class GlobalOperations extends \Google\Service\Resource
+class FutureReservations extends \Google\Service\Resource
 {
   /**
-   * Retrieves an aggregated list of all operations. To prevent failure, Google
-   * recommends that you set the `returnPartialSuccess` parameter to `true`.
-   * (globalOperations.aggregatedList)
+   * Retrieves an aggregated list of future reservations. To prevent failure,
+   * Google recommends that you set the `returnPartialSuccess` parameter to
+   * `true`. (futureReservations.aggregatedList)
    *
    * @param string $project Project ID for this request.
    * @param array $optParams Optional parameters.
@@ -102,51 +103,128 @@ class GlobalOperations extends \Google\Service\Resource
    * @opt_param string serviceProjectNumber The Shared VPC service project id or
    * service project number for which aggregated list request is invoked for
    * subnetworks list-usable api.
-   * @return OperationAggregatedList
+   * @return FutureReservationsAggregatedListResponse
    * @throws \Google\Service\Exception
    */
   public function aggregatedList($project, $optParams = [])
   {
     $params = ['project' => $project];
     $params = array_merge($params, $optParams);
-    return $this->call('aggregatedList', [$params], OperationAggregatedList::class);
+    return $this->call('aggregatedList', [$params], FutureReservationsAggregatedListResponse::class);
   }
   /**
-   * Deletes the specified Operations resource. (globalOperations.delete)
+   * Cancel the specified future reservation. (futureReservations.cancel)
    *
    * @param string $project Project ID for this request.
-   * @param string $operation Name of the Operations resource to delete, or its
-   * unique numeric identifier.
+   * @param string $zone Name of the zone for this request. Name should conform to
+   * RFC1035.
+   * @param string $futureReservation Name of the future reservation to retrieve.
+   * Name should conform to RFC1035.
    * @param array $optParams Optional parameters.
-   * @throws \Google\Service\Exception
-   */
-  public function delete($project, $operation, $optParams = [])
-  {
-    $params = ['project' => $project, 'operation' => $operation];
-    $params = array_merge($params, $optParams);
-    return $this->call('delete', [$params]);
-  }
-  /**
-   * Retrieves the specified Operations resource. (globalOperations.get)
    *
-   * @param string $project Project ID for this request.
-   * @param string $operation Name of the Operations resource to return, or its
-   * unique numeric identifier.
-   * @param array $optParams Optional parameters.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function get($project, $operation, $optParams = [])
+  public function cancel($project, $zone, $futureReservation, $optParams = [])
   {
-    $params = ['project' => $project, 'operation' => $operation];
+    $params = ['project' => $project, 'zone' => $zone, 'futureReservation' => $futureReservation];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Operation::class);
+    return $this->call('cancel', [$params], Operation::class);
   }
   /**
-   * Retrieves a list of Operation resources contained within the specified
-   * project. (globalOperations.listGlobalOperations)
+   * Deletes the specified future reservation. (futureReservations.delete)
    *
    * @param string $project Project ID for this request.
+   * @param string $zone Name of the zone for this request. Name should conform to
+   * RFC1035.
+   * @param string $futureReservation Name of the future reservation to retrieve.
+   * Name should conform to RFC1035.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($project, $zone, $futureReservation, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'futureReservation' => $futureReservation];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Retrieves information about the specified future reservation.
+   * (futureReservations.get)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone Name of the zone for this request. Name should conform to
+   * RFC1035.
+   * @param string $futureReservation Name of the future reservation to retrieve.
+   * Name should conform to RFC1035.
+   * @param array $optParams Optional parameters.
+   * @return FutureReservation
+   * @throws \Google\Service\Exception
+   */
+  public function get($project, $zone, $futureReservation, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'futureReservation' => $futureReservation];
+    $params = array_merge($params, $optParams);
+    return $this->call('get', [$params], FutureReservation::class);
+  }
+  /**
+   * Creates a new Future Reservation. (futureReservations.insert)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone Name of the zone for this request. Name should conform to
+   * RFC1035.
+   * @param FutureReservation $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function insert($project, $zone, FutureReservation $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('insert', [$params], Operation::class);
+  }
+  /**
+   * A list of all the future reservations that have been configured for the
+   * specified project in specified zone.
+   * (futureReservations.listFutureReservations)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone Name of the zone for this request. Name should conform to
+   * RFC1035.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -202,42 +280,48 @@ class GlobalOperations extends \Google\Service\Resource
    * false. For example, when partial success behavior is enabled, aggregatedList
    * for a single zone scope either returns all resources in the zone or no
    * resources, with an error code.
-   * @return OperationList
+   * @return FutureReservationsListResponse
    * @throws \Google\Service\Exception
    */
-  public function listGlobalOperations($project, $optParams = [])
+  public function listFutureReservations($project, $zone, $optParams = [])
   {
-    $params = ['project' => $project];
+    $params = ['project' => $project, 'zone' => $zone];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], OperationList::class);
+    return $this->call('list', [$params], FutureReservationsListResponse::class);
   }
   /**
-   * Waits for the specified Operation resource to return as `DONE` or for the
-   * request to approach the 2 minute deadline, and retrieves the specified
-   * Operation resource. This method differs from the `GET` method in that it
-   * waits for no more than the default deadline (2 minutes) and then returns the
-   * current state of the operation, which might be `DONE` or still in progress.
-   * This method is called on a best-effort basis. Specifically: - In uncommon
-   * cases, when the server is overloaded, the request might return before the
-   * default deadline is reached, or might return after zero seconds. - If the
-   * default deadline is reached, there is no guarantee that the operation is
-   * actually done when the method returns. Be prepared to retry if the operation
-   * is not `DONE`.  (globalOperations.wait)
+   * Updates the specified future reservation. (futureReservations.update)
    *
    * @param string $project Project ID for this request.
-   * @param string $operation Name of the Operations resource to return, or its
-   * unique numeric identifier.
+   * @param string $zone Name of the zone for this request. Name should conform to
+   * RFC1035.
+   * @param string $futureReservation Name of the reservation to update. Name
+   * should conform to RFC1035.
+   * @param FutureReservation $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @opt_param string updateMask update_mask indicates fields to be updated as
+   * part of this request.
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function wait($project, $operation, $optParams = [])
+  public function update($project, $zone, $futureReservation, FutureReservation $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'operation' => $operation];
+    $params = ['project' => $project, 'zone' => $zone, 'futureReservation' => $futureReservation, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('wait', [$params], Operation::class);
+    return $this->call('update', [$params], Operation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GlobalOperations::class, 'Google_Service_Compute_Resource_GlobalOperations');
+class_alias(FutureReservations::class, 'Google_Service_Compute_Resource_FutureReservations');
