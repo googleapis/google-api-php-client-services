@@ -17,46 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends \Google\Model
+class GoogleCloudAiplatformV1GenerationConfigRoutingConfigManualRoutingMode extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
-  public $sampleRequest;
+  public $modelName;
 
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
-  }
   /**
    * @param string
    */
-  public function setSampleRequest($sampleRequest)
+  public function setModelName($modelName)
   {
-    $this->sampleRequest = $sampleRequest;
+    $this->modelName = $modelName;
   }
   /**
    * @return string
    */
-  public function getSampleRequest()
+  public function getModelName()
   {
-    return $this->sampleRequest;
+    return $this->modelName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata');
+class_alias(GoogleCloudAiplatformV1GenerationConfigRoutingConfigManualRoutingMode::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GenerationConfigRoutingConfigManualRoutingMode');

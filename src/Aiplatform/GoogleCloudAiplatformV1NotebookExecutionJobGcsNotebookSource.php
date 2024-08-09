@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends \Google\Model
+class GoogleCloudAiplatformV1NotebookExecutionJobGcsNotebookSource extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
-  public $sampleRequest;
+  public $generation;
+  /**
+   * @var string
+   */
+  public $uri;
 
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
-  }
   /**
    * @param string
    */
-  public function setSampleRequest($sampleRequest)
+  public function setGeneration($generation)
   {
-    $this->sampleRequest = $sampleRequest;
+    $this->generation = $generation;
   }
   /**
    * @return string
    */
-  public function getSampleRequest()
+  public function getGeneration()
   {
-    return $this->sampleRequest;
+    return $this->generation;
+  }
+  /**
+   * @param string
+   */
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  /**
+   * @return string
+   */
+  public function getUri()
+  {
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata');
+class_alias(GoogleCloudAiplatformV1NotebookExecutionJobGcsNotebookSource::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1NotebookExecutionJobGcsNotebookSource');
