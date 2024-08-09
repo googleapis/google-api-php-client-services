@@ -17,12 +17,12 @@
 
 namespace Google\Service\Docs;
 
-class DeleteHeaderRequest extends \Google\Model
+class HeadingLink extends \Google\Model
 {
   /**
    * @var string
    */
-  public $headerId;
+  public $id;
   /**
    * @var string
    */
@@ -31,16 +31,16 @@ class DeleteHeaderRequest extends \Google\Model
   /**
    * @param string
    */
-  public function setHeaderId($headerId)
+  public function setId($id)
   {
-    $this->headerId = $headerId;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getHeaderId()
+  public function getId()
   {
-    return $this->headerId;
+    return $this->id;
   }
   /**
    * @param string
@@ -59,4 +59,4 @@ class DeleteHeaderRequest extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeleteHeaderRequest::class, 'Google_Service_Docs_DeleteHeaderRequest');
+class_alias(HeadingLink::class, 'Google_Service_Docs_HeadingLink');

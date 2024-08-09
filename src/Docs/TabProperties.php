@@ -17,30 +17,70 @@
 
 namespace Google\Service\Docs;
 
-class DeleteHeaderRequest extends \Google\Model
+class TabProperties extends \Google\Model
 {
+  /**
+   * @var int
+   */
+  public $index;
+  /**
+   * @var int
+   */
+  public $nestingLevel;
   /**
    * @var string
    */
-  public $headerId;
+  public $parentTabId;
   /**
    * @var string
    */
   public $tabId;
+  /**
+   * @var string
+   */
+  public $title;
 
+  /**
+   * @param int
+   */
+  public function setIndex($index)
+  {
+    $this->index = $index;
+  }
+  /**
+   * @return int
+   */
+  public function getIndex()
+  {
+    return $this->index;
+  }
+  /**
+   * @param int
+   */
+  public function setNestingLevel($nestingLevel)
+  {
+    $this->nestingLevel = $nestingLevel;
+  }
+  /**
+   * @return int
+   */
+  public function getNestingLevel()
+  {
+    return $this->nestingLevel;
+  }
   /**
    * @param string
    */
-  public function setHeaderId($headerId)
+  public function setParentTabId($parentTabId)
   {
-    $this->headerId = $headerId;
+    $this->parentTabId = $parentTabId;
   }
   /**
    * @return string
    */
-  public function getHeaderId()
+  public function getParentTabId()
   {
-    return $this->headerId;
+    return $this->parentTabId;
   }
   /**
    * @param string
@@ -56,7 +96,21 @@ class DeleteHeaderRequest extends \Google\Model
   {
     return $this->tabId;
   }
+  /**
+   * @param string
+   */
+  public function setTitle($title)
+  {
+    $this->title = $title;
+  }
+  /**
+   * @return string
+   */
+  public function getTitle()
+  {
+    return $this->title;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeleteHeaderRequest::class, 'Google_Service_Docs_DeleteHeaderRequest');
+class_alias(TabProperties::class, 'Google_Service_Docs_TabProperties');

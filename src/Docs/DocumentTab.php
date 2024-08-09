@@ -17,15 +17,10 @@
 
 namespace Google\Service\Docs;
 
-class Document extends \Google\Collection
+class DocumentTab extends \Google\Model
 {
-  protected $collection_key = 'tabs';
   protected $bodyType = Body::class;
   protected $bodyDataType = '';
-  /**
-   * @var string
-   */
-  public $documentId;
   protected $documentStyleType = DocumentStyle::class;
   protected $documentStyleDataType = '';
   protected $footersType = Footer::class;
@@ -44,24 +39,10 @@ class Document extends \Google\Collection
   protected $namedStylesDataType = '';
   protected $positionedObjectsType = PositionedObject::class;
   protected $positionedObjectsDataType = 'map';
-  /**
-   * @var string
-   */
-  public $revisionId;
   protected $suggestedDocumentStyleChangesType = SuggestedDocumentStyle::class;
   protected $suggestedDocumentStyleChangesDataType = 'map';
   protected $suggestedNamedStylesChangesType = SuggestedNamedStyles::class;
   protected $suggestedNamedStylesChangesDataType = 'map';
-  /**
-   * @var string
-   */
-  public $suggestionsViewMode;
-  protected $tabsType = Tab::class;
-  protected $tabsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $title;
 
   /**
    * @param Body
@@ -76,20 +57,6 @@ class Document extends \Google\Collection
   public function getBody()
   {
     return $this->body;
-  }
-  /**
-   * @param string
-   */
-  public function setDocumentId($documentId)
-  {
-    $this->documentId = $documentId;
-  }
-  /**
-   * @return string
-   */
-  public function getDocumentId()
-  {
-    return $this->documentId;
   }
   /**
    * @param DocumentStyle
@@ -218,20 +185,6 @@ class Document extends \Google\Collection
     return $this->positionedObjects;
   }
   /**
-   * @param string
-   */
-  public function setRevisionId($revisionId)
-  {
-    $this->revisionId = $revisionId;
-  }
-  /**
-   * @return string
-   */
-  public function getRevisionId()
-  {
-    return $this->revisionId;
-  }
-  /**
    * @param SuggestedDocumentStyle[]
    */
   public function setSuggestedDocumentStyleChanges($suggestedDocumentStyleChanges)
@@ -259,49 +212,7 @@ class Document extends \Google\Collection
   {
     return $this->suggestedNamedStylesChanges;
   }
-  /**
-   * @param string
-   */
-  public function setSuggestionsViewMode($suggestionsViewMode)
-  {
-    $this->suggestionsViewMode = $suggestionsViewMode;
-  }
-  /**
-   * @return string
-   */
-  public function getSuggestionsViewMode()
-  {
-    return $this->suggestionsViewMode;
-  }
-  /**
-   * @param Tab[]
-   */
-  public function setTabs($tabs)
-  {
-    $this->tabs = $tabs;
-  }
-  /**
-   * @return Tab[]
-   */
-  public function getTabs()
-  {
-    return $this->tabs;
-  }
-  /**
-   * @param string
-   */
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-  /**
-   * @return string
-   */
-  public function getTitle()
-  {
-    return $this->title;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Document::class, 'Google_Service_Docs_Document');
+class_alias(DocumentTab::class, 'Google_Service_Docs_DocumentTab');
