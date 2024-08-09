@@ -17,64 +17,64 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals extends \Google\Model
+class GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $model;
+  public $allowPlaybackInterruption;
   /**
    * @var string
    */
-  public $modelOutput;
+  public $audio;
   /**
    * @var string
    */
-  public $renderedPrompt;
+  public $uri;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setModel($model)
+  public function setAllowPlaybackInterruption($allowPlaybackInterruption)
   {
-    $this->model = $model;
+    $this->allowPlaybackInterruption = $allowPlaybackInterruption;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getModel()
+  public function getAllowPlaybackInterruption()
   {
-    return $this->model;
-  }
-  /**
-   * @param string
-   */
-  public function setModelOutput($modelOutput)
-  {
-    $this->modelOutput = $modelOutput;
-  }
-  /**
-   * @return string
-   */
-  public function getModelOutput()
-  {
-    return $this->modelOutput;
+    return $this->allowPlaybackInterruption;
   }
   /**
    * @param string
    */
-  public function setRenderedPrompt($renderedPrompt)
+  public function setAudio($audio)
   {
-    $this->renderedPrompt = $renderedPrompt;
+    $this->audio = $audio;
   }
   /**
    * @return string
    */
-  public function getRenderedPrompt()
+  public function getAudio()
   {
-    return $this->renderedPrompt;
+    return $this->audio;
+  }
+  /**
+   * @param string
+   */
+  public function setUri($uri)
+  {
+    $this->uri = $uri;
+  }
+  /**
+   * @return string
+   */
+  public function getUri()
+  {
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals');
+class_alias(GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ResponseMessageMixedAudioSegment');

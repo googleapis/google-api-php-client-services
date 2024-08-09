@@ -17,64 +17,46 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals extends \Google\Model
+class GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall extends \Google\Model
 {
   /**
    * @var string
    */
-  public $model;
+  public $phoneNumber;
   /**
    * @var string
    */
-  public $modelOutput;
-  /**
-   * @var string
-   */
-  public $renderedPrompt;
+  public $sipUri;
 
   /**
    * @param string
    */
-  public function setModel($model)
+  public function setPhoneNumber($phoneNumber)
   {
-    $this->model = $model;
+    $this->phoneNumber = $phoneNumber;
   }
   /**
    * @return string
    */
-  public function getModel()
+  public function getPhoneNumber()
   {
-    return $this->model;
+    return $this->phoneNumber;
   }
   /**
    * @param string
    */
-  public function setModelOutput($modelOutput)
+  public function setSipUri($sipUri)
   {
-    $this->modelOutput = $modelOutput;
+    $this->sipUri = $sipUri;
   }
   /**
    * @return string
    */
-  public function getModelOutput()
+  public function getSipUri()
   {
-    return $this->modelOutput;
-  }
-  /**
-   * @param string
-   */
-  public function setRenderedPrompt($renderedPrompt)
-  {
-    $this->renderedPrompt = $renderedPrompt;
-  }
-  /**
-   * @return string
-   */
-  public function getRenderedPrompt()
-  {
-    return $this->renderedPrompt;
+    return $this->sipUri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3DataStoreConnectionSignalsRewriterModelCallSignals');
+class_alias(GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2beta1ResponseMessageTelephonyTransferCall');
