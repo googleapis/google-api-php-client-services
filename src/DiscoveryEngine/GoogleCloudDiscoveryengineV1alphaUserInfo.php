@@ -17,65 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1FhirStoreSource extends \Google\Collection
+class GoogleCloudDiscoveryengineV1alphaUserInfo extends \Google\Model
 {
-  protected $collection_key = 'resourceTypes';
   /**
    * @var string
    */
-  public $fhirStore;
+  public $userAgent;
   /**
    * @var string
    */
-  public $gcsStagingDir;
-  /**
-   * @var string[]
-   */
-  public $resourceTypes;
+  public $userId;
 
   /**
    * @param string
    */
-  public function setFhirStore($fhirStore)
+  public function setUserAgent($userAgent)
   {
-    $this->fhirStore = $fhirStore;
+    $this->userAgent = $userAgent;
   }
   /**
    * @return string
    */
-  public function getFhirStore()
+  public function getUserAgent()
   {
-    return $this->fhirStore;
+    return $this->userAgent;
   }
   /**
    * @param string
    */
-  public function setGcsStagingDir($gcsStagingDir)
+  public function setUserId($userId)
   {
-    $this->gcsStagingDir = $gcsStagingDir;
+    $this->userId = $userId;
   }
   /**
    * @return string
    */
-  public function getGcsStagingDir()
+  public function getUserId()
   {
-    return $this->gcsStagingDir;
-  }
-  /**
-   * @param string[]
-   */
-  public function setResourceTypes($resourceTypes)
-  {
-    $this->resourceTypes = $resourceTypes;
-  }
-  /**
-   * @return string[]
-   */
-  public function getResourceTypes()
-  {
-    return $this->resourceTypes;
+    return $this->userId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1FhirStoreSource::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1FhirStoreSource');
+class_alias(GoogleCloudDiscoveryengineV1alphaUserInfo::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaUserInfo');
