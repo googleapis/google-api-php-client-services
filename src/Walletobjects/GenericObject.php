@@ -58,12 +58,16 @@ class GenericObject extends \Google\Collection
   protected $linksModuleDataDataType = '';
   protected $logoType = Image::class;
   protected $logoDataType = '';
+  protected $messagesType = Message::class;
+  protected $messagesDataType = 'array';
   protected $notificationsType = Notifications::class;
   protected $notificationsDataType = '';
   protected $passConstraintsType = PassConstraints::class;
   protected $passConstraintsDataType = '';
   protected $rotatingBarcodeType = RotatingBarcode::class;
   protected $rotatingBarcodeDataType = '';
+  protected $saveRestrictionsType = SaveRestrictions::class;
+  protected $saveRestrictionsDataType = '';
   /**
    * @var string
    */
@@ -278,6 +282,20 @@ class GenericObject extends \Google\Collection
     return $this->logo;
   }
   /**
+   * @param Message[]
+   */
+  public function setMessages($messages)
+  {
+    $this->messages = $messages;
+  }
+  /**
+   * @return Message[]
+   */
+  public function getMessages()
+  {
+    return $this->messages;
+  }
+  /**
    * @param Notifications
    */
   public function setNotifications(Notifications $notifications)
@@ -318,6 +336,20 @@ class GenericObject extends \Google\Collection
   public function getRotatingBarcode()
   {
     return $this->rotatingBarcode;
+  }
+  /**
+   * @param SaveRestrictions
+   */
+  public function setSaveRestrictions(SaveRestrictions $saveRestrictions)
+  {
+    $this->saveRestrictions = $saveRestrictions;
+  }
+  /**
+   * @return SaveRestrictions
+   */
+  public function getSaveRestrictions()
+  {
+    return $this->saveRestrictions;
   }
   /**
    * @param string
