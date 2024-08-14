@@ -17,46 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends \Google\Model
+class GoogleCloudAiplatformV1PairwiseMetricSpec extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
-  public $sampleRequest;
+  public $metricPromptTemplate;
 
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
-  }
   /**
    * @param string
    */
-  public function setSampleRequest($sampleRequest)
+  public function setMetricPromptTemplate($metricPromptTemplate)
   {
-    $this->sampleRequest = $sampleRequest;
+    $this->metricPromptTemplate = $metricPromptTemplate;
   }
   /**
    * @return string
    */
-  public function getSampleRequest()
+  public function getMetricPromptTemplate()
   {
-    return $this->sampleRequest;
+    return $this->metricPromptTemplate;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata');
+class_alias(GoogleCloudAiplatformV1PairwiseMetricSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PairwiseMetricSpec');

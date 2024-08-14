@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends \Google\Model
+class GoogleCloudAiplatformV1NotebookExecutionJobDataformRepositorySource extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
-  public $sampleRequest;
+  public $commitSha;
+  /**
+   * @var string
+   */
+  public $dataformRepositoryResourceName;
 
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
-  }
   /**
    * @param string
    */
-  public function setSampleRequest($sampleRequest)
+  public function setCommitSha($commitSha)
   {
-    $this->sampleRequest = $sampleRequest;
+    $this->commitSha = $commitSha;
   }
   /**
    * @return string
    */
-  public function getSampleRequest()
+  public function getCommitSha()
   {
-    return $this->sampleRequest;
+    return $this->commitSha;
+  }
+  /**
+   * @param string
+   */
+  public function setDataformRepositoryResourceName($dataformRepositoryResourceName)
+  {
+    $this->dataformRepositoryResourceName = $dataformRepositoryResourceName;
+  }
+  /**
+   * @return string
+   */
+  public function getDataformRepositoryResourceName()
+  {
+    return $this->dataformRepositoryResourceName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata');
+class_alias(GoogleCloudAiplatformV1NotebookExecutionJobDataformRepositorySource::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1NotebookExecutionJobDataformRepositorySource');

@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata extends \Google\Model
+class GoogleCloudAiplatformV1PairwiseMetricResult extends \Google\Model
 {
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
-  public $sampleRequest;
+  public $explanation;
+  /**
+   * @var string
+   */
+  public $pairwiseChoice;
 
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
-  }
   /**
    * @param string
    */
-  public function setSampleRequest($sampleRequest)
+  public function setExplanation($explanation)
   {
-    $this->sampleRequest = $sampleRequest;
+    $this->explanation = $explanation;
   }
   /**
    * @return string
    */
-  public function getSampleRequest()
+  public function getExplanation()
   {
-    return $this->sampleRequest;
+    return $this->explanation;
+  }
+  /**
+   * @param string
+   */
+  public function setPairwiseChoice($pairwiseChoice)
+  {
+    $this->pairwiseChoice = $pairwiseChoice;
+  }
+  /**
+   * @return string
+   */
+  public function getPairwiseChoice()
+  {
+    return $this->pairwiseChoice;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata');
+class_alias(GoogleCloudAiplatformV1PairwiseMetricResult::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PairwiseMetricResult');
