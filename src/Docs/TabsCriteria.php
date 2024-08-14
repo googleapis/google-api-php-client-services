@@ -17,46 +17,29 @@
 
 namespace Google\Service\Docs;
 
-class DeleteHeaderRequest extends \Google\Model
+class TabsCriteria extends \Google\Collection
 {
+  protected $collection_key = 'tabIds';
   /**
-   * @var string
+   * @var string[]
    */
-  public $headerId;
-  /**
-   * @var string
-   */
-  public $tabId;
+  public $tabIds;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setHeaderId($headerId)
+  public function setTabIds($tabIds)
   {
-    $this->headerId = $headerId;
+    $this->tabIds = $tabIds;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getHeaderId()
+  public function getTabIds()
   {
-    return $this->headerId;
-  }
-  /**
-   * @param string
-   */
-  public function setTabId($tabId)
-  {
-    $this->tabId = $tabId;
-  }
-  /**
-   * @return string
-   */
-  public function getTabId()
-  {
-    return $this->tabId;
+    return $this->tabIds;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DeleteHeaderRequest::class, 'Google_Service_Docs_DeleteHeaderRequest');
+class_alias(TabsCriteria::class, 'Google_Service_Docs_TabsCriteria');
