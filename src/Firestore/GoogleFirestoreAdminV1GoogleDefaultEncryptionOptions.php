@@ -17,28 +17,9 @@
 
 namespace Google\Service\Firestore;
 
-class GoogleFirestoreAdminV1WeeklyRecurrence extends \Google\Model
+class GoogleFirestoreAdminV1GoogleDefaultEncryptionOptions extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $day;
-
-  /**
-   * @param string
-   */
-  public function setDay($day)
-  {
-    $this->day = $day;
-  }
-  /**
-   * @return string
-   */
-  public function getDay()
-  {
-    return $this->day;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleFirestoreAdminV1WeeklyRecurrence::class, 'Google_Service_Firestore_GoogleFirestoreAdminV1WeeklyRecurrence');
+class_alias(GoogleFirestoreAdminV1GoogleDefaultEncryptionOptions::class, 'Google_Service_Firestore_GoogleFirestoreAdminV1GoogleDefaultEncryptionOptions');
