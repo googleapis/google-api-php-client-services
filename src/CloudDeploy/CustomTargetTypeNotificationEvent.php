@@ -17,82 +17,82 @@
 
 namespace Google\Service\CloudDeploy;
 
-class ServiceNetworking extends \Google\Model
+class CustomTargetTypeNotificationEvent extends \Google\Model
 {
   /**
    * @var string
    */
-  public $deployment;
-  /**
-   * @var bool
-   */
-  public $disablePodOverprovisioning;
+  public $customTargetType;
   /**
    * @var string
    */
-  public $podSelectorLabel;
+  public $customTargetTypeUid;
   /**
    * @var string
    */
-  public $service;
+  public $message;
+  /**
+   * @var string
+   */
+  public $type;
 
   /**
    * @param string
    */
-  public function setDeployment($deployment)
+  public function setCustomTargetType($customTargetType)
   {
-    $this->deployment = $deployment;
+    $this->customTargetType = $customTargetType;
   }
   /**
    * @return string
    */
-  public function getDeployment()
+  public function getCustomTargetType()
   {
-    return $this->deployment;
-  }
-  /**
-   * @param bool
-   */
-  public function setDisablePodOverprovisioning($disablePodOverprovisioning)
-  {
-    $this->disablePodOverprovisioning = $disablePodOverprovisioning;
-  }
-  /**
-   * @return bool
-   */
-  public function getDisablePodOverprovisioning()
-  {
-    return $this->disablePodOverprovisioning;
+    return $this->customTargetType;
   }
   /**
    * @param string
    */
-  public function setPodSelectorLabel($podSelectorLabel)
+  public function setCustomTargetTypeUid($customTargetTypeUid)
   {
-    $this->podSelectorLabel = $podSelectorLabel;
+    $this->customTargetTypeUid = $customTargetTypeUid;
   }
   /**
    * @return string
    */
-  public function getPodSelectorLabel()
+  public function getCustomTargetTypeUid()
   {
-    return $this->podSelectorLabel;
+    return $this->customTargetTypeUid;
   }
   /**
    * @param string
    */
-  public function setService($service)
+  public function setMessage($message)
   {
-    $this->service = $service;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getService()
+  public function getMessage()
   {
-    return $this->service;
+    return $this->message;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceNetworking::class, 'Google_Service_CloudDeploy_ServiceNetworking');
+class_alias(CustomTargetTypeNotificationEvent::class, 'Google_Service_CloudDeploy_CustomTargetTypeNotificationEvent');
