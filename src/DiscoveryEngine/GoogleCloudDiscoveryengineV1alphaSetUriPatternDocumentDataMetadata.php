@@ -17,65 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1FhirStoreSource extends \Google\Collection
+class GoogleCloudDiscoveryengineV1alphaSetUriPatternDocumentDataMetadata extends \Google\Model
 {
-  protected $collection_key = 'resourceTypes';
   /**
    * @var string
    */
-  public $fhirStore;
+  public $createTime;
   /**
    * @var string
    */
-  public $gcsStagingDir;
-  /**
-   * @var string[]
-   */
-  public $resourceTypes;
+  public $updateTime;
 
   /**
    * @param string
    */
-  public function setFhirStore($fhirStore)
+  public function setCreateTime($createTime)
   {
-    $this->fhirStore = $fhirStore;
+    $this->createTime = $createTime;
   }
   /**
    * @return string
    */
-  public function getFhirStore()
+  public function getCreateTime()
   {
-    return $this->fhirStore;
+    return $this->createTime;
   }
   /**
    * @param string
    */
-  public function setGcsStagingDir($gcsStagingDir)
+  public function setUpdateTime($updateTime)
   {
-    $this->gcsStagingDir = $gcsStagingDir;
+    $this->updateTime = $updateTime;
   }
   /**
    * @return string
    */
-  public function getGcsStagingDir()
+  public function getUpdateTime()
   {
-    return $this->gcsStagingDir;
-  }
-  /**
-   * @param string[]
-   */
-  public function setResourceTypes($resourceTypes)
-  {
-    $this->resourceTypes = $resourceTypes;
-  }
-  /**
-   * @return string[]
-   */
-  public function getResourceTypes()
-  {
-    return $this->resourceTypes;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1FhirStoreSource::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1FhirStoreSource');
+class_alias(GoogleCloudDiscoveryengineV1alphaSetUriPatternDocumentDataMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaSetUriPatternDocumentDataMetadata');

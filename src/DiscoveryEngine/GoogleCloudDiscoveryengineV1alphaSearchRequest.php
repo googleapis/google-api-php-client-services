@@ -17,10 +17,10 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
+class GoogleCloudDiscoveryengineV1alphaSearchRequest extends \Google\Collection
 {
   protected $collection_key = 'facetSpecs';
-  protected $boostSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec::class;
+  protected $boostSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec::class;
   protected $boostSpecDataType = '';
   /**
    * @var string
@@ -30,25 +30,27 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $canonicalFilter;
-  protected $contentSearchSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec::class;
+  protected $contentSearchSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec::class;
   protected $contentSearchSpecDataType = '';
-  protected $dataStoreSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec::class;
+  protected $customFineTuningSpecType = GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec::class;
+  protected $customFineTuningSpecDataType = '';
+  protected $dataStoreSpecsType = GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec::class;
   protected $dataStoreSpecsDataType = 'array';
-  protected $embeddingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec::class;
+  protected $embeddingSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec::class;
   protected $embeddingSpecDataType = '';
-  protected $facetSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec::class;
+  protected $facetSpecsType = GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec::class;
   protected $facetSpecsDataType = 'array';
   /**
    * @var string
    */
   public $filter;
-  protected $imageQueryType = GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery::class;
+  protected $imageQueryType = GoogleCloudDiscoveryengineV1alphaSearchRequestImageQuery::class;
   protected $imageQueryDataType = '';
   /**
    * @var string
    */
   public $languageCode;
-  protected $naturalLanguageQueryUnderstandingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec::class;
+  protected $naturalLanguageQueryUnderstandingSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec::class;
   protected $naturalLanguageQueryUnderstandingSpecDataType = '';
   /**
    * @var int
@@ -74,7 +76,7 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $query;
-  protected $queryExpansionSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec::class;
+  protected $queryExpansionSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestQueryExpansionSpec::class;
   protected $queryExpansionSpecDataType = '';
   /**
    * @var string
@@ -85,10 +87,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    */
   public $regionCode;
   /**
+   * @var string
+   */
+  public $relevanceThreshold;
+  /**
    * @var bool
    */
   public $safeSearch;
-  protected $searchAsYouTypeSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestSearchAsYouTypeSpec::class;
+  protected $searchAsYouTypeSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec::class;
   protected $searchAsYouTypeSpecDataType = '';
   /**
    * @var string
@@ -98,11 +104,11 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
    * @var string
    */
   public $session;
-  protected $sessionSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestSessionSpec::class;
+  protected $sessionSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec::class;
   protected $sessionSpecDataType = '';
-  protected $spellCorrectionSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestSpellCorrectionSpec::class;
+  protected $spellCorrectionSpecType = GoogleCloudDiscoveryengineV1alphaSearchRequestSpellCorrectionSpec::class;
   protected $spellCorrectionSpecDataType = '';
-  protected $userInfoType = GoogleCloudDiscoveryengineV1betaUserInfo::class;
+  protected $userInfoType = GoogleCloudDiscoveryengineV1alphaUserInfo::class;
   protected $userInfoDataType = '';
   /**
    * @var string[]
@@ -114,14 +120,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   public $userPseudoId;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec
    */
-  public function setBoostSpec(GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec $boostSpec)
+  public function setBoostSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec $boostSpec)
   {
     $this->boostSpec = $boostSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestBoostSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestBoostSpec
    */
   public function getBoostSpec()
   {
@@ -156,56 +162,70 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->canonicalFilter;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec
    */
-  public function setContentSearchSpec(GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec $contentSearchSpec)
+  public function setContentSearchSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec $contentSearchSpec)
   {
     $this->contentSearchSpec = $contentSearchSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestContentSearchSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestContentSearchSpec
    */
   public function getContentSearchSpec()
   {
     return $this->contentSearchSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec[]
+   * @param GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec
+   */
+  public function setCustomFineTuningSpec(GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec $customFineTuningSpec)
+  {
+    $this->customFineTuningSpec = $customFineTuningSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaCustomFineTuningSpec
+   */
+  public function getCustomFineTuningSpec()
+  {
+    return $this->customFineTuningSpec;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec[]
    */
   public function setDataStoreSpecs($dataStoreSpecs)
   {
     $this->dataStoreSpecs = $dataStoreSpecs;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec[]
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec[]
    */
   public function getDataStoreSpecs()
   {
     return $this->dataStoreSpecs;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec
    */
-  public function setEmbeddingSpec(GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec $embeddingSpec)
+  public function setEmbeddingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec $embeddingSpec)
   {
     $this->embeddingSpec = $embeddingSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestEmbeddingSpec
    */
   public function getEmbeddingSpec()
   {
     return $this->embeddingSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec[]
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec[]
    */
   public function setFacetSpecs($facetSpecs)
   {
     $this->facetSpecs = $facetSpecs;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec[]
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestFacetSpec[]
    */
   public function getFacetSpecs()
   {
@@ -226,14 +246,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->filter;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestImageQuery
    */
-  public function setImageQuery(GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery $imageQuery)
+  public function setImageQuery(GoogleCloudDiscoveryengineV1alphaSearchRequestImageQuery $imageQuery)
   {
     $this->imageQuery = $imageQuery;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestImageQuery
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestImageQuery
    */
   public function getImageQuery()
   {
@@ -254,14 +274,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->languageCode;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec
    */
-  public function setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec $naturalLanguageQueryUnderstandingSpec)
+  public function setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec $naturalLanguageQueryUnderstandingSpec)
   {
     $this->naturalLanguageQueryUnderstandingSpec = $naturalLanguageQueryUnderstandingSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestNaturalLanguageQueryUnderstandingSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUnderstandingSpec
    */
   public function getNaturalLanguageQueryUnderstandingSpec()
   {
@@ -352,14 +372,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->query;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestQueryExpansionSpec
    */
-  public function setQueryExpansionSpec(GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec $queryExpansionSpec)
+  public function setQueryExpansionSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestQueryExpansionSpec $queryExpansionSpec)
   {
     $this->queryExpansionSpec = $queryExpansionSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestQueryExpansionSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestQueryExpansionSpec
    */
   public function getQueryExpansionSpec()
   {
@@ -394,6 +414,20 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->regionCode;
   }
   /**
+   * @param string
+   */
+  public function setRelevanceThreshold($relevanceThreshold)
+  {
+    $this->relevanceThreshold = $relevanceThreshold;
+  }
+  /**
+   * @return string
+   */
+  public function getRelevanceThreshold()
+  {
+    return $this->relevanceThreshold;
+  }
+  /**
    * @param bool
    */
   public function setSafeSearch($safeSearch)
@@ -408,14 +442,14 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->safeSearch;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestSearchAsYouTypeSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec
    */
-  public function setSearchAsYouTypeSpec(GoogleCloudDiscoveryengineV1betaSearchRequestSearchAsYouTypeSpec $searchAsYouTypeSpec)
+  public function setSearchAsYouTypeSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec $searchAsYouTypeSpec)
   {
     $this->searchAsYouTypeSpec = $searchAsYouTypeSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestSearchAsYouTypeSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec
    */
   public function getSearchAsYouTypeSpec()
   {
@@ -450,42 +484,42 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
     return $this->session;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestSessionSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec
    */
-  public function setSessionSpec(GoogleCloudDiscoveryengineV1betaSearchRequestSessionSpec $sessionSpec)
+  public function setSessionSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec $sessionSpec)
   {
     $this->sessionSpec = $sessionSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestSessionSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestSessionSpec
    */
   public function getSessionSpec()
   {
     return $this->sessionSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaSearchRequestSpellCorrectionSpec
+   * @param GoogleCloudDiscoveryengineV1alphaSearchRequestSpellCorrectionSpec
    */
-  public function setSpellCorrectionSpec(GoogleCloudDiscoveryengineV1betaSearchRequestSpellCorrectionSpec $spellCorrectionSpec)
+  public function setSpellCorrectionSpec(GoogleCloudDiscoveryengineV1alphaSearchRequestSpellCorrectionSpec $spellCorrectionSpec)
   {
     $this->spellCorrectionSpec = $spellCorrectionSpec;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaSearchRequestSpellCorrectionSpec
+   * @return GoogleCloudDiscoveryengineV1alphaSearchRequestSpellCorrectionSpec
    */
   public function getSpellCorrectionSpec()
   {
     return $this->spellCorrectionSpec;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaUserInfo
+   * @param GoogleCloudDiscoveryengineV1alphaUserInfo
    */
-  public function setUserInfo(GoogleCloudDiscoveryengineV1betaUserInfo $userInfo)
+  public function setUserInfo(GoogleCloudDiscoveryengineV1alphaUserInfo $userInfo)
   {
     $this->userInfo = $userInfo;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaUserInfo
+   * @return GoogleCloudDiscoveryengineV1alphaUserInfo
    */
   public function getUserInfo()
   {
@@ -522,4 +556,4 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1betaSearchRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaSearchRequest');
+class_alias(GoogleCloudDiscoveryengineV1alphaSearchRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaSearchRequest');
