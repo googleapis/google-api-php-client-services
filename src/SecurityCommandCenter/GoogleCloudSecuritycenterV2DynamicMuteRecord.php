@@ -17,64 +17,46 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class BulkMuteFindingsRequest extends \Google\Model
+class GoogleCloudSecuritycenterV2DynamicMuteRecord extends \Google\Model
 {
   /**
    * @var string
    */
-  public $filter;
+  public $matchTime;
   /**
    * @var string
    */
-  public $muteAnnotation;
-  /**
-   * @var string
-   */
-  public $muteState;
+  public $muteConfig;
 
   /**
    * @param string
    */
-  public function setFilter($filter)
+  public function setMatchTime($matchTime)
   {
-    $this->filter = $filter;
+    $this->matchTime = $matchTime;
   }
   /**
    * @return string
    */
-  public function getFilter()
+  public function getMatchTime()
   {
-    return $this->filter;
+    return $this->matchTime;
   }
   /**
    * @param string
    */
-  public function setMuteAnnotation($muteAnnotation)
+  public function setMuteConfig($muteConfig)
   {
-    $this->muteAnnotation = $muteAnnotation;
+    $this->muteConfig = $muteConfig;
   }
   /**
    * @return string
    */
-  public function getMuteAnnotation()
+  public function getMuteConfig()
   {
-    return $this->muteAnnotation;
-  }
-  /**
-   * @param string
-   */
-  public function setMuteState($muteState)
-  {
-    $this->muteState = $muteState;
-  }
-  /**
-   * @return string
-   */
-  public function getMuteState()
-  {
-    return $this->muteState;
+    return $this->muteConfig;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BulkMuteFindingsRequest::class, 'Google_Service_SecurityCommandCenter_BulkMuteFindingsRequest');
+class_alias(GoogleCloudSecuritycenterV2DynamicMuteRecord::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2DynamicMuteRecord');
