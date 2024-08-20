@@ -1,0 +1,21 @@
+name: Generate Documentation
+on:
+    push:
+        tags:
+            - "*"
+    workflow_dispatch:
+        inputs:
+            tag:
+                description: 'Tag to release'
+                required: true
+
+permissions:
+  contents: write
+
+jobs:
+    docs:
+        name: "Generate and Deploy Documentation"
+        uses: GoogleCloudPlatform/php-tools/.github/workflows/doctum.yml@doctum
+        with:
+          title: "Google Cloud PHP Client Services"
+          tag: ${{ inputs.tag }}
