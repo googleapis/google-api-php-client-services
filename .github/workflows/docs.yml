@@ -18,4 +18,4 @@ jobs:
         with:
           title: "Google Cloud PHP Client Services"
           default_tag: ${{ inputs.tag }}
-          tag_pattern: false
+          tag_pattern: ''
