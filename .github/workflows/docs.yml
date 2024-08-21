@@ -18,6 +18,6 @@ jobs:
         with:
           title: "Google Cloud PHP Client Services"
           theme: 'apiclient-services'
-          default_tag: ${{ inputs.tag }}
+          default_version: ${{ inputs.tag || 'master'}}
           tag_pattern: ''
 
