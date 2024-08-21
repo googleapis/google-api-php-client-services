@@ -19,5 +19,5 @@ jobs:
           title: "Google Cloud PHP Client Services"
           theme: 'apiclient-services'
           default_tag: ${{ inputs.tag }}
-          tag_pattern: 'doctum'
+          tag_pattern: ''
 
