@@ -190,6 +190,8 @@ class Cluster extends \Google\Collection
    * @var bool
    */
   public $satisfiesPzs;
+  protected $secretManagerConfigType = SecretManagerConfig::class;
+  protected $secretManagerConfigDataType = '';
   protected $securityPostureConfigType = SecurityPostureConfig::class;
   protected $securityPostureConfigDataType = '';
   /**
@@ -1052,6 +1054,20 @@ class Cluster extends \Google\Collection
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * @param SecretManagerConfig
+   */
+  public function setSecretManagerConfig(SecretManagerConfig $secretManagerConfig)
+  {
+    $this->secretManagerConfig = $secretManagerConfig;
+  }
+  /**
+   * @return SecretManagerConfig
+   */
+  public function getSecretManagerConfig()
+  {
+    return $this->secretManagerConfig;
   }
   /**
    * @param SecurityPostureConfig

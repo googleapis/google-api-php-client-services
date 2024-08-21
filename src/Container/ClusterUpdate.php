@@ -144,6 +144,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredReleaseChannelDataType = '';
   protected $desiredResourceUsageExportConfigType = ResourceUsageExportConfig::class;
   protected $desiredResourceUsageExportConfigDataType = '';
+  protected $desiredSecretManagerConfigType = SecretManagerConfig::class;
+  protected $desiredSecretManagerConfigDataType = '';
   protected $desiredSecurityPostureConfigType = SecurityPostureConfig::class;
   protected $desiredSecurityPostureConfigDataType = '';
   protected $desiredServiceExternalIpsConfigType = ServiceExternalIPsConfig::class;
@@ -838,6 +840,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredResourceUsageExportConfig()
   {
     return $this->desiredResourceUsageExportConfig;
+  }
+  /**
+   * @param SecretManagerConfig
+   */
+  public function setDesiredSecretManagerConfig(SecretManagerConfig $desiredSecretManagerConfig)
+  {
+    $this->desiredSecretManagerConfig = $desiredSecretManagerConfig;
+  }
+  /**
+   * @return SecretManagerConfig
+   */
+  public function getDesiredSecretManagerConfig()
+  {
+    return $this->desiredSecretManagerConfig;
   }
   /**
    * @param SecurityPostureConfig
