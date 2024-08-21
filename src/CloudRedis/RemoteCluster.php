@@ -17,27 +17,46 @@
 
 namespace Google\Service\CloudRedis;
 
-class CustomMetadataData extends \Google\Collection
+class RemoteCluster extends \Google\Model
 {
-  protected $collection_key = 'internalResourceMetadata';
-  protected $internalResourceMetadataType = InternalResourceMetadata::class;
-  protected $internalResourceMetadataDataType = 'array';
+  /**
+   * @var string
+   */
+  public $cluster;
+  /**
+   * @var string
+   */
+  public $uid;
 
   /**
-   * @param InternalResourceMetadata[]
+   * @param string
    */
-  public function setInternalResourceMetadata($internalResourceMetadata)
+  public function setCluster($cluster)
   {
-    $this->internalResourceMetadata = $internalResourceMetadata;
+    $this->cluster = $cluster;
   }
   /**
-   * @return InternalResourceMetadata[]
+   * @return string
    */
-  public function getInternalResourceMetadata()
+  public function getCluster()
   {
-    return $this->internalResourceMetadata;
+    return $this->cluster;
+  }
+  /**
+   * @param string
+   */
+  public function setUid($uid)
+  {
+    $this->uid = $uid;
+  }
+  /**
+   * @return string
+   */
+  public function getUid()
+  {
+    return $this->uid;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CustomMetadataData::class, 'Google_Service_CloudRedis_CustomMetadataData');
+class_alias(RemoteCluster::class, 'Google_Service_CloudRedis_RemoteCluster');
