@@ -17,65 +17,64 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class RestartInstanceRequest extends \Google\Collection
+class StageInfo extends \Google\Model
 {
-  protected $collection_key = 'nodeIds';
-  /**
-   * @var string[]
-   */
-  public $nodeIds;
   /**
    * @var string
    */
-  public $requestId;
+  public $logsUrl;
   /**
-   * @var bool
+   * @var string
    */
-  public $validateOnly;
+  public $stage;
+  /**
+   * @var string
+   */
+  public $status;
 
-  /**
-   * @param string[]
-   */
-  public function setNodeIds($nodeIds)
-  {
-    $this->nodeIds = $nodeIds;
-  }
-  /**
-   * @return string[]
-   */
-  public function getNodeIds()
-  {
-    return $this->nodeIds;
-  }
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setLogsUrl($logsUrl)
   {
-    $this->requestId = $requestId;
+    $this->logsUrl = $logsUrl;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getLogsUrl()
   {
-    return $this->requestId;
+    return $this->logsUrl;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setValidateOnly($validateOnly)
+  public function setStage($stage)
   {
-    $this->validateOnly = $validateOnly;
+    $this->stage = $stage;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getValidateOnly()
+  public function getStage()
   {
-    return $this->validateOnly;
+    return $this->stage;
+  }
+  /**
+   * @param string
+   */
+  public function setStatus($status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return string
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RestartInstanceRequest::class, 'Google_Service_CloudAlloyDBAdmin_RestartInstanceRequest');
+class_alias(StageInfo::class, 'Google_Service_CloudAlloyDBAdmin_StageInfo');

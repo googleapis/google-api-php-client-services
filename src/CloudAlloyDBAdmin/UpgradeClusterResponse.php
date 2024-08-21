@@ -17,82 +17,63 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class TrialMetadata extends \Google\Model
+class UpgradeClusterResponse extends \Google\Collection
 {
+  protected $collection_key = 'clusterUpgradeDetails';
+  protected $clusterUpgradeDetailsType = ClusterUpgradeDetails::class;
+  protected $clusterUpgradeDetailsDataType = 'array';
   /**
    * @var string
    */
-  public $endTime;
+  public $message;
   /**
    * @var string
    */
-  public $graceEndTime;
-  /**
-   * @var string
-   */
-  public $startTime;
-  /**
-   * @var string
-   */
-  public $upgradeTime;
+  public $status;
 
   /**
-   * @param string
+   * @param ClusterUpgradeDetails[]
    */
-  public function setEndTime($endTime)
+  public function setClusterUpgradeDetails($clusterUpgradeDetails)
   {
-    $this->endTime = $endTime;
+    $this->clusterUpgradeDetails = $clusterUpgradeDetails;
   }
   /**
-   * @return string
+   * @return ClusterUpgradeDetails[]
    */
-  public function getEndTime()
+  public function getClusterUpgradeDetails()
   {
-    return $this->endTime;
-  }
-  /**
-   * @param string
-   */
-  public function setGraceEndTime($graceEndTime)
-  {
-    $this->graceEndTime = $graceEndTime;
-  }
-  /**
-   * @return string
-   */
-  public function getGraceEndTime()
-  {
-    return $this->graceEndTime;
+    return $this->clusterUpgradeDetails;
   }
   /**
    * @param string
    */
-  public function setStartTime($startTime)
+  public function setMessage($message)
   {
-    $this->startTime = $startTime;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getStartTime()
+  public function getMessage()
   {
-    return $this->startTime;
+    return $this->message;
   }
   /**
    * @param string
    */
-  public function setUpgradeTime($upgradeTime)
+  public function setStatus($status)
   {
-    $this->upgradeTime = $upgradeTime;
+    $this->status = $status;
   }
   /**
    * @return string
    */
-  public function getUpgradeTime()
+  public function getStatus()
   {
-    return $this->upgradeTime;
+    return $this->status;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TrialMetadata::class, 'Google_Service_CloudAlloyDBAdmin_TrialMetadata');
+class_alias(UpgradeClusterResponse::class, 'Google_Service_CloudAlloyDBAdmin_UpgradeClusterResponse');

@@ -17,65 +17,64 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class RestartInstanceRequest extends \Google\Collection
+class InstanceUpgradeDetails extends \Google\Model
 {
-  protected $collection_key = 'nodeIds';
-  /**
-   * @var string[]
-   */
-  public $nodeIds;
   /**
    * @var string
    */
-  public $requestId;
+  public $instanceType;
   /**
-   * @var bool
+   * @var string
    */
-  public $validateOnly;
+  public $name;
+  /**
+   * @var string
+   */
+  public $upgradeStatus;
 
-  /**
-   * @param string[]
-   */
-  public function setNodeIds($nodeIds)
-  {
-    $this->nodeIds = $nodeIds;
-  }
-  /**
-   * @return string[]
-   */
-  public function getNodeIds()
-  {
-    return $this->nodeIds;
-  }
   /**
    * @param string
    */
-  public function setRequestId($requestId)
+  public function setInstanceType($instanceType)
   {
-    $this->requestId = $requestId;
+    $this->instanceType = $instanceType;
   }
   /**
    * @return string
    */
-  public function getRequestId()
+  public function getInstanceType()
   {
-    return $this->requestId;
+    return $this->instanceType;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setValidateOnly($validateOnly)
+  public function setName($name)
   {
-    $this->validateOnly = $validateOnly;
+    $this->name = $name;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getValidateOnly()
+  public function getName()
   {
-    return $this->validateOnly;
+    return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setUpgradeStatus($upgradeStatus)
+  {
+    $this->upgradeStatus = $upgradeStatus;
+  }
+  /**
+   * @return string
+   */
+  public function getUpgradeStatus()
+  {
+    return $this->upgradeStatus;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RestartInstanceRequest::class, 'Google_Service_CloudAlloyDBAdmin_RestartInstanceRequest');
+class_alias(InstanceUpgradeDetails::class, 'Google_Service_CloudAlloyDBAdmin_InstanceUpgradeDetails');
