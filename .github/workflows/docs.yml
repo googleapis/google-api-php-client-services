@@ -17,7 +17,10 @@ jobs:
         uses: GoogleCloudPlatform/php-tools/.github/workflows/doctum.yml@doctum
         with:
           title: "Google Cloud PHP Client Services"
+          # use a custom theme so that namespaces that share the same name as classes
+          # are not overwritten (we use ".ns.html" for namspaces to avoid this conflict
+          # in our theme)
+          # @see .github/doctum/apiclient-services
           theme: 'apiclient-services'
           default_version: ${{ inputs.tag || 'master'}}
           tag_pattern: ''
-
