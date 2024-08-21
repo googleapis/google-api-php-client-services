@@ -1,0 +1,17 @@
+{% extends "default/macros.twig" %}
+
+{% macro namespace_link(namespace) -%}
+    <a href="{{ root_path }}{{ namespace_path(namespace)|replace({".html": ".ns.html"}) }}">{{ namespace == '' ? global_namespace_name() : namespace|raw }}</a>
+{%- endmacro %}
+
+{% macro breadcrumbs(namespace) %}
+    {% set current_ns = '' %}
+    {% for ns in namespace|split('\\') %}
+        {%- if current_ns -%}
+            {% set current_ns = current_ns ~ '\\' ~ ns %}
+        {%- else -%}
+            {% set current_ns = ns %}
+        {%- endif -%}
+        <li><a href="{{ namespace_path(current_ns)|replace({".html": ".ns.html"})}}">{{ ns|raw }}</a></li><li class="backslash">\</li>
+    {%- endfor %}
+{% endmacro %}

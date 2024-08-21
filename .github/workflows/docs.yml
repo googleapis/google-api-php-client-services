@@ -17,5 +17,7 @@ jobs:
         uses: GoogleCloudPlatform/php-tools/.github/workflows/doctum.yml@doctum
         with:
           title: "Google Cloud PHP Client Services"
+          theme: 'apiclient-services'
           default_tag: ${{ inputs.tag }}
           tag_pattern: ''
+
