@@ -17,78 +17,75 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class Color extends \Google\Model
+use Google\Model;
+
+class Color extends Model
 {
-  /**
-   * @var float
-   */
-  public $alpha;
-  /**
-   * @var float
-   */
-  public $blue;
-  /**
-   * @var float
-   */
-  public $green;
-  /**
-   * @var float
-   */
-  public $red;
+  public float $alpha;
+  public float $blue;
+  public float $green;
+  public float $red;
 
   /**
-   * @param float
+   * @param float $alpha
    */
-  public function setAlpha($alpha)
+  public function setAlpha(float $alpha): void
   {
     $this->alpha = $alpha;
   }
+
   /**
    * @return float
    */
-  public function getAlpha()
+  public function getAlpha(): float
   {
     return $this->alpha;
   }
+
   /**
-   * @param float
+   * @param float $blue
    */
-  public function setBlue($blue)
+  public function setBlue(float $blue): void
   {
     $this->blue = $blue;
   }
+
   /**
    * @return float
    */
-  public function getBlue()
+  public function getBlue(): float
   {
     return $this->blue;
   }
+
   /**
-   * @param float
+   * @param float $green
    */
-  public function setGreen($green)
+  public function setGreen(float $green): void
   {
     $this->green = $green;
   }
+
   /**
    * @return float
    */
-  public function getGreen()
+  public function getGreen(): float
   {
     return $this->green;
   }
+
   /**
-   * @param float
+   * @param float $red
    */
-  public function setRed($red)
+  public function setRed(float $red): void
   {
     $this->red = $red;
   }
+
   /**
    * @return float
    */
-  public function getRed()
+  public function getRed(): float
   {
     return $this->red;
   }

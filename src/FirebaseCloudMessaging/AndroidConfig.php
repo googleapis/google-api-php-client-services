@@ -17,146 +17,142 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class AndroidConfig extends \Google\Model
+use Google\Model;
+
+class AndroidConfig extends Model
 {
-  /**
-   * @var string
-   */
-  public $collapseKey;
-  /**
-   * @var string[]
-   */
-  public $data;
-  /**
-   * @var bool
-   */
-  public $directBootOk;
-  protected $fcmOptionsType = AndroidFcmOptions::class;
-  protected $fcmOptionsDataType = '';
-  protected $notificationType = AndroidNotification::class;
-  protected $notificationDataType = '';
-  /**
-   * @var string
-   */
-  public $priority;
-  /**
-   * @var string
-   */
-  public $restrictedPackageName;
-  /**
-   * @var string
-   */
-  public $ttl;
+  protected string $collapseKey;
+  protected array $data;
+  protected bool $directBootOk;
+  protected AndroidFcmOptions $fcmOptions;
+  protected AndroidNotification $notification;
+  protected string $priority;
+  protected string $restrictedPackageName;
+  protected string $ttl;
 
   /**
-   * @param string
+   * @param string $collapseKey
    */
-  public function setCollapseKey($collapseKey)
+  public function setCollapseKey(string $collapseKey)
   {
     $this->collapseKey = $collapseKey;
   }
+
   /**
    * @return string
    */
-  public function getCollapseKey()
+  public function getCollapseKey(): string
   {
     return $this->collapseKey;
   }
+
   /**
-   * @param string[]
+   * @param string[] $data
    */
-  public function setData($data)
+  public function setData(array $data): void
   {
     $this->data = $data;
   }
+
   /**
    * @return string[]
    */
-  public function getData()
+  public function getData(): array
   {
     return $this->data;
   }
+
   /**
-   * @param bool
+   * @param bool $directBootOk
    */
-  public function setDirectBootOk($directBootOk)
+  public function setDirectBootOk(bool $directBootOk): void
   {
     $this->directBootOk = $directBootOk;
   }
+
   /**
    * @return bool
    */
-  public function getDirectBootOk()
+  public function getDirectBootOk(): bool
   {
     return $this->directBootOk;
   }
+
   /**
-   * @param AndroidFcmOptions
+   * @param AndroidFcmOptions $fcmOptions
    */
-  public function setFcmOptions(AndroidFcmOptions $fcmOptions)
+  public function setFcmOptions(AndroidFcmOptions $fcmOptions): void
   {
     $this->fcmOptions = $fcmOptions;
   }
+
   /**
    * @return AndroidFcmOptions
    */
-  public function getFcmOptions()
+  public function getFcmOptions(): AndroidFcmOptions
   {
     return $this->fcmOptions;
   }
+
   /**
-   * @param AndroidNotification
+   * @param AndroidNotification $notification
    */
-  public function setNotification(AndroidNotification $notification)
+  public function setNotification(AndroidNotification $notification): void
   {
     $this->notification = $notification;
   }
+
   /**
    * @return AndroidNotification
    */
-  public function getNotification()
+  public function getNotification(): AndroidNotification
   {
     return $this->notification;
   }
   /**
-   * @param string
+   * @param string $priority
    */
-  public function setPriority($priority)
+  public function setPriority(string $priority): void
   {
     $this->priority = $priority;
   }
+
   /**
    * @return string
    */
-  public function getPriority()
+  public function getPriority(): string
   {
     return $this->priority;
   }
+
   /**
-   * @param string
+   * @param string $restrictedPackageName
    */
-  public function setRestrictedPackageName($restrictedPackageName)
+  public function setRestrictedPackageName(string $restrictedPackageName): void
   {
     $this->restrictedPackageName = $restrictedPackageName;
   }
+
   /**
    * @return string
    */
-  public function getRestrictedPackageName()
+  public function getRestrictedPackageName(): string
   {
     return $this->restrictedPackageName;
   }
+
   /**
-   * @param string
+   * @param string $ttl
    */
-  public function setTtl($ttl)
+  public function setTtl(string $ttl): void
   {
     $this->ttl = $ttl;
   }
+
   /**
    * @return string
    */
-  public function getTtl()
+  public function getTtl(): string
   {
     return $this->ttl;
   }

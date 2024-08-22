@@ -17,58 +17,60 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class LightSettings extends \Google\Model
-{
-  protected $colorType = Color::class;
-  protected $colorDataType = '';
-  /**
-   * @var string
-   */
-  public $lightOffDuration;
-  /**
-   * @var string
-   */
-  public $lightOnDuration;
+use Google\Model;
 
-  /**
-   * @param Color
+class LightSettings extends Model
+{
+  protected string $colorType = Color::class;
+  protected string $colorDataType = '';
+  protected string $lightOffDuration;
+  protected string $lightOnDuration;
+    private Color $color;
+
+    /**
+   * @param Color $color
    */
-  public function setColor(Color $color)
+  public function setColor(Color $color): void
   {
     $this->color = $color;
   }
+
   /**
    * @return Color
    */
-  public function getColor()
+  public function getColor(): Color
   {
     return $this->color;
   }
+
   /**
-   * @param string
+   * @param string $lightOffDuration
    */
-  public function setLightOffDuration($lightOffDuration)
+  public function setLightOffDuration(string $lightOffDuration): void
   {
     $this->lightOffDuration = $lightOffDuration;
   }
+
   /**
    * @return string
    */
-  public function getLightOffDuration()
+  public function getLightOffDuration(): string
   {
     return $this->lightOffDuration;
   }
+
   /**
-   * @param string
+   * @param string $lightOnDuration
    */
-  public function setLightOnDuration($lightOnDuration)
+  public function setLightOnDuration(string $lightOnDuration): void
   {
     $this->lightOnDuration = $lightOnDuration;
   }
+
   /**
    * @return string
    */
-  public function getLightOnDuration()
+  public function getLightOnDuration(): string
   {
     return $this->lightOnDuration;
   }
