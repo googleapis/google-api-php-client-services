@@ -17,76 +17,84 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class WebpushConfig extends \Google\Model
+use Google\Model;
+
+class WebpushConfig extends Model
 {
   /**
    * @var string[]
    */
-  public $data;
-  protected $fcmOptionsType = WebpushFcmOptions::class;
-  protected $fcmOptionsDataType = '';
+  public array $data;
   /**
    * @var string[]
    */
-  public $headers;
+  public array $headers;
   /**
    * @var array[]
    */
-  public $notification;
+  public array $notification;
+  protected WebpushFcmOptions $fcmOptions;
 
-  /**
-   * @param string[]
+    /**
+   * @param string[] $data
    */
-  public function setData($data)
+  public function setData(array $data): void
   {
     $this->data = $data;
   }
+
   /**
    * @return string[]
    */
-  public function getData()
+  public function getData(): array
   {
     return $this->data;
   }
+
   /**
-   * @param WebpushFcmOptions
+   * @param WebpushFcmOptions $fcmOptions
    */
-  public function setFcmOptions(WebpushFcmOptions $fcmOptions)
+  public function setFcmOptions(WebpushFcmOptions $fcmOptions): void
   {
     $this->fcmOptions = $fcmOptions;
   }
+
   /**
    * @return WebpushFcmOptions
    */
-  public function getFcmOptions()
+  public function getFcmOptions(): WebpushFcmOptions
   {
     return $this->fcmOptions;
   }
+
   /**
-   * @param string[]
+   * @param string[] $headers
    */
-  public function setHeaders($headers)
+  public function setHeaders(array $headers): void
   {
     $this->headers = $headers;
   }
+
   /**
    * @return string[]
    */
-  public function getHeaders()
+  public function getHeaders(): array
   {
     return $this->headers;
   }
+
   /**
-   * @param array[]
+   * @param array[] $notification
    */
-  public function setNotification($notification)
+  public function setNotification(array $notification): void
   {
     $this->notification = $notification;
   }
+
   /**
    * @return array[]
    */
-  public function getNotification()
+  public function getNotification(): array
   {
     return $this->notification;
   }
