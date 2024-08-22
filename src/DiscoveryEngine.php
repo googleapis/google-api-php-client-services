@@ -322,6 +322,11 @@ class DiscoveryEngine extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'matcher.fhirMatcher.fhirResources' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'matcher.urisMatcher.uris' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1984,6 +1989,11 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'matcher.fhirMatcher.fhirResources' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
                 'matcher.urisMatcher.uris' => [
                   'location' => 'query',

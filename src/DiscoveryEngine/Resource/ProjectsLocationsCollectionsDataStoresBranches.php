@@ -38,6 +38,9 @@ class ProjectsLocationsCollectionsDataStoresBranches extends \Google\Service\Res
    * a_store}/branches/{branch}`.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string matcher.fhirMatcher.fhirResources Required. The FHIR
+   * resources to match by. Format: projects/{project}/locations/{location}/datase
+   * ts/{dataset}/fhirStores/{fhir_store}/fhir/{resource_type}/{fhir_resource_id}
    * @opt_param string matcher.urisMatcher.uris The exact URIs to match by.
    * @return GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponse
    * @throws \Google\Service\Exception

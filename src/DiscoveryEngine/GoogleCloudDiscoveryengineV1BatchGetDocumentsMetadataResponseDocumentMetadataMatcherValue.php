@@ -22,8 +22,26 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
   /**
    * @var string
    */
+  public $fhirResource;
+  /**
+   * @var string
+   */
   public $uri;
 
+  /**
+   * @param string
+   */
+  public function setFhirResource($fhirResource)
+  {
+    $this->fhirResource = $fhirResource;
+  }
+  /**
+   * @return string
+   */
+  public function getFhirResource()
+  {
+    return $this->fhirResource;
+  }
   /**
    * @param string
    */

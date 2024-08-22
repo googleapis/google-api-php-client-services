@@ -22,6 +22,10 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
   /**
    * @var string
    */
+  public $dataIngestionSource;
+  /**
+   * @var string
+   */
   public $lastRefreshedTime;
   protected $matcherValueType = GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetadataMatcherValue::class;
   protected $matcherValueDataType = '';
@@ -30,6 +34,20 @@ class GoogleCloudDiscoveryengineV1BatchGetDocumentsMetadataResponseDocumentMetad
    */
   public $status;
 
+  /**
+   * @param string
+   */
+  public function setDataIngestionSource($dataIngestionSource)
+  {
+    $this->dataIngestionSource = $dataIngestionSource;
+  }
+  /**
+   * @return string
+   */
+  public function getDataIngestionSource()
+  {
+    return $this->dataIngestionSource;
+  }
   /**
    * @param string
    */
