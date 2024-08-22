@@ -17,40 +17,40 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class SendMessageRequest extends \Google\Model
-{
-  protected $messageType = Message::class;
-  protected $messageDataType = '';
-  /**
-   * @var bool
-   */
-  public $validateOnly;
+use Google\Model;
 
-  /**
-   * @param Message
+class SendMessageRequest extends Model
+{
+  protected string $messageType = Message::class;
+  protected string $messageDataType = '';
+  public bool $validateOnly;
+  protected Message $message;
+
+    /**
+   * @param Message $message
    */
-  public function setMessage(Message $message)
+  public function setMessage(Message $message): void
   {
     $this->message = $message;
   }
   /**
    * @return Message
    */
-  public function getMessage()
+  public function getMessage(): Message
   {
     return $this->message;
   }
   /**
-   * @param bool
+   * @param bool $validateOnly
    */
-  public function setValidateOnly($validateOnly)
+  public function setValidateOnly(bool $validateOnly): void
   {
     $this->validateOnly = $validateOnly;
   }
   /**
    * @return bool
    */
-  public function getValidateOnly()
+  public function getValidateOnly(): bool
   {
     return $this->validateOnly;
   }
