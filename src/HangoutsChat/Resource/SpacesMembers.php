@@ -50,6 +50,18 @@ class SpacesMembers extends \Google\Service\Resource
    * create the membership. Format: spaces/{space}
    * @param Membership $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool useAdminAccess [Developer
+   * Preview](https://developers.google.com/workspace/preview). When `true`, the
+   * method runs using the user's Google Workspace administrator privileges. The
+   * calling user must be a Google Workspace administrator with the [manage chat
+   * and spaces conversations
+   * privilege](https://support.google.com/a/answer/13369245). Requires the
+   * `chat.admin.memberships` [OAuth 2.0
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes). Creating app memberships or creating memberships
+   * for users outside the administrator's Google Workspace organization isn't
+   * supported using admin access.
    * @return Membership
    * @throws \Google\Service\Exception
    */
@@ -76,6 +88,17 @@ class SpacesMembers extends \Google\Service\Resource
    * `chat.memberships.app` scope and `spaces/{space}/members/app` format. Format:
    * `spaces/{space}/members/{member}` or `spaces/{space}/members/app`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool useAdminAccess [Developer
+   * Preview](https://developers.google.com/workspace/preview). When `true`, the
+   * method runs using the user's Google Workspace administrator privileges. The
+   * calling user must be a Google Workspace administrator with the [manage chat
+   * and spaces conversations
+   * privilege](https://support.google.com/a/answer/13369245). Requires the
+   * `chat.admin.memberships` [OAuth 2.0
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes). Deleting app memberships in a space isn't
+   * supported using admin access.
    * @return Membership
    * @throws \Google\Service\Exception
    */
@@ -108,6 +131,17 @@ class SpacesMembers extends \Google\Service\Resource
    * example, `spaces/{space}/members/example@gmail.com` where `example@gmail.com`
    * is the email of the Google Chat user.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool useAdminAccess [Developer
+   * Preview](https://developers.google.com/workspace/preview). When `true`, the
+   * method runs using the user's Google Workspace administrator privileges. The
+   * calling user must be a Google Workspace administrator with the [manage chat
+   * and spaces conversations
+   * privilege](https://support.google.com/a/answer/13369245). Requires the
+   * `chat.admin.memberships` or `chat.admin.memberships.readonly` [OAuth 2.0
+   * scopes](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes). Getting app memberships in a space isn't
+   * supported when using admin access.
    * @return Membership
    * @throws \Google\Service\Exception
    */
@@ -175,6 +209,16 @@ class SpacesMembers extends \Google\Service\Resource
    * aren't returned. Currently requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user).
+   * @opt_param bool useAdminAccess [Developer
+   * Preview](https://developers.google.com/workspace/preview). When `true`, the
+   * method runs using the user's Google Workspace administrator privileges. The
+   * calling user must be a Google Workspace administrator with the [manage chat
+   * and spaces conversations
+   * privilege](https://support.google.com/a/answer/13369245). Requires either the
+   * `chat.admin.memberships.readonly` or `chat.admin.memberships` [OAuth 2.0
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes). Listing app memberships in a space isn't
+   * supported when using admin access.
    * @return ListMembershipsResponse
    * @throws \Google\Service\Exception
    */
@@ -199,6 +243,15 @@ class SpacesMembers extends \Google\Service\Resource
    * @opt_param string updateMask Required. The field paths to update. Separate
    * multiple values with commas or use `*` to update all field paths. Currently
    * supported field paths: - `role`
+   * @opt_param bool useAdminAccess [Developer
+   * Preview](https://developers.google.com/workspace/preview). When `true`, the
+   * method runs using the user's Google Workspace administrator privileges. The
+   * calling user must be a Google Workspace administrator with the [manage chat
+   * and spaces conversations
+   * privilege](https://support.google.com/a/answer/13369245). Requires the
+   * `chat.admin.memberships` [OAuth 2.0
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes).
    * @return Membership
    * @throws \Google\Service\Exception
    */
