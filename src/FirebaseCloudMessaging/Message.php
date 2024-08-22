@@ -17,176 +17,180 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class Message extends \Google\Model
-{
-  protected $androidType = AndroidConfig::class;
-  protected $androidDataType = '';
-  protected $apnsType = ApnsConfig::class;
-  protected $apnsDataType = '';
-  /**
-   * @var string
-   */
-  public $condition;
-  /**
-   * @var string[]
-   */
-  public $data;
-  protected $fcmOptionsType = FcmOptions::class;
-  protected $fcmOptionsDataType = '';
-  /**
-   * @var string
-   */
-  public $name;
-  protected $notificationType = Notification::class;
-  protected $notificationDataType = '';
-  /**
-   * @var string
-   */
-  public $token;
-  /**
-   * @var string
-   */
-  public $topic;
-  protected $webpushType = WebpushConfig::class;
-  protected $webpushDataType = '';
+use Google\Model;
 
-  /**
-   * @param AndroidConfig
+class Message extends Model
+{
+
+  protected string $condition;
+  /** @var string[] */
+  protected array $data;
+  protected string $name;
+  protected string $token;
+  protected string $topic;
+  protected AndroidConfig $android;
+  protected ApnsConfig $apns;
+  protected FcmOptions $fcmOptions;
+  protected Notification $notification;
+  protected WebpushConfig $webpush;
+
+
+    /**
+   * @param AndroidConfig $android
    */
-  public function setAndroid(AndroidConfig $android)
+  public function setAndroid(AndroidConfig $android): void
   {
     $this->android = $android;
   }
+
   /**
    * @return AndroidConfig
    */
-  public function getAndroid()
+  public function getAndroid(): AndroidConfig
   {
     return $this->android;
   }
+
   /**
-   * @param ApnsConfig
+   * @param ApnsConfig $apns
    */
-  public function setApns(ApnsConfig $apns)
+  public function setApns(ApnsConfig $apns): void
   {
     $this->apns = $apns;
   }
+
   /**
    * @return ApnsConfig
    */
-  public function getApns()
+  public function getApns(): ApnsConfig
   {
     return $this->apns;
   }
+
   /**
-   * @param string
+   * @param string $condition
    */
-  public function setCondition($condition)
+  public function setCondition(string $condition): void
   {
     $this->condition = $condition;
   }
+
   /**
    * @return string
    */
-  public function getCondition()
+  public function getCondition(): string
   {
     return $this->condition;
   }
+
   /**
-   * @param string[]
+   * @param string[] $data
    */
-  public function setData($data)
+  public function setData(array $data): void
   {
     $this->data = $data;
   }
+
   /**
    * @return string[]
    */
-  public function getData()
+  public function getData(): array
   {
     return $this->data;
   }
+
   /**
-   * @param FcmOptions
+   * @param FcmOptions $fcmOptions
    */
-  public function setFcmOptions(FcmOptions $fcmOptions)
+  public function setFcmOptions(FcmOptions $fcmOptions): void
   {
     $this->fcmOptions = $fcmOptions;
   }
+
   /**
    * @return FcmOptions
    */
-  public function getFcmOptions()
+  public function getFcmOptions(): FcmOptions
   {
     return $this->fcmOptions;
   }
+
   /**
-   * @param string
+   * @param string $name
    */
-  public function setName($name)
+  public function setName(string $name): void
   {
     $this->name = $name;
   }
+
   /**
    * @return string
    */
-  public function getName()
+  public function getName(): string
   {
     return $this->name;
   }
+
   /**
-   * @param Notification
+   * @param Notification $notification
    */
-  public function setNotification(Notification $notification)
+  public function setNotification(Notification $notification): void
   {
     $this->notification = $notification;
   }
+
   /**
    * @return Notification
    */
-  public function getNotification()
+  public function getNotification(): Notification
   {
     return $this->notification;
   }
+
   /**
-   * @param string
+   * @param string $token
    */
-  public function setToken($token)
+  public function setToken(string $token): void
   {
     $this->token = $token;
   }
+
   /**
    * @return string
    */
-  public function getToken()
+  public function getToken(): string
   {
     return $this->token;
   }
+
   /**
-   * @param string
+   * @param string $topic
    */
-  public function setTopic($topic)
+  public function setTopic(string $topic): void
   {
     $this->topic = $topic;
   }
+
   /**
    * @return string
    */
-  public function getTopic()
+  public function getTopic(): string
   {
     return $this->topic;
   }
+
   /**
-   * @param WebpushConfig
+   * @param WebpushConfig $webpush
    */
-  public function setWebpush(WebpushConfig $webpush)
+  public function setWebpush(WebpushConfig $webpush): void
   {
     $this->webpush = $webpush;
   }
+
   /**
    * @return WebpushConfig
    */
-  public function getWebpush()
+  public function getWebpush(): WebpushConfig
   {
     return $this->webpush;
   }
