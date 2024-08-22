@@ -17,42 +17,41 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class ApnsFcmOptions extends \Google\Model
+use Google\Model;
+
+class ApnsFcmOptions extends Model
 {
-  /**
-   * @var string
-   */
-  public $analyticsLabel;
-  /**
-   * @var string
-   */
-  public $image;
+  public string $analyticsLabel;
+  public string $image;
 
   /**
-   * @param string
+   * @param string $analyticsLabel
    */
-  public function setAnalyticsLabel($analyticsLabel)
+  public function setAnalyticsLabel(string $analyticsLabel): void
   {
     $this->analyticsLabel = $analyticsLabel;
   }
+
   /**
    * @return string
    */
-  public function getAnalyticsLabel()
+  public function getAnalyticsLabel(): string
   {
     return $this->analyticsLabel;
   }
+
   /**
-   * @param string
+   * @param string $image
    */
-  public function setImage($image)
+  public function setImage(string $image): void
   {
     $this->image = $image;
   }
+
   /**
    * @return string
    */
-  public function getImage()
+  public function getImage(): string
   {
     return $this->image;
   }

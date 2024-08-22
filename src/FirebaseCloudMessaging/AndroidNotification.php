@@ -19,489 +19,465 @@ namespace Google\Service\FirebaseCloudMessaging;
 
 class AndroidNotification extends \Google\Collection
 {
+/**
+ * @var string
+ */
   protected $collection_key = 'vibrateTimings';
-  /**
-   * @var string
-   */
-  public $body;
-  /**
-   * @var string[]
-   */
-  public $bodyLocArgs;
-  /**
-   * @var string
-   */
-  public $bodyLocKey;
-  /**
-   * @var bool
-   */
-  public $bypassProxyNotification;
-  /**
-   * @var string
-   */
-  public $channelId;
-  /**
-   * @var string
-   */
-  public $clickAction;
-  /**
-   * @var string
-   */
-  public $color;
-  /**
-   * @var bool
-   */
-  public $defaultLightSettings;
-  /**
-   * @var bool
-   */
-  public $defaultSound;
-  /**
-   * @var bool
-   */
-  public $defaultVibrateTimings;
-  /**
-   * @var string
-   */
-  public $eventTime;
-  /**
-   * @var string
-   */
-  public $icon;
-  /**
-   * @var string
-   */
-  public $image;
-  protected $lightSettingsType = LightSettings::class;
-  protected $lightSettingsDataType = '';
-  /**
-   * @var bool
-   */
-  public $localOnly;
-  /**
-   * @var int
-   */
-  public $notificationCount;
-  /**
-   * @var string
-   */
-  public $notificationPriority;
-  /**
-   * @var string
-   */
-  public $proxy;
-  /**
-   * @var string
-   */
-  public $sound;
-  /**
-   * @var bool
-   */
-  public $sticky;
-  /**
-   * @var string
-   */
-  public $tag;
-  /**
-   * @var string
-   */
-  public $ticker;
-  /**
-   * @var string
-   */
-  public $title;
-  /**
-   * @var string[]
-   */
-  public $titleLocArgs;
-  /**
-   * @var string
-   */
-  public $titleLocKey;
-  /**
-   * @var string[]
-   */
-  public $vibrateTimings;
-  /**
-   * @var string
-   */
-  public $visibility;
+  public string $body;
+  public array $bodyLocArgs;
+  public string $bodyLocKey;
+  public bool $bypassProxyNotification;
+  public string $channelId;
+  public string $clickAction;
+  public string $color;
+  public bool $defaultLightSettings;
+  public bool $defaultSound;
+  public bool $defaultVibrateTimings;
+  public string $eventTime;
+  public string $icon;
+  public string $image;
+  protected string $lightSettingsType = LightSettings::class;
+  protected string $lightSettingsDataType = '';
+  public bool $localOnly;
+  public int $notificationCount;
+  public string $notificationPriority;
+  public string $proxy;
+  public string $sound;
+  public bool $sticky;
+  public string $tag;
+  public string $ticker;
+  public string $title;
+  public array $titleLocArgs;
+  public string $titleLocKey;
+  public array $vibrateTimings;
+  public string $visibility;
+  protected LightSettings $lightSettings;
 
-  /**
-   * @param string
-   */
-  public function setBody($body)
+  public function setBody(string $body): void
   {
     $this->body = $body;
   }
+
   /**
    * @return string
    */
-  public function getBody()
+  public function getBody(): string
   {
     return $this->body;
   }
+
   /**
-   * @param string[]
+   * @param string[] $bodyLocArgs
    */
-  public function setBodyLocArgs($bodyLocArgs)
+  public function setBodyLocArgs(array $bodyLocArgs): void
   {
     $this->bodyLocArgs = $bodyLocArgs;
   }
+
   /**
    * @return string[]
    */
-  public function getBodyLocArgs()
+  public function getBodyLocArgs(): array
   {
     return $this->bodyLocArgs;
   }
+
   /**
-   * @param string
+   * @param string $bodyLocKey
    */
-  public function setBodyLocKey($bodyLocKey)
+  public function setBodyLocKey(string $bodyLocKey): void
   {
     $this->bodyLocKey = $bodyLocKey;
   }
+
   /**
    * @return string
    */
-  public function getBodyLocKey()
+  public function getBodyLocKey(): string
   {
     return $this->bodyLocKey;
   }
+
   /**
-   * @param bool
+   * @param bool $bypassProxyNotification
    */
-  public function setBypassProxyNotification($bypassProxyNotification)
+  public function setBypassProxyNotification(bool $bypassProxyNotification): void
   {
     $this->bypassProxyNotification = $bypassProxyNotification;
   }
+
   /**
    * @return bool
    */
-  public function getBypassProxyNotification()
+  public function getBypassProxyNotification(): bool
   {
     return $this->bypassProxyNotification;
   }
+
   /**
-   * @param string
+   * @param string $channelId
    */
-  public function setChannelId($channelId)
+  public function setChannelId(string $channelId): void
   {
     $this->channelId = $channelId;
   }
+
   /**
    * @return string
    */
-  public function getChannelId()
+  public function getChannelId(): string
   {
     return $this->channelId;
   }
+
   /**
-   * @param string
+   * @param string $clickAction
    */
-  public function setClickAction($clickAction)
+  public function setClickAction(string $clickAction): void
   {
     $this->clickAction = $clickAction;
   }
+
   /**
    * @return string
    */
-  public function getClickAction()
+  public function getClickAction(): string
   {
     return $this->clickAction;
   }
+
   /**
-   * @param string
+   * @param string $color
    */
-  public function setColor($color)
+  public function setColor(string $color): void
   {
     $this->color = $color;
   }
+
   /**
    * @return string
    */
-  public function getColor()
+  public function getColor(): string
   {
     return $this->color;
   }
+
   /**
-   * @param bool
+   * @param bool $defaultLightSettings
    */
-  public function setDefaultLightSettings($defaultLightSettings)
+  public function setDefaultLightSettings(bool $defaultLightSettings): void
   {
     $this->defaultLightSettings = $defaultLightSettings;
   }
+
   /**
    * @return bool
    */
-  public function getDefaultLightSettings()
+  public function getDefaultLightSettings(): bool
   {
     return $this->defaultLightSettings;
   }
+
   /**
-   * @param bool
+   * @param bool $defaultSound
    */
-  public function setDefaultSound($defaultSound)
+  public function setDefaultSound(bool $defaultSound): void
   {
     $this->defaultSound = $defaultSound;
   }
+
   /**
    * @return bool
    */
-  public function getDefaultSound()
+  public function getDefaultSound(): bool
   {
     return $this->defaultSound;
   }
+
   /**
-   * @param bool
+   * @param bool $defaultVibrateTimings
    */
-  public function setDefaultVibrateTimings($defaultVibrateTimings)
+  public function setDefaultVibrateTimings(bool $defaultVibrateTimings): void
   {
     $this->defaultVibrateTimings = $defaultVibrateTimings;
   }
+
   /**
    * @return bool
    */
-  public function getDefaultVibrateTimings()
+  public function getDefaultVibrateTimings(): bool
   {
     return $this->defaultVibrateTimings;
   }
+
   /**
-   * @param string
+   * @param string $eventTime
    */
-  public function setEventTime($eventTime)
+  public function setEventTime(string $eventTime): void
   {
     $this->eventTime = $eventTime;
   }
+
   /**
    * @return string
    */
-  public function getEventTime()
+  public function getEventTime(): string
   {
     return $this->eventTime;
   }
+
   /**
-   * @param string
+   * @param string $icon
    */
-  public function setIcon($icon)
+  public function setIcon(string $icon): void
   {
     $this->icon = $icon;
   }
+
   /**
    * @return string
    */
-  public function getIcon()
+  public function getIcon(): string
   {
     return $this->icon;
   }
+
   /**
-   * @param string
+   * @param string $image
    */
-  public function setImage($image)
+  public function setImage(string $image): void
   {
     $this->image = $image;
   }
+
   /**
    * @return string
    */
-  public function getImage()
+  public function getImage(): string
   {
     return $this->image;
   }
+
   /**
-   * @param LightSettings
+   * @param LightSettings $lightSettings
    */
-  public function setLightSettings(LightSettings $lightSettings)
+  public function setLightSettings(LightSettings $lightSettings): void
   {
     $this->lightSettings = $lightSettings;
   }
+
   /**
    * @return LightSettings
    */
-  public function getLightSettings()
+  public function getLightSettings(): LightSettings
   {
     return $this->lightSettings;
   }
+
   /**
-   * @param bool
+   * @param bool $localOnly
    */
-  public function setLocalOnly($localOnly)
+  public function setLocalOnly(bool $localOnly): void
   {
     $this->localOnly = $localOnly;
   }
+
   /**
    * @return bool
    */
-  public function getLocalOnly()
+  public function getLocalOnly(): bool
   {
     return $this->localOnly;
   }
+
   /**
-   * @param int
+   * @param int $notificationCount
    */
-  public function setNotificationCount($notificationCount)
+  public function setNotificationCount(int $notificationCount): void
   {
     $this->notificationCount = $notificationCount;
   }
+
   /**
    * @return int
    */
-  public function getNotificationCount()
+  public function getNotificationCount(): int
   {
     return $this->notificationCount;
   }
+
   /**
-   * @param string
+   * @param string $notificationPriority
    */
-  public function setNotificationPriority($notificationPriority)
+  public function setNotificationPriority(string $notificationPriority): void
   {
     $this->notificationPriority = $notificationPriority;
   }
+
   /**
    * @return string
    */
-  public function getNotificationPriority()
+  public function getNotificationPriority(): string
   {
     return $this->notificationPriority;
   }
+
   /**
-   * @param string
+   * @param string $proxy
    */
-  public function setProxy($proxy)
+  public function setProxy(string $proxy): void
   {
     $this->proxy = $proxy;
   }
+
   /**
    * @return string
    */
-  public function getProxy()
+  public function getProxy(): string
   {
     return $this->proxy;
   }
+
   /**
-   * @param string
+   * @param string $sound
    */
-  public function setSound($sound)
+  public function setSound(string $sound): void
   {
     $this->sound = $sound;
   }
+
   /**
    * @return string
    */
-  public function getSound()
+  public function getSound(): string
   {
     return $this->sound;
   }
+
   /**
-   * @param bool
+   * @param bool $sticky
    */
-  public function setSticky($sticky)
+  public function setSticky(bool $sticky): void
   {
     $this->sticky = $sticky;
   }
+
   /**
    * @return bool
    */
-  public function getSticky()
+  public function getSticky(): bool
   {
     return $this->sticky;
   }
+
   /**
-   * @param string
+   * @param string $tag
    */
-  public function setTag($tag)
+  public function setTag(string $tag): void
   {
     $this->tag = $tag;
   }
+
   /**
    * @return string
    */
-  public function getTag()
+  public function getTag(): string
   {
     return $this->tag;
   }
+
   /**
-   * @param string
+   * @param string $ticker
    */
-  public function setTicker($ticker)
+  public function setTicker(string $ticker): void
   {
     $this->ticker = $ticker;
   }
+
   /**
    * @return string
    */
-  public function getTicker()
+  public function getTicker(): string
   {
     return $this->ticker;
   }
+
   /**
-   * @param string
+   * @param string $title
    */
-  public function setTitle($title)
+  public function setTitle(string $title): void
   {
     $this->title = $title;
   }
+
   /**
    * @return string
    */
-  public function getTitle()
+  public function getTitle(): string
   {
     return $this->title;
   }
+
   /**
-   * @param string[]
+   * @param string[] $titleLocArgs
    */
-  public function setTitleLocArgs($titleLocArgs)
+  public function setTitleLocArgs(array $titleLocArgs): void
   {
     $this->titleLocArgs = $titleLocArgs;
   }
+
   /**
    * @return string[]
    */
-  public function getTitleLocArgs()
+  public function getTitleLocArgs(): array
   {
     return $this->titleLocArgs;
   }
+
   /**
-   * @param string
+   * @param string $titleLocKey
    */
-  public function setTitleLocKey($titleLocKey)
+  public function setTitleLocKey(string $titleLocKey): void
   {
     $this->titleLocKey = $titleLocKey;
   }
+
   /**
    * @return string
    */
-  public function getTitleLocKey()
+  public function getTitleLocKey(): string
   {
     return $this->titleLocKey;
   }
+
   /**
-   * @param string[]
+   * @param string[] $vibrateTimings
    */
-  public function setVibrateTimings($vibrateTimings)
+  public function setVibrateTimings(array $vibrateTimings): void
   {
     $this->vibrateTimings = $vibrateTimings;
   }
+
   /**
    * @return string[]
    */
-  public function getVibrateTimings()
+  public function getVibrateTimings(): array
   {
     return $this->vibrateTimings;
   }
+
   /**
-   * @param string
+   * @param string $visibility
    */
-  public function setVisibility($visibility)
+  public function setVisibility(string $visibility): void
   {
     $this->visibility = $visibility;
   }
+
   /**
    * @return string
    */
-  public function getVisibility()
+  public function getVisibility(): string
   {
     return $this->visibility;
   }

@@ -17,24 +17,20 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class AndroidFcmOptions extends \Google\Model
-{
-  /**
-   * @var string
-   */
-  public $analyticsLabel;
+use Google\Model;
 
-  /**
-   * @param string
-   */
-  public function setAnalyticsLabel($analyticsLabel)
+class AndroidFcmOptions extends Model
+{
+  public string $analyticsLabel;
+
+  public function setAnalyticsLabel(string $analyticsLabel): void
   {
     $this->analyticsLabel = $analyticsLabel;
   }
   /**
    * @return string
    */
-  public function getAnalyticsLabel()
+  public function getAnalyticsLabel(): string
   {
     return $this->analyticsLabel;
   }

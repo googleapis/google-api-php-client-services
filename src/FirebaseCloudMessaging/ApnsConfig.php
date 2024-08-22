@@ -17,58 +17,65 @@
 
 namespace Google\Service\FirebaseCloudMessaging;
 
-class ApnsConfig extends \Google\Model
+use Google\Model;
+
+class ApnsConfig extends Model
 {
-  protected $fcmOptionsType = ApnsFcmOptions::class;
-  protected $fcmOptionsDataType = '';
   /**
    * @var string[]
    */
-  public $headers;
+  public array $headers;
+
   /**
    * @var array[]
    */
-  public $payload;
+  public array $payload;
+    private ApnsFcmOptions $fcmOptions;
 
-  /**
-   * @param ApnsFcmOptions
+    /**
+   * @param ApnsFcmOptions $fcmOptions
    */
-  public function setFcmOptions(ApnsFcmOptions $fcmOptions)
+  public function setFcmOptions(ApnsFcmOptions $fcmOptions): void
   {
     $this->fcmOptions = $fcmOptions;
   }
+
   /**
    * @return ApnsFcmOptions
    */
-  public function getFcmOptions()
+  public function getFcmOptions(): ApnsFcmOptions
   {
     return $this->fcmOptions;
   }
+
   /**
-   * @param string[]
+   * @param string[] $headers
    */
-  public function setHeaders($headers)
+  public function setHeaders(array $headers): void
   {
     $this->headers = $headers;
   }
+
   /**
    * @return string[]
    */
-  public function getHeaders()
+  public function getHeaders(): array
   {
     return $this->headers;
   }
+
   /**
-   * @param array[]
+   * @param array[] $payload
    */
-  public function setPayload($payload)
+  public function setPayload(array $payload): void
   {
     $this->payload = $payload;
   }
+
   /**
    * @return array[]
    */
-  public function getPayload()
+  public function getPayload(): array
   {
     return $this->payload;
   }
