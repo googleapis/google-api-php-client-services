@@ -17,46 +17,46 @@
 
 namespace Google\Service\GKEOnPrem;
 
-class BareMetalClusterUpgradePolicy extends \Google\Model
+class Version extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $pause;
   /**
    * @var string
    */
-  public $policy;
+  public $count;
+  /**
+   * @var string
+   */
+  public $version;
 
-  /**
-   * @param bool
-   */
-  public function setPause($pause)
-  {
-    $this->pause = $pause;
-  }
-  /**
-   * @return bool
-   */
-  public function getPause()
-  {
-    return $this->pause;
-  }
   /**
    * @param string
    */
-  public function setPolicy($policy)
+  public function setCount($count)
   {
-    $this->policy = $policy;
+    $this->count = $count;
   }
   /**
    * @return string
    */
-  public function getPolicy()
+  public function getCount()
   {
-    return $this->policy;
+    return $this->count;
+  }
+  /**
+   * @param string
+   */
+  public function setVersion($version)
+  {
+    $this->version = $version;
+  }
+  /**
+   * @return string
+   */
+  public function getVersion()
+  {
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BareMetalClusterUpgradePolicy::class, 'Google_Service_GKEOnPrem_BareMetalClusterUpgradePolicy');
+class_alias(Version::class, 'Google_Service_GKEOnPrem_Version');
