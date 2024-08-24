@@ -140,6 +140,8 @@ class ClusterUpdate extends \Google\Collection
    * @var string
    */
   public $desiredPrivateIpv6GoogleAccess;
+  protected $desiredRbacBindingConfigType = RBACBindingConfig::class;
+  protected $desiredRbacBindingConfigDataType = '';
   protected $desiredReleaseChannelType = ReleaseChannel::class;
   protected $desiredReleaseChannelDataType = '';
   protected $desiredResourceUsageExportConfigType = ResourceUsageExportConfig::class;
@@ -812,6 +814,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredPrivateIpv6GoogleAccess()
   {
     return $this->desiredPrivateIpv6GoogleAccess;
+  }
+  /**
+   * @param RBACBindingConfig
+   */
+  public function setDesiredRbacBindingConfig(RBACBindingConfig $desiredRbacBindingConfig)
+  {
+    $this->desiredRbacBindingConfig = $desiredRbacBindingConfig;
+  }
+  /**
+   * @return RBACBindingConfig
+   */
+  public function getDesiredRbacBindingConfig()
+  {
+    return $this->desiredRbacBindingConfig;
   }
   /**
    * @param ReleaseChannel

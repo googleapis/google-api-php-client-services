@@ -174,6 +174,8 @@ class Cluster extends \Google\Collection
   protected $parentProductConfigDataType = '';
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
+  protected $rbacBindingConfigType = RBACBindingConfig::class;
+  protected $rbacBindingConfigDataType = '';
   protected $releaseChannelType = ReleaseChannel::class;
   protected $releaseChannelDataType = '';
   /**
@@ -984,6 +986,20 @@ class Cluster extends \Google\Collection
   public function getPrivateClusterConfig()
   {
     return $this->privateClusterConfig;
+  }
+  /**
+   * @param RBACBindingConfig
+   */
+  public function setRbacBindingConfig(RBACBindingConfig $rbacBindingConfig)
+  {
+    $this->rbacBindingConfig = $rbacBindingConfig;
+  }
+  /**
+   * @return RBACBindingConfig
+   */
+  public function getRbacBindingConfig()
+  {
+    return $this->rbacBindingConfig;
   }
   /**
    * @param ReleaseChannel
