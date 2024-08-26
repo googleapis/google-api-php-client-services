@@ -53,7 +53,9 @@ var Doctum = {
             var aLink = document.createElement('a');
 
             // Edit the HTML link to work correctly based on the current depth
+            {# BEGIN custom code for "apiclient-services" template #}
             aLink.href = Doctum.rootPath + child.p + (hasChildren ? '.ns.html' : '.html');
+            {# END custom code for "apiclient-services" template #}
             aLink.innerText = child.n;
             divHd.appendChild(aLink);
             liClass.appendChild(divHd);
