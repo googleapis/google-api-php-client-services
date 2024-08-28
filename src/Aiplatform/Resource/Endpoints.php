@@ -23,20 +23,19 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentResponse;
-use Google\Service\Aiplatform\GoogleCloudAiplatformV1PublisherModel;
 
 /**
- * The "models" collection of methods.
+ * The "endpoints" collection of methods.
  * Typical usage is:
  *  <code>
  *   $aiplatformService = new Google\Service\Aiplatform(...);
- *   $models = $aiplatformService->publishers_models;
+ *   $endpoints = $aiplatformService->endpoints;
  *  </code>
  */
-class PublishersModels extends \Google\Service\Resource
+class Endpoints extends \Google\Service\Resource
 {
   /**
-   * Return a list of tokens based on the input text. (models.computeTokens)
+   * Return a list of tokens based on the input text. (endpoints.computeTokens)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to get
    * lists of tokens and token ids.
@@ -52,7 +51,7 @@ class PublishersModels extends \Google\Service\Resource
     return $this->call('computeTokens', [$params], GoogleCloudAiplatformV1ComputeTokensResponse::class);
   }
   /**
-   * Perform a token counting. (models.countTokens)
+   * Perform a token counting. (endpoints.countTokens)
    *
    * @param string $endpoint Required. The name of the Endpoint requested to
    * perform token counting. Format:
@@ -69,7 +68,7 @@ class PublishersModels extends \Google\Service\Resource
     return $this->call('countTokens', [$params], GoogleCloudAiplatformV1CountTokensResponse::class);
   }
   /**
-   * Generate content with multimodal inputs. (models.generateContent)
+   * Generate content with multimodal inputs. (endpoints.generateContent)
    *
    * @param string $model Required. The fully qualified name of the publisher
    * model or tuned model endpoint to use. Publisher model format:
@@ -88,33 +87,8 @@ class PublishersModels extends \Google\Service\Resource
     return $this->call('generateContent', [$params], GoogleCloudAiplatformV1GenerateContentResponse::class);
   }
   /**
-   * Gets a Model Garden publisher model. (models.get)
-   *
-   * @param string $name Required. The name of the PublisherModel resource.
-   * Format: `publishers/{publisher}/models/{publisher_model}`
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string huggingFaceToken Optional. Token used to access Hugging
-   * Face gated models.
-   * @opt_param bool isHuggingFaceModel Optional. Boolean indicates whether the
-   * requested model is a Hugging Face model.
-   * @opt_param string languageCode Optional. The IETF BCP-47 language code
-   * representing the language in which the publisher model's text information
-   * should be written in.
-   * @opt_param string view Optional. PublisherModel view specifying which fields
-   * to read.
-   * @return GoogleCloudAiplatformV1PublisherModel
-   * @throws \Google\Service\Exception
-   */
-  public function get($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], GoogleCloudAiplatformV1PublisherModel::class);
-  }
-  /**
    * Generate content with multimodal inputs with streaming support.
-   * (models.streamGenerateContent)
+   * (endpoints.streamGenerateContent)
    *
    * @param string $model Required. The fully qualified name of the publisher
    * model or tuned model endpoint to use. Publisher model format:
@@ -135,4 +109,4 @@ class PublishersModels extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PublishersModels::class, 'Google_Service_Aiplatform_Resource_PublishersModels');
+class_alias(Endpoints::class, 'Google_Service_Aiplatform_Resource_Endpoints');
