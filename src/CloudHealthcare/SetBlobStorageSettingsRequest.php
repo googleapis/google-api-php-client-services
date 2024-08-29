@@ -17,12 +17,12 @@
 
 namespace Google\Service\CloudHealthcare;
 
-class ImportDicomDataRequest extends \Google\Model
+class SetBlobStorageSettingsRequest extends \Google\Model
 {
   protected $blobStorageSettingsType = BlobStorageSettings::class;
   protected $blobStorageSettingsDataType = '';
-  protected $gcsSourceType = GoogleCloudHealthcareV1DicomGcsSource::class;
-  protected $gcsSourceDataType = '';
+  protected $filterConfigType = DicomFilterConfig::class;
+  protected $filterConfigDataType = '';
 
   /**
    * @param BlobStorageSettings
@@ -39,20 +39,20 @@ class ImportDicomDataRequest extends \Google\Model
     return $this->blobStorageSettings;
   }
   /**
-   * @param GoogleCloudHealthcareV1DicomGcsSource
+   * @param DicomFilterConfig
    */
-  public function setGcsSource(GoogleCloudHealthcareV1DicomGcsSource $gcsSource)
+  public function setFilterConfig(DicomFilterConfig $filterConfig)
   {
-    $this->gcsSource = $gcsSource;
+    $this->filterConfig = $filterConfig;
   }
   /**
-   * @return GoogleCloudHealthcareV1DicomGcsSource
+   * @return DicomFilterConfig
    */
-  public function getGcsSource()
+  public function getFilterConfig()
   {
-    return $this->gcsSource;
+    return $this->filterConfig;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ImportDicomDataRequest::class, 'Google_Service_CloudHealthcare_ImportDicomDataRequest');
+class_alias(SetBlobStorageSettingsRequest::class, 'Google_Service_CloudHealthcare_SetBlobStorageSettingsRequest');
