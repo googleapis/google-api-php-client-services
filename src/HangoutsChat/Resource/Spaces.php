@@ -242,6 +242,12 @@ class Spaces extends \Google\Service\Resource
    * authorize-chat-user). (spaces.patch)
    *
    * @param string $name Resource name of the space. Format: `spaces/{space}`
+   * Where `{space}` represents the system-assigned ID for the space. You can
+   * obtain the space ID by calling the [`spaces.list()`](https://developers.googl
+   * e.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
+   * space URL. For example, if the space URL is
+   * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is
+   * `AAAAAAAAA`.
    * @param Space $postBody
    * @param array $optParams Optional parameters.
    *
