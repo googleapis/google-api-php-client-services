@@ -69,6 +69,8 @@ class Step extends \Google\Model
   public $projectId;
   protected $proxyConnectionType = ProxyConnectionInfo::class;
   protected $proxyConnectionDataType = '';
+  protected $redisInstanceType = RedisInstanceInfo::class;
+  protected $redisInstanceDataType = '';
   protected $routeType = RouteInfo::class;
   protected $routeDataType = '';
   protected $serverlessNegType = ServerlessNegInfo::class;
@@ -393,6 +395,20 @@ class Step extends \Google\Model
   public function getProxyConnection()
   {
     return $this->proxyConnection;
+  }
+  /**
+   * @param RedisInstanceInfo
+   */
+  public function setRedisInstance(RedisInstanceInfo $redisInstance)
+  {
+    $this->redisInstance = $redisInstance;
+  }
+  /**
+   * @return RedisInstanceInfo
+   */
+  public function getRedisInstance()
+  {
+    return $this->redisInstance;
   }
   /**
    * @param RouteInfo
