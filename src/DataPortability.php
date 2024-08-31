@@ -190,6 +190,9 @@ class DataPortability extends \Google\Service
   /** Move a copy of information about your YouTube channel.. */
   const DATAPORTABILITY_YOUTUBE_CHANNEL =
       "https://www.googleapis.com/auth/dataportability.youtube.channel";
+  /** Move a copy of your YouTube clips metadata.. */
+  const DATAPORTABILITY_YOUTUBE_CLIPS =
+      "https://www.googleapis.com/auth/dataportability.youtube.clips";
   /** Move a copy of your YouTube comments.. */
   const DATAPORTABILITY_YOUTUBE_COMMENTS =
       "https://www.googleapis.com/auth/dataportability.youtube.comments";
