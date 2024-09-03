@@ -25,6 +25,14 @@ class Instance extends \Google\Collection
    */
   public $createTime;
   /**
+   * @var bool
+   */
+  public $deletionProtectionEnabled;
+  /**
+   * @var string
+   */
+  public $deletionProtectionReason;
+  /**
    * @var string
    */
   public $description;
@@ -48,6 +56,10 @@ class Instance extends \Google\Collection
   public $name;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
+  /**
+   * @var string
+   */
+  public $protocol;
   protected $replicationType = Replication::class;
   protected $replicationDataType = '';
   /**
@@ -92,6 +104,34 @@ class Instance extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param bool
+   */
+  public function setDeletionProtectionEnabled($deletionProtectionEnabled)
+  {
+    $this->deletionProtectionEnabled = $deletionProtectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeletionProtectionEnabled()
+  {
+    return $this->deletionProtectionEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setDeletionProtectionReason($deletionProtectionReason)
+  {
+    $this->deletionProtectionReason = $deletionProtectionReason;
+  }
+  /**
+   * @return string
+   */
+  public function getDeletionProtectionReason()
+  {
+    return $this->deletionProtectionReason;
   }
   /**
    * @param string
@@ -190,6 +230,20 @@ class Instance extends \Google\Collection
   public function getNetworks()
   {
     return $this->networks;
+  }
+  /**
+   * @param string
+   */
+  public function setProtocol($protocol)
+  {
+    $this->protocol = $protocol;
+  }
+  /**
+   * @return string
+   */
+  public function getProtocol()
+  {
+    return $this->protocol;
   }
   /**
    * @param Replication
