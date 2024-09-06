@@ -1542,7 +1542,47 @@ class CloudHealthcare extends \Google\Service
         'fhir',
         [
           'methods' => [
-            'Patient-everything' => [
+            'Binary-create' => [
+              'path' => 'v1/{+parent}/fhir/Binary',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'Binary-read' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'Binary-update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'Binary-vread' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'Patient-everything' => [
               'path' => 'v1/{+name}/$everything',
               'httpMethod' => 'GET',
               'parameters' => [
