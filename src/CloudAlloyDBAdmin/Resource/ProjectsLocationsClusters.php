@@ -23,6 +23,7 @@ use Google\Service\CloudAlloyDBAdmin\Operation;
 use Google\Service\CloudAlloyDBAdmin\PromoteClusterRequest;
 use Google\Service\CloudAlloyDBAdmin\RestoreClusterRequest;
 use Google\Service\CloudAlloyDBAdmin\SwitchoverClusterRequest;
+use Google\Service\CloudAlloyDBAdmin\UpgradeClusterRequest;
 
 /**
  * The "clusters" collection of methods.
@@ -275,6 +276,21 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('switchover', [$params], Operation::class);
+  }
+  /**
+   * Upgrades a single Cluster. Imperative only. (clusters.upgrade)
+   *
+   * @param string $name Required. The resource name of the cluster.
+   * @param UpgradeClusterRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function upgrade($name, UpgradeClusterRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('upgrade', [$params], Operation::class);
   }
 }
 
