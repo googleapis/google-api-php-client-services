@@ -115,6 +115,10 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   /**
    * @var string
    */
+  public $tlsMigrationState;
+  /**
+   * @var string
+   */
   public $tlsServiceDirectory;
   /**
    * @var string
@@ -526,6 +530,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getSuspended()
   {
     return $this->suspended;
+  }
+  /**
+   * @param string
+   */
+  public function setTlsMigrationState($tlsMigrationState)
+  {
+    $this->tlsMigrationState = $tlsMigrationState;
+  }
+  /**
+   * @return string
+   */
+  public function getTlsMigrationState()
+  {
+    return $this->tlsMigrationState;
   }
   /**
    * @param string
