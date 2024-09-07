@@ -66,6 +66,8 @@ class DatabaseResourceMetadata extends \Google\Collection
    * @var string
    */
   public $resourceName;
+  protected $tagsSetType = Tags::class;
+  protected $tagsSetDataType = '';
   /**
    * @var string
    */
@@ -296,6 +298,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param Tags
+   */
+  public function setTagsSet(Tags $tagsSet)
+  {
+    $this->tagsSet = $tagsSet;
+  }
+  /**
+   * @return Tags
+   */
+  public function getTagsSet()
+  {
+    return $this->tagsSet;
   }
   /**
    * @param string
