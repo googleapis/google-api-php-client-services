@@ -17,42 +17,28 @@
 
 namespace Google\Service\CloudFilestore;
 
-class PerformanceConfig extends \Google\Model
+class IOPSPerTB extends \Google\Model
 {
-  protected $fixedIopsType = FixedIOPS::class;
-  protected $fixedIopsDataType = '';
-  protected $iopsPerTbType = IOPSPerTB::class;
-  protected $iopsPerTbDataType = '';
+  /**
+   * @var string
+   */
+  public $maxReadIopsPerTb;
 
   /**
-   * @param FixedIOPS
+   * @param string
    */
-  public function setFixedIops(FixedIOPS $fixedIops)
+  public function setMaxReadIopsPerTb($maxReadIopsPerTb)
   {
-    $this->fixedIops = $fixedIops;
+    $this->maxReadIopsPerTb = $maxReadIopsPerTb;
   }
   /**
-   * @return FixedIOPS
+   * @return string
    */
-  public function getFixedIops()
+  public function getMaxReadIopsPerTb()
   {
-    return $this->fixedIops;
-  }
-  /**
-   * @param IOPSPerTB
-   */
-  public function setIopsPerTb(IOPSPerTB $iopsPerTb)
-  {
-    $this->iopsPerTb = $iopsPerTb;
-  }
-  /**
-   * @return IOPSPerTB
-   */
-  public function getIopsPerTb()
-  {
-    return $this->iopsPerTb;
+    return $this->maxReadIopsPerTb;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PerformanceConfig::class, 'Google_Service_CloudFilestore_PerformanceConfig');
+class_alias(IOPSPerTB::class, 'Google_Service_CloudFilestore_IOPSPerTB');

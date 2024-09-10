@@ -21,6 +21,10 @@ class Instance extends \Google\Collection
 {
   protected $collection_key = 'suspensionReasons';
   /**
+   * @var bool
+   */
+  public $configurablePerformanceEnabled;
+  /**
    * @var string
    */
   public $createTime;
@@ -56,6 +60,10 @@ class Instance extends \Google\Collection
   public $name;
   protected $networksType = NetworkConfig::class;
   protected $networksDataType = 'array';
+  protected $performanceConfigType = PerformanceConfig::class;
+  protected $performanceConfigDataType = '';
+  protected $performanceLimitsType = PerformanceLimits::class;
+  protected $performanceLimitsDataType = '';
   /**
    * @var string
    */
@@ -91,6 +99,20 @@ class Instance extends \Google\Collection
    */
   public $tier;
 
+  /**
+   * @param bool
+   */
+  public function setConfigurablePerformanceEnabled($configurablePerformanceEnabled)
+  {
+    $this->configurablePerformanceEnabled = $configurablePerformanceEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getConfigurablePerformanceEnabled()
+  {
+    return $this->configurablePerformanceEnabled;
+  }
   /**
    * @param string
    */
@@ -230,6 +252,34 @@ class Instance extends \Google\Collection
   public function getNetworks()
   {
     return $this->networks;
+  }
+  /**
+   * @param PerformanceConfig
+   */
+  public function setPerformanceConfig(PerformanceConfig $performanceConfig)
+  {
+    $this->performanceConfig = $performanceConfig;
+  }
+  /**
+   * @return PerformanceConfig
+   */
+  public function getPerformanceConfig()
+  {
+    return $this->performanceConfig;
+  }
+  /**
+   * @param PerformanceLimits
+   */
+  public function setPerformanceLimits(PerformanceLimits $performanceLimits)
+  {
+    $this->performanceLimits = $performanceLimits;
+  }
+  /**
+   * @return PerformanceLimits
+   */
+  public function getPerformanceLimits()
+  {
+    return $this->performanceLimits;
   }
   /**
    * @param string
