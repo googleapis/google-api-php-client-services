@@ -69,6 +69,8 @@ class Step extends \Google\Model
   public $projectId;
   protected $proxyConnectionType = ProxyConnectionInfo::class;
   protected $proxyConnectionDataType = '';
+  protected $redisClusterType = RedisClusterInfo::class;
+  protected $redisClusterDataType = '';
   protected $redisInstanceType = RedisInstanceInfo::class;
   protected $redisInstanceDataType = '';
   protected $routeType = RouteInfo::class;
@@ -395,6 +397,20 @@ class Step extends \Google\Model
   public function getProxyConnection()
   {
     return $this->proxyConnection;
+  }
+  /**
+   * @param RedisClusterInfo
+   */
+  public function setRedisCluster(RedisClusterInfo $redisCluster)
+  {
+    $this->redisCluster = $redisCluster;
+  }
+  /**
+   * @return RedisClusterInfo
+   */
+  public function getRedisCluster()
+  {
+    return $this->redisCluster;
   }
   /**
    * @param RedisInstanceInfo
