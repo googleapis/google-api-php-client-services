@@ -34,6 +34,8 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $clusterIpv4Cidr;
+  protected $compliancePostureConfigType = CompliancePostureConfig::class;
+  protected $compliancePostureConfigDataType = '';
   protected $conditionsType = StatusCondition::class;
   protected $conditionsDataType = 'array';
   protected $confidentialNodesType = ConfidentialNodes::class;
@@ -314,6 +316,20 @@ class Cluster extends \Google\Collection
   public function getClusterIpv4Cidr()
   {
     return $this->clusterIpv4Cidr;
+  }
+  /**
+   * @param CompliancePostureConfig
+   */
+  public function setCompliancePostureConfig(CompliancePostureConfig $compliancePostureConfig)
+  {
+    $this->compliancePostureConfig = $compliancePostureConfig;
+  }
+  /**
+   * @return CompliancePostureConfig
+   */
+  public function getCompliancePostureConfig()
+  {
+    return $this->compliancePostureConfig;
   }
   /**
    * @param StatusCondition[]
