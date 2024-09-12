@@ -46,6 +46,8 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $servingConfigDataStoreType = GoogleCloudDiscoveryengineV1ServingConfigDataStore::class;
+  protected $servingConfigDataStoreDataType = '';
   /**
    * @var string[]
    */
@@ -152,6 +154,20 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1ServingConfigDataStore
+   */
+  public function setServingConfigDataStore(GoogleCloudDiscoveryengineV1ServingConfigDataStore $servingConfigDataStore)
+  {
+    $this->servingConfigDataStore = $servingConfigDataStore;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1ServingConfigDataStore
+   */
+  public function getServingConfigDataStore()
+  {
+    return $this->servingConfigDataStore;
   }
   /**
    * @param string[]

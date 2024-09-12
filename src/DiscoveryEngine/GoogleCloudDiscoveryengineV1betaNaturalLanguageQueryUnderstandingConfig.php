@@ -17,47 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1RecrawlUrisRequest extends \Google\Collection
+class GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig extends \Google\Model
 {
-  protected $collection_key = 'uris';
   /**
    * @var string
    */
-  public $siteCredential;
-  /**
-   * @var string[]
-   */
-  public $uris;
+  public $mode;
 
   /**
    * @param string
    */
-  public function setSiteCredential($siteCredential)
+  public function setMode($mode)
   {
-    $this->siteCredential = $siteCredential;
+    $this->mode = $mode;
   }
   /**
    * @return string
    */
-  public function getSiteCredential()
+  public function getMode()
   {
-    return $this->siteCredential;
-  }
-  /**
-   * @param string[]
-   */
-  public function setUris($uris)
-  {
-    $this->uris = $uris;
-  }
-  /**
-   * @return string[]
-   */
-  public function getUris()
-  {
-    return $this->uris;
+    return $this->mode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1RecrawlUrisRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1RecrawlUrisRequest');
+class_alias(GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig');

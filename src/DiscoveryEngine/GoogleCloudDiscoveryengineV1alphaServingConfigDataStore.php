@@ -17,47 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1RecrawlUrisRequest extends \Google\Collection
+class GoogleCloudDiscoveryengineV1alphaServingConfigDataStore extends \Google\Model
 {
-  protected $collection_key = 'uris';
   /**
-   * @var string
+   * @var bool
    */
-  public $siteCredential;
-  /**
-   * @var string[]
-   */
-  public $uris;
+  public $disabledForServing;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setSiteCredential($siteCredential)
+  public function setDisabledForServing($disabledForServing)
   {
-    $this->siteCredential = $siteCredential;
+    $this->disabledForServing = $disabledForServing;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getSiteCredential()
+  public function getDisabledForServing()
   {
-    return $this->siteCredential;
-  }
-  /**
-   * @param string[]
-   */
-  public function setUris($uris)
-  {
-    $this->uris = $uris;
-  }
-  /**
-   * @return string[]
-   */
-  public function getUris()
-  {
-    return $this->uris;
+    return $this->disabledForServing;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1RecrawlUrisRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1RecrawlUrisRequest');
+class_alias(GoogleCloudDiscoveryengineV1alphaServingConfigDataStore::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaServingConfigDataStore');

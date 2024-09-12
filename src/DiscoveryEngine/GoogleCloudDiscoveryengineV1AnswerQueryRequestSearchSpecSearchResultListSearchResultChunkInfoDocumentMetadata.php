@@ -17,47 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1RecrawlUrisRequest extends \Google\Collection
+class GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata extends \Google\Model
 {
-  protected $collection_key = 'uris';
   /**
    * @var string
    */
-  public $siteCredential;
+  public $title;
   /**
-   * @var string[]
+   * @var string
    */
-  public $uris;
+  public $uri;
 
   /**
    * @param string
    */
-  public function setSiteCredential($siteCredential)
+  public function setTitle($title)
   {
-    $this->siteCredential = $siteCredential;
+    $this->title = $title;
   }
   /**
    * @return string
    */
-  public function getSiteCredential()
+  public function getTitle()
   {
-    return $this->siteCredential;
+    return $this->title;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setUris($uris)
+  public function setUri($uri)
   {
-    $this->uris = $uris;
+    $this->uri = $uri;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getUris()
+  public function getUri()
   {
-    return $this->uris;
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1RecrawlUrisRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1RecrawlUrisRequest');
+class_alias(GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AnswerQueryRequestSearchSpecSearchResultListSearchResultChunkInfoDocumentMetadata');

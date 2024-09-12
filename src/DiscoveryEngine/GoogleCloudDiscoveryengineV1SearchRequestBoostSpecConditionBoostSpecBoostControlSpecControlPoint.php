@@ -17,47 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1RecrawlUrisRequest extends \Google\Collection
+class GoogleCloudDiscoveryengineV1SearchRequestBoostSpecConditionBoostSpecBoostControlSpecControlPoint extends \Google\Model
 {
-  protected $collection_key = 'uris';
   /**
    * @var string
    */
-  public $siteCredential;
+  public $attributeValue;
   /**
-   * @var string[]
+   * @var float
    */
-  public $uris;
+  public $boostAmount;
 
   /**
    * @param string
    */
-  public function setSiteCredential($siteCredential)
+  public function setAttributeValue($attributeValue)
   {
-    $this->siteCredential = $siteCredential;
+    $this->attributeValue = $attributeValue;
   }
   /**
    * @return string
    */
-  public function getSiteCredential()
+  public function getAttributeValue()
   {
-    return $this->siteCredential;
+    return $this->attributeValue;
   }
   /**
-   * @param string[]
+   * @param float
    */
-  public function setUris($uris)
+  public function setBoostAmount($boostAmount)
   {
-    $this->uris = $uris;
+    $this->boostAmount = $boostAmount;
   }
   /**
-   * @return string[]
+   * @return float
    */
-  public function getUris()
+  public function getBoostAmount()
   {
-    return $this->uris;
+    return $this->boostAmount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1RecrawlUrisRequest::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1RecrawlUrisRequest');
+class_alias(GoogleCloudDiscoveryengineV1SearchRequestBoostSpecConditionBoostSpecBoostControlSpecControlPoint::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1SearchRequestBoostSpecConditionBoostSpecBoostControlSpecControlPoint');
