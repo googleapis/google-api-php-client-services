@@ -999,8 +999,8 @@ class Cloudchannel extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'register' => [
-              'path' => 'v1/{+integrator}:register',
+            ],'registerSubscriber' => [
+              'path' => 'v1/{+integrator}:registerSubscriber',
               'httpMethod' => 'POST',
               'parameters' => [
                 'integrator' => [
@@ -1017,8 +1017,8 @@ class Cloudchannel extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'unregister' => [
-              'path' => 'v1/{+integrator}:unregister',
+            ],'unregisterSubscriber' => [
+              'path' => 'v1/{+integrator}:unregisterSubscriber',
               'httpMethod' => 'POST',
               'parameters' => [
                 'integrator' => [
