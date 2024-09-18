@@ -81,6 +81,10 @@ class GoogleCloudAiplatformV1Schema extends \Google\Collection
   /**
    * @var string[]
    */
+  public $propertyOrdering;
+  /**
+   * @var string[]
+   */
   public $required;
   /**
    * @var string
@@ -316,6 +320,20 @@ class GoogleCloudAiplatformV1Schema extends \Google\Collection
   public function getProperties()
   {
     return $this->properties;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPropertyOrdering($propertyOrdering)
+  {
+    $this->propertyOrdering = $propertyOrdering;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPropertyOrdering()
+  {
+    return $this->propertyOrdering;
   }
   /**
    * @param string[]
