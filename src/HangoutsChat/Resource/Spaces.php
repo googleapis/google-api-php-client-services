@@ -57,12 +57,15 @@ class Spaces extends \Google\Service\Resource
     return $this->call('completeImport', [$params], CompleteImportSpaceResponse::class);
   }
   /**
-   * Creates a named space. Spaces grouped by topics aren't supported. For an
-   * example, see [Create a
+   * Creates a space with no members. Can be used to create a named space. Spaces
+   * grouped by topics aren't supported. For an example, see [Create a
    * space](https://developers.google.com/workspace/chat/create-spaces). If you
    * receive the error message `ALREADY_EXISTS` when creating a space, try a
    * different `displayName`. An existing space within the Google Workspace
-   * organization might already use this display name. Requires [user
+   * organization might already use this display name. If you're a member of the
+   * [Developer Preview program](https://developers.google.com/workspace/preview),
+   * you can create a group chat in import mode using `spaceType.GROUP_CHAT`.
+   * Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user). (spaces.create)
    *
@@ -97,11 +100,9 @@ class Spaces extends \Google\Service\Resource
    * `spaces/{space}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool useAdminAccess [Developer
-   * Preview](https://developers.google.com/workspace/preview). When `true`, the
-   * method runs using the user's Google Workspace administrator privileges. The
-   * calling user must be a Google Workspace administrator with the [manage chat
-   * and spaces conversations
+   * @opt_param bool useAdminAccess When `true`, the method runs using the user's
+   * Google Workspace administrator privileges. The calling user must be a Google
+   * Workspace administrator with the [manage chat and spaces conversations
    * privilege](https://support.google.com/a/answer/13369245). Requires the
    * `chat.admin.delete` [OAuth 2.0
    * scope](https://developers.google.com/workspace/chat/authenticate-
@@ -168,11 +169,9 @@ class Spaces extends \Google\Service\Resource
    * `spaces/{space}`. Format: `spaces/{space}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool useAdminAccess [Developer
-   * Preview](https://developers.google.com/workspace/preview). When `true`, the
-   * method runs using the user's Google Workspace administrator privileges. The
-   * calling user must be a Google Workspace administrator with the [manage chat
-   * and spaces conversations
+   * @opt_param bool useAdminAccess When `true`, the method runs using the user's
+   * Google Workspace administrator privileges. The calling user must be a Google
+   * Workspace administrator with the [manage chat and spaces conversations
    * privilege](https://support.google.com/a/answer/13369245). Requires the
    * `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
    * scopes](https://developers.google.com/workspace/chat/authenticate-
@@ -291,11 +290,9 @@ class Spaces extends \Google\Service\Resource
    * `permission_settings.manage_webhooks`, `permission_settings.reply_messages`
    * (Warning: mutually exclusive with all other non-permission settings field
    * paths). `permission_settings` is not supported with admin access.
-   * @opt_param bool useAdminAccess [Developer
-   * Preview](https://developers.google.com/workspace/preview). When `true`, the
-   * method runs using the user's Google Workspace administrator privileges. The
-   * calling user must be a Google Workspace administrator with the [manage chat
-   * and spaces conversations
+   * @opt_param bool useAdminAccess When `true`, the method runs using the user's
+   * Google Workspace administrator privileges. The calling user must be a Google
+   * Workspace administrator with the [manage chat and spaces conversations
    * privilege](https://support.google.com/a/answer/13369245). Requires the
    * `chat.admin.spaces` [OAuth 2.0
    * scope](https://developers.google.com/workspace/chat/authenticate-
@@ -311,12 +308,11 @@ class Spaces extends \Google\Service\Resource
     return $this->call('patch', [$params], Space::class);
   }
   /**
-   * [Developer Preview](https://developers.google.com/workspace/preview). Returns
-   * a list of spaces based on a user's search. Requires [user
-   * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). The user must be an administrator for the Google
-   * Workspace organization. In the request, set `use_admin_access` to `true`.
-   * (spaces.search)
+   * Returns a list of spaces in a Google Workspace organization based on an
+   * administrator's search. Requires [user authentication with administrator
+   * privileges](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user#admin-privileges). In the request, set `use_admin_access`
+   * to `true`. (spaces.search)
    *
    * @param array $optParams Optional parameters.
    *
