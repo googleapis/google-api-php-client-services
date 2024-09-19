@@ -65,6 +65,9 @@ class ProjectsLocationsBackupVaultsDataSourcesBackups extends \Google\Service\Re
    * format 'projects/{project_id}/locations/{location}/backupVaults/{backupVault}
    * /dataSources/{datasource}/backups/{backup}'
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. Reserved for future use to provide a BASIC &
+   * FULL view of Backup resource.
    * @return Backup
    * @throws \Google\Service\Exception
    */
@@ -92,6 +95,8 @@ class ProjectsLocationsBackupVaultsDataSourcesBackups extends \Google\Service\Re
    * default.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
+   * @opt_param string view Optional. Reserved for future use to provide a BASIC &
+   * FULL view of Backup resource.
    * @return ListBackupsResponse
    * @throws \Google\Service\Exception
    */

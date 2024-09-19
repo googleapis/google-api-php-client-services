@@ -137,6 +137,9 @@ class ProjectsLocationsBackupVaults extends \Google\Service\Resource
    * the format
    * 'projects/{project_id}/locations/{location}/backupVaults/{resource_name}'
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. Reserved for future use to provide a BASIC &
+   * FULL view of Backup Vault
    * @return BackupVault
    * @throws \Google\Service\Exception
    */
@@ -165,6 +168,8 @@ class ProjectsLocationsBackupVaults extends \Google\Service\Resource
    * default.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return.
+   * @opt_param string view Optional. Reserved for future use to provide a BASIC &
+   * FULL view of Backup Vault.
    * @return ListBackupVaultsResponse
    * @throws \Google\Service\Exception
    */
