@@ -167,7 +167,10 @@ class Accounts extends \Google\Service\Resource
    * configuration changes like adding a stream or changing a property's time
    * zone. For configuration change history, see [searchChangeHistoryEvents](https
    * ://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/acc
-   * ounts/searchChangeHistoryEvents). (accounts.runAccessReport)
+   * ounts/searchChangeHistoryEvents). To give your feedback on this API, complete
+   * the [Google Analytics Access Reports feedback](https://docs.google.com/forms/
+   * d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform) form.
+   * (accounts.runAccessReport)
    *
    * @param string $entity The Data Access Report supports requesting at the
    * property level or account level. If requested at the account level, Data
