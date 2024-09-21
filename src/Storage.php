@@ -1487,6 +1487,10 @@ class Storage extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'restoreToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'softDeleted' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1722,6 +1726,10 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
                 'projection' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'restoreToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
