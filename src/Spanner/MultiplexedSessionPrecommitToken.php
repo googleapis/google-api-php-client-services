@@ -17,62 +17,46 @@
 
 namespace Google\Service\Spanner;
 
-class Transaction extends \Google\Model
+class MultiplexedSessionPrecommitToken extends \Google\Model
 {
   /**
    * @var string
    */
-  public $id;
-  protected $precommitTokenType = MultiplexedSessionPrecommitToken::class;
-  protected $precommitTokenDataType = '';
+  public $precommitToken;
   /**
-   * @var string
+   * @var int
    */
-  public $readTimestamp;
+  public $seqNum;
 
   /**
    * @param string
    */
-  public function setId($id)
-  {
-    $this->id = $id;
-  }
-  /**
-   * @return string
-   */
-  public function getId()
-  {
-    return $this->id;
-  }
-  /**
-   * @param MultiplexedSessionPrecommitToken
-   */
-  public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
+  public function setPrecommitToken($precommitToken)
   {
     $this->precommitToken = $precommitToken;
   }
   /**
-   * @return MultiplexedSessionPrecommitToken
+   * @return string
    */
   public function getPrecommitToken()
   {
     return $this->precommitToken;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setReadTimestamp($readTimestamp)
+  public function setSeqNum($seqNum)
   {
-    $this->readTimestamp = $readTimestamp;
+    $this->seqNum = $seqNum;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getReadTimestamp()
+  public function getSeqNum()
   {
-    return $this->readTimestamp;
+    return $this->seqNum;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Transaction::class, 'Google_Service_Spanner_Transaction');
+class_alias(MultiplexedSessionPrecommitToken::class, 'Google_Service_Spanner_MultiplexedSessionPrecommitToken');
