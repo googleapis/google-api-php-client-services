@@ -66,6 +66,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
    * @var string
    */
   public $resourceName;
+  protected $tagsSetType = StorageDatabasecenterPartnerapiV1mainTags::class;
+  protected $tagsSetDataType = '';
   /**
    * @var string
    */
@@ -296,6 +298,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainTags
+   */
+  public function setTagsSet(StorageDatabasecenterPartnerapiV1mainTags $tagsSet)
+  {
+    $this->tagsSet = $tagsSet;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainTags
+   */
+  public function getTagsSet()
+  {
+    return $this->tagsSet;
   }
   /**
    * @param string
