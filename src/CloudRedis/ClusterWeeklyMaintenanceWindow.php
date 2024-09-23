@@ -23,10 +23,6 @@ class ClusterWeeklyMaintenanceWindow extends \Google\Model
    * @var string
    */
   public $day;
-  /**
-   * @var string
-   */
-  public $duration;
   protected $startTimeType = TimeOfDay::class;
   protected $startTimeDataType = '';
 
@@ -43,20 +39,6 @@ class ClusterWeeklyMaintenanceWindow extends \Google\Model
   public function getDay()
   {
     return $this->day;
-  }
-  /**
-   * @param string
-   */
-  public function setDuration($duration)
-  {
-    $this->duration = $duration;
-  }
-  /**
-   * @return string
-   */
-  public function getDuration()
-  {
-    return $this->duration;
   }
   /**
    * @param TimeOfDay

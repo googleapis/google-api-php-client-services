@@ -26,10 +26,6 @@ class ClusterMaintenanceSchedule extends \Google\Model
   /**
    * @var string
    */
-  public $scheduleDeadlineTime;
-  /**
-   * @var string
-   */
   public $startTime;
 
   /**
@@ -45,20 +41,6 @@ class ClusterMaintenanceSchedule extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
-  }
-  /**
-   * @param string
-   */
-  public function setScheduleDeadlineTime($scheduleDeadlineTime)
-  {
-    $this->scheduleDeadlineTime = $scheduleDeadlineTime;
-  }
-  /**
-   * @return string
-   */
-  public function getScheduleDeadlineTime()
-  {
-    return $this->scheduleDeadlineTime;
   }
   /**
    * @param string
