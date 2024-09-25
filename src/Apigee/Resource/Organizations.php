@@ -80,8 +80,8 @@ class Organizations extends \Google\Service\Resource
    * operation completes. During this period, the Organization may be restored to
    * its last known state. After this period, the Organization will no longer be
    * able to be restored. **Note: During the data retention period specified using
-   * this field, the Apigee organization cannot be recreated in the same GCP
-   * project.**
+   * this field, the Apigee organization cannot be recreated in the same Google
+   * Cloud project.**
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
