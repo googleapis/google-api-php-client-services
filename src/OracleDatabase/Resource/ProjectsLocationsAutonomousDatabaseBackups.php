@@ -30,7 +30,7 @@ use Google\Service\OracleDatabase\ListAutonomousDatabaseBackupsResponse;
 class ProjectsLocationsAutonomousDatabaseBackups extends \Google\Service\Resource
 {
   /**
-   * Lists the long term and automatic backups of an Autonomous Database.
+   * Lists the long-term and automatic backups of an Autonomous Database.
    * (autonomousDatabaseBackups.listProjectsLocationsAutonomousDatabaseBackups)
    *
    * @param string $parent Required. The parent value for

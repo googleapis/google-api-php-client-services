@@ -23,8 +23,8 @@ use Google\Client;
  * Service definition for OracleDatabase (v1).
  *
  * <p>
- * The Oracle Database@Google Cloud API provides set of APIs to manage Oracle
- * databases such as Exadata and Autonomous Databases.</p>
+ * The Oracle Database@Google Cloud API provides a set of APIs to manage Oracle
+ * database services, such as Exadata and Autonomous Databases.</p>
  *
  * <p>
  * For more information about this service, see the API

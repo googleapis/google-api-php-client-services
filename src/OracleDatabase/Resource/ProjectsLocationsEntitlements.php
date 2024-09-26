@@ -33,7 +33,7 @@ class ProjectsLocationsEntitlements extends \Google\Service\Resource
    * Lists the entitlements in a given project.
    * (entitlements.listProjectsLocationsEntitlements)
    *
-   * @param string $parent Required. The parent value for Entitlement in the
+   * @param string $parent Required. The parent value for the entitlement in the
    * following format: projects/{project}/locations/{location}.
    * @param array $optParams Optional parameters.
    *

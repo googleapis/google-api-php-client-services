@@ -88,7 +88,7 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Generates a wallet for a single Autonomous Database.
+   * Generates a wallet for an Autonomous Database.
    * (autonomousDatabases.generateWallet)
    *
    * @param string $name Required. The name of the Autonomous Database in the
