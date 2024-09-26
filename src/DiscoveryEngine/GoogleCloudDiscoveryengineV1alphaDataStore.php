@@ -24,6 +24,8 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
    * @var bool
    */
   public $aclEnabled;
+  protected $billingEstimationType = GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation::class;
+  protected $billingEstimationDataType = '';
   /**
    * @var string
    */
@@ -80,6 +82,20 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   public function getAclEnabled()
   {
     return $this->aclEnabled;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation
+   */
+  public function setBillingEstimation(GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation $billingEstimation)
+  {
+    $this->billingEstimation = $billingEstimation;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataStoreBillingEstimation
+   */
+  public function getBillingEstimation()
+  {
+    return $this->billingEstimation;
   }
   /**
    * @param string

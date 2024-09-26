@@ -20,6 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
 {
   protected $collection_key = 'solutionTypes';
+  protected $billingEstimationType = GoogleCloudDiscoveryengineV1DataStoreBillingEstimation::class;
+  protected $billingEstimationDataType = '';
   /**
    * @var string
    */
@@ -57,6 +59,20 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
   protected $workspaceConfigType = GoogleCloudDiscoveryengineV1WorkspaceConfig::class;
   protected $workspaceConfigDataType = '';
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1DataStoreBillingEstimation
+   */
+  public function setBillingEstimation(GoogleCloudDiscoveryengineV1DataStoreBillingEstimation $billingEstimation)
+  {
+    $this->billingEstimation = $billingEstimation;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1DataStoreBillingEstimation
+   */
+  public function getBillingEstimation()
+  {
+    return $this->billingEstimation;
+  }
   /**
    * @param string
    */

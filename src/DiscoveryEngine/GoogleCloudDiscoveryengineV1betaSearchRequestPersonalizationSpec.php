@@ -17,46 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec extends \Google\Model
 {
   /**
    * @var string
    */
-  public $dataStore;
-  /**
-   * @var string
-   */
-  public $filter;
+  public $mode;
 
   /**
    * @param string
    */
-  public function setDataStore($dataStore)
+  public function setMode($mode)
   {
-    $this->dataStore = $dataStore;
+    $this->mode = $mode;
   }
   /**
    * @return string
    */
-  public function getDataStore()
+  public function getMode()
   {
-    return $this->dataStore;
-  }
-  /**
-   * @param string
-   */
-  public function setFilter($filter)
-  {
-    $this->filter = $filter;
-  }
-  /**
-   * @return string
-   */
-  public function getFilter()
-  {
-    return $this->filter;
+    return $this->mode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec');
+class_alias(GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaSearchRequestPersonalizationSpec');
