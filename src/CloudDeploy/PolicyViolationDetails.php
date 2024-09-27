@@ -17,65 +17,64 @@
 
 namespace Google\Service\CloudDeploy;
 
-class RetryJobRequest extends \Google\Collection
+class PolicyViolationDetails extends \Google\Model
 {
-  protected $collection_key = 'overrideDeployPolicy';
   /**
    * @var string
    */
-  public $jobId;
-  /**
-   * @var string[]
-   */
-  public $overrideDeployPolicy;
+  public $failureMessage;
   /**
    * @var string
    */
-  public $phaseId;
+  public $policy;
+  /**
+   * @var string
+   */
+  public $ruleId;
 
   /**
    * @param string
    */
-  public function setJobId($jobId)
+  public function setFailureMessage($failureMessage)
   {
-    $this->jobId = $jobId;
+    $this->failureMessage = $failureMessage;
   }
   /**
    * @return string
    */
-  public function getJobId()
+  public function getFailureMessage()
   {
-    return $this->jobId;
-  }
-  /**
-   * @param string[]
-   */
-  public function setOverrideDeployPolicy($overrideDeployPolicy)
-  {
-    $this->overrideDeployPolicy = $overrideDeployPolicy;
-  }
-  /**
-   * @return string[]
-   */
-  public function getOverrideDeployPolicy()
-  {
-    return $this->overrideDeployPolicy;
+    return $this->failureMessage;
   }
   /**
    * @param string
    */
-  public function setPhaseId($phaseId)
+  public function setPolicy($policy)
   {
-    $this->phaseId = $phaseId;
+    $this->policy = $policy;
   }
   /**
    * @return string
    */
-  public function getPhaseId()
+  public function getPolicy()
   {
-    return $this->phaseId;
+    return $this->policy;
+  }
+  /**
+   * @param string
+   */
+  public function setRuleId($ruleId)
+  {
+    $this->ruleId = $ruleId;
+  }
+  /**
+   * @return string
+   */
+  public function getRuleId()
+  {
+    return $this->ruleId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RetryJobRequest::class, 'Google_Service_CloudDeploy_RetryJobRequest');
+class_alias(PolicyViolationDetails::class, 'Google_Service_CloudDeploy_PolicyViolationDetails');

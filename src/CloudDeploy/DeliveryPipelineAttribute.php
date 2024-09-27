@@ -17,29 +17,46 @@
 
 namespace Google\Service\CloudDeploy;
 
-class TerminateJobRunRequest extends \Google\Collection
+class DeliveryPipelineAttribute extends \Google\Model
 {
-  protected $collection_key = 'overrideDeployPolicy';
+  /**
+   * @var string
+   */
+  public $id;
   /**
    * @var string[]
    */
-  public $overrideDeployPolicy;
+  public $labels;
 
+  /**
+   * @param string
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
+  }
+  /**
+   * @return string
+   */
+  public function getId()
+  {
+    return $this->id;
+  }
   /**
    * @param string[]
    */
-  public function setOverrideDeployPolicy($overrideDeployPolicy)
+  public function setLabels($labels)
   {
-    $this->overrideDeployPolicy = $overrideDeployPolicy;
+    $this->labels = $labels;
   }
   /**
    * @return string[]
    */
-  public function getOverrideDeployPolicy()
+  public function getLabels()
   {
-    return $this->overrideDeployPolicy;
+    return $this->labels;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TerminateJobRunRequest::class, 'Google_Service_CloudDeploy_TerminateJobRunRequest');
+class_alias(DeliveryPipelineAttribute::class, 'Google_Service_CloudDeploy_DeliveryPipelineAttribute');

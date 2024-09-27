@@ -17,29 +17,27 @@
 
 namespace Google\Service\CloudDeploy;
 
-class TerminateJobRunRequest extends \Google\Collection
+class PolicyViolation extends \Google\Collection
 {
-  protected $collection_key = 'overrideDeployPolicy';
-  /**
-   * @var string[]
-   */
-  public $overrideDeployPolicy;
+  protected $collection_key = 'policyViolationDetails';
+  protected $policyViolationDetailsType = PolicyViolationDetails::class;
+  protected $policyViolationDetailsDataType = 'array';
 
   /**
-   * @param string[]
+   * @param PolicyViolationDetails[]
    */
-  public function setOverrideDeployPolicy($overrideDeployPolicy)
+  public function setPolicyViolationDetails($policyViolationDetails)
   {
-    $this->overrideDeployPolicy = $overrideDeployPolicy;
+    $this->policyViolationDetails = $policyViolationDetails;
   }
   /**
-   * @return string[]
+   * @return PolicyViolationDetails[]
    */
-  public function getOverrideDeployPolicy()
+  public function getPolicyViolationDetails()
   {
-    return $this->overrideDeployPolicy;
+    return $this->policyViolationDetails;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TerminateJobRunRequest::class, 'Google_Service_CloudDeploy_TerminateJobRunRequest');
+class_alias(PolicyViolation::class, 'Google_Service_CloudDeploy_PolicyViolation');

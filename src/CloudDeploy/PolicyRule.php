@@ -17,29 +17,26 @@
 
 namespace Google\Service\CloudDeploy;
 
-class TerminateJobRunRequest extends \Google\Collection
+class PolicyRule extends \Google\Model
 {
-  protected $collection_key = 'overrideDeployPolicy';
-  /**
-   * @var string[]
-   */
-  public $overrideDeployPolicy;
+  protected $rolloutRestrictionType = RolloutRestriction::class;
+  protected $rolloutRestrictionDataType = '';
 
   /**
-   * @param string[]
+   * @param RolloutRestriction
    */
-  public function setOverrideDeployPolicy($overrideDeployPolicy)
+  public function setRolloutRestriction(RolloutRestriction $rolloutRestriction)
   {
-    $this->overrideDeployPolicy = $overrideDeployPolicy;
+    $this->rolloutRestriction = $rolloutRestriction;
   }
   /**
-   * @return string[]
+   * @return RolloutRestriction
    */
-  public function getOverrideDeployPolicy()
+  public function getRolloutRestriction()
   {
-    return $this->overrideDeployPolicy;
+    return $this->rolloutRestriction;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TerminateJobRunRequest::class, 'Google_Service_CloudDeploy_TerminateJobRunRequest');
+class_alias(PolicyRule::class, 'Google_Service_CloudDeploy_PolicyRule');
