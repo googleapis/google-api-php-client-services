@@ -109,7 +109,10 @@ class ProjectsLocationsBackupVaultsDataSourcesBackups extends \Google\Service\Re
   /**
    * Updates the settings of a Backup. (backups.patch)
    *
-   * @param string $name Output only. Identifier. Name of the resource.
+   * @param string $name Output only. Identifier. Name of the backup to create. It
+   * must have the format`"projects//locations//backupVaults//dataSources/{datasou
+   * rce}/backups/{backup}"`. `{backup}` cannot be changed after creation. It must
+   * be between 3-63 characters long and must be unique within the datasource.
    * @param Backup $postBody
    * @param array $optParams Optional parameters.
    *

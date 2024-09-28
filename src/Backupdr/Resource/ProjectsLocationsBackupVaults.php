@@ -35,6 +35,7 @@ use Google\Service\Backupdr\TestIamPermissionsResponse;
 class ProjectsLocationsBackupVaults extends \Google\Service\Resource
 {
   /**
+   * Creates a new BackupVault in a given project and location.
    * (backupVaults.create)
    *
    * @param string $parent Required. Value for parent.
@@ -182,7 +183,11 @@ class ProjectsLocationsBackupVaults extends \Google\Service\Resource
   /**
    * Updates the settings of a BackupVault. (backupVaults.patch)
    *
-   * @param string $name Output only. Identifier. The resource name.
+   * @param string $name Output only. Identifier. Name of the backup vault to
+   * create. It must have the
+   * format`"projects/{project}/locations/{location}/backupVaults/{backupvault}"`.
+   * `{backupvault}` cannot be changed after creation. It must be between 3-63
+   * characters long and must be unique within the project and location.
    * @param BackupVault $postBody
    * @param array $optParams Optional parameters.
    *
