@@ -36,6 +36,10 @@ class DatabaseResourceMetadata extends \Google\Collection
   public $currentState;
   protected $customMetadataType = CustomMetadataData::class;
   protected $customMetadataDataType = '';
+  /**
+   * @var string
+   */
+  public $edition;
   protected $entitlementsType = Entitlement::class;
   protected $entitlementsDataType = 'array';
   /**
@@ -56,6 +60,10 @@ class DatabaseResourceMetadata extends \Google\Collection
   protected $machineConfigurationDataType = '';
   protected $primaryResourceIdType = DatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
+  /**
+   * @var string
+   */
+  public $primaryResourceLocation;
   protected $productType = Product::class;
   protected $productDataType = '';
   /**
@@ -160,6 +168,20 @@ class DatabaseResourceMetadata extends \Google\Collection
     return $this->customMetadata;
   }
   /**
+   * @param string
+   */
+  public function setEdition($edition)
+  {
+    $this->edition = $edition;
+  }
+  /**
+   * @return string
+   */
+  public function getEdition()
+  {
+    return $this->edition;
+  }
+  /**
    * @param Entitlement[]
    */
   public function setEntitlements($entitlements)
@@ -256,6 +278,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getPrimaryResourceId()
   {
     return $this->primaryResourceId;
+  }
+  /**
+   * @param string
+   */
+  public function setPrimaryResourceLocation($primaryResourceLocation)
+  {
+    $this->primaryResourceLocation = $primaryResourceLocation;
+  }
+  /**
+   * @return string
+   */
+  public function getPrimaryResourceLocation()
+  {
+    return $this->primaryResourceLocation;
   }
   /**
    * @param Product
