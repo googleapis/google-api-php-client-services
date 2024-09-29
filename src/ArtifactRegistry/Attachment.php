@@ -17,9 +17,9 @@
 
 namespace Google\Service\ArtifactRegistry;
 
-class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
+class Attachment extends \Google\Collection
 {
-  protected $collection_key = 'hashes';
+  protected $collection_key = 'files';
   /**
    * @var string[]
    */
@@ -27,13 +27,15 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
   /**
    * @var string
    */
-  public $createTime;
+  public $attachmentNamespace;
   /**
    * @var string
    */
-  public $fetchTime;
-  protected $hashesType = Hash::class;
-  protected $hashesDataType = 'array';
+  public $createTime;
+  /**
+   * @var string[]
+   */
+  public $files;
   /**
    * @var string
    */
@@ -41,11 +43,15 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
   /**
    * @var string
    */
-  public $owner;
+  public $ociVersionName;
   /**
    * @var string
    */
-  public $sizeBytes;
+  public $target;
+  /**
+   * @var string
+   */
+  public $type;
   /**
    * @var string
    */
@@ -68,6 +74,20 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
   /**
    * @param string
    */
+  public function setAttachmentNamespace($attachmentNamespace)
+  {
+    $this->attachmentNamespace = $attachmentNamespace;
+  }
+  /**
+   * @return string
+   */
+  public function getAttachmentNamespace()
+  {
+    return $this->attachmentNamespace;
+  }
+  /**
+   * @param string
+   */
   public function setCreateTime($createTime)
   {
     $this->createTime = $createTime;
@@ -80,32 +100,18 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setFetchTime($fetchTime)
+  public function setFiles($files)
   {
-    $this->fetchTime = $fetchTime;
+    $this->files = $files;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getFetchTime()
+  public function getFiles()
   {
-    return $this->fetchTime;
-  }
-  /**
-   * @param Hash[]
-   */
-  public function setHashes($hashes)
-  {
-    $this->hashes = $hashes;
-  }
-  /**
-   * @return Hash[]
-   */
-  public function getHashes()
-  {
-    return $this->hashes;
+    return $this->files;
   }
   /**
    * @param string
@@ -124,30 +130,44 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
   /**
    * @param string
    */
-  public function setOwner($owner)
+  public function setOciVersionName($ociVersionName)
   {
-    $this->owner = $owner;
+    $this->ociVersionName = $ociVersionName;
   }
   /**
    * @return string
    */
-  public function getOwner()
+  public function getOciVersionName()
   {
-    return $this->owner;
+    return $this->ociVersionName;
   }
   /**
    * @param string
    */
-  public function setSizeBytes($sizeBytes)
+  public function setTarget($target)
   {
-    $this->sizeBytes = $sizeBytes;
+    $this->target = $target;
   }
   /**
    * @return string
    */
-  public function getSizeBytes()
+  public function getTarget()
   {
-    return $this->sizeBytes;
+    return $this->target;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
   /**
    * @param string
@@ -166,4 +186,4 @@ class GoogleDevtoolsArtifactregistryV1File extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleDevtoolsArtifactregistryV1File::class, 'Google_Service_ArtifactRegistry_GoogleDevtoolsArtifactregistryV1File');
+class_alias(Attachment::class, 'Google_Service_ArtifactRegistry_Attachment');

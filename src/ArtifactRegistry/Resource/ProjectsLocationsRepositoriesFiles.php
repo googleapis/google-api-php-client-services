@@ -21,6 +21,8 @@ use Google\Service\ArtifactRegistry\DownloadFileResponse;
 use Google\Service\ArtifactRegistry\GoogleDevtoolsArtifactregistryV1File;
 use Google\Service\ArtifactRegistry\ListFilesResponse;
 use Google\Service\ArtifactRegistry\Operation;
+use Google\Service\ArtifactRegistry\UploadFileMediaResponse;
+use Google\Service\ArtifactRegistry\UploadFileRequest;
 
 /**
  * The "files" collection of methods.
@@ -125,6 +127,45 @@ class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListFilesResponse::class);
+  }
+  /**
+   * Updates a file. (files.patch)
+   *
+   * @param string $name The name of the file, for example:
+   * `projects/p1/locations/us-central1/repositories/repo1/files/a%2Fb%2Fc.txt`.
+   * If the file ID part contains slashes, they are escaped.
+   * @param GoogleDevtoolsArtifactregistryV1File $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. The update mask applies to the
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
+   * buffers/docs/reference/google.protobuf#fieldmask
+   * @return GoogleDevtoolsArtifactregistryV1File
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleDevtoolsArtifactregistryV1File $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleDevtoolsArtifactregistryV1File::class);
+  }
+  /**
+   * Directly uploads a File to a repository. The returned Operation will complete
+   * once the resources are uploaded. (files.upload)
+   *
+   * @param string $parent Required. The resource name of the repository where the
+   * file will be uploaded.
+   * @param UploadFileRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return UploadFileMediaResponse
+   * @throws \Google\Service\Exception
+   */
+  public function upload($parent, UploadFileRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('upload', [$params], UploadFileMediaResponse::class);
   }
 }
 
