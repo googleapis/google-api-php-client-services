@@ -56,6 +56,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $machineConfigurationDataType = '';
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
+  /**
+   * @var string
+   */
+  public $primaryResourceLocation;
   protected $productType = StorageDatabasecenterProtoCommonProduct::class;
   protected $productDataType = '';
   /**
@@ -256,6 +260,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getPrimaryResourceId()
   {
     return $this->primaryResourceId;
+  }
+  /**
+   * @param string
+   */
+  public function setPrimaryResourceLocation($primaryResourceLocation)
+  {
+    $this->primaryResourceLocation = $primaryResourceLocation;
+  }
+  /**
+   * @return string
+   */
+  public function getPrimaryResourceLocation()
+  {
+    return $this->primaryResourceLocation;
   }
   /**
    * @param StorageDatabasecenterProtoCommonProduct
