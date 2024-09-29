@@ -520,6 +520,16 @@ class Storage extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'relocate' => [
+              'path' => 'b/{bucket}/relocate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'bucket' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'restore' => [
               'path' => 'b/{bucket}/restore',
               'httpMethod' => 'POST',
