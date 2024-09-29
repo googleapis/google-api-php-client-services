@@ -29,6 +29,10 @@ class PostgreSql extends \Google\Model
    * @var string
    */
   public $schemaValidation;
+  /**
+   * @var bool
+   */
+  public $unlinked;
 
   /**
    * @param CloudSqlInstance
@@ -71,6 +75,20 @@ class PostgreSql extends \Google\Model
   public function getSchemaValidation()
   {
     return $this->schemaValidation;
+  }
+  /**
+   * @param bool
+   */
+  public function setUnlinked($unlinked)
+  {
+    $this->unlinked = $unlinked;
+  }
+  /**
+   * @return bool
+   */
+  public function getUnlinked()
+  {
+    return $this->unlinked;
   }
 }
 
