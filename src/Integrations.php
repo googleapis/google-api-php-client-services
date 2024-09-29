@@ -675,7 +675,17 @@ class Integrations extends \Google\Service
         'executions',
         [
           'methods' => [
-            'download' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'download' => [
               'path' => 'v1/{+name}:download',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -785,6 +795,16 @@ class Integrations extends \Google\Service
                 'truncateParams' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],'replay' => [
+              'path' => 'v1/{+name}:replay',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
