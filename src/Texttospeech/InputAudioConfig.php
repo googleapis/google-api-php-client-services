@@ -17,62 +17,46 @@
 
 namespace Google\Service\Texttospeech;
 
-class SynthesisInput extends \Google\Model
+class InputAudioConfig extends \Google\Model
 {
-  protected $customPronunciationsType = CustomPronunciations::class;
-  protected $customPronunciationsDataType = '';
   /**
    * @var string
    */
-  public $ssml;
+  public $audioEncoding;
   /**
-   * @var string
+   * @var int
    */
-  public $text;
+  public $sampleRateHertz;
 
   /**
-   * @param CustomPronunciations
-   */
-  public function setCustomPronunciations(CustomPronunciations $customPronunciations)
-  {
-    $this->customPronunciations = $customPronunciations;
-  }
-  /**
-   * @return CustomPronunciations
-   */
-  public function getCustomPronunciations()
-  {
-    return $this->customPronunciations;
-  }
-  /**
    * @param string
    */
-  public function setSsml($ssml)
+  public function setAudioEncoding($audioEncoding)
   {
-    $this->ssml = $ssml;
+    $this->audioEncoding = $audioEncoding;
   }
   /**
    * @return string
    */
-  public function getSsml()
+  public function getAudioEncoding()
   {
-    return $this->ssml;
+    return $this->audioEncoding;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setText($text)
+  public function setSampleRateHertz($sampleRateHertz)
   {
-    $this->text = $text;
+    $this->sampleRateHertz = $sampleRateHertz;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getText()
+  public function getSampleRateHertz()
   {
-    return $this->text;
+    return $this->sampleRateHertz;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SynthesisInput::class, 'Google_Service_Texttospeech_SynthesisInput');
+class_alias(InputAudioConfig::class, 'Google_Service_Texttospeech_InputAudioConfig');

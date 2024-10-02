@@ -17,62 +17,64 @@
 
 namespace Google\Service\Texttospeech;
 
-class SynthesisInput extends \Google\Model
+class CustomPronunciationParams extends \Google\Model
 {
-  protected $customPronunciationsType = CustomPronunciations::class;
-  protected $customPronunciationsDataType = '';
   /**
    * @var string
    */
-  public $ssml;
+  public $phoneticEncoding;
   /**
    * @var string
    */
-  public $text;
+  public $phrase;
+  /**
+   * @var string
+   */
+  public $pronunciation;
 
   /**
-   * @param CustomPronunciations
-   */
-  public function setCustomPronunciations(CustomPronunciations $customPronunciations)
-  {
-    $this->customPronunciations = $customPronunciations;
-  }
-  /**
-   * @return CustomPronunciations
-   */
-  public function getCustomPronunciations()
-  {
-    return $this->customPronunciations;
-  }
-  /**
    * @param string
    */
-  public function setSsml($ssml)
+  public function setPhoneticEncoding($phoneticEncoding)
   {
-    $this->ssml = $ssml;
+    $this->phoneticEncoding = $phoneticEncoding;
   }
   /**
    * @return string
    */
-  public function getSsml()
+  public function getPhoneticEncoding()
   {
-    return $this->ssml;
+    return $this->phoneticEncoding;
   }
   /**
    * @param string
    */
-  public function setText($text)
+  public function setPhrase($phrase)
   {
-    $this->text = $text;
+    $this->phrase = $phrase;
   }
   /**
    * @return string
    */
-  public function getText()
+  public function getPhrase()
   {
-    return $this->text;
+    return $this->phrase;
+  }
+  /**
+   * @param string
+   */
+  public function setPronunciation($pronunciation)
+  {
+    $this->pronunciation = $pronunciation;
+  }
+  /**
+   * @return string
+   */
+  public function getPronunciation()
+  {
+    return $this->pronunciation;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SynthesisInput::class, 'Google_Service_Texttospeech_SynthesisInput');
+class_alias(CustomPronunciationParams::class, 'Google_Service_Texttospeech_CustomPronunciationParams');
