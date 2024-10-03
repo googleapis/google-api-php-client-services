@@ -87,7 +87,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_groundingConfigs;
-  public $projects_locations_identity_mapping_stores_operations;
+  public $projects_locations_identityMappingStores_operations;
   public $projects_locations_operations;
   public $projects_locations_rankingConfigs;
   public $projects_locations_userEvents;
@@ -2891,7 +2891,7 @@ class DiscoveryEngine extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_identity_mapping_stores_operations = new DiscoveryEngine\Resource\ProjectsLocationsIdentityMappingStoresOperations(
+    $this->projects_locations_identityMappingStores_operations = new DiscoveryEngine\Resource\ProjectsLocationsIdentityMappingStoresOperations(
         $this,
         $this->serviceName,
         'operations',
