@@ -437,21 +437,7 @@ class SecurityCommandCenter extends \Google\Service
         'muteConfigs',
         [
           'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/muteConfigs',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'muteConfigId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
+            'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
@@ -469,24 +455,6 @@ class SecurityCommandCenter extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'patch' => [
@@ -1329,21 +1297,7 @@ class SecurityCommandCenter extends \Google\Service
         'muteConfigs',
         [
           'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/muteConfigs',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'muteConfigId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
+            'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
@@ -1361,24 +1315,6 @@ class SecurityCommandCenter extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'patch' => [
@@ -2623,21 +2559,7 @@ class SecurityCommandCenter extends \Google\Service
         'muteConfigs',
         [
           'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/muteConfigs',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'muteConfigId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
+            'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
@@ -2655,24 +2577,6 @@ class SecurityCommandCenter extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'patch' => [

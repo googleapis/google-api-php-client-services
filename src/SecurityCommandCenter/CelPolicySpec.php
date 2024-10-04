@@ -17,46 +17,28 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class AzureResourceGroup extends \Google\Model
+class CelPolicySpec extends \Google\Model
 {
   /**
    * @var string
    */
-  public $id;
-  /**
-   * @var string
-   */
-  public $name;
+  public $spec;
 
   /**
    * @param string
    */
-  public function setId($id)
+  public function setSpec($spec)
   {
-    $this->id = $id;
+    $this->spec = $spec;
   }
   /**
    * @return string
    */
-  public function getId()
+  public function getSpec()
   {
-    return $this->id;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
+    return $this->spec;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AzureResourceGroup::class, 'Google_Service_SecurityCommandCenter_AzureResourceGroup');
+class_alias(CelPolicySpec::class, 'Google_Service_SecurityCommandCenter_CelPolicySpec');
