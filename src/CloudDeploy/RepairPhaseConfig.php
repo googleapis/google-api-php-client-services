@@ -17,46 +17,42 @@
 
 namespace Google\Service\CloudDeploy;
 
-class Rollback extends \Google\Model
+class RepairPhaseConfig extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $destinationPhase;
-  /**
-   * @var bool
-   */
-  public $disableRollbackIfRolloutPending;
+  protected $retryType = Retry::class;
+  protected $retryDataType = '';
+  protected $rollbackType = Rollback::class;
+  protected $rollbackDataType = '';
 
   /**
-   * @param string
+   * @param Retry
    */
-  public function setDestinationPhase($destinationPhase)
+  public function setRetry(Retry $retry)
   {
-    $this->destinationPhase = $destinationPhase;
+    $this->retry = $retry;
   }
   /**
-   * @return string
+   * @return Retry
    */
-  public function getDestinationPhase()
+  public function getRetry()
   {
-    return $this->destinationPhase;
+    return $this->retry;
   }
   /**
-   * @param bool
+   * @param Rollback
    */
-  public function setDisableRollbackIfRolloutPending($disableRollbackIfRolloutPending)
+  public function setRollback(Rollback $rollback)
   {
-    $this->disableRollbackIfRolloutPending = $disableRollbackIfRolloutPending;
+    $this->rollback = $rollback;
   }
   /**
-   * @return bool
+   * @return Rollback
    */
-  public function getDisableRollbackIfRolloutPending()
+  public function getRollback()
   {
-    return $this->disableRollbackIfRolloutPending;
+    return $this->rollback;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Rollback::class, 'Google_Service_CloudDeploy_Rollback');
+class_alias(RepairPhaseConfig::class, 'Google_Service_CloudDeploy_RepairPhaseConfig');
