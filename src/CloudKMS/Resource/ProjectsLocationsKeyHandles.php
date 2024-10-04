@@ -84,7 +84,7 @@ class ProjectsLocationsKeyHandles extends \Google\Service\Resource
    * to include in the response. The service may return fewer than this value.
    * Further KeyHandles can subsequently be obtained by including the
    * ListKeyHandlesResponse.next_page_token in a subsequent request. If
-   * unspecified, at most KeyHandles 100 will be returned.
+   * unspecified, at most 100 KeyHandles will be returned.
    * @opt_param string pageToken Optional. Optional pagination token, returned
    * earlier via ListKeyHandlesResponse.next_page_token.
    * @return ListKeyHandlesResponse
