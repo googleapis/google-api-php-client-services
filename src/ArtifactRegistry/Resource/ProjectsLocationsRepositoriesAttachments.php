@@ -33,7 +33,7 @@ class ProjectsLocationsRepositoriesAttachments extends \Google\Service\Resource
 {
   /**
    * Creates an attachment. The returned Operation will finish once the attachment
-   * has been created. Its response will be the created Attachment.
+   * has been created. Its response will be the created attachment.
    * (attachments.create)
    *
    * @param string $parent Required. The name of the parent resource where the
@@ -55,7 +55,7 @@ class ProjectsLocationsRepositoriesAttachments extends \Google\Service\Resource
   /**
    * Deletes an attachment. The returned Operation will finish once the
    * attachments has been deleted. It will not have any Operation metadata and
-   * will return a google.protobuf.Empty response. (attachments.delete)
+   * will return a `google.protobuf.Empty` response. (attachments.delete)
    *
    * @param string $name Required. The name of the attachment to delete.
    * @param array $optParams Optional parameters.
@@ -83,8 +83,7 @@ class ProjectsLocationsRepositoriesAttachments extends \Google\Service\Resource
     return $this->call('get', [$params], Attachment::class);
   }
   /**
-   * Lists repositories.
-   * (attachments.listProjectsLocationsRepositoriesAttachments)
+   * Lists attachments. (attachments.listProjectsLocationsRepositoriesAttachments)
    *
    * @param string $parent Required. The name of the parent resource whose
    * attachments will be listed.

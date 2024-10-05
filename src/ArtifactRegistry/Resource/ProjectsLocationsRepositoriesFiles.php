@@ -151,7 +151,7 @@ class ProjectsLocationsRepositoriesFiles extends \Google\Service\Resource
     return $this->call('patch', [$params], GoogleDevtoolsArtifactregistryV1File::class);
   }
   /**
-   * Directly uploads a File to a repository. The returned Operation will complete
+   * Directly uploads a file to a repository. The returned Operation will complete
    * once the resources are uploaded. (files.upload)
    *
    * @param string $parent Required. The resource name of the repository where the
