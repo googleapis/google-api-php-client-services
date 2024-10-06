@@ -204,6 +204,16 @@ class Apigee extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getControlPlaneAccess' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'getDeployedIngressConfig' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
@@ -296,6 +306,20 @@ class Apigee extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'updateControlPlaneAccess' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'updateSecuritySettings' => [
