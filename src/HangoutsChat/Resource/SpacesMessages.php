@@ -88,13 +88,13 @@ class SpacesMessages extends \Google\Service\Resource
   /**
    * Deletes a message. For an example, see [Delete a
    * message](https://developers.google.com/workspace/chat/delete-messages).
-   * Requires
+   * Supports the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). When using app authentication, requests can only delete
+   * authorize-chat-user) When using app authentication, requests can only delete
    * messages created by the calling Chat app. (messages.delete)
    *
    * @param string $name Required. Resource name of the message. Format:
@@ -123,13 +123,14 @@ class SpacesMessages extends \Google\Service\Resource
   }
   /**
    * Returns details about a message. For an example, see [Get details about a
-   * message](https://developers.google.com/workspace/chat/get-messages). Requires
+   * message](https://developers.google.com/workspace/chat/get-messages). Supports
+   * the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). Note: Might return a message from a blocked member or
+   * authorize-chat-user) Note: Might return a message from a blocked member or
    * space. (messages.get)
    *
    * @param string $name Required. Resource name of the message. Format:
@@ -213,13 +214,13 @@ class SpacesMessages extends \Google\Service\Resource
    * methods. The `patch` method uses a `patch` request while the `update` method
    * uses a `put` request. We recommend using the `patch` method. For an example,
    * see [Update a message](https://developers.google.com/workspace/chat/update-
-   * messages). Requires
+   * messages). Supports the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). When using app authentication, requests can only update
+   * authorize-chat-user) When using app authentication, requests can only update
    * messages created by the calling Chat app. (messages.patch)
    *
    * @param string $name Resource name of the message. Format:
@@ -261,13 +262,13 @@ class SpacesMessages extends \Google\Service\Resource
    * methods. The `patch` method uses a `patch` request while the `update` method
    * uses a `put` request. We recommend using the `patch` method. For an example,
    * see [Update a message](https://developers.google.com/workspace/chat/update-
-   * messages). Requires
+   * messages). Supports the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). When using app authentication, requests can only update
+   * authorize-chat-user) When using app authentication, requests can only update
    * messages created by the calling Chat app. (messages.update)
    *
    * @param string $name Resource name of the message. Format:

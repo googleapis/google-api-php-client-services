@@ -36,9 +36,15 @@ class SpacesMembers extends \Google\Service\Resource
    * membership, if the specified member has their auto-accept policy turned off,
    * then they're invited, and must accept the space invitation before joining.
    * Otherwise, creating a membership adds the member directly to the specified
-   * space. Requires [user
+   * space. Supports the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). For example usage, see: - [Invite or add a user to a
+   * authorize-chat-app) with [administrator
+   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+   * Preview](https://developers.google.com/workspace/preview) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) For example usage, see: - [Invite or add a user to a
    * space](https://developers.google.com/workspace/chat/create-members#create-
    * user-membership). - [Invite or add a Google Group to a
    * space](https://developers.google.com/workspace/chat/create-members#create-
@@ -72,9 +78,15 @@ class SpacesMembers extends \Google\Service\Resource
   /**
    * Deletes a membership. For an example, see [Remove a user or a Google Chat app
    * from a space](https://developers.google.com/workspace/chat/delete-members).
-   * Requires [user
+   * Supports the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (members.delete)
+   * authorize-chat-app) with [administrator
+   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+   * Preview](https://developers.google.com/workspace/preview) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) (members.delete)
    *
    * @param string $name Required. Resource name of the membership to delete. Chat
    * apps can delete human users' or their own memberships. Chat apps can't delete
@@ -108,24 +120,22 @@ class SpacesMembers extends \Google\Service\Resource
    * Returns details about a membership. For an example, see [Get details about a
    * user's or Google Chat app's
    * membership](https://developers.google.com/workspace/chat/get-members).
-   * Requires
+   * Supports the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (members.get)
+   * authorize-chat-user) (members.get)
    *
    * @param string $name Required. Resource name of the membership to retrieve. To
    * get the app's own membership [by using user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user), you can optionally use `spaces/{space}/members/app`.
-   * Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
-   * When [authenticated as a
-   * user](https://developers.google.com/workspace/chat/authenticate-authorize-
-   * chat-user), you can use the user's email as an alias for `{member}`. For
-   * example, `spaces/{space}/members/example@gmail.com` where `example@gmail.com`
-   * is the email of the Google Chat user.
+   * Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app` You
+   * can use the user's email as an alias for `{member}`. For example,
+   * `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
+   * email of the Google Chat user.
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool useAdminAccess When `true`, the method runs using the user's
@@ -155,13 +165,13 @@ class SpacesMembers extends \Google\Service\Resource
    * with [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user) lists memberships in spaces that the authenticated user
-   * has access to. Requires
+   * has access to. Supports the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (members.listSpacesMembers)
+   * authorize-chat-user) (members.listSpacesMembers)
    *
    * @param string $parent Required. The resource name of the space for which to
    * fetch a membership list. Format: spaces/{space}
@@ -222,10 +232,16 @@ class SpacesMembers extends \Google\Service\Resource
   }
   /**
    * Updates a membership. For an example, see [Update a user's membership in a
-   * space](https://developers.google.com/workspace/chat/update-members). Requires
-   * [user
+   * space](https://developers.google.com/workspace/chat/update-members). Supports
+   * the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (members.patch)
+   * authorize-chat-app) with [administrator
+   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+   * Preview](https://developers.google.com/workspace/preview) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) (members.patch)
    *
    * @param string $name Resource name of the membership, assigned by the server.
    * Format: `spaces/{space}/members/{member}`

@@ -65,9 +65,16 @@ class Spaces extends \Google\Service\Resource
    * organization might already use this display name. If you're a member of the
    * [Developer Preview program](https://developers.google.com/workspace/preview),
    * you can create a group chat in import mode using `spaceType.GROUP_CHAT`.
-   * Requires [user
+   * Supports the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaces.create)
+   * authorize-chat-app) with [administrator
+   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+   * Preview](https://developers.google.com/workspace/preview) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) When authenticating as an app, the `space.customer`
+   * field must be set in the request. (spaces.create)
    *
    * @param Space $postBody
    * @param array $optParams Optional parameters.
@@ -90,11 +97,16 @@ class Spaces extends \Google\Service\Resource
    * Deletes a named space. Always performs a cascading delete, which means that
    * the space's child resources—like messages posted in the space and memberships
    * in the space—are also deleted. For an example, see [Delete a
-   * space](https://developers.google.com/workspace/chat/delete-spaces). Requires
-   * [user
+   * space](https://developers.google.com/workspace/chat/delete-spaces). Supports
+   * the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) from a user who has permission to delete the space.
-   * (spaces.delete)
+   * authorize-chat-app) with [administrator
+   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+   * Preview](https://developers.google.com/workspace/preview) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) (spaces.delete)
    *
    * @param string $name Required. Resource name of the space to delete. Format:
    * `spaces/{space}`
@@ -120,17 +132,19 @@ class Spaces extends \Google\Service\Resource
    * Returns the existing direct message with the specified user. If no direct
    * message space is found, returns a `404 NOT_FOUND` error. For an example, see
    * [Find a direct message](/chat/api/guides/v1/spaces/find-direct-message). With
-   * [user
-   * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user), returns the direct message space between the specified
-   * user and the authenticated user. With [app
+   * [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app), returns the direct message space between the specified
-   * user and the calling Chat app. Requires [user
+   * user and the calling Chat app. With [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) or [app
+   * authorize-chat-user), returns the direct message space between the specified
+   * user and the authenticated user. // Supports the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app). (spaces.findDirectMessage)
+   * authorize-chat-app) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) (spaces.findDirectMessage)
    *
    * @param array $optParams Optional parameters.
    *
@@ -157,13 +171,14 @@ class Spaces extends \Google\Service\Resource
   }
   /**
    * Returns details about a space. For an example, see [Get details about a
-   * space](https://developers.google.com/workspace/chat/get-spaces). Requires
+   * space](https://developers.google.com/workspace/chat/get-spaces). Supports the
+   * following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaces.get)
+   * authorize-chat-user) (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form
    * `spaces/{space}`. Format: `spaces/{space}`
@@ -188,13 +203,14 @@ class Spaces extends \Google\Service\Resource
   /**
    * Lists spaces the caller is a member of. Group chats and DMs aren't listed
    * until the first message is sent. For an example, see [List
-   * spaces](https://developers.google.com/workspace/chat/list-spaces). Requires
+   * spaces](https://developers.google.com/workspace/chat/list-spaces). Supports
+   * the following types of
    * [authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize). Supports [app
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) and [user
+   * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). Lists spaces visible to the caller or authenticated
+   * authorize-chat-user) Lists spaces visible to the caller or authenticated
    * user. Group chats and DMs aren't listed until the first message is sent. To
    * list all named spaces by Google Workspace organization, use the [`spaces.sear
    * ch()`](https://developers.google.com/workspace/chat/api/reference/rest/v1/spa
@@ -235,10 +251,16 @@ class Spaces extends \Google\Service\Resource
    * space](https://developers.google.com/workspace/chat/update-spaces). If you're
    * updating the `displayName` field and receive the error message
    * `ALREADY_EXISTS`, try a different display name.. An existing space within the
-   * Google Workspace organization might already use this display name. Requires
-   * [user
+   * Google Workspace organization might already use this display name. Supports
+   * the following types of
+   * [authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaces.patch)
+   * authorize-chat-app) with [administrator
+   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
+   * Preview](https://developers.google.com/workspace/preview) - [User
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) (spaces.patch)
    *
    * @param string $name Resource name of the space. Format: `spaces/{space}`
    * Where `{space}` represents the system-assigned ID for the space. You can
