@@ -172,6 +172,8 @@ class ClusterUpdate extends \Google\Collection
   public $etag;
   protected $removedAdditionalPodRangesConfigType = AdditionalPodRangesConfig::class;
   protected $removedAdditionalPodRangesConfigDataType = '';
+  protected $userManagedKeysConfigType = UserManagedKeysConfig::class;
+  protected $userManagedKeysConfigDataType = '';
 
   /**
    * @param AdditionalPodRangesConfig
@@ -1012,6 +1014,20 @@ class ClusterUpdate extends \Google\Collection
   public function getRemovedAdditionalPodRangesConfig()
   {
     return $this->removedAdditionalPodRangesConfig;
+  }
+  /**
+   * @param UserManagedKeysConfig
+   */
+  public function setUserManagedKeysConfig(UserManagedKeysConfig $userManagedKeysConfig)
+  {
+    $this->userManagedKeysConfig = $userManagedKeysConfig;
+  }
+  /**
+   * @return UserManagedKeysConfig
+   */
+  public function getUserManagedKeysConfig()
+  {
+    return $this->userManagedKeysConfig;
   }
 }
 

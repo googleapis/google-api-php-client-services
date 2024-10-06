@@ -224,6 +224,8 @@ class Cluster extends \Google\Collection
    * @var string
    */
   public $tpuIpv4CidrBlock;
+  protected $userManagedKeysConfigType = UserManagedKeysConfig::class;
+  protected $userManagedKeysConfigDataType = '';
   protected $verticalPodAutoscalingType = VerticalPodAutoscaling::class;
   protected $verticalPodAutoscalingDataType = '';
   protected $workloadIdentityConfigType = WorkloadIdentityConfig::class;
@@ -1212,6 +1214,20 @@ class Cluster extends \Google\Collection
   public function getTpuIpv4CidrBlock()
   {
     return $this->tpuIpv4CidrBlock;
+  }
+  /**
+   * @param UserManagedKeysConfig
+   */
+  public function setUserManagedKeysConfig(UserManagedKeysConfig $userManagedKeysConfig)
+  {
+    $this->userManagedKeysConfig = $userManagedKeysConfig;
+  }
+  /**
+   * @return UserManagedKeysConfig
+   */
+  public function getUserManagedKeysConfig()
+  {
+    return $this->userManagedKeysConfig;
   }
   /**
    * @param VerticalPodAutoscaling
