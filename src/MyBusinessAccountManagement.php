@@ -36,7 +36,9 @@ use Google\Client;
  */
 class MyBusinessAccountManagement extends \Google\Service
 {
-
+  /** Business Profile Management. */
+  const BUSINESS_MANAGE =
+      "https://www.googleapis.com/auth/business.manage";
 
   public $accounts;
   public $accounts_admins;
