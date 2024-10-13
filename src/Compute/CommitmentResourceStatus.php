@@ -17,47 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class AuditLogConfig extends \Google\Collection
+class CommitmentResourceStatus extends \Google\Model
 {
-  protected $collection_key = 'exemptedMembers';
-  /**
-   * @var string[]
-   */
-  public $exemptedMembers;
   /**
    * @var string
    */
-  public $logType;
+  public $customTermEligibilityEndTimestamp;
 
-  /**
-   * @param string[]
-   */
-  public function setExemptedMembers($exemptedMembers)
-  {
-    $this->exemptedMembers = $exemptedMembers;
-  }
-  /**
-   * @return string[]
-   */
-  public function getExemptedMembers()
-  {
-    return $this->exemptedMembers;
-  }
   /**
    * @param string
    */
-  public function setLogType($logType)
+  public function setCustomTermEligibilityEndTimestamp($customTermEligibilityEndTimestamp)
   {
-    $this->logType = $logType;
+    $this->customTermEligibilityEndTimestamp = $customTermEligibilityEndTimestamp;
   }
   /**
    * @return string
    */
-  public function getLogType()
+  public function getCustomTermEligibilityEndTimestamp()
   {
-    return $this->logType;
+    return $this->customTermEligibilityEndTimestamp;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AuditLogConfig::class, 'Google_Service_Compute_AuditLogConfig');
+class_alias(CommitmentResourceStatus::class, 'Google_Service_Compute_CommitmentResourceStatus');

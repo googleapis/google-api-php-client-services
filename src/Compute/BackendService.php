@@ -83,6 +83,10 @@ class BackendService extends \Google\Collection
   /**
    * @var string
    */
+  public $ipAddressSelectionPolicy;
+  /**
+   * @var string
+   */
   public $kind;
   /**
    * @var string
@@ -424,6 +428,20 @@ class BackendService extends \Google\Collection
   public function getId()
   {
     return $this->id;
+  }
+  /**
+   * @param string
+   */
+  public function setIpAddressSelectionPolicy($ipAddressSelectionPolicy)
+  {
+    $this->ipAddressSelectionPolicy = $ipAddressSelectionPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getIpAddressSelectionPolicy()
+  {
+    return $this->ipAddressSelectionPolicy;
   }
   /**
    * @param string
