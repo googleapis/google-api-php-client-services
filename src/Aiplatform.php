@@ -65,6 +65,7 @@ class Aiplatform extends \Google\Service
   public $projects_locations_deploymentResourcePools;
   public $projects_locations_deploymentResourcePools_operations;
   public $projects_locations_endpoints;
+  public $projects_locations_endpoints_chat;
   public $projects_locations_endpoints_operations;
   public $projects_locations_featureGroups;
   public $projects_locations_featureGroups_features;
@@ -2014,6 +2015,26 @@ class Aiplatform extends \Google\Service
               ],
             ],'undeployModel' => [
               'path' => 'v1/{+endpoint}:undeployModel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_endpoints_chat = new Aiplatform\Resource\ProjectsLocationsEndpointsChat(
+        $this,
+        $this->serviceName,
+        'chat',
+        [
+          'methods' => [
+            'completions' => [
+              'path' => 'v1/{+endpoint}/chat/completions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'endpoint' => [

@@ -17,26 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GoogleSearchRetrieval extends \Google\Model
+class GoogleCloudAiplatformV1RetrievalMetadata extends \Google\Model
 {
-  protected $dynamicRetrievalConfigType = GoogleCloudAiplatformV1DynamicRetrievalConfig::class;
-  protected $dynamicRetrievalConfigDataType = '';
+  /**
+   * @var float
+   */
+  public $googleSearchDynamicRetrievalScore;
 
   /**
-   * @param GoogleCloudAiplatformV1DynamicRetrievalConfig
+   * @param float
    */
-  public function setDynamicRetrievalConfig(GoogleCloudAiplatformV1DynamicRetrievalConfig $dynamicRetrievalConfig)
+  public function setGoogleSearchDynamicRetrievalScore($googleSearchDynamicRetrievalScore)
   {
-    $this->dynamicRetrievalConfig = $dynamicRetrievalConfig;
+    $this->googleSearchDynamicRetrievalScore = $googleSearchDynamicRetrievalScore;
   }
   /**
-   * @return GoogleCloudAiplatformV1DynamicRetrievalConfig
+   * @return float
    */
-  public function getDynamicRetrievalConfig()
+  public function getGoogleSearchDynamicRetrievalScore()
   {
-    return $this->dynamicRetrievalConfig;
+    return $this->googleSearchDynamicRetrievalScore;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GoogleSearchRetrieval::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GoogleSearchRetrieval');
+class_alias(GoogleCloudAiplatformV1RetrievalMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RetrievalMetadata');
