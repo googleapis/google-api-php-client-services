@@ -147,8 +147,8 @@ class Subscriptions extends \Google\Service\Resource
    * subscription](https://developers.google.com/workspace/events/guides/update-
    * subscription). (subscriptions.patch)
    *
-   * @param string $name Optional. Immutable. Identifier. Resource name of the
-   * subscription. Format: `subscriptions/{subscription}`
+   * @param string $name Identifier. Resource name of the subscription. Format:
+   * `subscriptions/{subscription}`
    * @param Subscription $postBody
    * @param array $optParams Optional parameters.
    *
