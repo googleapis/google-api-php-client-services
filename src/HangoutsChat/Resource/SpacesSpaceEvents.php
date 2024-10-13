@@ -36,7 +36,9 @@ class SpacesSpaceEvents extends \Google\Service\Resource
    * Event.FIELDS.oneof_payload) contains the most recent version of the resource
    * that changed. For example, if you request an event about a new message but
    * the message was later updated, the server returns the updated `Message`
-   * resource in the event payload. Requires [user
+   * resource in the event payload. Note: The `permissionSettings` field is not
+   * returned in the Space object of the Space event data for this request.
+   * Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user). To get an event, the authenticated user must be a
    * member of the space. For an example, see [Get details about an event from a

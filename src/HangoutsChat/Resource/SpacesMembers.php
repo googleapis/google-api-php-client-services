@@ -44,7 +44,9 @@ class SpacesMembers extends \Google\Service\Resource
    * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
    * Preview](https://developers.google.com/workspace/preview) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) For example usage, see: - [Invite or add a user to a
+   * authorize-chat-user) You can authenticate and authorize this method with
+   * administrator privileges by setting the `use_admin_access` field in the
+   * request. For example usage, see: - [Invite or add a user to a
    * space](https://developers.google.com/workspace/chat/create-members#create-
    * user-membership). - [Invite or add a Google Group to a
    * space](https://developers.google.com/workspace/chat/create-members#create-
@@ -86,7 +88,9 @@ class SpacesMembers extends \Google\Service\Resource
    * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
    * Preview](https://developers.google.com/workspace/preview) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) (members.delete)
+   * authorize-chat-user) You can authenticate and authorize this method with
+   * administrator privileges by setting the `use_admin_access` field in the
+   * request. (members.delete)
    *
    * @param string $name Required. Resource name of the membership to delete. Chat
    * apps can delete human users' or their own memberships. Chat apps can't delete
@@ -126,7 +130,9 @@ class SpacesMembers extends \Google\Service\Resource
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) (members.get)
+   * authorize-chat-user) You can authenticate and authorize this method with
+   * administrator privileges by setting the `use_admin_access` field in the
+   * request. (members.get)
    *
    * @param string $name Required. Resource name of the membership to retrieve. To
    * get the app's own membership [by using user
@@ -171,7 +177,9 @@ class SpacesMembers extends \Google\Service\Resource
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) (members.listSpacesMembers)
+   * authorize-chat-user) You can authenticate and authorize this method with
+   * administrator privileges by setting the `use_admin_access` field in the
+   * request. (members.listSpacesMembers)
    *
    * @param string $parent Required. The resource name of the space for which to
    * fetch a membership list. Format: spaces/{space}
@@ -241,7 +249,9 @@ class SpacesMembers extends \Google\Service\Resource
    * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
    * Preview](https://developers.google.com/workspace/preview) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user) (members.patch)
+   * authorize-chat-user) You can authenticate and authorize this method with
+   * administrator privileges by setting the `use_admin_access` field in the
+   * request. (members.patch)
    *
    * @param string $name Resource name of the membership, assigned by the server.
    * Format: `spaces/{space}/members/{member}`

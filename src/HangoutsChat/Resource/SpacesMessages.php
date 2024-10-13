@@ -34,13 +34,16 @@ class SpacesMessages extends \Google\Service\Resource
   /**
    * Creates a message in a Google Chat space. For an example, see [Send a
    * message](https://developers.google.com/workspace/chat/create-messages). The
-   * `create()` method requires either user or app authentication. Chat attributes
-   * the message sender differently depending on the type of authentication that
-   * you use in your request. The following image shows how Chat attributes a
-   * message when you use app authentication. Chat displays the Chat app as the
-   * message sender. The content of the message can contain text (`text`), cards
-   * (`cardsV2`), and accessory widgets (`accessoryWidgets`). ![Message sent with
-   * app
+   * `create()` method requires either [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-
+   * authorize-chat-user) or [app
+   * authentication](https://developers.google.com/workspace/chat/authorize-
+   * import). Chat attributes the message sender differently depending on the type
+   * of authentication that you use in your request. The following image shows how
+   * Chat attributes a message when you use app authentication. Chat displays the
+   * Chat app as the message sender. The content of the message can contain text
+   * (`text`), cards (`cardsV2`), and accessory widgets (`accessoryWidgets`).
+   * ![Message sent with app
    * authentication](https://developers.google.com/workspace/chat/images/message-
    * app-auth.svg) The following image shows how Chat attributes a message when
    * you use user authentication. Chat displays the user as the message sender and
