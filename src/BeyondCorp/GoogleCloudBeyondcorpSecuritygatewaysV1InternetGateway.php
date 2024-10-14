@@ -17,26 +17,29 @@
 
 namespace Google\Service\BeyondCorp;
 
-class GoogleCloudBeyondcorpSecuritygatewaysV1Hub extends \Google\Model
+class GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway extends \Google\Collection
 {
-  protected $internetGatewayType = GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway::class;
-  protected $internetGatewayDataType = '';
+  protected $collection_key = 'assignedIps';
+  /**
+   * @var string[]
+   */
+  public $assignedIps;
 
   /**
-   * @param GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway
+   * @param string[]
    */
-  public function setInternetGateway(GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway $internetGateway)
+  public function setAssignedIps($assignedIps)
   {
-    $this->internetGateway = $internetGateway;
+    $this->assignedIps = $assignedIps;
   }
   /**
-   * @return GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway
+   * @return string[]
    */
-  public function getInternetGateway()
+  public function getAssignedIps()
   {
-    return $this->internetGateway;
+    return $this->assignedIps;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudBeyondcorpSecuritygatewaysV1Hub::class, 'Google_Service_BeyondCorp_GoogleCloudBeyondcorpSecuritygatewaysV1Hub');
+class_alias(GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway::class, 'Google_Service_BeyondCorp_GoogleCloudBeyondcorpSecuritygatewaysV1InternetGateway');
