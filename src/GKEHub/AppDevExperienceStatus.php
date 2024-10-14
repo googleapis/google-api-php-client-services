@@ -17,44 +17,46 @@
 
 namespace Google\Service\GKEHub;
 
-class IdentityServiceIdentityServiceOptions extends \Google\Model
+class AppDevExperienceStatus extends \Google\Model
 {
-  protected $diagnosticInterfaceType = IdentityServiceDiagnosticInterface::class;
-  protected $diagnosticInterfaceDataType = '';
   /**
    * @var string
    */
-  public $sessionDuration;
+  public $code;
+  /**
+   * @var string
+   */
+  public $description;
 
-  /**
-   * @param IdentityServiceDiagnosticInterface
-   */
-  public function setDiagnosticInterface(IdentityServiceDiagnosticInterface $diagnosticInterface)
-  {
-    $this->diagnosticInterface = $diagnosticInterface;
-  }
-  /**
-   * @return IdentityServiceDiagnosticInterface
-   */
-  public function getDiagnosticInterface()
-  {
-    return $this->diagnosticInterface;
-  }
   /**
    * @param string
    */
-  public function setSessionDuration($sessionDuration)
+  public function setCode($code)
   {
-    $this->sessionDuration = $sessionDuration;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getSessionDuration()
+  public function getCode()
   {
-    return $this->sessionDuration;
+    return $this->code;
+  }
+  /**
+   * @param string
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(IdentityServiceIdentityServiceOptions::class, 'Google_Service_GKEHub_IdentityServiceIdentityServiceOptions');
+class_alias(AppDevExperienceStatus::class, 'Google_Service_GKEHub_AppDevExperienceStatus');

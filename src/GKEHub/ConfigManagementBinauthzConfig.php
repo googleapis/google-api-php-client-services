@@ -15,19 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub\Resource;
+namespace Google\Service\GKEHub;
 
-/**
- * The "memberships" collection of methods.
- * Typical usage is:
- *  <code>
- *   $gkehubService = new Google\Service\GKEHub(...);
- *   $memberships = $gkehubService->projects_locations_memberships;
- *  </code>
- */
-class ProjectsLocationsMemberships extends \Google\Service\Resource
+class ConfigManagementBinauthzConfig extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $enabled;
+
+  /**
+   * @param bool
+   */
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnabled()
+  {
+    return $this->enabled;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsMemberships::class, 'Google_Service_GKEHub_Resource_ProjectsLocationsMemberships');
+class_alias(ConfigManagementBinauthzConfig::class, 'Google_Service_GKEHub_ConfigManagementBinauthzConfig');

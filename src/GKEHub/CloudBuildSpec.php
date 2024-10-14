@@ -17,44 +17,46 @@
 
 namespace Google\Service\GKEHub;
 
-class IdentityServiceIdentityServiceOptions extends \Google\Model
+class CloudBuildSpec extends \Google\Model
 {
-  protected $diagnosticInterfaceType = IdentityServiceDiagnosticInterface::class;
-  protected $diagnosticInterfaceDataType = '';
   /**
    * @var string
    */
-  public $sessionDuration;
+  public $securityPolicy;
+  /**
+   * @var string
+   */
+  public $version;
 
-  /**
-   * @param IdentityServiceDiagnosticInterface
-   */
-  public function setDiagnosticInterface(IdentityServiceDiagnosticInterface $diagnosticInterface)
-  {
-    $this->diagnosticInterface = $diagnosticInterface;
-  }
-  /**
-   * @return IdentityServiceDiagnosticInterface
-   */
-  public function getDiagnosticInterface()
-  {
-    return $this->diagnosticInterface;
-  }
   /**
    * @param string
    */
-  public function setSessionDuration($sessionDuration)
+  public function setSecurityPolicy($securityPolicy)
   {
-    $this->sessionDuration = $sessionDuration;
+    $this->securityPolicy = $securityPolicy;
   }
   /**
    * @return string
    */
-  public function getSessionDuration()
+  public function getSecurityPolicy()
   {
-    return $this->sessionDuration;
+    return $this->securityPolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setVersion($version)
+  {
+    $this->version = $version;
+  }
+  /**
+   * @return string
+   */
+  public function getVersion()
+  {
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(IdentityServiceIdentityServiceOptions::class, 'Google_Service_GKEHub_IdentityServiceIdentityServiceOptions');
+class_alias(CloudBuildSpec::class, 'Google_Service_GKEHub_CloudBuildSpec');

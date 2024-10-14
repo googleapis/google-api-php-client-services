@@ -17,82 +17,64 @@
 
 namespace Google\Service\GKEHub;
 
-class ServiceMeshSpec extends \Google\Model
+class State extends \Google\Model
 {
   /**
    * @var string
    */
-  public $configApi;
+  public $code;
   /**
    * @var string
    */
-  public $controlPlane;
+  public $description;
   /**
    * @var string
    */
-  public $defaultChannel;
-  /**
-   * @var string
-   */
-  public $management;
+  public $updateTime;
 
   /**
    * @param string
    */
-  public function setConfigApi($configApi)
+  public function setCode($code)
   {
-    $this->configApi = $configApi;
+    $this->code = $code;
   }
   /**
    * @return string
    */
-  public function getConfigApi()
+  public function getCode()
   {
-    return $this->configApi;
+    return $this->code;
   }
   /**
    * @param string
    */
-  public function setControlPlane($controlPlane)
+  public function setDescription($description)
   {
-    $this->controlPlane = $controlPlane;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getControlPlane()
+  public function getDescription()
   {
-    return $this->controlPlane;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setDefaultChannel($defaultChannel)
+  public function setUpdateTime($updateTime)
   {
-    $this->defaultChannel = $defaultChannel;
+    $this->updateTime = $updateTime;
   }
   /**
    * @return string
    */
-  public function getDefaultChannel()
+  public function getUpdateTime()
   {
-    return $this->defaultChannel;
-  }
-  /**
-   * @param string
-   */
-  public function setManagement($management)
-  {
-    $this->management = $management;
-  }
-  /**
-   * @return string
-   */
-  public function getManagement()
-  {
-    return $this->management;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceMeshSpec::class, 'Google_Service_GKEHub_ServiceMeshSpec');
+class_alias(State::class, 'Google_Service_GKEHub_State');

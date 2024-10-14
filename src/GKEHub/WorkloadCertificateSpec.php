@@ -15,19 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub\Resource;
+namespace Google\Service\GKEHub;
 
-/**
- * The "memberships" collection of methods.
- * Typical usage is:
- *  <code>
- *   $gkehubService = new Google\Service\GKEHub(...);
- *   $memberships = $gkehubService->projects_locations_memberships;
- *  </code>
- */
-class ProjectsLocationsMemberships extends \Google\Service\Resource
+class WorkloadCertificateSpec extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $certificateManagement;
+
+  /**
+   * @param string
+   */
+  public function setCertificateManagement($certificateManagement)
+  {
+    $this->certificateManagement = $certificateManagement;
+  }
+  /**
+   * @return string
+   */
+  public function getCertificateManagement()
+  {
+    return $this->certificateManagement;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsMemberships::class, 'Google_Service_GKEHub_Resource_ProjectsLocationsMemberships');
+class_alias(WorkloadCertificateSpec::class, 'Google_Service_GKEHub_WorkloadCertificateSpec');

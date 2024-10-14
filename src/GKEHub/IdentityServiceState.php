@@ -17,82 +17,80 @@
 
 namespace Google\Service\GKEHub;
 
-class ServiceMeshSpec extends \Google\Model
+class IdentityServiceState extends \Google\Model
 {
   /**
    * @var string
    */
-  public $configApi;
+  public $failureReason;
   /**
    * @var string
    */
-  public $controlPlane;
+  public $installedVersion;
+  protected $memberConfigType = IdentityServiceSpec::class;
+  protected $memberConfigDataType = '';
   /**
    * @var string
    */
-  public $defaultChannel;
-  /**
-   * @var string
-   */
-  public $management;
+  public $state;
 
   /**
    * @param string
    */
-  public function setConfigApi($configApi)
+  public function setFailureReason($failureReason)
   {
-    $this->configApi = $configApi;
+    $this->failureReason = $failureReason;
   }
   /**
    * @return string
    */
-  public function getConfigApi()
+  public function getFailureReason()
   {
-    return $this->configApi;
+    return $this->failureReason;
   }
   /**
    * @param string
    */
-  public function setControlPlane($controlPlane)
+  public function setInstalledVersion($installedVersion)
   {
-    $this->controlPlane = $controlPlane;
+    $this->installedVersion = $installedVersion;
   }
   /**
    * @return string
    */
-  public function getControlPlane()
+  public function getInstalledVersion()
   {
-    return $this->controlPlane;
+    return $this->installedVersion;
+  }
+  /**
+   * @param IdentityServiceSpec
+   */
+  public function setMemberConfig(IdentityServiceSpec $memberConfig)
+  {
+    $this->memberConfig = $memberConfig;
+  }
+  /**
+   * @return IdentityServiceSpec
+   */
+  public function getMemberConfig()
+  {
+    return $this->memberConfig;
   }
   /**
    * @param string
    */
-  public function setDefaultChannel($defaultChannel)
+  public function setState($state)
   {
-    $this->defaultChannel = $defaultChannel;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getDefaultChannel()
+  public function getState()
   {
-    return $this->defaultChannel;
-  }
-  /**
-   * @param string
-   */
-  public function setManagement($management)
-  {
-    $this->management = $management;
-  }
-  /**
-   * @return string
-   */
-  public function getManagement()
-  {
-    return $this->management;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceMeshSpec::class, 'Google_Service_GKEHub_ServiceMeshSpec');
+class_alias(IdentityServiceState::class, 'Google_Service_GKEHub_IdentityServiceState');

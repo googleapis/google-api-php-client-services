@@ -17,44 +17,44 @@
 
 namespace Google\Service\GKEHub;
 
-class IdentityServiceIdentityServiceOptions extends \Google\Model
+class PolicyControllerSpec extends \Google\Model
 {
-  protected $diagnosticInterfaceType = IdentityServiceDiagnosticInterface::class;
-  protected $diagnosticInterfaceDataType = '';
+  protected $policyControllerHubConfigType = PolicyControllerHubConfig::class;
+  protected $policyControllerHubConfigDataType = '';
   /**
    * @var string
    */
-  public $sessionDuration;
+  public $version;
 
   /**
-   * @param IdentityServiceDiagnosticInterface
+   * @param PolicyControllerHubConfig
    */
-  public function setDiagnosticInterface(IdentityServiceDiagnosticInterface $diagnosticInterface)
+  public function setPolicyControllerHubConfig(PolicyControllerHubConfig $policyControllerHubConfig)
   {
-    $this->diagnosticInterface = $diagnosticInterface;
+    $this->policyControllerHubConfig = $policyControllerHubConfig;
   }
   /**
-   * @return IdentityServiceDiagnosticInterface
+   * @return PolicyControllerHubConfig
    */
-  public function getDiagnosticInterface()
+  public function getPolicyControllerHubConfig()
   {
-    return $this->diagnosticInterface;
+    return $this->policyControllerHubConfig;
   }
   /**
    * @param string
    */
-  public function setSessionDuration($sessionDuration)
+  public function setVersion($version)
   {
-    $this->sessionDuration = $sessionDuration;
+    $this->version = $version;
   }
   /**
    * @return string
    */
-  public function getSessionDuration()
+  public function getVersion()
   {
-    return $this->sessionDuration;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(IdentityServiceIdentityServiceOptions::class, 'Google_Service_GKEHub_IdentityServiceIdentityServiceOptions');
+class_alias(PolicyControllerSpec::class, 'Google_Service_GKEHub_PolicyControllerSpec');

@@ -17,82 +17,64 @@
 
 namespace Google\Service\GKEHub;
 
-class ServiceMeshSpec extends \Google\Model
+class FeatureConfigRef extends \Google\Model
 {
   /**
    * @var string
    */
-  public $configApi;
+  public $config;
   /**
    * @var string
    */
-  public $controlPlane;
+  public $configUpdateTime;
   /**
    * @var string
    */
-  public $defaultChannel;
-  /**
-   * @var string
-   */
-  public $management;
+  public $uuid;
 
   /**
    * @param string
    */
-  public function setConfigApi($configApi)
+  public function setConfig($config)
   {
-    $this->configApi = $configApi;
+    $this->config = $config;
   }
   /**
    * @return string
    */
-  public function getConfigApi()
+  public function getConfig()
   {
-    return $this->configApi;
+    return $this->config;
   }
   /**
    * @param string
    */
-  public function setControlPlane($controlPlane)
+  public function setConfigUpdateTime($configUpdateTime)
   {
-    $this->controlPlane = $controlPlane;
+    $this->configUpdateTime = $configUpdateTime;
   }
   /**
    * @return string
    */
-  public function getControlPlane()
+  public function getConfigUpdateTime()
   {
-    return $this->controlPlane;
+    return $this->configUpdateTime;
   }
   /**
    * @param string
    */
-  public function setDefaultChannel($defaultChannel)
+  public function setUuid($uuid)
   {
-    $this->defaultChannel = $defaultChannel;
+    $this->uuid = $uuid;
   }
   /**
    * @return string
    */
-  public function getDefaultChannel()
+  public function getUuid()
   {
-    return $this->defaultChannel;
-  }
-  /**
-   * @param string
-   */
-  public function setManagement($management)
-  {
-    $this->management = $management;
-  }
-  /**
-   * @return string
-   */
-  public function getManagement()
-  {
-    return $this->management;
+    return $this->uuid;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceMeshSpec::class, 'Google_Service_GKEHub_ServiceMeshSpec');
+class_alias(FeatureConfigRef::class, 'Google_Service_GKEHub_FeatureConfigRef');

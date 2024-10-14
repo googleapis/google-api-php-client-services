@@ -17,44 +17,44 @@
 
 namespace Google\Service\GKEHub;
 
-class IdentityServiceIdentityServiceOptions extends \Google\Model
+class ConfigManagementBinauthzState extends \Google\Model
 {
-  protected $diagnosticInterfaceType = IdentityServiceDiagnosticInterface::class;
-  protected $diagnosticInterfaceDataType = '';
+  protected $versionType = ConfigManagementBinauthzVersion::class;
+  protected $versionDataType = '';
   /**
    * @var string
    */
-  public $sessionDuration;
+  public $webhook;
 
   /**
-   * @param IdentityServiceDiagnosticInterface
+   * @param ConfigManagementBinauthzVersion
    */
-  public function setDiagnosticInterface(IdentityServiceDiagnosticInterface $diagnosticInterface)
+  public function setVersion(ConfigManagementBinauthzVersion $version)
   {
-    $this->diagnosticInterface = $diagnosticInterface;
+    $this->version = $version;
   }
   /**
-   * @return IdentityServiceDiagnosticInterface
+   * @return ConfigManagementBinauthzVersion
    */
-  public function getDiagnosticInterface()
+  public function getVersion()
   {
-    return $this->diagnosticInterface;
+    return $this->version;
   }
   /**
    * @param string
    */
-  public function setSessionDuration($sessionDuration)
+  public function setWebhook($webhook)
   {
-    $this->sessionDuration = $sessionDuration;
+    $this->webhook = $webhook;
   }
   /**
    * @return string
    */
-  public function getSessionDuration()
+  public function getWebhook()
   {
-    return $this->sessionDuration;
+    return $this->webhook;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(IdentityServiceIdentityServiceOptions::class, 'Google_Service_GKEHub_IdentityServiceIdentityServiceOptions');
+class_alias(ConfigManagementBinauthzState::class, 'Google_Service_GKEHub_ConfigManagementBinauthzState');

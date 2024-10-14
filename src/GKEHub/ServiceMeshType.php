@@ -15,19 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\GKEHub\Resource;
+namespace Google\Service\GKEHub;
 
-/**
- * The "memberships" collection of methods.
- * Typical usage is:
- *  <code>
- *   $gkehubService = new Google\Service\GKEHub(...);
- *   $memberships = $gkehubService->projects_locations_memberships;
- *  </code>
- */
-class ProjectsLocationsMemberships extends \Google\Service\Resource
+class ServiceMeshType extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $code;
+  /**
+   * @var string
+   */
+  public $displayName;
+
+  /**
+   * @param string
+   */
+  public function setCode($code)
+  {
+    $this->code = $code;
+  }
+  /**
+   * @return string
+   */
+  public function getCode()
+  {
+    return $this->code;
+  }
+  /**
+   * @param string
+   */
+  public function setDisplayName($displayName)
+  {
+    $this->displayName = $displayName;
+  }
+  /**
+   * @return string
+   */
+  public function getDisplayName()
+  {
+    return $this->displayName;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsMemberships::class, 'Google_Service_GKEHub_Resource_ProjectsLocationsMemberships');
+class_alias(ServiceMeshType::class, 'Google_Service_GKEHub_ServiceMeshType');
