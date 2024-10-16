@@ -19,7 +19,7 @@ namespace Google\Service\Spanner;
 
 class Instance extends \Google\Collection
 {
-  protected $collection_key = 'endpointUris';
+  protected $collection_key = 'replicaComputeCapacity';
   protected $autoscalingConfigType = AutoscalingConfig::class;
   protected $autoscalingConfigDataType = '';
   /**
@@ -64,6 +64,8 @@ class Instance extends \Google\Collection
    * @var int
    */
   public $processingUnits;
+  protected $replicaComputeCapacityType = ReplicaComputeCapacity::class;
+  protected $replicaComputeCapacityDataType = 'array';
   /**
    * @var string
    */
@@ -240,6 +242,20 @@ class Instance extends \Google\Collection
   public function getProcessingUnits()
   {
     return $this->processingUnits;
+  }
+  /**
+   * @param ReplicaComputeCapacity[]
+   */
+  public function setReplicaComputeCapacity($replicaComputeCapacity)
+  {
+    $this->replicaComputeCapacity = $replicaComputeCapacity;
+  }
+  /**
+   * @return ReplicaComputeCapacity[]
+   */
+  public function getReplicaComputeCapacity()
+  {
+    return $this->replicaComputeCapacity;
   }
   /**
    * @param string

@@ -17,30 +17,15 @@
 
 namespace Google\Service\Spanner;
 
-class AutoscalingConfig extends \Google\Collection
+class AutoscalingConfigOverrides extends \Google\Model
 {
-  protected $collection_key = 'asymmetricAutoscalingOptions';
-  protected $asymmetricAutoscalingOptionsType = AsymmetricAutoscalingOption::class;
-  protected $asymmetricAutoscalingOptionsDataType = 'array';
   protected $autoscalingLimitsType = AutoscalingLimits::class;
   protected $autoscalingLimitsDataType = '';
-  protected $autoscalingTargetsType = AutoscalingTargets::class;
-  protected $autoscalingTargetsDataType = '';
+  /**
+   * @var int
+   */
+  public $autoscalingTargetHighPriorityCpuUtilizationPercent;
 
-  /**
-   * @param AsymmetricAutoscalingOption[]
-   */
-  public function setAsymmetricAutoscalingOptions($asymmetricAutoscalingOptions)
-  {
-    $this->asymmetricAutoscalingOptions = $asymmetricAutoscalingOptions;
-  }
-  /**
-   * @return AsymmetricAutoscalingOption[]
-   */
-  public function getAsymmetricAutoscalingOptions()
-  {
-    return $this->asymmetricAutoscalingOptions;
-  }
   /**
    * @param AutoscalingLimits
    */
@@ -56,20 +41,20 @@ class AutoscalingConfig extends \Google\Collection
     return $this->autoscalingLimits;
   }
   /**
-   * @param AutoscalingTargets
+   * @param int
    */
-  public function setAutoscalingTargets(AutoscalingTargets $autoscalingTargets)
+  public function setAutoscalingTargetHighPriorityCpuUtilizationPercent($autoscalingTargetHighPriorityCpuUtilizationPercent)
   {
-    $this->autoscalingTargets = $autoscalingTargets;
+    $this->autoscalingTargetHighPriorityCpuUtilizationPercent = $autoscalingTargetHighPriorityCpuUtilizationPercent;
   }
   /**
-   * @return AutoscalingTargets
+   * @return int
    */
-  public function getAutoscalingTargets()
+  public function getAutoscalingTargetHighPriorityCpuUtilizationPercent()
   {
-    return $this->autoscalingTargets;
+    return $this->autoscalingTargetHighPriorityCpuUtilizationPercent;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AutoscalingConfig::class, 'Google_Service_Spanner_AutoscalingConfig');
+class_alias(AutoscalingConfigOverrides::class, 'Google_Service_Spanner_AutoscalingConfigOverrides');
