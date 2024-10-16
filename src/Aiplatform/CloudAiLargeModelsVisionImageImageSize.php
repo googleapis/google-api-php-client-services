@@ -17,46 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureViewSyncConfig extends \Google\Model
+class CloudAiLargeModelsVisionImageImageSize extends \Google\Model
 {
   /**
-   * @var bool
+   * @var int
    */
-  public $continuous;
+  public $channels;
   /**
-   * @var string
+   * @var int
    */
-  public $cron;
+  public $height;
+  /**
+   * @var int
+   */
+  public $width;
 
   /**
-   * @param bool
+   * @param int
    */
-  public function setContinuous($continuous)
+  public function setChannels($channels)
   {
-    $this->continuous = $continuous;
+    $this->channels = $channels;
   }
   /**
-   * @return bool
+   * @return int
    */
-  public function getContinuous()
+  public function getChannels()
   {
-    return $this->continuous;
+    return $this->channels;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setCron($cron)
+  public function setHeight($height)
   {
-    $this->cron = $cron;
+    $this->height = $height;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getCron()
+  public function getHeight()
   {
-    return $this->cron;
+    return $this->height;
+  }
+  /**
+   * @param int
+   */
+  public function setWidth($width)
+  {
+    $this->width = $width;
+  }
+  /**
+   * @return int
+   */
+  public function getWidth()
+  {
+    return $this->width;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureViewSyncConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewSyncConfig');
+class_alias(CloudAiLargeModelsVisionImageImageSize::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionImageImageSize');

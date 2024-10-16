@@ -17,46 +17,26 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureViewSyncConfig extends \Google\Model
+class GoogleCloudAiplatformV1SchemaPromptInstanceVariableValue extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $continuous;
-  /**
-   * @var string
-   */
-  public $cron;
+  protected $partListType = GoogleCloudAiplatformV1SchemaPromptSpecPartList::class;
+  protected $partListDataType = '';
 
   /**
-   * @param bool
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecPartList
    */
-  public function setContinuous($continuous)
+  public function setPartList(GoogleCloudAiplatformV1SchemaPromptSpecPartList $partList)
   {
-    $this->continuous = $continuous;
+    $this->partList = $partList;
   }
   /**
-   * @return bool
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecPartList
    */
-  public function getContinuous()
+  public function getPartList()
   {
-    return $this->continuous;
-  }
-  /**
-   * @param string
-   */
-  public function setCron($cron)
-  {
-    $this->cron = $cron;
-  }
-  /**
-   * @return string
-   */
-  public function getCron()
-  {
-    return $this->cron;
+    return $this->partList;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureViewSyncConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewSyncConfig');
+class_alias(GoogleCloudAiplatformV1SchemaPromptInstanceVariableValue::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SchemaPromptInstanceVariableValue');

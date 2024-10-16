@@ -17,46 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureViewSyncConfig extends \Google\Model
+class GoogleCloudAiplatformV1PscInterfaceConfig extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $continuous;
-  /**
-   * @var string
-   */
-  public $cron;
-
-  /**
-   * @param bool
-   */
-  public function setContinuous($continuous)
-  {
-    $this->continuous = $continuous;
-  }
-  /**
-   * @return bool
-   */
-  public function getContinuous()
-  {
-    return $this->continuous;
-  }
-  /**
-   * @param string
-   */
-  public function setCron($cron)
-  {
-    $this->cron = $cron;
-  }
-  /**
-   * @return string
-   */
-  public function getCron()
-  {
-    return $this->cron;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureViewSyncConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewSyncConfig');
+class_alias(GoogleCloudAiplatformV1PscInterfaceConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PscInterfaceConfig');

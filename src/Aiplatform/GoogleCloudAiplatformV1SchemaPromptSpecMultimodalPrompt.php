@@ -17,46 +17,26 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FeatureViewSyncConfig extends \Google\Model
+class GoogleCloudAiplatformV1SchemaPromptSpecMultimodalPrompt extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $continuous;
-  /**
-   * @var string
-   */
-  public $cron;
+  protected $promptMessageType = GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage::class;
+  protected $promptMessageDataType = '';
 
   /**
-   * @param bool
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage
    */
-  public function setContinuous($continuous)
+  public function setPromptMessage(GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage $promptMessage)
   {
-    $this->continuous = $continuous;
+    $this->promptMessage = $promptMessage;
   }
   /**
-   * @return bool
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage
    */
-  public function getContinuous()
+  public function getPromptMessage()
   {
-    return $this->continuous;
-  }
-  /**
-   * @param string
-   */
-  public function setCron($cron)
-  {
-    $this->cron = $cron;
-  }
-  /**
-   * @return string
-   */
-  public function getCron()
-  {
-    return $this->cron;
+    return $this->promptMessage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1FeatureViewSyncConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1FeatureViewSyncConfig');
+class_alias(GoogleCloudAiplatformV1SchemaPromptSpecMultimodalPrompt::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SchemaPromptSpecMultimodalPrompt');

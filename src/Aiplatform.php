@@ -2217,7 +2217,17 @@ class Aiplatform extends \Google\Service
         'features',
         [
           'methods' => [
-            'create' => [
+            'batchCreate' => [
+              'path' => 'v1/{+parent}/features:batchCreate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/features',
               'httpMethod' => 'POST',
               'parameters' => [
