@@ -22,6 +22,8 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
   protected $collection_key = 'solutionTypes';
   protected $billingEstimationType = GoogleCloudDiscoveryengineV1DataStoreBillingEstimation::class;
   protected $billingEstimationDataType = '';
+  protected $cmekConfigType = GoogleCloudDiscoveryengineV1CmekConfig::class;
+  protected $cmekConfigDataType = '';
   /**
    * @var string
    */
@@ -44,6 +46,10 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
    * @var string
    */
   public $industryVertical;
+  /**
+   * @var string
+   */
+  public $kmsKeyName;
   /**
    * @var string
    */
@@ -72,6 +78,20 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
   public function getBillingEstimation()
   {
     return $this->billingEstimation;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1CmekConfig
+   */
+  public function setCmekConfig(GoogleCloudDiscoveryengineV1CmekConfig $cmekConfig)
+  {
+    $this->cmekConfig = $cmekConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1CmekConfig
+   */
+  public function getCmekConfig()
+  {
+    return $this->cmekConfig;
   }
   /**
    * @param string
@@ -156,6 +176,20 @@ class GoogleCloudDiscoveryengineV1DataStore extends \Google\Collection
   public function getIndustryVertical()
   {
     return $this->industryVertical;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
   }
   /**
    * @param string

@@ -22,6 +22,8 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   protected $collection_key = 'solutionTypes';
   protected $billingEstimationType = GoogleCloudDiscoveryengineV1betaDataStoreBillingEstimation::class;
   protected $billingEstimationDataType = '';
+  protected $cmekConfigType = GoogleCloudDiscoveryengineV1betaCmekConfig::class;
+  protected $cmekConfigDataType = '';
   /**
    * @var string
    */
@@ -44,6 +46,10 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
    * @var string
    */
   public $industryVertical;
+  /**
+   * @var string
+   */
+  public $kmsKeyName;
   protected $languageInfoType = GoogleCloudDiscoveryengineV1betaLanguageInfo::class;
   protected $languageInfoDataType = '';
   /**
@@ -76,6 +82,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getBillingEstimation()
   {
     return $this->billingEstimation;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaCmekConfig
+   */
+  public function setCmekConfig(GoogleCloudDiscoveryengineV1betaCmekConfig $cmekConfig)
+  {
+    $this->cmekConfig = $cmekConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaCmekConfig
+   */
+  public function getCmekConfig()
+  {
+    return $this->cmekConfig;
   }
   /**
    * @param string
@@ -160,6 +180,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getIndustryVertical()
   {
     return $this->industryVertical;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKeyName($kmsKeyName)
+  {
+    $this->kmsKeyName = $kmsKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKeyName()
+  {
+    return $this->kmsKeyName;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaLanguageInfo
