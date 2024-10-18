@@ -18,10 +18,12 @@
 namespace Google\Service\DeveloperConnect\Resource;
 
 use Google\Service\DeveloperConnect\Connection;
+use Google\Service\DeveloperConnect\DeveloperconnectEmpty;
 use Google\Service\DeveloperConnect\FetchGitHubInstallationsResponse;
 use Google\Service\DeveloperConnect\FetchLinkableGitRepositoriesResponse;
 use Google\Service\DeveloperConnect\ListConnectionsResponse;
 use Google\Service\DeveloperConnect\Operation;
+use Google\Service\DeveloperConnect\ProcessGitHubEnterpriseWebhookRequest;
 
 /**
  * The "connections" collection of methods.
@@ -212,6 +214,23 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * ProcessGitHubEnterpriseWebhook is called by the external GitHub Enterprise
+   * instances for notifying events. (connections.processGitHubEnterpriseWebhook)
+   *
+   * @param string $parent Required. Project and location where the webhook will
+   * be received. Format: `projects/locations`.
+   * @param ProcessGitHubEnterpriseWebhookRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DeveloperconnectEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function processGitHubEnterpriseWebhook($parent, ProcessGitHubEnterpriseWebhookRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('processGitHubEnterpriseWebhook', [$params], DeveloperconnectEmpty::class);
   }
 }
 
