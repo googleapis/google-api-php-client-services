@@ -58,6 +58,7 @@ class FilesAccessproposals extends \Google\Service\Resource
    *
    * @opt_param string action Required. The action to take on the AccessProposal.
    * @opt_param string role Optional. The roles the approver has allowed, if any.
+   * Note: This field is required for the `ACCEPT` action.
    * @opt_param bool sendNotification Optional. Whether to send an email to the
    * requester when the AccessProposal is denied or accepted.
    * @opt_param string view Optional. Indicates the view for this access proposal.
