@@ -55,6 +55,7 @@ class BeyondCorp extends \Google\Service
   public $projects_locations_operations;
   public $projects_locations_securityGateways;
   public $projects_locations_securityGateways_applications;
+  public $v_projects_locations_securityGateways;
   public $rootUrlTemplate;
 
   /**
@@ -908,6 +909,16 @@ class BeyondCorp extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -1026,6 +1037,20 @@ class BeyondCorp extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/securityGateways',
               'httpMethod' => 'GET',
@@ -1080,6 +1105,16 @@ class BeyondCorp extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -1118,6 +1153,20 @@ class BeyondCorp extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/applications',
               'httpMethod' => 'GET',
@@ -1142,6 +1191,36 @@ class BeyondCorp extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->v_projects_locations_securityGateways = new BeyondCorp\Resource\VProjectsLocationsSecurityGateways(
+        $this,
+        $this->serviceName,
+        'securityGateways',
+        [
+          'methods' => [
+            'setIamPolicy' => [
+              'path' => 'v/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
