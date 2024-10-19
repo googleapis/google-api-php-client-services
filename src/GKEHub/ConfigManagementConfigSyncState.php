@@ -20,6 +20,10 @@ namespace Google\Service\GKEHub;
 class ConfigManagementConfigSyncState extends \Google\Collection
 {
   protected $collection_key = 'errors';
+  /**
+   * @var string
+   */
+  public $clusterLevelStopSyncingState;
   protected $deploymentStateType = ConfigManagementConfigSyncDeploymentState::class;
   protected $deploymentStateDataType = '';
   protected $errorsType = ConfigManagementConfigSyncError::class;
@@ -41,6 +45,20 @@ class ConfigManagementConfigSyncState extends \Google\Collection
   protected $versionType = ConfigManagementConfigSyncVersion::class;
   protected $versionDataType = '';
 
+  /**
+   * @param string
+   */
+  public function setClusterLevelStopSyncingState($clusterLevelStopSyncingState)
+  {
+    $this->clusterLevelStopSyncingState = $clusterLevelStopSyncingState;
+  }
+  /**
+   * @return string
+   */
+  public function getClusterLevelStopSyncingState()
+  {
+    return $this->clusterLevelStopSyncingState;
+  }
   /**
    * @param ConfigManagementConfigSyncDeploymentState
    */
