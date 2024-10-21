@@ -19,7 +19,7 @@ namespace Google\Service\WorkloadManager;
 
 class Execution extends \Google\Collection
 {
-  protected $collection_key = 'externalDataSources';
+  protected $collection_key = 'ruleResults';
   /**
    * @var string
    */
@@ -42,6 +42,8 @@ class Execution extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $ruleResultsType = RuleExecutionResult::class;
+  protected $ruleResultsDataType = 'array';
   /**
    * @var string
    */
@@ -138,6 +140,20 @@ class Execution extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param RuleExecutionResult[]
+   */
+  public function setRuleResults($ruleResults)
+  {
+    $this->ruleResults = $ruleResults;
+  }
+  /**
+   * @return RuleExecutionResult[]
+   */
+  public function getRuleResults()
+  {
+    return $this->ruleResults;
   }
   /**
    * @param string
