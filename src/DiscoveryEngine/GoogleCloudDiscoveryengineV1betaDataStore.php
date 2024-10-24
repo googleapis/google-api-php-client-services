@@ -20,6 +20,8 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
 {
   protected $collection_key = 'solutionTypes';
+  protected $advancedSiteSearchConfigType = GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig::class;
+  protected $advancedSiteSearchConfigDataType = '';
   protected $billingEstimationType = GoogleCloudDiscoveryengineV1betaDataStoreBillingEstimation::class;
   protected $billingEstimationDataType = '';
   protected $cmekConfigType = GoogleCloudDiscoveryengineV1betaCmekConfig::class;
@@ -58,7 +60,7 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public $name;
   protected $naturalLanguageQueryUnderstandingConfigType = GoogleCloudDiscoveryengineV1betaNaturalLanguageQueryUnderstandingConfig::class;
   protected $naturalLanguageQueryUnderstandingConfigDataType = '';
-  protected $servingConfigDataStoreType = GoogleCloudDiscoveryengineV1betaServingConfigDataStore::class;
+  protected $servingConfigDataStoreType = GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore::class;
   protected $servingConfigDataStoreDataType = '';
   /**
    * @var string[]
@@ -69,6 +71,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   protected $workspaceConfigType = GoogleCloudDiscoveryengineV1betaWorkspaceConfig::class;
   protected $workspaceConfigDataType = '';
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig
+   */
+  public function setAdvancedSiteSearchConfig(GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig $advancedSiteSearchConfig)
+  {
+    $this->advancedSiteSearchConfig = $advancedSiteSearchConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaAdvancedSiteSearchConfig
+   */
+  public function getAdvancedSiteSearchConfig()
+  {
+    return $this->advancedSiteSearchConfig;
+  }
   /**
    * @param GoogleCloudDiscoveryengineV1betaDataStoreBillingEstimation
    */
@@ -238,14 +254,14 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
     return $this->naturalLanguageQueryUnderstandingConfig;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1betaServingConfigDataStore
+   * @param GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore
    */
-  public function setServingConfigDataStore(GoogleCloudDiscoveryengineV1betaServingConfigDataStore $servingConfigDataStore)
+  public function setServingConfigDataStore(GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore $servingConfigDataStore)
   {
     $this->servingConfigDataStore = $servingConfigDataStore;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1betaServingConfigDataStore
+   * @return GoogleCloudDiscoveryengineV1betaDataStoreServingConfigDataStore
    */
   public function getServingConfigDataStore()
   {
