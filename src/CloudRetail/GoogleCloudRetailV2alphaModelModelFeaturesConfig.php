@@ -21,8 +21,6 @@ class GoogleCloudRetailV2alphaModelModelFeaturesConfig extends \Google\Model
 {
   protected $frequentlyBoughtTogetherConfigType = GoogleCloudRetailV2alphaModelFrequentlyBoughtTogetherFeaturesConfig::class;
   protected $frequentlyBoughtTogetherConfigDataType = '';
-  protected $llmEmbeddingConfigType = GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig::class;
-  protected $llmEmbeddingConfigDataType = '';
 
   /**
    * @param GoogleCloudRetailV2alphaModelFrequentlyBoughtTogetherFeaturesConfig
@@ -37,20 +35,6 @@ class GoogleCloudRetailV2alphaModelModelFeaturesConfig extends \Google\Model
   public function getFrequentlyBoughtTogetherConfig()
   {
     return $this->frequentlyBoughtTogetherConfig;
-  }
-  /**
-   * @param GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig
-   */
-  public function setLlmEmbeddingConfig(GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig $llmEmbeddingConfig)
-  {
-    $this->llmEmbeddingConfig = $llmEmbeddingConfig;
-  }
-  /**
-   * @return GoogleCloudRetailV2alphaModelModelFeaturesConfigLlmEmbeddingConfig
-   */
-  public function getLlmEmbeddingConfig()
-  {
-    return $this->llmEmbeddingConfig;
   }
 }
 
