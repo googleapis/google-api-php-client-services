@@ -52,7 +52,8 @@ class Instances extends \Google\Service\Resource
    * for the specified instance. There can be up to three sets of certs listed:
    * the certificate that is currently in use, a future that has been added but
    * not yet used to sign a certificate, and a certificate that has been rotated
-   * out. (instances.ListServerCertificates)
+   * out. For instances not using Certificate Authority Service (CAS) server CA,
+   * use ListServerCas instead. (instances.ListServerCertificates)
    *
    * @param string $project Required. Project ID of the project that contains the
    * instance.
