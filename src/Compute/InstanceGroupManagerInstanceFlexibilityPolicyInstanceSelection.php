@@ -17,63 +17,47 @@
 
 namespace Google\Service\Compute;
 
-class Binding extends \Google\Collection
+class InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection extends \Google\Collection
 {
-  protected $collection_key = 'members';
-  protected $conditionType = Expr::class;
-  protected $conditionDataType = '';
+  protected $collection_key = 'machineTypes';
   /**
    * @var string[]
    */
-  public $members;
+  public $machineTypes;
   /**
-   * @var string
+   * @var int
    */
-  public $role;
+  public $rank;
 
-  /**
-   * @param Expr
-   */
-  public function setCondition(Expr $condition)
-  {
-    $this->condition = $condition;
-  }
-  /**
-   * @return Expr
-   */
-  public function getCondition()
-  {
-    return $this->condition;
-  }
   /**
    * @param string[]
    */
-  public function setMembers($members)
+  public function setMachineTypes($machineTypes)
   {
-    $this->members = $members;
+    $this->machineTypes = $machineTypes;
   }
   /**
    * @return string[]
    */
-  public function getMembers()
+  public function getMachineTypes()
   {
-    return $this->members;
+    return $this->machineTypes;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setRole($role)
+  public function setRank($rank)
   {
-    $this->role = $role;
+    $this->rank = $rank;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getRole()
+  public function getRank()
   {
-    return $this->role;
+    return $this->rank;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Binding::class, 'Google_Service_Compute_Binding');
+class_alias(InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection::class, 'Google_Service_Compute_InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection');
