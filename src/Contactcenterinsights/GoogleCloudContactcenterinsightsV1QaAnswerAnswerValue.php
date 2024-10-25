@@ -31,7 +31,9 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
    * @var bool
    */
   public $naValue;
+  public $normalizedScore;
   public $numValue;
+  public $potentialScore;
   public $score;
   /**
    * @var string
@@ -80,6 +82,14 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
   {
     return $this->naValue;
   }
+  public function setNormalizedScore($normalizedScore)
+  {
+    $this->normalizedScore = $normalizedScore;
+  }
+  public function getNormalizedScore()
+  {
+    return $this->normalizedScore;
+  }
   public function setNumValue($numValue)
   {
     $this->numValue = $numValue;
@@ -87,6 +97,14 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
   public function getNumValue()
   {
     return $this->numValue;
+  }
+  public function setPotentialScore($potentialScore)
+  {
+    $this->potentialScore = $potentialScore;
+  }
+  public function getPotentialScore()
+  {
+    return $this->potentialScore;
   }
   public function setScore($score)
   {
