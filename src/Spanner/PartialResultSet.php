@@ -26,8 +26,6 @@ class PartialResultSet extends \Google\Collection
   public $chunkedValue;
   protected $metadataType = ResultSetMetadata::class;
   protected $metadataDataType = '';
-  protected $precommitTokenType = MultiplexedSessionPrecommitToken::class;
-  protected $precommitTokenDataType = '';
   /**
    * @var string
    */
@@ -66,20 +64,6 @@ class PartialResultSet extends \Google\Collection
   public function getMetadata()
   {
     return $this->metadata;
-  }
-  /**
-   * @param MultiplexedSessionPrecommitToken
-   */
-  public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
-  {
-    $this->precommitToken = $precommitToken;
-  }
-  /**
-   * @return MultiplexedSessionPrecommitToken
-   */
-  public function getPrecommitToken()
-  {
-    return $this->precommitToken;
   }
   /**
    * @param string

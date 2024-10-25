@@ -25,8 +25,6 @@ class CommitResponse extends \Google\Model
    * @var string
    */
   public $commitTimestamp;
-  protected $precommitTokenType = MultiplexedSessionPrecommitToken::class;
-  protected $precommitTokenDataType = '';
 
   /**
    * @param CommitStats
@@ -55,20 +53,6 @@ class CommitResponse extends \Google\Model
   public function getCommitTimestamp()
   {
     return $this->commitTimestamp;
-  }
-  /**
-   * @param MultiplexedSessionPrecommitToken
-   */
-  public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
-  {
-    $this->precommitToken = $precommitToken;
-  }
-  /**
-   * @return MultiplexedSessionPrecommitToken
-   */
-  public function getPrecommitToken()
-  {
-    return $this->precommitToken;
   }
 }
 

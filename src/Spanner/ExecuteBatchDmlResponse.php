@@ -20,27 +20,11 @@ namespace Google\Service\Spanner;
 class ExecuteBatchDmlResponse extends \Google\Collection
 {
   protected $collection_key = 'resultSets';
-  protected $precommitTokenType = MultiplexedSessionPrecommitToken::class;
-  protected $precommitTokenDataType = '';
   protected $resultSetsType = ResultSet::class;
   protected $resultSetsDataType = 'array';
   protected $statusType = Status::class;
   protected $statusDataType = '';
 
-  /**
-   * @param MultiplexedSessionPrecommitToken
-   */
-  public function setPrecommitToken(MultiplexedSessionPrecommitToken $precommitToken)
-  {
-    $this->precommitToken = $precommitToken;
-  }
-  /**
-   * @return MultiplexedSessionPrecommitToken
-   */
-  public function getPrecommitToken()
-  {
-    return $this->precommitToken;
-  }
   /**
    * @param ResultSet[]
    */
