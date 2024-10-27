@@ -17,46 +17,27 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1TextParagraph extends \Google\Model
+class GoogleAppsCardV1OverflowMenu extends \Google\Collection
 {
-  /**
-   * @var int
-   */
-  public $maxLines;
-  /**
-   * @var string
-   */
-  public $text;
+  protected $collection_key = 'items';
+  protected $itemsType = GoogleAppsCardV1OverflowMenuItem::class;
+  protected $itemsDataType = 'array';
 
   /**
-   * @param int
+   * @param GoogleAppsCardV1OverflowMenuItem[]
    */
-  public function setMaxLines($maxLines)
+  public function setItems($items)
   {
-    $this->maxLines = $maxLines;
+    $this->items = $items;
   }
   /**
-   * @return int
+   * @return GoogleAppsCardV1OverflowMenuItem[]
    */
-  public function getMaxLines()
+  public function getItems()
   {
-    return $this->maxLines;
-  }
-  /**
-   * @param string
-   */
-  public function setText($text)
-  {
-    $this->text = $text;
-  }
-  /**
-   * @return string
-   */
-  public function getText()
-  {
-    return $this->text;
+    return $this->items;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAppsCardV1TextParagraph::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1TextParagraph');
+class_alias(GoogleAppsCardV1OverflowMenu::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1OverflowMenu');

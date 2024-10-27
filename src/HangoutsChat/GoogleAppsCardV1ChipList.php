@@ -17,46 +17,45 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1TextParagraph extends \Google\Model
+class GoogleAppsCardV1ChipList extends \Google\Collection
 {
-  /**
-   * @var int
-   */
-  public $maxLines;
+  protected $collection_key = 'chips';
+  protected $chipsType = GoogleAppsCardV1Chip::class;
+  protected $chipsDataType = 'array';
   /**
    * @var string
    */
-  public $text;
+  public $layout;
 
   /**
-   * @param int
+   * @param GoogleAppsCardV1Chip[]
    */
-  public function setMaxLines($maxLines)
+  public function setChips($chips)
   {
-    $this->maxLines = $maxLines;
+    $this->chips = $chips;
   }
   /**
-   * @return int
+   * @return GoogleAppsCardV1Chip[]
    */
-  public function getMaxLines()
+  public function getChips()
   {
-    return $this->maxLines;
+    return $this->chips;
   }
   /**
    * @param string
    */
-  public function setText($text)
+  public function setLayout($layout)
   {
-    $this->text = $text;
+    $this->layout = $layout;
   }
   /**
    * @return string
    */
-  public function getText()
+  public function getLayout()
   {
-    return $this->text;
+    return $this->layout;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAppsCardV1TextParagraph::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1TextParagraph');
+class_alias(GoogleAppsCardV1ChipList::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1ChipList');

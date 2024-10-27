@@ -17,59 +17,21 @@
 
 namespace Google\Service\HangoutsChat;
 
-class GoogleAppsCardV1Button extends \Google\Model
+class GoogleAppsCardV1OverflowMenuItem extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $altText;
-  protected $colorType = Color::class;
-  protected $colorDataType = '';
   /**
    * @var bool
    */
   public $disabled;
-  protected $iconType = GoogleAppsCardV1Icon::class;
-  protected $iconDataType = '';
   protected $onClickType = GoogleAppsCardV1OnClick::class;
   protected $onClickDataType = '';
+  protected $startIconType = GoogleAppsCardV1Icon::class;
+  protected $startIconDataType = '';
   /**
    * @var string
    */
   public $text;
-  /**
-   * @var string
-   */
-  public $type;
 
-  /**
-   * @param string
-   */
-  public function setAltText($altText)
-  {
-    $this->altText = $altText;
-  }
-  /**
-   * @return string
-   */
-  public function getAltText()
-  {
-    return $this->altText;
-  }
-  /**
-   * @param Color
-   */
-  public function setColor(Color $color)
-  {
-    $this->color = $color;
-  }
-  /**
-   * @return Color
-   */
-  public function getColor()
-  {
-    return $this->color;
-  }
   /**
    * @param bool
    */
@@ -83,20 +45,6 @@ class GoogleAppsCardV1Button extends \Google\Model
   public function getDisabled()
   {
     return $this->disabled;
-  }
-  /**
-   * @param GoogleAppsCardV1Icon
-   */
-  public function setIcon(GoogleAppsCardV1Icon $icon)
-  {
-    $this->icon = $icon;
-  }
-  /**
-   * @return GoogleAppsCardV1Icon
-   */
-  public function getIcon()
-  {
-    return $this->icon;
   }
   /**
    * @param GoogleAppsCardV1OnClick
@@ -113,6 +61,20 @@ class GoogleAppsCardV1Button extends \Google\Model
     return $this->onClick;
   }
   /**
+   * @param GoogleAppsCardV1Icon
+   */
+  public function setStartIcon(GoogleAppsCardV1Icon $startIcon)
+  {
+    $this->startIcon = $startIcon;
+  }
+  /**
+   * @return GoogleAppsCardV1Icon
+   */
+  public function getStartIcon()
+  {
+    return $this->startIcon;
+  }
+  /**
    * @param string
    */
   public function setText($text)
@@ -126,21 +88,7 @@ class GoogleAppsCardV1Button extends \Google\Model
   {
     return $this->text;
   }
-  /**
-   * @param string
-   */
-  public function setType($type)
-  {
-    $this->type = $type;
-  }
-  /**
-   * @return string
-   */
-  public function getType()
-  {
-    return $this->type;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleAppsCardV1Button::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1Button');
+class_alias(GoogleAppsCardV1OverflowMenuItem::class, 'Google_Service_HangoutsChat_GoogleAppsCardV1OverflowMenuItem');
