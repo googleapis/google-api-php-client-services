@@ -24,6 +24,10 @@ class ConfigManagementConfigSyncState extends \Google\Collection
    * @var string
    */
   public $clusterLevelStopSyncingState;
+  /**
+   * @var int
+   */
+  public $crCount;
   protected $deploymentStateType = ConfigManagementConfigSyncDeploymentState::class;
   protected $deploymentStateDataType = '';
   protected $errorsType = ConfigManagementConfigSyncError::class;
@@ -58,6 +62,20 @@ class ConfigManagementConfigSyncState extends \Google\Collection
   public function getClusterLevelStopSyncingState()
   {
     return $this->clusterLevelStopSyncingState;
+  }
+  /**
+   * @param int
+   */
+  public function setCrCount($crCount)
+  {
+    $this->crCount = $crCount;
+  }
+  /**
+   * @return int
+   */
+  public function getCrCount()
+  {
+    return $this->crCount;
   }
   /**
    * @param ConfigManagementConfigSyncDeploymentState
