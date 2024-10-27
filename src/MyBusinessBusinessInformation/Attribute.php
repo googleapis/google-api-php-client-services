@@ -33,7 +33,7 @@ class Attribute extends \Google\Collection
    */
   public $valueType;
   /**
-   * @var array[]
+   * @var (bool|string)[]
    */
   public $values;
 
@@ -94,14 +94,14 @@ class Attribute extends \Google\Collection
     return $this->valueType;
   }
   /**
-   * @param array[]
+   * @param (bool|string)[]
    */
   public function setValues($values)
   {
     $this->values = $values;
   }
   /**
-   * @return array[]
+   * @return (bool|string)[]
    */
   public function getValues()
   {
