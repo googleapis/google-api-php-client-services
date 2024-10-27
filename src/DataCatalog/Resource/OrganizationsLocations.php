@@ -18,6 +18,7 @@
 namespace Google\Service\DataCatalog\Resource;
 
 use Google\Service\DataCatalog\GoogleCloudDatacatalogV1MigrationConfig;
+use Google\Service\DataCatalog\GoogleCloudDatacatalogV1OrganizationConfig;
 use Google\Service\DataCatalog\GoogleCloudDatacatalogV1SetConfigRequest;
 
 /**
@@ -25,11 +26,28 @@ use Google\Service\DataCatalog\GoogleCloudDatacatalogV1SetConfigRequest;
  * Typical usage is:
  *  <code>
  *   $datacatalogService = new Google\Service\DataCatalog(...);
- *   $locations = $datacatalogService->projects_locations;
+ *   $locations = $datacatalogService->organizations_locations;
  *  </code>
  */
-class ProjectsLocations extends \Google\Service\Resource
+class OrganizationsLocations extends \Google\Service\Resource
 {
+  /**
+   * Retrieves the configuration related to the migration from Data Catalog to
+   * Dataplex for a specific organization, including all the projects under it
+   * which have a separate configuration set. (locations.retrieveConfig)
+   *
+   * @param string $name Required. The organization whose config is being
+   * retrieved.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDatacatalogV1OrganizationConfig
+   * @throws \Google\Service\Exception
+   */
+  public function retrieveConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('retrieveConfig', [$params], GoogleCloudDatacatalogV1OrganizationConfig::class);
+  }
   /**
    * Retrieves the effective configuration related to the migration from Data
    * Catalog to Dataplex for a specific organization or project. If there is no
@@ -69,4 +87,4 @@ class ProjectsLocations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_DataCatalog_Resource_ProjectsLocations');
+class_alias(OrganizationsLocations::class, 'Google_Service_DataCatalog_Resource_OrganizationsLocations');
