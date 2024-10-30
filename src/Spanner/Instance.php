@@ -33,6 +33,10 @@ class Instance extends \Google\Collection
   /**
    * @var string
    */
+  public $defaultBackupScheduleType;
+  /**
+   * @var string
+   */
   public $displayName;
   /**
    * @var string
@@ -116,6 +120,20 @@ class Instance extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDefaultBackupScheduleType($defaultBackupScheduleType)
+  {
+    $this->defaultBackupScheduleType = $defaultBackupScheduleType;
+  }
+  /**
+   * @return string
+   */
+  public function getDefaultBackupScheduleType()
+  {
+    return $this->defaultBackupScheduleType;
   }
   /**
    * @param string
