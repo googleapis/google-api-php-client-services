@@ -84,6 +84,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $goodForWatchingSports;
+  protected $googleMapsLinksType = GoogleMapsPlacesV1PlaceGoogleMapsLinks::class;
+  protected $googleMapsLinksDataType = '';
   /**
    * @var string
    */
@@ -535,6 +537,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getGoodForWatchingSports()
   {
     return $this->goodForWatchingSports;
+  }
+  /**
+   * @param GoogleMapsPlacesV1PlaceGoogleMapsLinks
+   */
+  public function setGoogleMapsLinks(GoogleMapsPlacesV1PlaceGoogleMapsLinks $googleMapsLinks)
+  {
+    $this->googleMapsLinks = $googleMapsLinks;
+  }
+  /**
+   * @return GoogleMapsPlacesV1PlaceGoogleMapsLinks
+   */
+  public function getGoogleMapsLinks()
+  {
+    return $this->googleMapsLinks;
   }
   /**
    * @param string
