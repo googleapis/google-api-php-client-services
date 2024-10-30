@@ -955,6 +955,16 @@ class DiscoveryEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'searchLite' => [
+              'path' => 'v1/{+servingConfig}:searchLite',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -1705,6 +1715,16 @@ class DiscoveryEngine extends \Google\Service
               ],
             ],'search' => [
               'path' => 'v1/{+servingConfig}:search',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'searchLite' => [
+              'path' => 'v1/{+servingConfig}:searchLite',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -2561,6 +2581,16 @@ class DiscoveryEngine extends \Google\Service
               ],
             ],'search' => [
               'path' => 'v1/{+servingConfig}:search',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'searchLite' => [
+              'path' => 'v1/{+servingConfig}:searchLite',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
