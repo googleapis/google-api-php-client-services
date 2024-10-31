@@ -17,31 +17,13 @@
 
 namespace Google\Service\Container;
 
-class EnterpriseConfig extends \Google\Model
+class DesiredEnterpriseConfig extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $clusterTier;
   /**
    * @var string
    */
   public $desiredTier;
 
-  /**
-   * @param string
-   */
-  public function setClusterTier($clusterTier)
-  {
-    $this->clusterTier = $clusterTier;
-  }
-  /**
-   * @return string
-   */
-  public function getClusterTier()
-  {
-    return $this->clusterTier;
-  }
   /**
    * @param string
    */
@@ -59,4 +41,4 @@ class EnterpriseConfig extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EnterpriseConfig::class, 'Google_Service_Container_EnterpriseConfig');
+class_alias(DesiredEnterpriseConfig::class, 'Google_Service_Container_DesiredEnterpriseConfig');
