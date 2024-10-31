@@ -19,11 +19,19 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Collection
 {
-  protected $collection_key = 'outputPrefixes';
+  protected $collection_key = 'predictionInputs';
   protected $contextType = GoogleCloudAiplatformV1Content::class;
   protected $contextDataType = '';
   protected $examplesType = GoogleCloudAiplatformV1SchemaPromptSpecPartList::class;
   protected $examplesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $infillPrefix;
+  /**
+   * @var string
+   */
+  public $infillSuffix;
   /**
    * @var string[]
    */
@@ -32,6 +40,8 @@ class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Co
    * @var string[]
    */
   public $outputPrefixes;
+  protected $predictionInputsType = GoogleCloudAiplatformV1SchemaPromptSpecPartList::class;
+  protected $predictionInputsDataType = 'array';
   protected $promptMessageType = GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage::class;
   protected $promptMessageDataType = '';
 
@@ -64,6 +74,34 @@ class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Co
     return $this->examples;
   }
   /**
+   * @param string
+   */
+  public function setInfillPrefix($infillPrefix)
+  {
+    $this->infillPrefix = $infillPrefix;
+  }
+  /**
+   * @return string
+   */
+  public function getInfillPrefix()
+  {
+    return $this->infillPrefix;
+  }
+  /**
+   * @param string
+   */
+  public function setInfillSuffix($infillSuffix)
+  {
+    $this->infillSuffix = $infillSuffix;
+  }
+  /**
+   * @return string
+   */
+  public function getInfillSuffix()
+  {
+    return $this->infillSuffix;
+  }
+  /**
    * @param string[]
    */
   public function setInputPrefixes($inputPrefixes)
@@ -90,6 +128,20 @@ class GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt extends \Google\Co
   public function getOutputPrefixes()
   {
     return $this->outputPrefixes;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecPartList[]
+   */
+  public function setPredictionInputs($predictionInputs)
+  {
+    $this->predictionInputs = $predictionInputs;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecPartList[]
+   */
+  public function getPredictionInputs()
+  {
+    return $this->predictionInputs;
   }
   /**
    * @param GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage
