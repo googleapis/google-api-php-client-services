@@ -17,82 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiLargeModelsVisionVideo extends \Google\Model
+class GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource extends \Google\Model
 {
   /**
    * @var string
    */
-  public $encodedVideo;
+  public $content;
   /**
    * @var string
    */
-  public $encoding;
+  public $displayName;
   /**
    * @var string
    */
-  public $uri;
-  /**
-   * @var string
-   */
-  public $video;
+  public $mimeType;
 
   /**
    * @param string
    */
-  public function setEncodedVideo($encodedVideo)
+  public function setContent($content)
   {
-    $this->encodedVideo = $encodedVideo;
+    $this->content = $content;
   }
   /**
    * @return string
    */
-  public function getEncodedVideo()
+  public function getContent()
   {
-    return $this->encodedVideo;
+    return $this->content;
   }
   /**
    * @param string
    */
-  public function setEncoding($encoding)
+  public function setDisplayName($displayName)
   {
-    $this->encoding = $encoding;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getEncoding()
+  public function getDisplayName()
   {
-    return $this->encoding;
+    return $this->displayName;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setMimeType($mimeType)
   {
-    $this->uri = $uri;
+    $this->mimeType = $mimeType;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getMimeType()
   {
-    return $this->uri;
-  }
-  /**
-   * @param string
-   */
-  public function setVideo($video)
-  {
-    $this->video = $video;
-  }
-  /**
-   * @return string
-   */
-  public function getVideo()
-  {
-    return $this->video;
+    return $this->mimeType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiLargeModelsVisionVideo::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionVideo');
+class_alias(GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource');

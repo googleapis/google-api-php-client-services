@@ -30,6 +30,8 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
   protected $multimodalPromptDataType = '';
   protected $structuredPromptType = GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt::class;
   protected $structuredPromptDataType = '';
+  protected $translationPromptType = GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt::class;
+  protected $translationPromptDataType = '';
 
   /**
    * @param string
@@ -86,6 +88,20 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
   public function getStructuredPrompt()
   {
     return $this->structuredPrompt;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt
+   */
+  public function setTranslationPrompt(GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt $translationPrompt)
+  {
+    $this->translationPrompt = $translationPrompt;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt
+   */
+  public function getTranslationPrompt()
+  {
+    return $this->translationPrompt;
   }
 }
 
