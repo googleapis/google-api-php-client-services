@@ -107,11 +107,11 @@ class SpacesSpaceEvents extends \Google\Service\Resource
    * @opt_param int pageSize Optional. The maximum number of space events
    * returned. The service might return fewer than this value. Negative values
    * return an `INVALID_ARGUMENT` error.
-   * @opt_param string pageToken A page token, received from a previous list space
-   * events call. Provide this to retrieve the subsequent page. When paginating,
-   * all other parameters provided to list space events must match the call that
-   * provided the page token. Passing different values to the other parameters
-   * might lead to unexpected results.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * list space events call. Provide this to retrieve the subsequent page. When
+   * paginating, all other parameters provided to list space events must match the
+   * call that provided the page token. Passing different values to the other
+   * parameters might lead to unexpected results.
    * @return ListSpaceEventsResponse
    * @throws \Google\Service\Exception
    */
