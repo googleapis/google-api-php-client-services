@@ -42,6 +42,8 @@ class GcpUserAccessBinding extends \Google\Collection
   protected $restrictedClientApplicationsDataType = 'array';
   protected $scopedAccessSettingsType = ScopedAccessSettings::class;
   protected $scopedAccessSettingsDataType = 'array';
+  protected $sessionSettingsType = SessionSettings::class;
+  protected $sessionSettingsDataType = '';
 
   /**
    * @param string[]
@@ -140,6 +142,20 @@ class GcpUserAccessBinding extends \Google\Collection
   public function getScopedAccessSettings()
   {
     return $this->scopedAccessSettings;
+  }
+  /**
+   * @param SessionSettings
+   */
+  public function setSessionSettings(SessionSettings $sessionSettings)
+  {
+    $this->sessionSettings = $sessionSettings;
+  }
+  /**
+   * @return SessionSettings
+   */
+  public function getSessionSettings()
+  {
+    return $this->sessionSettings;
   }
 }
 

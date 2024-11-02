@@ -122,7 +122,8 @@ class OrganizationsGcpUserAccessBindings extends \Google\Service\Resource
    * @opt_param bool append Optional. This field controls whether or not certain
    * repeated settings in the update request overwrite or append to existing
    * settings on the binding. If true, then append. Otherwise overwrite. So far,
-   * only scoped_access_settings supports appending. Global access_levels,
+   * only scoped_access_settings with reauth_settings supports appending. Global
+   * access_levels, access_levels in scoped_access_settings,
    * dry_run_access_levels, reauth_settings, and session_settings are not
    * compatible with append functionality, and the request will return an error if
    * append=true when these settings are in the update_mask. The request will also
