@@ -17,8 +17,12 @@
 
 namespace Google\Service\Datastream;
 
-class OracleProfile extends \Google\Model
+class OracleAsmConfig extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $asmService;
   /**
    * @var string[]
    */
@@ -26,13 +30,7 @@ class OracleProfile extends \Google\Model
   /**
    * @var string
    */
-  public $databaseService;
-  /**
-   * @var string
-   */
   public $hostname;
-  protected $oracleAsmConfigType = OracleAsmConfig::class;
-  protected $oracleAsmConfigDataType = '';
   protected $oracleSslConfigType = OracleSslConfig::class;
   protected $oracleSslConfigDataType = '';
   /**
@@ -46,12 +44,22 @@ class OracleProfile extends \Google\Model
   /**
    * @var string
    */
-  public $secretManagerStoredPassword;
-  /**
-   * @var string
-   */
   public $username;
 
+  /**
+   * @param string
+   */
+  public function setAsmService($asmService)
+  {
+    $this->asmService = $asmService;
+  }
+  /**
+   * @return string
+   */
+  public function getAsmService()
+  {
+    return $this->asmService;
+  }
   /**
    * @param string[]
    */
@@ -69,20 +77,6 @@ class OracleProfile extends \Google\Model
   /**
    * @param string
    */
-  public function setDatabaseService($databaseService)
-  {
-    $this->databaseService = $databaseService;
-  }
-  /**
-   * @return string
-   */
-  public function getDatabaseService()
-  {
-    return $this->databaseService;
-  }
-  /**
-   * @param string
-   */
   public function setHostname($hostname)
   {
     $this->hostname = $hostname;
@@ -93,20 +87,6 @@ class OracleProfile extends \Google\Model
   public function getHostname()
   {
     return $this->hostname;
-  }
-  /**
-   * @param OracleAsmConfig
-   */
-  public function setOracleAsmConfig(OracleAsmConfig $oracleAsmConfig)
-  {
-    $this->oracleAsmConfig = $oracleAsmConfig;
-  }
-  /**
-   * @return OracleAsmConfig
-   */
-  public function getOracleAsmConfig()
-  {
-    return $this->oracleAsmConfig;
   }
   /**
    * @param OracleSslConfig
@@ -153,20 +133,6 @@ class OracleProfile extends \Google\Model
   /**
    * @param string
    */
-  public function setSecretManagerStoredPassword($secretManagerStoredPassword)
-  {
-    $this->secretManagerStoredPassword = $secretManagerStoredPassword;
-  }
-  /**
-   * @return string
-   */
-  public function getSecretManagerStoredPassword()
-  {
-    return $this->secretManagerStoredPassword;
-  }
-  /**
-   * @param string
-   */
   public function setUsername($username)
   {
     $this->username = $username;
@@ -181,4 +147,4 @@ class OracleProfile extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OracleProfile::class, 'Google_Service_Datastream_OracleProfile');
+class_alias(OracleAsmConfig::class, 'Google_Service_Datastream_OracleAsmConfig');
