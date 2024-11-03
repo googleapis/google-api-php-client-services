@@ -21,6 +21,7 @@ use Google\Service\BeyondCorp\GoogleCloudBeyondcorpSecuritygatewaysV1ListSecurit
 use Google\Service\BeyondCorp\GoogleCloudBeyondcorpSecuritygatewaysV1SecurityGateway;
 use Google\Service\BeyondCorp\GoogleCloudBeyondcorpSecuritygatewaysV1SetPeeringRequest;
 use Google\Service\BeyondCorp\GoogleIamV1Policy;
+use Google\Service\BeyondCorp\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\BeyondCorp\GoogleIamV1TestIamPermissionsRequest;
 use Google\Service\BeyondCorp\GoogleIamV1TestIamPermissionsResponse;
 use Google\Service\BeyondCorp\GoogleLongrunningOperation;
@@ -200,6 +201,26 @@ class ProjectsLocationsSecurityGateways extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Sets the access control policy on the specified resource. Replaces any
+   * existing policy. Can return `NOT_FOUND`, `INVALID_ARGUMENT`, and
+   * `PERMISSION_DENIED` errors. (securityGateways.setIamPolicy)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy is being
+   * specified. See [Resource
+   * names](https://cloud.google.com/apis/design/resource_names) for the
+   * appropriate value for this field.
+   * @param GoogleIamV1SetIamPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleIamV1Policy
+   * @throws \Google\Service\Exception
+   */
+  public function setIamPolicy($resource, GoogleIamV1SetIamPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setIamPolicy', [$params], GoogleIamV1Policy::class);
   }
   /**
    * This is a custom method to allow customers to create a peering connections
