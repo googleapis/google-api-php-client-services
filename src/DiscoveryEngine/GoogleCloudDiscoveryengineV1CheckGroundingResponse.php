@@ -20,8 +20,10 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1CheckGroundingResponse extends \Google\Collection
 {
   protected $collection_key = 'claims';
-  protected $citedChunksType = GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk::class;
+  protected $citedChunksType = GoogleCloudDiscoveryengineV1FactChunk::class;
   protected $citedChunksDataType = 'array';
+  protected $citedFactsType = GoogleCloudDiscoveryengineV1CheckGroundingResponseCheckGroundingFactChunk::class;
+  protected $citedFactsDataType = 'array';
   protected $claimsType = GoogleCloudDiscoveryengineV1CheckGroundingResponseClaim::class;
   protected $claimsDataType = 'array';
   /**
@@ -30,18 +32,32 @@ class GoogleCloudDiscoveryengineV1CheckGroundingResponse extends \Google\Collect
   public $supportScore;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk[]
+   * @param GoogleCloudDiscoveryengineV1FactChunk[]
    */
   public function setCitedChunks($citedChunks)
   {
     $this->citedChunks = $citedChunks;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1CheckGroundingResponseFactChunk[]
+   * @return GoogleCloudDiscoveryengineV1FactChunk[]
    */
   public function getCitedChunks()
   {
     return $this->citedChunks;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1CheckGroundingResponseCheckGroundingFactChunk[]
+   */
+  public function setCitedFacts($citedFacts)
+  {
+    $this->citedFacts = $citedFacts;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1CheckGroundingResponseCheckGroundingFactChunk[]
+   */
+  public function getCitedFacts()
+  {
+    return $this->citedFacts;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1CheckGroundingResponseClaim[]
