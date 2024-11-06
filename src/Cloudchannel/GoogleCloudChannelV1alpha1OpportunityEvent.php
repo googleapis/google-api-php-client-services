@@ -17,44 +17,46 @@
 
 namespace Google\Service\Cloudchannel;
 
-class GoogleCloudChannelV1TransferableOffer extends \Google\Model
+class GoogleCloudChannelV1alpha1OpportunityEvent extends \Google\Model
 {
-  protected $offerType = GoogleCloudChannelV1Offer::class;
-  protected $offerDataType = '';
   /**
    * @var string
    */
-  public $priceReferenceId;
+  public $eventType;
+  /**
+   * @var string
+   */
+  public $opportunity;
 
-  /**
-   * @param GoogleCloudChannelV1Offer
-   */
-  public function setOffer(GoogleCloudChannelV1Offer $offer)
-  {
-    $this->offer = $offer;
-  }
-  /**
-   * @return GoogleCloudChannelV1Offer
-   */
-  public function getOffer()
-  {
-    return $this->offer;
-  }
   /**
    * @param string
    */
-  public function setPriceReferenceId($priceReferenceId)
+  public function setEventType($eventType)
   {
-    $this->priceReferenceId = $priceReferenceId;
+    $this->eventType = $eventType;
   }
   /**
    * @return string
    */
-  public function getPriceReferenceId()
+  public function getEventType()
   {
-    return $this->priceReferenceId;
+    return $this->eventType;
+  }
+  /**
+   * @param string
+   */
+  public function setOpportunity($opportunity)
+  {
+    $this->opportunity = $opportunity;
+  }
+  /**
+   * @return string
+   */
+  public function getOpportunity()
+  {
+    return $this->opportunity;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudChannelV1TransferableOffer::class, 'Google_Service_Cloudchannel_GoogleCloudChannelV1TransferableOffer');
+class_alias(GoogleCloudChannelV1alpha1OpportunityEvent::class, 'Google_Service_Cloudchannel_GoogleCloudChannelV1alpha1OpportunityEvent');
