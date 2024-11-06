@@ -51,7 +51,11 @@ class SpacesMessages extends \Google\Service\Resource
    * message can only contain text (`text`). ![Message sent with user
    * authentication](https://developers.google.com/workspace/chat/images/message-
    * user-auth.svg) The maximum message size, including the message contents, is
-   * 32,000 bytes. (messages.create)
+   * 32,000 bytes. For
+   * [webhook](https://developers.google.com/workspace/chat/quickstart/webhooks)
+   * requests, the response doesn't contain the full message. The response only
+   * populates the `name` and `thread.name` fields in addition to the information
+   * that was in the request. (messages.create)
    *
    * @param string $parent Required. The resource name of the space in which to
    * create a message. Format: `spaces/{space}`
