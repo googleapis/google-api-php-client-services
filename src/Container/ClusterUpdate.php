@@ -124,6 +124,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredNodeKubeletConfigDataType = '';
   protected $desiredNodePoolAutoConfigKubeletConfigType = NodeKubeletConfig::class;
   protected $desiredNodePoolAutoConfigKubeletConfigDataType = '';
+  protected $desiredNodePoolAutoConfigLinuxNodeConfigType = LinuxNodeConfig::class;
+  protected $desiredNodePoolAutoConfigLinuxNodeConfigDataType = '';
   protected $desiredNodePoolAutoConfigNetworkTagsType = NetworkTags::class;
   protected $desiredNodePoolAutoConfigNetworkTagsDataType = '';
   protected $desiredNodePoolAutoConfigResourceManagerTagsType = ResourceManagerTags::class;
@@ -742,6 +744,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredNodePoolAutoConfigKubeletConfig()
   {
     return $this->desiredNodePoolAutoConfigKubeletConfig;
+  }
+  /**
+   * @param LinuxNodeConfig
+   */
+  public function setDesiredNodePoolAutoConfigLinuxNodeConfig(LinuxNodeConfig $desiredNodePoolAutoConfigLinuxNodeConfig)
+  {
+    $this->desiredNodePoolAutoConfigLinuxNodeConfig = $desiredNodePoolAutoConfigLinuxNodeConfig;
+  }
+  /**
+   * @return LinuxNodeConfig
+   */
+  public function getDesiredNodePoolAutoConfigLinuxNodeConfig()
+  {
+    return $this->desiredNodePoolAutoConfigLinuxNodeConfig;
   }
   /**
    * @param NetworkTags
