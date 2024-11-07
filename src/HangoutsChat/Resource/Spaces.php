@@ -116,11 +116,11 @@ class Spaces extends \Google\Service\Resource
    * `spaces/{space}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool useAdminAccess When `true`, the method runs using the user's
-   * Google Workspace administrator privileges. The calling user must be a Google
-   * Workspace administrator with the [manage chat and spaces conversations
-   * privilege](https://support.google.com/a/answer/13369245). Requires the
-   * `chat.admin.delete` [OAuth 2.0
+   * @opt_param bool useAdminAccess Optional. When `true`, the method runs using
+   * the user's Google Workspace administrator privileges. The calling user must
+   * be a Google Workspace administrator with the [manage chat and spaces
+   * conversations privilege](https://support.google.com/a/answer/13369245).
+   * Requires the `chat.admin.delete` [OAuth 2.0
    * scope](https://developers.google.com/workspace/chat/authenticate-
    * authorize#chat-api-scopes).
    * @return ChatEmpty
@@ -190,11 +190,11 @@ class Spaces extends \Google\Service\Resource
    * `spaces/{space}`. Format: `spaces/{space}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool useAdminAccess When `true`, the method runs using the user's
-   * Google Workspace administrator privileges. The calling user must be a Google
-   * Workspace administrator with the [manage chat and spaces conversations
-   * privilege](https://support.google.com/a/answer/13369245). Requires the
-   * `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
+   * @opt_param bool useAdminAccess Optional. When `true`, the method runs using
+   * the user's Google Workspace administrator privileges. The calling user must
+   * be a Google Workspace administrator with the [manage chat and spaces
+   * conversations privilege](https://support.google.com/a/answer/13369245).
+   * Requires the `chat.admin.spaces` or `chat.admin.spaces.readonly` [OAuth 2.0
    * scopes](https://developers.google.com/workspace/chat/authenticate-
    * authorize#chat-api-scopes).
    * @return Space
@@ -268,11 +268,11 @@ class Spaces extends \Google\Service\Resource
    * administrator privileges by setting the `use_admin_access` field in the
    * request. (spaces.patch)
    *
-   * @param string $name Resource name of the space. Format: `spaces/{space}`
-   * Where `{space}` represents the system-assigned ID for the space. You can
-   * obtain the space ID by calling the [`spaces.list()`](https://developers.googl
-   * e.com/workspace/chat/api/reference/rest/v1/spaces/list) method or from the
-   * space URL. For example, if the space URL is
+   * @param string $name Identifier. Resource name of the space. Format:
+   * `spaces/{space}` Where `{space}` represents the system-assigned ID for the
+   * space. You can obtain the space ID by calling the [`spaces.list()`](https://d
+   * evelopers.google.com/workspace/chat/api/reference/rest/v1/spaces/list) method
+   * or from the space URL. For example, if the space URL is
    * `https://mail.google.com/mail/u/0/#chat/space/AAAAAAAAA`, the space ID is
    * `AAAAAAAAA`.
    * @param Space $postBody
@@ -319,11 +319,11 @@ class Spaces extends \Google\Service\Resource
    * `permission_settings.toggleHistory` - `permission_settings.useAtMentionAll` -
    * `permission_settings.manageApps` - `permission_settings.manageWebhooks` -
    * `permission_settings.replyMessages`
-   * @opt_param bool useAdminAccess When `true`, the method runs using the user's
-   * Google Workspace administrator privileges. The calling user must be a Google
-   * Workspace administrator with the [manage chat and spaces conversations
-   * privilege](https://support.google.com/a/answer/13369245). Requires the
-   * `chat.admin.spaces` [OAuth 2.0
+   * @opt_param bool useAdminAccess Optional. When `true`, the method runs using
+   * the user's Google Workspace administrator privileges. The calling user must
+   * be a Google Workspace administrator with the [manage chat and spaces
+   * conversations privilege](https://support.google.com/a/answer/13369245).
+   * Requires the `chat.admin.spaces` [OAuth 2.0
    * scope](https://developers.google.com/workspace/chat/authenticate-
    * authorize#chat-api-scopes). Some `FieldMask` values are not supported using
    * admin access. For details, see the description of `update_mask`.

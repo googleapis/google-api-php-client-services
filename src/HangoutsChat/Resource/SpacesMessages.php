@@ -112,9 +112,9 @@ class SpacesMessages extends \Google\Service\Resource
    * messages#name_a_created_message).
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool force When `true`, deleting a message also deletes its
-   * threaded replies. When `false`, if a message has threaded replies, deletion
-   * fails. Only applies when [authenticating as a
+   * @opt_param bool force Optional. When `true`, deleting a message also deletes
+   * its threaded replies. When `false`, if a message has threaded replies,
+   * deletion fails. Only applies when [authenticating as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-
    * chat-user). Has no effect when [authenticating as a Chat app]
    * (https://developers.google.com/workspace/chat/authenticate-authorize-chat-
@@ -170,9 +170,9 @@ class SpacesMessages extends \Google\Service\Resource
    * messages from. Format: `spaces/{space}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter A query filter. You can filter messages by date
-   * (`create_time`) and thread (`thread.name`). To filter messages by the date
-   * they were created, specify the `create_time` with a timestamp in
+   * @opt_param string filter Optional. A query filter. You can filter messages by
+   * date (`create_time`) and thread (`thread.name`). To filter messages by the
+   * date they were created, specify the `create_time` with a timestamp in
    * [RFC-3339](https://www.rfc-editor.org/rfc/rfc3339) format and double
    * quotation marks. For example, `"2023-04-21T11:30:00-04:00"`. You can use the
    * greater than operator `>` to list messages that were created after a
@@ -188,25 +188,25 @@ class SpacesMessages extends \Google\Service\Resource
    * "2013-01-01T00:00:00+00:00" AND thread.name = spaces/AAAAAAAAAAA/threads/123
    * thread.name = spaces/AAAAAAAAAAA/threads/123 ``` Invalid queries are rejected
    * by the server with an `INVALID_ARGUMENT` error.
-   * @opt_param string orderBy Optional, if resuming from a previous query. How
-   * the list of messages is ordered. Specify a value to order by an ordering
-   * operation. Valid ordering operation values are as follows: - `ASC` for
-   * ascending. - `DESC` for descending. The default ordering is `create_time
+   * @opt_param string orderBy Optional. Optional, if resuming from a previous
+   * query. How the list of messages is ordered. Specify a value to order by an
+   * ordering operation. Valid ordering operation values are as follows: - `ASC`
+   * for ascending. - `DESC` for descending. The default ordering is `create_time
    * ASC`.
-   * @opt_param int pageSize The maximum number of messages returned. The service
-   * might return fewer messages than this value. If unspecified, at most 25 are
-   * returned. The maximum value is 1000. If you use a value more than 1000, it's
-   * automatically changed to 1000. Negative values return an `INVALID_ARGUMENT`
-   * error.
-   * @opt_param string pageToken Optional, if resuming from a previous query. A
-   * page token received from a previous list messages call. Provide this
+   * @opt_param int pageSize Optional. The maximum number of messages returned.
+   * The service might return fewer messages than this value. If unspecified, at
+   * most 25 are returned. The maximum value is 1000. If you use a value more than
+   * 1000, it's automatically changed to 1000. Negative values return an
+   * `INVALID_ARGUMENT` error.
+   * @opt_param string pageToken Optional. Optional, if resuming from a previous
+   * query. A page token received from a previous list messages call. Provide this
    * parameter to retrieve the subsequent page. When paginating, all other
    * parameters provided should match the call that provided the page token.
    * Passing different values to the other parameters might lead to unexpected
    * results.
-   * @opt_param bool showDeleted Whether to include deleted messages. Deleted
-   * messages include deleted time and metadata about their deletion, but message
-   * content is unavailable.
+   * @opt_param bool showDeleted Optional. Whether to include deleted messages.
+   * Deleted messages include deleted time and metadata about their deletion, but
+   * message content is unavailable.
    * @return ListMessagesResponse
    * @throws \Google\Service\Exception
    */
@@ -230,7 +230,7 @@ class SpacesMessages extends \Google\Service\Resource
    * authorize-chat-user) When using app authentication, requests can only update
    * messages created by the calling Chat app. (messages.patch)
    *
-   * @param string $name Resource name of the message. Format:
+   * @param string $name Identifier. Resource name of the message. Format:
    * `spaces/{space}/messages/{message}` Where `{space}` is the ID of the space
    * where the message is posted and `{message}` is a system-assigned ID for the
    * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
@@ -278,7 +278,7 @@ class SpacesMessages extends \Google\Service\Resource
    * authorize-chat-user) When using app authentication, requests can only update
    * messages created by the calling Chat app. (messages.update)
    *
-   * @param string $name Resource name of the message. Format:
+   * @param string $name Identifier. Resource name of the message. Format:
    * `spaces/{space}/messages/{message}` Where `{space}` is the ID of the space
    * where the message is posted and `{message}` is a system-assigned ID for the
    * message. For example, `spaces/AAAAAAAAAAA/messages/BBBBBBBBBBB.BBBBBBBBBBB`.
