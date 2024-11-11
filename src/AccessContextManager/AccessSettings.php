@@ -24,8 +24,6 @@ class AccessSettings extends \Google\Collection
    * @var string[]
    */
   public $accessLevels;
-  protected $reauthSettingsType = ReauthSettings::class;
-  protected $reauthSettingsDataType = '';
   protected $sessionSettingsType = SessionSettings::class;
   protected $sessionSettingsDataType = '';
 
@@ -42,20 +40,6 @@ class AccessSettings extends \Google\Collection
   public function getAccessLevels()
   {
     return $this->accessLevels;
-  }
-  /**
-   * @param ReauthSettings
-   */
-  public function setReauthSettings(ReauthSettings $reauthSettings)
-  {
-    $this->reauthSettings = $reauthSettings;
-  }
-  /**
-   * @return ReauthSettings
-   */
-  public function getReauthSettings()
-  {
-    return $this->reauthSettings;
   }
   /**
    * @param SessionSettings
