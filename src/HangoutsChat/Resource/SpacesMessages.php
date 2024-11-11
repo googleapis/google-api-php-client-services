@@ -73,7 +73,12 @@ class SpacesMessages extends \Google\Service\Resource
    * [Name a message](https://developers.google.com/workspace/chat/create-
    * messages#name_a_created_message).
    * @opt_param string messageReplyOption Optional. Specifies whether a message
-   * starts a thread or replies to one. Only supported in named spaces.
+   * starts a thread or replies to one. Only supported in named spaces. When
+   * [responding to user
+   * interactions](https://developers.google.com/workspace/chat/receive-respond-
+   * interactions), this field is ignored. For interactions within a thread, the
+   * reply is created in the same thread. Otherwise, the reply is created as a new
+   * thread.
    * @opt_param string requestId Optional. A unique request ID for this message.
    * Specifying an existing request ID returns the message created with that ID
    * instead of creating a new message.
