@@ -18,7 +18,9 @@
 namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleApiHttpBody;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ImportUserEventsRequest;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1UserEvent;
+use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
 /**
  * The "userEvents" collection of methods.
@@ -58,6 +60,27 @@ class ProjectsLocationsUserEvents extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('collect', [$params], GoogleApiHttpBody::class);
+  }
+  /**
+   * Bulk import of user events. Request processing might be synchronous. Events
+   * that already exist are skipped. Use this method for backfilling historical
+   * user events. Operation.response is of type ImportResponse. Note that it is
+   * possible for a subset of the items to be successfully inserted.
+   * Operation.metadata is of type ImportMetadata. (userEvents.import)
+   *
+   * @param string $parent Required. Parent DataStore resource name, of the form `
+   * projects/{project}/locations/{location}/collections/{collection}/dataStores/{
+   * data_store}`
+   * @param GoogleCloudDiscoveryengineV1ImportUserEventsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function import($parent, GoogleCloudDiscoveryengineV1ImportUserEventsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('import', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Writes a single user event. (userEvents.write)

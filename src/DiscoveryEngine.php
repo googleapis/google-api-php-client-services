@@ -3069,6 +3069,16 @@ class DiscoveryEngine extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'import' => [
+              'path' => 'v1/{+parent}/userEvents:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'write' => [
               'path' => 'v1/{+parent}/userEvents:write',
               'httpMethod' => 'POST',
