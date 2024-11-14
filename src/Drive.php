@@ -66,13 +66,13 @@ class Drive extends \Google\Service
       "https://www.googleapis.com/auth/drive.scripts";
 
   public $about;
+  public $accessproposals;
   public $apps;
   public $changes;
   public $channels;
   public $comments;
   public $drives;
   public $files;
-  public $files_accessproposals;
   public $operation;
   public $operations;
   public $permissions;
@@ -108,6 +108,64 @@ class Drive extends \Google\Service
               'path' => 'about',
               'httpMethod' => 'GET',
               'parameters' => [],
+            ],
+          ]
+        ]
+    );
+    $this->accessproposals = new Drive\Resource\Accessproposals(
+        $this,
+        $this->serviceName,
+        'accessproposals',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'files/{fileId}/accessproposals/{proposalId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'proposalId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'files/{fileId}/accessproposals',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'resolve' => [
+              'path' => 'files/{fileId}/accessproposals/{proposalId}:resolve',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'fileId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'proposalId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -895,66 +953,6 @@ class Drive extends \Google\Service
                 'supportsTeamDrives' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->files_accessproposals = new Drive\Resource\FilesAccessproposals(
-        $this,
-        $this->serviceName,
-        'accessproposals',
-        [
-          'methods' => [
-            'list' => [
-              'path' => 'files/{fileId}/accessproposals',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'fileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'resolve' => [
-              'path' => 'files/{fileId}/accessproposals/{proposalId}:resolve',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'fileId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'proposalId' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'action' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'role' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                  'repeated' => true,
-                ],
-                'sendNotification' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
-                'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
