@@ -64,11 +64,7 @@ class Digitalassetlinks extends \Google\Service
         'assetlinks',
         [
           'methods' => [
-            'bulkCheck' => [
-              'path' => 'v1/assetlinks:bulkCheck',
-              'httpMethod' => 'POST',
-              'parameters' => [],
-            ],'check' => [
+            'check' => [
               'path' => 'v1/assetlinks:check',
               'httpMethod' => 'GET',
               'parameters' => [
