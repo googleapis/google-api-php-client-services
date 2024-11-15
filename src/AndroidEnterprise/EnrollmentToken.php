@@ -17,38 +17,58 @@
 
 namespace Google\Service\AndroidEnterprise;
 
-class CreateEnrollmentTokenResponse extends \Google\Model
+class EnrollmentToken extends \Google\Model
 {
   /**
    * @var string
    */
-  public $enrollmentToken;
-  protected $tokenType = EnrollmentToken::class;
-  protected $tokenDataType = '';
+  public $duration;
+  /**
+   * @var string
+   */
+  public $enrollmentTokenType;
+  /**
+   * @var string
+   */
+  public $token;
 
   /**
    * @param string
    */
-  public function setEnrollmentToken($enrollmentToken)
+  public function setDuration($duration)
   {
-    $this->enrollmentToken = $enrollmentToken;
+    $this->duration = $duration;
   }
   /**
    * @return string
    */
-  public function getEnrollmentToken()
+  public function getDuration()
   {
-    return $this->enrollmentToken;
+    return $this->duration;
   }
   /**
-   * @param EnrollmentToken
+   * @param string
    */
-  public function setToken(EnrollmentToken $token)
+  public function setEnrollmentTokenType($enrollmentTokenType)
+  {
+    $this->enrollmentTokenType = $enrollmentTokenType;
+  }
+  /**
+   * @return string
+   */
+  public function getEnrollmentTokenType()
+  {
+    return $this->enrollmentTokenType;
+  }
+  /**
+   * @param string
+   */
+  public function setToken($token)
   {
     $this->token = $token;
   }
   /**
-   * @return EnrollmentToken
+   * @return string
    */
   public function getToken()
   {
@@ -57,4 +77,4 @@ class CreateEnrollmentTokenResponse extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CreateEnrollmentTokenResponse::class, 'Google_Service_AndroidEnterprise_CreateEnrollmentTokenResponse');
+class_alias(EnrollmentToken::class, 'Google_Service_AndroidEnterprise_EnrollmentToken');

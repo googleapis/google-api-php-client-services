@@ -243,6 +243,18 @@ class AndroidEnterprise extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'enrollmentToken.duration' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'enrollmentToken.enrollmentTokenType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'enrollmentToken.token' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'createWebToken' => [
               'path' => 'androidenterprise/v1/enterprises/{enterpriseId}/createWebToken',
