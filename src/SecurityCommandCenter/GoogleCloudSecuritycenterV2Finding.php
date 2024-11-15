@@ -64,6 +64,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $diskType = GoogleCloudSecuritycenterV2Disk::class;
+  protected $diskDataType = '';
   /**
    * @var string
    */
@@ -414,6 +416,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2Disk
+   */
+  public function setDisk(GoogleCloudSecuritycenterV2Disk $disk)
+  {
+    $this->disk = $disk;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2Disk
+   */
+  public function getDisk()
+  {
+    return $this->disk;
   }
   /**
    * @param string

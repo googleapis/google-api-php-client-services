@@ -64,6 +64,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $diskType = Disk::class;
+  protected $diskDataType = '';
   /**
    * @var string
    */
@@ -414,6 +416,20 @@ class Finding extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param Disk
+   */
+  public function setDisk(Disk $disk)
+  {
+    $this->disk = $disk;
+  }
+  /**
+   * @return Disk
+   */
+  public function getDisk()
+  {
+    return $this->disk;
   }
   /**
    * @param string
