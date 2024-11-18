@@ -544,6 +544,10 @@ class Storage extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'projection' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'userProject' => [
                   'location' => 'query',
                   'type' => 'string',
