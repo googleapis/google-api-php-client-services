@@ -26,6 +26,10 @@ class GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo ext
   /**
    * @var string
    */
+  public $agentType;
+  /**
+   * @var string
+   */
   public $displayName;
   /**
    * @var string
@@ -49,6 +53,20 @@ class GoogleCloudContactcenterinsightsV1ConversationQualityMetadataAgentInfo ext
   public function getAgentId()
   {
     return $this->agentId;
+  }
+  /**
+   * @param string
+   */
+  public function setAgentType($agentType)
+  {
+    $this->agentType = $agentType;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentType()
+  {
+    return $this->agentType;
   }
   /**
    * @param string
