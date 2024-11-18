@@ -45,6 +45,8 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   public $enableAccessLogging;
   protected $explanationSpecType = GoogleCloudAiplatformV1ExplanationSpec::class;
   protected $explanationSpecDataType = '';
+  protected $fasterDeploymentConfigType = GoogleCloudAiplatformV1FasterDeploymentConfig::class;
+  protected $fasterDeploymentConfigDataType = '';
   /**
    * @var string
    */
@@ -183,6 +185,20 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   public function getExplanationSpec()
   {
     return $this->explanationSpec;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1FasterDeploymentConfig
+   */
+  public function setFasterDeploymentConfig(GoogleCloudAiplatformV1FasterDeploymentConfig $fasterDeploymentConfig)
+  {
+    $this->fasterDeploymentConfig = $fasterDeploymentConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FasterDeploymentConfig
+   */
+  public function getFasterDeploymentConfig()
+  {
+    return $this->fasterDeploymentConfig;
   }
   /**
    * @param string

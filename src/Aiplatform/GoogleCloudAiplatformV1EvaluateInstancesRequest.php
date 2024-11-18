@@ -23,6 +23,8 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
   protected $bleuInputDataType = '';
   protected $coherenceInputType = GoogleCloudAiplatformV1CoherenceInput::class;
   protected $coherenceInputDataType = '';
+  protected $cometInputType = GoogleCloudAiplatformV1CometInput::class;
+  protected $cometInputDataType = '';
   protected $exactMatchInputType = GoogleCloudAiplatformV1ExactMatchInput::class;
   protected $exactMatchInputDataType = '';
   protected $fluencyInputType = GoogleCloudAiplatformV1FluencyInput::class;
@@ -31,6 +33,8 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
   protected $fulfillmentInputDataType = '';
   protected $groundednessInputType = GoogleCloudAiplatformV1GroundednessInput::class;
   protected $groundednessInputDataType = '';
+  protected $metricxInputType = GoogleCloudAiplatformV1MetricxInput::class;
+  protected $metricxInputDataType = '';
   protected $pairwiseMetricInputType = GoogleCloudAiplatformV1PairwiseMetricInput::class;
   protected $pairwiseMetricInputDataType = '';
   protected $pairwiseQuestionAnsweringQualityInputType = GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInput::class;
@@ -95,6 +99,20 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
     return $this->coherenceInput;
   }
   /**
+   * @param GoogleCloudAiplatformV1CometInput
+   */
+  public function setCometInput(GoogleCloudAiplatformV1CometInput $cometInput)
+  {
+    $this->cometInput = $cometInput;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1CometInput
+   */
+  public function getCometInput()
+  {
+    return $this->cometInput;
+  }
+  /**
    * @param GoogleCloudAiplatformV1ExactMatchInput
    */
   public function setExactMatchInput(GoogleCloudAiplatformV1ExactMatchInput $exactMatchInput)
@@ -149,6 +167,20 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
   public function getGroundednessInput()
   {
     return $this->groundednessInput;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1MetricxInput
+   */
+  public function setMetricxInput(GoogleCloudAiplatformV1MetricxInput $metricxInput)
+  {
+    $this->metricxInput = $metricxInput;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1MetricxInput
+   */
+  public function getMetricxInput()
+  {
+    return $this->metricxInput;
   }
   /**
    * @param GoogleCloudAiplatformV1PairwiseMetricInput
