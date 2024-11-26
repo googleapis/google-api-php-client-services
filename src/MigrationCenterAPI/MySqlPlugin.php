@@ -17,64 +17,64 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class DiskUsageSample extends \Google\Model
+class MySqlPlugin extends \Google\Model
 {
   /**
-   * @var float
+   * @var bool
    */
-  public $averageIops;
+  public $enabled;
   /**
-   * @var float
+   * @var string
    */
-  public $averageReadIops;
+  public $plugin;
   /**
-   * @var float
+   * @var string
    */
-  public $averageWriteIops;
+  public $version;
 
   /**
-   * @param float
+   * @param bool
    */
-  public function setAverageIops($averageIops)
+  public function setEnabled($enabled)
   {
-    $this->averageIops = $averageIops;
+    $this->enabled = $enabled;
   }
   /**
-   * @return float
+   * @return bool
    */
-  public function getAverageIops()
+  public function getEnabled()
   {
-    return $this->averageIops;
+    return $this->enabled;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageReadIops($averageReadIops)
+  public function setPlugin($plugin)
   {
-    $this->averageReadIops = $averageReadIops;
+    $this->plugin = $plugin;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageReadIops()
+  public function getPlugin()
   {
-    return $this->averageReadIops;
+    return $this->plugin;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageWriteIops($averageWriteIops)
+  public function setVersion($version)
   {
-    $this->averageWriteIops = $averageWriteIops;
+    $this->version = $version;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageWriteIops()
+  public function getVersion()
   {
-    return $this->averageWriteIops;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskUsageSample::class, 'Google_Service_MigrationCenterAPI_DiskUsageSample');
+class_alias(MySqlPlugin::class, 'Google_Service_MigrationCenterAPI_MySqlPlugin');

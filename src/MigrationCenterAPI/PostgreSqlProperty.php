@@ -17,64 +17,64 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class DiskUsageSample extends \Google\Model
+class PostgreSqlProperty extends \Google\Model
 {
   /**
-   * @var float
+   * @var bool
    */
-  public $averageIops;
+  public $enabled;
   /**
-   * @var float
+   * @var string
    */
-  public $averageReadIops;
+  public $numericValue;
   /**
-   * @var float
+   * @var string
    */
-  public $averageWriteIops;
+  public $property;
 
   /**
-   * @param float
+   * @param bool
    */
-  public function setAverageIops($averageIops)
+  public function setEnabled($enabled)
   {
-    $this->averageIops = $averageIops;
+    $this->enabled = $enabled;
   }
   /**
-   * @return float
+   * @return bool
    */
-  public function getAverageIops()
+  public function getEnabled()
   {
-    return $this->averageIops;
+    return $this->enabled;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageReadIops($averageReadIops)
+  public function setNumericValue($numericValue)
   {
-    $this->averageReadIops = $averageReadIops;
+    $this->numericValue = $numericValue;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageReadIops()
+  public function getNumericValue()
   {
-    return $this->averageReadIops;
+    return $this->numericValue;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageWriteIops($averageWriteIops)
+  public function setProperty($property)
   {
-    $this->averageWriteIops = $averageWriteIops;
+    $this->property = $property;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageWriteIops()
+  public function getProperty()
   {
-    return $this->averageWriteIops;
+    return $this->property;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskUsageSample::class, 'Google_Service_MigrationCenterAPI_DiskUsageSample');
+class_alias(PostgreSqlProperty::class, 'Google_Service_MigrationCenterAPI_PostgreSqlProperty');

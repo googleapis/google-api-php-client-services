@@ -17,64 +17,64 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class DiskUsageSample extends \Google\Model
+class MySqlStorageEngineDetails extends \Google\Model
 {
   /**
-   * @var float
+   * @var int
    */
-  public $averageIops;
+  public $encryptedTableCount;
   /**
-   * @var float
+   * @var string
    */
-  public $averageReadIops;
+  public $engine;
   /**
-   * @var float
+   * @var int
    */
-  public $averageWriteIops;
+  public $tableCount;
 
   /**
-   * @param float
+   * @param int
    */
-  public function setAverageIops($averageIops)
+  public function setEncryptedTableCount($encryptedTableCount)
   {
-    $this->averageIops = $averageIops;
+    $this->encryptedTableCount = $encryptedTableCount;
   }
   /**
-   * @return float
+   * @return int
    */
-  public function getAverageIops()
+  public function getEncryptedTableCount()
   {
-    return $this->averageIops;
+    return $this->encryptedTableCount;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageReadIops($averageReadIops)
+  public function setEngine($engine)
   {
-    $this->averageReadIops = $averageReadIops;
+    $this->engine = $engine;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageReadIops()
+  public function getEngine()
   {
-    return $this->averageReadIops;
+    return $this->engine;
   }
   /**
-   * @param float
+   * @param int
    */
-  public function setAverageWriteIops($averageWriteIops)
+  public function setTableCount($tableCount)
   {
-    $this->averageWriteIops = $averageWriteIops;
+    $this->tableCount = $tableCount;
   }
   /**
-   * @return float
+   * @return int
    */
-  public function getAverageWriteIops()
+  public function getTableCount()
   {
-    return $this->averageWriteIops;
+    return $this->tableCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskUsageSample::class, 'Google_Service_MigrationCenterAPI_DiskUsageSample');
+class_alias(MySqlStorageEngineDetails::class, 'Google_Service_MigrationCenterAPI_MySqlStorageEngineDetails');

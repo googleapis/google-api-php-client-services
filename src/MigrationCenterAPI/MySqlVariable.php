@@ -17,64 +17,64 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class DiskUsageSample extends \Google\Model
+class MySqlVariable extends \Google\Model
 {
   /**
-   * @var float
+   * @var string
    */
-  public $averageIops;
+  public $category;
   /**
-   * @var float
+   * @var string
    */
-  public $averageReadIops;
+  public $value;
   /**
-   * @var float
+   * @var string
    */
-  public $averageWriteIops;
+  public $variable;
 
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageIops($averageIops)
+  public function setCategory($category)
   {
-    $this->averageIops = $averageIops;
+    $this->category = $category;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageIops()
+  public function getCategory()
   {
-    return $this->averageIops;
+    return $this->category;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageReadIops($averageReadIops)
+  public function setValue($value)
   {
-    $this->averageReadIops = $averageReadIops;
+    $this->value = $value;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageReadIops()
+  public function getValue()
   {
-    return $this->averageReadIops;
+    return $this->value;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageWriteIops($averageWriteIops)
+  public function setVariable($variable)
   {
-    $this->averageWriteIops = $averageWriteIops;
+    $this->variable = $variable;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageWriteIops()
+  public function getVariable()
   {
-    return $this->averageWriteIops;
+    return $this->variable;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskUsageSample::class, 'Google_Service_MigrationCenterAPI_DiskUsageSample');
+class_alias(MySqlVariable::class, 'Google_Service_MigrationCenterAPI_MySqlVariable');

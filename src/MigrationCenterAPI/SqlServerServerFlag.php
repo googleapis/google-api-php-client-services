@@ -17,64 +17,64 @@
 
 namespace Google\Service\MigrationCenterAPI;
 
-class DiskUsageSample extends \Google\Model
+class SqlServerServerFlag extends \Google\Model
 {
   /**
-   * @var float
+   * @var string
    */
-  public $averageIops;
+  public $serverFlagName;
   /**
-   * @var float
+   * @var string
    */
-  public $averageReadIops;
+  public $value;
   /**
-   * @var float
+   * @var string
    */
-  public $averageWriteIops;
+  public $valueInUse;
 
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageIops($averageIops)
+  public function setServerFlagName($serverFlagName)
   {
-    $this->averageIops = $averageIops;
+    $this->serverFlagName = $serverFlagName;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageIops()
+  public function getServerFlagName()
   {
-    return $this->averageIops;
+    return $this->serverFlagName;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageReadIops($averageReadIops)
+  public function setValue($value)
   {
-    $this->averageReadIops = $averageReadIops;
+    $this->value = $value;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageReadIops()
+  public function getValue()
   {
-    return $this->averageReadIops;
+    return $this->value;
   }
   /**
-   * @param float
+   * @param string
    */
-  public function setAverageWriteIops($averageWriteIops)
+  public function setValueInUse($valueInUse)
   {
-    $this->averageWriteIops = $averageWriteIops;
+    $this->valueInUse = $valueInUse;
   }
   /**
-   * @return float
+   * @return string
    */
-  public function getAverageWriteIops()
+  public function getValueInUse()
   {
-    return $this->averageWriteIops;
+    return $this->valueInUse;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DiskUsageSample::class, 'Google_Service_MigrationCenterAPI_DiskUsageSample');
+class_alias(SqlServerServerFlag::class, 'Google_Service_MigrationCenterAPI_SqlServerServerFlag');
