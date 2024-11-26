@@ -69,6 +69,8 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
    * @var string
    */
   public $sharedResources;
+  protected $statusType = GoogleCloudAiplatformV1DeployedModelStatus::class;
+  protected $statusDataType = '';
   /**
    * @var string[]
    */
@@ -283,6 +285,20 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   public function getSharedResources()
   {
     return $this->sharedResources;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1DeployedModelStatus
+   */
+  public function setStatus(GoogleCloudAiplatformV1DeployedModelStatus $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1DeployedModelStatus
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
   /**
    * @param string[]

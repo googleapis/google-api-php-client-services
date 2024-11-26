@@ -18,6 +18,8 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListReasoningEnginesResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1QueryReasoningEngineRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1QueryReasoningEngineResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ReasoningEngine;
 use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
@@ -117,6 +119,23 @@ class ProjectsLocationsReasoningEngines extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Queries using a reasoning engine. (reasoningEngines.query)
+   *
+   * @param string $name Required. The name of the ReasoningEngine resource to
+   * use. Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
+   * @param GoogleCloudAiplatformV1QueryReasoningEngineRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1QueryReasoningEngineResponse
+   * @throws \Google\Service\Exception
+   */
+  public function query($name, GoogleCloudAiplatformV1QueryReasoningEngineRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('query', [$params], GoogleCloudAiplatformV1QueryReasoningEngineResponse::class);
   }
 }
 
