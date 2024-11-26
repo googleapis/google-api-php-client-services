@@ -98,19 +98,20 @@ class ProjectsMetricDescriptors extends \Google\Service\Resource
    * the request. The format is: projects/[PROJECT_ID_OR_NUMBER]
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter If this field is empty, all custom and system-
-   * defined metric descriptors are returned. Otherwise, the filter
+   * @opt_param string filter Optional. If this field is empty, all custom and
+   * system-defined metric descriptors are returned. Otherwise, the filter
    * (https://cloud.google.com/monitoring/api/v3/filters) specifies which metric
    * descriptors are to be returned. For example, the following filter matches all
    * custom metrics (https://cloud.google.com/monitoring/custom-metrics):
    * metric.type = starts_with("custom.googleapis.com/")
-   * @opt_param int pageSize A positive number that is the maximum number of
-   * results to return. The default and maximum value is 10,000. If a page_size <=
-   * 0 or > 10,000 is submitted, will instead return a maximum of 10,000 results.
-   * @opt_param string pageToken If this field is not empty then it must contain
-   * the nextPageToken value returned by a previous call to this method. Using
-   * this field causes the method to return additional results from the previous
-   * method call.
+   * @opt_param int pageSize Optional. A positive number that is the maximum
+   * number of results to return. The default and maximum value is 10,000. If a
+   * page_size <= 0 or > 10,000 is submitted, will instead return a maximum of
+   * 10,000 results.
+   * @opt_param string pageToken Optional. If this field is not empty then it must
+   * contain the nextPageToken value returned by a previous call to this method.
+   * Using this field causes the method to return additional results from the
+   * previous method call.
    * @return ListMetricDescriptorsResponse
    * @throws \Google\Service\Exception
    */
