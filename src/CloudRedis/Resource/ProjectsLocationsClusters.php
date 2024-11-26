@@ -17,6 +17,7 @@
 
 namespace Google\Service\CloudRedis\Resource;
 
+use Google\Service\CloudRedis\BackupClusterRequest;
 use Google\Service\CloudRedis\CertificateAuthority;
 use Google\Service\CloudRedis\Cluster;
 use Google\Service\CloudRedis\ListClustersResponse;
@@ -33,6 +34,28 @@ use Google\Service\CloudRedis\RescheduleClusterMaintenanceRequest;
  */
 class ProjectsLocationsClusters extends \Google\Service\Resource
 {
+  /**
+   * Backup Redis Cluster. If this is the first time a backup is being created, a
+   * backup collection will be created at the backend, and this backup belongs to
+   * this collection. Both collection and backup will have a resource name. Backup
+   * will be executed for each shard. A replica (primary if nonHA) will be
+   * selected to perform the execution. Backup call will be rejected if there is
+   * an ongoing backup or update operation. (clusters.backup)
+   *
+   * @param string $name Required. Redis cluster resource name using the form:
+   * `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}` where
+   * `location_id` refers to a GCP region.
+   * @param BackupClusterRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function backup($name, BackupClusterRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('backup', [$params], Operation::class);
+  }
   /**
    * Creates a Redis cluster based on the specified properties. The creation is
    * executed asynchronously and callers may check the returned operation to track
