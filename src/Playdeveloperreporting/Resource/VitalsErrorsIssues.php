@@ -85,9 +85,9 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * time. Must normally be from 0 to 59, defaults to 0. An API may allow the
    * value 60 if it allows leap-seconds.
    * @opt_param string interval.endTime.timeZone.id IANA Time Zone Database time
-   * zone, e.g. "America/New_York".
+   * zone. For example "America/New_York".
    * @opt_param string interval.endTime.timeZone.version Optional. IANA Time Zone
-   * Database version number, e.g. "2019a".
+   * Database version number. For example "2019a".
    * @opt_param string interval.endTime.utcOffset UTC offset. Must be whole
    * seconds, between -18 hours and +18 hours. For example, a UTC offset of -4:00
    * would be represented as { seconds: -14400 }.
@@ -109,9 +109,9 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * time. Must normally be from 0 to 59, defaults to 0. An API may allow the
    * value 60 if it allows leap-seconds.
    * @opt_param string interval.startTime.timeZone.id IANA Time Zone Database time
-   * zone, e.g. "America/New_York".
+   * zone. For example "America/New_York".
    * @opt_param string interval.startTime.timeZone.version Optional. IANA Time
-   * Zone Database version number, e.g. "2019a".
+   * Zone Database version number. For example "2019a".
    * @opt_param string interval.startTime.utcOffset UTC offset. Must be whole
    * seconds, between -18 hours and +18 hours. For example, a UTC offset of -4:00
    * would be represented as { seconds: -14400 }.
