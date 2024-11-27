@@ -25,6 +25,10 @@ class GoogleChecksRepoScanV1alphaSource extends \Google\Model
    * @var string
    */
   public $dataType;
+  /**
+   * @var bool
+   */
+  public $falsePositive;
 
   /**
    * @param GoogleChecksRepoScanV1alphaCodeAttribution
@@ -53,6 +57,20 @@ class GoogleChecksRepoScanV1alphaSource extends \Google\Model
   public function getDataType()
   {
     return $this->dataType;
+  }
+  /**
+   * @param bool
+   */
+  public function setFalsePositive($falsePositive)
+  {
+    $this->falsePositive = $falsePositive;
+  }
+  /**
+   * @return bool
+   */
+  public function getFalsePositive()
+  {
+    return $this->falsePositive;
   }
 }
 
