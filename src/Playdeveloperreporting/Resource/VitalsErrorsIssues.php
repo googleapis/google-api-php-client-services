@@ -50,7 +50,7 @@ class VitalsErrorsIssues extends \Google\Service\Resource
    * requested device brands. Example: `deviceBrand = "Google". * `deviceType`:
    * Matches error issues that occurred in the requested device types. Example:
    * `deviceType = "PHONE"`. * `errorIssueType`: Matches error issues of the
-   * requested types only. Valid candidates: `CRASH`, `ANR`. Example:
+   * requested types only. Valid candidates: `CRASH`, `ANR`, `NON_FATAL`. Example:
    * `errorIssueType = CRASH OR errorIssueType = ANR`. * `appProcessState`:
    * Matches error issues on the process state of an app, indicating whether an
    * app runs in the foreground (user-visible) or background. Valid candidates:
