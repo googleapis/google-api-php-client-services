@@ -60,8 +60,7 @@ class Spaces extends \Google\Service\Resource
   }
   /**
    * Creates a space with no members. Can be used to create a named space, or a
-   * group chat in `Import mode`. Spaces grouped by topics aren't supported. For
-   * an example, see [Create a
+   * group chat in `Import mode`. For an example, see [Create a
    * space](https://developers.google.com/workspace/chat/create-spaces). If you
    * receive the error message `ALREADY_EXISTS` when creating a space, try a
    * different `displayName`. An existing space within the Google Workspace
