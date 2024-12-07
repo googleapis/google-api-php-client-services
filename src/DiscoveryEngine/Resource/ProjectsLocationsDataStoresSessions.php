@@ -73,6 +73,9 @@ class ProjectsLocationsDataStoresSessions extends \Google\Service\Resource
    * Format: `projects/{project}/locations/{location}/collections/{collection}/dat
    * aStores/{data_store_id}/sessions/{session_id}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool includeAnswerDetails Optional. If set to true, the full
+   * session including all answer details will be returned.
    * @return GoogleCloudDiscoveryengineV1Session
    * @throws \Google\Service\Exception
    */

@@ -935,6 +935,20 @@ class DiscoveryEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'recommend' => [
               'path' => 'v1/{+servingConfig}:recommend',
               'httpMethod' => 'POST',
@@ -957,6 +971,16 @@ class DiscoveryEngine extends \Google\Service
               ],
             ],'searchLite' => [
               'path' => 'v1/{+servingConfig}:searchLite',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'streamAnswer' => [
+              'path' => 'v1/{+servingConfig}:streamAnswer',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -1003,6 +1027,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'includeAnswerDetails' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'list' => [
@@ -1703,6 +1731,20 @@ class DiscoveryEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'recommend' => [
               'path' => 'v1/{+servingConfig}:recommend',
               'httpMethod' => 'POST',
@@ -1725,6 +1767,16 @@ class DiscoveryEngine extends \Google\Service
               ],
             ],'searchLite' => [
               'path' => 'v1/{+servingConfig}:searchLite',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'streamAnswer' => [
+              'path' => 'v1/{+servingConfig}:streamAnswer',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -1771,6 +1823,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'includeAnswerDetails' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'list' => [
@@ -2569,6 +2625,20 @@ class DiscoveryEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'recommend' => [
               'path' => 'v1/{+servingConfig}:recommend',
               'httpMethod' => 'POST',
@@ -2591,6 +2661,16 @@ class DiscoveryEngine extends \Google\Service
               ],
             ],'searchLite' => [
               'path' => 'v1/{+servingConfig}:searchLite',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'servingConfig' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'streamAnswer' => [
+              'path' => 'v1/{+servingConfig}:streamAnswer',
               'httpMethod' => 'POST',
               'parameters' => [
                 'servingConfig' => [
@@ -2637,6 +2717,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'includeAnswerDetails' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'list' => [

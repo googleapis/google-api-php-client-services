@@ -38,6 +38,9 @@ class GoogleCloudDiscoveryengineV1Answer extends \Google\Collection
    * @var string
    */
   public $createTime;
+  public $groundingScore;
+  protected $groundingSupportsType = GoogleCloudDiscoveryengineV1AnswerGroundingSupport::class;
+  protected $groundingSupportsDataType = 'array';
   /**
    * @var string
    */
@@ -126,6 +129,28 @@ class GoogleCloudDiscoveryengineV1Answer extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  public function setGroundingScore($groundingScore)
+  {
+    $this->groundingScore = $groundingScore;
+  }
+  public function getGroundingScore()
+  {
+    return $this->groundingScore;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1AnswerGroundingSupport[]
+   */
+  public function setGroundingSupports($groundingSupports)
+  {
+    $this->groundingSupports = $groundingSupports;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1AnswerGroundingSupport[]
+   */
+  public function getGroundingSupports()
+  {
+    return $this->groundingSupports;
   }
   /**
    * @param string
