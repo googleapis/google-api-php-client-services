@@ -15,19 +15,30 @@
  * the License.
  */
 
-namespace Google\Service\DataprocMetastore\Resource;
+namespace Google\Service\DataprocMetastore;
 
-/**
- * The "locations" collection of methods.
- * Typical usage is:
- *  <code>
- *   $metastoreService = new Google\Service\DataprocMetastore(...);
- *   $locations = $metastoreService->projects_locations;
- *  </code>
- */
-class ProjectsLocations extends \Google\Service\Resource
+class GoogleCloudMetastoreV2QueryMetadataRequest extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $query;
+
+  /**
+   * @param string
+   */
+  public function setQuery($query)
+  {
+    $this->query = $query;
+  }
+  /**
+   * @return string
+   */
+  public function getQuery()
+  {
+    return $this->query;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_DataprocMetastore_Resource_ProjectsLocations');
+class_alias(GoogleCloudMetastoreV2QueryMetadataRequest::class, 'Google_Service_DataprocMetastore_GoogleCloudMetastoreV2QueryMetadataRequest');
