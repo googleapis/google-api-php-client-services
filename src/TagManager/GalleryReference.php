@@ -42,6 +42,10 @@ class GalleryReference extends \Google\Model
   /**
    * @var string
    */
+  public $templateDeveloperId;
+  /**
+   * @var string
+   */
   public $version;
 
   /**
@@ -113,6 +117,20 @@ class GalleryReference extends \Google\Model
   public function getSignature()
   {
     return $this->signature;
+  }
+  /**
+   * @param string
+   */
+  public function setTemplateDeveloperId($templateDeveloperId)
+  {
+    $this->templateDeveloperId = $templateDeveloperId;
+  }
+  /**
+   * @return string
+   */
+  public function getTemplateDeveloperId()
+  {
+    return $this->templateDeveloperId;
   }
   /**
    * @param string
