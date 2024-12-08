@@ -71,6 +71,8 @@ class MigrationJob extends \Google\Model
    * @var string
    */
   public $name;
+  protected $objectsConfigType = MigrationJobObjectsConfig::class;
+  protected $objectsConfigDataType = '';
   protected $oracleToPostgresConfigType = OracleToPostgresConfig::class;
   protected $oracleToPostgresConfigDataType = '';
   protected $performanceConfigType = PerformanceConfig::class;
@@ -315,6 +317,20 @@ class MigrationJob extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param MigrationJobObjectsConfig
+   */
+  public function setObjectsConfig(MigrationJobObjectsConfig $objectsConfig)
+  {
+    $this->objectsConfig = $objectsConfig;
+  }
+  /**
+   * @return MigrationJobObjectsConfig
+   */
+  public function getObjectsConfig()
+  {
+    return $this->objectsConfig;
   }
   /**
    * @param OracleToPostgresConfig

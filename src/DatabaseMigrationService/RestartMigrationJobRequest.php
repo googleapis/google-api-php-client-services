@@ -19,11 +19,27 @@ namespace Google\Service\DatabaseMigrationService;
 
 class RestartMigrationJobRequest extends \Google\Model
 {
+  protected $objectsFilterType = MigrationJobObjectsConfig::class;
+  protected $objectsFilterDataType = '';
   /**
    * @var bool
    */
   public $skipValidation;
 
+  /**
+   * @param MigrationJobObjectsConfig
+   */
+  public function setObjectsFilter(MigrationJobObjectsConfig $objectsFilter)
+  {
+    $this->objectsFilter = $objectsFilter;
+  }
+  /**
+   * @return MigrationJobObjectsConfig
+   */
+  public function getObjectsFilter()
+  {
+    return $this->objectsFilter;
+  }
   /**
    * @param bool
    */

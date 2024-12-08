@@ -17,26 +17,46 @@
 
 namespace Google\Service\DatabaseMigrationService;
 
-class PromoteMigrationJobRequest extends \Google\Model
+class SourceObjectIdentifier extends \Google\Model
 {
-  protected $objectsFilterType = MigrationJobObjectsConfig::class;
-  protected $objectsFilterDataType = '';
+  /**
+   * @var string
+   */
+  public $database;
+  /**
+   * @var string
+   */
+  public $type;
 
   /**
-   * @param MigrationJobObjectsConfig
+   * @param string
    */
-  public function setObjectsFilter(MigrationJobObjectsConfig $objectsFilter)
+  public function setDatabase($database)
   {
-    $this->objectsFilter = $objectsFilter;
+    $this->database = $database;
   }
   /**
-   * @return MigrationJobObjectsConfig
+   * @return string
    */
-  public function getObjectsFilter()
+  public function getDatabase()
   {
-    return $this->objectsFilter;
+    return $this->database;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PromoteMigrationJobRequest::class, 'Google_Service_DatabaseMigrationService_PromoteMigrationJobRequest');
+class_alias(SourceObjectIdentifier::class, 'Google_Service_DatabaseMigrationService_SourceObjectIdentifier');
