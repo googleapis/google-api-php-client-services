@@ -70,6 +70,10 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $totalSizeBytes;
+  /**
+   * @var string
+   */
+  public $uid;
 
   /**
    * @param BackupFile[]
@@ -252,6 +256,20 @@ class Backup extends \Google\Collection
   public function getTotalSizeBytes()
   {
     return $this->totalSizeBytes;
+  }
+  /**
+   * @param string
+   */
+  public function setUid($uid)
+  {
+    $this->uid = $uid;
+  }
+  /**
+   * @return string
+   */
+  public function getUid()
+  {
+    return $this->uid;
   }
 }
 
