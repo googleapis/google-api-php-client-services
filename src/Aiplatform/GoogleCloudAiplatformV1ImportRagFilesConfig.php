@@ -35,6 +35,8 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   protected $partialFailureGcsSinkDataType = '';
   protected $ragFileTransformationConfigType = GoogleCloudAiplatformV1RagFileTransformationConfig::class;
   protected $ragFileTransformationConfigDataType = '';
+  protected $sharePointSourcesType = GoogleCloudAiplatformV1SharePointSources::class;
+  protected $sharePointSourcesDataType = '';
   protected $slackSourceType = GoogleCloudAiplatformV1SlackSource::class;
   protected $slackSourceDataType = '';
 
@@ -135,6 +137,20 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   public function getRagFileTransformationConfig()
   {
     return $this->ragFileTransformationConfig;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1SharePointSources
+   */
+  public function setSharePointSources(GoogleCloudAiplatformV1SharePointSources $sharePointSources)
+  {
+    $this->sharePointSources = $sharePointSources;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SharePointSources
+   */
+  public function getSharePointSources()
+  {
+    return $this->sharePointSources;
   }
   /**
    * @param GoogleCloudAiplatformV1SlackSource

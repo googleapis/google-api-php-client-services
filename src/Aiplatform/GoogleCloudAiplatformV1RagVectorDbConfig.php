@@ -25,6 +25,8 @@ class GoogleCloudAiplatformV1RagVectorDbConfig extends \Google\Model
   protected $pineconeDataType = '';
   protected $ragEmbeddingModelConfigType = GoogleCloudAiplatformV1RagEmbeddingModelConfig::class;
   protected $ragEmbeddingModelConfigDataType = '';
+  protected $ragManagedDbType = GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb::class;
+  protected $ragManagedDbDataType = '';
   protected $vertexVectorSearchType = GoogleCloudAiplatformV1RagVectorDbConfigVertexVectorSearch::class;
   protected $vertexVectorSearchDataType = '';
 
@@ -69,6 +71,20 @@ class GoogleCloudAiplatformV1RagVectorDbConfig extends \Google\Model
   public function getRagEmbeddingModelConfig()
   {
     return $this->ragEmbeddingModelConfig;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb
+   */
+  public function setRagManagedDb(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb $ragManagedDb)
+  {
+    $this->ragManagedDb = $ragManagedDb;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDb
+   */
+  public function getRagManagedDb()
+  {
+    return $this->ragManagedDb;
   }
   /**
    * @param GoogleCloudAiplatformV1RagVectorDbConfigVertexVectorSearch

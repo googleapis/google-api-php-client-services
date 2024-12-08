@@ -45,6 +45,8 @@ class GoogleCloudAiplatformV1RagFile extends \Google\Model
    * @var string
    */
   public $name;
+  protected $sharePointSourcesType = GoogleCloudAiplatformV1SharePointSources::class;
+  protected $sharePointSourcesDataType = '';
   protected $slackSourceType = GoogleCloudAiplatformV1SlackSource::class;
   protected $slackSourceDataType = '';
   /**
@@ -177,6 +179,20 @@ class GoogleCloudAiplatformV1RagFile extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1SharePointSources
+   */
+  public function setSharePointSources(GoogleCloudAiplatformV1SharePointSources $sharePointSources)
+  {
+    $this->sharePointSources = $sharePointSources;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SharePointSources
+   */
+  public function getSharePointSources()
+  {
+    return $this->sharePointSources;
   }
   /**
    * @param GoogleCloudAiplatformV1SlackSource

@@ -52,6 +52,10 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var string
    */
   public $responseMimeType;
+  /**
+   * @var string[]
+   */
+  public $responseModalities;
   protected $responseSchemaType = GoogleCloudAiplatformV1Schema::class;
   protected $responseSchemaDataType = '';
   protected $routingConfigType = GoogleCloudAiplatformV1GenerationConfigRoutingConfig::class;
@@ -60,6 +64,8 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var int
    */
   public $seed;
+  protected $speechConfigType = GoogleCloudAiplatformV1SpeechConfig::class;
+  protected $speechConfigDataType = '';
   /**
    * @var string[]
    */
@@ -68,6 +74,10 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var float
    */
   public $temperature;
+  /**
+   * @var string
+   */
+  public $tokenResolution;
   /**
    * @var float
    */
@@ -190,6 +200,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
     return $this->responseMimeType;
   }
   /**
+   * @param string[]
+   */
+  public function setResponseModalities($responseModalities)
+  {
+    $this->responseModalities = $responseModalities;
+  }
+  /**
+   * @return string[]
+   */
+  public function getResponseModalities()
+  {
+    return $this->responseModalities;
+  }
+  /**
    * @param GoogleCloudAiplatformV1Schema
    */
   public function setResponseSchema(GoogleCloudAiplatformV1Schema $responseSchema)
@@ -232,6 +256,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
     return $this->seed;
   }
   /**
+   * @param GoogleCloudAiplatformV1SpeechConfig
+   */
+  public function setSpeechConfig(GoogleCloudAiplatformV1SpeechConfig $speechConfig)
+  {
+    $this->speechConfig = $speechConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1SpeechConfig
+   */
+  public function getSpeechConfig()
+  {
+    return $this->speechConfig;
+  }
+  /**
    * @param string[]
    */
   public function setStopSequences($stopSequences)
@@ -258,6 +296,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getTemperature()
   {
     return $this->temperature;
+  }
+  /**
+   * @param string
+   */
+  public function setTokenResolution($tokenResolution)
+  {
+    $this->tokenResolution = $tokenResolution;
+  }
+  /**
+   * @return string
+   */
+  public function getTokenResolution()
+  {
+    return $this->tokenResolution;
   }
   /**
    * @param float

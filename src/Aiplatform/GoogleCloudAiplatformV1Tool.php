@@ -22,6 +22,8 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   protected $collection_key = 'functionDeclarations';
   protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
   protected $functionDeclarationsDataType = 'array';
+  protected $googleSearchType = GoogleCloudAiplatformV1ToolGoogleSearch::class;
+  protected $googleSearchDataType = '';
   protected $googleSearchRetrievalType = GoogleCloudAiplatformV1GoogleSearchRetrieval::class;
   protected $googleSearchRetrievalDataType = '';
   protected $retrievalType = GoogleCloudAiplatformV1Retrieval::class;
@@ -40,6 +42,20 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   public function getFunctionDeclarations()
   {
     return $this->functionDeclarations;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ToolGoogleSearch
+   */
+  public function setGoogleSearch(GoogleCloudAiplatformV1ToolGoogleSearch $googleSearch)
+  {
+    $this->googleSearch = $googleSearch;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ToolGoogleSearch
+   */
+  public function getGoogleSearch()
+  {
+    return $this->googleSearch;
   }
   /**
    * @param GoogleCloudAiplatformV1GoogleSearchRetrieval
