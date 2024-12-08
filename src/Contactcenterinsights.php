@@ -40,7 +40,7 @@ class Contactcenterinsights extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_analysisRules;
-  public $projects_locations_authorizedViewSet_authorizedView;
+  public $projects_locations_authorizedViewSets_authorizedViews;
   public $projects_locations_conversations;
   public $projects_locations_conversations_analyses;
   public $projects_locations_conversations_feedbackLabels;
@@ -242,10 +242,10 @@ class Contactcenterinsights extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_authorizedViewSet_authorizedView = new Contactcenterinsights\Resource\ProjectsLocationsAuthorizedViewSetAuthorizedView(
+    $this->projects_locations_authorizedViewSets_authorizedViews = new Contactcenterinsights\Resource\ProjectsLocationsAuthorizedViewSetsAuthorizedViews(
         $this,
         $this->serviceName,
-        'authorizedView',
+        'authorizedViews',
         [
           'methods' => [
             'calculateStats' => [
