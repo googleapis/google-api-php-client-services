@@ -129,7 +129,8 @@ class ProjectsLocationsMessageBuses extends \Google\Service\Resource
   /**
    * List message buses. (messageBuses.listProjectsLocationsMessageBuses)
    *
-   * @param string $parent Required. The parent collection to list triggers on.
+   * @param string $parent Required. The parent collection to list message buses
+   * on.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. The filter field that the list request
