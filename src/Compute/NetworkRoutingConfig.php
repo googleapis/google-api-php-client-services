@@ -20,10 +20,64 @@ namespace Google\Service\Compute;
 class NetworkRoutingConfig extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $bgpAlwaysCompareMed;
+  /**
+   * @var string
+   */
+  public $bgpBestPathSelectionMode;
+  /**
+   * @var string
+   */
+  public $bgpInterRegionCost;
+  /**
    * @var string
    */
   public $routingMode;
 
+  /**
+   * @param bool
+   */
+  public function setBgpAlwaysCompareMed($bgpAlwaysCompareMed)
+  {
+    $this->bgpAlwaysCompareMed = $bgpAlwaysCompareMed;
+  }
+  /**
+   * @return bool
+   */
+  public function getBgpAlwaysCompareMed()
+  {
+    return $this->bgpAlwaysCompareMed;
+  }
+  /**
+   * @param string
+   */
+  public function setBgpBestPathSelectionMode($bgpBestPathSelectionMode)
+  {
+    $this->bgpBestPathSelectionMode = $bgpBestPathSelectionMode;
+  }
+  /**
+   * @return string
+   */
+  public function getBgpBestPathSelectionMode()
+  {
+    return $this->bgpBestPathSelectionMode;
+  }
+  /**
+   * @param string
+   */
+  public function setBgpInterRegionCost($bgpInterRegionCost)
+  {
+    $this->bgpInterRegionCost = $bgpInterRegionCost;
+  }
+  /**
+   * @return string
+   */
+  public function getBgpInterRegionCost()
+  {
+    return $this->bgpInterRegionCost;
+  }
   /**
    * @param string
    */

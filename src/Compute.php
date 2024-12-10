@@ -94,6 +94,7 @@ class Compute extends \Google\Service
   public $networkEdgeSecurityServices;
   public $networkEndpointGroups;
   public $networkFirewallPolicies;
+  public $networkProfiles;
   public $networks;
   public $nodeGroups;
   public $nodeTemplates;
@@ -4550,6 +4551,30 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'resumeInstances' => [
+              'path' => 'projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resumeInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'setInstanceTemplate' => [
               'path' => 'projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate',
               'httpMethod' => 'POST',
@@ -4576,6 +4601,78 @@ class Compute extends \Google\Service
               ],
             ],'setTargetPools' => [
               'path' => 'projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setTargetPools',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'startInstances' => [
+              'path' => 'projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/startInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'stopInstances' => [
+              'path' => 'projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/stopInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'suspendInstances' => [
+              'path' => 'projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/suspendInstances',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
@@ -8448,6 +8545,61 @@ class Compute extends \Google\Service
           ]
         ]
     );
+    $this->networkProfiles = new Compute\Resource\NetworkProfiles(
+        $this,
+        $this->serviceName,
+        'networkProfiles',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'projects/{project}/global/networkProfiles/{networkProfile}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'networkProfile' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'projects/{project}/global/networkProfiles',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->networks = new Compute\Resource\Networks(
         $this,
         $this->serviceName,
@@ -12001,6 +12153,30 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'resumeInstances' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resumeInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'setInstanceTemplate' => [
               'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate',
               'httpMethod' => 'POST',
@@ -12027,6 +12203,78 @@ class Compute extends \Google\Service
               ],
             ],'setTargetPools' => [
               'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/setTargetPools',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'startInstances' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/startInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'stopInstances' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/stopInstances',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instanceGroupManager' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'suspendInstances' => [
+              'path' => 'projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/suspendInstances',
               'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
@@ -13622,6 +13870,30 @@ class Compute extends \Google\Service
                 'priority' => [
                   'location' => 'query',
                   'type' => 'integer',
+                ],
+              ],
+            ],'setLabels' => [
+              'path' => 'projects/{project}/regions/{region}/securityPolicies/{resource}/setLabels',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
