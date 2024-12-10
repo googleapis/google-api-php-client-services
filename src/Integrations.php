@@ -161,7 +161,17 @@ class Integrations extends \Google\Service
         'locations',
         [
           'methods' => [
-            'getClients' => [
+            'generateOpenApiSpec' => [
+              'path' => 'v1/{+name}:generateOpenApiSpec',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getClients' => [
               'path' => 'v1/{+parent}/clients',
               'httpMethod' => 'GET',
               'parameters' => [
