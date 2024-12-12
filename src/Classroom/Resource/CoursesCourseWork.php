@@ -245,8 +245,11 @@ class CoursesCourseWork extends \Google\Service\Resource
   /**
    * Updates a rubric. See google.classroom.v1.Rubric for details of which fields
    * can be updated. Rubric update capabilities are
-   * [limited](/classroom/rubrics/limitations) once grading has started. This
-   * request must be made by the Google Cloud console of the [OAuth client
+   * [limited](/classroom/rubrics/limitations) once grading has started. The
+   * requesting user and course owner must have rubrics creation capabilities. For
+   * details, see [licensing requirements](https://developers.google.com/classroom
+   * /rubrics/limitations#license-requirements). This request must be made by the
+   * Google Cloud console of the [OAuth client
    * ID](https://support.google.com/cloud/answer/6158849) used to create the
    * parent course work item. This method returns the following error codes: *
    * `PERMISSION_DENIED` if the requesting developer project didn't create the
