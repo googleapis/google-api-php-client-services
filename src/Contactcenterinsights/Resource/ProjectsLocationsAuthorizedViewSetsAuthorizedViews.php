@@ -17,7 +17,6 @@
 
 namespace Google\Service\Contactcenterinsights\Resource;
 
-use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateStatsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1QueryMetricsRequest;
 use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
 
@@ -31,24 +30,6 @@ use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
  */
 class ProjectsLocationsAuthorizedViewSetsAuthorizedViews extends \Google\Service\Resource
 {
-  /**
-   * Gets conversation statistics. (authorizedViews.calculateStats)
-   *
-   * @param string $location Required. The location of the conversations.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter A filter to reduce results to a specific subset.
-   * This field is useful for getting statistics about conversations with specific
-   * properties.
-   * @return GoogleCloudContactcenterinsightsV1CalculateStatsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function calculateStats($location, $optParams = [])
-  {
-    $params = ['location' => $location];
-    $params = array_merge($params, $optParams);
-    return $this->call('calculateStats', [$params], GoogleCloudContactcenterinsightsV1CalculateStatsResponse::class);
-  }
   /**
    * Query metrics. (authorizedViews.queryMetrics)
    *

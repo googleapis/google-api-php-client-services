@@ -41,6 +41,7 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations;
   public $projects_locations_analysisRules;
   public $projects_locations_authorizedViewSets_authorizedViews;
+  public $projects_locations_authorizedViewSets_authorizedViews_conversations;
   public $projects_locations_conversations;
   public $projects_locations_conversations_analyses;
   public $projects_locations_conversations_feedbackLabels;
@@ -248,8 +249,28 @@ class Contactcenterinsights extends \Google\Service
         'authorizedViews',
         [
           'methods' => [
+            'queryMetrics' => [
+              'path' => 'v1/{+location}:queryMetrics',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_authorizedViewSets_authorizedViews_conversations = new Contactcenterinsights\Resource\ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations(
+        $this,
+        $this->serviceName,
+        'conversations',
+        [
+          'methods' => [
             'calculateStats' => [
-              'path' => 'v1/{+location}:calculateStats',
+              'path' => 'v1/{+location}/conversations:calculateStats',
               'httpMethod' => 'GET',
               'parameters' => [
                 'location' => [
@@ -260,16 +281,6 @@ class Contactcenterinsights extends \Google\Service
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'queryMetrics' => [
-              'path' => 'v1/{+location}:queryMetrics',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'location' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],
