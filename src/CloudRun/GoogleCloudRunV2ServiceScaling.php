@@ -22,12 +22,30 @@ class GoogleCloudRunV2ServiceScaling extends \Google\Model
   /**
    * @var int
    */
+  public $manualInstanceCount;
+  /**
+   * @var int
+   */
   public $minInstanceCount;
   /**
    * @var string
    */
   public $scalingMode;
 
+  /**
+   * @param int
+   */
+  public function setManualInstanceCount($manualInstanceCount)
+  {
+    $this->manualInstanceCount = $manualInstanceCount;
+  }
+  /**
+   * @return int
+   */
+  public function getManualInstanceCount()
+  {
+    return $this->manualInstanceCount;
+  }
   /**
    * @param int
    */
