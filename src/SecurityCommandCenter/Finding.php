@@ -58,6 +58,8 @@ class Finding extends \Google\Collection
   protected $dataAccessEventsDataType = 'array';
   protected $dataFlowEventsType = DataFlowEvent::class;
   protected $dataFlowEventsDataType = 'array';
+  protected $dataRetentionDeletionEventsType = DataRetentionDeletionEvent::class;
+  protected $dataRetentionDeletionEventsDataType = 'array';
   protected $databaseType = Database::class;
   protected $databaseDataType = '';
   /**
@@ -388,6 +390,20 @@ class Finding extends \Google\Collection
   public function getDataFlowEvents()
   {
     return $this->dataFlowEvents;
+  }
+  /**
+   * @param DataRetentionDeletionEvent[]
+   */
+  public function setDataRetentionDeletionEvents($dataRetentionDeletionEvents)
+  {
+    $this->dataRetentionDeletionEvents = $dataRetentionDeletionEvents;
+  }
+  /**
+   * @return DataRetentionDeletionEvent[]
+   */
+  public function getDataRetentionDeletionEvents()
+  {
+    return $this->dataRetentionDeletionEvents;
   }
   /**
    * @param Database

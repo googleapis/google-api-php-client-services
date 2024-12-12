@@ -58,6 +58,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $dataAccessEventsDataType = 'array';
   protected $dataFlowEventsType = GoogleCloudSecuritycenterV2DataFlowEvent::class;
   protected $dataFlowEventsDataType = 'array';
+  protected $dataRetentionDeletionEventsType = GoogleCloudSecuritycenterV2DataRetentionDeletionEvent::class;
+  protected $dataRetentionDeletionEventsDataType = 'array';
   protected $databaseType = GoogleCloudSecuritycenterV2Database::class;
   protected $databaseDataType = '';
   /**
@@ -388,6 +390,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getDataFlowEvents()
   {
     return $this->dataFlowEvents;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2DataRetentionDeletionEvent[]
+   */
+  public function setDataRetentionDeletionEvents($dataRetentionDeletionEvents)
+  {
+    $this->dataRetentionDeletionEvents = $dataRetentionDeletionEvents;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2DataRetentionDeletionEvent[]
+   */
+  public function getDataRetentionDeletionEvents()
+  {
+    return $this->dataRetentionDeletionEvents;
   }
   /**
    * @param GoogleCloudSecuritycenterV2Database
