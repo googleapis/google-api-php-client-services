@@ -172,6 +172,57 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
     return $this->call('Binary-vread', [$params], HttpBody::class);
   }
   /**
+   * Returns the consent enforcement status of a single consent resource. On
+   * success, the response body contains a JSON-encoded representation of a
+   * `Parameters` (http://hl7.org/fhir/parameters.html) FHIR resource, containing
+   * the current enforcement status. Does not support DSTU2.
+   * (fhir.ConsentEnforcementStatus)
+   *
+   * @param string $name Required. The name of the consent resource to find
+   * enforcement status, in the format `projects/{project_id}/locations/{location_
+   * id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Consent/{consent_id
+   * }`
+   * @param array $optParams Optional parameters.
+   * @return HttpBody
+   * @throws \Google\Service\Exception
+   */
+  public function ConsentEnforcementStatus($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('Consent-enforcement-status', [$params], HttpBody::class);
+  }
+  /**
+   * Returns the consent enforcement status of all consent resources for a
+   * patient. On success, the response body contains a JSON-encoded representation
+   * of a bundle of `Parameters` (http://hl7.org/fhir/parameters.html) FHIR
+   * resources, containing the current enforcement status for each consent
+   * resource of the patient. Does not support DSTU2.
+   * (fhir.PatientConsentEnforcementStatus)
+   *
+   * @param string $name Required. The name of the patient to find enforcement
+   * statuses, in the format `projects/{project_id}/locations/{location_id}/datase
+   * ts/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Patient/{patient_id}`
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int _count Optional. The maximum number of results on a page. If
+   * not specified, 100 is used. May not be larger than 1000.
+   * @opt_param string _page_token Optional. Used to retrieve the first, previous,
+   * next, or last page of consent enforcement statuses when using pagination.
+   * Value should be set to the value of `_page_token` set in next or previous
+   * page links' URLs. Next and previous page are returned in the response
+   * bundle's links field, where `link.relation` is "previous" or "next". Omit
+   * `_page_token` if no previous request has been made.
+   * @return HttpBody
+   * @throws \Google\Service\Exception
+   */
+  public function PatientConsentEnforcementStatus($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('Patient-consent-enforcement-status', [$params], HttpBody::class);
+  }
+  /**
    * Retrieves a Patient resource and resources related to that patient.
    * Implements the FHIR extended operation Patient-everything
    * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/patient-

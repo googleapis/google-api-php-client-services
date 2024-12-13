@@ -1378,7 +1378,27 @@ class CloudHealthcare extends \Google\Service
         'fhirStores',
         [
           'methods' => [
-            'create' => [
+            'applyAdminConsents' => [
+              'path' => 'v1/{+name}:applyAdminConsents',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'applyConsents' => [
+              'path' => 'v1/{+name}:applyConsents',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
               'path' => 'v1/{+parent}/fhirStores',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -1410,6 +1430,20 @@ class CloudHealthcare extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'explainDataAccess' => [
+              'path' => 'v1/{+name}:explainDataAccess',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resourceId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'export' => [
@@ -1580,6 +1614,34 @@ class CloudHealthcare extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'Consent-enforcement-status' => [
+              'path' => 'v1/{+name}/$consent-enforcement-status',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'Patient-consent-enforcement-status' => [
+              'path' => 'v1/{+name}/$consent-enforcement-status',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                '_count' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                '_page_token' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'Patient-everything' => [

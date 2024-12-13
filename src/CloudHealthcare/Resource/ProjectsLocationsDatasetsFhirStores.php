@@ -17,7 +17,10 @@
 
 namespace Google\Service\CloudHealthcare\Resource;
 
+use Google\Service\CloudHealthcare\ApplyAdminConsentsRequest;
+use Google\Service\CloudHealthcare\ApplyConsentsRequest;
 use Google\Service\CloudHealthcare\DeidentifyFhirStoreRequest;
+use Google\Service\CloudHealthcare\ExplainDataAccessResponse;
 use Google\Service\CloudHealthcare\ExportResourcesRequest;
 use Google\Service\CloudHealthcare\FhirStore;
 use Google\Service\CloudHealthcare\FhirStoreMetrics;
@@ -41,6 +44,66 @@ use Google\Service\CloudHealthcare\TestIamPermissionsResponse;
  */
 class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
 {
+  /**
+   * Applies the admin Consent resources for the FHIR store and reindexes the
+   * underlying resources in the FHIR store according to the aggregate consents.
+   * This method also updates the `consent_config.enforced_admin_consents` field
+   * of the FhirStore unless `validate_only=true` in ApplyAdminConsentsRequest.
+   * Any admin Consent resource change after this operation execution (including
+   * deletion) requires you to call ApplyAdminConsents again for the change to
+   * take effect. This method returns an Operation that can be used to track the
+   * progress of the resources that were reindexed, by calling GetOperation. Upon
+   * completion, the ApplyAdminConsentsResponse additionally contains the number
+   * of resources that were reindexed. If at least one Consent resource contains
+   * an error or fails be be enforced for any reason, the method returns an error
+   * instead of an Operation. No resources will be reindexed and the
+   * `consent_config.enforced_admin_consents` field will be unchanged. To enforce
+   * a consent check for data access, `consent_config.access_enforced` must be set
+   * to true for the FhirStore. (fhirStores.applyAdminConsents)
+   *
+   * @param string $name Required. The name of the FHIR store to enforce, in the
+   * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/f
+   * hirStores/{fhir_store_id}`.
+   * @param ApplyAdminConsentsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function applyAdminConsents($name, ApplyAdminConsentsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('applyAdminConsents', [$params], Operation::class);
+  }
+  /**
+   * Apply the Consent resources for the FHIR store and reindex the underlying
+   * resources in the FHIR store according to the aggregate consent. The aggregate
+   * consent of the patient in scope in this request replaces any previous call of
+   * this method. Any Consent resource change after this operation execution
+   * (including deletion) requires you to call ApplyConsents again to have effect.
+   * This method returns an Operation that can be used to track the progress of
+   * the consent resources that were processed by calling GetOperation. Upon
+   * completion, the ApplyConsentsResponse additionally contains the number of
+   * resources that was reindexed. Errors are logged to Cloud Logging (see
+   * [Viewing error logs in Cloud
+   * Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)). To
+   * enforce consent check for data access, `consent_config.access_enforced` must
+   * be set to true for the FhirStore. (fhirStores.applyConsents)
+   *
+   * @param string $name Required. The name of the FHIR store to enforce, in the
+   * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/f
+   * hirStores/{fhir_store_id}`.
+   * @param ApplyConsentsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function applyConsents($name, ApplyConsentsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('applyConsents', [$params], Operation::class);
+  }
   /**
    * Creates a new FHIR store within the parent dataset. (fhirStores.create)
    *
@@ -98,6 +161,26 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], HealthcareEmpty::class);
+  }
+  /**
+   * Explains all the permitted/denied actor, purpose and environment for a given
+   * resource. (fhirStores.explainDataAccess)
+   *
+   * @param string $name Required. The name of the FHIR store to enforce, in the
+   * format `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/f
+   * hirStores/{fhir_store_id}`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string resourceId Required. The ID (`{resourceType}/{id}`) of the
+   * resource to explain data access on.
+   * @return ExplainDataAccessResponse
+   * @throws \Google\Service\Exception
+   */
+  public function explainDataAccess($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('explainDataAccess', [$params], ExplainDataAccessResponse::class);
   }
   /**
    * Export resources from the FHIR store to the specified destination. This

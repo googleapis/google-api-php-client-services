@@ -24,6 +24,8 @@ class FhirStore extends \Google\Collection
    * @var string
    */
   public $complexDataTypeReferenceParsing;
+  protected $consentConfigType = ConsentConfig::class;
+  protected $consentConfigDataType = '';
   /**
    * @var bool
    */
@@ -74,6 +76,20 @@ class FhirStore extends \Google\Collection
   public function getComplexDataTypeReferenceParsing()
   {
     return $this->complexDataTypeReferenceParsing;
+  }
+  /**
+   * @param ConsentConfig
+   */
+  public function setConsentConfig(ConsentConfig $consentConfig)
+  {
+    $this->consentConfig = $consentConfig;
+  }
+  /**
+   * @return ConsentConfig
+   */
+  public function getConsentConfig()
+  {
+    return $this->consentConfig;
   }
   /**
    * @param bool
