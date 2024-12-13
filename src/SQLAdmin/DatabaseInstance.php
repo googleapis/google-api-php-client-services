@@ -172,6 +172,10 @@ class DatabaseInstance extends \Google\Collection
    * @var bool
    */
   public $switchTransactionLogsToCloudStorageEnabled;
+  /**
+   * @var string[]
+   */
+  public $tags;
   protected $upgradableDatabaseVersionsType = AvailableDatabaseVersion::class;
   protected $upgradableDatabaseVersionsDataType = 'array';
   /**
@@ -794,6 +798,20 @@ class DatabaseInstance extends \Google\Collection
   public function getSwitchTransactionLogsToCloudStorageEnabled()
   {
     return $this->switchTransactionLogsToCloudStorageEnabled;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
   /**
    * @param AvailableDatabaseVersion[]
