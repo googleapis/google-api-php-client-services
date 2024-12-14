@@ -27,6 +27,8 @@ class ExportClusterRequest extends \Google\Model
   public $database;
   protected $gcsDestinationType = GcsDestination::class;
   protected $gcsDestinationDataType = '';
+  protected $sqlExportOptionsType = SqlExportOptions::class;
+  protected $sqlExportOptionsDataType = '';
 
   /**
    * @param CsvExportOptions
@@ -69,6 +71,20 @@ class ExportClusterRequest extends \Google\Model
   public function getGcsDestination()
   {
     return $this->gcsDestination;
+  }
+  /**
+   * @param SqlExportOptions
+   */
+  public function setSqlExportOptions(SqlExportOptions $sqlExportOptions)
+  {
+    $this->sqlExportOptions = $sqlExportOptions;
+  }
+  /**
+   * @return SqlExportOptions
+   */
+  public function getSqlExportOptions()
+  {
+    return $this->sqlExportOptions;
   }
 }
 

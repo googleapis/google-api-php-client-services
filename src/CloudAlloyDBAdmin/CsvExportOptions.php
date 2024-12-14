@@ -22,8 +22,62 @@ class CsvExportOptions extends \Google\Model
   /**
    * @var string
    */
+  public $escapeCharacter;
+  /**
+   * @var string
+   */
+  public $fieldDelimiter;
+  /**
+   * @var string
+   */
+  public $quoteCharacter;
+  /**
+   * @var string
+   */
   public $selectQuery;
 
+  /**
+   * @param string
+   */
+  public function setEscapeCharacter($escapeCharacter)
+  {
+    $this->escapeCharacter = $escapeCharacter;
+  }
+  /**
+   * @return string
+   */
+  public function getEscapeCharacter()
+  {
+    return $this->escapeCharacter;
+  }
+  /**
+   * @param string
+   */
+  public function setFieldDelimiter($fieldDelimiter)
+  {
+    $this->fieldDelimiter = $fieldDelimiter;
+  }
+  /**
+   * @return string
+   */
+  public function getFieldDelimiter()
+  {
+    return $this->fieldDelimiter;
+  }
+  /**
+   * @param string
+   */
+  public function setQuoteCharacter($quoteCharacter)
+  {
+    $this->quoteCharacter = $quoteCharacter;
+  }
+  /**
+   * @return string
+   */
+  public function getQuoteCharacter()
+  {
+    return $this->quoteCharacter;
+  }
   /**
    * @param string
    */
