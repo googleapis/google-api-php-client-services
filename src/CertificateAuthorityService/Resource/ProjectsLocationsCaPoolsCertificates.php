@@ -127,8 +127,8 @@ class ProjectsLocationsCaPoolsCertificates extends \Google\Service\Resource
    * Update a Certificate. Currently, the only field you can update is the labels
    * field. (certificates.patch)
    *
-   * @param string $name Output only. The resource name for this Certificate in
-   * the format `projects/locations/caPools/certificates`.
+   * @param string $name Identifier. The resource name for this Certificate in the
+   * format `projects/locations/caPools/certificates`.
    * @param Certificate $postBody
    * @param array $optParams Optional parameters.
    *
