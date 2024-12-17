@@ -24,6 +24,10 @@ class RestartMigrationJobRequest extends \Google\Model
   /**
    * @var bool
    */
+  public $restartFailedObjects;
+  /**
+   * @var bool
+   */
   public $skipValidation;
 
   /**
@@ -39,6 +43,20 @@ class RestartMigrationJobRequest extends \Google\Model
   public function getObjectsFilter()
   {
     return $this->objectsFilter;
+  }
+  /**
+   * @param bool
+   */
+  public function setRestartFailedObjects($restartFailedObjects)
+  {
+    $this->restartFailedObjects = $restartFailedObjects;
+  }
+  /**
+   * @return bool
+   */
+  public function getRestartFailedObjects()
+  {
+    return $this->restartFailedObjects;
   }
   /**
    * @param bool
