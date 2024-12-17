@@ -41,6 +41,10 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    */
   public $maxOutputTokens;
   /**
+   * @var string
+   */
+  public $mediaResolution;
+  /**
    * @var float
    */
   public $presencePenalty;
@@ -74,10 +78,6 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var float
    */
   public $temperature;
-  /**
-   * @var string
-   */
-  public $tokenResolution;
   /**
    * @var float
    */
@@ -156,6 +156,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getMaxOutputTokens()
   {
     return $this->maxOutputTokens;
+  }
+  /**
+   * @param string
+   */
+  public function setMediaResolution($mediaResolution)
+  {
+    $this->mediaResolution = $mediaResolution;
+  }
+  /**
+   * @return string
+   */
+  public function getMediaResolution()
+  {
+    return $this->mediaResolution;
   }
   /**
    * @param float
@@ -296,20 +310,6 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getTemperature()
   {
     return $this->temperature;
-  }
-  /**
-   * @param string
-   */
-  public function setTokenResolution($tokenResolution)
-  {
-    $this->tokenResolution = $tokenResolution;
-  }
-  /**
-   * @return string
-   */
-  public function getTokenResolution()
-  {
-    return $this->tokenResolution;
   }
   /**
    * @param float

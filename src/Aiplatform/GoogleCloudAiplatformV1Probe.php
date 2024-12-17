@@ -21,10 +21,16 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
 {
   protected $execType = GoogleCloudAiplatformV1ProbeExecAction::class;
   protected $execDataType = '';
+  protected $grpcType = GoogleCloudAiplatformV1ProbeGrpcAction::class;
+  protected $grpcDataType = '';
+  protected $httpGetType = GoogleCloudAiplatformV1ProbeHttpGetAction::class;
+  protected $httpGetDataType = '';
   /**
    * @var int
    */
   public $periodSeconds;
+  protected $tcpSocketType = GoogleCloudAiplatformV1ProbeTcpSocketAction::class;
+  protected $tcpSocketDataType = '';
   /**
    * @var int
    */
@@ -45,6 +51,34 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
     return $this->exec;
   }
   /**
+   * @param GoogleCloudAiplatformV1ProbeGrpcAction
+   */
+  public function setGrpc(GoogleCloudAiplatformV1ProbeGrpcAction $grpc)
+  {
+    $this->grpc = $grpc;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ProbeGrpcAction
+   */
+  public function getGrpc()
+  {
+    return $this->grpc;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ProbeHttpGetAction
+   */
+  public function setHttpGet(GoogleCloudAiplatformV1ProbeHttpGetAction $httpGet)
+  {
+    $this->httpGet = $httpGet;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ProbeHttpGetAction
+   */
+  public function getHttpGet()
+  {
+    return $this->httpGet;
+  }
+  /**
    * @param int
    */
   public function setPeriodSeconds($periodSeconds)
@@ -57,6 +91,20 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
   public function getPeriodSeconds()
   {
     return $this->periodSeconds;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ProbeTcpSocketAction
+   */
+  public function setTcpSocket(GoogleCloudAiplatformV1ProbeTcpSocketAction $tcpSocket)
+  {
+    $this->tcpSocket = $tcpSocket;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ProbeTcpSocketAction
+   */
+  public function getTcpSocket()
+  {
+    return $this->tcpSocket;
   }
   /**
    * @param int
