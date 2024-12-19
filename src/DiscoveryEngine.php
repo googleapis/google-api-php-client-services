@@ -39,6 +39,7 @@ class DiscoveryEngine extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects;
+  public $projects_locations;
   public $projects_locations_collections_dataConnector_operations;
   public $projects_locations_collections_dataStores;
   public $projects_locations_collections_dataStores_branches;
@@ -122,6 +123,26 @@ class DiscoveryEngine extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations = new DiscoveryEngine\Resource\ProjectsLocations(
+        $this,
+        $this->serviceName,
+        'locations',
+        [
+          'methods' => [
+            'generateGroundedContent' => [
+              'path' => 'v1/{+location}:generateGroundedContent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

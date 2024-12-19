@@ -49,6 +49,10 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
    */
   public $industryVertical;
   /**
+   * @var bool
+   */
+  public $isInfobotFaqDataStore;
+  /**
    * @var string
    */
   public $kmsKeyName;
@@ -196,6 +200,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getIndustryVertical()
   {
     return $this->industryVertical;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsInfobotFaqDataStore($isInfobotFaqDataStore)
+  {
+    $this->isInfobotFaqDataStore = $isInfobotFaqDataStore;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsInfobotFaqDataStore()
+  {
+    return $this->isInfobotFaqDataStore;
   }
   /**
    * @param string
