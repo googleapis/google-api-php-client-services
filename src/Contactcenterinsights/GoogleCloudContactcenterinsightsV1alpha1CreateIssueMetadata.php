@@ -17,7 +17,7 @@
 
 namespace Google\Service\Contactcenterinsights;
 
-class GoogleCloudContactcenterinsightsV1CreateIssueMetadata extends \Google\Model
+class GoogleCloudContactcenterinsightsV1alpha1CreateIssueMetadata extends \Google\Model
 {
   /**
    * @var string
@@ -27,7 +27,7 @@ class GoogleCloudContactcenterinsightsV1CreateIssueMetadata extends \Google\Mode
    * @var string
    */
   public $endTime;
-  protected $requestType = GoogleCloudContactcenterinsightsV1CreateIssueRequest::class;
+  protected $requestType = GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest::class;
   protected $requestDataType = '';
 
   /**
@@ -59,14 +59,14 @@ class GoogleCloudContactcenterinsightsV1CreateIssueMetadata extends \Google\Mode
     return $this->endTime;
   }
   /**
-   * @param GoogleCloudContactcenterinsightsV1CreateIssueRequest
+   * @param GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest
    */
-  public function setRequest(GoogleCloudContactcenterinsightsV1CreateIssueRequest $request)
+  public function setRequest(GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest $request)
   {
     $this->request = $request;
   }
   /**
-   * @return GoogleCloudContactcenterinsightsV1CreateIssueRequest
+   * @return GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest
    */
   public function getRequest()
   {
@@ -75,4 +75,4 @@ class GoogleCloudContactcenterinsightsV1CreateIssueMetadata extends \Google\Mode
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContactcenterinsightsV1CreateIssueMetadata::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1CreateIssueMetadata');
+class_alias(GoogleCloudContactcenterinsightsV1alpha1CreateIssueMetadata::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1alpha1CreateIssueMetadata');

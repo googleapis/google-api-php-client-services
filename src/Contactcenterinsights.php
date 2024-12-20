@@ -739,7 +739,17 @@ class Contactcenterinsights extends \Google\Service
         'issues',
         [
           'methods' => [
-            'delete' => [
+            'create' => [
+              'path' => 'v1/{+parent}/issues',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [

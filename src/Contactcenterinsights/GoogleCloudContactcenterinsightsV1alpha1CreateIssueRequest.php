@@ -17,9 +17,9 @@
 
 namespace Google\Service\Contactcenterinsights;
 
-class GoogleCloudContactcenterinsightsV1CreateIssueRequest extends \Google\Model
+class GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest extends \Google\Model
 {
-  protected $issueType = GoogleCloudContactcenterinsightsV1Issue::class;
+  protected $issueType = GoogleCloudContactcenterinsightsV1alpha1Issue::class;
   protected $issueDataType = '';
   /**
    * @var string
@@ -27,14 +27,14 @@ class GoogleCloudContactcenterinsightsV1CreateIssueRequest extends \Google\Model
   public $parent;
 
   /**
-   * @param GoogleCloudContactcenterinsightsV1Issue
+   * @param GoogleCloudContactcenterinsightsV1alpha1Issue
    */
-  public function setIssue(GoogleCloudContactcenterinsightsV1Issue $issue)
+  public function setIssue(GoogleCloudContactcenterinsightsV1alpha1Issue $issue)
   {
     $this->issue = $issue;
   }
   /**
-   * @return GoogleCloudContactcenterinsightsV1Issue
+   * @return GoogleCloudContactcenterinsightsV1alpha1Issue
    */
   public function getIssue()
   {
@@ -57,4 +57,4 @@ class GoogleCloudContactcenterinsightsV1CreateIssueRequest extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContactcenterinsightsV1CreateIssueRequest::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1CreateIssueRequest');
+class_alias(GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1alpha1CreateIssueRequest');
