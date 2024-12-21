@@ -936,32 +936,12 @@ class CloudRetail extends \Google\Service
           'methods' => [
             'collect' => [
               'path' => 'v2/{+parent}/userEvents:collect',
-              'httpMethod' => 'GET',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'ets' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'prebuiltRule' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'rawJson' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'uri' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'userEvent' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'import' => [
