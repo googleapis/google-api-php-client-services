@@ -239,10 +239,6 @@ class AndroidEnterprise extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'deviceType' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
                 'enrollmentToken.duration' => [
                   'location' => 'query',
                   'type' => 'string',

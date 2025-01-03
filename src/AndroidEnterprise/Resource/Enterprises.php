@@ -85,8 +85,6 @@ class Enterprises extends \Google\Service\Resource
    * @param string $enterpriseId Required. The ID of the enterprise.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string deviceType Deprecated: Use enrollment_token instead. this
-   * field will be removed in the future.
    * @opt_param string enrollmentToken.duration [Optional] The length of time the
    * enrollment token is valid, ranging from 1 minute to
    * [`Durations.MAX_VALUE`](https://developers.google.com/protocol-buffers/docs/r
