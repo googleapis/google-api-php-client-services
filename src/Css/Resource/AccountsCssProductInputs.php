@@ -64,11 +64,12 @@ class AccountsCssProductInputs extends \Google\Service\Resource
    * @param CssProductInput $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string feedId Optional. The primary or supplemental feed id. If
-   * CSS Product already exists and feed id provided is different, then the CSS
-   * Product will be moved to a new feed. Note: For now, CSSs do not need to
-   * provide feed ids as we create feeds on the fly. We do not have supplemental
-   * feed support for CSS Products yet.
+   * @opt_param string feedId Optional. DEPRECATED. Feed id is not required for
+   * CSS Products. The primary or supplemental feed id. If CSS Product already
+   * exists and feed id provided is different, then the CSS Product will be moved
+   * to a new feed. Note: For now, CSSs do not need to provide feed ids as we
+   * create feeds on the fly. We do not have supplemental feed support for CSS
+   * Products yet.
    * @return CssProductInput
    * @throws \Google\Service\Exception
    */
