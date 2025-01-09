@@ -17,44 +17,44 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaSetDedicatedCrawlRateResponse extends \Google\Model
 {
-  protected $nextSyncTimeType = GoogleTypeDateTime::class;
-  protected $nextSyncTimeDataType = '';
+  protected $errorType = GoogleRpcStatus::class;
+  protected $errorDataType = '';
   /**
    * @var string
    */
-  public $refreshInterval;
+  public $state;
 
   /**
-   * @param GoogleTypeDateTime
+   * @param GoogleRpcStatus
    */
-  public function setNextSyncTime(GoogleTypeDateTime $nextSyncTime)
+  public function setError(GoogleRpcStatus $error)
   {
-    $this->nextSyncTime = $nextSyncTime;
+    $this->error = $error;
   }
   /**
-   * @return GoogleTypeDateTime
+   * @return GoogleRpcStatus
    */
-  public function getNextSyncTime()
+  public function getError()
   {
-    return $this->nextSyncTime;
+    return $this->error;
   }
   /**
    * @param string
    */
-  public function setRefreshInterval($refreshInterval)
+  public function setState($state)
   {
-    $this->refreshInterval = $refreshInterval;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getRefreshInterval()
+  public function getState()
   {
-    return $this->refreshInterval;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig');
+class_alias(GoogleCloudDiscoveryengineV1alphaSetDedicatedCrawlRateResponse::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaSetDedicatedCrawlRateResponse');

@@ -17,44 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting extends \Google\Model
 {
-  protected $nextSyncTimeType = GoogleTypeDateTime::class;
-  protected $nextSyncTimeDataType = '';
   /**
    * @var string
    */
-  public $refreshInterval;
+  public $category;
+  /**
+   * @var string
+   */
+  public $threshold;
 
-  /**
-   * @param GoogleTypeDateTime
-   */
-  public function setNextSyncTime(GoogleTypeDateTime $nextSyncTime)
-  {
-    $this->nextSyncTime = $nextSyncTime;
-  }
-  /**
-   * @return GoogleTypeDateTime
-   */
-  public function getNextSyncTime()
-  {
-    return $this->nextSyncTime;
-  }
   /**
    * @param string
    */
-  public function setRefreshInterval($refreshInterval)
+  public function setCategory($category)
   {
-    $this->refreshInterval = $refreshInterval;
+    $this->category = $category;
   }
   /**
    * @return string
    */
-  public function getRefreshInterval()
+  public function getCategory()
   {
-    return $this->refreshInterval;
+    return $this->category;
+  }
+  /**
+   * @param string
+   */
+  public function setThreshold($threshold)
+  {
+    $this->threshold = $threshold;
+  }
+  /**
+   * @return string
+   */
+  public function getThreshold()
+  {
+    return $this->threshold;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig');
+class_alias(GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AnswerQueryRequestSafetySpecSafetySetting');
