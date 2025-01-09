@@ -32,6 +32,14 @@ class NetworkRoutingConfig extends \Google\Model
    */
   public $bgpInterRegionCost;
   /**
+   * @var bool
+   */
+  public $effectiveBgpAlwaysCompareMed;
+  /**
+   * @var string
+   */
+  public $effectiveBgpInterRegionCost;
+  /**
    * @var string
    */
   public $routingMode;
@@ -77,6 +85,34 @@ class NetworkRoutingConfig extends \Google\Model
   public function getBgpInterRegionCost()
   {
     return $this->bgpInterRegionCost;
+  }
+  /**
+   * @param bool
+   */
+  public function setEffectiveBgpAlwaysCompareMed($effectiveBgpAlwaysCompareMed)
+  {
+    $this->effectiveBgpAlwaysCompareMed = $effectiveBgpAlwaysCompareMed;
+  }
+  /**
+   * @return bool
+   */
+  public function getEffectiveBgpAlwaysCompareMed()
+  {
+    return $this->effectiveBgpAlwaysCompareMed;
+  }
+  /**
+   * @param string
+   */
+  public function setEffectiveBgpInterRegionCost($effectiveBgpInterRegionCost)
+  {
+    $this->effectiveBgpInterRegionCost = $effectiveBgpInterRegionCost;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveBgpInterRegionCost()
+  {
+    return $this->effectiveBgpInterRegionCost;
   }
   /**
    * @param string
