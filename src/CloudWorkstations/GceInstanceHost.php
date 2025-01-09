@@ -17,64 +17,64 @@
 
 namespace Google\Service\CloudWorkstations;
 
-class StartWorkstationRequest extends \Google\Model
+class GceInstanceHost extends \Google\Model
 {
   /**
    * @var string
    */
-  public $boostConfig;
+  public $id;
   /**
    * @var string
    */
-  public $etag;
+  public $name;
   /**
-   * @var bool
+   * @var string
    */
-  public $validateOnly;
+  public $zone;
 
   /**
    * @param string
    */
-  public function setBoostConfig($boostConfig)
+  public function setId($id)
   {
-    $this->boostConfig = $boostConfig;
+    $this->id = $id;
   }
   /**
    * @return string
    */
-  public function getBoostConfig()
+  public function getId()
   {
-    return $this->boostConfig;
+    return $this->id;
   }
   /**
    * @param string
    */
-  public function setEtag($etag)
+  public function setName($name)
   {
-    $this->etag = $etag;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getEtag()
+  public function getName()
   {
-    return $this->etag;
+    return $this->name;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setValidateOnly($validateOnly)
+  public function setZone($zone)
   {
-    $this->validateOnly = $validateOnly;
+    $this->zone = $zone;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getValidateOnly()
+  public function getZone()
   {
-    return $this->validateOnly;
+    return $this->zone;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(StartWorkstationRequest::class, 'Google_Service_CloudWorkstations_StartWorkstationRequest');
+class_alias(GceInstanceHost::class, 'Google_Service_CloudWorkstations_GceInstanceHost');
