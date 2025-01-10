@@ -35,7 +35,7 @@ class Instance extends \Google\Collection
   /**
    * @var string
    */
-  public $daosVersion;
+  public $deploymentType;
   /**
    * @var string
    */
@@ -122,16 +122,16 @@ class Instance extends \Google\Collection
   /**
    * @param string
    */
-  public function setDaosVersion($daosVersion)
+  public function setDeploymentType($deploymentType)
   {
-    $this->daosVersion = $daosVersion;
+    $this->deploymentType = $deploymentType;
   }
   /**
    * @return string
    */
-  public function getDaosVersion()
+  public function getDeploymentType()
   {
-    return $this->daosVersion;
+    return $this->deploymentType;
   }
   /**
    * @param string
