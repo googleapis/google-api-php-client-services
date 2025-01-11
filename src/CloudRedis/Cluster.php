@@ -44,8 +44,14 @@ class Cluster extends \Google\Collection
   public $deletionProtectionEnabled;
   protected $discoveryEndpointsType = DiscoveryEndpoint::class;
   protected $discoveryEndpointsDataType = 'array';
+  protected $encryptionInfoType = EncryptionInfo::class;
+  protected $encryptionInfoDataType = '';
   protected $gcsSourceType = GcsBackupSource::class;
   protected $gcsSourceDataType = '';
+  /**
+   * @var string
+   */
+  public $kmsKey;
   protected $maintenancePolicyType = ClusterMaintenancePolicy::class;
   protected $maintenancePolicyDataType = '';
   protected $maintenanceScheduleType = ClusterMaintenanceSchedule::class;
@@ -215,6 +221,20 @@ class Cluster extends \Google\Collection
     return $this->discoveryEndpoints;
   }
   /**
+   * @param EncryptionInfo
+   */
+  public function setEncryptionInfo(EncryptionInfo $encryptionInfo)
+  {
+    $this->encryptionInfo = $encryptionInfo;
+  }
+  /**
+   * @return EncryptionInfo
+   */
+  public function getEncryptionInfo()
+  {
+    return $this->encryptionInfo;
+  }
+  /**
    * @param GcsBackupSource
    */
   public function setGcsSource(GcsBackupSource $gcsSource)
@@ -227,6 +247,20 @@ class Cluster extends \Google\Collection
   public function getGcsSource()
   {
     return $this->gcsSource;
+  }
+  /**
+   * @param string
+   */
+  public function setKmsKey($kmsKey)
+  {
+    $this->kmsKey = $kmsKey;
+  }
+  /**
+   * @return string
+   */
+  public function getKmsKey()
+  {
+    return $this->kmsKey;
   }
   /**
    * @param ClusterMaintenancePolicy

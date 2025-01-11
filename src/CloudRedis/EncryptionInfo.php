@@ -17,100 +17,83 @@
 
 namespace Google\Service\CloudRedis;
 
-class BackupCollection extends \Google\Model
+class EncryptionInfo extends \Google\Collection
 {
+  protected $collection_key = 'kmsKeyVersions';
   /**
    * @var string
    */
-  public $cluster;
+  public $encryptionType;
   /**
    * @var string
    */
-  public $clusterUid;
+  public $kmsKeyPrimaryState;
+  /**
+   * @var string[]
+   */
+  public $kmsKeyVersions;
   /**
    * @var string
    */
-  public $kmsKey;
-  /**
-   * @var string
-   */
-  public $name;
-  /**
-   * @var string
-   */
-  public $uid;
+  public $lastUpdateTime;
 
   /**
    * @param string
    */
-  public function setCluster($cluster)
+  public function setEncryptionType($encryptionType)
   {
-    $this->cluster = $cluster;
+    $this->encryptionType = $encryptionType;
   }
   /**
    * @return string
    */
-  public function getCluster()
+  public function getEncryptionType()
   {
-    return $this->cluster;
+    return $this->encryptionType;
   }
   /**
    * @param string
    */
-  public function setClusterUid($clusterUid)
+  public function setKmsKeyPrimaryState($kmsKeyPrimaryState)
   {
-    $this->clusterUid = $clusterUid;
+    $this->kmsKeyPrimaryState = $kmsKeyPrimaryState;
   }
   /**
    * @return string
    */
-  public function getClusterUid()
+  public function getKmsKeyPrimaryState()
   {
-    return $this->clusterUid;
+    return $this->kmsKeyPrimaryState;
+  }
+  /**
+   * @param string[]
+   */
+  public function setKmsKeyVersions($kmsKeyVersions)
+  {
+    $this->kmsKeyVersions = $kmsKeyVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getKmsKeyVersions()
+  {
+    return $this->kmsKeyVersions;
   }
   /**
    * @param string
    */
-  public function setKmsKey($kmsKey)
+  public function setLastUpdateTime($lastUpdateTime)
   {
-    $this->kmsKey = $kmsKey;
+    $this->lastUpdateTime = $lastUpdateTime;
   }
   /**
    * @return string
    */
-  public function getKmsKey()
+  public function getLastUpdateTime()
   {
-    return $this->kmsKey;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
-  }
-  /**
-   * @param string
-   */
-  public function setUid($uid)
-  {
-    $this->uid = $uid;
-  }
-  /**
-   * @return string
-   */
-  public function getUid()
-  {
-    return $this->uid;
+    return $this->lastUpdateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BackupCollection::class, 'Google_Service_CloudRedis_BackupCollection');
+class_alias(EncryptionInfo::class, 'Google_Service_CloudRedis_EncryptionInfo');
