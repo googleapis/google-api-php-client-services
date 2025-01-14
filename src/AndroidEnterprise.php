@@ -268,6 +268,11 @@ class AndroidEnterprise extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'allowedDomains' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'callbackUrl' => [
                   'location' => 'query',
                   'type' => 'string',
