@@ -335,7 +335,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string profile Required. The canonical URL of a profile that this
+   * @opt_param string profile Optional. The canonical URL of a profile that this
    * resource should be validated against. For example, to validate a Patient
    * resource against the US Core Patient profile this parameter would be
    * `http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient`. A
@@ -879,7 +879,7 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    *
    * @param string $parent Required. Name of the FHIR store to retrieve resources
    * from.
-   * @param string $resourceType Required. The FHIR resource type to search, such
+   * @param string $resourceType Optional. The FHIR resource type to search, such
    * as Patient or Observation. For a complete list, see the FHIR Resource Index
    * ([DSTU2](http://hl7.org/implement/standards/fhir/DSTU2/resourcelist.html),
    * [STU3](http://hl7.org/implement/standards/fhir/STU3/resourcelist.html),
