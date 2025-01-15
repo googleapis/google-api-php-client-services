@@ -108,7 +108,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Optional. Specifies the ordering of results.
-   * Supported values are: * relevance (default) * last_modified_timestamp *
+   * Supported values are: relevance (default) last_modified_timestamp
    * last_modified_timestamp asc
    * @opt_param int pageSize Optional. Number of results in the search page. If
    * <=0, then defaults to 10. Max limit for page_size is 1000. Throws an invalid
