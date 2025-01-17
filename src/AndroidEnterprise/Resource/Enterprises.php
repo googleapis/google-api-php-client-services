@@ -19,7 +19,6 @@ namespace Google\Service\AndroidEnterprise\Resource;
 
 use Google\Service\AndroidEnterprise\AdministratorWebToken;
 use Google\Service\AndroidEnterprise\AdministratorWebTokenSpec;
-use Google\Service\AndroidEnterprise\EnrollmentToken;
 use Google\Service\AndroidEnterprise\Enterprise;
 use Google\Service\AndroidEnterprise\EnterpriseAccount;
 use Google\Service\AndroidEnterprise\EnterprisesListResponse;
@@ -75,24 +74,6 @@ class Enterprises extends \Google\Service\Resource
     $params = [];
     $params = array_merge($params, $optParams);
     return $this->call('completeSignup', [$params], Enterprise::class);
-  }
-  /**
-   * Returns a token for device enrollment. The DPC can encode this token within
-   * the QR/NFC/zero-touch enrollment payload or fetch it before calling the on-
-   * device API to authenticate the user. The token can be generated for each
-   * device or reused across multiple devices. (enterprises.createEnrollmentToken)
-   *
-   * @param string $enterpriseId Required. The ID of the enterprise.
-   * @param EnrollmentToken $postBody
-   * @param array $optParams Optional parameters.
-   * @return EnrollmentToken
-   * @throws \Google\Service\Exception
-   */
-  public function createEnrollmentToken($enterpriseId, EnrollmentToken $postBody, $optParams = [])
-  {
-    $params = ['enterpriseId' => $enterpriseId, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('createEnrollmentToken', [$params], EnrollmentToken::class);
   }
   /**
    * Returns a unique token to access an embeddable UI. To generate a web UI, pass
