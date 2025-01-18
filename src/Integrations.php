@@ -1077,6 +1077,16 @@ class Integrations extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'execute' => [
+              'path' => 'v1/{+parent}/testCases:execute',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'executeTest' => [
               'path' => 'v1/{+testCaseName}:executeTest',
               'httpMethod' => 'POST',
