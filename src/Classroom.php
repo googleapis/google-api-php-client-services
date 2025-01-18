@@ -34,6 +34,12 @@ use Google\Client;
  */
 class Classroom extends \Google\Service
 {
+  /** See and update its own attachments to posts in Google Classroom. */
+  const CLASSROOM_ADDONS_STUDENT =
+      "https://www.googleapis.com/auth/classroom.addons.student";
+  /** See, create, and update its own attachments to posts in classes you teach in Google Classroom. */
+  const CLASSROOM_ADDONS_TEACHER =
+      "https://www.googleapis.com/auth/classroom.addons.teacher";
   /** View and manage announcements in Google Classroom. */
   const CLASSROOM_ANNOUNCEMENTS =
       "https://www.googleapis.com/auth/classroom.announcements";
