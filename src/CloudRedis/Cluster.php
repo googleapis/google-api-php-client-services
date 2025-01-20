@@ -21,6 +21,10 @@ class Cluster extends \Google\Collection
 {
   protected $collection_key = 'pscServiceAttachments';
   /**
+   * @var bool
+   */
+  public $asyncClusterEndpointsDeletionEnabled;
+  /**
    * @var string
    */
   public $authorizationMode;
@@ -108,6 +112,20 @@ class Cluster extends \Google\Collection
   protected $zoneDistributionConfigType = ZoneDistributionConfig::class;
   protected $zoneDistributionConfigDataType = '';
 
+  /**
+   * @param bool
+   */
+  public function setAsyncClusterEndpointsDeletionEnabled($asyncClusterEndpointsDeletionEnabled)
+  {
+    $this->asyncClusterEndpointsDeletionEnabled = $asyncClusterEndpointsDeletionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAsyncClusterEndpointsDeletionEnabled()
+  {
+    return $this->asyncClusterEndpointsDeletionEnabled;
+  }
   /**
    * @param string
    */

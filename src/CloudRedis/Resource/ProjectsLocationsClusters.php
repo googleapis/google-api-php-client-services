@@ -187,7 +187,8 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @opt_param string requestId Idempotent request UUID.
    * @opt_param string updateMask Required. Mask of fields to update. At least one
    * path must be supplied in this field. The elements of the repeated paths field
-   * may only include these fields from Cluster: * `size_gb` * `replica_count`
+   * may only include these fields from Cluster: * `size_gb` * `replica_count` *
+   * `cluster_endpoints`
    * @return Operation
    * @throws \Google\Service\Exception
    */
