@@ -85,6 +85,7 @@ class YouTube extends \Google\Service
   public $thumbnails;
   public $videoAbuseReportReasons;
   public $videoCategories;
+  public $videoTrainability;
   public $videos;
   public $watermarks;
   public $youtube_v3;
@@ -1977,6 +1978,25 @@ class YouTube extends \Google\Service
                   'repeated' => true,
                 ],
                 'regionCode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->videoTrainability = new YouTube\Resource\VideoTrainability(
+        $this,
+        $this->serviceName,
+        'videoTrainability',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'youtube/v3/videoTrainability',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'id' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
