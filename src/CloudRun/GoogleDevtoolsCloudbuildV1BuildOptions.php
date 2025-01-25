@@ -37,6 +37,10 @@ class GoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Collection
    */
   public $dynamicSubstitutions;
   /**
+   * @var bool
+   */
+  public $enableStructuredLogging;
+  /**
    * @var string[]
    */
   public $env;
@@ -132,6 +136,20 @@ class GoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Collection
   public function getDynamicSubstitutions()
   {
     return $this->dynamicSubstitutions;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableStructuredLogging($enableStructuredLogging)
+  {
+    $this->enableStructuredLogging = $enableStructuredLogging;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableStructuredLogging()
+  {
+    return $this->enableStructuredLogging;
   }
   /**
    * @param string[]
