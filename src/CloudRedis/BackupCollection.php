@@ -30,6 +30,10 @@ class BackupCollection extends \Google\Model
   /**
    * @var string
    */
+  public $createTime;
+  /**
+   * @var string
+   */
   public $kmsKey;
   /**
    * @var string
@@ -67,6 +71,20 @@ class BackupCollection extends \Google\Model
   public function getClusterUid()
   {
     return $this->clusterUid;
+  }
+  /**
+   * @param string
+   */
+  public function setCreateTime($createTime)
+  {
+    $this->createTime = $createTime;
+  }
+  /**
+   * @return string
+   */
+  public function getCreateTime()
+  {
+    return $this->createTime;
   }
   /**
    * @param string
