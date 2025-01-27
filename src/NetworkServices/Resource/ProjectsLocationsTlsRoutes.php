@@ -56,6 +56,10 @@ class ProjectsLocationsTlsRoutes extends \Google\Service\Resource
    * @param string $name Required. A name of the TlsRoute to delete. Must be in
    * the format `projects/locations/global/tlsRoutes`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string etag Optional. Etag of the resource. If this is provided,
+   * it must match the server's etag. If the provided etag does not match the
+   * server's etag, the request will fail with a 409 ABORTED error.
    * @return Operation
    * @throws \Google\Service\Exception
    */
