@@ -105,9 +105,9 @@ class ProjectsLocationsVolumesQuotaRules extends \Google\Service\Resource
   /**
    * Updates a quota rule. (quotaRules.patch)
    *
-   * @param string $name Identifier. The resource name of the active directory.
-   * Format: `projects/{project_number}/locations/{location_id}/quotaRules/{quota_
-   * rule_id}`.
+   * @param string $name Identifier. The resource name of the quota rule. Format:
+   * `projects/{project_number}/locations/{location_id}/volumes/volumes/{volume_id
+   * }/quotaRules/{quota_rule_id}`.
    * @param QuotaRule $postBody
    * @param array $optParams Optional parameters.
    *
