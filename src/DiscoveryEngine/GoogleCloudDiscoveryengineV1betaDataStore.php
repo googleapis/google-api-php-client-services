@@ -44,6 +44,8 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public $displayName;
   protected $documentProcessingConfigType = GoogleCloudDiscoveryengineV1betaDocumentProcessingConfig::class;
   protected $documentProcessingConfigDataType = '';
+  protected $healthcareFhirConfigType = GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig::class;
+  protected $healthcareFhirConfigDataType = '';
   /**
    * @var string
    */
@@ -186,6 +188,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getDocumentProcessingConfig()
   {
     return $this->documentProcessingConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig
+   */
+  public function setHealthcareFhirConfig(GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig $healthcareFhirConfig)
+  {
+    $this->healthcareFhirConfig = $healthcareFhirConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaHealthcareFhirConfig
+   */
+  public function getHealthcareFhirConfig()
+  {
+    return $this->healthcareFhirConfig;
   }
   /**
    * @param string
