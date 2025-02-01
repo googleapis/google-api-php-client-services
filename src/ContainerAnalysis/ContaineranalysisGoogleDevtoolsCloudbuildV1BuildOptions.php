@@ -37,6 +37,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
    */
   public $dynamicSubstitutions;
   /**
+   * @var bool
+   */
+  public $enableStructuredLogging;
+  /**
    * @var string[]
    */
   public $env;
@@ -132,6 +136,20 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   public function getDynamicSubstitutions()
   {
     return $this->dynamicSubstitutions;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableStructuredLogging($enableStructuredLogging)
+  {
+    $this->enableStructuredLogging = $enableStructuredLogging;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableStructuredLogging()
+  {
+    return $this->enableStructuredLogging;
   }
   /**
    * @param string[]
