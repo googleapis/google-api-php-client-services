@@ -200,7 +200,7 @@ class ProjectsLocationsConnections extends \Google\Service\Resource
    * @param HttpBody $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string webhookKey Arbitrary additional key to find the maching
+   * @opt_param string webhookKey Arbitrary additional key to find the matching
    * repository for a webhook event if needed.
    * @return CloudbuildEmpty
    * @throws \Google\Service\Exception
