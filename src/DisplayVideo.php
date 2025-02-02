@@ -89,6 +89,7 @@ class DisplayVideo extends \Google\Service
   public $partners_targetingTypes_assignedTargetingOptions;
   public $sdfdownloadtasks;
   public $sdfdownloadtasks_operations;
+  public $sdfuploadtasks_operations;
   public $targetingTypes_targetingOptions;
   public $users;
   public $rootUrlTemplate;
@@ -3444,6 +3445,26 @@ class DisplayVideo extends \Google\Service
         ]
     );
     $this->sdfdownloadtasks_operations = new DisplayVideo\Resource\SdfdownloadtasksOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v3/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->sdfuploadtasks_operations = new DisplayVideo\Resource\SdfuploadtasksOperations(
         $this,
         $this->serviceName,
         'operations',
