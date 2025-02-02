@@ -20,6 +20,8 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Tool extends \Google\Collection
 {
   protected $collection_key = 'functionDeclarations';
+  protected $codeExecutionType = GoogleCloudAiplatformV1ToolCodeExecution::class;
+  protected $codeExecutionDataType = '';
   protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
   protected $functionDeclarationsDataType = 'array';
   protected $googleSearchType = GoogleCloudAiplatformV1ToolGoogleSearch::class;
@@ -29,6 +31,20 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   protected $retrievalType = GoogleCloudAiplatformV1Retrieval::class;
   protected $retrievalDataType = '';
 
+  /**
+   * @param GoogleCloudAiplatformV1ToolCodeExecution
+   */
+  public function setCodeExecution(GoogleCloudAiplatformV1ToolCodeExecution $codeExecution)
+  {
+    $this->codeExecution = $codeExecution;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ToolCodeExecution
+   */
+  public function getCodeExecution()
+  {
+    return $this->codeExecution;
+  }
   /**
    * @param GoogleCloudAiplatformV1FunctionDeclaration[]
    */

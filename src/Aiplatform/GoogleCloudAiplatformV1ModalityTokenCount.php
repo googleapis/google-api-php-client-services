@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Blob extends \Google\Model
+class GoogleCloudAiplatformV1ModalityTokenCount extends \Google\Model
 {
   /**
    * @var string
    */
-  public $data;
+  public $modality;
   /**
-   * @var string
+   * @var int
    */
-  public $displayName;
-  /**
-   * @var string
-   */
-  public $mimeType;
+  public $tokenCount;
 
   /**
    * @param string
    */
-  public function setData($data)
+  public function setModality($modality)
   {
-    $this->data = $data;
+    $this->modality = $modality;
   }
   /**
    * @return string
    */
-  public function getData()
+  public function getModality()
   {
-    return $this->data;
+    return $this->modality;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setDisplayName($displayName)
+  public function setTokenCount($tokenCount)
   {
-    $this->displayName = $displayName;
+    $this->tokenCount = $tokenCount;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getDisplayName()
+  public function getTokenCount()
   {
-    return $this->displayName;
-  }
-  /**
-   * @param string
-   */
-  public function setMimeType($mimeType)
-  {
-    $this->mimeType = $mimeType;
-  }
-  /**
-   * @return string
-   */
-  public function getMimeType()
-  {
-    return $this->mimeType;
+    return $this->tokenCount;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Blob::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Blob');
+class_alias(GoogleCloudAiplatformV1ModalityTokenCount::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ModalityTokenCount');

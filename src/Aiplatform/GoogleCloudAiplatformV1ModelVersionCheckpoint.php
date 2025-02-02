@@ -17,64 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Blob extends \Google\Model
+class GoogleCloudAiplatformV1ModelVersionCheckpoint extends \Google\Model
 {
   /**
    * @var string
    */
-  public $data;
+  public $checkpointId;
   /**
    * @var string
    */
-  public $displayName;
+  public $epoch;
   /**
    * @var string
    */
-  public $mimeType;
+  public $step;
 
   /**
    * @param string
    */
-  public function setData($data)
+  public function setCheckpointId($checkpointId)
   {
-    $this->data = $data;
+    $this->checkpointId = $checkpointId;
   }
   /**
    * @return string
    */
-  public function getData()
+  public function getCheckpointId()
   {
-    return $this->data;
+    return $this->checkpointId;
   }
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setEpoch($epoch)
   {
-    $this->displayName = $displayName;
+    $this->epoch = $epoch;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getEpoch()
   {
-    return $this->displayName;
+    return $this->epoch;
   }
   /**
    * @param string
    */
-  public function setMimeType($mimeType)
+  public function setStep($step)
   {
-    $this->mimeType = $mimeType;
+    $this->step = $step;
   }
   /**
    * @return string
    */
-  public function getMimeType()
+  public function getStep()
   {
-    return $this->mimeType;
+    return $this->step;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Blob::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Blob');
+class_alias(GoogleCloudAiplatformV1ModelVersionCheckpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ModelVersionCheckpoint');

@@ -17,64 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Blob extends \Google\Model
+class GoogleCloudAiplatformV1CodeExecutionResult extends \Google\Model
 {
   /**
    * @var string
    */
-  public $data;
+  public $outcome;
   /**
    * @var string
    */
-  public $displayName;
-  /**
-   * @var string
-   */
-  public $mimeType;
+  public $output;
 
   /**
    * @param string
    */
-  public function setData($data)
+  public function setOutcome($outcome)
   {
-    $this->data = $data;
+    $this->outcome = $outcome;
   }
   /**
    * @return string
    */
-  public function getData()
+  public function getOutcome()
   {
-    return $this->data;
+    return $this->outcome;
   }
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setOutput($output)
   {
-    $this->displayName = $displayName;
+    $this->output = $output;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getOutput()
   {
-    return $this->displayName;
-  }
-  /**
-   * @param string
-   */
-  public function setMimeType($mimeType)
-  {
-    $this->mimeType = $mimeType;
-  }
-  /**
-   * @return string
-   */
-  public function getMimeType()
-  {
-    return $this->mimeType;
+    return $this->output;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Blob::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Blob');
+class_alias(GoogleCloudAiplatformV1CodeExecutionResult::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1CodeExecutionResult');

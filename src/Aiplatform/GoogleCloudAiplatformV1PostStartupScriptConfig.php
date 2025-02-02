@@ -17,64 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1Blob extends \Google\Model
+class GoogleCloudAiplatformV1PostStartupScriptConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $data;
+  public $postStartupScript;
   /**
    * @var string
    */
-  public $displayName;
+  public $postStartupScriptBehavior;
   /**
    * @var string
    */
-  public $mimeType;
+  public $postStartupScriptUrl;
 
   /**
    * @param string
    */
-  public function setData($data)
+  public function setPostStartupScript($postStartupScript)
   {
-    $this->data = $data;
+    $this->postStartupScript = $postStartupScript;
   }
   /**
    * @return string
    */
-  public function getData()
+  public function getPostStartupScript()
   {
-    return $this->data;
+    return $this->postStartupScript;
   }
   /**
    * @param string
    */
-  public function setDisplayName($displayName)
+  public function setPostStartupScriptBehavior($postStartupScriptBehavior)
   {
-    $this->displayName = $displayName;
+    $this->postStartupScriptBehavior = $postStartupScriptBehavior;
   }
   /**
    * @return string
    */
-  public function getDisplayName()
+  public function getPostStartupScriptBehavior()
   {
-    return $this->displayName;
+    return $this->postStartupScriptBehavior;
   }
   /**
    * @param string
    */
-  public function setMimeType($mimeType)
+  public function setPostStartupScriptUrl($postStartupScriptUrl)
   {
-    $this->mimeType = $mimeType;
+    $this->postStartupScriptUrl = $postStartupScriptUrl;
   }
   /**
    * @return string
    */
-  public function getMimeType()
+  public function getPostStartupScriptUrl()
   {
-    return $this->mimeType;
+    return $this->postStartupScriptUrl;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1Blob::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Blob');
+class_alias(GoogleCloudAiplatformV1PostStartupScriptConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PostStartupScriptConfig');
