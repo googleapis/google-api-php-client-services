@@ -56,8 +56,6 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $incrementalBackupChainId;
-  protected $instancePartitionsType = BackupInstancePartition::class;
-  protected $instancePartitionsDataType = 'array';
   /**
    * @var string
    */
@@ -230,20 +228,6 @@ class Backup extends \Google\Collection
   public function getIncrementalBackupChainId()
   {
     return $this->incrementalBackupChainId;
-  }
-  /**
-   * @param BackupInstancePartition[]
-   */
-  public function setInstancePartitions($instancePartitions)
-  {
-    $this->instancePartitions = $instancePartitions;
-  }
-  /**
-   * @return BackupInstancePartition[]
-   */
-  public function getInstancePartitions()
-  {
-    return $this->instancePartitions;
   }
   /**
    * @param string
