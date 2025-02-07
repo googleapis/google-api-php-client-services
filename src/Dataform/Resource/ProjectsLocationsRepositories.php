@@ -99,9 +99,9 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
    * @param string $name Required. The repository's name.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool force If set to true, any child resources of this repository
-   * will also be deleted. (Otherwise, the request will only succeed if the
-   * repository has no child resources.)
+   * @opt_param bool force Optional. If set to true, any child resources of this
+   * repository will also be deleted. (Otherwise, the request will only succeed if
+   * the repository has no child resources.)
    * @return DataformEmpty
    * @throws \Google\Service\Exception
    */

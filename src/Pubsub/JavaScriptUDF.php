@@ -15,49 +15,48 @@
  * the License.
  */
 
-namespace Google\Service\ServiceNetworking;
+namespace Google\Service\Pubsub;
 
-class SelectiveGapicGeneration extends \Google\Collection
+class JavaScriptUDF extends \Google\Model
 {
-  protected $collection_key = 'methods';
   /**
-   * @var bool
+   * @var string
    */
-  public $generateOmittedAsInternal;
+  public $code;
   /**
-   * @var string[]
+   * @var string
    */
-  public $methods;
+  public $functionName;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setGenerateOmittedAsInternal($generateOmittedAsInternal)
+  public function setCode($code)
   {
-    $this->generateOmittedAsInternal = $generateOmittedAsInternal;
+    $this->code = $code;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getGenerateOmittedAsInternal()
+  public function getCode()
   {
-    return $this->generateOmittedAsInternal;
+    return $this->code;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setMethods($methods)
+  public function setFunctionName($functionName)
   {
-    $this->methods = $methods;
+    $this->functionName = $functionName;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getMethods()
+  public function getFunctionName()
   {
-    return $this->methods;
+    return $this->functionName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SelectiveGapicGeneration::class, 'Google_Service_ServiceNetworking_SelectiveGapicGeneration');
+class_alias(JavaScriptUDF::class, 'Google_Service_Pubsub_JavaScriptUDF');

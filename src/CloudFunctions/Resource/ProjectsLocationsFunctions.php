@@ -256,7 +256,7 @@ class ProjectsLocationsFunctions extends \Google\Service\Resource
    * @opt_param string filter The filter for Functions that match the filter
    * expression, following the syntax outlined in https://google.aip.dev/160.
    * @opt_param string orderBy The sorting order of the resources returned. Value
-   * should be a comma separated list of fields. The default sorting oder is
+   * should be a comma separated list of fields. The default sorting order is
    * ascending. See https://google.aip.dev/132#ordering.
    * @opt_param int pageSize Maximum number of functions to return per call. The
    * largest allowed page_size is 1,000, if the page_size is omitted or specified

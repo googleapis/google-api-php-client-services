@@ -37,6 +37,8 @@ class Query extends \Google\Model
    * @var string
    */
   public $endTime;
+  protected $geminiOptionsType = GeminiOptions::class;
+  protected $geminiOptionsDataType = '';
   protected $hangoutsChatInfoType = HangoutsChatInfo::class;
   protected $hangoutsChatInfoDataType = '';
   protected $hangoutsChatOptionsType = HangoutsChatOptions::class;
@@ -157,6 +159,20 @@ class Query extends \Google\Model
   public function getEndTime()
   {
     return $this->endTime;
+  }
+  /**
+   * @param GeminiOptions
+   */
+  public function setGeminiOptions(GeminiOptions $geminiOptions)
+  {
+    $this->geminiOptions = $geminiOptions;
+  }
+  /**
+   * @return GeminiOptions
+   */
+  public function getGeminiOptions()
+  {
+    return $this->geminiOptions;
   }
   /**
    * @param HangoutsChatInfo

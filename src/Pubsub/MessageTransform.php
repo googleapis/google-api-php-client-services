@@ -15,49 +15,46 @@
  * the License.
  */
 
-namespace Google\Service\ServiceNetworking;
+namespace Google\Service\Pubsub;
 
-class SelectiveGapicGeneration extends \Google\Collection
+class MessageTransform extends \Google\Model
 {
-  protected $collection_key = 'methods';
   /**
    * @var bool
    */
-  public $generateOmittedAsInternal;
-  /**
-   * @var string[]
-   */
-  public $methods;
+  public $enabled;
+  protected $javascriptUdfType = JavaScriptUDF::class;
+  protected $javascriptUdfDataType = '';
 
   /**
    * @param bool
    */
-  public function setGenerateOmittedAsInternal($generateOmittedAsInternal)
+  public function setEnabled($enabled)
   {
-    $this->generateOmittedAsInternal = $generateOmittedAsInternal;
+    $this->enabled = $enabled;
   }
   /**
    * @return bool
    */
-  public function getGenerateOmittedAsInternal()
+  public function getEnabled()
   {
-    return $this->generateOmittedAsInternal;
+    return $this->enabled;
   }
   /**
-   * @param string[]
+   * @param JavaScriptUDF
    */
-  public function setMethods($methods)
+  public function setJavascriptUdf(JavaScriptUDF $javascriptUdf)
   {
-    $this->methods = $methods;
+    $this->javascriptUdf = $javascriptUdf;
   }
   /**
-   * @return string[]
+   * @return JavaScriptUDF
    */
-  public function getMethods()
+  public function getJavascriptUdf()
   {
-    return $this->methods;
+    return $this->javascriptUdf;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SelectiveGapicGeneration::class, 'Google_Service_ServiceNetworking_SelectiveGapicGeneration');
+class_alias(MessageTransform::class, 'Google_Service_Pubsub_MessageTransform');
