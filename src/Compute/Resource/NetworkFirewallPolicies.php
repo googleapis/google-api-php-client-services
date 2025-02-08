@@ -71,6 +71,40 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
     return $this->call('addAssociation', [$params], Operation::class);
   }
   /**
+   * Inserts a packet mirroring rule into a firewall policy.
+   * (networkFirewallPolicies.addPacketMirroringRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $firewallPolicy Name of the firewall policy to update.
+   * @param FirewallPolicyRule $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int maxPriority When rule.priority is not specified, auto choose a
+   * unused priority between minPriority and maxPriority>. This field is exclusive
+   * with rule.priority.
+   * @opt_param int minPriority When rule.priority is not specified, auto choose a
+   * unused priority between minPriority and maxPriority>. This field is exclusive
+   * with rule.priority.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function addPacketMirroringRule($project, $firewallPolicy, FirewallPolicyRule $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'firewallPolicy' => $firewallPolicy, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addPacketMirroringRule', [$params], Operation::class);
+  }
+  /**
    * Inserts a rule into a firewall policy. (networkFirewallPolicies.addRule)
    *
    * @param string $project Project ID for this request.
@@ -294,6 +328,26 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
+   * Gets a packet mirroring rule of the specified priority.
+   * (networkFirewallPolicies.getPacketMirroringRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $firewallPolicy Name of the firewall policy to which the
+   * queried rule belongs.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int priority The priority of the rule to get from the firewall
+   * policy.
+   * @return FirewallPolicyRule
+   * @throws \Google\Service\Exception
+   */
+  public function getPacketMirroringRule($project, $firewallPolicy, $optParams = [])
+  {
+    $params = ['project' => $project, 'firewallPolicy' => $firewallPolicy];
+    $params = array_merge($params, $optParams);
+    return $this->call('getPacketMirroringRule', [$params], FirewallPolicyRule::class);
+  }
+  /**
    * Gets a rule of the specified priority. (networkFirewallPolicies.getRule)
    *
    * @param string $project Project ID for this request.
@@ -437,6 +491,35 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
     return $this->call('patch', [$params], Operation::class);
   }
   /**
+   * Patches a packet mirroring rule of the specified priority.
+   * (networkFirewallPolicies.patchPacketMirroringRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $firewallPolicy Name of the firewall policy to update.
+   * @param FirewallPolicyRule $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int priority The priority of the rule to patch.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patchPacketMirroringRule($project, $firewallPolicy, FirewallPolicyRule $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'firewallPolicy' => $firewallPolicy, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patchPacketMirroringRule', [$params], Operation::class);
+  }
+  /**
    * Patches a rule of the specified priority. (networkFirewallPolicies.patchRule)
    *
    * @param string $project Project ID for this request.
@@ -491,6 +574,35 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
     $params = ['project' => $project, 'firewallPolicy' => $firewallPolicy];
     $params = array_merge($params, $optParams);
     return $this->call('removeAssociation', [$params], Operation::class);
+  }
+  /**
+   * Deletes a packet mirroring rule of the specified priority.
+   * (networkFirewallPolicies.removePacketMirroringRule)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $firewallPolicy Name of the firewall policy to update.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int priority The priority of the rule to remove from the firewall
+   * policy.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed. For
+   * example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments. The request ID must be a
+   * valid UUID with the exception that zero UUID is not supported (
+   * 00000000-0000-0000-0000-000000000000).
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function removePacketMirroringRule($project, $firewallPolicy, $optParams = [])
+  {
+    $params = ['project' => $project, 'firewallPolicy' => $firewallPolicy];
+    $params = array_merge($params, $optParams);
+    return $this->call('removePacketMirroringRule', [$params], Operation::class);
   }
   /**
    * Deletes a rule of the specified priority.
