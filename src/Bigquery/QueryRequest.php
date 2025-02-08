@@ -92,6 +92,10 @@ class QueryRequest extends \Google\Collection
    * @var bool
    */
   public $useQueryCache;
+  /**
+   * @var bool
+   */
+  public $writeIncrementalResults;
 
   /**
    * @param ConnectionProperty[]
@@ -372,6 +376,20 @@ class QueryRequest extends \Google\Collection
   public function getUseQueryCache()
   {
     return $this->useQueryCache;
+  }
+  /**
+   * @param bool
+   */
+  public function setWriteIncrementalResults($writeIncrementalResults)
+  {
+    $this->writeIncrementalResults = $writeIncrementalResults;
+  }
+  /**
+   * @return bool
+   */
+  public function getWriteIncrementalResults()
+  {
+    return $this->writeIncrementalResults;
   }
 }
 
