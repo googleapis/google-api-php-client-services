@@ -20,6 +20,8 @@ namespace Google\Service\Logging;
 class Policy extends \Google\Collection
 {
   protected $collection_key = 'bindings';
+  protected $auditConfigsType = AuditConfig::class;
+  protected $auditConfigsDataType = 'array';
   protected $bindingsType = Binding::class;
   protected $bindingsDataType = 'array';
   /**
@@ -31,6 +33,20 @@ class Policy extends \Google\Collection
    */
   public $version;
 
+  /**
+   * @param AuditConfig[]
+   */
+  public function setAuditConfigs($auditConfigs)
+  {
+    $this->auditConfigs = $auditConfigs;
+  }
+  /**
+   * @return AuditConfig[]
+   */
+  public function getAuditConfigs()
+  {
+    return $this->auditConfigs;
+  }
   /**
    * @param Binding[]
    */

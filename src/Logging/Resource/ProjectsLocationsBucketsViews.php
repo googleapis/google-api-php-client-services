@@ -48,7 +48,7 @@ class ProjectsLocationsBucketsViews extends \Google\Service\Resource
    *
    * @opt_param string viewId Required. A client-assigned identifier such as "my-
    * view". Identifiers are limited to 100 characters and can include only
-   * letters, digits, underscores, and hyphens.
+   * letters, digits, underscores, hyphens, and periods.
    * @return LogView
    * @throws \Google\Service\Exception
    */
