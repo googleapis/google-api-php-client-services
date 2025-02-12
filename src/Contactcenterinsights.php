@@ -51,6 +51,7 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations_issueModels_issues;
   public $projects_locations_operations;
   public $projects_locations_phraseMatchers;
+  public $projects_locations_qaQuestionTags;
   public $projects_locations_qaScorecards;
   public $projects_locations_qaScorecards_revisions;
   public $projects_locations_qaScorecards_revisions_qaQuestions;
@@ -917,6 +918,48 @@ class Contactcenterinsights extends \Google\Service
                   'required' => true,
                 ],
                 'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_qaQuestionTags = new Contactcenterinsights\Resource\ProjectsLocationsQaQuestionTags(
+        $this,
+        $this->serviceName,
+        'qaQuestionTags',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/qaQuestionTags',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/qaQuestionTags',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
