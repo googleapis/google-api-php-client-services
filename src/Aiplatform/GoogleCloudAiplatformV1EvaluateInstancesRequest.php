@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
 {
+  protected $autoraterConfigType = GoogleCloudAiplatformV1AutoraterConfig::class;
+  protected $autoraterConfigDataType = '';
   protected $bleuInputType = GoogleCloudAiplatformV1BleuInput::class;
   protected $bleuInputDataType = '';
   protected $coherenceInputType = GoogleCloudAiplatformV1CoherenceInput::class;
@@ -82,6 +84,20 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
   protected $trajectorySingleToolUseInputType = GoogleCloudAiplatformV1TrajectorySingleToolUseInput::class;
   protected $trajectorySingleToolUseInputDataType = '';
 
+  /**
+   * @param GoogleCloudAiplatformV1AutoraterConfig
+   */
+  public function setAutoraterConfig(GoogleCloudAiplatformV1AutoraterConfig $autoraterConfig)
+  {
+    $this->autoraterConfig = $autoraterConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1AutoraterConfig
+   */
+  public function getAutoraterConfig()
+  {
+    return $this->autoraterConfig;
+  }
   /**
    * @param GoogleCloudAiplatformV1BleuInput
    */

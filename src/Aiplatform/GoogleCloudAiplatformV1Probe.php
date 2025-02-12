@@ -21,6 +21,10 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
 {
   protected $execType = GoogleCloudAiplatformV1ProbeExecAction::class;
   protected $execDataType = '';
+  /**
+   * @var int
+   */
+  public $failureThreshold;
   protected $grpcType = GoogleCloudAiplatformV1ProbeGrpcAction::class;
   protected $grpcDataType = '';
   protected $httpGetType = GoogleCloudAiplatformV1ProbeHttpGetAction::class;
@@ -28,7 +32,15 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
   /**
    * @var int
    */
+  public $initialDelaySeconds;
+  /**
+   * @var int
+   */
   public $periodSeconds;
+  /**
+   * @var int
+   */
+  public $successThreshold;
   protected $tcpSocketType = GoogleCloudAiplatformV1ProbeTcpSocketAction::class;
   protected $tcpSocketDataType = '';
   /**
@@ -49,6 +61,20 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
   public function getExec()
   {
     return $this->exec;
+  }
+  /**
+   * @param int
+   */
+  public function setFailureThreshold($failureThreshold)
+  {
+    $this->failureThreshold = $failureThreshold;
+  }
+  /**
+   * @return int
+   */
+  public function getFailureThreshold()
+  {
+    return $this->failureThreshold;
   }
   /**
    * @param GoogleCloudAiplatformV1ProbeGrpcAction
@@ -81,6 +107,20 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
   /**
    * @param int
    */
+  public function setInitialDelaySeconds($initialDelaySeconds)
+  {
+    $this->initialDelaySeconds = $initialDelaySeconds;
+  }
+  /**
+   * @return int
+   */
+  public function getInitialDelaySeconds()
+  {
+    return $this->initialDelaySeconds;
+  }
+  /**
+   * @param int
+   */
   public function setPeriodSeconds($periodSeconds)
   {
     $this->periodSeconds = $periodSeconds;
@@ -91,6 +131,20 @@ class GoogleCloudAiplatformV1Probe extends \Google\Model
   public function getPeriodSeconds()
   {
     return $this->periodSeconds;
+  }
+  /**
+   * @param int
+   */
+  public function setSuccessThreshold($successThreshold)
+  {
+    $this->successThreshold = $successThreshold;
+  }
+  /**
+   * @return int
+   */
+  public function getSuccessThreshold()
+  {
+    return $this->successThreshold;
   }
   /**
    * @param GoogleCloudAiplatformV1ProbeTcpSocketAction

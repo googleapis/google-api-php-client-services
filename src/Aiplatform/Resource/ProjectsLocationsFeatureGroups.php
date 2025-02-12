@@ -141,7 +141,7 @@ class ProjectsLocationsFeatureGroups extends \Google\Service\Resource
    * a mask then only the non-empty fields present in the request will be
    * overwritten. Set the update_mask to `*` to override all fields. Updatable
    * fields: * `labels` * `description` * `big_query` *
-   * `big_query.entity_id_columns`
+   * `big_query.entity_id_columns` * `service_agent_type`
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
