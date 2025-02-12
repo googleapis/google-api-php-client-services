@@ -39,6 +39,10 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
    * `projectsId`.
    * @param string $servicesId Part of `name`. See documentation of `projectsId`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool force Optional. If set to true, any versions of this service
+   * will also be deleted. (Otherwise, the request will only succeed if the
+   * service has no versions.)
    * @return Operation
    * @throws \Google\Service\Exception
    */
