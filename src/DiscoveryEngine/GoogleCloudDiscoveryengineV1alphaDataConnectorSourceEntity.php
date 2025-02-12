@@ -27,6 +27,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity extends \Google
    * @var string
    */
   public $entityName;
+  protected $healthcareFhirConfigType = GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig::class;
+  protected $healthcareFhirConfigDataType = '';
   /**
    * @var string[]
    */
@@ -35,6 +37,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity extends \Google
    * @var array[]
    */
   public $params;
+  protected $startingSchemaType = GoogleCloudDiscoveryengineV1alphaSchema::class;
+  protected $startingSchemaDataType = '';
 
   /**
    * @param string
@@ -65,6 +69,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity extends \Google
     return $this->entityName;
   }
   /**
+   * @param GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig
+   */
+  public function setHealthcareFhirConfig(GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig $healthcareFhirConfig)
+  {
+    $this->healthcareFhirConfig = $healthcareFhirConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig
+   */
+  public function getHealthcareFhirConfig()
+  {
+    return $this->healthcareFhirConfig;
+  }
+  /**
    * @param string[]
    */
   public function setKeyPropertyMappings($keyPropertyMappings)
@@ -91,6 +109,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity extends \Google
   public function getParams()
   {
     return $this->params;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaSchema
+   */
+  public function setStartingSchema(GoogleCloudDiscoveryengineV1alphaSchema $startingSchema)
+  {
+    $this->startingSchema = $startingSchema;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaSchema
+   */
+  public function getStartingSchema()
+  {
+    return $this->startingSchema;
   }
 }
 

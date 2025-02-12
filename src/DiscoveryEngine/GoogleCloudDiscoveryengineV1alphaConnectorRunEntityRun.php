@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extends \Google\Col
   /**
    * @var string
    */
+  public $deletedRecordCount;
+  /**
+   * @var string
+   */
   public $entityName;
   /**
    * @var string
@@ -59,6 +63,20 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extends \Google\Col
    */
   public $syncType;
 
+  /**
+   * @param string
+   */
+  public function setDeletedRecordCount($deletedRecordCount)
+  {
+    $this->deletedRecordCount = $deletedRecordCount;
+  }
+  /**
+   * @return string
+   */
+  public function getDeletedRecordCount()
+  {
+    return $this->deletedRecordCount;
+  }
   /**
    * @param string
    */
