@@ -73,7 +73,6 @@ class Drive extends \Google\Service
   public $comments;
   public $drives;
   public $files;
-  public $operation;
   public $operations;
   public $permissions;
   public $replies;
@@ -959,14 +958,14 @@ class Drive extends \Google\Service
           ]
         ]
     );
-    $this->operation = new Drive\Resource\Operation(
+    $this->operations = new Drive\Resource\Operations(
         $this,
         $this->serviceName,
-        'operation',
+        'operations',
         [
           'methods' => [
             'cancel' => [
-              'path' => 'operation/{name}:cancel',
+              'path' => 'operations/{name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
@@ -976,7 +975,7 @@ class Drive extends \Google\Service
                 ],
               ],
             ],'delete' => [
-              'path' => 'operation/{name}',
+              'path' => 'operations/{name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
                 'name' => [
@@ -985,17 +984,7 @@ class Drive extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],
-          ]
-        ]
-    );
-    $this->operations = new Drive\Resource\Operations(
-        $this,
-        $this->serviceName,
-        'operations',
-        [
-          'methods' => [
-            'get' => [
+            ],'get' => [
               'path' => 'operations/{name}',
               'httpMethod' => 'GET',
               'parameters' => [
