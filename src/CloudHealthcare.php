@@ -1327,6 +1327,10 @@ class CloudHealthcare extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'viewport' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],
           ]
@@ -1366,6 +1370,10 @@ class CloudHealthcare extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'viewport' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
