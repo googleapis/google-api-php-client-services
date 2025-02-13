@@ -24,7 +24,7 @@ class GoogleCloudApigeeV1ListApiDebugSessionsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  protected $sessionsType = GoogleCloudApigeeV1Session::class;
+  protected $sessionsType = GoogleCloudApigeeV1ApiDebugSession::class;
   protected $sessionsDataType = 'array';
 
   /**
@@ -42,14 +42,14 @@ class GoogleCloudApigeeV1ListApiDebugSessionsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param GoogleCloudApigeeV1Session[]
+   * @param GoogleCloudApigeeV1ApiDebugSession[]
    */
   public function setSessions($sessions)
   {
     $this->sessions = $sessions;
   }
   /**
-   * @return GoogleCloudApigeeV1Session[]
+   * @return GoogleCloudApigeeV1ApiDebugSession[]
    */
   public function getSessions()
   {
