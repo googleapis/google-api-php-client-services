@@ -264,7 +264,17 @@ class DataPortability extends \Google\Service
         'archiveJobs',
         [
           'methods' => [
-            'getPortabilityArchiveState' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getPortabilityArchiveState' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
