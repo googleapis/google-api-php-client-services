@@ -21,6 +21,8 @@ class DatabaseDeploymentDetails extends \Google\Model
 {
   protected $aggregatedStatsType = DatabaseDeploymentDetailsAggregatedStats::class;
   protected $aggregatedStatsDataType = '';
+  protected $awsRdsType = AwsRds::class;
+  protected $awsRdsDataType = '';
   /**
    * @var string
    */
@@ -59,6 +61,20 @@ class DatabaseDeploymentDetails extends \Google\Model
   public function getAggregatedStats()
   {
     return $this->aggregatedStats;
+  }
+  /**
+   * @param AwsRds
+   */
+  public function setAwsRds(AwsRds $awsRds)
+  {
+    $this->awsRds = $awsRds;
+  }
+  /**
+   * @return AwsRds
+   */
+  public function getAwsRds()
+  {
+    return $this->awsRds;
   }
   /**
    * @param string
