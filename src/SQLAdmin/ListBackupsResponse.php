@@ -17,64 +17,61 @@
 
 namespace Google\Service\SQLAdmin;
 
-class BackupContext extends \Google\Model
+class ListBackupsResponse extends \Google\Collection
 {
+  protected $collection_key = 'warnings';
+  protected $backupsType = Backup::class;
+  protected $backupsDataType = 'array';
   /**
    * @var string
    */
-  public $backupId;
-  /**
-   * @var string
-   */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $name;
+  public $nextPageToken;
+  protected $warningsType = ApiWarning::class;
+  protected $warningsDataType = 'array';
 
   /**
-   * @param string
+   * @param Backup[]
    */
-  public function setBackupId($backupId)
+  public function setBackups($backups)
   {
-    $this->backupId = $backupId;
+    $this->backups = $backups;
   }
   /**
-   * @return string
+   * @return Backup[]
    */
-  public function getBackupId()
+  public function getBackups()
   {
-    return $this->backupId;
-  }
-  /**
-   * @param string
-   */
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  /**
-   * @return string
-   */
-  public function getKind()
-  {
-    return $this->kind;
+    return $this->backups;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->name = $name;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getNextPageToken()
   {
-    return $this->name;
+    return $this->nextPageToken;
+  }
+  /**
+   * @param ApiWarning[]
+   */
+  public function setWarnings($warnings)
+  {
+    $this->warnings = $warnings;
+  }
+  /**
+   * @return ApiWarning[]
+   */
+  public function getWarnings()
+  {
+    return $this->warnings;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BackupContext::class, 'Google_Service_SQLAdmin_BackupContext');
+class_alias(ListBackupsResponse::class, 'Google_Service_SQLAdmin_ListBackupsResponse');

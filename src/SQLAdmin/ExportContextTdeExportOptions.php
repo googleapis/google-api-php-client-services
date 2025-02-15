@@ -17,82 +17,82 @@
 
 namespace Google\Service\SQLAdmin;
 
-class ImportContextBakImportOptionsEncryptionOptions extends \Google\Model
+class ExportContextTdeExportOptions extends \Google\Model
 {
   /**
    * @var string
    */
-  public $certPath;
-  /**
-   * @var bool
-   */
-  public $keepEncrypted;
+  public $certificatePath;
   /**
    * @var string
    */
-  public $pvkPassword;
+  public $name;
   /**
    * @var string
    */
-  public $pvkPath;
+  public $privateKeyPassword;
+  /**
+   * @var string
+   */
+  public $privateKeyPath;
 
   /**
    * @param string
    */
-  public function setCertPath($certPath)
+  public function setCertificatePath($certificatePath)
   {
-    $this->certPath = $certPath;
+    $this->certificatePath = $certificatePath;
   }
   /**
    * @return string
    */
-  public function getCertPath()
+  public function getCertificatePath()
   {
-    return $this->certPath;
-  }
-  /**
-   * @param bool
-   */
-  public function setKeepEncrypted($keepEncrypted)
-  {
-    $this->keepEncrypted = $keepEncrypted;
-  }
-  /**
-   * @return bool
-   */
-  public function getKeepEncrypted()
-  {
-    return $this->keepEncrypted;
+    return $this->certificatePath;
   }
   /**
    * @param string
    */
-  public function setPvkPassword($pvkPassword)
+  public function setName($name)
   {
-    $this->pvkPassword = $pvkPassword;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getPvkPassword()
+  public function getName()
   {
-    return $this->pvkPassword;
+    return $this->name;
   }
   /**
    * @param string
    */
-  public function setPvkPath($pvkPath)
+  public function setPrivateKeyPassword($privateKeyPassword)
   {
-    $this->pvkPath = $pvkPath;
+    $this->privateKeyPassword = $privateKeyPassword;
   }
   /**
    * @return string
    */
-  public function getPvkPath()
+  public function getPrivateKeyPassword()
   {
-    return $this->pvkPath;
+    return $this->privateKeyPassword;
+  }
+  /**
+   * @param string
+   */
+  public function setPrivateKeyPath($privateKeyPath)
+  {
+    $this->privateKeyPath = $privateKeyPath;
+  }
+  /**
+   * @return string
+   */
+  public function getPrivateKeyPath()
+  {
+    return $this->privateKeyPath;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ImportContextBakImportOptionsEncryptionOptions::class, 'Google_Service_SQLAdmin_ImportContextBakImportOptionsEncryptionOptions');
+class_alias(ExportContextTdeExportOptions::class, 'Google_Service_SQLAdmin_ExportContextTdeExportOptions');

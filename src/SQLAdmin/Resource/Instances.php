@@ -182,6 +182,15 @@ class Instances extends \Google\Service\Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool enableFinalBackup Flag to opt-in for final backup. By
+   * default, it is turned off.
+   * @opt_param string finalBackupDescription Optional. The description of the
+   * final backup.
+   * @opt_param string finalBackupExpiryTime Optional. Final Backup expiration
+   * time. Timestamp in UTC of when this resource is considered expired.
+   * @opt_param string finalBackupTtlDays Optional. Retention period of the final
+   * backup.
    * @return Operation
    * @throws \Google\Service\Exception
    */

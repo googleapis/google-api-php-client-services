@@ -17,64 +17,46 @@
 
 namespace Google\Service\SQLAdmin;
 
-class BackupContext extends \Google\Model
+class Interval extends \Google\Model
 {
   /**
    * @var string
    */
-  public $backupId;
+  public $endTime;
   /**
    * @var string
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $name;
+  public $startTime;
 
   /**
    * @param string
    */
-  public function setBackupId($backupId)
+  public function setEndTime($endTime)
   {
-    $this->backupId = $backupId;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getBackupId()
+  public function getEndTime()
   {
-    return $this->backupId;
+    return $this->endTime;
   }
   /**
    * @param string
    */
-  public function setKind($kind)
+  public function setStartTime($startTime)
   {
-    $this->kind = $kind;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getStartTime()
   {
-    return $this->kind;
-  }
-  /**
-   * @param string
-   */
-  public function setName($name)
-  {
-    $this->name = $name;
-  }
-  /**
-   * @return string
-   */
-  public function getName()
-  {
-    return $this->name;
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BackupContext::class, 'Google_Service_SQLAdmin_BackupContext');
+class_alias(Interval::class, 'Google_Service_SQLAdmin_Interval');

@@ -69,6 +69,10 @@ class DatabaseInstance extends \Google\Collection
   protected $geminiConfigType = GeminiInstanceConfig::class;
   protected $geminiConfigDataType = '';
   /**
+   * @var bool
+   */
+  public $includeReplicasForMajorVersionUpgrade;
+  /**
    * @var string
    */
   public $instanceType;
@@ -378,6 +382,20 @@ class DatabaseInstance extends \Google\Collection
   public function getGeminiConfig()
   {
     return $this->geminiConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setIncludeReplicasForMajorVersionUpgrade($includeReplicasForMajorVersionUpgrade)
+  {
+    $this->includeReplicasForMajorVersionUpgrade = $includeReplicasForMajorVersionUpgrade;
+  }
+  /**
+   * @return bool
+   */
+  public function getIncludeReplicasForMajorVersionUpgrade()
+  {
+    return $this->includeReplicasForMajorVersionUpgrade;
   }
   /**
    * @param string
