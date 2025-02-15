@@ -31,6 +31,10 @@ class GoogleChromeManagementVersionsV1alpha1CertificateProvisioningProcess exten
    * @var string
    */
   public $failureMessage;
+  protected $genericCaConnectionType = GoogleChromeManagementVersionsV1alpha1GenericCaConnection::class;
+  protected $genericCaConnectionDataType = '';
+  protected $genericProfileType = GoogleChromeManagementVersionsV1alpha1GenericProfile::class;
+  protected $genericProfileDataType = '';
   /**
    * @var string
    */
@@ -123,6 +127,34 @@ class GoogleChromeManagementVersionsV1alpha1CertificateProvisioningProcess exten
   public function getFailureMessage()
   {
     return $this->failureMessage;
+  }
+  /**
+   * @param GoogleChromeManagementVersionsV1alpha1GenericCaConnection
+   */
+  public function setGenericCaConnection(GoogleChromeManagementVersionsV1alpha1GenericCaConnection $genericCaConnection)
+  {
+    $this->genericCaConnection = $genericCaConnection;
+  }
+  /**
+   * @return GoogleChromeManagementVersionsV1alpha1GenericCaConnection
+   */
+  public function getGenericCaConnection()
+  {
+    return $this->genericCaConnection;
+  }
+  /**
+   * @param GoogleChromeManagementVersionsV1alpha1GenericProfile
+   */
+  public function setGenericProfile(GoogleChromeManagementVersionsV1alpha1GenericProfile $genericProfile)
+  {
+    $this->genericProfile = $genericProfile;
+  }
+  /**
+   * @return GoogleChromeManagementVersionsV1alpha1GenericProfile
+   */
+  public function getGenericProfile()
+  {
+    return $this->genericProfile;
   }
   /**
    * @param string
