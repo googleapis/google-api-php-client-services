@@ -17,46 +17,28 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class PscConfig extends \Google\Model
+class PscInterfaceConfig extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $pscEnabled;
   /**
    * @var string
    */
-  public $serviceOwnedProjectNumber;
+  public $networkAttachmentResource;
 
-  /**
-   * @param bool
-   */
-  public function setPscEnabled($pscEnabled)
-  {
-    $this->pscEnabled = $pscEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getPscEnabled()
-  {
-    return $this->pscEnabled;
-  }
   /**
    * @param string
    */
-  public function setServiceOwnedProjectNumber($serviceOwnedProjectNumber)
+  public function setNetworkAttachmentResource($networkAttachmentResource)
   {
-    $this->serviceOwnedProjectNumber = $serviceOwnedProjectNumber;
+    $this->networkAttachmentResource = $networkAttachmentResource;
   }
   /**
    * @return string
    */
-  public function getServiceOwnedProjectNumber()
+  public function getNetworkAttachmentResource()
   {
-    return $this->serviceOwnedProjectNumber;
+    return $this->networkAttachmentResource;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PscConfig::class, 'Google_Service_CloudAlloyDBAdmin_PscConfig');
+class_alias(PscInterfaceConfig::class, 'Google_Service_CloudAlloyDBAdmin_PscInterfaceConfig');

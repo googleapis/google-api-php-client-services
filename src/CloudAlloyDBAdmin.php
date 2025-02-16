@@ -332,6 +332,16 @@ class CloudAlloyDBAdmin extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'import' => [
+              'path' => 'v1/{+name}:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/clusters',
               'httpMethod' => 'GET',

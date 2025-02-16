@@ -17,46 +17,28 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class PscConfig extends \Google\Model
+class ImportClusterResponse extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $pscEnabled;
   /**
    * @var string
    */
-  public $serviceOwnedProjectNumber;
+  public $bytesDownloaded;
 
-  /**
-   * @param bool
-   */
-  public function setPscEnabled($pscEnabled)
-  {
-    $this->pscEnabled = $pscEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getPscEnabled()
-  {
-    return $this->pscEnabled;
-  }
   /**
    * @param string
    */
-  public function setServiceOwnedProjectNumber($serviceOwnedProjectNumber)
+  public function setBytesDownloaded($bytesDownloaded)
   {
-    $this->serviceOwnedProjectNumber = $serviceOwnedProjectNumber;
+    $this->bytesDownloaded = $bytesDownloaded;
   }
   /**
    * @return string
    */
-  public function getServiceOwnedProjectNumber()
+  public function getBytesDownloaded()
   {
-    return $this->serviceOwnedProjectNumber;
+    return $this->bytesDownloaded;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PscConfig::class, 'Google_Service_CloudAlloyDBAdmin_PscConfig');
+class_alias(ImportClusterResponse::class, 'Google_Service_CloudAlloyDBAdmin_ImportClusterResponse');

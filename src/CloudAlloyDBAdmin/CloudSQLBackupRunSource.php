@@ -17,46 +17,64 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class PscConfig extends \Google\Model
+class CloudSQLBackupRunSource extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $pscEnabled;
   /**
    * @var string
    */
-  public $serviceOwnedProjectNumber;
+  public $backupRunId;
+  /**
+   * @var string
+   */
+  public $instanceId;
+  /**
+   * @var string
+   */
+  public $project;
 
-  /**
-   * @param bool
-   */
-  public function setPscEnabled($pscEnabled)
-  {
-    $this->pscEnabled = $pscEnabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getPscEnabled()
-  {
-    return $this->pscEnabled;
-  }
   /**
    * @param string
    */
-  public function setServiceOwnedProjectNumber($serviceOwnedProjectNumber)
+  public function setBackupRunId($backupRunId)
   {
-    $this->serviceOwnedProjectNumber = $serviceOwnedProjectNumber;
+    $this->backupRunId = $backupRunId;
   }
   /**
    * @return string
    */
-  public function getServiceOwnedProjectNumber()
+  public function getBackupRunId()
   {
-    return $this->serviceOwnedProjectNumber;
+    return $this->backupRunId;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceId($instanceId)
+  {
+    $this->instanceId = $instanceId;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceId()
+  {
+    return $this->instanceId;
+  }
+  /**
+   * @param string
+   */
+  public function setProject($project)
+  {
+    $this->project = $project;
+  }
+  /**
+   * @return string
+   */
+  public function getProject()
+  {
+    return $this->project;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PscConfig::class, 'Google_Service_CloudAlloyDBAdmin_PscConfig');
+class_alias(CloudSQLBackupRunSource::class, 'Google_Service_CloudAlloyDBAdmin_CloudSQLBackupRunSource');
