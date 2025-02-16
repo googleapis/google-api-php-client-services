@@ -74,6 +74,10 @@ class DatabaseResourceMetadata extends \Google\Collection
    * @var string
    */
   public $resourceName;
+  /**
+   * @var string
+   */
+  public $suspensionReason;
   protected $tagsSetType = Tags::class;
   protected $tagsSetDataType = '';
   /**
@@ -334,6 +338,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getResourceName()
   {
     return $this->resourceName;
+  }
+  /**
+   * @param string
+   */
+  public function setSuspensionReason($suspensionReason)
+  {
+    $this->suspensionReason = $suspensionReason;
+  }
+  /**
+   * @return string
+   */
+  public function getSuspensionReason()
+  {
+    return $this->suspensionReason;
   }
   /**
    * @param Tags
