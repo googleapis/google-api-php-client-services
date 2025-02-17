@@ -32,8 +32,8 @@ use Google\Service\NetworkSecurity\Operation;
 class ProjectsLocationsMirroringDeployments extends \Google\Service\Resource
 {
   /**
-   * Creates a new MirroringDeployment in a given project and location.
-   * (mirroringDeployments.create)
+   * Creates a deployment in a given project and location. See
+   * https://google.aip.dev/133. (mirroringDeployments.create)
    *
    * @param string $parent Required. Value for parent.
    * @param MirroringDeployment $postBody
@@ -63,7 +63,8 @@ class ProjectsLocationsMirroringDeployments extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single MirroringDeployment. (mirroringDeployments.delete)
+   * Deletes a deployment. See https://google.aip.dev/135.
+   * (mirroringDeployments.delete)
    *
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
@@ -89,7 +90,8 @@ class ProjectsLocationsMirroringDeployments extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets details of a single MirroringDeployment. (mirroringDeployments.get)
+   * Gets a specific deployment. See https://google.aip.dev/131.
+   * (mirroringDeployments.get)
    *
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
@@ -103,7 +105,8 @@ class ProjectsLocationsMirroringDeployments extends \Google\Service\Resource
     return $this->call('get', [$params], MirroringDeployment::class);
   }
   /**
-   * Lists MirroringDeployments in a given project and location.
+   * Lists deployments in a given project and location. See
+   * https://google.aip.dev/132.
    * (mirroringDeployments.listProjectsLocationsMirroringDeployments)
    *
    * @param string $parent Required. Parent value for
@@ -127,10 +130,13 @@ class ProjectsLocationsMirroringDeployments extends \Google\Service\Resource
     return $this->call('list', [$params], ListMirroringDeploymentsResponse::class);
   }
   /**
-   * Updates a single MirroringDeployment. (mirroringDeployments.patch)
+   * Updates a deployment. See https://google.aip.dev/134.
+   * (mirroringDeployments.patch)
    *
-   * @param string $name Immutable. Identifier. The name of the
-   * MirroringDeployment.
+   * @param string $name Immutable. Identifier. The resource name of this
+   * deployment, for example: `projects/123456789/locations/us-
+   * central1-a/mirroringDeployments/my-dep`. See https://google.aip.dev/122 for
+   * more details.
    * @param MirroringDeployment $postBody
    * @param array $optParams Optional parameters.
    *

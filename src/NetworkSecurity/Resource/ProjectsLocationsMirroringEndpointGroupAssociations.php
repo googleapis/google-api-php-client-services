@@ -32,17 +32,21 @@ use Google\Service\NetworkSecurity\Operation;
 class ProjectsLocationsMirroringEndpointGroupAssociations extends \Google\Service\Resource
 {
   /**
-   * Creates a new MirroringEndpointGroupAssociation in a given project and
-   * location. (mirroringEndpointGroupAssociations.create)
+   * Creates an association in a given project and location. See
+   * https://google.aip.dev/133. (mirroringEndpointGroupAssociations.create)
    *
-   * @param string $parent Required. Value for parent.
+   * @param string $parent Required. Container (project and location) where the
+   * association will be created, e.g. `projects/123456789/locations/global`.
    * @param MirroringEndpointGroupAssociation $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string mirroringEndpointGroupAssociationId Optional. Id of the
-   * requesting object If auto-generating Id server-side, remove this field and
-   * mirroring_endpoint_group_association_id from the method_signature of Create
-   * RPC
+   * @opt_param string mirroringEndpointGroupAssociationId Optional. ID for the
+   * new association. If not provided, the server will generate a unique ID. The
+   * ID must be a valid RFC 1035 resource name. The ID must be 1-63 characters
+   * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?`. The first
+   * character must be a lowercase letter, and all following characters (except
+   * for the last character) must be a dash, lowercase letter, or digit. The last
+   * character must be a
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
@@ -64,10 +68,13 @@ class ProjectsLocationsMirroringEndpointGroupAssociations extends \Google\Servic
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single MirroringEndpointGroupAssociation.
+   * Deletes a single association. See https://google.aip.dev/135.
    * (mirroringEndpointGroupAssociations.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Full resource name of the association to
+   * delete, e.g.
+   * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+   * association.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. An optional request ID to identify
@@ -91,10 +98,13 @@ class ProjectsLocationsMirroringEndpointGroupAssociations extends \Google\Servic
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets details of a single MirroringEndpointGroupAssociation.
+   * Gets a specific association. See https://google.aip.dev/131.
    * (mirroringEndpointGroupAssociations.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Full resource name of the association to get,
+   * e.g.
+   * projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-eg-
+   * association.
    * @param array $optParams Optional parameters.
    * @return MirroringEndpointGroupAssociation
    * @throws \Google\Service\Exception
@@ -106,21 +116,22 @@ class ProjectsLocationsMirroringEndpointGroupAssociations extends \Google\Servic
     return $this->call('get', [$params], MirroringEndpointGroupAssociation::class);
   }
   /**
-   * Lists MirroringEndpointGroupAssociations in a given project and location. (mi
-   * rroringEndpointGroupAssociations.listProjectsLocationsMirroringEndpointGroupA
-   * ssociations)
+   * Lists associations in a given project and location. See
+   * https://google.aip.dev/132. (mirroringEndpointGroupAssociations.listProjectsL
+   * ocationsMirroringEndpointGroupAssociations)
    *
-   * @param string $parent Required. Parent value for
-   * ListMirroringEndpointGroupAssociationsRequest
+   * @param string $parent Required. Parent container (project and location) of
+   * the associations to list, e.g. `projects/123456789/locations/global`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
+   * @opt_param string filter Optional. A filter expression that filters the
+   * results listed in the response. See https://google.aip.dev/160.
    * @opt_param string orderBy Optional. Hint for how to order the results
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
-   * default.
+   * default. See https://google.aip.dev/158.
    * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
+   * the server should return. See https://google.aip.dev/158.
    * @return ListMirroringEndpointGroupAssociationsResponse
    * @throws \Google\Service\Exception
    */
@@ -131,11 +142,13 @@ class ProjectsLocationsMirroringEndpointGroupAssociations extends \Google\Servic
     return $this->call('list', [$params], ListMirroringEndpointGroupAssociationsResponse::class);
   }
   /**
-   * Updates a single MirroringEndpointGroupAssociation.
+   * Updates an association. See https://google.aip.dev/134.
    * (mirroringEndpointGroupAssociations.patch)
    *
-   * @param string $name Immutable. Identifier. The name of the
-   * MirroringEndpointGroupAssociation.
+   * @param string $name Immutable. Identifier. The resource name of this endpoint
+   * group association, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroupAssociations/my-
+   * eg-association`. See https://google.aip.dev/122 for more details.
    * @param MirroringEndpointGroupAssociation $postBody
    * @param array $optParams Optional parameters.
    *
@@ -150,12 +163,9 @@ class ProjectsLocationsMirroringEndpointGroupAssociations extends \Google\Servic
    * clients from accidentally creating duplicate commitments. The request ID must
    * be a valid UUID with the exception that zero UUID is not supported
    * (00000000-0000-0000-0000-000000000000).
-   * @opt_param string updateMask Required. Field mask is used to specify the
-   * fields to be overwritten in the MirroringEndpointGroupAssociation resource by
-   * the update. The fields specified in the update_mask are relative to the
-   * resource, not the full request. A field will be overwritten if it is in the
-   * mask. If the user does not provide a mask then all fields will be
-   * overwritten.
+   * @opt_param string updateMask Optional. Field mask is used to specify the
+   * fields to be overwritten in the association by the update. See
+   * https://google.aip.dev/161.
    * @return Operation
    * @throws \Google\Service\Exception
    */

@@ -32,8 +32,8 @@ use Google\Service\NetworkSecurity\Operation;
 class ProjectsLocationsMirroringEndpointGroups extends \Google\Service\Resource
 {
   /**
-   * Creates a new MirroringEndpointGroup in a given project and location.
-   * (mirroringEndpointGroups.create)
+   * Creates an endpoint group in a given project and location. See
+   * https://google.aip.dev/133. (mirroringEndpointGroups.create)
    *
    * @param string $parent Required. Value for parent.
    * @param MirroringEndpointGroup $postBody
@@ -63,7 +63,8 @@ class ProjectsLocationsMirroringEndpointGroups extends \Google\Service\Resource
     return $this->call('create', [$params], Operation::class);
   }
   /**
-   * Deletes a single MirroringEndpointGroup. (mirroringEndpointGroups.delete)
+   * Deletes an endpoint group. See https://google.aip.dev/135.
+   * (mirroringEndpointGroups.delete)
    *
    * @param string $name Required. Name of the resource
    * @param array $optParams Optional parameters.
@@ -89,7 +90,7 @@ class ProjectsLocationsMirroringEndpointGroups extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Gets details of a single MirroringEndpointGroup.
+   * Gets a specific endpoint group. See https://google.aip.dev/131.
    * (mirroringEndpointGroups.get)
    *
    * @param string $name Required. Name of the resource
@@ -104,7 +105,8 @@ class ProjectsLocationsMirroringEndpointGroups extends \Google\Service\Resource
     return $this->call('get', [$params], MirroringEndpointGroup::class);
   }
   /**
-   * Lists MirroringEndpointGroups in a given project and location.
+   * Lists endpoint groups in a given project and location. See
+   * https://google.aip.dev/132.
    * (mirroringEndpointGroups.listProjectsLocationsMirroringEndpointGroups)
    *
    * @param string $parent Required. Parent value for
@@ -128,10 +130,13 @@ class ProjectsLocationsMirroringEndpointGroups extends \Google\Service\Resource
     return $this->call('list', [$params], ListMirroringEndpointGroupsResponse::class);
   }
   /**
-   * Updates a single MirroringEndpointGroup. (mirroringEndpointGroups.patch)
+   * Updates an endpoint group. See https://google.aip.dev/134.
+   * (mirroringEndpointGroups.patch)
    *
-   * @param string $name Immutable. Identifier. Next ID: 11 The name of the
-   * MirroringEndpointGroup.
+   * @param string $name Immutable. Identifier. The resource name of this endpoint
+   * group, for example:
+   * `projects/123456789/locations/global/mirroringEndpointGroups/my-eg`. See
+   * https://google.aip.dev/122 for more details.
    * @param MirroringEndpointGroup $postBody
    * @param array $optParams Optional parameters.
    *

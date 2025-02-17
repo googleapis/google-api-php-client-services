@@ -130,8 +130,10 @@ class ProjectsLocationsMirroringDeploymentGroups extends \Google\Service\Resourc
   /**
    * Updates a single MirroringDeploymentGroup. (mirroringDeploymentGroups.patch)
    *
-   * @param string $name Immutable. Identifier. Then name of the
-   * MirroringDeploymentGroup.
+   * @param string $name Immutable. Identifier. The resource name of this
+   * deployment group, for example:
+   * `projects/123456789/locations/global/mirroringDeploymentGroups/my-dg`. See
+   * https://google.aip.dev/122 for more details.
    * @param MirroringDeploymentGroup $postBody
    * @param array $optParams Optional parameters.
    *
