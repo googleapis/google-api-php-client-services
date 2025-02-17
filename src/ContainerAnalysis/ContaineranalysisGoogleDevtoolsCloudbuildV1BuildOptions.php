@@ -61,6 +61,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   /**
    * @var string
    */
+  public $pubsubTopic;
+  /**
+   * @var string
+   */
   public $requestedVerifyOption;
   /**
    * @var string[]
@@ -220,6 +224,20 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptions extends \Google\Co
   public function getPool()
   {
     return $this->pool;
+  }
+  /**
+   * @param string
+   */
+  public function setPubsubTopic($pubsubTopic)
+  {
+    $this->pubsubTopic = $pubsubTopic;
+  }
+  /**
+   * @return string
+   */
+  public function getPubsubTopic()
+  {
+    return $this->pubsubTopic;
   }
   /**
    * @param string
