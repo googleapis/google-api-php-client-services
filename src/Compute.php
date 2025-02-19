@@ -15574,6 +15574,34 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'deleteRoutePolicy' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/deleteRoutePolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'policy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'projects/{project}/regions/{region}/routers/{router}',
               'httpMethod' => 'GET',
@@ -15662,6 +15690,30 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'getRoutePolicy' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/getRoutePolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'policy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'getRouterStatus' => [
               'path' => 'projects/{project}/regions/{region}/routers/{router}/getRouterStatus',
               'httpMethod' => 'GET',
@@ -15736,9 +15788,133 @@ class Compute extends \Google\Service
                   'type' => 'boolean',
                 ],
               ],
+            ],'listBgpRoutes' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/listBgpRoutes',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'addressFamily' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'destinationPrefix' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'peer' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'policyApplied' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'routeType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'listRoutePolicies' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/listRoutePolicies',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'maxResults' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
             ],'patch' => [
               'path' => 'projects/{project}/regions/{region}/routers/{router}',
               'httpMethod' => 'PATCH',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patchRoutePolicy' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/patchRoutePolicy',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
                   'location' => 'path',
@@ -15783,6 +15959,30 @@ class Compute extends \Google\Service
             ],'update' => [
               'path' => 'projects/{project}/regions/{region}/routers/{router}',
               'httpMethod' => 'PUT',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'region' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'router' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'updateRoutePolicy' => [
+              'path' => 'projects/{project}/regions/{region}/routers/{router}/updateRoutePolicy',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'project' => [
                   'location' => 'path',
