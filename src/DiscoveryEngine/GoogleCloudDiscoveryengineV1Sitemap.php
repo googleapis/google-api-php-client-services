@@ -17,20 +17,16 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo extends \Google\Model
+class GoogleCloudDiscoveryengineV1Sitemap extends \Google\Model
 {
   /**
    * @var string
    */
-  public $document;
-  /**
-   * @var array[]
-   */
-  public $structData;
+  public $createTime;
   /**
    * @var string
    */
-  public $title;
+  public $name;
   /**
    * @var string
    */
@@ -39,44 +35,30 @@ class GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo extends 
   /**
    * @param string
    */
-  public function setDocument($document)
+  public function setCreateTime($createTime)
   {
-    $this->document = $document;
+    $this->createTime = $createTime;
   }
   /**
    * @return string
    */
-  public function getDocument()
+  public function getCreateTime()
   {
-    return $this->document;
-  }
-  /**
-   * @param array[]
-   */
-  public function setStructData($structData)
-  {
-    $this->structData = $structData;
-  }
-  /**
-   * @return array[]
-   */
-  public function getStructData()
-  {
-    return $this->structData;
+    return $this->createTime;
   }
   /**
    * @param string
    */
-  public function setTitle($title)
+  public function setName($name)
   {
-    $this->title = $title;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getTitle()
+  public function getName()
   {
-    return $this->title;
+    return $this->name;
   }
   /**
    * @param string
@@ -95,4 +77,4 @@ class GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo extends 
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1AnswerReferenceStructuredDocumentInfo');
+class_alias(GoogleCloudDiscoveryengineV1Sitemap::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1Sitemap');

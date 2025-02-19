@@ -50,6 +50,10 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   protected $documentProcessingConfigDataType = '';
   protected $healthcareFhirConfigType = GoogleCloudDiscoveryengineV1alphaHealthcareFhirConfig::class;
   protected $healthcareFhirConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $identityMappingStore;
   protected $idpConfigType = GoogleCloudDiscoveryengineV1alphaIdpConfig::class;
   protected $idpConfigDataType = '';
   /**
@@ -222,6 +226,20 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   public function getHealthcareFhirConfig()
   {
     return $this->healthcareFhirConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setIdentityMappingStore($identityMappingStore)
+  {
+    $this->identityMappingStore = $identityMappingStore;
+  }
+  /**
+   * @return string
+   */
+  public function getIdentityMappingStore()
+  {
+    return $this->identityMappingStore;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaIdpConfig

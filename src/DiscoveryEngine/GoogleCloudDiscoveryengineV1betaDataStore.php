@@ -49,6 +49,10 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   /**
    * @var string
    */
+  public $identityMappingStore;
+  /**
+   * @var string
+   */
   public $industryVertical;
   /**
    * @var bool
@@ -202,6 +206,20 @@ class GoogleCloudDiscoveryengineV1betaDataStore extends \Google\Collection
   public function getHealthcareFhirConfig()
   {
     return $this->healthcareFhirConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setIdentityMappingStore($identityMappingStore)
+  {
+    $this->identityMappingStore = $identityMappingStore;
+  }
+  /**
+   * @return string
+   */
+  public function getIdentityMappingStore()
+  {
+    return $this->identityMappingStore;
   }
   /**
    * @param string
