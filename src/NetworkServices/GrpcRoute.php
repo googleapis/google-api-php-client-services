@@ -29,10 +29,6 @@ class GrpcRoute extends \Google\Collection
    */
   public $description;
   /**
-   * @var string
-   */
-  public $etag;
-  /**
    * @var string[]
    */
   public $gateways;
@@ -90,20 +86,6 @@ class GrpcRoute extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
-  }
-  /**
-   * @param string
-   */
-  public function setEtag($etag)
-  {
-    $this->etag = $etag;
-  }
-  /**
-   * @return string
-   */
-  public function getEtag()
-  {
-    return $this->etag;
   }
   /**
    * @param string[]

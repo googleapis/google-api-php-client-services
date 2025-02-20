@@ -567,10 +567,6 @@ class NetworkServices extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'etag' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'get' => [
               'path' => 'v1/{+name}',
@@ -646,10 +642,6 @@ class NetworkServices extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'etag' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'get' => [
@@ -1233,10 +1225,6 @@ class NetworkServices extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
-                'etag' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
             ],'get' => [
               'path' => 'v1/{+name}',
@@ -1312,10 +1300,6 @@ class NetworkServices extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-                'etag' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'get' => [
