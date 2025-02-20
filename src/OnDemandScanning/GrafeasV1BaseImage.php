@@ -17,7 +17,7 @@
 
 namespace Google\Service\OnDemandScanning;
 
-class BaseImage extends \Google\Model
+class GrafeasV1BaseImage extends \Google\Model
 {
   /**
    * @var int
@@ -77,4 +77,4 @@ class BaseImage extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BaseImage::class, 'Google_Service_OnDemandScanning_BaseImage');
+class_alias(GrafeasV1BaseImage::class, 'Google_Service_OnDemandScanning_GrafeasV1BaseImage');
