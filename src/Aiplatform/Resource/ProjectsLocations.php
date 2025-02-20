@@ -21,12 +21,14 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1AugmentPromptRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1AugmentPromptResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CorroborateContentRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CorroborateContentResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluateDatasetRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluateInstancesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1EvaluateInstancesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1RetrieveContextsResponse;
 use Google\Service\Aiplatform\GoogleCloudLocationListLocationsResponse;
 use Google\Service\Aiplatform\GoogleCloudLocationLocation;
+use Google\Service\Aiplatform\GoogleLongrunningOperation;
 
 /**
  * The "locations" collection of methods.
@@ -74,6 +76,23 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('corroborateContent', [$params], GoogleCloudAiplatformV1CorroborateContentResponse::class);
+  }
+  /**
+   * Evaluates a dataset based on a set of given metrics.
+   * (locations.evaluateDataset)
+   *
+   * @param string $location Required. The resource name of the Location to
+   * evaluate the dataset. Format: `projects/{project}/locations/{location}`
+   * @param GoogleCloudAiplatformV1EvaluateDatasetRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function evaluateDataset($location, GoogleCloudAiplatformV1EvaluateDatasetRequest $postBody, $optParams = [])
+  {
+    $params = ['location' => $location, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('evaluateDataset', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Evaluates instances based on a given metric. (locations.evaluateInstances)

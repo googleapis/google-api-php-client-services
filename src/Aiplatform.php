@@ -489,6 +489,16 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'evaluateDataset' => [
+              'path' => 'v1/{+location}:evaluateDataset',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'evaluateInstances' => [
               'path' => 'v1/{+location}:evaluateInstances',
               'httpMethod' => 'POST',

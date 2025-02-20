@@ -30,6 +30,10 @@ class GoogleCloudAiplatformV1ModelVersionCheckpoint extends \Google\Model
   /**
    * @var string
    */
+  public $name;
+  /**
+   * @var string
+   */
   public $step;
 
   /**
@@ -59,6 +63,20 @@ class GoogleCloudAiplatformV1ModelVersionCheckpoint extends \Google\Model
   public function getEpoch()
   {
     return $this->epoch;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param string
