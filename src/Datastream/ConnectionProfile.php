@@ -49,6 +49,8 @@ class ConnectionProfile extends \Google\Model
   protected $postgresqlProfileDataType = '';
   protected $privateConnectivityType = PrivateConnectivity::class;
   protected $privateConnectivityDataType = '';
+  protected $salesforceProfileType = SalesforceProfile::class;
+  protected $salesforceProfileDataType = '';
   /**
    * @var bool
    */
@@ -219,6 +221,20 @@ class ConnectionProfile extends \Google\Model
   public function getPrivateConnectivity()
   {
     return $this->privateConnectivity;
+  }
+  /**
+   * @param SalesforceProfile
+   */
+  public function setSalesforceProfile(SalesforceProfile $salesforceProfile)
+  {
+    $this->salesforceProfile = $salesforceProfile;
+  }
+  /**
+   * @return SalesforceProfile
+   */
+  public function getSalesforceProfile()
+  {
+    return $this->salesforceProfile;
   }
   /**
    * @param bool
