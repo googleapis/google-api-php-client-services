@@ -17,6 +17,9 @@
 
 namespace Google\Service\DisplayVideo\Resource;
 
+use Google\Service\DisplayVideo\CreateSdfDownloadTaskRequest;
+use Google\Service\DisplayVideo\Operation;
+
 /**
  * The "sdfdownloadtasks" collection of methods.
  * Typical usage is:
@@ -27,6 +30,27 @@ namespace Google\Service\DisplayVideo\Resource;
  */
 class Sdfdownloadtasks extends \Google\Service\Resource
 {
+  /**
+   * Creates an SDF Download Task. Returns an Operation. An SDF Download Task is a
+   * long-running, asynchronous operation. The metadata type of this operation is
+   * SdfDownloadTaskMetadata. If the request is successful, the response type of
+   * the operation is SdfDownloadTask. The response will not include the download
+   * files, which must be retrieved with media.download. The state of operation
+   * can be retrieved with sdfdownloadtask.operations.get. Any errors can be found
+   * in the error.message. Note that error.details is expected to be empty.
+   * (sdfdownloadtasks.create)
+   *
+   * @param CreateSdfDownloadTaskRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function create(CreateSdfDownloadTaskRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Operation::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

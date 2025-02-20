@@ -17,12 +17,16 @@
 
 namespace Google\Service\DisplayVideo;
 
-class EditCustomerMatchMembersResponse extends \Google\Model
+class FirstPartyAndPartnerAudienceTargetingSetting extends \Google\Model
 {
   /**
    * @var string
    */
   public $firstPartyAndPartnerAudienceId;
+  /**
+   * @var string
+   */
+  public $recency;
 
   /**
    * @param string
@@ -38,7 +42,21 @@ class EditCustomerMatchMembersResponse extends \Google\Model
   {
     return $this->firstPartyAndPartnerAudienceId;
   }
+  /**
+   * @param string
+   */
+  public function setRecency($recency)
+  {
+    $this->recency = $recency;
+  }
+  /**
+   * @return string
+   */
+  public function getRecency()
+  {
+    return $this->recency;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EditCustomerMatchMembersResponse::class, 'Google_Service_DisplayVideo_EditCustomerMatchMembersResponse');
+class_alias(FirstPartyAndPartnerAudienceTargetingSetting::class, 'Google_Service_DisplayVideo_FirstPartyAndPartnerAudienceTargetingSetting');

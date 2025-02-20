@@ -17,28 +17,27 @@
 
 namespace Google\Service\DisplayVideo;
 
-class EditCustomerMatchMembersResponse extends \Google\Model
+class FirstPartyAndPartnerAudienceGroup extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $firstPartyAndPartnerAudienceId;
+  protected $collection_key = 'settings';
+  protected $settingsType = FirstPartyAndPartnerAudienceTargetingSetting::class;
+  protected $settingsDataType = 'array';
 
   /**
-   * @param string
+   * @param FirstPartyAndPartnerAudienceTargetingSetting[]
    */
-  public function setFirstPartyAndPartnerAudienceId($firstPartyAndPartnerAudienceId)
+  public function setSettings($settings)
   {
-    $this->firstPartyAndPartnerAudienceId = $firstPartyAndPartnerAudienceId;
+    $this->settings = $settings;
   }
   /**
-   * @return string
+   * @return FirstPartyAndPartnerAudienceTargetingSetting[]
    */
-  public function getFirstPartyAndPartnerAudienceId()
+  public function getSettings()
   {
-    return $this->firstPartyAndPartnerAudienceId;
+    return $this->settings;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EditCustomerMatchMembersResponse::class, 'Google_Service_DisplayVideo_EditCustomerMatchMembersResponse');
+class_alias(FirstPartyAndPartnerAudienceGroup::class, 'Google_Service_DisplayVideo_FirstPartyAndPartnerAudienceGroup');
