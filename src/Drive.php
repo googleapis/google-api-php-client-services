@@ -1081,6 +1081,10 @@ class Drive extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'enforceExpansiveAccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'supportsAllDrives' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -1168,6 +1172,10 @@ class Drive extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+                'enforceExpansiveAccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
                 'removeExpiration' => [
                   'location' => 'query',
