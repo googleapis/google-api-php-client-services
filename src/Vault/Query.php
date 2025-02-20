@@ -31,6 +31,8 @@ class Query extends \Google\Model
    * @var string
    */
   public $dataScope;
+  protected $driveDocumentInfoType = DriveDocumentInfo::class;
+  protected $driveDocumentInfoDataType = '';
   protected $driveOptionsType = DriveOptions::class;
   protected $driveOptionsDataType = '';
   /**
@@ -131,6 +133,20 @@ class Query extends \Google\Model
   public function getDataScope()
   {
     return $this->dataScope;
+  }
+  /**
+   * @param DriveDocumentInfo
+   */
+  public function setDriveDocumentInfo(DriveDocumentInfo $driveDocumentInfo)
+  {
+    $this->driveDocumentInfo = $driveDocumentInfo;
+  }
+  /**
+   * @return DriveDocumentInfo
+   */
+  public function getDriveDocumentInfo()
+  {
+    return $this->driveDocumentInfo;
   }
   /**
    * @param DriveOptions
