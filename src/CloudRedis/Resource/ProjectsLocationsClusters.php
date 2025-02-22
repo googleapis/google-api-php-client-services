@@ -81,7 +81,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * lowercase letters, numbers, and hyphens. * Must start with a letter. * Must
    * be between 1-63 characters. * Must end with a number or a letter. * Must be
    * unique within the customer project / location
-   * @opt_param string requestId Idempotent request UUID.
+   * @opt_param string requestId Optional. Idempotent request UUID.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -100,7 +100,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * `location_id` refers to a GCP region.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Idempotent request UUID.
+   * @opt_param string requestId Optional. Idempotent request UUID.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -184,7 +184,7 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @param Cluster $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string requestId Idempotent request UUID.
+   * @opt_param string requestId Optional. Idempotent request UUID.
    * @opt_param string updateMask Required. Mask of fields to update. At least one
    * path must be supplied in this field. The elements of the repeated paths field
    * may only include these fields from Cluster: * `size_gb` * `replica_count` *

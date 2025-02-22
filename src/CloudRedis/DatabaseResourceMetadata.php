@@ -46,6 +46,8 @@ class DatabaseResourceMetadata extends \Google\Collection
    * @var string
    */
   public $expectedState;
+  protected $gcbdrConfigurationType = GCBDRConfiguration::class;
+  protected $gcbdrConfigurationDataType = '';
   protected $idType = DatabaseResourceId::class;
   protected $idDataType = '';
   /**
@@ -212,6 +214,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getExpectedState()
   {
     return $this->expectedState;
+  }
+  /**
+   * @param GCBDRConfiguration
+   */
+  public function setGcbdrConfiguration(GCBDRConfiguration $gcbdrConfiguration)
+  {
+    $this->gcbdrConfiguration = $gcbdrConfiguration;
+  }
+  /**
+   * @return GCBDRConfiguration
+   */
+  public function getGcbdrConfiguration()
+  {
+    return $this->gcbdrConfiguration;
   }
   /**
    * @param DatabaseResourceId
