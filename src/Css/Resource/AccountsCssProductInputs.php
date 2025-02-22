@@ -36,7 +36,10 @@ class AccountsCssProductInputs extends \Google\Service\Resource
    * (cssProductInputs.delete)
    *
    * @param string $name Required. The name of the CSS product input resource to
-   * delete. Format: accounts/{account}/cssProductInputs/{css_product_input}
+   * delete. Format: accounts/{account}/cssProductInputs/{css_product_input},
+   * where the last section `css_product_input` consists of 3 parts:
+   * contentLanguage~feedLabel~offerId. Example:
+   * accounts/123/cssProductInputs/de~DE~rawProvidedId123
    * @param array $optParams Optional parameters.
    *
    * @opt_param string supplementalFeedId The Content API Supplemental Feed ID.
@@ -86,7 +89,10 @@ class AccountsCssProductInputs extends \Google\Service\Resource
    * (cssProductInputs.patch)
    *
    * @param string $name The name of the CSS Product input. Format:
-   * `accounts/{account}/cssProductInputs/{css_product_input}`
+   * `accounts/{account}/cssProductInputs/{css_product_input}`, where the last
+   * section `css_product_input` consists of 3 parts:
+   * contentLanguage~feedLabel~offerId. Example:
+   * accounts/123/cssProductInputs/de~DE~rawProvidedId123
    * @param CssProductInput $postBody
    * @param array $optParams Optional parameters.
    *
