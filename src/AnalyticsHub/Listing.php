@@ -51,6 +51,10 @@ class Listing extends \Google\Collection
    */
   public $icon;
   /**
+   * @var bool
+   */
+  public $logLinkedDatasetQueryUserEmail;
+  /**
    * @var string
    */
   public $name;
@@ -202,6 +206,20 @@ class Listing extends \Google\Collection
   public function getIcon()
   {
     return $this->icon;
+  }
+  /**
+   * @param bool
+   */
+  public function setLogLinkedDatasetQueryUserEmail($logLinkedDatasetQueryUserEmail)
+  {
+    $this->logLinkedDatasetQueryUserEmail = $logLinkedDatasetQueryUserEmail;
+  }
+  /**
+   * @return bool
+   */
+  public function getLogLinkedDatasetQueryUserEmail()
+  {
+    return $this->logLinkedDatasetQueryUserEmail;
   }
   /**
    * @param string

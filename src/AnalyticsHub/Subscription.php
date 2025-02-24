@@ -43,6 +43,10 @@ class Subscription extends \Google\Collection
    */
   public $listing;
   /**
+   * @var bool
+   */
+  public $logLinkedDatasetQueryUserEmail;
+  /**
    * @var string
    */
   public $name;
@@ -164,6 +168,20 @@ class Subscription extends \Google\Collection
   public function getListing()
   {
     return $this->listing;
+  }
+  /**
+   * @param bool
+   */
+  public function setLogLinkedDatasetQueryUserEmail($logLinkedDatasetQueryUserEmail)
+  {
+    $this->logLinkedDatasetQueryUserEmail = $logLinkedDatasetQueryUserEmail;
+  }
+  /**
+   * @return bool
+   */
+  public function getLogLinkedDatasetQueryUserEmail()
+  {
+    return $this->logLinkedDatasetQueryUserEmail;
   }
   /**
    * @param string
