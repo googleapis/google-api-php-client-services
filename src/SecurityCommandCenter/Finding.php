@@ -92,6 +92,10 @@ class Finding extends \Google\Collection
   protected $iamBindingsDataType = 'array';
   protected $indicatorType = Indicator::class;
   protected $indicatorDataType = '';
+  protected $ipRulesType = IpRules::class;
+  protected $ipRulesDataType = '';
+  protected $jobType = Job::class;
+  protected $jobDataType = '';
   protected $kernelRootkitType = KernelRootkit::class;
   protected $kernelRootkitDataType = '';
   protected $kubernetesType = Kubernetes::class;
@@ -124,6 +128,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $networksType = Network::class;
+  protected $networksDataType = 'array';
   /**
    * @var string
    */
@@ -574,6 +580,34 @@ class Finding extends \Google\Collection
     return $this->indicator;
   }
   /**
+   * @param IpRules
+   */
+  public function setIpRules(IpRules $ipRules)
+  {
+    $this->ipRules = $ipRules;
+  }
+  /**
+   * @return IpRules
+   */
+  public function getIpRules()
+  {
+    return $this->ipRules;
+  }
+  /**
+   * @param Job
+   */
+  public function setJob(Job $job)
+  {
+    $this->job = $job;
+  }
+  /**
+   * @return Job
+   */
+  public function getJob()
+  {
+    return $this->job;
+  }
+  /**
    * @param KernelRootkit
    */
   public function setKernelRootkit(KernelRootkit $kernelRootkit)
@@ -726,6 +760,20 @@ class Finding extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param Network[]
+   */
+  public function setNetworks($networks)
+  {
+    $this->networks = $networks;
+  }
+  /**
+   * @return Network[]
+   */
+  public function getNetworks()
+  {
+    return $this->networks;
   }
   /**
    * @param string
