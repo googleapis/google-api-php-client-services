@@ -17,62 +17,46 @@
 
 namespace Google\Service\WorkloadManager;
 
-class CloudResource extends \Google\Model
+class BackupProperties extends \Google\Model
 {
-  protected $instancePropertiesType = InstanceProperties::class;
-  protected $instancePropertiesDataType = '';
   /**
    * @var string
    */
-  public $kind;
+  public $latestBackupStatus;
   /**
    * @var string
    */
-  public $name;
+  public $latestBackupTime;
 
   /**
-   * @param InstanceProperties
-   */
-  public function setInstanceProperties(InstanceProperties $instanceProperties)
-  {
-    $this->instanceProperties = $instanceProperties;
-  }
-  /**
-   * @return InstanceProperties
-   */
-  public function getInstanceProperties()
-  {
-    return $this->instanceProperties;
-  }
-  /**
    * @param string
    */
-  public function setKind($kind)
+  public function setLatestBackupStatus($latestBackupStatus)
   {
-    $this->kind = $kind;
+    $this->latestBackupStatus = $latestBackupStatus;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getLatestBackupStatus()
   {
-    return $this->kind;
+    return $this->latestBackupStatus;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setLatestBackupTime($latestBackupTime)
   {
-    $this->name = $name;
+    $this->latestBackupTime = $latestBackupTime;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getLatestBackupTime()
   {
-    return $this->name;
+    return $this->latestBackupTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudResource::class, 'Google_Service_WorkloadManager_CloudResource');
+class_alias(BackupProperties::class, 'Google_Service_WorkloadManager_BackupProperties');

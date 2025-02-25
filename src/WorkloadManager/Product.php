@@ -17,47 +17,17 @@
 
 namespace Google\Service\WorkloadManager;
 
-class CloudResource extends \Google\Model
+class Product extends \Google\Model
 {
-  protected $instancePropertiesType = InstanceProperties::class;
-  protected $instancePropertiesDataType = '';
-  /**
-   * @var string
-   */
-  public $kind;
   /**
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $version;
 
-  /**
-   * @param InstanceProperties
-   */
-  public function setInstanceProperties(InstanceProperties $instanceProperties)
-  {
-    $this->instanceProperties = $instanceProperties;
-  }
-  /**
-   * @return InstanceProperties
-   */
-  public function getInstanceProperties()
-  {
-    return $this->instanceProperties;
-  }
-  /**
-   * @param string
-   */
-  public function setKind($kind)
-  {
-    $this->kind = $kind;
-  }
-  /**
-   * @return string
-   */
-  public function getKind()
-  {
-    return $this->kind;
-  }
   /**
    * @param string
    */
@@ -72,7 +42,21 @@ class CloudResource extends \Google\Model
   {
     return $this->name;
   }
+  /**
+   * @param string
+   */
+  public function setVersion($version)
+  {
+    $this->version = $version;
+  }
+  /**
+   * @return string
+   */
+  public function getVersion()
+  {
+    return $this->version;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudResource::class, 'Google_Service_WorkloadManager_CloudResource');
+class_alias(Product::class, 'Google_Service_WorkloadManager_Product');

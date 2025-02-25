@@ -17,62 +17,63 @@
 
 namespace Google\Service\WorkloadManager;
 
-class CloudResource extends \Google\Model
+class WorkloadProfileHealth extends \Google\Collection
 {
-  protected $instancePropertiesType = InstanceProperties::class;
-  protected $instancePropertiesDataType = '';
+  protected $collection_key = 'componentHealthes';
   /**
    * @var string
    */
-  public $kind;
+  public $checkTime;
+  protected $componentHealthesType = ComponentHealth::class;
+  protected $componentHealthesDataType = 'array';
   /**
    * @var string
    */
-  public $name;
+  public $state;
 
   /**
-   * @param InstanceProperties
-   */
-  public function setInstanceProperties(InstanceProperties $instanceProperties)
-  {
-    $this->instanceProperties = $instanceProperties;
-  }
-  /**
-   * @return InstanceProperties
-   */
-  public function getInstanceProperties()
-  {
-    return $this->instanceProperties;
-  }
-  /**
    * @param string
    */
-  public function setKind($kind)
+  public function setCheckTime($checkTime)
   {
-    $this->kind = $kind;
+    $this->checkTime = $checkTime;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getCheckTime()
   {
-    return $this->kind;
+    return $this->checkTime;
+  }
+  /**
+   * @param ComponentHealth[]
+   */
+  public function setComponentHealthes($componentHealthes)
+  {
+    $this->componentHealthes = $componentHealthes;
+  }
+  /**
+   * @return ComponentHealth[]
+   */
+  public function getComponentHealthes()
+  {
+    return $this->componentHealthes;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setState($state)
   {
-    $this->name = $name;
+    $this->state = $state;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getState()
   {
-    return $this->name;
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudResource::class, 'Google_Service_WorkloadManager_CloudResource');
+class_alias(WorkloadProfileHealth::class, 'Google_Service_WorkloadManager_WorkloadProfileHealth');

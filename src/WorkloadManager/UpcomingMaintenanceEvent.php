@@ -17,62 +17,82 @@
 
 namespace Google\Service\WorkloadManager;
 
-class CloudResource extends \Google\Model
+class UpcomingMaintenanceEvent extends \Google\Model
 {
-  protected $instancePropertiesType = InstanceProperties::class;
-  protected $instancePropertiesDataType = '';
   /**
    * @var string
    */
-  public $kind;
+  public $endTime;
   /**
    * @var string
    */
-  public $name;
+  public $maintenanceStatus;
+  /**
+   * @var string
+   */
+  public $startTime;
+  /**
+   * @var string
+   */
+  public $type;
 
   /**
-   * @param InstanceProperties
-   */
-  public function setInstanceProperties(InstanceProperties $instanceProperties)
-  {
-    $this->instanceProperties = $instanceProperties;
-  }
-  /**
-   * @return InstanceProperties
-   */
-  public function getInstanceProperties()
-  {
-    return $this->instanceProperties;
-  }
-  /**
    * @param string
    */
-  public function setKind($kind)
+  public function setEndTime($endTime)
   {
-    $this->kind = $kind;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getEndTime()
   {
-    return $this->kind;
+    return $this->endTime;
   }
   /**
    * @param string
    */
-  public function setName($name)
+  public function setMaintenanceStatus($maintenanceStatus)
   {
-    $this->name = $name;
+    $this->maintenanceStatus = $maintenanceStatus;
   }
   /**
    * @return string
    */
-  public function getName()
+  public function getMaintenanceStatus()
   {
-    return $this->name;
+    return $this->maintenanceStatus;
+  }
+  /**
+   * @param string
+   */
+  public function setStartTime($startTime)
+  {
+    $this->startTime = $startTime;
+  }
+  /**
+   * @return string
+   */
+  public function getStartTime()
+  {
+    return $this->startTime;
+  }
+  /**
+   * @param string
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return string
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudResource::class, 'Google_Service_WorkloadManager_CloudResource');
+class_alias(UpcomingMaintenanceEvent::class, 'Google_Service_WorkloadManager_UpcomingMaintenanceEvent');
