@@ -17,6 +17,9 @@
 
 namespace Google\Service\Spanner\Resource;
 
+use Google\Service\Spanner\AdaptMessageRequest;
+use Google\Service\Spanner\AdaptMessageResponse;
+use Google\Service\Spanner\AdapterSession;
 use Google\Service\Spanner\BatchCreateSessionsRequest;
 use Google\Service\Spanner\BatchCreateSessionsResponse;
 use Google\Service\Spanner\BatchWriteRequest;
@@ -50,6 +53,42 @@ use Google\Service\Spanner\Transaction;
  */
 class ProjectsInstancesDatabasesSessions extends \Google\Service\Resource
 {
+  /**
+   * Handles a single message from the client and returns the result as a stream.
+   * The server will interpret the message frame and respond with message frames
+   * to the client. (sessions.adaptMessage)
+   *
+   * @param string $name Required. The database session in which the adapter
+   * request is processed.
+   * @param AdaptMessageRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return AdaptMessageResponse
+   * @throws \Google\Service\Exception
+   */
+  public function adaptMessage($name, AdaptMessageRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('adaptMessage', [$params], AdaptMessageResponse::class);
+  }
+  /**
+   * Creates a new session to be used for requests made by the adapter. A session
+   * identifies a specific incarnation of a database resource and is meant to be
+   * reused across many `AdaptMessage` calls. (sessions.adapter)
+   *
+   * @param string $parent Required. The database in which the new session is
+   * created.
+   * @param AdapterSession $postBody
+   * @param array $optParams Optional parameters.
+   * @return AdapterSession
+   * @throws \Google\Service\Exception
+   */
+  public function adapter($parent, AdapterSession $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('adapter', [$params], AdapterSession::class);
+  }
   /**
    * Creates multiple new sessions. This API can be used to initialize a session
    * cache on the clients. See https://goo.gl/TgSFN2 for best practices on session
