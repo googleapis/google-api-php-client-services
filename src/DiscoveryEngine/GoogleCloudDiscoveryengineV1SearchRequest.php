@@ -76,6 +76,8 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public $query;
   protected $queryExpansionSpecType = GoogleCloudDiscoveryengineV1SearchRequestQueryExpansionSpec::class;
   protected $queryExpansionSpecDataType = '';
+  protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec::class;
+  protected $relevanceScoreSpecDataType = '';
   /**
    * @var bool
    */
@@ -338,6 +340,20 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public function getQueryExpansionSpec()
   {
     return $this->queryExpansionSpec;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec
+   */
+  public function setRelevanceScoreSpec(GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec $relevanceScoreSpec)
+  {
+    $this->relevanceScoreSpec = $relevanceScoreSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec
+   */
+  public function getRelevanceScoreSpec()
+  {
+    return $this->relevanceScoreSpec;
   }
   /**
    * @param bool

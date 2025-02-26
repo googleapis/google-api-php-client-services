@@ -26,6 +26,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var bool
    */
   public $autoRunDisabled;
+  protected $bapConfigType = GoogleCloudDiscoveryengineV1alphaBAPConfig::class;
+  protected $bapConfigDataType = '';
   /**
    * @var string[]
    */
@@ -128,6 +130,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getAutoRunDisabled()
   {
     return $this->autoRunDisabled;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaBAPConfig
+   */
+  public function setBapConfig(GoogleCloudDiscoveryengineV1alphaBAPConfig $bapConfig)
+  {
+    $this->bapConfig = $bapConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaBAPConfig
+   */
+  public function getBapConfig()
+  {
+    return $this->bapConfig;
   }
   /**
    * @param string[]
