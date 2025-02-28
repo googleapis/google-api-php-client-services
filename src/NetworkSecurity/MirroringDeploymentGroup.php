@@ -19,7 +19,7 @@ namespace Google\Service\NetworkSecurity;
 
 class MirroringDeploymentGroup extends \Google\Collection
 {
-  protected $collection_key = 'connectedEndpointGroups';
+  protected $collection_key = 'nestedDeployments';
   protected $connectedEndpointGroupsType = MirroringDeploymentGroupConnectedEndpointGroup::class;
   protected $connectedEndpointGroupsDataType = 'array';
   /**
@@ -38,6 +38,8 @@ class MirroringDeploymentGroup extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $nestedDeploymentsType = MirroringDeploymentGroupDeployment::class;
+  protected $nestedDeploymentsDataType = 'array';
   /**
    * @var string
    */
@@ -124,6 +126,20 @@ class MirroringDeploymentGroup extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param MirroringDeploymentGroupDeployment[]
+   */
+  public function setNestedDeployments($nestedDeployments)
+  {
+    $this->nestedDeployments = $nestedDeployments;
+  }
+  /**
+   * @return MirroringDeploymentGroupDeployment[]
+   */
+  public function getNestedDeployments()
+  {
+    return $this->nestedDeployments;
   }
   /**
    * @param string
