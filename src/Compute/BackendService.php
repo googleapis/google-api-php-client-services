@@ -44,6 +44,8 @@ class BackendService extends \Google\Collection
    * @var string
    */
   public $creationTimestamp;
+  protected $customMetricsType = BackendServiceCustomMetric::class;
+  protected $customMetricsDataType = 'array';
   /**
    * @var string[]
    */
@@ -290,6 +292,20 @@ class BackendService extends \Google\Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  /**
+   * @param BackendServiceCustomMetric[]
+   */
+  public function setCustomMetrics($customMetrics)
+  {
+    $this->customMetrics = $customMetrics;
+  }
+  /**
+   * @return BackendServiceCustomMetric[]
+   */
+  public function getCustomMetrics()
+  {
+    return $this->customMetrics;
   }
   /**
    * @param string[]

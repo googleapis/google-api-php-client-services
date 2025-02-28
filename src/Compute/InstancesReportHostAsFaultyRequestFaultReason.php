@@ -17,46 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class AllocationResourceStatusSpecificSKUAllocation extends \Google\Model
+class InstancesReportHostAsFaultyRequestFaultReason extends \Google\Model
 {
   /**
    * @var string
    */
-  public $sourceInstanceTemplateId;
+  public $behavior;
   /**
-   * @var string[]
+   * @var string
    */
-  public $utilizations;
+  public $description;
 
   /**
    * @param string
    */
-  public function setSourceInstanceTemplateId($sourceInstanceTemplateId)
+  public function setBehavior($behavior)
   {
-    $this->sourceInstanceTemplateId = $sourceInstanceTemplateId;
+    $this->behavior = $behavior;
   }
   /**
    * @return string
    */
-  public function getSourceInstanceTemplateId()
+  public function getBehavior()
   {
-    return $this->sourceInstanceTemplateId;
+    return $this->behavior;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setUtilizations($utilizations)
+  public function setDescription($description)
   {
-    $this->utilizations = $utilizations;
+    $this->description = $description;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getUtilizations()
+  public function getDescription()
   {
-    return $this->utilizations;
+    return $this->description;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AllocationResourceStatusSpecificSKUAllocation::class, 'Google_Service_Compute_AllocationResourceStatusSpecificSKUAllocation');
+class_alias(InstancesReportHostAsFaultyRequestFaultReason::class, 'Google_Service_Compute_InstancesReportHostAsFaultyRequestFaultReason');

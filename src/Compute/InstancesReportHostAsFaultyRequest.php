@@ -17,46 +17,45 @@
 
 namespace Google\Service\Compute;
 
-class AllocationResourceStatusSpecificSKUAllocation extends \Google\Model
+class InstancesReportHostAsFaultyRequest extends \Google\Collection
 {
+  protected $collection_key = 'faultReasons';
   /**
    * @var string
    */
-  public $sourceInstanceTemplateId;
-  /**
-   * @var string[]
-   */
-  public $utilizations;
+  public $disruptionSchedule;
+  protected $faultReasonsType = InstancesReportHostAsFaultyRequestFaultReason::class;
+  protected $faultReasonsDataType = 'array';
 
   /**
    * @param string
    */
-  public function setSourceInstanceTemplateId($sourceInstanceTemplateId)
+  public function setDisruptionSchedule($disruptionSchedule)
   {
-    $this->sourceInstanceTemplateId = $sourceInstanceTemplateId;
+    $this->disruptionSchedule = $disruptionSchedule;
   }
   /**
    * @return string
    */
-  public function getSourceInstanceTemplateId()
+  public function getDisruptionSchedule()
   {
-    return $this->sourceInstanceTemplateId;
+    return $this->disruptionSchedule;
   }
   /**
-   * @param string[]
+   * @param InstancesReportHostAsFaultyRequestFaultReason[]
    */
-  public function setUtilizations($utilizations)
+  public function setFaultReasons($faultReasons)
   {
-    $this->utilizations = $utilizations;
+    $this->faultReasons = $faultReasons;
   }
   /**
-   * @return string[]
+   * @return InstancesReportHostAsFaultyRequestFaultReason[]
    */
-  public function getUtilizations()
+  public function getFaultReasons()
   {
-    return $this->utilizations;
+    return $this->faultReasons;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AllocationResourceStatusSpecificSKUAllocation::class, 'Google_Service_Compute_AllocationResourceStatusSpecificSKUAllocation');
+class_alias(InstancesReportHostAsFaultyRequest::class, 'Google_Service_Compute_InstancesReportHostAsFaultyRequest');

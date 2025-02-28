@@ -45,6 +45,8 @@ class Reservation extends \Google\Model
    * @var string
    */
   public $name;
+  protected $reservationSharingPolicyType = AllocationReservationSharingPolicy::class;
+  protected $reservationSharingPolicyDataType = '';
   /**
    * @var string[]
    */
@@ -173,6 +175,20 @@ class Reservation extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param AllocationReservationSharingPolicy
+   */
+  public function setReservationSharingPolicy(AllocationReservationSharingPolicy $reservationSharingPolicy)
+  {
+    $this->reservationSharingPolicy = $reservationSharingPolicy;
+  }
+  /**
+   * @return AllocationReservationSharingPolicy
+   */
+  public function getReservationSharingPolicy()
+  {
+    return $this->reservationSharingPolicy;
   }
   /**
    * @param string[]

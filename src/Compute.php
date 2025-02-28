@@ -5750,6 +5750,30 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'reportHostAsFaulty' => [
+              'path' => 'projects/{project}/zones/{zone}/instances/{instance}/reportHostAsFaulty',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'zone' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'reset' => [
               'path' => 'projects/{project}/zones/{zone}/instances/{instance}/reset',
               'httpMethod' => 'POST',

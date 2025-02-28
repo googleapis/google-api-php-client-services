@@ -17,46 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class AllocationResourceStatusSpecificSKUAllocation extends \Google\Model
+class InstanceGroupManagerResourcePolicies extends \Google\Model
 {
   /**
    * @var string
    */
-  public $sourceInstanceTemplateId;
-  /**
-   * @var string[]
-   */
-  public $utilizations;
+  public $workloadPolicy;
 
   /**
    * @param string
    */
-  public function setSourceInstanceTemplateId($sourceInstanceTemplateId)
+  public function setWorkloadPolicy($workloadPolicy)
   {
-    $this->sourceInstanceTemplateId = $sourceInstanceTemplateId;
+    $this->workloadPolicy = $workloadPolicy;
   }
   /**
    * @return string
    */
-  public function getSourceInstanceTemplateId()
+  public function getWorkloadPolicy()
   {
-    return $this->sourceInstanceTemplateId;
-  }
-  /**
-   * @param string[]
-   */
-  public function setUtilizations($utilizations)
-  {
-    $this->utilizations = $utilizations;
-  }
-  /**
-   * @return string[]
-   */
-  public function getUtilizations()
-  {
-    return $this->utilizations;
+    return $this->workloadPolicy;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AllocationResourceStatusSpecificSKUAllocation::class, 'Google_Service_Compute_AllocationResourceStatusSpecificSKUAllocation');
+class_alias(InstanceGroupManagerResourcePolicies::class, 'Google_Service_Compute_InstanceGroupManagerResourcePolicies');

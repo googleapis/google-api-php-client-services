@@ -17,46 +17,28 @@
 
 namespace Google\Service\Compute;
 
-class AllocationResourceStatusSpecificSKUAllocation extends \Google\Model
+class AllocationReservationSharingPolicy extends \Google\Model
 {
   /**
    * @var string
    */
-  public $sourceInstanceTemplateId;
-  /**
-   * @var string[]
-   */
-  public $utilizations;
+  public $serviceShareType;
 
   /**
    * @param string
    */
-  public function setSourceInstanceTemplateId($sourceInstanceTemplateId)
+  public function setServiceShareType($serviceShareType)
   {
-    $this->sourceInstanceTemplateId = $sourceInstanceTemplateId;
+    $this->serviceShareType = $serviceShareType;
   }
   /**
    * @return string
    */
-  public function getSourceInstanceTemplateId()
+  public function getServiceShareType()
   {
-    return $this->sourceInstanceTemplateId;
-  }
-  /**
-   * @param string[]
-   */
-  public function setUtilizations($utilizations)
-  {
-    $this->utilizations = $utilizations;
-  }
-  /**
-   * @return string[]
-   */
-  public function getUtilizations()
-  {
-    return $this->utilizations;
+    return $this->serviceShareType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AllocationResourceStatusSpecificSKUAllocation::class, 'Google_Service_Compute_AllocationResourceStatusSpecificSKUAllocation');
+class_alias(AllocationReservationSharingPolicy::class, 'Google_Service_Compute_AllocationReservationSharingPolicy');
