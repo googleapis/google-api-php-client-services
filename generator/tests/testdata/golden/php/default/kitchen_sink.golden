@@ -1137,6 +1137,7 @@ class Profile extends \Google\Model
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
 
@@ -2629,6 +2630,7 @@ class Series extends \Google\Model
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
   /**
@@ -3058,6 +3060,7 @@ class SeriesList extends \Google\Collection
   protected $itemsDataType = 'array';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
 
@@ -3142,6 +3145,7 @@ class Submission extends \Google\Collection
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
   protected $parentSubmissionIdType = SubmissionParentSubmissionId::class;
@@ -3596,6 +3600,7 @@ class SubmissionList extends \Google\Collection
   protected $itemsDataType = 'array';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
 
@@ -3724,6 +3729,7 @@ class Tag extends \Google\Model
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
   /**
@@ -3906,6 +3912,7 @@ class Topic extends \Google\Model
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
   /**
@@ -4057,6 +4064,7 @@ class Topic2 extends \Google\Collection
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
   /**
@@ -4624,6 +4632,7 @@ class TopicList extends \Google\Collection
   protected $itemsDataType = 'array';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
 
@@ -4942,6 +4951,7 @@ class Vote extends \Google\Model
   protected $idDataType = '';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
   /**
@@ -5064,6 +5074,7 @@ class VoteList extends \Google\Collection
   protected $itemsDataType = 'array';
   /**
    * @var string
+   * @deprecated
    */
   public $kind;
 
