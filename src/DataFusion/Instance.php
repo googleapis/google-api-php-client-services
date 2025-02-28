@@ -80,6 +80,8 @@ class Instance extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  protected $loggingConfigType = LoggingConfig::class;
+  protected $loggingConfigDataType = '';
   protected $maintenanceEventsType = MaintenanceEvent::class;
   protected $maintenanceEventsDataType = 'array';
   protected $maintenancePolicyType = MaintenancePolicy::class;
@@ -106,6 +108,10 @@ class Instance extends \Google\Collection
    * @var bool
    */
   public $privateInstance;
+  /**
+   * @var bool
+   */
+  public $satisfiesPzi;
   /**
    * @var bool
    */
@@ -390,6 +396,20 @@ class Instance extends \Google\Collection
     return $this->labels;
   }
   /**
+   * @param LoggingConfig
+   */
+  public function setLoggingConfig(LoggingConfig $loggingConfig)
+  {
+    $this->loggingConfig = $loggingConfig;
+  }
+  /**
+   * @return LoggingConfig
+   */
+  public function getLoggingConfig()
+  {
+    return $this->loggingConfig;
+  }
+  /**
    * @param MaintenanceEvent[]
    */
   public function setMaintenanceEvents($maintenanceEvents)
@@ -500,6 +520,20 @@ class Instance extends \Google\Collection
   public function getPrivateInstance()
   {
     return $this->privateInstance;
+  }
+  /**
+   * @param bool
+   */
+  public function setSatisfiesPzi($satisfiesPzi)
+  {
+    $this->satisfiesPzi = $satisfiesPzi;
+  }
+  /**
+   * @return bool
+   */
+  public function getSatisfiesPzi()
+  {
+    return $this->satisfiesPzi;
   }
   /**
    * @param bool
