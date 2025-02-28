@@ -37,6 +37,7 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
   {% endif %}
 {% endif %}
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
+   {% if property.deprecated %}* @deprecated{% endif %}
    */
  {% endif %}
   public ${{ property.memberName }};
