@@ -79,6 +79,10 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   protected $relevanceScoreSpecType = GoogleCloudDiscoveryengineV1SearchRequestRelevanceScoreSpec::class;
   protected $relevanceScoreSpecDataType = '';
   /**
+   * @var string
+   */
+  public $relevanceThreshold;
+  /**
    * @var bool
    */
   public $safeSearch;
@@ -354,6 +358,20 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public function getRelevanceScoreSpec()
   {
     return $this->relevanceScoreSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setRelevanceThreshold($relevanceThreshold)
+  {
+    $this->relevanceThreshold = $relevanceThreshold;
+  }
+  /**
+   * @return string
+   */
+  public function getRelevanceThreshold()
+  {
+    return $this->relevanceThreshold;
   }
   /**
    * @param bool
