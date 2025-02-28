@@ -17,46 +17,64 @@
 
 namespace Google\Service\Compute;
 
-class AllocationResourceStatusSpecificSKUAllocation extends \Google\Model
+class BackendCustomMetric extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $dryRun;
+  /**
+   * @var float
+   */
+  public $maxUtilization;
   /**
    * @var string
    */
-  public $sourceInstanceTemplateId;
-  /**
-   * @var string[]
-   */
-  public $utilizations;
+  public $name;
 
+  /**
+   * @param bool
+   */
+  public function setDryRun($dryRun)
+  {
+    $this->dryRun = $dryRun;
+  }
+  /**
+   * @return bool
+   */
+  public function getDryRun()
+  {
+    return $this->dryRun;
+  }
+  /**
+   * @param float
+   */
+  public function setMaxUtilization($maxUtilization)
+  {
+    $this->maxUtilization = $maxUtilization;
+  }
+  /**
+   * @return float
+   */
+  public function getMaxUtilization()
+  {
+    return $this->maxUtilization;
+  }
   /**
    * @param string
    */
-  public function setSourceInstanceTemplateId($sourceInstanceTemplateId)
+  public function setName($name)
   {
-    $this->sourceInstanceTemplateId = $sourceInstanceTemplateId;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getSourceInstanceTemplateId()
+  public function getName()
   {
-    return $this->sourceInstanceTemplateId;
-  }
-  /**
-   * @param string[]
-   */
-  public function setUtilizations($utilizations)
-  {
-    $this->utilizations = $utilizations;
-  }
-  /**
-   * @return string[]
-   */
-  public function getUtilizations()
-  {
-    return $this->utilizations;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AllocationResourceStatusSpecificSKUAllocation::class, 'Google_Service_Compute_AllocationResourceStatusSpecificSKUAllocation');
+class_alias(BackendCustomMetric::class, 'Google_Service_Compute_BackendCustomMetric');
