@@ -17,64 +17,64 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig extends \Google\Model
+class GoogleCloudDataplexV1BusinessGlossaryEvent extends \Google\Model
 {
   /**
    * @var string
    */
-  public $connection;
+  public $eventType;
   /**
    * @var string
    */
-  public $location;
+  public $message;
   /**
    * @var string
    */
-  public $tableType;
+  public $resource;
 
   /**
    * @param string
    */
-  public function setConnection($connection)
+  public function setEventType($eventType)
   {
-    $this->connection = $connection;
+    $this->eventType = $eventType;
   }
   /**
    * @return string
    */
-  public function getConnection()
+  public function getEventType()
   {
-    return $this->connection;
+    return $this->eventType;
   }
   /**
    * @param string
    */
-  public function setLocation($location)
+  public function setMessage($message)
   {
-    $this->location = $location;
+    $this->message = $message;
   }
   /**
    * @return string
    */
-  public function getLocation()
+  public function getMessage()
   {
-    return $this->location;
+    return $this->message;
   }
   /**
    * @param string
    */
-  public function setTableType($tableType)
+  public function setResource($resource)
   {
-    $this->tableType = $tableType;
+    $this->resource = $resource;
   }
   /**
    * @return string
    */
-  public function getTableType()
+  public function getResource()
   {
-    return $this->tableType;
+    return $this->resource;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig');
+class_alias(GoogleCloudDataplexV1BusinessGlossaryEvent::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1BusinessGlossaryEvent');
