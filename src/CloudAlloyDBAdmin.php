@@ -414,6 +414,16 @@ class CloudAlloyDBAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'restoreFromCloudSQL' => [
+              'path' => 'v1/{+parent}/clusters:restoreFromCloudSQL',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'switchover' => [
               'path' => 'v1/{+name}:switchover',
               'httpMethod' => 'POST',
@@ -818,6 +828,10 @@ class CloudAlloyDBAdmin extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'scope' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
