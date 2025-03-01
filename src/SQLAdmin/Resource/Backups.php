@@ -112,7 +112,7 @@ class Backups extends \Google\Service\Resource
    * API to update final backups only. (Backups.UpdateBackup)
    *
    * @param string $name Output only. The resource name of the backup. Format:
-   * projects/{project}/backups/{backup}
+   * projects/{project}/backups/{backup}.
    * @param Backup $postBody
    * @param array $optParams Optional parameters.
    *
