@@ -113,6 +113,9 @@ class HangoutsChat extends \Google\Service
   /** View last read time for Google Chat conversations. */
   const CHAT_USERS_READSTATE_READONLY =
       "https://www.googleapis.com/auth/chat.users.readstate.readonly";
+  /** Read and update your space settings. */
+  const CHAT_USERS_SPACESETTINGS =
+      "https://www.googleapis.com/auth/chat.users.spacesettings";
 
   public $media;
   public $spaces;
@@ -122,6 +125,7 @@ class HangoutsChat extends \Google\Service
   public $spaces_messages_reactions;
   public $spaces_spaceEvents;
   public $users_spaces;
+  public $users_spaces_spaceNotificationSetting;
   public $users_spaces_threads;
   public $rootUrlTemplate;
 
@@ -663,6 +667,40 @@ class HangoutsChat extends \Google\Service
                 ],
               ],
             ],'updateSpaceReadState' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->users_spaces_spaceNotificationSetting = new HangoutsChat\Resource\UsersSpacesSpaceNotificationSetting(
+        $this,
+        $this->serviceName,
+        'spaceNotificationSetting',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => [
