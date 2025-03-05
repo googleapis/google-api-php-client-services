@@ -24,6 +24,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
    * @var array[]
    */
   public $classMethods;
+  protected $deploymentSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec::class;
+  protected $deploymentSpecDataType = '';
   protected $packageSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec::class;
   protected $packageSpecDataType = '';
 
@@ -40,6 +42,20 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   public function getClassMethods()
   {
     return $this->classMethods;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec
+   */
+  public function setDeploymentSpec(GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec $deploymentSpec)
+  {
+    $this->deploymentSpec = $deploymentSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecDeploymentSpec
+   */
+  public function getDeploymentSpec()
+  {
+    return $this->deploymentSpec;
   }
   /**
    * @param GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec

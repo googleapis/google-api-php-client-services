@@ -17,11 +17,13 @@
 
 namespace Google\Service\Aiplatform;
 
-class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
+class GoogleCloudAiplatformV1GenerateVideoResponse extends \Google\Collection
 {
   protected $collection_key = 'videos';
-  protected $generatedSamplesType = CloudAiLargeModelsVisionMedia::class;
-  protected $generatedSamplesDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $generatedSamples;
   /**
    * @var int
    */
@@ -30,18 +32,18 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
    * @var string[]
    */
   public $raiMediaFilteredReasons;
-  protected $videosType = CloudAiLargeModelsVisionGenerateVideoResponseVideo::class;
+  protected $videosType = GoogleCloudAiplatformV1GenerateVideoResponseVideo::class;
   protected $videosDataType = 'array';
 
   /**
-   * @param CloudAiLargeModelsVisionMedia[]
+   * @param string[]
    */
   public function setGeneratedSamples($generatedSamples)
   {
     $this->generatedSamples = $generatedSamples;
   }
   /**
-   * @return CloudAiLargeModelsVisionMedia[]
+   * @return string[]
    */
   public function getGeneratedSamples()
   {
@@ -76,14 +78,14 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
     return $this->raiMediaFilteredReasons;
   }
   /**
-   * @param CloudAiLargeModelsVisionGenerateVideoResponseVideo[]
+   * @param GoogleCloudAiplatformV1GenerateVideoResponseVideo[]
    */
   public function setVideos($videos)
   {
     $this->videos = $videos;
   }
   /**
-   * @return CloudAiLargeModelsVisionGenerateVideoResponseVideo[]
+   * @return GoogleCloudAiplatformV1GenerateVideoResponseVideo[]
    */
   public function getVideos()
   {
@@ -92,4 +94,4 @@ class CloudAiLargeModelsVisionGenerateVideoResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudAiLargeModelsVisionGenerateVideoResponse::class, 'Google_Service_Aiplatform_CloudAiLargeModelsVisionGenerateVideoResponse');
+class_alias(GoogleCloudAiplatformV1GenerateVideoResponse::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GenerateVideoResponse');

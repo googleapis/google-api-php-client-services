@@ -19,7 +19,7 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Google\Collection
 {
-  protected $collection_key = 'promptTokensDetails';
+  protected $collection_key = 'toolUsePromptTokensDetails';
   protected $cacheTokensDetailsType = GoogleCloudAiplatformV1ModalityTokenCount::class;
   protected $cacheTokensDetailsDataType = 'array';
   /**
@@ -38,6 +38,12 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   public $promptTokenCount;
   protected $promptTokensDetailsType = GoogleCloudAiplatformV1ModalityTokenCount::class;
   protected $promptTokensDetailsDataType = 'array';
+  /**
+   * @var int
+   */
+  public $toolUsePromptTokenCount;
+  protected $toolUsePromptTokensDetailsType = GoogleCloudAiplatformV1ModalityTokenCount::class;
+  protected $toolUsePromptTokensDetailsDataType = 'array';
   /**
    * @var int
    */
@@ -126,6 +132,34 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   public function getPromptTokensDetails()
   {
     return $this->promptTokensDetails;
+  }
+  /**
+   * @param int
+   */
+  public function setToolUsePromptTokenCount($toolUsePromptTokenCount)
+  {
+    $this->toolUsePromptTokenCount = $toolUsePromptTokenCount;
+  }
+  /**
+   * @return int
+   */
+  public function getToolUsePromptTokenCount()
+  {
+    return $this->toolUsePromptTokenCount;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ModalityTokenCount[]
+   */
+  public function setToolUsePromptTokensDetails($toolUsePromptTokensDetails)
+  {
+    $this->toolUsePromptTokensDetails = $toolUsePromptTokensDetails;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ModalityTokenCount[]
+   */
+  public function getToolUsePromptTokensDetails()
+  {
+    return $this->toolUsePromptTokensDetails;
   }
   /**
    * @param int
