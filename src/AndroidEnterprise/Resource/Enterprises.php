@@ -23,6 +23,7 @@ use Google\Service\AndroidEnterprise\Enterprise;
 use Google\Service\AndroidEnterprise\EnterpriseAccount;
 use Google\Service\AndroidEnterprise\EnterprisesListResponse;
 use Google\Service\AndroidEnterprise\EnterprisesSendTestPushNotificationResponse;
+use Google\Service\AndroidEnterprise\GenerateEnterpriseUpgradeUrlResponse;
 use Google\Service\AndroidEnterprise\NotificationSet;
 use Google\Service\AndroidEnterprise\ServiceAccount;
 use Google\Service\AndroidEnterprise\SignupInfo;
@@ -108,6 +109,35 @@ class Enterprises extends \Google\Service\Resource
     $params = ['token' => $token, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('enroll', [$params], Enterprise::class);
+  }
+  /**
+   * Generates an enterprise upgrade URL to upgrade an existing managed Google
+   * Play Accounts enterprise to a managed Google domain. **Note:** This feature
+   * is not generally available. (enterprises.generateEnterpriseUpgradeUrl)
+   *
+   * @param string $enterpriseId Required. The ID of the enterprise.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string adminEmail Optional. Email address used to prefill the
+   * admin field of the enterprise signup form as part of the upgrade process.
+   * This value is a hint only and can be altered by the user. Personal email
+   * addresses are not allowed. If `allowedDomains` is non-empty then this must
+   * belong to one of the `allowedDomains`.
+   * @opt_param string allowedDomains Optional. A list of domains that are
+   * permitted for the admin email. The IT admin cannot enter an email address
+   * with a domain name that is not in this list. Subdomains of domains in this
+   * list are not allowed but can be allowed by adding a second entry which has
+   * `*.` prefixed to the domain name (e.g. *.example.com). If the field is not
+   * present or is an empty list then the IT admin is free to use any valid domain
+   * name. Personal email domains are not allowed.
+   * @return GenerateEnterpriseUpgradeUrlResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateEnterpriseUpgradeUrl($enterpriseId, $optParams = [])
+  {
+    $params = ['enterpriseId' => $enterpriseId];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateEnterpriseUpgradeUrl', [$params], GenerateEnterpriseUpgradeUrlResponse::class);
   }
   /**
    * Generates a sign-up URL. (enterprises.generateSignupUrl)
