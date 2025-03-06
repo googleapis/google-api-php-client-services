@@ -94,6 +94,8 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
    * @var string
    */
   public $rowCount;
+  protected $sampleFindingsTableType = GooglePrivacyDlpV2BigQueryTable::class;
+  protected $sampleFindingsTableDataType = '';
   /**
    * @var string
    */
@@ -420,6 +422,20 @@ class GooglePrivacyDlpV2TableDataProfile extends \Google\Collection
   public function getRowCount()
   {
     return $this->rowCount;
+  }
+  /**
+   * @param GooglePrivacyDlpV2BigQueryTable
+   */
+  public function setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable $sampleFindingsTable)
+  {
+    $this->sampleFindingsTable = $sampleFindingsTable;
+  }
+  /**
+   * @return GooglePrivacyDlpV2BigQueryTable
+   */
+  public function getSampleFindingsTable()
+  {
+    return $this->sampleFindingsTable;
   }
   /**
    * @param string

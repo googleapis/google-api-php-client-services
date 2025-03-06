@@ -92,6 +92,8 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
    * @var string
    */
   public $resourceVisibility;
+  protected $sampleFindingsTableType = GooglePrivacyDlpV2BigQueryTable::class;
+  protected $sampleFindingsTableDataType = '';
   protected $sensitivityScoreType = GooglePrivacyDlpV2SensitivityScore::class;
   protected $sensitivityScoreDataType = '';
   /**
@@ -406,6 +408,20 @@ class GooglePrivacyDlpV2FileStoreDataProfile extends \Google\Collection
   public function getResourceVisibility()
   {
     return $this->resourceVisibility;
+  }
+  /**
+   * @param GooglePrivacyDlpV2BigQueryTable
+   */
+  public function setSampleFindingsTable(GooglePrivacyDlpV2BigQueryTable $sampleFindingsTable)
+  {
+    $this->sampleFindingsTable = $sampleFindingsTable;
+  }
+  /**
+   * @return GooglePrivacyDlpV2BigQueryTable
+   */
+  public function getSampleFindingsTable()
+  {
+    return $this->sampleFindingsTable;
   }
   /**
    * @param GooglePrivacyDlpV2SensitivityScore
