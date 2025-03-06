@@ -50,7 +50,6 @@ class WorkloadManager extends \Google\Service
   public $projects_locations_insights;
   public $projects_locations_operations;
   public $projects_locations_rules;
-  public $projects_locations_sapSystems;
   public $rootUrlTemplate;
 
   /**
@@ -404,7 +403,21 @@ class WorkloadManager extends \Google\Service
         'insights',
         [
           'methods' => [
-            'writeInsight' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'writeInsight' => [
               'path' => 'v1/{+location}/insights:writeInsight',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -508,30 +521,6 @@ class WorkloadManager extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_sapSystems = new WorkloadManager\Resource\ProjectsLocationsSapSystems(
-        $this,
-        $this->serviceName,
-        'sapSystems',
-        [
-          'methods' => [
-            'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
