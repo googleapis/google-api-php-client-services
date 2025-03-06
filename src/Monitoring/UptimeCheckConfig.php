@@ -38,6 +38,10 @@ class UptimeCheckConfig extends \Google\Collection
    * @var bool
    */
   public $isInternal;
+  /**
+   * @var bool
+   */
+  public $logCheckFailures;
   protected $monitoredResourceType = MonitoredResource::class;
   protected $monitoredResourceDataType = '';
   /**
@@ -150,6 +154,20 @@ class UptimeCheckConfig extends \Google\Collection
   public function getIsInternal()
   {
     return $this->isInternal;
+  }
+  /**
+   * @param bool
+   */
+  public function setLogCheckFailures($logCheckFailures)
+  {
+    $this->logCheckFailures = $logCheckFailures;
+  }
+  /**
+   * @return bool
+   */
+  public function getLogCheckFailures()
+  {
+    return $this->logCheckFailures;
   }
   /**
    * @param MonitoredResource
