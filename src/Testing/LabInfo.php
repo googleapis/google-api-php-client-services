@@ -23,6 +23,10 @@ class LabInfo extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $regionCode;
 
   /**
    * @param string
@@ -37,6 +41,20 @@ class LabInfo extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setRegionCode($regionCode)
+  {
+    $this->regionCode = $regionCode;
+  }
+  /**
+   * @return string
+   */
+  public function getRegionCode()
+  {
+    return $this->regionCode;
   }
 }
 
