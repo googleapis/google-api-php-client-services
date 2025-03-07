@@ -50,6 +50,10 @@ class BackupPlan extends \Google\Model
   /**
    * @var string
    */
+  public $lastSuccessfulBackupTime;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var int
@@ -193,6 +197,20 @@ class BackupPlan extends \Google\Model
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param string
+   */
+  public function setLastSuccessfulBackupTime($lastSuccessfulBackupTime)
+  {
+    $this->lastSuccessfulBackupTime = $lastSuccessfulBackupTime;
+  }
+  /**
+   * @return string
+   */
+  public function getLastSuccessfulBackupTime()
+  {
+    return $this->lastSuccessfulBackupTime;
   }
   /**
    * @param string
