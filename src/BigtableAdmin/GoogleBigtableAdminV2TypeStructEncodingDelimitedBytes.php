@@ -17,28 +17,28 @@
 
 namespace Google\Service\BigtableAdmin;
 
-class GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes extends \Google\Model
+class GoogleBigtableAdminV2TypeStructEncodingDelimitedBytes extends \Google\Model
 {
   /**
    * @var string
    */
-  public $nullEscapeChar;
+  public $delimiter;
 
   /**
    * @param string
    */
-  public function setNullEscapeChar($nullEscapeChar)
+  public function setDelimiter($delimiter)
   {
-    $this->nullEscapeChar = $nullEscapeChar;
+    $this->delimiter = $delimiter;
   }
   /**
    * @return string
    */
-  public function getNullEscapeChar()
+  public function getDelimiter()
   {
-    return $this->nullEscapeChar;
+    return $this->delimiter;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes::class, 'Google_Service_BigtableAdmin_GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes');
+class_alias(GoogleBigtableAdminV2TypeStructEncodingDelimitedBytes::class, 'Google_Service_BigtableAdmin_GoogleBigtableAdminV2TypeStructEncodingDelimitedBytes');

@@ -17,28 +17,26 @@
 
 namespace Google\Service\BigtableAdmin;
 
-class GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes extends \Google\Model
+class GoogleBigtableAdminV2TypeTimestampEncoding extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $nullEscapeChar;
+  protected $unixMicrosInt64Type = GoogleBigtableAdminV2TypeInt64Encoding::class;
+  protected $unixMicrosInt64DataType = '';
 
   /**
-   * @param string
+   * @param GoogleBigtableAdminV2TypeInt64Encoding
    */
-  public function setNullEscapeChar($nullEscapeChar)
+  public function setUnixMicrosInt64(GoogleBigtableAdminV2TypeInt64Encoding $unixMicrosInt64)
   {
-    $this->nullEscapeChar = $nullEscapeChar;
+    $this->unixMicrosInt64 = $unixMicrosInt64;
   }
   /**
-   * @return string
+   * @return GoogleBigtableAdminV2TypeInt64Encoding
    */
-  public function getNullEscapeChar()
+  public function getUnixMicrosInt64()
   {
-    return $this->nullEscapeChar;
+    return $this->unixMicrosInt64;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes::class, 'Google_Service_BigtableAdmin_GoogleBigtableAdminV2TypeStringEncodingUtf8Bytes');
+class_alias(GoogleBigtableAdminV2TypeTimestampEncoding::class, 'Google_Service_BigtableAdmin_GoogleBigtableAdminV2TypeTimestampEncoding');

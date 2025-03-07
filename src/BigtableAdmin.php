@@ -69,6 +69,7 @@ class BigtableAdmin extends \Google\Service
   public $projects_instances_clusters;
   public $projects_instances_clusters_backups;
   public $projects_instances_clusters_hotTablets;
+  public $projects_instances_logicalViews;
   public $projects_instances_materializedViews;
   public $projects_instances_tables;
   public $projects_instances_tables_authorizedViews;
@@ -576,6 +577,46 @@ class BigtableAdmin extends \Google\Service
                 'startTime' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_instances_logicalViews = new BigtableAdmin\Resource\ProjectsInstancesLogicalViews(
+        $this,
+        $this->serviceName,
+        'logicalViews',
+        [
+          'methods' => [
+            'getIamPolicy' => [
+              'path' => 'v2/{+resource}:getIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v2/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v2/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
