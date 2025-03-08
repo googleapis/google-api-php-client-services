@@ -36,6 +36,8 @@ class ConnectSettings extends \Google\Collection
    * @var string
    */
   public $dnsName;
+  protected $dnsNamesType = DnsNameMapping::class;
+  protected $dnsNamesDataType = 'array';
   protected $ipAddressesType = IpMapping::class;
   protected $ipAddressesDataType = 'array';
   /**
@@ -112,6 +114,20 @@ class ConnectSettings extends \Google\Collection
   public function getDnsName()
   {
     return $this->dnsName;
+  }
+  /**
+   * @param DnsNameMapping[]
+   */
+  public function setDnsNames($dnsNames)
+  {
+    $this->dnsNames = $dnsNames;
+  }
+  /**
+   * @return DnsNameMapping[]
+   */
+  public function getDnsNames()
+  {
+    return $this->dnsNames;
   }
   /**
    * @param IpMapping[]

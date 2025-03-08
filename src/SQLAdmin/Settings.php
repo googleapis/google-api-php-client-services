@@ -111,6 +111,10 @@ class Settings extends \Google\Collection
    */
   public $replicationType;
   /**
+   * @var bool
+   */
+  public $retainBackupsOnDelete;
+  /**
    * @var string
    */
   public $settingsVersion;
@@ -528,6 +532,20 @@ class Settings extends \Google\Collection
   public function getReplicationType()
   {
     return $this->replicationType;
+  }
+  /**
+   * @param bool
+   */
+  public function setRetainBackupsOnDelete($retainBackupsOnDelete)
+  {
+    $this->retainBackupsOnDelete = $retainBackupsOnDelete;
+  }
+  /**
+   * @return bool
+   */
+  public function getRetainBackupsOnDelete()
+  {
+    return $this->retainBackupsOnDelete;
   }
   /**
    * @param string

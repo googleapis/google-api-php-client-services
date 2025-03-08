@@ -46,6 +46,12 @@ class Backup extends \Google\Model
   /**
    * @var string
    */
+  public $instanceDeletionTime;
+  protected $instanceSettingsType = DatabaseInstance::class;
+  protected $instanceSettingsDataType = '';
+  /**
+   * @var string
+   */
   public $kind;
   /**
    * @var string
@@ -193,6 +199,34 @@ class Backup extends \Google\Model
   public function getInstance()
   {
     return $this->instance;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceDeletionTime($instanceDeletionTime)
+  {
+    $this->instanceDeletionTime = $instanceDeletionTime;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceDeletionTime()
+  {
+    return $this->instanceDeletionTime;
+  }
+  /**
+   * @param DatabaseInstance
+   */
+  public function setInstanceSettings(DatabaseInstance $instanceSettings)
+  {
+    $this->instanceSettings = $instanceSettings;
+  }
+  /**
+   * @return DatabaseInstance
+   */
+  public function getInstanceSettings()
+  {
+    return $this->instanceSettings;
   }
   /**
    * @param string
