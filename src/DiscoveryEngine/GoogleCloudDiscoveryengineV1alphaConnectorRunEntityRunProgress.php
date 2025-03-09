@@ -24,7 +24,7 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRunProgress extends \Go
    */
   public $currentCount;
   /**
-   * @var int
+   * @var float
    */
   public $percentile;
   /**
@@ -47,14 +47,14 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRunProgress extends \Go
     return $this->currentCount;
   }
   /**
-   * @param int
+   * @param float
    */
   public function setPercentile($percentile)
   {
     $this->percentile = $percentile;
   }
   /**
-   * @return int
+   * @return float
    */
   public function getPercentile()
   {

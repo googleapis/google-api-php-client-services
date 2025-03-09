@@ -35,6 +35,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   /**
    * @var string
    */
+  public $connectorType;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string
@@ -78,6 +82,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var string
    */
   public $privateConnectivityProjectId;
+  /**
+   * @var string
+   */
+  public $realtimeState;
   /**
    * @var string
    */
@@ -158,6 +166,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getBlockingReasons()
   {
     return $this->blockingReasons;
+  }
+  /**
+   * @param string
+   */
+  public function setConnectorType($connectorType)
+  {
+    $this->connectorType = $connectorType;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectorType()
+  {
+    return $this->connectorType;
   }
   /**
    * @param string
@@ -354,6 +376,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getPrivateConnectivityProjectId()
   {
     return $this->privateConnectivityProjectId;
+  }
+  /**
+   * @param string
+   */
+  public function setRealtimeState($realtimeState)
+  {
+    $this->realtimeState = $realtimeState;
+  }
+  /**
+   * @return string
+   */
+  public function getRealtimeState()
+  {
+    return $this->realtimeState;
   }
   /**
    * @param string
