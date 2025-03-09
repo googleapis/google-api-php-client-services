@@ -28,7 +28,16 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
  {% else %}
  {% if property.annotationType %}
   /**
+{% if property.description %}
+  {% if property.description %}
+  {% filter block_comment %}
+   * {{ property.description }}
+  {% endfilter %}
+   *
+  {% endif %}
+{% endif %}
    * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
+   {% if property.deprecated %}* @deprecated{% endif %}
    */
  {% endif %}
   public ${{ property.memberName }};
