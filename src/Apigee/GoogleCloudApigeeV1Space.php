@@ -17,55 +17,52 @@
 
 namespace Google\Service\Apigee;
 
-class GoogleCloudApigeeV1SharedFlow extends \Google\Collection
+class GoogleCloudApigeeV1Space extends \Google\Model
 {
-  protected $collection_key = 'revision';
   /**
    * @var string
    */
-  public $latestRevisionId;
-  protected $metaDataType = GoogleCloudApigeeV1EntityMetadata::class;
-  protected $metaDataDataType = '';
+  public $createTime;
+  /**
+   * @var string
+   */
+  public $displayName;
   /**
    * @var string
    */
   public $name;
   /**
-   * @var string[]
-   */
-  public $revision;
-  /**
    * @var string
    */
-  public $space;
+  public $updateTime;
 
   /**
    * @param string
    */
-  public function setLatestRevisionId($latestRevisionId)
+  public function setCreateTime($createTime)
   {
-    $this->latestRevisionId = $latestRevisionId;
+    $this->createTime = $createTime;
   }
   /**
    * @return string
    */
-  public function getLatestRevisionId()
+  public function getCreateTime()
   {
-    return $this->latestRevisionId;
+    return $this->createTime;
   }
   /**
-   * @param GoogleCloudApigeeV1EntityMetadata
+   * @param string
    */
-  public function setMetaData(GoogleCloudApigeeV1EntityMetadata $metaData)
+  public function setDisplayName($displayName)
   {
-    $this->metaData = $metaData;
+    $this->displayName = $displayName;
   }
   /**
-   * @return GoogleCloudApigeeV1EntityMetadata
+   * @return string
    */
-  public function getMetaData()
+  public function getDisplayName()
   {
-    return $this->metaData;
+    return $this->displayName;
   }
   /**
    * @param string
@@ -82,34 +79,20 @@ class GoogleCloudApigeeV1SharedFlow extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
-   */
-  public function setRevision($revision)
-  {
-    $this->revision = $revision;
-  }
-  /**
-   * @return string[]
-   */
-  public function getRevision()
-  {
-    return $this->revision;
-  }
-  /**
    * @param string
    */
-  public function setSpace($space)
+  public function setUpdateTime($updateTime)
   {
-    $this->space = $space;
+    $this->updateTime = $updateTime;
   }
   /**
    * @return string
    */
-  public function getSpace()
+  public function getUpdateTime()
   {
-    return $this->space;
+    return $this->updateTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudApigeeV1SharedFlow::class, 'Google_Service_Apigee_GoogleCloudApigeeV1SharedFlow');
+class_alias(GoogleCloudApigeeV1Space::class, 'Google_Service_Apigee_GoogleCloudApigeeV1Space');

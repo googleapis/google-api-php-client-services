@@ -126,6 +126,7 @@ class Apigee extends \Google\Service
   public $organizations_sharedflows_revisions_deployments;
   public $organizations_sites_apicategories;
   public $organizations_sites_apidocs;
+  public $organizations_spaces;
   public $projects;
   public $rootUrlTemplate;
 
@@ -486,9 +487,23 @@ class Apigee extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'space' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'startKey' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'move' => [
+              'path' => 'v1/{+name}:move',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'update' => [
@@ -658,6 +673,10 @@ class Apigee extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'space' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'validate' => [
                   'location' => 'query',
                   'type' => 'boolean',
@@ -699,6 +718,20 @@ class Apigee extends \Google\Service
                 'includeRevisions' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'space' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'move' => [
+              'path' => 'v1/{+name}:move',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'patch' => [
@@ -4983,6 +5016,10 @@ class Apigee extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'space' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -5020,6 +5057,20 @@ class Apigee extends \Google\Service
                 'includeRevisions' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'space' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'move' => [
+              'path' => 'v1/{+name}:move',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -5253,6 +5304,116 @@ class Apigee extends \Google\Service
               'httpMethod' => 'PATCH',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->organizations_spaces = new Apigee\Resource\OrganizationsSpaces(
+        $this,
+        $this->serviceName,
+        'spaces',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/spaces',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'spaceId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getIamPolicy' => [
+              'path' => 'v1/{+resource}:getIamPolicy',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'options.requestedPolicyVersion' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/spaces',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
