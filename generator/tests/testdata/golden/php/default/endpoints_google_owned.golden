@@ -125,13 +125,10 @@ namespace Google\Service\EccoDomaniIeri;
 
 class HelloGreeting extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $message;
+  public string $message;
 
   /**
-   * @param string
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -171,12 +168,28 @@ namespace Google\Service\EccoDomaniIeri;
 
 class HelloGreetingCollection extends \Google\Collection
 {
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  public const TYPE_TYPE_1 = 'TYPE_1';
+  /**
+   * Legacy alias for `TYPE_1`. Deprecated.
+   *
+   * @deprecated
+   */
+  public const TYPE_type1 = 'type1';
+  public const TYPE_TYPE_2 = 'TYPE_2';
+  public const TYPE_OTHER = 'OTHER';
   protected $collection_key = 'items';
   protected $itemsType = HelloGreeting::class;
   protected $itemsDataType = 'array';
+  /**
+   * Required. The type of this collection.
+   */
+  public string $type;
 
   /**
-   * @param HelloGreeting[]
+   * Greeting that stores a message.
+   *
+   * @param HelloGreeting[] $items
    */
   public function setItems($items)
   {
@@ -188,6 +201,24 @@ class HelloGreetingCollection extends \Google\Collection
   public function getItems()
   {
     return $this->items;
+  }
+  /**
+   * Required. The type of this collection.
+   *
+   * Accepted values: TYPE_UNSPECIFIED, TYPE_1, type1, TYPE_2, OTHER
+   *
+   * @param self::TYPE_* $type
+   */
+  public function setType($type)
+  {
+    $this->type = $type;
+  }
+  /**
+   * @return self::TYPE_*
+   */
+  public function getType()
+  {
+    return $this->type;
   }
 }
 

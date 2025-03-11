@@ -536,8 +536,8 @@ class Constant(CodeObject):
   constants to represent the possible values of an Enum data type.
   """
 
-  def __init__(self, value, name=None, description=None,
-               parent=None, language_model=None):
+  def __init__(self, value, name=None, deprecated=False,
+               description=None, parent=None, language_model=None):
     """Construct a Module.
 
     Args:
@@ -545,6 +545,7 @@ class Constant(CodeObject):
       name: (str) The name for this value. If not specified, the value will be
         used as the base for the name, but numbers will be prefixed with the
         string "value_" to turn them into a valid identifier.
+      deprecated: (bool) Whether this constant is deprecated.
       description: (str) A description of the meaning of this constant.
       parent: (CodeObject) The parent of this element.
       language_model: (LanguageModel) The language we are targetting.
@@ -560,6 +561,7 @@ class Constant(CodeObject):
     else:
       self._description = None
     self._name = name
+    self._deprecated = deprecated
 
   @property
   def description(self):
@@ -580,6 +582,15 @@ class Constant(CodeObject):
   def constantName(self):  # pylint: disable=g-bad-name
     """Override."""
     return self.language_model.ApplyPolicy('constant', self, self.name)
+  
+  @property
+  def constantPrefix(self):  # pylint: disable=g-bad-name
+    return self.language_model.ApplyPolicy('constant', self,
+                                           self.parent.enum_name)
+
+  @property
+  def deprecated(self):
+    return self._deprecated
 
   @classmethod
   def _NameFromValue(cls, value):
@@ -593,7 +604,7 @@ class Constant(CodeObject):
       value: (str) The value to derive a name from.
 
     Returns:
-      (str): A name which could
+      (str): A name which could be used as an identifier.
     """
     # Many string constants begin with punctuation or symbols like '@'. Remove
     # those.

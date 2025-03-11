@@ -21,7 +21,7 @@ FAILED_FILE=${TMP_REPORT_DIR}/failed
 cd $TOP/tests
 find . -name '*_test.py' | while read test
 do
-  python $test
+  python3 $test
   if [ $? == 0 ]; then
     echo "${test}" >> "${SUCCEEDED_FILE}"
   else

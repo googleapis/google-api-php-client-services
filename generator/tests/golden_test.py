@@ -53,7 +53,7 @@ class GoldenTest(absltest.TestCase):
 
   def Generate(self, language, variant, input, options, out_file):
     cmd = [
-        'python',
+        'python3',
         CODEGEN_DIR + '/generate_library.py',
         '--input=%s/%s.json' % (GOLDEN_DISCOVERY_DIR, input),
         '--language=%s' % language,

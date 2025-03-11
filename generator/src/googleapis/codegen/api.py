@@ -951,6 +951,7 @@ class Parameter(template_objects.CodeObject):
                                         api,
                                         name,
                                         self.values.get('enum'),
+                                        self.values.get('enumDeprecated'),
                                         self.values.get('enumDescriptions'),
                                         parent=method)
       self.SetTemplateValue('enumType', self._data_type)

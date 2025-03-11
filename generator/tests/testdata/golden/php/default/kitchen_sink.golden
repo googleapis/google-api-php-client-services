@@ -748,13 +748,13 @@ class Enum extends \Google\Model
 {
   /**
    * Enum type name.
-   *
-   * @var string
    */
-  public $name;
+  public string $name;
 
   /**
-   * @param string
+   * Enum type name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -794,13 +794,10 @@ namespace Google\Service\KitchSink;
 
 class Geometry extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $type;
+  public string $type;
 
   /**
-   * @param string
+   * @param string $type
    */
   public function setType($type)
   {
@@ -850,7 +847,7 @@ class GeometryCollection extends Geometry
     $this->type = 'Collection';
   }
   /**
-   * @param Geometry[]
+   * @param Geometry[] $geometries
    */
   public function setGeometries($geometries)
   {
@@ -892,16 +889,13 @@ use Google\Service\KitchSink\Geometry;
 
 class GeometryPolygon extends Geometry
 {
-  /**
-   * @var string
-   */
-  public $coordinates;
+  public string $coordinates;
   protected function gapiInit()
   {
     $this->type = 'Polygon';
   }
   /**
-   * @param string
+   * @param string $coordinates
    */
   public function setCoordinates($coordinates)
   {
@@ -943,16 +937,13 @@ use Google\Service\KitchSink\Geometry;
 
 class GeometryReference extends Geometry
 {
-  /**
-   * @var string
-   */
-  public $coordinates;
+  public string $coordinates;
   protected function gapiInit()
   {
     $this->type = 'Ref';
   }
   /**
-   * @param string
+   * @param string $coordinates
    */
   public function setCoordinates($coordinates)
   {
@@ -994,13 +985,13 @@ class KitchSinkReadOnly extends \Google\Model
 {
   /**
    * ReadOnly type name.
-   *
-   * @var string
    */
-  public $name;
+  public string $name;
 
   /**
-   * @param string
+   * ReadOnly type name.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -1041,10 +1032,7 @@ namespace Google\Service\KitchSink;
 class LatLong extends \Google\Model
 {
   public $latitude;
-  /**
-   * @var string
-   */
-  public $location;
+  public string $location;
   public $longitude;
 
   public function setLatitude($latitude)
@@ -1056,7 +1044,7 @@ class LatLong extends \Google\Model
     return $this->latitude;
   }
   /**
-   * @param string
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -1136,13 +1124,12 @@ class Profile extends \Google\Model
   protected $idType = ProfileId::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
+  public string $kind;
 
   /**
-   * @param ProfileAttribution
+   * @param ProfileAttribution $attribution
    */
   public function setAttribution(ProfileAttribution $attribution)
   {
@@ -1156,7 +1143,7 @@ class Profile extends \Google\Model
     return $this->attribution;
   }
   /**
-   * @param ProfileId
+   * @param ProfileId $id
    */
   public function setId(ProfileId $id)
   {
@@ -1170,7 +1157,8 @@ class Profile extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -1178,6 +1166,7 @@ class Profile extends \Google\Model
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
@@ -1210,23 +1199,14 @@ namespace Google\Service\KitchSink;
 
 class ProfileAttribution extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $avatarUrl;
-  /**
-   * @var string
-   */
-  public $displayName;
+  public string $avatarUrl;
+  public string $displayName;
   protected $geoType = LatLong::class;
   protected $geoDataType = '';
-  /**
-   * @var string
-   */
-  public $location;
+  public string $location;
 
   /**
-   * @param string
+   * @param string $avatarUrl
    */
   public function setAvatarUrl($avatarUrl)
   {
@@ -1240,7 +1220,7 @@ class ProfileAttribution extends \Google\Model
     return $this->avatarUrl;
   }
   /**
-   * @param string
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -1254,7 +1234,7 @@ class ProfileAttribution extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param LatLong
+   * @param LatLong $geo
    */
   public function setGeo(LatLong $geo)
   {
@@ -1268,7 +1248,7 @@ class ProfileAttribution extends \Google\Model
     return $this->geo;
   }
   /**
-   * @param string
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -1308,13 +1288,10 @@ namespace Google\Service\KitchSink;
 
 class ProfileId extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $user;
+  public string $user;
 
   /**
-   * @param string
+   * @param string $user
    */
   public function setUser($user)
   {
@@ -2512,7 +2489,7 @@ class Rule extends \Google\Model
   protected $submissionsDataType = '';
 
   /**
-   * @param RuleSubmissions
+   * @param RuleSubmissions $submissions
    */
   public function setSubmissions(RuleSubmissions $submissions)
   {
@@ -2552,17 +2529,11 @@ namespace Google\Service\KitchSink;
 
 class RuleSubmissions extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $close;
-  /**
-   * @var int
-   */
-  public $open;
+  public int $close;
+  public int $open;
 
   /**
-   * @param int
+   * @param int $close
    */
   public function setClose($close)
   {
@@ -2576,7 +2547,7 @@ class RuleSubmissions extends \Google\Model
     return $this->close;
   }
   /**
-   * @param int
+   * @param int $open
    */
   public function setOpen($open)
   {
@@ -2616,38 +2587,22 @@ namespace Google\Service\KitchSink;
 
 class Series extends \Google\Model
 {
-  /**
-   * @var bool
-   */
-  public $anonymousSubmissionAllowed;
+  public bool $anonymousSubmissionAllowed;
   protected $countersType = SeriesCounters::class;
   protected $countersDataType = '';
-  /**
-   * @var string
-   */
-  public $description;
+  public string $description;
   protected $idType = SeriesId::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $name;
-  /**
-   * @var int
-   */
-  public $numTopics;
-  /**
-   * @var bool
-   */
-  public $videoSubmissionAllowed;
+  public string $kind;
+  public string $name;
+  public int $numTopics;
+  public bool $videoSubmissionAllowed;
 
   /**
-   * @param bool
+   * @param bool $anonymousSubmissionAllowed
    */
   public function setAnonymousSubmissionAllowed($anonymousSubmissionAllowed)
   {
@@ -2661,7 +2616,7 @@ class Series extends \Google\Model
     return $this->anonymousSubmissionAllowed;
   }
   /**
-   * @param SeriesCounters
+   * @param SeriesCounters $counters
    */
   public function setCounters(SeriesCounters $counters)
   {
@@ -2675,7 +2630,7 @@ class Series extends \Google\Model
     return $this->counters;
   }
   /**
-   * @param string
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -2689,7 +2644,7 @@ class Series extends \Google\Model
     return $this->description;
   }
   /**
-   * @param SeriesId
+   * @param SeriesId $id
    */
   public function setId(SeriesId $id)
   {
@@ -2703,7 +2658,8 @@ class Series extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -2711,13 +2667,14 @@ class Series extends \Google\Model
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -2731,7 +2688,7 @@ class Series extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * @param int $numTopics
    */
   public function setNumTopics($numTopics)
   {
@@ -2745,7 +2702,7 @@ class Series extends \Google\Model
     return $this->numTopics;
   }
   /**
-   * @param bool
+   * @param bool $videoSubmissionAllowed
    */
   public function setVideoSubmissionAllowed($videoSubmissionAllowed)
   {
@@ -2785,44 +2742,35 @@ namespace Google\Service\KitchSink;
 
 class SeriesCounters extends \Google\Model
 {
+  /**
+   * Doc comment for DOWNLOAD.
+   */
+  public const LINK_TYPE_DOWNLOAD = 'DOWNLOAD';
+  /**
+   * Doc comment for THUMBNAIL.
+   */
+  public const LINK_TYPE_THUMBNAIL = 'THUMBNAIL';
+  /**
+   * Doc comment for PDF.
+   */
+  public const LINK_TYPE_PDF = 'PDF';
   protected $internal_gapi_mappings = [
         "minusVotes" => "minus_votes",
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
-  /**
-   * @var int
-   */
-  public $anonymousSubmissions;
+  public int $anonymousSubmissions;
   protected $countersType = SeriesCountersCounters::class;
   protected $countersDataType = '';
-  /**
-   * @var int
-   */
-  public $else;
-  /**
-   * @var int
-   */
-  public $minusVotes;
-  /**
-   * @var string
-   */
-  public $noneVotes;
-  /**
-   * @var int
-   */
-  public $plusVotes;
-  /**
-   * @var int
-   */
-  public $submissions;
-  /**
-   * @var string
-   */
-  public $users;
+  public int $else;
+  public int $minusVotes;
+  public string $noneVotes;
+  public int $plusVotes;
+  public int $submissions;
+  public string $users;
 
   /**
-   * @param int
+   * @param int $anonymousSubmissions
    */
   public function setAnonymousSubmissions($anonymousSubmissions)
   {
@@ -2836,7 +2784,7 @@ class SeriesCounters extends \Google\Model
     return $this->anonymousSubmissions;
   }
   /**
-   * @param SeriesCountersCounters
+   * @param SeriesCountersCounters $counters
    */
   public function setCounters(SeriesCountersCounters $counters)
   {
@@ -2850,7 +2798,7 @@ class SeriesCounters extends \Google\Model
     return $this->counters;
   }
   /**
-   * @param int
+   * @param int $else
    */
   public function setElse($else)
   {
@@ -2864,7 +2812,7 @@ class SeriesCounters extends \Google\Model
     return $this->else;
   }
   /**
-   * @param int
+   * @param int $minusVotes
    */
   public function setMinusVotes($minusVotes)
   {
@@ -2878,7 +2826,7 @@ class SeriesCounters extends \Google\Model
     return $this->minusVotes;
   }
   /**
-   * @param string
+   * @param string $noneVotes
    */
   public function setNoneVotes($noneVotes)
   {
@@ -2892,7 +2840,7 @@ class SeriesCounters extends \Google\Model
     return $this->noneVotes;
   }
   /**
-   * @param int
+   * @param int $plusVotes
    */
   public function setPlusVotes($plusVotes)
   {
@@ -2906,7 +2854,7 @@ class SeriesCounters extends \Google\Model
     return $this->plusVotes;
   }
   /**
-   * @param int
+   * @param int $submissions
    */
   public function setSubmissions($submissions)
   {
@@ -2920,14 +2868,14 @@ class SeriesCounters extends \Google\Model
     return $this->submissions;
   }
   /**
-   * @param string
+   * @param self::LINK_TYPE_* $users
    */
   public function setUsers($users)
   {
     $this->users = $users;
   }
   /**
-   * @return string
+   * @return self::LINK_TYPE_*
    */
   public function getUsers()
   {
@@ -2963,13 +2911,10 @@ class SeriesCountersCounters extends \Google\Model
   protected $internal_gapi_mappings = [
         "allVotes" => "all-votes",
   ];
-  /**
-   * @var int
-   */
-  public $allVotes;
+  public int $allVotes;
 
   /**
-   * @param int
+   * @param int $allVotes
    */
   public function setAllVotes($allVotes)
   {
@@ -3009,13 +2954,10 @@ namespace Google\Service\KitchSink;
 
 class SeriesId extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $seriesId;
+  public int $seriesId;
 
   /**
-   * @param int
+   * @param int $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -3059,13 +3001,12 @@ class SeriesList extends \Google\Collection
   protected $itemsType = Series::class;
   protected $itemsDataType = 'array';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
+  public string $kind;
 
   /**
-   * @param Series[]
+   * @param Series[] $items
    */
   public function setItems($items)
   {
@@ -3079,7 +3020,8 @@ class SeriesList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -3087,6 +3029,7 @@ class SeriesList extends \Google\Collection
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
@@ -3123,44 +3066,31 @@ class Submission extends \Google\Collection
   protected $internal_gapi_mappings = [
         "attachmentUrl" => "@attachmentUrl",
   ];
-  /**
-   * @var string
-   */
-  public $attachmentUrl;
+  public string $attachmentUrl;
   protected $attributionType = SubmissionAttribution::class;
   protected $attributionDataType = '';
-  /**
-   * @var string
-   */
-  public $author;
+  public string $author;
   protected $countersType = SubmissionCounters::class;
   protected $countersDataType = '';
-  /**
-   * @var int
-   */
-  public $created;
+  public int $created;
   protected $geoType = LatLong::class;
   protected $geoDataType = 'array';
   protected $idType = SubmissionId::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
+  public string $kind;
   protected $parentSubmissionIdType = SubmissionParentSubmissionId::class;
   protected $parentSubmissionIdDataType = '';
-  /**
-   * @var string
-   */
-  public $text;
+  public string $text;
   protected $topicsType = ModeratorTopicsResourcePartial::class;
   protected $topicsDataType = 'array';
   protected $translationsType = Translation::class;
   protected $translationsDataType = 'map';
 
   /**
-   * @param string
+   * @param string $attachmentUrl
    */
   public function setAttachmentUrl($attachmentUrl)
   {
@@ -3174,7 +3104,7 @@ class Submission extends \Google\Collection
     return $this->attachmentUrl;
   }
   /**
-   * @param SubmissionAttribution
+   * @param SubmissionAttribution $attribution
    */
   public function setAttribution(SubmissionAttribution $attribution)
   {
@@ -3188,7 +3118,7 @@ class Submission extends \Google\Collection
     return $this->attribution;
   }
   /**
-   * @param string
+   * @param string $author
    */
   public function setAuthor($author)
   {
@@ -3202,7 +3132,7 @@ class Submission extends \Google\Collection
     return $this->author;
   }
   /**
-   * @param SubmissionCounters
+   * @param SubmissionCounters $counters
    */
   public function setCounters(SubmissionCounters $counters)
   {
@@ -3216,7 +3146,7 @@ class Submission extends \Google\Collection
     return $this->counters;
   }
   /**
-   * @param int
+   * @param int $created
    */
   public function setCreated($created)
   {
@@ -3230,7 +3160,7 @@ class Submission extends \Google\Collection
     return $this->created;
   }
   /**
-   * @param LatLong[]
+   * @param LatLong[] $geo
    */
   public function setGeo($geo)
   {
@@ -3244,7 +3174,7 @@ class Submission extends \Google\Collection
     return $this->geo;
   }
   /**
-   * @param SubmissionId
+   * @param SubmissionId $id
    */
   public function setId(SubmissionId $id)
   {
@@ -3258,7 +3188,8 @@ class Submission extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -3266,13 +3197,14 @@ class Submission extends \Google\Collection
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param SubmissionParentSubmissionId
+   * @param SubmissionParentSubmissionId $parentSubmissionId
    */
   public function setParentSubmissionId(SubmissionParentSubmissionId $parentSubmissionId)
   {
@@ -3286,7 +3218,7 @@ class Submission extends \Google\Collection
     return $this->parentSubmissionId;
   }
   /**
-   * @param string
+   * @param string $text
    */
   public function setText($text)
   {
@@ -3300,7 +3232,7 @@ class Submission extends \Google\Collection
     return $this->text;
   }
   /**
-   * @param ModeratorTopicsResourcePartial[]
+   * @param ModeratorTopicsResourcePartial[] $topics
    */
   public function setTopics($topics)
   {
@@ -3314,7 +3246,7 @@ class Submission extends \Google\Collection
     return $this->topics;
   }
   /**
-   * @param Translation[]
+   * @param Translation[] $translations
    */
   public function setTranslations($translations)
   {
@@ -3360,23 +3292,18 @@ class SubmissionAttribution extends \Google\Model
   ];
   /**
    * A member with a $ in the name
-   *
-   * @var string
    */
-  public $avatarUrl;
+  public string $avatarUrl;
   /**
    * A member with a $ in the name, but if you strip it, you get a reserved word
-   *
-   * @var string
    */
-  public $object;
-  /**
-   * @var string
-   */
-  public $location;
+  public string $object;
+  public string $location;
 
   /**
-   * @param string
+   * A member with a $ in the name
+   *
+   * @param string $avatarUrl
    */
   public function setAvatarUrl($avatarUrl)
   {
@@ -3390,7 +3317,9 @@ class SubmissionAttribution extends \Google\Model
     return $this->avatarUrl;
   }
   /**
-   * @param string
+   * A member with a $ in the name, but if you strip it, you get a reserved word
+   *
+   * @param string $object
    */
   public function setObject($object)
   {
@@ -3404,7 +3333,7 @@ class SubmissionAttribution extends \Google\Model
     return $this->object;
   }
   /**
-   * @param string
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -3449,21 +3378,12 @@ class SubmissionCounters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
-  /**
-   * @var int
-   */
-  public $minusVotes;
-  /**
-   * @var int
-   */
-  public $noneVotes;
-  /**
-   * @var int
-   */
-  public $plusVotes;
+  public int $minusVotes;
+  public int $noneVotes;
+  public int $plusVotes;
 
   /**
-   * @param int
+   * @param int $minusVotes
    */
   public function setMinusVotes($minusVotes)
   {
@@ -3477,7 +3397,7 @@ class SubmissionCounters extends \Google\Model
     return $this->minusVotes;
   }
   /**
-   * @param int
+   * @param int $noneVotes
    */
   public function setNoneVotes($noneVotes)
   {
@@ -3491,7 +3411,7 @@ class SubmissionCounters extends \Google\Model
     return $this->noneVotes;
   }
   /**
-   * @param int
+   * @param int $plusVotes
    */
   public function setPlusVotes($plusVotes)
   {
@@ -3531,17 +3451,11 @@ namespace Google\Service\KitchSink;
 
 class SubmissionId extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $seriesId;
-  /**
-   * @var int
-   */
-  public $submissionId;
+  public int $seriesId;
+  public int $submissionId;
 
   /**
-   * @param int
+   * @param int $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -3555,7 +3469,7 @@ class SubmissionId extends \Google\Model
     return $this->seriesId;
   }
   /**
-   * @param int
+   * @param int $submissionId
    */
   public function setSubmissionId($submissionId)
   {
@@ -3599,13 +3513,12 @@ class SubmissionList extends \Google\Collection
   protected $itemsType = Submission::class;
   protected $itemsDataType = 'array';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
+  public string $kind;
 
   /**
-   * @param Submission[]
+   * @param Submission[] $items
    */
   public function setItems($items)
   {
@@ -3619,7 +3532,8 @@ class SubmissionList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -3627,6 +3541,7 @@ class SubmissionList extends \Google\Collection
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
@@ -3659,17 +3574,11 @@ namespace Google\Service\KitchSink;
 
 class SubmissionParentSubmissionId extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $seriesId;
-  /**
-   * @var int
-   */
-  public $submissionId;
+  public int $seriesId;
+  public int $submissionId;
 
   /**
-   * @param int
+   * @param int $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -3683,7 +3592,7 @@ class SubmissionParentSubmissionId extends \Google\Model
     return $this->seriesId;
   }
   /**
-   * @param int
+   * @param int $submissionId
    */
   public function setSubmissionId($submissionId)
   {
@@ -3728,17 +3637,13 @@ class Tag extends \Google\Model
   protected $idType = TagId::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $text;
+  public string $kind;
+  public string $text;
 
   /**
-   * @param Geometry
+   * @param Geometry $geometry
    */
   public function setGeometry(Geometry $geometry)
   {
@@ -3752,7 +3657,7 @@ class Tag extends \Google\Model
     return $this->geometry;
   }
   /**
-   * @param TagId
+   * @param TagId $id
    */
   public function setId(TagId $id)
   {
@@ -3766,7 +3671,8 @@ class Tag extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -3774,13 +3680,14 @@ class Tag extends \Google\Model
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $text
    */
   public function setText($text)
   {
@@ -3820,21 +3727,12 @@ namespace Google\Service\KitchSink;
 
 class TagId extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $seriesId;
-  /**
-   * @var int
-   */
-  public $submissionId;
-  /**
-   * @var string
-   */
-  public $tag;
+  public int $seriesId;
+  public int $submissionId;
+  public string $tag;
 
   /**
-   * @param int
+   * @param int $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -3848,7 +3746,7 @@ class TagId extends \Google\Model
     return $this->seriesId;
   }
   /**
-   * @param int
+   * @param int $submissionId
    */
   public function setSubmissionId($submissionId)
   {
@@ -3862,7 +3760,7 @@ class TagId extends \Google\Model
     return $this->submissionId;
   }
   /**
-   * @param string
+   * @param string $tag
    */
   public function setTag($tag)
   {
@@ -3904,30 +3802,20 @@ class Topic extends \Google\Model
 {
   protected $countersType = TopicCounters::class;
   protected $countersDataType = '';
-  /**
-   * @var string
-   */
-  public $description;
+  public string $description;
   protected $idType = TopicId::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $name;
-  /**
-   * @var string
-   */
-  public $presenter;
+  public string $kind;
+  public string $name;
+  public string $presenter;
   protected $rulesType = TopicRules::class;
   protected $rulesDataType = '';
 
   /**
-   * @param TopicCounters
+   * @param TopicCounters $counters
    */
   public function setCounters(TopicCounters $counters)
   {
@@ -3941,7 +3829,7 @@ class Topic extends \Google\Model
     return $this->counters;
   }
   /**
-   * @param string
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -3955,7 +3843,7 @@ class Topic extends \Google\Model
     return $this->description;
   }
   /**
-   * @param TopicId
+   * @param TopicId $id
    */
   public function setId(TopicId $id)
   {
@@ -3969,7 +3857,8 @@ class Topic extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -3977,13 +3866,14 @@ class Topic extends \Google\Model
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -3997,7 +3887,7 @@ class Topic extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param string $presenter
    */
   public function setPresenter($presenter)
   {
@@ -4011,7 +3901,7 @@ class Topic extends \Google\Model
     return $this->presenter;
   }
   /**
-   * @param TopicRules
+   * @param TopicRules $rules
    */
   public function setRules(TopicRules $rules)
   {
@@ -4054,32 +3944,22 @@ class Topic2 extends \Google\Collection
   protected $collection_key = 'rules';
   protected $countersType = Topic2Counters::class;
   protected $countersDataType = '';
-  /**
-   * @var string
-   */
-  public $description;
+  public string $description;
   protected $featuredSubmissionType = Submission::class;
   protected $featuredSubmissionDataType = '';
   protected $idType = Topic2Id::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $name;
-  /**
-   * @var string
-   */
-  public $presenter;
+  public string $kind;
+  public string $name;
+  public string $presenter;
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
 
   /**
-   * @param Topic2Counters
+   * @param Topic2Counters $counters
    */
   public function setCounters(Topic2Counters $counters)
   {
@@ -4093,7 +3973,7 @@ class Topic2 extends \Google\Collection
     return $this->counters;
   }
   /**
-   * @param string
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -4107,7 +3987,7 @@ class Topic2 extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param Submission
+   * @param Submission $featuredSubmission
    */
   public function setFeaturedSubmission(Submission $featuredSubmission)
   {
@@ -4121,7 +4001,7 @@ class Topic2 extends \Google\Collection
     return $this->featuredSubmission;
   }
   /**
-   * @param Topic2Id
+   * @param Topic2Id $id
    */
   public function setId(Topic2Id $id)
   {
@@ -4135,7 +4015,8 @@ class Topic2 extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -4143,13 +4024,14 @@ class Topic2 extends \Google\Collection
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $name
    */
   public function setName($name)
   {
@@ -4163,7 +4045,7 @@ class Topic2 extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * @param string $presenter
    */
   public function setPresenter($presenter)
   {
@@ -4177,7 +4059,7 @@ class Topic2 extends \Google\Collection
     return $this->presenter;
   }
   /**
-   * @param Rule[]
+   * @param Rule[] $rules
    */
   public function setRules($rules)
   {
@@ -4222,33 +4104,15 @@ class Topic2Counters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
-  /**
-   * @var int
-   */
-  public $minusVotes;
-  /**
-   * @var int
-   */
-  public $noneVotes;
-  /**
-   * @var int
-   */
-  public $plusVotes;
-  /**
-   * @var int
-   */
-  public $submissions;
-  /**
-   * @var int
-   */
-  public $users;
-  /**
-   * @var int
-   */
-  public $videoSubmissions;
+  public int $minusVotes;
+  public int $noneVotes;
+  public int $plusVotes;
+  public int $submissions;
+  public int $users;
+  public int $videoSubmissions;
 
   /**
-   * @param int
+   * @param int $minusVotes
    */
   public function setMinusVotes($minusVotes)
   {
@@ -4262,7 +4126,7 @@ class Topic2Counters extends \Google\Model
     return $this->minusVotes;
   }
   /**
-   * @param int
+   * @param int $noneVotes
    */
   public function setNoneVotes($noneVotes)
   {
@@ -4276,7 +4140,7 @@ class Topic2Counters extends \Google\Model
     return $this->noneVotes;
   }
   /**
-   * @param int
+   * @param int $plusVotes
    */
   public function setPlusVotes($plusVotes)
   {
@@ -4290,7 +4154,7 @@ class Topic2Counters extends \Google\Model
     return $this->plusVotes;
   }
   /**
-   * @param int
+   * @param int $submissions
    */
   public function setSubmissions($submissions)
   {
@@ -4304,7 +4168,7 @@ class Topic2Counters extends \Google\Model
     return $this->submissions;
   }
   /**
-   * @param int
+   * @param int $users
    */
   public function setUsers($users)
   {
@@ -4318,7 +4182,7 @@ class Topic2Counters extends \Google\Model
     return $this->users;
   }
   /**
-   * @param int
+   * @param int $videoSubmissions
    */
   public function setVideoSubmissions($videoSubmissions)
   {
@@ -4358,17 +4222,11 @@ namespace Google\Service\KitchSink;
 
 class Topic2Id extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $seriesId;
-  /**
-   * @var int
-   */
-  public $topicId;
+  public int $seriesId;
+  public int $topicId;
 
   /**
-   * @param int
+   * @param int $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -4382,7 +4240,7 @@ class Topic2Id extends \Google\Model
     return $this->seriesId;
   }
   /**
-   * @param int
+   * @param int $topicId
    */
   public function setTopicId($topicId)
   {
@@ -4427,33 +4285,15 @@ class TopicCounters extends \Google\Model
         "noneVotes" => "none_votes",
         "plusVotes" => "plus_votes",
   ];
-  /**
-   * @var int
-   */
-  public $minusVotes;
-  /**
-   * @var int
-   */
-  public $noneVotes;
-  /**
-   * @var int
-   */
-  public $plusVotes;
-  /**
-   * @var int
-   */
-  public $submissions;
-  /**
-   * @var int
-   */
-  public $users;
-  /**
-   * @var int
-   */
-  public $videoSubmissions;
+  public int $minusVotes;
+  public int $noneVotes;
+  public int $plusVotes;
+  public int $submissions;
+  public int $users;
+  public int $videoSubmissions;
 
   /**
-   * @param int
+   * @param int $minusVotes
    */
   public function setMinusVotes($minusVotes)
   {
@@ -4467,7 +4307,7 @@ class TopicCounters extends \Google\Model
     return $this->minusVotes;
   }
   /**
-   * @param int
+   * @param int $noneVotes
    */
   public function setNoneVotes($noneVotes)
   {
@@ -4481,7 +4321,7 @@ class TopicCounters extends \Google\Model
     return $this->noneVotes;
   }
   /**
-   * @param int
+   * @param int $plusVotes
    */
   public function setPlusVotes($plusVotes)
   {
@@ -4495,7 +4335,7 @@ class TopicCounters extends \Google\Model
     return $this->plusVotes;
   }
   /**
-   * @param int
+   * @param int $submissions
    */
   public function setSubmissions($submissions)
   {
@@ -4509,7 +4349,7 @@ class TopicCounters extends \Google\Model
     return $this->submissions;
   }
   /**
-   * @param int
+   * @param int $users
    */
   public function setUsers($users)
   {
@@ -4523,7 +4363,7 @@ class TopicCounters extends \Google\Model
     return $this->users;
   }
   /**
-   * @param int
+   * @param int $videoSubmissions
    */
   public function setVideoSubmissions($videoSubmissions)
   {
@@ -4563,17 +4403,11 @@ namespace Google\Service\KitchSink;
 
 class TopicId extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $seriesId;
-  /**
-   * @var int
-   */
-  public $topicId;
+  public int $seriesId;
+  public int $topicId;
 
   /**
-   * @param int
+   * @param int $seriesId
    */
   public function setSeriesId($seriesId)
   {
@@ -4587,7 +4421,7 @@ class TopicId extends \Google\Model
     return $this->seriesId;
   }
   /**
-   * @param int
+   * @param int $topicId
    */
   public function setTopicId($topicId)
   {
@@ -4631,13 +4465,12 @@ class TopicList extends \Google\Collection
   protected $itemsType = Topic::class;
   protected $itemsDataType = 'array';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
+  public string $kind;
 
   /**
-   * @param Topic[]
+   * @param Topic[] $items
    */
   public function setItems($items)
   {
@@ -4651,7 +4484,8 @@ class TopicList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -4659,6 +4493,7 @@ class TopicList extends \Google\Collection
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
@@ -4697,7 +4532,7 @@ class TopicRules extends \Google\Model
   protected $votesDataType = '';
 
   /**
-   * @param TopicRulesSubmissions
+   * @param TopicRulesSubmissions $submissions
    */
   public function setSubmissions(TopicRulesSubmissions $submissions)
   {
@@ -4711,7 +4546,7 @@ class TopicRules extends \Google\Model
     return $this->submissions;
   }
   /**
-   * @param TopicRulesVotes
+   * @param TopicRulesVotes $votes
    */
   public function setVotes(TopicRulesVotes $votes)
   {
@@ -4751,17 +4586,11 @@ namespace Google\Service\KitchSink;
 
 class TopicRulesSubmissions extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $close;
-  /**
-   * @var int
-   */
-  public $open;
+  public int $close;
+  public int $open;
 
   /**
-   * @param int
+   * @param int $close
    */
   public function setClose($close)
   {
@@ -4775,7 +4604,7 @@ class TopicRulesSubmissions extends \Google\Model
     return $this->close;
   }
   /**
-   * @param int
+   * @param int $open
    */
   public function setOpen($open)
   {
@@ -4815,17 +4644,11 @@ namespace Google\Service\KitchSink;
 
 class TopicRulesVotes extends \Google\Model
 {
-  /**
-   * @var int
-   */
-  public $close;
-  /**
-   * @var int
-   */
-  public $open;
+  public int $close;
+  public int $open;
 
   /**
-   * @param int
+   * @param int $close
    */
   public function setClose($close)
   {
@@ -4839,7 +4662,7 @@ class TopicRulesVotes extends \Google\Model
     return $this->close;
   }
   /**
-   * @param int
+   * @param int $open
    */
   public function setOpen($open)
   {
@@ -4879,17 +4702,11 @@ namespace Google\Service\KitchSink;
 
 class Translation extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $lang;
-  /**
-   * @var string
-   */
-  public $text;
+  public string $lang;
+  public string $text;
 
   /**
-   * @param string
+   * @param string $lang
    */
   public function setLang($lang)
   {
@@ -4903,7 +4720,7 @@ class Translation extends \Google\Model
     return $this->lang;
   }
   /**
-   * @param string
+   * @param string $text
    */
   public function setText($text)
   {
@@ -4943,24 +4760,17 @@ namespace Google\Service\KitchSink;
 
 class Vote extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $flag;
+  public string $flag;
   protected $idType = VoteId::class;
   protected $idDataType = '';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $vote;
+  public string $kind;
+  public string $vote;
 
   /**
-   * @param string
+   * @param string $flag
    */
   public function setFlag($flag)
   {
@@ -4974,7 +4784,7 @@ class Vote extends \Google\Model
     return $this->flag;
   }
   /**
-   * @param VoteId
+   * @param VoteId $id
    */
   public function setId(VoteId $id)
   {
@@ -4988,7 +4798,8 @@ class Vote extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -4996,13 +4807,14 @@ class Vote extends \Google\Model
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {
     return $this->kind;
   }
   /**
-   * @param string
+   * @param string $vote
    */
   public function setVote($vote)
   {
@@ -5073,13 +4885,12 @@ class VoteList extends \Google\Collection
   protected $itemsType = Vote::class;
   protected $itemsDataType = 'array';
   /**
-   * @var string
    * @deprecated
    */
-  public $kind;
+  public string $kind;
 
   /**
-   * @param Vote[]
+   * @param Vote[] $items
    */
   public function setItems($items)
   {
@@ -5093,7 +4904,8 @@ class VoteList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * @param string $kind
+   * @deprecated
    */
   public function setKind($kind)
   {
@@ -5101,6 +4913,7 @@ class VoteList extends \Google\Collection
   }
   /**
    * @return string
+   * @deprecated
    */
   public function getKind()
   {

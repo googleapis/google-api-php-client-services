@@ -8,6 +8,26 @@ use {{ api.ownerName }}\Service\{{ api.className }}\{{ model.superClass }};
 class {{ model.className }} extends {% if model.superClass %}{{ model.superClass }}{% else %}{% if model.dataType == "array" %}\Google\Collection{% else %}\Google\Model{% endif %}{% endif %}
 {{% if model.properties %}
 {% filter noblanklines %}
+{% for property in model.properties %}
+{% if property.dataType == "enum" and property.data_type.elements %}
+  {% for element in property.data_type.elements %}
+  {% if element.description or element.deprecated %}
+  /**
+  {% if element.description %}
+  {% filter block_comment %}
+   * {{ element.description }}
+  {% endfilter %}
+  {% endif %}
+  {% if element.description and element.deprecated %}
+   *{% endif %}
+  {% if element.deprecated %}
+   * @deprecated{% endif %}
+   */
+  {% endif %}
+  public const {{ element.constantPrefix }}_{{ element.name }} = '{{ element.value }}';
+  {% endfor %}
+{% endif %}
+{% endfor %}
 {% if not model.is_variant_base and model.collectionKey %}
   protected $collection_key = '{{ model.collectionKey }}';
 {% endif %}{% if model.has_gapi %}
@@ -26,21 +46,22 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
   protected ${{ property.memberName }}DataType = '{{ property.dataType }}';
   {% endif %}
  {% else %}
- {% if property.annotationType %}
+ {% if property.dataType == "array" or property.dataType == "map" or property.description or property.deprecated %}
   /**
-{% if property.description %}
   {% if property.description %}
   {% filter block_comment %}
    * {{ property.description }}
-  {% endfilter %}
-   *
+   {% endfilter %}
   {% endif %}
-{% endif %}
-   * @var {{ property.annotationType }}{% if property.dataType == "array" or property.dataType == "map" %}[]{% endif %}
-   {% if property.deprecated %}* @deprecated{% endif %}
+  {% if property.dataType == "array" or property.dataType == "map" %}
+  {% if property.description or property.deprecated %}
+   *{% endif %}
+   * @var {{ property.annotationType }}[]{% endif %}
+  {% if property.deprecated %}
+   * @deprecated{% endif %}
    */
  {% endif %}
-  public ${{ property.memberName }};
+  public {% if property.annotationType %}{% if property.dataType == "array" or property.dataType == "map" %}array{% else %}{{ property.annotationType }}{% endif %} {% endif %}${{ property.memberName }};
  {% endif %}
 {% endfor %}
 {% endfilter %}
@@ -55,7 +76,25 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
 {% filter noblanklines %}
 {% if property.annotationType %}
   /**
-   * @param {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
+   {% if property.description %}
+   {% filter block_comment %}
+   * {{ property.description }}
+   {% endfilter %}
+   *
+   {% if property.possibleValues %}
+   {% filter block_comment %}
+   * Accepted values: {{ property.possibleValues }}
+   {% endfilter %}
+   *
+   {% endif %}
+   {% endif %}
+   {% if property.dataType == "enum" %}
+   * @param self::{{ property.data_type.constant_name }}_* ${{ property.memberName }}
+   {% else %}
+   * @param {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %} ${{ property.memberName }}
+   {% endif %}
+   {% if property.deprecated %}
+   * @deprecated{% endif %}
    */
 {% endif %}
   {% if property.type == "array" or property.dataType == "map" or not property.typeHint %}
@@ -69,7 +108,13 @@ class {{ model.className }} extends {% if model.superClass %}{{ model.superClass
 
 {% if property.annotationType %}
   /**
+   {% if property.dataType == "enum" %}
+   * @return self::{{ property.data_type.constant_name }}_*
+   {% else %}
    * @return {{ property.annotationType }}{% if property.type == "array" or property.dataType == "map" %}[]{% endif %}
+   {% endif %}
+   {% if property.deprecated %}
+   * @deprecated{% endif %}
    */
 {% endif %}
   public function {{ property.getterName }}()
