@@ -94,10 +94,25 @@ class Forms extends \Google\Service
             ],'create' => [
               'path' => 'v1/forms',
               'httpMethod' => 'POST',
-              'parameters' => [],
+              'parameters' => [
+                'unpublished' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/forms/{formId}',
               'httpMethod' => 'GET',
+              'parameters' => [
+                'formId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'setPublishSettings' => [
+              'path' => 'v1/forms/{formId}:setPublishSettings',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'formId' => [
                   'location' => 'path',
