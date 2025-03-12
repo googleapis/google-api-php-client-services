@@ -836,7 +836,7 @@ class_alias(Geometry::class, 'Google_Service_KitchSink_Geometry');
 
 namespace Google\Service\KitchSink;
 
-use Google\Service\KitchSink\Geometry
+use Google\Service\KitchSink\Geometry;
 
 class GeometryCollection extends Geometry
 {
@@ -886,7 +886,7 @@ class_alias(GeometryCollection::class, 'Google_Service_KitchSink_GeometryCollect
 
 namespace Google\Service\KitchSink;
 
-use Google\Service\KitchSink\Geometry
+use Google\Service\KitchSink\Geometry;
 
 class GeometryPolygon extends Geometry
 {
@@ -937,7 +937,7 @@ class_alias(GeometryPolygon::class, 'Google_Service_KitchSink_GeometryPolygon');
 
 namespace Google\Service\KitchSink;
 
-use Google\Service\KitchSink\Geometry
+use Google\Service\KitchSink\Geometry;
 
 class GeometryReference extends Geometry
 {
