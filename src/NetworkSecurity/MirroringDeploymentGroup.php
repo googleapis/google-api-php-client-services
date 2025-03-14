@@ -34,6 +34,8 @@ class MirroringDeploymentGroup extends \Google\Collection
    * @var string[]
    */
   public $labels;
+  protected $locationsType = MirroringLocation::class;
+  protected $locationsDataType = 'array';
   /**
    * @var string
    */
@@ -112,6 +114,20 @@ class MirroringDeploymentGroup extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param MirroringLocation[]
+   */
+  public function setLocations($locations)
+  {
+    $this->locations = $locations;
+  }
+  /**
+   * @return MirroringLocation[]
+   */
+  public function getLocations()
+  {
+    return $this->locations;
   }
   /**
    * @param string
