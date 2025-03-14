@@ -730,20 +730,6 @@ class CloudRun extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getIamPolicy' => [
-              'path' => 'v2/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
             ],'list' => [
               'path' => 'v2/{+parent}/workerPools',
               'httpMethod' => 'GET',
@@ -790,16 +776,6 @@ class CloudRun extends \Google\Service
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v2/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'testIamPermissions' => [

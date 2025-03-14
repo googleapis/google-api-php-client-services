@@ -19,8 +19,6 @@ namespace Google\Service\CloudRun\Resource;
 
 use Google\Service\CloudRun\GoogleCloudRunV2ListWorkerPoolsResponse;
 use Google\Service\CloudRun\GoogleCloudRunV2WorkerPool;
-use Google\Service\CloudRun\GoogleIamV1Policy;
-use Google\Service\CloudRun\GoogleIamV1SetIamPolicyRequest;
 use Google\Service\CloudRun\GoogleIamV1TestIamPermissionsRequest;
 use Google\Service\CloudRun\GoogleIamV1TestIamPermissionsResponse;
 use Google\Service\CloudRun\GoogleLongrunningOperation;
@@ -100,38 +98,6 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudRunV2WorkerPool::class);
   }
   /**
-   * Gets the IAM Access Control policy currently in effect for the given Cloud
-   * Run WorkerPool. This result does not include any inherited policies.
-   * (workerPools.getIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * requested. See [Resource
-   * names](https://cloud.google.com/apis/design/resource_names) for the
-   * appropriate value for this field.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int options.requestedPolicyVersion Optional. The maximum policy
-   * version that will be used to format the policy. Valid values are 0, 1, and 3.
-   * Requests specifying an invalid value will be rejected. Requests for policies
-   * with any conditional role bindings must specify version 3. Policies with no
-   * conditional role bindings may specify any valid value or leave the field
-   * unset. The policy in the response might use the policy version that you
-   * specified, or it might use a lower policy version. For example, if you
-   * specify version 3, but the policy has no conditional role bindings, the
-   * response uses version 1. To learn which resources support conditions in their
-   * IAM policies, see the [IAM
-   * documentation](https://cloud.google.com/iam/help/conditions/resource-
-   * policies).
-   * @return GoogleIamV1Policy
-   * @throws \Google\Service\Exception
-   */
-  public function getIamPolicy($resource, $optParams = [])
-  {
-    $params = ['resource' => $resource];
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', [$params], GoogleIamV1Policy::class);
-  }
-  /**
    * Lists WorkerPools. Results are sorted by creation time, descending.
    * (workerPools.listProjectsLocationsWorkerPools)
    *
@@ -188,25 +154,6 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], GoogleLongrunningOperation::class);
-  }
-  /**
-   * Sets the IAM Access control policy for the specified WorkerPool. Overwrites
-   * any existing policy. (workerPools.setIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See [Resource
-   * names](https://cloud.google.com/apis/design/resource_names) for the
-   * appropriate value for this field.
-   * @param GoogleIamV1SetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return GoogleIamV1Policy
-   * @throws \Google\Service\Exception
-   */
-  public function setIamPolicy($resource, GoogleIamV1SetIamPolicyRequest $postBody, $optParams = [])
-  {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', [$params], GoogleIamV1Policy::class);
   }
   /**
    * Returns permissions that a caller has on the specified Project. There are no
