@@ -35,7 +35,7 @@ class LighthouseCategoryV5 extends \Google\Collection
    */
   public $manualDescription;
   /**
-   * @var array
+   * @var double
    */
   public $score;
   /**
@@ -100,14 +100,14 @@ class LighthouseCategoryV5 extends \Google\Collection
     return $this->manualDescription;
   }
   /**
-   * @param array
+   * @param double
    */
   public function setScore($score)
   {
     $this->score = $score;
   }
   /**
-   * @return array
+   * @return double
    */
   public function getScore()
   {
