@@ -33,6 +33,8 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   protected $partialFailureBigquerySinkDataType = '';
   protected $partialFailureGcsSinkType = GoogleCloudAiplatformV1GcsDestination::class;
   protected $partialFailureGcsSinkDataType = '';
+  protected $ragFileParsingConfigType = GoogleCloudAiplatformV1RagFileParsingConfig::class;
+  protected $ragFileParsingConfigDataType = '';
   protected $ragFileTransformationConfigType = GoogleCloudAiplatformV1RagFileTransformationConfig::class;
   protected $ragFileTransformationConfigDataType = '';
   protected $sharePointSourcesType = GoogleCloudAiplatformV1SharePointSources::class;
@@ -123,6 +125,20 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   public function getPartialFailureGcsSink()
   {
     return $this->partialFailureGcsSink;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1RagFileParsingConfig
+   */
+  public function setRagFileParsingConfig(GoogleCloudAiplatformV1RagFileParsingConfig $ragFileParsingConfig)
+  {
+    $this->ragFileParsingConfig = $ragFileParsingConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1RagFileParsingConfig
+   */
+  public function getRagFileParsingConfig()
+  {
+    return $this->ragFileParsingConfig;
   }
   /**
    * @param GoogleCloudAiplatformV1RagFileTransformationConfig

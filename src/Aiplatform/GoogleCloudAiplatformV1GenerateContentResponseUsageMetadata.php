@@ -41,6 +41,10 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   /**
    * @var int
    */
+  public $thoughtsTokenCount;
+  /**
+   * @var int
+   */
   public $toolUsePromptTokenCount;
   protected $toolUsePromptTokensDetailsType = GoogleCloudAiplatformV1ModalityTokenCount::class;
   protected $toolUsePromptTokensDetailsDataType = 'array';
@@ -132,6 +136,20 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   public function getPromptTokensDetails()
   {
     return $this->promptTokensDetails;
+  }
+  /**
+   * @param int
+   */
+  public function setThoughtsTokenCount($thoughtsTokenCount)
+  {
+    $this->thoughtsTokenCount = $thoughtsTokenCount;
+  }
+  /**
+   * @return int
+   */
+  public function getThoughtsTokenCount()
+  {
+    return $this->thoughtsTokenCount;
   }
   /**
    * @param int
