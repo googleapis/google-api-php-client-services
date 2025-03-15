@@ -138,6 +138,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   protected $photosDataType = 'array';
   protected $plusCodeType = GoogleMapsPlacesV1PlacePlusCode::class;
   protected $plusCodeDataType = '';
+  protected $postalAddressType = GoogleTypePostalAddress::class;
+  protected $postalAddressDataType = '';
   /**
    * @var string
    */
@@ -785,6 +787,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getPlusCode()
   {
     return $this->plusCode;
+  }
+  /**
+   * @param GoogleTypePostalAddress
+   */
+  public function setPostalAddress(GoogleTypePostalAddress $postalAddress)
+  {
+    $this->postalAddress = $postalAddress;
+  }
+  /**
+   * @return GoogleTypePostalAddress
+   */
+  public function getPostalAddress()
+  {
+    return $this->postalAddress;
   }
   /**
    * @param string
