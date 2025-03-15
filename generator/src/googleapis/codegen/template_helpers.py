@@ -540,7 +540,7 @@ def block_comment(value):  # pylint: disable=g-bad-name
     comment_prefix = _ExtractCommentPrefix(lines[0])
   # TODO(user): Default is for backwards-compatibility; remove when safe to
   # do so.
-  language = _GetCurrentLanguage(default='java')
+  language = _GetCurrentLanguage(default='php')
   line_width = _language_defaults[language][_LINE_WIDTH]
   wrapper = textwrap.TextWrapper(width=line_width,
                                  replace_whitespace=False,
