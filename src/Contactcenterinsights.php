@@ -81,7 +81,17 @@ class Contactcenterinsights extends \Google\Service
         'locations',
         [
           'methods' => [
-            'bulkDownloadFeedbackLabels' => [
+            'bulkDeleteFeedbackLabels' => [
+              'path' => 'v1/{+parent}:bulkDeleteFeedbackLabels',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'bulkDownloadFeedbackLabels' => [
               'path' => 'v1/{+parent}:bulkDownloadFeedbackLabels',
               'httpMethod' => 'POST',
               'parameters' => [
