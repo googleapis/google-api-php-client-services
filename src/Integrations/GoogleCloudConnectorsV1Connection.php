@@ -19,7 +19,7 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1Connection extends \Google\Collection
 {
-  protected $collection_key = 'destinationConfigs';
+  protected $collection_key = 'trafficShapingConfigs';
   /**
    * @var bool
    */
@@ -120,6 +120,8 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
    * @var string
    */
   public $tlsServiceDirectory;
+  protected $trafficShapingConfigsType = GoogleCloudConnectorsV1TrafficShapingConfig::class;
+  protected $trafficShapingConfigsDataType = 'array';
   /**
    * @var string
    */
@@ -558,6 +560,20 @@ class GoogleCloudConnectorsV1Connection extends \Google\Collection
   public function getTlsServiceDirectory()
   {
     return $this->tlsServiceDirectory;
+  }
+  /**
+   * @param GoogleCloudConnectorsV1TrafficShapingConfig[]
+   */
+  public function setTrafficShapingConfigs($trafficShapingConfigs)
+  {
+    $this->trafficShapingConfigs = $trafficShapingConfigs;
+  }
+  /**
+   * @return GoogleCloudConnectorsV1TrafficShapingConfig[]
+   */
+  public function getTrafficShapingConfigs()
+  {
+    return $this->trafficShapingConfigs;
   }
   /**
    * @param string

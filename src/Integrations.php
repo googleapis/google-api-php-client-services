@@ -669,6 +669,32 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'search' => [
+              'path' => 'v1/{+parent}/integrations:search',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'query' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'test' => [
               'path' => 'v1/{+name}:test',
               'httpMethod' => 'POST',
