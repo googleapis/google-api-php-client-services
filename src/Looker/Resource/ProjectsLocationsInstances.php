@@ -23,7 +23,6 @@ use Google\Service\Looker\Instance;
 use Google\Service\Looker\ListInstancesResponse;
 use Google\Service\Looker\Operation;
 use Google\Service\Looker\RestartInstanceRequest;
-use Google\Service\Looker\RestoreInstanceRequest;
 
 /**
  * The "instances" collection of methods.
@@ -176,22 +175,6 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('restart', [$params], Operation::class);
-  }
-  /**
-   * Restore Looker instance. (instances.restore)
-   *
-   * @param string $name Required. Instance being restored Format:
-   * projects/{project}/locations/{location}/instances/{instance}
-   * @param RestoreInstanceRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Operation
-   * @throws \Google\Service\Exception
-   */
-  public function restore($name, RestoreInstanceRequest $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('restore', [$params], Operation::class);
   }
 }
 
