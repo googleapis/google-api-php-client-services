@@ -30,6 +30,10 @@ class InstanceNetworkConfig extends \Google\Collection
    * @var bool
    */
   public $enablePublicIp;
+  /**
+   * @var string
+   */
+  public $network;
 
   /**
    * @param AuthorizedNetwork[]
@@ -72,6 +76,20 @@ class InstanceNetworkConfig extends \Google\Collection
   public function getEnablePublicIp()
   {
     return $this->enablePublicIp;
+  }
+  /**
+   * @param string
+   */
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  /**
+   * @return string
+   */
+  public function getNetwork()
+  {
+    return $this->network;
   }
 }
 

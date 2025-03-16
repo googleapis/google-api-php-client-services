@@ -17,46 +17,64 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class MachineConfig extends \Google\Model
+class GoogleTypeDate extends \Google\Model
 {
   /**
    * @var int
    */
-  public $cpuCount;
+  public $day;
   /**
-   * @var string
+   * @var int
    */
-  public $machineType;
+  public $month;
+  /**
+   * @var int
+   */
+  public $year;
 
   /**
    * @param int
    */
-  public function setCpuCount($cpuCount)
+  public function setDay($day)
   {
-    $this->cpuCount = $cpuCount;
+    $this->day = $day;
   }
   /**
    * @return int
    */
-  public function getCpuCount()
+  public function getDay()
   {
-    return $this->cpuCount;
+    return $this->day;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setMachineType($machineType)
+  public function setMonth($month)
   {
-    $this->machineType = $machineType;
+    $this->month = $month;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getMachineType()
+  public function getMonth()
   {
-    return $this->machineType;
+    return $this->month;
+  }
+  /**
+   * @param int
+   */
+  public function setYear($year)
+  {
+    $this->year = $year;
+  }
+  /**
+   * @return int
+   */
+  public function getYear()
+  {
+    return $this->year;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MachineConfig::class, 'Google_Service_CloudAlloyDBAdmin_MachineConfig');
+class_alias(GoogleTypeDate::class, 'Google_Service_CloudAlloyDBAdmin_GoogleTypeDate');
