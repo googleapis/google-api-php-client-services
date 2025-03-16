@@ -32,6 +32,10 @@ class Backup extends \Google\Model
   /**
    * @var string
    */
+  public $databaseVersion;
+  /**
+   * @var string
+   */
   public $description;
   protected $errorType = OperationError::class;
   protected $errorDataType = '';
@@ -143,6 +147,20 @@ class Backup extends \Google\Model
   public function getBackupRun()
   {
     return $this->backupRun;
+  }
+  /**
+   * @param string
+   */
+  public function setDatabaseVersion($databaseVersion)
+  {
+    $this->databaseVersion = $databaseVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getDatabaseVersion()
+  {
+    return $this->databaseVersion;
   }
   /**
    * @param string

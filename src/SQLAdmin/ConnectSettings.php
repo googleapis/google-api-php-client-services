@@ -19,7 +19,7 @@ namespace Google\Service\SQLAdmin;
 
 class ConnectSettings extends \Google\Collection
 {
-  protected $collection_key = 'ipAddresses';
+  protected $collection_key = 'nodes';
   /**
    * @var string
    */
@@ -44,6 +44,12 @@ class ConnectSettings extends \Google\Collection
    * @var string
    */
   public $kind;
+  /**
+   * @var int
+   */
+  public $nodeCount;
+  protected $nodesType = ConnectPoolNodeConfig::class;
+  protected $nodesDataType = 'array';
   /**
    * @var bool
    */
@@ -156,6 +162,34 @@ class ConnectSettings extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param int
+   */
+  public function setNodeCount($nodeCount)
+  {
+    $this->nodeCount = $nodeCount;
+  }
+  /**
+   * @return int
+   */
+  public function getNodeCount()
+  {
+    return $this->nodeCount;
+  }
+  /**
+   * @param ConnectPoolNodeConfig[]
+   */
+  public function setNodes($nodes)
+  {
+    $this->nodes = $nodes;
+  }
+  /**
+   * @return ConnectPoolNodeConfig[]
+   */
+  public function getNodes()
+  {
+    return $this->nodes;
   }
   /**
    * @param bool
