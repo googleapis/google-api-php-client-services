@@ -89,12 +89,12 @@ class ProjectsLocationsCatalogs extends \Google\Service\Resource
    * If it is set higher, it will be capped by 20.
    * @opt_param string query Required. The query used to generate suggestions. The
    * maximum number of allowed characters is 255.
-   * @opt_param string visitorId Required field. A unique identifier for tracking
-   * visitors. For example, this could be implemented with an HTTP cookie, which
-   * should be able to uniquely identify a visitor on a single device. This unique
-   * identifier should not change if the visitor logs in or out of the website.
-   * The field must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * @opt_param string visitorId Recommended field. A unique identifier for
+   * tracking visitors. For example, this could be implemented with an HTTP
+   * cookie, which should be able to uniquely identify a visitor on a single
+   * device. This unique identifier should not change if the visitor logs in or
+   * out of the website. The field must be a UTF-8 encoded string with a length
+   * limit of 128 characters. Otherwise, an INVALID_ARGUMENT error is returned.
    * @return GoogleCloudRetailV2CompleteQueryResponse
    * @throws \Google\Service\Exception
    */
