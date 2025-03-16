@@ -17,44 +17,64 @@
 
 namespace Google\Service\ContainerAnalysis;
 
-class GrafeasV1FileLocation extends \Google\Model
+class StepResult extends \Google\Model
 {
   /**
    * @var string
    */
-  public $filePath;
-  protected $layerDetailsType = LayerDetails::class;
-  protected $layerDetailsDataType = '';
+  public $attestationContentName;
+  /**
+   * @var string
+   */
+  public $attestationType;
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
    * @param string
    */
-  public function setFilePath($filePath)
+  public function setAttestationContentName($attestationContentName)
   {
-    $this->filePath = $filePath;
+    $this->attestationContentName = $attestationContentName;
   }
   /**
    * @return string
    */
-  public function getFilePath()
+  public function getAttestationContentName()
   {
-    return $this->filePath;
+    return $this->attestationContentName;
   }
   /**
-   * @param LayerDetails
+   * @param string
    */
-  public function setLayerDetails(LayerDetails $layerDetails)
+  public function setAttestationType($attestationType)
   {
-    $this->layerDetails = $layerDetails;
+    $this->attestationType = $attestationType;
   }
   /**
-   * @return LayerDetails
+   * @return string
    */
-  public function getLayerDetails()
+  public function getAttestationType()
   {
-    return $this->layerDetails;
+    return $this->attestationType;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GrafeasV1FileLocation::class, 'Google_Service_ContainerAnalysis_GrafeasV1FileLocation');
+class_alias(StepResult::class, 'Google_Service_ContainerAnalysis_StepResult');

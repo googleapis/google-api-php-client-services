@@ -17,44 +17,64 @@
 
 namespace Google\Service\ContainerAnalysis;
 
-class GrafeasV1FileLocation extends \Google\Model
+class BaseImage extends \Google\Model
 {
+  /**
+   * @var int
+   */
+  public $layerCount;
   /**
    * @var string
    */
-  public $filePath;
-  protected $layerDetailsType = LayerDetails::class;
-  protected $layerDetailsDataType = '';
+  public $name;
+  /**
+   * @var string
+   */
+  public $repository;
 
+  /**
+   * @param int
+   */
+  public function setLayerCount($layerCount)
+  {
+    $this->layerCount = $layerCount;
+  }
+  /**
+   * @return int
+   */
+  public function getLayerCount()
+  {
+    return $this->layerCount;
+  }
   /**
    * @param string
    */
-  public function setFilePath($filePath)
+  public function setName($name)
   {
-    $this->filePath = $filePath;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getFilePath()
+  public function getName()
   {
-    return $this->filePath;
+    return $this->name;
   }
   /**
-   * @param LayerDetails
+   * @param string
    */
-  public function setLayerDetails(LayerDetails $layerDetails)
+  public function setRepository($repository)
   {
-    $this->layerDetails = $layerDetails;
+    $this->repository = $repository;
   }
   /**
-   * @return LayerDetails
+   * @return string
    */
-  public function getLayerDetails()
+  public function getRepository()
   {
-    return $this->layerDetails;
+    return $this->repository;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GrafeasV1FileLocation::class, 'Google_Service_ContainerAnalysis_GrafeasV1FileLocation');
+class_alias(BaseImage::class, 'Google_Service_ContainerAnalysis_BaseImage');
