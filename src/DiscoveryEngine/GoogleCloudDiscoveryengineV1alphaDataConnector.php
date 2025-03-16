@@ -22,6 +22,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   protected $collection_key = 'staticIpAddresses';
   protected $actionConfigType = GoogleCloudDiscoveryengineV1alphaActionConfig::class;
   protected $actionConfigDataType = '';
+  protected $alertPolicyConfigsType = GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig::class;
+  protected $alertPolicyConfigsDataType = 'array';
   /**
    * @var bool
    */
@@ -124,6 +126,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getActionConfig()
   {
     return $this->actionConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
+   */
+  public function setAlertPolicyConfigs($alertPolicyConfigs)
+  {
+    $this->alertPolicyConfigs = $alertPolicyConfigs;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
+   */
+  public function getAlertPolicyConfigs()
+  {
+    return $this->alertPolicyConfigs;
   }
   /**
    * @param bool
