@@ -512,6 +512,10 @@ class WorkloadManager extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'evaluationType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
