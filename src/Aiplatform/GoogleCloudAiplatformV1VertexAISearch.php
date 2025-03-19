@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Model
    * @var string
    */
   public $datastore;
+  /**
+   * @var string
+   */
+  public $engine;
 
   /**
    * @param string
@@ -37,6 +41,20 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Model
   public function getDatastore()
   {
     return $this->datastore;
+  }
+  /**
+   * @param string
+   */
+  public function setEngine($engine)
+  {
+    $this->engine = $engine;
+  }
+  /**
+   * @return string
+   */
+  public function getEngine()
+  {
+    return $this->engine;
   }
 }
 

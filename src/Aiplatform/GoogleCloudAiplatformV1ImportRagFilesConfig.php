@@ -23,6 +23,10 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   protected $gcsSourceDataType = '';
   protected $googleDriveSourceType = GoogleCloudAiplatformV1GoogleDriveSource::class;
   protected $googleDriveSourceDataType = '';
+  protected $importResultBigquerySinkType = GoogleCloudAiplatformV1BigQueryDestination::class;
+  protected $importResultBigquerySinkDataType = '';
+  protected $importResultGcsSinkType = GoogleCloudAiplatformV1GcsDestination::class;
+  protected $importResultGcsSinkDataType = '';
   protected $jiraSourceType = GoogleCloudAiplatformV1JiraSource::class;
   protected $jiraSourceDataType = '';
   /**
@@ -69,6 +73,34 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   public function getGoogleDriveSource()
   {
     return $this->googleDriveSource;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1BigQueryDestination
+   */
+  public function setImportResultBigquerySink(GoogleCloudAiplatformV1BigQueryDestination $importResultBigquerySink)
+  {
+    $this->importResultBigquerySink = $importResultBigquerySink;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1BigQueryDestination
+   */
+  public function getImportResultBigquerySink()
+  {
+    return $this->importResultBigquerySink;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1GcsDestination
+   */
+  public function setImportResultGcsSink(GoogleCloudAiplatformV1GcsDestination $importResultGcsSink)
+  {
+    $this->importResultGcsSink = $importResultGcsSink;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GcsDestination
+   */
+  public function getImportResultGcsSink()
+  {
+    return $this->importResultGcsSink;
   }
   /**
    * @param GoogleCloudAiplatformV1JiraSource
