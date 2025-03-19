@@ -92,6 +92,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_identityMappingStores;
   public $projects_locations_identityMappingStores_operations;
   public $projects_locations_operations;
+  public $projects_locations_podcasts_operations;
   public $projects_locations_rankingConfigs;
   public $projects_locations_userEvents;
   public $projects_operations;
@@ -3300,6 +3301,26 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_podcasts_operations = new DiscoveryEngine\Resource\ProjectsLocationsPodcastsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
