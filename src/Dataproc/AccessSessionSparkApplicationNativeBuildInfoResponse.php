@@ -17,28 +17,26 @@
 
 namespace Google\Service\Dataproc;
 
-class AuthenticationConfig extends \Google\Model
+class AccessSessionSparkApplicationNativeBuildInfoResponse extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $userWorkloadAuthenticationType;
+  protected $executionDataType = NativeBuildInfoUiData::class;
+  protected $executionDataDataType = '';
 
   /**
-   * @param string
+   * @param NativeBuildInfoUiData
    */
-  public function setUserWorkloadAuthenticationType($userWorkloadAuthenticationType)
+  public function setExecutionData(NativeBuildInfoUiData $executionData)
   {
-    $this->userWorkloadAuthenticationType = $userWorkloadAuthenticationType;
+    $this->executionData = $executionData;
   }
   /**
-   * @return string
+   * @return NativeBuildInfoUiData
    */
-  public function getUserWorkloadAuthenticationType()
+  public function getExecutionData()
   {
-    return $this->userWorkloadAuthenticationType;
+    return $this->executionData;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AuthenticationConfig::class, 'Google_Service_Dataproc_AuthenticationConfig');
+class_alias(AccessSessionSparkApplicationNativeBuildInfoResponse::class, 'Google_Service_Dataproc_AccessSessionSparkApplicationNativeBuildInfoResponse');
