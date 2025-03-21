@@ -36,6 +36,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $category;
+  protected $chokepointType = GoogleCloudSecuritycenterV2Chokepoint::class;
+  protected $chokepointDataType = '';
   protected $cloudArmorType = GoogleCloudSecuritycenterV2CloudArmor::class;
   protected $cloudArmorDataType = '';
   protected $cloudDlpDataProfileType = GoogleCloudSecuritycenterV2CloudDlpDataProfile::class;
@@ -256,6 +258,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getCategory()
   {
     return $this->category;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2Chokepoint
+   */
+  public function setChokepoint(GoogleCloudSecuritycenterV2Chokepoint $chokepoint)
+  {
+    $this->chokepoint = $chokepoint;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2Chokepoint
+   */
+  public function getChokepoint()
+  {
+    return $this->chokepoint;
   }
   /**
    * @param GoogleCloudSecuritycenterV2CloudArmor

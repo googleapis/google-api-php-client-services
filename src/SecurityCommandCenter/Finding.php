@@ -36,6 +36,8 @@ class Finding extends \Google\Collection
    * @var string
    */
   public $category;
+  protected $chokepointType = Chokepoint::class;
+  protected $chokepointDataType = '';
   protected $cloudArmorType = CloudArmor::class;
   protected $cloudArmorDataType = '';
   protected $cloudDlpDataProfileType = CloudDlpDataProfile::class;
@@ -256,6 +258,20 @@ class Finding extends \Google\Collection
   public function getCategory()
   {
     return $this->category;
+  }
+  /**
+   * @param Chokepoint
+   */
+  public function setChokepoint(Chokepoint $chokepoint)
+  {
+    $this->chokepoint = $chokepoint;
+  }
+  /**
+   * @return Chokepoint
+   */
+  public function getChokepoint()
+  {
+    return $this->chokepoint;
   }
   /**
    * @param CloudArmor
