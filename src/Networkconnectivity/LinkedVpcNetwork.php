@@ -35,6 +35,10 @@ class LinkedVpcNetwork extends \Google\Collection
   /**
    * @var string[]
    */
+  public $proposedExcludeExportRanges;
+  /**
+   * @var string[]
+   */
   public $proposedIncludeExportRanges;
   /**
    * @var string
@@ -82,6 +86,20 @@ class LinkedVpcNetwork extends \Google\Collection
   public function getProducerVpcSpokes()
   {
     return $this->producerVpcSpokes;
+  }
+  /**
+   * @param string[]
+   */
+  public function setProposedExcludeExportRanges($proposedExcludeExportRanges)
+  {
+    $this->proposedExcludeExportRanges = $proposedExcludeExportRanges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getProposedExcludeExportRanges()
+  {
+    return $this->proposedExcludeExportRanges;
   }
   /**
    * @param string[]
