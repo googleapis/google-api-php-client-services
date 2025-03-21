@@ -40,6 +40,10 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
   /**
    * @var bool
    */
+  public $enableHttpCall;
+  /**
+   * @var bool
+   */
   public $enableInternalIp;
   /**
    * @var bool
@@ -139,6 +143,20 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableHttpCall($enableHttpCall)
+  {
+    $this->enableHttpCall = $enableHttpCall;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableHttpCall()
+  {
+    return $this->enableHttpCall;
   }
   /**
    * @param bool

@@ -678,6 +678,10 @@ class Integrations extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'enableNaturalLanguageQueryUnderstanding' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',

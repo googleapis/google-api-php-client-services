@@ -155,6 +155,8 @@ class ProjectsLocationsIntegrations extends \Google\Service\Resource
    * projects/locations/resources/integrations
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool enableNaturalLanguageQueryUnderstanding Optional. Whether to
+   * enable natural language query understanding.
    * @opt_param string filter Optional. The pre-filter to be applied to the
    * search. This should follow the expressions defined in
    * https://cloud.google.com/generative-ai-app-builder/docs/filter-search-
