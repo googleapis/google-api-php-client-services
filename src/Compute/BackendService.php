@@ -72,6 +72,8 @@ class BackendService extends \Google\Collection
    * @var string
    */
   public $fingerprint;
+  protected $haPolicyType = BackendServiceHAPolicy::class;
+  protected $haPolicyDataType = '';
   /**
    * @var string[]
    */
@@ -404,6 +406,20 @@ class BackendService extends \Google\Collection
   public function getFingerprint()
   {
     return $this->fingerprint;
+  }
+  /**
+   * @param BackendServiceHAPolicy
+   */
+  public function setHaPolicy(BackendServiceHAPolicy $haPolicy)
+  {
+    $this->haPolicy = $haPolicy;
+  }
+  /**
+   * @return BackendServiceHAPolicy
+   */
+  public function getHaPolicy()
+  {
+    return $this->haPolicy;
   }
   /**
    * @param string[]
