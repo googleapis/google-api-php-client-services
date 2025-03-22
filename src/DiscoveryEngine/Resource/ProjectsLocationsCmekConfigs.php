@@ -18,20 +18,36 @@
 namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1CmekConfig;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1ListCmekConfigsResponse;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
 /**
- * The "locations" collection of methods.
+ * The "cmekConfigs" collection of methods.
  * Typical usage is:
  *  <code>
  *   $discoveryengineService = new Google\Service\DiscoveryEngine(...);
- *   $locations = $discoveryengineService->projects_locations;
+ *   $cmekConfigs = $discoveryengineService->projects_locations_cmekConfigs;
  *  </code>
  */
-class ProjectsLocations extends \Google\Service\Resource
+class ProjectsLocationsCmekConfigs extends \Google\Service\Resource
 {
   /**
-   * Gets the CmekConfig. (locations.getCmekConfig)
+   * De-provisions a CmekConfig. (cmekConfigs.delete)
+   *
+   * @param string $name Required. The resource name of the CmekConfig to delete,
+   * such as `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Gets the CmekConfig. (cmekConfigs.get)
    *
    * @param string $name Required. Resource name of CmekConfig, such as
    * `projects/locations/cmekConfig` or `projects/locations/cmekConfigs`. If the
@@ -41,17 +57,35 @@ class ProjectsLocations extends \Google\Service\Resource
    * @return GoogleCloudDiscoveryengineV1CmekConfig
    * @throws \Google\Service\Exception
    */
-  public function getCmekConfig($name, $optParams = [])
+  public function get($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('getCmekConfig', [$params], GoogleCloudDiscoveryengineV1CmekConfig::class);
+    return $this->call('get', [$params], GoogleCloudDiscoveryengineV1CmekConfig::class);
+  }
+  /**
+   * Lists all the CmekConfigs with the project.
+   * (cmekConfigs.listProjectsLocationsCmekConfigs)
+   *
+   * @param string $parent Required. The parent location resource name, such as
+   * `projects/{project}/locations/{location}`. If the caller does not have
+   * permission to list CmekConfigs under this location, regardless of whether or
+   * not a CmekConfig exists, a PERMISSION_DENIED error is returned.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1ListCmekConfigsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsCmekConfigs($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], GoogleCloudDiscoveryengineV1ListCmekConfigsResponse::class);
   }
   /**
    * Provisions a CMEK key for use in a location of a customer's project. This
    * method will also conduct location validation on the provided cmekConfig to
    * make sure the key is valid and can be used in the selected location.
-   * (locations.updateCmekConfig)
+   * (cmekConfigs.patch)
    *
    * @param string $name Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
@@ -64,13 +98,13 @@ class ProjectsLocations extends \Google\Service\Resource
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function updateCmekConfig($name, GoogleCloudDiscoveryengineV1CmekConfig $postBody, $optParams = [])
+  public function patch($name, GoogleCloudDiscoveryengineV1CmekConfig $postBody, $optParams = [])
   {
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('updateCmekConfig', [$params], GoogleLongrunningOperation::class);
+    return $this->call('patch', [$params], GoogleLongrunningOperation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocations');
+class_alias(ProjectsLocationsCmekConfigs::class, 'Google_Service_DiscoveryEngine_Resource_ProjectsLocationsCmekConfigs');
