@@ -26,6 +26,7 @@ use Google\Service\OracleDatabase\RestartAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\RestoreAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\StartAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\StopAutonomousDatabaseRequest;
+use Google\Service\OracleDatabase\SwitchoverAutonomousDatabaseRequest;
 
 /**
  * The "autonomousDatabases" collection of methods.
@@ -217,6 +218,24 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('stop', [$params], Operation::class);
+  }
+  /**
+   * Initiates a switchover of specified autonomous deatabase to the associated
+   * peer database. (autonomousDatabases.switchover)
+   *
+   * @param string $name Required. The name of the Autonomous Database in the
+   * following format: projects/{project}/locations/{location}/autonomousDatabases
+   * /{autonomous_database}.
+   * @param SwitchoverAutonomousDatabaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function switchover($name, SwitchoverAutonomousDatabaseRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('switchover', [$params], Operation::class);
   }
 }
 

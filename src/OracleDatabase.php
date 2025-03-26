@@ -96,6 +96,11 @@ class OracleDatabase extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -293,6 +298,16 @@ class OracleDatabase extends \Google\Service
               ],
             ],'stop' => [
               'path' => 'v1/{+name}:stop',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'switchover' => [
+              'path' => 'v1/{+name}:switchover',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
