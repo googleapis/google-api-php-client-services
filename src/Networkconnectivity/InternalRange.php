@@ -29,6 +29,14 @@ class InternalRange extends \Google\Collection
    */
   public $description;
   /**
+   * @var string[]
+   */
+  public $excludeCidrRanges;
+  /**
+   * @var bool
+   */
+  public $immutable;
+  /**
    * @var string
    */
   public $ipCidrRange;
@@ -102,6 +110,34 @@ class InternalRange extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeCidrRanges($excludeCidrRanges)
+  {
+    $this->excludeCidrRanges = $excludeCidrRanges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeCidrRanges()
+  {
+    return $this->excludeCidrRanges;
+  }
+  /**
+   * @param bool
+   */
+  public function setImmutable($immutable)
+  {
+    $this->immutable = $immutable;
+  }
+  /**
+   * @return bool
+   */
+  public function getImmutable()
+  {
+    return $this->immutable;
   }
   /**
    * @param string
