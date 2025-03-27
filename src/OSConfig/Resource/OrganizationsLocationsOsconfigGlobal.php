@@ -22,12 +22,12 @@ namespace Google\Service\OSConfig\Resource;
  * Typical usage is:
  *  <code>
  *   $osconfigService = new Google\Service\OSConfig(...);
- *   $global = $osconfigService->projects_locations_global;
+ *   $global = $osconfigService->organizations_locations_global;
  *  </code>
  */
-class ProjectsLocationsOsconfigGlobal extends \Google\Service\Resource
+class OrganizationsLocationsOsconfigGlobal extends \Google\Service\Resource
 {
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsOsconfigGlobal::class, 'Google_Service_OSConfig_Resource_ProjectsLocationsOsconfigGlobal');
+class_alias(OrganizationsLocationsOsconfigGlobal::class, 'Google_Service_OSConfig_Resource_OrganizationsLocationsOsconfigGlobal');

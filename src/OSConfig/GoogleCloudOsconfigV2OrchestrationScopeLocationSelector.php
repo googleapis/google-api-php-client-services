@@ -15,19 +15,31 @@
  * the License.
  */
 
-namespace Google\Service\OSConfig\Resource;
+namespace Google\Service\OSConfig;
 
-/**
- * The "global" collection of methods.
- * Typical usage is:
- *  <code>
- *   $osconfigService = new Google\Service\OSConfig(...);
- *   $global = $osconfigService->projects_locations_global;
- *  </code>
- */
-class ProjectsLocationsOsconfigGlobal extends \Google\Service\Resource
+class GoogleCloudOsconfigV2OrchestrationScopeLocationSelector extends \Google\Collection
 {
+  protected $collection_key = 'includedLocations';
+  /**
+   * @var string[]
+   */
+  public $includedLocations;
+
+  /**
+   * @param string[]
+   */
+  public function setIncludedLocations($includedLocations)
+  {
+    $this->includedLocations = $includedLocations;
+  }
+  /**
+   * @return string[]
+   */
+  public function getIncludedLocations()
+  {
+    return $this->includedLocations;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsOsconfigGlobal::class, 'Google_Service_OSConfig_Resource_ProjectsLocationsOsconfigGlobal');
+class_alias(GoogleCloudOsconfigV2OrchestrationScopeLocationSelector::class, 'Google_Service_OSConfig_GoogleCloudOsconfigV2OrchestrationScopeLocationSelector');
