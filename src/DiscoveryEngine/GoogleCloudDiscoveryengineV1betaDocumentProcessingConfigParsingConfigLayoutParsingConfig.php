@@ -19,6 +19,43 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1betaDocumentProcessingConfigParsingConfigLayoutParsingConfig extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $enableImageAnnotation;
+  /**
+   * @var bool
+   */
+  public $enableTableAnnotation;
+
+  /**
+   * @param bool
+   */
+  public function setEnableImageAnnotation($enableImageAnnotation)
+  {
+    $this->enableImageAnnotation = $enableImageAnnotation;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableImageAnnotation()
+  {
+    return $this->enableImageAnnotation;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableTableAnnotation($enableTableAnnotation)
+  {
+    $this->enableTableAnnotation = $enableTableAnnotation;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableTableAnnotation()
+  {
+    return $this->enableTableAnnotation;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
