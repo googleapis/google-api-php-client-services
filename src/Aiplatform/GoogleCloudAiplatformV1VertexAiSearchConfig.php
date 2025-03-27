@@ -17,64 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingChunkWeb extends \Google\Model
+class GoogleCloudAiplatformV1VertexAiSearchConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $domain;
-  /**
-   * @var string
-   */
-  public $title;
-  /**
-   * @var string
-   */
-  public $uri;
+  public $servingConfig;
 
   /**
    * @param string
    */
-  public function setDomain($domain)
+  public function setServingConfig($servingConfig)
   {
-    $this->domain = $domain;
+    $this->servingConfig = $servingConfig;
   }
   /**
    * @return string
    */
-  public function getDomain()
+  public function getServingConfig()
   {
-    return $this->domain;
-  }
-  /**
-   * @param string
-   */
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-  /**
-   * @return string
-   */
-  public function getTitle()
-  {
-    return $this->title;
-  }
-  /**
-   * @param string
-   */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  /**
-   * @return string
-   */
-  public function getUri()
-  {
-    return $this->uri;
+    return $this->servingConfig;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingChunkWeb::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingChunkWeb');
+class_alias(GoogleCloudAiplatformV1VertexAiSearchConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1VertexAiSearchConfig');

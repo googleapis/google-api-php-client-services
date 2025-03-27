@@ -17,64 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingChunkWeb extends \Google\Model
+class GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService extends \Google\Model
 {
   /**
    * @var string
    */
-  public $domain;
-  /**
-   * @var string
-   */
-  public $title;
-  /**
-   * @var string
-   */
-  public $uri;
+  public $modelName;
 
   /**
    * @param string
    */
-  public function setDomain($domain)
+  public function setModelName($modelName)
   {
-    $this->domain = $domain;
+    $this->modelName = $modelName;
   }
   /**
    * @return string
    */
-  public function getDomain()
+  public function getModelName()
   {
-    return $this->domain;
-  }
-  /**
-   * @param string
-   */
-  public function setTitle($title)
-  {
-    $this->title = $title;
-  }
-  /**
-   * @return string
-   */
-  public function getTitle()
-  {
-    return $this->title;
-  }
-  /**
-   * @param string
-   */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  /**
-   * @return string
-   */
-  public function getUri()
-  {
-    return $this->uri;
+    return $this->modelName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingChunkWeb::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingChunkWeb');
+class_alias(GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RagRetrievalConfigRankingRankService');
