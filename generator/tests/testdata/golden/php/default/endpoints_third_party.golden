@@ -125,13 +125,10 @@ namespace NASA\Service\EccoDomaniIeri;
 
 class HelloGreeting extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $message;
+  public string $message;
 
   /**
-   * @param string
+   * @param string $message
    */
   public function setMessage($message)
   {
@@ -176,7 +173,9 @@ class HelloGreetingCollection extends \Google\Collection
   protected $itemsDataType = 'array';
 
   /**
-   * @param HelloGreeting[]
+   * Greeting that stores a message.
+   *
+   * @param HelloGreeting[] $items
    */
   public function setItems($items)
   {
