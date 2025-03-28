@@ -17,46 +17,44 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing extends \Google\Model
+class GoogleCloudDataplexV1MetadataJobExportJobSpec extends \Google\Model
 {
   /**
    * @var string
    */
-  public $dataset;
-  /**
-   * @var string
-   */
-  public $location;
+  public $outputPath;
+  protected $scopeType = GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope::class;
+  protected $scopeDataType = '';
 
   /**
    * @param string
    */
-  public function setDataset($dataset)
+  public function setOutputPath($outputPath)
   {
-    $this->dataset = $dataset;
+    $this->outputPath = $outputPath;
   }
   /**
    * @return string
    */
-  public function getDataset()
+  public function getOutputPath()
   {
-    return $this->dataset;
+    return $this->outputPath;
   }
   /**
-   * @param string
+   * @param GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope
    */
-  public function setLocation($location)
+  public function setScope(GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope $scope)
   {
-    $this->location = $location;
+    $this->scope = $scope;
   }
   /**
-   * @return string
+   * @return GoogleCloudDataplexV1MetadataJobExportJobSpecExportJobScope
    */
-  public function getLocation()
+  public function getScope()
   {
-    return $this->location;
+    return $this->scope;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing');
+class_alias(GoogleCloudDataplexV1MetadataJobExportJobSpec::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1MetadataJobExportJobSpec');

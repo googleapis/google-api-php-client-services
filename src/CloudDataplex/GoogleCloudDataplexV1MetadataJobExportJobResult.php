@@ -17,46 +17,46 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing extends \Google\Model
+class GoogleCloudDataplexV1MetadataJobExportJobResult extends \Google\Model
 {
   /**
    * @var string
    */
-  public $dataset;
+  public $errorMessage;
   /**
    * @var string
    */
-  public $location;
+  public $exportedEntries;
 
   /**
    * @param string
    */
-  public function setDataset($dataset)
+  public function setErrorMessage($errorMessage)
   {
-    $this->dataset = $dataset;
+    $this->errorMessage = $errorMessage;
   }
   /**
    * @return string
    */
-  public function getDataset()
+  public function getErrorMessage()
   {
-    return $this->dataset;
+    return $this->errorMessage;
   }
   /**
    * @param string
    */
-  public function setLocation($location)
+  public function setExportedEntries($exportedEntries)
   {
-    $this->location = $location;
+    $this->exportedEntries = $exportedEntries;
   }
   /**
    * @return string
    */
-  public function getLocation()
+  public function getExportedEntries()
   {
-    return $this->location;
+    return $this->exportedEntries;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataDiscoveryResultBigQueryPublishing');
+class_alias(GoogleCloudDataplexV1MetadataJobExportJobResult::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1MetadataJobExportJobResult');
