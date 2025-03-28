@@ -24,6 +24,8 @@ class GceSetup extends \Google\Collection
   protected $acceleratorConfigsDataType = 'array';
   protected $bootDiskType = BootDisk::class;
   protected $bootDiskDataType = '';
+  protected $confidentialInstanceConfigType = ConfidentialInstanceConfig::class;
+  protected $confidentialInstanceConfigDataType = '';
   protected $containerImageType = ContainerImage::class;
   protected $containerImageDataType = '';
   protected $dataDisksType = DataDisk::class;
@@ -90,6 +92,20 @@ class GceSetup extends \Google\Collection
   public function getBootDisk()
   {
     return $this->bootDisk;
+  }
+  /**
+   * @param ConfidentialInstanceConfig
+   */
+  public function setConfidentialInstanceConfig(ConfidentialInstanceConfig $confidentialInstanceConfig)
+  {
+    $this->confidentialInstanceConfig = $confidentialInstanceConfig;
+  }
+  /**
+   * @return ConfidentialInstanceConfig
+   */
+  public function getConfidentialInstanceConfig()
+  {
+    return $this->confidentialInstanceConfig;
   }
   /**
    * @param ContainerImage
