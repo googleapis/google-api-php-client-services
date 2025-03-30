@@ -22,6 +22,8 @@ class Finding extends \Google\Collection
   protected $collection_key = 'processes';
   protected $accessType = Access::class;
   protected $accessDataType = '';
+  protected $affectedResourcesType = AffectedResources::class;
+  protected $affectedResourcesDataType = '';
   protected $applicationType = Application::class;
   protected $applicationDataType = '';
   protected $attackExposureType = AttackExposure::class;
@@ -188,6 +190,20 @@ class Finding extends \Google\Collection
   public function getAccess()
   {
     return $this->access;
+  }
+  /**
+   * @param AffectedResources
+   */
+  public function setAffectedResources(AffectedResources $affectedResources)
+  {
+    $this->affectedResources = $affectedResources;
+  }
+  /**
+   * @return AffectedResources
+   */
+  public function getAffectedResources()
+  {
+    return $this->affectedResources;
   }
   /**
    * @param Application

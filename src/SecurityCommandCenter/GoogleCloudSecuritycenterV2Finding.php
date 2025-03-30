@@ -22,6 +22,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $collection_key = 'processes';
   protected $accessType = GoogleCloudSecuritycenterV2Access::class;
   protected $accessDataType = '';
+  protected $affectedResourcesType = GoogleCloudSecuritycenterV2AffectedResources::class;
+  protected $affectedResourcesDataType = '';
   protected $applicationType = GoogleCloudSecuritycenterV2Application::class;
   protected $applicationDataType = '';
   protected $attackExposureType = GoogleCloudSecuritycenterV2AttackExposure::class;
@@ -188,6 +190,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getAccess()
   {
     return $this->access;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2AffectedResources
+   */
+  public function setAffectedResources(GoogleCloudSecuritycenterV2AffectedResources $affectedResources)
+  {
+    $this->affectedResources = $affectedResources;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2AffectedResources
+   */
+  public function getAffectedResources()
+  {
+    return $this->affectedResources;
   }
   /**
    * @param GoogleCloudSecuritycenterV2Application
