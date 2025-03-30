@@ -210,6 +210,26 @@ class PaymentsResellerSubscription extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'resume' => [
+              'path' => 'v1/{+name}:resume',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'suspend' => [
+              'path' => 'v1/{+name}:suspend',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'undoCancel' => [
               'path' => 'v1/{+name}:undoCancel',
               'httpMethod' => 'POST',

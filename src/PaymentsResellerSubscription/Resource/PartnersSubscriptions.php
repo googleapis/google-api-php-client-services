@@ -23,7 +23,11 @@ use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubsc
 use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1EntitleSubscriptionResponse;
 use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionRequest;
 use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1ExtendSubscriptionResponse;
+use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest;
+use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse;
 use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1Subscription;
+use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest;
+use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse;
 use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionRequest;
 use Google\Service\PaymentsResellerSubscription\GoogleCloudPaymentsResellerSubscriptionV1UndoCancelSubscriptionResponse;
 
@@ -163,6 +167,44 @@ class PartnersSubscriptions extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('provision', [$params], GoogleCloudPaymentsResellerSubscriptionV1Subscription::class);
+  }
+  /**
+   * Resumes a suspended subscription. The new billing cycle will start at the
+   * time of the request. It should be called directly by the partner using
+   * service accounts. (subscriptions.resume)
+   *
+   * @param string $name Required. The name of the subscription resource to be
+   * resumed. It will have the format of
+   * "partners/{partner_id}/subscriptions/{subscription_id}"
+   * @param GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse
+   * @throws \Google\Service\Exception
+   */
+  public function resume($name, GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('resume', [$params], GoogleCloudPaymentsResellerSubscriptionV1ResumeSubscriptionResponse::class);
+  }
+  /**
+   * Suspends a subscription. Contract terms may dictate if a prorated refund will
+   * be issued upon suspension. It should be called directly by the partner using
+   * service accounts. (subscriptions.suspend)
+   *
+   * @param string $name Required. The name of the subscription resource to be
+   * suspended. It will have the format of
+   * "partners/{partner_id}/subscriptions/{subscription_id}"
+   * @param GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse
+   * @throws \Google\Service\Exception
+   */
+  public function suspend($name, GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('suspend', [$params], GoogleCloudPaymentsResellerSubscriptionV1SuspendSubscriptionResponse::class);
   }
   /**
    * Currently, it is used by **Google One, Play Pass** partners. Revokes the
