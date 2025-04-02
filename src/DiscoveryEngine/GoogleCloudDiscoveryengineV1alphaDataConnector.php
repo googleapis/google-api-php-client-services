@@ -88,6 +88,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var string
    */
   public $realtimeState;
+  protected $realtimeSyncConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig::class;
+  protected $realtimeSyncConfigDataType = '';
   /**
    * @var string
    */
@@ -406,6 +408,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getRealtimeState()
   {
     return $this->realtimeState;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig
+   */
+  public function setRealtimeSyncConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig $realtimeSyncConfig)
+  {
+    $this->realtimeSyncConfig = $realtimeSyncConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig
+   */
+  public function getRealtimeSyncConfig()
+  {
+    return $this->realtimeSyncConfig;
   }
   /**
    * @param string
