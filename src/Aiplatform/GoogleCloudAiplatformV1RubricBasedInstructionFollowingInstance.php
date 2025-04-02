@@ -17,29 +17,13 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PointwiseMetricInstance extends \Google\Model
+class GoogleCloudAiplatformV1RubricBasedInstructionFollowingInstance extends \Google\Model
 {
-  protected $contentMapInstanceType = GoogleCloudAiplatformV1ContentMap::class;
-  protected $contentMapInstanceDataType = '';
   /**
    * @var string
    */
   public $jsonInstance;
 
-  /**
-   * @param GoogleCloudAiplatformV1ContentMap
-   */
-  public function setContentMapInstance(GoogleCloudAiplatformV1ContentMap $contentMapInstance)
-  {
-    $this->contentMapInstance = $contentMapInstance;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1ContentMap
-   */
-  public function getContentMapInstance()
-  {
-    return $this->contentMapInstance;
-  }
   /**
    * @param string
    */
@@ -57,4 +41,4 @@ class GoogleCloudAiplatformV1PointwiseMetricInstance extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PointwiseMetricInstance::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PointwiseMetricInstance');
+class_alias(GoogleCloudAiplatformV1RubricBasedInstructionFollowingInstance::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RubricBasedInstructionFollowingInstance');

@@ -17,46 +17,29 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1PointwiseMetricResult extends \Google\Model
+class GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult extends \Google\Collection
 {
-  protected $customOutputType = GoogleCloudAiplatformV1CustomOutput::class;
-  protected $customOutputDataType = '';
-  /**
-   * @var string
-   */
-  public $explanation;
+  protected $collection_key = 'rubricCritiqueResults';
+  protected $rubricCritiqueResultsType = GoogleCloudAiplatformV1RubricCritiqueResult::class;
+  protected $rubricCritiqueResultsDataType = 'array';
   /**
    * @var float
    */
   public $score;
 
   /**
-   * @param GoogleCloudAiplatformV1CustomOutput
+   * @param GoogleCloudAiplatformV1RubricCritiqueResult[]
    */
-  public function setCustomOutput(GoogleCloudAiplatformV1CustomOutput $customOutput)
+  public function setRubricCritiqueResults($rubricCritiqueResults)
   {
-    $this->customOutput = $customOutput;
+    $this->rubricCritiqueResults = $rubricCritiqueResults;
   }
   /**
-   * @return GoogleCloudAiplatformV1CustomOutput
+   * @return GoogleCloudAiplatformV1RubricCritiqueResult[]
    */
-  public function getCustomOutput()
+  public function getRubricCritiqueResults()
   {
-    return $this->customOutput;
-  }
-  /**
-   * @param string
-   */
-  public function setExplanation($explanation)
-  {
-    $this->explanation = $explanation;
-  }
-  /**
-   * @return string
-   */
-  public function getExplanation()
-  {
-    return $this->explanation;
+    return $this->rubricCritiqueResults;
   }
   /**
    * @param float
@@ -75,4 +58,4 @@ class GoogleCloudAiplatformV1PointwiseMetricResult extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1PointwiseMetricResult::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1PointwiseMetricResult');
+class_alias(GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RubricBasedInstructionFollowingResult');
