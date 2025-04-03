@@ -100,8 +100,8 @@ class SpacesMessagesReactions extends \Google\Service\Resource
    * AND emoji.custom_emoji.uid = "{uid}" emoji.unicode = "🙂" OR user.name =
    * "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid = "{uid}" OR
    * user.name = "users/{user}" emoji.unicode = "🙂" OR emoji.custom_emoji.uid =
-   * "{uid}" AND user.name = "users/{user}" ``` Invalid queries are rejected by
-   * the server with an `INVALID_ARGUMENT` error.
+   * "{uid}" AND user.name = "users/{user}" ``` Invalid queries are rejected with
+   * an `INVALID_ARGUMENT` error.
    * @opt_param int pageSize Optional. The maximum number of reactions returned.
    * The service can return fewer reactions than this value. If unspecified, the
    * default value is 25. The maximum value is 200; values above 200 are changed
