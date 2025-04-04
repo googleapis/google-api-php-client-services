@@ -20,20 +20,12 @@ namespace Google\Service\Reports;
 class ResourceDetails extends \Google\Collection
 {
   protected $collection_key = 'appliedLabels';
-  /**
-   * @var string
-   */
-  public $applicationId;
   protected $appliedLabelsType = AppliedLabel::class;
   protected $appliedLabelsDataType = 'array';
   /**
    * @var string
    */
   public $id;
-  /**
-   * @var string
-   */
-  public $ownerEmail;
   /**
    * @var string
    */
@@ -47,20 +39,6 @@ class ResourceDetails extends \Google\Collection
    */
   public $type;
 
-  /**
-   * @param string
-   */
-  public function setApplicationId($applicationId)
-  {
-    $this->applicationId = $applicationId;
-  }
-  /**
-   * @return string
-   */
-  public function getApplicationId()
-  {
-    return $this->applicationId;
-  }
   /**
    * @param AppliedLabel[]
    */
@@ -88,20 +66,6 @@ class ResourceDetails extends \Google\Collection
   public function getId()
   {
     return $this->id;
-  }
-  /**
-   * @param string
-   */
-  public function setOwnerEmail($ownerEmail)
-  {
-    $this->ownerEmail = $ownerEmail;
-  }
-  /**
-   * @return string
-   */
-  public function getOwnerEmail()
-  {
-    return $this->ownerEmail;
   }
   /**
    * @param string
