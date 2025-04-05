@@ -3,7 +3,7 @@
 
 namespace {{ api.ownerName }}\Service\{{ api.className }};
 {% if model.superClass %}
-use {{ api.ownerName }}\Service\{{ api.className }}\{{ model.superClass }}
+use {{ api.ownerName }}\Service\{{ api.className }}\{{ model.superClass }};
 {% endif %}
 class {{ model.className }} extends {% if model.superClass %}{{ model.superClass }}{% else %}{% if model.dataType == "array" %}\Google\Collection{% else %}\Google\Model{% endif %}{% endif %}
 {{% if model.properties %}
