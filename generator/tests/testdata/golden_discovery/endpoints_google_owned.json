@@ -25,13 +25,17 @@
  "parameters": {
   "alt": {
    "type": "string",
-   "description": "Data format for the response.",
+   "description": "Data format for response.",
    "default": "json",
    "enum": [
-    "json"
+    "json",
+    "media",
+    "proto"
    ],
    "enumDescriptions": [
-    "Responses with Content-Type of application/json"
+    "Responses with Content-Type of application/json",
+    "Media download with context-dependent Content-Type",
+    "Responses with Content-Type of application/x-protobuf"
    ],
    "location": "query"
   },
@@ -98,6 +102,31 @@
      "items": {
       "$ref": "HelloGreeting"
      }
+    },
+    "type": {
+     "description": "Required. The type of this collection.",
+     "enum": [
+      "TYPE_UNSPECIFIED",
+      "TYPE_1",
+      "type1",
+      "TYPE_2",
+      "OTHER"
+     ],
+     "enumDeprecated": [
+      false,
+      false,
+      true,
+      false,
+      false
+     ],
+     "enumDescriptions": [
+      "",
+      "",
+      "Legacy alias for `TYPE_1`. Deprecated.",
+      "",
+      ""
+     ],
+     "type": "string"
     }
    }
   }
