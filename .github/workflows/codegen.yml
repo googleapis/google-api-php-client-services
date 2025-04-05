@@ -9,7 +9,7 @@ jobs:
   discovery:
     uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
   batch:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: discovery
     outputs:
       services: ${{ steps.chunk.outputs.result }}
@@ -32,7 +32,7 @@ jobs:
             }
             return result
   generate_batch1:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: batch
     strategy:
       fail-fast: false
@@ -75,7 +75,7 @@ jobs:
           fork: true
 
   generate_batch2:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: batch
     strategy:
       fail-fast: false
