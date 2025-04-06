@@ -455,6 +455,16 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'toggleHttp' => [
+              'path' => 'v1/{+parent}/clients:toggleHttp',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]

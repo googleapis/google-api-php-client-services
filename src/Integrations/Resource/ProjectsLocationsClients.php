@@ -22,6 +22,7 @@ use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaProvisionClientReq
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaSwitchVariableMaskingRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaToggleHttpRequest;
 use Google\Service\Integrations\GoogleProtobufEmpty;
 
 /**
@@ -117,6 +118,22 @@ class ProjectsLocationsClients extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('switchVariableMasking', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Enable/Disable http call for provisioned client (clients.toggleHttp)
+   *
+   * @param string $parent Required. Required: The ID of the GCP Project to be
+   * provisioned.
+   * @param GoogleCloudIntegrationsV1alphaToggleHttpRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleProtobufEmpty
+   * @throws \Google\Service\Exception
+   */
+  public function toggleHttp($parent, GoogleCloudIntegrationsV1alphaToggleHttpRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('toggleHttp', [$params], GoogleProtobufEmpty::class);
   }
 }
 
