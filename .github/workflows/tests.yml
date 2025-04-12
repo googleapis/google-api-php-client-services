@@ -31,7 +31,7 @@ jobs:
             - name: Run Script
               run: vendor/bin/phpunit
     generator:
-        runs-on: ubuntu-22.04
+        runs-on: ubuntu-24.04
         name: Generator Unit Tests
         steps:
             - uses: actions/checkout@v4
