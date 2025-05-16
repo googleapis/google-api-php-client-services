@@ -129,6 +129,16 @@ class Networkconnectivity extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'acceptSpokeUpdate' => [
+              'path' => 'v1/{+name}:acceptSpokeUpdate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'create' => [
               'path' => 'v1/{+parent}/hubs',
               'httpMethod' => 'POST',
@@ -296,6 +306,16 @@ class Networkconnectivity extends \Google\Service
               ],
             ],'rejectSpoke' => [
               'path' => 'v1/{+name}:rejectSpoke',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'rejectSpokeUpdate' => [
+              'path' => 'v1/{+name}:rejectSpokeUpdate',
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [

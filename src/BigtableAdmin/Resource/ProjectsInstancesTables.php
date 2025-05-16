@@ -246,8 +246,8 @@ class ProjectsInstancesTables extends \Google\Service\Resource
    * `change_stream_config` * `change_stream_config.retention_period` *
    * `deletion_protection` * `automated_backup_policy` *
    * `automated_backup_policy.retention_period` *
-   * `automated_backup_policy.frequency` If `column_families` is set in
-   * `update_mask`, it will return an UNIMPLEMENTED error.
+   * `automated_backup_policy.frequency` * `row_key_schema` If `column_families`
+   * is set in `update_mask`, it will return an UNIMPLEMENTED error.
    * @return Operation
    * @throws \Google\Service\Exception
    */

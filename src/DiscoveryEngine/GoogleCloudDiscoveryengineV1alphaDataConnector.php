@@ -22,6 +22,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   protected $collection_key = 'staticIpAddresses';
   protected $actionConfigType = GoogleCloudDiscoveryengineV1alphaActionConfig::class;
   protected $actionConfigDataType = '';
+  protected $alertPolicyConfigsType = GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig::class;
+  protected $alertPolicyConfigsDataType = 'array';
   /**
    * @var bool
    */
@@ -32,6 +34,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var string[]
    */
   public $blockingReasons;
+  /**
+   * @var string
+   */
+  public $connectorType;
   /**
    * @var string
    */
@@ -81,6 +87,12 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   /**
    * @var string
    */
+  public $realtimeState;
+  protected $realtimeSyncConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig::class;
+  protected $realtimeSyncConfigDataType = '';
+  /**
+   * @var string
+   */
   public $refreshInterval;
   /**
    * @var string
@@ -116,6 +128,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getActionConfig()
   {
     return $this->actionConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
+   */
+  public function setAlertPolicyConfigs($alertPolicyConfigs)
+  {
+    $this->alertPolicyConfigs = $alertPolicyConfigs;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
+   */
+  public function getAlertPolicyConfigs()
+  {
+    return $this->alertPolicyConfigs;
   }
   /**
    * @param bool
@@ -158,6 +184,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getBlockingReasons()
   {
     return $this->blockingReasons;
+  }
+  /**
+   * @param string
+   */
+  public function setConnectorType($connectorType)
+  {
+    $this->connectorType = $connectorType;
+  }
+  /**
+   * @return string
+   */
+  public function getConnectorType()
+  {
+    return $this->connectorType;
   }
   /**
    * @param string
@@ -354,6 +394,34 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getPrivateConnectivityProjectId()
   {
     return $this->privateConnectivityProjectId;
+  }
+  /**
+   * @param string
+   */
+  public function setRealtimeState($realtimeState)
+  {
+    $this->realtimeState = $realtimeState;
+  }
+  /**
+   * @return string
+   */
+  public function getRealtimeState()
+  {
+    return $this->realtimeState;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig
+   */
+  public function setRealtimeSyncConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig $realtimeSyncConfig)
+  {
+    $this->realtimeSyncConfig = $realtimeSyncConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig
+   */
+  public function getRealtimeSyncConfig()
+  {
+    return $this->realtimeSyncConfig;
   }
   /**
    * @param string

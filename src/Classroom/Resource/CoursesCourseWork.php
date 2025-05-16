@@ -231,8 +231,7 @@ class CoursesCourseWork extends \Google\Service\Resource
    * error is returned. The following fields may be specified by teachers: *
    * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` *
    * `scheduled_time` * `submission_modification_mode` * `topic_id` *
-   * `grading_period_id` Available in [V1_20240401_PREVIEW](https://developers.goo
-   * gle.com/classroom/reference/preview) and later.
+   * `grading_period_id`
    * @return CourseWork
    * @throws \Google\Service\Exception
    */

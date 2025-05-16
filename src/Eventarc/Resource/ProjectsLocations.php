@@ -46,7 +46,8 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('get', [$params], Location::class);
   }
   /**
-   * Get a GoogleChannelConfig (locations.getGoogleChannelConfig)
+   * Get a GoogleChannelConfig. The name of the GoogleChannelConfig in the
+   * response is ALWAYS coded with projectID. (locations.getGoogleChannelConfig)
    *
    * @param string $name Required. The name of the config to get.
    * @param array $optParams Optional parameters.
@@ -87,7 +88,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * Update a single GoogleChannelConfig (locations.updateGoogleChannelConfig)
    *
    * @param string $name Required. The resource name of the config. Must be in the
-   * format of, `projects/{project}/locations/{location}/googleChannelConfig`.
+   * format of, `projects/{project}/locations/{location}/googleChannelConfig`. In
+   * API responses, the config name always includes the projectID, regardless of
+   * whether the projectID or projectNumber was provided.
    * @param GoogleChannelConfig $postBody
    * @param array $optParams Optional parameters.
    *

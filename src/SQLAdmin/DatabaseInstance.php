@@ -56,6 +56,8 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $dnsName;
+  protected $dnsNamesType = DnsNameMapping::class;
+  protected $dnsNamesDataType = 'array';
   /**
    * @var string
    */
@@ -102,6 +104,12 @@ class DatabaseInstance extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var int
+   */
+  public $nodeCount;
+  protected $nodesType = PoolNodeConfig::class;
+  protected $nodesDataType = 'array';
   protected $onPremisesConfigurationType = OnPremisesConfiguration::class;
   protected $onPremisesConfigurationDataType = '';
   protected $outOfDiskReportType = SqlOutOfDiskReport::class;
@@ -328,6 +336,20 @@ class DatabaseInstance extends \Google\Collection
     return $this->dnsName;
   }
   /**
+   * @param DnsNameMapping[]
+   */
+  public function setDnsNames($dnsNames)
+  {
+    $this->dnsNames = $dnsNames;
+  }
+  /**
+   * @return DnsNameMapping[]
+   */
+  public function getDnsNames()
+  {
+    return $this->dnsNames;
+  }
+  /**
    * @param string
    */
   public function setEtag($etag)
@@ -508,6 +530,34 @@ class DatabaseInstance extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param int
+   */
+  public function setNodeCount($nodeCount)
+  {
+    $this->nodeCount = $nodeCount;
+  }
+  /**
+   * @return int
+   */
+  public function getNodeCount()
+  {
+    return $this->nodeCount;
+  }
+  /**
+   * @param PoolNodeConfig[]
+   */
+  public function setNodes($nodes)
+  {
+    $this->nodes = $nodes;
+  }
+  /**
+   * @return PoolNodeConfig[]
+   */
+  public function getNodes()
+  {
+    return $this->nodes;
   }
   /**
    * @param OnPremisesConfiguration

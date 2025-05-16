@@ -66,6 +66,10 @@ class ProjectsLocationsDataExchangesListings extends \Google\Service\Resource
    * @param string $name Required. Resource name of the listing to delete. e.g.
    * `projects/myproject/locations/US/dataExchanges/123/listings/456`.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool deleteCommercial Optional. If the listing is commercial then
+   * this field must be set to true, otherwise a failure is thrown. This acts as a
+   * safety guard to avoid deleting commercial listings accidentally.
    * @return AnalyticshubEmpty
    * @throws \Google\Service\Exception
    */

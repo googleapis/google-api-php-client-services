@@ -176,6 +176,8 @@ class Cluster extends \Google\Collection
   protected $notificationConfigDataType = '';
   protected $parentProductConfigType = ParentProductConfig::class;
   protected $parentProductConfigDataType = '';
+  protected $podAutoscalingType = PodAutoscaling::class;
+  protected $podAutoscalingDataType = '';
   protected $privateClusterConfigType = PrivateClusterConfig::class;
   protected $privateClusterConfigDataType = '';
   protected $rbacBindingConfigType = RBACBindingConfig::class;
@@ -1006,6 +1008,20 @@ class Cluster extends \Google\Collection
   public function getParentProductConfig()
   {
     return $this->parentProductConfig;
+  }
+  /**
+   * @param PodAutoscaling
+   */
+  public function setPodAutoscaling(PodAutoscaling $podAutoscaling)
+  {
+    $this->podAutoscaling = $podAutoscaling;
+  }
+  /**
+   * @return PodAutoscaling
+   */
+  public function getPodAutoscaling()
+  {
+    return $this->podAutoscaling;
   }
   /**
    * @param PrivateClusterConfig

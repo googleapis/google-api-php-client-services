@@ -80,31 +80,7 @@ class BeyondCorp extends \Google\Service
         'partnerTenants',
         [
           'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
+            'testIamPermissions' => [
               'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -124,31 +100,7 @@ class BeyondCorp extends \Google\Service
         'browserDlpRules',
         [
           'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
+            'testIamPermissions' => [
               'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -168,31 +120,7 @@ class BeyondCorp extends \Google\Service
         'proxyConfigs',
         [
           'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
+            'testIamPermissions' => [
               'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -840,16 +768,6 @@ class BeyondCorp extends \Google\Service
                 'options.requestedPolicyVersion' => [
                   'location' => 'query',
                   'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],'testIamPermissions' => [

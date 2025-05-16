@@ -46,6 +46,10 @@ class VmwareAdminCluster extends \Google\Model
    */
   public $description;
   /**
+   * @var bool
+   */
+  public $enableAdvancedCluster;
+  /**
    * @var string
    */
   public $endpoint;
@@ -227,6 +231,20 @@ class VmwareAdminCluster extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableAdvancedCluster($enableAdvancedCluster)
+  {
+    $this->enableAdvancedCluster = $enableAdvancedCluster;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableAdvancedCluster()
+  {
+    return $this->enableAdvancedCluster;
   }
   /**
    * @param string

@@ -150,6 +150,8 @@ class ClusterUpdate extends \Google\Collection
   protected $desiredNotificationConfigDataType = '';
   protected $desiredParentProductConfigType = ParentProductConfig::class;
   protected $desiredParentProductConfigDataType = '';
+  protected $desiredPodAutoscalingType = PodAutoscaling::class;
+  protected $desiredPodAutoscalingDataType = '';
   protected $desiredPrivateClusterConfigType = PrivateClusterConfig::class;
   protected $desiredPrivateClusterConfigDataType = '';
   /**
@@ -888,6 +890,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredParentProductConfig()
   {
     return $this->desiredParentProductConfig;
+  }
+  /**
+   * @param PodAutoscaling
+   */
+  public function setDesiredPodAutoscaling(PodAutoscaling $desiredPodAutoscaling)
+  {
+    $this->desiredPodAutoscaling = $desiredPodAutoscaling;
+  }
+  /**
+   * @return PodAutoscaling
+   */
+  public function getDesiredPodAutoscaling()
+  {
+    return $this->desiredPodAutoscaling;
   }
   /**
    * @param PrivateClusterConfig

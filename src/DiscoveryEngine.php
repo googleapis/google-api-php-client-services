@@ -40,6 +40,7 @@ class DiscoveryEngine extends \Google\Service
 
   public $projects;
   public $projects_locations;
+  public $projects_locations_cmekConfigs;
   public $projects_locations_collections_dataConnector_operations;
   public $projects_locations_collections_dataStores;
   public $projects_locations_collections_dataStores_branches;
@@ -93,6 +94,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_identityMappingStores;
   public $projects_locations_identityMappingStores_operations;
   public $projects_locations_operations;
+  public $projects_locations_podcasts_operations;
   public $projects_locations_rankingConfigs;
   public $projects_locations_userEvents;
   public $projects_operations;
@@ -141,14 +143,82 @@ class DiscoveryEngine extends \Google\Service
         'locations',
         [
           'methods' => [
-            'generateGroundedContent' => [
-              'path' => 'v1/{+location}:generateGroundedContent',
-              'httpMethod' => 'POST',
+            'getCmekConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
               'parameters' => [
-                'location' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'updateCmekConfig' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'setDefault' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_cmekConfigs = new DiscoveryEngine\Resource\ProjectsLocationsCmekConfigs(
+        $this,
+        $this->serviceName,
+        'cmekConfigs',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/cmekConfigs',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'setDefault' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -3321,6 +3391,26 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_podcasts_operations = new DiscoveryEngine\Resource\ProjectsLocationsPodcastsOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

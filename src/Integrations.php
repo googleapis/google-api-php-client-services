@@ -455,6 +455,16 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'toggleHttp' => [
+              'path' => 'v1/{+parent}/clients:toggleHttp',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],
           ]
         ]
@@ -667,6 +677,36 @@ class Integrations extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'search' => [
+              'path' => 'v1/{+parent}/integrations:search',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'enableNaturalLanguageQueryUnderstanding' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'query' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],'test' => [
@@ -1139,40 +1179,6 @@ class Integrations extends \Google\Service
                 'readMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'listExecutions' => [
-              'path' => 'v1/{+parent}:executions',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'orderBy' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'readMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'truncateParams' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
                 ],
               ],
             ],'patch' => [

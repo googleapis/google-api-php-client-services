@@ -138,6 +138,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   protected $photosDataType = 'array';
   protected $plusCodeType = GoogleMapsPlacesV1PlacePlusCode::class;
   protected $plusCodeDataType = '';
+  protected $postalAddressType = GoogleTypePostalAddress::class;
+  protected $postalAddressDataType = '';
   /**
    * @var string
    */
@@ -219,6 +221,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var bool
    */
   public $takeout;
+  protected $timeZoneType = GoogleTypeTimeZone::class;
+  protected $timeZoneDataType = '';
   /**
    * @var string[]
    */
@@ -785,6 +789,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
     return $this->plusCode;
   }
   /**
+   * @param GoogleTypePostalAddress
+   */
+  public function setPostalAddress(GoogleTypePostalAddress $postalAddress)
+  {
+    $this->postalAddress = $postalAddress;
+  }
+  /**
+   * @return GoogleTypePostalAddress
+   */
+  public function getPostalAddress()
+  {
+    return $this->postalAddress;
+  }
+  /**
    * @param string
    */
   public function setPriceLevel($priceLevel)
@@ -1113,6 +1131,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getTakeout()
   {
     return $this->takeout;
+  }
+  /**
+   * @param GoogleTypeTimeZone
+   */
+  public function setTimeZone(GoogleTypeTimeZone $timeZone)
+  {
+    $this->timeZone = $timeZone;
+  }
+  /**
+   * @return GoogleTypeTimeZone
+   */
+  public function getTimeZone()
+  {
+    return $this->timeZone;
   }
   /**
    * @param string[]

@@ -34,6 +34,8 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   protected $contentSearchSpecDataType = '';
   protected $dataStoreSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestDataStoreSpec::class;
   protected $dataStoreSpecsDataType = 'array';
+  protected $displaySpecType = GoogleCloudDiscoveryengineV1betaSearchRequestDisplaySpec::class;
+  protected $displaySpecDataType = '';
   protected $embeddingSpecType = GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec::class;
   protected $embeddingSpecDataType = '';
   protected $facetSpecsType = GoogleCloudDiscoveryengineV1betaSearchRequestFacetSpec::class;
@@ -198,6 +200,20 @@ class GoogleCloudDiscoveryengineV1betaSearchRequest extends \Google\Collection
   public function getDataStoreSpecs()
   {
     return $this->dataStoreSpecs;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1betaSearchRequestDisplaySpec
+   */
+  public function setDisplaySpec(GoogleCloudDiscoveryengineV1betaSearchRequestDisplaySpec $displaySpec)
+  {
+    $this->displaySpec = $displaySpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1betaSearchRequestDisplaySpec
+   */
+  public function getDisplaySpec()
+  {
+    return $this->displaySpec;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1betaSearchRequestEmbeddingSpec

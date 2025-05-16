@@ -59,11 +59,19 @@ class Subnetwork extends \Google\Collection
   /**
    * @var string
    */
+  public $ipCollection;
+  /**
+   * @var string
+   */
   public $ipv6AccessType;
   /**
    * @var string
    */
   public $ipv6CidrRange;
+  /**
+   * @var string
+   */
+  public $ipv6GceEndpoint;
   /**
    * @var string
    */
@@ -246,6 +254,20 @@ class Subnetwork extends \Google\Collection
   /**
    * @param string
    */
+  public function setIpCollection($ipCollection)
+  {
+    $this->ipCollection = $ipCollection;
+  }
+  /**
+   * @return string
+   */
+  public function getIpCollection()
+  {
+    return $this->ipCollection;
+  }
+  /**
+   * @param string
+   */
   public function setIpv6AccessType($ipv6AccessType)
   {
     $this->ipv6AccessType = $ipv6AccessType;
@@ -270,6 +292,20 @@ class Subnetwork extends \Google\Collection
   public function getIpv6CidrRange()
   {
     return $this->ipv6CidrRange;
+  }
+  /**
+   * @param string
+   */
+  public function setIpv6GceEndpoint($ipv6GceEndpoint)
+  {
+    $this->ipv6GceEndpoint = $ipv6GceEndpoint;
+  }
+  /**
+   * @return string
+   */
+  public function getIpv6GceEndpoint()
+  {
+    return $this->ipv6GceEndpoint;
   }
   /**
    * @param string

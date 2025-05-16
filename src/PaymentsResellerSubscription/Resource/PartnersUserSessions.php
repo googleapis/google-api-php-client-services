@@ -32,10 +32,10 @@ class PartnersUserSessions extends \Google\Service\Resource
 {
   /**
    * This API replaces user authorized OAuth consent based APIs (Create, Entitle).
-   * Generates a short-lived token for a user session based on the user intent.
-   * You can use the session token to redirect the user to Google to finish the
-   * signup flow. You can re-generate new session token repeatedly for the same
-   * request if necessary, regardless of the previous tokens being expired or not.
+   * Issues a timed session token for the given user intent. You can use the
+   * session token to redirect the user to Google to finish the signup flow. You
+   * can re-generate new session token repeatedly for the same request if
+   * necessary, regardless of the previous tokens being expired or not.
    * (userSessions.generate)
    *
    * @param string $parent Required. The parent, the partner that can resell.
