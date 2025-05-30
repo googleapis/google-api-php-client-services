@@ -40,11 +40,34 @@ class ManagedKafka extends \Google\Service
 
   public $projects_locations;
   public $projects_locations_clusters;
+  public $projects_locations_clusters_acls;
   public $projects_locations_clusters_consumerGroups;
   public $projects_locations_clusters_topics;
   public $projects_locations_connectClusters;
   public $projects_locations_connectClusters_connectors;
   public $projects_locations_operations;
+  public $projects_locations_schemaRegistries;
+  public $projects_locations_schemaRegistries_compatibility;
+  public $projects_locations_schemaRegistries_config;
+  public $projects_locations_schemaRegistries_contexts;
+  public $projects_locations_schemaRegistries_contexts_compatibility;
+  public $projects_locations_schemaRegistries_contexts_config;
+  public $projects_locations_schemaRegistries_contexts_mode;
+  public $projects_locations_schemaRegistries_contexts_schemas;
+  public $projects_locations_schemaRegistries_contexts_schemas_subjects;
+  public $projects_locations_schemaRegistries_contexts_schemas_types;
+  public $projects_locations_schemaRegistries_contexts_schemas_versions;
+  public $projects_locations_schemaRegistries_contexts_subjects;
+  public $projects_locations_schemaRegistries_contexts_subjects_versions;
+  public $projects_locations_schemaRegistries_contexts_subjects_versions_referencedby;
+  public $projects_locations_schemaRegistries_mode;
+  public $projects_locations_schemaRegistries_schemas;
+  public $projects_locations_schemaRegistries_schemas_subjects;
+  public $projects_locations_schemaRegistries_schemas_types;
+  public $projects_locations_schemaRegistries_schemas_versions;
+  public $projects_locations_schemaRegistries_subjects;
+  public $projects_locations_schemaRegistries_subjects_versions;
+  public $projects_locations_schemaRegistries_subjects_versions_referencedby;
   public $rootUrlTemplate;
 
   /**
@@ -201,6 +224,102 @@ class ManagedKafka extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_clusters_acls = new ManagedKafka\Resource\ProjectsLocationsClustersAcls(
+        $this,
+        $this->serviceName,
+        'acls',
+        [
+          'methods' => [
+            'addAclEntry' => [
+              'path' => 'v1/{+acl}:addAclEntry',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'acl' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'create' => [
+              'path' => 'v1/{+parent}/acls',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'aclId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/acls',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'removeAclEntry' => [
+              'path' => 'v1/{+acl}:removeAclEntry',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'acl' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -613,6 +732,798 @@ class ManagedKafka extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistries(
+        $this,
+        $this->serviceName,
+        'schemaRegistries',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/schemaRegistries',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/schemaRegistries',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_compatibility = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesCompatibility(
+        $this,
+        $this->serviceName,
+        'compatibility',
+        [
+          'methods' => [
+            'checkCompatibility' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_config = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesConfig(
+        $this,
+        $this->serviceName,
+        'config',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'defaultToGlobal' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContexts(
+        $this,
+        $this->serviceName,
+        'contexts',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/contexts',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_compatibility = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsCompatibility(
+        $this,
+        $this->serviceName,
+        'compatibility',
+        [
+          'methods' => [
+            'checkCompatibility' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_config = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsConfig(
+        $this,
+        $this->serviceName,
+        'config',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'defaultToGlobal' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_mode = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsMode(
+        $this,
+        $this->serviceName,
+        'mode',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_schemas = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSchemas(
+        $this,
+        $this->serviceName,
+        'schemas',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'getSchema' => [
+              'path' => 'v1/{+name}/schema',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_schemas_subjects = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSchemasSubjects(
+        $this,
+        $this->serviceName,
+        'subjects',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/subjects',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_schemas_types = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSchemasTypes(
+        $this,
+        $this->serviceName,
+        'types',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/schemas/types',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_schemas_versions = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSchemasVersions(
+        $this,
+        $this->serviceName,
+        'versions',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/versions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_subjects = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSubjects(
+        $this,
+        $this->serviceName,
+        'subjects',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'permanent' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/subjects',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'subjectPrefix' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'lookupVersion' => [
+              'path' => 'v1/{+parent}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_subjects_versions = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSubjectsVersions(
+        $this,
+        $this->serviceName,
+        'versions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/versions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'permanent' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'getSchema' => [
+              'path' => 'v1/{+name}/schema',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/versions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_contexts_subjects_versions_referencedby = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesContextsSubjectsVersionsReferencedby(
+        $this,
+        $this->serviceName,
+        'referencedby',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/referencedby',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_mode = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesMode(
+        $this,
+        $this->serviceName,
+        'mode',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'update' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PUT',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_schemas = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSchemas(
+        $this,
+        $this->serviceName,
+        'schemas',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'getSchema' => [
+              'path' => 'v1/{+name}/schema',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_schemas_subjects = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSchemasSubjects(
+        $this,
+        $this->serviceName,
+        'subjects',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/subjects',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_schemas_types = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSchemasTypes(
+        $this,
+        $this->serviceName,
+        'types',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/schemas/types',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_schemas_versions = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSchemasVersions(
+        $this,
+        $this->serviceName,
+        'versions',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/versions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'subject' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_subjects = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSubjects(
+        $this,
+        $this->serviceName,
+        'subjects',
+        [
+          'methods' => [
+            'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'permanent' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/subjects',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'subjectPrefix' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'lookupVersion' => [
+              'path' => 'v1/{+parent}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_subjects_versions = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSubjectsVersions(
+        $this,
+        $this->serviceName,
+        'versions',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/versions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'permanent' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'getSchema' => [
+              'path' => 'v1/{+name}/schema',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/versions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deleted' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_schemaRegistries_subjects_versions_referencedby = new ManagedKafka\Resource\ProjectsLocationsSchemaRegistriesSubjectsVersionsReferencedby(
+        $this,
+        $this->serviceName,
+        'referencedby',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/referencedby',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
