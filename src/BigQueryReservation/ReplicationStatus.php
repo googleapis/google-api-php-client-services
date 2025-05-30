@@ -29,6 +29,10 @@ class ReplicationStatus extends \Google\Model
    * @var string
    */
   public $lastReplicationTime;
+  /**
+   * @var string
+   */
+  public $softFailoverStartTime;
 
   /**
    * @param Status
@@ -71,6 +75,20 @@ class ReplicationStatus extends \Google\Model
   public function getLastReplicationTime()
   {
     return $this->lastReplicationTime;
+  }
+  /**
+   * @param string
+   */
+  public function setSoftFailoverStartTime($softFailoverStartTime)
+  {
+    $this->softFailoverStartTime = $softFailoverStartTime;
+  }
+  /**
+   * @return string
+   */
+  public function getSoftFailoverStartTime()
+  {
+    return $this->softFailoverStartTime;
   }
 }
 

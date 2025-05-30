@@ -1038,6 +1038,10 @@ class Drive extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'enforceExpansiveAccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'enforceSingleParent' => [
                   'location' => 'query',
                   'type' => 'boolean',

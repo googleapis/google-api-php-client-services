@@ -113,6 +113,8 @@ class ProjectsLocationsReasoningEngines extends \Google\Service\Resource
    * Updates a reasoning engine. (reasoningEngines.patch)
    *
    * @param string $name Identifier. The resource name of the ReasoningEngine.
+   * Format:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}`
    * @param GoogleCloudAiplatformV1ReasoningEngine $postBody
    * @param array $optParams Optional parameters.
    *
