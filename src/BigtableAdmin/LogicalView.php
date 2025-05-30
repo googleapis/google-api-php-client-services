@@ -20,6 +20,10 @@ namespace Google\Service\BigtableAdmin;
 class LogicalView extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $deletionProtection;
+  /**
    * @var string
    */
   public $etag;
@@ -32,6 +36,20 @@ class LogicalView extends \Google\Model
    */
   public $query;
 
+  /**
+   * @param bool
+   */
+  public function setDeletionProtection($deletionProtection)
+  {
+    $this->deletionProtection = $deletionProtection;
+  }
+  /**
+   * @return bool
+   */
+  public function getDeletionProtection()
+  {
+    return $this->deletionProtection;
+  }
   /**
    * @param string
    */
