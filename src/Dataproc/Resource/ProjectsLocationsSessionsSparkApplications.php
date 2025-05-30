@@ -19,8 +19,6 @@ namespace Google\Service\Dataproc\Resource;
 
 use Google\Service\Dataproc\AccessSessionSparkApplicationEnvironmentInfoResponse;
 use Google\Service\Dataproc\AccessSessionSparkApplicationJobResponse;
-use Google\Service\Dataproc\AccessSessionSparkApplicationNativeBuildInfoResponse;
-use Google\Service\Dataproc\AccessSessionSparkApplicationNativeSqlQueryResponse;
 use Google\Service\Dataproc\AccessSessionSparkApplicationResponse;
 use Google\Service\Dataproc\AccessSessionSparkApplicationSqlQueryResponse;
 use Google\Service\Dataproc\AccessSessionSparkApplicationSqlSparkPlanGraphResponse;
@@ -29,7 +27,6 @@ use Google\Service\Dataproc\AccessSessionSparkApplicationStageRddOperationGraphR
 use Google\Service\Dataproc\SearchSessionSparkApplicationExecutorStageSummaryResponse;
 use Google\Service\Dataproc\SearchSessionSparkApplicationExecutorsResponse;
 use Google\Service\Dataproc\SearchSessionSparkApplicationJobsResponse;
-use Google\Service\Dataproc\SearchSessionSparkApplicationNativeSqlQueriesResponse;
 use Google\Service\Dataproc\SearchSessionSparkApplicationSqlQueriesResponse;
 use Google\Service\Dataproc\SearchSessionSparkApplicationStageAttemptTasksResponse;
 use Google\Service\Dataproc\SearchSessionSparkApplicationStageAttemptsResponse;
@@ -109,45 +106,6 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('accessJob', [$params], AccessSessionSparkApplicationJobResponse::class);
-  }
-  /**
-   * Obtain data corresponding to Native Build Information for a Spark
-   * Application. (sparkApplications.accessNativeBuildInfo)
-   *
-   * @param string $name Required. The fully qualified name of the session to
-   * retrieve in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/session
-   * s/SESSION_ID/sparkApplications/APPLICATION_ID"
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent Required. Parent (Session) resource reference.
-   * @return AccessSessionSparkApplicationNativeBuildInfoResponse
-   * @throws \Google\Service\Exception
-   */
-  public function accessNativeBuildInfo($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('accessNativeBuildInfo', [$params], AccessSessionSparkApplicationNativeBuildInfoResponse::class);
-  }
-  /**
-   * Obtain data corresponding to a particular Native SQL Query for a Spark
-   * Application. (sparkApplications.accessNativeSqlQuery)
-   *
-   * @param string $name Required. The fully qualified name of the session to
-   * retrieve in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/session
-   * s/SESSION_ID/sparkApplications/APPLICATION_ID"
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string executionId Required. Execution ID
-   * @opt_param string parent Required. Parent (Session) resource reference.
-   * @return AccessSessionSparkApplicationNativeSqlQueryResponse
-   * @throws \Google\Service\Exception
-   */
-  public function accessNativeSqlQuery($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('accessNativeSqlQuery', [$params], AccessSessionSparkApplicationNativeSqlQueryResponse::class);
   }
   /**
    * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the
@@ -333,6 +291,7 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
    * s/SESSION_ID/sparkApplications/APPLICATION_ID"
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string jobIds Optional. List of Job IDs to filter by if provided.
    * @opt_param string jobStatus Optional. List only jobs in the specific state.
    * @opt_param int pageSize Optional. Maximum number of jobs to return in each
    * response. The service may return fewer than this. The default page size is
@@ -351,31 +310,6 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
     return $this->call('searchJobs', [$params], SearchSessionSparkApplicationJobsResponse::class);
   }
   /**
-   * Obtain data corresponding to Native SQL Queries for a Spark Application.
-   * (sparkApplications.searchNativeSqlQueries)
-   *
-   * @param string $name Required. The fully qualified name of the session to
-   * retrieve in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/session
-   * s/SESSION_ID/sparkApplications/APPLICATION_ID"
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int pageSize Optional. Maximum number of queries to return in each
-   * response. The service may return fewer than this. The default page size is
-   * 10; the maximum page size is 100.
-   * @opt_param string pageToken Optional. A page token received from a previous
-   * SearchSessionSparkApplicationSqlQueries call. Provide this token to retrieve
-   * the subsequent page.
-   * @opt_param string parent Required. Parent (Session) resource reference.
-   * @return SearchSessionSparkApplicationNativeSqlQueriesResponse
-   * @throws \Google\Service\Exception
-   */
-  public function searchNativeSqlQueries($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('searchNativeSqlQueries', [$params], SearchSessionSparkApplicationNativeSqlQueriesResponse::class);
-  }
-  /**
    * Obtain data corresponding to SQL Queries for a Spark Application.
    * (sparkApplications.searchSqlQueries)
    *
@@ -386,6 +320,8 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
    *
    * @opt_param bool details Optional. Lists/ hides details of Spark plan nodes.
    * True is set to list and false to hide.
+   * @opt_param string operationIds Optional. List of Spark Connect operation IDs
+   * to filter by if provided.
    * @opt_param int pageSize Optional. Maximum number of queries to return in each
    * response. The service may return fewer than this. The default page size is
    * 10; the maximum page size is 100.
@@ -480,6 +416,8 @@ class ProjectsLocationsSessionsSparkApplications extends \Google\Service\Resourc
    * SearchSessionSparkApplicationStages call. Provide this token to retrieve the
    * subsequent page.
    * @opt_param string parent Required. Parent (Session) resource reference.
+   * @opt_param string stageIds Optional. List of Stage IDs to filter by if
+   * provided.
    * @opt_param string stageStatus Optional. List only stages in the given state.
    * @opt_param string summaryMetricsMask Optional. The list of summary metrics
    * fields to include. Empty list will default to skip all summary metrics
