@@ -133,6 +133,10 @@ class Policy extends \Google\Collection
    */
   public $ensureVerifyAppsEnabled;
   /**
+   * @var string
+   */
+  public $enterpriseDisplayNameVisibility;
+  /**
    * @var bool
    */
   public $factoryResetDisabled;
@@ -342,6 +346,8 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $wifiConfigsLockdownEnabled;
+  protected $workAccountSetupConfigType = WorkAccountSetupConfig::class;
+  protected $workAccountSetupConfigDataType = '';
 
   /**
    * @param string[]
@@ -804,6 +810,20 @@ class Policy extends \Google\Collection
   public function getEnsureVerifyAppsEnabled()
   {
     return $this->ensureVerifyAppsEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setEnterpriseDisplayNameVisibility($enterpriseDisplayNameVisibility)
+  {
+    $this->enterpriseDisplayNameVisibility = $enterpriseDisplayNameVisibility;
+  }
+  /**
+   * @return string
+   */
+  public function getEnterpriseDisplayNameVisibility()
+  {
+    return $this->enterpriseDisplayNameVisibility;
   }
   /**
    * @param bool
@@ -1658,6 +1678,20 @@ class Policy extends \Google\Collection
   public function getWifiConfigsLockdownEnabled()
   {
     return $this->wifiConfigsLockdownEnabled;
+  }
+  /**
+   * @param WorkAccountSetupConfig
+   */
+  public function setWorkAccountSetupConfig(WorkAccountSetupConfig $workAccountSetupConfig)
+  {
+    $this->workAccountSetupConfig = $workAccountSetupConfig;
+  }
+  /**
+   * @return WorkAccountSetupConfig
+   */
+  public function getWorkAccountSetupConfig()
+  {
+    return $this->workAccountSetupConfig;
   }
 }
 
