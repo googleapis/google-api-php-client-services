@@ -184,6 +184,24 @@ class Backupdr extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'triggerBackup' => [
               'path' => 'v1/{+name}:triggerBackup',
               'httpMethod' => 'POST',
@@ -418,6 +436,10 @@ class Backupdr extends \Google\Service
                   'required' => true,
                 ],
                 'force' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'forceUpdateAccessRestriction' => [
                   'location' => 'query',
                   'type' => 'boolean',
                 ],

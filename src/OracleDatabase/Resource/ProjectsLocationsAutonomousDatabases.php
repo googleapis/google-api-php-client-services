@@ -220,7 +220,7 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     return $this->call('stop', [$params], Operation::class);
   }
   /**
-   * Initiates a switchover of specified autonomous deatabase to the associated
+   * Initiates a switchover of specified autonomous database to the associated
    * peer database. (autonomousDatabases.switchover)
    *
    * @param string $name Required. The name of the Autonomous Database in the
