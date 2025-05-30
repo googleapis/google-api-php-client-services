@@ -17,52 +17,28 @@
 
 namespace Google\Service\CloudKMS;
 
-class AutokeyConfig extends \Google\Model
+class KeyAccessJustificationsPolicyConfig extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $etag;
-  /**
-   * @var string
-   */
-  public $keyProject;
+  protected $defaultKeyAccessJustificationPolicyType = KeyAccessJustificationsPolicy::class;
+  protected $defaultKeyAccessJustificationPolicyDataType = '';
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var string
-   */
-  public $state;
 
   /**
-   * @param string
+   * @param KeyAccessJustificationsPolicy
    */
-  public function setEtag($etag)
+  public function setDefaultKeyAccessJustificationPolicy(KeyAccessJustificationsPolicy $defaultKeyAccessJustificationPolicy)
   {
-    $this->etag = $etag;
+    $this->defaultKeyAccessJustificationPolicy = $defaultKeyAccessJustificationPolicy;
   }
   /**
-   * @return string
+   * @return KeyAccessJustificationsPolicy
    */
-  public function getEtag()
+  public function getDefaultKeyAccessJustificationPolicy()
   {
-    return $this->etag;
-  }
-  /**
-   * @param string
-   */
-  public function setKeyProject($keyProject)
-  {
-    $this->keyProject = $keyProject;
-  }
-  /**
-   * @return string
-   */
-  public function getKeyProject()
-  {
-    return $this->keyProject;
+    return $this->defaultKeyAccessJustificationPolicy;
   }
   /**
    * @param string
@@ -78,21 +54,7 @@ class AutokeyConfig extends \Google\Model
   {
     return $this->name;
   }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AutokeyConfig::class, 'Google_Service_CloudKMS_AutokeyConfig');
+class_alias(KeyAccessJustificationsPolicyConfig::class, 'Google_Service_CloudKMS_KeyAccessJustificationsPolicyConfig');
