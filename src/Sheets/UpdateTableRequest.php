@@ -17,23 +17,14 @@
 
 namespace Google\Service\Sheets;
 
-class AppendCellsRequest extends \Google\Collection
+class UpdateTableRequest extends \Google\Model
 {
-  protected $collection_key = 'rows';
   /**
    * @var string
    */
   public $fields;
-  protected $rowsType = RowData::class;
-  protected $rowsDataType = 'array';
-  /**
-   * @var int
-   */
-  public $sheetId;
-  /**
-   * @var string
-   */
-  public $tableId;
+  protected $tableType = Table::class;
+  protected $tableDataType = '';
 
   /**
    * @param string
@@ -50,48 +41,20 @@ class AppendCellsRequest extends \Google\Collection
     return $this->fields;
   }
   /**
-   * @param RowData[]
+   * @param Table
    */
-  public function setRows($rows)
+  public function setTable(Table $table)
   {
-    $this->rows = $rows;
+    $this->table = $table;
   }
   /**
-   * @return RowData[]
+   * @return Table
    */
-  public function getRows()
+  public function getTable()
   {
-    return $this->rows;
-  }
-  /**
-   * @param int
-   */
-  public function setSheetId($sheetId)
-  {
-    $this->sheetId = $sheetId;
-  }
-  /**
-   * @return int
-   */
-  public function getSheetId()
-  {
-    return $this->sheetId;
-  }
-  /**
-   * @param string
-   */
-  public function setTableId($tableId)
-  {
-    $this->tableId = $tableId;
-  }
-  /**
-   * @return string
-   */
-  public function getTableId()
-  {
-    return $this->tableId;
+    return $this->table;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppendCellsRequest::class, 'Google_Service_Sheets_AppendCellsRequest');
+class_alias(UpdateTableRequest::class, 'Google_Service_Sheets_UpdateTableRequest');

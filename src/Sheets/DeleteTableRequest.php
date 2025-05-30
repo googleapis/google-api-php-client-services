@@ -17,66 +17,13 @@
 
 namespace Google\Service\Sheets;
 
-class AppendCellsRequest extends \Google\Collection
+class DeleteTableRequest extends \Google\Model
 {
-  protected $collection_key = 'rows';
-  /**
-   * @var string
-   */
-  public $fields;
-  protected $rowsType = RowData::class;
-  protected $rowsDataType = 'array';
-  /**
-   * @var int
-   */
-  public $sheetId;
   /**
    * @var string
    */
   public $tableId;
 
-  /**
-   * @param string
-   */
-  public function setFields($fields)
-  {
-    $this->fields = $fields;
-  }
-  /**
-   * @return string
-   */
-  public function getFields()
-  {
-    return $this->fields;
-  }
-  /**
-   * @param RowData[]
-   */
-  public function setRows($rows)
-  {
-    $this->rows = $rows;
-  }
-  /**
-   * @return RowData[]
-   */
-  public function getRows()
-  {
-    return $this->rows;
-  }
-  /**
-   * @param int
-   */
-  public function setSheetId($sheetId)
-  {
-    $this->sheetId = $sheetId;
-  }
-  /**
-   * @return int
-   */
-  public function getSheetId()
-  {
-    return $this->sheetId;
-  }
   /**
    * @param string
    */
@@ -94,4 +41,4 @@ class AppendCellsRequest extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppendCellsRequest::class, 'Google_Service_Sheets_AppendCellsRequest');
+class_alias(DeleteTableRequest::class, 'Google_Service_Sheets_DeleteTableRequest');

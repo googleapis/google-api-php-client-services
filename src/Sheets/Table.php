@@ -17,49 +17,51 @@
 
 namespace Google\Service\Sheets;
 
-class BasicFilter extends \Google\Collection
+class Table extends \Google\Collection
 {
-  protected $collection_key = 'sortSpecs';
-  protected $criteriaType = FilterCriteria::class;
-  protected $criteriaDataType = 'map';
-  protected $filterSpecsType = FilterSpec::class;
-  protected $filterSpecsDataType = 'array';
+  protected $collection_key = 'columnProperties';
+  protected $columnPropertiesType = TableColumnProperties::class;
+  protected $columnPropertiesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $name;
   protected $rangeType = GridRange::class;
   protected $rangeDataType = '';
-  protected $sortSpecsType = SortSpec::class;
-  protected $sortSpecsDataType = 'array';
+  protected $rowsPropertiesType = TableRowsProperties::class;
+  protected $rowsPropertiesDataType = '';
   /**
    * @var string
    */
   public $tableId;
 
   /**
-   * @param FilterCriteria[]
+   * @param TableColumnProperties[]
    */
-  public function setCriteria($criteria)
+  public function setColumnProperties($columnProperties)
   {
-    $this->criteria = $criteria;
+    $this->columnProperties = $columnProperties;
   }
   /**
-   * @return FilterCriteria[]
+   * @return TableColumnProperties[]
    */
-  public function getCriteria()
+  public function getColumnProperties()
   {
-    return $this->criteria;
+    return $this->columnProperties;
   }
   /**
-   * @param FilterSpec[]
+   * @param string
    */
-  public function setFilterSpecs($filterSpecs)
+  public function setName($name)
   {
-    $this->filterSpecs = $filterSpecs;
+    $this->name = $name;
   }
   /**
-   * @return FilterSpec[]
+   * @return string
    */
-  public function getFilterSpecs()
+  public function getName()
   {
-    return $this->filterSpecs;
+    return $this->name;
   }
   /**
    * @param GridRange
@@ -76,18 +78,18 @@ class BasicFilter extends \Google\Collection
     return $this->range;
   }
   /**
-   * @param SortSpec[]
+   * @param TableRowsProperties
    */
-  public function setSortSpecs($sortSpecs)
+  public function setRowsProperties(TableRowsProperties $rowsProperties)
   {
-    $this->sortSpecs = $sortSpecs;
+    $this->rowsProperties = $rowsProperties;
   }
   /**
-   * @return SortSpec[]
+   * @return TableRowsProperties
    */
-  public function getSortSpecs()
+  public function getRowsProperties()
   {
-    return $this->sortSpecs;
+    return $this->rowsProperties;
   }
   /**
    * @param string
@@ -106,4 +108,4 @@ class BasicFilter extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BasicFilter::class, 'Google_Service_Sheets_BasicFilter');
+class_alias(Table::class, 'Google_Service_Sheets_Table');
