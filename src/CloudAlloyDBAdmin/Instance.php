@@ -21,6 +21,10 @@ class Instance extends \Google\Collection
 {
   protected $collection_key = 'outboundPublicIpAddresses';
   /**
+   * @var string
+   */
+  public $activationPolicy;
+  /**
    * @var string[]
    */
   public $annotations;
@@ -115,6 +119,20 @@ class Instance extends \Google\Collection
   protected $writableNodeType = Node::class;
   protected $writableNodeDataType = '';
 
+  /**
+   * @param string
+   */
+  public function setActivationPolicy($activationPolicy)
+  {
+    $this->activationPolicy = $activationPolicy;
+  }
+  /**
+   * @return string
+   */
+  public function getActivationPolicy()
+  {
+    return $this->activationPolicy;
+  }
   /**
    * @param string[]
    */
