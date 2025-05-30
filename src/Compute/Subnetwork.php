@@ -19,7 +19,7 @@ namespace Google\Service\Compute;
 
 class Subnetwork extends \Google\Collection
 {
-  protected $collection_key = 'secondaryIpRanges';
+  protected $collection_key = 'systemReservedInternalIpv6Ranges';
   /**
    * @var string
    */
@@ -124,6 +124,14 @@ class Subnetwork extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var string[]
+   */
+  public $systemReservedExternalIpv6Ranges;
+  /**
+   * @var string[]
+   */
+  public $systemReservedInternalIpv6Ranges;
 
   /**
    * @param string
@@ -502,6 +510,34 @@ class Subnetwork extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSystemReservedExternalIpv6Ranges($systemReservedExternalIpv6Ranges)
+  {
+    $this->systemReservedExternalIpv6Ranges = $systemReservedExternalIpv6Ranges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSystemReservedExternalIpv6Ranges()
+  {
+    return $this->systemReservedExternalIpv6Ranges;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSystemReservedInternalIpv6Ranges($systemReservedInternalIpv6Ranges)
+  {
+    $this->systemReservedInternalIpv6Ranges = $systemReservedInternalIpv6Ranges;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSystemReservedInternalIpv6Ranges()
+  {
+    return $this->systemReservedInternalIpv6Ranges;
   }
 }
 
