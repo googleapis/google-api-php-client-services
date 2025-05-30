@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1VertexAISearchDataStoreSpec extends \Google\Model
 {
   /**
    * @var string
    */
-  public $apiKeySecretVersion;
+  public $dataStore;
   /**
    * @var string
    */
-  public $apiKeyString;
+  public $filter;
 
   /**
    * @param string
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setDataStore($dataStore)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->dataStore = $dataStore;
   }
   /**
    * @return string
    */
-  public function getApiKeySecretVersion()
+  public function getDataStore()
   {
-    return $this->apiKeySecretVersion;
+    return $this->dataStore;
   }
   /**
    * @param string
    */
-  public function setApiKeyString($apiKeyString)
+  public function setFilter($filter)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->filter = $filter;
   }
   /**
    * @return string
    */
-  public function getApiKeyString()
+  public function getFilter()
   {
-    return $this->apiKeyString;
+    return $this->filter;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1VertexAISearchDataStoreSpec::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1VertexAISearchDataStoreSpec');

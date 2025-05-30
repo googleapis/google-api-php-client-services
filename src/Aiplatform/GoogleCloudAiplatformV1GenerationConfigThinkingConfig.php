@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1GenerationConfigThinkingConfig extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $apiKeySecretVersion;
+  public $includeThoughts;
   /**
-   * @var string
+   * @var int
    */
-  public $apiKeyString;
+  public $thinkingBudget;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setIncludeThoughts($includeThoughts)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->includeThoughts = $includeThoughts;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getApiKeySecretVersion()
+  public function getIncludeThoughts()
   {
-    return $this->apiKeySecretVersion;
+    return $this->includeThoughts;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setApiKeyString($apiKeyString)
+  public function setThinkingBudget($thinkingBudget)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->thinkingBudget = $thinkingBudget;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getApiKeyString()
+  public function getThinkingBudget()
   {
-    return $this->apiKeyString;
+    return $this->thinkingBudget;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1GenerationConfigThinkingConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GenerationConfigThinkingConfig');

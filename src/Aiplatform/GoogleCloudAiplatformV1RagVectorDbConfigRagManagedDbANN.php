@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN extends \Google\Model
 {
   /**
-   * @var string
+   * @var int
    */
-  public $apiKeySecretVersion;
+  public $leafCount;
   /**
-   * @var string
+   * @var int
    */
-  public $apiKeyString;
+  public $treeDepth;
 
   /**
-   * @param string
+   * @param int
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setLeafCount($leafCount)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->leafCount = $leafCount;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getApiKeySecretVersion()
+  public function getLeafCount()
   {
-    return $this->apiKeySecretVersion;
+    return $this->leafCount;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setApiKeyString($apiKeyString)
+  public function setTreeDepth($treeDepth)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->treeDepth = $treeDepth;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getApiKeyString()
+  public function getTreeDepth()
   {
-    return $this->apiKeyString;
+    return $this->treeDepth;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RagVectorDbConfigRagManagedDbANN');

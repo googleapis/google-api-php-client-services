@@ -17,46 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1Checkpoint extends \Google\Model
 {
   /**
    * @var string
    */
-  public $apiKeySecretVersion;
+  public $checkpointId;
   /**
    * @var string
    */
-  public $apiKeyString;
+  public $epoch;
+  /**
+   * @var string
+   */
+  public $step;
 
   /**
    * @param string
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setCheckpointId($checkpointId)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->checkpointId = $checkpointId;
   }
   /**
    * @return string
    */
-  public function getApiKeySecretVersion()
+  public function getCheckpointId()
   {
-    return $this->apiKeySecretVersion;
+    return $this->checkpointId;
   }
   /**
    * @param string
    */
-  public function setApiKeyString($apiKeyString)
+  public function setEpoch($epoch)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->epoch = $epoch;
   }
   /**
    * @return string
    */
-  public function getApiKeyString()
+  public function getEpoch()
   {
-    return $this->apiKeyString;
+    return $this->epoch;
+  }
+  /**
+   * @param string
+   */
+  public function setStep($step)
+  {
+    $this->step = $step;
+  }
+  /**
+   * @return string
+   */
+  public function getStep()
+  {
+    return $this->step;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1Checkpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1Checkpoint');

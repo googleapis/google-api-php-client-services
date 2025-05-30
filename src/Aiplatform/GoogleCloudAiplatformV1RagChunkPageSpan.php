@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1RagChunkPageSpan extends \Google\Model
 {
   /**
-   * @var string
+   * @var int
    */
-  public $apiKeySecretVersion;
+  public $firstPage;
   /**
-   * @var string
+   * @var int
    */
-  public $apiKeyString;
+  public $lastPage;
 
   /**
-   * @param string
+   * @param int
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setFirstPage($firstPage)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->firstPage = $firstPage;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getApiKeySecretVersion()
+  public function getFirstPage()
   {
-    return $this->apiKeySecretVersion;
+    return $this->firstPage;
   }
   /**
-   * @param string
+   * @param int
    */
-  public function setApiKeyString($apiKeyString)
+  public function setLastPage($lastPage)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->lastPage = $lastPage;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getApiKeyString()
+  public function getLastPage()
   {
-    return $this->apiKeyString;
+    return $this->lastPage;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1RagChunkPageSpan::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RagChunkPageSpan');

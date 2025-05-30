@@ -17,46 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1ExternalApiElasticSearchParams extends \Google\Model
 {
   /**
    * @var string
    */
-  public $apiKeySecretVersion;
+  public $index;
+  /**
+   * @var int
+   */
+  public $numHits;
   /**
    * @var string
    */
-  public $apiKeyString;
+  public $searchTemplate;
 
   /**
    * @param string
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setIndex($index)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->index = $index;
   }
   /**
    * @return string
    */
-  public function getApiKeySecretVersion()
+  public function getIndex()
   {
-    return $this->apiKeySecretVersion;
+    return $this->index;
+  }
+  /**
+   * @param int
+   */
+  public function setNumHits($numHits)
+  {
+    $this->numHits = $numHits;
+  }
+  /**
+   * @return int
+   */
+  public function getNumHits()
+  {
+    return $this->numHits;
   }
   /**
    * @param string
    */
-  public function setApiKeyString($apiKeyString)
+  public function setSearchTemplate($searchTemplate)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->searchTemplate = $searchTemplate;
   }
   /**
    * @return string
    */
-  public function getApiKeyString()
+  public function getSearchTemplate()
   {
-    return $this->apiKeyString;
+    return $this->searchTemplate;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1ExternalApiElasticSearchParams::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ExternalApiElasticSearchParams');

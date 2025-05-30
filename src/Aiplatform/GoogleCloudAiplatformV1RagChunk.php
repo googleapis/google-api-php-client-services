@@ -17,46 +17,44 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1RagChunk extends \Google\Model
 {
+  protected $pageSpanType = GoogleCloudAiplatformV1RagChunkPageSpan::class;
+  protected $pageSpanDataType = '';
   /**
    * @var string
    */
-  public $apiKeySecretVersion;
-  /**
-   * @var string
-   */
-  public $apiKeyString;
+  public $text;
 
   /**
+   * @param GoogleCloudAiplatformV1RagChunkPageSpan
+   */
+  public function setPageSpan(GoogleCloudAiplatformV1RagChunkPageSpan $pageSpan)
+  {
+    $this->pageSpan = $pageSpan;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1RagChunkPageSpan
+   */
+  public function getPageSpan()
+  {
+    return $this->pageSpan;
+  }
+  /**
    * @param string
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setText($text)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->text = $text;
   }
   /**
    * @return string
    */
-  public function getApiKeySecretVersion()
+  public function getText()
   {
-    return $this->apiKeySecretVersion;
-  }
-  /**
-   * @param string
-   */
-  public function setApiKeyString($apiKeyString)
-  {
-    $this->apiKeyString = $apiKeyString;
-  }
-  /**
-   * @return string
-   */
-  public function getApiKeyString()
-  {
-    return $this->apiKeyString;
+    return $this->text;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1RagChunk::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RagChunk');

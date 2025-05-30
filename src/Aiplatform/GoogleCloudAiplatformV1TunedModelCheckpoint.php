@@ -17,80 +17,82 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GroundingChunkRetrievedContext extends \Google\Model
+class GoogleCloudAiplatformV1TunedModelCheckpoint extends \Google\Model
 {
-  protected $ragChunkType = GoogleCloudAiplatformV1RagChunk::class;
-  protected $ragChunkDataType = '';
   /**
    * @var string
    */
-  public $text;
+  public $checkpointId;
   /**
    * @var string
    */
-  public $title;
+  public $endpoint;
   /**
    * @var string
    */
-  public $uri;
+  public $epoch;
+  /**
+   * @var string
+   */
+  public $step;
 
   /**
-   * @param GoogleCloudAiplatformV1RagChunk
-   */
-  public function setRagChunk(GoogleCloudAiplatformV1RagChunk $ragChunk)
-  {
-    $this->ragChunk = $ragChunk;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1RagChunk
-   */
-  public function getRagChunk()
-  {
-    return $this->ragChunk;
-  }
-  /**
    * @param string
    */
-  public function setText($text)
+  public function setCheckpointId($checkpointId)
   {
-    $this->text = $text;
+    $this->checkpointId = $checkpointId;
   }
   /**
    * @return string
    */
-  public function getText()
+  public function getCheckpointId()
   {
-    return $this->text;
+    return $this->checkpointId;
   }
   /**
    * @param string
    */
-  public function setTitle($title)
+  public function setEndpoint($endpoint)
   {
-    $this->title = $title;
+    $this->endpoint = $endpoint;
   }
   /**
    * @return string
    */
-  public function getTitle()
+  public function getEndpoint()
   {
-    return $this->title;
+    return $this->endpoint;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setEpoch($epoch)
   {
-    $this->uri = $uri;
+    $this->epoch = $epoch;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getEpoch()
   {
-    return $this->uri;
+    return $this->epoch;
+  }
+  /**
+   * @param string
+   */
+  public function setStep($step)
+  {
+    $this->step = $step;
+  }
+  /**
+   * @return string
+   */
+  public function getStep()
+  {
+    return $this->step;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GroundingChunkRetrievedContext::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingChunkRetrievedContext');
+class_alias(GoogleCloudAiplatformV1TunedModelCheckpoint::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1TunedModelCheckpoint');

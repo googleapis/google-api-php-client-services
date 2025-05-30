@@ -17,46 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1ColabImage extends \Google\Model
 {
   /**
    * @var string
    */
-  public $apiKeySecretVersion;
+  public $description;
   /**
    * @var string
    */
-  public $apiKeyString;
+  public $releaseName;
 
   /**
    * @param string
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setDescription($description)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getApiKeySecretVersion()
+  public function getDescription()
   {
-    return $this->apiKeySecretVersion;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setApiKeyString($apiKeyString)
+  public function setReleaseName($releaseName)
   {
-    $this->apiKeyString = $apiKeyString;
+    $this->releaseName = $releaseName;
   }
   /**
    * @return string
    */
-  public function getApiKeyString()
+  public function getReleaseName()
   {
-    return $this->apiKeyString;
+    return $this->releaseName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1ColabImage::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ColabImage');

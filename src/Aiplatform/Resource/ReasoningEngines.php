@@ -30,24 +30,26 @@ use Google\Service\Aiplatform\GoogleLongrunningOperation;
  * Typical usage is:
  *  <code>
  *   $aiplatformService = new Google\Service\Aiplatform(...);
- *   $reasoningEngines = $aiplatformService->projects_locations_reasoningEngines;
+ *   $reasoningEngines = $aiplatformService->reasoningEngines;
  *  </code>
  */
-class ProjectsLocationsReasoningEngines extends \Google\Service\Resource
+class ReasoningEngines extends \Google\Service\Resource
 {
   /**
    * Creates a reasoning engine. (reasoningEngines.create)
    *
-   * @param string $parent Required. The resource name of the Location to create
-   * the ReasoningEngine in. Format: `projects/{project}/locations/{location}`
    * @param GoogleCloudAiplatformV1ReasoningEngine $postBody
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string parent Required. The resource name of the Location to
+   * create the ReasoningEngine in. Format:
+   * `projects/{project}/locations/{location}`
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
-  public function create($parent, GoogleCloudAiplatformV1ReasoningEngine $postBody, $optParams = [])
+  public function create(GoogleCloudAiplatformV1ReasoningEngine $postBody, $optParams = [])
   {
-    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
@@ -90,22 +92,22 @@ class ProjectsLocationsReasoningEngines extends \Google\Service\Resource
   }
   /**
    * Lists reasoning engines in a location.
-   * (reasoningEngines.listProjectsLocationsReasoningEngines)
+   * (reasoningEngines.listReasoningEngines)
    *
-   * @param string $parent Required. The resource name of the Location to list the
-   * ReasoningEngines from. Format: `projects/{project}/locations/{location}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. The standard list filter. More detail in
    * [AIP-160](https://google.aip.dev/160).
    * @opt_param int pageSize Optional. The standard list page size.
    * @opt_param string pageToken Optional. The standard list page token.
+   * @opt_param string parent Required. The resource name of the Location to list
+   * the ReasoningEngines from. Format: `projects/{project}/locations/{location}`
    * @return GoogleCloudAiplatformV1ListReasoningEnginesResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsLocationsReasoningEngines($parent, $optParams = [])
+  public function listReasoningEngines($optParams = [])
   {
-    $params = ['parent' => $parent];
+    $params = [];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudAiplatformV1ListReasoningEnginesResponse::class);
   }
@@ -166,4 +168,4 @@ class ProjectsLocationsReasoningEngines extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsReasoningEngines::class, 'Google_Service_Aiplatform_Resource_ProjectsLocationsReasoningEngines');
+class_alias(ReasoningEngines::class, 'Google_Service_Aiplatform_Resource_ReasoningEngines');

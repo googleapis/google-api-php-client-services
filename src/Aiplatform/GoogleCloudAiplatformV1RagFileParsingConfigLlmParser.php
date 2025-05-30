@@ -17,64 +17,64 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1DeployedModelRef extends \Google\Model
+class GoogleCloudAiplatformV1RagFileParsingConfigLlmParser extends \Google\Model
 {
   /**
    * @var string
    */
-  public $checkpointId;
+  public $customParsingPrompt;
+  /**
+   * @var int
+   */
+  public $maxParsingRequestsPerMin;
   /**
    * @var string
    */
-  public $deployedModelId;
-  /**
-   * @var string
-   */
-  public $endpoint;
+  public $modelName;
 
   /**
    * @param string
    */
-  public function setCheckpointId($checkpointId)
+  public function setCustomParsingPrompt($customParsingPrompt)
   {
-    $this->checkpointId = $checkpointId;
+    $this->customParsingPrompt = $customParsingPrompt;
   }
   /**
    * @return string
    */
-  public function getCheckpointId()
+  public function getCustomParsingPrompt()
   {
-    return $this->checkpointId;
+    return $this->customParsingPrompt;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxParsingRequestsPerMin($maxParsingRequestsPerMin)
+  {
+    $this->maxParsingRequestsPerMin = $maxParsingRequestsPerMin;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxParsingRequestsPerMin()
+  {
+    return $this->maxParsingRequestsPerMin;
   }
   /**
    * @param string
    */
-  public function setDeployedModelId($deployedModelId)
+  public function setModelName($modelName)
   {
-    $this->deployedModelId = $deployedModelId;
+    $this->modelName = $modelName;
   }
   /**
    * @return string
    */
-  public function getDeployedModelId()
+  public function getModelName()
   {
-    return $this->deployedModelId;
-  }
-  /**
-   * @param string
-   */
-  public function setEndpoint($endpoint)
-  {
-    $this->endpoint = $endpoint;
-  }
-  /**
-   * @return string
-   */
-  public function getEndpoint()
-  {
-    return $this->endpoint;
+    return $this->modelName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1DeployedModelRef::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1DeployedModelRef');
+class_alias(GoogleCloudAiplatformV1RagFileParsingConfigLlmParser::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1RagFileParsingConfigLlmParser');

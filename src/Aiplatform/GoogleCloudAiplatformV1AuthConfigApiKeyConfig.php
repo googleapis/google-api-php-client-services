@@ -17,30 +17,38 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
+class GoogleCloudAiplatformV1AuthConfigApiKeyConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $apiKeySecretVersion;
+  public $apiKeySecret;
   /**
    * @var string
    */
   public $apiKeyString;
+  /**
+   * @var string
+   */
+  public $httpElementLocation;
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
    * @param string
    */
-  public function setApiKeySecretVersion($apiKeySecretVersion)
+  public function setApiKeySecret($apiKeySecret)
   {
-    $this->apiKeySecretVersion = $apiKeySecretVersion;
+    $this->apiKeySecret = $apiKeySecret;
   }
   /**
    * @return string
    */
-  public function getApiKeySecretVersion()
+  public function getApiKeySecret()
   {
-    return $this->apiKeySecretVersion;
+    return $this->apiKeySecret;
   }
   /**
    * @param string
@@ -56,7 +64,35 @@ class GoogleCloudAiplatformV1ApiAuthApiKeyConfig extends \Google\Model
   {
     return $this->apiKeyString;
   }
+  /**
+   * @param string
+   */
+  public function setHttpElementLocation($httpElementLocation)
+  {
+    $this->httpElementLocation = $httpElementLocation;
+  }
+  /**
+   * @return string
+   */
+  public function getHttpElementLocation()
+  {
+    return $this->httpElementLocation;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ApiAuthApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ApiAuthApiKeyConfig');
+class_alias(GoogleCloudAiplatformV1AuthConfigApiKeyConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1AuthConfigApiKeyConfig');
