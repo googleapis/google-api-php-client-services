@@ -18,8 +18,11 @@
 namespace Google\Service\Contactcenterinsights\Resource;
 
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateStatsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1CalculateStatsResponse;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Conversation;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1IngestConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListConversationsResponse;
 use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
 use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
@@ -29,10 +32,10 @@ use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
  * Typical usage is:
  *  <code>
  *   $contactcenterinsightsService = new Google\Service\Contactcenterinsights(...);
- *   $conversations = $contactcenterinsightsService->projects_locations_authorizedViewSets_authorizedViews_conversations;
+ *   $conversations = $contactcenterinsightsService->projects_locations_datasets_conversations;
  *  </code>
  */
-class ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations extends \Google\Service\Resource
+class ProjectsLocationsDatasetsConversations extends \Google\Service\Resource
 {
   /**
    * Analyzes multiple conversations in a single request.
@@ -51,20 +54,34 @@ class ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations extends \G
     return $this->call('bulkAnalyze', [$params], GoogleLongrunningOperation::class);
   }
   /**
+   * Deletes multiple conversations in a single request.
+   * (conversations.bulkDelete)
+   *
+   * @param string $parent Required. The parent resource to delete conversations
+   * from. Format: projects/{project}/locations/{location}
+   * @param GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function bulkDelete($parent, GoogleCloudContactcenterinsightsV1BulkDeleteConversationsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('bulkDelete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
    * Gets conversation statistics. (conversations.calculateStats)
    *
    * @param string $location Required. The location of the conversations.
+   * @param GoogleCloudContactcenterinsightsV1CalculateStatsRequest $postBody
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter A filter to reduce results to a specific subset.
-   * This field is useful for getting statistics about conversations with specific
-   * properties.
    * @return GoogleCloudContactcenterinsightsV1CalculateStatsResponse
    * @throws \Google\Service\Exception
    */
-  public function calculateStats($location, $optParams = [])
+  public function calculateStats($location, GoogleCloudContactcenterinsightsV1CalculateStatsRequest $postBody, $optParams = [])
   {
-    $params = ['location' => $location];
+    $params = ['location' => $location, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('calculateStats', [$params], GoogleCloudContactcenterinsightsV1CalculateStatsResponse::class);
   }
@@ -104,8 +121,24 @@ class ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations extends \G
     return $this->call('get', [$params], GoogleCloudContactcenterinsightsV1Conversation::class);
   }
   /**
-   * Lists conversations. (conversations.listProjectsLocationsAuthorizedViewSetsAu
-   * thorizedViewsConversations)
+   * Imports conversations and processes them according to the user's
+   * configuration. (conversations.ingest)
+   *
+   * @param string $parent Required. The parent resource for new conversations.
+   * @param GoogleCloudContactcenterinsightsV1IngestConversationsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function ingest($parent, GoogleCloudContactcenterinsightsV1IngestConversationsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('ingest', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Lists conversations.
+   * (conversations.listProjectsLocationsDatasetsConversations)
    *
    * @param string $parent Required. The parent resource of the conversation.
    * @param array $optParams Optional parameters.
@@ -132,7 +165,7 @@ class ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations extends \G
    * @return GoogleCloudContactcenterinsightsV1ListConversationsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations($parent, $optParams = [])
+  public function listProjectsLocationsDatasetsConversations($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -141,4 +174,4 @@ class ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations extends \G
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations::class, 'Google_Service_Contactcenterinsights_Resource_ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversations');
+class_alias(ProjectsLocationsDatasetsConversations::class, 'Google_Service_Contactcenterinsights_Resource_ProjectsLocationsDatasetsConversations');
