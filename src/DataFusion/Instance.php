@@ -133,6 +133,10 @@ class Instance extends \Google\Collection
    */
   public $stateMessage;
   /**
+   * @var string[]
+   */
+  public $tags;
+  /**
    * @var string
    */
   public $tenantProjectId;
@@ -604,6 +608,20 @@ class Instance extends \Google\Collection
   public function getStateMessage()
   {
     return $this->stateMessage;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
   /**
    * @param string
