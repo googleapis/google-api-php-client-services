@@ -17,46 +17,60 @@
 
 namespace Google\Service\Dataform;
 
-class NotebookRuntimeOptions extends \Google\Model
+class SqlDefinition extends \Google\Model
 {
+  protected $errorTableType = ErrorTable::class;
+  protected $errorTableDataType = '';
+  protected $loadType = LoadConfig::class;
+  protected $loadDataType = '';
   /**
    * @var string
    */
-  public $aiPlatformNotebookRuntimeTemplate;
-  /**
-   * @var string
-   */
-  public $gcsOutputBucket;
+  public $query;
 
   /**
+   * @param ErrorTable
+   */
+  public function setErrorTable(ErrorTable $errorTable)
+  {
+    $this->errorTable = $errorTable;
+  }
+  /**
+   * @return ErrorTable
+   */
+  public function getErrorTable()
+  {
+    return $this->errorTable;
+  }
+  /**
+   * @param LoadConfig
+   */
+  public function setLoad(LoadConfig $load)
+  {
+    $this->load = $load;
+  }
+  /**
+   * @return LoadConfig
+   */
+  public function getLoad()
+  {
+    return $this->load;
+  }
+  /**
    * @param string
    */
-  public function setAiPlatformNotebookRuntimeTemplate($aiPlatformNotebookRuntimeTemplate)
+  public function setQuery($query)
   {
-    $this->aiPlatformNotebookRuntimeTemplate = $aiPlatformNotebookRuntimeTemplate;
+    $this->query = $query;
   }
   /**
    * @return string
    */
-  public function getAiPlatformNotebookRuntimeTemplate()
+  public function getQuery()
   {
-    return $this->aiPlatformNotebookRuntimeTemplate;
-  }
-  /**
-   * @param string
-   */
-  public function setGcsOutputBucket($gcsOutputBucket)
-  {
-    $this->gcsOutputBucket = $gcsOutputBucket;
-  }
-  /**
-   * @return string
-   */
-  public function getGcsOutputBucket()
-  {
-    return $this->gcsOutputBucket;
+    return $this->query;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NotebookRuntimeOptions::class, 'Google_Service_Dataform_NotebookRuntimeOptions');
+class_alias(SqlDefinition::class, 'Google_Service_Dataform_SqlDefinition');

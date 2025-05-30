@@ -17,35 +17,32 @@
 
 namespace Google\Service\Dataform;
 
-class DataPreparation extends \Google\Collection
+class DataPreparationAction extends \Google\Model
 {
-  protected $collection_key = 'tags';
-  protected $contentsSqlType = SqlDefinition::class;
+  protected $contentsSqlType = ActionSqlDefinition::class;
   protected $contentsSqlDataType = '';
   /**
    * @var string
    */
   public $contentsYaml;
-  protected $dependencyTargetsType = Target::class;
-  protected $dependencyTargetsDataType = 'array';
   /**
-   * @var bool
+   * @var string
    */
-  public $disabled;
+  public $generatedSql;
   /**
-   * @var string[]
+   * @var string
    */
-  public $tags;
+  public $jobId;
 
   /**
-   * @param SqlDefinition
+   * @param ActionSqlDefinition
    */
-  public function setContentsSql(SqlDefinition $contentsSql)
+  public function setContentsSql(ActionSqlDefinition $contentsSql)
   {
     $this->contentsSql = $contentsSql;
   }
   /**
-   * @return SqlDefinition
+   * @return ActionSqlDefinition
    */
   public function getContentsSql()
   {
@@ -66,48 +63,34 @@ class DataPreparation extends \Google\Collection
     return $this->contentsYaml;
   }
   /**
-   * @param Target[]
+   * @param string
    */
-  public function setDependencyTargets($dependencyTargets)
+  public function setGeneratedSql($generatedSql)
   {
-    $this->dependencyTargets = $dependencyTargets;
+    $this->generatedSql = $generatedSql;
   }
   /**
-   * @return Target[]
+   * @return string
    */
-  public function getDependencyTargets()
+  public function getGeneratedSql()
   {
-    return $this->dependencyTargets;
+    return $this->generatedSql;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setDisabled($disabled)
+  public function setJobId($jobId)
   {
-    $this->disabled = $disabled;
+    $this->jobId = $jobId;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getDisabled()
+  public function getJobId()
   {
-    return $this->disabled;
-  }
-  /**
-   * @param string[]
-   */
-  public function setTags($tags)
-  {
-    $this->tags = $tags;
-  }
-  /**
-   * @return string[]
-   */
-  public function getTags()
-  {
-    return $this->tags;
+    return $this->jobId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DataPreparation::class, 'Google_Service_Dataform_DataPreparation');
+class_alias(DataPreparationAction::class, 'Google_Service_Dataform_DataPreparationAction');

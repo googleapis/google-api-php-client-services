@@ -17,46 +17,44 @@
 
 namespace Google\Service\Dataform;
 
-class NotebookRuntimeOptions extends \Google\Model
+class ActionErrorTable extends \Google\Model
 {
   /**
-   * @var string
+   * @var int
    */
-  public $aiPlatformNotebookRuntimeTemplate;
-  /**
-   * @var string
-   */
-  public $gcsOutputBucket;
+  public $retentionDays;
+  protected $targetType = Target::class;
+  protected $targetDataType = '';
 
   /**
-   * @param string
+   * @param int
    */
-  public function setAiPlatformNotebookRuntimeTemplate($aiPlatformNotebookRuntimeTemplate)
+  public function setRetentionDays($retentionDays)
   {
-    $this->aiPlatformNotebookRuntimeTemplate = $aiPlatformNotebookRuntimeTemplate;
+    $this->retentionDays = $retentionDays;
   }
   /**
-   * @return string
+   * @return int
    */
-  public function getAiPlatformNotebookRuntimeTemplate()
+  public function getRetentionDays()
   {
-    return $this->aiPlatformNotebookRuntimeTemplate;
+    return $this->retentionDays;
   }
   /**
-   * @param string
+   * @param Target
    */
-  public function setGcsOutputBucket($gcsOutputBucket)
+  public function setTarget(Target $target)
   {
-    $this->gcsOutputBucket = $gcsOutputBucket;
+    $this->target = $target;
   }
   /**
-   * @return string
+   * @return Target
    */
-  public function getGcsOutputBucket()
+  public function getTarget()
   {
-    return $this->gcsOutputBucket;
+    return $this->target;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NotebookRuntimeOptions::class, 'Google_Service_Dataform_NotebookRuntimeOptions');
+class_alias(ActionErrorTable::class, 'Google_Service_Dataform_ActionErrorTable');

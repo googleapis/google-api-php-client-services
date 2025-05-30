@@ -17,46 +17,28 @@
 
 namespace Google\Service\Dataform;
 
-class NotebookRuntimeOptions extends \Google\Model
+class ActionIncrementalLoadMode extends \Google\Model
 {
   /**
    * @var string
    */
-  public $aiPlatformNotebookRuntimeTemplate;
-  /**
-   * @var string
-   */
-  public $gcsOutputBucket;
+  public $column;
 
   /**
    * @param string
    */
-  public function setAiPlatformNotebookRuntimeTemplate($aiPlatformNotebookRuntimeTemplate)
+  public function setColumn($column)
   {
-    $this->aiPlatformNotebookRuntimeTemplate = $aiPlatformNotebookRuntimeTemplate;
+    $this->column = $column;
   }
   /**
    * @return string
    */
-  public function getAiPlatformNotebookRuntimeTemplate()
+  public function getColumn()
   {
-    return $this->aiPlatformNotebookRuntimeTemplate;
-  }
-  /**
-   * @param string
-   */
-  public function setGcsOutputBucket($gcsOutputBucket)
-  {
-    $this->gcsOutputBucket = $gcsOutputBucket;
-  }
-  /**
-   * @return string
-   */
-  public function getGcsOutputBucket()
-  {
-    return $this->gcsOutputBucket;
+    return $this->column;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NotebookRuntimeOptions::class, 'Google_Service_Dataform_NotebookRuntimeOptions');
+class_alias(ActionIncrementalLoadMode::class, 'Google_Service_Dataform_ActionIncrementalLoadMode');
