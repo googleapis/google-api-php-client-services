@@ -221,6 +221,11 @@ class BeyondCorp extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -672,24 +677,6 @@ class BeyondCorp extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],'shouldThrottle' => [
-              'path' => 'v1/{+name}:shouldThrottle',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'port' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'requestedAmount' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],'testIamPermissions' => [
