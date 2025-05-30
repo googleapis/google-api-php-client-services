@@ -195,7 +195,9 @@ class ProjectsLocationsRepositories extends \Google\Service\Resource
     return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
-   * Lists Repositories in a given project and location.
+   * Lists Repositories in a given project and location. **Note:** *This method
+   * can return repositories not shown in the [Dataform
+   * UI](https://console.cloud.google.com/bigquery/dataform)*.
    * (repositories.listProjectsLocationsRepositories)
    *
    * @param string $parent Required. The location in which to list repositories.
