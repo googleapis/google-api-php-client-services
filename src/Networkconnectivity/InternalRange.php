@@ -20,6 +20,8 @@ namespace Google\Service\Networkconnectivity;
 class InternalRange extends \Google\Collection
 {
   protected $collection_key = 'users';
+  protected $allocationOptionsType = AllocationOptions::class;
+  protected $allocationOptionsDataType = '';
   /**
    * @var string
    */
@@ -83,6 +85,20 @@ class InternalRange extends \Google\Collection
    */
   public $users;
 
+  /**
+   * @param AllocationOptions
+   */
+  public function setAllocationOptions(AllocationOptions $allocationOptions)
+  {
+    $this->allocationOptions = $allocationOptions;
+  }
+  /**
+   * @return AllocationOptions
+   */
+  public function getAllocationOptions()
+  {
+    return $this->allocationOptions;
+  }
   /**
    * @param string
    */

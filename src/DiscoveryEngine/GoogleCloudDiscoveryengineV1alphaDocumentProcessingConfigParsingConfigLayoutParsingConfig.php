@@ -17,8 +17,9 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayoutParsingConfig extends \Google\Collection
 {
+  protected $collection_key = 'structuredContentTypes';
   /**
    * @var bool
    */
@@ -27,6 +28,22 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayo
    * @var bool
    */
   public $enableTableAnnotation;
+  /**
+   * @var string[]
+   */
+  public $excludeHtmlClasses;
+  /**
+   * @var string[]
+   */
+  public $excludeHtmlElements;
+  /**
+   * @var string[]
+   */
+  public $excludeHtmlIds;
+  /**
+   * @var string[]
+   */
+  public $structuredContentTypes;
 
   /**
    * @param bool
@@ -55,6 +72,62 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayo
   public function getEnableTableAnnotation()
   {
     return $this->enableTableAnnotation;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeHtmlClasses($excludeHtmlClasses)
+  {
+    $this->excludeHtmlClasses = $excludeHtmlClasses;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeHtmlClasses()
+  {
+    return $this->excludeHtmlClasses;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeHtmlElements($excludeHtmlElements)
+  {
+    $this->excludeHtmlElements = $excludeHtmlElements;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeHtmlElements()
+  {
+    return $this->excludeHtmlElements;
+  }
+  /**
+   * @param string[]
+   */
+  public function setExcludeHtmlIds($excludeHtmlIds)
+  {
+    $this->excludeHtmlIds = $excludeHtmlIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getExcludeHtmlIds()
+  {
+    return $this->excludeHtmlIds;
+  }
+  /**
+   * @param string[]
+   */
+  public function setStructuredContentTypes($structuredContentTypes)
+  {
+    $this->structuredContentTypes = $structuredContentTypes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getStructuredContentTypes()
+  {
+    return $this->structuredContentTypes;
   }
 }
 
