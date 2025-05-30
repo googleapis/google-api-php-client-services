@@ -48,6 +48,10 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
   /**
    * @var bool
    */
+  public $enableManagedAiFeatures;
+  /**
+   * @var bool
+   */
   public $enableVariableMasking;
   /**
    * @var string
@@ -171,6 +175,20 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
   public function getEnableInternalIp()
   {
     return $this->enableInternalIp;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableManagedAiFeatures($enableManagedAiFeatures)
+  {
+    $this->enableManagedAiFeatures = $enableManagedAiFeatures;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableManagedAiFeatures()
+  {
+    return $this->enableManagedAiFeatures;
   }
   /**
    * @param bool

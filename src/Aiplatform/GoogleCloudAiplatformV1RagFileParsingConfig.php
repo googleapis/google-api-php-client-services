@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1RagFileParsingConfig extends \Google\Model
 {
   protected $layoutParserType = GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser::class;
   protected $layoutParserDataType = '';
+  protected $llmParserType = GoogleCloudAiplatformV1RagFileParsingConfigLlmParser::class;
+  protected $llmParserDataType = '';
 
   /**
    * @param GoogleCloudAiplatformV1RagFileParsingConfigLayoutParser
@@ -35,6 +37,20 @@ class GoogleCloudAiplatformV1RagFileParsingConfig extends \Google\Model
   public function getLayoutParser()
   {
     return $this->layoutParser;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1RagFileParsingConfigLlmParser
+   */
+  public function setLlmParser(GoogleCloudAiplatformV1RagFileParsingConfigLlmParser $llmParser)
+  {
+    $this->llmParser = $llmParser;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1RagFileParsingConfigLlmParser
+   */
+  public function getLlmParser()
+  {
+    return $this->llmParser;
   }
 }
 

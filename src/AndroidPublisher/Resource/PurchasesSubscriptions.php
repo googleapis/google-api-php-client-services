@@ -92,8 +92,9 @@ class PurchasesSubscriptions extends \Google\Service\Resource
     return $this->call('defer', [$params], SubscriptionPurchasesDeferResponse::class);
   }
   /**
-   * Checks whether a user's subscription purchase is valid and returns its expiry
-   * time. (subscriptions.get)
+   * Deprecated: Use purchases.subscriptionsv2.get instead. Checks whether a
+   * user's subscription purchase is valid and returns its expiry time.
+   * (subscriptions.get)
    *
    * @param string $packageName The package name of the application for which this
    * subscription was purchased (for example, 'com.some.thing').
@@ -112,9 +113,9 @@ class PurchasesSubscriptions extends \Google\Service\Resource
     return $this->call('get', [$params], SubscriptionPurchase::class);
   }
   /**
-   * Refunds a user's subscription purchase, but the subscription remains valid
-   * until its expiration time and it will continue to recur.
-   * (subscriptions.refund)
+   * Deprecated: Use orders.refund instead. Refunds a user's subscription
+   * purchase, but the subscription remains valid until its expiration time and it
+   * will continue to recur. (subscriptions.refund)
    *
    * @param string $packageName The package name of the application for which this
    * subscription was purchased (for example, 'com.some.thing').
@@ -132,7 +133,8 @@ class PurchasesSubscriptions extends \Google\Service\Resource
     return $this->call('refund', [$params]);
   }
   /**
-   * Refunds and immediately revokes a user's subscription purchase. Access to the
+   * Deprecated: Use purchases.subscriptionsv2.revoke instead. Refunds and
+   * immediately revokes a user's subscription purchase. Access to the
    * subscription will be terminated immediately and it will stop recurring.
    * (subscriptions.revoke)
    *
