@@ -17,27 +17,46 @@
 
 namespace Google\Service\NetworkSecurity;
 
-class AuthzPolicyAuthzRuleFromRequestSource extends \Google\Collection
+class InterceptLocation extends \Google\Model
 {
-  protected $collection_key = 'resources';
-  protected $resourcesType = AuthzPolicyAuthzRuleRequestResource::class;
-  protected $resourcesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $location;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
-   * @param AuthzPolicyAuthzRuleRequestResource[]
+   * @param string
    */
-  public function setResources($resources)
+  public function setLocation($location)
   {
-    $this->resources = $resources;
+    $this->location = $location;
   }
   /**
-   * @return AuthzPolicyAuthzRuleRequestResource[]
+   * @return string
    */
-  public function getResources()
+  public function getLocation()
   {
-    return $this->resources;
+    return $this->location;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AuthzPolicyAuthzRuleFromRequestSource::class, 'Google_Service_NetworkSecurity_AuthzPolicyAuthzRuleFromRequestSource');
+class_alias(InterceptLocation::class, 'Google_Service_NetworkSecurity_InterceptLocation');

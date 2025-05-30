@@ -17,27 +17,28 @@
 
 namespace Google\Service\NetworkSecurity;
 
-class AuthzPolicyAuthzRuleFromRequestSource extends \Google\Collection
+class InterceptDeploymentGroupConnectedEndpointGroup extends \Google\Model
 {
-  protected $collection_key = 'resources';
-  protected $resourcesType = AuthzPolicyAuthzRuleRequestResource::class;
-  protected $resourcesDataType = 'array';
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
-   * @param AuthzPolicyAuthzRuleRequestResource[]
+   * @param string
    */
-  public function setResources($resources)
+  public function setName($name)
   {
-    $this->resources = $resources;
+    $this->name = $name;
   }
   /**
-   * @return AuthzPolicyAuthzRuleRequestResource[]
+   * @return string
    */
-  public function getResources()
+  public function getName()
   {
-    return $this->resources;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AuthzPolicyAuthzRuleFromRequestSource::class, 'Google_Service_NetworkSecurity_AuthzPolicyAuthzRuleFromRequestSource');
+class_alias(InterceptDeploymentGroupConnectedEndpointGroup::class, 'Google_Service_NetworkSecurity_InterceptDeploymentGroupConnectedEndpointGroup');
