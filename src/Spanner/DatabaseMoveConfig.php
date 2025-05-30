@@ -17,45 +17,44 @@
 
 namespace Google\Service\Spanner;
 
-class MoveInstanceRequest extends \Google\Collection
+class DatabaseMoveConfig extends \Google\Model
 {
-  protected $collection_key = 'targetDatabaseMoveConfigs';
   /**
    * @var string
    */
-  public $targetConfig;
-  protected $targetDatabaseMoveConfigsType = DatabaseMoveConfig::class;
-  protected $targetDatabaseMoveConfigsDataType = 'array';
+  public $databaseId;
+  protected $encryptionConfigType = InstanceEncryptionConfig::class;
+  protected $encryptionConfigDataType = '';
 
   /**
    * @param string
    */
-  public function setTargetConfig($targetConfig)
+  public function setDatabaseId($databaseId)
   {
-    $this->targetConfig = $targetConfig;
+    $this->databaseId = $databaseId;
   }
   /**
    * @return string
    */
-  public function getTargetConfig()
+  public function getDatabaseId()
   {
-    return $this->targetConfig;
+    return $this->databaseId;
   }
   /**
-   * @param DatabaseMoveConfig[]
+   * @param InstanceEncryptionConfig
    */
-  public function setTargetDatabaseMoveConfigs($targetDatabaseMoveConfigs)
+  public function setEncryptionConfig(InstanceEncryptionConfig $encryptionConfig)
   {
-    $this->targetDatabaseMoveConfigs = $targetDatabaseMoveConfigs;
+    $this->encryptionConfig = $encryptionConfig;
   }
   /**
-   * @return DatabaseMoveConfig[]
+   * @return InstanceEncryptionConfig
    */
-  public function getTargetDatabaseMoveConfigs()
+  public function getEncryptionConfig()
   {
-    return $this->targetDatabaseMoveConfigs;
+    return $this->encryptionConfig;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MoveInstanceRequest::class, 'Google_Service_Spanner_MoveInstanceRequest');
+class_alias(DatabaseMoveConfig::class, 'Google_Service_Spanner_DatabaseMoveConfig');
