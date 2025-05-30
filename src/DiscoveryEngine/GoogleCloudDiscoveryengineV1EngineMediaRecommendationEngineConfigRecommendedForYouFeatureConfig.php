@@ -17,37 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1CheckGroundingSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigRecommendedForYouFeatureConfig extends \Google\Model
 {
-  public $citationThreshold;
   /**
-   * @var bool
+   * @var string
    */
-  public $enableClaimLevelScore;
+  public $contextEventType;
 
-  public function setCitationThreshold($citationThreshold)
+  /**
+   * @param string
+   */
+  public function setContextEventType($contextEventType)
   {
-    $this->citationThreshold = $citationThreshold;
-  }
-  public function getCitationThreshold()
-  {
-    return $this->citationThreshold;
+    $this->contextEventType = $contextEventType;
   }
   /**
-   * @param bool
+   * @return string
    */
-  public function setEnableClaimLevelScore($enableClaimLevelScore)
+  public function getContextEventType()
   {
-    $this->enableClaimLevelScore = $enableClaimLevelScore;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableClaimLevelScore()
-  {
-    return $this->enableClaimLevelScore;
+    return $this->contextEventType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1CheckGroundingSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1CheckGroundingSpec');
+class_alias(GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigRecommendedForYouFeatureConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1EngineMediaRecommendationEngineConfigRecommendedForYouFeatureConfig');

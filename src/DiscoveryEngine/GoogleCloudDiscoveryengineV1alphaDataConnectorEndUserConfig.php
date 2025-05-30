@@ -17,37 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1CheckGroundingSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig extends \Google\Model
 {
-  public $citationThreshold;
   /**
-   * @var bool
+   * @var array[]
    */
-  public $enableClaimLevelScore;
+  public $additionalParams;
+  /**
+   * @var array[]
+   */
+  public $authParams;
 
-  public function setCitationThreshold($citationThreshold)
+  /**
+   * @param array[]
+   */
+  public function setAdditionalParams($additionalParams)
   {
-    $this->citationThreshold = $citationThreshold;
-  }
-  public function getCitationThreshold()
-  {
-    return $this->citationThreshold;
+    $this->additionalParams = $additionalParams;
   }
   /**
-   * @param bool
+   * @return array[]
    */
-  public function setEnableClaimLevelScore($enableClaimLevelScore)
+  public function getAdditionalParams()
   {
-    $this->enableClaimLevelScore = $enableClaimLevelScore;
+    return $this->additionalParams;
   }
   /**
-   * @return bool
+   * @param array[]
    */
-  public function getEnableClaimLevelScore()
+  public function setAuthParams($authParams)
   {
-    return $this->enableClaimLevelScore;
+    $this->authParams = $authParams;
+  }
+  /**
+   * @return array[]
+   */
+  public function getAuthParams()
+  {
+    return $this->authParams;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1CheckGroundingSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1CheckGroundingSpec');
+class_alias(GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig');

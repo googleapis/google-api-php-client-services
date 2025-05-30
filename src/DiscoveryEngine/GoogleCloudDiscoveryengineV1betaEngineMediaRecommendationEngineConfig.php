@@ -17,15 +17,15 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig extends \Google\Model
+class GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig extends \Google\Model
 {
-  protected $engineFeaturesConfigType = GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig::class;
+  protected $engineFeaturesConfigType = GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigEngineFeaturesConfig::class;
   protected $engineFeaturesConfigDataType = '';
   /**
    * @var string
    */
   public $optimizationObjective;
-  protected $optimizationObjectiveConfigType = GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig::class;
+  protected $optimizationObjectiveConfigType = GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig::class;
   protected $optimizationObjectiveConfigDataType = '';
   /**
    * @var string
@@ -37,14 +37,14 @@ class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig ext
   public $type;
 
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig
+   * @param GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigEngineFeaturesConfig
    */
-  public function setEngineFeaturesConfig(GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig $engineFeaturesConfig)
+  public function setEngineFeaturesConfig(GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigEngineFeaturesConfig $engineFeaturesConfig)
   {
     $this->engineFeaturesConfig = $engineFeaturesConfig;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigEngineFeaturesConfig
+   * @return GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigEngineFeaturesConfig
    */
   public function getEngineFeaturesConfig()
   {
@@ -65,14 +65,14 @@ class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig ext
     return $this->optimizationObjective;
   }
   /**
-   * @param GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig
+   * @param GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig
    */
-  public function setOptimizationObjectiveConfig(GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig $optimizationObjectiveConfig)
+  public function setOptimizationObjectiveConfig(GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig $optimizationObjectiveConfig)
   {
     $this->optimizationObjectiveConfig = $optimizationObjectiveConfig;
   }
   /**
-   * @return GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig
+   * @return GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfigOptimizationObjectiveConfig
    */
   public function getOptimizationObjectiveConfig()
   {
@@ -109,4 +109,4 @@ class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig ext
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfig');
+class_alias(GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1betaEngineMediaRecommendationEngineConfig');

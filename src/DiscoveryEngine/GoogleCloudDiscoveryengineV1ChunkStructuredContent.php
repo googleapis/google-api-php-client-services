@@ -17,37 +17,46 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1CheckGroundingSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1ChunkStructuredContent extends \Google\Model
 {
-  public $citationThreshold;
   /**
-   * @var bool
+   * @var string
    */
-  public $enableClaimLevelScore;
+  public $content;
+  /**
+   * @var string
+   */
+  public $structureType;
 
-  public function setCitationThreshold($citationThreshold)
+  /**
+   * @param string
+   */
+  public function setContent($content)
   {
-    $this->citationThreshold = $citationThreshold;
-  }
-  public function getCitationThreshold()
-  {
-    return $this->citationThreshold;
+    $this->content = $content;
   }
   /**
-   * @param bool
+   * @return string
    */
-  public function setEnableClaimLevelScore($enableClaimLevelScore)
+  public function getContent()
   {
-    $this->enableClaimLevelScore = $enableClaimLevelScore;
+    return $this->content;
   }
   /**
-   * @return bool
+   * @param string
    */
-  public function getEnableClaimLevelScore()
+  public function setStructureType($structureType)
   {
-    return $this->enableClaimLevelScore;
+    $this->structureType = $structureType;
+  }
+  /**
+   * @return string
+   */
+  public function getStructureType()
+  {
+    return $this->structureType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1CheckGroundingSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1CheckGroundingSpec');
+class_alias(GoogleCloudDiscoveryengineV1ChunkStructuredContent::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1ChunkStructuredContent');

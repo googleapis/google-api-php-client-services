@@ -17,37 +17,28 @@
 
 namespace Google\Service\DiscoveryEngine;
 
-class GoogleCloudDiscoveryengineV1CheckGroundingSpec extends \Google\Model
+class GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigMostPopularFeatureConfig extends \Google\Model
 {
-  public $citationThreshold;
   /**
-   * @var bool
+   * @var string
    */
-  public $enableClaimLevelScore;
+  public $timeWindowDays;
 
-  public function setCitationThreshold($citationThreshold)
+  /**
+   * @param string
+   */
+  public function setTimeWindowDays($timeWindowDays)
   {
-    $this->citationThreshold = $citationThreshold;
-  }
-  public function getCitationThreshold()
-  {
-    return $this->citationThreshold;
+    $this->timeWindowDays = $timeWindowDays;
   }
   /**
-   * @param bool
+   * @return string
    */
-  public function setEnableClaimLevelScore($enableClaimLevelScore)
+  public function getTimeWindowDays()
   {
-    $this->enableClaimLevelScore = $enableClaimLevelScore;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableClaimLevelScore()
-  {
-    return $this->enableClaimLevelScore;
+    return $this->timeWindowDays;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDiscoveryengineV1CheckGroundingSpec::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1CheckGroundingSpec');
+class_alias(GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigMostPopularFeatureConfig::class, 'Google_Service_DiscoveryEngine_GoogleCloudDiscoveryengineV1alphaEngineMediaRecommendationEngineConfigMostPopularFeatureConfig');
