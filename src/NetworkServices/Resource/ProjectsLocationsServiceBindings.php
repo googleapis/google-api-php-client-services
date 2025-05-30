@@ -104,6 +104,28 @@ class ProjectsLocationsServiceBindings extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListServiceBindingsResponse::class);
   }
+  /**
+   * Updates the parameters of a single ServiceBinding. (serviceBindings.patch)
+   *
+   * @param string $name Identifier. Name of the ServiceBinding resource. It
+   * matches pattern `projects/locations/serviceBindings/`.
+   * @param ServiceBinding $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. Field mask is used to specify the
+   * fields to be overwritten in the ServiceBinding resource by the update. The
+   * fields specified in the update_mask are relative to the resource, not the
+   * full request. A field will be overwritten if it is in the mask. If the user
+   * does not provide a mask then all fields will be overwritten.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, ServiceBinding $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
