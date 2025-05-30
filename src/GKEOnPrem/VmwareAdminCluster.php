@@ -83,6 +83,8 @@ class VmwareAdminCluster extends \Google\Model
   protected $platformConfigDataType = '';
   protected $preparedSecretsType = VmwareAdminPreparedSecretsConfig::class;
   protected $preparedSecretsDataType = '';
+  protected $privateRegistryConfigType = VmwareAdminPrivateRegistryConfig::class;
+  protected $privateRegistryConfigDataType = '';
   /**
    * @var bool
    */
@@ -399,6 +401,20 @@ class VmwareAdminCluster extends \Google\Model
   public function getPreparedSecrets()
   {
     return $this->preparedSecrets;
+  }
+  /**
+   * @param VmwareAdminPrivateRegistryConfig
+   */
+  public function setPrivateRegistryConfig(VmwareAdminPrivateRegistryConfig $privateRegistryConfig)
+  {
+    $this->privateRegistryConfig = $privateRegistryConfig;
+  }
+  /**
+   * @return VmwareAdminPrivateRegistryConfig
+   */
+  public function getPrivateRegistryConfig()
+  {
+    return $this->privateRegistryConfig;
   }
   /**
    * @param bool
