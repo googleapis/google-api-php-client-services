@@ -17,64 +17,64 @@
 
 namespace Google\Service\DisplayVideo;
 
-class AlgorithmRulesSignal extends \Google\Model
+class AlgorithmRulesFloodlightActivityConversionSignal extends \Google\Model
 {
   /**
    * @var string
    */
-  public $activeViewSignal;
+  public $conversionCounting;
   /**
    * @var string
    */
-  public $clickSignal;
+  public $countingMethod;
   /**
    * @var string
    */
-  public $impressionSignal;
+  public $floodlightActivityId;
 
   /**
    * @param string
    */
-  public function setActiveViewSignal($activeViewSignal)
+  public function setConversionCounting($conversionCounting)
   {
-    $this->activeViewSignal = $activeViewSignal;
+    $this->conversionCounting = $conversionCounting;
   }
   /**
    * @return string
    */
-  public function getActiveViewSignal()
+  public function getConversionCounting()
   {
-    return $this->activeViewSignal;
+    return $this->conversionCounting;
   }
   /**
    * @param string
    */
-  public function setClickSignal($clickSignal)
+  public function setCountingMethod($countingMethod)
   {
-    $this->clickSignal = $clickSignal;
+    $this->countingMethod = $countingMethod;
   }
   /**
    * @return string
    */
-  public function getClickSignal()
+  public function getCountingMethod()
   {
-    return $this->clickSignal;
+    return $this->countingMethod;
   }
   /**
    * @param string
    */
-  public function setImpressionSignal($impressionSignal)
+  public function setFloodlightActivityId($floodlightActivityId)
   {
-    $this->impressionSignal = $impressionSignal;
+    $this->floodlightActivityId = $floodlightActivityId;
   }
   /**
    * @return string
    */
-  public function getImpressionSignal()
+  public function getFloodlightActivityId()
   {
-    return $this->impressionSignal;
+    return $this->floodlightActivityId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AlgorithmRulesSignal::class, 'Google_Service_DisplayVideo_AlgorithmRulesSignal');
+class_alias(AlgorithmRulesFloodlightActivityConversionSignal::class, 'Google_Service_DisplayVideo_AlgorithmRulesFloodlightActivityConversionSignal');
