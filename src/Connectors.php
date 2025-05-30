@@ -300,6 +300,11 @@ class Connectors extends \Google\Service
                   'type' => 'string',
                   'repeated' => true,
                 ],
+                'sortOrder' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],'patch' => [
               'path' => 'v2/{+name}',
