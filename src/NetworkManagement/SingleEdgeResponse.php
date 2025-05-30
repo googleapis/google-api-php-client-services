@@ -17,25 +17,14 @@
 
 namespace Google\Service\NetworkManagement;
 
-class ProbingDetails extends \Google\Collection
+class SingleEdgeResponse extends \Google\Model
 {
-  protected $collection_key = 'edgeResponses';
+  protected $destinationEgressLocationType = EdgeLocation::class;
+  protected $destinationEgressLocationDataType = '';
   /**
    * @var string
    */
-  public $abortCause;
-  protected $destinationEgressLocationType = EdgeLocation::class;
-  protected $destinationEgressLocationDataType = '';
-  protected $edgeResponsesType = SingleEdgeResponse::class;
-  protected $edgeResponsesDataType = 'array';
-  protected $endpointInfoType = EndpointInfo::class;
-  protected $endpointInfoDataType = '';
-  protected $errorType = Status::class;
-  protected $errorDataType = '';
-  /**
-   * @var bool
-   */
-  public $probedAllDevices;
+  public $destinationRouter;
   protected $probingLatencyType = LatencyDistribution::class;
   protected $probingLatencyDataType = '';
   /**
@@ -50,25 +39,7 @@ class ProbingDetails extends \Google\Collection
    * @var int
    */
   public $successfulProbeCount;
-  /**
-   * @var string
-   */
-  public $verifyTime;
 
-  /**
-   * @param string
-   */
-  public function setAbortCause($abortCause)
-  {
-    $this->abortCause = $abortCause;
-  }
-  /**
-   * @return string
-   */
-  public function getAbortCause()
-  {
-    return $this->abortCause;
-  }
   /**
    * @param EdgeLocation
    */
@@ -84,60 +55,18 @@ class ProbingDetails extends \Google\Collection
     return $this->destinationEgressLocation;
   }
   /**
-   * @param SingleEdgeResponse[]
+   * @param string
    */
-  public function setEdgeResponses($edgeResponses)
+  public function setDestinationRouter($destinationRouter)
   {
-    $this->edgeResponses = $edgeResponses;
+    $this->destinationRouter = $destinationRouter;
   }
   /**
-   * @return SingleEdgeResponse[]
+   * @return string
    */
-  public function getEdgeResponses()
+  public function getDestinationRouter()
   {
-    return $this->edgeResponses;
-  }
-  /**
-   * @param EndpointInfo
-   */
-  public function setEndpointInfo(EndpointInfo $endpointInfo)
-  {
-    $this->endpointInfo = $endpointInfo;
-  }
-  /**
-   * @return EndpointInfo
-   */
-  public function getEndpointInfo()
-  {
-    return $this->endpointInfo;
-  }
-  /**
-   * @param Status
-   */
-  public function setError(Status $error)
-  {
-    $this->error = $error;
-  }
-  /**
-   * @return Status
-   */
-  public function getError()
-  {
-    return $this->error;
-  }
-  /**
-   * @param bool
-   */
-  public function setProbedAllDevices($probedAllDevices)
-  {
-    $this->probedAllDevices = $probedAllDevices;
-  }
-  /**
-   * @return bool
-   */
-  public function getProbedAllDevices()
-  {
-    return $this->probedAllDevices;
+    return $this->destinationRouter;
   }
   /**
    * @param LatencyDistribution
@@ -195,21 +124,7 @@ class ProbingDetails extends \Google\Collection
   {
     return $this->successfulProbeCount;
   }
-  /**
-   * @param string
-   */
-  public function setVerifyTime($verifyTime)
-  {
-    $this->verifyTime = $verifyTime;
-  }
-  /**
-   * @return string
-   */
-  public function getVerifyTime()
-  {
-    return $this->verifyTime;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProbingDetails::class, 'Google_Service_NetworkManagement_ProbingDetails');
+class_alias(SingleEdgeResponse::class, 'Google_Service_NetworkManagement_SingleEdgeResponse');
