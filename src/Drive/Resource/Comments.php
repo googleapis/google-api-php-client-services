@@ -53,10 +53,7 @@ class Comments extends \Google\Service\Resource
   /**
    * Deletes a comment. For more information, see [Manage comments and
    * replies](https://developers.google.com/workspace/drive/api/guides/manage-
-   * comments). Required: The `fields` parameter must be set. To return the exact
-   * fields you need, see [Return specific
-   * fields](https://developers.google.com/workspace/drive/api/guides/fields-
-   * parameter). (comments.delete)
+   * comments). (comments.delete)
    *
    * @param string $fileId The ID of the file.
    * @param string $commentId The ID of the comment.
