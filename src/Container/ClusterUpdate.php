@@ -24,6 +24,8 @@ class ClusterUpdate extends \Google\Collection
   protected $additionalPodRangesConfigDataType = '';
   protected $desiredAddonsConfigType = AddonsConfig::class;
   protected $desiredAddonsConfigDataType = '';
+  protected $desiredAnonymousAuthenticationConfigType = AnonymousAuthenticationConfig::class;
+  protected $desiredAnonymousAuthenticationConfigDataType = '';
   protected $desiredAuthenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $desiredAuthenticatorGroupsConfigDataType = '';
   protected $desiredAutopilotWorkloadPolicyConfigType = WorkloadPolicyConfig::class;
@@ -218,6 +220,20 @@ class ClusterUpdate extends \Google\Collection
   public function getDesiredAddonsConfig()
   {
     return $this->desiredAddonsConfig;
+  }
+  /**
+   * @param AnonymousAuthenticationConfig
+   */
+  public function setDesiredAnonymousAuthenticationConfig(AnonymousAuthenticationConfig $desiredAnonymousAuthenticationConfig)
+  {
+    $this->desiredAnonymousAuthenticationConfig = $desiredAnonymousAuthenticationConfig;
+  }
+  /**
+   * @return AnonymousAuthenticationConfig
+   */
+  public function getDesiredAnonymousAuthenticationConfig()
+  {
+    return $this->desiredAnonymousAuthenticationConfig;
   }
   /**
    * @param AuthenticatorGroupsConfig
