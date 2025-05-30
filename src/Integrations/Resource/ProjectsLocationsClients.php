@@ -18,6 +18,8 @@
 namespace Google\Service\Integrations\Resource;
 
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaDeprovisionClientRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest;
+use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorResponse;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaProvisionClientRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaReplaceServiceAccountRequest;
 use Google\Service\Integrations\GoogleCloudIntegrationsV1alphaSwitchEncryptionRequest;
@@ -69,6 +71,23 @@ class ProjectsLocationsClients extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('provision', [$params], GoogleProtobufEmpty::class);
+  }
+  /**
+   * Perform post provisioning steps after client is provisioned.
+   * (clients.provisionClientPostProcessor)
+   *
+   * @param string $parent Required. Required: The ID of the GCP Project to be
+   * provisioned.
+   * @param GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorResponse
+   * @throws \Google\Service\Exception
+   */
+  public function provisionClientPostProcessor($parent, GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('provisionClientPostProcessor', [$params], GoogleCloudIntegrationsV1alphaProvisionClientPostProcessorResponse::class);
   }
   /**
    * Update run-as service account for provisioned client (clients.replace)

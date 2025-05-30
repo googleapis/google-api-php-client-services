@@ -97,6 +97,8 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_podcasts_operations;
   public $projects_locations_rankingConfigs;
   public $projects_locations_userEvents;
+  public $projects_locations_userStores;
+  public $projects_locations_userStores_userLicenses;
   public $projects_operations;
   public $rootUrlTemplate;
 
@@ -1818,7 +1820,17 @@ class DiscoveryEngine extends \Google\Service
         'operations',
         [
           'methods' => [
-            'get' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -3487,6 +3499,58 @@ class DiscoveryEngine extends \Google\Service
                 'writeAsync' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_userStores = new DiscoveryEngine\Resource\ProjectsLocationsUserStores(
+        $this,
+        $this->serviceName,
+        'userStores',
+        [
+          'methods' => [
+            'batchUpdateUserLicenses' => [
+              'path' => 'v1/{+parent}:batchUpdateUserLicenses',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_userStores_userLicenses = new DiscoveryEngine\Resource\ProjectsLocationsUserStoresUserLicenses(
+        $this,
+        $this->serviceName,
+        'userLicenses',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/userLicenses',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
