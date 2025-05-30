@@ -34,7 +34,11 @@ class UsersSpacesSpaceNotificationSetting extends \Google\Service\Resource
    * space notification setting](https://developers.google.com/workspace/chat/get-
    * space-notification-setting). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaceNotificationSetting.get)
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.users.spacesettings`
+   * (spaceNotificationSetting.get)
    *
    * @param string $name Required. Format:
    * users/{user}/spaces/{space}/spaceNotificationSetting -
@@ -58,7 +62,11 @@ class UsersSpacesSpaceNotificationSetting extends \Google\Service\Resource
    * setting](https://developers.google.com/workspace/chat/update-space-
    * notification-setting). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaceNotificationSetting.patch)
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.users.spacesettings`
+   * (spaceNotificationSetting.patch)
    *
    * @param string $name Identifier. The resource name of the space notification
    * setting. Format: `users/{user}/spaces/{space}/spaceNotificationSetting`.
