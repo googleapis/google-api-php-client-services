@@ -17,12 +17,14 @@
 
 namespace Google\Service\BackupforGKE;
 
-class RestorePlan extends \Google\Model
+class BackupPlanBinding extends \Google\Model
 {
   /**
    * @var string
    */
   public $backupPlan;
+  protected $backupPlanDetailsType = BackupPlanDetails::class;
+  protected $backupPlanDetailsDataType = '';
   /**
    * @var string
    */
@@ -34,33 +36,11 @@ class RestorePlan extends \Google\Model
   /**
    * @var string
    */
-  public $description;
-  /**
-   * @var string
-   */
   public $etag;
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
   public $name;
-  /**
-   * @var string
-   */
-  public $restoreChannel;
-  protected $restoreConfigType = RestoreConfig::class;
-  protected $restoreConfigDataType = '';
-  /**
-   * @var string
-   */
-  public $state;
-  /**
-   * @var string
-   */
-  public $stateReason;
   /**
    * @var string
    */
@@ -83,6 +63,20 @@ class RestorePlan extends \Google\Model
   public function getBackupPlan()
   {
     return $this->backupPlan;
+  }
+  /**
+   * @param BackupPlanDetails
+   */
+  public function setBackupPlanDetails(BackupPlanDetails $backupPlanDetails)
+  {
+    $this->backupPlanDetails = $backupPlanDetails;
+  }
+  /**
+   * @return BackupPlanDetails
+   */
+  public function getBackupPlanDetails()
+  {
+    return $this->backupPlanDetails;
   }
   /**
    * @param string
@@ -115,20 +109,6 @@ class RestorePlan extends \Google\Model
   /**
    * @param string
    */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  /**
-   * @param string
-   */
   public function setEtag($etag)
   {
     $this->etag = $etag;
@@ -139,20 +119,6 @@ class RestorePlan extends \Google\Model
   public function getEtag()
   {
     return $this->etag;
-  }
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
   }
   /**
    * @param string
@@ -167,62 +133,6 @@ class RestorePlan extends \Google\Model
   public function getName()
   {
     return $this->name;
-  }
-  /**
-   * @param string
-   */
-  public function setRestoreChannel($restoreChannel)
-  {
-    $this->restoreChannel = $restoreChannel;
-  }
-  /**
-   * @return string
-   */
-  public function getRestoreChannel()
-  {
-    return $this->restoreChannel;
-  }
-  /**
-   * @param RestoreConfig
-   */
-  public function setRestoreConfig(RestoreConfig $restoreConfig)
-  {
-    $this->restoreConfig = $restoreConfig;
-  }
-  /**
-   * @return RestoreConfig
-   */
-  public function getRestoreConfig()
-  {
-    return $this->restoreConfig;
-  }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
-  }
-  /**
-   * @param string
-   */
-  public function setStateReason($stateReason)
-  {
-    $this->stateReason = $stateReason;
-  }
-  /**
-   * @return string
-   */
-  public function getStateReason()
-  {
-    return $this->stateReason;
   }
   /**
    * @param string
@@ -255,4 +165,4 @@ class RestorePlan extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RestorePlan::class, 'Google_Service_BackupforGKE_RestorePlan');
+class_alias(BackupPlanBinding::class, 'Google_Service_BackupforGKE_BackupPlanBinding');

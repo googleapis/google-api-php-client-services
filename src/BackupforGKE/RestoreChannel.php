@@ -17,16 +17,8 @@
 
 namespace Google\Service\BackupforGKE;
 
-class RestorePlan extends \Google\Model
+class RestoreChannel extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $backupPlan;
-  /**
-   * @var string
-   */
-  public $cluster;
   /**
    * @var string
    */
@@ -35,6 +27,14 @@ class RestorePlan extends \Google\Model
    * @var string
    */
   public $description;
+  /**
+   * @var string
+   */
+  public $destinationProject;
+  /**
+   * @var string
+   */
+  public $destinationProjectId;
   /**
    * @var string
    */
@@ -50,54 +50,12 @@ class RestorePlan extends \Google\Model
   /**
    * @var string
    */
-  public $restoreChannel;
-  protected $restoreConfigType = RestoreConfig::class;
-  protected $restoreConfigDataType = '';
-  /**
-   * @var string
-   */
-  public $state;
-  /**
-   * @var string
-   */
-  public $stateReason;
-  /**
-   * @var string
-   */
   public $uid;
   /**
    * @var string
    */
   public $updateTime;
 
-  /**
-   * @param string
-   */
-  public function setBackupPlan($backupPlan)
-  {
-    $this->backupPlan = $backupPlan;
-  }
-  /**
-   * @return string
-   */
-  public function getBackupPlan()
-  {
-    return $this->backupPlan;
-  }
-  /**
-   * @param string
-   */
-  public function setCluster($cluster)
-  {
-    $this->cluster = $cluster;
-  }
-  /**
-   * @return string
-   */
-  public function getCluster()
-  {
-    return $this->cluster;
-  }
   /**
    * @param string
    */
@@ -125,6 +83,34 @@ class RestorePlan extends \Google\Model
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setDestinationProject($destinationProject)
+  {
+    $this->destinationProject = $destinationProject;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationProject()
+  {
+    return $this->destinationProject;
+  }
+  /**
+   * @param string
+   */
+  public function setDestinationProjectId($destinationProjectId)
+  {
+    $this->destinationProjectId = $destinationProjectId;
+  }
+  /**
+   * @return string
+   */
+  public function getDestinationProjectId()
+  {
+    return $this->destinationProjectId;
   }
   /**
    * @param string
@@ -171,62 +157,6 @@ class RestorePlan extends \Google\Model
   /**
    * @param string
    */
-  public function setRestoreChannel($restoreChannel)
-  {
-    $this->restoreChannel = $restoreChannel;
-  }
-  /**
-   * @return string
-   */
-  public function getRestoreChannel()
-  {
-    return $this->restoreChannel;
-  }
-  /**
-   * @param RestoreConfig
-   */
-  public function setRestoreConfig(RestoreConfig $restoreConfig)
-  {
-    $this->restoreConfig = $restoreConfig;
-  }
-  /**
-   * @return RestoreConfig
-   */
-  public function getRestoreConfig()
-  {
-    return $this->restoreConfig;
-  }
-  /**
-   * @param string
-   */
-  public function setState($state)
-  {
-    $this->state = $state;
-  }
-  /**
-   * @return string
-   */
-  public function getState()
-  {
-    return $this->state;
-  }
-  /**
-   * @param string
-   */
-  public function setStateReason($stateReason)
-  {
-    $this->stateReason = $stateReason;
-  }
-  /**
-   * @return string
-   */
-  public function getStateReason()
-  {
-    return $this->stateReason;
-  }
-  /**
-   * @param string
-   */
   public function setUid($uid)
   {
     $this->uid = $uid;
@@ -255,4 +185,4 @@ class RestorePlan extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RestorePlan::class, 'Google_Service_BackupforGKE_RestorePlan');
+class_alias(RestoreChannel::class, 'Google_Service_BackupforGKE_RestoreChannel');
