@@ -17,82 +17,64 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig extends \Google\Model
+class GoogleCloudDataplexV1EntryLinkEntryReference extends \Google\Model
 {
   /**
    * @var string
    */
-  public $connection;
+  public $name;
   /**
    * @var string
    */
-  public $location;
+  public $path;
   /**
    * @var string
    */
-  public $project;
-  /**
-   * @var string
-   */
-  public $tableType;
+  public $type;
 
   /**
    * @param string
    */
-  public function setConnection($connection)
+  public function setName($name)
   {
-    $this->connection = $connection;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getConnection()
+  public function getName()
   {
-    return $this->connection;
+    return $this->name;
   }
   /**
    * @param string
    */
-  public function setLocation($location)
+  public function setPath($path)
   {
-    $this->location = $location;
+    $this->path = $path;
   }
   /**
    * @return string
    */
-  public function getLocation()
+  public function getPath()
   {
-    return $this->location;
+    return $this->path;
   }
   /**
    * @param string
    */
-  public function setProject($project)
+  public function setType($type)
   {
-    $this->project = $project;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getProject()
+  public function getType()
   {
-    return $this->project;
-  }
-  /**
-   * @param string
-   */
-  public function setTableType($tableType)
-  {
-    $this->tableType = $tableType;
-  }
-  /**
-   * @return string
-   */
-  public function getTableType()
-  {
-    return $this->tableType;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig');
+class_alias(GoogleCloudDataplexV1EntryLinkEntryReference::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1EntryLinkEntryReference');
