@@ -17,82 +17,82 @@
 
 namespace Google\Service\Integrations;
 
-class GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest extends \Google\Model
+class GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest extends \Google\Model
 {
   /**
    * @var string
    */
-  public $functionName;
+  public $creator;
   /**
    * @var string
    */
-  public $functionRegion;
+  public $description;
   /**
    * @var string
    */
-  public $gcfApiVersion;
+  public $displayName;
   /**
    * @var string
    */
-  public $projectId;
+  public $intent;
 
   /**
    * @param string
    */
-  public function setFunctionName($functionName)
+  public function setCreator($creator)
   {
-    $this->functionName = $functionName;
+    $this->creator = $creator;
   }
   /**
    * @return string
    */
-  public function getFunctionName()
+  public function getCreator()
   {
-    return $this->functionName;
+    return $this->creator;
   }
   /**
    * @param string
    */
-  public function setFunctionRegion($functionRegion)
+  public function setDescription($description)
   {
-    $this->functionRegion = $functionRegion;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getFunctionRegion()
+  public function getDescription()
   {
-    return $this->functionRegion;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setGcfApiVersion($gcfApiVersion)
+  public function setDisplayName($displayName)
   {
-    $this->gcfApiVersion = $gcfApiVersion;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getGcfApiVersion()
+  public function getDisplayName()
   {
-    return $this->gcfApiVersion;
+    return $this->displayName;
   }
   /**
    * @param string
    */
-  public function setProjectId($projectId)
+  public function setIntent($intent)
   {
-    $this->projectId = $projectId;
+    $this->intent = $intent;
   }
   /**
    * @return string
    */
-  public function getProjectId()
+  public function getIntent()
   {
-    return $this->projectId;
+    return $this->intent;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaCreateCloudFunctionRequest');
+class_alias(GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest::class, 'Google_Service_Integrations_GoogleCloudIntegrationsV1alphaGenerateAgentFlowRequest');
