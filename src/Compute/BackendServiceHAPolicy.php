@@ -23,6 +23,8 @@ class BackendServiceHAPolicy extends \Google\Model
    * @var string
    */
   public $fastIPMove;
+  protected $leaderType = BackendServiceHAPolicyLeader::class;
+  protected $leaderDataType = '';
 
   /**
    * @param string
@@ -37,6 +39,20 @@ class BackendServiceHAPolicy extends \Google\Model
   public function getFastIPMove()
   {
     return $this->fastIPMove;
+  }
+  /**
+   * @param BackendServiceHAPolicyLeader
+   */
+  public function setLeader(BackendServiceHAPolicyLeader $leader)
+  {
+    $this->leader = $leader;
+  }
+  /**
+   * @return BackendServiceHAPolicyLeader
+   */
+  public function getLeader()
+  {
+    return $this->leader;
   }
 }
 
