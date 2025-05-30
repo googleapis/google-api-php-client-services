@@ -670,6 +670,16 @@ class VMMigrationService extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'extendMigration' => [
+              'path' => 'v1/{+migratingVm}:extendMigration',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'migratingVm' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'finalizeMigration' => [
               'path' => 'v1/{+migratingVm}:finalizeMigration',
               'httpMethod' => 'POST',
