@@ -23,10 +23,6 @@ class ConfidentialInstanceConfig extends \Google\Model
    * @var string
    */
   public $confidentialInstanceType;
-  /**
-   * @var bool
-   */
-  public $enableConfidentialCompute;
 
   /**
    * @param string
@@ -41,20 +37,6 @@ class ConfidentialInstanceConfig extends \Google\Model
   public function getConfidentialInstanceType()
   {
     return $this->confidentialInstanceType;
-  }
-  /**
-   * @param bool
-   */
-  public function setEnableConfidentialCompute($enableConfidentialCompute)
-  {
-    $this->enableConfidentialCompute = $enableConfidentialCompute;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableConfidentialCompute()
-  {
-    return $this->enableConfidentialCompute;
   }
 }
 
