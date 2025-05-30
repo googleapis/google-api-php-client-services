@@ -22,6 +22,10 @@ class AutonomousDatabaseProperties extends \Google\Collection
   protected $collection_key = 'supportedCloneRegions';
   public $actualUsedDataStorageSizeTb;
   public $allocatedStorageSizeTb;
+  /**
+   * @var string[]
+   */
+  public $allowlistedIps;
   protected $apexDetailsType = AutonomousDatabaseApex::class;
   protected $apexDetailsDataType = '';
   /**
@@ -254,6 +258,20 @@ class AutonomousDatabaseProperties extends \Google\Collection
   public function getAllocatedStorageSizeTb()
   {
     return $this->allocatedStorageSizeTb;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAllowlistedIps($allowlistedIps)
+  {
+    $this->allowlistedIps = $allowlistedIps;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAllowlistedIps()
+  {
+    return $this->allowlistedIps;
   }
   /**
    * @param AutonomousDatabaseApex

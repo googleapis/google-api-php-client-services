@@ -91,7 +91,7 @@ class Forms extends \Google\Service\Resource
    * they don't have the `publish_settings` field. (forms.setPublishSettings)
    *
    * @param string $formId Required. The ID of the form. You can get the id from
-   * `Form.form_id` field.
+   * Form.form_id field.
    * @param SetPublishSettingsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return SetPublishSettingsResponse
