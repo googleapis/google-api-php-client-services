@@ -65,7 +65,7 @@ class ProjectsLocationsAccountConnectorsUsers extends \Google\Service\Resource
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Delete the User of the user themselves. (users.deleteSelf)
+   * Delete the User based on the user credentials. (users.deleteSelf)
    *
    * @param string $name Required. Name of the AccountConnector resource
    * @param array $optParams Optional parameters.
@@ -96,7 +96,7 @@ class ProjectsLocationsAccountConnectorsUsers extends \Google\Service\Resource
     return $this->call('fetchAccessToken', [$params], FetchAccessTokenResponse::class);
   }
   /**
-   * Fetches the User of the user themselves. (users.fetchSelf)
+   * Fetch the User based on the user credentials. (users.fetchSelf)
    *
    * @param string $name Required. Name of the AccountConnector resource
    * @param array $optParams Optional parameters.

@@ -143,16 +143,16 @@ class ProjectsLocationsAccountConnectors extends \Google\Service\Resource
    * Updates the parameters of a single AccountConnector.
    * (accountConnectors.patch)
    *
-   * @param string $name Identifier. The resource name of the userConnection, in
+   * @param string $name Identifier. The resource name of the accountConnector, in
    * the format `projects/{project}/locations/{location}/accountConnectors/{accoun
    * t_connector_id}`.
    * @param AccountConnector $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param bool allowMissing Optional. If set to true, and the userConnection
-   * is not found a new userConnection will be created. In this situation
-   * `update_mask` is ignored. The creation will succeed only if the input
-   * userConnection has all the necessary
+   * @opt_param bool allowMissing Optional. If set to true, and the
+   * accountConnector is not found a new accountConnector will be created. In this
+   * situation `update_mask` is ignored. The creation will succeed only if the
+   * input accountConnector has all the necessary
    * @opt_param string requestId Optional. An optional request ID to identify
    * requests. Specify a unique request ID so that if you must retry your request,
    * the server will know to ignore the request if it has already been completed.
