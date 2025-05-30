@@ -47,6 +47,10 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extends \Google\Col
   /**
    * @var string
    */
+  public $scheduledRecordCount;
+  /**
+   * @var string
+   */
   public $sourceApiRequestCount;
   /**
    * @var string
@@ -162,6 +166,20 @@ class GoogleCloudDiscoveryengineV1alphaConnectorRunEntityRun extends \Google\Col
   public function getProgress()
   {
     return $this->progress;
+  }
+  /**
+   * @param string
+   */
+  public function setScheduledRecordCount($scheduledRecordCount)
+  {
+    $this->scheduledRecordCount = $scheduledRecordCount;
+  }
+  /**
+   * @return string
+   */
+  public function getScheduledRecordCount()
+  {
+    return $this->scheduledRecordCount;
   }
   /**
    * @param string

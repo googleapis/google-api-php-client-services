@@ -41,6 +41,10 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   protected $ragFileParsingConfigDataType = '';
   protected $ragFileTransformationConfigType = GoogleCloudAiplatformV1RagFileTransformationConfig::class;
   protected $ragFileTransformationConfigDataType = '';
+  /**
+   * @var bool
+   */
+  public $rebuildAnnIndex;
   protected $sharePointSourcesType = GoogleCloudAiplatformV1SharePointSources::class;
   protected $sharePointSourcesDataType = '';
   protected $slackSourceType = GoogleCloudAiplatformV1SlackSource::class;
@@ -185,6 +189,20 @@ class GoogleCloudAiplatformV1ImportRagFilesConfig extends \Google\Model
   public function getRagFileTransformationConfig()
   {
     return $this->ragFileTransformationConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setRebuildAnnIndex($rebuildAnnIndex)
+  {
+    $this->rebuildAnnIndex = $rebuildAnnIndex;
+  }
+  /**
+   * @return bool
+   */
+  public function getRebuildAnnIndex()
+  {
+    return $this->rebuildAnnIndex;
   }
   /**
    * @param GoogleCloudAiplatformV1SharePointSources
