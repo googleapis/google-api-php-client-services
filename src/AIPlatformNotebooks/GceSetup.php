@@ -54,6 +54,8 @@ class GceSetup extends \Google\Collection
   public $minCpuPlatform;
   protected $networkInterfacesType = NetworkInterface::class;
   protected $networkInterfacesDataType = 'array';
+  protected $reservationAffinityType = ReservationAffinity::class;
+  protected $reservationAffinityDataType = '';
   protected $serviceAccountsType = ServiceAccount::class;
   protected $serviceAccountsDataType = 'array';
   protected $shieldedInstanceConfigType = ShieldedInstanceConfig::class;
@@ -232,6 +234,20 @@ class GceSetup extends \Google\Collection
   public function getNetworkInterfaces()
   {
     return $this->networkInterfaces;
+  }
+  /**
+   * @param ReservationAffinity
+   */
+  public function setReservationAffinity(ReservationAffinity $reservationAffinity)
+  {
+    $this->reservationAffinity = $reservationAffinity;
+  }
+  /**
+   * @return ReservationAffinity
+   */
+  public function getReservationAffinity()
+  {
+    return $this->reservationAffinity;
   }
   /**
    * @param ServiceAccount[]
