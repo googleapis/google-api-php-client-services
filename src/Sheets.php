@@ -102,6 +102,10 @@ class Sheets extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'excludeTablesInBandedRanges' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'includeGridData' => [
                   'location' => 'query',
                   'type' => 'boolean',
