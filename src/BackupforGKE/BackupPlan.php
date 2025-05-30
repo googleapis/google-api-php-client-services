@@ -19,6 +19,10 @@ namespace Google\Service\BackupforGKE;
 
 class BackupPlan extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $backupChannel;
   protected $backupConfigType = BackupConfig::class;
   protected $backupConfigDataType = '';
   protected $backupScheduleType = Schedule::class;
@@ -86,6 +90,20 @@ class BackupPlan extends \Google\Model
    */
   public $updateTime;
 
+  /**
+   * @param string
+   */
+  public function setBackupChannel($backupChannel)
+  {
+    $this->backupChannel = $backupChannel;
+  }
+  /**
+   * @return string
+   */
+  public function getBackupChannel()
+  {
+    return $this->backupChannel;
+  }
   /**
    * @param BackupConfig
    */
