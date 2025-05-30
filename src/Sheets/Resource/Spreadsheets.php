@@ -95,6 +95,8 @@ class Spreadsheets extends \Google\Service\Resource
    * @param string $spreadsheetId The spreadsheet to request.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool excludeTablesInBandedRanges True if tables should be excluded
+   * in the banded ranges. False if not set.
    * @opt_param bool includeGridData True if grid data should be returned. This
    * parameter is ignored if a field mask was set in the request.
    * @opt_param string ranges The ranges to retrieve from the spreadsheet.

@@ -29,6 +29,10 @@ class DatabaseInstance extends \Google\Collection
    */
   public $backendType;
   /**
+   * @var bool
+   */
+  public $clearNetwork;
+  /**
    * @var string
    */
   public $connectionName;
@@ -222,6 +226,20 @@ class DatabaseInstance extends \Google\Collection
   public function getBackendType()
   {
     return $this->backendType;
+  }
+  /**
+   * @param bool
+   */
+  public function setClearNetwork($clearNetwork)
+  {
+    $this->clearNetwork = $clearNetwork;
+  }
+  /**
+   * @return bool
+   */
+  public function getClearNetwork()
+  {
+    return $this->clearNetwork;
   }
   /**
    * @param string

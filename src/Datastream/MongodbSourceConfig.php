@@ -23,6 +23,10 @@ class MongodbSourceConfig extends \Google\Model
   protected $excludeObjectsDataType = '';
   protected $includeObjectsType = MongodbCluster::class;
   protected $includeObjectsDataType = '';
+  /**
+   * @var int
+   */
+  public $maxConcurrentBackfillTasks;
 
   /**
    * @param MongodbCluster
@@ -51,6 +55,20 @@ class MongodbSourceConfig extends \Google\Model
   public function getIncludeObjects()
   {
     return $this->includeObjects;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxConcurrentBackfillTasks($maxConcurrentBackfillTasks)
+  {
+    $this->maxConcurrentBackfillTasks = $maxConcurrentBackfillTasks;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxConcurrentBackfillTasks()
+  {
+    return $this->maxConcurrentBackfillTasks;
   }
 }
 

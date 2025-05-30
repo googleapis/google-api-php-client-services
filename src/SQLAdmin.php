@@ -701,6 +701,16 @@ class SQLAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'pointInTimeRestore' => [
+              'path' => 'v1/{+parent}:pointInTimeRestore',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'promoteReplica' => [
               'path' => 'v1/projects/{project}/instances/{instance}/promoteReplica',
               'httpMethod' => 'POST',
