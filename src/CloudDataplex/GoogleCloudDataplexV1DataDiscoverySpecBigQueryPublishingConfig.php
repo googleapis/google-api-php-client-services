@@ -30,6 +30,10 @@ class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig extends \Go
   /**
    * @var string
    */
+  public $project;
+  /**
+   * @var string
+   */
   public $tableType;
 
   /**
@@ -59,6 +63,20 @@ class GoogleCloudDataplexV1DataDiscoverySpecBigQueryPublishingConfig extends \Go
   public function getLocation()
   {
     return $this->location;
+  }
+  /**
+   * @param string
+   */
+  public function setProject($project)
+  {
+    $this->project = $project;
+  }
+  /**
+   * @return string
+   */
+  public function getProject()
+  {
+    return $this->project;
   }
   /**
    * @param string

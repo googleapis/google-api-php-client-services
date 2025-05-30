@@ -19,8 +19,6 @@ namespace Google\Service\Dataproc\Resource;
 
 use Google\Service\Dataproc\AccessSparkApplicationEnvironmentInfoResponse;
 use Google\Service\Dataproc\AccessSparkApplicationJobResponse;
-use Google\Service\Dataproc\AccessSparkApplicationNativeBuildInfoResponse;
-use Google\Service\Dataproc\AccessSparkApplicationNativeSqlQueryResponse;
 use Google\Service\Dataproc\AccessSparkApplicationResponse;
 use Google\Service\Dataproc\AccessSparkApplicationSqlQueryResponse;
 use Google\Service\Dataproc\AccessSparkApplicationSqlSparkPlanGraphResponse;
@@ -29,7 +27,6 @@ use Google\Service\Dataproc\AccessSparkApplicationStageRddOperationGraphResponse
 use Google\Service\Dataproc\SearchSparkApplicationExecutorStageSummaryResponse;
 use Google\Service\Dataproc\SearchSparkApplicationExecutorsResponse;
 use Google\Service\Dataproc\SearchSparkApplicationJobsResponse;
-use Google\Service\Dataproc\SearchSparkApplicationNativeSqlQueriesResponse;
 use Google\Service\Dataproc\SearchSparkApplicationSqlQueriesResponse;
 use Google\Service\Dataproc\SearchSparkApplicationStageAttemptTasksResponse;
 use Google\Service\Dataproc\SearchSparkApplicationStageAttemptsResponse;
@@ -109,44 +106,6 @@ class ProjectsLocationsBatchesSparkApplications extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('accessJob', [$params], AccessSparkApplicationJobResponse::class);
-  }
-  /**
-   * Obtain build data for Native Job (sparkApplications.accessNativeBuildInfo)
-   *
-   * @param string $name Required. The fully qualified name of the batch to
-   * retrieve in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches
-   * /BATCH_ID/sparkApplications/APPLICATION_ID"
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string parent Required. Parent (Batch) resource reference.
-   * @return AccessSparkApplicationNativeBuildInfoResponse
-   * @throws \Google\Service\Exception
-   */
-  public function accessNativeBuildInfo($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('accessNativeBuildInfo', [$params], AccessSparkApplicationNativeBuildInfoResponse::class);
-  }
-  /**
-   * Obtain data corresponding to a particular Native SQL Query for a Spark
-   * Application. (sparkApplications.accessNativeSqlQuery)
-   *
-   * @param string $name Required. The fully qualified name of the batch to
-   * retrieve in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches
-   * /BATCH_ID/sparkApplications/APPLICATION_ID"
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string executionId Required. Execution ID
-   * @opt_param string parent Required. Parent (Batch) resource reference.
-   * @return AccessSparkApplicationNativeSqlQueryResponse
-   * @throws \Google\Service\Exception
-   */
-  public function accessNativeSqlQuery($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('accessNativeSqlQuery', [$params], AccessSparkApplicationNativeSqlQueryResponse::class);
   }
   /**
    * Obtain Spark Plan Graph for a Spark Application SQL execution. Limits the
@@ -348,31 +307,6 @@ class ProjectsLocationsBatchesSparkApplications extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('searchJobs', [$params], SearchSparkApplicationJobsResponse::class);
-  }
-  /**
-   * Obtain data corresponding to Native SQL Queries for a Spark Application.
-   * (sparkApplications.searchNativeSqlQueries)
-   *
-   * @param string $name Required. The fully qualified name of the batch to
-   * retrieve in the format "projects/PROJECT_ID/locations/DATAPROC_REGION/batches
-   * /BATCH_ID/sparkApplications/APPLICATION_ID"
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int pageSize Optional. Maximum number of queries to return in each
-   * response. The service may return fewer than this. The default page size is
-   * 10; the maximum page size is 100.
-   * @opt_param string pageToken Optional. A page token received from a previous
-   * SearchSparkApplicationNativeSqlQueries call. Provide this token to retrieve
-   * the subsequent page.
-   * @opt_param string parent Required. Parent (Batch) resource reference.
-   * @return SearchSparkApplicationNativeSqlQueriesResponse
-   * @throws \Google\Service\Exception
-   */
-  public function searchNativeSqlQueries($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('searchNativeSqlQueries', [$params], SearchSparkApplicationNativeSqlQueriesResponse::class);
   }
   /**
    * Obtain data corresponding to SQL Queries for a Spark Application.
