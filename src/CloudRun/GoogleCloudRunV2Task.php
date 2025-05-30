@@ -65,6 +65,10 @@ class GoogleCloudRunV2Task extends \Google\Collection
    */
   public $generation;
   /**
+   * @var bool
+   */
+  public $gpuZonalRedundancyDisabled;
+  /**
    * @var int
    */
   public $index;
@@ -304,6 +308,20 @@ class GoogleCloudRunV2Task extends \Google\Collection
   public function getGeneration()
   {
     return $this->generation;
+  }
+  /**
+   * @param bool
+   */
+  public function setGpuZonalRedundancyDisabled($gpuZonalRedundancyDisabled)
+  {
+    $this->gpuZonalRedundancyDisabled = $gpuZonalRedundancyDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getGpuZonalRedundancyDisabled()
+  {
+    return $this->gpuZonalRedundancyDisabled;
   }
   /**
    * @param int
