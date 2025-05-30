@@ -63,6 +63,14 @@ class ForwardingRule extends \Google\Collection
   /**
    * @var string
    */
+  public $externalManagedBackendBucketMigrationState;
+  /**
+   * @var float
+   */
+  public $externalManagedBackendBucketMigrationTestingPercentage;
+  /**
+   * @var string
+   */
   public $fingerprint;
   /**
    * @var string
@@ -286,6 +294,34 @@ class ForwardingRule extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setExternalManagedBackendBucketMigrationState($externalManagedBackendBucketMigrationState)
+  {
+    $this->externalManagedBackendBucketMigrationState = $externalManagedBackendBucketMigrationState;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalManagedBackendBucketMigrationState()
+  {
+    return $this->externalManagedBackendBucketMigrationState;
+  }
+  /**
+   * @param float
+   */
+  public function setExternalManagedBackendBucketMigrationTestingPercentage($externalManagedBackendBucketMigrationTestingPercentage)
+  {
+    $this->externalManagedBackendBucketMigrationTestingPercentage = $externalManagedBackendBucketMigrationTestingPercentage;
+  }
+  /**
+   * @return float
+   */
+  public function getExternalManagedBackendBucketMigrationTestingPercentage()
+  {
+    return $this->externalManagedBackendBucketMigrationTestingPercentage;
   }
   /**
    * @param string
