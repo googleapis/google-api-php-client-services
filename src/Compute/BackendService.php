@@ -66,6 +66,14 @@ class BackendService extends \Google\Collection
    * @var bool
    */
   public $enableCDN;
+  /**
+   * @var string
+   */
+  public $externalManagedMigrationState;
+  /**
+   * @var float
+   */
+  public $externalManagedMigrationTestingPercentage;
   protected $failoverPolicyType = BackendServiceFailoverPolicy::class;
   protected $failoverPolicyDataType = '';
   /**
@@ -378,6 +386,34 @@ class BackendService extends \Google\Collection
   public function getEnableCDN()
   {
     return $this->enableCDN;
+  }
+  /**
+   * @param string
+   */
+  public function setExternalManagedMigrationState($externalManagedMigrationState)
+  {
+    $this->externalManagedMigrationState = $externalManagedMigrationState;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalManagedMigrationState()
+  {
+    return $this->externalManagedMigrationState;
+  }
+  /**
+   * @param float
+   */
+  public function setExternalManagedMigrationTestingPercentage($externalManagedMigrationTestingPercentage)
+  {
+    $this->externalManagedMigrationTestingPercentage = $externalManagedMigrationTestingPercentage;
+  }
+  /**
+   * @return float
+   */
+  public function getExternalManagedMigrationTestingPercentage()
+  {
+    return $this->externalManagedMigrationTestingPercentage;
   }
   /**
    * @param BackendServiceFailoverPolicy

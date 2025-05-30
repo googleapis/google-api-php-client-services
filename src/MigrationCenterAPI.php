@@ -235,6 +235,10 @@ class MigrationCenterAPI extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'showHidden' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'view' => [
                   'location' => 'query',
                   'type' => 'string',
