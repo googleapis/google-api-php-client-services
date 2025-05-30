@@ -201,7 +201,8 @@ class Courses extends \Google\Service\Resource
    * Updates grading period settings of a course. Individual grading periods can
    * be added, removed, or modified using this method. The requesting user and
    * course owner must be eligible to modify Grading Periods. For details, see
-   * [licensing requirements](https://developers.google.com/classroom/grading-
+   * [licensing
+   * requirements](https://developers.google.com/workspace/classroom/grading-
    * periods/manage-grading-periods#licensing_requirements). This method returns
    * the following error codes: * `PERMISSION_DENIED` if the requesting user is
    * not permitted to modify the grading period settings in a course or for access
