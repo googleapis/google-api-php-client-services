@@ -21,64 +21,12 @@ class ConnectionPoolConfig extends \Google\Collection
 {
   protected $collection_key = 'flags';
   /**
-   * @var string
-   */
-  public $clientConnectionIdleTimeout;
-  /**
-   * @var int
-   */
-  public $connPoolSize;
-  /**
    * @var bool
    */
   public $connectionPoolingEnabled;
   protected $flagsType = ConnectionPoolFlags::class;
   protected $flagsDataType = 'array';
-  /**
-   * @var int
-   */
-  public $maxClientConnections;
-  /**
-   * @var string
-   */
-  public $poolMode;
-  /**
-   * @var string
-   */
-  public $queryWaitTimeout;
-  /**
-   * @var string
-   */
-  public $serverConnectionIdleTimeout;
 
-  /**
-   * @param string
-   */
-  public function setClientConnectionIdleTimeout($clientConnectionIdleTimeout)
-  {
-    $this->clientConnectionIdleTimeout = $clientConnectionIdleTimeout;
-  }
-  /**
-   * @return string
-   */
-  public function getClientConnectionIdleTimeout()
-  {
-    return $this->clientConnectionIdleTimeout;
-  }
-  /**
-   * @param int
-   */
-  public function setConnPoolSize($connPoolSize)
-  {
-    $this->connPoolSize = $connPoolSize;
-  }
-  /**
-   * @return int
-   */
-  public function getConnPoolSize()
-  {
-    return $this->connPoolSize;
-  }
   /**
    * @param bool
    */
@@ -106,62 +54,6 @@ class ConnectionPoolConfig extends \Google\Collection
   public function getFlags()
   {
     return $this->flags;
-  }
-  /**
-   * @param int
-   */
-  public function setMaxClientConnections($maxClientConnections)
-  {
-    $this->maxClientConnections = $maxClientConnections;
-  }
-  /**
-   * @return int
-   */
-  public function getMaxClientConnections()
-  {
-    return $this->maxClientConnections;
-  }
-  /**
-   * @param string
-   */
-  public function setPoolMode($poolMode)
-  {
-    $this->poolMode = $poolMode;
-  }
-  /**
-   * @return string
-   */
-  public function getPoolMode()
-  {
-    return $this->poolMode;
-  }
-  /**
-   * @param string
-   */
-  public function setQueryWaitTimeout($queryWaitTimeout)
-  {
-    $this->queryWaitTimeout = $queryWaitTimeout;
-  }
-  /**
-   * @return string
-   */
-  public function getQueryWaitTimeout()
-  {
-    return $this->queryWaitTimeout;
-  }
-  /**
-   * @param string
-   */
-  public function setServerConnectionIdleTimeout($serverConnectionIdleTimeout)
-  {
-    $this->serverConnectionIdleTimeout = $serverConnectionIdleTimeout;
-  }
-  /**
-   * @return string
-   */
-  public function getServerConnectionIdleTimeout()
-  {
-    return $this->serverConnectionIdleTimeout;
   }
 }
 
