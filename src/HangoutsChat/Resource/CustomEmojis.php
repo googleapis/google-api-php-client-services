@@ -39,7 +39,10 @@ class CustomEmojis extends \Google\Service\Resource
    * emoji permissions](https://support.google.com/a/answer/12850085). Requires
    * [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (customEmojis.create)
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.customemojis` (customEmojis.create)
    *
    * @param CustomEmoji $postBody
    * @param array $optParams Optional parameters.
@@ -65,7 +68,10 @@ class CustomEmojis extends \Google\Service\Resource
    * emoji permissions](https://support.google.com/a/answer/12850085). Requires
    * [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (customEmojis.delete)
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.customemojis` (customEmojis.delete)
    *
    * @param string $name Required. Resource name of the custom emoji to delete.
    * Format: `customEmojis/{customEmoji}` You can use the emoji name as an alias
@@ -89,7 +95,11 @@ class CustomEmojis extends \Google\Service\Resource
    * custom emoji permissions](https://support.google.com/a/answer/12850085).
    * Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (customEmojis.get)
+   * authorize-chat-user) with one of the following [authorization
+   * scopes](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.customemojis.readonly` -
+   * `https://www.googleapis.com/auth/chat.customemojis` (customEmojis.get)
    *
    * @param string $name Required. Resource name of the custom emoji. Format:
    * `customEmojis/{customEmoji}` You can use the emoji name as an alias for
@@ -114,7 +124,12 @@ class CustomEmojis extends \Google\Service\Resource
    * emoji permissions](https://support.google.com/a/answer/12850085). Requires
    * [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (customEmojis.listCustomEmojis)
+   * authorize-chat-user) with one of the following [authorization
+   * scopes](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.customemojis.readonly` -
+   * `https://www.googleapis.com/auth/chat.customemojis`
+   * (customEmojis.listCustomEmojis)
    *
    * @param array $optParams Optional parameters.
    *

@@ -40,6 +40,10 @@ class Command extends \Google\Collection
    * @var string
    */
   public $newPassword;
+  protected $requestDeviceInfoParamsType = RequestDeviceInfoParams::class;
+  protected $requestDeviceInfoParamsDataType = '';
+  protected $requestDeviceInfoStatusType = RequestDeviceInfoStatus::class;
+  protected $requestDeviceInfoStatusDataType = '';
   /**
    * @var string[]
    */
@@ -144,6 +148,34 @@ class Command extends \Google\Collection
   public function getNewPassword()
   {
     return $this->newPassword;
+  }
+  /**
+   * @param RequestDeviceInfoParams
+   */
+  public function setRequestDeviceInfoParams(RequestDeviceInfoParams $requestDeviceInfoParams)
+  {
+    $this->requestDeviceInfoParams = $requestDeviceInfoParams;
+  }
+  /**
+   * @return RequestDeviceInfoParams
+   */
+  public function getRequestDeviceInfoParams()
+  {
+    return $this->requestDeviceInfoParams;
+  }
+  /**
+   * @param RequestDeviceInfoStatus
+   */
+  public function setRequestDeviceInfoStatus(RequestDeviceInfoStatus $requestDeviceInfoStatus)
+  {
+    $this->requestDeviceInfoStatus = $requestDeviceInfoStatus;
+  }
+  /**
+   * @return RequestDeviceInfoStatus
+   */
+  public function getRequestDeviceInfoStatus()
+  {
+    return $this->requestDeviceInfoStatus;
   }
   /**
    * @param string[]

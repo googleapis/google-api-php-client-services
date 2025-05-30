@@ -36,6 +36,8 @@ class MongodbProfile extends \Google\Collection
   public $secretManagerStoredPassword;
   protected $srvConnectionFormatType = SrvConnectionFormat::class;
   protected $srvConnectionFormatDataType = '';
+  protected $sslConfigType = MongodbSslConfig::class;
+  protected $sslConfigDataType = '';
   protected $standardConnectionFormatType = StandardConnectionFormat::class;
   protected $standardConnectionFormatDataType = '';
   /**
@@ -112,6 +114,20 @@ class MongodbProfile extends \Google\Collection
   public function getSrvConnectionFormat()
   {
     return $this->srvConnectionFormat;
+  }
+  /**
+   * @param MongodbSslConfig
+   */
+  public function setSslConfig(MongodbSslConfig $sslConfig)
+  {
+    $this->sslConfig = $sslConfig;
+  }
+  /**
+   * @return MongodbSslConfig
+   */
+  public function getSslConfig()
+  {
+    return $this->sslConfig;
   }
   /**
    * @param StandardConnectionFormat
