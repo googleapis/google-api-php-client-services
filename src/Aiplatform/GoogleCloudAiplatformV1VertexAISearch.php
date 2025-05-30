@@ -17,8 +17,11 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1VertexAISearch extends \Google\Model
+class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
 {
+  protected $collection_key = 'dataStoreSpecs';
+  protected $dataStoreSpecsType = GoogleCloudAiplatformV1VertexAISearchDataStoreSpec::class;
+  protected $dataStoreSpecsDataType = 'array';
   /**
    * @var string
    */
@@ -27,7 +30,29 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Model
    * @var string
    */
   public $engine;
+  /**
+   * @var string
+   */
+  public $filter;
+  /**
+   * @var int
+   */
+  public $maxResults;
 
+  /**
+   * @param GoogleCloudAiplatformV1VertexAISearchDataStoreSpec[]
+   */
+  public function setDataStoreSpecs($dataStoreSpecs)
+  {
+    $this->dataStoreSpecs = $dataStoreSpecs;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1VertexAISearchDataStoreSpec[]
+   */
+  public function getDataStoreSpecs()
+  {
+    return $this->dataStoreSpecs;
+  }
   /**
    * @param string
    */
@@ -55,6 +80,34 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Model
   public function getEngine()
   {
     return $this->engine;
+  }
+  /**
+   * @param string
+   */
+  public function setFilter($filter)
+  {
+    $this->filter = $filter;
+  }
+  /**
+   * @return string
+   */
+  public function getFilter()
+  {
+    return $this->filter;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxResults($maxResults)
+  {
+    $this->maxResults = $maxResults;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxResults()
+  {
+    return $this->maxResults;
   }
 }
 
