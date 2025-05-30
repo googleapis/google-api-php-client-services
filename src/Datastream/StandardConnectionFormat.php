@@ -19,6 +19,25 @@ namespace Google\Service\Datastream;
 
 class StandardConnectionFormat extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $directConnection;
+
+  /**
+   * @param bool
+   */
+  public function setDirectConnection($directConnection)
+  {
+    $this->directConnection = $directConnection;
+  }
+  /**
+   * @return bool
+   */
+  public function getDirectConnection()
+  {
+    return $this->directConnection;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

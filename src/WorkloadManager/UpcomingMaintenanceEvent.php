@@ -30,6 +30,10 @@ class UpcomingMaintenanceEvent extends \Google\Model
   /**
    * @var string
    */
+  public $onHostMaintenance;
+  /**
+   * @var string
+   */
   public $startTime;
   /**
    * @var string
@@ -63,6 +67,20 @@ class UpcomingMaintenanceEvent extends \Google\Model
   public function getMaintenanceStatus()
   {
     return $this->maintenanceStatus;
+  }
+  /**
+   * @param string
+   */
+  public function setOnHostMaintenance($onHostMaintenance)
+  {
+    $this->onHostMaintenance = $onHostMaintenance;
+  }
+  /**
+   * @return string
+   */
+  public function getOnHostMaintenance()
+  {
+    return $this->onHostMaintenance;
   }
   /**
    * @param string
