@@ -17,28 +17,44 @@
 
 namespace Google\Service\BigQueryReservation;
 
-class FailoverReservationRequest extends \Google\Model
+class SetIamPolicyRequest extends \Google\Model
 {
+  protected $policyType = Policy::class;
+  protected $policyDataType = '';
   /**
    * @var string
    */
-  public $failoverMode;
+  public $updateMask;
 
+  /**
+   * @param Policy
+   */
+  public function setPolicy(Policy $policy)
+  {
+    $this->policy = $policy;
+  }
+  /**
+   * @return Policy
+   */
+  public function getPolicy()
+  {
+    return $this->policy;
+  }
   /**
    * @param string
    */
-  public function setFailoverMode($failoverMode)
+  public function setUpdateMask($updateMask)
   {
-    $this->failoverMode = $failoverMode;
+    $this->updateMask = $updateMask;
   }
   /**
    * @return string
    */
-  public function getFailoverMode()
+  public function getUpdateMask()
   {
-    return $this->failoverMode;
+    return $this->updateMask;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FailoverReservationRequest::class, 'Google_Service_BigQueryReservation_FailoverReservationRequest');
+class_alias(SetIamPolicyRequest::class, 'Google_Service_BigQueryReservation_SetIamPolicyRequest');

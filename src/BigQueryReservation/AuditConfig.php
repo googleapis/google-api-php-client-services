@@ -17,28 +17,45 @@
 
 namespace Google\Service\BigQueryReservation;
 
-class FailoverReservationRequest extends \Google\Model
+class AuditConfig extends \Google\Collection
 {
+  protected $collection_key = 'auditLogConfigs';
+  protected $auditLogConfigsType = AuditLogConfig::class;
+  protected $auditLogConfigsDataType = 'array';
   /**
    * @var string
    */
-  public $failoverMode;
+  public $service;
 
+  /**
+   * @param AuditLogConfig[]
+   */
+  public function setAuditLogConfigs($auditLogConfigs)
+  {
+    $this->auditLogConfigs = $auditLogConfigs;
+  }
+  /**
+   * @return AuditLogConfig[]
+   */
+  public function getAuditLogConfigs()
+  {
+    return $this->auditLogConfigs;
+  }
   /**
    * @param string
    */
-  public function setFailoverMode($failoverMode)
+  public function setService($service)
   {
-    $this->failoverMode = $failoverMode;
+    $this->service = $service;
   }
   /**
    * @return string
    */
-  public function getFailoverMode()
+  public function getService()
   {
-    return $this->failoverMode;
+    return $this->service;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FailoverReservationRequest::class, 'Google_Service_BigQueryReservation_FailoverReservationRequest');
+class_alias(AuditConfig::class, 'Google_Service_BigQueryReservation_AuditConfig');

@@ -17,80 +17,82 @@
 
 namespace Google\Service\BigQueryReservation;
 
-class ReplicationStatus extends \Google\Model
+class Expr extends \Google\Model
 {
-  protected $errorType = Status::class;
-  protected $errorDataType = '';
   /**
    * @var string
    */
-  public $lastErrorTime;
+  public $description;
   /**
    * @var string
    */
-  public $lastReplicationTime;
+  public $expression;
   /**
    * @var string
    */
-  public $softFailoverStartTime;
+  public $location;
+  /**
+   * @var string
+   */
+  public $title;
 
   /**
-   * @param Status
-   */
-  public function setError(Status $error)
-  {
-    $this->error = $error;
-  }
-  /**
-   * @return Status
-   */
-  public function getError()
-  {
-    return $this->error;
-  }
-  /**
    * @param string
    */
-  public function setLastErrorTime($lastErrorTime)
+  public function setDescription($description)
   {
-    $this->lastErrorTime = $lastErrorTime;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getLastErrorTime()
+  public function getDescription()
   {
-    return $this->lastErrorTime;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setLastReplicationTime($lastReplicationTime)
+  public function setExpression($expression)
   {
-    $this->lastReplicationTime = $lastReplicationTime;
+    $this->expression = $expression;
   }
   /**
    * @return string
    */
-  public function getLastReplicationTime()
+  public function getExpression()
   {
-    return $this->lastReplicationTime;
+    return $this->expression;
   }
   /**
    * @param string
    */
-  public function setSoftFailoverStartTime($softFailoverStartTime)
+  public function setLocation($location)
   {
-    $this->softFailoverStartTime = $softFailoverStartTime;
+    $this->location = $location;
   }
   /**
    * @return string
    */
-  public function getSoftFailoverStartTime()
+  public function getLocation()
   {
-    return $this->softFailoverStartTime;
+    return $this->location;
+  }
+  /**
+   * @param string
+   */
+  public function setTitle($title)
+  {
+    $this->title = $title;
+  }
+  /**
+   * @return string
+   */
+  public function getTitle()
+  {
+    return $this->title;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReplicationStatus::class, 'Google_Service_BigQueryReservation_ReplicationStatus');
+class_alias(Expr::class, 'Google_Service_BigQueryReservation_Expr');

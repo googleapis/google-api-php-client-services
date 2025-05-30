@@ -17,28 +17,29 @@
 
 namespace Google\Service\BigQueryReservation;
 
-class FailoverReservationRequest extends \Google\Model
+class TestIamPermissionsRequest extends \Google\Collection
 {
+  protected $collection_key = 'permissions';
   /**
-   * @var string
+   * @var string[]
    */
-  public $failoverMode;
+  public $permissions;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setFailoverMode($failoverMode)
+  public function setPermissions($permissions)
   {
-    $this->failoverMode = $failoverMode;
+    $this->permissions = $permissions;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getFailoverMode()
+  public function getPermissions()
   {
-    return $this->failoverMode;
+    return $this->permissions;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FailoverReservationRequest::class, 'Google_Service_BigQueryReservation_FailoverReservationRequest');
+class_alias(TestIamPermissionsRequest::class, 'Google_Service_BigQueryReservation_TestIamPermissionsRequest');
