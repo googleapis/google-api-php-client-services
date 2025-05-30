@@ -17,17 +17,33 @@
 
 namespace Google\Service\MapsPlaces;
 
-class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
+class GoogleMapsPlacesV1PlaceNeighborhoodSummary extends \Google\Model
 {
+  protected $descriptionType = GoogleMapsPlacesV1ContentBlock::class;
+  protected $descriptionDataType = '';
   protected $disclosureTextType = GoogleTypeLocalizedText::class;
   protected $disclosureTextDataType = '';
-  protected $overviewType = GoogleTypeLocalizedText::class;
-  protected $overviewDataType = '';
   /**
    * @var string
    */
-  public $overviewFlagContentUri;
+  public $flagContentUri;
+  protected $overviewType = GoogleMapsPlacesV1ContentBlock::class;
+  protected $overviewDataType = '';
 
+  /**
+   * @param GoogleMapsPlacesV1ContentBlock
+   */
+  public function setDescription(GoogleMapsPlacesV1ContentBlock $description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return GoogleMapsPlacesV1ContentBlock
+   */
+  public function getDescription()
+  {
+    return $this->description;
+  }
   /**
    * @param GoogleTypeLocalizedText
    */
@@ -43,34 +59,34 @@ class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
     return $this->disclosureText;
   }
   /**
-   * @param GoogleTypeLocalizedText
+   * @param string
    */
-  public function setOverview(GoogleTypeLocalizedText $overview)
+  public function setFlagContentUri($flagContentUri)
+  {
+    $this->flagContentUri = $flagContentUri;
+  }
+  /**
+   * @return string
+   */
+  public function getFlagContentUri()
+  {
+    return $this->flagContentUri;
+  }
+  /**
+   * @param GoogleMapsPlacesV1ContentBlock
+   */
+  public function setOverview(GoogleMapsPlacesV1ContentBlock $overview)
   {
     $this->overview = $overview;
   }
   /**
-   * @return GoogleTypeLocalizedText
+   * @return GoogleMapsPlacesV1ContentBlock
    */
   public function getOverview()
   {
     return $this->overview;
   }
-  /**
-   * @param string
-   */
-  public function setOverviewFlagContentUri($overviewFlagContentUri)
-  {
-    $this->overviewFlagContentUri = $overviewFlagContentUri;
-  }
-  /**
-   * @return string
-   */
-  public function getOverviewFlagContentUri()
-  {
-    return $this->overviewFlagContentUri;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleMapsPlacesV1PlaceGenerativeSummary::class, 'Google_Service_MapsPlaces_GoogleMapsPlacesV1PlaceGenerativeSummary');
+class_alias(GoogleMapsPlacesV1PlaceNeighborhoodSummary::class, 'Google_Service_MapsPlaces_GoogleMapsPlacesV1PlaceNeighborhoodSummary');

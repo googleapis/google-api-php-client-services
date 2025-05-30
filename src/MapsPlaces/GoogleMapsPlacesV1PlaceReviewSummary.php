@@ -17,16 +17,20 @@
 
 namespace Google\Service\MapsPlaces;
 
-class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
+class GoogleMapsPlacesV1PlaceReviewSummary extends \Google\Model
 {
   protected $disclosureTextType = GoogleTypeLocalizedText::class;
   protected $disclosureTextDataType = '';
-  protected $overviewType = GoogleTypeLocalizedText::class;
-  protected $overviewDataType = '';
   /**
    * @var string
    */
-  public $overviewFlagContentUri;
+  public $flagContentUri;
+  /**
+   * @var string
+   */
+  public $reviewsUri;
+  protected $textType = GoogleTypeLocalizedText::class;
+  protected $textDataType = '';
 
   /**
    * @param GoogleTypeLocalizedText
@@ -43,34 +47,48 @@ class GoogleMapsPlacesV1PlaceGenerativeSummary extends \Google\Model
     return $this->disclosureText;
   }
   /**
-   * @param GoogleTypeLocalizedText
-   */
-  public function setOverview(GoogleTypeLocalizedText $overview)
-  {
-    $this->overview = $overview;
-  }
-  /**
-   * @return GoogleTypeLocalizedText
-   */
-  public function getOverview()
-  {
-    return $this->overview;
-  }
-  /**
    * @param string
    */
-  public function setOverviewFlagContentUri($overviewFlagContentUri)
+  public function setFlagContentUri($flagContentUri)
   {
-    $this->overviewFlagContentUri = $overviewFlagContentUri;
+    $this->flagContentUri = $flagContentUri;
   }
   /**
    * @return string
    */
-  public function getOverviewFlagContentUri()
+  public function getFlagContentUri()
   {
-    return $this->overviewFlagContentUri;
+    return $this->flagContentUri;
+  }
+  /**
+   * @param string
+   */
+  public function setReviewsUri($reviewsUri)
+  {
+    $this->reviewsUri = $reviewsUri;
+  }
+  /**
+   * @return string
+   */
+  public function getReviewsUri()
+  {
+    return $this->reviewsUri;
+  }
+  /**
+   * @param GoogleTypeLocalizedText
+   */
+  public function setText(GoogleTypeLocalizedText $text)
+  {
+    $this->text = $text;
+  }
+  /**
+   * @return GoogleTypeLocalizedText
+   */
+  public function getText()
+  {
+    return $this->text;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleMapsPlacesV1PlaceGenerativeSummary::class, 'Google_Service_MapsPlaces_GoogleMapsPlacesV1PlaceGenerativeSummary');
+class_alias(GoogleMapsPlacesV1PlaceReviewSummary::class, 'Google_Service_MapsPlaces_GoogleMapsPlacesV1PlaceReviewSummary');
