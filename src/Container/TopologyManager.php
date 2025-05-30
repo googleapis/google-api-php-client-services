@@ -17,46 +17,46 @@
 
 namespace Google\Service\Container;
 
-class ConfidentialNodes extends \Google\Model
+class TopologyManager extends \Google\Model
 {
   /**
    * @var string
    */
-  public $confidentialInstanceType;
+  public $policy;
   /**
-   * @var bool
+   * @var string
    */
-  public $enabled;
+  public $scope;
 
   /**
    * @param string
    */
-  public function setConfidentialInstanceType($confidentialInstanceType)
+  public function setPolicy($policy)
   {
-    $this->confidentialInstanceType = $confidentialInstanceType;
+    $this->policy = $policy;
   }
   /**
    * @return string
    */
-  public function getConfidentialInstanceType()
+  public function getPolicy()
   {
-    return $this->confidentialInstanceType;
+    return $this->policy;
   }
   /**
-   * @param bool
+   * @param string
    */
-  public function setEnabled($enabled)
+  public function setScope($scope)
   {
-    $this->enabled = $enabled;
+    $this->scope = $scope;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getEnabled()
+  public function getScope()
   {
-    return $this->enabled;
+    return $this->scope;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfidentialNodes::class, 'Google_Service_Container_ConfidentialNodes');
+class_alias(TopologyManager::class, 'Google_Service_Container_TopologyManager');

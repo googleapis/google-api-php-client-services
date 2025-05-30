@@ -17,46 +17,28 @@
 
 namespace Google\Service\Container;
 
-class ConfidentialNodes extends \Google\Model
+class MemoryManager extends \Google\Model
 {
   /**
    * @var string
    */
-  public $confidentialInstanceType;
-  /**
-   * @var bool
-   */
-  public $enabled;
+  public $policy;
 
   /**
    * @param string
    */
-  public function setConfidentialInstanceType($confidentialInstanceType)
+  public function setPolicy($policy)
   {
-    $this->confidentialInstanceType = $confidentialInstanceType;
+    $this->policy = $policy;
   }
   /**
    * @return string
    */
-  public function getConfidentialInstanceType()
+  public function getPolicy()
   {
-    return $this->confidentialInstanceType;
-  }
-  /**
-   * @param bool
-   */
-  public function setEnabled($enabled)
-  {
-    $this->enabled = $enabled;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnabled()
-  {
-    return $this->enabled;
+    return $this->policy;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfidentialNodes::class, 'Google_Service_Container_ConfidentialNodes');
+class_alias(MemoryManager::class, 'Google_Service_Container_MemoryManager');

@@ -17,31 +17,13 @@
 
 namespace Google\Service\Container;
 
-class ConfidentialNodes extends \Google\Model
+class HighScaleCheckpointingConfig extends \Google\Model
 {
-  /**
-   * @var string
-   */
-  public $confidentialInstanceType;
   /**
    * @var bool
    */
   public $enabled;
 
-  /**
-   * @param string
-   */
-  public function setConfidentialInstanceType($confidentialInstanceType)
-  {
-    $this->confidentialInstanceType = $confidentialInstanceType;
-  }
-  /**
-   * @return string
-   */
-  public function getConfidentialInstanceType()
-  {
-    return $this->confidentialInstanceType;
-  }
   /**
    * @param bool
    */
@@ -59,4 +41,4 @@ class ConfidentialNodes extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConfidentialNodes::class, 'Google_Service_Container_ConfidentialNodes');
+class_alias(HighScaleCheckpointingConfig::class, 'Google_Service_Container_HighScaleCheckpointingConfig');
