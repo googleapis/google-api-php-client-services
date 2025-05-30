@@ -23,10 +23,16 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
    * @var string
    */
   public $dataProfileResourceName;
+  protected $dataSourceTypeType = GooglePrivacyDlpV2DataSourceType::class;
+  protected $dataSourceTypeDataType = '';
   /**
    * @var string
    */
   public $findingId;
+  /**
+   * @var string
+   */
+  public $fullResourceName;
   protected $infotypeType = GooglePrivacyDlpV2InfoType::class;
   protected $infotypeDataType = '';
   protected $locationType = GooglePrivacyDlpV2DataProfileFindingLocation::class;
@@ -61,6 +67,20 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
     return $this->dataProfileResourceName;
   }
   /**
+   * @param GooglePrivacyDlpV2DataSourceType
+   */
+  public function setDataSourceType(GooglePrivacyDlpV2DataSourceType $dataSourceType)
+  {
+    $this->dataSourceType = $dataSourceType;
+  }
+  /**
+   * @return GooglePrivacyDlpV2DataSourceType
+   */
+  public function getDataSourceType()
+  {
+    return $this->dataSourceType;
+  }
+  /**
    * @param string
    */
   public function setFindingId($findingId)
@@ -73,6 +93,20 @@ class GooglePrivacyDlpV2DataProfileFinding extends \Google\Model
   public function getFindingId()
   {
     return $this->findingId;
+  }
+  /**
+   * @param string
+   */
+  public function setFullResourceName($fullResourceName)
+  {
+    $this->fullResourceName = $fullResourceName;
+  }
+  /**
+   * @return string
+   */
+  public function getFullResourceName()
+  {
+    return $this->fullResourceName;
   }
   /**
    * @param GooglePrivacyDlpV2InfoType
