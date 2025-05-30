@@ -22,6 +22,12 @@ class Cluster extends \Google\Collection
   protected $collection_key = 'nodePools';
   protected $addonsConfigType = AddonsConfig::class;
   protected $addonsConfigDataType = '';
+  /**
+   * @var string[]
+   */
+  public $alphaClusterFeatureGates;
+  protected $anonymousAuthenticationConfigType = AnonymousAuthenticationConfig::class;
+  protected $anonymousAuthenticationConfigDataType = '';
   protected $authenticatorGroupsConfigType = AuthenticatorGroupsConfig::class;
   protected $authenticatorGroupsConfigDataType = '';
   protected $autopilotType = Autopilot::class;
@@ -252,6 +258,34 @@ class Cluster extends \Google\Collection
   public function getAddonsConfig()
   {
     return $this->addonsConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setAlphaClusterFeatureGates($alphaClusterFeatureGates)
+  {
+    $this->alphaClusterFeatureGates = $alphaClusterFeatureGates;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAlphaClusterFeatureGates()
+  {
+    return $this->alphaClusterFeatureGates;
+  }
+  /**
+   * @param AnonymousAuthenticationConfig
+   */
+  public function setAnonymousAuthenticationConfig(AnonymousAuthenticationConfig $anonymousAuthenticationConfig)
+  {
+    $this->anonymousAuthenticationConfig = $anonymousAuthenticationConfig;
+  }
+  /**
+   * @return AnonymousAuthenticationConfig
+   */
+  public function getAnonymousAuthenticationConfig()
+  {
+    return $this->anonymousAuthenticationConfig;
   }
   /**
    * @param AuthenticatorGroupsConfig
