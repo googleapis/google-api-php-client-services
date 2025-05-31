@@ -17,100 +17,82 @@
 
 namespace Google\Service\AndroidManagement;
 
-class TelephonyInfo extends \Google\Model
+class InternalErrorDetails extends \Google\Model
 {
   /**
    * @var string
    */
-  public $activationState;
+  public $errorCode;
   /**
    * @var string
    */
-  public $carrierName;
+  public $errorCodeDetail;
   /**
    * @var string
    */
-  public $configMode;
+  public $operationCode;
   /**
    * @var string
    */
-  public $iccId;
-  /**
-   * @var string
-   */
-  public $phoneNumber;
+  public $operationCodeDetail;
 
   /**
    * @param string
    */
-  public function setActivationState($activationState)
+  public function setErrorCode($errorCode)
   {
-    $this->activationState = $activationState;
+    $this->errorCode = $errorCode;
   }
   /**
    * @return string
    */
-  public function getActivationState()
+  public function getErrorCode()
   {
-    return $this->activationState;
+    return $this->errorCode;
   }
   /**
    * @param string
    */
-  public function setCarrierName($carrierName)
+  public function setErrorCodeDetail($errorCodeDetail)
   {
-    $this->carrierName = $carrierName;
+    $this->errorCodeDetail = $errorCodeDetail;
   }
   /**
    * @return string
    */
-  public function getCarrierName()
+  public function getErrorCodeDetail()
   {
-    return $this->carrierName;
+    return $this->errorCodeDetail;
   }
   /**
    * @param string
    */
-  public function setConfigMode($configMode)
+  public function setOperationCode($operationCode)
   {
-    $this->configMode = $configMode;
+    $this->operationCode = $operationCode;
   }
   /**
    * @return string
    */
-  public function getConfigMode()
+  public function getOperationCode()
   {
-    return $this->configMode;
+    return $this->operationCode;
   }
   /**
    * @param string
    */
-  public function setIccId($iccId)
+  public function setOperationCodeDetail($operationCodeDetail)
   {
-    $this->iccId = $iccId;
+    $this->operationCodeDetail = $operationCodeDetail;
   }
   /**
    * @return string
    */
-  public function getIccId()
+  public function getOperationCodeDetail()
   {
-    return $this->iccId;
-  }
-  /**
-   * @param string
-   */
-  public function setPhoneNumber($phoneNumber)
-  {
-    $this->phoneNumber = $phoneNumber;
-  }
-  /**
-   * @return string
-   */
-  public function getPhoneNumber()
-  {
-    return $this->phoneNumber;
+    return $this->operationCodeDetail;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TelephonyInfo::class, 'Google_Service_AndroidManagement_TelephonyInfo');
+class_alias(InternalErrorDetails::class, 'Google_Service_AndroidManagement_InternalErrorDetails');
