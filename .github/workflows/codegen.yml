@@ -52,7 +52,7 @@ jobs:
           path: discovery-artifact-manager
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.13"
       - id: find-preferred-versions
         run: |
           versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
@@ -95,7 +95,7 @@ jobs:
           path: discovery-artifact-manager
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.13"
       - id: find-preferred-versions
         run: |
           versions=$( cat discovery-artifact-manager/discoveries/index.json | jq -r '[.items[] | select(.name == "${{ matrix.service }}") | select(.name == "admin" or .preferred).version] | join(",")' )
