@@ -37,8 +37,9 @@ class PurchasesSubscriptions extends \Google\Service\Resource
    *
    * @param string $packageName The package name of the application for which this
    * subscription was purchased (for example, 'com.some.thing').
-   * @param string $subscriptionId The purchased subscription ID (for example,
-   * 'monthly001').
+   * @param string $subscriptionId Note: Since May 21, 2025, subscription_id is
+   * not required, and not recommended for subscription with add-ons. The
+   * purchased subscription ID (for example, 'monthly001').
    * @param string $token The token provided to the user's device when the
    * subscription was purchased.
    * @param SubscriptionPurchasesAcknowledgeRequest $postBody
@@ -57,8 +58,9 @@ class PurchasesSubscriptions extends \Google\Service\Resource
    *
    * @param string $packageName The package name of the application for which this
    * subscription was purchased (for example, 'com.some.thing').
-   * @param string $subscriptionId The purchased subscription ID (for example,
-   * 'monthly001').
+   * @param string $subscriptionId Note: Since May 21, 2025, subscription_id is
+   * not required, and not recommended for subscription with add-ons. The
+   * purchased subscription ID (for example, 'monthly001').
    * @param string $token The token provided to the user's device when the
    * subscription was purchased.
    * @param array $optParams Optional parameters.
