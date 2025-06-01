@@ -36,7 +36,9 @@ use Google\Client;
  */
 class PostmasterTools extends \Google\Service
 {
-
+  /** See email traffic metrics for the domains you have registered in Gmail Postmaster Tools. */
+  const POSTMASTER_READONLY =
+      "https://www.googleapis.com/auth/postmaster.readonly";
 
   public $domains;
   public $domains_trafficStats;
