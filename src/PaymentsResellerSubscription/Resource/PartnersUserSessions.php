@@ -35,8 +35,8 @@ class PartnersUserSessions extends \Google\Service\Resource
    * Issues a timed session token for the given user intent. You can use the
    * session token to redirect the user to Google to finish the signup flow. You
    * can re-generate new session token repeatedly for the same request if
-   * necessary, regardless of the previous tokens being expired or not.
-   * (userSessions.generate)
+   * necessary, regardless of the previous tokens being expired or not. By
+   * default, the session token is valid for 1 hour. (userSessions.generate)
    *
    * @param string $parent Required. The parent, the partner that can resell.
    * Format: partners/{partner}
