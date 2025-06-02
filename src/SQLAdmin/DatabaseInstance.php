@@ -118,6 +118,8 @@ class DatabaseInstance extends \Google\Collection
   protected $onPremisesConfigurationDataType = '';
   protected $outOfDiskReportType = SqlOutOfDiskReport::class;
   protected $outOfDiskReportDataType = '';
+  protected $pitrFieldsType = PITRFields::class;
+  protected $pitrFieldsDataType = '';
   /**
    * @var string
    */
@@ -604,6 +606,20 @@ class DatabaseInstance extends \Google\Collection
   public function getOutOfDiskReport()
   {
     return $this->outOfDiskReport;
+  }
+  /**
+   * @param PITRFields
+   */
+  public function setPitrFields(PITRFields $pitrFields)
+  {
+    $this->pitrFields = $pitrFields;
+  }
+  /**
+   * @return PITRFields
+   */
+  public function getPitrFields()
+  {
+    return $this->pitrFields;
   }
   /**
    * @param string
