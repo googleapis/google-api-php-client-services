@@ -53,10 +53,12 @@ class SpacesMembers extends \Google\Service\Resource
    * mode spaces only) - User authentication grants administrator privileges when
    * an administrator account authenticates, `use_admin_access` is `true`, and the
    * following authorization scope is used: -
-   * `https://www.googleapis.com/auth/chat.admin.memberships` For example usage,
-   * see: - [Invite or add a user to a
-   * space](https://developers.google.com/workspace/chat/create-members#create-
-   * user-membership). - [Invite or add a Google Group to a
+   * `https://www.googleapis.com/auth/chat.admin.memberships` App authentication
+   * is not supported for the following use cases: - Inviting users external to
+   * the Workspace organization that owns the space. - Adding a Google Group to a
+   * space. - Adding a Chat app to a space. For example usage, see: - [Invite or
+   * add a user to a space](https://developers.google.com/workspace/chat/create-
+   * members#create-user-membership). - [Invite or add a Google Group to a
    * space](https://developers.google.com/workspace/chat/create-members#create-
    * group-membership). - [Add the Chat app to a
    * space](https://developers.google.com/workspace/chat/create-members#create-
@@ -105,12 +107,12 @@ class SpacesMembers extends \Google\Service\Resource
    * mode spaces only) - User authentication grants administrator privileges when
    * an administrator account authenticates, `use_admin_access` is `true`, and the
    * following authorization scope is used: -
-   * `https://www.googleapis.com/auth/chat.admin.memberships` To delete
-   * memberships for space managers, the requester must be a space manager. If
-   * you're using [app
+   * `https://www.googleapis.com/auth/chat.admin.memberships` App authentication
+   * is not supported for the following use cases: - Removing a Google Group from
+   * a space. - Removing a Chat app from a space. To delete memberships for space
+   * managers, the requester must be a space manager. If you're using [app
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-app) the application must be the space creator.
-   * (members.delete)
+   * authorize-chat-app) the Chat app must be the space creator. (members.delete)
    *
    * @param string $name Required. Resource name of the membership to delete. Chat
    * apps can delete human users' or their own memberships. Chat apps can't delete

@@ -80,10 +80,15 @@ class Spaces extends \Google\Service\Resource
    * `https://www.googleapis.com/auth/chat.spaces` -
    * `https://www.googleapis.com/auth/chat.import` (import mode spaces only) When
    * authenticating as an app, the `space.customer` field must be set in the
-   * request. Space membership upon creation depends on whether the space is
-   * created in `Import mode`: * **Import mode:** No members are created. * **All
-   * other modes:** The calling user is added as a member. This is: * The app
-   * itself when using app authentication. * The human user when using user
+   * request. When authenticating as an app, the Chat app is added as a member of
+   * the space. However, unlike human authentication, the Chat app is not added as
+   * a space manager. By default, the Chat app can be removed from the space by
+   * all space members. To allow only space managers to remove the app from a
+   * space, set `space.permission_settings.manage_apps` to `managers_allowed`.
+   * Space membership upon creation depends on whether the space is created in
+   * `Import mode`: * **Import mode:** No members are created. * **All other
+   * modes:** The calling user is added as a member. This is: * The app itself
+   * when using app authentication. * The human user when using user
    * authentication. If you receive the error message `ALREADY_EXISTS` when
    * creating a space, try a different `displayName`. An existing space within the
    * Google Workspace organization might already use this display name.
@@ -211,7 +216,11 @@ class Spaces extends \Google\Service\Resource
    * administrator privileges when an administrator account authenticates,
    * `use_admin_access` is `true`, and one of the following authorization scopes
    * is used: - `https://www.googleapis.com/auth/chat.admin.spaces.readonly` -
-   * `https://www.googleapis.com/auth/chat.admin.spaces` (spaces.get)
+   * `https://www.googleapis.com/auth/chat.admin.spaces` App authentication has
+   * the following limitations: - `space.access_settings` is only populated when
+   * using the `chat.app.spaces` scope. - `space.predefind_permission_settings`
+   * and `space.permission_settings` are only populated when using the
+   * `chat.app.spaces` scope, and only for spaces the app created. (spaces.get)
    *
    * @param string $name Required. Resource name of the space, in the form
    * `spaces/{space}`. Format: `spaces/{space}`
@@ -302,7 +311,12 @@ class Spaces extends \Google\Service\Resource
    * User authentication grants administrator privileges when an administrator
    * account authenticates, `use_admin_access` is `true`, and the following
    * authorization scopes is used: -
-   * `https://www.googleapis.com/auth/chat.admin.spaces` (spaces.patch)
+   * `https://www.googleapis.com/auth/chat.admin.spaces` App authentication has
+   * the following limitations: - To update either
+   * `space.predefined_permission_settings` or `space.permission_settings`, the
+   * app must be the space creator. - Updating the
+   * `space.access_settings.audience` is not supported for app authentication.
+   * (spaces.patch)
    *
    * @param string $name Identifier. Resource name of the space. Format:
    * `spaces/{space}` Where `{space}` represents the system-assigned ID for the
