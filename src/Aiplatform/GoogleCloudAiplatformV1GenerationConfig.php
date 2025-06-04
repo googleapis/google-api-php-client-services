@@ -53,6 +53,10 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    */
   public $presencePenalty;
   /**
+   * @var array
+   */
+  public $responseJsonSchema;
+  /**
    * @var bool
    */
   public $responseLogprobs;
@@ -204,6 +208,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getPresencePenalty()
   {
     return $this->presencePenalty;
+  }
+  /**
+   * @param array
+   */
+  public function setResponseJsonSchema($responseJsonSchema)
+  {
+    $this->responseJsonSchema = $responseJsonSchema;
+  }
+  /**
+   * @return array
+   */
+  public function getResponseJsonSchema()
+  {
+    return $this->responseJsonSchema;
   }
   /**
    * @param bool
