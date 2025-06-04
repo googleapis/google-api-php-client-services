@@ -54,6 +54,9 @@ class ProjectsLocations extends \Google\Service\Resource
    * applicable.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string extraLocationTypes Optional. A list of extra location types
+   * that should be used as conditions for controlling the visibility of the
+   * locations.
    * @opt_param string filter A filter to narrow down results to a preferred
    * subset. The filtering language accepts strings like "displayName=tokyo", and
    * is documented in more detail in AIP-160 (https://google.aip.dev/160).
@@ -101,7 +104,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * (locations.searchEntries)
    *
    * @param string $name Required. The project to which the request should be
-   * attributed in the following form: projects/{project}/locations/{location}.
+   * attributed in the following form: projects/{project}/locations/global.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string orderBy Optional. Specifies the ordering of results.
@@ -119,6 +122,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * operating. It must either be organizations/ or projects/. If it is
    * unspecified, it defaults to the organization where the project provided in
    * name is located.
+   * @opt_param bool semanticSearch Optional. Internal only.
    * @return GoogleCloudDataplexV1SearchEntriesResponse
    * @throws \Google\Service\Exception
    */

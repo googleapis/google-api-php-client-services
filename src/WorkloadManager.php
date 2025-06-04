@@ -94,6 +94,11 @@ class WorkloadManager extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -509,6 +514,10 @@ class WorkloadManager extends \Google\Service
                   'required' => true,
                 ],
                 'customRulesBucket' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'evaluationType' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

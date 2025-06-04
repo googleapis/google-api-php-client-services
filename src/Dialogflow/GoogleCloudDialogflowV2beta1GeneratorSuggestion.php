@@ -17,12 +17,15 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2beta1GeneratorSuggestion extends \Google\Model
+class GoogleCloudDialogflowV2beta1GeneratorSuggestion extends \Google\Collection
 {
+  protected $collection_key = 'toolCallInfo';
   protected $freeFormSuggestionType = GoogleCloudDialogflowV2beta1FreeFormSuggestion::class;
   protected $freeFormSuggestionDataType = '';
   protected $summarySuggestionType = GoogleCloudDialogflowV2beta1SummarySuggestion::class;
   protected $summarySuggestionDataType = '';
+  protected $toolCallInfoType = GoogleCloudDialogflowV2beta1GeneratorSuggestionToolCallInfo::class;
+  protected $toolCallInfoDataType = 'array';
 
   /**
    * @param GoogleCloudDialogflowV2beta1FreeFormSuggestion
@@ -51,6 +54,20 @@ class GoogleCloudDialogflowV2beta1GeneratorSuggestion extends \Google\Model
   public function getSummarySuggestion()
   {
     return $this->summarySuggestion;
+  }
+  /**
+   * @param GoogleCloudDialogflowV2beta1GeneratorSuggestionToolCallInfo[]
+   */
+  public function setToolCallInfo($toolCallInfo)
+  {
+    $this->toolCallInfo = $toolCallInfo;
+  }
+  /**
+   * @return GoogleCloudDialogflowV2beta1GeneratorSuggestionToolCallInfo[]
+   */
+  public function getToolCallInfo()
+  {
+    return $this->toolCallInfo;
   }
 }
 

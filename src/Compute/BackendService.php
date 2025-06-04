@@ -66,12 +66,22 @@ class BackendService extends \Google\Collection
    * @var bool
    */
   public $enableCDN;
+  /**
+   * @var string
+   */
+  public $externalManagedMigrationState;
+  /**
+   * @var float
+   */
+  public $externalManagedMigrationTestingPercentage;
   protected $failoverPolicyType = BackendServiceFailoverPolicy::class;
   protected $failoverPolicyDataType = '';
   /**
    * @var string
    */
   public $fingerprint;
+  protected $haPolicyType = BackendServiceHAPolicy::class;
+  protected $haPolicyDataType = '';
   /**
    * @var string[]
    */
@@ -378,6 +388,34 @@ class BackendService extends \Google\Collection
     return $this->enableCDN;
   }
   /**
+   * @param string
+   */
+  public function setExternalManagedMigrationState($externalManagedMigrationState)
+  {
+    $this->externalManagedMigrationState = $externalManagedMigrationState;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalManagedMigrationState()
+  {
+    return $this->externalManagedMigrationState;
+  }
+  /**
+   * @param float
+   */
+  public function setExternalManagedMigrationTestingPercentage($externalManagedMigrationTestingPercentage)
+  {
+    $this->externalManagedMigrationTestingPercentage = $externalManagedMigrationTestingPercentage;
+  }
+  /**
+   * @return float
+   */
+  public function getExternalManagedMigrationTestingPercentage()
+  {
+    return $this->externalManagedMigrationTestingPercentage;
+  }
+  /**
    * @param BackendServiceFailoverPolicy
    */
   public function setFailoverPolicy(BackendServiceFailoverPolicy $failoverPolicy)
@@ -404,6 +442,20 @@ class BackendService extends \Google\Collection
   public function getFingerprint()
   {
     return $this->fingerprint;
+  }
+  /**
+   * @param BackendServiceHAPolicy
+   */
+  public function setHaPolicy(BackendServiceHAPolicy $haPolicy)
+  {
+    $this->haPolicy = $haPolicy;
+  }
+  /**
+   * @return BackendServiceHAPolicy
+   */
+  public function getHaPolicy()
+  {
+    return $this->haPolicy;
   }
   /**
    * @param string[]

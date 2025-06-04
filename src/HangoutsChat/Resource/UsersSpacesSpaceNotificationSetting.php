@@ -30,9 +30,15 @@ use Google\Service\HangoutsChat\SpaceNotificationSetting;
 class UsersSpacesSpaceNotificationSetting extends \Google\Service\Resource
 {
   /**
-   * Gets the space notification state setting. Requires [user
+   * Gets the space notification setting. For an example, see [Get the caller's
+   * space notification setting](https://developers.google.com/workspace/chat/get-
+   * space-notification-setting). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaceNotificationSetting.get)
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.users.spacesettings`
+   * (spaceNotificationSetting.get)
    *
    * @param string $name Required. Format:
    * users/{user}/spaces/{space}/spaceNotificationSetting -
@@ -51,9 +57,16 @@ class UsersSpacesSpaceNotificationSetting extends \Google\Service\Resource
     return $this->call('get', [$params], SpaceNotificationSetting::class);
   }
   /**
-   * Updates the space notification state setting. Requires [user
+   * Updates the space notification setting. For an example, see [Update the
+   * caller's space notification
+   * setting](https://developers.google.com/workspace/chat/update-space-
+   * notification-setting). Requires [user
    * authentication](https://developers.google.com/workspace/chat/authenticate-
-   * authorize-chat-user). (spaceNotificationSetting.patch)
+   * authorize-chat-user) with the [authorization
+   * scope](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): -
+   * `https://www.googleapis.com/auth/chat.users.spacesettings`
+   * (spaceNotificationSetting.patch)
    *
    * @param string $name Identifier. The resource name of the space notification
    * setting. Format: `users/{user}/spaces/{space}/spaceNotificationSetting`.

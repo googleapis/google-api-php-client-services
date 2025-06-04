@@ -54,7 +54,9 @@ class Appengine extends \Google\Service
   public $apps_services;
   public $apps_services_versions;
   public $apps_services_versions_instances;
+  public $projects_locations_applications;
   public $projects_locations_applications_authorizedDomains;
+  public $projects_locations_applications_domainMappings;
   public $projects_locations_applications_services;
   public $projects_locations_applications_services_versions;
   public $rootUrlTemplate;
@@ -487,6 +489,11 @@ class Appengine extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'extraLocationTypes' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'filter' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -865,6 +872,40 @@ class Appengine extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_applications = new Appengine\Resource\ProjectsLocationsApplications(
+        $this,
+        $this->serviceName,
+        'applications',
+        [
+          'methods' => [
+            'patch' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_applications_authorizedDomains = new Appengine\Resource\ProjectsLocationsApplicationsAuthorizedDomains(
         $this,
         $this->serviceName,
@@ -903,6 +944,41 @@ class Appengine extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_applications_domainMappings = new Appengine\Resource\ProjectsLocationsApplicationsDomainMappings(
+        $this,
+        $this->serviceName,
+        'domainMappings',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/domainMappings/{domainMappingsId}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'domainMappingsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_applications_services = new Appengine\Resource\ProjectsLocationsApplicationsServices(
         $this,
         $this->serviceName,
@@ -932,6 +1008,39 @@ class Appengine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'servicesId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'migrateTraffic' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
@@ -972,6 +1081,40 @@ class Appengine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/projects/{projectsId}/locations/{locationsId}/applications/{applicationsId}/services/{servicesId}/versions/{versionsId}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'projectsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'locationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'servicesId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'versionsId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

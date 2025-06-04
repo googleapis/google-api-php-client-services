@@ -65,6 +65,12 @@ class HangoutsChat extends \Google\Service
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   const CHAT_BOT =
       "https://www.googleapis.com/auth/chat.bot";
+  /** View, create, and delete custom emoji in Google Chat. */
+  const CHAT_CUSTOMEMOJIS =
+      "https://www.googleapis.com/auth/chat.customemojis";
+  /** View custom emoji in Google Chat. */
+  const CHAT_CUSTOMEMOJIS_READONLY =
+      "https://www.googleapis.com/auth/chat.customemojis.readonly";
   /** Delete conversations and spaces and remove access to associated files in Google Chat. */
   const CHAT_DELETE =
       "https://www.googleapis.com/auth/chat.delete";
@@ -117,6 +123,7 @@ class HangoutsChat extends \Google\Service
   const CHAT_USERS_SPACESETTINGS =
       "https://www.googleapis.com/auth/chat.users.spacesettings";
 
+  public $customEmojis;
   public $media;
   public $spaces;
   public $spaces_members;
@@ -146,6 +153,57 @@ class HangoutsChat extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'chat';
 
+    $this->customEmojis = new HangoutsChat\Resource\CustomEmojis(
+        $this,
+        $this->serviceName,
+        'customEmojis',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/customEmojis',
+              'httpMethod' => 'POST',
+              'parameters' => [],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/customEmojis',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->media = new HangoutsChat\Resource\Media(
         $this,
         $this->serviceName,

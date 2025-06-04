@@ -77,6 +77,10 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   /**
    * @var string
    */
+  public $placeId;
+  /**
+   * @var string
+   */
   public $query;
   protected $queryExpansionSpecType = GoogleCloudRetailV2SearchRequestQueryExpansionSpec::class;
   protected $queryExpansionSpecDataType = '';
@@ -326,6 +330,20 @@ class GoogleCloudRetailV2SearchRequest extends \Google\Collection
   public function getPersonalizationSpec()
   {
     return $this->personalizationSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setPlaceId($placeId)
+  {
+    $this->placeId = $placeId;
+  }
+  /**
+   * @return string
+   */
+  public function getPlaceId()
+  {
+    return $this->placeId;
   }
   /**
    * @param string

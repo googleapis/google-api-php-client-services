@@ -20,8 +20,14 @@ namespace Google\Service\DiscoveryEngine;
 class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
 {
   protected $collection_key = 'staticIpAddresses';
+  /**
+   * @var bool
+   */
+  public $aclEnabled;
   protected $actionConfigType = GoogleCloudDiscoveryengineV1alphaActionConfig::class;
   protected $actionConfigDataType = '';
+  protected $alertPolicyConfigsType = GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig::class;
+  protected $alertPolicyConfigsDataType = 'array';
   /**
    * @var bool
    */
@@ -33,9 +39,17 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    */
   public $blockingReasons;
   /**
+   * @var string[]
+   */
+  public $connectorModes;
+  /**
    * @var string
    */
   public $connectorType;
+  /**
+   * @var bool
+   */
+  public $createEuaSaas;
   /**
    * @var string
    */
@@ -46,6 +60,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public $dataSource;
   protected $destinationConfigsType = GoogleCloudDiscoveryengineV1alphaDestinationConfig::class;
   protected $destinationConfigsDataType = 'array';
+  protected $endUserConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig::class;
+  protected $endUserConfigDataType = '';
   protected $entitiesType = GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity::class;
   protected $entitiesDataType = 'array';
   protected $errorsType = GoogleRpcStatus::class;
@@ -56,6 +72,14 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public $identityRefreshInterval;
   protected $identityScheduleConfigType = GoogleCloudDiscoveryengineV1alphaIdentityScheduleConfig::class;
   protected $identityScheduleConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $incrementalRefreshInterval;
+  /**
+   * @var bool
+   */
+  public $incrementalSyncDisabled;
   /**
    * @var string
    */
@@ -86,6 +110,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    * @var string
    */
   public $realtimeState;
+  protected $realtimeSyncConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig::class;
+  protected $realtimeSyncConfigDataType = '';
   /**
    * @var string
    */
@@ -112,6 +138,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public $updateTime;
 
   /**
+   * @param bool
+   */
+  public function setAclEnabled($aclEnabled)
+  {
+    $this->aclEnabled = $aclEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAclEnabled()
+  {
+    return $this->aclEnabled;
+  }
+  /**
    * @param GoogleCloudDiscoveryengineV1alphaActionConfig
    */
   public function setActionConfig(GoogleCloudDiscoveryengineV1alphaActionConfig $actionConfig)
@@ -124,6 +164,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getActionConfig()
   {
     return $this->actionConfig;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
+   */
+  public function setAlertPolicyConfigs($alertPolicyConfigs)
+  {
+    $this->alertPolicyConfigs = $alertPolicyConfigs;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
+   */
+  public function getAlertPolicyConfigs()
+  {
+    return $this->alertPolicyConfigs;
   }
   /**
    * @param bool
@@ -168,6 +222,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
     return $this->blockingReasons;
   }
   /**
+   * @param string[]
+   */
+  public function setConnectorModes($connectorModes)
+  {
+    $this->connectorModes = $connectorModes;
+  }
+  /**
+   * @return string[]
+   */
+  public function getConnectorModes()
+  {
+    return $this->connectorModes;
+  }
+  /**
    * @param string
    */
   public function setConnectorType($connectorType)
@@ -180,6 +248,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getConnectorType()
   {
     return $this->connectorType;
+  }
+  /**
+   * @param bool
+   */
+  public function setCreateEuaSaas($createEuaSaas)
+  {
+    $this->createEuaSaas = $createEuaSaas;
+  }
+  /**
+   * @return bool
+   */
+  public function getCreateEuaSaas()
+  {
+    return $this->createEuaSaas;
   }
   /**
    * @param string
@@ -222,6 +304,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getDestinationConfigs()
   {
     return $this->destinationConfigs;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig
+   */
+  public function setEndUserConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig $endUserConfig)
+  {
+    $this->endUserConfig = $endUserConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorEndUserConfig
+   */
+  public function getEndUserConfig()
+  {
+    return $this->endUserConfig;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaDataConnectorSourceEntity[]
@@ -278,6 +374,34 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getIdentityScheduleConfig()
   {
     return $this->identityScheduleConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setIncrementalRefreshInterval($incrementalRefreshInterval)
+  {
+    $this->incrementalRefreshInterval = $incrementalRefreshInterval;
+  }
+  /**
+   * @return string
+   */
+  public function getIncrementalRefreshInterval()
+  {
+    return $this->incrementalRefreshInterval;
+  }
+  /**
+   * @param bool
+   */
+  public function setIncrementalSyncDisabled($incrementalSyncDisabled)
+  {
+    $this->incrementalSyncDisabled = $incrementalSyncDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getIncrementalSyncDisabled()
+  {
+    return $this->incrementalSyncDisabled;
   }
   /**
    * @param string
@@ -390,6 +514,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getRealtimeState()
   {
     return $this->realtimeState;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig
+   */
+  public function setRealtimeSyncConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig $realtimeSyncConfig)
+  {
+    $this->realtimeSyncConfig = $realtimeSyncConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig
+   */
+  public function getRealtimeSyncConfig()
+  {
+    return $this->realtimeSyncConfig;
   }
   /**
    * @param string

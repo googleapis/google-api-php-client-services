@@ -41,6 +41,10 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   /**
    * @var int
    */
+  public $thoughtsTokenCount;
+  /**
+   * @var int
+   */
   public $toolUsePromptTokenCount;
   protected $toolUsePromptTokensDetailsType = GoogleCloudAiplatformV1ModalityTokenCount::class;
   protected $toolUsePromptTokensDetailsDataType = 'array';
@@ -48,6 +52,10 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
    * @var int
    */
   public $totalTokenCount;
+  /**
+   * @var string
+   */
+  public $trafficType;
 
   /**
    * @param GoogleCloudAiplatformV1ModalityTokenCount[]
@@ -136,6 +144,20 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   /**
    * @param int
    */
+  public function setThoughtsTokenCount($thoughtsTokenCount)
+  {
+    $this->thoughtsTokenCount = $thoughtsTokenCount;
+  }
+  /**
+   * @return int
+   */
+  public function getThoughtsTokenCount()
+  {
+    return $this->thoughtsTokenCount;
+  }
+  /**
+   * @param int
+   */
   public function setToolUsePromptTokenCount($toolUsePromptTokenCount)
   {
     $this->toolUsePromptTokenCount = $toolUsePromptTokenCount;
@@ -174,6 +196,20 @@ class GoogleCloudAiplatformV1GenerateContentResponseUsageMetadata extends \Googl
   public function getTotalTokenCount()
   {
     return $this->totalTokenCount;
+  }
+  /**
+   * @param string
+   */
+  public function setTrafficType($trafficType)
+  {
+    $this->trafficType = $trafficType;
+  }
+  /**
+   * @return string
+   */
+  public function getTrafficType()
+  {
+    return $this->trafficType;
   }
 }
 

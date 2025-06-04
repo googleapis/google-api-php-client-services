@@ -27,6 +27,10 @@ class UptimeCheckConfig extends \Google\Collection
   protected $contentMatchersType = ContentMatcher::class;
   protected $contentMatchersDataType = 'array';
   /**
+   * @var bool
+   */
+  public $disabled;
+  /**
    * @var string
    */
   public $displayName;
@@ -98,6 +102,20 @@ class UptimeCheckConfig extends \Google\Collection
   public function getContentMatchers()
   {
     return $this->contentMatchers;
+  }
+  /**
+   * @param bool
+   */
+  public function setDisabled($disabled)
+  {
+    $this->disabled = $disabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getDisabled()
+  {
+    return $this->disabled;
   }
   /**
    * @param string
