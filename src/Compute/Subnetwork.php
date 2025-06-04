@@ -86,6 +86,8 @@ class Subnetwork extends \Google\Collection
    * @var string
    */
   public $network;
+  protected $paramsType = SubnetworkParams::class;
+  protected $paramsDataType = '';
   /**
    * @var bool
    */
@@ -370,6 +372,20 @@ class Subnetwork extends \Google\Collection
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param SubnetworkParams
+   */
+  public function setParams(SubnetworkParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return SubnetworkParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * @param bool

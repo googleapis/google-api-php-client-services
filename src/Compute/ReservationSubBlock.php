@@ -17,7 +17,7 @@
 
 namespace Google\Service\Compute;
 
-class ReservationBlock extends \Google\Model
+class ReservationSubBlock extends \Google\Model
 {
   /**
    * @var int
@@ -43,18 +43,8 @@ class ReservationBlock extends \Google\Model
    * @var string
    */
   public $name;
-  protected $physicalTopologyType = ReservationBlockPhysicalTopology::class;
+  protected $physicalTopologyType = ReservationSubBlockPhysicalTopology::class;
   protected $physicalTopologyDataType = '';
-  protected $reservationMaintenanceType = GroupMaintenanceInfo::class;
-  protected $reservationMaintenanceDataType = '';
-  /**
-   * @var int
-   */
-  public $reservationSubBlockCount;
-  /**
-   * @var int
-   */
-  public $reservationSubBlockInUseCount;
   /**
    * @var string
    */
@@ -157,60 +147,18 @@ class ReservationBlock extends \Google\Model
     return $this->name;
   }
   /**
-   * @param ReservationBlockPhysicalTopology
+   * @param ReservationSubBlockPhysicalTopology
    */
-  public function setPhysicalTopology(ReservationBlockPhysicalTopology $physicalTopology)
+  public function setPhysicalTopology(ReservationSubBlockPhysicalTopology $physicalTopology)
   {
     $this->physicalTopology = $physicalTopology;
   }
   /**
-   * @return ReservationBlockPhysicalTopology
+   * @return ReservationSubBlockPhysicalTopology
    */
   public function getPhysicalTopology()
   {
     return $this->physicalTopology;
-  }
-  /**
-   * @param GroupMaintenanceInfo
-   */
-  public function setReservationMaintenance(GroupMaintenanceInfo $reservationMaintenance)
-  {
-    $this->reservationMaintenance = $reservationMaintenance;
-  }
-  /**
-   * @return GroupMaintenanceInfo
-   */
-  public function getReservationMaintenance()
-  {
-    return $this->reservationMaintenance;
-  }
-  /**
-   * @param int
-   */
-  public function setReservationSubBlockCount($reservationSubBlockCount)
-  {
-    $this->reservationSubBlockCount = $reservationSubBlockCount;
-  }
-  /**
-   * @return int
-   */
-  public function getReservationSubBlockCount()
-  {
-    return $this->reservationSubBlockCount;
-  }
-  /**
-   * @param int
-   */
-  public function setReservationSubBlockInUseCount($reservationSubBlockInUseCount)
-  {
-    $this->reservationSubBlockInUseCount = $reservationSubBlockInUseCount;
-  }
-  /**
-   * @return int
-   */
-  public function getReservationSubBlockInUseCount()
-  {
-    return $this->reservationSubBlockInUseCount;
   }
   /**
    * @param string
@@ -271,4 +219,4 @@ class ReservationBlock extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReservationBlock::class, 'Google_Service_Compute_ReservationBlock');
+class_alias(ReservationSubBlock::class, 'Google_Service_Compute_ReservationSubBlock');

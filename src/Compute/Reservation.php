@@ -45,6 +45,10 @@ class Reservation extends \Google\Collection
    */
   public $description;
   /**
+   * @var bool
+   */
+  public $enableEmergentMaintenance;
+  /**
    * @var string
    */
   public $id;
@@ -190,6 +194,20 @@ class Reservation extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnableEmergentMaintenance($enableEmergentMaintenance)
+  {
+    $this->enableEmergentMaintenance = $enableEmergentMaintenance;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableEmergentMaintenance()
+  {
+    return $this->enableEmergentMaintenance;
   }
   /**
    * @param string
