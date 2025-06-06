@@ -106,13 +106,10 @@ namespace Google\Service\PhpFloatType;
 
 class ObjectWithFloat extends \Google\Model
 {
-  /**
-   * @var float
-   */
-  public $propName;
+  public float $propName;
 
   /**
-   * @param float
+   * @param float $propName
    */
   public function setPropName($propName)
   {
