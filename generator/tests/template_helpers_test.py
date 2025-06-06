@@ -71,26 +71,28 @@ class TemplateHelpersTest(absltest.TestCase):
     self.assertEqual(expected,
                       template_helpers.java_comment_fragment(value, indent))
 
-  def testCommentBlockJavaDoc(self):
+  def testCommentBlockPHPDoc(self):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     value = """
        * %s %s
        * %s %s %s
        * """ % (alphabet, alphabet, alphabet, alphabet, alphabet)
     expected = """
-       * %s %s %s
-       * %s %s""" % (alphabet, alphabet, alphabet, alphabet, alphabet)
+       * %s %s
+       * %s %s
+       * %s""" % (alphabet, alphabet, alphabet, alphabet, alphabet)
     self.assertEqual(expected, template_helpers.block_comment(value))
     value = """
        // %s %s
        // %s %s %s
        // """ % (alphabet, alphabet, alphabet, alphabet, alphabet)
     expected = """
-       // %s %s %s
-       // %s %s""" % (alphabet, alphabet, alphabet, alphabet, alphabet)
+       // %s %s
+       // %s %s
+       // %s""" % (alphabet, alphabet, alphabet, alphabet, alphabet)
     self.assertEqual(expected, template_helpers.block_comment(value))
     value = '// %s %s %s %s' % ((alphabet,) * 4)
-    expected = '// %s %s %s\n// %s' % ((alphabet,) * 4)
+    expected = '// %s %s\n// %s %s' % ((alphabet,) * 4)
     self.assertEqual(expected, template_helpers.block_comment(value))
 
   def testCommentBlockPerLanguage(self):
