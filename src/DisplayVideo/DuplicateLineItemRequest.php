@@ -22,8 +22,26 @@ class DuplicateLineItemRequest extends \Google\Model
   /**
    * @var string
    */
+  public $containsEuPoliticalAds;
+  /**
+   * @var string
+   */
   public $targetDisplayName;
 
+  /**
+   * @param string
+   */
+  public function setContainsEuPoliticalAds($containsEuPoliticalAds)
+  {
+    $this->containsEuPoliticalAds = $containsEuPoliticalAds;
+  }
+  /**
+   * @return string
+   */
+  public function getContainsEuPoliticalAds()
+  {
+    return $this->containsEuPoliticalAds;
+  }
   /**
    * @param string
    */
