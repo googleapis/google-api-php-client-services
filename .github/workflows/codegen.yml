@@ -41,11 +41,11 @@ jobs:
         service: ${{fromJson(needs.batch.outputs.services).one}}
     steps:
       - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           path: google-api-php-client-services
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
@@ -84,11 +84,11 @@ jobs:
         service: ${{fromJson(needs.batch.outputs.services).two}}
     steps:
       - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 1
           path: google-api-php-client-services
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
