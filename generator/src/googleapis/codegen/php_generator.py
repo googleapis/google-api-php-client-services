@@ -127,6 +127,13 @@ class PHPGenerator(api_library_generator.ApiLibraryGenerator):
     if isinstance(prop.data_type, data_types.MapDataType):
       prop.SetTemplateValue('dataType', 'map')
 
+    if isinstance(prop.data_type, data_types.Enum):
+      prop.SetTemplateValue('dataType', 'enum')
+      prop_values = prop.values.get('enum')
+      if isinstance(prop_values, list):
+          prop_values = ", ".join(prop_values)
+      prop.SetTemplateValue('possibleValues', prop_values)
+
     if not prop.member_name_is_json_name:
       schema.SetTemplateValue('has_gapi', True)
 
@@ -252,6 +259,11 @@ class PhpLanguageModel(language_model.LanguageModel):
   setter_policy = language_model.NamingPolicy(
       case_transform=language_model.UPPER_CAMEL_CASE,
       format_string='set{name}')
+  constant_policy = language_model.NamingPolicy(
+      case_transform=language_model.UPPER_UNCAMEL_CASE,
+      separator='_')
+  enum_policy = language_model.NamingPolicy(
+      case_transform=language_model.UPPER_CAMEL_CASE)
 
   def __init__(self):
     super(PhpLanguageModel, self).__init__(class_name_delimiter='.')
