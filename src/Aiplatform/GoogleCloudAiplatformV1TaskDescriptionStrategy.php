@@ -17,55 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1VideoMetadata extends \Google\Model
+class GoogleCloudAiplatformV1TaskDescriptionStrategy extends \Google\Model
 {
   /**
    * @var string
    */
-  public $endOffset;
-  public $fps;
-  /**
-   * @var string
-   */
-  public $startOffset;
+  public $taskDescription;
 
   /**
    * @param string
    */
-  public function setEndOffset($endOffset)
+  public function setTaskDescription($taskDescription)
   {
-    $this->endOffset = $endOffset;
+    $this->taskDescription = $taskDescription;
   }
   /**
    * @return string
    */
-  public function getEndOffset()
+  public function getTaskDescription()
   {
-    return $this->endOffset;
-  }
-  public function setFps($fps)
-  {
-    $this->fps = $fps;
-  }
-  public function getFps()
-  {
-    return $this->fps;
-  }
-  /**
-   * @param string
-   */
-  public function setStartOffset($startOffset)
-  {
-    $this->startOffset = $startOffset;
-  }
-  /**
-   * @return string
-   */
-  public function getStartOffset()
-  {
-    return $this->startOffset;
+    return $this->taskDescription;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1VideoMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1VideoMetadata');
+class_alias(GoogleCloudAiplatformV1TaskDescriptionStrategy::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1TaskDescriptionStrategy');

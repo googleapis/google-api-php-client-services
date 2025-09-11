@@ -17,55 +17,44 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1VideoMetadata extends \Google\Model
+class GoogleCloudAiplatformV1SyntheticField extends \Google\Model
 {
+  protected $contentType = GoogleCloudAiplatformV1Content::class;
+  protected $contentDataType = '';
   /**
    * @var string
    */
-  public $endOffset;
-  public $fps;
-  /**
-   * @var string
-   */
-  public $startOffset;
+  public $fieldName;
 
   /**
-   * @param string
+   * @param GoogleCloudAiplatformV1Content
    */
-  public function setEndOffset($endOffset)
+  public function setContent(GoogleCloudAiplatformV1Content $content)
   {
-    $this->endOffset = $endOffset;
+    $this->content = $content;
   }
   /**
-   * @return string
+   * @return GoogleCloudAiplatformV1Content
    */
-  public function getEndOffset()
+  public function getContent()
   {
-    return $this->endOffset;
-  }
-  public function setFps($fps)
-  {
-    $this->fps = $fps;
-  }
-  public function getFps()
-  {
-    return $this->fps;
+    return $this->content;
   }
   /**
    * @param string
    */
-  public function setStartOffset($startOffset)
+  public function setFieldName($fieldName)
   {
-    $this->startOffset = $startOffset;
+    $this->fieldName = $fieldName;
   }
   /**
    * @return string
    */
-  public function getStartOffset()
+  public function getFieldName()
   {
-    return $this->startOffset;
+    return $this->fieldName;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1VideoMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1VideoMetadata');
+class_alias(GoogleCloudAiplatformV1SyntheticField::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SyntheticField');

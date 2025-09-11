@@ -17,29 +17,27 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
+class GoogleCloudAiplatformV1SyntheticExample extends \Google\Collection
 {
-  protected $collection_key = 'excludeDomains';
-  /**
-   * @var string[]
-   */
-  public $excludeDomains;
+  protected $collection_key = 'fields';
+  protected $fieldsType = GoogleCloudAiplatformV1SyntheticField::class;
+  protected $fieldsDataType = 'array';
 
   /**
-   * @param string[]
+   * @param GoogleCloudAiplatformV1SyntheticField[]
    */
-  public function setExcludeDomains($excludeDomains)
+  public function setFields($fields)
   {
-    $this->excludeDomains = $excludeDomains;
+    $this->fields = $fields;
   }
   /**
-   * @return string[]
+   * @return GoogleCloudAiplatformV1SyntheticField[]
    */
-  public function getExcludeDomains()
+  public function getFields()
   {
-    return $this->excludeDomains;
+    return $this->fields;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ToolGoogleSearch::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ToolGoogleSearch');
+class_alias(GoogleCloudAiplatformV1SyntheticExample::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SyntheticExample');

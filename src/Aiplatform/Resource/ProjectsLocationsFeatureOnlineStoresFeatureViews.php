@@ -18,6 +18,8 @@
 namespace Google\Service\Aiplatform\Resource;
 
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureView;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureViewDirectWriteRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureViewDirectWriteResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchFeatureValuesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchFeatureValuesResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListFeatureViewsResponse;
@@ -82,6 +84,25 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViews extends \Google\Service\R
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Bidirectional streaming RPC to directly write to feature values in a feature
+   * view. Requests may not have a one-to-one mapping to responses and responses
+   * may be returned out-of-order to reduce latency. (featureViews.directWrite)
+   *
+   * @param string $featureView FeatureView resource format `projects/{project}/lo
+   * cations/{location}/featureOnlineStores/{featureOnlineStore}/featureViews/{fea
+   * tureView}`
+   * @param GoogleCloudAiplatformV1FeatureViewDirectWriteRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1FeatureViewDirectWriteResponse
+   * @throws \Google\Service\Exception
+   */
+  public function directWrite($featureView, GoogleCloudAiplatformV1FeatureViewDirectWriteRequest $postBody, $optParams = [])
+  {
+    $params = ['featureView' => $featureView, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('directWrite', [$params], GoogleCloudAiplatformV1FeatureViewDirectWriteResponse::class);
   }
   /**
    * Fetch feature values under a FeatureView. (featureViews.fetchFeatureValues)

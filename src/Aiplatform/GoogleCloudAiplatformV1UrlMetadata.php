@@ -17,55 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1VideoMetadata extends \Google\Model
+class GoogleCloudAiplatformV1UrlMetadata extends \Google\Model
 {
   /**
    * @var string
    */
-  public $endOffset;
-  public $fps;
+  public $retrievedUrl;
   /**
    * @var string
    */
-  public $startOffset;
+  public $urlRetrievalStatus;
 
   /**
    * @param string
    */
-  public function setEndOffset($endOffset)
+  public function setRetrievedUrl($retrievedUrl)
   {
-    $this->endOffset = $endOffset;
+    $this->retrievedUrl = $retrievedUrl;
   }
   /**
    * @return string
    */
-  public function getEndOffset()
+  public function getRetrievedUrl()
   {
-    return $this->endOffset;
-  }
-  public function setFps($fps)
-  {
-    $this->fps = $fps;
-  }
-  public function getFps()
-  {
-    return $this->fps;
+    return $this->retrievedUrl;
   }
   /**
    * @param string
    */
-  public function setStartOffset($startOffset)
+  public function setUrlRetrievalStatus($urlRetrievalStatus)
   {
-    $this->startOffset = $startOffset;
+    $this->urlRetrievalStatus = $urlRetrievalStatus;
   }
   /**
    * @return string
    */
-  public function getStartOffset()
+  public function getUrlRetrievalStatus()
   {
-    return $this->startOffset;
+    return $this->urlRetrievalStatus;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1VideoMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1VideoMetadata');
+class_alias(GoogleCloudAiplatformV1UrlMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1UrlMetadata');

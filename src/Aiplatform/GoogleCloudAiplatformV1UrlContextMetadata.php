@@ -17,29 +17,27 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
+class GoogleCloudAiplatformV1UrlContextMetadata extends \Google\Collection
 {
-  protected $collection_key = 'excludeDomains';
-  /**
-   * @var string[]
-   */
-  public $excludeDomains;
+  protected $collection_key = 'urlMetadata';
+  protected $urlMetadataType = GoogleCloudAiplatformV1UrlMetadata::class;
+  protected $urlMetadataDataType = 'array';
 
   /**
-   * @param string[]
+   * @param GoogleCloudAiplatformV1UrlMetadata[]
    */
-  public function setExcludeDomains($excludeDomains)
+  public function setUrlMetadata($urlMetadata)
   {
-    $this->excludeDomains = $excludeDomains;
+    $this->urlMetadata = $urlMetadata;
   }
   /**
-   * @return string[]
+   * @return GoogleCloudAiplatformV1UrlMetadata[]
    */
-  public function getExcludeDomains()
+  public function getUrlMetadata()
   {
-    return $this->excludeDomains;
+    return $this->urlMetadata;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ToolGoogleSearch::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ToolGoogleSearch');
+class_alias(GoogleCloudAiplatformV1UrlContextMetadata::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1UrlContextMetadata');
