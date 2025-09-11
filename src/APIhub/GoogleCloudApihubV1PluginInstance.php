@@ -45,6 +45,10 @@ class GoogleCloudApihubV1PluginInstance extends \Google\Collection
   /**
    * @var string
    */
+  public $sourceProjectId;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string
@@ -148,6 +152,20 @@ class GoogleCloudApihubV1PluginInstance extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceProjectId($sourceProjectId)
+  {
+    $this->sourceProjectId = $sourceProjectId;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceProjectId()
+  {
+    return $this->sourceProjectId;
   }
   /**
    * @param string

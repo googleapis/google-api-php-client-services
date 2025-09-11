@@ -38,6 +38,10 @@ class GoogleCloudApihubV1Plugin extends \Google\Collection
   public $displayName;
   protected $documentationType = GoogleCloudApihubV1Documentation::class;
   protected $documentationDataType = '';
+  /**
+   * @var string
+   */
+  public $gatewayType;
   protected $hostingServiceType = GoogleCloudApihubV1HostingService::class;
   protected $hostingServiceDataType = '';
   /**
@@ -146,6 +150,20 @@ class GoogleCloudApihubV1Plugin extends \Google\Collection
   public function getDocumentation()
   {
     return $this->documentation;
+  }
+  /**
+   * @param string
+   */
+  public function setGatewayType($gatewayType)
+  {
+    $this->gatewayType = $gatewayType;
+  }
+  /**
+   * @return string
+   */
+  public function getGatewayType()
+  {
+    return $this->gatewayType;
   }
   /**
    * @param GoogleCloudApihubV1HostingService

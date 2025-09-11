@@ -49,6 +49,8 @@ class APIhub extends \Google\Service
   public $projects_locations_curations;
   public $projects_locations_dependencies;
   public $projects_locations_deployments;
+  public $projects_locations_discoveredApiObservations;
+  public $projects_locations_discoveredApiObservations_discoveredApiOperations;
   public $projects_locations_externalApis;
   public $projects_locations_hostProjectRegistrations;
   public $projects_locations_operations;
@@ -894,6 +896,82 @@ class APIhub extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_discoveredApiObservations = new APIhub\Resource\ProjectsLocationsDiscoveredApiObservations(
+        $this,
+        $this->serviceName,
+        'discoveredApiObservations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/discoveredApiObservations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_discoveredApiObservations_discoveredApiOperations = new APIhub\Resource\ProjectsLocationsDiscoveredApiObservationsDiscoveredApiOperations(
+        $this,
+        $this->serviceName,
+        'discoveredApiOperations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/discoveredApiOperations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_externalApis = new APIhub\Resource\ProjectsLocationsExternalApis(
         $this,
         $this->serviceName,
@@ -1290,6 +1368,20 @@ class APIhub extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

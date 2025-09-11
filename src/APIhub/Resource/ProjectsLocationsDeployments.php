@@ -107,7 +107,10 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
    * (RFC3339)[https://tools.ietf.org/html/rfc3339] format. Allowed comparison
    * operators: `>` and `<`. * `resource_uri` - A URI to the deployment resource.
    * Allowed comparison operators: `=`. * `api_versions` - The API versions linked
-   * to this deployment. Allowed comparison operators: `:`. *
+   * to this deployment. Allowed comparison operators: `:`. * `source_project` -
+   * The project/organization at source for the deployment. Allowed comparison
+   * operators: `=`. * `source_environment` - The environment at source for the
+   * deployment. Allowed comparison operators: `=`. *
    * `deployment_type.enum_values.values.id` - The allowed value id of the
    * deployment_type attribute associated with the Deployment. Allowed comparison
    * operators: `:`. * `deployment_type.enum_values.values.display_name` - The
@@ -139,13 +142,19 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
    * attributes/user-defined-attribute-id.json_values.values` - The allowed value
    * of the user defined JSON attribute associated with the Resource. Allowed
    * comparison operator is `:`. Here user-defined-attribute-json is a placeholder
-   * that can be replaced with any user defined JSON attribute name. Expressions
-   * are combined with either `AND` logic operator or `OR` logical operator but
-   * not both of them together i.e. only one of the `AND` or `OR` operator can be
-   * used throughout the filter string and both the operators cannot be used
-   * together. No other logical operators are supported. At most three filter
-   * fields are allowed in the filter string and if provided more than that then
-   * `INVALID_ARGUMENT` error is returned by the API. Here are a few examples: *
+   * that can be replaced with any user defined JSON attribute name. A filter
+   * function is also supported in the filter string. The filter function is
+   * `id(name)`. The `id(name)` function returns the id of the resource name. For
+   * example, `id(name) = \"deployment-1\"` is equivalent to `name =
+   * \"projects/test-project-id/locations/test-location-
+   * id/deployments/deployment-1\"` provided the parent is `projects/test-project-
+   * id/locations/test-location-id`. Expressions are combined with either `AND`
+   * logic operator or `OR` logical operator but not both of them together i.e.
+   * only one of the `AND` or `OR` operator can be used throughout the filter
+   * string and both the operators cannot be used together. No other logical
+   * operators are supported. At most three filter fields are allowed in the
+   * filter string and if provided more than that then `INVALID_ARGUMENT` error is
+   * returned by the API. Here are a few examples: *
    * `environment.enum_values.values.id: staging-id` - The allowed value id of the
    * environment attribute associated with the Deployment is _staging-id_. *
    * `environment.enum_values.values.display_name: \"Staging Deployment\"` - The
@@ -185,8 +194,9 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
    * Update a deployment resource in the API hub. The following fields in the
    * deployment resource can be updated: * display_name * description *
    * documentation * deployment_type * resource_uri * endpoints * slo *
-   * environment * attributes The update_mask should be used to specify the fields
-   * being updated. (deployments.patch)
+   * environment * attributes * source_project * source_environment *
+   * management_url * source_uri The update_mask should be used to specify the
+   * fields being updated. (deployments.patch)
    *
    * @param string $name Identifier. The name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`

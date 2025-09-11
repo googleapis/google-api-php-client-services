@@ -158,14 +158,19 @@ class ProjectsLocationsPluginsInstances extends \Google\Service\Resource
    * comparison operator must be one of: `<`, `>` or `=`. Filters are not case
    * sensitive. The following fields in the `PluginInstances` are eligible for
    * filtering: * `state` - The state of the Plugin Instance. Allowed comparison
-   * operators: `=`. Expressions are combined with either `AND` logic operator or
-   * `OR` logical operator but not both of them together i.e. only one of the
-   * `AND` or `OR` operator can be used throughout the filter string and both the
-   * operators cannot be used together. No other logical operators are supported.
-   * At most three filter fields are allowed in the filter string and if provided
-   * more than that then `INVALID_ARGUMENT` error is returned by the API. Here are
-   * a few examples: * `state = ENABLED` - The plugin instance is in enabled
-   * state.
+   * operators: `=`. A filter function is also supported in the filter string. The
+   * filter function is `id(name)`. The `id(name)` function returns the id of the
+   * resource name. For example, `id(name) = \"plugin-instance-1\"` is equivalent
+   * to `name = \"projects/test-project-id/locations/test-location-
+   * id/plugins/plugin-1/instances/plugin-instance-1\"` provided the parent is
+   * `projects/test-project-id/locations/test-location-id/plugins/plugin-1`.
+   * Expressions are combined with either `AND` logic operator or `OR` logical
+   * operator but not both of them together i.e. only one of the `AND` or `OR`
+   * operator can be used throughout the filter string and both the operators
+   * cannot be used together. No other logical operators are supported. At most
+   * three filter fields are allowed in the filter string and if provided more
+   * than that then `INVALID_ARGUMENT` error is returned by the API. Here are a
+   * few examples: * `state = ENABLED` - The plugin instance is in enabled state.
    * @opt_param int pageSize Optional. The maximum number of hub plugins to
    * return. The service may return fewer than this value. If unspecified, at most
    * 50 hub plugins will be returned. The maximum value is 1000; values above 1000
@@ -182,6 +187,29 @@ class ProjectsLocationsPluginsInstances extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudApihubV1ListPluginInstancesResponse::class);
+  }
+  /**
+   * Updates a plugin instance in the API hub. The following fields in the
+   * plugin_instance can be updated currently: * display_name *
+   * schedule_cron_expression The update_mask should be used to specify the fields
+   * being updated. To update the auth_config and additional_config of the plugin
+   * instance, use the ApplyPluginInstanceConfig method. (instances.patch)
+   *
+   * @param string $name Identifier. The unique name of the plugin instance
+   * resource. Format: `projects/{project}/locations/{location}/plugins/{plugin}/i
+   * nstances/{instance}`
+   * @param GoogleCloudApihubV1PluginInstance $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Optional. The list of fields to update.
+   * @return GoogleCloudApihubV1PluginInstance
+   * @throws \Google\Service\Exception
+   */
+  public function patch($name, GoogleCloudApihubV1PluginInstance $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], GoogleCloudApihubV1PluginInstance::class);
   }
 }
 

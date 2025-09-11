@@ -48,6 +48,8 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
   public $endpoints;
   protected $environmentType = GoogleCloudApihubV1AttributeValues::class;
   protected $environmentDataType = '';
+  protected $managementUrlType = GoogleCloudApihubV1AttributeValues::class;
+  protected $managementUrlDataType = '';
   /**
    * @var string
    */
@@ -58,8 +60,18 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
   public $resourceUri;
   protected $sloType = GoogleCloudApihubV1AttributeValues::class;
   protected $sloDataType = '';
+  /**
+   * @var string
+   */
+  public $sourceEnvironment;
   protected $sourceMetadataType = GoogleCloudApihubV1SourceMetadata::class;
   protected $sourceMetadataDataType = 'array';
+  /**
+   * @var string
+   */
+  public $sourceProject;
+  protected $sourceUriType = GoogleCloudApihubV1AttributeValues::class;
+  protected $sourceUriDataType = '';
   /**
    * @var string
    */
@@ -192,6 +204,20 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->environment;
   }
   /**
+   * @param GoogleCloudApihubV1AttributeValues
+   */
+  public function setManagementUrl(GoogleCloudApihubV1AttributeValues $managementUrl)
+  {
+    $this->managementUrl = $managementUrl;
+  }
+  /**
+   * @return GoogleCloudApihubV1AttributeValues
+   */
+  public function getManagementUrl()
+  {
+    return $this->managementUrl;
+  }
+  /**
    * @param string
    */
   public function setName($name)
@@ -234,6 +260,20 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
     return $this->slo;
   }
   /**
+   * @param string
+   */
+  public function setSourceEnvironment($sourceEnvironment)
+  {
+    $this->sourceEnvironment = $sourceEnvironment;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceEnvironment()
+  {
+    return $this->sourceEnvironment;
+  }
+  /**
    * @param GoogleCloudApihubV1SourceMetadata[]
    */
   public function setSourceMetadata($sourceMetadata)
@@ -246,6 +286,34 @@ class GoogleCloudApihubV1Deployment extends \Google\Collection
   public function getSourceMetadata()
   {
     return $this->sourceMetadata;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceProject($sourceProject)
+  {
+    $this->sourceProject = $sourceProject;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceProject()
+  {
+    return $this->sourceProject;
+  }
+  /**
+   * @param GoogleCloudApihubV1AttributeValues
+   */
+  public function setSourceUri(GoogleCloudApihubV1AttributeValues $sourceUri)
+  {
+    $this->sourceUri = $sourceUri;
+  }
+  /**
+   * @return GoogleCloudApihubV1AttributeValues
+   */
+  public function getSourceUri()
+  {
+    return $this->sourceUri;
   }
   /**
    * @param string
