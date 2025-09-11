@@ -34,8 +34,8 @@ class ProjectsLocationsMeshesRouteViews extends \Google\Service\Resource
    * Get a single RouteView of a Mesh. (routeViews.get)
    *
    * @param string $name Required. Name of the MeshRouteView resource. Format: pro
-   * jects/{project_number}/locations/{location}/meshes/{mesh_name}/routeViews/{ro
-   * ute_view_name}
+   * jects/{project_number}/locations/{location}/meshes/{mesh}/routeViews/{route_v
+   * iew}
    * @param array $optParams Optional parameters.
    * @return MeshRouteView
    * @throws \Google\Service\Exception
@@ -50,7 +50,7 @@ class ProjectsLocationsMeshesRouteViews extends \Google\Service\Resource
    * Lists RouteViews (routeViews.listProjectsLocationsMeshesRouteViews)
    *
    * @param string $parent Required. The Mesh to which a Route is associated.
-   * Format: projects/{project_number}/locations/{location}/meshes/{mesh_name}
+   * Format: projects/{project_number}/locations/{location}/meshes/{mesh}
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of MeshRouteViews to return per call.
