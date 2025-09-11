@@ -18,6 +18,7 @@
 namespace Google\Service\VMMigrationService\Resource;
 
 use Google\Service\VMMigrationService\FetchInventoryResponse;
+use Google\Service\VMMigrationService\FetchStorageInventoryResponse;
 use Google\Service\VMMigrationService\ListSourcesResponse;
 use Google\Service\VMMigrationService\Operation;
 use Google\Service\VMMigrationService\Source;
@@ -116,6 +117,35 @@ class ProjectsLocationsSources extends \Google\Service\Resource
     $params = ['source' => $source];
     $params = array_merge($params, $optParams);
     return $this->call('fetchInventory', [$params], FetchInventoryResponse::class);
+  }
+  /**
+   * List remote source's inventory of storage resources. The remote source is
+   * another cloud vendor (e.g. AWS, Azure). The inventory describes the list of
+   * existing storage resources in that source. Note that this operation lists the
+   * resources on the remote source, as opposed to listing the MigratingVms
+   * resources in the vmmigration service. (sources.fetchStorageInventory)
+   *
+   * @param string $source Required. The name of the Source.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool forceRefresh Optional. If this flag is set to true, the
+   * source will be queried instead of using cached results. Using this flag will
+   * make the call slower.
+   * @opt_param int pageSize Optional. The maximum number of VMs to return. The
+   * service may return fewer than this value.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * `FetchStorageInventory` call. Provide this to retrieve the subsequent page.
+   * When paginating, all other parameters provided to `FetchStorageInventory`
+   * must match the call that provided the page token.
+   * @opt_param string type Required. The type of the storage inventory to fetch.
+   * @return FetchStorageInventoryResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchStorageInventory($source, $optParams = [])
+  {
+    $params = ['source' => $source];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchStorageInventory', [$params], FetchStorageInventoryResponse::class);
   }
   /**
    * Gets details of a single Source. (sources.get)

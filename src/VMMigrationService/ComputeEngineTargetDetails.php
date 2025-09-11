@@ -37,6 +37,10 @@ class ComputeEngineTargetDetails extends \Google\Collection
   protected $computeSchedulingType = ComputeScheduling::class;
   protected $computeSchedulingDataType = '';
   /**
+   * @var string[]
+   */
+  public $diskReplicaZones;
+  /**
    * @var string
    */
   public $diskType;
@@ -170,6 +174,20 @@ class ComputeEngineTargetDetails extends \Google\Collection
   public function getComputeScheduling()
   {
     return $this->computeScheduling;
+  }
+  /**
+   * @param string[]
+   */
+  public function setDiskReplicaZones($diskReplicaZones)
+  {
+    $this->diskReplicaZones = $diskReplicaZones;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDiskReplicaZones()
+  {
+    return $this->diskReplicaZones;
   }
   /**
    * @param string
