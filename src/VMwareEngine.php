@@ -772,6 +772,16 @@ class VMwareEngine extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'privateCloudDeletionNow' => [
+              'path' => 'v1/{+name}:privateCloudDeletionNow',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'resetNsxCredentials' => [
               'path' => 'v1/{+privateCloud}:resetNsxCredentials',
               'httpMethod' => 'POST',

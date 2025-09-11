@@ -17,6 +17,7 @@
 
 namespace Google\Service\VMwareEngine\Resource;
 
+use Google\Service\VMwareEngine\AcceleratePrivateCloudDeletionRequest;
 use Google\Service\VMwareEngine\Credentials;
 use Google\Service\VMwareEngine\DnsForwarding;
 use Google\Service\VMwareEngine\ListPrivateCloudsResponse;
@@ -264,6 +265,27 @@ class ProjectsLocationsPrivateClouds extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Accelerates the deletion of a private cloud that is currently in soft
+   * deletion A `PrivateCloud` resource in soft deletion has `PrivateCloud.state`
+   * set to `SOFT_DELETED` and `PrivateCloud.expireTime` set to the time when
+   * deletion can no longer be reversed. (privateClouds.privateCloudDeletionNow)
+   *
+   * @param string $name Required. The resource name of the private cloud in
+   * softdeletion. Resource names are schemeless URIs that follow the conventions
+   * in https://cloud.google.com/apis/design/resource_names. For example:
+   * `projects/my-project/locations/us-central1-a/privateClouds/my-cloud`
+   * @param AcceleratePrivateCloudDeletionRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function privateCloudDeletionNow($name, AcceleratePrivateCloudDeletionRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('privateCloudDeletionNow', [$params], Operation::class);
   }
   /**
    * Resets credentials of the NSX appliance. (privateClouds.resetNsxCredentials)
