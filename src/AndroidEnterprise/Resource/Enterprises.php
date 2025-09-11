@@ -112,8 +112,9 @@ class Enterprises extends \Google\Service\Resource
   }
   /**
    * Generates an enterprise upgrade URL to upgrade an existing managed Google
-   * Play Accounts enterprise to a managed Google domain. **Note:** This feature
-   * is not generally available. (enterprises.generateEnterpriseUpgradeUrl)
+   * Play Accounts enterprise to a managed Google domain. See the guide to
+   * upgrading an enterprise for more details.
+   * (enterprises.generateEnterpriseUpgradeUrl)
    *
    * @param string $enterpriseId Required. The ID of the enterprise.
    * @param array $optParams Optional parameters.

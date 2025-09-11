@@ -27,6 +27,8 @@ class EnrollmentToken extends \Google\Model
    * @var string
    */
   public $enrollmentTokenType;
+  protected $googleAuthenticationOptionsType = EnrollmentTokenGoogleAuthenticationOptions::class;
+  protected $googleAuthenticationOptionsDataType = '';
   /**
    * @var string
    */
@@ -59,6 +61,20 @@ class EnrollmentToken extends \Google\Model
   public function getEnrollmentTokenType()
   {
     return $this->enrollmentTokenType;
+  }
+  /**
+   * @param EnrollmentTokenGoogleAuthenticationOptions
+   */
+  public function setGoogleAuthenticationOptions(EnrollmentTokenGoogleAuthenticationOptions $googleAuthenticationOptions)
+  {
+    $this->googleAuthenticationOptions = $googleAuthenticationOptions;
+  }
+  /**
+   * @return EnrollmentTokenGoogleAuthenticationOptions
+   */
+  public function getGoogleAuthenticationOptions()
+  {
+    return $this->googleAuthenticationOptions;
   }
   /**
    * @param string
