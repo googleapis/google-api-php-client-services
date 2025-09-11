@@ -51,9 +51,9 @@ class Permissions extends \Google\Service\Resource
    * new owner's My Drive root folder and all prior parents removed. If set to
    * `false`, parents are not changed.
    * @opt_param bool sendNotificationEmail Whether to send a notification email
-   * when sharing to users or groups. This defaults to true for users and groups,
-   * and is not allowed for other requests. It must not be disabled for ownership
-   * transfers.
+   * when sharing to users or groups. This defaults to `true` for users and
+   * groups, and is not allowed for other requests. It must not be disabled for
+   * ownership transfers.
    * @opt_param bool supportsAllDrives Whether the requesting application supports
    * both My Drives and shared drives.
    * @opt_param bool supportsTeamDrives Deprecated: Use `supportsAllDrives`
