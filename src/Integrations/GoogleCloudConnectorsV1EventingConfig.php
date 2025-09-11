@@ -19,7 +19,7 @@ namespace Google\Service\Integrations;
 
 class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
 {
-  protected $collection_key = 'additionalVariables';
+  protected $collection_key = 'privateConnectivityAllowlistedProjects';
   protected $additionalVariablesType = GoogleCloudConnectorsV1ConfigVariable::class;
   protected $additionalVariablesDataType = 'array';
   protected $authConfigType = GoogleCloudConnectorsV1AuthConfig::class;
@@ -38,6 +38,10 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public $eventsListenerIngressEndpoint;
   protected $listenerAuthConfigType = GoogleCloudConnectorsV1AuthConfig::class;
   protected $listenerAuthConfigDataType = '';
+  /**
+   * @var string[]
+   */
+  public $privateConnectivityAllowlistedProjects;
   /**
    * @var bool
    */
@@ -146,6 +150,20 @@ class GoogleCloudConnectorsV1EventingConfig extends \Google\Collection
   public function getListenerAuthConfig()
   {
     return $this->listenerAuthConfig;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPrivateConnectivityAllowlistedProjects($privateConnectivityAllowlistedProjects)
+  {
+    $this->privateConnectivityAllowlistedProjects = $privateConnectivityAllowlistedProjects;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPrivateConnectivityAllowlistedProjects()
+  {
+    return $this->privateConnectivityAllowlistedProjects;
   }
   /**
    * @param bool

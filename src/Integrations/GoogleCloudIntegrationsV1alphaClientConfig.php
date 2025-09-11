@@ -33,6 +33,8 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
    * @var string
    */
   public $createTime;
+  protected $customerConfigType = GoogleCloudIntegrationsV1alphaCustomerConfig::class;
+  protected $customerConfigDataType = '';
   /**
    * @var string
    */
@@ -133,6 +135,20 @@ class GoogleCloudIntegrationsV1alphaClientConfig extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param GoogleCloudIntegrationsV1alphaCustomerConfig
+   */
+  public function setCustomerConfig(GoogleCloudIntegrationsV1alphaCustomerConfig $customerConfig)
+  {
+    $this->customerConfig = $customerConfig;
+  }
+  /**
+   * @return GoogleCloudIntegrationsV1alphaCustomerConfig
+   */
+  public function getCustomerConfig()
+  {
+    return $this->customerConfig;
   }
   /**
    * @param string

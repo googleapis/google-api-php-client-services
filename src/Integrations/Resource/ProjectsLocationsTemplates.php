@@ -179,6 +179,8 @@ class ProjectsLocationsTemplates extends \Google\Service\Resource
    * Templates.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param bool enableNaturalLanguageQueryUnderstanding Optional. Whether to
+   * enable natural language query understanding.
    * @opt_param string filter Optional. Standard filter field to filter templates.
    * client_id filter won't be supported and will restrict to templates belonging
    * to the current client only. Return all templates of the current client if the
@@ -191,6 +193,8 @@ class ProjectsLocationsTemplates extends \Google\Service\Resource
    * will be coerced to 1000.
    * @opt_param string pageToken Optional. The token returned in the previous
    * response.
+   * @opt_param string query Optional. The search query that will be passed to
+   * Vertex search service.
    * @opt_param string readMask Optional. The mask which specifies fields that
    * need to be returned in the template's response.
    * @return GoogleCloudIntegrationsV1alphaSearchTemplatesResponse
