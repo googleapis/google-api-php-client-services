@@ -69,8 +69,7 @@ class Spaces extends \Google\Service\Resource
    * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) with [administrator
-   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-   * Preview](https://developers.google.com/workspace/preview) and one of the
+   * approval](https://support.google.com/a?p=chat-app-auth) and one of the
    * following authorization scopes: -
    * `https://www.googleapis.com/auth/chat.app.spaces.create` -
    * `https://www.googleapis.com/auth/chat.app.spaces` - [User
@@ -121,10 +120,9 @@ class Spaces extends \Google\Service\Resource
    * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) with [administrator
-   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-   * Preview](https://developers.google.com/workspace/preview) and the
-   * authorization scope: - `https://www.googleapis.com/auth/chat.app.delete`
-   * (only in spaces the app created) - [User
+   * approval](https://support.google.com/a?p=chat-app-auth) and the authorization
+   * scope: - `https://www.googleapis.com/auth/chat.app.delete` (only in spaces
+   * the app created) - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user) with one of the following authorization scopes: -
    * `https://www.googleapis.com/auth/chat.delete` -
@@ -300,8 +298,7 @@ class Spaces extends \Google\Service\Resource
    * authorize): - [App
    * authentication](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-app) with [administrator
-   * approval](https://support.google.com/a?p=chat-app-auth) in [Developer
-   * Preview](https://developers.google.com/workspace/preview) and one of the
+   * approval](https://support.google.com/a?p=chat-app-auth) and one of the
    * following authorization scopes: -
    * `https://www.googleapis.com/auth/chat.app.spaces` - [User
    * authentication](https://developers.google.com/workspace/chat/authenticate-
@@ -388,14 +385,16 @@ class Spaces extends \Google\Service\Resource
   }
   /**
    * Returns a list of spaces in a Google Workspace organization based on an
-   * administrator's search. Requires [user authentication with administrator
+   * administrator's search. In the request, set `use_admin_access` to `true`. For
+   * an example, see [Search for and manage
+   * spaces](https://developers.google.com/workspace/chat/search-manage-admin).
+   * Requires [user authentication with administrator
    * privileges](https://developers.google.com/workspace/chat/authenticate-
    * authorize-chat-user#admin-privileges) and one of the following [authorization
    * scopes](https://developers.google.com/workspace/chat/authenticate-
    * authorize#chat-api-scopes): -
    * `https://www.googleapis.com/auth/chat.admin.spaces.readonly` -
-   * `https://www.googleapis.com/auth/chat.admin.spaces` In the request, set
-   * `use_admin_access` to `true`. (spaces.search)
+   * `https://www.googleapis.com/auth/chat.admin.spaces` (spaces.search)
    *
    * @param array $optParams Optional parameters.
    *

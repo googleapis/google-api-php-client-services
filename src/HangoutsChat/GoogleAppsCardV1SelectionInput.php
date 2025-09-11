@@ -20,8 +20,14 @@ namespace Google\Service\HangoutsChat;
 class GoogleAppsCardV1SelectionInput extends \Google\Collection
 {
   protected $collection_key = 'items';
+  protected $dataSourceConfigsType = GoogleAppsCardV1DataSourceConfig::class;
+  protected $dataSourceConfigsDataType = 'array';
   protected $externalDataSourceType = GoogleAppsCardV1Action::class;
   protected $externalDataSourceDataType = '';
+  /**
+   * @var string
+   */
+  public $hintText;
   protected $itemsType = GoogleAppsCardV1SelectionItem::class;
   protected $itemsDataType = 'array';
   /**
@@ -50,6 +56,20 @@ class GoogleAppsCardV1SelectionInput extends \Google\Collection
   public $type;
 
   /**
+   * @param GoogleAppsCardV1DataSourceConfig[]
+   */
+  public function setDataSourceConfigs($dataSourceConfigs)
+  {
+    $this->dataSourceConfigs = $dataSourceConfigs;
+  }
+  /**
+   * @return GoogleAppsCardV1DataSourceConfig[]
+   */
+  public function getDataSourceConfigs()
+  {
+    return $this->dataSourceConfigs;
+  }
+  /**
    * @param GoogleAppsCardV1Action
    */
   public function setExternalDataSource(GoogleAppsCardV1Action $externalDataSource)
@@ -62,6 +82,20 @@ class GoogleAppsCardV1SelectionInput extends \Google\Collection
   public function getExternalDataSource()
   {
     return $this->externalDataSource;
+  }
+  /**
+   * @param string
+   */
+  public function setHintText($hintText)
+  {
+    $this->hintText = $hintText;
+  }
+  /**
+   * @return string
+   */
+  public function getHintText()
+  {
+    return $this->hintText;
   }
   /**
    * @param GoogleAppsCardV1SelectionItem[]
