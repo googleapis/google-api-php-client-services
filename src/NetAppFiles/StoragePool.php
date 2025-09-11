@@ -27,10 +27,15 @@ class StoragePool extends \Google\Model
    * @var bool
    */
   public $allowAutoTiering;
+  public $availableThroughputMibps;
   /**
    * @var string
    */
   public $capacityGib;
+  /**
+   * @var string
+   */
+  public $coldTierSizeUsedGib;
   /**
    * @var string
    */
@@ -44,6 +49,10 @@ class StoragePool extends \Google\Model
    */
   public $description;
   /**
+   * @var bool
+   */
+  public $enableHotTierAutoResize;
+  /**
    * @var string
    */
   public $encryptionType;
@@ -51,6 +60,14 @@ class StoragePool extends \Google\Model
    * @var bool
    */
   public $globalAccessAllowed;
+  /**
+   * @var string
+   */
+  public $hotTierSizeGib;
+  /**
+   * @var string
+   */
+  public $hotTierSizeUsedGib;
   /**
    * @var string
    */
@@ -75,6 +92,10 @@ class StoragePool extends \Google\Model
    * @var string
    */
   public $psaRange;
+  /**
+   * @var string
+   */
+  public $qosType;
   /**
    * @var string
    */
@@ -148,6 +169,14 @@ class StoragePool extends \Google\Model
   {
     return $this->allowAutoTiering;
   }
+  public function setAvailableThroughputMibps($availableThroughputMibps)
+  {
+    $this->availableThroughputMibps = $availableThroughputMibps;
+  }
+  public function getAvailableThroughputMibps()
+  {
+    return $this->availableThroughputMibps;
+  }
   /**
    * @param string
    */
@@ -161,6 +190,20 @@ class StoragePool extends \Google\Model
   public function getCapacityGib()
   {
     return $this->capacityGib;
+  }
+  /**
+   * @param string
+   */
+  public function setColdTierSizeUsedGib($coldTierSizeUsedGib)
+  {
+    $this->coldTierSizeUsedGib = $coldTierSizeUsedGib;
+  }
+  /**
+   * @return string
+   */
+  public function getColdTierSizeUsedGib()
+  {
+    return $this->coldTierSizeUsedGib;
   }
   /**
    * @param string
@@ -205,6 +248,20 @@ class StoragePool extends \Google\Model
     return $this->description;
   }
   /**
+   * @param bool
+   */
+  public function setEnableHotTierAutoResize($enableHotTierAutoResize)
+  {
+    $this->enableHotTierAutoResize = $enableHotTierAutoResize;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableHotTierAutoResize()
+  {
+    return $this->enableHotTierAutoResize;
+  }
+  /**
    * @param string
    */
   public function setEncryptionType($encryptionType)
@@ -231,6 +288,34 @@ class StoragePool extends \Google\Model
   public function getGlobalAccessAllowed()
   {
     return $this->globalAccessAllowed;
+  }
+  /**
+   * @param string
+   */
+  public function setHotTierSizeGib($hotTierSizeGib)
+  {
+    $this->hotTierSizeGib = $hotTierSizeGib;
+  }
+  /**
+   * @return string
+   */
+  public function getHotTierSizeGib()
+  {
+    return $this->hotTierSizeGib;
+  }
+  /**
+   * @param string
+   */
+  public function setHotTierSizeUsedGib($hotTierSizeUsedGib)
+  {
+    $this->hotTierSizeUsedGib = $hotTierSizeUsedGib;
+  }
+  /**
+   * @return string
+   */
+  public function getHotTierSizeUsedGib()
+  {
+    return $this->hotTierSizeUsedGib;
   }
   /**
    * @param string
@@ -315,6 +400,20 @@ class StoragePool extends \Google\Model
   public function getPsaRange()
   {
     return $this->psaRange;
+  }
+  /**
+   * @param string
+   */
+  public function setQosType($qosType)
+  {
+    $this->qosType = $qosType;
+  }
+  /**
+   * @return string
+   */
+  public function getQosType()
+  {
+    return $this->qosType;
   }
   /**
    * @param string

@@ -29,9 +29,17 @@ class HybridReplicationParameters extends \Google\Collection
    */
   public $description;
   /**
+   * @var string
+   */
+  public $hybridReplicationType;
+  /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var int
+   */
+  public $largeVolumeConstituentCount;
   /**
    * @var string
    */
@@ -52,6 +60,10 @@ class HybridReplicationParameters extends \Google\Collection
    * @var string
    */
   public $replication;
+  /**
+   * @var string
+   */
+  public $replicationSchedule;
 
   /**
    * @param string
@@ -82,6 +94,20 @@ class HybridReplicationParameters extends \Google\Collection
     return $this->description;
   }
   /**
+   * @param string
+   */
+  public function setHybridReplicationType($hybridReplicationType)
+  {
+    $this->hybridReplicationType = $hybridReplicationType;
+  }
+  /**
+   * @return string
+   */
+  public function getHybridReplicationType()
+  {
+    return $this->hybridReplicationType;
+  }
+  /**
    * @param string[]
    */
   public function setLabels($labels)
@@ -94,6 +120,20 @@ class HybridReplicationParameters extends \Google\Collection
   public function getLabels()
   {
     return $this->labels;
+  }
+  /**
+   * @param int
+   */
+  public function setLargeVolumeConstituentCount($largeVolumeConstituentCount)
+  {
+    $this->largeVolumeConstituentCount = $largeVolumeConstituentCount;
+  }
+  /**
+   * @return int
+   */
+  public function getLargeVolumeConstituentCount()
+  {
+    return $this->largeVolumeConstituentCount;
   }
   /**
    * @param string
@@ -164,6 +204,20 @@ class HybridReplicationParameters extends \Google\Collection
   public function getReplication()
   {
     return $this->replication;
+  }
+  /**
+   * @param string
+   */
+  public function setReplicationSchedule($replicationSchedule)
+  {
+    $this->replicationSchedule = $replicationSchedule;
+  }
+  /**
+   * @return string
+   */
+  public function getReplicationSchedule()
+  {
+    return $this->replicationSchedule;
   }
 }
 
