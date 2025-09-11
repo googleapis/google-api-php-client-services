@@ -43,6 +43,10 @@ class Rollout extends \Google\Model
   public $status;
   protected $trafficPercentStrategyType = TrafficPercentStrategy::class;
   protected $trafficPercentStrategyDataType = '';
+  /**
+   * @var string
+   */
+  public $universe;
 
   /**
    * @param string
@@ -141,6 +145,20 @@ class Rollout extends \Google\Model
   public function getTrafficPercentStrategy()
   {
     return $this->trafficPercentStrategy;
+  }
+  /**
+   * @param string
+   */
+  public function setUniverse($universe)
+  {
+    $this->universe = $universe;
+  }
+  /**
+   * @return string
+   */
+  public function getUniverse()
+  {
+    return $this->universe;
   }
 }
 
