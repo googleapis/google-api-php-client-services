@@ -70,7 +70,8 @@ class Folders extends \Google\Service\Resource
    * (folders.updateAutokeyConfig)
    *
    * @param string $name Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`
+   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
    * @param AutokeyConfig $postBody
    * @param array $optParams Optional parameters.
    *

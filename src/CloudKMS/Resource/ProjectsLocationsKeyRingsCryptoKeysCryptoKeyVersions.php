@@ -22,6 +22,8 @@ use Google\Service\CloudKMS\AsymmetricDecryptResponse;
 use Google\Service\CloudKMS\AsymmetricSignRequest;
 use Google\Service\CloudKMS\AsymmetricSignResponse;
 use Google\Service\CloudKMS\CryptoKeyVersion;
+use Google\Service\CloudKMS\DecapsulateRequest;
+use Google\Service\CloudKMS\DecapsulateResponse;
 use Google\Service\CloudKMS\DestroyCryptoKeyVersionRequest;
 use Google\Service\CloudKMS\ImportCryptoKeyVersionRequest;
 use Google\Service\CloudKMS\ListCryptoKeyVersionsResponse;
@@ -99,6 +101,24 @@ class ProjectsLocationsKeyRingsCryptoKeysCryptoKeyVersions extends \Google\Servi
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('create', [$params], CryptoKeyVersion::class);
+  }
+  /**
+   * Decapsulates data that was encapsulated with a public key retrieved from
+   * GetPublicKey corresponding to a CryptoKeyVersion with CryptoKey.purpose
+   * KEY_ENCAPSULATION. (cryptoKeyVersions.decapsulate)
+   *
+   * @param string $name Required. The resource name of the CryptoKeyVersion to
+   * use for decapsulation.
+   * @param DecapsulateRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DecapsulateResponse
+   * @throws \Google\Service\Exception
+   */
+  public function decapsulate($name, DecapsulateRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('decapsulate', [$params], DecapsulateResponse::class);
   }
   /**
    * Schedule a CryptoKeyVersion for destruction. Upon calling this method,
