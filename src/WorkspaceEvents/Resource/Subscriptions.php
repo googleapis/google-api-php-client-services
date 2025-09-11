@@ -152,8 +152,8 @@ class Subscriptions extends \Google\Service\Resource
    * following fields in a subscription: * `expire_time`: The timestamp when the
    * subscription expires. * `ttl`: The time-to-live (TTL) or duration of the
    * subscription. * `event_types`: The list of event types to receive about the
-   * target resource. To fully replace the subscription (the equivalent of `PUT`),
-   * use `*`. Any omitted fields are updated with empty values.
+   * target resource. When using the `*` wildcard (equivalent to `PUT`), omitted
+   * fields are set to empty values and rejected if they're invalid.
    * @opt_param bool validateOnly Optional. If set to `true`, validates and
    * previews the request, but doesn't update the subscription.
    * @return Operation

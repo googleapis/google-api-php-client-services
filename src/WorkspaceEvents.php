@@ -35,6 +35,12 @@ use Google\Client;
  */
 class WorkspaceEvents extends \Google\Service
 {
+  /** On their own behalf, apps in Google Chat can see, add, update, and remove members from conversations and spaces. */
+  const CHAT_APP_MEMBERSHIPS =
+      "https://www.googleapis.com/auth/chat.app.memberships";
+  /** On their own behalf, apps in Google Chat can create conversations and spaces and see or update their metadata (including history settings and access settings). */
+  const CHAT_APP_SPACES =
+      "https://www.googleapis.com/auth/chat.app.spaces";
   /** Private Service: https://www.googleapis.com/auth/chat.bot. */
   const CHAT_BOT =
       "https://www.googleapis.com/auth/chat.bot";
