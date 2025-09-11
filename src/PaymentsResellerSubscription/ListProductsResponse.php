@@ -17,45 +17,45 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class ListProductsResponse extends \Google\Collection
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
+  protected $collection_key = 'products';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $nextPageToken;
+  protected $productsType = Product::class;
+  protected $productsDataType = 'array';
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getNextPageToken()
   {
-    return $this->entitlementMode;
+    return $this->nextPageToken;
+  }
+  /**
+   * @param Product[]
+   */
+  public function setProducts($products)
+  {
+    $this->products = $products;
+  }
+  /**
+   * @return Product[]
+   */
+  public function getProducts()
+  {
+    return $this->products;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(ListProductsResponse::class, 'Google_Service_PaymentsResellerSubscription_ListProductsResponse');

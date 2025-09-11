@@ -17,45 +17,46 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class SubscriptionUpgradeDowngradeDetails extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $billingCycleSpec;
+  /**
+   * @var string
+   */
+  public $previousSubscriptionId;
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setBillingCycleSpec($billingCycleSpec)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->billingCycleSpec = $billingCycleSpec;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getBillingCycleSpec()
   {
-    return $this->entitlementMode;
+    return $this->billingCycleSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setPreviousSubscriptionId($previousSubscriptionId)
+  {
+    $this->previousSubscriptionId = $previousSubscriptionId;
+  }
+  /**
+   * @return string
+   */
+  public function getPreviousSubscriptionId()
+  {
+    return $this->previousSubscriptionId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(SubscriptionUpgradeDowngradeDetails::class, 'Google_Service_PaymentsResellerSubscription_SubscriptionUpgradeDowngradeDetails');

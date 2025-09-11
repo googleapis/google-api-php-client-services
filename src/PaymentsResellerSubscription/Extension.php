@@ -17,45 +17,44 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class Extension extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
+  protected $durationType = Duration::class;
+  protected $durationDataType = '';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $partnerUserToken;
 
   /**
-   * @param ProductBundleDetailsBundleElement[]
+   * @param Duration
    */
-  public function setBundleElements($bundleElements)
+  public function setDuration(Duration $duration)
   {
-    $this->bundleElements = $bundleElements;
+    $this->duration = $duration;
   }
   /**
-   * @return ProductBundleDetailsBundleElement[]
+   * @return Duration
    */
-  public function getBundleElements()
+  public function getDuration()
   {
-    return $this->bundleElements;
+    return $this->duration;
   }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setPartnerUserToken($partnerUserToken)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->partnerUserToken = $partnerUserToken;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getPartnerUserToken()
   {
-    return $this->entitlementMode;
+    return $this->partnerUserToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(Extension::class, 'Google_Service_PaymentsResellerSubscription_Extension');

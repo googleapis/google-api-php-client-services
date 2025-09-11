@@ -17,45 +17,46 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class CancelSubscriptionRequest extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
+  /**
+   * @var bool
+   */
+  public $cancelImmediately;
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $cancellationReason;
 
   /**
-   * @param ProductBundleDetailsBundleElement[]
+   * @param bool
    */
-  public function setBundleElements($bundleElements)
+  public function setCancelImmediately($cancelImmediately)
   {
-    $this->bundleElements = $bundleElements;
+    $this->cancelImmediately = $cancelImmediately;
   }
   /**
-   * @return ProductBundleDetailsBundleElement[]
+   * @return bool
    */
-  public function getBundleElements()
+  public function getCancelImmediately()
   {
-    return $this->bundleElements;
+    return $this->cancelImmediately;
   }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setCancellationReason($cancellationReason)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->cancellationReason = $cancellationReason;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getCancellationReason()
   {
-    return $this->entitlementMode;
+    return $this->cancellationReason;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(CancelSubscriptionRequest::class, 'Google_Service_PaymentsResellerSubscription_CancelSubscriptionRequest');

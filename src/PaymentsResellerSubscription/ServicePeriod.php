@@ -17,45 +17,46 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class ServicePeriod extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $endTime;
+  /**
+   * @var string
+   */
+  public $startTime;
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setEndTime($endTime)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getEndTime()
   {
-    return $this->entitlementMode;
+    return $this->endTime;
+  }
+  /**
+   * @param string
+   */
+  public function setStartTime($startTime)
+  {
+    $this->startTime = $startTime;
+  }
+  /**
+   * @return string
+   */
+  public function getStartTime()
+  {
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(ServicePeriod::class, 'Google_Service_PaymentsResellerSubscription_ServicePeriod');

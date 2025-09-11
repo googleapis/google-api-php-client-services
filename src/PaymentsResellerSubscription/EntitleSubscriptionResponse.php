@@ -17,27 +17,26 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class SubscriptionLineItemBundleDetails extends \Google\Collection
+class EntitleSubscriptionResponse extends \Google\Model
 {
-  protected $collection_key = 'bundleElementDetails';
-  protected $bundleElementDetailsType = SubscriptionLineItemBundleDetailsBundleElementDetails::class;
-  protected $bundleElementDetailsDataType = 'array';
+  protected $subscriptionType = Subscription::class;
+  protected $subscriptionDataType = '';
 
   /**
-   * @param SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * @param Subscription
    */
-  public function setBundleElementDetails($bundleElementDetails)
+  public function setSubscription(Subscription $subscription)
   {
-    $this->bundleElementDetails = $bundleElementDetails;
+    $this->subscription = $subscription;
   }
   /**
-   * @return SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * @return Subscription
    */
-  public function getBundleElementDetails()
+  public function getSubscription()
   {
-    return $this->bundleElementDetails;
+    return $this->subscription;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SubscriptionLineItemBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_SubscriptionLineItemBundleDetails');
+class_alias(EntitleSubscriptionResponse::class, 'Google_Service_PaymentsResellerSubscription_EntitleSubscriptionResponse');

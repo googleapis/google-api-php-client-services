@@ -17,27 +17,26 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class SubscriptionLineItemBundleDetails extends \Google\Collection
+class GenerateUserSessionRequest extends \Google\Model
 {
-  protected $collection_key = 'bundleElementDetails';
-  protected $bundleElementDetailsType = SubscriptionLineItemBundleDetailsBundleElementDetails::class;
-  protected $bundleElementDetailsDataType = 'array';
+  protected $intentPayloadType = IntentPayload::class;
+  protected $intentPayloadDataType = '';
 
   /**
-   * @param SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * @param IntentPayload
    */
-  public function setBundleElementDetails($bundleElementDetails)
+  public function setIntentPayload(IntentPayload $intentPayload)
   {
-    $this->bundleElementDetails = $bundleElementDetails;
+    $this->intentPayload = $intentPayload;
   }
   /**
-   * @return SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * @return IntentPayload
    */
-  public function getBundleElementDetails()
+  public function getIntentPayload()
   {
-    return $this->bundleElementDetails;
+    return $this->intentPayload;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SubscriptionLineItemBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_SubscriptionLineItemBundleDetails');
+class_alias(GenerateUserSessionRequest::class, 'Google_Service_PaymentsResellerSubscription_GenerateUserSessionRequest');

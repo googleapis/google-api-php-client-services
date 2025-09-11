@@ -17,45 +17,64 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class FindEligiblePromotionsRequest extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $filter;
+  /**
+   * @var int
+   */
+  public $pageSize;
+  /**
+   * @var string
+   */
+  public $pageToken;
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setFilter($filter)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->filter = $filter;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getFilter()
   {
-    return $this->entitlementMode;
+    return $this->filter;
+  }
+  /**
+   * @param int
+   */
+  public function setPageSize($pageSize)
+  {
+    $this->pageSize = $pageSize;
+  }
+  /**
+   * @return int
+   */
+  public function getPageSize()
+  {
+    return $this->pageSize;
+  }
+  /**
+   * @param string
+   */
+  public function setPageToken($pageToken)
+  {
+    $this->pageToken = $pageToken;
+  }
+  /**
+   * @return string
+   */
+  public function getPageToken()
+  {
+    return $this->pageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(FindEligiblePromotionsRequest::class, 'Google_Service_PaymentsResellerSubscription_FindEligiblePromotionsRequest');

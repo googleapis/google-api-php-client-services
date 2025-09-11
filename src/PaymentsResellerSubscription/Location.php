@@ -17,45 +17,46 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class Location extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $postalCode;
+  /**
+   * @var string
+   */
+  public $regionCode;
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setPostalCode($postalCode)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->postalCode = $postalCode;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getPostalCode()
   {
-    return $this->entitlementMode;
+    return $this->postalCode;
+  }
+  /**
+   * @param string
+   */
+  public function setRegionCode($regionCode)
+  {
+    $this->regionCode = $regionCode;
+  }
+  /**
+   * @return string
+   */
+  public function getRegionCode()
+  {
+    return $this->regionCode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(Location::class, 'Google_Service_PaymentsResellerSubscription_Location');

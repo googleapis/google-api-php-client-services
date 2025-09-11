@@ -17,27 +17,26 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class SubscriptionLineItemBundleDetails extends \Google\Collection
+class SubscriptionLineItemOneTimeRecurrenceDetails extends \Google\Model
 {
-  protected $collection_key = 'bundleElementDetails';
-  protected $bundleElementDetailsType = SubscriptionLineItemBundleDetailsBundleElementDetails::class;
-  protected $bundleElementDetailsDataType = 'array';
+  protected $servicePeriodType = ServicePeriod::class;
+  protected $servicePeriodDataType = '';
 
   /**
-   * @param SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * @param ServicePeriod
    */
-  public function setBundleElementDetails($bundleElementDetails)
+  public function setServicePeriod(ServicePeriod $servicePeriod)
   {
-    $this->bundleElementDetails = $bundleElementDetails;
+    $this->servicePeriod = $servicePeriod;
   }
   /**
-   * @return SubscriptionLineItemBundleDetailsBundleElementDetails[]
+   * @return ServicePeriod
    */
-  public function getBundleElementDetails()
+  public function getServicePeriod()
   {
-    return $this->bundleElementDetails;
+    return $this->servicePeriod;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SubscriptionLineItemBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_SubscriptionLineItemBundleDetails');
+class_alias(SubscriptionLineItemOneTimeRecurrenceDetails::class, 'Google_Service_PaymentsResellerSubscription_SubscriptionLineItemOneTimeRecurrenceDetails');

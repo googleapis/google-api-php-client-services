@@ -17,45 +17,28 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class SubscriptionMigrationDetails extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $migratedSubscriptionId;
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setMigratedSubscriptionId($migratedSubscriptionId)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->migratedSubscriptionId = $migratedSubscriptionId;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getMigratedSubscriptionId()
   {
-    return $this->entitlementMode;
+    return $this->migratedSubscriptionId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(SubscriptionMigrationDetails::class, 'Google_Service_PaymentsResellerSubscription_SubscriptionMigrationDetails');

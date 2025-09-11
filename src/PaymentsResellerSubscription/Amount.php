@@ -17,45 +17,46 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ProductBundleDetails extends \Google\Collection
+class Amount extends \Google\Model
 {
-  protected $collection_key = 'bundleElements';
-  protected $bundleElementsType = ProductBundleDetailsBundleElement::class;
-  protected $bundleElementsDataType = 'array';
   /**
    * @var string
    */
-  public $entitlementMode;
+  public $amountMicros;
+  /**
+   * @var string
+   */
+  public $currencyCode;
 
-  /**
-   * @param ProductBundleDetailsBundleElement[]
-   */
-  public function setBundleElements($bundleElements)
-  {
-    $this->bundleElements = $bundleElements;
-  }
-  /**
-   * @return ProductBundleDetailsBundleElement[]
-   */
-  public function getBundleElements()
-  {
-    return $this->bundleElements;
-  }
   /**
    * @param string
    */
-  public function setEntitlementMode($entitlementMode)
+  public function setAmountMicros($amountMicros)
   {
-    $this->entitlementMode = $entitlementMode;
+    $this->amountMicros = $amountMicros;
   }
   /**
    * @return string
    */
-  public function getEntitlementMode()
+  public function getAmountMicros()
   {
-    return $this->entitlementMode;
+    return $this->amountMicros;
+  }
+  /**
+   * @param string
+   */
+  public function setCurrencyCode($currencyCode)
+  {
+    $this->currencyCode = $currencyCode;
+  }
+  /**
+   * @return string
+   */
+  public function getCurrencyCode()
+  {
+    return $this->currencyCode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductBundleDetails::class, 'Google_Service_PaymentsResellerSubscription_ProductBundleDetails');
+class_alias(Amount::class, 'Google_Service_PaymentsResellerSubscription_Amount');
