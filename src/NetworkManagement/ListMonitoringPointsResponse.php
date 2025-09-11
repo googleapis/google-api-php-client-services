@@ -17,46 +17,45 @@
 
 namespace Google\Service\NetworkManagement;
 
-class CloudRunRevisionEndpoint extends \Google\Model
+class ListMonitoringPointsResponse extends \Google\Collection
 {
+  protected $collection_key = 'monitoringPoints';
+  protected $monitoringPointsType = MonitoringPoint::class;
+  protected $monitoringPointsDataType = 'array';
   /**
    * @var string
    */
-  public $serviceUri;
-  /**
-   * @var string
-   */
-  public $uri;
+  public $nextPageToken;
 
   /**
+   * @param MonitoringPoint[]
+   */
+  public function setMonitoringPoints($monitoringPoints)
+  {
+    $this->monitoringPoints = $monitoringPoints;
+  }
+  /**
+   * @return MonitoringPoint[]
+   */
+  public function getMonitoringPoints()
+  {
+    return $this->monitoringPoints;
+  }
+  /**
    * @param string
    */
-  public function setServiceUri($serviceUri)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->serviceUri = $serviceUri;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getServiceUri()
+  public function getNextPageToken()
   {
-    return $this->serviceUri;
-  }
-  /**
-   * @param string
-   */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  /**
-   * @return string
-   */
-  public function getUri()
-  {
-    return $this->uri;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudRunRevisionEndpoint::class, 'Google_Service_NetworkManagement_CloudRunRevisionEndpoint');
+class_alias(ListMonitoringPointsResponse::class, 'Google_Service_NetworkManagement_ListMonitoringPointsResponse');

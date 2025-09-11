@@ -17,46 +17,64 @@
 
 namespace Google\Service\NetworkManagement;
 
-class CloudRunRevisionEndpoint extends \Google\Model
+class ProviderTag extends \Google\Model
 {
   /**
    * @var string
    */
-  public $serviceUri;
+  public $category;
   /**
    * @var string
    */
-  public $uri;
+  public $resourceType;
+  /**
+   * @var string
+   */
+  public $value;
 
   /**
    * @param string
    */
-  public function setServiceUri($serviceUri)
+  public function setCategory($category)
   {
-    $this->serviceUri = $serviceUri;
+    $this->category = $category;
   }
   /**
    * @return string
    */
-  public function getServiceUri()
+  public function getCategory()
   {
-    return $this->serviceUri;
+    return $this->category;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setResourceType($resourceType)
   {
-    $this->uri = $uri;
+    $this->resourceType = $resourceType;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getResourceType()
   {
-    return $this->uri;
+    return $this->resourceType;
+  }
+  /**
+   * @param string
+   */
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  /**
+   * @return string
+   */
+  public function getValue()
+  {
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudRunRevisionEndpoint::class, 'Google_Service_NetworkManagement_CloudRunRevisionEndpoint');
+class_alias(ProviderTag::class, 'Google_Service_NetworkManagement_ProviderTag');

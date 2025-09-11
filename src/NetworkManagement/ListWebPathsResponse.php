@@ -17,46 +17,45 @@
 
 namespace Google\Service\NetworkManagement;
 
-class CloudRunRevisionEndpoint extends \Google\Model
+class ListWebPathsResponse extends \Google\Collection
 {
+  protected $collection_key = 'webPaths';
   /**
    * @var string
    */
-  public $serviceUri;
-  /**
-   * @var string
-   */
-  public $uri;
+  public $nextPageToken;
+  protected $webPathsType = WebPath::class;
+  protected $webPathsDataType = 'array';
 
   /**
    * @param string
    */
-  public function setServiceUri($serviceUri)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->serviceUri = $serviceUri;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getServiceUri()
+  public function getNextPageToken()
   {
-    return $this->serviceUri;
+    return $this->nextPageToken;
   }
   /**
-   * @param string
+   * @param WebPath[]
    */
-  public function setUri($uri)
+  public function setWebPaths($webPaths)
   {
-    $this->uri = $uri;
+    $this->webPaths = $webPaths;
   }
   /**
-   * @return string
+   * @return WebPath[]
    */
-  public function getUri()
+  public function getWebPaths()
   {
-    return $this->uri;
+    return $this->webPaths;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudRunRevisionEndpoint::class, 'Google_Service_NetworkManagement_CloudRunRevisionEndpoint');
+class_alias(ListWebPathsResponse::class, 'Google_Service_NetworkManagement_ListWebPathsResponse');

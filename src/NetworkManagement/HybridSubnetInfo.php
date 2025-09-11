@@ -17,12 +17,16 @@
 
 namespace Google\Service\NetworkManagement;
 
-class CloudRunRevisionEndpoint extends \Google\Model
+class HybridSubnetInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $serviceUri;
+  public $displayName;
+  /**
+   * @var string
+   */
+  public $region;
   /**
    * @var string
    */
@@ -31,16 +35,30 @@ class CloudRunRevisionEndpoint extends \Google\Model
   /**
    * @param string
    */
-  public function setServiceUri($serviceUri)
+  public function setDisplayName($displayName)
   {
-    $this->serviceUri = $serviceUri;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getServiceUri()
+  public function getDisplayName()
   {
-    return $this->serviceUri;
+    return $this->displayName;
+  }
+  /**
+   * @param string
+   */
+  public function setRegion($region)
+  {
+    $this->region = $region;
+  }
+  /**
+   * @return string
+   */
+  public function getRegion()
+  {
+    return $this->region;
   }
   /**
    * @param string
@@ -59,4 +77,4 @@ class CloudRunRevisionEndpoint extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudRunRevisionEndpoint::class, 'Google_Service_NetworkManagement_CloudRunRevisionEndpoint');
+class_alias(HybridSubnetInfo::class, 'Google_Service_NetworkManagement_HybridSubnetInfo');

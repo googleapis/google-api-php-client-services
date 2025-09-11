@@ -17,46 +17,46 @@
 
 namespace Google\Service\NetworkManagement;
 
-class CloudRunRevisionEndpoint extends \Google\Model
+class GeoLocation extends \Google\Model
 {
   /**
    * @var string
    */
-  public $serviceUri;
+  public $country;
   /**
    * @var string
    */
-  public $uri;
+  public $formattedAddress;
 
   /**
    * @param string
    */
-  public function setServiceUri($serviceUri)
+  public function setCountry($country)
   {
-    $this->serviceUri = $serviceUri;
+    $this->country = $country;
   }
   /**
    * @return string
    */
-  public function getServiceUri()
+  public function getCountry()
   {
-    return $this->serviceUri;
+    return $this->country;
   }
   /**
    * @param string
    */
-  public function setUri($uri)
+  public function setFormattedAddress($formattedAddress)
   {
-    $this->uri = $uri;
+    $this->formattedAddress = $formattedAddress;
   }
   /**
    * @return string
    */
-  public function getUri()
+  public function getFormattedAddress()
   {
-    return $this->uri;
+    return $this->formattedAddress;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudRunRevisionEndpoint::class, 'Google_Service_NetworkManagement_CloudRunRevisionEndpoint');
+class_alias(GeoLocation::class, 'Google_Service_NetworkManagement_GeoLocation');

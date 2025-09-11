@@ -19,8 +19,6 @@ namespace Google\Service\NetworkManagement\Resource;
 
 use Google\Service\NetworkManagement\ListVpcFlowLogsConfigsResponse;
 use Google\Service\NetworkManagement\Operation;
-use Google\Service\NetworkManagement\QueryOrgVpcFlowLogsConfigsResponse;
-use Google\Service\NetworkManagement\ShowEffectiveFlowLogsConfigsResponse;
 use Google\Service\NetworkManagement\VpcFlowLogsConfig;
 
 /**
@@ -28,10 +26,10 @@ use Google\Service\NetworkManagement\VpcFlowLogsConfig;
  * Typical usage is:
  *  <code>
  *   $networkmanagementService = new Google\Service\NetworkManagement(...);
- *   $vpcFlowLogsConfigs = $networkmanagementService->projects_locations_vpcFlowLogsConfigs;
+ *   $vpcFlowLogsConfigs = $networkmanagementService->organizations_locations_vpcFlowLogsConfigs;
  *  </code>
  */
-class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
+class OrganizationsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
 {
   /**
    * Creates a new `VpcFlowLogsConfig`. If a configuration with the exact same
@@ -98,8 +96,8 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
     return $this->call('get', [$params], VpcFlowLogsConfig::class);
   }
   /**
-   * Lists all `VpcFlowLogsConfigs` in a given project.
-   * (vpcFlowLogsConfigs.listProjectsLocationsVpcFlowLogsConfigs)
+   * Lists all `VpcFlowLogsConfigs` in a given organization.
+   * (vpcFlowLogsConfigs.listOrganizationsLocationsVpcFlowLogsConfigs)
    *
    * @param string $parent Required. The parent resource of the VpcFlowLogsConfig,
    * in one of the following formats: - For project-level resourcs:
@@ -118,7 +116,7 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
    * @return ListVpcFlowLogsConfigsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsLocationsVpcFlowLogsConfigs($parent, $optParams = [])
+  public function listOrganizationsLocationsVpcFlowLogsConfigs($parent, $optParams = [])
   {
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
@@ -127,7 +125,7 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
   /**
    * Updates an existing `VpcFlowLogsConfig`. If a configuration with the exact
    * same settings already exists (even if the ID is different), the creation
-   * fails. Notes: 1. Updating a configuration with `state=DISABLED` will fail. 2.
+   * fails. Notes: 1. Updating a configuration with `state=DISABLED` will fail 2.
    * The following fields are not considered as settings for the purpose of the
    * check mentioned above, therefore - updating another configuration with the
    * same fields but different values for the following fields will fail as well:
@@ -157,62 +155,7 @@ class ProjectsLocationsVpcFlowLogsConfigs extends \Google\Service\Resource
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
   }
-  /**
-   * QueryOrgVpcFlowLogsConfigs returns a list of all organization-level VPC Flow
-   * Logs configurations applicable to the specified project.
-   * (vpcFlowLogsConfigs.queryOrgVpcFlowLogsConfigs)
-   *
-   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig,
-   * specified in the following format: `projects/{project_id}/locations/global`
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter Optional. Lists the `VpcFlowLogsConfigs` that match
-   * the filter expression. A filter expression must use the supported [CEL logic
-   * operators] (https://cloud.google.com/vpc/docs/about-flow-logs-
-   * records#supported_cel_logic_operators).
-   * @opt_param int pageSize Optional. Number of `VpcFlowLogsConfigs` to return.
-   * @opt_param string pageToken Optional. Page token from an earlier query, as
-   * returned in `next_page_token`.
-   * @return QueryOrgVpcFlowLogsConfigsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function queryOrgVpcFlowLogsConfigs($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('queryOrgVpcFlowLogsConfigs', [$params], QueryOrgVpcFlowLogsConfigsResponse::class);
-  }
-  /**
-   * ShowEffectiveFlowLogsConfigs returns a list of all VPC Flow Logs
-   * configurations applicable to a specified resource.
-   * (vpcFlowLogsConfigs.showEffectiveFlowLogsConfigs)
-   *
-   * @param string $parent Required. The parent resource of the VpcFlowLogsConfig,
-   * specified in the following format: `projects/{project_id}/locations/global`
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string filter Optional. Lists the `EffectiveVpcFlowLogsConfigs`
-   * that match the filter expression. A filter expression must use the supported
-   * [CEL logic operators] (https://cloud.google.com/vpc/docs/about-flow-logs-
-   * records#supported_cel_logic_operators).
-   * @opt_param int pageSize Optional. Number of `EffectiveVpcFlowLogsConfigs` to
-   * return. Default is 30.
-   * @opt_param string pageToken Optional. Page token from an earlier query, as
-   * returned in `next_page_token`.
-   * @opt_param string resource Required. The resource to get the effective VPC
-   * Flow Logs configuration for. The resource must belong to the same project as
-   * the parent. The resource must be a network, subnetwork, interconnect
-   * attachment, VPN tunnel, or a project.
-   * @return ShowEffectiveFlowLogsConfigsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function showEffectiveFlowLogsConfigs($parent, $optParams = [])
-  {
-    $params = ['parent' => $parent];
-    $params = array_merge($params, $optParams);
-    return $this->call('showEffectiveFlowLogsConfigs', [$params], ShowEffectiveFlowLogsConfigsResponse::class);
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocationsVpcFlowLogsConfigs::class, 'Google_Service_NetworkManagement_Resource_ProjectsLocationsVpcFlowLogsConfigs');
+class_alias(OrganizationsLocationsVpcFlowLogsConfigs::class, 'Google_Service_NetworkManagement_Resource_OrganizationsLocationsVpcFlowLogsConfigs');

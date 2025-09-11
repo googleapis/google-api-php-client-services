@@ -17,46 +17,45 @@
 
 namespace Google\Service\NetworkManagement;
 
-class CloudRunRevisionEndpoint extends \Google\Model
+class ListNetworkPathsResponse extends \Google\Collection
 {
+  protected $collection_key = 'networkPaths';
+  protected $networkPathsType = NetworkPath::class;
+  protected $networkPathsDataType = 'array';
   /**
    * @var string
    */
-  public $serviceUri;
-  /**
-   * @var string
-   */
-  public $uri;
+  public $nextPageToken;
 
   /**
+   * @param NetworkPath[]
+   */
+  public function setNetworkPaths($networkPaths)
+  {
+    $this->networkPaths = $networkPaths;
+  }
+  /**
+   * @return NetworkPath[]
+   */
+  public function getNetworkPaths()
+  {
+    return $this->networkPaths;
+  }
+  /**
    * @param string
    */
-  public function setServiceUri($serviceUri)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->serviceUri = $serviceUri;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
    * @return string
    */
-  public function getServiceUri()
+  public function getNextPageToken()
   {
-    return $this->serviceUri;
-  }
-  /**
-   * @param string
-   */
-  public function setUri($uri)
-  {
-    $this->uri = $uri;
-  }
-  /**
-   * @return string
-   */
-  public function getUri()
-  {
-    return $this->uri;
+    return $this->nextPageToken;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudRunRevisionEndpoint::class, 'Google_Service_NetworkManagement_CloudRunRevisionEndpoint');
+class_alias(ListNetworkPathsResponse::class, 'Google_Service_NetworkManagement_ListNetworkPathsResponse');

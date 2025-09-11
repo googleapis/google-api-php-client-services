@@ -17,136 +17,136 @@
 
 namespace Google\Service\NetworkManagement;
 
-class DropInfo extends \Google\Model
+class NetworkInterface extends \Google\Model
 {
   /**
    * @var string
    */
-  public $cause;
+  public $adapterDescription;
   /**
    * @var string
    */
-  public $destinationGeolocationCode;
+  public $cidr;
   /**
    * @var string
    */
-  public $destinationIp;
+  public $interfaceName;
   /**
    * @var string
    */
-  public $region;
+  public $ipAddress;
   /**
    * @var string
    */
-  public $resourceUri;
+  public $macAddress;
   /**
    * @var string
    */
-  public $sourceGeolocationCode;
+  public $speed;
   /**
    * @var string
    */
-  public $sourceIp;
+  public $vlanId;
 
   /**
    * @param string
    */
-  public function setCause($cause)
+  public function setAdapterDescription($adapterDescription)
   {
-    $this->cause = $cause;
+    $this->adapterDescription = $adapterDescription;
   }
   /**
    * @return string
    */
-  public function getCause()
+  public function getAdapterDescription()
   {
-    return $this->cause;
+    return $this->adapterDescription;
   }
   /**
    * @param string
    */
-  public function setDestinationGeolocationCode($destinationGeolocationCode)
+  public function setCidr($cidr)
   {
-    $this->destinationGeolocationCode = $destinationGeolocationCode;
+    $this->cidr = $cidr;
   }
   /**
    * @return string
    */
-  public function getDestinationGeolocationCode()
+  public function getCidr()
   {
-    return $this->destinationGeolocationCode;
+    return $this->cidr;
   }
   /**
    * @param string
    */
-  public function setDestinationIp($destinationIp)
+  public function setInterfaceName($interfaceName)
   {
-    $this->destinationIp = $destinationIp;
+    $this->interfaceName = $interfaceName;
   }
   /**
    * @return string
    */
-  public function getDestinationIp()
+  public function getInterfaceName()
   {
-    return $this->destinationIp;
+    return $this->interfaceName;
   }
   /**
    * @param string
    */
-  public function setRegion($region)
+  public function setIpAddress($ipAddress)
   {
-    $this->region = $region;
+    $this->ipAddress = $ipAddress;
   }
   /**
    * @return string
    */
-  public function getRegion()
+  public function getIpAddress()
   {
-    return $this->region;
+    return $this->ipAddress;
   }
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setMacAddress($macAddress)
   {
-    $this->resourceUri = $resourceUri;
+    $this->macAddress = $macAddress;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getMacAddress()
   {
-    return $this->resourceUri;
+    return $this->macAddress;
   }
   /**
    * @param string
    */
-  public function setSourceGeolocationCode($sourceGeolocationCode)
+  public function setSpeed($speed)
   {
-    $this->sourceGeolocationCode = $sourceGeolocationCode;
+    $this->speed = $speed;
   }
   /**
    * @return string
    */
-  public function getSourceGeolocationCode()
+  public function getSpeed()
   {
-    return $this->sourceGeolocationCode;
+    return $this->speed;
   }
   /**
    * @param string
    */
-  public function setSourceIp($sourceIp)
+  public function setVlanId($vlanId)
   {
-    $this->sourceIp = $sourceIp;
+    $this->vlanId = $vlanId;
   }
   /**
    * @return string
    */
-  public function getSourceIp()
+  public function getVlanId()
   {
-    return $this->sourceIp;
+    return $this->vlanId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DropInfo::class, 'Google_Service_NetworkManagement_DropInfo');
+class_alias(NetworkInterface::class, 'Google_Service_NetworkManagement_NetworkInterface');

@@ -55,8 +55,12 @@ class Step extends \Google\Model
   protected $gkeMasterDataType = '';
   protected $googleServiceType = GoogleServiceInfo::class;
   protected $googleServiceDataType = '';
+  protected $hybridSubnetType = HybridSubnetInfo::class;
+  protected $hybridSubnetDataType = '';
   protected $instanceType = InstanceInfo::class;
   protected $instanceDataType = '';
+  protected $interconnectAttachmentType = InterconnectAttachmentInfo::class;
+  protected $interconnectAttachmentDataType = '';
   protected $loadBalancerType = LoadBalancerInfo::class;
   protected $loadBalancerDataType = '';
   protected $loadBalancerBackendInfoType = LoadBalancerBackendInfo::class;
@@ -319,6 +323,20 @@ class Step extends \Google\Model
     return $this->googleService;
   }
   /**
+   * @param HybridSubnetInfo
+   */
+  public function setHybridSubnet(HybridSubnetInfo $hybridSubnet)
+  {
+    $this->hybridSubnet = $hybridSubnet;
+  }
+  /**
+   * @return HybridSubnetInfo
+   */
+  public function getHybridSubnet()
+  {
+    return $this->hybridSubnet;
+  }
+  /**
    * @param InstanceInfo
    */
   public function setInstance(InstanceInfo $instance)
@@ -331,6 +349,20 @@ class Step extends \Google\Model
   public function getInstance()
   {
     return $this->instance;
+  }
+  /**
+   * @param InterconnectAttachmentInfo
+   */
+  public function setInterconnectAttachment(InterconnectAttachmentInfo $interconnectAttachment)
+  {
+    $this->interconnectAttachment = $interconnectAttachment;
+  }
+  /**
+   * @return InterconnectAttachmentInfo
+   */
+  public function getInterconnectAttachment()
+  {
+    return $this->interconnectAttachment;
   }
   /**
    * @param LoadBalancerInfo

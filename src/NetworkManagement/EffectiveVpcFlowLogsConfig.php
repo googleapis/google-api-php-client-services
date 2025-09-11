@@ -17,7 +17,7 @@
 
 namespace Google\Service\NetworkManagement;
 
-class VpcFlowLogsConfig extends \Google\Collection
+class EffectiveVpcFlowLogsConfig extends \Google\Collection
 {
   protected $collection_key = 'metadataFields';
   /**
@@ -27,15 +27,7 @@ class VpcFlowLogsConfig extends \Google\Collection
   /**
    * @var string
    */
-  public $createTime;
-  /**
-   * @var string
-   */
   public $crossProjectMetadata;
-  /**
-   * @var string
-   */
-  public $description;
   /**
    * @var string
    */
@@ -48,10 +40,6 @@ class VpcFlowLogsConfig extends \Google\Collection
    * @var string
    */
   public $interconnectAttachment;
-  /**
-   * @var string[]
-   */
-  public $labels;
   /**
    * @var string
    */
@@ -71,19 +59,15 @@ class VpcFlowLogsConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $scope;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string
    */
   public $subnet;
-  /**
-   * @var string
-   */
-  public $targetResourceState;
-  /**
-   * @var string
-   */
-  public $updateTime;
   /**
    * @var string
    */
@@ -106,20 +90,6 @@ class VpcFlowLogsConfig extends \Google\Collection
   /**
    * @param string
    */
-  public function setCreateTime($createTime)
-  {
-    $this->createTime = $createTime;
-  }
-  /**
-   * @return string
-   */
-  public function getCreateTime()
-  {
-    return $this->createTime;
-  }
-  /**
-   * @param string
-   */
   public function setCrossProjectMetadata($crossProjectMetadata)
   {
     $this->crossProjectMetadata = $crossProjectMetadata;
@@ -130,20 +100,6 @@ class VpcFlowLogsConfig extends \Google\Collection
   public function getCrossProjectMetadata()
   {
     return $this->crossProjectMetadata;
-  }
-  /**
-   * @param string
-   */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
   }
   /**
    * @param string
@@ -186,20 +142,6 @@ class VpcFlowLogsConfig extends \Google\Collection
   public function getInterconnectAttachment()
   {
     return $this->interconnectAttachment;
-  }
-  /**
-   * @param string[]
-   */
-  public function setLabels($labels)
-  {
-    $this->labels = $labels;
-  }
-  /**
-   * @return string[]
-   */
-  public function getLabels()
-  {
-    return $this->labels;
   }
   /**
    * @param string
@@ -260,6 +202,20 @@ class VpcFlowLogsConfig extends \Google\Collection
   /**
    * @param string
    */
+  public function setScope($scope)
+  {
+    $this->scope = $scope;
+  }
+  /**
+   * @return string
+   */
+  public function getScope()
+  {
+    return $this->scope;
+  }
+  /**
+   * @param string
+   */
   public function setState($state)
   {
     $this->state = $state;
@@ -288,34 +244,6 @@ class VpcFlowLogsConfig extends \Google\Collection
   /**
    * @param string
    */
-  public function setTargetResourceState($targetResourceState)
-  {
-    $this->targetResourceState = $targetResourceState;
-  }
-  /**
-   * @return string
-   */
-  public function getTargetResourceState()
-  {
-    return $this->targetResourceState;
-  }
-  /**
-   * @param string
-   */
-  public function setUpdateTime($updateTime)
-  {
-    $this->updateTime = $updateTime;
-  }
-  /**
-   * @return string
-   */
-  public function getUpdateTime()
-  {
-    return $this->updateTime;
-  }
-  /**
-   * @param string
-   */
   public function setVpnTunnel($vpnTunnel)
   {
     $this->vpnTunnel = $vpnTunnel;
@@ -330,4 +258,4 @@ class VpcFlowLogsConfig extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VpcFlowLogsConfig::class, 'Google_Service_NetworkManagement_VpcFlowLogsConfig');
+class_alias(EffectiveVpcFlowLogsConfig::class, 'Google_Service_NetworkManagement_EffectiveVpcFlowLogsConfig');

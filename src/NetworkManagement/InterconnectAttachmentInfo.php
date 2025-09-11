@@ -17,20 +17,24 @@
 
 namespace Google\Service\NetworkManagement;
 
-class DropInfo extends \Google\Model
+class InterconnectAttachmentInfo extends \Google\Model
 {
   /**
    * @var string
    */
-  public $cause;
+  public $cloudRouterUri;
   /**
    * @var string
    */
-  public $destinationGeolocationCode;
+  public $displayName;
   /**
    * @var string
    */
-  public $destinationIp;
+  public $interconnectUri;
+  /**
+   * @var string
+   */
+  public $l2AttachmentMatchedIpAddress;
   /**
    * @var string
    */
@@ -38,57 +42,67 @@ class DropInfo extends \Google\Model
   /**
    * @var string
    */
-  public $resourceUri;
+  public $type;
   /**
    * @var string
    */
-  public $sourceGeolocationCode;
-  /**
-   * @var string
-   */
-  public $sourceIp;
+  public $uri;
 
   /**
    * @param string
    */
-  public function setCause($cause)
+  public function setCloudRouterUri($cloudRouterUri)
   {
-    $this->cause = $cause;
+    $this->cloudRouterUri = $cloudRouterUri;
   }
   /**
    * @return string
    */
-  public function getCause()
+  public function getCloudRouterUri()
   {
-    return $this->cause;
+    return $this->cloudRouterUri;
   }
   /**
    * @param string
    */
-  public function setDestinationGeolocationCode($destinationGeolocationCode)
+  public function setDisplayName($displayName)
   {
-    $this->destinationGeolocationCode = $destinationGeolocationCode;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getDestinationGeolocationCode()
+  public function getDisplayName()
   {
-    return $this->destinationGeolocationCode;
+    return $this->displayName;
   }
   /**
    * @param string
    */
-  public function setDestinationIp($destinationIp)
+  public function setInterconnectUri($interconnectUri)
   {
-    $this->destinationIp = $destinationIp;
+    $this->interconnectUri = $interconnectUri;
   }
   /**
    * @return string
    */
-  public function getDestinationIp()
+  public function getInterconnectUri()
   {
-    return $this->destinationIp;
+    return $this->interconnectUri;
+  }
+  /**
+   * @param string
+   */
+  public function setL2AttachmentMatchedIpAddress($l2AttachmentMatchedIpAddress)
+  {
+    $this->l2AttachmentMatchedIpAddress = $l2AttachmentMatchedIpAddress;
+  }
+  /**
+   * @return string
+   */
+  public function getL2AttachmentMatchedIpAddress()
+  {
+    return $this->l2AttachmentMatchedIpAddress;
   }
   /**
    * @param string
@@ -107,46 +121,32 @@ class DropInfo extends \Google\Model
   /**
    * @param string
    */
-  public function setResourceUri($resourceUri)
+  public function setType($type)
   {
-    $this->resourceUri = $resourceUri;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getResourceUri()
+  public function getType()
   {
-    return $this->resourceUri;
+    return $this->type;
   }
   /**
    * @param string
    */
-  public function setSourceGeolocationCode($sourceGeolocationCode)
+  public function setUri($uri)
   {
-    $this->sourceGeolocationCode = $sourceGeolocationCode;
+    $this->uri = $uri;
   }
   /**
    * @return string
    */
-  public function getSourceGeolocationCode()
+  public function getUri()
   {
-    return $this->sourceGeolocationCode;
-  }
-  /**
-   * @param string
-   */
-  public function setSourceIp($sourceIp)
-  {
-    $this->sourceIp = $sourceIp;
-  }
-  /**
-   * @return string
-   */
-  public function getSourceIp()
-  {
-    return $this->sourceIp;
+    return $this->uri;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DropInfo::class, 'Google_Service_NetworkManagement_DropInfo');
+class_alias(InterconnectAttachmentInfo::class, 'Google_Service_NetworkManagement_InterconnectAttachmentInfo');

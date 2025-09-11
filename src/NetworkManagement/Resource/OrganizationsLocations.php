@@ -25,10 +25,10 @@ use Google\Service\NetworkManagement\Location;
  * Typical usage is:
  *  <code>
  *   $networkmanagementService = new Google\Service\NetworkManagement(...);
- *   $locations = $networkmanagementService->projects_locations;
+ *   $locations = $networkmanagementService->organizations_locations;
  *  </code>
  */
-class ProjectsLocations extends \Google\Service\Resource
+class OrganizationsLocations extends \Google\Service\Resource
 {
   /**
    * Gets information about a location. (locations.get)
@@ -46,7 +46,7 @@ class ProjectsLocations extends \Google\Service\Resource
   }
   /**
    * Lists information about the supported locations for this service.
-   * (locations.listProjectsLocations)
+   * (locations.listOrganizationsLocations)
    *
    * @param string $name The resource that owns the locations collection, if
    * applicable.
@@ -65,7 +65,7 @@ class ProjectsLocations extends \Google\Service\Resource
    * @return ListLocationsResponse
    * @throws \Google\Service\Exception
    */
-  public function listProjectsLocations($name, $optParams = [])
+  public function listOrganizationsLocations($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
@@ -74,4 +74,4 @@ class ProjectsLocations extends \Google\Service\Resource
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProjectsLocations::class, 'Google_Service_NetworkManagement_Resource_ProjectsLocations');
+class_alias(OrganizationsLocations::class, 'Google_Service_NetworkManagement_Resource_OrganizationsLocations');
