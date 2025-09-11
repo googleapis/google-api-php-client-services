@@ -39,6 +39,7 @@ class MyBusinessVerifications extends \Google\Service
 
   public $locations;
   public $locations_verifications;
+  public $verificationTokens;
   public $rootUrlTemplate;
 
   /**
@@ -133,6 +134,20 @@ class MyBusinessVerifications extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],
+          ]
+        ]
+    );
+    $this->verificationTokens = new MyBusinessVerifications\Resource\VerificationTokens(
+        $this,
+        $this->serviceName,
+        'verificationTokens',
+        [
+          'methods' => [
+            'generate' => [
+              'path' => 'v1/verificationTokens:generate',
+              'httpMethod' => 'POST',
+              'parameters' => [],
             ],
           ]
         ]

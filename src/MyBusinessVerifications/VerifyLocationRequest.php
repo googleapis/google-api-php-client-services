@@ -43,6 +43,10 @@ class VerifyLocationRequest extends \Google\Model
   public $phoneNumber;
   protected $tokenType = VerificationToken::class;
   protected $tokenDataType = '';
+  /**
+   * @var string
+   */
+  public $trustedPartnerToken;
 
   /**
    * @param ServiceBusinessContext
@@ -141,6 +145,20 @@ class VerifyLocationRequest extends \Google\Model
   public function getToken()
   {
     return $this->token;
+  }
+  /**
+   * @param string
+   */
+  public function setTrustedPartnerToken($trustedPartnerToken)
+  {
+    $this->trustedPartnerToken = $trustedPartnerToken;
+  }
+  /**
+   * @return string
+   */
+  public function getTrustedPartnerToken()
+  {
+    return $this->trustedPartnerToken;
   }
 }
 
