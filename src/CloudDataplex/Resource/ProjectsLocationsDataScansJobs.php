@@ -58,7 +58,7 @@ class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
    * @param string $name Required. The resource name of the DataScanJob: projects/
    * {project}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_jo
    * b_id} where project refers to a project_id or project_number and location_id
-   * refers to a GCP region.
+   * refers to a Google Cloud region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view Optional. Select the DataScanJob view to return.
@@ -79,7 +79,7 @@ class ProjectsLocationsDataScansJobs extends \Google\Service\Resource
    * @param string $parent Required. The resource name of the parent environment:
    * projects/{project}/locations/{location_id}/dataScans/{data_scan_id} where
    * project refers to a project_id or project_number and location_id refers to a
-   * GCP region.
+   * Google Cloud region.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. An expression for filtering the results of

@@ -55,8 +55,8 @@ class ProjectsLocationsMetadataJobs extends \Google\Service\Resource
     return $this->call('cancel', [$params], DataplexEmpty::class);
   }
   /**
-   * Creates a metadata job. For example, use a metadata job to import Dataplex
-   * Catalog entries and aspects from a third-party system into Dataplex.
+   * Creates a metadata job. For example, use a metadata job to import metadata
+   * from a third-party system into Dataplex Universal Catalog.
    * (metadataJobs.create)
    *
    * @param string $parent Required. The resource name of the parent location, in

@@ -91,7 +91,7 @@ class OrganizationsLocationsOperations extends \Google\Service\Resource
   /**
    * Lists operations that match the specified filter in the request. If the
    * server doesn't support this method, it returns UNIMPLEMENTED.
-   * (operations.listOperations)
+   * (operations.listOrganizationsLocationsOperations)
    *
    * @param string $name The name of the operation's parent resource.
    * @param array $optParams Optional parameters.
@@ -102,11 +102,11 @@ class OrganizationsLocationsOperations extends \Google\Service\Resource
    * @return GoogleLongrunningListOperationsResponse
    * @throws \Google\Service\Exception
    */
-  public function listOperations($name, $optParams = [])
+  public function listOrganizationsLocationsOperations($name, $optParams = [])
   {
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
-    return $this->call('listOperations', [$params], GoogleLongrunningListOperationsResponse::class);
+    return $this->call('list', [$params], GoogleLongrunningListOperationsResponse::class);
   }
 }
 

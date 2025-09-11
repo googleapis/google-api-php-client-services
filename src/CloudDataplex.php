@@ -23,7 +23,7 @@ use Google\Client;
  * Service definition for CloudDataplex (v1).
  *
  * <p>
- * Dataplex API is used to manage the lifecycle of data lakes.</p>
+ * A unified, intelligent governance solution for data and AI assets.</p>
  *
  * <p>
  * For more information about this service, see the API
@@ -43,6 +43,8 @@ class CloudDataplex extends \Google\Service
   public $projects_locations;
   public $projects_locations_aspectTypes;
   public $projects_locations_dataAttributeBindings;
+  public $projects_locations_dataProducts;
+  public $projects_locations_dataProducts_dataAssets;
   public $projects_locations_dataScans;
   public $projects_locations_dataScans_jobs;
   public $projects_locations_dataTaxonomies;
@@ -249,8 +251,8 @@ class CloudDataplex extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'listOperations' => [
-              'path' => 'v1/{+name}',
+            ],'list' => [
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
@@ -621,6 +623,66 @@ class CloudDataplex extends \Google\Service
                 ],
               ],
             ],'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataProducts = new CloudDataplex\Resource\ProjectsLocationsDataProducts(
+        $this,
+        $this->serviceName,
+        'dataProducts',
+        [
+          'methods' => [
+            'setIamPolicy' => [
+              'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataProducts_dataAssets = new CloudDataplex\Resource\ProjectsLocationsDataProductsDataAssets(
+        $this,
+        $this->serviceName,
+        'dataAssets',
+        [
+          'methods' => [
+            'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => [
