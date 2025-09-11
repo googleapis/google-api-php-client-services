@@ -91,6 +91,10 @@ class Conversion extends \Google\Collection
   /**
    * @var string
    */
+  public $sessionAttributesEncoded;
+  /**
+   * @var string
+   */
   public $timestampMicros;
   /**
    * @var bool
@@ -351,6 +355,20 @@ class Conversion extends \Google\Collection
   public function getQuantity()
   {
     return $this->quantity;
+  }
+  /**
+   * @param string
+   */
+  public function setSessionAttributesEncoded($sessionAttributesEncoded)
+  {
+    $this->sessionAttributesEncoded = $sessionAttributesEncoded;
+  }
+  /**
+   * @return string
+   */
+  public function getSessionAttributesEncoded()
+  {
+    return $this->sessionAttributesEncoded;
   }
   /**
    * @param string

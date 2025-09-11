@@ -31,10 +31,6 @@ class ReportReachCriteria extends \Google\Collection
   protected $dimensionsType = SortedDimension::class;
   protected $dimensionsDataType = 'array';
   /**
-   * @var bool
-   */
-  public $enableAllDimensionCombinations;
-  /**
    * @var string[]
    */
   public $metricNames;
@@ -112,20 +108,6 @@ class ReportReachCriteria extends \Google\Collection
   public function getDimensions()
   {
     return $this->dimensions;
-  }
-  /**
-   * @param bool
-   */
-  public function setEnableAllDimensionCombinations($enableAllDimensionCombinations)
-  {
-    $this->enableAllDimensionCombinations = $enableAllDimensionCombinations;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableAllDimensionCombinations()
-  {
-    return $this->enableAllDimensionCombinations;
   }
   /**
    * @param string[]

@@ -97,23 +97,6 @@ class Reports extends \Google\Service\Resource
     return $this->call('list', [$params], ReportList::class);
   }
   /**
-   * Updates an existing report. This method supports patch semantics.
-   * (reports.patch)
-   *
-   * @param string $profileId The Campaign Manager 360 user profile ID.
-   * @param string $reportId The ID of the report.
-   * @param Report $postBody
-   * @param array $optParams Optional parameters.
-   * @return Report
-   * @throws \Google\Service\Exception
-   */
-  public function patch($profileId, $reportId, Report $postBody, $optParams = [])
-  {
-    $params = ['profileId' => $profileId, 'reportId' => $reportId, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('patch', [$params], Report::class);
-  }
-  /**
    * Runs a report. (reports.run)
    *
    * @param string $profileId The Campaign Manager 360 user profile ID.
