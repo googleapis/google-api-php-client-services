@@ -17,20 +17,25 @@
 
 namespace Google\Service\CloudObservability;
 
-class Scope extends \Google\Model
+class TraceScope extends \Google\Collection
 {
+  protected $collection_key = 'resourceNames';
   /**
    * @var string
    */
-  public $logScope;
+  public $createTime;
+  /**
+   * @var string
+   */
+  public $description;
   /**
    * @var string
    */
   public $name;
   /**
-   * @var string
+   * @var string[]
    */
-  public $traceScope;
+  public $resourceNames;
   /**
    * @var string
    */
@@ -39,16 +44,30 @@ class Scope extends \Google\Model
   /**
    * @param string
    */
-  public function setLogScope($logScope)
+  public function setCreateTime($createTime)
   {
-    $this->logScope = $logScope;
+    $this->createTime = $createTime;
   }
   /**
    * @return string
    */
-  public function getLogScope()
+  public function getCreateTime()
   {
-    return $this->logScope;
+    return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
   }
   /**
    * @param string
@@ -65,18 +84,18 @@ class Scope extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setTraceScope($traceScope)
+  public function setResourceNames($resourceNames)
   {
-    $this->traceScope = $traceScope;
+    $this->resourceNames = $resourceNames;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getTraceScope()
+  public function getResourceNames()
   {
-    return $this->traceScope;
+    return $this->resourceNames;
   }
   /**
    * @param string
@@ -95,4 +114,4 @@ class Scope extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Scope::class, 'Google_Service_CloudObservability_Scope');
+class_alias(TraceScope::class, 'Google_Service_CloudObservability_TraceScope');
