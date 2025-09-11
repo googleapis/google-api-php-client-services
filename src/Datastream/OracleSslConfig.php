@@ -27,6 +27,10 @@ class OracleSslConfig extends \Google\Model
    * @var bool
    */
   public $caCertificateSet;
+  /**
+   * @var string
+   */
+  public $serverCertificateDistinguishedName;
 
   /**
    * @param string
@@ -55,6 +59,20 @@ class OracleSslConfig extends \Google\Model
   public function getCaCertificateSet()
   {
     return $this->caCertificateSet;
+  }
+  /**
+   * @param string
+   */
+  public function setServerCertificateDistinguishedName($serverCertificateDistinguishedName)
+  {
+    $this->serverCertificateDistinguishedName = $serverCertificateDistinguishedName;
+  }
+  /**
+   * @return string
+   */
+  public function getServerCertificateDistinguishedName()
+  {
+    return $this->serverCertificateDistinguishedName;
   }
 }
 

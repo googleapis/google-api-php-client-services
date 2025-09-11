@@ -17,44 +17,28 @@
 
 namespace Google\Service\Datastream;
 
-class SourceHierarchyDatasets extends \Google\Model
+class MongodbChangeStreamPosition extends \Google\Model
 {
-  protected $datasetTemplateType = DatasetTemplate::class;
-  protected $datasetTemplateDataType = '';
   /**
    * @var string
    */
-  public $projectId;
+  public $startTime;
 
-  /**
-   * @param DatasetTemplate
-   */
-  public function setDatasetTemplate(DatasetTemplate $datasetTemplate)
-  {
-    $this->datasetTemplate = $datasetTemplate;
-  }
-  /**
-   * @return DatasetTemplate
-   */
-  public function getDatasetTemplate()
-  {
-    return $this->datasetTemplate;
-  }
   /**
    * @param string
    */
-  public function setProjectId($projectId)
+  public function setStartTime($startTime)
   {
-    $this->projectId = $projectId;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getProjectId()
+  public function getStartTime()
   {
-    return $this->projectId;
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SourceHierarchyDatasets::class, 'Google_Service_Datastream_SourceHierarchyDatasets');
+class_alias(MongodbChangeStreamPosition::class, 'Google_Service_Datastream_MongodbChangeStreamPosition');

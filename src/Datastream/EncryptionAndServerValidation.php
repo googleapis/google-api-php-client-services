@@ -17,44 +17,46 @@
 
 namespace Google\Service\Datastream;
 
-class SourceHierarchyDatasets extends \Google\Model
+class EncryptionAndServerValidation extends \Google\Model
 {
-  protected $datasetTemplateType = DatasetTemplate::class;
-  protected $datasetTemplateDataType = '';
   /**
    * @var string
    */
-  public $projectId;
+  public $caCertificate;
+  /**
+   * @var string
+   */
+  public $serverCertificateHostname;
 
-  /**
-   * @param DatasetTemplate
-   */
-  public function setDatasetTemplate(DatasetTemplate $datasetTemplate)
-  {
-    $this->datasetTemplate = $datasetTemplate;
-  }
-  /**
-   * @return DatasetTemplate
-   */
-  public function getDatasetTemplate()
-  {
-    return $this->datasetTemplate;
-  }
   /**
    * @param string
    */
-  public function setProjectId($projectId)
+  public function setCaCertificate($caCertificate)
   {
-    $this->projectId = $projectId;
+    $this->caCertificate = $caCertificate;
   }
   /**
    * @return string
    */
-  public function getProjectId()
+  public function getCaCertificate()
   {
-    return $this->projectId;
+    return $this->caCertificate;
+  }
+  /**
+   * @param string
+   */
+  public function setServerCertificateHostname($serverCertificateHostname)
+  {
+    $this->serverCertificateHostname = $serverCertificateHostname;
+  }
+  /**
+   * @return string
+   */
+  public function getServerCertificateHostname()
+  {
+    return $this->serverCertificateHostname;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SourceHierarchyDatasets::class, 'Google_Service_Datastream_SourceHierarchyDatasets');
+class_alias(EncryptionAndServerValidation::class, 'Google_Service_Datastream_EncryptionAndServerValidation');

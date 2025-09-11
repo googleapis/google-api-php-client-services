@@ -23,6 +23,10 @@ class ServerVerification extends \Google\Model
    * @var string
    */
   public $caCertificate;
+  /**
+   * @var string
+   */
+  public $serverCertificateHostname;
 
   /**
    * @param string
@@ -37,6 +41,20 @@ class ServerVerification extends \Google\Model
   public function getCaCertificate()
   {
     return $this->caCertificate;
+  }
+  /**
+   * @param string
+   */
+  public function setServerCertificateHostname($serverCertificateHostname)
+  {
+    $this->serverCertificateHostname = $serverCertificateHostname;
+  }
+  /**
+   * @return string
+   */
+  public function getServerCertificateHostname()
+  {
+    return $this->serverCertificateHostname;
   }
 }
 
