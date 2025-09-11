@@ -22,21 +22,21 @@ class UploadPrivateImageResponse extends \Google\Model
   /**
    * @var string
    */
-  public $privateContentId;
+  public $privateImageId;
 
   /**
    * @param string
    */
-  public function setPrivateContentId($privateContentId)
+  public function setPrivateImageId($privateImageId)
   {
-    $this->privateContentId = $privateContentId;
+    $this->privateImageId = $privateImageId;
   }
   /**
    * @return string
    */
-  public function getPrivateContentId()
+  public function getPrivateImageId()
   {
-    return $this->privateContentId;
+    return $this->privateImageId;
   }
 }
 
