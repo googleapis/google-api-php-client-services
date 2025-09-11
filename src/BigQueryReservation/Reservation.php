@@ -66,6 +66,10 @@ class Reservation extends \Google\Model
   /**
    * @var string
    */
+  public $reservationGroup;
+  /**
+   * @var string
+   */
   public $scalingMode;
   /**
    * @var string
@@ -247,6 +251,20 @@ class Reservation extends \Google\Model
   public function getReplicationStatus()
   {
     return $this->replicationStatus;
+  }
+  /**
+   * @param string
+   */
+  public function setReservationGroup($reservationGroup)
+  {
+    $this->reservationGroup = $reservationGroup;
+  }
+  /**
+   * @return string
+   */
+  public function getReservationGroup()
+  {
+    return $this->reservationGroup;
   }
   /**
    * @param string
