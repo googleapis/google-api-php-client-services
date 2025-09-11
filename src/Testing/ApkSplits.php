@@ -17,42 +17,27 @@
 
 namespace Google\Service\Testing;
 
-class AppBundle extends \Google\Model
+class ApkSplits extends \Google\Collection
 {
-  protected $apksType = ApkSplits::class;
-  protected $apksDataType = '';
-  protected $bundleLocationType = FileReference::class;
-  protected $bundleLocationDataType = '';
+  protected $collection_key = 'bundleSplits';
+  protected $bundleSplitsType = FileReference::class;
+  protected $bundleSplitsDataType = 'array';
 
   /**
-   * @param ApkSplits
+   * @param FileReference[]
    */
-  public function setApks(ApkSplits $apks)
+  public function setBundleSplits($bundleSplits)
   {
-    $this->apks = $apks;
+    $this->bundleSplits = $bundleSplits;
   }
   /**
-   * @return ApkSplits
+   * @return FileReference[]
    */
-  public function getApks()
+  public function getBundleSplits()
   {
-    return $this->apks;
-  }
-  /**
-   * @param FileReference
-   */
-  public function setBundleLocation(FileReference $bundleLocation)
-  {
-    $this->bundleLocation = $bundleLocation;
-  }
-  /**
-   * @return FileReference
-   */
-  public function getBundleLocation()
-  {
-    return $this->bundleLocation;
+    return $this->bundleSplits;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppBundle::class, 'Google_Service_Testing_AppBundle');
+class_alias(ApkSplits::class, 'Google_Service_Testing_ApkSplits');
