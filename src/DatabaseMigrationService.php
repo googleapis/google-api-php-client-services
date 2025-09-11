@@ -1020,6 +1020,10 @@ class DatabaseMigrationService extends \Google\Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ],
+                'validateOnly' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
