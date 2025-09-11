@@ -24,6 +24,10 @@ class SetAutoscalerLinkOperationMetadata extends \Google\Collection
    * @var string[]
    */
   public $zonalIgmIds;
+  /**
+   * @var string[]
+   */
+  public $zoneToIgmIds;
 
   /**
    * @param string[]
@@ -38,6 +42,20 @@ class SetAutoscalerLinkOperationMetadata extends \Google\Collection
   public function getZonalIgmIds()
   {
     return $this->zonalIgmIds;
+  }
+  /**
+   * @param string[]
+   */
+  public function setZoneToIgmIds($zoneToIgmIds)
+  {
+    $this->zoneToIgmIds = $zoneToIgmIds;
+  }
+  /**
+   * @return string[]
+   */
+  public function getZoneToIgmIds()
+  {
+    return $this->zoneToIgmIds;
   }
 }
 
