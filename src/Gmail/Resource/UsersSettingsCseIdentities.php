@@ -34,7 +34,16 @@ class UsersSettingsCseIdentities extends \Google\Service\Resource
    * Creates and configures a client-side encryption identity that's authorized to
    * send mail from the user account. Google publishes the S/MIME certificate to a
    * shared domain-wide directory so that people within a Google Workspace
-   * organization can encrypt and send mail to the identity. (identities.create)
+   * organization can encrypt and send mail to the identity. For administrators
+   * managing identities and keypairs for users in their organization, requests
+   * require authorization with a [service account](https://developers.google.com/
+   * identity/protocols/OAuth2ServiceAccount) that has [domain-wide delegation aut
+   * hority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount
+   * #delegatingauthority) to impersonate users with the
+   * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users
+   * managing their own identities and keypairs, requests require [hardware key
+   * encryption](https://support.google.com/a/answer/14153163) turned on and
+   * configured. (identities.create)
    *
    * @param string $userId The requester's primary email address. To indicate the
    * authenticated user, you can use the special value `me`.
@@ -53,7 +62,16 @@ class UsersSettingsCseIdentities extends \Google\Service\Resource
    * Deletes a client-side encryption identity. The authenticated user can no
    * longer use the identity to send encrypted messages. You cannot restore the
    * identity after you delete it. Instead, use the CreateCseIdentity method to
-   * create another identity with the same configuration. (identities.delete)
+   * create another identity with the same configuration. For administrators
+   * managing identities and keypairs for users in their organization, requests
+   * require authorization with a [service account](https://developers.google.com/
+   * identity/protocols/OAuth2ServiceAccount) that has [domain-wide delegation aut
+   * hority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount
+   * #delegatingauthority) to impersonate users with the
+   * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users
+   * managing their own identities and keypairs, requests require [hardware key
+   * encryption](https://support.google.com/a/answer/14153163) turned on and
+   * configured. (identities.delete)
    *
    * @param string $userId The requester's primary email address. To indicate the
    * authenticated user, you can use the special value `me`.
@@ -69,7 +87,16 @@ class UsersSettingsCseIdentities extends \Google\Service\Resource
     return $this->call('delete', [$params]);
   }
   /**
-   * Retrieves a client-side encryption identity configuration. (identities.get)
+   * Retrieves a client-side encryption identity configuration. For administrators
+   * managing identities and keypairs for users in their organization, requests
+   * require authorization with a [service account](https://developers.google.com/
+   * identity/protocols/OAuth2ServiceAccount) that has [domain-wide delegation aut
+   * hority](https://developers.google.com/identity/protocols/OAuth2ServiceAccount
+   * #delegatingauthority) to impersonate users with the
+   * `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users
+   * managing their own identities and keypairs, requests require [hardware key
+   * encryption](https://support.google.com/a/answer/14153163) turned on and
+   * configured. (identities.get)
    *
    * @param string $userId The requester's primary email address. To indicate the
    * authenticated user, you can use the special value `me`.
@@ -86,8 +113,16 @@ class UsersSettingsCseIdentities extends \Google\Service\Resource
     return $this->call('get', [$params], CseIdentity::class);
   }
   /**
-   * Lists the client-side encrypted identities for an authenticated user.
-   * (identities.listUsersSettingsCseIdentities)
+   * Lists the client-side encrypted identities for an authenticated user. For
+   * administrators managing identities and keypairs for users in their
+   * organization, requests require authorization with a [service account](https:/
+   * /developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+   * [domain-wide delegation authority](https://developers.google.com/identity/pro
+   * tocols/OAuth2ServiceAccount#delegatingauthority) to impersonate users with
+   * the `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users
+   * managing their own identities and keypairs, requests require [hardware key
+   * encryption](https://support.google.com/a/answer/14153163) turned on and
+   * configured. (identities.listUsersSettingsCseIdentities)
    *
    * @param string $userId The requester's primary email address. To indicate the
    * authenticated user, you can use the special value `me`.
@@ -110,8 +145,16 @@ class UsersSettingsCseIdentities extends \Google\Service\Resource
   /**
    * Associates a different key pair with an existing client-side encryption
    * identity. The updated key pair must validate against Google's [S/MIME
-   * certificate profiles](https://support.google.com/a/answer/7300887).
-   * (identities.patch)
+   * certificate profiles](https://support.google.com/a/answer/7300887). For
+   * administrators managing identities and keypairs for users in their
+   * organization, requests require authorization with a [service account](https:/
+   * /developers.google.com/identity/protocols/OAuth2ServiceAccount) that has
+   * [domain-wide delegation authority](https://developers.google.com/identity/pro
+   * tocols/OAuth2ServiceAccount#delegatingauthority) to impersonate users with
+   * the `https://www.googleapis.com/auth/gmail.settings.basic` scope. For users
+   * managing their own identities and keypairs, requests require [hardware key
+   * encryption](https://support.google.com/a/answer/14153163) turned on and
+   * configured. (identities.patch)
    *
    * @param string $userId The requester's primary email address. To indicate the
    * authenticated user, you can use the special value `me`.
