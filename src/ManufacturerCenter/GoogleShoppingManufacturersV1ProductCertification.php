@@ -30,7 +30,23 @@ class GoogleShoppingManufacturersV1ProductCertification extends \Google\Model
   /**
    * @var string
    */
+  public $link;
+  /**
+   * @var string
+   */
+  public $logo;
+  /**
+   * @var string
+   */
   public $name;
+  /**
+   * @var string
+   */
+  public $validUntil;
+  /**
+   * @var string
+   */
+  public $value;
 
   /**
    * @param string
@@ -63,6 +79,34 @@ class GoogleShoppingManufacturersV1ProductCertification extends \Google\Model
   /**
    * @param string
    */
+  public function setLink($link)
+  {
+    $this->link = $link;
+  }
+  /**
+   * @return string
+   */
+  public function getLink()
+  {
+    return $this->link;
+  }
+  /**
+   * @param string
+   */
+  public function setLogo($logo)
+  {
+    $this->logo = $logo;
+  }
+  /**
+   * @return string
+   */
+  public function getLogo()
+  {
+    return $this->logo;
+  }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
@@ -73,6 +117,34 @@ class GoogleShoppingManufacturersV1ProductCertification extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setValidUntil($validUntil)
+  {
+    $this->validUntil = $validUntil;
+  }
+  /**
+   * @return string
+   */
+  public function getValidUntil()
+  {
+    return $this->validUntil;
+  }
+  /**
+   * @param string
+   */
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  /**
+   * @return string
+   */
+  public function getValue()
+  {
+    return $this->value;
   }
 }
 
