@@ -50,6 +50,8 @@ class StorageObject extends \Google\Collection
    * @var string
    */
   public $contentType;
+  protected $contextsType = StorageObjectContexts::class;
+  protected $contextsDataType = '';
   /**
    * @var string
    */
@@ -272,6 +274,20 @@ class StorageObject extends \Google\Collection
   public function getContentType()
   {
     return $this->contentType;
+  }
+  /**
+   * @param StorageObjectContexts
+   */
+  public function setContexts(StorageObjectContexts $contexts)
+  {
+    $this->contexts = $contexts;
+  }
+  /**
+   * @return StorageObjectContexts
+   */
+  public function getContexts()
+  {
+    return $this->contexts;
   }
   /**
    * @param string

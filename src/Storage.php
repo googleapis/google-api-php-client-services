@@ -1604,6 +1604,10 @@ class Storage extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'includeFoldersAsPrefixes' => [
                   'location' => 'query',
                   'type' => 'boolean',
