@@ -368,6 +368,9 @@ class Subnetworks extends \Google\Service\Resource
    * false. For example, when partial success behavior is enabled, aggregatedList
    * for a single zone scope either returns all resources in the zone or no
    * resources, with an error code.
+   * @opt_param string serviceProject The project id or project number in which
+   * the subnetwork is intended to be used. Only applied for Shared VPC. See
+   * [Shared VPC documentation](https://cloud.google.com/vpc/docs/shared-vpc/)
    * @return UsableSubnetworksAggregatedList
    * @throws \Google\Service\Exception
    */

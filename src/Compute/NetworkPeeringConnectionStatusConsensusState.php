@@ -17,44 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class InstanceParams extends \Google\Model
+class NetworkPeeringConnectionStatusConsensusState extends \Google\Model
 {
-  protected $requestValidForDurationType = Duration::class;
-  protected $requestValidForDurationDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $resourceManagerTags;
+  public $deleteStatus;
+  /**
+   * @var string
+   */
+  public $updateStatus;
 
   /**
-   * @param Duration
+   * @param string
    */
-  public function setRequestValidForDuration(Duration $requestValidForDuration)
+  public function setDeleteStatus($deleteStatus)
   {
-    $this->requestValidForDuration = $requestValidForDuration;
+    $this->deleteStatus = $deleteStatus;
   }
   /**
-   * @return Duration
+   * @return string
    */
-  public function getRequestValidForDuration()
+  public function getDeleteStatus()
   {
-    return $this->requestValidForDuration;
+    return $this->deleteStatus;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setResourceManagerTags($resourceManagerTags)
+  public function setUpdateStatus($updateStatus)
   {
-    $this->resourceManagerTags = $resourceManagerTags;
+    $this->updateStatus = $updateStatus;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getResourceManagerTags()
+  public function getUpdateStatus()
   {
-    return $this->resourceManagerTags;
+    return $this->updateStatus;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');
+class_alias(NetworkPeeringConnectionStatusConsensusState::class, 'Google_Service_Compute_NetworkPeeringConnectionStatusConsensusState');

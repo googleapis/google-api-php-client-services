@@ -27,6 +27,8 @@ class ReservationSubBlock extends \Google\Model
    * @var string
    */
   public $creationTimestamp;
+  protected $healthInfoType = ReservationSubBlockHealthInfo::class;
+  protected $healthInfoDataType = '';
   /**
    * @var string
    */
@@ -45,6 +47,8 @@ class ReservationSubBlock extends \Google\Model
   public $name;
   protected $physicalTopologyType = ReservationSubBlockPhysicalTopology::class;
   protected $physicalTopologyDataType = '';
+  protected $reservationSubBlockMaintenanceType = GroupMaintenanceInfo::class;
+  protected $reservationSubBlockMaintenanceDataType = '';
   /**
    * @var string
    */
@@ -89,6 +93,20 @@ class ReservationSubBlock extends \Google\Model
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  /**
+   * @param ReservationSubBlockHealthInfo
+   */
+  public function setHealthInfo(ReservationSubBlockHealthInfo $healthInfo)
+  {
+    $this->healthInfo = $healthInfo;
+  }
+  /**
+   * @return ReservationSubBlockHealthInfo
+   */
+  public function getHealthInfo()
+  {
+    return $this->healthInfo;
   }
   /**
    * @param string
@@ -159,6 +177,20 @@ class ReservationSubBlock extends \Google\Model
   public function getPhysicalTopology()
   {
     return $this->physicalTopology;
+  }
+  /**
+   * @param GroupMaintenanceInfo
+   */
+  public function setReservationSubBlockMaintenance(GroupMaintenanceInfo $reservationSubBlockMaintenance)
+  {
+    $this->reservationSubBlockMaintenance = $reservationSubBlockMaintenance;
+  }
+  /**
+   * @return GroupMaintenanceInfo
+   */
+  public function getReservationSubBlockMaintenance()
+  {
+    return $this->reservationSubBlockMaintenance;
   }
   /**
    * @param string

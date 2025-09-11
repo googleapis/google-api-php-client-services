@@ -17,29 +17,13 @@
 
 namespace Google\Service\Compute;
 
-class InstanceParams extends \Google\Model
+class BackendBucketParams extends \Google\Model
 {
-  protected $requestValidForDurationType = Duration::class;
-  protected $requestValidForDurationDataType = '';
   /**
    * @var string[]
    */
   public $resourceManagerTags;
 
-  /**
-   * @param Duration
-   */
-  public function setRequestValidForDuration(Duration $requestValidForDuration)
-  {
-    $this->requestValidForDuration = $requestValidForDuration;
-  }
-  /**
-   * @return Duration
-   */
-  public function getRequestValidForDuration()
-  {
-    return $this->requestValidForDuration;
-  }
   /**
    * @param string[]
    */
@@ -57,4 +41,4 @@ class InstanceParams extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');
+class_alias(BackendBucketParams::class, 'Google_Service_Compute_BackendBucketParams');

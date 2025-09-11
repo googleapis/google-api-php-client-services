@@ -66,6 +66,8 @@ class BackendBucket extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $paramsType = BackendBucketParams::class;
+  protected $paramsDataType = '';
   /**
    * @var string
    */
@@ -240,6 +242,20 @@ class BackendBucket extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param BackendBucketParams
+   */
+  public function setParams(BackendBucketParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return BackendBucketParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * @param string

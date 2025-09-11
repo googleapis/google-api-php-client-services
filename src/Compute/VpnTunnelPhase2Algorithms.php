@@ -17,44 +17,65 @@
 
 namespace Google\Service\Compute;
 
-class InstanceParams extends \Google\Model
+class VpnTunnelPhase2Algorithms extends \Google\Collection
 {
-  protected $requestValidForDurationType = Duration::class;
-  protected $requestValidForDurationDataType = '';
+  protected $collection_key = 'pfs';
   /**
    * @var string[]
    */
-  public $resourceManagerTags;
+  public $encryption;
+  /**
+   * @var string[]
+   */
+  public $integrity;
+  /**
+   * @var string[]
+   */
+  public $pfs;
 
-  /**
-   * @param Duration
-   */
-  public function setRequestValidForDuration(Duration $requestValidForDuration)
-  {
-    $this->requestValidForDuration = $requestValidForDuration;
-  }
-  /**
-   * @return Duration
-   */
-  public function getRequestValidForDuration()
-  {
-    return $this->requestValidForDuration;
-  }
   /**
    * @param string[]
    */
-  public function setResourceManagerTags($resourceManagerTags)
+  public function setEncryption($encryption)
   {
-    $this->resourceManagerTags = $resourceManagerTags;
+    $this->encryption = $encryption;
   }
   /**
    * @return string[]
    */
-  public function getResourceManagerTags()
+  public function getEncryption()
   {
-    return $this->resourceManagerTags;
+    return $this->encryption;
+  }
+  /**
+   * @param string[]
+   */
+  public function setIntegrity($integrity)
+  {
+    $this->integrity = $integrity;
+  }
+  /**
+   * @return string[]
+   */
+  public function getIntegrity()
+  {
+    return $this->integrity;
+  }
+  /**
+   * @param string[]
+   */
+  public function setPfs($pfs)
+  {
+    $this->pfs = $pfs;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPfs()
+  {
+    return $this->pfs;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');
+class_alias(VpnTunnelPhase2Algorithms::class, 'Google_Service_Compute_VpnTunnelPhase2Algorithms');

@@ -17,44 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class InstanceParams extends \Google\Model
+class InterconnectApplicationAwareInterconnectBandwidthPercentage extends \Google\Model
 {
-  protected $requestValidForDurationType = Duration::class;
-  protected $requestValidForDurationDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $resourceManagerTags;
+  public $percentage;
+  /**
+   * @var string
+   */
+  public $trafficClass;
 
   /**
-   * @param Duration
+   * @param string
    */
-  public function setRequestValidForDuration(Duration $requestValidForDuration)
+  public function setPercentage($percentage)
   {
-    $this->requestValidForDuration = $requestValidForDuration;
+    $this->percentage = $percentage;
   }
   /**
-   * @return Duration
+   * @return string
    */
-  public function getRequestValidForDuration()
+  public function getPercentage()
   {
-    return $this->requestValidForDuration;
+    return $this->percentage;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setResourceManagerTags($resourceManagerTags)
+  public function setTrafficClass($trafficClass)
   {
-    $this->resourceManagerTags = $resourceManagerTags;
+    $this->trafficClass = $trafficClass;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getResourceManagerTags()
+  public function getTrafficClass()
   {
-    return $this->resourceManagerTags;
+    return $this->trafficClass;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');
+class_alias(InterconnectApplicationAwareInterconnectBandwidthPercentage::class, 'Google_Service_Compute_InterconnectApplicationAwareInterconnectBandwidthPercentage');

@@ -17,44 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class InstanceParams extends \Google\Model
+class ReservationBlockPhysicalTopologyInstancePhysicalHostTopology extends \Google\Model
 {
-  protected $requestValidForDurationType = Duration::class;
-  protected $requestValidForDurationDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $resourceManagerTags;
+  public $host;
+  /**
+   * @var string
+   */
+  public $subBlock;
 
   /**
-   * @param Duration
+   * @param string
    */
-  public function setRequestValidForDuration(Duration $requestValidForDuration)
+  public function setHost($host)
   {
-    $this->requestValidForDuration = $requestValidForDuration;
+    $this->host = $host;
   }
   /**
-   * @return Duration
+   * @return string
    */
-  public function getRequestValidForDuration()
+  public function getHost()
   {
-    return $this->requestValidForDuration;
+    return $this->host;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setResourceManagerTags($resourceManagerTags)
+  public function setSubBlock($subBlock)
   {
-    $this->resourceManagerTags = $resourceManagerTags;
+    $this->subBlock = $subBlock;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getResourceManagerTags()
+  public function getSubBlock()
   {
-    return $this->resourceManagerTags;
+    return $this->subBlock;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');
+class_alias(ReservationBlockPhysicalTopologyInstancePhysicalHostTopology::class, 'Google_Service_Compute_ReservationBlockPhysicalTopologyInstancePhysicalHostTopology');

@@ -44,6 +44,8 @@ class ReservationBlocks extends \Google\Service\Resource
    * @param string $reservationBlock The name of the reservation block. Name
    * should conform to RFC1035 or be a resource ID.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View of the Block.
    * @return ReservationBlocksGetResponse
    * @throws \Google\Service\Exception
    */

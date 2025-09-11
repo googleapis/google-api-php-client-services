@@ -20,6 +20,8 @@ namespace Google\Service\Compute;
 class Reservation extends \Google\Collection
 {
   protected $collection_key = 'linkedCommitments';
+  protected $advancedDeploymentControlType = ReservationAdvancedDeploymentControl::class;
+  protected $advancedDeploymentControlDataType = '';
   protected $aggregateReservationType = AllocationAggregateReservation::class;
   protected $aggregateReservationDataType = '';
   /**
@@ -79,6 +81,10 @@ class Reservation extends \Google\Collection
   /**
    * @var string
    */
+  public $schedulingType;
+  /**
+   * @var string
+   */
   public $selfLink;
   protected $shareSettingsType = ShareSettings::class;
   protected $shareSettingsDataType = '';
@@ -97,6 +103,20 @@ class Reservation extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * @param ReservationAdvancedDeploymentControl
+   */
+  public function setAdvancedDeploymentControl(ReservationAdvancedDeploymentControl $advancedDeploymentControl)
+  {
+    $this->advancedDeploymentControl = $advancedDeploymentControl;
+  }
+  /**
+   * @return ReservationAdvancedDeploymentControl
+   */
+  public function getAdvancedDeploymentControl()
+  {
+    return $this->advancedDeploymentControl;
+  }
   /**
    * @param AllocationAggregateReservation
    */
@@ -320,6 +340,20 @@ class Reservation extends \Google\Collection
   public function getSatisfiesPzs()
   {
     return $this->satisfiesPzs;
+  }
+  /**
+   * @param string
+   */
+  public function setSchedulingType($schedulingType)
+  {
+    $this->schedulingType = $schedulingType;
+  }
+  /**
+   * @return string
+   */
+  public function getSchedulingType()
+  {
+    return $this->schedulingType;
   }
   /**
    * @param string

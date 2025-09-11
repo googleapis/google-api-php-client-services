@@ -155,6 +155,9 @@ class ServiceAttachments extends \Google\Service\Resource
    * @param string $serviceAttachment Name of the ServiceAttachment resource to
    * return.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param bool showNatIps Indicates whether NAT IPs should be included in
+   * the response.
    * @return ServiceAttachment
    * @throws \Google\Service\Exception
    */

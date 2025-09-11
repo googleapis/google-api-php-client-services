@@ -26,6 +26,8 @@ use Google\Service\Compute\InstanceGroupsListInstancesRequest;
 use Google\Service\Compute\InstanceGroupsRemoveInstancesRequest;
 use Google\Service\Compute\InstanceGroupsSetNamedPortsRequest;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "instanceGroups" collection of methods.
@@ -434,6 +436,24 @@ class InstanceGroups extends \Google\Service\Resource
     $params = ['project' => $project, 'zone' => $zone, 'instanceGroup' => $instanceGroup, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setNamedPorts', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (instanceGroups.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $zone, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 

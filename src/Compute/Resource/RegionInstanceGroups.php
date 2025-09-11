@@ -23,6 +23,8 @@ use Google\Service\Compute\RegionInstanceGroupList;
 use Google\Service\Compute\RegionInstanceGroupsListInstances;
 use Google\Service\Compute\RegionInstanceGroupsListInstancesRequest;
 use Google\Service\Compute\RegionInstanceGroupsSetNamedPortsRequest;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "regionInstanceGroups" collection of methods.
@@ -224,6 +226,24 @@ class RegionInstanceGroups extends \Google\Service\Resource
     $params = ['project' => $project, 'region' => $region, 'instanceGroup' => $instanceGroup, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setNamedPorts', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (regionInstanceGroups.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $region The name of the region for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 

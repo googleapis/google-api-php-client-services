@@ -22,6 +22,14 @@ class GroupMaintenanceInfo extends \Google\Model
   /**
    * @var int
    */
+  public $instanceMaintenanceOngoingCount;
+  /**
+   * @var int
+   */
+  public $instanceMaintenancePendingCount;
+  /**
+   * @var int
+   */
   public $maintenanceOngoingCount;
   /**
    * @var int
@@ -31,9 +39,45 @@ class GroupMaintenanceInfo extends \Google\Model
    * @var string
    */
   public $schedulingType;
+  /**
+   * @var int
+   */
+  public $subblockInfraMaintenanceOngoingCount;
+  /**
+   * @var int
+   */
+  public $subblockInfraMaintenancePendingCount;
   protected $upcomingGroupMaintenanceType = UpcomingMaintenance::class;
   protected $upcomingGroupMaintenanceDataType = '';
 
+  /**
+   * @param int
+   */
+  public function setInstanceMaintenanceOngoingCount($instanceMaintenanceOngoingCount)
+  {
+    $this->instanceMaintenanceOngoingCount = $instanceMaintenanceOngoingCount;
+  }
+  /**
+   * @return int
+   */
+  public function getInstanceMaintenanceOngoingCount()
+  {
+    return $this->instanceMaintenanceOngoingCount;
+  }
+  /**
+   * @param int
+   */
+  public function setInstanceMaintenancePendingCount($instanceMaintenancePendingCount)
+  {
+    $this->instanceMaintenancePendingCount = $instanceMaintenancePendingCount;
+  }
+  /**
+   * @return int
+   */
+  public function getInstanceMaintenancePendingCount()
+  {
+    return $this->instanceMaintenancePendingCount;
+  }
   /**
    * @param int
    */
@@ -75,6 +119,34 @@ class GroupMaintenanceInfo extends \Google\Model
   public function getSchedulingType()
   {
     return $this->schedulingType;
+  }
+  /**
+   * @param int
+   */
+  public function setSubblockInfraMaintenanceOngoingCount($subblockInfraMaintenanceOngoingCount)
+  {
+    $this->subblockInfraMaintenanceOngoingCount = $subblockInfraMaintenanceOngoingCount;
+  }
+  /**
+   * @return int
+   */
+  public function getSubblockInfraMaintenanceOngoingCount()
+  {
+    return $this->subblockInfraMaintenanceOngoingCount;
+  }
+  /**
+   * @param int
+   */
+  public function setSubblockInfraMaintenancePendingCount($subblockInfraMaintenancePendingCount)
+  {
+    $this->subblockInfraMaintenancePendingCount = $subblockInfraMaintenancePendingCount;
+  }
+  /**
+   * @return int
+   */
+  public function getSubblockInfraMaintenancePendingCount()
+  {
+    return $this->subblockInfraMaintenancePendingCount;
   }
   /**
    * @param UpcomingMaintenance

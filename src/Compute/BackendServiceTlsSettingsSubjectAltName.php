@@ -17,44 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class InstanceParams extends \Google\Model
+class BackendServiceTlsSettingsSubjectAltName extends \Google\Model
 {
-  protected $requestValidForDurationType = Duration::class;
-  protected $requestValidForDurationDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $resourceManagerTags;
+  public $dnsName;
+  /**
+   * @var string
+   */
+  public $uniformResourceIdentifier;
 
   /**
-   * @param Duration
+   * @param string
    */
-  public function setRequestValidForDuration(Duration $requestValidForDuration)
+  public function setDnsName($dnsName)
   {
-    $this->requestValidForDuration = $requestValidForDuration;
+    $this->dnsName = $dnsName;
   }
   /**
-   * @return Duration
+   * @return string
    */
-  public function getRequestValidForDuration()
+  public function getDnsName()
   {
-    return $this->requestValidForDuration;
+    return $this->dnsName;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setResourceManagerTags($resourceManagerTags)
+  public function setUniformResourceIdentifier($uniformResourceIdentifier)
   {
-    $this->resourceManagerTags = $resourceManagerTags;
+    $this->uniformResourceIdentifier = $uniformResourceIdentifier;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getResourceManagerTags()
+  public function getUniformResourceIdentifier()
   {
-    return $this->resourceManagerTags;
+    return $this->uniformResourceIdentifier;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(InstanceParams::class, 'Google_Service_Compute_InstanceParams');
+class_alias(BackendServiceTlsSettingsSubjectAltName::class, 'Google_Service_Compute_BackendServiceTlsSettingsSubjectAltName');

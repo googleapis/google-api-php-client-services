@@ -19,6 +19,8 @@ namespace Google\Service\Compute;
 
 class ResourceStatus extends \Google\Model
 {
+  protected $effectiveInstanceMetadataType = ResourceStatusEffectiveInstanceMetadata::class;
+  protected $effectiveInstanceMetadataDataType = '';
   /**
    * @var string
    */
@@ -30,6 +32,20 @@ class ResourceStatus extends \Google\Model
   protected $upcomingMaintenanceType = UpcomingMaintenance::class;
   protected $upcomingMaintenanceDataType = '';
 
+  /**
+   * @param ResourceStatusEffectiveInstanceMetadata
+   */
+  public function setEffectiveInstanceMetadata(ResourceStatusEffectiveInstanceMetadata $effectiveInstanceMetadata)
+  {
+    $this->effectiveInstanceMetadata = $effectiveInstanceMetadata;
+  }
+  /**
+   * @return ResourceStatusEffectiveInstanceMetadata
+   */
+  public function getEffectiveInstanceMetadata()
+  {
+    return $this->effectiveInstanceMetadata;
+  }
   /**
    * @param string
    */
