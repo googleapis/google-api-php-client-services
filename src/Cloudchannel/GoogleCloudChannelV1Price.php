@@ -17,17 +17,22 @@
 
 namespace Google\Service\Cloudchannel;
 
-class GoogleCloudChannelV1Price extends \Google\Model
+class GoogleCloudChannelV1Price extends \Google\Collection
 {
+  protected $collection_key = 'discountComponents';
   protected $basePriceType = GoogleTypeMoney::class;
   protected $basePriceDataType = '';
   public $discount;
+  protected $discountComponentsType = GoogleCloudChannelV1DiscountComponent::class;
+  protected $discountComponentsDataType = 'array';
   protected $effectivePriceType = GoogleTypeMoney::class;
   protected $effectivePriceDataType = '';
   /**
    * @var string
    */
   public $externalPriceUri;
+  protected $pricePeriodType = GoogleCloudChannelV1Period::class;
+  protected $pricePeriodDataType = '';
 
   /**
    * @param GoogleTypeMoney
@@ -50,6 +55,20 @@ class GoogleCloudChannelV1Price extends \Google\Model
   public function getDiscount()
   {
     return $this->discount;
+  }
+  /**
+   * @param GoogleCloudChannelV1DiscountComponent[]
+   */
+  public function setDiscountComponents($discountComponents)
+  {
+    $this->discountComponents = $discountComponents;
+  }
+  /**
+   * @return GoogleCloudChannelV1DiscountComponent[]
+   */
+  public function getDiscountComponents()
+  {
+    return $this->discountComponents;
   }
   /**
    * @param GoogleTypeMoney
@@ -78,6 +97,20 @@ class GoogleCloudChannelV1Price extends \Google\Model
   public function getExternalPriceUri()
   {
     return $this->externalPriceUri;
+  }
+  /**
+   * @param GoogleCloudChannelV1Period
+   */
+  public function setPricePeriod(GoogleCloudChannelV1Period $pricePeriod)
+  {
+    $this->pricePeriod = $pricePeriod;
+  }
+  /**
+   * @return GoogleCloudChannelV1Period
+   */
+  public function getPricePeriod()
+  {
+    return $this->pricePeriod;
   }
 }
 
