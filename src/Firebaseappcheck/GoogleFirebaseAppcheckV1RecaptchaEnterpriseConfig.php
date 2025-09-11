@@ -23,6 +23,8 @@ class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends \Google\Model
    * @var string
    */
   public $name;
+  protected $riskAnalysisType = GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis::class;
+  protected $riskAnalysisDataType = '';
   /**
    * @var string
    */
@@ -45,6 +47,20 @@ class GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfig extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis
+   */
+  public function setRiskAnalysis(GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis $riskAnalysis)
+  {
+    $this->riskAnalysis = $riskAnalysis;
+  }
+  /**
+   * @return GoogleFirebaseAppcheckV1RecaptchaEnterpriseConfigRiskAnalysis
+   */
+  public function getRiskAnalysis()
+  {
+    return $this->riskAnalysis;
   }
   /**
    * @param string

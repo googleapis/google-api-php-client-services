@@ -19,6 +19,12 @@ namespace Google\Service\Firebaseappcheck;
 
 class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
 {
+  protected $accountDetailsType = GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails::class;
+  protected $accountDetailsDataType = '';
+  protected $appIntegrityType = GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity::class;
+  protected $appIntegrityDataType = '';
+  protected $deviceIntegrityType = GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity::class;
+  protected $deviceIntegrityDataType = '';
   /**
    * @var string
    */
@@ -28,6 +34,48 @@ class GoogleFirebaseAppcheckV1PlayIntegrityConfig extends \Google\Model
    */
   public $tokenTtl;
 
+  /**
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails
+   */
+  public function setAccountDetails(GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails $accountDetails)
+  {
+    $this->accountDetails = $accountDetails;
+  }
+  /**
+   * @return GoogleFirebaseAppcheckV1PlayIntegrityConfigAccountDetails
+   */
+  public function getAccountDetails()
+  {
+    return $this->accountDetails;
+  }
+  /**
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity
+   */
+  public function setAppIntegrity(GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity $appIntegrity)
+  {
+    $this->appIntegrity = $appIntegrity;
+  }
+  /**
+   * @return GoogleFirebaseAppcheckV1PlayIntegrityConfigAppIntegrity
+   */
+  public function getAppIntegrity()
+  {
+    return $this->appIntegrity;
+  }
+  /**
+   * @param GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity
+   */
+  public function setDeviceIntegrity(GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity $deviceIntegrity)
+  {
+    $this->deviceIntegrity = $deviceIntegrity;
+  }
+  /**
+   * @return GoogleFirebaseAppcheckV1PlayIntegrityConfigDeviceIntegrity
+   */
+  public function getDeviceIntegrity()
+  {
+    return $this->deviceIntegrity;
+  }
   /**
    * @param string
    */
