@@ -57,11 +57,13 @@ class ChromeManagement extends \Google\Service
   public $customers_apps_chrome;
   public $customers_apps_web;
   public $customers_profiles;
+  public $customers_profiles_commands;
   public $customers_reports;
   public $customers_telemetry_devices;
   public $customers_telemetry_events;
   public $customers_telemetry_notificationConfigs;
   public $customers_telemetry_users;
+  public $customers_thirdPartyProfileUsers;
   public $rootUrlTemplate;
 
   /**
@@ -271,6 +273,54 @@ class ChromeManagement extends \Google\Service
                 'orderBy' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_profiles_commands = new ChromeManagement\Resource\CustomersProfilesCommands(
+        $this,
+        $this->serviceName,
+        'commands',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/commands',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/commands',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
                 'pageSize' => [
                   'location' => 'query',
@@ -751,6 +801,26 @@ class ChromeManagement extends \Google\Service
                 'readMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_thirdPartyProfileUsers = new ChromeManagement\Resource\CustomersThirdPartyProfileUsers(
+        $this,
+        $this->serviceName,
+        'thirdPartyProfileUsers',
+        [
+          'methods' => [
+            'move' => [
+              'path' => 'v1/{+name}:move',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

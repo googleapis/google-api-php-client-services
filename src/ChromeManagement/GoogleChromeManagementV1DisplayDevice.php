@@ -32,6 +32,10 @@ class GoogleChromeManagementV1DisplayDevice extends \Google\Model
    */
   public $displayWidthMm;
   /**
+   * @var string
+   */
+  public $edidVersion;
+  /**
    * @var bool
    */
   public $internal;
@@ -47,6 +51,10 @@ class GoogleChromeManagementV1DisplayDevice extends \Google\Model
    * @var int
    */
   public $modelId;
+  /**
+   * @var int
+   */
+  public $serialNumber;
 
   /**
    * @param int
@@ -89,6 +97,20 @@ class GoogleChromeManagementV1DisplayDevice extends \Google\Model
   public function getDisplayWidthMm()
   {
     return $this->displayWidthMm;
+  }
+  /**
+   * @param string
+   */
+  public function setEdidVersion($edidVersion)
+  {
+    $this->edidVersion = $edidVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getEdidVersion()
+  {
+    return $this->edidVersion;
   }
   /**
    * @param bool
@@ -145,6 +167,20 @@ class GoogleChromeManagementV1DisplayDevice extends \Google\Model
   public function getModelId()
   {
     return $this->modelId;
+  }
+  /**
+   * @param int
+   */
+  public function setSerialNumber($serialNumber)
+  {
+    $this->serialNumber = $serialNumber;
+  }
+  /**
+   * @return int
+   */
+  public function getSerialNumber()
+  {
+    return $this->serialNumber;
   }
 }
 
