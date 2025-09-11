@@ -87,6 +87,10 @@ class ProjectsLocationsSchemaRegistries extends \Google\Service\Resource
    * @param string $parent Required. The parent whose schema registry instances
    * are to be listed. Structured like: `projects/{project}/locations/{location}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view Optional. Specifies the view to return for the schema
+   * registry instances. If not specified, the default view is
+   * SCHEMA_REGISTRY_VIEW_BASIC.
    * @return ListSchemaRegistriesResponse
    * @throws \Google\Service\Exception
    */
