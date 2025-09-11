@@ -76,6 +76,8 @@ class Restore extends \Google\Collection
    * @var string
    */
   public $stateReason;
+  protected $troubleshootingInfoType = TroubleshootingInfo::class;
+  protected $troubleshootingInfoDataType = '';
   /**
    * @var string
    */
@@ -300,6 +302,20 @@ class Restore extends \Google\Collection
   public function getStateReason()
   {
     return $this->stateReason;
+  }
+  /**
+   * @param TroubleshootingInfo
+   */
+  public function setTroubleshootingInfo(TroubleshootingInfo $troubleshootingInfo)
+  {
+    $this->troubleshootingInfo = $troubleshootingInfo;
+  }
+  /**
+   * @return TroubleshootingInfo
+   */
+  public function getTroubleshootingInfo()
+  {
+    return $this->troubleshootingInfo;
   }
   /**
    * @param string
