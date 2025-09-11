@@ -17,11 +17,9 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class ServiceConnectionPolicy extends \Google\Collection
+class Destination extends \Google\Collection
 {
-  protected $collection_key = 'pscConnections';
-  protected $autoCreatedSubnetInfoType = AutoCreatedSubnetworkInfo::class;
-  protected $autoCreatedSubnetInfoDataType = '';
+  protected $collection_key = 'endpoints';
   /**
    * @var string
    */
@@ -30,6 +28,8 @@ class ServiceConnectionPolicy extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $endpointsType = DestinationEndpoint::class;
+  protected $endpointsDataType = 'array';
   /**
    * @var string
    */
@@ -37,7 +37,7 @@ class ServiceConnectionPolicy extends \Google\Collection
   /**
    * @var string
    */
-  public $infrastructure;
+  public $ipPrefix;
   /**
    * @var string[]
    */
@@ -46,37 +46,17 @@ class ServiceConnectionPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $stateTimelineType = StateTimeline::class;
+  protected $stateTimelineDataType = '';
   /**
    * @var string
    */
-  public $network;
-  protected $pscConfigType = PscConfig::class;
-  protected $pscConfigDataType = '';
-  protected $pscConnectionsType = PscConnection::class;
-  protected $pscConnectionsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $serviceClass;
+  public $uid;
   /**
    * @var string
    */
   public $updateTime;
 
-  /**
-   * @param AutoCreatedSubnetworkInfo
-   */
-  public function setAutoCreatedSubnetInfo(AutoCreatedSubnetworkInfo $autoCreatedSubnetInfo)
-  {
-    $this->autoCreatedSubnetInfo = $autoCreatedSubnetInfo;
-  }
-  /**
-   * @return AutoCreatedSubnetworkInfo
-   */
-  public function getAutoCreatedSubnetInfo()
-  {
-    return $this->autoCreatedSubnetInfo;
-  }
   /**
    * @param string
    */
@@ -106,6 +86,20 @@ class ServiceConnectionPolicy extends \Google\Collection
     return $this->description;
   }
   /**
+   * @param DestinationEndpoint[]
+   */
+  public function setEndpoints($endpoints)
+  {
+    $this->endpoints = $endpoints;
+  }
+  /**
+   * @return DestinationEndpoint[]
+   */
+  public function getEndpoints()
+  {
+    return $this->endpoints;
+  }
+  /**
    * @param string
    */
   public function setEtag($etag)
@@ -122,16 +116,16 @@ class ServiceConnectionPolicy extends \Google\Collection
   /**
    * @param string
    */
-  public function setInfrastructure($infrastructure)
+  public function setIpPrefix($ipPrefix)
   {
-    $this->infrastructure = $infrastructure;
+    $this->ipPrefix = $ipPrefix;
   }
   /**
    * @return string
    */
-  public function getInfrastructure()
+  public function getIpPrefix()
   {
-    return $this->infrastructure;
+    return $this->ipPrefix;
   }
   /**
    * @param string[]
@@ -162,60 +156,32 @@ class ServiceConnectionPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * @param StateTimeline
    */
-  public function setNetwork($network)
+  public function setStateTimeline(StateTimeline $stateTimeline)
   {
-    $this->network = $network;
+    $this->stateTimeline = $stateTimeline;
   }
   /**
-   * @return string
+   * @return StateTimeline
    */
-  public function getNetwork()
+  public function getStateTimeline()
   {
-    return $this->network;
-  }
-  /**
-   * @param PscConfig
-   */
-  public function setPscConfig(PscConfig $pscConfig)
-  {
-    $this->pscConfig = $pscConfig;
-  }
-  /**
-   * @return PscConfig
-   */
-  public function getPscConfig()
-  {
-    return $this->pscConfig;
-  }
-  /**
-   * @param PscConnection[]
-   */
-  public function setPscConnections($pscConnections)
-  {
-    $this->pscConnections = $pscConnections;
-  }
-  /**
-   * @return PscConnection[]
-   */
-  public function getPscConnections()
-  {
-    return $this->pscConnections;
+    return $this->stateTimeline;
   }
   /**
    * @param string
    */
-  public function setServiceClass($serviceClass)
+  public function setUid($uid)
   {
-    $this->serviceClass = $serviceClass;
+    $this->uid = $uid;
   }
   /**
    * @return string
    */
-  public function getServiceClass()
+  public function getUid()
   {
-    return $this->serviceClass;
+    return $this->uid;
   }
   /**
    * @param string
@@ -234,4 +200,4 @@ class ServiceConnectionPolicy extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceConnectionPolicy::class, 'Google_Service_Networkconnectivity_ServiceConnectionPolicy');
+class_alias(Destination::class, 'Google_Service_Networkconnectivity_Destination');

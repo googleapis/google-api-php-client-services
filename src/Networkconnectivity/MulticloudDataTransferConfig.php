@@ -17,11 +17,8 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class ServiceConnectionPolicy extends \Google\Collection
+class MulticloudDataTransferConfig extends \Google\Model
 {
-  protected $collection_key = 'pscConnections';
-  protected $autoCreatedSubnetInfoType = AutoCreatedSubnetworkInfo::class;
-  protected $autoCreatedSubnetInfoDataType = '';
   /**
    * @var string
    */
@@ -31,13 +28,17 @@ class ServiceConnectionPolicy extends \Google\Collection
    */
   public $description;
   /**
-   * @var string
+   * @var int
    */
-  public $etag;
+  public $destinationsActiveCount;
+  /**
+   * @var int
+   */
+  public $destinationsCount;
   /**
    * @var string
    */
-  public $infrastructure;
+  public $etag;
   /**
    * @var string[]
    */
@@ -46,37 +47,17 @@ class ServiceConnectionPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $servicesType = StateTimeline::class;
+  protected $servicesDataType = 'map';
   /**
    * @var string
    */
-  public $network;
-  protected $pscConfigType = PscConfig::class;
-  protected $pscConfigDataType = '';
-  protected $pscConnectionsType = PscConnection::class;
-  protected $pscConnectionsDataType = 'array';
-  /**
-   * @var string
-   */
-  public $serviceClass;
+  public $uid;
   /**
    * @var string
    */
   public $updateTime;
 
-  /**
-   * @param AutoCreatedSubnetworkInfo
-   */
-  public function setAutoCreatedSubnetInfo(AutoCreatedSubnetworkInfo $autoCreatedSubnetInfo)
-  {
-    $this->autoCreatedSubnetInfo = $autoCreatedSubnetInfo;
-  }
-  /**
-   * @return AutoCreatedSubnetworkInfo
-   */
-  public function getAutoCreatedSubnetInfo()
-  {
-    return $this->autoCreatedSubnetInfo;
-  }
   /**
    * @param string
    */
@@ -106,6 +87,34 @@ class ServiceConnectionPolicy extends \Google\Collection
     return $this->description;
   }
   /**
+   * @param int
+   */
+  public function setDestinationsActiveCount($destinationsActiveCount)
+  {
+    $this->destinationsActiveCount = $destinationsActiveCount;
+  }
+  /**
+   * @return int
+   */
+  public function getDestinationsActiveCount()
+  {
+    return $this->destinationsActiveCount;
+  }
+  /**
+   * @param int
+   */
+  public function setDestinationsCount($destinationsCount)
+  {
+    $this->destinationsCount = $destinationsCount;
+  }
+  /**
+   * @return int
+   */
+  public function getDestinationsCount()
+  {
+    return $this->destinationsCount;
+  }
+  /**
    * @param string
    */
   public function setEtag($etag)
@@ -118,20 +127,6 @@ class ServiceConnectionPolicy extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
-  }
-  /**
-   * @param string
-   */
-  public function setInfrastructure($infrastructure)
-  {
-    $this->infrastructure = $infrastructure;
-  }
-  /**
-   * @return string
-   */
-  public function getInfrastructure()
-  {
-    return $this->infrastructure;
   }
   /**
    * @param string[]
@@ -162,60 +157,32 @@ class ServiceConnectionPolicy extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * @param StateTimeline[]
    */
-  public function setNetwork($network)
+  public function setServices($services)
   {
-    $this->network = $network;
+    $this->services = $services;
   }
   /**
-   * @return string
+   * @return StateTimeline[]
    */
-  public function getNetwork()
+  public function getServices()
   {
-    return $this->network;
-  }
-  /**
-   * @param PscConfig
-   */
-  public function setPscConfig(PscConfig $pscConfig)
-  {
-    $this->pscConfig = $pscConfig;
-  }
-  /**
-   * @return PscConfig
-   */
-  public function getPscConfig()
-  {
-    return $this->pscConfig;
-  }
-  /**
-   * @param PscConnection[]
-   */
-  public function setPscConnections($pscConnections)
-  {
-    $this->pscConnections = $pscConnections;
-  }
-  /**
-   * @return PscConnection[]
-   */
-  public function getPscConnections()
-  {
-    return $this->pscConnections;
+    return $this->services;
   }
   /**
    * @param string
    */
-  public function setServiceClass($serviceClass)
+  public function setUid($uid)
   {
-    $this->serviceClass = $serviceClass;
+    $this->uid = $uid;
   }
   /**
    * @return string
    */
-  public function getServiceClass()
+  public function getUid()
   {
-    return $this->serviceClass;
+    return $this->uid;
   }
   /**
    * @param string
@@ -234,4 +201,4 @@ class ServiceConnectionPolicy extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ServiceConnectionPolicy::class, 'Google_Service_Networkconnectivity_ServiceConnectionPolicy');
+class_alias(MulticloudDataTransferConfig::class, 'Google_Service_Networkconnectivity_MulticloudDataTransferConfig');
