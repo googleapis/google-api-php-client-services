@@ -28,6 +28,10 @@ class VoiceSelectionParams extends \Google\Model
   /**
    * @var string
    */
+  public $modelName;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -63,6 +67,20 @@ class VoiceSelectionParams extends \Google\Model
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * @param string
+   */
+  public function setModelName($modelName)
+  {
+    $this->modelName = $modelName;
+  }
+  /**
+   * @return string
+   */
+  public function getModelName()
+  {
+    return $this->modelName;
   }
   /**
    * @param string
