@@ -26,6 +26,10 @@ class Product extends \Google\Model
   /**
    * @var string
    */
+  public $minorVersion;
+  /**
+   * @var string
+   */
   public $type;
   /**
    * @var string
@@ -45,6 +49,20 @@ class Product extends \Google\Model
   public function getEngine()
   {
     return $this->engine;
+  }
+  /**
+   * @param string
+   */
+  public function setMinorVersion($minorVersion)
+  {
+    $this->minorVersion = $minorVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getMinorVersion()
+  {
+    return $this->minorVersion;
   }
   /**
    * @param string
