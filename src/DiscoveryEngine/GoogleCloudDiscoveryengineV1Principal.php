@@ -22,12 +22,30 @@ class GoogleCloudDiscoveryengineV1Principal extends \Google\Model
   /**
    * @var string
    */
+  public $externalEntityId;
+  /**
+   * @var string
+   */
   public $groupId;
   /**
    * @var string
    */
   public $userId;
 
+  /**
+   * @param string
+   */
+  public function setExternalEntityId($externalEntityId)
+  {
+    $this->externalEntityId = $externalEntityId;
+  }
+  /**
+   * @return string
+   */
+  public function getExternalEntityId()
+  {
+    return $this->externalEntityId;
+  }
   /**
    * @param string
    */

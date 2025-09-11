@@ -27,6 +27,10 @@ class GoogleCloudDiscoveryengineV1alphaSessionTurn extends \Google\Model
   protected $detailedAnswerDataType = '';
   protected $queryType = GoogleCloudDiscoveryengineV1alphaQuery::class;
   protected $queryDataType = '';
+  /**
+   * @var string[]
+   */
+  public $queryConfig;
 
   /**
    * @param string
@@ -69,6 +73,20 @@ class GoogleCloudDiscoveryengineV1alphaSessionTurn extends \Google\Model
   public function getQuery()
   {
     return $this->query;
+  }
+  /**
+   * @param string[]
+   */
+  public function setQueryConfig($queryConfig)
+  {
+    $this->queryConfig = $queryConfig;
+  }
+  /**
+   * @return string[]
+   */
+  public function getQueryConfig()
+  {
+    return $this->queryConfig;
   }
 }
 

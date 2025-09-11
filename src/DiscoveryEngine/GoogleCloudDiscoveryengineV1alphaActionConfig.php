@@ -31,6 +31,10 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
    * @var string
    */
   public $serviceName;
+  /**
+   * @var bool
+   */
+  public $useStaticSecrets;
 
   /**
    * @param array[]
@@ -73,6 +77,20 @@ class GoogleCloudDiscoveryengineV1alphaActionConfig extends \Google\Model
   public function getServiceName()
   {
     return $this->serviceName;
+  }
+  /**
+   * @param bool
+   */
+  public function setUseStaticSecrets($useStaticSecrets)
+  {
+    $this->useStaticSecrets = $useStaticSecrets;
+  }
+  /**
+   * @return bool
+   */
+  public function getUseStaticSecrets()
+  {
+    return $this->useStaticSecrets;
   }
 }
 

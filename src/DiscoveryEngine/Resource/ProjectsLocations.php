@@ -17,6 +17,7 @@
 
 namespace Google\Service\DiscoveryEngine\Resource;
 
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1AclConfig;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1CmekConfig;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
@@ -30,6 +31,23 @@ use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
  */
 class ProjectsLocations extends \Google\Service\Resource
 {
+  /**
+   * Gets the AclConfig. (locations.getAclConfig)
+   *
+   * @param string $name Required. Resource name of AclConfig, such as
+   * `projects/locations/aclConfig`. If the caller does not have permission to
+   * access the AclConfig, regardless of whether or not it exists, a
+   * PERMISSION_DENIED error is returned.
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1AclConfig
+   * @throws \Google\Service\Exception
+   */
+  public function getAclConfig($name, $optParams = [])
+  {
+    $params = ['name' => $name];
+    $params = array_merge($params, $optParams);
+    return $this->call('getAclConfig', [$params], GoogleCloudDiscoveryengineV1AclConfig::class);
+  }
   /**
    * Gets the CmekConfig. (locations.getCmekConfig)
    *
@@ -48,6 +66,26 @@ class ProjectsLocations extends \Google\Service\Resource
     return $this->call('getCmekConfig', [$params], GoogleCloudDiscoveryengineV1CmekConfig::class);
   }
   /**
+   * Default ACL configuration for use in a location of a customer's project.
+   * Updates will only reflect to new data stores. Existing data stores will still
+   * use the old value. (locations.updateAclConfig)
+   *
+   * @param string $name Immutable. The full resource name of the acl
+   * configuration. Format: `projects/{project}/locations/{location}/aclConfig`.
+   * This field must be a UTF-8 encoded string with a length limit of 1024
+   * characters.
+   * @param GoogleCloudDiscoveryengineV1AclConfig $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudDiscoveryengineV1AclConfig
+   * @throws \Google\Service\Exception
+   */
+  public function updateAclConfig($name, GoogleCloudDiscoveryengineV1AclConfig $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('updateAclConfig', [$params], GoogleCloudDiscoveryengineV1AclConfig::class);
+  }
+  /**
    * Provisions a CMEK key for use in a location of a customer's project. This
    * method will also conduct location validation on the provided cmekConfig to
    * make sure the key is valid and can be used in the selected location.
@@ -55,7 +93,7 @@ class ProjectsLocations extends \Google\Service\Resource
    *
    * @param string $name Required. The name of the CmekConfig of the form
    * `projects/{project}/locations/{location}/cmekConfig` or
-   * `projects/{project}/locations/{location}/cmekConfigs/{cmekConfig}`.
+   * `projects/{project}/locations/{location}/cmekConfigs/{cmek_config}`.
    * @param GoogleCloudDiscoveryengineV1CmekConfig $postBody
    * @param array $optParams Optional parameters.
    *

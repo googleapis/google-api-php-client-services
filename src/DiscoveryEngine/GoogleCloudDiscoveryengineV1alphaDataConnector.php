@@ -26,6 +26,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public $aclEnabled;
   protected $actionConfigType = GoogleCloudDiscoveryengineV1alphaActionConfig::class;
   protected $actionConfigDataType = '';
+  /**
+   * @var string
+   */
+  public $actionState;
   protected $alertPolicyConfigsType = GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig::class;
   protected $alertPolicyConfigsDataType = 'array';
   /**
@@ -66,6 +70,12 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   protected $entitiesDataType = 'array';
   protected $errorsType = GoogleRpcStatus::class;
   protected $errorsDataType = 'array';
+  protected $federatedConfigType = GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig::class;
+  protected $federatedConfigDataType = '';
+  /**
+   * @var bool
+   */
+  public $hybridIngestionDisabled;
   /**
    * @var string
    */
@@ -117,6 +127,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
    */
   public $refreshInterval;
   /**
+   * @var string[]
+   */
+  public $removeParamKeys;
+  /**
    * @var string
    */
   public $state;
@@ -164,6 +178,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getActionConfig()
   {
     return $this->actionConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setActionState($actionState)
+  {
+    $this->actionState = $actionState;
+  }
+  /**
+   * @return string
+   */
+  public function getActionState()
+  {
+    return $this->actionState;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaAlertPolicyConfig[]
@@ -346,6 +374,34 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getErrors()
   {
     return $this->errors;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig
+   */
+  public function setFederatedConfig(GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig $federatedConfig)
+  {
+    $this->federatedConfig = $federatedConfig;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorFederatedConfig
+   */
+  public function getFederatedConfig()
+  {
+    return $this->federatedConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setHybridIngestionDisabled($hybridIngestionDisabled)
+  {
+    $this->hybridIngestionDisabled = $hybridIngestionDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getHybridIngestionDisabled()
+  {
+    return $this->hybridIngestionDisabled;
   }
   /**
    * @param string
@@ -542,6 +598,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getRefreshInterval()
   {
     return $this->refreshInterval;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRemoveParamKeys($removeParamKeys)
+  {
+    $this->removeParamKeys = $removeParamKeys;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRemoveParamKeys()
+  {
+    return $this->removeParamKeys;
   }
   /**
    * @param string

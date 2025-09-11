@@ -27,6 +27,8 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
    * @var string
    */
   public $dataUseTermsVersion;
+  protected $saasParamsType = GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams::class;
+  protected $saasParamsDataType = '';
 
   /**
    * @param bool
@@ -55,6 +57,20 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends \Google\Model
   public function getDataUseTermsVersion()
   {
     return $this->dataUseTermsVersion;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams
+   */
+  public function setSaasParams(GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams $saasParams)
+  {
+    $this->saasParams = $saasParams;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams
+   */
+  public function getSaasParams()
+  {
+    return $this->saasParams;
   }
 }
 

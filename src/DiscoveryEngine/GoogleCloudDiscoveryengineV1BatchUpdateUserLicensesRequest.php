@@ -23,8 +23,6 @@ class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest extends \Google
    * @var bool
    */
   public $deleteUnassignedUserLicenses;
-  protected $gcsSourceType = GoogleCloudDiscoveryengineV1GcsSource::class;
-  protected $gcsSourceDataType = '';
   protected $inlineSourceType = GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource::class;
   protected $inlineSourceDataType = '';
 
@@ -41,20 +39,6 @@ class GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequest extends \Google
   public function getDeleteUnassignedUserLicenses()
   {
     return $this->deleteUnassignedUserLicenses;
-  }
-  /**
-   * @param GoogleCloudDiscoveryengineV1GcsSource
-   */
-  public function setGcsSource(GoogleCloudDiscoveryengineV1GcsSource $gcsSource)
-  {
-    $this->gcsSource = $gcsSource;
-  }
-  /**
-   * @return GoogleCloudDiscoveryengineV1GcsSource
-   */
-  public function getGcsSource()
-  {
-    return $this->gcsSource;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1BatchUpdateUserLicensesRequestInlineSource

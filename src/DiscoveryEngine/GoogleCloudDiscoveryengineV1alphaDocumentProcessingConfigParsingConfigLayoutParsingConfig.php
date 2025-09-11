@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayo
   /**
    * @var bool
    */
+  public $enableGetProcessedDocument;
+  /**
+   * @var bool
+   */
   public $enableImageAnnotation;
   /**
    * @var bool
@@ -45,6 +49,20 @@ class GoogleCloudDiscoveryengineV1alphaDocumentProcessingConfigParsingConfigLayo
    */
   public $structuredContentTypes;
 
+  /**
+   * @param bool
+   */
+  public function setEnableGetProcessedDocument($enableGetProcessedDocument)
+  {
+    $this->enableGetProcessedDocument = $enableGetProcessedDocument;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnableGetProcessedDocument()
+  {
+    return $this->enableGetProcessedDocument;
+  }
   /**
    * @param bool
    */

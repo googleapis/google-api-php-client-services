@@ -23,12 +23,30 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUndersta
   /**
    * @var string
    */
+  public $extractedFilterBehavior;
+  /**
+   * @var string
+   */
   public $filterExtractionCondition;
   /**
    * @var string[]
    */
   public $geoSearchQueryDetectionFieldNames;
 
+  /**
+   * @param string
+   */
+  public function setExtractedFilterBehavior($extractedFilterBehavior)
+  {
+    $this->extractedFilterBehavior = $extractedFilterBehavior;
+  }
+  /**
+   * @return string
+   */
+  public function getExtractedFilterBehavior()
+  {
+    return $this->extractedFilterBehavior;
+  }
   /**
    * @param string
    */

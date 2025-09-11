@@ -23,6 +23,8 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig extends \
    * @var string
    */
   public $realtimeSyncSecret;
+  protected $streamingErrorType = GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError::class;
+  protected $streamingErrorDataType = '';
   /**
    * @var string
    */
@@ -41,6 +43,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfig extends \
   public function getRealtimeSyncSecret()
   {
     return $this->realtimeSyncSecret;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError
+   */
+  public function setStreamingError(GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError $streamingError)
+  {
+    $this->streamingError = $streamingError;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaDataConnectorRealtimeSyncConfigStreamingError
+   */
+  public function getStreamingError()
+  {
+    return $this->streamingError;
   }
   /**
    * @param string
