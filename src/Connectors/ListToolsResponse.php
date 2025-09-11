@@ -17,46 +17,45 @@
 
 namespace Google\Service\Connectors;
 
-class UpdateEntitiesWithConditionsResponse extends \Google\Model
+class ListToolsResponse extends \Google\Collection
 {
+  protected $collection_key = 'tools';
   /**
-   * @var array[]
+   * @var string
    */
-  public $metadata;
-  /**
-   * @var array[]
-   */
-  public $response;
+  public $nextPageToken;
+  protected $toolsType = Tool::class;
+  protected $toolsDataType = 'array';
 
   /**
-   * @param array[]
+   * @param string
    */
-  public function setMetadata($metadata)
+  public function setNextPageToken($nextPageToken)
   {
-    $this->metadata = $metadata;
+    $this->nextPageToken = $nextPageToken;
   }
   /**
-   * @return array[]
+   * @return string
    */
-  public function getMetadata()
+  public function getNextPageToken()
   {
-    return $this->metadata;
+    return $this->nextPageToken;
   }
   /**
-   * @param array[]
+   * @param Tool[]
    */
-  public function setResponse($response)
+  public function setTools($tools)
   {
-    $this->response = $response;
+    $this->tools = $tools;
   }
   /**
-   * @return array[]
+   * @return Tool[]
    */
-  public function getResponse()
+  public function getTools()
   {
-    return $this->response;
+    return $this->tools;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UpdateEntitiesWithConditionsResponse::class, 'Google_Service_Connectors_UpdateEntitiesWithConditionsResponse');
+class_alias(ListToolsResponse::class, 'Google_Service_Connectors_ListToolsResponse');

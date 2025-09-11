@@ -38,6 +38,8 @@ class ProjectsLocationsConnectionsEntityTypes extends \Google\Service\Resource
    * tyType}
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string contextMetadata Context metadata for request could be used
+   * to fetch customization of entity type schema.
    * @opt_param string view Specifies view for entity type schema.
    * @return EntityType
    * @throws \Google\Service\Exception

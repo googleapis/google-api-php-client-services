@@ -43,6 +43,7 @@ class Connectors extends \Google\Service
   public $projects_locations_connections_actions;
   public $projects_locations_connections_entityTypes;
   public $projects_locations_connections_entityTypes_entities;
+  public $projects_locations_connections_tools;
   public $rootUrlTemplate;
 
   /**
@@ -193,6 +194,10 @@ class Connectors extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'contextMetadata' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'view' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -326,6 +331,44 @@ class Connectors extends \Google\Service
                   'required' => true,
                 ],
                 'conditions' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_connections_tools = new Connectors\Resource\ProjectsLocationsConnectionsTools(
+        $this,
+        $this->serviceName,
+        'tools',
+        [
+          'methods' => [
+            'execute' => [
+              'path' => 'v2/{+name}:execute',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/tools',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

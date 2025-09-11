@@ -17,46 +17,28 @@
 
 namespace Google\Service\Connectors;
 
-class UpdateEntitiesWithConditionsResponse extends \Google\Model
+class ExecuteToolResponse extends \Google\Model
 {
   /**
    * @var array[]
    */
-  public $metadata;
-  /**
-   * @var array[]
-   */
-  public $response;
+  public $result;
 
   /**
    * @param array[]
    */
-  public function setMetadata($metadata)
+  public function setResult($result)
   {
-    $this->metadata = $metadata;
+    $this->result = $result;
   }
   /**
    * @return array[]
    */
-  public function getMetadata()
+  public function getResult()
   {
-    return $this->metadata;
-  }
-  /**
-   * @param array[]
-   */
-  public function setResponse($response)
-  {
-    $this->response = $response;
-  }
-  /**
-   * @return array[]
-   */
-  public function getResponse()
-  {
-    return $this->response;
+    return $this->result;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UpdateEntitiesWithConditionsResponse::class, 'Google_Service_Connectors_UpdateEntitiesWithConditionsResponse');
+class_alias(ExecuteToolResponse::class, 'Google_Service_Connectors_ExecuteToolResponse');

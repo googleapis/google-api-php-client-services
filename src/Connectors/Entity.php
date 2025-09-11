@@ -24,6 +24,10 @@ class Entity extends \Google\Model
    */
   public $fields;
   /**
+   * @var array[]
+   */
+  public $metadata;
+  /**
    * @var string
    */
   public $name;
@@ -41,6 +45,20 @@ class Entity extends \Google\Model
   public function getFields()
   {
     return $this->fields;
+  }
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string
