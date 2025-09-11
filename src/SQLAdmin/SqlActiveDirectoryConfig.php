@@ -17,8 +17,17 @@
 
 namespace Google\Service\SQLAdmin;
 
-class SqlActiveDirectoryConfig extends \Google\Model
+class SqlActiveDirectoryConfig extends \Google\Collection
 {
+  protected $collection_key = 'dnsServers';
+  /**
+   * @var string
+   */
+  public $adminCredentialSecretName;
+  /**
+   * @var string[]
+   */
+  public $dnsServers;
   /**
    * @var string
    */
@@ -27,7 +36,43 @@ class SqlActiveDirectoryConfig extends \Google\Model
    * @var string
    */
   public $kind;
+  /**
+   * @var string
+   */
+  public $mode;
+  /**
+   * @var string
+   */
+  public $organizationalUnit;
 
+  /**
+   * @param string
+   */
+  public function setAdminCredentialSecretName($adminCredentialSecretName)
+  {
+    $this->adminCredentialSecretName = $adminCredentialSecretName;
+  }
+  /**
+   * @return string
+   */
+  public function getAdminCredentialSecretName()
+  {
+    return $this->adminCredentialSecretName;
+  }
+  /**
+   * @param string[]
+   */
+  public function setDnsServers($dnsServers)
+  {
+    $this->dnsServers = $dnsServers;
+  }
+  /**
+   * @return string[]
+   */
+  public function getDnsServers()
+  {
+    return $this->dnsServers;
+  }
   /**
    * @param string
    */
@@ -55,6 +100,34 @@ class SqlActiveDirectoryConfig extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string
+   */
+  public function setMode($mode)
+  {
+    $this->mode = $mode;
+  }
+  /**
+   * @return string
+   */
+  public function getMode()
+  {
+    return $this->mode;
+  }
+  /**
+   * @param string
+   */
+  public function setOrganizationalUnit($organizationalUnit)
+  {
+    $this->organizationalUnit = $organizationalUnit;
+  }
+  /**
+   * @return string
+   */
+  public function getOrganizationalUnit()
+  {
+    return $this->organizationalUnit;
   }
 }
 

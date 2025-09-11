@@ -54,6 +54,10 @@ class CloneContext extends \Google\Collection
    * @var string
    */
   public $preferredZone;
+  /**
+   * @var string
+   */
+  public $sourceInstanceDeletionTime;
 
   /**
    * @param string
@@ -180,6 +184,20 @@ class CloneContext extends \Google\Collection
   public function getPreferredZone()
   {
     return $this->preferredZone;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceInstanceDeletionTime($sourceInstanceDeletionTime)
+  {
+    $this->sourceInstanceDeletionTime = $sourceInstanceDeletionTime;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceInstanceDeletionTime()
+  {
+    return $this->sourceInstanceDeletionTime;
   }
 }
 

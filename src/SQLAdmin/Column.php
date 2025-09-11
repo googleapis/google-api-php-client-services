@@ -17,64 +17,46 @@
 
 namespace Google\Service\SQLAdmin;
 
-class SqlInstancesGetLatestRecoveryTimeResponse extends \Google\Model
+class Column extends \Google\Model
 {
   /**
    * @var string
    */
-  public $earliestRecoveryTime;
+  public $name;
   /**
    * @var string
    */
-  public $kind;
-  /**
-   * @var string
-   */
-  public $latestRecoveryTime;
+  public $type;
 
   /**
    * @param string
    */
-  public function setEarliestRecoveryTime($earliestRecoveryTime)
+  public function setName($name)
   {
-    $this->earliestRecoveryTime = $earliestRecoveryTime;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getEarliestRecoveryTime()
+  public function getName()
   {
-    return $this->earliestRecoveryTime;
+    return $this->name;
   }
   /**
    * @param string
    */
-  public function setKind($kind)
+  public function setType($type)
   {
-    $this->kind = $kind;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getKind()
+  public function getType()
   {
-    return $this->kind;
-  }
-  /**
-   * @param string
-   */
-  public function setLatestRecoveryTime($latestRecoveryTime)
-  {
-    $this->latestRecoveryTime = $latestRecoveryTime;
-  }
-  /**
-   * @return string
-   */
-  public function getLatestRecoveryTime()
-  {
-    return $this->latestRecoveryTime;
+    return $this->type;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SqlInstancesGetLatestRecoveryTimeResponse::class, 'Google_Service_SQLAdmin_SqlInstancesGetLatestRecoveryTimeResponse');
+class_alias(Column::class, 'Google_Service_SQLAdmin_Column');

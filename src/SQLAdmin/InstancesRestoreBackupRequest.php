@@ -17,8 +17,9 @@
 
 namespace Google\Service\SQLAdmin;
 
-class InstancesRestoreBackupRequest extends \Google\Model
+class InstancesRestoreBackupRequest extends \Google\Collection
 {
+  protected $collection_key = 'restoreInstanceClearOverridesFieldNames';
   /**
    * @var string
    */
@@ -29,6 +30,10 @@ class InstancesRestoreBackupRequest extends \Google\Model
   public $backupdrBackup;
   protected $restoreBackupContextType = RestoreBackupContext::class;
   protected $restoreBackupContextDataType = '';
+  /**
+   * @var string[]
+   */
+  public $restoreInstanceClearOverridesFieldNames;
   protected $restoreInstanceSettingsType = DatabaseInstance::class;
   protected $restoreInstanceSettingsDataType = '';
 
@@ -73,6 +78,20 @@ class InstancesRestoreBackupRequest extends \Google\Model
   public function getRestoreBackupContext()
   {
     return $this->restoreBackupContext;
+  }
+  /**
+   * @param string[]
+   */
+  public function setRestoreInstanceClearOverridesFieldNames($restoreInstanceClearOverridesFieldNames)
+  {
+    $this->restoreInstanceClearOverridesFieldNames = $restoreInstanceClearOverridesFieldNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getRestoreInstanceClearOverridesFieldNames()
+  {
+    return $this->restoreInstanceClearOverridesFieldNames;
   }
   /**
    * @param DatabaseInstance

@@ -26,6 +26,10 @@ class ConnectionPoolConfig extends \Google\Collection
   public $connectionPoolingEnabled;
   protected $flagsType = ConnectionPoolFlags::class;
   protected $flagsDataType = 'array';
+  /**
+   * @var int
+   */
+  public $poolerCount;
 
   /**
    * @param bool
@@ -54,6 +58,20 @@ class ConnectionPoolConfig extends \Google\Collection
   public function getFlags()
   {
     return $this->flags;
+  }
+  /**
+   * @param int
+   */
+  public function setPoolerCount($poolerCount)
+  {
+    $this->poolerCount = $poolerCount;
+  }
+  /**
+   * @return int
+   */
+  public function getPoolerCount()
+  {
+    return $this->poolerCount;
   }
 }
 

@@ -29,10 +29,6 @@ class DatabaseInstance extends \Google\Collection
    */
   public $backendType;
   /**
-   * @var bool
-   */
-  public $clearNetwork;
-  /**
    * @var string
    */
   public $connectionName;
@@ -118,8 +114,6 @@ class DatabaseInstance extends \Google\Collection
   protected $onPremisesConfigurationDataType = '';
   protected $outOfDiskReportType = SqlOutOfDiskReport::class;
   protected $outOfDiskReportDataType = '';
-  protected $pitrFieldsType = PITRFields::class;
-  protected $pitrFieldsDataType = '';
   /**
    * @var string
    */
@@ -228,20 +222,6 @@ class DatabaseInstance extends \Google\Collection
   public function getBackendType()
   {
     return $this->backendType;
-  }
-  /**
-   * @param bool
-   */
-  public function setClearNetwork($clearNetwork)
-  {
-    $this->clearNetwork = $clearNetwork;
-  }
-  /**
-   * @return bool
-   */
-  public function getClearNetwork()
-  {
-    return $this->clearNetwork;
   }
   /**
    * @param string
@@ -606,20 +586,6 @@ class DatabaseInstance extends \Google\Collection
   public function getOutOfDiskReport()
   {
     return $this->outOfDiskReport;
-  }
-  /**
-   * @param PITRFields
-   */
-  public function setPitrFields(PITRFields $pitrFields)
-  {
-    $this->pitrFields = $pitrFields;
-  }
-  /**
-   * @return PITRFields
-   */
-  public function getPitrFields()
-  {
-    return $this->pitrFields;
   }
   /**
    * @param string
