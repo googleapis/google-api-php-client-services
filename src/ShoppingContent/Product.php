@@ -227,6 +227,8 @@ class Product extends \Google\Collection
    * @var string
    */
   public $maxHandlingTime;
+  protected $maximumRetailPriceType = Price::class;
+  protected $maximumRetailPriceDataType = '';
   /**
    * @var string
    */
@@ -1165,6 +1167,20 @@ class Product extends \Google\Collection
   public function getMaxHandlingTime()
   {
     return $this->maxHandlingTime;
+  }
+  /**
+   * @param Price
+   */
+  public function setMaximumRetailPrice(Price $maximumRetailPrice)
+  {
+    $this->maximumRetailPrice = $maximumRetailPrice;
+  }
+  /**
+   * @return Price
+   */
+  public function getMaximumRetailPrice()
+  {
+    return $this->maximumRetailPrice;
   }
   /**
    * @param string
