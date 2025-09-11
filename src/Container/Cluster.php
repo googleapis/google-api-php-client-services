@@ -100,6 +100,8 @@ class Cluster extends \Google\Collection
   public $expireTime;
   protected $fleetType = Fleet::class;
   protected $fleetDataType = '';
+  protected $gkeAutoUpgradeConfigType = GkeAutoUpgradeConfig::class;
+  protected $gkeAutoUpgradeConfigDataType = '';
   /**
    * @var string
    */
@@ -636,6 +638,20 @@ class Cluster extends \Google\Collection
   public function getFleet()
   {
     return $this->fleet;
+  }
+  /**
+   * @param GkeAutoUpgradeConfig
+   */
+  public function setGkeAutoUpgradeConfig(GkeAutoUpgradeConfig $gkeAutoUpgradeConfig)
+  {
+    $this->gkeAutoUpgradeConfig = $gkeAutoUpgradeConfig;
+  }
+  /**
+   * @return GkeAutoUpgradeConfig
+   */
+  public function getGkeAutoUpgradeConfig()
+  {
+    return $this->gkeAutoUpgradeConfig;
   }
   /**
    * @param string

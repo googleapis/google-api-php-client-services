@@ -17,28 +17,47 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class AdditionalIPRangesConfig extends \Google\Collection
 {
+  protected $collection_key = 'podIpv4RangeNames';
+  /**
+   * @var string[]
+   */
+  public $podIpv4RangeNames;
   /**
    * @var string
    */
-  public $mode;
+  public $subnetwork;
 
+  /**
+   * @param string[]
+   */
+  public function setPodIpv4RangeNames($podIpv4RangeNames)
+  {
+    $this->podIpv4RangeNames = $podIpv4RangeNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getPodIpv4RangeNames()
+  {
+    return $this->podIpv4RangeNames;
+  }
   /**
    * @param string
    */
-  public function setMode($mode)
+  public function setSubnetwork($subnetwork)
   {
-    $this->mode = $mode;
+    $this->subnetwork = $subnetwork;
   }
   /**
    * @return string
    */
-  public function getMode()
+  public function getSubnetwork()
   {
-    return $this->mode;
+    return $this->subnetwork;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(AdditionalIPRangesConfig::class, 'Google_Service_Container_AdditionalIPRangesConfig');

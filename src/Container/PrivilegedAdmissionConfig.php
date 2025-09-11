@@ -17,28 +17,29 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class PrivilegedAdmissionConfig extends \Google\Collection
 {
+  protected $collection_key = 'allowlistPaths';
   /**
-   * @var string
+   * @var string[]
    */
-  public $mode;
+  public $allowlistPaths;
 
   /**
-   * @param string
+   * @param string[]
    */
-  public function setMode($mode)
+  public function setAllowlistPaths($allowlistPaths)
   {
-    $this->mode = $mode;
+    $this->allowlistPaths = $allowlistPaths;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getMode()
+  public function getAllowlistPaths()
   {
-    return $this->mode;
+    return $this->allowlistPaths;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(PrivilegedAdmissionConfig::class, 'Google_Service_Container_PrivilegedAdmissionConfig');

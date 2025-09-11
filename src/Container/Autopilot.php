@@ -23,6 +23,8 @@ class Autopilot extends \Google\Model
    * @var bool
    */
   public $enabled;
+  protected $privilegedAdmissionConfigType = PrivilegedAdmissionConfig::class;
+  protected $privilegedAdmissionConfigDataType = '';
   protected $workloadPolicyConfigType = WorkloadPolicyConfig::class;
   protected $workloadPolicyConfigDataType = '';
 
@@ -39,6 +41,20 @@ class Autopilot extends \Google\Model
   public function getEnabled()
   {
     return $this->enabled;
+  }
+  /**
+   * @param PrivilegedAdmissionConfig
+   */
+  public function setPrivilegedAdmissionConfig(PrivilegedAdmissionConfig $privilegedAdmissionConfig)
+  {
+    $this->privilegedAdmissionConfig = $privilegedAdmissionConfig;
+  }
+  /**
+   * @return PrivilegedAdmissionConfig
+   */
+  public function getPrivilegedAdmissionConfig()
+  {
+    return $this->privilegedAdmissionConfig;
   }
   /**
    * @param WorkloadPolicyConfig

@@ -17,28 +17,27 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class DesiredAdditionalIPRangesConfig extends \Google\Collection
 {
-  /**
-   * @var string
-   */
-  public $mode;
+  protected $collection_key = 'additionalIpRangesConfigs';
+  protected $additionalIpRangesConfigsType = AdditionalIPRangesConfig::class;
+  protected $additionalIpRangesConfigsDataType = 'array';
 
   /**
-   * @param string
+   * @param AdditionalIPRangesConfig[]
    */
-  public function setMode($mode)
+  public function setAdditionalIpRangesConfigs($additionalIpRangesConfigs)
   {
-    $this->mode = $mode;
+    $this->additionalIpRangesConfigs = $additionalIpRangesConfigs;
   }
   /**
-   * @return string
+   * @return AdditionalIPRangesConfig[]
    */
-  public function getMode()
+  public function getAdditionalIpRangesConfigs()
   {
-    return $this->mode;
+    return $this->additionalIpRangesConfigs;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(DesiredAdditionalIPRangesConfig::class, 'Google_Service_Container_DesiredAdditionalIPRangesConfig');

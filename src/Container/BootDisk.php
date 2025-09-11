@@ -17,82 +17,82 @@
 
 namespace Google\Service\Container;
 
-class Fleet extends \Google\Model
+class BootDisk extends \Google\Model
 {
   /**
    * @var string
    */
-  public $membership;
+  public $diskType;
   /**
    * @var string
    */
-  public $membershipType;
-  /**
-   * @var bool
-   */
-  public $preRegistered;
+  public $provisionedIops;
   /**
    * @var string
    */
-  public $project;
+  public $provisionedThroughput;
+  /**
+   * @var string
+   */
+  public $sizeGb;
 
   /**
    * @param string
    */
-  public function setMembership($membership)
+  public function setDiskType($diskType)
   {
-    $this->membership = $membership;
+    $this->diskType = $diskType;
   }
   /**
    * @return string
    */
-  public function getMembership()
+  public function getDiskType()
   {
-    return $this->membership;
+    return $this->diskType;
   }
   /**
    * @param string
    */
-  public function setMembershipType($membershipType)
+  public function setProvisionedIops($provisionedIops)
   {
-    $this->membershipType = $membershipType;
+    $this->provisionedIops = $provisionedIops;
   }
   /**
    * @return string
    */
-  public function getMembershipType()
+  public function getProvisionedIops()
   {
-    return $this->membershipType;
-  }
-  /**
-   * @param bool
-   */
-  public function setPreRegistered($preRegistered)
-  {
-    $this->preRegistered = $preRegistered;
-  }
-  /**
-   * @return bool
-   */
-  public function getPreRegistered()
-  {
-    return $this->preRegistered;
+    return $this->provisionedIops;
   }
   /**
    * @param string
    */
-  public function setProject($project)
+  public function setProvisionedThroughput($provisionedThroughput)
   {
-    $this->project = $project;
+    $this->provisionedThroughput = $provisionedThroughput;
   }
   /**
    * @return string
    */
-  public function getProject()
+  public function getProvisionedThroughput()
   {
-    return $this->project;
+    return $this->provisionedThroughput;
+  }
+  /**
+   * @param string
+   */
+  public function setSizeGb($sizeGb)
+  {
+    $this->sizeGb = $sizeGb;
+  }
+  /**
+   * @return string
+   */
+  public function getSizeGb()
+  {
+    return $this->sizeGb;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Fleet::class, 'Google_Service_Container_Fleet');
+class_alias(BootDisk::class, 'Google_Service_Container_BootDisk');

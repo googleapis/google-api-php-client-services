@@ -17,28 +17,28 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class AutoIpamConfig extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $mode;
+  public $enabled;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setMode($mode)
+  public function setEnabled($enabled)
   {
-    $this->mode = $mode;
+    $this->enabled = $enabled;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getMode()
+  public function getEnabled()
   {
-    return $this->mode;
+    return $this->enabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(AutoIpamConfig::class, 'Google_Service_Container_AutoIpamConfig');

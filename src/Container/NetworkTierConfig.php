@@ -17,28 +17,28 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class NetworkTierConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $mode;
+  public $networkTier;
 
   /**
    * @param string
    */
-  public function setMode($mode)
+  public function setNetworkTier($networkTier)
   {
-    $this->mode = $mode;
+    $this->networkTier = $networkTier;
   }
   /**
    * @return string
    */
-  public function getMode()
+  public function getNetworkTier()
   {
-    return $this->mode;
+    return $this->networkTier;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(NetworkTierConfig::class, 'Google_Service_Container_NetworkTierConfig');

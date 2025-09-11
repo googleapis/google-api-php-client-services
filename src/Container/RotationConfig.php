@@ -17,28 +17,46 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class RotationConfig extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $enabled;
   /**
    * @var string
    */
-  public $mode;
+  public $rotationInterval;
 
+  /**
+   * @param bool
+   */
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnabled()
+  {
+    return $this->enabled;
+  }
   /**
    * @param string
    */
-  public function setMode($mode)
+  public function setRotationInterval($rotationInterval)
   {
-    $this->mode = $mode;
+    $this->rotationInterval = $rotationInterval;
   }
   /**
    * @return string
    */
-  public function getMode()
+  public function getRotationInterval()
   {
-    return $this->mode;
+    return $this->rotationInterval;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(RotationConfig::class, 'Google_Service_Container_RotationConfig');

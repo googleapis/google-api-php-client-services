@@ -17,28 +17,28 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class GkeAutoUpgradeConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $mode;
+  public $patchMode;
 
   /**
    * @param string
    */
-  public function setMode($mode)
+  public function setPatchMode($patchMode)
   {
-    $this->mode = $mode;
+    $this->patchMode = $patchMode;
   }
   /**
    * @return string
    */
-  public function getMode()
+  public function getPatchMode()
   {
-    return $this->mode;
+    return $this->patchMode;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(GkeAutoUpgradeConfig::class, 'Google_Service_Container_GkeAutoUpgradeConfig');

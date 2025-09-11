@@ -17,28 +17,46 @@
 
 namespace Google\Service\Container;
 
-class AnonymousAuthenticationConfig extends \Google\Model
+class LustreCsiDriverConfig extends \Google\Model
 {
   /**
-   * @var string
+   * @var bool
    */
-  public $mode;
+  public $enableLegacyLustrePort;
+  /**
+   * @var bool
+   */
+  public $enabled;
 
   /**
-   * @param string
+   * @param bool
    */
-  public function setMode($mode)
+  public function setEnableLegacyLustrePort($enableLegacyLustrePort)
   {
-    $this->mode = $mode;
+    $this->enableLegacyLustrePort = $enableLegacyLustrePort;
   }
   /**
-   * @return string
+   * @return bool
    */
-  public function getMode()
+  public function getEnableLegacyLustrePort()
   {
-    return $this->mode;
+    return $this->enableLegacyLustrePort;
+  }
+  /**
+   * @param bool
+   */
+  public function setEnabled($enabled)
+  {
+    $this->enabled = $enabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getEnabled()
+  {
+    return $this->enabled;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AnonymousAuthenticationConfig::class, 'Google_Service_Container_AnonymousAuthenticationConfig');
+class_alias(LustreCsiDriverConfig::class, 'Google_Service_Container_LustreCsiDriverConfig');

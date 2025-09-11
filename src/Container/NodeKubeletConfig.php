@@ -47,6 +47,16 @@ class NodeKubeletConfig extends \Google\Collection
   /**
    * @var int
    */
+  public $evictionMaxPodGracePeriodSeconds;
+  protected $evictionMinimumReclaimType = EvictionMinimumReclaim::class;
+  protected $evictionMinimumReclaimDataType = '';
+  protected $evictionSoftType = EvictionSignals::class;
+  protected $evictionSoftDataType = '';
+  protected $evictionSoftGracePeriodType = EvictionGracePeriod::class;
+  protected $evictionSoftGracePeriodDataType = '';
+  /**
+   * @var int
+   */
   public $imageGcHighThresholdPercent;
   /**
    * @var int
@@ -64,12 +74,20 @@ class NodeKubeletConfig extends \Google\Collection
    * @var bool
    */
   public $insecureKubeletReadonlyPortEnabled;
+  /**
+   * @var int
+   */
+  public $maxParallelImagePulls;
   protected $memoryManagerType = MemoryManager::class;
   protected $memoryManagerDataType = '';
   /**
    * @var string
    */
   public $podPidsLimit;
+  /**
+   * @var bool
+   */
+  public $singleProcessOomKill;
   protected $topologyManagerType = TopologyManager::class;
   protected $topologyManagerDataType = '';
 
@@ -160,6 +178,62 @@ class NodeKubeletConfig extends \Google\Collection
   /**
    * @param int
    */
+  public function setEvictionMaxPodGracePeriodSeconds($evictionMaxPodGracePeriodSeconds)
+  {
+    $this->evictionMaxPodGracePeriodSeconds = $evictionMaxPodGracePeriodSeconds;
+  }
+  /**
+   * @return int
+   */
+  public function getEvictionMaxPodGracePeriodSeconds()
+  {
+    return $this->evictionMaxPodGracePeriodSeconds;
+  }
+  /**
+   * @param EvictionMinimumReclaim
+   */
+  public function setEvictionMinimumReclaim(EvictionMinimumReclaim $evictionMinimumReclaim)
+  {
+    $this->evictionMinimumReclaim = $evictionMinimumReclaim;
+  }
+  /**
+   * @return EvictionMinimumReclaim
+   */
+  public function getEvictionMinimumReclaim()
+  {
+    return $this->evictionMinimumReclaim;
+  }
+  /**
+   * @param EvictionSignals
+   */
+  public function setEvictionSoft(EvictionSignals $evictionSoft)
+  {
+    $this->evictionSoft = $evictionSoft;
+  }
+  /**
+   * @return EvictionSignals
+   */
+  public function getEvictionSoft()
+  {
+    return $this->evictionSoft;
+  }
+  /**
+   * @param EvictionGracePeriod
+   */
+  public function setEvictionSoftGracePeriod(EvictionGracePeriod $evictionSoftGracePeriod)
+  {
+    $this->evictionSoftGracePeriod = $evictionSoftGracePeriod;
+  }
+  /**
+   * @return EvictionGracePeriod
+   */
+  public function getEvictionSoftGracePeriod()
+  {
+    return $this->evictionSoftGracePeriod;
+  }
+  /**
+   * @param int
+   */
   public function setImageGcHighThresholdPercent($imageGcHighThresholdPercent)
   {
     $this->imageGcHighThresholdPercent = $imageGcHighThresholdPercent;
@@ -228,6 +302,20 @@ class NodeKubeletConfig extends \Google\Collection
     return $this->insecureKubeletReadonlyPortEnabled;
   }
   /**
+   * @param int
+   */
+  public function setMaxParallelImagePulls($maxParallelImagePulls)
+  {
+    $this->maxParallelImagePulls = $maxParallelImagePulls;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxParallelImagePulls()
+  {
+    return $this->maxParallelImagePulls;
+  }
+  /**
    * @param MemoryManager
    */
   public function setMemoryManager(MemoryManager $memoryManager)
@@ -254,6 +342,20 @@ class NodeKubeletConfig extends \Google\Collection
   public function getPodPidsLimit()
   {
     return $this->podPidsLimit;
+  }
+  /**
+   * @param bool
+   */
+  public function setSingleProcessOomKill($singleProcessOomKill)
+  {
+    $this->singleProcessOomKill = $singleProcessOomKill;
+  }
+  /**
+   * @return bool
+   */
+  public function getSingleProcessOomKill()
+  {
+    return $this->singleProcessOomKill;
   }
   /**
    * @param TopologyManager

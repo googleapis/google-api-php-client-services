@@ -22,6 +22,8 @@ class UpdateNodePoolRequest extends \Google\Collection
   protected $collection_key = 'storagePools';
   protected $acceleratorsType = AcceleratorConfig::class;
   protected $acceleratorsDataType = 'array';
+  protected $bootDiskType = BootDisk::class;
+  protected $bootDiskDataType = '';
   /**
    * @var string
    */
@@ -132,6 +134,20 @@ class UpdateNodePoolRequest extends \Google\Collection
   public function getAccelerators()
   {
     return $this->accelerators;
+  }
+  /**
+   * @param BootDisk
+   */
+  public function setBootDisk(BootDisk $bootDisk)
+  {
+    $this->bootDisk = $bootDisk;
+  }
+  /**
+   * @return BootDisk
+   */
+  public function getBootDisk()
+  {
+    return $this->bootDisk;
   }
   /**
    * @param string
