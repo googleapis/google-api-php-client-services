@@ -17,45 +17,46 @@
 
 namespace Google\Service\WorkloadManager;
 
-class SapInstanceProperties extends \Google\Collection
+class AgentStatusReference extends \Google\Model
 {
-  protected $collection_key = 'numbers';
-  protected $agentStatesType = AgentStates::class;
-  protected $agentStatesDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $numbers;
+  public $name;
+  /**
+   * @var string
+   */
+  public $url;
 
   /**
-   * @param AgentStates
+   * @param string
    */
-  public function setAgentStates(AgentStates $agentStates)
+  public function setName($name)
   {
-    $this->agentStates = $agentStates;
+    $this->name = $name;
   }
   /**
-   * @return AgentStates
+   * @return string
    */
-  public function getAgentStates()
+  public function getName()
   {
-    return $this->agentStates;
+    return $this->name;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setNumbers($numbers)
+  public function setUrl($url)
   {
-    $this->numbers = $numbers;
+    $this->url = $url;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getNumbers()
+  public function getUrl()
   {
-    return $this->numbers;
+    return $this->url;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SapInstanceProperties::class, 'Google_Service_WorkloadManager_SapInstanceProperties');
+class_alias(AgentStatusReference::class, 'Google_Service_WorkloadManager_AgentStatusReference');

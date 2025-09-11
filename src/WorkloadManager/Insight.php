@@ -19,6 +19,8 @@ namespace Google\Service\WorkloadManager;
 
 class Insight extends \Google\Model
 {
+  protected $agentStatusType = AgentStatus::class;
+  protected $agentStatusDataType = '';
   /**
    * @var string
    */
@@ -36,6 +38,20 @@ class Insight extends \Google\Model
   protected $torsoValidationType = TorsoValidation::class;
   protected $torsoValidationDataType = '';
 
+  /**
+   * @param AgentStatus
+   */
+  public function setAgentStatus(AgentStatus $agentStatus)
+  {
+    $this->agentStatus = $agentStatus;
+  }
+  /**
+   * @return AgentStatus
+   */
+  public function getAgentStatus()
+  {
+    return $this->agentStatus;
+  }
   /**
    * @param string
    */

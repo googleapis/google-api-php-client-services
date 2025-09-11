@@ -17,45 +17,64 @@
 
 namespace Google\Service\WorkloadManager;
 
-class SapInstanceProperties extends \Google\Collection
+class AgentStatusConfigValue extends \Google\Model
 {
-  protected $collection_key = 'numbers';
-  protected $agentStatesType = AgentStates::class;
-  protected $agentStatesDataType = '';
   /**
-   * @var string[]
+   * @var bool
    */
-  public $numbers;
+  public $isDefault;
+  /**
+   * @var string
+   */
+  public $name;
+  /**
+   * @var string
+   */
+  public $value;
 
   /**
-   * @param AgentStates
+   * @param bool
    */
-  public function setAgentStates(AgentStates $agentStates)
+  public function setIsDefault($isDefault)
   {
-    $this->agentStates = $agentStates;
+    $this->isDefault = $isDefault;
   }
   /**
-   * @return AgentStates
+   * @return bool
    */
-  public function getAgentStates()
+  public function getIsDefault()
   {
-    return $this->agentStates;
+    return $this->isDefault;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setNumbers($numbers)
+  public function setName($name)
   {
-    $this->numbers = $numbers;
+    $this->name = $name;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getNumbers()
+  public function getName()
   {
-    return $this->numbers;
+    return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  /**
+   * @return string
+   */
+  public function getValue()
+  {
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SapInstanceProperties::class, 'Google_Service_WorkloadManager_SapInstanceProperties');
+class_alias(AgentStatusConfigValue::class, 'Google_Service_WorkloadManager_AgentStatusConfigValue');

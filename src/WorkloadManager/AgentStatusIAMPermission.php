@@ -17,45 +17,46 @@
 
 namespace Google\Service\WorkloadManager;
 
-class SapInstanceProperties extends \Google\Collection
+class AgentStatusIAMPermission extends \Google\Model
 {
-  protected $collection_key = 'numbers';
-  protected $agentStatesType = AgentStates::class;
-  protected $agentStatesDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $numbers;
+  public $granted;
+  /**
+   * @var string
+   */
+  public $name;
 
   /**
-   * @param AgentStates
+   * @param string
    */
-  public function setAgentStates(AgentStates $agentStates)
+  public function setGranted($granted)
   {
-    $this->agentStates = $agentStates;
+    $this->granted = $granted;
   }
   /**
-   * @return AgentStates
+   * @return string
    */
-  public function getAgentStates()
+  public function getGranted()
   {
-    return $this->agentStates;
+    return $this->granted;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setNumbers($numbers)
+  public function setName($name)
   {
-    $this->numbers = $numbers;
+    $this->name = $name;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getNumbers()
+  public function getName()
   {
-    return $this->numbers;
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SapInstanceProperties::class, 'Google_Service_WorkloadManager_SapInstanceProperties');
+class_alias(AgentStatusIAMPermission::class, 'Google_Service_WorkloadManager_AgentStatusIAMPermission');
