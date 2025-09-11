@@ -27,6 +27,18 @@ class Reader extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $originatingPublicationId;
+  /**
+   * @var string
+   */
+  public $ppid;
+  /**
+   * @var string
+   */
+  public $publicationId;
 
   /**
    * @param string
@@ -55,6 +67,48 @@ class Reader extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setOriginatingPublicationId($originatingPublicationId)
+  {
+    $this->originatingPublicationId = $originatingPublicationId;
+  }
+  /**
+   * @return string
+   */
+  public function getOriginatingPublicationId()
+  {
+    return $this->originatingPublicationId;
+  }
+  /**
+   * @param string
+   */
+  public function setPpid($ppid)
+  {
+    $this->ppid = $ppid;
+  }
+  /**
+   * @return string
+   */
+  public function getPpid()
+  {
+    return $this->ppid;
+  }
+  /**
+   * @param string
+   */
+  public function setPublicationId($publicationId)
+  {
+    $this->publicationId = $publicationId;
+  }
+  /**
+   * @return string
+   */
+  public function getPublicationId()
+  {
+    return $this->publicationId;
   }
 }
 
