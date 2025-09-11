@@ -27,6 +27,8 @@ class AutoRenewingPlan extends \Google\Model
   protected $installmentDetailsDataType = '';
   protected $priceChangeDetailsType = SubscriptionItemPriceChangeDetails::class;
   protected $priceChangeDetailsDataType = '';
+  protected $priceStepUpConsentDetailsType = PriceStepUpConsentDetails::class;
+  protected $priceStepUpConsentDetailsDataType = '';
   protected $recurringPriceType = Money::class;
   protected $recurringPriceDataType = '';
 
@@ -71,6 +73,20 @@ class AutoRenewingPlan extends \Google\Model
   public function getPriceChangeDetails()
   {
     return $this->priceChangeDetails;
+  }
+  /**
+   * @param PriceStepUpConsentDetails
+   */
+  public function setPriceStepUpConsentDetails(PriceStepUpConsentDetails $priceStepUpConsentDetails)
+  {
+    $this->priceStepUpConsentDetails = $priceStepUpConsentDetails;
+  }
+  /**
+   * @return PriceStepUpConsentDetails
+   */
+  public function getPriceStepUpConsentDetails()
+  {
+    return $this->priceStepUpConsentDetails;
   }
   /**
    * @param Money

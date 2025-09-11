@@ -17,8 +17,12 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class OneTimePurchaseDetails extends \Google\Model
+class ActivateOneTimeProductOfferRequest extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $latencyTolerance;
   /**
    * @var string
    */
@@ -26,14 +30,30 @@ class OneTimePurchaseDetails extends \Google\Model
   /**
    * @var string
    */
-  public $purchaseOptionId;
+  public $packageName;
   /**
-   * @var int
+   * @var string
    */
-  public $quantity;
-  protected $rentalDetailsType = RentalDetails::class;
-  protected $rentalDetailsDataType = '';
+  public $productId;
+  /**
+   * @var string
+   */
+  public $purchaseOptionId;
 
+  /**
+   * @param string
+   */
+  public function setLatencyTolerance($latencyTolerance)
+  {
+    $this->latencyTolerance = $latencyTolerance;
+  }
+  /**
+   * @return string
+   */
+  public function getLatencyTolerance()
+  {
+    return $this->latencyTolerance;
+  }
   /**
    * @param string
    */
@@ -51,6 +71,34 @@ class OneTimePurchaseDetails extends \Google\Model
   /**
    * @param string
    */
+  public function setPackageName($packageName)
+  {
+    $this->packageName = $packageName;
+  }
+  /**
+   * @return string
+   */
+  public function getPackageName()
+  {
+    return $this->packageName;
+  }
+  /**
+   * @param string
+   */
+  public function setProductId($productId)
+  {
+    $this->productId = $productId;
+  }
+  /**
+   * @return string
+   */
+  public function getProductId()
+  {
+    return $this->productId;
+  }
+  /**
+   * @param string
+   */
   public function setPurchaseOptionId($purchaseOptionId)
   {
     $this->purchaseOptionId = $purchaseOptionId;
@@ -62,35 +110,7 @@ class OneTimePurchaseDetails extends \Google\Model
   {
     return $this->purchaseOptionId;
   }
-  /**
-   * @param int
-   */
-  public function setQuantity($quantity)
-  {
-    $this->quantity = $quantity;
-  }
-  /**
-   * @return int
-   */
-  public function getQuantity()
-  {
-    return $this->quantity;
-  }
-  /**
-   * @param RentalDetails
-   */
-  public function setRentalDetails(RentalDetails $rentalDetails)
-  {
-    $this->rentalDetails = $rentalDetails;
-  }
-  /**
-   * @return RentalDetails
-   */
-  public function getRentalDetails()
-  {
-    return $this->rentalDetails;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OneTimePurchaseDetails::class, 'Google_Service_AndroidPublisher_OneTimePurchaseDetails');
+class_alias(ActivateOneTimeProductOfferRequest::class, 'Google_Service_AndroidPublisher_ActivateOneTimeProductOfferRequest');

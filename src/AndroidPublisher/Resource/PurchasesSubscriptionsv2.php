@@ -17,6 +17,8 @@
 
 namespace Google\Service\AndroidPublisher\Resource;
 
+use Google\Service\AndroidPublisher\CancelSubscriptionPurchaseRequest;
+use Google\Service\AndroidPublisher\CancelSubscriptionPurchaseResponse;
 use Google\Service\AndroidPublisher\RevokeSubscriptionPurchaseRequest;
 use Google\Service\AndroidPublisher\RevokeSubscriptionPurchaseResponse;
 use Google\Service\AndroidPublisher\SubscriptionPurchaseV2;
@@ -31,6 +33,24 @@ use Google\Service\AndroidPublisher\SubscriptionPurchaseV2;
  */
 class PurchasesSubscriptionsv2 extends \Google\Service\Resource
 {
+  /**
+   * Cancel a subscription purchase for the user. (subscriptionsv2.cancel)
+   *
+   * @param string $packageName Required. The package of the application for which
+   * this subscription was purchased (for example, 'com.some.thing').
+   * @param string $token Required. The token provided to the user's device when
+   * the subscription was purchased.
+   * @param CancelSubscriptionPurchaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return CancelSubscriptionPurchaseResponse
+   * @throws \Google\Service\Exception
+   */
+  public function cancel($packageName, $token, CancelSubscriptionPurchaseRequest $postBody, $optParams = [])
+  {
+    $params = ['packageName' => $packageName, 'token' => $token, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('cancel', [$params], CancelSubscriptionPurchaseResponse::class);
+  }
   /**
    * Get metadata about a subscription (subscriptionsv2.get)
    *

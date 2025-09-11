@@ -17,80 +17,82 @@
 
 namespace Google\Service\AndroidPublisher;
 
-class OneTimePurchaseDetails extends \Google\Model
+class OneTimeProductPreOrderOffer extends \Google\Model
 {
   /**
    * @var string
    */
-  public $offerId;
+  public $endTime;
   /**
    * @var string
    */
-  public $purchaseOptionId;
+  public $priceChangeBehavior;
   /**
-   * @var int
+   * @var string
    */
-  public $quantity;
-  protected $rentalDetailsType = RentalDetails::class;
-  protected $rentalDetailsDataType = '';
+  public $releaseTime;
+  /**
+   * @var string
+   */
+  public $startTime;
 
   /**
    * @param string
    */
-  public function setOfferId($offerId)
+  public function setEndTime($endTime)
   {
-    $this->offerId = $offerId;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getOfferId()
+  public function getEndTime()
   {
-    return $this->offerId;
+    return $this->endTime;
   }
   /**
    * @param string
    */
-  public function setPurchaseOptionId($purchaseOptionId)
+  public function setPriceChangeBehavior($priceChangeBehavior)
   {
-    $this->purchaseOptionId = $purchaseOptionId;
+    $this->priceChangeBehavior = $priceChangeBehavior;
   }
   /**
    * @return string
    */
-  public function getPurchaseOptionId()
+  public function getPriceChangeBehavior()
   {
-    return $this->purchaseOptionId;
+    return $this->priceChangeBehavior;
   }
   /**
-   * @param int
+   * @param string
    */
-  public function setQuantity($quantity)
+  public function setReleaseTime($releaseTime)
   {
-    $this->quantity = $quantity;
+    $this->releaseTime = $releaseTime;
   }
   /**
-   * @return int
+   * @return string
    */
-  public function getQuantity()
+  public function getReleaseTime()
   {
-    return $this->quantity;
+    return $this->releaseTime;
   }
   /**
-   * @param RentalDetails
+   * @param string
    */
-  public function setRentalDetails(RentalDetails $rentalDetails)
+  public function setStartTime($startTime)
   {
-    $this->rentalDetails = $rentalDetails;
+    $this->startTime = $startTime;
   }
   /**
-   * @return RentalDetails
+   * @return string
    */
-  public function getRentalDetails()
+  public function getStartTime()
   {
-    return $this->rentalDetails;
+    return $this->startTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OneTimePurchaseDetails::class, 'Google_Service_AndroidPublisher_OneTimePurchaseDetails');
+class_alias(OneTimeProductPreOrderOffer::class, 'Google_Service_AndroidPublisher_OneTimeProductPreOrderOffer');
