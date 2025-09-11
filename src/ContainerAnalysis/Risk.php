@@ -17,45 +17,42 @@
 
 namespace Google\Service\ContainerAnalysis;
 
-class VulnerabilityOccurrencesSummary extends \Google\Collection
+class Risk extends \Google\Model
 {
-  protected $collection_key = 'unreachable';
-  protected $countsType = FixableTotalByDigest::class;
-  protected $countsDataType = 'array';
-  /**
-   * @var string[]
-   */
-  public $unreachable;
+  protected $cisaKevType = CISAKnownExploitedVulnerabilities::class;
+  protected $cisaKevDataType = '';
+  protected $epssType = ExploitPredictionScoringSystem::class;
+  protected $epssDataType = '';
 
   /**
-   * @param FixableTotalByDigest[]
+   * @param CISAKnownExploitedVulnerabilities
    */
-  public function setCounts($counts)
+  public function setCisaKev(CISAKnownExploitedVulnerabilities $cisaKev)
   {
-    $this->counts = $counts;
+    $this->cisaKev = $cisaKev;
   }
   /**
-   * @return FixableTotalByDigest[]
+   * @return CISAKnownExploitedVulnerabilities
    */
-  public function getCounts()
+  public function getCisaKev()
   {
-    return $this->counts;
+    return $this->cisaKev;
   }
   /**
-   * @param string[]
+   * @param ExploitPredictionScoringSystem
    */
-  public function setUnreachable($unreachable)
+  public function setEpss(ExploitPredictionScoringSystem $epss)
   {
-    $this->unreachable = $unreachable;
+    $this->epss = $epss;
   }
   /**
-   * @return string[]
+   * @return ExploitPredictionScoringSystem
    */
-  public function getUnreachable()
+  public function getEpss()
   {
-    return $this->unreachable;
+    return $this->epss;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VulnerabilityOccurrencesSummary::class, 'Google_Service_ContainerAnalysis_VulnerabilityOccurrencesSummary');
+class_alias(Risk::class, 'Google_Service_ContainerAnalysis_Risk');

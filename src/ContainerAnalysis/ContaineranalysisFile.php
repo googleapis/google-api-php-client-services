@@ -17,45 +17,46 @@
 
 namespace Google\Service\ContainerAnalysis;
 
-class VulnerabilityOccurrencesSummary extends \Google\Collection
+class ContaineranalysisFile extends \Google\Model
 {
-  protected $collection_key = 'unreachable';
-  protected $countsType = FixableTotalByDigest::class;
-  protected $countsDataType = 'array';
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $digest;
+  /**
+   * @var string
+   */
+  public $name;
 
-  /**
-   * @param FixableTotalByDigest[]
-   */
-  public function setCounts($counts)
-  {
-    $this->counts = $counts;
-  }
-  /**
-   * @return FixableTotalByDigest[]
-   */
-  public function getCounts()
-  {
-    return $this->counts;
-  }
   /**
    * @param string[]
    */
-  public function setUnreachable($unreachable)
+  public function setDigest($digest)
   {
-    $this->unreachable = $unreachable;
+    $this->digest = $digest;
   }
   /**
    * @return string[]
    */
-  public function getUnreachable()
+  public function getDigest()
   {
-    return $this->unreachable;
+    return $this->digest;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VulnerabilityOccurrencesSummary::class, 'Google_Service_ContainerAnalysis_VulnerabilityOccurrencesSummary');
+class_alias(ContaineranalysisFile::class, 'Google_Service_ContainerAnalysis_ContaineranalysisFile');

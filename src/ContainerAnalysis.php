@@ -24,9 +24,8 @@ use Google\Client;
  *
  * <p>
  * This API is a prerequisite for leveraging Artifact Analysis scanning
- * capabilities in both Artifact Registry and with Advanced Vulnerability
- * Insights (runtime scanning) in GKE. In addition, the Container Analysis API
- * is an implementation of the Grafeas API, which enables storing, querying, and
+ * capabilities in Artifact Registry. In addition, the Container Analysis API is
+ * an implementation of the Grafeas API, which enables storing, querying, and
  * retrieval of critical metadata about all of your software artifacts.</p>
  *
  * <p>
@@ -149,6 +148,10 @@ class ContainerAnalysis extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'patch' => [
@@ -300,6 +303,10 @@ class ContainerAnalysis extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/occurrences',
@@ -321,6 +328,10 @@ class ContainerAnalysis extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'patch' => [
@@ -461,6 +472,10 @@ class ContainerAnalysis extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'patch' => [
@@ -612,6 +627,10 @@ class ContainerAnalysis extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'list' => [
               'path' => 'v1/{+parent}/occurrences',
@@ -633,6 +652,10 @@ class ContainerAnalysis extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'patch' => [
