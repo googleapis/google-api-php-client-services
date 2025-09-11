@@ -41,17 +41,11 @@ class BeyondCorp extends \Google\Service
   const CLOUD_PLATFORM =
       "https://www.googleapis.com/auth/cloud-platform";
 
-  public $organizations_locations_global_partnerTenants;
-  public $organizations_locations_global_partnerTenants_browserDlpRules;
-  public $organizations_locations_global_partnerTenants_proxyConfigs;
   public $organizations_locations_operations;
   public $projects_locations;
   public $projects_locations_appConnections;
   public $projects_locations_appConnectors;
   public $projects_locations_appGateways;
-  public $projects_locations_clientConnectorServices;
-  public $projects_locations_clientGateways;
-  public $projects_locations_global_securityGateways_applications;
   public $projects_locations_operations;
   public $projects_locations_securityGateways;
   public $projects_locations_securityGateways_applications;
@@ -74,66 +68,6 @@ class BeyondCorp extends \Google\Service
     $this->version = 'v1';
     $this->serviceName = 'beyondcorp';
 
-    $this->organizations_locations_global_partnerTenants = new BeyondCorp\Resource\OrganizationsLocationsBeyondcorpGlobalPartnerTenants(
-        $this,
-        $this->serviceName,
-        'partnerTenants',
-        [
-          'methods' => [
-            'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->organizations_locations_global_partnerTenants_browserDlpRules = new BeyondCorp\Resource\OrganizationsLocationsBeyondcorpGlobalPartnerTenantsBrowserDlpRules(
-        $this,
-        $this->serviceName,
-        'browserDlpRules',
-        [
-          'methods' => [
-            'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->organizations_locations_global_partnerTenants_proxyConfigs = new BeyondCorp\Resource\OrganizationsLocationsBeyondcorpGlobalPartnerTenantsProxyConfigs(
-        $this,
-        $this->serviceName,
-        'proxyConfigs',
-        [
-          'methods' => [
-            'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->organizations_locations_operations = new BeyondCorp\Resource\OrganizationsLocationsOperations(
         $this,
         $this->serviceName,
@@ -693,140 +627,6 @@ class BeyondCorp extends \Google\Service
           ]
         ]
     );
-    $this->projects_locations_clientConnectorServices = new BeyondCorp\Resource\ProjectsLocationsClientConnectorServices(
-        $this,
-        $this->serviceName,
-        'clientConnectorServices',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_clientGateways = new BeyondCorp\Resource\ProjectsLocationsClientGateways(
-        $this,
-        $this->serviceName,
-        'clientGateways',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_global_securityGateways_applications = new BeyondCorp\Resource\ProjectsLocationsBeyondcorpGlobalSecurityGatewaysApplications(
-        $this,
-        $this->serviceName,
-        'applications',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/applications',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'applicationId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'patch' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'PATCH',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'requestId' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'updateMask' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
     $this->projects_locations_operations = new BeyondCorp\Resource\ProjectsLocationsOperations(
         $this,
         $this->serviceName,
@@ -1029,7 +829,25 @@ class BeyondCorp extends \Google\Service
         'applications',
         [
           'methods' => [
-            'delete' => [
+            'create' => [
+              'path' => 'v1/{+parent}/applications',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'applicationId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => [
@@ -1097,8 +915,36 @@ class BeyondCorp extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'setIamPolicy' => [
               'path' => 'v1/{+resource}:setIamPolicy',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'testIamPermissions' => [
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => [
                 'resource' => [
