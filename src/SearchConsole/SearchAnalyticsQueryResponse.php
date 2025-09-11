@@ -20,6 +20,8 @@ namespace Google\Service\SearchConsole;
 class SearchAnalyticsQueryResponse extends \Google\Collection
 {
   protected $collection_key = 'rows';
+  protected $metadataType = Metadata::class;
+  protected $metadataDataType = '';
   /**
    * @var string
    */
@@ -27,6 +29,20 @@ class SearchAnalyticsQueryResponse extends \Google\Collection
   protected $rowsType = ApiDataRow::class;
   protected $rowsDataType = 'array';
 
+  /**
+   * @param Metadata
+   */
+  public function setMetadata(Metadata $metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return Metadata
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
+  }
   /**
    * @param string
    */
