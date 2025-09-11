@@ -24,6 +24,12 @@ class BigQueryDatasetSource extends \Google\Collection
    * @var string
    */
   public $dataset;
+  protected $effectiveReplicasType = Replica::class;
+  protected $effectiveReplicasDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $replicaLocations;
   protected $restrictedExportPolicyType = RestrictedExportPolicy::class;
   protected $restrictedExportPolicyDataType = '';
   protected $selectedResourcesType = SelectedResource::class;
@@ -42,6 +48,34 @@ class BigQueryDatasetSource extends \Google\Collection
   public function getDataset()
   {
     return $this->dataset;
+  }
+  /**
+   * @param Replica[]
+   */
+  public function setEffectiveReplicas($effectiveReplicas)
+  {
+    $this->effectiveReplicas = $effectiveReplicas;
+  }
+  /**
+   * @return Replica[]
+   */
+  public function getEffectiveReplicas()
+  {
+    return $this->effectiveReplicas;
+  }
+  /**
+   * @param string[]
+   */
+  public function setReplicaLocations($replicaLocations)
+  {
+    $this->replicaLocations = $replicaLocations;
+  }
+  /**
+   * @return string[]
+   */
+  public function getReplicaLocations()
+  {
+    return $this->replicaLocations;
   }
   /**
    * @param RestrictedExportPolicy
