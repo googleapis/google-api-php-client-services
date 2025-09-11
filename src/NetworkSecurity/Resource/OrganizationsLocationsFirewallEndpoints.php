@@ -128,7 +128,7 @@ class OrganizationsLocationsFirewallEndpoints extends \Google\Service\Resource
   /**
    * Update a single Endpoint. (firewallEndpoints.patch)
    *
-   * @param string $name Immutable. Identifier. name of resource
+   * @param string $name Immutable. Identifier. Name of resource.
    * @param FirewallEndpoint $postBody
    * @param array $optParams Optional parameters.
    *
