@@ -1037,6 +1037,10 @@ class GKEOnPrem extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'ignoreErrors' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'validateOnly' => [
                   'location' => 'query',
                   'type' => 'boolean',

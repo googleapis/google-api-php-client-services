@@ -256,6 +256,13 @@ class ProjectsLocationsVmwareAdminClusters extends \Google\Service\Resource
    * @opt_param string etag The current etag of the VMware admin cluster. If an
    * etag is provided and does not match the current etag of the cluster, deletion
    * will be blocked and an ABORTED error will be returned.
+   * @opt_param bool ignoreErrors Optional. If set to true, the unenrollment of a
+   * vmware admin cluster resource will succeed even if errors occur during
+   * unenrollment. This parameter can be used when you want to unenroll admin
+   * cluster resource and the on-prem admin cluster is disconnected / unreachable.
+   * WARNING: Using this parameter when your admin cluster still exists may result
+   * in a deleted GCP admin cluster but existing resourcelink in on-prem admin
+   * cluster and membership.
    * @opt_param bool validateOnly Validate the request without actually doing any
    * updates.
    * @return Operation
