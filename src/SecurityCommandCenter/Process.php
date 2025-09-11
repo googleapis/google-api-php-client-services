@@ -52,6 +52,10 @@ class Process extends \Google\Collection
   public $pid;
   protected $scriptType = SecuritycenterFile::class;
   protected $scriptDataType = '';
+  /**
+   * @var string
+   */
+  public $userId;
 
   /**
    * @param string[]
@@ -192,6 +196,20 @@ class Process extends \Google\Collection
   public function getScript()
   {
     return $this->script;
+  }
+  /**
+   * @param string
+   */
+  public function setUserId($userId)
+  {
+    $this->userId = $userId;
+  }
+  /**
+   * @return string
+   */
+  public function getUserId()
+  {
+    return $this->userId;
   }
 }
 

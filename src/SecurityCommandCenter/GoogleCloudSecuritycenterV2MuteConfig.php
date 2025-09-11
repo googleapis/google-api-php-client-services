@@ -26,6 +26,10 @@ class GoogleCloudSecuritycenterV2MuteConfig extends \Google\Model
   /**
    * @var string
    */
+  public $cryptoKeyName;
+  /**
+   * @var string
+   */
   public $description;
   /**
    * @var string
@@ -65,6 +69,20 @@ class GoogleCloudSecuritycenterV2MuteConfig extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setCryptoKeyName($cryptoKeyName)
+  {
+    $this->cryptoKeyName = $cryptoKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getCryptoKeyName()
+  {
+    return $this->cryptoKeyName;
   }
   /**
    * @param string

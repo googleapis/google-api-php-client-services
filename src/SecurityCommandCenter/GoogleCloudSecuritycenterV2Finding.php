@@ -24,6 +24,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $accessDataType = '';
   protected $affectedResourcesType = GoogleCloudSecuritycenterV2AffectedResources::class;
   protected $affectedResourcesDataType = '';
+  protected $aiModelType = GoogleCloudSecuritycenterV2AiModel::class;
+  protected $aiModelDataType = '';
   protected $applicationType = GoogleCloudSecuritycenterV2Application::class;
   protected $applicationDataType = '';
   protected $attackExposureType = GoogleCloudSecuritycenterV2AttackExposure::class;
@@ -46,6 +48,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   protected $cloudDlpDataProfileDataType = '';
   protected $cloudDlpInspectionType = GoogleCloudSecuritycenterV2CloudDlpInspection::class;
   protected $cloudDlpInspectionDataType = '';
+  protected $complianceDetailsType = GoogleCloudSecuritycenterV2ComplianceDetails::class;
+  protected $complianceDetailsDataType = '';
   protected $compliancesType = GoogleCloudSecuritycenterV2Compliance::class;
   protected $compliancesDataType = 'array';
   protected $connectionsType = GoogleCloudSecuritycenterV2Connection::class;
@@ -58,6 +62,10 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
    * @var string
    */
   public $createTime;
+  /**
+   * @var string
+   */
+  public $cryptoKeyName;
   protected $dataAccessEventsType = GoogleCloudSecuritycenterV2DataAccessEvent::class;
   protected $dataAccessEventsDataType = 'array';
   protected $dataFlowEventsType = GoogleCloudSecuritycenterV2DataFlowEvent::class;
@@ -174,6 +182,8 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public $state;
   protected $toxicCombinationType = GoogleCloudSecuritycenterV2ToxicCombination::class;
   protected $toxicCombinationDataType = '';
+  protected $vertexAiType = GoogleCloudSecuritycenterV2VertexAi::class;
+  protected $vertexAiDataType = '';
   protected $vulnerabilityType = GoogleCloudSecuritycenterV2Vulnerability::class;
   protected $vulnerabilityDataType = '';
 
@@ -204,6 +214,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getAffectedResources()
   {
     return $this->affectedResources;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2AiModel
+   */
+  public function setAiModel(GoogleCloudSecuritycenterV2AiModel $aiModel)
+  {
+    $this->aiModel = $aiModel;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2AiModel
+   */
+  public function getAiModel()
+  {
+    return $this->aiModel;
   }
   /**
    * @param GoogleCloudSecuritycenterV2Application
@@ -332,6 +356,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
     return $this->cloudDlpInspection;
   }
   /**
+   * @param GoogleCloudSecuritycenterV2ComplianceDetails
+   */
+  public function setComplianceDetails(GoogleCloudSecuritycenterV2ComplianceDetails $complianceDetails)
+  {
+    $this->complianceDetails = $complianceDetails;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2ComplianceDetails
+   */
+  public function getComplianceDetails()
+  {
+    return $this->complianceDetails;
+  }
+  /**
    * @param GoogleCloudSecuritycenterV2Compliance[]
    */
   public function setCompliances($compliances)
@@ -400,6 +438,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setCryptoKeyName($cryptoKeyName)
+  {
+    $this->cryptoKeyName = $cryptoKeyName;
+  }
+  /**
+   * @return string
+   */
+  public function getCryptoKeyName()
+  {
+    return $this->cryptoKeyName;
   }
   /**
    * @param GoogleCloudSecuritycenterV2DataAccessEvent[]
@@ -988,6 +1040,20 @@ class GoogleCloudSecuritycenterV2Finding extends \Google\Collection
   public function getToxicCombination()
   {
     return $this->toxicCombination;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2VertexAi
+   */
+  public function setVertexAi(GoogleCloudSecuritycenterV2VertexAi $vertexAi)
+  {
+    $this->vertexAi = $vertexAi;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2VertexAi
+   */
+  public function getVertexAi()
+  {
+    return $this->vertexAi;
   }
   /**
    * @param GoogleCloudSecuritycenterV2Vulnerability
