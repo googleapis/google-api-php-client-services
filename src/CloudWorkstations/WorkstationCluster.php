@@ -52,6 +52,8 @@ class WorkstationCluster extends \Google\Collection
    * @var string
    */
   public $etag;
+  protected $gatewayConfigType = GatewayConfig::class;
+  protected $gatewayConfigDataType = '';
   /**
    * @var string[]
    */
@@ -212,6 +214,20 @@ class WorkstationCluster extends \Google\Collection
   public function getEtag()
   {
     return $this->etag;
+  }
+  /**
+   * @param GatewayConfig
+   */
+  public function setGatewayConfig(GatewayConfig $gatewayConfig)
+  {
+    $this->gatewayConfig = $gatewayConfig;
+  }
+  /**
+   * @return GatewayConfig
+   */
+  public function getGatewayConfig()
+  {
+    return $this->gatewayConfig;
   }
   /**
    * @param string[]
