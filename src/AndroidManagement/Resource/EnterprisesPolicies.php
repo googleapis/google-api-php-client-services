@@ -19,7 +19,11 @@ namespace Google\Service\AndroidManagement\Resource;
 
 use Google\Service\AndroidManagement\AndroidmanagementEmpty;
 use Google\Service\AndroidManagement\ListPoliciesResponse;
+use Google\Service\AndroidManagement\ModifyPolicyApplicationsRequest;
+use Google\Service\AndroidManagement\ModifyPolicyApplicationsResponse;
 use Google\Service\AndroidManagement\Policy;
+use Google\Service\AndroidManagement\RemovePolicyApplicationsRequest;
+use Google\Service\AndroidManagement\RemovePolicyApplicationsResponse;
 
 /**
  * The "policies" collection of methods.
@@ -83,6 +87,24 @@ class EnterprisesPolicies extends \Google\Service\Resource
     return $this->call('list', [$params], ListPoliciesResponse::class);
   }
   /**
+   * Updates or creates applications in a policy.
+   * (policies.modifyPolicyApplications)
+   *
+   * @param string $name Required. The name of the Policy containing the
+   * ApplicationPolicy objects to be updated, in the form
+   * enterprises/{enterpriseId}/policies/{policyId}.
+   * @param ModifyPolicyApplicationsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ModifyPolicyApplicationsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function modifyPolicyApplications($name, ModifyPolicyApplicationsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('modifyPolicyApplications', [$params], ModifyPolicyApplicationsResponse::class);
+  }
+  /**
    * Updates or creates a policy. (policies.patch)
    *
    * @param string $name The name of the policy in the form
@@ -100,6 +122,23 @@ class EnterprisesPolicies extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Policy::class);
+  }
+  /**
+   * Removes applications in a policy. (policies.removePolicyApplications)
+   *
+   * @param string $name Required. The name of the policy containing the
+   * ApplicationPolicy objects to be removed, in the form
+   * enterprises/{enterpriseId}/policies/{policyId}.
+   * @param RemovePolicyApplicationsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return RemovePolicyApplicationsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function removePolicyApplications($name, RemovePolicyApplicationsRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('removePolicyApplications', [$params], RemovePolicyApplicationsResponse::class);
   }
 }
 

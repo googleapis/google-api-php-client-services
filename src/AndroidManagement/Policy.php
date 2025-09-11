@@ -44,6 +44,10 @@ class Policy extends \Google\Collection
    * @var string
    */
   public $appAutoUpdatePolicy;
+  /**
+   * @var string
+   */
+  public $appFunctions;
   protected $applicationsType = ApplicationPolicy::class;
   protected $applicationsDataType = 'array';
   /**
@@ -450,6 +454,20 @@ class Policy extends \Google\Collection
   public function getAppAutoUpdatePolicy()
   {
     return $this->appAutoUpdatePolicy;
+  }
+  /**
+   * @param string
+   */
+  public function setAppFunctions($appFunctions)
+  {
+    $this->appFunctions = $appFunctions;
+  }
+  /**
+   * @return string
+   */
+  public function getAppFunctions()
+  {
+    return $this->appFunctions;
   }
   /**
    * @param ApplicationPolicy[]
