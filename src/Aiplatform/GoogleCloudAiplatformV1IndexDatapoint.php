@@ -27,6 +27,10 @@ class GoogleCloudAiplatformV1IndexDatapoint extends \Google\Collection
    */
   public $datapointId;
   /**
+   * @var array[]
+   */
+  public $embeddingMetadata;
+  /**
    * @var float[]
    */
   public $featureVector;
@@ -64,6 +68,20 @@ class GoogleCloudAiplatformV1IndexDatapoint extends \Google\Collection
   public function getDatapointId()
   {
     return $this->datapointId;
+  }
+  /**
+   * @param array[]
+   */
+  public function setEmbeddingMetadata($embeddingMetadata)
+  {
+    $this->embeddingMetadata = $embeddingMetadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getEmbeddingMetadata()
+  {
+    return $this->embeddingMetadata;
   }
   /**
    * @param float[]

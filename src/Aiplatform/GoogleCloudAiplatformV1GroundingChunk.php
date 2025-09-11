@@ -19,11 +19,27 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1GroundingChunk extends \Google\Model
 {
+  protected $mapsType = GoogleCloudAiplatformV1GroundingChunkMaps::class;
+  protected $mapsDataType = '';
   protected $retrievedContextType = GoogleCloudAiplatformV1GroundingChunkRetrievedContext::class;
   protected $retrievedContextDataType = '';
   protected $webType = GoogleCloudAiplatformV1GroundingChunkWeb::class;
   protected $webDataType = '';
 
+  /**
+   * @param GoogleCloudAiplatformV1GroundingChunkMaps
+   */
+  public function setMaps(GoogleCloudAiplatformV1GroundingChunkMaps $maps)
+  {
+    $this->maps = $maps;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GroundingChunkMaps
+   */
+  public function getMaps()
+  {
+    return $this->maps;
+  }
   /**
    * @param GoogleCloudAiplatformV1GroundingChunkRetrievedContext
    */

@@ -19,6 +19,10 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences extends \Google\Model
 {
+  /**
+   * @var bool
+   */
+  public $colabNotebookDisabled;
   protected $referencesType = GoogleCloudAiplatformV1PublisherModelResourceReference::class;
   protected $referencesDataType = 'map';
   /**
@@ -34,10 +38,28 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
    */
   public $resourceUseCase;
   /**
+   * @var bool
+   */
+  public $supportsWorkbench;
+  /**
    * @var string
    */
   public $title;
 
+  /**
+   * @param bool
+   */
+  public function setColabNotebookDisabled($colabNotebookDisabled)
+  {
+    $this->colabNotebookDisabled = $colabNotebookDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getColabNotebookDisabled()
+  {
+    return $this->colabNotebookDisabled;
+  }
   /**
    * @param GoogleCloudAiplatformV1PublisherModelResourceReference[]
    */
@@ -93,6 +115,20 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReference
   public function getResourceUseCase()
   {
     return $this->resourceUseCase;
+  }
+  /**
+   * @param bool
+   */
+  public function setSupportsWorkbench($supportsWorkbench)
+  {
+    $this->supportsWorkbench = $supportsWorkbench;
+  }
+  /**
+   * @return bool
+   */
+  public function getSupportsWorkbench()
+  {
+    return $this->supportsWorkbench;
   }
   /**
    * @param string

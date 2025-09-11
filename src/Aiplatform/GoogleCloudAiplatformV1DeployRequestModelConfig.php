@@ -1,0 +1,132 @@
+<?php
+/*
+ * Copyright 2014 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+namespace Google\Service\Aiplatform;
+
+class GoogleCloudAiplatformV1DeployRequestModelConfig extends \Google\Model
+{
+  /**
+   * @var bool
+   */
+  public $acceptEula;
+  protected $containerSpecType = GoogleCloudAiplatformV1ModelContainerSpec::class;
+  protected $containerSpecDataType = '';
+  /**
+   * @var string
+   */
+  public $huggingFaceAccessToken;
+  /**
+   * @var bool
+   */
+  public $huggingFaceCacheEnabled;
+  /**
+   * @var string
+   */
+  public $modelDisplayName;
+  /**
+   * @var string
+   */
+  public $modelUserId;
+
+  /**
+   * @param bool
+   */
+  public function setAcceptEula($acceptEula)
+  {
+    $this->acceptEula = $acceptEula;
+  }
+  /**
+   * @return bool
+   */
+  public function getAcceptEula()
+  {
+    return $this->acceptEula;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ModelContainerSpec
+   */
+  public function setContainerSpec(GoogleCloudAiplatformV1ModelContainerSpec $containerSpec)
+  {
+    $this->containerSpec = $containerSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ModelContainerSpec
+   */
+  public function getContainerSpec()
+  {
+    return $this->containerSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setHuggingFaceAccessToken($huggingFaceAccessToken)
+  {
+    $this->huggingFaceAccessToken = $huggingFaceAccessToken;
+  }
+  /**
+   * @return string
+   */
+  public function getHuggingFaceAccessToken()
+  {
+    return $this->huggingFaceAccessToken;
+  }
+  /**
+   * @param bool
+   */
+  public function setHuggingFaceCacheEnabled($huggingFaceCacheEnabled)
+  {
+    $this->huggingFaceCacheEnabled = $huggingFaceCacheEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getHuggingFaceCacheEnabled()
+  {
+    return $this->huggingFaceCacheEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setModelDisplayName($modelDisplayName)
+  {
+    $this->modelDisplayName = $modelDisplayName;
+  }
+  /**
+   * @return string
+   */
+  public function getModelDisplayName()
+  {
+    return $this->modelDisplayName;
+  }
+  /**
+   * @param string
+   */
+  public function setModelUserId($modelUserId)
+  {
+    $this->modelUserId = $modelUserId;
+  }
+  /**
+   * @return string
+   */
+  public function getModelUserId()
+  {
+    return $this->modelUserId;
+  }
+}
+
+// Adding a class alias for backwards compatibility with the previous class name.
+class_alias(GoogleCloudAiplatformV1DeployRequestModelConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1DeployRequestModelConfig');

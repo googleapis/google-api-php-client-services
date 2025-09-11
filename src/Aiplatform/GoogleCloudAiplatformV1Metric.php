@@ -32,6 +32,8 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   protected $pairwiseMetricSpecDataType = '';
   protected $pointwiseMetricSpecType = GoogleCloudAiplatformV1PointwiseMetricSpec::class;
   protected $pointwiseMetricSpecDataType = '';
+  protected $predefinedMetricSpecType = GoogleCloudAiplatformV1PredefinedMetricSpec::class;
+  protected $predefinedMetricSpecDataType = '';
   protected $rougeSpecType = GoogleCloudAiplatformV1RougeSpec::class;
   protected $rougeSpecDataType = '';
 
@@ -104,6 +106,20 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public function getPointwiseMetricSpec()
   {
     return $this->pointwiseMetricSpec;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PredefinedMetricSpec
+   */
+  public function setPredefinedMetricSpec(GoogleCloudAiplatformV1PredefinedMetricSpec $predefinedMetricSpec)
+  {
+    $this->predefinedMetricSpec = $predefinedMetricSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PredefinedMetricSpec
+   */
+  public function getPredefinedMetricSpec()
+  {
+    return $this->predefinedMetricSpec;
   }
   /**
    * @param GoogleCloudAiplatformV1RougeSpec

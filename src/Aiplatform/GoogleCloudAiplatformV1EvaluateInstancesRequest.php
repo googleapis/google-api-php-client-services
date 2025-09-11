@@ -17,8 +17,9 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
+class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Collection
 {
+  protected $collection_key = 'metrics';
   protected $autoraterConfigType = GoogleCloudAiplatformV1AutoraterConfig::class;
   protected $autoraterConfigDataType = '';
   protected $bleuInputType = GoogleCloudAiplatformV1BleuInput::class;
@@ -35,6 +36,10 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
   protected $fulfillmentInputDataType = '';
   protected $groundednessInputType = GoogleCloudAiplatformV1GroundednessInput::class;
   protected $groundednessInputDataType = '';
+  protected $instanceType = GoogleCloudAiplatformV1EvaluationInstance::class;
+  protected $instanceDataType = '';
+  protected $metricsType = GoogleCloudAiplatformV1Metric::class;
+  protected $metricsDataType = 'array';
   protected $metricxInputType = GoogleCloudAiplatformV1MetricxInput::class;
   protected $metricxInputDataType = '';
   protected $pairwiseMetricInputType = GoogleCloudAiplatformV1PairwiseMetricInput::class;
@@ -197,6 +202,34 @@ class GoogleCloudAiplatformV1EvaluateInstancesRequest extends \Google\Model
   public function getGroundednessInput()
   {
     return $this->groundednessInput;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1EvaluationInstance
+   */
+  public function setInstance(GoogleCloudAiplatformV1EvaluationInstance $instance)
+  {
+    $this->instance = $instance;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationInstance
+   */
+  public function getInstance()
+  {
+    return $this->instance;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1Metric[]
+   */
+  public function setMetrics($metrics)
+  {
+    $this->metrics = $metrics;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1Metric[]
+   */
+  public function getMetrics()
+  {
+    return $this->metrics;
   }
   /**
    * @param GoogleCloudAiplatformV1MetricxInput

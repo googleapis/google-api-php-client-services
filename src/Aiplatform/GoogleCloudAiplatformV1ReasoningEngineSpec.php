@@ -32,6 +32,10 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   protected $deploymentSpecDataType = '';
   protected $packageSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecPackageSpec::class;
   protected $packageSpecDataType = '';
+  /**
+   * @var string
+   */
+  public $serviceAccount;
 
   /**
    * @param string
@@ -88,6 +92,20 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   public function getPackageSpec()
   {
     return $this->packageSpec;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceAccount($serviceAccount)
+  {
+    $this->serviceAccount = $serviceAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAccount()
+  {
+    return $this->serviceAccount;
   }
 }
 

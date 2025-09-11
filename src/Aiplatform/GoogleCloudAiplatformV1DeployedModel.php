@@ -54,6 +54,10 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   /**
    * @var string
    */
+  public $gdcConnectedModel;
+  /**
+   * @var string
+   */
   public $id;
   /**
    * @var string
@@ -221,6 +225,20 @@ class GoogleCloudAiplatformV1DeployedModel extends \Google\Model
   public function getFasterDeploymentConfig()
   {
     return $this->fasterDeploymentConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setGdcConnectedModel($gdcConnectedModel)
+  {
+    $this->gdcConnectedModel = $gdcConnectedModel;
+  }
+  /**
+   * @return string
+   */
+  public function getGdcConnectedModel()
+  {
+    return $this->gdcConnectedModel;
   }
   /**
    * @param string

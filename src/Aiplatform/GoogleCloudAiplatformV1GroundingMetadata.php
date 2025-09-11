@@ -20,6 +20,10 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
 {
   protected $collection_key = 'webSearchQueries';
+  /**
+   * @var string
+   */
+  public $googleMapsWidgetContextToken;
   protected $groundingChunksType = GoogleCloudAiplatformV1GroundingChunk::class;
   protected $groundingChunksDataType = 'array';
   protected $groundingSupportsType = GoogleCloudAiplatformV1GroundingSupport::class;
@@ -33,6 +37,20 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
    */
   public $webSearchQueries;
 
+  /**
+   * @param string
+   */
+  public function setGoogleMapsWidgetContextToken($googleMapsWidgetContextToken)
+  {
+    $this->googleMapsWidgetContextToken = $googleMapsWidgetContextToken;
+  }
+  /**
+   * @return string
+   */
+  public function getGoogleMapsWidgetContextToken()
+  {
+    return $this->googleMapsWidgetContextToken;
+  }
   /**
    * @param GoogleCloudAiplatformV1GroundingChunk[]
    */
