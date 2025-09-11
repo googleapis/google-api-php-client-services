@@ -36,6 +36,10 @@ class ReplicaConfig extends \Google\Collection
    * @var string[]
    */
   public $stateReasons;
+  /**
+   * @var string
+   */
+  public $stateUpdateTime;
 
   /**
    * @param string
@@ -92,6 +96,20 @@ class ReplicaConfig extends \Google\Collection
   public function getStateReasons()
   {
     return $this->stateReasons;
+  }
+  /**
+   * @param string
+   */
+  public function setStateUpdateTime($stateUpdateTime)
+  {
+    $this->stateUpdateTime = $stateUpdateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getStateUpdateTime()
+  {
+    return $this->stateUpdateTime;
   }
 }
 
