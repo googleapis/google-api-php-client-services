@@ -26,51 +26,61 @@ use Google\Service\Appengine\ListAuthorizedCertificatesResponse;
  * Typical usage is:
  *  <code>
  *   $appengineService = new Google\Service\Appengine(...);
- *   $authorizedCertificates = $appengineService->apps_authorizedCertificates;
+ *   $authorizedCertificates = $appengineService->projects_locations_applications_authorizedCertificates;
  *  </code>
  */
-class AppsAuthorizedCertificates extends \Google\Service\Resource
+class ProjectsLocationsApplicationsAuthorizedCertificates extends \Google\Service\Resource
 {
   /**
    * Uploads the specified SSL certificate. (authorizedCertificates.create)
    *
-   * @param string $appsId Part of `parent`. Required. Name of the parent
+   * @param string $projectsId Part of `parent`. Required. Name of the parent
    * Application resource. Example: apps/myapp.
+   * @param string $locationsId Part of `parent`. See documentation of
+   * `projectsId`.
+   * @param string $applicationsId Part of `parent`. See documentation of
+   * `projectsId`.
    * @param AuthorizedCertificate $postBody
    * @param array $optParams Optional parameters.
    * @return AuthorizedCertificate
    * @throws \Google\Service\Exception
    */
-  public function create($appsId, AuthorizedCertificate $postBody, $optParams = [])
+  public function create($projectsId, $locationsId, $applicationsId, AuthorizedCertificate $postBody, $optParams = [])
   {
-    $params = ['appsId' => $appsId, 'postBody' => $postBody];
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('create', [$params], AuthorizedCertificate::class);
   }
   /**
    * Deletes the specified SSL certificate. (authorizedCertificates.delete)
    *
-   * @param string $appsId Part of `name`. Required. Name of the resource to
+   * @param string $projectsId Part of `name`. Required. Name of the resource to
    * delete. Example: apps/myapp/authorizedCertificates/12345.
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
    * @param string $authorizedCertificatesId Part of `name`. See documentation of
-   * `appsId`.
+   * `projectsId`.
    * @param array $optParams Optional parameters.
    * @return AppengineEmpty
    * @throws \Google\Service\Exception
    */
-  public function delete($appsId, $authorizedCertificatesId, $optParams = [])
+  public function delete($projectsId, $locationsId, $applicationsId, $authorizedCertificatesId, $optParams = [])
   {
-    $params = ['appsId' => $appsId, 'authorizedCertificatesId' => $authorizedCertificatesId];
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'authorizedCertificatesId' => $authorizedCertificatesId];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], AppengineEmpty::class);
   }
   /**
    * Gets the specified SSL certificate. (authorizedCertificates.get)
    *
-   * @param string $appsId Part of `name`. Required. Name of the resource
+   * @param string $projectsId Part of `name`. Required. Name of the resource
    * requested. Example: apps/myapp/authorizedCertificates/12345.
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
    * @param string $authorizedCertificatesId Part of `name`. See documentation of
-   * `appsId`.
+   * `projectsId`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string view Controls the set of fields returned in the GET
@@ -78,18 +88,22 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
    * @return AuthorizedCertificate
    * @throws \Google\Service\Exception
    */
-  public function get($appsId, $authorizedCertificatesId, $optParams = [])
+  public function get($projectsId, $locationsId, $applicationsId, $authorizedCertificatesId, $optParams = [])
   {
-    $params = ['appsId' => $appsId, 'authorizedCertificatesId' => $authorizedCertificatesId];
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'authorizedCertificatesId' => $authorizedCertificatesId];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], AuthorizedCertificate::class);
   }
   /**
-   * Lists all SSL certificates the user is authorized to administer.
-   * (authorizedCertificates.listAppsAuthorizedCertificates)
+   * Lists all SSL certificates the user is authorized to administer. (authorizedC
+   * ertificates.listProjectsLocationsApplicationsAuthorizedCertificates)
    *
-   * @param string $appsId Part of `parent`. Required. Name of the parent
+   * @param string $projectsId Part of `parent`. Required. Name of the parent
    * Application resource. Example: apps/myapp.
+   * @param string $locationsId Part of `parent`. See documentation of
+   * `projectsId`.
+   * @param string $applicationsId Part of `parent`. See documentation of
+   * `projectsId`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum results to return per page.
@@ -100,9 +114,9 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
    * @return ListAuthorizedCertificatesResponse
    * @throws \Google\Service\Exception
    */
-  public function listAppsAuthorizedCertificates($appsId, $optParams = [])
+  public function listProjectsLocationsApplicationsAuthorizedCertificates($projectsId, $locationsId, $applicationsId, $optParams = [])
   {
-    $params = ['appsId' => $appsId];
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListAuthorizedCertificatesResponse::class);
   }
@@ -113,10 +127,13 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
    * certificate. The certificate display_name may also be updated.
    * (authorizedCertificates.patch)
    *
-   * @param string $appsId Part of `name`. Required. Name of the resource to
+   * @param string $projectsId Part of `name`. Required. Name of the resource to
    * update. Example: apps/myapp/authorizedCertificates/12345.
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
    * @param string $authorizedCertificatesId Part of `name`. See documentation of
-   * `appsId`.
+   * `projectsId`.
    * @param AuthorizedCertificate $postBody
    * @param array $optParams Optional parameters.
    *
@@ -126,13 +143,13 @@ class AppsAuthorizedCertificates extends \Google\Service\Resource
    * @return AuthorizedCertificate
    * @throws \Google\Service\Exception
    */
-  public function patch($appsId, $authorizedCertificatesId, AuthorizedCertificate $postBody, $optParams = [])
+  public function patch($projectsId, $locationsId, $applicationsId, $authorizedCertificatesId, AuthorizedCertificate $postBody, $optParams = [])
   {
-    $params = ['appsId' => $appsId, 'authorizedCertificatesId' => $authorizedCertificatesId, 'postBody' => $postBody];
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'authorizedCertificatesId' => $authorizedCertificatesId, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], AuthorizedCertificate::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AppsAuthorizedCertificates::class, 'Google_Service_Appengine_Resource_AppsAuthorizedCertificates');
+class_alias(ProjectsLocationsApplicationsAuthorizedCertificates::class, 'Google_Service_Appengine_Resource_ProjectsLocationsApplicationsAuthorizedCertificates');

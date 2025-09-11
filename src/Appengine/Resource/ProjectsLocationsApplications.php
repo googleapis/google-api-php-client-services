@@ -37,8 +37,8 @@ class ProjectsLocationsApplications extends \Google\Service\Resource
    * policy for the application. iap - Identity-Aware Proxy properties for the
    * application. (applications.patch)
    *
-   * @param string $projectsId Part of `name`. Name of the Application resource to
-   * update. Example: apps/myapp.
+   * @param string $projectsId Part of `name`. Required. Name of the Application
+   * resource to update. Example: apps/myapp.
    * @param string $locationsId Part of `name`. See documentation of `projectsId`.
    * @param string $applicationsId Part of `name`. See documentation of
    * `projectsId`.

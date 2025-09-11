@@ -55,8 +55,8 @@ class Apps extends \Google\Service\Resource
   /**
    * Gets information about an application. (apps.get)
    *
-   * @param string $appsId Part of `name`. Name of the Application resource to
-   * get. Example: apps/myapp.
+   * @param string $appsId Part of `name`. Required. Name of the Application
+   * resource to get. Example: apps/myapp.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string includeExtraData Options to include extra data
@@ -93,8 +93,8 @@ class Apps extends \Google\Service\Resource
    * policy for the application. iap - Identity-Aware Proxy properties for the
    * application. (apps.patch)
    *
-   * @param string $appsId Part of `name`. Name of the Application resource to
-   * update. Example: apps/myapp.
+   * @param string $appsId Part of `name`. Required. Name of the Application
+   * resource to update. Example: apps/myapp.
    * @param Application $postBody
    * @param array $optParams Optional parameters.
    *
@@ -122,8 +122,8 @@ class Apps extends \Google\Service\Resource
    * was recent, the numeric ID can be found in the Cloud Console Activity Log.
    * (apps.repair)
    *
-   * @param string $appsId Part of `name`. Name of the application to repair.
-   * Example: apps/myapp
+   * @param string $appsId Part of `name`. Required. Name of the application to
+   * repair. Example: apps/myapp
    * @param RepairApplicationRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

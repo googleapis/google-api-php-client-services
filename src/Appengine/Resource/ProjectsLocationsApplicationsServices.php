@@ -33,8 +33,8 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
   /**
    * Deletes the specified service and all enclosed versions. (services.delete)
    *
-   * @param string $projectsId Part of `name`. Name of the resource requested.
-   * Example: apps/myapp/services/default.
+   * @param string $projectsId Part of `name`. Required. Name of the resource
+   * requested. Example: apps/myapp/services/default.
    * @param string $locationsId Part of `name`. See documentation of `projectsId`.
    * @param string $applicationsId Part of `name`. See documentation of
    * `projectsId`.
@@ -52,8 +52,8 @@ class ProjectsLocationsApplicationsServices extends \Google\Service\Resource
   /**
    * Updates the configuration of the specified service. (services.patch)
    *
-   * @param string $projectsId Part of `name`. Name of the resource to update.
-   * Example: apps/myapp/services/default.
+   * @param string $projectsId Part of `name`. Required. Name of the resource to
+   * update. Example: apps/myapp/services/default.
    * @param string $locationsId Part of `name`. See documentation of `projectsId`.
    * @param string $applicationsId Part of `name`. See documentation of
    * `projectsId`.

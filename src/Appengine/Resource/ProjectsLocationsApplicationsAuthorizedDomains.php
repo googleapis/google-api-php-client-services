@@ -33,8 +33,8 @@ class ProjectsLocationsApplicationsAuthorizedDomains extends \Google\Service\Res
    * Lists all domains the user is authorized to administer.
    * (authorizedDomains.listProjectsLocationsApplicationsAuthorizedDomains)
    *
-   * @param string $projectsId Part of `parent`. Name of the parent Application
-   * resource. Example: apps/myapp.
+   * @param string $projectsId Part of `parent`. Required. Name of the parent
+   * Application resource. Example: apps/myapp.
    * @param string $locationsId Part of `parent`. See documentation of
    * `projectsId`.
    * @param string $applicationsId Part of `parent`. See documentation of

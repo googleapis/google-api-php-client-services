@@ -56,7 +56,7 @@ class AppsFirewallIngressRules extends \Google\Service\Resource
   /**
    * Creates a firewall rule for the application. (ingressRules.create)
    *
-   * @param string $appsId Part of `parent`. Name of the parent Firewall
+   * @param string $appsId Part of `parent`. Required. Name of the parent Firewall
    * collection in which to create a new rule. Example:
    * apps/myapp/firewall/ingressRules.
    * @param FirewallRule $postBody

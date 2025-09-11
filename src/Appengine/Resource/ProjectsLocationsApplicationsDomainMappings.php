@@ -18,6 +18,7 @@
 namespace Google\Service\Appengine\Resource;
 
 use Google\Service\Appengine\DomainMapping;
+use Google\Service\Appengine\Operation;
 
 /**
  * The "domainMappings" collection of methods.
@@ -30,10 +31,37 @@ use Google\Service\Appengine\DomainMapping;
 class ProjectsLocationsApplicationsDomainMappings extends \Google\Service\Resource
 {
   /**
+   * Maps a domain to an application. A user must be authorized to administer a
+   * domain in order to map it to an application. For a list of available
+   * authorized domains, see AuthorizedDomains.ListAuthorizedDomains.
+   * (domainMappings.create)
+   *
+   * @param string $projectsId Part of `parent`. Required. Name of the parent
+   * Application resource. Example: apps/myapp.
+   * @param string $locationsId Part of `parent`. See documentation of
+   * `projectsId`.
+   * @param string $applicationsId Part of `parent`. See documentation of
+   * `projectsId`.
+   * @param DomainMapping $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string overrideStrategy Whether the domain creation should
+   * override any existing mappings for this domain. By default, overrides are
+   * rejected.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function create($projectsId, $locationsId, $applicationsId, DomainMapping $postBody, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('create', [$params], Operation::class);
+  }
+  /**
    * Gets the specified domain mapping. (domainMappings.get)
    *
-   * @param string $projectsId Part of `name`. Name of the resource requested.
-   * Example: apps/myapp/domainMappings/example.com.
+   * @param string $projectsId Part of `name`. Required. Name of the resource
+   * requested. Example: apps/myapp/domainMappings/example.com.
    * @param string $locationsId Part of `name`. See documentation of `projectsId`.
    * @param string $applicationsId Part of `name`. See documentation of
    * `projectsId`.
