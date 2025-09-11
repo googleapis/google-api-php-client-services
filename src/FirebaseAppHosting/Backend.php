@@ -69,6 +69,10 @@ class Backend extends \Google\Collection
    */
   public $reconciling;
   /**
+   * @var bool
+   */
+  public $requestLogsDisabled;
+  /**
    * @var string
    */
   public $serviceAccount;
@@ -270,6 +274,20 @@ class Backend extends \Google\Collection
   public function getReconciling()
   {
     return $this->reconciling;
+  }
+  /**
+   * @param bool
+   */
+  public function setRequestLogsDisabled($requestLogsDisabled)
+  {
+    $this->requestLogsDisabled = $requestLogsDisabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getRequestLogsDisabled()
+  {
+    return $this->requestLogsDisabled;
   }
   /**
    * @param string
