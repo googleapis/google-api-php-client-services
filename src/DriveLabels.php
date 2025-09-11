@@ -220,6 +220,16 @@ class DriveLabels extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'updateLabelEnabledAppSettings' => [
+              'path' => 'v2/{+name}:updateLabelEnabledAppSettings',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'updatePermissions' => [
               'path' => 'v2/{+parent}/permissions',
               'httpMethod' => 'PATCH',

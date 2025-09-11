@@ -30,17 +30,18 @@ use Google\Service\DriveLabels\GoogleAppsDriveLabelsV2LabelPermission;
 class LabelsRevisions extends \Google\Service\Resource
 {
   /**
-   * Updates a Label's permissions. If a permission for the indicated principal
-   * doesn't exist, a new Label Permission is created, otherwise the existing
-   * permission is updated. Permissions affect the Label resource as a whole, are
-   * not revisioned, and do not require publishing. (revisions.updatePermissions)
+   * Updates a label's permissions. If a permission for the indicated principal
+   * doesn't exist, a label permission is created, otherwise the existing
+   * permission is updated. Permissions affect the label resource as a whole,
+   * aren't revisioned, and don't require publishing.
+   * (revisions.updatePermissions)
    *
-   * @param string $parent Required. The parent Label resource name.
+   * @param string $parent Required. The parent label resource name.
    * @param GoogleAppsDriveLabelsV2LabelPermission $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool useAdminAccess Set to `true` in order to use the user's admin
-   * credentials. The server will verify the user is an admin for the Label before
+   * credentials. The server will verify the user is an admin for the label before
    * allowing access.
    * @return GoogleAppsDriveLabelsV2LabelPermission
    * @throws \Google\Service\Exception
