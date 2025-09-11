@@ -32,6 +32,8 @@ class GoogleCloudDialogflowCxV3Flow extends \Google\Collection
   public $displayName;
   protected $eventHandlersType = GoogleCloudDialogflowCxV3EventHandler::class;
   protected $eventHandlersDataType = 'array';
+  protected $inputParameterDefinitionsType = GoogleCloudDialogflowCxV3ParameterDefinition::class;
+  protected $inputParameterDefinitionsDataType = 'array';
   protected $knowledgeConnectorSettingsType = GoogleCloudDialogflowCxV3KnowledgeConnectorSettings::class;
   protected $knowledgeConnectorSettingsDataType = '';
   /**
@@ -46,6 +48,8 @@ class GoogleCloudDialogflowCxV3Flow extends \Google\Collection
   public $name;
   protected $nluSettingsType = GoogleCloudDialogflowCxV3NluSettings::class;
   protected $nluSettingsDataType = '';
+  protected $outputParameterDefinitionsType = GoogleCloudDialogflowCxV3ParameterDefinition::class;
+  protected $outputParameterDefinitionsDataType = 'array';
   /**
    * @var string[]
    */
@@ -108,6 +112,20 @@ class GoogleCloudDialogflowCxV3Flow extends \Google\Collection
   public function getEventHandlers()
   {
     return $this->eventHandlers;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function setInputParameterDefinitions($inputParameterDefinitions)
+  {
+    $this->inputParameterDefinitions = $inputParameterDefinitions;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function getInputParameterDefinitions()
+  {
+    return $this->inputParameterDefinitions;
   }
   /**
    * @param GoogleCloudDialogflowCxV3KnowledgeConnectorSettings
@@ -178,6 +196,20 @@ class GoogleCloudDialogflowCxV3Flow extends \Google\Collection
   public function getNluSettings()
   {
     return $this->nluSettings;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function setOutputParameterDefinitions($outputParameterDefinitions)
+  {
+    $this->outputParameterDefinitions = $outputParameterDefinitions;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function getOutputParameterDefinitions()
+  {
+    return $this->outputParameterDefinitions;
   }
   /**
    * @param string[]

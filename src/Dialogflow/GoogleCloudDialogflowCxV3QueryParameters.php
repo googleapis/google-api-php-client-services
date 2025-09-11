@@ -53,6 +53,10 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   protected $llmModelSettingsType = GoogleCloudDialogflowCxV3LlmModelSettings::class;
   protected $llmModelSettingsDataType = '';
   /**
+   * @var string
+   */
+  public $parameterScope;
+  /**
    * @var array[]
    */
   public $parameters;
@@ -206,6 +210,20 @@ class GoogleCloudDialogflowCxV3QueryParameters extends \Google\Collection
   public function getLlmModelSettings()
   {
     return $this->llmModelSettings;
+  }
+  /**
+   * @param string
+   */
+  public function setParameterScope($parameterScope)
+  {
+    $this->parameterScope = $parameterScope;
+  }
+  /**
+   * @return string
+   */
+  public function getParameterScope()
+  {
+    return $this->parameterScope;
   }
   /**
    * @param array[]

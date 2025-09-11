@@ -28,6 +28,10 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet extends \
    */
   public $documentUri;
   /**
+   * @var array[]
+   */
+  public $metadata;
+  /**
    * @var string
    */
   public $text;
@@ -59,6 +63,20 @@ class GoogleCloudDialogflowCxV3DataStoreConnectionSignalsSearchSnippet extends \
   public function getDocumentUri()
   {
     return $this->documentUri;
+  }
+  /**
+   * @param array[]
+   */
+  public function setMetadata($metadata)
+  {
+    $this->metadata = $metadata;
+  }
+  /**
+   * @return array[]
+   */
+  public function getMetadata()
+  {
+    return $this->metadata;
   }
   /**
    * @param string

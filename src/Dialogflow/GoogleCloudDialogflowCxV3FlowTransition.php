@@ -17,64 +17,46 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata extends \Google\Model
+class GoogleCloudDialogflowCxV3FlowTransition extends \Google\Model
 {
   /**
    * @var string
    */
-  public $conversationModel;
+  public $displayName;
   /**
    * @var string
    */
-  public $createTime;
-  /**
-   * @var string
-   */
-  public $doneTime;
+  public $flow;
 
   /**
    * @param string
    */
-  public function setConversationModel($conversationModel)
+  public function setDisplayName($displayName)
   {
-    $this->conversationModel = $conversationModel;
+    $this->displayName = $displayName;
   }
   /**
    * @return string
    */
-  public function getConversationModel()
+  public function getDisplayName()
   {
-    return $this->conversationModel;
+    return $this->displayName;
   }
   /**
    * @param string
    */
-  public function setCreateTime($createTime)
+  public function setFlow($flow)
   {
-    $this->createTime = $createTime;
+    $this->flow = $flow;
   }
   /**
    * @return string
    */
-  public function getCreateTime()
+  public function getFlow()
   {
-    return $this->createTime;
-  }
-  /**
-   * @param string
-   */
-  public function setDoneTime($doneTime)
-  {
-    $this->doneTime = $doneTime;
-  }
-  /**
-   * @return string
-   */
-  public function getDoneTime()
-  {
-    return $this->doneTime;
+    return $this->flow;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata');
+class_alias(GoogleCloudDialogflowCxV3FlowTransition::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3FlowTransition');

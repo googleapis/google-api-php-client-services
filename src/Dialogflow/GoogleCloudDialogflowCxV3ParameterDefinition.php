@@ -17,82 +17,80 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2CreateConversationModelOperationMetadata extends \Google\Model
+class GoogleCloudDialogflowCxV3ParameterDefinition extends \Google\Model
 {
   /**
    * @var string
    */
-  public $conversationModel;
+  public $description;
   /**
    * @var string
    */
-  public $createTime;
+  public $name;
   /**
    * @var string
    */
-  public $doneTime;
-  /**
-   * @var string
-   */
-  public $state;
+  public $type;
+  protected $typeSchemaType = GoogleCloudDialogflowCxV3TypeSchema::class;
+  protected $typeSchemaDataType = '';
 
   /**
    * @param string
    */
-  public function setConversationModel($conversationModel)
+  public function setDescription($description)
   {
-    $this->conversationModel = $conversationModel;
+    $this->description = $description;
   }
   /**
    * @return string
    */
-  public function getConversationModel()
+  public function getDescription()
   {
-    return $this->conversationModel;
+    return $this->description;
   }
   /**
    * @param string
    */
-  public function setCreateTime($createTime)
+  public function setName($name)
   {
-    $this->createTime = $createTime;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getCreateTime()
+  public function getName()
   {
-    return $this->createTime;
+    return $this->name;
   }
   /**
    * @param string
    */
-  public function setDoneTime($doneTime)
+  public function setType($type)
   {
-    $this->doneTime = $doneTime;
+    $this->type = $type;
   }
   /**
    * @return string
    */
-  public function getDoneTime()
+  public function getType()
   {
-    return $this->doneTime;
+    return $this->type;
   }
   /**
-   * @param string
+   * @param GoogleCloudDialogflowCxV3TypeSchema
    */
-  public function setState($state)
+  public function setTypeSchema(GoogleCloudDialogflowCxV3TypeSchema $typeSchema)
   {
-    $this->state = $state;
+    $this->typeSchema = $typeSchema;
   }
   /**
-   * @return string
+   * @return GoogleCloudDialogflowCxV3TypeSchema
    */
-  public function getState()
+  public function getTypeSchema()
   {
-    return $this->state;
+    return $this->typeSchema;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowV2CreateConversationModelOperationMetadata::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2CreateConversationModelOperationMetadata');
+class_alias(GoogleCloudDialogflowCxV3ParameterDefinition::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3ParameterDefinition');

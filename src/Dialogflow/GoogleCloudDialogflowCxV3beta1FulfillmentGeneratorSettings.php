@@ -17,64 +17,64 @@
 
 namespace Google\Service\Dialogflow;
 
-class GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata extends \Google\Model
+class GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings extends \Google\Model
 {
   /**
    * @var string
    */
-  public $conversationModel;
+  public $generator;
+  /**
+   * @var string[]
+   */
+  public $inputParameters;
   /**
    * @var string
    */
-  public $createTime;
-  /**
-   * @var string
-   */
-  public $doneTime;
+  public $outputParameter;
 
   /**
    * @param string
    */
-  public function setConversationModel($conversationModel)
+  public function setGenerator($generator)
   {
-    $this->conversationModel = $conversationModel;
+    $this->generator = $generator;
   }
   /**
    * @return string
    */
-  public function getConversationModel()
+  public function getGenerator()
   {
-    return $this->conversationModel;
+    return $this->generator;
+  }
+  /**
+   * @param string[]
+   */
+  public function setInputParameters($inputParameters)
+  {
+    $this->inputParameters = $inputParameters;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInputParameters()
+  {
+    return $this->inputParameters;
   }
   /**
    * @param string
    */
-  public function setCreateTime($createTime)
+  public function setOutputParameter($outputParameter)
   {
-    $this->createTime = $createTime;
+    $this->outputParameter = $outputParameter;
   }
   /**
    * @return string
    */
-  public function getCreateTime()
+  public function getOutputParameter()
   {
-    return $this->createTime;
-  }
-  /**
-   * @param string
-   */
-  public function setDoneTime($doneTime)
-  {
-    $this->doneTime = $doneTime;
-  }
-  /**
-   * @return string
-   */
-  public function getDoneTime()
-  {
-    return $this->doneTime;
+    return $this->outputParameter;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowV2DeleteConversationModelOperationMetadata');
+class_alias(GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings::class, 'Google_Service_Dialogflow_GoogleCloudDialogflowCxV3beta1FulfillmentGeneratorSettings');

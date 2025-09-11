@@ -32,6 +32,10 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
    * @var string
    */
   public $goal;
+  protected $handlersType = GoogleCloudDialogflowCxV3Handler::class;
+  protected $handlersDataType = 'array';
+  protected $inputParameterDefinitionsType = GoogleCloudDialogflowCxV3ParameterDefinition::class;
+  protected $inputParameterDefinitionsDataType = 'array';
   protected $instructionType = GoogleCloudDialogflowCxV3PlaybookInstruction::class;
   protected $instructionDataType = '';
   protected $llmModelSettingsType = GoogleCloudDialogflowCxV3LlmModelSettings::class;
@@ -40,6 +44,12 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $outputParameterDefinitionsType = GoogleCloudDialogflowCxV3ParameterDefinition::class;
+  protected $outputParameterDefinitionsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $playbookType;
   /**
    * @var string[]
    */
@@ -104,6 +114,34 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
     return $this->goal;
   }
   /**
+   * @param GoogleCloudDialogflowCxV3Handler[]
+   */
+  public function setHandlers($handlers)
+  {
+    $this->handlers = $handlers;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3Handler[]
+   */
+  public function getHandlers()
+  {
+    return $this->handlers;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function setInputParameterDefinitions($inputParameterDefinitions)
+  {
+    $this->inputParameterDefinitions = $inputParameterDefinitions;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function getInputParameterDefinitions()
+  {
+    return $this->inputParameterDefinitions;
+  }
+  /**
    * @param GoogleCloudDialogflowCxV3PlaybookInstruction
    */
   public function setInstruction(GoogleCloudDialogflowCxV3PlaybookInstruction $instruction)
@@ -144,6 +182,34 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function setOutputParameterDefinitions($outputParameterDefinitions)
+  {
+    $this->outputParameterDefinitions = $outputParameterDefinitions;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3ParameterDefinition[]
+   */
+  public function getOutputParameterDefinitions()
+  {
+    return $this->outputParameterDefinitions;
+  }
+  /**
+   * @param string
+   */
+  public function setPlaybookType($playbookType)
+  {
+    $this->playbookType = $playbookType;
+  }
+  /**
+   * @return string
+   */
+  public function getPlaybookType()
+  {
+    return $this->playbookType;
   }
   /**
    * @param string[]
