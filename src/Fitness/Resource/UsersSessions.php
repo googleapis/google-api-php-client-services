@@ -54,10 +54,10 @@ class UsersSessions extends \Google\Service\Resource
    *
    * @opt_param int activityType If non-empty, only sessions with these activity
    * types should be returned.
-   * @opt_param string endTime An RFC3339 timestamp. Only sessions ending between
-   * the start and end times will be included in the response. If this time is
-   * omitted but startTime is specified, all sessions from startTime to the end of
-   * time will be returned.
+   * @opt_param string endTime An RFC3339 timestamp. Only sessions starting before
+   * endTime and ending after startTime up to (endTime + 1 day) will be included
+   * in the response. If this time is omitted but startTime is specified, all
+   * sessions ending after startTime to the end of time will be returned.
    * @opt_param bool includeDeleted If true, and if both startTime and endTime are
    * omitted, session deletions will be returned.
    * @opt_param string pageToken The continuation token, which is used for
@@ -66,10 +66,11 @@ class UsersSessions extends \Google\Service\Resource
    * ignored if either start or end time is specified. If none of start time, end
    * time, and the page token is specified, sessions modified in the last 30 days
    * are returned.
-   * @opt_param string startTime An RFC3339 timestamp. Only sessions ending
-   * between the start and end times will be included in the response. If this
-   * time is omitted but endTime is specified, all sessions from the start of time
-   * up to endTime will be returned.
+   * @opt_param string startTime An RFC3339 timestamp. Only sessions starting
+   * before endTime and ending after startTime up to (endTime + 1 day) will be
+   * included in the response. If this time is omitted but endTime is specified,
+   * all sessions starting before endTime and ending after the start of time up to
+   * (endTime + 1 day) will be returned.
    * @return ListSessionsResponse
    * @throws \Google\Service\Exception
    */
