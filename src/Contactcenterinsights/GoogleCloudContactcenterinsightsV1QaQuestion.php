@@ -44,10 +44,16 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
    * @var int
    */
   public $order;
+  protected $predefinedQuestionConfigType = GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig::class;
+  protected $predefinedQuestionConfigDataType = '';
   /**
    * @var string
    */
   public $questionBody;
+  /**
+   * @var string
+   */
+  public $questionType;
   /**
    * @var string[]
    */
@@ -158,6 +164,20 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
     return $this->order;
   }
   /**
+   * @param GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig
+   */
+  public function setPredefinedQuestionConfig(GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig $predefinedQuestionConfig)
+  {
+    $this->predefinedQuestionConfig = $predefinedQuestionConfig;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1QaQuestionPredefinedQuestionConfig
+   */
+  public function getPredefinedQuestionConfig()
+  {
+    return $this->predefinedQuestionConfig;
+  }
+  /**
    * @param string
    */
   public function setQuestionBody($questionBody)
@@ -170,6 +190,20 @@ class GoogleCloudContactcenterinsightsV1QaQuestion extends \Google\Collection
   public function getQuestionBody()
   {
     return $this->questionBody;
+  }
+  /**
+   * @param string
+   */
+  public function setQuestionType($questionType)
+  {
+    $this->questionType = $questionType;
+  }
+  /**
+   * @return string
+   */
+  public function getQuestionType()
+  {
+    return $this->questionType;
   }
   /**
    * @param string[]

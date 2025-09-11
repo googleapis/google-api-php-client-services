@@ -23,6 +23,10 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSourc
   /**
    * @var string
    */
+  public $audioBucketUri;
+  /**
+   * @var string
+   */
   public $bucketObjectType;
   /**
    * @var string
@@ -36,7 +40,25 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSourc
    * @var string
    */
   public $metadataBucketUri;
+  /**
+   * @var string
+   */
+  public $transcriptBucketUri;
 
+  /**
+   * @param string
+   */
+  public function setAudioBucketUri($audioBucketUri)
+  {
+    $this->audioBucketUri = $audioBucketUri;
+  }
+  /**
+   * @return string
+   */
+  public function getAudioBucketUri()
+  {
+    return $this->audioBucketUri;
+  }
   /**
    * @param string
    */
@@ -92,6 +114,20 @@ class GoogleCloudContactcenterinsightsV1alpha1IngestConversationsRequestGcsSourc
   public function getMetadataBucketUri()
   {
     return $this->metadataBucketUri;
+  }
+  /**
+   * @param string
+   */
+  public function setTranscriptBucketUri($transcriptBucketUri)
+  {
+    $this->transcriptBucketUri = $transcriptBucketUri;
+  }
+  /**
+   * @return string
+   */
+  public function getTranscriptBucketUri()
+  {
+    return $this->transcriptBucketUri;
   }
 }
 

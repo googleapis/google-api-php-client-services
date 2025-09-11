@@ -17,8 +17,9 @@
 
 namespace Google\Service\Contactcenterinsights;
 
-class GoogleCloudContactcenterinsightsV1QaScorecard extends \Google\Model
+class GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag extends \Google\Collection
 {
+  protected $collection_key = 'qaQuestionIds';
   /**
    * @var string
    */
@@ -26,23 +27,15 @@ class GoogleCloudContactcenterinsightsV1QaScorecard extends \Google\Model
   /**
    * @var string
    */
-  public $description;
-  /**
-   * @var string
-   */
   public $displayName;
-  /**
-   * @var bool
-   */
-  public $isDefault;
   /**
    * @var string
    */
   public $name;
   /**
-   * @var string
+   * @var string[]
    */
-  public $source;
+  public $qaQuestionIds;
   /**
    * @var string
    */
@@ -65,20 +58,6 @@ class GoogleCloudContactcenterinsightsV1QaScorecard extends \Google\Model
   /**
    * @param string
    */
-  public function setDescription($description)
-  {
-    $this->description = $description;
-  }
-  /**
-   * @return string
-   */
-  public function getDescription()
-  {
-    return $this->description;
-  }
-  /**
-   * @param string
-   */
   public function setDisplayName($displayName)
   {
     $this->displayName = $displayName;
@@ -89,20 +68,6 @@ class GoogleCloudContactcenterinsightsV1QaScorecard extends \Google\Model
   public function getDisplayName()
   {
     return $this->displayName;
-  }
-  /**
-   * @param bool
-   */
-  public function setIsDefault($isDefault)
-  {
-    $this->isDefault = $isDefault;
-  }
-  /**
-   * @return bool
-   */
-  public function getIsDefault()
-  {
-    return $this->isDefault;
   }
   /**
    * @param string
@@ -119,18 +84,18 @@ class GoogleCloudContactcenterinsightsV1QaScorecard extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setSource($source)
+  public function setQaQuestionIds($qaQuestionIds)
   {
-    $this->source = $source;
+    $this->qaQuestionIds = $qaQuestionIds;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getSource()
+  public function getQaQuestionIds()
   {
-    return $this->source;
+    return $this->qaQuestionIds;
   }
   /**
    * @param string
@@ -149,4 +114,4 @@ class GoogleCloudContactcenterinsightsV1QaScorecard extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudContactcenterinsightsV1QaScorecard::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1QaScorecard');
+class_alias(GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag::class, 'Google_Service_Contactcenterinsights_GoogleCloudContactcenterinsightsV1alpha1QaQuestionTag');

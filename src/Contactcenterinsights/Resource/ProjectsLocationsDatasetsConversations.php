@@ -24,6 +24,7 @@ use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Calcu
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1Conversation;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1IngestConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1ListConversationsResponse;
+use Google\Service\Contactcenterinsights\GoogleCloudContactcenterinsightsV1SampleConversationsRequest;
 use Google\Service\Contactcenterinsights\GoogleLongrunningOperation;
 use Google\Service\Contactcenterinsights\GoogleProtobufEmpty;
 
@@ -170,6 +171,22 @@ class ProjectsLocationsDatasetsConversations extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudContactcenterinsightsV1ListConversationsResponse::class);
+  }
+  /**
+   * Samples conversations based on user configuration and handles the sampled
+   * conversations for different use cases. (conversations.sample)
+   *
+   * @param string $parent Required. The parent resource of the dataset.
+   * @param GoogleCloudContactcenterinsightsV1SampleConversationsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function sample($parent, GoogleCloudContactcenterinsightsV1SampleConversationsRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('sample', [$params], GoogleLongrunningOperation::class);
   }
 }
 
