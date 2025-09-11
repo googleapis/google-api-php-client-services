@@ -55,9 +55,9 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
   }
   /**
    * RetrieveStudyMetadata returns instance associated with the given study
-   * presented as metadata with the bulk data removed. See [RetrieveTransaction] (
-   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.4
-   * ). For details on the implementation of RetrieveStudyMetadata, see [Metadata
+   * presented as metadata. See [RetrieveTransaction] (http://dicom.nema.org/medic
+   * al/dicom/current/output/html/part18.html#sect_10.4). For details on the
+   * implementation of RetrieveStudyMetadata, see [Metadata
    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
    * to call RetrieveStudyMetadata, see [Retrieve

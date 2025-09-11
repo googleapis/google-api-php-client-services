@@ -848,12 +848,11 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * search query that will match a large number of resources, you can avoiding
    * using the special synchronous index by including an additional `_sort`
    * parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the
-   * default sorting order. Note: The special synchronous identifier index are
-   * currently disabled for DocumentReference and DocumentManifest searches. For
-   * samples and detailed information, see [Searching for FHIR
-   * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and
-   * [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-
-   * tos/fhir-advanced-search). (fhir.search)
+   * default sorting order. For samples and detailed information, see [Searching
+   * for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+   * search) and [Advanced FHIR search
+   * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-
+   * search). (fhir.search)
    *
    * @param string $parent Required. Name of the FHIR store to retrieve resources
    * from.
@@ -930,12 +929,11 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * search query that will match a large number of resources, you can avoiding
    * using the special synchronous index by including an additional `_sort`
    * parameter in your query. Use `_sort=-_lastUpdated` if you want to keep the
-   * default sorting order. Note: The special synchronous identifier index are
-   * currently disabled for DocumentReference and DocumentManifest searches. For
-   * samples and detailed information, see [Searching for FHIR
-   * resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-search) and
-   * [Advanced FHIR search features](https://cloud.google.com/healthcare/docs/how-
-   * tos/fhir-advanced-search). (fhir.searchType)
+   * default sorting order. For samples and detailed information, see [Searching
+   * for FHIR resources](https://cloud.google.com/healthcare/docs/how-tos/fhir-
+   * search) and [Advanced FHIR search
+   * features](https://cloud.google.com/healthcare/docs/how-tos/fhir-advanced-
+   * search). (fhir.searchType)
    *
    * @param string $parent Required. Name of the FHIR store to retrieve resources
    * from.
@@ -976,9 +974,10 @@ class ProjectsLocationsDatasetsFhirStoresFhir extends \Google\Service\Resource
    * by the FHIR store contain a JSON-encoded `OperationOutcome` resource
    * describing the reason for the error. If the request cannot be mapped to a
    * valid API method on a FHIR store, a generic GCP error might be returned
-   * instead. In R5, the conditional update interaction If-None-Match is
-   * supported, including the wildcard behaviour. For samples that show how to
-   * call `update`, see [Updating a FHIR
+   * instead. The conditional update interaction If-None-Match is supported,
+   * including the wildcard behaviour, as defined by the R5 spec. This
+   * functionality is supported in R4 and R5. For samples that show how to call
+   * `update`, see [Updating a FHIR
    * resource](https://cloud.google.com/healthcare/docs/how-tos/fhir-
    * resources#updating_a_fhir_resource). (fhir.update)
    *

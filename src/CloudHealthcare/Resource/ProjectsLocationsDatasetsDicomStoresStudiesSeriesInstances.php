@@ -86,10 +86,10 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
   }
   /**
    * RetrieveInstanceMetadata returns instance associated with the given study,
-   * series, and SOP Instance UID presented as metadata with the bulk data
-   * removed. See [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/curre
-   * nt/output/html/part18.html#sect_10.4). For details on the implementation of
-   * RetrieveInstanceMetadata, see [Metadata
+   * series, and SOP Instance UID presented as metadata. See [RetrieveTransaction]
+   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.
+   * 4). For details on the implementation of RetrieveInstanceMetadata, see
+   * [Metadata
    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
    * to call RetrieveInstanceMetadata, see [Retrieve

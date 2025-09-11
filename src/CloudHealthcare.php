@@ -56,6 +56,7 @@ class CloudHealthcare extends \Google\Service
   public $projects_locations_datasets_dicomStores_studies;
   public $projects_locations_datasets_dicomStores_studies_series;
   public $projects_locations_datasets_dicomStores_studies_series_instances;
+  public $projects_locations_datasets_dicomStores_studies_series_instances_bulkdata;
   public $projects_locations_datasets_dicomStores_studies_series_instances_frames;
   public $projects_locations_datasets_fhirStores;
   public $projects_locations_datasets_fhirStores_fhir;
@@ -1336,6 +1337,31 @@ class CloudHealthcare extends \Google\Service
                 'viewport' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_datasets_dicomStores_studies_series_instances_bulkdata = new CloudHealthcare\Resource\ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesBulkdata(
+        $this,
+        $this->serviceName,
+        'bulkdata',
+        [
+          'methods' => [
+            'retrieveBulkdata' => [
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'dicomWebPath' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],

@@ -57,10 +57,9 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeries extends \Google\Service\
   }
   /**
    * RetrieveSeriesMetadata returns instance associated with the given study and
-   * series, presented as metadata with the bulk data removed. See
-   * [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/current/output/htm
-   * l/part18.html#sect_10.4). For details on the implementation of
-   * RetrieveSeriesMetadata, see [Metadata
+   * series, presented as metadata. See [RetrieveTransaction] (http://dicom.nema.o
+   * rg/medical/dicom/current/output/html/part18.html#sect_10.4). For details on
+   * the implementation of RetrieveSeriesMetadata, see [Metadata
    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
    * to call RetrieveSeriesMetadata, see [Retrieve
