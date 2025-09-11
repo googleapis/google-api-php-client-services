@@ -29,6 +29,8 @@ class Type extends \Google\Model
   protected $bytesTypeDataType = '';
   protected $dateTypeType = GoogleBigtableAdminV2TypeDate::class;
   protected $dateTypeDataType = '';
+  protected $enumTypeType = GoogleBigtableAdminV2TypeEnum::class;
+  protected $enumTypeDataType = '';
   protected $float32TypeType = GoogleBigtableAdminV2TypeFloat32::class;
   protected $float32TypeDataType = '';
   protected $float64TypeType = GoogleBigtableAdminV2TypeFloat64::class;
@@ -37,6 +39,8 @@ class Type extends \Google\Model
   protected $int64TypeDataType = '';
   protected $mapTypeType = GoogleBigtableAdminV2TypeMap::class;
   protected $mapTypeDataType = '';
+  protected $protoTypeType = GoogleBigtableAdminV2TypeProto::class;
+  protected $protoTypeDataType = '';
   protected $stringTypeType = GoogleBigtableAdminV2TypeString::class;
   protected $stringTypeDataType = '';
   protected $structTypeType = GoogleBigtableAdminV2TypeStruct::class;
@@ -115,6 +119,20 @@ class Type extends \Google\Model
     return $this->dateType;
   }
   /**
+   * @param GoogleBigtableAdminV2TypeEnum
+   */
+  public function setEnumType(GoogleBigtableAdminV2TypeEnum $enumType)
+  {
+    $this->enumType = $enumType;
+  }
+  /**
+   * @return GoogleBigtableAdminV2TypeEnum
+   */
+  public function getEnumType()
+  {
+    return $this->enumType;
+  }
+  /**
    * @param GoogleBigtableAdminV2TypeFloat32
    */
   public function setFloat32Type(GoogleBigtableAdminV2TypeFloat32 $float32Type)
@@ -169,6 +187,20 @@ class Type extends \Google\Model
   public function getMapType()
   {
     return $this->mapType;
+  }
+  /**
+   * @param GoogleBigtableAdminV2TypeProto
+   */
+  public function setProtoType(GoogleBigtableAdminV2TypeProto $protoType)
+  {
+    $this->protoType = $protoType;
+  }
+  /**
+   * @return GoogleBigtableAdminV2TypeProto
+   */
+  public function getProtoType()
+  {
+    return $this->protoType;
   }
   /**
    * @param GoogleBigtableAdminV2TypeString
