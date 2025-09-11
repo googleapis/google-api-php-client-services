@@ -23,8 +23,6 @@ class SecurityContext extends \Google\Model
    * @var bool
    */
   public $allowPrivilegeEscalation;
-  protected $capabilitiesType = Capabilities::class;
-  protected $capabilitiesDataType = '';
   /**
    * @var bool
    */
@@ -55,20 +53,6 @@ class SecurityContext extends \Google\Model
   public function getAllowPrivilegeEscalation()
   {
     return $this->allowPrivilegeEscalation;
-  }
-  /**
-   * @param Capabilities
-   */
-  public function setCapabilities(Capabilities $capabilities)
-  {
-    $this->capabilities = $capabilities;
-  }
-  /**
-   * @return Capabilities
-   */
-  public function getCapabilities()
-  {
-    return $this->capabilities;
   }
   /**
    * @param bool
