@@ -40,8 +40,8 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * (workerPools.create)
    *
    * @param string $parent Required. The location and project in which this worker
-   * pool should be created. Format: projects/{project}/locations/{location},
-   * where {project} can be project id or number. Only lowercase characters,
+   * pool should be created. Format: `projects/{project}/locations/{location}`,
+   * where `{project}` can be project id or number. Only lowercase characters,
    * digits, and hyphens.
    * @param GoogleCloudRunV2WorkerPool $postBody
    * @param array $optParams Optional parameters.
@@ -52,7 +52,7 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * @opt_param string workerPoolId Required. The unique identifier for the
    * WorkerPool. It must begin with letter, and cannot end with hyphen; must
    * contain fewer than 50 characters. The name of the worker pool becomes
-   * {parent}/workerPools/{worker_pool_id}.
+   * `{parent}/workerPools/{worker_pool_id}`.
    * @return GoogleLongrunningOperation
    * @throws \Google\Service\Exception
    */
@@ -66,8 +66,8 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * Deletes a WorkerPool. (workerPools.delete)
    *
    * @param string $name Required. The full name of the WorkerPool. Format:
-   * projects/{project}/locations/{location}/workerPools/{worker_pool}, where
-   * {project} can be project id or number.
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where
+   * `{project}` can be project id or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string etag A system-generated fingerprint for this version of the
@@ -87,8 +87,8 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * Gets information about a WorkerPool. (workerPools.get)
    *
    * @param string $name Required. The full name of the WorkerPool. Format:
-   * projects/{project}/locations/{location}/workerPools/{worker_pool}, where
-   * {project} can be project id or number.
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}`, where
+   * `{project}` can be project id or number.
    * @param array $optParams Optional parameters.
    * @return GoogleCloudRunV2WorkerPool
    * @throws \Google\Service\Exception
@@ -137,8 +137,8 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    *
    * @param string $parent Required. The location and project to list resources
    * on. Location must be a valid Google Cloud region, and cannot be the "-"
-   * wildcard. Format: projects/{project}/locations/{location}, where {project}
-   * can be project id or number.
+   * wildcard. Format: `projects/{project}/locations/{location}`, where
+   * `{project}` can be project id or number.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of WorkerPools to return in this call.
@@ -161,7 +161,7 @@ class ProjectsLocationsWorkerPools extends \Google\Service\Resource
    * @param string $name The fully qualified name of this WorkerPool. In
    * CreateWorkerPoolRequest, this field is ignored, and instead composed from
    * CreateWorkerPoolRequest.parent and CreateWorkerPoolRequest.worker_id. Format:
-   * projects/{project}/locations/{location}/workerPools/{worker_id}
+   * `projects/{project}/locations/{location}/workerPools/{worker_id}`
    * @param GoogleCloudRunV2WorkerPool $postBody
    * @param array $optParams Optional parameters.
    *

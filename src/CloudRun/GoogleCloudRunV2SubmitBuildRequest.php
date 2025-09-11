@@ -31,6 +31,14 @@ class GoogleCloudRunV2SubmitBuildRequest extends \Google\Collection
   /**
    * @var string
    */
+  public $machineType;
+  /**
+   * @var string
+   */
+  public $releaseTrack;
+  /**
+   * @var string
+   */
   public $serviceAccount;
   protected $storageSourceType = GoogleCloudRunV2StorageSource::class;
   protected $storageSourceDataType = '';
@@ -84,6 +92,34 @@ class GoogleCloudRunV2SubmitBuildRequest extends \Google\Collection
   public function getImageUri()
   {
     return $this->imageUri;
+  }
+  /**
+   * @param string
+   */
+  public function setMachineType($machineType)
+  {
+    $this->machineType = $machineType;
+  }
+  /**
+   * @return string
+   */
+  public function getMachineType()
+  {
+    return $this->machineType;
+  }
+  /**
+   * @param string
+   */
+  public function setReleaseTrack($releaseTrack)
+  {
+    $this->releaseTrack = $releaseTrack;
+  }
+  /**
+   * @return string
+   */
+  public function getReleaseTrack()
+  {
+    return $this->releaseTrack;
   }
   /**
    * @param string

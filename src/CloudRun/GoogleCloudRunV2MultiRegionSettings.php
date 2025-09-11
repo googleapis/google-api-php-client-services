@@ -17,64 +17,47 @@
 
 namespace Google\Service\CloudRun;
 
-class GoogleCloudRunV2VolumeMount extends \Google\Model
+class GoogleCloudRunV2MultiRegionSettings extends \Google\Collection
 {
+  protected $collection_key = 'regions';
   /**
    * @var string
    */
-  public $mountPath;
+  public $multiRegionId;
   /**
-   * @var string
+   * @var string[]
    */
-  public $name;
-  /**
-   * @var string
-   */
-  public $subPath;
+  public $regions;
 
   /**
    * @param string
    */
-  public function setMountPath($mountPath)
+  public function setMultiRegionId($multiRegionId)
   {
-    $this->mountPath = $mountPath;
+    $this->multiRegionId = $multiRegionId;
   }
   /**
    * @return string
    */
-  public function getMountPath()
+  public function getMultiRegionId()
   {
-    return $this->mountPath;
+    return $this->multiRegionId;
   }
   /**
-   * @param string
+   * @param string[]
    */
-  public function setName($name)
+  public function setRegions($regions)
   {
-    $this->name = $name;
+    $this->regions = $regions;
   }
   /**
-   * @return string
+   * @return string[]
    */
-  public function getName()
+  public function getRegions()
   {
-    return $this->name;
-  }
-  /**
-   * @param string
-   */
-  public function setSubPath($subPath)
-  {
-    $this->subPath = $subPath;
-  }
-  /**
-   * @return string
-   */
-  public function getSubPath()
-  {
-    return $this->subPath;
+    return $this->regions;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudRunV2VolumeMount::class, 'Google_Service_CloudRun_GoogleCloudRunV2VolumeMount');
+class_alias(GoogleCloudRunV2MultiRegionSettings::class, 'Google_Service_CloudRun_GoogleCloudRunV2MultiRegionSettings');
