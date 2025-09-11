@@ -101,8 +101,8 @@ class ProvidersEntitlements extends \Google\Service\Resource
    * attributes are * `account` * `customer_billing_account` with value in the
    * format of: `billingAccounts/{id}` * `product_external_name` *
    * `quote_external_name` * `offer` * `new_pending_offer` * `plan` *
-   * `newPendingPlan` or `new_pending_plan` * `state` * `consumers.project` *
-   * `change_history.new_offer` Note that the consumers and
+   * `newPendingPlan` or `new_pending_plan` * `state` * `services` *
+   * `consumers.project` * `change_history.new_offer` Note that the consumers and
    * change_history.new_offer match works on repeated structures, so equality
    * (`consumers.project=projects/123456789`) is not supported. Set membership can
    * be expressed with the `:` operator. For example,
