@@ -17,8 +17,13 @@
 
 namespace Google\Service\CivicInfo;
 
-class CivicinfoSchemaV2SimpleAddressType extends \Google\Model
+class CivicinfoSchemaV2SimpleAddressType extends \Google\Collection
 {
+  protected $collection_key = 'addressLine';
+  /**
+   * @var string[]
+   */
+  public $addressLine;
   /**
    * @var string
    */
@@ -48,6 +53,20 @@ class CivicinfoSchemaV2SimpleAddressType extends \Google\Model
    */
   public $zip;
 
+  /**
+   * @param string[]
+   */
+  public function setAddressLine($addressLine)
+  {
+    $this->addressLine = $addressLine;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAddressLine()
+  {
+    return $this->addressLine;
+  }
   /**
    * @param string
    */
