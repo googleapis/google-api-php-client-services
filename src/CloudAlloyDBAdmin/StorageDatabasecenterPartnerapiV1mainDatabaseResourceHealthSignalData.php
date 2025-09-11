@@ -41,6 +41,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   /**
    * @var string
    */
+  public $location;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -144,6 +148,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceHealthSignalData exte
   public function getExternalUri()
   {
     return $this->externalUri;
+  }
+  /**
+   * @param string
+   */
+  public function setLocation($location)
+  {
+    $this->location = $location;
+  }
+  /**
+   * @return string
+   */
+  public function getLocation()
+  {
+    return $this->location;
   }
   /**
    * @param string

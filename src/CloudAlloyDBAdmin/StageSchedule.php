@@ -17,82 +17,82 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class StorageDatabasecenterProtoCommonProduct extends \Google\Model
+class StageSchedule extends \Google\Model
 {
   /**
    * @var string
    */
-  public $engine;
+  public $actualEndTime;
   /**
    * @var string
    */
-  public $minorVersion;
+  public $actualStartTime;
   /**
    * @var string
    */
-  public $type;
+  public $estimatedEndTime;
   /**
    * @var string
    */
-  public $version;
+  public $estimatedStartTime;
 
   /**
    * @param string
    */
-  public function setEngine($engine)
+  public function setActualEndTime($actualEndTime)
   {
-    $this->engine = $engine;
+    $this->actualEndTime = $actualEndTime;
   }
   /**
    * @return string
    */
-  public function getEngine()
+  public function getActualEndTime()
   {
-    return $this->engine;
+    return $this->actualEndTime;
   }
   /**
    * @param string
    */
-  public function setMinorVersion($minorVersion)
+  public function setActualStartTime($actualStartTime)
   {
-    $this->minorVersion = $minorVersion;
+    $this->actualStartTime = $actualStartTime;
   }
   /**
    * @return string
    */
-  public function getMinorVersion()
+  public function getActualStartTime()
   {
-    return $this->minorVersion;
+    return $this->actualStartTime;
   }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setEstimatedEndTime($estimatedEndTime)
   {
-    $this->type = $type;
+    $this->estimatedEndTime = $estimatedEndTime;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getEstimatedEndTime()
   {
-    return $this->type;
+    return $this->estimatedEndTime;
   }
   /**
    * @param string
    */
-  public function setVersion($version)
+  public function setEstimatedStartTime($estimatedStartTime)
   {
-    $this->version = $version;
+    $this->estimatedStartTime = $estimatedStartTime;
   }
   /**
    * @return string
    */
-  public function getVersion()
+  public function getEstimatedStartTime()
   {
-    return $this->version;
+    return $this->estimatedStartTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(StorageDatabasecenterProtoCommonProduct::class, 'Google_Service_CloudAlloyDBAdmin_StorageDatabasecenterProtoCommonProduct');
+class_alias(StageSchedule::class, 'Google_Service_CloudAlloyDBAdmin_StageSchedule');

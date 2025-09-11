@@ -19,6 +19,12 @@ namespace Google\Service\CloudAlloyDBAdmin;
 
 class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\Model
 {
+  protected $backupdrMetadataType = StorageDatabasecenterPartnerapiV1mainBackupDRMetadata::class;
+  protected $backupdrMetadataDataType = '';
+  protected $configBasedSignalDataType = StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData::class;
+  protected $configBasedSignalDataDataType = '';
+  protected $databaseResourceSignalDataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData::class;
+  protected $databaseResourceSignalDataDataType = '';
   /**
    * @var string
    */
@@ -37,7 +43,53 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
   protected $resourceIdDataType = '';
   protected $resourceMetadataType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata::class;
   protected $resourceMetadataDataType = '';
+  /**
+   * @var bool
+   */
+  public $skipIngestion;
 
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainBackupDRMetadata
+   */
+  public function setBackupdrMetadata(StorageDatabasecenterPartnerapiV1mainBackupDRMetadata $backupdrMetadata)
+  {
+    $this->backupdrMetadata = $backupdrMetadata;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainBackupDRMetadata
+   */
+  public function getBackupdrMetadata()
+  {
+    return $this->backupdrMetadata;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData
+   */
+  public function setConfigBasedSignalData(StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData $configBasedSignalData)
+  {
+    $this->configBasedSignalData = $configBasedSignalData;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainConfigBasedSignalData
+   */
+  public function getConfigBasedSignalData()
+  {
+    return $this->configBasedSignalData;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData
+   */
+  public function setDatabaseResourceSignalData(StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData $databaseResourceSignalData)
+  {
+    $this->databaseResourceSignalData = $databaseResourceSignalData;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainDatabaseResourceSignalData
+   */
+  public function getDatabaseResourceSignalData()
+  {
+    return $this->databaseResourceSignalData;
+  }
   /**
    * @param string
    */
@@ -135,6 +187,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceFeed extends \Google\
   public function getResourceMetadata()
   {
     return $this->resourceMetadata;
+  }
+  /**
+   * @param bool
+   */
+  public function setSkipIngestion($skipIngestion)
+  {
+    $this->skipIngestion = $skipIngestion;
+  }
+  /**
+   * @return bool
+   */
+  public function getSkipIngestion()
+  {
+    return $this->skipIngestion;
   }
 }
 

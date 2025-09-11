@@ -26,6 +26,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   protected $backupConfigurationDataType = '';
   protected $backupRunType = StorageDatabasecenterPartnerapiV1mainBackupRun::class;
   protected $backupRunDataType = '';
+  protected $backupdrConfigurationType = StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration::class;
+  protected $backupdrConfigurationDataType = '';
   /**
    * @var string
    */
@@ -88,6 +90,10 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public $updationTime;
   protected $userLabelSetType = StorageDatabasecenterPartnerapiV1mainUserLabels::class;
   protected $userLabelSetDataType = '';
+  /**
+   * @var string
+   */
+  public $zone;
 
   /**
    * @param StorageDatabasecenterPartnerapiV1mainAvailabilityConfiguration
@@ -130,6 +136,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getBackupRun()
   {
     return $this->backupRun;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration
+   */
+  public function setBackupdrConfiguration(StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration $backupdrConfiguration)
+  {
+    $this->backupdrConfiguration = $backupdrConfiguration;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainBackupDRConfiguration
+   */
+  public function getBackupdrConfiguration()
+  {
+    return $this->backupdrConfiguration;
   }
   /**
    * @param string
@@ -410,6 +430,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getUserLabelSet()
   {
     return $this->userLabelSet;
+  }
+  /**
+   * @param string
+   */
+  public function setZone($zone)
+  {
+    $this->zone = $zone;
+  }
+  /**
+   * @return string
+   */
+  public function getZone()
+  {
+    return $this->zone;
   }
 }
 
