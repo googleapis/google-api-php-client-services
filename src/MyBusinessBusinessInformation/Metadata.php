@@ -64,6 +64,10 @@ class Metadata extends \Google\Model
    */
   public $hasVoiceOfMerchant;
   /**
+   * @var bool
+   */
+  public $isParticularlyPersonalPlace;
+  /**
    * @var string
    */
   public $mapsUri;
@@ -229,6 +233,20 @@ class Metadata extends \Google\Model
   public function getHasVoiceOfMerchant()
   {
     return $this->hasVoiceOfMerchant;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsParticularlyPersonalPlace($isParticularlyPersonalPlace)
+  {
+    $this->isParticularlyPersonalPlace = $isParticularlyPersonalPlace;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsParticularlyPersonalPlace()
+  {
+    return $this->isParticularlyPersonalPlace;
   }
   /**
    * @param string
