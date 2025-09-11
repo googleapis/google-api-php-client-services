@@ -24,6 +24,10 @@ class Instance extends \Google\Model
   /**
    * @var string
    */
+  public $classType;
+  /**
+   * @var string
+   */
   public $consumerNetwork;
   /**
    * @var string
@@ -133,6 +137,20 @@ class Instance extends \Google\Model
   public function getAdminSettings()
   {
     return $this->adminSettings;
+  }
+  /**
+   * @param string
+   */
+  public function setClassType($classType)
+  {
+    $this->classType = $classType;
+  }
+  /**
+   * @return string
+   */
+  public function getClassType()
+  {
+    return $this->classType;
   }
   /**
    * @param string
