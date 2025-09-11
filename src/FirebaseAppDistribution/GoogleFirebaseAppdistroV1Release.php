@@ -38,6 +38,10 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
   /**
    * @var string
    */
+  public $expireTime;
+  /**
+   * @var string
+   */
   public $firebaseConsoleUri;
   /**
    * @var string
@@ -49,6 +53,10 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
    * @var string
    */
   public $testingUri;
+  /**
+   * @var string
+   */
+  public $updateTime;
 
   /**
    * @param string
@@ -109,6 +117,20 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
   /**
    * @param string
    */
+  public function setExpireTime($expireTime)
+  {
+    $this->expireTime = $expireTime;
+  }
+  /**
+   * @return string
+   */
+  public function getExpireTime()
+  {
+    return $this->expireTime;
+  }
+  /**
+   * @param string
+   */
   public function setFirebaseConsoleUri($firebaseConsoleUri)
   {
     $this->firebaseConsoleUri = $firebaseConsoleUri;
@@ -161,6 +183,20 @@ class GoogleFirebaseAppdistroV1Release extends \Google\Model
   public function getTestingUri()
   {
     return $this->testingUri;
+  }
+  /**
+   * @param string
+   */
+  public function setUpdateTime($updateTime)
+  {
+    $this->updateTime = $updateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getUpdateTime()
+  {
+    return $this->updateTime;
   }
 }
 

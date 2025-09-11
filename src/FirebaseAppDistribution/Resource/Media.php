@@ -35,7 +35,7 @@ class Media extends \Google\Service\Resource
    * created, an update to an existing release, or a no-op if a release with the
    * same binary already exists. (media.upload)
    *
-   * @param string $app The name of the app resource. Format:
+   * @param string $app Required. The name of the app resource. Format:
    * `projects/{project_number}/apps/{app_id}`
    * @param GoogleFirebaseAppdistroV1UploadReleaseRequest $postBody
    * @param array $optParams Optional parameters.

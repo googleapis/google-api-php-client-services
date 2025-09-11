@@ -108,7 +108,7 @@ class ProjectsTesters extends \Google\Service\Resource
    * @param GoogleFirebaseAppdistroV1Tester $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of fields to update.
+   * @opt_param string updateMask Optional. The list of fields to update.
    * @return GoogleFirebaseAppdistroV1Tester
    * @throws \Google\Service\Exception
    */

@@ -97,22 +97,23 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    * `projects/{project_number}/apps/{app_id}`
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter The expression to filter releases listed in the
-   * response. To learn more about filtering, refer to [Google's AIP-160
+   * @opt_param string filter Optional. The expression to filter releases listed
+   * in the response. To learn more about filtering, refer to [Google's AIP-160
    * standard](http://aip.dev/160). Supported fields: - `releaseNotes.text`
    * supports `=` (can contain a wildcard character (`*`) at the beginning or end
    * of the string) - `createTime` supports `<`, `<=`, `>` and `>=`, and expects
    * an RFC-3339 formatted string Examples: - `createTime <=
    * "2021-09-08T00:00:00+04:00"` - `releaseNotes.text="fixes" AND createTime >=
    * "2021-09-08T00:00:00.0Z"` - `releaseNotes.text="*v1.0.0-rc*"`
-   * @opt_param string orderBy The fields used to order releases. Supported
-   * fields: - `createTime` To specify descending order for a field, append a
-   * "desc" suffix, for example, `createTime desc`. If this parameter is not set,
-   * releases are ordered by `createTime` in descending order.
-   * @opt_param int pageSize The maximum number of releases to return. The service
-   * may return fewer than this value. The valid range is [1-100]; If unspecified
-   * (0), at most 25 releases are returned. Values above 100 are coerced to 100.
-   * @opt_param string pageToken A page token, received from a previous
+   * @opt_param string orderBy Optional. The fields used to order releases.
+   * Supported fields: - `createTime` To specify descending order for a field,
+   * append a "desc" suffix, for example, `createTime desc`. If this parameter is
+   * not set, releases are ordered by `createTime` in descending order.
+   * @opt_param int pageSize Optional. The maximum number of releases to return.
+   * The service may return fewer than this value. The valid range is [1-100]; If
+   * unspecified (0), at most 25 releases are returned. Values above 100 are
+   * coerced to 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListReleases` call. Provide this to retrieve the subsequent page. When
    * paginating, all other parameters provided to `ListReleases` must match the
    * call that provided the page token.
@@ -133,7 +134,7 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    * @param GoogleFirebaseAppdistroV1Release $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask The list of fields to update.
+   * @opt_param string updateMask Optional. The list of fields to update.
    * @return GoogleFirebaseAppdistroV1Release
    * @throws \Google\Service\Exception
    */
