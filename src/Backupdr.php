@@ -41,13 +41,16 @@ class Backupdr extends \Google\Service
   public $projects_locations;
   public $projects_locations_backupPlanAssociations;
   public $projects_locations_backupPlans;
+  public $projects_locations_backupPlans_revisions;
   public $projects_locations_backupVaults;
   public $projects_locations_backupVaults_dataSources;
   public $projects_locations_backupVaults_dataSources_backups;
+  public $projects_locations_dataSourceReferences;
   public $projects_locations_managementServers;
   public $projects_locations_operations;
   public $projects_locations_resourceBackupConfigs;
   public $projects_locations_serviceConfig;
+  public $projects_locations_trial;
   public $rootUrlTemplate;
 
   /**
@@ -74,6 +77,16 @@ class Backupdr extends \Google\Service
         [
           'methods' => [
             'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'getTrial' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -148,6 +161,36 @@ class Backupdr extends \Google\Service
                   'required' => true,
                 ],
                 'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'fetchForResourceType' => [
+              'path' => 'v1/{+parent}/backupPlanAssociations:fetchForResourceType',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'resourceType' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -280,6 +323,62 @@ class Backupdr extends \Google\Service
                 'orderBy' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_backupPlans_revisions = new Backupdr\Resource\ProjectsLocationsBackupPlansRevisions(
+        $this,
+        $this->serviceName,
+        'revisions',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/revisions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
                 'pageSize' => [
                   'location' => 'query',
@@ -694,6 +793,56 @@ class Backupdr extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_dataSourceReferences = new Backupdr\Resource\ProjectsLocationsDataSourceReferences(
+        $this,
+        $this->serviceName,
+        'dataSourceReferences',
+        [
+          'methods' => [
+            'fetchForResourceType' => [
+              'path' => 'v1/{+parent}/dataSourceReferences:fetchForResourceType',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'resourceType' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_managementServers = new Backupdr\Resource\ProjectsLocationsManagementServers(
         $this,
         $this->serviceName,
@@ -780,6 +929,16 @@ class Backupdr extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'msComplianceMetadata' => [
+              'path' => 'v1/{+parent}:msComplianceMetadata',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'setIamPolicy' => [
@@ -915,6 +1074,26 @@ class Backupdr extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_trial = new Backupdr\Resource\ProjectsLocationsTrial(
+        $this,
+        $this->serviceName,
+        'trial',
+        [
+          'methods' => [
+            'subscribe' => [
+              'path' => 'v1/{+parent}/trial:subscribe',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

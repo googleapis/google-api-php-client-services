@@ -17,6 +17,8 @@
 
 namespace Google\Service\Backupdr\Resource;
 
+use Google\Service\Backupdr\FetchMsComplianceMetadataRequest;
+use Google\Service\Backupdr\FetchMsComplianceMetadataResponse;
 use Google\Service\Backupdr\ListManagementServersResponse;
 use Google\Service\Backupdr\ManagementServer;
 use Google\Service\Backupdr\Operation;
@@ -168,6 +170,25 @@ class ProjectsLocationsManagementServers extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], ListManagementServersResponse::class);
+  }
+  /**
+   * Returns the Assured Workloads compliance metadata for a given project.
+   * (managementServers.msComplianceMetadata)
+   *
+   * @param string $parent Required. The project and location to be used to check
+   * CSS metadata for target project information, in the format
+   * 'projects/{project_id}/locations/{location}'. In Cloud BackupDR, locations
+   * map to Google Cloud regions, for example **us-central1**.
+   * @param FetchMsComplianceMetadataRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return FetchMsComplianceMetadataResponse
+   * @throws \Google\Service\Exception
+   */
+  public function msComplianceMetadata($parent, FetchMsComplianceMetadataRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('msComplianceMetadata', [$params], FetchMsComplianceMetadataResponse::class);
   }
   /**
    * Sets the access control policy on the specified resource. Replaces any

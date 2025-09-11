@@ -17,82 +17,82 @@
 
 namespace Google\Service\Backupdr;
 
-class GCPBackupPlanInfo extends \Google\Model
+class CloudSqlInstanceBackupProperties extends \Google\Model
 {
   /**
    * @var string
    */
-  public $backupPlan;
+  public $databaseInstalledVersion;
+  /**
+   * @var bool
+   */
+  public $finalBackup;
   /**
    * @var string
    */
-  public $backupPlanRevisionId;
+  public $instanceTier;
   /**
    * @var string
    */
-  public $backupPlanRevisionName;
-  /**
-   * @var string
-   */
-  public $backupPlanRuleId;
+  public $sourceInstance;
 
   /**
    * @param string
    */
-  public function setBackupPlan($backupPlan)
+  public function setDatabaseInstalledVersion($databaseInstalledVersion)
   {
-    $this->backupPlan = $backupPlan;
+    $this->databaseInstalledVersion = $databaseInstalledVersion;
   }
   /**
    * @return string
    */
-  public function getBackupPlan()
+  public function getDatabaseInstalledVersion()
   {
-    return $this->backupPlan;
+    return $this->databaseInstalledVersion;
+  }
+  /**
+   * @param bool
+   */
+  public function setFinalBackup($finalBackup)
+  {
+    $this->finalBackup = $finalBackup;
+  }
+  /**
+   * @return bool
+   */
+  public function getFinalBackup()
+  {
+    return $this->finalBackup;
   }
   /**
    * @param string
    */
-  public function setBackupPlanRevisionId($backupPlanRevisionId)
+  public function setInstanceTier($instanceTier)
   {
-    $this->backupPlanRevisionId = $backupPlanRevisionId;
+    $this->instanceTier = $instanceTier;
   }
   /**
    * @return string
    */
-  public function getBackupPlanRevisionId()
+  public function getInstanceTier()
   {
-    return $this->backupPlanRevisionId;
+    return $this->instanceTier;
   }
   /**
    * @param string
    */
-  public function setBackupPlanRevisionName($backupPlanRevisionName)
+  public function setSourceInstance($sourceInstance)
   {
-    $this->backupPlanRevisionName = $backupPlanRevisionName;
+    $this->sourceInstance = $sourceInstance;
   }
   /**
    * @return string
    */
-  public function getBackupPlanRevisionName()
+  public function getSourceInstance()
   {
-    return $this->backupPlanRevisionName;
-  }
-  /**
-   * @param string
-   */
-  public function setBackupPlanRuleId($backupPlanRuleId)
-  {
-    $this->backupPlanRuleId = $backupPlanRuleId;
-  }
-  /**
-   * @return string
-   */
-  public function getBackupPlanRuleId()
-  {
-    return $this->backupPlanRuleId;
+    return $this->sourceInstance;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GCPBackupPlanInfo::class, 'Google_Service_Backupdr_GCPBackupPlanInfo');
+class_alias(CloudSqlInstanceBackupProperties::class, 'Google_Service_Backupdr_CloudSqlInstanceBackupProperties');

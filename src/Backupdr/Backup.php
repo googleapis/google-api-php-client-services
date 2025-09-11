@@ -28,6 +28,8 @@ class Backup extends \Google\Collection
    * @var string
    */
   public $backupType;
+  protected $cloudSqlInstanceBackupPropertiesType = CloudSqlInstanceBackupProperties::class;
+  protected $cloudSqlInstanceBackupPropertiesDataType = '';
   protected $computeInstanceBackupPropertiesType = ComputeInstanceBackupProperties::class;
   protected $computeInstanceBackupPropertiesDataType = '';
   /**
@@ -130,6 +132,20 @@ class Backup extends \Google\Collection
   public function getBackupType()
   {
     return $this->backupType;
+  }
+  /**
+   * @param CloudSqlInstanceBackupProperties
+   */
+  public function setCloudSqlInstanceBackupProperties(CloudSqlInstanceBackupProperties $cloudSqlInstanceBackupProperties)
+  {
+    $this->cloudSqlInstanceBackupProperties = $cloudSqlInstanceBackupProperties;
+  }
+  /**
+   * @return CloudSqlInstanceBackupProperties
+   */
+  public function getCloudSqlInstanceBackupProperties()
+  {
+    return $this->cloudSqlInstanceBackupProperties;
   }
   /**
    * @param ComputeInstanceBackupProperties

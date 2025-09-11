@@ -17,14 +17,8 @@
 
 namespace Google\Service\Backupdr;
 
-class BackupConfigInfo extends \Google\Model
+class DataSourceBackupConfigInfo extends \Google\Model
 {
-  protected $backupApplianceBackupConfigType = BackupApplianceBackupConfig::class;
-  protected $backupApplianceBackupConfigDataType = '';
-  protected $gcpBackupConfigType = GcpBackupConfig::class;
-  protected $gcpBackupConfigDataType = '';
-  protected $lastBackupErrorType = Status::class;
-  protected $lastBackupErrorDataType = '';
   /**
    * @var string
    */
@@ -34,48 +28,6 @@ class BackupConfigInfo extends \Google\Model
    */
   public $lastSuccessfulBackupConsistencyTime;
 
-  /**
-   * @param BackupApplianceBackupConfig
-   */
-  public function setBackupApplianceBackupConfig(BackupApplianceBackupConfig $backupApplianceBackupConfig)
-  {
-    $this->backupApplianceBackupConfig = $backupApplianceBackupConfig;
-  }
-  /**
-   * @return BackupApplianceBackupConfig
-   */
-  public function getBackupApplianceBackupConfig()
-  {
-    return $this->backupApplianceBackupConfig;
-  }
-  /**
-   * @param GcpBackupConfig
-   */
-  public function setGcpBackupConfig(GcpBackupConfig $gcpBackupConfig)
-  {
-    $this->gcpBackupConfig = $gcpBackupConfig;
-  }
-  /**
-   * @return GcpBackupConfig
-   */
-  public function getGcpBackupConfig()
-  {
-    return $this->gcpBackupConfig;
-  }
-  /**
-   * @param Status
-   */
-  public function setLastBackupError(Status $lastBackupError)
-  {
-    $this->lastBackupError = $lastBackupError;
-  }
-  /**
-   * @return Status
-   */
-  public function getLastBackupError()
-  {
-    return $this->lastBackupError;
-  }
   /**
    * @param string
    */
@@ -107,4 +59,4 @@ class BackupConfigInfo extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BackupConfigInfo::class, 'Google_Service_Backupdr_BackupConfigInfo');
+class_alias(DataSourceBackupConfigInfo::class, 'Google_Service_Backupdr_DataSourceBackupConfigInfo');

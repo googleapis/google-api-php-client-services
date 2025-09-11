@@ -17,82 +17,100 @@
 
 namespace Google\Service\Backupdr;
 
-class GCPBackupPlanInfo extends \Google\Model
+class Trial extends \Google\Model
 {
   /**
    * @var string
    */
-  public $backupPlan;
+  public $endReason;
   /**
    * @var string
    */
-  public $backupPlanRevisionId;
+  public $endTime;
   /**
    * @var string
    */
-  public $backupPlanRevisionName;
+  public $name;
   /**
    * @var string
    */
-  public $backupPlanRuleId;
+  public $startTime;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
    * @param string
    */
-  public function setBackupPlan($backupPlan)
+  public function setEndReason($endReason)
   {
-    $this->backupPlan = $backupPlan;
+    $this->endReason = $endReason;
   }
   /**
    * @return string
    */
-  public function getBackupPlan()
+  public function getEndReason()
   {
-    return $this->backupPlan;
+    return $this->endReason;
   }
   /**
    * @param string
    */
-  public function setBackupPlanRevisionId($backupPlanRevisionId)
+  public function setEndTime($endTime)
   {
-    $this->backupPlanRevisionId = $backupPlanRevisionId;
+    $this->endTime = $endTime;
   }
   /**
    * @return string
    */
-  public function getBackupPlanRevisionId()
+  public function getEndTime()
   {
-    return $this->backupPlanRevisionId;
+    return $this->endTime;
   }
   /**
    * @param string
    */
-  public function setBackupPlanRevisionName($backupPlanRevisionName)
+  public function setName($name)
   {
-    $this->backupPlanRevisionName = $backupPlanRevisionName;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getBackupPlanRevisionName()
+  public function getName()
   {
-    return $this->backupPlanRevisionName;
+    return $this->name;
   }
   /**
    * @param string
    */
-  public function setBackupPlanRuleId($backupPlanRuleId)
+  public function setStartTime($startTime)
   {
-    $this->backupPlanRuleId = $backupPlanRuleId;
+    $this->startTime = $startTime;
   }
   /**
    * @return string
    */
-  public function getBackupPlanRuleId()
+  public function getStartTime()
   {
-    return $this->backupPlanRuleId;
+    return $this->startTime;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GCPBackupPlanInfo::class, 'Google_Service_Backupdr_GCPBackupPlanInfo');
+class_alias(Trial::class, 'Google_Service_Backupdr_Trial');

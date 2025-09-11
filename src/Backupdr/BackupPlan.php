@@ -49,11 +49,23 @@ class BackupPlan extends \Google\Collection
   /**
    * @var string
    */
+  public $logRetentionDays;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
    */
   public $resourceType;
+  /**
+   * @var string
+   */
+  public $revisionId;
+  /**
+   * @var string
+   */
+  public $revisionName;
   /**
    * @var string
    */
@@ -168,6 +180,20 @@ class BackupPlan extends \Google\Collection
   /**
    * @param string
    */
+  public function setLogRetentionDays($logRetentionDays)
+  {
+    $this->logRetentionDays = $logRetentionDays;
+  }
+  /**
+   * @return string
+   */
+  public function getLogRetentionDays()
+  {
+    return $this->logRetentionDays;
+  }
+  /**
+   * @param string
+   */
   public function setName($name)
   {
     $this->name = $name;
@@ -192,6 +218,34 @@ class BackupPlan extends \Google\Collection
   public function getResourceType()
   {
     return $this->resourceType;
+  }
+  /**
+   * @param string
+   */
+  public function setRevisionId($revisionId)
+  {
+    $this->revisionId = $revisionId;
+  }
+  /**
+   * @return string
+   */
+  public function getRevisionId()
+  {
+    return $this->revisionId;
+  }
+  /**
+   * @param string
+   */
+  public function setRevisionName($revisionName)
+  {
+    $this->revisionName = $revisionName;
+  }
+  /**
+   * @return string
+   */
+  public function getRevisionName()
+  {
+    return $this->revisionName;
   }
   /**
    * @param string

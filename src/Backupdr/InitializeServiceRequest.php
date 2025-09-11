@@ -19,6 +19,8 @@ namespace Google\Service\Backupdr;
 
 class InitializeServiceRequest extends \Google\Model
 {
+  protected $cloudSqlInstanceInitializationConfigType = CloudSqlInstanceInitializationConfig::class;
+  protected $cloudSqlInstanceInitializationConfigDataType = '';
   /**
    * @var string
    */
@@ -28,6 +30,20 @@ class InitializeServiceRequest extends \Google\Model
    */
   public $resourceType;
 
+  /**
+   * @param CloudSqlInstanceInitializationConfig
+   */
+  public function setCloudSqlInstanceInitializationConfig(CloudSqlInstanceInitializationConfig $cloudSqlInstanceInitializationConfig)
+  {
+    $this->cloudSqlInstanceInitializationConfig = $cloudSqlInstanceInitializationConfig;
+  }
+  /**
+   * @return CloudSqlInstanceInitializationConfig
+   */
+  public function getCloudSqlInstanceInitializationConfig()
+  {
+    return $this->cloudSqlInstanceInitializationConfig;
+  }
   /**
    * @param string
    */
