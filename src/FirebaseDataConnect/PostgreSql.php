@@ -26,6 +26,10 @@ class PostgreSql extends \Google\Model
    */
   public $database;
   /**
+   * @var bool
+   */
+  public $ephemeral;
+  /**
    * @var string
    */
   public $schemaMigration;
@@ -65,6 +69,20 @@ class PostgreSql extends \Google\Model
   public function getDatabase()
   {
     return $this->database;
+  }
+  /**
+   * @param bool
+   */
+  public function setEphemeral($ephemeral)
+  {
+    $this->ephemeral = $ephemeral;
+  }
+  /**
+   * @return bool
+   */
+  public function getEphemeral()
+  {
+    return $this->ephemeral;
   }
   /**
    * @param string
