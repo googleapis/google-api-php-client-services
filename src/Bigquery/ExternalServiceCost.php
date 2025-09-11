@@ -22,6 +22,10 @@ class ExternalServiceCost extends \Google\Model
   /**
    * @var string
    */
+  public $billingMethod;
+  /**
+   * @var string
+   */
   public $bytesBilled;
   /**
    * @var string
@@ -40,6 +44,20 @@ class ExternalServiceCost extends \Google\Model
    */
   public $slotMs;
 
+  /**
+   * @param string
+   */
+  public function setBillingMethod($billingMethod)
+  {
+    $this->billingMethod = $billingMethod;
+  }
+  /**
+   * @return string
+   */
+  public function getBillingMethod()
+  {
+    return $this->billingMethod;
+  }
   /**
    * @param string
    */

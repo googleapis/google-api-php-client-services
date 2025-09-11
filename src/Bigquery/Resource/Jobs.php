@@ -112,6 +112,10 @@ class Jobs extends \Google\Service\Resource
    * @param string $jobId Required. Job ID of the query job.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string formatOptions.timestampOutputFormat Optional. The API
+   * output format for a timestamp. This offers more explicit control over the
+   * timestamp output format as compared to the existing `use_int64_timestamp`
+   * option.
    * @opt_param bool formatOptions.useInt64Timestamp Optional. Output timestamp as
    * usec int64. Default is false.
    * @opt_param string location The geographic location of the job. You must

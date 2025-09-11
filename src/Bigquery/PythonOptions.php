@@ -17,46 +17,47 @@
 
 namespace Google\Service\Bigquery;
 
-class DataFormatOptions extends \Google\Model
+class PythonOptions extends \Google\Collection
 {
+  protected $collection_key = 'packages';
   /**
    * @var string
    */
-  public $timestampOutputFormat;
+  public $entryPoint;
   /**
-   * @var bool
+   * @var string[]
    */
-  public $useInt64Timestamp;
+  public $packages;
 
   /**
    * @param string
    */
-  public function setTimestampOutputFormat($timestampOutputFormat)
+  public function setEntryPoint($entryPoint)
   {
-    $this->timestampOutputFormat = $timestampOutputFormat;
+    $this->entryPoint = $entryPoint;
   }
   /**
    * @return string
    */
-  public function getTimestampOutputFormat()
+  public function getEntryPoint()
   {
-    return $this->timestampOutputFormat;
+    return $this->entryPoint;
   }
   /**
-   * @param bool
+   * @param string[]
    */
-  public function setUseInt64Timestamp($useInt64Timestamp)
+  public function setPackages($packages)
   {
-    $this->useInt64Timestamp = $useInt64Timestamp;
+    $this->packages = $packages;
   }
   /**
-   * @return bool
+   * @return string[]
    */
-  public function getUseInt64Timestamp()
+  public function getPackages()
   {
-    return $this->useInt64Timestamp;
+    return $this->packages;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DataFormatOptions::class, 'Google_Service_Bigquery_DataFormatOptions');
+class_alias(PythonOptions::class, 'Google_Service_Bigquery_PythonOptions');

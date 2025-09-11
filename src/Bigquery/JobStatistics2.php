@@ -129,6 +129,10 @@ class JobStatistics2 extends \Google\Collection
   /**
    * @var string
    */
+  public $totalServicesSkuSlotMs;
+  /**
+   * @var string
+   */
   public $totalSlotMs;
   /**
    * @var string
@@ -698,6 +702,20 @@ class JobStatistics2 extends \Google\Collection
   public function getTotalPartitionsProcessed()
   {
     return $this->totalPartitionsProcessed;
+  }
+  /**
+   * @param string
+   */
+  public function setTotalServicesSkuSlotMs($totalServicesSkuSlotMs)
+  {
+    $this->totalServicesSkuSlotMs = $totalServicesSkuSlotMs;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalServicesSkuSlotMs()
+  {
+    return $this->totalServicesSkuSlotMs;
   }
   /**
    * @param string

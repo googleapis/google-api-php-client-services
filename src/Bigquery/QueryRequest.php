@@ -65,6 +65,10 @@ class QueryRequest extends \Google\Collection
    */
   public $maxResults;
   /**
+   * @var int
+   */
+  public $maxSlots;
+  /**
    * @var string
    */
   public $maximumBytesBilled;
@@ -288,6 +292,20 @@ class QueryRequest extends \Google\Collection
   public function getMaxResults()
   {
     return $this->maxResults;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxSlots($maxSlots)
+  {
+    $this->maxSlots = $maxSlots;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxSlots()
+  {
+    return $this->maxSlots;
   }
   /**
    * @param string

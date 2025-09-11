@@ -41,6 +41,10 @@ class JobConfiguration extends \Google\Model
   public $labels;
   protected $loadType = JobConfigurationLoad::class;
   protected $loadDataType = '';
+  /**
+   * @var int
+   */
+  public $maxSlots;
   protected $queryType = JobConfigurationQuery::class;
   protected $queryDataType = '';
   /**
@@ -145,6 +149,20 @@ class JobConfiguration extends \Google\Model
   public function getLoad()
   {
     return $this->load;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxSlots($maxSlots)
+  {
+    $this->maxSlots = $maxSlots;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxSlots()
+  {
+    return $this->maxSlots;
   }
   /**
    * @param JobConfigurationQuery

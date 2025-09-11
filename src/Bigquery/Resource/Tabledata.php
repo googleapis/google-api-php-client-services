@@ -57,6 +57,10 @@ class Tabledata extends \Google\Service\Resource
    * @param string $tableId Required. Table id of the table to list.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string formatOptions.timestampOutputFormat Optional. The API
+   * output format for a timestamp. This offers more explicit control over the
+   * timestamp output format as compared to the existing `use_int64_timestamp`
+   * option.
    * @opt_param bool formatOptions.useInt64Timestamp Optional. Output timestamp as
    * usec int64. Default is false.
    * @opt_param string maxResults Row limit of the table.

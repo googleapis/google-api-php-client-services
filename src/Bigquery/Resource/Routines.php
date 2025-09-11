@@ -22,6 +22,8 @@ use Google\Service\Bigquery\ListRoutinesResponse;
 use Google\Service\Bigquery\Policy;
 use Google\Service\Bigquery\Routine;
 use Google\Service\Bigquery\SetIamPolicyRequest;
+use Google\Service\Bigquery\TestIamPermissionsRequest;
+use Google\Service\Bigquery\TestIamPermissionsResponse;
 
 /**
  * The "routines" collection of methods.
@@ -153,6 +155,28 @@ class Routines extends \Google\Service\Resource
     $params = ['resource' => $resource, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource. If the
+   * resource does not exist, this will return an empty set of permissions, not a
+   * `NOT_FOUND` error. Note: This operation is designed to be used for building
+   * permission-aware UIs and command-line tools, not for authorization checking.
+   * This operation may "fail open" without warning. (routines.testIamPermissions)
+   *
+   * @param string $resource REQUIRED: The resource for which the policy detail is
+   * being requested. See [Resource
+   * names](https://cloud.google.com/apis/design/resource_names) for the
+   * appropriate value for this field.
+   * @param TestIamPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestIamPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
   }
   /**
    * Updates information in an existing routine. The update method replaces the
