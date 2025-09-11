@@ -50,6 +50,10 @@ class Secret extends \Google\Collection
   protected $replicationDataType = '';
   protected $rotationType = Rotation::class;
   protected $rotationDataType = '';
+  /**
+   * @var string[]
+   */
+  public $tags;
   protected $topicsType = Topic::class;
   protected $topicsDataType = 'array';
   /**
@@ -190,6 +194,20 @@ class Secret extends \Google\Collection
   public function getRotation()
   {
     return $this->rotation;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
   /**
    * @param Topic[]
