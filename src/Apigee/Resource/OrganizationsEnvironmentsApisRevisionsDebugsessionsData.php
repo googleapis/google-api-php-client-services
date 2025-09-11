@@ -34,9 +34,9 @@ class OrganizationsEnvironmentsApisRevisionsDebugsessionsData extends \Google\Se
    *
    * @param string $name Required. The name of the debug session transaction. Must
    * be of the form: `organizations/{organization}/environments/{environment}/apis
-   * /{api}/revisions/{revision}/debugsessions/{session}/data/{transaction}`. If
-   * the API proxy resource has the `space` attribute set, IAM permissions are
-   * checked differently . To learn more, read the [Apigee Spaces
+   * /{api}/revisions/{revision}/debugsessions/{debug_session}/data/{transaction}`
+   * . If the API proxy resource has the `space` attribute set, IAM permissions
+   * are checked differently . To learn more, read the [Apigee Spaces
    * Overview](https://cloud.google.com/apigee/docs/api-platform/system-
    * administration/spaces/apigee-spaces-overview).
    * @param array $optParams Optional parameters.

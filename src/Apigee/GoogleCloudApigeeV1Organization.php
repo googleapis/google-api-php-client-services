@@ -97,6 +97,10 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   /**
    * @var bool
    */
+  public $networkEgressRestricted;
+  /**
+   * @var bool
+   */
   public $portalDisabled;
   /**
    * @var string
@@ -394,6 +398,20 @@ class GoogleCloudApigeeV1Organization extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setNetworkEgressRestricted($networkEgressRestricted)
+  {
+    $this->networkEgressRestricted = $networkEgressRestricted;
+  }
+  /**
+   * @return bool
+   */
+  public function getNetworkEgressRestricted()
+  {
+    return $this->networkEgressRestricted;
   }
   /**
    * @param bool
