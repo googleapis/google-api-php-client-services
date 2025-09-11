@@ -54,6 +54,8 @@ class Revision extends \Google\Collection
    * @var string
    */
   public $name;
+  protected $providerConfigType = ProviderConfig::class;
+  protected $providerConfigDataType = '';
   /**
    * @var string
    */
@@ -220,6 +222,20 @@ class Revision extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param ProviderConfig
+   */
+  public function setProviderConfig(ProviderConfig $providerConfig)
+  {
+    $this->providerConfig = $providerConfig;
+  }
+  /**
+   * @return ProviderConfig
+   */
+  public function getProviderConfig()
+  {
+    return $this->providerConfig;
   }
   /**
    * @param string

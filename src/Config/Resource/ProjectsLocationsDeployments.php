@@ -274,7 +274,7 @@ class ProjectsLocationsDeployments extends \Google\Service\Resource
   /**
    * Updates a Deployment. (deployments.patch)
    *
-   * @param string $name Resource name of the deployment. Format:
+   * @param string $name Identifier. Resource name of the deployment. Format:
    * `projects/{project}/locations/{location}/deployments/{deployment}`
    * @param Deployment $postBody
    * @param array $optParams Optional parameters.

@@ -68,6 +68,8 @@ class Preview extends \Google\Collection
    * @var string
    */
   public $previewMode;
+  protected $providerConfigType = ProviderConfig::class;
+  protected $providerConfigDataType = '';
   /**
    * @var string
    */
@@ -274,6 +276,20 @@ class Preview extends \Google\Collection
   public function getPreviewMode()
   {
     return $this->previewMode;
+  }
+  /**
+   * @param ProviderConfig
+   */
+  public function setProviderConfig(ProviderConfig $providerConfig)
+  {
+    $this->providerConfig = $providerConfig;
+  }
+  /**
+   * @return ProviderConfig
+   */
+  public function getProviderConfig()
+  {
+    return $this->providerConfig;
   }
   /**
    * @param string
