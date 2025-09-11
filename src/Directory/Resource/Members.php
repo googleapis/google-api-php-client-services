@@ -107,9 +107,9 @@ class Members extends \Google\Service\Resource
   }
   /**
    * Retrieves a paginated list of all members in a group. This method times out
-   * after 60 minutes. For more information, see [Troubleshoot error
-   * codes](https://developers.google.com/admin-
-   * sdk/directory/v1/guides/troubleshoot-error-codes). (members.listMembers)
+   * after 60 minutes. For more information, see [Troubleshoot error codes](https:
+   * //developers.google.com/workspace/admin/directory/v1/guides/troubleshoot-
+   * error-codes). (members.listMembers)
    *
    * @param string $groupKey Identifies the group in the API request. The value
    * can be the group's email address, group alias, or the unique group ID.
@@ -133,8 +133,8 @@ class Members extends \Google\Service\Resource
   }
   /**
    * Updates the membership properties of a user in the specified group. This
-   * method supports [patch semantics](/admin-
-   * sdk/directory/v1/guides/performance#patch). (members.patch)
+   * method supports [patch semantics](https://developers.google.com/workspace/adm
+   * in/directory/v1/guides/performance#patch). (members.patch)
    *
    * @param string $groupKey Identifies the group in the API request. The value
    * can be the group's email address, group alias, or the unique group ID.

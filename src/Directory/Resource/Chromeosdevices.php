@@ -33,9 +33,9 @@ use Google\Service\Directory\ChromeOsMoveDevicesToOu;
 class Chromeosdevices extends \Google\Service\Resource
 {
   /**
-   * Use [BatchChangeChromeOsDeviceStatus](/admin-
-   * sdk/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatus)
-   * instead. Takes an action that affects a Chrome OS Device. This includes
+   * Use [BatchChangeChromeOsDeviceStatus](https://developers.google.com/workspace
+   * /admin/directory/reference/rest/v1/customer.devices.chromeos/batchChangeStatu
+   * s) instead. Takes an action that affects a Chrome OS Device. This includes
    * deprovisioning, disabling, and re-enabling devices. *Warning:* *
    * Deprovisioning a device will stop device policy syncing and remove device-
    * level printers. After a device is deprovisioned, it must be wiped before it
@@ -50,11 +50,12 @@ class Chromeosdevices extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $resourceId The unique ID of the device. The `resourceId`s are
-   * returned in the response from the [chromeosdevices.list](/admin-
-   * sdk/directory/v1/reference/chromeosdevices/list) method.
+   * returned in the response from the [chromeosdevices.list](https://developers.g
+   * oogle.com/workspace/admin/directory/v1/reference/chromeosdevices/list)
+   * method.
    * @param ChromeOsDeviceAction $postBody
    * @param array $optParams Optional parameters.
    * @throws \Google\Service\Exception
@@ -71,11 +72,12 @@ class Chromeosdevices extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $deviceId The unique ID of the device. The `deviceId`s are
-   * returned in the response from the [chromeosdevices.list](/admin-
-   * sdk/directory/v1/reference/chromeosdevices/list) method.
+   * returned in the response from the [chromeosdevices.list](https://developers.g
+   * oogle.com/workspace/admin/directory/v1/reference/chromeosdevices/list)
+   * method.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string projection Determines whether the response contains the
@@ -96,8 +98,8 @@ class Chromeosdevices extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param array $optParams Optional parameters.
    *
    * @opt_param bool includeChildOrgunits Return devices from all child orgunits,
@@ -114,7 +116,8 @@ class Chromeosdevices extends \Google\Service\Resource
    * @opt_param string projection Determines whether the response contains the
    * full list of properties or only a subset.
    * @opt_param string query Search string in the format given at
-   * https://developers.google.com/admin-sdk/directory/v1/list-query-operators
+   * https://developers.google.com/workspace/admin/directory/v1/list-query-
+   * operators
    * @opt_param string sortOrder Whether to return results in ascending or
    * descending order. Must be used with the `orderBy` parameter.
    * @return ChromeOsDevicesModel
@@ -146,17 +149,17 @@ class Chromeosdevices extends \Google\Service\Resource
   /**
    * Updates a device's updatable properties, such as `annotatedUser`,
    * `annotatedLocation`, `notes`, `orgUnitPath`, or `annotatedAssetId`. This
-   * method supports [patch semantics](/admin-
-   * sdk/directory/v1/guides/performance#patch). (chromeosdevices.patch)
+   * method supports [patch semantics](https://developers.google.com/workspace/adm
+   * in/directory/v1/guides/performance#patch). (chromeosdevices.patch)
    *
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $deviceId The unique ID of the device. The `deviceId`s are
-   * returned in the response from the [chromeosdevices.list](/admin-
-   * sdk/v1/reference/chromeosdevices/list) method.
+   * returned in the response from the [chromeosdevices.list](https://developers.g
+   * oogle.com/workspace/admin/v1/reference/chromeosdevices/list) method.
    * @param ChromeOsDevice $postBody
    * @param array $optParams Optional parameters.
    *
@@ -179,11 +182,11 @@ class Chromeosdevices extends \Google\Service\Resource
    * @param string $customerId The unique ID for the customer's Google Workspace
    * account. As an account administrator, you can also use the `my_customer`
    * alias to represent your account's `customerId`. The `customerId` is also
-   * returned as part of the [Users resource](/admin-
-   * sdk/directory/v1/reference/users).
+   * returned as part of the [Users resource](https://developers.google.com/worksp
+   * ace/admin/directory/v1/reference/users).
    * @param string $deviceId The unique ID of the device. The `deviceId`s are
-   * returned in the response from the [chromeosdevices.list](/admin-
-   * sdk/v1/reference/chromeosdevices/list) method.
+   * returned in the response from the [chromeosdevices.list](https://developers.g
+   * oogle.com/workspace/admin/v1/reference/chromeosdevices/list) method.
    * @param ChromeOsDevice $postBody
    * @param array $optParams Optional parameters.
    *

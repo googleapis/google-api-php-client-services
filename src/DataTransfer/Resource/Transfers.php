@@ -46,9 +46,10 @@ class Transfers extends \Google\Service\Resource
     return $this->call('get', [$params], DataTransfer::class);
   }
   /**
-   * Inserts a data transfer request. See the [Transfer parameters](/admin-
-   * sdk/data-transfer/v1/parameters) reference for specific application
-   * requirements. (transfers.insert)
+   * Inserts a data transfer request. See the [Transfer
+   * parameters](https://developers.google.com/workspace/admin/data-
+   * transfer/v1/parameters) reference for specific application requirements.
+   * (transfers.insert)
    *
    * @param DataTransfer $postBody
    * @param array $optParams Optional parameters.

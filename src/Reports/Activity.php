@@ -38,6 +38,8 @@ class Activity extends \Google\Collection
    * @var string
    */
   public $kind;
+  protected $networkInfoType = ActivityNetworkInfo::class;
+  protected $networkInfoDataType = '';
   /**
    * @var string
    */
@@ -128,6 +130,20 @@ class Activity extends \Google\Collection
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param ActivityNetworkInfo
+   */
+  public function setNetworkInfo(ActivityNetworkInfo $networkInfo)
+  {
+    $this->networkInfo = $networkInfo;
+  }
+  /**
+   * @return ActivityNetworkInfo
+   */
+  public function getNetworkInfo()
+  {
+    return $this->networkInfo;
   }
   /**
    * @param string

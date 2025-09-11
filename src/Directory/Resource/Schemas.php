@@ -51,9 +51,9 @@ class Schemas extends \Google\Service\Resource
    * account. In case of a multi-domain account, to fetch all groups for a
    * customer, use this field instead of `domain`. You can also use the
    * `my_customer` alias to represent your account's `customerId`. The
-   * `customerId` is also returned as part of the [Users](/admin-
-   * sdk/directory/v1/reference/users) resource. You must provide either the
-   * `customer` or the `domain` parameter.
+   * `customerId` is also returned as part of the [Users](https://developers.googl
+   * e.com/workspace/admin/directory/v1/reference/users) resource. You must
+   * provide either the `customer` or the `domain` parameter.
    * @param string $schemaKey Name or immutable ID of the schema.
    * @param array $optParams Optional parameters.
    * @return Schema
@@ -87,9 +87,9 @@ class Schemas extends \Google\Service\Resource
    * account. In case of a multi-domain account, to fetch all groups for a
    * customer, use this field instead of `domain`. You can also use the
    * `my_customer` alias to represent your account's `customerId`. The
-   * `customerId` is also returned as part of the [Users](/admin-
-   * sdk/directory/v1/reference/users) resource. You must provide either the
-   * `customer` or the `domain` parameter.
+   * `customerId` is also returned as part of the [Users](https://developers.googl
+   * e.com/workspace/admin/directory/v1/reference/users) resource. You must
+   * provide either the `customer` or the `domain` parameter.
    * @param array $optParams Optional parameters.
    * @return SchemasModel
    * @throws \Google\Service\Exception

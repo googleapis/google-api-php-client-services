@@ -83,9 +83,9 @@ class Groups extends \Google\Service\Resource
    * account. In case of a multi-domain account, to fetch all groups for a
    * customer, use this field instead of `domain`. You can also use the
    * `my_customer` alias to represent your account's `customerId`. The
-   * `customerId` is also returned as part of the [Users](/admin-
-   * sdk/directory/v1/reference/users) resource. You must provide either the
-   * `customer` or the `domain` parameter.
+   * `customerId` is also returned as part of the [Users](https://developers.googl
+   * e.com/workspace/admin/directory/v1/reference/users) resource. You must
+   * provide either the `customer` or the `domain` parameter.
    * @opt_param string domain The domain name. Use this field to get groups from
    * only one domain. To return all domains for a customer account, use the
    * `customer` query parameter instead.
@@ -112,8 +112,9 @@ class Groups extends \Google\Service\Resource
     return $this->call('list', [$params], GroupsModel::class);
   }
   /**
-   * Updates a group's properties. This method supports [patch semantics](/admin-
-   * sdk/directory/v1/guides/performance#patch). (groups.patch)
+   * Updates a group's properties. This method supports [patch semantics](https://
+   * developers.google.com/workspace/admin/directory/v1/guides/performance#patch).
+   * (groups.patch)
    *
    * @param string $groupKey Identifies the group in the API request. The value
    * can be the group's email address, group alias, or the unique group ID.

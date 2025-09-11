@@ -171,6 +171,10 @@ class ChromeOsDevice extends \Google\Collection
   /**
    * @var string
    */
+  public $osVersionCompliance;
+  /**
+   * @var string
+   */
   public $platformVersion;
   protected $recentUsersType = ChromeOsDeviceRecentUsers::class;
   protected $recentUsersDataType = 'array';
@@ -788,6 +792,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getOsVersion()
   {
     return $this->osVersion;
+  }
+  /**
+   * @param string
+   */
+  public function setOsVersionCompliance($osVersionCompliance)
+  {
+    $this->osVersionCompliance = $osVersionCompliance;
+  }
+  /**
+   * @return string
+   */
+  public function getOsVersionCompliance()
+  {
+    return $this->osVersionCompliance;
   }
   /**
    * @param string

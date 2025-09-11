@@ -60,8 +60,8 @@ class Users extends \Google\Service\Resource
    * @opt_param string projection What subset of fields to fetch for this user.
    * @opt_param string viewType Whether to fetch the administrator-only or domain-
    * wide public view of the user. For more information, see [Retrieve a user as a
-   * non-administrator](/admin-sdk/directory/v1/guides/manage-
-   * users#retrieve_users_non_admin).
+   * non-administrator](https://developers.google.com/workspace/admin/directory/v1
+   * /guides/manage-users#retrieve_users_non_admin).
    * @return User
    * @throws \Google\Service\Exception
    */
@@ -112,9 +112,9 @@ class Users extends \Google\Service\Resource
    * account. In case of a multi-domain account, to fetch all users for a
    * customer, use this field instead of `domain`. You can also use the
    * `my_customer` alias to represent your account's `customerId`. The
-   * `customerId` is also returned as part of the [Users](/admin-
-   * sdk/directory/v1/reference/users) resource. You must provide either the
-   * `customer` or the `domain` parameter.
+   * `customerId` is also returned as part of the [Users](https://developers.googl
+   * e.com/workspace/admin/directory/v1/reference/users) resource. You must
+   * provide either the `customer` or the `domain` parameter.
    * @opt_param string domain The domain name. Use this field to get users from
    * only one domain. To return all domains for a customer account, use the
    * `customer` query parameter instead. Either the `customer` or the `domain`
@@ -127,16 +127,16 @@ class Users extends \Google\Service\Resource
    * token is only valid for three days.
    * @opt_param string projection What subset of fields to fetch for this user.
    * @opt_param string query Query string for searching user fields. For more
-   * information on constructing user queries, see [Search for Users](/admin-
-   * sdk/directory/v1/guides/search-users).
+   * information on constructing user queries, see [Search for Users](https://deve
+   * lopers.google.com/workspace/admin/directory/v1/guides/search-users).
    * @opt_param string showDeleted If set to `true`, retrieves the list of deleted
    * users. (Default: `false`)
    * @opt_param string sortOrder Whether to return results in ascending or
    * descending order, ignoring case.
    * @opt_param string viewType Whether to fetch the administrator-only or domain-
    * wide public view of the user. For more information, see [Retrieve a user as a
-   * non-administrator](/admin-sdk/directory/v1/guides/manage-
-   * users#retrieve_users_non_admin).
+   * non-administrator](https://developers.google.com/workspace/admin/directory/v1
+   * /guides/manage-users#retrieve_users_non_admin).
    * @return UsersModel
    * @throws \Google\Service\Exception
    */
@@ -164,11 +164,11 @@ class Users extends \Google\Service\Resource
   /**
    * Updates a user using patch semantics. The update method should be used
    * instead, because it also supports patch semantics and has better performance.
-   * If you're mapping an external identity to a Google identity, use the
-   * [`update`](https://developers.google.com/admin-
-   * sdk/directory/v1/reference/users/update) method instead of the `patch`
-   * method. This method is unable to clear fields that contain repeated objects
-   * (`addresses`, `phones`, etc). Use the update method instead. (users.patch)
+   * If you're mapping an external identity to a Google identity, use the [`update
+   * `](https://developers.google.com/workspace/admin/directory/v1/reference/users
+   * /update) method instead of the `patch` method. This method is unable to clear
+   * fields that contain repeated objects (`addresses`, `phones`, etc). Use the
+   * update method instead. (users.patch)
    *
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.
@@ -219,9 +219,9 @@ class Users extends \Google\Service\Resource
    * the request will be preserved, and fields set to `null` will be cleared. For
    * repeating fields that contain arrays, individual items in the array can't be
    * patched piecemeal; they must be supplied in the request body with the desired
-   * values for all items. See the [user accounts
-   * guide](https://developers.google.com/admin-sdk/directory/v1/guides/manage-
-   * users#update_user) for more information. (users.update)
+   * values for all items. See the [user accounts guide](https://developers.google
+   * .com/workspace/admin/directory/v1/guides/manage-users#update_user) for more
+   * information. (users.update)
    *
    * @param string $userKey Identifies the user in the API request. The value can
    * be the user's primary email address, alias email address, or unique user ID.
@@ -265,8 +265,8 @@ class Users extends \Google\Service\Resource
    * descending order.
    * @opt_param string viewType Whether to fetch the administrator-only or domain-
    * wide public view of the user. For more information, see [Retrieve a user as a
-   * non-administrator](/admin-sdk/directory/v1/guides/manage-
-   * users#retrieve_users_non_admin).
+   * non-administrator](https://developers.google.com/workspace/admin/directory/v1
+   * /guides/manage-users#retrieve_users_non_admin).
    * @return Channel
    * @throws \Google\Service\Exception
    */
