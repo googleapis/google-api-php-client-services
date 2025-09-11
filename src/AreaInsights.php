@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://g3doc.corp.google.com/geo/platform/area_insights/README.md?cl=head" target="_blank">Documentation</a>
+ * <a href="https://developers.google.com/maps/documentation/places-aggregate/overview" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
