@@ -27,6 +27,10 @@ class ClusterConfig extends \Google\Collection
   /**
    * @var string
    */
+  public $clusterTier;
+  /**
+   * @var string
+   */
   public $clusterType;
   /**
    * @var string
@@ -90,6 +94,20 @@ class ClusterConfig extends \Google\Collection
   public function getAuxiliaryNodeGroups()
   {
     return $this->auxiliaryNodeGroups;
+  }
+  /**
+   * @param string
+   */
+  public function setClusterTier($clusterTier)
+  {
+    $this->clusterTier = $clusterTier;
+  }
+  /**
+   * @return string
+   */
+  public function getClusterTier()
+  {
+    return $this->clusterTier;
   }
   /**
    * @param string

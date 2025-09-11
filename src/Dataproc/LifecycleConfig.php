@@ -30,11 +30,23 @@ class LifecycleConfig extends \Google\Model
   /**
    * @var string
    */
+  public $autoStopTime;
+  /**
+   * @var string
+   */
+  public $autoStopTtl;
+  /**
+   * @var string
+   */
   public $idleDeleteTtl;
   /**
    * @var string
    */
   public $idleStartTime;
+  /**
+   * @var string
+   */
+  public $idleStopTtl;
 
   /**
    * @param string
@@ -67,6 +79,34 @@ class LifecycleConfig extends \Google\Model
   /**
    * @param string
    */
+  public function setAutoStopTime($autoStopTime)
+  {
+    $this->autoStopTime = $autoStopTime;
+  }
+  /**
+   * @return string
+   */
+  public function getAutoStopTime()
+  {
+    return $this->autoStopTime;
+  }
+  /**
+   * @param string
+   */
+  public function setAutoStopTtl($autoStopTtl)
+  {
+    $this->autoStopTtl = $autoStopTtl;
+  }
+  /**
+   * @return string
+   */
+  public function getAutoStopTtl()
+  {
+    return $this->autoStopTtl;
+  }
+  /**
+   * @param string
+   */
   public function setIdleDeleteTtl($idleDeleteTtl)
   {
     $this->idleDeleteTtl = $idleDeleteTtl;
@@ -91,6 +131,20 @@ class LifecycleConfig extends \Google\Model
   public function getIdleStartTime()
   {
     return $this->idleStartTime;
+  }
+  /**
+   * @param string
+   */
+  public function setIdleStopTtl($idleStopTtl)
+  {
+    $this->idleStopTtl = $idleStopTtl;
+  }
+  /**
+   * @return string
+   */
+  public function getIdleStopTtl()
+  {
+    return $this->idleStopTtl;
   }
 }
 

@@ -1363,6 +1363,11 @@ class Dataproc extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'jobIds' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
                 'parent' => [
                   'location' => 'query',
                   'type' => 'string',
@@ -1402,6 +1407,11 @@ class Dataproc extends \Google\Service
                 'parent' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'stageIds' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],'write' => [
