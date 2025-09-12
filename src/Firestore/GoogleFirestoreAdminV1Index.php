@@ -50,6 +50,10 @@ class GoogleFirestoreAdminV1Index extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var bool
+   */
+  public $unique;
 
   /**
    * @param string
@@ -162,6 +166,20 @@ class GoogleFirestoreAdminV1Index extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param bool
+   */
+  public function setUnique($unique)
+  {
+    $this->unique = $unique;
+  }
+  /**
+   * @return bool
+   */
+  public function getUnique()
+  {
+    return $this->unique;
   }
 }
 

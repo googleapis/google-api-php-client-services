@@ -86,6 +86,16 @@ class Firestore extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'clone' => [
+              'path' => 'v1/{+parent}/databases:clone',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'create' => [
               'path' => 'v1/{+parent}/databases',
               'httpMethod' => 'POST',
