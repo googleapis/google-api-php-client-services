@@ -262,6 +262,16 @@ class FirebaseDataConnect extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'introspectGraphql' => [
+              'path' => 'v1/{+name}:introspectGraphql',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'list' => [
               'path' => 'v1/{+parent}/services',
               'httpMethod' => 'GET',
@@ -399,6 +409,26 @@ class FirebaseDataConnect extends \Google\Service
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'impersonateMutation' => [
+              'path' => 'v1/{+name}:impersonateMutation',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'impersonateQuery' => [
+              'path' => 'v1/{+name}:impersonateQuery',
+              'httpMethod' => 'POST',
               'parameters' => [
                 'name' => [
                   'location' => 'path',

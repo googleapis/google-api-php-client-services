@@ -157,6 +157,29 @@ class ProjectsLocationsServices extends \Google\Service\Resource
     return $this->call('get', [$params], Service::class);
   }
   /**
+   * Execute introspection query against the Firebase Data Connect's generated
+   * GraphQL schema. GraphQL introspection query provides metadata such as what
+   * tables the schema have, what queries and mutations can be performed on the
+   * schema, and so on. Read more at https://graphql.org/learn/introspection.
+   * IntrospectGraphql can read schema metadata but cannot read rows from Cloud
+   * SQL instance, which can be done via ExecuteGraphqlRead.
+   * (services.introspectGraphql)
+   *
+   * @param string $name Required. The relative resource name of Firebase Data
+   * Connect service, in the format: ```
+   * projects/{project}/locations/{location}/services/{service} ```
+   * @param GraphqlRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GraphqlResponse
+   * @throws \Google\Service\Exception
+   */
+  public function introspectGraphql($name, GraphqlRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('introspectGraphql', [$params], GraphqlResponse::class);
+  }
+  /**
    * Lists Services in a given project and location.
    * (services.listProjectsLocationsServices)
    *
