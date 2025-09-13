@@ -28,6 +28,10 @@ class OdbNetwork extends \Google\Model
    */
   public $entitlementId;
   /**
+   * @var string
+   */
+  public $gcpOracleZone;
+  /**
    * @var string[]
    */
   public $labels;
@@ -71,6 +75,20 @@ class OdbNetwork extends \Google\Model
   public function getEntitlementId()
   {
     return $this->entitlementId;
+  }
+  /**
+   * @param string
+   */
+  public function setGcpOracleZone($gcpOracleZone)
+  {
+    $this->gcpOracleZone = $gcpOracleZone;
+  }
+  /**
+   * @return string
+   */
+  public function getGcpOracleZone()
+  {
+    return $this->gcpOracleZone;
   }
   /**
    * @param string[]
