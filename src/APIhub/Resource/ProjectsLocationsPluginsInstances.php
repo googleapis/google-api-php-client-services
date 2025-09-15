@@ -21,6 +21,8 @@ use Google\Service\APIhub\GoogleCloudApihubV1DisablePluginInstanceActionRequest;
 use Google\Service\APIhub\GoogleCloudApihubV1EnablePluginInstanceActionRequest;
 use Google\Service\APIhub\GoogleCloudApihubV1ExecutePluginInstanceActionRequest;
 use Google\Service\APIhub\GoogleCloudApihubV1ListPluginInstancesResponse;
+use Google\Service\APIhub\GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest;
+use Google\Service\APIhub\GoogleCloudApihubV1ManagePluginInstanceSourceDataResponse;
 use Google\Service\APIhub\GoogleCloudApihubV1PluginInstance;
 use Google\Service\APIhub\GoogleLongrunningOperation;
 
@@ -187,6 +189,23 @@ class ProjectsLocationsPluginsInstances extends \Google\Service\Resource
     $params = ['parent' => $parent];
     $params = array_merge($params, $optParams);
     return $this->call('list', [$params], GoogleCloudApihubV1ListPluginInstancesResponse::class);
+  }
+  /**
+   * Manages data for a given plugin instance. (instances.manageSourceData)
+   *
+   * @param string $name Required. The name of the plugin instance for which data
+   * needs to be managed. Format: `projects/{project}/locations/{location}/plugins
+   * /{plugin}/instances/{instance}`
+   * @param GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudApihubV1ManagePluginInstanceSourceDataResponse
+   * @throws \Google\Service\Exception
+   */
+  public function manageSourceData($name, GoogleCloudApihubV1ManagePluginInstanceSourceDataRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('manageSourceData', [$params], GoogleCloudApihubV1ManagePluginInstanceSourceDataResponse::class);
   }
   /**
    * Updates a plugin instance in the API hub. The following fields in the

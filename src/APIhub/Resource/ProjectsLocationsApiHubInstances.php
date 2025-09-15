@@ -53,7 +53,9 @@ class ProjectsLocationsApiHubInstances extends \Google\Service\Resource
     return $this->call('create', [$params], GoogleLongrunningOperation::class);
   }
   /**
-   * Deletes the API hub instance. (apiHubInstances.delete)
+   * Deletes the API hub instance. Deleting the API hub instance will also result
+   * in the removal of all associated runtime project attachments and the host
+   * project registration. (apiHubInstances.delete)
    *
    * @param string $name Required. The name of the Api Hub instance to delete.
    * Format:
