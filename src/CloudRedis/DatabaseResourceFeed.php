@@ -23,6 +23,8 @@ class DatabaseResourceFeed extends \Google\Model
   protected $backupdrMetadataDataType = '';
   protected $configBasedSignalDataType = ConfigBasedSignalData::class;
   protected $configBasedSignalDataDataType = '';
+  protected $databaseResourceSignalDataType = DatabaseResourceSignalData::class;
+  protected $databaseResourceSignalDataDataType = '';
   /**
    * @var string
    */
@@ -73,6 +75,20 @@ class DatabaseResourceFeed extends \Google\Model
   public function getConfigBasedSignalData()
   {
     return $this->configBasedSignalData;
+  }
+  /**
+   * @param DatabaseResourceSignalData
+   */
+  public function setDatabaseResourceSignalData(DatabaseResourceSignalData $databaseResourceSignalData)
+  {
+    $this->databaseResourceSignalData = $databaseResourceSignalData;
+  }
+  /**
+   * @return DatabaseResourceSignalData
+   */
+  public function getDatabaseResourceSignalData()
+  {
+    return $this->databaseResourceSignalData;
   }
   /**
    * @param string
