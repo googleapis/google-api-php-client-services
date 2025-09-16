@@ -48,12 +48,18 @@ class OracleDatabase extends \Google\Service
   public $projects_locations_cloudExadataInfrastructures_dbServers;
   public $projects_locations_cloudVmClusters;
   public $projects_locations_cloudVmClusters_dbNodes;
+  public $projects_locations_databaseCharacterSets;
+  public $projects_locations_databases;
+  public $projects_locations_dbSystemInitialStorageSizes;
   public $projects_locations_dbSystemShapes;
+  public $projects_locations_dbSystems;
+  public $projects_locations_dbVersions;
   public $projects_locations_entitlements;
   public $projects_locations_giVersions;
   public $projects_locations_odbNetworks;
   public $projects_locations_odbNetworks_odbSubnets;
   public $projects_locations_operations;
+  public $projects_locations_pluggableDatabases;
   public $rootUrlTemplate;
 
   /**
@@ -566,6 +572,108 @@ class OracleDatabase extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_databaseCharacterSets = new OracleDatabase\Resource\ProjectsLocationsDatabaseCharacterSets(
+        $this,
+        $this->serviceName,
+        'databaseCharacterSets',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/databaseCharacterSets',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_databases = new OracleDatabase\Resource\ProjectsLocationsDatabases(
+        $this,
+        $this->serviceName,
+        'databases',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/databases',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dbSystemInitialStorageSizes = new OracleDatabase\Resource\ProjectsLocationsDbSystemInitialStorageSizes(
+        $this,
+        $this->serviceName,
+        'dbSystemInitialStorageSizes',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbSystemInitialStorageSizes',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_dbSystemShapes = new OracleDatabase\Resource\ProjectsLocationsDbSystemShapes(
         $this,
         $this->serviceName,
@@ -574,6 +682,116 @@ class OracleDatabase extends \Google\Service
           'methods' => [
             'list' => [
               'path' => 'v1/{+parent}/dbSystemShapes',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dbSystems = new OracleDatabase\Resource\ProjectsLocationsDbSystems(
+        $this,
+        $this->serviceName,
+        'dbSystems',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/dbSystems',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'dbSystemId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/dbSystems',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dbVersions = new OracleDatabase\Resource\ProjectsLocationsDbVersions(
+        $this,
+        $this->serviceName,
+        'dbVersions',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbVersions',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
@@ -855,6 +1073,48 @@ class OracleDatabase extends \Google\Service
               'httpMethod' => 'GET',
               'parameters' => [
                 'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_pluggableDatabases = new OracleDatabase\Resource\ProjectsLocationsPluggableDatabases(
+        $this,
+        $this->serviceName,
+        'pluggableDatabases',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/pluggableDatabases',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
