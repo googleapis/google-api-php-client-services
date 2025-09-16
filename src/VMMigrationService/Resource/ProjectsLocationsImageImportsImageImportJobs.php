@@ -33,7 +33,8 @@ use Google\Service\VMMigrationService\Operation;
 class ProjectsLocationsImageImportsImageImportJobs extends \Google\Service\Resource
 {
   /**
-   * Initiates the cancellation of a running clone job. (imageImportJobs.cancel)
+   * Initiates the cancellation of a running ImageImportJob.
+   * (imageImportJobs.cancel)
    *
    * @param string $name Required. The image import job id.
    * @param CancelImageImportJobRequest $postBody

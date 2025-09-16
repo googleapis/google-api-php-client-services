@@ -20,6 +20,8 @@ namespace Google\Service\VMMigrationService;
 class ComputeEngineTargetDetails extends \Google\Collection
 {
   protected $collection_key = 'networkTags';
+  protected $adaptationModifiersType = AdaptationModifier::class;
+  protected $adaptationModifiersDataType = 'array';
   /**
    * @var string[]
    */
@@ -105,6 +107,20 @@ class ComputeEngineTargetDetails extends \Google\Collection
    */
   public $zone;
 
+  /**
+   * @param AdaptationModifier[]
+   */
+  public function setAdaptationModifiers($adaptationModifiers)
+  {
+    $this->adaptationModifiers = $adaptationModifiers;
+  }
+  /**
+   * @return AdaptationModifier[]
+   */
+  public function getAdaptationModifiers()
+  {
+    return $this->adaptationModifiers;
+  }
   /**
    * @param string[]
    */
