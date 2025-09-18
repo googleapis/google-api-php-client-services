@@ -25,6 +25,10 @@ class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends \Google\Collect
   /**
    * @var string
    */
+  public $jsonParams;
+  /**
+   * @var string
+   */
   public $key;
   /**
    * @var array[]
@@ -44,6 +48,20 @@ class GoogleCloudDiscoveryengineV1alphaDestinationConfig extends \Google\Collect
   public function getDestinations()
   {
     return $this->destinations;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonParams($jsonParams)
+  {
+    $this->jsonParams = $jsonParams;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonParams()
+  {
+    return $this->jsonParams;
   }
   /**
    * @param string

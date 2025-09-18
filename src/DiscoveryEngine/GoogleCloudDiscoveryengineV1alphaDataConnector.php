@@ -93,6 +93,10 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   /**
    * @var string
    */
+  public $jsonParams;
+  /**
+   * @var string
+   */
   public $kmsKeyName;
   /**
    * @var string
@@ -458,6 +462,20 @@ class GoogleCloudDiscoveryengineV1alphaDataConnector extends \Google\Collection
   public function getIncrementalSyncDisabled()
   {
     return $this->incrementalSyncDisabled;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonParams($jsonParams)
+  {
+    $this->jsonParams = $jsonParams;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonParams()
+  {
+    return $this->jsonParams;
   }
   /**
    * @param string

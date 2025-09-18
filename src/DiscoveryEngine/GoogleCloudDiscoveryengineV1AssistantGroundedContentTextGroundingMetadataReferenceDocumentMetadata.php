@@ -30,6 +30,10 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataR
   /**
    * @var string
    */
+  public $mimeType;
+  /**
+   * @var string
+   */
   public $pageIdentifier;
   /**
    * @var string
@@ -67,6 +71,20 @@ class GoogleCloudDiscoveryengineV1AssistantGroundedContentTextGroundingMetadataR
   public function getDomain()
   {
     return $this->domain;
+  }
+  /**
+   * @param string
+   */
+  public function setMimeType($mimeType)
+  {
+    $this->mimeType = $mimeType;
+  }
+  /**
+   * @return string
+   */
+  public function getMimeType()
+  {
+    return $this->mimeType;
   }
   /**
    * @param string

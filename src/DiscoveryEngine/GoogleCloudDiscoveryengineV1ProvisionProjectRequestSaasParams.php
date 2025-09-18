@@ -23,6 +23,10 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams extends \Goo
    * @var bool
    */
   public $acceptBizQos;
+  /**
+   * @var bool
+   */
+  public $isBiz;
 
   /**
    * @param bool
@@ -37,6 +41,20 @@ class GoogleCloudDiscoveryengineV1ProvisionProjectRequestSaasParams extends \Goo
   public function getAcceptBizQos()
   {
     return $this->acceptBizQos;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsBiz($isBiz)
+  {
+    $this->isBiz = $isBiz;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsBiz()
+  {
+    return $this->isBiz;
   }
 }
 

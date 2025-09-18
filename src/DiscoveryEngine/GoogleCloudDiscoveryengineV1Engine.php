@@ -33,6 +33,10 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   /**
    * @var string
    */
+  public $configurableBillingApproach;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var string[]
@@ -126,6 +130,20 @@ class GoogleCloudDiscoveryengineV1Engine extends \Google\Collection
   public function getCommonConfig()
   {
     return $this->commonConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setConfigurableBillingApproach($configurableBillingApproach)
+  {
+    $this->configurableBillingApproach = $configurableBillingApproach;
+  }
+  /**
+   * @return string
+   */
+  public function getConfigurableBillingApproach()
+  {
+    return $this->configurableBillingApproach;
   }
   /**
    * @param string

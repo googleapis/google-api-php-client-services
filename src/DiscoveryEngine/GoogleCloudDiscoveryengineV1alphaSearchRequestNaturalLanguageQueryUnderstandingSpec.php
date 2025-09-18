@@ -21,6 +21,10 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUndersta
 {
   protected $collection_key = 'geoSearchQueryDetectionFieldNames';
   /**
+   * @var string[]
+   */
+  public $allowedFieldNames;
+  /**
    * @var string
    */
   public $extractedFilterBehavior;
@@ -33,6 +37,20 @@ class GoogleCloudDiscoveryengineV1alphaSearchRequestNaturalLanguageQueryUndersta
    */
   public $geoSearchQueryDetectionFieldNames;
 
+  /**
+   * @param string[]
+   */
+  public function setAllowedFieldNames($allowedFieldNames)
+  {
+    $this->allowedFieldNames = $allowedFieldNames;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAllowedFieldNames()
+  {
+    return $this->allowedFieldNames;
+  }
   /**
    * @param string
    */
