@@ -17,28 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1GoogleMaps extends \Google\Model
+class GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri extends \Google\Model
 {
   /**
-   * @var bool
+   * @var string
    */
-  public $enableWidget;
+  public $flagContentUri;
+  /**
+   * @var string
+   */
+  public $sourceId;
 
   /**
-   * @param bool
+   * @param string
    */
-  public function setEnableWidget($enableWidget)
+  public function setFlagContentUri($flagContentUri)
   {
-    $this->enableWidget = $enableWidget;
+    $this->flagContentUri = $flagContentUri;
   }
   /**
-   * @return bool
+   * @return string
    */
-  public function getEnableWidget()
+  public function getFlagContentUri()
   {
-    return $this->enableWidget;
+    return $this->flagContentUri;
+  }
+  /**
+   * @param string
+   */
+  public function setSourceId($sourceId)
+  {
+    $this->sourceId = $sourceId;
+  }
+  /**
+   * @return string
+   */
+  public function getSourceId()
+  {
+    return $this->sourceId;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GoogleMaps::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GoogleMaps');
+class_alias(GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri');

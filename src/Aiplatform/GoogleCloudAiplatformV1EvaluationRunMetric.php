@@ -19,8 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
 {
-  protected $computationBasedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec::class;
-  protected $computationBasedMetricSpecDataType = '';
   protected $llmBasedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricLLMBasedMetricSpec::class;
   protected $llmBasedMetricSpecDataType = '';
   /**
@@ -32,20 +30,6 @@ class GoogleCloudAiplatformV1EvaluationRunMetric extends \Google\Model
   protected $rubricBasedMetricSpecType = GoogleCloudAiplatformV1EvaluationRunMetricRubricBasedMetricSpec::class;
   protected $rubricBasedMetricSpecDataType = '';
 
-  /**
-   * @param GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec
-   */
-  public function setComputationBasedMetricSpec(GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec $computationBasedMetricSpec)
-  {
-    $this->computationBasedMetricSpec = $computationBasedMetricSpec;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1EvaluationRunMetricComputationBasedMetricSpec
-   */
-  public function getComputationBasedMetricSpec()
-  {
-    return $this->computationBasedMetricSpec;
-  }
   /**
    * @param GoogleCloudAiplatformV1EvaluationRunMetricLLMBasedMetricSpec
    */

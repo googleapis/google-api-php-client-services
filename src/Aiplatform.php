@@ -71,6 +71,9 @@ class Aiplatform extends \Google\Service
   public $projects_locations_deploymentResourcePools_operations;
   public $projects_locations_endpoints;
   public $projects_locations_endpoints_chat;
+  public $projects_locations_endpoints_deployedModels_invoke;
+  public $projects_locations_endpoints_invoke;
+  public $projects_locations_endpoints_openapi;
   public $projects_locations_endpoints_operations;
   public $projects_locations_evaluationItems;
   public $projects_locations_evaluationRuns;
@@ -2412,6 +2415,85 @@ class Aiplatform extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_endpoints_deployedModels_invoke = new Aiplatform\Resource\ProjectsLocationsEndpointsDeployedModelsInvoke(
+        $this,
+        $this->serviceName,
+        'invoke',
+        [
+          'methods' => [
+            'invoke' => [
+              'path' => 'v1/{+endpoint}/deployedModels/{deployedModelId}/invoke/{+invokeId}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deployedModelId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'invokeId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_endpoints_invoke = new Aiplatform\Resource\ProjectsLocationsEndpointsInvoke(
+        $this,
+        $this->serviceName,
+        'invoke',
+        [
+          'methods' => [
+            'invoke' => [
+              'path' => 'v1/{+endpoint}/invoke/{+invokeId}',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'invokeId' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_endpoints_openapi = new Aiplatform\Resource\ProjectsLocationsEndpointsOpenapi(
+        $this,
+        $this->serviceName,
+        'openapi',
+        [
+          'methods' => [
+            'embeddings' => [
+              'path' => 'v1/{+endpoint}/embeddings',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'endpoint' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'deployedModelId' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],

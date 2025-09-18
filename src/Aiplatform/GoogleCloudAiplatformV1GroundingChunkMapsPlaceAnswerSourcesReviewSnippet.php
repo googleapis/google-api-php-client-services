@@ -19,12 +19,6 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet extends \Google\Model
 {
-  protected $authorAttributionType = GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution::class;
-  protected $authorAttributionDataType = '';
-  /**
-   * @var string
-   */
-  public $flagContentUri;
   /**
    * @var string
    */
@@ -32,40 +26,12 @@ class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet e
   /**
    * @var string
    */
-  public $relativePublishTimeDescription;
+  public $reviewId;
   /**
    * @var string
    */
-  public $review;
+  public $title;
 
-  /**
-   * @param GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution
-   */
-  public function setAuthorAttribution(GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution $authorAttribution)
-  {
-    $this->authorAttribution = $authorAttribution;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesAuthorAttribution
-   */
-  public function getAuthorAttribution()
-  {
-    return $this->authorAttribution;
-  }
-  /**
-   * @param string
-   */
-  public function setFlagContentUri($flagContentUri)
-  {
-    $this->flagContentUri = $flagContentUri;
-  }
-  /**
-   * @return string
-   */
-  public function getFlagContentUri()
-  {
-    return $this->flagContentUri;
-  }
   /**
    * @param string
    */
@@ -83,30 +49,30 @@ class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet e
   /**
    * @param string
    */
-  public function setRelativePublishTimeDescription($relativePublishTimeDescription)
+  public function setReviewId($reviewId)
   {
-    $this->relativePublishTimeDescription = $relativePublishTimeDescription;
+    $this->reviewId = $reviewId;
   }
   /**
    * @return string
    */
-  public function getRelativePublishTimeDescription()
+  public function getReviewId()
   {
-    return $this->relativePublishTimeDescription;
+    return $this->reviewId;
   }
   /**
    * @param string
    */
-  public function setReview($review)
+  public function setTitle($title)
   {
-    $this->review = $review;
+    $this->title = $title;
   }
   /**
    * @return string
    */
-  public function getReview()
+  public function getTitle()
   {
-    return $this->review;
+    return $this->title;
   }
 }
 

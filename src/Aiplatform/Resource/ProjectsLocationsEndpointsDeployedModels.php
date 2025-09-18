@@ -15,30 +15,19 @@
  * the License.
  */
 
-namespace Google\Service\Aiplatform;
+namespace Google\Service\Aiplatform\Resource;
 
-class GoogleCloudAiplatformV1GoogleMaps extends \Google\Model
+/**
+ * The "deployedModels" collection of methods.
+ * Typical usage is:
+ *  <code>
+ *   $aiplatformService = new Google\Service\Aiplatform(...);
+ *   $deployedModels = $aiplatformService->projects_locations_endpoints_deployedModels;
+ *  </code>
+ */
+class ProjectsLocationsEndpointsDeployedModels extends \Google\Service\Resource
 {
-  /**
-   * @var bool
-   */
-  public $enableWidget;
-
-  /**
-   * @param bool
-   */
-  public function setEnableWidget($enableWidget)
-  {
-    $this->enableWidget = $enableWidget;
-  }
-  /**
-   * @return bool
-   */
-  public function getEnableWidget()
-  {
-    return $this->enableWidget;
-  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1GoogleMaps::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GoogleMaps');
+class_alias(ProjectsLocationsEndpointsDeployedModels::class, 'Google_Service_Aiplatform_Resource_ProjectsLocationsEndpointsDeployedModels');

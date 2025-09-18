@@ -20,27 +20,9 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSources extends \Google\Collection
 {
   protected $collection_key = 'reviewSnippets';
-  /**
-   * @var string
-   */
-  public $flagContentUri;
   protected $reviewSnippetsType = GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet::class;
   protected $reviewSnippetsDataType = 'array';
 
-  /**
-   * @param string
-   */
-  public function setFlagContentUri($flagContentUri)
-  {
-    $this->flagContentUri = $flagContentUri;
-  }
-  /**
-   * @return string
-   */
-  public function getFlagContentUri()
-  {
-    return $this->flagContentUri;
-  }
   /**
    * @param GoogleCloudAiplatformV1GroundingChunkMapsPlaceAnswerSourcesReviewSnippet[]
    */

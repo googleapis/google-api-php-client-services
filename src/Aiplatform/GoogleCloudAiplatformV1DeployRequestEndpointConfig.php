@@ -35,6 +35,8 @@ class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends \Google\Model
    * @var string
    */
   public $endpointUserId;
+  protected $privateServiceConnectConfigType = GoogleCloudAiplatformV1PrivateServiceConnectConfig::class;
+  protected $privateServiceConnectConfigDataType = '';
 
   /**
    * @param bool
@@ -91,6 +93,20 @@ class GoogleCloudAiplatformV1DeployRequestEndpointConfig extends \Google\Model
   public function getEndpointUserId()
   {
     return $this->endpointUserId;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   */
+  public function setPrivateServiceConnectConfig(GoogleCloudAiplatformV1PrivateServiceConnectConfig $privateServiceConnectConfig)
+  {
+    $this->privateServiceConnectConfig = $privateServiceConnectConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PrivateServiceConnectConfig
+   */
+  public function getPrivateServiceConnectConfig()
+  {
+    return $this->privateServiceConnectConfig;
   }
 }
 

@@ -32,6 +32,8 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   protected $retrievalMetadataDataType = '';
   protected $searchEntryPointType = GoogleCloudAiplatformV1SearchEntryPoint::class;
   protected $searchEntryPointDataType = '';
+  protected $sourceFlaggingUrisType = GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri::class;
+  protected $sourceFlaggingUrisDataType = 'array';
   /**
    * @var string[]
    */
@@ -106,6 +108,20 @@ class GoogleCloudAiplatformV1GroundingMetadata extends \Google\Collection
   public function getSearchEntryPoint()
   {
     return $this->searchEntryPoint;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri[]
+   */
+  public function setSourceFlaggingUris($sourceFlaggingUris)
+  {
+    $this->sourceFlaggingUris = $sourceFlaggingUris;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1GroundingMetadataSourceFlaggingUri[]
+   */
+  public function getSourceFlaggingUris()
+  {
+    return $this->sourceFlaggingUris;
   }
   /**
    * @param string[]

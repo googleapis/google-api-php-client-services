@@ -28,6 +28,8 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   protected $bleuSpecDataType = '';
   protected $exactMatchSpecType = GoogleCloudAiplatformV1ExactMatchSpec::class;
   protected $exactMatchSpecDataType = '';
+  protected $llmBasedMetricSpecType = GoogleCloudAiplatformV1LLMBasedMetricSpec::class;
+  protected $llmBasedMetricSpecDataType = '';
   protected $pairwiseMetricSpecType = GoogleCloudAiplatformV1PairwiseMetricSpec::class;
   protected $pairwiseMetricSpecDataType = '';
   protected $pointwiseMetricSpecType = GoogleCloudAiplatformV1PointwiseMetricSpec::class;
@@ -78,6 +80,20 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public function getExactMatchSpec()
   {
     return $this->exactMatchSpec;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1LLMBasedMetricSpec
+   */
+  public function setLlmBasedMetricSpec(GoogleCloudAiplatformV1LLMBasedMetricSpec $llmBasedMetricSpec)
+  {
+    $this->llmBasedMetricSpec = $llmBasedMetricSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1LLMBasedMetricSpec
+   */
+  public function getLlmBasedMetricSpec()
+  {
+    return $this->llmBasedMetricSpec;
   }
   /**
    * @param GoogleCloudAiplatformV1PairwiseMetricSpec
