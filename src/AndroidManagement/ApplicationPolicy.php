@@ -90,6 +90,8 @@ class ApplicationPolicy extends \Google\Collection
    * @var string
    */
   public $preferentialNetworkId;
+  protected $rolesType = Role::class;
+  protected $rolesDataType = 'array';
   protected $signingKeyCertsType = ApplicationSigningKeyCert::class;
   protected $signingKeyCertsDataType = 'array';
   /**
@@ -380,6 +382,20 @@ class ApplicationPolicy extends \Google\Collection
   public function getPreferentialNetworkId()
   {
     return $this->preferentialNetworkId;
+  }
+  /**
+   * @param Role[]
+   */
+  public function setRoles($roles)
+  {
+    $this->roles = $roles;
+  }
+  /**
+   * @return Role[]
+   */
+  public function getRoles()
+  {
+    return $this->roles;
   }
   /**
    * @param ApplicationSigningKeyCert[]
