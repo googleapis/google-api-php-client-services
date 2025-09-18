@@ -20,13 +20,37 @@ namespace Google\Service\Networkconnectivity;
 class Transport extends \Google\Model
 {
   /**
+   * @var bool
+   */
+  public $adminEnabled;
+  /**
+   * @var string
+   */
+  public $advertisedRoutes;
+  /**
+   * @var string
+   */
+  public $bandwidth;
+  /**
    * @var string
    */
   public $createTime;
   /**
+   * @var string
+   */
+  public $description;
+  /**
+   * @var string
+   */
+  public $generatedActivationKey;
+  /**
    * @var string[]
    */
   public $labels;
+  /**
+   * @var int
+   */
+  public $mtuLimit;
   /**
    * @var string
    */
@@ -34,8 +58,74 @@ class Transport extends \Google\Model
   /**
    * @var string
    */
+  public $network;
+  /**
+   * @var string
+   */
+  public $providedActivationKey;
+  /**
+   * @var string
+   */
+  public $region;
+  /**
+   * @var string
+   */
+  public $remoteProfile;
+  /**
+   * @var string
+   */
+  public $stackType;
+  /**
+   * @var string
+   */
+  public $state;
+  /**
+   * @var string
+   */
   public $updateTime;
 
+  /**
+   * @param bool
+   */
+  public function setAdminEnabled($adminEnabled)
+  {
+    $this->adminEnabled = $adminEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAdminEnabled()
+  {
+    return $this->adminEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setAdvertisedRoutes($advertisedRoutes)
+  {
+    $this->advertisedRoutes = $advertisedRoutes;
+  }
+  /**
+   * @return string
+   */
+  public function getAdvertisedRoutes()
+  {
+    return $this->advertisedRoutes;
+  }
+  /**
+   * @param string
+   */
+  public function setBandwidth($bandwidth)
+  {
+    $this->bandwidth = $bandwidth;
+  }
+  /**
+   * @return string
+   */
+  public function getBandwidth()
+  {
+    return $this->bandwidth;
+  }
   /**
    * @param string
    */
@@ -49,6 +139,34 @@ class Transport extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setDescription($description)
+  {
+    $this->description = $description;
+  }
+  /**
+   * @return string
+   */
+  public function getDescription()
+  {
+    return $this->description;
+  }
+  /**
+   * @param string
+   */
+  public function setGeneratedActivationKey($generatedActivationKey)
+  {
+    $this->generatedActivationKey = $generatedActivationKey;
+  }
+  /**
+   * @return string
+   */
+  public function getGeneratedActivationKey()
+  {
+    return $this->generatedActivationKey;
   }
   /**
    * @param string[]
@@ -65,6 +183,20 @@ class Transport extends \Google\Model
     return $this->labels;
   }
   /**
+   * @param int
+   */
+  public function setMtuLimit($mtuLimit)
+  {
+    $this->mtuLimit = $mtuLimit;
+  }
+  /**
+   * @return int
+   */
+  public function getMtuLimit()
+  {
+    return $this->mtuLimit;
+  }
+  /**
    * @param string
    */
   public function setName($name)
@@ -77,6 +209,90 @@ class Transport extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setNetwork($network)
+  {
+    $this->network = $network;
+  }
+  /**
+   * @return string
+   */
+  public function getNetwork()
+  {
+    return $this->network;
+  }
+  /**
+   * @param string
+   */
+  public function setProvidedActivationKey($providedActivationKey)
+  {
+    $this->providedActivationKey = $providedActivationKey;
+  }
+  /**
+   * @return string
+   */
+  public function getProvidedActivationKey()
+  {
+    return $this->providedActivationKey;
+  }
+  /**
+   * @param string
+   */
+  public function setRegion($region)
+  {
+    $this->region = $region;
+  }
+  /**
+   * @return string
+   */
+  public function getRegion()
+  {
+    return $this->region;
+  }
+  /**
+   * @param string
+   */
+  public function setRemoteProfile($remoteProfile)
+  {
+    $this->remoteProfile = $remoteProfile;
+  }
+  /**
+   * @return string
+   */
+  public function getRemoteProfile()
+  {
+    return $this->remoteProfile;
+  }
+  /**
+   * @param string
+   */
+  public function setStackType($stackType)
+  {
+    $this->stackType = $stackType;
+  }
+  /**
+   * @return string
+   */
+  public function getStackType()
+  {
+    return $this->stackType;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
   /**
    * @param string

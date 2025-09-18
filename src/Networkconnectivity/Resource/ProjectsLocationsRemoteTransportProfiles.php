@@ -34,7 +34,7 @@ class ProjectsLocationsRemoteTransportProfiles extends \Google\Service\Resource
    * Gets details of a single RemoteTransportProfile.
    * (remoteTransportProfiles.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return RemoteTransportProfile
    * @throws \Google\Service\Exception
@@ -50,11 +50,11 @@ class ProjectsLocationsRemoteTransportProfiles extends \Google\Service\Resource
    * (remoteTransportProfiles.listProjectsLocationsRemoteTransportProfiles)
    *
    * @param string $parent Required. Parent value for
-   * ListRemoteTransportProfilesRequest
+   * ListRemoteTransportProfilesRequest.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.

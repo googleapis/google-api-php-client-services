@@ -62,7 +62,7 @@ class ProjectsLocationsTransports extends \Google\Service\Resource
   /**
    * Deletes a single Transport. (transports.delete)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId Optional. An optional request ID to identify
@@ -88,7 +88,7 @@ class ProjectsLocationsTransports extends \Google\Service\Resource
   /**
    * Gets details of a single Transport. (transports.get)
    *
-   * @param string $name Required. Name of the resource
+   * @param string $name Required. Name of the resource.
    * @param array $optParams Optional parameters.
    * @return Transport
    * @throws \Google\Service\Exception
@@ -103,11 +103,11 @@ class ProjectsLocationsTransports extends \Google\Service\Resource
    * Lists Transports in a given project and location.
    * (transports.listProjectsLocationsTransports)
    *
-   * @param string $parent Required. Parent value for ListTransportsRequest
+   * @param string $parent Required. Parent value for ListTransportsRequest.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filtering results
-   * @opt_param string orderBy Optional. Hint for how to order the results
+   * @opt_param string filter Optional. Filtering results.
+   * @opt_param string orderBy Optional. Hint for how to order the results.
    * @opt_param int pageSize Optional. Requested page size. Server may return
    * fewer items than requested. If unspecified, server will pick an appropriate
    * default.
@@ -125,7 +125,8 @@ class ProjectsLocationsTransports extends \Google\Service\Resource
   /**
    * Updates the parameters of a single Transport. (transports.patch)
    *
-   * @param string $name Identifier. name of resource
+   * @param string $name Identifier. Name of the resource, see google.aip.dev/122
+   * for resource naming.
    * @param Transport $postBody
    * @param array $optParams Optional parameters.
    *
