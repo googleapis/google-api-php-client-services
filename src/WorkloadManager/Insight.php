@@ -25,6 +25,8 @@ class Insight extends \Google\Model
    * @var string
    */
   public $instanceId;
+  protected $openShiftValidationType = OpenShiftValidation::class;
+  protected $openShiftValidationDataType = '';
   protected $sapDiscoveryType = SapDiscovery::class;
   protected $sapDiscoveryDataType = '';
   protected $sapValidationType = SapValidation::class;
@@ -65,6 +67,20 @@ class Insight extends \Google\Model
   public function getInstanceId()
   {
     return $this->instanceId;
+  }
+  /**
+   * @param OpenShiftValidation
+   */
+  public function setOpenShiftValidation(OpenShiftValidation $openShiftValidation)
+  {
+    $this->openShiftValidation = $openShiftValidation;
+  }
+  /**
+   * @return OpenShiftValidation
+   */
+  public function getOpenShiftValidation()
+  {
+    return $this->openShiftValidation;
   }
   /**
    * @param SapDiscovery
