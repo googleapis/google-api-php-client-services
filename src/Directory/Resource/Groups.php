@@ -94,8 +94,9 @@ class Groups extends \Google\Service\Resource
    * @opt_param string orderBy Column to use for sorting results
    * @opt_param string pageToken Token to specify next page in the list
    * @opt_param string query Query string search. Should be of the form "".
-   * Complete documentation is at https: //developers.google.com/admin-
-   * sdk/directory/v1/guides/search-groups
+   * Complete documentation is at
+   * https://developers.google.com/workspace/admin/directory/v1/guides/search-
+   * groups
    * @opt_param string sortOrder Whether to return results in ascending or
    * descending order. Only of use when orderBy is also used
    * @opt_param string userKey Email or immutable ID of the user if only those
