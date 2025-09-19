@@ -110,22 +110,22 @@ class ObjectWithScalarArrays extends \Google\Collection
   /**
    * @var bool[]
    */
-  public $arrayOfBooleans;
+  public array $arrayOfBooleans;
   /**
    * @var float[]
    */
-  public $arrayOfFloats;
+  public array $arrayOfFloats;
   /**
    * @var int[]
    */
-  public $arrayOfIntegers;
+  public array $arrayOfIntegers;
   /**
    * @var string[]
    */
-  public $arrayOfStrings;
+  public array $arrayOfStrings;
 
   /**
-   * @param bool[]
+   * @param bool[] $arrayOfBooleans
    */
   public function setArrayOfBooleans($arrayOfBooleans)
   {
@@ -139,7 +139,7 @@ class ObjectWithScalarArrays extends \Google\Collection
     return $this->arrayOfBooleans;
   }
   /**
-   * @param float[]
+   * @param float[] $arrayOfFloats
    */
   public function setArrayOfFloats($arrayOfFloats)
   {
@@ -153,7 +153,7 @@ class ObjectWithScalarArrays extends \Google\Collection
     return $this->arrayOfFloats;
   }
   /**
-   * @param int[]
+   * @param int[] $arrayOfIntegers
    */
   public function setArrayOfIntegers($arrayOfIntegers)
   {
@@ -167,7 +167,7 @@ class ObjectWithScalarArrays extends \Google\Collection
     return $this->arrayOfIntegers;
   }
   /**
-   * @param string[]
+   * @param string[] $arrayOfStrings
    */
   public function setArrayOfStrings($arrayOfStrings)
   {
