@@ -41,6 +41,10 @@ class Account extends \Google\Collection
   /**
    * @var string
    */
+  public $resellerParentBillingAccount;
+  /**
+   * @var string
+   */
   public $state;
   /**
    * @var string
@@ -116,6 +120,20 @@ class Account extends \Google\Collection
   public function getProvider()
   {
     return $this->provider;
+  }
+  /**
+   * @param string
+   */
+  public function setResellerParentBillingAccount($resellerParentBillingAccount)
+  {
+    $this->resellerParentBillingAccount = $resellerParentBillingAccount;
+  }
+  /**
+   * @return string
+   */
+  public function getResellerParentBillingAccount()
+  {
+    return $this->resellerParentBillingAccount;
   }
   /**
    * @param string
