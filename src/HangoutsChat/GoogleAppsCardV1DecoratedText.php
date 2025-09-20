@@ -23,8 +23,12 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
    * @var string
    */
   public $bottomLabel;
+  protected $bottomLabelTextType = GoogleAppsCardV1TextParagraph::class;
+  protected $bottomLabelTextDataType = '';
   protected $buttonType = GoogleAppsCardV1Button::class;
   protected $buttonDataType = '';
+  protected $contentTextType = GoogleAppsCardV1TextParagraph::class;
+  protected $contentTextDataType = '';
   protected $endIconType = GoogleAppsCardV1Icon::class;
   protected $endIconDataType = '';
   protected $iconType = GoogleAppsCardV1Icon::class;
@@ -33,6 +37,10 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
   protected $onClickDataType = '';
   protected $startIconType = GoogleAppsCardV1Icon::class;
   protected $startIconDataType = '';
+  /**
+   * @var string
+   */
+  public $startIconVerticalAlignment;
   protected $switchControlType = GoogleAppsCardV1SwitchControl::class;
   protected $switchControlDataType = '';
   /**
@@ -43,6 +51,8 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
    * @var string
    */
   public $topLabel;
+  protected $topLabelTextType = GoogleAppsCardV1TextParagraph::class;
+  protected $topLabelTextDataType = '';
   /**
    * @var bool
    */
@@ -63,6 +73,20 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->bottomLabel;
   }
   /**
+   * @param GoogleAppsCardV1TextParagraph
+   */
+  public function setBottomLabelText(GoogleAppsCardV1TextParagraph $bottomLabelText)
+  {
+    $this->bottomLabelText = $bottomLabelText;
+  }
+  /**
+   * @return GoogleAppsCardV1TextParagraph
+   */
+  public function getBottomLabelText()
+  {
+    return $this->bottomLabelText;
+  }
+  /**
    * @param GoogleAppsCardV1Button
    */
   public function setButton(GoogleAppsCardV1Button $button)
@@ -75,6 +99,20 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
   public function getButton()
   {
     return $this->button;
+  }
+  /**
+   * @param GoogleAppsCardV1TextParagraph
+   */
+  public function setContentText(GoogleAppsCardV1TextParagraph $contentText)
+  {
+    $this->contentText = $contentText;
+  }
+  /**
+   * @return GoogleAppsCardV1TextParagraph
+   */
+  public function getContentText()
+  {
+    return $this->contentText;
   }
   /**
    * @param GoogleAppsCardV1Icon
@@ -133,6 +171,20 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
     return $this->startIcon;
   }
   /**
+   * @param string
+   */
+  public function setStartIconVerticalAlignment($startIconVerticalAlignment)
+  {
+    $this->startIconVerticalAlignment = $startIconVerticalAlignment;
+  }
+  /**
+   * @return string
+   */
+  public function getStartIconVerticalAlignment()
+  {
+    return $this->startIconVerticalAlignment;
+  }
+  /**
    * @param GoogleAppsCardV1SwitchControl
    */
   public function setSwitchControl(GoogleAppsCardV1SwitchControl $switchControl)
@@ -173,6 +225,20 @@ class GoogleAppsCardV1DecoratedText extends \Google\Model
   public function getTopLabel()
   {
     return $this->topLabel;
+  }
+  /**
+   * @param GoogleAppsCardV1TextParagraph
+   */
+  public function setTopLabelText(GoogleAppsCardV1TextParagraph $topLabelText)
+  {
+    $this->topLabelText = $topLabelText;
+  }
+  /**
+   * @return GoogleAppsCardV1TextParagraph
+   */
+  public function getTopLabelText()
+  {
+    return $this->topLabelText;
   }
   /**
    * @param bool
