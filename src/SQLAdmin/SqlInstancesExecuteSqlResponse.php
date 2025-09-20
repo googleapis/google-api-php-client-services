@@ -20,11 +20,27 @@ namespace Google\Service\SQLAdmin;
 class SqlInstancesExecuteSqlResponse extends \Google\Collection
 {
   protected $collection_key = 'results';
+  protected $messagesType = Message::class;
+  protected $messagesDataType = 'array';
   protected $metadataType = Metadata::class;
   protected $metadataDataType = '';
   protected $resultsType = QueryResult::class;
   protected $resultsDataType = 'array';
 
+  /**
+   * @param Message[]
+   */
+  public function setMessages($messages)
+  {
+    $this->messages = $messages;
+  }
+  /**
+   * @return Message[]
+   */
+  public function getMessages()
+  {
+    return $this->messages;
+  }
   /**
    * @param Metadata
    */

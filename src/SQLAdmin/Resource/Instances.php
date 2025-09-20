@@ -502,6 +502,8 @@ class Instances extends \Google\Service\Resource
    * @param string $instance Cloud SQL instance ID. This does not include the
    * project ID.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string mode Optional. Reset SSL mode to use.
    * @return Operation
    * @throws \Google\Service\Exception
    */

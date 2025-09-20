@@ -789,6 +789,10 @@ class SQLAdmin extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'mode' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'restart' => [
               'path' => 'v1/projects/{project}/instances/{instance}/restart',

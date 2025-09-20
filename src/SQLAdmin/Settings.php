@@ -114,6 +114,8 @@ class Settings extends \Google\Collection
    * @var string
    */
   public $pricingPlan;
+  protected $readPoolAutoScaleConfigType = ReadPoolAutoScaleConfig::class;
+  protected $readPoolAutoScaleConfigDataType = '';
   /**
    * @var int
    */
@@ -572,6 +574,20 @@ class Settings extends \Google\Collection
   public function getPricingPlan()
   {
     return $this->pricingPlan;
+  }
+  /**
+   * @param ReadPoolAutoScaleConfig
+   */
+  public function setReadPoolAutoScaleConfig(ReadPoolAutoScaleConfig $readPoolAutoScaleConfig)
+  {
+    $this->readPoolAutoScaleConfig = $readPoolAutoScaleConfig;
+  }
+  /**
+   * @return ReadPoolAutoScaleConfig
+   */
+  public function getReadPoolAutoScaleConfig()
+  {
+    return $this->readPoolAutoScaleConfig;
   }
   /**
    * @param int
