@@ -76,7 +76,11 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
     return $this->call('delete', [$params], GoogleCloudDataplexV1Entry::class);
   }
   /**
-   * Gets an Entry. (entries.get)
+   * Gets an Entry. Caution: The Vertex AI, Bigtable, Spanner, Pub/Sub, Dataform,
+   * and Dataproc Metastore metadata that is stored in Dataplex Universal Catalog
+   * is changing. For more information, see Changes to metadata stored in Dataplex
+   * Universal Catalog (https://cloud.google.com/dataplex/docs/metadata-changes).
+   * (entries.get)
    *
    * @param string $name Required. The resource name of the Entry: projects/{proje
    * ct}/locations/{location}/entryGroups/{entry_group}/entries/{entry}.
@@ -99,7 +103,11 @@ class ProjectsLocationsEntryGroupsEntries extends \Google\Service\Resource
     return $this->call('get', [$params], GoogleCloudDataplexV1Entry::class);
   }
   /**
-   * Lists Entries within an EntryGroup.
+   * Lists Entries within an EntryGroup. Caution: The Vertex AI, Bigtable,
+   * Spanner, Pub/Sub, Dataform, and Dataproc Metastore metadata that is stored in
+   * Dataplex Universal Catalog is changing. For more information, see Changes to
+   * metadata stored in Dataplex Universal Catalog
+   * (https://cloud.google.com/dataplex/docs/metadata-changes).
    * (entries.listProjectsLocationsEntryGroupsEntries)
    *
    * @param string $parent Required. The resource name of the parent Entry Group:
