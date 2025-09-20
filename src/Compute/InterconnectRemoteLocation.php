@@ -73,6 +73,10 @@ class InterconnectRemoteLocation extends \Google\Collection
    */
   public $maxLagSize10Gbps;
   /**
+   * @var int
+   */
+  public $maxLagSize400Gbps;
+  /**
    * @var string
    */
   public $name;
@@ -290,6 +294,20 @@ class InterconnectRemoteLocation extends \Google\Collection
   public function getMaxLagSize10Gbps()
   {
     return $this->maxLagSize10Gbps;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxLagSize400Gbps($maxLagSize400Gbps)
+  {
+    $this->maxLagSize400Gbps = $maxLagSize400Gbps;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxLagSize400Gbps()
+  {
+    return $this->maxLagSize400Gbps;
   }
   /**
    * @param string

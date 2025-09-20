@@ -134,6 +134,8 @@ class Subnetwork extends \Google\Collection
    * @var string[]
    */
   public $systemReservedInternalIpv6Ranges;
+  protected $utilizationDetailsType = SubnetworkUtilizationDetails::class;
+  protected $utilizationDetailsDataType = '';
 
   /**
    * @param string
@@ -554,6 +556,20 @@ class Subnetwork extends \Google\Collection
   public function getSystemReservedInternalIpv6Ranges()
   {
     return $this->systemReservedInternalIpv6Ranges;
+  }
+  /**
+   * @param SubnetworkUtilizationDetails
+   */
+  public function setUtilizationDetails(SubnetworkUtilizationDetails $utilizationDetails)
+  {
+    $this->utilizationDetails = $utilizationDetails;
+  }
+  /**
+   * @return SubnetworkUtilizationDetails
+   */
+  public function getUtilizationDetails()
+  {
+    return $this->utilizationDetails;
   }
 }
 

@@ -18436,6 +18436,11 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'views' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'projects/{project}/regions/{region}/subnetworks/{resource}/getIamPolicy',
@@ -18513,6 +18518,11 @@ class Compute extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+                'views' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],'listUsable' => [

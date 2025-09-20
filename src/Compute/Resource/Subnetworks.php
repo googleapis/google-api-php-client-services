@@ -182,6 +182,10 @@ class Subnetworks extends \Google\Service\Resource
    * @param string $region Name of the region scoping this request.
    * @param string $subnetwork Name of the Subnetwork resource to return.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string views Defines the extra views returned back in the
+   * subnetwork resource. Supported values: - WITH_UTILIZATION: Utilization data
+   * is included in the response.
    * @return Subnetwork
    * @throws \Google\Service\Exception
    */
@@ -299,6 +303,9 @@ class Subnetworks extends \Google\Service\Resource
    * false. For example, when partial success behavior is enabled, aggregatedList
    * for a single zone scope either returns all resources in the zone or no
    * resources, with an error code.
+   * @opt_param string views Defines the extra views returned back in the
+   * subnetwork resource. Supported values: - WITH_UTILIZATION: Utilization data
+   * is included in the response.
    * @return SubnetworkList
    * @throws \Google\Service\Exception
    */

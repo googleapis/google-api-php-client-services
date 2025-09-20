@@ -19,7 +19,7 @@ namespace Google\Service\Compute;
 
 class InterconnectLocation extends \Google\Collection
 {
-  protected $collection_key = 'regionInfos';
+  protected $collection_key = 'singleRegionProductionCriticalPeerLocations';
   /**
    * @var string
    */
@@ -82,6 +82,10 @@ class InterconnectLocation extends \Google\Collection
    * @var string
    */
   public $selfLink;
+  /**
+   * @var string[]
+   */
+  public $singleRegionProductionCriticalPeerLocations;
   /**
    * @var string
    */
@@ -314,6 +318,20 @@ class InterconnectLocation extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  /**
+   * @param string[]
+   */
+  public function setSingleRegionProductionCriticalPeerLocations($singleRegionProductionCriticalPeerLocations)
+  {
+    $this->singleRegionProductionCriticalPeerLocations = $singleRegionProductionCriticalPeerLocations;
+  }
+  /**
+   * @return string[]
+   */
+  public function getSingleRegionProductionCriticalPeerLocations()
+  {
+    return $this->singleRegionProductionCriticalPeerLocations;
   }
   /**
    * @param string

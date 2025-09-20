@@ -321,7 +321,14 @@ class Projects extends \Google\Service\Resource
     return $this->call('listXpnHosts', [$params], XpnHostList::class);
   }
   /**
-   * Moves a persistent disk from one zone to another. (projects.moveDisk)
+   * Starting September 29, 2025, you can't use the moveDisk API on new projects.
+   * To move a disk to a different region or zone, follow the steps in [Change the
+   * location of a disk](https://{$universe.dns_names.final_documentation_domain}/
+   * compute/docs/disks/migrate-to-hyperdisk#migrate-to-hd). Projects that already
+   * use the moveDisk API can continue usage until September 29, 2026. Starting
+   * November 1, 2025, API responses will include a warning message in the
+   * response body about the upcoming deprecation. You can skip the message to
+   * continue using the service without interruption. (projects.moveDisk)
    *
    * @param string $project Project ID for this request.
    * @param DiskMoveRequest $postBody
