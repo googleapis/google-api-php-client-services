@@ -18,6 +18,7 @@
 namespace Google\Service\OracleDatabase\Resource;
 
 use Google\Service\OracleDatabase\AutonomousDatabase;
+use Google\Service\OracleDatabase\FailoverAutonomousDatabaseRequest;
 use Google\Service\OracleDatabase\GenerateAutonomousDatabaseWalletRequest;
 use Google\Service\OracleDatabase\GenerateAutonomousDatabaseWalletResponse;
 use Google\Service\OracleDatabase\ListAutonomousDatabasesResponse;
@@ -90,6 +91,24 @@ class ProjectsLocationsAutonomousDatabases extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Initiates a failover to target autonomous database from the associated
+   * primary database. (autonomousDatabases.failover)
+   *
+   * @param string $name Required. The name of the Autonomous Database in the
+   * following format: projects/{project}/locations/{location}/autonomousDatabases
+   * /{autonomous_database}.
+   * @param FailoverAutonomousDatabaseRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function failover($name, FailoverAutonomousDatabaseRequest $postBody, $optParams = [])
+  {
+    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('failover', [$params], Operation::class);
   }
   /**
    * Generates a wallet for an Autonomous Database.

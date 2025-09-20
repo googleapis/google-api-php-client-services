@@ -55,7 +55,10 @@ class OracleDatabase extends \Google\Service
   public $projects_locations_dbSystems;
   public $projects_locations_dbVersions;
   public $projects_locations_entitlements;
+  public $projects_locations_exadbVmClusters;
+  public $projects_locations_exascaleDbStorageVaults;
   public $projects_locations_giVersions;
+  public $projects_locations_giVersions_minorVersions;
   public $projects_locations_odbNetworks;
   public $projects_locations_odbNetworks_odbSubnets;
   public $projects_locations_operations;
@@ -226,6 +229,16 @@ class OracleDatabase extends \Google\Service
                 'requestId' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'failover' => [
+              'path' => 'v1/{+name}:failover',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'generateWallet' => [
@@ -844,6 +857,190 @@ class OracleDatabase extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_exadbVmClusters = new OracleDatabase\Resource\ProjectsLocationsExadbVmClusters(
+        $this,
+        $this->serviceName,
+        'exadbVmClusters',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/exadbVmClusters',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'exadbVmClusterId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/exadbVmClusters',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'removeVirtualMachine' => [
+              'path' => 'v1/{+name}:removeVirtualMachine',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_exascaleDbStorageVaults = new OracleDatabase\Resource\ProjectsLocationsExascaleDbStorageVaults(
+        $this,
+        $this->serviceName,
+        'exascaleDbStorageVaults',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/exascaleDbStorageVaults',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'exascaleDbStorageVaultId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'requestId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+parent}/exascaleDbStorageVaults',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'orderBy' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_giVersions = new OracleDatabase\Resource\ProjectsLocationsGiVersions(
         $this,
         $this->serviceName,
@@ -852,6 +1049,38 @@ class OracleDatabase extends \Google\Service
           'methods' => [
             'list' => [
               'path' => 'v1/{+parent}/giVersions',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_giVersions_minorVersions = new OracleDatabase\Resource\ProjectsLocationsGiVersionsMinorVersions(
+        $this,
+        $this->serviceName,
+        'minorVersions',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/minorVersions',
               'httpMethod' => 'GET',
               'parameters' => [
                 'parent' => [
