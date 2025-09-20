@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine\Resource;
 
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1AclConfig;
 use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1CmekConfig;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1DataConnector;
+use Google\Service\DiscoveryEngine\GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest;
 use Google\Service\DiscoveryEngine\GoogleLongrunningOperation;
 
 /**
@@ -64,6 +66,53 @@ class ProjectsLocations extends \Google\Service\Resource
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('getCmekConfig', [$params], GoogleCloudDiscoveryengineV1CmekConfig::class);
+  }
+  /**
+   * Creates a Collection and sets up the DataConnector for it. To stop a
+   * DataConnector after setup, use the CollectionService.DeleteCollection method.
+   * (locations.setUpDataConnector)
+   *
+   * @param string $parent Required. The parent of Collection, in the format of
+   * `projects/{project}/locations/{location}`.
+   * @param GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function setUpDataConnector($parent, GoogleCloudDiscoveryengineV1SetUpDataConnectorRequest $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setUpDataConnector', [$params], GoogleLongrunningOperation::class);
+  }
+  /**
+   * Creates a Collection and sets up the DataConnector for it. To stop a
+   * DataConnector after setup, use the CollectionService.DeleteCollection method.
+   * (locations.setUpDataConnectorV2)
+   *
+   * @param string $parent Required. The parent of Collection, in the format of
+   * `projects/{project}/locations/{location}`.
+   * @param GoogleCloudDiscoveryengineV1DataConnector $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string collectionDisplayName Required. The display name of the
+   * Collection. Should be human readable, used to display collections in the
+   * Console Dashboard. UTF-8 encoded string with limit of 1024 characters.
+   * @opt_param string collectionId Required. The ID to use for the Collection,
+   * which will become the final component of the Collection's resource name. A
+   * new Collection is created as part of the DataConnector setup. DataConnector
+   * is a singleton resource under Collection, managing all DataStores of the
+   * Collection. This field must conform to
+   * [RFC-1034](https://tools.ietf.org/html/rfc1034) standard with a length limit
+   * of 63 characters. Otherwise, an INVALID_ARGUMENT error is returned.
+   * @return GoogleLongrunningOperation
+   * @throws \Google\Service\Exception
+   */
+  public function setUpDataConnectorV2($parent, GoogleCloudDiscoveryengineV1DataConnector $postBody, $optParams = [])
+  {
+    $params = ['parent' => $parent, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setUpDataConnectorV2', [$params], GoogleLongrunningOperation::class);
   }
   /**
    * Default ACL configuration for use in a location of a customer's project.
