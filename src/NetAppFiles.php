@@ -808,6 +808,16 @@ class NetAppFiles extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'restore' => [
+              'path' => 'v1/{+name}:restore',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'revert' => [
               'path' => 'v1/{+name}:revert',
               'httpMethod' => 'POST',

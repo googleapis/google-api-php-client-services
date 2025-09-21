@@ -26,6 +26,8 @@ class Volume extends \Google\Collection
   public $activeDirectory;
   protected $backupConfigType = BackupConfig::class;
   protected $backupConfigDataType = '';
+  protected $cacheParametersType = CacheParameters::class;
+  protected $cacheParametersDataType = '';
   /**
    * @var string
    */
@@ -188,6 +190,20 @@ class Volume extends \Google\Collection
   public function getBackupConfig()
   {
     return $this->backupConfig;
+  }
+  /**
+   * @param CacheParameters
+   */
+  public function setCacheParameters(CacheParameters $cacheParameters)
+  {
+    $this->cacheParameters = $cacheParameters;
+  }
+  /**
+   * @return CacheParameters
+   */
+  public function getCacheParameters()
+  {
+    return $this->cacheParameters;
   }
   /**
    * @param string
