@@ -22,7 +22,7 @@ class UpdateSchemaBundleMetadata extends \Google\Model
   /**
    * @var string
    */
-  public $endTime;
+  public $finishTime;
   /**
    * @var string
    */
@@ -30,21 +30,21 @@ class UpdateSchemaBundleMetadata extends \Google\Model
   /**
    * @var string
    */
-  public $startTime;
+  public $requestTime;
 
   /**
    * @param string
    */
-  public function setEndTime($endTime)
+  public function setFinishTime($finishTime)
   {
-    $this->endTime = $endTime;
+    $this->finishTime = $finishTime;
   }
   /**
    * @return string
    */
-  public function getEndTime()
+  public function getFinishTime()
   {
-    return $this->endTime;
+    return $this->finishTime;
   }
   /**
    * @param string
@@ -63,16 +63,16 @@ class UpdateSchemaBundleMetadata extends \Google\Model
   /**
    * @param string
    */
-  public function setStartTime($startTime)
+  public function setRequestTime($requestTime)
   {
-    $this->startTime = $startTime;
+    $this->requestTime = $requestTime;
   }
   /**
    * @return string
    */
-  public function getStartTime()
+  public function getRequestTime()
   {
-    return $this->startTime;
+    return $this->requestTime;
   }
 }
 
