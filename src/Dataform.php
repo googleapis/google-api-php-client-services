@@ -43,7 +43,6 @@ class Dataform extends \Google\Service
       "https://www.googleapis.com/auth/cloud-platform";
 
   public $projects_locations;
-  public $projects_locations_folders;
   public $projects_locations_operations;
   public $projects_locations_repositories;
   public $projects_locations_repositories_compilationResults;
@@ -51,7 +50,6 @@ class Dataform extends \Google\Service
   public $projects_locations_repositories_workflowConfigs;
   public $projects_locations_repositories_workflowInvocations;
   public $projects_locations_repositories_workspaces;
-  public $projects_locations_teamFolders;
   public $rootUrlTemplate;
 
   /**
@@ -136,50 +134,6 @@ class Dataform extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_folders = new Dataform\Resource\ProjectsLocationsFolders(
-        $this,
-        $this->serviceName,
-        'folders',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],
@@ -340,20 +294,6 @@ class Dataform extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
             ],'list' => [
               'path' => 'v1beta1/{+parent}/repositories',
               'httpMethod' => 'GET',
@@ -436,26 +376,6 @@ class Dataform extends \Google\Service
                 'path' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],
@@ -874,20 +794,6 @@ class Dataform extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
             ],'installNpmPackages' => [
               'path' => 'v1beta1/{+workspace}:installNpmPackages',
               'httpMethod' => 'POST',
@@ -1066,75 +972,11 @@ class Dataform extends \Google\Service
                   'type' => 'string',
                 ],
               ],
-            ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'writeFile' => [
               'path' => 'v1beta1/{+workspace}:writeFile',
               'httpMethod' => 'POST',
               'parameters' => [
                 'workspace' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_teamFolders = new Dataform\Resource\ProjectsLocationsTeamFolders(
-        $this,
-        $this->serviceName,
-        'teamFolders',
-        [
-          'methods' => [
-            'getIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'options.requestedPolicyVersion' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
