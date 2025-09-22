@@ -64,6 +64,8 @@ class JobStatistics2 extends \Google\Collection
   protected $exportDataStatisticsDataType = '';
   protected $externalServiceCostsType = ExternalServiceCost::class;
   protected $externalServiceCostsDataType = 'array';
+  protected $incrementalResultStatsType = IncrementalResultStats::class;
+  protected $incrementalResultStatsDataType = '';
   protected $loadQueryStatisticsType = LoadQueryStatistics::class;
   protected $loadQueryStatisticsDataType = '';
   protected $materializedViewStatisticsType = MaterializedViewStatistics::class;
@@ -380,6 +382,20 @@ class JobStatistics2 extends \Google\Collection
   public function getExternalServiceCosts()
   {
     return $this->externalServiceCosts;
+  }
+  /**
+   * @param IncrementalResultStats
+   */
+  public function setIncrementalResultStats(IncrementalResultStats $incrementalResultStats)
+  {
+    $this->incrementalResultStats = $incrementalResultStats;
+  }
+  /**
+   * @return IncrementalResultStats
+   */
+  public function getIncrementalResultStats()
+  {
+    return $this->incrementalResultStats;
   }
   /**
    * @param LoadQueryStatistics

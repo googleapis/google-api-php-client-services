@@ -20,6 +20,8 @@ namespace Google\Service\Bigquery;
 class SearchStatistics extends \Google\Collection
 {
   protected $collection_key = 'indexUnusedReasons';
+  protected $indexPruningStatsType = IndexPruningStats::class;
+  protected $indexPruningStatsDataType = 'array';
   protected $indexUnusedReasonsType = IndexUnusedReason::class;
   protected $indexUnusedReasonsDataType = 'array';
   /**
@@ -27,6 +29,20 @@ class SearchStatistics extends \Google\Collection
    */
   public $indexUsageMode;
 
+  /**
+   * @param IndexPruningStats[]
+   */
+  public function setIndexPruningStats($indexPruningStats)
+  {
+    $this->indexPruningStats = $indexPruningStats;
+  }
+  /**
+   * @return IndexPruningStats[]
+   */
+  public function getIndexPruningStats()
+  {
+    return $this->indexPruningStats;
+  }
   /**
    * @param IndexUnusedReason[]
    */
