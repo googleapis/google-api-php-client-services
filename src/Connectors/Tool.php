@@ -20,6 +20,8 @@ namespace Google\Service\Connectors;
 class Tool extends \Google\Collection
 {
   protected $collection_key = 'dependsOn';
+  protected $annotationsType = ToolAnnotations::class;
+  protected $annotationsDataType = '';
   /**
    * @var string[]
    */
@@ -37,6 +39,20 @@ class Tool extends \Google\Collection
   protected $outputSchemaType = JsonSchema::class;
   protected $outputSchemaDataType = '';
 
+  /**
+   * @param ToolAnnotations
+   */
+  public function setAnnotations(ToolAnnotations $annotations)
+  {
+    $this->annotations = $annotations;
+  }
+  /**
+   * @return ToolAnnotations
+   */
+  public function getAnnotations()
+  {
+    return $this->annotations;
+  }
   /**
    * @param string[]
    */
