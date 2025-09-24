@@ -40,6 +40,8 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
    * @var string
    */
   public $businessStatus;
+  protected $consumerAlertType = GoogleMapsPlacesV1PlaceConsumerAlert::class;
+  protected $consumerAlertDataType = '';
   protected $containingPlacesType = GoogleMapsPlacesV1PlaceContainingPlace::class;
   protected $containingPlacesDataType = 'array';
   /**
@@ -343,6 +345,20 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getBusinessStatus()
   {
     return $this->businessStatus;
+  }
+  /**
+   * @param GoogleMapsPlacesV1PlaceConsumerAlert
+   */
+  public function setConsumerAlert(GoogleMapsPlacesV1PlaceConsumerAlert $consumerAlert)
+  {
+    $this->consumerAlert = $consumerAlert;
+  }
+  /**
+   * @return GoogleMapsPlacesV1PlaceConsumerAlert
+   */
+  public function getConsumerAlert()
+  {
+    return $this->consumerAlert;
   }
   /**
    * @param GoogleMapsPlacesV1PlaceContainingPlace[]
