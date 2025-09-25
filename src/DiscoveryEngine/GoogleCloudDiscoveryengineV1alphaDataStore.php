@@ -33,6 +33,10 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   /**
    * @var string
    */
+  public $configurableBillingApproach;
+  /**
+   * @var string
+   */
   public $contentConfig;
   /**
    * @var string
@@ -142,6 +146,20 @@ class GoogleCloudDiscoveryengineV1alphaDataStore extends \Google\Collection
   public function getCmekConfig()
   {
     return $this->cmekConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setConfigurableBillingApproach($configurableBillingApproach)
+  {
+    $this->configurableBillingApproach = $configurableBillingApproach;
+  }
+  /**
+   * @return string
+   */
+  public function getConfigurableBillingApproach()
+  {
+    return $this->configurableBillingApproach;
   }
   /**
    * @param string

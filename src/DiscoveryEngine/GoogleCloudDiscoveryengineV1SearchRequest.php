@@ -48,6 +48,8 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
    * @var string
    */
   public $languageCode;
+  protected $naturalLanguageQueryUnderstandingSpecType = GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec::class;
+  protected $naturalLanguageQueryUnderstandingSpecDataType = '';
   /**
    * @var int
    */
@@ -256,6 +258,20 @@ class GoogleCloudDiscoveryengineV1SearchRequest extends \Google\Collection
   public function getLanguageCode()
   {
     return $this->languageCode;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec
+   */
+  public function setNaturalLanguageQueryUnderstandingSpec(GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec $naturalLanguageQueryUnderstandingSpec)
+  {
+    $this->naturalLanguageQueryUnderstandingSpec = $naturalLanguageQueryUnderstandingSpec;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1SearchRequestNaturalLanguageQueryUnderstandingSpec
+   */
+  public function getNaturalLanguageQueryUnderstandingSpec()
+  {
+    return $this->naturalLanguageQueryUnderstandingSpec;
   }
   /**
    * @param int

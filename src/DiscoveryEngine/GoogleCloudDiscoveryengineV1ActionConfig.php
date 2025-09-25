@@ -30,6 +30,10 @@ class GoogleCloudDiscoveryengineV1ActionConfig extends \Google\Model
   /**
    * @var string
    */
+  public $jsonActionParams;
+  /**
+   * @var string
+   */
   public $serviceName;
   /**
    * @var bool
@@ -63,6 +67,20 @@ class GoogleCloudDiscoveryengineV1ActionConfig extends \Google\Model
   public function getIsActionConfigured()
   {
     return $this->isActionConfigured;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonActionParams($jsonActionParams)
+  {
+    $this->jsonActionParams = $jsonActionParams;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonActionParams()
+  {
+    return $this->jsonActionParams;
   }
   /**
    * @param string

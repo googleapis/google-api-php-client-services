@@ -27,6 +27,10 @@ class GoogleCloudDiscoveryengineV1DataConnectorFederatedConfig extends \Google\M
    * @var array[]
    */
   public $authParams;
+  /**
+   * @var string
+   */
+  public $jsonAuthParams;
 
   /**
    * @param array[]
@@ -55,6 +59,20 @@ class GoogleCloudDiscoveryengineV1DataConnectorFederatedConfig extends \Google\M
   public function getAuthParams()
   {
     return $this->authParams;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonAuthParams($jsonAuthParams)
+  {
+    $this->jsonAuthParams = $jsonAuthParams;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonAuthParams()
+  {
+    return $this->jsonAuthParams;
   }
 }
 
