@@ -31,6 +31,8 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
   protected $qaQuestionAnswerDimensionMetadataDataType = '';
   protected $qaQuestionDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetadata::class;
   protected $qaQuestionDimensionMetadataDataType = '';
+  protected $qaScorecardDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata::class;
+  protected $qaScorecardDimensionMetadataDataType = '';
 
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata
@@ -101,6 +103,20 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
   public function getQaQuestionDimensionMetadata()
   {
     return $this->qaQuestionDimensionMetadata;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata
+   */
+  public function setQaScorecardDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata $qaScorecardDimensionMetadata)
+  {
+    $this->qaScorecardDimensionMetadata = $qaScorecardDimensionMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DimensionQaScorecardDimensionMetadata
+   */
+  public function getQaScorecardDimensionMetadata()
+  {
+    return $this->qaScorecardDimensionMetadata;
   }
 }
 
