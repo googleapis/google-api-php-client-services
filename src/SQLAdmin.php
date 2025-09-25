@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://developers.google.com/cloud-sql/" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/sql/docs" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -721,6 +721,21 @@ class SQLAdmin extends \Google\Service
               'httpMethod' => 'POST',
               'parameters' => [
                 'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'preCheckMajorVersionUpgrade' => [
+              'path' => 'v1/projects/{project}/instances/{instance}/preCheckMajorVersionUpgrade',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'instance' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,

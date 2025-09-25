@@ -29,6 +29,7 @@ use Google\Service\SQLAdmin\InstancesImportRequest;
 use Google\Service\SQLAdmin\InstancesListResponse;
 use Google\Service\SQLAdmin\InstancesListServerCasResponse;
 use Google\Service\SQLAdmin\InstancesListServerCertificatesResponse;
+use Google\Service\SQLAdmin\InstancesPreCheckMajorVersionUpgradeRequest;
 use Google\Service\SQLAdmin\InstancesReencryptRequest;
 use Google\Service\SQLAdmin\InstancesRestoreBackupRequest;
 use Google\Service\SQLAdmin\InstancesRotateServerCaRequest;
@@ -433,6 +434,24 @@ class Instances extends \Google\Service\Resource
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('pointInTimeRestore', [$params], Operation::class);
+  }
+  /**
+   * Execute MVU Pre-checks (instances.preCheckMajorVersionUpgrade)
+   *
+   * @param string $project Required. Project ID of the project that contains the
+   * instance.
+   * @param string $instance Required. Cloud SQL instance ID. This does not
+   * include the project ID.
+   * @param InstancesPreCheckMajorVersionUpgradeRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function preCheckMajorVersionUpgrade($project, $instance, InstancesPreCheckMajorVersionUpgradeRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'instance' => $instance, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('preCheckMajorVersionUpgrade', [$params], Operation::class);
   }
   /**
    * Promotes the read replica instance to be an independent Cloud SQL primary

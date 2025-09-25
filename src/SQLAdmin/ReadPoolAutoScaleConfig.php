@@ -36,6 +36,14 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
    * @var int
    */
   public $minNodeCount;
+  /**
+   * @var int
+   */
+  public $scaleInCooldownSeconds;
+  /**
+   * @var int
+   */
+  public $scaleOutCooldownSeconds;
   protected $targetMetricsType = TargetMetric::class;
   protected $targetMetricsDataType = 'array';
 
@@ -94,6 +102,34 @@ class ReadPoolAutoScaleConfig extends \Google\Collection
   public function getMinNodeCount()
   {
     return $this->minNodeCount;
+  }
+  /**
+   * @param int
+   */
+  public function setScaleInCooldownSeconds($scaleInCooldownSeconds)
+  {
+    $this->scaleInCooldownSeconds = $scaleInCooldownSeconds;
+  }
+  /**
+   * @return int
+   */
+  public function getScaleInCooldownSeconds()
+  {
+    return $this->scaleInCooldownSeconds;
+  }
+  /**
+   * @param int
+   */
+  public function setScaleOutCooldownSeconds($scaleOutCooldownSeconds)
+  {
+    $this->scaleOutCooldownSeconds = $scaleOutCooldownSeconds;
+  }
+  /**
+   * @return int
+   */
+  public function getScaleOutCooldownSeconds()
+  {
+    return $this->scaleOutCooldownSeconds;
   }
   /**
    * @param TargetMetric[]
