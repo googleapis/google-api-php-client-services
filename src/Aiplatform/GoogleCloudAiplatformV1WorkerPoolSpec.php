@@ -24,6 +24,8 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
   protected $containerSpecDataType = '';
   protected $diskSpecType = GoogleCloudAiplatformV1DiskSpec::class;
   protected $diskSpecDataType = '';
+  protected $lustreMountsType = GoogleCloudAiplatformV1LustreMount::class;
+  protected $lustreMountsDataType = 'array';
   protected $machineSpecType = GoogleCloudAiplatformV1MachineSpec::class;
   protected $machineSpecDataType = '';
   protected $nfsMountsType = GoogleCloudAiplatformV1NfsMount::class;
@@ -62,6 +64,20 @@ class GoogleCloudAiplatformV1WorkerPoolSpec extends \Google\Collection
   public function getDiskSpec()
   {
     return $this->diskSpec;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1LustreMount[]
+   */
+  public function setLustreMounts($lustreMounts)
+  {
+    $this->lustreMounts = $lustreMounts;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1LustreMount[]
+   */
+  public function getLustreMounts()
+  {
+    return $this->lustreMounts;
   }
   /**
    * @param GoogleCloudAiplatformV1MachineSpec
