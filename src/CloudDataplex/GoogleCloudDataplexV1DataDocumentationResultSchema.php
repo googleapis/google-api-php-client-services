@@ -17,26 +17,27 @@
 
 namespace Google\Service\CloudDataplex;
 
-class GoogleCloudDataplexV1DataDocumentationResult extends \Google\Model
+class GoogleCloudDataplexV1DataDocumentationResultSchema extends \Google\Collection
 {
-  protected $tableResultType = GoogleCloudDataplexV1DataDocumentationResultTableResult::class;
-  protected $tableResultDataType = '';
+  protected $collection_key = 'fields';
+  protected $fieldsType = GoogleCloudDataplexV1DataDocumentationResultField::class;
+  protected $fieldsDataType = 'array';
 
   /**
-   * @param GoogleCloudDataplexV1DataDocumentationResultTableResult
+   * @param GoogleCloudDataplexV1DataDocumentationResultField[]
    */
-  public function setTableResult(GoogleCloudDataplexV1DataDocumentationResultTableResult $tableResult)
+  public function setFields($fields)
   {
-    $this->tableResult = $tableResult;
+    $this->fields = $fields;
   }
   /**
-   * @return GoogleCloudDataplexV1DataDocumentationResultTableResult
+   * @return GoogleCloudDataplexV1DataDocumentationResultField[]
    */
-  public function getTableResult()
+  public function getFields()
   {
-    return $this->tableResult;
+    return $this->fields;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDataplexV1DataDocumentationResult::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataDocumentationResult');
+class_alias(GoogleCloudDataplexV1DataDocumentationResultSchema::class, 'Google_Service_CloudDataplex_GoogleCloudDataplexV1DataDocumentationResultSchema');
