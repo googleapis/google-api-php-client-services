@@ -34,6 +34,8 @@ class Instance extends \Google\Collection
   public $availabilityType;
   protected $clientConnectionConfigType = ClientConnectionConfig::class;
   protected $clientConnectionConfigDataType = '';
+  protected $connectionPoolConfigType = ConnectionPoolConfig::class;
+  protected $connectionPoolConfigDataType = '';
   /**
    * @var string
    */
@@ -174,6 +176,20 @@ class Instance extends \Google\Collection
   public function getClientConnectionConfig()
   {
     return $this->clientConnectionConfig;
+  }
+  /**
+   * @param ConnectionPoolConfig
+   */
+  public function setConnectionPoolConfig(ConnectionPoolConfig $connectionPoolConfig)
+  {
+    $this->connectionPoolConfig = $connectionPoolConfig;
+  }
+  /**
+   * @return ConnectionPoolConfig
+   */
+  public function getConnectionPoolConfig()
+  {
+    return $this->connectionPoolConfig;
   }
   /**
    * @param string
