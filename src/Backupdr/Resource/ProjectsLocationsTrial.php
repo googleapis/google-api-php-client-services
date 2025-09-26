@@ -33,8 +33,9 @@ class ProjectsLocationsTrial extends \Google\Service\Resource
   /**
    * Subscribes to a trial for a project (trial.subscribe)
    *
-   * @param string $parent Required. The parent resource where this trial will be
-   * created.
+   * @param string $parent Required. The project where this trial will be created.
+   * Format: projects/{project}/locations/{location} Supported Locations are - us,
+   * eu and asia.
    * @param SubscribeTrialRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Trial

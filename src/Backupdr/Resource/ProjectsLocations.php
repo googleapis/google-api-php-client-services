@@ -48,7 +48,9 @@ class ProjectsLocations extends \Google\Service\Resource
   /**
    * Gets the Trial state for a given project (locations.getTrial)
    *
-   * @param string $name Required. The name of the trial to retrieve.
+   * @param string $name Required. The project for which trial details need to be
+   * retrieved. Format: projects/{project}/locations/{location} Supported
+   * Locations are - us, eu and asia.
    * @param array $optParams Optional parameters.
    * @return Trial
    * @throws \Google\Service\Exception

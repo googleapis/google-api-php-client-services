@@ -20,6 +20,8 @@ namespace Google\Service\Backupdr;
 class Backup extends \Google\Collection
 {
   protected $collection_key = 'serviceLocks';
+  protected $alloyDbBackupPropertiesType = AlloyDbClusterBackupProperties::class;
+  protected $alloyDbBackupPropertiesDataType = '';
   protected $backupApplianceBackupPropertiesType = BackupApplianceBackupProperties::class;
   protected $backupApplianceBackupPropertiesDataType = '';
   protected $backupApplianceLocksType = BackupLock::class;
@@ -91,6 +93,20 @@ class Backup extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param AlloyDbClusterBackupProperties
+   */
+  public function setAlloyDbBackupProperties(AlloyDbClusterBackupProperties $alloyDbBackupProperties)
+  {
+    $this->alloyDbBackupProperties = $alloyDbBackupProperties;
+  }
+  /**
+   * @return AlloyDbClusterBackupProperties
+   */
+  public function getAlloyDbBackupProperties()
+  {
+    return $this->alloyDbBackupProperties;
+  }
   /**
    * @param BackupApplianceBackupProperties
    */
