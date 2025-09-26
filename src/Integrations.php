@@ -1069,6 +1069,16 @@ class Integrations extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'test' => [
+              'path' => 'v1/{+name}:test',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'unpublish' => [
               'path' => 'v1/{+name}:unpublish',
               'httpMethod' => 'POST',
