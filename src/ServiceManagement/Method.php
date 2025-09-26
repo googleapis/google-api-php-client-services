@@ -23,6 +23,10 @@ class Method extends \Google\Collection
   /**
    * @var string
    */
+  public $edition;
+  /**
+   * @var string
+   */
   public $name;
   protected $optionsType = Option::class;
   protected $optionsDataType = 'array';
@@ -47,6 +51,20 @@ class Method extends \Google\Collection
    */
   public $syntax;
 
+  /**
+   * @param string
+   */
+  public function setEdition($edition)
+  {
+    $this->edition = $edition;
+  }
+  /**
+   * @return string
+   */
+  public function getEdition()
+  {
+    return $this->edition;
+  }
   /**
    * @param string
    */
