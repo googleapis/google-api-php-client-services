@@ -27,6 +27,8 @@ class GooglePrivacyDlpV2Action extends \Google\Model
   protected $pubSubDataType = '';
   protected $publishFindingsToCloudDataCatalogType = GooglePrivacyDlpV2PublishFindingsToCloudDataCatalog::class;
   protected $publishFindingsToCloudDataCatalogDataType = '';
+  protected $publishFindingsToDataplexCatalogType = GooglePrivacyDlpV2PublishFindingsToDataplexCatalog::class;
+  protected $publishFindingsToDataplexCatalogDataType = '';
   protected $publishSummaryToCsccType = GooglePrivacyDlpV2PublishSummaryToCscc::class;
   protected $publishSummaryToCsccDataType = '';
   protected $publishToStackdriverType = GooglePrivacyDlpV2PublishToStackdriver::class;
@@ -89,6 +91,20 @@ class GooglePrivacyDlpV2Action extends \Google\Model
   public function getPublishFindingsToCloudDataCatalog()
   {
     return $this->publishFindingsToCloudDataCatalog;
+  }
+  /**
+   * @param GooglePrivacyDlpV2PublishFindingsToDataplexCatalog
+   */
+  public function setPublishFindingsToDataplexCatalog(GooglePrivacyDlpV2PublishFindingsToDataplexCatalog $publishFindingsToDataplexCatalog)
+  {
+    $this->publishFindingsToDataplexCatalog = $publishFindingsToDataplexCatalog;
+  }
+  /**
+   * @return GooglePrivacyDlpV2PublishFindingsToDataplexCatalog
+   */
+  public function getPublishFindingsToDataplexCatalog()
+  {
+    return $this->publishFindingsToDataplexCatalog;
   }
   /**
    * @param GooglePrivacyDlpV2PublishSummaryToCscc
