@@ -73,6 +73,10 @@ class TableFieldSchema extends \Google\Collection
   /**
    * @var string
    */
+  public $timestampPrecision;
+  /**
+   * @var string
+   */
   public $type;
 
   /**
@@ -284,6 +288,20 @@ class TableFieldSchema extends \Google\Collection
   public function getScale()
   {
     return $this->scale;
+  }
+  /**
+   * @param string
+   */
+  public function setTimestampPrecision($timestampPrecision)
+  {
+    $this->timestampPrecision = $timestampPrecision;
+  }
+  /**
+   * @return string
+   */
+  public function getTimestampPrecision()
+  {
+    return $this->timestampPrecision;
   }
   /**
    * @param string
