@@ -21,8 +21,12 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
 {
   protected $egressPolicyType = GoogleCloudBeyondcorpSecuritygatewaysV1EgressPolicy::class;
   protected $egressPolicyDataType = '';
+  protected $externalType = GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal::class;
+  protected $externalDataType = '';
   protected $networkType = GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork::class;
   protected $networkDataType = '';
+  protected $proxyProtocolType = GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig::class;
+  protected $proxyProtocolDataType = '';
 
   /**
    * @param GoogleCloudBeyondcorpSecuritygatewaysV1EgressPolicy
@@ -39,6 +43,20 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
     return $this->egressPolicy;
   }
   /**
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal
+   */
+  public function setExternal(GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal $external)
+  {
+    $this->external = $external;
+  }
+  /**
+   * @return GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamExternal
+   */
+  public function getExternal()
+  {
+    return $this->external;
+  }
+  /**
    * @param GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork
    */
   public function setNetwork(GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstreamNetwork $network)
@@ -51,6 +69,20 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream extends \Google
   public function getNetwork()
   {
     return $this->network;
+  }
+  /**
+   * @param GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig
+   */
+  public function setProxyProtocol(GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig $proxyProtocol)
+  {
+    $this->proxyProtocol = $proxyProtocol;
+  }
+  /**
+   * @return GoogleCloudBeyondcorpSecuritygatewaysV1ProxyProtocolConfig
+   */
+  public function getProxyProtocol()
+  {
+    return $this->proxyProtocol;
   }
 }
 

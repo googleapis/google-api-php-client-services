@@ -37,6 +37,10 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends \Google\Collect
   /**
    * @var string
    */
+  public $schema;
+  /**
+   * @var string
+   */
   public $updateTime;
   protected $upstreamsType = GoogleCloudBeyondcorpSecuritygatewaysV1ApplicationUpstream::class;
   protected $upstreamsDataType = 'array';
@@ -96,6 +100,20 @@ class GoogleCloudBeyondcorpSecuritygatewaysV1Application extends \Google\Collect
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setSchema($schema)
+  {
+    $this->schema = $schema;
+  }
+  /**
+   * @return string
+   */
+  public function getSchema()
+  {
+    return $this->schema;
   }
   /**
    * @param string
