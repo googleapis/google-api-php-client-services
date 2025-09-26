@@ -374,11 +374,19 @@ class CloudIdentity extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'iosDeviceId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
                 'pageSize' => [
                   'location' => 'query',
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'partner' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
