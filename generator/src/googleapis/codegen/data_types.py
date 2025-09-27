@@ -458,6 +458,13 @@ class Enum(PrimitiveDataType):
         "@public",
         "@self"
        ],
+    "enumDeprecated": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
     "enumDescriptions": [
         "Limit to activities commented on by the user.",
         "Limit to activities to be consumed by the user.",
@@ -467,7 +474,8 @@ class Enum(PrimitiveDataType):
        ]
   """
 
-  def __init__(self, def_dict, api, wire_name, values, descriptions, parent):
+  def __init__(self, def_dict, api, wire_name,
+               values, deprecated, descriptions, parent):
     """Create an enum.
 
     Args:
@@ -476,6 +484,8 @@ class Enum(PrimitiveDataType):
       wire_name: (str) The identifier used in the wire protocol for this enum.
       values: ([str]) List of possible values. If not provided, use the 'enum'
           element from def_dict.
+      deprecated: ([bool]) List of deprecation status. If not provided, use the
+          'enumDeprecated' element from def_dict.
       descriptions: ([str]) List of value descriptions. If not provided, use
           the 'enumDescriptions' element from def_dict.
       parent: (Method) The object owning this enum.
@@ -490,14 +500,20 @@ class Enum(PrimitiveDataType):
       values = def_dict.get('enum')
     if descriptions is None:
       descriptions = def_dict.get('enumDescriptions') or []
+    if deprecated is None:
+      deprecated = def_dict.get('enumDeprecated') or []
 
     self._elements = []
     for i in range(len(values)):
       v = values[i]
       # Sometimes the description list is too short.
       d = descriptions[i] if (i < len(descriptions)) else None
+      is_deprecated = deprecated[i] if (i < len(deprecated)) else False
+      if i >= len(deprecated):
+        is_deprecated = False
       self._elements.append(
-          template_objects.Constant(v, description=d, parent=self))
+          template_objects.Constant(v, description=d,
+                                    deprecated=is_deprecated, parent=self))
     self.SetTemplateValue(
         'elements', self._elements,
         meaning='The individual possible values of an Enum data type.')
@@ -518,6 +534,11 @@ class Enum(PrimitiveDataType):
     return self.language_model.ApplyPolicy('enum', self,
                                            self.values['wireName'])
 
+  @property
+  def constant_name(self):
+    return self.language_model.ApplyPolicy('constant', self,
+                                           self.values['wireName'])
+
 
 def CreatePrimitiveDataType(def_dict, api, wire_name, parent=None):
   """Creates a PrimitiveDataType from a JSON dictionary.
@@ -536,7 +557,8 @@ def CreatePrimitiveDataType(def_dict, api, wire_name, parent=None):
     return Enum(def_dict,
                 api,
                 wire_name,
-                None,
-                None,
+                def_dict.get('enum'),
+                def_dict.get('enumDeprecated'),
+                def_dict.get('enumDescriptions'),
                 parent)
   return PrimitiveDataType(def_dict, api, parent)
