@@ -98,6 +98,10 @@ class AutonomousDatabaseProperties extends \Google\Collection
    * @var string
    */
   public $disasterRecoveryRoleChangedTime;
+  protected $encryptionKeyType = EncryptionKey::class;
+  protected $encryptionKeyDataType = '';
+  protected $encryptionKeyHistoryEntriesType = EncryptionKeyHistoryEntry::class;
+  protected $encryptionKeyHistoryEntriesDataType = 'array';
   /**
    * @var string
    */
@@ -218,6 +222,10 @@ class AutonomousDatabaseProperties extends \Google\Collection
    * @var string
    */
   public $secretId;
+  /**
+   * @var string
+   */
+  public $serviceAgentEmail;
   /**
    * @var string
    */
@@ -552,6 +560,34 @@ class AutonomousDatabaseProperties extends \Google\Collection
   public function getDisasterRecoveryRoleChangedTime()
   {
     return $this->disasterRecoveryRoleChangedTime;
+  }
+  /**
+   * @param EncryptionKey
+   */
+  public function setEncryptionKey(EncryptionKey $encryptionKey)
+  {
+    $this->encryptionKey = $encryptionKey;
+  }
+  /**
+   * @return EncryptionKey
+   */
+  public function getEncryptionKey()
+  {
+    return $this->encryptionKey;
+  }
+  /**
+   * @param EncryptionKeyHistoryEntry[]
+   */
+  public function setEncryptionKeyHistoryEntries($encryptionKeyHistoryEntries)
+  {
+    $this->encryptionKeyHistoryEntries = $encryptionKeyHistoryEntries;
+  }
+  /**
+   * @return EncryptionKeyHistoryEntry[]
+   */
+  public function getEncryptionKeyHistoryEntries()
+  {
+    return $this->encryptionKeyHistoryEntries;
   }
   /**
    * @param string
@@ -986,6 +1022,20 @@ class AutonomousDatabaseProperties extends \Google\Collection
   public function getSecretId()
   {
     return $this->secretId;
+  }
+  /**
+   * @param string
+   */
+  public function setServiceAgentEmail($serviceAgentEmail)
+  {
+    $this->serviceAgentEmail = $serviceAgentEmail;
+  }
+  /**
+   * @return string
+   */
+  public function getServiceAgentEmail()
+  {
+    return $this->serviceAgentEmail;
   }
   /**
    * @param string
