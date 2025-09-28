@@ -24,6 +24,8 @@ class SecurityPolicy extends \Google\Collection
   protected $adaptiveProtectionConfigDataType = '';
   protected $advancedOptionsConfigType = SecurityPolicyAdvancedOptionsConfig::class;
   protected $advancedOptionsConfigDataType = '';
+  protected $associationsType = SecurityPolicyAssociation::class;
+  protected $associationsDataType = 'array';
   /**
    * @var string
    */
@@ -73,6 +75,10 @@ class SecurityPolicy extends \Google\Collection
   /**
    * @var string
    */
+  public $shortName;
+  /**
+   * @var string
+   */
   public $type;
   protected $userDefinedFieldsType = SecurityPolicyUserDefinedField::class;
   protected $userDefinedFieldsDataType = 'array';
@@ -104,6 +110,20 @@ class SecurityPolicy extends \Google\Collection
   public function getAdvancedOptionsConfig()
   {
     return $this->advancedOptionsConfig;
+  }
+  /**
+   * @param SecurityPolicyAssociation[]
+   */
+  public function setAssociations($associations)
+  {
+    $this->associations = $associations;
+  }
+  /**
+   * @return SecurityPolicyAssociation[]
+   */
+  public function getAssociations()
+  {
+    return $this->associations;
   }
   /**
    * @param string
@@ -286,6 +306,20 @@ class SecurityPolicy extends \Google\Collection
   public function getSelfLink()
   {
     return $this->selfLink;
+  }
+  /**
+   * @param string
+   */
+  public function setShortName($shortName)
+  {
+    $this->shortName = $shortName;
+  }
+  /**
+   * @return string
+   */
+  public function getShortName()
+  {
+    return $this->shortName;
   }
   /**
    * @param string

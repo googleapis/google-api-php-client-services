@@ -18,52 +18,39 @@
 namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\Operation;
-use Google\Service\Compute\ReservationSubBlocksGetResponse;
-use Google\Service\Compute\ReservationSubBlocksListResponse;
-use Google\Service\Compute\ReservationSubBlocksReportFaultyRequest;
+use Google\Service\Compute\PreviewFeature;
+use Google\Service\Compute\PreviewFeatureList;
 
 /**
- * The "reservationSubBlocks" collection of methods.
+ * The "previewFeatures" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $reservationSubBlocks = $computeService->reservationSubBlocks;
+ *   $previewFeatures = $computeService->previewFeatures;
  *  </code>
  */
-class ReservationSubBlocks extends \Google\Service\Resource
+class PreviewFeatures extends \Google\Service\Resource
 {
   /**
-   * Retrieves information about the specified reservation subBlock.
-   * (reservationSubBlocks.get)
+   * Returns the details of the given PreviewFeature. (previewFeatures.get)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request. Zone name should
-   * conform to RFC1035.
-   * @param string $parentName The name of the parent reservation and parent
-   * block. In the format of
-   * reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
-   * @param string $reservationSubBlock The name of the reservation subBlock. Name
-   * should conform to RFC1035 or be a resource ID.
+   * @param string $previewFeature Name of the PreviewFeature for this request.
    * @param array $optParams Optional parameters.
-   * @return ReservationSubBlocksGetResponse
+   * @return PreviewFeature
    * @throws \Google\Service\Exception
    */
-  public function get($project, $zone, $parentName, $reservationSubBlock, $optParams = [])
+  public function get($project, $previewFeature, $optParams = [])
   {
-    $params = ['project' => $project, 'zone' => $zone, 'parentName' => $parentName, 'reservationSubBlock' => $reservationSubBlock];
+    $params = ['project' => $project, 'previewFeature' => $previewFeature];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], ReservationSubBlocksGetResponse::class);
+    return $this->call('get', [$params], PreviewFeature::class);
   }
   /**
-   * Retrieves a list of reservation subBlocks under a single reservation.
-   * (reservationSubBlocks.listReservationSubBlocks)
+   * Returns the details of the given PreviewFeature.
+   * (previewFeatures.listPreviewFeatures)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request. Zone name should
-   * conform to RFC1035.
-   * @param string $parentName The name of the parent reservation and parent
-   * block. In the format of
-   * reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -119,27 +106,22 @@ class ReservationSubBlocks extends \Google\Service\Resource
    * false. For example, when partial success behavior is enabled, aggregatedList
    * for a single zone scope either returns all resources in the zone or no
    * resources, with an error code.
-   * @return ReservationSubBlocksListResponse
+   * @return PreviewFeatureList
    * @throws \Google\Service\Exception
    */
-  public function listReservationSubBlocks($project, $zone, $parentName, $optParams = [])
+  public function listPreviewFeatures($project, $optParams = [])
   {
-    $params = ['project' => $project, 'zone' => $zone, 'parentName' => $parentName];
+    $params = ['project' => $project];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], ReservationSubBlocksListResponse::class);
+    return $this->call('list', [$params], PreviewFeatureList::class);
   }
   /**
-   * Allows customers to perform maintenance on a reservation subBlock
-   * (reservationSubBlocks.performMaintenance)
+   * Patches the given PreviewFeature. This method is used to enable or disable a
+   * PreviewFeature. (previewFeatures.update)
    *
    * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request. Zone name should
-   * conform to RFC1035.
-   * @param string $parentName The name of the parent reservation and parent
-   * block. In the format of
-   * reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
-   * @param string $reservationSubBlock The name of the reservation subBlock. Name
-   * should conform to RFC1035 or be a resource ID.
+   * @param string $previewFeature Name of the PreviewFeature for this request.
+   * @param PreviewFeature $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -155,47 +137,13 @@ class ReservationSubBlocks extends \Google\Service\Resource
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function performMaintenance($project, $zone, $parentName, $reservationSubBlock, $optParams = [])
+  public function update($project, $previewFeature, PreviewFeature $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'zone' => $zone, 'parentName' => $parentName, 'reservationSubBlock' => $reservationSubBlock];
+    $params = ['project' => $project, 'previewFeature' => $previewFeature, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('performMaintenance', [$params], Operation::class);
-  }
-  /**
-   * Allows customers to report a faulty subBlock.
-   * (reservationSubBlocks.reportFaulty)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $zone Name of the zone for this request. Zone name should
-   * conform to RFC1035.
-   * @param string $parentName The name of the parent reservation and parent
-   * block. In the format of
-   * reservations/{reservation_name}/reservationBlocks/{reservation_block_name}
-   * @param string $reservationSubBlock The name of the reservation subBlock. Name
-   * should conform to RFC1035 or be a resource ID.
-   * @param ReservationSubBlocksReportFaultyRequest $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string requestId An optional request ID to identify requests.
-   * Specify a unique request ID so that if you must retry your request, the
-   * server will know to ignore the request if it has already been completed. For
-   * example, consider a situation where you make an initial request and the
-   * request times out. If you make the request again with the same request ID,
-   * the server can check if original operation with the same request ID was
-   * received, and if so, will ignore the second request. This prevents clients
-   * from accidentally creating duplicate commitments. The request ID must be a
-   * valid UUID with the exception that zero UUID is not supported (
-   * 00000000-0000-0000-0000-000000000000).
-   * @return Operation
-   * @throws \Google\Service\Exception
-   */
-  public function reportFaulty($project, $zone, $parentName, $reservationSubBlock, ReservationSubBlocksReportFaultyRequest $postBody, $optParams = [])
-  {
-    $params = ['project' => $project, 'zone' => $zone, 'parentName' => $parentName, 'reservationSubBlock' => $reservationSubBlock, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('reportFaulty', [$params], Operation::class);
+    return $this->call('update', [$params], Operation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReservationSubBlocks::class, 'Google_Service_Compute_Resource_ReservationSubBlocks');
+class_alias(PreviewFeatures::class, 'Google_Service_Compute_Resource_PreviewFeatures');

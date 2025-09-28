@@ -144,6 +144,10 @@ class Interconnect extends \Google\Collection
    * @var string
    */
   public $state;
+  /**
+   * @var string
+   */
+  public $subzone;
 
   /**
    * @param bool
@@ -606,6 +610,20 @@ class Interconnect extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string
+   */
+  public function setSubzone($subzone)
+  {
+    $this->subzone = $subzone;
+  }
+  /**
+   * @return string
+   */
+  public function getSubzone()
+  {
+    return $this->subzone;
   }
 }
 
