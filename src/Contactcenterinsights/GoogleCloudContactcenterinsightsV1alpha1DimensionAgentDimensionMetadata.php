@@ -22,6 +22,14 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
   /**
    * @var string
    */
+  public $agentDeploymentDisplayName;
+  /**
+   * @var string
+   */
+  public $agentDeploymentId;
+  /**
+   * @var string
+   */
   public $agentDisplayName;
   /**
    * @var string
@@ -31,7 +39,43 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
    * @var string
    */
   public $agentTeam;
+  /**
+   * @var string
+   */
+  public $agentVersionDisplayName;
+  /**
+   * @var string
+   */
+  public $agentVersionId;
 
+  /**
+   * @param string
+   */
+  public function setAgentDeploymentDisplayName($agentDeploymentDisplayName)
+  {
+    $this->agentDeploymentDisplayName = $agentDeploymentDisplayName;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentDeploymentDisplayName()
+  {
+    return $this->agentDeploymentDisplayName;
+  }
+  /**
+   * @param string
+   */
+  public function setAgentDeploymentId($agentDeploymentId)
+  {
+    $this->agentDeploymentId = $agentDeploymentId;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentDeploymentId()
+  {
+    return $this->agentDeploymentId;
+  }
   /**
    * @param string
    */
@@ -73,6 +117,34 @@ class GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata ex
   public function getAgentTeam()
   {
     return $this->agentTeam;
+  }
+  /**
+   * @param string
+   */
+  public function setAgentVersionDisplayName($agentVersionDisplayName)
+  {
+    $this->agentVersionDisplayName = $agentVersionDisplayName;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentVersionDisplayName()
+  {
+    return $this->agentVersionDisplayName;
+  }
+  /**
+   * @param string
+   */
+  public function setAgentVersionId($agentVersionId)
+  {
+    $this->agentVersionId = $agentVersionId;
+  }
+  /**
+   * @return string
+   */
+  public function getAgentVersionId()
+  {
+    return $this->agentVersionId;
   }
 }
 
