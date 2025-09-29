@@ -353,7 +353,7 @@ class ToolInformation(UseableInTemplates):
 
   def __init__(self):
     super(ToolInformation, self).__init__(_GENERATOR_INFORMATION)
-    now = datetime.datetime.utcnow()
+    now = datetime.datetime.now(datetime.UTC)
     self.SetTemplateValue('runDate',
                           '%4d-%02d-%02d' % (now.year, now.month, now.day))
     self.SetTemplateValue(

@@ -19,7 +19,7 @@ from setuptools import setup
 
 setup(
     name='google-apis-client-generator',
-    version='1.4.2',
+    version='1.5.0',
     description='Google Apis Client Generator',
     long_description=open('README.md').read(),
     author='Tony Aiuto',
@@ -37,9 +37,7 @@ setup(
          'googleapis.codegen.script_stubs:RunExpandTemplates')
       ]},
     include_package_data=True,
-    # TODO(user): Any 1.8 version is OK, but django<1.9 seems to do the wrong
-    #     thing. It installs version 1.9rc1, which is not compatible.
-    install_requires=['django==2.2.28',
+    install_requires=['django==5.2.1',
                       #'google-apputils',
                       'httplib2',
                       'absl-py',
