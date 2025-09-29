@@ -125,7 +125,10 @@ namespace NASA\Service\EccoDomaniIeri;
 
 class HelloGreeting extends \Google\Model
 {
-  public string $message;
+  /**
+   * @var string
+   */
+  public $message;
 
   /**
    * @param string $message

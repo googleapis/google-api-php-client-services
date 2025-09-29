@@ -110,19 +110,19 @@ class ObjectWithScalarArrays extends \Google\Collection
   /**
    * @var bool[]
    */
-  public array $arrayOfBooleans;
+  public $arrayOfBooleans;
   /**
    * @var float[]
    */
-  public array $arrayOfFloats;
+  public $arrayOfFloats;
   /**
    * @var int[]
    */
-  public array $arrayOfIntegers;
+  public $arrayOfIntegers;
   /**
    * @var string[]
    */
-  public array $arrayOfStrings;
+  public $arrayOfStrings;
 
   /**
    * @param bool[] $arrayOfBooleans
