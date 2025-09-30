@@ -458,6 +458,10 @@ class Storage extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
                 'softDeleted' => [
                   'location' => 'query',
                   'type' => 'boolean',

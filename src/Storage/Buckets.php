@@ -19,7 +19,7 @@ namespace Google\Service\Storage;
 
 class Buckets extends \Google\Collection
 {
-  protected $collection_key = 'items';
+  protected $collection_key = 'unreachable';
   protected $itemsType = Bucket::class;
   protected $itemsDataType = 'array';
   /**
@@ -30,6 +30,10 @@ class Buckets extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
+  /**
+   * @var string[]
+   */
+  public $unreachable;
 
   /**
    * @param Bucket[]
@@ -72,6 +76,20 @@ class Buckets extends \Google\Collection
   public function getNextPageToken()
   {
     return $this->nextPageToken;
+  }
+  /**
+   * @param string[]
+   */
+  public function setUnreachable($unreachable)
+  {
+    $this->unreachable = $unreachable;
+  }
+  /**
+   * @return string[]
+   */
+  public function getUnreachable()
+  {
+    return $this->unreachable;
   }
 }
 
