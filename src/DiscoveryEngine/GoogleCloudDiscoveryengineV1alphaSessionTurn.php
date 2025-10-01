@@ -25,6 +25,8 @@ class GoogleCloudDiscoveryengineV1alphaSessionTurn extends \Google\Model
   public $answer;
   protected $detailedAnswerType = GoogleCloudDiscoveryengineV1alphaAnswer::class;
   protected $detailedAnswerDataType = '';
+  protected $detailedAssistAnswerType = GoogleCloudDiscoveryengineV1alphaAssistAnswer::class;
+  protected $detailedAssistAnswerDataType = '';
   protected $queryType = GoogleCloudDiscoveryengineV1alphaQuery::class;
   protected $queryDataType = '';
   /**
@@ -59,6 +61,20 @@ class GoogleCloudDiscoveryengineV1alphaSessionTurn extends \Google\Model
   public function getDetailedAnswer()
   {
     return $this->detailedAnswer;
+  }
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaAssistAnswer
+   */
+  public function setDetailedAssistAnswer(GoogleCloudDiscoveryengineV1alphaAssistAnswer $detailedAssistAnswer)
+  {
+    $this->detailedAssistAnswer = $detailedAssistAnswer;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaAssistAnswer
+   */
+  public function getDetailedAssistAnswer()
+  {
+    return $this->detailedAssistAnswer;
   }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaQuery

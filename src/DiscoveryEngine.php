@@ -102,6 +102,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_groundingConfigs;
   public $projects_locations_identityMappingStores;
   public $projects_locations_identityMappingStores_operations;
+  public $projects_locations_licenseConfigs;
   public $projects_locations_operations;
   public $projects_locations_podcasts_operations;
   public $projects_locations_rankingConfigs;
@@ -3646,6 +3647,54 @@ class DiscoveryEngine extends \Google\Service
                 'returnPartialSuccess' => [
                   'location' => 'query',
                   'type' => 'boolean',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_licenseConfigs = new DiscoveryEngine\Resource\ProjectsLocationsLicenseConfigs(
+        $this,
+        $this->serviceName,
+        'licenseConfigs',
+        [
+          'methods' => [
+            'create' => [
+              'path' => 'v1/{+parent}/licenseConfigs',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'licenseConfigId' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'patch' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'PATCH',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'updateMask' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
