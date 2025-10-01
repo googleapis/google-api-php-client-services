@@ -49,6 +49,8 @@ class Request extends \Google\Model
   protected $insertInlineImageDataType = '';
   protected $insertPageBreakType = InsertPageBreakRequest::class;
   protected $insertPageBreakDataType = '';
+  protected $insertPersonType = InsertPersonRequest::class;
+  protected $insertPersonDataType = '';
   protected $insertSectionBreakType = InsertSectionBreakRequest::class;
   protected $insertSectionBreakDataType = '';
   protected $insertTableType = InsertTableRequest::class;
@@ -295,6 +297,20 @@ class Request extends \Google\Model
   public function getInsertPageBreak()
   {
     return $this->insertPageBreak;
+  }
+  /**
+   * @param InsertPersonRequest
+   */
+  public function setInsertPerson(InsertPersonRequest $insertPerson)
+  {
+    $this->insertPerson = $insertPerson;
+  }
+  /**
+   * @return InsertPersonRequest
+   */
+  public function getInsertPerson()
+  {
+    return $this->insertPerson;
   }
   /**
    * @param InsertSectionBreakRequest
