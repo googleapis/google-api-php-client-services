@@ -26,6 +26,10 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   /**
    * @var string
    */
+  public $answerRecord;
+  /**
+   * @var string
+   */
   public $createTime;
   /**
    * @var array[]
@@ -34,7 +38,19 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   /**
    * @var string
    */
+  public $state;
+  /**
+   * @var string
+   */
   public $tool;
+  /**
+   * @var string
+   */
+  public $toolDisplayDetails;
+  /**
+   * @var string
+   */
+  public $toolDisplayName;
 
   /**
    * @param string
@@ -49,6 +65,20 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   public function getAction()
   {
     return $this->action;
+  }
+  /**
+   * @param string
+   */
+  public function setAnswerRecord($answerRecord)
+  {
+    $this->answerRecord = $answerRecord;
+  }
+  /**
+   * @return string
+   */
+  public function getAnswerRecord()
+  {
+    return $this->answerRecord;
   }
   /**
    * @param string
@@ -81,6 +111,20 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   /**
    * @param string
    */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
+  }
+  /**
+   * @param string
+   */
   public function setTool($tool)
   {
     $this->tool = $tool;
@@ -91,6 +135,34 @@ class GoogleCloudDialogflowV2ToolCall extends \Google\Model
   public function getTool()
   {
     return $this->tool;
+  }
+  /**
+   * @param string
+   */
+  public function setToolDisplayDetails($toolDisplayDetails)
+  {
+    $this->toolDisplayDetails = $toolDisplayDetails;
+  }
+  /**
+   * @return string
+   */
+  public function getToolDisplayDetails()
+  {
+    return $this->toolDisplayDetails;
+  }
+  /**
+   * @param string
+   */
+  public function setToolDisplayName($toolDisplayName)
+  {
+    $this->toolDisplayName = $toolDisplayName;
+  }
+  /**
+   * @return string
+   */
+  public function getToolDisplayName()
+  {
+    return $this->toolDisplayName;
   }
 }
 
