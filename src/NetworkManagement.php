@@ -45,10 +45,6 @@ class NetworkManagement extends \Google\Service
   public $projects_locations;
   public $projects_locations_global_connectivityTests;
   public $projects_locations_global_operations;
-  public $projects_locations_networkMonitoringProviders;
-  public $projects_locations_networkMonitoringProviders_monitoringPoints;
-  public $projects_locations_networkMonitoringProviders_networkPaths;
-  public $projects_locations_networkMonitoringProviders_webPaths;
   public $projects_locations_vpcFlowLogsConfigs;
   public $rootUrlTemplate;
 
@@ -172,6 +168,10 @@ class NetworkManagement extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
@@ -494,181 +494,9 @@ class NetworkManagement extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_networkMonitoringProviders = new NetworkManagement\Resource\ProjectsLocationsNetworkMonitoringProviders(
-        $this,
-        $this->serviceName,
-        'networkMonitoringProviders',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/networkMonitoringProviders',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'networkMonitoringProviderId' => [
+                'returnPartialSuccess' => [
                   'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/networkMonitoringProviders',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_networkMonitoringProviders_monitoringPoints = new NetworkManagement\Resource\ProjectsLocationsNetworkMonitoringProvidersMonitoringPoints(
-        $this,
-        $this->serviceName,
-        'monitoringPoints',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/monitoringPoints',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_networkMonitoringProviders_networkPaths = new NetworkManagement\Resource\ProjectsLocationsNetworkMonitoringProvidersNetworkPaths(
-        $this,
-        $this->serviceName,
-        'networkPaths',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/networkPaths',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_networkMonitoringProviders_webPaths = new NetworkManagement\Resource\ProjectsLocationsNetworkMonitoringProvidersWebPaths(
-        $this,
-        $this->serviceName,
-        'webPaths',
-        [
-          'methods' => [
-            'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/webPaths',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'boolean',
                 ],
               ],
             ],
