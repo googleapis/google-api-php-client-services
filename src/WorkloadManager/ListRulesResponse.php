@@ -20,26 +20,24 @@ namespace Google\Service\WorkloadManager;
 class ListRulesResponse extends \Google\Collection
 {
   protected $collection_key = 'rules';
-  /**
-   * @var string
-   */
-  public $nextPageToken;
+  protected $invalidRulesWrapperType = InvalidRulesWrapper::class;
+  protected $invalidRulesWrapperDataType = '';
   protected $rulesType = Rule::class;
   protected $rulesDataType = 'array';
 
   /**
-   * @param string
+   * @param InvalidRulesWrapper
    */
-  public function setNextPageToken($nextPageToken)
+  public function setInvalidRulesWrapper(InvalidRulesWrapper $invalidRulesWrapper)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->invalidRulesWrapper = $invalidRulesWrapper;
   }
   /**
-   * @return string
+   * @return InvalidRulesWrapper
    */
-  public function getNextPageToken()
+  public function getInvalidRulesWrapper()
   {
-    return $this->nextPageToken;
+    return $this->invalidRulesWrapper;
   }
   /**
    * @param Rule[]
