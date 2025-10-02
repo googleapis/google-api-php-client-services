@@ -84,8 +84,7 @@ class ProjectsLocationsMetadataStoresMetadataSchemas extends \Google\Service\Res
    * @opt_param string filter A query to filter available MetadataSchemas for
    * matching results.
    * @opt_param int pageSize The maximum number of MetadataSchemas to return. The
-   * service may return fewer. Must be in range 1-1000, inclusive. Defaults to
-   * 100.
+   * service may return fewer. Must be in range 1-100, inclusive. Defaults to 100.
    * @opt_param string pageToken A page token, received from a previous
    * MetadataService.ListMetadataSchemas call. Provide this to retrieve the next
    * page. When paginating, all other provided parameters must match the call that
