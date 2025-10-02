@@ -19,10 +19,14 @@ namespace Google\Service\Document;
 
 class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule extends \Google\Model
 {
+  protected $childAlignmentRuleType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule::class;
+  protected $childAlignmentRuleDataType = '';
   /**
    * @var string
    */
   public $description;
+  protected $entityAlignmentRuleType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule::class;
+  protected $entityAlignmentRuleDataType = '';
   protected $fieldOccurrencesType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldOccurrences::class;
   protected $fieldOccurrencesDataType = '';
   protected $fieldRegexType = CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldRegex::class;
@@ -34,6 +38,20 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule exten
    */
   public $name;
 
+  /**
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule
+   */
+  public function setChildAlignmentRule(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule $childAlignmentRule)
+  {
+    $this->childAlignmentRule = $childAlignmentRule;
+  }
+  /**
+   * @return CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule
+   */
+  public function getChildAlignmentRule()
+  {
+    return $this->childAlignmentRule;
+  }
   /**
    * @param string
    */
@@ -47,6 +65,20 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule exten
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule
+   */
+  public function setEntityAlignmentRule(CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule $entityAlignmentRule)
+  {
+    $this->entityAlignmentRule = $entityAlignmentRule;
+  }
+  /**
+   * @return CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleEntityAlignmentRule
+   */
+  public function getEntityAlignmentRule()
+  {
+    return $this->entityAlignmentRule;
   }
   /**
    * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleFieldOccurrences
