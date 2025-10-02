@@ -17,14 +17,15 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class Transport extends \Google\Model
+class Transport extends \Google\Collection
 {
+  protected $collection_key = 'advertisedRoutes';
   /**
    * @var bool
    */
   public $adminEnabled;
   /**
-   * @var string
+   * @var string[]
    */
   public $advertisedRoutes;
   /**
@@ -99,14 +100,14 @@ class Transport extends \Google\Model
     return $this->adminEnabled;
   }
   /**
-   * @param string
+   * @param string[]
    */
   public function setAdvertisedRoutes($advertisedRoutes)
   {
     $this->advertisedRoutes = $advertisedRoutes;
   }
   /**
-   * @return string
+   * @return string[]
    */
   public function getAdvertisedRoutes()
   {

@@ -82,7 +82,17 @@ class Networkconnectivity extends \Google\Service
         'locations',
         [
           'methods' => [
-            'get' => [
+            'checkConsumerConfig' => [
+              'path' => 'v1/{+location}:checkConsumerConfig',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'location' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -1092,6 +1102,10 @@ class Networkconnectivity extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
