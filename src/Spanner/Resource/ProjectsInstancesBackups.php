@@ -72,10 +72,10 @@ class ProjectsInstancesBackups extends \Google\Service\Resource
    * concurrently. (backups.create)
    *
    * @param string $parent Required. The name of the instance in which the backup
-   * will be created. This must be the same instance that contains the database
-   * the backup will be created from. The backup will be stored in the location(s)
-   * specified in the instance configuration of this instance. Values are of the
-   * form `projects//instances/`.
+   * is created. This must be the same instance that contains the database the
+   * backup is created from. The backup will be stored in the locations specified
+   * in the instance configuration of this instance. Values are of the form
+   * `projects//instances/`.
    * @param Backup $postBody
    * @param array $optParams Optional parameters.
    *
@@ -84,10 +84,15 @@ class ProjectsInstancesBackups extends \Google\Service\Resource
    * `projects//instances//backups/`.
    * @opt_param string encryptionConfig.encryptionType Required. The encryption
    * type of the backup.
-   * @opt_param string encryptionConfig.kmsKeyName Optional. The Cloud KMS key
-   * that will be used to protect the backup. This field should be set only when
-   * encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`. Values are of the form
-   * `projects//locations//keyRings//cryptoKeys/`.
+   * @opt_param string encryptionConfig.kmsKeyName Optional. This field is
+   * maintained for backwards compatibility. For new callers, we recommend using
+   * `kms_key_names` to specify the KMS key. Only use `kms_key_name` if the
+   * location of the KMS key matches the database instance's configuration
+   * (location) exactly. For example, if the KMS location is in `us-central1` or
+   * `nam3`, then the database instance must also be in `us-central1` or `nam3`.
+   * The Cloud KMS key that is used to encrypt and decrypt the restored database.
+   * Set this field only when encryption_type is `CUSTOMER_MANAGED_ENCRYPTION`.
+   * Values are of the form `projects//locations//keyRings//cryptoKeys/`.
    * @opt_param string encryptionConfig.kmsKeyNames Optional. Specifies the KMS
    * configuration for the one or more keys used to protect the backup. Values are
    * of the form `projects//locations//keyRings//cryptoKeys/`. The keys referenced
@@ -221,11 +226,11 @@ class ProjectsInstancesBackups extends \Google\Service\Resource
    * @param Backup $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string updateMask Required. A mask specifying which fields (e.g.
-   * `expire_time`) in the Backup resource should be updated. This mask is
-   * relative to the Backup resource, not to the request message. The field mask
-   * must always be specified; this prevents any future fields from being erased
-   * accidentally by clients that do not know about them.
+   * @opt_param string updateMask Required. A mask specifying which fields (for
+   * example, `expire_time`) in the backup resource should be updated. This mask
+   * is relative to the backup resource, not to the request message. The field
+   * mask must always be specified; this prevents any future fields from being
+   * erased accidentally by clients that do not know about them.
    * @return Backup
    * @throws \Google\Service\Exception
    */
