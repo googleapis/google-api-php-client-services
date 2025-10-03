@@ -57,8 +57,8 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
   }
   /**
    * RetrieveInstance returns instance associated with the given study, series,
-   * and SOP Instance UID. See [RetrieveTransaction] (http://dicom.nema.org/medica
-   * l/dicom/current/output/html/part18.html#sect_10.4). For details on the
+   * and SOP Instance UID. See [RetrieveTransaction] (https://dicom.nema.org/medic
+   * al/dicom/current/output/html/part18.html#sect_10.4). For details on the
    * implementation of RetrieveInstance, see [DICOM study/series/instances](https:
    * //cloud.google.com/healthcare/docs/dicom#dicom_studyseriesinstances) and
    * [DICOM
@@ -87,8 +87,8 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
   /**
    * RetrieveInstanceMetadata returns instance associated with the given study,
    * series, and SOP Instance UID presented as metadata. See [RetrieveTransaction]
-   * (http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.
-   * 4). For details on the implementation of RetrieveInstanceMetadata, see
+   * (https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10
+   * .4). For details on the implementation of RetrieveInstanceMetadata, see
    * [Metadata
    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
@@ -115,8 +115,8 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstances extends \Google
   /**
    * RetrieveRenderedInstance returns instance associated with the given study,
    * series, and SOP Instance UID in an acceptable Rendered Media Type. See
-   * [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/current/output/htm
-   * l/part18.html#sect_10.4). For details on the implementation of
+   * [RetrieveTransaction] (https://dicom.nema.org/medical/dicom/current/output/ht
+   * ml/part18.html#sect_10.4). For details on the implementation of
    * RetrieveRenderedInstance, see [Rendered
    * resources](https://cloud.google.com/healthcare/docs/dicom#rendered_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how

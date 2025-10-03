@@ -55,8 +55,8 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
   }
   /**
    * RetrieveStudyMetadata returns instance associated with the given study
-   * presented as metadata. See [RetrieveTransaction] (http://dicom.nema.org/medic
-   * al/dicom/current/output/html/part18.html#sect_10.4). For details on the
+   * presented as metadata. See [RetrieveTransaction] (https://dicom.nema.org/medi
+   * cal/dicom/current/output/html/part18.html#sect_10.4). For details on the
    * implementation of RetrieveStudyMetadata, see [Metadata
    * resources](https://cloud.google.com/healthcare/docs/dicom#metadata_resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
@@ -81,12 +81,12 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
   }
   /**
    * RetrieveStudy returns all instances within the given study. See
-   * [RetrieveTransaction] (http://dicom.nema.org/medical/dicom/current/output/htm
-   * l/part18.html#sect_10.4). For details on the implementation of RetrieveStudy,
-   * see [DICOM study/series/instances](https://cloud.google.com/healthcare/docs/d
-   * icom#dicom_studyseriesinstances) in the Cloud Healthcare API conformance
-   * statement. For samples that show how to call RetrieveStudy, see [Retrieve
-   * DICOM data](https://cloud.google.com/healthcare/docs/how-
+   * [RetrieveTransaction] (https://dicom.nema.org/medical/dicom/current/output/ht
+   * ml/part18.html#sect_10.4). For details on the implementation of
+   * RetrieveStudy, see [DICOM study/series/instances](https://cloud.google.com/he
+   * althcare/docs/dicom#dicom_studyseriesinstances) in the Cloud Healthcare API
+   * conformance statement. For samples that show how to call RetrieveStudy, see
+   * [Retrieve DICOM data](https://cloud.google.com/healthcare/docs/how-
    * tos/dicomweb#retrieve-dicom). (studies.retrieveStudy)
    *
    * @param string $parent Required. The name of the DICOM store that is being
@@ -106,10 +106,10 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
   }
   /**
    * SearchForInstances returns a list of matching instances. See [Search
-   * Transaction] (http://dicom.nema.org/medical/dicom/current/output/html/part18.
-   * html#sect_10.6). For details on the implementation of SearchForInstances, see
-   * [Search transaction](https://cloud.google.com/healthcare/docs/dicom#search_tr
-   * ansaction) in the Cloud Healthcare API conformance statement. For samples
+   * Transaction] (https://dicom.nema.org/medical/dicom/current/output/html/part18
+   * .html#sect_10.6). For details on the implementation of SearchForInstances,
+   * see [Search transaction](https://cloud.google.com/healthcare/docs/dicom#searc
+   * h_transaction) in the Cloud Healthcare API conformance statement. For samples
    * that show how to call SearchForInstances, see [Search for DICOM
    * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
    * dicom). (studies.searchForInstances)
@@ -132,9 +132,9 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
   }
   /**
    * SearchForSeries returns a list of matching series. See [Search Transaction] (
-   * http://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.6
-   * ). For details on the implementation of SearchForSeries, see [Search transact
-   * ion](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in
+   * https://dicom.nema.org/medical/dicom/current/output/html/part18.html#sect_10.
+   * 6). For details on the implementation of SearchForSeries, see [Search transac
+   * tion](https://cloud.google.com/healthcare/docs/dicom#search_transaction) in
    * the Cloud Healthcare API conformance statement. For samples that show how to
    * call SearchForSeries, see [Search for DICOM
    * data](https://cloud.google.com/healthcare/docs/how-tos/dicomweb#search-
@@ -157,8 +157,8 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
   }
   /**
    * StoreInstances stores DICOM instances associated with study instance unique
-   * identifiers (SUID). See [Store Transaction] (http://dicom.nema.org/medical/di
-   * com/current/output/html/part18.html#sect_10.5). For details on the
+   * identifiers (SUID). See [Store Transaction] (https://dicom.nema.org/medical/d
+   * icom/current/output/html/part18.html#sect_10.5). For details on the
    * implementation of StoreInstances, see [Store transaction](https://cloud.googl
    * e.com/healthcare/docs/dicom#store_transaction) in the Cloud Healthcare API
    * conformance statement. For samples that show how to call StoreInstances, see

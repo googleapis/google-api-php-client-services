@@ -31,8 +31,8 @@ class ProjectsLocationsDatasetsDicomStoresStudiesSeriesInstancesBulkdata extends
 {
   /**
    * Returns uncompressed, unencoded bytes representing the referenced bulkdata
-   * tag from an instance. See [Retrieve Transaction](http://dicom.nema.org/medica
-   * l/dicom/current/output/html/part18.html#sect_10.4). For details on the
+   * tag from an instance. See [Retrieve Transaction](https://dicom.nema.org/medic
+   * al/dicom/current/output/html/part18.html#sect_10.4). For details on the
    * implementation of RetrieveBulkdata, see [Bulkdata
    * resources](https://cloud.google.com/healthcare/docs/dicom#bulkdata-resources)
    * in the Cloud Healthcare API conformance statement. For samples that show how
