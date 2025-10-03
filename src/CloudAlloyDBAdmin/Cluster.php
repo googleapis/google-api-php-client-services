@@ -27,6 +27,10 @@ class Cluster extends \Google\Model
   protected $automatedBackupPolicyDataType = '';
   protected $backupSourceType = BackupSource::class;
   protected $backupSourceDataType = '';
+  protected $backupdrBackupSourceType = BackupDrBackupSource::class;
+  protected $backupdrBackupSourceDataType = '';
+  protected $backupdrInfoType = BackupDrInfo::class;
+  protected $backupdrInfoDataType = '';
   protected $cloudsqlBackupRunSourceType = CloudSQLBackupRunSource::class;
   protected $cloudsqlBackupRunSourceDataType = '';
   /**
@@ -163,6 +167,34 @@ class Cluster extends \Google\Model
   public function getBackupSource()
   {
     return $this->backupSource;
+  }
+  /**
+   * @param BackupDrBackupSource
+   */
+  public function setBackupdrBackupSource(BackupDrBackupSource $backupdrBackupSource)
+  {
+    $this->backupdrBackupSource = $backupdrBackupSource;
+  }
+  /**
+   * @return BackupDrBackupSource
+   */
+  public function getBackupdrBackupSource()
+  {
+    return $this->backupdrBackupSource;
+  }
+  /**
+   * @param BackupDrInfo
+   */
+  public function setBackupdrInfo(BackupDrInfo $backupdrInfo)
+  {
+    $this->backupdrInfo = $backupdrInfo;
+  }
+  /**
+   * @return BackupDrInfo
+   */
+  public function getBackupdrInfo()
+  {
+    return $this->backupdrInfo;
   }
   /**
    * @param CloudSQLBackupRunSource

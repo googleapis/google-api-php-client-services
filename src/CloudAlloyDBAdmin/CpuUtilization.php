@@ -17,44 +17,28 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class ReadPoolConfig extends \Google\Model
+class CpuUtilization extends \Google\Model
 {
-  protected $autoScalingConfigType = AutoScalingConfig::class;
-  protected $autoScalingConfigDataType = '';
   /**
-   * @var int
+   * @var float
    */
-  public $nodeCount;
+  public $utilizationTarget;
 
   /**
-   * @param AutoScalingConfig
+   * @param float
    */
-  public function setAutoScalingConfig(AutoScalingConfig $autoScalingConfig)
+  public function setUtilizationTarget($utilizationTarget)
   {
-    $this->autoScalingConfig = $autoScalingConfig;
+    $this->utilizationTarget = $utilizationTarget;
   }
   /**
-   * @return AutoScalingConfig
+   * @return float
    */
-  public function getAutoScalingConfig()
+  public function getUtilizationTarget()
   {
-    return $this->autoScalingConfig;
-  }
-  /**
-   * @param int
-   */
-  public function setNodeCount($nodeCount)
-  {
-    $this->nodeCount = $nodeCount;
-  }
-  /**
-   * @return int
-   */
-  public function getNodeCount()
-  {
-    return $this->nodeCount;
+    return $this->utilizationTarget;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReadPoolConfig::class, 'Google_Service_CloudAlloyDBAdmin_ReadPoolConfig');
+class_alias(CpuUtilization::class, 'Google_Service_CloudAlloyDBAdmin_CpuUtilization');

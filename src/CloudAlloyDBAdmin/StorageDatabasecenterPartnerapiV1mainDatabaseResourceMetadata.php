@@ -62,6 +62,8 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public $location;
   protected $machineConfigurationType = StorageDatabasecenterPartnerapiV1mainMachineConfiguration::class;
   protected $machineConfigurationDataType = '';
+  protected $maintenanceInfoType = StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo::class;
+  protected $maintenanceInfoDataType = '';
   protected $primaryResourceIdType = StorageDatabasecenterPartnerapiV1mainDatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   /**
@@ -304,6 +306,20 @@ class StorageDatabasecenterPartnerapiV1mainDatabaseResourceMetadata extends \Goo
   public function getMachineConfiguration()
   {
     return $this->machineConfiguration;
+  }
+  /**
+   * @param StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo
+   */
+  public function setMaintenanceInfo(StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo $maintenanceInfo)
+  {
+    $this->maintenanceInfo = $maintenanceInfo;
+  }
+  /**
+   * @return StorageDatabasecenterPartnerapiV1mainResourceMaintenanceInfo
+   */
+  public function getMaintenanceInfo()
+  {
+    return $this->maintenanceInfo;
   }
   /**
    * @param StorageDatabasecenterPartnerapiV1mainDatabaseResourceId

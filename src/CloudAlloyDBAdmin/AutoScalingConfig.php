@@ -17,44 +17,43 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class ReadPoolConfig extends \Google\Model
+class AutoScalingConfig extends \Google\Collection
 {
-  protected $autoScalingConfigType = AutoScalingConfig::class;
-  protected $autoScalingConfigDataType = '';
-  /**
-   * @var int
-   */
-  public $nodeCount;
+  protected $collection_key = 'schedules';
+  protected $policyType = Policy::class;
+  protected $policyDataType = '';
+  protected $schedulesType = Schedule::class;
+  protected $schedulesDataType = 'array';
 
   /**
-   * @param AutoScalingConfig
+   * @param Policy
    */
-  public function setAutoScalingConfig(AutoScalingConfig $autoScalingConfig)
+  public function setPolicy(Policy $policy)
   {
-    $this->autoScalingConfig = $autoScalingConfig;
+    $this->policy = $policy;
   }
   /**
-   * @return AutoScalingConfig
+   * @return Policy
    */
-  public function getAutoScalingConfig()
+  public function getPolicy()
   {
-    return $this->autoScalingConfig;
+    return $this->policy;
   }
   /**
-   * @param int
+   * @param Schedule[]
    */
-  public function setNodeCount($nodeCount)
+  public function setSchedules($schedules)
   {
-    $this->nodeCount = $nodeCount;
+    $this->schedules = $schedules;
   }
   /**
-   * @return int
+   * @return Schedule[]
    */
-  public function getNodeCount()
+  public function getSchedules()
   {
-    return $this->nodeCount;
+    return $this->schedules;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReadPoolConfig::class, 'Google_Service_CloudAlloyDBAdmin_ReadPoolConfig');
+class_alias(AutoScalingConfig::class, 'Google_Service_CloudAlloyDBAdmin_AutoScalingConfig');

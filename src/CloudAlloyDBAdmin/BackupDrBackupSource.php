@@ -17,44 +17,28 @@
 
 namespace Google\Service\CloudAlloyDBAdmin;
 
-class ReadPoolConfig extends \Google\Model
+class BackupDrBackupSource extends \Google\Model
 {
-  protected $autoScalingConfigType = AutoScalingConfig::class;
-  protected $autoScalingConfigDataType = '';
   /**
-   * @var int
+   * @var string
    */
-  public $nodeCount;
+  public $backup;
 
   /**
-   * @param AutoScalingConfig
+   * @param string
    */
-  public function setAutoScalingConfig(AutoScalingConfig $autoScalingConfig)
+  public function setBackup($backup)
   {
-    $this->autoScalingConfig = $autoScalingConfig;
+    $this->backup = $backup;
   }
   /**
-   * @return AutoScalingConfig
+   * @return string
    */
-  public function getAutoScalingConfig()
+  public function getBackup()
   {
-    return $this->autoScalingConfig;
-  }
-  /**
-   * @param int
-   */
-  public function setNodeCount($nodeCount)
-  {
-    $this->nodeCount = $nodeCount;
-  }
-  /**
-   * @return int
-   */
-  public function getNodeCount()
-  {
-    return $this->nodeCount;
+    return $this->backup;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ReadPoolConfig::class, 'Google_Service_CloudAlloyDBAdmin_ReadPoolConfig');
+class_alias(BackupDrBackupSource::class, 'Google_Service_CloudAlloyDBAdmin_BackupDrBackupSource');
