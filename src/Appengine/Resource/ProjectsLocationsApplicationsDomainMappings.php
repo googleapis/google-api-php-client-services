@@ -58,6 +58,28 @@ class ProjectsLocationsApplicationsDomainMappings extends \Google\Service\Resour
     return $this->call('create', [$params], Operation::class);
   }
   /**
+   * Deletes the specified domain mapping. A user must be authorized to administer
+   * the associated domain in order to delete a DomainMapping resource.
+   * (domainMappings.delete)
+   *
+   * @param string $projectsId Part of `name`. Required. Name of the resource to
+   * delete. Example: apps/myapp/domainMappings/example.com.
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param string $domainMappingsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param array $optParams Optional parameters.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function delete($projectsId, $locationsId, $applicationsId, $domainMappingsId, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'domainMappingsId' => $domainMappingsId];
+    $params = array_merge($params, $optParams);
+    return $this->call('delete', [$params], Operation::class);
+  }
+  /**
    * Gets the specified domain mapping. (domainMappings.get)
    *
    * @param string $projectsId Part of `name`. Required. Name of the resource
@@ -76,6 +98,33 @@ class ProjectsLocationsApplicationsDomainMappings extends \Google\Service\Resour
     $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'domainMappingsId' => $domainMappingsId];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], DomainMapping::class);
+  }
+  /**
+   * Updates the specified domain mapping. To map an SSL certificate to a domain
+   * mapping, update certificate_id to point to an AuthorizedCertificate resource.
+   * A user must be authorized to administer the associated domain in order to
+   * update a DomainMapping resource. (domainMappings.patch)
+   *
+   * @param string $projectsId Part of `name`. Required. Name of the resource to
+   * update. Example: apps/myapp/domainMappings/example.com.
+   * @param string $locationsId Part of `name`. See documentation of `projectsId`.
+   * @param string $applicationsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param string $domainMappingsId Part of `name`. See documentation of
+   * `projectsId`.
+   * @param DomainMapping $postBody
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string updateMask Required. Standard field mask for the set of
+   * fields to be updated.
+   * @return Operation
+   * @throws \Google\Service\Exception
+   */
+  public function patch($projectsId, $locationsId, $applicationsId, $domainMappingsId, DomainMapping $postBody, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'domainMappingsId' => $domainMappingsId, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('patch', [$params], Operation::class);
   }
 }
 
