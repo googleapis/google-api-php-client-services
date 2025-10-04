@@ -22,6 +22,10 @@ class GoogleCloudRunV2SubmitBuildRequest extends \Google\Collection
   protected $collection_key = 'tags';
   protected $buildpackBuildType = GoogleCloudRunV2BuildpacksBuild::class;
   protected $buildpackBuildDataType = '';
+  /**
+   * @var string
+   */
+  public $client;
   protected $dockerBuildType = GoogleCloudRunV2DockerBuild::class;
   protected $dockerBuildDataType = '';
   /**
@@ -64,6 +68,20 @@ class GoogleCloudRunV2SubmitBuildRequest extends \Google\Collection
   public function getBuildpackBuild()
   {
     return $this->buildpackBuild;
+  }
+  /**
+   * @param string
+   */
+  public function setClient($client)
+  {
+    $this->client = $client;
+  }
+  /**
+   * @return string
+   */
+  public function getClient()
+  {
+    return $this->client;
   }
   /**
    * @param GoogleCloudRunV2DockerBuild
