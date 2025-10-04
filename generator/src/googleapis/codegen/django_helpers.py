@@ -29,7 +29,12 @@ import six
 try:
   # In AppEngine, we have to call use_library() in our main. Doing that causes
   # an error, which we can safely ignore because use_library did it
-  settings.configure()
+  settings.configure(
+      # Prevents django.core.exceptions.AppRegistryNotReady: Apps aren't loaded yet.
+      INSTALLED_APPS=[],
+      USE_I18N=False,
+      USE_L10N=False,
+  )
   os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 except RuntimeError:
   pass
