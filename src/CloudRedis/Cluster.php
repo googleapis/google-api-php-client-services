@@ -68,6 +68,10 @@ class Cluster extends \Google\Collection
   protected $maintenancePolicyDataType = '';
   protected $maintenanceScheduleType = ClusterMaintenanceSchedule::class;
   protected $maintenanceScheduleDataType = '';
+  /**
+   * @var string
+   */
+  public $maintenanceVersion;
   protected $managedBackupSourceType = ManagedBackupSource::class;
   protected $managedBackupSourceDataType = '';
   /**
@@ -359,6 +363,20 @@ class Cluster extends \Google\Collection
   public function getMaintenanceSchedule()
   {
     return $this->maintenanceSchedule;
+  }
+  /**
+   * @param string
+   */
+  public function setMaintenanceVersion($maintenanceVersion)
+  {
+    $this->maintenanceVersion = $maintenanceVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getMaintenanceVersion()
+  {
+    return $this->maintenanceVersion;
   }
   /**
    * @param ManagedBackupSource

@@ -62,6 +62,8 @@ class DatabaseResourceMetadata extends \Google\Collection
   public $location;
   protected $machineConfigurationType = MachineConfiguration::class;
   protected $machineConfigurationDataType = '';
+  protected $maintenanceInfoType = ResourceMaintenanceInfo::class;
+  protected $maintenanceInfoDataType = '';
   protected $primaryResourceIdType = DatabaseResourceId::class;
   protected $primaryResourceIdDataType = '';
   /**
@@ -304,6 +306,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getMachineConfiguration()
   {
     return $this->machineConfiguration;
+  }
+  /**
+   * @param ResourceMaintenanceInfo
+   */
+  public function setMaintenanceInfo(ResourceMaintenanceInfo $maintenanceInfo)
+  {
+    $this->maintenanceInfo = $maintenanceInfo;
+  }
+  /**
+   * @return ResourceMaintenanceInfo
+   */
+  public function getMaintenanceInfo()
+  {
+    return $this->maintenanceInfo;
   }
   /**
    * @param DatabaseResourceId
