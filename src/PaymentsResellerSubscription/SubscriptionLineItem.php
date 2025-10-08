@@ -40,6 +40,10 @@ class SubscriptionLineItem extends \Google\Collection
   public $lineItemIndex;
   protected $lineItemPromotionSpecsType = SubscriptionPromotionSpec::class;
   protected $lineItemPromotionSpecsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $name;
   protected $oneTimeRecurrenceDetailsType = SubscriptionLineItemOneTimeRecurrenceDetails::class;
   protected $oneTimeRecurrenceDetailsDataType = '';
   /**
@@ -154,6 +158,20 @@ class SubscriptionLineItem extends \Google\Collection
   public function getLineItemPromotionSpecs()
   {
     return $this->lineItemPromotionSpecs;
+  }
+  /**
+   * @param string
+   */
+  public function setName($name)
+  {
+    $this->name = $name;
+  }
+  /**
+   * @return string
+   */
+  public function getName()
+  {
+    return $this->name;
   }
   /**
    * @param SubscriptionLineItemOneTimeRecurrenceDetails
