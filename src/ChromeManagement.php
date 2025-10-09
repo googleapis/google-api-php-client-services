@@ -56,6 +56,8 @@ class ChromeManagement extends \Google\Service
   public $customers_apps_android;
   public $customers_apps_chrome;
   public $customers_apps_web;
+  public $customers_certificateProvisioningProcesses;
+  public $customers_certificateProvisioningProcesses_operations;
   public $customers_profiles;
   public $customers_profiles_commands;
   public $customers_reports;
@@ -64,6 +66,7 @@ class ChromeManagement extends \Google\Service
   public $customers_telemetry_notificationConfigs;
   public $customers_telemetry_users;
   public $customers_thirdPartyProfileUsers;
+  public $operations;
   public $rootUrlTemplate;
 
   /**
@@ -215,6 +218,86 @@ class ChromeManagement extends \Google\Service
         $this,
         $this->serviceName,
         'web',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_certificateProvisioningProcesses = new ChromeManagement\Resource\CustomersCertificateProvisioningProcesses(
+        $this,
+        $this->serviceName,
+        'certificateProvisioningProcesses',
+        [
+          'methods' => [
+            'claim' => [
+              'path' => 'v1/{+name}:claim',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'setFailure' => [
+              'path' => 'v1/{+name}:setFailure',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'signData' => [
+              'path' => 'v1/{+name}:signData',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'uploadCertificate' => [
+              'path' => 'v1/{+name}:uploadCertificate',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->customers_certificateProvisioningProcesses_operations = new ChromeManagement\Resource\CustomersCertificateProvisioningProcessesOperations(
+        $this,
+        $this->serviceName,
+        'operations',
         [
           'methods' => [
             'get' => [
@@ -821,6 +904,62 @@ class ChromeManagement extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->operations = new ChromeManagement\Resource\Operations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'cancel' => [
+              'path' => 'v1/{+name}:cancel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'delete' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'DELETE',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],
