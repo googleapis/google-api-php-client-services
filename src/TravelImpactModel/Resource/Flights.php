@@ -19,6 +19,8 @@ namespace Google\Service\TravelImpactModel\Resource;
 
 use Google\Service\TravelImpactModel\ComputeFlightEmissionsRequest;
 use Google\Service\TravelImpactModel\ComputeFlightEmissionsResponse;
+use Google\Service\TravelImpactModel\ComputeScope3FlightEmissionsRequest;
+use Google\Service\TravelImpactModel\ComputeScope3FlightEmissionsResponse;
 use Google\Service\TravelImpactModel\ComputeTypicalFlightEmissionsRequest;
 use Google\Service\TravelImpactModel\ComputeTypicalFlightEmissionsResponse;
 
@@ -56,6 +58,52 @@ class Flights extends \Google\Service\Resource
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('computeFlightEmissions', [$params], ComputeFlightEmissionsResponse::class);
+  }
+  /**
+   * Stateless method to retrieve GHG emissions estimates for a set of flight
+   * segments for Scope 3 reporting. The response will contain all entries that
+   * match the input Scope3FlightSegment flight segments, in the same order
+   * provided. The estimates will be computed using the following cascading logic
+   * (using the first one that is available): 1. TIM-based emissions given origin,
+   * destination, carrier, flightNumber, departureDate, and cabinClass. 2. Typical
+   * flight emissions given origin, destination, year in departureDate, and
+   * cabinClass. 3. Distance-based emissions calculated using distanceKm, year in
+   * departureDate, and cabinClass. If there are no estimates available for a
+   * certain flight with any of the three methods, the response will return a
+   * Scope3FlightEmissions object with empty emission fields. The request will
+   * still be considered successful. Generally, missing emissions estimates occur
+   * when the flight is unknown to the server (e.g. no specific flight exists, or
+   * typical flight emissions are not available for the requested pair). The
+   * request will fail with an `INVALID_ARGUMENT` error if: * The request contains
+   * more than 1,000 flight legs. * The input flight leg is missing one or more
+   * identifiers. For example, missing origin/destination without a valid distance
+   * for TIM_EMISSIONS or TYPICAL_FLIGHT_EMISSIONS type matching, or missing
+   * distance for a DISTANCE_BASED_EMISSIONS type matching (if you want to
+   * fallback to distance-based emissions or want a distance-based emissions
+   * estimate, you need to specify a distance). * The flight date is before 2019
+   * (Scope 3 data is only available for 2019 and after). * The flight distance is
+   * not between 0 and 25,000,000,000,000,000 km. * Missing cabin class. Because
+   * the request is processed with fallback logic, it is possible that
+   * misconfigured requests return valid emissions estimates using fallback
+   * methods. For example, if a request has the wrong flight number but specifies
+   * the origin and destination, the request will still succeed, but the returned
+   * emissions will be based solely on the typical flight emissions. Similarly, if
+   * a request is missing the origin for a typical flight emissions request, but
+   * specifies a valid distance, the request could succeed based solely on the
+   * distance-based emissions. Consequently, one should check the source of the
+   * returned emissions (source) to confirm the results are as expected.
+   * (flights.computeScope3FlightEmissions)
+   *
+   * @param ComputeScope3FlightEmissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return ComputeScope3FlightEmissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function computeScope3FlightEmissions(ComputeScope3FlightEmissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('computeScope3FlightEmissions', [$params], ComputeScope3FlightEmissionsResponse::class);
   }
   /**
    * Retrieves typical flight emissions estimates between two airports, also known
