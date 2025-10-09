@@ -34,8 +34,6 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
   public $normalizedScore;
   public $numValue;
   public $potentialScore;
-  protected $rationaleType = GoogleCloudContactcenterinsightsV1QaAnswerAnswerValueQaAnswerRationale::class;
-  protected $rationaleDataType = '';
   public $score;
   /**
    * @var bool
@@ -111,20 +109,6 @@ class GoogleCloudContactcenterinsightsV1QaAnswerAnswerValue extends \Google\Mode
   public function getPotentialScore()
   {
     return $this->potentialScore;
-  }
-  /**
-   * @param GoogleCloudContactcenterinsightsV1QaAnswerAnswerValueQaAnswerRationale
-   */
-  public function setRationale(GoogleCloudContactcenterinsightsV1QaAnswerAnswerValueQaAnswerRationale $rationale)
-  {
-    $this->rationale = $rationale;
-  }
-  /**
-   * @return GoogleCloudContactcenterinsightsV1QaAnswerAnswerValueQaAnswerRationale
-   */
-  public function getRationale()
-  {
-    return $this->rationale;
   }
   public function setScore($score)
   {
