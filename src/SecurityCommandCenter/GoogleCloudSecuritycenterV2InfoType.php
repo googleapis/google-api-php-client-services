@@ -17,63 +17,62 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class CloudDlpDataProfile extends \Google\Collection
+class GoogleCloudSecuritycenterV2InfoType extends \Google\Model
 {
-  protected $collection_key = 'infoTypes';
   /**
    * @var string
    */
-  public $dataProfile;
-  protected $infoTypesType = InfoType::class;
-  protected $infoTypesDataType = 'array';
+  public $name;
+  protected $sensitivityScoreType = GoogleCloudSecuritycenterV2SensitivityScore::class;
+  protected $sensitivityScoreDataType = '';
   /**
    * @var string
    */
-  public $parentType;
+  public $version;
 
   /**
    * @param string
    */
-  public function setDataProfile($dataProfile)
+  public function setName($name)
   {
-    $this->dataProfile = $dataProfile;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getDataProfile()
+  public function getName()
   {
-    return $this->dataProfile;
+    return $this->name;
   }
   /**
-   * @param InfoType[]
+   * @param GoogleCloudSecuritycenterV2SensitivityScore
    */
-  public function setInfoTypes($infoTypes)
+  public function setSensitivityScore(GoogleCloudSecuritycenterV2SensitivityScore $sensitivityScore)
   {
-    $this->infoTypes = $infoTypes;
+    $this->sensitivityScore = $sensitivityScore;
   }
   /**
-   * @return InfoType[]
+   * @return GoogleCloudSecuritycenterV2SensitivityScore
    */
-  public function getInfoTypes()
+  public function getSensitivityScore()
   {
-    return $this->infoTypes;
+    return $this->sensitivityScore;
   }
   /**
    * @param string
    */
-  public function setParentType($parentType)
+  public function setVersion($version)
   {
-    $this->parentType = $parentType;
+    $this->version = $version;
   }
   /**
    * @return string
    */
-  public function getParentType()
+  public function getVersion()
   {
-    return $this->parentType;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CloudDlpDataProfile::class, 'Google_Service_SecurityCommandCenter_CloudDlpDataProfile');
+class_alias(GoogleCloudSecuritycenterV2InfoType::class, 'Google_Service_SecurityCommandCenter_GoogleCloudSecuritycenterV2InfoType');

@@ -17,12 +17,15 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class GoogleCloudSecuritycenterV2CloudDlpDataProfile extends \Google\Model
+class GoogleCloudSecuritycenterV2CloudDlpDataProfile extends \Google\Collection
 {
+  protected $collection_key = 'infoTypes';
   /**
    * @var string
    */
   public $dataProfile;
+  protected $infoTypesType = GoogleCloudSecuritycenterV2InfoType::class;
+  protected $infoTypesDataType = 'array';
   /**
    * @var string
    */
@@ -41,6 +44,20 @@ class GoogleCloudSecuritycenterV2CloudDlpDataProfile extends \Google\Model
   public function getDataProfile()
   {
     return $this->dataProfile;
+  }
+  /**
+   * @param GoogleCloudSecuritycenterV2InfoType[]
+   */
+  public function setInfoTypes($infoTypes)
+  {
+    $this->infoTypes = $infoTypes;
+  }
+  /**
+   * @return GoogleCloudSecuritycenterV2InfoType[]
+   */
+  public function getInfoTypes()
+  {
+    return $this->infoTypes;
   }
   /**
    * @param string

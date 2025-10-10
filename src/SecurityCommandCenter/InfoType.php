@@ -17,63 +17,62 @@
 
 namespace Google\Service\SecurityCommandCenter;
 
-class ListOperationsResponse extends \Google\Collection
+class InfoType extends \Google\Model
 {
-  protected $collection_key = 'unreachable';
   /**
    * @var string
    */
-  public $nextPageToken;
-  protected $operationsType = Operation::class;
-  protected $operationsDataType = 'array';
+  public $name;
+  protected $sensitivityScoreType = SensitivityScore::class;
+  protected $sensitivityScoreDataType = '';
   /**
-   * @var string[]
+   * @var string
    */
-  public $unreachable;
+  public $version;
 
   /**
    * @param string
    */
-  public function setNextPageToken($nextPageToken)
+  public function setName($name)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->name = $name;
   }
   /**
    * @return string
    */
-  public function getNextPageToken()
+  public function getName()
   {
-    return $this->nextPageToken;
+    return $this->name;
   }
   /**
-   * @param Operation[]
+   * @param SensitivityScore
    */
-  public function setOperations($operations)
+  public function setSensitivityScore(SensitivityScore $sensitivityScore)
   {
-    $this->operations = $operations;
+    $this->sensitivityScore = $sensitivityScore;
   }
   /**
-   * @return Operation[]
+   * @return SensitivityScore
    */
-  public function getOperations()
+  public function getSensitivityScore()
   {
-    return $this->operations;
+    return $this->sensitivityScore;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setUnreachable($unreachable)
+  public function setVersion($version)
   {
-    $this->unreachable = $unreachable;
+    $this->version = $version;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getUnreachable()
+  public function getVersion()
   {
-    return $this->unreachable;
+    return $this->version;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListOperationsResponse::class, 'Google_Service_SecurityCommandCenter_ListOperationsResponse');
+class_alias(InfoType::class, 'Google_Service_SecurityCommandCenter_InfoType');
