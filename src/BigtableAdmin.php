@@ -141,6 +141,10 @@ class BigtableAdmin extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],
           ]
@@ -737,6 +741,10 @@ class BigtableAdmin extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'v2/{+resource}:getIamPolicy',
@@ -762,6 +770,10 @@ class BigtableAdmin extends \Google\Service
                   'type' => 'integer',
                 ],
                 'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'view' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -1144,16 +1156,6 @@ class BigtableAdmin extends \Google\Service
                   'required' => true,
                 ],
               ],
-            ],'getIamPolicy' => [
-              'path' => 'v2/{+resource}:getIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
             ],'list' => [
               'path' => 'v2/{+parent}/schemaBundles',
               'httpMethod' => 'GET',
@@ -1192,26 +1194,6 @@ class BigtableAdmin extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
-                ],
-              ],
-            ],'setIamPolicy' => [
-              'path' => 'v2/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'testIamPermissions' => [
-              'path' => 'v2/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'resource' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
                 ],
               ],
             ],

@@ -18,14 +18,9 @@
 namespace Google\Service\BigtableAdmin\Resource;
 
 use Google\Service\BigtableAdmin\BigtableadminEmpty;
-use Google\Service\BigtableAdmin\GetIamPolicyRequest;
 use Google\Service\BigtableAdmin\ListSchemaBundlesResponse;
 use Google\Service\BigtableAdmin\Operation;
-use Google\Service\BigtableAdmin\Policy;
 use Google\Service\BigtableAdmin\SchemaBundle;
-use Google\Service\BigtableAdmin\SetIamPolicyRequest;
-use Google\Service\BigtableAdmin\TestIamPermissionsRequest;
-use Google\Service\BigtableAdmin\TestIamPermissionsResponse;
 
 /**
  * The "schemaBundles" collection of methods.
@@ -96,26 +91,6 @@ class ProjectsInstancesTablesSchemaBundles extends \Google\Service\Resource
     return $this->call('get', [$params], SchemaBundle::class);
   }
   /**
-   * Gets the access control policy for a Bigtable resource. Returns an empty
-   * policy if the resource exists but does not have a policy set.
-   * (schemaBundles.getIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * requested. See [Resource
-   * names](https://cloud.google.com/apis/design/resource_names) for the
-   * appropriate value for this field.
-   * @param GetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Policy
-   * @throws \Google\Service\Exception
-   */
-  public function getIamPolicy($resource, GetIamPolicyRequest $postBody, $optParams = [])
-  {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', [$params], Policy::class);
-  }
-  /**
    * Lists all schema bundles associated with the specified table.
    * (schemaBundles.listProjectsInstancesTablesSchemaBundles)
    *
@@ -163,44 +138,6 @@ class ProjectsInstancesTablesSchemaBundles extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
-  }
-  /**
-   * Sets the access control policy on a Bigtable resource. Replaces any existing
-   * policy. (schemaBundles.setIamPolicy)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy is being
-   * specified. See [Resource
-   * names](https://cloud.google.com/apis/design/resource_names) for the
-   * appropriate value for this field.
-   * @param SetIamPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Policy
-   * @throws \Google\Service\Exception
-   */
-  public function setIamPolicy($resource, SetIamPolicyRequest $postBody, $optParams = [])
-  {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', [$params], Policy::class);
-  }
-  /**
-   * Returns permissions that the caller has on the specified Bigtable resource.
-   * (schemaBundles.testIamPermissions)
-   *
-   * @param string $resource REQUIRED: The resource for which the policy detail is
-   * being requested. See [Resource
-   * names](https://cloud.google.com/apis/design/resource_names) for the
-   * appropriate value for this field.
-   * @param TestIamPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return TestIamPermissionsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function testIamPermissions($resource, TestIamPermissionsRequest $postBody, $optParams = [])
-  {
-    $params = ['resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', [$params], TestIamPermissionsResponse::class);
   }
 }
 
