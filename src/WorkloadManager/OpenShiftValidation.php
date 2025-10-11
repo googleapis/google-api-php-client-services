@@ -19,6 +19,43 @@ namespace Google\Service\WorkloadManager;
 
 class OpenShiftValidation extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $clusterId;
+  /**
+   * @var array[]
+   */
+  public $validationDetails;
+
+  /**
+   * @param string
+   */
+  public function setClusterId($clusterId)
+  {
+    $this->clusterId = $clusterId;
+  }
+  /**
+   * @return string
+   */
+  public function getClusterId()
+  {
+    return $this->clusterId;
+  }
+  /**
+   * @param array[]
+   */
+  public function setValidationDetails($validationDetails)
+  {
+    $this->validationDetails = $validationDetails;
+  }
+  /**
+   * @return array[]
+   */
+  public function getValidationDetails()
+  {
+    return $this->validationDetails;
+  }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.

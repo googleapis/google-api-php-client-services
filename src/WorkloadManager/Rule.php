@@ -23,6 +23,10 @@ class Rule extends \Google\Collection
   /**
    * @var string
    */
+  public $assetType;
+  /**
+   * @var string
+   */
   public $description;
   /**
    * @var string
@@ -69,6 +73,20 @@ class Rule extends \Google\Collection
    */
   public $uri;
 
+  /**
+   * @param string
+   */
+  public function setAssetType($assetType)
+  {
+    $this->assetType = $assetType;
+  }
+  /**
+   * @return string
+   */
+  public function getAssetType()
+  {
+    return $this->assetType;
+  }
   /**
    * @param string
    */
