@@ -175,8 +175,8 @@ class ProjectsLocationsBackupPlansBackups extends \Google\Service\Resource
   /**
    * Update a Backup. (backups.patch)
    *
-   * @param string $name Output only. The fully qualified name of the Backup.
-   * `projects/locations/backupPlans/backups`
+   * @param string $name Output only. Identifier. The fully qualified name of the
+   * Backup. `projects/locations/backupPlans/backups`
    * @param Backup $postBody
    * @param array $optParams Optional parameters.
    *
