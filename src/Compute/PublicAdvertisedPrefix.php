@@ -51,6 +51,10 @@ class PublicAdvertisedPrefix extends \Google\Collection
   /**
    * @var string
    */
+  public $ipv6AccessType;
+  /**
+   * @var string
+   */
   public $kind;
   /**
    * @var string
@@ -172,6 +176,20 @@ class PublicAdvertisedPrefix extends \Google\Collection
   public function getIpCidrRange()
   {
     return $this->ipCidrRange;
+  }
+  /**
+   * @param string
+   */
+  public function setIpv6AccessType($ipv6AccessType)
+  {
+    $this->ipv6AccessType = $ipv6AccessType;
+  }
+  /**
+   * @return string
+   */
+  public function getIpv6AccessType()
+  {
+    return $this->ipv6AccessType;
   }
   /**
    * @param string

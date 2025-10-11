@@ -19,7 +19,7 @@ namespace Google\Service\Compute;
 
 class Interconnect extends \Google\Collection
 {
-  protected $collection_key = 'requestedFeatures';
+  protected $collection_key = 'wireGroups';
   /**
    * @var bool
    */
@@ -148,6 +148,10 @@ class Interconnect extends \Google\Collection
    * @var string
    */
   public $subzone;
+  /**
+   * @var string[]
+   */
+  public $wireGroups;
 
   /**
    * @param bool
@@ -624,6 +628,20 @@ class Interconnect extends \Google\Collection
   public function getSubzone()
   {
     return $this->subzone;
+  }
+  /**
+   * @param string[]
+   */
+  public function setWireGroups($wireGroups)
+  {
+    $this->wireGroups = $wireGroups;
+  }
+  /**
+   * @return string[]
+   */
+  public function getWireGroups()
+  {
+    return $this->wireGroups;
   }
 }
 

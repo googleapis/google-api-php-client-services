@@ -48,6 +48,8 @@ class InterconnectLocation extends \Google\Collection
    * @var string
    */
   public $creationTimestamp;
+  protected $crossSiteInterconnectInfosType = InterconnectLocationCrossSiteInterconnectInfo::class;
+  protected $crossSiteInterconnectInfosDataType = 'array';
   /**
    * @var string
    */
@@ -192,6 +194,20 @@ class InterconnectLocation extends \Google\Collection
   public function getCreationTimestamp()
   {
     return $this->creationTimestamp;
+  }
+  /**
+   * @param InterconnectLocationCrossSiteInterconnectInfo[]
+   */
+  public function setCrossSiteInterconnectInfos($crossSiteInterconnectInfos)
+  {
+    $this->crossSiteInterconnectInfos = $crossSiteInterconnectInfos;
+  }
+  /**
+   * @return InterconnectLocationCrossSiteInterconnectInfo[]
+   */
+  public function getCrossSiteInterconnectInfos()
+  {
+    return $this->crossSiteInterconnectInfos;
   }
   /**
    * @param string

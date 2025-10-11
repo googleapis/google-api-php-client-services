@@ -17,39 +17,26 @@
 
 namespace Google\Service\Compute\Resource;
 
-use Google\Service\Compute\InstantSnapshot;
-use Google\Service\Compute\InstantSnapshotList;
+use Google\Service\Compute\CrossSiteNetwork;
+use Google\Service\Compute\CrossSiteNetworkList;
 use Google\Service\Compute\Operation;
-use Google\Service\Compute\Policy;
-use Google\Service\Compute\RegionSetLabelsRequest;
-use Google\Service\Compute\RegionSetPolicyRequest;
-use Google\Service\Compute\TestPermissionsRequest;
-use Google\Service\Compute\TestPermissionsResponse;
 
 /**
- * The "regionInstantSnapshots" collection of methods.
+ * The "crossSiteNetworks" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $regionInstantSnapshots = $computeService->regionInstantSnapshots;
+ *   $crossSiteNetworks = $computeService->crossSiteNetworks;
  *  </code>
  */
-class RegionInstantSnapshots extends \Google\Service\Resource
+class CrossSiteNetworks extends \Google\Service\Resource
 {
   /**
-   * Deletes the specified InstantSnapshot resource. Keep in mind that deleting a
-   * single instantSnapshot might not necessarily delete all the data on that
-   * instantSnapshot. If any data on the instantSnapshot that is marked for
-   * deletion is needed for subsequent instantSnapshots, the data will be moved to
-   * the next corresponding instantSnapshot.
-   *
-   * For more information, seeDeleting instantSnapshots.
-   * (regionInstantSnapshots.delete)
+   * Deletes the specified cross-site network in the given scope.
+   * (crossSiteNetworks.delete)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $instantSnapshot Name of the InstantSnapshot resource to
-   * delete.
+   * @param string $crossSiteNetwork Name of the cross-site network to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -63,60 +50,40 @@ class RegionInstantSnapshots extends \Google\Service\Resource
    * from accidentally creating duplicate commitments.
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
-   * supported (00000000-0000-0000-0000-000000000000).
+   * supported (00000000-0000-0000-0000-000000000000). end_interface:
+   * MixerMutationRequestBuilder
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function delete($project, $region, $instantSnapshot, $optParams = [])
+  public function delete($project, $crossSiteNetwork, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instantSnapshot' => $instantSnapshot];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified InstantSnapshot resource in the specified region.
-   * (regionInstantSnapshots.get)
+   * Returns the specified cross-site network in the given scope.
+   * (crossSiteNetworks.get)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $instantSnapshot Name of the InstantSnapshot resource to
-   * return.
+   * @param string $crossSiteNetwork Name of the cross-site network to return.
    * @param array $optParams Optional parameters.
-   * @return InstantSnapshot
+   * @return CrossSiteNetwork
    * @throws \Google\Service\Exception
    */
-  public function get($project, $region, $instantSnapshot, $optParams = [])
+  public function get($project, $crossSiteNetwork, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'instantSnapshot' => $instantSnapshot];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], InstantSnapshot::class);
+    return $this->call('get', [$params], CrossSiteNetwork::class);
   }
   /**
-   * Gets the access control policy for a resource. May be empty if no such policy
-   * or resource exists. (regionInstantSnapshots.getIamPolicy)
+   * Creates a cross-site network in the specified project in the given scope
+   * using the parameters that are included in the request.
+   * (crossSiteNetworks.insert)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
-   * @return Policy
-   * @throws \Google\Service\Exception
-   */
-  public function getIamPolicy($project, $region, $resource, $optParams = [])
-  {
-    $params = ['project' => $project, 'region' => $region, 'resource' => $resource];
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', [$params], Policy::class);
-  }
-  /**
-   * Creates an instant snapshot in the specified region.
-   * (regionInstantSnapshots.insert)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $region Name of the region for this request.
-   * @param InstantSnapshot $postBody
+   * @param CrossSiteNetwork $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -130,22 +97,24 @@ class RegionInstantSnapshots extends \Google\Service\Resource
    * from accidentally creating duplicate commitments.
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
-   * supported (00000000-0000-0000-0000-000000000000).
+   * supported (00000000-0000-0000-0000-000000000000). end_interface:
+   * MixerMutationRequestBuilder
+   * @opt_param bool validateOnly [Input Only] Validate the new configuration, but
+   * don't create it.
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function insert($project, $region, InstantSnapshot $postBody, $optParams = [])
+  public function insert($project, CrossSiteNetwork $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'postBody' => $postBody];
+    $params = ['project' => $project, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Retrieves the list of InstantSnapshot resources contained within the
-   * specified region. (regionInstantSnapshots.listRegionInstantSnapshots)
+   * Lists the cross-site networks for a project in the given scope.
+   * (crossSiteNetworks.listCrossSiteNetworks)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -217,42 +186,23 @@ class RegionInstantSnapshots extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
-   * @return InstantSnapshotList
+   * @return CrossSiteNetworkList
    * @throws \Google\Service\Exception
    */
-  public function listRegionInstantSnapshots($project, $region, $optParams = [])
+  public function listCrossSiteNetworks($project, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region];
+    $params = ['project' => $project];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], InstantSnapshotList::class);
+    return $this->call('list', [$params], CrossSiteNetworkList::class);
   }
   /**
-   * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (regionInstantSnapshots.setIamPolicy)
+   * Updates the specified cross-site network with the data included in the
+   * request. This method supportsPATCH semantics and uses theJSON merge patch
+   * format and processing rules. (crossSiteNetworks.patch)
    *
    * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param RegionSetPolicyRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return Policy
-   * @throws \Google\Service\Exception
-   */
-  public function setIamPolicy($project, $region, $resource, RegionSetPolicyRequest $postBody, $optParams = [])
-  {
-    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', [$params], Policy::class);
-  }
-  /**
-   * Sets the labels on a instantSnapshot in the given region. To learn more about
-   * labels, read the Labeling Resources documentation.
-   * (regionInstantSnapshots.setLabels)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $region The region for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param RegionSetLabelsRequest $postBody
+   * @param string $crossSiteNetwork Name of the cross-site network to update.
+   * @param CrossSiteNetwork $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -266,35 +216,22 @@ class RegionInstantSnapshots extends \Google\Service\Resource
    * from accidentally creating duplicate commitments.
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
-   * supported (00000000-0000-0000-0000-000000000000).
+   * supported (00000000-0000-0000-0000-000000000000). end_interface:
+   * MixerMutationRequestBuilder
+   * @opt_param string updateMask update_mask indicates fields to be updated as
+   * part of this request.
+   * @opt_param bool validateOnly [Input Only] Validate the new configuration, but
+   * don't update it.
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function setLabels($project, $region, $resource, RegionSetLabelsRequest $postBody, $optParams = [])
+  public function patch($project, $crossSiteNetwork, CrossSiteNetwork $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('setLabels', [$params], Operation::class);
-  }
-  /**
-   * Returns permissions that a caller has on the specified resource.
-   * (regionInstantSnapshots.testIamPermissions)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $region The name of the region for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param TestPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return TestPermissionsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function testIamPermissions($project, $region, $resource, TestPermissionsRequest $postBody, $optParams = [])
-  {
-    $params = ['project' => $project, 'region' => $region, 'resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
+    return $this->call('patch', [$params], Operation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RegionInstantSnapshots::class, 'Google_Service_Compute_Resource_RegionInstantSnapshots');
+class_alias(CrossSiteNetworks::class, 'Google_Service_Compute_Resource_CrossSiteNetworks');

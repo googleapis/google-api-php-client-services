@@ -17,65 +17,46 @@
 
 namespace Google\Service\Compute;
 
-class BgpRouteAsPath extends \Google\Collection
+class CrossSiteNetworkListWarningData extends \Google\Model
 {
-  protected $collection_key = 'asns32';
-  /**
-   * @var int[]
-   */
-  public $asns;
-  /**
-   * @var string[]
-   */
-  public $asns32;
   /**
    * @var string
    */
-  public $type;
+  public $key;
+  /**
+   * @var string
+   */
+  public $value;
 
-  /**
-   * @param int[]
-   */
-  public function setAsns($asns)
-  {
-    $this->asns = $asns;
-  }
-  /**
-   * @return int[]
-   */
-  public function getAsns()
-  {
-    return $this->asns;
-  }
-  /**
-   * @param string[]
-   */
-  public function setAsns32($asns32)
-  {
-    $this->asns32 = $asns32;
-  }
-  /**
-   * @return string[]
-   */
-  public function getAsns32()
-  {
-    return $this->asns32;
-  }
   /**
    * @param string
    */
-  public function setType($type)
+  public function setKey($key)
   {
-    $this->type = $type;
+    $this->key = $key;
   }
   /**
    * @return string
    */
-  public function getType()
+  public function getKey()
   {
-    return $this->type;
+    return $this->key;
+  }
+  /**
+   * @param string
+   */
+  public function setValue($value)
+  {
+    $this->value = $value;
+  }
+  /**
+   * @return string
+   */
+  public function getValue()
+  {
+    return $this->value;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BgpRouteAsPath::class, 'Google_Service_Compute_BgpRouteAsPath');
+class_alias(CrossSiteNetworkListWarningData::class, 'Google_Service_Compute_CrossSiteNetworkListWarningData');
