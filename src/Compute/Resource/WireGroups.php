@@ -17,35 +17,26 @@
 
 namespace Google\Service\Compute\Resource;
 
-use Google\Service\Compute\GlobalSetLabelsRequest;
-use Google\Service\Compute\GlobalSetPolicyRequest;
 use Google\Service\Compute\Operation;
-use Google\Service\Compute\Policy;
-use Google\Service\Compute\Snapshot;
-use Google\Service\Compute\SnapshotList;
-use Google\Service\Compute\TestPermissionsRequest;
-use Google\Service\Compute\TestPermissionsResponse;
+use Google\Service\Compute\WireGroup;
+use Google\Service\Compute\WireGroupList;
 
 /**
- * The "snapshots" collection of methods.
+ * The "wireGroups" collection of methods.
  * Typical usage is:
  *  <code>
  *   $computeService = new Google\Service\Compute(...);
- *   $snapshots = $computeService->snapshots;
+ *   $wireGroups = $computeService->wireGroups;
  *  </code>
  */
-class Snapshots extends \Google\Service\Resource
+class WireGroups extends \Google\Service\Resource
 {
   /**
-   * Deletes the specified Snapshot resource. Keep in mind that deleting a single
-   * snapshot might not necessarily delete all the data on that snapshot. If any
-   * data on the snapshot that is marked for deletion is needed for subsequent
-   * snapshots, the data will be moved to the next corresponding snapshot.
-   *
-   * For more information, seeDeleting snapshots. (snapshots.delete)
+   * Deletes the specified wire group in the given scope. (wireGroups.delete)
    *
    * @param string $project Project ID for this request.
-   * @param string $snapshot Name of the Snapshot resource to delete.
+   * @param string $crossSiteNetwork
+   * @param string $wireGroup Name of the wire group resource to delete.
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -59,58 +50,40 @@ class Snapshots extends \Google\Service\Resource
    * from accidentally creating duplicate commitments.
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
-   * supported (00000000-0000-0000-0000-000000000000).
+   * supported (00000000-0000-0000-0000-000000000000). end_interface:
+   * MixerMutationRequestBuilder
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function delete($project, $snapshot, $optParams = [])
+  public function delete($project, $crossSiteNetwork, $wireGroup, $optParams = [])
   {
-    $params = ['project' => $project, 'snapshot' => $snapshot];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork, 'wireGroup' => $wireGroup];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
   }
   /**
-   * Returns the specified Snapshot resource. (snapshots.get)
+   * Gets the specified wire group resource in the given scope. (wireGroups.get)
    *
    * @param string $project Project ID for this request.
-   * @param string $snapshot Name of the Snapshot resource to return.
+   * @param string $crossSiteNetwork
+   * @param string $wireGroup Name of the wire group resource to return.
    * @param array $optParams Optional parameters.
-   * @return Snapshot
+   * @return WireGroup
    * @throws \Google\Service\Exception
    */
-  public function get($project, $snapshot, $optParams = [])
+  public function get($project, $crossSiteNetwork, $wireGroup, $optParams = [])
   {
-    $params = ['project' => $project, 'snapshot' => $snapshot];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork, 'wireGroup' => $wireGroup];
     $params = array_merge($params, $optParams);
-    return $this->call('get', [$params], Snapshot::class);
+    return $this->call('get', [$params], WireGroup::class);
   }
   /**
-   * Gets the access control policy for a resource. May be empty if no such policy
-   * or resource exists. (snapshots.getIamPolicy)
+   * Creates a wire group in the specified project in the given scope using the
+   * parameters that are included in the request. (wireGroups.insert)
    *
    * @param string $project Project ID for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
-   * @return Policy
-   * @throws \Google\Service\Exception
-   */
-  public function getIamPolicy($project, $resource, $optParams = [])
-  {
-    $params = ['project' => $project, 'resource' => $resource];
-    $params = array_merge($params, $optParams);
-    return $this->call('getIamPolicy', [$params], Policy::class);
-  }
-  /**
-   * Creates a snapshot in the specified project using the data included in the
-   * request. For regular snapshot creation, consider using this method instead of
-   * disks.createSnapshot, as this method supports more features, such as creating
-   * snapshots in a project different from the source disk project.
-   * (snapshots.insert)
-   *
-   * @param string $project Project ID for this request.
-   * @param Snapshot $postBody
+   * @param string $crossSiteNetwork
+   * @param WireGroup $postBody
    * @param array $optParams Optional parameters.
    *
    * @opt_param string requestId An optional request ID to identify requests.
@@ -124,21 +97,25 @@ class Snapshots extends \Google\Service\Resource
    * from accidentally creating duplicate commitments.
    *
    * The request ID must be a valid UUID with the exception that zero UUID is not
-   * supported (00000000-0000-0000-0000-000000000000).
+   * supported (00000000-0000-0000-0000-000000000000). end_interface:
+   * MixerMutationRequestBuilder
+   * @opt_param bool validateOnly [Input Only] Validate the new configuration, but
+   * don't create it.
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function insert($project, Snapshot $postBody, $optParams = [])
+  public function insert($project, $crossSiteNetwork, WireGroup $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'postBody' => $postBody];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], Operation::class);
   }
   /**
-   * Retrieves the list of Snapshot resources contained within the specified
-   * project. (snapshots.listSnapshots)
+   * Lists the wire groups for a project in the given scope.
+   * (wireGroups.listWireGroups)
    *
    * @param string $project Project ID for this request.
+   * @param string $crossSiteNetwork
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter A filter expression that filters resources listed in
@@ -210,67 +187,53 @@ class Snapshots extends \Google\Service\Resource
    * For example, when partial success behavior is enabled, aggregatedList for a
    * single zone scope either returns all resources in the zone or no resources,
    * with an error code.
-   * @return SnapshotList
+   * @return WireGroupList
    * @throws \Google\Service\Exception
    */
-  public function listSnapshots($project, $optParams = [])
+  public function listWireGroups($project, $crossSiteNetwork, $optParams = [])
   {
-    $params = ['project' => $project];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork];
     $params = array_merge($params, $optParams);
-    return $this->call('list', [$params], SnapshotList::class);
+    return $this->call('list', [$params], WireGroupList::class);
   }
   /**
-   * Sets the access control policy on the specified resource. Replaces any
-   * existing policy. (snapshots.setIamPolicy)
+   * Updates the specified wire group resource with the data included in the
+   * request. This method supportsPATCH semantics and usesJSON merge patch format
+   * and processing rules. (wireGroups.patch)
    *
    * @param string $project Project ID for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param GlobalSetPolicyRequest $postBody
+   * @param string $crossSiteNetwork
+   * @param string $wireGroup Name of the WireGroups resource to patch.
+   * @param WireGroup $postBody
    * @param array $optParams Optional parameters.
-   * @return Policy
-   * @throws \Google\Service\Exception
-   */
-  public function setIamPolicy($project, $resource, GlobalSetPolicyRequest $postBody, $optParams = [])
-  {
-    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('setIamPolicy', [$params], Policy::class);
-  }
-  /**
-   * Sets the labels on a snapshot. To learn more about labels, read theLabeling
-   * Resources documentation. (snapshots.setLabels)
    *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param GlobalSetLabelsRequest $postBody
-   * @param array $optParams Optional parameters.
+   * @opt_param string requestId An optional request ID to identify requests.
+   * Specify a unique request ID so that if you must retry your request, the
+   * server will know to ignore the request if it has already been completed.
+   *
+   * For example, consider a situation where you make an initial request and the
+   * request times out. If you make the request again with the same request ID,
+   * the server can check if original operation with the same request ID was
+   * received, and if so, will ignore the second request. This prevents clients
+   * from accidentally creating duplicate commitments.
+   *
+   * The request ID must be a valid UUID with the exception that zero UUID is not
+   * supported (00000000-0000-0000-0000-000000000000). end_interface:
+   * MixerMutationRequestBuilder
+   * @opt_param string updateMask update_mask indicates fields to be updated as
+   * part of this request.
+   * @opt_param bool validateOnly [Input Only] Validate the new configuration, but
+   * don't update it.
    * @return Operation
    * @throws \Google\Service\Exception
    */
-  public function setLabels($project, $resource, GlobalSetLabelsRequest $postBody, $optParams = [])
+  public function patch($project, $crossSiteNetwork, $wireGroup, WireGroup $postBody, $optParams = [])
   {
-    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = ['project' => $project, 'crossSiteNetwork' => $crossSiteNetwork, 'wireGroup' => $wireGroup, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('setLabels', [$params], Operation::class);
-  }
-  /**
-   * Returns permissions that a caller has on the specified resource.
-   * (snapshots.testIamPermissions)
-   *
-   * @param string $project Project ID for this request.
-   * @param string $resource Name or id of the resource for this request.
-   * @param TestPermissionsRequest $postBody
-   * @param array $optParams Optional parameters.
-   * @return TestPermissionsResponse
-   * @throws \Google\Service\Exception
-   */
-  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
-  {
-    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
+    return $this->call('patch', [$params], Operation::class);
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(Snapshots::class, 'Google_Service_Compute_Resource_Snapshots');
+class_alias(WireGroups::class, 'Google_Service_Compute_Resource_WireGroups');

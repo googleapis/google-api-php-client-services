@@ -27,6 +27,8 @@ class ResourceStatus extends \Google\Model
   public $physicalHost;
   protected $physicalHostTopologyType = ResourceStatusPhysicalHostTopology::class;
   protected $physicalHostTopologyDataType = '';
+  protected $reservationConsumptionInfoType = ResourceStatusReservationConsumptionInfo::class;
+  protected $reservationConsumptionInfoDataType = '';
   protected $schedulingType = ResourceStatusScheduling::class;
   protected $schedulingDataType = '';
   protected $upcomingMaintenanceType = UpcomingMaintenance::class;
@@ -73,6 +75,20 @@ class ResourceStatus extends \Google\Model
   public function getPhysicalHostTopology()
   {
     return $this->physicalHostTopology;
+  }
+  /**
+   * @param ResourceStatusReservationConsumptionInfo
+   */
+  public function setReservationConsumptionInfo(ResourceStatusReservationConsumptionInfo $reservationConsumptionInfo)
+  {
+    $this->reservationConsumptionInfo = $reservationConsumptionInfo;
+  }
+  /**
+   * @return ResourceStatusReservationConsumptionInfo
+   */
+  public function getReservationConsumptionInfo()
+  {
+    return $this->reservationConsumptionInfo;
   }
   /**
    * @param ResourceStatusScheduling
