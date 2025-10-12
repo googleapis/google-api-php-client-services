@@ -35,6 +35,10 @@ class Cluster extends \Google\Collection
   protected $automatedBackupConfigType = AutomatedBackupConfig::class;
   protected $automatedBackupConfigDataType = '';
   /**
+   * @var string[]
+   */
+  public $availableMaintenanceVersions;
+  /**
    * @var string
    */
   public $backupCollection;
@@ -52,6 +56,10 @@ class Cluster extends \Google\Collection
   public $deletionProtectionEnabled;
   protected $discoveryEndpointsType = DiscoveryEndpoint::class;
   protected $discoveryEndpointsDataType = 'array';
+  /**
+   * @var string
+   */
+  public $effectiveMaintenanceVersion;
   protected $encryptionInfoType = EncryptionInfo::class;
   protected $encryptionInfoDataType = '';
   protected $gcsSourceType = GcsBackupSource::class;
@@ -197,6 +205,20 @@ class Cluster extends \Google\Collection
     return $this->automatedBackupConfig;
   }
   /**
+   * @param string[]
+   */
+  public function setAvailableMaintenanceVersions($availableMaintenanceVersions)
+  {
+    $this->availableMaintenanceVersions = $availableMaintenanceVersions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getAvailableMaintenanceVersions()
+  {
+    return $this->availableMaintenanceVersions;
+  }
+  /**
    * @param string
    */
   public function setBackupCollection($backupCollection)
@@ -279,6 +301,20 @@ class Cluster extends \Google\Collection
   public function getDiscoveryEndpoints()
   {
     return $this->discoveryEndpoints;
+  }
+  /**
+   * @param string
+   */
+  public function setEffectiveMaintenanceVersion($effectiveMaintenanceVersion)
+  {
+    $this->effectiveMaintenanceVersion = $effectiveMaintenanceVersion;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveMaintenanceVersion()
+  {
+    return $this->effectiveMaintenanceVersion;
   }
   /**
    * @param EncryptionInfo
