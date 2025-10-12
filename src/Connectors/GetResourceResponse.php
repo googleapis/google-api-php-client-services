@@ -17,9 +17,12 @@
 
 namespace Google\Service\Connectors;
 
-class ListToolsResponse extends \Google\Collection
+class GetResourceResponse extends \Google\Model
 {
-  protected $collection_key = 'tools';
+  /**
+   * @var string
+   */
+  public $data;
   /**
    * @var array[]
    */
@@ -27,10 +30,22 @@ class ListToolsResponse extends \Google\Collection
   /**
    * @var string
    */
-  public $nextPageToken;
-  protected $toolsType = Tool::class;
-  protected $toolsDataType = 'array';
+  public $mimeType;
 
+  /**
+   * @param string
+   */
+  public function setData($data)
+  {
+    $this->data = $data;
+  }
+  /**
+   * @return string
+   */
+  public function getData()
+  {
+    return $this->data;
+  }
   /**
    * @param array[]
    */
@@ -48,32 +63,18 @@ class ListToolsResponse extends \Google\Collection
   /**
    * @param string
    */
-  public function setNextPageToken($nextPageToken)
+  public function setMimeType($mimeType)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->mimeType = $mimeType;
   }
   /**
    * @return string
    */
-  public function getNextPageToken()
+  public function getMimeType()
   {
-    return $this->nextPageToken;
-  }
-  /**
-   * @param Tool[]
-   */
-  public function setTools($tools)
-  {
-    $this->tools = $tools;
-  }
-  /**
-   * @return Tool[]
-   */
-  public function getTools()
-  {
-    return $this->tools;
+    return $this->mimeType;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListToolsResponse::class, 'Google_Service_Connectors_ListToolsResponse');
+class_alias(GetResourceResponse::class, 'Google_Service_Connectors_GetResourceResponse');

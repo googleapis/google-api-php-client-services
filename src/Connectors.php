@@ -43,6 +43,7 @@ class Connectors extends \Google\Service
   public $projects_locations_connections_actions;
   public $projects_locations_connections_entityTypes;
   public $projects_locations_connections_entityTypes_entities;
+  public $projects_locations_connections_resources;
   public $projects_locations_connections_tools;
   public $rootUrlTemplate;
 
@@ -331,6 +332,44 @@ class Connectors extends \Google\Service
                   'required' => true,
                 ],
                 'conditions' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_connections_resources = new Connectors\Resource\ProjectsLocationsConnectionsResources(
+        $this,
+        $this->serviceName,
+        'resources',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v2/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v2/{+parent}/resources',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],

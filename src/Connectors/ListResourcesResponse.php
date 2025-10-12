@@ -17,9 +17,9 @@
 
 namespace Google\Service\Connectors;
 
-class ListToolsResponse extends \Google\Collection
+class ListResourcesResponse extends \Google\Collection
 {
-  protected $collection_key = 'tools';
+  protected $collection_key = 'resources';
   /**
    * @var array[]
    */
@@ -28,8 +28,8 @@ class ListToolsResponse extends \Google\Collection
    * @var string
    */
   public $nextPageToken;
-  protected $toolsType = Tool::class;
-  protected $toolsDataType = 'array';
+  protected $resourcesType = ConnectorsResource::class;
+  protected $resourcesDataType = 'array';
 
   /**
    * @param array[]
@@ -60,20 +60,20 @@ class ListToolsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param Tool[]
+   * @param ConnectorsResource[]
    */
-  public function setTools($tools)
+  public function setResources($resources)
   {
-    $this->tools = $tools;
+    $this->resources = $resources;
   }
   /**
-   * @return Tool[]
+   * @return ConnectorsResource[]
    */
-  public function getTools()
+  public function getResources()
   {
-    return $this->tools;
+    return $this->resources;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListToolsResponse::class, 'Google_Service_Connectors_ListToolsResponse');
+class_alias(ListResourcesResponse::class, 'Google_Service_Connectors_ListResourcesResponse');
