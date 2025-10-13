@@ -119,7 +119,8 @@ class ProjectsLocationsDatasetsDicomStoresStudies extends \Google\Service\Resour
    * s/{dataset_id}/dicomStores/{dicom_store_id}`.
    * @param string $dicomWebPath Required. The path of the
    * SearchForInstancesRequest DICOMweb request. For example, `instances`,
-   * `series/{series_uid}/instances`, or `studies/{study_uid}/instances`.
+   * `studies/{study_uid}/series/{series_uid}/instances`, or
+   * `studies/{study_uid}/instances`.
    * @param array $optParams Optional parameters.
    * @return HttpBody
    * @throws \Google\Service\Exception
