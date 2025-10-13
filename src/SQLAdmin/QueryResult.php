@@ -32,6 +32,8 @@ class QueryResult extends \Google\Collection
   public $partialResult;
   protected $rowsType = Row::class;
   protected $rowsDataType = 'array';
+  protected $statusType = Status::class;
+  protected $statusDataType = '';
 
   /**
    * @param Column[]
@@ -88,6 +90,20 @@ class QueryResult extends \Google\Collection
   public function getRows()
   {
     return $this->rows;
+  }
+  /**
+   * @param Status
+   */
+  public function setStatus(Status $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return Status
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
 }
 

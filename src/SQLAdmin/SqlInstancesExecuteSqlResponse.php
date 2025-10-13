@@ -26,6 +26,8 @@ class SqlInstancesExecuteSqlResponse extends \Google\Collection
   protected $metadataDataType = '';
   protected $resultsType = QueryResult::class;
   protected $resultsDataType = 'array';
+  protected $statusType = Status::class;
+  protected $statusDataType = '';
 
   /**
    * @param Message[]
@@ -68,6 +70,20 @@ class SqlInstancesExecuteSqlResponse extends \Google\Collection
   public function getResults()
   {
     return $this->results;
+  }
+  /**
+   * @param Status
+   */
+  public function setStatus(Status $status)
+  {
+    $this->status = $status;
+  }
+  /**
+   * @return Status
+   */
+  public function getStatus()
+  {
+    return $this->status;
   }
 }
 

@@ -303,9 +303,10 @@ class Instances extends \Google\Service\Resource
    * Retrieves a resource containing information about a Cloud SQL instance.
    * (instances.get)
    *
-   * @param string $project Project ID of the project that contains the instance.
-   * @param string $instance Database instance ID. This does not include the
-   * project ID.
+   * @param string $project Required. Project ID of the project that contains the
+   * instance.
+   * @param string $instance Required. Database instance ID. This does not include
+   * the project ID.
    * @param array $optParams Optional parameters.
    * @return DatabaseInstance
    * @throws \Google\Service\Exception

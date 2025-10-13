@@ -33,6 +33,10 @@ class Settings extends \Google\Collection
    */
   public $authorizedGaeApplications;
   /**
+   * @var bool
+   */
+  public $autoUpgradeEnabled;
+  /**
    * @var string
    */
   public $availabilityType;
@@ -210,6 +214,20 @@ class Settings extends \Google\Collection
   public function getAuthorizedGaeApplications()
   {
     return $this->authorizedGaeApplications;
+  }
+  /**
+   * @param bool
+   */
+  public function setAutoUpgradeEnabled($autoUpgradeEnabled)
+  {
+    $this->autoUpgradeEnabled = $autoUpgradeEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getAutoUpgradeEnabled()
+  {
+    return $this->autoUpgradeEnabled;
   }
   /**
    * @param string
