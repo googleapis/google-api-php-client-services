@@ -40,8 +40,8 @@ class ProjectsLocationsDbSystemInitialStorageSizes extends \Google\Service\Resou
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Optional. The maximum number of items to return. If
-   * unspecified, a maximum of 50 System Versions will be returned. The maximum
-   * value is 1000; values above 1000 will be reset to 1000.
+   * unspecified, a maximum of 50 DbSystemInitialStorageSizes will be returned.
+   * The maximum value is 1000; values above 1000 will be reset to 1000.
    * @opt_param string pageToken Optional. A token identifying the requested page
    * of results to return. All fields except the filter should remain the same as
    * in the request that provided this page token.

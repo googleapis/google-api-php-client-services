@@ -56,6 +56,7 @@ class OracleDatabase extends \Google\Service
   public $projects_locations_dbVersions;
   public $projects_locations_entitlements;
   public $projects_locations_exadbVmClusters;
+  public $projects_locations_exadbVmClusters_dbNodes;
   public $projects_locations_exascaleDbStorageVaults;
   public $projects_locations_giVersions;
   public $projects_locations_giVersions_minorVersions;
@@ -975,6 +976,34 @@ class OracleDatabase extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_exadbVmClusters_dbNodes = new OracleDatabase\Resource\ProjectsLocationsExadbVmClustersDbNodes(
+        $this,
+        $this->serviceName,
+        'dbNodes',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+parent}/dbNodes',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
