@@ -155,6 +155,10 @@ class PartnersSubscriptions extends \Google\Service\Resource
    * @param Subscription $postBody
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int cycleOptions.initialCycleDuration.count number of duration
+   * units to be included.
+   * @opt_param string cycleOptions.initialCycleDuration.unit The unit used for
+   * the duration
    * @opt_param string subscriptionId Required. Identifies the subscription
    * resource on the Partner side. The value is restricted to 63 ASCII characters
    * at the maximum. If a subscription was previously created with the same

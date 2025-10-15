@@ -17,26 +17,26 @@
 
 namespace Google\Service\PaymentsResellerSubscription;
 
-class ResumeSubscriptionRequest extends \Google\Model
+class CycleOptions extends \Google\Model
 {
-  protected $cycleOptionsType = CycleOptions::class;
-  protected $cycleOptionsDataType = '';
+  protected $initialCycleDurationType = Duration::class;
+  protected $initialCycleDurationDataType = '';
 
   /**
-   * @param CycleOptions
+   * @param Duration
    */
-  public function setCycleOptions(CycleOptions $cycleOptions)
+  public function setInitialCycleDuration(Duration $initialCycleDuration)
   {
-    $this->cycleOptions = $cycleOptions;
+    $this->initialCycleDuration = $initialCycleDuration;
   }
   /**
-   * @return CycleOptions
+   * @return Duration
    */
-  public function getCycleOptions()
+  public function getInitialCycleDuration()
   {
-    return $this->cycleOptions;
+    return $this->initialCycleDuration;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResumeSubscriptionRequest::class, 'Google_Service_PaymentsResellerSubscription_ResumeSubscriptionRequest');
+class_alias(CycleOptions::class, 'Google_Service_PaymentsResellerSubscription_CycleOptions');
