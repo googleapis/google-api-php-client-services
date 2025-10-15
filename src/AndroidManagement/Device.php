@@ -42,6 +42,8 @@ class Device extends \Google\Collection
   public $appliedState;
   protected $commonCriteriaModeInfoType = CommonCriteriaModeInfo::class;
   protected $commonCriteriaModeInfoDataType = '';
+  protected $defaultApplicationInfoType = DefaultApplicationInfo::class;
+  protected $defaultApplicationInfoDataType = 'array';
   protected $deviceSettingsType = DeviceSettings::class;
   protected $deviceSettingsDataType = '';
   protected $disabledReasonType = UserFacingMessage::class;
@@ -228,6 +230,20 @@ class Device extends \Google\Collection
   public function getCommonCriteriaModeInfo()
   {
     return $this->commonCriteriaModeInfo;
+  }
+  /**
+   * @param DefaultApplicationInfo[]
+   */
+  public function setDefaultApplicationInfo($defaultApplicationInfo)
+  {
+    $this->defaultApplicationInfo = $defaultApplicationInfo;
+  }
+  /**
+   * @return DefaultApplicationInfo[]
+   */
+  public function getDefaultApplicationInfo()
+  {
+    return $this->defaultApplicationInfo;
   }
   /**
    * @param DeviceSettings

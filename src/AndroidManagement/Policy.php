@@ -116,6 +116,8 @@ class Policy extends \Google\Collection
    * @var bool
    */
   public $debuggingFeaturesAllowed;
+  protected $defaultApplicationSettingsType = DefaultApplicationSetting::class;
+  protected $defaultApplicationSettingsDataType = 'array';
   /**
    * @var string
    */
@@ -734,6 +736,20 @@ class Policy extends \Google\Collection
   public function getDebuggingFeaturesAllowed()
   {
     return $this->debuggingFeaturesAllowed;
+  }
+  /**
+   * @param DefaultApplicationSetting[]
+   */
+  public function setDefaultApplicationSettings($defaultApplicationSettings)
+  {
+    $this->defaultApplicationSettings = $defaultApplicationSettings;
+  }
+  /**
+   * @return DefaultApplicationSetting[]
+   */
+  public function getDefaultApplicationSettings()
+  {
+    return $this->defaultApplicationSettings;
   }
   /**
    * @param string

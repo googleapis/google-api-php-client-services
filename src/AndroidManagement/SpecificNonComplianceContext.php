@@ -19,11 +19,27 @@ namespace Google\Service\AndroidManagement;
 
 class SpecificNonComplianceContext extends \Google\Model
 {
+  protected $defaultApplicationContextType = DefaultApplicationContext::class;
+  protected $defaultApplicationContextDataType = '';
   protected $oncWifiContextType = OncWifiContext::class;
   protected $oncWifiContextDataType = '';
   protected $passwordPoliciesContextType = PasswordPoliciesContext::class;
   protected $passwordPoliciesContextDataType = '';
 
+  /**
+   * @param DefaultApplicationContext
+   */
+  public function setDefaultApplicationContext(DefaultApplicationContext $defaultApplicationContext)
+  {
+    $this->defaultApplicationContext = $defaultApplicationContext;
+  }
+  /**
+   * @return DefaultApplicationContext
+   */
+  public function getDefaultApplicationContext()
+  {
+    return $this->defaultApplicationContext;
+  }
   /**
    * @param OncWifiContext
    */
