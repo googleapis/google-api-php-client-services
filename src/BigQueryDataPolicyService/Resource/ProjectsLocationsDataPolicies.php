@@ -17,12 +17,14 @@
 
 namespace Google\Service\BigQueryDataPolicyService\Resource;
 
+use Google\Service\BigQueryDataPolicyService\AddGranteesRequest;
 use Google\Service\BigQueryDataPolicyService\BigquerydatapolicyEmpty;
+use Google\Service\BigQueryDataPolicyService\CreateDataPolicyRequest;
 use Google\Service\BigQueryDataPolicyService\DataPolicy;
 use Google\Service\BigQueryDataPolicyService\GetIamPolicyRequest;
 use Google\Service\BigQueryDataPolicyService\ListDataPoliciesResponse;
 use Google\Service\BigQueryDataPolicyService\Policy;
-use Google\Service\BigQueryDataPolicyService\RenameDataPolicyRequest;
+use Google\Service\BigQueryDataPolicyService\RemoveGranteesRequest;
 use Google\Service\BigQueryDataPolicyService\SetIamPolicyRequest;
 use Google\Service\BigQueryDataPolicyService\TestIamPermissionsRequest;
 use Google\Service\BigQueryDataPolicyService\TestIamPermissionsResponse;
@@ -38,18 +40,38 @@ use Google\Service\BigQueryDataPolicyService\TestIamPermissionsResponse;
 class ProjectsLocationsDataPolicies extends \Google\Service\Resource
 {
   /**
-   * Creates a new data policy under a project with the given `dataPolicyId` (used
-   * as the display name), policy tag, and data policy type. (dataPolicies.create)
+   * Adds new grantees to a data policy. The new grantees will be added to the
+   * existing grantees. If the request contains a duplicate grantee, the grantee
+   * will be ignored. If the request contains a grantee that already exists, the
+   * grantee will be ignored. (dataPolicies.addGrantees)
    *
-   * @param string $parent Required. Resource name of the project that the data
-   * policy will belong to. The format is
-   * `projects/{project_number}/locations/{location_id}`.
-   * @param DataPolicy $postBody
+   * @param string $dataPolicy Required. Resource name of this data policy, in the
+   * format of `projects/{project_number}/locations/{location_id}/dataPolicies/{da
+   * ta_policy_id}`.
+   * @param AddGranteesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataPolicy
    * @throws \Google\Service\Exception
    */
-  public function create($parent, DataPolicy $postBody, $optParams = [])
+  public function addGrantees($dataPolicy, AddGranteesRequest $postBody, $optParams = [])
+  {
+    $params = ['dataPolicy' => $dataPolicy, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('addGrantees', [$params], DataPolicy::class);
+  }
+  /**
+   * Creates a new data policy under a project with the given `data_policy_id`
+   * (used as the display name), and data policy type. (dataPolicies.create)
+   *
+   * @param string $parent Required. Resource name of the project that the data
+   * policy will belong to. The format is
+   * `projects/{project_number}/locations/{location_id}`.
+   * @param CreateDataPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return DataPolicy
+   * @throws \Google\Service\Exception
+   */
+  public function create($parent, CreateDataPolicyRequest $postBody, $optParams = [])
   {
     $params = ['parent' => $parent, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
@@ -59,12 +81,9 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * Deletes the data policy specified by its resource name. (dataPolicies.delete)
    *
    * @param string $name Required. Resource name of the data policy to delete.
-   * Format is `projects/{project_number}/locations/{location_id}/dataPolicies/{da
-   * ta_policy_id}`.
+   * Format is
+   * `projects/{project_number}/locations/{location_id}/dataPolicies/{id}`.
    * @param array $optParams Optional parameters.
-   *
-   * @opt_param bool force Optional. If true, the data policy will be deleted even
-   * when it is referenced by one or more table columns.
    * @return BigquerydatapolicyEmpty
    * @throws \Google\Service\Exception
    */
@@ -78,8 +97,8 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * Gets the data policy specified by its resource name. (dataPolicies.get)
    *
    * @param string $name Required. Resource name of the requested data policy.
-   * Format is `projects/{project_number}/locations/{location_id}/dataPolicies/{da
-   * ta_policy_id}`.
+   * Format is
+   * `projects/{project_number}/locations/{location_id}/dataPolicies/{id}`.
    * @param array $optParams Optional parameters.
    * @return DataPolicy
    * @throws \Google\Service\Exception
@@ -118,16 +137,16 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * `projects/{project_number}/locations/{location_id}`.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Filters the data policies by policy tags that they
-   * are associated with. Currently filter only supports "policy_tag" based
-   * filtering and OR based predicates. Sample filter can be "policy_tag:
+   * @opt_param string filter Optional. Filters the data policies by policy tags
+   * that they are associated with. Currently filter only supports "policy_tag"
+   * based filtering and OR based predicates. Sample filter can be "policy_tag:
    * projects/1/locations/us/taxonomies/2/policyTags/3". You may also use wildcard
    * such as "policy_tag: projects/1/locations/us/taxonomies/2*". Please note that
    * OR predicates cannot be used with wildcard filters.
-   * @opt_param int pageSize The maximum number of data policies to return. Must
-   * be a value between 1 and 1000. If not set, defaults to 50.
-   * @opt_param string pageToken The `nextPageToken` value returned from a
-   * previous list request, if any. If not set, defaults to an empty string.
+   * @opt_param int pageSize Optional. The maximum number of data policies to
+   * return. Must be a value between 1 and 1000. If not set, defaults to 50.
+   * @opt_param string pageToken Optional. The `nextPageToken` value returned from
+   * a previous list request, if any. If not set, defaults to an empty string.
    * @return ListDataPoliciesResponse
    * @throws \Google\Service\Exception
    */
@@ -141,7 +160,7 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * Updates the metadata for an existing data policy. The target data policy can
    * be specified by the resource name. (dataPolicies.patch)
    *
-   * @param string $name Output only. Resource name of this data policy, in the
+   * @param string $name Identifier. Resource name of this data policy, in the
    * format of `projects/{project_number}/locations/{location_id}/dataPolicies/{da
    * ta_policy_id}`.
    * @param DataPolicy $postBody
@@ -150,8 +169,9 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
    * @opt_param bool allowMissing Optional. If set to true, and the data policy is
    * not found, a new data policy will be created. In this situation, update_mask
    * is ignored.
-   * @opt_param string updateMask The update mask applies to the resource. For the
-   * `FieldMask` definition, see https://developers.google.com/protocol-
+   * @opt_param string updateMask Optional. The update mask applies to the
+   * resource. For the `FieldMask` definition, see
+   * https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#fieldmask If not set, defaults to all
    * of the fields that are allowed to update. Updates to the `name` and
    * `dataPolicyId` fields are not allowed.
@@ -165,22 +185,23 @@ class ProjectsLocationsDataPolicies extends \Google\Service\Resource
     return $this->call('patch', [$params], DataPolicy::class);
   }
   /**
-   * Renames the id (display name) of the specified data policy.
-   * (dataPolicies.rename)
+   * Removes grantees from a data policy. The grantees will be removed from the
+   * existing grantees. If the request contains a grantee that does not exist, the
+   * grantee will be ignored. (dataPolicies.removeGrantees)
    *
-   * @param string $name Required. Resource name of the data policy to rename. The
-   * format is `projects/{project_number}/locations/{location_id}/dataPolicies/{da
-   * ta_policy_id}`
-   * @param RenameDataPolicyRequest $postBody
+   * @param string $dataPolicy Required. Resource name of this data policy, in the
+   * format of `projects/{project_number}/locations/{location_id}/dataPolicies/{da
+   * ta_policy_id}`.
+   * @param RemoveGranteesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return DataPolicy
    * @throws \Google\Service\Exception
    */
-  public function rename($name, RenameDataPolicyRequest $postBody, $optParams = [])
+  public function removeGrantees($dataPolicy, RemoveGranteesRequest $postBody, $optParams = [])
   {
-    $params = ['name' => $name, 'postBody' => $postBody];
+    $params = ['dataPolicy' => $dataPolicy, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
-    return $this->call('rename', [$params], DataPolicy::class);
+    return $this->call('removeGrantees', [$params], DataPolicy::class);
   }
   /**
    * Sets the IAM policy for the specified data policy.
