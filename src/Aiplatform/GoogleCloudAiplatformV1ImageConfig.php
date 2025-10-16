@@ -17,47 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
+class GoogleCloudAiplatformV1ImageConfig extends \Google\Model
 {
-  protected $collection_key = 'excludeDomains';
   /**
    * @var string
    */
-  public $blockingConfidence;
-  /**
-   * @var string[]
-   */
-  public $excludeDomains;
+  public $aspectRatio;
 
   /**
    * @param string
    */
-  public function setBlockingConfidence($blockingConfidence)
+  public function setAspectRatio($aspectRatio)
   {
-    $this->blockingConfidence = $blockingConfidence;
+    $this->aspectRatio = $aspectRatio;
   }
   /**
    * @return string
    */
-  public function getBlockingConfidence()
+  public function getAspectRatio()
   {
-    return $this->blockingConfidence;
-  }
-  /**
-   * @param string[]
-   */
-  public function setExcludeDomains($excludeDomains)
-  {
-    $this->excludeDomains = $excludeDomains;
-  }
-  /**
-   * @return string[]
-   */
-  public function getExcludeDomains()
-  {
-    return $this->excludeDomains;
+    return $this->aspectRatio;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ToolGoogleSearch::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ToolGoogleSearch');
+class_alias(GoogleCloudAiplatformV1ImageConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ImageConfig');

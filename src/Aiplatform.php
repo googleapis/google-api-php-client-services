@@ -995,6 +995,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -1150,6 +1154,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -1422,6 +1430,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -1578,6 +1590,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -1653,6 +1669,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -1828,6 +1848,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -1953,6 +1977,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -2119,6 +2147,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -2556,6 +2588,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -3074,6 +3110,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -3139,6 +3179,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -3332,6 +3376,16 @@ class Aiplatform extends \Google\Service
               ],
             ],'fetchFeatureValues' => [
               'path' => 'v1/{+featureView}:fetchFeatureValues',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'featureView' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'generateFetchAccessToken' => [
+              'path' => 'v1/{+featureView}:generateFetchAccessToken',
               'httpMethod' => 'POST',
               'parameters' => [
                 'featureView' => [
@@ -3546,6 +3600,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -3611,6 +3669,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -4144,6 +4206,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -4220,6 +4286,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -4295,6 +4365,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -4447,6 +4521,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -4654,6 +4732,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -4829,6 +4911,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -5092,6 +5178,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -5314,6 +5404,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -5512,6 +5606,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -5644,6 +5742,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -5749,6 +5851,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -5935,6 +6041,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -6289,6 +6399,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -6420,6 +6534,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -6689,6 +6807,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -6892,6 +7014,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -7068,6 +7194,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -7143,6 +7273,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -7305,6 +7439,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -7485,6 +7623,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -7744,6 +7886,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -7882,6 +8028,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -7957,6 +8107,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -8134,6 +8288,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -8310,6 +8468,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -8466,6 +8628,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -8609,6 +8775,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -8803,6 +8973,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -9107,6 +9281,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -9290,6 +9468,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -9498,6 +9680,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -9573,6 +9759,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],'wait' => [
@@ -9726,6 +9916,10 @@ class Aiplatform extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'wait' => [
               'path' => 'v1/{+name}:wait',
@@ -9873,6 +10067,10 @@ class Aiplatform extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'returnPartialSuccess' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
                 ],
               ],
             ],

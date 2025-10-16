@@ -22,6 +22,8 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureViewDirectWriteReque
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FeatureViewDirectWriteResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchFeatureValuesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchFeatureValuesResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateFetchAccessTokenRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ListFeatureViewsResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1SearchNearestEntitiesRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1SearchNearestEntitiesResponse;
@@ -120,6 +122,25 @@ class ProjectsLocationsFeatureOnlineStoresFeatureViews extends \Google\Service\R
     $params = ['featureView' => $featureView, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('fetchFeatureValues', [$params], GoogleCloudAiplatformV1FetchFeatureValuesResponse::class);
+  }
+  /**
+   * RPC to generate an access token for the given feature view. FeatureViews
+   * under the same FeatureOnlineStore share the same access token.
+   * (featureViews.generateFetchAccessToken)
+   *
+   * @param string $featureView FeatureView resource format `projects/{project}/lo
+   * cations/{location}/featureOnlineStores/{featureOnlineStore}/featureViews/{fea
+   * tureView}`
+   * @param GoogleCloudAiplatformV1GenerateFetchAccessTokenRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateFetchAccessToken($featureView, GoogleCloudAiplatformV1GenerateFetchAccessTokenRequest $postBody, $optParams = [])
+  {
+    $params = ['featureView' => $featureView, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateFetchAccessToken', [$params], GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse::class);
   }
   /**
    * Gets details of a single FeatureView. (featureViews.get)

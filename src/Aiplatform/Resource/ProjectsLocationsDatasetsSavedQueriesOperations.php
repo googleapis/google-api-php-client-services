@@ -97,6 +97,13 @@ class ProjectsLocationsDatasetsSavedQueriesOperations extends \Google\Service\Re
    * @opt_param string filter The standard list filter.
    * @opt_param int pageSize The standard list page size.
    * @opt_param string pageToken The standard list page token.
+   * @opt_param bool returnPartialSuccess When set to `true`, operations that are
+   * reachable are returned as normal, and those that are unreachable are returned
+   * in the [ListOperationsResponse.unreachable] field. This can only be `true`
+   * when reading across collections e.g. when `parent` is set to
+   * `"projects/example/locations/-"`. This field is not by default supported and
+   * will result in an `UNIMPLEMENTED` error if set unless explicitly documented
+   * otherwise in service or product specific documentation.
    * @return GoogleLongrunningListOperationsResponse
    * @throws \Google\Service\Exception
    */

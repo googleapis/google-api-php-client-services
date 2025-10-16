@@ -36,6 +36,8 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
    * @var float
    */
   public $frequencyPenalty;
+  protected $imageConfigType = GoogleCloudAiplatformV1ImageConfig::class;
+  protected $imageConfigDataType = '';
   /**
    * @var int
    */
@@ -152,6 +154,20 @@ class GoogleCloudAiplatformV1GenerationConfig extends \Google\Collection
   public function getFrequencyPenalty()
   {
     return $this->frequencyPenalty;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ImageConfig
+   */
+  public function setImageConfig(GoogleCloudAiplatformV1ImageConfig $imageConfig)
+  {
+    $this->imageConfig = $imageConfig;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ImageConfig
+   */
+  public function getImageConfig()
+  {
+    return $this->imageConfig;
   }
   /**
    * @param int

@@ -21,10 +21,28 @@ class GoogleCloudAiplatformV1EnterpriseWebSearch extends \Google\Collection
 {
   protected $collection_key = 'excludeDomains';
   /**
+   * @var string
+   */
+  public $blockingConfidence;
+  /**
    * @var string[]
    */
   public $excludeDomains;
 
+  /**
+   * @param string
+   */
+  public function setBlockingConfidence($blockingConfidence)
+  {
+    $this->blockingConfidence = $blockingConfidence;
+  }
+  /**
+   * @return string
+   */
+  public function getBlockingConfidence()
+  {
+    return $this->blockingConfidence;
+  }
   /**
    * @param string[]
    */

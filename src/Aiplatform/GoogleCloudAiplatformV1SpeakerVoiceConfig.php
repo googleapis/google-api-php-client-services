@@ -17,44 +17,28 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
+class GoogleCloudAiplatformV1SpeakerVoiceConfig extends \Google\Model
 {
   /**
    * @var string
    */
-  public $languageCode;
-  protected $multiSpeakerVoiceConfigType = GoogleCloudAiplatformV1MultiSpeakerVoiceConfig::class;
-  protected $multiSpeakerVoiceConfigDataType = '';
+  public $speaker;
   protected $voiceConfigType = GoogleCloudAiplatformV1VoiceConfig::class;
   protected $voiceConfigDataType = '';
 
   /**
    * @param string
    */
-  public function setLanguageCode($languageCode)
+  public function setSpeaker($speaker)
   {
-    $this->languageCode = $languageCode;
+    $this->speaker = $speaker;
   }
   /**
    * @return string
    */
-  public function getLanguageCode()
+  public function getSpeaker()
   {
-    return $this->languageCode;
-  }
-  /**
-   * @param GoogleCloudAiplatformV1MultiSpeakerVoiceConfig
-   */
-  public function setMultiSpeakerVoiceConfig(GoogleCloudAiplatformV1MultiSpeakerVoiceConfig $multiSpeakerVoiceConfig)
-  {
-    $this->multiSpeakerVoiceConfig = $multiSpeakerVoiceConfig;
-  }
-  /**
-   * @return GoogleCloudAiplatformV1MultiSpeakerVoiceConfig
-   */
-  public function getMultiSpeakerVoiceConfig()
-  {
-    return $this->multiSpeakerVoiceConfig;
+    return $this->speaker;
   }
   /**
    * @param GoogleCloudAiplatformV1VoiceConfig
@@ -73,4 +57,4 @@ class GoogleCloudAiplatformV1SpeechConfig extends \Google\Model
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1SpeechConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SpeechConfig');
+class_alias(GoogleCloudAiplatformV1SpeakerVoiceConfig::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1SpeakerVoiceConfig');

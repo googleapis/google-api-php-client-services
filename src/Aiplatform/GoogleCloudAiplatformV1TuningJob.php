@@ -51,6 +51,8 @@ class GoogleCloudAiplatformV1TuningJob extends \Google\Model
    * @var string
    */
   public $name;
+  protected $preTunedModelType = GoogleCloudAiplatformV1PreTunedModel::class;
+  protected $preTunedModelDataType = '';
   /**
    * @var string
    */
@@ -203,6 +205,20 @@ class GoogleCloudAiplatformV1TuningJob extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1PreTunedModel
+   */
+  public function setPreTunedModel(GoogleCloudAiplatformV1PreTunedModel $preTunedModel)
+  {
+    $this->preTunedModel = $preTunedModel;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1PreTunedModel
+   */
+  public function getPreTunedModel()
+  {
+    return $this->preTunedModel;
   }
   /**
    * @param string

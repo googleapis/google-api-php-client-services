@@ -17,47 +17,46 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1ToolGoogleSearch extends \Google\Collection
+class GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse extends \Google\Model
 {
-  protected $collection_key = 'excludeDomains';
   /**
    * @var string
    */
-  public $blockingConfidence;
+  public $accessToken;
   /**
-   * @var string[]
+   * @var string
    */
-  public $excludeDomains;
+  public $expireTime;
 
   /**
    * @param string
    */
-  public function setBlockingConfidence($blockingConfidence)
+  public function setAccessToken($accessToken)
   {
-    $this->blockingConfidence = $blockingConfidence;
+    $this->accessToken = $accessToken;
   }
   /**
    * @return string
    */
-  public function getBlockingConfidence()
+  public function getAccessToken()
   {
-    return $this->blockingConfidence;
+    return $this->accessToken;
   }
   /**
-   * @param string[]
+   * @param string
    */
-  public function setExcludeDomains($excludeDomains)
+  public function setExpireTime($expireTime)
   {
-    $this->excludeDomains = $excludeDomains;
+    $this->expireTime = $expireTime;
   }
   /**
-   * @return string[]
+   * @return string
    */
-  public function getExcludeDomains()
+  public function getExpireTime()
   {
-    return $this->excludeDomains;
+    return $this->expireTime;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudAiplatformV1ToolGoogleSearch::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1ToolGoogleSearch');
+class_alias(GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse::class, 'Google_Service_Aiplatform_GoogleCloudAiplatformV1GenerateFetchAccessTokenResponse');
