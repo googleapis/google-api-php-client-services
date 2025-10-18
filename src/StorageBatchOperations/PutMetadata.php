@@ -47,6 +47,8 @@ class PutMetadata extends \Google\Model
    * @var string
    */
   public $customTime;
+  protected $objectRetentionType = ObjectRetention::class;
+  protected $objectRetentionDataType = '';
 
   /**
    * @param string
@@ -145,6 +147,20 @@ class PutMetadata extends \Google\Model
   public function getCustomTime()
   {
     return $this->customTime;
+  }
+  /**
+   * @param ObjectRetention
+   */
+  public function setObjectRetention(ObjectRetention $objectRetention)
+  {
+    $this->objectRetention = $objectRetention;
+  }
+  /**
+   * @return ObjectRetention
+   */
+  public function getObjectRetention()
+  {
+    return $this->objectRetention;
   }
 }
 
