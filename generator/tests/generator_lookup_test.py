@@ -47,7 +47,8 @@ class GeneratorLookupTest(absltest.TestCase):
     targets.Targets.SetDefaultTemplateRoot(template_root)
     features_path = os.path.join(template_root,
                                  'php/generator_test/features.json')
-    raw_features = json.load(open(features_path))
+    with open(features_path, 'r') as f:
+      raw_features = json.load(f)
     generator_name = raw_features['generator']
     gen = generator_lookup.GetGeneratorByLanguage(generator_name)
     self.assertEqual(php_generator.PHPGenerator, gen)
