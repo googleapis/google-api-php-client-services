@@ -29,6 +29,10 @@ class ResourceMaintenanceSchedule extends \Google\Model
   public $phase;
   protected $timeType = TimeOfDay::class;
   protected $timeDataType = '';
+  /**
+   * @var string
+   */
+  public $week;
 
   /**
    * @param string
@@ -71,6 +75,20 @@ class ResourceMaintenanceSchedule extends \Google\Model
   public function getTime()
   {
     return $this->time;
+  }
+  /**
+   * @param string
+   */
+  public function setWeek($week)
+  {
+    $this->week = $week;
+  }
+  /**
+   * @return string
+   */
+  public function getWeek()
+  {
+    return $this->week;
   }
 }
 
