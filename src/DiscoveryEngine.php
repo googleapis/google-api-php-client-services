@@ -40,6 +40,12 @@ class DiscoveryEngine extends \Google\Service
   /** Search your organization's data in the Cloud Search index. */
   const CLOUD_SEARCH_QUERY =
       "https://www.googleapis.com/auth/cloud_search.query";
+  /** View your Agentspace chat history, including uploaded files and generated reports and visualizations, and interact with the Agentspace assistant on your behalf.. */
+  const DISCOVERYENGINE_ASSIST_READWRITE =
+      "https://www.googleapis.com/auth/discoveryengine.assist.readwrite";
+  /** View, edit, create, and delete all your data associated with any Discovery Engine API product, such as Agentspace, Vertex AI Search, or NotebookLM Enterprise, including both end user data and administration or configuration data.. */
+  const DISCOVERYENGINE_READWRITE =
+      "https://www.googleapis.com/auth/discoveryengine.readwrite";
 
   public $media;
   public $projects;

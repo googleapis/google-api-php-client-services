@@ -32,6 +32,10 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
    */
   public $freeTrial;
   /**
+   * @var bool
+   */
+  public $geminiBundle;
+  /**
    * @var string
    */
   public $licenseCount;
@@ -109,6 +113,20 @@ class GoogleCloudDiscoveryengineV1betaLicenseConfig extends \Google\Model
   public function getFreeTrial()
   {
     return $this->freeTrial;
+  }
+  /**
+   * @param bool
+   */
+  public function setGeminiBundle($geminiBundle)
+  {
+    $this->geminiBundle = $geminiBundle;
+  }
+  /**
+   * @return bool
+   */
+  public function getGeminiBundle()
+  {
+    return $this->geminiBundle;
   }
   /**
    * @param string

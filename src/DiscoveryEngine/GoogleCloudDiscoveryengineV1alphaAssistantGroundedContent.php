@@ -19,11 +19,27 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaAssistantGroundedContent extends \Google\Model
 {
+  protected $citationMetadataType = GoogleCloudDiscoveryengineV1alphaCitationMetadata::class;
+  protected $citationMetadataDataType = '';
   protected $contentType = GoogleCloudDiscoveryengineV1alphaAssistantContent::class;
   protected $contentDataType = '';
   protected $textGroundingMetadataType = GoogleCloudDiscoveryengineV1alphaAssistantGroundedContentTextGroundingMetadata::class;
   protected $textGroundingMetadataDataType = '';
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaCitationMetadata
+   */
+  public function setCitationMetadata(GoogleCloudDiscoveryengineV1alphaCitationMetadata $citationMetadata)
+  {
+    $this->citationMetadata = $citationMetadata;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaCitationMetadata
+   */
+  public function getCitationMetadata()
+  {
+    return $this->citationMetadata;
+  }
   /**
    * @param GoogleCloudDiscoveryengineV1alphaAssistantContent
    */
