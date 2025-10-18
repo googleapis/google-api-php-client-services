@@ -21,6 +21,8 @@ class ContainerdConfig extends \Google\Model
 {
   protected $privateRegistryAccessConfigType = PrivateRegistryAccessConfig::class;
   protected $privateRegistryAccessConfigDataType = '';
+  protected $writableCgroupsType = WritableCgroups::class;
+  protected $writableCgroupsDataType = '';
 
   /**
    * @param PrivateRegistryAccessConfig
@@ -35,6 +37,20 @@ class ContainerdConfig extends \Google\Model
   public function getPrivateRegistryAccessConfig()
   {
     return $this->privateRegistryAccessConfig;
+  }
+  /**
+   * @param WritableCgroups
+   */
+  public function setWritableCgroups(WritableCgroups $writableCgroups)
+  {
+    $this->writableCgroups = $writableCgroups;
+  }
+  /**
+   * @return WritableCgroups
+   */
+  public function getWritableCgroups()
+  {
+    return $this->writableCgroups;
   }
 }
 
