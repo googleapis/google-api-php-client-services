@@ -83,11 +83,11 @@ class OrganizationsLocationsTableDataProfiles extends \Google\Service\Resource
    * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
    * `profile_last_generated`: Date and time the profile was last generated * The
    * operator must be `=` or `!=`. The `profile_last_generated` filter also
-   * supports `<` and `>`. Examples: * `project_id = 12345 AND status_code = 1` *
-   * `project_id = 12345 AND sensitivity_level = HIGH` * `project_id = 12345 AND
-   * resource_visibility = PUBLIC` * `profile_last_generated <
-   * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than
-   * 500 characters.
+   * supports `<` and `>`. The syntax is based on https://google.aip.dev/160.
+   * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345
+   * AND sensitivity_level = HIGH` * `project_id = 12345 AND resource_visibility =
+   * PUBLIC` * `profile_last_generated < "2025-01-01T00:00:00.000Z"` The length of
+   * this field should be no more than 500 characters.
    * @opt_param string orderBy Comma-separated list of fields to order by,
    * followed by `asc` or `desc` postfix. This list is case insensitive. The
    * default sorting order is ascending. Redundant space characters are

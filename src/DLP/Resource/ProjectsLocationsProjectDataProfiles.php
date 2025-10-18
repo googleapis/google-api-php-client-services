@@ -62,8 +62,9 @@ class ProjectsLocationsProjectDataProfiles extends \Google\Service\Resource
    * https://github.com/googleapis/googleapis/blob/master/google/rpc/code.proto -
    * `profile_last_generated`: Date and time the profile was last generated * The
    * operator must be `=` or `!=`. The `profile_last_generated` filter also
-   * supports `<` and `>`. Examples: * `project_id = 12345 AND status_code = 1` *
-   * `project_id = 12345 AND sensitivity_level = HIGH` * `profile_last_generated <
+   * supports `<` and `>`. The syntax is based on https://google.aip.dev/160.
+   * Examples: * `project_id = 12345 AND status_code = 1` * `project_id = 12345
+   * AND sensitivity_level = HIGH` * `profile_last_generated <
    * "2025-01-01T00:00:00.000Z"` The length of this field should be no more than
    * 500 characters.
    * @opt_param string orderBy Comma-separated list of fields to order by,
