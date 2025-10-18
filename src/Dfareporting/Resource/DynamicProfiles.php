@@ -18,6 +18,7 @@
 namespace Google\Service\Dfareporting\Resource;
 
 use Google\Service\Dfareporting\DynamicProfile;
+use Google\Service\Dfareporting\DynamicProfileGenerateCodeResponse;
 
 /**
  * The "dynamicProfiles" collection of methods.
@@ -29,6 +30,20 @@ use Google\Service\Dfareporting\DynamicProfile;
  */
 class DynamicProfiles extends \Google\Service\Resource
 {
+  /**
+   * Generates code for a dynamic profile. (dynamicProfiles.generateCode)
+   *
+   * @param string $dynamicProfileId Required. Dynamic profile ID.
+   * @param array $optParams Optional parameters.
+   * @return DynamicProfileGenerateCodeResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateCode($dynamicProfileId, $optParams = [])
+  {
+    $params = ['dynamicProfileId' => $dynamicProfileId];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateCode', [$params], DynamicProfileGenerateCodeResponse::class);
+  }
   /**
    * Gets a dynamic profile by ID. (dynamicProfiles.get)
    *
@@ -56,6 +71,19 @@ class DynamicProfiles extends \Google\Service\Resource
     $params = ['postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('insert', [$params], DynamicProfile::class);
+  }
+  /**
+   * Publish for a dynamic profile. (dynamicProfiles.publish)
+   *
+   * @param string $dynamicProfileId Required. Dynamic profile ID.
+   * @param array $optParams Optional parameters.
+   * @throws \Google\Service\Exception
+   */
+  public function publish($dynamicProfileId, $optParams = [])
+  {
+    $params = ['dynamicProfileId' => $dynamicProfileId];
+    $params = array_merge($params, $optParams);
+    return $this->call('publish', [$params]);
   }
   /**
    * Updates an existing dynamic profile. (dynamicProfiles.update)
