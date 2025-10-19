@@ -243,7 +243,8 @@ class ProjectsLocationsInstances extends \Google\Service\Resource
   /**
    * UpdateInstance updates an Instance. (instances.patch)
    *
-   * @param string $name Output only. The name of this notebook instance. Format:
+   * @param string $name Output only. Identifier. The name of this notebook
+   * instance. Format:
    * `projects/{project_id}/locations/{location}/instances/{instance_id}`
    * @param Instance $postBody
    * @param array $optParams Optional parameters.
