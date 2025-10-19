@@ -19,8 +19,6 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
 {
-  protected $alertPolicyResourceConfigType = GoogleCloudDiscoveryengineV1AlertPolicyResourceConfig::class;
-  protected $alertPolicyResourceConfigDataType = '';
   /**
    * @var bool
    */
@@ -58,20 +56,6 @@ class GoogleCloudDiscoveryengineV1LicenseConfig extends \Google\Model
    */
   public $subscriptionTier;
 
-  /**
-   * @param GoogleCloudDiscoveryengineV1AlertPolicyResourceConfig
-   */
-  public function setAlertPolicyResourceConfig(GoogleCloudDiscoveryengineV1AlertPolicyResourceConfig $alertPolicyResourceConfig)
-  {
-    $this->alertPolicyResourceConfig = $alertPolicyResourceConfig;
-  }
-  /**
-   * @return GoogleCloudDiscoveryengineV1AlertPolicyResourceConfig
-   */
-  public function getAlertPolicyResourceConfig()
-  {
-    return $this->alertPolicyResourceConfig;
-  }
   /**
    * @param bool
    */
