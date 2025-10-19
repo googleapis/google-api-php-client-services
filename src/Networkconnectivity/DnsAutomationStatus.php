@@ -17,44 +17,62 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class ProducerPscConfig extends \Google\Model
+class DnsAutomationStatus extends \Google\Model
 {
-  protected $automatedDnsCreationSpecType = AutomatedDnsCreationSpec::class;
-  protected $automatedDnsCreationSpecDataType = '';
+  protected $errorType = GoogleRpcStatus::class;
+  protected $errorDataType = '';
   /**
    * @var string
    */
-  public $serviceAttachmentUri;
+  public $fqdn;
+  /**
+   * @var string
+   */
+  public $state;
 
   /**
-   * @param AutomatedDnsCreationSpec
+   * @param GoogleRpcStatus
    */
-  public function setAutomatedDnsCreationSpec(AutomatedDnsCreationSpec $automatedDnsCreationSpec)
+  public function setError(GoogleRpcStatus $error)
   {
-    $this->automatedDnsCreationSpec = $automatedDnsCreationSpec;
+    $this->error = $error;
   }
   /**
-   * @return AutomatedDnsCreationSpec
+   * @return GoogleRpcStatus
    */
-  public function getAutomatedDnsCreationSpec()
+  public function getError()
   {
-    return $this->automatedDnsCreationSpec;
+    return $this->error;
   }
   /**
    * @param string
    */
-  public function setServiceAttachmentUri($serviceAttachmentUri)
+  public function setFqdn($fqdn)
   {
-    $this->serviceAttachmentUri = $serviceAttachmentUri;
+    $this->fqdn = $fqdn;
   }
   /**
    * @return string
    */
-  public function getServiceAttachmentUri()
+  public function getFqdn()
   {
-    return $this->serviceAttachmentUri;
+    return $this->fqdn;
+  }
+  /**
+   * @param string
+   */
+  public function setState($state)
+  {
+    $this->state = $state;
+  }
+  /**
+   * @return string
+   */
+  public function getState()
+  {
+    return $this->state;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProducerPscConfig::class, 'Google_Service_Networkconnectivity_ProducerPscConfig');
+class_alias(DnsAutomationStatus::class, 'Google_Service_Networkconnectivity_DnsAutomationStatus');

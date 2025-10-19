@@ -17,44 +17,64 @@
 
 namespace Google\Service\Networkconnectivity;
 
-class ProducerPscConfig extends \Google\Model
+class AutomatedDnsCreationSpec extends \Google\Model
 {
-  protected $automatedDnsCreationSpecType = AutomatedDnsCreationSpec::class;
-  protected $automatedDnsCreationSpecDataType = '';
   /**
    * @var string
    */
-  public $serviceAttachmentUri;
+  public $dnsSuffix;
+  /**
+   * @var string
+   */
+  public $hostname;
+  /**
+   * @var string
+   */
+  public $ttl;
 
-  /**
-   * @param AutomatedDnsCreationSpec
-   */
-  public function setAutomatedDnsCreationSpec(AutomatedDnsCreationSpec $automatedDnsCreationSpec)
-  {
-    $this->automatedDnsCreationSpec = $automatedDnsCreationSpec;
-  }
-  /**
-   * @return AutomatedDnsCreationSpec
-   */
-  public function getAutomatedDnsCreationSpec()
-  {
-    return $this->automatedDnsCreationSpec;
-  }
   /**
    * @param string
    */
-  public function setServiceAttachmentUri($serviceAttachmentUri)
+  public function setDnsSuffix($dnsSuffix)
   {
-    $this->serviceAttachmentUri = $serviceAttachmentUri;
+    $this->dnsSuffix = $dnsSuffix;
   }
   /**
    * @return string
    */
-  public function getServiceAttachmentUri()
+  public function getDnsSuffix()
   {
-    return $this->serviceAttachmentUri;
+    return $this->dnsSuffix;
+  }
+  /**
+   * @param string
+   */
+  public function setHostname($hostname)
+  {
+    $this->hostname = $hostname;
+  }
+  /**
+   * @return string
+   */
+  public function getHostname()
+  {
+    return $this->hostname;
+  }
+  /**
+   * @param string
+   */
+  public function setTtl($ttl)
+  {
+    $this->ttl = $ttl;
+  }
+  /**
+   * @return string
+   */
+  public function getTtl()
+  {
+    return $this->ttl;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProducerPscConfig::class, 'Google_Service_Networkconnectivity_ProducerPscConfig');
+class_alias(AutomatedDnsCreationSpec::class, 'Google_Service_Networkconnectivity_AutomatedDnsCreationSpec');

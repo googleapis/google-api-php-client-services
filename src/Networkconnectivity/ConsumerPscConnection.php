@@ -19,6 +19,8 @@ namespace Google\Service\Networkconnectivity;
 
 class ConsumerPscConnection extends \Google\Model
 {
+  protected $dnsAutomationStatusType = DnsAutomationStatus::class;
+  protected $dnsAutomationStatusDataType = '';
   protected $errorDataType = '';
   protected $errorInfoType = GoogleRpcErrorInfo::class;
   protected $errorInfoDataType = '';
@@ -75,6 +77,20 @@ class ConsumerPscConnection extends \Google\Model
    */
   public $state;
 
+  /**
+   * @param DnsAutomationStatus
+   */
+  public function setDnsAutomationStatus(DnsAutomationStatus $dnsAutomationStatus)
+  {
+    $this->dnsAutomationStatus = $dnsAutomationStatus;
+  }
+  /**
+   * @return DnsAutomationStatus
+   */
+  public function getDnsAutomationStatus()
+  {
+    return $this->dnsAutomationStatus;
+  }
   /**
    * @param GoogleRpcStatus
    */
