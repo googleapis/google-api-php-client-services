@@ -18,9 +18,13 @@
 namespace Google\Service\Compute\Resource;
 
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\Policy;
 use Google\Service\Compute\ReservationBlocksGetResponse;
 use Google\Service\Compute\ReservationBlocksListResponse;
 use Google\Service\Compute\ReservationsBlocksPerformMaintenanceRequest;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
+use Google\Service\Compute\ZoneSetNestedPolicyRequest;
 
 /**
  * The "reservationBlocks" collection of methods.
@@ -54,6 +58,27 @@ class ReservationBlocks extends \Google\Service\Resource
     $params = ['project' => $project, 'zone' => $zone, 'reservation' => $reservation, 'reservationBlock' => $reservationBlock];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], ReservationBlocksGetResponse::class);
+  }
+  /**
+   * Gets the access control policy for a resource. May be empty if no such policy
+   * or resource exists. (reservationBlocks.getIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $parentResource Name or id of parent resource of the resource
+   * for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int optionsRequestedPolicyVersion Requested IAM Policy version.
+   * @return Policy
+   * @throws \Google\Service\Exception
+   */
+  public function getIamPolicy($project, $zone, $parentResource, $resource, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'parentResource' => $parentResource, 'resource' => $resource];
+    $params = array_merge($params, $optParams);
+    return $this->call('getIamPolicy', [$params], Policy::class);
   }
   /**
    * Retrieves a list of reservation blocks under a single reservation.
@@ -178,6 +203,46 @@ class ReservationBlocks extends \Google\Service\Resource
     $params = ['project' => $project, 'zone' => $zone, 'reservation' => $reservation, 'reservationBlock' => $reservationBlock, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('performMaintenance', [$params], Operation::class);
+  }
+  /**
+   * Sets the access control policy on the specified resource. Replaces any
+   * existing policy. (reservationBlocks.setIamPolicy)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $parentResource Name or id of parent resource of the resource
+   * for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param ZoneSetNestedPolicyRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return Policy
+   * @throws \Google\Service\Exception
+   */
+  public function setIamPolicy($project, $zone, $parentResource, $resource, ZoneSetNestedPolicyRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'parentResource' => $parentResource, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('setIamPolicy', [$params], Policy::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (reservationBlocks.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $zone The name of the zone for this request.
+   * @param string $parentResource Name or id of parent resource of the resource
+   * for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $zone, $parentResource, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'zone' => $zone, 'parentResource' => $parentResource, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
 }
 
