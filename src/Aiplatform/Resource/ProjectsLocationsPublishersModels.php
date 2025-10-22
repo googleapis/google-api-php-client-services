@@ -22,6 +22,8 @@ use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1ComputeTokensResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1CountTokensResponse;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1EmbedContentRequest;
+use Google\Service\Aiplatform\GoogleCloudAiplatformV1EmbedContentResponse;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1FetchPredictOperationRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentRequest;
 use Google\Service\Aiplatform\GoogleCloudAiplatformV1GenerateContentResponse;
@@ -76,6 +78,23 @@ class ProjectsLocationsPublishersModels extends \Google\Service\Resource
     $params = ['endpoint' => $endpoint, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('countTokens', [$params], GoogleCloudAiplatformV1CountTokensResponse::class);
+  }
+  /**
+   * Embed content with multimodal inputs. (models.embedContent)
+   *
+   * @param string $model Required. The name of the publisher model requested to
+   * serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @param GoogleCloudAiplatformV1EmbedContentRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return GoogleCloudAiplatformV1EmbedContentResponse
+   * @throws \Google\Service\Exception
+   */
+  public function embedContent($model, GoogleCloudAiplatformV1EmbedContentRequest $postBody, $optParams = [])
+  {
+    $params = ['model' => $model, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('embedContent', [$params], GoogleCloudAiplatformV1EmbedContentResponse::class);
   }
   /**
    * Fetch an asynchronous online prediction operation.

@@ -7673,6 +7673,16 @@ class Aiplatform extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'embedContent' => [
+              'path' => 'v1/{+model}:embedContent',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'model' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'fetchPredictOperation' => [
               'path' => 'v1/{+endpoint}:fetchPredictOperation',
               'httpMethod' => 'POST',
