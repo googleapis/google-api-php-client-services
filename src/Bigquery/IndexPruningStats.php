@@ -24,6 +24,10 @@ class IndexPruningStats extends \Google\Model
   /**
    * @var string
    */
+  public $indexId;
+  /**
+   * @var string
+   */
   public $postIndexPruningParallelInputCount;
   /**
    * @var string
@@ -43,6 +47,20 @@ class IndexPruningStats extends \Google\Model
   public function getBaseTable()
   {
     return $this->baseTable;
+  }
+  /**
+   * @param string
+   */
+  public function setIndexId($indexId)
+  {
+    $this->indexId = $indexId;
+  }
+  /**
+   * @return string
+   */
+  public function getIndexId()
+  {
+    return $this->indexId;
   }
   /**
    * @param string
