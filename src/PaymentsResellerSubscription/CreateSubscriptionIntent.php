@@ -19,6 +19,8 @@ namespace Google\Service\PaymentsResellerSubscription;
 
 class CreateSubscriptionIntent extends \Google\Model
 {
+  protected $cycleOptionsType = CycleOptions::class;
+  protected $cycleOptionsDataType = '';
   /**
    * @var string
    */
@@ -30,6 +32,20 @@ class CreateSubscriptionIntent extends \Google\Model
    */
   public $subscriptionId;
 
+  /**
+   * @param CycleOptions
+   */
+  public function setCycleOptions(CycleOptions $cycleOptions)
+  {
+    $this->cycleOptions = $cycleOptions;
+  }
+  /**
+   * @return CycleOptions
+   */
+  public function getCycleOptions()
+  {
+    return $this->cycleOptions;
+  }
   /**
    * @param string
    */
