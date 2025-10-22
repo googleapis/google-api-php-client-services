@@ -123,6 +123,14 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   /**
    * @var string
    */
+  public $movedPlace;
+  /**
+   * @var string
+   */
+  public $movedPlaceId;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -709,6 +717,34 @@ class GoogleMapsPlacesV1Place extends \Google\Collection
   public function getMenuForChildren()
   {
     return $this->menuForChildren;
+  }
+  /**
+   * @param string
+   */
+  public function setMovedPlace($movedPlace)
+  {
+    $this->movedPlace = $movedPlace;
+  }
+  /**
+   * @return string
+   */
+  public function getMovedPlace()
+  {
+    return $this->movedPlace;
+  }
+  /**
+   * @param string
+   */
+  public function setMovedPlaceId($movedPlaceId)
+  {
+    $this->movedPlaceId = $movedPlaceId;
+  }
+  /**
+   * @return string
+   */
+  public function getMovedPlaceId()
+  {
+    return $this->movedPlaceId;
   }
   /**
    * @param string
