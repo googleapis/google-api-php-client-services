@@ -21,6 +21,10 @@ class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmCon
 {
   protected $modelArmorConfigType = GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig::class;
   protected $modelArmorConfigDataType = '';
+  /**
+   * @var bool
+   */
+  public $optOutNotebookSharing;
 
   /**
    * @param GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfigModelArmorConfig
@@ -35,6 +39,20 @@ class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmCon
   public function getModelArmorConfig()
   {
     return $this->modelArmorConfig;
+  }
+  /**
+   * @param bool
+   */
+  public function setOptOutNotebookSharing($optOutNotebookSharing)
+  {
+    $this->optOutNotebookSharing = $optOutNotebookSharing;
+  }
+  /**
+   * @return bool
+   */
+  public function getOptOutNotebookSharing()
+  {
+    return $this->optOutNotebookSharing;
   }
 }
 
