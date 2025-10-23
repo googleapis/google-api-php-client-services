@@ -44,6 +44,8 @@ class ChromeOsDevice extends \Google\Collection
   public $autoUpdateThrough;
   protected $backlightInfoType = BacklightInfo::class;
   protected $backlightInfoDataType = 'array';
+  protected $bluetoothAdapterInfoType = BluetoothAdapterInfo::class;
+  protected $bluetoothAdapterInfoDataType = 'array';
   /**
    * @var string
    */
@@ -302,6 +304,20 @@ class ChromeOsDevice extends \Google\Collection
   public function getBacklightInfo()
   {
     return $this->backlightInfo;
+  }
+  /**
+   * @param BluetoothAdapterInfo[]
+   */
+  public function setBluetoothAdapterInfo($bluetoothAdapterInfo)
+  {
+    $this->bluetoothAdapterInfo = $bluetoothAdapterInfo;
+  }
+  /**
+   * @return BluetoothAdapterInfo[]
+   */
+  public function getBluetoothAdapterInfo()
+  {
+    return $this->bluetoothAdapterInfo;
   }
   /**
    * @param string
