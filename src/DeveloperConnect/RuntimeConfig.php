@@ -19,10 +19,14 @@ namespace Google\Service\DeveloperConnect;
 
 class RuntimeConfig extends \Google\Model
 {
+  protected $appHubServiceType = AppHubService::class;
+  protected $appHubServiceDataType = '';
   protected $appHubWorkloadType = AppHubWorkload::class;
   protected $appHubWorkloadDataType = '';
   protected $gkeWorkloadType = GKEWorkload::class;
   protected $gkeWorkloadDataType = '';
+  protected $googleCloudRunType = GoogleCloudRun::class;
+  protected $googleCloudRunDataType = '';
   /**
    * @var string
    */
@@ -32,6 +36,20 @@ class RuntimeConfig extends \Google\Model
    */
   public $uri;
 
+  /**
+   * @param AppHubService
+   */
+  public function setAppHubService(AppHubService $appHubService)
+  {
+    $this->appHubService = $appHubService;
+  }
+  /**
+   * @return AppHubService
+   */
+  public function getAppHubService()
+  {
+    return $this->appHubService;
+  }
   /**
    * @param AppHubWorkload
    */
@@ -59,6 +77,20 @@ class RuntimeConfig extends \Google\Model
   public function getGkeWorkload()
   {
     return $this->gkeWorkload;
+  }
+  /**
+   * @param GoogleCloudRun
+   */
+  public function setGoogleCloudRun(GoogleCloudRun $googleCloudRun)
+  {
+    $this->googleCloudRun = $googleCloudRun;
+  }
+  /**
+   * @return GoogleCloudRun
+   */
+  public function getGoogleCloudRun()
+  {
+    return $this->googleCloudRun;
   }
   /**
    * @param string
