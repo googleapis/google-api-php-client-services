@@ -20,7 +20,7 @@ namespace Google\Service;
 use Google\Client;
 
 /**
- * Service definition for Chromewebstore (v1.1).
+ * Service definition for Chromewebstore (v2).
  *
  * <p>
  * The Chrome Web Store API provides access to data about apps and extensions,
@@ -42,7 +42,8 @@ class Chromewebstore extends \Google\Service
   const CHROMEWEBSTORE_READONLY =
       "https://www.googleapis.com/auth/chromewebstore.readonly";
 
-  public $items;
+  public $media;
+  public $publishers_items;
   public $rootUrlTemplate;
 
   /**
@@ -59,65 +60,70 @@ class Chromewebstore extends \Google\Service
     $this->rootUrlTemplate = $rootUrl ?: 'https://chromewebstore.UNIVERSE_DOMAIN/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1.1';
+    $this->version = 'v2';
     $this->serviceName = 'chromewebstore';
 
-    $this->items = new Chromewebstore\Resource\Items(
+    $this->media = new Chromewebstore\Resource\Media(
+        $this,
+        $this->serviceName,
+        'media',
+        [
+          'methods' => [
+            'upload' => [
+              'path' => 'v2/{+name}:upload',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->publishers_items = new Chromewebstore\Resource\PublishersItems(
         $this,
         $this->serviceName,
         'items',
         [
           'methods' => [
-            'get' => [
-              'path' => 'chromewebstore/v1.1/items/{itemId}',
-              'httpMethod' => 'GET',
+            'cancelSubmission' => [
+              'path' => 'v2/{+name}:cancelSubmission',
+              'httpMethod' => 'POST',
               'parameters' => [
-                'itemId' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ],
-                'projection' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
               ],
-            ],'insert' => [
-              'path' => 'chromewebstore/v1.1/items',
-              'httpMethod' => 'POST',
+            ],'fetchStatus' => [
+              'path' => 'v2/{+name}:fetchStatus',
+              'httpMethod' => 'GET',
               'parameters' => [
-                'publisherEmail' => [
-                  'location' => 'query',
+                'name' => [
+                  'location' => 'path',
                   'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],'publish' => [
-              'path' => 'chromewebstore/v1.1/items/{itemId}/publish',
+              'path' => 'v2/{+name}:publish',
               'httpMethod' => 'POST',
               'parameters' => [
-                'itemId' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
                 ],
-                'deployPercentage' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'publishTarget' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'reviewExemption' => [
-                  'location' => 'query',
-                  'type' => 'boolean',
-                ],
               ],
-            ],'update' => [
-              'path' => 'chromewebstore/v1.1/items/{itemId}',
-              'httpMethod' => 'PUT',
+            ],'setPublishedDeployPercentage' => [
+              'path' => 'v2/{+name}:setPublishedDeployPercentage',
+              'httpMethod' => 'POST',
               'parameters' => [
-                'itemId' => [
+                'name' => [
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
