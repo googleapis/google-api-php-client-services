@@ -17,12 +17,17 @@
 
 namespace Google\Service\Drive;
 
-class Reply extends \Google\Model
+class Reply extends \Google\Collection
 {
+  protected $collection_key = 'mentionedEmailAddresses';
   /**
    * @var string
    */
   public $action;
+  /**
+   * @var string
+   */
+  public $assigneeEmailAddress;
   protected $authorType = User::class;
   protected $authorDataType = '';
   /**
@@ -50,6 +55,10 @@ class Reply extends \Google\Model
    */
   public $kind;
   /**
+   * @var string[]
+   */
+  public $mentionedEmailAddresses;
+  /**
    * @var string
    */
   public $modifiedTime;
@@ -67,6 +76,20 @@ class Reply extends \Google\Model
   public function getAction()
   {
     return $this->action;
+  }
+  /**
+   * @param string
+   */
+  public function setAssigneeEmailAddress($assigneeEmailAddress)
+  {
+    $this->assigneeEmailAddress = $assigneeEmailAddress;
+  }
+  /**
+   * @return string
+   */
+  public function getAssigneeEmailAddress()
+  {
+    return $this->assigneeEmailAddress;
   }
   /**
    * @param User
@@ -165,6 +188,20 @@ class Reply extends \Google\Model
   public function getKind()
   {
     return $this->kind;
+  }
+  /**
+   * @param string[]
+   */
+  public function setMentionedEmailAddresses($mentionedEmailAddresses)
+  {
+    $this->mentionedEmailAddresses = $mentionedEmailAddresses;
+  }
+  /**
+   * @return string[]
+   */
+  public function getMentionedEmailAddresses()
+  {
+    return $this->mentionedEmailAddresses;
   }
   /**
    * @param string
