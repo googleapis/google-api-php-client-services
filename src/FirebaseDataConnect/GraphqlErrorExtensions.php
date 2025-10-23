@@ -17,8 +17,9 @@
 
 namespace Google\Service\FirebaseDataConnect;
 
-class GraphqlErrorExtensions extends \Google\Model
+class GraphqlErrorExtensions extends \Google\Collection
 {
+  protected $collection_key = 'workarounds';
   /**
    * @var string
    */
@@ -34,7 +35,9 @@ class GraphqlErrorExtensions extends \Google\Model
   /**
    * @var string
    */
-  public $resource;
+  public $warningLevel;
+  protected $workaroundsType = Workaround::class;
+  protected $workaroundsDataType = 'array';
 
   /**
    * @param string
@@ -81,16 +84,30 @@ class GraphqlErrorExtensions extends \Google\Model
   /**
    * @param string
    */
-  public function setResource($resource)
+  public function setWarningLevel($warningLevel)
   {
-    $this->resource = $resource;
+    $this->warningLevel = $warningLevel;
   }
   /**
    * @return string
    */
-  public function getResource()
+  public function getWarningLevel()
   {
-    return $this->resource;
+    return $this->warningLevel;
+  }
+  /**
+   * @param Workaround[]
+   */
+  public function setWorkarounds($workarounds)
+  {
+    $this->workarounds = $workarounds;
+  }
+  /**
+   * @return Workaround[]
+   */
+  public function getWorkarounds()
+  {
+    return $this->workarounds;
   }
 }
 
