@@ -43,6 +43,10 @@ class DataSourceReference extends \Google\Model
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $totalStoredBytes;
 
   /**
    * @param string
@@ -141,6 +145,20 @@ class DataSourceReference extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setTotalStoredBytes($totalStoredBytes)
+  {
+    $this->totalStoredBytes = $totalStoredBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getTotalStoredBytes()
+  {
+    return $this->totalStoredBytes;
   }
 }
 

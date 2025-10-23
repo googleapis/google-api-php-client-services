@@ -62,6 +62,8 @@ class Backup extends \Google\Collection
   public $expireTime;
   protected $gcpBackupPlanInfoType = GCPBackupPlanInfo::class;
   protected $gcpBackupPlanInfoDataType = '';
+  protected $gcpResourceType = BackupGcpResource::class;
+  protected $gcpResourceDataType = '';
   /**
    * @var string[]
    */
@@ -288,6 +290,20 @@ class Backup extends \Google\Collection
   public function getGcpBackupPlanInfo()
   {
     return $this->gcpBackupPlanInfo;
+  }
+  /**
+   * @param BackupGcpResource
+   */
+  public function setGcpResource(BackupGcpResource $gcpResource)
+  {
+    $this->gcpResource = $gcpResource;
+  }
+  /**
+   * @return BackupGcpResource
+   */
+  public function getGcpResource()
+  {
+    return $this->gcpResource;
   }
   /**
    * @param string[]

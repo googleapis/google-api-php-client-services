@@ -30,6 +30,14 @@ class CloudSqlInstanceBackupProperties extends \Google\Model
   /**
    * @var string
    */
+  public $instanceCreateTime;
+  /**
+   * @var string
+   */
+  public $instanceDeleteTime;
+  /**
+   * @var string
+   */
   public $instanceTier;
   /**
    * @var string
@@ -63,6 +71,34 @@ class CloudSqlInstanceBackupProperties extends \Google\Model
   public function getFinalBackup()
   {
     return $this->finalBackup;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceCreateTime($instanceCreateTime)
+  {
+    $this->instanceCreateTime = $instanceCreateTime;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceCreateTime()
+  {
+    return $this->instanceCreateTime;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceDeleteTime($instanceDeleteTime)
+  {
+    $this->instanceDeleteTime = $instanceDeleteTime;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceDeleteTime()
+  {
+    return $this->instanceDeleteTime;
   }
   /**
    * @param string

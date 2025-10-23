@@ -18,6 +18,7 @@
 namespace Google\Service\Backupdr\Resource;
 
 use Google\Service\Backupdr\Backup;
+use Google\Service\Backupdr\FetchBackupsForResourceTypeResponse;
 use Google\Service\Backupdr\ListBackupsResponse;
 use Google\Service\Backupdr\Operation;
 use Google\Service\Backupdr\RestoreBackupRequest;
@@ -57,6 +58,42 @@ class ProjectsLocationsBackupVaultsDataSourcesBackups extends \Google\Service\Re
     $params = ['name' => $name];
     $params = array_merge($params, $optParams);
     return $this->call('delete', [$params], Operation::class);
+  }
+  /**
+   * Fetch Backups for a given resource type. (backups.fetchForResourceType)
+   *
+   * @param string $parent Required. Datasources are the parent resource for the
+   * backups. Format: projects/{project}/locations/{location}/backupVaults/{backup
+   * VaultId}/dataSources/{datasourceId}
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string filter Optional. A filter expression that filters the
+   * results fetched in the response. The expression must specify the field name,
+   * a comparison operator, and the value that you want to use for filtering.
+   * Supported fields:
+   * @opt_param string orderBy Optional. A comma-separated list of fields to order
+   * by, sorted in ascending order. Use "desc" after a field name for descending.
+   * @opt_param int pageSize Optional. The maximum number of Backups to return.
+   * The service may return fewer than this value. If unspecified, at most 50
+   * Backups will be returned. The maximum value is 100; values above 100 will be
+   * coerced to 100.
+   * @opt_param string pageToken Optional. A page token, received from a previous
+   * call of `FetchBackupsForResourceType`. Provide this to retrieve the
+   * subsequent page. When paginating, all other parameters provided to
+   * `FetchBackupsForResourceType` must match the call that provided the page
+   * token.
+   * @opt_param string resourceType Required. The type of the GCP resource. Ex:
+   * sqladmin.googleapis.com/Instance
+   * @opt_param string view Optional. This parameter is used to specify the view
+   * of the backup. If not specified, the default view is BASIC.
+   * @return FetchBackupsForResourceTypeResponse
+   * @throws \Google\Service\Exception
+   */
+  public function fetchForResourceType($parent, $optParams = [])
+  {
+    $params = ['parent' => $parent];
+    $params = array_merge($params, $optParams);
+    return $this->call('fetchForResourceType', [$params], FetchBackupsForResourceTypeResponse::class);
   }
   /**
    * Gets details of a Backup. (backups.get)
