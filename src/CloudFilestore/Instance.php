@@ -44,6 +44,8 @@ class Instance extends \Google\Collection
    * @var string
    */
   public $description;
+  protected $directoryServicesType = DirectoryServicesConfig::class;
+  protected $directoryServicesDataType = '';
   /**
    * @var string
    */
@@ -194,6 +196,20 @@ class Instance extends \Google\Collection
   public function getDescription()
   {
     return $this->description;
+  }
+  /**
+   * @param DirectoryServicesConfig
+   */
+  public function setDirectoryServices(DirectoryServicesConfig $directoryServices)
+  {
+    $this->directoryServices = $directoryServices;
+  }
+  /**
+   * @return DirectoryServicesConfig
+   */
+  public function getDirectoryServices()
+  {
+    return $this->directoryServices;
   }
   /**
    * @param string

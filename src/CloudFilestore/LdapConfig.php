@@ -17,63 +17,83 @@
 
 namespace Google\Service\CloudFilestore;
 
-class ListOperationsResponse extends \Google\Collection
+class LdapConfig extends \Google\Collection
 {
-  protected $collection_key = 'unreachable';
+  protected $collection_key = 'servers';
   /**
    * @var string
    */
-  public $nextPageToken;
-  protected $operationsType = Operation::class;
-  protected $operationsDataType = 'array';
+  public $domain;
+  /**
+   * @var string
+   */
+  public $groupsOu;
   /**
    * @var string[]
    */
-  public $unreachable;
+  public $servers;
+  /**
+   * @var string
+   */
+  public $usersOu;
 
   /**
    * @param string
    */
-  public function setNextPageToken($nextPageToken)
+  public function setDomain($domain)
   {
-    $this->nextPageToken = $nextPageToken;
+    $this->domain = $domain;
   }
   /**
    * @return string
    */
-  public function getNextPageToken()
+  public function getDomain()
   {
-    return $this->nextPageToken;
+    return $this->domain;
   }
   /**
-   * @param Operation[]
+   * @param string
    */
-  public function setOperations($operations)
+  public function setGroupsOu($groupsOu)
   {
-    $this->operations = $operations;
+    $this->groupsOu = $groupsOu;
   }
   /**
-   * @return Operation[]
+   * @return string
    */
-  public function getOperations()
+  public function getGroupsOu()
   {
-    return $this->operations;
+    return $this->groupsOu;
   }
   /**
    * @param string[]
    */
-  public function setUnreachable($unreachable)
+  public function setServers($servers)
   {
-    $this->unreachable = $unreachable;
+    $this->servers = $servers;
   }
   /**
    * @return string[]
    */
-  public function getUnreachable()
+  public function getServers()
   {
-    return $this->unreachable;
+    return $this->servers;
+  }
+  /**
+   * @param string
+   */
+  public function setUsersOu($usersOu)
+  {
+    $this->usersOu = $usersOu;
+  }
+  /**
+   * @return string
+   */
+  public function getUsersOu()
+  {
+    return $this->usersOu;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListOperationsResponse::class, 'Google_Service_CloudFilestore_ListOperationsResponse');
+class_alias(LdapConfig::class, 'Google_Service_CloudFilestore_LdapConfig');
