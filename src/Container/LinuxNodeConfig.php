@@ -25,6 +25,8 @@ class LinuxNodeConfig extends \Google\Model
   public $cgroupMode;
   protected $hugepagesType = HugepagesConfig::class;
   protected $hugepagesDataType = '';
+  protected $nodeKernelModuleLoadingType = NodeKernelModuleLoading::class;
+  protected $nodeKernelModuleLoadingDataType = '';
   /**
    * @var string[]
    */
@@ -65,6 +67,20 @@ class LinuxNodeConfig extends \Google\Model
   public function getHugepages()
   {
     return $this->hugepages;
+  }
+  /**
+   * @param NodeKernelModuleLoading
+   */
+  public function setNodeKernelModuleLoading(NodeKernelModuleLoading $nodeKernelModuleLoading)
+  {
+    $this->nodeKernelModuleLoading = $nodeKernelModuleLoading;
+  }
+  /**
+   * @return NodeKernelModuleLoading
+   */
+  public function getNodeKernelModuleLoading()
+  {
+    return $this->nodeKernelModuleLoading;
   }
   /**
    * @param string[]

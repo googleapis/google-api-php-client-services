@@ -17,46 +17,28 @@
 
 namespace Google\Service\Container;
 
-class MaintenanceExclusionOptions extends \Google\Model
+class NodeKernelModuleLoading extends \Google\Model
 {
   /**
    * @var string
    */
-  public $endTimeBehavior;
-  /**
-   * @var string
-   */
-  public $scope;
+  public $policy;
 
   /**
    * @param string
    */
-  public function setEndTimeBehavior($endTimeBehavior)
+  public function setPolicy($policy)
   {
-    $this->endTimeBehavior = $endTimeBehavior;
+    $this->policy = $policy;
   }
   /**
    * @return string
    */
-  public function getEndTimeBehavior()
+  public function getPolicy()
   {
-    return $this->endTimeBehavior;
-  }
-  /**
-   * @param string
-   */
-  public function setScope($scope)
-  {
-    $this->scope = $scope;
-  }
-  /**
-   * @return string
-   */
-  public function getScope()
-  {
-    return $this->scope;
+    return $this->policy;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MaintenanceExclusionOptions::class, 'Google_Service_Container_MaintenanceExclusionOptions');
+class_alias(NodeKernelModuleLoading::class, 'Google_Service_Container_NodeKernelModuleLoading');
