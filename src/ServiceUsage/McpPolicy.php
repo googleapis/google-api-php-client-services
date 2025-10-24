@@ -20,8 +20,6 @@ namespace Google\Service\ServiceUsage;
 class McpPolicy extends \Google\Collection
 {
   protected $collection_key = 'mcpEnableRules';
-  protected $contentSecurityType = ContentSecurity::class;
-  protected $contentSecurityDataType = '';
   /**
    * @var string
    */
@@ -41,20 +39,6 @@ class McpPolicy extends \Google\Collection
    */
   public $updateTime;
 
-  /**
-   * @param ContentSecurity
-   */
-  public function setContentSecurity(ContentSecurity $contentSecurity)
-  {
-    $this->contentSecurity = $contentSecurity;
-  }
-  /**
-   * @return ContentSecurity
-   */
-  public function getContentSecurity()
-  {
-    return $this->contentSecurity;
-  }
   /**
    * @param string
    */
