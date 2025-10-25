@@ -29,6 +29,10 @@ class NetworkInterface extends \Google\Collection
    */
   public $fingerprint;
   /**
+   * @var string
+   */
+  public $igmpQuery;
+  /**
    * @var int
    */
   public $internalIpv6PrefixLength;
@@ -128,6 +132,20 @@ class NetworkInterface extends \Google\Collection
   public function getFingerprint()
   {
     return $this->fingerprint;
+  }
+  /**
+   * @param string
+   */
+  public function setIgmpQuery($igmpQuery)
+  {
+    $this->igmpQuery = $igmpQuery;
+  }
+  /**
+   * @return string
+   */
+  public function getIgmpQuery()
+  {
+    return $this->igmpQuery;
   }
   /**
    * @param int

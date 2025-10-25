@@ -20,6 +20,8 @@ namespace Google\Service\Compute\Resource;
 use Google\Service\Compute\Firewall;
 use Google\Service\Compute\FirewallList;
 use Google\Service\Compute\Operation;
+use Google\Service\Compute\TestPermissionsRequest;
+use Google\Service\Compute\TestPermissionsResponse;
 
 /**
  * The "firewalls" collection of methods.
@@ -218,6 +220,23 @@ class Firewalls extends \Google\Service\Resource
     $params = ['project' => $project, 'firewall' => $firewall, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('patch', [$params], Operation::class);
+  }
+  /**
+   * Returns permissions that a caller has on the specified resource.
+   * (firewalls.testIamPermissions)
+   *
+   * @param string $project Project ID for this request.
+   * @param string $resource Name or id of the resource for this request.
+   * @param TestPermissionsRequest $postBody
+   * @param array $optParams Optional parameters.
+   * @return TestPermissionsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function testIamPermissions($project, $resource, TestPermissionsRequest $postBody, $optParams = [])
+  {
+    $params = ['project' => $project, 'resource' => $resource, 'postBody' => $postBody];
+    $params = array_merge($params, $optParams);
+    return $this->call('testIamPermissions', [$params], TestPermissionsResponse::class);
   }
   /**
    * Updates the specified firewall rule with the data included in the request.

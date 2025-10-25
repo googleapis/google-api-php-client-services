@@ -2488,6 +2488,21 @@ class Compute extends \Google\Service
                   'type' => 'string',
                 ],
               ],
+            ],'testIamPermissions' => [
+              'path' => 'projects/{project}/global/firewalls/{resource}/testIamPermissions',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'project' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'resource' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'update' => [
               'path' => 'projects/{project}/global/firewalls/{firewall}',
               'httpMethod' => 'PUT',
@@ -16508,6 +16523,10 @@ class Compute extends \Google\Service
                   'type' => 'string',
                   'required' => true,
                 ],
+                'view' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
               ],
             ],'getIamPolicy' => [
               'path' => 'projects/{project}/zones/{zone}/{parentResource}/reservationSubBlocks/{resource}/getIamPolicy',
@@ -19243,6 +19262,11 @@ class Compute extends \Google\Service
                 'serviceProjectNumber' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+                'views' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],'delete' => [

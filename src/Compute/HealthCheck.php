@@ -34,6 +34,8 @@ class HealthCheck extends \Google\Collection
   public $description;
   protected $grpcHealthCheckType = GRPCHealthCheck::class;
   protected $grpcHealthCheckDataType = '';
+  protected $grpcTlsHealthCheckType = GRPCTLSHealthCheck::class;
+  protected $grpcTlsHealthCheckDataType = '';
   /**
    * @var int
    */
@@ -142,6 +144,20 @@ class HealthCheck extends \Google\Collection
   public function getGrpcHealthCheck()
   {
     return $this->grpcHealthCheck;
+  }
+  /**
+   * @param GRPCTLSHealthCheck
+   */
+  public function setGrpcTlsHealthCheck(GRPCTLSHealthCheck $grpcTlsHealthCheck)
+  {
+    $this->grpcTlsHealthCheck = $grpcTlsHealthCheck;
+  }
+  /**
+   * @return GRPCTLSHealthCheck
+   */
+  public function getGrpcTlsHealthCheck()
+  {
+    return $this->grpcTlsHealthCheck;
   }
   /**
    * @param int

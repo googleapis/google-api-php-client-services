@@ -41,7 +41,7 @@ class Reservations extends \Google\Service\Resource
   /**
    * Retrieves an aggregated list of reservations.
    *
-   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (reservations.aggregatedList)
    *
    * @param string $project Project ID for this request.

@@ -112,6 +112,8 @@ class Interconnect extends \Google\Collection
    * @var string
    */
   public $operationalStatus;
+  protected $paramsType = InterconnectParams::class;
+  protected $paramsDataType = '';
   /**
    * @var string
    */
@@ -502,6 +504,20 @@ class Interconnect extends \Google\Collection
   public function getOperationalStatus()
   {
     return $this->operationalStatus;
+  }
+  /**
+   * @param InterconnectParams
+   */
+  public function setParams(InterconnectParams $params)
+  {
+    $this->params = $params;
+  }
+  /**
+   * @return InterconnectParams
+   */
+  public function getParams()
+  {
+    return $this->params;
   }
   /**
    * @param string

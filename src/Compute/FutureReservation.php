@@ -72,6 +72,10 @@ class FutureReservation extends \Google\Model
   /**
    * @var string
    */
+  public $reservationMode;
+  /**
+   * @var string
+   */
   public $reservationName;
   /**
    * @var string
@@ -297,6 +301,20 @@ class FutureReservation extends \Google\Model
   public function getPlanningStatus()
   {
     return $this->planningStatus;
+  }
+  /**
+   * @param string
+   */
+  public function setReservationMode($reservationMode)
+  {
+    $this->reservationMode = $reservationMode;
+  }
+  /**
+   * @return string
+   */
+  public function getReservationMode()
+  {
+    return $this->reservationMode;
   }
   /**
    * @param string

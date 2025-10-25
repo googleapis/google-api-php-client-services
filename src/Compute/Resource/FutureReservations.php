@@ -35,7 +35,7 @@ class FutureReservations extends \Google\Service\Resource
   /**
    * Retrieves an aggregated list of future reservations.
    *
-   * To prevent failure, recommendation is that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (futureReservations.aggregatedList)
    *
    * @param string $project Project ID for this request.

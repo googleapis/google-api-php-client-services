@@ -35,7 +35,7 @@ class Autoscalers extends \Google\Service\Resource
   /**
    * Retrieves an aggregated list of autoscalers.
    *
-   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (autoscalers.aggregatedList)
    *
    * @param string $project Project ID for this request.

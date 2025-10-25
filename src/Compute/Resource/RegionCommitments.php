@@ -35,7 +35,7 @@ class RegionCommitments extends \Google\Service\Resource
   /**
    * Retrieves an aggregated list of commitments by region.
    *
-   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (regionCommitments.aggregatedList)
    *
    * @param string $project Project ID for this request.

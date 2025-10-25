@@ -66,6 +66,10 @@ class Reservation extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $protectionTier;
   protected $reservationSharingPolicyType = AllocationReservationSharingPolicy::class;
   protected $reservationSharingPolicyDataType = '';
   /**
@@ -284,6 +288,20 @@ class Reservation extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setProtectionTier($protectionTier)
+  {
+    $this->protectionTier = $protectionTier;
+  }
+  /**
+   * @return string
+   */
+  public function getProtectionTier()
+  {
+    return $this->protectionTier;
   }
   /**
    * @param AllocationReservationSharingPolicy

@@ -34,7 +34,7 @@ class AcceleratorTypes extends \Google\Service\Resource
   /**
    * Retrieves an aggregated list of accelerator types.
    *
-   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (acceleratorTypes.aggregatedList)
    *
    * @param string $project Project ID for this request.

@@ -76,7 +76,7 @@ class BackendServices extends \Google\Service\Resource
    * Retrieves the list of all BackendService resources, regional and global,
    * available to the specified project.
    *
-   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (backendServices.aggregatedList)
    *
    * @param string $project Name of the project scoping this request.

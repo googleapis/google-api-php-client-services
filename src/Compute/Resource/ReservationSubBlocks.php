@@ -49,6 +49,8 @@ class ReservationSubBlocks extends \Google\Service\Resource
    * @param string $reservationSubBlock The name of the reservation subBlock. Name
    * should conform to RFC1035 or be a resource ID.
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string view View of the subBlock.
    * @return ReservationSubBlocksGetResponse
    * @throws \Google\Service\Exception
    */

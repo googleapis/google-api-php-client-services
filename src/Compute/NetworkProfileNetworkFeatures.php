@@ -71,6 +71,10 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   /**
    * @var string
    */
+  public $allowMulticast;
+  /**
+   * @var string
+   */
   public $allowNcc;
   /**
    * @var string
@@ -112,6 +116,10 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
    * @var string[]
    */
   public $interfaceTypes;
+  /**
+   * @var string
+   */
+  public $multicast;
   /**
    * @var string[]
    */
@@ -304,6 +312,20 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   /**
    * @param string
    */
+  public function setAllowMulticast($allowMulticast)
+  {
+    $this->allowMulticast = $allowMulticast;
+  }
+  /**
+   * @return string
+   */
+  public function getAllowMulticast()
+  {
+    return $this->allowMulticast;
+  }
+  /**
+   * @param string
+   */
   public function setAllowNcc($allowNcc)
   {
     $this->allowNcc = $allowNcc;
@@ -454,6 +476,20 @@ class NetworkProfileNetworkFeatures extends \Google\Collection
   public function getInterfaceTypes()
   {
     return $this->interfaceTypes;
+  }
+  /**
+   * @param string
+   */
+  public function setMulticast($multicast)
+  {
+    $this->multicast = $multicast;
+  }
+  /**
+   * @return string
+   */
+  public function getMulticast()
+  {
+    return $this->multicast;
   }
   /**
    * @param string[]

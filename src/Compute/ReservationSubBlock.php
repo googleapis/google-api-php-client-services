@@ -19,6 +19,8 @@ namespace Google\Service\Compute;
 
 class ReservationSubBlock extends \Google\Model
 {
+  protected $acceleratorTopologiesInfoType = AcceleratorTopologiesInfo::class;
+  protected $acceleratorTopologiesInfoDataType = '';
   /**
    * @var int
    */
@@ -66,6 +68,20 @@ class ReservationSubBlock extends \Google\Model
    */
   public $zone;
 
+  /**
+   * @param AcceleratorTopologiesInfo
+   */
+  public function setAcceleratorTopologiesInfo(AcceleratorTopologiesInfo $acceleratorTopologiesInfo)
+  {
+    $this->acceleratorTopologiesInfo = $acceleratorTopologiesInfo;
+  }
+  /**
+   * @return AcceleratorTopologiesInfo
+   */
+  public function getAcceleratorTopologiesInfo()
+  {
+    return $this->acceleratorTopologiesInfo;
+  }
   /**
    * @param int
    */

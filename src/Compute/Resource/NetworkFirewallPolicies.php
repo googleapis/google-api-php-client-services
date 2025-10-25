@@ -148,7 +148,7 @@ class NetworkFirewallPolicies extends \Google\Service\Resource
    * firewall policies from all applicable scopes (global and regional) and
    * grouping the results per scope.
    *
-   * To prevent failure, Google recommends that you set the `returnPartialSuccess`
+   * To prevent failure, it is recommended that you set the `returnPartialSuccess`
    * parameter to `true`. (networkFirewallPolicies.aggregatedList)
    *
    * @param string $project Project ID for this request.

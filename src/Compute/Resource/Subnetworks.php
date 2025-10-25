@@ -127,6 +127,9 @@ class Subnetworks extends \Google\Service\Resource
    * @opt_param string serviceProjectNumber The Shared VPC service project id or
    * service project number for which aggregated list request is invoked for
    * subnetworks list-usable api.
+   * @opt_param string views Defines the extra views returned back in the
+   * subnetwork resource. Supported values:        - WITH_UTILIZATION: Utilization
+   * data is included in the    response.
    * @return SubnetworkAggregatedList
    * @throws \Google\Service\Exception
    */
