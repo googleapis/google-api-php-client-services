@@ -112,7 +112,7 @@ class ObjectWithFloat extends \Google\Model
   public $propName;
 
   /**
-   * @param float
+   * @param float $propName
    */
   public function setPropName($propName)
   {
