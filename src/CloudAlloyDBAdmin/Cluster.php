@@ -49,6 +49,8 @@ class Cluster extends \Google\Model
    * @var string
    */
   public $databaseVersion;
+  protected $dataplexConfigType = DataplexConfig::class;
+  protected $dataplexConfigDataType = '';
   /**
    * @var string
    */
@@ -279,6 +281,20 @@ class Cluster extends \Google\Model
   public function getDatabaseVersion()
   {
     return $this->databaseVersion;
+  }
+  /**
+   * @param DataplexConfig
+   */
+  public function setDataplexConfig(DataplexConfig $dataplexConfig)
+  {
+    $this->dataplexConfig = $dataplexConfig;
+  }
+  /**
+   * @return DataplexConfig
+   */
+  public function getDataplexConfig()
+  {
+    return $this->dataplexConfig;
   }
   /**
    * @param string
