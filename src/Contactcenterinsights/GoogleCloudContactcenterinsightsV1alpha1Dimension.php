@@ -21,12 +21,22 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
 {
   protected $agentDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionAgentDimensionMetadata::class;
   protected $agentDimensionMetadataDataType = '';
+  protected $clientSentimentCategoryDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionClientSentimentCategoryDimensionMetadata::class;
+  protected $clientSentimentCategoryDimensionMetadataDataType = '';
+  protected $conversationProfileDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionConversationProfileDimensionMetadata::class;
+  protected $conversationProfileDimensionMetadataDataType = '';
+  protected $conversationalAgentsPlaybookDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsPlaybookDimensionMetadata::class;
+  protected $conversationalAgentsPlaybookDimensionMetadataDataType = '';
+  protected $conversationalAgentsToolDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsToolDimensionMetadata::class;
+  protected $conversationalAgentsToolDimensionMetadataDataType = '';
   /**
    * @var string
    */
   public $dimensionKey;
   protected $issueDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionIssueDimensionMetadata::class;
   protected $issueDimensionMetadataDataType = '';
+  protected $mediumDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionMediumDimensionMetadata::class;
+  protected $mediumDimensionMetadataDataType = '';
   protected $qaQuestionAnswerDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionAnswerDimensionMetadata::class;
   protected $qaQuestionAnswerDimensionMetadataDataType = '';
   protected $qaQuestionDimensionMetadataType = GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionDimensionMetadata::class;
@@ -47,6 +57,62 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
   public function getAgentDimensionMetadata()
   {
     return $this->agentDimensionMetadata;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1DimensionClientSentimentCategoryDimensionMetadata
+   */
+  public function setClientSentimentCategoryDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionClientSentimentCategoryDimensionMetadata $clientSentimentCategoryDimensionMetadata)
+  {
+    $this->clientSentimentCategoryDimensionMetadata = $clientSentimentCategoryDimensionMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DimensionClientSentimentCategoryDimensionMetadata
+   */
+  public function getClientSentimentCategoryDimensionMetadata()
+  {
+    return $this->clientSentimentCategoryDimensionMetadata;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1DimensionConversationProfileDimensionMetadata
+   */
+  public function setConversationProfileDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionConversationProfileDimensionMetadata $conversationProfileDimensionMetadata)
+  {
+    $this->conversationProfileDimensionMetadata = $conversationProfileDimensionMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DimensionConversationProfileDimensionMetadata
+   */
+  public function getConversationProfileDimensionMetadata()
+  {
+    return $this->conversationProfileDimensionMetadata;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsPlaybookDimensionMetadata
+   */
+  public function setConversationalAgentsPlaybookDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsPlaybookDimensionMetadata $conversationalAgentsPlaybookDimensionMetadata)
+  {
+    $this->conversationalAgentsPlaybookDimensionMetadata = $conversationalAgentsPlaybookDimensionMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsPlaybookDimensionMetadata
+   */
+  public function getConversationalAgentsPlaybookDimensionMetadata()
+  {
+    return $this->conversationalAgentsPlaybookDimensionMetadata;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsToolDimensionMetadata
+   */
+  public function setConversationalAgentsToolDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsToolDimensionMetadata $conversationalAgentsToolDimensionMetadata)
+  {
+    $this->conversationalAgentsToolDimensionMetadata = $conversationalAgentsToolDimensionMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DimensionConversationalAgentsToolDimensionMetadata
+   */
+  public function getConversationalAgentsToolDimensionMetadata()
+  {
+    return $this->conversationalAgentsToolDimensionMetadata;
   }
   /**
    * @param string
@@ -75,6 +141,20 @@ class GoogleCloudContactcenterinsightsV1alpha1Dimension extends \Google\Model
   public function getIssueDimensionMetadata()
   {
     return $this->issueDimensionMetadata;
+  }
+  /**
+   * @param GoogleCloudContactcenterinsightsV1alpha1DimensionMediumDimensionMetadata
+   */
+  public function setMediumDimensionMetadata(GoogleCloudContactcenterinsightsV1alpha1DimensionMediumDimensionMetadata $mediumDimensionMetadata)
+  {
+    $this->mediumDimensionMetadata = $mediumDimensionMetadata;
+  }
+  /**
+   * @return GoogleCloudContactcenterinsightsV1alpha1DimensionMediumDimensionMetadata
+   */
+  public function getMediumDimensionMetadata()
+  {
+    return $this->mediumDimensionMetadata;
   }
   /**
    * @param GoogleCloudContactcenterinsightsV1alpha1DimensionQaQuestionAnswerDimensionMetadata

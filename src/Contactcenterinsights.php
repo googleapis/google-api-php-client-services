@@ -44,7 +44,6 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations_authorizedViewSets;
   public $projects_locations_authorizedViewSets_authorizedViews;
   public $projects_locations_authorizedViewSets_authorizedViews_conversations;
-  public $projects_locations_authorizedViewSets_authorizedViews_conversations_analyses;
   public $projects_locations_authorizedViewSets_authorizedViews_conversations_assessments;
   public $projects_locations_authorizedViewSets_authorizedViews_conversations_assessments_notes;
   public $projects_locations_authorizedViewSets_authorizedViews_conversations_feedbackLabels;
@@ -54,9 +53,9 @@ class Contactcenterinsights extends \Google\Service
   public $projects_locations_conversations_assessments;
   public $projects_locations_conversations_assessments_notes;
   public $projects_locations_conversations_feedbackLabels;
+  public $projects_locations_conversations_segments;
   public $projects_locations_datasets;
   public $projects_locations_datasets_conversations;
-  public $projects_locations_datasets_conversations_analyses;
   public $projects_locations_datasets_conversations_feedbackLabels;
   public $projects_locations_datasets_insightsdata;
   public $projects_locations_encryptionSpec;
@@ -612,17 +611,7 @@ class Contactcenterinsights extends \Google\Service
         'conversations',
         [
           'methods' => [
-            'bulkAnalyze' => [
-              'path' => 'v1/{+parent}/conversations:bulkAnalyze',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'calculateStats' => [
+            'calculateStats' => [
               'path' => 'v1/{+location}/conversations:calculateStats',
               'httpMethod' => 'GET',
               'parameters' => [
@@ -690,68 +679,6 @@ class Contactcenterinsights extends \Google\Service
                   'type' => 'string',
                 ],
                 'view' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_authorizedViewSets_authorizedViews_conversations_analyses = new Contactcenterinsights\Resource\ProjectsLocationsAuthorizedViewSetsAuthorizedViewsConversationsAnalyses(
-        $this,
-        $this->serviceName,
-        'analyses',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/analyses',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/analyses',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
                 ],
@@ -1518,6 +1445,26 @@ class Contactcenterinsights extends \Google\Service
           ]
         ]
     );
+    $this->projects_locations_conversations_segments = new Contactcenterinsights\Resource\ProjectsLocationsConversationsSegments(
+        $this,
+        $this->serviceName,
+        'segments',
+        [
+          'methods' => [
+            'bulkAnalyze' => [
+              'path' => 'v1/{+parent}/segments:bulkAnalyze',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
     $this->projects_locations_datasets = new Contactcenterinsights\Resource\ProjectsLocationsDatasets(
         $this,
         $this->serviceName,
@@ -1656,17 +1603,7 @@ class Contactcenterinsights extends \Google\Service
         'conversations',
         [
           'methods' => [
-            'bulkAnalyze' => [
-              'path' => 'v1/{+parent}/conversations:bulkAnalyze',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'bulkDelete' => [
+            'bulkDelete' => [
               'path' => 'v1/{+parent}/conversations:bulkDelete',
               'httpMethod' => 'POST',
               'parameters' => [
@@ -1762,68 +1699,6 @@ class Contactcenterinsights extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ],
-              ],
-            ],
-          ]
-        ]
-    );
-    $this->projects_locations_datasets_conversations_analyses = new Contactcenterinsights\Resource\ProjectsLocationsDatasetsConversationsAnalyses(
-        $this,
-        $this->serviceName,
-        'analyses',
-        [
-          'methods' => [
-            'create' => [
-              'path' => 'v1/{+parent}/analyses',
-              'httpMethod' => 'POST',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'delete' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'DELETE',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'get' => [
-              'path' => 'v1/{+name}',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'name' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-              ],
-            ],'list' => [
-              'path' => 'v1/{+parent}/analyses',
-              'httpMethod' => 'GET',
-              'parameters' => [
-                'parent' => [
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ],
-                'filter' => [
-                  'location' => 'query',
-                  'type' => 'string',
-                ],
-                'pageSize' => [
-                  'location' => 'query',
-                  'type' => 'integer',
-                ],
-                'pageToken' => [
-                  'location' => 'query',
-                  'type' => 'string',
                 ],
               ],
             ],
