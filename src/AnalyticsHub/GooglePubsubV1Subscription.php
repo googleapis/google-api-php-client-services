@@ -70,6 +70,10 @@ class GooglePubsubV1Subscription extends \Google\Collection
   public $retainAckedMessages;
   protected $retryPolicyType = RetryPolicy::class;
   protected $retryPolicyDataType = '';
+  /**
+   * @var string[]
+   */
+  public $tags;
 
   /**
    * @param int
@@ -294,6 +298,20 @@ class GooglePubsubV1Subscription extends \Google\Collection
   public function getRetryPolicy()
   {
     return $this->retryPolicy;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
 }
 
