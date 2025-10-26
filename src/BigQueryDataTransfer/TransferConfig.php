@@ -52,6 +52,10 @@ class TransferConfig extends \Google\Model
   /**
    * @var string
    */
+  public $managedTableType;
+  /**
+   * @var string
+   */
   public $name;
   /**
    * @var string
@@ -213,6 +217,20 @@ class TransferConfig extends \Google\Model
   public function getError()
   {
     return $this->error;
+  }
+  /**
+   * @param string
+   */
+  public function setManagedTableType($managedTableType)
+  {
+    $this->managedTableType = $managedTableType;
+  }
+  /**
+   * @return string
+   */
+  public function getManagedTableType()
+  {
+    return $this->managedTableType;
   }
   /**
    * @param string
