@@ -204,10 +204,10 @@ class ProjectsLocationsApis extends \Google\Service\Resource
   /**
    * Update an API resource in the API hub. The following fields in the API can be
    * updated: * display_name * description * owner * documentation * target_user *
-   * team * business_unit * maturity_level * api_style * attributes The
-   * update_mask should be used to specify the fields being updated. Updating the
-   * owner field requires complete owner message and updates both owner and email
-   * fields. (apis.patch)
+   * team * business_unit * maturity_level * api_style * attributes * fingerprint
+   * The update_mask should be used to specify the fields being updated. Updating
+   * the owner field requires complete owner message and updates both owner and
+   * email fields. (apis.patch)
    *
    * @param string $name Identifier. The name of the API resource in the API Hub.
    * Format: `projects/{project}/locations/{location}/apis/{api}`
