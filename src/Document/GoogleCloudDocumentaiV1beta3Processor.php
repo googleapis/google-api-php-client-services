@@ -17,7 +17,7 @@
 
 namespace Google\Service\Document;
 
-class GoogleCloudDocumentaiV1Processor extends \Google\Collection
+class GoogleCloudDocumentaiV1beta3Processor extends \Google\Collection
 {
   protected $collection_key = 'processorVersionAliases';
   /**
@@ -48,7 +48,7 @@ class GoogleCloudDocumentaiV1Processor extends \Google\Collection
    * @var string
    */
   public $processEndpoint;
-  protected $processorVersionAliasesType = GoogleCloudDocumentaiV1ProcessorVersionAlias::class;
+  protected $processorVersionAliasesType = GoogleCloudDocumentaiV1beta3ProcessorVersionAlias::class;
   protected $processorVersionAliasesDataType = 'array';
   /**
    * @var bool
@@ -166,14 +166,14 @@ class GoogleCloudDocumentaiV1Processor extends \Google\Collection
     return $this->processEndpoint;
   }
   /**
-   * @param GoogleCloudDocumentaiV1ProcessorVersionAlias[]
+   * @param GoogleCloudDocumentaiV1beta3ProcessorVersionAlias[]
    */
   public function setProcessorVersionAliases($processorVersionAliases)
   {
     $this->processorVersionAliases = $processorVersionAliases;
   }
   /**
-   * @return GoogleCloudDocumentaiV1ProcessorVersionAlias[]
+   * @return GoogleCloudDocumentaiV1beta3ProcessorVersionAlias[]
    */
   public function getProcessorVersionAliases()
   {
@@ -238,4 +238,4 @@ class GoogleCloudDocumentaiV1Processor extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoogleCloudDocumentaiV1Processor::class, 'Google_Service_Document_GoogleCloudDocumentaiV1Processor');
+class_alias(GoogleCloudDocumentaiV1beta3Processor::class, 'Google_Service_Document_GoogleCloudDocumentaiV1beta3Processor');

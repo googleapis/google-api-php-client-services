@@ -22,6 +22,10 @@ class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult exte
   /**
    * @var string
    */
+  public $rule;
+  /**
+   * @var string
+   */
   public $ruleDescription;
   /**
    * @var string
@@ -36,6 +40,20 @@ class GoogleCloudDocumentaiV1DocumentEntityValidationOutputValidationResult exte
    */
   public $validationResultType;
 
+  /**
+   * @param string
+   */
+  public function setRule($rule)
+  {
+    $this->rule = $rule;
+  }
+  /**
+   * @return string
+   */
+  public function getRule()
+  {
+    return $this->rule;
+  }
   /**
    * @param string
    */
