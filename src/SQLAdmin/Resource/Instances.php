@@ -163,10 +163,10 @@ class Instances extends \Google\Service\Resource
    * Creates a Cloud SQL instance as a clone of the source instance. Using this
    * operation might cause your instance to restart. (instances.cloneInstances)
    *
-   * @param string $project Project ID of the source as well as the clone Cloud
-   * SQL instance.
-   * @param string $instance The ID of the Cloud SQL instance to be cloned
-   * (source). This does not include the project ID.
+   * @param string $project Required. Project ID of the source as well as the
+   * clone Cloud SQL instance.
+   * @param string $instance Required. The ID of the Cloud SQL instance to be
+   * cloned (source). This does not include the project ID.
    * @param InstancesCloneRequest $postBody
    * @param array $optParams Optional parameters.
    * @return Operation

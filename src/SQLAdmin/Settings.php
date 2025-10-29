@@ -56,6 +56,10 @@ class Settings extends \Google\Collection
    * @var bool
    */
   public $crashSafeReplicationEnabled;
+  /**
+   * @var string
+   */
+  public $dataApiAccess;
   protected $dataCacheConfigType = DataCacheConfig::class;
   protected $dataCacheConfigDataType = '';
   /**
@@ -312,6 +316,20 @@ class Settings extends \Google\Collection
   public function getCrashSafeReplicationEnabled()
   {
     return $this->crashSafeReplicationEnabled;
+  }
+  /**
+   * @param string
+   */
+  public function setDataApiAccess($dataApiAccess)
+  {
+    $this->dataApiAccess = $dataApiAccess;
+  }
+  /**
+   * @return string
+   */
+  public function getDataApiAccess()
+  {
+    return $this->dataApiAccess;
   }
   /**
    * @param DataCacheConfig
