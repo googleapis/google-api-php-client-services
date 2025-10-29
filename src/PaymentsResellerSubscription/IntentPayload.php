@@ -23,6 +23,8 @@ class IntentPayload extends \Google\Model
   protected $createIntentDataType = '';
   protected $entitleIntentType = EntitleSubscriptionIntent::class;
   protected $entitleIntentDataType = '';
+  protected $intentOptionsType = IntentPayloadIntentOptions::class;
+  protected $intentOptionsDataType = '';
 
   /**
    * @param CreateSubscriptionIntent
@@ -51,6 +53,20 @@ class IntentPayload extends \Google\Model
   public function getEntitleIntent()
   {
     return $this->entitleIntent;
+  }
+  /**
+   * @param IntentPayloadIntentOptions
+   */
+  public function setIntentOptions(IntentPayloadIntentOptions $intentOptions)
+  {
+    $this->intentOptions = $intentOptions;
+  }
+  /**
+   * @return IntentPayloadIntentOptions
+   */
+  public function getIntentOptions()
+  {
+    return $this->intentOptions;
   }
 }
 
