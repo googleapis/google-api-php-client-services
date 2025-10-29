@@ -19,6 +19,8 @@ namespace Google\Service\DiscoveryEngine;
 
 class GoogleCloudDiscoveryengineV1alphaProject extends \Google\Model
 {
+  protected $configurableBillingStatusType = GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingStatus::class;
+  protected $configurableBillingStatusDataType = '';
   /**
    * @var string
    */
@@ -36,6 +38,20 @@ class GoogleCloudDiscoveryengineV1alphaProject extends \Google\Model
   protected $serviceTermsMapType = GoogleCloudDiscoveryengineV1alphaProjectServiceTerms::class;
   protected $serviceTermsMapDataType = 'map';
 
+  /**
+   * @param GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingStatus
+   */
+  public function setConfigurableBillingStatus(GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingStatus $configurableBillingStatus)
+  {
+    $this->configurableBillingStatus = $configurableBillingStatus;
+  }
+  /**
+   * @return GoogleCloudDiscoveryengineV1alphaProjectConfigurableBillingStatus
+   */
+  public function getConfigurableBillingStatus()
+  {
+    return $this->configurableBillingStatus;
+  }
   /**
    * @param string
    */
