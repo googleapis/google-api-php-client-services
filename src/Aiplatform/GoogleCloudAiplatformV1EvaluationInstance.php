@@ -19,6 +19,8 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
 {
+  protected $agentDataType = GoogleCloudAiplatformV1EvaluationInstanceAgentData::class;
+  protected $agentDataDataType = '';
   protected $otherDataType = GoogleCloudAiplatformV1EvaluationInstanceMapInstance::class;
   protected $otherDataDataType = '';
   protected $promptType = GoogleCloudAiplatformV1EvaluationInstanceInstanceData::class;
@@ -30,6 +32,20 @@ class GoogleCloudAiplatformV1EvaluationInstance extends \Google\Model
   protected $rubricGroupsType = GoogleCloudAiplatformV1RubricGroup::class;
   protected $rubricGroupsDataType = 'map';
 
+  /**
+   * @param GoogleCloudAiplatformV1EvaluationInstanceAgentData
+   */
+  public function setAgentData(GoogleCloudAiplatformV1EvaluationInstanceAgentData $agentData)
+  {
+    $this->agentData = $agentData;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1EvaluationInstanceAgentData
+   */
+  public function getAgentData()
+  {
+    return $this->agentData;
+  }
   /**
    * @param GoogleCloudAiplatformV1EvaluationInstanceMapInstance
    */

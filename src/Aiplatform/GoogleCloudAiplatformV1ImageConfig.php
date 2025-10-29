@@ -23,6 +23,12 @@ class GoogleCloudAiplatformV1ImageConfig extends \Google\Model
    * @var string
    */
   public $aspectRatio;
+  protected $imageOutputOptionsType = GoogleCloudAiplatformV1ImageConfigImageOutputOptions::class;
+  protected $imageOutputOptionsDataType = '';
+  /**
+   * @var string
+   */
+  public $personGeneration;
 
   /**
    * @param string
@@ -37,6 +43,34 @@ class GoogleCloudAiplatformV1ImageConfig extends \Google\Model
   public function getAspectRatio()
   {
     return $this->aspectRatio;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ImageConfigImageOutputOptions
+   */
+  public function setImageOutputOptions(GoogleCloudAiplatformV1ImageConfigImageOutputOptions $imageOutputOptions)
+  {
+    $this->imageOutputOptions = $imageOutputOptions;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ImageConfigImageOutputOptions
+   */
+  public function getImageOutputOptions()
+  {
+    return $this->imageOutputOptions;
+  }
+  /**
+   * @param string
+   */
+  public function setPersonGeneration($personGeneration)
+  {
+    $this->personGeneration = $personGeneration;
+  }
+  /**
+   * @return string
+   */
+  public function getPersonGeneration()
+  {
+    return $this->personGeneration;
   }
 }
 

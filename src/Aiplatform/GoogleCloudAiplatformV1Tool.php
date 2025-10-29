@@ -22,6 +22,8 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   protected $collection_key = 'functionDeclarations';
   protected $codeExecutionType = GoogleCloudAiplatformV1ToolCodeExecution::class;
   protected $codeExecutionDataType = '';
+  protected $computerUseType = GoogleCloudAiplatformV1ToolComputerUse::class;
+  protected $computerUseDataType = '';
   protected $enterpriseWebSearchType = GoogleCloudAiplatformV1EnterpriseWebSearch::class;
   protected $enterpriseWebSearchDataType = '';
   protected $functionDeclarationsType = GoogleCloudAiplatformV1FunctionDeclaration::class;
@@ -50,6 +52,20 @@ class GoogleCloudAiplatformV1Tool extends \Google\Collection
   public function getCodeExecution()
   {
     return $this->codeExecution;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ToolComputerUse
+   */
+  public function setComputerUse(GoogleCloudAiplatformV1ToolComputerUse $computerUse)
+  {
+    $this->computerUse = $computerUse;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ToolComputerUse
+   */
+  public function getComputerUse()
+  {
+    return $this->computerUse;
   }
   /**
    * @param GoogleCloudAiplatformV1EnterpriseWebSearch

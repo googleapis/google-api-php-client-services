@@ -17,12 +17,15 @@
 
 namespace Google\Service\Aiplatform;
 
-class GoogleCloudAiplatformV1FunctionResponse extends \Google\Model
+class GoogleCloudAiplatformV1FunctionResponse extends \Google\Collection
 {
+  protected $collection_key = 'parts';
   /**
    * @var string
    */
   public $name;
+  protected $partsType = GoogleCloudAiplatformV1FunctionResponsePart::class;
+  protected $partsDataType = 'array';
   /**
    * @var array[]
    */
@@ -41,6 +44,20 @@ class GoogleCloudAiplatformV1FunctionResponse extends \Google\Model
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1FunctionResponsePart[]
+   */
+  public function setParts($parts)
+  {
+    $this->parts = $parts;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1FunctionResponsePart[]
+   */
+  public function getParts()
+  {
+    return $this->parts;
   }
   /**
    * @param array[]

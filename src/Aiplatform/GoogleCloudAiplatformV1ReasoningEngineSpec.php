@@ -36,6 +36,8 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
    * @var string
    */
   public $serviceAccount;
+  protected $sourceCodeSpecType = GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec::class;
+  protected $sourceCodeSpecDataType = '';
 
   /**
    * @param string
@@ -106,6 +108,20 @@ class GoogleCloudAiplatformV1ReasoningEngineSpec extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec
+   */
+  public function setSourceCodeSpec(GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec $sourceCodeSpec)
+  {
+    $this->sourceCodeSpec = $sourceCodeSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1ReasoningEngineSpecSourceCodeSpec
+   */
+  public function getSourceCodeSpec()
+  {
+    return $this->sourceCodeSpec;
   }
 }
 
