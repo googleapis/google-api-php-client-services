@@ -46,14 +46,6 @@ flags.DEFINE_string(
     'api_version',
     None,
     'version of "api_name" to generate for.  E.g. "v1".')
-flags.DEFINE_string(
-    'discovery_server',
-    'www.googleapis.com',
-    'The discovery server to use for loading "api_name"')
-flags.DEFINE_string(
-    'discovery_version',
-    'v1',
-    'The discovery version to use for loading "api_name"')
 flags.DEFINE_boolean(
     'include_timestamp',
     False,
@@ -229,10 +221,10 @@ def Generate(discovery_doc, package_writer,
 
 def GetApiDiscovery(api_name, api_version):
   """Get a discovery doc from the discovery server."""
-  api_path = 'apis/%s/%s/rest' % (api_name, api_version)
 
-  discovery_url = 'https://%s/discovery/%s/%s' % (
-      FLAGS.discovery_server, FLAGS.discovery_version, api_path)
+  discovery_url = 'https://%s.googleapis.com/$discovery/rest?version=%s' % (
+      api_name, api_version)
+  print('Fetching discovery json from %s' % discovery_url)
   http = httplib2.Http()
   _, content = http.request(discovery_url)
   discovery_doc = json.loads(content)

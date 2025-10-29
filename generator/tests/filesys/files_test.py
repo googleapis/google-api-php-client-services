@@ -25,7 +25,8 @@ class FilesTest(absltest.TestCase):
   def setUp(self):
     self.tempdir = tempfile.mkdtemp()
     for name in 'abc':
-      open(os.path.join(self.tempdir, name), 'w').write(name)
+      with open(os.path.join(self.tempdir, name), 'w') as f:
+        f.write(name)
 
   def tearDown(self):
     shutil.rmtree(self.tempdir)
