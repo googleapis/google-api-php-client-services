@@ -31,6 +31,10 @@ class FhirStoreMetric extends \Google\Model
    * @var string
    */
   public $structuredStorageSizeBytes;
+  /**
+   * @var string
+   */
+  public $versionedStorageSizeBytes;
 
   /**
    * @param string
@@ -73,6 +77,20 @@ class FhirStoreMetric extends \Google\Model
   public function getStructuredStorageSizeBytes()
   {
     return $this->structuredStorageSizeBytes;
+  }
+  /**
+   * @param string
+   */
+  public function setVersionedStorageSizeBytes($versionedStorageSizeBytes)
+  {
+    $this->versionedStorageSizeBytes = $versionedStorageSizeBytes;
+  }
+  /**
+   * @return string
+   */
+  public function getVersionedStorageSizeBytes()
+  {
+    return $this->versionedStorageSizeBytes;
   }
 }
 
