@@ -36,11 +36,12 @@ use Google\Service\DisplayVideo\UploadAdAssetResponse;
 class AdvertisersAdAssets extends \Google\Service\Resource
 {
   /**
-   * BulkCreate video assets for Ad. Only supports youtube video assets for now.
-   * (adAssets.bulkCreate)
+   * Creates multiple ad assets in a single request. Returns the newly-created ad
+   * assets if successful. Only supports the creation of assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`. (adAssets.bulkCreate)
    *
-   * @param string $advertiserId Required. The ID of the advertiser this ad asset
-   * belongs to.
+   * @param string $advertiserId Required. The ID of the advertiser these ad
+   * assets belong to.
    * @param BulkCreateAdAssetsRequest $postBody
    * @param array $optParams Optional parameters.
    * @return BulkCreateAdAssetsResponse
@@ -53,7 +54,8 @@ class AdvertisersAdAssets extends \Google\Service\Resource
     return $this->call('bulkCreate', [$params], BulkCreateAdAssetsResponse::class);
   }
   /**
-   * Create a video asset for Ad. Only supports youtube video assets for now.
+   * Creates an ad asset. Returns the newly-created ad asset if successful. Only
+   * supports the creation of assets of AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * (adAssets.create)
    *
    * @param string $advertiserId Required. The ID of the advertiser this ad asset
@@ -70,12 +72,13 @@ class AdvertisersAdAssets extends \Google\Service\Resource
     return $this->call('create', [$params], AdAsset::class);
   }
   /**
-   * Get an ad asset by ad asset ID. Only supports youtube video assets.
-   * (adAssets.get)
+   * Gets an ad asset. Only supports the retrieval of assets of AdAssetType
+   * `AD_ASSET_TYPE_YOUTUBE_VIDEO`. (adAssets.get)
    *
    * @param string $advertiserId Required. The ID of the advertiser this ad asset
    * belongs to.
-   * @param string $adAssetId Required. The ID of the ad asset to fetch.
+   * @param string $adAssetId Required. The ID of the ad asset to fetch. Only
+   * supports assets of AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO`
    * @param array $optParams Optional parameters.
    * @return AdAsset
    * @throws \Google\Service\Exception
@@ -87,29 +90,32 @@ class AdvertisersAdAssets extends \Google\Service\Resource
     return $this->call('get', [$params], AdAsset::class);
   }
   /**
-   * List ad assets by advertiser ID. Only supports youtube video ad assets.
+   * Lists ad assets under an advertiser ID. Only supports the retrieval of assets
+   * of AdAssetType `AD_ASSET_TYPE_YOUTUBE_VIDEO`.
    * (adAssets.listAdvertisersAdAssets)
    *
-   * @param string $advertiserId Required. The ID of the advertiser to list assets
-   * for.
+   * @param string $advertiserId Required. The ID of the advertiser the ad assets
+   * belong to.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string filter Optional. Filter expression to restrict the ad
-   * assets to return. The supported fields are: *
-   * `youtubeVideoAsset.youtubeVideoId` * `entityStatus` Examples: *
+   * @opt_param string filter Optional. Allows filtering of the results by ad
+   * asset fields. Supported syntax: * A restriction has the form of `{field}
+   * {operator} {value}`. * All fields must use the `EQUALS (=)` operator.
+   * Supported fields: * `youtubeVideoAsset.youtubeVideoId` * `entityStatus`
+   * Examples: * All active YouTube video ad assets under an advertiser:
    * `entityStatus=ENTITY_STATUS_ACTIVE`
    * @opt_param string orderBy Optional. Field by which to sort the list.
    * Acceptable values are: * `entityStatus` * `youtubeVideoAsset.youtubeVideoId`
    * * `adAssetId` (default) The default sorting order is ascending. To specify
    * descending order for a field, a suffix "desc" should be added to the field
-   * name. Example: `assetId desc`.
+   * name. Example: `adAssetId desc`.
    * @opt_param int pageSize Optional. Requested page size. Must be between `1`
    * and `5000`. If unspecified will default to `5000`. Returns error code
    * `INVALID_ARGUMENT` if an invalid value is specified.
    * @opt_param string pageToken Optional. A token identifying a page of results
    * the server should return. Typically, this is the value of next_page_token
-   * returned from the previous call to `ListAssets` method. If not specified, the
-   * first page of results will be returned.
+   * returned from the previous call to `ListAdAssets` method. If not specified,
+   * the first page of results will be returned.
    * @return ListAdAssetsResponse
    * @throws \Google\Service\Exception
    */
@@ -120,8 +126,9 @@ class AdvertisersAdAssets extends \Google\Service\Resource
     return $this->call('list', [$params], ListAdAssetsResponse::class);
   }
   /**
-   * Uploads an ad asset. Returns the ID of the newly uploaded ad asset if
-   * successful. (adAssets.upload)
+   * Uploads and creates an ad asset. Returns the ID of the newly-created ad asset
+   * if successful. Only supports the uploading of assets with the AdAssetType
+   * `AD_ASSET_TYPE_IMAGE`. (adAssets.upload)
    *
    * @param string $advertiserId Required. The ID of the advertiser this ad asset
    * belongs to.

@@ -32,20 +32,19 @@ use Google\Service\DisplayVideo\YoutubeAssetAssociation;
 class AdvertisersAdGroupsYoutubeAssetTypesYoutubeAssetAssociations extends \Google\Service\Resource
 {
   /**
-   * Creates a new association between an entity (line item or ad group) and a
-   * YouTube asset. Returns the newly created association if successful.
-   * (youtubeAssetAssociations.create)
+   * Creates a new association between the identified resource and a YouTube
+   * asset. Returns the newly-created association. *Warning:* This method is only
+   * available to an informed subset of users. (youtubeAssetAssociations.create)
    *
-   * @param string $advertiserId Required. The ID of the advertiser this request
-   * is for.
-   * @param string $adGroupId The unique ID of the ad group linked.
-   * @param string $youtubeAssetType Required. The type of the linked YouTube
-   * asset in the association.
+   * @param string $advertiserId Required. The ID of the advertiser that the
+   * linked entity belongs to.
+   * @param string $adGroupId The ID of an ad group.
+   * @param string $youtubeAssetType Required. The type of YouTube asset
+   * associated with the resource.
    * @param YoutubeAssetAssociation $postBody
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string linkedEntity.lineItemId The unique ID of the line item
-   * linked.
+   * @opt_param string linkedEntity.lineItemId The ID of a line item.
    * @return YoutubeAssetAssociation
    * @throws \Google\Service\Exception
    */
@@ -56,25 +55,25 @@ class AdvertisersAdGroupsYoutubeAssetTypesYoutubeAssetAssociations extends \Goog
     return $this->call('create', [$params], YoutubeAssetAssociation::class);
   }
   /**
-   * Deletes an existing association between an entity (line item or ad group) and
-   * a YouTube asset. (youtubeAssetAssociations.delete)
+   * Deletes an existing association between the identified resource and a YouTube
+   * asset. *Warning:* This method is only available to an informed subset of
+   * users. (youtubeAssetAssociations.delete)
    *
-   * @param string $advertiserId Required. The ID of the advertiser this request
-   * is for.
-   * @param string $adGroupId The unique ID of the ad group linked.
-   * @param string $youtubeAssetType Required. The YouTube asset type this request
-   * is for.
+   * @param string $advertiserId Required. The ID of the advertiser that the
+   * linked entity belongs to.
+   * @param string $adGroupId The ID of an ad group.
+   * @param string $youtubeAssetType Required. The type of YouTube asset
+   * associated with the resource.
    * @param string $youtubeAssetAssociationId Required. The ID of the YouTube
-   * asset in the association. For location associations: This should be the ID of
-   * the asset set linked, or 0 if the association stands for location asset is
-   * disabled. For affiliate location associations: This should be the ID of the
-   * asset set linked, or 0 if the association stands for affiliate location asset
-   * is disabled. For sitelink associations: This should be the ID of the sitelink
-   * asset linked.
+   * asset in the association. For `YOUTUBE_ASSET_TYPE_LOCATION` and
+   * `YOUTUBE_ASSET_TYPE_AFFILIATE_LOCATION` associations: This should be the ID
+   * of the asset set linked, or 0 if the location_asset_filter or
+   * affiliate_location_asset_filter is `DISABLED`. For
+   * `YOUTUBE_ASSET_TYPE_SITELINK` associations: This should be the ID of the
+   * sitelink asset linked.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string linkedEntity.lineItemId The unique ID of the line item
-   * linked.
+   * @opt_param string linkedEntity.lineItemId The ID of a line item.
    * @return DisplayvideoEmpty
    * @throws \Google\Service\Exception
    */
@@ -85,29 +84,32 @@ class AdvertisersAdGroupsYoutubeAssetTypesYoutubeAssetAssociations extends \Goog
     return $this->call('delete', [$params], DisplayvideoEmpty::class);
   }
   /**
-   * Lists the YouTube asset associations for given resource. (youtubeAssetAssocia
-   * tions.listAdvertisersAdGroupsYoutubeAssetTypesYoutubeAssetAssociations)
+   * Lists the YouTube asset associations linked to the given resource. (youtubeAs
+   * setAssociations.listAdvertisersAdGroupsYoutubeAssetTypesYoutubeAssetAssociati
+   * ons)
    *
-   * @param string $advertiserId Required. The ID of the advertiser this request
-   * is for.
-   * @param string $adGroupId The unique ID of the ad group linked.
-   * @param string $youtubeAssetType Required. The type of YouTube asset in the
-   * association.
+   * @param string $advertiserId Required. The ID of the advertiser that the
+   * linked entity belongs to.
+   * @param string $adGroupId The ID of an ad group.
+   * @param string $youtubeAssetType Required. The type of YouTube asset being
+   * associated with the resource.
    * @param array $optParams Optional parameters.
    *
-   * @opt_param string linkedEntity.lineItemId The unique ID of the line item
-   * linked.
+   * @opt_param string linkedEntity.lineItemId The ID of a line item.
    * @opt_param string orderBy Optional. Field by which to sort the list. The only
-   * acceptable values are: `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
-   * `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`,
+   * acceptable values are: * `linkedYoutubeAsset.locationAssetFilter.assetSetId`,
+   * * `linkedYoutubeAsset.affiliateLocationAssetFilter.assetSetId`, *
    * `linkedYoutubeAsset.sitelinkAsset.assetId` The default sorting order is
    * ascending. To specify descending order for a field, a suffix " desc" should
    * be added to the field name. Example:
    * `linkedYoutubeAsset.sitelinkAsset.assetId desc`.
    * @opt_param int pageSize Optional. Requested page size. Must be between `1`
-   * and `10000`. If unspecified will default to `100`.
+   * and `10000`. If unspecified will default to `100`. Returns error code
+   * `INVALID_ARGUMENT` if an invalid value is specified.
    * @opt_param string pageToken Optional. A token identifying a page of results
-   * the server should return.
+   * the server should return. Typically, this is the value of next_page_token
+   * returned from the previous call to `ListYoutubeAssetAssociations` method. If
+   * not specified, the first page of results will be returned.
    * @return ListYoutubeAssetAssociationsResponse
    * @throws \Google\Service\Exception
    */
