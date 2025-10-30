@@ -17,26 +17,28 @@
 
 namespace Google\Service\Datastream;
 
-class StartBackfillJobRequest extends \Google\Model
+class EventFilter extends \Google\Model
 {
-  protected $eventFilterType = EventFilter::class;
-  protected $eventFilterDataType = '';
+  /**
+   * @var string
+   */
+  public $sqlWhereClause;
 
   /**
-   * @param EventFilter
+   * @param string
    */
-  public function setEventFilter(EventFilter $eventFilter)
+  public function setSqlWhereClause($sqlWhereClause)
   {
-    $this->eventFilter = $eventFilter;
+    $this->sqlWhereClause = $sqlWhereClause;
   }
   /**
-   * @return EventFilter
+   * @return string
    */
-  public function getEventFilter()
+  public function getSqlWhereClause()
   {
-    return $this->eventFilter;
+    return $this->sqlWhereClause;
   }
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(StartBackfillJobRequest::class, 'Google_Service_Datastream_StartBackfillJobRequest');
+class_alias(EventFilter::class, 'Google_Service_Datastream_EventFilter');
