@@ -36,6 +36,8 @@ class ProductOfferDetails extends \Google\Collection
    * @var string
    */
   public $offerToken;
+  protected $preorderOfferDetailsType = PreorderOfferDetails::class;
+  protected $preorderOfferDetailsDataType = '';
   /**
    * @var string
    */
@@ -106,6 +108,20 @@ class ProductOfferDetails extends \Google\Collection
   public function getOfferToken()
   {
     return $this->offerToken;
+  }
+  /**
+   * @param PreorderOfferDetails
+   */
+  public function setPreorderOfferDetails(PreorderOfferDetails $preorderOfferDetails)
+  {
+    $this->preorderOfferDetails = $preorderOfferDetails;
+  }
+  /**
+   * @return PreorderOfferDetails
+   */
+  public function getPreorderOfferDetails()
+  {
+    return $this->preorderOfferDetails;
   }
   /**
    * @param string

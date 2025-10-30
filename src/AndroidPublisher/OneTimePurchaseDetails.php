@@ -23,6 +23,8 @@ class OneTimePurchaseDetails extends \Google\Model
    * @var string
    */
   public $offerId;
+  protected $preorderDetailsType = PreorderDetails::class;
+  protected $preorderDetailsDataType = '';
   /**
    * @var string
    */
@@ -47,6 +49,20 @@ class OneTimePurchaseDetails extends \Google\Model
   public function getOfferId()
   {
     return $this->offerId;
+  }
+  /**
+   * @param PreorderDetails
+   */
+  public function setPreorderDetails(PreorderDetails $preorderDetails)
+  {
+    $this->preorderDetails = $preorderDetails;
+  }
+  /**
+   * @return PreorderDetails
+   */
+  public function getPreorderDetails()
+  {
+    return $this->preorderDetails;
   }
   /**
    * @param string
