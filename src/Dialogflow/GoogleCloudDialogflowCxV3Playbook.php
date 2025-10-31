@@ -20,6 +20,8 @@ namespace Google\Service\Dialogflow;
 class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
 {
   protected $collection_key = 'referencedTools';
+  protected $codeBlockType = GoogleCloudDialogflowCxV3CodeBlock::class;
+  protected $codeBlockDataType = '';
   /**
    * @var string
    */
@@ -34,6 +36,10 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
   public $goal;
   protected $handlersType = GoogleCloudDialogflowCxV3Handler::class;
   protected $handlersDataType = 'array';
+  /**
+   * @var string[]
+   */
+  public $inlineActions;
   protected $inputParameterDefinitionsType = GoogleCloudDialogflowCxV3ParameterDefinition::class;
   protected $inputParameterDefinitionsDataType = 'array';
   protected $instructionType = GoogleCloudDialogflowCxV3PlaybookInstruction::class;
@@ -71,6 +77,20 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
    */
   public $updateTime;
 
+  /**
+   * @param GoogleCloudDialogflowCxV3CodeBlock
+   */
+  public function setCodeBlock(GoogleCloudDialogflowCxV3CodeBlock $codeBlock)
+  {
+    $this->codeBlock = $codeBlock;
+  }
+  /**
+   * @return GoogleCloudDialogflowCxV3CodeBlock
+   */
+  public function getCodeBlock()
+  {
+    return $this->codeBlock;
+  }
   /**
    * @param string
    */
@@ -126,6 +146,20 @@ class GoogleCloudDialogflowCxV3Playbook extends \Google\Collection
   public function getHandlers()
   {
     return $this->handlers;
+  }
+  /**
+   * @param string[]
+   */
+  public function setInlineActions($inlineActions)
+  {
+    $this->inlineActions = $inlineActions;
+  }
+  /**
+   * @return string[]
+   */
+  public function getInlineActions()
+  {
+    return $this->inlineActions;
   }
   /**
    * @param GoogleCloudDialogflowCxV3ParameterDefinition[]
