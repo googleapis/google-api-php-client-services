@@ -84,12 +84,12 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
   /**
    * Creates a cluster, consisting of the specified number and type of Google
    * Compute Engine instances. By default, the cluster is created in the project's
-   * [default network](https://{$universe.dns_names.final_documentation_domain}/co
-   * mpute/docs/networks-and-firewalls#networks). One firewall is added for the
-   * cluster. After cluster creation, the Kubelet creates routes for each node to
-   * allow the containers on that node to communicate with all other instances in
-   * the cluster. Finally, an entry is added to the project's global metadata
-   * indicating which CIDR range the cluster is using. (clusters.create)
+   * [default network](https://cloud.google.com/compute/docs/networks-and-
+   * firewalls#networks). One firewall is added for the cluster. After cluster
+   * creation, the kubelet creates routes for each node to allow the containers on
+   * that node to communicate with all other instances in the cluster. Finally, an
+   * entry is added to the project's global metadata indicating which CIDR range
+   * the cluster is using. (clusters.create)
    *
    * @param string $parent The parent (project and location) where the cluster
    * will be created. Specified in the format `projects/locations`.
@@ -118,14 +118,13 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @opt_param string clusterId Deprecated. The name of the cluster to delete.
    * This field has been deprecated and replaced by the name field.
    * @opt_param string projectId Deprecated. The Google Developers Console
-   * [project ID or project
-   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * [project ID or project number](https://cloud.google.com/resource-
    * manager/docs/creating-managing-projects). This field has been deprecated and
    * replaced by the name field.
-   * @opt_param string zone Deprecated. The name of the Google Compute Engine [zon
-   * e](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zone
-   * s#available) in which the cluster resides. This field has been deprecated and
-   * replaced by the name field.
+   * @opt_param string zone Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
    * @return Operation
    * @throws \Google\Service\Exception
    */
@@ -164,14 +163,13 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @opt_param string clusterId Deprecated. The name of the cluster to retrieve.
    * This field has been deprecated and replaced by the name field.
    * @opt_param string projectId Deprecated. The Google Developers Console
-   * [project ID or project
-   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * [project ID or project number](https://cloud.google.com/resource-
    * manager/docs/creating-managing-projects). This field has been deprecated and
    * replaced by the name field.
-   * @opt_param string zone Deprecated. The name of the Google Compute Engine [zon
-   * e](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zone
-   * s#available) in which the cluster resides. This field has been deprecated and
-   * replaced by the name field.
+   * @opt_param string zone Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides. This field has been deprecated and replaced by the name
+   * field.
    * @return Cluster
    * @throws \Google\Service\Exception
    */
@@ -207,14 +205,13 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
    * @param array $optParams Optional parameters.
    *
    * @opt_param string projectId Deprecated. The Google Developers Console
-   * [project ID or project
-   * number](https://{$universe.dns_names.final_documentation_domain}/resource-
+   * [project ID or project number](https://cloud.google.com/resource-
    * manager/docs/creating-managing-projects). This field has been deprecated and
    * replaced by the parent field.
-   * @opt_param string zone Deprecated. The name of the Google Compute Engine [zon
-   * e](https://{$universe.dns_names.final_documentation_domain}/compute/docs/zone
-   * s#available) in which the cluster resides, or "-" for all zones. This field
-   * has been deprecated and replaced by the parent field.
+   * @opt_param string zone Deprecated. The name of the Google Compute Engine
+   * [zone](https://cloud.google.com/compute/docs/zones#available) in which the
+   * cluster resides, or "-" for all zones. This field has been deprecated and
+   * replaced by the parent field.
    * @return ListClustersResponse
    * @throws \Google\Service\Exception
    */
@@ -258,10 +255,10 @@ class ProjectsLocationsClusters extends \Google\Service\Resource
     return $this->call('setLegacyAbac', [$params], Operation::class);
   }
   /**
-   * Sets the locations for a specific cluster. Deprecated. Use [projects.location
-   * s.clusters.update](https://{$universe.dns_names.final_documentation_domain}/k
-   * ubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
-   * instead. (clusters.setLocations)
+   * Sets the locations for a specific cluster. Deprecated. Use
+   * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-
+   * engine/docs/reference/rest/v1/projects.locations.clusters/update) instead.
+   * (clusters.setLocations)
    *
    * @param string $name The name (project, location, cluster) of the cluster to
    * set locations. Specified in the format `projects/locations/clusters`.
