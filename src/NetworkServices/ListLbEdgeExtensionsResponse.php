@@ -17,20 +17,34 @@
 
 namespace Google\Service\NetworkServices;
 
-class ListOperationsResponse extends \Google\Collection
+class ListLbEdgeExtensionsResponse extends \Google\Collection
 {
   protected $collection_key = 'unreachable';
+  protected $lbEdgeExtensionsType = LbEdgeExtension::class;
+  protected $lbEdgeExtensionsDataType = 'array';
   /**
    * @var string
    */
   public $nextPageToken;
-  protected $operationsType = Operation::class;
-  protected $operationsDataType = 'array';
   /**
    * @var string[]
    */
   public $unreachable;
 
+  /**
+   * @param LbEdgeExtension[]
+   */
+  public function setLbEdgeExtensions($lbEdgeExtensions)
+  {
+    $this->lbEdgeExtensions = $lbEdgeExtensions;
+  }
+  /**
+   * @return LbEdgeExtension[]
+   */
+  public function getLbEdgeExtensions()
+  {
+    return $this->lbEdgeExtensions;
+  }
   /**
    * @param string
    */
@@ -44,20 +58,6 @@ class ListOperationsResponse extends \Google\Collection
   public function getNextPageToken()
   {
     return $this->nextPageToken;
-  }
-  /**
-   * @param Operation[]
-   */
-  public function setOperations($operations)
-  {
-    $this->operations = $operations;
-  }
-  /**
-   * @return Operation[]
-   */
-  public function getOperations()
-  {
-    return $this->operations;
   }
   /**
    * @param string[]
@@ -76,4 +76,4 @@ class ListOperationsResponse extends \Google\Collection
 }
 
 // Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ListOperationsResponse::class, 'Google_Service_NetworkServices_ListOperationsResponse');
+class_alias(ListLbEdgeExtensionsResponse::class, 'Google_Service_NetworkServices_ListLbEdgeExtensionsResponse');
