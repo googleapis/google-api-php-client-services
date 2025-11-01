@@ -20,6 +20,10 @@ namespace Google\Service\Backupdr;
 class TriggerBackupRequest extends \Google\Model
 {
   /**
+   * @var int
+   */
+  public $customRetentionDays;
+  /**
    * @var string
    */
   public $requestId;
@@ -28,6 +32,20 @@ class TriggerBackupRequest extends \Google\Model
    */
   public $ruleId;
 
+  /**
+   * @param int
+   */
+  public function setCustomRetentionDays($customRetentionDays)
+  {
+    $this->customRetentionDays = $customRetentionDays;
+  }
+  /**
+   * @return int
+   */
+  public function getCustomRetentionDays()
+  {
+    return $this->customRetentionDays;
+  }
   /**
    * @param string
    */

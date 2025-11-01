@@ -51,6 +51,10 @@ class BackupPlan extends \Google\Collection
    */
   public $logRetentionDays;
   /**
+   * @var int
+   */
+  public $maxCustomOnDemandRetentionDays;
+  /**
    * @var string
    */
   public $name;
@@ -190,6 +194,20 @@ class BackupPlan extends \Google\Collection
   public function getLogRetentionDays()
   {
     return $this->logRetentionDays;
+  }
+  /**
+   * @param int
+   */
+  public function setMaxCustomOnDemandRetentionDays($maxCustomOnDemandRetentionDays)
+  {
+    $this->maxCustomOnDemandRetentionDays = $maxCustomOnDemandRetentionDays;
+  }
+  /**
+   * @return int
+   */
+  public function getMaxCustomOnDemandRetentionDays()
+  {
+    return $this->maxCustomOnDemandRetentionDays;
   }
   /**
    * @param string
