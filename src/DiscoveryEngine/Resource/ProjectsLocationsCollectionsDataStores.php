@@ -60,14 +60,15 @@ class ProjectsLocationsCollectionsDataStores extends \Google\Service\Resource
    * fields marked as completable. Default values: * `document` is the default
    * model for regular dataStores. * `search-history` is the default model for
    * site search dataStores.
-   * @opt_param string userPseudoId A unique identifier for tracking visitors. For
-   * example, this could be implemented with an HTTP cookie, which should be able
-   * to uniquely identify a visitor on a single device. This unique identifier
-   * should not change if the visitor logs in or out of the website. This field
-   * should NOT have a fixed value such as `unknown_visitor`. This should be the
-   * same identifier as UserEvent.user_pseudo_id and SearchRequest.user_pseudo_id.
-   * The field must be a UTF-8 encoded string with a length limit of 128
-   * characters. Otherwise, an `INVALID_ARGUMENT` error is returned.
+   * @opt_param string userPseudoId Optional. A unique identifier for tracking
+   * visitors. For example, this could be implemented with an HTTP cookie, which
+   * should be able to uniquely identify a visitor on a single device. This unique
+   * identifier should not change if the visitor logs in or out of the website.
+   * This field should NOT have a fixed value such as `unknown_visitor`. This
+   * should be the same identifier as UserEvent.user_pseudo_id and
+   * SearchRequest.user_pseudo_id. The field must be a UTF-8 encoded string with a
+   * length limit of 128 characters. Otherwise, an `INVALID_ARGUMENT` error is
+   * returned.
    * @return GoogleCloudDiscoveryengineV1CompleteQueryResponse
    * @throws \Google\Service\Exception
    */
