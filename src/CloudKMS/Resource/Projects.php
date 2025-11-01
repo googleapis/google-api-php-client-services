@@ -17,7 +17,6 @@
 
 namespace Google\Service\CloudKMS\Resource;
 
-use Google\Service\CloudKMS\AutokeyConfig;
 use Google\Service\CloudKMS\KeyAccessJustificationsPolicyConfig;
 use Google\Service\CloudKMS\ShowEffectiveAutokeyConfigResponse;
 use Google\Service\CloudKMS\ShowEffectiveKeyAccessJustificationsEnrollmentConfigResponse;
@@ -33,23 +32,6 @@ use Google\Service\CloudKMS\ShowEffectiveKeyAccessJustificationsPolicyConfigResp
  */
 class Projects extends \Google\Service\Resource
 {
-  /**
-   * Returns the AutokeyConfig for a folder or project.
-   * (projects.getAutokeyConfig)
-   *
-   * @param string $name Required. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
-   * @param array $optParams Optional parameters.
-   * @return AutokeyConfig
-   * @throws \Google\Service\Exception
-   */
-  public function getAutokeyConfig($name, $optParams = [])
-  {
-    $params = ['name' => $name];
-    $params = array_merge($params, $optParams);
-    return $this->call('getAutokeyConfig', [$params], AutokeyConfig::class);
-  }
   /**
    * Gets the KeyAccessJustificationsPolicyConfig for a given organization,
    * folder, or project. (projects.getKajPolicyConfig)
@@ -118,31 +100,6 @@ class Projects extends \Google\Service\Resource
     $params = ['project' => $project];
     $params = array_merge($params, $optParams);
     return $this->call('showEffectiveKeyAccessJustificationsPolicyConfig', [$params], ShowEffectiveKeyAccessJustificationsPolicyConfigResponse::class);
-  }
-  /**
-   * Updates the AutokeyConfig for a folder. The caller must have both
-   * `cloudkms.autokeyConfigs.update` permission on the parent folder and
-   * `cloudkms.cryptoKeys.setIamPolicy` permission on the provided key project. A
-   * KeyHandle creation in the folder's descendant projects will use this
-   * configuration to determine where to create the resulting CryptoKey.
-   * (projects.updateAutokeyConfig)
-   *
-   * @param string $name Identifier. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig`
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
-   * @param AutokeyConfig $postBody
-   * @param array $optParams Optional parameters.
-   *
-   * @opt_param string updateMask Required. Masks which fields of the
-   * AutokeyConfig to update, e.g. `keyProject`.
-   * @return AutokeyConfig
-   * @throws \Google\Service\Exception
-   */
-  public function updateAutokeyConfig($name, AutokeyConfig $postBody, $optParams = [])
-  {
-    $params = ['name' => $name, 'postBody' => $postBody];
-    $params = array_merge($params, $optParams);
-    return $this->call('updateAutokeyConfig', [$params], AutokeyConfig::class);
   }
   /**
    * Updates the KeyAccessJustificationsPolicyConfig for a given organization,

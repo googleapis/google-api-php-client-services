@@ -31,11 +31,10 @@ use Google\Service\CloudKMS\KeyAccessJustificationsPolicyConfig;
 class Folders extends \Google\Service\Resource
 {
   /**
-   * Returns the AutokeyConfig for a folder or project. (folders.getAutokeyConfig)
+   * Returns the AutokeyConfig for a folder. (folders.getAutokeyConfig)
    *
    * @param string $name Required. Name of the AutokeyConfig resource, e.g.
-   * `folders/{FOLDER_NUMBER}/autokeyConfig` or
-   * `projects/{PROJECT_NUMBER}/autokeyConfig`.
+   * `folders/{FOLDER_NUMBER}/autokeyConfig`.
    * @param array $optParams Optional parameters.
    * @return AutokeyConfig
    * @throws \Google\Service\Exception
