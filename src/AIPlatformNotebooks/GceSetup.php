@@ -43,6 +43,10 @@ class GceSetup extends \Google\Collection
   /**
    * @var string
    */
+  public $instanceId;
+  /**
+   * @var string
+   */
   public $machineType;
   /**
    * @var string[]
@@ -178,6 +182,20 @@ class GceSetup extends \Google\Collection
   public function getGpuDriverConfig()
   {
     return $this->gpuDriverConfig;
+  }
+  /**
+   * @param string
+   */
+  public function setInstanceId($instanceId)
+  {
+    $this->instanceId = $instanceId;
+  }
+  /**
+   * @return string
+   */
+  public function getInstanceId()
+  {
+    return $this->instanceId;
   }
   /**
    * @param string
