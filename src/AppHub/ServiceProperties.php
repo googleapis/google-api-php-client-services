@@ -19,6 +19,8 @@ namespace Google\Service\AppHub;
 
 class ServiceProperties extends \Google\Model
 {
+  protected $functionalTypeType = FunctionalType::class;
+  protected $functionalTypeDataType = '';
   /**
    * @var string
    */
@@ -32,6 +34,20 @@ class ServiceProperties extends \Google\Model
    */
   public $zone;
 
+  /**
+   * @param FunctionalType
+   */
+  public function setFunctionalType(FunctionalType $functionalType)
+  {
+    $this->functionalType = $functionalType;
+  }
+  /**
+   * @return FunctionalType
+   */
+  public function getFunctionalType()
+  {
+    return $this->functionalType;
+  }
   /**
    * @param string
    */
