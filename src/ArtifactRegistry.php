@@ -236,6 +236,16 @@ class ArtifactRegistry extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'exportArtifact' => [
+              'path' => 'v1/{+repository}:exportArtifact',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'repository' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
