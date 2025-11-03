@@ -77,6 +77,10 @@ class Subscription extends \Google\Collection
    */
   public $state;
   /**
+   * @var string[]
+   */
+  public $tags;
+  /**
    * @var string
    */
   public $topic;
@@ -336,6 +340,20 @@ class Subscription extends \Google\Collection
   public function getState()
   {
     return $this->state;
+  }
+  /**
+   * @param string[]
+   */
+  public function setTags($tags)
+  {
+    $this->tags = $tags;
+  }
+  /**
+   * @return string[]
+   */
+  public function getTags()
+  {
+    return $this->tags;
   }
   /**
    * @param string
