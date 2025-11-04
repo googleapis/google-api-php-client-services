@@ -26,6 +26,8 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public $aggregationMetrics;
   protected $bleuSpecType = GoogleCloudAiplatformV1BleuSpec::class;
   protected $bleuSpecDataType = '';
+  protected $customCodeExecutionSpecType = GoogleCloudAiplatformV1CustomCodeExecutionSpec::class;
+  protected $customCodeExecutionSpecDataType = '';
   protected $exactMatchSpecType = GoogleCloudAiplatformV1ExactMatchSpec::class;
   protected $exactMatchSpecDataType = '';
   protected $llmBasedMetricSpecType = GoogleCloudAiplatformV1LLMBasedMetricSpec::class;
@@ -66,6 +68,20 @@ class GoogleCloudAiplatformV1Metric extends \Google\Collection
   public function getBleuSpec()
   {
     return $this->bleuSpec;
+  }
+  /**
+   * @param GoogleCloudAiplatformV1CustomCodeExecutionSpec
+   */
+  public function setCustomCodeExecutionSpec(GoogleCloudAiplatformV1CustomCodeExecutionSpec $customCodeExecutionSpec)
+  {
+    $this->customCodeExecutionSpec = $customCodeExecutionSpec;
+  }
+  /**
+   * @return GoogleCloudAiplatformV1CustomCodeExecutionSpec
+   */
+  public function getCustomCodeExecutionSpec()
+  {
+    return $this->customCodeExecutionSpec;
   }
   /**
    * @param GoogleCloudAiplatformV1ExactMatchSpec
