@@ -101,6 +101,10 @@ class ComputeEngineTargetDetails extends \Google\Collection
   /**
    * @var string
    */
+  public $storagePool;
+  /**
+   * @var string
+   */
   public $vmName;
   /**
    * @var string
@@ -414,6 +418,20 @@ class ComputeEngineTargetDetails extends \Google\Collection
   public function getServiceAccount()
   {
     return $this->serviceAccount;
+  }
+  /**
+   * @param string
+   */
+  public function setStoragePool($storagePool)
+  {
+    $this->storagePool = $storagePool;
+  }
+  /**
+   * @return string
+   */
+  public function getStoragePool()
+  {
+    return $this->storagePool;
   }
   /**
    * @param string
