@@ -154,9 +154,9 @@ class ProjectsLocationsDatasetsFhirStores extends \Google\Service\Resource
    * @opt_param string _type Optional. String of comma-delimited FHIR resource
    * types. If provided, only resources of the specified resource type(s) are
    * exported.
-   * @opt_param string organizeOutputBy Optional. Required. The FHIR resource type
-   * used to organize exported resources. Only supports "Patient". When organized
-   * by Patient resource, output files are grouped as follows: * Patient file(s)
+   * @opt_param string organizeOutputBy Required. The FHIR resource type used to
+   * organize exported resources. Only supports "Patient". When organized by
+   * Patient resource, output files are grouped as follows: * Patient file(s)
    * containing the Patient resources. Each Patient is sequentially followed by
    * all resources the Patient references, and all resources that reference the
    * Patient (equivalent to a GetPatientEverything request). * Individual files
