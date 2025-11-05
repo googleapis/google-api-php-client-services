@@ -19,6 +19,10 @@ namespace Google\Service\ContainerAnalysis;
 
 class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \Google\Model
 {
+  /**
+   * @var string
+   */
+  public $artifactRegistryPackage;
   protected $fileHashesType = ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes::class;
   protected $fileHashesDataType = '';
   protected $pushTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
@@ -28,6 +32,20 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedMavenArtifact extends \
    */
   public $uri;
 
+  /**
+   * @param string
+   */
+  public function setArtifactRegistryPackage($artifactRegistryPackage)
+  {
+    $this->artifactRegistryPackage = $artifactRegistryPackage;
+  }
+  /**
+   * @return string
+   */
+  public function getArtifactRegistryPackage()
+  {
+    return $this->artifactRegistryPackage;
+  }
   /**
    * @param ContaineranalysisGoogleDevtoolsCloudbuildV1FileHashes
    */

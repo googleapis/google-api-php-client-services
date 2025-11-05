@@ -22,6 +22,10 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage extends \Google\Mode
   /**
    * @var string
    */
+  public $artifactRegistryPackage;
+  /**
+   * @var string
+   */
   public $digest;
   /**
    * @var string
@@ -30,6 +34,20 @@ class ContaineranalysisGoogleDevtoolsCloudbuildV1BuiltImage extends \Google\Mode
   protected $pushTimingType = ContaineranalysisGoogleDevtoolsCloudbuildV1TimeSpan::class;
   protected $pushTimingDataType = '';
 
+  /**
+   * @param string
+   */
+  public function setArtifactRegistryPackage($artifactRegistryPackage)
+  {
+    $this->artifactRegistryPackage = $artifactRegistryPackage;
+  }
+  /**
+   * @return string
+   */
+  public function getArtifactRegistryPackage()
+  {
+    return $this->artifactRegistryPackage;
+  }
   /**
    * @param string
    */
