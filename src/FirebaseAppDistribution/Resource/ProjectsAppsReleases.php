@@ -40,7 +40,7 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    *
    * @param string $parent Required. The name of the app resource, which is the
    * parent of the release resources. Format:
-   * `projects/{project_number}/apps/{app_id}`
+   * `projects/{project_number}/apps/{app}`
    * @param GoogleFirebaseAppdistroV1BatchDeleteReleasesRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleProtobufEmpty
@@ -61,7 +61,7 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    * (releases.distribute)
    *
    * @param string $name Required. The name of the release resource to distribute.
-   * Format: `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+   * Format: `projects/{project_number}/apps/{app}/releases/{release}`
    * @param GoogleFirebaseAppdistroV1DistributeReleaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleFirebaseAppdistroV1DistributeReleaseResponse
@@ -77,7 +77,7 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    * Gets a release. (releases.get)
    *
    * @param string $name Required. The name of the release resource to retrieve.
-   * Format: projects/{project_number}/apps/{app_id}/releases/{release_id}
+   * Format: projects/{project_number}/apps/{app}/releases/{release}
    * @param array $optParams Optional parameters.
    * @return GoogleFirebaseAppdistroV1Release
    * @throws \Google\Service\Exception
@@ -94,7 +94,7 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    *
    * @param string $parent Required. The name of the app resource, which is the
    * parent of the release resources. Format:
-   * `projects/{project_number}/apps/{app_id}`
+   * `projects/{project_number}/apps/{app}`
    * @param array $optParams Optional parameters.
    *
    * @opt_param string filter Optional. The expression to filter releases listed
@@ -130,7 +130,7 @@ class ProjectsAppsReleases extends \Google\Service\Resource
    * Updates a release. (releases.patch)
    *
    * @param string $name The name of the release resource. Format:
-   * `projects/{project_number}/apps/{app_id}/releases/{release_id}`
+   * `projects/{project_number}/apps/{app}/releases/{release}`
    * @param GoogleFirebaseAppdistroV1Release $postBody
    * @param array $optParams Optional parameters.
    *

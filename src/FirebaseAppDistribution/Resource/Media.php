@@ -36,7 +36,7 @@ class Media extends \Google\Service\Resource
    * same binary already exists. (media.upload)
    *
    * @param string $app Required. The name of the app resource. Format:
-   * `projects/{project_number}/apps/{app_id}`
+   * `projects/{project_number}/apps/{app}`
    * @param GoogleFirebaseAppdistroV1UploadReleaseRequest $postBody
    * @param array $optParams Optional parameters.
    * @return GoogleLongrunningOperation
