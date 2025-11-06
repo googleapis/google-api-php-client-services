@@ -37,6 +37,10 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule exten
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $ruleId;
 
   /**
    * @param CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRuleChildAlignmentRule
@@ -135,6 +139,20 @@ class CloudAiDocumentaiLabHifiaToolsValidationValidatorInputValidationRule exten
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setRuleId($ruleId)
+  {
+    $this->ruleId = $ruleId;
+  }
+  /**
+   * @return string
+   */
+  public function getRuleId()
+  {
+    return $this->ruleId;
   }
 }
 
