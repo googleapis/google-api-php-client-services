@@ -34,6 +34,10 @@ class CalendarListEntry extends \Google\Collection
   public $colorId;
   protected $conferencePropertiesType = ConferenceProperties::class;
   protected $conferencePropertiesDataType = '';
+  /**
+   * @var string
+   */
+  public $dataOwner;
   protected $defaultRemindersType = EventReminder::class;
   protected $defaultRemindersDataType = 'array';
   /**
@@ -146,6 +150,20 @@ class CalendarListEntry extends \Google\Collection
   public function getConferenceProperties()
   {
     return $this->conferenceProperties;
+  }
+  /**
+   * @param string
+   */
+  public function setDataOwner($dataOwner)
+  {
+    $this->dataOwner = $dataOwner;
+  }
+  /**
+   * @return string
+   */
+  public function getDataOwner()
+  {
+    return $this->dataOwner;
   }
   /**
    * @param EventReminder[]
