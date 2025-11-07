@@ -19,6 +19,8 @@ namespace Google\Service\CloudDataplex;
 
 class GoogleCloudDataplexV1DataProfileResult extends \Google\Model
 {
+  protected $catalogPublishingStatusType = GoogleCloudDataplexV1DataScanCatalogPublishingStatus::class;
+  protected $catalogPublishingStatusDataType = '';
   protected $postScanActionsResultType = GoogleCloudDataplexV1DataProfileResultPostScanActionsResult::class;
   protected $postScanActionsResultDataType = '';
   protected $profileType = GoogleCloudDataplexV1DataProfileResultProfile::class;
@@ -30,6 +32,20 @@ class GoogleCloudDataplexV1DataProfileResult extends \Google\Model
   protected $scannedDataType = GoogleCloudDataplexV1ScannedData::class;
   protected $scannedDataDataType = '';
 
+  /**
+   * @param GoogleCloudDataplexV1DataScanCatalogPublishingStatus
+   */
+  public function setCatalogPublishingStatus(GoogleCloudDataplexV1DataScanCatalogPublishingStatus $catalogPublishingStatus)
+  {
+    $this->catalogPublishingStatus = $catalogPublishingStatus;
+  }
+  /**
+   * @return GoogleCloudDataplexV1DataScanCatalogPublishingStatus
+   */
+  public function getCatalogPublishingStatus()
+  {
+    return $this->catalogPublishingStatus;
+  }
   /**
    * @param GoogleCloudDataplexV1DataProfileResultPostScanActionsResult
    */
