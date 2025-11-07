@@ -17,8 +17,15 @@
 
 namespace Google\Service\DataManager;
 
-class Item extends \Google\Model
+class Item extends \Google\Collection
 {
+  protected $collection_key = 'additionalItemParameters';
+  protected $additionalItemParametersType = ItemParameter::class;
+  protected $additionalItemParametersDataType = 'array';
+  /**
+   * @var string
+   */
+  public $itemId;
   /**
    * @var string
    */
@@ -29,6 +36,34 @@ class Item extends \Google\Model
   public $quantity;
   public $unitPrice;
 
+  /**
+   * @param ItemParameter[]
+   */
+  public function setAdditionalItemParameters($additionalItemParameters)
+  {
+    $this->additionalItemParameters = $additionalItemParameters;
+  }
+  /**
+   * @return ItemParameter[]
+   */
+  public function getAdditionalItemParameters()
+  {
+    return $this->additionalItemParameters;
+  }
+  /**
+   * @param string
+   */
+  public function setItemId($itemId)
+  {
+    $this->itemId = $itemId;
+  }
+  /**
+   * @return string
+   */
+  public function getItemId()
+  {
+    return $this->itemId;
+  }
   /**
    * @param string
    */

@@ -17,8 +17,11 @@
 
 namespace Google\Service\DataManager;
 
-class UserProperties extends \Google\Model
+class UserProperties extends \Google\Collection
 {
+  protected $collection_key = 'additionalUserProperties';
+  protected $additionalUserPropertiesType = UserProperty::class;
+  protected $additionalUserPropertiesDataType = 'array';
   /**
    * @var string
    */
@@ -28,6 +31,20 @@ class UserProperties extends \Google\Model
    */
   public $customerValueBucket;
 
+  /**
+   * @param UserProperty[]
+   */
+  public function setAdditionalUserProperties($additionalUserProperties)
+  {
+    $this->additionalUserProperties = $additionalUserProperties;
+  }
+  /**
+   * @return UserProperty[]
+   */
+  public function getAdditionalUserProperties()
+  {
+    return $this->additionalUserProperties;
+  }
   /**
    * @param string
    */

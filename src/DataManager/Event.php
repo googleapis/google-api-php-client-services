@@ -22,8 +22,14 @@ class Event extends \Google\Collection
   protected $collection_key = 'experimentalFields';
   protected $adIdentifiersType = AdIdentifiers::class;
   protected $adIdentifiersDataType = '';
+  protected $additionalEventParametersType = EventParameter::class;
+  protected $additionalEventParametersDataType = 'array';
   protected $cartDataType = CartData::class;
   protected $cartDataDataType = '';
+  /**
+   * @var string
+   */
+  public $clientId;
   protected $consentType = Consent::class;
   protected $consentDataType = '';
   public $conversionValue;
@@ -39,6 +45,10 @@ class Event extends \Google\Collection
   public $destinationReferences;
   protected $eventDeviceInfoType = DeviceInfo::class;
   protected $eventDeviceInfoDataType = '';
+  /**
+   * @var string
+   */
+  public $eventName;
   /**
    * @var string
    */
@@ -59,6 +69,10 @@ class Event extends \Google\Collection
   public $transactionId;
   protected $userDataType = UserData::class;
   protected $userDataDataType = '';
+  /**
+   * @var string
+   */
+  public $userId;
   protected $userPropertiesType = UserProperties::class;
   protected $userPropertiesDataType = '';
 
@@ -77,6 +91,20 @@ class Event extends \Google\Collection
     return $this->adIdentifiers;
   }
   /**
+   * @param EventParameter[]
+   */
+  public function setAdditionalEventParameters($additionalEventParameters)
+  {
+    $this->additionalEventParameters = $additionalEventParameters;
+  }
+  /**
+   * @return EventParameter[]
+   */
+  public function getAdditionalEventParameters()
+  {
+    return $this->additionalEventParameters;
+  }
+  /**
    * @param CartData
    */
   public function setCartData(CartData $cartData)
@@ -89,6 +117,20 @@ class Event extends \Google\Collection
   public function getCartData()
   {
     return $this->cartData;
+  }
+  /**
+   * @param string
+   */
+  public function setClientId($clientId)
+  {
+    $this->clientId = $clientId;
+  }
+  /**
+   * @return string
+   */
+  public function getClientId()
+  {
+    return $this->clientId;
   }
   /**
    * @param Consent
@@ -167,6 +209,20 @@ class Event extends \Google\Collection
   public function getEventDeviceInfo()
   {
     return $this->eventDeviceInfo;
+  }
+  /**
+   * @param string
+   */
+  public function setEventName($eventName)
+  {
+    $this->eventName = $eventName;
+  }
+  /**
+   * @return string
+   */
+  public function getEventName()
+  {
+    return $this->eventName;
   }
   /**
    * @param string
@@ -251,6 +307,20 @@ class Event extends \Google\Collection
   public function getUserData()
   {
     return $this->userData;
+  }
+  /**
+   * @param string
+   */
+  public function setUserId($userId)
+  {
+    $this->userId = $userId;
+  }
+  /**
+   * @return string
+   */
+  public function getUserId()
+  {
+    return $this->userId;
   }
   /**
    * @param UserProperties
