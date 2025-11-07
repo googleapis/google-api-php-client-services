@@ -60,6 +60,10 @@ class SecurityPolicy extends \Google\Collection
    * @var string
    */
   public $name;
+  /**
+   * @var string
+   */
+  public $parent;
   protected $recaptchaOptionsConfigType = SecurityPolicyRecaptchaOptionsConfig::class;
   protected $recaptchaOptionsConfigDataType = '';
   /**
@@ -250,6 +254,20 @@ class SecurityPolicy extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param string
+   */
+  public function setParent($parent)
+  {
+    $this->parent = $parent;
+  }
+  /**
+   * @return string
+   */
+  public function getParent()
+  {
+    return $this->parent;
   }
   /**
    * @param SecurityPolicyRecaptchaOptionsConfig
