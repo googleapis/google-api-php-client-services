@@ -18,6 +18,7 @@
 namespace Google\Service\Appengine\Resource;
 
 use Google\Service\Appengine\DomainMapping;
+use Google\Service\Appengine\ListDomainMappingsResponse;
 use Google\Service\Appengine\Operation;
 
 /**
@@ -98,6 +99,30 @@ class ProjectsLocationsApplicationsDomainMappings extends \Google\Service\Resour
     $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId, 'domainMappingsId' => $domainMappingsId];
     $params = array_merge($params, $optParams);
     return $this->call('get', [$params], DomainMapping::class);
+  }
+  /**
+   * Lists the domain mappings on an application.
+   * (domainMappings.listProjectsLocationsApplicationsDomainMappings)
+   *
+   * @param string $projectsId Part of `parent`. Required. Name of the parent
+   * Application resource. Example: apps/myapp.
+   * @param string $locationsId Part of `parent`. See documentation of
+   * `projectsId`.
+   * @param string $applicationsId Part of `parent`. See documentation of
+   * `projectsId`.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int pageSize Maximum results to return per page.
+   * @opt_param string pageToken Continuation token for fetching the next page of
+   * results.
+   * @return ListDomainMappingsResponse
+   * @throws \Google\Service\Exception
+   */
+  public function listProjectsLocationsApplicationsDomainMappings($projectsId, $locationsId, $applicationsId, $optParams = [])
+  {
+    $params = ['projectsId' => $projectsId, 'locationsId' => $locationsId, 'applicationsId' => $applicationsId];
+    $params = array_merge($params, $optParams);
+    return $this->call('list', [$params], ListDomainMappingsResponse::class);
   }
   /**
    * Updates the specified domain mapping. To map an SSL certificate to a domain
