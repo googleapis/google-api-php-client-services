@@ -24,6 +24,10 @@ class MongodbSourceConfig extends \Google\Model
   protected $includeObjectsType = MongodbCluster::class;
   protected $includeObjectsDataType = '';
   /**
+   * @var string
+   */
+  public $jsonMode;
+  /**
    * @var int
    */
   public $maxConcurrentBackfillTasks;
@@ -55,6 +59,20 @@ class MongodbSourceConfig extends \Google\Model
   public function getIncludeObjects()
   {
     return $this->includeObjects;
+  }
+  /**
+   * @param string
+   */
+  public function setJsonMode($jsonMode)
+  {
+    $this->jsonMode = $jsonMode;
+  }
+  /**
+   * @return string
+   */
+  public function getJsonMode()
+  {
+    return $this->jsonMode;
   }
   /**
    * @param int
