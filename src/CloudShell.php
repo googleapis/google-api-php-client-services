@@ -152,6 +152,24 @@ class CloudShell extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'generateAccessToken' => [
+              'path' => 'v1/{+environment}:generateAccessToken',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'environment' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'expireTime' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'ttl' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+              ],
             ],'get' => [
               'path' => 'v1/{+name}',
               'httpMethod' => 'GET',

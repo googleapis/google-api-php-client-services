@@ -20,6 +20,7 @@ namespace Google\Service\CloudShell\Resource;
 use Google\Service\CloudShell\AddPublicKeyRequest;
 use Google\Service\CloudShell\AuthorizeEnvironmentRequest;
 use Google\Service\CloudShell\Environment;
+use Google\Service\CloudShell\GenerateAccessTokenResponse;
 use Google\Service\CloudShell\Operation;
 use Google\Service\CloudShell\RemovePublicKeyRequest;
 use Google\Service\CloudShell\StartEnvironmentRequest;
@@ -72,6 +73,30 @@ class UsersEnvironments extends \Google\Service\Resource
     $params = ['name' => $name, 'postBody' => $postBody];
     $params = array_merge($params, $optParams);
     return $this->call('authorize', [$params], Operation::class);
+  }
+  /**
+   * Generates an access token for the user's environment.
+   * (environments.generateAccessToken)
+   *
+   * @param string $environment Required. The environment to generate the access
+   * token for.
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param string expireTime Desired expiration time of the access token.
+   * This value must be at most 24 hours in the future. If a value is not
+   * specified, the token's expiration time will be set to a default value of 1
+   * hour in the future.
+   * @opt_param string ttl Desired lifetime duration of the access token. This
+   * value must be at most 24 hours. If a value is not specified, the token's
+   * lifetime will be set to a default value of 1 hour.
+   * @return GenerateAccessTokenResponse
+   * @throws \Google\Service\Exception
+   */
+  public function generateAccessToken($environment, $optParams = [])
+  {
+    $params = ['environment' => $environment];
+    $params = array_merge($params, $optParams);
+    return $this->call('generateAccessToken', [$params], GenerateAccessTokenResponse::class);
   }
   /**
    * Gets an environment. Returns NOT_FOUND if the environment does not exist.
