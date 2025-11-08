@@ -35,7 +35,7 @@ class ProjectsLocationsTcpRoutes extends \Google\Service\Resource
    * Creates a new TcpRoute in a given project and location. (tcpRoutes.create)
    *
    * @param string $parent Required. The parent resource of the TcpRoute. Must be
-   * in the format `projects/locations/global`.
+   * in the format `projects/locations`.
    * @param TcpRoute $postBody
    * @param array $optParams Optional parameters.
    *
@@ -54,7 +54,7 @@ class ProjectsLocationsTcpRoutes extends \Google\Service\Resource
    * Deletes a single TcpRoute. (tcpRoutes.delete)
    *
    * @param string $name Required. A name of the TcpRoute to delete. Must be in
-   * the format `projects/locations/global/tcpRoutes`.
+   * the format `projects/locations/tcpRoutes`.
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -69,7 +69,7 @@ class ProjectsLocationsTcpRoutes extends \Google\Service\Resource
    * Gets details of a single TcpRoute. (tcpRoutes.get)
    *
    * @param string $name Required. A name of the TcpRoute to get. Must be in the
-   * format `projects/locations/global/tcpRoutes`.
+   * format `projects/locations/tcpRoutes`.
    * @param array $optParams Optional parameters.
    * @return TcpRoute
    * @throws \Google\Service\Exception
@@ -85,8 +85,7 @@ class ProjectsLocationsTcpRoutes extends \Google\Service\Resource
    * (tcpRoutes.listProjectsLocationsTcpRoutes)
    *
    * @param string $parent Required. The project and location from which the
-   * TcpRoutes should be listed, specified in the format
-   * `projects/locations/global`.
+   * TcpRoutes should be listed, specified in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of TcpRoutes to return per call.
@@ -110,7 +109,7 @@ class ProjectsLocationsTcpRoutes extends \Google\Service\Resource
    * Updates the parameters of a single TcpRoute. (tcpRoutes.patch)
    *
    * @param string $name Identifier. Name of the TcpRoute resource. It matches
-   * pattern `projects/locations/global/tcpRoutes/tcp_route_name>`.
+   * pattern `projects/locations/tcpRoutes/tcp_route_name>`.
    * @param TcpRoute $postBody
    * @param array $optParams Optional parameters.
    *

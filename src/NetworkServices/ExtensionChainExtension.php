@@ -41,6 +41,10 @@ class ExtensionChainExtension extends \Google\Collection
    */
   public $name;
   /**
+   * @var bool
+   */
+  public $observabilityMode;
+  /**
    * @var string
    */
   public $requestBodySendMode;
@@ -130,6 +134,20 @@ class ExtensionChainExtension extends \Google\Collection
   public function getName()
   {
     return $this->name;
+  }
+  /**
+   * @param bool
+   */
+  public function setObservabilityMode($observabilityMode)
+  {
+    $this->observabilityMode = $observabilityMode;
+  }
+  /**
+   * @return bool
+   */
+  public function getObservabilityMode()
+  {
+    return $this->observabilityMode;
   }
   /**
    * @param string

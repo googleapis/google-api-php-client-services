@@ -36,7 +36,7 @@ class ProjectsLocationsEndpointPolicies extends \Google\Service\Resource
    * (endpointPolicies.create)
    *
    * @param string $parent Required. The parent resource of the EndpointPolicy.
-   * Must be in the format `projects/locations/global`.
+   * Must be in the format `projects/locations`.
    * @param EndpointPolicy $postBody
    * @param array $optParams Optional parameters.
    *
@@ -55,7 +55,7 @@ class ProjectsLocationsEndpointPolicies extends \Google\Service\Resource
    * Deletes a single EndpointPolicy. (endpointPolicies.delete)
    *
    * @param string $name Required. A name of the EndpointPolicy to delete. Must be
-   * in the format `projects/locations/global/endpointPolicies`.
+   * in the format `projects/locations/endpointPolicies`.
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -70,7 +70,7 @@ class ProjectsLocationsEndpointPolicies extends \Google\Service\Resource
    * Gets details of a single EndpointPolicy. (endpointPolicies.get)
    *
    * @param string $name Required. A name of the EndpointPolicy to get. Must be in
-   * the format `projects/locations/global/endpointPolicies`.
+   * the format `projects/locations/endpointPolicies`.
    * @param array $optParams Optional parameters.
    * @return EndpointPolicy
    * @throws \Google\Service\Exception
@@ -87,7 +87,7 @@ class ProjectsLocationsEndpointPolicies extends \Google\Service\Resource
    *
    * @param string $parent Required. The project and location from which the
    * EndpointPolicies should be listed, specified in the format
-   * `projects/locations/global`.
+   * `projects/locations`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of EndpointPolicies to return per
@@ -113,7 +113,7 @@ class ProjectsLocationsEndpointPolicies extends \Google\Service\Resource
    *
    * @param string $name Identifier. Name of the EndpointPolicy resource. It
    * matches pattern
-   * `projects/{project}/locations/global/endpointPolicies/{endpoint_policy}`.
+   * `projects/{project}/locations/endpointPolicies/{endpoint_policy}`.
    * @param EndpointPolicy $postBody
    * @param array $optParams Optional parameters.
    *

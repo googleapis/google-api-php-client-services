@@ -35,7 +35,7 @@ class ProjectsLocationsMeshes extends \Google\Service\Resource
    * Creates a new Mesh in a given project and location. (meshes.create)
    *
    * @param string $parent Required. The parent resource of the Mesh. Must be in
-   * the format `projects/locations/global`.
+   * the format `projects/locations`.
    * @param Mesh $postBody
    * @param array $optParams Optional parameters.
    *
@@ -54,7 +54,7 @@ class ProjectsLocationsMeshes extends \Google\Service\Resource
    * Deletes a single Mesh. (meshes.delete)
    *
    * @param string $name Required. A name of the Mesh to delete. Must be in the
-   * format `projects/locations/global/meshes`.
+   * format `projects/locations/meshes`.
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -69,7 +69,7 @@ class ProjectsLocationsMeshes extends \Google\Service\Resource
    * Gets details of a single Mesh. (meshes.get)
    *
    * @param string $name Required. A name of the Mesh to get. Must be in the
-   * format `projects/locations/global/meshes`.
+   * format `projects/locations/meshes`.
    * @param array $optParams Optional parameters.
    * @return Mesh
    * @throws \Google\Service\Exception
@@ -85,7 +85,7 @@ class ProjectsLocationsMeshes extends \Google\Service\Resource
    * (meshes.listProjectsLocationsMeshes)
    *
    * @param string $parent Required. The project and location from which the
-   * Meshes should be listed, specified in the format `projects/locations/global`.
+   * Meshes should be listed, specified in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of Meshes to return per call.
@@ -108,7 +108,7 @@ class ProjectsLocationsMeshes extends \Google\Service\Resource
    * Updates the parameters of a single Mesh. (meshes.patch)
    *
    * @param string $name Identifier. Name of the Mesh resource. It matches pattern
-   * `projects/locations/global/meshes/`.
+   * `projects/locations/meshes/`.
    * @param Mesh $postBody
    * @param array $optParams Optional parameters.
    *

@@ -35,7 +35,7 @@ class ProjectsLocationsHttpRoutes extends \Google\Service\Resource
    * Creates a new HttpRoute in a given project and location. (httpRoutes.create)
    *
    * @param string $parent Required. The parent resource of the HttpRoute. Must be
-   * in the format `projects/locations/global`.
+   * in the format `projects/locations`.
    * @param HttpRoute $postBody
    * @param array $optParams Optional parameters.
    *
@@ -54,7 +54,7 @@ class ProjectsLocationsHttpRoutes extends \Google\Service\Resource
    * Deletes a single HttpRoute. (httpRoutes.delete)
    *
    * @param string $name Required. A name of the HttpRoute to delete. Must be in
-   * the format `projects/locations/global/httpRoutes`.
+   * the format `projects/locations/httpRoutes`.
    * @param array $optParams Optional parameters.
    * @return Operation
    * @throws \Google\Service\Exception
@@ -69,7 +69,7 @@ class ProjectsLocationsHttpRoutes extends \Google\Service\Resource
    * Gets details of a single HttpRoute. (httpRoutes.get)
    *
    * @param string $name Required. A name of the HttpRoute to get. Must be in the
-   * format `projects/locations/global/httpRoutes`.
+   * format `projects/locations/httpRoutes`.
    * @param array $optParams Optional parameters.
    * @return HttpRoute
    * @throws \Google\Service\Exception
@@ -85,8 +85,7 @@ class ProjectsLocationsHttpRoutes extends \Google\Service\Resource
    * (httpRoutes.listProjectsLocationsHttpRoutes)
    *
    * @param string $parent Required. The project and location from which the
-   * HttpRoutes should be listed, specified in the format
-   * `projects/locations/global`.
+   * HttpRoutes should be listed, specified in the format `projects/locations`.
    * @param array $optParams Optional parameters.
    *
    * @opt_param int pageSize Maximum number of HttpRoutes to return per call.
@@ -110,7 +109,7 @@ class ProjectsLocationsHttpRoutes extends \Google\Service\Resource
    * Updates the parameters of a single HttpRoute. (httpRoutes.patch)
    *
    * @param string $name Identifier. Name of the HttpRoute resource. It matches
-   * pattern `projects/locations/global/httpRoutes/http_route_name>`.
+   * pattern `projects/locations/httpRoutes/http_route_name>`.
    * @param HttpRoute $postBody
    * @param array $optParams Optional parameters.
    *
