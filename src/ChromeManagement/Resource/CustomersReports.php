@@ -17,12 +17,15 @@
 
 namespace Google\Service\ChromeManagement\Resource;
 
+use Google\Service\ChromeManagement\GoogleChromeManagementV1CountActiveDevicesResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeBrowsersNeedingAttentionResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeCrashEventsResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeDevicesReachingAutoExpirationDateResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeDevicesThatNeedAttentionResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeHardwareFleetDevicesResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountChromeVersionsResponse;
+use Google\Service\ChromeManagement\GoogleChromeManagementV1CountDevicesPerBootTypeResponse;
+use Google\Service\ChromeManagement\GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountInstalledAppsResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountPrintJobsByPrinterResponse;
 use Google\Service\ChromeManagement\GoogleChromeManagementV1CountPrintJobsByUserResponse;
@@ -39,6 +42,30 @@ use Google\Service\ChromeManagement\GoogleChromeManagementV1FindInstalledAppDevi
  */
 class CustomersReports extends \Google\Service\Resource
 {
+  /**
+   * Get a count of active devices per set time frames.
+   * (reports.countActiveDevices)
+   *
+   * @param string $customer Required. Obfuscated customer ID prefixed with
+   * "customers/C" or "customers/my_customer".
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int date.day Day of a month. Must be from 1 to 31 and valid for
+   * the year and month, or 0 to specify a year by itself or a year and month
+   * where the day isn't significant.
+   * @opt_param int date.month Month of a year. Must be from 1 to 12, or 0 to
+   * specify a year without a month and day.
+   * @opt_param int date.year Year of the date. Must be from 1 to 9999, or 0 to
+   * specify a date without a year.
+   * @return GoogleChromeManagementV1CountActiveDevicesResponse
+   * @throws \Google\Service\Exception
+   */
+  public function countActiveDevices($customer, $optParams = [])
+  {
+    $params = ['customer' => $customer];
+    $params = array_merge($params, $optParams);
+    return $this->call('countActiveDevices', [$params], GoogleChromeManagementV1CountActiveDevicesResponse::class);
+  }
   /**
    * Count of Chrome Browsers that have been recently enrolled, have new policy to
    * be synced, or have no recent activity.
@@ -181,6 +208,52 @@ class CustomersReports extends \Google\Service\Resource
     $params = ['customer' => $customer];
     $params = array_merge($params, $optParams);
     return $this->call('countChromeVersions', [$params], GoogleChromeManagementV1CountChromeVersionsResponse::class);
+  }
+  /**
+   * Get a count of devices per boot type. (reports.countDevicesPerBootType)
+   *
+   * @param string $customer Required. Obfuscated customer ID prefixed with
+   * "customers/C" or "customers/my_customer".
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int date.day Day of a month. Must be from 1 to 31 and valid for
+   * the year and month, or 0 to specify a year by itself or a year and month
+   * where the day isn't significant.
+   * @opt_param int date.month Month of a year. Must be from 1 to 12, or 0 to
+   * specify a year without a month and day.
+   * @opt_param int date.year Year of the date. Must be from 1 to 9999, or 0 to
+   * specify a date without a year.
+   * @return GoogleChromeManagementV1CountDevicesPerBootTypeResponse
+   * @throws \Google\Service\Exception
+   */
+  public function countDevicesPerBootType($customer, $optParams = [])
+  {
+    $params = ['customer' => $customer];
+    $params = array_merge($params, $optParams);
+    return $this->call('countDevicesPerBootType', [$params], GoogleChromeManagementV1CountDevicesPerBootTypeResponse::class);
+  }
+  /**
+   * Get a count of devices per channel. (reports.countDevicesPerReleaseChannel)
+   *
+   * @param string $customer Required. Obfuscated customer ID prefixed with
+   * "customers/C" or "customers/my_customer".
+   * @param array $optParams Optional parameters.
+   *
+   * @opt_param int date.day Day of a month. Must be from 1 to 31 and valid for
+   * the year and month, or 0 to specify a year by itself or a year and month
+   * where the day isn't significant.
+   * @opt_param int date.month Month of a year. Must be from 1 to 12, or 0 to
+   * specify a year without a month and day.
+   * @opt_param int date.year Year of the date. Must be from 1 to 9999, or 0 to
+   * specify a date without a year.
+   * @return GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse
+   * @throws \Google\Service\Exception
+   */
+  public function countDevicesPerReleaseChannel($customer, $optParams = [])
+  {
+    $params = ['customer' => $customer];
+    $params = array_merge($params, $optParams);
+    return $this->call('countDevicesPerReleaseChannel', [$params], GoogleChromeManagementV1CountDevicesPerReleaseChannelResponse::class);
   }
   /**
    * Generate report of app installations. (reports.countInstalledApps)
