@@ -25,10 +25,6 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
   protected $developerInstructionDataType = '';
   protected $eventsType = GoogleCloudAiplatformV1EvaluationInstanceAgentDataEvents::class;
   protected $eventsDataType = '';
-  /**
-   * @var string
-   */
-  public $eventsText;
   protected $toolsType = GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools::class;
   protected $toolsDataType = '';
   /**
@@ -77,20 +73,6 @@ class GoogleCloudAiplatformV1EvaluationInstanceAgentData extends \Google\Model
   public function getEvents()
   {
     return $this->events;
-  }
-  /**
-   * @param string
-   */
-  public function setEventsText($eventsText)
-  {
-    $this->eventsText = $eventsText;
-  }
-  /**
-   * @return string
-   */
-  public function getEventsText()
-  {
-    return $this->eventsText;
   }
   /**
    * @param GoogleCloudAiplatformV1EvaluationInstanceAgentDataTools
