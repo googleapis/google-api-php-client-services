@@ -57,6 +57,10 @@ class DatabaseResourceMetadata extends \Google\Collection
    */
   public $instanceType;
   /**
+   * @var bool
+   */
+  public $isDeletionProtectionEnabled;
+  /**
    * @var string
    */
   public $location;
@@ -278,6 +282,20 @@ class DatabaseResourceMetadata extends \Google\Collection
   public function getInstanceType()
   {
     return $this->instanceType;
+  }
+  /**
+   * @param bool
+   */
+  public function setIsDeletionProtectionEnabled($isDeletionProtectionEnabled)
+  {
+    $this->isDeletionProtectionEnabled = $isDeletionProtectionEnabled;
+  }
+  /**
+   * @return bool
+   */
+  public function getIsDeletionProtectionEnabled()
+  {
+    return $this->isDeletionProtectionEnabled;
   }
   /**
    * @param string
