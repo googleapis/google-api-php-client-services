@@ -32,6 +32,10 @@ class Rollout extends \Google\Model
   /**
    * @var string
    */
+  public $effectiveUnitFilter;
+  /**
+   * @var string
+   */
   public $endTime;
   /**
    * @var string
@@ -137,6 +141,20 @@ class Rollout extends \Google\Model
   public function getCreateTime()
   {
     return $this->createTime;
+  }
+  /**
+   * @param string
+   */
+  public function setEffectiveUnitFilter($effectiveUnitFilter)
+  {
+    $this->effectiveUnitFilter = $effectiveUnitFilter;
+  }
+  /**
+   * @return string
+   */
+  public function getEffectiveUnitFilter()
+  {
+    return $this->effectiveUnitFilter;
   }
   /**
    * @param string
