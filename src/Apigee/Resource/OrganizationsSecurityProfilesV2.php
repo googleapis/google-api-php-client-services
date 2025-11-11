@@ -55,6 +55,9 @@ class OrganizationsSecurityProfilesV2 extends \Google\Service\Resource
    * @param string $name Required. The name of the security profile v2 to delete.
    * Format: `organizations/{org}/securityProfilesV2/{profile}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string riskAssessmentType Optional. The risk assessment type of
+   * the security profile. Defaults to ADVANCED_API_SECURITY.
    * @return GoogleProtobufEmpty
    * @throws \Google\Service\Exception
    */
@@ -70,6 +73,9 @@ class OrganizationsSecurityProfilesV2 extends \Google\Service\Resource
    * @param string $name Required. The name of the security profile v2 to get.
    * Format: `organizations/{org}/securityProfilesV2/{profile}`
    * @param array $optParams Optional parameters.
+   *
+   * @opt_param string riskAssessmentType Optional. The risk assessment type of
+   * the security profile. Defaults to ADVANCED_API_SECURITY.
    * @return GoogleCloudApigeeV1SecurityProfileV2
    * @throws \Google\Service\Exception
    */
@@ -90,6 +96,8 @@ class OrganizationsSecurityProfilesV2 extends \Google\Service\Resource
    * @opt_param int pageSize Optional. The maximum number of profiles to return
    * @opt_param string pageToken Optional. A page token, received from a previous
    * `ListSecurityProfilesV2` call. Provide this to retrieve the subsequent page.
+   * @opt_param string riskAssessmentType Optional. The risk assessment type of
+   * the security profiles. Defaults to ADVANCED_API_SECURITY.
    * @return GoogleCloudApigeeV1ListSecurityProfilesV2Response
    * @throws \Google\Service\Exception
    */

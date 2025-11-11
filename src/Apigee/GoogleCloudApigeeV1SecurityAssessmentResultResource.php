@@ -19,6 +19,8 @@ namespace Google\Service\Apigee;
 
 class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
 {
+  protected $apiHubDeploymentDetailsType = GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails::class;
+  protected $apiHubDeploymentDetailsDataType = '';
   /**
    * @var string
    */
@@ -32,6 +34,20 @@ class GoogleCloudApigeeV1SecurityAssessmentResultResource extends \Google\Model
    */
   public $type;
 
+  /**
+   * @param GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails
+   */
+  public function setApiHubDeploymentDetails(GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails $apiHubDeploymentDetails)
+  {
+    $this->apiHubDeploymentDetails = $apiHubDeploymentDetails;
+  }
+  /**
+   * @return GoogleCloudApigeeV1SecurityAssessmentResultResourceApiHubDeploymentDetails
+   */
+  public function getApiHubDeploymentDetails()
+  {
+    return $this->apiHubDeploymentDetails;
+  }
   /**
    * @param string
    */
