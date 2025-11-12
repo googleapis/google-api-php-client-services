@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1ProbeHttpHeader extends \Google\Model
 {
   /**
+   * The header field name. This will be canonicalized upon output, so case-
+   * variant names will be understood as the same header.
+   *
    * @var string
    */
   public $name;
   /**
+   * The header field value
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * The header field name. This will be canonicalized upon output, so case-
+   * variant names will be understood as the same header.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1ProbeHttpHeader extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The header field value
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

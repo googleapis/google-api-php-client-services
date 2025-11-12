@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1PipelineTaskExecutorDetail extends \Google\Model
   protected $customJobDetailDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1PipelineTaskExecutorDetailContainerDetail
+   * Output only. The detailed info for a container executor.
+   *
+   * @param GoogleCloudAiplatformV1PipelineTaskExecutorDetailContainerDetail $containerDetail
    */
   public function setContainerDetail(GoogleCloudAiplatformV1PipelineTaskExecutorDetailContainerDetail $containerDetail)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1PipelineTaskExecutorDetail extends \Google\Model
     return $this->containerDetail;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineTaskExecutorDetailCustomJobDetail
+   * Output only. The detailed info for a custom job executor.
+   *
+   * @param GoogleCloudAiplatformV1PipelineTaskExecutorDetailCustomJobDetail $customJobDetail
    */
   public function setCustomJobDetail(GoogleCloudAiplatformV1PipelineTaskExecutorDetailCustomJobDetail $customJobDetail)
   {

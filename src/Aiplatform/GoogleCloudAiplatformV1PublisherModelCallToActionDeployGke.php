@@ -21,12 +21,16 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeployGke extends \Google
 {
   protected $collection_key = 'gkeYamlConfigs';
   /**
+   * Optional. GKE deployment configuration in yaml format.
+   *
    * @var string[]
    */
   public $gkeYamlConfigs;
 
   /**
-   * @param string[]
+   * Optional. GKE deployment configuration in yaml format.
+   *
+   * @param string[] $gkeYamlConfigs
    */
   public function setGkeYamlConfigs($gkeYamlConfigs)
   {

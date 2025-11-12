@@ -20,16 +20,51 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends \Google\Model
 {
   /**
+   * Default value, and follows fail slow behavior.
+   */
+  public const FAILURE_POLICY_PIPELINE_FAILURE_POLICY_UNSPECIFIED = 'PIPELINE_FAILURE_POLICY_UNSPECIFIED';
+  /**
+   * Indicates that the pipeline should continue to run until all possible tasks
+   * have been scheduled and completed.
+   */
+  public const FAILURE_POLICY_PIPELINE_FAILURE_POLICY_FAIL_SLOW = 'PIPELINE_FAILURE_POLICY_FAIL_SLOW';
+  /**
+   * Indicates that the pipeline should stop scheduling new tasks after a task
+   * has failed.
+   */
+  public const FAILURE_POLICY_PIPELINE_FAILURE_POLICY_FAIL_FAST = 'PIPELINE_FAILURE_POLICY_FAIL_FAST';
+  /**
+   * Represents the failure policy of a pipeline. Currently, the default of a
+   * pipeline is that the pipeline will continue to run until no more tasks can
+   * be executed, also known as PIPELINE_FAILURE_POLICY_FAIL_SLOW. However, if a
+   * pipeline is set to PIPELINE_FAILURE_POLICY_FAIL_FAST, it will stop
+   * scheduling any new tasks when a task has failed. Any scheduled tasks will
+   * continue to completion.
+   *
    * @var string
    */
   public $failurePolicy;
   /**
+   * Required. A path in a Cloud Storage bucket, which will be treated as the
+   * root output directory of the pipeline. It is used by the system to generate
+   * the paths of output artifacts. The artifact paths are generated with a sub-
+   * path pattern `{job_id}/{task_id}/{output_key}` under the specified output
+   * directory. The service account specified in this pipeline must have the
+   * `storage.objects.get` and `storage.objects.create` permissions for this
+   * bucket.
+   *
    * @var string
    */
   public $gcsOutputDirectory;
   protected $inputArtifactsType = GoogleCloudAiplatformV1PipelineJobRuntimeConfigInputArtifact::class;
   protected $inputArtifactsDataType = 'map';
   /**
+   * The runtime parameters of the PipelineJob. The parameters will be passed
+   * into PipelineJob.pipeline_spec to replace the placeholders at runtime. This
+   * field is used by pipelines built using
+   * `PipelineJob.pipeline_spec.schema_version` 2.1.0, such as pipelines built
+   * using Kubeflow Pipelines SDK 1.9 or higher and the v2 DSL.
+   *
    * @var array[]
    */
   public $parameterValues;
@@ -37,21 +72,39 @@ class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends \Google\Model
   protected $parametersDataType = 'map';
 
   /**
-   * @param string
+   * Represents the failure policy of a pipeline. Currently, the default of a
+   * pipeline is that the pipeline will continue to run until no more tasks can
+   * be executed, also known as PIPELINE_FAILURE_POLICY_FAIL_SLOW. However, if a
+   * pipeline is set to PIPELINE_FAILURE_POLICY_FAIL_FAST, it will stop
+   * scheduling any new tasks when a task has failed. Any scheduled tasks will
+   * continue to completion.
+   *
+   * Accepted values: PIPELINE_FAILURE_POLICY_UNSPECIFIED,
+   * PIPELINE_FAILURE_POLICY_FAIL_SLOW, PIPELINE_FAILURE_POLICY_FAIL_FAST
+   *
+   * @param self::FAILURE_POLICY_* $failurePolicy
    */
   public function setFailurePolicy($failurePolicy)
   {
     $this->failurePolicy = $failurePolicy;
   }
   /**
-   * @return string
+   * @return self::FAILURE_POLICY_*
    */
   public function getFailurePolicy()
   {
     return $this->failurePolicy;
   }
   /**
-   * @param string
+   * Required. A path in a Cloud Storage bucket, which will be treated as the
+   * root output directory of the pipeline. It is used by the system to generate
+   * the paths of output artifacts. The artifact paths are generated with a sub-
+   * path pattern `{job_id}/{task_id}/{output_key}` under the specified output
+   * directory. The service account specified in this pipeline must have the
+   * `storage.objects.get` and `storage.objects.create` permissions for this
+   * bucket.
+   *
+   * @param string $gcsOutputDirectory
    */
   public function setGcsOutputDirectory($gcsOutputDirectory)
   {
@@ -65,7 +118,10 @@ class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends \Google\Model
     return $this->gcsOutputDirectory;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineJobRuntimeConfigInputArtifact[]
+   * The runtime artifacts of the PipelineJob. The key will be the input
+   * artifact name and the value would be one of the InputArtifact.
+   *
+   * @param GoogleCloudAiplatformV1PipelineJobRuntimeConfigInputArtifact[] $inputArtifacts
    */
   public function setInputArtifacts($inputArtifacts)
   {
@@ -79,7 +135,13 @@ class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends \Google\Model
     return $this->inputArtifacts;
   }
   /**
-   * @param array[]
+   * The runtime parameters of the PipelineJob. The parameters will be passed
+   * into PipelineJob.pipeline_spec to replace the placeholders at runtime. This
+   * field is used by pipelines built using
+   * `PipelineJob.pipeline_spec.schema_version` 2.1.0, such as pipelines built
+   * using Kubeflow Pipelines SDK 1.9 or higher and the v2 DSL.
+   *
+   * @param array[] $parameterValues
    */
   public function setParameterValues($parameterValues)
   {
@@ -93,13 +155,22 @@ class GoogleCloudAiplatformV1PipelineJobRuntimeConfig extends \Google\Model
     return $this->parameterValues;
   }
   /**
-   * @param GoogleCloudAiplatformV1Value[]
+   * Deprecated. Use RuntimeConfig.parameter_values instead. The runtime
+   * parameters of the PipelineJob. The parameters will be passed into
+   * PipelineJob.pipeline_spec to replace the placeholders at runtime. This
+   * field is used by pipelines built using
+   * `PipelineJob.pipeline_spec.schema_version` 2.0.0 or lower, such as
+   * pipelines built using Kubeflow Pipelines SDK 1.8 or lower.
+   *
+   * @deprecated
+   * @param GoogleCloudAiplatformV1Value[] $parameters
    */
   public function setParameters($parameters)
   {
     $this->parameters = $parameters;
   }
   /**
+   * @deprecated
    * @return GoogleCloudAiplatformV1Value[]
    */
   public function getParameters()

@@ -21,10 +21,16 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
 {
   protected $collection_key = 'userDatasetExamples';
   /**
+   * Output only. A partial sample of the indices (starting from 1) of the
+   * dropped examples.
+   *
    * @var string[]
    */
   public $droppedExampleIndices;
   /**
+   * Output only. For each index in `dropped_example_indices`, the user-facing
+   * reason why the example was dropped.
+   *
    * @var string[]
    */
   public $droppedExampleReasons;
@@ -33,14 +39,20 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
   protected $scoresDistributionType = GoogleCloudAiplatformV1DatasetDistribution::class;
   protected $scoresDistributionDataType = '';
   /**
+   * Output only. Number of billable tokens in the tuning dataset.
+   *
    * @var string
    */
   public $totalBillableTokenCount;
   /**
+   * Output only. Number of examples in the tuning dataset.
+   *
    * @var string
    */
   public $tuningDatasetExampleCount;
   /**
+   * Output only. Number of tuning steps for this Tuning Job.
+   *
    * @var string
    */
   public $tuningStepCount;
@@ -52,7 +64,10 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
   protected $userOutputTokenDistributionDataType = '';
 
   /**
-   * @param string[]
+   * Output only. A partial sample of the indices (starting from 1) of the
+   * dropped examples.
+   *
+   * @param string[] $droppedExampleIndices
    */
   public function setDroppedExampleIndices($droppedExampleIndices)
   {
@@ -66,7 +81,10 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->droppedExampleIndices;
   }
   /**
-   * @param string[]
+   * Output only. For each index in `dropped_example_indices`, the user-facing
+   * reason why the example was dropped.
+   *
+   * @param string[] $droppedExampleReasons
    */
   public function setDroppedExampleReasons($droppedExampleReasons)
   {
@@ -80,7 +98,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->droppedExampleReasons;
   }
   /**
-   * @param GoogleCloudAiplatformV1DatasetDistribution
+   * Output only. Dataset distributions for scores variance per example.
+   *
+   * @param GoogleCloudAiplatformV1DatasetDistribution $scoreVariancePerExampleDistribution
    */
   public function setScoreVariancePerExampleDistribution(GoogleCloudAiplatformV1DatasetDistribution $scoreVariancePerExampleDistribution)
   {
@@ -94,7 +114,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->scoreVariancePerExampleDistribution;
   }
   /**
-   * @param GoogleCloudAiplatformV1DatasetDistribution
+   * Output only. Dataset distributions for scores.
+   *
+   * @param GoogleCloudAiplatformV1DatasetDistribution $scoresDistribution
    */
   public function setScoresDistribution(GoogleCloudAiplatformV1DatasetDistribution $scoresDistribution)
   {
@@ -108,7 +130,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->scoresDistribution;
   }
   /**
-   * @param string
+   * Output only. Number of billable tokens in the tuning dataset.
+   *
+   * @param string $totalBillableTokenCount
    */
   public function setTotalBillableTokenCount($totalBillableTokenCount)
   {
@@ -122,7 +146,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->totalBillableTokenCount;
   }
   /**
-   * @param string
+   * Output only. Number of examples in the tuning dataset.
+   *
+   * @param string $tuningDatasetExampleCount
    */
   public function setTuningDatasetExampleCount($tuningDatasetExampleCount)
   {
@@ -136,7 +162,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->tuningDatasetExampleCount;
   }
   /**
-   * @param string
+   * Output only. Number of tuning steps for this Tuning Job.
+   *
+   * @param string $tuningStepCount
    */
   public function setTuningStepCount($tuningStepCount)
   {
@@ -150,7 +178,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->tuningStepCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1GeminiPreferenceExample[]
+   * Output only. Sample user examples in the training dataset.
+   *
+   * @param GoogleCloudAiplatformV1GeminiPreferenceExample[] $userDatasetExamples
    */
   public function setUserDatasetExamples($userDatasetExamples)
   {
@@ -164,7 +194,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->userDatasetExamples;
   }
   /**
-   * @param GoogleCloudAiplatformV1DatasetDistribution
+   * Output only. Dataset distributions for the user input tokens.
+   *
+   * @param GoogleCloudAiplatformV1DatasetDistribution $userInputTokenDistribution
    */
   public function setUserInputTokenDistribution(GoogleCloudAiplatformV1DatasetDistribution $userInputTokenDistribution)
   {
@@ -178,7 +210,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationDataStats extends \Google\Col
     return $this->userInputTokenDistribution;
   }
   /**
-   * @param GoogleCloudAiplatformV1DatasetDistribution
+   * Output only. Dataset distributions for the user output tokens.
+   *
+   * @param GoogleCloudAiplatformV1DatasetDistribution $userOutputTokenDistribution
    */
   public function setUserOutputTokenDistribution(GoogleCloudAiplatformV1DatasetDistribution $userOutputTokenDistribution)
   {

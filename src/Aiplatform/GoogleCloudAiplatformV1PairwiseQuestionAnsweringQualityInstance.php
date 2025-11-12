@@ -20,28 +20,40 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance extends \Google\Model
 {
   /**
+   * Required. Output of the baseline model.
+   *
    * @var string
    */
   public $baselinePrediction;
   /**
+   * Required. Text to answer the question.
+   *
    * @var string
    */
   public $context;
   /**
+   * Required. Question Answering prompt for LLM.
+   *
    * @var string
    */
   public $instruction;
   /**
+   * Required. Output of the candidate model.
+   *
    * @var string
    */
   public $prediction;
   /**
+   * Optional. Ground truth used to compare against the prediction.
+   *
    * @var string
    */
   public $reference;
 
   /**
-   * @param string
+   * Required. Output of the baseline model.
+   *
+   * @param string $baselinePrediction
    */
   public function setBaselinePrediction($baselinePrediction)
   {
@@ -55,7 +67,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance extends \G
     return $this->baselinePrediction;
   }
   /**
-   * @param string
+   * Required. Text to answer the question.
+   *
+   * @param string $context
    */
   public function setContext($context)
   {
@@ -69,7 +83,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance extends \G
     return $this->context;
   }
   /**
-   * @param string
+   * Required. Question Answering prompt for LLM.
+   *
+   * @param string $instruction
    */
   public function setInstruction($instruction)
   {
@@ -83,7 +99,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance extends \G
     return $this->instruction;
   }
   /**
-   * @param string
+   * Required. Output of the candidate model.
+   *
+   * @param string $prediction
    */
   public function setPrediction($prediction)
   {
@@ -97,7 +115,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance extends \G
     return $this->prediction;
   }
   /**
-   * @param string
+   * Optional. Ground truth used to compare against the prediction.
+   *
+   * @param string $reference
    */
   public function setReference($reference)
   {

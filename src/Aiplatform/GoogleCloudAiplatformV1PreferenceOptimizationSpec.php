@@ -20,22 +20,40 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PreferenceOptimizationSpec extends \Google\Model
 {
   /**
+   * Optional. If set to true, disable intermediate checkpoints for Preference
+   * Optimization and only the last checkpoint will be exported. Otherwise,
+   * enable intermediate checkpoints for Preference Optimization. Default is
+   * false.
+   *
    * @var bool
    */
   public $exportLastCheckpointOnly;
   protected $hyperParametersType = GoogleCloudAiplatformV1PreferenceOptimizationHyperParameters::class;
   protected $hyperParametersDataType = '';
   /**
+   * Required. Cloud Storage path to file containing training dataset for
+   * preference optimization tuning. The dataset must be formatted as a JSONL
+   * file.
+   *
    * @var string
    */
   public $trainingDatasetUri;
   /**
+   * Optional. Cloud Storage path to file containing validation dataset for
+   * preference optimization tuning. The dataset must be formatted as a JSONL
+   * file.
+   *
    * @var string
    */
   public $validationDatasetUri;
 
   /**
-   * @param bool
+   * Optional. If set to true, disable intermediate checkpoints for Preference
+   * Optimization and only the last checkpoint will be exported. Otherwise,
+   * enable intermediate checkpoints for Preference Optimization. Default is
+   * false.
+   *
+   * @param bool $exportLastCheckpointOnly
    */
   public function setExportLastCheckpointOnly($exportLastCheckpointOnly)
   {
@@ -49,7 +67,9 @@ class GoogleCloudAiplatformV1PreferenceOptimizationSpec extends \Google\Model
     return $this->exportLastCheckpointOnly;
   }
   /**
-   * @param GoogleCloudAiplatformV1PreferenceOptimizationHyperParameters
+   * Optional. Hyperparameters for Preference Optimization.
+   *
+   * @param GoogleCloudAiplatformV1PreferenceOptimizationHyperParameters $hyperParameters
    */
   public function setHyperParameters(GoogleCloudAiplatformV1PreferenceOptimizationHyperParameters $hyperParameters)
   {
@@ -63,7 +83,11 @@ class GoogleCloudAiplatformV1PreferenceOptimizationSpec extends \Google\Model
     return $this->hyperParameters;
   }
   /**
-   * @param string
+   * Required. Cloud Storage path to file containing training dataset for
+   * preference optimization tuning. The dataset must be formatted as a JSONL
+   * file.
+   *
+   * @param string $trainingDatasetUri
    */
   public function setTrainingDatasetUri($trainingDatasetUri)
   {
@@ -77,7 +101,11 @@ class GoogleCloudAiplatformV1PreferenceOptimizationSpec extends \Google\Model
     return $this->trainingDatasetUri;
   }
   /**
-   * @param string
+   * Optional. Cloud Storage path to file containing validation dataset for
+   * preference optimization tuning. The dataset must be formatted as a JSONL
+   * file.
+   *
+   * @param string $validationDatasetUri
    */
   public function setValidationDatasetUri($validationDatasetUri)
   {

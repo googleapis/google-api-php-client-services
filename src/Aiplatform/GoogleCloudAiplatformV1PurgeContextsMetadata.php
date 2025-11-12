@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1PurgeContextsMetadata extends \Google\Model
   protected $genericMetadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * Operation metadata for purging Contexts.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {

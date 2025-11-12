@@ -20,20 +20,51 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1OutputFieldSpec extends \Google\Model
 {
   /**
+   * Field type is unspecified.
+   */
+  public const FIELD_TYPE_FIELD_TYPE_UNSPECIFIED = 'FIELD_TYPE_UNSPECIFIED';
+  /**
+   * Arbitrary content field type.
+   */
+  public const FIELD_TYPE_CONTENT = 'CONTENT';
+  /**
+   * Text field type.
+   */
+  public const FIELD_TYPE_TEXT = 'TEXT';
+  /**
+   * Image field type.
+   */
+  public const FIELD_TYPE_IMAGE = 'IMAGE';
+  /**
+   * Audio field type.
+   */
+  public const FIELD_TYPE_AUDIO = 'AUDIO';
+  /**
+   * Required. The name of the output field.
+   *
    * @var string
    */
   public $fieldName;
   /**
+   * Optional. The data type of the field. Defaults to CONTENT if not set.
+   *
    * @var string
    */
   public $fieldType;
   /**
+   * Optional. Optional, but recommended. Additional guidance specific to this
+   * field to provide targeted instructions for the LLM to generate the content
+   * of a single output field. While the LLM can sometimes infer content from
+   * the field name, providing explicit guidance is preferred.
+   *
    * @var string
    */
   public $guidance;
 
   /**
-   * @param string
+   * Required. The name of the output field.
+   *
+   * @param string $fieldName
    */
   public function setFieldName($fieldName)
   {
@@ -47,21 +78,30 @@ class GoogleCloudAiplatformV1OutputFieldSpec extends \Google\Model
     return $this->fieldName;
   }
   /**
-   * @param string
+   * Optional. The data type of the field. Defaults to CONTENT if not set.
+   *
+   * Accepted values: FIELD_TYPE_UNSPECIFIED, CONTENT, TEXT, IMAGE, AUDIO
+   *
+   * @param self::FIELD_TYPE_* $fieldType
    */
   public function setFieldType($fieldType)
   {
     $this->fieldType = $fieldType;
   }
   /**
-   * @return string
+   * @return self::FIELD_TYPE_*
    */
   public function getFieldType()
   {
     return $this->fieldType;
   }
   /**
-   * @param string
+   * Optional. Optional, but recommended. Additional guidance specific to this
+   * field to provide targeted instructions for the LLM to generate the content
+   * of a single output field. While the LLM can sometimes infer content from
+   * the field name, providing explicit guidance is preferred.
+   *
+   * @param string $guidance
    */
   public function setGuidance($guidance)
   {

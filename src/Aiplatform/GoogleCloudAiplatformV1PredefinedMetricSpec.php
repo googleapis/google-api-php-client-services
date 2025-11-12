@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PredefinedMetricSpec extends \Google\Model
 {
   /**
+   * Required. The name of a pre-defined metric, such as
+   * "instruction_following_v1" or "text_quality_v1".
+   *
    * @var string
    */
   public $metricSpecName;
   /**
+   * Optional. The parameters needed to run the pre-defined metric.
+   *
    * @var array[]
    */
   public $metricSpecParameters;
 
   /**
-   * @param string
+   * Required. The name of a pre-defined metric, such as
+   * "instruction_following_v1" or "text_quality_v1".
+   *
+   * @param string $metricSpecName
    */
   public function setMetricSpecName($metricSpecName)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1PredefinedMetricSpec extends \Google\Model
     return $this->metricSpecName;
   }
   /**
-   * @param array[]
+   * Optional. The parameters needed to run the pre-defined metric.
+   *
+   * @param array[] $metricSpecParameters
    */
   public function setMetricSpecParameters($metricSpecParameters)
   {

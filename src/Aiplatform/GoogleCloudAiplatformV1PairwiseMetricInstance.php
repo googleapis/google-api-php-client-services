@@ -22,12 +22,19 @@ class GoogleCloudAiplatformV1PairwiseMetricInstance extends \Google\Model
   protected $contentMapInstanceType = GoogleCloudAiplatformV1ContentMap::class;
   protected $contentMapInstanceDataType = '';
   /**
+   * Instance specified as a json string. String key-value pairs are expected in
+   * the json_instance to render PairwiseMetricSpec.instance_prompt_template.
+   *
    * @var string
    */
   public $jsonInstance;
 
   /**
-   * @param GoogleCloudAiplatformV1ContentMap
+   * Key-value contents for the mutlimodality input, including text, image,
+   * video, audio, and pdf, etc. The key is placeholder in metric prompt
+   * template, and the value is the multimodal content.
+   *
+   * @param GoogleCloudAiplatformV1ContentMap $contentMapInstance
    */
   public function setContentMapInstance(GoogleCloudAiplatformV1ContentMap $contentMapInstance)
   {
@@ -41,7 +48,10 @@ class GoogleCloudAiplatformV1PairwiseMetricInstance extends \Google\Model
     return $this->contentMapInstance;
   }
   /**
-   * @param string
+   * Instance specified as a json string. String key-value pairs are expected in
+   * the json_instance to render PairwiseMetricSpec.instance_prompt_template.
+   *
+   * @param string $jsonInstance
    */
   public function setJsonInstance($jsonInstance)
   {

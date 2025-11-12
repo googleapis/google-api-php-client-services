@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualitySpec extends \Google\Model
 {
   /**
+   * Optional. Whether to use instance.reference to compute question answering
+   * quality.
+   *
    * @var bool
    */
   public $useReference;
   /**
+   * Optional. Which version to use for evaluation.
+   *
    * @var int
    */
   public $version;
 
   /**
-   * @param bool
+   * Optional. Whether to use instance.reference to compute question answering
+   * quality.
+   *
+   * @param bool $useReference
    */
   public function setUseReference($useReference)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualitySpec extends \Googl
     return $this->useReference;
   }
   /**
-   * @param int
+   * Optional. Which version to use for evaluation.
+   *
+   * @param int $version
    */
   public function setVersion($version)
   {

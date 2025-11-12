@@ -19,12 +19,48 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
 {
+  /**
+   * Not set.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The PROVISIONING state indicates the persistent resources is being created.
+   */
+  public const STATE_PROVISIONING = 'PROVISIONING';
+  /**
+   * The RUNNING state indicates the persistent resource is healthy and fully
+   * usable.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * The STOPPING state indicates the persistent resource is being deleted.
+   */
+  public const STATE_STOPPING = 'STOPPING';
+  /**
+   * The ERROR state indicates the persistent resource may be unusable. Details
+   * can be found in the `error` field.
+   */
+  public const STATE_ERROR = 'ERROR';
+  /**
+   * The REBOOTING state indicates the persistent resource is being rebooted (PR
+   * is not available right now but is expected to be ready again later).
+   */
+  public const STATE_REBOOTING = 'REBOOTING';
+  /**
+   * The UPDATING state indicates the persistent resource is being updated.
+   */
+  public const STATE_UPDATING = 'UPDATING';
   protected $collection_key = 'resourcePools';
   /**
+   * Output only. Time when the PersistentResource was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Optional. The display name of the PersistentResource. The name can be up to
+   * 128 characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
@@ -33,20 +69,47 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
   protected $errorType = GoogleRpcStatus::class;
   protected $errorDataType = '';
   /**
+   * Optional. The labels with user-defined metadata to organize
+   * PersistentResource. Label keys and values can be no longer than 64
+   * characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are
+   * allowed. See https://goo.gl/xmQnxf for more information and examples of
+   * labels.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * Immutable. Resource name of a PersistentResource.
+   *
    * @var string
    */
   public $name;
   /**
+   * Optional. The full name of the Compute Engine
+   * [network](/compute/docs/networks-and-firewalls#networks) to peered with
+   * Vertex AI to host the persistent resources. For example,
+   * `projects/12345/global/networks/myVPC`.
+   * [Format](/compute/docs/reference/rest/v1/networks/insert) is of the form
+   * `projects/{project}/global/networks/{network}`. Where {project} is a
+   * project number, as in `12345`, and {network} is a network name. To specify
+   * this field, you must have already [configured VPC Network Peering for
+   * Vertex AI](https://cloud.google.com/vertex-ai/docs/general/vpc-peering). If
+   * this field is left unspecified, the resources aren't peered with any
+   * network.
+   *
    * @var string
    */
   public $network;
   protected $pscInterfaceConfigType = GoogleCloudAiplatformV1PscInterfaceConfig::class;
   protected $pscInterfaceConfigDataType = '';
   /**
+   * Optional. A list of names for the reserved IP ranges under the VPC network
+   * that can be used for this persistent resource. If set, we will deploy the
+   * persistent resource within the provided IP ranges. Otherwise, the
+   * persistent resource is deployed to any IP ranges under the provided VPC
+   * network. Example: ['vertex-ai-ip-range'].
+   *
    * @var string[]
    */
   public $reservedIpRanges;
@@ -57,28 +120,41 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
   protected $resourceRuntimeSpecType = GoogleCloudAiplatformV1ResourceRuntimeSpec::class;
   protected $resourceRuntimeSpecDataType = '';
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzi;
   /**
+   * Output only. Reserved for future use.
+   *
    * @var bool
    */
   public $satisfiesPzs;
   /**
+   * Output only. Time when the PersistentResource for the first time entered
+   * the `RUNNING` state.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The detailed state of a Study.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Time when the PersistentResource was most recently updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param string
+   * Output only. Time when the PersistentResource was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -92,7 +168,10 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Optional. The display name of the PersistentResource. The name can be up to
+   * 128 characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -106,7 +185,11 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1EncryptionSpec
+   * Optional. Customer-managed encryption key spec for a PersistentResource. If
+   * set, this PersistentResource and all sub-resources of this
+   * PersistentResource will be secured by this key.
+   *
+   * @param GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec
    */
   public function setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec $encryptionSpec)
   {
@@ -120,7 +203,10 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->encryptionSpec;
   }
   /**
-   * @param GoogleRpcStatus
+   * Output only. Only populated when persistent resource's state is `STOPPING`
+   * or `ERROR`.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -134,7 +220,14 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param string[]
+   * Optional. The labels with user-defined metadata to organize
+   * PersistentResource. Label keys and values can be no longer than 64
+   * characters (Unicode codepoints), can only contain lowercase letters,
+   * numeric characters, underscores and dashes. International characters are
+   * allowed. See https://goo.gl/xmQnxf for more information and examples of
+   * labels.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -148,7 +241,9 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * Immutable. Resource name of a PersistentResource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -162,7 +257,19 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Optional. The full name of the Compute Engine
+   * [network](/compute/docs/networks-and-firewalls#networks) to peered with
+   * Vertex AI to host the persistent resources. For example,
+   * `projects/12345/global/networks/myVPC`.
+   * [Format](/compute/docs/reference/rest/v1/networks/insert) is of the form
+   * `projects/{project}/global/networks/{network}`. Where {project} is a
+   * project number, as in `12345`, and {network} is a network name. To specify
+   * this field, you must have already [configured VPC Network Peering for
+   * Vertex AI](https://cloud.google.com/vertex-ai/docs/general/vpc-peering). If
+   * this field is left unspecified, the resources aren't peered with any
+   * network.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -176,7 +283,9 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param GoogleCloudAiplatformV1PscInterfaceConfig
+   * Optional. Configuration for PSC-I for PersistentResource.
+   *
+   * @param GoogleCloudAiplatformV1PscInterfaceConfig $pscInterfaceConfig
    */
   public function setPscInterfaceConfig(GoogleCloudAiplatformV1PscInterfaceConfig $pscInterfaceConfig)
   {
@@ -190,7 +299,13 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->pscInterfaceConfig;
   }
   /**
-   * @param string[]
+   * Optional. A list of names for the reserved IP ranges under the VPC network
+   * that can be used for this persistent resource. If set, we will deploy the
+   * persistent resource within the provided IP ranges. Otherwise, the
+   * persistent resource is deployed to any IP ranges under the provided VPC
+   * network. Example: ['vertex-ai-ip-range'].
+   *
+   * @param string[] $reservedIpRanges
    */
   public function setReservedIpRanges($reservedIpRanges)
   {
@@ -204,7 +319,9 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->reservedIpRanges;
   }
   /**
-   * @param GoogleCloudAiplatformV1ResourcePool[]
+   * Required. The spec of the pools of different resources.
+   *
+   * @param GoogleCloudAiplatformV1ResourcePool[] $resourcePools
    */
   public function setResourcePools($resourcePools)
   {
@@ -218,7 +335,9 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->resourcePools;
   }
   /**
-   * @param GoogleCloudAiplatformV1ResourceRuntime
+   * Output only. Runtime information of the Persistent Resource.
+   *
+   * @param GoogleCloudAiplatformV1ResourceRuntime $resourceRuntime
    */
   public function setResourceRuntime(GoogleCloudAiplatformV1ResourceRuntime $resourceRuntime)
   {
@@ -232,7 +351,10 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->resourceRuntime;
   }
   /**
-   * @param GoogleCloudAiplatformV1ResourceRuntimeSpec
+   * Optional. Persistent Resource runtime spec. For example, used for Ray
+   * cluster configuration.
+   *
+   * @param GoogleCloudAiplatformV1ResourceRuntimeSpec $resourceRuntimeSpec
    */
   public function setResourceRuntimeSpec(GoogleCloudAiplatformV1ResourceRuntimeSpec $resourceRuntimeSpec)
   {
@@ -246,7 +368,9 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->resourceRuntimeSpec;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzi
    */
   public function setSatisfiesPzi($satisfiesPzi)
   {
@@ -260,7 +384,9 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->satisfiesPzi;
   }
   /**
-   * @param bool
+   * Output only. Reserved for future use.
+   *
+   * @param bool $satisfiesPzs
    */
   public function setSatisfiesPzs($satisfiesPzs)
   {
@@ -274,7 +400,10 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->satisfiesPzs;
   }
   /**
-   * @param string
+   * Output only. Time when the PersistentResource for the first time entered
+   * the `RUNNING` state.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -288,21 +417,28 @@ class GoogleCloudAiplatformV1PersistentResource extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The detailed state of a Study.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PROVISIONING, RUNNING, STOPPING, ERROR,
+   * REBOOTING, UPDATING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Time when the PersistentResource was most recently updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

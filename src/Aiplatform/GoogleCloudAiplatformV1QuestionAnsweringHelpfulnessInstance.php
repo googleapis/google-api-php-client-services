@@ -20,24 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance extends \Google\Model
 {
   /**
+   * Optional. Text provided as context to answer the question.
+   *
    * @var string
    */
   public $context;
   /**
+   * Required. The question asked and other instruction in the inference prompt.
+   *
    * @var string
    */
   public $instruction;
   /**
+   * Required. Output of the evaluated model.
+   *
    * @var string
    */
   public $prediction;
   /**
+   * Optional. Ground truth used to compare against the prediction.
+   *
    * @var string
    */
   public $reference;
 
   /**
-   * @param string
+   * Optional. Text provided as context to answer the question.
+   *
+   * @param string $context
    */
   public function setContext($context)
   {
@@ -51,7 +61,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance extends \Googl
     return $this->context;
   }
   /**
-   * @param string
+   * Required. The question asked and other instruction in the inference prompt.
+   *
+   * @param string $instruction
    */
   public function setInstruction($instruction)
   {
@@ -65,7 +77,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance extends \Googl
     return $this->instruction;
   }
   /**
-   * @param string
+   * Required. Output of the evaluated model.
+   *
+   * @param string $prediction
    */
   public function setPrediction($prediction)
   {
@@ -79,7 +93,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance extends \Googl
     return $this->prediction;
   }
   /**
-   * @param string
+   * Optional. Ground truth used to compare against the prediction.
+   *
+   * @param string $reference
    */
   public function setReference($reference)
   {

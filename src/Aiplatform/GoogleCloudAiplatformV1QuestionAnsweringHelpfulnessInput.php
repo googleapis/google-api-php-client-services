@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInput extends \Google\M
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance
+   * Required. Question answering helpfulness instance.
+   *
+   * @param GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessInput extends \Google\M
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessSpec
+   * Required. Spec for question answering helpfulness score metric.
+   *
+   * @param GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1QuestionAnsweringHelpfulnessSpec $metricSpec)
   {

@@ -19,42 +19,128 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
 {
+  /**
+   * The model launch stage is unspecified.
+   */
+  public const LAUNCH_STAGE_LAUNCH_STAGE_UNSPECIFIED = 'LAUNCH_STAGE_UNSPECIFIED';
+  /**
+   * Used to indicate the PublisherModel is at Experimental launch stage,
+   * available to a small set of customers.
+   */
+  public const LAUNCH_STAGE_EXPERIMENTAL = 'EXPERIMENTAL';
+  /**
+   * Used to indicate the PublisherModel is at Private Preview launch stage,
+   * only available to a small set of customers, although a larger set of
+   * customers than an Experimental launch. Previews are the first launch stage
+   * used to get feedback from customers.
+   */
+  public const LAUNCH_STAGE_PRIVATE_PREVIEW = 'PRIVATE_PREVIEW';
+  /**
+   * Used to indicate the PublisherModel is at Public Preview launch stage,
+   * available to all customers, although not supported for production
+   * workloads.
+   */
+  public const LAUNCH_STAGE_PUBLIC_PREVIEW = 'PUBLIC_PREVIEW';
+  /**
+   * Used to indicate the PublisherModel is at GA launch stage, available to all
+   * customers and ready for production workload.
+   */
+  public const LAUNCH_STAGE_GA = 'GA';
+  /**
+   * The open source category is unspecified, which should not be used.
+   */
+  public const OPEN_SOURCE_CATEGORY_OPEN_SOURCE_CATEGORY_UNSPECIFIED = 'OPEN_SOURCE_CATEGORY_UNSPECIFIED';
+  /**
+   * Used to indicate the PublisherModel is not open sourced.
+   */
+  public const OPEN_SOURCE_CATEGORY_PROPRIETARY = 'PROPRIETARY';
+  /**
+   * Used to indicate the PublisherModel is a Google-owned open source model w/
+   * Google checkpoint.
+   */
+  public const OPEN_SOURCE_CATEGORY_GOOGLE_OWNED_OSS_WITH_GOOGLE_CHECKPOINT = 'GOOGLE_OWNED_OSS_WITH_GOOGLE_CHECKPOINT';
+  /**
+   * Used to indicate the PublisherModel is a 3p-owned open source model w/
+   * Google checkpoint.
+   */
+  public const OPEN_SOURCE_CATEGORY_THIRD_PARTY_OWNED_OSS_WITH_GOOGLE_CHECKPOINT = 'THIRD_PARTY_OWNED_OSS_WITH_GOOGLE_CHECKPOINT';
+  /**
+   * Used to indicate the PublisherModel is a Google-owned pure open source
+   * model.
+   */
+  public const OPEN_SOURCE_CATEGORY_GOOGLE_OWNED_OSS = 'GOOGLE_OWNED_OSS';
+  /**
+   * Used to indicate the PublisherModel is a 3p-owned pure open source model.
+   */
+  public const OPEN_SOURCE_CATEGORY_THIRD_PARTY_OWNED_OSS = 'THIRD_PARTY_OWNED_OSS';
+  /**
+   * The version state is unspecified.
+   */
+  public const VERSION_STATE_VERSION_STATE_UNSPECIFIED = 'VERSION_STATE_UNSPECIFIED';
+  /**
+   * Used to indicate the version is stable.
+   */
+  public const VERSION_STATE_VERSION_STATE_STABLE = 'VERSION_STATE_STABLE';
+  /**
+   * Used to indicate the version is unstable.
+   */
+  public const VERSION_STATE_VERSION_STATE_UNSTABLE = 'VERSION_STATE_UNSTABLE';
   protected $collection_key = 'frameworks';
   /**
+   * Optional. Additional information about the model's Frameworks.
+   *
    * @var string[]
    */
   public $frameworks;
   /**
+   * Optional. Indicates the launch stage of the model.
+   *
    * @var string
    */
   public $launchStage;
   /**
+   * Output only. The resource name of the PublisherModel.
+   *
    * @var string
    */
   public $name;
   /**
+   * Required. Indicates the open source category of the publisher model.
+   *
    * @var string
    */
   public $openSourceCategory;
   protected $predictSchemataType = GoogleCloudAiplatformV1PredictSchemata::class;
   protected $predictSchemataDataType = '';
   /**
+   * Optional. Output only. Immutable. Used to indicate this model has a
+   * publisher model and provide the template of the publisher model resource
+   * name.
+   *
    * @var string
    */
   public $publisherModelTemplate;
   protected $supportedActionsType = GoogleCloudAiplatformV1PublisherModelCallToAction::class;
   protected $supportedActionsDataType = '';
   /**
+   * Output only. Immutable. The version ID of the PublisherModel. A new version
+   * is committed when a new model version is uploaded under an existing model
+   * id. It is an auto-incrementing decimal number in string representation.
+   *
    * @var string
    */
   public $versionId;
   /**
+   * Optional. Indicates the state of the model version.
+   *
    * @var string
    */
   public $versionState;
 
   /**
-   * @param string[]
+   * Optional. Additional information about the model's Frameworks.
+   *
+   * @param string[] $frameworks
    */
   public function setFrameworks($frameworks)
   {
@@ -68,21 +154,28 @@ class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
     return $this->frameworks;
   }
   /**
-   * @param string
+   * Optional. Indicates the launch stage of the model.
+   *
+   * Accepted values: LAUNCH_STAGE_UNSPECIFIED, EXPERIMENTAL, PRIVATE_PREVIEW,
+   * PUBLIC_PREVIEW, GA
+   *
+   * @param self::LAUNCH_STAGE_* $launchStage
    */
   public function setLaunchStage($launchStage)
   {
     $this->launchStage = $launchStage;
   }
   /**
-   * @return string
+   * @return self::LAUNCH_STAGE_*
    */
   public function getLaunchStage()
   {
     return $this->launchStage;
   }
   /**
-   * @param string
+   * Output only. The resource name of the PublisherModel.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -96,21 +189,32 @@ class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * Required. Indicates the open source category of the publisher model.
+   *
+   * Accepted values: OPEN_SOURCE_CATEGORY_UNSPECIFIED, PROPRIETARY,
+   * GOOGLE_OWNED_OSS_WITH_GOOGLE_CHECKPOINT,
+   * THIRD_PARTY_OWNED_OSS_WITH_GOOGLE_CHECKPOINT, GOOGLE_OWNED_OSS,
+   * THIRD_PARTY_OWNED_OSS
+   *
+   * @param self::OPEN_SOURCE_CATEGORY_* $openSourceCategory
    */
   public function setOpenSourceCategory($openSourceCategory)
   {
     $this->openSourceCategory = $openSourceCategory;
   }
   /**
-   * @return string
+   * @return self::OPEN_SOURCE_CATEGORY_*
    */
   public function getOpenSourceCategory()
   {
     return $this->openSourceCategory;
   }
   /**
-   * @param GoogleCloudAiplatformV1PredictSchemata
+   * Optional. The schemata that describes formats of the PublisherModel's
+   * predictions and explanations as given and returned via
+   * PredictionService.Predict.
+   *
+   * @param GoogleCloudAiplatformV1PredictSchemata $predictSchemata
    */
   public function setPredictSchemata(GoogleCloudAiplatformV1PredictSchemata $predictSchemata)
   {
@@ -124,7 +228,11 @@ class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
     return $this->predictSchemata;
   }
   /**
-   * @param string
+   * Optional. Output only. Immutable. Used to indicate this model has a
+   * publisher model and provide the template of the publisher model resource
+   * name.
+   *
+   * @param string $publisherModelTemplate
    */
   public function setPublisherModelTemplate($publisherModelTemplate)
   {
@@ -138,7 +246,9 @@ class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
     return $this->publisherModelTemplate;
   }
   /**
-   * @param GoogleCloudAiplatformV1PublisherModelCallToAction
+   * Optional. Supported call-to-action options.
+   *
+   * @param GoogleCloudAiplatformV1PublisherModelCallToAction $supportedActions
    */
   public function setSupportedActions(GoogleCloudAiplatformV1PublisherModelCallToAction $supportedActions)
   {
@@ -152,7 +262,11 @@ class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
     return $this->supportedActions;
   }
   /**
-   * @param string
+   * Output only. Immutable. The version ID of the PublisherModel. A new version
+   * is committed when a new model version is uploaded under an existing model
+   * id. It is an auto-incrementing decimal number in string representation.
+   *
+   * @param string $versionId
    */
   public function setVersionId($versionId)
   {
@@ -166,14 +280,19 @@ class GoogleCloudAiplatformV1PublisherModel extends \Google\Collection
     return $this->versionId;
   }
   /**
-   * @param string
+   * Optional. Indicates the state of the model version.
+   *
+   * Accepted values: VERSION_STATE_UNSPECIFIED, VERSION_STATE_STABLE,
+   * VERSION_STATE_UNSTABLE
+   *
+   * @param self::VERSION_STATE_* $versionState
    */
   public function setVersionState($versionState)
   {
     $this->versionState = $versionState;
   }
   /**
-   * @return string
+   * @return self::VERSION_STATE_*
    */
   public function getVersionState()
   {

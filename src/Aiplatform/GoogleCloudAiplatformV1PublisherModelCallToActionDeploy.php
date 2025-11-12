@@ -20,6 +20,9 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Model
 {
   /**
+   * Optional. The path to the directory containing the Model artifact and any
+   * of its supporting files.
+   *
    * @var string
    */
   public $artifactUri;
@@ -32,30 +35,46 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
   protected $deployMetadataType = GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata::class;
   protected $deployMetadataDataType = '';
   /**
+   * Optional. The name of the deploy task (e.g., "text to image generation").
+   *
    * @var string
    */
   public $deployTaskName;
   protected $largeModelReferenceType = GoogleCloudAiplatformV1LargeModelReference::class;
   protected $largeModelReferenceDataType = '';
   /**
+   * Optional. Default model display name.
+   *
    * @var string
    */
   public $modelDisplayName;
   /**
+   * Optional. The signed URI for ephemeral Cloud Storage access to model
+   * artifact.
+   *
    * @var string
    */
   public $publicArtifactUri;
   /**
+   * The resource name of the shared DeploymentResourcePool to deploy on.
+   * Format: `projects/{project}/locations/{location}/deploymentResourcePools/{d
+   * eployment_resource_pool}`
+   *
    * @var string
    */
   public $sharedResources;
   /**
+   * Required. The title of the regional resource reference.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Optional. The path to the directory containing the Model artifact and any
+   * of its supporting files.
+   *
+   * @param string $artifactUri
    */
   public function setArtifactUri($artifactUri)
   {
@@ -69,7 +88,10 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->artifactUri;
   }
   /**
-   * @param GoogleCloudAiplatformV1AutomaticResources
+   * A description of resources that to large degree are decided by Vertex AI,
+   * and require only a modest additional configuration.
+   *
+   * @param GoogleCloudAiplatformV1AutomaticResources $automaticResources
    */
   public function setAutomaticResources(GoogleCloudAiplatformV1AutomaticResources $automaticResources)
   {
@@ -83,7 +105,10 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->automaticResources;
   }
   /**
-   * @param GoogleCloudAiplatformV1ModelContainerSpec
+   * Optional. The specification of the container that is to be used when
+   * deploying this Model in Vertex AI. Not present for Large Models.
+   *
+   * @param GoogleCloudAiplatformV1ModelContainerSpec $containerSpec
    */
   public function setContainerSpec(GoogleCloudAiplatformV1ModelContainerSpec $containerSpec)
   {
@@ -97,7 +122,10 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->containerSpec;
   }
   /**
-   * @param GoogleCloudAiplatformV1DedicatedResources
+   * A description of resources that are dedicated to the DeployedModel, and
+   * that need a higher degree of manual configuration.
+   *
+   * @param GoogleCloudAiplatformV1DedicatedResources $dedicatedResources
    */
   public function setDedicatedResources(GoogleCloudAiplatformV1DedicatedResources $dedicatedResources)
   {
@@ -111,7 +139,9 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->dedicatedResources;
   }
   /**
-   * @param GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata
+   * Optional. Metadata information about this deployment config.
+   *
+   * @param GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata $deployMetadata
    */
   public function setDeployMetadata(GoogleCloudAiplatformV1PublisherModelCallToActionDeployDeployMetadata $deployMetadata)
   {
@@ -125,7 +155,9 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->deployMetadata;
   }
   /**
-   * @param string
+   * Optional. The name of the deploy task (e.g., "text to image generation").
+   *
+   * @param string $deployTaskName
    */
   public function setDeployTaskName($deployTaskName)
   {
@@ -139,7 +171,10 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->deployTaskName;
   }
   /**
-   * @param GoogleCloudAiplatformV1LargeModelReference
+   * Optional. Large model reference. When this is set, model_artifact_spec is
+   * not needed.
+   *
+   * @param GoogleCloudAiplatformV1LargeModelReference $largeModelReference
    */
   public function setLargeModelReference(GoogleCloudAiplatformV1LargeModelReference $largeModelReference)
   {
@@ -153,7 +188,9 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->largeModelReference;
   }
   /**
-   * @param string
+   * Optional. Default model display name.
+   *
+   * @param string $modelDisplayName
    */
   public function setModelDisplayName($modelDisplayName)
   {
@@ -167,7 +204,10 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->modelDisplayName;
   }
   /**
-   * @param string
+   * Optional. The signed URI for ephemeral Cloud Storage access to model
+   * artifact.
+   *
+   * @param string $publicArtifactUri
    */
   public function setPublicArtifactUri($publicArtifactUri)
   {
@@ -181,7 +221,11 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->publicArtifactUri;
   }
   /**
-   * @param string
+   * The resource name of the shared DeploymentResourcePool to deploy on.
+   * Format: `projects/{project}/locations/{location}/deploymentResourcePools/{d
+   * eployment_resource_pool}`
+   *
+   * @param string $sharedResources
    */
   public function setSharedResources($sharedResources)
   {
@@ -195,7 +239,9 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionDeploy extends \Google\Mo
     return $this->sharedResources;
   }
   /**
-   * @param string
+   * Required. The title of the regional resource reference.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInput extends \Goog
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance
+   * Required. Pairwise question answering quality instance.
+   *
+   * @param GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualityInput extends \Goog
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualitySpec
+   * Required. Spec for pairwise question answering quality score metric.
+   *
+   * @param GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualitySpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1PairwiseQuestionAnsweringQualitySpec $metricSpec)
   {

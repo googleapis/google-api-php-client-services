@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1QuestionAnsweringCorrectnessResult extends \Google\Model
 {
   /**
+   * Output only. Confidence for question answering correctness score.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * Output only. Explanation for question answering correctness score.
+   *
    * @var string
    */
   public $explanation;
   /**
+   * Output only. Question Answering Correctness score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. Confidence for question answering correctness score.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringCorrectnessResult extends \Google\
     return $this->confidence;
   }
   /**
-   * @param string
+   * Output only. Explanation for question answering correctness score.
+   *
+   * @param string $explanation
    */
   public function setExplanation($explanation)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringCorrectnessResult extends \Google\
     return $this->explanation;
   }
   /**
-   * @param float
+   * Output only. Question Answering Correctness score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

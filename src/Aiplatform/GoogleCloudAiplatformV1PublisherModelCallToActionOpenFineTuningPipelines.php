@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionOpenFineTuningPipelines e
   protected $fineTuningPipelinesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences[]
+   * Required. Regional resource references to fine tuning pipelines.
+   *
+   * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences[] $fineTuningPipelines
    */
   public function setFineTuningPipelines($fineTuningPipelines)
   {

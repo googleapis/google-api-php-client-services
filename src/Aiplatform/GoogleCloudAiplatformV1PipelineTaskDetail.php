@@ -19,12 +19,58 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
 {
+  /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * Specifies pending state for the task.
+   */
+  public const STATE_PENDING = 'PENDING';
+  /**
+   * Specifies task is being executed.
+   */
+  public const STATE_RUNNING = 'RUNNING';
+  /**
+   * Specifies task completed successfully.
+   */
+  public const STATE_SUCCEEDED = 'SUCCEEDED';
+  /**
+   * Specifies Task cancel is in pending state.
+   */
+  public const STATE_CANCEL_PENDING = 'CANCEL_PENDING';
+  /**
+   * Specifies task is being cancelled.
+   */
+  public const STATE_CANCELLING = 'CANCELLING';
+  /**
+   * Specifies task was cancelled.
+   */
+  public const STATE_CANCELLED = 'CANCELLED';
+  /**
+   * Specifies task failed.
+   */
+  public const STATE_FAILED = 'FAILED';
+  /**
+   * Specifies task was skipped due to cache hit.
+   */
+  public const STATE_SKIPPED = 'SKIPPED';
+  /**
+   * Specifies that the task was not triggered because the task's trigger policy
+   * is not satisfied. The trigger policy is specified in the `condition` field
+   * of PipelineJob.pipeline_spec.
+   */
+  public const STATE_NOT_TRIGGERED = 'NOT_TRIGGERED';
   protected $collection_key = 'pipelineTaskStatus';
   /**
+   * Output only. Task create time.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Output only. Task end time.
+   *
    * @var string
    */
   public $endTime;
@@ -39,34 +85,56 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
   protected $outputsType = GoogleCloudAiplatformV1PipelineTaskDetailArtifactList::class;
   protected $outputsDataType = 'map';
   /**
+   * Output only. The id of the parent task if the task is within a component
+   * scope. Empty if the task is at the root level.
+   *
    * @var string
    */
   public $parentTaskId;
   protected $pipelineTaskStatusType = GoogleCloudAiplatformV1PipelineTaskDetailPipelineTaskStatus::class;
   protected $pipelineTaskStatusDataType = 'array';
   /**
+   * Output only. Task start time.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. State of the task.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. The system generated ID of the task.
+   *
    * @var string
    */
   public $taskId;
   /**
+   * Output only. The user specified name of the task that is defined in
+   * pipeline_spec.
+   *
    * @var string
    */
   public $taskName;
   /**
+   * Output only. The unique name of a task. This field is used by rerun
+   * pipeline job. Console UI and Vertex AI SDK will support triggering pipeline
+   * job reruns. The name is constructed by concatenating all the parent tasks
+   * name with the task name. For example, if a task named "child_task" has a
+   * parent task named "parent_task_1" and parent task 1 has a parent task named
+   * "parent_task_2", the task unique name will be
+   * "parent_task_2.parent_task_1.child_task".
+   *
    * @var string
    */
   public $taskUniqueName;
 
   /**
-   * @param string
+   * Output only. Task create time.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -80,7 +148,9 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param string
+   * Output only. Task end time.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -94,7 +164,10 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->endTime;
   }
   /**
-   * @param GoogleRpcStatus
+   * Output only. The error that occurred during task execution. Only populated
+   * when the task's state is FAILED or CANCELLED.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -108,7 +181,9 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->error;
   }
   /**
-   * @param GoogleCloudAiplatformV1Execution
+   * Output only. The execution metadata of the task.
+   *
+   * @param GoogleCloudAiplatformV1Execution $execution
    */
   public function setExecution(GoogleCloudAiplatformV1Execution $execution)
   {
@@ -122,7 +197,9 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->execution;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineTaskExecutorDetail
+   * Output only. The detailed execution info.
+   *
+   * @param GoogleCloudAiplatformV1PipelineTaskExecutorDetail $executorDetail
    */
   public function setExecutorDetail(GoogleCloudAiplatformV1PipelineTaskExecutorDetail $executorDetail)
   {
@@ -136,7 +213,9 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->executorDetail;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineTaskDetailArtifactList[]
+   * Output only. The runtime input artifacts of the task.
+   *
+   * @param GoogleCloudAiplatformV1PipelineTaskDetailArtifactList[] $inputs
    */
   public function setInputs($inputs)
   {
@@ -150,7 +229,9 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->inputs;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineTaskDetailArtifactList[]
+   * Output only. The runtime output artifacts of the task.
+   *
+   * @param GoogleCloudAiplatformV1PipelineTaskDetailArtifactList[] $outputs
    */
   public function setOutputs($outputs)
   {
@@ -164,7 +245,10 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->outputs;
   }
   /**
-   * @param string
+   * Output only. The id of the parent task if the task is within a component
+   * scope. Empty if the task is at the root level.
+   *
+   * @param string $parentTaskId
    */
   public function setParentTaskId($parentTaskId)
   {
@@ -178,7 +262,10 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->parentTaskId;
   }
   /**
-   * @param GoogleCloudAiplatformV1PipelineTaskDetailPipelineTaskStatus[]
+   * Output only. A list of task status. This field keeps a record of task
+   * status evolving over time.
+   *
+   * @param GoogleCloudAiplatformV1PipelineTaskDetailPipelineTaskStatus[] $pipelineTaskStatus
    */
   public function setPipelineTaskStatus($pipelineTaskStatus)
   {
@@ -192,7 +279,9 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->pipelineTaskStatus;
   }
   /**
-   * @param string
+   * Output only. Task start time.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -206,21 +295,28 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. State of the task.
+   *
+   * Accepted values: STATE_UNSPECIFIED, PENDING, RUNNING, SUCCEEDED,
+   * CANCEL_PENDING, CANCELLING, CANCELLED, FAILED, SKIPPED, NOT_TRIGGERED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. The system generated ID of the task.
+   *
+   * @param string $taskId
    */
   public function setTaskId($taskId)
   {
@@ -234,7 +330,10 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->taskId;
   }
   /**
-   * @param string
+   * Output only. The user specified name of the task that is defined in
+   * pipeline_spec.
+   *
+   * @param string $taskName
    */
   public function setTaskName($taskName)
   {
@@ -248,7 +347,15 @@ class GoogleCloudAiplatformV1PipelineTaskDetail extends \Google\Collection
     return $this->taskName;
   }
   /**
-   * @param string
+   * Output only. The unique name of a task. This field is used by rerun
+   * pipeline job. Console UI and Vertex AI SDK will support triggering pipeline
+   * job reruns. The name is constructed by concatenating all the parent tasks
+   * name with the task name. For example, if a task named "child_task" has a
+   * parent task named "parent_task_1" and parent task 1 has a parent task named
+   * "parent_task_2", the task unique name will be
+   * "parent_task_2.parent_task_1.child_task".
+   *
+   * @param string $taskUniqueName
    */
   public function setTaskUniqueName($taskUniqueName)
   {

@@ -20,37 +20,81 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Presets extends \Google\Model
 {
   /**
+   * Should not be set. Added as a recommended best practice for enums
+   */
+  public const MODALITY_MODALITY_UNSPECIFIED = 'MODALITY_UNSPECIFIED';
+  /**
+   * IMAGE modality
+   */
+  public const MODALITY_IMAGE = 'IMAGE';
+  /**
+   * TEXT modality
+   */
+  public const MODALITY_TEXT = 'TEXT';
+  /**
+   * TABULAR modality
+   */
+  public const MODALITY_TABULAR = 'TABULAR';
+  /**
+   * More precise neighbors as a trade-off against slower response.
+   */
+  public const QUERY_PRECISE = 'PRECISE';
+  /**
+   * Faster response as a trade-off against less precise neighbors.
+   */
+  public const QUERY_FAST = 'FAST';
+  /**
+   * The modality of the uploaded model, which automatically configures the
+   * distance measurement and feature normalization for the underlying example
+   * index and queries. If your model does not precisely fit one of these types,
+   * it is okay to choose the closest type.
+   *
    * @var string
    */
   public $modality;
   /**
+   * Preset option controlling parameters for speed-precision trade-off when
+   * querying for examples. If omitted, defaults to `PRECISE`.
+   *
    * @var string
    */
   public $query;
 
   /**
-   * @param string
+   * The modality of the uploaded model, which automatically configures the
+   * distance measurement and feature normalization for the underlying example
+   * index and queries. If your model does not precisely fit one of these types,
+   * it is okay to choose the closest type.
+   *
+   * Accepted values: MODALITY_UNSPECIFIED, IMAGE, TEXT, TABULAR
+   *
+   * @param self::MODALITY_* $modality
    */
   public function setModality($modality)
   {
     $this->modality = $modality;
   }
   /**
-   * @return string
+   * @return self::MODALITY_*
    */
   public function getModality()
   {
     return $this->modality;
   }
   /**
-   * @param string
+   * Preset option controlling parameters for speed-precision trade-off when
+   * querying for examples. If omitted, defaults to `PRECISE`.
+   *
+   * Accepted values: PRECISE, FAST
+   *
+   * @param self::QUERY_* $query
    */
   public function setQuery($query)
   {
     $this->query = $query;
   }
   /**
-   * @return string
+   * @return self::QUERY_*
    */
   public function getQuery()
   {

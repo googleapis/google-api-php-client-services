@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Port extends \Google\Model
 {
   /**
+   * The number of the port to expose on the pod's IP address. Must be a valid
+   * port number, between 1 and 65535 inclusive.
+   *
    * @var int
    */
   public $containerPort;
 
   /**
-   * @param int
+   * The number of the port to expose on the pod's IP address. Must be a valid
+   * port number, between 1 and 65535 inclusive.
+   *
+   * @param int $containerPort
    */
   public function setContainerPort($containerPort)
   {

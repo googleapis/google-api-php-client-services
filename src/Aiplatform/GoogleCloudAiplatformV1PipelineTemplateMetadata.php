@@ -20,12 +20,20 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PipelineTemplateMetadata extends \Google\Model
 {
   /**
+   * The version_name in artifact registry. Will always be presented in output
+   * if the PipelineJob.template_uri is from supported template registry. Format
+   * is "sha256:abcdef123456...".
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param string
+   * The version_name in artifact registry. Will always be presented in output
+   * if the PipelineJob.template_uri is from supported template registry. Format
+   * is "sha256:abcdef123456...".
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

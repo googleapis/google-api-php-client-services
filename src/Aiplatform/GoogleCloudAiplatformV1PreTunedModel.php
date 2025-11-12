@@ -20,20 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PreTunedModel extends \Google\Model
 {
   /**
+   * Output only. The name of the base model this PreTunedModel was tuned from.
+   *
    * @var string
    */
   public $baseModel;
   /**
+   * Optional. The source checkpoint id. If not specified, the default
+   * checkpoint will be used.
+   *
    * @var string
    */
   public $checkpointId;
   /**
+   * The resource name of the Model. E.g., a model resource name with a
+   * specified version id or alias:
+   * `projects/{project}/locations/{location}/models/{model}@{version_id}`
+   * `projects/{project}/locations/{location}/models/{model}@{alias}` Or, omit
+   * the version id to use the default version:
+   * `projects/{project}/locations/{location}/models/{model}`
+   *
    * @var string
    */
   public $tunedModelName;
 
   /**
-   * @param string
+   * Output only. The name of the base model this PreTunedModel was tuned from.
+   *
+   * @param string $baseModel
    */
   public function setBaseModel($baseModel)
   {
@@ -47,7 +61,10 @@ class GoogleCloudAiplatformV1PreTunedModel extends \Google\Model
     return $this->baseModel;
   }
   /**
-   * @param string
+   * Optional. The source checkpoint id. If not specified, the default
+   * checkpoint will be used.
+   *
+   * @param string $checkpointId
    */
   public function setCheckpointId($checkpointId)
   {
@@ -61,7 +78,14 @@ class GoogleCloudAiplatformV1PreTunedModel extends \Google\Model
     return $this->checkpointId;
   }
   /**
-   * @param string
+   * The resource name of the Model. E.g., a model resource name with a
+   * specified version id or alias:
+   * `projects/{project}/locations/{location}/models/{model}@{version_id}`
+   * `projects/{project}/locations/{location}/models/{model}@{alias}` Or, omit
+   * the version id to use the default version:
+   * `projects/{project}/locations/{location}/models/{model}`
+   *
+   * @param string $tunedModelName
    */
   public function setTunedModelName($tunedModelName)
   {

@@ -20,12 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PipelineJobRuntimeConfigInputArtifact extends \Google\Model
 {
   /**
+   * Artifact resource id from MLMD. Which is the last portion of an artifact
+   * resource name: `projects/{project}/locations/{location}/metadataStores/defa
+   * ult/artifacts/{artifact_id}`. The artifact must stay within the same
+   * project, location and default metadatastore as the pipeline.
+   *
    * @var string
    */
   public $artifactId;
 
   /**
-   * @param string
+   * Artifact resource id from MLMD. Which is the last portion of an artifact
+   * resource name: `projects/{project}/locations/{location}/metadataStores/defa
+   * ult/artifacts/{artifact_id}`. The artifact must stay within the same
+   * project, location and default metadatastore as the pipeline.
+   *
+   * @param string $artifactId
    */
   public function setArtifactId($artifactId)
   {

@@ -28,7 +28,9 @@ class GoogleCloudAiplatformV1NotebookSoftwareConfig extends \Google\Collection
   protected $postStartupScriptConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1ColabImage
+   * Optional. Google-managed NotebookRuntime colab image.
+   *
+   * @param GoogleCloudAiplatformV1ColabImage $colabImage
    */
   public function setColabImage(GoogleCloudAiplatformV1ColabImage $colabImage)
   {
@@ -42,7 +44,10 @@ class GoogleCloudAiplatformV1NotebookSoftwareConfig extends \Google\Collection
     return $this->colabImage;
   }
   /**
-   * @param GoogleCloudAiplatformV1EnvVar[]
+   * Optional. Environment variables to be passed to the container. Maximum
+   * limit is 100.
+   *
+   * @param GoogleCloudAiplatformV1EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -56,7 +61,9 @@ class GoogleCloudAiplatformV1NotebookSoftwareConfig extends \Google\Collection
     return $this->env;
   }
   /**
-   * @param GoogleCloudAiplatformV1PostStartupScriptConfig
+   * Optional. Post startup script config.
+   *
+   * @param GoogleCloudAiplatformV1PostStartupScriptConfig $postStartupScriptConfig
    */
   public function setPostStartupScriptConfig(GoogleCloudAiplatformV1PostStartupScriptConfig $postStartupScriptConfig)
   {

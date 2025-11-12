@@ -21,20 +21,43 @@ class GoogleCloudAiplatformV1PredictRequest extends \Google\Collection
 {
   protected $collection_key = 'instances';
   /**
+   * Required. The instances that are the input to the prediction call. A
+   * DeployedModel may have an upper limit on the number of instances it
+   * supports per request, and when it is exceeded the prediction call errors in
+   * case of AutoML Models, or, in case of customer created Models, the
+   * behaviour is as documented by that Model. The schema of any single instance
+   * may be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * instance_schema_uri.
+   *
    * @var array[]
    */
   public $instances;
   /**
+   * Optional. The user labels for Imagen billing usage only. Only Imagen
+   * supports labels. For other use cases, it will be ignored.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The parameters that govern the prediction. The schema of the parameters may
+   * be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * parameters_schema_uri.
+   *
    * @var array
    */
   public $parameters;
 
   /**
-   * @param array[]
+   * Required. The instances that are the input to the prediction call. A
+   * DeployedModel may have an upper limit on the number of instances it
+   * supports per request, and when it is exceeded the prediction call errors in
+   * case of AutoML Models, or, in case of customer created Models, the
+   * behaviour is as documented by that Model. The schema of any single instance
+   * may be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * instance_schema_uri.
+   *
+   * @param array[] $instances
    */
   public function setInstances($instances)
   {
@@ -48,7 +71,10 @@ class GoogleCloudAiplatformV1PredictRequest extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param string[]
+   * Optional. The user labels for Imagen billing usage only. Only Imagen
+   * supports labels. For other use cases, it will be ignored.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -62,7 +88,11 @@ class GoogleCloudAiplatformV1PredictRequest extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param array
+   * The parameters that govern the prediction. The schema of the parameters may
+   * be specified via Endpoint's DeployedModels' Model's PredictSchemata's
+   * parameters_schema_uri.
+   *
+   * @param array $parameters
    */
   public function setParameters($parameters)
   {

@@ -21,26 +21,40 @@ class GoogleCloudAiplatformV1ProbeHttpGetAction extends \Google\Collection
 {
   protected $collection_key = 'httpHeaders';
   /**
+   * Host name to connect to, defaults to the model serving container's IP. You
+   * probably want to set "Host" in httpHeaders instead.
+   *
    * @var string
    */
   public $host;
   protected $httpHeadersType = GoogleCloudAiplatformV1ProbeHttpHeader::class;
   protected $httpHeadersDataType = 'array';
   /**
+   * Path to access on the HTTP server.
+   *
    * @var string
    */
   public $path;
   /**
+   * Number of the port to access on the container. Number must be in the range
+   * 1 to 65535.
+   *
    * @var int
    */
   public $port;
   /**
+   * Scheme to use for connecting to the host. Defaults to HTTP. Acceptable
+   * values are "HTTP" or "HTTPS".
+   *
    * @var string
    */
   public $scheme;
 
   /**
-   * @param string
+   * Host name to connect to, defaults to the model serving container's IP. You
+   * probably want to set "Host" in httpHeaders instead.
+   *
+   * @param string $host
    */
   public function setHost($host)
   {
@@ -54,7 +68,9 @@ class GoogleCloudAiplatformV1ProbeHttpGetAction extends \Google\Collection
     return $this->host;
   }
   /**
-   * @param GoogleCloudAiplatformV1ProbeHttpHeader[]
+   * Custom headers to set in the request. HTTP allows repeated headers.
+   *
+   * @param GoogleCloudAiplatformV1ProbeHttpHeader[] $httpHeaders
    */
   public function setHttpHeaders($httpHeaders)
   {
@@ -68,7 +84,9 @@ class GoogleCloudAiplatformV1ProbeHttpGetAction extends \Google\Collection
     return $this->httpHeaders;
   }
   /**
-   * @param string
+   * Path to access on the HTTP server.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -82,7 +100,10 @@ class GoogleCloudAiplatformV1ProbeHttpGetAction extends \Google\Collection
     return $this->path;
   }
   /**
-   * @param int
+   * Number of the port to access on the container. Number must be in the range
+   * 1 to 65535.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
@@ -96,7 +117,10 @@ class GoogleCloudAiplatformV1ProbeHttpGetAction extends \Google\Collection
     return $this->port;
   }
   /**
-   * @param string
+   * Scheme to use for connecting to the host. Defaults to HTTP. Acceptable
+   * values are "HTTP" or "HTTPS".
+   *
+   * @param string $scheme
    */
   public function setScheme($scheme)
   {

@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringCorrectnessInput extends \Google\M
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1QuestionAnsweringCorrectnessInstance
+   * Required. Question answering correctness instance.
+   *
+   * @param GoogleCloudAiplatformV1QuestionAnsweringCorrectnessInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1QuestionAnsweringCorrectnessInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1QuestionAnsweringCorrectnessInput extends \Google\M
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1QuestionAnsweringCorrectnessSpec
+   * Required. Spec for question answering correctness score metric.
+   *
+   * @param GoogleCloudAiplatformV1QuestionAnsweringCorrectnessSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1QuestionAnsweringCorrectnessSpec $metricSpec)
   {

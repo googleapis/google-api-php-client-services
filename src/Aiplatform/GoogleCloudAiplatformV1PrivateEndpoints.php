@@ -20,24 +20,35 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PrivateEndpoints extends \Google\Model
 {
   /**
+   * Output only. Http(s) path to send explain requests.
+   *
    * @var string
    */
   public $explainHttpUri;
   /**
+   * Output only. Http(s) path to send health check requests.
+   *
    * @var string
    */
   public $healthHttpUri;
   /**
+   * Output only. Http(s) path to send prediction requests.
+   *
    * @var string
    */
   public $predictHttpUri;
   /**
+   * Output only. The name of the service attachment resource. Populated if
+   * private service connect is enabled.
+   *
    * @var string
    */
   public $serviceAttachment;
 
   /**
-   * @param string
+   * Output only. Http(s) path to send explain requests.
+   *
+   * @param string $explainHttpUri
    */
   public function setExplainHttpUri($explainHttpUri)
   {
@@ -51,7 +62,9 @@ class GoogleCloudAiplatformV1PrivateEndpoints extends \Google\Model
     return $this->explainHttpUri;
   }
   /**
-   * @param string
+   * Output only. Http(s) path to send health check requests.
+   *
+   * @param string $healthHttpUri
    */
   public function setHealthHttpUri($healthHttpUri)
   {
@@ -65,7 +78,9 @@ class GoogleCloudAiplatformV1PrivateEndpoints extends \Google\Model
     return $this->healthHttpUri;
   }
   /**
-   * @param string
+   * Output only. Http(s) path to send prediction requests.
+   *
+   * @param string $predictHttpUri
    */
   public function setPredictHttpUri($predictHttpUri)
   {
@@ -79,7 +94,10 @@ class GoogleCloudAiplatformV1PrivateEndpoints extends \Google\Model
     return $this->predictHttpUri;
   }
   /**
-   * @param string
+   * Output only. The name of the service attachment resource. Populated if
+   * private service connect is enabled.
+   *
+   * @param string $serviceAttachment
    */
   public function setServiceAttachment($serviceAttachment)
   {

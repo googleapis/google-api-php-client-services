@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1PointwiseMetricInput extends \Google\Model
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1PointwiseMetricInstance
+   * Required. Pointwise metric instance.
+   *
+   * @param GoogleCloudAiplatformV1PointwiseMetricInstance $instance
    */
   public function setInstance(GoogleCloudAiplatformV1PointwiseMetricInstance $instance)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1PointwiseMetricInput extends \Google\Model
     return $this->instance;
   }
   /**
-   * @param GoogleCloudAiplatformV1PointwiseMetricSpec
+   * Required. Spec for pointwise metric.
+   *
+   * @param GoogleCloudAiplatformV1PointwiseMetricSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1PointwiseMetricSpec $metricSpec)
   {

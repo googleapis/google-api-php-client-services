@@ -20,25 +20,74 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PreferenceOptimizationHyperParameters extends \Google\Model
 {
   /**
+   * Adapter size is unspecified.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_UNSPECIFIED = 'ADAPTER_SIZE_UNSPECIFIED';
+  /**
+   * Adapter size 1.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_ONE = 'ADAPTER_SIZE_ONE';
+  /**
+   * Adapter size 2.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_TWO = 'ADAPTER_SIZE_TWO';
+  /**
+   * Adapter size 4.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_FOUR = 'ADAPTER_SIZE_FOUR';
+  /**
+   * Adapter size 8.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_EIGHT = 'ADAPTER_SIZE_EIGHT';
+  /**
+   * Adapter size 16.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_SIXTEEN = 'ADAPTER_SIZE_SIXTEEN';
+  /**
+   * Adapter size 32.
+   */
+  public const ADAPTER_SIZE_ADAPTER_SIZE_THIRTY_TWO = 'ADAPTER_SIZE_THIRTY_TWO';
+  /**
+   * Optional. Adapter size for preference optimization.
+   *
    * @var string
    */
   public $adapterSize;
+  /**
+   * Optional. Weight for KL Divergence regularization.
+   *
+   * @var 
+   */
   public $beta;
   /**
+   * Optional. Number of complete passes the model makes over the entire
+   * training dataset during training.
+   *
    * @var string
    */
   public $epochCount;
+  /**
+   * Optional. Multiplier for adjusting the default learning rate.
+   *
+   * @var 
+   */
   public $learningRateMultiplier;
 
   /**
-   * @param string
+   * Optional. Adapter size for preference optimization.
+   *
+   * Accepted values: ADAPTER_SIZE_UNSPECIFIED, ADAPTER_SIZE_ONE,
+   * ADAPTER_SIZE_TWO, ADAPTER_SIZE_FOUR, ADAPTER_SIZE_EIGHT,
+   * ADAPTER_SIZE_SIXTEEN, ADAPTER_SIZE_THIRTY_TWO
+   *
+   * @param self::ADAPTER_SIZE_* $adapterSize
    */
   public function setAdapterSize($adapterSize)
   {
     $this->adapterSize = $adapterSize;
   }
   /**
-   * @return string
+   * @return self::ADAPTER_SIZE_*
    */
   public function getAdapterSize()
   {
@@ -53,7 +102,10 @@ class GoogleCloudAiplatformV1PreferenceOptimizationHyperParameters extends \Goog
     return $this->beta;
   }
   /**
-   * @param string
+   * Optional. Number of complete passes the model makes over the entire
+   * training dataset during training.
+   *
+   * @param string $epochCount
    */
   public function setEpochCount($epochCount)
   {

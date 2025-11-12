@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1PublisherModelCallToActionOpenNotebooks extends \Go
   protected $notebooksDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences[]
+   * Required. Regional resource references to notebooks.
+   *
+   * @param GoogleCloudAiplatformV1PublisherModelCallToActionRegionalResourceReferences[] $notebooks
    */
   public function setNotebooks($notebooks)
   {

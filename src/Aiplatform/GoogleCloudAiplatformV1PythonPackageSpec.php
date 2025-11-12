@@ -21,26 +21,43 @@ class GoogleCloudAiplatformV1PythonPackageSpec extends \Google\Collection
 {
   protected $collection_key = 'packageUris';
   /**
+   * Command line arguments to be passed to the Python task.
+   *
    * @var string[]
    */
   public $args;
   protected $envType = GoogleCloudAiplatformV1EnvVar::class;
   protected $envDataType = 'array';
   /**
+   * Required. The URI of a container image in Artifact Registry that will run
+   * the provided Python package. Vertex AI provides a wide range of executor
+   * images with pre-installed packages to meet users' various use cases. See
+   * the list of [pre-built containers for
+   * training](https://cloud.google.com/vertex-ai/docs/training/pre-built-
+   * containers). You must use an image from this list.
+   *
    * @var string
    */
   public $executorImageUri;
   /**
+   * Required. The Google Cloud Storage location of the Python package files
+   * which are the training program and its dependent packages. The maximum
+   * number of package URIs is 100.
+   *
    * @var string[]
    */
   public $packageUris;
   /**
+   * Required. The Python module name to run after installing the packages.
+   *
    * @var string
    */
   public $pythonModule;
 
   /**
-   * @param string[]
+   * Command line arguments to be passed to the Python task.
+   *
+   * @param string[] $args
    */
   public function setArgs($args)
   {
@@ -54,7 +71,10 @@ class GoogleCloudAiplatformV1PythonPackageSpec extends \Google\Collection
     return $this->args;
   }
   /**
-   * @param GoogleCloudAiplatformV1EnvVar[]
+   * Environment variables to be passed to the python module. Maximum limit is
+   * 100.
+   *
+   * @param GoogleCloudAiplatformV1EnvVar[] $env
    */
   public function setEnv($env)
   {
@@ -68,7 +88,14 @@ class GoogleCloudAiplatformV1PythonPackageSpec extends \Google\Collection
     return $this->env;
   }
   /**
-   * @param string
+   * Required. The URI of a container image in Artifact Registry that will run
+   * the provided Python package. Vertex AI provides a wide range of executor
+   * images with pre-installed packages to meet users' various use cases. See
+   * the list of [pre-built containers for
+   * training](https://cloud.google.com/vertex-ai/docs/training/pre-built-
+   * containers). You must use an image from this list.
+   *
+   * @param string $executorImageUri
    */
   public function setExecutorImageUri($executorImageUri)
   {
@@ -82,7 +109,11 @@ class GoogleCloudAiplatformV1PythonPackageSpec extends \Google\Collection
     return $this->executorImageUri;
   }
   /**
-   * @param string[]
+   * Required. The Google Cloud Storage location of the Python package files
+   * which are the training program and its dependent packages. The maximum
+   * number of package URIs is 100.
+   *
+   * @param string[] $packageUris
    */
   public function setPackageUris($packageUris)
   {
@@ -96,7 +127,9 @@ class GoogleCloudAiplatformV1PythonPackageSpec extends \Google\Collection
     return $this->packageUris;
   }
   /**
-   * @param string
+   * Required. The Python module name to run after installing the packages.
+   *
+   * @param string $pythonModule
    */
   public function setPythonModule($pythonModule)
   {

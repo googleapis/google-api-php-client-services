@@ -20,20 +20,46 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PostStartupScriptConfig extends \Google\Model
 {
   /**
+   * Unspecified post startup script behavior.
+   */
+  public const POST_STARTUP_SCRIPT_BEHAVIOR_POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED = 'POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED';
+  /**
+   * Run post startup script after runtime is started.
+   */
+  public const POST_STARTUP_SCRIPT_BEHAVIOR_RUN_ONCE = 'RUN_ONCE';
+  /**
+   * Run post startup script after runtime is stopped.
+   */
+  public const POST_STARTUP_SCRIPT_BEHAVIOR_RUN_EVERY_START = 'RUN_EVERY_START';
+  /**
+   * Download and run post startup script every time runtime is started.
+   */
+  public const POST_STARTUP_SCRIPT_BEHAVIOR_DOWNLOAD_AND_RUN_EVERY_START = 'DOWNLOAD_AND_RUN_EVERY_START';
+  /**
+   * Optional. Post startup script to run after runtime is started.
+   *
    * @var string
    */
   public $postStartupScript;
   /**
+   * Optional. Post startup script behavior that defines download and execution
+   * behavior.
+   *
    * @var string
    */
   public $postStartupScriptBehavior;
   /**
+   * Optional. Post startup script url to download. Example:
+   * `gs://bucket/script.sh`
+   *
    * @var string
    */
   public $postStartupScriptUrl;
 
   /**
-   * @param string
+   * Optional. Post startup script to run after runtime is started.
+   *
+   * @param string $postStartupScript
    */
   public function setPostStartupScript($postStartupScript)
   {
@@ -47,21 +73,30 @@ class GoogleCloudAiplatformV1PostStartupScriptConfig extends \Google\Model
     return $this->postStartupScript;
   }
   /**
-   * @param string
+   * Optional. Post startup script behavior that defines download and execution
+   * behavior.
+   *
+   * Accepted values: POST_STARTUP_SCRIPT_BEHAVIOR_UNSPECIFIED, RUN_ONCE,
+   * RUN_EVERY_START, DOWNLOAD_AND_RUN_EVERY_START
+   *
+   * @param self::POST_STARTUP_SCRIPT_BEHAVIOR_* $postStartupScriptBehavior
    */
   public function setPostStartupScriptBehavior($postStartupScriptBehavior)
   {
     $this->postStartupScriptBehavior = $postStartupScriptBehavior;
   }
   /**
-   * @return string
+   * @return self::POST_STARTUP_SCRIPT_BEHAVIOR_*
    */
   public function getPostStartupScriptBehavior()
   {
     return $this->postStartupScriptBehavior;
   }
   /**
-   * @param string
+   * Optional. Post startup script url to download. Example:
+   * `gs://bucket/script.sh`
+   *
+   * @param string $postStartupScriptUrl
    */
   public function setPostStartupScriptUrl($postStartupScriptUrl)
   {

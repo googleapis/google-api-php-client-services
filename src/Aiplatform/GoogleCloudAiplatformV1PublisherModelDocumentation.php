@@ -20,16 +20,23 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1PublisherModelDocumentation extends \Google\Model
 {
   /**
+   * Required. Content of this piece of document (in Markdown format).
+   *
    * @var string
    */
   public $content;
   /**
+   * Required. E.g., OVERVIEW, USE CASES, DOCUMENTATION, SDK & SAMPLES, JAVA,
+   * NODE.JS, etc..
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param string
+   * Required. Content of this piece of document (in Markdown format).
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -43,7 +50,10 @@ class GoogleCloudAiplatformV1PublisherModelDocumentation extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Required. E.g., OVERVIEW, USE CASES, DOCUMENTATION, SDK & SAMPLES, JAVA,
+   * NODE.JS, etc..
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
