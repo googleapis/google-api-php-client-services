@@ -25,7 +25,11 @@ class BareMetalStorageConfig extends \Google\Model
   protected $lvpShareConfigDataType = '';
 
   /**
-   * @param BareMetalLvpConfig
+   * Required. Specifies the config for local PersistentVolumes backed by
+   * mounted node disks. These disks need to be formatted and mounted by the
+   * user, which can be done before or after cluster creation.
+   *
+   * @param BareMetalLvpConfig $lvpNodeMountsConfig
    */
   public function setLvpNodeMountsConfig(BareMetalLvpConfig $lvpNodeMountsConfig)
   {
@@ -39,7 +43,11 @@ class BareMetalStorageConfig extends \Google\Model
     return $this->lvpNodeMountsConfig;
   }
   /**
-   * @param BareMetalLvpShareConfig
+   * Required. Specifies the config for local PersistentVolumes backed by
+   * subdirectories in a shared filesystem. These subdirectores are
+   * automatically created during cluster creation.
+   *
+   * @param BareMetalLvpShareConfig $lvpShareConfig
    */
   public function setLvpShareConfig(BareMetalLvpShareConfig $lvpShareConfig)
   {

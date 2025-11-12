@@ -20,30 +20,50 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalWorkloadNodeConfig extends \Google\Model
 {
   /**
+   * No container runtime selected.
+   */
+  public const CONTAINER_RUNTIME_CONTAINER_RUNTIME_UNSPECIFIED = 'CONTAINER_RUNTIME_UNSPECIFIED';
+  /**
+   * Containerd runtime.
+   */
+  public const CONTAINER_RUNTIME_CONTAINERD = 'CONTAINERD';
+  /**
+   * Specifies which container runtime will be used.
+   *
    * @var string
    */
   public $containerRuntime;
   /**
+   * The maximum number of pods a node can run. The size of the CIDR range
+   * assigned to the node will be derived from this parameter.
+   *
    * @var string
    */
   public $maxPodsPerNode;
 
   /**
-   * @param string
+   * Specifies which container runtime will be used.
+   *
+   * Accepted values: CONTAINER_RUNTIME_UNSPECIFIED, CONTAINERD
+   *
+   * @param self::CONTAINER_RUNTIME_* $containerRuntime
    */
   public function setContainerRuntime($containerRuntime)
   {
     $this->containerRuntime = $containerRuntime;
   }
   /**
-   * @return string
+   * @return self::CONTAINER_RUNTIME_*
    */
   public function getContainerRuntime()
   {
     return $this->containerRuntime;
   }
   /**
-   * @param string
+   * The maximum number of pods a node can run. The size of the CIDR range
+   * assigned to the node will be derived from this parameter.
+   *
+   * @param string $maxPodsPerNode
    */
   public function setMaxPodsPerNode($maxPodsPerNode)
   {

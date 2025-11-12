@@ -21,10 +21,16 @@ class ListVmwareClustersResponse extends \Google\Collection
 {
   protected $collection_key = 'vmwareClusters';
   /**
+   * A token identifying a page of results the server should return. If the
+   * token is not empty this means that more results are available and should be
+   * retrieved by repeating the request with the provided page token.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
@@ -32,7 +38,11 @@ class ListVmwareClustersResponse extends \Google\Collection
   protected $vmwareClustersDataType = 'array';
 
   /**
-   * @param string
+   * A token identifying a page of results the server should return. If the
+   * token is not empty this means that more results are available and should be
+   * retrieved by repeating the request with the provided page token.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -46,7 +56,9 @@ class ListVmwareClustersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {
@@ -60,7 +72,9 @@ class ListVmwareClustersResponse extends \Google\Collection
     return $this->unreachable;
   }
   /**
-   * @param VmwareCluster[]
+   * The list of VMware Cluster.
+   *
+   * @param VmwareCluster[] $vmwareClusters
    */
   public function setVmwareClusters($vmwareClusters)
   {

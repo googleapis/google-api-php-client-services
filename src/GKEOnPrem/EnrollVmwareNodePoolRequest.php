@@ -20,12 +20,16 @@ namespace Google\Service\GKEOnPrem;
 class EnrollVmwareNodePoolRequest extends \Google\Model
 {
   /**
+   * The target node pool id to be enrolled.
+   *
    * @var string
    */
   public $vmwareNodePoolId;
 
   /**
-   * @param string
+   * The target node pool id to be enrolled.
+   *
+   * @param string $vmwareNodePoolId
    */
   public function setVmwareNodePoolId($vmwareNodePoolId)
   {

@@ -20,10 +20,38 @@ namespace Google\Service\GKEOnPrem;
 class ValidationCheck extends \Google\Model
 {
   /**
+   * Default value. Standard preflight validation check will be used.
+   */
+  public const OPTION_OPTIONS_UNSPECIFIED = 'OPTIONS_UNSPECIFIED';
+  /**
+   * Prevent failed preflight checks from failing.
+   */
+  public const OPTION_SKIP_VALIDATION_CHECK_BLOCKING = 'SKIP_VALIDATION_CHECK_BLOCKING';
+  /**
+   * Skip all preflight check validations.
+   */
+  public const OPTION_SKIP_VALIDATION_ALL = 'SKIP_VALIDATION_ALL';
+  /**
+   * Default value. This value is unused.
+   */
+  public const SCENARIO_SCENARIO_UNSPECIFIED = 'SCENARIO_UNSPECIFIED';
+  /**
+   * The validation check occurred during a create flow.
+   */
+  public const SCENARIO_CREATE = 'CREATE';
+  /**
+   * The validation check occurred during an update flow.
+   */
+  public const SCENARIO_UPDATE = 'UPDATE';
+  /**
+   * Options used for the validation check
+   *
    * @var string
    */
   public $option;
   /**
+   * Output only. The scenario when the preflight checks were run.
+   *
    * @var string
    */
   public $scenario;
@@ -31,35 +59,46 @@ class ValidationCheck extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * Options used for the validation check
+   *
+   * Accepted values: OPTIONS_UNSPECIFIED, SKIP_VALIDATION_CHECK_BLOCKING,
+   * SKIP_VALIDATION_ALL
+   *
+   * @param self::OPTION_* $option
    */
   public function setOption($option)
   {
     $this->option = $option;
   }
   /**
-   * @return string
+   * @return self::OPTION_*
    */
   public function getOption()
   {
     return $this->option;
   }
   /**
-   * @param string
+   * Output only. The scenario when the preflight checks were run.
+   *
+   * Accepted values: SCENARIO_UNSPECIFIED, CREATE, UPDATE
+   *
+   * @param self::SCENARIO_* $scenario
    */
   public function setScenario($scenario)
   {
     $this->scenario = $scenario;
   }
   /**
-   * @return string
+   * @return self::SCENARIO_*
    */
   public function getScenario()
   {
     return $this->scenario;
   }
   /**
-   * @param ValidationCheckStatus
+   * Output only. The detailed validation check status.
+   *
+   * @param ValidationCheckStatus $status
    */
   public function setStatus(ValidationCheckStatus $status)
   {

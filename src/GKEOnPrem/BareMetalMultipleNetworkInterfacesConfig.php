@@ -20,12 +20,18 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalMultipleNetworkInterfacesConfig extends \Google\Model
 {
   /**
+   * Whether to enable multiple network interfaces for your pods. When set
+   * network_config.advanced_networking is automatically set to true.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether to enable multiple network interfaces for your pods. When set
+   * network_config.advanced_networking is automatically set to true.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

@@ -23,7 +23,10 @@ class BareMetalAdminMaintenanceStatus extends \Google\Model
   protected $machineDrainStatusDataType = '';
 
   /**
-   * @param BareMetalAdminMachineDrainStatus
+   * Represents the status of draining and drained machine nodes. This is used
+   * to show the progress of cluster upgrade.
+   *
+   * @param BareMetalAdminMachineDrainStatus $machineDrainStatus
    */
   public function setMachineDrainStatus(BareMetalAdminMachineDrainStatus $machineDrainStatus)
   {

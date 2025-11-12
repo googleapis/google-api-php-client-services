@@ -20,16 +20,22 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalDrainingMachine extends \Google\Model
 {
   /**
+   * Draining machine IP address.
+   *
    * @var string
    */
   public $nodeIp;
   /**
+   * The count of pods yet to drain.
+   *
    * @var int
    */
   public $podCount;
 
   /**
-   * @param string
+   * Draining machine IP address.
+   *
+   * @param string $nodeIp
    */
   public function setNodeIp($nodeIp)
   {
@@ -43,7 +49,9 @@ class BareMetalDrainingMachine extends \Google\Model
     return $this->nodeIp;
   }
   /**
-   * @param int
+   * The count of pods yet to drain.
+   *
+   * @param int $podCount
    */
   public function setPodCount($podCount)
   {

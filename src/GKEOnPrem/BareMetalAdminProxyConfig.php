@@ -21,16 +21,26 @@ class BareMetalAdminProxyConfig extends \Google\Collection
 {
   protected $collection_key = 'noProxy';
   /**
+   * A list of IPs, hostnames, and domains that should skip the proxy. Examples:
+   * ["127.0.0.1", "example.com", ".corp", "localhost"].
+   *
    * @var string[]
    */
   public $noProxy;
   /**
+   * Required. Specifies the address of your proxy server. Examples:
+   * `http://domain` WARNING: Do not provide credentials in the format
+   * `http://(username:password@)domain` these will be rejected by the server.
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string[]
+   * A list of IPs, hostnames, and domains that should skip the proxy. Examples:
+   * ["127.0.0.1", "example.com", ".corp", "localhost"].
+   *
+   * @param string[] $noProxy
    */
   public function setNoProxy($noProxy)
   {
@@ -44,7 +54,11 @@ class BareMetalAdminProxyConfig extends \Google\Collection
     return $this->noProxy;
   }
   /**
-   * @param string
+   * Required. Specifies the address of your proxy server. Examples:
+   * `http://domain` WARNING: Do not provide credentials in the format
+   * `http://(username:password@)domain` these will be rejected by the server.
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

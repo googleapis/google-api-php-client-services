@@ -20,16 +20,25 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalApiServerArgument extends \Google\Model
 {
   /**
+   * Required. The argument name as it appears on the API Server command line,
+   * make sure to remove the leading dashes.
+   *
    * @var string
    */
   public $argument;
   /**
+   * Required. The value of the arg as it will be passed to the API Server
+   * command line.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Required. The argument name as it appears on the API Server command line,
+   * make sure to remove the leading dashes.
+   *
+   * @param string $argument
    */
   public function setArgument($argument)
   {
@@ -43,7 +52,10 @@ class BareMetalApiServerArgument extends \Google\Model
     return $this->argument;
   }
   /**
-   * @param string
+   * Required. The value of the arg as it will be passed to the API Server
+   * command line.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

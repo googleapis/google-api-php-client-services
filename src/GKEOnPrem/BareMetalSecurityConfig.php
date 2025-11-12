@@ -23,7 +23,9 @@ class BareMetalSecurityConfig extends \Google\Model
   protected $authorizationDataType = '';
 
   /**
-   * @param Authorization
+   * Configures user access to the user cluster.
+   *
+   * @param Authorization $authorization
    */
   public function setAuthorization(Authorization $authorization)
   {

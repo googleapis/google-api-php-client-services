@@ -23,16 +23,24 @@ class BareMetalVersionInfo extends \Google\Collection
   protected $dependenciesType = UpgradeDependency::class;
   protected $dependenciesDataType = 'array';
   /**
+   * If set, the cluster dependencies (e.g. the admin cluster, other user
+   * clusters managed by the same admin cluster, version skew policy, etc) must
+   * be upgraded before this version can be installed or upgraded to.
+   *
    * @var bool
    */
   public $hasDependencies;
   /**
+   * Version number e.g. 1.13.1.
+   *
    * @var string
    */
   public $version;
 
   /**
-   * @param UpgradeDependency[]
+   * The list of upgrade dependencies for this version.
+   *
+   * @param UpgradeDependency[] $dependencies
    */
   public function setDependencies($dependencies)
   {
@@ -46,7 +54,11 @@ class BareMetalVersionInfo extends \Google\Collection
     return $this->dependencies;
   }
   /**
-   * @param bool
+   * If set, the cluster dependencies (e.g. the admin cluster, other user
+   * clusters managed by the same admin cluster, version skew policy, etc) must
+   * be upgraded before this version can be installed or upgraded to.
+   *
+   * @param bool $hasDependencies
    */
   public function setHasDependencies($hasDependencies)
   {
@@ -60,7 +72,9 @@ class BareMetalVersionInfo extends \Google\Collection
     return $this->hasDependencies;
   }
   /**
-   * @param string
+   * Version number e.g. 1.13.1.
+   *
+   * @param string $version
    */
   public function setVersion($version)
   {

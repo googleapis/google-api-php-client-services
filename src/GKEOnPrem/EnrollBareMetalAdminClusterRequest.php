@@ -20,16 +20,29 @@ namespace Google\Service\GKEOnPrem;
 class EnrollBareMetalAdminClusterRequest extends \Google\Model
 {
   /**
+   * User provided OnePlatform identifier that is used as part of the resource
+   * name. This must be unique among all GKE on-prem clusters within a project
+   * and location and will return a 409 if the cluster already exists.
+   * (https://tools.ietf.org/html/rfc1123) format.
+   *
    * @var string
    */
   public $bareMetalAdminClusterId;
   /**
+   * Required. This is the full resource name of this admin cluster's fleet
+   * membership.
+   *
    * @var string
    */
   public $membership;
 
   /**
-   * @param string
+   * User provided OnePlatform identifier that is used as part of the resource
+   * name. This must be unique among all GKE on-prem clusters within a project
+   * and location and will return a 409 if the cluster already exists.
+   * (https://tools.ietf.org/html/rfc1123) format.
+   *
+   * @param string $bareMetalAdminClusterId
    */
   public function setBareMetalAdminClusterId($bareMetalAdminClusterId)
   {
@@ -43,7 +56,10 @@ class EnrollBareMetalAdminClusterRequest extends \Google\Model
     return $this->bareMetalAdminClusterId;
   }
   /**
-   * @param string
+   * Required. This is the full resource name of this admin cluster's fleet
+   * membership.
+   *
+   * @param string $membership
    */
   public function setMembership($membership)
   {

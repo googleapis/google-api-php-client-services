@@ -24,7 +24,9 @@ class OperationProgress extends \Google\Collection
   protected $stagesDataType = 'array';
 
   /**
-   * @param OperationStage[]
+   * The stages of the operation.
+   *
+   * @param OperationStage[] $stages
    */
   public function setStages($stages)
   {

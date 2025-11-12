@@ -23,16 +23,23 @@ class ListBareMetalNodePoolsResponse extends \Google\Collection
   protected $bareMetalNodePoolsType = BareMetalNodePool::class;
   protected $bareMetalNodePoolsDataType = 'array';
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Locations that could not be reached.
+   *
    * @var string[]
    */
   public $unreachable;
 
   /**
-   * @param BareMetalNodePool[]
+   * The node pools from the specified parent resource.
+   *
+   * @param BareMetalNodePool[] $bareMetalNodePools
    */
   public function setBareMetalNodePools($bareMetalNodePools)
   {
@@ -46,7 +53,10 @@ class ListBareMetalNodePoolsResponse extends \Google\Collection
     return $this->bareMetalNodePools;
   }
   /**
-   * @param string
+   * A token, which can be sent as `page_token` to retrieve the next page. If
+   * this field is omitted, there are no subsequent pages.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -60,7 +70,9 @@ class ListBareMetalNodePoolsResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string[]
+   * Locations that could not be reached.
+   *
+   * @param string[] $unreachable
    */
   public function setUnreachable($unreachable)
   {

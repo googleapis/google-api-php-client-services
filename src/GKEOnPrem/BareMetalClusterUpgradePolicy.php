@@ -20,16 +20,36 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalClusterUpgradePolicy extends \Google\Model
 {
   /**
+   * No upgrade policy selected.
+   */
+  public const POLICY_NODE_POOL_POLICY_UNSPECIFIED = 'NODE_POOL_POLICY_UNSPECIFIED';
+  /**
+   * Upgrade worker node pools sequentially.
+   */
+  public const POLICY_SERIAL = 'SERIAL';
+  /**
+   * Upgrade all worker node pools in parallel.
+   */
+  public const POLICY_CONCURRENT = 'CONCURRENT';
+  /**
+   * Output only. Pause is used to show the upgrade pause status. It's view only
+   * for now.
+   *
    * @var bool
    */
   public $pause;
   /**
+   * Specifies which upgrade policy to use.
+   *
    * @var string
    */
   public $policy;
 
   /**
-   * @param bool
+   * Output only. Pause is used to show the upgrade pause status. It's view only
+   * for now.
+   *
+   * @param bool $pause
    */
   public function setPause($pause)
   {
@@ -43,14 +63,18 @@ class BareMetalClusterUpgradePolicy extends \Google\Model
     return $this->pause;
   }
   /**
-   * @param string
+   * Specifies which upgrade policy to use.
+   *
+   * Accepted values: NODE_POOL_POLICY_UNSPECIFIED, SERIAL, CONCURRENT
+   *
+   * @param self::POLICY_* $policy
    */
   public function setPolicy($policy)
   {
     $this->policy = $policy;
   }
   /**
-   * @return string
+   * @return self::POLICY_*
    */
   public function getPolicy()
   {

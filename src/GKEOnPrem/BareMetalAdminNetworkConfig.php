@@ -23,7 +23,9 @@ class BareMetalAdminNetworkConfig extends \Google\Model
   protected $islandModeCidrDataType = '';
 
   /**
-   * @param BareMetalAdminIslandModeCidrConfig
+   * Configuration for Island mode CIDR.
+   *
+   * @param BareMetalAdminIslandModeCidrConfig $islandModeCidr
    */
   public function setIslandModeCidr(BareMetalAdminIslandModeCidrConfig $islandModeCidr)
   {

@@ -31,7 +31,10 @@ class BareMetalLoadBalancerConfig extends \Google\Model
   protected $vipConfigDataType = '';
 
   /**
-   * @param BareMetalBgpLbConfig
+   * Configuration for BGP typed load balancers. When set
+   * network_config.advanced_networking is automatically set to true.
+   *
+   * @param BareMetalBgpLbConfig $bgpLbConfig
    */
   public function setBgpLbConfig(BareMetalBgpLbConfig $bgpLbConfig)
   {
@@ -45,7 +48,9 @@ class BareMetalLoadBalancerConfig extends \Google\Model
     return $this->bgpLbConfig;
   }
   /**
-   * @param BareMetalManualLbConfig
+   * Manually configured load balancers.
+   *
+   * @param BareMetalManualLbConfig $manualLbConfig
    */
   public function setManualLbConfig(BareMetalManualLbConfig $manualLbConfig)
   {
@@ -59,7 +64,9 @@ class BareMetalLoadBalancerConfig extends \Google\Model
     return $this->manualLbConfig;
   }
   /**
-   * @param BareMetalMetalLbConfig
+   * Configuration for MetalLB load balancers.
+   *
+   * @param BareMetalMetalLbConfig $metalLbConfig
    */
   public function setMetalLbConfig(BareMetalMetalLbConfig $metalLbConfig)
   {
@@ -73,7 +80,9 @@ class BareMetalLoadBalancerConfig extends \Google\Model
     return $this->metalLbConfig;
   }
   /**
-   * @param BareMetalPortConfig
+   * Configures the ports that the load balancer will listen on.
+   *
+   * @param BareMetalPortConfig $portConfig
    */
   public function setPortConfig(BareMetalPortConfig $portConfig)
   {
@@ -87,7 +96,9 @@ class BareMetalLoadBalancerConfig extends \Google\Model
     return $this->portConfig;
   }
   /**
-   * @param BareMetalVipConfig
+   * The VIPs used by the load balancer.
+   *
+   * @param BareMetalVipConfig $vipConfig
    */
   public function setVipConfig(BareMetalVipConfig $vipConfig)
   {

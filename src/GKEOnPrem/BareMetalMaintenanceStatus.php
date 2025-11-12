@@ -23,7 +23,9 @@ class BareMetalMaintenanceStatus extends \Google\Model
   protected $machineDrainStatusDataType = '';
 
   /**
-   * @param BareMetalMachineDrainStatus
+   * The maintenance status of node machines.
+   *
+   * @param BareMetalMachineDrainStatus $machineDrainStatus
    */
   public function setMachineDrainStatus(BareMetalMachineDrainStatus $machineDrainStatus)
   {

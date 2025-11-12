@@ -24,7 +24,12 @@ class Authorization extends \Google\Collection
   protected $adminUsersDataType = 'array';
 
   /**
-   * @param ClusterUser[]
+   * For VMware and bare metal user clusters, users will be granted the cluster-
+   * admin role on the cluster, which provides full administrative access to the
+   * cluster. For bare metal admin clusters, users will be granted the cluster-
+   * view role, which limits users to read-only access.
+   *
+   * @param ClusterUser[] $adminUsers
    */
   public function setAdminUsers($adminUsers)
   {

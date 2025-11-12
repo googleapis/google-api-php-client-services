@@ -20,12 +20,16 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalSrIovConfig extends \Google\Model
 {
   /**
+   * Whether to install the SR-IOV operator.
+   *
    * @var bool
    */
   public $enabled;
 
   /**
-   * @param bool
+   * Whether to install the SR-IOV operator.
+   *
+   * @param bool $enabled
    */
   public function setEnabled($enabled)
   {

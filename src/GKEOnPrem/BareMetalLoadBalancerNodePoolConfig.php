@@ -23,7 +23,9 @@ class BareMetalLoadBalancerNodePoolConfig extends \Google\Model
   protected $nodePoolConfigDataType = '';
 
   /**
-   * @param BareMetalNodePoolConfig
+   * The generic configuration for a node pool running a load balancer.
+   *
+   * @param BareMetalNodePoolConfig $nodePoolConfig
    */
   public function setNodePoolConfig(BareMetalNodePoolConfig $nodePoolConfig)
   {

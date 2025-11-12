@@ -27,7 +27,9 @@ class BareMetalAdminLoadBalancerConfig extends \Google\Model
   protected $vipConfigDataType = '';
 
   /**
-   * @param BareMetalAdminManualLbConfig
+   * Manually configured load balancers.
+   *
+   * @param BareMetalAdminManualLbConfig $manualLbConfig
    */
   public function setManualLbConfig(BareMetalAdminManualLbConfig $manualLbConfig)
   {
@@ -41,7 +43,9 @@ class BareMetalAdminLoadBalancerConfig extends \Google\Model
     return $this->manualLbConfig;
   }
   /**
-   * @param BareMetalAdminPortConfig
+   * Configures the ports that the load balancer will listen on.
+   *
+   * @param BareMetalAdminPortConfig $portConfig
    */
   public function setPortConfig(BareMetalAdminPortConfig $portConfig)
   {
@@ -55,7 +59,9 @@ class BareMetalAdminLoadBalancerConfig extends \Google\Model
     return $this->portConfig;
   }
   /**
-   * @param BareMetalAdminVipConfig
+   * The VIPs used by the load balancer.
+   *
+   * @param BareMetalAdminVipConfig $vipConfig
    */
   public function setVipConfig(BareMetalAdminVipConfig $vipConfig)
   {

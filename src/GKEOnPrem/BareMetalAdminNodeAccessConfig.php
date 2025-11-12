@@ -20,12 +20,18 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalAdminNodeAccessConfig extends \Google\Model
 {
   /**
+   * Required. LoginUser is the user name used to access node machines. It
+   * defaults to "root" if not set.
+   *
    * @var string
    */
   public $loginUser;
 
   /**
-   * @param string
+   * Required. LoginUser is the user name used to access node machines. It
+   * defaults to "root" if not set.
+   *
+   * @param string $loginUser
    */
   public function setLoginUser($loginUser)
   {

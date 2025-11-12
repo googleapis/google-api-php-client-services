@@ -20,16 +20,27 @@ namespace Google\Service\GKEOnPrem;
 class EnrollVmwareAdminClusterRequest extends \Google\Model
 {
   /**
+   * Required. This is the full resource name of this admin cluster's fleet
+   * membership.
+   *
    * @var string
    */
   public $membership;
   /**
+   * User provided OnePlatform identifier that is used as part of the resource
+   * name. This must be unique among all GKE on-prem clusters within a project
+   * and location and will return a 409 if the cluster already exists.
+   * (https://tools.ietf.org/html/rfc1123) format.
+   *
    * @var string
    */
   public $vmwareAdminClusterId;
 
   /**
-   * @param string
+   * Required. This is the full resource name of this admin cluster's fleet
+   * membership.
+   *
+   * @param string $membership
    */
   public function setMembership($membership)
   {
@@ -43,7 +54,12 @@ class EnrollVmwareAdminClusterRequest extends \Google\Model
     return $this->membership;
   }
   /**
-   * @param string
+   * User provided OnePlatform identifier that is used as part of the resource
+   * name. This must be unique among all GKE on-prem clusters within a project
+   * and location and will return a 409 if the cluster already exists.
+   * (https://tools.ietf.org/html/rfc1123) format.
+   *
+   * @param string $vmwareAdminClusterId
    */
   public function setVmwareAdminClusterId($vmwareAdminClusterId)
   {

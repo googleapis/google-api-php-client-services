@@ -24,7 +24,9 @@ class QueryBareMetalAdminVersionConfigResponse extends \Google\Collection
   protected $versionsDataType = 'array';
 
   /**
-   * @param BareMetalVersionInfo[]
+   * List of available versions to install or to upgrade to.
+   *
+   * @param BareMetalVersionInfo[] $versions
    */
   public function setVersions($versions)
   {

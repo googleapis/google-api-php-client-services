@@ -20,16 +20,22 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalLvpConfig extends \Google\Model
 {
   /**
+   * Required. The host machine path.
+   *
    * @var string
    */
   public $path;
   /**
+   * Required. The StorageClass name that PVs will be created with.
+   *
    * @var string
    */
   public $storageClass;
 
   /**
-   * @param string
+   * Required. The host machine path.
+   *
+   * @param string $path
    */
   public function setPath($path)
   {
@@ -43,7 +49,9 @@ class BareMetalLvpConfig extends \Google\Model
     return $this->path;
   }
   /**
-   * @param string
+   * Required. The StorageClass name that PVs will be created with.
+   *
+   * @param string $storageClass
    */
   public function setStorageClass($storageClass)
   {

@@ -23,6 +23,9 @@ class BareMetalBgpLbConfig extends \Google\Collection
   protected $addressPoolsType = BareMetalLoadBalancerAddressPool::class;
   protected $addressPoolsDataType = 'array';
   /**
+   * Required. BGP autonomous system number (ASN) of the cluster. This field can
+   * be updated after cluster creation.
+   *
    * @var string
    */
   public $asn;
@@ -32,7 +35,11 @@ class BareMetalBgpLbConfig extends \Google\Collection
   protected $loadBalancerNodePoolConfigDataType = '';
 
   /**
-   * @param BareMetalLoadBalancerAddressPool[]
+   * Required. AddressPools is a list of non-overlapping IP pools used by load
+   * balancer typed services. All addresses must be routable to load balancer
+   * nodes. IngressVIP must be included in the pools.
+   *
+   * @param BareMetalLoadBalancerAddressPool[] $addressPools
    */
   public function setAddressPools($addressPools)
   {
@@ -46,7 +53,10 @@ class BareMetalBgpLbConfig extends \Google\Collection
     return $this->addressPools;
   }
   /**
-   * @param string
+   * Required. BGP autonomous system number (ASN) of the cluster. This field can
+   * be updated after cluster creation.
+   *
+   * @param string $asn
    */
   public function setAsn($asn)
   {
@@ -60,7 +70,13 @@ class BareMetalBgpLbConfig extends \Google\Collection
     return $this->asn;
   }
   /**
-   * @param BareMetalBgpPeerConfig[]
+   * Required. The list of BGP peers that the cluster will connect to. At least
+   * one peer must be configured for each control plane node. Control plane
+   * nodes will connect to these peers to advertise the control plane VIP. The
+   * Services load balancer also uses these peers by default. This field can be
+   * updated after cluster creation.
+   *
+   * @param BareMetalBgpPeerConfig[] $bgpPeerConfigs
    */
   public function setBgpPeerConfigs($bgpPeerConfigs)
   {
@@ -74,7 +90,11 @@ class BareMetalBgpLbConfig extends \Google\Collection
     return $this->bgpPeerConfigs;
   }
   /**
-   * @param BareMetalLoadBalancerNodePoolConfig
+   * Specifies the node pool running data plane load balancing. L2 connectivity
+   * is required among nodes in this pool. If missing, the control plane node
+   * pool is used for data plane load balancing.
+   *
+   * @param BareMetalLoadBalancerNodePoolConfig $loadBalancerNodePoolConfig
    */
   public function setLoadBalancerNodePoolConfig(BareMetalLoadBalancerNodePoolConfig $loadBalancerNodePoolConfig)
   {

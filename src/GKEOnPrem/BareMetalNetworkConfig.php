@@ -20,6 +20,10 @@ namespace Google\Service\GKEOnPrem;
 class BareMetalNetworkConfig extends \Google\Model
 {
   /**
+   * Enables the use of advanced Anthos networking features, such as Bundled
+   * Load Balancing with BGP or the egress NAT gateway. Setting configuration
+   * for advanced networking features will automatically set this flag.
+   *
    * @var bool
    */
   public $advancedNetworking;
@@ -31,7 +35,11 @@ class BareMetalNetworkConfig extends \Google\Model
   protected $srIovConfigDataType = '';
 
   /**
-   * @param bool
+   * Enables the use of advanced Anthos networking features, such as Bundled
+   * Load Balancing with BGP or the egress NAT gateway. Setting configuration
+   * for advanced networking features will automatically set this flag.
+   *
+   * @param bool $advancedNetworking
    */
   public function setAdvancedNetworking($advancedNetworking)
   {
@@ -45,7 +53,13 @@ class BareMetalNetworkConfig extends \Google\Model
     return $this->advancedNetworking;
   }
   /**
-   * @param BareMetalIslandModeCidrConfig
+   * Configuration for island mode CIDR. In an island-mode network, nodes have
+   * unique IP addresses, but pods don't have unique addresses across clusters.
+   * This doesn't cause problems because pods in one cluster never directly
+   * communicate with pods in another cluster. Instead, there are gateways that
+   * mediate between a pod in one cluster and a pod in another cluster.
+   *
+   * @param BareMetalIslandModeCidrConfig $islandModeCidr
    */
   public function setIslandModeCidr(BareMetalIslandModeCidrConfig $islandModeCidr)
   {
@@ -59,7 +73,9 @@ class BareMetalNetworkConfig extends \Google\Model
     return $this->islandModeCidr;
   }
   /**
-   * @param BareMetalMultipleNetworkInterfacesConfig
+   * Configuration for multiple network interfaces.
+   *
+   * @param BareMetalMultipleNetworkInterfacesConfig $multipleNetworkInterfacesConfig
    */
   public function setMultipleNetworkInterfacesConfig(BareMetalMultipleNetworkInterfacesConfig $multipleNetworkInterfacesConfig)
   {
@@ -73,7 +89,9 @@ class BareMetalNetworkConfig extends \Google\Model
     return $this->multipleNetworkInterfacesConfig;
   }
   /**
-   * @param BareMetalSrIovConfig
+   * Configuration for SR-IOV.
+   *
+   * @param BareMetalSrIovConfig $srIovConfig
    */
   public function setSrIovConfig(BareMetalSrIovConfig $srIovConfig)
   {
