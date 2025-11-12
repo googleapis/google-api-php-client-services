@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class MachineTypeAccelerators extends \Google\Model
 {
   /**
+   * Number of accelerator cards exposed to the guest.
+   *
    * @var int
    */
   public $guestAcceleratorCount;
   /**
+   * The accelerator type resource name, not a full URL, e.g.nvidia-tesla-t4.
+   *
    * @var string
    */
   public $guestAcceleratorType;
 
   /**
-   * @param int
+   * Number of accelerator cards exposed to the guest.
+   *
+   * @param int $guestAcceleratorCount
    */
   public function setGuestAcceleratorCount($guestAcceleratorCount)
   {
@@ -43,7 +49,9 @@ class MachineTypeAccelerators extends \Google\Model
     return $this->guestAcceleratorCount;
   }
   /**
-   * @param string
+   * The accelerator type resource name, not a full URL, e.g.nvidia-tesla-t4.
+   *
+   * @param string $guestAcceleratorType
    */
   public function setGuestAcceleratorType($guestAcceleratorType)
   {

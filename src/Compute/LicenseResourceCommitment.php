@@ -20,20 +20,28 @@ namespace Google\Service\Compute;
 class LicenseResourceCommitment extends \Google\Model
 {
   /**
+   * The number of licenses you plan to purchase.
+   *
    * @var string
    */
   public $amount;
   /**
+   * The number of cores per license.
+   *
    * @var string
    */
   public $coresPerLicense;
   /**
+   * The applicable license URI.
+   *
    * @var string
    */
   public $license;
 
   /**
-   * @param string
+   * The number of licenses you plan to purchase.
+   *
+   * @param string $amount
    */
   public function setAmount($amount)
   {
@@ -47,7 +55,9 @@ class LicenseResourceCommitment extends \Google\Model
     return $this->amount;
   }
   /**
-   * @param string
+   * The number of cores per license.
+   *
+   * @param string $coresPerLicense
    */
   public function setCoresPerLicense($coresPerLicense)
   {
@@ -61,7 +71,9 @@ class LicenseResourceCommitment extends \Google\Model
     return $this->coresPerLicense;
   }
   /**
-   * @param string
+   * The applicable license URI.
+   *
+   * @param string $license
    */
   public function setLicense($license)
   {

@@ -24,7 +24,12 @@ class InterconnectMacsecConfig extends \Google\Collection
   protected $preSharedKeysDataType = 'array';
 
   /**
-   * @param InterconnectMacsecConfigPreSharedKey[]
+   * A keychain placeholder describing a set of named key objects along with
+   * their start times. A MACsec CKN/CAK is generated for each key in the key
+   * chain. Google router automatically picks the key with the most recent
+   * startTime when establishing or re-establishing a MACsec secure link.
+   *
+   * @param InterconnectMacsecConfigPreSharedKey[] $preSharedKeys
    */
   public function setPreSharedKeys($preSharedKeys)
   {

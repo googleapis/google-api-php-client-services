@@ -29,7 +29,7 @@ class InterconnectRemoteLocationConstraintsSubnetLengthRange extends \Google\Mod
   public $min;
 
   /**
-   * @param int
+   * @param int $max
    */
   public function setMax($max)
   {
@@ -43,7 +43,7 @@ class InterconnectRemoteLocationConstraintsSubnetLengthRange extends \Google\Mod
     return $this->max;
   }
   /**
-   * @param int
+   * @param int $min
    */
   public function setMin($min)
   {

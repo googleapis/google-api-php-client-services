@@ -26,7 +26,9 @@ class NetworkAttachmentsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param NetworkAttachment[]
+   * A list of NetworkAttachments contained in this scope.
+   *
+   * @param NetworkAttachment[] $networkAttachments
    */
   public function setNetworkAttachments($networkAttachments)
   {
@@ -40,7 +42,10 @@ class NetworkAttachmentsScopedList extends \Google\Collection
     return $this->networkAttachments;
   }
   /**
-   * @param NetworkAttachmentsScopedListWarning
+   * Informational warning which replaces the list of network attachments when
+   * the list is empty.
+   *
+   * @param NetworkAttachmentsScopedListWarning $warning
    */
   public function setWarning(NetworkAttachmentsScopedListWarning $warning)
   {

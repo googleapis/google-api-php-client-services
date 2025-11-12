@@ -21,88 +21,143 @@ class License extends \Google\Collection
 {
   protected $collection_key = 'requiredCoattachedLicenses';
   /**
+   * Specifies licenseCodes of licenses that can replace this license. Note:
+   * such replacements are allowed even if removable_from_disk is false.
+   *
    * @var string[]
    */
   public $allowedReplacementLicenses;
   /**
+   * If true, this license can be appended to an existing disk's set of
+   * licenses.
+   *
    * @var bool
    */
   public $appendableToDisk;
   /**
+   * [Output Only] Deprecated. This field no longer reflects whether a license
+   * charges a usage fee.
+   *
    * @var bool
    */
   public $chargesUseFee;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional textual description of the resource; provided by the client
+   * when the resource is created.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * Specifies licenseCodes of licenses that are incompatible with this license.
+   * If a license is incompatible with this license, it cannot be attached to
+   * the same disk or image.
+   *
    * @var string[]
    */
   public $incompatibleLicenses;
   /**
+   * [Output Only] Type of resource. Always compute#license for licenses.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] The unique code used to attach this license to images,
+   * snapshots, and disks.
+   *
    * @var string
    */
   public $licenseCode;
   protected $minimumRetentionType = Duration::class;
   protected $minimumRetentionDataType = '';
   /**
+   * If true, this license can only be used on VMs on multi tenant nodes.
+   *
    * @var bool
    */
   public $multiTenantOnly;
   /**
+   * Name of the resource. The name must be 1-63 characters long and comply
+   * withRFC1035.
+   *
    * @var string
    */
   public $name;
   /**
+   * If true, indicates this is an OS license. Only one OS license can be
+   * attached to a disk or image at a time.
+   *
    * @var bool
    */
   public $osLicense;
   /**
+   * If true, this license can be removed from a disk's set of licenses, with no
+   * replacement license needed.
+   *
    * @var bool
    */
   public $removableFromDisk;
   /**
+   * Specifies the set of permissible coattached licenseCodes of licenses that
+   * satisfy the coattachment requirement of this license. At least one license
+   * from the set must be attached to the same disk or image as this license.
+   *
    * @var string[]
    */
   public $requiredCoattachedLicenses;
   protected $resourceRequirementsType = LicenseResourceRequirements::class;
   protected $resourceRequirementsDataType = '';
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   *
    * @var string
    */
   public $selfLinkWithId;
   /**
+   * If true, this license can only be used on VMs on sole tenant nodes.
+   *
    * @var bool
    */
   public $soleTenantOnly;
   /**
+   * If false, licenses will not be copied from the source resource when
+   * creating an image from a disk, disk from snapshot, or snapshot from disk.
+   *
    * @var bool
    */
   public $transferable;
   /**
+   * [Output Only] Last update timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $updateTimestamp;
 
   /**
-   * @param string[]
+   * Specifies licenseCodes of licenses that can replace this license. Note:
+   * such replacements are allowed even if removable_from_disk is false.
+   *
+   * @param string[] $allowedReplacementLicenses
    */
   public function setAllowedReplacementLicenses($allowedReplacementLicenses)
   {
@@ -116,7 +171,10 @@ class License extends \Google\Collection
     return $this->allowedReplacementLicenses;
   }
   /**
-   * @param bool
+   * If true, this license can be appended to an existing disk's set of
+   * licenses.
+   *
+   * @param bool $appendableToDisk
    */
   public function setAppendableToDisk($appendableToDisk)
   {
@@ -130,7 +188,10 @@ class License extends \Google\Collection
     return $this->appendableToDisk;
   }
   /**
-   * @param bool
+   * [Output Only] Deprecated. This field no longer reflects whether a license
+   * charges a usage fee.
+   *
+   * @param bool $chargesUseFee
    */
   public function setChargesUseFee($chargesUseFee)
   {
@@ -144,7 +205,9 @@ class License extends \Google\Collection
     return $this->chargesUseFee;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -158,7 +221,10 @@ class License extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional textual description of the resource; provided by the client
+   * when the resource is created.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -172,7 +238,10 @@ class License extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -186,7 +255,11 @@ class License extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string[]
+   * Specifies licenseCodes of licenses that are incompatible with this license.
+   * If a license is incompatible with this license, it cannot be attached to
+   * the same disk or image.
+   *
+   * @param string[] $incompatibleLicenses
    */
   public function setIncompatibleLicenses($incompatibleLicenses)
   {
@@ -200,7 +273,9 @@ class License extends \Google\Collection
     return $this->incompatibleLicenses;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource. Always compute#license for licenses.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -214,7 +289,10 @@ class License extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] The unique code used to attach this license to images,
+   * snapshots, and disks.
+   *
+   * @param string $licenseCode
    */
   public function setLicenseCode($licenseCode)
   {
@@ -228,7 +306,10 @@ class License extends \Google\Collection
     return $this->licenseCode;
   }
   /**
-   * @param Duration
+   * If set, this license will be unable to be removed or replaced once attached
+   * to a disk until the minimum_retention period has passed.
+   *
+   * @param Duration $minimumRetention
    */
   public function setMinimumRetention(Duration $minimumRetention)
   {
@@ -242,7 +323,9 @@ class License extends \Google\Collection
     return $this->minimumRetention;
   }
   /**
-   * @param bool
+   * If true, this license can only be used on VMs on multi tenant nodes.
+   *
+   * @param bool $multiTenantOnly
    */
   public function setMultiTenantOnly($multiTenantOnly)
   {
@@ -256,7 +339,10 @@ class License extends \Google\Collection
     return $this->multiTenantOnly;
   }
   /**
-   * @param string
+   * Name of the resource. The name must be 1-63 characters long and comply
+   * withRFC1035.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -270,7 +356,10 @@ class License extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param bool
+   * If true, indicates this is an OS license. Only one OS license can be
+   * attached to a disk or image at a time.
+   *
+   * @param bool $osLicense
    */
   public function setOsLicense($osLicense)
   {
@@ -284,7 +373,10 @@ class License extends \Google\Collection
     return $this->osLicense;
   }
   /**
-   * @param bool
+   * If true, this license can be removed from a disk's set of licenses, with no
+   * replacement license needed.
+   *
+   * @param bool $removableFromDisk
    */
   public function setRemovableFromDisk($removableFromDisk)
   {
@@ -298,7 +390,11 @@ class License extends \Google\Collection
     return $this->removableFromDisk;
   }
   /**
-   * @param string[]
+   * Specifies the set of permissible coattached licenseCodes of licenses that
+   * satisfy the coattachment requirement of this license. At least one license
+   * from the set must be attached to the same disk or image as this license.
+   *
+   * @param string[] $requiredCoattachedLicenses
    */
   public function setRequiredCoattachedLicenses($requiredCoattachedLicenses)
   {
@@ -312,7 +408,9 @@ class License extends \Google\Collection
     return $this->requiredCoattachedLicenses;
   }
   /**
-   * @param LicenseResourceRequirements
+   * [Input Only] Deprecated.
+   *
+   * @param LicenseResourceRequirements $resourceRequirements
    */
   public function setResourceRequirements(LicenseResourceRequirements $resourceRequirements)
   {
@@ -326,7 +424,9 @@ class License extends \Google\Collection
     return $this->resourceRequirements;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -340,7 +440,9 @@ class License extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource with the resource id.
+   *
+   * @param string $selfLinkWithId
    */
   public function setSelfLinkWithId($selfLinkWithId)
   {
@@ -354,7 +456,9 @@ class License extends \Google\Collection
     return $this->selfLinkWithId;
   }
   /**
-   * @param bool
+   * If true, this license can only be used on VMs on sole tenant nodes.
+   *
+   * @param bool $soleTenantOnly
    */
   public function setSoleTenantOnly($soleTenantOnly)
   {
@@ -368,7 +472,10 @@ class License extends \Google\Collection
     return $this->soleTenantOnly;
   }
   /**
-   * @param bool
+   * If false, licenses will not be copied from the source resource when
+   * creating an image from a disk, disk from snapshot, or snapshot from disk.
+   *
+   * @param bool $transferable
    */
   public function setTransferable($transferable)
   {
@@ -382,7 +489,9 @@ class License extends \Google\Collection
     return $this->transferable;
   }
   /**
-   * @param string
+   * [Output Only] Last update timestamp inRFC3339 text format.
+   *
+   * @param string $updateTimestamp
    */
   public function setUpdateTimestamp($updateTimestamp)
   {

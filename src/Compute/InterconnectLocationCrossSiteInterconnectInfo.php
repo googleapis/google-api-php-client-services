@@ -20,12 +20,20 @@ namespace Google\Service\Compute;
 class InterconnectLocationCrossSiteInterconnectInfo extends \Google\Model
 {
   /**
+   * The remote location for Cross-Site Interconnect wires. This specifies an
+   * InterconnectLocation city (metropolitan area designator), which itself may
+   * match multiple InterconnectLocations.
+   *
    * @var string
    */
   public $city;
 
   /**
-   * @param string
+   * The remote location for Cross-Site Interconnect wires. This specifies an
+   * InterconnectLocation city (metropolitan area designator), which itself may
+   * match multiple InterconnectLocations.
+   *
+   * @param string $city
    */
   public function setCity($city)
   {

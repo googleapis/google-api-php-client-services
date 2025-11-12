@@ -24,7 +24,9 @@ class NatIpInfoResponse extends \Google\Collection
   protected $resultDataType = 'array';
 
   /**
-   * @param NatIpInfo[]
+   * [Output Only] A list of NAT IP information.
+   *
+   * @param NatIpInfo[] $result
    */
   public function setResult($result)
   {

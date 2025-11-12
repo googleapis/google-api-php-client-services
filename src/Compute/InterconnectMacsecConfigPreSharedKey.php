@@ -20,24 +20,34 @@ namespace Google\Service\Compute;
 class InterconnectMacsecConfigPreSharedKey extends \Google\Model
 {
   /**
+   * An auto-generated Connectivity Association Key (CAK) for this key.
+   *
    * @var string
    */
   public $cak;
   /**
+   * An auto-generated Connectivity Association Key Name (CKN) for this key.
+   *
    * @var string
    */
   public $ckn;
   /**
+   * User provided name for this pre-shared key.
+   *
    * @var string
    */
   public $name;
   /**
+   * User provided timestamp on or after which this key is valid.
+   *
    * @var string
    */
   public $startTime;
 
   /**
-   * @param string
+   * An auto-generated Connectivity Association Key (CAK) for this key.
+   *
+   * @param string $cak
    */
   public function setCak($cak)
   {
@@ -51,7 +61,9 @@ class InterconnectMacsecConfigPreSharedKey extends \Google\Model
     return $this->cak;
   }
   /**
-   * @param string
+   * An auto-generated Connectivity Association Key Name (CKN) for this key.
+   *
+   * @param string $ckn
    */
   public function setCkn($ckn)
   {
@@ -65,7 +77,9 @@ class InterconnectMacsecConfigPreSharedKey extends \Google\Model
     return $this->ckn;
   }
   /**
-   * @param string
+   * User provided name for this pre-shared key.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -79,7 +93,9 @@ class InterconnectMacsecConfigPreSharedKey extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * User provided timestamp on or after which this key is valid.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {

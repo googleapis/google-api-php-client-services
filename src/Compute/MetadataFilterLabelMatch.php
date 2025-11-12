@@ -20,16 +20,30 @@ namespace Google\Service\Compute;
 class MetadataFilterLabelMatch extends \Google\Model
 {
   /**
+   * Name of metadata label.
+   *
+   *  The name can have a maximum length of 1024 characters and must be at least
+   * 1 character long.
+   *
    * @var string
    */
   public $name;
   /**
+   * The value of the label must match the specified value.
+   *
+   * value can have a maximum length of 1024 characters.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Name of metadata label.
+   *
+   *  The name can have a maximum length of 1024 characters and must be at least
+   * 1 character long.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +57,11 @@ class MetadataFilterLabelMatch extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * The value of the label must match the specified value.
+   *
+   * value can have a maximum length of 1024 characters.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

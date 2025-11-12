@@ -24,7 +24,10 @@ class ManagedInstanceLastAttemptErrors extends \Google\Collection
   protected $errorsDataType = 'array';
 
   /**
-   * @param ManagedInstanceLastAttemptErrorsErrors[]
+   * [Output Only] The array of errors encountered while processing this
+   * operation.
+   *
+   * @param ManagedInstanceLastAttemptErrorsErrors[] $errors
    */
   public function setErrors($errors)
   {

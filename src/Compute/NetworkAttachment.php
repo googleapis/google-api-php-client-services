@@ -19,6 +19,9 @@ namespace Google\Service\Compute;
 
 class NetworkAttachment extends \Google\Collection
 {
+  public const CONNECTION_PREFERENCE_ACCEPT_AUTOMATIC = 'ACCEPT_AUTOMATIC';
+  public const CONNECTION_PREFERENCE_ACCEPT_MANUAL = 'ACCEPT_MANUAL';
+  public const CONNECTION_PREFERENCE_INVALID = 'INVALID';
   protected $collection_key = 'subnetworks';
   protected $connectionEndpointsType = NetworkAttachmentConnectedEndpoint::class;
   protected $connectionEndpointsDataType = 'array';
@@ -27,60 +30,110 @@ class NetworkAttachment extends \Google\Collection
    */
   public $connectionPreference;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Fingerprint of this resource. A hash of the contents stored in this object.
+   * This field is used in optimistic locking. An up-to-date fingerprint must be
+   * provided in order to patch.
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * [Output Only] The unique identifier for the resource type. The server
+   * generates this identifier.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] The URL of the network which the Network Attachment belongs
+   * to. Practically it is inferred by fetching the network of the first
+   * subnetwork associated. Because it is required that all the subnetworks must
+   * be from the same network, it is assured that the Network Attachment belongs
+   * to the same network as all the subnetworks.
+   *
    * @var string
    */
   public $network;
   /**
+   * Projects that are allowed to connect to this network attachment. The
+   * project can be specified using its id or number.
+   *
    * @var string[]
    */
   public $producerAcceptLists;
   /**
+   * Projects that are not allowed to connect to this network attachment. The
+   * project can be specified using its id or number.
+   *
    * @var string[]
    */
   public $producerRejectLists;
   /**
+   * [Output Only] URL of the region where the network attachment resides. This
+   * field applies only to the region resource. You must specify this field as
+   * part of the HTTP request URL. It is not settable as a field in the request
+   * body.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] Server-defined URL for this resource's resource id.
+   *
    * @var string
    */
   public $selfLinkWithId;
   /**
+   * An array of URLs where each entry is the URL of a subnet provided by the
+   * service consumer to use for endpoints in the producers that connect to this
+   * network attachment.
+   *
    * @var string[]
    */
   public $subnetworks;
 
   /**
-   * @param NetworkAttachmentConnectedEndpoint[]
+   * [Output Only] An array of connections for all the producers connected to
+   * this network attachment.
+   *
+   * @param NetworkAttachmentConnectedEndpoint[] $connectionEndpoints
    */
   public function setConnectionEndpoints($connectionEndpoints)
   {
@@ -94,21 +147,23 @@ class NetworkAttachment extends \Google\Collection
     return $this->connectionEndpoints;
   }
   /**
-   * @param string
+   * @param self::CONNECTION_PREFERENCE_* $connectionPreference
    */
   public function setConnectionPreference($connectionPreference)
   {
     $this->connectionPreference = $connectionPreference;
   }
   /**
-   * @return string
+   * @return self::CONNECTION_PREFERENCE_*
    */
   public function getConnectionPreference()
   {
     return $this->connectionPreference;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -122,7 +177,10 @@ class NetworkAttachment extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -136,7 +194,11 @@ class NetworkAttachment extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * Fingerprint of this resource. A hash of the contents stored in this object.
+   * This field is used in optimistic locking. An up-to-date fingerprint must be
+   * provided in order to patch.
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -150,7 +212,10 @@ class NetworkAttachment extends \Google\Collection
     return $this->fingerprint;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource type. The server
+   * generates this identifier.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -164,7 +229,9 @@ class NetworkAttachment extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -178,7 +245,15 @@ class NetworkAttachment extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource. Provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -192,7 +267,13 @@ class NetworkAttachment extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] The URL of the network which the Network Attachment belongs
+   * to. Practically it is inferred by fetching the network of the first
+   * subnetwork associated. Because it is required that all the subnetworks must
+   * be from the same network, it is assured that the Network Attachment belongs
+   * to the same network as all the subnetworks.
+   *
+   * @param string $network
    */
   public function setNetwork($network)
   {
@@ -206,7 +287,10 @@ class NetworkAttachment extends \Google\Collection
     return $this->network;
   }
   /**
-   * @param string[]
+   * Projects that are allowed to connect to this network attachment. The
+   * project can be specified using its id or number.
+   *
+   * @param string[] $producerAcceptLists
    */
   public function setProducerAcceptLists($producerAcceptLists)
   {
@@ -220,7 +304,10 @@ class NetworkAttachment extends \Google\Collection
     return $this->producerAcceptLists;
   }
   /**
-   * @param string[]
+   * Projects that are not allowed to connect to this network attachment. The
+   * project can be specified using its id or number.
+   *
+   * @param string[] $producerRejectLists
    */
   public function setProducerRejectLists($producerRejectLists)
   {
@@ -234,7 +321,12 @@ class NetworkAttachment extends \Google\Collection
     return $this->producerRejectLists;
   }
   /**
-   * @param string
+   * [Output Only] URL of the region where the network attachment resides. This
+   * field applies only to the region resource. You must specify this field as
+   * part of the HTTP request URL. It is not settable as a field in the request
+   * body.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -248,7 +340,9 @@ class NetworkAttachment extends \Google\Collection
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -262,7 +356,9 @@ class NetworkAttachment extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource's resource id.
+   *
+   * @param string $selfLinkWithId
    */
   public function setSelfLinkWithId($selfLinkWithId)
   {
@@ -276,7 +372,11 @@ class NetworkAttachment extends \Google\Collection
     return $this->selfLinkWithId;
   }
   /**
-   * @param string[]
+   * An array of URLs where each entry is the URL of a subnet provided by the
+   * service consumer to use for endpoints in the producers that connect to this
+   * network attachment.
+   *
+   * @param string[] $subnetworks
    */
   public function setSubnetworks($subnetworks)
   {

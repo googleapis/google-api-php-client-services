@@ -19,70 +19,120 @@ namespace Google\Service\Compute;
 
 class MachineType extends \Google\Collection
 {
+  /**
+   * Default value indicating Architecture is not set.
+   */
+  public const ARCHITECTURE_ARCHITECTURE_UNSPECIFIED = 'ARCHITECTURE_UNSPECIFIED';
+  /**
+   * Machines with architecture ARM64
+   */
+  public const ARCHITECTURE_ARM64 = 'ARM64';
+  /**
+   * Machines with architecture X86_64
+   */
+  public const ARCHITECTURE_X86_64 = 'X86_64';
   protected $collection_key = 'accelerators';
   protected $acceleratorsType = MachineTypeAccelerators::class;
   protected $acceleratorsDataType = 'array';
   /**
+   * [Output Only] The architecture of the machine type.
+   *
    * @var string
    */
   public $architecture;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   protected $deprecatedType = DeprecationStatus::class;
   protected $deprecatedDataType = '';
   /**
+   * [Output Only] An optional textual description of the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The number of virtual CPUs that are available to the
+   * instance.
+   *
    * @var int
    */
   public $guestCpus;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Deprecated] This property is deprecated and will never be populated with
+   * any relevant values.
+   *
    * @var int
    */
   public $imageSpaceGb;
   /**
+   * [Output Only] Whether this machine type has a shared CPU. SeeShared-core
+   * machine types for more information.
+   *
    * @var bool
    */
   public $isSharedCpu;
   /**
+   * [Output Only] The type of the resource. Alwayscompute#machineType for
+   * machine types.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] Maximum persistent disks allowed.
+   *
    * @var int
    */
   public $maximumPersistentDisks;
   /**
+   * [Output Only] Maximum total persistent disks size (GB) allowed.
+   *
    * @var string
    */
   public $maximumPersistentDisksSizeGb;
   /**
+   * [Output Only] The amount of physical memory available to the instance,
+   * defined in MB.
+   *
    * @var int
    */
   public $memoryMb;
   /**
+   * [Output Only] Name of the resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] The name of the zone where the machine type resides, such as
+   * us-central1-a.
+   *
    * @var string
    */
   public $zone;
 
   /**
-   * @param MachineTypeAccelerators[]
+   * [Output Only] A list of accelerator configurations assigned to this machine
+   * type.
+   *
+   * @param MachineTypeAccelerators[] $accelerators
    */
   public function setAccelerators($accelerators)
   {
@@ -96,21 +146,27 @@ class MachineType extends \Google\Collection
     return $this->accelerators;
   }
   /**
-   * @param string
+   * [Output Only] The architecture of the machine type.
+   *
+   * Accepted values: ARCHITECTURE_UNSPECIFIED, ARM64, X86_64
+   *
+   * @param self::ARCHITECTURE_* $architecture
    */
   public function setArchitecture($architecture)
   {
     $this->architecture = $architecture;
   }
   /**
-   * @return string
+   * @return self::ARCHITECTURE_*
    */
   public function getArchitecture()
   {
     return $this->architecture;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -124,7 +180,10 @@ class MachineType extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param DeprecationStatus
+   * [Output Only] The deprecation status associated with this machine type.
+   * Only applicable if the machine type is unavailable.
+   *
+   * @param DeprecationStatus $deprecated
    */
   public function setDeprecated(DeprecationStatus $deprecated)
   {
@@ -138,7 +197,9 @@ class MachineType extends \Google\Collection
     return $this->deprecated;
   }
   /**
-   * @param string
+   * [Output Only] An optional textual description of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -152,7 +213,10 @@ class MachineType extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param int
+   * [Output Only] The number of virtual CPUs that are available to the
+   * instance.
+   *
+   * @param int $guestCpus
    */
   public function setGuestCpus($guestCpus)
   {
@@ -166,7 +230,10 @@ class MachineType extends \Google\Collection
     return $this->guestCpus;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -180,7 +247,10 @@ class MachineType extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param int
+   * [Deprecated] This property is deprecated and will never be populated with
+   * any relevant values.
+   *
+   * @param int $imageSpaceGb
    */
   public function setImageSpaceGb($imageSpaceGb)
   {
@@ -194,7 +264,10 @@ class MachineType extends \Google\Collection
     return $this->imageSpaceGb;
   }
   /**
-   * @param bool
+   * [Output Only] Whether this machine type has a shared CPU. SeeShared-core
+   * machine types for more information.
+   *
+   * @param bool $isSharedCpu
    */
   public function setIsSharedCpu($isSharedCpu)
   {
@@ -208,7 +281,10 @@ class MachineType extends \Google\Collection
     return $this->isSharedCpu;
   }
   /**
-   * @param string
+   * [Output Only] The type of the resource. Alwayscompute#machineType for
+   * machine types.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -222,7 +298,9 @@ class MachineType extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param int
+   * [Output Only] Maximum persistent disks allowed.
+   *
+   * @param int $maximumPersistentDisks
    */
   public function setMaximumPersistentDisks($maximumPersistentDisks)
   {
@@ -236,7 +314,9 @@ class MachineType extends \Google\Collection
     return $this->maximumPersistentDisks;
   }
   /**
-   * @param string
+   * [Output Only] Maximum total persistent disks size (GB) allowed.
+   *
+   * @param string $maximumPersistentDisksSizeGb
    */
   public function setMaximumPersistentDisksSizeGb($maximumPersistentDisksSizeGb)
   {
@@ -250,7 +330,10 @@ class MachineType extends \Google\Collection
     return $this->maximumPersistentDisksSizeGb;
   }
   /**
-   * @param int
+   * [Output Only] The amount of physical memory available to the instance,
+   * defined in MB.
+   *
+   * @param int $memoryMb
    */
   public function setMemoryMb($memoryMb)
   {
@@ -264,7 +347,9 @@ class MachineType extends \Google\Collection
     return $this->memoryMb;
   }
   /**
-   * @param string
+   * [Output Only] Name of the resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -278,7 +363,9 @@ class MachineType extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -292,7 +379,10 @@ class MachineType extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string
+   * [Output Only] The name of the zone where the machine type resides, such as
+   * us-central1-a.
+   *
+   * @param string $zone
    */
   public function setZone($zone)
   {

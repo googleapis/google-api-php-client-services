@@ -21,20 +21,34 @@ class InterconnectRemoteLocationList extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   *
    * @var string
    */
   public $id;
   protected $itemsType = InterconnectRemoteLocation::class;
   protected $itemsDataType = 'array';
   /**
+   * [Output Only] Type of resource.
+   * Alwayscompute#interconnectRemoteLocationList for lists of interconnect
+   * remote locations.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] This token lets you get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * [Output Only] Server-defined URL for this resource.
+   *
    * @var string
    */
   public $selfLink;
@@ -42,7 +56,9 @@ class InterconnectRemoteLocationList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param string
+   * [Output Only] Unique identifier for the resource; defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -56,7 +72,9 @@ class InterconnectRemoteLocationList extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param InterconnectRemoteLocation[]
+   * A list of InterconnectRemoteLocation resources.
+   *
+   * @param InterconnectRemoteLocation[] $items
    */
   public function setItems($items)
   {
@@ -70,7 +88,11 @@ class InterconnectRemoteLocationList extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * [Output Only] Type of resource.
+   * Alwayscompute#interconnectRemoteLocationList for lists of interconnect
+   * remote locations.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -84,7 +106,13 @@ class InterconnectRemoteLocationList extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] This token lets you get the next page of results for list
+   * requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -98,7 +126,9 @@ class InterconnectRemoteLocationList extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for this resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -112,7 +142,9 @@ class InterconnectRemoteLocationList extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param InterconnectRemoteLocationListWarning
+   * [Output Only] Informational warning message.
+   *
+   * @param InterconnectRemoteLocationListWarning $warning
    */
   public function setWarning(InterconnectRemoteLocationListWarning $warning)
   {

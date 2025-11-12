@@ -26,7 +26,9 @@ class MachineTypesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param MachineType[]
+   * [Output Only] A list of machine types contained in this scope.
+   *
+   * @param MachineType[] $machineTypes
    */
   public function setMachineTypes($machineTypes)
   {
@@ -40,7 +42,10 @@ class MachineTypesScopedList extends \Google\Collection
     return $this->machineTypes;
   }
   /**
-   * @param MachineTypesScopedListWarning
+   * [Output Only] An informational warning that appears when the machine types
+   * list is empty.
+   *
+   * @param MachineTypesScopedListWarning $warning
    */
   public function setWarning(MachineTypesScopedListWarning $warning)
   {

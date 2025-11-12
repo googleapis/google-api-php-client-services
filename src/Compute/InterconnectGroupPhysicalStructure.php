@@ -24,7 +24,7 @@ class InterconnectGroupPhysicalStructure extends \Google\Collection
   protected $metrosDataType = 'array';
 
   /**
-   * @param InterconnectGroupPhysicalStructureMetros[]
+   * @param InterconnectGroupPhysicalStructureMetros[] $metros
    */
   public function setMetros($metros)
   {

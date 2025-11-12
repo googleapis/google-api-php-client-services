@@ -26,7 +26,9 @@ class NetworkEdgeSecurityServicesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param NetworkEdgeSecurityService[]
+   * A list of NetworkEdgeSecurityServices contained in this scope.
+   *
+   * @param NetworkEdgeSecurityService[] $networkEdgeSecurityServices
    */
   public function setNetworkEdgeSecurityServices($networkEdgeSecurityServices)
   {
@@ -40,7 +42,10 @@ class NetworkEdgeSecurityServicesScopedList extends \Google\Collection
     return $this->networkEdgeSecurityServices;
   }
   /**
-   * @param NetworkEdgeSecurityServicesScopedListWarning
+   * Informational warning which replaces the list of security policies when the
+   * list is empty.
+   *
+   * @param NetworkEdgeSecurityServicesScopedListWarning $warning
    */
   public function setWarning(NetworkEdgeSecurityServicesScopedListWarning $warning)
   {

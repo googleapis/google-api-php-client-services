@@ -19,28 +19,173 @@ namespace Google\Service\Compute;
 
 class ManagedInstance extends \Google\Collection
 {
+  /**
+   * The managed instance group is abandoning this instance. The instance will
+   * be removed from the instance group and from any target pools that are
+   * associated with this group.
+   */
+  public const CURRENT_ACTION_ABANDONING = 'ABANDONING';
+  /**
+   * The managed instance group is creating this instance. If the group fails to
+   * create this instance, it will try again until it is successful.
+   */
+  public const CURRENT_ACTION_CREATING = 'CREATING';
+  /**
+   * The managed instance group is attempting to create this instance only once.
+   * If the group fails to create this instance, it does not try again and the
+   * group's targetSize value is decreased.
+   */
+  public const CURRENT_ACTION_CREATING_WITHOUT_RETRIES = 'CREATING_WITHOUT_RETRIES';
+  /**
+   * The managed instance group is permanently deleting this instance.
+   */
+  public const CURRENT_ACTION_DELETING = 'DELETING';
+  /**
+   * The managed instance group has not scheduled any actions for this instance.
+   */
+  public const CURRENT_ACTION_NONE = 'NONE';
+  /**
+   * The managed instance group is recreating this instance.
+   */
+  public const CURRENT_ACTION_RECREATING = 'RECREATING';
+  /**
+   * The managed instance group is applying configuration changes to the
+   * instance without stopping it. For example, the group can update the target
+   * pool list for an instance without stopping that instance.
+   */
+  public const CURRENT_ACTION_REFRESHING = 'REFRESHING';
+  /**
+   * The managed instance group is restarting this instance.
+   */
+  public const CURRENT_ACTION_RESTARTING = 'RESTARTING';
+  /**
+   * The managed instance group is resuming this instance.
+   */
+  public const CURRENT_ACTION_RESUMING = 'RESUMING';
+  /**
+   * The managed instance group is starting this instance.
+   */
+  public const CURRENT_ACTION_STARTING = 'STARTING';
+  /**
+   * The managed instance group is stopping this instance.
+   */
+  public const CURRENT_ACTION_STOPPING = 'STOPPING';
+  /**
+   * The managed instance group is suspending this instance.
+   */
+  public const CURRENT_ACTION_SUSPENDING = 'SUSPENDING';
+  /**
+   * The managed instance group is verifying this already created instance.
+   * Verification happens every time the instance is (re)created or restarted
+   * and consists of:  1. Waiting until health check specified as part of this
+   * managed instance     group's autohealing policy reports HEALTHY.     Note:
+   * Applies only if autohealing policy has a health check specified  2. Waiting
+   * for addition verification steps performed as post-instance     creation
+   * (subject to future extensions).
+   */
+  public const CURRENT_ACTION_VERIFYING = 'VERIFYING';
+  /**
+   * The instance is halted and we are performing tear down tasks like network
+   * deprogramming, releasing quota, IP, tearing down disks etc.
+   */
+  public const INSTANCE_STATUS_DEPROVISIONING = 'DEPROVISIONING';
+  /**
+   * For Flex Start provisioning instance is waiting for available capacity from
+   * Dynamic Workload Scheduler (DWS).
+   */
+  public const INSTANCE_STATUS_PENDING = 'PENDING';
+  /**
+   * Resources are being allocated for the instance.
+   */
+  public const INSTANCE_STATUS_PROVISIONING = 'PROVISIONING';
+  /**
+   * The instance is in repair.
+   */
+  public const INSTANCE_STATUS_REPAIRING = 'REPAIRING';
+  /**
+   * The instance is running.
+   */
+  public const INSTANCE_STATUS_RUNNING = 'RUNNING';
+  /**
+   * All required resources have been allocated and the instance is being
+   * started.
+   */
+  public const INSTANCE_STATUS_STAGING = 'STAGING';
+  /**
+   * The instance has stopped successfully.
+   */
+  public const INSTANCE_STATUS_STOPPED = 'STOPPED';
+  /**
+   * The instance is currently stopping (either being deleted or killed).
+   */
+  public const INSTANCE_STATUS_STOPPING = 'STOPPING';
+  /**
+   * The instance has suspended.
+   */
+  public const INSTANCE_STATUS_SUSPENDED = 'SUSPENDED';
+  /**
+   * The instance is suspending.
+   */
+  public const INSTANCE_STATUS_SUSPENDING = 'SUSPENDING';
+  /**
+   * The instance has stopped (either by explicit action or underlying failure).
+   */
+  public const INSTANCE_STATUS_TERMINATED = 'TERMINATED';
   protected $collection_key = 'instanceHealth';
   /**
+   * [Output Only] The current action that the managed instance group has
+   * scheduled for the instance. Possible values:        - NONE The instance is
+   * running, and the managed    instance group does not have any scheduled
+   * actions for this instance.    - CREATING The managed instance group is
+   * creating this    instance. If the group fails to create this instance, it
+   * will try again    until it is successful.    - CREATING_WITHOUT_RETRIES The
+   * managed instance group    is attempting to create this instance only once.
+   * If the group fails    to create this instance, it does not try again and
+   * the group'stargetSize value is decreased instead.    - RECREATING The
+   * managed instance group is recreating    this instance.    - DELETING The
+   * managed instance group is permanently    deleting this instance.    -
+   * ABANDONING The managed instance group is abandoning    this instance. The
+   * instance will be removed from the instance group    and from any target
+   * pools that are associated with this group.    - RESTARTING The managed
+   * instance group is restarting    the instance.    - REFRESHING The managed
+   * instance group is applying    configuration changes to the instance without
+   * stopping it. For example,    the group can update the target pool list for
+   * an instance without    stopping that instance.    - VERIFYING The managed
+   * instance group has created the    instance and it is in the process of
+   * being verified.
+   *
    * @var string
    */
   public $currentAction;
   /**
+   * [Output only] The unique identifier for this resource. This field is empty
+   * when instance does not exist.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] The URL of the instance. The URL can exist even if the
+   * instance has not yet been created.
+   *
    * @var string
    */
   public $instance;
   protected $instanceHealthType = ManagedInstanceInstanceHealth::class;
   protected $instanceHealthDataType = 'array';
   /**
+   * [Output Only] The status of the instance. This field is empty when the
+   * instance does not exist.
+   *
    * @var string
    */
   public $instanceStatus;
   protected $lastAttemptType = ManagedInstanceLastAttempt::class;
   protected $lastAttemptDataType = '';
   /**
+   * [Output Only] The name of the instance. The name always exists even if the
+   * instance has not yet been created.
+   *
    * @var string
    */
   public $name;
@@ -54,21 +199,49 @@ class ManagedInstance extends \Google\Collection
   protected $versionDataType = '';
 
   /**
-   * @param string
+   * [Output Only] The current action that the managed instance group has
+   * scheduled for the instance. Possible values:        - NONE The instance is
+   * running, and the managed    instance group does not have any scheduled
+   * actions for this instance.    - CREATING The managed instance group is
+   * creating this    instance. If the group fails to create this instance, it
+   * will try again    until it is successful.    - CREATING_WITHOUT_RETRIES The
+   * managed instance group    is attempting to create this instance only once.
+   * If the group fails    to create this instance, it does not try again and
+   * the group'stargetSize value is decreased instead.    - RECREATING The
+   * managed instance group is recreating    this instance.    - DELETING The
+   * managed instance group is permanently    deleting this instance.    -
+   * ABANDONING The managed instance group is abandoning    this instance. The
+   * instance will be removed from the instance group    and from any target
+   * pools that are associated with this group.    - RESTARTING The managed
+   * instance group is restarting    the instance.    - REFRESHING The managed
+   * instance group is applying    configuration changes to the instance without
+   * stopping it. For example,    the group can update the target pool list for
+   * an instance without    stopping that instance.    - VERIFYING The managed
+   * instance group has created the    instance and it is in the process of
+   * being verified.
+   *
+   * Accepted values: ABANDONING, CREATING, CREATING_WITHOUT_RETRIES, DELETING,
+   * NONE, RECREATING, REFRESHING, RESTARTING, RESUMING, STARTING, STOPPING,
+   * SUSPENDING, VERIFYING
+   *
+   * @param self::CURRENT_ACTION_* $currentAction
    */
   public function setCurrentAction($currentAction)
   {
     $this->currentAction = $currentAction;
   }
   /**
-   * @return string
+   * @return self::CURRENT_ACTION_*
    */
   public function getCurrentAction()
   {
     return $this->currentAction;
   }
   /**
-   * @param string
+   * [Output only] The unique identifier for this resource. This field is empty
+   * when instance does not exist.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -82,7 +255,10 @@ class ManagedInstance extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] The URL of the instance. The URL can exist even if the
+   * instance has not yet been created.
+   *
+   * @param string $instance
    */
   public function setInstance($instance)
   {
@@ -96,7 +272,9 @@ class ManagedInstance extends \Google\Collection
     return $this->instance;
   }
   /**
-   * @param ManagedInstanceInstanceHealth[]
+   * [Output Only] Health state of the instance per health-check.
+   *
+   * @param ManagedInstanceInstanceHealth[] $instanceHealth
    */
   public function setInstanceHealth($instanceHealth)
   {
@@ -110,21 +288,30 @@ class ManagedInstance extends \Google\Collection
     return $this->instanceHealth;
   }
   /**
-   * @param string
+   * [Output Only] The status of the instance. This field is empty when the
+   * instance does not exist.
+   *
+   * Accepted values: DEPROVISIONING, PENDING, PROVISIONING, REPAIRING, RUNNING,
+   * STAGING, STOPPED, STOPPING, SUSPENDED, SUSPENDING, TERMINATED
+   *
+   * @param self::INSTANCE_STATUS_* $instanceStatus
    */
   public function setInstanceStatus($instanceStatus)
   {
     $this->instanceStatus = $instanceStatus;
   }
   /**
-   * @return string
+   * @return self::INSTANCE_STATUS_*
    */
   public function getInstanceStatus()
   {
     return $this->instanceStatus;
   }
   /**
-   * @param ManagedInstanceLastAttempt
+   * [Output Only] Information about the last attempt to create or delete the
+   * instance.
+   *
+   * @param ManagedInstanceLastAttempt $lastAttempt
    */
   public function setLastAttempt(ManagedInstanceLastAttempt $lastAttempt)
   {
@@ -138,7 +325,10 @@ class ManagedInstance extends \Google\Collection
     return $this->lastAttempt;
   }
   /**
-   * @param string
+   * [Output Only] The name of the instance. The name always exists even if the
+   * instance has not yet been created.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -152,7 +342,10 @@ class ManagedInstance extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param PreservedState
+   * [Output Only] Preserved state applied from per-instance config for this
+   * instance.
+   *
+   * @param PreservedState $preservedStateFromConfig
    */
   public function setPreservedStateFromConfig(PreservedState $preservedStateFromConfig)
   {
@@ -166,7 +359,10 @@ class ManagedInstance extends \Google\Collection
     return $this->preservedStateFromConfig;
   }
   /**
-   * @param PreservedState
+   * [Output Only] Preserved state generated based on stateful policy for this
+   * instance.
+   *
+   * @param PreservedState $preservedStateFromPolicy
    */
   public function setPreservedStateFromPolicy(PreservedState $preservedStateFromPolicy)
   {
@@ -180,7 +376,10 @@ class ManagedInstance extends \Google\Collection
     return $this->preservedStateFromPolicy;
   }
   /**
-   * @param ManagedInstancePropertiesFromFlexibilityPolicy
+   * [Output Only] Instance properties selected for this instance resulting from
+   * InstanceFlexibilityPolicy.
+   *
+   * @param ManagedInstancePropertiesFromFlexibilityPolicy $propertiesFromFlexibilityPolicy
    */
   public function setPropertiesFromFlexibilityPolicy(ManagedInstancePropertiesFromFlexibilityPolicy $propertiesFromFlexibilityPolicy)
   {
@@ -194,7 +393,9 @@ class ManagedInstance extends \Google\Collection
     return $this->propertiesFromFlexibilityPolicy;
   }
   /**
-   * @param ManagedInstanceVersion
+   * [Output Only] Intended version of this instance.
+   *
+   * @param ManagedInstanceVersion $version
    */
   public function setVersion(ManagedInstanceVersion $version)
   {

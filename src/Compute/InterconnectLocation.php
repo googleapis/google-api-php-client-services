@@ -19,86 +19,165 @@ namespace Google\Service\Compute;
 
 class InterconnectLocation extends \Google\Collection
 {
+  public const CONTINENT_AFRICA = 'AFRICA';
+  public const CONTINENT_ASIA_PAC = 'ASIA_PAC';
+  public const CONTINENT_C_AFRICA = 'C_AFRICA';
+  public const CONTINENT_C_ASIA_PAC = 'C_ASIA_PAC';
+  public const CONTINENT_C_EUROPE = 'C_EUROPE';
+  public const CONTINENT_C_NORTH_AMERICA = 'C_NORTH_AMERICA';
+  public const CONTINENT_C_SOUTH_AMERICA = 'C_SOUTH_AMERICA';
+  public const CONTINENT_EUROPE = 'EUROPE';
+  public const CONTINENT_NORTH_AMERICA = 'NORTH_AMERICA';
+  public const CONTINENT_SOUTH_AMERICA = 'SOUTH_AMERICA';
+  /**
+   * The InterconnectLocation is available for provisioning new Interconnects.
+   */
+  public const STATUS_AVAILABLE = 'AVAILABLE';
+  /**
+   * The InterconnectLocation is closed for provisioning new Interconnects.
+   */
+  public const STATUS_CLOSED = 'CLOSED';
   protected $collection_key = 'singleRegionProductionCriticalPeerLocations';
   /**
+   * [Output Only] The postal address of the Point of Presence, each line in the
+   * address is separated by a newline character.
+   *
    * @var string
    */
   public $address;
   /**
+   * [Output Only] Availability zone for this InterconnectLocation. Within a
+   * metropolitan area (metro), maintenance will not be simultaneously scheduled
+   * in more than one availability zone.  Example: "zone1" or "zone2".
+   *
    * @var string
    */
   public $availabilityZone;
   /**
+   * [Output only] List of features available at this InterconnectLocation,
+   * which can take one of the following values:        - IF_MACSEC    -
+   * IF_CROSS_SITE_NETWORK
+   *
    * @var string[]
    */
   public $availableFeatures;
   /**
+   * [Output only] List of link types available at this InterconnectLocation,
+   * which can take one of the following values:        -
+   * LINK_TYPE_ETHERNET_10G_LR    - LINK_TYPE_ETHERNET_100G_LR    -
+   * LINK_TYPE_ETHERNET_400G_LR4
+   *
    * @var string[]
    */
   public $availableLinkTypes;
   /**
+   * [Output Only] Metropolitan area designator that indicates which city an
+   * interconnect is located. For example: "Chicago, IL", "Amsterdam,
+   * Netherlands".
+   *
    * @var string
    */
   public $city;
   /**
+   * [Output Only] Continent for this location, which can take one of the
+   * following values:        - AFRICA    - ASIA_PAC    - EUROPE    -
+   * NORTH_AMERICA    - SOUTH_AMERICA
+   *
    * @var string
    */
   public $continent;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   protected $crossSiteInterconnectInfosType = InterconnectLocationCrossSiteInterconnectInfo::class;
   protected $crossSiteInterconnectInfosDataType = 'array';
   /**
+   * [Output Only] An optional description of the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   *
    * @var string
    */
   public $facilityProvider;
   /**
+   * [Output Only] A provider-assigned Identifier for this facility (e.g.,
+   * Ashburn-DC1).
+   *
    * @var string
    */
   public $facilityProviderFacilityId;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
+   * interconnect locations.
+   *
    * @var string
    */
   public $kind;
   /**
+   * [Output Only] Name of the resource.
+   *
    * @var string
    */
   public $name;
   /**
+   * [Output Only] The peeringdb identifier for this facility (corresponding
+   * with a netfac type in peeringdb).
+   *
    * @var string
    */
   public $peeringdbFacilityId;
   protected $regionInfosType = InterconnectLocationRegionInfo::class;
   protected $regionInfosDataType = 'array';
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * [Output Only] URLs of the other locations that can pair up with this
+   * location to support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-
+   * zone2-5467 are Single-Region 99.99% peer locations of each other.
+   *
    * @var string[]
    */
   public $singleRegionProductionCriticalPeerLocations;
   /**
+   * [Output Only] The status of this InterconnectLocation, which can take one
+   * of the following values:        - CLOSED: The InterconnectLocation is
+   * closed and is unavailable for    provisioning new Interconnects.    -
+   * AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects.
+   *
    * @var string
    */
   public $status;
   /**
+   * [Output Only] Reserved for future use.
+   *
    * @var bool
    */
   public $supportsPzs;
 
   /**
-   * @param string
+   * [Output Only] The postal address of the Point of Presence, each line in the
+   * address is separated by a newline character.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -112,7 +191,11 @@ class InterconnectLocation extends \Google\Collection
     return $this->address;
   }
   /**
-   * @param string
+   * [Output Only] Availability zone for this InterconnectLocation. Within a
+   * metropolitan area (metro), maintenance will not be simultaneously scheduled
+   * in more than one availability zone.  Example: "zone1" or "zone2".
+   *
+   * @param string $availabilityZone
    */
   public function setAvailabilityZone($availabilityZone)
   {
@@ -126,7 +209,11 @@ class InterconnectLocation extends \Google\Collection
     return $this->availabilityZone;
   }
   /**
-   * @param string[]
+   * [Output only] List of features available at this InterconnectLocation,
+   * which can take one of the following values:        - IF_MACSEC    -
+   * IF_CROSS_SITE_NETWORK
+   *
+   * @param string[] $availableFeatures
    */
   public function setAvailableFeatures($availableFeatures)
   {
@@ -140,7 +227,12 @@ class InterconnectLocation extends \Google\Collection
     return $this->availableFeatures;
   }
   /**
-   * @param string[]
+   * [Output only] List of link types available at this InterconnectLocation,
+   * which can take one of the following values:        -
+   * LINK_TYPE_ETHERNET_10G_LR    - LINK_TYPE_ETHERNET_100G_LR    -
+   * LINK_TYPE_ETHERNET_400G_LR4
+   *
+   * @param string[] $availableLinkTypes
    */
   public function setAvailableLinkTypes($availableLinkTypes)
   {
@@ -154,7 +246,11 @@ class InterconnectLocation extends \Google\Collection
     return $this->availableLinkTypes;
   }
   /**
-   * @param string
+   * [Output Only] Metropolitan area designator that indicates which city an
+   * interconnect is located. For example: "Chicago, IL", "Amsterdam,
+   * Netherlands".
+   *
+   * @param string $city
    */
   public function setCity($city)
   {
@@ -168,21 +264,30 @@ class InterconnectLocation extends \Google\Collection
     return $this->city;
   }
   /**
-   * @param string
+   * [Output Only] Continent for this location, which can take one of the
+   * following values:        - AFRICA    - ASIA_PAC    - EUROPE    -
+   * NORTH_AMERICA    - SOUTH_AMERICA
+   *
+   * Accepted values: AFRICA, ASIA_PAC, C_AFRICA, C_ASIA_PAC, C_EUROPE,
+   * C_NORTH_AMERICA, C_SOUTH_AMERICA, EUROPE, NORTH_AMERICA, SOUTH_AMERICA
+   *
+   * @param self::CONTINENT_* $continent
    */
   public function setContinent($continent)
   {
     $this->continent = $continent;
   }
   /**
-   * @return string
+   * @return self::CONTINENT_*
    */
   public function getContinent()
   {
     return $this->continent;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -196,7 +301,12 @@ class InterconnectLocation extends \Google\Collection
     return $this->creationTimestamp;
   }
   /**
-   * @param InterconnectLocationCrossSiteInterconnectInfo[]
+   * [Output Only] A list of InterconnectLocation.CrossSiteInterconnectInfo
+   * objects, that describe where Cross-Site Interconnect wires may connect to
+   * from this location and associated connection parameters. Cross-Site
+   * Interconnect isn't allowed to locations which are not listed.
+   *
+   * @param InterconnectLocationCrossSiteInterconnectInfo[] $crossSiteInterconnectInfos
    */
   public function setCrossSiteInterconnectInfos($crossSiteInterconnectInfos)
   {
@@ -210,7 +320,9 @@ class InterconnectLocation extends \Google\Collection
     return $this->crossSiteInterconnectInfos;
   }
   /**
-   * @param string
+   * [Output Only] An optional description of the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -224,7 +336,9 @@ class InterconnectLocation extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] The name of the provider for this facility (e.g., EQUINIX).
+   *
+   * @param string $facilityProvider
    */
   public function setFacilityProvider($facilityProvider)
   {
@@ -238,7 +352,10 @@ class InterconnectLocation extends \Google\Collection
     return $this->facilityProvider;
   }
   /**
-   * @param string
+   * [Output Only] A provider-assigned Identifier for this facility (e.g.,
+   * Ashburn-DC1).
+   *
+   * @param string $facilityProviderFacilityId
    */
   public function setFacilityProviderFacilityId($facilityProviderFacilityId)
   {
@@ -252,7 +369,10 @@ class InterconnectLocation extends \Google\Collection
     return $this->facilityProviderFacilityId;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -266,7 +386,10 @@ class InterconnectLocation extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#interconnectLocation for
+   * interconnect locations.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -280,7 +403,9 @@ class InterconnectLocation extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * [Output Only] Name of the resource.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -294,7 +419,10 @@ class InterconnectLocation extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * [Output Only] The peeringdb identifier for this facility (corresponding
+   * with a netfac type in peeringdb).
+   *
+   * @param string $peeringdbFacilityId
    */
   public function setPeeringdbFacilityId($peeringdbFacilityId)
   {
@@ -308,7 +436,11 @@ class InterconnectLocation extends \Google\Collection
     return $this->peeringdbFacilityId;
   }
   /**
-   * @param InterconnectLocationRegionInfo[]
+   * [Output Only] A list of InterconnectLocation.RegionInfo objects, that
+   * describe parameters pertaining to the relation between this
+   * InterconnectLocation and various Google Cloud regions.
+   *
+   * @param InterconnectLocationRegionInfo[] $regionInfos
    */
   public function setRegionInfos($regionInfos)
   {
@@ -322,7 +454,9 @@ class InterconnectLocation extends \Google\Collection
     return $this->regionInfos;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -336,7 +470,11 @@ class InterconnectLocation extends \Google\Collection
     return $this->selfLink;
   }
   /**
-   * @param string[]
+   * [Output Only] URLs of the other locations that can pair up with this
+   * location to support Single-Region 99.99% SLA. E.g. iad-zone1-1 and iad-
+   * zone2-5467 are Single-Region 99.99% peer locations of each other.
+   *
+   * @param string[] $singleRegionProductionCriticalPeerLocations
    */
   public function setSingleRegionProductionCriticalPeerLocations($singleRegionProductionCriticalPeerLocations)
   {
@@ -350,21 +488,31 @@ class InterconnectLocation extends \Google\Collection
     return $this->singleRegionProductionCriticalPeerLocations;
   }
   /**
-   * @param string
+   * [Output Only] The status of this InterconnectLocation, which can take one
+   * of the following values:        - CLOSED: The InterconnectLocation is
+   * closed and is unavailable for    provisioning new Interconnects.    -
+   * AVAILABLE: The InterconnectLocation is available for provisioning new
+   * Interconnects.
+   *
+   * Accepted values: AVAILABLE, CLOSED
+   *
+   * @param self::STATUS_* $status
    */
   public function setStatus($status)
   {
     $this->status = $status;
   }
   /**
-   * @return string
+   * @return self::STATUS_*
    */
   public function getStatus()
   {
     return $this->status;
   }
   /**
-   * @param bool
+   * [Output Only] Reserved for future use.
+   *
+   * @param bool $supportsPzs
    */
   public function setSupportsPzs($supportsPzs)
   {

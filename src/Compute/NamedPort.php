@@ -20,16 +20,24 @@ namespace Google\Service\Compute;
 class NamedPort extends \Google\Model
 {
   /**
+   * The name for this named port. The name must be 1-63 characters long, and
+   * comply withRFC1035.
+   *
    * @var string
    */
   public $name;
   /**
+   * The port number, which can be a value between 1 and 65535.
+   *
    * @var int
    */
   public $port;
 
   /**
-   * @param string
+   * The name for this named port. The name must be 1-63 characters long, and
+   * comply withRFC1035.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,7 +51,9 @@ class NamedPort extends \Google\Model
     return $this->name;
   }
   /**
-   * @param int
+   * The port number, which can be a value between 1 and 65535.
+   *
+   * @param int $port
    */
   public function setPort($port)
   {
