@@ -19,28 +19,90 @@ namespace Google\Service\CCAIPlatform;
 
 class ContactCenter extends \Google\Collection
 {
+  /**
+   * The default value. This value is used if the state is omitted.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * State DEPLOYING
+   */
+  public const STATE_STATE_DEPLOYING = 'STATE_DEPLOYING';
+  /**
+   * State DEPLOYED
+   */
+  public const STATE_STATE_DEPLOYED = 'STATE_DEPLOYED';
+  /**
+   * State TERMINATING
+   */
+  public const STATE_STATE_TERMINATING = 'STATE_TERMINATING';
+  /**
+   * State FAILED
+   */
+  public const STATE_STATE_FAILED = 'STATE_FAILED';
+  /**
+   * State TERMINATING_FAILED
+   */
+  public const STATE_STATE_TERMINATING_FAILED = 'STATE_TERMINATING_FAILED';
+  /**
+   * State TERMINATED
+   */
+  public const STATE_STATE_TERMINATED = 'STATE_TERMINATED';
+  /**
+   * State IN_GRACE_PERIOD
+   */
+  public const STATE_STATE_IN_GRACE_PERIOD = 'STATE_IN_GRACE_PERIOD';
+  /**
+   * State in STATE_FAILING_OVER. This State must ONLY be used by Multiregional
+   * Instances when a failover was triggered. Customers are not able to update
+   * instances in this state.
+   */
+  public const STATE_STATE_FAILING_OVER = 'STATE_FAILING_OVER';
+  /**
+   * State DEGRADED. This State must ONLY be used by Multiregional Instances
+   * after a failover was executed successfully. Customers are not able to
+   * update instances in this state.
+   */
+  public const STATE_STATE_DEGRADED = 'STATE_DEGRADED';
+  /**
+   * State REPAIRING. This State must ONLY be used by Multiregional Instances
+   * after a fallback was triggered. Customers are not able to update instancs
+   * in this state.
+   */
+  public const STATE_STATE_REPAIRING = 'STATE_REPAIRING';
   protected $collection_key = 'privateComponents';
   protected $adminUserType = AdminUser::class;
   protected $adminUserDataType = '';
   /**
+   * Optional. Whether the advanced reporting feature is enabled.
+   *
    * @var bool
    */
   public $advancedReportingEnabled;
   /**
+   * Optional. Whether to enable users to be created in the CCAIP-instance
+   * concurrently to having users in Cloud identity
+   *
    * @var bool
    */
   public $ccaipManagedUsers;
   /**
+   * Output only. [Output only] Create time stamp
+   *
    * @var string
    */
   public $createTime;
   protected $criticalType = Critical::class;
   protected $criticalDataType = '';
   /**
+   * Required. Immutable. At least 2 and max 16 char long, must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt).
+   *
    * @var string
    */
   public $customerDomainPrefix;
   /**
+   * Required. A user friendly name for the ContactCenter.
+   *
    * @var string
    */
   public $displayName;
@@ -51,14 +113,20 @@ class ContactCenter extends \Google\Collection
   protected $instanceConfigType = InstanceConfig::class;
   protected $instanceConfigDataType = '';
   /**
+   * Immutable. The KMS key name to encrypt the user input (`ContactCenter`).
+   *
    * @var string
    */
   public $kmsKey;
   /**
+   * Labels as key value pairs
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * name of resource
+   *
    * @var string
    */
   public $name;
@@ -67,32 +135,45 @@ class ContactCenter extends \Google\Collection
   protected $privateAccessType = PrivateAccess::class;
   protected $privateAccessDataType = '';
   /**
+   * Output only. TODO(b/283407860) Deprecate this field.
+   *
    * @var string[]
    */
   public $privateComponents;
   /**
+   * Output only. UJET release version, unique for each new release.
+   *
    * @var string
    */
   public $releaseVersion;
   protected $samlParamsType = SAMLParams::class;
   protected $samlParamsDataType = '';
   /**
+   * Output only. The state of this contact center.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. [Output only] Update time stamp
+   *
    * @var string
    */
   public $updateTime;
   protected $urisType = URIs::class;
   protected $urisDataType = '';
   /**
+   * Optional. Email address of the first admin user.
+   *
    * @var string
    */
   public $userEmail;
 
   /**
-   * @param AdminUser
+   * Optional. Info about the first admin user, such as given name and family
+   * name.
+   *
+   * @param AdminUser $adminUser
    */
   public function setAdminUser(AdminUser $adminUser)
   {
@@ -106,7 +187,9 @@ class ContactCenter extends \Google\Collection
     return $this->adminUser;
   }
   /**
-   * @param bool
+   * Optional. Whether the advanced reporting feature is enabled.
+   *
+   * @param bool $advancedReportingEnabled
    */
   public function setAdvancedReportingEnabled($advancedReportingEnabled)
   {
@@ -120,7 +203,10 @@ class ContactCenter extends \Google\Collection
     return $this->advancedReportingEnabled;
   }
   /**
-   * @param bool
+   * Optional. Whether to enable users to be created in the CCAIP-instance
+   * concurrently to having users in Cloud identity
+   *
+   * @param bool $ccaipManagedUsers
    */
   public function setCcaipManagedUsers($ccaipManagedUsers)
   {
@@ -134,7 +220,9 @@ class ContactCenter extends \Google\Collection
     return $this->ccaipManagedUsers;
   }
   /**
-   * @param string
+   * Output only. [Output only] Create time stamp
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -148,7 +236,9 @@ class ContactCenter extends \Google\Collection
     return $this->createTime;
   }
   /**
-   * @param Critical
+   * Optional. Critical release channel.
+   *
+   * @param Critical $critical
    */
   public function setCritical(Critical $critical)
   {
@@ -162,7 +252,10 @@ class ContactCenter extends \Google\Collection
     return $this->critical;
   }
   /**
-   * @param string
+   * Required. Immutable. At least 2 and max 16 char long, must conform to [RFC
+   * 1035](https://www.ietf.org/rfc/rfc1035.txt).
+   *
+   * @param string $customerDomainPrefix
    */
   public function setCustomerDomainPrefix($customerDomainPrefix)
   {
@@ -176,7 +269,9 @@ class ContactCenter extends \Google\Collection
     return $this->customerDomainPrefix;
   }
   /**
-   * @param string
+   * Required. A user friendly name for the ContactCenter.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -190,7 +285,9 @@ class ContactCenter extends \Google\Collection
     return $this->displayName;
   }
   /**
-   * @param Early
+   * Optional. Early release channel.
+   *
+   * @param Early $early
    */
   public function setEarly(Early $early)
   {
@@ -204,7 +301,9 @@ class ContactCenter extends \Google\Collection
     return $this->early;
   }
   /**
-   * @param FeatureConfig
+   * Optional. Feature configuration to populate the feature flags.
+   *
+   * @param FeatureConfig $featureConfig
    */
   public function setFeatureConfig(FeatureConfig $featureConfig)
   {
@@ -218,7 +317,9 @@ class ContactCenter extends \Google\Collection
     return $this->featureConfig;
   }
   /**
-   * @param InstanceConfig
+   * The configuration of this instance, it is currently immutable once created.
+   *
+   * @param InstanceConfig $instanceConfig
    */
   public function setInstanceConfig(InstanceConfig $instanceConfig)
   {
@@ -232,7 +333,9 @@ class ContactCenter extends \Google\Collection
     return $this->instanceConfig;
   }
   /**
-   * @param string
+   * Immutable. The KMS key name to encrypt the user input (`ContactCenter`).
+   *
+   * @param string $kmsKey
    */
   public function setKmsKey($kmsKey)
   {
@@ -246,7 +349,9 @@ class ContactCenter extends \Google\Collection
     return $this->kmsKey;
   }
   /**
-   * @param string[]
+   * Labels as key value pairs
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -260,7 +365,9 @@ class ContactCenter extends \Google\Collection
     return $this->labels;
   }
   /**
-   * @param string
+   * name of resource
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -274,7 +381,9 @@ class ContactCenter extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param Normal
+   * Optional. Normal release channel.
+   *
+   * @param Normal $normal
    */
   public function setNormal(Normal $normal)
   {
@@ -288,7 +397,9 @@ class ContactCenter extends \Google\Collection
     return $this->normal;
   }
   /**
-   * @param PrivateAccess
+   * Optional. VPC-SC related networking configuration.
+   *
+   * @param PrivateAccess $privateAccess
    */
   public function setPrivateAccess(PrivateAccess $privateAccess)
   {
@@ -302,7 +413,9 @@ class ContactCenter extends \Google\Collection
     return $this->privateAccess;
   }
   /**
-   * @param string[]
+   * Output only. TODO(b/283407860) Deprecate this field.
+   *
+   * @param string[] $privateComponents
    */
   public function setPrivateComponents($privateComponents)
   {
@@ -316,7 +429,9 @@ class ContactCenter extends \Google\Collection
     return $this->privateComponents;
   }
   /**
-   * @param string
+   * Output only. UJET release version, unique for each new release.
+   *
+   * @param string $releaseVersion
    */
   public function setReleaseVersion($releaseVersion)
   {
@@ -330,7 +445,9 @@ class ContactCenter extends \Google\Collection
     return $this->releaseVersion;
   }
   /**
-   * @param SAMLParams
+   * Optional. Params that sets up Google as IdP.
+   *
+   * @param SAMLParams $samlParams
    */
   public function setSamlParams(SAMLParams $samlParams)
   {
@@ -344,21 +461,30 @@ class ContactCenter extends \Google\Collection
     return $this->samlParams;
   }
   /**
-   * @param string
+   * Output only. The state of this contact center.
+   *
+   * Accepted values: STATE_UNSPECIFIED, STATE_DEPLOYING, STATE_DEPLOYED,
+   * STATE_TERMINATING, STATE_FAILED, STATE_TERMINATING_FAILED,
+   * STATE_TERMINATED, STATE_IN_GRACE_PERIOD, STATE_FAILING_OVER,
+   * STATE_DEGRADED, STATE_REPAIRING
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. [Output only] Update time stamp
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {
@@ -372,7 +498,9 @@ class ContactCenter extends \Google\Collection
     return $this->updateTime;
   }
   /**
-   * @param URIs
+   * Output only. URIs to access the deployed ContactCenters.
+   *
+   * @param URIs $uris
    */
   public function setUris(URIs $uris)
   {
@@ -386,7 +514,9 @@ class ContactCenter extends \Google\Collection
     return $this->uris;
   }
   /**
-   * @param string
+   * Optional. Email address of the first admin user.
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {

@@ -20,16 +20,22 @@ namespace Google\Service\CCAIPlatform;
 class AdminUser extends \Google\Model
 {
   /**
+   * Optional. Last/family name of the first admin user.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * Optional. First/given name of the first admin user.
+   *
    * @var string
    */
   public $givenName;
 
   /**
-   * @param string
+   * Optional. Last/family name of the first admin user.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -43,7 +49,9 @@ class AdminUser extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * Optional. First/given name of the first admin user.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {

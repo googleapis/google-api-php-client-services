@@ -20,12 +20,16 @@ namespace Google\Service\CCAIPlatform;
 class FeatureConfig extends \Google\Model
 {
   /**
+   * Optional. If true - enables the agent desktop feature. Default is false.
+   *
    * @var bool
    */
   public $agentDesktopEnabled;
 
   /**
-   * @param bool
+   * Optional. If true - enables the agent desktop feature. Default is false.
+   *
+   * @param bool $agentDesktopEnabled
    */
   public function setAgentDesktopEnabled($agentDesktopEnabled)
   {
