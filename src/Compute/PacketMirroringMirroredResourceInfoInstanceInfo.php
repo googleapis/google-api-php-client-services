@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class PacketMirroringMirroredResourceInfoInstanceInfo extends \Google\Model
 {
   /**
+   * [Output Only] Unique identifier for the instance; defined by the server.
+   *
    * @var string
    */
   public $canonicalUrl;
   /**
+   * Resource URL to the virtual machine instance which is being mirrored.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * [Output Only] Unique identifier for the instance; defined by the server.
+   *
+   * @param string $canonicalUrl
    */
   public function setCanonicalUrl($canonicalUrl)
   {
@@ -43,7 +49,9 @@ class PacketMirroringMirroredResourceInfoInstanceInfo extends \Google\Model
     return $this->canonicalUrl;
   }
   /**
-   * @param string
+   * Resource URL to the virtual machine instance which is being mirrored.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

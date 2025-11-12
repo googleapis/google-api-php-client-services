@@ -24,7 +24,9 @@ class RegionInstanceGroupManagersCreateInstancesRequest extends \Google\Collecti
   protected $instancesDataType = 'array';
 
   /**
-   * @param PerInstanceConfig[]
+   * [Required] List of specifications of per-instance configs.
+   *
+   * @param PerInstanceConfig[] $instances
    */
   public function setInstances($instances)
   {

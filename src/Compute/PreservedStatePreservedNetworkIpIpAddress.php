@@ -20,16 +20,23 @@ namespace Google\Service\Compute;
 class PreservedStatePreservedNetworkIpIpAddress extends \Google\Model
 {
   /**
+   * The URL of the reservation for this IP address.
+   *
    * @var string
    */
   public $address;
   /**
+   * An IPv4 internal network address to assign to the instance for this network
+   * interface.
+   *
    * @var string
    */
   public $literal;
 
   /**
-   * @param string
+   * The URL of the reservation for this IP address.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -43,7 +50,10 @@ class PreservedStatePreservedNetworkIpIpAddress extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * An IPv4 internal network address to assign to the instance for this network
+   * interface.
+   *
+   * @param string $literal
    */
   public function setLiteral($literal)
   {

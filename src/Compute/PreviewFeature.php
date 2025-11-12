@@ -19,33 +19,52 @@ namespace Google\Service\Compute;
 
 class PreviewFeature extends \Google\Model
 {
+  public const ACTIVATION_STATUS_ACTIVATION_STATE_UNSPECIFIED = 'ACTIVATION_STATE_UNSPECIFIED';
+  public const ACTIVATION_STATUS_DISABLED = 'DISABLED';
+  public const ACTIVATION_STATUS_ENABLED = 'ENABLED';
   /**
+   * Specifies whether the feature is enabled or disabled.
+   *
    * @var string
    */
   public $activationStatus;
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * [Output Only] Description of the feature.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output only] The type of the feature. Always "compute#previewFeature" for
+   * preview features.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the feature.
+   *
    * @var string
    */
   public $name;
   protected $rolloutOperationType = PreviewFeatureRolloutOperation::class;
   protected $rolloutOperationDataType = '';
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
@@ -53,21 +72,27 @@ class PreviewFeature extends \Google\Model
   protected $statusDataType = '';
 
   /**
-   * @param string
+   * Specifies whether the feature is enabled or disabled.
+   *
+   * Accepted values: ACTIVATION_STATE_UNSPECIFIED, DISABLED, ENABLED
+   *
+   * @param self::ACTIVATION_STATUS_* $activationStatus
    */
   public function setActivationStatus($activationStatus)
   {
     $this->activationStatus = $activationStatus;
   }
   /**
-   * @return string
+   * @return self::ACTIVATION_STATUS_*
    */
   public function getActivationStatus()
   {
     return $this->activationStatus;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -81,7 +106,9 @@ class PreviewFeature extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * [Output Only] Description of the feature.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -95,7 +122,10 @@ class PreviewFeature extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -109,7 +139,10 @@ class PreviewFeature extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output only] The type of the feature. Always "compute#previewFeature" for
+   * preview features.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -123,7 +156,9 @@ class PreviewFeature extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the feature.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -137,7 +172,9 @@ class PreviewFeature extends \Google\Model
     return $this->name;
   }
   /**
-   * @param PreviewFeatureRolloutOperation
+   * Rollout operation of the feature.
+   *
+   * @param PreviewFeatureRolloutOperation $rolloutOperation
    */
   public function setRolloutOperation(PreviewFeatureRolloutOperation $rolloutOperation)
   {
@@ -151,7 +188,9 @@ class PreviewFeature extends \Google\Model
     return $this->rolloutOperation;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -165,7 +204,9 @@ class PreviewFeature extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param PreviewFeatureStatus
+   * [Output only] Status of the feature.
+   *
+   * @param PreviewFeatureStatus $status
    */
   public function setStatus(PreviewFeatureStatus $status)
   {

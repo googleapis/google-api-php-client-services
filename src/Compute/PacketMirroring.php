@@ -19,53 +19,94 @@ namespace Google\Service\Compute;
 
 class PacketMirroring extends \Google\Model
 {
+  public const ENABLE_FALSE = 'FALSE';
+  public const ENABLE_TRUE = 'TRUE';
   protected $collectorIlbType = PacketMirroringForwardingRuleInfo::class;
   protected $collectorIlbDataType = '';
   /**
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * Indicates whether or not this packet mirroring takes effect. If set to
+   * FALSE, this packet mirroring policy will not be enforced on the network.
+   *
+   * The default is TRUE.
+   *
    * @var string
    */
   public $enable;
   protected $filterType = PacketMirroringFilter::class;
   protected $filterDataType = '';
   /**
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for
+   * packet mirrorings.
+   *
    * @var string
    */
   public $kind;
   protected $mirroredResourcesType = PacketMirroringMirroredResourceInfo::class;
   protected $mirroredResourcesDataType = '';
   /**
+   * Name of the resource; provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   protected $networkType = PacketMirroringNetworkInfo::class;
   protected $networkDataType = '';
   /**
+   * The priority of applying this configuration. Priority is used to break ties
+   * in cases where there is more than one matching rule. In the case of two
+   * rules that apply for a given Instance, the one with the lowest-numbered
+   * priority value wins.
+   *
+   * Default value is 1000. Valid range is 0 through 65535.
+   *
    * @var string
    */
   public $priority;
   /**
+   * [Output Only] URI of the region where the packetMirroring resides.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] Server-defined URL for the resource.
+   *
    * @var string
    */
   public $selfLink;
 
   /**
-   * @param PacketMirroringForwardingRuleInfo
+   * The Forwarding Rule resource of typeloadBalancingScheme=INTERNAL that will
+   * be used as collector for mirrored traffic. The specified forwarding rule
+   * must have isMirroringCollector set to true.
+   *
+   * @param PacketMirroringForwardingRuleInfo $collectorIlb
    */
   public function setCollectorIlb(PacketMirroringForwardingRuleInfo $collectorIlb)
   {
@@ -79,7 +120,9 @@ class PacketMirroring extends \Google\Model
     return $this->collectorIlb;
   }
   /**
-   * @param string
+   * [Output Only] Creation timestamp inRFC3339 text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -93,7 +136,10 @@ class PacketMirroring extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -107,21 +153,30 @@ class PacketMirroring extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * Indicates whether or not this packet mirroring takes effect. If set to
+   * FALSE, this packet mirroring policy will not be enforced on the network.
+   *
+   * The default is TRUE.
+   *
+   * Accepted values: FALSE, TRUE
+   *
+   * @param self::ENABLE_* $enable
    */
   public function setEnable($enable)
   {
     $this->enable = $enable;
   }
   /**
-   * @return string
+   * @return self::ENABLE_*
    */
   public function getEnable()
   {
     return $this->enable;
   }
   /**
-   * @param PacketMirroringFilter
+   * Filter for mirrored traffic. If unspecified, all IPv4 traffic is mirrored.
+   *
+   * @param PacketMirroringFilter $filter
    */
   public function setFilter(PacketMirroringFilter $filter)
   {
@@ -135,7 +190,10 @@ class PacketMirroring extends \Google\Model
     return $this->filter;
   }
   /**
-   * @param string
+   * [Output Only] The unique identifier for the resource. This identifier is
+   * defined by the server.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -149,7 +207,10 @@ class PacketMirroring extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] Type of the resource. Alwayscompute#packetMirroring for
+   * packet mirrorings.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -163,7 +224,11 @@ class PacketMirroring extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param PacketMirroringMirroredResourceInfo
+   * PacketMirroring mirroredResourceInfos. MirroredResourceInfo specifies a set
+   * of mirrored VM instances, subnetworks and/or tags for which traffic from/to
+   * all VM instances will be mirrored.
+   *
+   * @param PacketMirroringMirroredResourceInfo $mirroredResources
    */
   public function setMirroredResources(PacketMirroringMirroredResourceInfo $mirroredResources)
   {
@@ -177,7 +242,15 @@ class PacketMirroring extends \Google\Model
     return $this->mirroredResources;
   }
   /**
-   * @param string
+   * Name of the resource; provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -191,7 +264,11 @@ class PacketMirroring extends \Google\Model
     return $this->name;
   }
   /**
-   * @param PacketMirroringNetworkInfo
+   * Specifies the mirrored VPC network. Only packets in this network will be
+   * mirrored. All mirrored VMs should have a NIC in the given network. All
+   * mirrored subnetworks should belong to the given network.
+   *
+   * @param PacketMirroringNetworkInfo $network
    */
   public function setNetwork(PacketMirroringNetworkInfo $network)
   {
@@ -205,7 +282,14 @@ class PacketMirroring extends \Google\Model
     return $this->network;
   }
   /**
-   * @param string
+   * The priority of applying this configuration. Priority is used to break ties
+   * in cases where there is more than one matching rule. In the case of two
+   * rules that apply for a given Instance, the one with the lowest-numbered
+   * priority value wins.
+   *
+   * Default value is 1000. Valid range is 0 through 65535.
+   *
+   * @param string $priority
    */
   public function setPriority($priority)
   {
@@ -219,7 +303,9 @@ class PacketMirroring extends \Google\Model
     return $this->priority;
   }
   /**
-   * @param string
+   * [Output Only] URI of the region where the packetMirroring resides.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -233,7 +319,9 @@ class PacketMirroring extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] Server-defined URL for the resource.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {

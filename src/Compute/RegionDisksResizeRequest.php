@@ -20,12 +20,16 @@ namespace Google\Service\Compute;
 class RegionDisksResizeRequest extends \Google\Model
 {
   /**
+   * The new size of the regional persistent disk, which is specified in GB.
+   *
    * @var string
    */
   public $sizeGb;
 
   /**
-   * @param string
+   * The new size of the regional persistent disk, which is specified in GB.
+   *
+   * @param string $sizeGb
    */
   public function setSizeGb($sizeGb)
   {

@@ -26,7 +26,9 @@ class PublicDelegatedPrefixesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param PublicDelegatedPrefix[]
+   * [Output Only] A list of PublicDelegatedPrefixes contained in this scope.
+   *
+   * @param PublicDelegatedPrefix[] $publicDelegatedPrefixes
    */
   public function setPublicDelegatedPrefixes($publicDelegatedPrefixes)
   {
@@ -40,7 +42,10 @@ class PublicDelegatedPrefixesScopedList extends \Google\Collection
     return $this->publicDelegatedPrefixes;
   }
   /**
-   * @param PublicDelegatedPrefixesScopedListWarning
+   * [Output Only] Informational warning which replaces the list of public
+   * delegated prefixes when the list is empty.
+   *
+   * @param PublicDelegatedPrefixesScopedListWarning $warning
    */
   public function setWarning(PublicDelegatedPrefixesScopedListWarning $warning)
   {

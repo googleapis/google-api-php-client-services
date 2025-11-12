@@ -20,19 +20,37 @@ namespace Google\Service\Compute;
 class ProjectsSetCloudArmorTierRequest extends \Google\Model
 {
   /**
+   * Enterprise tier protection billed annually.
+   */
+  public const CLOUD_ARMOR_TIER_CA_ENTERPRISE_ANNUAL = 'CA_ENTERPRISE_ANNUAL';
+  /**
+   * Enterprise tier protection billed monthly.
+   */
+  public const CLOUD_ARMOR_TIER_CA_ENTERPRISE_PAYGO = 'CA_ENTERPRISE_PAYGO';
+  /**
+   * Standard protection.
+   */
+  public const CLOUD_ARMOR_TIER_CA_STANDARD = 'CA_STANDARD';
+  /**
+   * Managed protection tier to be set.
+   *
    * @var string
    */
   public $cloudArmorTier;
 
   /**
-   * @param string
+   * Managed protection tier to be set.
+   *
+   * Accepted values: CA_ENTERPRISE_ANNUAL, CA_ENTERPRISE_PAYGO, CA_STANDARD
+   *
+   * @param self::CLOUD_ARMOR_TIER_* $cloudArmorTier
    */
   public function setCloudArmorTier($cloudArmorTier)
   {
     $this->cloudArmorTier = $cloudArmorTier;
   }
   /**
-   * @return string
+   * @return self::CLOUD_ARMOR_TIER_*
    */
   public function getCloudArmorTier()
   {

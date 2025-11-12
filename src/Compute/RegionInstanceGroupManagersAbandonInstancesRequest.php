@@ -21,12 +21,18 @@ class RegionInstanceGroupManagersAbandonInstancesRequest extends \Google\Collect
 {
   protected $collection_key = 'instances';
   /**
+   * The URLs of one or more instances to abandon. This can be a full URL or a
+   * partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
+   *
    * @var string[]
    */
   public $instances;
 
   /**
-   * @param string[]
+   * The URLs of one or more instances to abandon. This can be a full URL or a
+   * partial URL, such as zones/[ZONE]/instances/[INSTANCE_NAME].
+   *
+   * @param string[] $instances
    */
   public function setInstances($instances)
   {

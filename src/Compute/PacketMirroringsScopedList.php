@@ -26,7 +26,9 @@ class PacketMirroringsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param PacketMirroring[]
+   * A list of packetMirrorings contained in this scope.
+   *
+   * @param PacketMirroring[] $packetMirrorings
    */
   public function setPacketMirrorings($packetMirrorings)
   {
@@ -40,7 +42,10 @@ class PacketMirroringsScopedList extends \Google\Collection
     return $this->packetMirrorings;
   }
   /**
-   * @param PacketMirroringsScopedListWarning
+   * Informational warning which replaces the list of packetMirrorings when the
+   * list is empty.
+   *
+   * @param PacketMirroringsScopedListWarning $warning
    */
   public function setWarning(PacketMirroringsScopedListWarning $warning)
   {

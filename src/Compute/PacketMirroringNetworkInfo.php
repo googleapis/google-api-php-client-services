@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class PacketMirroringNetworkInfo extends \Google\Model
 {
   /**
+   * [Output Only] Unique identifier for the network; defined by the server.
+   *
    * @var string
    */
   public $canonicalUrl;
   /**
+   * URL of the network resource.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * [Output Only] Unique identifier for the network; defined by the server.
+   *
+   * @param string $canonicalUrl
    */
   public function setCanonicalUrl($canonicalUrl)
   {
@@ -43,7 +49,9 @@ class PacketMirroringNetworkInfo extends \Google\Model
     return $this->canonicalUrl;
   }
   /**
-   * @param string
+   * URL of the network resource.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

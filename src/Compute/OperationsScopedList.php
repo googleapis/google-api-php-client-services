@@ -26,7 +26,9 @@ class OperationsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param Operation[]
+   * [Output Only] A list of operations contained in this scope.
+   *
+   * @param Operation[] $operations
    */
   public function setOperations($operations)
   {
@@ -40,7 +42,10 @@ class OperationsScopedList extends \Google\Collection
     return $this->operations;
   }
   /**
-   * @param OperationsScopedListWarning
+   * [Output Only] Informational warning which replaces the list of operations
+   * when the list is empty.
+   *
+   * @param OperationsScopedListWarning $warning
    */
   public function setWarning(OperationsScopedListWarning $warning)
   {

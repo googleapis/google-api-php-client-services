@@ -24,7 +24,10 @@ class RegionInstanceGroupManagerPatchInstanceConfigReq extends \Google\Collectio
   protected $perInstanceConfigsDataType = 'array';
 
   /**
-   * @param PerInstanceConfig[]
+   * The list of per-instance configurations to insert or patch on this managed
+   * instance group.
+   *
+   * @param PerInstanceConfig[] $perInstanceConfigs
    */
   public function setPerInstanceConfigs($perInstanceConfigs)
   {

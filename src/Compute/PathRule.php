@@ -23,12 +23,25 @@ class PathRule extends \Google\Collection
   protected $customErrorResponsePolicyType = CustomErrorResponsePolicy::class;
   protected $customErrorResponsePolicyDataType = '';
   /**
+   * The list of path patterns to match. Each must start with / and the only
+   * place a * is allowed is at the end following a /.  The string fed to the
+   * path matcher does not include any text after the first ? or #, and those
+   * chars are not allowed here.
+   *
    * @var string[]
    */
   public $paths;
   protected $routeActionType = HttpRouteAction::class;
   protected $routeActionDataType = '';
   /**
+   * The full or partial URL of the backend service resource to which traffic is
+   * directed if this rule is matched. If routeAction is also specified,
+   * advanced routing actions, such as URL rewrites, take effect before sending
+   * the request to the backend.
+   *
+   * Only one of urlRedirect, service orrouteAction.weightedBackendService can
+   * be set.
+   *
    * @var string
    */
   public $service;
@@ -36,7 +49,33 @@ class PathRule extends \Google\Collection
   protected $urlRedirectDataType = '';
 
   /**
-   * @param CustomErrorResponsePolicy
+   * customErrorResponsePolicy specifies how the Load Balancer returns error
+   * responses when BackendServiceorBackendBucket responds with an error.
+   *
+   * If a policy for an error code is not configured for the PathRule, a policy
+   * for the error code configured
+   * inpathMatcher.defaultCustomErrorResponsePolicy is applied. If one is not
+   * specified inpathMatcher.defaultCustomErrorResponsePolicy, the policy
+   * configured in UrlMap.defaultCustomErrorResponsePolicy takes effect.
+   *
+   * For example, consider a UrlMap with the following configuration:
+   * - UrlMap.defaultCustomErrorResponsePolicy are configured      with policies
+   * for 5xx and 4xx errors      - A PathRule for /coming_soon/ is configured
+   * for the error      code 404.
+   *
+   * If the request is for www.myotherdomain.com and a404 is encountered, the
+   * policy underUrlMap.defaultCustomErrorResponsePolicy takes effect. If a404
+   * response is encountered for the requestwww.example.com/current_events/, the
+   * pathMatcher's policy takes effect. If however, the request
+   * forwww.example.com/coming_soon/ encounters a 404, the policy in
+   * PathRule.customErrorResponsePolicy takes effect. If any of the requests in
+   * this example encounter a 500 error code, the policy
+   * atUrlMap.defaultCustomErrorResponsePolicy takes effect.
+   *
+   * customErrorResponsePolicy is supported only for global external Application
+   * Load Balancers.
+   *
+   * @param CustomErrorResponsePolicy $customErrorResponsePolicy
    */
   public function setCustomErrorResponsePolicy(CustomErrorResponsePolicy $customErrorResponsePolicy)
   {
@@ -50,7 +89,12 @@ class PathRule extends \Google\Collection
     return $this->customErrorResponsePolicy;
   }
   /**
-   * @param string[]
+   * The list of path patterns to match. Each must start with / and the only
+   * place a * is allowed is at the end following a /.  The string fed to the
+   * path matcher does not include any text after the first ? or #, and those
+   * chars are not allowed here.
+   *
+   * @param string[] $paths
    */
   public function setPaths($paths)
   {
@@ -64,7 +108,17 @@ class PathRule extends \Google\Collection
     return $this->paths;
   }
   /**
-   * @param HttpRouteAction
+   * In response to a matching path, the load balancer performs advanced routing
+   * actions, such as URL rewrites and header transformations, before forwarding
+   * the request to the selected backend.
+   *
+   * Only one of urlRedirect, service orrouteAction.weightedBackendService can
+   * be set.
+   *
+   * URL maps for classic Application Load Balancers only support the urlRewrite
+   * action within a path rule'srouteAction.
+   *
+   * @param HttpRouteAction $routeAction
    */
   public function setRouteAction(HttpRouteAction $routeAction)
   {
@@ -78,7 +132,15 @@ class PathRule extends \Google\Collection
     return $this->routeAction;
   }
   /**
-   * @param string
+   * The full or partial URL of the backend service resource to which traffic is
+   * directed if this rule is matched. If routeAction is also specified,
+   * advanced routing actions, such as URL rewrites, take effect before sending
+   * the request to the backend.
+   *
+   * Only one of urlRedirect, service orrouteAction.weightedBackendService can
+   * be set.
+   *
+   * @param string $service
    */
   public function setService($service)
   {
@@ -92,7 +154,15 @@ class PathRule extends \Google\Collection
     return $this->service;
   }
   /**
-   * @param HttpRedirectAction
+   * When a path pattern is matched, the request is redirected to a URL
+   * specified by urlRedirect.
+   *
+   * Only one of urlRedirect, service orrouteAction.weightedBackendService can
+   * be set.
+   *
+   * Not supported when the URL map is bound to a target gRPC proxy.
+   *
+   * @param HttpRedirectAction $urlRedirect
    */
   public function setUrlRedirect(HttpRedirectAction $urlRedirect)
   {

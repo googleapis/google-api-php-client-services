@@ -19,49 +19,89 @@ namespace Google\Service\Compute;
 
 class PreservedStatePreservedDisk extends \Google\Model
 {
+  public const AUTO_DELETE_NEVER = 'NEVER';
+  public const AUTO_DELETE_ON_PERMANENT_INSTANCE_DELETION = 'ON_PERMANENT_INSTANCE_DELETION';
   /**
+   * Attaches this disk in read-only mode. Multiple VM instances can use a disk
+   * in READ_ONLY mode at a time.
+   */
+  public const MODE_READ_ONLY = 'READ_ONLY';
+  /**
+   * *[Default]* Attaches this disk in READ_WRITE mode. Only one VM instance at
+   * a time can be attached to a disk inREAD_WRITE mode.
+   */
+  public const MODE_READ_WRITE = 'READ_WRITE';
+  /**
+   * These stateful disks will never be deleted during autohealing, update,
+   * instance recreate operations. This flag is used to configure if the disk
+   * should be deleted after it is no longer used by the group, e.g. when the
+   * given instance or the whole MIG is deleted. Note: disks attached in
+   * READ_ONLY mode cannot be auto-deleted.
+   *
    * @var string
    */
   public $autoDelete;
   /**
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If
+   * not specified, the default is to attach the disk in READ_WRITE mode.
+   *
    * @var string
    */
   public $mode;
   /**
+   * The URL of the disk resource that is stateful and should be attached to the
+   * VM instance.
+   *
    * @var string
    */
   public $source;
 
   /**
-   * @param string
+   * These stateful disks will never be deleted during autohealing, update,
+   * instance recreate operations. This flag is used to configure if the disk
+   * should be deleted after it is no longer used by the group, e.g. when the
+   * given instance or the whole MIG is deleted. Note: disks attached in
+   * READ_ONLY mode cannot be auto-deleted.
+   *
+   * Accepted values: NEVER, ON_PERMANENT_INSTANCE_DELETION
+   *
+   * @param self::AUTO_DELETE_* $autoDelete
    */
   public function setAutoDelete($autoDelete)
   {
     $this->autoDelete = $autoDelete;
   }
   /**
-   * @return string
+   * @return self::AUTO_DELETE_*
    */
   public function getAutoDelete()
   {
     return $this->autoDelete;
   }
   /**
-   * @param string
+   * The mode in which to attach this disk, either READ_WRITE orREAD_ONLY. If
+   * not specified, the default is to attach the disk in READ_WRITE mode.
+   *
+   * Accepted values: READ_ONLY, READ_WRITE
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {
     return $this->mode;
   }
   /**
-   * @param string
+   * The URL of the disk resource that is stateful and should be attached to the
+   * VM instance.
+   *
+   * @param string $source
    */
   public function setSource($source)
   {

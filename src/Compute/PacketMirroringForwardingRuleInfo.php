@@ -20,16 +20,25 @@ namespace Google\Service\Compute;
 class PacketMirroringForwardingRuleInfo extends \Google\Model
 {
   /**
+   * [Output Only] Unique identifier for the forwarding rule; defined by the
+   * server.
+   *
    * @var string
    */
   public $canonicalUrl;
   /**
+   * Resource URL to the forwarding rule representing the ILB configured as
+   * destination of the mirrored traffic.
+   *
    * @var string
    */
   public $url;
 
   /**
-   * @param string
+   * [Output Only] Unique identifier for the forwarding rule; defined by the
+   * server.
+   *
+   * @param string $canonicalUrl
    */
   public function setCanonicalUrl($canonicalUrl)
   {
@@ -43,7 +52,10 @@ class PacketMirroringForwardingRuleInfo extends \Google\Model
     return $this->canonicalUrl;
   }
   /**
-   * @param string
+   * Resource URL to the forwarding rule representing the ILB configured as
+   * destination of the mirrored traffic.
+   *
+   * @param string $url
    */
   public function setUrl($url)
   {

@@ -24,7 +24,9 @@ class PreconfiguredWafSet extends \Google\Collection
   protected $expressionSetsDataType = 'array';
 
   /**
-   * @param WafExpressionSet[]
+   * List of entities that are currently supported for WAF rules.
+   *
+   * @param WafExpressionSet[] $expressionSets
    */
   public function setExpressionSets($expressionSets)
   {

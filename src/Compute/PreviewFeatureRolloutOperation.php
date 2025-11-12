@@ -23,7 +23,9 @@ class PreviewFeatureRolloutOperation extends \Google\Model
   protected $rolloutInputDataType = '';
 
   /**
-   * @param PreviewFeatureRolloutOperationRolloutInput
+   * Input only. The input for the rollout operation.
+   *
+   * @param PreviewFeatureRolloutOperationRolloutInput $rolloutInput
    */
   public function setRolloutInput(PreviewFeatureRolloutOperationRolloutInput $rolloutInput)
   {

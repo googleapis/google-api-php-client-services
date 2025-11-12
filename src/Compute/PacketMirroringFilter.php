@@ -19,25 +19,57 @@ namespace Google\Service\Compute;
 
 class PacketMirroringFilter extends \Google\Collection
 {
+  /**
+   * Default, both directions are mirrored.
+   */
+  public const DIRECTION_BOTH = 'BOTH';
+  /**
+   * Only egress traffic is mirrored.
+   */
+  public const DIRECTION_EGRESS = 'EGRESS';
+  /**
+   * Only ingress traffic is mirrored.
+   */
+  public const DIRECTION_INGRESS = 'INGRESS';
   protected $collection_key = 'cidrRanges';
   protected $internal_gapi_mappings = [
         "iPProtocols" => "IPProtocols",
   ];
   /**
+   * Protocols that apply as filter on mirrored traffic. If no protocols are
+   * specified, all traffic that matches the specified CIDR ranges is mirrored.
+   * If neither cidrRanges nor IPProtocols is specified, all IPv4 traffic is
+   * mirrored.
+   *
    * @var string[]
    */
   public $iPProtocols;
   /**
+   * One or more IPv4 or IPv6 CIDR ranges that apply as filters on the source
+   * (ingress) or destination (egress) IP in the IP header. If no ranges are
+   * specified, all IPv4 traffic that matches the specified IPProtocols is
+   * mirrored. If neither cidrRanges nor IPProtocols is specified, all IPv4
+   * traffic is mirrored. To mirror all IPv4 and IPv6 traffic, use
+   * "0.0.0.0/0,::/0".
+   *
    * @var string[]
    */
   public $cidrRanges;
   /**
+   * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The
+   * default is BOTH.
+   *
    * @var string
    */
   public $direction;
 
   /**
-   * @param string[]
+   * Protocols that apply as filter on mirrored traffic. If no protocols are
+   * specified, all traffic that matches the specified CIDR ranges is mirrored.
+   * If neither cidrRanges nor IPProtocols is specified, all IPv4 traffic is
+   * mirrored.
+   *
+   * @param string[] $iPProtocols
    */
   public function setIPProtocols($iPProtocols)
   {
@@ -51,7 +83,14 @@ class PacketMirroringFilter extends \Google\Collection
     return $this->iPProtocols;
   }
   /**
-   * @param string[]
+   * One or more IPv4 or IPv6 CIDR ranges that apply as filters on the source
+   * (ingress) or destination (egress) IP in the IP header. If no ranges are
+   * specified, all IPv4 traffic that matches the specified IPProtocols is
+   * mirrored. If neither cidrRanges nor IPProtocols is specified, all IPv4
+   * traffic is mirrored. To mirror all IPv4 and IPv6 traffic, use
+   * "0.0.0.0/0,::/0".
+   *
+   * @param string[] $cidrRanges
    */
   public function setCidrRanges($cidrRanges)
   {
@@ -65,14 +104,19 @@ class PacketMirroringFilter extends \Google\Collection
     return $this->cidrRanges;
   }
   /**
-   * @param string
+   * Direction of traffic to mirror, either INGRESS, EGRESS, or BOTH. The
+   * default is BOTH.
+   *
+   * Accepted values: BOTH, EGRESS, INGRESS
+   *
+   * @param self::DIRECTION_* $direction
    */
   public function setDirection($direction)
   {
     $this->direction = $direction;
   }
   /**
-   * @return string
+   * @return self::DIRECTION_*
    */
   public function getDirection()
   {

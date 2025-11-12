@@ -21,12 +21,18 @@ class RegionInstanceGroupManagerDeleteInstanceConfigReq extends \Google\Collecti
 {
   protected $collection_key = 'names';
   /**
+   * The list of instance names for which we want to delete per-instance configs
+   * on this managed instance group.
+   *
    * @var string[]
    */
   public $names;
 
   /**
-   * @param string[]
+   * The list of instance names for which we want to delete per-instance configs
+   * on this managed instance group.
+   *
+   * @param string[] $names
    */
   public function setNames($names)
   {

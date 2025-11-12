@@ -19,33 +19,68 @@ namespace Google\Service\Compute;
 
 class PacketIntervals extends \Google\Model
 {
+  public const DURATION_DURATION_UNSPECIFIED = 'DURATION_UNSPECIFIED';
+  public const DURATION_HOUR = 'HOUR';
   /**
+   * From BfdSession object creation time.
+   */
+  public const DURATION_MAX = 'MAX';
+  public const DURATION_MINUTE = 'MINUTE';
+  /**
+   * Only applies to Echo packets. This shows the intervals between sending and
+   * receiving the same packet.
+   */
+  public const TYPE_LOOPBACK = 'LOOPBACK';
+  /**
+   * Intervals between received packets.
+   */
+  public const TYPE_RECEIVE = 'RECEIVE';
+  /**
+   * Intervals between transmitted packets.
+   */
+  public const TYPE_TRANSMIT = 'TRANSMIT';
+  public const TYPE_TYPE_UNSPECIFIED = 'TYPE_UNSPECIFIED';
+  /**
+   * Average observed inter-packet interval in milliseconds.
+   *
    * @var string
    */
   public $avgMs;
   /**
+   * From how long ago in the past these intervals were observed.
+   *
    * @var string
    */
   public $duration;
   /**
+   * Maximum observed inter-packet interval in milliseconds.
+   *
    * @var string
    */
   public $maxMs;
   /**
+   * Minimum observed inter-packet interval in milliseconds.
+   *
    * @var string
    */
   public $minMs;
   /**
+   * Number of inter-packet intervals from which these statistics were derived.
+   *
    * @var string
    */
   public $numIntervals;
   /**
+   * The type of packets for which inter-packet intervals were computed.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Average observed inter-packet interval in milliseconds.
+   *
+   * @param string $avgMs
    */
   public function setAvgMs($avgMs)
   {
@@ -59,21 +94,27 @@ class PacketIntervals extends \Google\Model
     return $this->avgMs;
   }
   /**
-   * @param string
+   * From how long ago in the past these intervals were observed.
+   *
+   * Accepted values: DURATION_UNSPECIFIED, HOUR, MAX, MINUTE
+   *
+   * @param self::DURATION_* $duration
    */
   public function setDuration($duration)
   {
     $this->duration = $duration;
   }
   /**
-   * @return string
+   * @return self::DURATION_*
    */
   public function getDuration()
   {
     return $this->duration;
   }
   /**
-   * @param string
+   * Maximum observed inter-packet interval in milliseconds.
+   *
+   * @param string $maxMs
    */
   public function setMaxMs($maxMs)
   {
@@ -87,7 +128,9 @@ class PacketIntervals extends \Google\Model
     return $this->maxMs;
   }
   /**
-   * @param string
+   * Minimum observed inter-packet interval in milliseconds.
+   *
+   * @param string $minMs
    */
   public function setMinMs($minMs)
   {
@@ -101,7 +144,9 @@ class PacketIntervals extends \Google\Model
     return $this->minMs;
   }
   /**
-   * @param string
+   * Number of inter-packet intervals from which these statistics were derived.
+   *
+   * @param string $numIntervals
    */
   public function setNumIntervals($numIntervals)
   {
@@ -115,14 +160,18 @@ class PacketIntervals extends \Google\Model
     return $this->numIntervals;
   }
   /**
-   * @param string
+   * The type of packets for which inter-packet intervals were computed.
+   *
+   * Accepted values: LOOPBACK, RECEIVE, TRANSMIT, TYPE_UNSPECIFIED
+   *
+   * @param self::TYPE_* $type
    */
   public function setType($type)
   {
     $this->type = $type;
   }
   /**
-   * @return string
+   * @return self::TYPE_*
    */
   public function getType()
   {

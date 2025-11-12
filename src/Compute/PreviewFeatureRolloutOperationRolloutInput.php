@@ -19,17 +19,32 @@ namespace Google\Service\Compute;
 
 class PreviewFeatureRolloutOperationRolloutInput extends \Google\Model
 {
+  public const PREDEFINED_ROLLOUT_PLAN_ROLLOUT_PLAN_FAST_ROLLOUT = 'ROLLOUT_PLAN_FAST_ROLLOUT';
+  public const PREDEFINED_ROLLOUT_PLAN_ROLLOUT_PLAN_TWO_DAY_ROLLOUT = 'ROLLOUT_PLAN_TWO_DAY_ROLLOUT';
+  public const PREDEFINED_ROLLOUT_PLAN_ROLLOUT_PLAN_UNSPECIFIED = 'ROLLOUT_PLAN_UNSPECIFIED';
   /**
+   * The name of the rollout plan Ex.
+   * organizations//locations/global/rolloutPlans/ Ex.
+   * folders//locations/global/rolloutPlans/ Ex.
+   * projects//locations/global/rolloutPlans/.
+   *
    * @var string
    */
   public $name;
   /**
+   * Predefined rollout plan.
+   *
    * @var string
    */
   public $predefinedRolloutPlan;
 
   /**
-   * @param string
+   * The name of the rollout plan Ex.
+   * organizations//locations/global/rolloutPlans/ Ex.
+   * folders//locations/global/rolloutPlans/ Ex.
+   * projects//locations/global/rolloutPlans/.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -43,14 +58,19 @@ class PreviewFeatureRolloutOperationRolloutInput extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Predefined rollout plan.
+   *
+   * Accepted values: ROLLOUT_PLAN_FAST_ROLLOUT, ROLLOUT_PLAN_TWO_DAY_ROLLOUT,
+   * ROLLOUT_PLAN_UNSPECIFIED
+   *
+   * @param self::PREDEFINED_ROLLOUT_PLAN_* $predefinedRolloutPlan
    */
   public function setPredefinedRolloutPlan($predefinedRolloutPlan)
   {
     $this->predefinedRolloutPlan = $predefinedRolloutPlan;
   }
   /**
-   * @return string
+   * @return self::PREDEFINED_ROLLOUT_PLAN_*
    */
   public function getPredefinedRolloutPlan()
   {
