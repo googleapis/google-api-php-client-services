@@ -23,7 +23,9 @@ class UpdateConsumerConfigRequest extends \Google\Model
   protected $consumerConfigDataType = '';
 
   /**
-   * @param ConsumerConfig
+   * Required. The updated peering config.
+   *
+   * @param ConsumerConfig $consumerConfig
    */
   public function setConsumerConfig(ConsumerConfig $consumerConfig)
   {

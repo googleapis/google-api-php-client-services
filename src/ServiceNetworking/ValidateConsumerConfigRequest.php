@@ -20,10 +20,17 @@ namespace Google\Service\ServiceNetworking;
 class ValidateConsumerConfigRequest extends \Google\Model
 {
   /**
+   * Optional. The IAM permission check determines whether the consumer project
+   * has 'servicenetworking.services.use' permission or not.
+   *
    * @var bool
    */
   public $checkServiceNetworkingUsePermission;
   /**
+   * Required. The network that the consumer is using to connect with services.
+   * Must be in the form of projects/{project}/global/networks/{network}
+   * {project} is a project number, as in '12345' {network} is network name.
+   *
    * @var string
    */
   public $consumerNetwork;
@@ -32,12 +39,23 @@ class ValidateConsumerConfigRequest extends \Google\Model
   protected $rangeReservationType = RangeReservation::class;
   protected $rangeReservationDataType = '';
   /**
+   * The validations will be performed in the order listed in the
+   * ValidationError enum. The first failure will return. If a validation is not
+   * requested, then the next one will be performed.
+   * SERVICE_NETWORKING_NOT_ENABLED and NETWORK_NOT_PEERED checks are performed
+   * for all requests where validation is requested. NETWORK_NOT_FOUND and
+   * NETWORK_DISCONNECTED checks are done for requests that have
+   * validate_network set to true.
+   *
    * @var bool
    */
   public $validateNetwork;
 
   /**
-   * @param bool
+   * Optional. The IAM permission check determines whether the consumer project
+   * has 'servicenetworking.services.use' permission or not.
+   *
+   * @param bool $checkServiceNetworkingUsePermission
    */
   public function setCheckServiceNetworkingUsePermission($checkServiceNetworkingUsePermission)
   {
@@ -51,7 +69,11 @@ class ValidateConsumerConfigRequest extends \Google\Model
     return $this->checkServiceNetworkingUsePermission;
   }
   /**
-   * @param string
+   * Required. The network that the consumer is using to connect with services.
+   * Must be in the form of projects/{project}/global/networks/{network}
+   * {project} is a project number, as in '12345' {network} is network name.
+   *
+   * @param string $consumerNetwork
    */
   public function setConsumerNetwork($consumerNetwork)
   {
@@ -65,7 +87,10 @@ class ValidateConsumerConfigRequest extends \Google\Model
     return $this->consumerNetwork;
   }
   /**
-   * @param ConsumerProject
+   * NETWORK_NOT_IN_CONSUMERS_PROJECT, NETWORK_NOT_IN_CONSUMERS_HOST_PROJECT,
+   * and HOST_PROJECT_NOT_FOUND are done when consumer_project is provided.
+   *
+   * @param ConsumerProject $consumerProject
    */
   public function setConsumerProject(ConsumerProject $consumerProject)
   {
@@ -79,7 +104,10 @@ class ValidateConsumerConfigRequest extends \Google\Model
     return $this->consumerProject;
   }
   /**
-   * @param RangeReservation
+   * RANGES_EXHAUSTED, RANGES_NOT_RESERVED, and RANGES_DELETED_LATER are done
+   * when range_reservation is provided.
+   *
+   * @param RangeReservation $rangeReservation
    */
   public function setRangeReservation(RangeReservation $rangeReservation)
   {
@@ -93,7 +121,15 @@ class ValidateConsumerConfigRequest extends \Google\Model
     return $this->rangeReservation;
   }
   /**
-   * @param bool
+   * The validations will be performed in the order listed in the
+   * ValidationError enum. The first failure will return. If a validation is not
+   * requested, then the next one will be performed.
+   * SERVICE_NETWORKING_NOT_ENABLED and NETWORK_NOT_PEERED checks are performed
+   * for all requests where validation is requested. NETWORK_NOT_FOUND and
+   * NETWORK_DISCONNECTED checks are done for requests that have
+   * validate_network set to true.
+   *
+   * @param bool $validateNetwork
    */
   public function setValidateNetwork($validateNetwork)
   {

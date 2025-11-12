@@ -20,20 +20,31 @@ namespace Google\Service\ServiceNetworking;
 class SystemParameter extends \Google\Model
 {
   /**
+   * Define the HTTP header name to use for the parameter. It is case
+   * insensitive.
+   *
    * @var string
    */
   public $httpHeader;
   /**
+   * Define the name of the parameter, such as "api_key" . It is case sensitive.
+   *
    * @var string
    */
   public $name;
   /**
+   * Define the URL query parameter name to use for the parameter. It is case
+   * sensitive.
+   *
    * @var string
    */
   public $urlQueryParameter;
 
   /**
-   * @param string
+   * Define the HTTP header name to use for the parameter. It is case
+   * insensitive.
+   *
+   * @param string $httpHeader
    */
   public function setHttpHeader($httpHeader)
   {
@@ -47,7 +58,9 @@ class SystemParameter extends \Google\Model
     return $this->httpHeader;
   }
   /**
-   * @param string
+   * Define the name of the parameter, such as "api_key" . It is case sensitive.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -61,7 +74,10 @@ class SystemParameter extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Define the URL query parameter name to use for the parameter. It is case
+   * sensitive.
+   *
+   * @param string $urlQueryParameter
    */
   public function setUrlQueryParameter($urlQueryParameter)
   {
