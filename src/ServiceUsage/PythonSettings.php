@@ -25,7 +25,9 @@ class PythonSettings extends \Google\Model
   protected $experimentalFeaturesDataType = '';
 
   /**
-   * @param CommonLanguageSettings
+   * Some settings.
+   *
+   * @param CommonLanguageSettings $common
    */
   public function setCommon(CommonLanguageSettings $common)
   {
@@ -39,7 +41,9 @@ class PythonSettings extends \Google\Model
     return $this->common;
   }
   /**
-   * @param ExperimentalFeatures
+   * Experimental features to be included during client library generation.
+   *
+   * @param ExperimentalFeatures $experimentalFeatures
    */
   public function setExperimentalFeatures(ExperimentalFeatures $experimentalFeatures)
   {
