@@ -23,12 +23,17 @@ class ListAccessPoliciesResponse extends \Google\Collection
   protected $accessPoliciesType = AccessPolicy::class;
   protected $accessPoliciesDataType = 'array';
   /**
+   * The pagination token to retrieve the next page of results. If the value is
+   * empty, no further results remain.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param AccessPolicy[]
+   * List of the AccessPolicy instances.
+   *
+   * @param AccessPolicy[] $accessPolicies
    */
   public function setAccessPolicies($accessPolicies)
   {
@@ -42,7 +47,10 @@ class ListAccessPoliciesResponse extends \Google\Collection
     return $this->accessPolicies;
   }
   /**
-   * @param string
+   * The pagination token to retrieve the next page of results. If the value is
+   * empty, no further results remain.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

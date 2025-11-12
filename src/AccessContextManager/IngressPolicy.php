@@ -24,12 +24,20 @@ class IngressPolicy extends \Google\Model
   protected $ingressToType = IngressTo::class;
   protected $ingressToDataType = '';
   /**
+   * Optional. Human-readable title for the ingress rule. The title must be
+   * unique within the perimeter and can not exceed 100 characters. Within the
+   * access policy, the combined length of all rule titles must not exceed
+   * 240,000 characters.
+   *
    * @var string
    */
   public $title;
 
   /**
-   * @param IngressFrom
+   * Defines the conditions on the source of a request causing this
+   * IngressPolicy to apply.
+   *
+   * @param IngressFrom $ingressFrom
    */
   public function setIngressFrom(IngressFrom $ingressFrom)
   {
@@ -43,7 +51,10 @@ class IngressPolicy extends \Google\Model
     return $this->ingressFrom;
   }
   /**
-   * @param IngressTo
+   * Defines the conditions on the ApiOperation and request destination that
+   * cause this IngressPolicy to apply.
+   *
+   * @param IngressTo $ingressTo
    */
   public function setIngressTo(IngressTo $ingressTo)
   {
@@ -57,7 +68,12 @@ class IngressPolicy extends \Google\Model
     return $this->ingressTo;
   }
   /**
-   * @param string
+   * Optional. Human-readable title for the ingress rule. The title must be
+   * unique within the perimeter and can not exceed 100 characters. Within the
+   * access policy, the combined length of all rule titles must not exceed
+   * 240,000 characters.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {

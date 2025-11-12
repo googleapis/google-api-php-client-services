@@ -24,7 +24,9 @@ class ReplaceServicePerimetersResponse extends \Google\Collection
   protected $servicePerimetersDataType = 'array';
 
   /**
-   * @param ServicePerimeter[]
+   * List of the Service Perimeter instances.
+   *
+   * @param ServicePerimeter[] $servicePerimeters
    */
   public function setServicePerimeters($servicePerimeters)
   {

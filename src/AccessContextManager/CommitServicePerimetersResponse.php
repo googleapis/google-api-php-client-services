@@ -24,7 +24,9 @@ class CommitServicePerimetersResponse extends \Google\Collection
   protected $servicePerimetersDataType = 'array';
 
   /**
-   * @param ServicePerimeter[]
+   * List of all the Service Perimeter instances in the Access Policy.
+   *
+   * @param ServicePerimeter[] $servicePerimeters
    */
   public function setServicePerimeters($servicePerimeters)
   {

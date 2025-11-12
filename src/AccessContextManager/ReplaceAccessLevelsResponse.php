@@ -24,7 +24,9 @@ class ReplaceAccessLevelsResponse extends \Google\Collection
   protected $accessLevelsDataType = 'array';
 
   /**
-   * @param AccessLevel[]
+   * List of the Access Level instances.
+   *
+   * @param AccessLevel[] $accessLevels
    */
   public function setAccessLevels($accessLevels)
   {

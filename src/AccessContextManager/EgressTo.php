@@ -21,22 +21,48 @@ class EgressTo extends \Google\Collection
 {
   protected $collection_key = 'roles';
   /**
+   * A list of external resources that are allowed to be accessed. Only AWS and
+   * Azure resources are supported. For Amazon S3, the supported formats are
+   * s3://BUCKET_NAME, s3a://BUCKET_NAME, and s3n://BUCKET_NAME. For Azure
+   * Storage, the supported format is
+   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches
+   * if it contains an external resource in this list (Example:
+   * s3://bucket/path). Currently '*' is not allowed.
+   *
    * @var string[]
    */
   public $externalResources;
   protected $operationsType = ApiOperation::class;
   protected $operationsDataType = 'array';
   /**
+   * A list of resources, currently only projects in the form `projects/`, that
+   * are allowed to be accessed by sources defined in the corresponding
+   * EgressFrom. A request matches if it contains a resource in this list. If
+   * `*` is specified for `resources`, then this EgressTo rule will authorize
+   * access to all resources outside the perimeter.
+   *
    * @var string[]
    */
   public $resources;
   /**
+   * IAM roles that represent the set of operations that the sources specified
+   * in the corresponding EgressFrom. are allowed to perform in this
+   * ServicePerimeter.
+   *
    * @var string[]
    */
   public $roles;
 
   /**
-   * @param string[]
+   * A list of external resources that are allowed to be accessed. Only AWS and
+   * Azure resources are supported. For Amazon S3, the supported formats are
+   * s3://BUCKET_NAME, s3a://BUCKET_NAME, and s3n://BUCKET_NAME. For Azure
+   * Storage, the supported format is
+   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches
+   * if it contains an external resource in this list (Example:
+   * s3://bucket/path). Currently '*' is not allowed.
+   *
+   * @param string[] $externalResources
    */
   public function setExternalResources($externalResources)
   {
@@ -50,7 +76,11 @@ class EgressTo extends \Google\Collection
     return $this->externalResources;
   }
   /**
-   * @param ApiOperation[]
+   * A list of ApiOperations allowed to be performed by the sources specified in
+   * the corresponding EgressFrom. A request matches if it uses an
+   * operation/service in this list.
+   *
+   * @param ApiOperation[] $operations
    */
   public function setOperations($operations)
   {
@@ -64,7 +94,13 @@ class EgressTo extends \Google\Collection
     return $this->operations;
   }
   /**
-   * @param string[]
+   * A list of resources, currently only projects in the form `projects/`, that
+   * are allowed to be accessed by sources defined in the corresponding
+   * EgressFrom. A request matches if it contains a resource in this list. If
+   * `*` is specified for `resources`, then this EgressTo rule will authorize
+   * access to all resources outside the perimeter.
+   *
+   * @param string[] $resources
    */
   public function setResources($resources)
   {
@@ -78,7 +114,11 @@ class EgressTo extends \Google\Collection
     return $this->resources;
   }
   /**
-   * @param string[]
+   * IAM roles that represent the set of operations that the sources specified
+   * in the corresponding EgressFrom. are allowed to perform in this
+   * ServicePerimeter.
+   *
+   * @param string[] $roles
    */
   public function setRoles($roles)
   {

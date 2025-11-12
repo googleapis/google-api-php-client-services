@@ -21,6 +21,9 @@ class ListServicePerimetersResponse extends \Google\Collection
 {
   protected $collection_key = 'servicePerimeters';
   /**
+   * The pagination token to retrieve the next page of results. If the value is
+   * empty, no further results remain.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -28,7 +31,10 @@ class ListServicePerimetersResponse extends \Google\Collection
   protected $servicePerimetersDataType = 'array';
 
   /**
-   * @param string
+   * The pagination token to retrieve the next page of results. If the value is
+   * empty, no further results remain.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -42,7 +48,9 @@ class ListServicePerimetersResponse extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param ServicePerimeter[]
+   * List of the Service Perimeter instances.
+   *
+   * @param ServicePerimeter[] $servicePerimeters
    */
   public function setServicePerimeters($servicePerimeters)
   {

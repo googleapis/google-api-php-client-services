@@ -23,16 +23,28 @@ class IngressTo extends \Google\Collection
   protected $operationsType = ApiOperation::class;
   protected $operationsDataType = 'array';
   /**
+   * A list of resources, currently only projects in the form `projects/`,
+   * protected by this ServicePerimeter that are allowed to be accessed by
+   * sources defined in the corresponding IngressFrom. If a single `*` is
+   * specified, then access to all resources inside the perimeter are allowed.
+   *
    * @var string[]
    */
   public $resources;
   /**
+   * IAM roles that represent the set of operations that the sources specified
+   * in the corresponding IngressFrom are allowed to perform in this
+   * ServicePerimeter.
+   *
    * @var string[]
    */
   public $roles;
 
   /**
-   * @param ApiOperation[]
+   * A list of ApiOperations allowed to be performed by the sources specified in
+   * corresponding IngressFrom in this ServicePerimeter.
+   *
+   * @param ApiOperation[] $operations
    */
   public function setOperations($operations)
   {
@@ -46,7 +58,12 @@ class IngressTo extends \Google\Collection
     return $this->operations;
   }
   /**
-   * @param string[]
+   * A list of resources, currently only projects in the form `projects/`,
+   * protected by this ServicePerimeter that are allowed to be accessed by
+   * sources defined in the corresponding IngressFrom. If a single `*` is
+   * specified, then access to all resources inside the perimeter are allowed.
+   *
+   * @param string[] $resources
    */
   public function setResources($resources)
   {
@@ -60,7 +77,11 @@ class IngressTo extends \Google\Collection
     return $this->resources;
   }
   /**
-   * @param string[]
+   * IAM roles that represent the set of operations that the sources specified
+   * in the corresponding IngressFrom are allowed to perform in this
+   * ServicePerimeter.
+   *
+   * @param string[] $roles
    */
   public function setRoles($roles)
   {

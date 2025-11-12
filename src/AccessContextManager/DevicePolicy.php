@@ -21,30 +21,45 @@ class DevicePolicy extends \Google\Collection
 {
   protected $collection_key = 'osConstraints';
   /**
+   * Allowed device management levels, an empty list allows all management
+   * levels.
+   *
    * @var string[]
    */
   public $allowedDeviceManagementLevels;
   /**
+   * Allowed encryptions statuses, an empty list allows all statuses.
+   *
    * @var string[]
    */
   public $allowedEncryptionStatuses;
   protected $osConstraintsType = OsConstraint::class;
   protected $osConstraintsDataType = 'array';
   /**
+   * Whether the device needs to be approved by the customer admin.
+   *
    * @var bool
    */
   public $requireAdminApproval;
   /**
+   * Whether the device needs to be corp owned.
+   *
    * @var bool
    */
   public $requireCorpOwned;
   /**
+   * Whether or not screenlock is required for the DevicePolicy to be true.
+   * Defaults to `false`.
+   *
    * @var bool
    */
   public $requireScreenlock;
 
   /**
-   * @param string[]
+   * Allowed device management levels, an empty list allows all management
+   * levels.
+   *
+   * @param string[] $allowedDeviceManagementLevels
    */
   public function setAllowedDeviceManagementLevels($allowedDeviceManagementLevels)
   {
@@ -58,7 +73,9 @@ class DevicePolicy extends \Google\Collection
     return $this->allowedDeviceManagementLevels;
   }
   /**
-   * @param string[]
+   * Allowed encryptions statuses, an empty list allows all statuses.
+   *
+   * @param string[] $allowedEncryptionStatuses
    */
   public function setAllowedEncryptionStatuses($allowedEncryptionStatuses)
   {
@@ -72,7 +89,9 @@ class DevicePolicy extends \Google\Collection
     return $this->allowedEncryptionStatuses;
   }
   /**
-   * @param OsConstraint[]
+   * Allowed OS versions, an empty list allows all types and all versions.
+   *
+   * @param OsConstraint[] $osConstraints
    */
   public function setOsConstraints($osConstraints)
   {
@@ -86,7 +105,9 @@ class DevicePolicy extends \Google\Collection
     return $this->osConstraints;
   }
   /**
-   * @param bool
+   * Whether the device needs to be approved by the customer admin.
+   *
+   * @param bool $requireAdminApproval
    */
   public function setRequireAdminApproval($requireAdminApproval)
   {
@@ -100,7 +121,9 @@ class DevicePolicy extends \Google\Collection
     return $this->requireAdminApproval;
   }
   /**
-   * @param bool
+   * Whether the device needs to be corp owned.
+   *
+   * @param bool $requireCorpOwned
    */
   public function setRequireCorpOwned($requireCorpOwned)
   {
@@ -114,7 +137,10 @@ class DevicePolicy extends \Google\Collection
     return $this->requireCorpOwned;
   }
   /**
-   * @param bool
+   * Whether or not screenlock is required for the DevicePolicy to be true.
+   * Defaults to `false`.
+   *
+   * @param bool $requireScreenlock
    */
   public function setRequireScreenlock($requireScreenlock)
   {
