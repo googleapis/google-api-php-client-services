@@ -20,37 +20,84 @@ namespace Google\Service\Compute;
 class InstanceGroupManagerInstanceLifecyclePolicy extends \Google\Model
 {
   /**
+   * MIG does not repair a failed or an unhealthy VM.
+   */
+  public const DEFAULT_ACTION_ON_FAILURE_DO_NOTHING = 'DO_NOTHING';
+  /**
+   * (Default) MIG automatically repairs a failed or an unhealthy VM by
+   * recreating it. For more information, see About repairing VMs in a MIG.
+   */
+  public const DEFAULT_ACTION_ON_FAILURE_REPAIR = 'REPAIR';
+  public const FORCE_UPDATE_ON_REPAIR_NO = 'NO';
+  public const FORCE_UPDATE_ON_REPAIR_YES = 'YES';
+  /**
+   * The action that a MIG performs on a failed or an unhealthy VM. A VM is
+   * marked as unhealthy when the application running on that VM fails a health
+   * check. Valid values are         - REPAIR (default): MIG automatically
+   * repairs a failed or    an unhealthy VM by recreating it. For more
+   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does
+   * not repair a failed or an unhealthy    VM.
+   *
    * @var string
    */
   public $defaultActionOnFailure;
   /**
+   * A bit indicating whether to forcefully apply the group's latest
+   * configuration when repairing a VM. Valid options are:
+   *
+   *              -  NO (default): If configuration updates are available, they
+   * are not      forcefully applied during repair. Instead, configuration
+   * updates are      applied according to the group's update policy.          -
+   * YES: If configuration updates are available, they are applied      during
+   * repair.
+   *
    * @var string
    */
   public $forceUpdateOnRepair;
 
   /**
-   * @param string
+   * The action that a MIG performs on a failed or an unhealthy VM. A VM is
+   * marked as unhealthy when the application running on that VM fails a health
+   * check. Valid values are         - REPAIR (default): MIG automatically
+   * repairs a failed or    an unhealthy VM by recreating it. For more
+   * information, see About    repairing VMs in a MIG.    - DO_NOTHING: MIG does
+   * not repair a failed or an unhealthy    VM.
+   *
+   * Accepted values: DO_NOTHING, REPAIR
+   *
+   * @param self::DEFAULT_ACTION_ON_FAILURE_* $defaultActionOnFailure
    */
   public function setDefaultActionOnFailure($defaultActionOnFailure)
   {
     $this->defaultActionOnFailure = $defaultActionOnFailure;
   }
   /**
-   * @return string
+   * @return self::DEFAULT_ACTION_ON_FAILURE_*
    */
   public function getDefaultActionOnFailure()
   {
     return $this->defaultActionOnFailure;
   }
   /**
-   * @param string
+   * A bit indicating whether to forcefully apply the group's latest
+   * configuration when repairing a VM. Valid options are:
+   *
+   *              -  NO (default): If configuration updates are available, they
+   * are not      forcefully applied during repair. Instead, configuration
+   * updates are      applied according to the group's update policy.          -
+   * YES: If configuration updates are available, they are applied      during
+   * repair.
+   *
+   * Accepted values: NO, YES
+   *
+   * @param self::FORCE_UPDATE_ON_REPAIR_* $forceUpdateOnRepair
    */
   public function setForceUpdateOnRepair($forceUpdateOnRepair)
   {
     $this->forceUpdateOnRepair = $forceUpdateOnRepair;
   }
   /**
-   * @return string
+   * @return self::FORCE_UPDATE_ON_REPAIR_*
    */
   public function getForceUpdateOnRepair()
   {

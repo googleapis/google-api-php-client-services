@@ -20,24 +20,34 @@ namespace Google\Service\Compute;
 class InstanceConsumptionInfo extends \Google\Model
 {
   /**
+   * The number of virtual CPUs that are available to the instance.
+   *
    * @var int
    */
   public $guestCpus;
   /**
+   * The amount of local SSD storage available to the instance, defined in GiB.
+   *
    * @var int
    */
   public $localSsdGb;
   /**
+   * The amount of physical memory available to the instance, defined in MiB.
+   *
    * @var int
    */
   public $memoryMb;
   /**
+   * The minimal guaranteed number of virtual CPUs that are reserved.
+   *
    * @var int
    */
   public $minNodeCpus;
 
   /**
-   * @param int
+   * The number of virtual CPUs that are available to the instance.
+   *
+   * @param int $guestCpus
    */
   public function setGuestCpus($guestCpus)
   {
@@ -51,7 +61,9 @@ class InstanceConsumptionInfo extends \Google\Model
     return $this->guestCpus;
   }
   /**
-   * @param int
+   * The amount of local SSD storage available to the instance, defined in GiB.
+   *
+   * @param int $localSsdGb
    */
   public function setLocalSsdGb($localSsdGb)
   {
@@ -65,7 +77,9 @@ class InstanceConsumptionInfo extends \Google\Model
     return $this->localSsdGb;
   }
   /**
-   * @param int
+   * The amount of physical memory available to the instance, defined in MiB.
+   *
+   * @param int $memoryMb
    */
   public function setMemoryMb($memoryMb)
   {
@@ -79,7 +93,9 @@ class InstanceConsumptionInfo extends \Google\Model
     return $this->memoryMb;
   }
   /**
-   * @param int
+   * The minimal guaranteed number of virtual CPUs that are reserved.
+   *
+   * @param int $minNodeCpus
    */
   public function setMinNodeCpus($minNodeCpus)
   {

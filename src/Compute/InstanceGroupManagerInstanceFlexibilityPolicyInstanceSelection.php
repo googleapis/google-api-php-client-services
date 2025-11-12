@@ -21,16 +21,25 @@ class InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection extends \Go
 {
   protected $collection_key = 'machineTypes';
   /**
+   * Full machine-type names, e.g. "n1-standard-16".
+   *
    * @var string[]
    */
   public $machineTypes;
   /**
+   * Preference of this instance selection. Lower number means higher
+   * preference. MIG will first try to create a VM based on the machine-type
+   * with lowest rank and fallback to next rank based on availability. Machine
+   * types and instance selections with the same rank have the same preference.
+   *
    * @var int
    */
   public $rank;
 
   /**
-   * @param string[]
+   * Full machine-type names, e.g. "n1-standard-16".
+   *
+   * @param string[] $machineTypes
    */
   public function setMachineTypes($machineTypes)
   {
@@ -44,7 +53,12 @@ class InstanceGroupManagerInstanceFlexibilityPolicyInstanceSelection extends \Go
     return $this->machineTypes;
   }
   /**
-   * @param int
+   * Preference of this instance selection. Lower number means higher
+   * preference. MIG will first try to create a VM based on the machine-type
+   * with lowest rank and fallback to next rank based on availability. Machine
+   * types and instance selections with the same rank have the same preference.
+   *
+   * @param int $rank
    */
   public function setRank($rank)
   {

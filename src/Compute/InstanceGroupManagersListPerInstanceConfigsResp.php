@@ -23,6 +23,12 @@ class InstanceGroupManagersListPerInstanceConfigsResp extends \Google\Collection
   protected $itemsType = PerInstanceConfig::class;
   protected $itemsDataType = 'array';
   /**
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
@@ -30,7 +36,9 @@ class InstanceGroupManagersListPerInstanceConfigsResp extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param PerInstanceConfig[]
+   * [Output Only] The list of PerInstanceConfig.
+   *
+   * @param PerInstanceConfig[] $items
    */
   public function setItems($items)
   {
@@ -44,7 +52,13 @@ class InstanceGroupManagersListPerInstanceConfigsResp extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -58,7 +72,9 @@ class InstanceGroupManagersListPerInstanceConfigsResp extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param InstanceGroupManagersListPerInstanceConfigsRespWarning
+   * [Output Only] Informational warning message.
+   *
+   * @param InstanceGroupManagersListPerInstanceConfigsRespWarning $warning
    */
   public function setWarning(InstanceGroupManagersListPerInstanceConfigsRespWarning $warning)
   {

@@ -20,12 +20,22 @@ namespace Google\Service\Compute;
 class ImageParams extends \Google\Model
 {
   /**
+   * Resource manager tags to be bound to the image. Tag keys and values have
+   * the same definition as resource manager tags. Keys must be in the format
+   * `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The
+   * field is ignored (both PUT & PATCH) when empty.
+   *
    * @var string[]
    */
   public $resourceManagerTags;
 
   /**
-   * @param string[]
+   * Resource manager tags to be bound to the image. Tag keys and values have
+   * the same definition as resource manager tags. Keys must be in the format
+   * `tagKeys/{tag_key_id}`, and values are in the format `tagValues/456`. The
+   * field is ignored (both PUT & PATCH) when empty.
+   *
+   * @param string[] $resourceManagerTags
    */
   public function setResourceManagerTags($resourceManagerTags)
   {

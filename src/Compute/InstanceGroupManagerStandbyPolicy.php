@@ -20,16 +20,39 @@ namespace Google\Service\Compute;
 class InstanceGroupManagerStandbyPolicy extends \Google\Model
 {
   /**
+   * MIG does not automatically resume or start VMs in the standby pool when the
+   * group scales out.
+   */
+  public const MODE_MANUAL = 'MANUAL';
+  /**
+   * MIG automatically resumes or starts VMs in the standby pool when the group
+   * scales out, and replenishes the standby pool afterwards.
+   */
+  public const MODE_SCALE_OUT_POOL = 'SCALE_OUT_POOL';
+  /**
+   * Specifies the number of seconds that the MIG should wait to suspend or stop
+   * a VM after that VM was created. The initial delay gives the initialization
+   * script the time to prepare your VM for a quick scale out. The value of
+   * initial delay must be between 0 and 3600 seconds. The default value is 0.
+   *
    * @var int
    */
   public $initialDelaySec;
   /**
+   * Defines how a MIG resumes or starts VMs from a standby pool when the group
+   * scales out. The default mode is `MANUAL`.
+   *
    * @var string
    */
   public $mode;
 
   /**
-   * @param int
+   * Specifies the number of seconds that the MIG should wait to suspend or stop
+   * a VM after that VM was created. The initial delay gives the initialization
+   * script the time to prepare your VM for a quick scale out. The value of
+   * initial delay must be between 0 and 3600 seconds. The default value is 0.
+   *
+   * @param int $initialDelaySec
    */
   public function setInitialDelaySec($initialDelaySec)
   {
@@ -43,14 +66,19 @@ class InstanceGroupManagerStandbyPolicy extends \Google\Model
     return $this->initialDelaySec;
   }
   /**
-   * @param string
+   * Defines how a MIG resumes or starts VMs from a standby pool when the group
+   * scales out. The default mode is `MANUAL`.
+   *
+   * Accepted values: MANUAL, SCALE_OUT_POOL
+   *
+   * @param self::MODE_* $mode
    */
   public function setMode($mode)
   {
     $this->mode = $mode;
   }
   /**
-   * @return string
+   * @return self::MODE_*
    */
   public function getMode()
   {

@@ -26,7 +26,9 @@ class InstanceGroupsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param InstanceGroup[]
+   * [Output Only] The list ofinstance groups that are contained in this scope.
+   *
+   * @param InstanceGroup[] $instanceGroups
    */
   public function setInstanceGroups($instanceGroups)
   {
@@ -40,7 +42,10 @@ class InstanceGroupsScopedList extends \Google\Collection
     return $this->instanceGroups;
   }
   /**
-   * @param InstanceGroupsScopedListWarning
+   * [Output Only] An informational warning that replaces the list of instance
+   * groups when the list is empty.
+   *
+   * @param InstanceGroupsScopedListWarning $warning
    */
   public function setWarning(InstanceGroupsScopedListWarning $warning)
   {

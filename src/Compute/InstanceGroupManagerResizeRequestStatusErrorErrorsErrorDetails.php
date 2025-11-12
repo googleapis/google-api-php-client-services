@@ -29,7 +29,7 @@ class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails extends \Go
   protected $quotaInfoDataType = '';
 
   /**
-   * @param ErrorInfo
+   * @param ErrorInfo $errorInfo
    */
   public function setErrorInfo(ErrorInfo $errorInfo)
   {
@@ -43,7 +43,7 @@ class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails extends \Go
     return $this->errorInfo;
   }
   /**
-   * @param Help
+   * @param Help $help
    */
   public function setHelp(Help $help)
   {
@@ -57,7 +57,7 @@ class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails extends \Go
     return $this->help;
   }
   /**
-   * @param LocalizedMessage
+   * @param LocalizedMessage $localizedMessage
    */
   public function setLocalizedMessage(LocalizedMessage $localizedMessage)
   {
@@ -71,7 +71,7 @@ class InstanceGroupManagerResizeRequestStatusErrorErrorsErrorDetails extends \Go
     return $this->localizedMessage;
   }
   /**
-   * @param QuotaExceededInfo
+   * @param QuotaExceededInfo $quotaInfo
    */
   public function setQuotaInfo(QuotaExceededInfo $quotaInfo)
   {

@@ -23,12 +23,20 @@ class InstanceGroupManagersListErrorsResponse extends \Google\Collection
   protected $itemsType = InstanceManagedByIgmError::class;
   protected $itemsDataType = 'array';
   /**
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
    * @var string
    */
   public $nextPageToken;
 
   /**
-   * @param InstanceManagedByIgmError[]
+   * [Output Only] The list of errors of the managed instance group.
+   *
+   * @param InstanceManagedByIgmError[] $items
    */
   public function setItems($items)
   {
@@ -42,7 +50,13 @@ class InstanceGroupManagersListErrorsResponse extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * [Output Only] This token allows you to get the next page of results for
+   * list requests. If the number of results is larger thanmaxResults, use the
+   * nextPageToken as a value for the query parameter pageToken in the next list
+   * request. Subsequent list requests will have their own nextPageToken to
+   * continue paging through the results.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {

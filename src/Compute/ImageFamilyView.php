@@ -23,7 +23,10 @@ class ImageFamilyView extends \Google\Model
   protected $imageDataType = '';
 
   /**
-   * @param Image
+   * The latest image that is part of the specified image family in the
+   * requested location, and that is not deprecated.
+   *
+   * @param Image $image
    */
   public function setImage(Image $image)
   {
