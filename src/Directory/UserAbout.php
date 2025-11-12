@@ -20,16 +20,26 @@ namespace Google\Service\Directory;
 class UserAbout extends \Google\Model
 {
   /**
+   * About entry can have a type which indicates the content type. It can either
+   * be plain or html. By default, notes contents are assumed to contain plain
+   * text.
+   *
    * @var string
    */
   public $contentType;
   /**
+   * Actual value of notes.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * About entry can have a type which indicates the content type. It can either
+   * be plain or html. By default, notes contents are assumed to contain plain
+   * text.
+   *
+   * @param string $contentType
    */
   public function setContentType($contentType)
   {
@@ -43,7 +53,9 @@ class UserAbout extends \Google\Model
     return $this->contentType;
   }
   /**
-   * @param string
+   * Actual value of notes.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

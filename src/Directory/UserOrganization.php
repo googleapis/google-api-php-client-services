@@ -20,56 +20,87 @@ namespace Google\Service\Directory;
 class UserOrganization extends \Google\Model
 {
   /**
+   * The cost center of the users department.
+   *
    * @var string
    */
   public $costCenter;
   /**
+   * Custom type.
+   *
    * @var string
    */
   public $customType;
   /**
+   * Department within the organization.
+   *
    * @var string
    */
   public $department;
   /**
+   * Description of the organization.
+   *
    * @var string
    */
   public $description;
   /**
+   * The domain to which the organization belongs to.
+   *
    * @var string
    */
   public $domain;
   /**
+   * The full-time equivalent millipercent within the organization (100000 =
+   * 100%).
+   *
    * @var int
    */
   public $fullTimeEquivalent;
   /**
+   * Location of the organization. This need not be fully qualified address.
+   *
    * @var string
    */
   public $location;
   /**
+   * Name of the organization
+   *
    * @var string
    */
   public $name;
   /**
+   * If it user's primary organization.
+   *
    * @var bool
    */
   public $primary;
   /**
+   * Symbol of the organization.
+   *
    * @var string
    */
   public $symbol;
   /**
+   * Title (designation) of the user in the organization.
+   *
    * @var string
    */
   public $title;
   /**
+   * Each entry can have a type which indicates standard types of that entry.
+   * For example organization could be of school work etc. In addition to the
+   * standard type an entry can have a custom type and can give it any name.
+   * Such types should have the CUSTOM value as type and also have a CustomType
+   * value.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The cost center of the users department.
+   *
+   * @param string $costCenter
    */
   public function setCostCenter($costCenter)
   {
@@ -83,7 +114,9 @@ class UserOrganization extends \Google\Model
     return $this->costCenter;
   }
   /**
-   * @param string
+   * Custom type.
+   *
+   * @param string $customType
    */
   public function setCustomType($customType)
   {
@@ -97,7 +130,9 @@ class UserOrganization extends \Google\Model
     return $this->customType;
   }
   /**
-   * @param string
+   * Department within the organization.
+   *
+   * @param string $department
    */
   public function setDepartment($department)
   {
@@ -111,7 +146,9 @@ class UserOrganization extends \Google\Model
     return $this->department;
   }
   /**
-   * @param string
+   * Description of the organization.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -125,7 +162,9 @@ class UserOrganization extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * The domain to which the organization belongs to.
+   *
+   * @param string $domain
    */
   public function setDomain($domain)
   {
@@ -139,7 +178,10 @@ class UserOrganization extends \Google\Model
     return $this->domain;
   }
   /**
-   * @param int
+   * The full-time equivalent millipercent within the organization (100000 =
+   * 100%).
+   *
+   * @param int $fullTimeEquivalent
    */
   public function setFullTimeEquivalent($fullTimeEquivalent)
   {
@@ -153,7 +195,9 @@ class UserOrganization extends \Google\Model
     return $this->fullTimeEquivalent;
   }
   /**
-   * @param string
+   * Location of the organization. This need not be fully qualified address.
+   *
+   * @param string $location
    */
   public function setLocation($location)
   {
@@ -167,7 +211,9 @@ class UserOrganization extends \Google\Model
     return $this->location;
   }
   /**
-   * @param string
+   * Name of the organization
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -181,7 +227,9 @@ class UserOrganization extends \Google\Model
     return $this->name;
   }
   /**
-   * @param bool
+   * If it user's primary organization.
+   *
+   * @param bool $primary
    */
   public function setPrimary($primary)
   {
@@ -195,7 +243,9 @@ class UserOrganization extends \Google\Model
     return $this->primary;
   }
   /**
-   * @param string
+   * Symbol of the organization.
+   *
+   * @param string $symbol
    */
   public function setSymbol($symbol)
   {
@@ -209,7 +259,9 @@ class UserOrganization extends \Google\Model
     return $this->symbol;
   }
   /**
-   * @param string
+   * Title (designation) of the user in the organization.
+   *
+   * @param string $title
    */
   public function setTitle($title)
   {
@@ -223,7 +275,13 @@ class UserOrganization extends \Google\Model
     return $this->title;
   }
   /**
-   * @param string
+   * Each entry can have a type which indicates standard types of that entry.
+   * For example organization could be of school work etc. In addition to the
+   * standard type an entry can have a custom type and can give it any name.
+   * Such types should have the CUSTOM value as type and also have a CustomType
+   * value.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

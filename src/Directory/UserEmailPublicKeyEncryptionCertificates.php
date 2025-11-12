@@ -23,20 +23,31 @@ class UserEmailPublicKeyEncryptionCertificates extends \Google\Model
         "isDefault" => "is_default",
   ];
   /**
+   * X.509 encryption certificate in `PEM` format. Must only be an end-entity
+   * (leaf) certificate.
+   *
    * @var string
    */
   public $certificate;
   /**
+   * Whether this is the default certificate for the given email address.
+   *
    * @var bool
    */
   public $isDefault;
   /**
+   * Denotes the certificate's state in its lifecycle. Possible values are
+   * `not_yet_validated`, `valid`, `invalid`, `expired`, and `revoked`.
+   *
    * @var string
    */
   public $state;
 
   /**
-   * @param string
+   * X.509 encryption certificate in `PEM` format. Must only be an end-entity
+   * (leaf) certificate.
+   *
+   * @param string $certificate
    */
   public function setCertificate($certificate)
   {
@@ -50,7 +61,9 @@ class UserEmailPublicKeyEncryptionCertificates extends \Google\Model
     return $this->certificate;
   }
   /**
-   * @param bool
+   * Whether this is the default certificate for the given email address.
+   *
+   * @param bool $isDefault
    */
   public function setIsDefault($isDefault)
   {
@@ -64,7 +77,10 @@ class UserEmailPublicKeyEncryptionCertificates extends \Google\Model
     return $this->isDefault;
   }
   /**
-   * @param string
+   * Denotes the certificate's state in its lifecycle. Possible values are
+   * `not_yet_validated`, `valid`, `invalid`, `expired`, and `revoked`.
+   *
+   * @param string $state
    */
   public function setState($state)
   {

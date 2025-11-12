@@ -20,20 +20,30 @@ namespace Google\Service\Directory;
 class UserGender extends \Google\Model
 {
   /**
+   * AddressMeAs. A human-readable string containing the proper way to refer to
+   * the profile owner by humans for example he/him/his or they/them/their.
+   *
    * @var string
    */
   public $addressMeAs;
   /**
+   * Custom gender.
+   *
    * @var string
    */
   public $customGender;
   /**
+   * Gender.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * AddressMeAs. A human-readable string containing the proper way to refer to
+   * the profile owner by humans for example he/him/his or they/them/their.
+   *
+   * @param string $addressMeAs
    */
   public function setAddressMeAs($addressMeAs)
   {
@@ -47,7 +57,9 @@ class UserGender extends \Google\Model
     return $this->addressMeAs;
   }
   /**
-   * @param string
+   * Custom gender.
+   *
+   * @param string $customGender
    */
   public function setCustomGender($customGender)
   {
@@ -61,7 +73,9 @@ class UserGender extends \Google\Model
     return $this->customGender;
   }
   /**
-   * @param string
+   * Gender.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

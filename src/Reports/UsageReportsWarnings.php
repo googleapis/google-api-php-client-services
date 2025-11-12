@@ -21,18 +21,28 @@ class UsageReportsWarnings extends \Google\Collection
 {
   protected $collection_key = 'data';
   /**
+   * Machine readable code or warning type. The warning code value is `200`.
+   *
    * @var string
    */
   public $code;
   protected $dataType = UsageReportsWarningsData::class;
   protected $dataDataType = 'array';
   /**
+   * The human readable messages for a warning are: - Data is not available
+   * warning - Sorry, data for date yyyy-mm-dd for application "`application
+   * name`" is not available. - Partial data is available warning - Data for
+   * date yyyy-mm-dd for application "`application name`" is not available right
+   * now, please try again after a few hours.
+   *
    * @var string
    */
   public $message;
 
   /**
-   * @param string
+   * Machine readable code or warning type. The warning code value is `200`.
+   *
+   * @param string $code
    */
   public function setCode($code)
   {
@@ -46,7 +56,9 @@ class UsageReportsWarnings extends \Google\Collection
     return $this->code;
   }
   /**
-   * @param UsageReportsWarningsData[]
+   * Key-value pairs to give detailed information on the warning.
+   *
+   * @param UsageReportsWarningsData[] $data
    */
   public function setData($data)
   {
@@ -60,7 +72,13 @@ class UsageReportsWarnings extends \Google\Collection
     return $this->data;
   }
   /**
-   * @param string
+   * The human readable messages for a warning are: - Data is not available
+   * warning - Sorry, data for date yyyy-mm-dd for application "`application
+   * name`" is not available. - Partial data is available warning - Data for
+   * date yyyy-mm-dd for application "`application name`" is not available right
+   * now, please try again after a few hours.
+   *
+   * @param string $message
    */
   public function setMessage($message)
   {

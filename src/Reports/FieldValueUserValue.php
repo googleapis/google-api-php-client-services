@@ -20,12 +20,16 @@ namespace Google\Service\Reports;
 class FieldValueUserValue extends \Google\Model
 {
   /**
+   * Email of the user.
+   *
    * @var string
    */
   public $email;
 
   /**
-   * @param string
+   * Email of the user.
+   *
+   * @param string $email
    */
   public function setEmail($email)
   {

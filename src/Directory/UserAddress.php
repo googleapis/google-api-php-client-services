@@ -20,60 +20,94 @@ namespace Google\Service\Directory;
 class UserAddress extends \Google\Model
 {
   /**
+   * Country.
+   *
    * @var string
    */
   public $country;
   /**
+   * Country code.
+   *
    * @var string
    */
   public $countryCode;
   /**
+   * Custom type.
+   *
    * @var string
    */
   public $customType;
   /**
+   * Extended Address.
+   *
    * @var string
    */
   public $extendedAddress;
   /**
+   * Formatted address.
+   *
    * @var string
    */
   public $formatted;
   /**
+   * Locality.
+   *
    * @var string
    */
   public $locality;
   /**
+   * Other parts of address.
+   *
    * @var string
    */
   public $poBox;
   /**
+   * Postal code.
+   *
    * @var string
    */
   public $postalCode;
   /**
+   * If this is user's primary address. Only one entry could be marked as
+   * primary.
+   *
    * @var bool
    */
   public $primary;
   /**
+   * Region.
+   *
    * @var string
    */
   public $region;
   /**
+   * User supplied address was structured. Structured addresses are NOT
+   * supported at this time. You might be able to write structured addresses but
+   * any values will eventually be clobbered.
+   *
    * @var bool
    */
   public $sourceIsStructured;
   /**
+   * Street.
+   *
    * @var string
    */
   public $streetAddress;
   /**
+   * Each entry can have a type which indicates standard values of that entry.
+   * For example address could be of home work etc. In addition to the standard
+   * type an entry can have a custom type and can take any value. Such type
+   * should have the CUSTOM value as type and also have a customType value.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * Country.
+   *
+   * @param string $country
    */
   public function setCountry($country)
   {
@@ -87,7 +121,9 @@ class UserAddress extends \Google\Model
     return $this->country;
   }
   /**
-   * @param string
+   * Country code.
+   *
+   * @param string $countryCode
    */
   public function setCountryCode($countryCode)
   {
@@ -101,7 +137,9 @@ class UserAddress extends \Google\Model
     return $this->countryCode;
   }
   /**
-   * @param string
+   * Custom type.
+   *
+   * @param string $customType
    */
   public function setCustomType($customType)
   {
@@ -115,7 +153,9 @@ class UserAddress extends \Google\Model
     return $this->customType;
   }
   /**
-   * @param string
+   * Extended Address.
+   *
+   * @param string $extendedAddress
    */
   public function setExtendedAddress($extendedAddress)
   {
@@ -129,7 +169,9 @@ class UserAddress extends \Google\Model
     return $this->extendedAddress;
   }
   /**
-   * @param string
+   * Formatted address.
+   *
+   * @param string $formatted
    */
   public function setFormatted($formatted)
   {
@@ -143,7 +185,9 @@ class UserAddress extends \Google\Model
     return $this->formatted;
   }
   /**
-   * @param string
+   * Locality.
+   *
+   * @param string $locality
    */
   public function setLocality($locality)
   {
@@ -157,7 +201,9 @@ class UserAddress extends \Google\Model
     return $this->locality;
   }
   /**
-   * @param string
+   * Other parts of address.
+   *
+   * @param string $poBox
    */
   public function setPoBox($poBox)
   {
@@ -171,7 +217,9 @@ class UserAddress extends \Google\Model
     return $this->poBox;
   }
   /**
-   * @param string
+   * Postal code.
+   *
+   * @param string $postalCode
    */
   public function setPostalCode($postalCode)
   {
@@ -185,7 +233,10 @@ class UserAddress extends \Google\Model
     return $this->postalCode;
   }
   /**
-   * @param bool
+   * If this is user's primary address. Only one entry could be marked as
+   * primary.
+   *
+   * @param bool $primary
    */
   public function setPrimary($primary)
   {
@@ -199,7 +250,9 @@ class UserAddress extends \Google\Model
     return $this->primary;
   }
   /**
-   * @param string
+   * Region.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -213,7 +266,11 @@ class UserAddress extends \Google\Model
     return $this->region;
   }
   /**
-   * @param bool
+   * User supplied address was structured. Structured addresses are NOT
+   * supported at this time. You might be able to write structured addresses but
+   * any values will eventually be clobbered.
+   *
+   * @param bool $sourceIsStructured
    */
   public function setSourceIsStructured($sourceIsStructured)
   {
@@ -227,7 +284,9 @@ class UserAddress extends \Google\Model
     return $this->sourceIsStructured;
   }
   /**
-   * @param string
+   * Street.
+   *
+   * @param string $streetAddress
    */
   public function setStreetAddress($streetAddress)
   {
@@ -241,7 +300,12 @@ class UserAddress extends \Google\Model
     return $this->streetAddress;
   }
   /**
-   * @param string
+   * Each entry can have a type which indicates standard values of that entry.
+   * For example address could be of home work etc. In addition to the standard
+   * type an entry can have a custom type and can take any value. Such type
+   * should have the CUSTOM value as type and also have a customType value.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

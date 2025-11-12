@@ -24,7 +24,9 @@ class FieldValueUserListValue extends \Google\Collection
   protected $valuesDataType = 'array';
 
   /**
-   * @param FieldValueUserValue[]
+   * List of users.
+   *
+   * @param FieldValueUserValue[] $values
    */
   public function setValues($values)
   {

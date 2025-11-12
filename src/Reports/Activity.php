@@ -23,6 +23,8 @@ class Activity extends \Google\Collection
   protected $actorType = ActivityActor::class;
   protected $actorDataType = '';
   /**
+   * ETag of the entry.
+   *
    * @var string
    */
   public $etag;
@@ -31,16 +33,28 @@ class Activity extends \Google\Collection
   protected $idType = ActivityId::class;
   protected $idDataType = '';
   /**
+   * IP address of the user doing the action. This is the Internet Protocol (IP)
+   * address of the user when logging into Google Workspace, which may or may
+   * not reflect the user's physical location. For example, the IP address can
+   * be the user's proxy server's address or a virtual private network (VPN)
+   * address. The API supports IPv4 and IPv6.
+   *
    * @var string
    */
   public $ipAddress;
   /**
+   * The type of API resource. For an activity report, the value is
+   * `audit#activity`.
+   *
    * @var string
    */
   public $kind;
   protected $networkInfoType = ActivityNetworkInfo::class;
   protected $networkInfoDataType = '';
   /**
+   * This is the domain that is affected by the report's event. For example
+   * domain of Admin console or the Drive application's document owner.
+   *
    * @var string
    */
   public $ownerDomain;
@@ -48,7 +62,9 @@ class Activity extends \Google\Collection
   protected $resourceDetailsDataType = 'array';
 
   /**
-   * @param ActivityActor
+   * User doing the action.
+   *
+   * @param ActivityActor $actor
    */
   public function setActor(ActivityActor $actor)
   {
@@ -62,7 +78,9 @@ class Activity extends \Google\Collection
     return $this->actor;
   }
   /**
-   * @param string
+   * ETag of the entry.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -76,7 +94,9 @@ class Activity extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param ActivityEvents[]
+   * Activity events in the report.
+   *
+   * @param ActivityEvents[] $events
    */
   public function setEvents($events)
   {
@@ -90,7 +110,9 @@ class Activity extends \Google\Collection
     return $this->events;
   }
   /**
-   * @param ActivityId
+   * Unique identifier for each activity record.
+   *
+   * @param ActivityId $id
    */
   public function setId(ActivityId $id)
   {
@@ -104,7 +126,13 @@ class Activity extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param string
+   * IP address of the user doing the action. This is the Internet Protocol (IP)
+   * address of the user when logging into Google Workspace, which may or may
+   * not reflect the user's physical location. For example, the IP address can
+   * be the user's proxy server's address or a virtual private network (VPN)
+   * address. The API supports IPv4 and IPv6.
+   *
+   * @param string $ipAddress
    */
   public function setIpAddress($ipAddress)
   {
@@ -118,7 +146,10 @@ class Activity extends \Google\Collection
     return $this->ipAddress;
   }
   /**
-   * @param string
+   * The type of API resource. For an activity report, the value is
+   * `audit#activity`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -132,7 +163,9 @@ class Activity extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param ActivityNetworkInfo
+   * Network information of the user doing the action.
+   *
+   * @param ActivityNetworkInfo $networkInfo
    */
   public function setNetworkInfo(ActivityNetworkInfo $networkInfo)
   {
@@ -146,7 +179,10 @@ class Activity extends \Google\Collection
     return $this->networkInfo;
   }
   /**
-   * @param string
+   * This is the domain that is affected by the report's event. For example
+   * domain of Admin console or the Drive application's document owner.
+   *
+   * @param string $ownerDomain
    */
   public function setOwnerDomain($ownerDomain)
   {
@@ -160,7 +196,9 @@ class Activity extends \Google\Collection
     return $this->ownerDomain;
   }
   /**
-   * @param ResourceDetails[]
+   * Details of the resource on which the action was performed.
+   *
+   * @param ResourceDetails[] $resourceDetails
    */
   public function setResourceDetails($resourceDetails)
   {

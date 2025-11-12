@@ -20,20 +20,28 @@ namespace Google\Service\Directory;
 class UserSshPublicKey extends \Google\Model
 {
   /**
+   * An expiration time in microseconds since epoch.
+   *
    * @var string
    */
   public $expirationTimeUsec;
   /**
+   * A SHA-256 fingerprint of the SSH public key. (Read-only)
+   *
    * @var string
    */
   public $fingerprint;
   /**
+   * An SSH public key.
+   *
    * @var string
    */
   public $key;
 
   /**
-   * @param string
+   * An expiration time in microseconds since epoch.
+   *
+   * @param string $expirationTimeUsec
    */
   public function setExpirationTimeUsec($expirationTimeUsec)
   {
@@ -47,7 +55,9 @@ class UserSshPublicKey extends \Google\Model
     return $this->expirationTimeUsec;
   }
   /**
-   * @param string
+   * A SHA-256 fingerprint of the SSH public key. (Read-only)
+   *
+   * @param string $fingerprint
    */
   public function setFingerprint($fingerprint)
   {
@@ -61,7 +71,9 @@ class UserSshPublicKey extends \Google\Model
     return $this->fingerprint;
   }
   /**
-   * @param string
+   * An SSH public key.
+   *
+   * @param string $key
    */
   public function setKey($key)
   {

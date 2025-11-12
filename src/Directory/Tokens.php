@@ -21,18 +21,24 @@ class Tokens extends \Google\Collection
 {
   protected $collection_key = 'items';
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   protected $itemsType = Token::class;
   protected $itemsDataType = 'array';
   /**
+   * The type of the API resource. This is always `admin#directory#tokenList`.
+   *
    * @var string
    */
   public $kind;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -46,7 +52,9 @@ class Tokens extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param Token[]
+   * A list of Token resources.
+   *
+   * @param Token[] $items
    */
   public function setItems($items)
   {
@@ -60,7 +68,9 @@ class Tokens extends \Google\Collection
     return $this->items;
   }
   /**
-   * @param string
+   * The type of the API resource. This is always `admin#directory#tokenList`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {

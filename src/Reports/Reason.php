@@ -20,12 +20,16 @@ namespace Google\Service\Reports;
 class Reason extends \Google\Model
 {
   /**
+   * The type of the reason.
+   *
    * @var string
    */
   public $reasonType;
 
   /**
-   * @param string
+   * The type of the reason.
+   *
+   * @param string $reasonType
    */
   public function setReasonType($reasonType)
   {

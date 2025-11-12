@@ -20,24 +20,35 @@ namespace Google\Service\Directory;
 class UserName extends \Google\Model
 {
   /**
+   * The user's display name. Limit: 256 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The user's last name. Required when creating a user account.
+   *
    * @var string
    */
   public $familyName;
   /**
+   * The user's full name formed by concatenating the first and last name
+   * values.
+   *
    * @var string
    */
   public $fullName;
   /**
+   * The user's first name. Required when creating a user account.
+   *
    * @var string
    */
   public $givenName;
 
   /**
-   * @param string
+   * The user's display name. Limit: 256 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -51,7 +62,9 @@ class UserName extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * The user's last name. Required when creating a user account.
+   *
+   * @param string $familyName
    */
   public function setFamilyName($familyName)
   {
@@ -65,7 +78,10 @@ class UserName extends \Google\Model
     return $this->familyName;
   }
   /**
-   * @param string
+   * The user's full name formed by concatenating the first and last name
+   * values.
+   *
+   * @param string $fullName
    */
   public function setFullName($fullName)
   {
@@ -79,7 +95,9 @@ class UserName extends \Google\Model
     return $this->fullName;
   }
   /**
-   * @param string
+   * The user's first name. Required when creating a user account.
+   *
+   * @param string $givenName
    */
   public function setGivenName($givenName)
   {

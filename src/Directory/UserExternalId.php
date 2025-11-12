@@ -20,20 +20,28 @@ namespace Google\Service\Directory;
 class UserExternalId extends \Google\Model
 {
   /**
+   * Custom type.
+   *
    * @var string
    */
   public $customType;
   /**
+   * The type of the Id.
+   *
    * @var string
    */
   public $type;
   /**
+   * The value of the id.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param string
+   * Custom type.
+   *
+   * @param string $customType
    */
   public function setCustomType($customType)
   {
@@ -47,7 +55,9 @@ class UserExternalId extends \Google\Model
     return $this->customType;
   }
   /**
-   * @param string
+   * The type of the Id.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -61,7 +71,9 @@ class UserExternalId extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * The value of the id.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

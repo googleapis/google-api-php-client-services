@@ -24,18 +24,27 @@ class Users extends \Google\Collection
         "triggerEvent" => "trigger_event",
   ];
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Kind of resource this is.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Token used to access next page of this result. The page token is only valid
+   * for three days.
+   *
    * @var string
    */
   public $nextPageToken;
   /**
+   * Event that triggered this response (only used in case of Push Response)
+   *
    * @var string
    */
   public $triggerEvent;
@@ -43,7 +52,9 @@ class Users extends \Google\Collection
   protected $usersDataType = 'array';
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -57,7 +68,9 @@ class Users extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param string
+   * Kind of resource this is.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -71,7 +84,10 @@ class Users extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param string
+   * Token used to access next page of this result. The page token is only valid
+   * for three days.
+   *
+   * @param string $nextPageToken
    */
   public function setNextPageToken($nextPageToken)
   {
@@ -85,7 +101,9 @@ class Users extends \Google\Collection
     return $this->nextPageToken;
   }
   /**
-   * @param string
+   * Event that triggered this response (only used in case of Push Response)
+   *
+   * @param string $triggerEvent
    */
   public function setTriggerEvent($triggerEvent)
   {
@@ -99,7 +117,9 @@ class Users extends \Google\Collection
     return $this->triggerEvent;
   }
   /**
-   * @param User[]
+   * A list of user objects.
+   *
+   * @param User[] $users
    */
   public function setUsers($users)
   {

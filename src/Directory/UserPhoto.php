@@ -20,40 +20,68 @@ namespace Google\Service\Directory;
 class UserPhoto extends \Google\Model
 {
   /**
+   * ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * Height of the photo in pixels.
+   *
    * @var int
    */
   public $height;
   /**
+   * The ID the API uses to uniquely identify the user.
+   *
    * @var string
    */
   public $id;
   /**
+   * The type of the API resource. For Photo resources, this is
+   * `admin#directory#user#photo`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The MIME type of the photo. Allowed values are `JPEG`, `PNG`, `GIF`, `BMP`,
+   * `TIFF`, and web-safe base64 encoding.
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * The user photo's upload data in [web-safe
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in
+   * bytes. This means: * The slash (/) character is replaced with the
+   * underscore (_) character. * The plus sign (+) character is replaced with
+   * the hyphen (-) character. * The equals sign (=) character is replaced with
+   * the asterisk (*). * For padding, the period (.) character is used instead
+   * of the RFC-4648 baseURL definition which uses the equals sign (=) for
+   * padding. This is done to simplify URL-parsing. * Whatever the size of the
+   * photo being uploaded, the API downsizes it to 96x96 pixels.
+   *
    * @var string
    */
   public $photoData;
   /**
+   * The user's primary email address.
+   *
    * @var string
    */
   public $primaryEmail;
   /**
+   * Width of the photo in pixels.
+   *
    * @var int
    */
   public $width;
 
   /**
-   * @param string
+   * ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -67,7 +95,9 @@ class UserPhoto extends \Google\Model
     return $this->etag;
   }
   /**
-   * @param int
+   * Height of the photo in pixels.
+   *
+   * @param int $height
    */
   public function setHeight($height)
   {
@@ -81,7 +111,9 @@ class UserPhoto extends \Google\Model
     return $this->height;
   }
   /**
-   * @param string
+   * The ID the API uses to uniquely identify the user.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -95,7 +127,10 @@ class UserPhoto extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * The type of the API resource. For Photo resources, this is
+   * `admin#directory#user#photo`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -109,7 +144,10 @@ class UserPhoto extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * The MIME type of the photo. Allowed values are `JPEG`, `PNG`, `GIF`, `BMP`,
+   * `TIFF`, and web-safe base64 encoding.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -123,7 +161,17 @@ class UserPhoto extends \Google\Model
     return $this->mimeType;
   }
   /**
-   * @param string
+   * The user photo's upload data in [web-safe
+   * Base64](https://en.wikipedia.org/wiki/Base64#URL_applications) format in
+   * bytes. This means: * The slash (/) character is replaced with the
+   * underscore (_) character. * The plus sign (+) character is replaced with
+   * the hyphen (-) character. * The equals sign (=) character is replaced with
+   * the asterisk (*). * For padding, the period (.) character is used instead
+   * of the RFC-4648 baseURL definition which uses the equals sign (=) for
+   * padding. This is done to simplify URL-parsing. * Whatever the size of the
+   * photo being uploaded, the API downsizes it to 96x96 pixels.
+   *
+   * @param string $photoData
    */
   public function setPhotoData($photoData)
   {
@@ -137,7 +185,9 @@ class UserPhoto extends \Google\Model
     return $this->photoData;
   }
   /**
-   * @param string
+   * The user's primary email address.
+   *
+   * @param string $primaryEmail
    */
   public function setPrimaryEmail($primaryEmail)
   {
@@ -151,7 +201,9 @@ class UserPhoto extends \Google\Model
     return $this->primaryEmail;
   }
   /**
-   * @param int
+   * Width of the photo in pixels.
+   *
+   * @param int $width
    */
   public function setWidth($width)
   {

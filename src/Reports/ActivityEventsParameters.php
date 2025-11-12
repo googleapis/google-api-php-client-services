@@ -21,36 +21,50 @@ class ActivityEventsParameters extends \Google\Collection
 {
   protected $collection_key = 'multiValue';
   /**
+   * Boolean value of the parameter.
+   *
    * @var bool
    */
   public $boolValue;
   /**
+   * Integer value of the parameter.
+   *
    * @var string
    */
   public $intValue;
   protected $messageValueType = ActivityEventsParametersMessageValue::class;
   protected $messageValueDataType = '';
   /**
+   * Integer values of the parameter.
+   *
    * @var string[]
    */
   public $multiIntValue;
   protected $multiMessageValueType = ActivityEventsParametersMultiMessageValue::class;
   protected $multiMessageValueDataType = 'array';
   /**
+   * String values of the parameter.
+   *
    * @var string[]
    */
   public $multiValue;
   /**
+   * The name of the parameter.
+   *
    * @var string
    */
   public $name;
   /**
+   * String value of the parameter.
+   *
    * @var string
    */
   public $value;
 
   /**
-   * @param bool
+   * Boolean value of the parameter.
+   *
+   * @param bool $boolValue
    */
   public function setBoolValue($boolValue)
   {
@@ -64,7 +78,9 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->boolValue;
   }
   /**
-   * @param string
+   * Integer value of the parameter.
+   *
+   * @param string $intValue
    */
   public function setIntValue($intValue)
   {
@@ -78,7 +94,12 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->intValue;
   }
   /**
-   * @param ActivityEventsParametersMessageValue
+   * Nested parameter value pairs associated with this parameter. Complex value
+   * type for a parameter are returned as a list of parameter values. For
+   * example, the address parameter may have a value as `[{parameter: [{name:
+   * city, value: abc}]}]`
+   *
+   * @param ActivityEventsParametersMessageValue $messageValue
    */
   public function setMessageValue(ActivityEventsParametersMessageValue $messageValue)
   {
@@ -92,7 +113,9 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->messageValue;
   }
   /**
-   * @param string[]
+   * Integer values of the parameter.
+   *
+   * @param string[] $multiIntValue
    */
   public function setMultiIntValue($multiIntValue)
   {
@@ -106,7 +129,9 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->multiIntValue;
   }
   /**
-   * @param ActivityEventsParametersMultiMessageValue[]
+   * List of `messageValue` objects.
+   *
+   * @param ActivityEventsParametersMultiMessageValue[] $multiMessageValue
    */
   public function setMultiMessageValue($multiMessageValue)
   {
@@ -120,7 +145,9 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->multiMessageValue;
   }
   /**
-   * @param string[]
+   * String values of the parameter.
+   *
+   * @param string[] $multiValue
    */
   public function setMultiValue($multiValue)
   {
@@ -134,7 +161,9 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->multiValue;
   }
   /**
-   * @param string
+   * The name of the parameter.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -148,7 +177,9 @@ class ActivityEventsParameters extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string
+   * String value of the parameter.
+   *
+   * @param string $value
    */
   public function setValue($value)
   {

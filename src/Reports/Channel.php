@@ -20,48 +20,77 @@ namespace Google\Service\Reports;
 class Channel extends \Google\Model
 {
   /**
+   * The address where notifications are delivered for this channel.
+   *
    * @var string
    */
   public $address;
   /**
+   * Date and time of notification channel expiration, expressed as a Unix
+   * timestamp, in milliseconds. Optional.
+   *
    * @var string
    */
   public $expiration;
   /**
+   * A UUID or similar unique string that identifies this channel.
+   *
    * @var string
    */
   public $id;
   /**
+   * Identifies this as a notification channel used to watch for changes to a
+   * resource, which is "`api#channel`".
+   *
    * @var string
    */
   public $kind;
   /**
+   * Additional parameters controlling delivery channel behavior. Optional.
+   *
    * @var string[]
    */
   public $params;
   /**
+   * A Boolean value to indicate whether payload is wanted. A payload is data
+   * that is sent in the body of an HTTP POST, PUT, or PATCH message and
+   * contains important information about the request. Optional.
+   *
    * @var bool
    */
   public $payload;
   /**
+   * An opaque ID that identifies the resource being watched on this channel.
+   * Stable across different API versions.
+   *
    * @var string
    */
   public $resourceId;
   /**
+   * A version-specific identifier for the watched resource.
+   *
    * @var string
    */
   public $resourceUri;
   /**
+   * An arbitrary string delivered to the target address with each notification
+   * delivered over this channel. Optional.
+   *
    * @var string
    */
   public $token;
   /**
+   * The type of delivery mechanism used for this channel. The value should be
+   * set to `"web_hook"`.
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param string
+   * The address where notifications are delivered for this channel.
+   *
+   * @param string $address
    */
   public function setAddress($address)
   {
@@ -75,7 +104,10 @@ class Channel extends \Google\Model
     return $this->address;
   }
   /**
-   * @param string
+   * Date and time of notification channel expiration, expressed as a Unix
+   * timestamp, in milliseconds. Optional.
+   *
+   * @param string $expiration
    */
   public function setExpiration($expiration)
   {
@@ -89,7 +121,9 @@ class Channel extends \Google\Model
     return $this->expiration;
   }
   /**
-   * @param string
+   * A UUID or similar unique string that identifies this channel.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -103,7 +137,10 @@ class Channel extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * Identifies this as a notification channel used to watch for changes to a
+   * resource, which is "`api#channel`".
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -117,7 +154,9 @@ class Channel extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string[]
+   * Additional parameters controlling delivery channel behavior. Optional.
+   *
+   * @param string[] $params
    */
   public function setParams($params)
   {
@@ -131,7 +170,11 @@ class Channel extends \Google\Model
     return $this->params;
   }
   /**
-   * @param bool
+   * A Boolean value to indicate whether payload is wanted. A payload is data
+   * that is sent in the body of an HTTP POST, PUT, or PATCH message and
+   * contains important information about the request. Optional.
+   *
+   * @param bool $payload
    */
   public function setPayload($payload)
   {
@@ -145,7 +188,10 @@ class Channel extends \Google\Model
     return $this->payload;
   }
   /**
-   * @param string
+   * An opaque ID that identifies the resource being watched on this channel.
+   * Stable across different API versions.
+   *
+   * @param string $resourceId
    */
   public function setResourceId($resourceId)
   {
@@ -159,7 +205,9 @@ class Channel extends \Google\Model
     return $this->resourceId;
   }
   /**
-   * @param string
+   * A version-specific identifier for the watched resource.
+   *
+   * @param string $resourceUri
    */
   public function setResourceUri($resourceUri)
   {
@@ -173,7 +221,10 @@ class Channel extends \Google\Model
     return $this->resourceUri;
   }
   /**
-   * @param string
+   * An arbitrary string delivered to the target address with each notification
+   * delivered over this channel. Optional.
+   *
+   * @param string $token
    */
   public function setToken($token)
   {
@@ -187,7 +238,10 @@ class Channel extends \Google\Model
     return $this->token;
   }
   /**
-   * @param string
+   * The type of delivery mechanism used for this channel. The value should be
+   * set to `"web_hook"`.
+   *
+   * @param string $type
    */
   public function setType($type)
   {

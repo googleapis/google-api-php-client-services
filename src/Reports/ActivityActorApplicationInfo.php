@@ -20,20 +20,28 @@ namespace Google\Service\Reports;
 class ActivityActorApplicationInfo extends \Google\Model
 {
   /**
+   * Name of the application used to perform the action.
+   *
    * @var string
    */
   public $applicationName;
   /**
+   * Whether the application was impersonating a user.
+   *
    * @var bool
    */
   public $impersonation;
   /**
+   * OAuth client id of the third party application used to perform the action.
+   *
    * @var string
    */
   public $oauthClientId;
 
   /**
-   * @param string
+   * Name of the application used to perform the action.
+   *
+   * @param string $applicationName
    */
   public function setApplicationName($applicationName)
   {
@@ -47,7 +55,9 @@ class ActivityActorApplicationInfo extends \Google\Model
     return $this->applicationName;
   }
   /**
-   * @param bool
+   * Whether the application was impersonating a user.
+   *
+   * @param bool $impersonation
    */
   public function setImpersonation($impersonation)
   {
@@ -61,7 +71,9 @@ class ActivityActorApplicationInfo extends \Google\Model
     return $this->impersonation;
   }
   /**
-   * @param string
+   * OAuth client id of the third party application used to perform the action.
+   *
+   * @param string $oauthClientId
    */
   public function setOauthClientId($oauthClientId)
   {

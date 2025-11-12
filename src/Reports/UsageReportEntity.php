@@ -20,28 +20,42 @@ namespace Google\Service\Reports;
 class UsageReportEntity extends \Google\Model
 {
   /**
+   * Output only. The unique identifier of the customer's account.
+   *
    * @var string
    */
   public $customerId;
   /**
+   * Output only. Object key. Only relevant if entity.type = "OBJECT" Note:
+   * external-facing name of report is "Entities" rather than "Objects".
+   *
    * @var string
    */
   public $entityId;
   /**
+   * Output only. The user's immutable Google Workspace profile identifier.
+   *
    * @var string
    */
   public $profileId;
   /**
+   * Output only. The type of item. The value is `user`.
+   *
    * @var string
    */
   public $type;
   /**
+   * Output only. The user's email address. Only relevant if entity.type =
+   * "USER"
+   *
    * @var string
    */
   public $userEmail;
 
   /**
-   * @param string
+   * Output only. The unique identifier of the customer's account.
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {
@@ -55,7 +69,10 @@ class UsageReportEntity extends \Google\Model
     return $this->customerId;
   }
   /**
-   * @param string
+   * Output only. Object key. Only relevant if entity.type = "OBJECT" Note:
+   * external-facing name of report is "Entities" rather than "Objects".
+   *
+   * @param string $entityId
    */
   public function setEntityId($entityId)
   {
@@ -69,7 +86,9 @@ class UsageReportEntity extends \Google\Model
     return $this->entityId;
   }
   /**
-   * @param string
+   * Output only. The user's immutable Google Workspace profile identifier.
+   *
+   * @param string $profileId
    */
   public function setProfileId($profileId)
   {
@@ -83,7 +102,9 @@ class UsageReportEntity extends \Google\Model
     return $this->profileId;
   }
   /**
-   * @param string
+   * Output only. The type of item. The value is `user`.
+   *
+   * @param string $type
    */
   public function setType($type)
   {
@@ -97,7 +118,10 @@ class UsageReportEntity extends \Google\Model
     return $this->type;
   }
   /**
-   * @param string
+   * Output only. The user's email address. Only relevant if entity.type =
+   * "USER"
+   *
+   * @param string $userEmail
    */
   public function setUserEmail($userEmail)
   {

@@ -21,34 +21,62 @@ class User extends \Google\Collection
 {
   protected $collection_key = 'nonEditableAliases';
   /**
+   * The list of the user's addresses. The maximum allowed data size for this
+   * field is 10KB.
+   *
    * @var array
    */
   public $addresses;
   /**
+   * Output only. This property is `true` if the user has completed an initial
+   * login and accepted the Terms of Service agreement.
+   *
    * @var bool
    */
   public $agreedToTerms;
   /**
+   * Output only. The list of the user's alias email addresses.
+   *
    * @var string[]
    */
   public $aliases;
   /**
+   * Indicates if user is archived.
+   *
    * @var bool
    */
   public $archived;
   /**
+   * Indicates if the user is forced to change their password at next login.
+   * This setting doesn't apply when [the user signs in via a third-party
+   * identity provider](https://support.google.com/a/answer/60224).
+   *
    * @var bool
    */
   public $changePasswordAtNextLogin;
   /**
+   * User's G Suite account creation time. (Read-only)
+   *
    * @var string
    */
   public $creationTime;
   /**
+   * Custom fields of the user. The key is a `schema_name` and its values are
+   * `'field_name': 'field_value'`.
+   *
    * @var array[]
    */
   public $customSchemas;
   /**
+   * Output only. The customer ID to [retrieve all account users](https://develo
+   * pers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users.html#get_all_users). You can use the alias `my_customer` to represent
+   * your account's `customerId`. As a reseller administrator, you can use the
+   * resold customer account's `customerId`. To get a `customerId`, use the
+   * account's primary domain in the `domain` parameter of a [users.list](https:
+   * //developers.google.com/workspace/admin/directory/v1/reference/users/list)
+   * request.
+   *
    * @var string
    */
   public $customerId;
@@ -57,154 +85,274 @@ class User extends \Google\Collection
    */
   public $deletionTime;
   /**
+   * The list of the user's email addresses. The maximum allowed data size for
+   * this field is 10KB. This excludes `publicKeyEncryptionCertificates`.
+   *
    * @var array
    */
   public $emails;
   /**
+   * Output only. ETag of the resource.
+   *
    * @var string
    */
   public $etag;
   /**
+   * The list of external IDs for the user, such as an employee or network ID.
+   * The maximum allowed data size for this field is 2KB.
+   *
    * @var array
    */
   public $externalIds;
   /**
+   * The user's gender. The maximum allowed data size for this field is 1KB.
+   *
    * @var array
    */
   public $gender;
   /**
+   * Stores the hash format of the `password` property. The following
+   * `hashFunction` values are allowed: * `MD5` - Accepts simple hex-encoded
+   * values. * `SHA-1` - Accepts simple hex-encoded values. * `crypt` -
+   * Compliant with the [C crypt
+   * library](https://en.wikipedia.org/wiki/Crypt_%28C%29). Supports the DES,
+   * MD5 (hash prefix `$1$`), SHA-256 (hash prefix `$5$`), and SHA-512 (hash
+   * prefix `$6$`) hash algorithms. If rounds are specified as part of the
+   * prefix, they must be 10,000 or fewer.
+   *
    * @var string
    */
   public $hashFunction;
   /**
+   * The unique ID for the user. A user `id` can be used as a user request URI's
+   * `userKey`.
+   *
    * @var string
    */
   public $id;
   /**
+   * The list of the user's Instant Messenger (IM) accounts. A user account can
+   * have multiple ims properties. But, only one of these ims properties can be
+   * the primary IM contact. The maximum allowed data size for this field is
+   * 2KB.
+   *
    * @var array
    */
   public $ims;
   /**
+   * Indicates if the user's profile is visible in the Google Workspace global
+   * address list when the contact sharing feature is enabled for the domain.
+   * For more information about excluding user profiles, see the [administration
+   * help center](https://support.google.com/a/answer/1285988).
+   *
    * @var bool
    */
   public $includeInGlobalAddressList;
   /**
+   * If `true`, the user's IP address is subject to a deprecated IP address
+   * [`allowlist`](https://support.google.com/a/answer/60752) configuration.
+   *
    * @var bool
    */
   public $ipWhitelisted;
   /**
+   * Output only. Indicates a user with super administrator privileges. The
+   * `isAdmin` property can only be edited in the [Make a user an administrator]
+   * (https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users.html#make_admin) operation ( [makeAdmin](https://developers.google.co
+   * m/workspace/admin/directory/v1/reference/users/makeAdmin.html) method). If
+   * edited in the user [insert](https://developers.google.com/workspace/admin/d
+   * irectory/v1/reference/users/insert.html) or [update](https://developers.goo
+   * gle.com/workspace/admin/directory/v1/reference/users/update.html) methods,
+   * the edit is ignored by the API service.
+   *
    * @var bool
    */
   public $isAdmin;
   /**
+   * Output only. Indicates if the user is a delegated administrator. Delegated
+   * administrators are supported by the API but cannot create or undelete
+   * users, or make users administrators. These requests are ignored by the API
+   * service. Roles and privileges for administrators are assigned using the
+   * [Admin console](https://support.google.com/a/answer/33325).
+   *
    * @var bool
    */
   public $isDelegatedAdmin;
   /**
+   * Output only. Is 2-step verification enforced (Read-only)
+   *
    * @var bool
    */
   public $isEnforcedIn2Sv;
   /**
+   * Output only. Is enrolled in 2-step verification (Read-only)
+   *
    * @var bool
    */
   public $isEnrolledIn2Sv;
   /**
+   * Output only. Indicates if the user's Google mailbox is created. This
+   * property is only applicable if the user has been assigned a Gmail license.
+   *
    * @var bool
    */
   public $isMailboxSetup;
   /**
+   * The list of the user's keywords. The maximum allowed data size for this
+   * field is 1KB.
+   *
    * @var array
    */
   public $keywords;
   /**
+   * Output only. The type of the API resource. For Users resources, the value
+   * is `admin#directory#user`.
+   *
    * @var string
    */
   public $kind;
   /**
+   * The user's languages. The maximum allowed data size for this field is 1KB.
+   *
    * @var array
    */
   public $languages;
   /**
+   * User's last login time. (Read-only)
+   *
    * @var string
    */
   public $lastLoginTime;
   /**
+   * The user's locations. The maximum allowed data size for this field is 10KB.
+   *
    * @var array
    */
   public $locations;
   protected $nameType = UserName::class;
   protected $nameDataType = '';
   /**
+   * Output only. The list of the user's non-editable alias email addresses.
+   * These are typically outside the account's primary domain or sub-domain.
+   *
    * @var string[]
    */
   public $nonEditableAliases;
   /**
+   * Notes for the user.
+   *
    * @var array
    */
   public $notes;
   /**
+   * The full path of the parent organization associated with the user. If the
+   * parent organization is the top-level, it is represented as a forward slash
+   * (`/`).
+   *
    * @var string
    */
   public $orgUnitPath;
   /**
+   * The list of organizations the user belongs to. The maximum allowed data
+   * size for this field is 10KB.
+   *
    * @var array
    */
   public $organizations;
   /**
+   * User's password
+   *
    * @var string
    */
   public $password;
   /**
+   * The list of the user's phone numbers. The maximum allowed data size for
+   * this field is 1KB.
+   *
    * @var array
    */
   public $phones;
   /**
+   * The list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html)
+   * account information for the user.
+   *
    * @var array
    */
   public $posixAccounts;
   /**
+   * The user's primary email address. This property is required in a request to
+   * create a user account. The `primaryEmail` must be unique and cannot be an
+   * alias of another user.
+   *
    * @var string
    */
   public $primaryEmail;
   /**
+   * Recovery email of the user.
+   *
    * @var string
    */
   public $recoveryEmail;
   /**
+   * Recovery phone of the user. The phone number must be in the E.164 format,
+   * starting with the plus sign (+). Example: *+16506661212*.
+   *
    * @var string
    */
   public $recoveryPhone;
   /**
+   * The list of the user's relationships to other users. The maximum allowed
+   * data size for this field is 2KB.
+   *
    * @var array
    */
   public $relations;
   /**
+   * A list of SSH public keys.
+   *
    * @var array
    */
   public $sshPublicKeys;
   /**
+   * Indicates if user is suspended.
+   *
    * @var bool
    */
   public $suspended;
   /**
+   * Output only. Has the reason a user account is suspended either by the
+   * administrator or by Google at the time of suspension. The property is
+   * returned only if the `suspended` property is `true`.
+   *
    * @var string
    */
   public $suspensionReason;
   /**
+   * Output only. ETag of the user's photo (Read-only)
+   *
    * @var string
    */
   public $thumbnailPhotoEtag;
   /**
+   * Output only. The URL of the user's profile photo. The URL might be
+   * temporary or private.
+   *
    * @var string
    */
   public $thumbnailPhotoUrl;
   /**
+   * The user's websites. The maximum allowed data size for this field is 2KB.
+   *
    * @var array
    */
   public $websites;
 
   /**
-   * @param array
+   * The list of the user's addresses. The maximum allowed data size for this
+   * field is 10KB.
+   *
+   * @param array $addresses
    */
   public function setAddresses($addresses)
   {
@@ -218,7 +366,10 @@ class User extends \Google\Collection
     return $this->addresses;
   }
   /**
-   * @param bool
+   * Output only. This property is `true` if the user has completed an initial
+   * login and accepted the Terms of Service agreement.
+   *
+   * @param bool $agreedToTerms
    */
   public function setAgreedToTerms($agreedToTerms)
   {
@@ -232,7 +383,9 @@ class User extends \Google\Collection
     return $this->agreedToTerms;
   }
   /**
-   * @param string[]
+   * Output only. The list of the user's alias email addresses.
+   *
+   * @param string[] $aliases
    */
   public function setAliases($aliases)
   {
@@ -246,7 +399,9 @@ class User extends \Google\Collection
     return $this->aliases;
   }
   /**
-   * @param bool
+   * Indicates if user is archived.
+   *
+   * @param bool $archived
    */
   public function setArchived($archived)
   {
@@ -260,7 +415,11 @@ class User extends \Google\Collection
     return $this->archived;
   }
   /**
-   * @param bool
+   * Indicates if the user is forced to change their password at next login.
+   * This setting doesn't apply when [the user signs in via a third-party
+   * identity provider](https://support.google.com/a/answer/60224).
+   *
+   * @param bool $changePasswordAtNextLogin
    */
   public function setChangePasswordAtNextLogin($changePasswordAtNextLogin)
   {
@@ -274,7 +433,9 @@ class User extends \Google\Collection
     return $this->changePasswordAtNextLogin;
   }
   /**
-   * @param string
+   * User's G Suite account creation time. (Read-only)
+   *
+   * @param string $creationTime
    */
   public function setCreationTime($creationTime)
   {
@@ -288,7 +449,10 @@ class User extends \Google\Collection
     return $this->creationTime;
   }
   /**
-   * @param array[]
+   * Custom fields of the user. The key is a `schema_name` and its values are
+   * `'field_name': 'field_value'`.
+   *
+   * @param array[] $customSchemas
    */
   public function setCustomSchemas($customSchemas)
   {
@@ -302,7 +466,16 @@ class User extends \Google\Collection
     return $this->customSchemas;
   }
   /**
-   * @param string
+   * Output only. The customer ID to [retrieve all account users](https://develo
+   * pers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users.html#get_all_users). You can use the alias `my_customer` to represent
+   * your account's `customerId`. As a reseller administrator, you can use the
+   * resold customer account's `customerId`. To get a `customerId`, use the
+   * account's primary domain in the `domain` parameter of a [users.list](https:
+   * //developers.google.com/workspace/admin/directory/v1/reference/users/list)
+   * request.
+   *
+   * @param string $customerId
    */
   public function setCustomerId($customerId)
   {
@@ -316,7 +489,7 @@ class User extends \Google\Collection
     return $this->customerId;
   }
   /**
-   * @param string
+   * @param string $deletionTime
    */
   public function setDeletionTime($deletionTime)
   {
@@ -330,7 +503,10 @@ class User extends \Google\Collection
     return $this->deletionTime;
   }
   /**
-   * @param array
+   * The list of the user's email addresses. The maximum allowed data size for
+   * this field is 10KB. This excludes `publicKeyEncryptionCertificates`.
+   *
+   * @param array $emails
    */
   public function setEmails($emails)
   {
@@ -344,7 +520,9 @@ class User extends \Google\Collection
     return $this->emails;
   }
   /**
-   * @param string
+   * Output only. ETag of the resource.
+   *
+   * @param string $etag
    */
   public function setEtag($etag)
   {
@@ -358,7 +536,10 @@ class User extends \Google\Collection
     return $this->etag;
   }
   /**
-   * @param array
+   * The list of external IDs for the user, such as an employee or network ID.
+   * The maximum allowed data size for this field is 2KB.
+   *
+   * @param array $externalIds
    */
   public function setExternalIds($externalIds)
   {
@@ -372,7 +553,9 @@ class User extends \Google\Collection
     return $this->externalIds;
   }
   /**
-   * @param array
+   * The user's gender. The maximum allowed data size for this field is 1KB.
+   *
+   * @param array $gender
    */
   public function setGender($gender)
   {
@@ -386,7 +569,16 @@ class User extends \Google\Collection
     return $this->gender;
   }
   /**
-   * @param string
+   * Stores the hash format of the `password` property. The following
+   * `hashFunction` values are allowed: * `MD5` - Accepts simple hex-encoded
+   * values. * `SHA-1` - Accepts simple hex-encoded values. * `crypt` -
+   * Compliant with the [C crypt
+   * library](https://en.wikipedia.org/wiki/Crypt_%28C%29). Supports the DES,
+   * MD5 (hash prefix `$1$`), SHA-256 (hash prefix `$5$`), and SHA-512 (hash
+   * prefix `$6$`) hash algorithms. If rounds are specified as part of the
+   * prefix, they must be 10,000 or fewer.
+   *
+   * @param string $hashFunction
    */
   public function setHashFunction($hashFunction)
   {
@@ -400,7 +592,10 @@ class User extends \Google\Collection
     return $this->hashFunction;
   }
   /**
-   * @param string
+   * The unique ID for the user. A user `id` can be used as a user request URI's
+   * `userKey`.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -414,7 +609,12 @@ class User extends \Google\Collection
     return $this->id;
   }
   /**
-   * @param array
+   * The list of the user's Instant Messenger (IM) accounts. A user account can
+   * have multiple ims properties. But, only one of these ims properties can be
+   * the primary IM contact. The maximum allowed data size for this field is
+   * 2KB.
+   *
+   * @param array $ims
    */
   public function setIms($ims)
   {
@@ -428,7 +628,12 @@ class User extends \Google\Collection
     return $this->ims;
   }
   /**
-   * @param bool
+   * Indicates if the user's profile is visible in the Google Workspace global
+   * address list when the contact sharing feature is enabled for the domain.
+   * For more information about excluding user profiles, see the [administration
+   * help center](https://support.google.com/a/answer/1285988).
+   *
+   * @param bool $includeInGlobalAddressList
    */
   public function setIncludeInGlobalAddressList($includeInGlobalAddressList)
   {
@@ -442,7 +647,10 @@ class User extends \Google\Collection
     return $this->includeInGlobalAddressList;
   }
   /**
-   * @param bool
+   * If `true`, the user's IP address is subject to a deprecated IP address
+   * [`allowlist`](https://support.google.com/a/answer/60752) configuration.
+   *
+   * @param bool $ipWhitelisted
    */
   public function setIpWhitelisted($ipWhitelisted)
   {
@@ -456,7 +664,17 @@ class User extends \Google\Collection
     return $this->ipWhitelisted;
   }
   /**
-   * @param bool
+   * Output only. Indicates a user with super administrator privileges. The
+   * `isAdmin` property can only be edited in the [Make a user an administrator]
+   * (https://developers.google.com/workspace/admin/directory/v1/guides/manage-
+   * users.html#make_admin) operation ( [makeAdmin](https://developers.google.co
+   * m/workspace/admin/directory/v1/reference/users/makeAdmin.html) method). If
+   * edited in the user [insert](https://developers.google.com/workspace/admin/d
+   * irectory/v1/reference/users/insert.html) or [update](https://developers.goo
+   * gle.com/workspace/admin/directory/v1/reference/users/update.html) methods,
+   * the edit is ignored by the API service.
+   *
+   * @param bool $isAdmin
    */
   public function setIsAdmin($isAdmin)
   {
@@ -470,7 +688,13 @@ class User extends \Google\Collection
     return $this->isAdmin;
   }
   /**
-   * @param bool
+   * Output only. Indicates if the user is a delegated administrator. Delegated
+   * administrators are supported by the API but cannot create or undelete
+   * users, or make users administrators. These requests are ignored by the API
+   * service. Roles and privileges for administrators are assigned using the
+   * [Admin console](https://support.google.com/a/answer/33325).
+   *
+   * @param bool $isDelegatedAdmin
    */
   public function setIsDelegatedAdmin($isDelegatedAdmin)
   {
@@ -484,7 +708,9 @@ class User extends \Google\Collection
     return $this->isDelegatedAdmin;
   }
   /**
-   * @param bool
+   * Output only. Is 2-step verification enforced (Read-only)
+   *
+   * @param bool $isEnforcedIn2Sv
    */
   public function setIsEnforcedIn2Sv($isEnforcedIn2Sv)
   {
@@ -498,7 +724,9 @@ class User extends \Google\Collection
     return $this->isEnforcedIn2Sv;
   }
   /**
-   * @param bool
+   * Output only. Is enrolled in 2-step verification (Read-only)
+   *
+   * @param bool $isEnrolledIn2Sv
    */
   public function setIsEnrolledIn2Sv($isEnrolledIn2Sv)
   {
@@ -512,7 +740,10 @@ class User extends \Google\Collection
     return $this->isEnrolledIn2Sv;
   }
   /**
-   * @param bool
+   * Output only. Indicates if the user's Google mailbox is created. This
+   * property is only applicable if the user has been assigned a Gmail license.
+   *
+   * @param bool $isMailboxSetup
    */
   public function setIsMailboxSetup($isMailboxSetup)
   {
@@ -526,7 +757,10 @@ class User extends \Google\Collection
     return $this->isMailboxSetup;
   }
   /**
-   * @param array
+   * The list of the user's keywords. The maximum allowed data size for this
+   * field is 1KB.
+   *
+   * @param array $keywords
    */
   public function setKeywords($keywords)
   {
@@ -540,7 +774,10 @@ class User extends \Google\Collection
     return $this->keywords;
   }
   /**
-   * @param string
+   * Output only. The type of the API resource. For Users resources, the value
+   * is `admin#directory#user`.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -554,7 +791,9 @@ class User extends \Google\Collection
     return $this->kind;
   }
   /**
-   * @param array
+   * The user's languages. The maximum allowed data size for this field is 1KB.
+   *
+   * @param array $languages
    */
   public function setLanguages($languages)
   {
@@ -568,7 +807,9 @@ class User extends \Google\Collection
     return $this->languages;
   }
   /**
-   * @param string
+   * User's last login time. (Read-only)
+   *
+   * @param string $lastLoginTime
    */
   public function setLastLoginTime($lastLoginTime)
   {
@@ -582,7 +823,9 @@ class User extends \Google\Collection
     return $this->lastLoginTime;
   }
   /**
-   * @param array
+   * The user's locations. The maximum allowed data size for this field is 10KB.
+   *
+   * @param array $locations
    */
   public function setLocations($locations)
   {
@@ -596,7 +839,16 @@ class User extends \Google\Collection
     return $this->locations;
   }
   /**
-   * @param UserName
+   * Holds the given and family names of the user, and the read-only `fullName`
+   * value. The maximum number of characters in the `givenName` and in the
+   * `familyName` values is 60. In addition, name values support unicode/UTF-8
+   * characters, and can contain spaces, letters (a-z), numbers (0-9), dashes
+   * (-), forward slashes (/), and periods (.). For more information about
+   * character usage rules, see the [administration help
+   * center](https://support.google.com/a/answer/9193374). Maximum allowed data
+   * size for this field is 1KB.
+   *
+   * @param UserName $name
    */
   public function setName(UserName $name)
   {
@@ -610,7 +862,10 @@ class User extends \Google\Collection
     return $this->name;
   }
   /**
-   * @param string[]
+   * Output only. The list of the user's non-editable alias email addresses.
+   * These are typically outside the account's primary domain or sub-domain.
+   *
+   * @param string[] $nonEditableAliases
    */
   public function setNonEditableAliases($nonEditableAliases)
   {
@@ -624,7 +879,9 @@ class User extends \Google\Collection
     return $this->nonEditableAliases;
   }
   /**
-   * @param array
+   * Notes for the user.
+   *
+   * @param array $notes
    */
   public function setNotes($notes)
   {
@@ -638,7 +895,11 @@ class User extends \Google\Collection
     return $this->notes;
   }
   /**
-   * @param string
+   * The full path of the parent organization associated with the user. If the
+   * parent organization is the top-level, it is represented as a forward slash
+   * (`/`).
+   *
+   * @param string $orgUnitPath
    */
   public function setOrgUnitPath($orgUnitPath)
   {
@@ -652,7 +913,10 @@ class User extends \Google\Collection
     return $this->orgUnitPath;
   }
   /**
-   * @param array
+   * The list of organizations the user belongs to. The maximum allowed data
+   * size for this field is 10KB.
+   *
+   * @param array $organizations
    */
   public function setOrganizations($organizations)
   {
@@ -666,7 +930,9 @@ class User extends \Google\Collection
     return $this->organizations;
   }
   /**
-   * @param string
+   * User's password
+   *
+   * @param string $password
    */
   public function setPassword($password)
   {
@@ -680,7 +946,10 @@ class User extends \Google\Collection
     return $this->password;
   }
   /**
-   * @param array
+   * The list of the user's phone numbers. The maximum allowed data size for
+   * this field is 1KB.
+   *
+   * @param array $phones
    */
   public function setPhones($phones)
   {
@@ -694,7 +963,10 @@ class User extends \Google\Collection
     return $this->phones;
   }
   /**
-   * @param array
+   * The list of [POSIX](https://www.opengroup.org/austin/papers/posix_faq.html)
+   * account information for the user.
+   *
+   * @param array $posixAccounts
    */
   public function setPosixAccounts($posixAccounts)
   {
@@ -708,7 +980,11 @@ class User extends \Google\Collection
     return $this->posixAccounts;
   }
   /**
-   * @param string
+   * The user's primary email address. This property is required in a request to
+   * create a user account. The `primaryEmail` must be unique and cannot be an
+   * alias of another user.
+   *
+   * @param string $primaryEmail
    */
   public function setPrimaryEmail($primaryEmail)
   {
@@ -722,7 +998,9 @@ class User extends \Google\Collection
     return $this->primaryEmail;
   }
   /**
-   * @param string
+   * Recovery email of the user.
+   *
+   * @param string $recoveryEmail
    */
   public function setRecoveryEmail($recoveryEmail)
   {
@@ -736,7 +1014,10 @@ class User extends \Google\Collection
     return $this->recoveryEmail;
   }
   /**
-   * @param string
+   * Recovery phone of the user. The phone number must be in the E.164 format,
+   * starting with the plus sign (+). Example: *+16506661212*.
+   *
+   * @param string $recoveryPhone
    */
   public function setRecoveryPhone($recoveryPhone)
   {
@@ -750,7 +1031,10 @@ class User extends \Google\Collection
     return $this->recoveryPhone;
   }
   /**
-   * @param array
+   * The list of the user's relationships to other users. The maximum allowed
+   * data size for this field is 2KB.
+   *
+   * @param array $relations
    */
   public function setRelations($relations)
   {
@@ -764,7 +1048,9 @@ class User extends \Google\Collection
     return $this->relations;
   }
   /**
-   * @param array
+   * A list of SSH public keys.
+   *
+   * @param array $sshPublicKeys
    */
   public function setSshPublicKeys($sshPublicKeys)
   {
@@ -778,7 +1064,9 @@ class User extends \Google\Collection
     return $this->sshPublicKeys;
   }
   /**
-   * @param bool
+   * Indicates if user is suspended.
+   *
+   * @param bool $suspended
    */
   public function setSuspended($suspended)
   {
@@ -792,7 +1080,11 @@ class User extends \Google\Collection
     return $this->suspended;
   }
   /**
-   * @param string
+   * Output only. Has the reason a user account is suspended either by the
+   * administrator or by Google at the time of suspension. The property is
+   * returned only if the `suspended` property is `true`.
+   *
+   * @param string $suspensionReason
    */
   public function setSuspensionReason($suspensionReason)
   {
@@ -806,7 +1098,9 @@ class User extends \Google\Collection
     return $this->suspensionReason;
   }
   /**
-   * @param string
+   * Output only. ETag of the user's photo (Read-only)
+   *
+   * @param string $thumbnailPhotoEtag
    */
   public function setThumbnailPhotoEtag($thumbnailPhotoEtag)
   {
@@ -820,7 +1114,10 @@ class User extends \Google\Collection
     return $this->thumbnailPhotoEtag;
   }
   /**
-   * @param string
+   * Output only. The URL of the user's profile photo. The URL might be
+   * temporary or private.
+   *
+   * @param string $thumbnailPhotoUrl
    */
   public function setThumbnailPhotoUrl($thumbnailPhotoUrl)
   {
@@ -834,7 +1131,9 @@ class User extends \Google\Collection
     return $this->thumbnailPhotoUrl;
   }
   /**
-   * @param array
+   * The user's websites. The maximum allowed data size for this field is 2KB.
+   *
+   * @param array $websites
    */
   public function setWebsites($websites)
   {
