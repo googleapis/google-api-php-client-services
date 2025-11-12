@@ -21,32 +21,52 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
 {
   protected $collection_key = 'trackMetrics';
   /**
+   * The single metric for bounding boxes evaluation: the `meanAveragePrecision`
+   * averaged over all `boundingBoxMetrics`.
+   *
    * @var float
    */
   public $boundingBoxMeanAveragePrecision;
   protected $boundingBoxMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics::class;
   protected $boundingBoxMetricsDataType = 'array';
   /**
+   * UNIMPLEMENTED. The total number of bounding boxes (i.e. summed over all
+   * frames) the ground truth used to create this evaluation had.
+   *
    * @var int
    */
   public $evaluatedBoundingBoxCount;
   /**
+   * UNIMPLEMENTED. The number of video frames used to create this evaluation.
+   *
    * @var int
    */
   public $evaluatedFrameCount;
   /**
+   * UNIMPLEMENTED. The total number of tracks (i.e. as seen across all frames)
+   * the ground truth used to create this evaluation had.
+   *
    * @var int
    */
   public $evaluatedTrackCount;
   /**
+   * UNIMPLEMENTED. The single metric for tracks accuracy evaluation: the
+   * `meanAveragePrecision` averaged over all `trackMetrics`.
+   *
    * @var float
    */
   public $trackMeanAveragePrecision;
   /**
+   * UNIMPLEMENTED. The single metric for tracks bounding box iou evaluation:
+   * the `meanBoundingBoxIou` averaged over all `trackMetrics`.
+   *
    * @var float
    */
   public $trackMeanBoundingBoxIou;
   /**
+   * UNIMPLEMENTED. The single metric for tracking consistency evaluation: the
+   * `meanMismatchRate` averaged over all `trackMetrics`.
+   *
    * @var float
    */
   public $trackMeanMismatchRate;
@@ -54,7 +74,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
   protected $trackMetricsDataType = 'array';
 
   /**
-   * @param float
+   * The single metric for bounding boxes evaluation: the `meanAveragePrecision`
+   * averaged over all `boundingBoxMetrics`.
+   *
+   * @param float $boundingBoxMeanAveragePrecision
    */
   public function setBoundingBoxMeanAveragePrecision($boundingBoxMeanAveragePrecision)
   {
@@ -68,7 +91,11 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->boundingBoxMeanAveragePrecision;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics[]
+   * The bounding boxes match metrics for each intersection-over-union threshold
+   * 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99 and each label confidence threshold
+   * 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99 pair.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics[] $boundingBoxMetrics
    */
   public function setBoundingBoxMetrics($boundingBoxMetrics)
   {
@@ -82,7 +109,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->boundingBoxMetrics;
   }
   /**
-   * @param int
+   * UNIMPLEMENTED. The total number of bounding boxes (i.e. summed over all
+   * frames) the ground truth used to create this evaluation had.
+   *
+   * @param int $evaluatedBoundingBoxCount
    */
   public function setEvaluatedBoundingBoxCount($evaluatedBoundingBoxCount)
   {
@@ -96,7 +126,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->evaluatedBoundingBoxCount;
   }
   /**
-   * @param int
+   * UNIMPLEMENTED. The number of video frames used to create this evaluation.
+   *
+   * @param int $evaluatedFrameCount
    */
   public function setEvaluatedFrameCount($evaluatedFrameCount)
   {
@@ -110,7 +142,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->evaluatedFrameCount;
   }
   /**
-   * @param int
+   * UNIMPLEMENTED. The total number of tracks (i.e. as seen across all frames)
+   * the ground truth used to create this evaluation had.
+   *
+   * @param int $evaluatedTrackCount
    */
   public function setEvaluatedTrackCount($evaluatedTrackCount)
   {
@@ -124,7 +159,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->evaluatedTrackCount;
   }
   /**
-   * @param float
+   * UNIMPLEMENTED. The single metric for tracks accuracy evaluation: the
+   * `meanAveragePrecision` averaged over all `trackMetrics`.
+   *
+   * @param float $trackMeanAveragePrecision
    */
   public function setTrackMeanAveragePrecision($trackMeanAveragePrecision)
   {
@@ -138,7 +176,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->trackMeanAveragePrecision;
   }
   /**
-   * @param float
+   * UNIMPLEMENTED. The single metric for tracks bounding box iou evaluation:
+   * the `meanBoundingBoxIou` averaged over all `trackMetrics`.
+   *
+   * @param float $trackMeanBoundingBoxIou
    */
   public function setTrackMeanBoundingBoxIou($trackMeanBoundingBoxIou)
   {
@@ -152,7 +193,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->trackMeanBoundingBoxIou;
   }
   /**
-   * @param float
+   * UNIMPLEMENTED. The single metric for tracking consistency evaluation: the
+   * `meanMismatchRate` averaged over all `trackMetrics`.
+   *
+   * @param float $trackMeanMismatchRate
    */
   public function setTrackMeanMismatchRate($trackMeanMismatchRate)
   {
@@ -166,7 +210,11 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoObjectTrackingMetr
     return $this->trackMeanMismatchRate;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsTrackMetrics[]
+   * UNIMPLEMENTED. The tracks match metrics for each intersection-over-union
+   * threshold 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99 and each label confidence
+   * threshold 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99 pair.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsTrackMetrics[] $trackMetrics
    */
   public function setTrackMetrics($trackMetrics)
   {

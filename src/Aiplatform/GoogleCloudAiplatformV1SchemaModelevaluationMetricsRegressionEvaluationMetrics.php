@@ -20,28 +20,43 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsRegressionEvaluationMetrics extends \Google\Model
 {
   /**
+   * Mean Absolute Error (MAE).
+   *
    * @var float
    */
   public $meanAbsoluteError;
   /**
+   * Mean absolute percentage error. Infinity when there are zeros in the ground
+   * truth.
+   *
    * @var float
    */
   public $meanAbsolutePercentageError;
   /**
+   * Coefficient of determination as Pearson correlation coefficient. Undefined
+   * when ground truth or predictions are constant or near constant.
+   *
    * @var float
    */
   public $rSquared;
   /**
+   * Root Mean Squared Error (RMSE).
+   *
    * @var float
    */
   public $rootMeanSquaredError;
   /**
+   * Root mean squared log error. Undefined when there are negative ground truth
+   * values or predictions.
+   *
    * @var float
    */
   public $rootMeanSquaredLogError;
 
   /**
-   * @param float
+   * Mean Absolute Error (MAE).
+   *
+   * @param float $meanAbsoluteError
    */
   public function setMeanAbsoluteError($meanAbsoluteError)
   {
@@ -55,7 +70,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsRegressionEvaluationMet
     return $this->meanAbsoluteError;
   }
   /**
-   * @param float
+   * Mean absolute percentage error. Infinity when there are zeros in the ground
+   * truth.
+   *
+   * @param float $meanAbsolutePercentageError
    */
   public function setMeanAbsolutePercentageError($meanAbsolutePercentageError)
   {
@@ -69,7 +87,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsRegressionEvaluationMet
     return $this->meanAbsolutePercentageError;
   }
   /**
-   * @param float
+   * Coefficient of determination as Pearson correlation coefficient. Undefined
+   * when ground truth or predictions are constant or near constant.
+   *
+   * @param float $rSquared
    */
   public function setRSquared($rSquared)
   {
@@ -83,7 +104,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsRegressionEvaluationMet
     return $this->rSquared;
   }
   /**
-   * @param float
+   * Root Mean Squared Error (RMSE).
+   *
+   * @param float $rootMeanSquaredError
    */
   public function setRootMeanSquaredError($rootMeanSquaredError)
   {
@@ -97,7 +120,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsRegressionEvaluationMet
     return $this->rootMeanSquaredError;
   }
   /**
-   * @param float
+   * Root mean squared log error. Undefined when there are negative ground truth
+   * values or predictions.
+   *
+   * @param float $rootMeanSquaredLogError
    */
   public function setRootMeanSquaredLogError($rootMeanSquaredLogError)
   {

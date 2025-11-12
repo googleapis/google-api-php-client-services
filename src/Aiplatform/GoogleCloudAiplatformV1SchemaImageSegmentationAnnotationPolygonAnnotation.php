@@ -21,10 +21,14 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation 
 {
   protected $collection_key = 'vertexes';
   /**
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $annotationSpecId;
   /**
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $displayName;
@@ -32,7 +36,9 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation 
   protected $vertexesDataType = 'array';
 
   /**
-   * @param string
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $annotationSpecId
    */
   public function setAnnotationSpecId($annotationSpecId)
   {
@@ -46,7 +52,9 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation 
     return $this->annotationSpecId;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -60,7 +68,10 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation 
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaVertex[]
+   * The vertexes are connected one by one and the last vertex is connected to
+   * the first one to represent a polygon.
+   *
+   * @param GoogleCloudAiplatformV1SchemaVertex[] $vertexes
    */
   public function setVertexes($vertexes)
   {

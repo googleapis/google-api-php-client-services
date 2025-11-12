@@ -21,6 +21,10 @@ class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig extends \Google\
 {
   protected $collection_key = 'sources';
   /**
+   * If set, skip finding claim attributions (i.e not generate grounding
+   * citation).
+   *
+   * @deprecated
    * @var bool
    */
   public $disableAttribution;
@@ -28,13 +32,18 @@ class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig extends \Google\
   protected $sourcesDataType = 'array';
 
   /**
-   * @param bool
+   * If set, skip finding claim attributions (i.e not generate grounding
+   * citation).
+   *
+   * @deprecated
+   * @param bool $disableAttribution
    */
   public function setDisableAttribution($disableAttribution)
   {
     $this->disableAttribution = $disableAttribution;
   }
   /**
+   * @deprecated
    * @return bool
    */
   public function getDisableAttribution()
@@ -42,7 +51,9 @@ class GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfig extends \Google\
     return $this->disableAttribution;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry[]
+   * The sources for the grounding checking.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPredictParamsGroundingConfigSourceEntry[] $sources
    */
   public function setSources($sources)
   {

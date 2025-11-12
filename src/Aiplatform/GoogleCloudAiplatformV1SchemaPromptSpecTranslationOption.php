@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPromptSpecTranslationOption extends \Google\Model
 {
   /**
+   * How many shots to use.
+   *
    * @var int
    */
   public $numberOfShots;
 
   /**
-   * @param int
+   * How many shots to use.
+   *
+   * @param int $numberOfShots
    */
   public function setNumberOfShots($numberOfShots)
   {

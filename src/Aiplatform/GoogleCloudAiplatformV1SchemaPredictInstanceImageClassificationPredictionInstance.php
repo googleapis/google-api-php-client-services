@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPredictInstanceImageClassificationPredictionInstance extends \Google\Model
 {
   /**
+   * The image bytes or Cloud Storage URI to make the prediction on.
+   *
    * @var string
    */
   public $content;
   /**
+   * The MIME type of the content of the image. Only the images in below listed
+   * MIME types are supported. - image/jpeg - image/gif - image/png - image/webp
+   * - image/bmp - image/tiff - image/vnd.microsoft.icon
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * The image bytes or Cloud Storage URI to make the prediction on.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -43,7 +51,11 @@ class GoogleCloudAiplatformV1SchemaPredictInstanceImageClassificationPredictionI
     return $this->content;
   }
   /**
-   * @param string
+   * The MIME type of the content of the image. Only the images in below listed
+   * MIME types are supported. - image/jpeg - image/gif - image/png - image/webp
+   * - image/bmp - image/tiff - image/vnd.microsoft.icon
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

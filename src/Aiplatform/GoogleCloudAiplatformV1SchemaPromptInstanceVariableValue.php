@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1SchemaPromptInstanceVariableValue extends \Google\M
   protected $partListDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecPartList
+   * The parts of the variable value.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecPartList $partList
    */
   public function setPartList(GoogleCloudAiplatformV1SchemaPromptSpecPartList $partList)
   {

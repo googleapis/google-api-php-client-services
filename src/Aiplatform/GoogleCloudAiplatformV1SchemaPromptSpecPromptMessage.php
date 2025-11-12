@@ -25,6 +25,8 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
   protected $generationConfigType = GoogleCloudAiplatformV1GenerationConfig::class;
   protected $generationConfigDataType = '';
   /**
+   * The model name.
+   *
    * @var string
    */
   public $model;
@@ -38,7 +40,11 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
   protected $toolsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1Content[]
+   * The content of the current conversation with the model. For single-turn
+   * queries, this is a single instance. For multi-turn queries, this is a
+   * repeated field that contains conversation history + latest request.
+   *
+   * @param GoogleCloudAiplatformV1Content[] $contents
    */
   public function setContents($contents)
   {
@@ -52,7 +58,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
     return $this->contents;
   }
   /**
-   * @param GoogleCloudAiplatformV1GenerationConfig
+   * Generation config.
+   *
+   * @param GoogleCloudAiplatformV1GenerationConfig $generationConfig
    */
   public function setGenerationConfig(GoogleCloudAiplatformV1GenerationConfig $generationConfig)
   {
@@ -66,7 +74,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
     return $this->generationConfig;
   }
   /**
-   * @param string
+   * The model name.
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -80,7 +90,10 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
     return $this->model;
   }
   /**
-   * @param GoogleCloudAiplatformV1SafetySetting[]
+   * Per request settings for blocking unsafe content. Enforced on
+   * GenerateContentResponse.candidates.
+   *
+   * @param GoogleCloudAiplatformV1SafetySetting[] $safetySettings
    */
   public function setSafetySettings($safetySettings)
   {
@@ -94,7 +107,10 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
     return $this->safetySettings;
   }
   /**
-   * @param GoogleCloudAiplatformV1Content
+   * The user provided system instructions for the model. Note: only text should
+   * be used in parts and content in each part will be in a separate paragraph.
+   *
+   * @param GoogleCloudAiplatformV1Content $systemInstruction
    */
   public function setSystemInstruction(GoogleCloudAiplatformV1Content $systemInstruction)
   {
@@ -108,7 +124,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
     return $this->systemInstruction;
   }
   /**
-   * @param GoogleCloudAiplatformV1ToolConfig
+   * Tool config. This config is shared for all tools provided in the request.
+   *
+   * @param GoogleCloudAiplatformV1ToolConfig $toolConfig
    */
   public function setToolConfig(GoogleCloudAiplatformV1ToolConfig $toolConfig)
   {
@@ -122,7 +140,12 @@ class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends \Google\Colle
     return $this->toolConfig;
   }
   /**
-   * @param GoogleCloudAiplatformV1Tool[]
+   * A list of `Tools` the model may use to generate the next response. A `Tool`
+   * is a piece of code that enables the system to interact with external
+   * systems to perform an action, or set of actions, outside of knowledge and
+   * scope of the model.
+   *
+   * @param GoogleCloudAiplatformV1Tool[] $tools
    */
   public function setTools($tools)
   {

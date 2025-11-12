@@ -20,20 +20,46 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaImageBoundingBoxAnnotation extends \Google\Model
 {
   /**
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $annotationSpecId;
   /**
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $displayName;
+  /**
+   * The rightmost coordinate of the bounding box.
+   *
+   * @var 
+   */
   public $xMax;
+  /**
+   * The leftmost coordinate of the bounding box.
+   *
+   * @var 
+   */
   public $xMin;
+  /**
+   * The bottommost coordinate of the bounding box.
+   *
+   * @var 
+   */
   public $yMax;
+  /**
+   * The topmost coordinate of the bounding box.
+   *
+   * @var 
+   */
   public $yMin;
 
   /**
-   * @param string
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $annotationSpecId
    */
   public function setAnnotationSpecId($annotationSpecId)
   {
@@ -47,7 +73,9 @@ class GoogleCloudAiplatformV1SchemaImageBoundingBoxAnnotation extends \Google\Mo
     return $this->annotationSpecId;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

@@ -20,10 +20,14 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTextExtractionAnnotation extends \Google\Model
 {
   /**
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $annotationSpecId;
   /**
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $displayName;
@@ -31,7 +35,9 @@ class GoogleCloudAiplatformV1SchemaTextExtractionAnnotation extends \Google\Mode
   protected $textSegmentDataType = '';
 
   /**
-   * @param string
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $annotationSpecId
    */
   public function setAnnotationSpecId($annotationSpecId)
   {
@@ -45,7 +51,9 @@ class GoogleCloudAiplatformV1SchemaTextExtractionAnnotation extends \Google\Mode
     return $this->annotationSpecId;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -59,7 +67,9 @@ class GoogleCloudAiplatformV1SchemaTextExtractionAnnotation extends \Google\Mode
     return $this->displayName;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaTextSegment
+   * The segment of the text content.
+   *
+   * @param GoogleCloudAiplatformV1SchemaTextSegment $textSegment
    */
   public function setTextSegment(GoogleCloudAiplatformV1SchemaTextSegment $textSegment)
   {

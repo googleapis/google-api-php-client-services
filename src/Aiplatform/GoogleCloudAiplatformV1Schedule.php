@@ -20,10 +20,38 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1Schedule extends \Google\Model
 {
   /**
+   * Unspecified.
+   */
+  public const STATE_STATE_UNSPECIFIED = 'STATE_UNSPECIFIED';
+  /**
+   * The Schedule is active. Runs are being scheduled on the user-specified
+   * timespec.
+   */
+  public const STATE_ACTIVE = 'ACTIVE';
+  /**
+   * The schedule is paused. No new runs will be created until the schedule is
+   * resumed. Already started runs will be allowed to complete.
+   */
+  public const STATE_PAUSED = 'PAUSED';
+  /**
+   * The Schedule is completed. No new runs will be scheduled. Already started
+   * runs will be allowed to complete. Schedules in completed state cannot be
+   * paused or resumed.
+   */
+  public const STATE_COMPLETED = 'COMPLETED';
+  /**
+   * Optional. Whether new scheduled runs can be queued when max_concurrent_runs
+   * limit is reached. If set to true, new runs will be queued instead of
+   * skipped. Default to false.
+   *
    * @var bool
    */
   public $allowQueueing;
   /**
+   * Output only. Whether to backfill missed runs when the schedule is resumed
+   * from PAUSED state. If set to true, all missed runs will be scheduled. New
+   * runs will be scheduled after the backfill is complete. Default to false.
+   *
    * @var bool
    */
   public $catchUp;
@@ -32,66 +60,119 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
   protected $createPipelineJobRequestType = GoogleCloudAiplatformV1CreatePipelineJobRequest::class;
   protected $createPipelineJobRequestDataType = '';
   /**
+   * Output only. Timestamp when this Schedule was created.
+   *
    * @var string
    */
   public $createTime;
   /**
+   * Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled
+   * runs. To explicitly set a timezone to the cron tab, apply a prefix in the
+   * cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The
+   * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database.
+   * For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York
+   * 1 * * * *".
+   *
    * @var string
    */
   public $cron;
   /**
+   * Required. User provided name of the Schedule. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * Optional. Timestamp after which no new runs can be scheduled. If specified,
+   * The schedule will be completed when either end_time is reached or when
+   * scheduled_run_count >= max_run_count. If not specified, new runs will keep
+   * getting scheduled until this Schedule is paused or deleted. Already
+   * scheduled runs will be allowed to complete. Unset if not specified.
+   *
    * @var string
    */
   public $endTime;
   /**
+   * Output only. Timestamp when this Schedule was last paused. Unset if never
+   * paused.
+   *
    * @var string
    */
   public $lastPauseTime;
   /**
+   * Output only. Timestamp when this Schedule was last resumed. Unset if never
+   * resumed from pause.
+   *
    * @var string
    */
   public $lastResumeTime;
   protected $lastScheduledRunResponseType = GoogleCloudAiplatformV1ScheduleRunResponse::class;
   protected $lastScheduledRunResponseDataType = '';
   /**
+   * Required. Maximum number of runs that can be started concurrently for this
+   * Schedule. This is the limit for starting the scheduled requests and not the
+   * execution of the operations/jobs created by the requests (if applicable).
+   *
    * @var string
    */
   public $maxConcurrentRunCount;
   /**
+   * Optional. Maximum run count of the schedule. If specified, The schedule
+   * will be completed when either started_run_count >= max_run_count or when
+   * end_time is reached. If not specified, new runs will keep getting scheduled
+   * until this Schedule is paused or deleted. Already scheduled runs will be
+   * allowed to complete. Unset if not specified.
+   *
    * @var string
    */
   public $maxRunCount;
   /**
+   * Immutable. The resource name of the Schedule.
+   *
    * @var string
    */
   public $name;
   /**
+   * Output only. Timestamp when this Schedule should schedule the next run.
+   * Having a next_run_time in the past means the runs are being started behind
+   * schedule.
+   *
    * @var string
    */
   public $nextRunTime;
   /**
+   * Optional. Timestamp after which the first run can be scheduled. Default to
+   * Schedule create time if not specified.
+   *
    * @var string
    */
   public $startTime;
   /**
+   * Output only. The number of runs started by this schedule.
+   *
    * @var string
    */
   public $startedRunCount;
   /**
+   * Output only. The state of this Schedule.
+   *
    * @var string
    */
   public $state;
   /**
+   * Output only. Timestamp when this Schedule was updated.
+   *
    * @var string
    */
   public $updateTime;
 
   /**
-   * @param bool
+   * Optional. Whether new scheduled runs can be queued when max_concurrent_runs
+   * limit is reached. If set to true, new runs will be queued instead of
+   * skipped. Default to false.
+   *
+   * @param bool $allowQueueing
    */
   public function setAllowQueueing($allowQueueing)
   {
@@ -105,7 +186,11 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->allowQueueing;
   }
   /**
-   * @param bool
+   * Output only. Whether to backfill missed runs when the schedule is resumed
+   * from PAUSED state. If set to true, all missed runs will be scheduled. New
+   * runs will be scheduled after the backfill is complete. Default to false.
+   *
+   * @param bool $catchUp
    */
   public function setCatchUp($catchUp)
   {
@@ -119,7 +204,9 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->catchUp;
   }
   /**
-   * @param GoogleCloudAiplatformV1CreateNotebookExecutionJobRequest
+   * Request for NotebookService.CreateNotebookExecutionJob.
+   *
+   * @param GoogleCloudAiplatformV1CreateNotebookExecutionJobRequest $createNotebookExecutionJobRequest
    */
   public function setCreateNotebookExecutionJobRequest(GoogleCloudAiplatformV1CreateNotebookExecutionJobRequest $createNotebookExecutionJobRequest)
   {
@@ -133,7 +220,11 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->createNotebookExecutionJobRequest;
   }
   /**
-   * @param GoogleCloudAiplatformV1CreatePipelineJobRequest
+   * Request for PipelineService.CreatePipelineJob.
+   * CreatePipelineJobRequest.parent field is required (format:
+   * projects/{project}/locations/{location}).
+   *
+   * @param GoogleCloudAiplatformV1CreatePipelineJobRequest $createPipelineJobRequest
    */
   public function setCreatePipelineJobRequest(GoogleCloudAiplatformV1CreatePipelineJobRequest $createPipelineJobRequest)
   {
@@ -147,7 +238,9 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->createPipelineJobRequest;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Schedule was created.
+   *
+   * @param string $createTime
    */
   public function setCreateTime($createTime)
   {
@@ -161,7 +254,14 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->createTime;
   }
   /**
-   * @param string
+   * Cron schedule (https://en.wikipedia.org/wiki/Cron) to launch scheduled
+   * runs. To explicitly set a timezone to the cron tab, apply a prefix in the
+   * cron tab: "CRON_TZ=${IANA_TIME_ZONE}" or "TZ=${IANA_TIME_ZONE}". The
+   * ${IANA_TIME_ZONE} may only be a valid string from IANA time zone database.
+   * For example, "CRON_TZ=America/New_York 1 * * * *", or "TZ=America/New_York
+   * 1 * * * *".
+   *
+   * @param string $cron
    */
   public function setCron($cron)
   {
@@ -175,7 +275,10 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->cron;
   }
   /**
-   * @param string
+   * Required. User provided name of the Schedule. The name can be up to 128
+   * characters long and can consist of any UTF-8 characters.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -189,7 +292,13 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param string
+   * Optional. Timestamp after which no new runs can be scheduled. If specified,
+   * The schedule will be completed when either end_time is reached or when
+   * scheduled_run_count >= max_run_count. If not specified, new runs will keep
+   * getting scheduled until this Schedule is paused or deleted. Already
+   * scheduled runs will be allowed to complete. Unset if not specified.
+   *
+   * @param string $endTime
    */
   public function setEndTime($endTime)
   {
@@ -203,7 +312,10 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->endTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Schedule was last paused. Unset if never
+   * paused.
+   *
+   * @param string $lastPauseTime
    */
   public function setLastPauseTime($lastPauseTime)
   {
@@ -217,7 +329,10 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->lastPauseTime;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Schedule was last resumed. Unset if never
+   * resumed from pause.
+   *
+   * @param string $lastResumeTime
    */
   public function setLastResumeTime($lastResumeTime)
   {
@@ -231,7 +346,12 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->lastResumeTime;
   }
   /**
-   * @param GoogleCloudAiplatformV1ScheduleRunResponse
+   * Output only. Response of the last scheduled run. This is the response for
+   * starting the scheduled requests and not the execution of the
+   * operations/jobs created by the requests (if applicable). Unset if no run
+   * has been scheduled yet.
+   *
+   * @param GoogleCloudAiplatformV1ScheduleRunResponse $lastScheduledRunResponse
    */
   public function setLastScheduledRunResponse(GoogleCloudAiplatformV1ScheduleRunResponse $lastScheduledRunResponse)
   {
@@ -245,7 +365,11 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->lastScheduledRunResponse;
   }
   /**
-   * @param string
+   * Required. Maximum number of runs that can be started concurrently for this
+   * Schedule. This is the limit for starting the scheduled requests and not the
+   * execution of the operations/jobs created by the requests (if applicable).
+   *
+   * @param string $maxConcurrentRunCount
    */
   public function setMaxConcurrentRunCount($maxConcurrentRunCount)
   {
@@ -259,7 +383,13 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->maxConcurrentRunCount;
   }
   /**
-   * @param string
+   * Optional. Maximum run count of the schedule. If specified, The schedule
+   * will be completed when either started_run_count >= max_run_count or when
+   * end_time is reached. If not specified, new runs will keep getting scheduled
+   * until this Schedule is paused or deleted. Already scheduled runs will be
+   * allowed to complete. Unset if not specified.
+   *
+   * @param string $maxRunCount
    */
   public function setMaxRunCount($maxRunCount)
   {
@@ -273,7 +403,9 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->maxRunCount;
   }
   /**
-   * @param string
+   * Immutable. The resource name of the Schedule.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -287,7 +419,11 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->name;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Schedule should schedule the next run.
+   * Having a next_run_time in the past means the runs are being started behind
+   * schedule.
+   *
+   * @param string $nextRunTime
    */
   public function setNextRunTime($nextRunTime)
   {
@@ -301,7 +437,10 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->nextRunTime;
   }
   /**
-   * @param string
+   * Optional. Timestamp after which the first run can be scheduled. Default to
+   * Schedule create time if not specified.
+   *
+   * @param string $startTime
    */
   public function setStartTime($startTime)
   {
@@ -315,7 +454,9 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->startTime;
   }
   /**
-   * @param string
+   * Output only. The number of runs started by this schedule.
+   *
+   * @param string $startedRunCount
    */
   public function setStartedRunCount($startedRunCount)
   {
@@ -329,21 +470,27 @@ class GoogleCloudAiplatformV1Schedule extends \Google\Model
     return $this->startedRunCount;
   }
   /**
-   * @param string
+   * Output only. The state of this Schedule.
+   *
+   * Accepted values: STATE_UNSPECIFIED, ACTIVE, PAUSED, COMPLETED
+   *
+   * @param self::STATE_* $state
    */
   public function setState($state)
   {
     $this->state = $state;
   }
   /**
-   * @return string
+   * @return self::STATE_*
    */
   public function getState()
   {
     return $this->state;
   }
   /**
-   * @param string
+   * Output only. Timestamp when this Schedule was updated.
+   *
+   * @param string $updateTime
    */
   public function setUpdateTime($updateTime)
   {

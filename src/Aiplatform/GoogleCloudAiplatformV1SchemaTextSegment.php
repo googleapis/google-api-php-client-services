@@ -20,20 +20,31 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTextSegment extends \Google\Model
 {
   /**
+   * The text content in the segment for output only.
+   *
    * @var string
    */
   public $content;
   /**
+   * Zero-based character index of the first character past the end of the text
+   * segment (counting character from the beginning of the text). The character
+   * at the end_offset is NOT included in the text segment.
+   *
    * @var string
    */
   public $endOffset;
   /**
+   * Zero-based character index of the first character of the text segment
+   * (counting characters from the beginning of the text).
+   *
    * @var string
    */
   public $startOffset;
 
   /**
-   * @param string
+   * The text content in the segment for output only.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -47,7 +58,11 @@ class GoogleCloudAiplatformV1SchemaTextSegment extends \Google\Model
     return $this->content;
   }
   /**
-   * @param string
+   * Zero-based character index of the first character past the end of the text
+   * segment (counting character from the beginning of the text). The character
+   * at the end_offset is NOT included in the text segment.
+   *
+   * @param string $endOffset
    */
   public function setEndOffset($endOffset)
   {
@@ -61,7 +76,10 @@ class GoogleCloudAiplatformV1SchemaTextSegment extends \Google\Model
     return $this->endOffset;
   }
   /**
-   * @param string
+   * Zero-based character index of the first character of the text segment
+   * (counting characters from the beginning of the text).
+   *
+   * @param string $startOffset
    */
   public function setStartOffset($startOffset)
   {

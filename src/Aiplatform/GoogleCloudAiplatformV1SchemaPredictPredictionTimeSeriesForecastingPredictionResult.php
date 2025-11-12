@@ -21,22 +21,30 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTimeSeriesForecastingPredict
 {
   protected $collection_key = 'quantileValues';
   /**
+   * Quantile predictions, in 1-1 correspondence with quantile_values.
+   *
    * @var float[]
    */
   public $quantilePredictions;
   /**
+   * Quantile values.
+   *
    * @var float[]
    */
   public $quantileValues;
   protected $tftFeatureImportanceType = GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance::class;
   protected $tftFeatureImportanceDataType = '';
   /**
+   * The regression value.
+   *
    * @var float
    */
   public $value;
 
   /**
-   * @param float[]
+   * Quantile predictions, in 1-1 correspondence with quantile_values.
+   *
+   * @param float[] $quantilePredictions
    */
   public function setQuantilePredictions($quantilePredictions)
   {
@@ -50,7 +58,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTimeSeriesForecastingPredict
     return $this->quantilePredictions;
   }
   /**
-   * @param float[]
+   * Quantile values.
+   *
+   * @param float[] $quantileValues
    */
   public function setQuantileValues($quantileValues)
   {
@@ -64,7 +74,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTimeSeriesForecastingPredict
     return $this->quantileValues;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance
+   * Only use these if TFt is enabled.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance $tftFeatureImportance
    */
   public function setTftFeatureImportance(GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance $tftFeatureImportance)
   {
@@ -78,7 +90,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTimeSeriesForecastingPredict
     return $this->tftFeatureImportance;
   }
   /**
-   * @param float
+   * The regression value.
+   *
+   * @param float $value
    */
   public function setValue($value)
   {

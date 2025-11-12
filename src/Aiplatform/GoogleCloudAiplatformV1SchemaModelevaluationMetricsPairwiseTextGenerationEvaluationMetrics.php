@@ -20,60 +20,99 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationEvaluationMetrics extends \Google\Model
 {
   /**
+   * Fraction of cases where the autorater agreed with the human raters.
+   *
    * @var float
    */
   public $accuracy;
   /**
+   * Percentage of time the autorater decided the baseline model had the better
+   * response.
+   *
    * @var float
    */
   public $baselineModelWinRate;
   /**
+   * A measurement of agreement between the autorater and human raters that
+   * takes the likelihood of random agreement into account.
+   *
    * @var float
    */
   public $cohensKappa;
   /**
+   * Harmonic mean of precision and recall.
+   *
    * @var float
    */
   public $f1Score;
   /**
+   * Number of examples where the autorater chose the baseline model, but humans
+   * preferred the model.
+   *
    * @var string
    */
   public $falseNegativeCount;
   /**
+   * Number of examples where the autorater chose the model, but humans
+   * preferred the baseline model.
+   *
    * @var string
    */
   public $falsePositiveCount;
   /**
+   * Percentage of time humans decided the baseline model had the better
+   * response.
+   *
    * @var float
    */
   public $humanPreferenceBaselineModelWinRate;
   /**
+   * Percentage of time humans decided the model had the better response.
+   *
    * @var float
    */
   public $humanPreferenceModelWinRate;
   /**
+   * Percentage of time the autorater decided the model had the better response.
+   *
    * @var float
    */
   public $modelWinRate;
   /**
+   * Fraction of cases where the autorater and humans thought the model had a
+   * better response out of all cases where the autorater thought the model had
+   * a better response. True positive divided by all positive.
+   *
    * @var float
    */
   public $precision;
   /**
+   * Fraction of cases where the autorater and humans thought the model had a
+   * better response out of all cases where the humans thought the model had a
+   * better response.
+   *
    * @var float
    */
   public $recall;
   /**
+   * Number of examples where both the autorater and humans decided that the
+   * model had the worse response.
+   *
    * @var string
    */
   public $trueNegativeCount;
   /**
+   * Number of examples where both the autorater and humans decided that the
+   * model had the better response.
+   *
    * @var string
    */
   public $truePositiveCount;
 
   /**
-   * @param float
+   * Fraction of cases where the autorater agreed with the human raters.
+   *
+   * @param float $accuracy
    */
   public function setAccuracy($accuracy)
   {
@@ -87,7 +126,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->accuracy;
   }
   /**
-   * @param float
+   * Percentage of time the autorater decided the baseline model had the better
+   * response.
+   *
+   * @param float $baselineModelWinRate
    */
   public function setBaselineModelWinRate($baselineModelWinRate)
   {
@@ -101,7 +143,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->baselineModelWinRate;
   }
   /**
-   * @param float
+   * A measurement of agreement between the autorater and human raters that
+   * takes the likelihood of random agreement into account.
+   *
+   * @param float $cohensKappa
    */
   public function setCohensKappa($cohensKappa)
   {
@@ -115,7 +160,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->cohensKappa;
   }
   /**
-   * @param float
+   * Harmonic mean of precision and recall.
+   *
+   * @param float $f1Score
    */
   public function setF1Score($f1Score)
   {
@@ -129,7 +176,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->f1Score;
   }
   /**
-   * @param string
+   * Number of examples where the autorater chose the baseline model, but humans
+   * preferred the model.
+   *
+   * @param string $falseNegativeCount
    */
   public function setFalseNegativeCount($falseNegativeCount)
   {
@@ -143,7 +193,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->falseNegativeCount;
   }
   /**
-   * @param string
+   * Number of examples where the autorater chose the model, but humans
+   * preferred the baseline model.
+   *
+   * @param string $falsePositiveCount
    */
   public function setFalsePositiveCount($falsePositiveCount)
   {
@@ -157,7 +210,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->falsePositiveCount;
   }
   /**
-   * @param float
+   * Percentage of time humans decided the baseline model had the better
+   * response.
+   *
+   * @param float $humanPreferenceBaselineModelWinRate
    */
   public function setHumanPreferenceBaselineModelWinRate($humanPreferenceBaselineModelWinRate)
   {
@@ -171,7 +227,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->humanPreferenceBaselineModelWinRate;
   }
   /**
-   * @param float
+   * Percentage of time humans decided the model had the better response.
+   *
+   * @param float $humanPreferenceModelWinRate
    */
   public function setHumanPreferenceModelWinRate($humanPreferenceModelWinRate)
   {
@@ -185,7 +243,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->humanPreferenceModelWinRate;
   }
   /**
-   * @param float
+   * Percentage of time the autorater decided the model had the better response.
+   *
+   * @param float $modelWinRate
    */
   public function setModelWinRate($modelWinRate)
   {
@@ -199,7 +259,11 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->modelWinRate;
   }
   /**
-   * @param float
+   * Fraction of cases where the autorater and humans thought the model had a
+   * better response out of all cases where the autorater thought the model had
+   * a better response. True positive divided by all positive.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -213,7 +277,11 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->precision;
   }
   /**
-   * @param float
+   * Fraction of cases where the autorater and humans thought the model had a
+   * better response out of all cases where the humans thought the model had a
+   * better response.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {
@@ -227,7 +295,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->recall;
   }
   /**
-   * @param string
+   * Number of examples where both the autorater and humans decided that the
+   * model had the worse response.
+   *
+   * @param string $trueNegativeCount
    */
   public function setTrueNegativeCount($trueNegativeCount)
   {
@@ -241,7 +312,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsPairwiseTextGenerationE
     return $this->trueNegativeCount;
   }
   /**
-   * @param string
+   * Number of examples where both the autorater and humans decided that the
+   * model had the better response.
+   *
+   * @param string $truePositiveCount
    */
   public function setTruePositiveCount($truePositiveCount)
   {

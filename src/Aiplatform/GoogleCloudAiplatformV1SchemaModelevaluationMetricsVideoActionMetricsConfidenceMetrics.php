@@ -20,24 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfidenceMetrics extends \Google\Model
 {
   /**
+   * Output only. The confidence threshold value used to compute the metrics.
+   *
    * @var float
    */
   public $confidenceThreshold;
   /**
+   * Output only. The harmonic mean of recall and precision.
+   *
    * @var float
    */
   public $f1Score;
   /**
+   * Output only. Precision for the given confidence threshold.
+   *
    * @var float
    */
   public $precision;
   /**
+   * Output only. Recall for the given confidence threshold.
+   *
    * @var float
    */
   public $recall;
 
   /**
-   * @param float
+   * Output only. The confidence threshold value used to compute the metrics.
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -51,7 +61,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfi
     return $this->confidenceThreshold;
   }
   /**
-   * @param float
+   * Output only. The harmonic mean of recall and precision.
+   *
+   * @param float $f1Score
    */
   public function setF1Score($f1Score)
   {
@@ -65,7 +77,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfi
     return $this->f1Score;
   }
   /**
-   * @param float
+   * Output only. Precision for the given confidence threshold.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -79,7 +93,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfi
     return $this->precision;
   }
   /**
-   * @param float
+   * Output only. Recall for the given confidence threshold.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {

@@ -20,24 +20,44 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPredictInstanceVideoClassificationPredictionInstance extends \Google\Model
 {
   /**
+   * The Google Cloud Storage location of the video on which to perform the
+   * prediction.
+   *
    * @var string
    */
   public $content;
   /**
+   * The MIME type of the content of the video. Only the following are
+   * supported: video/mp4 video/avi video/quicktime
+   *
    * @var string
    */
   public $mimeType;
   /**
+   * The end, exclusive, of the video's time segment on which to perform the
+   * prediction. Expressed as a number of seconds as measured from the start of
+   * the video, with "s" appended at the end. Fractions are allowed, up to a
+   * microsecond precision, and "inf" or "Infinity" is allowed, which means the
+   * end of the video.
+   *
    * @var string
    */
   public $timeSegmentEnd;
   /**
+   * The beginning, inclusive, of the video's time segment on which to perform
+   * the prediction. Expressed as a number of seconds as measured from the start
+   * of the video, with "s" appended at the end. Fractions are allowed, up to a
+   * microsecond precision.
+   *
    * @var string
    */
   public $timeSegmentStart;
 
   /**
-   * @param string
+   * The Google Cloud Storage location of the video on which to perform the
+   * prediction.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -51,7 +71,10 @@ class GoogleCloudAiplatformV1SchemaPredictInstanceVideoClassificationPredictionI
     return $this->content;
   }
   /**
-   * @param string
+   * The MIME type of the content of the video. Only the following are
+   * supported: video/mp4 video/avi video/quicktime
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {
@@ -65,7 +88,13 @@ class GoogleCloudAiplatformV1SchemaPredictInstanceVideoClassificationPredictionI
     return $this->mimeType;
   }
   /**
-   * @param string
+   * The end, exclusive, of the video's time segment on which to perform the
+   * prediction. Expressed as a number of seconds as measured from the start of
+   * the video, with "s" appended at the end. Fractions are allowed, up to a
+   * microsecond precision, and "inf" or "Infinity" is allowed, which means the
+   * end of the video.
+   *
+   * @param string $timeSegmentEnd
    */
   public function setTimeSegmentEnd($timeSegmentEnd)
   {
@@ -79,7 +108,12 @@ class GoogleCloudAiplatformV1SchemaPredictInstanceVideoClassificationPredictionI
     return $this->timeSegmentEnd;
   }
   /**
-   * @param string
+   * The beginning, inclusive, of the video's time segment on which to perform
+   * the prediction. Expressed as a number of seconds as measured from the start
+   * of the video, with "s" appended at the end. Fractions are allowed, up to a
+   * microsecond precision.
+   *
+   * @param string $timeSegmentStart
    */
   public function setTimeSegmentStart($timeSegmentStart)
   {

@@ -23,16 +23,26 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics exte
   protected $confidenceMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfidenceMetrics::class;
   protected $confidenceMetricsDataType = 'array';
   /**
+   * The mean average precision.
+   *
    * @var float
    */
   public $meanAveragePrecision;
   /**
+   * This VideoActionMetrics is calculated based on this prediction window
+   * length. If the predicted action's timestamp is inside the time window whose
+   * center is the ground truth action's timestamp with this specific length,
+   * the prediction result is treated as a true positive.
+   *
    * @var string
    */
   public $precisionWindowLength;
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfidenceMetrics[]
+   * Metrics for each label-match confidence_threshold from
+   * 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetricsConfidenceMetrics[] $confidenceMetrics
    */
   public function setConfidenceMetrics($confidenceMetrics)
   {
@@ -46,7 +56,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics exte
     return $this->confidenceMetrics;
   }
   /**
-   * @param float
+   * The mean average precision.
+   *
+   * @param float $meanAveragePrecision
    */
   public function setMeanAveragePrecision($meanAveragePrecision)
   {
@@ -60,7 +72,12 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics exte
     return $this->meanAveragePrecision;
   }
   /**
-   * @param string
+   * This VideoActionMetrics is calculated based on this prediction window
+   * length. If the predicted action's timestamp is inside the time window whose
+   * center is the ground truth action's timestamp with this specific length,
+   * the prediction result is treated as a true positive.
+   *
+   * @param string $precisionWindowLength
    */
   public function setPrecisionWindowLength($precisionWindowLength)
   {

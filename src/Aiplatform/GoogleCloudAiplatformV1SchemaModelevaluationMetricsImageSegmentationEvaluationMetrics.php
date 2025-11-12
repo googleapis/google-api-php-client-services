@@ -24,7 +24,11 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageSegmentationEvalua
   protected $confidenceMetricsEntriesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageSegmentationEvaluationMetricsConfidenceMetricsEntry[]
+   * Metrics for each confidenceThreshold in
+   * 0.00,0.05,0.10,...,0.95,0.96,0.97,0.98,0.99 Precision-recall curve can be
+   * derived from it.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsImageSegmentationEvaluationMetricsConfidenceMetricsEntry[] $confidenceMetricsEntries
    */
   public function setConfidenceMetricsEntries($confidenceMetricsEntries)
   {

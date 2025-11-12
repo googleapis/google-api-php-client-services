@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsSummarizationEvaluationMetrics extends \Google\Model
 {
   /**
+   * ROUGE-L (Longest Common Subsequence) scoring at summary level.
+   *
    * @var float
    */
   public $rougeLSum;
 
   /**
-   * @param float
+   * ROUGE-L (Longest Common Subsequence) scoring at summary level.
+   *
+   * @param float $rougeLSum
    */
   public function setRougeLSum($rougeLSum)
   {

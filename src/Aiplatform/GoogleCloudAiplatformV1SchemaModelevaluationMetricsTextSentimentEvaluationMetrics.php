@@ -22,36 +22,57 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
   protected $confusionMatrixType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix::class;
   protected $confusionMatrixDataType = '';
   /**
+   * The harmonic mean of recall and precision.
+   *
    * @var float
    */
   public $f1Score;
   /**
+   * Linear weighted kappa. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
    * @var float
    */
   public $linearKappa;
   /**
+   * Mean absolute error. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
    * @var float
    */
   public $meanAbsoluteError;
   /**
+   * Mean squared error. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
    * @var float
    */
   public $meanSquaredError;
   /**
+   * Precision.
+   *
    * @var float
    */
   public $precision;
   /**
+   * Quadratic weighted kappa. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
    * @var float
    */
   public $quadraticKappa;
   /**
+   * Recall.
+   *
    * @var float
    */
   public $recall;
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix
+   * Confusion matrix of the evaluation. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix $confusionMatrix
    */
   public function setConfusionMatrix(GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix $confusionMatrix)
   {
@@ -65,7 +86,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->confusionMatrix;
   }
   /**
-   * @param float
+   * The harmonic mean of recall and precision.
+   *
+   * @param float $f1Score
    */
   public function setF1Score($f1Score)
   {
@@ -79,7 +102,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->f1Score;
   }
   /**
-   * @param float
+   * Linear weighted kappa. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
+   * @param float $linearKappa
    */
   public function setLinearKappa($linearKappa)
   {
@@ -93,7 +119,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->linearKappa;
   }
   /**
-   * @param float
+   * Mean absolute error. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
+   * @param float $meanAbsoluteError
    */
   public function setMeanAbsoluteError($meanAbsoluteError)
   {
@@ -107,7 +136,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->meanAbsoluteError;
   }
   /**
-   * @param float
+   * Mean squared error. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
+   * @param float $meanSquaredError
    */
   public function setMeanSquaredError($meanSquaredError)
   {
@@ -121,7 +153,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->meanSquaredError;
   }
   /**
-   * @param float
+   * Precision.
+   *
+   * @param float $precision
    */
   public function setPrecision($precision)
   {
@@ -135,7 +169,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->precision;
   }
   /**
-   * @param float
+   * Quadratic weighted kappa. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
+   * @param float $quadraticKappa
    */
   public function setQuadraticKappa($quadraticKappa)
   {
@@ -149,7 +186,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextSentimentEvaluation
     return $this->quadraticKappa;
   }
   /**
-   * @param float
+   * Recall.
+   *
+   * @param float $recall
    */
   public function setRecall($recall)
   {

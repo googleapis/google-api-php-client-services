@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecTranslationSentenceFileInput extend
   protected $gcsInputSourceDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource
+   * Inlined file source.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource $fileInputSource
    */
   public function setFileInputSource(GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource $fileInputSource)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecTranslationSentenceFileInput extend
     return $this->fileInputSource;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationGcsInputSource
+   * Cloud Storage file source.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationGcsInputSource $gcsInputSource
    */
   public function setGcsInputSource(GoogleCloudAiplatformV1SchemaPromptSpecTranslationGcsInputSource $gcsInputSource)
   {

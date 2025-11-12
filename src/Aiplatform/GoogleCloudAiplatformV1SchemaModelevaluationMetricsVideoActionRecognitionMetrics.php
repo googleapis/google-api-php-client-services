@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionRecognitionM
 {
   protected $collection_key = 'videoActionMetrics';
   /**
+   * The number of ground truth actions used to create this evaluation.
+   *
    * @var int
    */
   public $evaluatedActionCount;
@@ -28,7 +30,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionRecognitionM
   protected $videoActionMetricsDataType = 'array';
 
   /**
-   * @param int
+   * The number of ground truth actions used to create this evaluation.
+   *
+   * @param int $evaluatedActionCount
    */
   public function setEvaluatedActionCount($evaluatedActionCount)
   {
@@ -42,7 +46,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionRecognitionM
     return $this->evaluatedActionCount;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics[]
+   * The metric entries for precision window lengths: 1s,2s,3s.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsVideoActionMetrics[] $videoActionMetrics
    */
   public function setVideoActionMetrics($videoActionMetrics)
   {

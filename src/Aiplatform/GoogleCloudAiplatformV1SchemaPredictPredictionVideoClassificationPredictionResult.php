@@ -20,32 +20,62 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPredictPredictionVideoClassificationPredictionResult extends \Google\Model
 {
   /**
+   * The Model's confidence in correction of this prediction, higher value means
+   * higher confidence.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * The display name of the AnnotationSpec that had been identified.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The resource ID of the AnnotationSpec that had been identified.
+   *
    * @var string
    */
   public $id;
   /**
+   * The end, exclusive, of the video's time segment in which the AnnotationSpec
+   * has been identified. Expressed as a number of seconds as measured from the
+   * start of the video, with fractions up to a microsecond precision, and with
+   * "s" appended at the end. Note that for 'segment-classification' prediction
+   * type, this equals the original 'timeSegmentEnd' from the input instance,
+   * for other types it is the end of a shot or a 1 second interval
+   * respectively.
+   *
    * @var string
    */
   public $timeSegmentEnd;
   /**
+   * The beginning, inclusive, of the video's time segment in which the
+   * AnnotationSpec has been identified. Expressed as a number of seconds as
+   * measured from the start of the video, with fractions up to a microsecond
+   * precision, and with "s" appended at the end. Note that for 'segment-
+   * classification' prediction type, this equals the original
+   * 'timeSegmentStart' from the input instance, for other types it is the start
+   * of a shot or a 1 second interval respectively.
+   *
    * @var string
    */
   public $timeSegmentStart;
   /**
+   * The type of the prediction. The requested types can be configured via
+   * parameters. This will be one of - segment-classification - shot-
+   * classification - one-sec-interval-classification
+   *
    * @var string
    */
   public $type;
 
   /**
-   * @param float
+   * The Model's confidence in correction of this prediction, higher value means
+   * higher confidence.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -59,7 +89,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoClassificationPredictio
     return $this->confidence;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that had been identified.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -73,7 +105,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoClassificationPredictio
     return $this->displayName;
   }
   /**
-   * @param string
+   * The resource ID of the AnnotationSpec that had been identified.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -87,7 +121,15 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoClassificationPredictio
     return $this->id;
   }
   /**
-   * @param string
+   * The end, exclusive, of the video's time segment in which the AnnotationSpec
+   * has been identified. Expressed as a number of seconds as measured from the
+   * start of the video, with fractions up to a microsecond precision, and with
+   * "s" appended at the end. Note that for 'segment-classification' prediction
+   * type, this equals the original 'timeSegmentEnd' from the input instance,
+   * for other types it is the end of a shot or a 1 second interval
+   * respectively.
+   *
+   * @param string $timeSegmentEnd
    */
   public function setTimeSegmentEnd($timeSegmentEnd)
   {
@@ -101,7 +143,15 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoClassificationPredictio
     return $this->timeSegmentEnd;
   }
   /**
-   * @param string
+   * The beginning, inclusive, of the video's time segment in which the
+   * AnnotationSpec has been identified. Expressed as a number of seconds as
+   * measured from the start of the video, with fractions up to a microsecond
+   * precision, and with "s" appended at the end. Note that for 'segment-
+   * classification' prediction type, this equals the original
+   * 'timeSegmentStart' from the input instance, for other types it is the start
+   * of a shot or a 1 second interval respectively.
+   *
+   * @param string $timeSegmentStart
    */
   public function setTimeSegmentStart($timeSegmentStart)
   {
@@ -115,7 +165,11 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoClassificationPredictio
     return $this->timeSegmentStart;
   }
   /**
-   * @param string
+   * The type of the prediction. The requested types can be configured via
+   * parameters. This will be one of - segment-classification - shot-
+   * classification - one-sec-interval-classification
+   *
+   * @param string $type
    */
   public function setType($type)
   {

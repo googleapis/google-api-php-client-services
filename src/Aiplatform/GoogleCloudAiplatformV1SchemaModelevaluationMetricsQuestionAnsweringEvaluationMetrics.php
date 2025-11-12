@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsQuestionAnsweringEvaluationMetrics extends \Google\Model
 {
   /**
+   * The rate at which the input predicted strings exactly match their
+   * references.
+   *
    * @var float
    */
   public $exactMatch;
 
   /**
-   * @param float
+   * The rate at which the input predicted strings exactly match their
+   * references.
+   *
+   * @param float $exactMatch
    */
   public function setExactMatch($exactMatch)
   {

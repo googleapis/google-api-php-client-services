@@ -23,7 +23,7 @@ class GoogleCloudAiplatformV1SchemaTablesDatasetMetadata extends \Google\Model
   protected $inputConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaTablesDatasetMetadataInputConfig
+   * @param GoogleCloudAiplatformV1SchemaTablesDatasetMetadataInputConfig $inputConfig
    */
   public function setInputConfig(GoogleCloudAiplatformV1SchemaTablesDatasetMetadataInputConfig $inputConfig)
   {

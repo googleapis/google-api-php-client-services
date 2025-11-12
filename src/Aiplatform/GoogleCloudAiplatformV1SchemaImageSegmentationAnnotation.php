@@ -27,7 +27,10 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotation extends \Google\M
   protected $polylineAnnotationDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationMaskAnnotation
+   * Mask based segmentation annotation. Only one mask annotation can exist for
+   * one image.
+   *
+   * @param GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationMaskAnnotation $maskAnnotation
    */
   public function setMaskAnnotation(GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationMaskAnnotation $maskAnnotation)
   {
@@ -41,7 +44,9 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotation extends \Google\M
     return $this->maskAnnotation;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation
+   * Polygon annotation.
+   *
+   * @param GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation $polygonAnnotation
    */
   public function setPolygonAnnotation(GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolygonAnnotation $polygonAnnotation)
   {
@@ -55,7 +60,9 @@ class GoogleCloudAiplatformV1SchemaImageSegmentationAnnotation extends \Google\M
     return $this->polygonAnnotation;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolylineAnnotation
+   * Polyline annotation.
+   *
+   * @param GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolylineAnnotation $polylineAnnotation
    */
   public function setPolylineAnnotation(GoogleCloudAiplatformV1SchemaImageSegmentationAnnotationPolylineAnnotation $polylineAnnotation)
   {

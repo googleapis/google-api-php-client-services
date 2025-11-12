@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsGeneralTextGenerationEvaluationMetrics extends \Google\Model
 {
   /**
+   * BLEU (bilingual evaluation understudy) scores based on sacrebleu
+   * implementation.
+   *
    * @var float
    */
   public $bleu;
   /**
+   * ROUGE-L (Longest Common Subsequence) scoring at summary level.
+   *
    * @var float
    */
   public $rougeLSum;
 
   /**
-   * @param float
+   * BLEU (bilingual evaluation understudy) scores based on sacrebleu
+   * implementation.
+   *
+   * @param float $bleu
    */
   public function setBleu($bleu)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsGeneralTextGenerationEv
     return $this->bleu;
   }
   /**
-   * @param float
+   * ROUGE-L (Longest Common Subsequence) scoring at summary level.
+   *
+   * @param float $rougeLSum
    */
   public function setRougeLSum($rougeLSum)
   {

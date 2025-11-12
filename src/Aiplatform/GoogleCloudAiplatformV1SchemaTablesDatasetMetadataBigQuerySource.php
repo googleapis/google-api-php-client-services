@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTablesDatasetMetadataBigQuerySource extends \Google\Model
 {
   /**
+   * The URI of a BigQuery table. e.g. bq://projectId.bqDatasetId.bqTableId
+   *
    * @var string
    */
   public $uri;
 
   /**
-   * @param string
+   * The URI of a BigQuery table. e.g. bq://projectId.bqDatasetId.bqTableId
+   *
+   * @param string $uri
    */
   public function setUri($uri)
   {

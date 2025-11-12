@@ -26,7 +26,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluatio
   protected $confusionMatrixDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluationMetricsConfidenceMetrics[]
+   * Metrics that have confidence thresholds. Precision-recall curve can be
+   * derived from them.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluationMetricsConfidenceMetrics[] $confidenceMetrics
    */
   public function setConfidenceMetrics($confidenceMetrics)
   {
@@ -40,7 +43,11 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsTextExtractionEvaluatio
     return $this->confidenceMetrics;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix
+   * Confusion matrix of the evaluation. Only set for Models where number of
+   * AnnotationSpecs is no more than 10. Only set for ModelEvaluations, not for
+   * ModelEvaluationSlices.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix $confusionMatrix
    */
   public function setConfusionMatrix(GoogleCloudAiplatformV1SchemaModelevaluationMetricsConfusionMatrix $confusionMatrix)
   {

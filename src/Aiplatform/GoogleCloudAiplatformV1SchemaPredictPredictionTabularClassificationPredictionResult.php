@@ -21,16 +21,25 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularClassificationPredict
 {
   protected $collection_key = 'scores';
   /**
+   * The name of the classes being classified, contains all possible values of
+   * the target column.
+   *
    * @var string[]
    */
   public $classes;
   /**
+   * The model's confidence in each class being correct, higher value means
+   * higher confidence. The N-th score corresponds to the N-th class in classes.
+   *
    * @var float[]
    */
   public $scores;
 
   /**
-   * @param string[]
+   * The name of the classes being classified, contains all possible values of
+   * the target column.
+   *
+   * @param string[] $classes
    */
   public function setClasses($classes)
   {
@@ -44,7 +53,10 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularClassificationPredict
     return $this->classes;
   }
   /**
-   * @param float[]
+   * The model's confidence in each class being correct, higher value means
+   * higher confidence. The N-th score corresponds to the N-th class in classes.
+   *
+   * @param float[] $scores
    */
   public function setScores($scores)
   {

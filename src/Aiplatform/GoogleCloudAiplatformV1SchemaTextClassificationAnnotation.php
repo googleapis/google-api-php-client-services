@@ -20,16 +20,22 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTextClassificationAnnotation extends \Google\Model
 {
   /**
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $annotationSpecId;
   /**
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $displayName;
 
   /**
-   * @param string
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $annotationSpecId
    */
   public function setAnnotationSpecId($annotationSpecId)
   {
@@ -43,7 +49,9 @@ class GoogleCloudAiplatformV1SchemaTextClassificationAnnotation extends \Google\
     return $this->annotationSpecId;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {

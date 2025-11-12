@@ -19,6 +19,11 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Scalar extends \Google\Model
 {
+  /**
+   * Value of the point at this step / timestamp.
+   *
+   * @var 
+   */
   public $value;
 
   public function setValue($value)

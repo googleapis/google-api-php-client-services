@@ -19,9 +19,25 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SchemaModelevaluationMetricsForecastingEvaluationMetricsQuantileMetricsEntry extends \Google\Model
 {
+  /**
+   * This is a custom metric that calculates the percentage of true values that
+   * were less than the predicted value for that quantile. Only populated when
+   * optimization_objective is minimize-quantile-loss and each entry corresponds
+   * to an entry in quantiles The percent value can be used to compare with the
+   * quantile value, which is the target value.
+   *
+   * @var 
+   */
   public $observedQuantile;
+  /**
+   * The quantile for this entry.
+   *
+   * @var 
+   */
   public $quantile;
   /**
+   * The scaled pinball loss of this quantile.
+   *
    * @var float
    */
   public $scaledPinballLoss;
@@ -43,7 +59,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsForecastingEvaluationMe
     return $this->quantile;
   }
   /**
-   * @param float
+   * The scaled pinball loss of this quantile.
+   *
+   * @param float $scaledPinballLoss
    */
   public function setScaledPinballLoss($scaledPinballLoss)
   {

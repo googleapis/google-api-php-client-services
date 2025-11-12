@@ -21,28 +21,40 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularRegressionPredictionR
 {
   protected $collection_key = 'quantileValues';
   /**
+   * The lower bound of the prediction interval.
+   *
    * @var float
    */
   public $lowerBound;
   /**
+   * Quantile predictions, in 1-1 correspondence with quantile_values.
+   *
    * @var float[]
    */
   public $quantilePredictions;
   /**
+   * Quantile values.
+   *
    * @var float[]
    */
   public $quantileValues;
   /**
+   * The upper bound of the prediction interval.
+   *
    * @var float
    */
   public $upperBound;
   /**
+   * The regression value.
+   *
    * @var float
    */
   public $value;
 
   /**
-   * @param float
+   * The lower bound of the prediction interval.
+   *
+   * @param float $lowerBound
    */
   public function setLowerBound($lowerBound)
   {
@@ -56,7 +68,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularRegressionPredictionR
     return $this->lowerBound;
   }
   /**
-   * @param float[]
+   * Quantile predictions, in 1-1 correspondence with quantile_values.
+   *
+   * @param float[] $quantilePredictions
    */
   public function setQuantilePredictions($quantilePredictions)
   {
@@ -70,7 +84,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularRegressionPredictionR
     return $this->quantilePredictions;
   }
   /**
-   * @param float[]
+   * Quantile values.
+   *
+   * @param float[] $quantileValues
    */
   public function setQuantileValues($quantileValues)
   {
@@ -84,7 +100,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularRegressionPredictionR
     return $this->quantileValues;
   }
   /**
-   * @param float
+   * The upper bound of the prediction interval.
+   *
+   * @param float $upperBound
    */
   public function setUpperBound($upperBound)
   {
@@ -98,7 +116,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTabularRegressionPredictionR
     return $this->upperBound;
   }
   /**
-   * @param float
+   * The regression value.
+   *
+   * @param float $value
    */
   public function setValue($value)
   {

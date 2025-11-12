@@ -23,16 +23,25 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics exte
   protected $confidenceMetricsType = GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetricsConfidenceMetrics::class;
   protected $confidenceMetricsDataType = 'array';
   /**
+   * The intersection-over-union threshold value used to compute this metrics
+   * entry.
+   *
    * @var float
    */
   public $iouThreshold;
   /**
+   * The mean average precision, most often close to `auPrc`.
+   *
    * @var float
    */
   public $meanAveragePrecision;
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetricsConfidenceMetrics[]
+   * Metrics for each label-match confidence_threshold from
+   * 0.05,0.10,...,0.95,0.96,0.97,0.98,0.99. Precision-recall curve is derived
+   * from them.
+   *
+   * @param GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetricsConfidenceMetrics[] $confidenceMetrics
    */
   public function setConfidenceMetrics($confidenceMetrics)
   {
@@ -46,7 +55,10 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics exte
     return $this->confidenceMetrics;
   }
   /**
-   * @param float
+   * The intersection-over-union threshold value used to compute this metrics
+   * entry.
+   *
+   * @param float $iouThreshold
    */
   public function setIouThreshold($iouThreshold)
   {
@@ -60,7 +72,9 @@ class GoogleCloudAiplatformV1SchemaModelevaluationMetricsBoundingBoxMetrics exte
     return $this->iouThreshold;
   }
   /**
-   * @param float
+   * The mean average precision, most often close to `auPrc`.
+   *
+   * @param float $meanAveragePrecision
    */
   public function setMeanAveragePrecision($meanAveragePrecision)
   {

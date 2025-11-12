@@ -33,6 +33,10 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
    */
   public $contextColumns;
   /**
+   * TFT feature importance values. Each pair for {context/horizon/attribute}
+   * should have the same shape since the weight corresponds to the column
+   * names.
+   *
    * @var float[]
    */
   public $contextWeights;
@@ -46,7 +50,7 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
   public $horizonWeights;
 
   /**
-   * @param string[]
+   * @param string[] $attributeColumns
    */
   public function setAttributeColumns($attributeColumns)
   {
@@ -60,7 +64,7 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
     return $this->attributeColumns;
   }
   /**
-   * @param float[]
+   * @param float[] $attributeWeights
    */
   public function setAttributeWeights($attributeWeights)
   {
@@ -74,7 +78,7 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
     return $this->attributeWeights;
   }
   /**
-   * @param string[]
+   * @param string[] $contextColumns
    */
   public function setContextColumns($contextColumns)
   {
@@ -88,7 +92,11 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
     return $this->contextColumns;
   }
   /**
-   * @param float[]
+   * TFT feature importance values. Each pair for {context/horizon/attribute}
+   * should have the same shape since the weight corresponds to the column
+   * names.
+   *
+   * @param float[] $contextWeights
    */
   public function setContextWeights($contextWeights)
   {
@@ -102,7 +110,7 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
     return $this->contextWeights;
   }
   /**
-   * @param string[]
+   * @param string[] $horizonColumns
    */
   public function setHorizonColumns($horizonColumns)
   {
@@ -116,7 +124,7 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionTftFeatureImportance extends
     return $this->horizonColumns;
   }
   /**
-   * @param float[]
+   * @param float[] $horizonWeights
    */
   public function setHorizonWeights($horizonWeights)
   {

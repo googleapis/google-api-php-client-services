@@ -19,6 +19,11 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1SamplingStrategyRandomSampleConfig extends \Google\Model
 {
+  /**
+   * Sample rate (0, 1]
+   *
+   * @var 
+   */
   public $sampleRate;
 
   public function setSampleRate($sampleRate)

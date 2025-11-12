@@ -21,6 +21,8 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
 {
   protected $collection_key = 'executions';
   /**
+   * The Schema version that represents changes to the API behavior.
+   *
    * @var string
    */
   public $apiSchemaVersion;
@@ -34,7 +36,9 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
   protected $translationPromptDataType = '';
 
   /**
-   * @param string
+   * The Schema version that represents changes to the API behavior.
+   *
+   * @param string $apiSchemaVersion
    */
   public function setApiSchemaVersion($apiSchemaVersion)
   {
@@ -48,7 +52,9 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
     return $this->apiSchemaVersion;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptInstancePromptExecution[]
+   * A list of execution instances for constructing a ready-to-use prompt.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptInstancePromptExecution[] $executions
    */
   public function setExecutions($executions)
   {
@@ -62,7 +68,9 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
     return $this->executions;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecMultimodalPrompt
+   * Multimodal prompt which embeds preambles to prompt string.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecMultimodalPrompt $multimodalPrompt
    */
   public function setMultimodalPrompt(GoogleCloudAiplatformV1SchemaPromptSpecMultimodalPrompt $multimodalPrompt)
   {
@@ -76,7 +84,9 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
     return $this->multimodalPrompt;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt
+   * The prompt variation that stores preambles in separate fields.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt $structuredPrompt
    */
   public function setStructuredPrompt(GoogleCloudAiplatformV1SchemaPromptSpecStructuredPrompt $structuredPrompt)
   {
@@ -90,7 +100,9 @@ class GoogleCloudAiplatformV1SchemaPromptApiSchema extends \Google\Collection
     return $this->structuredPrompt;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt
+   * The prompt variation for Translation use case.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt $translationPrompt
    */
   public function setTranslationPrompt(GoogleCloudAiplatformV1SchemaPromptSpecTranslationPrompt $translationPrompt)
   {

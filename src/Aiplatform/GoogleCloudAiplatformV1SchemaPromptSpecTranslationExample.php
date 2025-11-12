@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecTranslationExample extends \Google\
   protected $referenceSentencesFileInputsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecReferenceSentencePairList[]
+   * The reference sentences from inline text.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecReferenceSentencePairList[] $referenceSentencePairLists
    */
   public function setReferenceSentencePairLists($referenceSentencePairLists)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecTranslationExample extends \Google\
     return $this->referenceSentencePairLists;
   }
   /**
-   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationSentenceFileInput[]
+   * The reference sentences from file.
+   *
+   * @param GoogleCloudAiplatformV1SchemaPromptSpecTranslationSentenceFileInput[] $referenceSentencesFileInputs
    */
   public function setReferenceSentencesFileInputs($referenceSentencesFileInputs)
   {

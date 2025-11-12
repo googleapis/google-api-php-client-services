@@ -20,28 +20,48 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPredictPredictionVideoActionRecognitionPredictionResult extends \Google\Model
 {
   /**
+   * The Model's confidence in correction of this prediction, higher value means
+   * higher confidence.
+   *
    * @var float
    */
   public $confidence;
   /**
+   * The display name of the AnnotationSpec that had been identified.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The resource ID of the AnnotationSpec that had been identified.
+   *
    * @var string
    */
   public $id;
   /**
+   * The end, exclusive, of the video's time segment in which the AnnotationSpec
+   * has been identified. Expressed as a number of seconds as measured from the
+   * start of the video, with fractions up to a microsecond precision, and with
+   * "s" appended at the end.
+   *
    * @var string
    */
   public $timeSegmentEnd;
   /**
+   * The beginning, inclusive, of the video's time segment in which the
+   * AnnotationSpec has been identified. Expressed as a number of seconds as
+   * measured from the start of the video, with fractions up to a microsecond
+   * precision, and with "s" appended at the end.
+   *
    * @var string
    */
   public $timeSegmentStart;
 
   /**
-   * @param float
+   * The Model's confidence in correction of this prediction, higher value means
+   * higher confidence.
+   *
+   * @param float $confidence
    */
   public function setConfidence($confidence)
   {
@@ -55,7 +75,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoActionRecognitionPredic
     return $this->confidence;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that had been identified.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -69,7 +91,9 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoActionRecognitionPredic
     return $this->displayName;
   }
   /**
-   * @param string
+   * The resource ID of the AnnotationSpec that had been identified.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -83,7 +107,12 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoActionRecognitionPredic
     return $this->id;
   }
   /**
-   * @param string
+   * The end, exclusive, of the video's time segment in which the AnnotationSpec
+   * has been identified. Expressed as a number of seconds as measured from the
+   * start of the video, with fractions up to a microsecond precision, and with
+   * "s" appended at the end.
+   *
+   * @param string $timeSegmentEnd
    */
   public function setTimeSegmentEnd($timeSegmentEnd)
   {
@@ -97,7 +126,12 @@ class GoogleCloudAiplatformV1SchemaPredictPredictionVideoActionRecognitionPredic
     return $this->timeSegmentEnd;
   }
   /**
-   * @param string
+   * The beginning, inclusive, of the video's time segment in which the
+   * AnnotationSpec has been identified. Expressed as a number of seconds as
+   * measured from the start of the video, with fractions up to a microsecond
+   * precision, and with "s" appended at the end.
+   *
+   * @param string $timeSegmentStart
    */
   public function setTimeSegmentStart($timeSegmentStart)
   {

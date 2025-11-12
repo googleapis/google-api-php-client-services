@@ -20,20 +20,28 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource extends \Google\Model
 {
   /**
+   * The file's contents.
+   *
    * @var string
    */
   public $content;
   /**
+   * The file's display name.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The file's mime type.
+   *
    * @var string
    */
   public $mimeType;
 
   /**
-   * @param string
+   * The file's contents.
+   *
+   * @param string $content
    */
   public function setContent($content)
   {
@@ -47,7 +55,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource extends 
     return $this->content;
   }
   /**
-   * @param string
+   * The file's display name.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -61,7 +71,9 @@ class GoogleCloudAiplatformV1SchemaPromptSpecTranslationFileInputSource extends 
     return $this->displayName;
   }
   /**
-   * @param string
+   * The file's mime type.
+   *
+   * @param string $mimeType
    */
   public function setMimeType($mimeType)
   {

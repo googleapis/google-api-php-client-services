@@ -20,24 +20,34 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaTextSentimentAnnotation extends \Google\Model
 {
   /**
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $annotationSpecId;
   /**
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
    * @var string
    */
   public $displayName;
   /**
+   * The sentiment score for text.
+   *
    * @var int
    */
   public $sentiment;
   /**
+   * The sentiment max score for text.
+   *
    * @var int
    */
   public $sentimentMax;
 
   /**
-   * @param string
+   * The resource Id of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $annotationSpecId
    */
   public function setAnnotationSpecId($annotationSpecId)
   {
@@ -51,7 +61,9 @@ class GoogleCloudAiplatformV1SchemaTextSentimentAnnotation extends \Google\Model
     return $this->annotationSpecId;
   }
   /**
-   * @param string
+   * The display name of the AnnotationSpec that this Annotation pertains to.
+   *
+   * @param string $displayName
    */
   public function setDisplayName($displayName)
   {
@@ -65,7 +77,9 @@ class GoogleCloudAiplatformV1SchemaTextSentimentAnnotation extends \Google\Model
     return $this->displayName;
   }
   /**
-   * @param int
+   * The sentiment score for text.
+   *
+   * @param int $sentiment
    */
   public function setSentiment($sentiment)
   {
@@ -79,7 +93,9 @@ class GoogleCloudAiplatformV1SchemaTextSentimentAnnotation extends \Google\Model
     return $this->sentiment;
   }
   /**
-   * @param int
+   * The sentiment max score for text.
+   *
+   * @param int $sentimentMax
    */
   public function setSentimentMax($sentimentMax)
   {

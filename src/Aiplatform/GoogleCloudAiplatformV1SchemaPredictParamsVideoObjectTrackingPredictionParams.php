@@ -20,20 +20,33 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1SchemaPredictParamsVideoObjectTrackingPredictionParams extends \Google\Model
 {
   /**
+   * The Model only returns predictions with at least this confidence score.
+   * Default value is 0.0
+   *
    * @var float
    */
   public $confidenceThreshold;
   /**
+   * The model only returns up to that many top, by confidence score,
+   * predictions per frame of the video. If this number is very high, the Model
+   * may return fewer predictions per frame. Default value is 50.
+   *
    * @var int
    */
   public $maxPredictions;
   /**
+   * Only bounding boxes with shortest edge at least that long as a relative
+   * value of video frame size are returned. Default value is 0.0.
+   *
    * @var float
    */
   public $minBoundingBoxSize;
 
   /**
-   * @param float
+   * The Model only returns predictions with at least this confidence score.
+   * Default value is 0.0
+   *
+   * @param float $confidenceThreshold
    */
   public function setConfidenceThreshold($confidenceThreshold)
   {
@@ -47,7 +60,11 @@ class GoogleCloudAiplatformV1SchemaPredictParamsVideoObjectTrackingPredictionPar
     return $this->confidenceThreshold;
   }
   /**
-   * @param int
+   * The model only returns up to that many top, by confidence score,
+   * predictions per frame of the video. If this number is very high, the Model
+   * may return fewer predictions per frame. Default value is 50.
+   *
+   * @param int $maxPredictions
    */
   public function setMaxPredictions($maxPredictions)
   {
@@ -61,7 +78,10 @@ class GoogleCloudAiplatformV1SchemaPredictParamsVideoObjectTrackingPredictionPar
     return $this->maxPredictions;
   }
   /**
-   * @param float
+   * Only bounding boxes with shortest edge at least that long as a relative
+   * value of video frame size are returned. Default value is 0.0.
+   *
+   * @param float $minBoundingBoxSize
    */
   public function setMinBoundingBoxSize($minBoundingBoxSize)
   {
