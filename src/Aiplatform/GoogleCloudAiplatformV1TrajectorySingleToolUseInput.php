@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1TrajectorySingleToolUseInput extends \Google\Collec
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseInstance[]
+   * Required. Repeated TrajectorySingleToolUse instance.
+   *
+   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1TrajectorySingleToolUseInput extends \Google\Collec
     return $this->instances;
   }
   /**
-   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseSpec
+   * Required. Spec for TrajectorySingleToolUse metric.
+   *
+   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1TrajectorySingleToolUseSpec $metricSpec)
   {

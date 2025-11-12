@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1UpdateDeploymentResourcePoolOperationMetadata exten
   protected $genericMetadataDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * The operation generic information.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {

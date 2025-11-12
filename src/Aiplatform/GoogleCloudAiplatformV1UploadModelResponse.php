@@ -20,16 +20,24 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1UploadModelResponse extends \Google\Model
 {
   /**
+   * The name of the uploaded Model resource. Format:
+   * `projects/{project}/locations/{location}/models/{model}`
+   *
    * @var string
    */
   public $model;
   /**
+   * Output only. The version ID of the model that is uploaded.
+   *
    * @var string
    */
   public $modelVersionId;
 
   /**
-   * @param string
+   * The name of the uploaded Model resource. Format:
+   * `projects/{project}/locations/{location}/models/{model}`
+   *
+   * @param string $model
    */
   public function setModel($model)
   {
@@ -43,7 +51,9 @@ class GoogleCloudAiplatformV1UploadModelResponse extends \Google\Model
     return $this->model;
   }
   /**
-   * @param string
+   * Output only. The version ID of the model that is uploaded.
+   *
+   * @param string $modelVersionId
    */
   public function setModelVersionId($modelVersionId)
   {

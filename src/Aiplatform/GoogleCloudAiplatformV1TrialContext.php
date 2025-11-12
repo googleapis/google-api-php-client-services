@@ -21,6 +21,9 @@ class GoogleCloudAiplatformV1TrialContext extends \Google\Collection
 {
   protected $collection_key = 'parameters';
   /**
+   * A human-readable field which can store a description of this context. This
+   * will become part of the resulting Trial's description field.
+   *
    * @var string
    */
   public $description;
@@ -28,7 +31,10 @@ class GoogleCloudAiplatformV1TrialContext extends \Google\Collection
   protected $parametersDataType = 'array';
 
   /**
-   * @param string
+   * A human-readable field which can store a description of this context. This
+   * will become part of the resulting Trial's description field.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -42,7 +48,16 @@ class GoogleCloudAiplatformV1TrialContext extends \Google\Collection
     return $this->description;
   }
   /**
-   * @param GoogleCloudAiplatformV1TrialParameter[]
+   * If/when a Trial is generated or selected from this Context, its Parameters
+   * will match any parameters specified here. (I.e. if this context specifies
+   * parameter name:'a' int_value:3, then a resulting Trial will have
+   * int_value:3 for its parameter named 'a'.) Note that we first attempt to
+   * match existing REQUESTED Trials with contexts, and if there are no matches,
+   * we generate suggestions in the subspace defined by the parameters specified
+   * here. NOTE: a Context without any Parameters matches the entire feasible
+   * search space.
+   *
+   * @param GoogleCloudAiplatformV1TrialParameter[] $parameters
    */
   public function setParameters($parameters)
   {

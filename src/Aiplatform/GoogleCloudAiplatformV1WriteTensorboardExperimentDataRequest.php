@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1WriteTensorboardExperimentDataRequest extends \Goog
   protected $writeRunDataRequestsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1WriteTensorboardRunDataRequest[]
+   * Required. Requests containing per-run TensorboardTimeSeries data to write.
+   *
+   * @param GoogleCloudAiplatformV1WriteTensorboardRunDataRequest[] $writeRunDataRequests
    */
   public function setWriteRunDataRequests($writeRunDataRequests)
   {

@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1TrajectorySingleToolUseResults extends \Google\Coll
   protected $trajectorySingleToolUseMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseMetricValue[]
+   * Output only. TrajectorySingleToolUse metric values.
+   *
+   * @param GoogleCloudAiplatformV1TrajectorySingleToolUseMetricValue[] $trajectorySingleToolUseMetricValues
    */
   public function setTrajectorySingleToolUseMetricValues($trajectorySingleToolUseMetricValues)
   {

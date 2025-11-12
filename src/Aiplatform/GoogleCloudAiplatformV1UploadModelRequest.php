@@ -22,20 +22,39 @@ class GoogleCloudAiplatformV1UploadModelRequest extends \Google\Model
   protected $modelType = GoogleCloudAiplatformV1Model::class;
   protected $modelDataType = '';
   /**
+   * Optional. The ID to use for the uploaded Model, which will become the final
+   * component of the model resource name. This value may be up to 63
+   * characters, and valid characters are `[a-z0-9_-]`. The first character
+   * cannot be a number or hyphen.
+   *
    * @var string
    */
   public $modelId;
   /**
+   * Optional. The resource name of the model into which to upload the version.
+   * Only specify this field when uploading a new version.
+   *
    * @var string
    */
   public $parentModel;
   /**
+   * Optional. The user-provided custom service account to use to do the model
+   * upload. If empty, [Vertex AI Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload
+   * the model. This account must belong to the target project where the model
+   * is uploaded to, i.e., the project specified in the `parent` field of this
+   * request and have necessary read permissions (to Google Cloud Storage,
+   * Artifact Registry, etc.).
+   *
    * @var string
    */
   public $serviceAccount;
 
   /**
-   * @param GoogleCloudAiplatformV1Model
+   * Required. The Model to create.
+   *
+   * @param GoogleCloudAiplatformV1Model $model
    */
   public function setModel(GoogleCloudAiplatformV1Model $model)
   {
@@ -49,7 +68,12 @@ class GoogleCloudAiplatformV1UploadModelRequest extends \Google\Model
     return $this->model;
   }
   /**
-   * @param string
+   * Optional. The ID to use for the uploaded Model, which will become the final
+   * component of the model resource name. This value may be up to 63
+   * characters, and valid characters are `[a-z0-9_-]`. The first character
+   * cannot be a number or hyphen.
+   *
+   * @param string $modelId
    */
   public function setModelId($modelId)
   {
@@ -63,7 +87,10 @@ class GoogleCloudAiplatformV1UploadModelRequest extends \Google\Model
     return $this->modelId;
   }
   /**
-   * @param string
+   * Optional. The resource name of the model into which to upload the version.
+   * Only specify this field when uploading a new version.
+   *
+   * @param string $parentModel
    */
   public function setParentModel($parentModel)
   {
@@ -77,7 +104,16 @@ class GoogleCloudAiplatformV1UploadModelRequest extends \Google\Model
     return $this->parentModel;
   }
   /**
-   * @param string
+   * Optional. The user-provided custom service account to use to do the model
+   * upload. If empty, [Vertex AI Service
+   * Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) will be used to access resources needed to upload
+   * the model. This account must belong to the target project where the model
+   * is uploaded to, i.e., the project specified in the `parent` field of this
+   * request and have necessary read permissions (to Google Cloud Storage,
+   * Artifact Registry, etc.).
+   *
+   * @param string $serviceAccount
    */
   public function setServiceAccount($serviceAccount)
   {

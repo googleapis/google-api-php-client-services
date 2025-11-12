@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1TrajectoryExactMatchResults extends \Google\Collect
   protected $trajectoryExactMatchMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryExactMatchMetricValue[]
+   * Output only. TrajectoryExactMatch metric values.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryExactMatchMetricValue[] $trajectoryExactMatchMetricValues
    */
   public function setTrajectoryExactMatchMetricValues($trajectoryExactMatchMetricValues)
   {

@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1TuningDataStats extends \Google\Model
   protected $supervisedTuningDataStatsDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1PreferenceOptimizationDataStats
+   * Output only. Statistics for preference optimization.
+   *
+   * @param GoogleCloudAiplatformV1PreferenceOptimizationDataStats $preferenceOptimizationDataStats
    */
   public function setPreferenceOptimizationDataStats(GoogleCloudAiplatformV1PreferenceOptimizationDataStats $preferenceOptimizationDataStats)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1TuningDataStats extends \Google\Model
     return $this->preferenceOptimizationDataStats;
   }
   /**
-   * @param GoogleCloudAiplatformV1SupervisedTuningDataStats
+   * The SFT Tuning data stats.
+   *
+   * @param GoogleCloudAiplatformV1SupervisedTuningDataStats $supervisedTuningDataStats
    */
   public function setSupervisedTuningDataStats(GoogleCloudAiplatformV1SupervisedTuningDataStats $supervisedTuningDataStats)
   {

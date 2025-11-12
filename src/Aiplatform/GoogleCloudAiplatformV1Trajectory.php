@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1Trajectory extends \Google\Collection
   protected $toolCallsDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1ToolCall[]
+   * Required. Tool calls in the trajectory.
+   *
+   * @param GoogleCloudAiplatformV1ToolCall[] $toolCalls
    */
   public function setToolCalls($toolCalls)
   {

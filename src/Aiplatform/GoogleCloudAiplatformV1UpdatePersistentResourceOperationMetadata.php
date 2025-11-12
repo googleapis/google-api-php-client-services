@@ -22,12 +22,16 @@ class GoogleCloudAiplatformV1UpdatePersistentResourceOperationMetadata extends \
   protected $genericMetadataType = GoogleCloudAiplatformV1GenericOperationMetadata::class;
   protected $genericMetadataDataType = '';
   /**
+   * Progress Message for Update LRO
+   *
    * @var string
    */
   public $progressMessage;
 
   /**
-   * @param GoogleCloudAiplatformV1GenericOperationMetadata
+   * Operation metadata for PersistentResource.
+   *
+   * @param GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata
    */
   public function setGenericMetadata(GoogleCloudAiplatformV1GenericOperationMetadata $genericMetadata)
   {
@@ -41,7 +45,9 @@ class GoogleCloudAiplatformV1UpdatePersistentResourceOperationMetadata extends \
     return $this->genericMetadata;
   }
   /**
-   * @param string
+   * Progress Message for Update LRO
+   *
+   * @param string $progressMessage
    */
   public function setProgressMessage($progressMessage)
   {

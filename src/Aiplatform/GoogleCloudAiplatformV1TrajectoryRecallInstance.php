@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1TrajectoryRecallInstance extends \Google\Model
   protected $referenceTrajectoryDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1Trajectory
+   * Required. Spec for predicted tool call trajectory.
+   *
+   * @param GoogleCloudAiplatformV1Trajectory $predictedTrajectory
    */
   public function setPredictedTrajectory(GoogleCloudAiplatformV1Trajectory $predictedTrajectory)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1TrajectoryRecallInstance extends \Google\Model
     return $this->predictedTrajectory;
   }
   /**
-   * @param GoogleCloudAiplatformV1Trajectory
+   * Required. Spec for reference tool call trajectory.
+   *
+   * @param GoogleCloudAiplatformV1Trajectory $referenceTrajectory
    */
   public function setReferenceTrajectory(GoogleCloudAiplatformV1Trajectory $referenceTrajectory)
   {

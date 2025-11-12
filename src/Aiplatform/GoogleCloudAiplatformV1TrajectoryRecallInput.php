@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1TrajectoryRecallInput extends \Google\Collection
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryRecallInstance[]
+   * Required. Repeated TrajectoryRecall instance.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryRecallInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1TrajectoryRecallInput extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryRecallSpec
+   * Required. Spec for TrajectoryRecall metric.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryRecallSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1TrajectoryRecallSpec $metricSpec)
   {

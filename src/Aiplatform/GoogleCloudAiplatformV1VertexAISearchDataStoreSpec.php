@@ -20,16 +20,27 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1VertexAISearchDataStoreSpec extends \Google\Model
 {
   /**
+   * Full resource name of DataStore, such as Format: `projects/{project}/locati
+   * ons/{location}/collections/{collection}/dataStores/{dataStore}`
+   *
    * @var string
    */
   public $dataStore;
   /**
+   * Optional. Filter specification to filter documents in the data store
+   * specified by data_store field. For more information on filtering, see
+   * [Filtering](https://cloud.google.com/generative-ai-app-builder/docs/filter-
+   * search-metadata)
+   *
    * @var string
    */
   public $filter;
 
   /**
-   * @param string
+   * Full resource name of DataStore, such as Format: `projects/{project}/locati
+   * ons/{location}/collections/{collection}/dataStores/{dataStore}`
+   *
+   * @param string $dataStore
    */
   public function setDataStore($dataStore)
   {
@@ -43,7 +54,12 @@ class GoogleCloudAiplatformV1VertexAISearchDataStoreSpec extends \Google\Model
     return $this->dataStore;
   }
   /**
-   * @param string
+   * Optional. Filter specification to filter documents in the data store
+   * specified by data_store field. For more information on filtering, see
+   * [Filtering](https://cloud.google.com/generative-ai-app-builder/docs/filter-
+   * search-metadata)
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {

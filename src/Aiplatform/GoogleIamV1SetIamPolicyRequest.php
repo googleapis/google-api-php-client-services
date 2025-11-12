@@ -23,7 +23,11 @@ class GoogleIamV1SetIamPolicyRequest extends \Google\Model
   protected $policyDataType = '';
 
   /**
-   * @param GoogleIamV1Policy
+   * REQUIRED: The complete policy to be applied to the `resource`. The size of
+   * the policy is limited to a few 10s of KB. An empty policy is a valid policy
+   * but certain Google Cloud services (such as Projects) might reject them.
+   *
+   * @param GoogleIamV1Policy $policy
    */
   public function setPolicy(GoogleIamV1Policy $policy)
   {

@@ -25,7 +25,9 @@ class GoogleCloudAiplatformV1UploadRagFileResponse extends \Google\Model
   protected $ragFileDataType = '';
 
   /**
-   * @param GoogleRpcStatus
+   * The error that occurred while processing the RagFile.
+   *
+   * @param GoogleRpcStatus $error
    */
   public function setError(GoogleRpcStatus $error)
   {
@@ -39,7 +41,9 @@ class GoogleCloudAiplatformV1UploadRagFileResponse extends \Google\Model
     return $this->error;
   }
   /**
-   * @param GoogleCloudAiplatformV1RagFile
+   * The RagFile that had been uploaded into the RagCorpus.
+   *
+   * @param GoogleCloudAiplatformV1RagFile $ragFile
    */
   public function setRagFile(GoogleCloudAiplatformV1RagFile $ragFile)
   {

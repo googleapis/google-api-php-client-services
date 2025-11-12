@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1TrajectoryAnyOrderMatchMetricValue extends \Google\Model
 {
   /**
+   * Output only. TrajectoryAnyOrderMatch score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. TrajectoryAnyOrderMatch score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

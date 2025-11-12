@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1TrajectoryRecallResults extends \Google\Collection
   protected $trajectoryRecallMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryRecallMetricValue[]
+   * Output only. TrajectoryRecall metric values.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryRecallMetricValue[] $trajectoryRecallMetricValues
    */
   public function setTrajectoryRecallMetricValues($trajectoryRecallMetricValues)
   {

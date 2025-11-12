@@ -20,12 +20,18 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1TrainingConfig extends \Google\Model
 {
   /**
+   * The timeout hours for the CMLE training job, expressed in milli hours i.e.
+   * 1,000 value in this field means 1 hour.
+   *
    * @var string
    */
   public $timeoutTrainingMilliHours;
 
   /**
-   * @param string
+   * The timeout hours for the CMLE training job, expressed in milli hours i.e.
+   * 1,000 value in this field means 1 hour.
+   *
+   * @param string $timeoutTrainingMilliHours
    */
   public function setTimeoutTrainingMilliHours($timeoutTrainingMilliHours)
   {

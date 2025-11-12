@@ -26,7 +26,9 @@ class GoogleCloudAiplatformV1TrajectoryPrecisionInput extends \Google\Collection
   protected $metricSpecDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryPrecisionInstance[]
+   * Required. Repeated TrajectoryPrecision instance.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryPrecisionInstance[] $instances
    */
   public function setInstances($instances)
   {
@@ -40,7 +42,9 @@ class GoogleCloudAiplatformV1TrajectoryPrecisionInput extends \Google\Collection
     return $this->instances;
   }
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryPrecisionSpec
+   * Required. Spec for TrajectoryPrecision metric.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryPrecisionSpec $metricSpec
    */
   public function setMetricSpec(GoogleCloudAiplatformV1TrajectoryPrecisionSpec $metricSpec)
   {

@@ -23,7 +23,9 @@ class GoogleCloudAiplatformV1UploadRagFileConfig extends \Google\Model
   protected $ragFileTransformationConfigDataType = '';
 
   /**
-   * @param GoogleCloudAiplatformV1RagFileTransformationConfig
+   * Specifies the transformation config for RagFiles.
+   *
+   * @param GoogleCloudAiplatformV1RagFileTransformationConfig $ragFileTransformationConfig
    */
   public function setRagFileTransformationConfig(GoogleCloudAiplatformV1RagFileTransformationConfig $ragFileTransformationConfig)
   {

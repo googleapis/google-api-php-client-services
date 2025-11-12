@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1TrajectorySingleToolUseMetricValue extends \Google\Model
 {
   /**
+   * Output only. TrajectorySingleToolUse score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. TrajectorySingleToolUse score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

@@ -20,12 +20,16 @@ namespace Google\Service\Aiplatform;
 class GoogleCloudAiplatformV1TrajectoryPrecisionMetricValue extends \Google\Model
 {
   /**
+   * Output only. TrajectoryPrecision score.
+   *
    * @var float
    */
   public $score;
 
   /**
-   * @param float
+   * Output only. TrajectoryPrecision score.
+   *
+   * @param float $score
    */
   public function setScore($score)
   {

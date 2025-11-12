@@ -23,24 +23,41 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
   protected $dataStoreSpecsType = GoogleCloudAiplatformV1VertexAISearchDataStoreSpec::class;
   protected $dataStoreSpecsDataType = 'array';
   /**
+   * Optional. Fully-qualified Vertex AI Search data store resource ID. Format: 
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStore
+   * s/{dataStore}`
+   *
    * @var string
    */
   public $datastore;
   /**
+   * Optional. Fully-qualified Vertex AI Search engine resource ID. Format: `pro
+   * jects/{project}/locations/{location}/collections/{collection}/engines/{engi
+   * ne}`
+   *
    * @var string
    */
   public $engine;
   /**
+   * Optional. Filter strings to be passed to the search API.
+   *
    * @var string
    */
   public $filter;
   /**
+   * Optional. Number of search results to return per query. The default value
+   * is 10. The maximumm allowed value is 10.
+   *
    * @var int
    */
   public $maxResults;
 
   /**
-   * @param GoogleCloudAiplatformV1VertexAISearchDataStoreSpec[]
+   * Specifications that define the specific DataStores to be searched, along
+   * with configurations for those data stores. This is only considered for
+   * Engines with multiple data stores. It should only be set if engine is used.
+   *
+   * @param GoogleCloudAiplatformV1VertexAISearchDataStoreSpec[] $dataStoreSpecs
    */
   public function setDataStoreSpecs($dataStoreSpecs)
   {
@@ -54,7 +71,11 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
     return $this->dataStoreSpecs;
   }
   /**
-   * @param string
+   * Optional. Fully-qualified Vertex AI Search data store resource ID. Format: 
+   * `projects/{project}/locations/{location}/collections/{collection}/dataStore
+   * s/{dataStore}`
+   *
+   * @param string $datastore
    */
   public function setDatastore($datastore)
   {
@@ -68,7 +89,11 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
     return $this->datastore;
   }
   /**
-   * @param string
+   * Optional. Fully-qualified Vertex AI Search engine resource ID. Format: `pro
+   * jects/{project}/locations/{location}/collections/{collection}/engines/{engi
+   * ne}`
+   *
+   * @param string $engine
    */
   public function setEngine($engine)
   {
@@ -82,7 +107,9 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
     return $this->engine;
   }
   /**
-   * @param string
+   * Optional. Filter strings to be passed to the search API.
+   *
+   * @param string $filter
    */
   public function setFilter($filter)
   {
@@ -96,7 +123,10 @@ class GoogleCloudAiplatformV1VertexAISearch extends \Google\Collection
     return $this->filter;
   }
   /**
-   * @param int
+   * Optional. Number of search results to return per query. The default value
+   * is 10. The maximumm allowed value is 10.
+   *
+   * @param int $maxResults
    */
   public function setMaxResults($maxResults)
   {

@@ -19,12 +19,21 @@ namespace Google\Service\Aiplatform;
 
 class GoogleCloudAiplatformV1Value extends \Google\Model
 {
+  /**
+   * A double value.
+   *
+   * @var 
+   */
   public $doubleValue;
   /**
+   * An integer value.
+   *
    * @var string
    */
   public $intValue;
   /**
+   * A string value.
+   *
    * @var string
    */
   public $stringValue;
@@ -38,7 +47,9 @@ class GoogleCloudAiplatformV1Value extends \Google\Model
     return $this->doubleValue;
   }
   /**
-   * @param string
+   * An integer value.
+   *
+   * @param string $intValue
    */
   public function setIntValue($intValue)
   {
@@ -52,7 +63,9 @@ class GoogleCloudAiplatformV1Value extends \Google\Model
     return $this->intValue;
   }
   /**
-   * @param string
+   * A string value.
+   *
+   * @param string $stringValue
    */
   public function setStringValue($stringValue)
   {

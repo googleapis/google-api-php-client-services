@@ -24,7 +24,9 @@ class GoogleCloudAiplatformV1TrajectoryPrecisionResults extends \Google\Collecti
   protected $trajectoryPrecisionMetricValuesDataType = 'array';
 
   /**
-   * @param GoogleCloudAiplatformV1TrajectoryPrecisionMetricValue[]
+   * Output only. TrajectoryPrecision metric values.
+   *
+   * @param GoogleCloudAiplatformV1TrajectoryPrecisionMetricValue[] $trajectoryPrecisionMetricValues
    */
   public function setTrajectoryPrecisionMetricValues($trajectoryPrecisionMetricValues)
   {
