@@ -19,12 +19,18 @@ namespace Google\Service\Compute;
 
 class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
 {
+  public const GROUP_STATUS_DEGRADED = 'DEGRADED';
+  public const GROUP_STATUS_FULLY_DOWN = 'FULLY_DOWN';
+  public const GROUP_STATUS_FULLY_UP = 'FULLY_UP';
+  public const GROUP_STATUS_UNSPECIFIED = 'UNSPECIFIED';
   protected $collection_key = 'attachmentStatuses';
   protected $attachmentStatusesType = InterconnectAttachmentGroupsOperationalStatusAttachmentStatus::class;
   protected $attachmentStatusesDataType = 'array';
   protected $configuredType = InterconnectAttachmentGroupConfigured::class;
   protected $configuredDataType = '';
   /**
+   * Summarizes the status of the group.
+   *
    * @var string
    */
   public $groupStatus;
@@ -34,7 +40,7 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
   protected $operationalDataType = '';
 
   /**
-   * @param InterconnectAttachmentGroupsOperationalStatusAttachmentStatus[]
+   * @param InterconnectAttachmentGroupsOperationalStatusAttachmentStatus[] $attachmentStatuses
    */
   public function setAttachmentStatuses($attachmentStatuses)
   {
@@ -48,7 +54,7 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
     return $this->attachmentStatuses;
   }
   /**
-   * @param InterconnectAttachmentGroupConfigured
+   * @param InterconnectAttachmentGroupConfigured $configured
    */
   public function setConfigured(InterconnectAttachmentGroupConfigured $configured)
   {
@@ -62,21 +68,25 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
     return $this->configured;
   }
   /**
-   * @param string
+   * Summarizes the status of the group.
+   *
+   * Accepted values: DEGRADED, FULLY_DOWN, FULLY_UP, UNSPECIFIED
+   *
+   * @param self::GROUP_STATUS_* $groupStatus
    */
   public function setGroupStatus($groupStatus)
   {
     $this->groupStatus = $groupStatus;
   }
   /**
-   * @return string
+   * @return self::GROUP_STATUS_*
    */
   public function getGroupStatus()
   {
     return $this->groupStatus;
   }
   /**
-   * @param InterconnectAttachmentGroupIntent
+   * @param InterconnectAttachmentGroupIntent $intent
    */
   public function setIntent(InterconnectAttachmentGroupIntent $intent)
   {
@@ -90,7 +100,9 @@ class InterconnectAttachmentGroupsOperationalStatus extends \Google\Collection
     return $this->intent;
   }
   /**
-   * @param InterconnectAttachmentGroupConfigured
+   * The operational state of the group, including only active Attachments.
+   *
+   * @param InterconnectAttachmentGroupConfigured $operational
    */
   public function setOperational(InterconnectAttachmentGroupConfigured $operational)
   {

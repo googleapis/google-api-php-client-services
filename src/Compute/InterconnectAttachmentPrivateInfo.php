@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class InterconnectAttachmentPrivateInfo extends \Google\Model
 {
   /**
+   * [Output Only] 802.1q encapsulation tag to be used for traffic between
+   * Google and the customer, going to and from this network and region.
+   *
    * @var string
    */
   public $tag8021q;
 
   /**
-   * @param string
+   * [Output Only] 802.1q encapsulation tag to be used for traffic between
+   * Google and the customer, going to and from this network and region.
+   *
+   * @param string $tag8021q
    */
   public function setTag8021q($tag8021q)
   {

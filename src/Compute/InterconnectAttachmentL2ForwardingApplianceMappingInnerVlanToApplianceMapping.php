@@ -21,16 +21,29 @@ class InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanToApplianceMapp
 {
   protected $collection_key = 'innerVlanTags';
   /**
+   * Required in this object. A single IPv4 or IPv6 address used as the
+   * destination IP address for ingress packets that match on both VLAN tags.
+   *
    * @var string
    */
   public $innerApplianceIpAddress;
   /**
+   * Required in this object. Used to match the inner VLAN tag on the packet.
+   * Each entry can be a single number or a range of numbers in the range of 1
+   * to 4094, e.g., ["1", "4001-4094"] is valid. Non-empty and Non-overlapping
+   * VLAN tag ranges are enforced, and violating operations will be rejected.
+   *
+   * The inner VLAN tags must have an ethertype value of 0x8100.
+   *
    * @var string[]
    */
   public $innerVlanTags;
 
   /**
-   * @param string
+   * Required in this object. A single IPv4 or IPv6 address used as the
+   * destination IP address for ingress packets that match on both VLAN tags.
+   *
+   * @param string $innerApplianceIpAddress
    */
   public function setInnerApplianceIpAddress($innerApplianceIpAddress)
   {
@@ -44,7 +57,14 @@ class InterconnectAttachmentL2ForwardingApplianceMappingInnerVlanToApplianceMapp
     return $this->innerApplianceIpAddress;
   }
   /**
-   * @param string[]
+   * Required in this object. Used to match the inner VLAN tag on the packet.
+   * Each entry can be a single number or a range of numbers in the range of 1
+   * to 4094, e.g., ["1", "4001-4094"] is valid. Non-empty and Non-overlapping
+   * VLAN tag ranges are enforced, and violating operations will be rejected.
+   *
+   * The inner VLAN tags must have an ethertype value of 0x8100.
+   *
+   * @param string[] $innerVlanTags
    */
   public function setInnerVlanTags($innerVlanTags)
   {

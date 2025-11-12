@@ -20,16 +20,23 @@ namespace Google\Service\Compute;
 class InstancePropertiesPatch extends \Google\Model
 {
   /**
+   * The label key-value pairs that you want to patch onto the instance.
+   *
    * @var string[]
    */
   public $labels;
   /**
+   * The metadata key-value pairs that you want to patch onto the instance. For
+   * more information, see Project and instance metadata.
+   *
    * @var string[]
    */
   public $metadata;
 
   /**
-   * @param string[]
+   * The label key-value pairs that you want to patch onto the instance.
+   *
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {
@@ -43,7 +50,10 @@ class InstancePropertiesPatch extends \Google\Model
     return $this->labels;
   }
   /**
-   * @param string[]
+   * The metadata key-value pairs that you want to patch onto the instance. For
+   * more information, see Project and instance metadata.
+   *
+   * @param string[] $metadata
    */
   public function setMetadata($metadata)
   {

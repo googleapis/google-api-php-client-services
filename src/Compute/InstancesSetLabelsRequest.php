@@ -20,6 +20,10 @@ namespace Google\Service\Compute;
 class InstancesSetLabelsRequest extends \Google\Model
 {
   /**
+   * Fingerprint of the previous set of labels for this resource, used to
+   * prevent conflicts. Provide the latest fingerprint value when making a
+   * request to add or change labels.
+   *
    * @var string
    */
   public $labelFingerprint;
@@ -29,7 +33,11 @@ class InstancesSetLabelsRequest extends \Google\Model
   public $labels;
 
   /**
-   * @param string
+   * Fingerprint of the previous set of labels for this resource, used to
+   * prevent conflicts. Provide the latest fingerprint value when making a
+   * request to add or change labels.
+   *
+   * @param string $labelFingerprint
    */
   public function setLabelFingerprint($labelFingerprint)
   {
@@ -43,7 +51,7 @@ class InstancesSetLabelsRequest extends \Google\Model
     return $this->labelFingerprint;
   }
   /**
-   * @param string[]
+   * @param string[] $labels
    */
   public function setLabels($labels)
   {

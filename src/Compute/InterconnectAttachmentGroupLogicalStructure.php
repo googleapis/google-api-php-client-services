@@ -24,7 +24,7 @@ class InterconnectAttachmentGroupLogicalStructure extends \Google\Collection
   protected $regionsDataType = 'array';
 
   /**
-   * @param InterconnectAttachmentGroupLogicalStructureRegion[]
+   * @param InterconnectAttachmentGroupLogicalStructureRegion[] $regions
    */
   public function setRegions($regions)
   {

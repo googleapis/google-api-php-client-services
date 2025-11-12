@@ -20,16 +20,22 @@ namespace Google\Service\Compute;
 class Int64RangeMatch extends \Google\Model
 {
   /**
+   * The end of the range (exclusive) in signed long integer format.
+   *
    * @var string
    */
   public $rangeEnd;
   /**
+   * The start of the range (inclusive) in signed long integer format.
+   *
    * @var string
    */
   public $rangeStart;
 
   /**
-   * @param string
+   * The end of the range (exclusive) in signed long integer format.
+   *
+   * @param string $rangeEnd
    */
   public function setRangeEnd($rangeEnd)
   {
@@ -43,7 +49,9 @@ class Int64RangeMatch extends \Google\Model
     return $this->rangeEnd;
   }
   /**
-   * @param string
+   * The start of the range (inclusive) in signed long integer format.
+   *
+   * @param string $rangeStart
    */
   public function setRangeStart($rangeStart)
   {

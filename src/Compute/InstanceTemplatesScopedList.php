@@ -26,7 +26,10 @@ class InstanceTemplatesScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param InstanceTemplate[]
+   * [Output Only] A list of instance templates that are contained within the
+   * specified project and zone.
+   *
+   * @param InstanceTemplate[] $instanceTemplates
    */
   public function setInstanceTemplates($instanceTemplates)
   {
@@ -40,7 +43,10 @@ class InstanceTemplatesScopedList extends \Google\Collection
     return $this->instanceTemplates;
   }
   /**
-   * @param InstanceTemplatesScopedListWarning
+   * [Output Only] An informational warning that replaces the list of instance
+   * templates when the list is empty.
+   *
+   * @param InstanceTemplatesScopedListWarning $warning
    */
   public function setWarning(InstanceTemplatesScopedListWarning $warning)
   {

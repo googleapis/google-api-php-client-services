@@ -20,36 +20,68 @@ namespace Google\Service\Compute;
 class InstanceTemplate extends \Google\Model
 {
   /**
+   * [Output Only] The creation timestamp for this instance template inRFC3339
+   * text format.
+   *
    * @var string
    */
   public $creationTimestamp;
   /**
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
    * @var string
    */
   public $description;
   /**
+   * [Output Only] A unique identifier for this instance template. The server
+   * defines this identifier.
+   *
    * @var string
    */
   public $id;
   /**
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate
+   * for instance templates.
+   *
    * @var string
    */
   public $kind;
   /**
+   * Name of the resource; provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
    * @var string
    */
   public $name;
   protected $propertiesType = InstanceProperties::class;
   protected $propertiesDataType = '';
   /**
+   * [Output Only] URL of the region where the instance template resides. Only
+   * applicable for regional resources.
+   *
    * @var string
    */
   public $region;
   /**
+   * [Output Only] The URL for this instance template. The server defines this
+   * URL.
+   *
    * @var string
    */
   public $selfLink;
   /**
+   * The source instance used to create the template. You can provide this as a
+   * partial or full URL to the resource. For example, the following are valid
+   * values:              - https://www.googleapis.com/compute/v1/projects/proje
+   * ct/zones/zone/instances/instance     -
+   * projects/project/zones/zone/instances/instance
+   *
    * @var string
    */
   public $sourceInstance;
@@ -57,7 +89,10 @@ class InstanceTemplate extends \Google\Model
   protected $sourceInstanceParamsDataType = '';
 
   /**
-   * @param string
+   * [Output Only] The creation timestamp for this instance template inRFC3339
+   * text format.
+   *
+   * @param string $creationTimestamp
    */
   public function setCreationTimestamp($creationTimestamp)
   {
@@ -71,7 +106,10 @@ class InstanceTemplate extends \Google\Model
     return $this->creationTimestamp;
   }
   /**
-   * @param string
+   * An optional description of this resource. Provide this property when you
+   * create the resource.
+   *
+   * @param string $description
    */
   public function setDescription($description)
   {
@@ -85,7 +123,10 @@ class InstanceTemplate extends \Google\Model
     return $this->description;
   }
   /**
-   * @param string
+   * [Output Only] A unique identifier for this instance template. The server
+   * defines this identifier.
+   *
+   * @param string $id
    */
   public function setId($id)
   {
@@ -99,7 +140,10 @@ class InstanceTemplate extends \Google\Model
     return $this->id;
   }
   /**
-   * @param string
+   * [Output Only] The resource type, which is alwayscompute#instanceTemplate
+   * for instance templates.
+   *
+   * @param string $kind
    */
   public function setKind($kind)
   {
@@ -113,7 +157,15 @@ class InstanceTemplate extends \Google\Model
     return $this->kind;
   }
   /**
-   * @param string
+   * Name of the resource; provided by the client when the resource is created.
+   * The name must be 1-63 characters long, and comply withRFC1035.
+   * Specifically, the name must be 1-63 characters long and match the regular
+   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
+   * must be a lowercase letter, and all following characters must be a dash,
+   * lowercase letter, or digit, except the last character, which cannot be a
+   * dash.
+   *
+   * @param string $name
    */
   public function setName($name)
   {
@@ -127,7 +179,9 @@ class InstanceTemplate extends \Google\Model
     return $this->name;
   }
   /**
-   * @param InstanceProperties
+   * The instance properties for this instance template.
+   *
+   * @param InstanceProperties $properties
    */
   public function setProperties(InstanceProperties $properties)
   {
@@ -141,7 +195,10 @@ class InstanceTemplate extends \Google\Model
     return $this->properties;
   }
   /**
-   * @param string
+   * [Output Only] URL of the region where the instance template resides. Only
+   * applicable for regional resources.
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {
@@ -155,7 +212,10 @@ class InstanceTemplate extends \Google\Model
     return $this->region;
   }
   /**
-   * @param string
+   * [Output Only] The URL for this instance template. The server defines this
+   * URL.
+   *
+   * @param string $selfLink
    */
   public function setSelfLink($selfLink)
   {
@@ -169,7 +229,13 @@ class InstanceTemplate extends \Google\Model
     return $this->selfLink;
   }
   /**
-   * @param string
+   * The source instance used to create the template. You can provide this as a
+   * partial or full URL to the resource. For example, the following are valid
+   * values:              - https://www.googleapis.com/compute/v1/projects/proje
+   * ct/zones/zone/instances/instance     -
+   * projects/project/zones/zone/instances/instance
+   *
+   * @param string $sourceInstance
    */
   public function setSourceInstance($sourceInstance)
   {
@@ -183,7 +249,9 @@ class InstanceTemplate extends \Google\Model
     return $this->sourceInstance;
   }
   /**
-   * @param SourceInstanceParams
+   * The source instance params to use to create this instance template.
+   *
+   * @param SourceInstanceParams $sourceInstanceParams
    */
   public function setSourceInstanceParams(SourceInstanceParams $sourceInstanceParams)
   {

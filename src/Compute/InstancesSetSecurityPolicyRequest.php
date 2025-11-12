@@ -21,16 +21,28 @@ class InstancesSetSecurityPolicyRequest extends \Google\Collection
 {
   protected $collection_key = 'networkInterfaces';
   /**
+   * The network interfaces that the security policy will be applied to. Network
+   * interfaces use the nicN naming format. You can only set a security policy
+   * for network interfaces with an access config.
+   *
    * @var string[]
    */
   public $networkInterfaces;
   /**
+   * A full or partial URL to a security policy to add to this instance. If this
+   * field is set to an empty string it will remove the associated security
+   * policy.
+   *
    * @var string
    */
   public $securityPolicy;
 
   /**
-   * @param string[]
+   * The network interfaces that the security policy will be applied to. Network
+   * interfaces use the nicN naming format. You can only set a security policy
+   * for network interfaces with an access config.
+   *
+   * @param string[] $networkInterfaces
    */
   public function setNetworkInterfaces($networkInterfaces)
   {
@@ -44,7 +56,11 @@ class InstancesSetSecurityPolicyRequest extends \Google\Collection
     return $this->networkInterfaces;
   }
   /**
-   * @param string
+   * A full or partial URL to a security policy to add to this instance. If this
+   * field is set to an empty string it will remove the associated security
+   * policy.
+   *
+   * @param string $securityPolicy
    */
   public function setSecurityPolicy($securityPolicy)
   {

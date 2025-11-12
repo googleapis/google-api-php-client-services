@@ -20,16 +20,24 @@ namespace Google\Service\Compute;
 class InstancesSetNameRequest extends \Google\Model
 {
   /**
+   * The current name of this resource, used to prevent conflicts. Provide the
+   * latest name when making a request to change name.
+   *
    * @var string
    */
   public $currentName;
   /**
+   * The name to be applied to the instance. Needs to be RFC 1035 compliant.
+   *
    * @var string
    */
   public $name;
 
   /**
-   * @param string
+   * The current name of this resource, used to prevent conflicts. Provide the
+   * latest name when making a request to change name.
+   *
+   * @param string $currentName
    */
   public function setCurrentName($currentName)
   {
@@ -43,7 +51,9 @@ class InstancesSetNameRequest extends \Google\Model
     return $this->currentName;
   }
   /**
-   * @param string
+   * The name to be applied to the instance. Needs to be RFC 1035 compliant.
+   *
+   * @param string $name
    */
   public function setName($name)
   {

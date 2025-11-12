@@ -23,7 +23,10 @@ class InstancesBulkInsertOperationMetadata extends \Google\Model
   protected $perLocationStatusDataType = 'map';
 
   /**
-   * @param BulkInsertOperationStatus[]
+   * Status information per location (location name is key). Example key:
+   * zones/us-central1-a
+   *
+   * @param BulkInsertOperationStatus[] $perLocationStatus
    */
   public function setPerLocationStatus($perLocationStatus)
   {

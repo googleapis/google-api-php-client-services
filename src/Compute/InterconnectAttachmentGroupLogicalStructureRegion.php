@@ -23,12 +23,14 @@ class InterconnectAttachmentGroupLogicalStructureRegion extends \Google\Collecti
   protected $metrosType = InterconnectAttachmentGroupLogicalStructureRegionMetro::class;
   protected $metrosDataType = 'array';
   /**
+   * [Output Only] The name of a region, like "us-central1".
+   *
    * @var string
    */
   public $region;
 
   /**
-   * @param InterconnectAttachmentGroupLogicalStructureRegionMetro[]
+   * @param InterconnectAttachmentGroupLogicalStructureRegionMetro[] $metros
    */
   public function setMetros($metros)
   {
@@ -42,7 +44,9 @@ class InterconnectAttachmentGroupLogicalStructureRegion extends \Google\Collecti
     return $this->metros;
   }
   /**
-   * @param string
+   * [Output Only] The name of a region, like "us-central1".
+   *
+   * @param string $region
    */
   public function setRegion($region)
   {

@@ -24,7 +24,10 @@ class InterconnectApplicationAwareInterconnectBandwidthPercentagePolicy extends 
   protected $bandwidthPercentagesDataType = 'array';
 
   /**
-   * @param InterconnectApplicationAwareInterconnectBandwidthPercentage[]
+   * Specify bandwidth percentages for various traffic classes for queuing type
+   * Bandwidth Percent.
+   *
+   * @param InterconnectApplicationAwareInterconnectBandwidthPercentage[] $bandwidthPercentages
    */
   public function setBandwidthPercentages($bandwidthPercentages)
   {

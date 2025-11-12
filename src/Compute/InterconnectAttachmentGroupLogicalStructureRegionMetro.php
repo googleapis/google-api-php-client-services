@@ -23,12 +23,15 @@ class InterconnectAttachmentGroupLogicalStructureRegionMetro extends \Google\Col
   protected $facilitiesType = InterconnectAttachmentGroupLogicalStructureRegionMetroFacility::class;
   protected $facilitiesDataType = 'array';
   /**
+   * [Output Only] The name of the metro, as a three-letter lowercase string
+   * like "iad". This is the first component of the location of an Interconnect.
+   *
    * @var string
    */
   public $metro;
 
   /**
-   * @param InterconnectAttachmentGroupLogicalStructureRegionMetroFacility[]
+   * @param InterconnectAttachmentGroupLogicalStructureRegionMetroFacility[] $facilities
    */
   public function setFacilities($facilities)
   {
@@ -42,7 +45,10 @@ class InterconnectAttachmentGroupLogicalStructureRegionMetro extends \Google\Col
     return $this->facilities;
   }
   /**
-   * @param string
+   * [Output Only] The name of the metro, as a three-letter lowercase string
+   * like "iad". This is the first component of the location of an Interconnect.
+   *
+   * @param string $metro
    */
   public function setMetro($metro)
   {

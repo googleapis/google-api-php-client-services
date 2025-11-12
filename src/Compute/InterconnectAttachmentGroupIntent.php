@@ -19,20 +19,24 @@ namespace Google\Service\Compute;
 
 class InterconnectAttachmentGroupIntent extends \Google\Model
 {
+  public const AVAILABILITY_SLA_AVAILABILITY_SLA_UNSPECIFIED = 'AVAILABILITY_SLA_UNSPECIFIED';
+  public const AVAILABILITY_SLA_NO_SLA = 'NO_SLA';
+  public const AVAILABILITY_SLA_PRODUCTION_CRITICAL = 'PRODUCTION_CRITICAL';
+  public const AVAILABILITY_SLA_PRODUCTION_NON_CRITICAL = 'PRODUCTION_NON_CRITICAL';
   /**
    * @var string
    */
   public $availabilitySla;
 
   /**
-   * @param string
+   * @param self::AVAILABILITY_SLA_* $availabilitySla
    */
   public function setAvailabilitySla($availabilitySla)
   {
     $this->availabilitySla = $availabilitySla;
   }
   /**
-   * @return string
+   * @return self::AVAILABILITY_SLA_*
    */
   public function getAvailabilitySla()
   {

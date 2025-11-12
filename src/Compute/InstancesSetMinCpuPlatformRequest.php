@@ -20,12 +20,16 @@ namespace Google\Service\Compute;
 class InstancesSetMinCpuPlatformRequest extends \Google\Model
 {
   /**
+   * Minimum cpu/platform this instance should be started at.
+   *
    * @var string
    */
   public $minCpuPlatform;
 
   /**
-   * @param string
+   * Minimum cpu/platform this instance should be started at.
+   *
+   * @param string $minCpuPlatform
    */
   public function setMinCpuPlatform($minCpuPlatform)
   {

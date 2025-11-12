@@ -21,12 +21,16 @@ class InstancesRemoveResourcePoliciesRequest extends \Google\Collection
 {
   protected $collection_key = 'resourcePolicies';
   /**
+   * Resource policies to be removed from this instance.
+   *
    * @var string[]
    */
   public $resourcePolicies;
 
   /**
-   * @param string[]
+   * Resource policies to be removed from this instance.
+   *
+   * @param string[] $resourcePolicies
    */
   public function setResourcePolicies($resourcePolicies)
   {

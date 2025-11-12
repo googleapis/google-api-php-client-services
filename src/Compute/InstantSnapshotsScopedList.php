@@ -26,7 +26,9 @@ class InstantSnapshotsScopedList extends \Google\Collection
   protected $warningDataType = '';
 
   /**
-   * @param InstantSnapshot[]
+   * [Output Only] A list of instantSnapshots contained in this scope.
+   *
+   * @param InstantSnapshot[] $instantSnapshots
    */
   public function setInstantSnapshots($instantSnapshots)
   {
@@ -40,7 +42,10 @@ class InstantSnapshotsScopedList extends \Google\Collection
     return $this->instantSnapshots;
   }
   /**
-   * @param InstantSnapshotsScopedListWarning
+   * [Output Only] Informational warning which replaces the list of
+   * instantSnapshots when the list is empty.
+   *
+   * @param InstantSnapshotsScopedListWarning $warning
    */
   public function setWarning(InstantSnapshotsScopedListWarning $warning)
   {

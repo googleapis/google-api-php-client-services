@@ -20,16 +20,24 @@ namespace Google\Service\Compute;
 class InterconnectDiagnosticsMacsecStatus extends \Google\Model
 {
   /**
+   * Indicates the Connectivity Association Key Name (CKN) currently being used
+   * if MACsec is operational.
+   *
    * @var string
    */
   public $ckn;
   /**
+   * Indicates whether or not MACsec is operational on this link.
+   *
    * @var bool
    */
   public $operational;
 
   /**
-   * @param string
+   * Indicates the Connectivity Association Key Name (CKN) currently being used
+   * if MACsec is operational.
+   *
+   * @param string $ckn
    */
   public function setCkn($ckn)
   {
@@ -43,7 +51,9 @@ class InterconnectDiagnosticsMacsecStatus extends \Google\Model
     return $this->ckn;
   }
   /**
-   * @param bool
+   * Indicates whether or not MACsec is operational on this link.
+   *
+   * @param bool $operational
    */
   public function setOperational($operational)
   {

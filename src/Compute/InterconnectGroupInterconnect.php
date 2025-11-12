@@ -20,12 +20,18 @@ namespace Google\Service\Compute;
 class InterconnectGroupInterconnect extends \Google\Model
 {
   /**
+   * The URL of an Interconnect in this group. All Interconnects in the group
+   * are unique.
+   *
    * @var string
    */
   public $interconnect;
 
   /**
-   * @param string
+   * The URL of an Interconnect in this group. All Interconnects in the group
+   * are unique.
+   *
+   * @param string $interconnect
    */
   public function setInterconnect($interconnect)
   {
